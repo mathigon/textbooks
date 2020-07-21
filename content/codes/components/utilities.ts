@@ -22,7 +22,9 @@ export const MORSE_CODE: Obj<string> = {
   a: '•−', b: '−•••', c: '−•−•', d: '−••', e: '•', f: '••−•', g: '−−•',
   h: '••••', i: '••', j: '•−−−', k: '−•−', l: '•−••', m: '−−', n: '−•',
   o: '−−−', p: '•−−•', q: '−−•−', r: '•−•', s: '•••', t: '−', u: '••−',
-  v: '•••−', w: '•−−', x: '−••−', y: '−•−−', z: '−−••'
+  v: '•••−', w: '•−−', x: '−••−', y: '−•−−', z: '−−••',
+  '1': '•−−−−', '2': '••−−−', '3': '•••−−', '4': '••••−', '5': '•••••',
+  '6': '−••••', '7': '−−•••', '8': '−−−••', '9': '−−−−•', '0': '−−−−−'
 };
 
 
@@ -84,7 +86,7 @@ export function cipherLetterFreq(cipher: string) {
   const msg = cipher.toLowerCase();
   const freq = repeat(0, 26);
 
-  for (let l of msg) {
+  for (const l of msg) {
     if (l >= 'a' && l <= 'z') freq[LOWER_CASE.indexOf(l)] += 1;
   }
 

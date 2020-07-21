@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 ::: column.grow
 
@@ -136,6 +137,7 @@ Les graphes constitués d'une seule chaîne de sommets sont appelés [__cycles__
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Les ponts de Königsberg
 
@@ -209,9 +211,6 @@ Premièrement, nous devons convertir les cartes de la ville en graphes avec des 
 
 Sur papier, imaginez quelques graphes différents, puis essayez de déterminer lesquels peuvent être dessinés avec un seul trait continu.
 
-    // p Try drawing these graphs with one continuous stroke:
-    // p.todo Interactive coming soon…
-
 ---
 
 > id: bridges-3
@@ -219,16 +218,17 @@ Sur papier, imaginez quelques graphes différents, puis essayez de déterminer l
 
 Tout comme pour les cartes de villes précédentes, nous constatons que certains graphes sont possibles, d'autres non. Pour nous aider à comprendre pourquoi, étiquetons chaque sommet avec son [degré](gloss:graph-degree):
 
-    .frame.fill(style="padding: 20px")
-      p(style="margin: 0"): strong Ces graphes sont possibles :
-      include svg/vertex-orders-1.svg
-      p(style="margin: 1em 0 0"): strong Ces graphes ne sont pas possibles :
-      include svg/vertex-orders-2.svg
-      p: select
-        option(value="val", selected) Colorier par valeur
-        option(value="size") Colorier par petit et grand
-        option(value="prime") Colorier par primalité
-        option(value="eo") Colorier par parité
+    figure
+      x-select.var.tabs(:bind="colour")
+        div(value="val") Valeur
+        div(value="size") Petit et grand
+        div(value="prime") Primalité
+        div(value="eo") Parité
+      .box
+        p(style="margin: 0"): strong Ces graphes sont possibles :
+        include svg/vertex-orders-1.svg
+        p(style="margin: 1em 0 0"): strong Ces graphes ne sont pas possibles :
+        include svg/vertex-orders-2.svg
 
 ---
 
@@ -265,11 +265,11 @@ La découverte d’Euler peut ne pas sembler particulièrement utile dans la vie
 
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Poignées de main et fêtes
 
 ::: column.grow
-
 
 Vous avez été invité à une fête d'anniversaire extravagante. Vous et l'hôte inclus, ${hnd}{hnd|5|3,15,1} personnes sont présentes.
 
@@ -277,7 +277,7 @@ Le soir, alors que les invités se préparent à partir, tout le monde se serre 
 
 Nous pouvons représenter les poignées de main à l'aide d'un graphique: chaque personne est [[un sommet|une arête]] et chaque poignée de main est [[une arête|un sommet]].
 
-{.reveal(when=&#39;blank-0 blank-1&#39;)} Il est maintenant facile de compter le nombre d'arêtes dans le graphique. Nous constatons que là-bas avec ${hnd} personnes, il y a ${hnd*(hnd-1)/2} poignées de main.
+{.reveal(when='blank-0 blank-1')} Il est maintenant facile de compter le nombre d'arêtes dans le graphique. Nous constatons que là-bas avec ${hnd} personnes, il y a ${hnd*(hnd-1)/2} poignées de main.
 
 ::: column.s-hide(width=240)
 
@@ -344,6 +344,7 @@ Dans ce cas, le graphe correspondant est constitué de deux ensembles distincts 
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Graphes plans
 
@@ -361,7 +362,7 @@ Dans un petit village, il existe trois centrales produisant de l’eau, de l’�
 
 Essayez de connecter chacune des plantes ci-dessous à chacune des maisons, sans qu’une de vos lignes ne se croise:
 
-    .frame.fill
+    .box.no-padding
       include svg/utilities.svg
       button.btn Clear
 
@@ -400,20 +401,23 @@ Le [graphe complet](gloss:complete-graph) `K_5` est le plus petit graphe non pla
 Le graphique du puzzle des trois utilitaires est le [graphique bipartite](gloss:bipartite-graph) `K_"3,3"`. Il s'avère que tout graphe non planaire doit contenir une [sous-division](gloss:subdivision) `K_5` ou `K_"3,3"` ou sous forme de sous-graphe.
 
 ---
-
 > id: planarity
 > goals: planarity
 
-    .box.problem-box
-      .box-title: h3 Planarité
-      .box-body
-        x-solved
-        svg#planarity.frame(viewBox="0 0 640 320")
-        p.md C'est un graphe planaire, mais les ${n}{n|7|5,20,1} sommets ont été brouillés. Réorganisez les sommets de manière à ce qu'aucun des bords ne se chevauche.
-        button.btn New Random Graph
+::: .box.f-blue
+
+#### Planarité
+
+    x-solved
+    svg#planarity.frame(viewBox="0 0 640 320")
+
+C'est un graphe planaire, mais les ${n}{n|7|5,20,1} sommets ont été brouillés. Réorganisez les sommets de manière à ce qu'aucun des bords ne se chevauche.
+
+    p.btn-row: button.btn New Random Graph
+
+:::
 
 ---
-
 > id: euler
 
 ### Formule d'Euler
@@ -455,7 +459,6 @@ _{span.euler-sum} 25 sommets + faces_
 
 En comparant ces nombres, vous remarquerez que le nombre d'arêtes correspond toujours à [[un|bigger|the same]] de moins que le nombre de faces plus le nombre de sommets. En d'autres termes, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Ce résultat s'appelle __l'équation d'Euler__ et est nommé d'après le même [mathématicien](bio:euler) qui a résolu le problème des ponts de Königsberg.
 
-
 Malheureusement, il existe une infinité de graphiques et nous ne pouvons pas vérifier chacun d’eux pour voir si l’équation d’Euler fonctionne. Au lieu de cela, nous pouvons essayer de trouver une [preuve](gloss:proof) simple qui fonctionne pour tous les graphes…
 
 ---
@@ -464,7 +467,7 @@ Malheureusement, il existe une infinité de graphiques et nous ne pouvons pas v�
 
     x-slideshow
       .stage(slot="stage")
-        svg.frame(viewBox="0 0 640 200")
+        svg(viewBox="0 0 640 200")
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
           line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
@@ -561,6 +564,7 @@ __{.red} 90__ bords
 
 > id: maps
 > section: map-colouring
+> translated: auto
 
 ## Coloration de la carte
 
@@ -586,44 +590,35 @@ Certaines «cartes» simples, comme un échiquier, n'ont besoin que de deux coul
 
 Lorsque vous colorez la carte des États américains, 50 couleurs suffisent évidemment, mais il en faut beaucoup moins. Essayez de colorier les cartes ci-dessous avec le moins de couleurs possible:
 
-    p.text-center
-      span.four-colour-icon.on
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
-      span.four-colour-icon
+    .four-colour-icons
+      for i in [1, 2, 3, 4, 5, 6, 7]
+        .four-colour-icon(tabindex=0)
     
     x-tabbox.four-colours.full-width
       .tab
         h3 États Unis #[span.check(when="map-0")]
         x-solved
-        include svg/colours-1.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-1.svg
         button.btn.clear Recommencer
-        button.btn.solve Solution
       .tab
         h3 Amérique du sud #[span.check(when="map-1")]
         x-solved
-        include svg/colours-2.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-2.svg
         button.btn.clear Recommencer
-        button.btn.solve Solution
       .tab
         h3 Allemagne #[span.check(when="map-2")]
         x-solved
-        include svg/colours-3.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-3.svg
         button.btn.clear Recommencer
-        button.btn.solve Solution
       .tab
         h3 Angleterre #[span.check(when="map-3")]
         x-solved
-        include svg/colours-4.svg
         .colour-count Nombre de couleurs: #[span 0]
+        include svg/colours-4.svg
         button.btn.clear Recommencer
-        button.btn.solve Solution
 
 ---
 
@@ -703,6 +698,7 @@ Cependant, les mathématiciens ont également examiné des cartes de _empires_, 
 
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Le problème du vendeur ambulant
 
@@ -871,6 +867,7 @@ FAIRE
 
 > id: applications
 > section: applications
+> translated: auto
 
 ## Les graphiques au quotidien
 
@@ -998,7 +995,6 @@ Il existe d'innombrables autres graphiques dans la science, l'ingénierie ou la 
 ::: column(width=200)
 
     x-img(lightbox src="images/finance.jpg" width=200 height=200)
-
 
 {.caption} Les graphes ont également de nombreuses applications en __probabilités__, __en théorie des jeux__ et en __mathématiques financières__.
 

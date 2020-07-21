@@ -72,7 +72,6 @@
 
 下图中是一个直径为1的轮子。当你“展开”它的边缘，你可以发现它的长度恰好是[[`pi`|`2 * pi`|3]]。
 
-
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
 
@@ -135,7 +134,7 @@
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") 三角形
       div(data-value="1") 正方形
       div(data-value="2") 五边形
@@ -143,7 +142,6 @@
     svg(width=320 height=200)
 
 {.caption} _周长_ = __{.m-green}100__, _面积_ = __${area}__
-
 
 :::
 
@@ -252,7 +250,6 @@ _{span.reveal(when="blank-2")} 所以三角形的面积近似于_
 ---
 > id: pi-sequence
 
-
 一个接近圆周率的计算方法是使用无穷数列进行表示。下面是一个由[戈特弗里德•威廉•莱布尼茨](bio:leibniz) 在1676年发现的例子：
 {.text-center} `π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/input(11) + …`
 
@@ -287,14 +284,17 @@ _{span.reveal(when="blank-2")} 所以三角形的面积近似于_
 
 如果圆周率是一个常数，意味着你随便想一个数字串，它将出现在某个数位里面。下面你可以在圆周率的前1百万位搜索——是否包含你的生日？
 
-    .box
-      .box-title: h3 圆周率的前1百万位
-      .box-body.pi-controls
-        | 搜索一个数字串：
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### 圆周率的前1百万位
+
+    .pi-controls
+      | 搜索一个数字串：
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -327,11 +327,7 @@ _{span.reveal(when="blank-2")} 所以三角形的面积近似于_
 
     figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## 角度制与弧度制
 
@@ -420,7 +416,6 @@ _{span.reveal(when="blank-2")} 所以三角形的面积近似于_
 对于大多数人而言，测量角的度数只是我们的习性：360°摄像，滑板可以转540°，还有一些人的想法可以来个180°的大转弯。
 
 从一个数学家的观点来看，选择360完全是随意的。如果我们住在火星上，一个圆可能会有670°，而在木星上甚至一年为10,475天。
-
 
 ::: column(width=280)
 
@@ -579,13 +574,9 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 {.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
 
-
 {.reveal(when="var-0")} 这个叫做__小角度近似__，可以大大简化某些包含三角函数的特定方程的求解。你在未来将会学到更多关于这方面的知识。
 
-
 --------------------------------------------------------------------------------
-
-
 
 ## 切线、弦和弧
 
@@ -643,86 +634,11 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 {.todo} 即将推出!
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
-
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
-    // Point of Tangency: The point where a tangent line touches the circle.
-    // 
-    // The tangent line and the radius drawn to the point of tangency have a unique
-    // relationship. Let’s investigate it here.
-    // 
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    // 
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    // 
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
-
 ---
 
 ### 弦
 
 {.todo} 即将推出
-
-    // A chord is a line segment whose endpoints are on a circle. A diameter is the
-    // longest chord in a circle. There are several theorems that explore the
-    // properties of chords.
-    // 
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    // 
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    // 
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    // 
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    // 
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
-
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 > id: earth-arc
@@ -823,14 +739,6 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 :::
 
 其中_r_是圆的半径，_c_为圆心角的度数。
-
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
-
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
 
 ---
 > id: arcs-rad
@@ -962,16 +870,7 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 {.todo} 即将推出!
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## 圆的定理
 
@@ -1089,11 +988,7 @@ Combines all of Euclidean Geometry
 
 {.todo} TODO
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## 循环多边形
 
@@ -1116,10 +1011,7 @@ formed a linear pair when matched up.
 Inscribed Quadrilateral Theorem: A quadrilateral is inscribed in a circle if
 and only if the opposite angles are supplementary.
 
-
-
 --------------------------------------------------------------------------------
-
 
 ## 球体、锥体与柱体
 
@@ -1237,12 +1129,6 @@ and only if the opposite angles are supplementary.
     x-gesture(target=".slide-me" slide="60,0")
 
 :::
-
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
-
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
 
 ---
 > id: cylinder-surface
@@ -1544,7 +1430,6 @@ __{.m-green}扇形__ 的半径为圆锥底面圆上的点到顶点的距离。�
 
     x-slider(steps=100)
 
-
 {.reveal(when="slider-0")} 让我们尝试计算这两个几何体在距离地面相同 __{span.pill.blue.step-target(data-to="h")}高度*h*__ 的横截面的面积。
 
 ::: column.grow
@@ -1665,13 +1550,13 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 
 这里你可以看到不同形式的地图，称为__投影__。试着移动红色的正方形，你可以观察到这个区域在地球仪上的_实际_样子：
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") 墨卡托投影
         .projection(data-name="cylindrical") 圆柱投影
         .projection(data-name="robinson") 罗宾森投影
         .projection(data-name="mollweide") 摩尔威德投影
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline
@@ -1694,28 +1579,11 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 
 {.todo} 即将推出：球的表面积的证明
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
     
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
     
-    // And therefore,
-    // surface area = 3 * volume / radius = 
     
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
-
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
-
-
 
 --------------------------------------------------------------------------------
-
-
 
 ## 圆锥曲线
 
@@ -1773,12 +1641,6 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 如果你有一条长的绳子把两个固定的点连起来，你可以通过描出绳子最远的点来画一个完美的椭圆：
 
 {.todo} 即将推出：画椭圆的动态效果
-
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
@@ -1886,7 +1748,6 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)

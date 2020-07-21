@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360px" height="228px" viewBox="0 0 360 228" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>transistor_on</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="248" height="90" rx="3"></rect>
+    </defs>
+    <g id="transistor_on" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="transistor/wires">
+            <path d="M8.52651283e-14,66 C50.6666667,71.3333333 76,95.3333333 76,138 C76,138 76,153 100,153 C100,153 259,153 259,153 C284,153 284,138 284,138 C284,95.3333333 309.333333,71.3333333 360,66" id="path_on" stroke="#979797" stroke-width="1"></path>
+            <line x1="95" y1="114" x2="264" y2="114" id="path_off" stroke="#979797" stroke-width="1"></line>
+            <g id="transistor" transform="translate(56.000000, 74.000000)" fill-rule="evenodd" stroke-width="1">
+                <g id="top" transform="translate(35.000000, 0.000000)" stroke="#000000">
+                    <path d="M3,0 L175,0 C176.656854,-3.04359188e-16 178,1.34314575 178,3 L178,64 L178,64 L0,64 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" stroke-width="4" fill="#CAC9CA"></path>
+                    <path d="M3,0 L175,0 C176.656854,-3.04359188e-16 178,1.34314575 178,3 L178,16 L178,16 L0,16 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04359188e-16 3,0 Z" id="layer1" stroke-width="4" fill="#6B8CA0"></path>
+                    <rect id="layer3" stroke-width="4" fill="#99755A" x="0" y="32" width="178" height="16"></rect>
+                </g>
+                <g id="bottom" transform="translate(0.000000, 64.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" stroke="#000000" stroke-width="4" fill="#D8D8D8" xlink:href="#path-1"></use>
+                    <rect id="Rectangle" stroke="#000000" stroke-width="4" fill="#547E98" mask="url(#mask-2)" x="0" y="0" width="248" height="15"></rect>
+                    <path d="M245,0 C246.656854,-3.04359188e-16 248,1.34314575 248,3 L248.000884,46.956312 C247.337549,46.9853363 246.670487,47 246,47 C221.147186,47 201,26.8528137 201,2 C201,1.32961474 201.014659,0.662653333 201.043675,-0.000581151679 L245,0 Z" id="Combined-Shape" stroke="#000000" stroke-width="4" fill="#547E98"></path>
+                    <path d="M44.956312,-0.000883578361 C44.9853363,0.662450582 45,1.32951284 45,2 C45,26.8528137 24.8528137,47 0,47 L0,47 L0,3 C-2.02906125e-16,1.34314575 1.34314575,3.04118709e-16 3,-2.16840434e-19 Z" id="Combined-Shape" stroke="#000000" stroke-width="4" fill="#557F98"></path>
+                </g>
+            </g>
+            <line x1="180" y1="74" x2="180" y2="0" id="Path" stroke="#000000" stroke-width="4"></line>
+            <path d="M76,138 C76,95.3333333 50.6666667,71.3333333 0,66" id="wire_in" stroke="#000000" stroke-width="4"></path>
+            <path d="M284,138 C284,95.3333333 309.333333,71.3333333 360,66" id="wire_out" stroke="#000000" stroke-width="4"></path>
+        </g>
+        <g id="electron" transform="translate(8.000000, 58.000000)">
+            <circle id="Oval" stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="12" cy="12" r="12"></circle>
+            <rect id="Rectangle" fill="#000000" transform="translate(12.500000, 12.000000) rotate(-4.000000) translate(-12.500000, -12.000000) " x="6" y="10" width="13" height="4"></rect>
+        </g>
+        <g id="electron" transform="translate(54.000000, 90.000000)">
+            <circle id="Oval" stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="12" cy="12" r="12"></circle>
+            <rect id="Rectangle" fill="#000000" transform="translate(12.500000, 12.000000) rotate(-4.000000) translate(-12.500000, -12.000000) " x="6" y="10" width="13" height="4"></rect>
+        </g>
+        <g id="electron" transform="translate(71.000000, 139.000000)">
+            <circle id="Oval" stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="12" cy="12" r="12"></circle>
+            <rect id="Rectangle" fill="#000000" transform="translate(12.500000, 12.000000) rotate(-4.000000) translate(-12.500000, -12.000000) " x="6" y="10" width="13" height="4"></rect>
+        </g>
+        <g id="electron" transform="translate(117.000000, 142.000000)">
+            <circle id="Oval" stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="12" cy="12" r="12"></circle>
+            <rect id="Rectangle" fill="#000000" transform="translate(12.500000, 12.000000) rotate(-4.000000) translate(-12.500000, -12.000000) " x="6" y="10" width="13" height="4"></rect>
+        </g>
+        <g id="electron" transform="translate(168.000000, 142.000000)">
+            <circle id="Oval" stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="12" cy="12" r="12"></circle>
+            <rect id="Rectangle" fill="#000000" transform="translate(12.500000, 12.000000) rotate(-4.000000) translate(-12.500000, -12.000000) " x="6" y="10" width="13" height="4"></rect>
+        </g>
+        <g id="electron" transform="translate(219.000000, 142.000000)">
+            <circle id="Oval" stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="12" cy="12" r="12"></circle>
+            <rect id="Rectangle" fill="#000000" transform="translate(12.500000, 12.000000) rotate(-4.000000) translate(-12.500000, -12.000000) " x="6" y="10" width="13" height="4"></rect>
+        </g>
+        <g id="electron" transform="translate(264.000000, 139.000000)">
+            <circle id="Oval" stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="12" cy="12" r="12"></circle>
+            <rect id="Rectangle" fill="#000000" transform="translate(12.500000, 12.000000) rotate(-4.000000) translate(-12.500000, -12.000000) " x="6" y="10" width="13" height="4"></rect>
+        </g>
+        <g id="electron" transform="translate(282.000000, 91.000000)">
+            <circle id="Oval" stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="12" cy="12" r="12"></circle>
+            <rect id="Rectangle" fill="#000000" transform="translate(12.500000, 12.000000) rotate(-4.000000) translate(-12.500000, -12.000000) " x="6" y="10" width="13" height="4"></rect>
+        </g>
+        <g id="electron" transform="translate(319.000000, 60.000000)">
+            <circle id="Oval" stroke="#000000" stroke-width="3" fill="#FFFFFF" cx="12" cy="12" r="12"></circle>
+            <rect id="Rectangle" fill="#000000" transform="translate(12.500000, 12.000000) rotate(-4.000000) translate(-12.500000, -12.000000) " x="6" y="10" width="13" height="4"></rect>
+        </g>
+    </g>
+</svg>

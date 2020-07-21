@@ -404,11 +404,7 @@ convex:
   link: /course/polyhedra/polygons#concave
 
 coordinate-system:
-<<<<<<< HEAD
-  title: Coordinate System
-=======
   title: Coordinate system
->>>>>>> bbed5edab7c8796f02e81a0da996c4742266e3fd
   text: A __coordinate system__ is a two-dimensional plane that contains two
     perpendicular axes. Every point on the plane can be defined using two
     numbers (coordinates), that specify its distance from the two axes.
@@ -837,7 +833,7 @@ integer:
 intercept:
   title: Intercept
   text: A __intercept__ is the point where a graph crosses an axis. It is often names after the axis, so the y-intercept is the point of intersection between the graph and the y-axis.
-        ## Include graph with x- and y-intercepts highlighted.
+  ## Include graph with x- and y-intercepts highlighted.
 
 internal-angle:
   title: Internal angles
@@ -1723,12 +1719,10 @@ tangent:
   # Formally, it is a line through a point of a differentiable curve, which has
   # the same slop as the slope of the curve at that point.
   # A line tangent to a circle is perpendicular to the radius at that point.
-<<<<<<< HEAD
   # A tangent line is a line that has exactly one point of intersection with a
   # curve. This means a tangent line with touch a curve without crossing it.
   # {.fixme} insert diagram of tangent line in functions and tangent line to a
   # circle
-=======
 
 telegraph:
   title: Telegraph
@@ -1736,7 +1730,6 @@ telegraph:
     A __telegraph__ is system for transmitting messages across long distances,
     by sending electric signals along wires.
 
->>>>>>> bbed5edab7c8796f02e81a0da996c4742266e3fd
 term:
   title: Term (Algebra)
   text: |

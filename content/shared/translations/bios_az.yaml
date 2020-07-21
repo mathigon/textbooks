@@ -1,0 +1,1715 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+abel:
+  born: 1802
+  died: 1829
+  name: Abel
+  overflow: true
+  bio: |
+    __Niels Henrik Abel__ (1802 - 1829) mühüm Norveç riyaziyyatçısı idi. 26 yaşında vəfat etsə də,
+    geniş mövzuya əsaslı töhfələr verdi.
+
+    16 yaşında Abel binom teoremini sübut etdi. Üç il sonra o, kintik tənlikləri həll etmək mümkün
+    olmadığını - qrup nəzəriyyəsini müstəqil icad etməklə sübut etdi. Bu 350 il ərzində açıq bir
+    problem idi! Elliptik funksiyalar üzərində işləmiş və _Abelian_ funksiyalarını kəşf etmişdir.
+
+    Abel ömrünü yoxsulluq içində keçirdi: altı bacısı vardı, atası 18 yaşında öldü, bir
+    universitetdə iş tapa bilmədi və bir çox riyaziyyatçı əvvəlcə işini boşaltdı. Bu gün
+    riyaziyyatda ən yüksək mükafatlardan biri olan _Abel mükafatı_ onun adını daşıyır.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+al-haytham:
+  born: 965
+  died: 1050
+  name: Al-Haytham
+  bio: |
+    __Həsən İbn Heytham__ (أبو علي ، الحسن بن الحسن بن الهيهم, c. 965 - 1050) İslam Qızıl Əsri
+    dövründə Qahirədə yaşadı və riyaziyyat, fizika, astronomiya, fəlsəfə və tibb sahələrini öyrəndi.
+    O, _elmi metodun_ tərəfdarı idi: İntibah dövründə Avropa alimlərindən yüz illər əvvəl hər hansı
+    bir elmi fərziyyənin təcrübələr və ya riyazi məntiqlərdən istifadə edərək təsdiqlənməli olduğuna
+    inam.
+
+    Əl-Heytham xüsusilə optika və görmə qavrayışı ilə maraqlanırdı. Dördüncü güclərin (`1^4 + 2^4 +
+    3^4 + … +
+
+    n^4`) cəminin düsturunu da çıxardı və cəbr ilə həndəsə arasındakı əlaqəni araşdırdı.
+
+al-karaji:
+  born: 953
+  died: 1029
+  name: Al-Karaji
+  bio: |
+    __Muhammad Əl-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 - 1029) fars riyaziyyatçısı və
+    mühəndisi idi. Binomial teoremini sübut etməyə imkan verən_ induksiya _ilə sübutdan istifadə
+    edən ilk şəxs idi.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+al-khwarizmi:
+  born: 780
+  died: 850
+  name: Al-Khwarizmi
+  overflow: true
+  bio: |
+    Fars riyaziyyatçısı __Məhəmməd əl-Xorazmi__ (محمد بن موسى الخوارزمي, 780 - 850) Bağdadda
+    müsəlman Abbasilər rejiminin qızıl dövründə. İsgəndəriyyə Kitabxanasının dağıdılmasından bəri
+    ilk böyük elmi kitab toplusu olan "Hikmət Evində" işləmişdir.
+
+    Əl-Xorazi "Cəbr Atası" adını aldı - əslində _cəbr_ sözü ən vacib kitabının ərəb dilindən gəlir:
+    "Tamamlama və Balanslaşdırma ilə Hesablama üzrə Kitab". O, xətti və kvadratik tənliklərin necə
+    həll olunacağını göstərdi və uzun əsrlər boyu Avropa universitetlərində əsas riyaziyyat dərsliyi
+    idi.
+
+    Əl-Xorazmiy də astronomiya və coğrafiyada işləmişdir və "alqoritm" kəlməsi onun adını daşıyır.
+
+apollonius:
+  name: Apollonius
+  born: -262
+  died: -190
+  bio: |
+    __Perqanın Apollonius__ (e.ə. 200-cü il) dörd _konus hissəsində_ işi ilə ən yaxşı tanınan bir
+    yunan riyaziyyatçısı və astronomu idi.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+appel:
+  name: Appel
+  bio: |
+    __Kenneth Appel__ (1932 - 2013) Wolfgang Haken ilə Dörd Rəng Teoreminin sübutu ilə tanınan bir
+    amerikalı riyaziyyatçı idi.
+
+    Tanınmasıyla o və Haken Amerika Riyaziyyat Cəmiyyətinin Fulkerson mükafatını aldılar.
+
+    Appel Nyu-Yorkdakı Queens Kollecində və Michigan Universitetində təhsil almışdır. İllinoys
+    Universitetində və Nyu Hampşir Universitetində dərs demişdir.
+
+archimedes:
+  name: Archimedes
+  born: -287
+  died: -212
+  bio: |
+    __Arximed__ (e.ə. 287 - e.ə. 212) qədim yunan alimi və mühəndisi və bütün dövrlərin ən böyük
+    riyaziyyatçılarından biri idi. Hesablama anlayışlarının çoxunu kəşf etdi və həndəsə, analiz və
+    mexanikada çalışdı.
+
+    Vanna qəbul edərkən Arximed, suya düşdükləri zaman suyun miqdarından istifadə edərək nizamsız
+    cisimlərin həcmini müəyyənləşdirmək üçün bir yol tapdı. O, bu kəşfdən o qədər həyəcanlandı ki,
+    hələ də soyunmadan, küçəyə çıxdı və _"Evrika!"_ (Yunan dilində _"Mən onu tapdım!"_).
+
+    Bir mühəndis kimi, Siciliyadakı vətəni Sirakuzanın mühasirəsi zamanı usta müdafiə maşınları
+    qurdu. İki ildən sonra romalılar nəhayət içəri girə bildilər və Arximed öldürüldü. Son sözləri
+    _"Dairələrimi narahat etmə"_ - o vaxt oxudu.
+  links:
+    - title: Archimedean Solids
+      url: /course/polyhedra/platonic#archimedean
+
+aristotle:
+  born: -384
+  died: -322
+  name: Aristotle
+  bio: |
+    __Aristotel__ (Ἀριστοτέλης e.ə. 384 - e.ə. 322) Qədim Yunanıstanda bir filosof idi. _Platon_
+    müəllimi ilə birlikdə "Qərb Fəlsəfəsinin Atası" sayılır. O, həm də Böyük İskəndərin şəxsi
+    tərbiyəsi idi.
+
+    Aristotel elm, riyaziyyat, fəlsəfə, poeziya, musiqi, siyasət, ritorika, dilçilik və bir çox
+    digər mövzularda yazırdı. Onun əsəri orta əsrlərdə və İntibah dövründə çox təsirli idi və etika
+    və digər fəlsəfi suallara dair fikirləri bu gün də müzakirə olunur.
+
+    Aristotel eyni zamanda elm və riyaziyyatda tətbiqləri daxil olmaqla _məntiqi_, rəsmi şəkildə
+    öyrənən ilk tanınmış şəxsdir.
+
+aryabhata:
+  born: 476
+  died: 550
+  name: Aryabhata
+  overflow: true
+  bio: |
+    __Aryabhata__ (भटर्यभट) hind riyaziyyatını qızıl çağında ilk riyaziyyatçı və astronomlardan
+    biri idi. Triqonometrik funksiyaları təyin etdi, eyni zamanda kvadratik tənlikləri həll etdi,
+    _π_ üçün yaxınlıq tapdı və _π_ irrasional olduğunu başa düşdü.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Quadratic Equations
+      url: /course/quadratics/introduction
+
+babbage:
+  born: 1791
+  died: 1871
+  name: Babbage
+  small: true
+  bio: |
+    __Charles Babb__ (1791 - 1871) İngilis riyaziyyatçısı, filosofu və mühəndisi idi. O, ilk
+    mexaniki kompüteri (_Fərqli mühərrik_) və təkmilləşdirilmiş, proqramlaşdırıla bilən bir
+    versiyanı (_Analitik Mühərriki_) icad edərək çox vaxt “kompüterin atası” adlanır.
+
+    Nəzəriyyə olaraq, bu maşınlar kartlarda və ya lentdə saxlanan müəyyən hesablamaları avtomatik
+    həyata keçirə bilərdi. Ancaq istehsal xərcləri çox olduğuna görə, Bambanın ömrü boyu heç vaxt
+    tamamlanmamışdı. 1991-ci ildə Londondakı Elm Muzeyində funksional bir nüsxə tikildi.
+
+bernoulli-1:
+  born: 1654
+  died: 1705
+  name: Bernoulli
+  bio: |
+    __Jacob Bernoulli__ (1655 - 1705) İsveçrə riyaziyyatçısı və Bernoulli ailəsinin bir çox önəmli
+    elm adamlarından biri idi. Əslində, bir neçə qardaşı və oğlu ilə dərin akademik rəqabət
+    aparırdı.
+
+    Jacob Newton və Leibnitz tərəfindən icad edilən, _dəyişkənliklərin hesablanması sahəsini
+    yaratmış, _e_ fundamental sabitini kəşf etmiş, diferensial tənliklərin həlli üsullarını inkişaf
+    etdirmiş və çox şeylər apardı. daha çox.
+
+    Ehtimallar, birləşmələr və çox sayda qanun daxil olmaqla ehtimala dair ilk əsaslı əsərini nəşr
+    etdirdi, binom teoremini sübut etdi və Bernoulli ədədlərinin bir çox xüsusiyyətlərini əldə etdi.
+
+bernoulli-2:
+  born: 1700
+  died: 1782
+  name: Bernoulli
+  bio: |
+    __Daniel Bernoulli__ (1700 - 1782) İsveçrə riyaziyyatçısı və fiziki idi. Bernoulli ailəsinin bir
+    çox məşhur elm adamlarından biri idi - atası Johann, dayısı Yaqub və qardaşı Nikol.
+
+    Daniel Bernoulli bir mayenin sürətinin artması ilə təzyiqinin azaldığını göstərdi. İndi
+    _Bernoulli prinsipi_ adlanır, bu təyyarə qanadları və yanma mühərrikləri tərəfindən istifadə
+    edilən mexanizmdir. O, ehtimal və statistikada da mühüm kəşflər etdi və ilk olaraq _Bessel_
+    funksiyaları ilə qarşılaşdı.
+
+    34 yaşında, Paris Akademiyasından bir mükafat üçün onu döydüyünə görə atasının evindən qadağan
+    edildi.
+
+bhaskara:
+  born: 1114
+  died: 1185
+  name: Bhaskara
+  bio: |
+    __Bhaskara II__ (1114 - 1185) hind riyaziyyatçısı və astronomu idi. Leibnitz və Newton-dan 500
+    il əvvəl, hesablamanın bəzi əsas anlayışlarını kəşf etdi. Bhaskara ayrıca sıfıra bölünməyərək
+    sonsuzluğu verir və müxtəlif kvadrat, kub, kvartik və Diofantin tənliklərini həll etdi.
+
+blackwell:
+  born: 1919
+  died: 2010
+  name: Blackwell
+  small: true
+  bio: |
+    __Devid Blekuell__ (1919 - 2010) amerikalı statistik və riyaziyyatçı idi. Oyun nəzəriyyəsi,
+    ehtimal nəzəriyyəsi, məlumat nəzəriyyəsi və dinamik proqramlaşdırma üzərində işləmiş və Bayesiya
+    statistikasına dair ilk dərsliklərdən birini yazmışdır. _Rao-Blackwell teoremi_, statistikada
+    müəyyən miqdarların qiymətləndiricilərinin necə yaxşılaşdırıldığını göstərir.
+
+    Blackwell, Amerika _Milli Elmlər Akademiyasına_ qoşulan ilk afroamerikalı seçilmiş və o,
+    riyaziyyat üzrə fəlsəfə doktoru dərəcəsini almış birincilərdən idi.
+
+bolyai:
+  born: 1802
+  died: 1860
+  name: Bolyai
+  small: true
+  bio: |
+    __Yanos Bolyai__ (1802 - 1860) macar bir riyaziyyatçı idi və Evklid olmayan həndəsə
+    qurucularından biri - Evklidin paralel xətlər haqqında beşinci aksiomu tutmadığı bir həndəsə. Bu
+    riyaziyyatda əhəmiyyətli bir irəliləyiş idi. Təəssüf ki, Bolyai üçün riyaziyyatçılar Gauss və
+    Lobachevsky eyni nəticələr eyni anda kəşf etdilər və kreditin böyük hissəsini aldılar.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+boole:
+  born: 1815
+  died: 1864
+  name: Boole
+  bio: |
+    __George Boole__ (1815 - 1864) İngilis riyaziyyatçısı idi. Uşaq ikən özünü aşağı sinif
+    həyatından qaçmaq ümidi ilə özünə Latın, Yunan və riyaziyyat fənləri öyrətdi. O, AND, OR və YOX
+    (əlavə və ya vurma əvəzinə) kimi operatorlardan istifadə edən və dəstlərlə işləyərkən istifadə
+    edilə bilən _Boolean cəbr_ yaratdı. Bu rəsmi riyazi məntiq üçün təməl idi və kompüter elmində
+    bir çox tətbiqi var.
+
+brahmagupta:
+  born: 598
+  died: 668
+  name: Brahmagupta
+  overflow: true
+  bio: |
+    Hind riyaziyyatçısı __Brahmagupta__ (e.ə. 598 - 668 e.ə.) sıfır və mənfi ədədlərlə əlavə,
+    toplama və çoxaltma qaydalarını icad etdi. O, eyni zamanda astronom idi və riyaziyyatda bir çox
+    başqa kəşflər etdi. Təəssüf ki, onun yazılarında heç bir dəlil yox idi, ona görə də nəticələrini
+    necə əldə etdiyini bilmirik.
+
+cantor:
+  born: 1845
+  died: 1918
+  name: Cantor
+  bio: |
+    Alman riyaziyyatçısı __Georg Cantor__ (1845 - 1918) dəst nəzəriyyəsinin ixtiraçısı və
+    sonsuzluğumuzun anlayışında bir qabaqcıl idi. Həyatının böyük bir hissəsi üçün, Cantor'un
+    kəşfləri həmkarları tərəfindən sərt şəkildə qarşı edildi. Bu, onun depressiyasına və əsəbi
+    pozulmasına səbəb ola bilər və o, bir neçə onillikləri bir ruhi müəssisədə keçirdi.
+
+    Cantor sonsuzluğun _müxtəlif ölçülü_ olduğunu sübut etdi. Həqiqi ədədlər toplusu, məsələn,
+    _hesablanmayan_ - bu natural ədədlər dəsti ilə birləşdirilə bilməyəcəyiniz deməkdir.
+
+    Yalnız ömrünün sonuna qədər Cantor layiq olduğu şöhrəti almağa başladı. David Hilbert məşhur
+    olaraq bəyan etdi: "Heç kim bizi Cantorun yaratdığı cənnətdən qovmayacaq".
+  links:
+    - title: Infinity
+      url: /world/Infinity
+    - title: Set Theory
+      url: /world/Axioms_and_Proof
+
+cardano:
+  born: 1501
+  died: 1576
+  name: Cardano
+  bio: |
+    İtalyan __Gerolamo Cardano__ (1501 - 1576) İntibah dövrünün ən nüfuzlu riyaziyyatçı və elm
+    adamlarından biri idi. Hipertsikloidləri araşdırdı, Tartalya və Ferrari'nın kub və kvartal
+    tənliklər üçün həllini tapdı, mənfi ədədləri sistematik istifadə edən ilk Avropa idi və hətta
+    (`sqrt(-1)` -ə əsaslanaraq) xəyali nömrələrin mövcudluğunu etiraf etdi.
+
+    Cardano, ehtimal nəzəriyyəsində bəzi irəliləyişlər göstərdi və binomial əmsalları və binomial
+    teoremini Avropaya təqdim etdi. O, bir çox mexaniki cihaz, o cümlədən kombinasiya qıfıllar, üç
+    dərəcə sərbəst giroskoplar və bu gün də nəqliyyat vasitələrində istifadə olunan sürücü şaftları
+    (və ya Cardan valları) icad etdi.
+  links:
+    - title: Imaginary Numbers
+      url: /world/Real_Irrational_Imaginary
+
+carroll:
+  born: 1832
+  died: 1898
+  name: Carroll
+  bio: |
+    __Charles Lutwidge Dodgson__ (1832 - 1898) onun qələm adı altında ən yaxşı bilinən __Lewis
+    Carroll__, _Alisanın Wonderland sərgüzəştləri_ və onun davamı _müəllifi kimi. Görünüşlü
+    şüşədən_.
+
+    Bununla birlikdə, Carroll da parlaq bir riyaziyyatçı idi. Həmişə bulmacalar və məntiqləri
+    uşaqlarının hekayələrinə daxil etməyə çalışaraq onları daha xoş və yaddaqalan etdi.
+
+cauchy:
+  born: 1789
+  died: 1857
+  name: Cauchy
+  small: true
+  bio: |
+    __Augustin-Louis Коши__ (1789 - 1857) fransız riyaziyyatçısı və fiziki idi. Riyaziyyatda geniş
+    sahələrə töhfə verdi və onlarla teorem onun adını daşıyır.
+
+    Koşi əvvəlki riyaziyyatçıların daha çox diqqətsiz və qüsursuz olduqları nəticələri islah edərək
+    sübut edərək hesablama və təhlili rəsmiləşdirdi. _kompleks analiz_ sahəsini qurdu, permutasiya
+    qruplarını araşdırdı və optika, maye dinamikası və elastiklik nəzəriyyəsi üzərində işlədi.
+
+cavalieri:
+  name: Cavalieri
+  born: 1598
+  died: 1647
+  bio: |
+    __Bonaventura Cavalieri__ (1598 - 1647) italyan riyaziyyatçısı və rahibi idi. Sonsuz
+    hesablamaların aparıcısını hazırladı və həndəsədə qatılıqların həcmini tapmaq Cavalieri prinsipi
+    ilə yadda qaldı.
+
+    Cavalieri, eyni zamanda, optika və mexanika sahələrində çalışdı, İtaliyaya logarifmləri tanıtdı
+    və Galileo Galilei ilə bir çox məktub mübadiləsi etdi.
+  links:
+    - title: Cavalieri’s Principle
+      url: /course/circles/spheres-cones-cylinders#cavalieri
+
+cayley:
+  born: 1821
+  died: 1895
+  name: Cayley
+  bio: |
+    __Artur Cayley__ (1821 - 1895) İngilis riyaziyyatçısı və hüquqşünası idi. O, _qrup nəzəriyyəsi_
+    -nin təşəbbüskarlarından biri idi, əvvəlcə "qrup" un müasir tərifini təklif etdi və riyaziyyatda
+    daha çox tətbiqi əhatə etmək üçün onları ümumiləşdirdi. Cayley matris cəbrini də inkişaf etdirdi
+    və daha yüksək ölçülü həndəsə üzərində çalışdı.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+collatz:
+  name: Collatz
+  bio: |
+    __Lothar Collatz__ (1910 - 1990) diferensial tənliklər və optimallaşdırma problemləri üzərində
+    çalışan bir Alman riyaziyyatçısı idi. _Collatz zənninin_ və ya `3x+1` problemi onun adını
+    daşıyır - və hələ də həll edilmir.
+
+conway:
+  name: Conway
+  born: 1937
+  died: 2020
+  bio: |
+    __John Horton Conway__ (1937 - 2020) Cambridge və Princeton Universitetində işləyən İngilis
+    riyaziyyatçısı idi. Kral Cəmiyyətinin bir üzvü və Poli mükafatını alan ilk şəxs idi.
+
+    Düyünlər və oyunlar kimi gündəlik əşyaların əsas riyaziyyatını araşdırdı və qrup nəzəriyyəsinə,
+    say nəzəriyyəsinə və riyaziyyatın bir çox digər sahələrinə öz töhfələrini verdi. Conway
+    heyranedici xüsusiyyətləri olan _hüceyrə avtomatı_ olan "Conway's Life Game" ixtira etməklə
+    məşhurdur.
+  links:
+    - title: Look-and-say Sequence
+      url: /course/sequences/special#look-and-say
+
+copernicus:
+  born: 1473
+  died: 1543
+  name: Copernicus
+  bio: |
+    __Nikolas Kopernik__ (1473 - 1543) polyak riyaziyyatçısı, astronomu və hüquqşünası idi. Həyatı
+    boyu insanların çoxu kainatın _Geosentrik_ modelinə, mərkəzdə Yer və ətrafındakı hər şeyə
+    inanırdılar.
+
+    Kopernik yeni bir model yaratdı, burada günəş mərkəzdədir və Yer kürəsi bir dairədə hərəkət
+    edir. O, həmçinin Yerin öz oxu ətrafında gündə bir dəfə fırlandığını proqnozlaşdırdı. Katolik
+    kilsəsini qəzəbləndirəcəyindən qorxaraq, modeli yalnız ölümündən dərhal əvvəl nəşr etdi - indi
+    _Kopernik İnqilabı_ adlandırılanları işə salıb.
+
+    Kopernik həm də bir diplomat və həkim olaraq çalışdı və iqtisadiyyata əhəmiyyətli töhfələr
+    verdi.
+  links:
+    - title: Planetary Orbits
+      url: /course/circles/conic-sections#orbits
+
+de-moivre:
+  born: 1667
+  died: 1754
+  name: De Moivre
+  bio: |
+    __Abraham de Moivre__ (1667 - 1754) ehtimal və analitik həndəsə sahəsində çalışan bir fransız
+    riyaziyyatçısı idi. Triqonometriya və mürəkkəb ədədləri birləşdirən _de Moivre düsturu_ ilə ən
+    çox xatırlanır.
+
+    De Moivre, ehtimalda normal paylanmanın düsturunu kəşf etdi və əvvəlcə _mərkəzi hədd teoremini_
+    zənn etdi. Fibonacci ədədləri üçün qızıl nisbəti `φ` ilə əlaqələndirən qeyri-rekursiv bir düstur
+    da tapdı.
+  links:
+    - title: Probability
+      url: /course/probability/predicting-the-future
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+dedekind:
+  born: 1831
+  died: 1916
+  name: Dedekind
+  small: true
+  bio: |
+    __Richard Dedekind__ (1831 - 1916) Alman riyaziyyatçısı və Gaussın şagirdlərindən biri idi.
+    Dəstək nəzəriyyəsində bir çox konsepsiya hazırladı və həqiqi ədədlərin rəsmi tərifi olaraq
+    _Dedekind_ kəsdi. Ayrıca, mücərrəd cəbrində vacib iki quruluş olan _nömrə sahələrinin_ və
+    _üzüklərinin_ ilk təriflərini verdi.
+
+democritus:
+  born: -460
+  died: -370
+  name: Democritus
+  bio: |
+    Yunan riyaziyyatçısı __Demokrit {1 (e.ə. 460 - e.ə. 370), bütün maddənin kiçik _atomdan (3)
+    ibarət olduğunu və "müasir elmin atası" hesab edildiyini düşünən ilk şəxs ola bilər. ”. Həndəsə,
+    prizmaların və konusların həcminin düsturu da daxil olmaqla bir çox kəşflər etdi.
+  links:
+    - title: Volume of a Cone
+      url: /course/circles/spheres-cones-cylinders#cone-volume
+
+desargues:
+  born: 1591
+  died: 1661
+  name: Desargues
+  bio: |
+    __Girard Desargues__ (1591 - 1661) fransız riyaziyyatçısı, mühəndis və memar idi. Parisdə və
+    Lyonda çoxsaylı binalar dizayn etdi, bir bənd tikməyə kömək etdi və episikloidlərdən istifadə
+    edərək suyun artırılması üçün bir mexanizm icad etdi.
+
+    Riyaziyyatda Desargues _proyektiv həndəsə_ atası hesab olunur. Bu paralel xətlərin "sonsuzluq
+    nöqtəsində" görüşdüyü xüsusi bir həndəsə növüdür, şekillerin ölçüsü (yalnız nisbətləri)
+    əhəmiyyətli deyil və bütün dörd konik hissələr (dairə, ellips, parabola və hiperbola) mahiyyət
+    etibarilə eyni.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+descartes:
+  born: 1596
+  died: 1650
+  name: Descartes
+  bio: |
+    __René Dekart__ (1596 - 1650) fransız riyaziyyatçısı və filosofu və Elmi İnqilabın əsas
+    simalarından biri idi. Əvvəlki filosofların nüfuzunu qəbul etməkdən imtina etdi və ən məşhur
+    sitatlarından biri də "Düşünürəm, buna görə də mənəm" deyir.
+
+    Dekart, cəbrdən istifadə edərək həndəsi formaları təsvir etməyə imkan verən _analitik həndəsə_
+    -nin atasıdır. Bu bir neçə onillikdən sonra Newton və Leibnitz-in _hesablamalarını_ icad
+    etməsinə imkan verən şərtlərdən biri idi.
+
+    Hakimiyyət və ya eksponentlər üçün üstün yazıların ilk istifadəsi ilə hesablanır və _karteziya
+    koordinat sistemi_ onun adını daşıyır.
+
+diophantus:
+  born: 200
+  died: 284
+  name: Diophantus
+  overflow: true
+  bio: |
+    __Diophantus__ İsgəndəriyyədə yaşayan Ellinist bir riyaziyyatçı idi. Əsərlərinin əksəriyyəti bir
+    neçə bilinməyən çoxbucaqlı tənliklərin həlli ilə bağlıdır. Bunlar indi _Diofantin tənliyi_
+    adlanır və bu gün də tədqiqatın vacib bir sahəsi olaraq qalır.
+
+    Bir çox əsrlərdən sonra Diophantusun kitablarından birini oxuyarkən _Pierre de Fermat_ bu
+    tənliklərdən birini təklif etdi. Bu, "Fermatın Son Teoremi" kimi tanındı və yalnız 1994-cü ildə
+    həll edildi.
+
+dirac:
+  name: Dirac
+  bio: |
+    __Paul Dirac__ (1898 - 1972) İngilis nəzəri fiziki idi, 1933 Nobel mükafatını Erwin Schrödinger
+    ilə bölüşdü. Dirac Kvant Mexanikasının qabaqcıllarından idi, məşhur _Dirac tənliyini_ tərtib
+    etdi və əvvəlcə antimaterin varlığını proqnozlaşdırdı.
+
+    Amerikaya köçməzdən əvvəl Kembric Universitetində dərs demişdir. Dirac məşhur bir şəkildə
+    utancaq idi və Eynşteynə görə _"dahi ilə dəlilik arasındakı başgicəllənmə yolunda tarazlaşdı"_.
+
+einstein:
+  name: Einstein
+  born: 1879
+  died: 1955
+  small: true
+  bio: |
+    __Albert Eynşteyn__ (1879 - 1955) Alman fiziki və tarixin ən nüfuzlu elm adamlarından biri idi.
+    Fizika üzrə Nobel mükafatını aldı və TIME jurnalı onu XX əsrin _adamı_ adlandırdı.
+
+    Eynşteyn Nyutondan bəri kainata baxışımızda ən əhəmiyyətli bir dəyişikliyə səbəb oldu. Klassik,
+    _Newtonian_ fizikasının artıq müəyyən fiziki fenomenləri izah etmək üçün kifayət olmadığını başa
+    düşdü.
+
+    26 yaşında, "möcüzə ili" boyunca, fotoelektrik effekti və Brownian hərəkətini izah edən dörd
+    əsaslandırıcı elmi sənəd nəşr etdirdi, xüsusi nisbi nisbət təqdim etdi və enerjinin (_E {)
+    olduğunu bildirən `E = m c^2` düsturunu əldə etdi. 8}) və kütlə (_m_) bərabərdir.
+
+eratosthenes:
+  name: Eratosthenes
+  born: -276
+  died: -195
+  bio: |
+    __Kirenanın eratostenləri__ (e.ə. 276 - 1956) Yunan riyaziyyatçısı, coğrafiyaşünas, astronom,
+    tarixçi və şair idi. Ömrünün çox hissəsini Misirdə, İsgəndəriyyə kitabxanasının müdiri kimi
+    keçirdi. Bir çox digər nailiyyətlər arasında Eratosthenes, Yerin dairəsini hesablamış, Yerin
+    fırlanma oxunun əyilməsini ölçmüş, Günəşə olan məsafəni təxmin etmiş və dünyanın ilk
+    xəritələrini yaratmışdır. Ayrıca _baş sayları_ hesablamağın səmərəli bir yolu olan
+    "Eratosthenlərin Ələkəsi" ni də icad etdi.
+  links:
+    - title: Radius of the Earth
+      url: /course/circles/tangets-chords-arcs#eratosthenes
+    - title: Sieve of Eratosthenes
+      url: /course/divisibility/primes#eratosthenes
+
+erdos:
+  born: 1913
+  died: 1996
+  name: Erdős
+  bio: |
+    __Paul Erdős__ (1913 - 1996) tarixin ən məhsuldar riyaziyyatçılarından biri idi. Macarıstanda
+    anadan olmuş, qrafika nəzəriyyəsi, say nəzəriyyəsi, kombinatorika, analiz, ehtimal və
+    riyaziyyatın digər hissələrində saysız-hesabsız problemləri həll etmişdir.
+
+    Həyatı boyunca Erdős 1500-ə yaxın məqalə dərc etmiş və 500-dən çox digər riyaziyyatçı ilə
+    əməkdaşlıq etmişdir. Əslində, ömrünün çox hissəsini çamadan xaricində yaşamağa, seminarlara və
+    həmkarlarını ziyarət etməyə sərf etdi!
+
+escher:
+  name: Escher
+  born: 1898
+  died: 1972
+  bio: |
+    __Maurits Cornelis Escher__ (1898 - 1972), riyazi ilə ilhamlanmış cisim və formaların eskizləri,
+    ağac kəsmələri və litoqrafları yaratmış bir holland sənətkarı idi: polyhedra, tessellations və
+    qeyri-mümkün formalar daxil olmaqla. Simmetriya, sonsuzluq, perspektiv və evklid olmayan həndəsə
+    kimi anlayışları qrafik olaraq araşdırdı.
+  small: true
+  links:
+    - title: Tessellations in Art
+      url: /course/polyhedra/tessellations#escher
+
+euclid:
+  name: Euclid
+  born: -330
+  died: -270
+  bio: |
+    __İsgəndəriyyə Evklidi__ (e.ə. 300 ilə yaxın) Yunan riyaziyyatçısı idi və çox vaxt _həndəsə
+    atası_ adlanır. Evklid geometriyasını ilk dəfə təqdim edən və həndəsə və say nəzəriyyəsində bir
+    çox vacib sübutları özündə cəmləşdirən _Elementlər_ adlı bir kitab nəşr etdi. XIX əsrə qədər
+    əsas riyaziyyat dərsliyi idi. İsgəndəriyyədə riyaziyyatdan dərs demişdi, ancaq həyatı haqqında
+    çox az şey məlumdur.
+  links:
+    - title: Euclid’s Axioms
+      url: /course/euclidean-geometry/euclids-axioms
+    - title: Infinitely many Primes
+      url: /course/divisibility/primes#primes3
+
+euler:
+  name: Euler
+  born: 1707
+  died: 1783
+  bio: |
+    __Leonhard Euler__ (1707 - 1783) tarixin ən böyük riyaziyyatçılarından biri idi. Onun işi
+    riyaziyyatın bütün sahələrini əhatə edir və 80 cildlik tədqiqat yazmışdır.
+
+    Euler İsveçrədə anadan olmuş və Bazeldə oxumuş, lakin ömrünün çox hissəsini Berlində, Prussiyada
+    və Sankt-Peterburqda keçirmişdir.
+
+    Euler müasir riyazi terminologiyanın və notasiyanın çoxunu icad etdi, hesablama, təhlil, qrafika
+    nəzəriyyəsi, fizika, astronomiya və bir çox digər mövzularda mühüm kəşflər etdi.
+  links:
+    - title: Königsberg Bridges Problem
+      url: /course/graph-theory/bridges
+    - title: Euler’s Formula
+      url: /course/graph-theory/planar-graphs
+    - title: Polyhedrons
+      url: /course/polyhedra/polyhedra
+
+fatou:
+  name: Fatou
+  bio: |
+    __Pierre Joseph Louis Fatou__ (1878 - 1929) fransız riyaziyyatçısı və astronomu idi. O, _Culiya_
+    dəstini birlikdə kəşf etdi və onun tərsinə, Fatou dəsti onun adını daşıyır. Təhlil və göy
+    mexanikasına da mühüm töhfələr verdi.
+
+fermat:
+  name: Fermat
+  born: 1607
+  died: 1665
+  bio: |
+    __Pierre de Fermat__ (1607 - 1665) fransız riyaziyyatçısı və hüquqşünası idi. Kalkulyasiyanın
+    erkən bir pioneri, eyni zamanda say nəzəriyyəsi, ehtimal, həndəsə və optika sahələrində də
+    çalışmışdır.
+
+    1637-ci ildə, o, dərsliklərindən birinin kənarında qısa bir qeyd yazdı, `a^n + b^n = c^n`
+    tənliyinin `n > 2` üçün tam həlli olmadığını və bu marjanın özündə cəmlənməsi üçün dar olduğu
+    "ecazkar sübutun" olduğunu iddia etdi. ”. Bu _Fermatın Son Teoremi_ kimi tanındı və riyaziyyatda
+    ən məşhur həll olunmayan problemlərdən biri - 1994-cü ildə nəhayət sübut olunana qədər.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+
+fibonacci:
+  name: Fibonacci
+  born: 1175
+  died: 1250
+  bio: |
+    __Leonardo Pisano__, ümumiyyətlə __Fibonacci__ (1175 - 1250) kimi tanınan italyan riyaziyyatçısı
+    idi. Ən yaxşı adı ilə verilən ardıcıllıqla tanınır: 1, 1, 2, 3, 5, 8, 13,…
+
+    Fibonacci eyni zamanda eramızın 12-ci əsrində hələ Roma rəqəmlərindən (I, V, X, D, ...) istifadə
+    edən ərəb rəqəmlərinin (0, 1, 2, 3, 4, ...) Avropada yayılması üçün məsuliyyət daşıyır. Onluq
+    sistemini tacirlər üçün praktik bir dərslik olan "Liber Abaci" adlı bir kitabda izah etdi.
+  links:
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+fourier:
+  born: 1768
+  died: 1830
+  name: Fourier
+  bio: |
+    __Joseph Furye__ (1768 - 1830) fransız riyaziyyatçısı və Napoleonun dostu və məsləhətçisi idi.
+    Riyazi araşdırmalarından əlavə, istixana effektinin kəşfi ilə də maraqlanır.
+
+    Misirə səyahət edərkən, Furye xüsusilə _istilik_ ilə valeh oldu. İstilik köçürməsini və
+    titrəmələri araşdırdı və hər hansı bir dövri funksiyanın sonsuz cəmini trigonometrik funksiyalar
+    şəklində yazıla biləcəyini kəşf etdi: a _Furye seriyası_.
+
+fuller:
+  name: Fuller
+  bio: |
+    __Richard Buckminster "Bucky" Fuller__ (1895 - 1983) Amerikalı memar, dizayner və ixtiraçı idi.
+    O, _geodeziya qübbəsi_ - iri, sferik quruluşlar tikməklə məşhurdur. Oxşar görünüşlü Karbon
+    molekulları, _fullerenes_ sonradan onun adını aldı.
+
+galileo:
+  born: 1564
+  died: 1642
+  name: Galileo
+  bio: |
+    __Galileo Galilei__ (1564 - 1642) italyan astronomu, fiziki və mühəndis idi. Gecə səmasında
+    müşahidələr aparmaq üçün ilk teleskoplardan birini istifadə edərək Yupiterin dörd ən böyük
+    ayını, Veneranın fazalarını, günəş ləkələrini və daha çoxunu aşkar etdi.
+
+    Bəzən "müasir elmin atası" adlandırılan Galileo, sərbəst düşmə, kinematik, materialşünaslıqdakı
+    cisimlərin hərəkətini də araşdırdı və termoskopu (erkən termometr) icad etdi.
+
+    O, _Heliocentrism_, Günəşin Günəş sistemimizin mərkəzində olması fikrinin vokal tərəfdarı idi.
+    Bu sonda onun Katolik inkvizisiya tərəfindən mühakimə olunmasına səbəb oldu: Galileo geri
+    çəkilmək məcburiyyətində qaldı və ömrünün qalan hissəsini ev həbsində keçirdi.
+
+galois:
+  born: 1811
+  died: 1832
+  name: Galois
+  overflow: true
+  bio: |
+    Fransız riyaziyyatçısı __Evariste Galois__ (1811 - 1832) qısa və faciəli bir ömür sürmüş, buna
+    baxmayaraq riyaziyyatın iki tamamilə yeni sahəsini icad etmişdir: _Qrup nəzəriyyəsi_ və _Galois
+    nəzəriyyəsi_ .
+
+    Yeniyetmələrində ikən Galois, beş və daha yüksək dərəcənin çoxbucaqlı tənlikləri üçün ümumi bir
+    həll olmadığını sübut etdi - eyni zamanda Niels Abel ilə.
+
+    Təəssüf ki, bu kəşfləri bölüşdüyü digər riyaziyyatçılar dəfələrlə səhvən işləmiş və ya sadəcə
+    işlərini geri qaytarmış, daha mürəkkəb işlərə cəmləşərək məktəb və universitet imtahanlarını
+    verə bilməmişlər.
+
+    21 yaşında Galois dueldə vuruldu (bəziləri bir qadına qarşı bir dava deyirlər), daha sonra
+    aldığı yaralardan öldü. Ölümündən əvvəlki gecə bir rəfiqəsinə bir məktubda riyazi kəşflərini
+    ümumiləşdirdi. İşinin həqiqi təsirini tam dərk etmək üçün digər riyaziyyatçıların uzun illər
+    tələb olundu.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+gauss:
+  name: Gauss
+  born: 1777
+  died: 1855
+  bio: |
+    __Carl Fridrix Gauss__ (1777 - 1855), şübhəsiz ki, tarixin ən böyük riyaziyyatçısı idi.
+    Riyaziyyatın cəbr və say nəzəriyyəsindən tutmuş statistika, hesablama, həndəsə, geologiya və
+    astronomiyaya qədər olan hər bir sahəsində əsaslı kəşflər etdi.
+
+    Rəvayətə görə, 3 yaşında atasının uçotundakı səhvini düzəltdi və 8 yaşında 1-dən 100-ə qədər
+    bütün tam ədədləri tez bir şəkildə əlavə etmək üçün bir yol tapdı. Hələ yeniyetmə ikən ilk vacib
+    kəşflərini etdi və daha sonra professor kimi bir çox digər məşhur riyaziyyatçılara dərs verdi.
+  links:
+    - title: Prime Number Theorem
+      url: /course/divisibility/the-distribution-of-primes#riemann
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+    - title: Sums of Triangle Numbers
+      url: /course/sequences/figurate#triangle-sums
+
+germain:
+  born: 1776
+  died: 1831
+  name: Germain
+  small: true
+  bio: |
+    __Marie-Sophie Germain__ (1776 - 1831) Archimedes haqqında oxuduqdan sonra 13 yaşında
+    riyaziyyatçı olmaq istədiyinə qərar verdi. Təəssüf ki, bir qadın olaraq əhəmiyyətli
+    müxalifətlərlə qarşılaşdı. Valideynləri onun gənc yaşlarında təhsil almasına mane olmağa
+    çalışırdılar və o, heç bir universitetdə vəzifə almırdı.
+
+    Germain elastik səthlərin riyaziyyatını anlamaqda bir qabaqcıl idi, bunun üçün Paris Elmlər
+    Akademiyasından böyük mükafat qazandı. Fermatın Son Teoremini həll etməkdə də əhəmiyyətli bir
+    irəliləyiş əldə etdi və müntəzəm olaraq Karl Fridrix Gauss ilə yazışdı.
+
+godel:
+  born: 1906
+  died: 1978
+  name: Gödel
+  small: true
+  bio: |
+    __Kurt Gödel__ (1906 - 1978) sonradan Amerikaya mühacirət edən Avstriya riyaziyyatçısı idi və
+    tarixin ən böyük logistlərindən biri hesab olunur.
+
+    25 yaşında, Vyanada doktorluq dərəcəsini bitirdikdən sonra iki _natamamlıq teoremlərini_ nəşr
+    etdi. Bunlar hər hansı bir (ardıcıl və kifayət qədər güclü) bir riyazi sistemin doğru, lakin
+    sübut edilə bilmədiyi müəyyən ifadələri ehtiva etdiyini bildirirlər. Başqa sözlə, riyaziyyatda
+    həll etmək mümkün olmayan müəyyən problemlər var.
+
+    Bu nəticə riyaziyyatın inkişafına və fəlsəfəsinə dərin təsir göstərdi. Gödel də bu "mümkün
+    olmayan teoremlərin" bir nümunəsini tapdı: _davamlı hipotezi_.
+  links:
+    - title: Unprovable Theorems
+      url: /world/Axioms_and_Proof
+    - title: Continuum Hypothesis
+      url: /world/Infinity
+
+goldbach:
+  name: Goldbach
+  born: 1690
+  died: 1764
+  bio: |
+    __Christian Goldbach__ (1690 - 1764) Prussiya riyaziyyatçısı və Euler, Leibniz və Bernoulli'nin
+    çağdaşları idi. Rus Çarı Peter II-nin tərbiyəçisi idi və "Qoldbax Coneksiyası" ilə yadda qalır.
+  links:
+    - title: Goldbach Conjecture
+      url: /course/divisibility/the-distribution-of-primes#goldbach1
+
+grothendieck:
+  born: 1928
+  died: 2014
+  name: Grothendieck
+  small: true
+  bio: |
+    Fransız riyaziyyatçısı __Alexander Grothendieck__ (1928 - 2014) _cəbri həndəsəsinin_ inkişafında
+    əsas fiqurlardan biri idi. Riyaziyyatda bir çox yeni problemə, o cümlədən Fermatın son teoreminə
+    müraciət etmək üçün sahəni genişləndirdi. 1966-cı ildə Fields medalı ilə təltif edilmişdir.
+
+guthrie:
+  name: Guthrie
+  bio: |
+    __Francis Guthrie__ (1831 - 1899) Cənubi Afrikalı botanik və riyaziyyatçı idi, 1852-ci ildə Dörd
+    Rəng Problemini ilk ifadə etdi. O, ən böyük İngilis riyaziyyatçılarından biri Augustus De
+    Morganın tələbəsi idi. Riyaziyyat professoru və müəllimi olmaqdan əlavə Guthrie bir hüquqşünas
+    olaraq çalışdı və günəş enerjisi və aeronavtika sahəsində araşdırmalar etdi.
+
+haken:
+  name: Haken
+  bio: |
+    __Wolfgang Haken__ (1928-ci il təvəllüdlü) - Alman riyaziyyatçısıdır, Kenneth Appel ilə birlikdə
+    _Dörd Rəng Teoremi_ sübutu ilə məşhurdur. Tanınmasıyla, o və Appell Amerika Riyaziyyat
+    Cəmiyyətinin Fulkerson mükafatını aldılar. 1990-cı ildə Haken, indi də Emeritus Prof.
+
+halley:
+  name: Halley
+  bio: |
+    __Edmond Halley__ (1656 - 1742) İngilis riyaziyyatçısı və fiziki, ikinci _Astronom Royal_ idi.
+    Onun adını daşıyan Halley Comet-in orbitini hesabladı.
+
+hamilton:
+  born: 1805
+  died: 1865
+  name: Hamilton
+  small: true
+  bio: |
+    __William Rowan Hamilton__ (1805 - 1865) İrlandiya riyaziyyatçısı və uşaq atası idi. Riyaziyyat,
+    fizika və kompüter elmlərində mühüm tətbiqetmələrə malik olan "komutativ olmayan cəbr" in ilk
+    nümunəsi olan _dördbucaqlı_ icad etdi.
+
+    Əvvəlcə Dublindəki Kral Kanalını gəzərkən bu fikri ortaya atdı və əsas düsturu keçdiyi daş
+    körpüyə həkk etdi: `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
+
+    Həmilton fizika, o cümlədən optika və Newton mexanikasına da mühüm töhfələr verdi.
+
+hardy:
+  born: 1877
+  died: 1947
+  name: Hardy
+  small: true
+  bio: |
+    __G.H. Hardy__ (1877 - 1947) aparıcı İngilis saf riyaziyyatçısı idi. _John Littlewood_ ilə
+    birlikdə təhlildə və say nəzəriyyəsində, o cümlədən baş sayların paylanmasında mühüm kəşflər
+    etdi.
+
+    1913-cü ildə Hardy, Hindistandan naməlum, öz-özünə tədris olunan bir katibə _Srinivasa
+    Ramanujan_ -dən məktub aldı. Hardi dahisini dərhal tanıdı və Ramanujanın işlədiyi Cambridge
+    şəhərinə getməsini təmin etdi. Birlikdə əhəmiyyətli kəşflər və müəllif çox sayda kağız etdilər.
+
+    Hardy həmişə tətbiq olunan riyaziyyatdan əl çəkdi və bunu riyazi təfəkkürün şəxsi hesabında,
+    1940-cı ildə yazılmış _A Riyaziyyat Üzvü_ kitabında ifadə etdi.
+
+hilbert:
+  name: Hilbert
+  born: 1862
+  died: 1943
+  bio: |
+    __David Hilbert__ (1862 - 1943) 20-ci əsrin ən nüfuzlu riyaziyyatçılarından biri idi.
+    Riyaziyyatın demək olar ki, hər bir sahəsi üzərində işləyirdi və xüsusilə riyaziyyat üçün rəsmi,
+    məntiqi bir təməl qurmaqda maraqlı idi.
+
+    Hilbert Göttingendə (Almaniya) çalışdı və burada məşhur riyaziyyatçı olmuş bir çox tələbəyə dərs
+    verdi. 1900-cü ildə Beynəlxalq Riyaziyyatçılar Konqresi zamanı 23 həll olunmamış problemlərin
+    siyahısını təqdim etdi. Bunlar gələcək tədqiqatların gedişatını təyin etdi və onlardan dördü bu
+    gün də həll edilmir!
+  links:
+    - title: Hilbert’s Hotel
+      url: /world/Infinity
+
+hypatia:
+  born: 360
+  died: 415
+  name: Hypatia
+  overflow: true
+  bio: |
+    __Hipatiya__ (e.ə. 360 - e.ə. 415) qədim İsgəndəriyyədəki görkəmli astronom və riyaziyyatçı idi.
+    O, eyni zamanda həyatı və işi əsaslı şəkildə qeyd olunan ilk qadın riyaziyyatçı idi. Dövrünün
+    bir çox elmi kitabına şərhlər yazdı və ya şərhlər yazdı və astrolabes və hidrometrlər qurdu.
+
+    Həyatı boyu böyük bir müəllim kimi tanındı və İsgəndəriyyənin Roma prefekturası Orestesə
+    məsləhət verdi. İskəndəriyyənin yepiskopu Kiril ilə Orestesin davası Hypatia'nın bir qrup
+    xristian tərəfindən öldürülməsinə səbəb oldu.
+
+jacobi:
+  born: 1809
+  died: 1851
+  name: Jacobi
+  small: true
+  bio: |
+    __Carl Jacobi__ (1804 - 1851) alman riyaziyyatçısı idi. Təhlil, diferensial tənliklər və say
+    nəzəriyyəsi üzərində işləmiş və _elliptik funksiyaların_ tədqiqində qabaqcıllardan olmuşdur.
+
+jefferson:
+  name: Jefferson
+  bio: |
+    __Tomas Jefferson__ (1743 - 1826), ABŞ-ın qurucu atalarından biri, üçüncü prezidenti və İstiqlal
+    Bəyannaməsinin əsas müəllifi idi.
+
+    Siyasətdəki işindən əlavə, riyaziyyat, bağçılıq, mexanika sahələrini də öyrəndi və memar olaraq
+    çalışdı. Dövlət vəzifəsindən istefa etdikdən sonra Jefferson Virciniya Universitetini qurdu.
+
+jiushao:
+  born: 1202
+  died: 1261
+  name: Qin Jiushao
+  overflow: true
+  bio: |
+    __Qin Jiushao__ (秦九韶, c. 1202 - 1261) Çin riyaziyyatçısı, ixtiraçısı və siyasətçisi idi. _Shùshū
+    Jiǔzhāng_ kitabında çox sayda riyazi kəşflər, o cümlədən mühüm _Çin qalıcı teoremi_ dərc etdi və
+    araşdırma, meteorologiya və hərbi sahələr haqqında yazdı.
+
+    Qin əvvəlcə indi _Horner metodu_ olaraq bilinən çoxsaylı tənliklərin ədədi həll edilməsi üçün
+    bir metod hazırladı. Üç tərəfinin uzunluğuna əsasən üçbucağın sahəsi üçün bir düstur tapdı,
+    arifmetik seriyanın cəmini hesabladı və Çin riyaziyyatına "sıfır" bir simvol təqdim etdi.
+
+    Qin, yağışları ölçmək və əkinçilik üçün vacib olan meteoroloji məlumatları toplamaq üçün
+    istifadə olunan _Tianchi hövzələrini_ icad etdi.
+
+johnson:
+  born: 1918
+  died: 2020
+  name: Johnson
+  bio: |
+    __Katherine Johnson__ (1918 - 2020) Afrika-Amerika riyaziyyatçısı idi. NASA-da işləyərkən
+    Johnson, Amerikalı astronavtların götürdüyü orbitləri - kosmosda ilk Amerikalı olan Alan
+    Shepardı, Apollo Ayın eniş proqramını və hətta Kosmik Şuttle də hesabladı.
+
+    Orbital traektoriyalarını, pəncərələrini işə salmağı və təcili qayıdış yollarını hesablamaq üçün
+    qeyri-adi bacarığı çox məşhur idi. Kompüterlərin gəlişindən sonra da astronavt Con Qlenn ondan
+    elektron nəticələrin şəxsən yenidən yoxlanılmasını istədi.
+
+    2015-ci ildə Johnson Prezident azadlığı medalı aldı.
+
+julia:
+  name: Julia
+  bio: |
+    __Gaston Maurice Julia__ (1893 - 1978) sonradan Benoit Mandelbrot tərəfindən populyarlaşan
+    fraktal _Julia_ dəstini birlikdə kəşf edən Fransız riyaziyyatçısı idi.
+
+karinthy:
+  name: Karinthy
+  bio: |
+    __Frigyes Karinthy__ (1887 - 1938) macar yazıçısı, şairi və jurnalisti idi. 1929-cu ildə
+    "Zəncirlər" qısa hekayəsi ilə məşhurdur, ilk olaraq _altı dərəcə ayrılma_ anlayışını təqdim
+    etmişdir.
+
+kepler:
+  name: Kepler
+  born: 1571
+  died: 1630
+  bio: |
+    __Johannes Kepler__ (1571 - 1630) alman astronomu və riyaziyyatçısı idi. O, Praqadakı _imperator
+    riyaziyyatçısı idi və planetar hərəkət_ üçün üç _qanunları ilə yaxşı tanışdır. Kepler optikada
+    da çalışdı və müşahidələri üçün təkmilləşdirilmiş bir teleskop icad etdi.
+  links:
+    - title: Elliptical Orbits
+      url: /course/circles/conic-sections#kepler
+
+khayyam:
+  name: Khayyam
+  born: 1048
+  died: 1131
+  bio: |
+    __Ömər Xəyyam__ (عمر خیّام, 1048 - 1131) fars riyaziyyatçısı, astronomu və şairi idi. Bütün kub
+    tənliklərini təsnif etməyi və həll etməyi bacardı və Evklidin _paralel aksiomunu_ anlamaq üçün
+    yeni yollar tapdı. Xəyyam eyni zamanda _Cəlali təqvimi_, bəzi ölkələrdə hələ də istifadə olunan
+    dəqiq bir günəş təqvimini tərtib etdi.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+koch:
+  name: von Koch
+  bio: |
+    __Niels Fabian Helge von Koch__ (1870 - 1924) İsveç riyaziyyatçısı idi. Əvvəlcə onun adını
+    daşıyan bir fraktal olan _Koç qar uçqunu_ təsvir etdi və Riemann hipotezi və baş ədədlərin
+    paylanması arasındakı əlaqələri sübut etdi.
+
+lagrange:
+  born: 1736
+  died: 1813
+  name: Lagrange
+  bio: |
+    __Joseph-Louis Lagrange__ (1736 - 1813) Leonard Euler-in ardınca Berlində Elmlər Akademiyasının
+    direktoru vəzifəsini yerinə yetirən italyan riyaziyyatçısı idi.
+
+    Dəyişikliklərin təhlili və hesablanması üzərində işləmiş, diferensial tənliklərin həlli üçün
+    yeni metodlar icad etmiş, say nəzəriyyəsində teoremləri sübut etmiş və qrup nəzəriyyəsinin
+    əsaslarını qoymuşdur.
+
+    Lagrange klassik və göy mexanikası haqqında da yazdı və Avropada metrik sistemin qurulmasına
+    kömək etdi.
+
+lambert:
+  born: 1728
+  died: 1777
+  name: Lambert
+  bio: |
+    __Johann Lambert__ (1728 - 1777) İsveçrə riyaziyyatçısı, fiziki, astronomu və filosofu idi. İlk
+    olaraq _π_ irrasional bir say olduğunu sübut etdi və hiperbolik trigonometrik funksiyaları
+    təqdim etdi. Lambert, həndəsə və kartoqrafiya üzərində də işləmiş, xəritə proqnozları yaratmış
+    və Evklid olmayan fəzaların kəşfinə kölgə salmışdır.
+
+laplace:
+  born: 1749
+  died: 1827
+  name: Laplace
+  small: true
+  bio: |
+    __Pierre-Simon Laplas__ (1749 - 1827) fransız riyaziyyatçısı və alimi idi. Geniş maraqları və
+    işinin çox təsir etdiyi üçün bəzən onu "Fransanın Nyutonu" adlandırırlar.
+
+    Beş cildlik bir kitabda Laplas, göy mexanikasındakı problemləri _həndəsə_ -dən _hesablamalarına_
+    tərcümə etmişdir. Bu, kainatımızı dərk etmək üçün geniş yeni strategiyalar açdı. Günəş
+    sisteminin fırlanan toz diskindən inkişaf etməsini təklif etdi.
+
+    Laplas, ehtimal sahəsini də qabaqlayır və ehtimalın fiziki dünyadakı məlumatları anlamağımızda
+    necə kömək edə biləcəyini göstərdi.
+
+leibniz:
+  name: Leibniz
+  born: 1646
+  died: 1716
+  bio: |
+    __Gottfried Vilhelm Leibniz__ (1646 - 1716) Alman riyaziyyatçısı və filosofu idi. Bir çox digər
+    nailiyyətlər arasında, o, hesablama ixtiraçılarından biri idi və ilk mexaniki kalkulyatorlardan
+    birini yaratdı.
+
+    Leybniz, kainatımızın Allahın yaratdığı ən yaxşı kainat olduğuna inanaraq, bizə iradə azadlığına
+    sahib olmasına inanırdı. O, _rasionalizmin_ böyük təbliğçisi idi, eyni zamanda fizika, tibb,
+    dilçilik, hüquq, tarix və bir çox digər sahələrə də töhfələr verdi.
+
+leonardo:
+  born: 1452
+  died: 1519
+  name: Da Vinci
+  bio: |
+    __Leonardo da Vinci__ (1452 - 1519) italyan rəssam və polimmat idi. Rəssamlıq, heykəltəraşlıq və
+    memarlıqdan mühəndislik, riyaziyyat, anatomiya, astronomiya, botanika və kartoqrafiyaya qədər
+    maraqları dəyişdi. O, tez-tez "Universal Dahi" nin nümunəsi olaraq görülür və indiyə qədər
+    yaşamış ən müxtəlif istedadlı şəxslərdən biri idi.
+
+    Leonardo Vinçidə anadan olmuş, Florensiyada təhsil almış və Milan, Roma, Bolonya və Venesiyada
+    işləmişdir. Rəsmlərindən yalnız 15-i sağ qalıb, lakin bunların arasında dünyanın ən yaxşı
+    bilinən və ən çox yayılan əsərləri, o cümlədən _Mona Lisa_ və _Son Təqdimat_ da var.
+
+    Noutbuklarında çox sayda rəsm, ixtira və elmi diaqram var - ilk uçan maşınlar və vertolyotlar,
+    hidravlik nasoslar, körpülər və sair.
+
+lie:
+  born: 1842
+  died: 1899
+  name: Lie
+  small: true
+  bio: |
+    Norveç riyaziyyatçısı __Marius Sophus Lie__ (1842 - 1899) _davamlı çevrilmə qruplarının_ -
+    hazırda _Yalan qrupları_ adlı tədqiqatında mühüm irəliləyişlər etmişdir. Ayrıca diferensial
+    tənliklər və Evklid olmayan həndəsə üzərində işləmişdir.
+
+lobachevsky:
+  born: 1792
+  died: 1856
+  name: Lobachevsky
+  small: true
+  bio: |
+    __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) rus riyaziyyatçısı və Evklid olmayan həndəsə
+    qurucularından biri idi. Evklidin beşinci aksiomunun (paralel xətlər haqqında) tutmadığı ardıcıl
+    bir həndəsə növü qura biləcəyinizi göstərə bildi.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+lorenz:
+  name: Lorenz
+  born: 1917
+  died: 2008
+  bio: |
+    __Edward Lorenz__ (1917 - 2008) amerikalı riyaziyyatçı və meteoroloq idi. O, _xaos
+    nəzəriyyəsini_ kəşf etdi, _qəribə cəlbediciləri_ kəşf etdi və "kəpənək effekti" ifadəsini
+    işlətdi.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+
+lovelace:
+  born: 1815
+  died: 1852
+  name: Lovelace
+  overflow: true
+  bio: |
+    __Ada Lovelace__ (1815 - 1852) ingilis yazıçısı və riyaziyyatçısı idi. Charles Babb ilə birlikdə
+    _Analitik Mühərriki_ erkən, mexaniki bir kompüterdə çalışdı. Belə bir maşın üzərində işlətmək
+    üçün ilk alqoritmi yazdı (Bernoulli nömrələrini hesablamaq üçün), tarixində ilk kompüter
+    proqramçısı oldu.
+
+    Ada, yanaşmasını "poetik elm" olaraq xarakterizə etdi və çox vaxt texnologiyanın cəmiyyətə
+    təsiri haqqında düşündü.
+
+madhava:
+  born: 1340
+  died: 1425
+  name: Madhava
+  bio: |
+    __Sangamagramma'dan Madhava__ (c. 1340 - 1425) Hindistanın cənubundan olan bir riyaziyyatçı və
+    astronom idi. Orijinal əsərlərinin hamısı itirildi, lakin riyaziyyatın inkişafına çox təsir
+    etdi.
+
+    Madhava ilk dəfə sonsuz seriyalardan təxmini trigonometrik funksiyaları istifadə etdi ki, bu da
+    bir çox əsrlər sonra hesablamaların inkişafı yolunda əhəmiyyətli bir addım idi. O, həndəsə və
+    cəbri də öyrəndi və _π_ (sonsuz seriyalardan istifadə etməklə) üçün dəqiq bir düstur tapdı.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Pi
+      url: /course/circles/introduction
+
+mandelbrot:
+  born: 1924
+  died: 2010
+  name: Mandelbrot
+  bio: |
+    Riyaziyyatçı __Benoit Mandelbrot__ Polşada anadan olub, Fransada böyüyüb və nəticədə ABŞ-a
+    köçüb. O, _fraktal həndəsə_ -nin öncüllərindən biri idi və xüsusilə "kobudluq" və "xaos" un
+    həqiqi aləmdə necə görünməsi ilə maraqlanırdı (məs. Buludlar və ya sahil zolaqları).
+
+    IBM-də işləyərkən fraktalların qrafik təsvirlərini yaratmaq üçün erkən kompüterlərdən istifadə
+    etdi və 1980-ci ildə məşhur _Mandelbrot_ dəstini kəşf etdi.
+  links:
+    - title: Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
+
+menger:
+  name: Menger
+  bio: |
+    __Karl Menger__ (1902 - 1985) Avstriya-Amerika riyaziyyatçısı idi. Cəbr, həndəsə, ölçülər, oyun
+    nəzəriyyəsi və sosial elmləri araşdırdı, ancaq _Menger süngəri_, məşhur üç ölçülü _fraktal_ üçün
+    ən yaxşı xatırlanır.
+
+mersenne:
+  born: 1588
+  died: 1648
+  name: Mersenne
+  bio: |
+    __Marin Mersenne__ (1588 - 1648) fransız riyaziyyatçısı və keşişidir. Elmi dünyadakı təmasları
+    ilə 17-ci əsrdə tez-tez mübadilə edildiyi üçün "Avropanın poçt qutusu" adlandırıldı.
+
+    Bu gün biz onu _Mersenne priyomları_, `2^n - 1` kimi yazıla bilən baş sayları üçün çox
+    xatırlayırıq. Ən böyük məlum priyomların əksəriyyəti bu tipdir. Ayrıca akustika və titrəyən bir
+    simli harmonikanı araşdırdı və ilahiyyat və fəlsəfə haqqında yazdı.
+  links:
+    - title: Large Primes
+      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+
+milgram:
+  name: Milgram
+  bio: |
+    __Stenley Milgram__ (1933 - 1984) məşhur sosial psixoloq idi. O, ən yaxşısı _itaət_ üzrə
+    təcrübələr, böyüklərin əmrlərə tabe olmağa hazır olduqlarını, başqalarına zərər verdikdə də necə
+    olmağını sınamaq və əlaqələrin dərəcəsini sınayan _kiçik dünya təcrübəsi_ üçün ən yaxşı bilinir.
+    cəmiyyətlər.
+
+mirzakhani:
+  born: 1977
+  died: 2017
+  name: Mirzakhani
+  overflow: true;
+  bio: |
+    __Məryəm Mirzəxani__ (مریم میرزاخانی, 1977 - 2017) İran riyaziyyatçısı və Standford
+    Universitetinin professoru idi. Riyaziyyatda ən yüksək mükafatı olan _Fields Medal_ almış yeganə
+    qadındır.
+
+    Məryəm dinamik sistemlərin və həndəsənin kəsişməsində işləyirdi. _hiperbolik səthlər_ və
+    _kompleks manifoldlar_ kimi obyektləri araşdırdı, eyni zamanda riyaziyyatın bir çox başqa
+    sahələrinə də töhfə verdi.
+
+    Problemləri həll edərkən Məryəm böyük kağız vərəqlərinə doodles və diaqramlar çəkir, əsas
+    naxışları və gözəllikləri görür. Qızı hətta Məryəmin işini "rəsm" kimi təsvir etdi. 40 yaşında
+    Məryəm döş xərçəngindən öldü.
+
+monge:
+  born: 1746
+  died: 1818
+  name: Monge
+  bio: |
+    __Gaspard Monge__ (1746 - 1818) fransız riyaziyyatçısı idi. Üç ölçülü məkanda (məsələn, bir
+    sahədəki) səthlərdə _əyrilik xətti_ anlayışını təqdim edərək _diferensial həndəsə_ atası hesab
+    olunur. Monge eyni zamanda iki ölçülü rəsmlərdən istifadə edərək üç ölçülü cisimlərin təsvirini
+    verməyə imkan verən _ortoqrafik proyeksiya_ və _təsviri həndəsə_ icad etdi.
+
+    Fransız İnqilabı dövründə Monge Dəniz naziri olaraq vəzifə yerinə yetirdi. Fransız təhsil
+    sistemində islahatlara kömək etdi və École Politexnikasını tapdı.
+  small: true
+  links:
+    - title: Map Projections
+      url: /world/Dimensions_and_Distortions
+
+monsky:
+  name: Monsky
+  bio: |
+    __Paul Monsky__ (1936-cı il təvəllüdlü) - Amerikalı riyaziyyatçı və Brandeis Universitetinin
+    professorudur. O, bir kvadratın bərabər sahəli üçbucaqlara bölünməyəcəyini sübut etdi - bu
+    "Monski teoremi" kimi tanınır.
+
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) amerikalı ixtiraçı və rəssam idi. Boston yaxınlığında böyüdü və
+    sənətçi karyerasına başlamazdan əvvəl Yale universitetində oxudu.
+
+    Sənət öyrənmək üçün Avropaya səyahətdən qayıdarkən Morse yeni elektrik cihazları haqqında
+    danışan sərnişinləri eşitdi. Bu, onu yalnız bir tel istifadə edərək, elektrik teleqrafında
+    əhəmiyyətli bir inkişaf üzərində işləməyə və köməkçisi Alfred Vail ilə _Morse kodu_ inkişaf
+    etdirməsinə ilham verdi.
+
+    Maliyyələşmədə bəzi ilkin çətinliklərdən sonra Morse teleqrafı tez bir zamanda ABŞ-a və bütün
+    dünyaya yayıldı.
+
+    Morse eyni zamanda iki dəfə Nyu-York şəhərinin meri vəzifəsinə namizəd oldu, lakin köləliyə və
+    immiqrasiyaya qarşı dəstəyi onun hər iki dəfə məğlub olduğu anlamına gəldi.
+
+napier:
+  born: 1550
+  died: 1617
+  name: Napier
+  bio: |
+    __John Napier__ (1550 - 1617) Şotlandiya riyaziyyatçısı, fiziki və astronomu idi. Loqarifmlər
+    icad etdi, onlu nöqtənin istifadəsini populyarlaşdırdı və "Napier sümükləri", vurma və bölməyə
+    kömək edən əl hesablama qurğusu yaratdı.
+
+nash:
+  born: 1928
+  died: 2015
+  name: Nash
+  bio: |
+    __John Forbes Nash__ (1928 - 2015) oyun nəzəriyyəsi, diferensial həndəsə və qismən diferensial
+    tənliklər üzərində işləyən Amerikalı riyaziyyatçı idi. Riyaziyyatın mürəkkəb, real həyat
+    sistemlərində - iqtisadiyyat və hərbi də daxil olmaqla qərar qəbul etməsini necə izah edə
+    biləcəyini göstərdi.
+
+    30 yaşlarında Nash'a paranoid şizofreniya diaqnozu qoyuldu, ancaq sağaldı və akademik işə
+    qayıtdı. Həm iqtisadiyyat üzrə Nobel mükafatını, həm də riyaziyyat sahəsində ən yüksək
+    mükafatlardan olan _Abel mükafatı_ alan yeganə şəxsdir.
+  links:
+    - title: Game Theory
+      url: /world/Game_Theory
+
+neumann:
+  born: 1903
+  died: 1957
+  name: von Neumann
+  small: true
+  bio: |
+    __John von Neumann__ (1903 - 1957) Macarıstan-Amerika riyaziyyatçısı, fiziki və kompüter alimi
+    idi. Saf riyaziyyata mühüm töhfələr verdi, kvant mexanikasının qabaqcılı oldu və oyun
+    nəzəriyyəsi, mobil avtomatika, özünü vurma maşınları və xətti proqramlaşdırma kimi anlayışlar
+    hazırladı.
+
+    II Dünya Müharibəsi zamanı fon Neumann, hidrogen bombasının inkişafı üzərində işləyən _Manhetten
+    Layihəsi_ -nin əsas üzvü idi. Daha sonra Atom Enerjisi Komissiyası və ABŞ Hərbi Hava Qüvvələri
+    ilə məsləhətləşdi.
+
+newton:
+  name: Newton
+  born: 1642
+  died: 1726
+  bio: |
+    __Sir Isaac Newton__ (1642 - 1726) İngilis fiziki, riyaziyyatçısı və astronomu və bütün
+    dövrlərin ən nüfuzlu elm adamlarından biri idi. Kembric Universitetinin professoru və London
+    Kral Cəmiyyətinin prezidenti idi.
+
+    _Principia Mathematica_ adlı kitabında Nyuton klassik fizikanın əsasını qoyan və sonrakı üç əsr
+    ərzində kainata baxışımızda hakim olan hərəkət və cazibə qanunlarını ifadə etmişdir.
+
+    Digər bir çox şey arasında Newton, hesablama ixtiraçılarından biri idi, ilk əks etdirən teleskop
+    qurdu, səs sürətini hesabladı, mayelərin hərəkətini öyrəndi və prizmaların günəş işığını göy
+    qurşağı rəngli spektrə necə bölməsinə əsaslanaraq rəng nəzəriyyəsini inkişaf etdirdi. .
+  links:
+    - title: Gravity
+      url: /course/circles/conic-sections#newton
+    - title: Digits of Pi
+      url: /course/circles/introduction#pi-record
+
+nicomachus:
+  name: Nicomachus
+  born: 60
+  died: 120
+  overflow: true
+  bio: |
+    __Gerasa Nikomusu__ (e.ə. 60 - 120) qədim yunan riyaziyyatçısı idi, o da nömrələrin mistik
+    xüsusiyyətləri barədə çox vaxt sərf etmişdir. Onun kitabı _Arifmetikaya giriş_, mükəmməl
+    ədədlərin ilk qeydini ehtiva edir.
+  links:
+    - title: Perfect Numbers
+      url: /course/sequences/special#perfect
+
+nightingale:
+  born: 1820
+  died: 1910
+  name: Nightingale
+  small: true
+  bio: |
+    __Florence Nightingale__ (1820 - 1910) İngilis tibb bacısı və statistik idi. Krım müharibəsi
+    zamanı yaralı İngilis əsgərlərinə qulluq etdi və daha sonra tibb bacıları üçün ilk təlim
+    məktəbini qurdu. "Lampa ilə Xanım" olaraq, o, mədəni bir simvol yaratdı və ABŞ-da yeni tibb
+    bacıları hələ də _bülbül girovunu_ alırlar.
+
+    Onun tibbə verdiyi ən mühüm töhfələrdən biri müalicələrin qiymətləndirilməsi üçün statistikanın
+    istifadəsi idi. Çox sayda infoqrafiya yaratdı və pasta tablolarından istifadə edənlərdən biri
+    oldu. Bülbül, həmçinin Hindistanda sanitariya və aclıqdan qurtuluşu yaxşılaşdırmaq üçün çalışdı,
+    fahişəlik haqqında qanunların ləğvinə kömək etdi və qadınlar üçün yeni karyeraların təşviqinə
+    kömək etdi.
+
+noether:
+  name: Noether
+  born: 1882
+  died: 1935
+  bio: |
+    __Amalie Emmy Noether__ (1882 - 1935), abstrakt cəbr və nəzəri fizikada, o cümlədən simmetriya
+    və qorunma qanunları arasında mühüm kəşflər edən bir Alman riyaziyyatçısı idi. Tez-tez ən
+    nüfuzlu qadın riyaziyyatçısı kimi təsvir olunur.
+  small: true
+  links:
+    - title: Symmetry in Physics
+      url: /course/transformations/physics
+
+oresme:
+  born: 1323
+  died: 1382
+  name: Oresme
+  bio: |
+    __Nicole Oresme__ (c. 1323 - 1382) mərhum orta əsrlərdə yaşayan mühüm fransız riyaziyyatçısı,
+    filosofu və yepiskopu idi. Dekartdan xeyli əvvəl koordinat həndəsəsini icad etdi, fraksiya
+    eksponentlərindən ilk istifadə etdi və sonsuz seriyalar üzərində işlədi. İqtisadiyyat, fizika,
+    astronomiya və ilahiyyat haqqında yazdı və Fransa kralı V Charles V'in müşaviri idi.
+
+pacioli:
+  born: 1446
+  died: 1517
+  name: Pacioli
+  bio: |
+    __Luca Pacioli__, artıma və mənfi (+ və -) üçün standart simvollar icad edən nüfuzlu bir İtalyan
+    rahibi və riyaziyyatçısı idi. O, ikitərəfli mühasibat uçotunu tətbiq etdiyi Avropadakı ilk
+    mühasiblərdən biri idi. Pacioli Leonardo da Vinci ilə əməkdaşlıq etdi və arifmetika və həndəsə
+    haqqında da yazdı.
+
+pascal:
+  name: Pascal
+  born: 1623
+  died: 1662
+  bio: |
+    __Blez Paskal__ (1623 - 1662) fransız riyaziyyatçısı, fiziki və filosofu idi. Proyektiv həndəsə,
+    ehtimal və vakuumun fizikası üzərində işləməklə yanaşı, ilk mexaniki hesablayıcıların bir
+    qismini icad etdi.
+
+    Ən məşhuru, Paskal _Paskal üçbucağının_, bəzi inanılmaz xüsusiyyətlərə malik sonsuz sayda
+    üçbucaq adlandırılması ilə yadda qalmışdır.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+peano:
+  born: 1858
+  died: 1932
+  name: Peano
+  small: true
+  bio: |
+    İtalyan riyaziyyatçısı __Cüzeppe Peano__ (1858 - 1932) məntiq və riyaziyyat haqqında 200-dən çox
+    kitab və məqalə çap etdirmişdir. Ciddi cəbr və analiz üçün əsas olan _Peano aksiomlarını_ tərtib
+    etdi, məntiq və dəst nəzəriyyəsi üçün notasiyasını inkişaf etdirdi, fasiləsiz, boşluq doldurma
+    əyriləri (_Peano əyriləri_) qurdu və induksiya ilə sübut metodu üzərində işləmişdir.
+
+    Peano, Latın dilində sadələşdirilmiş bir versiyası olan _Latino sine flexione_ yeni, beynəlxalq
+    bir dil də inkişaf etdirdi.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+pearson:
+  name: Pearson
+  bio: |
+    __Karl Pearson__ (1857 - 1936) İngilis riyaziyyatçısı və statististi idi. O, bir çox digər
+    mövzular arasında biometriya, meteorologiya və evgenika üzərində işləmiş və London Universitet
+    Universitetində dünyanın ilk universitet statistika şöbəsini qurmuşdur.
+
+penrose:
+  name: Penrose
+  born: 1931
+  bio: |
+    __Sir Roger Penrose__ (1931-ci il təvəllüdlü) - ümumi nisbi və kosmologiyada təməlqoyma işləri
+    ilə tanınan İngilis riyaziyyatçısı və fizikidir - tez-tez Stephen Hawking və Michael Atiyah kimi
+    digər məşhur elm adamları ilə əməkdaşlıq edir. Ayrıca _Penrose Tilings_ -i də aşkar etdi: özünə
+    bənzər, dövri olmayan tessellations.
+  links:
+    - title: Penrose Tilings
+      url: /course/polyhedra/tessellations#penrose
+
+perelman:
+  born: 1966
+  name: Perelman
+  bio: |
+    2003-cü ildə rus riyaziyyatçısı __Qriqori Perelman__ (Григо́рий Перельма́нборн, 1966-cı il
+    təvəllüdlü) _Poincaré Conjecture_ -ni sübut etdi, bu vaxta qədər riyaziyyatda ən məşhur həll
+    edilməmiş problemlərdən biri idi.
+
+    Kompleks sübut 2006-cı ilə qədər təsdiqləndi, ancaq Perelman onunla birlikdə gələn iki böyük
+    mükafatdan imtina etdi: 1 milyon dollarlıq Clay Millennium mükafatı və riyaziyyatda ən yüksək
+    tanınan _Sahələr Medalı_. Əslində dedi: _"Mən pul və şöhrətlə maraqlanmıram; Zooparkdakı heyvan
+    kimi görünmək istəmirəm. "_
+
+    Perelman eyni zamanda Riamenya həndəsəsinə və həndəsi topologiyasına da töhfələr verdi və
+    Poincaré Conjecture hələ də yeddi Minilliyin Mükafatı problemlərinin həll olunduğu yeganə
+    biridir.
+
+pingala:
+  name: Pingala
+  born: -330
+  died: -270
+  bio: |
+    __Pingala__ (Pişikalı) eramızdan əvvəl 300 ətrafında yaşamış qədim hind şairi və riyaziyyatçısı
+    idi, lakin həyatı haqqında çox az məlumat var. Sanskrit şeirini riyazi olaraq təhlil etdiyi
+    Çandaḥśstra yazdı. İkili ədədlərin, Fibonacci ədədlərinin və Paskal üçbucağının ilk məlum
+    açıqlamaları da var.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+planck:
+  name: Plank
+  bio: |
+    __Max Plank__ (1858 - 1947) Alman fiziki və Kvant Mexanikasının orijinal inkişaf
+    etdiricilərindən biri idi - 1918-ci ildə Nobel mükafatı aldı.
+
+plato:
+  name: Plato
+  born: -425
+  died: -347
+  bio: |
+    __Platon__ (e.ə. 425 - e.ə. 347) qədim Yunanıstanda bir filosof idi və müəllimi Sokrat və
+    tələbəsi Aristotel ilə birlikdə Qərb fəlsəfəsi və elminin əsasını qoydu.
+
+    Platon, Qərb dünyasında ilk ali təhsil müəssisəsi olan Afina Akademiyasını qurdu. Fəlsəfə və
+    ilahiyyat, elm və riyaziyyat, siyasət və ədalət mövzusunda yazdığı çoxsaylı yazıları onu bütün
+    dövrlərin ən nüfuzlu mütəfəkkirlərindən birinə çevirir.
+  links:
+    - title: Platonic Solids
+      url: /course/polyhedra/platonic
+
+poincare:
+  born: 1854
+  died: 1912
+  name: Poincaré
+  bio: |
+    Fransız riyaziyyatçısı __Henri Poincaré__ (1854 - 1912) tez-tez _son universalist_ kimi təsvir
+    olunur, yəni ömrü boyu tanınan riyaziyyatın hər sahəsində çalışmışdır.
+
+    Poincaré _Topologiya_ sahəsinin yaradıcılarından biridir və o _Poincaré zənnini_ ilə gündəmə
+    gətirdi. 2003-cü ildə Grigori Perelman tərəfindən sübut olunana qədər bu riyaziyyatda məşhur
+    həll edilməmiş problemlərdən biri idi
+
+    O, həmçinin "üç bədən problemi" üçün qismən bir həll tapdı və kosmosdakı üç ulduzun və ya
+    planetin hərəkətinin tamamilə gözlənilməz ola biləcəyini kəşf etdi. Müasir _Xaos nəzəriyyəsi_
+    üçün zəmin yaratdı.
+
+    Poincaré ilk olaraq _cazibə dalğaları_ təklif etdi və Lorentz çevrilmələri üzərində işi Albert
+    Eynşteynin xüsusi nisbiilik nəzəriyyəsini qurduğu əsas oldu.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+    - title: Topology
+      url: /world/Dimensions_and_Distortions
+
+ptolemy:
+  born: 90
+  died: 168
+  name: Ptolemy
+  bio: |
+    __Klaudi Ptolemey__ (e.ə. 100 - 170 e.ə.) Yunan-Roma riyaziyyatçısı, astronom, coğrafiya və
+    astroloq idi. Kainatımızın _Ptolemaic_ və ya _Geosentrik_ modeli ilə ən yaxşı yadda qalıb -
+    Yerin mərkəzdə olması və bütün planetlərin və günəşin ətrafında fırlandığı.
+
+    Bu gün bu modelin səhv olduğunu bilsək də, Ptoleminin elmi təsiri mübahisəsizdir. Bir çox
+    praktik tətbiqetmələrlə trigonometrik cədvəllər hazırladı, bu da əsrlər boyu ən doğru olaraq
+    qaldı. Ayrıca Yerin ətraflı xəritələrini yaratdı və musiqi nəzəriyyəsi və optika haqqında yazdı.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Orbits
+      url: /course/circles/introduction
+
+pythagoras:
+  name: Pythagoras
+  born: -570
+  died: -495
+  bio: |
+    __Samos Pifaqorası__ (e.ə. 570 - 495) yunan filosofu və riyaziyyatçısı idi. Ən yaxşısı _Pifaqor
+    teoremini_ sübut etməsi ilə məşhurdur, lakin bir çox digər riyazi və elmi kəşflər etdi.
+
+    Pifaqorlar musiqini riyazi bir şəkildə izah etməyə çalışdılar və tezliklərin nisbəti sadə bir
+    fraksiya olduqda iki tonun birlikdə "gözəl" (samitli) səsləndiyini aşkar etdilər.
+
+    O, eyni zamanda bir neçə qəribə qaydalara əməl edərkən və şagirdləri ilə riyaziyyata, demək olar
+    ki, bir din kimi ibadət etdiyi bir məktəb qurdu - lakin məktəb sonda rəqibləri tərəfindən
+    yandırıldı.
+  links:
+    - title: Pythagoras’ Theorem
+      url: /course/triangles/pythagoras
+
+ramanujan:
+  born: 1887
+  died: 1920
+  name: Ramanujan
+  overflow: true
+  bio: |
+    __Srinivasa Ramanujan__ (1887 - 1920) Hindistanda böyüdü, burada riyaziyyatdan çox az rəsmi
+    təhsil aldı. Yenə də kiçik bir dükanda vəzifəçi kimi işləyərkən tamamilə təcrid şəraitində yeni
+    ideyalar hazırlamağı bacardı.
+
+    Digər riyaziyyatçılarla əlaqə qurmaq üçün bir neçə uğursuz cəhddən sonra məşhur G.H-yə məktub
+    yazdı. Hardy. Hardy dərhal Ramanujan'ın dahisini tanıdı və İngiltərədəki Kembricə səyahət
+    etməsini təmin etdi. Birlikdə say nəzəriyyəsi, təhlil və sonsuz seriyalarda çoxsaylı kəşflər
+    etdilər.
+
+    Təəssüf ki, Ramanujan çox keçmədən xəstələndi və Hindistana qayıtmaq məcburiyyətində qaldı,
+    burada 32 yaşında öldü. Qısa ömrü boyunca Ramanujan, geniş mövzularda 3000-dən çox teorem və
+    tənlik sübut etdi. Onun işi riyaziyyatın tamamilə yeni sahələrini yaratdı və noutbukları
+    ölümündən sonra onilliklər ərzində digər riyaziyyatçılar tərəfindən öyrənildi.
+
+regiomontanus:
+  born: 1436
+  died: 1476
+  name: Regiomontanus
+  overflow: true
+  bio: |
+    __Johann Müller Regiomontanus__ (1436 - 1476) Alman riyaziyyatçısı və astronomu idi. Ətraflı
+    astronomik cədvəllər yaratmaq və çoxlu dərsliklər çap etmək də daxil olmaqla hər iki sahədə
+    böyük irəliləyişlər əldə etdi.
+
+richardson:
+  name: Richardson
+  bio: |
+    __Lewis Fry Richardson__ (1881 - 1953) İngilis riyaziyyatçısı və fiziki idi. O, hava proqnozunun
+    müasir riyazi texnikalarını kəşf etdi, aysberqləri aşkar etmək üçün akustik maşınlar icad etdi
+    və xətti tənliklər sisteminin həlli üsullarını inkişaf etdirdi.
+
+    Ayrıca, iki ölkənin ortaq sərhədlərinin uzunluğunu nəzərə alaraq bir-birlərinə müharibə elan
+    etmə ehtimalını da hesablamağa çalışdı. Ancaq ölkələrin sərhədlərinin uzunluğu üçün dəqiq ölçü
+    tapa bilmədi. Bu, sərhədlərin və sahil xətlərinin _fraktallarının_ çoxlu xüsusiyyətlərinə sahib
+    olduğunu başa düşməyə səbəb oldu.
+
+riemann:
+  name: Riemann
+  born: 1826
+  died: 1866
+  overflow: true
+  bio: |
+    __Bernhard Riemann__ (1826 - 1866) analiz və say nəzəriyyəsi sahələrində çalışan bir Alman
+    riyaziyyatçısı idi. İnteqrasiyanın ilk sərt tərifi ilə tanış oldu, ümumi nisbi nisbətin əsasını
+    qoyan diferensial həndəsə öyrəndi və baş ədədlərin paylanması ilə bağlı əsaslı kəşflər etdi.
+  links:
+    - title: Riemann Hypothesis
+      url: /course/divisibility/the-distribution-of-primes#riemann
+
+russell:
+  born: 1872
+  died: 1970
+  name: Russell
+  small: true
+  bio: |
+    __Bertrand Russell__ (1872 - 1970) İngilis filosofu, riyaziyyatçısı və müəllifi idi. O, geniş
+    şəkildə 20-ci əsrin ən mühüm məntiqçilərindən biri hesab olunur.
+
+    Russell "Principia Mathematica" əsərini yazdı, burada məntiqdən istifadə edərək riyaziyyat üçün
+    rəsmi bir təməl yaratmağa çalışdı. Onun işi təkcə riyaziyyat və fəlsəfəyə deyil, həm də
+    dilçiliyə, süni intellektə və metafizikaya əhəmiyyətli dərəcədə təsir göstərmişdir.
+
+    Russell ehtiraslı bir pasifist və müharibə əleyhinə bir fəal idi. 1950-ci ildə "humanitar
+    idealları və düşüncə azadlığını müdafiə etdiyi" əsərinə görə ədəbiyyat üzrə Nobel mükafatını
+    aldı.
+
+shannon:
+  name: Shannon
+  born: 1898
+  died: 1972
+  bio: |
+    __Klod Shannon__ (1898 - 1972) Amerikalı riyaziyyatçı və elektrik mühəndisi, "məlumat
+    nəzəriyyəsinin atası" olaraq xatırlanır. İkinci Dünya Müharibəsi zamanı milli müdafiəsi üçün
+    kodlaşdırma da daxil olmaqla kriptovalyutası üzərində çalışdı, eyni zamanda hoqqabazlıq,
+    velosiped sürmə və şahmatla maraqlanırdı. Boş vaxtlarında, hoqqabazlıq edə bilən və ya Rubikin
+    kub tapmacasını həll edən maşınlar qurdu.
+  small: true
+  links:
+    - title: Computers for Gambling
+      url: /course/statistics/casino#dealer
+
+shijie:
+  born: 1249
+  died: 1314
+  name: Zhu Shijie
+  bio: |
+    __Zhu Shijie__ (朱世杰, 1249 - 1314) ən böyük Çin riyaziyyatçılarından biri idi. _Dörd
+    Bilinməyənlərin Jade Güzgüsü_ kitabında, çoxbucaqlı tənliklər sistemlərindən və dörd
+    dəyişənlərdən (_Cənnət_, _Yer_ adlanan) istifadə edərək 288 fərqli problemin necə həll
+    edildiyini göstərdi. _Adam_ və _Mətn_).
+
+    Zhu Paskal üçbucağından geniş istifadə etdi. O, eyni zamanda xətti tənliklər sistemlərinin həlli
+    üçün qaydalar icad etdi - müasir matris metodlarımızı uzun əsrlərə aid etməklə.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+sierpinski:
+  name: Sierpiński
+  bio: |
+    __Wacław Franciszek Sierpiński__ (1882 - 1969) Polşa riyaziyyatçısı idi. Müəyyən edilmiş
+    nəzəriyyə, say nəzəriyyəsi, təhlil və topologiyalarda mühüm kəşflər etdi, 700-dən çox sənəd və
+    50 kitab nəşr etdi. Ayrıca _Sierpinski üçbucağı_, _Sierpinski xalçası_ və _Sierpinski əyri_
+    daxil olmaqla bir çox məşhur _fraktalları icad etdi.
+
+    _Sierpinski nömrələri_, tək ədədlərdir _k_, belə ki, `k * 2^n +1` bütün_ {_ bütün natural
+    ədədlər üçün kompozitdir. _Sierpinski problemi_ ən kiçik Sierpinski nömrələrini tapmağa çalışır.
+    Ən kiçik məlum olan sayı 78,557-dir, lakin daha kiçik olanların olub-olmadığı hələ bilinmir.
+
+sikdar:
+  name: Sikdar
+  bio: |
+    __Radhanath Sikdar__ (1813 - 1870) hind riyaziyyatçısı idi. Everest dağının hündürlüyünü ölçən
+    və yer üzündəki ən yüksək dağ olduğunu göstərən ilk insan idi.
+
+singmaster:
+  name: Singmaster
+  bio: |
+    __David Singmaster__ (1939-cu il təvəllüdlü), xüsusilə riyazi bulmacaları və beyin oyunları ilə
+    məşhur olan bir Amerikalı riyaziyyatçıdır. _Rubik küpünün_ analizi və həlli üçün riyazi
+    alqoritmlər hazırlayan ilk adam idi.
+
+stevin:
+  born: 1548
+  died: 1620
+  name: Stevin
+  bio: |
+    __Simon Stevin__ (1548 - 1620) Flamand riyaziyyatçısı və mühəndisi idi. Onluq fraksiyaları
+    istifadə edən və yazan ilk insanlardan biri idi və elmə və mühəndisliyə bir çox töhfələr verdi.
+
+tartaglia:
+  born: 1499
+  died: 1557
+  name: Tartaglia
+  bio: |
+    __Niccolò Fontana Tartaglia__ (1499 - 1557) italyan riyaziyyatçısı, mühəndis və mühasib idi.
+    Arximed və Evklidin ilk İtalyan tərcümələrini nəşr etdi, istənilən kub tənliyinin (kompleks
+    ədədlərin ilk həqiqi tətbiqi daxil olmaqla) həlli üçün bir düstur tapdı və top toplarının mərmi
+    hərəkətini araşdırmaq üçün riyaziyyatdan istifadə etdi.
+
+thales:
+  name: Thales
+  born: -624
+  died: -546
+  bio: |
+    __Milet Tales__ (e.ə. 624 - 546) yunan riyaziyyatçısı və filosofu idi.
+
+    Thales tez-tez Qərb sivilizasiyasında ilk alim kimi tanınır: din və ya mifologiyadan istifadə
+    etməkdənsə, elmi hadisələrdən istifadə edərək təbiət hadisələrini izah etməyə çalışdı. O, eyni
+    zamanda tarixində bir riyazi kəşfə sahib olan ilk şəxsdir: Thales teoremi.
+  links:
+    - title: Thales’ Theorem
+      url: /course/euclidean-geometry/introduction
+
+thorp:
+  name: Thorp
+  bio: |
+    __Edward Thorp__ (1932-ci il təvəllüdlü) Amerika hedcinq fondunun meneceri və _kart saymaq_ icad
+    etməsi ilə tanınan və kazinolarda döymək üçün ilk _geyə bilən kompüteri_ qurduğu üçün
+    bilinəndir. Rulet. MİT-də işləmiş, riyaziyyat professorudur və ehtimal nəzəriyyəsinin müasir
+    tətbiqlərini qabaqlayır.
+
+turing:
+  born: 1912
+  died: 1954
+  name: Turing
+  bio: |
+    __Alan Turing__ (1912 - 1954) İngilis riyaziyyatçısı idi və tez-tez "kompüter elminin atası"
+    adlanır.
+
+    İkinci Dünya Müharibəsi illərində Turing, Bletchley Parkındakı "Hökumət Kodları və Şifrə
+    Məktəbi" nin bir hissəsi olaraq Alman hərbi qüvvələrinin istifadə etdiyi Enigma kodunun
+    pozulmasında çox vacib bir rol oynadı. Bu, müttəfiqlərin müharibədə qalib gəlməsinə kömək etdi
+    və milyonlarla insanın həyatını xilas edə bilər.
+
+    Süni intellektin qabiliyyətini qiymətləndirmək üçün istifadə edilə bilən _Turing maşın_, ümumi
+    təyinatlı kompüterin riyazi modeli və _Turing testi də icad etdi.
+
+    Turing, hələ həyatı boyu cinayət sayılan gey idi və onun təməlqoyma uğurlarının heç vaxt tam
+    tanınmaması demək idi. 41 yaşında intihar etdi.
+
+ulam:
+  name: Ulam
+  bio: |
+    __Stanislav Ulam__ (1909 - 1984) Polşa-Amerika riyaziyyatçısı idi. İlk nüvə silahlarını inkişaf
+    etdirən Amerikadakı _Manhetten Layihəsi_ də əhəmiyyətli bir rol oynadı. O, həmçinin nüvə
+    pulsları istifadə edərək raket sürüşməsi üzərində işləmiş və _Monte Carlo metodu_ - statistikada
+    vacib bir konsepsiya hazırlamışdır.
+
+venn:
+  name: Venn
+  bio: |
+    __John Venn__ (1834 - 1923), müəyyən nəzəriyyə və ehtimalda istifadə olunan _Venn diaqramını_
+    tətbiq edən bir İngilis riyaziyyatçısı və filosofu idi. Kembric Universitetində dərs deyirdi və
+    Londonda Kral Cəmiyyətinin əməkdaşı idi.
+
+viete:
+  born: 1540
+  died: 1603
+  name: Viète
+  bio: |
+    __François Viète__ (1540 - 1603) fransız riyaziyyatçısı, hüquqşünas və Fransanın Kral Henri III
+    və IV məsləhətçisi idi. Cəbrdə əhəmiyyətli irəliləyişlər etdi və əvvəlcə dəyişənləri təmsil
+    etmək üçün məktubların istifadəsini təqdim etdi.
+
+    Viète_ düsturu adlanan _Viète & # 39; s polinominin kökləri və əmsalları arasındakı əlaqəni kəşf
+    etdi. 393216 tərəfli çoxbucaqlı istifadə edərək _π_ -ni 10 onluq yerlərinə hesablamaq da daxil
+    olmaqla həndəsə və trigonometriya haqqında kitablar yazmışdır.
+
+wallis:
+  born: 1616
+  died: 1703
+  name: Wallis
+  bio: |
+    İngilis riyaziyyatçısı __John Wallis__ (1616 - 1703) hesablamanın inkişafına töhfə verdi,
+    sonsuzluq üçün nömrə xətti və the simvolunu icad etdi və Parlament və kral məhkəməsi üçün baş
+    kriptoqraf vəzifəsini icra etdi.
+
+wiles:
+  born: 1953
+  name: Wiles
+  bio: |
+    İngilis riyaziyyatçısı Sir __Andrew Wiles__ (1953-cü il təvəllüdlü) Fermatın son teoremini sübut
+    etmək üçün ən məşhurdur, bu vaxta qədər riyaziyyatda ən məşhur həll edilməmiş problemlərdən biri
+    idi.
+
+    1637-ci ildə Pierre de Fermat, bir dərslik kənarında yazdı ki, `a^n + b^n = c^n` tənliyinin `n >
+    2` üçün tam həlli olmadığına dair gözəl bir dəlil var. Təəssüf ki, heç kim bir sübut tapa
+    bilmədi - 400 il sonra Wiles-ə qədər.
+
+    Hiylələr 10 yaşından bəri problemə heyran olmuşlar və yeddi ili təklikdə işləmişlər. 1993-cü
+    ildə həllini elan etdi, arqumentindəki kiçik bir boşluğu düzəltmək üçün daha iki il çəksə də.
+
+    Yaş həddi 40-a çatan riyaziyyatda ən yüksək mükafatı olan _Fields_ medalı almaq üçün çox yaşlı
+    idi. Bunun əvəzinə Wiles işinə görə xüsusi bir gümüş lövhə ilə təltif edildi.
+
+wolfram:
+  name: Wolfram
+  bio: |
+    __Stiven Wolfram__ (1959-cu il təvəllüdlü) - İngilis-Amerika kompüter alimi, fizik və iş adamı.
+    _Riyaziyyat_ hesablama sistemini, _Wolfram | Alpha_ cavab mühərrikini və Wolfram proqramlaşdırma
+    dilini hazırladığı _Wolfram Araşdırma_ -nin yaradıcısı və baş direktorudur.

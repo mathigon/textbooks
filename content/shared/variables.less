@@ -10,10 +10,10 @@
 @green:  #22ab24;
 @yellow: #fd8c00;
 
-@orange: #ea3620;
-@purple: #6f27cc;
-@teal:   #18aa93;
-@lime:   #b3c214;
+@orange: #eb4726;
+@purple: #6d3bbf;
+@teal:   #009ea6;
+@lime:   #bfc212;
 
 @dark-grey:   #181824;
 @grey:        #3a3645;
@@ -21,11 +21,15 @@
 @light-grey:  #c5c2cc;
 
 @text-dark:   #333;
+@text-normal: #666;
 @text-medium: #999;
 @text-light:  #aaa;
 
 @border-light: #c5c2cc;
-@grey-background: mix(@grey, white, 4%);
+
+@grey-background: mix(@grey, white, 5%);
+@dark-mode: mix(@grey, @dark-grey, 30%);
+@dark-mode-background: mix(@dark-mode, white, 95%);
 
 @bounce: cubic-bezier(.33,1.9,.52,.7);
 
@@ -83,7 +87,7 @@
   background: @background url('data:image/svg+xml;utf8,@{url}') no-repeat center;
 }
 
-.iconBackground(@foreground, @background, @path, @size: 24, @box: 28) {
+.iconBackground(@foreground, @background, @path, @size: 24, @box: 24) {
   .svgBackground('<path fill="@{foreground}" d="@{path}"/>', @size, @size, @background, ' viewBox="0 0 @{box} @{box}"');
 }
 

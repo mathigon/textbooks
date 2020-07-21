@@ -428,14 +428,12 @@ Gerçek fraktallar hiçbir zaman doğada görünmezken, fraktallara _neredeyse_ 
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Orta Asya'daki dağ silsilesi
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Hindistan'da Ganj Nehri Deltası
@@ -448,14 +446,12 @@ Gerçek fraktallar hiçbir zaman doğada görünmezken, fraktallara _neredeyse_ 
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Retinadaki kan damarları
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} ABD'deki Büyük Kanyon
@@ -470,16 +466,12 @@ Gerçek fraktallar hiçbir zaman doğada görünmezken, fraktallara _neredeyse_ 
 
 Tüm bu nesneler, tamamen rastgele oluşmuş gibi görünebilir, ancak tıpkı fraktallar gibi, bunların nasıl oluştuğunu belirleyen bir örüntü vardır. Matematik, şekilleri daha iyi anlamamıza yardımcı olabilir ve fraktalların tıp, biyoloji, jeoloji ve meteoroloji gibi alanlarda uygulamaları vardır. [Devam](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Bilgisayar tarafından oluşturulan fraktal şeklinde yeryüzü
@@ -522,22 +514,18 @@ Roma'daki farklı kiliselerdeki yer döşemelerinden bazı örnekler:
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -730,15 +718,15 @@ Bu, matematikte daha önce gördüğünüz başka bir konsepte benzer: [rekursif
 
 Sonuç dizisinin `x_0` başlangıç değerine bağlı olarak nasıl çok farklı davranabileceğine dikkat edin:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 `x_0 > 1` ise, dizi [[ıraksar|yakınsar]]: _{span.reveal(when="blank-0")} sonsuza kadar büyümeye devam eder._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 `x_0` –1 ve 1 arasındaysa, dizi [[yakınsar|ıraksar]] .
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 `x_0 < -1` ise, dizi [[ıraksar|yakınsar]] .
 
@@ -951,18 +939,13 @@ Bu kaydırma çizgisini kullanarak, 27 ayrı resimden oluşan bu seride 14 katri
 
 [{.pill.red} c](target:c) değerini Mandelbrot setinin etrafında hareket ettirdikçe, ilginç bir özellik fark edebilirsiniz:
 
-* Mandelbrot setinin [[ana gövdesi](target:bulb0) içerisindeki tüm diziler [[<<<<|ıraksar|yörüngeye ulaşır]] _{span.reveal(when="blank-0")} tek bir noktaya yakınsar._
+* Mandelbrot setinin [[ana gövdesi](target:bulb0) içerisindeki tüm [[diziler|ıraksar|yörüngeye ulaşır]] _{span.reveal(when="blank-0")} tek bir noktaya yakınsar._
 * {.reveal(when="blank-0")} Üstteki [büyük ampul içindeki](target:bulb1) diziler, [[3]] noktadan oluşan [[yörüngesine ulaşır|yakınsar|ıraksar]] _{span.reveal(when="blank-1")}._
 * {.reveal(when="blank-2")} [Küçük ampulün içindeki](target:bulb2) diziler [[5]] uzunluğunda yörüngelere sahiptir.
-
 
 :::
 
 {.reveal(when="blank-3")} Her ampul farklı boyutta bir yörüngeye sahiptir, daha küçük ampuller yörüngelerinde daha fazla noktaya sahiptir. Bu yörüngelerin büyüklüğü, [Kaos teorisinde](/course/chaos) önemli bir kavram olan __Lojistik Harita__ ile yakından ilişkilidir.
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 
@@ -988,6 +971,4 @@ Bernoit Mandelbrot hayatının çoğunu fraktalların yanı sıra matematikteki 
 > sectionStatus: dev
 
 {.todo} Çok Yakında!
-
-
 

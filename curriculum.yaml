@@ -10,7 +10,8 @@
 
 integers:
   title: The Integers
-  color: 22ab24
+  color: 22AB24
+  level: Foundations
   sections:
     # TODO Update Sections
     - title: Commutative, Associative and Distributive Laws
@@ -24,11 +25,13 @@ integers:
 divisibility:
   title: Divisibility and Primes
   description: Prime numbers represent both the most basic properties and the most complex unsolved problems. Here you can learn about the building blocks of mathematics.
-  color: 1fab40
+  color: 1AA845
+  level: Foundations
 
 fractions:
   title: Fractions
-  color: 1dab5b
+  color: 11A465
+  level: Foundations
   sections:
     # TODO Update Sections
     - title: Introduction
@@ -39,7 +42,8 @@ fractions:
 
 decimals:
   title: Decimals
-  color: 1aaa77
+  color: 09A186
+  level: Foundations
   sections:
     # TODO Update Sections
     - title: Introduction
@@ -52,7 +56,8 @@ decimals:
 
 percentages:
   title: Rates, Percentages and Ratios
-  color: 18a38a
+  color: 009EA6
+  level: Foundations
   sections:
     # TODO Update Sections
     - title: Ratios and Mixtures
@@ -63,7 +68,8 @@ percentages:
 
 exponents:
   title: Roots and Exponents
-  color: 15a1ab
+  color: 0497B9
+  level: Foundations
   sections:
     # TODO Update Sections
     - title: Square and Cube Roots
@@ -74,32 +80,23 @@ exponents:
 
 shapes:
   title: Area and Shapes
-  color: 0f82f2
-  sections:
-    - title: Introduction
-    - title: Parallelograms and Triangles
-    - title: Polygons
-    - title: Circles and Circumferences
-    - title: Area of Circles
+  color: 0F82F2
+  level: Foundations
 
 polygons:
   title: Angles and Polygons
-  color: 2c63e8
+  color: 2E6AE1
+  level: Foundations
 
 solids:
   title: 3D Solids
-  color: 4a40de
-  sections:
-    - title: Polyhedra
-    - title: Nets and Surface Area
-    - title: Volumes and Cuboids
-    - title: Prisms and Pyramids
-    - title: Cylinders and Cones
-    - title: Spheres
+  color: 4E53D0
+  level: Foundations
 
 measuring:
   title: Units and Measuring
-  color: 6f27cc
+  color: 6D3BBF
+  level: Foundations
   sections:
     # TODO Update Sections
     - title: Measuring
@@ -110,7 +107,8 @@ measuring:
 
 algebra:
   title: Introduction to Algebra
-  color: fd8c00
+  color: FD8C00
+  level: Foundations
   sections:
     # TODO Update Sections
     - title: Introduction
@@ -120,7 +118,8 @@ algebra:
 
 proportional:
   title: Proportional Relationships
-  color: f76f0a
+  color: F7750D
+  level: Foundations
   sections:
     # TODO Update Sections
     - title: Introduction
@@ -130,7 +129,8 @@ proportional:
 
 linear-equations:
   title: Linear Equations
-  color: f15315
+  color: F15E19
+  level: Foundations
   sections:
     - title: Reasoning with Tape Diagrams
     - title: Weighing and Balancing
@@ -140,15 +140,18 @@ linear-equations:
 
 linear-functions:
   title: Linear Functions
-  color: ea3620
+  color: EB4726
+  level: Foundations
 
 basic-probability:
   title: Introduction to Probability
-  color: cd0e66
+  color: CD0E66
+  level: Foundations
 
 combinatorics:
   title: Combinatorics
-  color: af1589
+  color: AD1D84
+  level: Foundations
   sections:
     - title: Factorials
       preview: /world/Combinatorics
@@ -161,15 +164,8 @@ combinatorics:
 
 data:
   title: Data and Statistics
-  color: 901cac
-  sections:
-    - title: Introduction
-    - title: Dot Plots and Histograms
-    - title: Box Plots
-    - title: Mean, Median and Mode
-    - title: Sampling
-    - title: Comparing Populations
-    - title: Scatter Plots and Linear Models
+  color: 8D2CA1
+  level: Foundations
 
 
 # ------------------------------------------------------------------------------
@@ -178,36 +174,42 @@ data:
 euclidean-geometry:
   title: Euclidean Geometry
   description: Geometry is one of the oldest parts of mathematics – and one of the most useful. Its logical, systematic approach has been copied in many other areas.
-  color: 0f82f2
+  color: 0F82F2
+  level: Intermediate
   next: transformations
 
 transformations:
   title: Transformations and Symmetry
   description: Symmetry can be seen everywhere in nature – but it also underlies completely invisible laws of nature. Mathematics can explain why that is the case.
-  color: 216fec
+  color: "2274E8"
+  level: Intermediate
   next: triangles
 
 triangles:
   title: Triangles and Trigonometry
   description: "Triangles are some of the most important shapes in geometry: they have countless interesting properties and appear everywhere in engineering and technology."
-  color: 325ce6
+  color: 3566DE
+  level: Intermediate
   next: polyhedra
 
 polyhedra:
   title: Polygons and Polyhedra
   description: Geometric shapes are everywhere around us. In this course you will learn about angels, polygons, tessellations, polyhedra and nets.
-  color: "4346e0"
+  color: 4757D3
+  level: Intermediate
   next: circles
 
 circles:
   title: Circles and Pi
   trailer: tBJUNvCBkLo
-  color: 5934d9
+  color: 5A49C9
+  level: Intermediate
   next: graph-theory
 
 non-euclidean-geometry:
   title: Non-Euclidean Geometry
-  color: 6f27cc
+  color: 6D3BBF
+  level: Intermediate
   sections:
     - title: Spherical Geometry
       preview: /world/Dimensions_and_Distortions#spherical
@@ -223,60 +225,71 @@ non-euclidean-geometry:
 
 functions:
   title: Functions
-  color: fd8c00
+  color: FD8C00
+  level: Intermediate
+  next: sequences
 
 sequences:
   title: Sequences and Patterns
   description: Learn about some of the most fascinating patterns in mathematics, from triangle numbers to the Fibonacci sequence and Pascal’s triangle.
   trailer: u2vwpDVj5rU
-  color: f97607
+  color: F97E08
+  level: Intermediate
   next: quadratics
-
-equations:
-  title: Linear Equations and Inequalities
-  color: f46110
-  sections:
-    - title: Solving Linear Equations
-    - title: Graphing Linear Functions
-    - title: Systems of Linear Equations
-    - title: Row Operations and Elimination
-    - title: Linear Inequalities
-    - title: Inequalities in Two Variables
-    - title: Systems of Inequalities
 
 quadratics:
   title: Quadratic Equations
-  color: ef4b18
+  color: F6700F
+  level: Intermediate
   next: graph-theory
+
+equations:
+  title: Inequalities and Systems of Equations
+  color: F26317
+  level: Intermediate
+  sections:
+    - title: Systems of Linear Equations
+    - title: Row Operations and Elimination
+    - title: Linear Inequalities
+    - title: Systems of Inequalities
+    - title: Quadratic Inequalities
 
 exponentials:
   title: Exponential Functions
-  color: ea3620
+  color: EF551E
+  level: Intermediate
+  next: probability
 
 probability:
   title: Probability
   description: "Cards, dice, roulette and game shows: probability is one of the most fun areas of mathematics, full of surprises and real life applications."
-  color: cd0e66
+  color: CD0E66
+  level: Intermediate
   next: statistics
 
 statistics:
   title: Statistics
-  color: bb127b
+  color: BA1778
+  level: Intermediate
   next: graph-theory
 
 graph-theory:
   title: Graphs and Networks
   description: "Discover the mathematical principles that connect our world: from shaking hands to travel and navigation, colouring maps and social networks."
-  color: aa1690
+  color: A7208A
+  level: Intermediate
   next: probability
 
 codes:
   title: Codes and Ciphers
-  color: 971aa6
+  color: 93299B
+  level: Intermediate
+  next: game-theory
 
 game-theory:
   title: Game Theory
-  color: 8220b9
+  color: 8032AD
+  level: Intermediate
 
 
 # ------------------------------------------------------------------------------
@@ -284,7 +297,8 @@ game-theory:
 
 polynomials:
   title: Polynomials
-  color: fd8c00
+  color: FD8C00
+  level: Advanced
   sections:
     - title: Introduction
     - title: Zeros of Polynomials
@@ -294,7 +308,8 @@ polynomials:
 
 function-transforms:
   title: Function Transformations
-  color: fa7b06
+  color: F97E08
+  level: Advanced
   sections:
     - title: Combining and Composing Functions
     - title: Translating Functions
@@ -304,7 +319,8 @@ function-transforms:
 
 rationals:
   title: Rationals and Radicals
-  color: f66a0c
+  color: F6700F
+  level: Advanced
   sections:
     - title: Rational and Irrational Numbers
     - title: Rational Functions and Expressions
@@ -315,7 +331,8 @@ rationals:
 
 logarithms:
   title: Exponentials and Logarithms
-  color: f25813
+  color: F26317
+  level: Advanced
   sections:
     - title: Exponential Growth and Decay
     - title: Exponential Functions
@@ -326,7 +343,8 @@ logarithms:
 
 series:
   title: Sequences and Series
-  color: ee4719
+  color: EF551E
+  level: Advanced
   sections:
     - title: Sequences
     - title: Series and Sigma Notation
@@ -335,14 +353,13 @@ series:
 
 logic:
   title: Logic, Sets and Proof
-  color: ea3620
+  color: EB4726
+  level: Advanced
   sections:
     - title: Logic and Paradoxes
       preview: /world/Logic_and_Paradoxes
-    - title: Sets, Axioms and Proof
+    - title: Axioms and Proof
       preview: /world/Axioms_and_Proof
-    - title: Proof by Contradiction
-      preview: /world/Axioms_and_Proof#contradiction
     - title: Proof by Induction
       preview: /world/Axioms_and_Proof#induction
     - title: Infinity and Hilbert’s Hotel
@@ -350,7 +367,8 @@ logic:
 
 coordinate-geometry:
   title: Coordinate Geometry
-  color: 0f82f2
+  color: 0F82F2
+  level: Advanced
   sections:
     - title: Equations of Lines
     - title: Parallel and Perpendicular Lines
@@ -360,7 +378,8 @@ coordinate-geometry:
 
 trigonometry:
   title: Trigonometry
-  color: 216fec
+  color: "2274E8"
+  level: Advanced
   sections:
     - title: The Unit Circle Definition
     - title: Graphs of Trigonometric Functions
@@ -372,7 +391,8 @@ trigonometry:
 
 conics:
   title: Conic Sections and Polar Coordinates
-  color: 325ce6
+  color: 3566DE
+  level: Advanced
   sections:
     - title: Parametric Curves
     - title: Circles and Ellipses
@@ -382,11 +402,13 @@ conics:
 
 vectors:
   title: Vectors
-  color: "4346e0"
+  color: 4757D3
+  level: Advanced
 
 matrices:
   title: Matrices
-  color: 5934d9
+  color: 5A49C9
+  level: Advanced
   sections:
     - title: Matrices as Transformations
     - title: Matrix Arithmetic
@@ -397,16 +419,20 @@ matrices:
 
 complex:
   title: Complex Numbers
-  color: 6f27cc
+  color: 6D3BBF
+  level: Advanced
 
 fractals:
   title: Fractals
   trailer: ohygDnKg5mg
-  color: 8220b9
+  color: 8032AD
+  level: Advanced
+  next: chaos
 
 differentiation:
   title: Differentiation
-  color: 22ab24
+  color: 22AB24
+  level: Advanced
   sections:
     - title: Introduction
     - title: Limits and Gradients
@@ -416,27 +442,29 @@ differentiation:
 
 integration:
   title: Integration
-  color: 1fab40
+  color: 1AA845
+  level: Advanced
   sections:
     - title: Introduction
-    - title: Integration Rules I
-    - title: Integration Rules II
+    - title: Integration Rules
     - title: Definite Integrals and Areas under a Curve
-    - title: Numerical Integration
     - title: Improper Integrals
     - title: Solids of Revolution
 
 numerical:
   title: Numerical Methods
-  color: 1dab5b
+  color: 11A465
+  level: Advanced
   sections:
     - title: Solving Equations Numerically
     - title: The Newton­-Raphson Method
+    - title: Numerical Integration
     - title: Maclaurin and Taylor series
 
 diff-equations:
   title: Differential Equations
-  color: 1aaa77
+  color: 09A186
+  level: Advanced
   sections:
     - title: Simple Differential Equations
     - title: First Order Separable Equations
@@ -447,34 +475,36 @@ diff-equations:
 
 chaos:
   title: Chaos Theory
-  color: 18a38a
+  color: 009EA6
+  level: Advanced
 
-adv-probability:
-  title: Advanced Probability
-  color: cd0e66
+random-variables:
+  title: Random Variables
+  color: CD0E66
+  level: Advanced
   sections:
     - title: Introduction
     - title: Discrete Random Variables
-    - title: The Normal Distribution
     - title: Binomial and Poisson Distribution
     - title: Continuous Random Variables
-    - title: Random Walks
+    - title: The Normal Distribution
+    - title: The Central Limit Theorem
 
-adv-statistics:
+hypothesis-tests:
   title: Statistics and Hypothesis Tests
-  color: bb127b
+  color: BA1778
+  level: Advanced
   sections:
-    - title: Data Representation
-    - title: Experiments and Sampling
-    - title: Hypothesis Tests
-    - title: Estimation and Confidence Intervals
-    - title: The Law of Large Numbers and Central Limit Theorem
-    - title: Chi Squared Tests and Correlation Coefficients
+    - title: Sampling and Estimation
+    - title: Hypothesis Tests and Confidence Intervals
+    - title: Linear Models and Correlation Coefficients
+    - title: Contingency tables and Chi Squared Tests
     - title: Bayesian Statistics
 
 algorithms:
   title: Algorithms
-  color: aa1690
+  color: A7208A
+  level: Advanced
   sections:
     - title: Introduction to Computing
     - title: Complexity and O Notation
@@ -484,14 +514,14 @@ algorithms:
 
 machine-learning-1:
   title: Machine Learning
-  color: 971aa6
+  color: 93299B
+  level: Advanced
   sections:
     - title: Introduction
     - title: Linear Regression
     - title: Support Vector Machines
     - title: Neural Networks
     - title: Unsupervised Learning
-    - title: Tensor Flow
 
 
 # ------------------------------------------------------------------------------
@@ -500,11 +530,10 @@ machine-learning-1:
 exploding-dots:
   title: Exploding Dots
   description: A mathematical story developed for Global Math Week – learn about place value, infinity and p-adic numbers.
-  color: 6f27cc
+  color: 6D3BBF
   hideTitle: true
 
-connections:
-  title: How Mathematics Connects Us
-  description: Discover the mathematical principles that connect our world, from shaking hands to travel and navigation, colouring maps and social networks.
-  color: aa1690
+talks:
+  title: Talks and Workshops
+  color: A7208A
   hideIcon: true

@@ -629,14 +629,6 @@ ist es tatsächlich ein gleichseitiges Dreieck._
 
 {.todo} Demnächst - Konstruktion von Mittelpunkten und Mittelsenkrechten
 
-    // Ein Mittelpunkt ist ein Punkt auf einer Strecke, der ihn in zwei kongruente
-    // Segmente unterteilt. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
-    // `bar(AC)`.
-    // 
-    // Eine Gerade, eine Strecke oder ein Strahl, die im rechten Winkel durch den Mittelpunkt einer anderen Strecke 
-    // verläuft, wird als __Streckensymmetrale__ bezeichnet. `bar(DE)` ist der
-    // Senkrechthälfte von `bar(AC)`, also `bar(AB) ~= bar(BC)` und `bar(AC) _|_ bar(DE)`.
-
 ---
 > id: angle-bisector
 
@@ -904,11 +896,6 @@ Origami-Techniken ermöglichen es, dass sich Solarmodule "entfalten", wenn sie d
 besonders clevere Faltungen sind unglaublich kompakt und benötigen nur wenige Motoren
 und andere mechanische Komponenten.
 
-    // Eine davon ist die __Miura-Faltung__, die von _Korio Miura_ erfunden wurde.
-    // Das Gleiche gilt auch für die Spiegel von Teleskopen im Weltraum. Größere Spiegel
-    // können bessere Bilder liefern. Ingenieure können mit Origami große Spiegel bauen, die
-    // sich sehr effizient zusammenklappen lassen, wenn sie auf Raketen geladen werden.
-
 :::
 
 ---
@@ -950,25 +937,6 @@ Zugang zu verschaffen. Dieses Bild ist von einem Prototyp, der an der
 Hiroshima University in Japan entworfen wurde.
 
 :::
-
-    // ---
-    // > id: origami-applications-2
-    // > goals: video
-    // 
-    // ::: column(width=300)
-    // 
-    // x-video(src="https://storage.googleapis.com/mathigon-videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
-    // 
-    // ::: column.grow
-    // #### Stadiondächer
-    // 
-    // Brücken sind schwierig zu bauen, da sie große Entfernungen
-    // ohne Zwischenstütze überbrücken müssen. Dies gilt auch für die Dächer von
-    // Sportstadien, die eine große Fläche bedecken müssen, ohne von Säulen getragen zu werden.
-    // 
-    // Das Dach des neuen Falcon-Stadions in Atlanta besteht aus acht riesigen
-    // Modulen, die sich beim Öffnen oder Schließen drehen können.
-    // :::
 
 ---
 > id: origami-applications-4

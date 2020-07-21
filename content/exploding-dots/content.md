@@ -92,7 +92,9 @@ numbers that are equal. 5 and 8 are different, just like 100 is different from
 Well – almost. Like for every rule, there might be some exceptions to this one.
 For example, here is one age-old question asked by students around the world:
 
-{.quote} __Is 0.999999… equal to 1?__
+::: blockquote
+Is 0.999999… equal to 1?
+:::
 
 The “…” means that there are _infinitely many_ 9s to the right of the decimal
 point. If the answer to this question is _yes_, it would mean that there are two
@@ -109,9 +111,10 @@ entire questions sounds a bit dubious. There is no way we could _actually write
 down_ infinitely many 9s – it would take infinitely long. We have to cheat by
 writing dots and using our imagination. The question should really be:
 
-{.quote(style="max-width: 480px; margin: 1.5em auto")} __If we were
-somehow God-like and could write an infinite string of 9s, would the results be
-equal to 1?__
+::: blockquote(style="max-width: 480px; margin: 1.5em auto")
+If we were somehow God-like and could write an infinite string of 9s, would
+the results be equal to 1?
+:::
 
 Since we humans are not God-like, you might decide that the question is
 meaningless. But that seems like a very unsatisfactory solution – and new
@@ -145,7 +148,7 @@ As humans, we can only ever write a finite number of 9s, say ${n}{n|1|1,15,1}:
         polygon(points="655 77 659.88 65.06 655 67.89 650.12 65.06 655 77")
     x-gesture(target="x-var" slide="100,0")
 
-{.convergence} **{.m-yellow}0.9** is less than 1.  
+{.convergence.no-voice} **{.m-yellow}0.9** is less than 1.  
 _{span.reveal(when="n2")} **{.m-green}0.99** is less than 1._  
 _{span.reveal(when="n3")} **{.m-blue}0.999** is less than 1._  
 _{span.reveal(when="n4")} **{.m-red}0.9999** is less than 1._  
@@ -303,9 +306,8 @@ there – and that is a perfectly valid view.
 This begs the question: is there an _unusual_ system of arithmetic for which
 …999999 is a meaningful number?
 
-::: .box.problem-box
-    .box-title: h3 Challenge
-::: .box-body
+::: .box.f-blue
+#### Challenge
 
 Let’s make matters worse! Consider the number with infinitely many 9s both to
 the left _and_ to the right of the decimal point: __{.m-red.nowrap}…9999.9999…__.
@@ -315,7 +317,6 @@ Try to use the same algebraic argument to show that this equals __{.m-red}zero__
 __{.m-green.nowrap}…9999__ + __{.m-yellow.nowrap}0.9999…__ = __{.m-green}−1__ +
 __{.m-yellow}1__ = __{.m-red}0__.*
 
-:::
 :::
 
 _{button.next-step} Continue_
@@ -440,15 +441,13 @@ know that _{span.nowrap}…6666667_ = `1/3`.*
 
 ---
 
-::: .box.problem-box
-    .box-title: h3 Challenge
-::: .box-body
+::: .box.f-blue
+#### Challenge
 
 Can you work out which ten-adic number behaves like `2/3`?
 
 What about other fractions like `4/7` or `2/13`?
 
-:::
 :::
 
 _It turns out that there are a few fractions that cannot be expressed in our

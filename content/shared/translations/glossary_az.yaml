@@ -1,0 +1,1808 @@
+# ==============================================================================
+# MATHIGON GLOSSARY
+# ==============================================================================
+
+absolute-value:absolute-value:
+  title: Mütləq dəyər
+  text: |
+    Ədədin __mütləq dəyəri__ nömrəli xəttdəki məsafədir. Bu mənfi ədədləri müsbət hala gətirir, amma
+    müsbət ədədləri dəyişməz buraxır. `x` -in mütləq dəyəri `|x|` olaraq yazılmışdır. Məsələn, `|-5|
+    = 5` və `|3| = 3`.
+
+acute-angle:
+  title: Kəskin bucaq
+  text: '__kəskin bir bucaq__, ölçüsü 90 ° -dən azdır.'
+
+acute-triangle:
+  title: Kəskin üçbucaq
+  text: '__kəskin üçbucağında__, hər üç daxili bucaq _kəskin_ (90 ° -dən az) təşkil edir.'
+  link: /course/triangles/properties#classification
+
+adic:
+  title: N-adic ədədlər
+  text: |
+    ___N_ - {{}} rəqəmləri, bəzi _n_ tam ədəd üçün adi arifmetikadan fərqli olan "yaxınlıq" anlayışı
+    olan xüsusi say sistemidir. İki _n_ -adiki ədəd _yaxındır_, əgər fərqləri yüksək gücə bölünərsə
+    _n_.
+
+adjacent-angles:
+  title: Bitişik açılar
+  text: |
+    Bir tərəfi və ucunu bölsələr də, üst-üstə düşməzsə iki açı __bitişikdir__. _bitişik_ sözü
+    "qonşu" deməkdir.
+
+aleph-zero:
+  title: Alef Zero
+  text: |
+    Aleph Zero, İvrit hərfindən istifadə edərək yazılmış, sonsuz bir dəstin (məsələn, natural
+    ədədlərin) yaxınlıq dərəcəsidir.
+
+algebraic-numbers:
+  title: Cəbr nömrələri
+  text: |
+    __Cəbr nömrələri__, həqiqi ədədlərin alt hissəsidir, tam əmsalları olan çoxnömlü tənliyin
+    kökləri kimi göstərilə bilər. Bütün rasional ədədlər (`2/3` kimi) və artımlar (`root(3,5)` kimi)
+    cəbrdir və sürətlərdən (`(2 + sqrt(3))/(1 - sqrt(5))` kimi) qurula bilən ədədlər də var.
+
+    Həqiqi, lakin __ olmayan cərgələr _transsendental ədədlər_ adlanır.
+
+algorithm:
+  title: Alqoritm
+  text: |
+    __alqoritmi__, müəyyən bir problemi həll etmək üçün istifadə edilə bilən qaydalar və təlimatlar
+    toplusudur. Bunlar ümumiyyətlə kompüterlər tərəfindən istifadə olunur və riyaziyyatın hər
+    yerində görünür: _uzun bölmə_ -dən _-ə qədər Gaussian aradan qaldırılması_.
+
+alternate-angles:
+  title: Alternativ açılar
+  text: |
+    __Alternativ bucaqlar__ iki _paralel xətlər_ əmələ gətirir ki, bunlar da _kəsişən_ xətti ilə
+    kəsişir və onlar daim bir-birinə uyğundur. Aşağıdakı diaqramda 1, 2, 3 və 4 etiketli cütlərin
+    hər biri alternativdir. Hər bir cütdəki iki bucaq fərqli bir paralel xəttdə, əks tərəf isə əks
+    tərəfdə yerləşir.
+
+    Paralel xətlərin kənarında yatdıqları üçün 1 və 2 bucaq cütlərinə __alternativ xarici açılar__
+    deyilir və 3 və 4 bucaq cütlərinə __alternativ daxili açılar__ deyilir.
+
+amino-acid:
+  title: Amin turşusu
+  text: |
+    __Amin turşuları__, __zülalları__ təşkil edən kiçik üzvi birləşmələrdir. Bunlar bütün canlı
+    orqanizmlərin əsas qurucu hissələridir.
+
+    Vücudumuzda amin turşuları qidaları parçalamaq, bədən toxumasını bərpa etmək, enerji saxlamaq və
+    bir çox digər funksiyalar üçün istifadə olunur.
+
+angle:
+  title: Bucaq
+  text: |
+    Bir açı bir ortaq nöqtəni bölüşən iki şüa ilə meydana gəlir. Hər bir ray bucağın bir tərəfi
+    adlanır. bir bucağın ölçüsü ümumiyyətlə _dərəcə_ və ya _radian_ ilə ölçülür.
+
+angle-bisector:
+  title: Bucaq bisektoru
+  text: |
+    __açı bisektoru__, bir bucağı yarıda iki konqresli, daha kiçik bucaqlara bölən bir xətt və ya
+    şüadır.
+  image: angle-bisector.svg
+
+anti-dot:
+  title: Anti-Dot
+  text: |
+    Bir nöqtə maşınındakı hüceyrələrdə "deşiklər" və ya "mənfi nöqtələr" kimi düşünə biləcəyiniz
+    __anti-nöqtələr__ ola bilər. Onların dəyəri-1-dir. Dəyişmədən həmişə eyni hüceyrəyə nöqtə və əks
+    nöqtə əlavə edə bilərsiniz.
+
+apothem:
+  title: Apothem
+  text: Adi bir çoxbucağın __apothem__ tərəflərindən birinin ortasından mərkəzinə qədər olan məsafədir.
+
+arabic-numerals:
+  title: Ərəb rəqəmləri
+  text: |
+    __ərəb rəqəmsal sistemi__ hər hansı bir rəqəm yazmaq üçün onlu rəqəmdən (0, 1, 2, 3, 4, 5, 6, 7,
+    8, 9) istifadə edir.
+
+    Əvvəlcə Hindistanda inkişaf etdirildi, sonra ərəb riyaziyyatçıları tərəfindən uyğunlaşdırıldı,
+    İtalyan riyaziyyatçısı Leonardo Fibonacci tərəfindən Avropaya gətirilmədən əvvəl.
+
+arccos:
+  title: Tərs kosinus
+  text: |
+    __tərs kosinus__ funksiyası `arccos(x)` və ya `cos^(-1)(x)` şəklində yazılmış trigonometrik bir
+    funksiyadır. Bu `cos(x)` tərsidir.
+
+archimedean-solid:
+  title: Arximed bərk
+  text: |
+    __Arximed bərk__, hər tərəfdən eyni görünən müxtəlif növ müntəzəm çoxbucaqlılardan ibarət olan
+    bir polyhedron. 13 fərqli Arximed qatı var.
+  link: /course/polyhedra/platonic#archimedean
+
+arithmetic-mean:
+  title: Arifmetik orta
+  text: |
+    __ortalama__, bir sıra nömrələrin _orta_ -dir. Hesablaya bilərsiniz, ancaq dəstdəki bütün
+    nömrələri əlavə edərək cəmi maddələrin sayına bölməklə.
+
+arithmetic-sequence:
+  title: Arifmetik ardıcıllıq
+  text: |
+    __arifmetik ardıcıllıqla__ (bəzən __arifmetik irəliləyiş__ adlanır) ardıcıl şərtlər arasındakı
+    _d_ fərqinin həmişə sabit olduğu sıra ardıcıllığıdır.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+arithmetic series:
+  title: Arifmetik seriya
+  text: '__arifmetik sıra__, arifmetik ardıcıllıqla verilənlərin cəmidir.'
+
+associative:
+  title: Assosiativlik
+  text: |
+    Əməliyyat • `a•(b•c) = (a•b)•c` olduqda assosiativdir. Məsələn, ədədlərin əlavə edilməsi (+) və
+    vurma (×) assosiativdir.
+
+atom:
+  title: Atom
+  text: |
+    __Atomlar__ bütün adi maddələri təşkil edən hissəciklərdir: bərk, maye, qazlar və plazma.
+    Atomlar _protonları_ və _neytronları_ ibarət olan və müsbət yüklənmiş _nüvəsi_ (və ya _nüvəsi_)
+    ibarətdir və mənfi mənşəli qabıqlarla əhatə olunmuşdur doldurulmuş _elektron {_. Bir atomun
+    diametri təxminən millimetrin on milyondan birinə bərabərdir.
+
+axiom:
+  title: Aksiom
+  text: |
+    Bəzən __postulat__ adlanan __aksioma__, "özünü açıq" sayılan və sübut olmadan qəbul edilən
+    riyazi bir ifadədir. O qədər sadə olmalıdır ki, açıq və şübhəsiz həqiqətdir.
+
+    Aksiomalar riyaziyyatın əsasını təşkil edir və digər, daha mürəkkəb nəticələrin sübut edilməsi
+    üçün istifadə edilə bilər.
+
+axis-of-symmetry:
+  title: Simmetriya oxu
+  text: 'Bir formanın əks simmetriyası varsa, simmetrinin __oxu__, onu iki bərabər yarıya bölən xəttdir.'
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+base-10:
+  title: Baza 10
+  text: |
+    __decimal sistemi__ (və ya __baza 10__) dünyanın ən çox istifadə olunan nömrələmə sistemidir.
+    Bir rəqəmdəki hər rəqəm 0-dan 9-a qədər olan on fərqli dəyərdən birinə sahib ola bilər.
+
+bipartite-graph:
+  title: Bipartit Qrafik
+  text: |
+    A (tam) __iki tərəfli qrafik__ iki dəstdən ibarətdir. Hər bir vertex əks dəstdəki bütün
+    ucluqlara qoşulmuşdur, ancaq öz dəstindəki vertiklərin heç biri.
+  link: /course/graph-theory/handshakes#handshakes-4
+
+blackjack:
+  title: Blackjack
+  text: |
+    __Blackjack__ 21-ə yaxın olmaq üçün birdən çox kartın dəyərini əlavə etdiyiniz bir kart
+    oyunudur, lakin yuxarıda deyil.
+
+cavalieri:
+  title: Cavalieri prinsipi
+  text: |
+    __Cavalieri'nin Prinsipi__ bildirir ki, hər səviyyədə iki bərk hündürlük və eyni kəsişmə sahəsi
+    varsa, deməli onların hər ikisi eyni həcmdədir.
+
+    Bu faktdan prizmaların və silindrlərin həcminin hündürlüyü ilə vurulmuş kəsişmələrinin sahəsi
+    olduğunu əldə etmək üçün istifadə edə bilərik.
+
+calculus:
+  title: Hesablama
+  text: |
+    __Hesablama__, riyaziyyatın məhdudiyyətlər, törəmələr, inteqrallar və güc seriyaları ilə məşğul
+    olan bir qoludur. Ümumi problemlərə bir əyrinin yamacını tapmaq, ekstrema tapmaq, bir
+    funksiyanın dəyişmə sürətini tapmaq və əyri altında sahəni tapmaq daxildir.
+
+center-of-rotation:
+  title: Dönmə Mərkəzi
+  text: '__fırlanma mərkəzi__, bir formanın döndüyü nöqtədir.'
+  link: /course/transformations/rigid#rotations
+
+centroid:
+  title: Centroid
+  text: |
+    Üçbucağın __centroid__ üç medianın kəsişdiyi nöqtədir. Eyni zamanda vahid sıxlıq üçbucağının
+    "kütlə mərkəzi" dir.
+  link: /course/triangles/properties#center-of-mass
+
+chaos:
+  title: Xaos
+  text: hər şey
+
+circle:
+  title: Dairə
+  text: |
+    A __dairə__, iki nöqtədə bütün nöqtələrin müəyyən bir nöqtədən ({_mərkəzi_) sabit bir məsafədə
+    (_radius_) məcmusudur.
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+circle-area:
+  title: Bir dairənin sahəsi
+  text: Radiusu _r_ olan bir dairənin __sahəsi `A = pi r^2` folmula tərəfindən verilir.
+
+circle-circumference:
+  title: Bir dairənin dövranı
+  text: |
+    Bir dairənin __ətrafı xarici kənarındakı məsafədir. Radiusu _r_ olan bir dairənin `C = 2 pi r`
+    dairəsi var.
+  link: /course/circles/introduction#radius
+
+circle-diameter:
+  title: Çap (dairə)
+  text: 'Bir dairənin __diametri__, ətrafındakı iki əks nöqtə ilə mərkəzindən keçən məsafədir.'
+  link: /course/circles/introduction#radius
+
+circle-radius:
+  title: Radius
+  text: |
+    Bir dairənin __radiusu__ onun mərkəzi ilə ətrafındakı hər nöqtə arasındakı məsafədir (və ya bir
+    xətt seqmentidir).
+  link: /course/circles/introduction#radius
+
+circle-sector:
+  title: Dairə Sektoru
+  text: |
+    Bir dairənin A __sektoru 1 radius və __arc__ ilə bağlanmış daxili hissəsidir. Onun sahəsi qövsün
+    uzunluğu ilə yanaşı daxili açı ilə də mütənasibdir. Bu o deməkdir ki
+
+    {.text-center} `(A_"Sector")/(A_"Circle") = "Arc"/"Circumference" = θ/(2π)`
+  link: /course/circles/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
+circle-segment:
+  title: Dairə seqmenti
+  text: |
+    Bir dairənin A __seqmenti__, daxili hissəsinin bir akkord və müvafiq qövs ilə bağlanmış
+    hissəsidir.
+
+circumcircle:
+  title: Üçbucağın dairəsi
+  text: Üçbucağın __dairəsi__ hər üç ucundan keçən bir dairədir.
+  image: circumcircle.svg
+  link: /course/triangles/properties#circumcircle-1
+
+coefficient:
+  title: Əmsal
+  text: |
+    __əmsallar__, riyazi bir ifadə və ya tənlikdəki dəyişənlərin qarşısında olan ədədlərdir.
+    Məsələn, `4x + 5y^2 - 3z` ifadəsində `x` əmsalı 4, əmsalı `y^2` 5, `z` əmsalı isə -3dür.
+
+collinear:
+  title: Düzəldici nöqtələr
+  text: Üç və ya daha çox nöqtə eyni xəttdə yatırsa __üst-üstə düşür__.
+
+compass:
+  title: Compass
+  text: |
+    Bir kompas dairələr və ya qövslər yaratmaq üçün istifadə olunan bir rəsm vasitəsidir. İki qoldan
+    ibarətdir - bir ucundakı iynə mərkəzə yerləşdirilir, digər ucunda qələm əyrini izləyir.
+
+complementary-angles:
+  title: Tamamlayıcı bucaqlar
+  text: '90 ° -ə (düzgün bir açı) əlavə etsələr, iki bucaq __tamamlayıcı__ dir.'
+
+complete-graph:
+  title: Tam Qrafik
+  text: |
+    __tam qrafiklər__ -də, hər bir vertex digər ucluğa bağlanır. _n_ ucları olan tam bir qrafanın
+    `(n×(n-1))/2` kənarları var.
+  link: /course/graph-theory/handshakes#handshakes-3
+
+complex-numbers:
+  title: Kompleks Nömrələr
+  text: |
+    __kompleks nömrələr__, həqiqi və xəyali bir ədədin cəmi və ya fərqi olan bütün ədədlərdir. Onlar
+    çox vaxt `a + bi` şəklində yazılır, burada _a_ həqiqi hissə və _b_ xəyali hissədir.
+
+    Kompleks ədədlər iki ölçülü bir müstəvidə verilə bilər, burada _x_ -axis həqiqi ədədlərdir, _y_
+    -axislər xəyali ədədlərdir.
+
+    Bütün mürəkkəb nömrələrin məcmusu çox vaxt `CC` simvolu ilə işarələnir.
+
+composite-number:
+  title: Kompozit nömrə
+  text: |
+    A __kompozit nömrəsi__, əsas olmayan bir tamdır. Bu o deməkdir ki, bunun 1 və özündən başqa
+    amillər var.
+
+concave:
+  title: Konkav poliqonu
+  text: |
+    A __konkav__ çoxbucaqlı ən azı 180 ° -dən çox daxili açıya malikdir. Diaqonallardan ən azı biri
+    çoxbucağın kənarında _yerləşir. Bir konkav bir çoxbucağın müəyyən edilməsinin ümumi bir yolu,
+    çoxbucağın "əyilmiş" tərəfini axtarmaqdır. _Konkav_ _konveks_ çoxbucağının əksidir.
+  link: /course/polyhedra/polygons#concave
+
+cone:
+  title: Konus
+  text: |
+    A __konus__, əyri tərəfi ilə bir nöqtəyə qoşulmuş (_vertex_ adlanır) dairəvi _bazası_ olan
+    üçölçülü bərkdir. Bir konus "dairəvi piramida" olaraq da düşünə bilərsiniz.
+
+    A __sağ konus__, birbaşa təməlinin mərkəzinin üstündəki vertexi olan bir konusdur.
+  link: /course/circles/spheres-cones-cylinders#cone
+  image: cone.svg
+
+cone-volume:
+  title: Bir konusun həcmi
+  text: |
+    Bir konusun həcmi tənliklə verilir
+
+    {.text-center} `V = 1/3 π r^2 h`,
+
+    burada _r_ dairəvi təməlin radiusudur və _h_ konusun hündürlüyüdür (təməldən dik nöqtəyə
+    perpendikulyar məsafə).
+
+congruent:
+  title: Konqres
+  text: |
+    Həndəsədə, ölçü, forma və ölçüdə eynidirsə, iki rəqəm __bərabərdir__. Bu, onları bir-birinin
+    üstünə yerləşdirmək üçün hərəkət edə, çevirə və ya döndərə biləcəyimiz deməkdir.
+  link: /course/euclidean-geometry/definitions#congruence
+
+congruent-angles:
+  title: Birləşən bucaqlar
+  text: İki bucaq eyni ölçüdə olduqda __bərabərdir__.
+
+conic-section:
+  title: Konik bölmə
+  text: |
+    A __konik hissə__, bir konusun səthinin düz bir təyyarə ilə kəsişməsi kimi yaranan bir əyridir.
+    Bir çox xüsusiyyətlərini bölüşən dörd fərqli konus tipi var:
+
+    * Dairə
+
+    * Ellips
+
+    * Parabola
+
+    * Hiperbola
+  link: /course/circles/conic-sections
+
+convex:
+  title: Konveks çoxbucaqlı
+  text: |
+    A __konveks__ çoxbucaqlı 180 ° -dən çox daxili açıları yoxdur. Bütün diaqonallar çoxbucağın
+    içində yatır. Bu, _bükülmüş_ çoxbucaqlıların əksidir.
+  link: /course/polyhedra/polygons#concave
+
+coordinate-system:
+  title: Koordinat Sistemi
+  text: |
+    A __əlaqələndirici sistem__, iki perpendikulyar ox olan iki ölçülü bir müstəvidir. Təyyarədəki
+    hər nöqtə iki oxdan məsafəsini təyin edən iki ədəd (koordinat) istifadə edərək müəyyən edilə
+    bilər.
+
+coordinate-system-origin:
+  title: Koordinat Sistemi
+  text: |
+    Bir koordinat sisteminin __mənşəli__ koordinatları olan nöqtədir (0, 0). Ümumiyyətlə iki oxun
+    keçdiyi nöqtədir.
+
+corresponding-angles:
+  title: Uyğun açılar
+  text: |
+    __Müvafiq açılar__, eninə, eyni zamanda fərqli xətlərdə eyni vəziyyətdə olan iki bucaqdır.
+    Həmişə həmfikirdirlər.
+  image: corresponding-angles.svg
+
+cos:
+  title: Kosin
+  text: |
+    __kosin__ `cos(θ)` olaraq yazılmış trigonometrik bir funksiyadır. Doğru açılı üçbucaq, bitişik
+    tərəfin və hipotenuzanın nisbətidir.
+  link: /course/triangles/trigonometry#trig-functions
+
+cpoct:
+  title: MƏHSUL
+  text: |
+    CPOCT,__ uyğun üçbucaqların müvafiq hissələrini ifadə edir. Demək, iki üçbucaq bir-birinə
+    uyğundursa, deməli, onların bütün komponentləri (bucaqlar, tərəflər, orta hissələr və s.)
+    Bir-birinə uyğun olmalıdır.
+  link: /course/triangles/congruence#cpoct
+
+cross-section:
+  title: Kəsmə
+  text: A __kəsiyi__ üç ölçülü bərkin bir müstəvi ilə kəsişməsidir.
+
+cryptography:
+  title: Kriptoqrafiya
+  text: __Kriptoqrafiya__ gizli mesajların şifrələnməsini və deşifrasını öyrənən riyaziyyat sahəsidir.
+
+cube:
+  title: Küp
+  text: |
+    A __kub__ (bəzən __Hexahedron__ adlanır) hər üzünün kvadrat olduğu müntəzəm bir polyhedrdir. Beş
+    _Platonik qatı_ biridir və 6 üzü, 8 ucu və 12 kənarı var.
+  link: /course/polyhedra/platonic#platonic-overview
+
+cube-volume:
+  title: Bir kubun həcmi
+  text: Yan tərəfi _a_ olan bir kubun həcmi `V = a^3` var.
+
+cylinder:
+  title: Silindr
+  text: |
+    A __silindr__, əyri bir səthlə birləşdirilmiş iki konqresiv, paralel, dairəvi tərəflərdən
+    (_əsasları_) ibarət üçölçülü bərkdir. Bir silindr "dairəvi prizma" kimi də düşünə bilərsiniz.
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+
+cylinder-volume:
+  title: Silindr həcmi
+  text: |
+    Bir silindrin həcmi tənliklə verilir
+
+    {.text-center} `V = π r^2 h`,
+
+    burada _r_ dairəvi təməlin radiusudur və _h_ silindrin hündürlüyüdür (iki əsas arasındakı
+    perpendikulyar məsafə).
+
+degrees:
+  title: Dərəcələr
+  text: |
+    __Dərəcələr__, bucaqları ölçmək üçün bir vahiddir, ° işarəsi ilə işarələnmişdir. Bir tam inqilab
+    360 °, düzgün bir açı 90 ° və s.
+
+denominator:
+  title: Məxrəc
+  text: '__məxrəci__, hissə-hissə alt rəqəmdir. Məsələn, `4/7` -də 7 sayı məxrəcdir.'
+
+dilation:
+  title: Dililəşmə
+  text: |
+    A __dilatasyonu__, daha böyük və ya kiçik hala gətirərək, həndəsi formanı dəyişdirən bir
+    çevrilmədir.
+  image: dilation.svg
+  link: /course/transformations/dilations
+
+directed-graph:
+  title: Rejissor Qrafik
+  text: '__yönəldilmiş qrafikdə__, hər bir tərəfdə "ox" var, yəni başlanğıc ucu və son ucu var.'
+  link: /course/graph-theory/introduction#intro-1
+
+discriminant:
+  title: Qeyri-ixtiyari
+  text: |
+    Kvadrat tənliyin __ayrıseçkilici__, kvadrat düsturundakı kvadrat kökü altında ifadə: `b^2 −
+    4ac`.
+
+    Kvadrat tənliyin həlli sayını təyin etmək üçün istifadə edilə bilər. Ayrı-seçkilik 0-dən çox
+    olarsa, iki həll yolu var. 0-a bərabər olarsa, yalnız bir həll var. 0-dan az olarsa, heç bir
+    (real) həll yoxdur.
+
+dna:
+  title: GÜT
+  text: |
+    __DNT__ (Deoksiribonuklein turşusu) bütün canlı orqanizmlərin genetik planını ehtiva edən bir
+    molekuldur. Əksər DNT-lər _ikiqat helix_ əmələ gətirən iki ipdən ibarətdir. Genetik məlumat
+    DNT-ni təşkil edən dörd nuklein turşusu (A, G, C və T) sırasında kodlanır. _DNT ardıcıllığı_ bu
+    məlumatın çıxarılması prosesidir - biologiya, tibb, genetika və biotexnologiyada vacib bir
+    texnikadır.
+
+dodecahedron:
+  title: Dodecahedron
+  text: |
+    __Dodecahedron__ Platonik bir qatıdır və müntəzəm beşbucaqlı olan 12 üzdən ibarətdir. 20 ucu və
+    30 kənarı var.
+  link: /course/polyhedra/platonic#platonic-overview
+
+dot-annihilation:
+  title: Məhv olmaq
+  text: |
+    Eyni hüceyrədə həm nöqtə, həm də anti-nöqtə varsa, ləğv edirlər və ya __bir-birini ləğv edirlər.
+    `–1 + 1 = 0` haqqında düşünün.
+
+dot-machine:
+  title: Nöqtəli Maşın
+  text: |
+    {__nöqtə maşını__ nöqtələri olan birdən çox hüceyrədən ibarətdir. Bu nöqtələri müəyyən qaydalara
+    görə manipulyasiya edə bilərsiniz.
+
+    Məsələn, `1←3` maşınında, bir hüceyrədəki 3 nöqtə sonrakı hücredəki 1 nöqtəyə _sol_ -ə çevrilə
+    bilər. Eynilə, 1 nöqtə sonrakı hücredəki 3 nöqtəyə _sağ_ çevrilə bilər. Buna "partlayış"
+    deyilir.
+
+ellipse:
+  title: Ellips
+  text: |
+    __ellips__ iki fokus nöqtəsini əhatə edən əyri bir yoldur. Ellipsin ətrafındakı hər hansı bir
+    nöqtədə iki fokusa bərabər məsafələr_ var.
+
+    Fokuslar çox yaxın olduqda, ellips demək olar ki, bir dairəyə bənzəyir. Bir-birindən
+    uzaqlaşdıqca, ellips daha uzundur.
+
+    Ellipslər _konus hissəsinin_ bir növüdür: bir konusun bir təyyarə ilə kəsişməsi.
+  image: ellipse.svg
+  link: /course/circles/conic-sections#ellipses
+
+equation:
+  title: Tənlik
+  text: |
+    __tənliyi__ iki və ya daha çox ifadəni __bərabərliyi işarəsi__ `=` ilə birləşdirərək yaradılan
+    riyazi bir ifadədir. Bütün bu ifadələrin eyni dəyərə sahib olduğunu göstərir.
+
+equilateral-triangle:
+  title: Bərabər üçbucaq
+  text: '__bərabər tərəfli üçbucaq__, hər üç tərəfin eyni uzunluğu olan üçbucaqdır.'
+
+euclidean-geometry:
+  title: Evklid Həndəsəsi
+  text: |
+    __Evklid geometrisi__ riyaziyyatçı _Evklid_ tərəfindən təsəvvür edilən həndəsə növüdür və
+    nöqtələrin, xətlərin, çoxbucaqlıların, dairələrin, həmçinin üçölçülü qatıların öyrənilməsini
+    özündə cəmləşdirir. Bütün icazə verilən əməliyyatları və quruluşları təsvir edən həndəsənin əsas
+    qanunlarından yalnız beş _aksioma_ -ə bağlıdır.
+  link: /course/euclidean-geometry/euclids-axioms#euclid
+
+factor:
+  title: Faktor
+  text: |
+    _a_ bir sıra _b_ sayının __amili__ (və ya __bölücü__), əgər bölmək olarsa _b_ qalanı olmadan
+    _a_.
+  link: /course/divisibility/factors-and-multiples
+
+factorial:
+  title: Faktiki
+  text: |
+    Müsbət tam ədədin __faktorial__, özünə daxil olan bütün tam ədədlərin məhsuludur. Məsələn, nida
+    nöqtəsindən istifadə edərək yazırıq
+
+    {.text-center} `5! = 1×2×3×4×5`.
+
+    Tərifinə görə, `0! = 1.`
+
+factorisation:
+  title: Faktorinq mükafatı
+  text: Bir nömrənin __əsas amilizasiyası__ onu əsas ədədlərin məhsulu kimi yazmağın bir yoludur.
+  link: /course/divisibility/primes
+
+fermat-last:
+  title: Fermanın son teoremi
+  text: |
+    __Fermanın son teoremi__, `x^n + y^n = z^n` tənliyinin `n>2` üçün tam həlli olmadığını bildirir.
+    Əgər `n=2` olarsa, çox sayda həlli olan _Pifaqor teoremini alırıq, lakin _n_ = 3, 4, 5, ... heç
+    biri yoxdur.
+
+    1637-ci ildə riyaziyyatçı Pierre de Fermat, bir dəlildə bir qeyd etdi, bir sübutu olduğunu,
+    ancaq həddinə uyğunlaşmaq üçün çox böyük olduğunu iddia etdi. 350 il ərzində digər
+    riyaziyyatçılar bu sübutu tapmağa çalışdılar və Fermatın Son Teoremi hətta _Ginnesin Rekordlar
+    Kitabı_ da "ən çətin riyazi problem" olaraq qaldı.
+
+    1994-cü ildə, uzun illər işlədikdən sonra, Andrew Wiles nəhayət bunu sübut edə bildi. Daha sonra
+    riyaziyyatda ən yüksək fərqlənənlərdən biri olan Abel mükafatını aldı.
+
+fibonacci-numbers:
+  title: Fibonacci Nömrələri
+  text: |
+    __Fibonacci nömrələrinin__ ardıcıllığı 1, 1 ilə başlayır. Hər bir aşağıdakı iki əvvəlki
+    terminlərin cəmidir, yəni təkrarlanan düsturun `x_n = x_(n-1) + x_(n-2)` olduğunu göstərir.
+  link: /course/sequences/fibonacci#fibonacci
+
+figurate-numbers:
+  title: Firgurate Nömrələri
+  text: |
+    __Fiqurlu nömrələr__ həndəsi fiqurlardan istifadə etməklə təmsil oluna bilən nömrələrdir.
+    Nümunələrə kvadrat, üçbucaq və tetrahedral ədədlər daxildir.
+  link: /course/sequences/figurate#figurate
+
+formula:
+  title: Düstur
+  text: |
+    A __düsturu__, iki və ya daha çox dəyişən arasındakı əlaqəni izah edən bir qayda və ya
+    tənlikdir. Buna misal `A = πr^2`.
+
+fractal:
+  title: Fraktal
+  text: |
+    A __fraktal__, _fraksiya ölçüsü_ olan həndəsi bir forma. Bir çox məşhur fraktallar _özünə
+    bənzərdir_, yəni onların daha kiçik nüsxələrindən ibarətdir. Fraktallarda hər böyütmə
+    səviyyəsində nümunələr mövcuddur və onlar bir proseduru təkrarlamaq və ya bir tənliyi sonsuz
+    dəfələrlə təkrarlamaqla yaradıla bilər.
+  link: /course/fractals/introduction
+
+fta:
+  title: Arithemticin əsas teoremi
+  text: |
+    __Arithemticin fundamental teoremi__ (FTA) hər tam ədədin özünəməxsus baş faktorizasiyasının
+    olduğunu söyləyir.
+
+function:
+  title: Funksiya
+  text: 'A __funksiyası__, `x` girişini tam olaraq bir çıxışa çevirən riyazi bir əlaqədir `f(x)`.'
+
+function-graph:
+  title: Funksiyaların qrafikləri
+  text: |
+    `f(x)` formasının riyazi funksiyalarını koordinat sistemində yerləşdirə bilərik. Nəticə
+    funksiyanın __qrafiki__ adlanır.
+
+gcf:
+  title: Ən böyük ortaq amildir
+  text: _a_ və _b_ iki ədəddən ibarət olan __ən böyük ümumi amil _a_ və _b_.
+  link: /course/divisibility/greatest-common-factors
+
+geometric-sequence:
+  title: Həndəsi ardıcıllıq
+  text: |
+    A __həndəsi ardıcıllıqla__ (bəzən __həndəsi irəliləyiş__ adlanır) ardıcıl müddətlər arasında _r_
+    nisbətinin daim olduğu bir sıra ardıcıllığıdır.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+geometric-series:
+  title: Həndəsə seriyası
+  text: |
+    A __həndəsi silsilə__, ardıcıl terminlərin sabit nisbəti _r_ olduğu bir həndəsi ardıcıllıqla
+    terminlərin sonsuzluğudur. Misal üçün,
+
+    {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
+
+    sabit nisbəti `1/2` olan həndəsi silsilədir.
+
+glide-reflection:
+  title: Sürüşmə Yansımaları
+  text: |
+    A __sürüşmə əks olunması__ xüsusi bir çevrilmə növüdür. Bu, əks istiqamətdə ox ilə eyni
+    istiqamətdə _əks_ və _tərcüməsi_ birləşməsidir.
+  link: /course/transformations/symmetry-groups#footsteps
+
+golden-ratio:
+  title: Qızıl nisbət
+  text: |
+    __qızıl nisbəti__, dəyəri `φ = 1.61803398875…` olan müəyyən bir irrasional nömrədir. Ardıcıl iki
+    Fibonacci nömrəsini bölməklə yaxınlaşmaq olar.
+
+    Qızıl nisbət tez-tez sənət və memarlıqda xüsusilə estetik baxımdan xoşagələn görünür və bir çox
+    bitkinin spirallərində görünür.
+  link: /course/sequences/fibonacci#golden-ratio-1
+
+graph:
+  title: Qrafik
+  text: 'A __qrafik__, kənarları ilə birləşdirilmiş ucları toplusudur.'
+  link: /course/graph-theory/introduction
+
+graph-cycle:
+  title: Dövrə
+  text: __Dövrlər__ tək uclardan ibarət olan qrafiklərdir.
+  link: /course/graph-theory/introduction#intro-4
+
+graph-degree:
+  title: Dərəcəsi
+  text: 'Bir dikbaşının __dərəcəsi__, o ucunda görüşən kənarların sayıdır.'
+  link: /course/graph-theory/introduction#intro-3
+
+graph-edge:
+  title: Kənar
+  text: '__Kenarlar__, qrafikdə ucları (nöqtələri) birləşdirən xətlərdir.'
+  link: /course/graph-theory/introduction
+
+graph-order:
+  title: Sifariş verin
+  text: Bir qrafikin __əmri__ içindəki ucların sayındadır.
+  link: /course/graph-theory/introduction#intro-3
+
+graph-vertex:
+  title: Vertex
+  text: A __vertex__ bir qrafanın bir hissəsi olan nöqtə və ya qovşaqdır.
+  link: /course/graph-theory/introduction
+
+gravity:
+  title: Ağırlıq
+  text: |
+    __Cazibə__ təbiətin dörd əsas gücündən biridir və kainatdakı hər iki kütləni digərinə tərəf
+    çəkir. İsaak Newton iki kütlə arasındakı qüvvənin `m_1` və `m_2` olduğunu təsbit etdi
+
+    {.text-center} `F = (G m_1 m_2) / r^2`,
+
+    burada _G_ cazibə qüvvəsi və _r_ kütlələr arasındakı məsafədir.
+
+group:
+  title: Qrup
+  text: |
+    Bir qrup, üç fərqli qaydaya riayət edən "şeylər" (ədədlər və ya simmetriyalar kimi) toplusudur:
+
+    * Qrupda olan başqa birini əldə etmək üçün iki şeyi əlavə / birləşdirə bilərsiniz.
+    * İşlər _assosiativ_, yəni `a+(b+c) + (a+b)+c` deməkdir.
+    * Bir _şəxsiyyəti var_ və hər bir "şey" də əlavə edildikdə şəxsiyyəti verən _tərs_ var.
+  link: /course/transformations/symmetry-groups#groups-1
+
+hailstone-sequence:
+  title: Hailstone ardıcıllığı
+  text: |
+    __Hailstone ardıcıllığı__ istənilən nöqtəni başlanğıc nöqtəsi kimi seçməklə və sonra bu
+    qaydalara əməl etməklə əmələ gələ bilər:
+
+    * Əgər `x_n` bərabərdirsə, `x_(n+1) = x_n / 2`.
+
+    * Əgər `x_n` təkdirsə, `x_(n+1) = 3 * x_n + 1`
+  link: /course/sequences/special#hailstone
+
+heptagon:
+  title: Heptaqon
+  text: 'A __heptagon__, yeddi tərəfi olan çoxbucaqlıdır.'
+
+hexagon:
+  title: Altıbucaqlı
+  text: A __altıbucaqlı__ altı tərəfi olan çoxbucaqlıdır.
+
+hyperbola:
+  title: Hiperbola
+  text: |
+    A __hiperbola__, `y = 1/x` funksiyasının qrafik şəklidir. İki disjoint hissədən ibarətdir, hər
+    ikisi _asimptotlara_ yaxınlaşır. Ayrıca _konus hissəsidir_.
+  image: hyperbola.svg
+
+hypotenuse:
+  title: Hipotenüz
+  text: 'Düzbucaqlı üçbucağın __hipotenüzü__, sağ bucağın əksinə qoyulmuş ən uzun tərəfidir.'
+  image: right-triangle.svg
+
+icosahedron:
+  title: Icosahedron
+  text: |
+    __İkosahedron__ Platonik bir bərkdir və hamısı bərabər tərəfli üçbucaq olan 20 üzdən ibarətdir.
+    12 ucu və 30 kənarı var.
+  link: /course/polyhedra/platonic#platonic-overview
+
+imaginary:
+  title: Xəyali nömrələr
+  text: |
+    __Xəyali nömrələr__ mənfi ədədlərin kvadrat köklərini götürərək əmələ gəlir. Adlarına
+    baxmayaraq, riyaziyyat, elm və mühəndislik baxımından böyük əhəmiyyət daşıyırlar.
+
+    __xəyali vahid__ `i = sqrt(−1)` şəklində yazılır və digər xəyali nömrələr də çoxaltma şəklində
+    yazıla bilər. Məsələn, `sqrt(-5) = 5i`.
+
+infinity:
+  title: Sonsuzluq
+  text: |
+    __Sonsuzluq__ - məhdudiyyətsiz və sonu olmayan bir kəmiyyətdir. Riyaziyyatda `∞` simvolu ilə
+    təmsil olunur.
+
+information:
+  title: Məlumat nəzəriyyəsi
+  text: |
+    __Məlumat nəzəriyyəsi__ məlumatların və məlumatların kəmiyyətlənməsi, saxlanması və
+    əlaqələndirilməsinin öyrənilməsidir. Məntiq, kriptoqrafiya və kompüter elmlərində istifadə
+    olunur.
+
+integer:
+  title: Tam ədədlər
+  text: |
+    __tam ədədləri sıfır daxil olmaqla müsbət və mənfi bütün ədədlərdir:…, –3, –2, –1, 0, 1, 2, 3,….
+    Tez-tez `ZZ` simvolu ilə işarələnirlər.
+
+internal-angle:
+  title: Daxili açılar
+  text: 'Bir çoxbucağın __daxili bucaqları daxili, hər bir ucundakı açılardır.'
+  image: internal-angle.svg
+
+irrational-numbers:
+  title: İrrasional ədədlər
+  text: |
+    __İrrasional nömrələr__ tam ədədlərin (_rasional ədədlər_) fraksiyaları kimi ifadə edilə
+    bilməyən ədədlərdir. Məsələn, 0.333333 ... = `1/3` _rasional_, lakin `π`, `sqrt(2)` və _e_
+    hamısı _irrasional_ -dir. İrrasional bir ədədin onluq forması dayanmır və təkrarlanmır.
+
+irregular-polygon:
+  title: Düzensiz çoxbucaq
+  text: |
+    __nizamsız çoxbucaqlı__, _nizamlı_ olmayan biridir. Bu o deməkdir ki, ya tərəflər, həm də
+    bucaqlar eyni ölçüdə deyil.
+
+isosceles-triangle:
+  title: Isosceles üçbucağı
+  text: '__isosceles üçbucağında__, iki tərəf eyni uzunluğa malikdir.'
+
+iss:
+  title: Beynəlxalq Kosmik Stansiya
+  text: |
+    __Beynəlxalq Kosmik Stansiya__ (ISS) 1998-ci ildə istifadəyə verildi və təxminən 400 km
+    yüksəklikdə Yer kürəsini orbit etdi. Aşağı Yer orbitində insan tərəfindən hazırlanan ən böyük
+    bir orqandır və işə düşməsindən bəri davamlı olaraq yaşayır. Bunu Yerdən gələn çılpaq gözlə
+    görmək olar.
+
+julia-set:
+  title: Julia Set
+  text: |
+    `§f(x) = x^2` kimi `f` funksiyasını nəzərə alsaq, müvafiq __Julia dəsti__ `§K(f)` kompleks
+    müstəvidəki bütün nöqtələrin alt hissəsidir, burada `f` təkrar tətbiq etməklə yaranan ardıcıllıq
+    ayrılmır. Bir çox hallarda Julia dəsti _fraktal_dır və _Mandelbrot dəsti_ ilə sıx əlaqəlidir.
+  link: /course/fractals/mandelbrot#julia
+  image: julia-set.png
+
+kite:
+  title: Uçurtma
+  text: A __uçurtma__ iki qonşu tərəfin eyni uzunluğa malik dördbucaqlıdır.
+  link: /course/polyhedra/quadrilaterals#kites
+
+koch-snowflake:
+  title: Koch Snowflake
+  text: |
+    __Koch Snowflake__ özünə bənzər fraktaldır. Hər iki tərəfə rekursiv şəkildə əlavə olunan daha
+    kiçik bərabər tərəfli üçbucaqlardan ibarət olan iki tərəfli üçbucaqdan ibarətdir.
+  link: /course/fractals/introduction#koch
+  image: koch-snowflake.svg
+
+laws-of-nature:
+  title: Təbiət qanunları
+  text: |
+    __ təbiət qanunları__, kainatda müşahidə etdiyimiz hər şeyi izah etməyə çalışan fiziki qaydalara
+    (ümumiyyətlə riyazi tənliklər şəklində ifadə olunur) kollektiv olaraq verilən bir addır.
+
+lcm:
+  title: Ən aşağı ümumi çoxluq
+  text: |
+    _a_ və _b_ iki nömrəli __ən az ümumi çoxluq__ (lcm), _a_ və {ikisinin çoxluğuna bərabər olan ən
+    kiçik tam ədəddir. 8} b_.
+  link: /course/divisibility/least-common-multiples
+
+line:
+  title: Xətt
+  text: |
+    {__xətti__, hər iki istiqamətdə əbədi uzanan sonsuz çox nöqtələr toplusudur. Xətlər həmişə
+    düzdür və _eni_ yoxdur.
+  link: /course/euclidean-geometry/definitions#lines
+
+line-segment:
+  title: Xətt seqmenti
+  text: |
+    A __xətti seqmenti__, sonsuzluğa qədər uzanmadan iki nöqtənin arasında yerləşən bir xəttin
+    hissəsidir. Sətir seqmentlərini _A_ nöqtəsindən _B_ nöqtəsinə `bar(AB)` kimi etiketleyebilirik.
+  link: /course/euclidean-geometry/definitions#segments
+
+line-slope:
+  title: Bir Xəttin Yamacı
+  text: |
+    Bir xəttin __yamacı__ onun "dikliyini" ölçür və adətən _m_ hərfi ilə işarələnir. Sətir boyunca
+    _x_ -də vahid dəyişməsi üçün _y_ dəki dəyişiklikdir.
+
+linear-equation:
+  title: Xətti tənlik
+  text: |
+    A __xətti tənlik__ `ax + b = 0` formasındadır, burada _x_ dəyişkəndir və _a_ və _b_ ədəddir. Bir
+    koordinat sistemində bağlandıqda `ax+b` dəyərləri düz bir xətt təşkil edir.
+
+linear-function:
+  title: Xətti funksiya
+  text: |
+    A __xətti funksiya__ qrafiki düz xətt olan bir funksiyadır. Bu `f(x) = mx + c` olaraq təyin
+    oluna bilər, burada _m_ xəttin yamacıdır və _c_ onun _y_ -axış kəsişməsidir.
+
+mandelbrot-set:
+  title: Mandelbrot dəsti
+  text: |
+    __Mandelbrot dəsti__, təkrarlanan ardıcıllıqla `§z_n = z_(n-1)^2 + c` (`§z_0 = 0` ilə)
+    ayrılmayan `CC` kompleks nömrələr toplusudur. Bu _fraktal_.
+  link: /course/fractals/mandelbrot
+  image: mandelbrot-set.png
+
+matrix:
+  title: Matris
+  text: A __matrisası__ satır və sütun şəklində düzülmüş düzbucaqlı bir sıra.
+
+median:
+  title: Median
+  text: |
+    Bir sıra nömrələrin __median__, ədədlərin yarısı daha böyük və yarısı daha kiçik olan bir
+    dəyərdir. İki "orta nömrə" varsa, bu rəqəmlərin ortalamasıdır.
+
+midpoint:
+  title: Orta nöqtə
+  text: |
+    Bir xətt seqmentinin __orta nöqtəsi__, seqmenti ortada iki konqres hissəsinə bölən xətt
+    seqmentindəki nöqtədir. __orta nöqtə düsturu__, son nöqtələr `(x_1, y_1)` və `(x_2,y_2)` üçün
+    orta nöqtənin `((x_1 + x_2)/2, (y_1 + y_2)/2)` olduğunu söylədi.
+
+millennium-prize:
+  title: Minillik mükafatı problemləri
+  text: |
+    Yeddi __Minillik Mükafat Problemləri__ Riyaziyyatda ən çətin açıq problemlərdən biridir. Onlar
+    2000-ci ildə _Gil Riyaziyyat İnstitutu_ tərəfindən siyahıya alındı və hər biri $ 1 milyon
+    mükafat aldı:
+
+    * P vs NP
+
+    * Hodge təsəvvürü
+
+    * Poincaré zənn
+
+    * Riemann hipotezi
+
+    * Yang-Mills Varlığı və Kütləvi Gap
+
+    * Navier-Stokes mövcudluğu və hamarlığı
+
+    * Birch və Swinnerton-Dyer Conjecture
+
+    Bu günə qədər problemlərdən yalnız biri _Poincaré Conjecture_ həll edildi. Lakin bunu həll edən
+    riyaziyyatçı Qriqori Perelman mükafatdan imtina etdi.
+
+mode:
+  title: Rejim
+  text: |
+    Bir sıra nömrələrin __rejimi__ ən çox baş verən saydır. Məsələn, [3, 4, 4, 4, 5, 5, 6] rejimi
+    5-dir.
+
+molecule:
+  title: Molekul
+  text: |
+    A __molekul__ kimyəvi bağlar ilə birlikdə olan iki və ya daha çox atomdan ibarətdir.
+    __İonlardan__ fərqli olaraq elektrik yükü yoxdur.
+
+    Molekullara misal olaraq iki bağlı Oksigen atomundan və `H_2 O` iki Hidrogen atomundan və bir
+    Oksigen atomundan ibarət olan `O_2` aiddir.
+
+morse-code:
+  title: Morse Kodu
+  text: |
+    __Morse kodu__, qısa və uzun siqnallardan (nöqtələr və tire adlanır) istifadə edərək məktub və
+    rəqəmləri təmsil etmək üçün bir yoldur. _Samuel Morse_ adını aldı və əvvəlcə teleqraflardan
+    istifadə edərək uzun məsafələrdə əlaqə qurmaq üçün istifadə edildi.
+
+    Məsələn, "L" hərfi qısa və uzun siqnalların _{x-morse(char="L")}_ ardıcıllığından istifadə
+    olunmaqla təmsil olunurdu.
+
+multiple:
+  title: Çoxsaylı
+  text: '_a_ bir sıra _b_ sayının __çox__, əgər _b_ _a_ amilidirsə.'
+  link: /course/divisibility/factors-and-multiples
+
+natural-numbers:
+  title: Natural ədədlər
+  text: |
+    __natural ədədlər__, 1: 1, 2, 3, 4, ... başlayan müsbət bütün ədədlərdir. Onlar çox vaxt `NN`
+    simvolu ilə işarələnirlər.
+
+net:
+  title: Polyhedra şəbəkələri
+  text: 'Çoxbucaqlı __xalis__, çoxbucaqlı üzlərini düz bir səthə "açarkən" əldə etdiyiniz şeydir.'
+
+neutron:
+  title: Neytron
+  text: |
+    A __neytron__ bir atomun nüvəsini təşkil edən hissəciklərdən biridir. Şarj yoxdur və təxminən
+    bir proton ilə eyni kütləə malikdir.
+
+np:
+  title: NP çətin problemləri
+  text: |
+    _Hesablama mürəkkəbliyi nəzəriyyəsi_, "çətin" problemlərin kompüter tərəfindən necə həll
+    olunacağını müəyyənləşdirmək üçündür. __NP sərt__ (qeyri-müəyyən polinomial zaman sərt) ən çətin
+    problemlər sinifidir.
+
+numerator:
+  title: Sayı
+  text: '__sayıcısı__, fraksiya içərisindəki ən üst nömrədir. Məsələn, `4/7` -də, 4 sayı sayışdır.'
+
+obtuse-angle:
+  title: Kəskin bucaq
+  text: '__maneə törətmə bucağı__, ölçüsü 90 ° -dən böyük, lakin 180 ° -dən azdır.'
+
+obtuse-triangle:
+  title: Qəbul üçbucağı
+  text: '__maneəli üçbucaqda__, bir daxili bucaq 90 ° -dən böyükdür.'
+  link: /course/triangles/properties#classification
+
+octagon:
+  title: Səkkizbucaq
+  text: '__səkkizbucaqlı__, səkkiz tərəfi olan çoxbucaqlıdır.'
+
+octahedron:
+  title: Oktahedron
+  text: |
+    __Oktahedron__ Platonik bir bərkdir və bərabər tərəfli üçbucaq olan 8 üzdən ibarətdir. 6 ucu və
+    12 kənarı var.
+  link: /course/polyhedra/platonic#platonic-overview
+
+order-of-symmetry:
+  title: Simmetriya qaydası
+  text: |
+    Bir forma fırlanma simmetriyasına sahibdirsə, simmetrinin __qaydası__, forma eyni göründüyü
+    istiqamətlərin sayıdır. (Və ya, başlanğıca qayıtmadan əvvəl şəklinizi dönə biləcəyiniz neçə
+    dəfə.)
+  link: /course/transformations/symmetry#rotational-symmetry
+
+origin:
+  title: Mənşəyi
+  text: 'Bir koordinat sisteminin __mənşəli__ nöqtəsidir (0, 0), burada _x_ -axis və _y_ -axis kəsişir.'
+
+origin-number-line:
+  title: Bir nömrə xəttinin mənşəyi
+  text: Bir sıra xəttinin __mənşəli__ nöqtəsi 0 nöqtəsidir.
+
+palindrome:
+  title: Palindrom
+  text: |
+    A __palindrom__, öndən-arxaya oxuduğu kimi eyni oxuduğu bir söz və ya rəqəmdir. Məsələn, 25752
+    və "ANNA" hər ikisi də palindromdur.
+  link: /course/transformations/symmetry#palindromes
+
+parabola:
+  title: Peyk yeməyi
+  text: |
+    A __parabola__, `y = x^2` kimi dördkünc bir funksiyanın qrafikinin formasıdır. Simmetrik, U
+    şəkilli və ya yuxarı və ya aşağıya işarə edə bilər. Ayrıca _konik hissəsidir_.
+  image: parabola.svg
+
+parabola-conic:
+  title: Peyk yeməyi
+  text: |
+    A __parabola__ sabit xəttdən eyni məsafədə olan, __directrix__ adlanan və sabit bir nöqtə olan
+    __fokus {deyilən bütün nöqtələrin məcmusudur. 5}.
+
+parabola-focus:
+  title: Bir Parabola diqqət
+  text: |
+    Parabolanın __fokus__ daxili hissəsində sabit bir nöqtədir. Parabolik bir güzgü üçün bütün
+    paralel, daxil olan işıq şüaları əks olunduqdan sonra diqqət mərkəzində kəsişir.
+
+parabola-vertex:
+  title: Parabolanın şaquli
+  text: |
+    Parabolanın __vertex__ istiqaməti dəyişdirdiyi nöqtədir. Bu ya müvafiq kvadratik funksiyanın
+    maksimumu, ya da minimumudur və parabola simmetriyasının oxunda yerləşir.
+
+parallel:
+  title: Paralel xətlər
+  text: |
+    İki və ya daha çox xətt, heç kəs kəsişməsə __paralel__. Eyni yamac var və aralarındakı məsafə
+    daimidir.
+  image: parallel.svg
+  link: /course/euclidean-geometry/definitions#parallel
+
+parallelogram:
+  title: Paraleloqram
+  text: 'A __paraleloqram__, qarşı tərəflərin hər iki cütü paralel olduğu dördbucaqlıdır.'
+  link: /course/polyhedra/quadrilaterals#parallelograms
+
+pascals-triangle:
+  title: Paskal üçbucağı
+  text: |
+    __Paskalın üçbucağı__ hər hüceyrə birbaşa yuxarıdakı iki hüceyrənin cəmi olduğu bir sıra
+    piramidadır. Bütün binomial əmsalları, eləcə də bir çox digər sıra ardıcıllığı və nümunələrini
+    ehtiva edir.
+  link: /course/sequences/pascals-triangle#pascal-triangle
+
+penrose:
+  title: Penrose kirəmit
+  text: |
+    A __Penrose kirəmitlədiyi__, _dövri olmayan_, _özünə bənzər_ imtahandır. Yalnız bir neçə fərqli
+    formadan ibarətdir, lakin heç vaxt təkrarlanmır.
+  link: /course/polyhedra/tessellations#penrose
+
+pentagon:
+  title: Pentaqon
+  text: A __beşbucaqlı__ beş tərəfli çoxbucaqlıdır.
+
+percent:
+  title: Faiz
+  text: 'A __faiz__, məxrəci 100 olan bir nisbətdir. Məsələn, `80/100 = 0.8` demək üçün 80% yazırıq.'
+
+perfect-numbers:
+  title: Mükəmməl Nömrələr
+  text: |
+    A __mükəmməl bir nömrə__, bölücülərinin cəminə bərabər olan bir ədəddir (özündən başqa).
+    Məsələn, `28 = 1 + 2 + 4 + 7 + 14` mükəmməl bir nömrədir.
+  link: /course/sequences/special#perfect-1
+
+perpendicular:
+  title: Perpendikulyar xətlər
+  text: |
+    İki xətt düzgün bucaqda kəsişirsə, __perpendikulyar__ (bəzən _normal_ və ya _ortogonal_
+    adlanır).
+  image: perpendicular.svg
+  link: /course/euclidean-geometry/definitions#perpendicular
+
+perpendicular-bisector:
+  title: Perpendikulyar bisektor
+  text: |
+    Bir xətt seqmentinin __perpendikulyar bisektoru__ onun orta nöqtəsindən keçir və 90 ° bir açı
+    ilə kəsişir.
+  image: perpendicular-bisector.svg
+
+pi:
+  title: Pi
+  text: |
+    Tez-tez Yunan hərfi _π_ olaraq yazılan __Pi__, dairənin və dairənin diametridir. Bu
+    transsendental bir nömrədir və dəyəri təxminən 3.14159265-dir ...
+  link: /course/circles/introduction#pi-definition
+
+platonic-solid:
+  title: Platon bərkdir
+  text: |
+    A __Platonik bərk__ hər üzün eyni sayda kənarları olan müntəzəm bir çoxbucaqlı olduğu və hər
+    vertexdə eyni sayda üzün qarşılaşdığı çoxbucaqlıdır. Yalnız beş fərqli Platonik qatı var:
+    Tetrahedron, Cube, Oktahedron, Dodecahedron və Icosahedron.
+  link: /course/polyhedra/platonic
+
+point:
+  title: Nöqtə
+  text: |
+    A __nöqtə__ məkanda müəyyən bir yerdir. Ballar bir mövqeyi təsvir edir, lakin ölçüsü və ya
+    forması yoxdur.
+  link: /course/euclidean-geometry/definitions#points
+
+polygon:
+  title: Çoxbucaqlı
+  text: |
+    A __çoxbucaqlı__ düz xətt seqmentlərindən ibarət olan həndəsi formadır. Çoxbucaqlılarda əyri
+    tərəflər və ya çuxurlar ola bilməz. Məsələn, bir kvadrat çoxbucaqlıdır, lakin bir dairə deyil.
+  image: polygon.svg
+  link: /course/polyhedra/polygons#polygons
+
+polygon-diagonal:
+  title: Diaqonal
+  text: 'Çoxbucaqlı A __diaqonal__, bir-birinin yanında olmayan iki ucu birləşdirən bir xətt seqmentidir.'
+
+polygon-edge:
+  title: Bir çoxbucaqlı kənarı
+  text: |
+    Çoxbucağın __tərəfləri__ və ya __kənarları__ onun konturunu təşkil edən xətt seqmentləridir.
+    Məsələn, üçbucağın üç tərəfi var.
+
+polygon-vertex:
+  title: Bir çoxbucağın şaquli
+  text: Çoxbucağın __ucları__ qonşu tərəflərin ("küncləri") görüşdüyü yerlərdir.
+
+polyhedron:
+  title: Polyhedron
+  text: |
+    A __polyhedron__ (çoxluq _polyhedra_), əyri səth və kənarları olmayan üçölçülü bərkdir. Bir
+    polyhedronun bütün üzləri çoxbucaqlıdır. Məsələn, bir kub və bir piramida polyhedra, lakin bir
+    sahə belə deyil.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-dual:
+  title: Bir polyhedron ikili
+  text: HƏR ŞEY
+  link: /course/polyhedra/platonic#platonic-dual
+
+polyhedron-edge:
+  title: Bir polyhedron kənarları
+  text: 'Bir polyhedronun __kənarları__, iki üzünün bağlandığı xətt seqmentləridir.'
+  link: /course/polyhedra/polyhedra
+
+polyhedron-face:
+  title: Bir polyhedronun üzü
+  text: Bir polyhedronun __üzləri__ onun səthini təşkil edən çoxbucaqlardır.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-vertex:
+  title: Bir polyhedronun şaquli
+  text: Bir polyhedronun "küncləri" onun __ucları__ adlanır.
+  link: /course/polyhedra/polyhedra
+
+polynomial:
+  title: Polinom
+  text: |
+    A __çoxbucaqlı__ sabit və güclərə qaldırılmış dəyişənlərin çoxluğundan ibarət olan cəbr
+    ifadəsidir. Məsələn, `5x^3 - 2y^2 + x + 4` çoxbucaqlıdır. Yalnız bir dəyişən olan çoxbucaqlı ən
+    ümumi forma `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0` olduğu halda `a_n`,
+    `a_(n-1)`, ..., `a_0` hamısı spesifik sabitdir.
+
+polynomial-degree:
+  title: Dərəcəsi
+  text: |
+    Bir terminin və ya çoxbucağının __dərəcəsi {hər hansı bir dəyişənin ən yüksək gücüdür. Məsələn,
+    `5x^3 + 2y^2 - 4z` dərəcəsi 3-dür.
+
+powers:
+  title: Eksponentləşmə
+  text: |
+    __Eksponentləşdirmə__ (və ya __güc__) - bir sayın ({_bazası_) müəyyən bir dəfə özünün vurduğu
+    riyazi əməliyyatdır ({_eksponent_). Bu adətən üst sətirbaz `a^x` şəklində yazılır, burada _a_
+    baza və _x_ eksponentdir. Məsələn, `4^3=4×4×4`.
+
+prime:
+  title: Baş Sayı
+  text: |
+    A __baş nömrəsi__ 1 və özündən başqa heç bir amili olmayan müsbət tamdır. İlk ədədə 2, 3, 5, 7,
+    11, 13,…
+  link: /course/divisibility/primes
+
+prime-factor:
+  title: Baş Faktor
+  text: Bir sayın A __əsas amili__ sadəcə əsas olan bir amildir.
+  link: /course/divisibility/primes
+
+prime-factorisation:
+  title: Faktorinq mükafatı
+  text: |
+    Bir nömrənin __əsas amilizasiyası__, onu əsas ədədlərin məhsulu kimi ifadə etmək üçün bir
+    yoldur. Məsələn, 12-nin əsas amilizasiyası `2 × 2 × 3` -dir.
+
+prism:
+  title: Prizma
+  text: |
+    A __prizma__, çoxbucaqlı olan (iki tərəfli {_əsasları_ adlanır), müvafiq ucları paralel
+    seqmentlər ilə birləşən üç ölçülü bərkdir. Bir prizmanın qalan üzləri hamısı düzbucaqlı və ya
+    paraleloqramdır.
+  image: prism.svg
+
+probability:
+  title: Ehtimal
+  text: |
+    A __ehtimalı__ 0 ilə 1 arasındakı rəqəmdir, müəyyən bir hadisənin baş vermə ehtimalını göstərir.
+    Bir hadisənin ehtimalı _A_ `P(A)` olaraq yazılmışdır.
+
+probability-tree:
+  title: Ehtimal ağacı
+  text: |
+    A __ehtimal ağacı__ çox ardıcıl hadisələrin birləşdirilmiş ehtimalını təmsil edən bir ağac
+    diaqramıdır.
+
+proof:
+  title: Sübut
+  text: 'A __sübut__, müəyyən bir ifadənin həqiqət olduğuna şübhə etmədən məntiqi bir dəlildir.'
+
+protein:
+  title: Zülal
+  text: |
+    A __Zülal__, canlı orqanizmlər daxilində bir çox fərqli funksiyanı yerinə yetirə bilən böyük bir
+    _makromolekuldur_: həzmdən hüceyrələr arasındakı ünsiyyətə və ya DNT təkrarlayanadək. Zülallar
+    _amin turşusu qalıqlarının_ bir və ya daha çox zəncirindən ibarətdir.
+
+proton:
+  title: Proton
+  text: |
+    A __proton__ atomun nüvəsini təşkil edən hissəciklərdən biridir. +1 pulsuzdur. Bir atomdakı
+    protonların sayı onun "atom nömrəsi" adlanır və onun hansı element olduğunu müəyyənləşdirir.
+
+pyramid:
+  title: Piramida
+  text: |
+    A __piramidası__, baza kimi çoxbucaqlı və kənarda üçbucaqlı üzlər olan bir təpəyə bənzər bir
+    çoxhedrdir.
+
+    __sağ müntəzəm piramida__, baza _müntəzəm çoxbucaqlıdır_ və ucu birbaşa bazanın mərkəzindən
+    yuxarıdır.
+  image: pyramid.svg
+
+protractor:
+  title: Qoruyucu
+  text: Bir qoruyucu bir açı bucaq dərəcəsi ölçmək üçün istifadə olunan bir vasitədir.
+
+pythagoras-theorem:
+  title: Pifaqor teoremi
+  text: |
+    __Pifaqor teoremi__ hər düzgün bucaqlı üçbucağın `a^2 + b^2 = c^2` olduğu yerdədir, burada _c_
+    hipotenuzun uzunluğu və _a_ və _b_ digər iki tərəfin uzunluqlarıdır.
+  link: /course/triangles/pythagoras
+
+pythagorean-triple:
+  title: Pifaqor üçlü
+  text: |
+    A __Pifaqor üçlü__, Pifaqor teoremini `a^2 + b^2 = c^2` təmin edən üç bütövlükdə _a_, _b_ və _c_
+    məcmusudur.
+  link: /course/triangles/pythagoras#pythagorean-triples
+
+quadratic:
+  title: Kvadratdır
+  text: 'A __dördbucaqlı__ 2-ci dərəcə çoxluğundadır. Məsələn, `x^2 - 2x + 3` kvadratdır.'
+
+quadratic-equation:
+  title: Kvadrat tənlik
+  text: |
+    A __kvadratik tənlik__ tək dərəcə 2 dəyişənini ehtiva edən bir tənlikdir. Tez-tez `ax^2 + bx + c
+    = 0` olaraq yazılır, burada _x_ dəyişəndir, _a_, _b_ və _c_ ədədlərdir və `a != 0`.
+
+quadratic-formula:
+  title: Kvadrat Formula
+  text: |
+    __kvadratik düstur__, bir kvadrat tənliyin köklərini təyin etmək üçün bir yoldur. `ax^2 + bx + c
+    = 0` tənliyinin kökləri var
+
+    {.text-center} `x = (-b +- sqrt(b^2 - 4ac))/(2a)`.
+
+quadratic-function:
+  title: Kvadrat funksiyası
+  text: |
+    A __kvadratik funksiya__ `f(x) = ax^2+bx+c` şəklindədir, burada _a_, _b_ və _c_ ədəddir, və `a
+    != 0`. Bir kvadratik funksiyanın qrafiki __parabola__ adlanan U formalı əyridir.
+
+quadratic-function-vertex-form:
+  title: Bir kvadratik funksiyanın şaquli forması
+  text: |
+    Kvadratik bir funksiyanın __vertex forması__ və ya __standart forması__ `f(x) = a(x − h)^2 + k`
+    -dir. `(h, k)` nöqtəsi müvafiq parabolanın __vertexidir__.
+
+quadrilateral:
+  title: Dörd tərəfli
+  text: A __dörd tərəfli__ dörd tərəfli çoxbucaqlıdır.
+  link: /course/polyhedra/quadrilaterals
+
+quantum:
+  title: Kvant mexanikası
+  text: |
+    __Kvant mexanikası__, fundamental hissəciklərin qəribə davranışlarını izah edən Fizikanın bir
+    qoludur.
+
+radians:
+  title: Radianlar
+  text: |
+    __Radians__ bucaq ölçüsünü ölçmək üçün bir vahiddir. Bir tam inqilab (360 °) `2π` radiandır -
+    vahid bir dairənin çevrəsinin uzunluğu.
+  link: /course/circles/radians#radians
+
+radioactive:
+  title: Radioaktiv çürümə
+  text: |
+    __Radioaktiv tənəzzül__ qeyri-sabit atomların parçalanaraq enerjini buraxdığı fiziki bir
+    prosesdir.
+
+rational-numbers:
+  title: Rasional ədədlər
+  text: |
+    __Rasional nömrələr__ iki tam ədədin `p/q` hissəsi kimi ifadə edilə bilən ədədlərdir. Onların
+    onluq genişlənməsi ya dayanır, ya da sonunda təkrarlanır. Nümunələr `1/2`, `-5/7`, 12.71 və 9.
+    Rasional ədədlər tez-tez `QQ` simvolu ilə işarələnir.
+
+ray:
+  title: Ray
+  text: |
+    A __ray__ bir nöqtədə başlayan və sonsuz bir istiqamətə uzanan bir xəttin hissəsidir. `A` -dən
+    başlayan şüaları `vec(AB)` olaraq qeyd edə bilərik.
+  link: /course/euclidean-geometry/definitions#rays
+
+real-numbers:
+  title: Real Nömrələr
+  text: |
+    __həqiqi ədədlər__ müsbət və mənfi ədədlər, rasional ədədlər (fraksiyalar), kvadrat köklər, kub
+    kökləri, ondalıklar, _π_, _də daxil olmaqla, nömrələr xəttində görünən bütün nömrələrdir. e_ və
+    daha çox. Tez-tez `RR` simvolu ilə işarələnirlər.
+
+rectangle:
+  title: Düzbucaq
+  text: 'A __düzbucaqlı__, dörd tərəfin hamısının 90 ° olduğu dörd tərəflidir.'
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+reflection:
+  title: Əks
+  text: 'A __əks__, bir xətt boyunca bir forma "atlayan" və ya "güzgülər" edən bir çevrilmədir.'
+  link: /course/transformations/rigid#reflections
+
+reflectional-symmetry:
+  title: Reflectional simmetriya
+  text: 'Bir forma əks olunduqdan sonra eyni görünsə, əks etdirən simmetriya var.'
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+regular-polygon:
+  title: Daimi çoxbucaqlı
+  text: |
+    A __müntəzəm çoxbucaqlı__, bütün tərəflərin eyni uzunluğa və bütün daxili açıların eyni ölçüdə
+    olduğu çoxbucaqlıdır.
+  image: regular-polygon.svg
+  link: /course/polyhedra/polygons#regular-polygons
+
+rhombus:
+  title: Rombus
+  text: |
+    A __romb__ (çoxluq _romblar_ və ya _rombi_) dörd tərəfli bir tərəfdir, bu tərəflərin hamısı eyni
+    uzunluqdadır.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+right-angle:
+  title: Düz bucaq
+  text: 'A __sağ bucaq__, 90 ° ölçülü bir açıdır.'
+
+right-triangle:
+  title: Düz açılı üçbucaq
+  text: __düzbucaqlı üçbucaq__ içərisində bir daxili bucaq tam 90 ° -dir.
+  image: right-triangle.svg
+  link: /course/triangles/properties#classification
+
+rigid-transformation:
+  title: Sərt çevrilmə
+  text: |
+    A __sərt çevrilmə__ (və ya __izometriya__) həndəsi fiqurun ölçüsünü və ya formasını dəyişməyən
+    bir çevrilmədir.
+  link: /course/transformations/rigid
+
+roman-numerals:
+  title: Roma Sayları
+  text: |
+    __Roma rəqəmsal sistemi__ qədim Romada inkişaf etmiş və 14-cü əsrə qədər Avropada istifadə
+    edilmişdir. Yeddi fərqli məktubu birləşdirərək istənilən tam ədəd yazmağınıza icazə verdi:
+
+    * I = 1
+
+    * V = 5
+
+    * X = 10
+
+    * L = 50
+
+    * C = 100
+
+    * D = 500
+
+    * M = 1000
+
+rotation:
+  title: Dönmə
+  text: |
+    A __fırlanma__ sabit bir nöqtə ətrafında müəyyən bir açı ilə bir forma "çevirən" bir
+    çevrilmədir.
+  link: /course/transformations/rigid#rotations
+
+rotational-symmetry:
+  title: Dönmə simmetriyası
+  text: Bir forma döndükdən sonra da eyni görünərsə (360 ° -dən az) fırlanma simmetriyasına malikdir.
+  image: rotational-symmetry.svg
+  link: /course/transformations/symmetry#rotational-symmetry
+
+roulette:
+  title: Rulet
+  text: |
+    __Rulet__, bir iplik topunun hara getməyinə qərar verdiyiniz bir kazino oyunudur. 36 ədəddən,
+    bir və ya iki 0-dən ibarətdir.
+
+scale-factor:
+  title: Ölçək Faktoru
+  text: |
+    İki oxşar həndəsi fiqurun __miqyas amili__ hər iki uyğun uzunluğun nisbətidir.
+
+    1-dən az olan bir miqyas amili şəklin kiçildiyini və 1-dən böyük bir miqyas amilinin formanın
+    böyüdüyünü göstərir.
+  link: /course/transformations/dilations#dilations-1
+
+scalene-triangle:
+  title: Tərəzi üçbucağı
+  text: '__skalene üçbucağında__, hər üç tərəfin fərqli uzunluqları var.'
+
+scientific-notation:
+  title: Elmi Notation
+  text: |
+    __Elmi notation__ çox böyük və ya kiçik ədəd yazmaq üçün standart bir metoddur. `a × 10^n`
+    formasındadır, burada _n_ tamdır və `1 ≤ a < 10`.
+
+    Məsələn, 4600 sayı `4.6 × 10^3` olaraq yazıla bilər.
+
+set:
+  title: Dəstlər
+  text: |
+    A __dəsti__ əşyalar və ya əşyalar toplusudur (element adlanır). Hər element yalnız bir dəstdən
+    birini görə bilər. {} S istifadə edərək dəstlər yazırıq, məsələn, 2, 3 və 4 ədədləri olan bir
+    dəst {2, 3, 4} olaraq yazılırdı.
+
+sequence:
+  title: Ardıcıllıq
+  text: |
+    A __ardıcıllığı__, tez-tez müəyyən bir naxış və ya funksiyanı izləyən nömrələrin (və ya həndəsi
+    cisimlər kimi digər elementlərin) sifariş edilmiş siyahısıdır. Ardıcıllıqlar həm sonlu, həm də
+    sonsuz ola bilər.
+  link: /course/sequences/introduction#simple-patterns
+
+sequence-convergence:
+  title: Konvergensiya
+  text: Zamanla şərtləri yaxınlaşdıqda və müəyyən bir __limit__ yaxınlaşdıqda __ardıcıllığı__ çevirir.
+
+sequence-divergence:
+  title: Ayrışma
+  text: |
+    Bir sıra __zaman keçdikcə şərtləri daha da böyüdükcə sonsuzluğa (və ya mənfi sonsuzluğa)
+    yönəldilir__.
+
+sequence-explicit:
+  title: Açıq Formula
+  text: |
+    Bir ardıcıllıqla __açıq bir formula__ _n_ funksiyası olaraq _n_ üçüncü müddətin `x_n` dəyərini
+    ifadə edir.
+  link: /course/sequences/introduction#explicit
+
+sequence-recursive:
+  title: Rekursiya Formulu
+  text: |
+    Bir ardıcıllıq üçün __təkrarlayan düstur__ hər bir müddətin dəyərini əvvəlki şərtlərin
+    funksiyası kimi ifadə edir.
+  link: /course/sequences/introduction#recursive-1
+
+sequence-term:
+  title: Bir ardıcıllıq şərtləri
+  text: Bir ardıcıllığın __şərtləri__ onun bütün fərdi nömrələri və ya elementləridir.
+  link: /course/sequences/introduction#simple-patterns
+
+sierpinski-triangle:
+  title: Sierpinski üçbucağı
+  text: |
+    __Sierpinski üçbucağı__ özünə bənzər fraktaldır. Bu bərabər tərəfli üçbucaqdan ibarətdir, daha
+    kiçik tərəfli üçbucaqlar geri qalan hissədən geri çəkilir.
+  link: /course/fractals/sierpinski
+  image: sierpinski-triangle.svg
+
+sieve-eratosthenes:
+  title: Eratosthenlərin ələk
+  text: |
+    __Eratosthenlərin ələkliyi__, _olmayan_ başlıq olmayan nömrələri dəfələrlə silməklə, əsas
+    ədədləri tapmaq prosedurudur.
+  link: /course/divisibility/primes#eratosthenes
+
+similar:
+  title: Oxşar
+  text: |
+    İki həndəsi forma eyni forma, lakin fərqli ölçüdə olduqda __oxşardır__. Bir forma digəri ilə
+    uyğunlaşmaq üçün hərəkət edə, döndürə, əks etdirə və boyutlandıra bilərik. Onların uyğun açıları
+    bərabərdir və müvafiq tərəfləri eyni nisbətdədir.
+
+sin:
+  title: onun
+  text: |
+    __Sine__ `sin(θ)` olaraq yazılmış trigonometrik bir funksiyadır. Düzgün açılı üçbucaqda, əks
+    tərəfin və hipotenuzun nisbətidir.
+  link: /course/triangles/trigonometry#trig-functions
+
+sphere:
+  title: Sahə
+  text: |
+    A __sahə__, verilmiş _mərkəzdən_ eyni məsafədə olan bütün nöqtələrdən ibarət olan üç ölçülü bir
+    qatıdır. Bu məsafəyə kürənin _radiusu_ deyilir.
+  link: /course/circles/spheres-cones-cylinders#sphere
+
+sphere-radius:
+  title: Bir sferanın radiusu
+  text: Bir sferanın __radiusu__ onun mərkəzi ilə səthindəki istənilən nöqtə arasındakı məsafədir.
+
+square:
+  title: Meydan
+  text: |
+    A __kvadrat__ adi dördbucaqlıdır: hər tərəf eyni uzunluğa, bütün açılar eyni ölçüyə malikdir (90
+    °).
+  link: /course/polyhedra/quadrilaterals
+
+square-area:
+  title: Bir meydanın sahəsi
+  text: Yan tərəfinin uzunluğu _s_ olan kvadratın __sahəsi `A = s^2` -dir.
+
+square-matrix:
+  title: Kvadrat Matrix
+  text: '{__kvadrat matrisası__ eyni sayda sətir və sütun olan bir matrisdir.'
+
+square-numbers:
+  title: Kvadrat Nömrələr
+  text: |
+    A __kvadrat nömrəsi__ başqa tam ədədin kvadratı kimi ifadə edilə bilən bir rəqəmdir. İlk kvadrat
+    ədədlər 1, 4, 9, 16, 25,…
+  link: /course/sequences/introduction#squares
+
+subdivision:
+  title: Bölmələr
+  text: Bir qrafikin __bölməsini yaratmaq üçün kənarları boyunca əlavə ucları əlavə edin.
+
+subgraph:
+  title: Subqraf
+  text: |
+    Bir qraf, daha böyük qrafik kənarları və uclarının alt dəsti ilə əmələ gəlsə, başqa bir qrafikin
+    __alt tərcüməsidir.
+  link: /course/graph-theory/introduction#intro-2
+
+supplementary-angles:
+  title: Əlavə bucaqlar
+  text: '180 ° (yarı dairə) qədər əlavə etsələr, iki bucaq __əlavə__ dir.'
+
+symmetry:
+  title: Simmetriya
+  text: |
+    Bir rəqəm və ya forma bir şəkildə dəyişdirildikdən sonra eynidirsə (məsələn, əks etmə və ya
+    dönmə) __simmetriyası var__.
+  link: /course/transformations/symmetry#symmetry
+
+symmetry-group:
+  title: Simmetriya Qrupu
+  text: 'Həndəsi cismin __simmetriya qrupu {{} bütün simmetriyalarının_ (habelə _şəxsiyyəti_) toplusudur.'
+  link: /course/transformations/symmetry-groups#groups-1
+
+tan:
+  title: Tangent
+  text: |
+    __Tangent__ `tan(θ)` olaraq yazılmış trigonometrik bir funksiyadır. _sinus_ və _kosinasının_
+    nisbəti kimi müəyyən edilmişdir:
+
+    {.text-center} `tan(θ) = sin(θ) / cos(θ)`.
+
+    Düzgün açılı üçbucaqda, `tan(θ)`, qarşı tərəfin və qonşu tərəfin nisbəti `θ`.
+  link: /course/triangles/trigonometry#trig-functions
+
+tangent:
+  title: Tangent xətti
+  text: |
+    A __tangens xətti__, bir nöqtədə əyri və ya dairəyə toxunan, kəsişmədən bir xəttdir. Bu nöqtəyə
+    bəzən__ dolğunluq nöqtəsi __deyilir.
+
+term:
+  title: Müddəti (Cəbr)
+  text: |
+    __şərtləri__, cəbri ifadə və ya tənlik + və ya işarələri ilə ayrılan hissələrdir. Bunlar məhsul
+    və ya fraksiya və ya bir və ya bir neçə ədəd, dəyişən və ya funksiya ola bilər.
+
+    Məsələn, `2x^2 - 3ab + 4` ifadəsində üç termin `2x^2`, `3ab` və 4-dür.
+
+tessellation:
+  title: Tesellation
+  text: 'A __boşalma__, boşluğu və ya üst-üstə düşmədən bir səthi əhatə edən həndəsi naxışdır.'
+  link: /course/polyhedra/tessellations
+
+tetrahedral-numbers:
+  title: Tetraedral Nömrələr
+  text: |
+    A __tetraedral nömrəsi__, çox sferanı _tetrahedron_ -ə yığmaqla yaradılan bir saydır. İlk
+    tetraedral nömrələr 1, 4, 10, 20, 35,…
+  link: /course/sequences/figurate#tetrahedral
+
+tetrahedron:
+  title: Tetrahedron
+  text: |
+    __Tetrahedron__ bir Platon qatıdır və bərabər tərəfli üçbucaq olan dörd üzdən ibarətdir. Dörd
+    ucu və altı kənarı var.
+  link: /course/polyhedra/platonic#platonic-overview
+
+theorem:
+  title: Teorem
+  text: |
+    A __teoremi__ riyaziyyatda xüsusilə vacib bir nəticədir və ya müşahidədir. Aksiomalardan,
+    qaydalar məntiqindən və onsuz da həqiqət olduğu bilinən əvvəlki teoremlərdən istifadə edərək hər
+    zaman həqiqət olduğu sübut edilmişdir.
+
+transformation:
+  title: Çevrilmə
+  text: |
+    A __çevrilmə__ bir həndəsi formanı digərinə çevirir. _əks {_ və ya _düzəlişlər_ kimi bir çox
+    fərqli çevrilmə mövcuddur.
+  link: /course/transformations/rigid#transformations
+
+transformation-image:
+  title: Bir çevrilmənin görüntüsü
+  text: |
+    Həndəsi forma dəyişdirdikdən sonra nəticə onun __şəkli__ adlanır. Tez-tez etiketinin sonuna bir
+    'əlavə etməklə işarələnir.
+  link: /course/transformations/rigid#transformations
+
+translation:
+  title: Tərcümə
+  text: |
+    A __tərcümə__, fiquru bucağı və forması dəyişdirmədən müəyyən bir istiqamətə aparan bir
+    çevrilmədir.
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+
+translational-symmetry:
+  title: Tərcümə simmetriyası
+  text: |
+    Təkrar bir nümunə (divar kağızı kimi) müəyyən bir məsafədən tərcümə edildikdən sonra eyni
+    görünsə, __tərcümə simmetriyası var__.
+  link: /course/transformations/symmetry-groups#symmetry-groups-1
+
+transversal:
+  title: Traversal
+  text: 'Transversal, digər iki xətti kəsən bir xəttdir.'
+
+trapezium:
+  title: Trapezium
+  text: |
+    A __trapezium__ (bəzən __trapezoid__ adlanır) iki qarşı tərəfin paralel olduğu dörd tərəflidir.
+    Bunlara trapeziumun _əsasları_, digər iki tərəfi isə _ayaqları_ adlanır.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-2
+
+triangle:
+  title: Üçbucaq
+  text: A __üçbucağı__ üç düz tərəfi və üç daxili açısı olan həndəsi bir forma.
+
+triangle-aa:
+  title: Üçbucaqlar üçün AA vəziyyəti
+  text: |
+    İki üçbucaq iki bucağı eyni ölçüdə olduqda __oxşardır__. Buna üçbucaqlar üçün __AA oxşarlıq
+    şərti__ deyilir.
+
+triangle-altitude:
+  title: Üçbucaqların yüksəkliyi
+  text: |
+    Üçbucağın __hündürlüyü__ (və ya __hündürlüyü__), tərəflərin birinə qarşı dik xətdən keçən bir
+    xəttdir. Hər üçbucağın üç hündürlüyü var.
+  image: triangle-altitude.svg
+  link: /course/triangles/properties#altitudes
+
+triangle-legs:
+  title: Üçbucağın ayaqları
+  text: |
+    Düzbucaqlı üçbucağın iki __ayaqları__ iki qısa tərəfdir (_hipotenüzü_ deyil). Doğru bucağın
+    yanında.
+
+triangle-inequality:
+  title: Üçbucaq bərabərsizliyi
+  text: |
+    __üçbucaq bərabərsizliyi__, üçbucağın hər iki tərəfinin uzunluqlarının cəminin üçüncü tərəfin
+    uzunluğundan çox olduğunu bildirir. Bu da iki nöqtə arasındakı ən qısa məsafənin düz bir xətt
+    olduğunu göstərir (çünki üçüncü nöqtədən keçmək həmişə daha uzun olur).
+
+triangle-median:
+  title: Üçbucağın medianları
+  text: |
+    Üçbucağın __medianları__, hər bir ucu qarşı tərəflərin orta nöqtəsinə bağlayan xətt
+    seqmentləridir. Üçbucağın üç mediası __centroid__ adlanan bir nöqtədə kəsişir.
+  link: /course/triangles/properties#medians
+
+triangle-midsegment:
+  title: Yarımmüddət
+  text: |
+    Üçbucağın __orta seqmentləri üçbucağın müxtəlif tərəflərinin orta nöqtələrini birləşdirən
+    xətlərdir.
+  image: triangle-midsegment.svg
+  link: /course/triangles/midsegments
+
+triangle-numbers:
+  title: Üçbucaq Nömrələri
+  text: |
+    {__üçbucağının nömrəsi__ nöqtələrin bərabər tərəfli üçbucağı şəklində göstərilə bilən tam
+    ədəddir. _n_ üçüncü üçbucaq nömrəsinin düsturu `(n*(n+1))/ 2`, ilk üçbucaq ədədləri 1, 3, 6, 10,
+    15,…
+  image: triangle-numbers.svg
+  link: /course/sequences/figurate#triangle-numbers
+
+triangle-sss:
+  title: Üçbucaqlar üçün SSS vəziyyəti
+  text: |
+    İki üçbucağın üç tərəfi eyni uzunluğundadırsa __bərabərdir__. Buna üçbucaqlar üçün __SSS
+    uyğunluq şərti__ deyilir.
+  link: /course/triangles/congruence#congruence-1
+
+trigonometry:
+  title: Triqonometriya
+  text: |
+    __Triqonometriya__, üçbucaqların tərəfləri və bucaqları arasındakı əlaqələri öyrənən
+    riyaziyyatın bir qoludur. Əvvəlcə __sinus__, __kosinası__, __tangens__ və onların qarşılıqlı
+    əlaqələri ilə əlaqədardır.
+  link: /course/triangles/trigonometry
+
+truncated-icosahedron:
+  title: Kəsilmiş Icosahedron
+  text: |
+    __Kəsilmiş İkosahedron__, 12 müntəzəm beşbucaqdan və 20 nizamlı altıbucaqlıdan ibarət olan
+    _Arximed bərk_.
+  link: /course/polyhedra/platonic#archimedean
+
+twin-primes:
+  title: Əkiz priyomlar
+  text: |
+    __Əkiz nöqtələr__, 17 və 19 və ya 101 və 103 kimi cüt ədədlərdir, bunlar tamamilə iki ayrıdır.
+    Sonsuz çoxlu cüt cütlük varsa, bilinmir.
+  link: /course/divisibility/the-distribution-of-primes#twin-primes
+
+unit-circle:
+  title: Birlik dairəsi
+  text: A __vahid dairəsi__ radiusu 1 olan bir dairədir.
+
+variable:
+  title: Dəyişən
+  text: |
+    A __dəyişən__ bilinməyən və ya dəyəri dəyişə biləcək bir kəmiyyətdir. Cəbr ifadəsində,
+    ümumiyyətlə _x_ kimi bir məktubla təmsil olunur.
+
+venn-diagram:
+  title: Venn diaqramı
+  text: A __Venn diaqramı__ üst-üstə düşən çoxlu xüsusiyyət və ya hadisələri vizual olaraq göstərir.
+  image: venn.svg
+
+vertical-angles:
+  title: Şaquli açılar
+  text: |
+    __Şaquli açılar__ kəsişən xətlərin yaratdığı əks əks açılar cütüdür. Şaquli açılar həmişə
+    _bərabərdir_.
+
+whole-numbers:
+  title: Bütöv Nömrələr
+  text: '__bütün nömrələri__ sıfır daxil olmaqla hesablama nömrələridir: 0, 1, 2, 3, 4,…'
+
+zero-product:
+  title: Sıfır məhsul mülkiyyəti
+  text: |
+    __sıfır məhsul mülkiyyəti__ bildirir ki, iki kəmiyyətin məhsulu sıfırdırsa, bu miqdarın ən azı
+    biri də sıfır olmalıdır. Məsələn, əgər `a × (a - 1) = 0`, onda `a = 0` ya da `a - 1 = 0`.

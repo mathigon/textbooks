@@ -634,6 +634,16 @@ TODO: draw chart
 
 > section: piecewise
 > sectionStatus: dev
+> id: fn-sketch
+
+Draw a Function:
+
+    x-coordinate-sketch(width=600 height=400 x-axis="-1,10,1" y-axis="-5,5,1")
+      button.btn.clear Clear
+
+Type some text:
+
+    x-free-text(placeholder="Your answer…")
 
 // NOTE
 // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.

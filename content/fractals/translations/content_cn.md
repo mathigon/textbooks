@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 环顾大自然时，您可能已经注意到像这样的复杂植物：
 
@@ -428,14 +429,12 @@
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption}中亚的山脉
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption}印度的恒河三角洲
@@ -448,14 +447,12 @@
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption}视网膜血管
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption}美国大峡谷
@@ -470,16 +467,12 @@
 
 所有这些对象可能看起来都是完全随机的，但就像分形一样，存在一个确定其形成方式的潜在模式。数学可以帮助我们更好地理解形状，分形在医学，生物学，地质学和气象学等领域都有应用。 [继续](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption}计算机生成的分形地形
@@ -498,6 +491,7 @@
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -522,22 +516,18 @@
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -694,6 +684,7 @@ Sierpinski三角形有许多变体，并且其他分形具有相似的特性和�
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 我们在前几章中看到的所有分形都是使用__迭代__的过程创建的：首先从特定的模式开始，然后一遍又一遍地重复。
 
@@ -730,15 +721,15 @@ Sierpinski三角形有许多变体，并且其他分形具有相似的特性和�
 
 请注意，取决于起始值`x_0`，所得序列的行为会有很大不同：
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 如果`x_0 > 1`，序列[[会偏离|converges]]：_{span.reveal(when="blank-0")}，但它会一直增长，直到无穷大。_
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 如果`x_0`在–1和1之间，则序列[[收敛|diverges]]。
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 如果为`x_0 < -1`，则序列[[与|converges]]分开。
 
@@ -955,14 +946,9 @@ Sierpinski三角形有许多变体，并且其他分形具有相似的特性和�
 * {.reveal(when="blank-0")}在[大灯泡](target:bulb1)中位于顶部[[内的序列到达由[[3]]个点组成的|converge|diverge]] _{span.reveal(when="blank-1")}轨道。_
 * {.reveal(when="blank-2")}这个较小的灯泡](target:bulb2)中的序列的轨道长度为[[5]]。
 
-
 :::
 
 {.reveal(when="blank-3")}每个灯泡都有不同大小的轨道，较小的灯泡在其轨道上有越来越多的点。这些轨道的大小与[后勤图](/course/chaos)中的重要概念__后勤图__密切相关。
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 
@@ -988,6 +974,4 @@ Bernoit Mandelbrot毕生致力于分形研究以及_粗糙度_和_自相似_的�
 > sectionStatus: dev
 
 {.todo}即将来临！
-
-
 

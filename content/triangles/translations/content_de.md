@@ -133,7 +133,6 @@ berechnen.
 :::
 
     figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
-    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
 
 ---
 
@@ -273,29 +272,8 @@ waagrecht an einem Stück Schnur aufhängen, die an seinem Schwerpunkt befestigt
 
     figure: img(src="images/center-of-mass.jpg" width=600 height=190)
 
-::: column.grow
 Das funktioniert, weil das Gewicht des Dreiecks gleichmäßig um den
 Schwerpunkt verteilt ist. In der Physik wird dieser Punkt oft als __Massenschwerpunkt__ bezeichnet.
-
-Jede gerade Linie, die durch den Schwerpunkt verläuft, teilt das Dreieck in zwei
-Teile, die genau die gleiche Fläche haben. Verschiebe den [blauen Punkt](target:move) in der
-Abbildung rechts. Die roten und grünen Bereiche haben immer die gleiche Fläche.
-::: column(width=220)
-
-    x-geopad(width=220): svg
-      circle.move(name="a" cx=70 cy=50)
-      circle.move(name="b" cx=60 cy=160)
-      circle.move(name="c" cx=180 cy=130)
-      circle.yellow(x="triangle(a,b,c).centroid" name="d")
-      circle.move.blue.pulsate(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
-      circle(hidden name="q" x="p.rotate(pi,d)")
-
-      path.dark(x="triangle(a,b,c)" name="t")
-      path.fill.green.light(x="t.intersect(polygon(p,q,p.rotate(pi/2,q),q.rotate(-pi/2,p)))")
-      path.fill.red.light(x="t.intersect(polygon(p,q,p.rotate(-pi/2,q),q.rotate(pi/2,p)))")
-      path.blue(x="line(p,d)")
-
-:::
 
 ---
 > id: circumcircle
@@ -855,10 +833,6 @@ Wand hinauf?
 Beachte, dass ein rechtwinkliges Dreieck gebildet wird, das aus der Leiter, der Wand und
 dem Boden besteht. Mit dem Satz des Pythagoras können wir das so schreiben:
 
-    //- Ideal syntax:
-    //- | `green(h^2) + blue(1^2)` | `red(6^2)`          |
-    //- |          `=> green(h^2)` | `= blank(35)`       |
-    //- |            `=> green(h)` | `= sqrt(35) = 5.92` |
     
     table.eqn-system
       tr
@@ -962,11 +936,6 @@ jeweils [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfra
 und [ein Quadrat](target:square) der Fläche [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
 
 {.reveal(when="blank-3 blank-4")} Wenn wir alle diese Informationen zusammenführen, bekommen wir folgende Gleichung:
-
-    //- Ideal syntax:
-    //- |         `(a+b)^2` | `= 4 xx 1/2ab + c^2` |
-    //- | `a^2 + 2ab + b^2` | `= 2ab + c^2`        |
-    //- |       `a^2 + b^2` | `= c^2`              |
 
     table.eqn-system.reveal(when="blank-3 blank-4")
       tr
@@ -1215,13 +1184,6 @@ Pythagoräische Tripel finden?
 {.reveal(when="p0 p1 p2 p3 p4 p5")} Erkennst du ein Muster in der
 Verteilung dieser Punkte? 
 
-    // Der Mathematiker Euklid fand eine clevere Methode, um neue
-    // Pythagoräische Tripel zu erzeugen. Zuerst müssen wir zwei beliebige ganze Zahlen _m_ und _n_ nehmen:
-    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = ${n}{n|2|1,20,1}
-    // Jetzt können wir die drei Zahlen berechnen, aus denen sich das Tripel zusammensetzt:
-    // {.text-center} `2mn =` ${2×m×n}, `m^2 - n^2 =` ${m×m-n×n},  `m^2 + n^2 =` ${m×m+n×n}
-    // Und schon haben wir ein Pythagoräisches Tripel! Du kannst überprüfen, ob a2 + b2 = c2.
-
 ----
 
 ## Gleichschenklige und gleichseitige Dreiecke
@@ -1244,28 +1206,6 @@ Proof by constructing angle bisector and using SAS result.
 
 {.todo} COMING SOON – Find the height of an Isosceles Triangles using Pythagoras
 
-    // {.todo} The angles between the base and the congruent sides are
-    // called base angles. The angle made by the two legs of the isosceles triangle is
-    // called the vertex angle.
-    // 
-    // {.todo} Base Angles Theorem: The base angles of an isosceles triangle are congruent.
-    // To prove the Base Angles Theorem, we will construct the angle bisector through
-    // the vertex angle of an isosceles triangle.
-    // 
-    // {.todo} Isosceles Triangle Theorem: The angle bisector of the vertex angle in an
-    // isosceles triangle is also the perpendicular bisector to the base.
-    // 
-    // {.todo} The converses of the Base Angles Theorem and the Isosceles Triangle Theorem are
-    // both true. If two angles in a triangle are congruent, then
-    // the opposite sides are also congruent. And if the perpendicular bisector of the base of
-    // an isosceles triangle is also the angle bisector of the vertex angle.
-    // 
-    // {.todo} In other words, if △ABC is isosceles, AD⊥CB and CD≅DB, then ∠CAD≅∠BAD.
-    // 
-    // {.todo} Find the Height of an Isosceles Triangle
-    // One way to use The Pythagorean Theorem is to identify the heights in isosceles
-    // triangles so you can calculate the area.
-
 ---
 > id: equilateral
 
@@ -1275,14 +1215,6 @@ Wir sagen, dass ein Dreieck [__gleichseitig__](todo:equilateral-triangle) ist, w
 seine Seiten die gleiche Länge haben. Du hast [bereits
 gesehen](/course/euclidean-geometry/geometric-construction), wie man ein
 gleichseitiges Dreieck mit Lineal und Zirkel konstruiert.
-
-    // Jedes gleichseitige Dreieck ist immer auch gleichschenklig. Aus dem Basiswinkelsatz
-    // wissen wir, dass auch Winkel, die sich gegenüber kongruenten Seiten in einem Dreieck befinden, kongruent sind.
-    // In einem gleichseitigen Dreieck sind alle Seiten deckungsgleich, so dass auch alle Winkel
-    // deckungsgleich sein müssen.
-    // 
-    // Da wir wissen, dass die Summe aller drei Winkel 180° beträgt, muss jeder einzelne Winkel
-    // in einem gleichseitigen Dreieck [[60]]° betragen.
 
 {.todo} KOMMT BALD - Größe der Winkel in einem gleichseitigen Dreieck
 
@@ -1419,31 +1351,12 @@ eine dreistellige Abkürzung:
 
 {.todo} KOMMT BALD - Mehr zur Trigonometrie
 
-    // {.todo} COMING SOON – Abbreviations: sin x, cos y
-    // {.todo} COMING SOON – Using calculators
-    // {.todo} COMING SOON – Examples
-    // {.todo} COMING SOON – Rationalize the denominator
-
 ---
 > id: inverse-trig
 
 ### Trignometrische Umkehrfunktionen (inverse Funktionen) 
 
 {.todo} KOMMT BALD - Umkehrfunktion
-
-    // Das Wort invers für umgekehrt ist dir vielleicht bekannt. In der Mathematik lernt man, wie
-    // man eine Operation durchführt, und wie man sie "rückgängig macht". Zum Beispiel kannst du dich daran
-    // erinnern, dass Addition und Subtraktion als inverse Operationen betrachtet werden.
-    // Multiplikation und Division sind ebenfalls inverse Operationen. In der Algebra hast du
-    // Umkehrfunktionen verwendet, um Gleichungen und Ungleichungen zu lösen. Wenn wir das Wort
-    // invers auf die trigonometrischen Verhältnisse anwenden, können wir die Größe der spitzen Winkel in
-    // einem rechtwinkligen Dreieck finden. Normalerweise, wenn du einen Winkel und eine Seite eines rechtwinkligen
-    // Dreiecks gegeben hast, kannst die beiden anderen Seiten finden, indem du Sinus, Cosinus oder Tangents anwendest. With
-    // the inverse trig ratios, you can find the angle measure, given two sides.
-
-    // On most scientific and graphing calculators, the buttons look like
-    // [SIN−1],[COS−1], and [TAN−1]. Typically, you might have to hit a shift
-    // button to access these functions.
 
 ---
 
@@ -1464,10 +1377,6 @@ In einem Dreieck mit den Seiten _a_, _b_ und _c_, und den Winkeln _A_, _B_ und _
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
 :::
 
-    // {.todo} Verwende den Sinussatz, wenn folgendes gegeben ist:
-    // Ein Winkel und seine gegenüberliegende Seite.
-    // Zwei beliebige Winkel und eine Seite.
-
 ::: column.grow
 ::: .theorem
 __Kosinussatz__  
@@ -1478,21 +1387,12 @@ In einem Dreieck mit den Seiten _a_, _b_ und _c_, und den Winkeln _A_, _B_ und _
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
-    // {.todo} Obwohl es drei Formeln gibt, sind sie alle sehr ähnlich. Zuerst ist zu beachten
-    // , dass sich die gegenüberliegende Seite auf der anderen Seite des
-    // Gleichheitszeichens befindet, egal welcher Winkel im Kosinus liegt.
-    // 
-    // {.todo} Verwende den Kosinussatz, wenn folgendes gegeben ist:
-    // Zwei Seiten und der eingeschlossene Winkel.
-    // Alle drei Seiten.
 :::
 
 ---
 > id: trigonometry-4
 
 {.todo} COMING SOON – Proof, examples and applications
-
-    // TODO Future stuff about trigonometry
 
 ---
 > id: mountains

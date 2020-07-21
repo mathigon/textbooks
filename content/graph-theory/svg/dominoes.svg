@@ -1,7 +1,5 @@
 <svg viewBox="0 0 960 80" id="dominoes">
 
-<rect x="0" y="0" width="960" height="80" fill="#FFF"/>
-
 <linearGradient id="grad1" gradientUnits="userSpaceOnUse" x1="480" y1="80" x2="480" y2="68">
 	<stop  offset="0" style="stop-color:#FFFFFF"/>
 	<stop  offset="1" style="stop-color:#CCCCCC"/>
