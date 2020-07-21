@@ -1,6 +1,20 @@
 import { Step } from "../shared/types";
 import { ElementView } from "@mathigon/boost";
 
+
+/**
+ *
+ * @param A 2x2 matrix
+ * @param v 2x1 vector
+ */
+function applyTransform(A: number[][], v: number[]): number[] {
+
+    return [
+        A[0][0]*v[0] + A[0][1]*v[1],
+        A[1][0]*v[0] + A[1][1]*v[1]
+    ]
+}
+
 /**
  * Okay looks like I have a general idea of how this should work, but I need to work out some details.
  * How???
@@ -50,19 +64,29 @@ export function translations($step: Step) {
    */
   export function scale($step: Step) {
   
-    console.log('inside of scale');
-    console.log('here is the model')
-    console.log($step.model);
-  
     $step.model.polygonScale = (xscale: number, yscale: number) => {
       console.log(xscale, yscale);
   
+      // here's where we have to do that p5js strategy where we push and pop translates to display it
+      // (1) center polygon along the origin (0,0)
+      // (2) apply transformation shown in matrix
+      // (3) move it to center (110, 110)
+
       const points = [[30,10], [10,70], [70,70], [50,10]];
-      const transformedPoints = points.map(p => [p[0]*xscale, p[1]*yscale]);
-      const pointString = transformedPoints.map(point => + point[0] + "," + point[1]).join(' ');
-      const poly0 = `<polygon points="${pointString}" fill="#ff941f" opacity="0.5" />`;
+
+      // let's try some d3 style formatting
+      const pointString = points.map(p => [p[0]-40, p[1]-40])         // (1) center shape along origin (0,0)
+                                .map(p => applyTransform([            // (2) apply transformation from matrix
+                                    [xscale, 0],
+                                    [0, yscale]
+                                ], p))
+                                .map(p => [p[0]+110, [p[1]+110]])     // (3) move to center of SVG
+                                .map(point => point.join(','))        // commas between xy coords
+                                .join(' ')                            // spaces between coord pairs
+
+      const poly = `<polygon points="${pointString}" fill="#ff941f" opacity="0.5" />`;
   
-      return poly0;
+      return poly;
     }
   }
   
@@ -73,16 +97,29 @@ export function translations($step: Step) {
    */
   export function skew($step: Step) {
   
+    // here's where we have to do that p5js strategy where we push and pop translates to display it
+    // (1) center polygon along the origin (0,0)
+    // (2) apply transformation shown in matrix
+    // (3) move it to center (110, 110)
+
     $step.model.polygonSkew = (xskew: number, yskew: number) => {
       console.log(xskew, yskew);
   
       const points = [[30,10], [10,70], [70,70], [50,10]];
-      const transformedPoints = points.map(p => [p[0]*1 + p[1]*xskew, p[1]*1 + p[0]*yskew]);
-      const pointString = transformedPoints.map(point => + point[0] + "," + point[1]).join(' ');
-      const poly0 = `<polygon points="${pointString}" fill="#ff941f" opacity="0.5" />`;
+
+      // let's try some d3 style formatting
+      const pointString = points.map(p => [p[0]-40, p[1]-40])         // (1) center shape along origin (0,0)
+                                .map(p => applyTransform([
+                                    [1, - xskew],  // why is this negative?
+                                    [-yskew, 1]   // is this the right direction?
+                                ], p)) // (2) apply transformation from matrix
+                                .map(p => [p[0]+110, [p[1]+110]])     // (3) move to center of SVG
+                                .map(point => point.join(','))        // commas between xy coords
+                                .join(' ')                            // spaces between coord pairs
+
+      const poly = `<polygon points="${pointString}" fill="#ff941f" opacity="0.5" />`;
   
-  
-      return poly0;
+      return poly;
     }
   
     console.log('inside of skew');
@@ -101,11 +138,22 @@ export function translations($step: Step) {
       const sin = Math.sin(rads);
   
       const points = [[30,10], [10,70], [70,70], [50,10]];
-      const transformedPoints = points.map(p => 
-        [cos * p[0] - sin * p[1], 
+
+      // let's try some d3 style formatting
+      const pointString = points.map(p => [p[0]-40, p[1]-40])         // (1) center shape along origin (0,0)
+                                .map(p => applyTransform([ // apply transformation from matrix
+                                    [cos, -sin], // why is this negative?
+                                    [sin, cos] // is this the right direction?
+                                ], p))
+                                .map(p => [p[0]+110, [p[1]+110]])     // (3) move to center of SVG
+                                .map(point => point.join(','))        // commas between xy coords
+                                .join(' ')                            // spaces between coord pairs
+
+      /*const transformedPoints = points.map(p =>
+        [cos * p[0] - sin * p[1],
         sin * p[0] + cos * p[1]]
       );
-      const pointString = transformedPoints.map(point => + point[0] + "," + point[1]).join(' ');
+      const pointString = transformedPoints.map(point => + point[0] + "," + point[1]).join(' ');*/
       const poly0 = `<polygon points="${pointString}" fill="#ff941f" opacity="0.5" />`;
   
       return poly0;
@@ -116,4 +164,3 @@ export function translations($step: Step) {
     console.log($step.model);
   
   }
-  

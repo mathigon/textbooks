@@ -46,17 +46,19 @@ Adjust the angle ${angle} with this slider for ${angle}{angle|0|-359,360,5}
 > id: rotate
 
 #### Rotate
-This one works.
+Let's see how rotation works.
 
     svg(width=220 height=220)
       g.grid
         each i in [10,30,50,70,90,110,130,150,170,190,210]
-          line(x1=i x2=i y1=0 y2=210 stroke="#e6e6e6" stroke-width=2)
+          - var width = i == 110 ? 4 : 2
+          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
+          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
         each i in [10,30,50,70,90,110,130,150,170,190,210]
-          line(x1=0 x2=220 y1=i y2=i stroke="#e6e6e6" stroke-width=2)
+          - var width = i == 110 ? 4 : 2
+          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
+          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
       g.var.rotate(:html="polygonRotate(angle)")
-
-Table check.
 
 Rotate: adjust this ${angle}{angle|0|-340,340,20} degrees
 
@@ -65,7 +67,7 @@ Rotate: adjust this ${angle}{angle|0|-340,340,20} degrees
 <tr><td>sin(${angle})</td><td>cos(${angle})</td></tr>
 </table>
 
-Table check.
+Now add the final result?
 
 ---
 
@@ -74,24 +76,29 @@ Table check.
 > id: scale
 
 #### Scale
-This one won't work.
+Let's try a scale operation.
 
     svg(width=220 height=220)
       g.grid
         each i in [10,30,50,70,90,110,130,150,170,190,210]
-          line(x1=i x2=i y1=0 y2=210 stroke="#e6e6e6" stroke-width=2)
+          - var width = i == 110 ? 4 : 2
+          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
+          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
         each i in [10,30,50,70,90,110,130,150,170,190,210]
-          line(x1=0 x2=220 y1=i y2=i stroke="#e6e6e6" stroke-width=2)
+          - var width = i == 110 ? 4 : 2
+          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
+          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
       g.var.scale(:html="polygonScale(xscale, yscale)")
 
-Table check.
+
+Adjust the matrix to see how it changes in the coordinates.
 
 <table>
 <tr><td>${xscale}{xscale|1.0|-2.0,2.0,0.1}</td><td>0</td></tr>
 <tr><td>0</td><td>${yscale}{yscale|1.0|-2.0,2.0,0.1}</td></tr>
 </table>
 
-Table check.
+Cool. Let's now add some code that lets us snap to x-big, x-shrink, x-reverse, y-big, y-shrink, y-reverse.
 
 ---
 
@@ -99,23 +106,27 @@ Table check.
 > id: skew
 
 #### Skew 
-Why is this not working?
+Now let's try a skew
 
 
     svg(width=220 height=220)
       g.grid
         each i in [10,30,50,70,90,110,130,150,170,190,210]
-          line(x1=i x2=i y1=0 y2=210 stroke="#e6e6e6" stroke-width=2)
+          - var width = i == 110 ? 4 : 2
+          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
+          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
         each i in [10,30,50,70,90,110,130,150,170,190,210]
-          line(x1=0 x2=220 y1=i y2=i stroke="#e6e6e6" stroke-width=2)
+          - var width = i == 110 ? 4 : 2
+          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
+          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
       g.var.skew(:html="polygonSkew(xskew, yskew)")
 
 
-Or this?
+Adjust the matrix to see how it changes in the coordinates.
 
 <table>
 <tr><td>1</td><td>${xskew}{xskew|0.0|-2.0,2.0,0.1}</td></tr>
 <tr><td>${yskew}{yskew|0.0|-2.0,2.0,0.1}</td><td>1</td></tr>
 </table>
 
-Putting text here.
+Now add some buttons and code that make it snap to a set of matrix values.
