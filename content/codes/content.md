@@ -488,7 +488,8 @@ If we want to use each combination of ups and downs to represent a different num
 | 4 | [[16]] |
 | 5 | [[32]] |
 
-More generally, with N fingers we can represent [[2^N]] possible combinations. Remember that our fingers are merely serving as a metaphor for binary numbers. This means that __any N-digit number can represent up to 2^N different values__.
+More generally, with __n__ fingers we can represent _{x-equation.small(solution="2^n" keys="n sup" numeric)}_. possible combinations. Remember that our fingers are merely serving as a metaphor for binary numbers. This means that __any n-digit number can represent up to 2^n different values__.
+
 
 
 ---
