@@ -395,7 +395,7 @@ export function rabbits($step: Step) {
   const $paths = $step.$$('path');
   const $arrows = $step.$$('polygon');
   const $rabbits = $step.$$('.rabbit').slice(1);
-  const $numbers = $step.$$('.n').slice(1);
+  const $numbers = $step.$$('.hex').slice(1);
   const $stage = $step.$('.rabbits')!;
   const $slideshow = $step.$('x-slideshow') as Slideshow;
 

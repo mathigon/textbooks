@@ -60,31 +60,31 @@ sequence are called [__terms__](gloss:sequence-term).
 Here are a few examples of sequences. Can you find their patterns and calculate
 the next two terms?
 
-{.text-center.s-orange.with-arrows.no-voice} _{.n}3_, _{.n}6*{span.arrow}+3*_,
-_{.n}9*{span.arrow(hidden)}+3*_, _{.n}12*{span.arrow(hidden)}+3*_,
-_{.n}15*{span.arrow(hidden)}+3*_, _{.n}[[18]]*{span.arrow(hidden)}+3*_
-_{.n}[[21]]*{span.arrow(hidden)}+3*_, …
+{.text-center.s-orange.with-arrows.no-voice} _{.hex}3_, _{.hex}6*{span.arrow}+3*_,
+_{.hex}9*{span.arrow(hidden)}+3*_, _{.hex}12*{span.arrow(hidden)}+3*_,
+_{.hex}15*{span.arrow(hidden)}+3*_, _{.hex}[[18]]*{span.arrow(hidden)}+3*_
+_{.hex}[[21]]*{span.arrow(hidden)}+3*_, …
 _{span.pattern.reveal(when="blank-0 blank-1")}Pattern: “Add 3 to the previous
 number to get the next one.”_
 
-{.text-center.s-teal.with-arrows.no-voice} _{.n}4_, _{.n}10*{span.arrow(hidden)}+6*_,
-_{.n}16*{span.arrow(hidden)}+6*_, _{.n}22*{span.arrow(hidden)}+6*_,
-_{.n}28*{span.arrow(hidden)}+6*_, _{.n}[[34]]*{span.arrow(hidden)}+6*_,
-_{.n}[[40]]*{span.arrow(hidden)}+6*_, …
+{.text-center.s-teal.with-arrows.no-voice} _{.hex}4_, _{.hex}10*{span.arrow(hidden)}+6*_,
+_{.hex}16*{span.arrow(hidden)}+6*_, _{.hex}22*{span.arrow(hidden)}+6*_,
+_{.hex}28*{span.arrow(hidden)}+6*_, _{.hex}[[34]]*{span.arrow(hidden)}+6*_,
+_{.hex}[[40]]*{span.arrow(hidden)}+6*_, …
 _{span.pattern.reveal(when="blank-2 blank-3")} Pattern: “Add 6 to the previous
 number to get the next one.”_
 
-{.text-center.s-purple.with-arrows.no-voice} _{.n}3_, _{.n}4*{span.arrow(hidden)}+1*_,
-_{.n}7*{span.arrow(hidden)}+3*_, _{.n}8*{span.arrow(hidden)}+1*_,
-_{.n}11*{span.arrow(hidden)}+3*_, _{.n}[[12]]*{span.arrow(hidden)}+1*_,
-_{.n}[[15]]*{span.arrow(hidden)}+3*_, …
+{.text-center.s-purple.with-arrows.no-voice} _{.hex}3_, _{.hex}4*{span.arrow(hidden)}+1*_,
+_{.hex}7*{span.arrow(hidden)}+3*_, _{.hex}8*{span.arrow(hidden)}+1*_,
+_{.hex}11*{span.arrow(hidden)}+3*_, _{.hex}[[12]]*{span.arrow(hidden)}+1*_,
+_{.hex}[[15]]*{span.arrow(hidden)}+3*_, …
 _{span.pattern.reveal(when="blank-4 blank-5")} Pattern: “Alternatingly add 1 and
 add 3 to the previous number, to get the next one.”_
 
-{.text-center.s-lime.with-arrows.no-voice} _{.n}1_, _{.n}2*{span.arrow(hidden)}×2*_,
-_{.n}4*{span.arrow(hidden)}×2*_, _{.n}8*{span.arrow(hidden)}×2*_,
-_{.n}16*{span.arrow(hidden)}×2*_, _{.n}[[32]]*{span.arrow(hidden)}×2*_,
-_{.n}[[64]]*{span.arrow(hidden)}×2*_, …
+{.text-center.s-lime.with-arrows.no-voice} _{.hex}1_, _{.hex}2*{span.arrow(hidden)}×2*_,
+_{.hex}4*{span.arrow(hidden)}×2*_, _{.hex}8*{span.arrow(hidden)}×2*_,
+_{.hex}16*{span.arrow(hidden)}×2*_, _{.hex}[[32]]*{span.arrow(hidden)}×2*_,
+_{.hex}[[64]]*{span.arrow(hidden)}×2*_, …
 _{span.pattern.reveal(when="blank-6 blank-7")} Pattern: “Multiply the previous
 number by 2, to get the next one.”_
 
@@ -97,7 +97,7 @@ by a special [variable](gloss:variable):
 
     p.text-center.s-orange
       for i in [1, 2, 3, 4, 5, 6, 7]
-        span.math.n
+        span.math.hex
           msub
             mi x
             mn= i
@@ -153,11 +153,11 @@ that consists of geometric shapes – triangles of increasing size:
 At every step, we’re adding one more row to the previous triangle. The length of
 these new rows also increases by one every time. Can you see the pattern?
 
-{.text-center.s-orange.with-arrows.no-voice} _{.n}1_, _{.n}3*{span.arrow}+2*_,
-_{.n}6*{span.arrow}+3*_, _{.n}10*{span.arrow}+4*_,
-_{.n}15*{span.arrow}+5*_, _{.n}21*{span.arrow}+6*_
-_{.n}[[28]]*{span.arrow.reveal(when="blank-0")}+7*_,
-_{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
+{.text-center.s-orange.with-arrows.no-voice} _{.hex}1_, _{.hex}3*{span.arrow}+2*_,
+_{.hex}6*{span.arrow}+3*_, _{.hex}10*{span.arrow}+4*_,
+_{.hex}15*{span.arrow}+5*_, _{.hex}21*{span.arrow}+6*_
+_{.hex}[[28]]*{span.arrow.reveal(when="blank-0")}+7*_,
+_{.hex}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 ---
 > id: recursive
@@ -165,9 +165,9 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 We can also describe this pattern using a special [formula](gloss:formula):
 
     p.text-center.s-orange
-      span.n.md `x_n`
+      span.hex.md `x_n`
       | &nbsp;=&nbsp;
-      span.n.md `x_(n-1)`
+      span.hex.md `x_(n-1)`
       | &nbsp;+&nbsp;
       em#t3 n
 
@@ -226,7 +226,7 @@ term of the sequence as a function of of its _previous_ terms. For square
 numbers we can do even better: a formula that tells you the *n*th term
 directly, without first having to calculate all the previous ones:
 
-{.text-center.s-purple} *{.n}`x_n`* = _{x-equation(solution="n^2")}_
+{.text-center.s-purple} *{.hex}`x_n`* = _{x-equation(solution="n^2")}_
 
 ---
 > id: explicit
@@ -344,10 +344,10 @@ which is now called _Halley’s comet_. It is orbiting around the sun and passes
 Earth approximately every 76 years. He also predicted when the comet would be
 visible next:
 
-{.text-center.s-orange.s-large.with-arrows.no-voice} _{span.n}1530_,
-_{span.n}1606*{span.arrow}+76*_, _{.n}1682*{span.arrow}+76*_,
-_{.n}1758*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
-_{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
+{.text-center.s-orange.s-large.with-arrows.no-voice} _{span.hex}1530_,
+_{span.hex}1606*{span.arrow}+76*_, _{.hex}1682*{span.arrow}+76*_,
+_{.hex}1758*{span.arrow}+76*_, _{.hex}[[1834]]*{span.arrow}+76*_,
+_{.hex}[[1910]]*{span.arrow}+76*_, _{.hex}[[1986]]*{span.arrow}+76*_, …
 
 ---
 > id: halley-2
@@ -385,13 +385,13 @@ The scientists noticed that the ball loses 20% of its height after every bounce.
 In other words, the maximum height of every bounce is 80% of the previous one.
 This allowed them to predict the height of every following bounce:
 
-{.text-center.s-teal.s-large.with-arrows.no-voice} _{span.n}10_,
-_{span.n}8*{span.arrow}×0.8*_, _{.n}[[6.4]]*{span.arrow}×0.8*_,
-_{span.n}[[5.12]]*{span.arrow}×0.8*_,
-_{span.n.reveal}4.096*{span.arrow}×0.8*_*{span.reveal},*
-_{span.n.reveal}3.277*{span.arrow}×0.8*_*{span.reveal},*
-_{span.n.reveal}2.621*{span.arrow}×0.8*_*{span.reveal},*
-_{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
+{.text-center.s-teal.s-large.with-arrows.no-voice} _{span.hex}10_,
+_{span.hex}8*{span.arrow}×0.8*_, _{.hex}[[6.4]]*{span.arrow}×0.8*_,
+_{span.hex}[[5.12]]*{span.arrow}×0.8*_,
+_{span.hex.reveal}4.096*{span.arrow}×0.8*_*{span.reveal},*
+_{span.hex.reveal}3.277*{span.arrow}×0.8*_*{span.reveal},*
+_{span.hex.reveal}2.621*{span.arrow}×0.8*_*{span.reveal},*
+_{span.hex.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ---
 > id: arithmetic-geometric
@@ -442,8 +442,8 @@ are?
 
 ::: column(width=330 parent="ag-select")
 
-{.text-center.s-grey.s-small.no-voice} _{span.n}2_, _{span.n}4_, _{span.n}8_,
-_{span.n}16_, _{span.n}32_, _{span.n}64_, …
+{.text-center.s-grey.s-small.no-voice} _{span.hex}2_, _{span.hex}4_, _{span.hex}8_,
+_{span.hex}16_, _{span.hex}32_, _{span.hex}64_, …
 
 ::: column(width=320)
 
@@ -452,8 +452,8 @@ ratio [[2]]._
 
 ::: column(width=330)
 
-{.text-center.s-grey.s-small.no-voice} _{span.n}2_, _{span.n}5_, _{span.n}8_,
-_{span.n}11_, _{span.n}14_, _{span.n}17_, …
+{.text-center.s-grey.s-small.no-voice} _{span.hex}2_, _{span.hex}5_, _{span.hex}8_,
+_{span.hex}11_, _{span.hex}14_, _{span.hex}17_, …
 
 ::: column(width=320)
 
@@ -462,8 +462,8 @@ difference [[3]]._
 
 ::: column(width=330)
 
-{.text-center.s-grey.s-small.no-voice} _{span.n}17_, _{span.n}13_, _{span.n}9_,
-_{span.n}5_, _{span.n}1_, _{span.n}–3_, …
+{.text-center.s-grey.s-small.no-voice} _{span.hex}17_, _{span.hex}13_, _{span.hex}9_,
+_{span.hex}5_, _{span.hex}1_, _{span.hex}–3_, …
 
 ::: column(width=320)
 
@@ -472,8 +472,8 @@ difference [[-4]]._
 
 ::: column(width=330)
 
-{.text-center.s-grey.s-small.no-voice} _{span.n}2_, _{span.n}4_, _{span.n}7_,
-_{span.n}11_, _{span.n}16_, _{span.n}22_, …
+{.text-center.s-grey.s-small.no-voice} _{span.hex}2_, _{span.hex}4_, _{span.hex}7_,
+_{span.hex}11_, _{span.hex}16_, _{span.hex}22_, …
 
 ::: column(width=320)
 
@@ -481,8 +481,8 @@ _{span.n}11_, _{span.n}16_, _{span.n}22_, …
 
 ::: column(width=330)
 
-{.text-center.s-grey.s-small.no-voice} _{span.n}40_, _{span.n}20_, _{span.n}10_,
-_{span.n}5_, _{span.n}2.5_, _{span.n}1.25_, …
+{.text-center.s-grey.s-small.no-voice} _{span.hex}40_, _{span.hex}20_, _{span.hex}10_,
+_{span.hex}5_, _{span.hex}2.5_, _{span.hex}1.25_, …
 
 ::: column(width=320)
 
@@ -507,10 +507,10 @@ the values of `a`, _d_ and _r_. Can you find any patterns?
 
     hr
 
-{.text-center.s-red.s-small.no-voice} _{span.n}${arithmetic(a,d,0)}_,
-_{span.n}${arithmetic(a,d,1)}_, _{span.n}${arithmetic(a,d,2)}_,
-_{span.n}${arithmetic(a,d,3)}_, _{span.n}${arithmetic(a,d,4)}_,
-_{span.n}${arithmetic(a,d,5)}_, …
+{.text-center.s-red.s-small.no-voice} _{span.hex}${arithmetic(a,d,0)}_,
+_{span.hex}${arithmetic(a,d,1)}_, _{span.hex}${arithmetic(a,d,2)}_,
+_{span.hex}${arithmetic(a,d,3)}_, _{span.hex}${arithmetic(a,d,4)}_,
+_{span.hex}${arithmetic(a,d,5)}_, …
 
     x-coordinate-system(padding="12 12 24 40" width=320 height=240)
     x-gesture(target="#arithmetic-geometric-graph x-var" slide="100,0")
@@ -523,10 +523,10 @@ _{span.n}${arithmetic(a,d,5)}_, …
 
     hr
 
-{.text-center.s-red.s-small.no-voice} _{span.n}${geometric(b,r,0)}_,
-_{span.n}${geometric(b,r,1)}_, _{span.n}${geometric(b,r,2)}_,
-_{span.n}${geometric(b,r,3)}_, _{span.n}${geometric(b,r,4)}_,
-_{span.n}${geometric(b,r,5)}_, …
+{.text-center.s-red.s-small.no-voice} _{span.hex}${geometric(b,r,0)}_,
+_{span.hex}${geometric(b,r,1)}_, _{span.hex}${geometric(b,r,2)}_,
+_{span.hex}${geometric(b,r,3)}_, _{span.hex}${geometric(b,r,4)}_,
+_{span.hex}${geometric(b,r,5)}_, …
 
     x-coordinate-system.green(padding="12 12 24 40" width=320 height=240)
 
@@ -686,10 +686,10 @@ person can have a huge impact on the world:
 Notice how the number of people at every step forms a [[geometric sequence|arithmetic
 sequence|triangle number]], _{span.reveal(when="blank-0")}with common ratio [[3]]:_
 
-{.text-center.s-orange.with-arrows.no-voice.reveal(when="blank-1")} _{span.n}1_,
-_{span.n}3*{span.arrow}×3*_, _{span.n}9*{span.arrow}×3*_,
-_{span.n}[[27]]*{span.arrow}×3*_, _{span.n}[[81]]*{span.arrow}×3*_,
-_{span.n}[[243]]*{span.arrow}×3*_, …
+{.text-center.s-orange.with-arrows.no-voice.reveal(when="blank-1")} _{span.hex}1_,
+_{span.hex}3*{span.arrow}×3*_, _{span.hex}9*{span.arrow}×3*_,
+_{span.hex}[[27]]*{span.arrow}×3*_, _{span.hex}[[81]]*{span.arrow}×3*_,
+_{span.hex}[[243]]*{span.arrow}×3*_, …
 
 ---
 > id: pay-it-forward-2
@@ -709,8 +709,8 @@ than are currently alive on Earth.
 This sequence of numbers has a special name: the __powers of 3__. As you can
 see, every term is actually just a different [power](gloss:powers) of 3:
 
-{.text-center.s-orange.no-voice} _{span.n}`3^0`_, _{span.n}`3^1`_, _{span.n}`3^2`_,
-_{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
+{.text-center.s-orange.no-voice} _{span.hex}`3^0`_, _{span.hex}`3^1`_, _{span.hex}`3^2`_,
+_{span.hex}`3^3`_, _{span.hex}`3^4`_, _{span.hex}`3^5`_, …
 
 ---
 > id: millionaire
@@ -983,14 +983,14 @@ numbers](gloss:triangle-numbers) to help you? What about the sum of the first
 
 Another sequence that is based on geometric shapes are the __square numbers__:
 
-{.text-center.s-purple.with-arrows.no-voice} _{.n}1_,
-_{.n}4*{span.arrow.reveal(when="blank-4")}+3*_,
-_{.n}9*{span.arrow.reveal(when="blank-4")}+5*_,
-_{.n}16*{span.arrow.reveal(when="blank-4")}+7*_,
-_{.n}[[25]]*{span.arrow.reveal(when="blank-4")}+9*_,
-_{.n}[[36]]*{span.arrow.reveal(when="blank-4")}+11*_,
-_{.n}[[49]]*{span.arrow.reveal(when="blank-4")}+13*_,
-_{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
+{.text-center.s-purple.with-arrows.no-voice} _{.hex}1_,
+_{.hex}4*{span.arrow.reveal(when="blank-4")}+3*_,
+_{.hex}9*{span.arrow.reveal(when="blank-4")}+5*_,
+_{.hex}16*{span.arrow.reveal(when="blank-4")}+7*_,
+_{.hex}[[25]]*{span.arrow.reveal(when="blank-4")}+9*_,
+_{.hex}[[36]]*{span.arrow.reveal(when="blank-4")}+11*_,
+_{.hex}[[49]]*{span.arrow.reveal(when="blank-4")}+13*_,
+_{.hex}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} You can calculate the numbers
 is this sequence by squaring every whole number (`1^2`, `2^2`, `3^2`, …), but it
@@ -1175,12 +1175,12 @@ male and female).
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
 
-          .n(style="top: 0%") 1
-          .n(style="top: 15%") 1
-          .n(style="top: 32%") 2
-          .n(style="top: 49%") 3
-          .n(style="top: 66%") 5
-          .n(style="top: 84%") 8
+          .hex(style="top: 0%") 1
+          .hex(style="top: 15%") 1
+          .hex(style="top: 32%") 2
+          .hex(style="top: 49%") 3
+          .hex(style="top: 66%") 5
+          .hex(style="top: 84%") 8
 
       .legend(slot="legend") In the first month, the rabbits are very small and can’t do much – but they grow very quickly.
       .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
@@ -1205,17 +1205,17 @@ words, you have to add the *previous two* terms in the sequence, to get the
 next one. The sequence starts with two 1s, and the [recursive
 formula](gloss:sequence-recursive) is_
 
-{.text-center.s-orange.reveal(when="blank-0")} *{span.n}`x_n`* =
-*{span.n}`x_(n-1)`* + *{span.n}`x_(n-2)`*
+{.text-center.s-orange.reveal(when="blank-0")} *{span.hex}`x_n`* =
+*{span.hex}`x_(n-1)`* + *{span.hex}`x_(n-2)`*
 
 ---
 > id: rabbits-3
 
 Can you calculate the number of rabbits after a few more months?
 
-{.text-center.s-orange} _{.n}1_, _{.n}1_, _{.n}2_, _{.n}3_, _{.n}5_, _{.n}8_,
-_{.n}[[13]]_, _{.n}[[21]]_, _{.n}[[34]]_, _{.n}[[55]]_, _{.n}[[89]]_,
-_{.n}[[144]]_, …
+{.text-center.s-orange} _{.hex}1_, _{.hex}1_, _{.hex}2_, _{.hex}3_, _{.hex}5_, _{.hex}8_,
+_{.hex}[[13]]_, _{.hex}[[21]]_, _{.hex}[[34]]_, _{.hex}[[55]]_, _{.hex}[[89]]_,
+_{.hex}[[144]]_, …
 
 {.reveal(when="blank-5")} So after 12 months, you’ll have 144 pairs of rabbits!
 
@@ -1568,9 +1568,9 @@ sequences share many properties. For example, the ratios of consecutive terms
 will _always_ [converge](gloss:sequence-convergence) to the golden ratio.
 
 {.text-center.s-purple.s-small.no-voice}
-${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.n}${a+b}_, _{span.n}${a+2×b}_,
-_{span.n}${2×a+3×b}_, _{span.n}${3×a+5×b}_, _{span.n}${5×a+8×b}_,
-_{span.n}${8×a+13×b}_, …
+${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.hex}${a+b}_, _{span.hex}${a+2×b}_,
+_{span.hex}${2×a+3×b}_, _{span.hex}${3×a+5×b}_, _{span.hex}${5×a+8×b}_,
+_{span.hex}${8×a+13×b}_, …
 
 ---
 > id: fibonacci-puzzles
@@ -1650,8 +1650,8 @@ multiples]].
 
 Here are the first few prime numbers:
 
-{.text-center.s-teal} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_,
-_{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
+{.text-center.s-teal} _{.hex}2_, _{.hex}3_, _{.hex}5_, _{.hex}7_, _{.hex}11_,
+_{.hex}[[13]]_, _{.hex}[[17]]_, _{.hex}[[19]]_, …
 
 ---
 > id: primes-2
@@ -1756,9 +1756,9 @@ Only one number in the list above has a sum of factors that is _equal_ to itself
 The next perfect number is 28, because if we add up all its factors we get
 `1 + 2 + 4 + 7 + 14 = 28`. After that, perfect numbers become much rarer:
 
-{.text-center.s-purple.s-vertical.perfect-list.no-voice.no-voice} _{.n}6_, _{.n}28_,
-_{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}8,589,869,056_,
-_{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
+{.text-center.s-purple.s-vertical.perfect-list.no-voice.no-voice} _{.hex}6_, _{.hex}28_,
+_{.hex}496_, _{.hex}8,128_, _{.hex}33,550,336_, _{.hex}8,589,869,056_,
+_{.hex}137,438,691,328_, _{.hex}2,305,843,008,139,952,128_, …
 
 Notice that all of these numbers are [[even|multiples of 3|2 more than a square
 number]]. _{span.reveal(when="blank-0")}It turns out that they are also all
@@ -1806,14 +1806,14 @@ a recursive formula like this:
 
 Let’s start with `x_1 = 5` and see what happens:
 
-{.text-center.s-orange.with-arrows.no-voice} _{.n}5_, _{.n}[[16]]*{span.arrow}×3 +1*_,
-_{.n}[[8]]*{span.arrow.reveal(when="blank-0")}÷2*_,
-_{.n}[[4]]*{span.arrow.reveal(when="blank-1")}÷2*_,
-_{.n}[[2]]*{span.arrow.reveal(when="blank-2")}÷2*_,
-_{.n}[[1]]*{span.arrow.reveal(when="blank-3")}÷2*_,
-_{.n}[[4]]*{span.arrow.reveal(when="blank-4")}×3 +1*_,
-_{.n}[[2]]*{span.arrow.reveal(when="blank-5")}÷2*_,
-_{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
+{.text-center.s-orange.with-arrows.no-voice} _{.hex}5_, _{.hex}[[16]]*{span.arrow}×3 +1*_,
+_{.hex}[[8]]*{span.arrow.reveal(when="blank-0")}÷2*_,
+_{.hex}[[4]]*{span.arrow.reveal(when="blank-1")}÷2*_,
+_{.hex}[[2]]*{span.arrow.reveal(when="blank-2")}÷2*_,
+_{.hex}[[1]]*{span.arrow.reveal(when="blank-3")}÷2*_,
+_{.hex}[[4]]*{span.arrow.reveal(when="blank-4")}×3 +1*_,
+_{.hex}[[2]]*{span.arrow.reveal(when="blank-5")}÷2*_,
+_{.hex}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
 
 ---
 > id: hailstone-1
@@ -1824,9 +1824,9 @@ continue to repeat over and over again, forever.
 Of course, we could have picked a different starting point, like ${n}{n|10|5,40,1}.
 Then the sequence would look like this:
 
-{.text-center.no-voice} _{span.var.s-orange(:html="hailstones(n)")}_, *{span.s-red}_{.n}4_,
-_{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
-*{span.s-blue}_{.n}4_, _{.n}2_, _{.n}1_, …*
+{.text-center.no-voice} _{span.var.s-orange(:html="hailstones(n)")}_, *{span.s-red}_{.hex}4_,
+_{.hex}2_, _{.hex}1_,* *{span.s-purple}_{.hex}4_, _{.hex}2_, _{.hex}1_,*
+*{span.s-blue}_{.hex}4_, _{.hex}2_, _{.hex}1_, …*
 
 ---
 > id: hailstone-2
@@ -1882,8 +1882,8 @@ centuries!
 Here is one more sequence that is a bit different from all the ones you’ve seen
 above. Can you find the pattern?
 
-{.text-center.s-lime.s-vertical} _{span.n}1_, _{span.n}11_, _{.n}21_,
-_{.n}1211_, _{.n}111221_, _{.n}312211_, …
+{.text-center.s-lime.s-vertical} _{span.hex}1_, _{span.hex}11_, _{.hex}21_,
+_{.hex}1211_, _{.hex}111221_, _{.hex}312211_, …
 
 _{button.next-step} Continue_
 
@@ -1898,8 +1898,8 @@ get if you “read out loud” the previous one. Here is an example:
 
 Can you now find the next terms?
 
-{.text-center.s-lime.s-vertical} …, _{.n}312211_, _{.n}[[13112221]]_,
-_{.n}[[1113213211]]_, …
+{.text-center.s-lime.s-vertical} …, _{.hex}312211_, _{.hex}[[13112221]]_,
+_{.hex}[[1113213211]]_, …
 
 ---
 > id: look-and-say-2
@@ -1934,32 +1934,32 @@ one goal: find the pattern and calculate the next two terms!
 
 #### Find the next number
 
-{.text-center.s-yellow.no-voice} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
-_{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
+{.text-center.s-yellow.no-voice} _{span.hex}7_, _{span.hex}11_, _{.hex}15_, _{.hex}19_, _{.hex}23_,
+_{.hex}27_, _{.hex}[[31]]_, _{.hex}[[35]]_, …
 _{span.pattern.reveal(when="blank-0 blank-1")} Pattern: Always +4_
 
-{.text-center.s-orange.no-voice} _{span.n}11_, _{span.n}14_, _{.n}18_, _{.n}23_, _{.n}29_,
-_{.n}36_, _{.n}[[44]]_, _{.n}[[53]]_, …
+{.text-center.s-orange.no-voice} _{span.hex}11_, _{span.hex}14_, _{.hex}18_, _{.hex}23_, _{.hex}29_,
+_{.hex}36_, _{.hex}[[44]]_, _{.hex}[[53]]_, …
 _{span.pattern.reveal(when="blank-2 blank-3")} Pattern: +3, +4, +5, +6, …_
 
-{.text-center.s-red.no-voice} _{span.n}3_, _{span.n}7_, _{.n}6_, _{.n}10_, _{.n}9_,
-_{.n}13_, _{.n}[[12]]_, _{.n}[[16]]_, …
+{.text-center.s-red.no-voice} _{span.hex}3_, _{span.hex}7_, _{.hex}6_, _{.hex}10_, _{.hex}9_,
+_{.hex}13_, _{.hex}[[12]]_, _{.hex}[[16]]_, …
 _{span.pattern.reveal(when="blank-4 blank-5")} Pattern: +4, –1, +4, –1, …_
 
-{.text-center.s-purple.no-voice} _{span.n}2_, _{span.n}4_, _{.n}6_, _{.n}12_, _{.n}14_,
-_{.n}28_, _{.n}[[30]]_, _{.n}[[60]]_, …
+{.text-center.s-purple.no-voice} _{span.hex}2_, _{span.hex}4_, _{.hex}6_, _{.hex}12_, _{.hex}14_,
+_{.hex}28_, _{.hex}[[30]]_, _{.hex}[[60]]_, …
 _{span.pattern.reveal(when="blank-6 blank-7")} Pattern: ×2, +2, ×2, +2, …_
 
-{.text-center.s-blue.no-voice} _{span.n}1_, _{span.n}1_, _{.n}2_, _{.n}3_, _{.n}5_,
-_{.n}8_, _{.n}[[13]]_, _{.n}[[21]]_, …
+{.text-center.s-blue.no-voice} _{span.hex}1_, _{span.hex}1_, _{.hex}2_, _{.hex}3_, _{.hex}5_,
+_{.hex}8_, _{.hex}[[13]]_, _{.hex}[[21]]_, …
 _{span.pattern.reveal(when="blank-8 blank-9")} Pattern: Fibonacci Numbers_
 
-{.text-center.s-teal.no-voice} _{span.n}27_, _{span.n}28_, _{.n}30_, _{.n}15_, _{.n}16_,
-_{.n}18_, _{.n}[[9]]_, _{.n}[[10]]_, …
+{.text-center.s-teal.no-voice} _{span.hex}27_, _{span.hex}28_, _{.hex}30_, _{.hex}15_, _{.hex}16_,
+_{.hex}18_, _{.hex}[[9]]_, _{.hex}[[10]]_, …
 _{span.pattern.reveal(when="blank-10 blank-11")} Pattern: +1, +2, ÷2, +1, +2, ÷2, …_
 
-{.text-center.s-green.no-voice} _{span.n}1_, _{span.n}9_, _{.n}25_, _{.n}49_, _{.n}81_,
-_{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
+{.text-center.s-green.no-voice} _{span.hex}1_, _{span.hex}9_, _{.hex}25_, _{.hex}49_, _{.hex}81_,
+_{.hex}121_, _{.hex}[[169]]_, _{.hex}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 
 :::

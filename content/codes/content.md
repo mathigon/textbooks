@@ -649,24 +649,24 @@ Binary numbers work very similarly except they use a base-two number system. So 
 Let's examine the binary number _{.ns.g}11111_ (5 consecutive 1s). How much is each digit worth?
 
 | __{.m-red}digit__ | 1 | 1 | 1 | 1 | 1 |
-| __{.m-green}digit value__   | {.s-green}_{.n}[[16]]_ | {.s-green}_{.n}[[8]]_ | {.s-green}_{.n}[[4]]_ | {.s-green}_{.n}[[2]]_ | {.s-green}_{.n}[[1]]_ |
+| __{.m-green}digit value__   | {.s-green}_{.hex}[[16]]_ | {.s-green}_{.hex}[[8]]_ | {.s-green}_{.hex}[[4]]_ | {.s-green}_{.hex}[[2]]_ | {.s-green}_{.hex}[[1]]_ |
 {.table-small.grid}
 
 ---
 
 We can find the decimal value of this binary number _{.ns.g}11111_ by adding up the digit values. So its value is _not_ eleven thousand, one-hundred and eleven, but is 
 
-{.text-center.s-red} _{.n}16_ + _{.n}8_ + _{.n}4_ + _{.n}2_ + _{.n}1_ = _{.n}[[31]]_
+{.text-center.s-red} _{.hex}16_ + _{.hex}8_ + _{.hex}4_ + _{.hex}2_ + _{.hex}1_ = _{.hex}[[31]]_
 
 ---
 
 Here are some 6-digit binary numbers. Let's convert them to decimal by first writing the values of each digit, and then adding the digits together.
 
-{.text-center.s-purple} _{.ns}100110_ = _{.n}[[32]]_ + _{.n.z}0_ + _{.n.z}0_ + _{.n}[[4]]_ + _{.n}[[2]]_ + _{.n.z}0_ = _{.n}[[38]]_
+{.text-center.s-purple} _{.ns}100110_ = _{.hex}[[32]]_ + _{.hex.z}0_ + _{.hex.z}0_ + _{.hex}[[4]]_ + _{.hex}[[2]]_ + _{.hex.z}0_ = _{.hex}[[38]]_
 
-{.text-center.s-yellow} _{.ns.y}111000_ = _{.n}[[32]]_ + _{.n}[[16]]_ + _{.n}[[8]]_ + _{.n.z}0_ + _{.n.z}0_ + _{.n.z}0_ = _{.n}[[56]]_
+{.text-center.s-yellow} _{.ns.y}111000_ = _{.hex}[[32]]_ + _{.hex}[[16]]_ + _{.hex}[[8]]_ + _{.hex.z}0_ + _{.hex.z}0_ + _{.hex.z}0_ = _{.hex}[[56]]_
 
-{.text-center.s-teal} _{.ns.g}101011_ = _{.n}[[32]]_ + _{.n.z}0_ + _{.n}[[8]]_ + _{.n.z}0_ + _{.n}[[2]]_ + _{.n}[[1]]_ = _{.n}[[43]]_
+{.text-center.s-teal} _{.ns.g}101011_ = _{.hex}[[32]]_ + _{.hex.z}0_ + _{.hex}[[8]]_ + _{.hex.z}0_ + _{.hex}[[2]]_ + _{.hex}[[1]]_ = _{.hex}[[43]]_
 
 
 When computers (including digital calculators) add and subtract numbers, this is how the numbers are represented at the level of the transistor!
