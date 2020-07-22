@@ -394,7 +394,7 @@ _Cytosine_ if placed within a strand of DNA letters.
 > goals: switch
 > sectionStatus: dev
 
-Computers are all around us. You’re reading this on a computer right now! But how many people actually know how computers work? How many of us, as we scroll through ur social media feed, or search for a recipe, or watch a movie from our favorite streaming service, actually know how what's happening actually works?
+Computers are all around us. You’re reading this on a computer right now! But how many people actually know how computers work? How many of us, as we scroll through our social media feeds, or search for a recipe, or watch a movie from our favorite streaming service know how what's happening actually works?
 
 There are many many complex layers and processes that operate together to get information from all over the world and display it on your screen. But at the lowest level of every computer are [transistors](gloss:transistor). Transistors are the building blocks of how computers store and manipulate information.
 
@@ -415,7 +415,7 @@ But how can a simple on/off switch store information as complex as sound, images
 > id: finger5
 > sectionStatus: dev
 
-To understand how all sorts of different codes can be stored in the transistors of a computer, let’s try a thought exercise…
+To understand how all sorts of different codes can be stored in the transistors of a computer, let’s try a thought exercise. We've just looked at how a transistor can be turned on or off, now let's look at how we can count on our fingers by putting them up or down.
 
 
 ### Playing with Digits
