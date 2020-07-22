@@ -418,7 +418,7 @@ But how can a simple on/off switch store information as complex as sound, images
 To understand how all sorts of different codes can be stored in the transistors of a computer, let’s try a thought exercise…
 
 
-### Fingers
+### Playing with Digits
 
 How high can you count using only one hand, without skipping any numbers? When we count with our hands, we traditionally use how many fingers are up to represent the number. We have five fingers, so that means the highest we can count with one hand is [[five|four|ten]].
 
@@ -578,7 +578,6 @@ We can represent any five-digit binary number by following any path from beginni
 
 ---
 
-#### Fingers
 > id: finger32
 
 Yes, there are [[32]] different combinations we can make with five fingers.
