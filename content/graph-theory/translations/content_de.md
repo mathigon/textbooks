@@ -331,9 +331,9 @@ Einschließlich dir selbst und dem Gastgeber sind ${hnd}{hnd|5|3,15,1} Gäste an
 Als die Gäste sich abends zum Aufbruch bereit machen, schüttelt jeder jedem anderen die Hand.
 Wie oft werden insgesamt die Hände geschüttelt?
 
-Wir können das Händeschütteln mit einem Graphen darstellen: jede Person ist [[ein Knoten|eine Kante]], und jedes Händesschütteln ist [[eine Kante|ein Knoten]].
+Wir können das Händeschütteln mit einem Graphen darstellen: jede Person entspricht [[einem Knoten|einer Kante]], und jedes Händesschütteln entspricht [[einer Kante|einem Knoten]].
 
-{.reveal(when='blank-0 blank-1')} Jetzt ist es einfach, die Anzahl der Kanten im Graph zu zählen. Wir stellen
+{.reveal(when='blank-0 blank-1')} Jetzt kann man ganz einfach die Anzahl der Kanten im Graphen zählen. Wir stellen
 fest, dass bei ${hnd} Leuten ${hnd*(hnd-1)/2} mal die Hände geschüttelt werden.
 
 ::: column.s-hide(width=240)
@@ -350,8 +350,8 @@ Anstatt alle Kanten in großen Graphen zu zählen, könnten wir auch versuchen,
 eine einfache Formel zu finden, die uns das Ergebnis für eine _beliebige_ Anzahl von Gästen angibt.
 
 Jeder der ${n}{n|5|2,8,1} Gäste auf der Party schüttelt ${n-1} anderen die Hand.
-Das macht ${n} × ${n-1} = ${n×(n-1)} geschüttelte Hände insgesamt. Für _n_ Gäste
-wäre das ein [[`n×(n–1)`|`n×(n+1)`|`n^2`]] - maliges Händeschütteln.
+Es werden also insgesamt ${n} × ${n-1} = ${n×(n-1)} mal die Hände geschüttelt. Für _n_ Gäste
+heißt das, dass [[`n×(n–1)`|`n×(n+1)`|`n^2`]] mal die Hände geschüttelt werden.
 
     p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
@@ -361,21 +361,21 @@ wäre das ein [[`n×(n–1)`|`n×(n+1)`|`n^2`]] - maliges Händeschütteln.
 
 Leider ist diese Antwort nicht ganz richtig. Beachte, dass <x-target to=".handshakes tr:first-child
 td:first-child, .handshakes tr:first-child td:nth-child(2)">die ersten beiden Einträge
-in der obersten Zeile</x-target> eigentlich die gleichen sind, nur umgedreht.
+in der obersten Zeile</x-target> eigentlich identisch sind, nur umgedreht.
 
 Tatsächlich haben wir jedes Händeschütteln [[zweimal|einmal|dreimal]] gezählt, _{span.reveal(when="blank-0")}
 einmal für jede der beiden beteiligten Personen. Das bedeutet, dass die korrekte
-Anzahl des Händeschüttelns für ${n}{n|5|2,25,1} Gäste `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` beträgt._
+Anzahl des Händeschüttelns bei ${n}{n|5|2,25,1} Gästen `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` beträgt._
 
 ---
 > id: handshakes-3
 
-Die Händeschüttel-Graphen sind ein besonderer Fall, weil jeder Knoten mit jedem
-anderen Knoten verbunden ist. Graphen mit dieser Eigenschaft werden __vollständige Graphen__
+Die Graphen, die das Händeschütteln beschreiben, stellen einen besonderen Fall dar, weil jeder Knoten
+mit jedem anderen Knoten verbunden ist. Graphen mit dieser Eigenschaft werden __vollständige Graphen__
 genannt. Ein vollständiger Graph mit 4 Knoten wird oft als `K_4` abgekürzt, ein
 vollständiger Graph mit 5 Knoten wird als `K_5` bezeichnet, und so weiter.
 
-Wir haben gerade gezeigt, dass ein vollständiger Graph mit `n` Knoten, `K_n`,
+Wir haben gerade gezeigt, dass ein vollständiger Graph mit `n` Knoten, also `K_n`,
 `(n × (n-1))/2` Kanten hat.
 
     .row
@@ -391,7 +391,7 @@ Wir haben gerade gezeigt, dass ein vollständiger Graph mit `n` Knoten, `K_n`,
 
 An einem anderen Tag bist du zu einem Speed-Dating-Event für ${m}{m|5|2,8,1}
 Jungs und ${f}{f|4|2,8,1} Mädchen eingeladen. Es gibt viele kleine Tische und jeder Junge
-verbringt 5 Minuten mit jedem der Mädchen. Wie viele einzelne "Dates" gibt es insgesamt?
+verbringt 5 Minuten mit jedem der Mädchen. Wie viele einzelne "Dates" ergibt das insgesamt?
 
 ::: column.grow
 
@@ -406,7 +406,9 @@ Anordnung haben, werden __bipartite Graphen__ oder __paare Graphen__ genannt.
 
 :::
 
-{.reveal(when="blank-0 blank-1")} Der zweigeteilte Graph mit zwei Sätzen der Größe _x_ und _y_ wird oft als geschrieben `K_"x,y"` . Es hat [[`x×y`|`x+y`|`2x–y`]] Kanten, _{span.reveal(when="blank-2")} was bedeutet, dass es im obigen Beispiel gibt ${m} × ${f} = ${m×f} Termine._ 
+{.reveal(when="blank-0 blank-1")} Der zweigeteilte Graph mit zwei Gruppen der Größe _x_ und _y_
+wird oft als `K_"x,y"` geschrieben. Er hat [[`x×y`|`x+y`|`2x–y`]] Kanten, _{span.reveal(when="blank-2")}_
+was bedeutet, dass es im obigen Beispiel zu ${m} × ${f} = ${m×f} Dates kommt.
 
 ---
 > id: utilities
@@ -414,13 +416,16 @@ Anordnung haben, werden __bipartite Graphen__ oder __paare Graphen__ genannt.
 > section: planar-graphs
 > translated: auto
 
-## Planare Graphen 
+## Planare Graphen
 
 ::: column.grow
 
-Hier ist ein weiteres Rätsel, das sich auf die Graphentheorie bezieht. 
+Hier ist ein weiteres Rätsel, das mit der Graphentheorie zu tun hat.
 
-In einem kleinen Dorf gibt es drei Häuser und drei Versorgungsanlagen, die Wasser, Strom und Gas produzieren. Wir müssen jeden der Kurse mit jedem der Versorgungsanlagen verbinden, aber aufgrund der Anordnung des Dorfes dürfen sich die verschiedenen Rohre und Kabel nicht kreuzen. 
+In einem kleinen Dorf gibt es drei Häuser und drei Versorgungswerke,
+die Wasser, Strom und Gas produzieren. Wir müssen die einzelnen Leitungen
+an jedes der Versorgungswerke anschließen, aber aufgrund der Anordnung des Dorfes dürfen
+sich die verschiedenen Rohre und Kabel nicht kreuzen.
 
 ::: column(width=300)
 
@@ -428,7 +433,7 @@ In einem kleinen Dorf gibt es drei Häuser und drei Versorgungsanlagen, die Wass
 
 :::
 
-Versuchen Sie, jedes der Häuser mit jedem der unten aufgeführten Versorgungsunternehmen zu verbinden, ohne dass sich eine Ihrer Linien kreuzt: 
+Versuche, jedes der Häuser mit jedem der untenstehenden Versorgungswerke zu verbinden, ohne dass sich eine deiner Leitungen kreuzt:
 
     .box.no-padding
       include svg/utilities.svg
@@ -437,34 +442,43 @@ Versuchen Sie, jedes der Häuser mit jedem der unten aufgeführten Versorgungsun
 ---
 > id: utilities-1
 
-Genau wie bei den Königsberg-Brücken stellen Sie schnell fest, dass auch dieses Problem nicht möglich ist. Es scheint, dass einige Diagramme ohne überlappende Kanten gezeichnet werden können - diese werden als __planare Diagramme bezeichnet__ -, andere jedoch nicht. 
+Genau wie bei den Königsberger Brücken vorher, stellt man schnell fest,
+dass auch dieses Problem nicht lösbar ist. Es scheint, dass einige Graphen ohne
+überlappende Kanten gezeichnet werden können - diese nennt man __planare Graphen__
+, andere jedoch nicht.
 
 ::: column(width=200)
 
     svg.graph(width=200 height=200 style="margin-bottom: .4em")
 
-{.text-center}`K_3` ist planar. 
+{.text-center}`K_3` ist planar.
 
 ::: column(width=200)
 
     svg.graph#planar-2(width=200 height=200 style="margin-bottom: .4em")
 
-{.text-center}`K_4` [[ist planar | ist nicht planar]] . 
+{.text-center}`K_4` [[ist planar | ist nicht planar]] .
 
 ::: column(width=200)
 
     svg.graph#planar-3(width=200 height=200 style="margin-bottom: .4em;")
 
-{.text-center}`K_5` [[ist nicht planar | ist planar]] . 
+{.text-center}`K_5` [[ist nicht planar | ist planar]] .
 
 :::
 
 ---
 > id: utilities-2
 
-Das [komplette Diagramm](gloss:complete-graph) `K_5` ist der kleinste Graph, der nicht planar ist. Jedes andere Diagramm, das enthält `K_5` als Untergraph ist in gewisser Weise auch nicht planar. Das beinhaltet `K_6` , `K_7` und alle größeren vollständigen Grafiken. 
+Der [vollständige Graph](gloss:complete-graph) `K_5` ist der kleinste Graph,
+der nicht planar ist. Jeder andere Graph, der `K_5` in irgendeiner Weise als
+Teilgraph enthält, ist auch nicht planar. Dazu gehören `K_6`, `K_7`, und alle
+größeren vollständigen Graphen.
 
-Das Diagramm in den drei Hilfsprogrammen ist das [zweiteilige Diagramm](gloss:bipartite-graph) `K_"3,3"` . Es stellt sich heraus, dass jeder nicht planare Graph entweder a enthalten muss `K_5` oder ein `K_"3,3"` (oder eine [Unterteilung](gloss:subdivision) dieser beiden Graphen) als Untergraph. Dies nennt man _Kuratowskis Theorem_ . 
+Der Graph im Rätsel der drei Versorgungswerke ist der [bipartite graph](gloss:bipartite-graph)
+`K_"3,3"`. Es stellt sich heraus, dass jeder nicht-planare Graph entweder
+einen `K_5` oder einen `K_"3,3"`  (bzw. eine [Unterteilung](gloss:subdivision) dieser
+beiden Graphen) als Teilgraph enthalten muss. Das ist bekannt als _Kuratowskis Theorem_.
 
 ---
 > id: planarity
@@ -472,59 +486,68 @@ Das Diagramm in den drei Hilfsprogrammen ist das [zweiteilige Diagramm](gloss:bi
 
 ::: .box.f-blue
 
-#### Planarität 
+#### Planarität
 
     x-solved
     svg#planarity(viewBox="0 0 720 360")
 
-Dies ist ein planarer Graph, aber der ${n}{n|7|5,20,1} Eckpunkte wurden verschlüsselt. Ordnen Sie die Scheitelpunkte so an, dass sich keine der Kanten überlappt. 
+Dies ist ein planarer Graph, aber die Knoten ${n}{n|7|5,20,1} sind durcheinander
+geraten. Ordne die Knoten neu an, so dass keine der Kanten überlappen.
 
-    p.btn-row: button.btn New Random Graph
+    p.btn-row: button.btn Neuer zufälliger Graph
 
 :::
 
 ---
 > id: euler
 
-### Eulers Formel 
+### Eulers Formel
 
-Alle planaren Graphen unterteilen die Ebene, auf der sie gezeichnet werden, in eine Reihe von Bereichen, die als __Flächen bezeichnet werden__ . 
+Alle planaren Graphen unterteilen die Ebene, auf der sie gezeichnet werden,
+in mehrere Bereiche, genannt __Flächen__.
 
 ::: column(width=200)
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Eckpunkte  
-[[5]] Gesichter  
+{.text-center} [[6]] Knoten  
+[[5]] Flächen  
 [[10]] Kanten  
-_{span.euler-sum} 11 Eckpunkte + Gesichter_ 
+_{span.euler-sum} 11 Knoten + Flächen_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] Eckpunkte  
-[[7]] Gesichter  
+{.text-center} [[8]] Knoten  
+[[7]] Flächen  
 [[14]] Kanten  
-_{span.euler-sum} 15 Eckpunkte + Gesichter_ 
+_{span.euler-sum} 15 Knoten + Flächen_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] Eckpunkte  
-[[13]] Gesichter  
+{.text-center} [[12]] Knoten  
+[[13]] Flächen  
 [[24]] Kanten  
-_{span.euler-sum} 25 Eckpunkte + Gesichter_ 
+_{span.euler-sum} 25 Knoten + Flächen_
 
 :::
 
 ---
 > id: euler-1
 
-Wenn Sie diese Zahlen vergleichen, werden Sie feststellen, dass die Anzahl der Kanten immer [[eins weniger ist | größer | das gleiche]] wie die Anzahl der Flächen plus die Anzahl der Eckpunkte. Mit anderen Worten, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Dieses Ergebnis heißt __Eulers Gleichung__ und ist nach demselben [Mathematiker benannt,](bio:euler) der das Problem der Königsbergbrücken gelöst hat. 
+Wenn du diese Zahlen vergleichst, wirst du feststellen, dass die Anzahl der Kanten
+immer [[eins weniger|größer|dieselbe]] ist als die Anzahl der Flächen plus die Anzahl
+der Knoten. Mit anderen Worten: _{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + 1.
+Dieses Ergebnis wird __Euler-Gleichung__ genannt und ist nach demselben
+[Mathematiker](bio:euler) benannt, der auch das Problem der Königsberger Brücken gelöst hat.
 
-Leider gibt es unendlich viele Graphen und wir können nicht jeden überprüfen, ob die Euler-Gleichung funktioniert. Stattdessen können wir versuchen, einen einfachen [Beweis](gloss:proof) zu finden, der für jedes Diagramm funktioniert… 
+Leider gibt es unendlich viele Graphen, und wir können nicht jeden einzelnen überprüfen,
+um zu sehen, ob die Eulersche Gleichung funktioniert. Stattdessen können
+wir versuchen, einen einfachen [Beweis](gloss:proof) zu finden, der für
+jeden Graphen funktioniert...
 
 ---
 > id: euler-2
@@ -545,33 +568,43 @@ Leider gibt es unendlich viele Graphen und wir können nicht jeden überprüfen,
           table.grid.table-small
             tr
               td: strong.blue.i F
-              td: strong.green.i V
-              td: strong.red.i E
+              td: strong.green.i K
+              td: strong.red.i Ka
             tr
               td.xf 0
               td.xv 1
               td.xe 0
           p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
     
-      .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
-      .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler’s equation still works.
-      .legend(slot="legend") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler’s equation still works.
-      .legend(slot="legend") Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler’s equation works.
-      .legend(slot="legend") Let’s keep going: if we now create a quadrilateral we add one vertex, two edges and one face. Euler’s equation still works.
+      .legend(slot="legend") Der einfachste Graph besteht aus einem einzigen Knoten. Wir können leicht überprüfen, dass die Euler-Gleichung funktioniert.
+      .legend(slot="legend") Wir wollen einen neuen Knoten zu unserem Graphen hinzufügen. Außerdem müssen wir noch eine Kante hinzufügen, und die Euler-Gleichung funktioniert immer noch.
+      .legend(slot="legend") Wenn wir einen dritten Knoten zum Graphen hinzufügen wollen, haben wir zwei Möglichkeiten. Wir könnten ein kleines Dreieck erstellen: dies fügt einen Knoten, eine Fläche und zwei Kanten hinzu, so dass die Euler-Gleichung immer noch funktioniert.
+      .legend(slot="legend") Stattdessen könnten wir die Linie einfach um eins verlängern: das fügt einen Knoten und eine Kante hinzu, und die Euler-Gleichung funktioniert.
+      .legend(slot="legend") Machen wir weiter: Wenn wir jetzt ein Viereck erstellen, fügen wir einen Knoten, zwei Kanten und eine Fläche hinzu. Die Euler-Gleichung funktioniert immer noch.
 
 ---
 > id: euler-3
 
-Jeder (endliche) Graph kann erstellt werden, indem mit einem Scheitelpunkt begonnen und nacheinander weitere Scheitelpunkte hinzugefügt werden. Wir haben gezeigt, dass die Euler-Gleichung gültig ist, unabhängig davon, wie wir neue Eckpunkte hinzufügen. Daher gilt es für alle Grafiken. 
+Jeder (endliche) Graph kann konstruiert werden, indem man mit einem Knoten beginnt
+und nach und nach weitere Knoten hinzufügt. Wir haben gezeigt, dass,
+egal auf welche Weise wir neue Knoten hinzufügen, die Euler-Gleichung
+gültig ist. Daher ist sie für alle Graphen gültig.
 
-Der Prozess, den wir verwendet haben, heißt __mathematische Induktion__ . Es ist eine sehr nützliche Technik, um Ergebnisse in unendlich vielen Fällen zu beweisen, indem Sie einfach mit dem einfachsten Fall beginnen und zeigen, dass das Ergebnis bei jedem Schritt bei der Erstellung komplexerer Fälle gilt. 
+Der Prozess, den wir verwendet haben, wird __mathematische Induktion__ genannt.
+Das ist eine sehr nützliche Technik, um Ergebnisse in unendlich vielen
+Fällen zu beweisen, indem man einfach mit dem einfachsten Fall beginnt und
+zeigt, dass das Ergebnis, wenn man komplexere Fälle entwickelt, bei jedem
+Schritt gültig bleibt.
 
     .svg-block: include svg/dominoes.svg
 
 ---
 > id: euler-4
 
-Viele planare Graphen sehen den Netzen von [Polyedern](gloss:polyhedron) sehr ähnlich, dreidimensionale Formen mit [polygonalen](gloss:polygon) Flächen. Wenn wir uns Polyeder aus elastischen Bändern vorstellen, können wir uns vorstellen, sie auszudehnen, bis sie flache, planare Graphen werden: 
+Viele planare Graphen sehen den Netzen von [Polyedern](gloss:polyhedron),
+dreidimensionalen Körpern mit [polygonalen](gloss:polygon) Flächen, sehr
+ähnlich. Wenn wir uns vorstellen, dass Polyeder aus Gummibändern bestehen,
+könnten wir sie so lange dehnen, bis sie zu flachen, planaren Graphen werden:
 
 ::: column(width=300)
 
@@ -588,36 +621,40 @@ Viele planare Graphen sehen den Netzen von [Polyedern](gloss:polyhedron) sehr ä
 ---
 > id: euler-5
 
-Dies bedeutet, dass wir die Euler-Formel nicht nur für planare Graphen, sondern auch für alle Polyeder verwenden können - mit einem kleinen Unterschied. Bei der Umwandlung der Polyeder in Diagramme verschwindet eine der Flächen: Die oberste Fläche der Polyeder wird zur „Außenseite“; der Graphen. 
+Das bedeutet, dass wir die Eulersche Formel nicht nur für planare Graphen,
+sondern auch für alle Polyeder verwenden können - mit einem kleinen Unterschied.
+Wenn man die Polyeder in Graphen umwandelt, verschwindet eine der Flächen: die oberste Fläche der Polyeder wird zur "Umrandung" des jeweiligen Graphen.
 
-Mit anderen Worten, wenn Sie die Anzahl der zählen __{.red} Kanten__ , __{.blue} Gesichter__ und __{.green} Eckpunkte__ _jedes_ Polyeder, werden Sie feststellen , dass _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + [[2]] . 
+Mit anderen Worten, wenn du die Anzahl der __{.red}Kanten__, __{.blue}Flächen__
+und __{.green}Eckpunkte__ eines _beliebigen_ Polyeders zählst, wirst du feststellen,
+dass _{.b.blue}F_ + _{.b.green}E_ = _{.b.red}K_ + [[2]] ist.
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
 {.caption} __Ikosaeder__  
-__{.blue} 20__ Gesichter  
+__{.blue} 20__ Flächen  
 __{.green} 12__ Eckpunkte  
-__{.red} 30__ Kanten 
+__{.red} 30__ Kanten
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
 {.caption} __Rhombicosidodekaeder__  
-__{.blue} 62__ Gesichter  
+__{.blue} 62__ Flächen  
 __{.green} 60__ Eckpunkte  
-__{.red} 120__ Kanten 
+__{.red} 120__ Kanten
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
-{.caption} __Verkürztes Ikosaeder__  
-__{.blue} 32__ Gesichter (12 schwarz, 20 weiß)  
+{.caption} __Abgestumpftes Icosahedron__  
+__{.blue} 32__ Flächen (12 schwarz, 20 weiß)  
 __{.green} 60__ Eckpunkte  
-__{.red} 90__ Kanten 
+__{.red} 90__ Kanten
 
 :::
 
@@ -626,15 +663,20 @@ __{.red} 90__ Kanten
 > section: map-colouring
 > translated: auto
 
-## Kartenfärbung 
+## Karten färben
 
 ::: column.grow
 
-Wir haben bereits die Graphentheorie mit bestimmten Karten verwendet. Beim Verkleinern verschwinden einzelne Straßen und Brücken und stattdessen sehen wir die Umrisse ganzer Länder. 
+Wir haben die Graphentheorie bereits bei verschiedenen Landkarten angewendet.
+Wenn wir herauszoomen, verschwinden einzelne Straßen und Brücken und wir sehen
+stattdessen den Umriss ganzer Länder.
 
-Wenn Sie eine Karte oder eine andere Zeichnung aus verschiedenen Regionen ausmalen, können benachbarte Länder nicht dieselbe Farbe haben. Möglicherweise möchten wir auch so wenig verschiedene Farben wie möglich verwenden. 
+Beim Einfärben einer Karte - oder jeder anderen Zeichnung, die aus verschiedenen
+Regionen besteht - dürfen benachbarte Länder nicht die gleiche Farbe haben.
+Außerdem sollten wir so wenig verschiedene Farben wie möglich verwenden.
 
-Einige einfache „Karten“, wie ein Schachbrett, benötigen nur zwei Farben (Schwarzweiß), aber die meisten komplexen Karten benötigen mehr. 
+Einige einfache "Karten", wie ein Schachbrett, brauchen nur zwei Farben
+(schwarz und weiß), aber die meisten komplexeren Karten brauchen mehrere.
 
 ::: column(width=240 style="margin-top: -10px")
 
@@ -647,7 +689,9 @@ Einige einfache „Karten“, wie ein Schachbrett, benötigen nur zwei Farben (S
 > goals: map-0 map-1 map-2 map-3
 > title: Colouring Maps
 
-Beim Ausmalen der Karte der US-Bundesstaaten reichen natürlich 50 Farben aus, aber es sind weit weniger erforderlich. Färben Sie die folgenden Karten mit möglichst wenigen Farben: 
+Wenn man die Karte der US-Bundesstaaten einfärbt, dann sind natürlich 50 Farben
+ausreichend, aber es sind weit weniger notwendig. Versuche die Karten unten
+mit so wenig Farben wie möglich einzufärben:
 
     .four-colour-icons
       for i in [1, 2, 3, 4, 5, 6, 7]
@@ -655,31 +699,31 @@ Beim Ausmalen der Karte der US-Bundesstaaten reichen natürlich 50 Farben aus, a
     
     x-tabbox.four-colours.full-width
       .tab
-        h3 United States #[span.check(when="map-0")]
+        h3 Vereinigte Staaten #[span.check(when="map-0")]
         x-solved
-        .colour-count(style="margin-bottom: -32px") #[span 0] colours used
+        .colour-count(style="margin-bottom: -32px") #[span 0] verwendete Farben
         include svg/colours-1.svg
-        button.btn.clear Clear
-        // Note that states or countries which only share a corner are allowed to have the same colour.
-        // Alaska and Hawaii are isolated from all of the other states and can have any colour.
+        button.btn.clear Löschen
+        // Beachte, dass Staaten oder Länder, die sich nur eine Ecke teilen, die gleiche Farbe haben dürfen.
+        // Alaska und Hawaii sind von allen anderen Staaten isoliert und können jede beliebige Farbe haben.
       .tab
-        h3 South America #[span.check(when="map-1")]
+        h3 Südamerika #[span.check(when="map-1")]
         x-solved
-        .colour-count #[span 0] colours used
+        .colour-count #[span 0] verwendete Farben
         include svg/colours-2.svg
-        button.btn.clear Clear
+        button.btn.clear Löschen
       .tab
-        h3 Germany #[span.check(when="map-2")]
+        h3 Deutschland #[span.check(when="map-2")]
         x-solved
-        .colour-count #[span 0] colours used
+        .colour-count #[span 0] verwendete Farben
         include svg/colours-3.svg
-        button.btn.clear Clear
+        button.btn.clear Löschen
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
-        .colour-count #[span 0] colours used
+        .colour-count #[span 0] verwendete Farben
         include svg/colours-4.svg
-        button.btn.clear Clear
+        button.btn.clear Löschen
 
 ---
 > id: maps-2
@@ -687,7 +731,11 @@ Beim Ausmalen der Karte der US-Bundesstaaten reichen natürlich 50 Farben aus, a
 
 ::: column.grow
 
-Alle diese Karten können mit nur vier verschiedenen Farben gefärbt werden, aber es ist nicht schwer vorstellbar, dass andere, sehr komplizierte Karten viel mehr Farben benötigen. Tatsächlich benötigen einige Karten __mindestens__ vier Farben, wenn sie vier miteinander verbundene Länder enthalten. 
+Alle diese Karten können mit nur vier verschiedenen Farben eingefärbt werden,
+aber es ist nicht schwer, sich vorzustellen, dass andere, sehr komplizierte
+Karten viel mehr Farben benötigen. Tatsächlich brauchen manche Karten
+__mindestens__ vier Farben, wenn sie vier Länder enthalten, die alle miteinander
+verbunden sind.
 
 ::: column(width=200)
 
@@ -695,11 +743,13 @@ Alle diese Karten können mit nur vier verschiedenen Farben gefärbt werden, abe
 
 :::
 
-Wie zuvor können wir eine Karte mit Ländern und Grenzen in ein planares Diagramm konvertieren: Jedes Land wird [[zum Scheitelpunkt | eine Ecke | ein Gesicht]] und Länder, die [[eine Grenze teilen | habe die gleiche Farbe]] durch eine Kante verbunden: 
+Wie zuvor können wir eine Karte mit Ländern und Grenzen in einen planaren
+Graphen umwandeln: jedes Land entspricht [[einem Knoten|einer Kante|einer Fläche]], und Länder, die [[eine Grenze teilen|die gleiche Farbe haben]] werden durch eine Kante verbunden:
 
     .svg-block: include svg/colour-graph.svg
 
-{.reveal(when="blank-0 blank-1")} Jetzt möchten wir die Scheitelpunkte eines Diagramms einfärben, und zwei Scheitelpunkte müssen eine andere Farbe haben, wenn sie durch eine Kante verbunden sind. 
+{.reveal(when="blank-0 blank-1")} Jetzt wollen wir die Knoten eines Graphen einfärben,
+und zwei Knoten müssen eine andere Farbe haben, wenn sie durch eine Kante verbunden sind.
 
 ---
 > id: maps-3
