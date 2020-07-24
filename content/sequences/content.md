@@ -1401,7 +1401,7 @@ is the ratio of its width and its height:
 
 Notice how, as we add more and more squares, the aspect ratio seems to get
 closer and closer to a specific number around 1.6. This number is called the
-[__golden ratio__](gloss:golden-ratio) and usually represented by the Greek
+[__golden ratio__](gloss:golden-ratio) and is usually represented by the Greek
 letter `φ` (“phi”). Its exact value is
 
 {.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
@@ -1543,7 +1543,7 @@ Nature also can’t solve equations to calculate the golden ratio – but over t
 course of millions of years, plants had plenty of time to try out different
 angles and discover the best one.
 
-Plants and animals always want grow in the most efficient way, and that is why
+Plants and animals always want to grow in the most efficient way, and that is why
 nature is full of regular, mathematical patterns.
 
 :::
@@ -2124,7 +2124,7 @@ Since 3003 is a triangle number, it actually appears two more times in the
 _third_ diagonals of the triangle – that makes eight occurrences in total.
 
 It is unknown if there are any other numbers that appear eight times in the
-triangle, or if there numbers that appear more than eight times. The American
+triangle, or if there are numbers that appear more than eight times. The American
 mathematician [David Singmaster](bio:singmaster) hypothesised that there is a
 fixed limit on how often numbers can appear in Pascal’s triangle – but it hasn’t
 been proven yet.
