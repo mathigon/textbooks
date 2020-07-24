@@ -319,7 +319,6 @@ von diesen Anwendungen kennenlernen.
 ---
 > id: handshakes-1
 > section: handshakes
-> translated: auto
 
 ## Händeschütteln und Dating
 
@@ -414,7 +413,6 @@ was bedeutet, dass es im obigen Beispiel zu ${m} × ${f} = ${m×f} Dates kommt.
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
-> translated: auto
 
 ## Planare Graphen
 
@@ -661,7 +659,6 @@ __{.red} 90__ Kanten
 ---
 > id: maps
 > section: map-colouring
-> translated: auto
 
 ## Karten färben
 
@@ -819,7 +816,6 @@ man mehr als vier Farben, und die Beweise werden noch schwieriger.
 ---
 > id: salesman
 > section: travelling-salesman
-> translated: auto
 
 ## Problem des Handlungsreisenden
 
@@ -1033,7 +1029,6 @@ die jeweils mit einem Preis von \$1 Mio. dotiert sind.
 ---
 > id: applications
 > section: applications
-> translated: auto
 
 ## Graphen im Alltag
 
