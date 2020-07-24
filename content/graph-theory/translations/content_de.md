@@ -501,7 +501,7 @@ geraten. Ordne die Knoten neu an, so dass keine der Kanten überlappen.
 ---
 > id: euler
 
-### Eulers Formel
+### Eulersche Polyederformel
 
 Alle planaren Graphen unterteilen die Ebene, auf der sie gezeichnet werden,
 in mehrere Bereiche, genannt __Flächen__.
@@ -541,11 +541,11 @@ _{span.euler-sum} 25 Knoten + Flächen_
 Wenn du diese Zahlen vergleichst, wirst du feststellen, dass die Anzahl der Kanten
 immer [[eins weniger|größer|dieselbe]] ist als die Anzahl der Flächen plus die Anzahl
 der Knoten. Mit anderen Worten: _{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + 1.
-Dieses Ergebnis wird __Euler-Gleichung__ genannt und ist nach demselben
-[Mathematiker](bio:euler) benannt, der auch das Problem der Königsberger Brücken gelöst hat.
+Dieses Ergebnis wollen wir __Euler-Formel__ nennen, nach demselben
+[Mathematiker](bio:euler), der auch das Problem der Königsberger Brücken gelöst hat.
 
 Leider gibt es unendlich viele Graphen, und wir können nicht jeden einzelnen überprüfen,
-um zu sehen, ob die Eulersche Gleichung funktioniert. Stattdessen können
+um zu sehen, ob die Euler-Formel funktioniert. Stattdessen können
 wir versuchen, einen einfachen [Beweis](gloss:proof) zu finden, der für
 jeden Graphen funktioniert...
 
@@ -576,18 +576,18 @@ jeden Graphen funktioniert...
               td.xe 0
           p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
     
-      .legend(slot="legend") Der einfachste Graph besteht aus einem einzigen Knoten. Wir können leicht überprüfen, dass die Euler-Gleichung funktioniert.
-      .legend(slot="legend") Wir wollen einen neuen Knoten zu unserem Graphen hinzufügen. Außerdem müssen wir noch eine Kante hinzufügen, und die Euler-Gleichung funktioniert immer noch.
-      .legend(slot="legend") Wenn wir einen dritten Knoten zum Graphen hinzufügen wollen, haben wir zwei Möglichkeiten. Wir könnten ein kleines Dreieck erstellen: dies fügt einen Knoten, eine Fläche und zwei Kanten hinzu, so dass die Euler-Gleichung immer noch funktioniert.
-      .legend(slot="legend") Stattdessen könnten wir die Linie einfach um eins verlängern: das fügt einen Knoten und eine Kante hinzu, und die Euler-Gleichung funktioniert.
-      .legend(slot="legend") Machen wir weiter: Wenn wir jetzt ein Viereck erstellen, fügen wir einen Knoten, zwei Kanten und eine Fläche hinzu. Die Euler-Gleichung funktioniert immer noch.
+      .legend(slot="legend") Der einfachste Graph besteht aus einem einzigen Knoten. Wir können leicht überprüfen, dass die Euler-Formel funktioniert.
+      .legend(slot="legend") Wir wollen einen neuen Knoten zu unserem Graphen hinzufügen. Außerdem müssen wir noch eine Kante hinzufügen, und die Euler-Formel funktioniert immer noch.
+      .legend(slot="legend") Wenn wir einen dritten Knoten zum Graphen hinzufügen wollen, haben wir zwei Möglichkeiten. Wir könnten ein kleines Dreieck erstellen: dies fügt einen Knoten, eine Fläche und zwei Kanten hinzu, so dass die Euler-Formel immer noch funktioniert.
+      .legend(slot="legend") Stattdessen könnten wir die Linie einfach um eins verlängern: das fügt einen Knoten und eine Kante hinzu, und die Euler-Formel funktioniert.
+      .legend(slot="legend") Machen wir weiter: Wenn wir jetzt ein Viereck erstellen, fügen wir einen Knoten, zwei Kanten und eine Fläche hinzu. Die Euler-Formel funktioniert immer noch.
 
 ---
 > id: euler-3
 
 Jeder (endliche) Graph kann konstruiert werden, indem man mit einem Knoten beginnt
 und nach und nach weitere Knoten hinzufügt. Wir haben gezeigt, dass,
-egal auf welche Weise wir neue Knoten hinzufügen, die Euler-Gleichung
+egal auf welche Weise wir neue Knoten hinzufügen, die Euler-Formel
 gültig ist. Daher ist sie für alle Graphen gültig.
 
 Der Prozess, den wir verwendet haben, wird __mathematische Induktion__ genannt.
@@ -621,13 +621,13 @@ könnten wir sie so lange dehnen, bis sie zu flachen, planaren Graphen werden:
 ---
 > id: euler-5
 
-Das bedeutet, dass wir die Eulersche Formel nicht nur für planare Graphen,
+Das bedeutet, dass wir die Euler-Formel nicht nur für planare Graphen,
 sondern auch für alle Polyeder verwenden können - mit einem kleinen Unterschied.
 Wenn man die Polyeder in Graphen umwandelt, verschwindet eine der Flächen: die oberste Fläche der Polyeder wird zur "Umrandung" des jeweiligen Graphen.
 
 Mit anderen Worten, wenn du die Anzahl der __{.red}Kanten__, __{.blue}Flächen__
-und __{.green}Eckpunkte__ eines _beliebigen_ Polyeders zählst, wirst du feststellen,
-dass _{.b.blue}F_ + _{.b.green}E_ = _{.b.red}K_ + [[2]] ist.
+und __{.green}Ecken__ eines _beliebigen_ Polyeders zählst, wirst du feststellen,
+dass _{.b.blue}F_ + _{.b.green}E_ = _{.b.red}K_ + [[2]] ist, bekannt als __Eulersche Polyederformel__.
 
 ::: column(width=200)
 
@@ -635,7 +635,7 @@ dass _{.b.blue}F_ + _{.b.green}E_ = _{.b.red}K_ + [[2]] ist.
 
 {.caption} __Ikosaeder__  
 __{.blue} 20__ Flächen  
-__{.green} 12__ Eckpunkte  
+__{.green} 12__ Ecken  
 __{.red} 30__ Kanten
 
 ::: column(width=200)
@@ -644,7 +644,7 @@ __{.red} 30__ Kanten
 
 {.caption} __Rhombicosidodekaeder__  
 __{.blue} 62__ Flächen  
-__{.green} 60__ Eckpunkte  
+__{.green} 60__ Ecken  
 __{.red} 120__ Kanten
 
 ::: column(width=200)
@@ -653,7 +653,7 @@ __{.red} 120__ Kanten
 
 {.caption} __Abgestumpftes Icosahedron__  
 __{.blue} 32__ Flächen (12 schwarz, 20 weiß)  
-__{.green} 60__ Eckpunkte  
+__{.green} 60__ Ecken  
 __{.red} 90__ Kanten
 
 :::
@@ -760,43 +760,59 @@ und zwei Knoten müssen eine andere Farbe haben, wenn sie durch eine Kante verbu
 
 ::: column.grow
 
-1852 musste der Botanikstudent [Francis Guthrie](bio:guthrie) eine Karte der Grafschaften in England ausmalen. Er bemerkte, dass vier Farben für jede Karte, die er versuchte, ausreichten, aber er konnte keinen Beweis finden, der für _alle_ Karten funktionierte. Dies stellte sich als äußerst schwieriges Problem heraus und wurde als __Vierfarbensatz bekannt__ . 
+1852 musste der Botanikstudent [Francis Guthrie](bio:guthrie) eine Karte der Grafschaften
+in England ausmalen. Er bemerkte, dass vier Farben für jede Karte, die er ausprobierte,
+ausreichten, aber er konnte keinen Beweis dafür finden, dass das für _alle_ Karten so ist.
+Dies stellte sich als äußerst schwieriges Problem heraus und wurde bekannt als __Vier-Farben-Satz__.
 
-In den folgenden 100 Jahren veröffentlichten viele Mathematiker „Beweise“ für den Vierfarbensatz, nur um später Fehler zu finden. Einige dieser ungültigen Beweise waren so überzeugend, dass es mehr als 10 Jahre dauerte, um Fehler zu entdecken. 
+In den folgenden 100 Jahren veröffentlichten viele Mathematiker „Beweise“ für den Vier-Farben-Satz,
+nur um später Fehler zu finden. Einige dieser ungültigen Beweise waren so überzeugend,
+dass es mehr als 10 Jahre dauerte, um die Fehler zu entdecken.
 
-Mathematiker konnten lange Zeit weder beweisen, dass vier Farben ausreichen, noch eine Karte finden, die mehr als vier Farben benötigte. 
+Mathematiker konnten lange Zeit weder beweisen, dass vier Farben ausreichen,
+noch eine Karte finden, die mehr als vier Farben benötigte.
 
 :::
 
 ---
 > id: maps-4
 
-In Bezug auf das Vierfarbenproblem wurden bis 1976 nur geringe Fortschritte erzielt, als [Wolfgang Haken](bio:haken) und [Kenneth Appel](bio:appel) einen Computer verwendeten, um es endgültig zu lösen. Sie reduzierten unendlich viele mögliche Karten auf 1936 Sonderfälle, die jeweils von einem Computer überprüft wurden, der insgesamt über 1000 Stunden dauerte. 
+In Bezug auf das Vier-Farben-Problem wurden bis 1976 nur geringe Fortschritte erzielt,
+als [Wolfgang Haken](bio:haken) und [Kenneth Appel](bio:appel) einen Computer verwendeten,
+um es endgültig zu lösen. Sie reduzierten unendlich viele mögliche Karten auf 1936 Sonderfälle,
+die jeweils von einem Computer überprüft wurden, was insgesamt über 1000 Stunden in Anspruch nahm.
 
     x-parallax.full-width(background="images/ibm-360.jpg")
 
 ---
 > id: maps-5
 
-Der Vierfarbensatz ist der erste bekannte mathematische Satz, der mit einem Computer bewiesen wurde, was seitdem viel häufiger und weniger kontrovers geworden ist. Dank schnellerer Computer und eines effizienteren Algorithmus können Sie heute den Vierfarbensatz in nur wenigen Stunden auf einem Laptop beweisen. 
+Der __Vier-Farben-Satz__ ist der erste bekannte mathematische Satz, der mit Hilfe eines Computers
+bewiesen wurde, etwas, das inzwischen viel gebräuchlicher und weniger umstritten ist.
+Schnellere Computer und ein effizienterer Algorithmus tragen dazu bei, dass man heute den
+Vier-Farben-Satz auf einem Laptop in nur wenigen Stunden beweisen kann.
 
     figure
       x-img(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
-      p.caption Postmark for the Department of Mathematics at the University of<br/>Illinois Urbana-Champaign, where Haken and Appel worked.
+      p.caption Stempel der mathematischen Fakultät der Universität von <br/>Illinois Urbana-Champaign, wo Haken und Appel gearbeitet haben. <br/>"Four colors suffice" bedeutet "Vier Farben reichen aus"
 
 ---
 > id: maps-6
 
 ::: column.grow
 
-Der Vierfarbensatz funktioniert nur für Karten auf einer flachen Ebene oder einer Kugel, bei denen alle Länder aus einem einzigen Bereich bestehen. 
+Der Vier-Farben-Satz funktioniert nur für Karten auf einer flachen Ebene oder einer Kugel,
+wobei alle Länder aus einem einzigen Gebiet bestehen.
 
-Mathematiker haben sich jedoch auch Karten von _Imperien angesehen_ , in denen Länder aus mehreren getrennten Komponenten bestehen können, und Karten auf unterschiedlich geformten Planeten wie einem Torus (Donutform). In diesen Fällen benötigen Sie möglicherweise mehr als vier Farben, und die Proofs werden noch schwieriger. 
+Mathematiker haben sich aber auch Karten von _Imperien_ angesehen, auf denen Länder aus
+mehreren nicht zusammenhängenden Gebieten bestehen können, und Karten auf unterschiedlich
+geformten Planeten, wie zum Beispiel einem Torus (Donutform). In diesen Fällen braucht
+man mehr als vier Farben, und die Beweise werden noch schwieriger.
 
 ::: column(width=300)
 
     x-video(width=300 height=220 src="images/torus.mp4" hover loop)
-    p.caption This map on a torus requires seven colours.
+    p.caption Diese Karte auf einem Torus benötigt sieben Farben.
 
 :::
 
@@ -805,13 +821,22 @@ Mathematiker haben sich jedoch auch Karten von _Imperien angesehen_ , in denen L
 > section: travelling-salesman
 > translated: auto
 
-## Das Problem des reisenden Verkäufers 
+## Problem des Handlungsreisenden
 
 ::: column.grow(parent="right")
 
-Denken wir noch einmal über Netzwerke und Karten nach. Stellen Sie sich vor, ein Lieferservice muss einen Besuch abstatten ${tsn}{tsn|8|2,50,1} verschiedene Städte, um Pakete zu verteilen. Wir können uns diese Städte als Eckpunkte in einem Diagramm vorstellen. Wenn alle Städte durch Straßen verbunden sind, ist dies eine [[vollständige Grafik | Zyklus | zweigeteilter Graph]] , also gibt es <mfrac><mrow>${tsn} × (( ${tsn} - 1)</mrow><mn>2</mn></mfrac> = ${tsn*(tsn-1)/2} Kanten insgesamt. 
+Wir wollen uns noch einmal über Netzwerke und Karten Gedanken machen. Stelle dir vor,
+ein Lieferservice muss ${tsn}{tsn|8|2,50,1} verschiedene Städte abklappern, um Pakete zu
+verteilen. Wir können uns diese Städte als die Knoten in einem Graphen vorstellen. Wenn
+alle Städte durch Straßen miteinander verbunden sind, handelt es sich um einen
+[[vollständigen Graphen|Zyklus|bipartiten Graphen]], und er hat also insgesamt
+<mfrac><mrow>${tsn} × (${tsn} – 1)</mrow><mn>2</mn></mfrac> =
+${tsn*(tsn-1)/2} Kanten.
 
-Der Lieferwagen muss alle Städte in beliebiger Reihenfolge besuchen. Im Königsberger Brückenproblem wollten wir Wege finden, die an _jeder Kante_ genau einen entlang _verlaufen_ . Jetzt wollen wir Pfade finden, die _jeden Scheitelpunkt_ genau einmal besuchen. Diese Pfade werden __Hamilton-Zyklen genannt__ . 
+Der Lieferwagen muss alle Städte besuchen, egal in welcher Reihenfolge. Beim Königsberger
+Brückenproblem wollten wir Wege finden, die _jede Kante_ genau einmal entlangfahren.
+Jetzt wollen wir Pfade finden, die _jeden Knoten_ genau einmal passieren. Diese Pfade werden
+__Hamiltonkreise__ genannt.
 
 ::: column(width=260)
 
@@ -822,31 +847,47 @@ Der Lieferwagen muss alle Städte in beliebiger Reihenfolge besuchen. Im Königs
 ---
 > id: salesman-1
 
-Es gibt unzählige verschiedene Möglichkeiten für Hamilton-Zyklen in vollständigen Graphen. Tatsächlich können wir jeden Scheitelpunkt als Startscheitelpunkt auswählen und dann eine der verbleibenden Städte in beliebiger Reihenfolge auswählen: 
+Es gibt unzählige verschiedene Möglichkeiten für Hamiltonkreise in vollständigen Graphen.
+Tatsächlich können wir jeden beliebigen Knoten als Startpunkt wählen und dann eine der
+übrigen Städte in beliebiger Reihenfolge auswählen:
 
     .row
-      .grow: p.todo Diagram coming soon…
-      .grow: p.todo Diagram Coming Soon…
+      .grow: p.todo Diagramm kommt bald…
+      .grow: p.todo Diagramm kommt bald…
 
 ---
 > id: salesman-2
 
-In einer Grafik mit ${tsn1}{tsn1|4|2,10,1} Städte muss jeder Hamilton-Zyklus auch enthalten ${tsn1} Städte. Jetzt, 
+In einer Grafik mit ${tsn1}{tsn1|4|2,10,1} Städten muss auch jeder Hamiltonkreis
+${tsn1} Städte enthalten. Somit gilt:
 
     ul.var(:html="tsmString(tsn1)")
 
-Dies bedeutet, dass es insgesamt gibt ${tsnPaths(tsn1)} mögliche Wege. Eine Abkürzung für dieses Produkt ist ${tsn1} ! oder ${tsn1} __Factorial__ . 
+Dies bedeutet, dass es insgesamt ${tsnPaths(tsn1)} mögliche Pfade gibt. Eine Kurzschreibweise
+für dieses Produkt ist ${tsn1}! oder __Faktor__ ${tsn1}.
 
-Sie können sich vorstellen, dass es möglicherweise nicht möglich ist, direkt zwischen zwei Städten zu reisen - ohne über eine andere Stadt zu fahren. In diesem Fall haben wir keinen vollständigen Graphen mehr, und es wird viel schwieriger, die Anzahl der Hamilton-Zyklen zu finden, falls sie überhaupt existieren. 
+Du kannst dir vorstellen, dass es unter Umständen nicht möglich ist, direkt zwischen zwei
+Städten zu reisen, ohne dabei über eine andere Stadt zu fahren. In diesem Fall haben wir
+es mit keinem vollständigen Graphen mehr zu tun, und es wird viel schwieriger,
+die Anzahl der Hamiltonkreise zu finden, falls es überhaupt welche gibt.
 
 ---
 > id: salesman-3
 
 ::: column.grow(parent="right")
 
-Bisher haben wir die Tatsache ignoriert, dass einige Städte weiter voneinander entfernt sein könnten als andere. Im wirklichen Leben ist dies jedoch eine sehr wichtige Überlegung: Wir wollen nicht nur _einen_ Weg finden, sondern den kürzesten. Dies wird als __Problem__ des __Handlungsreisenden bezeichnet__ . Dies muss nicht nur in Transport und Logistik gelöst werden, sondern auch bei der Positionierung von Transistoren auf Mikrochips, bei der Herstellung schnellerer Computer oder bei der Analyse der [DNA-](gloss:dna) Struktur. 
+Bisher haben wir die Tatsache ignoriert, dass einige Städte weiter voneinander entfernt
+sein könnten als andere. Im wirklichen Leben ist dies jedoch eine sehr wichtige Überlegung:
+Wir wollen nicht nur _einen_ Weg finden, sondern den kürzesten. Man nennt dies das
+__Problem des Handlungsreisenden__. Es muss nicht nur im Transport- und Logistikbereich gelöst
+werden, sondern auch bei der Positionierung von Transistoren auf Mikrochips, um
+immer schnellere Computer herzustellen, oder bei der Analyse der Struktur der [DNA](gloss:dna).
 
-Eine einfache Methode wäre, alle möglichen Pfade auszuprobieren, die Länge jedes Pfades zu ermitteln und dann den kürzesten auszuwählen. Wir haben das jedoch gerade gezeigt, auch mit nur ${tsn2}{tsn2|10|2,20,1} Städte gibt es ${tsn2} ! = ${factorial(tsn2)} mögliche Wege. Sobald Sie Hunderte oder Tausende von Eckpunkten haben, wird es unmöglich, alle möglichen Pfade auszuprobieren, selbst wenn Sie leistungsstarke Computer verwenden. 
+Eine einfache Methode wäre es, alle möglichen Wege auszuprobieren, die Länge jedes
+Weges zu ermitteln und dann den kürzesten zu wählen. Wie auch immer, wir haben gerade
+gezeigt, dass es selbst mit nur ${tsn2}{tsn2|10|2,20,1} Städten ${tsn2} = ${factorial(tsn2)}! mögliche
+Wege gibt. Sobald du hunderte oder tausende Knoten hast, wird es selbst mit leistungsstarken
+Computern unmöglich, alle verschiedenen Wege auszuprobieren.
 
 ::: column(width=220)
 
@@ -858,9 +899,14 @@ Eine einfache Methode wäre, alle möglichen Pfade auszuprobieren, die Länge je
 > id: salesman-4
 > goals: move
 
-Leider gibt es keinen effizienteren Algorithmus zur Lösung des Problems der reisenden Verkäufer. Stattdessen haben Mathematiker und Informatiker verschiedene Algorithmen entwickelt, die _gute_ Lösungen finden, auch wenn sie möglicherweise nicht die besten sind. Diese Algorithmen, die nur ungefähre Lösungen liefern, werden als __Heuristiken bezeichnet__ . 
+Leider gibt es keinen effizienteren Algorithmus, um das Problem des Handlungsreisenden
+zu lösen. Stattdessen haben Mathematiker und Informatiker verschiedene Algorithmen entwickelt,
+die _gute_ Lösungen finden, auch wenn sie möglicherweise nicht die besten sind. Solche
+Algorithmen, die nur Näherungslösungen liefern, werden als __Heuristiken__ bezeichnet.
 
-Versuchen Sie, die Städte auf dieser Karte neu anzuordnen, und beobachten Sie, wie sich der kürzeste Weg zwischen ihnen ändert. Sie können Städte entfernen, indem Sie darauf tippen, und Sie können Städte hinzufügen, indem Sie auf eine beliebige Stelle auf der Karte klicken (bis zu 8): 
+Versuche, die Städte auf dieser Karte neu anzuordnen, und schau dir an, wie sich der
+kürzeste Weg zwischen ihnen verändert. Du kannst Städte entfernen, indem du sie anklickst,
+und du kannst Städte hinzufügen (bis zu 8), indem du irgendwo auf die Karte klickst:
 
     figure: .tsm
       svg(width=760 height=480 viewBox="0 0 760 480")
@@ -870,48 +916,64 @@ Versuchen Sie, die Städte auf dieser Karte neu anzuordnen, und beobachten Sie, 
 
 ::: column.grow
 
-Der __Greedy-Algorithmus__ (oder Nearest Neighbor-Algorithmus) ist sehr einfach: Sie beginnen in einer zufälligen Stadt und wechseln nacheinander in die nächstgelegene Stadt, die Sie zuvor noch nicht besucht haben. Sobald Sie alle Städte besucht haben, halten Sie an. 
+Der __Greedy-Algorithmus__ (oder Nearest-Neighbor-Algorithmus, "Nächster-Nachbar"
+bzw. "gieriger" Algorithmus) ist sehr einfach: Du beginnst in einer zufälligen Stadt
+und bewegst dich nacheinander in die nächste Stadt, die du noch nicht besucht hast.
+Wenn du alle Städte besucht hast, hältst du an.
 
 ::: column(width=300)
 
-{.todo} Animation kommt bald ... 
+{.todo} Animation kommt bald…
 
 :::
 
-Sie können zeigen, dass Pfade, die mit dem Greedy-Algorithmus gefunden wurden, im Durchschnitt 25% länger sind als der kürzestmögliche Pfad. 
+Man kann zeigen, dass die Wege, die mit dem Greedy-Algorithmus gefunden werden,
+im Durchschnitt 25% länger sind als der kürzestmögliche Weg.
 
 ---
 > id: salesman-6
 
 ::: column.grow
 
-Der __2-Opt-Algorithmus__ beginnt mit einem zufällig möglichen Pfad. Dann wählen Sie wiederholt zwei Kanten aus und tauschen sie aus, wenn dies die Länge des Pfades verringern würde. Sie hören auf, wenn Sie die Länge nicht weiter reduzieren können, indem Sie Kantenpaare vertauschen. 
+Der __2-Opt Algorithmus__ beginnt mit einem zufälligen möglichen Pfad. Dann wählst du
+wiederholt zwei Kanten aus und vertauschst sie, wenn das die Länge des Pfades verringern
+würde. Du hörst auf, wenn du die Länge nicht weiter reduzieren kannst, indem du
+irgendwelche Paare von Kanten vertauschst.
 
 ::: column(width=300)
 
-{.todo} Animation kommt bald ... 
+{.todo} Animation kommt bald…
 
 :::
 
 ---
 > id: ants
 
-Es stellte sich heraus, dass die Natur lange bevor es überhaupt Computer gab, einen cleveren Weg gefunden hatte, um optimale Wege zwischen verschiedenen Orten zu finden: in Ameisenkolonien. 
+Es stellt sich heraus, dass die Natur, lange bevor es Computer überhaupt gab, schon einen
+schlaueren Weg gefunden hatte, um die Wege zwischen verschiedenen Orten zu optimieren:
+in Ameisenkolonien.
 
     x-parallax.full-width(background="images/ants.jpg")
 
-Ameisen wollen möglichst kurze Wege zwischen ihrem Nest und möglichen Nahrungsquellen finden. Sie können durch Chemikalien miteinander kommunizieren, die sie auf ihrer Spur hinterlassen und denen andere Ameisen folgen können. 
+Ameisen wollen möglichst kurze Wege zwischen ihrem Nest und möglichen Nahrungsquellen finden.
+Sie können miteinander durch Chemikalien kommunizieren, die sie auf ihrem Weg hinterlassen
+und denen andere Ameisen folgen können.
 
 ---
 > id: ants-1
 
 ::: column.grow
 
-* Die Ameisenkolonie sendet viele Späher aus, die sich zunächst in zufällige Richtungen bewegen. Sobald sie Nahrung gefunden haben, kehren sie zurück und hinterlassen eine Spur von Pheromon. * Andere Ameisen neigen dazu, einer Spur zu folgen, wenn sie eine finden, die sie zum Essen führt. Auf ihrer Rückreise lagern sie mehr Pheromon ab und verstärken so den Weg. * Mit der Zeit verdunstet das Pheromon. Je länger ein Weg ist, desto länger brauchen Ameisen, um sich auf ihm fortzubewegen, und so hat das Pheromon mehr Zeit, um zu verdampfen. Kurze Wege hingegen können schneller verstärkt werden, sodass ihre Stärke schneller zunimmt. 
+* Die Ameisenkolonie sendet viele Späher aus, die sich zunächst in zufällige
+  Richtungen bewegen. Sobald sie Nahrung gefunden haben, kehren sie zurück und hinterlassen eine Spur von Pheromon.
+* Andere Ameisen neigen dazu, wenn sie eine Spur finden, einer zu folgen die
+  sie zum Essen führt. Auf ihrer Rückreise geben sie mehr Pheromon ab und verstärken so den Weg.
+* Mit der Zeit verdunstet das Pheromon. Je länger ein Weg ist, desto länger
+  brauchen Ameisen, um sich auf ihm fortzubewegen, und so hat das Pheromon mehr Zeit, um zu verdampfen. Kurze Wege hingegen können schneller verstärkt werden, sodass ihre Stärke schneller zunimmt.
 
 ::: column(width=240)
 
-{.todo} Diagramm kommt bald ... 
+{.todo} Diagramm kommt bald…
 
 :::
 
@@ -924,9 +986,14 @@ Ameisen wollen möglichst kurze Wege zwischen ihrem Nest und möglichen Nahrungs
 
 ::: column.grow
 
-Ant Colony System (ACS) -Algorithmen versuchen, dieses Verhalten auf Computern mithilfe vieler „virtueller“ Ameisen zu replizieren. Sie können schnell sehr gute Lösungen für das Problem der reisenden Verkäufer finden. 
+Ameisenalgorithmen (Ant Colony System - ACS) versuchen, dieses Verhalten auf Computern
+nachzubilden, indem sie viele "virtuelle" Ameisen zum Einsatz bringen. Sie können schnell
+sehr gute Lösungen für das Problem des Handlungsreisenden finden.
 
-Eine besonders nützliche Eigenschaft von ACS-Algorithmen besteht darin, dass sie kontinuierlich ausgeführt werden und sich in Echtzeit an Änderungen am Diagramm anpassen können. Diese Änderungen können durch Autounfälle und Straßensperrungen in Straßennetzen oder durch Verkehrsspitzen zu Webservern in Computernetzwerken verursacht werden. 
+Eine besonders nützliche Eigenschaft der ACS-Algorithmen ist, dass sie ständig ausgeführt
+werden und sich in Echtzeit an Änderungen des Graphen anpassen können. Diese Änderungen
+können in Straßennetzen durch Autounfälle und Straßensperrungen oder auf Webservern
+durch Überlastungen in Computernetzwerken verursacht werden.
 
 :::
 
@@ -939,11 +1006,19 @@ Eine besonders nützliche Eigenschaft von ACS-Algorithmen besteht darin, dass si
 
 ::: column.grow
 
-Das Problem des Handlungsreisenden ist [NP-schwer](gloss:np) , was bedeutet, dass es sehr schwierig ist, von Computern gelöst zu werden (zumindest für eine große Anzahl von Städten). 
+Das Problem des Handlungsreisenden ist [NP-hard](gloss:np), was bedeutet, dass es sehr
+schwer von Computern zu lösen ist (zumindest für eine große Anzahl von Städten).
 
-Das Finden eines schnellen und genauen Algorithmus hätte schwerwiegende Auswirkungen auf das Gebiet der Informatik: Es würde bedeuten, dass es schnelle Algorithmen für _alle_ NP-harten Probleme gibt. Dies würde auch den größten Teil der Internetsicherheit unbrauchbar machen, was auf der Tatsache beruht, dass bestimmte Probleme für Computer als sehr schwierig angesehen werden. 
+Die Entwicklung eines schnellen und genauen Algorithmus hätte schwerwiegende Auswirkungen
+auf den Bereich der Informatik: es würde bedeuten, dass es schnelle Algorithmen für
+_alle_ NP-hard-Probleme gibt. Es würde auch den größten Teil der Sicherheitsmaßnahmen
+im Internet aushebeln, die sich darauf verlassen, dass bestimmte Probleme sehr schwer
+für  Computer zu lösen sind.
 
-Die Suche nach einem schnellen Algorithmus zur Lösung des Problems des Handlungsreisenden würde auch eines der bekanntesten offenen Probleme in Mathematik und Informatik lösen, das __P-gegen-NP-__ Problem. Es ist eines der sieben [Millennium-Preisprobleme](gloss:millennium-prize) , die jeweils mit einem Preisgeld von 1 Mio. USD verbunden sind. 
+Einen schnellen Algorithmus zu finden, um das Problem des Handlungsreisenden zu lösen,
+würde auch eines der berühmtesten offenen Probleme in Mathematik und Informatik lösen,
+das __P versus NP__ Problem. Es ist eines der sieben [Millenniumprobleme](gloss:millennium-prize),
+die jeweils mit einem Preis von \$1 Mio. dotiert sind.
 
 :::
 
@@ -951,7 +1026,7 @@ Die Suche nach einem schnellen Algorithmus zur Lösung des Problems des Handlung
 > section: scheduling
 > sectionStatus: dev
 
-## Planungsprobleme 
+## Terminplanungs-Probleme
 
 {.todo} Kommt bald 
 
@@ -960,15 +1035,23 @@ Die Suche nach einem schnellen Algorithmus zur Lösung des Problems des Handlung
 > section: applications
 > translated: auto
 
-## Anwendungen von Graphen 
+## Graphen im Alltag
 
-Wir haben in den vorhergehenden Kapiteln viele verschiedene Anwendungen der Graphentheorie gesehen, obwohl einige davon etwas erfunden wurden. Es stellt sich jedoch heraus, dass Graphen die Grundlage vieler Objekte, Konzepte und Prozesse im Alltag bilden. 
+In den vorhergehenden Kapiteln haben wir viele verschiedene Anwendungen der Graphentheorie
+kennen gelernt, auch wenn einige von ihnen ein wenig konstruiert waren. Es stellt sich
+jedoch heraus, dass Graphen die Grundlage vieler Gegenstände, Konzepte und Prozesse des
+täglichen Lebens bilden.
 
 ::: column.grow
 
-Das Internet zum Beispiel ist ein riesiger virtueller Graph. Jeder Scheitelpunkt ist eine einzelne Webseite, und jede Kante bedeutet, dass zwischen zwei Seiten ein Hyperlink besteht. Beachten Sie, dass Links gehen nur in eine Richtung, so dass dieser Graph [[gerichtet]] ist [[| mehrzeilig | verbunden]] , und dass dieser Graph _sehr, sehr, groß ist_ . 
+Das Internet, zum Beispiel, ist ein riesiger, virtueller Graph. Jeder Knoten ist eine
+einzelne Webseite, und jede Kante bedeutet, dass es einen Hyperlink zwischen zwei
+Seiten gibt. Beachte, dass Links nur in eine Richtung gehen, also ist dieser Graph
+[[gerichtet|mehrzeilig|verbunden]], und außerdem ist er _sehr, sehr, groß_.
 
- Einige Websites, wie Wikipedia oder Facebook, haben viele eingehende Links, während viele kleinere Websites möglicherweise nur sehr wenige eingehende Links haben. Dies ist das zugrunde liegende Konzept, mit dem Google Suchergebnisse sortiert. 
+ Einige Websites, wie Wikipedia oder Facebook, haben viele eingehende Links, während
+ viele kleinere Websites möglicherweise nur sehr wenige eingehende Links haben. Das ist
+ übrigens das Konzept, nach dem Google seine Suchergebnisse sortiert.
 
 ::: column(width=240)
 
@@ -979,12 +1062,17 @@ Das Internet zum Beispiel ist ein riesiger virtueller Graph. Jeder Scheitelpunkt
 ---
 > id: applications-1
 
-Websites mit mehr eingehenden Links sind in der Regel von höherer Qualität und sollten oben in den Suchergebnissen angezeigt werden. Wenn Sie beispielsweise nach „London“ suchen, werden offizielle Touristeninformationsseiten vor kleinen Geschäften in London oder vor Blogs von Menschen angezeigt, die in London leben. Diese einfache Idee aus der Graphentheorie, der __Page Rank-Algorithmus__ , machte Google deutlich besser als andere frühe Suchmaschinen. 
+Websites mit mehr eingehenden Links sind in der Regel von höherer Qualität und sollten in
+den Suchergebnissen ganz oben angezeigt werden. Wenn man zum Beispiel nach "London" sucht,
+werden offizielle Touristeninformationen vor kleinen Geschäften in London oder Blogs von
+Leuten, die in London leben, angezeigt. Diese einfache Idee aus der Graphentheorie,
+der __PageRank-Algorithmus__, führte dazu, dass Google viel besser war als andere frühe Suchmaschinen.
 
 ---
 > id: applications-2
 
-Das Internet ist das größte Netzwerk, das jemals von der Menschheit geschaffen wurde. Dieses Bild zeigt einen sehr kleinen Teil aller mit dem Internet verbundenen Server: 
+Das Internet ist das größte Netzwerk, das je von Menschenhand geschaffen wurde. Dieses
+Bild zeigt einen sehr kleinen Teil aller an das Internet angeschlossenen Server:
 
     x-parallax.full-width(background="images/internet.jpg")
       .credit © LyonLabs, LLC and Barrett Lyon, 2014
@@ -992,11 +1080,17 @@ Das Internet ist das größte Netzwerk, das jemals von der Menschheit geschaffen
 ---
 > id: applications-3
 
-Während Websites und Hyperlinks ein _virtuelles_ Diagramm bilden, gibt es auch das _physische_ Netzwerk von Computern, Servern, Routern, Telefonleitungen und Kabeln. 
+Während Webseiten und Hyperlinks einen _virtuellen_ Graphen bilden, gibt es auch ein
+_wirkliches_ Netzwerk von Computern, Servern, Routern, Telefonleitungen und Kabeln.
 
 ::: column.grow(parent="right")
 
-Jedes Mal, wenn Sie einen Anruf tätigen oder eine Website laden, müssen Netzbetreiber einen Weg finden, Sender und Empfänger zu verbinden, ohne die Kapazität eines einzelnen Kabels oder einer einzelnen Verbindung zu überschreiten. Die Graphentheorie und die Wahrscheinlichkeit ermöglichen es, einen zuverlässigen Dienst zu gewährleisten, indem beispielsweise Umleitungen gefunden werden, wenn eine bestimmte Verbindung besetzt ist. 
+Jedes Mal, wenn du telefonierst oder eine Webseite aufrufst, müssen die Netzbetreiber einen
+Weg finden, Sender und Empfänger zu verbinden, ohne die Kapazität jedes einzelnen Kabels
+oder jeder einzelnen Verbindung zu überschreiten. Mit Hilfe der Graphentheorie
+und der
+Wahrscheinlichkeitsrechnung kann ein zuverlässiger Betrieb garantiert werden,
+indem beispielsweise Umleitungen gefunden werden, wenn eine bestimmte Verbindung besetzt ist.
 
 ::: column(width=220)
 
@@ -1007,7 +1101,9 @@ Jedes Mal, wenn Sie einen Anruf tätigen oder eine Website laden, müssen Netzbe
 ---
 > id: applications-4
 
-Grafiken spielen auch beim Transport und bei der Navigation eine wichtige Rolle. Alle Flug-, Zug- und U-Bahn-Netze bilden Diagramme, die zur Erstellung effizienter Flugpläne verwendet werden können. Eine der bekanntesten Grafiken ist die Karte der Londoner U-Bahn: 
+Graphen spielen auch im Transport- und Verkehrswesen eine wichtige Rolle. Alle Flug-, Zug-
+und U-Bahn-Netze bilden Graphen, die bei der Erstellung effizienter Fahrpläne verwendet
+werden können. Einer der bekanntesten Graphen ist die Karte der Londoner U-Bahn:
 
     figure: x-img(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
 
@@ -1016,7 +1112,9 @@ Grafiken spielen auch beim Transport und bei der Navigation eine wichtige Rolle.
 
 ::: column.grow
 
-Alle Straßen und Autobahnen bilden auch ein großes Netzwerk, das von Navigationsdiensten wie Google Maps verwendet wird, um die kürzeste Route zwischen zwei bestimmten Punkten zu ermitteln. 
+Auch alle Straßen und Autobahnen bilden ein großes Netzwerk, das von Navigationsdiensten
+wie Google Maps verwendet wird, um die kürzeste Route zwischen zwei bestimmten Punkten
+zu ermitteln.
 
 ::: column(width=60)
 
@@ -1030,68 +1128,80 @@ Alle Straßen und Autobahnen bilden auch ein großes Netzwerk, das von Navigatio
 
 ::: column.grow
 
-In Zukunft werden __intelligente Verkehrssysteme__ Staus und Unfälle reduzieren, indem Autos effizienter geroutet werden, indem Standortdaten von Smartphones und selbstfahrenden Autos verwendet werden. Dies könnte jedes Jahr Millionen von Stunden auf der Straße einsparen, die Umweltverschmutzung erheblich reduzieren und es den Rettungsdiensten ermöglichen, schneller zu reisen. 
+In Zukunft werden __Intelligente Transportsysteme__ Staus und Unfälle reduzieren,
+da Autos mit Hilfe von Standortdaten, die von Smartphones und selbstfahrenden Autos
+gesammelt werden, effizienter geleitet werden können. Dadurch könnten jedes Jahr Millionen
+von Stunden, die auf der Straße verloren gehen, eingespart, die Umweltverschmutzung
+erheblich reduziert und Notfalldienste rascher werden.
 
 :::
 
 ---
 > id: applications-6
 
-Dieses Bild zeigt das Netzwerk kommerzieller Fluglinienflüge durch Nordeuropa. 
+Dieses Bild zeigt das Netzwerk kommerzieller Fluglinienflüge durch Nordeuropa.
 
     x-parallax.full-width(background="images/flights.jpg")
 
 ---
 > id: applications-7
 
-Es gibt unzählige andere Grafiken in Wissenschaft, Technik oder im Alltag: 
+Es gibt unzählige andere Graphen in Wissenschaft, Technik oder im Alltag:
 
 ::: column(width=200)
 
     x-img(lightbox src="images/molecules.jpg" width=200 height=200)
 
-{.caption} Die Verbindungen zwischen Atomen in __Molekülen__ und Kristallgittern bilden einen Graphen. 
+{.caption} Die Verbindungen zwischen Atomen in __Molekülen__ und Kristallgittern bilden einen Graphen.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/epidemic.jpg" width=200 height=200)
 
-{.caption} Die __Ausbreitung von Krankheiten__ und Epidemien kann mithilfe eines Netzwerks modelliert werden. 
+{.caption} Die __Ausbreitung von Krankheiten__ und Epidemien kann mithilfe eines Netzwerks modelliert werden.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/evolution.jpg" width=200 height=200)
 
-{.caption} In der Biologie bilden die __Evolutionsbäume__ , die die Abstammung von Arten zeigen, eine Grafik. 
+{.caption} In der Biologie bilden die __Evolutionsbäume__, die die Abstammung von Arten zeigen, einen Graphen.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/network6.jpg" width=200 height=200)
 
-{.caption} Die verschiedenen Komponenten von __Stromkreisen__ und Computerchips bilden ein Netzwerk. 
+{.caption} Die verschiedenen Bestandteile von __Stromkreisen__ und Computerchips bilden ein Netzwerk.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/letters.jpg" width=200 height=200)
 
-{.caption} Die grammatikalische Struktur von __Sprachen__ kann mithilfe von Diagrammen modelliert werden, um beispielsweise Übersetzungsalgorithmen zu erstellen. 
+{.caption} Die grammatikalische Struktur von __Sprachen__ kann mithilfe von Graphen modelliert werden,
+um beispielsweise Übersetzungsalgorithmen zu erstellen.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/finance.jpg" width=200 height=200)
 
-{.caption} Graphen haben auch viele Anwendungen in der __Wahrscheinlichkeits-__ , __Spieltheorie__ und __Finanzmathematik__ . 
+{.caption} Graphen haben auch viele Anwendungen in der __Wahrscheinlichkeitsrechnung__,
+__Spieltheorie__ und __Finanzmathematik__.
 
 :::
 
 ---
 > id: social
 
-### Soziale Netzwerke 
+### Soziale Netzwerke
 
-Lassen Sie uns abschließend ein besonders gutes Beispiel für Grafiken betrachten, die im Alltag existieren: Social Media. Hier repräsentieren Eckpunkte [[Menschen | Freunde | Netzwerke]] und Kanten repräsentieren Freundschaften, Likes, Abonnements oder Follower. 
+Zum Schluss wollen wir uns noch ein besonders gutes Beispiel für Graphen aus dem
+täglichen Leben ansehen: Soziale Medien. Hier repräsentieren Knoten [[Menschen|Freunde|Netzwerke]]
+und Kanten stehen für Freundschaften, Vorlieben, Abonnements oder Follower.
 
-Wenn wir Social-Media-Grafiken zeichnen, sehen wir möglicherweise bestimmte __Gruppen__ gemeinsamer Freunde, die möglicherweise dieselbe Schule besucht haben oder in derselben Stadt leben. Wir können auch die __Zentralität__ von Personen bestimmen, die davon abhängt, wie gut ein Scheitelpunkt verbunden ist, und die ein Maß für die Popularität einer Person in sozialen Medien sein kann. 
+Wenn wir Graphen zu sozialen Medien zeichnen, sehen wir unter Umständen bestimmte
+__Häufungen__ bei gemeinsamen Bekannten, die vielleicht in die gleiche Schule gehen
+oder in der gleichen Stadt leben. Wir können auch bestimmen, wie sehr jemand im __Mittelpunkt__
+steht, was davon abhängt, wie gut ein Knoten mit dem anderen verbunden ist, und somit ein
+Maß für die Popularität in Sozialen Medien sein kann.
 
     figure: x-img(lightbox src="images/social-network.png" width=720 height=500)
 
@@ -1100,9 +1210,15 @@ Wenn wir Social-Media-Grafiken zeichnen, sehen wir möglicherweise bestimmte __G
 
 ::: column.grow
 
-Im Jahr 2014 hatte Facebook 1,4 Milliarden aktive Nutzer und insgesamt mehr als 200 Milliarden Freundschaften. Die Hälfte aller Facebook-Nutzer hat mehr als 200 Freunde, und da die meisten unserer Freunde eine ähnliche Anzahl von Freunden haben, könnten wir leicht Zehntausende von _Freunden von Freunden haben_ . 
+Im Jahr 2014 hatte Facebook 1,4 Milliarden aktive Nutzer und insgesamt mehr als 200 Milliarden
+Freundschaften. Die Hälfte aller Facebook-Nutzer hat mehr als 200 Freunde, und da die
+meisten unserer Freunde eine ähnliche Anzahl von Freunden haben, könnten wir leicht
+Zehntausende von _Freunden von Freunden_ haben.
 
-Eine spannende Frage wäre nun: Wenn Sie zwei zufällige Facebook-Nutzer auswählen, wie viele „Freundschaftskanten“ müssten Sie befolgen, um von einem zum anderen zu gelangen? Beispielsweise beträgt der Abstand zwischen Freunden [[1]] , der Abstand zwischen Freunden von Freunden [[2]] usw. 
+Eine spannende Frage wäre nun: Wenn du zwei zufällige Facebook-Nutzer auswählst, wie
+viele „Freundschaftskanten“ müsstest du entlang gehen, um von einem zum anderen zu
+gelangen? Beispielsweise beträgt der Abstand zwischen Freunden [[1]], der Abstand zwischen
+Freunden von Freunden [[2]] usw.
 
 ::: column(width=200)
 
@@ -1113,13 +1229,18 @@ Eine spannende Frage wäre nun: Wenn Sie zwei zufällige Facebook-Nutzer auswäh
 ---
 > id: social-2
 
-Im Jahr 2016 führte Facebook [eine Studie durch,](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/) um festzustellen, wie die Nutzer miteinander verbunden sind. Sie fanden heraus , dass im Durchschnitt, Sie zu _jedermann_ verbunden sind _sonst_ auf Facebook durch höchstens 3,57 andere Menschen. Und dazu gehören Prominente, Politiker oder sogar Könige! 
+Im Jahr 2016 führte Facebook [eine Studie](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/)
+durch, um festzustellen, wie eng die Benutzer miteinander verbunden sind. Sie fanden heraus,
+dass du im Durchschnitt mit _jedem anderen_ auf Facebook durch höchstens 3,57 andere Personen
+verbunden bist. Und dazu gehören Berühmtheiten, Politiker oder sogar Könige!
 
-Mit anderen Worten, wenn Sie einen der Milliarden Facebook-Nutzer auf der ganzen Welt auswählen, haben diese wahrscheinlich einen Freund eines Freundes, der einen Freund eines Ihrer Freunde kennt. Wir sagen, es gibt 3,57 __Grad Trennung__ . 
+Mit anderen Worten: Wenn du einen der Milliarden Facebook-Nutzer auf der ganzen Welt auswählst,
+dann wird dieser wahrscheinlich einen Freund eines Freundes haben, der einen Freund von
+einem deiner Freunde kennt. Man sagt, der __Grad der Trennung__ beträgt 3,57.
 
     figure
       x-img(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
-      p.caption Geographic visualisation of all Facebook friendships in 2010.
+      p.caption Geografische Darstellung aller Facebook-Freundschaften im Jahr 2010.
 
 ---
 > id: social-3
@@ -1130,10 +1251,17 @@ Mit anderen Worten, wenn Sie einen der Milliarden Facebook-Nutzer auf der ganzen
 
 ::: column.grow
 
-Als der ungarische Autor [Frigyes Karinthy](bio:karinthy) 1929 erstmals die Idee von „sechs Trennungsgraden“ vorschlug, gab es weder Internet noch soziale Medien, aber die Welt begann bereits, sich stärker zu vernetzen. 
+Als der ungarische Autor [Frigyes Karinthy](bio:karinthy) 1929 erstmals die Idee zu den „sechs
+Graden der Trennung“ ("six degrees of separation") vorstellte, gab es weder Internet noch
+soziale Medien, aber die Welt begann bereits, sich stärker zu vernetzen.
 
-1967 führte [Stanley Milgram](bio:milgram) ein erstes empirisches Experiment durch, bei dem 296 in Nebraska und Kansas lebende Teilnehmer gebeten wurden, einen Brief an eine bestimmte in Boston, Massachusetts, lebende Person zu senden. Sie alle mussten einen Freund auswählen, an den sie den Brief senden wollten, der dann einen anderen Freund auswählte. Bei jedem Schritt rückte der Brief näher an Boston heran. Milgram stellte fest, dass es im Durchschnitt nur 5,2 Zwischenfreunde gab - 5,2 Grad Trennung. 
+1967 führte [Stanley Milgram](bio:milgram) ein erstes empirisches Experiment durch,
+bei dem 296 in Nebraska und Kansas lebende Teilnehmer gebeten wurden, einen Brief an eine
+bestimmte in Boston, Massachusetts, lebende Person zu senden. Sie alle mussten einen
+Freund auswählen, um den den Brief an diesen zu senden, der dann wiederum einen anderen
+Freund auswählte. Bei jedem Schritt näherte sich der Brief Boston immer mehr. Milgram
+stellte fest, dass es im Durchschnitt nur 5,2 Zwischenfreunde gab - also einen Grad der Trennung von 5,2.
 
 :::
 
-Heute ist jeder von uns Teil unzähliger unsichtbarer Grafiken, die unseren sozialen Interaktionen, Reisen, Internet und Technologie, Wissenschaft und vielem mehr zugrunde liegen.
+Heute ist jeder von uns Teil unzähliger unsichtbarer Graphen, die unseren sozialen Interaktionen, Reisen, Internet und Technik, Wissenschaft und vielem mehr zugrunde liegen.
