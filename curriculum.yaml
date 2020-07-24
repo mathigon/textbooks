@@ -409,13 +409,6 @@ matrices:
   title: Matrices
   color: 5A49C9
   level: Advanced
-  sections:
-    - title: Matrices as Transformations
-    - title: Matrix Arithmetic
-    - title: Determinants
-    - title: Matrix Inverses
-    - title: Cramer’s Rule and Gaussian Elimination
-    - title: Eigenvalues and Eigenvectors
 
 complex:
   title: Complex Numbers
