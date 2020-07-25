@@ -854,13 +854,20 @@ Tatsächlich können wir jeden beliebigen Knoten als Startpunkt wählen und dann
 ---
 > id: salesman-2
 
-In einer Grafik mit ${tsn1}{tsn1|4|2,10,1} Städten muss auch jeder Hamiltonkreis
-${tsn1} Städte enthalten. Somit gilt:
+In einem Graphen mit 8 Städten muss jeder Hamiltonkreis auch 8 Städte enthalten. Somit gilt:
 
-    ul.var(:html="tsmString(tsn1)")
+//    ul.var(:html="tsmString(tsn1)")
 
-Dies bedeutet, dass es insgesamt ${tsnPaths(tsn1)} mögliche Pfade gibt. Eine Kurzschreibweise
-für dieses Produkt ist ${tsn1}! oder __Faktor__ ${tsn1}.
+- Es gibt 8 Auswahlmöglichkeiten für die 1. Stadt.
+- Nachdem die erste Stadt ausgewählt wurde, gibt es nur noch 7 Auswahlmöglichkeiten für die 2. Stadt.
+- Danach gibt es 6 Auswahlmöglichkeiten für die 3. Stadt.
+- Weiter geht's mit 5 Auswahlmöglichkeiten für die 4. Stadt.
+- Dann gibt es noch 4 Auswahlmöglichkeiten für die 5. Stadt.
+- …
+- Schließlich bleibt für die 8. Stadt nur noch 1 Wahl übrig.
+
+Dies bedeutet, dass es insgesamt 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 = 40,320 mögliche Pfade gibt.
+Eine Kurzschreibweise für dieses Produkt ist 8! oder __Faktor__ 8.
 
 Du kannst dir vorstellen, dass es unter Umständen nicht möglich ist, direkt zwischen zwei
 Städten zu reisen, ohne dabei über eine andere Stadt zu fahren. In diesem Fall haben wir
@@ -914,8 +921,8 @@ und du kannst Städte hinzufügen (bis zu 8), indem du irgendwo auf die Karte kl
 
 Der __Greedy-Algorithmus__ (oder Nearest-Neighbor-Algorithmus, "Nächster-Nachbar"
 bzw. "gieriger" Algorithmus) ist sehr einfach: Du beginnst in einer zufälligen Stadt
-und bewegst dich nacheinander in die nächste Stadt, die du noch nicht besucht hast.
-Wenn du alle Städte besucht hast, hältst du an.
+und bewegst dich nacheinander in die jeweils nächstgelegene Stadt, die du noch nicht
+besucht hast. Wenn du alle Städte besucht hast, hältst du an.
 
 ::: column(width=300)
 
