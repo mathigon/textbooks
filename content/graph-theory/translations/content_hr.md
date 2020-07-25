@@ -534,8 +534,10 @@ __{.red} 90__ Rubovi
 
 ---
 > id: maps
-> section: map-colouring ## Bojanje karte
+> section: map-colouring
 > translated: auto
+
+## Bojanje karte
 
 ::: column.grow
 

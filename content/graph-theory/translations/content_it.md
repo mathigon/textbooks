@@ -531,7 +531,9 @@ __{.red} 90__ Bordi
 
 ---
 > id: maps
-> section: map-colouring ## Colorazione delle mappe
+> section: map-colouring
+
+## Colorazione delle mappe
 
 ::: column.grow
 

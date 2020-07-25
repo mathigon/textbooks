@@ -11,7 +11,7 @@ const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
 
 const {nodeResolve} = require('@rollup/plugin-node-resolve');
-const typescript = require('@rollup/plugin-typescript');
+const typescript = require('rollup-plugin-typescript2');
 const autoprefixer = require('autoprefixer');
 const gulpTextbooks = require('@mathigon/parser').gulp;
 const rtl = require('postcss-rtl');
