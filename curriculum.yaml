@@ -33,12 +33,10 @@ fractions:
   color: 11A465
   level: Foundations
   sections:
-    # TODO Update Sections
     - title: Introduction
-    - title: Simplifying and Expanding Fractions
-    - title: Adding and Subtracting Fractions
-    - title: Multiplying and Dividing Fractions
+    - title: Fraction Arithmetic
     - title: Mixed Numbers
+    - title: Dividing Fractions
 
 decimals:
   title: Decimals
