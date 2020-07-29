@@ -8,6 +8,7 @@ import {last} from '@mathigon/core';
 import {register, CustomElementView, slide} from '@mathigon/boost';
 import {clamp, Point} from '@mathigon/fermat';
 import {create3D} from '../../shared/components/webgl';
+import { primeTest } from '../../divisibility/functions';
 
 
 function getGeometry(name: string) {
@@ -45,6 +46,7 @@ export class PolyhedronSlice extends CustomElementView {
     // Listen to the 'shape' attribute and update the graphics.
     this.on('attr:shape', e => {
       polyhedron.geometry = getGeometry(e.newVal);
+      updateIntersection();
       scene.draw();
     });
 
@@ -70,7 +72,7 @@ export class PolyhedronSlice extends CustomElementView {
     const centre = new THREE.Vector3();
 
     function updateIntersection() {
-      /* const vertices: THREE.Vector3[] = [];
+      const segments: THREE.Vector3[][] = [];
       const planeGeo = (plane.geometry as THREE.Geometry);
       const polyGeo = (polyhedron.geometry as THREE.Geometry);
 
@@ -79,24 +81,70 @@ export class PolyhedronSlice extends CustomElementView {
           planeGeo.vertices[planeGeo.faces[0].c]);
       plane.localToWorld(mathPlane as any);
 
+      const tolerance = 0.00001;
       for (const face of polyGeo.faces) {
         const a = polyhedron.localToWorld(polyGeo.vertices[face.a].clone());
         const b = polyhedron.localToWorld(polyGeo.vertices[face.b].clone());
         const c = polyhedron.localToWorld(polyGeo.vertices[face.c].clone());
 
+        const thisvertices: THREE.Vector3[] = [];
         for (const l of [[a, b], [b, c], [c, a]]) {
           const line = new THREE.Line3(l[0], l[1]);
           const intersection = mathPlane.intersectLine(line, centre);
-          if (intersection) vertices.push(intersection.clone());
+          if (intersection)
+          {
+            let pt:THREE.Vector3 = intersection.clone();
+            const closest = Math.min(...thisvertices.map(p => pt.distanceTo(p)));
+            if (closest > tolerance)
+              thisvertices.push(pt);
+          }
+        }
+        if (thisvertices.length == 2)
+        {
+          segments.push(thisvertices);
         }
       }
 
-      const curve = new THREE.CurvePath<THREE.Vector3>();
-      for (let i = 0; i < vertices.length - 2; ++i) {
-        curve.add(new THREE.LineCurve3(vertices[i], vertices[i + 1]));
+      // find the line segment that connects to the current point
+      function findNextSegment(current:THREE.Vector3, segments:THREE.Vector3[][])
+      {
+        for (let i = 0; i < segments.length; ++i)
+        {
+          const s:THREE.Vector3[] = segments[i];
+          if (s[0].distanceTo(current) < tolerance)
+            return {index:i, seg:s};
+          else if (s[1].distanceTo(current) < tolerance)
+            return {index:i, seg:s.reverse()};
+        }
+        return undefined;
       }
-      curve.add(new THREE.LineCurve3(last(vertices), vertices[0]));
-      tube.geometry = new THREE.TubeGeometry(curve, 200, 0.02, 8, true); */
+
+      const alllinked: THREE.Vector3[] = [];
+      let current = segments.shift();
+      let sanity = 0;
+      if (current)
+      {
+        alllinked.push(...current);
+        while (segments.length)
+        {
+          if (++sanity > 30)
+            break;
+          const next = findNextSegment(current[1], segments);
+          if (!next)
+            break;
+          alllinked.push(next.seg[1]);  // the first point is already there
+          // alllinked.push(...next.seg);
+          segments.splice(next.index, 1);
+          current = next.seg;
+        };
+
+        const curve = new THREE.CurvePath<THREE.Vector3>();
+        for (let i = 0; i < alllinked.length - 2; ++i) {
+          curve.add(new THREE.LineCurve3(alllinked[i], alllinked[i + 1]));
+        }
+        curve.add(new THREE.LineCurve3(last(alllinked), alllinked[0]));
+        tube.geometry = new THREE.TubeGeometry(curve, 200, 0.02, 8, true);
+      }
     }
 
     // -------------------------------------------------------------------------
@@ -155,6 +203,8 @@ export class PolyhedronSlice extends CustomElementView {
       }
     });
 
+    // FIXME the orientation is wrong for the initial intersection unless we draw first
+    scene.draw();
     updateIntersection();
     scene.draw();
   }
