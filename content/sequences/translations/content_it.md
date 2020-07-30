@@ -1008,7 +1008,8 @@ Immagina di aver ricevuto un paio di coniglietti, un maschio e una femmina. Sono
 
 Il numero di conigli in un determinato mese è [[la somma dei due numeri precedenti|il doppio del numero precedente]]. _{span.reveal(when="blank-0")} In altre parole, devi sommare i _due termini precedenti_ della successione, per ottenere il successivo. La successione inizia con due 1 e la [formula ricorsiva](gloss:sequence-recursive) è_
 
-{.text-center.s-orange.reveal(when="blank-0")} _{span.n} `x_n`_ = _{span.n} `x_(n-1)`_ + _{span.n} `x_(n-2)`_
+{.text-center.s-orange.reveal(when="blank-0")} *{span.n}`x_n`* =
+*{span.n}`x_(n-1)`* + *{span.n}`x_(n-2)`*
 
 ---
 
