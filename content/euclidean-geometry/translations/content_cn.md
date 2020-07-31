@@ -1,4 +1,4 @@
-# Euclidean Geometry
+# 欧几里得几何
 
 ## 引言
 
@@ -91,14 +91,12 @@ _{span.reveal(when="blank-0")} 这意味着这个三角形是
 
 ---
 
-## Euclid’s Axioms
+## 欧几里得公理
 
 > section: axioms
 > id: points
 
-Before we can write any proofs, we need some common terminology that will make
-it easier to talk about geometric objects. These are not particularly exciting,
-but you should already know most of them:
+在我写任何证明之前，我们需要一些通用术语，以便于我们在谈论几何对象时更加容易，这些术语并没有什么特别之处，大多数你都应该知道了：
 
 ::: column(width=240)
 
@@ -110,14 +108,10 @@ but you should already know most of them:
       circle(x="point(70,120)" target="no-move" label="R")
 
 ::: column.grow
-A [__point__](gloss:point) is a specific location in space. Points describe a
-position, but have no _size_ or _shape_ themselves. They are labelled using
-capital letters.
+ [__点__](gloss:point) 是空间中一个特定的位置，点描述了位置，但它没有 _大小_ 和 _形状_ ，一般用大写字母来标注。
 
-{.r} In Mathigon, [large, solid dots](target:move) indicate interactive points
-you can move around, while [smaller, outlined dots](target:no-move) indicate
-fixed points which you can’t move.
-_{button.next-step} Continue_
+{.r} 在 Mathigon 中， [大一点的实心点](target:move)表示你可以移动的交互式点，而[小一点的空心点](target:no-move)表示你不能移动的固定点。
+_{button.next-step} 继续_
 :::
 
 ---
@@ -134,16 +128,11 @@ _{button.next-step} Continue_
 
 ::: column.grow
 
-A [__line__](gloss:line) is a set of infinitely many points that extend forever
-in both directions. Lines are always straight and, just like points, they don’t
-take up any space – they have no _width_.
+[__线__](gloss:line) 是由无穷个点的集合，向双个方向无限延伸。线总是直的，它们没有 _宽度_ ，不占任何空间，就像点一样。
 
-{.r} Lines are labeled using lower-case letters like _a_ or _b_. We can also
-refer to them using two points that lie on the line, for example
-<span class="math"><mover><mi>PQ</mi><mo value="↔">↔</mo></mover></span> or
-<span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>. The
-order of the points does not matter.
-_{button.next-step} Continue_
+{.r} 线用小写字母来标记，例如  _a_ 或 _b_。我们也可以用位于线上的两个点来表示它们，例如 <span class="math"><mover><mi>PQ</mi><mo value="↔">↔</mo></mover></span> 或
+<span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>，点的顺序并不重要。
+_{button.next-step} 继续_
 
 :::
 
@@ -161,11 +150,8 @@ _{button.next-step} Continue_
       path.blue(x="segment(c,d)")
 
 ::: column.grow
-{.r} A [__line segment__](gloss:line-segment) is the part of a line between two
-points, without extending to infinity. We can label them just like lines, but
-without arrows on the bar above: `bar(AB)` or `bar(BA)`. Like, before the order
-of the points does not matter.
-_{button.next-step} Continue_
+{.r} [__线段__](gloss:line-segment) 是线位于两点之间的一部分，并不会无限延伸，我们可以用类似线的标记方式来标记线段，只是在字母上面没有箭头：`bar(AB)` 或 `bar(BA)`，点的顺序也不重要。
+_{button.next-step} 继续_
 :::
 
 ---
@@ -182,13 +168,10 @@ _{button.next-step} Continue_
       path.yellow(x="ray(a,b)")
 
 ::: column.grow
-A [__ray__](gloss:ray) is something in between a _line_ and a _line segment_:
-it only extends to infinity on one side. You can think of it like _sunrays_:
-they start at a point (the sun) and then keep going forever.
+ [__射线__](gloss:ray) 是介于 _线_ 和 _线段_ 之间的一种形式，它只在一个方向无限延伸，你可以把它想像成 _太阳光线_ ：它们从一个点（太阳）开始，然后射向无穷远。
 
-{.r} When labelling rays, the arrow shows the direction where it extends to
-infinity, for example `vec(AB)`. This time, the order of the points _does_ matter.
-_{button.next-step} Continue_
+{.r} 在标记射线时，箭头的方向用来表示沿这个方向延伸到无穷远，例如 `vec(AB)`，此时，点的顺序就很重要了。
+_{button.next-step} 继续_
 :::
 
 ---
@@ -206,17 +189,15 @@ _{button.next-step} Continue_
       path.blue(x="circle(b,60)")
 
 ::: column.grow
-{.r} A [__circle__](gloss:circle) is the collection of points that all have the
-same [distance](target:radius) from a point in the center. This distance is
-called the [__radius__](gloss:circle-radius).
-_{button.next-step} Continue_
+{.r} [__圆__](gloss:circle)是到一个中心点[距离](target:radius)相等的所有点的集合，这个距离叫做[__半径__](gloss:circle-radius)。
+_{button.next-step} 继续_
 :::
 
 ---
 > id: congruence
 > goals: pair-a-a pair-b-b pair-c-c pair-d-d pair-e1-e2 pair-e1-e3 pair-e2-e3 pair-f-f
 
-### Congruence
+### 全等
 
 ::: column(width=240)
 
@@ -226,17 +207,12 @@ _{button.next-step} Continue_
       path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-class="white")
 
 ::: column.grow
-The two shapes on the right basically look identical. They have the same size
-and shape, and we could [turn and slide](target:move) one of them to exactly
-match up with the other. In geometry, we say that the two shapes are
-[__congruent__](gloss:congruent).
+右边的两个图形看起来基本上是一样的，有相同的大小和形状，我们可以[移动和旋转](target:move) 其中一个，使其与另外一个完全重合，在几何学中，我们就说这两个图形是[__全等__](gloss:congruent)的。
 
-The symbol for congruence is _{span(voice="this")}`≅`_, so we would say that `A ≅ B`.
+全等的符号是 _{span(voice="this")}`≅`_ ，因此我们可以说`A ≅ B`。
 :::
 
-Here are a few different geometric objects – connect all pairs that are
-congruent to each other. Remember that _more than two_ shapes might be
-congruent, and some shapes might not be congruent to _any_ others:
+这是有一些不同的几何对象 - 将彼此全等的几何图象连起来，记住，_两个以上_ 的图形也可能是全等的，也有些形状与其它的 _任何_ 图形都不全等：
 
     svg.congruence(width=760 height=320 viewBox="0 0 760 320")
       g.lines
@@ -279,21 +255,18 @@ congruent, and some shapes might not be congruent to _any_ others:
 ---
 > id: congruence-1
 
-Two line segments are congruent if they [[have the same length|intersect]]. Two
-angles are congruent if they [[have the same size|meet at a point]] (in degrees).
+如果两条线段[[有相同的长度|相交]]，就可以说它们是全等的。如果两个角度[[有相同的大小|在一点相遇]]（以度为单位），就可以说它们是全等的。
 
-Note the that _“congruent”_ does not mean _“equal”_. For example, congruent
-lines and angles don’t have to point in the same direction. Still, _congruence_
-has many of the same properties of _equality_:
+注意，_“全等”_ 并不意味 _“相等”_。举个例子，全等线和角不一定要指向同一个方向，当然，_全等_ 仍然具有 _相等_ 的很多属性：
 
-* Congruence is __symmetric__: if `X ≅ Y` then also `Y ≅ X`.
-* Congruence is __reflexive__: any shape is congruent to itself. For example, `A ≅ A`.
-* Congruence is __transitive__: if `X ≅ Y` and `Y ≅ Z` then also `X ≅ Z`.
+* 全等满足 __对称性__：如果 `X ≅ Y`，那么 `Y ≅ X`。
+* 全等满足 __反射性__：任何形状与它自身是全等的，例如 `A ≅ A`。
+* 全等满足 __传递性__: 如果 `X ≅ Y` 并且 `Y ≅ Z` ，那么 `X ≅ Z`。
 
 ---
 > id: parallel
 
-### Parallel and Perpendicular
+### 平行与垂直
 
 ::: column(width=240)
 
@@ -306,17 +279,11 @@ has many of the same properties of _equality_:
 
 ::: column.grow
 
-Two straight lines that never intersect are called [__parallel__](gloss:parallel).
-They point into the same direction, and the distance between them is always
-[[the same|increasing|decreasing]].
+两条永不相交的直线就称它们是[__平行的__](gloss:parallel)，它们指向同一个方向，它们之间的距离总是[[相等的|增加的|减少的]]。
 
-{.reveal(when="blank-0")} A good example of parallel lines in real life are
-_railroad tracks_. But note that more than two lines can be parallel to each
-other!
+{.reveal(when="blank-0")} 现实生活中一个很好的平行线例子就是 _铁轨_。需要注意的是，两条以上的线也可以是互相平行的！
 
-{.reveal(when="blank-0")} In diagrams, we denote parallel lines by adding one or
-more small arrows. In this example, __{.m-red}`a ∥ b ∥ c`__ and
-__{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
+{.reveal(when="blank-0")} 在图示中，我们通过增加一个或多个小箭头来标识平行线。在左边的例子中，有 __{.m-red}`a ∥ b ∥ c`__ 和 __{.m-yellow}`d ∥ e`__，符号 `∥` 表示 _“平行于”_ 。
 
 :::
 
@@ -332,36 +299,30 @@ __{.m-yellow}`d ∥ e`__. The `∥` symbol simply means _“is parallel to”_.
 
 ::: column.grow
 
-The opposite of _parallel_ is two lines meeting at a 90° angle (right angle).
-These lines are called [__perpendicular__](gloss:perpendicular).
+与 _平行_ 相对的是两条线以90°角（直角）相交，那么这两条线就是[__垂直__](gloss:perpendicular)的。
 
-{.r} In this example, we would write  _{.b.m-blue}a_ `⊥` _{.b.m-green}b_. The
-`⊥` symbol simply means _“is perpendicular to”_.
+{.r} 在左边这个例子中，我们写为_{.b.m-blue}a_ `⊥` _{.b.m-green}b_ ，符号 `⊥` 表示 _“垂直于”_ 。
 
 :::
 
 ---
 > id: euclid
 
-### Euclid’s Axioms
+### 欧几里得公理
 
 ::: column.grow
 
-Greek mathematicians realised that to write formal proofs, you need some sort of
-_starting point_: simple, intuitive statements, that everyone agrees are true.
-These are called [__axioms__](gloss:axiom) (or _postulates_).
+希腊数学家们意识到，要想写出形式上的证明，你需要一系列 _起始点_ ：每个人都同意是正确的那些简单的、直观的声明。这些声明就叫做 [__公理__](gloss:axiom) (或 _公设_)。
 
-A key part of mathematics is combining different axioms to prove more complex
-results, using the rules of logic.
+数学中一个关键的部分就是利用逻辑规则，组合运用不同的公理去证明更复杂的结论。
 
-The Greek mathematician [Euclid of Alexandria](bio:euclid), who is often called
-the _father of geometry_, published the five axioms of geometry:
+希腊数学家 [欧几里得](bio:euclid) 被称为 _几何学之父_ ， 他提出了几何学中的五条公理：
 
 ::: column(width=220)
 
     img(src="images/euclid.jpg" width=220 height=269)
 
-{.caption} Euclid of Alexandria
+{.caption} 欧几里得
 
 :::
 
@@ -372,9 +333,8 @@ the _father of geometry_, published the five axioms of geometry:
       circle.move(name="b" cx=190 cy=30 target="1_point")
       path.red(x="segment(a,b)" target="1_line")
 
-{.text-center }__First Axiom__  
-You can join any [{.pill} two points](target:1_point) using exactly one straight [{.pill.red} line
-segment](target:1_line).
+{.text-center }__第一公理__  
+可以用一条直[{.pill.red} 线段](target:1_line)连接任意[{.pill} 两个点](target:1_point)
 
 ::: column(width=220)
 
@@ -385,9 +345,8 @@ segment](target:1_line).
       path(x="segment(c,d)" target="2_segment")
       path.blue.transparent(x="segment(c,d)" target="2_line")
 
-{.text-center }__Second Axiom__  
-You can extend any [{.pill} line segment](target:2_segment) to an [{.pill.blue} infinitely long
-line](target:2_line).
+{.text-center }__第二公理__  
+可以把任意一条[{.pill} 线段](target:2_segment)扩展成一条[{.pill.blue} 无限长的线](target:2_line)
 
 ::: column(width=220)
 
@@ -397,9 +356,8 @@ line](target:2_line).
       path(x="segment(e,f)" label="r" target="3_radius")
       path.green(x="circle(e,distance(e,f))" target="3_circle")
 
-{.text-center }__Third Axiom__  
-Given a [{.pill} point _P_](target:3_center) and a [{.pill} distance _r_](target:3_radius), you can
-draw a [{.pill.green} circle](target:3_circle) with centre _P_ and radius _r_.
+{.text-center }__第三公理__  
+线定一个[{.pill} 点 _P_](target:3_center)和一个[{.pill} 距离 _r_](target:3_radius)，可以 _P_ 为圆心，_r_ 为半径画一个[{.pill.green} 圆](target:3_circle) 
 
 ::: column(width=220)
 
@@ -418,8 +376,8 @@ draw a [{.pill.green} circle](target:3_circle) with centre _P_ and radius _r_.
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
-{.text-center }__Fourth Axiom__  
-Any two [{.pill.orange} right angles](target:4_angle) are congruent.
+{.text-center }__第四公理__  
+任意两个[{.pill.orange} 直角](target:4_angle)是全等的
 
 ::: column(width=220)
 
@@ -428,26 +386,19 @@ Any two [{.pill.orange} right angles](target:4_angle) are congruent.
       path(name="line5" x="line(point(50,80),point(130,140))" target="5_line" label="L")
       path.yellow(x="line5.parallel(g)" target="5_parallel")
 
-{.text-center }__Fifth Axiom__  
-Given a [{.pill} line _L_](target:5_line) and a [{.pill} point _P_](target:5_point) not on _L_,
-there is exactly [{.pill.yellow} one line](target:5_parallel) through _P_ that is
-[parallel](gloss:parallel) to _L_.
+{.text-center }__第五公理__  
+给定一条[{.pill} 直线 _L_](target:5_line)和一个直线 _L_ 外的 [{.pill} 点 _P_](target:5_point)，刚好有[{.pill.yellow} 一条线](target:5_parallel)通过 _P_ ，并且这条线 [平行于](gloss:parallel) _L_。
 :::
 
-{.r} _{button.next-step} Continue_
+{.r} _{button.next-step} 继续_
 
 ---
 > id: jefferson
 
 ::: column.grow
-Each of these axioms looks pretty obvious and self-evident, but together they
-form the foundation of geometry, and can be used to deduce almost everything
-else. According to none less than [Isaac Newton](bio:newton), _“it’s the glory
-of geometry that from so few principles it can accomplish so much”_.
+这里的每一条公理看起来都很明显，不言而喻，但它们共同构成了几何学的基础，可用于推导出几乎所有几何学其它的内容。 [艾萨克.牛顿](bio:newton)有说过：_几何学的荣耀在于，它能从如何少的原则中，获得如此多的成就_。
 
-Euclid published the five axioms in a book _“Elements”_. It is the first example
-in history of a systematic approach to mathematics, and was used as mathematics
-textbook for thousands of years.
+欧几里得在它的著作 _《几何原本》_ 中提出来这五个公理。这是历史上第一个系统的数学方法例子，后来在数千年中被用做数学教科书。
 
 ::: column(width=220)
 
@@ -455,22 +406,16 @@ textbook for thousands of years.
 
 :::
 
-One of the people who studied Euclid’s work was the American President [Thomas
-Jefferson](bio:jefferson). When writing the Declaration of Independence in 1776,
-he wanted to follow a similar approach. He begins by stating a few, simple
-“axioms” and then “proves” more complex results:
+美国总统[托马斯.杰斐逊](bio:jefferson)是研究欧几里得著作的人之一，当它在 1776 年写独立宣言时，他就想要遵循类似的方法，首先声明一些简单的 “公理”，然后现去 “证明” 更多复杂的结论：
 
-{div.parchment.voice} “We hold these truths to be self-evident: that all men are created equal,
-that they are endowed by their Creator with certain unalienable Rights, that among these are Life,
-Liberty and the pursuit of Happiness.”
+{div.parchment.voice} “我们认为以下事实不言而喻：人人生而平等，造物主赋予他们若干不可让与的权利，其中包括生存权、自由权和追求幸福的权利。”
 
 {.text-center.follows.no-voice} `=>`
 
-{div.parchment.voice} We, therefore … declare, that these United Colonies are, and of right ought
-to be, free and independent states.”
+{div.parchment.voice} 因此，我们... 宣布，这些联合的殖民地是，并且理应是自由和独立的国家。
 
-This is just one example where Euclid’s ideas in mathematics have inspired
-completely different subjects.
+这只是欧几里得的数学思想对其它不同领域启发的一个例子。
+
 
 ---
 
