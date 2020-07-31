@@ -269,7 +269,7 @@ size of the [internal angles](target:int-angle) of the polygon:
 (360°)/var("n")) = var("round(90-180/n,2)")`
 
 {.reveal(when="blank-3")} To find the apothem, we can use the definition of
-[[tangents|sine|cosine]]:
+[[tangent|sine|cosine]]:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
 target("opposite", "apothem") / target("adjacent", "half-base") =
@@ -1309,7 +1309,7 @@ knows if there are any others, or if these 15 are the only ones…
 
 ### Tessellations in Art
 
-Tessellations we both a tool and inspiration for many artists, architects and 
+Tessellations were both a tool and inspiration for many artists, architects and 
 designer – most famously the Dutch artist [M. C. Escher](bio:escher). Escher’s
 work contains strange, mutating creatures, patterns and landscapes:
 
@@ -1432,9 +1432,11 @@ you’ll learn how to actually prove it mathematically.
 > section: nets-cross-sections
 > sectionStatus: dev
 
-Our entire world is three-dimensional – but it is often much easier to draw or
-visualise flat, two-dimensional objects. And there are a few different ways to
-view three-dimensional polyhedra in a two-dimensional way.
+TODO
+
+    //Our entire world is three-dimensional – but it is often much easier to draw or
+    //visualise flat, two-dimensional objects. And there are a few different ways to
+    //view three-dimensional polyhedra in a two-dimensional way.
 
     //- x-folding(shape="Tetrahedron" size=400)
     //- x-folding(shape="Cube" size=400)
@@ -1442,19 +1444,28 @@ view three-dimensional polyhedra in a two-dimensional way.
     //- x-folding(shape="Dodecahedron" size=400)
     //- x-folding(shape="Icosahedron" size=400)
 
-Which of these nets makes a cube
-Match the net to the object
-https://github.com/polymake/matchthenet
-Drawing Nets
+    //Which of these nets makes a cube
+    //Match the net to the object
+    //https://github.com/polymake/matchthenet
+    //Drawing Nets
 
-Describe the cross section formed by the intersection of the plane and the solid.
+    //Describe the cross section formed by the intersection of the plane and the solid.
 
-A cross-section is the intersection of a plane with a solid.
-Another way to represent a three-dimensional figure in a two dimensional plane
-is to use a net. A net is an unfolded, flat representation of the sides of a
-three-dimensional shape.
+    //A cross-section is the intersection of a plane with a solid.
+    //Another way to represent a three-dimensional figure in a two dimensional plane
+    //is to use a net. A net is an unfolded, flat representation of the sides of a
+    //three-dimensional shape.
 
-rotate a cube to make a hexagonal cross-section
+    //rotate a cube to make a hexagonal cross-section
+
+---
+
+## Prisms and Pyramids
+
+> section: prisms-pyramids
+> sectionStatus: dev
+
+TODO
 
 ---
 
