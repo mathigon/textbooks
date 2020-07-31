@@ -1458,15 +1458,6 @@ rotate a cube to make a hexagonal cross-section
 
 ---
 
-## Prisms and Pyramids
-
-> section: prisms-pyramids
-> sectionStatus: dev
-
-TODO
-
----
-
 ## Scaling Shapes and Solids
 
 > section: scaling
