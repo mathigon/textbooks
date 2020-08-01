@@ -1,12 +1,11 @@
-# المضلعات والمضلعات 
+# مضلعات ومتعددة الوجوه 
 
 ## المضلعات 
 
 > section: polygons
 > id: polygons
-> translated: auto
 
-[__المضلع__](gloss:polygon) هو شكل مغلق ومسطح له جوانب مستقيمة فقط. يمكن أن يكون للمضلعات أي عدد من الأضلاع والزوايا ، ولكن لا يمكن تقويس الجوانب. أي من الأشكال أدناه هي مضلعات؟ 
+ [__المضلع__](gloss:polygon) هو شكل مغلق ومسطح له جوانب مستقيمة فقط. يمكن أن يكون للمضلعات أي عدد من الأضلاع والزوايا ، ولكن لا يمكن تقويس الجوانب. أي من الأشكال أدناه هي مضلعات؟ 
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -21,34 +20,35 @@
 ---
 > id: polygons-1
 
-نعطي أسماء مختلفة للمضلعات ، اعتمادًا على عدد الجوانب التي لديهم: 
+ نعطي أسماء مختلفة للمضلعات ، اعتمادًا على عدد الجوانب التي لديهم: 
 
     .row.padded-thin
       div(style="width: 100px")
         include svg/polygons/number-3.svg
-        p.caption #[strong Triangle]#[br]3 sides
+        p.caption #[strong مثلث]#[br]3 جوانب
       div(style="width: 100px")
         include svg/polygons/number-4.svg
-        p.caption #[strong Quadrilateral]#[br]4 sides
+        p.caption #[strong رباعي]#[br]4 جوانب
       div(style="width: 100px")
         include svg/polygons/number-5.svg
-        p.caption #[strong Pentagon]#[br]5 sides
+        p.caption #[strong خماسي]#[br]5 جوانب
       div(style="width: 100px")
         include svg/polygons/number-6.svg
-        p.caption #[strong Hexagon]#[br]6 sides
+        p.caption #[strong سداسي]#[br]6 جوانب
       div(style="width: 100px")
         include svg/polygons/number-7.svg
-        p.caption #[strong Heptagon]#[br]7 sides
+        p.caption #[strong سباعي]#[br]7 جوانب
       div(style="width: 100px")
         include svg/polygons/number-8.svg
-        p.caption #[strong Octagon]#[br]8 sides
+        p.caption #[strong مثمن]#[br]8 جوانب
 
 ---
 > id: angles-0
 
 ### الزوايا في المضلعات 
 
-كل مضلع مع الجانبين _N_ لديها أيضا [زوايا](gloss:internal-angle) _ن_ [الداخلية.](gloss:internal-angle) نحن نعلم بالفعل أن مجموع الزوايا الداخلية في المثلث دائمًا [[180]] درجة ولكن ماذا عن المضلعات الأخرى؟ 
+
+ كل مضلع له جوانب  _n_ له أيضًا _n_ [ زوايا الداخلية ](gloss:internal-angle) . نحن نعلم بالفعل أن مجموع الزوايا الداخلية في المثلث دائمًا [[180]] ° ولكن ماذا عن المضلعات الأخرى؟ 
 
 ---
 > id: angles
@@ -93,7 +93,7 @@
 ---
 > id: angles-1
 
-يبدو أن مجموع الزوايا الداخلية في الرباعي دائمًا [[360]] درجة - [[مرتين]] بالضبط [[| ثلاث مرات | نصف]] مجموع الزوايا في المثلث. _{span.reveal(when="blank-0 blank-1")} هذه ليست مصادفة: يمكن تقسيم كل رباعي إلى مثلثين._ 
+ يبدو أن مجموع الزوايا الداخلية في الرباعي دائمًا [[360]] ° - بالضبط [[مرتين| ثلاث مرات | نصف]] مجموع الزوايا في المثلث. _{span.reveal(when="blank-0 blank-1")} هذه ليست مصادفة: يمكن تقسيم كل رباعي إلى مثلثين._ 
 
     .row.padded-thin
       .reveal(when="blank-1" style="width: 140px"): include svg/polygons/triangles-4.svg
@@ -101,29 +101,29 @@
       .reveal(when="blank-4" style="width: 140px"): include svg/polygons/triangles-2.svg
       .reveal(when="blank-4" delay=500 style="width: 140px"): include svg/polygons/triangles-3.svg
 
-{.reveal(when="blank-0 blank-1")} نفس الشيء يعمل أيضًا مع المضلعات الأكبر حجمًا. يمكننا تقسيم الخماسي إلى [[3]] مثلثات ، لذا يكون مجموع الزاوية الداخلية `3 × 180° =` [[540]] درجة. _{span.reveal(when="blank-2 blank-3")} ويمكننا تقسيم السداسي إلى [[4]] مثلثات ، بحيث يكون مجموع الزاوية الداخلية `4 × 180° =` [[720]] درجة._ 
+{.reveal(when="blank-0 blank-1")} نفس الشيء يعمل مع المضلعات الأكبر حجمًا. يمكننا تقسيم الخماسي إلى [[3]] مثلثات ، لذا يكون مجموع الزاوية الداخلية `3 × 180° =` [[540]] °. _{span.reveal(when="blank-2 blank-3")} ويمكننا تقسيم السداسي إلى [[4]] مثلثات ، بحيث يكون مجموع الزاوية الداخلية `4 × 180° =` [[720]] °._ 
 
 ---
 > id: internal-angle-sum
 
-مضلع مع ${x}{x|7|3,15,1} سيكون للجانبين زاوية داخلية 180 درجة × ${x-2} = ${(x-2)*180}°. وبشكل أعم، مضلع مع الجانبين _ن_ يمكن تقسيمها إلى [[ن - 2 | ن - 1 | ن]] المثلثات. وبالتالي، 
+ مضلع مع ${x}{x|7|3,15,1} جوانب سيكون مجمع زاوية داخلية 180 ${x-2} = ${(x-2)*180}°.  وبشكل أعم، مضلع مع جوانب _ن_ يمكن تقسيمها إلى [[n - 2 |n - 1 | n]] مثلثات. وبالتالي، 
 
-{.text-center.reveal(when="blank-0")} مجموع الزوايا الداخلية في _n_ -gon `= (n - 2) × 180°` . 
+{.text-center.reveal(when="blank-0")} مجموع الزوايا الداخلية في _n_ -gon  = `(n - 2) × 180°` . 
 
     x-gesture(target="#internal-angle-sum x-var" slide="100,0")
 
 ---
 > id: concave
 
-### المضلعات المحدبة والمحدبة 
+### المضلعات المحدبة و المقعرة 
 
 ::: column.grow
 
-نقول أن المضلع [__مقعر__](gloss:concave) إذا كان يحتوي على قسم "يشير إلى الداخل". يمكنك أن تتخيل أن هذا الجزء ["انهار"](target:cave) . تسمى المضلعات _غير_ المقعرة [__محدبة__](gloss:convex) . 
+ نقول أن المضلع [__المقعر__](gloss:concave) إذا كان يحتوي على قسم "يشير إلى الداخل". يمكنك أن تتخيل أن هذا الجزء ["انهار"](target:cave) . تسمى المضلعات _غير_ المقعرة [__محدبة__](gloss:convex) . 
 
-هناك طريقتان يمكنك من خلالهما التعرف بسهولة على المضلعات المقعرة: تحتوي على [زاوية داخلية](target:angle) واحدة على الأقل [أكبر من 180 درجة](target:angle) . ولديهم أيضًا [قطر](target:diagonal) واحد على الأقل [يقع _خارج_ المضلع](target:diagonal) . 
+ هناك طريقتان يمكنك من خلالهما التعرف بسهولة على المضلعات المقعرة: تحتوي على [زاوية داخلية ](target:angle) واحدة على الأقل [أكبر من 180 °](target:angle) . ولديهم أيضًا [قطر](target:diagonal)  [يقع _خارج_ المضلع](target:diagonal) . 
 
-في المضلعات المحدبة ، من ناحية أخرى ، تكون جميع الزوايا الداخلية أقل من [[180]] درجة ، وتقع جميع الأقطار في [[الداخل | خارج]] المضلع. 
+ في المضلعات المحدبة ، من ناحية أخرى ، تكون جميع الزوايا الداخلية أقل من [[180]] ° ، وتقع جميع الأقطار في [[داخل | خارج]] المضلع. 
 
 ::: column(width=240)
 
@@ -147,7 +147,7 @@
 ---
 > id: concave-1
 
-أي من هذه المضلعات مقعرة؟ 
+ أي من هذه المضلعات مقعرة؟ 
 
     x-picker
       .item(data-error="not-concave-1"): include svg/polygons/concave-1.svg
@@ -160,9 +160,9 @@
 ---
 > id: regular-polygons
 
-### مضلعات منتظمة 
+### المضلعات العادية 
 
-نقول أن المضلع [__منتظم__](gloss:regular-polygon) إذا كانت جميع أضلاعه لها نفس الطول ، وجميع الزوايا لها نفس الحجم. أي من هذه الأشكال هي مضلعات منتظمة؟ 
+ نقول أن المضلع [__عادي__](gloss:regular-polygon) إذا كانت جميع أضلاعه لها نفس الطول ، وجميع الزوايا لها نفس الحجم. أي من هذه الأشكال هي مضلعات عادية 
 
     x-picker
       .item: include svg/polygons/regular-1.svg
@@ -175,21 +175,21 @@
 ---
 > id: regular-1
 
-يمكن أن تأتي المضلعات المنتظمة بأحجام مختلفة - ولكن جميع المضلعات العادية التي لها نفس العدد من الجوانب [[متشابهة | متطابقة | لديهم نفس المنطقة]] ! 
+ يمكن أن تأتي المضلعات العادية بأحجام مختلفة - ولكن جميع المضلعات العادية التي لها نفس العدد من الجوانب [[متشابهة | متطابقة | لديهم نفس المنطقة]] ! 
 
 ---
 > id: regular-2
 
-نحن نعلم بالفعل مجموع جميع [الزوايا الداخلية](gloss:internal-angle) في المضلعات. بالنسبة للمضلعات العادية ، يكون لجميع هذه الزوايا [[نفس الحجم | هي زوايا بديلة]] ، لذا يمكننا تحديد حجم زاوية داخلية واحدة: 
+ نحن نعلم بالفعل مجموع جميع [الزوايا الداخلية](gloss:internal-angle) في المضلعات. بالنسبة للمضلعات العادية ، يكون لجميع هذه الزوايا [[نفس الحجم | هي زوايا بديلة]] ، لذا يمكننا تحديد حجم زاوية داخلية واحدة: 
 
 {.text-center.reveal(when="blank-0")} زاوية <mfrac><mrow>[[مجموع كل الزوايا | عدد الزوايا]]</mrow><mrow>[[عدد الزوايا | مجموع كل الزوايا]]</mrow></mfrac> _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x` ._ 
 
-{.reveal(when="blank-1 blank-2" delay=1000)} إذا `n=3` نحصل على حجم الزوايا الداخلية لمثلث متساوي الأضلاع - نعلم بالفعل أنه يجب أن يكون [[60]] درجة. _{span.reveal(when="blank-3")} في مضلع عادي مع ${x}{x|6|3,12,1} الجانبين ، كل زاوية داخلية هي 180 درجة -_ <mfrac class="inline"><mrow>_360 درجة_</mrow><mrow>_${x}_</mrow></mfrac> _= ${round(180-360/x)}°._ 
+{.reveal(when="blank-1 blank-2" delay=1000)} إذا `n=3` نحصل على حجم الزوايا الداخلية لمثلث متساوي الأضلاع - نعلم بالفعل أنه يجب أن يكون [[60]] °. _{span.reveal(when="blank-3")} في مضلع عادي مع ${x}{x|6|3,12,1} جوانب ، كل زاوية داخلية هي 180 ° -_ <mfrac class="inline"><mrow>_360 °_</mrow><mrow>_${x}_</mrow></mfrac> _= ${round(180-360/x)}°._ 
 
 ---
 > id: regular-area
 
-### مساحة المضلعات المنتظمة 
+### مساحة المضلعات العادية 
 
 ::: column(width=320)
 
@@ -218,26 +218,27 @@
 
 ::: column.grow
 
-هنا يمكنك رؤية [مضلع عادي](gloss:regular-polygon) مع ${n}{n|5|4,12,1} الجانبين. كل جانب له طول [{.pill.green} 1 م](target:base) . دعونا نحاول حساب مساحتها! 
+ هنا يمكنك رؤية [مضلع عادي](gloss:regular-polygon) مع ${n}{n|5|4,12,1} جوهنب. كل جانب له طول [{.pill.green} 1m](target:base) . دعونا نحاول حساب مساحتها! 
 
-أولاً ، يمكننا تقسيم المضلع إلى ${toWord(n)} متطابقة ، [[متساوي الساقين | متساوي الاضلاع |]] مثلثات قائمة [[الزاوية]] . 
+ أولاً ، يمكننا تقسيم المضلع إلى ${toWord(n)} متطابقة ، [[ متساوي الساقين |متساوي الاضلاع |بزاوية قائمة
+]] مثلثات قائمة . 
 
-{.reveal(when="blank-0")} نحن نعلم بالفعل [[القاعدة | ارتفاع | مساحة]] هذه المثلثات ، لكننا بحاجة أيضًا إلى [[الارتفاع | الساقين | الوسيطات]] لتكون قادرة على حساب مساحتها. _{span.reveal(when="blank-2")} في المضلعات العادية ، يسمى هذا الارتفاع في بعض الأحيان [{.pill.yellow} تأليه](target:apothem) ._ 
+{.reveal(when="blank-0")} نحن نعلم بالفعل [[قاعدة |  الإرتفاع| المنطقة]] هذه المثلثات ، لكننا بحاجة أيضًا إلى [[الارتفاع | الساقين | الوسيطات]] لتكون قادرة على حساب مساحتها. _{span.reveal(when="blank-2")} في المضلعات العادية ، يسمى هذا الارتفاع في بعض الأحيان [{.pill.yellow} تأليه](target:apothem) ._ 
 
 {.reveal(when="blank-1 blank-2" delay=1000)} لاحظ أن هناك [مثلث قائم الزاوية](target:right-triangle) يتشكل من التأليه ونصف قاعدة مثلث متساوي الساقين. هذا يعني أنه يمكننا استخدام علم المثلثات! 
 
-{.reveal(when="blank-1 blank-2" delay=2000)} ال [{.pill.blue} زوايا قاعدة](target:base-angle) مثلث متساوي الساقين (دعنا نطلق عليها α) هي [[نصف | نفس الشيء | ضعف]] حجم [الزوايا الداخلية](target:int-angle) للمضلع: 
+{.reveal(when="blank-1 blank-2" delay=2000)} [{.pill.blue} الزوايا القاعدة](target:base-angle) المثلث متساوي الساقين (دعنا نطلق عليها α) هي [[نصف | نفس الشيء | مرتين]] حجم [الزوايا الداخلية](target:int-angle) للمضلع: 
 
 {.text-center.reveal(when="blank-3")}`pill(α, "blue", "alpha") = 1/2 (180° -
 (360°)/var("n")) = var("round(90-180/n,2)")`
 
-{.reveal(when="blank-3")} للعثور على التأليه ، يمكننا استخدام تعريف [[المماس | جيب | جيب التمام]] : 
+{.reveal(when="blank-3")} للعثور على التأليه ، يمكننا استخدام تعريف [[tangent | sine | cosine]] : 
 
 {.text-center.reveal(when="blank-4")}`tan pill(α, "blue", "alpha") = 
-target("opposite", "apothem") / target("adjacent", "half-base") =
+target("مقابل", "apothem") / target("متجاور", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
-{.text-center.reveal(when="blank-5 blank-6")}`⇒ pill("apothem", "yellow",
+{.text-center.reveal(when="blank-5 blank-6")}`⇒ pill("تأليه", "yellow",
 "apothem") = 1/2 pill(s, "green", "base") × tan pill(α, "blue", "alpha") =
 var("round(tan(pi/2-pi/n)/2,2)")"m"`
 
@@ -261,11 +262,10 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
-> translated: auto
 
-درسنا في [الدورة السابقة](/course/triangles) العديد من الخصائص المختلفة للمثلثات. الآن دعونا نلقي نظرة على رباعيات الأضلاع. 
+ درسنا في [الدورة السابقة](/course/triangles) العديد من الخصائص المختلفة للمثلثات. الآن دعونا نلقي نظرة على رباعيات الأضلاع. 
 
-يسمى _الرباعي المنتظم_ [[مربعًا | مستطيل | رباعي متساوي الأضلاع]] . جميع جوانبها لها نفس الطول ، وجميع زواياها متساوية. 
+ يسمى _الرباعي_ [[مربع | مستطيل | رباعي متساوي الأضلاع]] . جميع جوانبها لها نفس الطول ، وجميع زواياها متساوية. 
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -284,14 +284,14 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
       path.red(x="segment(c,d)" target="side" mark="bar")
       path.red(x="segment(d,a)" target="side" mark="bar")
 
-{.caption} __المربع__ هو رباعي الأضلاع [بأربعة](target:side) أضلاع [متساوية](target:side) [وأربع زوايا متساوية](target:angle) . 
+{.caption} __المربع__ هو رباعي الأضلاع [بأربعة](target:side) جوانب [متساوية](target:side) [وأربع زوايا متساوية](target:angle) . 
 
 :::
 
 ---
 > id: quadrilaterals-1
 
-بالنسبة إلى العناصر الرباعية "الأقل انتظامًا" قليلاً ، لدينا خياران. إذا أردنا فقط أن تكون _الزوايا_ متساوية ، نحصل على [__مستطيل__](gloss:rectangle) . إذا أردنا فقط أن تكون _الجوانب_ متساوية ، نحصل على [__دالتون__](gloss:rhombus) . 
+ بالنسبة إلى العناصر الرباعية "الأقل انتظامًا" قليلاً ، لدينا خياران. إذا أردنا فقط أن تكون _الزوايا_ متساوية ، نحصل على [__مستطيل__](gloss:rectangle) . إذا أردنا فقط أن تكون _الجوانب_ متساوية ، نحصل على [__معين__](gloss:rhombus) . 
 
 ::: column.quadrilateral
 
@@ -310,7 +310,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
       path.red(x="segment(c,d)")
       path.red(x="segment(d,a)")
 
-{.caption} __المستطيل__ هو رباعي [الزوايا](target:angle) مع [أربع زوايا متساوية](target:angle) . 
+{.caption} __المستطيل__ هو رباعي الأضلاع مع [أربع زوايا متساوية](target:angle) . 
 
 ::: column.quadrilateral
 
@@ -325,14 +325,14 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
       path.red(x="segment(g,h)" target="side" mark="bar")
       path.red(x="segment(h,e)" target="side" mark="bar")
 
-{.caption} __المعين__ هو رباعي الأضلاع مع [أربعة](target:side) أضلاع [متساوية](target:side) . 
+{.caption} __المعين__ هو رباعي الأضلاع مع [أربعة](target:side) جوانب [متساوية](target:side) . 
 
 :::
 
 ---
 > id: quadrilaterals-2
 
-هناك عدد قليل من الأضلاع الرباعية الأخرى ، والتي هي أقل انتظامًا ولكن لا تزال لها خصائص مهمة معينة: 
+ هناك عدد قليل من رباعيات الأضلاع الأخرى ، والتي هي أقل انتظامًا ولكن لا تزال لها خصائص مهمة معينة: 
 
 ::: column.quadrilateral
 
@@ -347,7 +347,8 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
       path.blue(x="segment(a,c)" mark="arrow2")
       path.blue(x="segment(b,d)" mark="arrow2")
 
-{.caption} إذا كان كل من أزواج من طرفي _نقيض_ [موازية،](gloss:parallel) وحصلنا على __متوازي أضلاع.__ 
+{.caption} إذا كان كل من _جوابب_ من طرفي _نقيض_ [موازى](gloss:parallel) وحصلنا على __متوازي الاضلاع
+.__ 
 
 ::: column.quadrilateral
 
@@ -362,7 +363,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
       path.blue(x="segment(g,h)" mark="bar2")
       path.red(x="segment(h,e,)" mark="bar")
 
-{.caption} إذا كان لزوجين من الأضلاع _المجاورة_ نفس الطول ، نحصل على __طائرة ورقية__ . 
+{.caption} إذا كان لزوجين من الأضلاع _جوابب_ نفس الطول ، نحصل على __طائرة ورقية__ . 
 
 ::: column.quadrilateral
 
@@ -384,11 +385,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-venn
 
-يمكن أن تقع الرباعية في العديد من هذه الفئات. يمكننا تصور التسلسل الهرمي لأنواع مختلفة من الرباعي [كمخطط فين](gloss:venn-diagram) : 
+ يمكن أن تقع الرباعية في العديد من هذه الفئات. يمكننا تصور التسلسل الهرمي لأنواع مختلفة من رباعيات الأضلاع [مخطط فين](gloss:venn-diagram) : 
 
     figure: include svg/venn.svg
 
-على سبيل المثال ، كل مستطيل هو أيضًا [[متوازي الأضلاع | دالتون | مربع]] ، وكل [[دالتون | شبه منحرف | متوازي الأضلاع]] هو أيضا طائرة ورقية. المعين في [[بعض الأحيان | دائما | أبدا]] مربع ومستطيل [[دائما | بعض الأحيان | أبدا]] شبه منحرف. 
+ على سبيل المثال ، كل مستطيل هو أيضًا [[متوازي الأضلاع | دالتون | مربع]] ، وكل [[دالتون | شبه منحرف | متوازي الأضلاع]] هو أيضا طائرة ورقية. المعين في [[بعض الأحيان | دائما | أبدا]] مربع ومستطيل [[دائما | بعض الأحيان | أبدا]] شبه منحرف. 
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} لتجنب أي غموض ، نستخدم عادةً النوع الأكثر تحديدًا. 
 
@@ -401,7 +402,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
-الآن اختر أربع نقاط ، في أي مكان في المربع الرمادي على اليسار. _{span.reveal(when="points")} يمكننا ربط كل منهم لتشكيل رباعي الأضلاع._ 
+ الآن اختر أربع نقاط ، في أي مكان في المربع الرمادي على اليسار. _{span.reveal(when="points")} يمكننا ربط كل منهم لتشكيل رباعي الأضلاع._ 
 
 {.reveal(when="points" delay=1000)} دعونا نجد نقطة الوسط لكل من الجوانب الأربعة. إذا ربطنا نقاط الوسط ، نحصل على [[رباعي آخر | مثلث | مستطيل]] . 
 
@@ -422,18 +423,18 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### متوازي الأضلاع 
 
-اتضح أن متوازيات الأضلاع لها خصائص أخرى مثيرة للاهتمام ، بخلاف أن تكون الأضلاع المقابلة موازية. أي العبارات الست التالية صحيحة؟ 
+ اتضح أن متوازيات الأضلاع لها خصائص أخرى مثيرة للاهتمام ، بخلاف أن تكون الأضلاع المقابلة موازية. أي العبارات الست التالية صحيحة؟ 
 
 ::: column.grow
 
     x-picker.list
-      .item.md The opposite sides are [congruent](gloss:congruent).
-      .item(data-error="parall-error-1") The internal angles are always less than 90°.
-      .item.md(data-error="parall-error-2") The diagonals [bisect](gloss:angle-bisector) the internal angles.
-      .item The opposite angles are congruent.
-      .item(data-error="parall-error-3") Both diagonals are congruent.
-      .item(data-error="parall-error-4") Adjacent sides have the same length
-      .item The two diagonals bisect each other in the middle.
+      .item.md الجوانب المقابلة [متطابقين](gloss:congruent).
+      .item(data-error="parall-error-1") دائمًا ما تكون الزوايا الداخلية أقل من 90 °.
+      .item.md(data-error="parall-error-2") الخطوط القطرية [ينصفو](gloss:angle-bisector) الزوايا الداخلية.
+      .item الزوايا المعاكسة متطابقة.
+      .item(data-error="parall-error-3") كلا القطرين متطابقين.
+      .item(data-error="parall-error-4") الجوانب المتجاورة لها نفس الطول.
+      .item ينقسم القطران إلى بعضهما في المنتصف.
 
 ::: column(width=300)
 
@@ -460,11 +461,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: parallelograms-proof
 
-بالطبع ، ببساطة "مراقبة" هذه الخصائص ليست كافية. للتأكد من أنها صحيحة _دائمًا_ ، نحتاج إلى _إثباتها_ : 
+ بالطبع ، ببساطة "مراقبة" هذه الخصائص ليست كافية. للتأكد من أنها صحيحة _دائمًا_ ، نحتاج إلى _إثباتها_ : 
 
 ::: tab
 
-#### عكس الزوايا والأضلاع _{span.check(when="diagonal blank-0 blank-1")}_ 
+#### الزوايا والجوانب المتقابلة _{span.check(when="diagonal blank-0 blank-1")}_ 
 
 ::: column(width=300)
 
@@ -494,13 +495,13 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
-{.task} دعونا نحاول أن نثبت أن الأضلاع والزوايا المقابلة في متوازي الأضلاع متطابقة دائمًا. 
+{.task} دعونا نحاول أن نثبت أن الجوانب والزوايا المقابلة في متوازي الأضلاع متطابقة دائمًا. 
 
-ابدأ برسم أحد أقطار متوازي الأضلاع. 
+ ابدأ برسم أحد أقطار متوازي الأضلاع. 
 
-{.reveal(when="diagonal")} يخلق القطر أربع زوايا جديدة مع أضلاع متوازي الأضلاع. [الزاويتان الأحمرتان والزاويتان الأزرقتان](target:red-angle) هما [زوايا](target:blue-angle) [بديلة](gloss:alternate-angles) ، لذا يجب أن [[تتطابق]] كل منهما [[| متاخم | مكمل]] . 
+{.reveal(when="diagonal")} يخلق القطر أربع زوايا جديدة مع جوانب متوازي الأضلاع. [الزاويتان الأحمرتان والزاويتان الأزرقتان](target:red-angle) هما [زوايا](target:blue-angle) [زوايا بديلة](gloss:alternate-angles) ، لذا يجب أن كل منهما [[تتطابق| متاخم | مكمل]] . 
 
-{.reveal(when="blank-0")} الآن إذا نظرنا إلى [المثلثات](target:triangles) التي أنشأها القطر ، نرى أن لديهم زوايا متطابقة ، [وجانب متطابق واحد](target:diagonal) . بواسطة [[ASA | AAS |]] حالة تطابق [[AA]] ، يجب أن يكون كلا المثلثين متطابقين. 
+{.reveal(when="blank-0")} الآن إذا نظرنا إلى [المثلثات](target:triangles) التي أنشأها القطر ، نرى أن لديهم زوايا متطابقة ، [وجانب متطابق واحد](target:diagonal) . بواسطة [[ASA | AAS |AA]] حالة تطابق  ، يجب أن يكون كلا المثلثين متطابقين. 
 
 {.reveal(when="blank-1")} هذا يعني أن الأجزاء المقابلة الأخرى من المثلثات يجب أن تكون متطابقة أيضًا: على وجه الخصوص ، كلا [الزوجين من الجانبين المعاكسين](target:sides) متطابقين ، وكلا [الزوجين من الزوايا المقابلة](target:angles) متطابقان. _{span.qed}_ 
 
@@ -508,9 +509,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.reveal(when="blank-1")} يتبين أن العكس صحيح أيضًا: إذا كان كلا الزوجين من الجانبين المتقابلين (أو الزوايا) في الرباعي متطابقين ، فيجب أن يكون الرباعي متوازي الأضلاع. 
 
+    //- Adjacent angles are supplementary.
+
 ::: tab
 
-#### الأقطار _{span.check(when="diagonal blank-2 blank-3")}_ 
+#### الخطوط القطرية _{span.check(when="diagonal blank-2 blank-3")}_ 
 
 ::: column(width=300)
 
@@ -544,11 +547,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} تثبت الآن أن القطرين في متوازي الأضلاع ينقسمان إلى بعضهما البعض. 
 
-دعونا نفكر في المثلثين الأصفرين اللذين ولّدتهما الأقطار: 
+ دعونا نفكر في المثلثين الأصفرين اللذين ولّدتهما الأقطار: 
 
-* لقد أثبتنا للتو أن [الجانبين الأخضر](target:side1) متطابقان ، لأنهما ضلعان متوازيان في متوازي الأضلاع. * [الزوايا الحمراء اثنين](target:anglesR) [واثنين من زوايا الزرقاء](target:anglesB) هي متطابقة، لأنهم [[زوايا بديلة | زوايا متقابلة | الزوايا القائمة]] . 
+ * لقد أثبتنا للتو أن [الجانبين الأخضر](target:side1) متطابقان ، لأنهما ضلعان متوازيان في متوازي الأضلاع. * [الزوايا الحمراء اثنين](target:anglesR) [واثنين من زوايا الزرقاء](target:anglesB) هي متطابقة، لأنهم [[الزوايا البديلة | الزوايا المتقابلة | الزوايا القائمة]] . 
 
-{.reveal(when="blank-2")} بواسطة [[ASA | SSS |]] حالة [[AAS]] ، يجب أن يكون كلا المثلثين الأصفرين متطابقين أيضًا. 
+{.reveal(when="blank-2")} بواسطة [[ASA | SSS |AAS]] حالة ، يجب أن يكون كلا المثلثين الأصفرين متطابقين أيضًا. 
 
 {.reveal(when="blank-3")} الآن يمكننا استخدام حقيقة أن الأجزاء المقابلة من المثلثات المتطابقة متطابقة أيضًا ، لاستنتاج ذلك [`bar(AM)`](target:AM) = [`bar(CM)`](target:CM) و [`bar(BM)`](target:BM) = [`bar(DM)`](target:DM) . بمعنى آخر ، يتقاطع القطران عند نقاط المنتصف. _{span.qed}_ 
 
@@ -565,9 +568,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
-أظهرنا أعلاه أن زوجين من [[العكس |]] تتطابق الجوانب [[المجاورة]] للمتوازي الأضلاع. في طائرة ورقية ، يتطابق زوجان من الجوانب _المجاورة_ . 
+ أظهرنا أعلاه أن زوجين من [[عكس |قريب]] تتطابق الجوانب [[المجاورة]] للمتوازي الأضلاع. في طائرة ورقية ، يتطابق زوجان من الجوانب _المجاورة_ . 
 
-من الواضح أن اسم _Kite_ يأتي من شكله: فهو يبدو مثل الطائرات الورقية التي يمكنك أن تطير في السماء. ومع ذلك ، من بين جميع العناصر الرباعية الخاصة التي رأيناها حتى الآن ، فإن الطائرة الورقية هي الوحيدة التي يمكن أن تكون [مقعرة](gloss:concave) أيضًا: إذا تم تشكيلها مثل السهام أو السهم: 
+ من الواضح أن اسم _Kite_ يأتي من شكله: فهو يبدو مثل الطائرات الورقية التي يمكنك أن تطير في السماء. ومع ذلك ، من بين جميع العناصر الرباعية الخاصة التي رأيناها حتى الآن ، فإن الطائرة الورقية هي الوحيدة التي يمكن أن تكون [مقعرة](gloss:concave) أيضًا: إذا تم تشكيلها مثل السهام أو السهم: 
 
 ::: column(width=320)
 
@@ -643,7 +646,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
-ربما لاحظت أن جميع الطائرات الورقية [[متماثلة | مشابه]] . _{span.reveal(when="blank-0")} [محور التناظر](gloss:axis-of-symmetry) هو [[أحد الأقطار | أحد الجانبين | جزء متوسط]] ._ 
+ ربما لاحظت أن جميع الطائرات الورقية [[متماثلة | مشابه]] . _{span.reveal(when="blank-0")} [محور التناظر](gloss:axis-of-symmetry) هو [[أحد الأقطار | أحد الجانبين | جزء متوسط]] ._ 
 
 {.reveal.r(when="blank-1")} يقسم القطر الطائرة الورقية إلى [مثلثين متطابقين](target:triangle1) . نحن نعلم أنها متطابقة من حالة [SSS](gloss:triangle-sss) : كلا المثلثين لهما [ثلاثة جوانب متطابقة](target:sss) (الأحمر والأخضر والأزرق). _{button.next-step} استمر_ 
 
@@ -665,7 +668,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### منطقة رباعيات الأضلاع 
 
-عند حساب مساحة المثلثات في الدورة السابقة ، استخدمنا خدعة تحويلها إلى [[مستطيل | ميدان | خماسي]] . اتضح أنه يمكننا أيضًا القيام بذلك لبعض الأضلاع الرباعية: 
+ عند حساب مساحة المثلثات في الدورة السابقة ، استخدمنا خدعة تحويلها إلى [[مستطيل | مربع | خماسي]] . اتضح أنه يمكننا أيضًا القيام بذلك لبعض رباعيات الأضلاع : 
 
 ::: tab
 
@@ -685,7 +688,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
-على اليسار ، حاول رسم مستطيل له نفس مساحة متوازي الأضلاع. 
+ على اليسار ، حاول رسم مستطيل له نفس مساحة متوازي الأضلاع. 
 
 {.reveal(when="draw-1")} يمكنك أن ترى أن [المثلث المفقود](target:triangle-1) على اليسار هو [[نفسه بالضبط | اصغر من | أكبر من]] [المثلث المتداخل](target:triangle-2) على اليمين؟ _{span.reveal(when="blank-1")} وبالتالي فإن مساحة متوازي الأضلاع_ 
 
@@ -699,7 +702,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 #### شبه منحرف _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_ 
 
-تذكر أن شبه المنحرف رباعي الأضلاع مع زوج واحد من [الجوانب المتوازية](target:bases) . تسمى هذه الجوانب المتوازية __قواعد__ شبه المنحرف. 
+ تذكر أن شبه المنحرف رباعي الأضلاع مع زوج واحد من [الجوانب المتوازية](target:bases) . تسمى هذه الجوانب المتوازية __قواعد__ شبه المنحرف. 
 
 ::: column(width=300)
 
@@ -721,7 +724,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
-كما في السابق ، حاول رسم مستطيل له نفس مساحة هذا شبه المنحرف. _{span.reveal(when="draw-2")} هل يمكنك أن ترى كيف تلغي [المثلثات المفقودة والمضافة](target:triangles-3) على اليسار واليمين؟_ 
+ كما في السابق ، حاول رسم مستطيل له نفس مساحة هذا شبه المنحرف. _{span.reveal(when="draw-2")} هل يمكنك أن ترى كيف تلغي [المثلثات المفقودة والمضافة](target:triangles-3) على اليسار واليمين؟_ 
 
 {.reveal(when="draw-2" delay=2000)} ال [{.pill.green} ارتفاع](target:t-height) هذا المستطيل هو [[المسافة بين | المتوسط | طول]] [الأضلاع المتوازية](target:bases) لشبه المنحرف. 
 
@@ -765,19 +768,19 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
-في هذه الطائرة الورقية ، يشكل [القطران](target:diag3) عرضًا [وارتفاعًا لمستطيل](target:rect4) كبير يحيط بالطائرة الورقية. 
+ في هذه الطائرة الورقية ، يشكل [القطران](target:diag3) عرضًا وارتفاعًا [ لمستطيل](target:rect4) كبير يحيط بالطائرة الورقية. 
 
-مساحة هذا المستطيل [[مرتين | كمثل | ثلاث مرات]] مساحة الطائرة الورقية. _{span.reveal(when="blank-5")} هل يمكنك أن ترى كيف أن كل من [المثلثات الأربعة](target:inside) التي تشكل الطائرة الورقية هي نفسها مثل [الفجوات الأربعة](target:outside) خارجها؟_ 
+ مساحة هذا المستطيل [[مرتين | مثل | ثلاث مرات]] مساحة الطائرة الورقية. _{span.reveal(when="blank-5")} هل يمكنك أن ترى كيف أن كل من [المثلثات الأربعة](target:inside) التي تشكل الطائرة الورقية هي نفسها مثل [الفتهات الأربعة](target:outside) خارجها؟_ 
 
-{.reveal(when="blank-5")} هذا يعني أن مساحة طائرة ورقية ذات أقطار [{.i.pill.green} D1](target:d31) و [{.i.pill.yellow} d2](target:d32) هو 
+{.reveal(when="blank-5")} هذا يعني أن مساحة طائرة ورقية ذات أقطار [{.i.pill.green} d1](target:d31) و [{.i.pill.yellow} d2](target:d32) هو 
 
-{.text-center.reveal(when="blank-5")} _المنطقة_ = `1/2` [{.i.pill.green} د 1](target:d31) × [{.i.pill.yellow} د 2](target:d32) . 
+{.text-center.reveal(when="blank-5")} _المنطقة_ = `1/2` [{.i.pill.green} d1](target:d31) × [{.i.pill.yellow} d2](target:d32) . 
 
 :::
 
 ::: tab
 
-#### دالتون _{span.check(when="blank-6 blank-7")}_ 
+#### المعين _{span.check(when="blank-6 blank-7")}_ 
 
 ::: column(width=300)
 
@@ -801,11 +804,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
-[المعين](gloss:rhombus) هو رباعي الأضلاع له أربعة جوانب متطابقة. قد تتذكر أن كل دالتون هو [[متوازي الأضلاع | مستطيل | مربعة]] - وكذلك [[طائرة ورقية | سداسي الزوايا | مضلع مقعر]] . 
+ [المعين](gloss:rhombus) هو رباعي الأضلاع له أربعة جوانب متطابقة. قد تتذكر أن كل دالتون هو [[متوازي الأضلاع | مستطيل | مربعة]] - وكذلك [[طائرة ورقية | سداسي الزوايا | مضلع مقعر]] . 
 
 {.reveal(when="blank-6 blank-7")} هذا يعني أنه للعثور على مساحة المعين ، يمكننا استخدام إما معادلة مساحة متوازي الأضلاع ، أو معادلة مساحة طائرة ورقية: 
 
-{.text-center.reveal(when="blank-6 blank-7")} _المنطقة_ = [{.i.pill.blue} قاعدة](target:base) × [{.i.pill.red} الارتفاع](target:height) = `1/2` [{.i.pill.green} د 1](target:d41) × [{.i.pill.yellow} د 2](target:d42) . 
+{.text-center.reveal(when="blank-6 blank-7")} _المنطقة_ = [{.i.pill.blue} قاعدة](target:base) × [{.i.pill.red} الارتفاع](target:height) = `1/2` [{.i.pill.green} d1](target:d41) × [{.i.pill.yellow} d2](target:d42) . 
 
 {.reveal(when="blank-6 blank-7" delay=1000)} _في سياقات مختلفة ، قد يتم إعطاؤك أجزاء مختلفة من المعين (الجوانب والارتفاع والأقطار) ، ويجب عليك اختيار أيهما أكثر ملاءمة._ 
 
@@ -813,7 +816,25 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
+    //- ### Cyclic quadrilaterals
     
+    //- ### Isosceles Trapeziums
+    //- 
+    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
+    //- congruent. The third trapezoid above is an example of an isosceles
+    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
+    //- Isosceles trapezoids also have parts that are labeled much like an
+    //- isosceles triangle. Both parallel sides are called bases.
+    //- 
+    //- In an isosceles triangle, the two base angles are congruent. This
+    //- property holds true for isosceles trapezoids.
+    //- 
+    //- The converse is also true: If a trapezoid has congruent base angles,
+    //- then it is an isosceles trapezoid.
+    //-
+    //- That the diagonals of a rectangle are congruent AND they isect each
+    //- other. The diagonals of an isosceles trapezoid are also congruent, but
+    //- they do NOT bisect each other.
 
 ---
 
@@ -821,15 +842,14 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: tessellations
 > id: tessellations
-> translated: auto
 
-تظهر [المضلعات](gloss:polygon) في كل مكان في الطبيعة. إنها مفيدة بشكل خاص إذا كنت تريد تجانب مساحة كبيرة ، لأنه يمكنك احتواء المضلعات معًا دون أي فجوات أو تداخلات. تسمى مثل هذه الأنماط [__بالفسيفساء__](gloss:tessellation) . 
+ تظهر [المضلعات](gloss:polygon) في كل مكان في الطبيعة. إنها مفيدة بشكل خاص إذا كنت تريد تجانب مساحة كبيرة ، لأنه يمكنك احتواء المضلعات معًا دون أي فجوات أو تداخلات. تسمى مثل هذه الأنماط [__التغطية بالفسيفساء__](gloss:tessellation) . 
 
 ::: column(width=200)
 
     x-img(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
 
-{.caption} [[سداسي الشكل | الثلاثي |]] قرص العسل [[التربيعي]] 
+{.caption(dir="ltr")} [[السداسي | الثلاثي |التربيعي]] قرص العسل  
 
 ::: column(width=200)
 
@@ -866,13 +886,13 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellations-1
 
-نسخ البشر العديد من هذه الأنماط الطبيعية في الفن والهندسة المعمارية والتكنولوجيا - من روما القديمة حتى الوقت الحاضر. وفيما يلي بعض الأمثلة على ذلك: 
+ نسخ البشر العديد من هذه الأنماط الطبيعية في الفن والهندسة المعمارية والتكنولوجيا - من روما القديمة حتى الوقت الحاضر. وفيما يلي بعض الأمثلة على ذلك: 
 
 ::: column(width=200)
 
     x-img(lightbox src="images/tessellations/pavement.jpg", width="200", height="200")
 
-{.caption} [[مستطيلي | من الدرجة الثانية |]] نمط الرصيف [[السداسي]] 
+{.caption(dir="ltr")} [[مستطيلي | التربيعي |السداسي]] نمط الرصيف 
 
 ::: column(width=200)
 
@@ -890,7 +910,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
     x-img(lightbox, credit="Chmee2 via Wikipedia", src="images/tessellations/museum.jpg", width="200", height="200")
 
-{.caption} [[الثلاثي | سداسي الشكل |]] سقف [[مستطيل]] في المتحف البريطاني في لندن 
+{.caption} [[ثلاثي | سداسي  |مستطيل]] سقف في المتحف البريطاني في لندن 
 
 ::: column(width=200)
 
@@ -906,11 +926,16 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
+    // TODO Carbon Nanotube
+    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
+    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
+    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
+
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
 
-هنا يمكنك إنشاء الفسيفساء الخاصة بك باستخدام المضلعات العادية. ما عليك سوى سحب الأشكال الجديدة من الشريط الجانبي إلى اللوحة القماشية. ما هي الأشكال الفسيفساء بشكل جيد؟ هل هناك أي أشكال لا تكسو على الإطلاق؟ حاول إنشاء أنماط مثيرة للاهتمام! 
+ هنا يمكنك إنشاء التغطية الفسيفساء الخاصة بك باستخدام المضلعات العادية. ما عليك سوى سحب الأشكال الجديدة من الشريط الجانبي إلى اللوحة القماشية. ما هي الأشكال الفسيفساء بشكل جيد؟ هل هناك أي أشكال لا تكسو على الإطلاق؟ حاول إنشاء أنماط مثيرة للاهتمام! 
 
     figure: .tessellation
       x-polypad
@@ -918,12 +943,12 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
         for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
           .add(data-shape=s)
       .btn-row
-        button.btn Clear
-        button.btn Download
+        button.btn إمسح
+        button.btn داونلود
       svg.overlay: g.tiles.active
     x-gesture(target=".tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
-      h4 Examples of other students’ tessellations
+      h4 أمثلة على التغطية الفسيفساء الطلاب الآخرين
       .row.padded-thin
         div(style="width: 224px"): img(src="images/user/tess-1.png" width=240 height=160)
         div(style="width: 224px"): img(src="images/user/tess-2.png" width=240 height=160)
@@ -932,14 +957,14 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-regular
 
-### فسيفساء من المضلعات العادية 
+### التغطية بالفسيفساء من المضلعات العادية  
 
-ربما لاحظت أن بعض [المضلعات المنتظمة](gloss:regular-polygon) (مثل [[المربعات | الخماسي]] ) فسيفساء بسهولة جدا ، في حين أن الآخرين (مثل [[الخماسي | مثلثات | السداسيات]] ) لا يبدو فسيفساء على الإطلاق. 
+ ربما لاحظت أن بعض [المضلعات العادية](gloss:regular-polygon) (مثل [[المربعات | الخماسي]] ) التغطية بالفسيفساء بسهولة جدا ، في حين أن الآخرين (مثل [[الخماسي | مثلثات | السداسيات]] ) لا يبدو التغطية بالفسيفساء على الإطلاق. 
 
 ---
 > id: tessellation-regular-1
 
-يتعلق هذا بحجم [الزوايا الداخلية](gloss:internal-angle) ، التي تعلمنا حسابها من قبل. عند كل [قمة](gloss:polygon-vertex) في التغطية بالفسيفساء ، تلتقي الزوايا الداخلية للعديد من المضلعات المختلفة. نحتاج إلى كل هذه الزوايا لإضافة [[360]] درجة ، وإلا سيكون هناك فجوة أو تداخل. 
+ يتعلق هذا بحجم [الزوايا الداخلية](gloss:internal-angle) ، التي تعلمنا حسابها من قبل. عند كل [رأس](gloss:polygon-vertex) في التغطية بالفسيفساء ، تلتقي الزوايا الداخلية للعديد من المضلعات المختلفة. نحتاج إلى كل هذه الزوايا لإضافة [[360]] ° ، وإلا سيكون هناك فجوة أو تداخل. 
 
 ---
 > id: tessellation-regular-2
@@ -948,67 +973,69 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
     include svg/tessellations/triangles.svg
 
-{.caption} [[فسيفساء]] مثلثات [[| لا فسيفساء]] _{span.reveal(when="blank-0")} لأن 6 × 60 درجة = 360 درجة._ 
+{.caption} مثلثات [[التغطية بالفسيفساء | لا التغطية بالفسيفساء ]] _{span.reveal(when="blank-0")} لأن 6 × 60 ° = 360 °._ 
 
 ::: column(width=160)
 
     include svg/tessellations/squares.svg
 
-{.caption} المربعات [[الفسيفساء | لا فسيفساء]] _{span.reveal(when="blank-1")} لأن 4 × 90 درجة = 360 درجة._ 
+{.caption} المربعات [[التغطية بالفسيفساء  | لا التغطية بالفسيفسء]] _{span.reveal(when="blank-1")} لأن 4 × 90 ° = 360 °._ 
 
 ::: column(width=160)
 
     include svg/tessellations/pentagons.svg
 
-{.caption} [[الخماسيون لا يغطون | فسيفساء]] _{span.reveal(when="blank-2")} لأن مضاعفات 108° لا تساوي 360°._ 
+{.caption} [[لا التغطية بالفسيفس | التغطية بالفسيفسا]] _{span.reveal(when="blank-2")} لأن مضاعفات 108° لا تساوي 360°._ 
+
+    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
 
 ::: column(width=160)
 
     include svg/tessellations/hexagons.svg
 
-{.caption} السداسي [[tessellate | لا فسيفساء]] _{span.reveal(when="blank-3")} لأن 3 × 120 درجة = 360 درجة._ 
+{.caption} السداسي [[التغطية بالفسيفسا | لا التغطية بالفسيفسا]] _{span.reveal(when="blank-3")} لأن 3 × 120 ° = 360 °._ 
 
 :::
 
 ---
 > id: tessellation-regular-3
 
-يمكنك أيضًا التحقق من ذلك ، تمامًا مثل الخماسي ، فإن أي مضلع عادي به 7 جوانب أو أكثر لا يتم تغطية الأرض. هذا يعني أن المضلعات العادية الوحيدة التي تغطي الفسيفساء هي مثلثات ومربعات وسداسيات! 
+ يمكنك أيضًا التحقق من ذلك ، تمامًا مثل الخماسي ، فإن أي مضلع عادي به 7 جوانب أو أكثر لا يتم تغطية الأرض. هذا يعني أن المضلعات العادية الوحيدة التي تغطي الفسيفساء هي مثلثات ومربعات وسداسيات! 
 
-بالطبع يمكنك الجمع بين أنواع مختلفة من المضلعات العادية في التغطية بالفسيفساء ، بشرط أن تضيف زواياها الداخلية ما يصل إلى 360 درجة: 
+ بالطبع يمكنك الجمع بين أنواع مختلفة من المضلعات العادية في التغطية بالفسيفساء ، بشرط أن تضيف زواياها الداخلية ما يصل إلى 360 درجة: 
 
-    x-gallery(slide-width="520")
+    x-gallery(slide-width="520")(dir="ltr")
       div
         img(src="images/tessellations/regular-1.svg" width=360 height=240)
-        p.caption Squares and triangles#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
+        p.caption مربعات والمثلثات#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-3.svg" width=360 height=240)
-        p.caption Squares and triangles#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
+        p.caption مربعات والمثلثات#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-4.svg" width=360 height=240)
-        p.caption Hexagons and triangles#[br]#[strong.m-red 120°] + #[strong.m-red 120°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
+        p.caption السداسيات والمثلثات#[br]#[strong.m-red 120°] + #[strong.m-red 120°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-5.svg" width=360 height=240)
-        p.caption Hexagons and triangles#[br]#[strong.m-red 120°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
+        p.caption السداسيات والمثلثات#[br]#[strong.m-red 120°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-2.svg" width=360 height=240)
-        p.caption Hexagons, squares and triangles#[br]#[strong.m-red 120°] + #[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] = 360°
+        p.caption السداسيات والمربعات والمثلثات#[br]#[strong.m-red 120°] + #[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-6.svg" width=360 height=240)
-        p.caption Octagons and squares#[br]#[strong.m-green 135°] + #[strong.m-green 135°] + #[strong.m-blue 90°] = 360°
+        p.caption المثمنات والمربعات#[br]#[strong.m-green 135°] + #[strong.m-green 135°] + #[strong.m-blue 90°] = 360°
       div
         img(src="images/tessellations/regular-7.svg" width=360 height=240)
-        p.caption Dodecagons (12-gons) and triangles#[br]#[strong.m-green 150°] + #[strong.m-green 150°] + #[strong.m-yellow 60°] = 360°
+        p.caption Dodecagons (12-gons) والمثلثات#[br]#[strong.m-green 150°] + #[strong.m-green 150°] + #[strong.m-yellow 60°] = 360°
       div
         img(src="images/tessellations/regular-8.svg" width=360 height=240)
-        p.caption Dodecagons, hexagons and squares#[br]#[strong.m-green 150°] + #[strong.m-red 120°] + #[strong.m-blue 90°] = 360°
+        p.caption Dodecagons, السداسيات والمربعات#[br]#[strong.m-green 150°] + #[strong.m-red 120°] + #[strong.m-blue 90°] = 360°
 
 ---
 > id: tessellation-triangles
 
-### فسيفساء من مضلعات غير منتظمة 
+### التغطية بالفسيفساء من مضلعات غير العادية 
 
-يمكننا أيضًا تجربة صنع الفسيفساء من [المضلعات غير المنتظمة](gloss:irregular-polygon) - طالما أننا حريصون عند تدويرها وترتيبها. 
+ يمكننا أيضًا تجربة صنع الفسيفساء من [المضلعات غير العادية](gloss:irregular-polygon) - طالما أننا حريصون عند تدويرها وترتيبها. 
 
 ::: column(width=360)
 
@@ -1028,9 +1055,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
-اتضح أنه لا يمكنك ترصيع ليس فقط مثلثات متساوية الأضلاع ، ولكن _أي مثلث_ ! حاول تحريك [القمم](target:vertex) في هذا الرسم البياني. 
+ اتضح أنه لا يمكنك ترصيع ليس فقط مثلثات متساوية الأضلاع ، ولكن _أي مثلث_ ! حاول تحريك [الرؤوس](target:vertex) في هذا الرسم البياني. 
 
-مجموع الزوايا الداخلية في المثلث هو [[180]] درجة. إذا استخدمنا كل زاوية [[مرتين | ذات مرة | ثلاث مرات]] في كل قمة في التغطية بالفسيفساء ، نحصل على 360 درجة: 
+ مجموع الزوايا الداخلية في المثلث هو [[180]] °. إذا استخدمنا كل زاوية [[مرتين |  مرة واحدة | ثلاث مرات]] في كل قمة في التغطية بالفسيفساء ، نحصل على 360 درجة: 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" cx=100 cy=80)
@@ -1093,7 +1120,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow    
 
-والمثير للدهشة أن _أي فسيفساء رباعي_ أيضًا فسيفساء! مجموع الزاوية الداخلية هو [[360]] درجة ، لذلك إذا استخدمنا كل زاوية [[مرة واحدة | مرتين | ثلاث مرات]] في كل قمة في التغطية بالفسيفساء ، نحصل على 360 درجة. 
+ والمثير للدهشة أن _أي فسيفساء رباعي_ أيضًا فسيفساء! مجموع الزاوية الداخلية هو [[360]] درجة ، لذلك إذا استخدمنا كل زاوية [[مرة واحدة | مرتين | ثلاث مرات]] في كل قمة في التغطية بالفسيفساء ، نحصل على 360 درجة. 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
@@ -1135,7 +1162,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-pentagons
 
-البنتاغون أصعب قليلاً. لقد رأينا بالفعل أن الخماسي _المنتظم_ [[لا يغطى | فسيفساء]] ، ولكن ماذا عن تلك غير العادية؟ 
+ البنتاغون أصعب قليلاً. لقد رأينا بالفعل أن الخماسي _المنتظم_ [[لا التغطية بالفسيفس | التغطية بالفسيفساء]] ، ولكن ماذا عن تلك غير العادية؟ 
 
 ---
 > id: tessellation-pentagons-1
@@ -1154,60 +1181,60 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-فيما يلي ثلاثة أمثلة مختلفة للفسيفساء مع الخماسي. إنها ليست _منتظمة_ ، لكنها مضلعات صالحة تمامًا من 5 جوانب. 
+ فيما يلي ثلاثة أمثلة مختلفة للفسيفساء مع الخماسي. إنها ليست _منتظمة_ ، لكنها مضلعات صالحة تمامًا من 5 جوانب. 
 
-حتى الآن ، وجد علماء الرياضيات 15 نوعًا مختلفًا من الفسيفساء مع خماسي (محدب) - تم اكتشاف أحدثها في عام 2015. لا أحد يعرف ما إذا كان هناك أي أنواع أخرى ، أو إذا كان هؤلاء الخمسة عشر هم الوحيدون ... 
+ حتى الآن ، وجد علماء الرياضيات 15 نوعًا مختلفًا من الفسيفساء مع خماسي (محدب) - تم اكتشاف أحدثها في عام 2015. لا أحد يعرف ما إذا كان هناك أي أنواع أخرى ، أو إذا كان هؤلاء الخمسة عشر هم الوحيدون ... 
 
 ---
 > id: escher
 
-### فسيفساء في الفن 
+### التغطية بالفسيفساء في الفن 
 
-Tessellations نحن أداة وإلهام لكثير من الفنانين والمهندسين المعماريين والمصمم - أشهرها الفنان الهولندي [MC Escher](bio:escher) . يحتوي عمل Escher على مخلوقات وأنماط ومناظر طبيعية غريبة ومتغيرة: 
+ كانت التغطية بالفسيفساء أداة وإلهام للعديد من الفنانين والمهندسين المعماريين والمصمم - أشهرها الفنان الهولندي [موريتس كورنيليس إيشر](bio:escher) . يحتوي عمل ايشر على مخلوقات وأنماط ومناظر طبيعية غريبة ومتغيرة: 
 
     .row
       div(style="width: 220px")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-1.jpg" width=220 height=220)
-        p.caption “Sky and Water I” (1938)
+        p.caption (1938) “السماء والمياه 1”
       div(style="width: 220px")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-2.jpg" width=220 height=220)
-        p.caption “Lizard” (1942)
+        p.caption "سحلية" (1942)
       div(style="width: 220px")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-3.jpg" width=220 height=220)
-        p.caption “Lizard, Fish, Bat” (1952)
+        p.caption “سحلية ، سمكة ، خفاش” (1952)
       div(style="width: 220px")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-4.jpg" width=220 height=220)
-        p.caption “Butterfly” (1948)
+        p.caption "فراشة" (1948)
       div(style="width: 220px")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-5.jpg" width=220 height=220)
-        p.caption “Two Fish” (1942)
+        p.caption “سمكتان” (1942)
       div(style="width: 220px")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
-        p.caption “Shells and Starfish” (1941)
+        p.caption “الأصداف ونجم البحر” (1941)
 
-غالبًا ما تبدو هذه الأعمال الفنية ممتعة وبلا مجهود ، ولكن المبادئ الرياضية الأساسية هي نفسها كما كانت من قبل: الزوايا والتناوب والترجمات والمضلعات. إذا لم تكن الرياضيات صحيحة ، فإن التغطية بالفسيفساء لن تعمل! 
+ غالبًا ما تبدو هذه الأعمال الفنية ممتعة وبلا مجهود ، ولكن المبادئ الرياضية الأساسية هي نفسها كما كانت من قبل: الزوايا والتناوب والترجمات والمضلعات. إذا لم تكن الرياضيات صحيحة ، فإن التغطية بالفسيفساء لن تعمل! 
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
-    p.caption “Metamorphosis II” by M. C. Escher (1940)
+    p.caption “التحول II by M. C. Escher (1940)
 
 ---
 > id: penrose
 
 ### تبليط بنروز 
 
-جميع الفسيفساء التي رأيناها حتى الآن تشترك في شيء واحد: أنها __دورية__ . هذا يعني أنها تتكون من نمط منتظم يتكرر مرارًا وتكرارًا. يمكن أن تستمر إلى الأبد في جميع الاتجاهات وسوف تبدو متشابهة في كل مكان. 
+ جميع الفسيفساء التي رأيناها حتى الآن تشترك في شيء واحد: أنها __دورية__ . هذا يعني أنها تتكون من نمط منتظم يتكرر مرارًا وتكرارًا. يمكن أن تستمر إلى الأبد في جميع الاتجاهات وسوف تبدو متشابهة في كل مكان. 
 
-في السبعينيات ، اكتشف عالم الرياضيات والفيزيائي البريطاني [روجر بنروز](bio:penrose) الفسيفساء _غير الدورية_ - لا تزال مستمرة إلى ما لا نهاية في جميع الاتجاهات ، لكنها _لا_ تبدو متشابهة تمامًا. تسمى هذه __المربعات بنروز__ ، وتحتاج فقط إلى أنواع مختلفة من المضلعات لإنشاء واحد: 
+ في السبعينيات ، اكتشف عالم الرياضيات والفيزيائي البريطاني [روجر بنروز](bio:penrose) الفسيفساء _غير الدورية_ - لا تزال مستمرة إلى ما لا نهاية في جميع الاتجاهات ، لكنها _لا_ تبدو متشابهة تمامًا. تسمى هذه __المربعات بنروز__ ، وتحتاج فقط إلى أنواع مختلفة من المضلعات لإنشاء واحد: 
 
     figure
       include svg/penrose.svg
       x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
-      p.caption Move the slider to reveal the underlying structure of this tessellation. Notice how you have the same patterns at various scales: the small yellow pentagons, blue stars, orange rhombi and green ‘ships’ appear in their original size, in a #[strong.blue slightly larger size] and an #[strong.red even larger size]. This #[em self-similarity] can be used to prove that this Penrose tiling is non-periodic.
+      p.caption حرك شريط التمرير للكشف عن البنية الأساسية لهذا الموزاييك. لاحظ كيف لديك نفس الأنماط على مستويات مختلفة: الخماسي الصفراء الصغيرة والنجوم الزرقاء والمعيني البرتقالي و "السفن" الخضراء تظهر بحجمها الأصلي ، في #[strong.blue حجم أكبر قليلاً] و #[strong.red حجم أكبر]. هذا #[em التشابه الذاتي] يمكن استخدامها لإثبات أن بلاط بنروز هذا غير دوري.
 
 ---
 > id: penrose-1
 
-كان Penrose يستكشف التغطية بالفسيفساء لمجرد التسلية ، ولكن اتضح أن البنية الداخلية لبعض المواد الحقيقية (مثل الألومنيوم) تتبع نمطًا مشابهًا. تم استخدام النمط حتى على ورق التواليت ، لأن الشركات المصنعة لاحظت أنه يمكن لف النمط غير الدوري دون أي انتفاخات. 
+ كان بنروز يستكشف التغطية بالفسيفساء لمجرد التسلية ، ولكن اتضح أن البنية الداخلية لبعض المواد الحقيقية (مثل الألومنيوم) تتبع نمطًا مشابهًا. تم استخدام النمط حتى على ورق التواليت ، لأن الشركات المصنعة لاحظت أنه يمكن لف النمط غير الدوري دون أي انتفاخات. 
 
 ---
 
@@ -1215,9 +1242,8 @@ Tessellations نحن أداة وإلهام لكثير من الفنانين وا
 
 > section: polyhedra
 > id: polyhedra
-> translated: auto
 
-حتى الآن نظرنا للتو إلى ما يمكننا القيام به مع المضلعات في عالم مسطح ثنائي الأبعاد. [__متعدد السطوح__](gloss:polyhedron) هو كائن ثلاثي الأبعاد يتكون من مضلعات. وهنا بعض الأمثلة: 
+ حتى الآن نظرنا للتو إلى ما يمكننا القيام به مع المضلعات في عالم مسطح ثنائي الأبعاد. [__متعدد الوجوه__](gloss:polyhedron) هو كائن ثلاثي الأبعاد يتكون من مضلعات. وهنا بعض الأمثلة: 
 
 ::: column.padded-thin(width=220)
 
@@ -1233,32 +1259,32 @@ Tessellations نحن أداة وإلهام لكثير من الفنانين وا
 
 :::
 
-لا يمكن أن تحتوي Polyhedra على أسطح منحنية - على سبيل المثال ، الكرات والأسطوانات ليست متعددة الوجوه. 
+ لا يمكن أن تحتوي متعدد الوجوه على أسطح منحنية - على سبيل المثال ، الكرات والأسطوانات ليست متعددة الوجوه. 
 
-تسمى المضلعات التي يتكون منها متعدد [__الوجوه وجوهها__](gloss:polyhedron-face) . تسمى الخطوط التي يتصل فيها وجهان [__بالحواف__](gloss:polyhedron-edge) ، وتسمى الزوايا التي تلتقي فيها الحواف [__بالقمم__](gloss:polyhedron-vertex) . 
+ تسمى المضلعات التي يتكون منها متعدد الوجوه [__وجوهها__](gloss:polyhedron-face) . تسمى الخطوط التي يتصل فيها وجهان [__بالحواف__](gloss:polyhedron-edge) ، وتسمى الزوايا التي تلتقي فيها الحواف [__الرؤوس__](gloss:polyhedron-vertex) . 
 
 ---
 > id: euler
 
-تأتي الأشكال المتعددة الوجوه بأشكال وأحجام مختلفة - من المكعبات البسيطة أو الأهرامات ذات الوجوه القليلة ، إلى الأشياء المعقدة مثل النجم أعلاه ، الذي يحتوي على 60 وجهًا مثلثًا. ومع ذلك ، اتضح أن _جميع_ أشكال الوجوه المتعددة لها خاصية واحدة مشتركة: 
+ تأتي الأشكال المتعددة الوجوه بأشكال وأحجام مختلفة - من المكعبات البسيطة أو الأهرامات ذات الوجوه القليلة ، إلى الأشياء المعقدة مثل النجم أعلاه ، الذي يحتوي على 60 وجهًا مثلثًا. ومع ذلك ، اتضح أن _جميع_ أشكال الوجوه المتعددة لها خاصية واحدة مشتركة: 
 
 ::: .theorem
 
-__صيغة أويلر متعددة الوجوه__  
-في كل شكل متعدد الوجوه ، فإن عدد الوجوه ( _F_ ) بالإضافة إلى عدد القمم ( _V_ ) يزيد بمقدار اثنين عن عدد الحواف ( _E_ ). بعبارات أخرى، 
+ __صيغة أويلر متعددة الوجوه__  
+في كل شكل متعدد الوجوه ، فإن عدد الوجوه ( _F_ ) بالإضافة إلى عدد الرؤوس ( _V_ ) يزيد بمقدار اثنين عن عدد الحواف ( _E_ ). بعبارات أخرى، 
 
 {.text-center}`F + V = E + 2`
 
 :::
 
-على سبيل المثال ، إذا كان متعدد الوجوه يحتوي على 12 وجهًا و 18 قمة ، فإننا نعلم أنه يجب أن يكون له [[28]] حواف. 
+ على سبيل المثال ، إذا كان متعدد الوجوه يحتوي على 12 وجهًا و 18 رؤوس ، فإننا نعلم أنه يجب أن يكون له [[28]] حواف. 
 
 ---
 > id: euler-1
 
-تم اكتشاف هذه المعادلة من قبل عالم الرياضيات السويسري الشهير [ليونارد أويلر](bio:euler) . إنه صحيح لأي متعدد السطوح ، طالما أنه لا يحتوي على أي ثقوب. 
+ تم اكتشاف هذه المعادلة من قبل عالم الرياضيات السويسري الشهير [ليونارد أويلر](bio:euler) . إنه صحيح لأي متعدد السطوح ، طالما أنه لا يحتوي على أي ثقوب. 
 
-إذا جربت العديد من الأشكال المتعددة ، مثل تلك المذكورة أعلاه ، فستجد أن صيغة أويلر تعمل دائمًا. ستتعلم في [دورة لاحقة](/course/graph-theory/planar-graphs) كيفية إثبات ذلك فعليًا رياضيًا. 
+ إذا جربت العديد من الأشكال المتعددة ، مثل تلك المذكورة أعلاه ، فستجد أن صيغة أويلر تعمل دائمًا. ستتعلم في [دورة لاحقة](/course/graph-theory/planar-graphs) كيفية إثبات ذلك فعليًا رياضيًا. 
 
 ---
 
@@ -1267,7 +1293,23 @@ __صيغة أويلر متعددة الوجوه__
 > section: nets-cross-sections
 > sectionStatus: dev
 
-TODO
+ لكى يفعل 
+
+    //إن عالمنا بأكمله ثلاثي الأبعاد - ولكن غالبًا ما يكون من الأسهل رسم أو تصور كائنات مسطحة ثنائية الأبعاد. وهناك عدة طرق ?/مختلفة لعرض متعدد الوجوه ثلاثي الأبعاد بطريقة ثنائية الأبعاد. 
+
+    //- x-folding(shape="Tetrahedron" size=400)
+    //- x-folding(shape="Cube" size=400)
+    //- x-folding(shape="Octahedron" size=400)
+    //- x-folding(shape="Dodecahedron" size=400)
+    //- x-folding(shape="Icosahedron" size=400)
+
+    //أي من هذه الشبكات تجعل المكعب يطابق الشبكة مع الكائن https://github.com/polymake/matchthenet شبكات الرسم 
+
+    //وصف المقطع العرضي الذي شكله تقاطع المستوى والصلب. 
+
+    //المقطع العرضي هو تقاطع مستوى مع صلب. هناك طريقة أخرى لتمثيل شكل ثلاثي الأبعاد في مستوى ثنائي الأبعاد وهي استخدام شبكة. //الشبكة عبارة عن تمثيل مسطح غير مكشوف لجوانب الشكل ثلاثي الأبعاد. 
+
+    //قم بتدوير مكعب لعمل مقطع عرضي سداسي 
 
 ---
 
@@ -1276,7 +1318,7 @@ TODO
 > section: prisms-pyramids
 > sectionStatus: dev
 
-لكى يفعل 
+ لكى يفعل 
 
 ---
 
@@ -1285,7 +1327,7 @@ TODO
 > section: scaling
 > sectionStatus: dev
 
-لكى يفعل 
+ لكى يفعل 
 
 ---
 
@@ -1293,11 +1335,14 @@ TODO
 
 > section: platonic
 > id: platonic
-> translated: auto
 
-في بداية هذه الدورة ، قمنا بتعريف [المضلعات المنتظمة على](gloss:regular-polygon) أنها [مضلعات](gloss:regular-polygon) "متماثلة" بشكل خاص ، حيث تكون جميع الجوانب والزوايا متشابهة. يمكننا القيام بشيء مماثل للعديد من الوجوه. 
+ في بداية هذه الدورة ، قمنا بتعريف [المصلع العادي ](gloss:regular-polygon) أنها "متماثلة" بشكل خاص ، حيث تكون جميع الجوانب والزوايا متشابهة. يمكننا القيام بشيء مماثل للعديد من الوجوه. 
 
-في _متعدد الوجوه العادي ، تكون_ جميع [الوجوه](gloss:polyhedron-face) من نفس النوع من المضلع المنتظم ، ويقابل نفس العدد من الوجوه في كل [قمة](gloss:polyhedron-vertex) . تسمى Polyhedra مع هاتين الخاصيتين [__بالجوامد الأفلاطونية الصلبة__](gloss:platonic-solid) ، التي سميت باسم الفيلسوف اليوناني [أفلاطون](bio:plato) . 
+ في _متعدد الوجوه العادي ، تكون_ جميع [الوجوه](gloss:polyhedron-face) من نفس النوع من المضلع المنتظم ، ويقابل نفس العدد من الوجوه في كل [رأس](gloss:polyhedron-vertex) . تسمى متعدد الوجوه مع هاتين الخاصيتين [__بالجوامد الأفلاطونية الصلبة__](gloss:platonic-solid) ، التي سميت باسم الفيلسوف اليوناني [أفلاطون](bio:plato) . 
+
+    //- The pyramid on the right of not a Platonic solid. It consists of two
+    //- different kinds of polygons (squares and triangles), and it has [[4]]
+    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
  إذن كيف تبدو المواد الصلبة الأفلاطونية - وكم منها موجودة؟ لإنشاء شكل ثلاثي الأبعاد ، نحتاج إلى [[3]] وجوه على الأقل لمقابلتها في كل قمة. لنبدأ بشكل منتظم بأصغر مضلع منتظم: مثلثات متساوية الأضلاع: 
 
@@ -1314,7 +1359,7 @@ TODO
 
 ::: column.grow
 
-إذا قمنا بإنشاء متعدد السطوح حيث تلتقي ثلاثة [مثلثات متساوية الأضلاع](gloss:equilateral-triangle) في كل قمة ، نحصل على الشكل على اليسار. ويسمى __رباعي الأسطح__ وله [[4]] وجوه. _{.reveal(when="blank-0")} ("Tetra" تعني "أربعة" في اليونانية)._ 
+ إذا قمنا بإنشاء متعدد السطوح حيث تلتقي ثلاثة [مثلثات متساوية الأضلاع](gloss:equilateral-triangle) في كل رأس ، نحصل على الشكل على اليسار. ويسمى __Tetrahedron__ وله [[4]] وجوه. _{.reveal(when="blank-0")} ("Tetra" تعني "أربعة" في اليونانية)._ 
 
 :::
 
@@ -1331,7 +1376,7 @@ TODO
 
 ::: column.grow
 
-إذا اجتمعت أربعة مثلثات متساوية الأضلاع في كل قمة ، نحصل على مادة صخر أفلاطونية مختلفة. يطلق عليه __Octahedron__ وله [[8]] وجوه. _{.reveal(when="blank-0")} ("Octa" تعني "ثمانية" في اليونانية. تمامًا مثل "Octagon" تعني شكلًا ذا 8 جوانب ، "Octahedron" تعني مادة صلبة ذات 8 وجوه.)_ 
+ إذا اجتمعت أربعة مثلثات متساوية الأضلاع في كل رأس ، نحصل على مادة صخر أفلاطونية مختلفة. يطلق عليه __Octahedron__ وله [[8]] وجوه. _{.reveal(when="blank-0")} ("Octa" تعني "ثمانية" في اليونانية. تمامًا مثل "Octagon" تعني شكلًا ذا 8 جوانب ، "Octahedron" تعني مادة صلبة ذات 8 وجوه.)_ 
 
 :::
 
@@ -1348,7 +1393,7 @@ TODO
 
 ::: column.grow
 
-إذا اجتمعت [[خمسة]] مثلثات في كل قمة ، نحصل على __Icosahedron__ . لها [[20 وجه]] . _{.reveal(when="blank-1")} ("إيكوزا" تعني "عشرين" باللغة اليونانية)._ 
+ إذا اجتمعت [[خمسة]] مثلثات في كل رأس ، نحصل على __Icosahedron__ . لها [[20 وجه]] . _{.reveal(when="blank-1")} ("إيكوزا" تعني "عشرين" باللغة اليونانية)._ 
 
 :::
 
@@ -1363,7 +1408,7 @@ TODO
 
 ::: column.grow
 
-إذا اجتمعت [[ستة]] مثلثات في كل قمة ، يحدث شيء مختلف: نحصل ببساطة على [[التغطية بالفسيفساء | رباعي الأضلاع | Icosahedron آخر]] ، _{span.reveal(when="blank-1")} بدلاً من متعدد الوجوه ثلاثي الأبعاد._ 
+ إذا اجتمعت [[ستة]] مثلثات في كل رأس ، يحدث شيء مختلف: نحصل ببساطة على [[التغطية بالفسيفساء | رباعي الأضلاع | Icosahedron آخر]] ، _{span.reveal(when="blank-1")} بدلاً من متعدد الوجوه ثلاثي الأبعاد._ 
 
 :::
 
@@ -1378,11 +1423,11 @@ TODO
 
 ::: column.grow
 
-كما أن سبعة مثلثات أو أكثر في كل قمة لا تنتج أيضًا العديد من الأشكال المتعددة الوجوه: لا توجد مساحة كافية حول الرأس ، لتناسب العديد من المثلثات. 
+ كما أن سبعة مثلثات أو أكثر في كل رأس لا تنتج أيضًا العديد من الأشكال المتعددة الوجوه: لا توجد مساحة كافية حول الرأس ، لتناسب العديد من المثلثات. 
 
 :::
 
-هذا يعني أننا وجدنا [[ثلاث]] مواد صلبة أفلاطونية تتكون من مثلثات. دعنا ننتقل إلى المضلع المنتظم التالي: المربعات. 
+ هذا يعني أننا وجدنا [[ثلاث]] مواد صلبة أفلاطونية تتكون من مثلثات. دعنا ننتقل إلى المضلع المنتظم التالي: المربعات. 
 
 ---
 > id: platonic-cube
@@ -1397,7 +1442,7 @@ TODO
 
 ::: column.grow
 
-إذا اجتمعت [[ثلاثة]] مربعات في كل قمة ، نحصل على __المكعب__ . تماما مثل النرد ، لديه [[6]] وجوه. _{span.reveal(when="blank-1")} يُطلق على المكعب أحيانًا اسم _Hexahedron_ ، بعد الكلمة اليونانية "hexa" لكلمة "six"._ 
+ إذا اجتمعت [[ثلاثة]] مربعات في كل رأس ، نحصل على __المكعب__ . تماما مثل النرد ، لديه [[6]] وجوه. _{span.reveal(when="blank-1")} يُطلق على المكعب أحيانًا اسم _Hexahedron_ ، بعد الكلمة اليونانية "hexa" لكلمة "six"._ 
 
 :::
 
@@ -1412,14 +1457,14 @@ TODO
 
 ::: column.grow
 
-إذا اجتمعت [[أربعة]] مربعات في كل قمة ، نحصل على [[فسيفساء أخرى | رباعي الأسطح | مكعب آخر]] . _{span.reveal(when="blank-1")} وكما كان الحال من قبل ، لن تعمل خمسة مربعات أو أكثر._ 
+ إذا اجتمعت [[أربعة]] مربعات في كل رأس ، نحصل على [[فسيفساء أخرى | رباعي الأسطح | مكعب آخر]] . _{span.reveal(when="blank-1")} وكما كان الحال من قبل ، لن تعمل خمسة مربعات أو أكثر._ 
 
 :::
 
 ---
 > id: platonic-dodecahedron
 
-بعد ذلك ، دعنا نجرب الخماسي المنتظم: 
+ بعد ذلك ، دعنا نجرب الخماسي المنتظم: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1431,7 +1476,7 @@ TODO
 
 ::: column.grow
 
-إذا __اجتمعت__ [[ثلاث]] خماسي في كل قمة ، نحصل على __Dodecahedron__ . لها [[12 وجه]] . _{.reveal(when="blank-1")} ("Dodeca" تعني "اثنا عشر" باليونانية.)_ 
+ إذا __اجتمعت__ [[ثلاث]] خماسي في كل رأس ، نحصل على __Dodecahedron__ . لها [[12 وجه]] . _{.reveal(when="blank-1")} ("Dodeca" تعني "اثنا عشر" باليونانية.)_ 
 
 :::
 
@@ -1446,14 +1491,14 @@ TODO
 
 ::: column.grow
 
-كما كان من قبل ، [[لا تعمل]] أربعة خماسيات أو أكثر [[| ممكنة]] لأنه لا توجد مساحة كافية. 
+ كما كان من قبل ، [[لا تعمل]] أربعة خماسيات أو أكثر [[لا تستطيع| من الممكن]] لأنه لا توجد مساحة كافية. 
 
 :::
 
 ---
 > id: platonic-hexagons
 
-المضلع المنتظم التالي الذي يجب تجربته هو السداسيات: 
+ المضلع المنتظم التالي الذي يجب تجربته هو السداسيات: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1463,68 +1508,68 @@ TODO
 
 ::: column.grow
 
-إذا اجتمعت ثلاث سداسيات في كل قمة ، نحصل على الفور على [[التغطية بالفسيفساء | متعدد الوجوه | سداسي]] . _{span.reveal(when="blank-0")} نظرًا لعدم وجود مساحة لأكثر من ثلاثة ، يبدو أنه لا توجد مواد صلبة أفلاطونية تتكون من سداسيات._ 
+ إذا اجتمعت ثلاث سداسيات في كل قمة ، نحصل على الفور على [[التغطية بالفسيفساء | متعدد الوجوه | سداسي]] . _{span.reveal(when="blank-0")} نظرًا لعدم وجود مساحة لأكثر من ثلاثة ، يبدو أنه لا توجد مواد صلبة أفلاطونية تتكون من سداسيات._ 
 
 :::
 
 ---
 > id: platonic-final
 
-يحدث نفس الشيء أيضًا لجميع المضلعات المنتظمة ذات أكثر من ستة جوانب. إنهم لا يغطون الشمع ، وبالتأكيد لا نحصل على أي مضلعات ثلاثية الأبعاد. 
+ يحدث نفس الشيء أيضًا لجميع المضلعات المنتظمة ذات أكثر من ستة جوانب. إنهم لا يغطون الشمع ، وبالتأكيد لا نحصل على أي مضلعات ثلاثية الأبعاد. 
 
-هذا يعني أن هناك [[خمسة]] مواد صلبة أفلاطونية فقط! دعنا نلقي نظرة عليها جميعًا معًا: 
+ هذا يعني أن هناك [[خمسة]] مواد صلبة أفلاطونية فقط! دعنا نلقي نظرة عليها جميعًا معًا: 
 
 ---
 > id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 
-__رباعي السطوح__ 
+ __رباعي السطوح__ 
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
-_{span.dual} [[4]] وجوه_  
+ _{span.dual} [[4]] وجوه_  
 _{span.dual} [[4]] رؤوس_  
 _{span.dual} [[6]] حواف_ 
 
 ::: column.grow.text-center(width=120)
 
-__مكعب__ 
+ __مكعب__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
-_{span.dual(target="dual1")} [[6]] وجوه_  
-_{span.dual(target="dual1")} [[8]] القمم_  
+ _{span.dual(target="dual1")} [[6]] وجوه_  
+_{span.dual(target="dual1")} [[8]] رؤوس_  
 _{span.dual} [[12]] حواف_ 
 
 ::: column.grow.text-center(width=120)
 
-__المجسم الثماني__ 
+ __المجسم الثماني__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
-_{span.dual(target="dual1")} [[8]] وجوه_  
+ _{span.dual(target="dual1")} [[8]] وجوه_  
 _{span.dual(target="dual1")} [[6]] رؤوس_  
 _{span.dual} [[12]] حواف_ 
 
 ::: column.grow.text-center(width=120)
 
-__الاثني عشري__ 
+ __الاثني عشري__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
-_{span.dual(target="dual2")} [[12]] وجوه_  
-_{span.dual(target="dual2")} 20 رأس_  
+ _{span.dual(target="dual2")} [[12]] وجوه_  
+_{span.dual(target="dual2")} 20 رؤوس_  
 _{span.dual} 30 حواف_ 
 
 ::: column.grow.text-center(width=120)
 
-__Icosahedron__ 
+ __Icosahedron__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
-_{span.dual(target="dual2")} [[20]] وجوه_  
-_{span.dual(target="dual2")} 12 قمة_  
+ _{span.dual(target="dual2")} [[20]] وجوه_  
+_{span.dual(target="dual2")} 12 رؤوس_  
 _{span.dual} 30 حواف_ 
 
 :::
@@ -1534,7 +1579,7 @@ _{span.dual} 30 حواف_
 ---
 > id: platonic-dual
 
-يمكننا تحويل متعدد الوجوه إلى ثنائيته ، عن طريق "استبدال" كل وجه برأس ، وكل رأس برأس. تظهر هذه الرسوم المتحركة كيف: 
+ يمكننا تحويل متعدد الوجوه إلى ثنائيته ، عن طريق "استبدال" كل وجه برأس ، وكل رأس بوجه. تظهر هذه الرسوم المتحركة كيف: 
 
 ::: column(width=300)
 
@@ -1548,16 +1593,16 @@ _{span.dual} 30 حواف_
 
 :::
 
-إن رباعي الأسطح ثنائي مع نفسه. نظرًا لأنه يحتوي على نفس العدد من الوجوه والرؤوس ، فإن تبديلها لن يغير أي شيء. 
+ إن رباعي الأسطح ثنائي مع نفسه. نظرًا لأنه يحتوي على نفس العدد من الوجوه والرؤوس ، فإن تبديلها لن يغير أي شيء. 
 
 ---
 > id: platonic-elements
 
-يعتقد [أفلاطون](bio:plato) أن جميع المواد في الكون تتكون من أربعة عناصر: الهواء والأرض والماء والنار. كان يعتقد أن كل عنصر يتوافق مع واحدة من المواد الصلبة الأفلاطونية ، في حين أن العنصر الخامس سيمثل الكون ككل. نعلم اليوم أن هناك أكثر من 100 عنصر مختلف يتكون من ذرات كروية ، وليس متعدد الوجوه. 
+ يعتقد [أفلاطون](bio:plato) أن جميع المواد في الكون تتكون من أربعة عناصر: الهواء والأرض والماء والنار. كان يعتقد أن كل عنصر يتوافق مع واحدة من المواد الصلبة الأفلاطونية ، في حين أن العنصر الخامس سيمثل الكون ككل. نعلم اليوم أن هناك أكثر من 100 عنصر مختلف يتكون من ذرات كروية ، وليس متعدد الوجوه. 
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
-      p.caption Images from Johannes Kepler’s book “Harmonices Mundi” (1619)
+      p.caption صور من كتاب يوهانس كيبلر “Harmonices Mundi” (1619)
 
 ---
 
@@ -1565,141 +1610,145 @@ _{span.dual} 30 حواف_
 
 > id: archimedean
 
-المواد الصلبة الأفلاطونية هي متعددة الوجوه بشكل خاص ، ولكن هناك عدد لا يحصى من الآخرين. 
+ المواد الصلبة الأفلاطونية هي متعددة الوجوه بشكل خاص ، ولكن هناك عدد لا يحصى من الآخرين. 
 
-على سبيل المثال ، يجب أن تتكون [__المواد الصلبة الأرخميدية__](gloss:archimedean-solid) من [مضلعات عادية](gloss:regular-polygon) ، ولكن يمكنك استخدام أنواع مختلفة متعددة. تم تسميتهم على اسم عالم رياضيات يوناني آخر ، [أرخميدس من سيراكيوز](bio:archimedes) ، وهناك 13 منهم: 
+ على سبيل المثال ، يجب أن تتكون [__المواد الصلبة الأرخميدية__](gloss:archimedean-solid) من [مضلعات عادية](gloss:regular-polygon) ، ولكن يمكنك استخدام أنواع مختلفة متعددة. تم تسميتهم على اسم عالم رياضيات يوناني آخر ، [أرخميدس من سيراكيوز](bio:archimedes) ، وهناك 13 منهم: 
 
 ::: column(width=170 parent="padded-thin")
 
     x-polyhedron(size=170 shape="TruncatedTetrahedron")
 
-{.caption} __مقطوع رباعي الأسطح__  
-8 وجوه و 12 قمة و 18 حواف 
+{.caption} __Truncated Tetrahedron__  
+8 وجوه و 12 رؤوس و 18 حواف 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="Cuboctahedron")
 
 {.caption} __Cuboctahedron__  
-14 وجهًا ، 12 قمة ، 24 حافة 
+14 وجهًا ، 12 رؤوس ، 24 حافة 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="TruncatedCube")
 
-{.caption} __مكعب مبتور__  
-14 وجهًا ، 24 رأسًا ، 36 حافة 
+{.caption} __Truncated Cube__   
+14 وجهًا ، 24 رؤوس ، 36 حافة 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="TruncatedOctahedron")
 
-{.caption} __مبتور ثماني__  
-14 وجهًا ، 24 رأسًا ، 36 حافة 
+{.caption} __Truncated Octahedron__   
+14 وجهًا ، 24 رؤوس ، 36 حافة 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="Rhombicuboctahedron")
 
-{.caption} __المعين__  
-26 وجهًا ، 24 رأسًا ، 48 حافة 
+{.caption} __Rhombicuboctahedron__  
+26 وجهًا ، 24 رؤوس ، 48 حافة 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __مقطوع مكعب__  
-26 وجهًا ، 48 قمة ، 72 حافة 
+{.caption} __Truncated Cuboctahedron__   
+26 وجهًا ، 48 رؤوس ، 72 حافة 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="SnubCube")
 
-{.caption} __صراع مكعب__  
-38 وجهًا ، 24 رأسًا ، 60 حوافًا 
+{.caption} __Snub Cube__  
+38 وجهًا ، 24 رؤوس ، 60 حوافًا 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="Icosidodecahedron")
 
 {.caption} __Icosidodecahedron__  
-32 وجهًا ، 30 رأسًا ، 60 حوافًا 
+32 وجهًا ، 30 رؤوس ، 60 حوافًا 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="TruncatedDodecahedron")
 
-{.caption} __Dodecahedron مقطوع__  
-32 وجهًا ، 60 قمة ، 90 حافة 
+{.caption} __Truncated Dodecahedron__   
+32 وجهًا ، 60 رؤوس ، 90 حافة 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="TruncatedIcosahedron")
 
-{.caption} __مقطوع Icosahedron__  
-32 وجهًا ، 60 قمة ، 90 حافة 
+{.caption} __Truncated Icosahedron__  
+32 وجهًا ، 60 رؤوس ، 90 حافة 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="Rhombicosidodecahedron")
 
-{.caption} __المعينية__  
-62 وجهًا ، 60 قمة ، 120 حافة 
+{.caption} __Rhombicosidodecahedron__  
+62 وجهًا ، 60 رؤوس ، 120 حافة 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="TruncatedIcosidodecahedron")
 
-{.caption} __مقطوع Icosidodecahedron__  
-62 وجهًا ، 120 رأسًا ، 180 حافة 
+{.caption} __Truncated Icosidodecahedron__  
+62 وجهًا ، 120 رؤوس ، 180 حافة 
 
 ::: column(width=170)
 
     x-polyhedron(size=170 shape="SnubDodecahedron")
 
-{.caption} __صخب Dodecahedron__  
-92 وجهًا ، 60 قمة ، 150 حافة 
+{.caption} __Snub Dodecahedron__ 
+92 وجهًا ، 60 رؤوس ، 150 حافة 
 
 :::
+
+    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
+    // generally not considered to be Archimedean solids, despite meeting the
+    // above definition.
 
 ---
 > id: polyhedra-applications
 
 ### التطبيقات 
 
-كان أفلاطون مخطئًا في الاعتقاد بأن جميع العناصر تتكون من المواد الصلبة الأفلاطونية. لكن للعديد من الوجوه العادية العديد من الخصائص الخاصة التي تجعلها تظهر في مكان آخر في الطبيعة - ويمكننا نسخ هذه الخصائص في العلوم والهندسة. 
+ كان أفلاطون مخطئًا في الاعتقاد بأن جميع العناصر تتكون من المواد الصلبة الأفلاطونية. لكن للعديد من الوجوه العادية العديد من الخصائص الخاصة التي تجعلها تظهر في مكان آخر في الطبيعة - ويمكننا نسخ هذه الخصائص في العلوم والهندسة. 
 
 ::: column(width=180)
 
     x-img(lightbox width=180 height=180 src="images/radiolaria.jpg")
-    p.caption Radiolaria skeleton
+    p.caption Radiolaria هيكل عظمي
 
 ::: column(width=180)
 
     x-img(lightbox width=180 height=180 src="images/virus.jpg")
-    p.caption Icosahedral virus
+    p.caption Icosahedral فايروس
 
 ::: column.grow
 
-تتشكل العديد من __الفيروسات__ __والبكتيريا__ __والكائنات الحية__ الصغيرة الأخرى مثل [إيكوساهيدرا](gloss:icosahedron) . على سبيل المثال ، يجب أن تحصر الفيروسات موادها الوراثية داخل غلاف العديد من وحدات البروتين المتطابقة. يعد الأسطح المجهرية هي الطريقة الأكثر فاعلية للقيام بذلك ، لأنها تتكون من بعض العناصر المنتظمة ولكنها تشبه شكل الكرة تقريبًا. 
+ تتشكل العديد من __الفيروسات__ __والبكتيريا__ __والكائنات الحية__ الصغيرة الأخرى مثل [Icosahedron](gloss:icosahedron) . على سبيل المثال ، يجب أن تحصر الفيروسات موادها الوراثية داخل غلاف العديد من وحدات البروتين المتطابقة. يعد الأسطح المجهرية هي الطريقة الأكثر فاعلية للقيام بذلك ، لأنها تتكون من بعض العناصر المنتظمة ولكنها تشبه شكل الكرة تقريبًا. 
 
 :::
 
 ::: column(width=180)
 
     x-img(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
-    p.caption Buckyball molecule
+    p.caption Buckyball الجزيئات
 
 ::: column(width=180)
 
     x-img(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
-    p.caption Montreal Biosphere
+    p.caption مونتريال Biosphere
 
 ::: column.grow
 
-تتشكل العديد من __الجزيئات__ مثل الأشكال المتعددة الوجوه العادية. المثال الأكثر شهرة هو `C_60` والتي تتكون من 60 ذرة كربون مرتبة على شكل [إيكوساهيدرون مقطوع](gloss:truncated-icosahedron) . 
+ تتشكل العديد من __الجزيئات__ مثل الأشكال المتعددة الوجوه العادية. المثال الأكثر شهرة هو `C_60` والتي تتكون من 60 ذرة كربون مرتبة على شكل [Trucated Icosahedron](gloss:truncated-icosahedron) . 
 
-تم اكتشافه في عام 1985 عندما بحث العلماء في الغبار بين النجوم. أطلقوا عليه اسم "Buckyball" (أو Buckminsterfullerene) على اسم المهندس المعماري [Buckminster Fuller](bio:fuller) ، المشهور ببناء مباني متشابهة المظهر. 
+ تم اكتشافه في عام 1985 عندما بحث العلماء في الغبار بين النجوم. أطلقوا عليه اسم "Buckyball" (أو Buckminster fullerene) على اسم المهندس المعماري [بكمنستر فولر](bio:fuller) ، المشهور ببناء مباني متشابهة المظهر. 
 
 :::
 
@@ -1711,44 +1760,45 @@ _{span.dual} 30 حواف_
 ::: column(width=180)
 
     x-img(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
-    p.caption Pyrite cube
+    p.caption Pyrite مكعب
 
 ::: column.grow
 
-معظم __البلورات__ لها ذراتها مرتبة في شبكة منتظمة تتكون من [رباعي الأرجل](gloss:tetrahedron) أو [المكعبات](gloss:cube) أو [الثماني](gloss:octahedron) . عندما تتشقق أو تتحطم ، يمكنك رؤية هذه الأشكال على نطاق أكبر. 
+ معظم __البلورات__ لها ذراتها مرتبة في شبكة منتظمة تتكون من [رباعي السطوح
+](gloss:tetrahedron) أو [المكعبات](gloss:cube) أو [ثماني السطوح](gloss:octahedron) . عندما تتشقق أو تتحطم ، يمكنك رؤية هذه الأشكال على نطاق أكبر. 
 
 :::
 
 ::: column(width=180)
 
     x-img(lightbox, credit="Andrew Dunn, via Wikipedia", width="180", height="180", src="images/space-frame.jpg")
-    p.caption Octagonal space frames
+    p.caption إطارات مثمنة
 
 ::: column(width=180)
 
     x-img(lightbox width="180", height="180", src="images/louvre.jpg")
-    p.caption Louvre museum in Paris
+    p.caption متحف اللوفر في باريس
 
 ::: column.grow
 
-Tetrahedra و octahedra صلبة ومستقرة بشكل لا يصدق ، مما يجعلها مفيدة للغاية في __البناء__ . _إطارات الفضاء_ هي هياكل متعددة الأضلاع يمكنها دعم الأسقف الكبيرة والجسور الثقيلة. 
+ رباعي السطوح و أو ثماني السطوح صلبة ومستقرة بشكل لا يصدق ، مما يجعلها مفيدة للغاية في __البناء__ . _إطارات الفضاء_ هي هياكل متعددة الأضلاع يمكنها دعم الأسقف الكبيرة والجسور الثقيلة. 
 
 :::
 
 ::: column(width=180)
 
     x-img(lightbox width="180", height="180", src="images/football.jpg")
-    p.caption Football
+    p.caption كرة القدم
 
 ::: column(width=180)
 
     x-img(lightbox width="180", height="180", src="images/dice.jpg")
-    p.caption Polygonal role-playing dice
+    p.caption الزهر المضلع
 
 ::: column.grow
 
-كما تستخدم المواد الصلبة الأفلاطونية لإنشاء __النرد__ . بسبب تناظرها ، فإن كل جانب لديه [احتمالية](gloss:probability) الهبوط مواجهة - لذلك النرد عادلة. 
+ كما تستخدم المواد الصلبة الأفلاطونية لإنشاء __زهر الطاولة__ . بسبب تناظرها ، فإن كل جانب لديه [احتمالية](gloss:probability) الهبوط مواجهة - لذلك النرد عادلة. 
 
-من المحتمل أن يكون [Icosahedron](gloss:truncated-icosahedron) الأكثر شهرة في العالم: إنه شكل كرة القدم. 
+ من المحتمل أن يكون [Icosahedron](gloss:truncated-icosahedron) الأكثر شهرة في العالم: إنه شكل كرة القدم. 
 
 :::

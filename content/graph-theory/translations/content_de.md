@@ -330,10 +330,10 @@ Einschließlich dir selbst und dem Gastgeber sind ${hnd}{hnd|5|3,15,1} Gäste an
 Als die Gäste sich abends zum Aufbruch bereit machen, schüttelt jeder jedem anderen die Hand.
 Wie oft werden insgesamt die Hände geschüttelt?
 
-Wir können das Händeschütteln mit einem Graphen darstellen: jede Person entspricht [[einem Knoten|einer Kante]], und jedes Händesschütteln entspricht [[einer Kante|einem Knoten]].
+Wir können das Händeschütteln mit einem Graphen darstellen: jeder Gast entspricht [[einem Knoten|einer Kante]], und jedes Händesschütteln entspricht [[einer Kante|einem Knoten]].
 
 {.reveal(when='blank-0 blank-1')} Jetzt kann man ganz einfach die Anzahl der Kanten im Graphen zählen. Wir stellen
-fest, dass bei ${hnd} Leuten ${hnd*(hnd-1)/2} mal die Hände geschüttelt werden.
+fest, dass bei ${hnd} Gästen ${hnd*(hnd-1)/2} mal die Hände geschüttelt werden.
 
 ::: column.s-hide(width=240)
 
@@ -363,8 +363,9 @@ td:first-child, .handshakes tr:first-child td:nth-child(2)">die ersten beiden Ei
 in der obersten Zeile</x-target> eigentlich identisch sind, nur umgedreht.
 
 Tatsächlich haben wir jedes Händeschütteln [[zweimal|einmal|dreimal]] gezählt, _{span.reveal(when="blank-0")}
-einmal für jede der beiden beteiligten Personen. Das bedeutet, dass die korrekte
-Anzahl des Händeschüttelns bei ${n}{n|5|2,25,1} Gästen `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` beträgt._
+einmal für jeden der beiden beteiligten Gäste. Das bedeutet, dass die korrekte
+Anzahl wie oft bei ${n}{n|5|2,25,1} Gästen einander die Hände geschüttelt werden
+`(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` beträgt._
 
 ---
 > id: handshakes-3
@@ -375,7 +376,7 @@ genannt. Ein vollständiger Graph mit 4 Knoten wird oft als `K_4` abgekürzt, ei
 vollständiger Graph mit 5 Knoten wird als `K_5` bezeichnet, und so weiter.
 
 Wir haben gerade gezeigt, dass ein vollständiger Graph mit `n` Knoten, also `K_n`,
-`(n × (n-1))/2` Kanten hat.
+genau `(n × (n-1))/2` Kanten hat.
 
     .row
       svg.graph(style="width: 90px; height: 90px")
@@ -508,28 +509,28 @@ in mehrere Bereiche, genannt __Flächen__.
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Knoten  
+{.text-center} [[6]] Ecken (Knoten)  
 [[5]] Flächen  
 [[10]] Kanten  
-_{span.euler-sum} 11 Knoten + Flächen_
+_{span.euler-sum} 11 Ecken + Flächen_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] Knoten  
+{.text-center} [[8]] Ecken (Knoten)  
 [[7]] Flächen  
 [[14]] Kanten  
-_{span.euler-sum} 15 Knoten + Flächen_
+_{span.euler-sum} 15 Ecken + Flächen_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] Knoten  
+{.text-center} [[12]] Ecken (Knoten)  
 [[13]] Flächen  
 [[24]] Kanten  
-_{span.euler-sum} 25 Knoten + Flächen_
+_{span.euler-sum} 25 Ecken + Flächen_
 
 :::
 
@@ -538,7 +539,8 @@ _{span.euler-sum} 25 Knoten + Flächen_
 
 Wenn du diese Zahlen vergleichst, wirst du feststellen, dass die Anzahl der Kanten
 immer [[eins weniger|größer|dieselbe]] ist als die Anzahl der Flächen plus die Anzahl
-der Knoten. Mit anderen Worten: _{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + 1.
+der Knoten, die wir hier als Ecken E bezeichnen wollen. Mit anderen Worten:
+_{.b.blue}F_ + _{.b.green}E_ = _{.b.red}K_ + 1.
 Dieses Ergebnis wollen wir __Euler-Formel__ nennen, nach demselben
 [Mathematiker](bio:euler), der auch das Problem der Königsberger Brücken gelöst hat.
 
@@ -566,8 +568,8 @@ jeden Graphen funktioniert...
           table.grid.table-small
             tr
               td: strong.blue.i F
-              td: strong.green.i K
-              td: strong.red.i Ka
+              td: strong.green.i E
+              td: strong.red.i K
             tr
               td.xf 0
               td.xv 1
@@ -854,13 +856,20 @@ Tatsächlich können wir jeden beliebigen Knoten als Startpunkt wählen und dann
 ---
 > id: salesman-2
 
-In einer Grafik mit ${tsn1}{tsn1|4|2,10,1} Städten muss auch jeder Hamiltonkreis
-${tsn1} Städte enthalten. Somit gilt:
+In einem Graphen mit 8 Städten muss jeder Hamiltonkreis auch 8 Städte enthalten. Somit gilt:
 
-    ul.var(:html="tsmString(tsn1)")
+//    ul.var(:html="tsmString(tsn1)")
 
-Dies bedeutet, dass es insgesamt ${tsnPaths(tsn1)} mögliche Pfade gibt. Eine Kurzschreibweise
-für dieses Produkt ist ${tsn1}! oder __Faktor__ ${tsn1}.
+- Es gibt 8 Auswahlmöglichkeiten für die 1. Stadt.
+- Nachdem die erste Stadt ausgewählt wurde, gibt es nur noch 7 Auswahlmöglichkeiten für die 2. Stadt.
+- Danach gibt es 6 Auswahlmöglichkeiten für die 3. Stadt.
+- Weiter geht's mit 5 Auswahlmöglichkeiten für die 4. Stadt.
+- Dann gibt es noch 4 Auswahlmöglichkeiten für die 5. Stadt.
+- …
+- Schließlich bleibt für die 8. Stadt nur noch 1 Wahl übrig.
+
+Dies bedeutet, dass es insgesamt 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 = 40,320 mögliche Pfade gibt.
+Eine Kurzschreibweise für dieses Produkt ist 8! oder __Faktor__ 8.
 
 Du kannst dir vorstellen, dass es unter Umständen nicht möglich ist, direkt zwischen zwei
 Städten zu reisen, ohne dabei über eine andere Stadt zu fahren. In diesem Fall haben wir
@@ -914,8 +923,8 @@ und du kannst Städte hinzufügen (bis zu 8), indem du irgendwo auf die Karte kl
 
 Der __Greedy-Algorithmus__ (oder Nearest-Neighbor-Algorithmus, "Nächster-Nachbar"
 bzw. "gieriger" Algorithmus) ist sehr einfach: Du beginnst in einer zufälligen Stadt
-und bewegst dich nacheinander in die nächste Stadt, die du noch nicht besucht hast.
-Wenn du alle Städte besucht hast, hältst du an.
+und bewegst dich nacheinander in die jeweils nächstgelegene Stadt, die du noch nicht
+besucht hast. Wenn du alle Städte besucht hast, hältst du an.
 
 ::: column(width=300)
 
