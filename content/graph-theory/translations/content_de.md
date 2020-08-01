@@ -509,28 +509,28 @@ in mehrere Bereiche, genannt __Flächen__.
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Knoten  
+{.text-center} [[6]] Ecken (Knoten)  
 [[5]] Flächen  
 [[10]] Kanten  
-_{span.euler-sum} 11 Knoten + Flächen_
+_{span.euler-sum} 11 Ecken + Flächen_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] Knoten  
+{.text-center} [[8]] Ecken (Knoten)  
 [[7]] Flächen  
 [[14]] Kanten  
-_{span.euler-sum} 15 Knoten + Flächen_
+_{span.euler-sum} 15 Ecken + Flächen_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] Knoten  
+{.text-center} [[12]] Ecken (Knoten)  
 [[13]] Flächen  
 [[24]] Kanten  
-_{span.euler-sum} 25 Knoten + Flächen_
+_{span.euler-sum} 25 Ecken + Flächen_
 
 :::
 
@@ -539,7 +539,8 @@ _{span.euler-sum} 25 Knoten + Flächen_
 
 Wenn du diese Zahlen vergleichst, wirst du feststellen, dass die Anzahl der Kanten
 immer [[eins weniger|größer|dieselbe]] ist als die Anzahl der Flächen plus die Anzahl
-der Knoten. Mit anderen Worten: _{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + 1.
+der Knoten, die wir hier als Ecken E bezeichnen wollen. Mit anderen Worten:
+_{.b.blue}F_ + _{.b.green}E_ = _{.b.red}K_ + 1.
 Dieses Ergebnis wollen wir __Euler-Formel__ nennen, nach demselben
 [Mathematiker](bio:euler), der auch das Problem der Königsberger Brücken gelöst hat.
 
@@ -567,8 +568,8 @@ jeden Graphen funktioniert...
           table.grid.table-small
             tr
               td: strong.blue.i F
-              td: strong.green.i K
-              td: strong.red.i Ka
+              td: strong.green.i E
+              td: strong.red.i K
             tr
               td.xf 0
               td.xv 1
