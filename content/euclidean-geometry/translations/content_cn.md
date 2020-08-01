@@ -419,25 +419,17 @@ _{button.next-step} 继续_
 
 ---
 
-## Ruler and Compass Construction
+## 直尺与圆规构建
 
 > section: construction
 > id: measuring
 
-You might have noticed that Euclid’s five axioms don’t contain anything about
-_measuring_ distances or angles. Up to now, this has been a key part of
-geometry, for example to calculate areas and volumes.
+你可能已经注意到，欧几里得的五条公里并没有包含任何关于距离与角度的 _测量_，而这却是几何学中的一个关键部分，例如计算面积和体积。
 
 ::: column.grow
-However, at the times of Thales or Euclid, there wasn’t a universal framework of
-units like we have today. Distances were often measured using body parts, for
-example finger widths, or arm lengths. These are not very accurate and they vary
-for different people.
+然而，在泰勒斯或欧几里得时代，还没有像我们今天使用的通用度量单位，距离通常是使用像手指宽度，或手臂长度这样的身体部位来测量的，这些都不是很准备，因人而异。
 
-To measure longer distances, architects or surveyors used _knotted cords_: long
-pieces of string that contained many knots at equal intervals. But these were
-also not perfectly accurate, and different string had the knots placed at
-slightly different distances.
+为了测试长距离，建筑师或测量师通常使用 _打结的绳子_ ：每隔相同距离有许多结的长绳子，但这些也不是很准确，并且不同的绳子打结的位置距离也有所不同。
 
     figure: x-img(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
 
@@ -447,15 +439,9 @@ slightly different distances.
 
 :::
 
-Greek mathematicians didn’t want to deal with these approximations. They were
-much more interested in the underlying laws of geometry, than in their practical
-applications.
+希腊数学家们不想以这些近似的方式去处理，他们对底层的几何规律比实际应用更感兴趣。
 
-That’s why they came up with a much more idealised version of our universe: one
-in which points can have no size and lines can have no width. Of course, it is
-[[impossible|very difficult]] to draw these on paper. Visible points will always
-take up some space, and lines will always have some width. This is why our
-drawings are always just “approximations”.
+这就是为什么他们抽象出了一个更理想化的通用版本：点没有大小，线没有宽度。当然，这些 [[不可能|很难]]在纸上画出来，可见的点总会占用空间，线也总会有宽度，这也是为什么我们的绘图只能是“近似”。
 
 ---
 > id: tools
@@ -463,9 +449,7 @@ drawings are always just “approximations”.
 
     figure: img(src="images/divider-1.svg" width=760 height=42)
 
-Euclid’ axioms basically tell us _what’s possible_ in his version of geometry.
-It turns out that we just need two very simple tools to be able to sketch this
-on paper:
+欧几里得的公理告诉我们，在他的几何学版本里 _什么是可能的_ 。事实证明，我们只需要两个非常简单的工具就可以在纸上画出这一切：
 
 ::: column(width=320)
 
@@ -476,9 +460,7 @@ on paper:
         path.red(name="l1" x="segment(a,b)" hidden)
       x-play-btn
 
-{.text-center} A __straight-edge__ is like a ruler but without any markings. You
-can use it to connect two points (as in Axiom 1), or to extend a line segment
-(as in Axiom 2).
+{.text-center} __直尺__ 就像一把没有任何标记的尺子。你可以用它将两点（如公理一所示）连起来，或者扩展一条线段（如公理二所示）
 
 ::: column.reveal(width=300 when="play-l1")
 
@@ -490,33 +472,24 @@ can use it to connect two points (as in Axiom 1), or to extend a line segment
         path.red(name="c1" x="arc(c,d,1.99*pi)" hidden)
       x-play-btn
 
-{.text-center} A __compass__ allows you to draw a circle of a given size around
-a point (as in Axiom 3).
+{.text-center} __圆规__ 让你可以一点为中心画一个给定大小的圆（如公理三所示）
 :::
 
 ---
 > id: construction
 
-Axioms 4 and 5 are about comparing properties of shapes, rather than drawing
-anything. Therefore they don’t need specific tools.
+公理四和公理五主要是关于形状的比较，而不是画什么，因此它们不需要任何特定的工具
 
 ::: column.grow
-You can imagine that Greek mathematicians were thinking about Geometry on the
-beach, and drawing different shapes in the sand: using long planks as
-straight-edge and pieces of string as compass.
+你可以想象出，希腊数学家们在海难上思考几何学，在沙地上画出不同的形状：使用长木板作为直尺，一截绳子用作圆规
 
-Even though these tools look very primitive, you can draw a great number of
-shapes with them. This became almost like a puzzle game for mathematicians:
-trying to find ways to “construct” different geometric shapes using just a
-straight-edge and compass.
+尽管这些工具看起来比较原始，但你可以用它们画出大量的形状，这对数学家们来说就像玩益智游戏：试图找到一种方法仅仅使用直尺和圆规去“构建”不同的几何图形
 
 ::: column(width=340)
 
     x-img(src="images/archimedes.jpg" width=340 height=265)
 
-{.caption} The Greek Mathematician [Archimedes](bio:archimedes) was studying
-Geometry when he was killed by Roman invaders. His last words were “do not
-disturb my circles”.
+{.caption} 希腊数学家[阿基米德](bio:archimedes) 被罗马侵略者杀害的时候，他正在研究几何学，他说的最后一句话是“不要弄坏我的圆形”。
 :::
 
 ---
@@ -528,36 +501,23 @@ disturb my circles”.
     x-geopad.sticky(width=320 tools="move|line|circle" intersections projections="no"): svg
 
 ::: column.grow
-{.task} Draw an [equilateral triangle](gloss:equilateral-triangle) using just a
-straight-edge and compass.
+{.task} 使用直尺和圆规画一个[等边三角形](gloss:equilateral-triangle) 。
 
-To begin, draw a line segment anywhere in a box on the right. With the
-<x-target no-margins to="#equilateral .tool:nth-child(3)">line tool</x-target>
-selected, simply drag from start to end. This segment will be one of the sides
-of the triangle.
+首先，选择<x-target no-margins to="#equilateral .tool:nth-child(3)">画线工具</x-target>，在右边的框中任意位置画一条线段，简单的从起始点拖到终点即可，这条线段作为三角形的一条边。
 
-{.reveal(when="segment0")} Next, draw two circles that have one of the endpoints
-of the line segments as center, and go through the other endpoint. With
-the <x-target no-margins to="#equilateral .tool:nth-child(5)">circle tool</x-target> selected,
-simply drag from one endpoint to the other.
+{.reveal(when="segment0")} 接下来，选择<x-target no-margins to="#equilateral .tool:nth-child(5)">画圆工具</x-target>，以该线段的端点为圆心画两个圆，只需要从其中一个端点拖到另一个端点即可。
 
-{.reveal(when="circle1 circle2")} We already have two vertices of the triangle,
-and the third one is the intersection of the two circles. Use the line tool
-again to draw the two missing sides and complete the triangle.
+{.reveal(when="circle1 circle2")} 三角形的其中两个端点我们已经有了，而两个圆的交点是第三个交点，再次用直线工具将缺失的边画上就完成了三角形的绘制。
 
-{.reveal(when="segment1 segment2")} Now [these two sides](target:a) and
-[these two sides](target:b) are each [[radii|diameters|circumferences]] of the
-same circle, _{span.reveal(when="blank-0")} so they must have the same length.
-In other words, all three sides of the triangle are congruent – and therefore it
-is indeed an equilateral triangle._
+{.reveal(when="segment1 segment2")} 现在[这两条边](target:a)和[这两条边](target:b) 都是同一个圆的[[半径 |直径|圆周 ]] ，_{span.reveal(when="blank-0")} 因此他们的长度一定相等，换句话说，这个三角形的三条边都是相等的，因此它确实是一个等边三角形。_
 :::
 
 ---
 > id: perp-bisector
 
-### Midpoints and Perpendicular Bisectors
+### 中点和垂直平分线
 
-{.todo} COMING SOON – Constructing Midpoints and Perpendicular Bisectors
+{.todo} 即将推出 – 构造中点和垂直平分线
 
     // A midpoint is a point on a line segment that divides it into two congruent
     // segments. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
@@ -570,9 +530,9 @@ is indeed an equilateral triangle._
 ---
 > id: angle-bisector
 
-### Angle Bisectors
+### 角平分线
 
-{.todo} COMING SOON – Constructing Angle Bisectors
+{.todo} 即将推出 – 构造角平分线
 
     // When two rays have the same endpoint, an angle is created.
     // 
@@ -593,17 +553,12 @@ is indeed an equilateral triangle._
 ---
 > id: impossible
 
-### Impossible Constructions
+### 不可能完成的构造
 
-In the next chapter, we will see even more shapes that can be constructed
-like this. However, there is a limit to Euclidean geometry: some constructions
-are simply impossible using just straight-edge and compass.
+在下一章中，我们将看到更多像这样可以被构造出来的形状，然而，欧低几何也有限制：有些仅使用直尺和圆规是无法构造出来的。
 
 ::: column.grow
-According to legend, the city of Delos in ancient Greece was once faced with a
-terrible plague. The oracle in Delphi told them that this was a punishment from
-the gods, and the plague would go away if they built a new altar for their
-temple that was _exactly twice_ the volume of the existing one.
+据传，古希腊的提洛斯（Delos）曾遭遇过一场可怕的瘟疫，德尔斐（Delphi）的神谕告诉他们，这是众神的惩罚，如果他们为自己的神庙建造一个新的祭坛，瘟疫就会消失，要求这个祭坛的体积恰好是现有神庙体积的两倍。
 
     figure: img(src="images/altar.svg" width=320 height=140)
 
@@ -611,56 +566,43 @@ temple that was _exactly twice_ the volume of the existing one.
 
     x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
 
-{.caption} A reconstruction of a temple in Delphi
+{.caption} 德尔斐一座寺庙的重建
 :::
 
-Note that _doubling the volume_ is not the same as _doubling an edge of the
-cube_. In fact, if the [[three-dimensional|two-dimensional|one-dimensional]] volume
-increases by a factor of 2, the [[one-dimensional|three-dimensional|two-dimensional]]
-edge of the cube will increase by a factor of `root(2,3)`.
+请注意，将立方体的 _体积加倍_ 并不等于将立方体的 _边长加倍_ 。事实上，立方体[[三维|二维|一维]] 的体积增加两倍，立方体[[一维|三维|二维]]的边将增加`root(2,3)`倍。
 
 ---
 > id: impossible-1
 
-This still sounds pretty simple, but doubling the cube is actually impossible
-in [Euclidean geometry](gloss:euclidean-geometry), using only straight-edge and
-compass! For the citizens of Delos this unfortunately meant that all hope was
-lost. There are two other constructions that are famously impossible.
-Mathematicians devoted a great amount of time trying to find a solution – but
-without success:
+将立方体的体积加倍，这听起来似乎很简单，实际上在仅使用直尺和圆规的[欧氏几何](gloss:euclidean-geometry)中是不可能完成的！这意味着对于提洛斯（Delos）的民众来说，一切的希望都破灭了。还有另外两个知名的构造也是不可能完成的，数学家们花了大量的时间试图找到解决方案 -- 但都没有成功：
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-1.svg" width=200 height=180)
 
-{.text-center} __{.m-red} Trisecting the angle__  
-We already know how to bisect angles. However it is impossible to similarly
-split an angle into _three_ equal parts.
+{.text-center} __{.m-red} 三等分角__  
+我们已知知道如何平分一个角，但是如果要将一个角 _三_ 均等分却是不可能的
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-2.svg" width=200 height=180)
 
-{.text-center} __{.m-blue} Doubling the cube__  
-Given the edge of a cube, it is impossible to construct the edge of another cube
-that has exactly twice the volume.
+{.text-center} __{.m-blue} 将立方体体积加倍__  
+给定一个立方体的边长，不可能构造出另一个立方体的边长，使得该立方体的体积刚好是原立方体的两倍
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-3.svg" width=200 height=180)
 
-{.text-center} __{.m-green} Squaring the circle__  
-Given a circle, it is impossible to construct a square that has exactly the same
-area.
+{.text-center} __{.m-green} 化圆为方__  
+给定一个圆，不可能构造出一个正方形，它的面积刚好等于圆的面积
 :::
 
-Note that these problems can all be solved quite easily with algebra, or using
-marked rulers and protractors. But they are impossible if you are just allowed to
-use straight-edge and compass.
+请注意，这些问题如果用代数或使用带刻度的标尺和量角器都可以很容易得到解决，但如果只允许使用真尺和圆规，那是不可能完成的
 
 ---
 
-## Even More Constructions
+## 更多的构造
 
 > section: more-construction
 > sectionStatus: dev
@@ -687,7 +629,7 @@ The shortest distance between two parallel lines is the length of the perpendicu
 
 ---
 
-## Angles and Proofs
+## 角度与证明
 
 > section: proofs
 > sectionStatus: dev
@@ -696,20 +638,16 @@ TODO
 
 ---
 
-## Origami and Paper Folding
+## 折纸
 
 > id: origami
 > section: origami
 > sectionBackground: dark
 
-Using straight-edge and compass is not the only way to construct geometric
-shapes. Another technique uses no tools at all: __Origami__.
+使用真尺和圆规并不是构造几何图形惟一的方式。另一种完全不使用工具的技术是：__折纸__。
 
-The word _Origami_ _{span.no-voice}(折り紙)_ comes from the Japanese _oru_ (to fold) and _kami_
-(paper). The goal is to make objects out of one or more sheets of paper,
-without any additional tools like glue or scissors. You can create incredibly
-beautiful and impressive designs – all of these figures were built using nothing
-but rectangular sheets of paper:
+_折纸_ _{span.no-voice}(折り紙)_ 一词源于日语 _oru_ (折叠) and _kami_
+(纸)，目标是不借助任何额外的工具，比如胶水或剪刀，用一张或多张纸来折出各种物体形状。下面是这些漂亮的物体都是用长方形的纸张折成的，真是难以置信：
 
 ::: column(width=186)
 
@@ -741,116 +679,89 @@ but rectangular sheets of paper:
 > id: crane
 > goals: video
 
-Building shapes like this can take a lot of time, and it is important to be
-extremely accurate. But with a bit of practice, you can do it yourself!
+完成这样的形状需要耗费大量的时间，而且要求非常精确，但是通过一些练习，你可以做到！
 
 ::: column.sticky-video(width=360)
 
     x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
 
 ::: column.grow
-{.step.active(data-t=0)} You just need a square sheet of paper. To start, fold
-the sheet along its two diagonals.
+{.step.active(data-t=0)} 你只需要一张正方形的纸，首先，沿两条对角线对折。
 
-{.step(data-t=16)} Next, fold it along its horizontal and vertical centers – but
-in the opposite direction.
+{.step(data-t=16)} 下一步，将纸翻到另一面，再沿着水平与垂直中心对折。
 
-{.step(data-t=38)} Now take two opposite corners of the sheet and bring them
-together as shown. This forms a smaller square which is open at the bottom.
+{.step(data-t=38)} 现在拎起这张纸的两个相对的角，如视频所示将它们连在一起，这样就形成了一个较小的底部开放的正方形。
 
-{.step(data-t=51)} Fold the left and right corners of the square towards its
-center line. Then turn it over and repeat the same.
+{.step(data-t=51)} 将正方形的左右两个角向中心线方向折叠，然后翻过来，完成同样的操作。
 
-{.step(data-t=83)} Now fold the top triangle down, along the horizontal line,
-and then open up the folds from the last two steps.
+{.step(data-t=83)} 现在沿着水平线向下折叠上面的三角形，然后将最后这两步的折叠重新打开。
 
-{.step(data-t=99)} This one is difficult: take the bottom corner of the paper
-and fold it all the way up, along the horizontal line you just created. Some of
-the folds you made before will be inverted. Then turn over and repeat.
+{.step(data-t=99)} 接下来的一步很难，拿着纸底部的角，打开的同时沿着开始折出的水平线往上折，之前的一些折叠会反转过来。将纸翻到另外一边，完成同样的操作。
 
-{.step(data-t=135)} Make sure the two “legs” are pointing down. Then take the
-left and right corner and fold them towards the center line. Turn over and
-repeat.
+{.step(data-t=135)} 确保两条“腿”朝下面，然后把左右两个角往中心线上折。将纸翻到另外一边，完成同样的操作。
 
-{.step(data-t=172)} You’re almost done! Slightly open the right side, and fold
-the head up towards the top. You will have to turn it inside out. Then repeat
-the same with the tail on the left.
+{.step(data-t=172)} 就快要完成了！轻微的打开右侧，将头部向上折到顶部，把纸翻转过来，对另一侧的尾巴做同样的动作。
 
-{.step(data-t=203)} Reverse the fold as shown to create a beak. You can decide
-how long you want it to be by picking the location of the fold.
+{.step(data-t=203)} 反向折叠，形成一个嘴，你可以自己选择位置来决定需要折叠多长。
 
-{.step(data-t=215)} Finally, fold down the two wings, and pull them apart.
+{.step(data-t=215)} 最后，往下折出两个翅膀，然后把它们打开。
 :::
 
 ---
 > id: crane-1
 
-This _crane_ is one of the oldest and most famous Origami models. We have many
-more [instructions for Origami models](/origami) you can try!
+这种 _鹤_ 是最古老最知名的折纸模型之一，这里还有许多[折纸模型说明](/origami)，你可以去尝试！
 
     figure: x-img(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
 
 ---
 > id: origami-axioms
 
-### Origami Axioms
+### 折纸公理
 
-Just like drawing with straight-edge and compass, there are a few axioms of
-different _folds_ that are possible with origami. They were first listed in
-1992, by the Italian-Japanese mathematician Humiaki Huzita.
+就像用直尺和圆规画图一样，关于折纸不同的 _折法_ 也有几个公理，由日裔意大利数学家藤田文章（Humiaki Huzita）于1992年首次提出。
 
 ::: column(width=220 parent="padded-thin origami-axioms")
 
     x-video(src="images/origami/axiom-1.mp4" width=220 height=220)
 
-{.text-center} You can fold a line connecting any two points.
+{.text-center} 你可以沿连接任意两点的直线折一条折痕
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-2.mp4" width=220 height=220)
 
-{.text-center} You can fold any point _P_ onto any other point _Q_. This creates
-the [[perpendicular bisector|angle bisector|midpoint]] of the line `bar(PQ)`.
+{.text-center} 你可把任意点 _P_ 折叠到任意的另外一点 _Q_。这就创建了线`bar(PQ)`的[[垂直平分线|角平分线|中点]]
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-3.mp4" width=220 height=220)
 
-{.text-center} We can fold any two lines onto each other. If the lines
-intersect, this creates the [[angle bisector|perpendicular bisector|midpoint]]
-of the angle between the two lines.
+{.text-center} 我们可以将任意两条线折叠在一起，如果线是相交的，这就创建了这两条线夹角的 [[角平分线|垂直平分线|中点]]
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-4.mp4" width=220 height=220)
 
-{.text-center} Given a point _P_ and a line _L_, we can make a fold
-perpendicular to _L_ passing through _P_.
+{.text-center} 给定一个点 _P_ 和一条直线 _L_，我们可以通过点 _P_ 折一条垂直于 _L_ 的折痕
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-5.mp4" width=220 height=220)
 
-{.text-center} Given two points _P_ and _Q_ and a line _L_, we can make a fold 
-that passes through _P_ and places _Q_ onto _L_.
+{.text-center} 给定两个点 _P_ 和 _Q_ 和一条线 _L_ ，我们可以通过点 _P_ 折一条折痕，使得点 _Q_ 刚好落在 _L_ 上
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-6.mp4" width=220 height=220)
 
-{.text-center} Given any two points _P_ and _Q_ and any two lines _K_ and _L_,
-we can make a fold that places point _P_ onto line _K_ and at the same time
-places point _Q_ onto line _L_.
+{.text-center} 给定任意两点 _P_ 和 _Q_ ，以及任意两条直线 _K_ 和 _L_，我们可以折一条折痕，使得点 _P_ 落在线 _K_ 上，同时使得点 _Q_ 落在线 _L_ 上
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-7.mp4" width=220 height=220)
 
-{.text-center} Given a point _P_ and two lines _K_ and _L_, we can fold a line
-perpendicular to _K_ that places _P_ onto _L_.
+{.text-center} 要给定一个点 _P_ 和两条线 _K_ 和 _L_ ，我们可以折一折痕，使得折痕垂直于 _K_，并使得点 _P_ 落在线 _L_ 上
 :::
 
 ---
 > id: origami-axioms-1
 
-It turns out that these axioms are even more powerful than the Euclidean ones.
-It is possible to trisect angles and double cubes using just paper folding!
-Of course, it is impossible to fold any _curved_ lines, and you still can’t
-square the circle with origami.
+事实证明，这些公理甚至比欧几里德公理更强大，仅使用折纸也可以完成三等分角以及将立方体体积翻倍！当然，折曲线是不可能的，也不能使用折纸化圆为方。
 
     figure: x-img(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
 
@@ -858,11 +769,9 @@ square the circle with origami.
 > id: origami-applications
 > goals: video
 
-### Applications of Origami
+### 折纸的应用
 
-Origami is an ancient art, and for the longest time, it was mostly a recreational
-pursuit, without real-life applications. However, it turns out that techniques
-developed for Origami can be incredibly useful in technology and engineering:
+折纸是一门古老的艺术，在很长一段时间里，主要是一种娱乐性的追求，而没有现实生活中的应用。然而，事实证明，与折纸相关的技术在科技与工程领域非常有用：
 
 ::: column(width=300)
 
@@ -870,15 +779,11 @@ developed for Origami can be incredibly useful in technology and engineering:
 
 ::: column.grow
 
-#### Origami in Space
+#### 折纸在太空中的应用
 
-Satellites need large solar panels to generate power. Unfortunately, the rockets
-that carry satellites into space only have very limited space for cargo, and
-any additional weight costs a lot of fuel.
+卫星需要大型太阳能板来发电，但不幸的是，将卫星送上太空的火箭只有很有限的载重空间，任何额外的重要都需要耗费大量的燃料。
 
-Origami techniques allow solar panels to “unfold” when they reach space. Some
-particularly clever folds are incredibly compact and require very few motors
-and other mechanical components.
+折纸技术允许太阳能板在到达太空后“展开”，一些特别巧妙的折叠非常紧凑，仅需要很少的马达和机械部件即可
 
     // One of these is the __Miura Map Fold__, which was invented by _Korio Miura_.
     // The same is also true for the mirrors of telescopes in space. Larger mirrors
@@ -897,12 +802,9 @@ and other mechanical components.
 
 ::: column.grow
 
-#### Origami in Medicine
+#### 折纸在医学领域的应用
 
-In medicine, similar ideas from Origami are used on a much smaller scale. In
-2003, researchers developed _Origami Stents_: tiny tubes that can be inserted
-into blood vessels. They are initially folded up but can expand inside patients’
-blood in order to enlarge clogged arteries or veins.
+在医学上，来自折纸的类似想法被用在范围小得多的地方。2003年，研究人员开发了 _折纸支架_ ：可以插入血管中的微小导管，它们先是折叠起来的，但可以在患者的血液里扩张，用于扩大阻塞的动脉或静脉。
 
 :::
 
@@ -915,15 +817,11 @@ blood in order to enlarge clogged arteries or veins.
 
 ::: column.grow
 
-#### Foldable Bridges
+#### 可折叠的桥梁
 
-The British and American military used Origami to develop foldable, mobile
-bridges. These were important for quickly crossing rivers or anti-tank ditches,
-and could be deployed much faster than previous designs.
+英国和美国的军方使用折纸技术去研发可折叠的移动桥梁，这些对于快速穿越河流或者反坦克壕沟非常有用，而且可以比以前的设计更快地部署使用
 
-They can also be used for disaster relief, to quickly give emergency vehicles
-access after earthquakes or tsunamis. This image is of a prototype designed at
-Hiroshima University in Japan.
+折纸也可用于救灾，在地震或海啸后快速提供紧急救援车辆，这张图是日本广岛大学设计的原型。
 
 :::
 
@@ -956,39 +854,28 @@ Hiroshima University in Japan.
 
 ::: column.grow
 
-#### Origami under the Sea
+#### 折纸在海底的应用
 
-The depths of the oceans are some of the least explored areas on Earth. Animals
-that live there are often squishy and delicate, which makes them very hard
-to examine.
+海洋深处是地球上人类探索最少的地方之一，生活在那里动物通常又软又嫩，这使得很难捕捉到它们。
 
-Here you can see a “trap” in the shape of a [dodecahedron](gloss:dodecahedron)
-that can fold around marine organisms, allowing them to be studied. It is
-remotely controlled and only needs a single motor to drive the complex folding
-motion of its five arms.
+这里可以看到一个[十二面体](gloss:dodecahedron)形状的“陷阱”，可以用来捕捉周围的海洋生物，以用于研究。它们是远程控制的，只需要一个电机就可以驱动它的五个手臂完成复杂的折叠动作。
 
 :::
 
 ---
 > id: origami-applications-5
 
-And there are many more applications of Origami in everyday life: houses
-that will compress rather than crumble during an earthquake, unfolding airbags
-in cars, self-assembling robots, more efficient packaging, and lightweight
-aircraft.
+在日常生活中，也有很多与折纸相关的应用：房屋在地震中被压缩而不是坍塌，汽车中的安全气囊自动展开，自组装的机器人，更高效的包装设计，轻型的飞机等等。
 
 ---
 > id: origami-wings
 > goals: video
 
-### Origami in Nature
+### 折纸在自然界中的应用
 
-It turns out that we humans are not the only ones harnessing the power of
-Origami: nature has been doing so for millions of years.
+事实证明，我们人类并不是唯一利用折纸力量的：大自然这样做已经有数百万年了。
 
-Here you can see the wing of an __earwig__ that can be folded up using an
-ingenious pattern. When opened, the size of the wing expands by a factor of 10 –
-the highest “folding ratio” in the animal kingdom:
+这里你可以看到一个 _蠼螋_ 的翅膀，它可以以一种巧妙的方式折叠一起来，当打开的时候，翅膀展开的大小会高达10倍，这是自然界王国的最高“折叠比率”了：
 
 ::: column(width=300)
 
@@ -1003,16 +890,9 @@ the highest “folding ratio” in the animal kingdom:
 ---
 > id: origami-wings-1
 
-When expanded, the large wings snap into a stable position that allows the
-insects to fly. But it only takes the lightest touch for the wings to retract.
-When folded up, they are compact enough to allow earwigs to tunnel underground.
-Many other insects, bats, leaves and flowers use similar folding patterns to fit
-large surfaces into small spaces.
+当展开的时候，巨大翅膀会收缩到一个固定的位置，这样昆虫就可以飞起来了，只需要轻轻一碰，翅膀就可以收缩回去。当折叠起来的时候，体积足够小，蠼螋就可以在地下挖隧道。许多其它昆虫、蝙蝠、叶子和花朵也使用了类似的折叠模式，将大面积的表面适配到狭小的空间中去。
 
-Scientists are studying these plants and animals, hoping to mimic their abilities
-in engineering and technology. Potential applications could include foldable
-electronics in smartphones, expanding solar panels for satellites, or even
-self-folding camping tents.
+科学家们也正在研究这些动植物，希望在工程和技术上模仿它们的能力。潜在的应用可能包括智能手机中的折叠电子元件，为卫星供能的扩展太阳能面板，甚至具有折叠功能的帐篷。
 
 ---
 > id: origami-dna
@@ -1024,20 +904,13 @@ self-folding camping tents.
 
 ::: column.grow
 
-Origami even appears in your own body: every human cell contains around 2 meters
-of [DNA](gloss:dna), the [molecule](gloss:molecule) that carries all your
-genetic information. If you could combine the DNA from all cells in your body,
-their length would be more than 140 times the distance from Earth to the sun!
+“折纸艺术”甚至出现在你自己的身体里：每个人类的细胞都包括约2米长的[DNA](gloss:dna)，一种携带你所有基因信息的[分子](gloss:molecule)。如果把你体内所有细胞的DNA进行组合，它们的长度甚至比从地球到太阳之间距离的140倍还要长！
 
-To fit all that DNA in your body, without it getting twisted or torn, every
-strand is curled, folded, and held in place by special molecules.
+为了在你身体容下所有的DNA，而不会扭曲或撕裂，每一条链都被特殊的分子卷曲、折叠并固定在适当的位置。
 
 :::
 
 ---
 > id: origami-dna-1
 
-A similar process is also used by other complex molecules that appear in living
-organisms. For example, __[protein](gloss:protein) folding__ is one of the most
-complex problems in biology. Understanding it better can help scientists develop
-new drugs in the future.
+同样的机制也被出现在生物体内的其它复杂分子所使用。例如：__[蛋白](gloss:protein)折叠__是生物学中最复杂的问题之一，更好地了解它可以帮助科学家在未来开发出新的药物。
