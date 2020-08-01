@@ -330,10 +330,10 @@ Einschließlich dir selbst und dem Gastgeber sind ${hnd}{hnd|5|3,15,1} Gäste an
 Als die Gäste sich abends zum Aufbruch bereit machen, schüttelt jeder jedem anderen die Hand.
 Wie oft werden insgesamt die Hände geschüttelt?
 
-Wir können das Händeschütteln mit einem Graphen darstellen: jede Person entspricht [[einem Knoten|einer Kante]], und jedes Händesschütteln entspricht [[einer Kante|einem Knoten]].
+Wir können das Händeschütteln mit einem Graphen darstellen: jeder Gast entspricht [[einem Knoten|einer Kante]], und jedes Händesschütteln entspricht [[einer Kante|einem Knoten]].
 
 {.reveal(when='blank-0 blank-1')} Jetzt kann man ganz einfach die Anzahl der Kanten im Graphen zählen. Wir stellen
-fest, dass bei ${hnd} Leuten ${hnd*(hnd-1)/2} mal die Hände geschüttelt werden.
+fest, dass bei ${hnd} Gästen ${hnd*(hnd-1)/2} mal die Hände geschüttelt werden.
 
 ::: column.s-hide(width=240)
 
@@ -363,8 +363,9 @@ td:first-child, .handshakes tr:first-child td:nth-child(2)">die ersten beiden Ei
 in der obersten Zeile</x-target> eigentlich identisch sind, nur umgedreht.
 
 Tatsächlich haben wir jedes Händeschütteln [[zweimal|einmal|dreimal]] gezählt, _{span.reveal(when="blank-0")}
-einmal für jede der beiden beteiligten Personen. Das bedeutet, dass die korrekte
-Anzahl des Händeschüttelns bei ${n}{n|5|2,25,1} Gästen `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` beträgt._
+einmal für jeden der beiden beteiligten Gäste. Das bedeutet, dass die korrekte
+Anzahl wie oft bei ${n}{n|5|2,25,1} Gästen einander die Hände geschüttelt werden
+`(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` beträgt._
 
 ---
 > id: handshakes-3
@@ -375,7 +376,7 @@ genannt. Ein vollständiger Graph mit 4 Knoten wird oft als `K_4` abgekürzt, ei
 vollständiger Graph mit 5 Knoten wird als `K_5` bezeichnet, und so weiter.
 
 Wir haben gerade gezeigt, dass ein vollständiger Graph mit `n` Knoten, also `K_n`,
-`(n × (n-1))/2` Kanten hat.
+genau `(n × (n-1))/2` Kanten hat.
 
     .row
       svg.graph(style="width: 90px; height: 90px")
