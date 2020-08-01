@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Wenn du dich in der Natur umschaust, hast du vielleicht komplizierte Pflanzen wie diese bemerkt:
 
@@ -490,6 +491,7 @@ Und wir können diesen Prozess sogar umkehren, um digitale Bilder zu komprimiere
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -682,6 +684,7 @@ Es gibt viele Varianten des Sierpinski-Dreiecks und andere Fraktale mit ähnlich
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Alle Fraktale, die wir in den vorherigen Kapiteln gesehen haben, wurden mit einem Prozess der __-Iteration__ erstellt: Sie beginnen mit einem bestimmten Muster und wiederholen es dann immer wieder.
 
