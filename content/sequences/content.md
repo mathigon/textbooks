@@ -1231,7 +1231,7 @@ Sequence__](gloss:fibonacci-numbers), named after the Italian mathematician
 
 ::: column.grow
 When Fibonacci was born in 1175, most people in Europe still used the [Roman
-numeral system](gloss:roman-numerals) for numbers (like IVX or MCMLIV).
+numeral system](gloss:roman-numerals) for numbers (like XIV or MCMLIV).
 Fibonacci’s father was a merchant, and together they travelled to Northern
 Africa as well as the Middle East. It was there that Fibonacci first learned the
 [Arabic numeral system](gloss:arabic-numerals).

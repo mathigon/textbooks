@@ -480,11 +480,11 @@ Un dels problemes de les fórmules recursives és que per trobar el centèsim te
 
 Per __{.m-red} seqüències aritmètiques__ , hem d’afegir _d_ a cada pas: 
 
-{.ag-equation.no-voice}`x_1 =``a`
+{.ag-equation.no-voice}`x_1 = a`
 
-{.ag-equation.no-voice}`x_2 =``a + d`
+{.ag-equation.no-voice}`x_2 = a + d`
 
-{.ag-equation.no-voice}`x_3 =``a + d + d`
+{.ag-equation.no-voice}`x_3 = a + d + d`
 
 {.ag-equation.no-voice}`x_4 =` _{x-equation(solution="a+d+d+d")}_ 
 
@@ -934,7 +934,8 @@ Imagineu-vos que heu rebut un parell de conills, un mascle i una femella. Són c
 
 El nombre de conills en un determinat mes és [[la suma dels dos números anteriors | el doble del número anterior]] . _{span.reveal(when="blank-0")} Dit d'una altra manera, heu d'afegir els _dos_ termes _anteriors_ a la seqüència, per obtenir el següent. La seqüència comença amb dos 1s, i la [fórmula recursiva](gloss:sequence-recursive) és_ 
 
-{.text-center.s-orange.reveal(when="blank-0")} _{span.n}`x_n`_ = _{span.n}`x_(n-1)`_ + _{span.n}`x_(n-2)`_ 
+{.text-center.s-orange.reveal(when="blank-0")} *{span.n}`x_n`* =
+*{span.n}`x_(n-1)`* + *{span.n}`x_(n-2)`*
 
 ---
 > id: rabbits-3
