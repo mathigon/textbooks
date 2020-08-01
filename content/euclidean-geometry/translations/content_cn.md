@@ -602,7 +602,7 @@ _{button.next-step} 继续_
 
 ---
 
-## Even More Constructions
+## 更多的构造
 
 > section: more-construction
 > sectionStatus: dev
@@ -629,7 +629,7 @@ The shortest distance between two parallel lines is the length of the perpendicu
 
 ---
 
-## Angles and Proofs
+## 角度与证明
 
 > section: proofs
 > sectionStatus: dev
@@ -638,20 +638,16 @@ TODO
 
 ---
 
-## Origami and Paper Folding
+## 折纸
 
 > id: origami
 > section: origami
 > sectionBackground: dark
 
-Using straight-edge and compass is not the only way to construct geometric
-shapes. Another technique uses no tools at all: __Origami__.
+使用真尺和圆规并不是构造几何图形惟一的方式。另一种完全不使用工具的技术是：__折纸__。
 
-The word _Origami_ _{span.no-voice}(折り紙)_ comes from the Japanese _oru_ (to fold) and _kami_
-(paper). The goal is to make objects out of one or more sheets of paper,
-without any additional tools like glue or scissors. You can create incredibly
-beautiful and impressive designs – all of these figures were built using nothing
-but rectangular sheets of paper:
+_折纸_ _{span.no-voice}(折り紙)_ 一词源于日语 _oru_ (折叠) and _kami_
+(纸)，目标是不借助任何额外的工具，比如胶水或剪刀，用一张或多张纸来折出各种物体形状。下面是这些漂亮的物体都是用长方形的纸张折成的，真是难以置信：
 
 ::: column(width=186)
 
@@ -683,116 +679,89 @@ but rectangular sheets of paper:
 > id: crane
 > goals: video
 
-Building shapes like this can take a lot of time, and it is important to be
-extremely accurate. But with a bit of practice, you can do it yourself!
+完成这样的形状需要耗费大量的时间，而且要求非常精确，但是通过一些练习，你可以做到！
 
 ::: column.sticky-video(width=360)
 
     x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
 
 ::: column.grow
-{.step.active(data-t=0)} You just need a square sheet of paper. To start, fold
-the sheet along its two diagonals.
+{.step.active(data-t=0)} 你只需要一张正方形的纸，首先，沿两条对角线对折。
 
-{.step(data-t=16)} Next, fold it along its horizontal and vertical centers – but
-in the opposite direction.
+{.step(data-t=16)} 下一步，将纸翻到另一面，再沿着水平与垂直中心对折。
 
-{.step(data-t=38)} Now take two opposite corners of the sheet and bring them
-together as shown. This forms a smaller square which is open at the bottom.
+{.step(data-t=38)} 现在拎起这张纸的两个相对的角，如视频所示将它们连在一起，这样就形成了一个较小的底部开放的正方形。
 
-{.step(data-t=51)} Fold the left and right corners of the square towards its
-center line. Then turn it over and repeat the same.
+{.step(data-t=51)} 将正方形的左右两个角向中心线方向折叠，然后翻过来，完成同样的操作。
 
-{.step(data-t=83)} Now fold the top triangle down, along the horizontal line,
-and then open up the folds from the last two steps.
+{.step(data-t=83)} 现在沿着水平线向下折叠上面的三角形，然后将最后这两步的折叠重新打开。
 
-{.step(data-t=99)} This one is difficult: take the bottom corner of the paper
-and fold it all the way up, along the horizontal line you just created. Some of
-the folds you made before will be inverted. Then turn over and repeat.
+{.step(data-t=99)} 接下来的一步很难，拿着纸底部的角，打开的同时沿着开始折出的水平线往上折，之前的一些折叠会反转过来。将纸翻到另外一边，完成同样的操作。
 
-{.step(data-t=135)} Make sure the two “legs” are pointing down. Then take the
-left and right corner and fold them towards the center line. Turn over and
-repeat.
+{.step(data-t=135)} 确保两条“腿”朝下面，然后把左右两个角往中心线上折。将纸翻到另外一边，完成同样的操作。
 
-{.step(data-t=172)} You’re almost done! Slightly open the right side, and fold
-the head up towards the top. You will have to turn it inside out. Then repeat
-the same with the tail on the left.
+{.step(data-t=172)} 就快要完成了！轻微的打开右侧，将头部向上折到顶部，把纸翻转过来，对另一侧的尾巴做同样的动作。
 
-{.step(data-t=203)} Reverse the fold as shown to create a beak. You can decide
-how long you want it to be by picking the location of the fold.
+{.step(data-t=203)} 反向折叠，形成一个嘴，你可以自己选择位置来决定需要折叠多长。
 
-{.step(data-t=215)} Finally, fold down the two wings, and pull them apart.
+{.step(data-t=215)} 最后，往下折出两个翅膀，然后把它们打开。
 :::
 
 ---
 > id: crane-1
 
-This _crane_ is one of the oldest and most famous Origami models. We have many
-more [instructions for Origami models](/origami) you can try!
+这种 _鹤_ 是最古老最知名的折纸模型之一，这里还有许多[折纸模型说明](/origami)，你可以去尝试！
 
     figure: x-img(src="images/origami-1.jpg" credit="© Meenakshi Mukerji, Joel Lord, Dirk Eisner, Angie Harms, Michal Kosmulski" width=760 height=118)
 
 ---
 > id: origami-axioms
 
-### Origami Axioms
+### 折纸公理
 
-Just like drawing with straight-edge and compass, there are a few axioms of
-different _folds_ that are possible with origami. They were first listed in
-1992, by the Italian-Japanese mathematician Humiaki Huzita.
+就像用直尺和圆规画图一样，关于折纸不同的 _折法_ 也有几个公理，由日裔意大利数学家藤田文章（Humiaki Huzita）于1992年首次提出。
 
 ::: column(width=220 parent="padded-thin origami-axioms")
 
     x-video(src="images/origami/axiom-1.mp4" width=220 height=220)
 
-{.text-center} You can fold a line connecting any two points.
+{.text-center} 你可以沿连接任意两点的直线折一条折痕
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-2.mp4" width=220 height=220)
 
-{.text-center} You can fold any point _P_ onto any other point _Q_. This creates
-the [[perpendicular bisector|angle bisector|midpoint]] of the line `bar(PQ)`.
+{.text-center} 你可把任意点 _P_ 折叠到任意的另外一点 _Q_。这就创建了线`bar(PQ)`的[[垂直平分线|角平分线|中点]]
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-3.mp4" width=220 height=220)
 
-{.text-center} We can fold any two lines onto each other. If the lines
-intersect, this creates the [[angle bisector|perpendicular bisector|midpoint]]
-of the angle between the two lines.
+{.text-center} 我们可以将任意两条线折叠在一起，如果线是相交的，这就创建了这两条线夹角的 [[角平分线|垂直平分线|中点]]
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-4.mp4" width=220 height=220)
 
-{.text-center} Given a point _P_ and a line _L_, we can make a fold
-perpendicular to _L_ passing through _P_.
+{.text-center} 给定一个点 _P_ 和一条直线 _L_，我们可以通过点 _P_ 折一条垂直于 _L_ 的折痕
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-5.mp4" width=220 height=220)
 
-{.text-center} Given two points _P_ and _Q_ and a line _L_, we can make a fold 
-that passes through _P_ and places _Q_ onto _L_.
+{.text-center} 给定两个点 _P_ 和 _Q_ 和一条线 _L_ ，我们可以通过点 _P_ 折一条折痕，使得点 _Q_ 刚好落在 _L_ 上
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-6.mp4" width=220 height=220)
 
-{.text-center} Given any two points _P_ and _Q_ and any two lines _K_ and _L_,
-we can make a fold that places point _P_ onto line _K_ and at the same time
-places point _Q_ onto line _L_.
+{.text-center} 给定任意两点 _P_ 和 _Q_ ，以及任意两条直线 _K_ 和 _L_，我们可以折一条折痕，使得点 _P_ 落在线 _K_ 上，同时使得点 _Q_ 落在线 _L_ 上
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-7.mp4" width=220 height=220)
 
-{.text-center} Given a point _P_ and two lines _K_ and _L_, we can fold a line
-perpendicular to _K_ that places _P_ onto _L_.
+{.text-center} 要给定一个点 _P_ 和两条线 _K_ 和 _L_ ，我们可以折一折痕，使得折痕垂直于 _K_，并使得点 _P_ 落在线 _L_ 上
 :::
 
 ---
 > id: origami-axioms-1
 
-It turns out that these axioms are even more powerful than the Euclidean ones.
-It is possible to trisect angles and double cubes using just paper folding!
-Of course, it is impossible to fold any _curved_ lines, and you still can’t
-square the circle with origami.
+事实证明，这些公理甚至比欧几里德公理更强大，仅使用折纸也可以完成三等分角以及将立方体体积翻倍！当然，折曲线是不可能的，也不能使用折纸化圆为方。
 
     figure: x-img(src="images/origami-2.jpg" credit="© Dirk Eisner, Meenakshi Mukerji, noricum, fdecomite" width=760 height=123)
 
@@ -800,11 +769,9 @@ square the circle with origami.
 > id: origami-applications
 > goals: video
 
-### Applications of Origami
+### 折纸的应用
 
-Origami is an ancient art, and for the longest time, it was mostly a recreational
-pursuit, without real-life applications. However, it turns out that techniques
-developed for Origami can be incredibly useful in technology and engineering:
+折纸是一门古老的艺术，在很长一段时间里，主要是一种娱乐性的追求，而没有现实生活中的应用。然而，事实证明，与折纸相关的技术在科技与工程领域非常有用：
 
 ::: column(width=300)
 
@@ -812,15 +779,11 @@ developed for Origami can be incredibly useful in technology and engineering:
 
 ::: column.grow
 
-#### Origami in Space
+#### 折纸在太空中的应用
 
-Satellites need large solar panels to generate power. Unfortunately, the rockets
-that carry satellites into space only have very limited space for cargo, and
-any additional weight costs a lot of fuel.
+卫星需要大型太阳能板来发电，但不幸的是，将卫星送上太空的火箭只有很有限的载重空间，任何额外的重要都需要耗费大量的燃料。
 
-Origami techniques allow solar panels to “unfold” when they reach space. Some
-particularly clever folds are incredibly compact and require very few motors
-and other mechanical components.
+折纸技术允许太阳能板在到达太空后“展开”，一些特别巧妙的折叠非常紧凑，仅需要很少的马达和机械部件即可
 
     // One of these is the __Miura Map Fold__, which was invented by _Korio Miura_.
     // The same is also true for the mirrors of telescopes in space. Larger mirrors
@@ -839,12 +802,9 @@ and other mechanical components.
 
 ::: column.grow
 
-#### Origami in Medicine
+#### 折纸在医学领域的应用
 
-In medicine, similar ideas from Origami are used on a much smaller scale. In
-2003, researchers developed _Origami Stents_: tiny tubes that can be inserted
-into blood vessels. They are initially folded up but can expand inside patients’
-blood in order to enlarge clogged arteries or veins.
+在医学上，来自折纸的类似想法被用在范围小得多的地方。2003年，研究人员开发了 _折纸支架_ ：可以插入血管中的微小导管，它们先是折叠起来的，但可以在患者的血液里扩张，用于扩大阻塞的动脉或静脉。
 
 :::
 
@@ -857,15 +817,11 @@ blood in order to enlarge clogged arteries or veins.
 
 ::: column.grow
 
-#### Foldable Bridges
+#### 可折叠的桥梁
 
-The British and American military used Origami to develop foldable, mobile
-bridges. These were important for quickly crossing rivers or anti-tank ditches,
-and could be deployed much faster than previous designs.
+英国和美国的军方使用折纸技术去研发可折叠的移动桥梁，这些对于快速穿越河流或者反坦克壕沟非常有用，而且可以比以前的设计更快地部署使用
 
-They can also be used for disaster relief, to quickly give emergency vehicles
-access after earthquakes or tsunamis. This image is of a prototype designed at
-Hiroshima University in Japan.
+折纸也可用于救灾，在地震或海啸后快速提供紧急救援车辆，这张图是日本广岛大学设计的原型。
 
 :::
 
@@ -898,39 +854,28 @@ Hiroshima University in Japan.
 
 ::: column.grow
 
-#### Origami under the Sea
+#### 折纸在海底的应用
 
-The depths of the oceans are some of the least explored areas on Earth. Animals
-that live there are often squishy and delicate, which makes them very hard
-to examine.
+海洋深处是地球上人类探索最少的地方之一，生活在那里动物通常又软又嫩，这使得很难捕捉到它们。
 
-Here you can see a “trap” in the shape of a [dodecahedron](gloss:dodecahedron)
-that can fold around marine organisms, allowing them to be studied. It is
-remotely controlled and only needs a single motor to drive the complex folding
-motion of its five arms.
+这里可以看到一个[十二面体](gloss:dodecahedron)形状的“陷阱”，可以用来捕捉周围的海洋生物，以用于研究。它们是远程控制的，只需要一个电机就可以驱动它的五个手臂完成复杂的折叠动作。
 
 :::
 
 ---
 > id: origami-applications-5
 
-And there are many more applications of Origami in everyday life: houses
-that will compress rather than crumble during an earthquake, unfolding airbags
-in cars, self-assembling robots, more efficient packaging, and lightweight
-aircraft.
+在日常生活中，也有很多与折纸相关的应用：房屋在地震中被压缩而不是坍塌，汽车中的安全气囊自动展开，自组装的机器人，更高效的包装设计，轻型的飞机等等。
 
 ---
 > id: origami-wings
 > goals: video
 
-### Origami in Nature
+### 折纸在自然界中的应用
 
-It turns out that we humans are not the only ones harnessing the power of
-Origami: nature has been doing so for millions of years.
+事实证明，我们人类并不是唯一利用折纸力量的：大自然这样做已经有数百万年了。
 
-Here you can see the wing of an __earwig__ that can be folded up using an
-ingenious pattern. When opened, the size of the wing expands by a factor of 10 –
-the highest “folding ratio” in the animal kingdom:
+这里你可以看到一个 _蠼螋_ 的翅膀，它可以以一种巧妙的方式折叠一起来，当打开的时候，翅膀展开的大小会高达10倍，这是自然界王国的最高“折叠比率”了：
 
 ::: column(width=300)
 
@@ -945,16 +890,9 @@ the highest “folding ratio” in the animal kingdom:
 ---
 > id: origami-wings-1
 
-When expanded, the large wings snap into a stable position that allows the
-insects to fly. But it only takes the lightest touch for the wings to retract.
-When folded up, they are compact enough to allow earwigs to tunnel underground.
-Many other insects, bats, leaves and flowers use similar folding patterns to fit
-large surfaces into small spaces.
+当展开的时候，巨大翅膀会收缩到一个固定的位置，这样昆虫就可以飞起来了，只需要轻轻一碰，翅膀就可以收缩回去。当折叠起来的时候，体积足够小，蠼螋就可以在地下挖隧道。许多其它昆虫、蝙蝠、叶子和花朵也使用了类似的折叠模式，将大面积的表面适配到狭小的空间中去。
 
-Scientists are studying these plants and animals, hoping to mimic their abilities
-in engineering and technology. Potential applications could include foldable
-electronics in smartphones, expanding solar panels for satellites, or even
-self-folding camping tents.
+科学家们也正在研究这些动植物，希望在工程和技术上模仿它们的能力。潜在的应用可能包括智能手机中的折叠电子元件，为卫星供能的扩展太阳能面板，甚至具有折叠功能的帐篷。
 
 ---
 > id: origami-dna
@@ -966,20 +904,13 @@ self-folding camping tents.
 
 ::: column.grow
 
-Origami even appears in your own body: every human cell contains around 2 meters
-of [DNA](gloss:dna), the [molecule](gloss:molecule) that carries all your
-genetic information. If you could combine the DNA from all cells in your body,
-their length would be more than 140 times the distance from Earth to the sun!
+“折纸艺术”甚至出现在你自己的身体里：每个人类的细胞都包括约2米长的[DNA](gloss:dna)，一种携带你所有基因信息的[分子](gloss:molecule)。如果把你体内所有细胞的DNA进行组合，它们的长度甚至比从地球到太阳之间距离的140倍还要长！
 
-To fit all that DNA in your body, without it getting twisted or torn, every
-strand is curled, folded, and held in place by special molecules.
+为了在你身体容下所有的DNA，而不会扭曲或撕裂，每一条链都被特殊的分子卷曲、折叠并固定在适当的位置。
 
 :::
 
 ---
 > id: origami-dna-1
 
-A similar process is also used by other complex molecules that appear in living
-organisms. For example, __[protein](gloss:protein) folding__ is one of the most
-complex problems in biology. Understanding it better can help scientists develop
-new drugs in the future.
+同样的机制也被出现在生物体内的其它复杂分子所使用。例如：__[蛋白](gloss:protein)折叠__是生物学中最复杂的问题之一，更好地了解它可以帮助科学家在未来开发出新的药物。
