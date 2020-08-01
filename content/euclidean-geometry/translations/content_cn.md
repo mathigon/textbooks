@@ -419,25 +419,17 @@ _{button.next-step} 继续_
 
 ---
 
-## Ruler and Compass Construction
+## 直尺与圆规构建
 
 > section: construction
 > id: measuring
 
-You might have noticed that Euclid’s five axioms don’t contain anything about
-_measuring_ distances or angles. Up to now, this has been a key part of
-geometry, for example to calculate areas and volumes.
+你可能已经注意到，欧几里得的五条公里并没有包含任何关于距离与角度的 _测量_，而这却是几何学中的一个关键部分，例如计算面积和体积。
 
 ::: column.grow
-However, at the times of Thales or Euclid, there wasn’t a universal framework of
-units like we have today. Distances were often measured using body parts, for
-example finger widths, or arm lengths. These are not very accurate and they vary
-for different people.
+然而，在泰勒斯或欧几里得时代，还没有像我们今天使用的通用度量单位，距离通常是使用像手指宽度，或手臂长度这样的身体部位来测量的，这些都不是很准备，因人而异。
 
-To measure longer distances, architects or surveyors used _knotted cords_: long
-pieces of string that contained many knots at equal intervals. But these were
-also not perfectly accurate, and different string had the knots placed at
-slightly different distances.
+为了测试长距离，建筑师或测量师通常使用 _打结的绳子_ ：每隔相同距离有许多结的长绳子，但这些也不是很准确，并且不同的绳子打结的位置距离也有所不同。
 
     figure: x-img(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
 
@@ -447,15 +439,9 @@ slightly different distances.
 
 :::
 
-Greek mathematicians didn’t want to deal with these approximations. They were
-much more interested in the underlying laws of geometry, than in their practical
-applications.
+希腊数学家们不想以这些近似的方式去处理，他们对底层的几何规律比实际应用更感兴趣。
 
-That’s why they came up with a much more idealised version of our universe: one
-in which points can have no size and lines can have no width. Of course, it is
-[[impossible|very difficult]] to draw these on paper. Visible points will always
-take up some space, and lines will always have some width. This is why our
-drawings are always just “approximations”.
+这就是为什么他们抽象出了一个更理想化的通用版本：点没有大小，线没有宽度。当然，这些 [[不可能|很难]]在纸上画出来，可见的点总会占用空间，线也总会有宽度，这也是为什么我们的绘图只能是“近似”。
 
 ---
 > id: tools
@@ -463,9 +449,7 @@ drawings are always just “approximations”.
 
     figure: img(src="images/divider-1.svg" width=760 height=42)
 
-Euclid’ axioms basically tell us _what’s possible_ in his version of geometry.
-It turns out that we just need two very simple tools to be able to sketch this
-on paper:
+欧几里得的公理告诉我们，在他的几何学版本里 _什么是可能的_ 。事实证明，我们只需要两个非常简单的工具就可以在纸上画出这一切：
 
 ::: column(width=320)
 
@@ -476,9 +460,7 @@ on paper:
         path.red(name="l1" x="segment(a,b)" hidden)
       x-play-btn
 
-{.text-center} A __straight-edge__ is like a ruler but without any markings. You
-can use it to connect two points (as in Axiom 1), or to extend a line segment
-(as in Axiom 2).
+{.text-center} __直尺__ 就像一把没有任何标记的尺子。你可以用它将两点（如公理一所示）连起来，或者扩展一条线段（如公理二所示）
 
 ::: column.reveal(width=300 when="play-l1")
 
@@ -490,33 +472,24 @@ can use it to connect two points (as in Axiom 1), or to extend a line segment
         path.red(name="c1" x="arc(c,d,1.99*pi)" hidden)
       x-play-btn
 
-{.text-center} A __compass__ allows you to draw a circle of a given size around
-a point (as in Axiom 3).
+{.text-center} __圆规__ 让你可以一点为中心画一个给定大小的圆（如公理三所示）
 :::
 
 ---
 > id: construction
 
-Axioms 4 and 5 are about comparing properties of shapes, rather than drawing
-anything. Therefore they don’t need specific tools.
+公理四和公理五主要是关于形状的比较，而不是画什么，因此它们不需要任何特定的工具
 
 ::: column.grow
-You can imagine that Greek mathematicians were thinking about Geometry on the
-beach, and drawing different shapes in the sand: using long planks as
-straight-edge and pieces of string as compass.
+你可以想象出，希腊数学家们在海难上思考几何学，在沙地上画出不同的形状：使用长木板作为直尺，一截绳子用作圆规
 
-Even though these tools look very primitive, you can draw a great number of
-shapes with them. This became almost like a puzzle game for mathematicians:
-trying to find ways to “construct” different geometric shapes using just a
-straight-edge and compass.
+尽管这些工具看起来比较原始，但你可以用它们画出大量的形状，这对数学家们来说就像玩益智游戏：试图找到一种方法仅仅使用直尺和圆规去“构建”不同的几何图形
 
 ::: column(width=340)
 
     x-img(src="images/archimedes.jpg" width=340 height=265)
 
-{.caption} The Greek Mathematician [Archimedes](bio:archimedes) was studying
-Geometry when he was killed by Roman invaders. His last words were “do not
-disturb my circles”.
+{.caption} 希腊数学家[阿基米德](bio:archimedes) 被罗马侵略者杀害的时候，他正在研究几何学，他说的最后一句话是“不要弄坏我的圆形”。
 :::
 
 ---
@@ -528,36 +501,23 @@ disturb my circles”.
     x-geopad.sticky(width=320 tools="move|line|circle" intersections projections="no"): svg
 
 ::: column.grow
-{.task} Draw an [equilateral triangle](gloss:equilateral-triangle) using just a
-straight-edge and compass.
+{.task} 使用直尺和圆规画一个[等边三角形](gloss:equilateral-triangle) 。
 
-To begin, draw a line segment anywhere in a box on the right. With the
-<x-target no-margins to="#equilateral .tool:nth-child(3)">line tool</x-target>
-selected, simply drag from start to end. This segment will be one of the sides
-of the triangle.
+首先，选择<x-target no-margins to="#equilateral .tool:nth-child(3)">画线工具</x-target>，在右边的框中任意位置画一条线段，简单的从起始点拖到终点即可，这条线段作为三角形的一条边。
 
-{.reveal(when="segment0")} Next, draw two circles that have one of the endpoints
-of the line segments as center, and go through the other endpoint. With
-the <x-target no-margins to="#equilateral .tool:nth-child(5)">circle tool</x-target> selected,
-simply drag from one endpoint to the other.
+{.reveal(when="segment0")} 接下来，选择<x-target no-margins to="#equilateral .tool:nth-child(5)">画圆工具</x-target>，以该线段的端点为圆心画两个圆，只需要从其中一个端点拖到另一个端点即可。
 
-{.reveal(when="circle1 circle2")} We already have two vertices of the triangle,
-and the third one is the intersection of the two circles. Use the line tool
-again to draw the two missing sides and complete the triangle.
+{.reveal(when="circle1 circle2")} 三角形的其中两个端点我们已经有了，而两个圆的交点是第三个交点，再次用直线工具将缺失的边画上就完成了三角形的绘制。
 
-{.reveal(when="segment1 segment2")} Now [these two sides](target:a) and
-[these two sides](target:b) are each [[radii|diameters|circumferences]] of the
-same circle, _{span.reveal(when="blank-0")} so they must have the same length.
-In other words, all three sides of the triangle are congruent – and therefore it
-is indeed an equilateral triangle._
+{.reveal(when="segment1 segment2")} 现在[这两条边](target:a)和[这两条边](target:b) 都是同一个圆的[[半径 |直径|圆周 ]] ，_{span.reveal(when="blank-0")} 因此他们的长度一定相等，换句话说，这个三角形的三条边都是相等的，因此它确实是一个等边三角形。_
 :::
 
 ---
 > id: perp-bisector
 
-### Midpoints and Perpendicular Bisectors
+### 中点和垂直平分线
 
-{.todo} COMING SOON – Constructing Midpoints and Perpendicular Bisectors
+{.todo} 即将推出 – 构造中点和垂直平分线
 
     // A midpoint is a point on a line segment that divides it into two congruent
     // segments. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
@@ -570,9 +530,9 @@ is indeed an equilateral triangle._
 ---
 > id: angle-bisector
 
-### Angle Bisectors
+### 角平分线
 
-{.todo} COMING SOON – Constructing Angle Bisectors
+{.todo} 即将推出 – 构造角平分线
 
     // When two rays have the same endpoint, an angle is created.
     // 
@@ -593,17 +553,12 @@ is indeed an equilateral triangle._
 ---
 > id: impossible
 
-### Impossible Constructions
+### 不可能完成的构造
 
-In the next chapter, we will see even more shapes that can be constructed
-like this. However, there is a limit to Euclidean geometry: some constructions
-are simply impossible using just straight-edge and compass.
+在下一章中，我们将看到更多像这样可以被构造出来的形状，然而，欧低几何也有限制：有些仅使用直尺和圆规是无法构造出来的。
 
 ::: column.grow
-According to legend, the city of Delos in ancient Greece was once faced with a
-terrible plague. The oracle in Delphi told them that this was a punishment from
-the gods, and the plague would go away if they built a new altar for their
-temple that was _exactly twice_ the volume of the existing one.
+据传，古希腊的提洛斯（Delos）曾遭遇过一场可怕的瘟疫，德尔斐（Delphi）的神谕告诉他们，这是众神的惩罚，如果他们为自己的神庙建造一个新的祭坛，瘟疫就会消失，要求这个祭坛的体积恰好是现有神庙体积的两倍。
 
     figure: img(src="images/altar.svg" width=320 height=140)
 
@@ -611,52 +566,39 @@ temple that was _exactly twice_ the volume of the existing one.
 
     x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
 
-{.caption} A reconstruction of a temple in Delphi
+{.caption} 德尔斐一座寺庙的重建
 :::
 
-Note that _doubling the volume_ is not the same as _doubling an edge of the
-cube_. In fact, if the [[three-dimensional|two-dimensional|one-dimensional]] volume
-increases by a factor of 2, the [[one-dimensional|three-dimensional|two-dimensional]]
-edge of the cube will increase by a factor of `root(2,3)`.
+请注意，将立方体的 _体积加倍_ 并不等于将立方体的 _边长加倍_ 。事实上，立方体[[三维|二维|一维]] 的体积增加两倍，立方体[[一维|三维|二维]]的边将增加`root(2,3)`倍。
 
 ---
 > id: impossible-1
 
-This still sounds pretty simple, but doubling the cube is actually impossible
-in [Euclidean geometry](gloss:euclidean-geometry), using only straight-edge and
-compass! For the citizens of Delos this unfortunately meant that all hope was
-lost. There are two other constructions that are famously impossible.
-Mathematicians devoted a great amount of time trying to find a solution – but
-without success:
+将立方体的体积加倍，这听起来似乎很简单，实际上在仅使用直尺和圆规的[欧氏几何](gloss:euclidean-geometry)中是不可能完成的！这意味着对于提洛斯（Delos）的民众来说，一切的希望都破灭了。还有另外两个知名的构造也是不可能完成的，数学家们花了大量的时间试图找到解决方案 -- 但都没有成功：
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-1.svg" width=200 height=180)
 
-{.text-center} __{.m-red} Trisecting the angle__  
-We already know how to bisect angles. However it is impossible to similarly
-split an angle into _three_ equal parts.
+{.text-center} __{.m-red} 三等分角__  
+我们已知知道如何平分一个角，但是如果要将一个角 _三_ 均等分却是不可能的
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-2.svg" width=200 height=180)
 
-{.text-center} __{.m-blue} Doubling the cube__  
-Given the edge of a cube, it is impossible to construct the edge of another cube
-that has exactly twice the volume.
+{.text-center} __{.m-blue} 将立方体体积加倍__  
+给定一个立方体的边长，不可能构造出另一个立方体的边长，使得该立方体的体积刚好是原立方体的两倍
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-3.svg" width=200 height=180)
 
-{.text-center} __{.m-green} Squaring the circle__  
-Given a circle, it is impossible to construct a square that has exactly the same
-area.
+{.text-center} __{.m-green} 化圆为方__  
+给定一个圆，不可能构造出一个正方形，它的面积刚好等于圆的面积
 :::
 
-Note that these problems can all be solved quite easily with algebra, or using
-marked rulers and protractors. But they are impossible if you are just allowed to
-use straight-edge and compass.
+请注意，这些问题如果用代数或使用带刻度的标尺和量角器都可以很容易得到解决，但如果只允许使用真尺和圆规，那是不可能完成的
 
 ---
 
