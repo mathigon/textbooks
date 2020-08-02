@@ -515,13 +515,6 @@ Başlangıç için, sol üstteki kutucuklardan <x-target no-margins to="#equilat
 
 {.todo} ÇOK YAKINDA – ORTANOKTALAR VE DİK AÇIORTAYLARI OLUŞTURMA
 
-    // A midpoint is a point on a line segment that divides it into two congruent
-    // segments. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
-    // `bar(AC)`.
-    // 
-    // A line, segment, or ray that passes through a midpoint of another segment 
-    // at a right angle is called a __perpendicular bisector__. `bar(DE)` is the
-    // perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) ⊥ bar(DE)`.
 
 ---
 > id: angle-bisector
@@ -549,7 +542,7 @@ Efsaneye göre bir zamanlar bir Antik Yunan şehri olan Dilos, korkunç bir hast
 {.caption} Delfi’deki tapınağın bir modeli
 :::
 
-Şunu unutmamalıyız ki _hacmi ikiye katlamak_ _bir kübün kenarını ikiye katlamakla_ aynı şey değildir. Aslında eğer [[2 boyutlu|1 boyutlu|3 boyutlu]] hacim 2 kat artarsa, kübün [[2 boyutlu|1 boyutlu|3 boyutlu]] kenarı `root(3)(2)` kadar artacaktır.
+Şunu unutmamalıyız ki _hacmi ikiye katlamak_ _bir kübün kenarını ikiye katlamakla_ aynı şey değildir. Aslında eğer [[2 boyutlu|1 boyutlu|3 boyutlu]] hacim 2 kat artarsa, kübün [[2 boyutlu|1 boyutlu|3 boyutlu]] kenarı `root(2,3)` kadar artacaktır.
 
 ---
 > id: impossible-1
@@ -739,10 +732,6 @@ Uyduların güç üretmek için büyük güneş panellerine ihtiyacı vardır. M
 
 Origami teknikleri sayesinde güneş panelleri, uydu uzaya ulaştığı zaman katlanarak açılabiliyorlar. Bazı zekice katlamalar sonucunda paneller çok küçülüp, çok az motora ve mekanik parçaya ihtiyaç duyuyorlar.
 
-    // One of these is the __Miura Map Fold__, which was invented by _Korio Miura_.
-    // The same is also true for the mirrors of telescopes in space. Larger mirrors
-    // can take better images. Engineers can use Origami to build large mirrors that
-    // can be folded up very efficiently when loaded onto rockets.
 
 :::
 
@@ -779,24 +768,6 @@ Deprem ve tsunami gibi felaket durumlarında da, acil müdahale araçlarına ge�
 
 :::
 
-    // ---
-    // > id: origami-applications-2
-    // > goals: video
-    // 
-    // ::: column(width=300)
-    // 
-    // x-video(src="https://storage.googleapis.com/mathigon-videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
-    // 
-    // ::: column.grow
-    // #### Stadium Roofs
-    // 
-    // Bridges are difficult to construct because they have to span large distances
-    // without intermediate support. This also is the case for the roofs of sports
-    // stadiums, which have to cover a large area without being supported by pillars.
-    // 
-    // The roof of the new Falcons Stadium in Atlanta consists of eight enormous
-    // modules that can twist to open or close.
-    // :::
 
 ---
 > id: origami-applications-4

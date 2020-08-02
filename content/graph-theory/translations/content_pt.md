@@ -213,7 +213,7 @@ Assim como nos mapas da cidade, descobrimos que alguns grafos são possíveis, e
         div(value="size") Tamanho
         div(value="prime") Números primos
         div(value="eo") Par e ímpar
-      .frame-body
+      .box
         p(style="margin: 0"): strong Esses grafos são possíveis:
         include svg/vertex-orders-1.svg
         p(style="margin: 1em 0 0"): strong Esses grafos não são possíveis:
@@ -329,7 +329,7 @@ Aqui está outro quebra-cabeça relacionado à teoria dos grafos. Em uma pequena
 
 Tente conectar cada um dos fornecedores abaixo a cada uma das casas, sem que nenhuma das linhas cruze:
 
-    .frame.fill
+    .box.no-padding
       include svg/utilities.svg
       button.btn Clear
 
@@ -363,19 +363,22 @@ Assim como as pontes de Königsberg, você rapidamente descobre que esse problem
 
 O [grafo completo](gloss:complete-graph) `K_5` é o menor grafo que não é planar. Qualquer outro grafo que contenha `K_5` como subgrafo também não é planar. Isso inclui `K_6`, `K_7` e todos os grafos completos que são maiores. O grafo no quebra-cabeça dos três serviços (água, energia e gás) é o [grafo bipartido](gloss:bipartite-graph) `K_"3,3"`. Acontece que qualquer grafo não-planar deve conter `K_5` ou `K_"3,3"` (ou uma [subdivisão](gloss:subdivision) desses dois grafos) como subgrafo. Este teorema é chamado de _teorema de Kuratowski_.
 
-    // TODO Add bio of Kazimierz Kuratowski
-
 ---
 > id: planarity
 > goals: planarity
 
-    .box.problem-box
-      .box-title: h3 Planaridade
-      .box-body
-        x-solved
-        svg#planarity.frame(viewBox="0 0 640 320")
-        p.md Esse é um grafo planar, mas os ${n}{n|7|5,20,1} vértices foram misturados. Rearranje os vértices de modo que nenhuma das arestas se cruzem.
-        button.btn Gerar novo grafo aleatório
+::: .box.f-blue
+
+#### Planaridade
+
+    x-solved
+    svg#planarity.frame(viewBox="0 0 640 320")
+
+Esse é um grafo planar, mas os ${n}{n|7|5,20,1} vértices foram misturados. Rearranje os vértices de modo que nenhuma das arestas se cruzem.
+
+    p.btn-row: button.btn Gerar novo grafo aleatório
+
+:::
 
 ---
 > id: euler
@@ -425,7 +428,7 @@ Infelizmente, existem infinitos grafos e não podemos verificar todos um a um pa
 
     x-slideshow
       .stage(slot="stage")
-        svg.frame(viewBox="0 0 640 200")
+        svg(viewBox="0 0 640 200")
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
           line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
           line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
@@ -542,31 +545,27 @@ Ao colorir o mapa dos estados dos EUA, 50 cores são obviamente suficientes, mas
       .tab
         h3 United States #[span.check(when="map-0")]
         x-solved
-        include svg/colours-1.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-1.svg
         button.btn.clear Clear
-        button.btn.solve Solution
       .tab
         h3 South America #[span.check(when="map-1")]
         x-solved
-        include svg/colours-2.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-2.svg
         button.btn.clear Clear
-        button.btn.solve Solution
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
-        include svg/colours-3.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-3.svg
         button.btn.clear Clear
-        button.btn.solve Solution
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
-        include svg/colours-4.svg
         .colour-count Number of colours: #[span 0]
+        include svg/colours-4.svg
         button.btn.clear Clear
-        button.btn.solve Solution
 
 ---
 > id: maps-2
@@ -641,7 +640,7 @@ No entanto, os matemáticos também analisaram mapas de _impérios_, onde os pa�
 
 ::: column.grow(parent="right")
 
-Vamos pensar, mais uma vez, em redes e mapas. Imagine que um serviço de entrega precise visitar ${tsn}{tsn|8|2,50,1} cidades diferentes para distribuir encomendas. Podemos pensar nessas cidades como os vértices de um gráfico. Se todas as cidades estiverem conectadas por estradas, este é um gráfico completo [[<<<<|cycle|bipartite graph]], então há <mfrac> <mrow> ${tsn} × (${tsn} - 1) </mrow> <mn> 2 </mn> </mfrac> = ${tsn*(tsn-1)/2} arestas no total.
+Vamos pensar, mais uma vez, em redes e mapas. Imagine que um serviço de entrega precise visitar ${tsn}{tsn|8|2,50,1} cidades diferentes para distribuir encomendas. Podemos pensar nessas cidades como os vértices de um gráfico. Se todas as cidades estiverem conectadas por estradas, este é um gráfico [[completo|cycle|bipartite graph]], então há <mfrac> <mrow> ${tsn} × (${tsn} - 1) </mrow> <mn> 2 </mn> </mfrac> = ${tsn*(tsn-1)/2} arestas no total.
 
 O caminhão de entrega deve visitar todas as cidades, em qualquer ordem. No problema das pontes de Königsberg, queríamos encontrar caminhos que percorrem _todas as margens_ exatamente um. Agora, queremos encontrar caminhos que visitam _todos os vértices_ exatamente uma vez. Esses caminhos são chamados __ciclos hamiltonianos__.
 
@@ -743,7 +742,6 @@ As formigas querem encontrar as rotas mais curtas possíveis entre o ninho e as 
 * Outras formigas tendem a seguir uma trilha quando encontram uma, o que as leva à comida. Na viagem de volta, depositam mais feromônios, reforçando a trilha.
 * Com o tempo, o feromônio evapora. Quanto mais longo o caminho, mais tempo leva para as formigas viajarem, e assim o feromônio tem mais tempo para evaporar. Caminhos curtos, por outro lado, podem ser reforçados mais rapidamente, portanto sua força aumenta mais rapidamente.
 
-
 ::: column(width=240)
 
 {.todo} Diagrama em breve ...
@@ -826,7 +824,7 @@ A internet é a maior rede já criada pela humanidade. Esta imagem mostra uma pr
 ---
 > id: applications-3
 
-Enquanto sites e hiperlinks formam um gráfico _virtual_, também existe a rede física _<<<<_ de computadores, servidores, roteadores, linhas telefônicas e cabos.
+Enquanto sites e hiperlinks formam um gráfico _virtual_, também existe a rede _física_ de computadores, servidores, roteadores, linhas telefônicas e cabos.
 
 ::: column.grow(parent="right")
 

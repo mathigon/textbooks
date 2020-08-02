@@ -6,7 +6,7 @@
 
 /// <reference types="three"/>
 import {Obj} from '@mathigon/core';
-import {loadScript, $N, CanvasView, ElementView} from '@mathigon/boost';
+import {loadScript, $N, CanvasView, ElementView, $html} from '@mathigon/boost';
 
 
 const url = '/resources/shared/vendor/three-91.min.js';
@@ -24,7 +24,7 @@ function getRenderer(width: number, height: number) {
 
   const renderer = new THREE.WebGLRenderer({antialias: true});
   renderer.localClippingEnabled = true;
-  renderer.setClearColor(0xffffff, 1);
+  renderer.setClearColor($html.hasClass('dark-mode') ? 0x22212e : 0xffffff, 1);
   renderer.setSize(width, height);
   return renderers[id] = renderer;
 }

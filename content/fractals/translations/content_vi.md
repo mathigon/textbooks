@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Khi nhìn xung quanh thiên nhiên, bạn có thể nhận thấy những loài thực vật phức tạp như thế này:
 
@@ -38,7 +39,7 @@ Một trong những mẫu đơn giản nhất có thể là phân đoạn dòng 
 
 Bạn có thể di chuyển [dấu chấm màu xanh](target:dot) để thay đổi độ dài và góc của tất cả các nhánh. Sau đó tăng số lần lặp bằng cách sử dụng [thanh trượt](->#fern-slider) bên dưới.
 
-{.reveal(when="slider-0")} Tùy thuộc vào vị trí của các nhánh, bạn có thể tạo các mẫu hoàn toàn khác nhau - trông giống như [fern](action:set(130,228,197,184)) ở trên, một cây [<<<<](action:set(160,186,200,186)) hoặc [hình ngũ giác lồng nhau](action:set(113,235,232,238)). Bạn có thể tìm thấy gì khác? [Tiếp tục](btn:next)
+{.reveal(when="slider-0")} Tùy thuộc vào vị trí của các nhánh, bạn có thể tạo các mẫu hoàn toàn khác nhau - trông giống như [fern](action:set(130,228,197,184)) ở trên, một [cây](action:set(160,186,200,186)) hoặc [hình ngũ giác lồng nhau](action:set(113,235,232,238)). Bạn có thể tìm thấy gì khác? [Tiếp tục](btn:next)
 
 ::: column(width=360)
 
@@ -147,7 +148,7 @@ Bây giờ hãy để một cái nhìn về tam giác Sierpinki. Nếu chúng t�
 ---
 > id: dimension-4
 
-Nhưng chờ đợi, làm thế nào một cái gì đó có một thứ nguyên không phải là một số nguyên? Có vẻ như không thể, nhưng đây chỉ là một trong những tính chất kỳ lạ của fractals. Trên thực tế, đây là những gì mang lại cho fractals tên của chúng: chúng có kích thước phân đoạn __<<<<__.
+Nhưng chờ đợi, làm thế nào một cái gì đó có một thứ nguyên không phải là một số nguyên? Có vẻ như không thể, nhưng đây chỉ là một trong những tính chất kỳ lạ của fractals. Trên thực tế, đây là những gì mang lại cho fractals tên của chúng: chúng có kích thước phân __đoạn__.
 
 Với mỗi lần lặp lại, chúng tôi loại bỏ một phần diện tích của tam giác Sierpinki. Nếu chúng ta có thể làm điều này vô cùng nhiều lần, thì thực sự sẽ không còn khu vực nào nữa: đó là lý do tại sao tam giác Sierpinki là một thứ gì đó nằm giữa khu vực 2 chiều và đường 1 chiều.
 
@@ -235,7 +236,7 @@ Khi chúng tôi chia tỷ lệ một phân đoạn cạnh của Bông tuyết Ko
 
 #### Khu vực _{span.check(when="blank-6")}_
 
-Tạo các bông tuyết Koch gần giống như một chuỗi đệ quy [<<<<](gloss:sequence-recursive): chúng ta biết hình dạng bắt đầu (một hình tam giác) và chúng ta biết cách chuyển từ một thuật ngữ này sang thuật ngữ tiếp theo (bằng cách thêm nhiều hình tam giác ở mỗi cạnh):
+Tạo các bông tuyết Koch gần giống như một chuỗi đệ [quy](gloss:sequence-recursive): chúng ta biết hình dạng bắt đầu (một hình tam giác) và chúng ta biết cách chuyển từ một thuật ngữ này sang thuật ngữ tiếp theo (bằng cách thêm nhiều hình tam giác ở mỗi cạnh):
 
 ::: column(width=140)
 
@@ -263,7 +264,7 @@ Tạo các bông tuyết Koch gần giống như một chuỗi đệ quy [<<<<](
 
 {.reveal(when="blank-0 blank-1 blank-2")} Sau lần lặp đầu tiên, số lượng tam giác mới được thêm vào tăng theo hệ số [[4]] ở mỗi bước. Đồng thời, diện tích của các hình tam giác mới này giảm theo hệ số [[9]] ở mỗi bước.
 
-{.reveal(when="blank-3 blank-4")} Hãy để nói rằng [tam giác đầu tiên](->#koch-0) có diện tích là 1. Sau đó, tổng diện tích của [ba tam giác tiếp theo](->#koch-1) là `3 × 1/9 = 1/3`. Tất cả các bước sau đây tạo thành một chuỗi hình học [[<<<<|arithmetic series|quadratic series]], _{span.reveal(when="blank-5")} với tỷ lệ chung [[`4/9`|`9/4`|`4/3`]]._
+{.reveal(when="blank-3 blank-4")} Hãy để nói rằng [tam giác đầu tiên](->#koch-0) có diện tích là 1. Sau đó, tổng diện tích của [ba tam giác tiếp theo](->#koch-1) là `3 × 1/9 = 1/3`. Tất cả các bước sau đây tạo thành một chuỗi hình [[học|arithmetic series|quadratic series]], _{span.reveal(when="blank-5")} với tỷ lệ chung [[`4/9`|`9/4`|`4/3`]]._
 
 {.reveal(when="blank-6")} Sử dụng công thức tính tổng của chuỗi hình học [vô hạn](gloss:geometric-series), chúng ta có thể tính được rằng tổng diện tích của bông tuyết Koch là
 
@@ -378,7 +379,7 @@ Chẳng hạn, một cách chúng ta có thể đo chiều dài bờ biển củ
 
 Nếu thước dài ${rulers[index]}{index|0|0,8,1} km, chúng ta phải sử dụng ${count} lần, do đó, chúng ta có tổng đường bờ biển là ${count} × ${rulers[index]} = ${count * rulers[index]} km.
 
-{.reveal(when="var-0")} Chúng ta chỉ có thể tiếp tục, với những người cai trị nhỏ hơn và nhỏ hơn, và mỗi lần kết quả của chúng ta cho chiều dài của đường bờ biển sẽ dài hơn một chút. Giống như Bông tuyết Koch trước đây, dường như bờ biển nước Anh dài vô tận! Điều này thường được gọi là nghịch lý bờ biển __<<<<__. [Tiếp tục](btn:next)
+{.reveal(when="var-0")} Chúng ta chỉ có thể tiếp tục, với những người cai trị nhỏ hơn và nhỏ hơn, và mỗi lần kết quả của chúng ta cho chiều dài của đường bờ biển sẽ dài hơn một chút. Giống như Bông tuyết Koch trước đây, dường như bờ biển nước Anh dài vô tận! Điều này thường được gọi là nghịch lý bờ __biển__. [Tiếp tục](btn:next)
 
 ::: column(width=280)
 
@@ -413,7 +414,7 @@ Vài thập kỷ sau, nhà toán học [Benoit Mandelbrot](bio:mandelbrot) tình
 
 > id: coastline-dimension-1
 
-Nếu chúng ta lặp lại điều này với các lưới lớn hơn, chúng ta sẽ thấy rằng kích thước của bờ biển Anh Làn thực sự là khoảng 1,21. Mandelbrot nhận ra rằng kích thước fractal này cũng là thước đo độ nhám __<<<<__ của một hình dạng - một khái niệm mới, mà ông đã tìm thấy các ứng dụng quan trọng trong nhiều lĩnh vực khác của toán học và khoa học.
+Nếu chúng ta lặp lại điều này với các lưới lớn hơn, chúng ta sẽ thấy rằng kích thước của bờ biển Anh Làn thực sự là khoảng 1,21. Mandelbrot nhận ra rằng kích thước fractal này cũng là thước đo độ __nhám__ của một hình dạng - một khái niệm mới, mà ông đã tìm thấy các ứng dụng quan trọng trong nhiều lĩnh vực khác của toán học và khoa học.
 
 ---
 
@@ -425,14 +426,12 @@ Mặc dù fractals thực sự không bao giờ có thể xuất hiện trong t�
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Dãy núi ở Trung Á
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Đồng bằng sông Hằng ở Ấn Độ
@@ -445,14 +444,12 @@ Mặc dù fractals thực sự không bao giờ có thể xuất hiện trong t�
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Mạch máu ở võng mạc
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} Grand Canyon ở Hoa Kỳ
@@ -467,16 +464,12 @@ Mặc dù fractals thực sự không bao giờ có thể xuất hiện trong t�
 
 Tất cả các đối tượng này có thể xuất hiện hoàn toàn ngẫu nhiên, nhưng, giống như fractals, có một mô hình cơ bản xác định cách chúng được hình thành. Toán học có thể giúp chúng ta hiểu các hình dạng tốt hơn và fractals có các ứng dụng trong các lĩnh vực như y học, sinh học, địa chất và khí tượng. [Tiếp tục](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Địa hình fractal do máy tính tạo ra
@@ -495,6 +488,7 @@ Và chúng tôi thậm chí có thể đảo ngược quá trình này để né
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -519,22 +513,18 @@ Dưới đây là một số ví dụ về việc lát sàn từ các nhà thờ
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -581,7 +571,7 @@ Nếu hai ô liền kề chia hết cho 2, thì tổng của chúng trong ô bê
 
 Tại đây bạn có thể thấy một phiên bản nhỏ của 128 hàng đầu tiên của tam giác Pascal. Chúng tôi đã đánh dấu tất cả các ô chia hết cho ${n}{n|2|2,40,1} - bạn chú ý điều gì?
 
-{.reveal(when="var-0")} Với mỗi số, chúng ta có một mẫu hình tam giác khác nhau tương tự như tam giác Sierpinki. Mẫu đặc biệt thường xuyên nếu chúng ta chọn số nguyên tố [[<<<<|triangle number|Fibonacci number]]. _{span.reveal(when="blank-0")} Nếu số có _nhiều yếu tố nguyên tố_ khác nhau, mẫu có vẻ ngẫu nhiên hơn._
+{.reveal(when="var-0")} Với mỗi số, chúng ta có một mẫu hình tam giác khác nhau tương tự như tam giác Sierpinki. Mẫu đặc biệt thường xuyên nếu chúng ta chọn số nguyên [[tố|triangle number|Fibonacci number]]. _{span.reveal(when="blank-0")} Nếu số có _nhiều yếu tố nguyên tố_ khác nhau, mẫu có vẻ ngẫu nhiên hơn._
 
     x-gesture(target="#pascal-large x-var" slide="100,0")
 
@@ -636,7 +626,7 @@ Có nhiều phiên bản khác của nó - ví dụ: chúng ta có thể bắt �
 
 ### Tự động di động
 
-Một máy tự động di động __<<<<__ là một lưới bao gồm nhiều ô riêng lẻ. Mỗi ô có thể ở các trạng thái khác nhau, các trạng thái khác nhau (ví dụ: các màu khác nhau) và trạng thái của mọi ô được xác định bởi các ô xung quanh.
+Một máy tự động di __động__ là một lưới bao gồm nhiều ô riêng lẻ. Mỗi ô có thể ở các trạng thái khác nhau, các trạng thái khác nhau (ví dụ: các màu khác nhau) và trạng thái của mọi ô được xác định bởi các ô xung quanh.
 
 Trong ví dụ của chúng tôi, mọi ô có thể là đen hoặc trắng. Chúng tôi bắt đầu với một hàng chỉ chứa một hình vuông màu đen. Trong mỗi hàng tiếp theo, màu của mỗi ô được xác định bởi ba ô ngay bên trên. Nhấn vào tám tùy chọn có thể bên dưới để lật màu của chúng - bạn có thể tìm thấy một bộ quy tắc tạo ra một mô hình tương tự như tam giác Sierpinki không?
 
@@ -691,6 +681,7 @@ Có nhiều biến thể của tam giác Sierpinki và các hình chữ nhật k
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Tất cả các fractals mà chúng ta đã thấy trong các chương trước đã được tạo bằng quy trình __lặp__: bạn bắt đầu với một mẫu cụ thể, và sau đó bạn lặp đi lặp lại nhiều lần.
 
@@ -727,15 +718,15 @@ Ví dụ, hãy lấy công thức đệ quy `§x_n = x_(n-1)^2` và vẽ các th
 
 Lưu ý cách chuỗi kết quả có thể hành xử rất khác nhau, tùy thuộc vào giá trị bắt đầu `x_0`:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 Nếu `x_0 > 1`, chuỗi [[phân kỳ|converges]]:|converges]] {span.reveal(when="blank-0")}, nó sẽ tiếp tục phát triển, lên đến vô cùng._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Nếu `x_0` nằm giữa dòng1 và 1, chuỗi [[hội tụ|diverges]].
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Nếu `x_0 < -1`, chuỗi [[phân kỳ|converges]].
 
@@ -822,7 +813,7 @@ Trong sơ đồ này, bạn có thể di chuyển vị trí của `pill(x_0,"yel
 
 ::: div(slot="legend")
 
-Trong một số trường hợp, chuỗi khôngn hội tụ đến một điểm duy nhất _<<<<_ - thay vào đó, nó đạt đến một chu kỳ gồm nhiều điểm, giống như một hình tam giác. Các chu trình này được gọi là __quỹ đạo__.
+Trong một số trường hợp, chuỗi khôngn hội tụ đến một điểm duy _nhất_ - thay vào đó, nó đạt đến một chu kỳ gồm nhiều điểm, giống như một hình tam giác. Các chu trình này được gọi là __quỹ đạo__.
 
 Các điểm có màu xanh lam có nghĩa là dãy tương ứng sẽ hội tụ hoặc có quỹ đạo (chúng tôi nói rằng đó là __giới hạn__). Các điểm được để lại màu trắng có nghĩa là chuỗi tương ứng __phân kỳ__: nó không bị giới hạn, và cuối cùng thổi đến vô cùng.
 
@@ -948,18 +939,13 @@ Thanh trượt này bao gồm 27 hình ảnh riêng lẻ, lên tới mức thu p
 
 Khi bạn di chuyển giá trị [{.pill.red} c](target:c) xung quanh bộ Mandelbrot, bạn có thể nhận thấy một thuộc tính tò mò:
 
-* Tất cả các chuỗi trong thân chính [<<<<](target:bulb0) của bộ Mandelbrot [[hội tụ|diverge|reach an orbit]] _{span.reveal(when="blank-0")} đến một điểm duy nhất._
+* Tất cả các chuỗi trong thân [chính](target:bulb0) của bộ Mandelbrot [[hội tụ|diverge|reach an orbit]] _{span.reveal(when="blank-0")} đến một điểm duy nhất._
 * {.reveal(when="blank-0")} Các chuỗi trong [bóng đèn lớn](target:bulb1) ở đầu [[đạt đến quỹ đạo|converge|diverge]] _{span.reveal(when="blank-1")} bao gồm [[3]] điểm._
 * {.reveal(when="blank-2")} Chuỗi trong [bóng đèn nhỏ hơn này](target:bulb2) có quỹ đạo có chiều dài [[5]].
-
 
 :::
 
 {.reveal(when="blank-3")} Mỗi bóng đèn có quỹ đạo có kích thước khác nhau, với các bóng đèn nhỏ hơn có càng nhiều điểm trên quỹ đạo của chúng. Kích thước của các quỹ đạo này có liên quan chặt chẽ với __Bản đồ logistic__, một khái niệm quan trọng trong [lý thuyết hỗn loạn](/course/chaos).
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 

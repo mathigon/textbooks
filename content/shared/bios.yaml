@@ -7,7 +7,7 @@ abel:
   born: 1802
   died: 1829
   name: Abel
-  overflow: true
+  full: Niels Henrik Abel
   bio: |
     __Niels Henrik Abel__ (1802 – 1829) was an important Norwegian
     mathematician. Even though he died at the age of 26, he made groundbreaking
@@ -26,10 +26,33 @@ abel:
     - title: Group Theory
       url: /course/transformations/symmetry-groups
 
+agnesi:
+  born: 1718
+  died: 1799
+  name: Agnesi
+  full: Maria Gaetana Agnesi
+  keywords: Woman Female
+  bio: |
+    __Maria Gaetana Agnesi__ (1718 – 1799) was an Italian mathematician,
+    philosopher, theologian, and humanitarian.  Agnesi was the first western
+    woman to write a mathematics textbook. She was also the first woman to be
+    appointed professor at a university.
+
+    Her textbook, the _Analytical Institutions for the use of Italian youth_
+    combined differential and integral caluclus, and was an international
+    success.
+
+    Agnesi also studied a bell-shaped curve described by the equation
+    `y=a^3/(x^2+a^2)`. This function is now called the _Witch of Agnesi_. The
+    strage name might come from a pun in the Italian language, were the word
+    “versiera” for “witch” sounds similar to the ropes used when sailing.
+
 al-haytham:
   born: 965
   died: 1050
   name: Al-Haytham
+  full: Hasan Ibn al-Haytham
+  location: middle-east
   bio: |
     __Hasan Ibn al-Haytham__ (أبو علي، الحسن بن الحسن بن الهيثم, c. 965 – 1050)
     lived in Cairo during the Islamic Golden Age, and studied mathematics,
@@ -46,6 +69,9 @@ al-karaji:
   born: 953
   died: 1029
   name: Al-Karaji
+  full: Muhammad Al-Karaji
+  location: middle-east
+  image: false
   bio: __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 – 1029) was
     a Persian mathematician and engineer. He was the first person to use _proof
     by induction_, which allowed him to prove the binomial theorem.
@@ -57,7 +83,9 @@ al-khwarizmi:
   born: 780
   died: 850
   name: Al-Khwarizmi
+  full: Muhammad Al-Khwarizmi
   overflow: true
+  location: middle-east
   bio: |
     The Persian mathematician __Muhammad Al-Khwarizmi__ (محمد بن موسى الخوارزمي‎,
     780 – 850) lived during the golden age of the Muslim Abbasid regime in
@@ -76,8 +104,10 @@ al-khwarizmi:
 
 apollonius:
   name: Apollonius
+  full: Apollonius of Perga
   born: -262  # ???
   died: -190  # ???
+  location: middle-east
   bio: __Apollonius of Perga__ (c. 200 BCE) was a Greek mathematician and
     astronomer best known for his work on the four _conic sections_.
   links:
@@ -142,10 +172,12 @@ aryabhata:
   died: 550
   name: Aryabhata
   overflow: true
-  bio: __Aryabhata__ (आर्यभट) was one of the first mathematicians and astronomers
-    in the golden age of Indian mathematics. He defined trigonometric functions,
-    solved simultaneous quadratic equations, found approximations for _π_, and
-    realised that _π_ is irrational.
+  location: asia
+  keywords: India
+  bio: __Aryabhata__ (आर्यभट, 476 – 550) was one of the first mathematicians and
+    astronomers in the golden age of Indian mathematics. He defined
+    trigonometric functions, solved simultaneous quadratic equations, found
+    approximations for _π_, and realised that _π_ is irrational.
   links:
     - title: Trigonometry
       url: /course/triangles/trigonometry
@@ -156,6 +188,7 @@ babbage:
   born: 1791
   died: 1871
   name: Babbage
+  full: Charles Babbage
   small: true
   bio: |
     __Charles Babbage__ (1791 – 1871) was a British mathematician, philosopher
@@ -172,15 +205,16 @@ bernoulli-1:
   born: 1654
   died: 1705
   name: Bernoulli
+  full: Jacob Bernoulli
   bio: |
     __Jacob Bernoulli__ (1655 – 1705) was a Swiss mathematician, and one of the
     many important scientists in the Bernoulli family. In fact, he had a deep
     academic rivalry with several of his brothers and sons.
 
-    Jacob made significant advances to the calculus that was invented by Newton
-    and Leibnitz, created the field of _calculus of variations_, discovered the
-    fundamental constant _e_, developed techniques for solving differential
-    equations, and much more.
+    Bernoulli made significant advances to the calculus that was invented by
+    Newton and Leibnitz, created the field of _calculus of variations_,
+    discovered the fundamental constant _e_, developed techniques for solving
+    differential equations, and much more.
 
     He published the first substantial work about probability, including
     permutations, combinations and the law of large numbers, he proved the
@@ -190,6 +224,7 @@ bernoulli-2:
   born: 1700
   died: 1782
   name: Bernoulli
+  full: Daniel Bernoulli
   bio: |
     __Daniel Bernoulli__ (1700 – 1782) was a Swiss mathematician and physicist.
     He was one of the many famous scientists from the Bernoulli family –
@@ -206,7 +241,9 @@ bernoulli-2:
 bhaskara:
   born: 1114
   died: 1185
-  name: Bhaskara
+  name: Bhaskara II
+  keywords: India
+  location: asia
   bio: __Bhaskara II__ (1114 – 1185) was an Indian mathematician and astronomer.
     He discovered some of the basic concepts of calculus, more than 500 years
     before Leibnitz and Newton. Bhaskara also established that division by zero
@@ -217,7 +254,9 @@ blackwell:
   born: 1919
   died: 2010
   name: Blackwell
+  full: David Blackwell
   small: true
+  location: america
   bio: |
     __David Blackwell__ (1919 – 2010) was an American statistician and
     mathematician. He worked on game theory, probability theory, information
@@ -233,6 +272,7 @@ bolyai:
   born: 1802
   died: 1860
   name: Bolyai
+  full: János Bolyai
   small: true
   bio: |
     __János Bolyai__ (1802 – 1860) was a Hungarian mathematician, and one of
@@ -249,6 +289,7 @@ boole:
   born: 1815
   died: 1864
   name: Boole
+  full: George Boole
   bio: __George Boole__ (1815 – 1864) was an English mathematician. As a child,
     he taught himself Latin, Greek and mathematics, hoping to escape his lower
     class life. He created _Boolean algebra_, which uses operators like AND, OR
@@ -261,6 +302,8 @@ brahmagupta:
   died: 668
   name: Brahmagupta
   overflow: true
+  location: asia
+  keywords: India
   bio: The Indian mathematician __Brahmagupta__ (c. 598 – 668 CE) invented the
     rules for addition, subtraction and multiplication with zero and negative
     numbers. He was also an astronomer and made many other discoveries in
@@ -271,6 +314,7 @@ cantor:
   born: 1845
   died: 1918
   name: Cantor
+  full: Georg Cantor
   bio: |
     The German mathematician __Georg Cantor__ (1845 – 1918) was the inventor of
     set theory, and a pioneer in our understanding of infinity. For most of his
@@ -295,6 +339,7 @@ cardano:
   born: 1501
   died: 1576
   name: Cardano
+  full: Gerolamo Cardano
   bio: |
     The Italian __Gerolamo Cardano__ (1501 – 1576) was one of the most
     influential mathematicians and scientists of the Renaissance. He
@@ -316,6 +361,8 @@ carroll:
   born: 1832
   died: 1898
   name: Carroll
+  full: Lewis Carroll
+  small: true
   bio: |
     __Charles Lutwidge Dodgson__ (1832 – 1898) is best know under his pen name
     __Lewis Carroll__, as the author of _Alice’s Adventures in Wonderland_ and
@@ -329,6 +376,7 @@ cauchy:
   born: 1789
   died: 1857
   name: Cauchy
+  full: Augustin-Louis Cauchy
   small: true
   bio: |
     __Augustin-Louis Cauchy__ (1789 – 1857) was a French mathematician and
@@ -342,6 +390,7 @@ cauchy:
 
 cavalieri:
   name: Cavalieri
+  full: Bonaventura Cavalieri
   born: 1598
   died: 1647
   bio: |
@@ -359,6 +408,7 @@ cayley:
   born: 1821
   died: 1895
   name: Cayley
+  full: Arthur Cayley
   bio: __Arthur Cayley__ (1821 – 1895) was a British mathematician and lawyer.
     He was one of the pioneers of _group theory_, first proposed the modern
     definition of a “group”, and generalised them to encompass many more
@@ -368,6 +418,49 @@ cayley:
     - title: Group Theory
       url: /course/transformations/symmetry-groups
 
+ceva:
+  born: 1647
+  died: 1734
+  name: Ceva
+  full: Giovanni Ceva
+  image: false
+  bio: |
+    __Giovanni Ceva__ (1647 – 1734) was an Italian mathematician, physicist,
+    and hydraulic engineer. One of his most enduring contributions to
+    mathematics is Ceva’s Theorem, about the relationship between different line
+    segments in a triangle. However, its publication in _De lineis rectis_
+    was recieved with little fanfair, and his discoveries weren’t fully
+    recognized until the 1800s.
+  links:
+    - title: Properties of Triangles
+      url: /course/triangles/properties
+
+chatelet:
+  born: 1706
+  died: 1749
+  name: Du Châtelet
+  full: Émilie du Châtelet
+  small: true
+  bio: |
+    __Émilie du Châtelet__ (1706 – 1749) was a French scientist and
+    mathematician. As a women, she was often excluded from the scientific
+    community, but shw built friendships with renown scholars, and had a long
+    affair with the philosopher _Voltaire_.
+
+    She applied her mathematical ability while gambling, and used her winnings
+    to buy books and laboratory equipment, and made important advanced regarding
+    the concepts like energy and energy conservation.
+
+    Around the age of 42, Du Châtelet became pregnant again. At the time,
+    without adequate healthcare, this was very dangerous for women of her age.
+    She was also working on a French translation of Newton’s book _Principia_,
+    which containes the basic laws of physics.
+
+    Du Châtelet was determined to finish the translation, as well as a detailed
+    commentary with additions and clarifications, and often worked 18 hours per
+    day. She died just a few days after giving birth to a daughter, but her
+    completed work was published posthumously, and is still used today.
+
 collatz:
   name: Collatz
   bio: __Lothar Collatz__ (1910 – 1990) was a German mathematician working on
@@ -376,6 +469,7 @@ collatz:
 
 conway:
   name: Conway
+  full: John Horton Conway
   born: 1937
   died: 2020
   bio: |
@@ -395,6 +489,7 @@ copernicus:
   born: 1473
   died: 1543
   name: Copernicus
+  full: Nicolaus Copernicus
   bio: |
     __Nicolaus Copernicus__ (1473 – 1543) was a Polish mathematician,
     astronomer and lawyer. During his life, most people believed in the
@@ -417,6 +512,7 @@ de-moivre:
   born: 1667
   died: 1754
   name: De Moivre
+  full: Abraham de Moivre
   bio: |
     __Abraham de Moivre__ (1667 – 1754) was a French mathematician who worked
     in probability and analytic geometry. He is most remembered for _de Moivre’s
@@ -436,6 +532,7 @@ dedekind:
   born: 1831
   died: 1916
   name: Dedekind
+  full: Richard Dedekind
   small: true
   bio: __Richard Dedekind__ (1831 – 1916) was a German mathematician and one of
     the students of Gauss. He developed many concepts in set theory, and
@@ -459,6 +556,7 @@ desargues:
   born: 1591
   died: 1661
   name: Desargues
+  full: Girard Desargues
   bio: |
     __Girard Desargues__ (1591 – 1661) was a French mathematician, engineer,
     and architect. He designed numerous buildings in Paris and Lyon, helped
@@ -478,6 +576,7 @@ descartes:
   born: 1596
   died: 1650
   name: Descartes
+  full: René Descartes
   bio: |
     __René Descartes__ (1596 – 1650) was a French mathematician and philosopher,
     and one of the key figures in the Scientific Revolution. He refused to
@@ -496,6 +595,7 @@ diophantus:
   died: 284
   name: Diophantus
   overflow: true
+  location: africa
   bio: |
     __Diophantus__ was a Hellenistic mathematician who lived in Alexandria.
     Most of his works are about solving polynomial equations with several
@@ -518,8 +618,27 @@ dirac:
     famously shy and, according to Einstein, _“balancing on the dizzying path
     between genius and madness”_.
 
+easley:
+  born: 1933
+  died: 2011
+  small: true
+  name: Easley
+  full: Annie Easley
+  keywords: Woman Female NASA
+  location: america
+  bio: |
+    __Annie Easley__ (1933 – 2011) was an American mathematician and computer
+    scientist. She was one of the first African-Americans to work at NASA as a
+    “computer”.
+
+    Easley wrote the software for the _Centaur_ rocket stage, and her work paved
+    the way for later rocket and satellite launches. She also analysed battery
+    life, energy conversion, and alternative power technologies like solar and
+    wind.
+
 einstein:
   name: Einstein
+  full: Albert Einstein
   born: 1879
   died: 1955
   small: true
@@ -539,8 +658,10 @@ einstein:
 
 eratosthenes:
   name: Eratosthenes
+  full: Eratosthenes of Cyrene
   born: -276
   died: -195
+  location: africa
   bio: __Eratosthenes of Cyrene__ (c. 276 – 195 BCE) was a Greek
     mathematician, geographer, astronomer, historian, and poet. He spent much
     of his life in Egypt, as head of the library of Alexandria.
@@ -561,6 +682,8 @@ erdos:
   born: 1913
   died: 1996
   name: Erdős
+  full: Paul Erdős
+  small: true
   bio: |
     __Paul Erdős__ (1913 – 1996) was one of the most productive mathematicians
     in history. Born in Hungary, he solved countless problems in graph theory,
@@ -573,6 +696,7 @@ erdos:
 
 escher:
   name: Escher
+  full: M. C. Escher
   born: 1898
   died: 1972
   bio: |
@@ -588,8 +712,10 @@ escher:
 
 euclid:
   name: Euclid
+  full: Euclid of Alexandria
   born: -330
   died: -270
+  location: africa
   bio: __Euclid of Alexandria__ (around 300 BCE) was a Greek mathematician and
     is often called the _father of geometry_. He published a book _Elements_
     that first introduced Euclidean geometry and contained many important proofs
@@ -604,6 +730,7 @@ euclid:
 
 euler:
   name: Euler
+  full: Leonhard Euler
   born: 1707
   died: 1783
   bio: |
@@ -625,6 +752,25 @@ euler:
     - title: Polyhedrons
       url: /course/polyhedra/polyhedra
 
+eudoxus:
+  born: -410
+  died: -355
+  name: Eudoxus
+  full: Eudoxus of Cnidus
+  location: middle-east
+  image: false
+  bio: |
+    __Eudoxus of Cnidus__ (Εὔδοξος ὁ Κνίδιος, c. 390 – 337 BCE) was an ancient
+    Greek astronomer and mathematician. Among his most enduring contributions
+    to astronomy are his planetary models.
+
+    History remembers him as the first to write mathematical explanation of the
+    planets. He developed the method of exhaustion in mathematics, which laid
+    the foundation for integral calculus. Eudoxus traveled to several places
+    around the Mediterranean to study. He studied under Plato in Athens, Greece
+    and under Egyptian priests in Heliopolis, Egypt. He later returned to Athens
+    to teach in Plato's Academy during the time Aristotle was a student.
+
 fatou:
   name: Fatou
   bio: __Pierre Joseph Louis Fatou__ (1878 – 1929) was a French mathematician
@@ -634,6 +780,7 @@ fatou:
 
 fermat:
   name: Fermat
+  full: Pierre de Fermat
   born: 1607
   died: 1665
   bio: |
@@ -672,6 +819,8 @@ fourier:
   born: 1768
   died: 1830
   name: Fourier
+  full: Joseph Fourier
+  small: true
   bio: |
     __Joseph Fourier__ (1768 – 1830) was a French mathematician, and a friend
     and advisor of Napoleon. In addition to his mathematical research, he is
@@ -693,6 +842,7 @@ galileo:
   born: 1564
   died: 1642
   name: Galileo
+  full: Galileo Galilei
   bio: |
     __Galileo Galilei__ (1564 – 1642) was an Italian astronomer, physicist and
     engineer. He used one of the first telescopes to make observations of the
@@ -712,6 +862,7 @@ galois:
   born: 1811
   died: 1832
   name: Galois
+  full: Évariste Galois
   overflow: true
   bio: |
     The French mathematician __Évariste Galois__ (1811 – 1832) had a short and
@@ -729,14 +880,15 @@ galois:
     At the age of 21, Galois was shot in a duel (some say a feud over a woman),
     and later died of his wounds. During the night before his death, he
     summarised his mathematical discoveries in a letter to a friend. It would
-    take other mathematicians many years to fully realise the true impact of
-    his work.
+    take other mathematicians many years to fully understand these letters, and
+    realise the impact of his work.
   links:
     - title: Group Theory
       url: /course/transformations/symmetry-groups
 
 gauss:
   name: Gauss
+  full: Carl Friedrich Gauss
   born: 1777
   died: 1855
   bio: |
@@ -761,7 +913,9 @@ germain:
   born: 1776
   died: 1831
   name: Germain
+  full: Marie-Sophie Germain
   small: true
+  keywords: Woman Female
   bio: |
     __Marie-Sophie Germain__ (1776 – 1831) decided that she wanted to be a
     mathematician at the age of 13, after reading about Archimedes.
@@ -778,6 +932,7 @@ godel:
   born: 1906
   died: 1978
   name: Gödel
+  full: Kurt Gödel
   small: true
   bio: |
     __Kurt Gödel__ (1906 – 1978) was an Austrian mathematician who later
@@ -801,8 +956,10 @@ godel:
 
 goldbach:
   name: Goldbach
+  full: Christian Goldbach
   born: 1690
   died: 1764
+  image: false
   bio: __Christian Goldbach__ (1690 – 1764) was a Prussian mathematician and
     contemporary of Euler, Leibniz and Bernoulli. He was tutor of Russian Tsar
     Peter II, and is remembered for his “Goldbach Conjecture“.
@@ -814,6 +971,7 @@ grothendieck:
   born: 1928
   died: 2014
   name: Grothendieck
+  full: Alexander Grothendieck
   small: true
   bio: The French mathematician __Alexander Grothendieck__ (1928 – 2014) was one
     of the key figures in the development of _algebraic geometry_. He extended
@@ -847,6 +1005,7 @@ hamilton:
   born: 1805
   died: 1865
   name: Hamilton
+  full: William Rowan Hamilton
   small: true
   bio: |
     __William Rowan Hamilton__ (1805 – 1865) was an Irish mathematician and
@@ -865,6 +1024,7 @@ hardy:
   born: 1877
   died: 1947
   name: Hardy
+  full: G.H. Hardy
   small: true
   bio: |
     __G.H. Hardy__ (1877 – 1947) was a leading English pure mathematician.
@@ -876,13 +1036,32 @@ hardy:
     arranged for Ramanujan to travel to Cambridge where he was working.
     Together, they made important discoveries and authord numerous paper.
 
-    Hardy always dislkied applied mathematics and expressed this in his personal
+    Hardy always disliked applied mathematics and expressed this in his personal
     account of mathematical thinking, the 1940 book _A Mathematician’s Apology_.
+
+hauptman:
+  born: 1917
+  died: 2011
+  name: Hauptman
+  full: Herbert Hauptman
+  small: true
+  location: america
+  bio: |
+    __Herbert Hauptman__ (1917 – 2011) was an American mathematician and a
+    Nobel laureate. He and Jerome Karle earned the 1985 Nobel prize in Chrmistry
+    for their work on x-ray crystallogaphy.
+
+    Hauptman joined the Medical Foundation of Buffalo as a researcher in the
+    crystallogaphic group. He was quickly promoted to director, and the
+    Foundation was later renamed as _Hauptman-Woodward Medical Research
+    Institute_.
 
 hilbert:
   name: Hilbert
+  full: David Hilbert
   born: 1862
   died: 1943
+  small: true
   bio: |
     __David Hilbert__ (1862 – 1943) was one of the most influential
     mathematicians of the 20th century. He worked on almost every area of
@@ -903,6 +1082,8 @@ hypatia:
   died: 415
   name: Hypatia
   overflow: true
+  location: africa
+  keywords: Woman Female
   bio: |
     __Hypatia__ (c. 360 – 415 CE) was a prominent astronomer and mathematician
     in ancient Alexandria. She was also the first female mathematician whose
@@ -918,6 +1099,7 @@ jacobi:
   born: 1809
   died: 1851
   name: Jacobi
+  full: Carl Jacobi
   small: true
   bio: __Carl Jacobi__ (1804 – 1851) was a German mathematician. He worked on
     analysis, differential equations and number theory, and was one of the
@@ -925,6 +1107,7 @@ jacobi:
 
 jefferson:
   name: Jefferson
+  full: Thomas Jefferson
   bio: |
     __Thomas Jefferson__ (1743 – 1826), was one of the Founding fathers of the
     United States, their third president, and the principal author of the
@@ -937,8 +1120,10 @@ jefferson:
 jiushao:
   born: 1202
   died: 1261
-  name: Qin Jiushao
-  overflow: true
+  name: Qin
+  full: Qin Jiushao
+  location: asia
+  keywords: China
   bio: |
     __Qin Jiushao__ (秦九韶, c. 1202 – 1261) was a Chinese mathematician,
     inventor and politician. In his book _Shùshū Jiǔzhāng_, he published
@@ -958,6 +1143,9 @@ johnson:
   born: 1918
   died: 2020
   name: Johnson
+  full: Katherine Johnson
+  keywords: Woman Female NASA
+  location: america
   bio: |
     __Katherine Johnson__ (1918 – 2020) was an African-American mathematician.
     While working at NASA, Johnson calculated the orbits taken by American
@@ -985,6 +1173,7 @@ karinthy:
 
 kepler:
   name: Kepler
+  full: Johannes Kepler
   born: 1571
   died: 1630
   bio: __Johannes Kepler__ (1571 – 1630) was a German astronomer and
@@ -997,8 +1186,10 @@ kepler:
 
 khayyam:
   name: Khayyam
+  full: Omar Khayyam
   born: 1048
   died: 1131
+  location: middle-east
   bio: __Omar Khayyam__ (عمر خیّام‎, 1048 – 1131) was a Persian mathematician,
     astronomer and poet. He managed to classify and solve all cubic equations,
     and found new ways to understand Euclid’s _parallel axiom_. Khayyam also
@@ -1015,10 +1206,28 @@ koch:
     and proved relationships between the Riemann hypothesis and the distribution
     of prime numbers.
 
+kovalevskaya:
+  born: 1850
+  died: 1891
+  name: Kovalevskaya
+  full: Sofia Kovalevskaya
+  keywords: Woman Female
+  bio: |
+    __Sofia Kovalevskaya__ (Софья Васильевна Ковалевская 1850 – 1891) was a
+    Russian mathematician, and the first woman to earn a modern doctorate in
+    mathematics. She was also the first woman to hold full professorship in
+    Nothern Europe, and is among the first women to be an editor of a scietific
+    journal.
+
+    Kovalevskaya made major contributions to analysis, partial differential
+    equations, and mechanics. She also wrote several works about her life
+    including a memoir, a play and an autobiographical novel.
+
 lagrange:
   born: 1736
   died: 1813
   name: Lagrange
+  full: Joseph-Louis Lagrange
   bio: |
     __Joseph-Louis Lagrange__ (1736 – 1813) was an Italian mathematician who
     succeeded Leonard Euler as the director of the Academy of Sciences in
@@ -1035,16 +1244,35 @@ lambert:
   born: 1728
   died: 1777
   name: Lambert
+  full: Johann Lambert
   bio: __Johann Lambert__ (1728 – 1777) was a Swiss mathematician, physicist,
     astronomer and philosopher. He was the first to prove that _π_ is an
     irrational number, and he introduced hyperbolic trigonometric functions.
     Lambert also worked on geometry and cartography, created map projections,
     and foreshadowed the discovery of non-Euclidean spaces.
 
+langlands:
+  born: 1936
+  name: Langlands
+  full: Robert Langlands
+  location: america
+  bio: |
+    __Robert Langlands__ (born 1936) is an American-Canadian mathematician. He
+    studied at Yale University, and later returned there as a professor. Now he
+    occupies Albert Einstein’s old office as an emeritus professor at Princeton
+    University.
+
+    In 2018, Langlands received the Abel Prize, one of the highest awards in
+    mathematics, for “his visionary program connecting representation theory to
+    number theory”. The _Langlands program_, which he first proposed in 1967,
+    consists of a vast web of conjectures and theorems that link different areas
+    of mathematics.
+
 laplace:
   born: 1749
   died: 1827
   name: Laplace
+  full: Pierre-Simon Laplace
   small: true
   bio: |
     __Pierre-Simon Laplace__ (1749 – 1827) was a French mathematician and
@@ -1061,6 +1289,7 @@ laplace:
 
 leibniz:
   name: Leibniz
+  full: Gottfried Wilhelm Leibniz
   born: 1646
   died: 1716
   bio: |
@@ -1077,6 +1306,7 @@ leonardo:
   born: 1452
   died: 1519
   name: Da Vinci
+  full: Leonardo da Vinci
   bio: |
     __Leonardo da Vinci__ (1452 – 1519) was an Italian artist and polymath. His
     interests ranged from painting, sculpting and architecture to engineering,
@@ -1097,7 +1327,7 @@ lie:
   born: 1842
   died: 1899
   name: Lie
-  small: true
+  full: Marius Sophus Lie
   bio: The Norwegian mathematician __Marius Sophus Lie__ (1842 – 1899) made
     significant advances in the study of _continuous transformation groups_ –
     now called _Lie groups_. He also worked on differential equations and
@@ -1107,8 +1337,9 @@ lobachevsky:
   born: 1792
   died: 1856
   name: Lobachevsky
+  full: Nikolai Lobachevsky
   small: true
-  bio: __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) was a Russian
+  bio: __Nikolai Lobachevsky__ (Никола́й Лобаче́вский, 1792 – 1856) was a Russian
     mathematician, and one of the founders of non-Euclidean geometry. He managed
     to show that you can build up a consistent type of geometry in which
     Euclid’s fifth axiom (about parallel lines) does not hold.
@@ -1118,8 +1349,11 @@ lobachevsky:
 
 lorenz:
   name: Lorenz
+  full: Edward Lorenz
   born: 1917
   died: 2008
+  small: true
+  location: america
   bio: __Edward Lorenz__ (1917 – 2008) was an American mathematician and
     meteorologist. He pioneered _chaos theory_, discovered _strange attractors_,
     and coined the term “butterfly effect”.
@@ -1131,7 +1365,7 @@ lovelace:
   born: 1815
   died: 1852
   name: Lovelace
-  overflow: true
+  full: Ada Lovelace
   bio: |
     __Ada Lovelace__ (1815 – 1852) was an English writer and mathematician.
     Together with Charles Babbage, she worked on the _Analytical Engine_ an
@@ -1139,13 +1373,16 @@ lovelace:
     such a machine (to calculate Bernoulli numbers), making her the first
     computer programmer in history.
 
-    Ada described her approach as “poetical science”, and spent much time
+    Lovelace described her approach as “poetical science”, and spent much time
     thinking about the impact of technology on society.
 
 madhava:
   born: 1340
   died: 1425
   name: Madhava
+  full: Madhava of Sangamagramma
+  keywords: India
+  location: asia
   bio: |
     __Madhava of Sangamagramma__ (c. 1340 – 1425) was a mathematician and
     astronomer from southern India. All of his original work has been lost, but
@@ -1165,6 +1402,7 @@ mandelbrot:
   born: 1924
   died: 2010
   name: Mandelbrot
+  full: Benoit Mandelbrot
   bio: |
     The mathematician __Benoit Mandelbrot__ was born in Poland, grew up in
     France, and eventually moved to the United States. He was one of the
@@ -1181,6 +1419,29 @@ mandelbrot:
     - title: Mandelbrot Set
       url: /course/fractals/mandelbrot
 
+mascheroni:
+  born: 1750
+  died: 1800
+  name: Mascheroni
+  full: Lorenzo Mascheroni
+  bio: |
+    __Lorenzo Mascheroni__ (1750 – 1800) was in Italian mathematician and son
+    of a wealthy landowner. He was ordained to priesthood at the age of 17, and
+    taught rhetoric as well as physics and mathematics.
+
+    After writing a book about structural engineering, he was appointed
+    professtor of mathematics at the university of Pavia. Mascheroni proved that
+    all Euclidean constructions that can be done with compass and straightedge
+    can also be done with just a compass: this is now known as the
+    Mohr–Mascheroni theorem.
+
+    Even more famously, the Euler-Mascheroni constant γ = 0.57721…, which
+    appears in analysis and number theory, is named after him. He wrote about
+    it in 1790 and calculated 32 of its digits (although with a few mistakes).
+  links:
+    - title: Ruler and Compass Construction
+      url: /course/euclidean-geometry/construction
+
 menger:
   name: Menger
   bio: __Karl Menger__ (1902 – 1985) was an Austrian-American mathematician.
@@ -1192,6 +1453,7 @@ mersenne:
   born: 1588
   died: 1648
   name: Mersenne
+  full: Marin Mersenne
   bio: |
     __Marin Mersenne__ (1588 – 1648) was a French mathematician and priest.
     Because of the frequent exchanges with his contacts in the scientific world
@@ -1216,25 +1478,28 @@ mirzakhani:
   born: 1977
   died: 2017
   name: Mirzakhani
-  overflow: true;
+  full: Maryam Mirzakhani
+  location: middle-east
+  keywords: Woman Female
   bio: |
     __Maryam Mirzakhani__ (مریم میرزاخانی‎, 1977 – 2017) was an Iranian
-    mathematician and professor at Standford University. She is the only woman
+    mathematician and professor at Stanford University. She is the only woman
     to have received the _Fields Medal_, the highest award in mathematics.
 
-    Maryam worked at the intersection of dynamical systems and geometry. She
+    Mirzakhani worked at the intersection of dynamical systems and geometry. She
     studied objects like _hyperbolic surfaces_ and _complex manifolds_, but
     also contributed to many other areas of mathematics.
 
-    When solving problems, Maryam would draw doodles and diagrams on large
+    When solving problems, Mirzakhani would draw doodles and diagrams on large
     sheets of paper, to see the underlying patterns and beauty. Her daughter
-    even described Maryam’s work as “painting”. At the age of 40, Maryam died
-    of breast cancer.
+    even described Maryam’s work as “painting”. At the age of 40, Mirzakhani
+    died of breast cancer.
 
 monge:
   born: 1746
   died: 1818
   name: Monge
+  full: Gaspard Monge
   bio: |
     __Gaspard Monge__ (1746 – 1818) was a French mathematician. He is considered
     the father of _differential geometry_, having introduced the concept of
@@ -1278,6 +1543,7 @@ napier:
   born: 1550
   died: 1617
   name: Napier
+  full: John Napier
   bio: __John Napier__ (1550 – 1617) was a Scottish mathematician, physicist,
     and astronomer. He invented logarithms, popularised the use of the decimal
     point, and created “Napier’s bones”, a manual calculating device that
@@ -1287,6 +1553,8 @@ nash:
   born: 1928
   died: 2015
   name: Nash
+  full: John Forbes Nash
+  location: america
   bio: |
     __John Forbes Nash__ (1928 – 2015) was an American mathematician who worked
     on game theory, differential geometry and partial differential equations.
@@ -1305,6 +1573,7 @@ neumann:
   born: 1903
   died: 1957
   name: von Neumann
+  full: John von Neumann
   small: true
   bio: |
     __John von Neumann__ (1903 – 1957) was a Hungarian-American mathematician,
@@ -1319,6 +1588,7 @@ neumann:
 
 newton:
   name: Newton
+  full: Isaac Newton
   born: 1642
   died: 1726
   bio: |
@@ -1343,9 +1613,11 @@ newton:
 
 nicomachus:
   name: Nicomachus
+  full: Nicomachus of Gerasa
   born: 60
   died: 120
   overflow: true
+  location: middle-east
   bio: __Nicomachus of Gerasa__ (c. 60 – 120) was an ancient Greek mathematician
     who also spent much time thinking about the mystical properties of numbers.
     His book _Introduction to Arithmetic_ contains the first mention of perfect
@@ -1358,12 +1630,13 @@ nightingale:
   born: 1820
   died: 1910
   name: Nightingale
+  full: Florence Nightingale
   small: true
   bio: |
     __Florence Nightingale__ (1820 – 1910) was an English nurse and
     statistician. During the Crimean War, she nursed wounded British soldiers,
     and later founded the first training school for nurses. As the “The Lady
-    with the Lamp”, she bacame a cultural icon, and new nurses in the US still
+    with the Lamp”, she became a cultural icon, and new nurses in the US still
     take the _Nightingale pledge_.
 
     One of her most important contributions to medicine was the use of
@@ -1374,13 +1647,14 @@ nightingale:
 
 noether:
   name: Noether
+  full: Amalie Emmy Noether
   born: 1882
   died: 1935
+  keywords: Woman Female
   bio: __Amalie Emmy Noether__ (1882 – 1935) was a German mathematician who made
     important discoveries in abstract algebra and theoretical physics, including
     the connection between symmetry and conservation laws. She is often
     described as the most influential female mathematician.
-  small: true
   links:
     - title: Symmetry in Physics
       url: /course/transformations/physics
@@ -1389,6 +1663,7 @@ oresme:
   born: 1323
   died: 1382
   name: Oresme
+  full: Nicole Oresme
   bio: __Nicole Oresme__ (c. 1323 – 1382) was an important French mathematician,
     philosopher and bishop, living in the late Middle Ages. He invented
     coordinate geometry, long before Descartes, was the first to use fractional
@@ -1399,6 +1674,7 @@ pacioli:
   born: 1446
   died: 1517
   name: Pacioli
+  full: Luca Pacioli
   bio: __Luca Pacioli__ was an influential Italian friar and mathematician, who
     invented the standard symbols for plus and minus (+ and –). He was one of
     the first accountants in Europe, where he introduced double-entry
@@ -1407,6 +1683,7 @@ pacioli:
 
 pascal:
   name: Pascal
+  full: Blaise Pascal
   born: 1623
   died: 1662
   bio: |
@@ -1427,6 +1704,7 @@ peano:
   born: 1858
   died: 1932
   name: Peano
+  full: Giuseppe Peano
   small: true
   bio: |
     The Italian mathematician __Giuseppe Peano__ (1858 – 1932) published over
@@ -1450,6 +1728,7 @@ pearson:
 
 penrose:
   name: Penrose
+  full: Roger Penrose
   born: 1931
   bio: |
     __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
@@ -1464,6 +1743,7 @@ penrose:
 perelman:
   born: 1966
   name: Perelman
+  full: Grigori Perelman
   bio: |
     In 2003, the Russian mathematician __Grigori Perelman__ (Григо́рий
     Перельма́нborn, born 1966) proved the _Poincaré Conjecture_, which, until
@@ -1483,6 +1763,7 @@ pingala:
   name: Pingala
   born: -330
   died: -270
+  location: asia
   bio: __Pingala__ (पिङ्गल) was an ancient Indian poet and mathematician who
     lived around 300 BCE, but very little is known about his life. He wrote the
     Chandaḥśāstra, where he analysed Sanskrit poetry mathematically. It also
@@ -1519,6 +1800,7 @@ poincare:
   born: 1854
   died: 1912
   name: Poincaré
+  full: Henri Poincaré
   bio: |
     The French mathematician __Henri Poincaré__ (1854 – 1912) is often
     described as _the last universalist_, meaning that he worked in every field
@@ -1546,6 +1828,9 @@ ptolemy:
   born: 90
   died: 168
   name: Ptolemy
+  full: Claudius Ptolemy
+  overflow: true
+  location: africa
   bio: |
     __Claudius Ptolemy__ (c. 100 – 170 CE) was a Greco-Roman mathematician,
     astronomer, geographer and astrologer. He is best remembered for the
@@ -1566,6 +1851,7 @@ pythagoras:
   name: Pythagoras
   born: -570
   died: -495
+  overflow: true
   bio: |
     __Pythagoras of Samos__ (c. 570 – 495 BCE) was a Greek philosopher and
     mathematician. He is best known for proving _Pythagoras’ Theorem_, but made
@@ -1586,7 +1872,10 @@ ramanujan:
   born: 1887
   died: 1920
   name: Ramanujan
+  full: Srinivasa Ramanujan
   overflow: true
+  location: asia
+  keywords: India
   bio: |
     __Srinivasa Ramanujan__ (1887 – 1920) grew up in India, where he received
     very little formal education in mathematics. Yet, he managed to develop new
@@ -1608,6 +1897,7 @@ regiomontanus:
   born: 1436
   died: 1476
   name: Regiomontanus
+  full: Johann Müller Regiomontanus
   overflow: true
   bio: __Johann Müller Regiomontanus__ (1436 – 1476) was a German mathematician
     and astronomer. He made great advances in both fields, including creating
@@ -1629,9 +1919,9 @@ richardson:
 
 riemann:
   name: Riemann
+  full: Bernhard Riemann
   born: 1826
   died: 1866
-  overflow: true
   bio: __Bernhard Riemann__ (1826 – 1866) was a German mathematician working in
     the fields of analysis and number theory. He came up with the first rigorous
     definition of integration, studied differential geometry which laid the
@@ -1645,6 +1935,7 @@ russell:
   born: 1872
   died: 1970
   name: Russell
+  full: Bertrand Russell
   small: true
   bio: |
     __Bertrand Russell__ (1872 – 1970) was a British philosopher, mathematician
@@ -1662,8 +1953,10 @@ russell:
 
 shannon:
   name: Shannon
+  full: Claude Shannon
   born: 1898
   died: 1972
+  location: america
   bio: __Claude Shannon__ (1898 – 1972) was an American mathematician and
     electrical engineer, remembered as the “father of information theory”. He
     worked on cryptography, including codebreaking for national defence during
@@ -1679,6 +1972,8 @@ shijie:
   born: 1249
   died: 1314
   name: Zhu Shijie
+  location: asia
+  keywords: China
   bio: |
     __Zhu Shijie__ (朱世杰, 1249 – 1314) was one of the greatest Chinese
     mathematicians. In is book _Jade Mirror of the Four Unknowns_, he showed how
@@ -1712,6 +2007,20 @@ sikdar:
     the first to measure the height of Mount Everest, and to show that it is
     the tallest mountain on Earth.
 
+simson:
+  born: 1687
+  died: 1768
+  name: Simson
+  full: Robert Simson
+  small: true
+  bio: |
+    __Robert Simson__ (1687 – 1768) was a Scottish mathematician who studied
+    ancient Greek geometers. He studied at the University of Glasgow, and later
+    returned as a professor.
+
+    The Simson line in a triangle is named after him, which can be constructed
+    using the circumcircle.
+
 singmaster:
   name: Singmaster
   bio: __David Singmaster__ (born 1939) is an American mathematician who is
@@ -1723,14 +2032,33 @@ stevin:
   born: 1548
   died: 1620
   name: Stevin
+  full: Simon Stevin
   bio: __Simon Stevin__ (1548 – 1620) was Flemish mathematician and engineer. He
     was one of the first people to use and write about decimal fractions, and
     made many other contributions to science and engineering.
+
+sylvester:
+  born: 1814
+  died: 1897
+  name: Sylvester
+  full: James Joseph Sylvester
+  small: true
+  bio: |
+    __James Joseph Sylvester__ (1814 – 1897) was an English mathematician. He
+    contributed to matrix theory, number theory, partition theory, and
+    combinatorics. Together with Arthur Cayley, he cofounded _invariant theory_.
+    Sylvester coined many of the terms we are familar with today including
+    “graph”, “discriminant”, and “matrix”.
+
+    Throughout his career, Sylvester faced antisemitism. He was denied a degree
+    from Cambridge, and he later experienced violence from students at the
+    University of Virginia during his short stay as a professor.
 
 tartaglia:
   born: 1499
   died: 1557
   name: Tartaglia
+  full: Niccolò Fontana Tartaglia
   bio: __Niccolò Fontana Tartaglia__ (1499 – 1557) was an Italian mathematician,
     engineer and bookkeeper. He published the first Italian translations of
     Archimedes and Euclid, found a formula for solving any cubic equation
@@ -1739,8 +2067,10 @@ tartaglia:
 
 thales:
   name: Thales
+  full: Thales of Miletus
   born: -624
   died: -546
+  location: asia
   bio: |
     __Thales of Miletus__ (c. 624 – 546 BCE) was a Greek mathematician and
     philosopher.
@@ -1765,6 +2095,7 @@ turing:
   born: 1912
   died: 1954
   name: Turing
+  full: Alan Turing
   bio: |
     __Alan Turing__ (1912 – 1954) was an English mathematician and is often
     called the “father of computer science”.
@@ -1785,6 +2116,38 @@ turing:
     - title: Codes and Cryptography
       url: /course/codes
 
+tusi:
+  born: 1201
+  died: 1274
+  name: Al-Din Tusi
+  full: Nasir al-Din Tusi
+  keywords: Arabic Middle East
+  location: middle-east
+  bio: |
+    __Nasir al-Din Tusi__ (1201 – 1274, نصیر الدین طوسی‎), also known as Muhammad
+    ibn Muhammad ibn al-Hasan al-Tūsī, was an architect, philospher, physician,
+    scientis, and theologian, as well as a prolific writer.
+
+    Many consider Al-Din Tusi to be the father of trigonometry, and he was
+    perhaps the first person to work on trigonometry independent of astronomy.
+    He also proposed and studied the Tusi couple: a device in which a circle
+    rolls around the inside of a larger circle with twice the diameter.
+
+uhlenbeck:
+  born: 1942
+  name: Uhlenbeck
+  full: Karen Uhlenbeck
+  location: america
+  keywords: Woman Female
+  bio: |
+    __Karen Uhlenbeck__ (born 1942) is an American mathematician, professor
+    emeritus at the University of Texas, and distinguished visiting professor
+    at Princeton University.
+
+    She is one of the founders of the field of modern geometric analysis, and
+    the only woman to have received the _Abel Prize_, one of the highest awards
+    in mathematics.
+
 ulam:
   name: Ulam
   bio: __Stanisław Ulam__ (1909 – 1984) was a Polish-American mathematician. He
@@ -1804,6 +2167,7 @@ viete:
   born: 1540
   died: 1603
   name: Viète
+  full: François Viète
   bio: |
     __François Viète__ (1540 – 1603) was a French mathematician, lawyer, and
     advisor to Kings Henry III and IV of France. He made significant advances
@@ -1818,6 +2182,7 @@ wallis:
   born: 1616
   died: 1703
   name: Wallis
+  full: John Wallis
   bio: The English mathematician __John Wallis__ (1616 – 1703) contributed to
     the development of calculus, invented the number line and the symbol ∞ for
     infinity, and served as chief cryptographer for Parliament and the royal
@@ -1826,8 +2191,9 @@ wallis:
 wiles:
   born: 1953
   name: Wiles
+  full: Andrew Wiles
   bio: |
-    The British mathematician Sir __Andrew Wiles__ (born 1953) is best known for
+    The British mathematician __Sir Andrew Wiles__ (born 1953) is best known for
     proving Fermat’s Last Theorem, which, until then, was one of the most famous
     unsolved problems in mathematics.
 
@@ -1851,3 +2217,20 @@ wolfram:
     physicist, and businessman. He is the founder and CEO of _Wolfram Research_,
     where he developed the _Mathematica_ computing system, the _Wolfram|Alpha_
     answer engine, and the Wolfram programming language.
+
+zhenyi:
+  born: 1768
+  died: 1797
+  name: Wang
+  full: Wang Zhenyi
+  location: asia
+  keywords: China Woman Female
+  bio: |
+    __Wang Zhenyi__ (王贞仪, 1768 – 1797) was a Chinese scientist and
+    mathematician living during the Qing dynasty. Despite laws and customs
+    preventing women from receiving higher education, she studied subjects like
+    astronomy, mathematics, geography and medicine.
+
+    In her books and articles, Wang wrote about trigonometry and Pythagoras’
+    theorem, studied solar and lunar eclipses, and explained many other
+    celestial phenomena.

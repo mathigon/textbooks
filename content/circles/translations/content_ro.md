@@ -155,7 +155,7 @@ devenind circulare sau sferice și reducându-și astfel suprafața.
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Triunghi
       div(data-value="1") Pătrat
       div(data-value="2") Pentagon
@@ -335,14 +335,17 @@ vedea cum sunt distribuite zecimalele.
 Dacă Pi este un număr normal, asta înseamnă că ne putem gândi la _orice_ șir de cifre și el va apărea 
 undeva între zecimalele lui. Aici poți căuta în primul milion de zecimale ale lui Pi - conțin ele ziua ta de naștere?
 
-    .box
-      .box-title: h3 Primul milion de zecimale ale lui Pi
-      .box-body.pi-controls
-        | Caută un șir de zecimale:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### Primul milion de zecimale ale lui Pi
+
+    .pi-controls
+      | Caută un șir de zecimale:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -380,11 +383,7 @@ fie pe 22 iulie, pentru că `pi ≈ 22/7`.
 
     figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Grade și Radiani
 
@@ -685,10 +684,7 @@ atunci `sin(θ) ≈ θ`. De exemplu,
 anumite ecuații ce conțin funcții trigonometrice.
 Vei afla mai multe despre toate acestea în viitor.
 
-
 --------------------------------------------------------------------------------
-
-
 
 ## Tangente, Corzi și Arce
 
@@ -756,86 +752,11 @@ definițiilor deocamdata - poți utiliza întotdeauna [glosarul](->.footer-link[
 
 {.todo} îN CURÂND!
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
-
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
-    // Point of Tangency: The point where a tangent line touches the circle.
-    // 
-    // The tangent line and the radius drawn to the point of tangency have a unique
-    // relationship. Let’s investigate it here.
-    // 
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    // 
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    // 
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
-
 ---
 
 ### Corzi
 
 {.todo}  îN CURÂND!
-
-    // A chord is a line segment whose endpoints are on a circle. A diameter is the
-    // longest chord in a circle. There are several theorems that explore the
-    // properties of chords.
-    // 
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    // 
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    // 
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    // 
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    // 
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
-
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 > id: earth-arc
@@ -942,7 +863,7 @@ De exemplu,
 ::: column(width=320 parent="padded-thin")
 
 | [{.red}lungime arc](pill) | = | `"circumferință" × c/360` |
-|                          | = | `2 π r × c/360`          |
+|                           | = | `2 π r × c/360`          |
 {.eqn-system}
 
 ::: column(width=320)
@@ -954,14 +875,6 @@ De exemplu,
 :::
 
 unde _r_ este raza cercului și _c_ este măsura unghiului la centru.
-
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
-
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
 
 ---
 > id: arcs-rad
@@ -1125,16 +1038,7 @@ diferit care se afla între: America.
 
 {.todo} În curând!
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Teorema Cercului
 
@@ -1252,11 +1156,7 @@ Combines all of Euclidean Geometry
 
 {.todo} TODO
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Poligoane ciclice
 
@@ -1281,11 +1181,7 @@ and only if the opposite angles are supplementary.
 
 https://www.youtube.com/watch?v=bJOuzqu3MUQ
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Sfere, Conuri și Cilindri
 
@@ -1437,12 +1333,6 @@ cilindrul devine oblic, de aceea volumul total rămâne constant:
 
 :::
 
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
-
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
-
 ---
 > id: cylinder-surface
 
@@ -1487,7 +1377,6 @@ _h_ este dată de
 
 Cilindrii se află peste tot în lumea noastră - de la conserve de băuturi carbogazoase 
 până la hârtie igienică sau conducte de apă. Poți găsi și alte exemple?
-
 
 _Gazoometrul_ de deasupra avea raza de 35m și înălțimea de 120m. Acum îi putem 
 calcula volumul care este aproximativ [[461,000 ± 1000]]`"m"^3`, iar aria sa 
@@ -1932,13 +1821,13 @@ sau turtirea anumitor zone.
 Aici se pot vedea diferite tipuri de hărți, numite __proiecții__. Încearcă să muți 
 pătratul roșu și privește cum arată _de fapt_ această zona pe un glob:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Cilindrică
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide") Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline
@@ -1963,28 +1852,11 @@ de exemplu, un poliedru cu o mulțime de fețe. Pe măsură ce numarul fețelor 
 
 {.todo} ÎN CURÂND: Demonstrația pentru calcularea ariei sferei
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
     
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
     
-    // And therefore,
-    // surface area = 3 * volume / radius = 
     
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
-
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
-
-
 
 --------------------------------------------------------------------------------
-
-
 
 ## Secțiuni conice
 
@@ -2056,12 +1928,6 @@ trasând întinderea maximă a firelor:
 
 {.todo} ÎN CURÂND: Desenarea interactivă a elipselor
 
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
-
 ---
 > id: ellipses-2
 > goals: v0 v1 v2 v3
@@ -2122,7 +1988,6 @@ Pentru a rezolva această problemă, astronomii au adăugat __epicicluri__ model
 de sistem solar: planetele se mișcă pe un cerc mare în jurul Pământului, în timp ce se 
 simultan se rotesc și pe un cerc mai mic. Acesta a fost modelul universului nostru cel mai acceptat
 timp de peste 1000 de ani, în ciuda faptului că era foarte complicat:
-
 
 ::: column(width=320)
 
@@ -2188,7 +2053,6 @@ cu care se mișcă planetele este cea care previne ca acestea să cada direct î
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)

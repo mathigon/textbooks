@@ -581,7 +581,6 @@ Winkeln](target:angles) kongruent. _{span.qed}_
 Paare von gegenüberliegenden Seiten (oder Winkeln) in einem Viereck deckungsgleich sind, dann muss das
 Viereck ein Parallelogramm sein.
 
-    //- Angrenzende Winkel sind ergänzend.
 
 ::: tab
 #### Diagonalen _{span.check(when="diagonal blank-2 blank-3")}_
@@ -937,25 +936,7 @@ wählen, die am besten geeignet ist._
 
 :::
 
-    //- ### Zyklische Vierecke
 
-    //- ### Gleichschenklige Trapeze
-    //- 
-    //- Ein gleichschenkliges Trapez ist ein Trapez, bei dem die nicht-parallelen Seiten
-    //- deckungsgleich sind. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -1039,10 +1020,6 @@ Technik kopiert - vom alten Rom bis in die Gegenwart. Hier sind einige Beispiele
 {.caption} _Studie einer regelmäßigen Flächenfüllung mit Reptilien_, M. C. Escher
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
 
 ---
 > id: tessellation-drawing
@@ -1105,7 +1082,6 @@ es entweder eine Lücke oder eine Überlappung.
 {.caption} Fünfecke [[kann man|kann man nicht]] zu einer Parkettierung zusammenfügen, _{span.reveal(when="blank-2")} da sich
 Vielfache von 108° nicht zu 360° summieren._
 
-    //- {.caption}3 × 108° = 324° ist zu klein, aber 4 × 108° = 432° ist zu groß.
 ::: column(width=160)
     include svg/tessellations/hexagons.svg
 
@@ -1462,9 +1438,6 @@ regelmäßige Vielecke von derselben Art und an jeder
  bezeichnet, benannt nach dem griechischen
 Philosophen [Platon](bio:plato).
 
-    //- Die Pyramide rechts von keinem platonischen Körper. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
 Wie sehen also die platonischen Körper aus - und wie viele von ihnen gibt es? Um eine dreidimensionale Form zu
 erhalten, benötigen wir mindestens [[3]] Flächen, die sich an jeder
@@ -1809,9 +1782,6 @@ von Syrakus](bio:archimedes), benannt, und es gibt 13 von ihnen:
 92 Flächen, 60 Eckpunkte, 150 Kanten
 :::
 
-    // Prismen und Antiprismen, deren Symmetriegruppen die Diedergruppen sind, werden im
-    // Allgemeinen nicht als archimedische Körper betrachtet, obwohl sie die
-    // obige Definition erfüllen.
 
 ---
 > id: polyhedra-applications

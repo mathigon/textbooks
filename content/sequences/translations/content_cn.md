@@ -50,7 +50,6 @@
 在数学中，[__序列__](gloss:sequence)通常是一系列遵循特定模式的数字(或其他对
 象)。序列中的单个元素称为[__序列项__](gloss:sequence-term)。
 
-
 下面是一些序列的例子。你能找到他们的模式并计算出接下来的两个序列项吗？
 
 {.text-center.s-orange.with-arrows} _{.n}3_, _{.n}6*{span.arrow}+3*_,
@@ -98,9 +97,6 @@ _{span.pattern.reveal(when="blank-6 blank-7")} 模式：“将前一个数字乘
 
 _x_后面的小数字称为__下标__，表示该项在序列中的位置。这意味着我们可以用
 [[`x_n`|`x_i`|`x_2`]]来表示序列中的第*n*项。
-
-    // 你可能会认为，将序列中的术语标记为_a_、_b_、_c_、_d_等更容易。然而，
-    // 你最终会[[用完字母|达到100个|忘记字母]]，而序列可能永远持续下去！
 
 ---
 > id: triangles
@@ -283,11 +279,7 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 :::
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## 算术序列和几何序列
 
@@ -497,17 +489,17 @@ _{span.n}${geometric(b,r,5)}_, …
 {.reveal(when="blank-0 blank-1")} 另一方面，几何序列会由于`a`和*r*的不同值而
 展现出完全不一样的曲线行为。
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
 如果 _{span.var-action}`r > 1`_, 则后面项将[[快速变大|快速变小|趋近0]]_{span.reveal(when="blank-2")}, 直到无穷。数学家称该序列[__发散__](gloss:sequence-divergence)._
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
 如果 _{span.var-action}*r* 是介于 –1 和 1_之间, 后面项将总是
 [[趋近0|降至负无穷|变小]]_{span.reveal(when="blank-3")}.
 我们称该序列[__收敛__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
 如果_{span.var-action}`r < -1`_，则后面项将在正数和负数之间交替，而它们的
 [[绝对值|相反数|差]]将变大。
@@ -515,7 +507,6 @@ _{span.n}${geometric(b,r,5)}_, …
 :::
 
 {.reveal(when="blank-4 blank-5")} 关于收敛和发散你将在本课的[最后一节](/course/sequences/convergence) 学习更多。
-
 
 ---
 > id: arithmetic-geometric-recursive
@@ -664,70 +655,6 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 {.todo} 敬请期待!
 
-    // Two siblings, Anna and Thomas, are receiving pocket money from their parents.
-    // They can choose between two different options:
-
-    // * Thomas is receiving $1 in the first month, $2s in the second month, $3 in the
-    //   third month, and so on. Every month, he receives $1 more than in the previous
-    //   one.
-    // * Anna receives 1¢ in the first month, 2¢ in the second month
-
-    // img.text-wrap(src="images/dishes.jpg" style="shape-outside: url(images/dishes.png)" width=280 height=276)
-
-    // In order to make some additional pocket money, you decided to make a deal with
-    // your parents: for appropriate payment, you’ll do every possible chore around
-    // the house – washing the dishes, laundry, taking out the trash or walking the
-    // dog.
-
-    // The payment system works like this: on the first day, you get 1 cent. On the
-    // second day, you get 2 cents – twice as much as before. On the next day you’ll
-    // get 4 cents. Every day, your payment doubles.
-
-    // 1¢ is not a lot of money – and neither are 2¢ or 4¢, especially
-    // considering how much work you’re doing. But the amount will slowly increase.
-    // How long do you think will it take until you’ve made $100? How long until
-    // you’ve made it to 1 Million?
-
-    // guess fields
-
-    // Let’s try to calculate it mathematically! Just like before, your salary
-    // follows an exponential model, because it changes by a constant ratio every
-    // day (times 2). On day `x`, you’ll get `2^x` cents.
-
-    // | __day__ | __payment__  |
-    // | ------- | ------------ |
-    // | 1       | $ 0.01       |
-    // | 2       | $ 0.02       |
-    // | 3       | $ 0.04       |
-    // | 4       | $ [[0.08]]   |
-    // | 5       | $ [[0.16]]   |
-    // | 6       | $ [[0.32]]   |
-    // | 7       | $ [[0.64]]   |
-    // | 8       | $ 1.28       |
-    // | 9       | $ 2.56       |
-    // | 10      | $ 5.12       |
-    // | 11      | $ 10.24      |
-    // | 12      | $ [[20.48]]  |
-    // | 13      | $ [[40.96]]  |
-    // | 14      | $ [[81.92]]  |
-    // | 15      | $ [[163.84]] |
-    // | 16      | $ 327.68     |
-    // | 17      | $ 655.36     |
-    // | 18      | $ 1,310.72   |
-
-    // One sibling gets $${a}{a|1|1,10,1} every day. The other sibling
-    // gets ${b}{b|1|1,10,1}¢ every day.
-
-    // As you can see, your daily payment start low but then grow rapidly. After 15
-    // days you’ve reached $100. After less than a month you’re making more than 1
-    // million per day, and after 2 months you’d have made more than _all the money
-    // on Earth_. :1f4b0: :1f37e: :1f911:
-
-    // Exponential growth can be truly XXXXX. Even if they start really slowly, they
-    // will eventually speed up a lot, and overtake any possible linear model. Most
-    // importantly, us humans tend to be very bad at estimating just _how fast_
-    // exponential models can grow. Or are we?
-
 ---
 > id: chessboard
 
@@ -735,34 +662,7 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 {.todo} 敬请期待!
 
-    // The game of chess was invented in India, many hundreds of years ago. According
-    // to legend, the Indian king loved the game so much that he invited its inventor
-    // to his palace and promised him any present they ask for.
-
-    // The inventor had just one simple request: rice. He wanted the king to place
-    // one grain of rice on the first square of the chess board, two grains on the
-    // second, four grains of the third, eight grains on the fourth, and so on. Every
-    // new square should have twice as many grains of rice as the previous one.
-
-    // The king, who was very wealthy, agreed immediately and asked his servants to
-    // fetch bags of rice. A chessboard has 64 squares, so how many grains of rice
-    // does the king need in total?
-
-    // You might have noticed that the number of grains of rice form a geometric sequence.
-    // The first term is [[1]], and the common ratio is [[2]]. Using the results from
-    // above, we can calculate how many grains of rice there will be on the last square:
-
-    // {.text-center} `a_64 = 1 * 2^63 =` 9 223 372 036 854 775 808
-
-    // That’s 9 billion billion grains of rice! In total, they would weight about
-    // 100 billion tonnes – or 100 times the weight of Mount Everest, the tallest
-    // mountain on Earth.
-
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## 形数
 
@@ -837,26 +737,7 @@ __三角形数__是通过创建逐渐增大的三角形而生成的：
 
 {.todo} 敬请期待: 三角形数公式的动画证明
 
-    // ::: column(width=300)
-
-    // svg(width=300 height=300)
       g
-
-    // ::: column.grow
-    // Let’s start with a triangle of size ${x}{x|5|1,10,1}.
-
-    // First, we need to make a second copy of the triangle.
-
-    // Now we can rearrange the two triangles, to fit together in a rectangle.
-
-    // The size of the rectangle is ${x} × ${x + 1}, so it must have an area of
-    // ${x * (x + 1)}
-
-    // Since the rectangle is twice as large as the original triangle, we know that
-    // the ${n}th triangle number must be ${x*(x+1)/2}.
-
-    // In general, the *n*th triangle number is `T_n = (n × (n + 1)) / 2`.
-    // :::
 
 ---
 > id: triangle-sums
@@ -899,9 +780,9 @@ _任意_整数都可以写成最多三个三角形数的和：
 ---
 > id: triangle-investigate
 
-::: .box.problem-box
-    .box-title: h3 问题求解
-::: .box-body
+::: .box.f-blue
+
+#### 问题求解
 
 前100个正[整数](gloss:integer)的和是多少？换句话说，下面式子的结果值是多少:
 
@@ -910,7 +791,6 @@ _任意_整数都可以写成最多三个三角形数的和：
 你能不用手工一个个加起来, 而用[三角形数](gloss:triangle-numbers)辅助来求结果吗?
 算算前1000个正整数的和怎么样？
 
-:::
 :::
 
 ---
@@ -1022,11 +902,7 @@ ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}。你能看出来我们如�
 
 {.todo} 敬请期待: 关于四面体数，立方数和圣诞节的12天的更多内容。
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## 序列作為函數
 
@@ -1035,11 +911,7 @@ ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}。你能看出来我们如�
 
 TODO
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## 斐波那契序列
 
@@ -1182,7 +1054,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div 原样
       div(data-value="cw") 顺时针
       div(data-value="ccw") 逆时针.
@@ -1194,7 +1066,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div 原样
       div(data-value="cw") 顺时针
       div(data-value="ccw") 逆时针.
@@ -1219,7 +1091,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") 雄性
       div(data-value="female") 雌性
     .bees
@@ -1376,8 +1248,6 @@ _{.n}[[144]]_, …
 对于花来说，选择一个合适的角度是很重要的：叶子或种子必须大致等距分布，这样它们
 才能获得最大的阳光和营养。在下面的图表中，你可以探索向日葵种子之间不同角度的外观：
 
-    // 注意角度的微小变化如何产生完全不同的排列：
-
 ::: x-slideshow
 
     .sunflower-spiral(slot="stage")
@@ -1455,9 +1325,9 @@ _{span.n}${8×a+13×b}_, …
 
 还有许多其他的谜题、模式和应用与斐波那契数相关。以下是几个例子，你可以自己尝试：
 
-::: .box.problem-box
-    .box-title: h3 问题求解
-::: .box-body
+::: .box.f-blue
+
+#### 问题求解
 
 __1. 斐波那契整除性__
 
@@ -1483,23 +1353,17 @@ __3. 斐波那契楼梯__
 对6、7或8阶楼梯有多少种选择？你能发现一个模式吗？这和斐波那契数有什么关系？
 
 :::
-:::
 
     figure
       x-img(src="images/fibonachos.jpg" width=600 height=282)
       p.caption © FoxTrot, by Bill Amend
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## 特殊序列
 
 > section: special
 > id: special-intro
-
 
 除了[算术序列](gloss:arithmetic-sequence)和[几何序列](gloss:geometric-sequence)、
 [斐波那契数](gloss:fibonacci-numbers)和[形数](gloss:figurate-numbers)之外，
@@ -1596,15 +1460,15 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
 让我们将这些数字与它们的因子之和进行比较：
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 对于大多数数字，其因子之和是[[小于|大于|等于]]自身。这些数字被称为__亏数__。
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 对于一些数字，其因子之和大于其本身。这些数字被称为__盈数__。
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 上面列表中只有一个数的因子之和等于其自身：[[6]]。这被称为一个[完美数字](gloss:perfect-numbers)。
 
@@ -1718,7 +1582,6 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 就像寻找奇数的完美数一样，这仍然是数学中一个未解的问题。令人惊讶的是，这些简
 单序列模式导致的问题甚至连几个世纪以来的世界上最好的数学家都感到困惑。
 
-
 ---
 > id: look-and-say
 
@@ -1769,9 +1632,9 @@ _氦_、_锂_、... _钚_来命名不同的部分。
 在这个测验中，你可以结合你对序列的所有知识。只有一个目标：找到模式并计算接下
 来的两项！
 
-::: .box.problem-box
-    .box-title: h3 找下个数
-::: .box-body
+::: .box.f-blue
+
+#### 找下个数
 
 {.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1802,13 +1665,8 @@ _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} 模式: 奇数平方数_
 
 :::
-:::
-
-
 
 --------------------------------------------------------------------------------
-
-
 
 ## 帕斯卡三角
 
@@ -1875,7 +1733,6 @@ __梅鲁山的楼梯__， 以一座神圣的印度教山命名。
 这就是为什么几百年来它一直吸引着世界各地的数学家。
 
 _{button.next-step} 继续_
-
 
 ---
 > id: pascal-sequences
@@ -2034,59 +1891,9 @@ __谢尔宾斯基三角形__。像这样的形状，由一个简单的模式组�
 
 {.todo} 即将上线，敬请期待
 
-    // Galton Board, normal distribution
-
-
-
-    // -------------------------------------------------------------------------
-
-    // ## The In-and-out Puzzle
-    // 
-    // > section: in-and-out
-    // > sectionStatus: dev
-    // > id: in-and-out-intro
-
-    // http://mathworld.wolfram.com/JosephusProblem.html
-
-    // Once there was an indecisive casting director. He would narrow down his
-    // choice for a role to twelve actors, and then be stuck. So, he made a habit
-    // of arranging the actors in a circle and going around in a circle, saying
-    // “Maybe you, not you, maybe you, not you, ...” and so on. After each “not
-    // you,” that person left the circle, so it would shrink until there was just
-    // a single person left, who would get the role.
-
-    // A clever actress decided she would get the role. There were 10 people in
-    // her circle. Where must she stand to be the last one in the circle?
-
-    // An actor auditioning for a different part was faced with 20 in his circle.
-    // Where should ! he stand?
     
-    // Find a pattern that tells you where to stand no matter how many people
-    // are in the circle. Why does it work?
-
-    // What if the director eliminates every mth person? Where should you stand
-    // in a circle of n?
-
-    // What about “in, in, out, out,” leaving two in and then kicking two out?
-
-    // With eight people, for example, you’ll lost the even numbers on round one,
-    // 3 and 7 on round two, and 5 on round three, making 1 the winner.
-
-    // Cross out the first person (person 2). At this point, there’s one fewer
-    // people in the circle, and we’re beginning at person three instead of
-    // person 1. So your answer for n people should be the same as for n-1,
-    // except the people are relabeled with a number 2 greater. In other words,
-    // if for the nth circle you stands in position p, for the n+1st circle you
-    // stand in position p +2. However, this number may be larger than n+1, so
-    // we have to reduce it mod n+1 if necessary. It’s possible to get a formula
-    // for this, and that’s a nice challenge for kids who are ready for it. But
-    // for most, just elucidating the pattern will be enough.
-
-
 
 --------------------------------------------------------------------------------
-
-
 
 ## 极限与收敛
 
@@ -2096,68 +1903,3 @@ __谢尔宾斯基三角形__。像这样的形状，由一个简单的模式组�
 
 {.todo} 即将上线，敬请期待
 
-    // In some sequences, such as Prime numbers or Perfect numbers, the individual
-    // terms are very special and interesting. In other sequences we may only be
-    // interested in what happens to the terms as we calculate more and more of
-    // them (what happens to xn as n gets very large). Here are a few examples
-    // of what could happen (the numbers, for clarity, are represented by dots):
-
-    // This sequence gets closer and closer to a particular number. We say that it converges.
-    // This sequence doesn’t converge, since it doesn’t keep getting closer to one single number.
-    // This sequence keeps on growing. We say that it diverges.
-
-    // Convergence means that the terms keep getting closer to a particular number,
-    // and divergence means that the terms keep getting bigger, whether towards
-    // infinity or negative infinity. Remember that the sequence of ratios of
-    // consecutive Fibonacci numbers above converged to the golden ratio.
-
-    // Unfortunately “getting closer” is not a particularly precise description
-    // in mathematics. A sequence could for example first get very big and then
-    // turn around and converge. We don’t really care about what happens at the
-    // beginning, only what happens to the most distant terms. All of the
-    // following sequences converge:
-
-    // Here is how mathematicians define the notion of convergence precisely,
-    // and this is one of the most important definitions in all of mathematics:
-
-    // A sequence with terms x1, x2, x3, … tends to a limit y if we can think of
-    // any tiny positive number, let us call it ε (the Greek letter Epsilon), and
-    // if eventually all terms of the sequence will be within ε of the limit y.
-    // This means that there is some (sometimes very big) integer N so that xN,
-    // xN+1, xN+2, … are all between y – ε and y + ε.
-
-    // Using special mathematical notation, it is possible to express this
-    // definition without any words. We use ∀ meaning “for all”, ∃ meaning
-    // “there exists” and : meaning “such that”:
-
-    // ∀ ε ∃ N : |xn – y| < ε ∀ n > N
-    // For all ε there exists a number N such that the distance |xn – y|
-    // between xn and y is less than ε for all n > N.
-
-    // Sequences and their convergence is studied in an area of mathematics
-    // called Analysis. We use sequences to define crucial concepts in mathematics
-    // such as series, continuity and differentiation.
-
-    // Litov’s Mean Value Theorem
-
-    // Start with two numbers, say 8 and 2.
-    // Let’s generate a sequence where the next number is the mean of the previous two numbers.
-    // So the next number is half of (8+2), and the sequence continues: 8,2,5
-    // The next number is half of (2+5), and the sequence continues: 8,2,5,3.5
-    // What would happen if you continued this process indefinitely?
-    // Choose a few pairs of starting numbers and repeat the process.
-    // Each time, your sequence should get closer and closer to a value which we call the limit.
-    // Can you find a relationship between your starting numbers and the limit of the sequence they generate?
-    // Can you explain why this happens?
-    // Now start with three numbers.
-    // This time, we can generate a sequence where the next number is the mean of the last three numbers.
-    // Check you agree that if we start with 4,1,10, the next number is 5, and the number after that is 163. 
-    // What would happen if you continued this process indefinitely?
-    // Choose some more sets of three starting numbers.
-    // Can you find a relationship between your starting numbers and the limit of the sequence they generate?
-    // Can you explain why this happens?
-
-    // After a while of playing with the numbers on a spreadsheet I have
-    // discovered that the formula to find the “limiting value” for 2 starting
-    // numbers is: (x+2y)/3
-    // where x is the first number chosen and y is the second number chosen.

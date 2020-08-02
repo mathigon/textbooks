@@ -684,7 +684,7 @@ glide-reflection:
   title: Reflexiones de deslizamiento
   text: |
     Una reflexión de deslizamientoes un tipo especial de transformación. Es una combinación de una
-    _reflexión_ y una _traducción_ en la misma dirección que el eje de reflexión.
+    _reflexión_ y una _traslación_ en la misma dirección que el eje de reflexión.
   link: /course/transformations/symmetry-groups#footsteps
 
 golden-ratio:
@@ -1755,7 +1755,7 @@ transformation-image:
 translation:
   title: Traducción
   text: |
-    Una traducciónes una transformación que mueve una figura en una dirección específica, sin
+    Una traslación es una transformación que mueve una figura en una dirección específica, sin
     cambiar su ángulo o forma.
   image: translation.svg
   link: /course/transformations/rigid#translations
@@ -1764,7 +1764,7 @@ translational-symmetry:
   title: Simetría Traslacional
   text: |
     Un patrón repetido (como un fondo de pantalla) tiene __simetría traslacional__ si se ve igual
-    después de ser traducido por una distancia específica.
+    después de ser trasladado por una distancia específica.
   link: /course/transformations/symmetry-groups#symmetry-groups-1
 
 transversal:

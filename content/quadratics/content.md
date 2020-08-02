@@ -649,9 +649,8 @@ w=11   □
 
 Now it's your turn! Try to solve these practice problems:
 
-::: .box.problem-box
-    .box-title: h3 Problems
-::: .box-body
+::: .box
+#### Problems
 
 Solve these equations:
 
@@ -663,7 +662,6 @@ e) x2+100x+2=3
 
 Solve x2+3x+1=5. Don’t be afraid of fractions. You can handle them!
 
-:::
 :::
 
 ---

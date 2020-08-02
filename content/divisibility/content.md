@@ -62,18 +62,21 @@ of __{.green}7__, and we can write __{.green}7__|__{.orange}21__.
 In this short game you have to determine which numbers are factors or multiples,
 as fast as possible. Click the [play button](->#divisibility-game_.toggle) to start.
 
-    .box.problem-box
-      .box-title: h3 Factors and Multiples Quiz
-      x-gameplay.box-body
-        .factors-row
-          .factor-number ${x}
-          | is a
-          .factor-value
-            .factor-bubble: .btn.btn-blue factor
-            .factor-bubble: .btn.btn-blue multiple
-            .factor-bubble: .btn.btn-blue neither
-          | of
-          .factor-number ${y}
+::: .box.f-blue.no-padding
+#### Factors and Multiples Quiz
+
+    x-gameplay
+      .factors-row
+        .factor-number ${x}
+        | is a
+        .factor-value
+          .factor-bubble: .btn.btn-blue factor
+          .factor-bubble: .btn.btn-blue multiple
+          .factor-bubble: .btn.btn-blue neither
+        | of
+        .factor-number ${y}
+
+:::
 
 ---
 > id: factors

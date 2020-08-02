@@ -229,7 +229,7 @@ The lowest y-value on the graph is about [[1250+-50 depending on scale]]. Let’
 --------------------------------------------------------------------------------
 
 
-## Graphing Functions
+## Graphing and Interpreting Functions
 
 > section: graphing
 > sectionStatus: dev
@@ -240,9 +240,20 @@ The lowest y-value on the graph is about [[1250+-50 depending on scale]]. Let’
 --------------------------------------------------------------------------------
 
 
-## Solving Equations Graphically
+## Linear Functions and Equations
 
-> section: solving-graphically
+> section: linear
+> sectionStatus: dev
+
+{.todo} Coming Soon!
+
+
+--------------------------------------------------------------------------------
+
+
+## Piecewise Functions
+
+> section: piecewise
 > sectionStatus: dev
 
 {.todo} Coming Soon!
@@ -277,5 +288,15 @@ The lowest y-value on the graph is about [[1250+-50 depending on scale]]. Let’
 
 > section: rates-of-change
 > sectionStatus: dev
+> id: fn-sketch
+
+Draw a Function:
+
+    x-coordinate-sketch(width=600 height=400 x-axis="-1,10,1" y-axis="-5,5,1")
+      button.btn.clear Clear
+
+Type some text:
+
+    x-free-text(placeholder="Your answer…")
 
 {.todo} Coming Soon!

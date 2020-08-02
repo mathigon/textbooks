@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -130,7 +131,7 @@ Na natureza, objetos como gotas de água ou bolhas de ar podem economizar energi
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Triangle
       div(data-value="1") Square
       div(data-value="2") Pentagon
@@ -276,14 +277,17 @@ Aqui você pode ver os primeiros 100 dígitos do Pi. Mova algumas das células p
 
 Se Pi é normal, significa que você pode pensar em _qualquer_ sequência de dígitos e ela aparecerá em algum lugar em seus dígitos. Aqui você pode pesquisar o primeiro milhão de dígitos do Pi - eles contêm seu aniversário?
 
-    .box
-      .box-title: h3 One Million Digits of Pi
-      .box-body.pi-controls
-        | Search for a string of digits:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### One Million Digits of Pi
+
+    .pi-controls
+      | Search for a string of digits:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -326,6 +330,7 @@ Existe até um _dia Pi_ a cada ano, que cai em 14 de março, porque `pi ≈ 3.14
 
 > section: radians
 > id: degrees
+> translated: auto
 
 Até agora em geometria, sempre medimos ângulos em [graus](gloss:degrees). Uma rotação do __{.m-red} círculo completo__ é [[360]]°, um meio-círculo __{.m-green}__ é [[180]]°, um __{.m-yellow} quarto de círculo__ é [[90]]° e assim por diante.
 
@@ -486,9 +491,9 @@ Você pode pensar em radianos como a “distância percorrida” ao longo da cir
 
 Por exemplo, a [Estação Espacial Internacional](gloss:iss) orbita a Terra uma vez a cada 1,5\ horas. Isso significa que sua __velocidade de rotação__ é [[`(2 pi)/1.5`| `1.5/(2 pi)`|`1.5 * pi`]] radianos por hora.
 
-{.reveal(when="blank-0")} Em um círculo unitário](gloss:unit-circle)](gloss:unit-circle), a velocidade de rotação é a mesma que a velocidade real _<<<<_, porque o comprimento da circunferência é o mesmo que uma rotação completa em radianos (ambos são `2pi`).
+{.reveal(when="blank-0")} Em um círculo unitário](gloss:unit-circle)](gloss:unit-circle), a velocidade de rotação é a mesma que a velocidade _real_, porque o comprimento da circunferência é o mesmo que uma rotação completa em radianos (ambos são `2pi`).
 
-{.reveal(when="blank-0" delay=1000)} O raio da órbita da ISS é 6800\ km, o que significa que a velocidade _<<<<_ real da ISS deve ser [[`(2 pi)/1.5 xx 6800`| `(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")} = 28483 km por hora._
+{.reveal(when="blank-0" delay=1000)} O raio da órbita da ISS é 6800\ km, o que significa que a _velocidade_ real da ISS deve ser [[`(2 pi)/1.5 xx 6800`| `(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")} = 28483 km por hora._
 
 ::: column(width=300)
 
@@ -519,7 +524,7 @@ Você pode ver que, neste exemplo, os radianos são uma unidade muito mais conve
 
 ### Trigonometria
 
-Para a maioria dos problemas simples de geometria, os graus e os radianos são completamente intercambiáveis - você pode escolher qual deles prefere ou uma pergunta pode dizer em que unidade você deve responder. , depois de estudar os cálculos mais avançados da [trigonometria](gloss:trigonometry) ou [<<<<](gloss:calculus), verifica-se que os radianos são muito mais convenientes do que graus.
+Para a maioria dos problemas simples de geometria, os graus e os radianos são completamente intercambiáveis - você pode escolher qual deles prefere ou uma pergunta pode dizer em que unidade você deve responder. , depois de estudar os cálculos mais avançados da [trigonometria](gloss:trigonometry) [ou](gloss:calculus), verifica-se que os radianos são muito mais convenientes do que graus.
 
 ::: column.grow
 
@@ -556,7 +561,7 @@ sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: small-angle
 
-O uso de radianos tem uma vantagem particularmente interessante ao usar a função Seno [__<<<<__](gloss:sin). Se `θ` for um ângulo muito pequeno (menor que 20 ° ou 0,3 rad), então `sin(θ) ≈ θ`. Por exemplo, {.text-center} sin (${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
+O uso de radianos tem uma vantagem particularmente interessante ao usar a função [__Seno__](gloss:sin). Se `θ` for um ângulo muito pequeno (menor que 20 ° ou 0,3 rad), então `sin(θ) ≈ θ`. Por exemplo, {.text-center} sin (${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
 
 {.reveal(when="var-0")} Isso é chamado de __aproximação de ângulo pequeno__, e pode simplificar bastante certas equações que contêm funções trigonométricas. Você aprenderá muito mais sobre isso no futuro.
 
@@ -566,6 +571,7 @@ O uso de radianos tem uma vantagem particularmente interessante ao usar a funç�
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 Nas seções anteriores, você aprendeu os nomes dados a várias partes diferentes de um círculo - como centro, raio, diâmetro e circunferência. No entanto, existem muitos elementos geométricos relacionados a um círculo, dos quais precisamos resolver problemas mais complexos:
 
@@ -659,7 +665,7 @@ Infelizmente, ninguém sabia exatamente o tamanho da Terra - até cerca de 200 a
 
 ::: column.grow
 
-Como você pode ver no diagrama, um arco [{.red}](pill:arc) faz parte da circunferência [[<<<<|diameter|tangent]] de um círculo e um setor [{.yellow}](pill:sector) faz parte do [[interior|radius|perimeter]] de um círculo.
+Como você pode ver no diagrama, um arco [{.red}](pill:arc) faz parte da [[circunferência|diameter|tangent]] de um círculo e um setor [{.yellow}](pill:sector) faz parte do [[interior|radius|perimeter]] de um círculo.
 
 ::: .reveal(when="blank-0 blank-1")
 
@@ -714,11 +720,15 @@ Agora, podemos reorganizar essas equações para encontrar a variável em que es
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} comprimento do arco](pill) | = | `"circumference" × c/360` | | | = | `2 π r × c/360` | {.eqn-system}
+| [{.red} comprimento do arco](pill) | = | `"circumference" × c/360` |
+| | = | `2 π r × c/360` |
+{.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} área do setor](pill) | = | `"circle area" × c/360` | | | = | `π r^2 × c/360` | {.eqn-system}
+| [{.yellow} área do setor](pill) | = | `"circle area" × c/360` |
+| | = | `π r^2 × c/360` |
+{.eqn-system}
 
 :::
 
@@ -885,6 +895,7 @@ Foi uma dessas medidas incorretas que levou Cristóvão Colombo a navegar para o
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 Nas seções anteriores, estudamos as propriedades dos círculos em uma superfície plana. Mas nosso mundo é realmente tridimensional, então vamos dar uma olhada em alguns sólidos 3D baseados em círculos:
 
@@ -922,7 +933,6 @@ Aqui você pode ver o _Gasômetro cilíndrico_ em Oberhausen, Alemanha. Ele cost
 
 * Quanto gás natural pode ser armazenado? Este é o [[volume|area|diameter]] do cilindro.
 * {.reveal(when="blank-0")} Quanto aço é necessário para construir o Gasômetro? Esta é (aproximadamente) a área de superfície [[do cilindro.
-
 
 {.reveal(when="blank-0 blank-1")} Vamos tentar encontrar fórmulas para esses dois resultados!
 
@@ -1013,7 +1023,6 @@ Existem dois [[círculos|spheres|squares]], um na parte superior e outro na part
 
 * {.reveal(when="blank-0 blank-1")} Os dois círculos cada um têm a área _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 * {.reveal(when="eqn-0")} A altura do retângulo é _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} e a largura do retângulo é a mesma que a [[circunferência|diameter|tangent]] dos círculos:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
-
 
 ::: column(width=320)
 
@@ -1252,7 +1261,7 @@ Você pode pensar em uma esfera como um "[círculo](gloss:circle) tridimensional
 ---
 > id: sphere-1
 
-{.r} Em uma seção anterior de [<<<<](/course/circles/tangets-chords-arcs#eratosthenes-1), você aprendeu como o matemático grego [Eratóstenes](bio:eratosthenes) calculou o raio da Terra usando a sombra de um poste - eram 6.371 km. Agora, vamos tentar encontrar o volume total e a área de superfície da Terra. [Continuar](btn:next)
+{.r} Em uma seção anterior [de](/course/circles/tangets-chords-arcs#eratosthenes-1), você aprendeu como o matemático grego [Eratóstenes](bio:eratosthenes) calculou o raio da Terra usando a sombra de um poste - eram 6.371 km. Agora, vamos tentar encontrar o volume total e a área de superfície da Terra. [Continuar](btn:next)
 
 ---
 > id: sphere-volume
@@ -1427,13 +1436,13 @@ Esse é um problema específico ao tentar criar mapas. A Terra possui uma superf
 
 Aqui você pode ver alguns tipos diferentes de mapas, chamados __projeções__. Tente mover o quadrado vermelho e observe como essa área _realmente_ se parece em um globo:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Cylindrical
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide") Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline
@@ -1464,6 +1473,7 @@ Para encontrar a área da superfície de uma esfera, podemos mais uma vez aproxi
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 O círculo é uma das quatro formas diferentes que podem ser criadas usando “fatias” através de um [cone](gloss:cone). Isso pode ser demonstrado usando o cone de luz de uma tocha:
 
@@ -1515,12 +1525,6 @@ Uma elipse parece quase um "círculo alongado". De fato, você pode pensar nisso
 Se você tiver uma cadeia longa conectada a dois pontos fixos, poderá desenhar uma elipse perfeita rastreando o alcance máximo das cadeias:
 
 {.todo} Em breve: elipses desenhando interativas
-
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
@@ -1630,7 +1634,6 @@ A gravidade é o que faz tudo cair no chão e a gravidade também é o que faz o
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)

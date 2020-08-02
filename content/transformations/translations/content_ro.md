@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 Multe concepte geometrice, precum [dreptele](gloss:line) și [punctele](gloss:point),
 au fost “inventate” de matematicieni. Pe de altă parte, simetria există peste tot
@@ -84,6 +85,7 @@ au această proprietate se numesc __transformări rigide__.
 
 > id: rigid
 > section: rigid
+> translated: auto
 
 O [__transformare rigidă__](gloss:rigid-transformation) este un tip special de transformare
 ce nu schimbă dimensiunea și forma figurii inițiale. Imaginează-ți că figura este făcută dintr-un 
@@ -437,7 +439,6 @@ sau în sens invers acelor de ceasornic.
       path.transparent(x="segment(rot,a1)" target="compass protractor")
       path.transparent(x="circle(rot,distance(rot,a))" target="compass")
 
-
 ::: column.grow
 Este mult mai dificil să desenăm rotații care nu sunt exact la 90° sau 180°. Hai să
 încercăm să rotim această formă cu ${10*ang}{ang|6|-18,18,1}° în jurul [centrului de rotație](target:rot).
@@ -480,39 +481,9 @@ utiliza transformările pentru a determina dacă două forme sunt [congruente](g
 
 > section: congruence
 > sectionStatus: dev
+> translated: auto
 
 TODO
-
----
-
-### Transformări Compuse
-
-Bineînțeles că putem combina mai multe translații, reflexii și rotații pentru a crea
-transformări mai complexe.
-
-{.todo} TODO Exemplu
-
-Cu toate acestea, se pare că indiferent câte transformări diferite am combina: întotdeauna
-va exista o altă transformare care ajunge la același rezultat într-un singur pas!
-
-{.todo} TODO Calculator de transformări compuse
-
-Combinarea a două reflexii prezintă un interes special. Există două cazuri diferite 
-ce trebuie luate în considerare:
-
-::: column.grow
-Dacă două axe de reflexie sunt paralele, rezultatul este o singură translație.
-Direcția de translație este perpendiculară pe axele de reflexie și distanța
-este dublul distanței dintre axele de reflexie.
-
-{.todo} TODO Animație
-::: column.grow
-Dacă cele două axe de reflexie se intersectează se obține o singură rotație. Centrul
-de rotație este intersecția dintre axele de reflexie și unghiul de rotație este
-dublul unghiului dintre axele de reflexie.
-
-{.todo} TODO Animație
-:::
 
 ---
 
@@ -521,6 +492,7 @@ dublul unghiului dintre axele de reflexie.
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
 [__Simetria__](gloss:symmetry) există peste tot în jurul nostru și este un concept
 intuitiv: părți diferite ale unui obiect arată _identic_ dintr-un anumit punct de vedere.
@@ -784,9 +756,7 @@ Acum completează aceste forme astfel încât să aibă simetrie rotațională:
 
 > id: groups
 > section: symmetry-groups
-
-    // HINT: To recognise different configurations, we need to highlight the
-    // four corners in different colours.
+> translated: auto
 
 Unele forme au mai mult de o axă de simetrie - hai să aruncăm o privire 
 la [pătrat](gloss:square) ca exemplu simplu.
@@ -1163,6 +1133,7 @@ ce are un grup de simetrie tridimensional.
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
 Până acum, toate simetriile pe care le-am studiat au fost cumva _vizuale_: forme,
 imagini și sabloane vizibile. De fapt, simetria poate fi un concept mult mai amplu:
@@ -1228,6 +1199,7 @@ dar nu a fost observat în lumea reală până în anul 2012.
 
 > id: dilations
 > section: dilations
+> translated: auto
 
 Până acum, ne-am uitat la transformări geoemtrice [[rigide|congruente|vizuale]].
 _{span.reveal(when="blank-0")} Acum hai să ne gândim la o transformare care nu e așa:
@@ -1271,20 +1243,6 @@ imaginea este [[mai mare|mai mică]] decât originalul.
 
 {.todo} COMING SOON – Mai multe despre Omotetii
 
-    // Here is how we can construct the dilation of a geometric shape:
-    // 
-    // ::: column(width=300)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // First we draw rays from the center of dilation to every point in the shape.
-    // 
-    // Now let’s measure the distance of all these points from the center of dilation.
-    // Then we can multiply the distance by the scale factor, and the measure the
-    // image of the point along the same ray.
-    // 
-    // All that’s left is to connect the transformed points in the image … all done!
-    // :::
-
 ---
 
 ## Asemănare
@@ -1293,208 +1251,4 @@ imaginea este [[mai mare|mai mică]] decât originalul.
 > sectionStatus: dev
 > id: similarity
 
-::: column.grow
-În cazul transformărilor rigide, imaginea este întotdeauna [[congruentă|mai mare|mai mică]] cu
-originalul – dar asta [[nu mai este|încă este]] adevărat pentru omotetii. În schimb, spunem că
-două forme sunt [__asemenea__](gloss:similar). Ele au aceeași formă generală, dar nu neapărat
-și aceeași dimensiune.
-
-Simbolul pentru asemănare este `∼` (similar cu simbolul pentru congrueță, care era `≅`). 
-În acest exemplu, vom nota `A ∼ A'`.
-
-::: column(width=240)
-{.todo} ÎN CURÂND - Ilustrație
-:::
-
----
-> id: perspective
-
-### Desene în Perspectivă
-
-You might have noticed that these dilations with the connecting rays almost look
-like __perspective drawings__. The center of dilation is called the __vanishing
-point__, because it looks like this is where everything is “vanishing in the
-distance”.
-
-Find the vanishing point in the figure below:
-
-{.todo} COMING SOON – Interactive
-
-Now can you draw another house that matches the existing ones?
-
----
-> id: similar-polygons
-
-### Poligoane Asemenea
-
-Asemănarea ne poate spune multe despre forme. De exemplu, [cercurile](gloss:circle),
-[pătratele](gloss:square) și [triunghiurile echilaterale](gloss:equilateral-triangle)
-sunt [[întotdeauna|uneori|niciodată]] asemenea. Ele pot avea dimensiuni diferite, dar
-au mereu aceeași formă generală.
-
-::: column.grow
-Cele două patrulatere din dreapta sunt asemenea. Prim observație importantă este că 
-pentru poligoane asemenea, toate perechile de unghiuri corespunzătoare sunt 
-[congruente](gloss:congruent-angles). Aceasta înseamnă că
-
-{.text-center} [_{.m-red}∡ABC_ ≅ _{.m-red}∡A'B'C'_](target:a)_{.space}_
-[_{.m-blue}∡BCD_ ≅ _{.m-blue}∡B'C'D'_](target:b)  
-[_{.m-green}∡CDE_ ≅ _{.m-green}∡C'D'E'_](target:c)_{.space}_
-[_{.m-yellow}∡DEA_ ≅ _{.m-yellow}∡D'E'A'_](target:d)
-
-A doua observație importantă este că pentru poligoane asemenea, toate laturile
-sunt scalate __proporțional__ cu factorul de scalare al omotetiei corespunzătoare.
-Dacă factorul de scalare este ${k}{k|1.5|0.5,2,0.1}, atunci
-
-{.text-center} `|AB| ×` ${k} `= |A'B'|`_{.space}_`|BC| ×` ${k} `= |B'C'|`  
-`|CD| ×` ${k} `= |C'D'|`_{.space}_`|DE| ×` ${k} `= |D'E'|`
-
-Putem rearanja aceste ecuații și elimina în întregime factorul de scalare:
-
-{.text-center} `|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
-    // This proportional relationship is true not just for the sides of the
-    // polygon, but also for properties like diagonals.
-
-Putem folosi aceasta pentru a rezolva probleme din viața reală ce implică poligoane 
-asemenea - de exemplu la găsirea lungimii laturilor lipsă atunci când se cunosc alte laturi.
-În următorul capitol vei vedea câteva exemple.
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-:::
-
----
-> id: similar-triangles
-
-### Triunghiuri Asemenea
-
-Conceptul de asemănare este deosebit de puternic la triunghiuri. Știm deja că
-unghiurile interioare corespunzătoare ale poligoanelor asemenea sunt egale.
- 
-La triunghiuri, și opusul este valabil: asta înseamnă că dacă ai două triunghuri
-care au cele trei unghiuri de aceeași dimensiune, atunci triunghiurile sunt asemenea.
-
-Și mai mult de atât! Știm că suma măsurilor unghiurilor unui triunghi este întotdeauna
-[[180]]°. Așadar, dacă știm măsura a două unghiuri ale unui triunghi, putem să calculăm
-întotdeauna valoarea celui de-al treilea.
-
-Pentru asemănare, asta înseamnă ca avem nevoie să verificăm doar _două unghiuri_ pentru
-a afla daca triunghiurile sunt asemenea. Dacă două triunghiuri au două unghiuri cu 
-aceeași măsură, atunci și al treilea unghi va avea aceeași măsură în ambele.
-
-Acest rezultat se numește uneori [__Criteriul de asemănare UU__](gloss:triangle-aa). 
-(Cei doi _U_ reprezintă cele două _unghiuri_ pe care le comparăm.)
-
-::: .theorem
-Dacă două unghiuri ale unui triunghi sunt congruente cu două unghiuri ale unui alt triunghi,
-atunci triunghiurile sunt asemenea.
-:::
-
----
-> id: similar-triangles-1
-
-Hai să vedem câteva exemple în care aceasta teoremă este utilă:
-
-::: column(width=320)
-{.todo} ÎN CURÂND – Animație
-
-::: column.grow
-Aici se poate vedea imaginea unui far mare. Împreună cu un prieten, vrei să măsori 
-înălțimea farului, dar din păcate nu putem urca până în vârf.
-want to measure the height of the lighthouse, but unfortunately we cannot climb
-to the top.
-
-Se pare că diagrama conține două triunghiuri asemenea, bine ascunse:
-unul este format de far și umbra sa, iar altul este format de prietenul tău și umbra sa.
-
-Ambele triunghiuri au un unghi drept la bază. Razele soarelui sunt paralele,
-așadar celelalte două unghiuri de jos sunt unghiuri corespondente și egale.
-Conform criteriului de asemănare UU, aceste două triunghiuri sunt asemenea.
-
-Putem măsura cu ușuriță lungimea umbrelor și, de asemenea, știm înălțimea prietenului
-tău. Știm că triunghiurile asemenea au laturile proporționale și putem astfel calcula
-înălțimea farului:
-
-{.todo} ÎN CURÂND – Ecuație
-
-Așadar farul are o înălțime de 1.5m.
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-{.todo} ÎN CURÂND – Animație
-::: column.grow
-Putem folosi aceeași tehnică pentru a masura distanțele la sol. Aici vrem 
-să aflăm lățimea unui râu mare. Pe o parte a râului se află un copac mare 
-și am un băț de 1m lungime.
-
-Încearcă să desenezi alte două triunghiuri asemenea în această diagramă.
-
-Putem marca punctul de-a lungul malului râului, care se află exact pe linia
-orizontului de la capătul bățului până la copac. Apoi putem măsura distanțele
-până la băț și până la punctul direct opus copacului.
-
-Din nou, aceste două triunghiuri sunt asemenea conform criteriului de asemănare UU.
-Ambele au un unghi drept și o pereche de unghiuri opuse.
-
-Conform regulii de proporționlitate, asta înseamnă că
-
-{.todo} ÎN CURÂND – Ecuație
-
-Așadar lățimea râului este de 45 metri.
-:::
-
----
-
-### Similarity on Rays
-
-Teoremă: Dacă o semidreaptă împarte în două un unghi al unui triunghi, atunci each
-împarte latura opusă în segmente proporționale cu lungimile celorlalte două laturi.
-
-Putem extinde această teoremă la un caz în afara triunghiurilor unde avem mai multe
-drepte paralele tăiate de drepte transversale.
-
-Teoremă: Dacă trei sau mai multe dreote paralele sunt tăiate de două linii transversale,
-atunci ele împart transversalele în mod proporțional.
-
-Să ne gândim la linia de mijloc a unui triunghi. Linia de mijloc este paralelă cu 
-una din laturile triunghiului și ea împarte celelalte două laturi în jumătăți congruente.
-Linia de mijloc împarte cele două laturi în segmente proporționale.
-
-Teorema lui Thales: Dacă o paralela dusă la una din laturile unui triunghi intersectează
-celelte două laturi, atunci ea le împarte în segmente proportionale.
-
-Reciproca Teoremei lui Thales: Dacă o dreaptă determină pe două din laturile unui triunghi segmente
-proporționale, atunci ea este paralelă cu a treia latură a triunghiului.
-
----
-
-### Auto-asemănare
-
-Există câteva forme matematice interesante care sunt asemenea cu o bucată mai mică _de-a lor_.
-Un exemplu este __Triunghiul Sierpinksi__: întreg triunghiul este asemenea oricărui triunghi 
-mai mic din care este compus. Poți mări și vei vedea o infinitate de triunghiuri din ce în ce 
-mai mici.
-
-Formele care au această proprietate se numesc __Fractali__. Ei au proprietăți cu 
-adevărat surprinzătoare, despre care vei afla mai multe pe viitor.
-
----
-
-TRiunghiurile nu sunt utile doar pentru măsurarea lungimilor. În capitolul urmator vom
-afla mult mai multe despre triunghiuri și proprietățile lor.
+TODO

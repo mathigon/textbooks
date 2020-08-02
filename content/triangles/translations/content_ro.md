@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 ::: column.grow
 Până la începutul secolului 19, exploratorii descoperiseră cea mai mare parte a lumii.
@@ -133,7 +134,6 @@ mișca și transforma aceste triunghiuri în mod realist și pentru a le calcula
 :::
 
     figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
-    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
 
 ---
 
@@ -141,6 +141,7 @@ mișca și transforma aceste triunghiuri în mod realist și pentru a le calcula
 
 > id: angle-sum
 > section: properties
+> translated: auto
 
 Hai să începem simplu: un triunghi este o formă închisă care are trei laturi (care
 sunt [segmente de dreaptă](gloss:line-segment)) și trei vârfuri ([punctele](gloss:point) 
@@ -268,23 +269,6 @@ agăța perfect drept de o bucată de sfoară care este prinsă de centrul de gr
 
 Se întâmplă așa pentru că greutatea unui triunghi este distribuită uniform în jurul
 centrului său de greutate. În fizică, acest punct se numește adesea __centru de masă__.
-
-    // Orice linie de dreaptă care trece prin centrul de greutate împarte triunghiul în două 	
-    // parți care au exact aceeași arie. Mută [punctul albastru](target:move) din figura
-    // din dreapta. Zona roșie și zona verde vor avea mereu aceeași arie.
-
-    // x-geopad(width=220): svg
-      circle.move(name="a" cx=70 cy=50)
-      circle.move(name="b" cx=60 cy=160)
-      circle.move(name="c" cx=180 cy=130)
-      circle.yellow(x="triangle(a,b,c).centroid" name="d")
-      circle.move.blue.pulsate(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
-      circle(hidden name="q" x="p.rotate(pi,d)")
-
-      path.dark(x="triangle(a,b,c)" name="t")
-      path.fill.green.light(x="t.intersect(polygon(p,q,p.rotate(pi/2,q),q.rotate(-pi/2,p)))")
-      path.fill.red.light(x="t.intersect(polygon(p,q,p.rotate(-pi/2,q),q.rotate(pi/2,p)))")
-      path.blue(x="line(p,d)")
 
 ---
 > id: circumcircle
@@ -495,6 +479,7 @@ dintre înălțimile sale sunt de fapt chiar laturile triunghiului.
 > sectionStatus: dev
 > id: midsegments
 > goals: s0 s1 s2
+> translated: auto
 
 ::: column(width=300)
 
@@ -549,6 +534,7 @@ cum se leagă de asemănare și proporționalitate.
 > id: sss-construction
 > section: congruence
 > goals: draw-base draw-c1 draw-c2
+> translated: auto
 
 Acum că putem verifica dacă trei laturi pot forma un triunghi, să ne gândim la
 modul în care am putea _construi_ de fapt un triunghi cu aceste laturi.
@@ -779,6 +765,7 @@ LLU nu este suficient pentru a confirma că două triunghiuri sunt congruente.
 
 > id: pythagoras
 > section: pythagoras
+> translated: auto
 
 Am ajuns acum într-un punct important din geometrie – să putem formula și întelege una 
 dintre cele mai faimoase [teoreme](gloss:theorem) din întreaga matematică: 
@@ -834,10 +821,6 @@ Cât de departe se duce în sus pe perete?
 De observat că există un triunghi dreptunghic format de scară, perete și sol.
 Folosind teorema lui Pitagora, obținem
 
-    //- Ideal syntax:
-    //- | `green(h^2) + blue(1^2)` | `red(6^2)`          |
-    //- |          `=> green(h^2)` | `= blank(35)`       |
-    //- |            `=> green(h)` | `= sqrt(35) = 5.92` |
     
     table.eqn-system
       tr
@@ -854,7 +837,6 @@ Folosind teorema lui Pitagora, obținem
 
 {.reveal(when="blank-0")} Pentru orice triunghi dreptunghic căruia îi știm două dintre laturi, 
 putem folosi teorema lui Pitagora pentru a afla cea de-a treia latură.
-
 
 ---
 > id: pythagoras-proof
@@ -943,11 +925,6 @@ având aria de [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup
 și [un pătrat](target:square) cu aria [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
 
 {.reveal(when="blank-3 blank-4")} Dacă punem la un loc toate aceste informații, obținem
-
-    //- Ideal syntax:
-    //- |         `(a+b)^2` | `= 4 xx 1/2ab + c^2` |
-    //- | `a^2 + 2ab + b^2` | `= 2ab + c^2`        |
-    //- |       `a^2 + b^2` | `= c^2`              |
 
     table.eqn-system.reveal(when="blank-3 blank-4")
       tr
@@ -1200,13 +1177,6 @@ Poți găsi un alt triplet pitagoreic folosind sistemul de coordonate de mai jos
 
 {.reveal(when="p0 p1 p2 p3 p4 p5")} Observi un șablon în distribuția acestor puncte?
 
-    // The mathematician Euclid found a clever method for generating new
-    // Pythagorean triples. First, we need to pick any two integers _m_ and _n_:
-    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = ${n}{n|2|1,20,1}
-    // Now we can calculate the three numbers that make up the triple:
-    // {.text-center} `2mn =` ${2×m×n}, `m^2 - n^2 =` ${m×m-n×n},  `m^2 + n^2 =` ${m×m+n×n}
-    // And there you have your pythagorean triple! You can check that a2 + b2 = c2.
-
 ----
 
 ## Triunghiuri Isoscele și Echilaterale
@@ -1228,28 +1198,6 @@ Demonstrație prin construcția bisectoarelor și a criteriului LUL.
 
 {.todo} ÎN CURÂND – Află înălțimea unui triunghi isoscel folosing teorema lui Pitagora
 
-    // {.todo} The angles between the base and the congruent sides are
-    // called base angles. The angle made by the two legs of the isosceles triangle is
-    // called the vertex angle.
-    // 
-    // {.todo} Base Angles Theorem: The base angles of an isosceles triangle are congruent.
-    // To prove the Base Angles Theorem, we will construct the angle bisector through
-    // the vertex angle of an isosceles triangle.
-    // 
-    // {.todo} Isosceles Triangle Theorem: The angle bisector of the vertex angle in an
-    // isosceles triangle is also the perpendicular bisector to the base.
-    // 
-    // {.todo} The converses of the Base Angles Theorem and the Isosceles Triangle Theorem are
-    // both true. If two angles in a triangle are congruent, then
-    // the opposite sides are also congruent. And if the perpendicular bisector of the base of
-    // an isosceles triangle is also the angle bisector of the vertex angle.
-    // 
-    // {.todo} In other words, if △ABC is isosceles, AD⊥CB and CD≅DB, then ∠CAD≅∠BAD.
-    // 
-    // {.todo} Find the Height of an Isosceles Triangle
-    // One way to use The Pythagorean Theorem is to identify the heights in isosceles
-    // triangles so you can calculate the area.
-
 ---
 > id: equilateral
 
@@ -1258,14 +1206,6 @@ Demonstrație prin construcția bisectoarelor și a criteriului LUL.
 Spunem că un triunghi este [__echilateral__](todo:equilateral-triangle) dacă toate
 laturile sale au aceeași lungime. [Ai văzut deja](/course/euclidean-geometry/geometric-construction) 
 cum se construiește un triunghi echilateral folosind dreptarul și compasul.
-
-    // Any equilateral triangle is always also isosceles. From the base angle theorem
-    // we know that angles opposite congruent sides in a triangle are also congruent.
-    // In an equilateral triangle, all of the sides are congruent, so all of the angles
-    // must also be congruent.
-    // 
-    // Since we know that the sum of all three angles is 180°, every individual angle
-    // in an equilateral triangle must be [[60]]°.
 
 {.todo} ÎN CURÂND – Măsura unghiurilor într-un triunghi echilateral
 
@@ -1277,6 +1217,7 @@ cum se construiește un triunghi echilateral folosind dreptarul și compasul.
 
 > id: trigonometry
 > section: trigonometry
+> translated: auto
 
 Până acum am văzut relații între __unghiurile__ triunghirilor (ex: suma unghiurilor
 unui triunghi este 180°) și relații între __laturile__ triunghiurilor 
@@ -1399,11 +1340,6 @@ laturilor unui triunghi dreptunghic. Fiecare dintre ele are un nume, precum
 
 {.todo} ÎN CURÂND – Mai multe despre trigonometrie
 
-    // {.todo} COMING SOON – Abbreviations: sin x, cos y
-    // {.todo} COMING SOON – Using calculators
-    // {.todo} COMING SOON – Examples
-    // {.todo} COMING SOON – Rationalize the denominator
-
 ---
 > id: inverse-trig
 
@@ -1411,26 +1347,13 @@ laturilor unui triunghi dreptunghic. Fiecare dintre ele are un nume, precum
 
 {.todo} ÎN CURÂND – Funcții inverse
 
-    // The word inverse is probably familiar to you. In mathematics, once you learn how
-    // to do an operation, you also learn how to “undo” it. For example, you may
-    // remember that addition and subtraction are considered inverse operations.
-    // Multiplication and division are also inverse operations. In algebra you used
-    // inverse operations to solve equations and inequalities. When we apply the word
-    // inverse to the trigonometric ratios, we can find the acute angle measures within
-    // a right triangle. Normally, if you are given an angle and a side of a right
-    // triangle, you can find the other two sides, using sine, cosine or tangent. With
-    // the inverse trig ratios, you can find the angle measure, given two sides.
-
-    // On most scientific and graphing calculators, the buttons look like
-    // [SIN−1],[COS−1], and [TAN−1]. Typically, you might have to hit a shift
-    // button to access these functions.
-
 ---
 
 ## Teorema Sinusurilor și Teorema Cosinusului
 
 > section: sine-cosine-rule
 > id: sine-cosine-rule
+> translated: auto
 
 Până acum, tot ce-am învățat despre trigonometrie se aplică doar în triunghiurile 
 dreptunghice. Dar majoritatea triunghiurilor nu sunt dreptunghice și există două 
@@ -1444,10 +1367,6 @@ __Teorema Sinusurilor__
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
 :::
 
-    // {.todo} Use Law of Sines when given:
-    // An angle and its opposite side.
-    // Any two angles and one side.
-
 ::: column.grow
 ::: .theorem
 __Teorema Cosinusului__  
@@ -1458,21 +1377,12 @@ __Teorema Cosinusului__
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
-    // {.todo} Even though there are three formulas, they are all very similar. First, notice
-    // that whatever angle is in the cosine, the opposite side is on the other side of
-    // the equal sign.
-    // 
-    // {.todo} Use Law of Cosines when given:
-    // Two sides and the included angle.
-    // All three sides.
 :::
 
 ---
 > id: trigonometry-4
 
 {.todo} ÎN CURÂND – Demonstrație, exemple și aplicații
-
-    // TODO Future stuff about trigonometry
 
 ---
 > id: mountains

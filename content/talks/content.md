@@ -42,7 +42,7 @@ water? You can start and end on any area of land.
 Can you connect each of these utility companies to each of the houses, without any of the lines
 intersecting?
 
-    .frame.fill
+    .box.no-padding
       include ../graph-theory/svg/utilities.svg
       button.btn Clear
 
@@ -50,13 +50,19 @@ intersecting?
 > id: planarity
 > title: Planarity Game
 
-    .box.problem-box
-      .box-title: h3 Planarity
-      .box-body
-        x-solved
-        svg#planarity.frame(viewBox="0 0 640 320")
-        p.md This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the vertices so that none of the edges overlap.
-        button.btn New Random Graph
+::: .box.f-blue
+
+#### Planarity
+
+    x-solved
+    svg#planarity(viewBox="0 0 720 360")
+
+This is a planar graph, but the ${n}{n|7|5,20,1} vertices have been scrambled up. Rearrange the
+vertices so that none of the edges overlap.
+
+    p.btn-row: button.btn New Random Graph
+
+:::
 
 ---
 > id: maps-1
@@ -73,31 +79,27 @@ colour?
       .tab
         h3 United States #[span.check(when="map-0")]
         x-solved
+        .colour-count(style="margin-bottom: -32px") #[span 0] colours used
         include ../graph-theory/svg/colours-1.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 South America #[span.check(when="map-1")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-2.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-3.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-4.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
 
 ---
 > id: salesman-4
@@ -125,37 +127,33 @@ can remove cities by tapping them, and you can add cities by clicking anywhere o
       .tab
         h3 United States #[span.check(when="map-0")]
         x-solved
+        .colour-count(style="margin-bottom: -32px") #[span 0] colours used
         include ../graph-theory/svg/colours-1.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 South America #[span.check(when="map-1")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-2.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 Germany #[span.check(when="map-2")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-3.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
       .tab
         h3 England #[span.check(when="map-3")]
         x-solved
+        .colour-count #[span 0] colours used
         include ../graph-theory/svg/colours-4.svg
-        .colour-count Number of colours: #[span 0]
         button.btn.clear Clear
-        button.btn.solve(hidden) Solution
 
 ---
 > title: Three Body Problem
 > id: three-bodies
 
-Description
+What happens when three plants orbit around each other in space?
 
     figure: x-geopad.simulation.r(width=480 height=480)
       canvas(width=960 height=960)
@@ -209,7 +207,7 @@ water? You can start and end on any area of land.
 Can you connect each of these utility companies to each of the houses, without any of the lines
 intersecting?
 
-    .frame.fill
+    .box.no-padding
       include ../graph-theory/svg/utilities.svg
       button.btn Clear
 
@@ -219,8 +217,7 @@ intersecting?
 
 In this diagram, we highlight all points `pill(x_0,"yellow","x0")` on the complex plane, for which
 the recursive sequence `pill(x_n,"yellow") = pill(x_(n-1),"yellow")^2 + pill(c,"red","c")` is
-bounded (it doesn't diverge). You can move the position of `pill(x_0,"yellow","x0")` and
-`pill(c,"red","c")` – which shapes do you expect to see?
+bounded (it doesn't diverge).
 
     x-geopad(width=720 height=480 x-axis="-1.8,1.8,1" y-axis="-1.2,1.2,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-suffix=",i" axis-names="Real, Imaginary")
       canvas(width=1440 height=960)
@@ -298,3 +295,15 @@ repeatedly pick a random vertex of a polygon, and then mark the midpoint of the 
 original point to that vertex. Then you continue from that new point. What shapes can you make?
 
     include ../fractals/components/chaos-game
+
+---
+> id: circles
+> title: Apollonian Gasket
+> section: alex
+
+## Alex Kontorovich
+
+Can you place all smaller circles inside the big one?
+
+    svg.circles(width=400 height=400 viewBox="0 0 280 280")
+      circle.outer(cx=140 cy=140 r=108.07)

@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 自然を見回すと、次のような複雑な植物に気づいたかもしれません。
 
@@ -424,14 +425,12 @@ _有限_の領域と_無限_の円周を持つ形状を作成できるとは考�
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption}中央アジアの山脈
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption}インドのガンジス川デルタ
@@ -444,14 +443,12 @@ _有限_の領域と_無限_の円周を持つ形状を作成できるとは考�
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption}網膜の血管
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption}アメリカのグランドキャニオン
@@ -466,16 +463,12 @@ _有限_の領域と_無限_の円周を持つ形状を作成できるとは考�
 
 これらのオブジェクトはすべて完全にランダムに見える場合がありますが、フラクタルと同様に、オブジェクトの形成方法を決定する基本的なパターンがあります。数学は形状をよりよく理解するのに役立ち、フラクタルは医学、生物学、地質学、気象学などの分野での用途があります。 [続行](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption}コンピュータ生成のフラクタル地形
@@ -494,6 +487,7 @@ _有限_の領域と_無限_の円周を持つ形状を作成できるとは考�
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -518,22 +512,18 @@ _有限_の領域と_無限_の円周を持つ形状を作成できるとは考�
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -690,6 +680,7 @@ __セルオートマトン__ は、多くの個別のセルで構成されるグ
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 前の章で見たフラクタルはすべて、__反復__ のプロセスを使用して作成されました。特定のパターンから始めて、それを何度も繰り返します。
 
@@ -726,15 +717,15 @@ __セルオートマトン__ は、多くの個別のセルで構成されるグ
 
 開始値`x_0`に応じて、結果のシーケンスの動作が大きく異なることに注意してください。
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 `x_0 > 1`の場合、シーケンス[[は分岐します|converges]]：_{span.reveal(when="blank-0")}それは無限にまで成長し続けます。_
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 `x_0`が–1と1の間にある場合、シーケンス[[は|diverges]]に収束します。
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 `x_0 < -1`の場合、シーケンス[[は|converges]]を分岐します。
 
@@ -951,14 +942,9 @@ __セルオートマトン__ は、多くの個別のセルで構成されるグ
 * {.reveal(when="blank-0")} 上部の[大きな電球](target:bulb1) 内のシーケンスは、[[3]] ポイントで構成される軌道 _{span.reveal(when="blank-1")}に到達します。_
 * {.reveal(when="blank-2")} [この小さい電球](target:bulb2) のシーケンスは、軌道の長さが [[5]] です。
 
-
 :::
 
 {.reveal(when="blank-3")} すべての球根には異なるサイズの軌道があり、小さい球根は軌道のポイントがますます増えています。これらの軌道のサイズは、[カオス理論](/course/chaos) の重要な概念である __ロジスティックマップ__ と密接に関連しています。
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 
@@ -984,6 +970,4 @@ __セルオートマトン__ は、多くの個別のセルで構成されるグ
 > sectionStatus: dev
 
 {.todo}もうすぐ！
-
-
 

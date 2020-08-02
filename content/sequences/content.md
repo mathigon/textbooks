@@ -540,19 +540,19 @@ sequences__ look very similar: if the difference is positive, they steadily
 {.reveal(when="blank-0 blank-1")} Geometric sequences, on the other hand, can
 behave completely differently based on the values of `a` and *r*:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
 If _{span.var-action}`r > 1`_, the terms will [[quickly get bigger|quickly
 decrease|get closer to zero]]_{span.reveal(when="blank-2")}, up to infinity.
 Mathematicians say that the sequence [__diverges__](gloss:sequence-divergence)._
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
 If _{span.var-action}*r* is between –1 and 1_, the terms will always [[get
 closer to 0|decrease to negative infinity|get smaller]]_{span.reveal(when="blank-3")}.
 We say that the sequence [__converges__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
 If _{span.var-action}`r < -1`_, the terms will alternate between positive and
 negative, while their [[absolute value|inverse|difference]] gets bigger.
@@ -961,9 +961,9 @@ Gauss](bio:gauss) – at the age of 19!
 ---
 > id: triangle-investigate
 
-::: .box.problem-box
-    .box-title: h3 Problem Solving
-::: .box-body
+::: .box.f-blue
+
+#### Problem Solving
 
 What is the sum of the first 100 positive [integers](gloss:integer)? In other
 words, what is the value of
@@ -974,7 +974,6 @@ Rather than manually adding up everything, can you use the [triangle
 numbers](gloss:triangle-numbers) to help you? What about the sum of the first
 1000 positive integers?
 
-:::
 :::
 
 ---
@@ -1232,7 +1231,7 @@ Sequence__](gloss:fibonacci-numbers), named after the Italian mathematician
 
 ::: column.grow
 When Fibonacci was born in 1175, most people in Europe still used the [Roman
-numeral system](gloss:roman-numerals) for numbers (like IVX or MCMLIV).
+numeral system](gloss:roman-numerals) for numbers (like XIV or MCMLIV).
 Fibonacci’s father was a merchant, and together they travelled to Northern
 Africa as well as the Middle East. It was there that Fibonacci first learned the
 [Arabic numeral system](gloss:arabic-numerals).
@@ -1269,7 +1268,7 @@ spirals there are in each direction?
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1282,7 +1281,7 @@ counterclockwise spirals.
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1311,7 +1310,7 @@ nature likes the Fibonacci sequence, which you’ll learn more about later.
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1402,7 +1401,7 @@ is the ratio of its width and its height:
 
 Notice how, as we add more and more squares, the aspect ratio seems to get
 closer and closer to a specific number around 1.6. This number is called the
-[__golden ratio__](gloss:golden-ratio) and usually represented by the Greek
+[__golden ratio__](gloss:golden-ratio) and is usually represented by the Greek
 letter `φ` (“phi”). Its exact value is
 
 {.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
@@ -1544,7 +1543,7 @@ Nature also can’t solve equations to calculate the golden ratio – but over t
 course of millions of years, plants had plenty of time to try out different
 angles and discover the best one.
 
-Plants and animals always want grow in the most efficient way, and that is why
+Plants and animals always want to grow in the most efficient way, and that is why
 nature is full of regular, mathematical patterns.
 
 :::
@@ -1579,9 +1578,9 @@ _{span.n}${8×a+13×b}_, …
 There are many other puzzles, patterns and applications related to Fibonacci
 numbers. Here are a few examples, which you can try yourself:
 
-::: .box.problem-box
-    .box-title: h3 Problem solving
-::: .box-body
+::: .box.f-blue
+
+#### Problem solving
 
 __1. Fibonacci Divisibility__
 
@@ -1612,7 +1611,6 @@ choices:
 How many choices are there for staircase with 6, 7 or 8 steps? Can you detect
 a pattern? And how is this related to the Fibonacci numbers?
 
-:::
 :::
 
     figure
@@ -1735,17 +1733,17 @@ of a number (excluding the number itself):
 
 Let’s compare these numbers with their sum of factors:
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 For most numbers, the sum of its factors is [[less than|greater than|equal to]]
 itself. These numbers are called __deficient numbers__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 For a few numbers, the sum of its factors is greater than itself. These numbers
 are called __abundant numbers__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 Only one number in the list above has a sum of factors that is _equal_ to itself:
 [[6]]. This is called a [__perfect number__](gloss:perfect-numbers).
@@ -1932,9 +1930,9 @@ to behave almost randomly.
 In this quiz you can combine all your knowledge about sequences. There is just
 one goal: find the pattern and calculate the next two terms!
 
-::: .box.problem-box
-    .box-title: h3 Find the next number
-::: .box-body
+::: .box.f-blue
+
+#### Find the next number
 
 {.text-center.s-yellow.no-voice} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1964,7 +1962,6 @@ _{span.pattern.reveal(when="blank-10 blank-11")} Pattern: +1, +2, ÷2, +1, +2, �
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 
-:::
 :::
 
 
@@ -2127,7 +2124,7 @@ Since 3003 is a triangle number, it actually appears two more times in the
 _third_ diagonals of the triangle – that makes eight occurrences in total.
 
 It is unknown if there are any other numbers that appear eight times in the
-triangle, or if there numbers that appear more than eight times. The American
+triangle, or if there are numbers that appear more than eight times. The American
 mathematician [David Singmaster](bio:singmaster) hypothesised that there is a
 fixed limit on how often numbers can appear in Pascal’s triangle – but it hasn’t
 been proven yet.

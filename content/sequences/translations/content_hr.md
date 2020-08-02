@@ -1,11 +1,11 @@
-# Sekvence i obrasci
+# Nizovi i obrasci
 
 ## Uvod
 
 > section: introduction
 > id: intro
 
-Mnoge profesije koje koriste matematiku zainteresirane su za jedan specifičan aspekt - _pronalaženje obrazaca_ i mogu predvidjeti budućnost. Evo nekoliko primjera:
+Mnoge profesije u kojima se koristi matematika usmjerene su na jedan određeni dio - _pronalaženje obrazaca_ , te za mogućnost predviđanja budućnosti. Evo nekoliko primjera:
 
 ::: column(width=160 parent="padded-thin")
 
@@ -13,7 +13,7 @@ Mnoge profesije koje koriste matematiku zainteresirane su za jedan specifičan a
 
 ::: column(width=400)
 
-U posljednjem desetljeću, __policijske uprave__ širom svijeta počele su se više oslanjati na matematiku. Posebni algoritmi mogu koristiti podatke iz prošlih zločina da predvide kada i gdje bi se zločini mogli dogoditi u budućnosti. Primjerice, sustav _PredPol_ (ukratko za „prediktivno policiranje“), pomogao je u smanjenju stope kriminala u dijelovima Los Angelesa za 12%!
+U posljednjem desetljeću, __policijske uprave__ širom svijeta počele su se više oslanjati na matematiku. Posebni algoritmi mogu pomoću podataka iz prošlih zločina predvidjeti kada i gdje bi se zločini mogli dogoditi u budućnosti. Primjerice, sustav _PredPol_ (kraće za predictive policing“), pomogao je smanjiti stopu kriminala u dijelovima Los Angelesa za 12%!
 
 ::: column(width=160)
 
@@ -21,7 +21,7 @@ U posljednjem desetljeću, __policijske uprave__ širom svijeta počele su se vi
 
 ::: column(width=400)
 
-Ispada da __potresi__ slijede slične obrasce kao zločini. Baš kao što bi jedno zločin mogao pokrenuti odmazde, potres može izazvati i potrese. U matematici se to naziva „uzbudljivi procesi“, a postoje jednadžbe koje pomažu predvidjeti kada bi se sljedeći mogao dogoditi.
+Pokazalo se da __potresi__ slijede slične obrasce kao i zločini. Baš kao što bi jedan zločin mogao pokrenuti niz ostalih, tako i jedan potres može uzrokovati nove potrese (aftershock). U matematici se to naziva „procesi koji sami sebe stvaraju“, a postoje i jednadžbe koje pomažu predvidjeti kada bi se sljedeći mogao dogoditi.
 
 ::: column(width=160)
 
@@ -29,21 +29,20 @@ Ispada da __potresi__ slijede slične obrasce kao zločini. Baš kao što bi jed
 
 ::: column(width=400)
 
-Bankari također pregledavaju povijesne podatke o cijenama dionica, kamatama i tečajevima kako bi procjenili kako se __financijska tržišta__ mogu promijeniti u budućnosti. Biti u stanju predvidjeti hoće li vrijednost dionica porasti ili opati može biti vrlo unosno!
+Bankari također analiziraju prošle podatke o cijenama dionica, kamatama i tečajevima kako bi procjenili kako bi se __financijska tržišta__ mogla mijenjati u budućnosti. Biti u stanju predvidjeti hoće li vrijednost dionica porasti ili opasti može biti vrlo unosno!
 
 :::
 
 Profesionalni matematičari koriste vrlo složene algoritme kako bi pronašli i analizirali sve te obrasce, ali počet ćemo s nečim malo osnovnijim.
 
 ---
-
 > id: simple-patterns
 
-### Jednostavne sekvence
+### Jednostavni nizovi
 
-U matematici, [__slijed__](gloss:sequence) je lanac brojeva (ili drugih predmeta) koji obično slijede određeni obrazac. Pojedini elementi u nizu nazivaju se [__izrazi__](gloss:sequence-term).
+U matematici, [__niz__](gloss:sequence) je lanac brojeva (ili drugih predmeta) koji obično slijede određeni obrazac. Pojedini elementi u nizu nazivaju se [__elementi niza__](gloss:sequence-term).
 
-Evo nekoliko primjera nastavka. Možete li pronaći njihove obrasce i izračunati sljedeća dva pojma?
+Evo nekoliko primjera nizova. Možete li pronaći njihove obrasce i izračunati sljedeća dva elementa u nizu?
 
 {.text-center.s-orange.with-arrows} _{.n}3_, _{.n}6*{span.arrow}+3*_,
 _{.n}9*{span.arrow(hidden)}+3*_, _{.n}12*{span.arrow(hidden)}+3*_,
@@ -76,7 +75,7 @@ number by 2, to get the next one.”_
 ---
 > id: simple-patterns-1
 
-Točkice (…) na kraju jednostavno znače da slijed može trajati zauvijek. Kada govorimo o ovakvim nizovima u matematici, često svaki termin predstavljamo posebnom [varijablom](gloss:variable):
+Točkice (…) na kraju znače da je niz beskonačan. Kada govorimo o ovakvim nizovima u matematici, često svaki element niza predstavljamo posebnom [varijablom](gloss:variable):
 
     p.text-center.s-orange
       for i in [1, 2, 3, 4, 5, 6, 7]
@@ -87,15 +86,14 @@ Točkice (…) na kraju jednostavno znače da slijed može trajati zauvijek. Kad
         | ,&nbsp;
       | …
 
-Mali broj nakon _x_ naziva se __pretplatnikom__ i označava poziciju pojma u nizu. To znači da možemo _n_ prvi izraz u nizu predstaviti do [[`x_n`|`x_i`|`x_2`]].
+Mali broj nakon _x_ naziva se __indeks__ i označava mjesto elementa u nizu. To znači da možemo _n_ ti element niza zapisati kao [[`x_n`|`x_i`|`x_2`]].
 
 ---
-
 > id: triangles
 
-### Brojevi trokuta i kvadrata
+### Trokutasti i kvadratni brojevi
 
-Sekvence u matematici ne moraju uvijek biti brojevi. Evo niza koji se sastoji od geometrijskih oblika - trokuta sve veće veličine:
+Nizovi u matematici ne moraju uvijek biti brojevi. Evo niza koji se sastoji od geometrijskih oblika - trokuta sve većih veličina:
 
 ::: column(width=24 parent="padded-thin")
 
@@ -136,10 +134,9 @@ Sekvence u matematici ne moraju uvijek biti brojevi. Evo niza koji se sastoji od
 :::
 
 ---
-
 > id: triangle-1
 
-Na svakom koraku dodajemo još jedan redak prethodnom trokutu. Duljina ovih novih redaka također se svaki put povećava po jedan. Možete li vidjeti uzorak?
+Pri svakom koraku dodajemo još jedan redak prethodnom trokutu. Duljina ovih novih redaka također se svaki put povećava za jedan. Možete li prepoznati uzorak?
 
 {.text-center.s-orange.with-arrows} _{.n}1_, _{.n}3*{span.arrow}+2*_,
 _{.n}6*{span.arrow}+3*_, _{.n}10*{span.arrow}+4*_,
@@ -148,7 +145,6 @@ _{.n}[[28]]*{span.arrow.reveal(when="blank-0")}+7*_,
 _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 ---
-
 > id: recursive
 
 Ovaj uzorak možemo opisati i pomoću posebne [formule](gloss:formula):
@@ -160,21 +156,19 @@ Ovaj uzorak možemo opisati i pomoću posebne [formule](gloss:formula):
       | &nbsp;+&nbsp;
       em#t3 n
 
-Da bismo dobili _n_ -ti broj trokuta, uzmemo [[prethodni|first|next]] broj trokuta i dodamo _n_. Na primjer, ako _n_ = ${n}{n|5|2,20,1}, formula postaje <msub><mi>x</mi><mn>${n}</mn> </msub> = <msub> <mi > x </mi> <mn> ${n-1} </mn> </msub> + ${n}.
+Da bismo dobili broj za _n_ -ti trokut, uzmemo broj za [[prethodni|first|next]] trokut i dodamo _n_. Na primjer, ako je _n_ = ${n}{n|5|2,20,1}, formula postaje <msub><mi>x</mi><mn>${n}</mn> </msub> = <msub> <mi > x </mi> <mn> ${n-1} </mn> </msub> + ${n}.
 
 ---
-
 > id: recursive-1
 
-Formula koja izražava `x_n` kao funkciju prethodnih izraza u nizu naziva se [__rekurzivna formula__](gloss:sequence-recursive). Sve dok znate [[prvi izraz|last term|second term]] u nizu, možete izračunati sve sljedeće.
+Formula koja određuje `x_n` kao funkciju prethodnih izraza u nizu naziva se [__rekurzivna formula__](gloss:sequence-recursive). Sve dok znate [[prvi element|last term|second term]] niza, možete izračunati sve sljedeće elemente.
 
 ---
-
 > id: squares
 
     hr
 
-Drugi niz koji se sastoji od geometrijskih oblika su __kvadratni brojevi__. Svaki pojam formiran je od sve većih kvadrata:
+Još jedan primjer niza koji se sastoji od geometrijskih oblika su __kvadratni brojevi__. Svaki element niza formiran je od sve većih kvadrata:
 
 ::: column(width=24 parent="padded-thin squares")
 
@@ -215,56 +209,51 @@ Drugi niz koji se sastoji od geometrijskih oblika su __kvadratni brojevi__. Svak
 :::
 
 ---
-
 > id: square-1
 
-Za brojeve trokuta pronašli smo rekurzivnu formulu koja vam govori _sljedeći_ izraz niza kao funkciju njegovih _prethodnih_ izraza. Za kvadratne brojeve možemo još bolje: formula koja vam izravno govori _n_, a da prethodno niste morali izračunati sve prethodne:
+Za trokutne brojeve pronašli smo rekurzivnu formulu koja svaki _sljedeći_ element niza opisuje kao funkciju njegovih _prethodnih_ elemenata. Za kvadratne brojeve možemo još bolje: formula koja vam izravno određuje _n_, a da prethodno ne moramo izračunati sve prethodne:
 
 {.text-center.s-purple} _{.n} `x_n`_ = _{x-equation(solution="n^2")}_
 
 ---
-
 > id: explicit
 
-To se zove [__eksplicitna formula__](gloss:sequence-explicit). Možemo ga koristiti, na primjer, za izračunavanje da je 13. kvadratni kvadrat [[169]], a da prethodno nismo pronašli prethodnih 12 kvadratnih brojeva.
+To je [__eksplicitna formula__](gloss:sequence-explicit). Možemo je koristiti, na primjer, za izračunati da je 13. kvadratni broj [[169]], a da prethodno nismo pronašli prethodnih 12 kvadratnih brojeva.
 
 ---
-
 > id: definitions
 
     hr
 
-Sažmi sve definicije koje smo vidjeli do sada:
+Rezimirajmo sve definicije koje smo vidjeli do sada:
 
 ::: .theorem
 
-[__slijed__](gloss:sequence) je popis brojeva, geometrijskih oblika ili drugih predmeta koji slijede određeni obrazac. Pojedine stavke u nizu nazivaju se [__izrazi__](gloss:sequence-term) i predstavljene su varijablama poput `x_n`.
+[__niz__](gloss:sequence) je popis brojeva, geometrijskih oblika ili drugih objekata koji slijede određeni obrazac. Pojedine stavke u nizu nazivaju se [__elementi niza__](gloss:sequence-term) i predstavljene su varijablama poput `x_n`.
 
-[__rekurzivna formula__](gloss:sequence-recursive) za niz govori vam o vrijednosti _n_ trećeg termina kao funkciji [[njegovih prethodnih izraza|the first term]]. Morate navesti i prvi termin (e).
+[__rekurzivna formula__](gloss:sequence-recursive) za niz određuje vrijednost _n_ tog elementa niza kao funkciju [[prethodnih elemenata niza|the first term]]. Potrebno je navesti početni element niza (ili više njih).
 
-[__Izričita formula__](gloss:sequence-explicit) za niz govori vam o vrijednosti _n_ trećeg termina u funkciji [[samo _n_|the previous term]], bez pozivanja na druge izraze u nizu.
+[__Eksplicitna formula__](gloss:sequence-explicit) za niz određuje vrijednost _n_ tog elementa niza kao funkciju [[samo _n_|the previous term]], bez pozivanja na druge elemente niza.
 
 :::
 
 ---
-
 > id: action-sequence
 
-### Fotografska sekvenca
+### Fotografiranje niza radnji
 
-U sljedećim ćete odjeljcima saznati više različitih matematičkih nizova, iznenađujućih obrazaca i neočekivanih aplikacija.
+U sljedećim ćete poglavljima upoznati više različitih matematičkih nizova, iznenađujućih obrazaca i neočekivanih primjena.
 
-Prvo, ipak, pogledajmo nešto sasvim drugo: __fotografiranje nizova radnji__. Fotograf brzo snima niz snimaka, a zatim ih spaja u jednu sliku:
+Prvo, ipak, pogledajmo nešto sasvim drugo: __fotografiranje niza radnji__. Fotograf brzo snima niz snimaka, a zatim ih spaja u jednu sliku:
 
     figure: x-img(src="images/action-1.jpg" width=640 height=320 alt="Skiing Jump")
 
-Možete li vidjeti kako skijaš formira niz? Uzorak nije zbrajanje ili množenje, već geometrijska [transformacija](gloss:rigid-transformation). Između uzastopnih koraka, skijaš je preveden i [[rotiran|reflected|dilated]].
+Možete li vidjeti kako skijaš formira niz? Uzorak nije zbrajanje ili množenje, već geometrijska [transformacija](gloss:rigid-transformation). Između uzastopnih koraka, skijaš je translatiran i [[rotiran|reflected|dilated]].
 
 ---
-
 > id: action-sequence-1
 
-Evo još nekoliko primjera fotografija iz sekvenci akcija za vaše uživanje:
+Evo još nekoliko primjera fotografiranja niza radnji:
 
 ::: column(width=320 parent="padded-thin")
 
@@ -294,16 +283,16 @@ Evo još nekoliko primjera fotografija iz sekvenci akcija za vaše uživanje:
 
 ---
 
-## Aritmetičke i geometrijske sekvence
+## Aritmetički i geometrijski niz
 
 > section: arithmetic-geometric
 > id: halley
 
 ::: column.grow
 
-Godine 1682. astronom [Edmond Halley](bio:halley) opazio je neobičnu pojavu: blistavi bijeli predmet s dugačkim repom koji se kretao noćnim nebom. Bio je to __komet__, mala ledena stijena koja leti kroz svemir, ostavljajući iza sebe trag prašine i leda.
+Godine 1682. astronom [Edmond Halley](bio:halley) opazio je neobičnu pojavu: blistavi bijeli objekt s dugačkim repom koji se kretao noćnim nebom. Bio je to __komet__, mala ledena stijena koja leti kroz svemir, ostavljajući iza sebe trag prašine i leda.
 
-Halley se sjetio da su i drugi astronomi primijetili slične komete mnogo ranije: jedan 1530., a drugi 1606. Primijetite da je jaz između dva uzastopna opažanja isti u oba slučaja: [[76]] godina.
+Halley se sjetio da su i drugi astronomi primijetili slične komete mnogo ranije: jedan 1530., a drugi 1606. Primijetite da je vremenski razmak između dva uzastopna opažanja u oba slučaja jednak: [[76]] godina.
 
 ::: column(width=320)
 
@@ -315,7 +304,7 @@ Halley se sjetio da su i drugi astronomi primijetili slične komete mnogo ranije
 ---
 > id: halley-1
 
-Halley je zaključio da su sva tri promatranja u stvari isti komet - koji se danas naziva _Halleyev komet_. Orbitira oko sunca i prolazi kroz Zemlju otprilike svakih 76 godina. Također je predvidio kada će kometa biti vidljiva sljedeća:
+Halley je zaključio da su sva tri opažanja zapravo isti komet - koji se danas naziva _Halleyev komet_. Orbitira oko sunca i prolazi uz Zemlju otprilike svakih 76 godina. Također je predvidio kada će komet biti vidljiv sljedeća put:
 
 {.text-center.s-orange.s-large.with-arrows} _{span.n}1530_,
 _{span.n}1606*{span.arrow}+76*_, _{.n}1682*{span.arrow}+76*_,
@@ -323,10 +312,9 @@ _{.n}1758*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
 _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 
 ---
-
 > id: halley-2
 
-Zapravo, vremenski interval nije uvijek _tačno_ 76 godina: može varirati za jednu ili dvije godine, jer orbiti kometa prekidaju drugi planeti. Danas znamo da su Halleyev komet promatrali stari astronomi već 240. godine prije Krista!
+Zapravo, vremenski interval nije uvijek _točno_ 76 godina: može varirati za jednu ili dvije godine, jer na orbitu kometa utječu drugi planeti. Danas znamo da su Halleyev komet promatrali stari astronomi već 240. godine prije Krista!
 
     figure
       .row
@@ -337,10 +325,9 @@ Zapravo, vremenski interval nije uvijek _tačno_ 76 godina: može varirati za je
       p.caption Depections of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
 
 ---
-
 > id: ball
 
-Drugačija skupina znanstvenika istražuje ponašanje odskakavajuće teniske lopte. Bacili su loptu s visine od 10 metara i tijekom vremena izmjerili njen položaj. Svakim odbijanjem, lopta gubi dio svoje izvorne visine:
+Druga skupina znanstvenika istražila je ponašanje teniske loptice koja odskakuje. Bacili su loptu s visine od 10 metara i tijekom vremena izmjerili njen položaj. Svakim odbijanjem, lopta gubi dio svoje izvorne visine:
 
     x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7,1" label-suffix="s,m" axis-names="time,height")
       .tennis-ball
@@ -348,7 +335,6 @@ Drugačija skupina znanstvenika istražuje ponašanje odskakavajuće teniske lop
     x-slider(steps=400 speed=0.5)
 
 ---
-
 > id: ball-1
 > goals: reveals
 
@@ -363,18 +349,16 @@ _{span.n.reveal}2.621*{span.arrow}×0.8*_*{span.reveal},*
 _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ---
-
 > id: arithmetic-geometric
 
 ### Definicije
 
-Ako usporedite oba ova problema, primijetite da postoje mnoge sličnosti: slijed Halleyevog kometa ima istu [[razliku|ratio|product]] između uzastopnih izraza, dok redoslijed odskoka za tenisku lopticu ima isti odnos [[<<<<|difference|product]] između uzastopnih izraza.
+Ako uspoređujemo oba ova problema, primijećujemo da postoje mnoge sličnosti: niz Halleyevog kometa ima istu [[razliku|ratio|product]] između uzastopnih elemenata niza, dok redoslijed odskoka za tenisku lopticu ima isti [[kvocijent|difference|product]] između uzastopnih elemenata niza.
 
 ---
-
 > id: arithmetic-geometric-1
 
-Sekvence s tim svojstvima imaju posebno ime:
+Nizovi s tim svojstvima imaju posebno ime:
 
 ::: column.grow
 
@@ -382,9 +366,9 @@ Sekvence s tim svojstvima imaju posebno ime:
 
     p.text-center: include svg/comet.svg
 
-[__Aritmetički niz__](gloss:arithmetic-sequence) ima konstantnu __{.m-red} razliku _d___ između uzastopnih izraza.
+[__Aritmetički niz__](gloss:arithmetic-sequence) ima konstantnu __{.m-red} razliku _d___ između uzastopnih elemenata niza.
 
-Isti se broj dodaje ili oduzima svakom terminu, da bi se proizveo sljedeći.
+Isti se broj dodaje ili oduzima svakom elementu, da bi se dobio sljedeći.
 
 :::
 
@@ -394,19 +378,18 @@ Isti se broj dodaje ili oduzima svakom terminu, da bi se proizveo sljedeći.
 
     p.text-center: include svg/ball.svg
 
-[__geometrijski niz__](gloss:geometric-sequence) ima konstantan __{.m-green} omjer _r___ između uzastopnih izraza.
+[__geometrijski niz__](gloss:geometric-sequence) ima konstantan __{.m-green} kvocijent _r___ dvaju uzastopnih elemenata niza.
 
-Svaki se pojam množi ili dijeli s istim brojem, da se dobije sljedeći.
+Svaki se element množi ili dijeli s istim brojem, da bi se dobio sljedeći.
 
 :::
 
 :::
 
 ---
-
 > id: arithmetic-geometric-select
 
-Evo nekoliko različitih nizova. Možete li odrediti koji su aritmetički, geometrijski ili ne, i koje su vrijednosti _{.b.m-red} d_ i _{.b.m-green} r_?
+Evo nekoliko različitih nizova. Možete li odrediti koji su aritmetički, geometrijski ili ni jedan ni drugi, i koje su vrijednosti _{.b.m-red} d_ i _{.b.m-green} r_?
 
 ::: column(width=330 parent="ag-select")
 
@@ -414,7 +397,7 @@ Evo nekoliko različitih nizova. Možete li odrediti koji su aritmetički, geome
 
 ::: column(width=320)
 
-je [[geometrijski|arithmetic|neither]] _{span.reveal(when="blank-0")}, s omjerom [[2]].
+je [[geometrijski|arithmetic|neither]] _{span.reveal(when="blank-0")}, s kvocijentom [[2]].
 
 ::: column(width=330)
 
@@ -422,7 +405,7 @@ je [[geometrijski|arithmetic|neither]] _{span.reveal(when="blank-0")}, s omjerom
 
 ::: column(width=320)
 
-je [[aritmetika|geometric|neither]] _{span.reveal(when="blank-2")}, s razlikom [[3]]_
+je [[aritmetički|geometric|neither]] _{span.reveal(when="blank-2")}, s razlikom [[3]]_
 
 ::: column(width=330)
 
@@ -430,7 +413,7 @@ je [[aritmetika|geometric|neither]] _{span.reveal(when="blank-2")}, s razlikom [
 
 ::: column(width=320)
 
-je [[aritmetika|geometric|neither]] _{span.reveal(when="blank-4")}, s razlikom [[-4]]._
+je [[aritmetički|geometric|neither]] _{span.reveal(when="blank-4")}, s razlikom [[-4]]._
 
 ::: column(width=330)
 
@@ -438,7 +421,7 @@ je [[aritmetika|geometric|neither]] _{span.reveal(when="blank-4")}, s razlikom [
 
 ::: column(width=320)
 
-nije [[niti|arithmetic|geometric]] _{span.reveal(when="blank-6")}._
+nije [[ni jedan ni drugi|arithmetic|geometric]] _{span.reveal(when="blank-6")}._
 
 ::: column(width=330)
 
@@ -451,14 +434,13 @@ je [[geometrijski|arithmetic|neither]] _{span.reveal(when="blank-7")}, s omjerom
 :::
 
 ---
-
 > id: arithmetic-geometric-graph
 
-Da bismo definirali aritmetički ili geometrijski niz, moramo znati ne samo zajedničku razliku ili omjer, već i početnu vrijednost (zvanu `a`). Ovdje možete generirati vlastite sekvence i crtati njihove vrijednosti na grafikonu, mijenjajući vrijednosti `a`, _d_ i _r_. Možete li pronaći bilo koji uzorak?
+Da bismo definirali aritmetički ili geometrijski niz, moramo znati ne samo zajedničku razliku ili kvocijent, već i početnu vrijednost (zvanu `a`). Ovdje možete generirati vlastite nizove i crtati njihove vrijednosti na grafikonu, mijenjajući vrijednosti `a`, _d_ i _r_. Možete li pronaći neki uzorak?
 
 ::: column.ag-chart(width=320)
 
-#### {.m-red} Aritmetička sekvenca
+#### {.m-red} Aritmetički niz
 
 {.text-center} `a` = ${a}{a|2|-10,10,0.2}, _d_ = ${d}{d|2|-10,10,0.2}
 
@@ -474,7 +456,7 @@ _{span.n}${arithmetic(a,d,5)}_, …
 
 ::: column.ag-chart.s-green(width=320)
 
-#### {.m-green} Geometrijska sekvenca
+#### {.m-green} Geometrijski niz
 
 {.text-center} `a` = ${b}{b|2|-10,10,0.2}, _r_ = ${r}{r|2|-10,10,0.2}
 
@@ -489,33 +471,32 @@ _{span.n}${geometric(b,r,5)}_, …
 
 :::
 
-{.reveal(when="var-0 var-1 var-2 var-3")} Primjetite kako svi __{.m-red} aritmetički nizi__ izgledaju vrlo slično: ako je razlika pozitivna, oni se uporno [[povećavaju|decrease]], a ako je razlika negativna, oni se stalno smanjuju [[<<<<|increase]].
+{.reveal(when="var-0 var-1 var-2 var-3")} Primjetite kako svi __{.m-red} aritmetički nizovi__ izgledaju vrlo slično: ako je razlika pozitivna, oni konstantno [[rastu|decrease]], a ako je razlika negativna, oni konstantno [[padaju|increase]].
 
-{.reveal(when="blank-0 blank-1")} Geometrijski nizovi, s druge strane, mogu se ponašati potpuno drugačije na osnovu vrijednosti `a` i _r_:
+{.reveal(when="blank-0 blank-1")} Geometrijski nizovi, s druge strane, mogu se ponašati potpuno drugačije ovisno o vrijednosti `a` i _r_:
 
 ::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-Ako se _{span.var-action} `r > 1`_, uvjeti [[brzo povećavaju|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, sve do beskonačnosti. Matematičari kažu da se redoslijed [__razlikuje__](gloss:sequence-divergence)_
+Ako je _{span.var-action} `r > 1`_, elementi se [[brzo povećavaju|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, sve do beskonačnosti. Matematičari kažu da niz [__divergira__](gloss:sequence-divergence)_
 
 ::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
 
-Ako je _{span.var-action} _r_ između -1 i 1_, uvjeti će se uvijek [[približiti 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Kažemo da niz [__konvergira__](gloss:sequence-convergence)_
+Ako je _{span.var-action} _r_ između -1 i 1_, elementi će se uvijek [[približavati 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Kažemo da niz [__konvergira__](gloss:sequence-convergence)_
 
 ::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
 
-Ako se _{span.var-action} `r < -1`_ izrazi izmjenjuju između pozitivnih i negativnih, dok njihova [[apsolutna vrijednost|inverse|difference]] postaje veća.
+Ako je _{span.var-action} `r < -1`_ elementi niza izmjenjuju se između pozitivnih i negativnih, dok njihova [[apsolutna vrijednost|inverse|difference]] postaje veća.
 
 :::
 
-{.reveal(when="blank-4 blank-5")} Saznajte više o konvergenciji i divergenciji u [posljednjem odjeljku](/course/sequences/convergence) ovog predmeta.
+{.reveal(when="blank-4 blank-5")} Saznajte više o konvergenciji i divergenciji u [posljednjem odjeljku](/course/sequences/convergence) ove teme.
 
 ---
-
 > id: arithmetic-geometric-recursive
 
 ### Rekurzivne i eksplicitne formule
 
-U prethodnom smo odjeljku naučili da [__rekurzivna formula__](gloss:sequence-recursive) govori o vrijednosti svakog pojma kao funkciji prethodnih izraza. Ovdje su rekurzivne formule za aritmetičke i geometrijske sekvence:
+U prethodnom smo poglavlju naučili da se [__rekurzivnom formulom__](gloss:sequence-recursive) određuje vrijednost svakog elementa niza kao funkcija prethodnih elemenata. Ovo su rekurzivne formule za aritmetički i geometrijski niz:
 
 ::: column.grow
 
@@ -528,14 +509,13 @@ U prethodnom smo odjeljku naučili da [__rekurzivna formula__](gloss:sequence-re
 :::
 
 ---
-
 > id: arithmetic-geometric-explicit
 
-Jedan problem rekurzivnih formula je da, na primjer, da bismo pronašli 100. pojam, prvo moramo izračunati prethodnih 99 pojmova - a to bi moglo potrajati dugo. Umjesto toga, možemo pokušati pronaći [__izričitu formulu__](gloss:sequence-explicit) koja nam izravno govori o vrijednosti _n_.
+Jedan problem s rekurzivnom formulom je da, na primjer, da bismo pronašli 100. element, prvo moramo izračunati prethodnih 99 elemenata - a to bi moglo potrajati dugo. Umjesto toga, možemo pokušati pronaći [__eksplicitnu formulu__](gloss:sequence-explicit) kojom izravno određujemo vrijednost _n_ tog elementa.
 
 ::: column.grow
 
-Za __{.m-red} aritmetičke sekvence__, moramo dodati _d_ na svakom koraku:
+Za __{.m-red} aritmetičke nizove__, moramo dodati _d_ pri svakom koraku:
 
 {.ag-equation} `x_1 =` `a`
 
@@ -553,7 +533,7 @@ Za __{.m-red} aritmetičke sekvence__, moramo dodati _d_ na svakom koraku:
 
 ::: column.grow
 
-Za __{.m-green} geometrijske sekvence__, moramo pomnožiti _r_ na svakom koraku:
+Za __{.m-green} geometrijske nizove__, moramo pomnožiti s _r_ pri svakom koraku:
 
 {.ag-equation} `x_1 = a`
 
@@ -565,14 +545,13 @@ Za __{.m-green} geometrijske sekvence__, moramo pomnožiti _r_ na svakom koraku:
 
 {.ag-equation.reveal(when="eqn-2")} `x_5 =` _{x-equation(solution="a×r×r×r×r")}_
 
-{.reveal(when="eqn-3")} Na _n_ ovom terminu množimo [[`n-1`|`n`|`n+1`]] kopije _r_, tako da je opća formula
+{.reveal(when="eqn-3")} Za _n_ ti element množimo [[`n-1`|`n`|`n+1`]] puta _r_, tako da je opća formula
 
 {.ag-equation.reveal(when="blank-1")} `x_n = a × r^(n-1)`.
 
 :::
 
 ---
-
 > id: arithmetic-geometric-explicit-1
 
 Ovdje je sažetak svih definicija i formula koje ste dosad vidjeli:
@@ -581,11 +560,11 @@ Ovdje je sažetak svih definicija i formula koje ste dosad vidjeli:
 
 ::: .theorem.s-red
 
-__{.m-red} Aritmetički niz__ ima prvi izraz `a` i zajedničku razliku `d` između uzastopnih izraza.
+__{.m-red} Aritmetički niz__ ima prvi element `a` i istu razliku `d` između uzastopnih elemenata niza.
 
 {.text-center} __Rekurzivna formula__: `x_n = x_(n-1) + d`
 
-{.text-center} __Izričita formula__: `x_n = a + d × (n-1)`
+{.text-center} __Eksplicitna formula__: `x_n = a + d × (n-1)`
 
 :::
 
@@ -593,11 +572,11 @@ __{.m-red} Aritmetički niz__ ima prvi izraz `a` i zajedničku razliku `d` izme�
 
 ::: .theorem.s-green
 
-__{.m-green} geometrijski niz__ ima prvi izraz `a` i zajednički omjer `r` između uzastopnih izraza.
+__{.m-green} geometrijski niz__ ima prvi element `a` i isti kvocijent `r` između uzastopnih elemenata niza.
 
 {.text-center} __Rekurzivna formula__: `x_n = x_(n-1) × r`
 
-{.text-center} __Izričita formula__: `x_n = a × r^(n-1)`
+{.text-center} __Eksplicitna formula__: `x_n = a × r^(n-1)`
 
 :::
 
@@ -606,27 +585,25 @@ __{.m-green} geometrijski niz__ ima prvi izraz `a` i zajednički omjer `r` izme�
 Pogledajmo nekoliko primjera gdje sve to možemo upotrijebiti!
 
 ---
-
 > id: pay-it-forward
 > goals: video
 
-### Plati naprijed
+### Šalji dalje
 
-Evo kratkog isječka iz filma _Plati naprijed_, gdje 12-godišnji Trevor objašnjava svoju ideju da svijet učini boljim mjestom:
+Evo kratkog isječka iz filma _Šalji dalje_, gdje 12-godišnji Trevor objašnjava svoju ideju kako učiniti svijet boljim mjestom:
 
     figure
       x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
-
 > id: pay-it-forward-1
 
-Suština Trevorove ideje je da, ako svi "plaćaju naprijed", jedna osoba može imati ogroman utjecaj na svijet:
+Suština Trevorove ideje je da, ako svi "šalju dalje", jedna osoba može imati ogroman utjecaj na svijet:
 
     figure: img(src="images/pay-it-forward.png" width=700 height=220)
 
-Primijetite kako broj ljudi na svakom koraku tvori [[geometrijski niz|arithmetic sequence|triangle number]], _{span.reveal(when="blank-0")} sa zajedničkim omjerom [[3]]:_
+Primijetite kako broj ljudi na svakom koraku čini [[geometrijski niz|arithmetic sequence|triangle number]], _{span.reveal(when="blank-0")} sa stalnim kvocijentom [[3]]:_
 
 {.text-center.s-orange.with-arrows.reveal(when="blank-1")} _{span.n}1_,
 _{span.n}3*{span.arrow}×3*_, _{span.n}9*{span.arrow}×3*_,
@@ -634,26 +611,23 @@ _{span.n}[[27]]*{span.arrow}×3*_, _{span.n}[[81]]*{span.arrow}×3*_,
 _{span.n}[[243]]*{span.arrow}×3*_, …
 
 ---
-
 > id: pay-it-forward-2
 
-Pomoću [eksplicitne formule](gloss:sequence-explicit) za geometrijske nizove, možemo utvrditi koliko je novih ljudi pogođeno u bilo kojem koraku:
+Pomoću [eksplicitne formule](gloss:sequence-explicit) za geometrijski niz, možemo utvrditi koliko je novih ljudi zahvaćeno u bilo kojem koraku:
 
 {.text-center} `x_n` = _{x-equation(solution="3^(n-1)")}_
 
 ---
-
 > id: pay-it-forward-3
 
-Broj ljudi se nevjerojatno brzo povećava. U 10. koraku postigli biste 19.683 nove, a nakon 22 koraka postigli biste više ljudi nego što su trenutno živi na Zemlji.
+Broj ljudi se nevjerojatno brzo povećava. U 10. koraku zahvatili biste 19.683 novih, a nakon 22 koraka zahvatili biste više ljudi nego što trenutno živi na Zemlji.
 
-Ovaj slijed brojeva ima posebno ime: __moći 3__. Kao što vidite, svaki je izraz zapravo samo drugačija snaga [<<<<](gloss:powers) od 3:
+Ovaj niz brojeva ima posebno ime: __potencija od 3__. Kao što vidite, svaki je element neka [potencija](gloss:powers) od 3:
 
 {.text-center.s-orange} _{span.n}`3^0`_, _{span.n}`3^1`_, _{span.n}`3^2`_,
 _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 ---
-
 > id: millionaire
 
 ### Tko želi biti milijunaš?
@@ -661,31 +635,29 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 {.todo} Uskoro!
 
 ---
-
 > id: chessboard
 
-### Problem sa šahovnicom
+### Problem sa šahovskom pločom
 
 {.todo} Uskoro!
 
 ---
 
-## Figuriraj brojeve
+## Figurirativni brojevi
 
 > section: figurate
 > id: figurate
 
-Naziv [geometrijskih nizova](gloss:geometric-sequence) prilično je zbunjujući jer oni nemaju ništa s geometrijom. U stvari, ime je razvijeno prije stotine godina, kada su matematičari razmišljali o _množenju_ i _kvadratnih korijena_ na mnogo geometrijskiji način.
+Naziv [geometrijski niz](gloss:geometric-sequence) prilično je zbunjujuć jer ovi nizovi nemaju ništa s geometrijom. U stvari, ime je nastalo prije više stotina godina, kada su matematičari razmišljali o _množenju_ i _korjenovanju_ na mnogo geometrijskiji način.
 
-Međutim, postoje mnogi drugi nizovi koji se _temelje na određenim geometrijskim oblicima - neke od njih ste već vidjeli u uvodu [<<<<](/course/sequences/introduction). Ove sekvence često nazivamo [__figurate brojevima__](gloss:figurate-numbers), a u ovom ćemo dijelu detaljnije pogledati neke od njih.
+Međutim, postoje mnogi drugi nizovi koji se _temelje na određenim geometrijskim oblicima - neke od njih ste već vidjeli u [uvodu](/course/sequences/introduction). Ove nizove često nazivamo [__figurativnim brojevima__](gloss:figurate-numbers), a u ovom ćemo dijelu detaljnije pogledati neke od njih.
 
 ---
-
 > id: triangle-numbers
 
-### Brojevi trokuta
+### Trokutni brojevi
 
-Brojevi trokuta __<<<<__ nastaju stvaranjem trokuta progresivno većih veličina:
+Trokutni __brojevi__ generiraju se stvaranjem trokuta čija veličina progresivno raste:
 
 ::: column(width=24 parent="padded-thin")
 
@@ -725,13 +697,12 @@ Brojevi trokuta __<<<<__ nastaju stvaranjem trokuta progresivno većih veličina
 
 :::
 
-Već ste vidjeli rekurzivnu formulu za brojeve trokuta: `x_n =` [[`x_(n-1) + n`|`n^2 - 1`|`2 × x_(n-1) - 1`]].
+Već ste vidjeli rekurzivnu formulu za trokutne brojeve: `x_n =` [[`x_(n-1) + n`|`n^2 - 1`|`2 × x_(n-1) - 1`]].
 
 ---
-
 > id: billiard-pool
 
-Nije slučajno da uvijek postoji 10 igara prilikom kuglanja ili 15 lopti pri igranju biljara: oboje su to brojevi trokuta!
+Nije slučajno da uvijek imamo 10 čunjeva u kuglanju ili 15 loptica pri igranju biljara: i jedno i drugo su trokutni brojevi!
 
 ::: column(width=320)
 
@@ -744,18 +715,16 @@ Nije slučajno da uvijek postoji 10 igara prilikom kuglanja ili 15 lopti pri igr
 :::
 
 ---
-
 > id: triangle-proof
 
-Nažalost, rekurzivna formula nije od velike pomoći ako želimo pronaći stoti ili 5000. trokutni broj, a da prethodno nismo izračunali sve prethodne. No, kao što smo to radili s aritmetičkim i geometrijskim nizovima, možemo pokušati pronaći eksplicitnu formulu za brojeve trokuta.
+Nažalost, rekurzivna formula nije od velike pomoći ako želimo pronaći stoti ili 5000. trokutni broj, a da prethodno nismo izračunali sve prethodne. No, kao što smo to radili s aritmetičkim i geometrijskim nizovima, možemo pokušati pronaći eksplicitnu formulu za trokutne brojeve.
 
-{.todo} Uskoro: animirani dokaz za formulu broja trokuta
+{.todo} Uskoro: animirani dokaz za formulu trokutnih brojeva
 
 ---
-
 > id: triangle-sums
 
-Čini se da se brojevi trokuta pojavljuju svugdje u matematici i vidjet ćete ih ponovo tijekom ovog tečaja. Jedna posebno zanimljiva činjenica je da se _bilo koji_ cijeli broj može zapisati kao zbroj od najviše tri broja trokuta:
+Čini se da se trokutni brojevi pojavljuju svugdje u matematici te ćete ih vidjeti ponovo tijekom ovog poglavlja. Jedna posebno zanimljiva činjenica je da se _bilo koji_ cijeli broj može zapisati kao zbroj najviše tri trokutna broja:
 
 ::: column(width=140 parent="triangle-sum")
 
@@ -796,35 +765,29 @@ Nažalost, rekurzivna formula nije od velike pomoći ako želimo pronaći stoti 
 
 :::
 
-{.reveal(when="slide")} Činjenica da ovo djeluje za _svih_ čitavih brojeva prvi je put dokazao 1796. godine njemački matematičar [Carl Friedrich Gauss](bio:gauss) - u dobi od 19 godina!
+{.reveal(when="slide")} Činjenicu da ovo vrijedi za _svaki_ cijeli broj prvi je put dokazao 1796. godine njemački matematičar [Carl Friedrich Gauss](bio:gauss) - u dobi od 19 godina!
 
 ---
-
 > id: triangle-investigate
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem Solving
+#### Problem Solving
 
-::: .box-body
-
-Koliki je zbroj prvih 100 pozitivnih [celih brojeva](gloss:integer)? Drugim riječima, u čemu je vrijednost
+Koliki je zbroj prvih 100 pozitivnih [cijelih brojeva](gloss:integer)? Drugim riječima, koliko je
 
 {.text-center} `1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100`?
 
-Umjesto da ručno dodajete sve, možete li vam pomoći [brojevi trokuta](gloss:triangle-numbers)? Što je sa zbrojem prvih 1000 pozitivnih brojeva?
-
-:::
+Umjesto da ručno zbrajamo sve, mogu li nam pomoći [trokutni brojevi](gloss:triangle-numbers)? Što je sa zbrojem prvih 1000 pozitivnih brojeva?
 
 :::
 
 ---
-
 > id: square-numbers
 
-### Kvadrati i poligonalni brojevi
+### Kvadratni i poligonalni brojevi
 
-Drugi niz koji se zasniva na geometrijskim oblicima su __kvadratni brojevi__:
+Još jedan od nizova koji se zasnivaju na geometrijskim oblicima su __kvadratni brojevi__:
 
 {.text-center.s-purple.with-arrows} _{.n}1_,
 _{.n}4*{span.arrow.reveal(when="blank-4")}+3*_,
@@ -835,17 +798,16 @@ _{.n}[[36]]*{span.arrow.reveal(when="blank-4")}+11*_,
 _{.n}[[49]]*{span.arrow.reveal(when="blank-4")}+13*_,
 _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 
-{.reveal(when="blank-0 blank-1 blank-2 blank-3")} Brojeve možete izračunati ovim redoslijedom tako što ćete zarezati svaki cijeli broj (`1^2`, `2^2`, `3^2`, ...), ali ispada da postoji drugi obrazac: razlike između uzastopnih kvadratnih brojeva su [[Neparni brojevi|triangle numbers|integers]] sve većim redoslijedom!
+{.reveal(when="blank-0 blank-1 blank-2 blank-3")} Brojeve u ovom nizu možete izračunati tako što ćete svaki cijeli broj kvadrirati (`1^2`, `2^2`, `3^2`, ...), ali postoji i drugi način: razlike između uzastopnih kvadratnih brojeva su [[Neparni brojevi|triangle numbers|integers]] u rastućem poretku!
 
 ---
-
 > id: square-numbers-1
 
 ::: column.grow
 
-Razlog za ovaj obrazac postaje očit ako stvarno nacrtamo kvadrat. Svaki korak dodaje jedan red i jedan stupac. Veličina ovih "uglova" počinje od 1 i povećava se za 2 u svakom koraku - time se formira slijed neparnih brojeva.
+Razlog za ovaj obrazac postaje očit ako nacrtamo kvadrat. U svakom sljedećem koraku dodajemo jedan red i jedan stupac. Veličina ovih "kutova" počinje od 1 i povećava se za 2 u svakom koraku - time se formira niz neparnih brojeva.
 
-To također znači da je _n_ četvrti broj samo zbroj prvih _n_ neparnih brojeva! Na primjer, zbroj prvih 6 neparnih brojeva je
+To također znači da je _n_ ti kvadratni broj zapravo zbroj prvih _n_ neparnih brojeva! Na primjer, zbroj prvih 6 neparnih brojeva je
 
 {.text-center} `1 + 3 + 5 + 7 + 9 + 11 =` [[36]].
 
@@ -857,13 +819,11 @@ To također znači da je _n_ četvrti broj samo zbroj prvih _n_ neparnih brojeva
 :::
 
 ---
-
 > id: square-numbers-2
 
-Pored toga, svaki je kvadratni broj zbroj dva uzastopna [broja trokuta](gloss:triangle-numbers). Na primjer, ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}. Možete li vidjeti kako možemo podijeliti svaki kvadrat duž njegove dijagonale, na dva trokuta?
+Pored toga, svaki je kvadratni broj zbroj dva uzastopna [trokutna broja](gloss:triangle-numbers). Na primjer, ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}. Možete li vidjeti kako možemo podijeliti svaki kvadrat duž njegove dijagonale, na dva trokuta?
 
 ---
-
 > id: polygon-numbers
 
 ::: column(width=300)
@@ -874,21 +834,20 @@ Pored toga, svaki je kvadratni broj zbroj dva uzastopna [broja trokuta](gloss:tr
 
 ::: column.grow
 
-Nakon brojeva trokuta i kvadrata, možemo nastaviti s većim [mnogokutima](gloss:polygon). Rezultirajući brojevi nizova nazivaju se __poligonalni brojevi__.
+Nakon trokutnih i kvadratnih brojeva, možemo nastaviti s većim [mnogokutima](gloss:polygon). Rezultirajući nizovi brojeva nazivaju se __poligonalni brojevi__.
 
 Na primjer, ako koristimo poligone sa ${k}{k|5|3,10,1} stranama, dobit ćemo niz __${polygonName(k)} brojeva__.
 
-Možete li pronaći rekurzivne i eksplicitne formule za _n_ taj višekutni broj koji ima _k_ strane? I primjećujete li još neke zanimljive obrasce za veće poligone?
+Možete li pronaći rekurzivne i eksplicitne formule za _n_ ti poligonalni broj koji ima _k_ strana? I primjećujete li još neke zanimljive obrasce za veće poligone?
 
 :::
 
 ---
-
 > id: tetrahedral
 
 ### Tetraedarski i kubni brojevi
 
-Naravno, također se ne moramo ograničavati na dvodimenzionalne oblike i obrasce. Mogli bismo složiti sfere kako bi formirali male piramide, baš kao što biste slagali naranče u supermarket:
+Naravno, također se ne moramo ograničavati na dvodimenzionalne oblike i obrasce. Možemo složiti sfere u oblik malih piramida, baš kao što se slažu naranče u supermarketu:
 
 ::: column(width=64 parent="padded-thin")
 
@@ -923,21 +882,20 @@ Naravno, također se ne moramo ograničavati na dvodimenzionalne oblike i obrasc
 :::
 
 ---
-
 > id: tetrahedral-1
 
-Matematičari često nazivaju ove piramide [__tetraedrama__](gloss:tetrahedron), a rezultirajući niz [__tetraedarskim brojevima__](gloss:tetrahedral-numbers).
+Matematičari ove piramide nazivaju [__tetraedri__](gloss:tetrahedron), a dobiveni niz [__tetraedarski brojevi__](gloss:tetrahedral-numbers).
 
-{.todo} Uskoro: Više o brojevima Tetraedrale, kubnim brojevima i 12 dana Božića.
+{.todo} Uskoro: Više o tetraedarskim brojevima, kubnim brojevima i 12 dana Božića.
 
 ---
 
-## Sekvence kao funkcije
+## Niz kao funkcija
 
 > section: functions
 > sectionStatus: dev
 
-NAPRAVITI
+U IZRADI
 
 ---
 
@@ -946,7 +904,7 @@ NAPRAVITI
 > section: fibonacci
 > id: rabbits
 
-Zamislite da ste primili par beba zečeva, jednog mužjaka i jednu ženku. Oni su vrlo posebni zečevi, jer nikada ne umiru, a ženka rađa novi par zečeva točno jednom mjesečno (uvijek drugi par mužjaka i ženki).
+Zamislite da ste dobili par mladih zečeva, jednog mužjaka i jednu ženku. Oni su vrlo posebni zečevi, jer nikada ne umiru, a ženka rađa novi par zečeva točno jednom mjesečno (uvijek novi par mužjaka i ženki).
 
     x-slideshow
       .stage.rabbits(slot="stage")
@@ -1013,21 +971,19 @@ Zamislite da ste primili par beba zečeva, jednog mužjaka i jednu ženku. Oni s
       .legend(slot="legend") In the sixth month, there are three more couples that give birth: the original one, as well as their first two pairs or kids.
 
 ---
-
 > id: rabbits-1
 
-{.r} U sljedećem mjesecu imali biste 13 pari kunića: 8 iz prethodnog mjeseca, plus 5 novih beba. Možete li otkriti uzorak u ovom nizu? _{button.next-step} Nastavi_
+{.r} U sljedećem mjesecu imali biste 13 parova kunića: 8 iz prethodnog mjeseca, plus 5 novih beba. Možete li otkriti uzorak u ovom nizu? _{button.next-step} Nastavi_
 
 ---
-
 > id: rabbits-2
 
-Broj zečeva u određenom mjesecu je [[zbroj dva prethodna broja|twice the previous number]]. _{span.reveal(when="blank-0")} Drugim riječima, trebate dodati _prethodna dva_ izraza u niz, da biste dobili sljedeći. Slijed započinje s dva 1, a [rekurzivna formula](gloss:sequence-recursive) je_
+Broj zečeva u određenom mjesecu je [[zbroj dva prethodna broja|twice the previous number]]. _{span.reveal(when="blank-0")} Drugim riječima, trebate dodati _prethodna dva_ elementa niza, da biste dobili sljedeći. Niz započinje s dvije jedinice, a [rekurzivna formula](gloss:sequence-recursive) je_
 
-{.text-center.s-orange.reveal(when="blank-0")} _{span.n} `x_n`_ = _{span.n} `x_(n-1)`_ + _{span.n} `x_(n-2)`_
+{.text-center.s-orange.reveal(when="blank-0")} *{span.n}`x_n`* =
+*{span.n}`x_(n-1)`* + *{span.n}`x_(n-2)`*
 
 ---
-
 > id: rabbits-3
 
 Možete li izračunati broj zečeva nakon još nekoliko mjeseci?
@@ -1036,22 +992,21 @@ Možete li izračunati broj zečeva nakon još nekoliko mjeseci?
 _{.n}[[13]]_, _{.n}[[21]]_, _{.n}[[34]]_, _{.n}[[55]]_, _{.n}[[89]]_,
 _{.n}[[144]]_, …
 
-{.reveal(when="blank-5")} Dakle nakon 12 mjeseci imat ćete 144 para zečeva!
+{.reveal(when="blank-5")} Dakle nakon 12 mjeseci imate 144 para zečeva!
 
     figure.reveal(when="blank-5")
       x-img(src="images/rabbits.jpg" width=600 height=230)
 
 ---
-
 > id: fibonacci
 
-Taj niz brojeva zove se [__Fibonacijeva sekvenca__](gloss:fibonacci-numbers), nazvana po talijanskom matematičaru [Leonardu Fibonacsu](bio:fibonacci).
+Taj niz brojeva zove se [__Fibonacijev niz__](gloss:fibonacci-numbers), nazvan po talijanskom matematičaru [Leonardu Fibonacciju](bio:fibonacci).
 
 ::: column.grow
 
-Kada se Fibonaccije rodio 1175. godine, većina ljudi u Europi još uvijek je koristila [rimski brojčani sustav](gloss:roman-numerals) za brojeve (npr. IVX ili MCMLIV). Fibonacijev otac bio je trgovac i zajedno su putovali u sjevernu Afriku, kao i na Bliski Istok. Tamo je Fibonaccije prvi naučio [arapski brojčani sustav](gloss:arabic-numerals).
+Kada se Fibonacci rodio 1175. godine, većina ljudi u Europi još uvijek je koristila [rimske brojke](gloss:roman-numerals) za zapis brojeva (npr. IVX ili MCMLIV). Fibonacijev otac bio je trgovac i zajedno su putovali u sjevernu Afriku, kao i na Bliski Istok. Tamo je Fibonacci prvi naučio koristiti [arapske brojke](gloss:arabic-numerals).
 
-Kada se vratio u Italiju, Fibonaccije je napisao knjigu nazvanu _Liber Abaci_ (latinski za "Knjigu izračuna"), gdje je prvi uveo nove arapske brojeve europskim trgovcima. Oni su bili neposredan uspjeh - i danas ih koristimo.
+Kada se vratio u Italiju, Fibonacci je napisao knjigu naziva _Liber Abaci_ (latinski za "Knjiga o računanju"), gdje je prvi uveo nove arapske brojke europskim trgovcima. Oni su bili trenutan uspjeh - i danas ih koristimo.
 
 ::: column(width=300)
 
@@ -1060,19 +1015,18 @@ Kada se vratio u Italiju, Fibonaccije je napisao knjigu nazvanu _Liber Abaci_ (l
 
 :::
 
-Na jednoj od stranica u svojoj knjizi, također je istraživao uzgojne uzgoje zečeva - zato su Fibonacijevi brojevi nazvani po njemu.
+Na jednoj od stranica u svojoj knjizi, također je istraživao uzgojne obrasce zečeva - zato su Fibonaccijevi brojevi nazvani po njemu.
 
     figure
       x-img(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
       p.caption Pages from Fibonacci’s #[em Liber Abaci]
 
 ---
-
 > id: spirals
 
-Naravno, Fibonaccijevi brojevi nisu način na koji se zečevi _<<<<_ naseljavaju u stvarnom životu. Kunići nemaju točno jednog mužjaka i jednu ženku potomstva svaki mjesec, a mi nismo računali da će kunići na kraju umrijeti.
+Naravno, Fibonaccijevi brojevi ne opisuju način na koji se _zečevi_ razmnožavaju u stvarnom životu. Kunići nemaju točno jednog muškog i jednog ženskog potomka svaki mjesec, a nije uračunato ni da će kunići na kraju i umrijeti.
 
-Ali ispada da u prirodi postoje mnoga druga mjesta na kojima se pojavljuju Fibonaccijevi brojevi _do_: na primjer spirale u biljkama. Možete li prebrojati koliko spirala ima u svakom smjeru?
+Ipak, čini se da u prirodi postoje mnoga druga mjesta na kojima se pojavljuju Fibonaccijevi brojevi: na primjer spirale u biljkama. Možete li prebrojati koliko spirala ima u svakom smjeru?
 
 ::: column(width=320)
 
@@ -1084,7 +1038,7 @@ Ali ispada da u prirodi postoje mnoga druga mjesta na kojima se pojavljuju Fibon
       .clockwise(style="background-image: url(images/pinecone-1.jpg)")
       .anticlockwise(style="background-image: url(images/pinecone-2.jpg)")
 
-{.text-center} Ovaj borov konus ima [[8]] spirale u smjeru kazaljke na satu i [[13]] spirale.
+{.text-center} Ovaj češer ima [[8]] spirala u smjeru kazaljke na satu i [[13]] spirala u smjeru suprotnom od smjera kazaljke na satu.
 
 ::: column(width=320)
 
@@ -1096,20 +1050,18 @@ Ali ispada da u prirodi postoje mnoga druga mjesta na kojima se pojavljuju Fibon
       .clockwise(style="background-image: url(images/sunflower-1.jpg)")
       .anticlockwise(style="background-image: url(images/sunflower-2.jpg)")
 
-{.text-center.reveal(when="blank-0 blank-1")} Ovaj suncokret ima 34 spirale u smjeru kazaljke na satu i 55 spirala u smjeru suprotnom od kazaljke na satu.
+{.text-center.reveal(when="blank-0 blank-1")} Ovaj suncokret ima 34 spirale u smjeru kazaljke na satu i 55 spirala u smjeru suprotnom od smjera kazaljke na satu.
 
 :::
 
 ---
-
 > id: spirals-1
 
-U oba slučaja brojevi spirale su uzastopni Fibonaccijevi brojevi. Isto vrijedi i za mnoge druge biljke: sljedeći put kad izađete vani, brojite latice u cvijetu ili broj lišća na stabljici. Vrlo često ćete otkriti da su to Fibonaccijevi brojevi!
+U oba slučaja brojevi spirala su uzastopni Fibonaccijevi brojevi. Isto vrijedi i za mnoge druge biljke: sljedeći put kad izađete van, brojite latice u cvijetu ili broj listova na stabljici. Vrlo često ćete otkriti da su to Fibonaccijevi brojevi!
 
-Naravno, to nije samo slučajnost. Postoji važan razlog zbog kojeg priroda voli Fibonaccijev slijed o kojem ćete saznati više kasnije.
+Naravno, to nije samo slučajnost. Postoji važan razlog zbog kojeg priroda voli Fibonaccijev niz, o kojem ćete saznati više kasnije.
 
 ---
-
 > id: bees
 
 ::: column(width=320)
@@ -1123,25 +1075,24 @@ Naravno, to nije samo slučajnost. Postoji važan razlog zbog kojeg priroda voli
 
 ::: column.grow
 
-Fibonaccijevi brojevi pojavljuju se i u populacijama medonosnih pčela.
+Fibonaccijevi brojevi pojavljuju se i u populacijama pčela.
 
-U svakoj pčelinjoj koloniji postoji po jedna _kraljica_ koja odlaže mnogo jaja. Ako jaje oplodi muško pčelo, ono se izljeva u __žensku__ pčelu. Ako nije oplođena, izljeva se na __mužjaka__ pčelu (zvanu bespilotna drona).
+U svakoj pčelinjoj koloniji postoji po jedna _kraljica_ koja polaže mnogo jaja. Ako jaje oplodi muška pčela, ono se izleže u __žensku__ pčelu. Ako nije oplođeno, izleže se u __mušku__ pčelu (zvanu radilica).
 
 To znači da ženske pčele imaju [[dva roditelja|one parent]], dok muške pčele imaju samo [[jednog roditelja|two parents]].
 
-{.reveal(when="blank-0 blank-1")} Ako nacrtamo stablo pčela pčela, broj roditelja, baka i djedova, pradjedova i starijih generacija uvijek su Fibonaccijevi brojevi!
+{.reveal(when="blank-0 blank-1")} Ako nacrtamo pčelinje obiteljsko stablo, brojevi roditelja, baka i djedova, pradjedova i ranijih generacija uvijek su Fibonaccijevi brojevi!
 
-{.i.lgrey.reveal(when="blank-0 blank-1" delay=400)} Povremeno se mlade pčele hrane posebnom hranom koja se zove "matična mliječ". U tom se slučaju pretvaraju u kraljice i odletjet će u novu košnicu.
+{.i.lgrey.reveal(when="blank-0 blank-1" delay=400)} Povremeno se mlade pčele hrane posebnom hranom koja se zove "matična mliječ". U tom se slučaju pretvaraju u kraljice i odletjet će van kako bi osnovale novu košnicu.
 
 :::
 
 ---
-
 > id: golden-spiral
 
-### Zlatni omjer
+### Zlatni rez
 
-Baš kao [trokut](gloss:triangle-numbers) i [kvadratni brojevi](gloss:square-numbers), i drugi nizovi koje smo vidjeli prije, Fibonaccijev niz se može prikazati pomoću geometrijskog uzorka:
+Baš kao [trokutni](gloss:triangle-numbers) i [kvadratni brojevi](gloss:square-numbers), i još neki nizovi koje smo vidjeli prije, Fibonaccijev niz može se prikazati pomoću geometrijskog uzorka:
 
     x-slideshow.golden-spiral
       .stage(slot="stage"): include svg/spiral.svg
@@ -1153,10 +1104,9 @@ Baš kao [trokut](gloss:triangle-numbers) i [kvadratni brojevi](gloss:square-num
       .legend(slot="legend") You might have noticed that, as the rectangles get larger, they seem to start “spiraling” outwards. We can even visualise this by drawing a perfect spiral that connects the corners of the squares.
 
 ---
-
 > id: golden-ratio
 
-Na svakom koraku, kvadrati formiraju veći pravokutnik. Njegova širina i visina uvijek su dva uzastopna Fibonaccijeva broja. __Omjer slike__ pravokutnika je omjer njegove širine i njegove visine:
+Na svakom koraku, kvadrati formiraju veći pravokutnik. Njegova širina i visina uvijek su dva uzastopna Fibonaccijeva broja. __Format__ pravokutnika je omjer njegove širine i njegove duljine:
 
 ::: column(width=100 parent="padded-thin golden-rect")
 
@@ -1197,15 +1147,14 @@ Na svakom koraku, kvadrati formiraju veći pravokutnik. Njegova širina i visina
 :::
 
 ---
-
 > id: golden-ratio-1
 > goals: img-0 img-1
 
-Primijetite kako se, kako dodajemo sve više i više kvadrata, čini se da se omjer slike bliži i približava određenom broju oko 1,6. Ovaj se broj zove [__zlatni omjer__](gloss:golden-ratio) i obično je predstavljen grčkim slovom `φ` ("phi"). Točna je njegova vrijednost
+Primijetite kako se, dodajući sve više i više kvadrata, čini da se omjer slike približava određenom broju oko 1,6. Ovaj se broj zove [__zlatni rez__](gloss:golden-ratio) i obično je predstavljen grčkim slovom `φ` ("phi"). Točna je njegova vrijednost
 
 {.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
 
-Mnogi vjeruju da je zlatni omjer posebno estetski ugodan. Zato je često koriste umjetnici i arhitekti - kao u ova dva primjera:
+Mnogi vjeruju da je zlatni rez ima posebnu estetsku vrijednost. Zato ga često koriste umjetnici i arhitekti - kao u ova dva primjera:
 
 ::: column(width=320)
 
@@ -1214,7 +1163,7 @@ Mnogi vjeruju da je zlatni omjer posebno estetski ugodan. Zato je često koriste
       img(src="images/pantheon-box.png" width=320 height=198)
     x-gesture(target=".golden-art")
 
-{.caption} Kaže se da je grčki kipar Phidias koristio zlatni omjer dizajnirajući _Partenon_ u Ateni. Prvo slovo njegova imena, `φ`, simbol je koji koristimo za zlatni omjer.
+{.caption} Vjeruje se da je grčki kipar Fidija koristio zlatni rez pri dizajnu _Partenona_ u Ateni. Prvo slovo njegova imena, `φ`, simbol je koji se koristi za zlatni rez.
 
 ::: column(width=320)
 
@@ -1222,31 +1171,29 @@ Mnogi vjeruju da je zlatni omjer posebno estetski ugodan. Zato je često koriste
       x-img(src="images/dali.jpg" width=320 height=198)
       img(src="images/dali-box.png" width=320 height=198)
 
-{.caption} _Sakrament Posljednje večere_, španjolskog umjetnika Salvadora Dalíja, jedna je od mnogih slika u zlatnom omjeru. U pozadini se takođe može vidjeti veliki [dodekaedar](gloss:dodecahedron).
+{.caption} _Sakrament Posljednje večere_, španjolskog umjetnika Salvadora Dalíja, jedna je od mnogih slika u zlatnom rezu. U pozadini se također može vidjeti veliki [dodekaedar](gloss:dodecahedron).
 
 :::
 
 ---
-
 > id: golden-ratio-2
 
-Zlatni omjer možemo približiti [[dijeljenjem|adding|subtracting]] dva uzastopna Fibonaccijeva broja.
+Zlatni rez možemo aproksimirati [[dijeljenjem|adding|subtracting]] dva uzastopna Fibonaccijeva broja.
 
-{.reveal(when="blank-0")} Međutim, ispada da se tačna vrednost `φ` ne može zapisati kao jednostavan ulomak: to je [__iracionalni broj__](gloss:irrational-numbers), baš kao [`π`](gloss:pi) i `sqrt(2)` i neke druge brojeve koje ste vidjeli prije.
+{.reveal(when="blank-0")} Međutim, ispada da se točna vrednost `φ` ne može zapisati kao jednostavan razlomak: to je [__iracionalni broj__](gloss:irrational-numbers), baš kao [`π`](gloss:pi) i `sqrt(2)` i neki drugi brojevi koje ste vidjeli prije.
 
 ---
-
 > id: sunflower-growing
 
 ### Fibonaccijeva spirala
 
 ::: column.grow
 
-Zlatni omjer objašnjava zašto se Fibonaccijevi brojevi pojavljuju u prirodi, poput konusa suncokreta i borova koje ste vidjeli na početku ovog odjeljka.
+Zlatni rez objašnjava zašto se Fibonaccijevi brojevi pojavljuju u prirodi, poput suncokreta i češera koje ste vidjeli na početku ovog poglavlja.
 
-Obje ove biljke rastu prema van iz njihovog središta (dio biljke nazvan _meristem_). Kako se dodaju nove sjemenke, lišće ili latice, guraju postojeće dalje prema van.
+Obje ove biljke rastu prema van iz svojeg središta (dio biljke nazvan _meristem_). Kako izrastaju nove sjemenke, lišće ili latice, one guraju postojeće dalje prema van.
 
-Pomaknite klizač udesno da biste prikazali kako biljka raste. Uočite kako se svaki list dodaje pri drugačijoj rotaciji od prethodnog. Kut između dva uzastopna lista uvijek je isti.
+Pomaknite klizač desno da biste vidjeli kako biljka raste. Uočite kako se svaki list dodaje drugačijom rotacijom od prethodnog. Kut između dva uzastopna lista uvijek je isti.
 
 ::: column(width=300)
 
@@ -1262,10 +1209,9 @@ Pomaknite klizač udesno da biste prikazali kako biljka raste. Uočite kako se s
 :::
 
 ---
-
 > id: sunflower-spiral
 
-Za cvijeće je važno odabrati prikladan kut: lišće ili sjeme moraju biti približno jednako raspoređeni kako bi dobili najveću količinu sunčeve svjetlosti i hranjivih sastojaka. Na donjem dijagramu možete istražiti kako može izgledati suncokret pod različitim kutovima između njegovih sjemenki:
+Za cvijeće je važan odgovarajući kut: lišće i sjeme moraju biti približno jednako raspoređeni kako bi dobili najveću količinu sunčeve svjetlosti i hranjivih sastojaka. Na donjem dijagramu možete istražiti kako može izgledati suncokret s različitim kutovima između njegovih sjemenki:
 
 ::: x-slideshow
 
@@ -1276,22 +1222,21 @@ Za cvijeće je važno odabrati prikladan kut: lišće ili sjeme moraju biti prib
 
 {div(slot="legend")} Ako je kut _{span.fib-action(data-value=0)} 0 °_, sve će sjeme rasti u jednom dugom redu daleko od središta.
 
-{div.inline(slot="legend")} Ako je kut _{span.fib-action(data-value=0.5)} `1/2`_ potpune rotacije (180 °), sjeme će se izmjenjivati između dva odvojena "kraka" koji se odmiču od središta.
+{div.inline(slot="legend")} Ako je kut _{span.fib-action(data-value=0.5)} `1/2`_ punog okretaja (180 °), sjeme će se izmjenjivati između dva odvojena "kraka" koji se odmiču od središta.
 
-{div.inline(slot="legend")} Ako je rotacija drugi udio od 360 °, na primjer _{span.fib-action(data-value=2/5)} `2/5`_ ili _{span.fib-action(data-value=1/3)} `1/3`_ ili _{span.fib-action(data-value=3/8)} `3/8`_, tada će broj "krakova" biti isti kao i [[nazivnik|numerator|prime factor]] tog ulomka.
+{div.inline(slot="legend")} Ako je rotacija neki drugi udio od 360 °, na primjer _{span.fib-action(data-value=2/5)} `2/5`_ ili _{span.fib-action(data-value=1/3)} `1/3`_ ili _{span.fib-action(data-value=3/8)} `3/8`_, tada će broj "krakova" biti isti kao i [[nazivnik|numerator|prime factor]] tog ulomka.
 
-{div(slot="legend")} Nažalost, "ruke" su loše, jer znače da sjeme nije ravnomjerno raspoređeno: sav se prostor između krakova izgubi. Ali ako [racionalni brojevi](gloss:rational-numbers) neće raditi, pokušajmo [iracionalne brojeve](gloss:irrational-numbers)!
+{div(slot="legend")} Nažalost, "ruke" su loše, jer znače da sjeme nije ravnomjerno raspoređeno: sav je prostor između krakova izgubljen. Ali ako [racionalni brojevi](gloss:rational-numbers) ne odgovaraju, pokušajmo [iracionalne brojeve](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} Jedan primjer iracionalnog broja je [`pi`](gloss:pi). Ali ako je kut između sjemena _{span.fib-action(data-value=0.31831)} `1/pi`_ 360 °, i dalje imamo oružje: njih 22. To je zato što je ulomak `22/7 = 3.1429…` prilično dobra aproksimacija za `pi`. Ono što nam stvarno treba je iracionalni broj koji _ne može_ približiti jednostavnim dijelom.
+{div.inline(slot="legend")} Jedan primjer iracionalnog broja je [`pi`](gloss:pi). Ali ako je kut između sjemena _{span.fib-action(data-value=0.31831)} `1/pi`_ 360 °, i dalje imamo oružje: njih 22. To je zato što je razlomak `22/7 = 3.1429…` prilično dobra aproksimacija za `pi`. Ono što nam stvarno treba je iracionalni broj koji se _ne može_ aproksimirati jednostavnim razlomkom.
 
-{div.inline(slot="legend")} Ispada da je [omjer zlata](gloss:golden-ratio) upravo to: "najracionalniji" od svih iracionalnih brojeva. Ako je kut između sjemena _{span.fib-action(data-value=0.6180339)} `1/phi`_ 360 °, oni izgledaju gotovo savršeno raspoređeni. A upravo je to kut koji koriste biljke širom svijeta.
+{div.inline(slot="legend")} Čini se da je [zlatni rez](gloss:golden-ratio) upravo to: "najracionalniji" od svih iracionalnih brojeva. Ako je kut između sjemena _{span.fib-action(data-value=0.6180339)} `1/phi`_ 360 °, ono izgleda gotovo savršeno raspoređeno. A upravo je to kut koji koriste biljke širom svijeta.
 
 :::
 
     x-gesture(target=".fib-action")
 
 ---
-
 > id: sunflower-spiral-1
 
 ::: column(width=240)
@@ -1300,47 +1245,43 @@ Za cvijeće je važno odabrati prikladan kut: lišće ili sjeme moraju biti prib
 
 ::: column.grow
 
-Sjetite se odozgo da se omjeri uzastopnih Fibonaccijevih brojeva sve više približavaju zlatnom omjeru - i zato ćete, ako brojite spirale u biljci, često pronaći Fibonaccijev broj.
+Sjetite se od prije da se omjeri uzastopnih Fibonaccijevih brojeva sve više približavaju zlatnom omjeru - i zato ćete, ako brojite spirale u biljci, često pronaći Fibonaccijev broj.
 
-Važno je zapamtiti da priroda ne zna za Fibonaccijeve brojeve. Priroda također ne može riješiti jednadžbe za izračun zlatnog omjera - ali tijekom milijuna milijuna godina, biljke su imale dovoljno vremena da isprobaju različite uglove i otkriju najbolji.
+Važno je zapamtiti da priroda ne zna za Fibonaccijeve brojeve. Priroda također ne može riješiti jednadžbe za izračun zlatnog omjera - ali tijekom milijuna godina, biljke su imale dovoljno vremena da isprobaju različite pristupe i otkriju koji je najbolji.
 
-Biljke i životinje uvijek žele rasti na najučinkovitiji način i zato je priroda puna redovitih, matematičkih obrazaca.
+Biljke i životinje uvijek žele rasti na najučinkovitiji način i upravo zato je priroda puna pravilnih, matematičkih obrazaca.
 
 :::
 
 ---
-
 > id: lucas-numbers
 
 ### Fibonachos
 
-Do sada smo koristili rekurzivnu jednadžbu samo za Fibonaccijeve brojeve. Zapravo postoji i eksplicitna jednadžba - ali je mnogo teže pronaći:
+Do sada smo za Fibonaccijeve brojeve koristili samo rekurzivnu formulu. Zapravo postoji i eksplicitna jednadžba - ali nju je mnogo teže pronaći:
 
 {.text-center} `F_n = 1/(  sqrt(5)) ( ((1 + sqrt(5))/2)^n - ((1 - sqrt(5))/2)^n )`
 
 Također bismo mogli pokušati odabrati različite početne točke za Fibonaccijeve brojeve. Na primjer, ako krenemo s 2, 1, ... a ne s 1, 1, ... dobit ćemo niz nazvan __Lucasovi brojevi__.
 
-Ispada da, bez obzira na dva početna broja koja odaberete, rezultirajući nizovi dijele mnoga svojstva. Na primjer, omjeri uzastopnih izraza _uvijek će_ [konvertirati](gloss:sequence-convergence) u zlatni omjer.
+Ispada da, bez obzira na dva početna broja koja odaberete, rezultirajući nizovi dijele mnoga svojstva. Na primjer, omjeri uzastopnih elemenata niza _uvijek će_ [konvergirati](gloss:sequence-convergence) u zlatni omjer.
 
 {.text-center.s-purple.s-small} ${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.n} ${a+b}<<<<_, _{span.n} ${a+2×b}<<<<_, _{span.n} ${2×a+3×b}<<<<_, _{span.n} ${3×a+5×b}<<<<_ , _{span.n} ${5×a+8×b}<<<<_, _{span.n} ${8×a+13×b}<<<<_, ...
 
 ---
-
 > id: fibonacci-puzzles
 
-Postoje mnoge druge zagonetke, obrasci i aplikacije povezane s Fibonaccijevim brojevima. Evo nekoliko primjera koje možete i sami isprobati:
+Postoje mnoge zagonetke, obrasci i aplikacije povezane s Fibonaccijevim brojevima. Evo nekoliko primjera koje možete i sami isprobati:
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem solving
+#### Problem solving
 
-::: .box-body
+__1. Fibonacijeva djeljivost__
 
-{1 1463}. Fibonacijeva podjela__
+(a) Koji su Fibonaccijevi brojevi parni? Postoji li uzorak po kojem znamo redni broj elementa niza? Možete li objasniti zašto?
 
-(a) Koji su Fibonaccijevi brojevi parni? Postoji li uzorak na kojem su mjestu smještene duž niza? Možete li objasniti zašto?
-
-(b) Koji su Fibonaccijevi brojevi djeljivi sa 3 (ili djeljivi sa 4)? Što primjećujete?
+(b) Koji su Fibonaccijevi brojevi djeljivi a 3 (ili djeljivi s 4)? Što primjećujete?
 
     hr
 
@@ -1350,15 +1291,14 @@ __2. Fibonaccijevi zbrojevi__
 
     hr
 
-{3 1469}. Fibonaccije stubišta__
+__3. Fibonaccijeva stubišta__
 
-Kad hodam stubama, mogu napraviti pojedinačne korake ili preskočiti dvije korake u isto vrijeme. To znači da postoji mnogo različitih mogućnosti za to kako bih se uspio stepenicom. Na primjer, ako postoji 5 koraka, imam 8 različitih izbora:
+Kad hodam stubama, mogu napraviti pojedinačne korake ili preskočiti dva koraka u isto vrijeme. To znači da postoji mnogo različitih mogućnosti za to kako bih se popeo stepenicama. Na primjer, ako postoji 5 koraka, imam 8 različitih izbora:
 
     figure: x-img(src="images/stairs.svg" width=530 height=200)
 
-Koliko ima izbora za stubište sa 6, 7 ili 8 stepenica? Možete li otkriti uzorak? I kako je to povezano s Fibonaccijevim brojevima?
+Koliko izbora ima za stubište sa 6, 7 ili 8 stepenica? Možete li otkriti uzorak? I kako je to povezano s Fibonaccijevim brojevima?
 
-:::
 :::
 
     figure
@@ -1367,25 +1307,24 @@ Koliko ima izbora za stubište sa 6, 7 ili 8 stepenica? Možete li otkriti uzora
 
 ---
 
-## Posebne sekvence
+## Posebni nizovi
 
 > section: special
 > id: special-intro
 
-Pored [aritmetičkih](gloss:arithmetic-sequence) i [geometrijskih](gloss:geometric-sequence) nastavaka, [Fibonaccijevih brojeva](gloss:fibonacci-numbers) i [figurativnih brojeva](gloss:figurate-numbers), postoji bezbroj zanimljivih nizova koji ne slijede slično , pravilni uzorak.
+Pored [aritmetičkih](gloss:arithmetic-sequence) i [geometrijskih](gloss:geometric-sequence) nizova, [Fibonaccijevih brojeva](gloss:fibonacci-numbers) i [figurativnih brojeva](gloss:figurate-numbers), postoji bezbroj zanimljivih nizova koji ne slijede sličan, pravilni uzorak.
 
 ---
-
 > id: primes
 
-### Primarni brojevi
+### Prosti brojevi
 
-Jedan primjer koji ste već vidjeli je [__glavni brojevi__](gloss:prime). Kažemo da je broj _glavni_ ako nema [faktora](gloss:factor) [[osim 1 i samog sebe|other than 1 and 2|and no multiples]].
+Jedan primjer koji ste već vidjeli su [__prosti brojevi__](gloss:prime). Kažemo da je broj _prost_ ako nema [djelitelja](gloss:factor) [[osim 1 i samog sebe|other than 1 and 2|and no multiples]].
 
 ---
 > id: primes-1
 
-Evo prvih nekoliko glavnih brojeva:
+Evo prvih nekoliko prostih brojeva:
 
 {.text-center.s-teal} _{.n}2_, _{.n}3_, _{.n}5_, _{.n}7_, _{.n}11_,
 _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
@@ -1394,7 +1333,7 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 > id: primes-2
 > goals: p2 p3 p5 p7
 
-Nažalost, prosti brojevi ne slijede jednostavan obrazac ili rekurzivnu formulu. Ponekad se pojavljuju neposredno jedan pored drugog (to se zove [blizanac prim.](gloss:twin-primes)), a ponekad postoje velike praznine između njih. Čini se da su raspoređeni gotovo nasumično! Prime brojevi također nemaju jednostavan geometrijski prikaz poput [trokuta](gloss:triangle-numbers) ili [kvadratnih brojeva](gloss:square-numbers), ali uz malo rada možemo otkriti zanimljive obrasce:
+Nažalost, prosti brojevi ne slijede jednostavan obrazac ili rekurzivnu formulu. Ponekad se pojavljuju neposredno jedan pored drugog (zovu se [blizanci prosti brojevi.](gloss:twin-primes)), a ponekad postoje velike praznine između njih. Čini se da su raspoređeni gotovo nasumično! Prosti brojevi također nemaju jednostavan geometrijski prikaz poput [trokutnih](gloss:triangle-numbers) ili [kvadratnih brojeva](gloss:square-numbers), ali uz malo rada možemo otkriti zanimljive obrasce:
 
 ::: column(width=320)
 
@@ -1407,27 +1346,27 @@ Nažalost, prosti brojevi ne slijede jednostavan obrazac ili rekurzivnu formulu.
         - i += 1
     x-gesture(target=".eratosthenes .l-red")
 
-{.caption} Ako precrtamo sve višestruke male cjelobrojne brojeve, preostali brojevi moraju biti primarni. Ova metoda se zove [__Sita Eratostena__](gloss:sieve-eratosthenes).
+{.caption} Ako precrtamo sve umnoške malih cijelih brojeva, preostali brojevi moraju biti prosti. Ova metoda zove se [__Eratostenovo sito__](gloss:sieve-eratosthenes).
 
 ::: column(width=320)
 
     x-coordinate-system(width=320 height=320 padding="8 8 20 24" axis-names="x,number of primes less than x")
 
-{.caption} Ako nacrtamo grafikon koji se povećava za 1 kad postoji glavni broj, dobit ćemo "stepenastu" funkciju sa fascinantnim svojstvima.
+{.caption} Ako nacrtamo grafikon koji se povećava za 1 kad god se pojavi prost broj, dobit ćemo "stepenastu" funkciju sa fascinantnim svojstvima.
 
 :::
 
 ---
 > id: primes-3
 
-Možete saznati više o tim i drugim svojstvima pravih brojeva u našem tečaju na temu [Razdvojenost i prava](/course/divisibility/primes). Oni su neki od najvažnijih i najtajanstvenijih pojmova u matematici!     figure: img(src="images/primes.svg" width=480 height=156)
+Možete saznati više o tim i drugim svojstvima prostih brojeva u našem poglavlju [Djeljivost i prosti brojevi](/course/divisibility/primes). To su neki od najvažnijih i najtajanstvenijih pojmova u matematici!     figure: img(src="images/primes.svg" width=480 height=156)
 
 ---
 > id: perfect
 
 ### Savršeni brojevi
 
-Da bismo utvrdili da li je broj [<<<<](gloss:prime), moramo pronaći sve njegove [faktore](gloss:factor). Obično bismo _množili_ ove faktore da bismo dobili izvorni broj, ali da vidimo što će se dogoditi ako _zbrojimo_ sve faktore broja (bez samog broja):
+Da bismo utvrdili je li [broj](gloss:prime), moramo pronaći sve njegove [faktore](gloss:factor). Obično _množimo_ ove faktore da bismo dobili izvorni broj, ali da vidimo što će se dogoditi ako _zbrojimo_ sve faktore broja (bez samog broja):
 
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
@@ -1456,15 +1395,15 @@ Usporedimo ove brojeve s njihovim zbrojem faktora:
 
 ::: column.perfect-box(width=220 parent="padded-thin")
 
-Za većinu brojeva, zbroj njegovih faktora je [[manji od samog|greater than|equal to]]. Ti se brojevi nazivaju __manjkavi brojevi__.
+Za većinu brojeva, zbroj njegovih faktora je [[manji od samog broja|greater than|equal to]]. Ti se brojevi nazivaju __manjkavi brojevi__.
 
 ::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
 
-Za nekoliko brojeva, zbroj njegovih faktora je veći od njega samog. Ti se brojevi nazivaju __obilni brojevi__.
+Za nekoliko brojeva, zbroj njihovih faktora je veći od njh samih. Ti se brojevi nazivaju __obilni brojevi__.
 
 ::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
 
-Samo jedan broj na gornjem popisu ima zbroj faktora koji je _jednak_ sebi: [[6]]. To se zove [__savršen broj__](gloss:perfect-numbers).
+Samo jedan broj na gornjem popisu ima zbroj faktora koji je _jednak_ tom broju: [[6]]. Ovakav broj zove se [__savršeni broj__](gloss:perfect-numbers).
 
 :::
 
@@ -1477,14 +1416,14 @@ Sljedeći savršeni broj je 28, jer ako zbrojimo sve njegove faktore, dobit ćem
 _{.n}496_, _{.n}8,128_, _{.n}33,550,336_, _{.n}8,589,869,056_,
 _{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
 
-Primjetite da su svi ovi brojevi [[čak i|multiples of 3|2 more than a square number]]. _{span.reveal(when="blank-0")} Ispada da su i svi trokutasti brojevi!_
+Primjetite da su svi ovi brojevi [[parni|multiples of 3|2 more than a square number]]. _{span.reveal(when="blank-0")} Ispada da su svi ovi brojevi ujedno i trokutasti!_
 
 ---
 > id: perfect-3
 
 ::: column.grow
 
-Savršene brojeve prvi su proučavali grčki matematičari poput [Euklid](bio:euclid), [Pitagore](bio:pythagoras) i [Nicomachus](bio:nicomachus), prije više od 2000 godina. Izračunali su prvih nekoliko savršenih brojeva i pitali se može li ih biti _neparnih_. Danas su matematičari koristili računala za provjeru prvih 10 <sup>1500</sup> brojeva (to je jedan praćen 1500 nula), ali bez uspjeha: svi savršeni brojevi koje su pronašli bili su parni. Do danas još uvijek nije poznato postoje li neki neparni savršeni brojevi, što ga čini najstarijim neriješenim problemom u _čitavoj matematici_!
+Savršene brojeve prvi su proučavali grčki matematičari poput [Euklida](bio:euclid), [Pitagore](bio:pythagoras) i [Nicomachusa](bio:nicomachus), prije više od 2000 godina. Izračunali su prvih nekoliko savršenih brojeva i pitali se ima li možda _neparnih_. Danas matematičari koriste računala za provjeru prvih 10 <sup>1500</sup> brojeva (to je jedan i 1500 nula), ali bez uspjeha: svi savršeni brojevi koje su pronašli bili su parni. Do danas još uvijek nije poznato postoje li neki neparni savršeni brojevi, što ovaj problem čini najstarijim neriješenim problemom u _čitavoj matematici_!
 
 ::: column(width=220)
 
@@ -1497,9 +1436,9 @@ Savršene brojeve prvi su proučavali grčki matematičari poput [Euklid](bio:eu
 ---
 > id: hailstone
 
-### Slijed Hailstone-a
+### Hailstonov niz
 
-Većina nastavka koje smo do sada vidjeli imalo je jedno pravilo ili obrazac. Ali nema razloga zašto ne možemo kombinirati više različitih - na primjer, rekurzivnu formulu poput ove:
+Većina nizova koje smo do sada vidjeli imala je jedno pravilo ili obrazac. Ali nema razloga da ne kombiniramo više različitih - na primjer, rekurzivnu formulu poput ove:
 
     table.grid.text-left
       tr
@@ -1509,7 +1448,7 @@ Većina nastavka koje smo do sada vidjeli imalo je jedno pravilo ili obrazac. Al
         td: strong.md If `x_n` is odd:
         td.md `x_(n+1) = 3 x_n + 1`
 
-Počnimo s `x_1 = 5` i vidjeti što se događa:
+Počnimo s `x_1 = 5` i vidimo što će se dogoditi:
 
 {.text-center.s-orange.with-arrows} _{.n}5_, _{.n}[[16]]*{span.arrow}×3 +1*_,
 _{.n}[[8]]*{span.arrow.reveal(when="blank-0")}÷2*_,
@@ -1523,7 +1462,7 @@ _{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
 ---
 > id: hailstone-1
 
-Izgleda da nakon nekoliko termina, niz dostigne "ciklus" ”: 4, 2, 1 nastavit će se ponavljati iznova i iznova, zauvijek. Naravno, mogli smo odabrati drugačiju polaznu točku, poput ${n}{n|10|5,40,1}. Tada bi slijed izgledao ovako:
+Izgleda da nakon nekoliko elemenata, niz dostigne "ciklus" ”: 4, 2, 1 će se nastaviti ponavljati iznova i iznova, zauvijek. Naravno, mogli smo odabrati drugačiju polaznu točku, poput ${n}{n|10|5,40,1}. Tada bi niz izgledao ovako:
 
 {.text-center} _{span.var.s-orange(:html="hailstones(n)")}_, *{span.s-red}_{.n}4_,
 _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
@@ -1532,22 +1471,21 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 ---
 > id: hailstone-2
 
-Čini se da duljina sekvence jako varira, ali uvijek će završiti u ciklusu 4, 2, 1 - bez obzira koji prvi broj odaberemo. U grafikonu možemo čak zamisliti i redoslijede niza:
+Čini se da duljina niza jako varira, ali uvijek će završiti u ciklusu 4, 2, 1 - bez obzira koji prvi broj odaberemo. U grafikonu možemo čak zamisliti i elemente niza:
 
     x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
-{.reveal(when="var-0")} Primjetite kako se neke početne točke završavaju vrlo brzo, dok druge (poput _{span.var-action} 31_ ili _{span.var-action} 47_) čine više od stotinu koraka prije nego što dođu do četvorke, 2, 1 ciklus.
+{.reveal(when="var-0")} Primjetite kako neke početne točke završavaju vrlo brzo, dok druge (poput _{span.var-action} 31_ ili _{span.var-action} 47_) naprave više od stotinu koraka prije nego što dođu do ciklusa 4, 2, 1.
 
 ---
-
 > id: hailstone-3
 
 ::: column.grow
 
-Svi nizovi koji slijede ovu rekurzivnu formulu nazivaju se [__Hailstone sekvence__](gloss:hailstone-sequence), jer se čini da se kreću nasumično gore-dolje prije nego što dosegnu ciklus 4, 2, 1 - baš kao i graševine koje se kreću prema gore i dolje u oblaku prije nego što se srušio na Zemlju.
+Svi nizovi koji slijede ovu rekurzivnu formulu nazivaju se [__nizovi tuča__](gloss:hailstone-sequence), jer se čini da se kreću nasumično gore-dolje prije nego što dosegnu ciklus 4, 2, 1 - baš kao i tuča koje se kreće prema gore i dolje u oblaku prije nego što se obruši na Zemlju.
 
-1937. godine, matematičar [Lothar Collatz](bio:collatz) predložio je da se _svaki_ niz točaka na kraju završi u ciklusu 4, 2, 1 - bez obzira na početnu vrijednost koju odaberete. Već ste provjerili nekoliko početnih točaka, a računala su zapravo isprobala sve brojeve do `10^20` - to je 100 milijardi milijardi ili 1 nakon čega slijedi dvadeset nula.
+1937. godine, matematičar [Lothar Collatz](bio:collatz) pretpostavio je da se _svaki_ niz tuča na kraju završi u ciklusu 4, 2, 1 - bez obzira na odabranu početnu vrijednost. Već smo provjerili nekoliko početnih točaka, a računalno su isprobani svi brojevi do `10^20` - to je 100 milijardi milijardi ili 1 nakon čega slijedi dvadeset nula.
 
 ::: column(width=240)
 
@@ -1555,15 +1493,14 @@ Svi nizovi koji slijede ovu rekurzivnu formulu nazivaju se [__Hailstone sekvence
 
 :::
 
-Međutim, postoji beskonačno mnogo cijelih brojeva. Nemoguće je provjeriti svaki od njih, a nitko nije uspio pronaći [dokaz](gloss:proof) koji djeluje za sve.
+Međutim, postoji beskonačno mnogo cijelih brojeva. Nemoguće je provjeriti svaki od njih, a nitko nije uspio pronaći [dokaz](gloss:proof) koji vrijedi za sve brojeve.
 
-Baš kao i potraga za neparnim savršenim brojevima, ovo je još uvijek otvoren matematički problem. Nevjerojatno je da ovi jednostavni uzorci nizova mogu dovesti do pitanja koja su stoljećima mistificirala čak i najbolje matematičare na svijetu!
+Baš kao i potraga za neparnim savršenim brojevima, ovo je još uvijek otvoren matematički problem. Nevjerojatno je da ovi jednostavni uzorci za nizove mogu voditi do pitanja koja su stoljećima mistificirala čak i najbolje matematičare na svijetu!
 
 ---
-
 > id: look-and-say
 
-### Slijed pretraživanja i kazivanja
+### Niz pogledaj i reci
 
 Evo još jednog niza koji se malo razlikuje od svih gore navedenih. Možete li pronaći uzorak?
 
@@ -1573,44 +1510,38 @@ _{.n}1211_, _{.n}111221_, _{.n}312211_, …
 _{button.next-step} Nastavi_
 
 ---
-
 > id: look-and-say-1
 
-Taj se niz naziva __slijed i gledaj__, a obrazac je upravo ono što ime kaže: započinješ s brojem 1, a svaki sljedeći izraz je ono što dobiješ ako "glasno čitaš" prethodni. Evo primjera:
+Taj se niz naziva __pogledaj i reci__, a obrazac je upravo ono što mu ime kaže: započinjete s brojem 1, a svaki sljedeći izraz je ono što dobijete ako "glasno pročitate" prethodni. Evo primjera:
 
     p: x-img(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
 
-Možete li sada pronaći sljedeće uvjete?
+Možete li sada pronaći sljedeće elemente?
 
 {.text-center.s-lime.s-vertical} ..., _{.n} 312211_, _{.n} [[13112221]]_, _{.n} [[1113213211]]_, ...
 
 ---
-
 > id: look-and-say-2
 
-Ovaj se slijed često koristi kao zagonetka da bi se upoznali matematičari - jer se čini da je uzorak potpuno ne-matematički. Međutim, kako se ispostavilo, niz ima mnoga zanimljiva svojstva. Na primjer, svaki izraz završava u [[1]], a niti jedna znamenka veća od [[3]] se nikad ne koristi.
+Ovaj se niz često koristi kao zagonetka da bi se nasamarili matematičari - jer se čini da je uzorak potpuno ne-matematički. Međutim, ispostavlja se da niz ima mnoga zanimljiva svojstva. Na primjer, svaki element završava s [[1]], a niti jedna znamenka veća od [[3]] se nikad ne koristi.
 
 ---
-
 > id: look-and-say-3
 
-Britanski matematičar [John Conway](bio:conway) otkrio je da će se, bez obzira koji broj odabrati kao početna vrijednost, slijed na kraju podijeliti u različite „odjeljke“ koji više ne djeluju jedni s drugima. Conway je to nazvao _kosmološkom teoremom_ i imenovao različite odjeljke pomoću kemijskih elemenata _Vodik_, _Helij_, _Litij_, ..., sve do _{plutonijevog 1760}.
+Britanski matematičar [John Conway](bio:conway) otkrio je da će se, bez obzira koji broj odaberemo kao početnu vrijednost, niz na kraju podijeliti u različite „odjeljke“ koji međusobno nisu povezani. Conway je to nazvao _kozmološkom teoremom_ i imenovao različite odjeljke pomoću kemijskih elemenata _Vodik_, _Helij_, _Litij_, ..., sve do _{Plutonija}.
 
 ---
-
 > id: quiz
 
-### Kviz sekvence
+### Kviz o nizovima
 
-Sada ste vidjeli bezbroj različitih matematičkih nizova - neki temeljeni na geometrijskim oblicima, neki koji slijede određene formule, a drugi koji se izgleda ponašaju gotovo nasumično.
+Sada ste vidjeli mnoge različite matematičke nizove - neki su temeljeni na geometrijskim oblicima, neki slijede određene formule, a neki se ponašaju gotovo nasumično.
 
-U ovom kvizu možete kombinirati sve svoje znanje o nastavcima. Postoji samo jedan cilj: pronaći uzorak i izračunati sljedeća dva pojma!
+U ovom kvizu možete kombinirati sve svoje znanje o nizovima. Postoji samo jedan cilj: pronaći uzorak i izračunati sljedeća dva elementa niza!
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Find the next number
-
-::: .box-body
+#### Find the next number
 
 {.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1641,7 +1572,6 @@ _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 
 :::
-:::
 
 ---
 
@@ -1650,7 +1580,7 @@ _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 > section: pascals-triangle
 > id: pascal-intro
 
-Ispod možete vidjeti piramidu brojeva koja je stvorena jednostavnim uzorkom: započinje s jednim "1" na vrhu, a svaka sljedeća ćelija zbroj je dvije stanice izravno iznad. Zadržite pokazivač miša iznad neke ćelije da biste vidjeli kako se izračunavaju, a zatim ispunite nedostajuće:
+U nastavku možete vidjeti piramidu brojeva koja je nastala pomoću jednostavnog uzorka: započinje s jednim "1" na vrhu, a svaka sljedeća ćelija zbroj je dvije ćelije izravno iznad. Zadržite pokazivač miša iznad neke ćelije da biste vidjeli kako se izračunavaju, a zatim ispunite one koje nedostaju:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
@@ -1669,48 +1599,45 @@ Ispod možete vidjeti piramidu brojeva koja je stvorena jednostavnim uzorkom: za
         - i += 1;
 
 ---
-
 > id: pascal-intro-1
 
-Ovaj je dijagram pokazao samo prvih dvanaest redaka, ali mogli smo nastaviti zauvijek, dodajući nove retke na dnu. Primjetite da je trokut [[simetričan|right-angled|equilateral]], što vam može pomoći da izračunate neke ćelije.
+Ovaj dijagram pokazuje samo prvih dvanaest redaka, ali mogli smo nastaviti u beskonačnost, dodajući nove retke na bazi trokuta. Primjetite da je trokut [[simetričan|right-angled|equilateral]], što vam može pomoći da izračunate neke ćelije.
 
 ---
-
 > id: pascal-triangle
 
-Trokut se zove [__Pascalov trokut__](gloss:pascals-triangle), nazvan po francuskom matematičaru [Blaise Pascal](bio:pascal). Bio je jedan od prvih europskih matematičara koji je istražio njegove obrasce i svojstva, ali to je bilo poznato i drugim civilizacijama mnogo stoljeća ranije:
+Ovaj trokut zove se [__Pascalov trokut__](gloss:pascals-triangle), nazvan po francuskom matematičaru [Blaise Pascalu](bio:pascal). On je bio jedan od prvih europskih matematičara koji je istražio obrasce i svojstva ovog trokuta, no sve to bilo je poznato i drugim civilizacijama mnogo stoljeća ranije:
 
 ::: column(width=200)
 
     x-img(src="images/pascal-1.jpg" width=130 height=280 style="margin: 0 auto")
 
-{.caption} U 450. godine, indijski matematičar [Pingala](bio:pingala) nazvao je trokut __"stubištem gore Meru"__, nazvanim po svetoj hinduističkoj planini.
+{.caption} 450. godine, indijski matematičar [Pingala](bio:pingala) nazvao je trokut __"Stubište planine Meru"__, po svetoj hinduističkoj planini.
 
 ::: column(width=200)
 
     x-img(src="images/pascal-2.jpg" width=200 height=280)
 
-{.caption} U Iranu je bio poznat kao __"Khayyam trokut"__ (مثلث خیام), nazvan po perzijskom pjesniku i matematičaru [Omaru Khayyámu](bio:khayyam).
+{.caption} U Iranu je trokut bio poznat kao __"Khayyam trokut"__ (مثلث خیام), nazvan po perzijskom pjesniku i matematičaru [Omaru Khayyámu](bio:khayyam).
 
 ::: column(width=200)
 
     x-img(src="images/pascal-3.jpg" width=200 height=280)
 
-{.caption} U Kini, matematičar Jia Xian također je otkrio trokut. Ime je dobio po njegovom nasljedniku, __"trokut Yang Hui"__ (杨辉 三角).
+{.caption} U Kini, matematičar Jia Xian također je otkrio trokut. Ime je dobio po njegovom nasljedniku, __"Trokut Yang Hui"__ (杨辉 三角).
 
 :::
 
-Pascalov trokut može se stvoriti vrlo jednostavnim uzorkom, ali on je ispunjen iznenađujućim uzorcima i svojstvima. Zato je stotinama godina fascinirao matematičare širom svijeta.
+Pascalov trokut može se napraviti vrlo jednostavnim uzorkom, ali on je ispunjen iznenađujućim uzorcima i svojstvima. Zato je stotinama godina fascinirao matematičare širom svijeta.
 
 _{button.next-step} Nastavi_
 
 ---
-
 > id: pascal-sequences
 
-### Pronalaženje slijeda
+### Pronalaženje nizova
 
-U prethodnim smo odjeljcima vidjeli bezbroj različitih matematičkih nizova. Ispada da se mnogi od njih mogu naći i u Pascalovom trokutu:
+U prethodnim smo odjeljcima vidjeli mnogo različitih matematičkih nizova. Mnogi od njih mogu se naći i u Pascalovom trokutu:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
@@ -1736,7 +1663,7 @@ U prethodnim smo odjeljcima vidjeli bezbroj različitih matematičkih nizova. Is
 
 #### {.btn.yellow} _{span.check(when="blank-0")}_
 
-Brojevi u prvoj dijagonali s obje strane su [[brojevi|increasing|even]].
+Brojevi u prvoj dijagonali s obje strane uvijek su [[jedinice|increasing|even]].
 
 ::: tab
 
@@ -1748,7 +1675,7 @@ Brojevi u drugoj dijagonali na obje strane su [[cijeli brojevi|primes|square num
 
 #### {.btn.red} _{span.check(when="blank-2")}_
 
-Brojevi u trećoj dijagonali na obje strane su [[brojevi trokuta|square numbers|Fibonacci numbers]].
+Brojevi u trećoj dijagonali na obje strane su [[trokutni brojevi|square numbers|Fibonacci numbers]].
 
 ::: tab
 
@@ -1760,13 +1687,13 @@ Brojevi u četvrtoj dijagonali su [[tetraedarski brojevi|cubic numbers|powers of
 
 #### {.btn.blue} _{span.check(when="blank-4")}_
 
-Ako zbrojite sve brojeve u redu, njihovi zbrojevi tvore drugi slijed: [[snage dvije|perfect numbers|prime numbers]].
+Ako zbrojimo sve brojeve u redu, njihovi zbrojevi tvore drugi niz: [[kvadrati brojeva|perfect numbers|prime numbers]].
 
 ::: tab
 
 #### {.btn.teal} _{span.check(when="blank-5")}_
 
-U svakom retku koji ima glavni broj u svojoj drugoj ćeliji, svi su sljedeći brojevi [[višestruki|factors|inverses]] tog pravog broja.
+U svakom retku koji ima prost broj u svojoj drugoj ćeliji, svi su sljedeći brojevi [[višekratnici|factors|inverses]] tog prostog broja.
 
 ::: tab
 
@@ -1777,31 +1704,28 @@ Dijagram iznad označava „plitke“ dijagonale u različitim bojama. Ako zbroj
 :::
 
 ---
-
 > id: pascal-sequences-1
 
-Naravno, svaki od ovih obrazaca ima matematički razlog koji objašnjava zašto se pojavljuje. Možda možete pronaći neke od njih!
+Naravno, svaki od ovih obrazaca ima matematičko objašnjenje zašto se pojavljuje. Možda možete pronaći neke od njih!
 
-Drugo pitanje koje možete postaviti je koliko se često pojavljuje broj u Pascalovom trokutu. Jasno je da postoji beskonačno mnogo 1, jedan, a svaki drugi broj pojavljuje se [[najmanje dva puta|at least once|exactly twice]], _{span.reveal(when="blank-0")} u drugoj dijagonali na obje strane._
+Drugo pitanje koje se može postaviti je koliko se često pojavljuje broj u Pascalovom trokutu. Jasno je da postoji beskonačno mnogo jedinica, jedna dvojka, a svi ostali brojevi pojavljuju se [[najmanje dva puta|at least once|exactly twice]], _{span.reveal(when="blank-0")} u drugoj dijagonali na obje strane._
 
 ---
-
 > id: pascal-sequences-2
 
-Neki se brojevi u sredini trokuta također pojavljuju tri ili četiri puta. Postoji čak nekoliko koji se pojavljuju šest puta: možete vidjeti i [120](->.s120) i [3003](->.s3003) četiri puta u trokutu iznad, a pojavit će se još dva puta u redovima 120 i 3003 ,
+Neki se brojevi u sredini trokuta također pojavljuju tri ili četiri puta. Postoji čak nekoliko njih  koji se pojavljuju šest puta: možete vidjeti i [120](->.s120) i [3003](->.s3003) četiri puta u trokutu iznad, a pojavit će se još dva puta u redovima 120 i 3003 ,
 
-Budući da je 3003 broj trokuta, on se zapravo pojavljuje još dva puta u _trećoj_ dijagonali trokuta - što čini ukupno osam pojava.
+Budući da je 3003 trokutni broj, on se zapravo pojavljuje još dva puta u _trećoj_ dijagonali trokuta - što čini ukupno osam pojavljivanja.
 
-Nije poznato postoje li neki drugi brojevi koji se u trokutu pojavljuju osam puta ili postoje brojevi koji se pojavljuju više od osam puta. Američki matematičar [David Singmaster](bio:singmaster) pretpostavio je da postoji fiksno ograničenje u koliko često se brojevi mogu pojaviti u Pascalovom trokutu, ali to još nije dokazano.
+Nije poznato postoje li i neki drugi brojevi koji se u trokutu pojavljuju osam puta ili postoje brojevi koji se pojavljuju više od osam puta. Američki matematičar [David Singmaster](bio:singmaster) pretpostavio je da postoji fiksno ograničenje koliko se često neki broj može pojaviti u Pascalovom trokutu, ali to još nije dokazano.
 
 ---
-
 > id: modular
 > goals: select
 
-### Podijeljenost
+### Djeljivost
 
-Neki obrasci Pascalovog trokuta nisu tako lako prepoznati. Na donjem dijagramu označite sve ćelije koje su ujednačene:
+Neki obrasci Pascalovog trokuta ne mogu se tako lako prepoznati. Na donjem dijagramu označite sve ćelije u kojima su parni brojevi:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -1817,14 +1741,13 @@ Neki obrasci Pascalovog trokuta nisu tako lako prepoznati. Na donjem dijagramu o
         - i += 1;
     x-gesture(target="#pascal-select .r:nth-child(3) .c:nth-child(2)")
 
-{.reveal(when="select")} Izgleda da parni broj u Pascalovom trokutu tvori drugi, manji [[trokut|matrix|square]].
+{.reveal(when="select")} Izgleda da parni brojevi u Pascalovom trokutu tvore drugi, manji [[trokut|matrix|square]].
 
 ---
-
 > id: modular-1
 > goals: c2 c3 c4 c5
 
-Ručno bojanje svake ćelije traje dugo, ali ovdje možete vidjeti što se događa ako to učinite za još mnogo redaka. A što je sa stanicama koje se dijele s drugim brojevima?
+Ručno bojanje svake ćelije traje dugo, ali ovdje možete vidjeti što se događa ako to učinite za još mnogo redaka. A što je s ćelijama djeljivima s nekim drugim brojevima?
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -1849,14 +1772,13 @@ Ručno bojanje svake ćelije traje dugo, ali ovdje možete vidjeti što se doga�
         button.btn.btn-yellow(data-value="5") Divisible by 5
 
 ---
-
 > id: modular-2
 
 ::: column.grow
 
-Wow! Obojene ćelije uvijek se pojavljuju u [[trokutima|squares|pairs]] (osim nekoliko pojedinačnih ćelija, koje se mogu vidjeti kao trokut veličine 1).
+Wow! Obojene ćelije uvijek se pojavljuju u [[trokutima|squares|pairs]] (osim nekoliko pojedinačnih ćelija, koje se mogu definirati kao trokut veličine 1).
 
-Ako nastavimo uzorak ćelija djeljiv s 2, dobit ćemo jednu koja je vrlo slična __Sierpinskom trokutu__ na desnoj strani. Oblici poput ovoga, koji se sastoje od jednostavnog obrasca koji izgleda zauvijek ostaje sve manji i manji, nazivaju se [__fraktalima__](gloss:fractal). Saznat ćete više o njima u budućnosti ...
+Ako nastavimo uzorak ćelija djeljivih s 2, dobit ćemo jednu koja je vrlo slična __trokutu Sierpinski__ prikazanom desno. Oblici poput ovog, koji se sastoje od jednostavnog obrasca koji se nastavlja u beskonačnost postajući sve manji i manji, nazivaju se [__fraktali__](gloss:fractal). Saznat ćete više o njima poslije ...
 
 ::: column.width(280)
 
@@ -1866,18 +1788,17 @@ Ako nastavimo uzorak ćelija djeljiv s 2, dobit ćemo jednu koja je vrlo slična
 :::
 
 ---
-
 > id: pascal-binomial
 
 ### Binomni koeficijenti
 
-Postoji još jedno važno svojstvo Pascalovog trokuta o kojem moramo razgovarati. Da bismo ga razumjeli, pokušat ćemo riješiti isti problem s dvije potpuno različite metode, a zatim ćemo vidjeti kako su povezani.
+Postoji još jedno važno svojstvo Pascalovog trokuta koje moramo spomenuti. Da bismo ga razumjeli, pokušat ćemo riješiti isti problem pomoću dvije potpuno različite metode, a zatim ćemo vidjeti kako su povezane.
 
 {.todo} Uskoro
 
 ---
 
-## Granice i konvergencija
+## Limesi i konvergencija
 
 > section: convergence
 > sectionStatus: dev

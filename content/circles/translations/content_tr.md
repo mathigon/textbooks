@@ -2,7 +2,6 @@
 
 ## Giriş
 
-
 > section: introduction
 > id: intro
 
@@ -85,7 +84,6 @@ Burada çapı 1 olan bir tekerlek var. Çevresini “açtıkça” uzunluğunun 
 
 {.text-center} `C =` [[`2 π r`|`π r`|`π r^2`]]dir.
 
-
 ---
 > id: nature
 
@@ -125,7 +123,6 @@ Burada çapı 1 olan bir tekerlek var. Çevresini “açtıkça” uzunluğunun 
 
 {.r} Ve bunun gibi daha pek çok örnek var: gökkuşağından tutun da sudaki dalgalara kadar. Başka bir örnek aklınıza geliyor mu? [Continue](btn:next)
 
-
 > id: max-area
 > goals: area-circle
 
@@ -137,7 +134,7 @@ Doğada su damlası ya da hava kabarcığı gibi nesneler yüzey alanlarını k�
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Üçgen
       div(data-value="1") Kare
       div(data-value="2") Beşgen
@@ -145,7 +142,6 @@ Doğada su damlası ya da hava kabarcığı gibi nesneler yüzey alanlarını k�
     svg(width=320 height=200)
 
 {.caption} _Çevre uzunluğu_ = __{.m-green}100__, _Alan_ = __${area}__
-
 
 :::
 
@@ -158,7 +154,6 @@ Doğada su damlası ya da hava kabarcığı gibi nesneler yüzey alanlarını k�
 Peki ama bir çemberin alanını nasıl hesaplayabiliriz? Hadi [dörtgenlerin alanını bulurken](/course/polygons-and-polyhedra/quadrilaterals) kullandığımız tekniği deneyelim: şekli çeşitli parçalara bölelim, ve bu parçaları alanını daha önceden bildiğimiz(üçgen ya da dikdörtgen gibi) bir şekil biçiminde birleştirmeye çalışalım.
 
 Aradaki tek fark, çemberler eğri olduğu için bazı yaklaşımlar kullanmamız gerekmesi:
-
 
 ::: column(width=340)
 
@@ -187,7 +182,6 @@ _{span.reveal(when="blank-1")} Dikdörtgenin uzunluğu çemberin
 _{span.reveal(when="blank-2")} (Dilimlerin yarısının aşağı, yarısının yukarı baktığına dikkat edin.)_
 
 {.reveal(when="blank-2" delay=1000)} Yani dikdörtgenin toplam alanı yaklaşık olarak  `A = π r^2`.
-
 
 :::
 
@@ -266,7 +260,6 @@ Pi’yi hesaplamaya yönelik bir yaklaşım sonsuz sayı serilerini kullanmak. �
 
 {.reveal(when="blank-0")} Bu serinin gittikçe daha çok terimini hesaba katarak Pi’ye gittikçe daha çok yaklaşık bir değer buluruz.
 
-
 ---
 > id: pi-colours
 > goals: hover
@@ -296,14 +289,17 @@ Burada Pi'nin ilk 100 basamağını görebilirsiniz. Basamakların nasıl bir da
 
 Eğer Pi normal ise, bu şu demek: aklınıza gelen _herhangi_ bir sayı Pi’nin basamaklarının arasında bir yerde olacaktır. Burada Pi’nin ilk bir milyon basamağında arama yapabilirsiniz. Sizin doğum gününüz Pi’nin basamaklarında var mı?
 
-    .box
-      .box-title: h3 Pi’nin Bir Milyon Basamağı
-      .box-body.pi-controls
-        | Bir sayı dizisi arayabilirsiniz:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### Pi’nin Bir Milyon Basamağı
+
+    .pi-controls
+      | Bir sayı dizisi arayabilirsiniz:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -317,18 +313,15 @@ Pi’yi anlaması kolay ve bilimde ve matematikte muazzam bir öneme sahip. Bunu
     x-video(src="images/museum.mp4" poster="images/museum.jpg" width=220 height=140 audio credit="© 20th Century Fox")
     p.caption Pi “Müzede Bir Gece 2”deki tabletin gizli şifresi.
 
-
 ::: column(width=220)
 
     x-video(src="images/simpsons.mp4" poster="images/simpsons.jpg" width=220 height=140 audio credit="© Fox")
     p.caption Profesör Frink (“Simpsons”) Pi’nin 3’e eşit olduğunu söyleyerek bir oda dolusu bilim adamını susturuyor.
 
-
 ::: column(width=220)
 
     x-video(src="images/star-trek.mp4" poster="images/star-trek.jpg" width=220 height=140 audio credit="© NBC")
     p.caption Spock (“Uzay Yolu”) kötü niyetli bir bilgisayarı Pi’nin son basamağını hesaplamasını isteyerek etkisiz hale getiriyor.
-
 
 :::
 
@@ -338,8 +331,6 @@ Pi’yi anlaması kolay ve bilimde ve matematikte muazzam bir öneme sahip. Bunu
 Her yıl kutlanan bir _Pi günü_ bile var. Tarihi `pi ≈ 3.14` olduğu için 14 Mart ya da `pi ≈ 22/7` olduğu için 22 Temmuz olarak geçiyor. 
 
     figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
-
-
 
 --------------------------------------------------------------------------------
 
@@ -440,7 +431,6 @@ Ancak matematiksel bir bakış açısıyla 360 sayısı tamamen rastgele. Mars�
 
 {.caption} 540 McFlip, 540° lik bir dönüş
 
-
 :::
 
 ---
@@ -496,7 +486,6 @@ __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} 
 
 :::
 
-
 ---
 > id: radians-table
 
@@ -524,8 +513,6 @@ Ranyanı birim çemberinin çevresinin üzerinde “kat edilen mesafe” olarak 
 yani  _gerçek_ hızı [[`(2 pi)/1.5 xx 6800`|
 `(2 pi)/1.5 ÷ 6800`|`6800/(2 * pi)`]] _{span.reveal(when="blank-1")}= 28483 km
 bölü saat._
-
-
 
 ::: column(width=300)
 
@@ -605,12 +592,7 @@ Radyan kullanmanın  [__sinüs fonksiyonu__](gloss:sin) ile çalışırken özel
 
 {.reveal(when="var-0")} Buna __küçük açı yaklaşımı__ denir ve trigonometrik fonksiyonları içeren kimi denklemleri çok sadeleştirebilir. Bununla ilgili ileride daha çok şey öğreneceksiniz.
 
-
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Teğetler, Kirişler ve Yaylar
 
@@ -655,7 +637,6 @@ Geçtiğimiz bölümlerde merkez, çap, yarıçap ve çevre gibi çemberin çeş
 * {.r.reveal(when="next-4")} Son olarak [{.purple} segment](pill:segment) çemberin iç bölgesinde bir _yay_ ile _bir kiriş_ arasında kalan yerdir..
   [Devam](btn:next)
 
-
 :::
 
 ---
@@ -669,86 +650,11 @@ Bu bölümde bütün bu elemanlar arasındaki ilişkilere bakacağız ve her bir
 
 {.todo} COMING SOON!
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
-
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
-    // Point of Tangency: The point where a tangent line touches the circle.
-    // 
-    // The tangent line and the radius drawn to the point of tangency have a unique
-    // relationship. Let’s investigate it here.
-    // 
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    // 
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    // 
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
-
 ---
 
 ### Kirişler
 
 {.todo} COMING SOON!
-
-    // A chord is a line segment whose endpoints are on a circle. A diameter is the
-    // longest chord in a circle. There are several theorems that explore the
-    // properties of chords.
-    // 
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    // 
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    // 
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    // 
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    // 
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
-
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 > id: earth-arc
@@ -808,7 +714,7 @@ Yayın, dilimin ve açının nasıl da çemberin bütünü ile _aynı orana_ sah
 ::: .reveal(when="blank-0")
 Demek ki [{.red} yayın uzunluğu](pill:arc) da çemberin [{.purple} çevresinin](pill:circ) `1/4`ü, ve [{.yellow} dilimin alanı](pill:sector) da bütün dairenin [{.orange} alanının](pill:area) `1/4`ü.
 
- Bu ilişkiyi bir denklem ile ifade edebiliriz:
+Bu ilişkiyi bir denklem ile ifade edebiliriz:
 
 {.text-center} `"yay uzunluğu" / "çevre" = blank("dilim alanı","yarıçap","yay alanı") / "daire alanı" = "merkez açı" / blank("360°","180°","90°")`
 :::
@@ -851,14 +757,6 @@ Demek ki [{.red} yayın uzunluğu](pill:arc) da çemberin [{.purple} çevresinin
 :::
 
 Burada _r_ çemberin yarıçapı, _c_ ise merkez açının ölçüsü.
-
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
-
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
 
 ---
 > id: arcs-rad
@@ -919,7 +817,6 @@ Eratosthenes yaz gündönümü öğle vaktinde dikilitaşın gölgesini fark ett
 ::: .reveal(when="next-0")
 
 Eratosthenes gölgenin [{.teal} açısını](pill:angle1) 7.2° olarak ölçtü. Bu İskenderiye’den Asvan’a olan [{.red} yayın](pill:arc) [{.purple} merkez açısı](pill:angle2) kadardı, çünkü bunlar [[zıt|dikey|denk]] açılar.
-
 
 :::
 
@@ -998,16 +895,7 @@ Christopher Columbus’u Portekiz’in batısına seyahate yönlendiren böyle y
 
 {.todo} COMING SOON!
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## The Circle Theorems
 
@@ -1125,11 +1013,7 @@ Combines all of Euclidean Geometry
 
 {.todo} TODO
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Cyclic Polygons
 
@@ -1152,11 +1036,7 @@ formed a linear pair when matched up.
 Inscribed Quadrilateral Theorem: A quadrilateral is inscribed in a circle if
 and only if the opposite angles are supplementary.
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Küre, Koni ve Silindir
 
@@ -1214,7 +1094,6 @@ Burada Almanya’da Oberhausen’daki _Gazmetre_ yi görebilirsiniz. Yakınlarda
 > id: cylinder-prism
 
 #### Silindirin Hacmi
-
 
 Silindirin altında ve üstünde iki eş daire var, bunlara _taban_ diyoruz. Bir silindirin __{.m-blue}yüksekliği *h*__ iki tabanı arasındaki dik mesafedir ve silindirin __{.m-red} yarıçapı *r*__ ise tabandaki dairelerin yarıçapıdır.
 
@@ -1279,12 +1158,6 @@ Bir silindiri bir sürü ince daireye dilimlediğinizi düşünün. Sonrasında 
 
 :::
 
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
-
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
-
 ---
 > id: cylinder-surface
 
@@ -1303,7 +1176,6 @@ Silindirin bir üstünde bir de altında iki tane [[daire|küre|kare]] var. Eği
   _{span.reveal(when="eqn-1")} ve genişliği dairelerin 
  [[çevresi|çapı|teğeti]] ile aynı:_
   _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
-
 
 ::: column(width=320)
 
@@ -1335,7 +1207,7 @@ Yukarıdaki _Gazmetre_ nin yarıçapı 35m ve yüksekliği 120m idi. Şimdi hacm
 
 ::: column.grow
 
- [__Koni__](gloss:cone) çembersel bir __{.m-red}tabanı__ olan 3 boyutlu bir şekildir. Kenarları şekildeki gibi “yukarı doğru sivrilir” ve __{.m-green}tepe noktası__ adındaki bir noktada biter.
+[__Koni__](gloss:cone) çembersel bir __{.m-red}tabanı__ olan 3 boyutlu bir şekildir. Kenarları şekildeki gibi “yukarı doğru sivrilir” ve __{.m-green}tepe noktası__ adındaki bir noktada biter.
 
 Koninin __{.m-red}yarıçapı__ çembersel tabanının yarıçapıdır, ve koninin
 __{.m-blue}yüksekliği__ tabandan tepe noktasına olan dik mesafedir.
@@ -1436,7 +1308,6 @@ Bir koninin yüzey alanını bulmak biraz daha zor. Önceki kişi bir koniyi iki
 
 {.text-center.reveal(when="blank-0")} `pill(A_"Taban","yellow","circle") =`
 _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
-
 
 ::: column(width=320)
 
@@ -1589,7 +1460,6 @@ Aşağıdaki çubuğu kaydırdıkça bu iki şeklin tabandan belli bir yüksekli
 
     x-slider(steps=100)
 
-
 {.reveal(when="slider-0")} Şimdi bu şekillerin tabandan belli bir __{span.pill.blue.step-target(data-to="h")}*h* yüksekliğindeki__ yatay kesitlerinin alanını bulmaya çalışalım.
 
 ::: column.grow
@@ -1598,7 +1468,6 @@ Aşağıdaki çubuğu kaydırdıkça bu iki şeklin tabandan belli bir yüksekli
 
 {.reveal(when="blank-0")} Yatay kesitin __{span.pill.red.step-target(data-to="x")}yarıçapı
 *x*__ _{span.pill.yellow.step-target(data-to="tri")}dik bir üçgenin_ parçası, yani [Pisagor](gloss:pythagoras-theorem) teoremini kullanabiliriz:
-
 
 ::: .reveal(when="blank-0")
 {.text-center} `pill(r^2,"green","r") = pill(h^2,"blue","h1") + pill(x^2,"red","x")`.
@@ -1663,7 +1532,6 @@ O zaman toplam kütlesi
 
 {.reveal(when="numbers")} Burada 6’dan sonra 24 tane sıfır var!
 
-
 ::: column(width=280)
 
     x-solid(size=280 rotate="0.5")
@@ -1714,13 +1582,13 @@ Bu özellikle harita yapanlar için bir problem. Dünyanın eğri, 3 boyutlu bir
 
 Burada __izdüşümler__ denilen bir kaç değişik çeşit harita görüyorsunuz. Kırmızı kareyi oynatarak bu alanın kürede _gerçekte_ nasıl göründüğüne bakın:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Silindirik
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide") Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline
@@ -1743,28 +1611,11 @@ Kürenin yüzey alanını bulmak için bir kez daha ona değişik şekillerle ya
 
 {.todo} COMING SOON: Sphere Surface Area Proof
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
     
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
     
-    // And therefore,
-    // surface area = 3 * volume / radius = 
     
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
-
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
-
-
 
 --------------------------------------------------------------------------------
-
-
 
 ## Konik Kesitler
 
@@ -1822,7 +1673,6 @@ Konik kesitler ilk olarak antik Yunan matematikçisi [Perga’lı Apollonius](bi
 
 İlerideki derslerde paraboller ve hiperboller hakkında çok şey öğreneceğiz. Şimdilik elipse yakından bakalım.
 
-
 ::: column(width=300)
 
     x-img(src="images/conics.svg" width=300 height=340)
@@ -1839,12 +1689,6 @@ Bir elips neredeyse “uzatılmış çember”e benzer. Aslında elipsi _iki mer
 İki noktaya sabitlenmiş uzun bir ipiniz varsa bu ipin uzandığı en uzak noktaları işaretleyerek mükemmel bir elips çizebilirsiniz: 
 
 {.todo} Coming soon: Ellipses drawing interactive
-
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
@@ -1952,7 +1796,6 @@ Yer çekimi her şeyin yere düşmesine yol açan şeydir ve aynı zamanda gezeg
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)

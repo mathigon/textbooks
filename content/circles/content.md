@@ -88,7 +88,7 @@ on forever without any specific pattern:
 > goals: unroll
 
 Here is a wheel with diameter 1. As you “unroll” the circumference, you can see
-that its length is exactly [[`pi`|`2 * pi`|3]]:
+that its length is exactly [[`pi`|`2 pi`|3]]:
 
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
@@ -159,7 +159,7 @@ circular or spherical, and reducing their surface area.
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Triangle
       div(data-value="1") Square
       div(data-value="2") Pentagon
@@ -347,14 +347,17 @@ If Pi is normal, it means that you can think of _any_ string of digits, and it
 will appear somewhere in its digits. Here you can search the first one
 million digits of Pi – do they contain your birthday?
 
-    .box
-      .box-title: h3 One Million Digits of Pi
-      .box-body.pi-controls
-        | Search for a string of digits:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### One Million Digits of Pi
+
+    .pi-controls
+      | Search for a string of digits:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -1965,13 +1968,13 @@ areas.
 Here you can see few different types of maps, called __projections__. Try moving
 the red square, and watch what this area _actually_ looks like on a globe:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Cylindrical
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide") Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline
