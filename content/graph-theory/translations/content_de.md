@@ -55,7 +55,7 @@ dir noch andere Beispiele vorstellen?
 
 In der Mathematik können all diese Beispiele als [__Graphen__](gloss:graph) dargestellt werden
 (nicht zu verwechseln mit dem _Graph_ einer Funktion). Ein Graph besteht aus einzelnen
-_Punkten_ die [[Knoten|Kreise|Kreuzungen]] genannt werden, von denen einige durch
+_Punkten_ die [[Knoten oder Ecken|Kreise oder Ecken|Kreuzungen oder Ecken]] genannt werden, von denen einige durch
 [[Kanten|Grenzen|Paare]] verbunden sind.
 
 Die __Graphentheorie__ beschäftigt sich mit Graphen und ihren Eigenschaften. Sie ist
@@ -71,7 +71,7 @@ eines der spannendsten und visuell ansprechendsten Gebiete der Mathematik und ha
 > id: intro-1
 
 Wir können das Layout von einfachen Graphen mit Kreisen und Linien zeichnen. Die Position
-der Knoten und die Länge der Kanten spielt dabei keine Rolle - uns interessiert nur, _wie sie
+der Knoten (Ecken) und die Länge der Kanten spielt dabei keine Rolle - uns interessiert nur, _wie sie
 miteinander verbunden_ sind. Die Kanten können sich sogar kreuzen und müssen nicht unbedingt gerade sein.
 
 ::: column(width=200)
@@ -576,11 +576,11 @@ jeden Graphen funktioniert...
               td.xe 0
           p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
     
-      .legend(slot="legend") Der einfachste Graph besteht aus einem einzigen Knoten. Wir können leicht überprüfen, dass die Euler-Formel funktioniert.
-      .legend(slot="legend") Wir wollen einen neuen Knoten zu unserem Graphen hinzufügen. Außerdem müssen wir noch eine Kante hinzufügen, und die Euler-Formel funktioniert immer noch.
-      .legend(slot="legend") Wenn wir einen dritten Knoten zum Graphen hinzufügen wollen, haben wir zwei Möglichkeiten. Wir könnten ein kleines Dreieck erstellen: dies fügt einen Knoten, eine Fläche und zwei Kanten hinzu, so dass die Euler-Formel immer noch funktioniert.
-      .legend(slot="legend") Stattdessen könnten wir die Linie einfach um eins verlängern: das fügt einen Knoten und eine Kante hinzu, und die Euler-Formel funktioniert.
-      .legend(slot="legend") Machen wir weiter: Wenn wir jetzt ein Viereck erstellen, fügen wir einen Knoten, zwei Kanten und eine Fläche hinzu. Die Euler-Formel funktioniert immer noch.
+      .legend(slot="legend") Der einfachste Graph besteht aus einer einzigen Ecke (Knoten). Wir können leicht überprüfen, dass die Euler-Formel funktioniert.
+      .legend(slot="legend") Wir wollen eine neue Ecke zu unserem Graphen hinzufügen. Außerdem müssen wir noch eine Kante hinzufügen, und die Euler-Formel funktioniert immer noch.
+      .legend(slot="legend") Wenn wir eine dritte Ecke zum Graphen hinzufügen wollen, haben wir zwei Möglichkeiten. Wir könnten ein kleines Dreieck erstellen: dies fügt eine Ecke, eine Fläche und zwei Kanten hinzu, so dass die Euler-Formel immer noch funktioniert.
+      .legend(slot="legend") Stattdessen könnten wir die Linie einfach um eins verlängern: das fügt eine Ecke und eine Kante hinzu, und die Euler-Formel funktioniert.
+      .legend(slot="legend") Machen wir weiter: Wenn wir jetzt ein Viereck erstellen, fügen wir eine Ecke, zwei Kanten und eine Fläche hinzu. Die Euler-Formel funktioniert immer noch.
 
 ---
 > id: euler-3
