@@ -7,7 +7,7 @@ import { wait } from "@mathigon/core";
 import { CoordinateSystem, Step } from "../shared/types";
 import { CoinFlip } from "./components/coin";
 
-import "./components/dragging";
+import "../shared/components/buckets";
 import "./components/coin";
 
 export function simulation($step: Step) {
