@@ -50,7 +50,7 @@ impossible to exactly predict the colour of the next card.
 Our language has many words we can use to describe the answer to these questions, without knowing
 exactly what will happen. Try to move each of these events to the best possible description:
 
-    x-buckets
+    x-buckets.likelihoods
       .inputs
         .input(bucket="3").md The sun rises tomorrow.
         .input(bucket="2").md LIKELY
@@ -108,21 +108,21 @@ rolling that 6!
 
 ::: column.frame.f-blue.text-center(width=200 parent="padded-thin")
 
-We can represent probabilities as a fraction, that shows how many outcomes were successful. In this example,
+We can represent probabilities as a fraction, that shows how many outcomes were successful:
 
-`p = [[5]]/[[20]]`
+`p = blank(5)/20`
 
-::: column.frame.f-blue.text-center(width=200)
+::: column.frame.f-green.text-center(width=200)
 
-We can convert the fraction into a decimal number between 0 and 1. In this case,
+We can convert the fraction into a decimal number between 0 and:
 
-p = [[0.25]]
+_p_ = [[0.25]]
 
-::: column.frame.f-blue.text-center(width=200)
+::: column.frame.f-yellow.text-center(width=200)
 
-We can also convert it into a percentage from 0% to 100%. In this case,
+We can also convert it into a percentage between 0% to 100%:
 
-p = [[25]]%
+_p_ = [[25]]%
 
 :::
 

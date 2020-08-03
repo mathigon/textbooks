@@ -8,6 +8,7 @@ import {list, flatten, Obj, tabulate2D, repeat} from '@mathigon/core';
 import {Random} from '@mathigon/fermat';
 import {$, $N, ElementView} from '@mathigon/boost';
 import {Step} from '../shared/types';
+import '../shared/components/buckets';
 
 
 // -----------------------------------------------------------------------------

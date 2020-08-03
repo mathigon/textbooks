@@ -58,7 +58,7 @@ class FlowGrid {
     }
 
     const height = Math.max(this.minHeight, yOffset);
-    this.$parent.animate({height: `${height}px`}, 250)
+    this.$parent.animate({height: `${height}px`}, 200)
   }
 
   private positionRow($rowEls: ElementView[], rowWidths: number[],
@@ -136,7 +136,7 @@ export class Buckets extends CustomElementView {
             this.check();
           }
 
-          await $i.animate({transform: 'none'}, 250).promise;
+          await $i.animate({transform: 'none'}, 200).promise;
           $i.removeClass('active');
         }
       });
