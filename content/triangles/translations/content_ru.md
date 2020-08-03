@@ -497,7 +497,7 @@ _{button.next-step} Продолжить_
           path.red(x="segment(a,b)")
           path(x="segment(a,c)")
           path.red(x="segment(b,c)")
-        p.caption Две стороны и #[заключенный между ними] угол равны.
+        p.caption Две стороны и #[strong между ними] угол равны.
 
       div(style="width: 150px")
         .text-center: strong ASA
@@ -510,7 +510,7 @@ _{button.next-step} Продолжить_
           path.red(x="segment(a,b)")
           path(x="segment(a,c)")
           path(x="segment(b,c)")
-        p.caption Два угла и #[заключенная между ними] сторона равны.
+        p.caption Два угла и #[strong между ними] сторона равны.
 
       div(style="width: 150px")
         .text-center: strong AAS
