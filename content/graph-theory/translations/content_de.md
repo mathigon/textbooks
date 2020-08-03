@@ -858,8 +858,6 @@ Tatsächlich können wir jeden beliebigen Knoten als Startpunkt wählen und dann
 
 In einem Graphen mit 8 Städten muss jeder Hamiltonkreis auch 8 Städte enthalten. Somit gilt:
 
-//    ul.var(:html="tsmString(tsn1)")
-
 - Es gibt 8 Auswahlmöglichkeiten für die 1. Stadt.
 - Nachdem die erste Stadt ausgewählt wurde, gibt es nur noch 7 Auswahlmöglichkeiten für die 2. Stadt.
 - Danach gibt es 6 Auswahlmöglichkeiten für die 3. Stadt.
@@ -868,7 +866,7 @@ In einem Graphen mit 8 Städten muss jeder Hamiltonkreis auch 8 Städte enthalte
 - …
 - Schließlich bleibt für die 8. Stadt nur noch 1 Wahl übrig.
 
-Dies bedeutet, dass es insgesamt 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 = 40,320 mögliche Pfade gibt.
+Dies bedeutet, dass es insgesamt 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 = 40 320 mögliche Pfade gibt.
 Eine Kurzschreibweise für dieses Produkt ist 8! oder __Faktor__ 8.
 
 Du kannst dir vorstellen, dass es unter Umständen nicht möglich ist, direkt zwischen zwei
@@ -890,7 +888,7 @@ immer schnellere Computer herzustellen, oder bei der Analyse der Struktur der [D
 
 Eine einfache Methode wäre es, alle möglichen Wege auszuprobieren, die Länge jedes
 Weges zu ermitteln und dann den kürzesten zu wählen. Wie auch immer, wir haben gerade
-gezeigt, dass es selbst mit nur ${tsn2}{tsn2|10|2,20,1} Städten ${tsn2} = ${factorial(tsn2)}! mögliche
+gezeigt, dass es selbst mit nur ${tsn2}{tsn2|10|2,20,1} Städten ${tsn2}! = ${factorial(tsn2)} mögliche
 Wege gibt. Sobald du hunderte oder tausende Knoten hast, wird es selbst mit leistungsstarken
 Computern unmöglich, alle verschiedenen Wege auszuprobieren.
 

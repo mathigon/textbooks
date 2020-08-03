@@ -77,7 +77,7 @@ wurden.
 {.r} Es gibt eine wichtige Eigenschaft von Zahlen, die wir natürlich als selbstverständlich
 ansehen: Alle Zahlen sind __einzigartig__. Mit anderen Worten, es gibt keine zwei verschiedenen
 Zahlen, die gleich sind. 5 und 8 sind verschieden, genauso wie 100 von 101 verschieden sind,
-und so weiter. _{button.next-step} Continue_
+und so weiter. _{button.next-step} Weiter_
 
 ::: column(width=300)
 
@@ -161,7 +161,7 @@ _{span.hidden} **${nines(n)}** ist weniger als 1._
 ---
 
 Jede dieser Näherungen ist [[kleiner als|größer als|gleich]] 1. Sie bilden eine
-Zahlenfolge (gloss:sequence), die auf der Zahlengeraden stetig nach rechts wandert
+[Zahlenfolge](gloss:sequence), die auf der Zahlengeraden stetig nach rechts wandert
 und sich immer mehr der 1 nähert (ohne sie aber je ganz zu erreichen).
 
 ---
@@ -190,30 +190,29 @@ wie 0,9999… in einer [`1←10`-Maschine](gloss:dot-machine) dargestellt werden
     p.text-center.reveal(when="d1"): button.btn.btn-small.btn-red Explodieren
 
 Klicke irgendwo in das [erste Dezimalfeld](->#dots_.dot-decimal+.dot-cell), um ein
-[Punkt und Anti-Punkt-Paar] (gloss:anti-dot) zu erstellen. Dadurch wird die Zahl nicht
+[Punkt und Anti-Punkt-Paar](gloss:anti-dot) zu erstellen. Dadurch wird die Zahl nicht
 verändert.
 
 {.reveal(when="d1")} Klicke jetzt auf den [Explodieren-Knopf](->#dots_button), um
 die Zahl mit Hilfe der `1←10` Regel zu vereinfachen.
 
-{.reveal(when="x1")} Das Gleiche machen wir nun mit dem [ zweiten Dezimalfeld
-(->#dots_.dot-decimal+.dot-cell+.dot-cell). Füge zuerst ein Punkt/Anti-Punkt-Paar
-hinzu und drücke dann auf Explodieren. Beachte, wie sich das Punkt/Anti-Punkt-Paar
-gegenseitig aufhebt! Das wird [Auslöschung](gloss:dot-annihilation) genannt. Die sich
-ergebende Zahl hat sich nicht verändert und ist immer noch 0,9999… Fahre mit den
-verbleibenden Zellen fort.
+{.reveal(when="x1")} Das Gleiche machen wir nun mit dem [zweiten Dezimalfeld](->#dots_.dot-decimal+.dot-cell+.dot-cell).
+Füge zuerst ein Punkt/Anti-Punkt-Paar hinzu und drücke dann auf Explodieren.
+Beachte, wie sich das Punkt/Anti-Punkt-Paar gegenseitig aufhebt! Das wird
+[Auslöschung](gloss:dot-annihilation) genannt. Die sich ergebende Zahl hat sich
+nicht verändert und ist immer noch 0,9999… Fahre mit den verbleibenden Zellen fort.
 
 {.reveal(when="d3 x3 d4 x4")} Wenn wir ewig so weitermachen, dann sieht es so aus,
 als würden wir tatsächlich zeigen, dass 0,9999… das Gleiche ist wie 1,0000…!
 
 ---
 
-### Eine algebraische Erklärung
+### Eine mathematische Erklärung
 
 Wenn du immer noch nicht überzeugt bist, dann schauen wir uns zum Abschluss noch eine
-algebraische Erklärung an. Wenn wir uns einig sind, dass 0.9999... eine gültige Zahl
+mathematische Erklärung an. Wenn wir uns einig sind, dass 0,9999… eine gültige Zahl
 ist (die 1 sein kann oder auch nicht), dann macht es Sinn anzunehmen, dass sie auch
-allen sonstigen, üblichen Regeln der Arithmetik gehorcht.
+allen sonstigen, üblichen Regeln der Mathematik gehorcht.
 
     ol.proof
       li Wir beginnen damit, dass wir dieser Zahl einen Namen geben. Wir nennen sie #[.ivar F] für #[strong.m-green Friederike].:
@@ -230,7 +229,7 @@ allen sonstigen, üblichen Regeln der Arithmetik gehorcht.
 Erstaunlich! Aber wir sollten uns darüber klar sein, was wir hier herausgefunden haben.
 __WENN__ man davon ausgeht, dass 0,9999… in der gängigen Mathematik eine sinnvolle
 Größe ist, __DANN__ folgt daraus, dass diese Zahl gleich 1 ist. Das ist ein wichtiges Detail,
-denn dasselbe algebraische Argument kann zu philosophischen Problemen führen - wie wir im
+denn dasselbe mathematische Argument kann zu philosophischen Problemen führen - wie wir im
 nächsten Abschnitt sehen werden…
 
 
@@ -243,187 +242,192 @@ nächsten Abschnitt sehen werden…
 
 > section: unusual
 
-In the [previous section](/course/exploding-dots/infinity), we looked at a
-number with infinitely many 9s to the right of the decimal point:
+Im [vorherigen Abschnitt](/course/exploding-dots/infinity) haben wir uns eine Zahl mit
+unendlich vielen 9ern rechts vom Komma angesehen:
 
-{.text-center} __0.999999…__
+{.text-center} __0,999999…__
 
-Now, let’s see what happens if we add infinitely many 9s to the _left_ of the
-decimal point:
+Jetzt wollen wir mal sehen, was passiert, wenn wir unendlich viele 9er links vom Komma
+hinzufügen:
 
 {.text-center} __…999999__
 
 ---
 
-If we assume that this is a meaningful number (and not, for example, just
-“infinity”), we can try to use the same algebraic argument as before, to work
-out its value:
+Wenn wir davon ausgehen, dass es sich um eine gültige Zahl handelt (und nicht z.B. nur um
+"Unendlich"), können wir versuchen, dasselbe mathematische Argument wie vorher zu verwenden,
+um ihren Wert herauszufinden:
 
     ol.proof.s-yellow
-      li Let’s start by giving the number a name, say #[.ivar A] for #[strong.m-yellow Allistaire]:
-        .text-center.r #[.ivar A] = …999999#[button.next-step Continue]
-      li.reveal(when="next-0") Now multiply it by 10. This gives us
-        .text-center.r 10#[.ivar A] = …999990#[button.next-step Continue]
-      li.reveal(when="next-1") Notice that #[.ivar A] and 10#[.ivar A] only differ in their final digit. Therefore, if we subtract the equation in step 1 from the equation in step 2, we get
-        .text-center.r 9#[.ivar A] = –9#[button.next-step Continue]
-      li.reveal(when="next-2") Finally, if we divide both sides by 9, we get
+      li Fangen wir damit an, der Nummer einen Namen zu geben, sagen wir #[.ivar A] für #[strong.m-yellow Arabella]:
+        .text-center.r #[.ivar A] = …999999#[button.next-step Weiter]
+      li.reveal(when="next-0") Nun multipliziere sie mit 10. Damit erhalten wir
+        .text-center.r 10#[.ivar A] = …999990#[button.next-step Weiter]
+      li.reveal(when="next-1") Beachte, dass #[.ivar A] und 10#[.ivar A] sich nur in der Endziffer unterscheiden. Wenn wir also die Gleichung in Schritt 1 von der Gleichung in Schritt 2 subtrahieren, erhalten wir
+        .text-center.r 9#[.ivar A] = –9#[button.next-step Weiter]
+      li.reveal(when="next-2") Schließlich, wenn wir beide Seiten durch 9 teilen, erhalten wir
         .text-center.md #[.ivar A] = [[-1]]
 
 ---
 
-In other words, we have just shown that _{strong.m-yellow.nowrap}…999999_ = −1.
-Apparently, if we pulled out an infinite calculator and computed the sum of 9 +
-90 + 900 + 9000 + …, the result would be −1!
+Mit anderen Worten, wir haben gerade gezeigt, dass _{strong.m-yellow.nowrap}…99999999_ = -1 ist.
+Anscheinend, wenn wir einen Unendlichkeitsrechner zur Hand nehmen und die Summe von 9 + 90 +
+900 + 9000 + … berechnen würden, wäre das Ergebnis also -1!
 
-_Do you believe that?_
+_Glaubst du das wirklich?_
 
     figure: x-img(src="images/confused.gif" alt="Confused GID" width=200 height=200)
 
 ---
 
-### Unusual Arithmetic
+### Außergewöhnliche Mathematik
 
-Even though …9999999 is clearly not a “normal” number, let’s assume for now that
-it exists, and that it follows the basic laws of arithmetic. If that is the
-case, we’d expect …9999999 + 1 = [[0]].
+Auch wenn …999999999 eindeutig keine "normale" Zahl ist, nehmen wir zunächst einmal an,
+dass sie existiert und dass die Grundregeln der Mathematik für sie gelten. Wenn das der
+Fall ist, müssten wir also davon ausgehen, dass …9999999 + 1 = [[0]] ist.
 
 ---
 > id: dots-1
 > goals: dot
 
-Let’s use a [`1←10` machine](gloss:dot-machine) to see if that is actually the
-case. Click somewhere in the 1s cell to add 1:
+Schauen wir mit einer [`1←10`-Maschine](gloss:dot-machine) nach, ob das tatsächlich der
+Fall ist. Klicke irgendwo in die 1er-Zelle, um 1 hinzuzufügen:
 
     x-dot-machine(cells="…99999")
     x-gesture(target="#dots-1 .dot-cell:last-child")
 
 ---
 
-Looks like this actually worked! If we add 1 to _{span.nowrap}…9999999_, the
-result is 0.
+Sieht aus, als hätte das tatsächlich funktioniert! Wenn wir 1 zu _{span.nowrap}…999999999_
+addieren, ist das Ergebnis 0.
 
-But remember: all we have shown is that __IF__ we choose to believe that …999999
-is a meaningful number that follows our usual laws of arithmetic, __THEN__ it
-must have value –1. Most people simply say that it _isn’t_ a number and stop
-there – and that is a perfectly valid view.
+Aber denk dran: Alles, was wir gezeigt haben, ist, dass __WENN__ wir uns entschieden haben
+zu glauben, dass …99999999 eine sinnvolle Zahl ist, die unseren üblichen Gesetzen der
+Mathematik folgt, __DANN__ muss sie den Wert -1 haben. Die meisten Leute sagen einfach, dass
+sie _keine_ Zahl ist und hören an dieser Stelle auf - und das ist eine vollkommen zulässige
+Sichtweise.
 
-This begs the question: is there an _unusual_ system of arithmetic for which
-…999999 is a meaningful number?
+Das wirft die Frage auf: Gibt es ein _außergewöhnliches_ mathematisches System, für das
+…999999 eine sinnvolle Zahl ist?
 
 ::: .box.f-blue
-#### Challenge
+#### Herausforderung
 
-Let’s make matters worse! Consider the number with infinitely many 9s both to
-the left _and_ to the right of the decimal point: __{.m-red.nowrap}…9999.9999…__.
-Try to use the same algebraic argument to show that this equals __{.m-red}zero__.
+Machen wir das Ganze noch schlimmer! Betrachte die Zahl mit unendlich vielen 9ern sowohl
+links _und_ rechts vom Komma: __{.m-red.nowrap}…9999,9999…__.
+Versuche wieder, das vorige mathematische Argument zu benutzen, um zu zeigen, dass das
+gleich __{.m-red}Null__ ist.
 
-*Somehow this makes sense, because __{.m-red.nowrap}…9999.9999…__ =
-__{.m-green.nowrap}…9999__ + __{.m-yellow.nowrap}0.9999…__ = __{.m-green}−1__ +
+*Irgendwie macht das Sinn, denn __{.m-red.nowrap}…9999,9999…__ =
+__{.m-green.nowrap}…9999__ + __{.m-yellow.nowrap}0,9999…__ = __{.m-green}−1__ +
 __{.m-yellow}1__ = __{.m-red}0__.*
 
 :::
 
-_{button.next-step} Continue_
+_{button.next-step} Weiter_
 
 ---
 > id: warp-1
 
-### Warping the Number Line
+### Eine außergewöhnliche Zahlengerade
 
-In the previous chapter, we saw that _{span.nowrap}0.999999… = 1_. This seems
-somewhat plausible, because the sequence of approximations 0.9, 0.99, 0.999,
-0.9999, and so on, get closer and closer to 1.
+Im vorigen Kapitel haben wir gesehen, dass _{span.nowrap}0,99999999… = 1_.
+Das ist ziemlich plausibel, denn die Abfolge der Näherungen 0,9; 0,99; 0,999;
+0,9999 usw. nähert sich immer mehr der 1 an.
 
-In this example, the exact opposite happens: the numbers 9, 99, 999, 9999, and
-so on, are marching further and further away from –1. That’s why it is so
-abstruse to think that _{span.nowrap}…999999_ could possibly equal –1.
+In diesem Beispiel geschieht genau das Gegenteil: die Zahlen 9, 99, 999, 9999,
+9999 usw. entfernen sich immer weiter von -1. Deshalb ist es so abwegig zu
+glauben, dass _{span.nowrap}…999999_ möglicherweise gleich -1 sein könnte.
 
     figure: include svg/number-line-1.svg
 
-_{button.next-step} Continue_
+_{button.next-step} Weiter_
 
 ---
 > id: warp-2
 
-It turns out, however, that it _is_ possible to develop a new arithmetic system
-in which numbers like _{span.nowrap}…999999_ are meaningful. To do that, we just
-have to change how we measure “distance” between numbers on the number line.
+Es stellt sich jedoch heraus, dass es _möglich ist_, ein neues arithmetisches
+System zu entwickeln, in dem Zahlen wie _{span.nowrap}…999999_ sinnvoll sind.
+Um das zu erreichen, müssen wir nur die Art und Weise ändern, wie wir den
+"Abstand" zwischen den Zahlen auf der Zahlengeraden messen.
 
-Usually, _distance_ is defined using __addition__ and __subtraction__. For
-example, the distance between 2 and 6 is [[4]],
-_{span.reveal(when="blank-0")}because `2 + 4 = 6`._
+Normalerweise wird _Abstand_ durch __Addition__ und __Subtraktion__ definiert.
+Zum Beispiel ist der Abstand zwischen 2 und 6 gleich [[4]], _{span.reveal(when="blank-0")}
+denn `2 + 4 = 6`._
 
     figure: include svg/number-line-2.svg
 
 ---
 
-Instead, we can define a “different kind” of distance using __multiplication__
-and __division__.
+Stattdessen können wir eine "andere Art" von Abstand definieren, indem wir __Multiplikation__
+und __Division__ verwenden.
 
-{.r} In the world of integers, 0 is the _most divisible_ number of all. It can
-be divided any number of times by any integer, and still give an integer result
-(namely 0). If we focus on our number base of 10, we can see that 0 can be
-divided by 10 once, or twice, or thirty-seven times, or a million times.
-_{button.next-step} Continue_
+{.r} In der Welt der ganzen Zahlen ist 0 die _am meisten teilbare_ Zahl von allen. Sie kann
+beliebig oft durch eine beliebige ganze Zahl geteilt werden und ergibt trotzdem ein
+ganzzahliges Ergebnis (nämlich 0). Wenn wir uns auf unsere Zahlenbasis von 10 konzentrieren,
+können wir sehen, dass 0 einmal oder zweimal oder siebenunddreißig Mal oder eine Million Mal
+durch 10 geteilt werden kann.
+_{button.next-step} Weiter_
 
 ---
 > id: zero-list
 
-* The number __40__ is a little bit “zero-like”, in this sense in that we can
-  divide it by ten and still have an integer.
-* The number __1700__ is more zero-like: it can be divided [[twice|three
-  times|four times]] by 10, and still give an integer result.
-* {.reveal(when="blank-0")} The number __230,000__ is even more zero-like. It
-  can be divided [[four]] times by 10, and still stay an integer.
-* {.reveal(when="blank-1")} The number __5__, on the other hand, is not very
-  zero-like. We can’t divide it by ten even once, and have it stay an integer.
+* Die Zahl __40__ ist ein bisschen "null-artig", in dem Sinne, dass wir sie durch zehn teilen
+  können und immer noch eine ganze Zahl bekommen.
+* Die Zahl __1700__ ist schon etwas null-artiger: sie kann [[zweimal|dreimal|viermal]] durch
+  10 geteilt werden, und ergibt immer noch eine ganze Zahl.
+* {.reveal(when="blank-0")} Die Zahl __230.000__ ist sogar noch null-artiger. Sie kann [[4]]
+  mal durch 10 geteilt werden und bleibt trotzdem eine ganze Zahl.
+* {.reveal(when="blank-1")} Die Zahl __5__ hingegen ist nicht sehr null-artig. Wir können sie
+  nämlich keinmal durch zehn teilen, so dass sich eine ganze Zahl ergibt.
 
 ---
 
-We can now develop a __distance formula__, based on how often 10 “goes into”
-into a number multiplicatively. If we can divide a number _a_ by ten a maximum
-of _k_ times while remaining an integer, let’s write
+Wir können jetzt eine __Abstandsformel__ erstellen, die darauf basiert, wie oft 10 "in" einer
+Zahl als Multiplikator "steckt". Wenn wir eine Zahl _a_ maximal _k_ mal durch zehn teilen
+können und dabei eine ganze Zahl erhalten, schreiben wir
 
-{.text-center} `|a|_(ten) = 1/10^k`
+{.text-center} `|a|_(zehn) = 1/10^k`
 
-For example, `|850|_(ten) = 1/(10^1) = 0.1`, and `|8500|_(ten) = 1/(10^2) = 0.01`,
-and `|850000|_(ten) =` [[0.0001]].
+Zum Beispiel, `|850|_(zehn) = 1/(10^1) = 0,1` und `|8500|_(zehn) = 1/(10^2) = 0,01`
+und `|850000|_(zehn) =` [[0,0001]].
 
 ---
 
-We can also measure the distance between any two different numbers. For example,
-the distance between 3 and 33 is `|33−3|_(ten) = |30|_(ten) = 1/(10^1) = 0.1`.
+Wir können auch den Abstand zwischen zwei beliebigen Zahlen messen. Zum Beispiel ist der
+Abstand zwischen 3 und 33 gleich `|33−3|_(zehn) = |30|_(zehn) = 1/(10^1) = 0,1`.
 
-With this new way to measure distance, 1, 10, 100, 1000, … is a sequence of
-numbers getting closer and closer to [[zero|1|–1|infinity]]. Similarly, 9, 99,
-999, 9999, … is getting closer and closer to [[-1]], just like we saw above.
+Mit dieser neuen Art, den Abstand zu messen, ist 1, 10, 100, 1000, … eine Zahlenfolge,
+die sich immer mehr [[Null|1|-1|unendlich]] annähert. In ähnlicher Weise kommt 9, 99, 999,
+9999, … immer näher an [[-1]] heran, so wie wir oben gesehen haben.
 
 ---
 > id: p-adic-numbers
 
-Mathematicians call this way of viewing distances between the non-negative
-integers [__ten-adic arithmetic__](gloss:adic). The suffix “adic” means “a
-counting of operations”. Here we are counting factors of ten.
+Mathematiker nennen diese Art der Betrachtungsweise der Abstände zwischen den nicht-negativen
+ganzen Zahlen [__10-adische Arithmetik__](gloss:adic). Die Endung "adisch" bedeutet "eine
+Zählung von Operationen". Hier zählen wir Faktoren von zehn.
 
 ---
 > id: dots-2
 > goals: dots
 
-### Negative Numbers and Fractions
+### Negative Zahlen und Brüche
 
-We’ve already seen that our new, ten-adic system supports negative integers:
-_{span.nowrap}…999999 = –1_. We can do something similar for other negative numbers. How much
-do you have to add to _{span.nowrap}…999998_, to get it to explode?
+Wir haben bereits gesehen, dass unser neues, 10-adisches System negative ganze
+Zahlen unterstützt: _{span.nowrap}…999999 = -1_. Wir können etwas Ähnliches für
+andere negative Zahlen tun. Wie viel muss man zu _{span.nowrap}…999998_ addieren,
+um die Explosionen auszulösen?
 
     x-dot-machine(cells="…99998")
     x-gesture(target="#dots-2 .dot-cell:last-child")
 
 ---
 
-In other words, _{span.nowrap}…999998 = [[-2]]_. _{span.reveal(when="blank-0")}
-We can similarly calculate that *{span.nowrap}…999997 = [[-3]]*,
-*{span.nowrap}…999953 = [[-47]]*, *{span.nowrap}…999700 = –300*
-and so on. Every negative integer has a ten-adic equivalent._
+Oder anders ausgedrückt: _{span.nowrap}…999998 = [[-2]]_. _{span.reveal(when="blank-0")}
+Ebenso können wir berechnen, dass *{span.nowrap}…99999997 = [[-3]]*, *{span.nowrap}…999953
+= [[-47]]*, *{span.nowrap}…999700 = -300* und so weiter. Jede negative ganze Zahl hat ein
+10-adisches Äquivalent._
 
 ---
 > id: dots-3
@@ -431,47 +435,47 @@ and so on. Every negative integer has a ten-adic equivalent._
 
 {.text-center} •
 
-Constructing ten-adic fractions is a bit more difficult. Let’s see what happens
-if we multiply _{span.nowrap}…6666667_ by 3:
+Etwas schwieriger ist es, 10-adische Brüche zu bilden. Sehen wir mal, was passiert,
+wenn wir _{span.nowrap}...6666667_ mit 3 multiplizieren:
 
     x-dot-machine.tiny(cells="…66667")
-    p.text-center: button.btn.btn-small.btn-red Multiply by 3
+    p.text-center: button.btn.btn-small.btn-red Multipliziere mit 3
     x-gesture(target="#dots-3 button")
 
 ---
 
-Since _{span.nowrap}…6666667_ × 3 = [[1]], *{span.reveal(when="blank-0")}we
-know that _{span.nowrap}…6666667_ = `1/3`.*
+Da _{span.nowrap}…6666667_ × 3 = [[1]], *{span.reveal(when="blank-0")}wissen
+wir, dass _{span.nowrap}…6666667_ = `1/3`.*
 
 ---
 
 ::: .box.f-blue
-#### Challenge
+#### Herausforderung
 
-Can you work out which ten-adic number behaves like `2/3`?
+Kannst du herausfinden, welche 10-adische Zahl sich wie `2/3` verhält?
 
-What about other fractions like `4/7` or `2/13`?
+Wie sieht es mit anderen Brüchen wie `4/7` oder `2/13` aus?
 
 :::
 
-_It turns out that there are a few fractions that cannot be expressed in our
-ten-adic number system: all fractions that, in their reduced form, have a
-[denominator](gloss:denominator) that is a multiple of 2 or 5 (or both). You
-can fix this by allowing ten-adic numbers to have a finite number of decimal
-places. Now, every [rational number](gloss:rational-numbers) has a ten-adic
-equivalent._
+_Es stellt sich heraus, dass es ein paar Brüche gibt, die in unserem 10-adischen
+Zahlensystem nicht ausgedrückt werden können: alle Brüche, die in ihrer gekürzten
+Form einen [Nenner](gloss:denominator) haben, der ein Vielfaches von 2 oder 5
+(oder beides) ist. Du kannst das korrigieren, indem du den 10-adischen Zahlen erlaubst,
+eine endliche Anzahl von Dezimalstellen zu haben. Nun besitzt jede [rationale Zahl](gloss:rational-numbers)
+ein 10-adisches Äquivalent._
 
 ---
 > id: flaw
 
-### A Serious Flaw
+### Ein gravierender Schönheitsfehler
 
-We’ve now seen that every integer an fraction has a ten-adic equivalent, and
-that we can add, subtract and multiply ten-adic numbers, just like we would
-normal integers. Unfortunately there is one serious flaw: we cannot _divide_ by
-all ten-adic numbers.
+Wir haben jetzt gesehen, dass jede ganze Zahl, die ein Bruch ist, ein 10-adisches Äquivalent
+hat, und dass wir 10-adische Zahlen addieren, subtrahieren und multiplizieren können, genau
+wie normale ganze Zahlen. Leider gibt es aber einen gravierenden Schönheitsfehler: wir können
+nicht durch alle 10-adischen Zahlen _dividieren_.
 
-To see why that’s the case, we need to look at the powers of 2 and 5:
+Um zu sehen, warum das der Fall ist, müssen wir uns die Potenzen 2 und 5 ansehen:
 
 ::: column(width=180)
 
@@ -500,10 +504,10 @@ To see why that’s the case, we need to look at the powers of 2 and 5:
 ---
 > id: flaw-1
 
-Notice how many of the powers of 5 end in <x-target to=".po2" no-margins>other,
-smaller powers of 5</x-target>. The same is also true for powers of 2. It turns
-out that we can create two infinite, 10-adic numbers, that always end in powers
-of 2 or 5 respectively:
+Beachte, wie viele der 5er-Potenzen mit <x-target to=".po2" no-margins>anderen,
+kleineren Potenzen von 5</x-target> enden. Das Gleiche gilt auch für die 2er
+Potenzen: Es stellt sich heraus, dass wir zwei unendliche, 10-adische Zahlen
+erzeugen können, die immer mit 2er bzw. 5er Potenzen enden:
 
 ::: column(width=140)
 
@@ -521,13 +525,14 @@ __{.i.m-yellow}N__ = …1953125
 
 :::
 
-_{button.next-step} Continue_
+_{button.next-step} Weiter_
 
 ---
 > id: flaw-2
 
-If we try to multiply powers of 2 and 5, we get a sequence of products that get
-closer and closer to zero (in our 10-adic sense):
+Wenn wir versuchen, die Potenzen von 2 und 5 zu multiplizieren, erhalten wir
+eine Zahlenfolge von Produkten, die immer näher an Null heranrücken (in unserem
+10adischen Sinn):
 
 |    |   |     |   |           |
 | -: | - | --: | - | --------: |
@@ -539,7 +544,8 @@ closer and closer to zero (in our 10-adic sense):
 ---
 > id: flaw-3
 
-The same happens if we try to multiply __{.i.m-red}M__ and __{.i.m-yellow}N__:
+Dasselbe passiert, wenn wir versuchen, __{.i.m-red}M__ und __{.i.m-yellow}N__
+miteinander zu multiplizieren:
 
 |   |   |    |    |    |    |
 | - | - | -- | -- | -- | -- |
@@ -554,13 +560,13 @@ The same happens if we try to multiply __{.i.m-red}M__ and __{.i.m-yellow}N__:
 
 ---
 
-In other words, we have found two non-zero numbers __{.i.m-red}M__ and
-__{.i.m-yellow}N__ so that __{.i.m-red}M__ × __{.i.m-yellow}N__ = 0.
+Mit anderen Worten, wir haben zwei von Null verschiedene Zahlen __{.i.m-red}M__
+und __{.i.m-yellow}N__ gefunden für die gilt __{.i.m-red}M__ × __{.i.m-yellow}N__ = 0.
 
-This means that in ten-adic arithmetic, it is impossible to divide by
-__{.i.m-red}M__ or __{.i.m-yellow}N__. (If it were possible, we could divide the
-equation __{.i.m-red}M__ × __{.i.m-yellow}N__ = 0 by __{.i.m-yellow}N__, and get
-__{.i.m-red}M__ = 0. That is a contradiction.)
+Das bedeutet, dass es in der 10-adischen Arithmetik unmöglich ist, durch
+__{.i.m-red}M__ oder __{.i.m-yellow}N__ zu dividieren. (Wenn es möglich wäre, könnten
+wir die Gleichung __{.i.m-red}M__ × __{.i.m-yellow}N__ = 0 durch __{.i.m-yellow}N__
+dividieren und würden als Ergebnis __{.i.m-red}M__ = 0 erhalten. Das ist ein Widerspruch.)
 
 
 
@@ -568,39 +574,39 @@ __{.i.m-red}M__ = 0. That is a contradiction.)
 
 
 
-## P-adic Numbers
+## P-adische Zahlen
 
 > section: p-adic
 > id: p-adic
 
-In the [previous section](/course/exploding-dots/unusual), we managed to
-construct two non-zero [10-adic numbers](gloss:adic) _M_ and _N_, so that
-`M×N=0`. This means that it is impossible to divide by numbers like _M_ and _N_
-– a serious flaw in any number system.
+Im [vorherigen Abschnitt](/course/exploding-dots/unusual) haben wir es geschafft,
+zwei von Null verschiedene [10-adische Zahlen](gloss:adic) _M_ und _N_ zu bilden, so dass
+`M×N=0` ergibt. Das bedeutet, dass es unmöglich ist, durch Zahlen wie _M_ und _N_ zu
+dividieren - ein gravierender Schönheitsfehler in jedem Zahlensystem.
 
-It turns out, however, that this problem only occurs if the number base is not a
-[prime number](gloss:prime). Since 10 [[is not prime|is prime]],
-_{span.reveal(when="blank-0")}the 10-adic numbers are flawed. 2-adic or 3-adic
-numbers, on the other hand, are not._
+Es stellt sich jedoch heraus, dass dieses Problem nur auftritt, wenn die Zahlenbasis
+keine [Primzahl](gloss:prime) ist. Da 10 [[keine|eine]] Primzahl ist, _{span.reveal(when="blank-0")}
+besitzen die 10-adischen Zahlen diesen Schönheitsfehler. 2-adische oder 3-adische Zahlen
+hingegen betrifft das nicht._
 
 ---
 
-Mathematicians call these numbers __*p*-adic numbers__, where the *p* stands for
-“prime”. Even though they don’t seem particularly relevant in everyday life,
-_p_-adic numbers turn out to be very useful in certain parts of mathematics.
+Mathematiker nennen diese Zahlen __*p*-adische Zahlen__, wobei das *p* für "Primzahl" steht.
+Auch wenn sie im Alltag nicht besonders relevant erscheinen, erweisen sich _p_-adische Zahlen
+in bestimmten Gebieten der Mathematik als sehr nützlich.
 
-For example, many unanswered problems in mathematics are related to prime
-numbers and [prime factorizations](gloss:factorisation). Since _p_-adic numbers
-were defined using _multiplication_ rather than _addition_, they are perfect for
-analysing these problems. *P*-adic numbers were even used in Andrew Wiles’
-famous proof of [Fermat’s Last Theorem](gloss:fermat-last).
+Zum Beispiel hängen viele unbeantwortete Probleme in der Mathematik mit Primzahlen und
+[Primfaktorzerlegung](gloss:factorisation) zusammen. Da _p_-adische Zahlen durch
+_Multiplikation_ und nicht durch _Addition_ definiert wurden, sind sie perfekt, um diese
+Probleme zu analysieren. *P*-adische Zahlen wurden sogar in Andrew Wiles' berühmtem Beweis
+von [Fermats letztem Satz](gloss:fermat-last) verwendet.
 
 ---
 > id: square
 
-One of the must surprising applications of p-adic numbers is in geometry. Here
-you can see a square that is divided into ${2*x}{x|9|1,50,1} small triangles of
-equal area:
+Eine der wohl überraschendsten Anwendungen der p-adischen Zahlen liegt in der Geometrie.
+Hier siehst du ein Quadrat, das in ${2*x}{x|9|1,50,1} kleine Dreiecke gleicher Fläche
+unterteilt ist:
 
     figure: svg.square(width=320 height=320)
     x-gesture(target="x-var" slide="100,0")
@@ -608,25 +614,25 @@ equal area:
 ---
 > id: square-1
 
-As you move the slider, you can see that it is possible to divide the square
-into any [[even|odd|prime]] number of equal triangles.
+Wenn du den Schieberegler bewegst, kannst du sehen, dass es möglich ist, das Quadrat in
+eine beliebige [[gerade|ungerade|prime]] Anzahl gleicher Dreiecke zu teilen.
 
-{.r.reveal(when="blank-0")} But what about _odd_ numbers? Draw a square on a
-sheet of paper, and then try dividing it into 3, 5 or 7 triangles of equal area.
-_{button.next-step} Continue_
+{.r.reveal(when="blank-0")} Aber was ist mit _ungeraden_ Zahlen? Zeichne ein Quadrat auf
+ein Blatt Papier und versuche dann, es in 3, 5 oder 7 Dreiecke gleicher Fläche zu teilen.
+_{button.next-step} Weiter_
 
 ---
 > id: square-3
 
-Here’s the shocker: it turns out that it is _impossible_ to divide a square into
-an _odd_ number of triangles of equal area! This was proven in 1970 by
-mathematician [Paul Monsky](bio:monsky) – you can even have a look at the paper
-he published about it:
+Und jetzt kommt die schockierende Überraschung: es stellt sich heraus, dass es _unmöglich_
+ist, ein Quadrat in eine _ungerade_ Anzahl von Dreiecken gleicher Fläche zu teilen! Das
+wurde 1970 von dem Mathematiker [Paul Monsky](bio:monsky) bewiesen - du kannst sogar einen
+Blick auf die Arbeit werfen, die er darüber veröffentlicht hat:
 
     figure
-      x-img(src="images/paper.jpg" alt="Paper by Paul Monsky" width=400 height=132)
+      x-img(src="images/paper.jpg" alt="Artikel von Paul Monsky" width=400 height=132)
       p.caption #[a(href="http://ieee.scripts.mit.edu/urgewiki/images/0/00/Monsky.pdf" target="_blank") The American Mathematical Monthly]
 
-In the proof, Monsky had to use the 2-adic number system. Mathematics, no matter
-how abstruse it might seem, always comes up with surprising and unexpected
-applications.
+Bei der Beweisführung musste Monsky das 2-adische Zahlensystem verwenden. Die Mathematik,
+so seltsam sie auch erscheinen mag, bringt immer wieder überraschende und unerwartete
+Anwendungen hervor.
