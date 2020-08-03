@@ -527,3 +527,8 @@ talks:
   title: Talks and Workshops
   color: A7208A
   hideIcon: true
+
+cbm:
+  title: Cause or Correlation
+  color: 0db0e3
+  hideIcon: true

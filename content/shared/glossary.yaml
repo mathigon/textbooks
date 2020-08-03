@@ -478,6 +478,13 @@ denominator:
   text: The __denominator__ is the bottom number in a fraction. For example, in
     `4/7`, the number 7 is the denominator.
 
+dependent-events:
+  title: Dependent Events
+  text: |
+    Two events are __dependent__ if the occurrence of one of them changes the
+    propability that the other event occuring. For example, _A_ and _B_ could
+    be dependent if P(*A*|*B*) ≠ P(*A*)`.
+
 dilation:
   title: Dilation
   text: A __dilation__ is a transformation that resizes a geometric shape, by
@@ -793,6 +800,15 @@ imaginary:
 
     The __imaginary unit__ is written as `i = sqrt(−1)`, and other imaginary
     numbers can be written as its multiples. For example, `sqrt(-5) = 5i`.
+
+independent-events:
+  title: Independent Events
+  text: |
+    Two events are __independent__ if the occurrence of any one of them _does
+    not_ affect the propability that the other event occuring.
+
+    More formally, we can say that _A_ and _B_ are independent if and only if
+    P(*A*|*B*) = P(*A*).
 
 infinity:
   title: "Infinity"
