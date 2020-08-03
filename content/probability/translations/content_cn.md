@@ -145,7 +145,7 @@ __概率__ 是介绍于 0 和 1 之间的一个数字，用来描述 __特定事
 ---
 > id: prob-line-4
 
-有多种不同的方式来思考概率，但在实践中，它们通常给出的结果都相同：
+有多种不同的方式来思考概率，但在实践中，它们得到的结果都一样：
 
 ::: column(width=230 parent="padded-thin")
 
@@ -153,21 +153,21 @@ __概率__ 是介绍于 0 和 1 之间的一个数字，用来描述 __特定事
 
 {.text-center} The __classical__ probability of landing heads is the proportion
 of _possible outcomes_ that are heads.
-正面朝上的 __古典__ 概率是可能结果为正面的比例
+正面朝上的 __古典__ 概率是正面朝上的可能结果的比例
 ::: column(width=230)
 
     img(src="images/frequentist.png" width=240 height=75 alt="frequentist probability")
 
 {.text-center} The __frequentist__ probability is the proportion of heads we get
 if we toss the coin _many times_.
-__频率概率__ 是如果我们抛多次硬币得到正面的比例
+__频率概率__ 是如果我们抛 _多次_ 硬币得到正面的比例
 ::: column(width=230)
 
     img(src="images/subjectivist.png" width=240 height=75 alt="subjectivist probability")
 
 {.text-center} The __subjectivist__ probability tells us how strongly we
 _believe_ that the coin will land heads.
-__主观概率__ 告诉我们，我们有多么 _坚信_ 正面会朝上
+__主观概率__ 是我们有多么 _坚信_ 正面会朝上
 :::
 
     // TODO Notice that subjectivist probabilities may be different for
@@ -323,10 +323,7 @@ TODO
 > goals: game
 > section: monty-hall
 
-Welcome to the most spectacular game show on the planet! You now have a
-once-in-a-lifetime chance of winning a fantastic sports car which is hidden
-behind one of these three doors. Unfortunately, there are only goats behind the
-other two doors. Select one to make your choice!
+欢迎来到这个星球最壮观的游戏秀！现在，你有一个千载难逢的机会赢得一辆漂亮的跑车，它就藏在这三扇门的其中一扇后面，而另外两扇后面只有山羊，决定选择一扇吧！
 
     .monty-hall.selectable
       .door-box: .door
@@ -334,68 +331,56 @@ other two doors. Select one to make your choice!
       .door-box: .door
       .floor
 
-{.monty-reveal} Are you sure about that? You can still change your mind and
-select a different door…
+{.monty-reveal} 你确定选好了吗？你现在还可以改变主意选择另一扇 ...
 
-    p.text-center.monty-reveal: button.btn.sure I’m sure!
+    p.text-center.monty-reveal: button.btn.sure 我确定了!
 
-{.monty-reveal} A great choice, but let me make life a little easier for you.
-I’ll open one of the other doors with a goat, so that there are only two doors
-left for you to pick from. Do you want to stick with your choice, or do you want
-to swap?
+{.monty-reveal} 不错的选择，现在让我来帮你更轻松一点去选择，我将要打开一扇后面有山羊的门，这样就只剩下两扇门让你选择了，你是想坚持你最初的选择还是交换一下？
 
     p.text-center.monty-reveal
-      button.btn.swap I want to stay!
-      button.btn.swap I want to swap!
+      button.btn.swap 我想坚持选择不变!
+      button.btn.swap 我想交换我的选择!
 
-{.monty-reveal} Ok – let’s see how you did…
+{.monty-reveal} 好吧，来看看你做得怎么样...
 
-    p.text-center.monty-reveal: button.btn.show Open the doors…
+    p.text-center.monty-reveal: button.btn.show 将门打开...
 
-{.monty-reveal} _{span.monty-option}Looks like you made the right choice.
-Congratulations, you just won a beautiful new sports car!_
-_{span.monty-option.hidden} Sorry – it seems like this time you only won a
-goat. But don’t worry, you can play again!_
+{.monty-reveal} _{span.monty-option} 恭喜你，看来你做出了正确的选择，你赢得了一个新的漂亮跑车！_
+_{span.monty-option.hidden} 抱歉 - 看来这次你只是赢得一只山羊，不过别担心，你还可以再玩一次！_
 
-    p.text-center.monty-reveal: button.btn.reset Replay game
+    p.text-center.monty-reveal: button.btn.reset 再玩一次
 
 ---
 > id: monty-hall-1
 
-If you play this game many times, you’ll notice that you’re more likely to win
-if you [[swap|don’t swap]] after the first door is opened,
-_{.reveal(when="blank-0")}rather than sticking with your initial choice._
+如果你多次玩这个游戏，你会发现，在第一扇门被打开后，如果你选择 [[交换|不交换]] ，你更有可能赢得游戏。
+_{.reveal(when="blank-0")}而不是坚持你最初的选择。_
 
-{.reveal(when="blank-0")} But how can this be – surely the car is equally likely
-to be behind each of the two remaining doors?
+{.reveal(when="blank-0")} 但是，这怎么可能呢？跑车在剩下的两扇门里也应该是同样的可能性呀
 
 ---
 > id: monty-hall-2
 
-The explanation is very subtle. When you pick the initial door, the probability
-of being correct is `1/3` and the probability of being wrong is `2/3`.
+解释有点微妙，当你选择最初的门时，正确的概率是 `1/3`，错误的概率是 `2/3`。
 
     p.text-center: include svg/monty-1.svg
 
 ---
 > id: monty-hall-3
 
-After the game master opens one of the other doors, the probability of being
-wrong is _still_ `2/3`, except now all this probability is on just one door.
-This means that swapping doors [[doubles|triples|halves]] your chance of winning.
+在游戏主持人打开另一扇门后，出错的概率 _仍然_ 是 `2/3`，只不过现在所有的概率都在一扇门上，这意味着换门会让你赢的机率 [[翻倍|翻三倍|变一半]] 。
 
     p.text-center: include svg/monty-2.svg
 
 ---
 > id: monty-hall-4
 
-Even if this doesn’t seem very intuitive, we can prove that it is correct –
-simply by listing all different possibilities:
+即使看来起不是很直观，我们也可以证明它是正确的 -- 简单的列出所有不同的可能性：
 
     figure: img(src="images/monty.png" width=694 height=468)
 
-Out of the 9 possibilities [[6]] need you to switch doors, to win. This gives a
-chance of `6/9 = 2/3` like before.
+
+在这9种可能性中，有 [[6]] 种需要换门才能赢，这就得到了 `6/9 = 2/3` 赢的机会。
 
 ---
 
@@ -416,18 +401,9 @@ TODO
 > section: randomness
 
 ::: column.grow
-Most of this course relied on the fact that things like coins, or dice, or
-roulette wheels are completely random. However, that is not really true – we
-already learned that Edward Thorpe managed to predict the outcome of roulette.
+这门课的大部分内容都是基于这样一个事实：硬币、骰子或轮盘赌都是完全随机的。然后，事实并非如此 -- 我们知道爱德华.索普成功地预测了轮盘赌的结果。
 
-Suppose we toss a coin: the chance of it landing heads is 0.5. If we knew which
-way the coin was facing just before it left the hand, we might be able to make a
-slightly better prediction, such as 0.58 or 0.41. If we also knew the weight and
-size of the coin, and the angle, position and speed as it left the hand, we
-could use the laws of physics – gravity, friction and air resistance – to model
-the motion of the coin and to predict the outcome. Finally, if we knew the exact
-position of every atom in the coin and of all the air molecules surrounding it,
-we could create a computer simulation to accurately predict what will happen.
+假设我们掷硬币：硬币正面朝上的概率是 0.5，如果在硬币离开手之前就知道它朝哪个方向，我们也许就能做出稍微好一点预测，比如 9.58 或 0.41，如果我们还知道硬币的重量和大小，以及它离开手时的角度、位置和速度，我们就可以利用重力、摩擦力和空气阻力等物理定律来模拟硬币的运动并预测结果，最后，如果我们还知道硬币中每个原子以及它周围所有空气分子的确切位置，我们就可以创建一个计算机模拟来精确的预测会发生什么。
 ::: column(width=240)
 
     x-img(src="images/coins.jpg" alt="Flipping a Coin" width=240 height=343)
@@ -437,40 +413,29 @@ we could create a computer simulation to accurately predict what will happen.
 ---
 > id: quantum1
 
-One could argue that tossing a coin really isn’t random at all – it is
-_chaotic_. That means that the underlying physical principles are so complex
-that even tiny changes to the starting conditions (speed, angle) can have a
-dramatic effect on the final outcome. We can use coins in games and gambling not
-because they are random, but because it is so incredibly difficult (and for
-practical purposes impossible) to predict the result.
+可能有人会说，掷硬盘并不是完全随机的，而是 _混乱的_，这意味着潜在的物理原理如些复杂，即使初始条件（速度、角度 ）有微小的改变，也会对最终结果产生巨大的影响。我们可以在游戏和赌博中使用硬币，并不是因为它们是随机的，而是因为预测结果非常困难（实际上是不可能的）。
 
-The same principle applies to many other “random” events in life, including dice
-and roulette wheels. They are not really _random_, we simply don’t have the
-tools to do the mathematical calculations accurately enough to predict the
-outcome.
+同样的原理也适用于生活中的许多其它“随机”事件，包括骰子和轮盘赌，它们并不是真正的 _随机_  ，只是我们没有足够精确的数学计算工具来对结果进行预测。
 
 ---
 > id: radioactive
 > goals: decay
 
-But _true randomness_ does exists – at the very foundations of matter. A block
-of radioactive material consists of billions of atoms which decay over time:
-they fall apart into smaller atoms while emitting dangerous radiation.
+但 _真正的随机_ 确实存在于物质世界中，一块放射性物质由数十亿个原子组成，随着时间的推移会衰变：它们分裂出更小的原子，同时释放出危险的辐射。
 
 ::: column.grow
 
-Physicists can calculate the probability that a particular atom will decay in a
-certain period of time, but it is impossible to work out _which one_ will decay
-next – even if you know the exact properties of every atom.
+物理学家可以计算出一个特定原子在一定时间内衰变的概率，但即使你知道每个原子的确切性质，也不可能计算出下一个衰变的是哪个。
 
 The overall rate of decay, on the other hand, is so steady that it can be used
 to calculate the age of fossils that died thousands of years ago on Earth. This
 process is called __Carbon dating__.
+另一方面，总体衰变速度是很稳定的，因此你可以用来计算出地球上死于数千年前的化石的年龄，这个过程被称为 _碳年代测定法_ 。
 
 ::: column(width=300)
 
     p: svg.radioactive(width=300 height=200 viewBox="0 0 300 200")
-    p.text-center.btn-row.no-voice: button.btn Start Decay
+    p.text-center.btn-row.no-voice: button.btn 启动衰变
 
 :::
 
@@ -480,28 +445,13 @@ process is called __Carbon dating__.
 ---
 > id: radioactive-1
 
-[Radioactive decay](gloss:radioactive) of atoms is caused by forces which act at
-much smaller scales within atoms, and which can be explained using [Quantum
-mechanics](gloss:quantum). During the last century, physicists like [Max
-Planck](bio:planck) and [Paul Dirac](bio:dirac) discovered that fundamental
-particles have a mind-blowing property: they can be in multiple different places
-_at the same time_. They don’t have a fixed position, but instead a probability
-distribution (also called _wave function_) which tells us how likely it is that
-we’ll find them at a particular position.
+[放射性衰变](gloss:radioactive) 是由不稳定原子分裂并释放能量的物理过程，这可以由量子力学来解释。上世纪末，像 [马克斯.普朗克](bio:planck) and [保罗.狄拉克](bio:dirac) 这样的物理学家们，发现基本粒子有一个令人惊讶的特性：它们可以 _同一时间_ 出现在多个不同的地方，它们没有固定的位置，而是一个概率分布函数（又叫 _波函数_ ），这个函数告诉我们在特定位置找到它们的可能性有多大。
 
-This incredible property is used by Quantum computers. Conventional computers
-can only ever do one computation at a time. Quantum computers can use the
-properties of subatomic particles to do many calculations at the same time – and
-that makes them significantly faster.
+量子计算机就是运用这种难以置信的特性，传统计算机一次只能进行一次计算，而量子计算机可以利用亚原子粒子的这一特性在同一时间进行多次计算，这就大大提高了计算机的运算速度。
 
     figure: x-img(lightbox src="images/quantum.jpg" alt="Quantum Mechanics" width=760 height=390)
 
 ---
 > id: radioactive-2
 
-We can’t really _understand_ or _explain_ quantum mechanics – we just have to
-accept that it is what is predicted by mathematical theory and confirmed by
-physical observations. The curious quantum effects have only ever been observed
-on tiny scales of a few atoms, and it is not clear how they affect us in
-everyday life. But it is the only known effect in nature that produces _true
-randomness_.
+我们不能真正 _理解_ 或 _解释_ 量子力学 -- 只能接受它是由数学理论预测并由物理观测来证实的，这种奇特的量子效应只在有几个原子的微小尺度上被观察到过，目前还不清楚它们在日常生活中如何影响我们的，但这是自然界中惟一已知的具有 _真正随机性_ 的效应。
