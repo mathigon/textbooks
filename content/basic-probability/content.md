@@ -148,7 +148,7 @@ p = [[25]]%
 
     p.btn-row
       button.btn.btn-blue Unlucky
-     button.btn.btn-green Trick Coin
+      button.btn.btn-green Trick Coin
 
 ---
 > id: simulation
