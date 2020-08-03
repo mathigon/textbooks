@@ -29,7 +29,7 @@ Eines Tages wurde er zu einem Rennen herausgefordert … von einer Schildkröte!
       img(src="images/tortoise.png" width=80 height=50 style="left: 54%; margin-top: 8%;")
 
 {div(slot="legend")} Achilles wusste, dass er _zehnmal_ so schnell laufen konnte
-wie die Schildkröte. Da er sehr siegessicher, beschloss er, ihr einen Vorsprung
+wie die Schildkröte. Da er sehr siegessicher war, beschloss er, ihr einen Vorsprung
 von 100m zu geben.
 
 {div(slot="legend")} Und das Rennen begann. In der Zeit, die Achilles brauchte, um
