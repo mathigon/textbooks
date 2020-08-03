@@ -19,10 +19,10 @@
 ---
 > id: voxel-builder
 
-Here is a voxel builder demo:
-
     figure
-      x-voxel-painter
+      x-voxel-painter(shape="cuboid")
+
+<!-- x-polyhedron(size=220 shape="Hebesphenorotunda") -->
 
 ---
 
