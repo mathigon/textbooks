@@ -1,0 +1,52 @@
+// =============================================================================
+// Buckets Component
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../shared/variables";
+
+x-buckets {
+  display: block;
+  margin: 1.5em 0;
+  user-select: none;
+  color: @text-dark;
+
+  .inputs, .bucket { position: relative; > * { position: absolute; } }
+  .inputs { z-index: 1; }
+  .buckets { display: flex; margin: 0 -8px; }
+
+  .input {
+    cursor: move;
+    background: fade(@grey-background, 50%);
+    border: 1px solid white;
+    padding: 4px 12px;
+    margin: 6px 0;
+    border-radius: 4px;
+    width: 140px;
+    font-size: 16px;
+    line-height: 1.35;
+    text-align: center;
+    transition: left .2s, top .2s, box-shadow .2s, background .2s, border .2s;
+    &.error { border-color: @red; background: mix(@red, @grey-background, 30%); }
+    &.active { z-index: 1; background: @grey-background; box-shadow: 0 2px 20px fade(black, 40%); }
+  }
+  .inputs .input { background: @grey-background; border-color: @border-light; }
+
+  .bucket {
+    width: 200px;
+    border-radius: 8px;
+    margin: 6px;
+    position: relative;
+    padding-bottom: 6px;
+    background: @grey-background;
+    transition: box-shadow .2s;
+    .title { text-align: center; font-weight: 600; margin-top: 8px; color: white; }
+    &.active { box-shadow: inset 0 0 0 5px fade(black, 40%); }
+
+    &:nth-child(1) { background: mix(@orange, @grey-background, 75%); }
+    &:nth-child(2) { background: mix(@purple, @grey-background, 75%); }
+    &:nth-child(3) { background: mix(@blue, @grey-background, 75%); }
+    &:nth-child(4) { background: mix(@teal, @grey-background, 75%); }
+  }
+}
