@@ -8,7 +8,6 @@ import {last} from '@mathigon/core';
 import {register, CustomElementView, slide} from '@mathigon/boost';
 import {clamp, Point} from '@mathigon/fermat';
 import {create3D} from '../../shared/components/webgl';
-import { primeTest } from '../../divisibility/functions';
 
 
 function getGeometry(name: string) {
@@ -30,6 +29,8 @@ export class PolyhedronSlice extends CustomElementView {
     scene.camera.up = new THREE.Vector3(0, 1, 0);
     scene.camera.lookAt(new THREE.Vector3(0, 0, 0));
 
+    const sceneObj = new THREE.Object3D();
+
     // Create Lights
     scene.add(new THREE.AmbientLight(0x666666));
     const light = new THREE.PointLight(0xbbbbbb);
@@ -41,7 +42,7 @@ export class PolyhedronSlice extends CustomElementView {
     const material = new THREE.MeshPhongMaterial({opacity: 0.8, color: 0xcd0e66,
       transparent: true, specular: 0x222222});
     const polyhedron = new THREE.Mesh(geometry, material);
-    scene.add(polyhedron);
+    sceneObj.add(polyhedron);
 
     // Listen to the 'shape' attribute and update the graphics.
     this.on('attr:shape', e => {
@@ -58,7 +59,7 @@ export class PolyhedronSlice extends CustomElementView {
     const plane = new THREE.Mesh(planeGeom, planeMaterial);
     plane.position.y = 0;
     plane.rotation.x = Math.PI / 2;
-    scene.add(plane);
+    sceneObj.add(plane);
 
     // -------------------------------------------------------------------------
 
@@ -67,6 +68,7 @@ export class PolyhedronSlice extends CustomElementView {
     const tube = new THREE.Mesh(undefined, tubeMaterial);
     tube.renderOrder = 10;
     scene.add(tube);
+    scene.add(sceneObj);
 
     const mathPlane = new THREE.Plane();
     const centre = new THREE.Vector3();
@@ -95,6 +97,8 @@ export class PolyhedronSlice extends CustomElementView {
           {
             let pt:THREE.Vector3 = intersection.clone();
             const closest = Math.min(...thisvertices.map(p => pt.distanceTo(p)));
+            // I'm occasionally getting three points returned by THREE but 
+            // two of them only differ by round off
             if (closest > tolerance)
               thisvertices.push(pt);
           }
@@ -187,15 +191,14 @@ export class PolyhedronSlice extends CustomElementView {
           raycaster.ray.intersectPlane(dragPlane, intersection);
           const newPosn = intersection.sub(offset).applyMatrix4(inverseMatrix);
           plane.position.y = clamp(newPosn.y, -1, 1);
-
-        } else if (target === 'shape') {
+        } else {
           const d = posn.subtract(last).scale(Math.PI / 180 / 2);
           const euler = new THREE.Euler(d.y, d.x, 0, 'XYZ');
           const q = new THREE.Quaternion().setFromEuler(euler);
-          polyhedron.quaternion.multiplyQuaternions(q, polyhedron.quaternion);
-
-        } else if (target === 'scene') {
-          // TODO Rotate entire scene. Maybe only allow rotation around x-axis?
+          if (target === 'shape')
+            polyhedron.quaternion.multiplyQuaternions(q, polyhedron.quaternion);
+          else
+            sceneObj.quaternion.multiplyQuaternions(q, sceneObj.quaternion);
         }
 
         updateIntersection();
