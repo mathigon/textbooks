@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {isPrime, goldbach, generatePrime} from '@mathigon/fermat';
+import {generatePrime, goldbach, isPrime} from '@mathigon/fermat';
 
 
 declare global {

@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import {flatten, tabulate2D, Obj} from '@mathigon/core';
-import {Point, Line} from '@mathigon/fermat';
+import {flatten, Obj, tabulate2D} from '@mathigon/core';
+import {Line, Point} from '@mathigon/fermat';
 import {CanvasView, CustomElementView, register, slide} from '@mathigon/boost';
 import {Select} from '../../shared/types';
 

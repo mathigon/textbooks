@@ -6,7 +6,7 @@
 
 import {tabulate} from '@mathigon/core';
 import {clamp} from '@mathigon/fermat';
-import {CustomElementView, register, $N, Browser, ElementView} from '@mathigon/boost';
+import {$N, Browser, CustomElementView, ElementView, register} from '@mathigon/boost';
 
 
 const ROW_HEIGHT = 30;

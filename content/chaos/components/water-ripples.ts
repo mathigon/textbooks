@@ -5,8 +5,8 @@
 
 
 import {repeat2D, tabulate2D} from '@mathigon/core';
-import {isBetween, clamp, Point} from '@mathigon/fermat';
-import {CustomElementView, register, $N, slide, animate, CanvasView} from '@mathigon/boost';
+import {clamp, isBetween, Point} from '@mathigon/fermat';
+import {$N, animate, CanvasView, CustomElementView, register, slide} from '@mathigon/boost';
 
 
 const THRESHOLD = 0.05;

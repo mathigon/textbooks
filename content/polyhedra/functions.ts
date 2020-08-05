@@ -6,9 +6,9 @@
 
 /// <reference types="THREE"/>
 import {total} from '@mathigon/core';
-import {clamp, toWord, Segment, Point, Angle, lerp, Rectangle, Polygon, isLineLike} from '@mathigon/fermat';
+import {Angle, clamp, isLineLike, lerp, Point, Polygon, Rectangle, Segment, toWord} from '@mathigon/fermat';
 import {$, Browser, slide} from '@mathigon/boost';
-import {Geopad, GeoPath, Path, Slider, Step, Polypad} from '../shared/types';
+import {Geopad, GeoPath, Path, Polypad, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';
 import {Graphics3D} from '../shared/components/webgl';
 import {Anibutton} from './components/anibutton';

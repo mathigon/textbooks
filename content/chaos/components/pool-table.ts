@@ -5,8 +5,8 @@
 
 
 import {last} from '@mathigon/core';
-import {Point, Line, Angle, quadratic} from '@mathigon/fermat';
-import {CustomElementView, register, $N, Draggable, SVGView, SVGParentView} from '@mathigon/boost';
+import {Angle, Line, Point, quadratic} from '@mathigon/fermat';
+import {$N, CustomElementView, Draggable, register, SVGParentView, SVGView} from '@mathigon/boost';
 
 
 class Ellipse {

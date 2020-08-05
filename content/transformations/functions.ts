@@ -4,9 +4,9 @@
 // =============================================================================
 
 
-import {isPalindrome, words, flatten} from '@mathigon/core';
+import {flatten, isPalindrome, words} from '@mathigon/core';
 import {Line, Point} from '@mathigon/fermat';
-import {Draggable, $N, InputView, ElementView} from '@mathigon/boost';
+import {$N, Draggable, ElementView, InputView} from '@mathigon/boost';
 import {Geopad, GeoPoint, PlayBtn, Slider, Step} from '../shared/types';
 import {Wallpaper} from './components/wallpaper';
 

@@ -4,9 +4,9 @@
 // =============================================================================
 
 
-import {$N, animate, thread, InputView, ElementView, SVGView, observe} from '@mathigon/boost';
+import {$N, animate, ElementView, InputView, observe, SVGView, thread} from '@mathigon/boost';
 import {isPrime, lcm, numberFormat, Random} from '@mathigon/fermat';
-import {total, sortBy, list, isOneOf, delay} from '@mathigon/core';
+import {delay, isOneOf, list, sortBy, total} from '@mathigon/core';
 import {Gameplay, Slideshow, Step} from '../shared/types';
 
 

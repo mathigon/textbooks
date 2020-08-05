@@ -4,16 +4,16 @@
 // =============================================================================
 
 
-import {last, tabulate, list, isOneOf, Color, Obj, repeat2D, tabulate2D} from '@mathigon/core';
-import {factorial, Random, numberFormat, toOrdinal, Point, Segment, subsets, SimplePoint, lerp} from '@mathigon/fermat';
-import {$, $$, $N, svgPointerPosn, animate, Draggable, SVGParentView, SVGView} from '@mathigon/boost';
+import {Color, isOneOf, last, list, Obj, repeat2D, tabulate, tabulate2D} from '@mathigon/core';
+import {factorial, lerp, numberFormat, Point, Random, Segment, SimplePoint, subsets, toOrdinal} from '@mathigon/fermat';
+import {$, $$, $N, animate, Draggable, SVGParentView, svgPointerPosn, SVGView} from '@mathigon/boost';
 import {Slideshow, Step} from '../shared/types';
 
 import {Edge, edgeToSegment, Graph} from './components/graph';
 import {Sketch} from './components/sketch';
 import {borders} from './components/four-colour-maps';
 import {travellingSalesman} from './components/geometry';
-import {RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE, TEAL} from '../shared/constants';
+import {BLUE, GREEN, ORANGE, PURPLE, RED, TEAL, YELLOW} from '../shared/constants';
 
 
 const person = 'M9,6C5.6,5.2,2.4,4.9,4,2c4.7-8.9,1-14-4-14c-5.1,0-8.7,5.3-4,14c1.6,2.9-1.7,3.2-5,4c-3.5,0.8-3,2.7-3,6h24C12,8.7,12.5,6.8,9,6z';

@@ -26,6 +26,7 @@ module.exports = {
     'no-multi-spaces': ['error', {ignoreEOLComments: true }],
     'spaced-comment': ['error', 'always', {markers: ['/']}],
     '@typescript-eslint/no-unused-vars': ['error', {varsIgnorePattern: '^_', argsIgnorePattern: '^_'}],
+    'sort-imports': ['error', {ignoreCase: true, ignoreDeclarationSort: true}],
     'comma-dangle': ['error', 'never'],
     'quote-props': ['error', 'as-needed'],
   }

@@ -5,7 +5,7 @@
 
 
 import {Obj} from '@mathigon/core';
-import {Point, Segment, isLineLike} from '@mathigon/fermat';
+import {isLineLike, Point, Segment} from '@mathigon/fermat';
 import {$N, slide, SVGView} from '@mathigon/boost';
 import {Geopad, GeoPoint, Path, PlayBtn, Step, Video} from '../shared/types';
 

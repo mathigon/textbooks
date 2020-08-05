@@ -6,8 +6,8 @@
 
 import {delay, wait} from '@mathigon/core';
 import {Point} from '@mathigon/fermat';
-import {$N, ElementView, slide, InputView, SVGView, loadScript} from '@mathigon/boost';
-import {Step, Slider, Slideshow} from '../shared/types';
+import {$N, ElementView, InputView, loadScript, slide, SVGView} from '@mathigon/boost';
+import {Slider, Slideshow, Step} from '../shared/types';
 
 import {beep, Beep} from './components/beep';
 import {CodeBox} from './components/code-box';

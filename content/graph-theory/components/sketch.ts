@@ -5,8 +5,8 @@
 
 
 import {EventTarget, last} from '@mathigon/core';
-import {Point, Segment, isBetween, SimplePoint} from '@mathigon/fermat';
-import {$N, slide, SVGParentView, SVGView, $body} from '@mathigon/boost';
+import {isBetween, Point, Segment, SimplePoint} from '@mathigon/fermat';
+import {$body, $N, slide, SVGParentView, SVGView} from '@mathigon/boost';
 
 
 interface SketchOptions {

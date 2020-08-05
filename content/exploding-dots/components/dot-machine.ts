@@ -4,9 +4,9 @@
 // =============================================================================
 
 
-import {EventTarget, defer, last} from '@mathigon/core';
-import {Point, numberFormat} from '@mathigon/fermat';
-import {CustomElementView, register, $N, pointerPosition, ElementView} from '@mathigon/boost';
+import {defer, EventTarget, last} from '@mathigon/core';
+import {numberFormat, Point} from '@mathigon/fermat';
+import {$N, CustomElementView, ElementView, pointerPosition, register} from '@mathigon/boost';
 import {AudioPlayer} from '../../shared/components/audio';
 
 

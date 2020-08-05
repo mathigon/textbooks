@@ -5,7 +5,7 @@
 
 
 import {Color, delay, list, Obj, repeat, wait} from '@mathigon/core';
-import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals} from '@mathigon/fermat';
+import {Circle, Complex, isBetween, nearlyEquals, numberFormat, Point, Polygon, Polyline} from '@mathigon/fermat';
 import {$html, $N, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, GeoPoint, Select, Slider, Slideshow, Step} from '../shared/types';
@@ -15,7 +15,7 @@ import {CellularAutomaton} from './components/automata';
 import {ChaosGame} from './components/chaos-game';
 import {COASTLINE} from './components/coastline';
 import {drawKoch, drawSierpinski} from './components/fractals';
-import {JuliaCanvas, converges} from './components/mandelbrot';
+import {converges, JuliaCanvas} from './components/mandelbrot';
 
 import './components/menger-sponge';
 import './components/sierpinski-tetrahedra';

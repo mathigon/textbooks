@@ -6,7 +6,7 @@
 
 import {tabulate2D} from '@mathigon/core';
 import {Point} from '@mathigon/fermat';
-import {$N, ElementView, SVGParentView, pointerOver, register, CustomElementView, Observable, observe} from '@mathigon/boost';
+import {$N, CustomElementView, ElementView, Observable, observe, pointerOver, register, SVGParentView} from '@mathigon/boost';
 
 
 const RULES = ['000', '001', '010', '100', '011', '101', '110', '111'];

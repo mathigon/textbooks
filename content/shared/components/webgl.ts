@@ -6,7 +6,7 @@
 
 /// <reference types="THREE"/>
 import {Obj} from '@mathigon/core';
-import {loadScript, $N, CanvasView, ElementView, $html} from '@mathigon/boost';
+import {$html, $N, CanvasView, ElementView, loadScript} from '@mathigon/boost';
 
 
 const url = '/resources/shared/vendor/three-91.min.js';

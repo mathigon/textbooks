@@ -5,9 +5,9 @@
 
 
 /// <reference types="THREE"/>
-import {list, wait, tabulate, isOneOf, Color, Obj} from '@mathigon/core';
-import {clamp, Point, toWord, roundTo, Polygon, Sector, round, Angle, Rectangle, numberFormat, Random} from '@mathigon/fermat';
-import {$N, slide, animate, Draggable, InputView, hover, CanvasView, ElementView, SVGView, SVGParentView} from '@mathigon/boost';
+import {Color, isOneOf, list, Obj, tabulate, wait} from '@mathigon/core';
+import {Angle, clamp, numberFormat, Point, Polygon, Random, Rectangle, round, roundTo, Sector, toWord} from '@mathigon/fermat';
+import {$N, animate, CanvasView, Draggable, ElementView, hover, InputView, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Burst} from '../shared/components/burst';
 import {ConicSection} from '../shared/components/conic-section';
 import {rotateDisk} from '../shared/components/disk';

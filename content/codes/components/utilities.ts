@@ -4,7 +4,7 @@
 // ============================================================================
 
 
-import {repeat, Obj} from '@mathigon/core';
+import {Obj, repeat} from '@mathigon/core';
 
 
 export const LOWER_CASE = 'abcdefghijklmnopqrstuvwxyz';

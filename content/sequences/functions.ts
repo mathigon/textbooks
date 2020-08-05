@@ -4,12 +4,12 @@
 // =============================================================================
 
 
-import {flatten, delay, list, last, cache, tabulate, sortBy, total} from '@mathigon/core';
+import {cache, delay, flatten, last, list, sortBy, tabulate, total} from '@mathigon/core';
 import {isPrime, numberFormat, Point, round} from '@mathigon/fermat';
 import {$N, ElementView, hover, SVGView} from '@mathigon/boost';
 import {ExprElement, Expression} from '@mathigon/hilbert';
 import {CoordinateSystem, EquationSystem, Gesture, Slider, Slideshow, Step, Tabbox} from '../shared/types';
-import {trianglePoints, polygonPoints} from './components/polygons';
+import {polygonPoints, trianglePoints} from './components/polygons';
 
 import './components/tetrahedron';
 
