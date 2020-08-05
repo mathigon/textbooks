@@ -4,6 +4,7 @@
 // =============================================================================
 
 
+/// <reference types="THREE"/>
 import {chunk} from '@mathigon/core';
 import {$html, $N, Browser, CustomElementView, register, slide} from '@mathigon/boost';
 import {create3D, Graphics3D} from './webgl';

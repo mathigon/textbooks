@@ -4,6 +4,7 @@
 // =============================================================================
 
 
+/// <reference types="THREE"/>
 import {total} from '@mathigon/core';
 import {clamp, toWord, Segment, Point, Angle, lerp, Rectangle, Polygon, isLineLike} from '@mathigon/fermat';
 import {$, Browser, slide} from '@mathigon/boost';

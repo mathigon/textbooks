@@ -4,6 +4,7 @@
 // =============================================================================
 
 
+/// <reference types="THREE"/>
 import {tabulate} from '@mathigon/core';
 import {clamp} from '@mathigon/fermat';
 import {CustomElementView, register, slide} from '@mathigon/boost';
