@@ -139,7 +139,7 @@ export function handshakes2($step: Step) {
 
 export function handshakes2a($step: Step) {
   $step.onScore('blank-0', () => {
-    if ($step.prev) $step.prev.addClass('complete')
+    if ($step.prev) $step.prev.addClass('complete');
   });
 }
 
@@ -163,8 +163,9 @@ export function handshakes4($section: Step) {
     const fPoints = tabulate(x => ({x: (x + 1) / (f + 1) * 300, y: 110}), f);
 
     const edges: [number, number][] = [];
-    for (let i = 0; i < m; ++i) for (let j = 0; j < f; ++j) edges.push(
-        [i, m + j]);
+    for (let i = 0; i < m; ++i) {
+      for (let j = 0; j < f; ++j) edges.push([i, m + j]);
+    }
 
     g.options.vertex = (v) => v < m ? '#20a0ff' : '#ff207e';
     g.load(m + f, edges, mPoints.concat(fPoints));
@@ -228,7 +229,7 @@ export function bridges($section: Step) {
       let enter: Point;
       let crossed = false;
 
-      $bridge.on('pointerenter', function (e) {
+      $bridge.on('pointerenter', (e) => {
         if (!map.drawing) return;
         enter = svgPointerPosn(e, $svg);
         if (crossed) {
@@ -275,8 +276,8 @@ export function bridges1($section: Step) {
   const $vertices = $$('.vertex', $svg);
   const $trace = $('.trace', $svg)!;
 
-  $edges.forEach($e => { $e.hide(); });
-  $vertices.forEach($e => { $e.hide(); });
+  $edges.forEach($e => $e.hide());
+  $vertices.forEach($e => $e.hide());
   $trace.hide();
 
   $section.onScore('blank-0', () => {
@@ -296,7 +297,11 @@ export function bridges1($section: Step) {
 }
 
 export function bridges3($section: Step) {
-  const g = GREEN, r = RED, b = BLUE, o = ORANGE;
+  const g = GREEN;
+  const r = RED;
+  const b = BLUE;
+  const o = ORANGE;
+
   const colours: Obj<(string|Color)[]> = {
     val: Color.rainbow(8),
     eo: [g, r, g, r, g, r, g],
@@ -399,7 +404,7 @@ export function utilities($section: Step) {
   const sectors = new WeakMap();
 
   function clear() {
-    allUtilities.forEach($el => { $el.css('opacity', 0); });
+    allUtilities.forEach($el => $el.css('opacity', 0));
     map.clear();
     errors = [];
     resolve();
@@ -419,8 +424,9 @@ export function utilities($section: Step) {
       e.preventDefault();
 
       map.clearPaths(errors);
-      errors.forEach(
-          e => { if (sectors.has(e)) sectors.get(e).css('opacity', 0); });
+      for (const e of errors) {
+        if (sectors.has(e)) sectors.get(e).css('opacity', 0);
+      }
       errors = [];
 
       map.start(p);
@@ -488,11 +494,9 @@ export function utilities1($section: Step) {
     }, 800);
   }
 
-  $section.onScore('blank-0', function () {
-    transition(k4, p4x);
-  });
+  $section.onScore('blank-0', () => transition(k4, p4x));
 
-  $section.onScore('blank-1', function () {
+  $section.onScore('blank-1', () => {
     transition(k5, p5x);
     k5.edges[1].$el.animate({stroke: '#C00'}, 800);
     k5.edges[4].$el.animate({stroke: '#C00'}, 800);
@@ -510,7 +514,7 @@ export function planarity($section: Step) {
 
   function shuffle(n: number) {
     return tabulate(() =>
-        new Point(Math.random() * graph.width, Math.random() * graph.height), n);
+      new Point(Math.random() * graph.width, Math.random() * graph.height), n);
   }
 
   function intersect(edges: Edge[]) {
@@ -580,7 +584,7 @@ export function planarity($section: Step) {
     graph.edges.forEach(e => e.$el.setClass('intersect', !!e.intersect));
   });
 
-  $newBtn.on('click',  () => generateGraph($section.model.n));
+  $newBtn.on('click', () => generateGraph($section.model.n));
   $section.model.watch( () => generateGraph($section.model.n));
 }
 
@@ -588,10 +592,10 @@ export function euler($section: Step) {
   const $svgs = $section.$$('svg');
   const $notes = $section.$$('.euler-sum');
 
-  list(9).forEach(function (i) {
+  list(9).forEach((i) => {
     const x = i % 3;
     const $svg = $svgs[(i - x) / 3];
-    $section.onScore('blank-' + i, function () {
+    $section.onScore('blank-' + i, () => {
       if (x === 0) {
         $svg.$$('circle').forEach(($c) => $c.animate({fill: GREEN}));
       } else if (x === 1) {
@@ -623,8 +627,9 @@ export function euler2($section: Step) {
 
   let slide = 0;
   $vertices.forEach(($v, i) => $v.setCenter(positions[0][i]));
-  $edges.forEach(
-      ($e, i) => { $e.setLine(positions[0][i], positions[0][(i + 1) % 4]); });
+  $edges.forEach(($e, i) => {
+    $e.setLine(positions[0][i], positions[0][(i + 1) % 4]);
+  });
 
   $slideshow.on('next back', (s: number) => {
     const start = positions[slide];
@@ -632,8 +637,9 @@ export function euler2($section: Step) {
     slide = s;
 
     animate((x) => {
-      $vertices.forEach(
-          ($v, i) => { $v.setCenter(Point.interpolate(start[i], end[i], x)); });
+      $vertices.forEach(($v, i) => {
+        $v.setCenter(Point.interpolate(start[i], end[i], x));
+      });
       $edges.forEach(($e, i) => {
         $e.setLine(Point.interpolate(start[i], end[i], x),
             Point.interpolate(start[(i + 1) % 4], end[(i + 1) % 4], x));
@@ -675,9 +681,9 @@ export function euler2($section: Step) {
 
   const values = [[0, 1, 0], [0, 2, 1], [1, 3, 3], [0, 3, 2], [1, 4, 4]];
   $slideshow.on('step', (s: number) => {
-    $f.forEach(x => { x.textStr = values[s][0]; });
-    $v.forEach(x => { x.textStr = values[s][1]; });
-    $e.forEach(x => { x.textStr = values[s][2]; });
+    $f.forEach(x => x.textStr = values[s][0]);
+    $v.forEach(x => x.textStr = values[s][1]);
+    $e.forEach(x => x.textStr = values[s][2]);
   });
 }
 
@@ -686,12 +692,12 @@ export function euler3($section: Step) {
   const $gs = $svg.$$('g');
 
   let hasClicked = false;
-  $svg.on('click', function () {
+  $svg.on('click', () => {
     if (hasClicked) return;
     hasClicked = true;
 
     $svg.css('cursor', 'default');
-    $gs.forEach(function ($g, i) {
+    $gs.forEach(($g, i) => {
       setTimeout(() => $g.css('transform', 'rotate(23.5deg)'), i * 100);
       setTimeout(() => $g.css('transform', 'rotate(43.5deg)'), i * 100 + 100);
       setTimeout(() => $g.css('transform', 'rotate(  56deg)'), i * 100 + 200);
@@ -707,7 +713,7 @@ export function euler4($step: Step) {
   const $slider = $step.$$('x-slider');
   const src = $img.map($i => $i.attr('src'));
 
-  for (const i in [0, 1]) {
+  for (const i of [0, 1]) {
     // Preload images
     for (let j = 1; j < 32; ++j) {
       const img = new Image();
@@ -726,9 +732,9 @@ export function maps1($section: Step) {
   let activeColour = 0;
   let warned = false;
 
-  $colours.forEach(function ($el, i) {
+  $colours.forEach(($el, i) => {
     $el.css('background', colours[i]);
-    $el.on('click', function () {
+    $el.on('click', () => {
       $colours[activeColour].removeClass('on');
       $colours[i].addClass('on');
       activeColour = i;
@@ -754,11 +760,13 @@ export function maps1($section: Step) {
       // const initial = colours.indexOf($c.attr('fill'));
       $c.css('fill', '#CCC');
 
-      $c.on('click', function () {
-        for (const n of neighbours) if (countryColours[n] === activeColour) {
-          if (!warned) $section.addHint('mapError');
-          warned = true;
-          return;
+      $c.on('click', () => {
+        for (const n of neighbours) {
+          if (countryColours[n] === activeColour) {
+            if (!warned) $section.addHint('mapError');
+            warned = true;
+            return;
+          }
         }
 
         if (countryColours[id] != undefined) --colourUses[countryColours[id]];
@@ -781,10 +789,10 @@ export function maps1($section: Step) {
       });
     });
 
-    $map.$('.clear')!.on('click', function () {
+    $map.$('.clear')!.on('click', () => {
       $count.textStr = used = 0;
       countryColours = {};
-      $countries.forEach($c => { $c.css('fill', '#CCC'); });
+      $countries.forEach($c => $c.css('fill', '#CCC'));
       $solveds[i].exit();
       colourUses = [0, 0, 0, 0, 0, 0, 0];
     });
@@ -797,8 +805,8 @@ export function maps2($section: Step) {
   const $edges = $svg.$$('path');
   const $vertices = $svg.$$('circle');
 
-  $edges.forEach($e => { $e.exit(); });
-  $vertices.forEach($e => { $e.exit(); });
+  $edges.forEach($e => $e.exit());
+  $vertices.forEach($e => $e.exit());
 
   $section.onScore('blank-0', () => {
     $vertices.forEach($v => $v.enter('pop', 600));
@@ -814,17 +822,14 @@ export function maps2($section: Step) {
 export function salesman2($section: Step) {
   $section.model.tsmString = (x: number) => {
     const a = [`There are <strong>${x}</strong> choices for the first city.`];
-    if (x > 2) a.push(
-        `After picking the first city, there are only <strong>${x -
-                                                                1}</strong> choices left for the second city.`);
-    for (let i = 3; i < Math.min(6, x); ++i) a.push(
-        `Then there are <strong>${x - i +
-                                  1}</strong> choices for the ${toOrdinal(
-            i)} city.`);
+    if (x > 2) {
+      a.push(`After picking the first city, there are only <strong>${x - 1}</strong> choices left for the second city.`);
+    }
+    for (let i = 3; i < Math.min(6, x); ++i) {
+      a.push(`Then there are <strong>${x - i + 1}</strong> choices for the ${toOrdinal(i)} city.`);
+    }
     if (x > 6) a.push('&hellip;');
-    a.push(
-        `Finally, there is only <strong>1</strong> choice left for the ${toOrdinal(
-            x)} city.`);
+    a.push(`Finally, there is only <strong>1</strong> choice left for the ${toOrdinal(x)} city.`);
 
     return '<li style="margin-bottom: 0">' +
            a.join('</li><li style="margin-bottom: 0">') + '</li>';

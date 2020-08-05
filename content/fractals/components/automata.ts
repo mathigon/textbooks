@@ -12,7 +12,7 @@ import {$N, ElementView, SVGParentView, pointerOver, register, CustomElementView
 const RULES = ['000', '001', '010', '100', '011', '101', '110', '111'];
 const MARGIN = 5;
 const CELL_SIZE = 12;
-const HIGHLIGHT =  'M-15,-15l0,17l12,0l0,12l17,0l0,-12l11,0l0,-17Z';
+const HIGHLIGHT = 'M-15,-15l0,17l12,0l0,12l17,0l0,-12l11,0l0,-17Z';
 
 
 interface State {
@@ -32,7 +32,7 @@ function rect(x: number, y: number, $parent: ElementView, classes = '') {
     width: CELL_SIZE, height: CELL_SIZE,
     x: MARGIN + x * CELL_SIZE, y: MARGIN + y * CELL_SIZE,
     class: classes
-  }, $parent)
+  }, $parent);
 }
 
 @register('x-automaton')
@@ -58,7 +58,7 @@ export class CellularAutomaton extends CustomElementView {
       for (const k of [0, 1, 2]) rect(k, 0, $svg, rule[k] === '1' ? 'fill' : '');
       const $highlight = $N('path', {d: HIGHLIGHT, class: 'highlight'}, $svg);
       $highlight.translate(MARGIN + CELL_SIZE, MARGIN + CELL_SIZE);
-      const $value =  rect(1, 1, $svg, 'red');
+      const $value = rect(1, 1, $svg, 'red');
       this.state.watch(() => $value.setClass('fill', this.state[rule]));
       this.state.watch(() => $svg.setClass('focus', this.state.active === i));
       $svg.on('click', () => this.state[rule] = !this.state[rule]);

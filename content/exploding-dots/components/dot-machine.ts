@@ -27,7 +27,7 @@ class Cell extends EventTarget {
 
 
   constructor(private readonly $dotMachine: DotMachine, initial = 0,
-              index = 0) {
+      index = 0) {
     super();
     this.value = initial;
 
@@ -44,9 +44,13 @@ class Cell extends EventTarget {
     }
   }
 
-  get $fullDots() { return this.$dots.filter($d => !$d.data.anti); }
+  get $fullDots() {
+    return this.$dots.filter($d => !$d.data.anti);
+  }
 
-  get $antiDots() { return this.$dots.filter($d => $d.data.anti); }
+  get $antiDots() {
+    return this.$dots.filter($d => $d.data.anti);
+  }
 
   getDotPosition(i: number) {
     const s = this.$dotMachine.spacing;
@@ -70,7 +74,7 @@ class Cell extends EventTarget {
   }
 
   addDot(posn?: Point,
-         {className = '', dx = 0, audio = false, count = true} = {}) {
+      {className = '', dx = 0, audio = false, count = true} = {}) {
     if (!posn) posn = this.getDotPosition(this.$dots.length);
     if (audio) enterAudio.play();
 

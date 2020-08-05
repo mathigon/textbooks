@@ -164,7 +164,7 @@ export function quadrilateralsArea($step: Step) {
       $geopads[0].animatePoint(path.components[1].name, new Point(10, 9));
       $step.addHint('correct');
       $step.score('draw-1');
-      $geopads[0].switchTool('move')
+      $geopads[0].switchTool('move');
     } else {
       $step.addHint('incorrect');
       path.delete();
@@ -178,7 +178,7 @@ export function quadrilateralsArea($step: Step) {
       $geopads[1].animatePoint(path.components[1].name, new Point(11, 9));
       $step.addHint('correct');
       $step.score('draw-2');
-      $geopads[1].switchTool('move')
+      $geopads[1].switchTool('move');
     } else {
       $step.addHint('incorrect');
       path.delete();

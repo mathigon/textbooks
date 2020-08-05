@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-/// <reference types="three"/>
+/// <reference types="THREE"/>
 import {Obj} from '@mathigon/core';
 import {loadScript, $N, CanvasView, ElementView, $html} from '@mathigon/boost';
 
@@ -39,7 +39,7 @@ export interface Graphics3D {
 }
 
 export async function create3D($el: ElementView, fov: number, width: number,
-                               height = width): Promise<Graphics3D> {
+    height = width): Promise<Graphics3D> {
 
   const $canvas = $N('canvas',
       {width, height, style: 'max-width: 100%'}, $el) as CanvasView;

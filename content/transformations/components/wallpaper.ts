@@ -28,11 +28,11 @@ const lineSI = new Line(new Point(0, 720), new Point(720, 0));
 
 function grid(points: Point[], x: number, y: number) {
   return flatten<Point>(tabulate2D((i, j) =>
-      points.map((p: Point) => p.shift(i * x, j * y)), width / x, height / y));
+    points.map((p: Point) => p.shift(i * x, j * y)), width / x, height / y));
 }
 
 function applyTransforms(point: Point, [x, y]: [number, number],
-                         transforms: ((p: Point) => Point)[]) {
+    transforms: ((p: Point) => Point)[]) {
   let points = [point.mod(x, y)];
 
   for (const t of transforms) {

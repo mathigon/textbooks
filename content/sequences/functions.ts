@@ -77,7 +77,7 @@ function bounce(x: number) {
 }
 
 function setPosition($el: ElementView, p: Point, width: number, height: number,
-                     r: number) {
+    r: number) {
   $el.css({
     left: p.x / width * 100 + '%', top: p.y / height * 100 + '%',
     transform: `rotate(${r}deg)`
@@ -167,8 +167,9 @@ export function payItForward2($step: Step) {
   const $equation = $step.$('x-equation') as EquationSystem;
   const close = Expression.parse('3^n');
   $equation.validate = (expr: ExprElement) => {
-    if (Expression.numEquals(expr, close))
+    if (Expression.numEquals(expr, close)) {
       return {error: 'pay-it-forward-close'};
+    }
   };
 }
 
@@ -303,7 +304,7 @@ export function polygonNumbers($step: Step) {
 // Special Sequences
 
 function eratosthenes($step: Step, $numbers: ElementView[],
-                      $gesture: Gesture, primes: number[], classes: string[]) {
+    $gesture: Gesture, primes: number[], classes: string[]) {
   const p = primes.pop()!;
   const c = classes.pop()!;
 
@@ -322,8 +323,9 @@ function eratosthenes($step: Step, $numbers: ElementView[],
 
     delay(() => {
       $step.score('p' + p);
-      if (primes.length) eratosthenes($step, $numbers, $gesture, primes,
-          classes);
+      if (primes.length) {
+        eratosthenes($step, $numbers, $gesture, primes, classes);
+      }
     }, time + 1000);
   });
 }
@@ -364,7 +366,7 @@ function hailstones(n: number) {
 
 export function hailstone1($step: Step) {
   $step.model.hailstones = (n: number) =>
-      hailstones(n).map(i => `<span class="n">${i}</span>`).join(', ');
+    hailstones(n).map(i => `<span class="n">${i}</span>`).join(', ');
 }
 
 export function hailstone2($step: Step) {
@@ -399,8 +401,9 @@ export function rabbits($step: Step) {
   const $stage = $step.$('.rabbits')!;
   const $slideshow = $step.$('x-slideshow') as Slideshow;
 
-  for (const $e of[...$dividers, ...$paths, ...$arrows, ...$numbers, ...$rabbits])
+  for (const $e of [...$dividers, ...$paths, ...$arrows, ...$numbers, ...$rabbits]) {
     $e.hide();
+  }
 
   const cum = [0, 1, 2, 4, 7, 12, 20];
   const padding = [10, 20, 30, 40, 50, 60];
@@ -620,9 +623,11 @@ function colourPascal($rows: ElementView[][], $cells: ElementView[], fn: ColorFu
   for (let i = 0; i < $rows.length; ++i) {
     for (let j = 0; j < $rows[i].length; ++j) {
       const className = fn(i, j, +$rows[i][j].text);
-      if (className) delay(() => {
-        if (index === colourIndex) $rows[i][j].addClass(className);
-      }, t += 6000 / (i * i + 100));
+      if (className) {
+        delay(() => {
+          if (index === colourIndex) $rows[i][j].addClass(className);
+        }, t += 6000 / (i * i + 100));
+      }
     }
   }
 }
@@ -648,8 +653,12 @@ export function pascalSequences($step: Step) {
     colourIndex += 1;
     $body.setAttr('class', 'body s-' + colours[i]);
 
-    if (i === 4) $sums.forEach(($s, t) => { $s.textStr = Math.pow(2, t); });
-    if (i === 6) $sums.forEach(($s, t) => { $s.textStr = fibonacci(t); });
+    if (i === 4) {
+      $sums.forEach(($s, t) => $s.textStr = Math.pow(2, t));
+    }
+    if (i === 6) {
+      $sums.forEach(($s, t) => $s.textStr = fibonacci(t));
+    }
 
     const $r = (i === 6) ? $fibonacci : $rows;
     colourPascal($r, $cells, colourFunctions[i], colourIndex);

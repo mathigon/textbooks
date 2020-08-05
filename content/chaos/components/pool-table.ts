@@ -17,9 +17,13 @@ class Ellipse {
     this.q = Math.sqrt(a ** 2 - b ** 2);
   }
 
-  get f1() { return this.c.shift(-this.q, 0); }
+  get f1() {
+    return this.c.shift(-this.q, 0);
+  }
 
-  get f2() { return this.c.shift(this.q, 0); }
+  get f2() {
+    return this.c.shift(this.q, 0);
+  }
 
   normalAt(p: Point) {
     const a = new Angle(this.f1, p, this.f2);
@@ -40,7 +44,6 @@ class Ellipse {
     const points = quadratic(A, B, C);
     return points.map(t => line.at(t));
   }
-
 }
 
 // -----------------------------------------------------------------------------

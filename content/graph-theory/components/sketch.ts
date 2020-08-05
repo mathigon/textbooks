@@ -37,8 +37,9 @@ export class Sketch extends EventTarget {
         if (!this.drawing) return;
 
         const box = $svg.viewBox;
-        if (!isBetween(p.x, 0, box.width) || !isBetween(p.y, 0, box.height))
+        if (!isBetween(p.x, 0, box.width) || !isBetween(p.y, 0, box.height)) {
           return this.stop();
+        }
 
         this.addPoint(p);
       },
@@ -78,7 +79,7 @@ export class Sketch extends EventTarget {
   }
 
   clear() {
-    this.paths.forEach(path => { path.remove(); });
+    this.paths.forEach(path => path.remove());
     this.paths = [];
     this.trigger('clear');
   }

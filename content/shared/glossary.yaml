@@ -247,7 +247,7 @@ circle:
 
 circle-area:
   title: Area of a circle
-  text: The __area of a circle__ with radius _r_ is given by the folmula
+  text: The __area of a circle__ with radius _r_ is given by the formula
     `A = pi r^2`.
 
 circle-circumference:

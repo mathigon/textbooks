@@ -169,7 +169,6 @@ export class WaterCanvas extends CustomElementView {
 
     for (let x = 0; x < this.sx; x++) {
       for (let y = 0; y < this.sy; y++) {
-
         const left = (x === 0) ? 0 : this.depthMap1[x - 1][y];
         const right = (x === this.sx - 1) ? 0 : this.depthMap1[x + 1][y];
         const top = (y === 0) ? 0 : this.depthMap1[x][y - 1];
@@ -189,5 +188,4 @@ export class WaterCanvas extends CustomElementView {
 
     return noChange;
   }
-
 }

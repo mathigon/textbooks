@@ -14,7 +14,7 @@ import {Geopad, GeoPath, Path, Slider, Step} from '../shared/types';
 // Triangle Properties
 
 function waitToDraw($step: Step, $geopad: Geopad, shapes: string[],
-                    classes: string[], targets: string[]) {
+    classes: string[], targets: string[]) {
   $geopad.waitForPaths(shapes, {
     onCorrect(path, i) {
       $step.addHint('correct');

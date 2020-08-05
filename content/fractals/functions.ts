@@ -234,7 +234,7 @@ export async function chaosGame($step: Step) {
   let startPoint: GeoPoint;
 
   if ($step.scores.has('point')) {
-    startPoint = $geopad.drawPoint('point(150, 200)', {classes: 'blue'})
+    startPoint = $geopad.drawPoint('point(150, 200)', {classes: 'blue'});
   } else {
     $geopad.switchTool('point');
     startPoint = await $geopad.waitForPoint();
@@ -333,7 +333,7 @@ export function fractalBuilder($step: Step) {
 export function cellular($step: Step) {
   const correct = ['01110000', '0101_0__', '01110101', '01111110'];
   const match = (a: string, b: string) =>
-      a.split('').every((c, i) => c === b[i] || c === '_');
+    a.split('').every((c, i) => c === b[i] || c === '_');
 
   const automaton = $step.$('x-automaton') as CellularAutomaton;
 

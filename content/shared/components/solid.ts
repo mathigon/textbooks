@@ -44,8 +44,11 @@ function rotate($solid: Solid, animate = true, speed = 1) {
   }
 
   if (autoRotate) {
-    $solid.scene.$canvas.on('enterViewport', () => { visible = true; frame(); });
-    $solid.scene.$canvas.on('exitViewport', () => { visible = false; });
+    $solid.scene.$canvas.on('enterViewport', () => {
+      visible = true;
+      frame();
+    });
+    $solid.scene.$canvas.on('exitViewport', () => visible = false);
   } else {
     setTimeout(frame);
   }
@@ -88,7 +91,6 @@ function createEdges(geometry: THREE.Geometry, material: THREE.Material, maxAngl
 
   return obj;
 }
-
 
 
 // -----------------------------------------------------------------------------
@@ -136,7 +138,7 @@ export class Solid extends CustomElementView {
 
   addMeshCallback(fn: (scene: Graphics3D) => THREE.Object3D[]|void) {
     const items = fn(this.scene) || [];
-    for (const i of items)  this.object.add(i);
+    for (const i of items) this.object.add(i);
 
     if (!this.hasAttr('static')) {
       const speed = +this.attr('rotate') || 1;
@@ -286,7 +288,7 @@ export class Solid extends CustomElementView {
     outlineMaterial.onBeforeCompile = function(shader) {
       const token = '#include <begin_vertex>';
       const customTransform = '\nvec3 transformed = position + vec3(normal) * 0.02;\n';
-      shader.vertexShader = shader.vertexShader.replace(token,customTransform)
+      shader.vertexShader = shader.vertexShader.replace(token, customTransform);
     };
     const outline = new THREE.Mesh(geometry, outlineMaterial);
 
@@ -301,8 +303,9 @@ export class Solid extends CustomElementView {
 
     obj.setClipPlanes = function(planes: THREE.Plane[]) {
       if (solid.setClipPlanes) solid.setClipPlanes(planes);
-      for (const m of [outlineMaterial, knockoutMaterial])
+      for (const m of [outlineMaterial, knockoutMaterial]) {
         m.clippingPlanes = planes;
+      }
     };
 
     obj.updateGeometry = function(geo: THREE.Geometry) {

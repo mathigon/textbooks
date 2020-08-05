@@ -13,9 +13,8 @@ import {Wallpaper} from './components/wallpaper';
 import './components/wallpaper';
 
 
-
 function play($step: Step, $el: ElementView, duration: number, score: string,
-              callback: () => void) {
+    callback: () => void) {
   const $play = $el.$('x-play-btn') as PlayBtn;
   $play.on('play', () => {
     callback();
@@ -31,7 +30,7 @@ function expandSegment($geopad: Geopad, [e1, e2]: GeoPoint[], line: Line) {
 }
 
 function drawShape($step: Step, $geopad: Geopad, goal: string, shape: string,
-                   expand = false) {
+    expand = false) {
   // `shape` should be names of a polygon, segment or line.
   const lines = flatten(
       words(shape).map(s => $geopad.model[s].edges || $geopad.model[s]));

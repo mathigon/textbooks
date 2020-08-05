@@ -33,7 +33,6 @@ function step(child: THREE.Object3D) {
 }
 
 
-
 @register('x-menger-sponge', {attributes: ['steps']})
 export class MengerSponge extends Solid {
 
