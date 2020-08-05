@@ -429,7 +429,7 @@ export function riemann($section: Step) {
   const $numbers = $section.$('.numbers');
   for (let i = 2; i < 30; ++i) {
     $N('text', {
-      html: i, x: (i - 1) * dx, y: y0 + 18, 'class': isPrime(i) ? 'prime' : ''
+      html: i, x: (i - 1) * dx, y: y0 + 18, class: isPrime(i) ? 'prime' : ''
     }, $numbers);
   }
 

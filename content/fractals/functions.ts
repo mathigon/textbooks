@@ -326,7 +326,7 @@ export function fractalBuilder($step: Step) {
       $step.model.assign({shape: '5', ratio: '2', rule: 'none'});
       game.reset();
       game.play(10000);
-    },
+    }
   });
 }
 

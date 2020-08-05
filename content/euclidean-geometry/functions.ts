@@ -148,7 +148,7 @@ export async function equilateral($step: Step) {
   // Draw the two circles
   const [c1, c2] = await $geopad.waitForPaths([
     `circle(${s0.name}.p1,distance(${s0.name}.p1,${s0.name}.p2))`,
-    `circle(${s0.name}.p2,distance(${s0.name}.p1,${s0.name}.p2))`,
+    `circle(${s0.name}.p2,distance(${s0.name}.p1,${s0.name}.p2))`
   ], drawingOptions);
 
   $step.score('circle1');
@@ -158,7 +158,7 @@ export async function equilateral($step: Step) {
   // Draw the two side segments
   const [s1, s2] = await $geopad.waitForPaths<Segment>([
     `segment(${s0.name}.p1,intersections(${c1.name},${c2.name})[0])`,
-    `segment(${s0.name}.p2,intersections(${c1.name},${c2.name})[0])`,
+    `segment(${s0.name}.p2,intersections(${c1.name},${c2.name})[0])`
   ], drawingOptions);
 
   s1.$el.setAttr('target', 'a');
