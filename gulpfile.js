@@ -18,13 +18,13 @@ const rtl = require('postcss-rtl');
 
 const LANGUAGES = ['en', 'ar', 'az', 'ca', 'cn', 'de', 'es', 'fr', 'hi', 'hr',
   'it', 'ja', 'pt', 'ro', 'ru', 'sv', 'tr', 'vi'];
-const CACHE = __dirname + '/content/.cache.json';
+const CACHE = __dirname + '/build/.cache.json';
 
 
 function markdown() {
   return gulp.src(['content/*/', '!content/shared/'])
       .pipe(gulpTextbooks(LANGUAGES, CACHE))
-      .pipe(gulp.dest('server/assets/resources'));
+      .pipe(gulp.dest('build'));
 }
 
 function scripts() {
@@ -36,7 +36,7 @@ function scripts() {
         }
       }, {format: 'iife', name: 'StepFunctions'}))
       .pipe(rename({extname: '.js'}))
-      .pipe(gulp.dest('server/assets/resources'));
+      .pipe(gulp.dest('build'));
 }
 
 const RTL_BLACKLIST = ['background', 'background-color', 'background-image',
@@ -47,7 +47,7 @@ function stylesheets() {
       .pipe(less())
       .pipe(postcss([rtl({blacklist: RTL_BLACKLIST}), autoprefixer()]))
       .pipe(rename({extname: '.css'}))
-      .pipe(gulp.dest('server/assets/resources'));
+      .pipe(gulp.dest('build'));
 }
 
 exports.watch = () => {
