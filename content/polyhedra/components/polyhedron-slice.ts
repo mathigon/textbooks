@@ -8,6 +8,7 @@ import {last} from '@mathigon/core';
 import {register, CustomElementView, slide} from '@mathigon/boost';
 import {clamp, Point} from '@mathigon/fermat';
 import {create3D} from '../../shared/components/webgl';
+import { Material } from 'three';
 
 
 function getGeometry(name: string) {
@@ -18,8 +19,7 @@ function getGeometry(name: string) {
   return new THREE.BoxGeometry(1, 1, 1);
 }
 
-
-@register('x-polyhedron-slice', {attributes: ['shape']})
+@register('x-polyhedron-slice', {attributes: ['shape', 'opacity']})
 export class PolyhedronSlice extends CustomElementView {
 
   async ready() {
@@ -39,8 +39,8 @@ export class PolyhedronSlice extends CustomElementView {
 
     // Create polyhedron object
     const geometry = getGeometry(this.attr('shape') || 'cube');
-    const material = new THREE.MeshPhongMaterial({opacity: 0.8, color: 0xcd0e66,
-      transparent: true, specular: 0x222222});
+    const material = new THREE.MeshPhongMaterial({opacity: Number(this.attr('opacity')) || 0.8, color: 0xcd0e66,
+    transparent: true, specular: 0x222222});
     const polyhedron = new THREE.Mesh(geometry, material);
     sceneObj.add(polyhedron);
 
@@ -48,6 +48,12 @@ export class PolyhedronSlice extends CustomElementView {
     this.on('attr:shape', e => {
       polyhedron.geometry = getGeometry(e.newVal);
       updateIntersection();
+      scene.draw();
+    });
+
+    // Listen to the 'opacity' attribute and update the graphics.
+    this.on('attr:opacity', e => {
+      (polyhedron.material as Material).opacity = 0.4 + e.newVal / 25.0;
       scene.draw();
     });
 
