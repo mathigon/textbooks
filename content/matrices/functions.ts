@@ -5,6 +5,7 @@
 
 import { Step } from "../shared/types";
 import { ElementView } from "@mathigon/boost";
+import { Point } from "@mathigon/fermat";
 
 /**
  *
@@ -25,7 +26,7 @@ function applyTransform(A: number[][], v: number[]): number[] {
  * @param $step
  */
 export function translations($step: Step) {
-  
+
     const $polygons = $step.$('svg')?.$$('polygon') as ElementView[];
     const origin = {x: -40, y: -30}; // center polygon on "origin" (top left)
     const center = {x : 110, y: 110};
@@ -40,14 +41,14 @@ export function translations($step: Step) {
       const scale = {x: cascade.x * state.a, y: cascade.y * 1};
       $polygons[1].setTransform(cascade, 0, state.a);
     });
-  }
-  
-  /**
-   * Rotate (how??)
-   * @param $step
-   */
-  export function rotations($step: Step) {
-  
+}
+
+/**
+ * Rotate (how??)
+ * @param $step
+ */
+export function rotations($step: Step) {
+    
     const $polygons = $step.$('svg')?.$$('polygon') as ElementView[];
     const center = {x: 50, y: 50}
     console.log($polygons[1]);
@@ -57,16 +58,16 @@ export function translations($step: Step) {
       // yeah, so this isn't doing what I want!
       $polygons[1].setTransform(center, Math.PI * state.angle / 360);
     });
-  }
+}
   
-  /**
-   * Very cool.
-   * NEXT: center on theorigin and make it reflect about
-   * NEXT: make the origin thicker
-   * 
-   * @param $step
-   */
-  export function scale($step: Step) {
+/**
+ * Very cool.
+ * NEXT: center on theorigin and make it reflect about
+ * NEXT: make the origin thicker
+ * 
+ * @param $step
+ */
+export function scale($step: Step) {
   
     $step.model.polygonScale = (xscale: number, yscale: number) => {
       console.log(xscale, yscale);
@@ -92,14 +93,14 @@ export function translations($step: Step) {
   
       return poly;
     }
-  }
-  
-  /**
-   * Also very cool.
-   * 
-   * @param $step 
-   */
-  export function skew($step: Step) {
+}
+
+/**
+ * Also very cool.
+ * 
+ * @param $step 
+ */
+export function skew($step: Step) {
   
     // here's where we have to do that p5js strategy where we push and pop translates to display it
     // (1) center polygon along the origin (0,0)
@@ -129,10 +130,10 @@ export function translations($step: Step) {
     console.log('inside of skew');
     console.log('here is the model')
     console.log($step.model);
-  }
-  
-  // NEXT: figure out why the heck this ain't workin'
-  export function rotate($step: Step) {
+}
+
+// NEXT: figure out why the heck this ain't workin'
+export function rotate($step: Step) {
   
     $step.model.polygonRotate = (angle: number) => {
       console.log('rotate', angle);
@@ -167,4 +168,40 @@ export function translations($step: Step) {
     console.log('here is the model')
     console.log($step.model);
   
-  }
+}
+
+export function playWithMe($step: Step) {
+
+    console.log($step.model)
+
+    // buttons
+    const buttons = $step.$$('.button');
+
+    // paths
+    const fabric = $step.$$('.fabric');
+
+    // QUESTION: how to animate these instead of just setting them instantly?
+    // identity
+    buttons[0].on('click', () => {
+        $step.model.ipoint = new Point(1, 0)
+        $step.model.jpoint = new Point(0, 1)
+    });
+
+    // skew
+    buttons[1].on('click', () => {
+        $step.model.ipoint = new Point(1, 0)
+        $step.model.jpoint = new Point(1, 1)
+    });
+
+    // scale
+    buttons[2].on('click', () => {
+        $step.model.ipoint = new Point(2, 0)
+        $step.model.jpoint = new Point(0, 2)
+    });
+
+    // rotate
+    buttons[3].on('click', () => {
+        $step.model.ipoint = new Point(0, 1)
+        $step.model.jpoint = new Point(-1, 0)
+    });
+}
