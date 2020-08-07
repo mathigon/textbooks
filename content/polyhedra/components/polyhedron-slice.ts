@@ -42,6 +42,7 @@ export class PolyhedronSlice extends CustomElementView {
     const material = new THREE.MeshPhongMaterial({opacity: Number(this.attr('opacity')) || 0.8, color: 0xcd0e66,
     transparent: true, specular: 0x222222});
     const polyhedron = new THREE.Mesh(geometry, material);
+    polyhedron.renderOrder = 5;
     sceneObj.add(polyhedron);
 
     // Listen to the 'shape' attribute and update the graphics.
@@ -65,6 +66,7 @@ export class PolyhedronSlice extends CustomElementView {
     const plane = new THREE.Mesh(planeGeom, planeMaterial);
     plane.position.y = 0;
     plane.rotation.x = Math.PI / 2;
+    plane.renderOrder = 7;
     sceneObj.add(plane);
 
     // -------------------------------------------------------------------------
@@ -79,7 +81,62 @@ export class PolyhedronSlice extends CustomElementView {
     const mathPlane = new THREE.Plane();
     const centre = new THREE.Vector3();
 
+    let useMerge = true;
     function updateIntersection() {
+      if (useMerge)
+        updateIntersectionMerge();
+      else
+        updateIntersectionCurve();
+    }
+
+    function updateIntersectionMerge() {
+      const planeGeo = (plane.geometry as THREE.Geometry);
+      const polyGeo = (polyhedron.geometry as THREE.Geometry);
+      // a geometry for the intersection segments
+      let mergedGeometry = new THREE.Geometry();
+
+      mathPlane.setFromCoplanarPoints(planeGeo.vertices[planeGeo.faces[0].a],
+          planeGeo.vertices[planeGeo.faces[0].b],
+          planeGeo.vertices[planeGeo.faces[0].c]);
+      plane.localToWorld(mathPlane as any);
+
+      const tolerance = 0.00001;
+      for (const face of polyGeo.faces) {
+        const a = polyhedron.localToWorld(polyGeo.vertices[face.a].clone());
+        const b = polyhedron.localToWorld(polyGeo.vertices[face.b].clone());
+        const c = polyhedron.localToWorld(polyGeo.vertices[face.c].clone());
+
+        const thisvertices: THREE.Vector3[] = [];
+        for (const l of [[a, b], [b, c], [c, a]]) {
+          const line = new THREE.Line3(l[0], l[1]);
+          const intersection = mathPlane.intersectLine(line, centre);
+          if (intersection)
+          {
+            let pt:THREE.Vector3 = intersection.clone();
+            const closest = Math.min(...thisvertices.map(p => pt.distanceTo(p)));
+            // I'm occasionally getting three points returned by THREE but 
+            // two of them only differ by round off
+            if (closest > tolerance)
+              thisvertices.push(pt);
+          }
+        }
+        if (thisvertices.length == 2)
+        { 
+          const line = new THREE.LineCurve3(thisvertices[0], thisvertices[1]);
+          const geometry = new THREE.TubeGeometry(line, 1, 0.02, undefined, false);
+          mergedGeometry.merge(geometry);
+          const sphere1 = new THREE.SphereGeometry(0.02, 32, 32);
+          sphere1.translate(thisvertices[0].x, thisvertices[0].y, thisvertices[0].z);
+          mergedGeometry.merge(sphere1);
+          const sphere2 = new THREE.SphereGeometry(0.02, 32, 32);
+          sphere2.translate(thisvertices[1].x, thisvertices[1].y, thisvertices[1].z);
+          mergedGeometry.merge(sphere2);
+        }
+      }
+      tube.geometry = mergedGeometry;
+    }
+
+    function updateIntersectionCurve() {
       const segments: THREE.Vector3[][] = [];
       const planeGeo = (plane.geometry as THREE.Geometry);
       const polyGeo = (polyhedron.geometry as THREE.Geometry);

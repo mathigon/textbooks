@@ -1442,7 +1442,6 @@ Here is a demo for intersections of a polyhedron and a plane:
         div(value="dodecahedron") Dodecahedron
         div(value="icosahedron") Icosahedron
       x-polyhedron-slice(:shape="poly" :opacity="opacity")
-      x-slider(steps=10 initial=10 :bind="opacity" no-play)
 
 ---
 
