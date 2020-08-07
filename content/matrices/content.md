@@ -69,7 +69,7 @@ Here is a spaceship we can rotate by ${phi + 'º'}{phi|60|10,350,10} around the 
 REVISE: put unit-i and unit-j side by side, so there's not so much emphasis on them.
 
 Now let's look at one point at a time how this might work.
-Let's rotate this point [A](target:a) ${t1 + 'º'}{t1|60|10,350,10} around the origin.
+Let's rotate this point [A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,10} around the origin. Our rotated point is called [A'](target:ap).
 
 ::: column(width=400)
 
@@ -81,45 +81,58 @@ Let's rotate this point [A](target:a) ${t1 + 'º'}{t1|60|10,350,10} around the o
       path.green(x="segment(point(0,0),a)")
 
       path.blue(x="segment(point(0,0),ap)")
-      path.red(x="segment(point(0,ap.y), point(ap.x, ap.y))")
-      path.yellow(x="segment(point(0,0), point(0, ap.y))")
+      path.red(x="segment(point(0,ap.y), point(ap.x, ap.y))" target="xp" label="x'")
+      path.yellow(x="segment(point(0,0), point(0, ap.y))" target="yp" label="y'")
 
 
 :::
 
+What is a formula to get the new coordinates for A’? We can call our new x value [x'](target:xp), and our new y value [y'](target:yp). Both x' and y' will be dependent on the length of __A__, which is 3.
 
-x' = - y * sinTH
-y' = y * cosTH
+
+x' = 3 * [[-sinθ|sinθ|cosθ]]
+
+y' = 3 * [[cosθ|sinθ]]
+
 
 
 ---
 
 > id: unit-i
 
-Now let's look at one point at a time how this might work.
-Let's rotate this point [B](target:b) ${t1 + 'º'}{t1|60|10,90,10} around the origin.
+Let's look at another point.
+Rotate the point [B](target:b) (3,0) ${t1 + 'º'}{t1|60|10,90,10} around the origin.
 
 ::: column(width=400)
 
     x-geopad(width=400 x-axis="-5,5,1" y-axis="-5,5,1" axes grid padding=5): svg
       circle.green(name="a" x="point(3,0)" label="B" target="b")
 
-      circle.blue(name="ap" x="a.rotate(t1/180*pi)" label="B'" target="ap")
+      circle.blue(name="ap" x="a.rotate(t1/180*pi)" label="B'" target="bp")
 
       path.green(x="segment(point(0,0),a)")
 
       path.blue(x="segment(point(0,0),ap)")
-      path.red(x="segment(point(0,0), point(ap.x, 0))")
-      path.yellow(x="segment(point(ap.x, 0), point(ap.x, ap.y))")
+      path.red(x="segment(point(0,0), point(ap.x, 0))" label="x'" target="xp")
+      path.yellow(x="segment(point(ap.x, 0), point(ap.x, ap.y))" label="y'" target="yp")
 
 
 :::
 
-x' = x * cosTH
-y' = x * sinTH
+What is a formula to get the new coordinates for [B’](target:bp)? We can call our new x value [x'](target:xp), and our new y value [y'](target:yp). Both x' and y' will be dependent on the length of __B__, which is 3.
 
 
-But now remember from our last course that any vector can be treated as a sum of the two unit vectors <uv>i</uv> and <uv>j</uv>.
+x' = 3 * [[cosθ|sinθ]]
+
+y' = 3 * [[sinθ|cosθ]]
+
+---
+
+Now that we have computed the formula for two points, can we say anthing about the general formula for rotation?
+
+Remember from our last course that any vector can be treated as a sum of the two unit vectors <uv>__i__</uv> and <uv>__j__</uv>.
+
+Our points __A__ and __B__ were the unit vectors <uv>__j__</uv> and <uv>__i__</uv>, each multiplied by 3.
 
 Instead of using trigonometry to find rotated point of (1, -1) or (0, -0.5), we can re-write these as... i - j.
 It turns out that we can apply blah blah blah... linear transformation.
@@ -161,6 +174,7 @@ Linear transformation means each grid line will remain "parallel and evenly spac
       circle.blue.move(name="jpoint" x="point(0,1)" target="j")
       circle(name="origin", x="point(0,0)")
 
+
         // right values for these? Ideally we'd show to "infinity", but this might render slowly?
       - var MINMAX = GRID*2
       - for (var b=-MINMAX; b <=MINMAX; ++b)
@@ -169,8 +183,14 @@ Linear transformation means each grid line will remain "parallel and evenly spac
         path.fabric(x=`line(point(${b}*jpoint.x, ${b}*jpoint.y), point(ipoint.x + ${b}*jpoint.x, ipoint.y + ${b}*jpoint.y))`)
         path.fabric(x=`line(point(${b}*ipoint.x, ${b}*ipoint.y), point(${b}*ipoint.x + jpoint.x, ${b}*ipoint.y + jpoint.y))`)
 
+      - var SPACESHIP = [[3,0], [0,3], [-3,0], [-3,-3], [0,-1], [3,-3]]
+      each p,i in SPACESHIP
+        circle.red(name=`s${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+        path.red(x=`segment(s${i}, s${(i+1)%SPACESHIP.length})`)
+
       path.green(x="segment(point(0,0),ipoint)", label="i", target="i")
       path.blue(x="segment(point(0,0),jpoint)", label="j", target="j")
+
 
 
 Here we display the [i](target:i) and [j](target:j) unit vectors.
