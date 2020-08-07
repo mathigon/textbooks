@@ -205,3 +205,14 @@ export function playWithMe($step: Step) {
     $step.model.jpoint = new Point(-1, 0);
   });
 }
+
+/**
+ * Show determinant as area.
+ */
+export function determinants($step:Step) {
+  $step.model.watch((state: any) => {
+    const i = state.ipoint;
+    const j = state.jpoint;
+    $step.model.determinant = i.x * j.y - i.y * j.x;
+  });
+}

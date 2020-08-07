@@ -370,6 +370,7 @@ a point (as in Axiom 3).
 
 > section: determinants
 > sectionStatus: dev
+> id: determinants
 
 {.todo} COMING SOON
 
@@ -377,6 +378,105 @@ The determinant is the change in area.
 {.fixme} How can I draw the area??? I need a polygon
 Scale changes it by a factor of N.
 Skew doesn't change it.
+
+
+    x-geopad(width=300): svg
+      circle.move(name="a" cx=82 cy=160 target="hypot")
+      circle.move(name="b" cx=218 cy=160 target="hypot")
+      circle.move(name="c" cx=120 cy=100 project="arc(line(a,b).midpoint,a,pi).contract(0.2)")
+
+      path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-class="white")
+      path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-class="white")
+      path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-class="white")
+
+      path.dark(x="segment(b,c)" label="a")
+      path.dark(x="segment(a,c)" label="b")
+      path.dark(x="segment(a,b)" label="c" target="hypot")
+      path.dark.thin(x="angle(b,c,a)")
+
+
+^^^^^ Scrap this for parts ^^^^^^ See we can turn a "rotate" into a more general "applyMatrix" or "transform"
+
+
+Watch the area change.
+
+    - var GRID = 4
+    x-geopad(width=400 x-axis=`-${GRID},${GRID},1` y-axis=`-${GRID},${GRID},1` grid padding=5): svg
+      circle.green.move(name="ipoint" x="point(1,0)" target="i")
+      circle.blue.move(name="jpoint" x="point(0,1)" target="j")
+      circle(name="origin", x="point(0,0)")
+
+
+        // right values for these? Ideally we'd show to "infinity", but this might render slowly?
+      - var MINMAX = GRID*2
+      - for (var b=-MINMAX; b <=MINMAX; ++b)
+        // .fabric as in "fabric of reality"
+        // can also try class ".grid" for default grid
+        path.fabric(x=`line(point(${b}*jpoint.x, ${b}*jpoint.y), point(ipoint.x + ${b}*jpoint.x, ipoint.y + ${b}*jpoint.y))`)
+        path.fabric(x=`line(point(${b}*ipoint.x, ${b}*ipoint.y), point(${b}*ipoint.x + jpoint.x, ${b}*ipoint.y + jpoint.y))`)
+
+      - var DETERMINANT = [[0,0], [1,0], [1,1], [0,1]]
+      - var determinant = DETERMINANT.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+      path.fill.light.purple(x=`polygon(${determinant})` label-class="purple")
+
+      path.green(x="segment(point(0,0),ipoint)", label="i", target="i")
+      path.blue(x="segment(point(0,0),jpoint)", label="j", target="j")
+
+Inside the matrix we have i = (${ipoint.x}, ${ipoint.y}) and j = (${jpoint.x}, ${jpoint.y})
+
+The deterimant is ${determinant}
+
+> id: det-formula
+
+The formula for the determinant of a 2x2 matrix is:
+
+```ad - bc```
+
+matrix: 
+
+[a](target:a), [b](target:b)
+
+[c](target:c), [d](target:d)
+
+The area [determinant](target:determinant) is equal to the area [ad](target:ad) minus the area [bc](target:bc).
+
+Let's see why this is true geometrically.
+
+    - var GRID = 1.5
+    x-geopad(width=400 x-axis=`-${GRID},${GRID},1` y-axis=`-${GRID},${GRID},1` grid padding=5): svg
+      circle.green.move(name="ipoint" x="point(1,0)" target="i")
+      circle.blue.move(name="jpoint" x="point(0,1)" target="j")
+      circle(name="origin", x="point(0,0)")
+
+      - var MINMAX = GRID*2
+      - for (var b=-MINMAX; b <=MINMAX; ++b)
+        // .fabric as in "fabric of reality"
+        // can also try class ".grid" for default grid
+        path.fabric(x=`line(point(${b}*jpoint.x, ${b}*jpoint.y), point(ipoint.x + ${b}*jpoint.x, ipoint.y + ${b}*jpoint.y))`)
+        path.fabric(x=`line(point(${b}*ipoint.x, ${b}*ipoint.y), point(${b}*ipoint.x + jpoint.x, ${b}*ipoint.y + jpoint.y))`)
+
+      - var DETERMINANT = [[0,0], [1,0], [1,1], [0,1]]
+      - var determinant = DETERMINANT.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+      path.fill.light.purple(x=`polygon(${determinant})` label-class="purple", target="determinant")
+
+      path.green(x="segment(point(0,0),ipoint)", label="i", target="i")
+      path.blue(x="segment(point(0,0),jpoint)", label="j", target="j")
+
+      path.red(x="segment(point(0,0), point(ipoint.x,0))", label="a", target="a")
+      path.red(x="segment(point(0,0), point(0,jpoint.y))", label="d", target="d")
+
+      path.red(x="segment(point(0,0), point(0,ipoint.y))", label="c", target="c")
+      path.red(x="segment(point(0,0), point(jpoint.x,0))", label="b", target="b")
+
+      path.fill.light.teal(x="polygon(point(0,0),point(ipoint.x,0),point(ipoint.x,jpoint.y),point(0,jpoint.y))" target="ad")
+
+      path.fill.light.lime(x="polygon(point(0,0),point(jpoint.x,0),point(jpoint.x,ipoint.y),point(0,ipoint.y))" target="bc")
+
+
+{.fixme} The shapes are blocking each other when targeted.
+
+{.fixme} Could do an animation that shows how the triangles fit together, like in Pythagoras.
+
 
 ---
 
