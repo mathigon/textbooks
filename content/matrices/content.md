@@ -168,7 +168,7 @@ This is a 2x2 matrix, but they can be any size.
 Linear transformation means each grid line will remain "parallel and evenly spaced". Now play with it.
 
     // try w/ grid on or off, to compare underlying grid w/ transformation
-    - var GRID = 5
+    - var GRID = 8
     x-geopad(width=400 x-axis=`-${GRID},${GRID},1` y-axis=`-${GRID},${GRID},1` grid padding=5): svg
       circle.green.move(name="ipoint" x="point(1,0)" target="i")
       circle.blue.move(name="jpoint" x="point(0,1)" target="j")
@@ -183,10 +183,35 @@ Linear transformation means each grid line will remain "parallel and evenly spac
         path.fabric(x=`line(point(${b}*jpoint.x, ${b}*jpoint.y), point(ipoint.x + ${b}*jpoint.x, ipoint.y + ${b}*jpoint.y))`)
         path.fabric(x=`line(point(${b}*ipoint.x, ${b}*ipoint.y), point(${b}*ipoint.x + jpoint.x, ${b}*ipoint.y + jpoint.y))`)
 
+      - var DRAW_SHIP = false
       - var SPACESHIP = [[3,0], [0,3], [-3,0], [-3,-3], [0,-1], [3,-3]]
-      each p,i in SPACESHIP
-        circle.red(name=`s${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
-        path.red(x=`segment(s${i}, s${(i+1)%SPACESHIP.length})`)
+      if DRAW_SHIP
+        each p,i in SPACESHIP
+          circle.red(name=`s${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          path.red(x=`segment(s${i}, s${(i+1)%SPACESHIP.length})`)
+
+      - var DRAW_BOAT = true
+      - var BOAT_RED = [[0.25,-2.5], [6.5,-2.5], [0.25,7]]
+      - var BOAT_PURPLE = [[-0.25,-1.5], [-4.25,-1.5], [-0.25,7]]
+      - var BOAT_ORANGE = [[0,5], [0,7.5], [-3.75,6.25]]
+      - var BOAT_GREEN = [[7, -4], [5,-6], [-5,-6], [-7,-4]]
+      - var BOAT_GRAY = [[-0.25,-4],[0.25,-4],[0.25,7],[-0.25,7]]
+      if DRAW_BOAT
+        each p,i in BOAT_GRAY
+          circle.gray(name=`bgy${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          path.gray(x=`segment(bgy${i}, bgy${(i+1)%BOAT_GRAY.length})`)
+        each p,i in BOAT_RED
+          circle.red(name=`brd${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          path.red(x=`segment(brd${i}, brd${(i+1)%BOAT_RED.length})`)
+        each p,i in BOAT_PURPLE
+          circle.purple(name=`bpp${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          path.purple(x=`segment(bpp${i}, bpp${(i+1)%BOAT_PURPLE.length})`)
+        each p,i in BOAT_ORANGE
+          circle.orange(name=`bor${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          path.orange(x=`segment(bor${i}, bor${(i+1)%BOAT_ORANGE.length})`)
+        each p,i in BOAT_GREEN
+          circle.green(name=`bgn${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          path.green(x=`segment(bgn${i}, bgn${(i+1)%BOAT_GREEN.length})`)
 
       path.green(x="segment(point(0,0),ipoint)", label="i", target="i")
       path.blue(x="segment(point(0,0),jpoint)", label="j", target="j")
