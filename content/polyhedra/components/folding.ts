@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-
+/// <reference types="THREE"/>
 import {$N, CustomElementView, register} from '@mathigon/boost';
 import {Obj} from '@mathigon/core';
 import {create3D} from '../../shared/components/webgl';
@@ -124,7 +124,7 @@ export class Folding extends CustomElementView {
       const a = 0.5 * (p/100) * Math.PI / 2;
       const r = 25 - p/100 * 15;
       scene.camera.position.set(0, r * Math.sin(a), r * Math.cos(a));
-      scene.camera.lookAt(0,0,0);
+      scene.camera.lookAt(0, 0, 0);
     });
   }
 }

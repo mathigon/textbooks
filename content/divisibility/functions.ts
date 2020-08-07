@@ -4,9 +4,9 @@
 // =============================================================================
 
 
-import {$N, animate, thread, InputView, ElementView, SVGView, observe} from '@mathigon/boost';
+import {$N, animate, ElementView, InputView, observe, SVGView, thread} from '@mathigon/boost';
 import {isPrime, lcm, numberFormat, Random} from '@mathigon/fermat';
-import {total, sortBy, list, isOneOf, delay} from '@mathigon/core';
+import {delay, isOneOf, list, sortBy, total} from '@mathigon/core';
 import {Gameplay, Slideshow, Step} from '../shared/types';
 
 
@@ -14,7 +14,7 @@ import {Gameplay, Slideshow, Step} from '../shared/types';
 // Shared Utilities and Classes
 
 function numberGrid($grid: ElementView, time: number, className: string,
-                    filter: (i: number) => boolean) {
+    filter: (i: number) => boolean) {
   for (const $i of $grid.children) {
     if (!filter(+$i.text)) continue;
     delay(() => $i.addClass(className), time);
@@ -36,7 +36,9 @@ export function divisibilityGame($step: Step) {
     const n1 = Random.smart(9, 'divisibility-game-number') + 2;
     const n2 = Random.smart(9, 'divisibility-game-number') + 2;
 
-    let x, y;
+    let x;
+    let y;
+
     switch (answer) {
       case 0:
         x = n1;
@@ -59,7 +61,7 @@ export function divisibilityGame($step: Step) {
     $buttons[1].on('click', answer === 1 ? success : error);
     $buttons[2].on('click', answer > 1 ? success : error);
 
-    $el.on('success', function () {
+    $el.on('success', () => {
       for (const [i, $b] of $buttons.entries()) {
         if (answer === i) {
           $b.addClass('success');
@@ -115,17 +117,17 @@ export function divisibility6($section: Step) {
   const $buttons = $section.$$('.btn');
   const $grid = $section.$('.number-grid')!;
 
-  $section.on('score-btn2', function () {
+  $section.on('score-btn2', () => {
     $buttons[0].exit('pop');
     numberGrid($grid, 200, 'yellow', i => (i % 2 === 0));
   });
 
-  $section.on('score-btn3', function () {
+  $section.on('score-btn3', () => {
     $buttons[1].exit('pop');
     numberGrid($grid, 200, 'blue', i => (i % 3 === 0));
   });
 
-  $section.on('score-blank-0', function () {
+  $section.on('score-blank-0', () => {
     numberGrid($grid, 200, 'green', i => (i % 6 === 0));
     delay(() => {
       $grid.children.forEach($el => $el.removeClass('yellow blue'));
@@ -141,8 +143,10 @@ export function factors2($section: Step) {
   const $numbers = $section.$$('.divisor-number');
   const $slides = $section.$('x-slideshow') as Slideshow;
 
-  $pairs.slice(1).forEach($p => { $p.hide(); });
-  $numbers.forEach(($n, i) => { if (i > 0 && i < 7) $n.hide(); });
+  $pairs.slice(1).forEach($p => $p.hide());
+  $numbers.forEach(($n, i) => {
+    if (i > 0 && i < 7) $n.hide();
+  });
 
   $slides.on('next', async (x) => {
     if (x === 1) {
@@ -269,10 +273,10 @@ export function ulam($section: Step) {
   const $cells = $section.$$('.number-cell');
   sortBy($cells, ($c) => +$c.text);
 
-  $cells.forEach($c => { $c.hide(); });
+  $cells.forEach($c => $c.hide());
   $cells.forEach($c => setTimeout(() => $c.enter('pop'), (+$c.text) * 80));
 
-  setTimeout(function () {
+  setTimeout(() => {
     let delay = 1;
     $cells.forEach($c => {
       if (!isPrime(+$c.text)) return;
@@ -298,9 +302,9 @@ export function race($section: Step) {
     running = true;
     $section.score('race');
 
-    $lapTimes.forEach($g => { $g.forEach($l => { $l.exit('pop', 200); }); });
+    $lapTimes.forEach($g => $g.forEach($l => $l.exit('pop', 200)));
 
-    animate(function (p) {
+    animate((p) => {
       for (const i of [0, 1]) {
         const offset = ((p * duration) % speed[i]) / speed[i];
         const point = $paths[i].getPointAt(offset);
@@ -317,7 +321,7 @@ export function race($section: Step) {
 
     for (const i of [0, 1]) {
       for (let x = 0; x < duration / speed[i]; ++x) {
-        setTimeout(function () {
+        setTimeout(() => {
           $lapTimes[i][x].enter('pop', 200);
         }, speed[i] * (x + 1) * 1000);
       }
@@ -356,7 +360,7 @@ export function cicadas($section: Step) {
 
   const $highlight = $section.$('rect')!;
   const $rects = $section.$$('rect').slice(1);
-  $rects.forEach($r => { $r.hide(); });
+  $rects.forEach($r => $r.hide());
 
   $section.model.watch((state: any) => {
     $rects[state.n - 4].show();
@@ -366,7 +370,7 @@ export function cicadas($section: Step) {
     if (state.n === 20) $section.score('bound-high');
   });
 
-  $section.onScore('bound-low bound-high', function () {
+  $section.onScore('bound-low bound-high', () => {
     $rects.forEach($r => $r.show());
   });
 }
@@ -379,10 +383,11 @@ export function goldbach1($section: Step) {
     const v = +$input.value;
     if (!v) return $section.model.result = '';
 
-    if (v % 2) return $section.model.result =
-        $section.getText('not-even');
-    if (v > Number.MAX_SAFE_INTEGER) return $section.model.result =
-        $section.getText('too-large');
+    if (v % 2) return $section.model.result = $section.getText('not-even');
+
+    if (v > Number.MAX_SAFE_INTEGER) {
+      return $section.model.result = $section.getText('too-large');
+    }
 
     $section.model.result = '<span class="loading"></span>';
     $section.score('calculator');
@@ -414,7 +419,7 @@ export function riemann($section: Step) {
   $pi.points = points;
 
   const $smallPrimes = $section.$('.small-primes');
-  [3, 5, 7, 11, 13, 17, 19, 23, 29].forEach(function (p, i) {
+  [3, 5, 7, 11, 13, 17, 19, 23, 29].forEach((p, i) => {
     $N('line', {
       x1: (p - 1) * dx, y1: y0, x2: (p - 1) * dx,
       y2: y0 - dy * (i + 1)
@@ -424,7 +429,7 @@ export function riemann($section: Step) {
   const $numbers = $section.$('.numbers');
   for (let i = 2; i < 30; ++i) {
     $N('text', {
-      html: i, x: (i - 1) * dx, y: y0 + 18, 'class': isPrime(i) ? 'prime' : ''
+      html: i, x: (i - 1) * dx, y: y0 + 18, class: isPrime(i) ? 'prime' : ''
     }, $numbers);
   }
 

@@ -683,7 +683,7 @@ Es gibt viele Varianten des Sierpinski-Dreiecks und andere Fraktale mit ähnlich
 > id: iteration
 > goals: move-1 move-2
 
-Alle Fraktale, die wir in den vorherigen Kapiteln gesehen haben, wurden mit einem Prozess der __-Iteration__ erstellt: Sie beginnen mit einem bestimmten Muster und wiederholen es dann immer wieder.
+Alle Fraktale, die wir in den vorherigen Kapiteln gesehen haben, wurden mit einem Prozess der __Iteration__ erstellt: Sie beginnen mit einem bestimmten Muster und wiederholen es dann immer wieder.
 
 ::: column(width=112 parent="padded-thin")
 

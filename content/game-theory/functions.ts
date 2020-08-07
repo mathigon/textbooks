@@ -28,7 +28,7 @@ function binaryDigitalSum(summands: number[]) {
   return toDecimal(sum);
 }
 
-function nimStep(piles: number[]) {
+function _nimStep(piles: number[]) {
   for (let i = 0; i < piles.length; ++i) {
     const temp = piles.slice(0);
     for (let j = 0; j < piles[i]; ++j) {

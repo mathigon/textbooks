@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import {Point, Line} from '@mathigon/fermat';
-import {CustomElementView, register, $N, slide, animate, SVGView} from '@mathigon/boost';
+import {Line, Point} from '@mathigon/fermat';
+import {$N, animate, CustomElementView, register, slide, SVGView} from '@mathigon/boost';
 
 
 @register('x-projectile')

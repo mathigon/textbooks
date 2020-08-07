@@ -1154,7 +1154,7 @@ TODO
 
 {.reveal(when="blank-0")} الآن علينا فقط إضافة مساحة كل من هذه المكونات. ال __{.m-yellow} القاعدة__ عبارة عن دائرة نصف قطرها _r_ ، لذا تكون مساحتها 
 
-{.text-center.reveal(when="blank-0")(dir="ltr")}`pill(A_"Base","yellow","circle") =` _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ . 
+{.text-center.reveal(when="blank-0" dir="ltr")}`pill(A_"Base","yellow","circle") =` _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ . 
 
 ::: column(width=320)
 
@@ -1172,7 +1172,7 @@ TODO
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_       |
 | `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
-{.eqn-system}
+{.eqn-system(dir="ltr")}
 
 ::: column(width=280)
 

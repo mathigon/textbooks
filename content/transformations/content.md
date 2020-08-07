@@ -91,7 +91,7 @@ transformation, which we’ll explore in more detail throughout this course.
 > section: rigid
 
 A [__rigid transformation__](gloss:rigid-transformation) is a special kind of transformation that
-don’t change the size or shape of a figure. We could imagine that it is made out of a solid material
+doesn’t change the size or shape of a figure. We could imagine that it is made out of a solid material
 like wood or metal: we can move it, turn it, or flip it over, but we can’t stretch, bend, or
 otherwise deform it.
 

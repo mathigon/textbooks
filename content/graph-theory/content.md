@@ -832,7 +832,7 @@ ${tsn*(tsn-1)/2} edges in total.
 
 The delivery truck has to visit all cities, in any order. In the Königsberg
 bridges problem we wanted to find paths which travel along _every edge_ exactly
-one. Now we want to find paths which visit _every vertex_ exactly once. These
+once. Now we want to find paths which visit _every vertex_ exactly once. These
 paths are called __Hamiltonian cycles__.
 
 ::: column(width=260)

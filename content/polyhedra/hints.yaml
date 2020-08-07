@@ -17,7 +17,7 @@ not-regular-2: All of the sides have the same length, but some of the angles hav
 not-regular-3: This is a circle, not a polygon!
 
 parall-error-1: That’s not true – the angles can have any size, as long as they add up to 360°.
-parall-error-2: This is true if the paralellogram also happens to be a rhombus, but not for _any_ parallelogram.
+parall-error-2: This is true if the parallelogram also happens to be a rhombus, but not for _any_ parallelogram.
 parall-error-3: This is correct if the parallelogram happens to be a rectangle, but not for _any_ parallelogram.
 parall-error-4: No: adjacent sides in a parallelogram don’t have to have the same length.
 
