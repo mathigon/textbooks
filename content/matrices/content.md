@@ -19,6 +19,9 @@ We rotate point [P](target:p) by ${th + '°'}{th|60|10,350,10} around the origin
       path.green(x="segment(point(0,0),p)")
       path.green(x="segment(point(0,0),q)")
 
+      - var str = ['point(0,0)','p','q'].join(',')
+      path.fill.green(x=`polygon(${str})` label="a²" label-class="white")
+
 :::
 
 We want to draw a spaceship.
@@ -197,21 +200,34 @@ Linear transformation means each grid line will remain "parallel and evenly spac
       - var BOAT_GREEN = [[7, -4], [5,-6], [-5,-6], [-7,-4]]
       - var BOAT_GRAY = [[-0.25,-4],[0.25,-4],[0.25,7],[-0.25,7]]
       if DRAW_BOAT
-        each p,i in BOAT_GRAY
-          circle.gray(name=`bgy${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
-          path.gray(x=`segment(bgy${i}, bgy${(i+1)%BOAT_GRAY.length})`)
-        each p,i in BOAT_RED
-          circle.red(name=`brd${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
-          path.red(x=`segment(brd${i}, brd${(i+1)%BOAT_RED.length})`)
-        each p,i in BOAT_PURPLE
-          circle.purple(name=`bpp${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
-          path.purple(x=`segment(bpp${i}, bpp${(i+1)%BOAT_PURPLE.length})`)
-        each p,i in BOAT_ORANGE
-          circle.orange(name=`bor${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
-          path.orange(x=`segment(bor${i}, bor${(i+1)%BOAT_ORANGE.length})`)
+        - var gray = BOAT_GRAY.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+        path.fill.gray(x=`polygon(${gray})` label-class="gray")
+        - var red = BOAT_RED.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+        path.fill.red(x=`polygon(${red})` label-class="red")
+        - var purple = BOAT_PURPLE.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+        path.fill.purple(x=`polygon(${purple})` label-class="purple")
+        - var orange = BOAT_ORANGE.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+        path.fill.orange(x=`polygon(${orange})` label-class="orange")
+        - var green = BOAT_GREEN.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+        path.fill.green(x=`polygon(${green})` label-class="green")
+
+
+        // each p,i in BOAT_GRAY
+          // circle.gray(name=`bgy${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          // path.gray(x=`segment(bgy${i}, bgy${(i+1)%BOAT_GRAY.length})`)
+          
+        // each p,i in BOAT_RED
+          // circle.red(name=`brd${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          // path.red(x=`segment(brd${i}, brd${(i+1)%BOAT_RED.length})`)
+        // each p,i in BOAT_PURPLE
+          // circle.purple(name=`bpp${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          // path.purple(x=`segment(bpp${i}, bpp${(i+1)%BOAT_PURPLE.length})`)
+        // each p,i in BOAT_ORANGE
+          // circle.orange(name=`bor${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          // path.orange(x=`segment(bor${i}, bor${(i+1)%BOAT_ORANGE.length})`)
         each p,i in BOAT_GREEN
           circle.green(name=`bgn${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
-          path.green(x=`segment(bgn${i}, bgn${(i+1)%BOAT_GREEN.length})`)
+          // path.green(x=`segment(bgn${i}, bgn${(i+1)%BOAT_GREEN.length})`)
 
       path.green(x="segment(point(0,0),ipoint)", label="i", target="i")
       path.blue(x="segment(point(0,0),jpoint)", label="j", target="j")
@@ -356,6 +372,11 @@ a point (as in Axiom 3).
 > sectionStatus: dev
 
 {.todo} COMING SOON
+
+The determinant is the change in area.
+{.fixme} How can I draw the area??? I need a polygon
+Scale changes it by a factor of N.
+Skew doesn't change it.
 
 ---
 
