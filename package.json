@@ -10,16 +10,16 @@
     "server": "mathigon-server",
     "watch": "gulp watch",
     "start": "gulp && npm-run-all --parallel server watch",
-    "lint": "eslint . --ext .ts --fix"
+    "lint": "eslint . --ext .ts"
   },
   "engines": {
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@mathigon/boost": "^0.5.1",
-    "@mathigon/core": "^0.5.1",
-    "@mathigon/fermat": "^0.5.1",
-    "@mathigon/hilbert": "^0.5.0",
+    "@mathigon/boost": "^0.5.2",
+    "@mathigon/core": "^0.5.2",
+    "@mathigon/fermat": "^0.5.2",
+    "@mathigon/hilbert": "^0.5.2",
     "@mathigon/dev-server": "^0.5.0",
     "@types/d3": "^5.7.2",
     "@types/topojson": "^3.2.2",
