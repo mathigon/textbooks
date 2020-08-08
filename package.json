@@ -23,7 +23,7 @@
     "@mathigon/dev-server": "0.5.1",
     "@types/d3": "5.7.2",
     "@types/topojson": "3.2.2",
-    "three": "0.110.0"
+    "three": "0.119.1"
   },
   "devDependencies": {
     "@google-cloud/text-to-speech": "3.1.0",
