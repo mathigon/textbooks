@@ -9,7 +9,8 @@
   "scripts": {
     "server": "mathigon-server",
     "watch": "gulp watch",
-    "start": "gulp && npm-run-all --parallel server watch",
+    "build": "gulp --max-old-space-size=8192",
+    "start": "npm run build && npm-run-all --parallel server watch",
     "lint": "eslint . --ext .ts"
   },
   "engines": {
