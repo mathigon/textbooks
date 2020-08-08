@@ -8,5 +8,6 @@
   {
     "packagePatterns": ["eslint", "^@types"],
     "automerge": true
-  }]
+  }],
+  "ignoreDeps": ["marked"]
 }
