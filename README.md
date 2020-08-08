@@ -49,6 +49,8 @@ with a `$step` argument, when the corresponding step is revealed for the first t
 
 ## Contributing
 
+[![Build Status](https://travis-ci.org/mathigon/textbooks.svg?branch=master)](https://travis-ci.org/mathigon/textbooks)
+
 We welcome any contributions to Mathigon – from bug fixes and correcting typos to creating entirely
 new courses. If you find any errors or problems, please [file an issue](https://github.com/mathigon/textbooks/issues).
 For larger changes, please [contact us](mailto:dev@mathigon.org) before starting your work.
