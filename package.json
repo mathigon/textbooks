@@ -9,7 +9,6 @@
   "scripts": {
     "server": "mathigon-server",
     "watch": "gulp watch",
-    "build": "gulp",
     "start": "gulp && npm-run-all --parallel server watch",
     "lint": "eslint . --ext .ts"
   },
