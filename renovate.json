@@ -1,5 +1,12 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base"],
+  "schedule": ["every weekend"],
+  "packageRules": [{
+    "updateTypes": ["patch", "pin", "digest"],
+    "automerge": true
+  },
+  {
+    "packagePatterns": ["eslint", "^@types"],
+    "automerge": true
+  }]
 }
