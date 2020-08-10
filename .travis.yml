@@ -7,3 +7,6 @@ cache:
 script:
   - npm run lint
   - npm run build
+  - npm run server &
+  - npm install puppeteer
+  - npx percy exec -- node test/snapshots.js
