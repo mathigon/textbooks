@@ -29,6 +29,6 @@ const percyCSS = `iframe, g.pulses, x-gesture, .popup { display: none !important
 PercyScript.run(async (page, percySnapshot) => {
   for (const p of pages) {
     await page.goto(`http://localhost:5000/course/${p}#full`);
-    await percySnapshot(`${p}`, {widths: [1200, 375], percyCSS});
+    await percySnapshot(`${p}`, {widths: [1200], percyCSS});
   }
 });
