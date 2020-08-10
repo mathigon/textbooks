@@ -19,15 +19,16 @@ for (const c of Object.keys(curriculum)) {
   if (!fs.existsSync(file)) continue;
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));
   for (const s of data.sections) {
-    pages.push(`${c}/${s.id}`);
+    if (s.status !== 'dev') pages.push(`${c}/${s.id}`);
   }
 }
 
-const percyCSS = `iframe, g.pulses, x-gesture { display: none !important; }`
+// TODO Percy breaks lots of inline CSS styles...
+const percyCSS = `iframe, g.pulses, x-gesture, .popup { display: none !important; }`;
 
 PercyScript.run(async (page, percySnapshot) => {
   for (const p of pages) {
-    await page.goto(`http://localhost:5000/${p}#full`);
-    await percySnapshot(`${p}-en`, {widths: [1200, 374], percyCSS});
+    await page.goto(`http://localhost:5000/course/${p}#full`);
+    await percySnapshot(`${p}`, {widths: [1200, 375], percyCSS});
   }
 });
