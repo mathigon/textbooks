@@ -58,11 +58,11 @@ class FlowGrid {
     }
 
     const height = Math.max(this.minHeight, yOffset);
-    this.$parent.animate({height: `${height}px`}, 250)
+    this.$parent.animate({height: `${height}px`}, 200);
   }
 
   private positionRow($rowEls: ElementView[], rowWidths: number[],
-                      rowWidth: number, yOffset: number) {
+      rowWidth: number, yOffset: number) {
     let xOffset = (this.width - rowWidth) / 2;
     for (const [i, $e] of $rowEls.entries()) {
       $e.css('left', `${xOffset}px`);
@@ -122,7 +122,7 @@ export class Buckets extends CustomElementView {
 
           if (targetBucket >= 0 && this.position[i] !== targetBucket) {
             const da = $buckets[targetBucket].topLeftPosition;
-            const db = (this.position[i] >= 0 ? $buckets[this.position[i]] : $input).topLeftPosition
+            const db = (this.position[i] >= 0 ? $buckets[this.position[i]] : $input).topLeftPosition;
 
             $buckets[targetBucket].append($i);
             $i.setTransform(p.subtract(start).add(db).subtract(da));
@@ -136,7 +136,7 @@ export class Buckets extends CustomElementView {
             this.check();
           }
 
-          await $i.animate({transform: 'none'}, 250).promise;
+          await $i.animate({transform: 'none'}, 200).promise;
           $i.removeClass('active');
         }
       });

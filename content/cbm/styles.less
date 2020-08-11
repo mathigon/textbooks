@@ -1,5 +1,5 @@
 // =============================================================================
-// Introduction to Probability
+// CBM Demo
 // (c) Mathigon
 // =============================================================================
 
@@ -8,13 +8,11 @@
 @import "../shared/components/buckets";
 
 
-x-coin-flip { display: block; }
-
-x-buckets.likelihoods {
-  .input { width: 160px; }
-  .bucket { width: 180px; }
+x-buckets {
+  .input { width: 230px; }
+  .bucket { width: 300px; }
   .bucket:nth-child(1) { background: mix(@orange, @grey-background, 85%); }
   .bucket:nth-child(2) { background: mix(@purple, @grey-background, 85%); }
-  .bucket:nth-child(3) { background: mix(@blue, @grey-background, 85%); }
-  .bucket:nth-child(4) { background: mix(@teal, @grey-background, 85%); }
 }
+
+iframe.wolfram { margin: 1.5em auto; display: block; }

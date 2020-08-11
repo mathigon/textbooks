@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {$N, CustomElementView, register, animate, ease, ElementView, SVGParentView} from '@mathigon/boost';
+import {$N, animate, CustomElementView, ease, ElementView, register, SVGParentView} from '@mathigon/boost';
 import {Burst} from '../../shared/components/burst';
 
 

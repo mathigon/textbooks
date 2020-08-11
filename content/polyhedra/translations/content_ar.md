@@ -1004,7 +1004,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
  بالطبع يمكنك الجمع بين أنواع مختلفة من المضلعات العادية في التغطية بالفسيفساء ، بشرط أن تضيف زواياها الداخلية ما يصل إلى 360 درجة: 
 
-    x-gallery(slide-width="520")(dir="ltr")
+    x-gallery(slide-width="520" dir="ltr")
       div
         img(src="images/tessellations/regular-1.svg" width=360 height=240)
         p.caption مربعات والمثلثات#[br]#[strong.m-blue 90°] + #[strong.m-blue 90°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] + #[strong.m-yellow 60°] = 360°

@@ -77,8 +77,8 @@ export function intro4($step: Step) {
 
   $system.isFinal = (expr) => {
     const str = expr.toString();
-    return (expr.variables.length === 1) && expr.functions.includes('sup')
-           && str.includes('89000') && str.includes('3250') &&
+    return (expr.variables.length === 1) && expr.functions.includes('sup') &&
+           str.includes('89000') && str.includes('3250') &&
            !str.includes('(');
   };
 

@@ -5,7 +5,7 @@
 
 
 import {Obj} from '@mathigon/core';
-import {Point, isBetween} from '@mathigon/fermat';
+import {isBetween, Point} from '@mathigon/fermat';
 import {$N, animate, AnimationResponse, CanvasView, SVGView} from '@mathigon/boost';
 
 import {AudioPlayer} from '../shared/components/audio';
@@ -100,7 +100,9 @@ export function doublePendulum($step: Step) {
     pendulums[2].angles[1] += 0.0002;
     pendulums[3].angles[1] += 0.0003;
 
-    sim.play((dt) => { for (const p of pendulums) p.step(dt); }, 0.1125, 3);
+    sim.play((dt) => {
+      for (const p of pendulums) p.step(dt);
+    }, 0.1125, 3);
   });
 
   $play.on('pause', () => {

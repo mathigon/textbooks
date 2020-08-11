@@ -1,0 +1,19 @@
+{
+  "extends": ["config:base"],
+  "schedule": ["before 5am every weekend"],
+  "packageRules": [{
+    "packagePatterns": ["eslint"],
+    "groupName": "eslint",
+    "automerge": true,
+    "automergeType":" branch"
+  }, {
+    "packagePatterns": ["^@types"],
+    "groupName": "types",
+    "automerge": true,
+    "automergeType":" branch"
+  }, {
+    "updateTypes": ["patch", "pin", "digest"],
+    "groupName": "patch-and-pin",
+    "automerge": true
+  }]
+}

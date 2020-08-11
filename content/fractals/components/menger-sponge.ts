@@ -4,6 +4,7 @@
 // =============================================================================
 
 
+/// <reference types="THREE"/>
 import {register} from '@mathigon/boost';
 import {Solid} from '../../shared/components/solid';
 
@@ -31,7 +32,6 @@ function step(child: THREE.Object3D) {
 
   return obj;
 }
-
 
 
 @register('x-menger-sponge', {attributes: ['steps']})

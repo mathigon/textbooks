@@ -18,7 +18,7 @@ export function drawSierpinski([a, b, c]: Point[], i: number): string {
   const t2 = drawSierpinski([b, ab, bc], i - 1);
   const t3 = drawSierpinski([c, ac, bc], i - 1);
 
-  return `M${ab.x},${ab.y}L${ac.x},${ac.y}L${bc.x},${bc.y}Z ${t1}${t2}${t3}`
+  return `M${ab.x},${ab.y}L${ac.x},${ac.y}L${bc.x},${bc.y}Z ${t1}${t2}${t3}`;
 }
 
 export function drawCarpet([a, b, c, d]: Point[], i: number): string {
@@ -36,7 +36,7 @@ export function drawCarpet([a, b, c, d]: Point[], i: number): string {
     }
   }
 
-  return path
+  return path;
 }
 
 export function drawKoch(last: Polygon, i: number): Polygon {
@@ -47,7 +47,7 @@ export function drawKoch(last: Polygon, i: number): Polygon {
     const a = Point.interpolate(e.p1, e.p2, 1/3);
     const c = Point.interpolate(e.p1, e.p2, 2/3);
     const b = c.rotate(-Math.PI/3, a);
-    points.push(e.p1, a, b, c)
+    points.push(e.p1, a, b, c);
   }
 
   return drawKoch(new Polygon(...points), i - 1);
