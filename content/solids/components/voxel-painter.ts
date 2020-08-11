@@ -19,20 +19,7 @@ export class VoxelPainter extends CustomElementView {
     /**
      * TODO
       convert to using built in mathigon mouse stuff
-        especially for save button
-        Talk about how to deal with unclicking mouse when not on canvas
-      More color variation with sides?
-
-      Bring back underside view
-      let's have the horizon, just stick the platform down a little further
-
-      Talk about 
-        Only calling the update when there is a pointerevent would be problematic because when you move the camera to a non cardinal direction...
-        scale = .00001 is good because less state
-        Can I bring the light with the camera? Weird to do more localToWorlds...
-
-      Pull from master
-      Create pull request
+      Only update when necessary
      */
 
     await loadScript('/resources/shared/vendor/three-91.min.js');
@@ -40,7 +27,6 @@ export class VoxelPainter extends CustomElementView {
     const TAU = Math.PI * 2;
 
     const clock = new THREE.Clock(true);
-    let frameCount = 0;
     let frameDelta = 1. / 60.;
 
     const v1 = new THREE.Vector3();
@@ -64,9 +50,8 @@ export class VoxelPainter extends CustomElementView {
     const $canvas = $(renderer.domElement) as CanvasView;
     this.append($canvas);
 
-    // Save button, TODO not appearingS
     if (this.attr('showSaveButton') === 'true') {
-      const $button = $N('button');
+      const $button = $N('button', { class: 'btn', text: 'Save' }, this);
       this.append($button);
 
       $button.on('click', () => {
@@ -81,30 +66,34 @@ export class VoxelPainter extends CustomElementView {
       });
     }
 
+    const rendererSize = renderer.getSize();
+    let camera = null
+    const cameraW = 30.;
+    const cameraNear = 1.
+    const cameraFar = 10000.
+    if (this.attr('cameraStyle') === 'orthographic' )
+    {
+      const cameraH = cameraW * rendererSize.height /rendererSize.width;
+      camera = new THREE.OrthographicCamera(-cameraW / 2., cameraW / 2., cameraH / 2., -cameraH / 2., cameraNear, cameraFar);
+    }
+    else
+      camera = new THREE.PerspectiveCamera(45, rendererSize.width / rendererSize.height, cameraNear, cameraFar);
+    camera.rotation.order = 'YXZ';
+    camera.rotation.y = TAU/8.;
+    camera.rotation.x =-TAU / 8.;
+    camera.position.x = 40.;
+    scene.add(camera);
+
     {
       const ambientLight = new THREE.AmbientLight(0x606060);
       scene.add(ambientLight);
 
       const directionalLight = new THREE.DirectionalLight(0xffffff);
       directionalLight.position.set(1, 0.75, 0.5).normalize();
-      scene.add(directionalLight);
+      camera.updateMatrixWorld()
+      camera.worldToLocal(directionalLight.position)
+      camera.add(directionalLight);
     }
-
-    const rendererSize = renderer.getSize();
-    let camera = null
-    if (this.attr('cameraStyle') === 'orthographic' )
-    {
-      const cameraW = 30.;
-      const cameraH = cameraW * rendererSize.height /rendererSize.width;
-      camera = new THREE.OrthographicCamera(-cameraW / 2., cameraW / 2., cameraH / 2., -cameraH / 2., 1., 10000.);
-    }
-    else
-      camera = new THREE.PerspectiveCamera(45, rendererSize.width / rendererSize.height, 1., 10000.);
-    camera.rotation.order = 'YXZ';
-    camera.rotation.y = TAU/8.;
-    camera.rotation.x =-TAU / 8.;
-    camera.position.x = 40.;
-    scene.add(camera);
 
     const voxelGeo = new THREE.BoxGeometry(1, 1, 1);
     const voxelMaterial = new THREE.MeshLambertMaterial({color: 0xfeb74c});
@@ -145,18 +134,10 @@ export class VoxelPainter extends CustomElementView {
         scene.add(this);
       }
     }
-    // function Voxel()
-    // {
-    //   let voxel = new THREE.Mesh(voxelGeo, voxelMaterial)
-    //   voxel.add(new THREE.LineSegments(outlineGeometry, outlineMaterial));
-    //   voxels.push(voxel);
-    //   objectsOnWhichVoxelsCanBePlaced.push(voxel);
-    //   scene.add(voxel);
-    //   return voxel
-    // }
 
-    const eraser = new THREE.Mesh(new THREE.PlaneBufferGeometry(.2, .2), new THREE.MeshBasicMaterial({transparent: true}));
+    const eraser = new THREE.Mesh(new THREE.PlaneBufferGeometry(1., 1.), new THREE.MeshBasicMaterial({transparent: true}));
     {
+      eraser.scale.setScalar(.2)
       camera.add(eraser);
 
       // eraser picture is from https://www.kissclipart.com/ which is public domain
@@ -173,10 +154,17 @@ export class VoxelPainter extends CustomElementView {
       );
 
       eraser.defaultPosition = new THREE.Vector3();
-      eraser.defaultPosition.z = -camera.near * 2.;
-      // TODO check where the corner is and put it near that
+      eraser.defaultPosition.z = -cameraNear * 2.;
       eraser.defaultPosition.x = -.7;
       eraser.defaultPosition.y = -.7;
+
+      if (this.attr('cameraStyle') === 'orthographic')
+      {
+        eraser.defaultPosition.x = -cameraW * .4
+        eraser.defaultPosition.y = eraser.defaultPosition.x * rendererSize.height / rendererSize.width
+
+        eraser.scale.setScalar(5.)
+      }
 
       eraser.position.copy(eraser.defaultPosition);
     }
@@ -245,11 +233,11 @@ export class VoxelPainter extends CustomElementView {
     const floorIntersectionPlane = new THREE.Mesh(floorIntersectionPlaneGeometry, new THREE.MeshBasicMaterial({visible: false}));
     const placingHelpers = [];
     {
-      scene.add(new THREE.GridHelper(gridDimension, gridDimension));
-
+      floorIntersectionPlane.add(new THREE.GridHelper(gridDimension, gridDimension));
       floorIntersectionPlaneGeometry.rotateX(-Math.PI / 2);
       scene.add(floorIntersectionPlane);
       objectsOnWhichVoxelsCanBePlaced.push(floorIntersectionPlane);
+      floorIntersectionPlane.position.y -= 2.
 
       for (let i = 0; i < 3; i++) {
         const placingHelper = new THREE.Mesh(new THREE.PlaneBufferGeometry(999., 999.), new THREE.MeshBasicMaterial({side: THREE.DoubleSide,
@@ -260,9 +248,12 @@ export class VoxelPainter extends CustomElementView {
         placingHelpers.push(placingHelper);
         scene.add(placingHelper);
       }
-      placingHelpers[0].geometry.rotateX(-TAU / 4.); // shouldn't need negative, check both directions angles
+      placingHelpers[0].geometry.rotateX( TAU / 4.);
       placingHelpers[1].geometry.rotateY( TAU / 4.);
       placingHelpers[2].geometry.rotateZ( TAU / 4.);
+      // placingHelpers[0].material.color.setRGB(1.,0.,0.)
+      // placingHelpers[1].material.color.setRGB(1.,1.,0.)
+      // placingHelpers[2].material.color.setRGB(1.,0.,1.)
     }
 
     function snapToNearestValidCubeCenterPosition(p) {
@@ -273,6 +264,13 @@ export class VoxelPainter extends CustomElementView {
       p.copy(intersection!.face!.normal).multiplyScalar(.1);
       p.add(intersection.point);
       snapToNearestValidCubeCenterPosition(p);
+    }
+
+    function getCameraDirectionSnappedToGrid(target) {
+      target.set(0., 0., -1.).applyQuaternion(camera.quaternion)
+      target.x = target.x > 0. ? .5 : -.5
+      target.y = target.y > 0. ? .5 : -.5
+      target.z = target.z > 0. ? .5 : -.5
     }
 
     const asyncPointerNdc = new THREE.Vector3()
@@ -286,6 +284,12 @@ export class VoxelPainter extends CustomElementView {
       asyncPointerNdc.set((p.x / $canvas.width ) * 2. - 1.,
           -(p.y / $canvas.height) * 2. + 1.);
     });
+
+    // slide($canvas, {
+    //   down: () => { },
+    //   move: () => { },
+    //   end: () => { }
+    // })
 
     $canvas.on('pointerdown', (event: PointerEvent) => {
       event.preventDefault();
@@ -301,9 +305,8 @@ export class VoxelPainter extends CustomElementView {
           placingEnd.copy(placingStart);
 
           // corner of cube that is away from camera
-          camera.localToWorld(v1.set(-1., 0., 0.));
-          v1.sub(camera.position).setLength(.5).add(placingStart);
-          snapToNearestValidCubeCenterPosition(v1);
+          getCameraDirectionSnappedToGrid(v1)
+          v1.add(placingStart);
           for (let i = 0; i < 3; i++) {
             placingHelpers[i].position.copy(v1);
             placingHelpers[i].updateMatrixWorld();
@@ -322,17 +325,16 @@ export class VoxelPainter extends CustomElementView {
         if (placingStart.z === placingEnd.z) iComponent = 0;
         const jComponent = (iComponent + 1) % 3;
         const kComponent = (jComponent + 1) % 3;
+        const k = placingStart.getComponent(kComponent);
 
         const iStart = Math.min( placingStart.getComponent(iComponent), placingEnd.getComponent(iComponent) );
         const iLimit = Math.max( placingStart.getComponent(iComponent), placingEnd.getComponent(iComponent) );
         const jStart = Math.min( placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent) );
         const jLimit = Math.max( placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent) );
 
-        // log(placingStart,placingEnd, iStart,iLimit,jStart,jLimit)
         const potentialNewPosition = new THREE.Vector3();
         for ( let i = iStart; i <= iLimit; i+= 1.) {
           for ( let j = jStart; j <= jLimit; j += 1.) {
-            const k = placingStart.getComponent(kComponent);
             potentialNewPosition.setComponent(kComponent, k);
             potentialNewPosition.setComponent(iComponent, i);
             potentialNewPosition.setComponent(jComponent, j);
@@ -341,9 +343,8 @@ export class VoxelPainter extends CustomElementView {
             voxels.forEach((voxel)=>{
               if (voxel.position.equals(potentialNewPosition)) alreadyOccupied = true;
             });
-            if (!alreadyOccupied) {
+            if (!alreadyOccupied)
               new Voxel().position.copy(potentialNewPosition);
-            }
           }
         }
       }
@@ -377,10 +378,13 @@ export class VoxelPainter extends CustomElementView {
           camera.rotation.x += (pointerNdc.y - oldPointerNdc.y)
           camera.rotation.x = clamp(camera.rotation.x, -TAU / 4., TAU / 4.);
         } else {
-          const desiredXAngle = -TAU / 14.;
-          camera.rotation.x = camera.rotation.x + getStepTowardDestination(camera.rotation.x, desiredXAngle);
-
           // snapspace is where the angles we want are integers
+          const snapSpaceAngleX = camera.rotation.x / (TAU / 14.);
+          let destination = Math.round(snapSpaceAngleX)
+          // destination = clamp(destination, -1, 1)
+          const newSnapSpaceAngleX = snapSpaceAngleX + getStepTowardDestination(snapSpaceAngleX, destination );
+          camera.rotation.x = newSnapSpaceAngleX * (TAU / 14.);
+
           const snapSpaceAngleY = camera.rotation.y / (TAU / 8.);
           const newSnapSpaceAngleY = snapSpaceAngleY + getStepTowardDestination(snapSpaceAngleY, Math.round(snapSpaceAngleY));
           camera.rotation.y = newSnapSpaceAngleY * (TAU / 8.);
@@ -395,9 +399,11 @@ export class VoxelPainter extends CustomElementView {
 
       if (mouseControlMode === 'placing') {
         const intersection = pointerRaycaster.intersectObjects(placingHelpers)[0];
-        snapToNearestValidCubeCenterPosition(placingEnd);
         if (intersection !== undefined) {
-          placingEnd.copy(intersection.point);
+          //get it off the helpers
+          getCameraDirectionSnappedToGrid(placingEnd)
+          placingEnd.negate().setLength(.1)
+          placingEnd.add(intersection.point);
           snapToNearestValidCubeCenterPosition(placingEnd);
 
           placementVisualizer.position.addVectors(placingEnd, placingStart).multiplyScalar(.5);
@@ -438,8 +444,6 @@ export class VoxelPainter extends CustomElementView {
       }
       else
         eraser.position.lerp(eraser.defaultPosition, .1);
-
-      ++frameCount;
 
       requestAnimationFrame(loop);
       renderer.render(scene, camera);
