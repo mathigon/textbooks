@@ -4,6 +4,7 @@
 
 > id: intro-0
 > section: introduction
+> translated: auto
 
 Svakodnevno smo okruženi bezbroj veza i mreža: prometnice i željezničke pruge, telefonske linije, internet, elektronički sklopovi, pa čak i molekularne veze. Postoje čak _društvene mreže_ između prijatelja i obitelji. Možete li smisliti još neke primjere?
 
@@ -85,9 +86,6 @@ Izgled jednostavnih grafova možemo nacrtati pomoću krugova i linija. Položaj 
 
 :::
 
-    // TODO maybe include examples of graphs with edges crossing, curved edges, etc.
-    // could include an "is this a graph?" quiz
-
 ---
 > id: intro-2
 
@@ -157,6 +155,7 @@ Grafovi koji se sastoje od jedne petlje vrhova nazivaju se [__ciklusom__](gloss:
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
+> translated: auto
 
 ## Königsberški mostovi
 
@@ -227,9 +226,6 @@ Prvo moramo pretvoriti karte gradova u grafikone s rubovima i vrhovima. Svaki ot
 
 Na papiru smislite nekoliko različitih grafova, a zatim pokušajte utvrditi koji se mogu izvući jednim kontinuiranim taktom.
 
-    // p Try drawing these graphs with one continuous stroke:
-    // p.todo Interactive coming soon…
-
 ---
 > id: bridges-3
 > goals: size prime eo
@@ -276,6 +272,7 @@ Ako se vratite na kartu Königsberga, vidjet ćete da postoji više od dva otoka
 ---
 > id: handshakes-1
 > section: handshakes
+> translated: auto
 
 ## Rukovanje i druženje
 
@@ -338,6 +335,7 @@ U ovom se slučaju odgovarajući graf sastoji od dva odvojena skupa. Svaka vrhov
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
+> translated: auto
 
 ## Ravni grafikoni
 
@@ -536,7 +534,10 @@ __{.red} 90__ Rubovi
 
 ---
 > id: maps
-> section: map-colouring ## Bojanje karte
+> section: map-colouring
+> translated: auto
+
+## Bojanje karte
 
 ::: column.grow
 
@@ -653,6 +654,7 @@ Međutim, matematičari su također pogledali mape _carstava_, gdje se zemlje mo
 ---
 > id: salesman
 > section: travelling-salesman
+> translated: auto
 
 ## Problem putničkog prodavca
 
@@ -760,7 +762,6 @@ Mravi žele pronaći najkraće moguće rute između svog gnijezda i mogućih izv
 * Ostali mravi imaju tendenciju da slijede trag kada pronađu jednog, koji ih vodi do hrane. Na povratku, oni polažu više feromona i na taj način pojačavaju trag.
 * S vremenom feromon isparava. Što je put duži, to više treba vremena da mravi putuju po njemu i tako feromon ima više vremena za isparavanje. S druge strane, kratki se putovi mogu brže pojačati pa se njihova snaga brže povećava.
 
-
 ::: column(width=240)
 
 {.todo} Dijagram uskoro stiže ...
@@ -810,6 +811,7 @@ Pronalaženje brzog algoritma za rješavanje problema Putničkog prodavača tako
 ---
 > id: applications
 > section: applications
+> translated: auto
 
 ## Grafovi u svakodnevnom životu
 
@@ -818,10 +820,6 @@ Vidjeli smo mnogo različitih primjena teorije grafova u prethodnim poglavljima,
 ::: column.grow
 
 Na primjer, Internet je ogroman, virtualni graf. Svaka vršica pojedinačna je web stranica, a svaki rub znači da postoji hiperveza između dvije stranice. Imajte na umu da veze idu samo u jednom smjeru, tako da je ovaj grafikon [[usmjeren|multi-line|conected]] i da je ovaj grafikon _vrlo, vrlo velik_.
-
-    // * "can be viewed as" instead of "is a vast, virtual graph". "Every
-    // vertex represens an individual webpage and every edge a hyperlink
-    // from one page to another".
 
 Neke web stranice, poput Wikipedije ili Facebooka, imaju puno dolaznih veza, dok mnoge manje web stranice mogu imati vrlo malo dolaznih veza. To je temeljni koncept koji Google koristi za razvrstavanje rezultata pretraživanja.
 

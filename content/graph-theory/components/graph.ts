@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import {list, EventTarget, run} from '@mathigon/core';
-import {nearlyEquals, Point, clamp, Vector, SimplePoint, Segment} from '@mathigon/fermat';
+import {EventTarget, list, run} from '@mathigon/core';
+import {clamp, nearlyEquals, Point, Segment, SimplePoint, Vector} from '@mathigon/fermat';
 import {$N, animate, ElementView, slide, SVGParentView, SVGView} from '@mathigon/boost';
 
 
@@ -83,7 +83,7 @@ export class Graph extends EventTarget {
         markerHeight: '6',
         orient: 'auto'
       }, $defs);
-      $N('path', {d: 'M0,-5L10,0L0,5', 'class': 'arrow'}, $marker);
+      $N('path', {d: 'M0,-5L10,0L0,5', class: 'arrow'}, $marker);
     }
 
     slide($svg, {
@@ -126,8 +126,8 @@ export class Graph extends EventTarget {
       const y = posn ? posn[v].y : this.height * (0.3 + 0.4 * Math.random());
 
       const $el = (this.options.icon ?
-                 $N('path', {'class': 'node', d: this.options.icon}, this.$vertices) :
-                 $N('circle', {'class': 'node', r: this.options.r || 5}, this.$vertices)) as SVGView;
+                 $N('path', {class: 'node', d: this.options.icon}, this.$vertices) :
+                 $N('circle', {class: 'node', r: this.options.r || 5}, this.$vertices)) as SVGView;
       if (this.options.vertex) $el.css('fill', run(this.options.vertex, v));
       return {$el: $el, posn: {x: x, y: y}, neighbours: [], v: {x: 0, y: 0}};
     });
@@ -137,7 +137,7 @@ export class Graph extends EventTarget {
       const v2 = this.vertices[b];
 
       const type = (v1 === v2) || this.options.arc ? 'path' : 'line';
-      const $el = $N(type, {'class': 'link'}, this.$edges) as SVGView;
+      const $el = $N(type, {class: 'link'}, this.$edges) as SVGView;
       if (this.options.directed) $el.setAttr('marker-end', 'url(#arrow-head)');
       if (this.options.edge) $el.css('stroke', run(this.options.edge, a, b));
 

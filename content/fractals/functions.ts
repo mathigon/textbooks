@@ -5,7 +5,7 @@
 
 
 import {Color, delay, list, Obj, repeat, wait} from '@mathigon/core';
-import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals} from '@mathigon/fermat';
+import {Circle, Complex, isBetween, nearlyEquals, numberFormat, Point, Polygon, Polyline} from '@mathigon/fermat';
 import {$html, $N, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, GeoPoint, Select, Slider, Slideshow, Step} from '../shared/types';
@@ -15,7 +15,7 @@ import {CellularAutomaton} from './components/automata';
 import {ChaosGame} from './components/chaos-game';
 import {COASTLINE} from './components/coastline';
 import {drawKoch, drawSierpinski} from './components/fractals';
-import {JuliaCanvas, converges} from './components/mandelbrot';
+import {converges, JuliaCanvas} from './components/mandelbrot';
 
 import './components/menger-sponge';
 import './components/sierpinski-tetrahedra';
@@ -234,7 +234,7 @@ export async function chaosGame($step: Step) {
   let startPoint: GeoPoint;
 
   if ($step.scores.has('point')) {
-    startPoint = $geopad.drawPoint('point(150, 200)', {classes: 'blue'})
+    startPoint = $geopad.drawPoint('point(150, 200)', {classes: 'blue'});
   } else {
     $geopad.switchTool('point');
     startPoint = await $geopad.waitForPoint();
@@ -326,14 +326,14 @@ export function fractalBuilder($step: Step) {
       $step.model.assign({shape: '5', ratio: '2', rule: 'none'});
       game.reset();
       game.play(10000);
-    },
+    }
   });
 }
 
 export function cellular($step: Step) {
   const correct = ['01110000', '0101_0__', '01110101', '01111110'];
   const match = (a: string, b: string) =>
-      a.split('').every((c, i) => c === b[i] || c === '_');
+    a.split('').every((c, i) => c === b[i] || c === '_');
 
   const automaton = $step.$('x-automaton') as CellularAutomaton;
 

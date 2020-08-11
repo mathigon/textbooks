@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 En regardant autour de la nature, vous avez peut-être remarqué des plantes complexes comme celles-ci:
 
@@ -428,14 +429,12 @@ Bien que les vraies fractales ne puissent jamais apparaître dans la nature, il 
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Chaîne de montagnes d'Asie centrale
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Delta du Gange en Inde
@@ -448,14 +447,12 @@ Bien que les vraies fractales ne puissent jamais apparaître dans la nature, il 
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Vaisseaux sanguins dans la rétine
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} Grand Canyon aux États-Unis
@@ -470,16 +467,12 @@ Bien que les vraies fractales ne puissent jamais apparaître dans la nature, il 
 
 Tous ces objets peuvent sembler complètement aléatoires, mais, tout comme les fractales, il existe un motif sous-jacent qui détermine la façon dont ils sont formés. Les mathématiques peuvent nous aider à mieux comprendre les formes et les fractales ont des applications dans des domaines comme la médecine, la biologie, la géologie et la météorologie. [Continuer](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Terrain fractal généré par ordinateur
@@ -498,6 +491,7 @@ Et nous pouvons même inverser ce processus pour compresser des images numériqu
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -522,22 +516,18 @@ Voici quelques exemples de pavages de sol de différentes églises à Rome:
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -694,6 +684,7 @@ Il existe de nombreuses variantes du triangle de Sierpinski et d'autres fractale
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Toutes les fractales que nous avons vues dans les chapitres précédents ont été créées en utilisant un processus __d'itération__: vous commencez avec un motif spécifique, puis vous le répétez encore et encore.
 
@@ -955,14 +946,9 @@ Lorsque vous déplacez la valeur de [{.pill.red} c](target:c) autour de l'ensemb
 * {.reveal(when="blank-0")} Les séquences de la [grosse ampoule](target:bulb1) en haut [[atteignent une orbite|converge|diverge]] _{span.reveal(when="blank-1")} composée de [[3]] points._
 * {.reveal(when="blank-2")} Les séquences de [cette ampoule plus petite](target:bulb2) ont des orbites de longueur [[5]].
 
-
 :::
 
 {.reveal(when="blank-3")} Chaque ampoule a une orbite de taille différente, les ampoules plus petites ayant de plus en plus de points sur leurs orbites. La taille de ces orbites est étroitement liée à la __carte logistique__, un concept important de la [théorie du chaos](/course/chaos).
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 
@@ -988,6 +974,4 @@ En 1985, l'ensemble Mandelbrot est apparu sur la couverture du magazine _Scienti
 > sectionStatus: dev
 
 {.todo} À venir bientôt!
-
-
 

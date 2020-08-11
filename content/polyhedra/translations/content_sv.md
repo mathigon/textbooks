@@ -4,8 +4,9 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
- En [__polygon__](gloss:polygon) är en sluten, platt form som endast har raka sidor. Polygoner kan ha valfritt antal sidor och vinklar, men sidorna kan inte vara böjda. Vilka av formerna nedan är polygoner? 
+En [__polygon__](gloss:polygon) är en sluten, platt form som endast har raka sidor. Polygoner kan ha valfritt antal sidor och vinklar, men sidorna kan inte vara böjda. Vilka av formerna nedan är polygoner? 
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -20,7 +21,7 @@
 ---
 > id: polygons-1
 
- Vi ger polygoner olika namn, beroende på hur många sidor de har: 
+Vi ger polygoner olika namn, beroende på hur många sidor de har: 
 
     .row.padded-thin
       div(style="width: 100px")
@@ -47,7 +48,7 @@
 
 ### Vinklar i polygoner 
 
- Varje polygon med _n-_ sidor har också _n_ [inre vinklar](gloss:internal-angle) . Vi vet redan att summan av de inre vinklarna i en triangel alltid är [[180]]° men hur är det med andra polygoner? 
+Varje polygon med _n-_ sidor har också _n_ [inre vinklar](gloss:internal-angle) . Vi vet redan att summan av de inre vinklarna i en triangel alltid är [[180]]° men hur är det med andra polygoner? 
 
 ---
 > id: angles
@@ -92,7 +93,7 @@
 ---
 > id: angles-1
 
- Det ser ut som att summan av inre vinklar i en fyrkant är alltid [[360]]° - exakt [[två gånger | tre gånger | halva]] summan av vinklar i en triangel. _{span.reveal(when="blank-0 blank-1")} Detta är ingen slump: varje fyrkant kan delas upp i två trianglar._ 
+Det ser ut som att summan av inre vinklar i en fyrkant är alltid [[360]]° - exakt [[två gånger | tre gånger | halva]] summan av vinklar i en triangel. _{span.reveal(when="blank-0 blank-1")} Detta är ingen slump: varje fyrkant kan delas upp i två trianglar._ 
 
     .row.padded-thin
       .reveal(when="blank-1" style="width: 140px"): include svg/polygons/triangles-4.svg
@@ -105,7 +106,7 @@
 ---
 > id: internal-angle-sum
 
- En polygon med ${x}{x|7|3,15,1} sidorna har en inre vinkelsumma på 180° × ${x-2} = ${(x-2)*180}°. Mer generellt kan en polygon med _n-_ sidor delas upp i [[n - 2 | n - 1 | n]] trianglar. Därför, 
+En polygon med ${x}{x|7|3,15,1} sidorna har en inre vinkelsumma på 180° × ${x-2} = ${(x-2)*180}°. Mer generellt kan en polygon med _n-_ sidor delas upp i [[n - 2 | n - 1 | n]] trianglar. Därför, 
 
 {.text-center.reveal(when="blank-0")} Summan av inre vinklar i en _n_ -gon `= (n - 2) × 180°` . 
 
@@ -118,11 +119,11 @@
 
 ::: column.grow
 
- Vi säger att en polygon är [__konkav__](gloss:concave) om den har ett avsnitt som "pekar inåt". Du kan föreställa dig att den här delen har ["blivit in"](target:cave) . Polygoner som _inte är_ konkava kallas [__konvex__](gloss:convex) . 
+Vi säger att en polygon är [__konkav__](gloss:concave) om den har ett avsnitt som "pekar inåt". Du kan föreställa dig att den här delen har ["blivit in"](target:cave) . Polygoner som _inte är_ konkava kallas [__konvex__](gloss:convex) . 
 
- Det finns två sätt att enkelt identifiera konkava polygoner: de har minst en [inre vinkel som är större än 180°](target:angle) . De har också minst en [diagonal som ligger _utanför_ polygonen](target:diagonal) . 
+Det finns två sätt att enkelt identifiera konkava polygoner: de har minst en [inre vinkel som är större än 180°](target:angle) . De har också minst en [diagonal som ligger _utanför_ polygonen](target:diagonal) . 
 
- I konvexa polygoner, å andra sidan, är alla inre vinklar mindre än [[180]]°, och alla diagonaler ligger [[inuti | utanför]] polygonen. 
+I konvexa polygoner, å andra sidan, är alla inre vinklar mindre än [[180]]°, och alla diagonaler ligger [[inuti | utanför]] polygonen. 
 
 ::: column(width=240)
 
@@ -146,7 +147,7 @@
 ---
 > id: concave-1
 
- Vilka av dessa polygoner är konkava? 
+Vilka av dessa polygoner är konkava? 
 
     x-picker
       .item(data-error="not-concave-1"): include svg/polygons/concave-1.svg
@@ -161,7 +162,7 @@
 
 ### Vanliga polygoner 
 
- Vi säger att en polygon är [__regelbunden__](gloss:regular-polygon) om alla sidor har samma längd och alla vinklar har samma storlek. Vilka av dessa former är vanliga polygoner? 
+Vi säger att en polygon är [__regelbunden__](gloss:regular-polygon) om alla sidor har samma längd och alla vinklar har samma storlek. Vilka av dessa former är vanliga polygoner? 
 
     x-picker
       .item: include svg/polygons/regular-1.svg
@@ -174,12 +175,12 @@
 ---
 > id: regular-1
 
- Vanliga polygoner kan fås i många olika storlekar - men alla vanliga polygoner med samma antal sidor [[är lika | är kongruenta | har samma område]] ! 
+Vanliga polygoner kan fås i många olika storlekar - men alla vanliga polygoner med samma antal sidor [[är lika | är kongruenta | har samma område]] ! 
 
 ---
 > id: regular-2
 
- Vi vet redan summan av alla [inre vinklar](gloss:internal-angle) i polygoner. För vanliga polygoner har alla dessa vinklar [[samma storlek | är alternerande vinklar]] , så vi kan räkna ut storleken på en enda inre vinkel: 
+Vi vet redan summan av alla [inre vinklar](gloss:internal-angle) i polygoner. För vanliga polygoner har alla dessa vinklar [[samma storlek | är alternerande vinklar]] , så vi kan räkna ut storleken på en enda inre vinkel: 
 
 {.text-center.reveal(when="blank-0")} vinkel = <mfrac><mrow>[[summan av alla vinklar | antal vinklar]]</mrow><mrow>[[antal vinklar | summan av alla vinklar]]</mrow></mfrac> _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x` ._ 
 
@@ -217,9 +218,9 @@
 
 ::: column.grow
 
- Här kan du se en [vanlig polygon](gloss:regular-polygon) med ${n}{n|5|4,12,1} sidor. Varje sida har längd [{.pill.green} 1 m](target:base) Låt oss försöka beräkna dess areal! 
+Här kan du se en [vanlig polygon](gloss:regular-polygon) med ${n}{n|5|4,12,1} sidor. Varje sida har längd [{.pill.green} 1 m](target:base) Låt oss försöka beräkna dess areal! 
 
- Först kan vi dela in polygonen i ${toWord(n)} kongruenta, [[isosceles | liksidig | rätvinklade]] trianglar. 
+Först kan vi dela in polygonen i ${toWord(n)} kongruenta, [[isosceles | liksidig | rätvinklade]] trianglar. 
 
 {.reveal(when="blank-0")} Vi känner redan till [[basen | höjd | området]] för dessa trianglar, men vi behöver också [[höjden | ben | medianer]] för att kunna beräkna dess areal. _{span.reveal(when="blank-2")} I vanliga polygoner kallas denna höjd ibland [{.pill.yellow} apotem](target:apothem) ._ 
 
@@ -260,10 +261,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
- I den [föregående kursen](/course/triangles) undersökte vi många olika egenskaper hos trianglar. Låt oss nu titta på fyrhjulingar. 
+I den [föregående kursen](/course/triangles) undersökte vi många olika egenskaper hos trianglar. Låt oss nu titta på fyrhjulingar. 
 
- En _vanlig fyrkantig_ kallas en [[fyrkant | rektangel | liksidiga fyrsidiga]] . Alla sidor har samma längd och alla vinklar är lika. 
+En _vanlig fyrkantig_ kallas en [[fyrkant | rektangel | liksidiga fyrsidiga]] . Alla sidor har samma längd och alla vinklar är lika. 
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -289,7 +291,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-1
 
- För lite "mindre regelbundna" fyrhjulingar har vi två alternativ. Om vi bara vill att _vinklarna_ ska vara lika får vi en [__rektangel__](gloss:rectangle) . Om vi bara vill att _sidorna_ ska vara lika, får vi en [__romb__](gloss:rhombus) . 
+För lite "mindre regelbundna" fyrhjulingar har vi två alternativ. Om vi bara vill att _vinklarna_ ska vara lika får vi en [__rektangel__](gloss:rectangle) . Om vi bara vill att _sidorna_ ska vara lika, får vi en [__romb__](gloss:rhombus) . 
 
 ::: column.quadrilateral
 
@@ -330,7 +332,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-2
 
- Det finns några andra fyrhjulingar som är ännu mindre regelbundna men som fortfarande har vissa viktiga egenskaper: 
+Det finns några andra fyrhjulingar som är ännu mindre regelbundna men som fortfarande har vissa viktiga egenskaper: 
 
 ::: column.quadrilateral
 
@@ -382,11 +384,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-venn
 
- Fyrhjulingar kan falla in i flera av dessa kategorier. Vi kan visualisera hierarkin för olika typer av fyrkantiga sidor som ett [Venn-diagram](gloss:venn-diagram) : 
+Fyrhjulingar kan falla in i flera av dessa kategorier. Vi kan visualisera hierarkin för olika typer av fyrkantiga sidor som ett [Venn-diagram](gloss:venn-diagram) : 
 
     figure: include svg/venn.svg
 
- Till exempel är varje rektangel också ett [[parallellogram | romb | fyrkant]] , och varje [[romb | trapets | parallelogram]] är också en drake. En romb är [[ibland | alltid | aldrig]] en fyrkant och en rektangel är [[alltid | ibland | aldrig]] ett trapez. 
+Till exempel är varje rektangel också ett [[parallellogram | romb | fyrkant]] , och varje [[romb | trapets | parallelogram]] är också en drake. En romb är [[ibland | alltid | aldrig]] en fyrkant och en rektangel är [[alltid | ibland | aldrig]] ett trapez. 
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} För att undvika tvetydighet använder vi vanligtvis bara den mest specifika typen. 
 
@@ -399,7 +401,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Välj nu fyra punkter, var som helst i den grå rutan till vänster. _{span.reveal(when="points")} Vi kan ansluta dem alla till en fyrkant._ 
+Välj nu fyra punkter, var som helst i den grå rutan till vänster. _{span.reveal(when="points")} Vi kan ansluta dem alla till en fyrkant._ 
 
 {.reveal(when="points" delay=1000)} Låt oss hitta mittpunkten för var och en av de fyra sidorna. Om vi ansluter mittpunkterna, får vi en [[annan fyrkant | en triangel | en rektangel]] . 
 
@@ -420,7 +422,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### parallellogram 
 
- Det visar sig att parallellogram har många andra intressanta egenskaper, andra än att motsatta sidor är parallella. Vilka av följande sex uttalanden är sanna? 
+Det visar sig att parallellogram har många andra intressanta egenskaper, andra än att motsatta sidor är parallella. Vilka av följande sex uttalanden är sanna? 
 
 ::: column.grow
 
@@ -458,7 +460,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: parallelograms-proof
 
- Naturligtvis är det helt enkelt inte att "observera" dessa egenskaper. För att vara säker på att de _alltid är_ sanna måste vi _bevisa_ dem: 
+Naturligtvis är det helt enkelt inte att "observera" dessa egenskaper. För att vara säker på att de _alltid är_ sanna måste vi _bevisa_ dem: 
 
 ::: tab
 
@@ -494,7 +496,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Låt oss försöka bevisa att motsatta sidor och vinklar i ett parallellogram alltid överensstämmer. 
 
- Börja med att rita en av parallellogrammets diagonaler. 
+Börja med att rita en av parallellogrammets diagonaler. 
 
 {.reveal(when="diagonal")} Diagonalen skapar fyra nya vinklar med sidorna på parallellogrammet. De två [röda vinklarna](target:red-angle) och de två [blåa vinklarna](target:blue-angle) är [alternerande vinklar](gloss:alternate-angles) , så de måste var och en vara [[kongruenta | intilliggande | kompletterande]] . 
 
@@ -505,8 +507,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 :::
 
 {.reveal(when="blank-1")} Det visar sig att det konverserade också är sant: om båda par av motsatta sidor (eller vinklar) i en fyrkantig är kongruenta, måste fyrkantiga sidor vara ett parallellogram. 
-
-    //- Adjacent angles are supplementary.
 
 ::: tab
 
@@ -544,9 +544,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Bevis nu att de två diagonalerna i ett parallellogram halverar varandra. 
 
- Låt oss tänka på de två gula trianglarna som genereras av diagonalerna: 
+Låt oss tänka på de två gula trianglarna som genereras av diagonalerna: 
 
- * Vi har precis bevisat att de [två gröna sidorna](target:side1) är kongruenta, eftersom de är motsatta sidor av ett parallellogram. * De [två röda vinklarna](target:anglesR) och de [två blåa vinklarna](target:anglesB) är kongruenta, eftersom de är [[alternerande vinklar | motsatta vinklar | rät vinklar]] . 
+* Vi har precis bevisat att de [två gröna sidorna](target:side1) är kongruenta, eftersom de är motsatta sidor av ett parallellogram. * De [två röda vinklarna](target:anglesR) och de [två blåa vinklarna](target:anglesB) är kongruenta, eftersom de är [[alternerande vinklar | motsatta vinklar | rät vinklar]] . 
 
 {.reveal(when="blank-2")} Av [[ASA | SSS | AAS-]] tillstånd, båda de gula trianglarna måste därför också vara kongruenta. 
 
@@ -565,9 +565,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Vi visade ovan att de två [[motsatta]] paren [[| intilliggande]] sidor av ett parallellogram är kongruenta. I en drake är två par _intilliggande_ sidor kongruenta. 
+Vi visade ovan att de två [[motsatta]] paren [[| intilliggande]] sidor av ett parallellogram är kongruenta. I en drake är två par _intilliggande_ sidor kongruenta. 
 
- Namnet _Kite_ kommer helt klart från sin form: det ser ut som drakarna du kan flyga på himlen. Emellertid, av alla de speciella fyrhjulingar som vi hittills har sett, är draken den enda som också kan vara [konkav](gloss:concave) : om den är formad som en pil eller pil: 
+Namnet _Kite_ kommer helt klart från sin form: det ser ut som drakarna du kan flyga på himlen. Emellertid, av alla de speciella fyrhjulingar som vi hittills har sett, är draken den enda som också kan vara [konkav](gloss:concave) : om den är formad som en pil eller pil: 
 
 ::: column(width=320)
 
@@ -643,7 +643,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Du kanske har märkt att alla drakar är [[symmetriska | liknande]] . _{span.reveal(when="blank-0")} [Symmetriaxeln](gloss:axis-of-symmetry) är [[en av diagonalerna | en av sidorna | ett midsegment]] ._ 
+Du kanske har märkt att alla drakar är [[symmetriska | liknande]] . _{span.reveal(when="blank-0")} [Symmetriaxeln](gloss:axis-of-symmetry) är [[en av diagonalerna | en av sidorna | ett midsegment]] ._ 
 
 {.reveal.r(when="blank-1")} Diagonalen delar draken i [två kongruenta trianglar](target:triangle1) . Vi vet att de är kongruenta från [SSS-](gloss:triangle-sss) tillståndet: båda trianglarna har [tre kongruenta sidor](target:sss) (röd, grön och blå). _{button.next-step} Fortsätta_ 
 
@@ -665,7 +665,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Område med fyrkantiga områden 
 
- När vi beräknade arean för trianglar i den föregående kursen, använde vi tricket för att konvertera det till en [[rektangel | fyrkant | femkant]] . Det visar sig att vi också kan göra det för vissa fyrhjulingar: 
+När vi beräknade arean för trianglar i den föregående kursen, använde vi tricket för att konvertera det till en [[rektangel | fyrkant | femkant]] . Det visar sig att vi också kan göra det för vissa fyrhjulingar: 
 
 ::: tab
 
@@ -685,7 +685,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Till vänster, försök att rita en rektangel som har samma område som parallellogrammet. 
+Till vänster, försök att rita en rektangel som har samma område som parallellogrammet. 
 
 {.reveal(when="draw-1")} Kan du se att den [saknade triangeln](target:triangle-1) till vänster är [[exakt samma som | mindre än | större än]] den [överlappande triangeln](target:triangle-2) till höger? _{span.reveal(when="blank-1")} Därför är området för ett parallellogram_ 
 
@@ -699,7 +699,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 #### Trapets _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_ 
 
- Kom ihåg att trapezier är fyrkantiga sidor med ett par [parallella sidor](target:bases) . Dessa parallella sidor kallas __trapesens baser__ . 
+Kom ihåg att trapezier är fyrkantiga sidor med ett par [parallella sidor](target:bases) . Dessa parallella sidor kallas __trapesens baser__ . 
 
 ::: column(width=300)
 
@@ -721,7 +721,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Liksom tidigare, försök att rita en rektangel som har samma område som detta trapez. _{span.reveal(when="draw-2")} Kan du se hur de [saknade och tillagda trianglarna](target:triangles-3) på vänster och höger avbryter?_ 
+Liksom tidigare, försök att rita en rektangel som har samma område som detta trapez. _{span.reveal(when="draw-2")} Kan du se hur de [saknade och tillagda trianglarna](target:triangles-3) på vänster och höger avbryter?_ 
 
 {.reveal(when="draw-2" delay=2000)} De [{.pill.green} höjden](target:t-height) på denna rektangel är [[avståndet mellan | genomsnitt av | längden på]] de [parallella sidorna](target:bases) av trapeziet. 
 
@@ -765,9 +765,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- I denna drake bildar de [två diagonalerna](target:diag3) bredden och höjden på en stor [rektangel](target:rect4) som omger draken. 
+I denna drake bildar de [två diagonalerna](target:diag3) bredden och höjden på en stor [rektangel](target:rect4) som omger draken. 
 
- Området för denna rektangel är [[två gånger | samma som | tre gånger]] drakens yta. _{span.reveal(when="blank-5")} Kan du se hur var och en av de [fyra trianglarna](target:inside) som utgör draken är desamma som de [fyra luckorna](target:outside) utanför den?_ 
+Området för denna rektangel är [[två gånger | samma som | tre gånger]] drakens yta. _{span.reveal(when="blank-5")} Kan du se hur var och en av de [fyra trianglarna](target:inside) som utgör draken är desamma som de [fyra luckorna](target:outside) utanför den?_ 
 
 {.reveal(when="blank-5")} Detta innebär att området med en drake med diagonaler [{.i.pill.green} d1](target:d31) och [{.i.pill.yellow} d2](target:d32) är 
 
@@ -801,7 +801,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- En [romb](gloss:rhombus) är en fyrkant som har fyra sammanhängande sidor. Du kanske kommer ihåg att varje romb är ett [[parallellogram | rektangel | torget]] - och även en [[drake | sexhörning | konkav polygon]] . 
+En [romb](gloss:rhombus) är en fyrkant som har fyra sammanhängande sidor. Du kanske kommer ihåg att varje romb är ett [[parallellogram | rektangel | torget]] - och även en [[drake | sexhörning | konkav polygon]] . 
 
 {.reveal(when="blank-6 blank-7")} Detta betyder att vi kan använda antingen ekvationen för området för ett parallellogram, eller det för en drake: 
 
@@ -813,25 +813,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    //- ### Cyclic quadrilaterals
     
-    //- ### Isosceles Trapeziums
-    //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -839,8 +821,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
- [Polygoner](gloss:polygon) förekommer överallt i naturen. De är särskilt användbara om du vill kakla in ett stort område, eftersom du kan passa polygoner utan några luckor eller överlappningar. Mönster som det kallas [__tessellationer__](gloss:tessellation) . 
+[Polygoner](gloss:polygon) förekommer överallt i naturen. De är särskilt användbara om du vill kakla in ett stort område, eftersom du kan passa polygoner utan några luckor eller överlappningar. Mönster som det kallas [__tessellationer__](gloss:tessellation) . 
 
 ::: column(width=200)
 
@@ -883,7 +866,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellations-1
 
- Människor har kopierat många av dessa naturliga mönster inom konst, arkitektur och teknik - från antika Rom till nutid. Här är några exempel: 
+Människor har kopierat många av dessa naturliga mönster inom konst, arkitektur och teknik - från antika Rom till nutid. Här är några exempel: 
 
 ::: column(width=200)
 
@@ -923,16 +906,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
 
- Här kan du skapa dina egna tessellationer med vanliga polygoner. Dra helt enkelt nya former från sidofältet till duken. Vilka former stämmer väl? Finns det några former som inte tessellaterar alls? Försök skapa intressanta mönster! 
+Här kan du skapa dina egna tessellationer med vanliga polygoner. Dra helt enkelt nya former från sidofältet till duken. Vilka former stämmer väl? Finns det några former som inte tessellaterar alls? Försök skapa intressanta mönster! 
 
     figure: .tessellation
       x-polypad
@@ -956,12 +934,12 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Tessellationer från vanliga polygoner 
 
- Du kanske har märkt att några [vanliga polygoner](gloss:regular-polygon) (som [[rutor) | pentagoner]] ) tessellera mycket lätt, medan andra (som [[pentagoner) | trianglar | sexhörningar]] ) verkar inte tessellera alls. 
+Du kanske har märkt att några [vanliga polygoner](gloss:regular-polygon) (som [[rutor) | pentagoner]] ) tessellera mycket lätt, medan andra (som [[pentagoner) | trianglar | sexhörningar]] ) verkar inte tessellera alls. 
 
 ---
 > id: tessellation-regular-1
 
- Detta har att göra med storleken på deras [inre vinklar](gloss:internal-angle) , som vi lärde oss att beräkna tidigare. Vid varje [topp](gloss:polygon-vertex) i tessellationen möts de inre vinklarna hos flera olika polygoner. Vi behöver alla dessa vinklar för att lägga till [[360]]°, annars blir det antingen ett gap eller en överlappning. 
+Detta har att göra med storleken på deras [inre vinklar](gloss:internal-angle) , som vi lärde oss att beräkna tidigare. Vid varje [topp](gloss:polygon-vertex) i tessellationen möts de inre vinklarna hos flera olika polygoner. Vi behöver alla dessa vinklar för att lägga till [[360]]°, annars blir det antingen ett gap eller en överlappning. 
 
 ---
 > id: tessellation-regular-2
@@ -984,8 +962,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.caption} Pentagoner [[tessellaterar inte | tessellate]] _{span.reveal(when="blank-2")} eftersom multiplar på 108° inte lägger till 360°._ 
 
-    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
-
 ::: column(width=160)
 
     include svg/tessellations/hexagons.svg
@@ -997,9 +973,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-regular-3
 
- Du kan på liknande sätt kontrollera att, precis som pentagoner, alla vanliga polygoner med sju eller fler sidor inte tessellaterar. Detta innebär att de enda vanliga polygonerna som tessellaterar är trianglar, rutor och hexagoner! 
+Du kan på liknande sätt kontrollera att, precis som pentagoner, alla vanliga polygoner med sju eller fler sidor inte tessellaterar. Detta innebär att de enda vanliga polygonerna som tessellaterar är trianglar, rutor och hexagoner! 
 
- Naturligtvis kan man kombinera olika typer av vanliga polygoner i en tessellation, förutsatt att deras inre vinklar kan lägga till 360°: 
+Naturligtvis kan man kombinera olika typer av vanliga polygoner i en tessellation, förutsatt att deras inre vinklar kan lägga till 360°: 
 
     x-gallery(slide-width="520")
       div
@@ -1032,7 +1008,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Tessellationer från oregelbundna polygoner 
 
- Vi kan också prova att göra tessellationer av [oregelbundna polygoner](gloss:irregular-polygon) - så länge vi är försiktiga när vi roterar och ordnar dem. 
+Vi kan också prova att göra tessellationer av [oregelbundna polygoner](gloss:irregular-polygon) - så länge vi är försiktiga när vi roterar och ordnar dem. 
 
 ::: column(width=360)
 
@@ -1052,9 +1028,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Det visar sig att du kan tessellera inte bara liksidiga trianglar, utan _vilken triangel som helst_ ! Försök att flytta [topparna](target:vertex) i detta diagram. 
+Det visar sig att du kan tessellera inte bara liksidiga trianglar, utan _vilken triangel som helst_ ! Försök att flytta [topparna](target:vertex) i detta diagram. 
 
- Summan av de inre vinklarna i en triangel är [[180]]°. Om vi använder varje vinkel [[två gånger | en gång | tre gånger]] vid varje toppunkt i tessellationen får vi 360°: 
+Summan av de inre vinklarna i en triangel är [[180]]°. Om vi använder varje vinkel [[två gånger | en gång | tre gånger]] vid varje toppunkt i tessellationen får vi 360°: 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" cx=100 cy=80)
@@ -1117,7 +1093,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow    
 
- Mer överraskande, _alla fyrkantiga_ tessellater också! Deras inre vinkelsumma är [[360]]°, så om vi använder varje vinkel en [[gång | dubbelt | tre gånger]] vid varje toppunkt i tessellationen får vi 360°. 
+Mer överraskande, _alla fyrkantiga_ tessellater också! Deras inre vinkelsumma är [[360]]°, så om vi använder varje vinkel en [[gång | dubbelt | tre gånger]] vid varje toppunkt i tessellationen får vi 360°. 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
@@ -1159,7 +1135,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-pentagons
 
- Pentagoner är lite svårare. Vi såg redan att _vanliga_ pentagoner [[inte stämmer | tessellate]] , men hur är det med icke-regelbundna? 
+Pentagoner är lite svårare. Vi såg redan att _vanliga_ pentagoner [[inte stämmer | tessellate]] , men hur är det med icke-regelbundna? 
 
 ---
 > id: tessellation-pentagons-1
@@ -1178,16 +1154,16 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Här är tre olika exempel på tessellationer med pentagoner. De är inte _vanliga_ , men de är giltiga 5-sidiga polygoner. 
+Här är tre olika exempel på tessellationer med pentagoner. De är inte _vanliga_ , men de är giltiga 5-sidiga polygoner. 
 
- Hittills har matematiker bara hittat 15 olika typer av tessellationer med (konvexa) pentagoner - den senaste upptäcktes 2015. Ingen vet om det finns några andra, eller om dessa 15 är de enda ... 
+Hittills har matematiker bara hittat 15 olika typer av tessellationer med (konvexa) pentagoner - den senaste upptäcktes 2015. Ingen vet om det finns några andra, eller om dessa 15 är de enda ... 
 
 ---
 > id: escher
 
 ### Tessellationer i art 
 
- Tessellations vi både ett verktyg och inspiration för många konstnärer, arkitekter och designer - mest känd den holländska konstnären [MC Escher](bio:escher) . Eschers verk innehåller konstiga, muterande varelser, mönster och landskap: 
+Tessellations vi både ett verktyg och inspiration för många konstnärer, arkitekter och designer - mest känd den holländska konstnären [MC Escher](bio:escher) . Eschers verk innehåller konstiga, muterande varelser, mönster och landskap: 
 
     .row
       div(style="width: 220px")
@@ -1209,7 +1185,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
- Dessa konstverk ser ofta roliga och enkla ut, men de underliggande matematiska principerna är desamma som tidigare: vinklar, rotationer, översättningar och polygoner. Om matematiken inte är rätt kommer tessellationen inte att fungera! 
+Dessa konstverk ser ofta roliga och enkla ut, men de underliggande matematiska principerna är desamma som tidigare: vinklar, rotationer, översättningar och polygoner. Om matematiken inte är rätt kommer tessellationen inte att fungera! 
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
     p.caption “Metamorphosis II” by M. C. Escher (1940)
@@ -1219,9 +1195,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Penrose brickor 
 
- Alla tessellationer vi såg hittills har en sak gemensamt: de är __periodiska__ . Det betyder att de består av ett regelbundet mönster som upprepas om och om igen. De kan fortsätta för evigt i alla riktningar och de kommer att se lika ut överallt. 
+Alla tessellationer vi såg hittills har en sak gemensamt: de är __periodiska__ . Det betyder att de består av ett regelbundet mönster som upprepas om och om igen. De kan fortsätta för evigt i alla riktningar och de kommer att se lika ut överallt. 
 
- På 1970-talet upptäckte den brittiska matematikern och fysikern [Roger Penrose](bio:penrose) _icke-periodiska_ tessellationer - de fortsätter oändligt i alla riktningar, men ser _aldrig_ exakt lika ut. Dessa kallas __Penrose-plattor__ , och du behöver bara några olika typer av polygoner för att skapa en: 
+På 1970-talet upptäckte den brittiska matematikern och fysikern [Roger Penrose](bio:penrose) _icke-periodiska_ tessellationer - de fortsätter oändligt i alla riktningar, men ser _aldrig_ exakt lika ut. Dessa kallas __Penrose-plattor__ , och du behöver bara några olika typer av polygoner för att skapa en: 
 
     figure
       include svg/penrose.svg
@@ -1231,7 +1207,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: penrose-1
 
- Penrose utforskade tessellationerna bara för skojs skull, men det visar sig att den inre strukturen i vissa verkliga material (som aluminium) följer ett liknande mönster. Mönstret användes till och med på toalettpapper, eftersom tillverkarna märkte att ett icke-periodiskt mönster kan rullas upp utan utbuktningar. 
+Penrose utforskade tessellationerna bara för skojs skull, men det visar sig att den inre strukturen i vissa verkliga material (som aluminium) följer ett liknande mönster. Mönstret användes till och med på toalettpapper, eftersom tillverkarna märkte att ett icke-periodiskt mönster kan rullas upp utan utbuktningar. 
 
 ---
 
@@ -1239,8 +1215,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
- Hittills har vi bara tittat på vad vi kan göra med polygoner i en platt, tvådimensionell värld. En [__polyhedron__](gloss:polyhedron) är ett tredimensionellt objekt som består av polygoner. Här är några exempel: 
+Hittills har vi bara tittat på vad vi kan göra med polygoner i en platt, tvådimensionell värld. En [__polyhedron__](gloss:polyhedron) är ett tredimensionellt objekt som består av polygoner. Här är några exempel: 
 
 ::: column.padded-thin(width=220)
 
@@ -1256,32 +1233,32 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Polyhedra kan inte innehålla böjda ytor - sfärer och cylindrar är till exempel inte polyhedra. 
+Polyhedra kan inte innehålla böjda ytor - sfärer och cylindrar är till exempel inte polyhedra. 
 
- Polygonerna som utgör en polyhedron kallas dess [__ansikten__](gloss:polyhedron-face) . Raderna där två ytor är anslutna kallas [__kanter__](gloss:polyhedron-edge) , och hörnen där kanterna möts kallas [__vertikaler__](gloss:polyhedron-vertex) . 
+Polygonerna som utgör en polyhedron kallas dess [__ansikten__](gloss:polyhedron-face) . Raderna där två ytor är anslutna kallas [__kanter__](gloss:polyhedron-edge) , och hörnen där kanterna möts kallas [__vertikaler__](gloss:polyhedron-vertex) . 
 
 ---
 > id: euler
 
- Polyhedra finns i många olika former och storlekar - från enkla kuber eller pyramider med bara några ansikten, till komplexa föremål som stjärnan ovan, som har 60 triangulära ytor. Det visar sig dock att _alla_ polyeder är gemensamma med en viktig egenskap: 
+Polyhedra finns i många olika former och storlekar - från enkla kuber eller pyramider med bara några ansikten, till komplexa föremål som stjärnan ovan, som har 60 triangulära ytor. Det visar sig dock att _alla_ polyeder är gemensamma med en viktig egenskap: 
 
 ::: .theorem
 
- __Eulers polyhedronformel__  
+__Eulers polyhedronformel__  
 I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) två fler än antalet kanter ( _E_ ). Med andra ord, 
 
 {.text-center}`F + V = E + 2`
 
 :::
 
- Till exempel, om en polyhedron har 12 ytor och 18 vertikaler, vet vi att den måste ha [[28]] kanter. 
+Till exempel, om en polyhedron har 12 ytor och 18 vertikaler, vet vi att den måste ha [[28]] kanter. 
 
 ---
 > id: euler-1
 
- Denna ekvation upptäcktes av den berömda schweiziska matematikern [Leonard Euler](bio:euler) . Det är sant för alla polyeder, så länge det inte innehåller några hål. 
+Denna ekvation upptäcktes av den berömda schweiziska matematikern [Leonard Euler](bio:euler) . Det är sant för alla polyeder, så länge det inte innehåller några hål. 
 
- Om du försöker olika polyeder, som de ovan, kommer du att upptäcka att Eulers formel alltid fungerar. I [en senare kurs kommer](/course/graph-theory/planar-graphs) du att lära dig att faktiskt bevisa det matematiskt. 
+Om du försöker olika polyeder, som de ovan, kommer du att upptäcka att Eulers formel alltid fungerar. I [en senare kurs kommer](/course/graph-theory/planar-graphs) du att lära dig att faktiskt bevisa det matematiskt. 
 
 ---
 
@@ -1290,21 +1267,7 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 > section: nets-cross-sections
 > sectionStatus: dev
 
- Hela vår värld är tredimensionell - men det är ofta mycket lättare att rita eller visualisera platta, tvådimensionella objekt. Och det finns några olika sätt att se tredimensionell polyeder på ett tvådimensionellt sätt. 
-
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
-
- Vilket av dessa nät gör en kub Matcha nätet med objektet https://github.com/polymake/matchthenet Ritningsnät 
-
- Beskriv tvärsnittet som bildas genom skärningspunkten mellan planet och det fasta ämnet. 
-
- Ett tvärsnitt är skärningspunkten mellan ett plan med ett fast ämne. Ett annat sätt att representera en tredimensionell figur i ett tvådimensionellt plan är att använda ett nät. Ett nät är en utbredd, platt representation av sidorna av en tredimensionell form. 
-
- rotera en kub för att skapa ett hexagonalt tvärsnitt 
+TODO
 
 ---
 
@@ -1313,7 +1276,7 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 > section: prisms-pyramids
 > sectionStatus: dev
 
- ATT GÖRA 
+ATT GÖRA 
 
 ---
 
@@ -1322,7 +1285,7 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 > section: scaling
 > sectionStatus: dev
 
- ATT GÖRA 
+ATT GÖRA 
 
 ---
 
@@ -1330,14 +1293,11 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 > section: platonic
 > id: platonic
+> translated: auto
 
- I början av denna kurs definierade vi [vanliga polygoner](gloss:regular-polygon) som särskilt ”symmetriska” polygoner, där alla sidor och vinklar är desamma. Vi kan göra något liknande för polyeder. 
+I början av denna kurs definierade vi [vanliga polygoner](gloss:regular-polygon) som särskilt ”symmetriska” polygoner, där alla sidor och vinklar är desamma. Vi kan göra något liknande för polyeder. 
 
- I en _vanlig polyhedron är_ alla [ansikten](gloss:polyhedron-face) alla samma typ av vanlig polygon, och samma antal ansikten möts vid varje [toppunkt](gloss:polyhedron-vertex) . Polyhedra med dessa två egenskaper kallas [__platoniska fasta ämnen__](gloss:platonic-solid) , uppkallad efter den grekiska filosofen [Platon](bio:plato) . 
-
-    //- The pyramid on the right of not a Platonic solid. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
+I en _vanlig polyhedron är_ alla [ansikten](gloss:polyhedron-face) alla samma typ av vanlig polygon, och samma antal ansikten möts vid varje [toppunkt](gloss:polyhedron-vertex) . Polyhedra med dessa två egenskaper kallas [__platoniska fasta ämnen__](gloss:platonic-solid) , uppkallad efter den grekiska filosofen [Platon](bio:plato) . 
 
  Så hur ser de platoniska fasta ämnena ut - och hur många av dem finns det? För att göra en tredimensionell form, vi behöver minst [[3]] ansikten för att möta vid varje vertex. Låt oss börja systematiskt med den minsta regelbundna polygonen: liksidiga trianglar: 
 
@@ -1354,7 +1314,7 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 ::: column.grow
 
- Om vi skapar en polyhedron där tre [liksidiga trianglar](gloss:equilateral-triangle) möts i varje topp, får vi formen till vänster. Det kallas en __Tetrahedron__ och har [[fyra]] ansikten. _{.reveal(when="blank-0")} ("Tetra" betyder "fyra" på grekiska)._ 
+Om vi skapar en polyhedron där tre [liksidiga trianglar](gloss:equilateral-triangle) möts i varje topp, får vi formen till vänster. Det kallas en __Tetrahedron__ och har [[fyra]] ansikten. _{.reveal(when="blank-0")} ("Tetra" betyder "fyra" på grekiska)._ 
 
 :::
 
@@ -1371,7 +1331,7 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 ::: column.grow
 
- Om fyra liksidiga trianglar möts vid varje toppunkt, får vi ett annat platoniskt fast material. Det kallas __Octahedron__ och har [[åtta]] ansikten. _{.reveal(when="blank-0")} ("Octa" betyder "åtta" på grekiska. Precis som "Octagon" betyder 8-sidig form, "Octahedron" betyder 8-fasad solid.)_ 
+Om fyra liksidiga trianglar möts vid varje toppunkt, får vi ett annat platoniskt fast material. Det kallas __Octahedron__ och har [[åtta]] ansikten. _{.reveal(when="blank-0")} ("Octa" betyder "åtta" på grekiska. Precis som "Octagon" betyder 8-sidig form, "Octahedron" betyder 8-fasad solid.)_ 
 
 :::
 
@@ -1388,7 +1348,7 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 ::: column.grow
 
- Om [[fem]] trianglar möts i varje topp, får vi __Icosahedron__ . Den har [[20]] ansikten. _{.reveal(when="blank-1")} ("Icosa" betyder "tjugo" på grekiska.)_ 
+Om [[fem]] trianglar möts i varje topp, får vi __Icosahedron__ . Den har [[20]] ansikten. _{.reveal(when="blank-1")} ("Icosa" betyder "tjugo" på grekiska.)_ 
 
 :::
 
@@ -1403,7 +1363,7 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 ::: column.grow
 
- Om [[sex]] trianglar möts vid varje toppunkt, händer något annat: vi får helt enkelt [[en tessellation | en fyrkantig | en annan Icosahedron]] , _{span.reveal(when="blank-1")} istället för en tredimensionell polyeder._ 
+Om [[sex]] trianglar möts vid varje toppunkt, händer något annat: vi får helt enkelt [[en tessellation | en fyrkantig | en annan Icosahedron]] , _{span.reveal(when="blank-1")} istället för en tredimensionell polyeder._ 
 
 :::
 
@@ -1418,11 +1378,11 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 ::: column.grow
 
- Och sju eller flera trianglar i varje topp ger inte heller ny polyeder: det finns inte tillräckligt med utrymme runt en topp, för att passa så många trianglar. 
+Och sju eller flera trianglar i varje topp ger inte heller ny polyeder: det finns inte tillräckligt med utrymme runt en topp, för att passa så många trianglar. 
 
 :::
 
- Det betyder att vi har hittat [[tre]] platoniska fasta partiklar bestående av trianglar. Låt oss gå vidare till nästa vanliga polygon: rutor. 
+Det betyder att vi har hittat [[tre]] platoniska fasta partiklar bestående av trianglar. Låt oss gå vidare till nästa vanliga polygon: rutor. 
 
 ---
 > id: platonic-cube
@@ -1437,7 +1397,7 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 ::: column.grow
 
- Om [[tre]] fyrkanter möts vid varje topp, får vi __kuben__ . Precis som tärningar har den [[6]] ansikten. _{span.reveal(when="blank-1")} Kuben kallas ibland också _Hexahedron_ , efter det grekiska ordet "hexa" för "sex"._ 
+Om [[tre]] fyrkanter möts vid varje topp, får vi __kuben__ . Precis som tärningar har den [[6]] ansikten. _{span.reveal(when="blank-1")} Kuben kallas ibland också _Hexahedron_ , efter det grekiska ordet "hexa" för "sex"._ 
 
 :::
 
@@ -1452,14 +1412,14 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 ::: column.grow
 
- Om [[fyra]] rutor möts vid varje toppunkt får vi en [[ny tessellation | en tetrahedron | en annan kub]] . _{span.reveal(when="blank-1")} Och som tidigare fungerar inte heller fem eller fler rutor._ 
+Om [[fyra]] rutor möts vid varje toppunkt får vi en [[ny tessellation | en tetrahedron | en annan kub]] . _{span.reveal(when="blank-1")} Och som tidigare fungerar inte heller fem eller fler rutor._ 
 
 :::
 
 ---
 > id: platonic-dodecahedron
 
- Låt oss sedan prova vanliga pentagoner: 
+Låt oss sedan prova vanliga pentagoner: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1471,7 +1431,7 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 ::: column.grow
 
- Om [[tre]] pentagoner möts vid varje toppunkt, får vi __Dodecahedron__ . Den har [[12]] ansikten. _{.reveal(when="blank-1")} ("Dodeca" betyder "tolv" på grekiska.)_ 
+Om [[tre]] pentagoner möts vid varje toppunkt, får vi __Dodecahedron__ . Den har [[12]] ansikten. _{.reveal(when="blank-1")} ("Dodeca" betyder "tolv" på grekiska.)_ 
 
 :::
 
@@ -1486,14 +1446,14 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 ::: column.grow
 
- Som tidigare [[fungerar inte]] fyra eller flera femtoner [[| är möjliga]] eftersom det inte finns tillräckligt med utrymme. 
+Som tidigare [[fungerar inte]] fyra eller flera femtoner [[| är möjliga]] eftersom det inte finns tillräckligt med utrymme. 
 
 :::
 
 ---
 > id: platonic-hexagons
 
- Nästa regelbundna polygon att prova är hexagoner: 
+Nästa regelbundna polygon att prova är hexagoner: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1503,67 +1463,67 @@ I varje polyhedron är antalet ansikten ( _F_ ) plus antalet vertikaler ( _V_ ) 
 
 ::: column.grow
 
- Om tre sexhörningar möts vid varje toppunkt får vi omedelbart en [[tessellation | polyeder | hexahedron]] . _{span.reveal(when="blank-0")} Eftersom det inte finns plats för mer än tre verkar det som om det inte finns några platoniska fasta partiklar som består av sexhörningar._ 
+Om tre sexhörningar möts vid varje toppunkt får vi omedelbart en [[tessellation | polyeder | hexahedron]] . _{span.reveal(when="blank-0")} Eftersom det inte finns plats för mer än tre verkar det som om det inte finns några platoniska fasta partiklar som består av sexhörningar._ 
 
 :::
 
 ---
 > id: platonic-final
 
- Detsamma gäller också för alla vanliga polygoner med mer än sex sidor. De tessellaterar inte, och vi får verkligen inga tredimensionella polygoner. 
+Detsamma gäller också för alla vanliga polygoner med mer än sex sidor. De tessellaterar inte, och vi får verkligen inga tredimensionella polygoner. 
 
- Detta innebär att det bara finns [[fem]] platoniska fasta ämnen! Låt oss titta på dem alla tillsammans: 
+Detta innebär att det bara finns [[fem]] platoniska fasta ämnen! Låt oss titta på dem alla tillsammans: 
 
 ---
 > id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 
- __Tetrahedron__ 
+__Tetrahedron__ 
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
- _{span.dual} [[4]] ansikten_  
+_{span.dual} [[4]] ansikten_  
 _{span.dual} [[4]] vertikaler_  
 _{span.dual} [[6]] kanter_ 
 
 ::: column.grow.text-center(width=120)
 
- __Kub__ 
+__Kub__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
- _{span.dual(target="dual1")} [[6]] ansikten_  
+_{span.dual(target="dual1")} [[6]] ansikten_  
 _{span.dual(target="dual1")} [[8]] vertikaler_  
 _{span.dual} [[12]] kanter_ 
 
 ::: column.grow.text-center(width=120)
 
- __Oktaeder__ 
+__Oktaeder__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
- _{span.dual(target="dual1")} [[8]] ansikten_  
+_{span.dual(target="dual1")} [[8]] ansikten_  
 _{span.dual(target="dual1")} [[6]] vertikaler_  
 _{span.dual} [[12]] kanter_ 
 
 ::: column.grow.text-center(width=120)
 
- __Dodecahedron__ 
+__Dodecahedron__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
- _{span.dual(target="dual2")} [[12]] ansikten_  
+_{span.dual(target="dual2")} [[12]] ansikten_  
 _{span.dual(target="dual2")} 20 vertikaler_  
 _{span.dual} 30 kanter_ 
 
 ::: column.grow.text-center(width=120)
 
- __icosahedron__ 
+__icosahedron__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
- _{span.dual(target="dual2")} [[20]] ansikten_  
+_{span.dual(target="dual2")} [[20]] ansikten_  
 _{span.dual(target="dual2")} 12 vertikaler_  
 _{span.dual} 30 kanter_ 
 
@@ -1574,7 +1534,7 @@ _{span.dual} 30 kanter_
 ---
 > id: platonic-dual
 
- Vi kan förvandla en polyhedron till dess dubbla genom att "ersätta" varje ansikte med en topp och alla toppar med ett ansikte. Dessa animationer visar hur: 
+Vi kan förvandla en polyhedron till dess dubbla genom att "ersätta" varje ansikte med en topp och alla toppar med ett ansikte. Dessa animationer visar hur: 
 
 ::: column(width=300)
 
@@ -1588,12 +1548,12 @@ _{span.dual} 30 kanter_
 
 :::
 
- Tetraederen är dubbel med sig själv. Eftersom det har samma antal ansikten och toppar, byter du inte det skulle inte förändra någonting. 
+Tetraederen är dubbel med sig själv. Eftersom det har samma antal ansikten och toppar, byter du inte det skulle inte förändra någonting. 
 
 ---
 > id: platonic-elements
 
- [Platon](bio:plato) trodde att all materia i universum består av fyra element: luft, jord, vatten och eld. Han trodde att varje element motsvarar ett av de platoniska fasta ämnena, medan det femte skulle representera universum som helhet. Idag vet vi att det finns mer än 100 olika element som består av sfäriska atomer, inte polyeder. 
+[Platon](bio:plato) trodde att all materia i universum består av fyra element: luft, jord, vatten och eld. Han trodde att varje element motsvarar ett av de platoniska fasta ämnena, medan det femte skulle representera universum som helhet. Idag vet vi att det finns mer än 100 olika element som består av sfäriska atomer, inte polyeder. 
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
@@ -1605,9 +1565,9 @@ _{span.dual} 30 kanter_
 
 > id: archimedean
 
- Platoniska fasta ämnen är särskilt viktiga polyeder, men det finns otaliga andra. 
+Platoniska fasta ämnen är särskilt viktiga polyeder, men det finns otaliga andra. 
 
- [__Arkimediska fasta ämnen__](gloss:archimedean-solid) , till exempel, måste fortfarande bestå av [vanliga polygoner](gloss:regular-polygon) , men du kan använda flera olika typer. De har fått sitt namn efter en annan grekisk matematiker, [Archimedes of Syracuse](bio:archimedes) , och det finns 13 av dem: 
+[__Arkimediska fasta ämnen__](gloss:archimedean-solid) , till exempel, måste fortfarande bestå av [vanliga polygoner](gloss:regular-polygon) , men du kan använda flera olika typer. De har fått sitt namn efter en annan grekisk matematiker, [Archimedes of Syracuse](bio:archimedes) , och det finns 13 av dem: 
 
 ::: column(width=170 parent="padded-thin")
 
@@ -1702,16 +1662,12 @@ _{span.dual} 30 kanter_
 
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
-
 ---
 > id: polyhedra-applications
 
 ### tillämpningar 
 
- Platon hade fel i att tro att alla element består av platoniska fasta ämnen. Men vanliga polyedrar har många speciella egenskaper som får dem att visas på andra håll i naturen - och vi kan kopiera dessa egenskaper inom vetenskap och teknik. 
+Platon hade fel i att tro att alla element består av platoniska fasta ämnen. Men vanliga polyedrar har många speciella egenskaper som får dem att visas på andra håll i naturen - och vi kan kopiera dessa egenskaper inom vetenskap och teknik. 
 
 ::: column(width=180)
 
@@ -1725,7 +1681,7 @@ _{span.dual} 30 kanter_
 
 ::: column.grow
 
- Många __virus__ , __bakterier__ och andra små __organismer__ är formade som [icosahedra](gloss:icosahedron) . Virus måste till exempel omsluta sitt genetiska material inuti ett skal med många identiska proteinenheter. Ikosahedronen är det mest effektiva sättet att göra detta eftersom den består av några få regelbundna element men nästan är formad som en sfär. 
+Många __virus__ , __bakterier__ och andra små __organismer__ är formade som [icosahedra](gloss:icosahedron) . Virus måste till exempel omsluta sitt genetiska material inuti ett skal med många identiska proteinenheter. Ikosahedronen är det mest effektiva sättet att göra detta eftersom den består av några få regelbundna element men nästan är formad som en sfär. 
 
 :::
 
@@ -1741,9 +1697,9 @@ _{span.dual} 30 kanter_
 
 ::: column.grow
 
- Många __molekyler__ är formade som vanliga polyedra. Det mest kända exemplet är `C_60` som består av 60 kolatomer anordnade i form av en [trunkerad Icosahedron](gloss:truncated-icosahedron) . 
+Många __molekyler__ är formade som vanliga polyedra. Det mest kända exemplet är `C_60` som består av 60 kolatomer anordnade i form av en [trunkerad Icosahedron](gloss:truncated-icosahedron) . 
 
- Det upptäcktes 1985 när forskare forskade på interstellärt damm. De kallade det "Buckyball" (eller Buckminsterfullerene) efter arkitekten [Buckminster Fuller](bio:fuller) , känd för att bygga byggnader med liknande utseende. 
+Det upptäcktes 1985 när forskare forskade på interstellärt damm. De kallade det "Buckyball" (eller Buckminsterfullerene) efter arkitekten [Buckminster Fuller](bio:fuller) , känd för att bygga byggnader med liknande utseende. 
 
 :::
 
@@ -1759,7 +1715,7 @@ _{span.dual} 30 kanter_
 
 ::: column.grow
 
- De flesta __kristaller__ har sina atomer anordnade i ett vanligt rutnät bestående av [tetraedra](gloss:tetrahedron) , [kuber](gloss:cube) eller [oktaedra](gloss:octahedron) . När de spricker eller spricker kan du se dessa former i större skala. 
+De flesta __kristaller__ har sina atomer anordnade i ett vanligt rutnät bestående av [tetraedra](gloss:tetrahedron) , [kuber](gloss:cube) eller [oktaedra](gloss:octahedron) . När de spricker eller spricker kan du se dessa former i större skala. 
 
 :::
 
@@ -1775,7 +1731,7 @@ _{span.dual} 30 kanter_
 
 ::: column.grow
 
- Tetrahedra och oktaedra är otroligt styva och stabila, vilket gör dem mycket användbara i __konstruktionen__ . _Rymdramar_ är polygonala strukturer som kan stödja stora tak och tunga broar. 
+Tetrahedra och oktaedra är otroligt styva och stabila, vilket gör dem mycket användbara i __konstruktionen__ . _Rymdramar_ är polygonala strukturer som kan stödja stora tak och tunga broar. 
 
 :::
 
@@ -1791,8 +1747,8 @@ _{span.dual} 30 kanter_
 
 ::: column.grow
 
- Platoniska fasta ämnen används också för att skapa __tärningar__ . på grund av deras symmetri har varje sida [sannolikheten](gloss:probability) för att landa uppåt - så tärningarna är rättvisa. 
+Platoniska fasta ämnen används också för att skapa __tärningar__ . på grund av deras symmetri har varje sida [sannolikheten](gloss:probability) för att landa uppåt - så tärningarna är rättvisa. 
 
- Den [trunkerade Icosahedron](gloss:truncated-icosahedron) är förmodligen den mest berömda polyhedronen i världen: det är formen på fotboll. 
+Den [trunkerade Icosahedron](gloss:truncated-icosahedron) är förmodligen den mest berömda polyhedronen i världen: det är formen på fotboll. 
 
 :::

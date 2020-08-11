@@ -4,8 +4,9 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
- [__ポリゴン__](gloss:polygon)とは、閉じた平らな形状で、辺がまっすぐなだけです。ポリゴンは任意の数の辺と角度を持つことができますが、辺を湾曲させることはできません。以下の形状のどれがポリゴンですか？ 
+[__ポリゴン__](gloss:polygon)とは、閉じた平らな形状で、辺がまっすぐなだけです。ポリゴンは任意の数の辺と角度を持つことができますが、辺を湾曲させることはできません。以下の形状のどれがポリゴンですか？ 
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -47,7 +48,7 @@
 
 ### ポリゴンの角度
 
- _n個_の辺を持つすべてのポリゴンも_、n個_ [内角を](gloss:internal-angle)持っています。三角形の内角の合計が常に[[180]]°であることはすでにわかっていますが、他のポリゴンについてはどうでしょうか。 
+_n個_の辺を持つすべてのポリゴンも_、n個_ [内角を](gloss:internal-angle)持っています。三角形の内角の合計が常に[[180]]°であることはすでにわかっていますが、他のポリゴンについてはどうでしょうか。 
 
 ---
 > id: angles
@@ -118,7 +119,7 @@
 
 ::: column.grow
 
- 「内側を指す」セクションがある場合、多角形は[__凹形__](gloss:concave)であると言います。この部分が[「陥没」し](target:cave)ていると想像できます。凹型で_ない_ポリゴンは、 [__凸型__](gloss:convex)と呼ばれます。 
+「内側を指す」セクションがある場合、多角形は[__凹形__](gloss:concave)であると言います。この部分が[「陥没」し](target:cave)ていると想像できます。凹型で_ない_ポリゴンは、 [__凸型__](gloss:convex)と呼ばれます。 
 
 凹型ポリゴンを簡単に識別する方法は2つあります。それらには[、180°より大きい内角が](target:angle)少なくとも1つあります。また[、ポリゴンの_外側に_ある](target:diagonal)少なくとも1つの[対角線があります](target:diagonal) 。 
 
@@ -260,10 +261,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
- [前のコースで](/course/triangles)は、三角形のさまざまな特性を調査しました。それでは、四辺形を見てみましょう。 
+[前のコースで](/course/triangles)は、三角形のさまざまな特性を調査しました。それでは、四辺形を見てみましょう。 
 
- _通常の四辺形_は[[正方形]]と呼ばれます[[|矩形|正四辺形]] 。辺はすべて同じ長さで、角度はすべて同じです。 
+_通常の四辺形_は[[正方形]]と呼ばれます[[|矩形|正四辺形]] 。辺はすべて同じ長さで、角度はすべて同じです。 
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -506,8 +508,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.reveal(when="blank-1")}逆も真であることがわかります。四辺形の反対側（または角度）の両方のペアが合同である場合、四辺形は平行四辺形でなければなりません。 
 
-    //- Adjacent angles are supplementary.
-
 ::: tab
 
 #### 対角線_{span.check(when="diagonal blank-2 blank-3")}_ 
@@ -546,7 +546,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 対角線によって生成された2つの黄色の三角形について考えてみましょう。 
 
- * [緑](target:side1)の[2つの辺](target:side1)は平行四辺形の反対側であるため、合同であることを証明しました。 * [2つの赤の角度](target:anglesR)と[2つの青の角度](target:anglesB)は[[交互の角度]]であるため合同です[[|反対の角度|直角]] 。 
+* [緑](target:side1)の[2つの辺](target:side1)は平行四辺形の反対側であるため、合同であることを証明しました。 * [2つの赤の角度](target:anglesR)と[2つの青の角度](target:anglesB)は[[交互の角度]]であるため合同です[[|反対の角度|直角]] 。 
 
 {.reveal(when="blank-2")} [[ASA]]によって[[| SSS |]]したがって、 [[AAS]]条件では、両方の黄色の三角形も一致している必要があります。 
 
@@ -567,7 +567,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 上で[[反対の]] 2つのペアが[[|]]平行四辺形の[[隣接する]]辺は合同です。カイトでは、2組の_隣接する_側面が合同です。 
 
- _凧_の名前はその形に由来します。空を飛ぶことができる凧のように見えます。ただし、これまでに見たすべての特別な四辺形の中で、カイトだけが[凹面に](gloss:concave)なることもできます。ダーツまたは矢印のような形状の場合： 
+_凧_の名前はその形に由来します。空を飛ぶことができる凧のように見えます。ただし、これまでに見たすべての特別な四辺形の中で、カイトだけが[凹面に](gloss:concave)なることもできます。ダーツまたは矢印のような形状の場合： 
 
 ::: column(width=320)
 
@@ -801,7 +801,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- [菱形](gloss:rhombus)は、4つの合同な辺を持つ四辺形です。すべてのひし形は[[平行四辺形]]であることを覚えているかもしれません[[|矩形|スクエア]] –そして[[カイト|六角形|凹面多角形]] 。 
+[菱形](gloss:rhombus)は、4つの合同な辺を持つ四辺形です。すべてのひし形は[[平行四辺形]]であることを覚えているかもしれません[[|矩形|スクエア]] –そして[[カイト|六角形|凹面多角形]] 。 
 
 {.reveal(when="blank-6 blank-7")}これは、ひし形の領域を見つけるために、平行四辺形の領域の式、または凧の領域の式のいずれかを使用できることを意味します。 
 
@@ -810,28 +810,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 {.reveal(when="blank-6 blank-7" delay=1000)} _異なるコンテキストでは、菱形の異なる部分（辺、高さ、対角線）が与えられる可能性があり、より便利な方の方程式を選択する必要があります。_ 
 
 :::
-
 :::
-
-    //- ### Cyclic quadrilaterals
-    
-    //- ### Isosceles Trapeziums
-    //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -839,8 +818,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
- [ポリゴン](gloss:polygon)は自然界のいたるところに現れます。大きな領域を並べて表示する場合は、ギャップやオーバーラップなしでポリゴンを組み合わせることができるため、特に便利です。このようなパターンは[__テッセレーション__](gloss:tessellation)と呼ばれます。 
+[ポリゴン](gloss:polygon)は自然界のいたるところに現れます。大きな領域を並べて表示する場合は、ギャップやオーバーラップなしでポリゴンを組み合わせることができるため、特に便利です。このようなパターンは[__テッセレーション__](gloss:tessellation)と呼ばれます。 
 
 ::: column(width=200)
 
@@ -923,11 +903,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
@@ -984,8 +959,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.caption}ペンタゴン[[はテッセレーションしません|テッセレーション]] _{span.reveal(when="blank-2")} 108°の倍数では360°にならないからです。_ 
 
-    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
-
 ::: column(width=160)
 
     include svg/tessellations/hexagons.svg
@@ -1032,7 +1005,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### 不規則なポリゴンからのテッセレーション
 
- [不規則なポリゴン](gloss:irregular-polygon)からテッセレーションを作成することもでき[ます。ポリゴンの](gloss:irregular-polygon)回転と配置に注意する必要があります。 
+[不規則なポリゴン](gloss:irregular-polygon)からテッセレーションを作成することもでき[ます。ポリゴンの](gloss:irregular-polygon)回転と配置に注意する必要があります。 
 
 ::: column(width=360)
 
@@ -1221,7 +1194,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 これまでに見たすべてのテッセレーションには、1つの共通点があります。それは__周期的__です。つまり、繰り返し繰り返される規則的なパターンで構成されています。彼らはすべての方向に永遠に続くことができ、どこでも同じように見えます。 
 
- 1970年代には、英国の数学者や物理学者[ロジャー・ペンローズは、](bio:penrose) _非周期的な_テッセレーションを発見した-彼らはまだ、すべての方向に無限に続けますが、まったく同じに見える_こと_はありません。これらは__ペンローズタイル__と呼ばれ、作成するのに必要なポリゴンの種類は数種類のみです。 
+1970年代には、英国の数学者や物理学者[ロジャー・ペンローズは、](bio:penrose) _非周期的な_テッセレーションを発見した-彼らはまだ、すべての方向に無限に続けますが、まったく同じに見える_こと_はありません。これらは__ペンローズタイル__と呼ばれ、作成するのに必要なポリゴンの種類は数種類のみです。 
 
     figure
       include svg/penrose.svg
@@ -1239,6 +1212,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
 これまでは、フラットな2次元の世界でポリゴンを使って何ができるかを見てきました。 [__多面体__](gloss:polyhedron)は、ポリゴンで構成される3次元オブジェクトです。ここではいくつかの例を示します。 
 
@@ -1267,7 +1241,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: .theorem
 
- __オイラーの多面体式__  
+__オイラーの多面体式__  
 すべての多面体で、面の数（ _F_ ）と頂点の数（ _V_ ）の合計は、エッジの数（ _E_ ）の2倍です。言い換えると、 
 
 {.text-center}`F + V = E + 2`
@@ -1290,21 +1264,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: nets-cross-sections
 > sectionStatus: dev
 
-私たちの世界はすべて3次元ですが、多くの場合、平面の2次元オブジェクトを描画または視覚化する方がはるかに簡単です。また、3次元の多面体を2次元で表示する方法はいくつかあります。 
-
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
-
-これらのネットのどれがキューブを作成しますオブジェクトにネットを一致させますhttps://github.com/polymake/matchthenet描画ネット
-
-平面とソリッドの交差によって形成される断面を記述します。 
-
-断面とは、平面とソリッドの交点です。 2次元平面で3次元図形を表現する別の方法は、ネットを使用することです。ネットは、3次元形状の側面の展開されたフラットな表現です。 
-
-立方体を回転させて六角形の断面を作る
+TODO
 
 ---
 
@@ -1313,7 +1273,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: prisms-pyramids
 > sectionStatus: dev
 
- TODO 
+TODO 
 
 ---
 
@@ -1322,7 +1282,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: scaling
 > sectionStatus: dev
 
- TODO 
+TODO 
 
 ---
 
@@ -1330,14 +1290,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: platonic
 > id: platonic
+> translated: auto
 
 このコースの最初に、すべての辺と角度が同じである[通常のポリゴン](gloss:regular-polygon)を特に「対称的な」ポリゴンとして定義しました。多面体についても同様のことができます。 
 
- _通常の多面体では、_すべての[面](gloss:polyhedron-face)はすべて同じ種類の通常のポリゴンであり、同じ数の面がすべての[頂点で](gloss:polyhedron-vertex)交わります。これら2つの特性を持つ多面体は、ギリシャの哲学者[プラトンに](bio:plato)ちなんで名付けられた[__プラトニック立体__](gloss:platonic-solid)と呼ばれます。 
-
-    //- The pyramid on the right of not a Platonic solid. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
+_通常の多面体では、_すべての[面](gloss:polyhedron-face)はすべて同じ種類の通常のポリゴンであり、同じ数の面がすべての[頂点で](gloss:polyhedron-vertex)交わります。これら2つの特性を持つ多面体は、ギリシャの哲学者[プラトンに](bio:plato)ちなんで名付けられた[__プラトニック立体__](gloss:platonic-solid)と呼ばれます。 
 
 それでは、プラトンの固体はどのように見え、それらの数はいくつですか？ 3次元形状を作成するには、すべての頂点で交わる面が少なくとも[[3つ]]必要です。最小の正多角形、つまり正三角形から体系的に始めましょう。 
 
@@ -1354,7 +1311,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- 3つの[正三角形が](gloss:equilateral-triangle)すべての頂点で交わる多面体を作成すると、左側の形状になります。 __四面体__と呼ばれ、 [[4つの]]面があります。 _{.reveal(when="blank-0")} （「テトラ」はギリシャ語で「4」を意味します）。_ 
+3つの[正三角形が](gloss:equilateral-triangle)すべての頂点で交わる多面体を作成すると、左側の形状になります。 __四面体__と呼ばれ、 [[4つの]]面があります。 _{.reveal(when="blank-0")} （「テトラ」はギリシャ語で「4」を意味します）。_ 
 
 :::
 
@@ -1371,7 +1328,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- 4つの正三角形がすべての頂点で交わると、異なるプラトニックソリッドが得られます。 __八面体__と呼ばれ、 [[8つの]]面があります。 _{.reveal(when="blank-0")} （「オクタ」はギリシャ語で「8」を意味します。「オクタゴン」が8面の形状を意味するように、「八面体」は8面のソリッドを意味します。）_ 
+4つの正三角形がすべての頂点で交わると、異なるプラトニックソリッドが得られます。 __八面体__と呼ばれ、 [[8つの]]面があります。 _{.reveal(when="blank-0")} （「オクタ」はギリシャ語で「8」を意味します。「オクタゴン」が8面の形状を意味するように、「八面体」は8面のソリッドを意味します。）_ 
 
 :::
 
@@ -1388,7 +1345,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- [[5つの]]三角形がすべての頂点に満たしている場合は、私たちは__二十面体を__取得__し__ます。それは[[20の]]顔を持っています。 _{.reveal(when="blank-1")} （「イコサ」はギリシャ語で「20」を意味します。）_ 
+[[5つの]]三角形がすべての頂点に満たしている場合は、私たちは__二十面体を__取得__し__ます。それは[[20の]]顔を持っています。 _{.reveal(when="blank-1")} （「イコサ」はギリシャ語で「20」を意味します。）_ 
 
 :::
 
@@ -1403,7 +1360,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- [[6つの]]三角形がすべての頂点で交わると、別のことが起こります。 [[テッセレーションを]]取得[[する]]だけです[[|四辺形|別の正二十面体]] 、 _{span.reveal(when="blank-1")}三次元多面体の代わりに。_ 
+[[6つの]]三角形がすべての頂点で交わると、別のことが起こります。 [[テッセレーションを]]取得[[する]]だけです[[|四辺形|別の正二十面体]] 、 _{span.reveal(when="blank-1")}三次元多面体の代わりに。_ 
 
 :::
 
@@ -1437,7 +1394,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- [[3つの]]正方形がすべての頂点で交わると、 __立方体になり__ます。サイコロのように、 [[6つの]]面があります。 _{span.reveal(when="blank-1")}この立方体は、ギリシャ語で「六」を意味する「ヘキサ」にちなんで、「 _六面体_ 」とも呼ばれます。_ 
+[[3つの]]正方形がすべての頂点で交わると、 __立方体になり__ます。サイコロのように、 [[6つの]]面があります。 _{span.reveal(when="blank-1")}この立方体は、ギリシャ語で「六」を意味する「ヘキサ」にちなんで、「 _六面体_ 」とも呼ばれます。_ 
 
 :::
 
@@ -1452,7 +1409,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- [[4つの]]正方形がすべての頂点で交わると、 [[別のテッセレーションが]]得られます[[|四面体|別のキューブ]] 。 _{span.reveal(when="blank-1")}以前と同様に、5つ以上の正方形も機能しません。_ 
+[[4つの]]正方形がすべての頂点で交わると、 [[別のテッセレーションが]]得られます[[|四面体|別のキューブ]] 。 _{span.reveal(when="blank-1")}以前と同様に、5つ以上の正方形も機能しません。_ 
 
 :::
 
@@ -1471,7 +1428,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- [[3つの]]五角形がすべての頂点で交わると、12 __面体になり__ます。それは[[12の]]顔を持っています。 _{.reveal(when="blank-1")} （「ドデカ」はギリシャ語で「12」を意味します。）_ 
+[[3つの]]五角形がすべての頂点で交わると、12 __面体になり__ます。それは[[12の]]顔を持っています。 _{.reveal(when="blank-1")} （「ドデカ」はギリシャ語で「12」を意味します。）_ 
 
 :::
 
@@ -1503,7 +1460,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- 3つの六角形がすべての頂点で交わると、すぐに[[テッセレーションが]]得られます[[|多面体|六面体]] 。 _{span.reveal(when="blank-0")} 3つ以上のスペースがないため、六角形で構成されるプラトニックソリッドはないようです。_ 
+3つの六角形がすべての頂点で交わると、すぐに[[テッセレーションが]]得られます[[|多面体|六面体]] 。 _{span.reveal(when="blank-0")} 3つ以上のスペースがないため、六角形で構成されるプラトニックソリッドはないようです。_ 
 
 :::
 
@@ -1519,51 +1476,51 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 
- __四面体__ 
+__四面体__ 
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
- _{span.dual} [[4]]面_  
+_{span.dual} [[4]]面_  
 _{span.dual} [[4]]頂点_  
 _{span.dual} [[6]]エッジ_ 
 
 ::: column.grow.text-center(width=120)
 
- __キューブ__ 
+__キューブ__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
- _{span.dual(target="dual1")} [[6]]面_  
+_{span.dual(target="dual1")} [[6]]面_  
 _{span.dual(target="dual1")} [[8]]頂点_  
 _{span.dual} [[12]]エッジ_ 
 
 ::: column.grow.text-center(width=120)
 
- __八面体__ 
+__八面体__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
- _{span.dual(target="dual1")} [[8]]面_  
+_{span.dual(target="dual1")} [[8]]面_  
 _{span.dual(target="dual1")} [[6]]頂点_  
 _{span.dual} [[12]]エッジ_ 
 
 ::: column.grow.text-center(width=120)
 
- __正十二面体__ 
+__正十二面体__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
- _{span.dual(target="dual2")} [[12]]面_  
+_{span.dual(target="dual2")} [[12]]面_  
 _{span.dual(target="dual2")} 20頂点_  
 _{span.dual} 30エッジ_ 
 
 ::: column.grow.text-center(width=120)
 
- __正二十面体__ 
+__正二十面体__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
- _{span.dual(target="dual2")} [[20]]面_  
+_{span.dual(target="dual2")} [[20]]面_  
 _{span.dual(target="dual2")} 12頂点_  
 _{span.dual} 30エッジ_ 
 
@@ -1593,7 +1550,7 @@ _{span.dual} 30エッジ_
 ---
 > id: platonic-elements
 
- [プラトン](bio:plato)は、宇宙のすべての問題は、空気、地球、水、火の4つの要素で構成されると信じていました。彼はすべての要素がプラトンの固体の1つに対応し、5番目の要素は全体として宇宙を表すと考えました。今日、多面体ではなく、球形の原子で構成される100以上の異なる要素があることを知っています。 
+[プラトン](bio:plato)は、宇宙のすべての問題は、空気、地球、水、火の4つの要素で構成されると信じていました。彼はすべての要素がプラトンの固体の1つに対応し、5番目の要素は全体として宇宙を表すと考えました。今日、多面体ではなく、球形の原子で構成される100以上の異なる要素があることを知っています。 
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
@@ -1702,10 +1659,6 @@ _{span.dual} 30エッジ_
 
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
-
 ---
 > id: polyhedra-applications
 
@@ -1793,6 +1746,6 @@ _{span.dual} 30エッジ_
 
 プラトンの固体はまた、 __サイコロ__を作成するために使用されます。対称性があるため、すべての面で上向きに着地する[可能性](gloss:probability)があります。そのため、サイコロは公平です。 
 
- [切頂二十](gloss:truncated-icosahedron)面体はおそらく世界で最も有名な多面体です。それはサッカーの形です。 
+[切頂二十](gloss:truncated-icosahedron)面体はおそらく世界で最も有名な多面体です。それはサッカーの形です。 
 
 :::

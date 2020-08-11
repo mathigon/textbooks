@@ -4,8 +4,9 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
- Moltes professions que utilitzen matemàtiques estan interessades en un aspecte concret: _trobar patrons_ i ser capaços de predir el futur. Aquests són alguns exemples: 
+Moltes professions que utilitzen matemàtiques estan interessades en un aspecte concret: _trobar patrons_ i ser capaços de predir el futur. Aquests són alguns exemples: 
 
 ::: column(width=160 parent="padded-thin")
 
@@ -13,7 +14,7 @@
 
 ::: column(width=400)
 
- En l'última dècada, __els departaments de policia de__ tot el món han començat a confiar més en les matemàtiques. Algoritmes especials poden utilitzar les dades de delictes passats per predir quan i on es poden produir delictes en el futur. Per exemple, el sistema _PredPol_ (curt per “policia predictiu”), va ajudar a disminuir la taxa de criminalitat a algunes parts de Los Angeles un 12%! 
+En l'última dècada, __els departaments de policia de__ tot el món han començat a confiar més en les matemàtiques. Algoritmes especials poden utilitzar les dades de delictes passats per predir quan i on es poden produir delictes en el futur. Per exemple, el sistema _PredPol_ (curt per “policia predictiu”), va ajudar a disminuir la taxa de criminalitat a algunes parts de Los Angeles un 12%! 
 
 ::: column(width=160)
 
@@ -21,7 +22,7 @@
 
 ::: column(width=400)
 
- Resulta que els __terratrèmols__ segueixen patrons similars als delictes. De la mateixa manera que un delicte podria desencadenar represàlies, un terratrèmol podria provocar rèpliques. En matemàtiques, això es diu un "procés auto-excitant", i hi ha equacions que ajuden a predir quan pot passar el següent. 
+Resulta que els __terratrèmols__ segueixen patrons similars als delictes. De la mateixa manera que un delicte podria desencadenar represàlies, un terratrèmol podria provocar rèpliques. En matemàtiques, això es diu un "procés auto-excitant", i hi ha equacions que ajuden a predir quan pot passar el següent. 
 
 ::: column(width=160)
 
@@ -29,20 +30,20 @@
 
 ::: column(width=400)
 
- Els banquers també consulten dades històriques dels preus de les accions, dels tipus d’interès i dels tipus de canvi de moneda per estimar com podrien canviar __els mercats financers__ en el futur. Poder predir si el valor d'una acció pujarà o baixarà pot ser molt lucratiu. 
+Els banquers també consulten dades històriques dels preus de les accions, dels tipus d’interès i dels tipus de canvi de moneda per estimar com podrien canviar __els mercats financers__ en el futur. Poder predir si el valor d'una acció pujarà o baixarà pot ser molt lucratiu. 
 
 :::
 
- Els matemàtics professionals utilitzen algoritmes altament complexos per trobar i analitzar tots aquests patrons, però començarem amb una mica més bàsic. 
+Els matemàtics professionals utilitzen algoritmes altament complexos per trobar i analitzar tots aquests patrons, però començarem amb una mica més bàsic. 
 
 ---
 > id: simple-patterns
 
 ### Seqüències simples 
 
- En matemàtiques, una [__seqüència__](gloss:sequence) és una cadena de nombres (o altres objectes) que solen seguir un patró particular. Els elements individuals d'una seqüència s'anomenen [__termes__](gloss:sequence-term) . 
+En matemàtiques, una [__seqüència__](gloss:sequence) és una cadena de nombres (o altres objectes) que solen seguir un patró particular. Els elements individuals d'una seqüència s'anomenen [__termes__](gloss:sequence-term) . 
 
- A continuació, es mostren alguns exemples de seqüències. Podeu trobar els seus patrons i calcular els dos termes següents? 
+A continuació, es mostren alguns exemples de seqüències. Podeu trobar els seus patrons i calcular els dos termes següents? 
 
 {.text-center.s-orange.with-arrows.no-voice} _{.n} 3_ , _{.n} 6 _{span.arrow} +3__ , _{.n} 9 _{span.arrow(hidden)} +3__ , _{.n} 12 _{span.arrow(hidden)} +3__ , _{.n} 15 _{span.arrow(hidden)} +3__ , _{.n} [[18]] _{span.arrow(hidden)} +3__ _{.n} [[21]] _{span.arrow(hidden)} +3__ ,… _{span.pattern.reveal(when="blank-0 blank-1")} Patró: "Afegeix 3 al número anterior per obtenir el següent."_ 
 
@@ -55,7 +56,7 @@
 ---
 > id: simple-patterns-1
 
- Els punts (...) al final volen dir simplement que la seqüència pot continuar per sempre. Quan ens referim a seqüències com aquesta en matemàtiques, sovint representem tots els termes per una [variable](gloss:variable) especial: 
+Els punts (...) al final volen dir simplement que la seqüència pot continuar per sempre. Quan ens referim a seqüències com aquesta en matemàtiques, sovint representem tots els termes per una [variable](gloss:variable) especial: 
 
     p.text-center.s-orange
       for i in [1, 2, 3, 4, 5, 6, 7]
@@ -66,19 +67,14 @@
         | ,&nbsp;
       | …
 
- El nombre petit després de la _x_ s'anomena __subíndex__ i indica la posició del terme a la seqüència. Això vol dir que podem representar el _n-èsim_ terme de la seqüència de [[`x_n`|`x_i`|`x_2`]] . 
-
-    // You might think that it would be easier to label the terms in the
-    // sequence as _a_, _b_, _c_, _d_, and so on. However you’ll eventually
-    // [[run out of letters|reach 100|forget a letter]], while the sequence
-    // might go on forever!
+El nombre petit després de la _x_ s'anomena __subíndex__ i indica la posició del terme a la seqüència. Això vol dir que podem representar el _n-èsim_ terme de la seqüència de [[`x_n`|`x_i`|`x_2`]] . 
 
 ---
 > id: triangles
 
 ### Nombres del triangle i quadrat 
 
- Les seqüències en matemàtiques no sempre han de ser números. Aquí hi ha una seqüència que consta de formes geomètriques - triangles de mida creixent: 
+Les seqüències en matemàtiques no sempre han de ser números. Aquí hi ha una seqüència que consta de formes geomètriques - triangles de mida creixent: 
 
 ::: column(width=24 parent="padded-thin")
 
@@ -121,14 +117,14 @@
 ---
 > id: triangle-1
 
- A cada pas, afegim una fila més al triangle anterior. La longitud d’aquestes noves files també augmenta una cada vegada. Pots veure el patró? 
+A cada pas, afegim una fila més al triangle anterior. La longitud d’aquestes noves files també augmenta una cada vegada. Pots veure el patró? 
 
 {.text-center.s-orange.with-arrows.no-voice} _{.n} 1_ , _{.n} 3 _{span.arrow} +2__ , _{.n} 6 _{span.arrow} +3__ , _{.n} 10 _{span.arrow} +4__ , _{.n} 15 _{span.arrow} +5__ , _{.n} 21 _{span.arrow} +6__ _{.n} [[28]] _{span.arrow.reveal(when="blank-0")} +7__ , _{.n} [[36]] _{span.arrow.reveal(when="blank-1")} +8__ ,… 
 
 ---
 > id: recursive
 
- També podem descriure aquest patró mitjançant una [fórmula](gloss:formula) especial: 
+També podem descriure aquest patró mitjançant una [fórmula](gloss:formula) especial: 
 
     p.text-center.s-orange
       span.n.md `x_n`
@@ -137,19 +133,19 @@
       | &nbsp;+&nbsp;
       em#t3 n
 
- Per obtenir el nombre de triangle _n_ -ésimo, prenem [[l'anterior | primer | següent]] número de triangle i afegiu _n_ . Per exemple, si _n_ = ${n}{n|5|2,20,1} , la fórmula es converteix <msub><mi>x</mi><mn>${n}</mn></msub> = <msub><mi>x</mi><mn>${n-1}</mn></msub> + ${n} . 
+Per obtenir el nombre de triangle _n_ -ésimo, prenem [[l'anterior | primer | següent]] número de triangle i afegiu _n_ . Per exemple, si _n_ = ${n}{n|5|2,20,1} , la fórmula es converteix <msub><mi>x</mi><mn>${n}</mn></msub> = <msub><mi>x</mi><mn>${n-1}</mn></msub> + ${n} . 
 
 ---
 > id: recursive-1
 
- Una fórmula que expressa `x_n` com a funció de termes anteriors de la seqüència s'anomena [__fórmula recursiva__](gloss:sequence-recursive) . Sempre que coneguis el [[primer terme | últim terme | segon terme]] de la seqüència, podeu calcular tots els següents. 
+Una fórmula que expressa `x_n` com a funció de termes anteriors de la seqüència s'anomena [__fórmula recursiva__](gloss:sequence-recursive) . Sempre que coneguis el [[primer terme | últim terme | segon terme]] de la seqüència, podeu calcular tots els següents. 
 
 ---
 > id: squares
 
     hr
 
- Una altra seqüència que consta de formes geomètriques són els __nombres quadrats__ . Cada terme està format per quadrats cada vegada més grans: 
+Una altra seqüència que consta de formes geomètriques són els __nombres quadrats__ . Cada terme està format per quadrats cada vegada més grans: 
 
 ::: column(width=24 parent="padded-thin squares")
 
@@ -192,29 +188,29 @@
 ---
 > id: square-1
 
- Per als nombres del triangle hem trobat una fórmula recursiva que us indica el _següent_ terme de la seqüència en funció dels seus termes _anteriors_ . Per als nombres quadrats que podem fer encara millor: una fórmula que li indica _l'enèsim_ terme directament, sense haver de calcular tots els anteriors: 
+Per als nombres del triangle hem trobat una fórmula recursiva que us indica el _següent_ terme de la seqüència en funció dels seus termes _anteriors_ . Per als nombres quadrats que podem fer encara millor: una fórmula que li indica _l'enèsim_ terme directament, sense haver de calcular tots els anteriors: 
 
 {.text-center.s-purple} _{.n}`x_n`_ = _{x-equation(solution="n^2")}_ 
 
 ---
 > id: explicit
 
- D’aquesta forma s’anomena [__fórmula explícita__](gloss:sequence-explicit) . Podem utilitzar-ho, per exemple, per calcular que el 13è número quadrat és [[169]] , sense abans trobar els 12 números quadrats anteriors. 
+D’aquesta forma s’anomena [__fórmula explícita__](gloss:sequence-explicit) . Podem utilitzar-ho, per exemple, per calcular que el 13è número quadrat és [[169]] , sense abans trobar els 12 números quadrats anteriors. 
 
 ---
 > id: definitions
 
     hr
 
- Resumim totes les definicions que hem vist fins ara: 
+Resumim totes les definicions que hem vist fins ara: 
 
 ::: .theorem
 
- Una [__seqüència__](gloss:sequence) és una llista de números, formes geomètriques o altres objectes, que segueixen un patró específic. Els ítems individuals de la seqüència s’anomenen [__termes__](gloss:sequence-term) i estan representats per variables com `x_n` . 
+Una [__seqüència__](gloss:sequence) és una llista de números, formes geomètriques o altres objectes, que segueixen un patró específic. Els ítems individuals de la seqüència s’anomenen [__termes__](gloss:sequence-term) i estan representats per variables com `x_n` . 
 
- Una [__fórmula recursiva__](gloss:sequence-recursive) per una seqüència li indica el valor de _l'enèsima_ termini com una funció dels [[seus termes anteriors | el primer terme]] . També heu d’especificar el primer terme. 
+Una [__fórmula recursiva__](gloss:sequence-recursive) per una seqüència li indica el valor de _l'enèsima_ termini com una funció dels [[seus termes anteriors | el primer terme]] . També heu d’especificar el primer terme. 
 
- Una [__fórmula explícita__](gloss:sequence-explicit) per a una seqüència indica el valor de _l'enèsim_ terme com una funció de [[tan sols _n_ | el terme anterior]] , sense fer referència a altres termes de la seqüència. 
+Una [__fórmula explícita__](gloss:sequence-explicit) per a una seqüència indica el valor de _l'enèsim_ terme com una funció de [[tan sols _n_ | el terme anterior]] , sense fer referència a altres termes de la seqüència. 
 
 :::
 
@@ -223,18 +219,18 @@
 
 ### Fotografia de seqüències d'acció 
 
- A les següents seccions, coneixereu moltes seqüències matemàtiques diferents, patrons sorprenents i aplicacions inesperades. 
+A les següents seccions, coneixereu moltes seqüències matemàtiques diferents, patrons sorprenents i aplicacions inesperades. 
 
- Primer, però, vegem alguna cosa completament diferent: la __fotografia de seqüències d’acció__ . Un fotògraf pren moltes fotos de forma ràpida i, després, les fusiona en una sola imatge: 
+Primer, però, vegem alguna cosa completament diferent: la __fotografia de seqüències d’acció__ . Un fotògraf pren moltes fotos de forma ràpida i, després, les fusiona en una sola imatge: 
 
     figure: x-img(src="images/action-1.jpg" width=640 height=320 alt="Skiing Jump")
 
- Es pot veure com l’esquiador forma una seqüència? El patró no és addició ni multiplicació, sinó una [transformació](gloss:rigid-transformation) geomètrica. Entre passos consecutius, l'esquiador es tradueix i [[gira | reflectit | dilatat]] . 
+Es pot veure com l’esquiador forma una seqüència? El patró no és addició ni multiplicació, sinó una [transformació](gloss:rigid-transformation) geomètrica. Entre passos consecutius, l'esquiador es tradueix i [[gira | reflectit | dilatat]] . 
 
 ---
 > id: action-sequence-1
 
- A continuació, es mostren alguns exemples més de fotografia de seqüència d’acció per al seu gaudi: 
+A continuació, es mostren alguns exemples més de fotografia de seqüència d’acció per al seu gaudi: 
 
 ::: column(width=320 parent="padded-thin")
 
@@ -268,12 +264,13 @@
 
 > section: arithmetic-geometric
 > id: halley
+> translated: auto
 
 ::: column.grow
 
- El 1682, l’astrònom [Edmond Halley va](bio:halley) observar un fenomen insòlit: un objecte blanc brillant amb una llarga cua que es movia pel cel nocturn. Es tractava d’un __cometa__ , una petita roca gelada que vola per l’espai, tot deixant enrere un rastre de pols i gel. 
+El 1682, l’astrònom [Edmond Halley va](bio:halley) observar un fenomen insòlit: un objecte blanc brillant amb una llarga cua que es movia pel cel nocturn. Es tractava d’un __cometa__ , una petita roca gelada que vola per l’espai, tot deixant enrere un rastre de pols i gel. 
 
- Halley va recordar que altres astrònoms havien observat cometes similars molt abans: una el 1530 i una altra el 1606. Observeu que la bretxa entre dues observacions consecutives és la mateixa en els dos casos: [[76]] anys. 
+Halley va recordar que altres astrònoms havien observat cometes similars molt abans: una el 1530 i una altra el 1606. Observeu que la bretxa entre dues observacions consecutives és la mateixa en els dos casos: [[76]] anys. 
 
 ::: column(width=320)
 
@@ -285,14 +282,14 @@
 ---
 > id: halley-1
 
- Halley va concloure que les tres observacions eren en realitat del mateix cometa, que ara es diu _cometa de Halley_ . Està orbitant al voltant del sol i passa la Terra aproximadament cada 76 anys. També va predir quan el cometa seria visible a continuació: 
+Halley va concloure que les tres observacions eren en realitat del mateix cometa, que ara es diu _cometa de Halley_ . Està orbitant al voltant del sol i passa la Terra aproximadament cada 76 anys. També va predir quan el cometa seria visible a continuació: 
 
 {.text-center.s-orange.s-large.with-arrows.no-voice} _{span.n} 1530_ , _{span.n} 1606 _{span.arrow} +76__ , _{.n} 1682 _{span.arrow} +76__ , _{.n} 1758 _{span.arrow} +76__ , _{.n} [[1834]] _{span.arrow} +76__ , _{.n} [[1910]] _{span.arrow} +76__ , _{.n} [[1986]] _{span.arrow} +76__ , ... 
 
 ---
 > id: halley-2
 
- En realitat, l'interval de temps no sempre _és exactament de_ 76 anys: pot variar un o dos anys, ja que l'òrbita del cometa és interrompuda per altres planetes. Avui sabem que el cometa Halley va ser observat per astrònoms antics fins al 240 aC! 
+En realitat, l'interval de temps no sempre _és exactament de_ 76 anys: pot variar un o dos anys, ja que l'òrbita del cometa és interrompuda per altres planetes. Avui sabem que el cometa Halley va ser observat per astrònoms antics fins al 240 aC! 
 
     figure
       .row
@@ -305,7 +302,7 @@
 ---
 > id: ball
 
- Un grup diferent de científics està investigant el comportament d'una pilota de tennis rebot. Van caure la pilota des d'una alçada de 10 metres i van mesurar la seva posició amb el pas del temps. Amb cada rebot, la pilota perd part de la seva alçada original: 
+Un grup diferent de científics està investigant el comportament d'una pilota de tennis rebot. Van caure la pilota des d'una alçada de 10 metres i van mesurar la seva posició amb el pas del temps. Amb cada rebot, la pilota perd part de la seva alçada original: 
 
     x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7,1" label-suffix="s,m" axis-names="time,height")
       .tennis-ball
@@ -316,7 +313,7 @@
 > id: ball-1
 > goals: reveals
 
- Els científics van observar que la pilota perd el 20% de la seva alçada després de cada rebot. Dit d’una altra manera, l’alçada màxima de cada rebot és del 80% de l’anterior. Això els va permetre predir l'alçada de cada rebot següent: 
+Els científics van observar que la pilota perd el 20% de la seva alçada després de cada rebot. Dit d’una altra manera, l’alçada màxima de cada rebot és del 80% de l’anterior. Això els va permetre predir l'alçada de cada rebot següent: 
 
 {.text-center.s-teal.s-large.with-arrows.no-voice} _{span.n} 10_ , _{span.n} 8 _{span.arrow} × 0,8__ , _{.n} [[6.4]] _{span.arrow} × 0,8__ , _{span.n} [[5.12]] _{span.arrow} × 0,8__ , _{span.n.reveal} 4.096 _{span.arrow} × 0,8__ _{span.reveal} ,_ _{span.n.reveal} 3.277 _{span.arrow} × 0,8__ _{span.reveal} ,_ _{span.n.reveal} 2.621 _{span.arrow} × 0,8__ _{span.reveal} ,_ _{span.n.reveal} 2.097 _{span.arrow} × 0,8__ _{span.reveal} , ..._ 
 
@@ -325,12 +322,12 @@
 
 ### Definicions 
 
- Si compareu aquests dos problemes, podríeu notar que hi ha moltes semblances: la seqüència del cometa de Halley té la mateixa [[diferència | relació | producte]] entre termes consecutius, mentre que la seqüència de rebots de pilota de tennis té la mateixa [[proporció | diferència | producte]] entre termes consecutius. 
+Si compareu aquests dos problemes, podríeu notar que hi ha moltes semblances: la seqüència del cometa de Halley té la mateixa [[diferència | relació | producte]] entre termes consecutius, mentre que la seqüència de rebots de pilota de tennis té la mateixa [[proporció | diferència | producte]] entre termes consecutius. 
 
 ---
 > id: arithmetic-geometric-1
 
- Les seqüències d’aquestes propietats tenen un nom especial: 
+Les seqüències d’aquestes propietats tenen un nom especial: 
 
 ::: column.grow
 
@@ -338,9 +335,9 @@
 
     p.text-center: include svg/comet.svg
 
- Una [__seqüència aritmètica__](gloss:arithmetic-sequence) té una constant __{.m-red} diferència _d___ entre termes consecutius. 
+Una [__seqüència aritmètica__](gloss:arithmetic-sequence) té una constant __{.m-red} diferència _d___ entre termes consecutius. 
 
- S’afegeix o es resta el mateix nombre a tots els termes, per produir-ne el següent. 
+S’afegeix o es resta el mateix nombre a tots els termes, per produir-ne el següent. 
 
 :::
 
@@ -350,9 +347,9 @@
 
     p.text-center: include svg/ball.svg
 
- Una [__seqüència geomètrica__](gloss:geometric-sequence) té una constant __{.m-green} relació _r___ entre termes consecutius. 
+Una [__seqüència geomètrica__](gloss:geometric-sequence) té una constant __{.m-green} relació _r___ entre termes consecutius. 
 
- Cada terme es multiplica o es divideix pel mateix nombre, per produir el següent. 
+Cada terme es multiplica o es divideix pel mateix nombre, per produir el següent. 
 
 :::
 
@@ -361,7 +358,7 @@
 ---
 > id: arithmetic-geometric-select
 
- A continuació, es detallen algunes seqüències diferents. Podeu determinar quines són aritmètiques, geomètriques o cap dels dos i quins són els valors de _{.b.m-red} d_ i _{.b.m-green} r_ són? 
+A continuació, es detallen algunes seqüències diferents. Podeu determinar quines són aritmètiques, geomètriques o cap dels dos i quins són els valors de _{.b.m-red} d_ i _{.b.m-green} r_ són? 
 
 ::: column(width=330 parent="ag-select")
 
@@ -408,7 +405,7 @@
 ---
 > id: arithmetic-geometric-graph
 
- Per definir una seqüència aritmètica o geomètrica, hem de conèixer no només la diferència o relació comuna, sinó també el valor inicial (anomenat `a` ). Aquí podeu generar les vostres pròpies seqüències i traçar els seus valors en un gràfic, canviant els valors de `a` , _d_ i _r_ . Podeu trobar algun patró? 
+Per definir una seqüència aritmètica o geomètrica, hem de conèixer no només la diferència o relació comuna, sinó també el valor inicial (anomenat `a` ). Aquí podeu generar les vostres pròpies seqüències i traçar els seus valors en un gràfic, canviant els valors de `a` , _d_ i _r_ . Podeu trobar algun patró? 
 
 ::: column.ag-chart(width=320)
 
@@ -443,15 +440,15 @@
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
- Si _{span.var-action}`r > 1`_ , els termes augmentaran [[ràpidament | disminueix ràpidament | apropeu-vos a zero]] _{span.reveal(when="blank-2")} , fins a l’infinit. Els matemàtics diuen que la seqüència [__divergeix__](gloss:sequence-divergence) ._ 
+Si _{span.var-action}`r > 1`_ , els termes augmentaran [[ràpidament | disminueix ràpidament | apropeu-vos a zero]] _{span.reveal(when="blank-2")} , fins a l’infinit. Els matemàtics diuen que la seqüència [__divergeix__](gloss:sequence-divergence) ._ 
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
- Si _{span.var-action} _r_ està entre –1 i 1_ , els termes sempre [[s’acostaran a 0 | disminuir fins a l’infinit negatiu | fer-se més petit]] _{span.reveal(when="blank-3")} . Diem que la seqüència [__convergeix__](gloss:sequence-convergence) ._ 
+Si _{span.var-action} _r_ està entre –1 i 1_ , els termes sempre [[s’acostaran a 0 | disminuir fins a l’infinit negatiu | fer-se més petit]] _{span.reveal(when="blank-3")} . Diem que la seqüència [__convergeix__](gloss:sequence-convergence) ._ 
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
- Si _{span.var-action}`r < -1`_ , els termes alternaran entre positius i negatius, mentre que el seu [[valor absolut | invers | la diferència]] és més gran. 
+Si _{span.var-action}`r < -1`_ , els termes alternaran entre positius i negatius, mentre que el seu [[valor absolut | invers | la diferència]] és més gran. 
 
 :::
 
@@ -462,7 +459,7 @@
 
 ### Fórmules recursives i explícites 
 
- A la secció anterior, heu après que una [__fórmula recursiva__](gloss:sequence-recursive) us indica el valor de cada terme en funció dels termes anteriors. Aquestes són les fórmules recursives per a seqüències aritmètiques i geomètriques: 
+A la secció anterior, heu après que una [__fórmula recursiva__](gloss:sequence-recursive) us indica el valor de cada terme en funció dels termes anteriors. Aquestes són les fórmules recursives per a seqüències aritmètiques i geomètriques: 
 
 ::: column.grow
 
@@ -477,17 +474,17 @@
 ---
 > id: arithmetic-geometric-explicit
 
- Un dels problemes de les fórmules recursives és que per trobar el centèsim terme, per exemple, primer hem de calcular els 99 termes anteriors, i això pot trigar molt. En canvi, podem mirar de trobar una [__fórmula explícita,__](gloss:sequence-explicit) que ens diu el valor de _l'enèsima_ expressió directa. 
+Un dels problemes de les fórmules recursives és que per trobar el centèsim terme, per exemple, primer hem de calcular els 99 termes anteriors, i això pot trigar molt. En canvi, podem mirar de trobar una [__fórmula explícita,__](gloss:sequence-explicit) que ens diu el valor de _l'enèsima_ expressió directa. 
 
 ::: column.grow
 
- Per __{.m-red} seqüències aritmètiques__ , hem d’afegir _d_ a cada pas: 
+Per __{.m-red} seqüències aritmètiques__ , hem d’afegir _d_ a cada pas: 
 
-{.ag-equation.no-voice}`x_1 =``a`
+{.ag-equation.no-voice}`x_1 = a`
 
-{.ag-equation.no-voice}`x_2 =``a + d`
+{.ag-equation.no-voice}`x_2 = a + d`
 
-{.ag-equation.no-voice}`x_3 =``a + d + d`
+{.ag-equation.no-voice}`x_3 = a + d + d`
 
 {.ag-equation.no-voice}`x_4 =` _{x-equation(solution="a+d+d+d")}_ 
 
@@ -499,7 +496,7 @@
 
 ::: column.grow
 
- Per __{.m-green} seqüències geomètriques__ , hem de multiplicar _r_ a cada pas: 
+Per __{.m-green} seqüències geomètriques__ , hem de multiplicar _r_ a cada pas: 
 
 {.ag-equation.no-voice}`x_1 = a`
 
@@ -520,13 +517,13 @@
 ---
 > id: arithmetic-geometric-explicit-1
 
- Aquí teniu un resum de totes les definicions i fórmules que heu vist fins ara: 
+Aquí teniu un resum de totes les definicions i fórmules que heu vist fins ara: 
 
 ::: column.grow
 
 ::: .theorem.s-red
 
- Un __{.m-red} la seqüència aritmètica__ té primer terme `a` i la diferència comuna `d` entre termes consecutius. 
+Un __{.m-red} la seqüència aritmètica__ té primer terme `a` i la diferència comuna `d` entre termes consecutius. 
 
 {.text-center} __Fórmula recursiva__ : `x_n = x_(n-1) + d`
 
@@ -538,7 +535,7 @@
 
 ::: .theorem.s-green
 
- A __{.m-green} la seqüència geomètrica__ té primer terme `a` i la proporció comuna `r` entre termes consecutius. 
+A __{.m-green} la seqüència geomètrica__ té primer terme `a` i la proporció comuna `r` entre termes consecutius. 
 
 {.text-center} __Fórmula recursiva__ : `x_n = x_(n-1) × r`
 
@@ -548,7 +545,7 @@
 
 :::
 
- Ara fem una ullada a alguns exemples en què podem fer servir tot això! 
+Ara fem una ullada a alguns exemples en què podem fer servir tot això! 
 
 ---
 > id: pay-it-forward
@@ -556,7 +553,7 @@
 
 ### Pagar per avançat 
 
- Aquí teniu un breu clip de la pel·lícula _Pay it Forward_ , on Trevor, de 12 anys, explica la seva idea per fer del món un lloc millor: 
+Aquí teniu un breu clip de la pel·lícula _Pay it Forward_ , on Trevor, de 12 anys, explica la seva idea per fer del món un lloc millor: 
 
     figure
       x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward-poster.jpg" width=640 height=360 controls audio)
@@ -565,27 +562,27 @@
 ---
 > id: pay-it-forward-1
 
- L’essència de la idea de Trevor és que, si tothom “la paga endavant”, una sola persona pot tenir un impacte enorme en el món: 
+L’essència de la idea de Trevor és que, si tothom “la paga endavant”, una sola persona pot tenir un impacte enorme en el món: 
 
     figure: img(src="images/pay-it-forward.png" width=700 height=220)
 
- Observeu com el nombre de persones a cada pas forma una [[seqüència geomètrica | seqüència aritmètica | número de triangle]] , _{span.reveal(when="blank-0")} amb proporció comuna [[3]] :_ 
+Observeu com el nombre de persones a cada pas forma una [[seqüència geomètrica | seqüència aritmètica | número de triangle]] , _{span.reveal(when="blank-0")} amb proporció comuna [[3]] :_ 
 
 {.text-center.s-orange.with-arrows.no-voice.reveal(when="blank-1")} _{span.n} 1_ , _{span.n} 3 _{span.arrow} × 3__ , _{span.n} 9 _{span.arrow} × 3__ , _{span.n} [[27]] _{span.arrow} × 3__ , _{span.n} [[81]] _{span.arrow} × 3__ , _{span.n} [[243]] _{span.arrow} × 3__ , ... 
 
 ---
 > id: pay-it-forward-2
 
- Utilitzant la [fórmula explícita](gloss:sequence-explicit) de seqüències geomètriques, podem esbrinar quantes persones noves es veuen afectades a qualsevol pas: 
+Utilitzant la [fórmula explícita](gloss:sequence-explicit) de seqüències geomètriques, podem esbrinar quantes persones noves es veuen afectades a qualsevol pas: 
 
 {.text-center}`x_n` = _{x-equation(solution="3^(n-1)")}_ 
 
 ---
 > id: pay-it-forward-3
 
- El nombre de persones augmenta increïblement ràpidament. En el desè pas, aconseguiríeu 19.683 nous i, després de 22 passos, hauríeu arribat a més persones de les que hi ha actualment vives a la Terra. 
+El nombre de persones augmenta increïblement ràpidament. En el desè pas, aconseguiríeu 19.683 nous i, després de 22 passos, hauríeu arribat a més persones de les que hi ha actualment vives a la Terra. 
 
- Aquesta seqüència de nombres té un nom especial: les __potències de 3__ . Com veieu, cada terme és realment un [poder](gloss:powers) diferent de 3: 
+Aquesta seqüència de nombres té un nom especial: les __potències de 3__ . Com veieu, cada terme és realment un [poder](gloss:powers) diferent de 3: 
 
 {.text-center.s-orange.no-voice} _{span.n}`3^0`_ , _{span.n}`3^1`_ , _{span.n}`3^2`_ , _{span.n}`3^3`_ , _{span.n}`3^4`_ , _{span.n}`3^5`_ , ... 
 
@@ -596,70 +593,6 @@
 
 {.todo} PRÒXIMAMENT! 
 
-    // Two siblings, Anna and Thomas, are receiving pocket money from their parents.
-    // They can choose between two different options:
-    
-    // * Thomas is receiving $1 in the first month, $2s in the second month, $3 in the
-    //   third month, and so on. Every month, he receives $1 more than in the previous
-    //   one.
-    // * Anna receives 1¢ in the first month, 2¢ in the second month
-    
-    // img.text-wrap(src="images/dishes.jpg" style="shape-outside: url(images/dishes.png)" width=280 height=276)
-    
-    // In order to make some additional pocket money, you decided to make a deal with
-    // your parents: for appropriate payment, you’ll do every possible chore around
-    // the house – washing the dishes, laundry, taking out the trash or walking the
-    // dog.
-    
-    // The payment system works like this: on the first day, you get 1 cent. On the
-    // second day, you get 2 cents – twice as much as before. On the next day you’ll
-    // get 4 cents. Every day, your payment doubles.
-    
-    // 1¢ is not a lot of money – and neither are 2¢ or 4¢, especially
-    // considering how much work you’re doing. But the amount will slowly increase.
-    // How long do you think will it take until you’ve made $100? How long until
-    // you’ve made it to 1 Million?
-    
-    // guess fields
-    
-    // Let’s try to calculate it mathematically! Just like before, your salary
-    // follows an exponential model, because it changes by a constant ratio every
-    // day (times 2). On day `x`, you’ll get `2^x` cents.
-    
-    // | __day__ | __payment__  |
-    // | ------- | ------------ |
-    // | 1       | $ 0.01       |
-    // | 2       | $ 0.02       |
-    // | 3       | $ 0.04       |
-    // | 4       | $ [[0.08]]   |
-    // | 5       | $ [[0.16]]   |
-    // | 6       | $ [[0.32]]   |
-    // | 7       | $ [[0.64]]   |
-    // | 8       | $ 1.28       |
-    // | 9       | $ 2.56       |
-    // | 10      | $ 5.12       |
-    // | 11      | $ 10.24      |
-    // | 12      | $ [[20.48]]  |
-    // | 13      | $ [[40.96]]  |
-    // | 14      | $ [[81.92]]  |
-    // | 15      | $ [[163.84]] |
-    // | 16      | $ 327.68     |
-    // | 17      | $ 655.36     |
-    // | 18      | $ 1,310.72   |
-    
-    // One sibling gets $${a}{a|1|1,10,1} every day. The other sibling
-    // gets ${b}{b|1|1,10,1}¢ every day.
-    
-    // As you can see, your daily payment start low but then grow rapidly. After 15
-    // days you’ve reached $100. After less than a month you’re making more than 1
-    // million per day, and after 2 months you’d have made more than _all the money
-    // on Earth_. :1f4b0: :1f37e: :1f911:
-    
-    // Exponential growth can be truly XXXXX. Even if they start really slowly, they
-    // will eventually speed up a lot, and overtake any possible linear model. Most
-    // importantly, us humans tend to be very bad at estimating just _how fast_
-    // exponential models can grow. Or are we?
-
 ---
 > id: chessboard
 
@@ -667,46 +600,24 @@
 
 {.todo} PRÒXIMAMENT! 
 
-    // The game of chess was invented in India, many hundreds of years ago. According
-    // to legend, the Indian king loved the game so much that he invited its inventor
-    // to his palace and promised him any present they ask for.
-    
-    // The inventor had just one simple request: rice. He wanted the king to place
-    // one grain of rice on the first square of the chess board, two grains on the
-    // second, four grains of the third, eight grains on the fourth, and so on. Every
-    // new square should have twice as many grains of rice as the previous one.
-    
-    // The king, who was very wealthy, agreed immediately and asked his servants to
-    // fetch bags of rice. A chessboard has 64 squares, so how many grains of rice
-    // does the king need in total?
-    
-    // You might have noticed that the number of grains of rice form a geometric sequence.
-    // The first term is [[1]], and the common ratio is [[2]]. Using the results from
-    // above, we can calculate how many grains of rice there will be on the last square:
-    
-    // {.text-center} `a_64 = 1 * 2^63 =` 9 223 372 036 854 775 808
-    
-    // That’s 9 billion billion grains of rice! In total, they would weight about
-    // 100 billion tonnes – or 100 times the weight of Mount Everest, the tallest
-    // mountain on Earth.
-
 ---
 
 ## Nombres figurats 
 
 > section: figurate
 > id: figurate
+> translated: auto
 
- El nom de [seqüències geomètriques](gloss:geometric-sequence) és força confús, perquè no tenen res a veure amb la geometria. De fet, el nom es va desenvolupar fa centenars d’anys, quan els matemàtics van pensar en la _multiplicació_ i l’ _arrelament quadrat_ d’una manera molt més geomètrica. 
+El nom de [seqüències geomètriques](gloss:geometric-sequence) és força confús, perquè no tenen res a veure amb la geometria. De fet, el nom es va desenvolupar fa centenars d’anys, quan els matemàtics van pensar en la _multiplicació_ i l’ _arrelament quadrat_ d’una manera molt més geomètrica. 
 
- No obstant això, hi ha moltes altres seqüències que _es_ basen en certes formes geomètriques - algunes de les quals ja vam veure en la [introducció.](/course/sequences/introduction) Aquestes seqüències s’anomenen sovint [__nombres figurats__](gloss:figurate-numbers) i, en aquest apartat, podrem veure amb detall algunes d’elles. 
+No obstant això, hi ha moltes altres seqüències que _es_ basen en certes formes geomètriques - algunes de les quals ja vam veure en la [introducció.](/course/sequences/introduction) Aquestes seqüències s’anomenen sovint [__nombres figurats__](gloss:figurate-numbers) i, en aquest apartat, podrem veure amb detall algunes d’elles. 
 
 ---
 > id: triangle-numbers
 
 ### Nombres del triangle 
 
- Els __nombres del triangle__ es generen creant triangles de mida progressivament més gran: 
+Els __nombres del triangle__ es generen creant triangles de mida progressivament més gran: 
 
 ::: column(width=24 parent="padded-thin")
 
@@ -746,12 +657,12 @@
 
 :::
 
- Ja heu vist la fórmula recursiva dels números de triangles: `x_n =` [[`x_(n-1) + n`|`n^2 - 1`|`2 × x_(n-1) - 1`]] . 
+Ja heu vist la fórmula recursiva dels números de triangles: `x_n =` [[`x_(n-1) + n`|`n^2 - 1`|`2 × x_(n-1) - 1`]] . 
 
 ---
 > id: billiard-pool
 
- No és casual que sempre hi hagi 10 pins quan es fan bitlles o 15 pilotes quan jugueu al billar: tots dos són números de triangle! 
+No és casual que sempre hi hagi 10 pins quan es fan bitlles o 15 pilotes quan jugueu al billar: tots dos són números de triangle! 
 
 ::: column(width=320)
 
@@ -766,35 +677,14 @@
 ---
 > id: triangle-proof
 
- Malauradament, la fórmula recursiva no és de gran ajuda si volem trobar el número del triangle número 100 o 5000, sense calcular primer tots els anteriors. Però, com vam fer amb les seqüències aritmètiques i geomètriques, podem intentar trobar una fórmula explícita per als nombres del triangle. 
+Malauradament, la fórmula recursiva no és de gran ajuda si volem trobar el número del triangle número 100 o 5000, sense calcular primer tots els anteriors. Però, com vam fer amb les seqüències aritmètiques i geomètriques, podem intentar trobar una fórmula explícita per als nombres del triangle. 
 
 {.todo} COM VEURE: Prova animada de la fórmula del número del triangle 
-
-    // ::: column(width=300)
-    
-    // svg(width=300 height=300)
-      g
-    
-    // ::: column.grow
-    // Let’s start with a triangle of size ${x}{x|5|1,10,1}.
-    
-    // First, we need to make a second copy of the triangle.
-    
-    // Now we can rearrange the two triangles, to fit together in a rectangle.
-    
-    // The size of the rectangle is ${x} × ${x + 1}, so it must have an area of
-    // ${x * (x + 1)}
-    
-    // Since the rectangle is twice as large as the original triangle, we know that
-    // the ${n}th triangle number must be ${x*(x+1)/2}.
-    
-    // In general, the *n*th triangle number is `T_n = (n × (n + 1)) / 2`.
-    // :::
 
 ---
 > id: triangle-sums
 
- Els números del triangle semblen aparèixer arreu de les matemàtiques i els veureu de nou al llarg d'aquest curs. Un fet especialment interessant és que _qualsevol_ nombre complet es pot escriure com la suma de com a màxim tres números de triangles: 
+Els números del triangle semblen aparèixer arreu de les matemàtiques i els veureu de nou al llarg d'aquest curs. Un fet especialment interessant és que _qualsevol_ nombre complet es pot escriure com la suma de com a màxim tres números de triangles: 
 
 ::: column(width=140 parent="triangle-sum")
 
@@ -844,11 +734,11 @@
 
 #### Solucionar problemes 
 
- Quina és la suma dels primers 100 [nombres enters](gloss:integer) positius? En altres paraules, quin és el valor de 
+Quina és la suma dels primers 100 [nombres enters](gloss:integer) positius? En altres paraules, quin és el valor de 
 
 {.text-center}`1 + 2 + 3 + 4 + 5 + … + 97 + 98 + 99 + 100` ? 
 
- En lloc de afegir-hi tot manualment, podeu utilitzar els [números](gloss:triangle-numbers) del [triangle](gloss:triangle-numbers) per ajudar-vos? Què passa amb la suma dels primers 1000 nombres enters positius? 
+En lloc de afegir-hi tot manualment, podeu utilitzar els [números](gloss:triangle-numbers) del [triangle](gloss:triangle-numbers) per ajudar-vos? Què passa amb la suma dels primers 1000 nombres enters positius? 
 
 :::
 
@@ -857,7 +747,7 @@
 
 ### Nombres quadrats i poligonals 
 
- Una altra seqüència que es basa en formes geomètriques són els __nombres quadrats__ : 
+Una altra seqüència que es basa en formes geomètriques són els __nombres quadrats__ : 
 
 {.text-center.s-purple.with-arrows.no-voice} _{.n} 1_ , _{.n} 4 _{span.arrow.reveal(when="blank-4")} +3__ , _{.n} 9 _{span.arrow.reveal(when="blank-4")} +5__ , _{.n} 16 _{span.arrow.reveal(when="blank-4")} +7__ , _{.n} [[25]] _{span.arrow.reveal(when="blank-4")} +9__ , _{.n} [[36]] _{span.arrow.reveal(when="blank-4")} +11__ , _{.n} [[49]] _{span.arrow.reveal(when="blank-4")} +13__ , _{.n} [[64]] _{span.arrow.reveal(when="blank-4")} +15__ , ... 
 
@@ -868,9 +758,9 @@
 
 ::: column.grow
 
- La raó d'aquest patró es fa evident si realment dibuixem un quadrat. Cada pas afegeix una fila i una columna. La mida d’aquests “cantons” comença a l’1 i augmenta un 2 a cada pas, formant així la seqüència de nombres imparells. 
+La raó d'aquest patró es fa evident si realment dibuixem un quadrat. Cada pas afegeix una fila i una columna. La mida d’aquests “cantons” comença a l’1 i augmenta un 2 a cada pas, formant així la seqüència de nombres imparells. 
 
- Això també vol dir que _l'enèsim_ nombre quadrat és simplement la suma dels _n_ primers nombres senars! Per exemple, la suma dels primers 6 nombres imparells és 
+Això també vol dir que _l'enèsim_ nombre quadrat és simplement la suma dels _n_ primers nombres senars! Per exemple, la suma dels primers 6 nombres imparells és 
 
 {.text-center}`1 + 3 + 5 + 7 + 9 + 11 =` [[36]] . 
 
@@ -884,7 +774,7 @@
 ---
 > id: square-numbers-2
 
- A més, cada nombre quadrat també és la suma de dos [nombres triangulars](gloss:triangle-numbers) consecutius. Per exemple, ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2} . Podeu veure com podem dividir cada quadrat al llarg de la seva diagonal, en dos triangles? 
+A més, cada nombre quadrat també és la suma de dos [nombres triangulars](gloss:triangle-numbers) consecutius. Per exemple, ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2} . Podeu veure com podem dividir cada quadrat al llarg de la seva diagonal, en dos triangles? 
 
 ---
 > id: polygon-numbers
@@ -897,11 +787,11 @@
 
 ::: column.grow
 
- Després de nombres de triangles i quadrats, podem seguir endavant amb [polígons](gloss:polygon) més grans. Les seqüències de nombres resultants s’anomenen __nombres poligonals__ . 
+Després de nombres de triangles i quadrats, podem seguir endavant amb [polígons](gloss:polygon) més grans. Les seqüències de nombres resultants s’anomenen __nombres poligonals__ . 
 
- Per exemple, si utilitzem polígons amb ${k}{k|5|3,10,1} costats, obtenim la seqüència de __${polygonName(k)} números__ . 
+Per exemple, si utilitzem polígons amb ${k}{k|5|3,10,1} costats, obtenim la seqüència de __${polygonName(k)} números__ . 
 
- Pot trobar fórmules recursives i explícites per _l'enèsim_ nombre poligonal que té _k_ costats? I detecteu algun patró interessant per a polígons més grans? 
+Pot trobar fórmules recursives i explícites per _l'enèsim_ nombre poligonal que té _k_ costats? I detecteu algun patró interessant per a polígons més grans? 
 
 :::
 
@@ -910,7 +800,7 @@
 
 ### Nombres tetraèdrics i cúbics 
 
- Per descomptat, tampoc ens hem de limitar a formes i patrons bidimensionals. Podríem apilar esferes per formar petites piràmides, de la mateixa manera que s’apilen taronges en un supermercat: 
+Per descomptat, tampoc ens hem de limitar a formes i patrons bidimensionals. Podríem apilar esferes per formar petites piràmides, de la mateixa manera que s’apilen taronges en un supermercat: 
 
 ::: column(width=64 parent="padded-thin")
 
@@ -947,7 +837,7 @@
 ---
 > id: tetrahedral-1
 
- Els matemàtics solen anomenar aquests [__tetraedres de les__](gloss:tetrahedron) piràmides i els [__números tetraèdrics de la__](gloss:tetrahedral-numbers) seqüència resultant. 
+Els matemàtics solen anomenar aquests [__tetraedres de les__](gloss:tetrahedron) piràmides i els [__números tetraèdrics de la__](gloss:tetrahedral-numbers) seqüència resultant. 
 
 {.todo} COM VENIR: Més informació sobre els números tetraèdrics, els números cúbics i els 12 dies de Nadal. 
 
@@ -958,7 +848,7 @@
 > section: functions
 > sectionStatus: dev
 
- FER 
+FER 
 
 ---
 
@@ -966,8 +856,9 @@
 
 > section: fibonacci
 > id: rabbits
+> translated: auto
 
- Imagineu-vos que heu rebut un parell de conills, un mascle i una femella. Són conills molt especials, perquè no moren mai, i la femella dóna a llum una nova parella de conills exactament un cop al mes (sempre una altra parella de mascles i femelles). 
+Imagineu-vos que heu rebut un parell de conills, un mascle i una femella. Són conills molt especials, perquè no moren mai, i la femella dóna a llum una nova parella de conills exactament un cop al mes (sempre una altra parella de mascles i femelles). 
 
     x-slideshow
       .stage.rabbits(slot="stage")
@@ -1041,14 +932,15 @@
 ---
 > id: rabbits-2
 
- El nombre de conills en un determinat mes és [[la suma dels dos números anteriors | el doble del número anterior]] . _{span.reveal(when="blank-0")} Dit d'una altra manera, heu d'afegir els _dos_ termes _anteriors_ a la seqüència, per obtenir el següent. La seqüència comença amb dos 1s, i la [fórmula recursiva](gloss:sequence-recursive) és_ 
+El nombre de conills en un determinat mes és [[la suma dels dos números anteriors | el doble del número anterior]] . _{span.reveal(when="blank-0")} Dit d'una altra manera, heu d'afegir els _dos_ termes _anteriors_ a la seqüència, per obtenir el següent. La seqüència comença amb dos 1s, i la [fórmula recursiva](gloss:sequence-recursive) és_ 
 
-{.text-center.s-orange.reveal(when="blank-0")} _{span.n}`x_n`_ = _{span.n}`x_(n-1)`_ + _{span.n}`x_(n-2)`_ 
+{.text-center.s-orange.reveal(when="blank-0")} *{span.n}`x_n`* =
+*{span.n}`x_(n-1)`* + *{span.n}`x_(n-2)`*
 
 ---
 > id: rabbits-3
 
- Podeu calcular el nombre de conills al cap d’uns mesos més? 
+Podeu calcular el nombre de conills al cap d’uns mesos més? 
 
 {.text-center.s-orange} _{.n} 1_ , _{.n} 1_ , _{.n} 2_ , _{.n} 3_ , _{.n} 5_ , _{.n} 8_ , _{.n} [[13]]_ , _{.n} [[21]]_ , _{.n} [[34]]_ , _{.n} [[55]]_ , _{.n} [[89]]_ , _{.n} [[144]]_ ,… 
 
@@ -1060,13 +952,13 @@
 ---
 > id: fibonacci
 
- Aquesta seqüència de nombres s’anomena [__Seqüència de Fibonacci__](gloss:fibonacci-numbers) , batejada amb el nom del matemàtic italià [Leonardo Fibonacci](bio:fibonacci) . 
+Aquesta seqüència de nombres s’anomena [__Seqüència de Fibonacci__](gloss:fibonacci-numbers) , batejada amb el nom del matemàtic italià [Leonardo Fibonacci](bio:fibonacci) . 
 
 ::: column.grow
 
- Quan Fibonacci va néixer el 1175, la majoria d’Europa encara utilitzava el [sistema de numeració romana](gloss:roman-numerals) per a nombres (com IVX o MCMLIV). El pare de Fibonacci era comerciant, i junts van viatjar al nord d’Àfrica, així com al Pròxim Orient. Va ser allà on Fibonacci va aprendre per primera vegada el [sistema de numeraris àrabs](gloss:arabic-numerals) . 
+Quan Fibonacci va néixer el 1175, la majoria d’Europa encara utilitzava el [sistema de numeració romana](gloss:roman-numerals) per a nombres (com IVX o MCMLIV). El pare de Fibonacci era comerciant, i junts van viatjar al nord d’Àfrica, així com al Pròxim Orient. Va ser allà on Fibonacci va aprendre per primera vegada el [sistema de numeraris àrabs](gloss:arabic-numerals) . 
 
- Quan va tornar a Itàlia, Fibonacci va escriure un llibre anomenat _Liber Abaci_ (llatí per a "El llibre dels càlculs"), on va introduir els nous números àrabs als comerciants europeus. Van ser un èxit immediat, i encara avui en fem servir. 
+Quan va tornar a Itàlia, Fibonacci va escriure un llibre anomenat _Liber Abaci_ (llatí per a "El llibre dels càlculs"), on va introduir els nous números àrabs als comerciants europeus. Van ser un èxit immediat, i encara avui en fem servir. 
 
 ::: column(width=300)
 
@@ -1075,7 +967,7 @@
 
 :::
 
- En una de les pàgines del seu llibre també va investigar els patrons de cria dels conills, és per això que els nombres de Fibonacci van rebre el seu nom. 
+En una de les pàgines del seu llibre també va investigar els patrons de cria dels conills, és per això que els nombres de Fibonacci van rebre el seu nom. 
 
     figure
       x-img(src="images/liber-abaci.jpg" width=440 height=290 lightbox)
@@ -1084,9 +976,9 @@
 ---
 > id: spirals
 
- Per descomptat, els nombres de Fibonacci no són _en realitat_ la forma en conills poblen en la vida real. Els conills no tenen exactament un fill masculí i una femella cada mes, i finalment no hem explicat que els conills van morir. 
+Per descomptat, els nombres de Fibonacci no són _en realitat_ la forma en conills poblen en la vida real. Els conills no tenen exactament un fill masculí i una femella cada mes, i finalment no hem explicat que els conills van morir. 
 
- Però resulta que hi ha molts altres llocs a la natura, on _apareixen_ els nombres de Fibonacci: per exemple, les espirals en les plantes. Es pot comptar quantes espirals hi ha en cada direcció? 
+Però resulta que hi ha molts altres llocs a la natura, on _apareixen_ els nombres de Fibonacci: per exemple, les espirals en les plantes. Es pot comptar quantes espirals hi ha en cada direcció? 
 
 ::: column(width=320)
 
@@ -1117,9 +1009,9 @@
 ---
 > id: spirals-1
 
- En ambdós casos, els nombres d’espirals són números de Fibonacci consecutius. El mateix passa per a moltes altres plantes: la propera vegada que sortiu a l’exterior, compteu el nombre de pètals d’una flor o el nombre de fulles d’una tija. Molt sovint comproveu que són números de Fibonacci. 
+En ambdós casos, els nombres d’espirals són números de Fibonacci consecutius. El mateix passa per a moltes altres plantes: la propera vegada que sortiu a l’exterior, compteu el nombre de pètals d’una flor o el nombre de fulles d’una tija. Molt sovint comproveu que són números de Fibonacci. 
 
- Per descomptat, no és només una coincidència. Hi ha una raó important per la qual la natura li agrada la seqüència de Fibonacci, de la qual podreu conèixer més endavant. 
+Per descomptat, no és només una coincidència. Hi ha una raó important per la qual la natura li agrada la seqüència de Fibonacci, de la qual podreu conèixer més endavant. 
 
 ---
 > id: bees
@@ -1135,11 +1027,11 @@
 
 ::: column.grow
 
- Els nombres de fibonacci també apareixen a les poblacions d’abelles. 
+Els nombres de fibonacci també apareixen a les poblacions d’abelles. 
 
- A cada colònia d’abelles hi ha una única _reina_ que posa molts ous. Si un ou fecundat per un òvul fecundat, aquest eclosiona a una abella __femella__ . Si no està fecundada, eclosiona a una abella __masculina__ (anomenada drone). 
+A cada colònia d’abelles hi ha una única _reina_ que posa molts ous. Si un ou fecundat per un òvul fecundat, aquest eclosiona a una abella __femella__ . Si no està fecundada, eclosiona a una abella __masculina__ (anomenada drone). 
 
- Això vol dir que les abelles femelles tenen [[dos pares | un progenitor]] , mentre que les abelles masculines només tenen [[un progenitor | dos pares]] 
+Això vol dir que les abelles femelles tenen [[dos pares | un progenitor]] , mentre que les abelles masculines només tenen [[un progenitor | dos pares]] 
 
 {.reveal(when="blank-0 blank-1")} Si dibuixem l’arbre ancestral d’una abella, el nombre de pares, avis, besavis i de les generacions anteriors són sempre nombres de Fibonacci. 
 
@@ -1152,7 +1044,7 @@
 
 ### La ratio d’or 
 
- Igual que els [números](gloss:square-numbers) del [triangle](gloss:triangle-numbers) i [quadrat](gloss:square-numbers) i altres seqüències que hem vist abans, es pot visualitzar la seqüència de Fibonacci mitjançant un patró geomètric: 
+Igual que els [números](gloss:square-numbers) del [triangle](gloss:triangle-numbers) i [quadrat](gloss:square-numbers) i altres seqüències que hem vist abans, es pot visualitzar la seqüència de Fibonacci mitjançant un patró geomètric: 
 
     x-slideshow.golden-spiral
       .stage(slot="stage"): include svg/spiral.svg
@@ -1166,7 +1058,7 @@
 ---
 > id: golden-ratio
 
- A cada pas, els quadrats formen un rectangle més gran. La seva amplada i alçada són sempre dos números consecutius de Fibonacci. La __relació__ d' __aspecte__ del rectangle és la relació entre l'amplada i l'altura: 
+A cada pas, els quadrats formen un rectangle més gran. La seva amplada i alçada són sempre dos números consecutius de Fibonacci. La __relació__ d' __aspecte__ del rectangle és la relació entre l'amplada i l'altura: 
 
 ::: column(width=100 parent="padded-thin golden-rect")
 
@@ -1210,11 +1102,11 @@
 > id: golden-ratio-1
 > goals: img-0 img-1
 
- Observeu com, a mesura que afegim cada cop més quadrats, la relació d’aspecte sembla apropar-se i apropar-se a un nombre específic al voltant d’1,6. Aquest nombre s'anomena [__proporció daurada__](gloss:golden-ratio) i sol representar-se amb la lletra grega `φ` (“Phi”). El seu valor exacte és 
+Observeu com, a mesura que afegim cada cop més quadrats, la relació d’aspecte sembla apropar-se i apropar-se a un nombre específic al voltant d’1,6. Aquest nombre s'anomena [__proporció daurada__](gloss:golden-ratio) i sol representar-se amb la lletra grega `φ` (“Phi”). El seu valor exacte és 
 
 {.text-center}`(1 + sqrt(5))/2 = 1.61803398875…`
 
- Moltes persones creuen que la proporció daurada és particularment agradable estèticament. És per això que sovint s’utilitzen artistes i arquitectes, com en aquests dos exemples: 
+Moltes persones creuen que la proporció daurada és particularment agradable estèticament. És per això que sovint s’utilitzen artistes i arquitectes, com en aquests dos exemples: 
 
 ::: column(width=320)
 
@@ -1238,7 +1130,7 @@
 ---
 > id: golden-ratio-2
 
- Podem aproximar la proporció daurada [[dividint | afegint | restant]] dos nombres consecutius de Fibonacci. 
+Podem aproximar la proporció daurada [[dividint | afegint | restant]] dos nombres consecutius de Fibonacci. 
 
 {.reveal(when="blank-0")} Tanmateix, resulta que el valor exacte de `φ` no es pot escriure com una fracció senzilla: és un [__nombre irracional__](gloss:irrational-numbers) , de la mateixa manera [`π`](gloss:pi) i `sqrt(2)` i alguns altres números que heu vist abans. 
 
@@ -1249,11 +1141,11 @@
 
 ::: column.grow
 
- La proporció daurada explica per què apareixen a la natura els números de Fibonacci, com el con de gira-sol i pi que vau veure al començament d'aquesta secció. 
+La proporció daurada explica per què apareixen a la natura els números de Fibonacci, com el con de gira-sol i pi que vau veure al començament d'aquesta secció. 
 
- Ambdues plantes creixen cap a fora del seu centre (una part de la planta anomenada _meristema_ ). A mesura que s’afegeixen noves llavors, fulles o pètals, empenyen els existents més cap a fora. 
+Ambdues plantes creixen cap a fora del seu centre (una part de la planta anomenada _meristema_ ). A mesura que s’afegeixen noves llavors, fulles o pètals, empenyen els existents més cap a fora. 
 
- Desplaceu el control lliscant cap a la dreta per visualitzar com creix una planta. Observeu com s’afegeix cada full a una rotació diferent de l’anterior. L’angle entre dues fulles consecutives és sempre el mateix. 
+Desplaceu el control lliscant cap a la dreta per visualitzar com creix una planta. Observeu com s’afegeix cada full a una rotació diferent de l’anterior. L’angle entre dues fulles consecutives és sempre el mateix. 
 
 ::: column(width=300)
 
@@ -1271,9 +1163,7 @@
 ---
 > id: sunflower-spiral
 
- És important que les flors trien un angle adequat: les fulles o les llavors han d’estar aproximadament iguals d’espai per obtenir la major quantitat de llum i nutrients. Al diagrama següent, podeu explorar com podria semblar un gira-sol amb diferents angles entre les seves llavors: 
-
-    // Notice how even tiny changes to the angle can produce a completely different arrangement:
+És important que les flors trien un angle adequat: les fulles o les llavors han d’estar aproximadament iguals d’espai per obtenir la major quantitat de llum i nutrients. Al diagrama següent, podeu explorar com podria semblar un gira-sol amb diferents angles entre les seves llavors: 
 
 ::: x-slideshow
 
@@ -1307,11 +1197,11 @@
 
 ::: column.grow
 
- Potser recordeu des de dalt que les proporcions de nombres de Fibonacci consecutius s’acosten i s’aproximen més a la proporció daurada, i és per això que, si comptau el nombre d’espirals d’una planta, sovint trobareu un nombre de Fibonacci. 
+Potser recordeu des de dalt que les proporcions de nombres de Fibonacci consecutius s’acosten i s’aproximen més a la proporció daurada, i és per això que, si comptau el nombre d’espirals d’una planta, sovint trobareu un nombre de Fibonacci. 
 
- És important recordar que la natura no coneix els números de Fibonacci. La naturalesa tampoc no pot resoldre equacions per calcular la proporció daurada, però al llarg de milions d’anys, les plantes van tenir molt de temps per provar diferents angles i descobrir-ne la millor. 
+És important recordar que la natura no coneix els números de Fibonacci. La naturalesa tampoc no pot resoldre equacions per calcular la proporció daurada, però al llarg de milions d’anys, les plantes van tenir molt de temps per provar diferents angles i descobrir-ne la millor. 
 
- Les plantes i els animals sempre volen créixer de la manera més eficient, i és per això que la natura està plena de patrons regulars i matemàtics. 
+Les plantes i els animals sempre volen créixer de la manera més eficient, i és per això que la natura està plena de patrons regulars i matemàtics. 
 
 :::
 
@@ -1320,46 +1210,46 @@
 
 ### Fibonachos 
 
- Fins ara, només hem utilitzat l’equació recursiva per a nombres de Fibonacci. De fet, hi ha una equació explícita, però és molt més difícil trobar-la: 
+Fins ara, només hem utilitzat l’equació recursiva per a nombres de Fibonacci. De fet, hi ha una equació explícita, però és molt més difícil trobar-la: 
 
 {.text-center}`F_n = 1/(  sqrt(5)) ( ((1 + sqrt(5))/2)^n - ((1 - sqrt(5))/2)^n )`
 
- També podríem intentar triar diferents punts de partida per als números de Fibonacci. Per exemple, si comencem amb 2, 1, ... en lloc d'1, 1, ... obtenim una seqüència anomenada __números de Lucas__ . 
+També podríem intentar triar diferents punts de partida per als números de Fibonacci. Per exemple, si comencem amb 2, 1, ... en lloc d'1, 1, ... obtenim una seqüència anomenada __números de Lucas__ . 
 
- Resulta que, siguin quins siguin els dos números inicials que trieu, les seqüències resultants comparteixen moltes propietats. Per exemple, les proporcions de termes consecutius _sempre_ [convergiran](gloss:sequence-convergence) a la proporció daurada. 
+Resulta que, siguin quins siguin els dos números inicials que trieu, les seqüències resultants comparteixen moltes propietats. Per exemple, les proporcions de termes consecutius _sempre_ [convergiran](gloss:sequence-convergence) a la proporció daurada. 
 
 {.text-center.s-purple.s-small.no-voice}${a}{a|1|0,10,1} , ${b}{b|1|0,10,1} , _{span.n}${a+b}_ , _{span.n}${a+2×b}_ , _{span.n}${2×a+3×b}_ , _{span.n}${3×a+5×b}_ , _{span.n}${5×a+8×b}_ , _{span.n}${8×a+13×b}_ , ... 
 
 ---
 > id: fibonacci-puzzles
 
- Hi ha molts altres trencaclosques, patrons i aplicacions relacionats amb números de Fibonacci. Aquests són alguns exemples que podeu provar a vosaltres mateixos: 
+Hi ha molts altres trencaclosques, patrons i aplicacions relacionats amb números de Fibonacci. Aquests són alguns exemples que podeu provar a vosaltres mateixos: 
 
 ::: .box.f-blue
 
 #### Solucionar problemes 
 
- __1. Divisibilitat de Fibonacci__ 
+__1. Divisibilitat de Fibonacci__ 
 
- (a) Quins nombres de Fibonacci són parells? Hi ha un patró on se situen al llarg de la seqüència? Pots explicar per què? 
+(a) Quins nombres de Fibonacci són parells? Hi ha un patró on se situen al llarg de la seqüència? Pots explicar per què? 
 
- (b) Quins nombres de Fibonacci són divisibles per 3 (o divisibles per 4)? Què nota? 
-
-    hr
-
- __2. Sumes Fibonacci__ 
-
- Què passa si afegiu tres números consecutius de Fibonacci? Pots explicar per què? 
+(b) Quins nombres de Fibonacci són divisibles per 3 (o divisibles per 4)? Què nota? 
 
     hr
 
- __3. Escales de Fibonacci__ 
+__2. Sumes Fibonacci__ 
 
- Al pujar les escales, puc fer passos senzills o fer un salt sobre dos esglaons alhora. Això vol dir que hi ha moltes possibilitats diferents sobre com puc pujar una escala. Per exemple, si hi ha 5 passos, tinc 8 opcions diferents: 
+Què passa si afegiu tres números consecutius de Fibonacci? Pots explicar per què? 
+
+    hr
+
+__3. Escales de Fibonacci__ 
+
+Al pujar les escales, puc fer passos senzills o fer un salt sobre dos esglaons alhora. Això vol dir que hi ha moltes possibilitats diferents sobre com puc pujar una escala. Per exemple, si hi ha 5 passos, tinc 8 opcions diferents: 
 
     figure: x-img(src="images/stairs.svg" width=530 height=200)
 
- Quantes opcions hi ha per a escala amb 6, 7 o 8 graons? Podeu detectar un patró? I com es relaciona això amb els números de Fibonacci? 
+Quantes opcions hi ha per a escala amb 6, 7 o 8 graons? Podeu detectar un patró? I com es relaciona això amb els números de Fibonacci? 
 
 :::
 
@@ -1373,20 +1263,21 @@
 
 > section: special
 > id: special-intro
+> translated: auto
 
- A més de [les](gloss:geometric-sequence) seqüències [aritmètiques](gloss:arithmetic-sequence) i [geomètriques](gloss:geometric-sequence) , [els nombres de Fibonacci](gloss:fibonacci-numbers) i els [nombres](gloss:fibonacci-numbers) [figurats](gloss:figurate-numbers) , hi ha infinitat de seqüències interessants que no segueixen un patró regular i similar. 
+A més de [les](gloss:geometric-sequence) seqüències [aritmètiques](gloss:arithmetic-sequence) i [geomètriques](gloss:geometric-sequence) , [els nombres de Fibonacci](gloss:fibonacci-numbers) i els [nombres](gloss:fibonacci-numbers) [figurats](gloss:figurate-numbers) , hi ha infinitat de seqüències interessants que no segueixen un patró regular i similar. 
 
 ---
 > id: primes
 
 ### Nombres primers 
 
- Un exemple que ja heu vist anteriorment són els [__números primers__](gloss:prime) . Diem que un nombre és _primer_ si no té [[altres]] [factors](gloss:factor) [[que 1 i ell mateix | que no siguin 1 i 2 | i cap múltiple]] . 
+Un exemple que ja heu vist anteriorment són els [__números primers__](gloss:prime) . Diem que un nombre és _primer_ si no té [[altres]] [factors](gloss:factor) [[que 1 i ell mateix | que no siguin 1 i 2 | i cap múltiple]] . 
 
 ---
 > id: primes-1
 
- Aquests són els primers números primers: 
+Aquests són els primers números primers: 
 
 {.text-center.s-teal} _{.n} 2_ , _{.n} 3_ , _{.n} 5_ , _{.n} 7_ , _{.n} 11_ , _{.n} [[13]]_ , _{.n} [[17]]_ , _{.n} [[19]]_ ,… 
 
@@ -1394,9 +1285,9 @@
 > id: primes-2
 > goals: p2 p3 p5 p7
 
- Malauradament, els nombres primers no segueixen un patró simple ni una fórmula recursiva. De vegades apareixen directament l’un al costat de l’altre (es diuen [primes bessones](gloss:twin-primes) ) i, de vegades, hi ha grans llacunes entre elles. Sembla que es distribueixen gairebé de forma aleatòria! 
+Malauradament, els nombres primers no segueixen un patró simple ni una fórmula recursiva. De vegades apareixen directament l’un al costat de l’altre (es diuen [primes bessones](gloss:twin-primes) ) i, de vegades, hi ha grans llacunes entre elles. Sembla que es distribueixen gairebé de forma aleatòria! 
 
- Els nombres primers tampoc tenen una representació geomètrica simple com un [número](gloss:square-numbers) [triangle](gloss:triangle-numbers) o [quadrat](gloss:square-numbers) , però amb una mica de treball podem revelar patrons interessants: 
+Els nombres primers tampoc tenen una representació geomètrica simple com un [número](gloss:square-numbers) [triangle](gloss:triangle-numbers) o [quadrat](gloss:square-numbers) , però amb una mica de treball podem revelar patrons interessants: 
 
 ::: column(width=320)
 
@@ -1422,7 +1313,7 @@
 ---
 > id: primes-3
 
- Podeu obtenir més informació sobre aquestes i altres propietats dels nombres primers del nostre curs sobre [Divisibilitat i Primes](/course/divisibility/primes) . Són alguns dels conceptes més importants i misteriosos de les matemàtiques. 
+Podeu obtenir més informació sobre aquestes i altres propietats dels nombres primers del nostre curs sobre [Divisibilitat i Primes](/course/divisibility/primes) . Són alguns dels conceptes més importants i misteriosos de les matemàtiques. 
 
     figure: img(src="images/primes.svg" width=480 height=156)
 
@@ -1431,7 +1322,7 @@
 
 ### Nombres perfectes 
 
- Per determinar si un nombre és [primer](gloss:prime) , hem de trobar tots els seus [factors](gloss:factor) . Normalment _multiplicaríem_ aquests factors per obtenir el número original, però vegem què succeeix si _sumem_ tots els factors d’un nombre (excepte el número en si): 
+Per determinar si un nombre és [primer](gloss:prime) , hem de trobar tots els seus [factors](gloss:factor) . Normalment _multiplicaríem_ aquests factors per obtenir el número original, però vegem què succeeix si _sumem_ tots els factors d’un nombre (excepte el número en si): 
 
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
@@ -1456,39 +1347,39 @@
 ---
 > id: perfect-1
 
- Comparem aquests nombres amb la seva suma de factors: 
+Comparem aquests nombres amb la seva suma de factors: 
 
 ::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
- Per a la majoria dels nombres, la suma dels seus factors és [[menor | més gran que | igual a]] si mateix. Aquests nombres s’anomenen __números deficients__ . 
+Per a la majoria dels nombres, la suma dels seus factors és [[menor | més gran que | igual a]] si mateix. Aquests nombres s’anomenen __números deficients__ . 
 
 ::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
- Per uns quants números, la suma dels seus factors és més gran que ella mateixa. Aquests números s’anomenen __nombres abundants__ . 
+Per uns quants números, la suma dels seus factors és més gran que ella mateixa. Aquests números s’anomenen __nombres abundants__ . 
 
 ::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
- Només un número de la llista anterior té una suma de factors que és _igual_ a si mateix: [[6]] . Això es diu un [__nombre perfecte__](gloss:perfect-numbers) . 
+Només un número de la llista anterior té una suma de factors que és _igual_ a si mateix: [[6]] . Això es diu un [__nombre perfecte__](gloss:perfect-numbers) . 
 
 :::
 
 ---
 > id: perfect-2
 
- El següent número perfecte és 28, perquè si sumem tots els seus factors, obtindrem `1 + 2 + 4 + 7 + 14 = 28` . Després d'això, els nombres perfectes són molt més rars: 
+El següent número perfecte és 28, perquè si sumem tots els seus factors, obtindrem `1 + 2 + 4 + 7 + 14 = 28` . Després d'això, els nombres perfectes són molt més rars: 
 
 {.text-center.s-purple.s-vertical.perfect-list.no-voice.no-voice} _{.n} 6_ , _{.n} 28_ , _{.n} 496_ , _{.n} 8.128_ , _{.n} 33.550.336_ , _{.n} 8.559.869.056_ , _{.n} 137.438.691.328_ , _{.n} 2.305.843.008.139.952.128_ , ... 
 
- Observeu que tots aquests nombres són [[parells | múltiples de 3 | 2 més que un nombre quadrat]] . _{span.reveal(when="blank-0")} Resulta que també són nombres de triangles!_ 
+Observeu que tots aquests nombres són [[parells | múltiples de 3 | 2 més que un nombre quadrat]] . _{span.reveal(when="blank-0")} Resulta que també són nombres de triangles!_ 
 
 ---
 > id: perfect-3
 
 ::: column.grow
 
- Els números perfectes van ser estudiats per matemàtics grecs antics com [Euclides](bio:euclid) , [Pitàgores](bio:pythagoras) i [Nicòmac](bio:nicomachus) , fa més de 2000 anys. Van calcular els primers nombres perfectes i es van preguntar si n’hi podria haver _algun_ . 
+Els números perfectes van ser estudiats per matemàtics grecs antics com [Euclides](bio:euclid) , [Pitàgores](bio:pythagoras) i [Nicòmac](bio:nicomachus) , fa més de 2000 anys. Van calcular els primers nombres perfectes i es van preguntar si n’hi podria haver _algun_ . 
 
- Avui, els matemàtics han utilitzat ordinadors per comprovar els primers 10 <sup>1500</sup> números (és a dir un 1 seguit per 1500 zeros), però sense èxit: tots els números perfectes que van trobar eren parells. A dia d’avui, encara no se sap si hi ha algun nombre perfecte i estrany, convertint-lo en el problema més antic que no s’ha resolt en _totes les matemàtiques_ . 
+Avui, els matemàtics han utilitzat ordinadors per comprovar els primers 10 <sup>1500</sup> números (és a dir un 1 seguit per 1500 zeros), però sense èxit: tots els números perfectes que van trobar eren parells. A dia d’avui, encara no se sap si hi ha algun nombre perfecte i estrany, convertint-lo en el problema més antic que no s’ha resolt en _totes les matemàtiques_ . 
 
 ::: column(width=220)
 
@@ -1503,7 +1394,7 @@
 
 ### La seqüència de la pedregada 
 
- La majoria de les seqüències que hem vist fins ara tenien una sola regla o patró. Però no hi ha cap raó per la qual no podem combinar-ne diverses, com ara una fórmula recursiva com aquesta: 
+La majoria de les seqüències que hem vist fins ara tenien una sola regla o patró. Però no hi ha cap raó per la qual no podem combinar-ne diverses, com ara una fórmula recursiva com aquesta: 
 
     table.grid.text-left
       tr
@@ -1513,23 +1404,23 @@
         td: strong.md If `x_n` is odd:
         td.md `x_(n+1) = 3 x_n + 1`
 
- Comencem `x_1 = 5` i veure què passa: 
+Comencem `x_1 = 5` i veure què passa: 
 
 {.text-center.s-orange.with-arrows.no-voice} _{.n} 5_ , _{.n} [[16]] _{span.arrow} × 3 +1__ , _{.n} [[8]] _{span.arrow.reveal(when="blank-0")} ÷ 2__ , _{.n} [[4]] _{span.arrow.reveal(when="blank-1")} ÷ 2__ , _{.n} [[2]] _{span.arrow.reveal(when="blank-2")} ÷ 2__ , _{.n} [[1]] _{span.arrow.reveal(when="blank-3")} ÷ 2__ , _{.n} [[4]] _{span.arrow.reveal(when="blank-4")} × 3 +1__ , _{.n} [[2]] _{span.arrow.reveal(when="blank-5")} ÷ 2__ , _{.n} [[1]] _{span.arrow.reveal(when="blank-6")} ÷ 2__ , ... 
 
 ---
 > id: hailstone-1
 
- Sembla que després d’uns quants termes, la seqüència arriba a un “cicle”: 4, 2, 1 continuaran repetint-se una i altra vegada per sempre. 
+Sembla que després d’uns quants termes, la seqüència arriba a un “cicle”: 4, 2, 1 continuaran repetint-se una i altra vegada per sempre. 
 
- Per descomptat, podríem haver escollit un punt de partida diferent, com ${n}{n|10|5,40,1} . Aleshores, la seqüència quedaria així: 
+Per descomptat, podríem haver escollit un punt de partida diferent, com ${n}{n|10|5,40,1} . Aleshores, la seqüència quedaria així: 
 
 {.text-center.no-voice} _{span.var.s-orange(:html="hailstones(n)")}_ , _{span.s-red} _{.n} 4_ , _{.n} 2_ , _{.n} 1_ ,_ _{span.s-purple} _{.n} 4_ , _{.n} 2_ , _{.n} 1_ ,_ _{span.s-blue} _{.n} 4_ , _{.n} 2_ , _{.n} 1_ ,…_ 
 
 ---
 > id: hailstone-2
 
- Sembla que la longitud de la seqüència varia molt, però sempre acabarà en un cicle de 4, 2, 1, sense importar el primer número que triem. Fins i tot podem visualitzar els termes de la seqüència en un gràfic: 
+Sembla que la longitud de la seqüència varia molt, però sempre acabarà en un cicle de 4, 2, 1, sense importar el primer número que triem. Fins i tot podem visualitzar els termes de la seqüència en un gràfic: 
 
     x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
@@ -1541,9 +1432,9 @@
 
 ::: column.grow
 
- Totes les seqüències que segueixen aquesta fórmula recursiva s’anomenen [__Hailstone Sequences__](gloss:hailstone-sequence) , perquè semblen moure’s de forma aleatòria amunt i avall abans d’arribar al cicle 4, 2, 1, igual que les pedres de grana que es desplacen amunt i avall en un núvol abans d’estavellar-se a la Terra. 
+Totes les seqüències que segueixen aquesta fórmula recursiva s’anomenen [__Hailstone Sequences__](gloss:hailstone-sequence) , perquè semblen moure’s de forma aleatòria amunt i avall abans d’arribar al cicle 4, 2, 1, igual que les pedres de grana que es desplacen amunt i avall en un núvol abans d’estavellar-se a la Terra. 
 
- El 1937, el matemàtic [Lothar Collatz va](bio:collatz) proposar que _cada_ seqüència de pedra de calamars acabés amb un cicle de 4, 2, 1, qualsevol valor inicial que trieu. Ja heu comprovat uns quants punts d’inici més amunt i els ordinadors han provat tots els números fins a arribar `10^20` - això és 100.000 milions de milions o un 1 seguit de vint zeros. 
+El 1937, el matemàtic [Lothar Collatz va](bio:collatz) proposar que _cada_ seqüència de pedra de calamars acabés amb un cicle de 4, 2, 1, qualsevol valor inicial que trieu. Ja heu comprovat uns quants punts d’inici més amunt i els ordinadors han provat tots els números fins a arribar `10^20` - això és 100.000 milions de milions o un 1 seguit de vint zeros. 
 
 ::: column(width=240)
 
@@ -1551,50 +1442,50 @@
 
 :::
 
- Tot i això, hi ha infinitat de nombres enters. És impossible comprovar cadascun d’ells i ningú ha estat capaç de trobar una [prova](gloss:proof) que funcioni per a tots. 
+Tot i això, hi ha infinitat de nombres enters. És impossible comprovar cadascun d’ells i ningú ha estat capaç de trobar una [prova](gloss:proof) que funcioni per a tots. 
 
- Igual que la recerca de nombres perfectes estranys, encara és un problema obert de les matemàtiques. És sorprenent que aquests senzills patrons de seqüències puguin donar lloc a preguntes que han mistificat fins i tot els millors matemàtics del món durant segles! 
+Igual que la recerca de nombres perfectes estranys, encara és un problema obert de les matemàtiques. És sorprenent que aquests senzills patrons de seqüències puguin donar lloc a preguntes que han mistificat fins i tot els millors matemàtics del món durant segles! 
 
 ---
 > id: look-and-say
 
 ### La seqüència de mirades i dites 
 
- Aquí teniu una seqüència més diferent de totes les que heu vist anteriorment. Podeu trobar el patró? 
+Aquí teniu una seqüència més diferent de totes les que heu vist anteriorment. Podeu trobar el patró? 
 
 {.text-center.s-lime.s-vertical} _{span.n} 1_ , _{span.n} 11_ , _{.n} 21_ , _{.n} 1211_ , _{.n} 111221_ , _{.n} 312211_ ,… 
 
- _{button.next-step} Continuar_ 
+_{button.next-step} Continuar_ 
 
 ---
 > id: look-and-say-1
 
- Aquesta seqüència s’anomena seqüència __Look-and-Say__ , i el patró és exactament el que diu el nom: comenceu amb un 1 i cada terme següent és el que obteniu si “llegeu en veu alta” l’anterior. Aquí teniu un exemple: 
+Aquesta seqüència s’anomena seqüència __Look-and-Say__ , i el patró és exactament el que diu el nom: comenceu amb un 1 i cada terme següent és el que obteniu si “llegeu en veu alta” l’anterior. Aquí teniu un exemple: 
 
     p: x-img(src="images/look-and-say.svg" width=240 height=130 style="margin: 0 auto")
 
- Ara podeu trobar els propers termes? 
+Ara podeu trobar els propers termes? 
 
 {.text-center.s-lime.s-vertical} ..., _{.n} 312211_ , _{.n} [[13112221]]_ , _{.n} [[1113213211]]_ , ... 
 
 ---
 > id: look-and-say-2
 
- Aquesta seqüència s'utilitza sovint com a trencaclosques per desencadenar matemàtics, perquè el patró sembla completament no matemàtic. No obstant això, segons resulta, la seqüència té moltes propietats interessants. Per exemple, tots els termes acaben en [[1]] i no s’utilitza cap dígit superior a [[3]] . 
+Aquesta seqüència s'utilitza sovint com a trencaclosques per desencadenar matemàtics, perquè el patró sembla completament no matemàtic. No obstant això, segons resulta, la seqüència té moltes propietats interessants. Per exemple, tots els termes acaben en [[1]] i no s’utilitza cap dígit superior a [[3]] . 
 
 ---
 > id: look-and-say-3
 
- El matemàtic britànic [John Conway va](bio:conway) descobrir que, independentment del nombre que trieu com a valor inicial, la seqüència es dividirà en diferents "seccions" que ja no interaccionen entre elles. Conway va anomenar aquest _teorema cosmològic_ i va nomenar les diferents seccions que utilitzaven els elements químics _Hidrogen_ , _Heli_ , _Liti_ , ..., fins a _Plutoni_ . 
+El matemàtic britànic [John Conway va](bio:conway) descobrir que, independentment del nombre que trieu com a valor inicial, la seqüència es dividirà en diferents "seccions" que ja no interaccionen entre elles. Conway va anomenar aquest _teorema cosmològic_ i va nomenar les diferents seccions que utilitzaven els elements químics _Hidrogen_ , _Heli_ , _Liti_ , ..., fins a _Plutoni_ . 
 
 ---
 > id: quiz
 
 ### El Test de seqüències 
 
- Ara heu vist infinitat de seqüències matemàtiques diferents: algunes basades en formes geomètriques, algunes que segueixen fórmules específiques i altres que semblen comportar-se gairebé de forma aleatòria. 
+Ara heu vist infinitat de seqüències matemàtiques diferents: algunes basades en formes geomètriques, algunes que segueixen fórmules específiques i altres que semblen comportar-se gairebé de forma aleatòria. 
 
- En aquest qüestionari podeu combinar tots els vostres coneixements sobre seqüències. Només hi ha un objectiu: trobar el patró i calcular els dos termes següents. 
+En aquest qüestionari podeu combinar tots els vostres coneixements sobre seqüències. Només hi ha un objectiu: trobar el patró i calcular els dos termes següents. 
 
 ::: .box.f-blue
 
@@ -1622,8 +1513,9 @@
 
 > section: pascals-triangle
 > id: pascal-intro
+> translated: auto
 
- A continuació, es pot veure una piràmide de números que es crea mitjançant un patró simple: comença amb una sola "1" a la part superior, i cada cel·la següent és la suma de les dues cel·les directament a sobre. Passa el ratolí sobre algunes de les cel·les per veure com es calculen i, a continuació, empleneu les que falten: 
+A continuació, es pot veure una piràmide de números que es crea mitjançant un patró simple: comença amb una sola "1" a la part superior, i cada cel·la següent és la suma de les dues cel·les directament a sobre. Passa el ratolí sobre algunes de les cel·les per veure com es calculen i, a continuació, empleneu les que falten: 
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
@@ -1644,12 +1536,12 @@
 ---
 > id: pascal-intro-1
 
- Aquest diagrama només mostrava les dotze primeres files, però podríem continuar per sempre, afegint noves files a la part inferior. Observeu que el triangle és [[simètric | d’angle dret | equilàter]] , que us pot ajudar a calcular algunes de les cèl·lules. 
+Aquest diagrama només mostrava les dotze primeres files, però podríem continuar per sempre, afegint noves files a la part inferior. Observeu que el triangle és [[simètric | d’angle dret | equilàter]] , que us pot ajudar a calcular algunes de les cèl·lules. 
 
 ---
 > id: pascal-triangle
 
- El triangle es diu [__triangle de Pascal__](gloss:pascals-triangle) , rebut el nom del matemàtic francès [Blaise Pascal](bio:pascal) . Va ser un dels primers matemàtics europeus a investigar els seus patrons i propietats, però va ser conegut per altres civilitzacions molts segles abans: 
+El triangle es diu [__triangle de Pascal__](gloss:pascals-triangle) , rebut el nom del matemàtic francès [Blaise Pascal](bio:pascal) . Va ser un dels primers matemàtics europeus a investigar els seus patrons i propietats, però va ser conegut per altres civilitzacions molts segles abans: 
 
 ::: column(width=200)
 
@@ -1671,16 +1563,16 @@
 
 :::
 
- El triangle de Pascal es pot crear utilitzant un patró molt senzill, però està farcit de patrons i propietats sorprenents. Per això ha fascinat matemàtics a tot el món durant centenars d’anys. 
+El triangle de Pascal es pot crear utilitzant un patró molt senzill, però està farcit de patrons i propietats sorprenents. Per això ha fascinat matemàtics a tot el món durant centenars d’anys. 
 
- _{button.next-step} Continuar_ 
+_{button.next-step} Continuar_ 
 
 ---
 > id: pascal-sequences
 
 ### Trobar seqüències 
 
- A les seccions anteriors, heu vist infinitat de seqüències matemàtiques diferents. Resulta que moltes d’elles també es poden trobar al triangle de Pascal: 
+A les seccions anteriors, heu vist infinitat de seqüències matemàtiques diferents. Resulta que moltes d’elles també es poden trobar al triangle de Pascal: 
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
@@ -1706,61 +1598,61 @@
 
 ####{.btn.yellow} _{span.check(when="blank-0")}_ 
 
- Els números de la primera diagonal a banda i banda són tots [[únics | creixent | fins i tot]] . 
+Els números de la primera diagonal a banda i banda són tots [[únics | creixent | fins i tot]] . 
 
 ::: tab
 
 ####{.btn.orange} _{span.check(when="blank-1")}_ 
 
- Els nombres de la segona diagonal a banda i banda són els [[nombres enters | primes | números quadrats]] . 
+Els nombres de la segona diagonal a banda i banda són els [[nombres enters | primes | números quadrats]] . 
 
 ::: tab
 
 ####{.btn.red} _{span.check(when="blank-2")}_ 
 
- Els números de la tercera diagonal a banda i banda són els [[números]] del [[triangle | números quadrats | Nombres de Fibonacci]] . 
+Els números de la tercera diagonal a banda i banda són els [[números]] del [[triangle | números quadrats | Nombres de Fibonacci]] . 
 
 ::: tab
 
 ####{.btn.purple} _{span.check(when="blank-3")}_ 
 
- Els nombres de la quarta diagonal són els [[nombres tetraèdrics | números cúbics | potències de 2]] . 
+Els nombres de la quarta diagonal són els [[nombres tetraèdrics | números cúbics | potències de 2]] . 
 
 ::: tab
 
 ####{.btn.blue} _{span.check(when="blank-4")}_ 
 
- Si sumem tots els números seguits, les seves sumes formen una altra seqüència: les [[potències de dos | números perfectes | nombres primers]] . 
+Si sumem tots els números seguits, les seves sumes formen una altra seqüència: les [[potències de dos | números perfectes | nombres primers]] . 
 
 ::: tab
 
 ####{.btn.teal} _{span.check(when="blank-5")}_ 
 
- A cada fila que tingui un nombre prim a la seva segona cel·la, tots els números següents són [[múltiples | factors | les inverses]] d’aquest primer. 
+A cada fila que tingui un nombre prim a la seva segona cel·la, tots els números següents són [[múltiples | factors | les inverses]] d’aquest primer. 
 
 ::: tab
 
 ####{.btn.green} _{span.check(when="blank-6")}_ 
 
- El diagrama de dalt destaca les diagonals "poc profundes" de diferents colors. Si sumem els nombres a cada diagonal, obtenim els [[nombres de Fibonacci | Nombres de calamarsa | seqüència geomètrica]] . 
+El diagrama de dalt destaca les diagonals "poc profundes" de diferents colors. Si sumem els nombres a cada diagonal, obtenim els [[nombres de Fibonacci | Nombres de calamarsa | seqüència geomètrica]] . 
 
 :::
 
 ---
 > id: pascal-sequences-1
 
- Per descomptat, cadascun d’aquests patrons té una raó matemàtica que explica per què apareix. Potser en trobeu alguns! 
+Per descomptat, cadascun d’aquests patrons té una raó matemàtica que explica per què apareix. Potser en trobeu alguns! 
 
- Una altra pregunta que us podeu fer és la freqüència amb què apareix un número al triangle de Pascal. És evident que hi ha infinites moltes un, un 2 i tots els altres apareixen [[almenys dues vegades | al menys un cop | exactament dues vegades]] , _{span.reveal(when="blank-0")} a la segona diagonal a banda i banda._ 
+Una altra pregunta que us podeu fer és la freqüència amb què apareix un número al triangle de Pascal. És evident que hi ha infinites moltes un, un 2 i tots els altres apareixen [[almenys dues vegades | al menys un cop | exactament dues vegades]] , _{span.reveal(when="blank-0")} a la segona diagonal a banda i banda._ 
 
 ---
 > id: pascal-sequences-2
 
- Alguns números al mig del triangle també apareixen tres o quatre vegades. Fins i tot n’hi ha algunes que apareixen sis vegades: es poden veure tant [120](->.s120) com [3003](->.s3003) quatre vegades al triangle de dalt i apareixeran dues vegades més cadascuna a les files 120 i 3003. 
+Alguns números al mig del triangle també apareixen tres o quatre vegades. Fins i tot n’hi ha algunes que apareixen sis vegades: es poden veure tant [120](->.s120) com [3003](->.s3003) quatre vegades al triangle de dalt i apareixeran dues vegades més cadascuna a les files 120 i 3003. 
 
- Com que 3003 és un número de triangle, en realitat apareix dues vegades més a les _terceres_ diagonals del triangle, fet que fa vuit ocurrències en total. 
+Com que 3003 és un número de triangle, en realitat apareix dues vegades més a les _terceres_ diagonals del triangle, fet que fa vuit ocurrències en total. 
 
- No se sap si hi ha altres números que apareixen vuit vegades al triangle o si hi ha números que apareixen més de vuit vegades. El matemàtic nord-americà [David Singmaster va](bio:singmaster) plantejar la hipòtesi que hi ha un límit fix en la freqüència amb què es poden aparèixer nombres al triangle de Pascal, però encara no s'ha demostrat. 
+No se sap si hi ha altres números que apareixen vuit vegades al triangle o si hi ha números que apareixen més de vuit vegades. El matemàtic nord-americà [David Singmaster va](bio:singmaster) plantejar la hipòtesi que hi ha un límit fix en la freqüència amb què es poden aparèixer nombres al triangle de Pascal, però encara no s'ha demostrat. 
 
 ---
 > id: modular
@@ -1768,7 +1660,7 @@
 
 ### Divisibilitat 
 
- Alguns patrons del triangle de Pascal no són tan fàcils de detectar. Al diagrama següent, ressalteu totes les cel·les parelles: 
+Alguns patrons del triangle de Pascal no són tan fàcils de detectar. Al diagrama següent, ressalteu totes les cel·les parelles: 
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -1790,7 +1682,7 @@
 > id: modular-1
 > goals: c2 c3 c4 c5
 
- Pintar cada cel·la manualment triga molt, però aquí podeu veure què passa si ho faríeu durant moltes més files. I què passa amb les cel·les divisibles per altres nombres? 
+Pintar cada cel·la manualment triga molt, però aquí podeu veure què passa si ho faríeu durant moltes més files. I què passa amb les cel·les divisibles per altres nombres? 
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -1819,9 +1711,9 @@
 
 ::: column.grow
 
- Uau! Les cel·les de colors sempre apareixen en [[triangles | quadrats | parells]] (excepte algunes cel·les simples, que es podrien veure com a triangles de mida 1). 
+Uau! Les cel·les de colors sempre apareixen en [[triangles | quadrats | parells]] (excepte algunes cel·les simples, que es podrien veure com a triangles de mida 1). 
 
- Si continuem el patró de cèl·lules divisibles per 2, obtenim una que és molt semblant al __triangle de Sierpinski__ a la dreta. Formes com aquesta, que consisteixen en un patró senzill que sembla continuar per sempre mentre es fan cada cop més petits, s’anomenen [__fractals__](gloss:fractal) . En el futur en sabreu més ... 
+Si continuem el patró de cèl·lules divisibles per 2, obtenim una que és molt semblant al __triangle de Sierpinski__ a la dreta. Formes com aquesta, que consisteixen en un patró senzill que sembla continuar per sempre mentre es fan cada cop més petits, s’anomenen [__fractals__](gloss:fractal) . En el futur en sabreu més ... 
 
 ::: column.width(280)
 
@@ -1835,57 +1727,9 @@
 
 ### Coeficients binomials 
 
- De la qual hem de parlar una propietat més important del triangle de Pascal. Per entendre-ho, intentarem resoldre el mateix problema amb dos mètodes completament diferents i, a continuació, veurem com es relacionen. 
+De la qual hem de parlar una propietat més important del triangle de Pascal. Per entendre-ho, intentarem resoldre el mateix problema amb dos mètodes completament diferents i, a continuació, veurem com es relacionen. 
 
 {.todo} PRÒXIMAMENT 
-
-    // Galton Board, normal distribution
-    
-    
-    
-    // -------------------------------------------------------------------------
-    
-    // ## The In-and-out Puzzle
-    //
-    // > section: in-and-out
-    // > sectionStatus: dev
-    // > id: in-and-out-intro
-    
-    // http://mathworld.wolfram.com/JosephusProblem.html
-    
-    // Once there was an indecisive casting director. He would narrow down his
-    // choice for a role to twelve actors, and then be stuck. So, he made a habit
-    // of arranging the actors in a circle and going around in a circle, saying
-    // “Maybe you, not you, maybe you, not you, ...” and so on. After each “not
-    // you,” that person left the circle, so it would shrink until there was just
-    // a single person left, who would get the role.
-    
-    // A clever actress decided she would get the role. There were 10 people in
-    // her circle. Where must she stand to be the last one in the circle?
-    
-    // An actor auditioning for a different part was faced with 20 in his circle.
-    // Where should ! he stand?
-    
-    // Find a pattern that tells you where to stand no matter how many people
-    // are in the circle. Why does it work?
-    
-    // What if the director eliminates every mth person? Where should you stand
-    // in a circle of n?
-    
-    // What about “in, in, out, out,” leaving two in and then kicking two out?
-    
-    // With eight people, for example, you’ll lost the even numbers on round one,
-    // 3 and 7 on round two, and 5 on round three, making 1 the winner.
-    
-    // Cross out the first person (person 2). At this point, there’s one fewer
-    // people in the circle, and we’re beginning at person three instead of
-    // person 1. So your answer for n people should be the same as for n-1,
-    // except the people are relabeled with a number 2 greater. In other words,
-    // if for the nth circle you stands in position p, for the n+1st circle you
-    // stand in position p +2. However, this number may be larger than n+1, so
-    // we have to reduce it mod n+1 if necessary. It’s possible to get a formula
-    // for this, and that’s a nice challenge for kids who are ready for it. But
-    // for most, just elucidating the pattern will be enough.
 
 ---
 
@@ -1897,68 +1741,14 @@
 
 {.todo} PRÒXIMAMENT 
 
-    // In some sequences, such as Prime numbers or Perfect numbers, the individual
-    // terms are very special and interesting. In other sequences we may only be
-    // interested in what happens to the terms as we calculate more and more of
-    // them (what happens to xn as n gets very large). Here are a few examples
-    // of what could happen (the numbers, for clarity, are represented by dots):
     
-    // This sequence gets closer and closer to a particular number. We say that it converges.
-    // This sequence doesn’t converge, since it doesn’t keep getting closer to one single number.
-    // This sequence keeps on growing. We say that it diverges.
     
-    // Convergence means that the terms keep getting closer to a particular number,
-    // and divergence means that the terms keep getting bigger, whether towards
-    // infinity or negative infinity. Remember that the sequence of ratios of
-    // consecutive Fibonacci numbers above converged to the golden ratio.
     
-    // Unfortunately “getting closer” is not a particularly precise description
-    // in mathematics. A sequence could for example first get very big and then
-    // turn around and converge. We don’t really care about what happens at the
-    // beginning, only what happens to the most distant terms. All of the
-    // following sequences converge:
     
-    // Here is how mathematicians define the notion of convergence precisely,
-    // and this is one of the most important definitions in all of mathematics:
     
-    // A sequence with terms x1, x2, x3, … tends to a limit y if we can think of
-    // any tiny positive number, let us call it ε (the Greek letter Epsilon), and
-    // if eventually all terms of the sequence will be within ε of the limit y.
-    // This means that there is some (sometimes very big) integer N so that xN,
-    // xN+1, xN+2, … are all between y – ε and y + ε.
     
-    // Using special mathematical notation, it is possible to express this
-    // definition without any words. We use ∀ meaning “for all”, ∃ meaning
-    // “there exists” and : meaning “such that”:
     
-    // ∀ ε ∃ N : |xn – y| < ε ∀ n > N
-    // For all ε there exists a number N such that the distance |xn – y|
-    // between xn and y is less than ε for all n > N.
     
-    // Sequences and their convergence is studied in an area of mathematics
-    // called Analysis. We use sequences to define crucial concepts in mathematics
-    // such as series, continuity and differentiation.
     
-    // Litov’s Mean Value Theorem
     
-    // Start with two numbers, say 8 and 2.
-    // Let’s generate a sequence where the next number is the mean of the previous two numbers.
-    // So the next number is half of (8+2), and the sequence continues: 8,2,5
-    // The next number is half of (2+5), and the sequence continues: 8,2,5,3.5
-    // What would happen if you continued this process indefinitely?
-    // Choose a few pairs of starting numbers and repeat the process.
-    // Each time, your sequence should get closer and closer to a value which we call the limit.
-    // Can you find a relationship between your starting numbers and the limit of the sequence they generate?
-    // Can you explain why this happens?
-    // Now start with three numbers.
-    // This time, we can generate a sequence where the next number is the mean of the last three numbers.
-    // Check you agree that if we start with 4,1,10, the next number is 5, and the number after that is 163.
-    // What would happen if you continued this process indefinitely?
-    // Choose some more sets of three starting numbers.
-    // Can you find a relationship between your starting numbers and the limit of the sequence they generate?
-    // Can you explain why this happens?
     
-    // After a while of playing with the numbers on a spreadsheet I have
-    // discovered that the formula to find the “limiting value” for 2 starting
-    // numbers is: (x+2y)/3
-    // where x is the first number chosen and y is the second number chosen.

@@ -4,8 +4,9 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
- Când priviți în jurul naturii, este posibil să fi observat plante complicate ca acestea: 
+Când priviți în jurul naturii, este posibil să fi observat plante complicate ca acestea: 
 
 ::: column.r(width=320)
 
@@ -28,15 +29,15 @@
 ---
 > id: fern
 
- În matematică, numim această proprietate __auto-asemănare__ , iar formele care o au se numesc [__fractale__](gloss:fractal) . Sunt unele dintre cele mai frumoase și mai bizare obiecte din toată matematica. 
+În matematică, numim această proprietate __auto-asemănare__ , iar formele care o au se numesc [__fractale__](gloss:fractal) . Sunt unele dintre cele mai frumoase și mai bizare obiecte din toată matematica. 
 
- Pentru a ne crea propriile fractale, trebuie să începem cu un model simplu și apoi să îl repetăm iar și iar, la scări mai mici. 
+Pentru a ne crea propriile fractale, trebuie să începem cu un model simplu și apoi să îl repetăm iar și iar, la scări mai mici. 
 
 ::: column.grow
 
- Unul dintre cele mai simple modele ar putea fi un [{.pill.red} segment de linie](target:s1) , cu [{.pill.blue} încă două segmente care se](target:s2) ramifică dintr-un capăt. Dacă repetăm acest tipar, ambele segmente albastre vor avea și alte două ramuri la capetele lor. 
+Unul dintre cele mai simple modele ar putea fi un [{.pill.red} segment de linie](target:s1) , cu [{.pill.blue} încă două segmente care se](target:s2) ramifică dintr-un capăt. Dacă repetăm acest tipar, ambele segmente albastre vor avea și alte două ramuri la capetele lor. 
 
- Puteți muta [punctele albastre](target:dot) pentru a schimba lungimea și unghiul tuturor ramurilor. Apoi măriți numărul de iterații folosind [glisorul de](->#fern-slider) mai jos. 
+Puteți muta [punctele albastre](target:dot) pentru a schimba lungimea și unghiul tuturor ramurilor. Apoi măriți numărul de iterații folosind [glisorul de](->#fern-slider) mai jos. 
 
 {.reveal(when="slider-0")} În funcție de poziția ramurilor, puteți face tipare complet diferite - arătând ca [feriga de](action:set(130,228,197,184)) deasupra, un [copac](action:set(160,186,200,186)) sau [pentagoni cuibăriti](action:set(113,235,232,238)) . Ce mai găsești? [Continua](btn:next) 
 
@@ -60,7 +61,7 @@
 
 ::: column.grow(parent="right")
 
- Un alt fractal celebru este [__triunghiul Sierpinski__](gloss:sierpinski-triangle) . În acest caz, începem cu un triunghi mare, echilateral și apoi tăiem în mod repetat triunghiuri mai mici din părțile rămase. 
+Un alt fractal celebru este [__triunghiul Sierpinski__](gloss:sierpinski-triangle) . În acest caz, începem cu un triunghi mare, echilateral și apoi tăiem în mod repetat triunghiuri mai mici din părțile rămase. 
 
 {.reveal(when="slider=0")} Observați cum forma finală este alcătuită din [trei copii identice ale sale](target:x) , și fiecare dintre acestea este alcătuită din copii chiar mai mici ale întregului triunghi! Puteți continua să faceți zoom-ul în triunghi pentru totdeauna, iar modelele și formele vor continua să se repete. 
 
@@ -84,9 +85,9 @@
 ---
 > id: real
 
- Plantele de la începutul acestui capitol _arată la_ fel ca fractalele, dar este clar imposibil să creezi fractali _adevărați_ în viața reală. Dacă continuăm să repetăm același model de mai multe ori, din ce în ce mai mici, am ajunge în cele din urmă la celule, molecule sau atomi care nu mai pot fi împărțiți. 
+Plantele de la începutul acestui capitol _arată la_ fel ca fractalele, dar este clar imposibil să creezi fractali _adevărați_ în viața reală. Dacă continuăm să repetăm același model de mai multe ori, din ce în ce mai mici, am ajunge în cele din urmă la celule, molecule sau atomi care nu mai pot fi împărțiți. 
 
- Cu toate acestea, folosind matematica, ne putem gândi la proprietățile pe care le-ar avea fractalii reali - iar acestea sunt foarte surprinzătoare ... [Continuă](btn:next) 
+Cu toate acestea, folosind matematica, ne putem gândi la proprietățile pe care le-ar avea fractalii reali - iar acestea sunt foarte surprinzătoare ... [Continuă](btn:next) 
 
 ---
 > id: dimension
@@ -99,7 +100,7 @@
 
 ::: column.grow
 
- În primul rând, să ne gândim la dimensiunea fractalilor. O linie are dimensiunea [[1]] . _{span.reveal(when="blank-0")} Când îl scalzi cu un factor de 2, lungimea acestuia crește cu un factor de `2^1 = 2` . Evident!_ 
+În primul rând, să ne gândim la dimensiunea fractalilor. O linie are dimensiunea [[1]] . _{span.reveal(when="blank-0")} Când îl scalzi cu un factor de 2, lungimea acestuia crește cu un factor de `2^1 = 2` . Evident!_ 
 
 :::
 
@@ -112,7 +113,7 @@
 
 ::: column.grow
 
- Un pătrat are dimensiunea [[2]] . _{span.reveal(when="blank-0")} Când îl scalzi cu un factor de 2, suprafața sa crește cu un factor de `2^2 =` [[4]] ._ 
+Un pătrat are dimensiunea [[2]] . _{span.reveal(when="blank-0")} Când îl scalzi cu un factor de 2, suprafața sa crește cu un factor de `2^2 =` [[4]] ._ 
 
 :::
 
@@ -125,7 +126,7 @@
 
 ::: column.grow
 
- Un cub are dimensiunea [[3]] . _{span.reveal(when="blank-0")} Când îl scalzi cu un factor de 2, volumul său crește cu un factor de `2^3 =` [[8]] ._ _{span.reveal(when="blank-1")} Observați că cubul mai mare din imagine este format din 8 copii ale celui mai mic!_ 
+Un cub are dimensiunea [[3]] . _{span.reveal(when="blank-0")} Când îl scalzi cu un factor de 2, volumul său crește cu un factor de `2^3 =` [[8]] ._ _{span.reveal(when="blank-1")} Observați că cubul mai mare din imagine este format din 8 copii ale celui mai mic!_ 
 
 :::
 
@@ -138,7 +139,7 @@
 
 ::: column.grow
 
- Acum să aruncăm o privire asupra triunghiului Sierpinski. Dacă îl scalăm cu un factor de 2, puteți vedea că „zona” crește cu un factor de [[3]] . 
+Acum să aruncăm o privire asupra triunghiului Sierpinski. Dacă îl scalăm cu un factor de 2, puteți vedea că „zona” crește cu un factor de [[3]] . 
 
 {.reveal(when="blank-0")} Să spunem că _d_ este dimensiunea triunghiului Sierpinski. Folosind același model ca mai sus, obținem `2^d = 3` . Cu alte cuvinte, _d_ = [[`log_2(3)`|`log_3(2)`]] _{span.reveal(when="blank-1")} ≈ 1.585 ..._ 
 
@@ -147,24 +148,24 @@
 ---
 > id: dimension-4
 
- Dar stai ... cum poate avea ceva o dimensiune care nu este un număr întreg? Pare imposibil, dar aceasta este doar una dintre proprietățile ciudate ale fractalilor. De fapt, acest lucru le dă numele fractalilor: au o __dimensiune fracțională__ . 
+Dar stai ... cum poate avea ceva o dimensiune care nu este un număr întreg? Pare imposibil, dar aceasta este doar una dintre proprietățile ciudate ale fractalilor. De fapt, acest lucru le dă numele fractalilor: au o __dimensiune fracțională__ . 
 
- Cu fiecare iterație, eliminăm o parte din aria triunghiului Sierpinski. Dacă am putea face acest lucru de nenumărate ori, nu ar mai exista nicio zonă: de aceea triunghiul Sierpinski este ceva între o zonă bidimensională și o linie unidimensională. 
+Cu fiecare iterație, eliminăm o parte din aria triunghiului Sierpinski. Dacă am putea face acest lucru de nenumărate ori, nu ar mai exista nicio zonă: de aceea triunghiul Sierpinski este ceva între o zonă bidimensională și o linie unidimensională. 
 
 ::: .theorem
 
- În timp ce mulți fractali sunt _similari cu sine_ , o definiție mai bună este aceea că __fractalele__ sunt forme care au o __dimensiune non-integrală__ . 
+În timp ce mulți fractali sunt _similari cu sine_ , o definiție mai bună este aceea că __fractalele__ sunt forme care au o __dimensiune non-integrală__ . 
 
 :::
 
- [Continua](btn:next) 
+[Continua](btn:next) 
 
 ---
 > id: snowflake
 
 ### Fulgul de zăpadă Koch 
 
- Există multe forme în natură care arată ca fractale. Am văzut deja unele plante la începutul acestui capitol. Alte exemple excelente sunt fulgii de zăpadă și cristalele de gheață: 
+Există multe forme în natură care arată ca fractale. Am văzut deja unele plante la începutul acestui capitol. Alte exemple excelente sunt fulgii de zăpadă și cristalele de gheață: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -191,11 +192,11 @@
 ---
 > id: koch
 
- Pentru a crea propriul nostru fulg de zăpadă fractală, trebuie să găsim încă o dată o procedură simplă pe care să o putem aplica din nou. 
+Pentru a crea propriul nostru fulg de zăpadă fractală, trebuie să găsim încă o dată o procedură simplă pe care să o putem aplica din nou. 
 
 ::: column.grow
 
- Ca și triunghiul Sierpinski, să începem cu un singur triunghi echilateral. Cu toate acestea, în loc să _îndepărtăm_ triunghiuri mai mici la fiecare pas, _adăugăm_ triunghiuri mai mici de-a lungul marginii. Lungimea laterală a fiecărui triunghi este [[`1/3`|`1/4`|`1/2`]] a triunghiurilor din pasul precedent. 
+Ca și triunghiul Sierpinski, să începem cu un singur triunghi echilateral. Cu toate acestea, în loc să _îndepărtăm_ triunghiuri mai mici la fiecare pas, _adăugăm_ triunghiuri mai mici de-a lungul marginii. Lungimea laterală a fiecărui triunghi este [[`1/3`|`1/4`|`1/2`]] a triunghiurilor din pasul precedent. 
 
 {.reveal(when="blank-0")} Forma rezultată se numește [__fulgul de zăpadă Koch__](gloss:koch-snowflake) , numit după matematicianul suedez [Helge von Koch](bio:koch) . Observați, încă o dată, că [secțiunile mici ale](target:t2) marginii fulgului de zăpadă arată exact la fel ca [secțiunile mai mari](target:t1) . 
 
@@ -218,7 +219,7 @@
 
 ::: column.grow
 
- Când scalăm un segment de margine al fulgului de zăpadă Koch cu un factor de 3, lungimea acestuia se [[cadește | triplete | duble]] . 
+Când scalăm un segment de margine al fulgului de zăpadă Koch cu un factor de 3, lungimea acestuia se [[cadește | triplete | duble]] . 
 
 {.reveal(when="blank-0")} Folosind aceeași relație între dimensiuni și factori de scară ca mai sus, obținem ecuația [[`3^d=4`|`2^d=4`|`2^d=3`|`4^d=3`]] . _{span.reveal(when="blank-1")} Aceasta înseamnă că dimensiunea Flocului de zăpadă Koch este `§d = log_3(4) ≈ 1.262` ._ 
 
@@ -231,7 +232,7 @@
 
 #### Zonă _{span.check(when="blank-6")}_ 
 
- Crearea fulgilor de nea Koch este aproape ca o [secvență recursivă](gloss:sequence-recursive) : cunoaștem forma de pornire (un triunghi) și știm cum să trecem de la un termen la altul (adăugând mai multe triunghiuri pe fiecare margine): 
+Crearea fulgilor de nea Koch este aproape ca o [secvență recursivă](gloss:sequence-recursive) : cunoaștem forma de pornire (un triunghi) și știm cum să trecem de la un termen la altul (adăugând mai multe triunghiuri pe fiecare margine): 
 
 ::: column(width=140)
 
@@ -271,7 +272,7 @@
 
 ::: column.grow
 
- De asemenea, putem încerca să calculăm perimetrul fulgului de zăpadă Koch. După cum am văzut deja, lungimea perimetrului se modifică cu un factor de [[`4/3`|`3/4`|`1/4`]] la fiecare pas. 
+De asemenea, putem încerca să calculăm perimetrul fulgului de zăpadă Koch. După cum am văzut deja, lungimea perimetrului se modifică cu un factor de [[`4/3`|`3/4`|`1/4`]] la fiecare pas. 
 
 {.reveal(when="blank-8")} Aceasta înseamnă că, încă o dată, avem o serie geometrică - dar, în acest caz, [[nu converg | converg spre 0 | nu are un prim termen]] . _{span.reveal(when="blank-9")} Aceasta înseamnă că perimetrul fulgului de zăpadă Koch este de fapt __infinit de lung__ !_ 
 
@@ -290,9 +291,9 @@
 
 ::: column.grow
 
- Este aproape de neconceput că poți avea o formă cu o zonă _finită_ și, de asemenea, o circumferință _infinită_ - dar aceasta este doar una dintre numeroasele proprietăți neașteptate ale fractalilor. 
+Este aproape de neconceput că poți avea o formă cu o zonă _finită_ și, de asemenea, o circumferință _infinită_ - dar aceasta este doar una dintre numeroasele proprietăți neașteptate ale fractalilor. 
 
- Poți veni cu alte modalități de a-ți crea propriile fractale? [Continua](btn:next) 
+Poți veni cu alte modalități de a-ți crea propriile fractale? [Continua](btn:next) 
 
 ::: column(width=352)
 
@@ -307,7 +308,7 @@
 
 ### Biserica Menger 
 
- Fractalele nu trebuie să fie „plane”, ca multe dintre exemplele de mai sus. Unul dintre cei mai faimoși fractali care arată tridimensional este __buretele Menger__ , numit după matematicianul [Karl Menger](bio:menger) care l-a descris pentru prima dată în 1926. 
+Fractalele nu trebuie să fie „plane”, ca multe dintre exemplele de mai sus. Unul dintre cei mai faimoși fractali care arată tridimensional este __buretele Menger__ , numit după matematicianul [Karl Menger](bio:menger) care l-a descris pentru prima dată în 1926. 
 
 ::: column(width=320 parent="right")
 
@@ -316,7 +317,7 @@
 
 ::: column.grow
 
- Începem cu un cub solid și găurim în mod repetat găuri mai mici și mai mici în laturile sale. Fiecare nouă iterație a găurilor are [[`1/3`|`1/2`|`1/4`]] lățimea iterației anterioare a găurilor. 
+Începem cu un cub solid și găurim în mod repetat găuri mai mici și mai mici în laturile sale. Fiecare nouă iterație a găurilor are [[`1/3`|`1/2`|`1/4`]] lățimea iterației anterioare a găurilor. 
 
 {.reveal(when="blank-0")} A `3×3×3` cubul este format din 27 de cuburi mai mici, dar aici am eliminat unele dintre acestea. Buretele Menger este format din [[20 de]] exemplare, care sunt de 3 ori mai mici. 
 
@@ -331,9 +332,9 @@
 
 ### Coasta fractală 
 
- Una dintre caracteristicile cheie ale tuturor fractalelor pe care le-am văzut până acum este că puteți „mări” pentru totdeauna și veți găsi întotdeauna modele noi. În jurul anului 1920, matematicianul britanic [Lewis Fry Richardson și-a](bio:richardson) dat seama că același lucru este valabil și pentru granița sau coasta multor țări. 
+Una dintre caracteristicile cheie ale tuturor fractalelor pe care le-am văzut până acum este că puteți „mări” pentru totdeauna și veți găsi întotdeauna modele noi. În jurul anului 1920, matematicianul britanic [Lewis Fry Richardson și-a](bio:richardson) dat seama că același lucru este valabil și pentru granița sau coasta multor țări. 
 
- Începeți cu forma de bază a țării și, pe măsură ce măriți, adăugați orificii de râu, golfuri și estuare, apoi stânci individuale, stânci, pietricele și așa mai departe: 
+Începeți cu forma de bază a țării și, pe măsură ce măriți, adăugați orificii de râu, golfuri și estuare, apoi stânci individuale, stânci, pietricele și așa mai departe: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -357,18 +358,18 @@
 
 :::
 
- [Continua](btn:next) 
+[Continua](btn:next) 
 
 ---
 > id: coastlines-1
 
 ::: column.grow
 
- Aceasta este o problemă semnificativă atunci când încercați să calculați lungimea graniței unei țări - cum decideți cât de mult să măriți și care sunt locurile și care sunt incluse? 
+Aceasta este o problemă semnificativă atunci când încercați să calculați lungimea graniței unei țări - cum decideți cât de mult să măriți și care sunt locurile și care sunt incluse? 
 
- Un mod în care am putea măsura lungimea liniei de coastă a Marii Britanii, de exemplu, este să luăm un conducător lung, să parcurgem toate plajele și apoi să adăugăm toate distanțele. 
+Un mod în care am putea măsura lungimea liniei de coastă a Marii Britanii, de exemplu, este să luăm un conducător lung, să parcurgem toate plajele și apoi să adăugăm toate distanțele. 
 
- Dacă domnitorul este ${rulers[index]}{index|0|0,8,1} lungime de km, trebuie să-l folosim ${count} ori, astfel încât să obținem o coastă totală de ${count} × ${rulers[index]} = ${count * rulers[index]} km. 
+Dacă domnitorul este ${rulers[index]}{index|0|0,8,1} lungime de km, trebuie să-l folosim ${count} ori, astfel încât să obținem o coastă totală de ${count} × ${rulers[index]} = ${count * rulers[index]} km. 
 
 {.reveal(when="var-0")} Putem continua să mergem, cu stăpâni mai mici și mai mici, și de fiecare dată rezultatul nostru pentru lungimea coastei ar fi ceva mai lung. La fel ca și Fulgul de zăpadă de Koch înainte, se pare că coasta Marii Britanii este infinit de lungă! Acest lucru este adesea numit __paradoxul litoralului__ . [Continua](btn:next) 
 
@@ -381,7 +382,7 @@
 ---
 > id: coastline-grid
 
- Câteva decenii mai târziu, matematicianul [Benoit Mandelbrot](bio:mandelbrot) s-a împiedicat de lucrările lui Richardson într-o carte de bibliotecă aruncată, în timp ce lucra la IBM. El și-a recunoscut semnificația și, de asemenea, modul în care se raportează la cercetări mai recente despre fractale și dimensiuni. 
+Câteva decenii mai târziu, matematicianul [Benoit Mandelbrot](bio:mandelbrot) s-a împiedicat de lucrările lui Richardson într-o carte de bibliotecă aruncată, în timp ce lucra la IBM. El și-a recunoscut semnificația și, de asemenea, modul în care se raportează la cercetări mai recente despre fractale și dimensiuni. 
 
 ::: column(width=340)
 
@@ -390,7 +391,7 @@
 
 ::: column.grow
 
- Litoralul Marii Britanii cu siguranță „arată” fractal, dar nu este _similar cu sine_ , ca și alte fractale pe care le-am văzut anterior. Pentru a găsi dimensiunea acesteia, putem să o desenăm pe o grilă și să numărăm numărul de celule cu care se intersectează. 
+Litoralul Marii Britanii cu siguranță „arată” fractal, dar nu este _similar cu sine_ , ca și alte fractale pe care le-am văzut anterior. Pentru a găsi dimensiunea acesteia, putem să o desenăm pe o grilă și să numărăm numărul de celule cu care se intersectează. 
 
 {.r.reveal(when="slider-0")} Inițial, există __{.pill.yellow} 88 de__ celule care se intersectează. Dacă am scala linia de coastă cu un factor de 2, există __{.pill.yellow} 197 de__ celule care se intersectează - mai mult de două ori mai multe! [Continua](btn:next) 
 
@@ -403,25 +404,23 @@
 ---
 > id: coastline-dimension-1
 
- Dacă repetăm acest lucru cu grile mai mari, am constata că dimensiunea coastei britanice este de fapt aproximativ 1,21. Mandelbrot și-a dat seama că această dimensiune fractală este și o măsură a __rugozității__ unei forme - un concept nou, pentru care a găsit aplicații importante în multe alte domenii ale matematicii și științei. 
+Dacă repetăm acest lucru cu grile mai mari, am constata că dimensiunea coastei britanice este de fapt aproximativ 1,21. Mandelbrot și-a dat seama că această dimensiune fractală este și o măsură a __rugozității__ unei forme - un concept nou, pentru care a găsit aplicații importante în multe alte domenii ale matematicii și științei. 
 
 ---
 > id: nature
 
 ### Mai multe fracturi în natură și tehnologie 
 
- În timp ce fractalii adevărați nu pot apărea niciodată în natură, există multe obiecte care arată _aproape_ ca fractale. Am văzut deja plante, fulgi de zăpadă și linii de coastă și iată câteva alte exemple: 
+În timp ce fractalii adevărați nu pot apărea niciodată în natură, există multe obiecte care arată _aproape_ ca fractale. Am văzut deja plante, fulgi de zăpadă și linii de coastă și iată câteva alte exemple: 
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC" alt="Mountain range")
 
 {.caption} Lanțul montan din Asia centrală 
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA" alt="River delta")
 
 {.caption} Delta râului Ganges în India 
@@ -434,14 +433,12 @@
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA" alt="Blood vessels")
 
 {.caption} Vasele de sânge din retină 
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey" alt="Grand Canyon")
 
 {.caption} Grand Canyon în SUA 
@@ -454,26 +451,22 @@
 
 :::
 
- Toate aceste obiecte ar putea apărea complet aleatoare, dar, la fel ca fractalele, există un model de bază care determină modul în care sunt formate. Matematica ne poate ajuta să înțelegem mai bine formele, iar fractalii au aplicații în domenii precum medicina, biologia, geologia și meteorologia. [Continua](btn:next) 
-
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
+Toate aceste obiecte ar putea apărea complet aleatoare, dar, la fel ca fractalele, există un model de bază care determină modul în care sunt formate. Matematica ne poate ajuta să înțelegem mai bine formele, iar fractalii au aplicații în domenii precum medicina, biologia, geologia și meteorologia. [Continua](btn:next) 
 
 ---
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox alt="Computer-generated fractal terrain with mountains and water")
 
 {.caption} Teren fractal generat de computer 
 
 ::: column.grow
 
- De asemenea, putem folosi fractali pentru a crea „copii” realiste, de exemplu, ca peisaje și texturi utilizate în jocuri video sau filme generate de computer. Apa, munții și norii din această imagine sunt realizate integral de un computer, cu ajutorul fractalilor! 
+De asemenea, putem folosi fractali pentru a crea „copii” realiste, de exemplu, ca peisaje și texturi utilizate în jocuri video sau filme generate de computer. Apa, munții și norii din această imagine sunt realizate integral de un computer, cu ajutorul fractalilor! 
 
- Și chiar putem inversa acest proces pentru a comprima imagini digitale, pentru a reduce dimensiunea fișierului lor. Primii algoritmi au fost dezvoltați de Michael Barnsley și Alan Sloan în anii '80, iar altele noi sunt încă cercetate în prezent. 
+Și chiar putem inversa acest proces pentru a comprima imagini digitale, pentru a reduce dimensiunea fișierului lor. Primii algoritmi au fost dezvoltați de Michael Barnsley și Alan Sloan în anii '80, iar altele noi sunt încă cercetate în prezent. 
 
 :::
 
@@ -483,10 +476,11 @@
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
- Unul dintre fractalele pe care le-am văzut în capitolul precedent a fost [__triunghiul Sierpinski__](gloss:sierpinski-triangle) , care poartă numele matematicianului polonez [Wacław Sierpiński](bio:sierpinski) . Poate fi creat începând cu un triunghi mare, echilateral și apoi tăind în mod repetat triunghiuri mai mici din centrul său. 
+Unul dintre fractalele pe care le-am văzut în capitolul precedent a fost [__triunghiul Sierpinski__](gloss:sierpinski-triangle) , care poartă numele matematicianului polonez [Wacław Sierpiński](bio:sierpinski) . Poate fi creat începând cu un triunghi mare, echilateral și apoi tăind în mod repetat triunghiuri mai mici din centrul său. 
 
 {.r.reveal(when="slider-0")} Wacław Sierpiński a fost primul matematician care s-a gândit la proprietățile acestui triunghi, dar a apărut cu multe secole mai devreme în lucrări de artă, modele și mozaicuri. 
 
@@ -502,31 +496,27 @@
 ---
 > id: sierpinski-history
 
- Iată câteva exemple de plăci de podele din diferite biserici din Roma: 
+Iată câteva exemple de plăci de podele din diferite biserici din Roma: 
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it" alt="Mosaic Floor with Sierpinski Triangle")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire" alt="Mosaic Floor with Sierpinski Triangle")
 
 :::
 
- După cum se dovedește, triunghiul Sierpinski apare într-o gamă largă de alte domenii ale matematicii și există multe moduri diferite de a-l genera. În acest capitol, vom explora unele dintre ele! [Continua](btn:next) 
+După cum se dovedește, triunghiul Sierpinski apare într-o gamă largă de alte domenii ale matematicii și există multe moduri diferite de a-l genera. În acest capitol, vom explora unele dintre ele! [Continua](btn:next) 
 
 ---
 > id: pascal
@@ -534,7 +524,7 @@
 
 ### Triunghiul lui Pascal 
 
- S-ar putea să vă amintiți deja triunghiul Sierpinski din capitolul nostru despre [__triunghiul lui Pascal__](gloss:pascals-triangle) . Aceasta este o piramidă de număr în care fiecare număr este suma celor două numere de mai sus. Atingeți toate numerele _uniforme_ din triunghiul de mai jos, pentru a le evidenția - și vedeți dacă observați un model: 
+S-ar putea să vă amintiți deja triunghiul Sierpinski din capitolul nostru despre [__triunghiul lui Pascal__](gloss:pascals-triangle) . Aceasta este o piramidă de număr în care fiecare număr este suma celor două numere de mai sus. Atingeți toate numerele _uniforme_ din triunghiul de mai jos, pentru a le evidenția - și vedeți dacă observați un model: 
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
@@ -552,9 +542,9 @@
 ---
 > id: pascal-1
 
- Triunghiul lui Pascal poate fi continuat în jos pentru totdeauna, iar modelul Sierpinski va continua cu triunghiuri mai mari și mai mari. Puteți vedea deja începutul unui triunghi și mai mare, începând din rândul 16. 
+Triunghiul lui Pascal poate fi continuat în jos pentru totdeauna, iar modelul Sierpinski va continua cu triunghiuri mai mari și mai mari. Puteți vedea deja începutul unui triunghi și mai mare, începând din rândul 16. 
 
- Dacă două celule adiacente sunt divizibile cu 2, atunci suma lor din celula de dedesubt trebuie să fie divizibilă și de 2 - de aceea putem obține triunghiuri colorate (sau celule unice). Desigur, putem încerca și colorarea tuturor celulelor divizibile cu _alte_ numere _decât 2_ . Ce crezi că se va întâmpla în acele cazuri? [Continua](btn:next) 
+Dacă două celule adiacente sunt divizibile cu 2, atunci suma lor din celula de dedesubt trebuie să fie divizibilă și de 2 - de aceea putem obține triunghiuri colorate (sau celule unice). Desigur, putem încerca și colorarea tuturor celulelor divizibile cu _alte_ numere _decât 2_ . Ce crezi că se va întâmpla în acele cazuri? [Continua](btn:next) 
 
 ---
 > id: pascal-large
@@ -563,7 +553,7 @@
       canvas.pascal(width=960 height=840)
       .label Divisible by #[span.circled.var(style="background: ${gradient[n - 2]}") ${n}]:
 
- Aici puteți vedea o versiune minusculă a primelor 128 de rânduri ale triunghiului lui Pascal. Am evidențiat toate celulele care sunt divizibile cu ${n}{n|2|2,40,1} - ce observi? 
+Aici puteți vedea o versiune minusculă a primelor 128 de rânduri ale triunghiului lui Pascal. Am evidențiat toate celulele care sunt divizibile cu ${n}{n|2|2,40,1} - ce observi? 
 
 {.reveal(when="var-0")} Pentru fiecare număr, obținem un model triunghiular diferit similar triunghiului Sierpinski. Modelul este deosebit de regulat dacă alegem un [[număr prim | număr triunghi | Numărul Fibonacci]] . _{span.reveal(when="blank-0")} Dacă numărul are _mulți_ factori primi diferiți, modelul arată mai aleatoriu._ 
 
@@ -587,7 +577,7 @@
 
 ::: column.grow
 
- Aici puteți vedea cele trei vertexuri ale unui triunghi echilateral. Atingeți oriunde în zona gri pentru a crea un al patrulea punct. 
+Aici puteți vedea cele trei vertexuri ale unui triunghi echilateral. Atingeți oriunde în zona gri pentru a crea un al patrulea punct. 
 
 {.r.reveal(when="point")} Să jucăm un joc simplu: alegem unul dintre vârfurile triunghiului la întâmplare, desenăm un segment de linie între punctul nostru și vertex, apoi găsim [{.pill.red} punctul mediu](target:p1) al acelui segment. [Continua](btn:next) 
 
@@ -603,9 +593,9 @@
 > id: fractal-builder
 > goals: s1 s2 shape play
 
- Acest proces se numește __Jocul haosului__ . S-ar putea să existe câteva puncte rătăcite la început, dar dacă repetați aceiași pași de mai multe ori, distribuția punctelor începe să arate exact ca triunghiul Sierpinski! 
+Acest proces se numește __Jocul haosului__ . S-ar putea să existe câteva puncte rătăcite la început, dar dacă repetați aceiași pași de mai multe ori, distribuția punctelor începe să arate exact ca triunghiul Sierpinski! 
 
- Există multe alte versiuni ale acestuia - de exemplu, am putea începe cu un pătrat sau un pentagon, am putea adăuga reguli suplimentare, cum ar fi să nu putem selecta același vertex de două ori la rând sau am putea alege următorul punct la un raport în afară de `§1/2` de-a lungul segmentului. În unele dintre aceste cazuri, vom primi doar o distribuție aleatorie a punctelor, dar în alte cazuri, dezvăluim și mai multe fractale: 
+Există multe alte versiuni ale acestuia - de exemplu, am putea începe cu un pătrat sau un pentagon, am putea adăuga reguli suplimentare, cum ar fi să nu putem selecta același vertex de două ori la rând sau am putea alege următorul punct la un raport în afară de `§1/2` de-a lungul segmentului. În unele dintre aceste cazuri, vom primi doar o distribuție aleatorie a punctelor, dar în alte cazuri, dezvăluim și mai multe fractale: 
 
     include components/chaos-game
 
@@ -617,9 +607,9 @@
 
 ### Automate celulare 
 
- Un __automat celular__ este o grilă formată din mai multe celule individuale. Fiecare celulă poate fi în „stări” diferite (de ex. Culori diferite), iar starea fiecărei celule este determinată de celulele înconjurătoare. 
+Un __automat celular__ este o grilă formată din mai multe celule individuale. Fiecare celulă poate fi în „stări” diferite (de ex. Culori diferite), iar starea fiecărei celule este determinată de celulele înconjurătoare. 
 
- În exemplul nostru, fiecare celulă poate fi fie alb sau negru. Începem cu un rând care conține doar un singur pătrat negru. În fiecare rând care urmează, culoarea fiecărei celule este determinată de cele trei celule imediat mai sus. Atingeți cele opt opțiuni posibile de mai jos pentru a-și întoarce culoarea - puteți găsi un set de reguli care creează un model similar triunghiului Sierpinski? 
+În exemplul nostru, fiecare celulă poate fi fie alb sau negru. Începem cu un rând care conține doar un singur pătrat negru. În fiecare rând care urmează, culoarea fiecărei celule este determinată de cele trei celule imediat mai sus. Atingeți cele opt opțiuni posibile de mai jos pentru a-și întoarce culoarea - puteți găsi un set de reguli care creează un model similar triunghiului Sierpinski? 
 
     figure: x-automaton(size=28)
 
@@ -630,9 +620,9 @@
 
 ::: column.grow
 
- Automatele celulare arată cât de complexe pot fi create tipare după reguli foarte simple - la fel ca fractalele. Multe procese din natură respectă, de asemenea, reguli simple, dar produc sisteme incredibil de complexe. 
+Automatele celulare arată cât de complexe pot fi create tipare după reguli foarte simple - la fel ca fractalele. Multe procese din natură respectă, de asemenea, reguli simple, dar produc sisteme incredibil de complexe. 
 
- În unele cazuri, acest lucru poate duce la apariția unor tipare care arată la fel ca automatele celulare, de exemplu culorile de pe coaja acestui melc. 
+În unele cazuri, acest lucru poate duce la apariția unor tipare care arată la fel ca automatele celulare, de exemplu culorile de pe coaja acestui melc. 
 
 ::: column(width=320)
 
@@ -647,7 +637,7 @@
 
 ### Tetrahedra Sierpinski 
 
- Există multe variante ale triunghiului Sierpinski și alte fractale cu proprietăți similare și procese de creare. Unele arată în două dimensiuni, cum ar fi _covorul Sierpinski pe_ care l-ai văzut mai sus. Alții arată tridimensional, ca aceste exemple: 
+Există multe variante ale triunghiului Sierpinski și alte fractale cu proprietăți similare și procese de creare. Unele arată în două dimensiuni, cum ar fi _covorul Sierpinski pe_ care l-ai văzut mai sus. Alții arată tridimensional, ca aceste exemple: 
 
 ::: column(width=320)
 
@@ -670,8 +660,9 @@
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
- Toate fractalele pe care le-am văzut în capitolele anterioare au fost create folosind un proces de __iterație__ : începeți cu un model specific, apoi îl repetați iar și iar. 
+Toate fractalele pe care le-am văzut în capitolele anterioare au fost create folosind un proces de __iterație__ : începeți cu un model specific, apoi îl repetați iar și iar. 
 
 ::: column(width=112 parent="padded-thin")
 
@@ -691,9 +682,9 @@
 
 :::
 
- Acest lucru este similar cu un alt concept în matematică pe care l-ați văzut anterior: cu [secvențe recursive](gloss:sequence-recursive) , începeți cu un număr specific, apoi aplicați aceeași formulă recursivă, din nou și din nou, pentru a obține următorul număr din secvență. 
+Acest lucru este similar cu un alt concept în matematică pe care l-ați văzut anterior: cu [secvențe recursive](gloss:sequence-recursive) , începeți cu un număr specific, apoi aplicați aceeași formulă recursivă, din nou și din nou, pentru a obține următorul număr din secvență. 
 
- Să luăm formula recursivă `§x_n = x_(n-1)^2` ca exemplu, și descrieți termenii pe o linie numerică. Puteți modifica valoarea `pill(x_0,"yellow","x0")` : 
+Să luăm formula recursivă `§x_n = x_(n-1)^2` ca exemplu, și descrieți termenii pe o linie numerică. Puteți modifica valoarea `pill(x_0,"yellow","x0")` : 
 
     figure: x-geopad.no-background(width=720 height=120 x-axis="-2.4,4.4,1" y-axis="-0.1,0.1" axes="yes,no" padding="40 20 0"): svg
       circle.yellow.move.pulsate(x="point(0,0)" name="x0" project="line(point(-3,0),point(3,0))" target="x0")
@@ -703,26 +694,26 @@
 ---
 > id: iteration-1
 
- Observați cum secvența rezultată se poate comporta foarte diferit, în funcție de valoarea de pornire `x_0` : 
+Observați cum secvența rezultată se poate comporta foarte diferit, în funcție de valoarea de pornire `x_0` : 
 
 ::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
- Dacă `x_0 > 1` , secvența [[se diverge | converg]] : _{span.reveal(when="blank-0")} doar crește, până la infinit._ 
+Dacă `x_0 > 1` , secvența [[se diverge | converg]] : _{span.reveal(when="blank-0")} doar crește, până la infinit._ 
 
 ::: column.frame.f-blue.text-center(width=212)
 
- Dacă `x_0` este cuprins între –1 și 1, secvența [[converg | diverge]] . 
+Dacă `x_0` este cuprins între –1 și 1, secvența [[converg | diverge]] . 
 
 ::: column.frame.f-blue.text-center(width=212)
 
- Dacă `x_0 < -1` , secvența [[se diverge | converg]] . 
+Dacă `x_0 < -1` , secvența [[se diverge | converg]] . 
 
 :::
 
 ---
 > id: iteration-2
 
- Până acum, nu am învățat nimic nou. Cu toate acestea, în urmă cu aproximativ un secol, matematicienii au început să exploreze ce se întâmplă cu aceste secvențe dacă utilizați [__numere complexe__](gloss:complex-numbers) , mai degrabă decât doar linia de număr real. Descoperirile lor au fost unele dintre cele mai surprinzătoare și frumoase rezultate din toată matematica. 
+Până acum, nu am învățat nimic nou. Cu toate acestea, în urmă cu aproximativ un secol, matematicienii au început să exploreze ce se întâmplă cu aceste secvențe dacă utilizați [__numere complexe__](gloss:complex-numbers) , mai degrabă decât doar linia de număr real. Descoperirile lor au fost unele dintre cele mai surprinzătoare și frumoase rezultate din toată matematica. 
 
 ---
 > id: julia
@@ -730,7 +721,7 @@
 
 ### Julia Sets 
 
- Să folosim aceeași secvență ca înainte, `§x_n = x_(n-1)^2` , dar pe planul complex. Puteți muta poziția din `pill(x_0,"yellow","x0")` , pentru a vedea ce se întâmplă cu următorii termeni. Dacă secvența pare să convergă, hai să colorăm punctul corespunzător pe planul din _{span.pill.blue} albastru_ : 
+Să folosim aceeași secvență ca înainte, `§x_n = x_(n-1)^2` , dar pe planul complex. Puteți muta poziția din `pill(x_0,"yellow","x0")` , pentru a vedea ce se întâmplă cu următorii termeni. Dacă secvența pare să convergă, hai să colorăm punctul corespunzător pe planul din _{span.pill.blue} albastru_ : 
 
     figure: x-geopad(slot="stage" width=720 height=480 x-axis="-2.2,2.2,1" y-axis="-1.5,1.5,1" axes grid padding=8 projections="no" style="margin-bottom: 24px" label-positioning="no" label-suffix=",i" axis-names="Real, Imaginary")
       canvas(width=1440 height=960)
@@ -758,12 +749,12 @@
 ---
 > id: julia-1
 
- Acum, să facem lucrurile un pic mai dificile. Mai degrabă decât să pătrundem numărul precedent, adăugăm și o constantă _{.pill.red} c de_ fiecare dată (care poate fi orice număr complex). Cu alte cuvinte, `§x_n = x_(n-1)^2 + c` . Crezi că tot vom obține un cerc de convergență? Ce alte forme credeți că am putea vedea? [Continua](btn:next) 
+Acum, să facem lucrurile un pic mai dificile. Mai degrabă decât să pătrundem numărul precedent, adăugăm și o constantă _{.pill.red} c de_ fiecare dată (care poate fi orice număr complex). Cu alte cuvinte, `§x_n = x_(n-1)^2 + c` . Crezi că tot vom obține un cerc de convergență? Ce alte forme credeți că am putea vedea? [Continua](btn:next) 
 
 ---
 > id: julia-2
 
- În această diagramă, puteți muta poziția `pill(x_0,"yellow","x0")` precum și valoarea de `pill(c,"red","c")` : 
+În această diagramă, puteți muta poziția `pill(x_0,"yellow","x0")` precum și valoarea de `pill(c,"red","c")` : 
 
 ::: x-slideshow
 
@@ -796,9 +787,9 @@
 
 ::: div(slot="legend")
 
- În unele cazuri, secvența nu converg într-un _singur punct_ - în schimb ajunge la un ciclu de mai multe puncte, precum un triunghi. Aceste cicluri se numesc __orbite__ . 
+În unele cazuri, secvența nu converg într-un _singur punct_ - în schimb ajunge la un ciclu de mai multe puncte, precum un triunghi. Aceste cicluri se numesc __orbite__ . 
 
- Punctele care sunt colorate albastru înseamnă că secvența corespunzătoare fie converg sau are o orbită (spunem că este __delimitată__ ). Punctele care sunt lăsate în alb înseamnă că secvența corespunzătoare __se diverge__ : nu este delimitată și, în cele din urmă, suflă până la infinit. 
+Punctele care sunt colorate albastru înseamnă că secvența corespunzătoare fie converg sau are o orbită (spunem că este __delimitată__ ). Punctele care sunt lăsate în alb înseamnă că secvența corespunzătoare __se diverge__ : nu este delimitată și, în cele din urmă, suflă până la infinit. 
 
 :::
 
@@ -809,11 +800,11 @@
 ---
 > id: julia-3
 
- Diferitele forme care se formează prin colorarea în numere se numesc [__seturi Julia__](gloss:julia-set) . Au fost descoperite independent de doi matematicieni francezi, [Gaston Julia](bio:julia) și [Pierre Fatou](bio:fatou) , în jurul anului 1918. 
+Diferitele forme care se formează prin colorarea în numere se numesc [__seturi Julia__](gloss:julia-set) . Au fost descoperite independent de doi matematicieni francezi, [Gaston Julia](bio:julia) și [Pierre Fatou](bio:fatou) , în jurul anului 1918. 
 
- La acea vreme, nu existau computere care să ajute la vizualizarea cum arăta de fapt seturile Julia. Matematicieni precum Julia și Fatou au putut să argumenteze din punct de vedere matematic, dar au văzut vreodată doar schițe grosolane, desenate manual despre cum ar putea arăta. 
+La acea vreme, nu existau computere care să ajute la vizualizarea cum arăta de fapt seturile Julia. Matematicieni precum Julia și Fatou au putut să argumenteze din punct de vedere matematic, dar au văzut vreodată doar schițe grosolane, desenate manual despre cum ar putea arăta. 
 
- Nu avem această problemă astăzi - imaginile de mai jos sunt diferite seturi Julia. Culorile diferite indică _cât de rapid se_ diferențiază secvența din acel punct: 
+Nu avem această problemă astăzi - imaginile de mai jos sunt diferite seturi Julia. Culorile diferite indică _cât de rapid se_ diferențiază secvența din acel punct: 
 
 ::: column(width=220)
 
@@ -835,7 +826,7 @@
 
 :::
 
- [Continua](btn:next) 
+[Continua](btn:next) 
 
 ---
 > id: mandel-paint
@@ -843,11 +834,11 @@
 
 ### Setul Mandelbrot 
 
- Când creați diferitele seturi Julia, ați observat că există anumite valori ale _c_ pentru care fiecare secvență se diverge și întregul plan complex rămâne alb. La câteva decenii după Julia și Fatou, o nouă generație de matematicieni a încercat să mapeze cum arătau aceste zone. 
+Când creați diferitele seturi Julia, ați observat că există anumite valori ale _c_ pentru care fiecare secvență se diverge și întregul plan complex rămâne alb. La câteva decenii după Julia și Fatou, o nouă generație de matematicieni a încercat să mapeze cum arătau aceste zone. 
 
- În exemplul precedent, am ales o valoare fixă pentru `pill(c,"red","c")` , apoi a schimbat poziția din `pill(x_0,"yellow","x0")` pentru a colora avionul. Acum, să remediem valoarea de `pill(x_0 = 0,"yellow","x0")` și în schimb schimbați valoarea lui `pill(c,"red","c")` . 
+În exemplul precedent, am ales o valoare fixă pentru `pill(c,"red","c")` , apoi a schimbat poziția din `pill(x_0,"yellow","x0")` pentru a colora avionul. Acum, să remediem valoarea de `pill(x_0 = 0,"yellow","x0")` și în schimb schimbați valoarea lui `pill(c,"red","c")` . 
 
- Încă o dată, pictați pe planul complex pentru a dezvălui zona în care secvențele rămân delimitate. Ce forme așteptați să apară? 
+Încă o dată, pictați pe planul complex pentru a dezvălui zona în care secvențele rămân delimitate. Ce forme așteptați să apară? 
 
     figure: x-geopad.no-background(width=720 height=480 x-axis="-2.1,1.1,1" y-axis="-1.1,1.1,1" axes grid padding=8 projections="no" label-suffix=",i" axis-names="Real, Imaginary")
       img(src="images/mandelbrot.png" data-bounds="1,0.5,-1,-1.5")
@@ -874,16 +865,16 @@
 ---
 > id: mandel-history
 
- Acest fractal se numește [__setul Mandelbrot__](gloss:mandelbrot-set) , iar atunci când este rotit cu 90°, pare aproape o persoană, cu cap, corp și două brațe. A fost definit și desenat pentru prima dată în 1978, într-o lucrare de cercetare de către matematicienii Robert Brooks și Peter Matelski: 
+Acest fractal se numește [__setul Mandelbrot__](gloss:mandelbrot-set) , iar atunci când este rotit cu 90°, pare aproape o persoană, cu cap, corp și două brațe. A fost definit și desenat pentru prima dată în 1978, într-o lucrare de cercetare de către matematicienii Robert Brooks și Peter Matelski: 
 
     figure: x-img(src="images/printout.jpg" width=360 height=290 credit="© Princeton University Press" alt="Mandelbrot set drawing")
 
- Câțiva ani mai târziu, [Benoit Mandelbrot a](bio:mandelbrot) folosit computerele puternice de la IBM pentru a crea o vizualizare mult mai detaliată a fractalului, care a fost numit ulterior după el. Primele tipărituri arătau diferit de ceea ce se aștepta el - până când a realizat că tehnicienii care lucrează la imprimante curățau „neplăcerile” din jurul marginii sale, presupunând că acesta era cauzat de particule de praf sau erori ale imprimantei și nu o caracteristică definitorie a fractalilor. ! [Continua](btn:next) 
+Câțiva ani mai târziu, [Benoit Mandelbrot a](bio:mandelbrot) folosit computerele puternice de la IBM pentru a crea o vizualizare mult mai detaliată a fractalului, care a fost numit ulterior după el. Primele tipărituri arătau diferit de ceea ce se aștepta el - până când a realizat că tehnicienii care lucrează la imprimante curățau „neplăcerile” din jurul marginii sale, presupunând că acesta era cauzat de particule de praf sau erori ale imprimantei și nu o caracteristică definitorie a fractalilor. ! [Continua](btn:next) 
 
 ---
 > id: mandel-zoom
 
- Ca toate fractalele, putem „mări” setul Mandelbrot pentru totdeauna, găsind noi tipare la fiecare scară. Aici puteți face zoom într-o parte a setului Mandelbrot care se numește __vale Seahorse__ . Punctele negre sunt _în interiorul_ setului Mandelbrot, unde secvența este delimitată. Punctele colorate se _află_ în _afara_ setului Mandelbrot, unde secvența se diverge, iar diferitele culori indică _cât de rapid_ crește până la infinit: 
+Ca toate fractalele, putem „mări” setul Mandelbrot pentru totdeauna, găsind noi tipare la fiecare scară. Aici puteți face zoom într-o parte a setului Mandelbrot care se numește __vale Seahorse__ . Punctele negre sunt _în interiorul_ setului Mandelbrot, unde secvența este delimitată. Punctele colorate se _află_ în _afara_ setului Mandelbrot, unde secvența se diverge, iar diferitele culori indică _cât de rapid_ crește până la infinit: 
 
     .mandel-frame
       - i = 1;
@@ -896,7 +887,7 @@
 ---
 > id: mandel-zoom-1
 
- Acest glisor constă din 27 de imagini individuale, până la un nivel de zoom de peste 14 cvadrilioni sau `2^54` . În total, au avut nevoie de aproape 45 de minute să se redea pe un laptop modern. Setul Mandelbrot poate fi creat cu o singură ecuație simplă, `§x_n = x_(n-1)^2 + c` , cu toate acestea, este infinit de complex și uimitor de frumos. 
+Acest glisor constă din 27 de imagini individuale, până la un nivel de zoom de peste 14 cvadrilioni sau `2^54` . În total, au avut nevoie de aproape 45 de minute să se redea pe un laptop modern. Setul Mandelbrot poate fi creat cu o singură ecuație simplă, `§x_n = x_(n-1)^2 + c` , cu toate acestea, este infinit de complex și uimitor de frumos. 
 
 ---
 > id: mandel-orbits
@@ -914,26 +905,22 @@
 
 ::: column.grow
 
- Pe măsură ce mutați valoarea de [{.pill.red} c în](target:c) jurul setului Mandelbrot, puteți observa o proprietate curioasă: 
+Pe măsură ce mutați valoarea de [{.pill.red} c în](target:c) jurul setului Mandelbrot, puteți observa o proprietate curioasă: 
 
- * Toate secvențele din [corpul principal](target:bulb0) al setului Mandelbrot [[converg | divergente | ajunge pe o orbită]] _{span.reveal(when="blank-0")} într-un singur punct._ * {.reveal(when="blank-0")} Secvențele din [bulbul mare](target:bulb1) din vârf [[ajung pe o orbită | converg | divergente]] _{span.reveal(when="blank-1")} format din [[3]] puncte._ * {.reveal(when="blank-2")} Secvențele din [acest bec mai mic](target:bulb2) au orbite de lungime [[5]] . 
+* Toate secvențele din [corpul principal](target:bulb0) al setului Mandelbrot [[converg | divergente | ajunge pe o orbită]] _{span.reveal(when="blank-0")} într-un singur punct._ * {.reveal(when="blank-0")} Secvențele din [bulbul mare](target:bulb1) din vârf [[ajung pe o orbită | converg | divergente]] _{span.reveal(when="blank-1")} format din [[3]] puncte._ * {.reveal(when="blank-2")} Secvențele din [acest bec mai mic](target:bulb2) au orbite de lungime [[5]] . 
 
 :::
 
 {.reveal(when="blank-3")} Fiecare bec are o orbită de dimensiuni diferite, cu becuri mai mici având din ce în ce mai multe puncte pe orbitele lor. Mărimea acestor orbite sunt strâns legate de __harta logistică__ , un concept important în [teoria haosului](/course/chaos) . 
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 > id: mandel-outro
 
 ::: column.grow
 
- Bernoit Mandelbrot și-a dedicat cea mai mare parte a vieții studiului fractalelor, precum și matematicii _rugozității_ și a _asemănării cu sine_ . Activitatea sa a avut aplicații în fizică, meteorologie, neurologie, economie, geologie, inginerie, informatică și multe alte domenii. 
+Bernoit Mandelbrot și-a dedicat cea mai mare parte a vieții studiului fractalelor, precum și matematicii _rugozității_ și a _asemănării cu sine_ . Activitatea sa a avut aplicații în fizică, meteorologie, neurologie, economie, geologie, inginerie, informatică și multe alte domenii. 
 
- În 1985, setul Mandelbrot a apărut pe coperta revistei _Scientific American_ , iar de atunci a devenit una dintre cele mai recunoscute forme matematice din lume. Îl puteți găsi pe tricouri, în videoclipuri muzicale și ca protector de ecran și a fost făcut referire în multe cărți și filme populare. 
+În 1985, setul Mandelbrot a apărut pe coperta revistei _Scientific American_ , iar de atunci a devenit una dintre cele mai recunoscute forme matematice din lume. Îl puteți găsi pe tricouri, în videoclipuri muzicale și ca protector de ecran și a fost făcut referire în multe cărți și filme populare. 
 
 ::: column(width=220)
 

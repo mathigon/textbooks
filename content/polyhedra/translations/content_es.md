@@ -4,8 +4,9 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
- Un [__polígono__](gloss:polygon) es una forma cerrada y plana que solo tiene lados rectos. Los polígonos pueden tener cualquier número de lados y ángulos, pero los lados no pueden ser curvos. ¿Cuál de las siguientes formas son polígonos? 
+Un [__polígono__](gloss:polygon) es una forma cerrada y plana que solo tiene lados rectos. Los polígonos pueden tener cualquier número de lados y ángulos, pero los lados no pueden ser curvos. ¿Cuál de las siguientes formas son polígonos? 
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -20,7 +21,7 @@
 ---
 > id: polygons-1
 
- Damos diferentes nombres a los polígonos, dependiendo de cuántos lados tengan: 
+Damos diferentes nombres a los polígonos, dependiendo de cuántos lados tengan: 
 
     .row.padded-thin
       div(style="width: 100px")
@@ -47,7 +48,7 @@
 
 ### Ángulos en polígonos 
 
- Cada polígono con _n_ lados también tiene _n_ [ángulos internos](gloss:internal-angle) . Ya sabemos que la suma de los ángulos internos en un triángulo es siempre [[180]]°, pero ¿qué pasa con otros polígonos? 
+Cada polígono con _n_ lados también tiene _n_ [ángulos internos](gloss:internal-angle) . Ya sabemos que la suma de los ángulos internos en un triángulo es siempre [[180]]°, pero ¿qué pasa con otros polígonos? 
 
 ---
 > id: angles
@@ -92,7 +93,7 @@
 ---
 > id: angles-1
 
- Parece que la suma de los ángulos internos en un cuadrilátero es siempre [[360]]°, exactamente [[dos veces | tres veces | La mitad de]] la suma de ángulos en un triángulo. _{span.reveal(when="blank-0 blank-1")} Esto no es una coincidencia: cada cuadrilátero se puede dividir en dos triángulos._ 
+Parece que la suma de los ángulos internos en un cuadrilátero es siempre [[360]]°, exactamente [[dos veces | tres veces | La mitad de]] la suma de ángulos en un triángulo. _{span.reveal(when="blank-0 blank-1")} Esto no es una coincidencia: cada cuadrilátero se puede dividir en dos triángulos._ 
 
     .row.padded-thin
       .reveal(when="blank-1" style="width: 140px"): include svg/polygons/triangles-4.svg
@@ -105,7 +106,7 @@
 ---
 > id: internal-angle-sum
 
- Un polígono con ${x}{x|7|3,15,1} los lados tendrán una suma de ángulo interno de 180° × ${x-2} = ${(x-2)*180}°. Más generalmente, un polígono con _n_ lados se puede dividir en [[n - 2 | n - 1 | n]] triángulos Por lo tanto, 
+Un polígono con ${x}{x|7|3,15,1} los lados tendrán una suma de ángulo interno de 180° × ${x-2} = ${(x-2)*180}°. Más generalmente, un polígono con _n_ lados se puede dividir en [[n - 2 | n - 1 | n]] triángulos Por lo tanto, 
 
 {.text-center.reveal(when="blank-0")} Suma de ángulos internos en un _n_ -gon `= (n - 2) × 180°` . 
 
@@ -118,11 +119,11 @@
 
 ::: column.grow
 
- Decimos que un polígono es [__cóncavo__](gloss:concave) si tiene una sección que "apunta hacia adentro". Puedes imaginar que esta parte se ha ["derrumbado"](target:cave) . Los polígonos que _no_ son cóncavos se llaman [__convexos__](gloss:convex) . 
+Decimos que un polígono es [__cóncavo__](gloss:concave) si tiene una sección que "apunta hacia adentro". Puedes imaginar que esta parte se ha ["derrumbado"](target:cave) . Los polígonos que _no_ son cóncavos se llaman [__convexos__](gloss:convex) . 
 
- Hay dos formas de identificar fácilmente los polígonos cóncavos: tienen al menos un [ángulo interno mayor de 180°](target:angle) . También tienen al menos una [diagonal que se encuentra _fuera_ del polígono](target:diagonal) . 
+Hay dos formas de identificar fácilmente los polígonos cóncavos: tienen al menos un [ángulo interno mayor de 180°](target:angle) . También tienen al menos una [diagonal que se encuentra _fuera_ del polígono](target:diagonal) . 
 
- En los polígonos convexos, por otro lado, todos los ángulos internos son inferiores a [[180]]°, y todas las diagonales se encuentran [[dentro | fuera]] del polígono 
+En los polígonos convexos, por otro lado, todos los ángulos internos son inferiores a [[180]]°, y todas las diagonales se encuentran [[dentro | fuera]] del polígono 
 
 ::: column(width=240)
 
@@ -146,7 +147,7 @@
 ---
 > id: concave-1
 
- ¿Cuál de estos polígonos son cóncavos? 
+¿Cuál de estos polígonos son cóncavos? 
 
     x-picker
       .item(data-error="not-concave-1"): include svg/polygons/concave-1.svg
@@ -161,7 +162,7 @@
 
 ### Polígonos regulares 
 
- Decimos que un polígono es [__regular__](gloss:regular-polygon) si todos sus lados tienen la misma longitud y todos los ángulos tienen el mismo tamaño. ¿Cuál de estas formas son polígonos regulares? 
+Decimos que un polígono es [__regular__](gloss:regular-polygon) si todos sus lados tienen la misma longitud y todos los ángulos tienen el mismo tamaño. ¿Cuál de estas formas son polígonos regulares? 
 
     x-picker
       .item: include svg/polygons/regular-1.svg
@@ -174,12 +175,12 @@
 ---
 > id: regular-1
 
- Los polígonos regulares pueden venir en muchos tamaños diferentes, pero todos los polígonos regulares con el mismo número de lados [[son similares | son congruentes | tener la misma zona]] ! 
+Los polígonos regulares pueden venir en muchos tamaños diferentes, pero todos los polígonos regulares con el mismo número de lados [[son similares | son congruentes | tener la misma zona]] ! 
 
 ---
 > id: regular-2
 
- Ya sabemos la suma de todos [los ángulos internos](gloss:internal-angle) en polígonos. Para polígonos regulares, todos estos ángulos tienen [[el mismo tamaño. | son ángulos alternos]] , por lo que podemos calcular el tamaño de un solo ángulo interno: 
+Ya sabemos la suma de todos [los ángulos internos](gloss:internal-angle) en polígonos. Para polígonos regulares, todos estos ángulos tienen [[el mismo tamaño. | son ángulos alternos]] , por lo que podemos calcular el tamaño de un solo ángulo interno: 
 
 {.text-center.reveal(when="blank-0")} ángulo = <mfrac><mrow>[[suma de todos los ángulos | cantidad de ángulos]]</mrow><mrow>[[cantidad de ángulos | suma de todos los ángulos]]</mrow></mfrac> _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x` ._ 
 
@@ -217,9 +218,9 @@
 
 ::: column.grow
 
- Aquí puedes ver un [polígono regular](gloss:regular-polygon) con ${n}{n|5|4,12,1} lados Cada lado tiene longitud [{.pill.green} 1m](target:base) . ¡Intentemos calcular su área! 
+Aquí puedes ver un [polígono regular](gloss:regular-polygon) con ${n}{n|5|4,12,1} lados Cada lado tiene longitud [{.pill.green} 1m](target:base) . ¡Intentemos calcular su área! 
 
- Primero, podemos dividir el polígono en ${toWord(n)} congruente, [[isósceles | equilátero |]] los [[triángulos rectángulos.]] 
+Primero, podemos dividir el polígono en ${toWord(n)} congruente, [[isósceles | equilátero |]] los [[triángulos rectángulos.]] 
 
 {.reveal(when="blank-0")} Ya conocemos la [[base | altura | área]] de estos triángulos, pero también necesitamos la [[altura | piernas | medianas]] para poder calcular su área. _{span.reveal(when="blank-2")} En polígonos regulares, esta altura a veces se llama [{.pill.yellow} apotema](target:apothem)_ 
 
@@ -260,10 +261,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
- En el [curso anterior](/course/triangles) investigamos muchas propiedades diferentes de los triángulos. Ahora echemos un vistazo a los cuadriláteros. 
+En el [curso anterior](/course/triangles) investigamos muchas propiedades diferentes de los triángulos. Ahora echemos un vistazo a los cuadriláteros. 
 
- Un _cuadrilátero regular_ se llama [[cuadrado | rectángulo | cuadrilátero equilátero]] . Todos sus lados tienen la misma longitud y todos sus ángulos son iguales. 
+Un _cuadrilátero regular_ se llama [[cuadrado | rectángulo | cuadrilátero equilátero]] . Todos sus lados tienen la misma longitud y todos sus ángulos son iguales. 
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -289,7 +291,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-1
 
- Para cuadriláteros ligeramente "menos regulares", tenemos dos opciones. Si solo queremos que los _ángulos_ sean iguales, obtenemos un [__rectángulo__](gloss:rectangle) . Si solo queremos que los _lados_ sean iguales, obtenemos un [__rombo__](gloss:rhombus) . 
+Para cuadriláteros ligeramente "menos regulares", tenemos dos opciones. Si solo queremos que los _ángulos_ sean iguales, obtenemos un [__rectángulo__](gloss:rectangle) . Si solo queremos que los _lados_ sean iguales, obtenemos un [__rombo__](gloss:rhombus) . 
 
 ::: column.quadrilateral
 
@@ -330,7 +332,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-2
 
- Hay algunos otros cuadriláteros, que son incluso menos regulares pero que aún tienen ciertas propiedades importantes: 
+Hay algunos otros cuadriláteros, que son incluso menos regulares pero que aún tienen ciertas propiedades importantes: 
 
 ::: column.quadrilateral
 
@@ -382,11 +384,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-venn
 
- Los cuadriláteros pueden caer en múltiples de estas categorías. Podemos visualizar la jerarquía de diferentes tipos de cuadriláteros como un [diagrama de Venn](gloss:venn-diagram) : 
+Los cuadriláteros pueden caer en múltiples de estas categorías. Podemos visualizar la jerarquía de diferentes tipos de cuadriláteros como un [diagrama de Venn](gloss:venn-diagram) : 
 
     figure: include svg/venn.svg
 
- Por ejemplo, cada rectángulo también es un [[paralelogramo | rombo | cuadrado]] , y cada [[rombo | trapecio | el paralelogramo]] también es una cometa. Un rombo es a [[veces | siempre | nunca]] un cuadrado y un rectángulo es [[siempre | algunas veces | Nunca]] un trapecio. 
+Por ejemplo, cada rectángulo también es un [[paralelogramo | rombo | cuadrado]] , y cada [[rombo | trapecio | el paralelogramo]] también es una cometa. Un rombo es a [[veces | siempre | nunca]] un cuadrado y un rectángulo es [[siempre | algunas veces | Nunca]] un trapecio. 
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} Para evitar cualquier ambigüedad, generalmente usamos solo el tipo más específico. 
 
@@ -399,7 +401,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Ahora elija cuatro puntos, en cualquier parte del cuadro gris a la izquierda. _{span.reveal(when="points")} Podemos conectarlos a todos para formar un cuadrilátero._ 
+Ahora elija cuatro puntos, en cualquier parte del cuadro gris a la izquierda. _{span.reveal(when="points")} Podemos conectarlos a todos para formar un cuadrilátero._ 
 
 {.reveal(when="points" delay=1000)} Encontremos el punto medio de cada uno de los cuatro lados. Si conectamos los puntos medios, obtenemos [[otro cuadrilátero | un triángulo | un rectángulo]] 
 
@@ -420,7 +422,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Paralelogramas 
 
- Resulta que los paralelogramos tienen muchas otras propiedades interesantes, además de que los lados opuestos son paralelos. ¿Cuál de las siguientes seis afirmaciones es verdadera? 
+Resulta que los paralelogramos tienen muchas otras propiedades interesantes, además de que los lados opuestos son paralelos. ¿Cuál de las siguientes seis afirmaciones es verdadera? 
 
 ::: column.grow
 
@@ -458,7 +460,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: parallelograms-proof
 
- Por supuesto, simplemente "observar" estas propiedades no es suficiente. Para asegurarnos de que _siempre_ sean ciertas, debemos _demostrarlas_ : 
+Por supuesto, simplemente "observar" estas propiedades no es suficiente. Para asegurarnos de que _siempre_ sean ciertas, debemos _demostrarlas_ : 
 
 ::: tab
 
@@ -494,7 +496,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Tratemos de demostrar que los lados y ángulos opuestos en un paralelogramo siempre son congruentes. 
 
- Comience dibujando una de las diagonales del paralelogramo. 
+Comience dibujando una de las diagonales del paralelogramo. 
 
 {.reveal(when="diagonal")} La diagonal crea cuatro nuevos ángulos con los lados del paralelogramo. Los dos [ángulos rojos](target:red-angle) y los dos [ángulos azules](target:blue-angle) son [ángulos alternos](gloss:alternate-angles) , por lo que deben ser [[congruentes. | adyacente | suplementario]] 
 
@@ -505,8 +507,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 :::
 
 {.reveal(when="blank-1")} Resulta que lo contrario también es cierto: si ambos pares de lados opuestos (o ángulos) en un cuadrilátero son congruentes, entonces el cuadrilátero debe ser un paralelogramo. 
-
-    //- Adjacent angles are supplementary.
 
 ::: tab
 
@@ -544,9 +544,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Ahora pruebe que las dos diagonales en un paralelogramo se bisecan entre sí. 
 
- Pensemos en los dos triángulos amarillos generados por las diagonales: 
+Pensemos en los dos triángulos amarillos generados por las diagonales: 
 
- * Acabamos de demostrar que los [dos lados verdes](target:side1) son congruentes, porque son lados opuestos de un paralelogramo. * Los [dos ángulos rojos](target:anglesR) y los [dos ángulos azules](target:anglesB) son congruentes, porque son [[ángulos alternos | ángulos opuestos | ángulos rectos]] 
+* Acabamos de demostrar que los [dos lados verdes](target:side1) son congruentes, porque son lados opuestos de un paralelogramo. * Los [dos ángulos rojos](target:anglesR) y los [dos ángulos azules](target:anglesB) son congruentes, porque son [[ángulos alternos | ángulos opuestos | ángulos rectos]] 
 
 {.reveal(when="blank-2")} Por la [[ASA | SSS |]] Condición de [[AAS]] , los dos triángulos amarillos también deben ser congruentes. 
 
@@ -565,9 +565,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Mostramos arriba que los dos pares de [[opuestos |]] lados [[adyacentes]] de un paralelogramo son congruentes. En una cometa, dos pares de lados _adyacentes_ son congruentes. 
+Mostramos arriba que los dos pares de [[opuestos |]] lados [[adyacentes]] de un paralelogramo son congruentes. En una cometa, dos pares de lados _adyacentes_ son congruentes. 
 
- El nombre _Kite_ claramente proviene de su forma: se parece a las cometas que puedes volar en el cielo. Sin embargo, de todos los cuadriláteros especiales que hemos visto hasta ahora, el Kite es el único que también puede ser [cóncavo](gloss:concave) : si tiene forma de dardo o flecha: 
+El nombre _Kite_ claramente proviene de su forma: se parece a las cometas que puedes volar en el cielo. Sin embargo, de todos los cuadriláteros especiales que hemos visto hasta ahora, el Kite es el único que también puede ser [cóncavo](gloss:concave) : si tiene forma de dardo o flecha: 
 
 ::: column(width=320)
 
@@ -643,7 +643,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Es posible que hayas notado que todas las cometas son [[simétricas | similar]] _{span.reveal(when="blank-0")} El [eje de simetría](gloss:axis-of-symmetry) es [[una de las diagonales. | uno de los lados | Un segmento medio]] ._ 
+Es posible que hayas notado que todas las cometas son [[simétricas | similar]] _{span.reveal(when="blank-0")} El [eje de simetría](gloss:axis-of-symmetry) es [[una de las diagonales. | uno de los lados | Un segmento medio]] ._ 
 
 {.reveal.r(when="blank-1")} La diagonal divide la cometa en [dos triángulos congruentes](target:triangle1) . Sabemos que son congruentes desde la condición [SSS](gloss:triangle-sss) : ambos triángulos tienen [tres lados congruentes](target:sss) (rojo, verde y azul). _{button.next-step} Seguir_ 
 
@@ -665,7 +665,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Área de cuadriláteros 
 
- Al calcular el área de triángulos en el curso anterior, utilizamos el truco de convertirlo en un [[rectángulo | cuadrado | pentágono]] Resulta que también podemos hacer eso para algunos cuadriláteros: 
+Al calcular el área de triángulos en el curso anterior, utilizamos el truco de convertirlo en un [[rectángulo | cuadrado | pentágono]] Resulta que también podemos hacer eso para algunos cuadriláteros: 
 
 ::: tab
 
@@ -685,7 +685,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- A la izquierda, intenta dibujar un rectángulo que tenga la misma área que el paralelogramo. 
+A la izquierda, intenta dibujar un rectángulo que tenga la misma área que el paralelogramo. 
 
 {.reveal(when="draw-1")} ¿Puedes ver que el [triángulo](target:triangle-1) que [falta](target:triangle-1) a la izquierda es [[exactamente el mismo que | menor que | más grande que]] el [triángulo superpuesto](target:triangle-2) a la derecha? _{span.reveal(when="blank-1")} Por lo tanto, el área de un paralelogramo es_ 
 
@@ -699,7 +699,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 #### Trapecio _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_ 
 
- Recuerde que los trapecios son cuadriláteros con un par de [lados paralelos](target:bases) . Estos lados paralelos se llaman las __bases__ del trapecio. 
+Recuerde que los trapecios son cuadriláteros con un par de [lados paralelos](target:bases) . Estos lados paralelos se llaman las __bases__ del trapecio. 
 
 ::: column(width=300)
 
@@ -721,7 +721,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Como antes, intenta dibujar un rectángulo que tenga la misma área que este trapecio. _{span.reveal(when="draw-2")} ¿Puedes ver cómo los [triángulos faltantes y agregados](target:triangles-3) a la izquierda y a la derecha se cancelan?_ 
+Como antes, intenta dibujar un rectángulo que tenga la misma área que este trapecio. _{span.reveal(when="draw-2")} ¿Puedes ver cómo los [triángulos faltantes y agregados](target:triangles-3) a la izquierda y a la derecha se cancelan?_ 
 
 {.reveal(when="draw-2" delay=2000)} los [{.pill.green} altura](target:t-height) de este rectángulo es la [[distancia entre | promedio de | longitud de]] los [lados paralelos](target:bases) del trapecio. 
 
@@ -765,9 +765,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- En esta cometa, las [dos diagonales](target:diag3) forman el ancho y la altura de un gran [rectángulo](target:rect4) que rodea la cometa. 
+En esta cometa, las [dos diagonales](target:diag3) forman el ancho y la altura de un gran [rectángulo](target:rect4) que rodea la cometa. 
 
- El área de este rectángulo es [[dos veces | lo mismo que | tres veces]] el área de la cometa. _{span.reveal(when="blank-5")} ¿Puedes ver cómo cada uno de los [cuatro triángulos](target:inside) que componen la cometa son los mismos que los [cuatro huecos](target:outside) fuera de ella?_ 
+El área de este rectángulo es [[dos veces | lo mismo que | tres veces]] el área de la cometa. _{span.reveal(when="blank-5")} ¿Puedes ver cómo cada uno de los [cuatro triángulos](target:inside) que componen la cometa son los mismos que los [cuatro huecos](target:outside) fuera de ella?_ 
 
 {.reveal(when="blank-5")} Esto significa que el área de una cometa con diagonales [{.i.pill.green} d1](target:d31) y [{.i.pill.yellow} d2](target:d32) es 
 
@@ -801,7 +801,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Un [rombo](gloss:rhombus) es un cuadrilátero que tiene cuatro lados congruentes. Quizás recuerdes que cada rombo es un [[paralelogramo | rectángulo | cuadrado]] - y también una [[cometa | hexágono | polígono cóncavo]] 
+Un [rombo](gloss:rhombus) es un cuadrilátero que tiene cuatro lados congruentes. Quizás recuerdes que cada rombo es un [[paralelogramo | rectángulo | cuadrado]] - y también una [[cometa | hexágono | polígono cóncavo]] 
 
 {.reveal(when="blank-6 blank-7")} Esto significa que para encontrar el área de un rombo, podemos usar la ecuación para el área de un paralelogramo o la del área de una cometa: 
 
@@ -813,25 +813,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    //- ### Cyclic quadrilaterals
     
-    //- ### Isosceles Trapeziums
-    //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -839,8 +821,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
- [Los polígonos](gloss:polygon) aparecen en todas partes en la naturaleza. Son especialmente útiles si desea enlosar un área grande, porque puede encajar polígonos juntos sin espacios ni superposiciones. Patrones como ese se llaman [__teselaciones__](gloss:tessellation) . 
+[Los polígonos](gloss:polygon) aparecen en todas partes en la naturaleza. Son especialmente útiles si desea enlosar un área grande, porque puede encajar polígonos juntos sin espacios ni superposiciones. Patrones como ese se llaman [__teselaciones__](gloss:tessellation) . 
 
 ::: column(width=200)
 
@@ -883,7 +866,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellations-1
 
- Los humanos han copiado muchos de estos patrones naturales en el arte, la arquitectura y la tecnología, desde la antigua Roma hasta el presente. Aquí están algunos ejemplos: 
+Los humanos han copiado muchos de estos patrones naturales en el arte, la arquitectura y la tecnología, desde la antigua Roma hasta el presente. Aquí están algunos ejemplos: 
 
 ::: column(width=200)
 
@@ -923,16 +906,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
 
- Aquí puede crear sus propios mosaicos utilizando polígonos regulares. Simplemente arrastre nuevas formas desde la barra lateral al lienzo. ¿Qué formas teselan bien? ¿Hay formas que no se tessellate en absoluto? ¡Intenta crear patrones interesantes! 
+Aquí puede crear sus propios mosaicos utilizando polígonos regulares. Simplemente arrastre nuevas formas desde la barra lateral al lienzo. ¿Qué formas teselan bien? ¿Hay formas que no se tessellate en absoluto? ¡Intenta crear patrones interesantes! 
 
     figure: .tessellation
       x-polypad
@@ -956,12 +934,12 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Teselaciones de polígonos regulares 
 
- Es posible que haya notado que algunos [polígonos regulares](gloss:regular-polygon) (como [[cuadrados) | pentágonos]] ) se teselan muy fácilmente, mientras que otros (como los [[pentágonos | triangulos | hexágonos]] ) no parecen teselar en absoluto. 
+Es posible que haya notado que algunos [polígonos regulares](gloss:regular-polygon) (como [[cuadrados) | pentágonos]] ) se teselan muy fácilmente, mientras que otros (como los [[pentágonos | triangulos | hexágonos]] ) no parecen teselar en absoluto. 
 
 ---
 > id: tessellation-regular-1
 
- Esto tiene que ver con el tamaño de sus [ángulos internos](gloss:internal-angle) , que aprendimos a calcular antes. En cada [vértice](gloss:polygon-vertex) de la teselación, se encuentran los ángulos internos de múltiples polígonos diferentes. Necesitamos todos estos ángulos para sumar [[360]]°, de lo contrario habrá un espacio o una superposición. 
+Esto tiene que ver con el tamaño de sus [ángulos internos](gloss:internal-angle) , que aprendimos a calcular antes. En cada [vértice](gloss:polygon-vertex) de la teselación, se encuentran los ángulos internos de múltiples polígonos diferentes. Necesitamos todos estos ángulos para sumar [[360]]°, de lo contrario habrá un espacio o una superposición. 
 
 ---
 > id: tessellation-regular-2
@@ -984,8 +962,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.caption} Los pentágonos [[no se teselan | teselado]] _{span.reveal(when="blank-2")} porque los múltiplos de 108° no suman 360°._ 
 
-    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
-
 ::: column(width=160)
 
     include svg/tessellations/hexagons.svg
@@ -997,9 +973,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-regular-3
 
- De manera similar, puede verificar que, al igual que los pentágonos, cualquier polígono regular con 7 o más lados no se teselelate. ¡Esto significa que los únicos polígonos regulares que se teselan son triángulos, cuadrados y hexágonos! 
+De manera similar, puede verificar que, al igual que los pentágonos, cualquier polígono regular con 7 o más lados no se teselelate. ¡Esto significa que los únicos polígonos regulares que se teselan son triángulos, cuadrados y hexágonos! 
 
- Por supuesto, puede combinar diferentes tipos de polígonos regulares en una teselación, siempre que sus ángulos internos puedan sumar 360°: 
+Por supuesto, puede combinar diferentes tipos de polígonos regulares en una teselación, siempre que sus ángulos internos puedan sumar 360°: 
 
     x-gallery(slide-width="520")
       div
@@ -1032,7 +1008,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Teselaciones de polígonos irregulares 
 
- También podemos intentar hacer mosaicos con [polígonos irregulares](gloss:irregular-polygon) , siempre que tengamos cuidado al rotarlos y organizarlos. 
+También podemos intentar hacer mosaicos con [polígonos irregulares](gloss:irregular-polygon) , siempre que tengamos cuidado al rotarlos y organizarlos. 
 
 ::: column(width=360)
 
@@ -1052,9 +1028,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- ¡Resulta que puedes teselar no solo triángulos equiláteros, sino _cualquier triángulo_ ! Intenta mover los [vértices](target:vertex) en este diagrama. 
+¡Resulta que puedes teselar no solo triángulos equiláteros, sino _cualquier triángulo_ ! Intenta mover los [vértices](target:vertex) en este diagrama. 
 
- La suma de los ángulos internos en un triángulo es [[180]]°. Si usamos cada ángulo [[dos veces | una vez | tres veces]] en cada vértice de la teselación, obtenemos 360°: 
+La suma de los ángulos internos en un triángulo es [[180]]°. Si usamos cada ángulo [[dos veces | una vez | tres veces]] en cada vértice de la teselación, obtenemos 360°: 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" cx=100 cy=80)
@@ -1117,7 +1093,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow    
 
- Más sorprendentemente, ¡ _cualquier cuadrilátero_ también se testea! Su suma de ángulo interno es [[360]]°, así que si usamos cada ángulo [[una vez | dos veces | tres veces]] en cada vértice de la teselación, obtenemos 360°. 
+Más sorprendentemente, ¡ _cualquier cuadrilátero_ también se testea! Su suma de ángulo interno es [[360]]°, así que si usamos cada ángulo [[una vez | dos veces | tres veces]] en cada vértice de la teselación, obtenemos 360°. 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
@@ -1159,7 +1135,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-pentagons
 
- Los pentágonos son un poco más complicados. Ya vimos que _los_ pentágonos _regulares_ [[no se teselan | teselado]] , pero ¿qué pasa con los no regulares? 
+Los pentágonos son un poco más complicados. Ya vimos que _los_ pentágonos _regulares_ [[no se teselan | teselado]] , pero ¿qué pasa con los no regulares? 
 
 ---
 > id: tessellation-pentagons-1
@@ -1178,16 +1154,16 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Aquí hay tres ejemplos diferentes de teselaciones con pentágonos. No son _regulares_ , pero son polígonos de 5 lados perfectamente válidos. 
+Aquí hay tres ejemplos diferentes de teselaciones con pentágonos. No son _regulares_ , pero son polígonos de 5 lados perfectamente válidos. 
 
- Hasta ahora, los matemáticos solo han encontrado 15 tipos diferentes de teselaciones con pentágonos (convexos), el más reciente de los cuales se descubrió en 2015. Nadie sabe si hay otros, o si estos 15 son los únicos ... 
+Hasta ahora, los matemáticos solo han encontrado 15 tipos diferentes de teselaciones con pentágonos (convexos), el más reciente de los cuales se descubrió en 2015. Nadie sabe si hay otros, o si estos 15 son los únicos ... 
 
 ---
 > id: escher
 
 ### Teselaciones en el arte 
 
- Tessellations es a la vez una herramienta e inspiración para muchos artistas, arquitectos y diseñadores, especialmente el artista holandés [MC Escher](bio:escher) . El trabajo de Escher contiene criaturas, patrones y paisajes extraños y mutantes: 
+Tessellations es a la vez una herramienta e inspiración para muchos artistas, arquitectos y diseñadores, especialmente el artista holandés [MC Escher](bio:escher) . El trabajo de Escher contiene criaturas, patrones y paisajes extraños y mutantes: 
 
     .row
       div(style="width: 220px")
@@ -1209,7 +1185,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
- Estas obras de arte a menudo se ven divertidas y sin esfuerzo, pero los principios matemáticos subyacentes son los mismos que antes: ángulos, rotaciones, traslaciones y polígonos. Si las matemáticas no están bien, ¡la teselación no funcionará! 
+Estas obras de arte a menudo se ven divertidas y sin esfuerzo, pero los principios matemáticos subyacentes son los mismos que antes: ángulos, rotaciones, traslaciones y polígonos. Si las matemáticas no están bien, ¡la teselación no funcionará! 
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
     p.caption “Metamorphosis II” by M. C. Escher (1940)
@@ -1219,9 +1195,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Penrose Tilings 
 
- Todas las teselaciones que vimos hasta ahora tienen una cosa en común: son __periódicas__ . Eso significa que consisten en un patrón regular que se repite una y otra vez. Pueden continuar para siempre en todas las direcciones y se verán igual en todas partes. 
+Todas las teselaciones que vimos hasta ahora tienen una cosa en común: son __periódicas__ . Eso significa que consisten en un patrón regular que se repite una y otra vez. Pueden continuar para siempre en todas las direcciones y se verán igual en todas partes. 
 
- En la década de 1970, el matemático y físico británico [Roger Penrose](bio:penrose) descubrió teselaciones _no periódicas_ : todavía continúan infinitamente en todas las direcciones, pero _nunca se_ ven exactamente iguales. Estos se llaman __inclinaciones de Penrose__ , y solo necesita unos pocos tipos diferentes de polígonos para crear uno: 
+En la década de 1970, el matemático y físico británico [Roger Penrose](bio:penrose) descubrió teselaciones _no periódicas_ : todavía continúan infinitamente en todas las direcciones, pero _nunca se_ ven exactamente iguales. Estos se llaman __inclinaciones de Penrose__ , y solo necesita unos pocos tipos diferentes de polígonos para crear uno: 
 
     figure
       include svg/penrose.svg
@@ -1231,7 +1207,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: penrose-1
 
- Penrose estaba explorando los mosaicos puramente por diversión, pero resulta que la estructura interna de algunos materiales reales (como el aluminio) sigue un patrón similar. El patrón incluso se usó en papel higiénico, porque los fabricantes notaron que un patrón no periódico puede enrollarse sin abultamientos. 
+Penrose estaba explorando los mosaicos puramente por diversión, pero resulta que la estructura interna de algunos materiales reales (como el aluminio) sigue un patrón similar. El patrón incluso se usó en papel higiénico, porque los fabricantes notaron que un patrón no periódico puede enrollarse sin abultamientos. 
 
 ---
 
@@ -1239,8 +1215,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
- Hasta ahora hemos visto lo que podemos hacer con los polígonos en un mundo plano y bidimensional. Un [__poliedro__](gloss:polyhedron) es un objeto tridimensional que se compone de polígonos. Aquí hay unos ejemplos: 
+Hasta ahora hemos visto lo que podemos hacer con los polígonos en un mundo plano y bidimensional. Un [__poliedro__](gloss:polyhedron) es un objeto tridimensional que se compone de polígonos. Aquí hay unos ejemplos: 
 
 ::: column.padded-thin(width=220)
 
@@ -1256,32 +1233,32 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Los poliedros no pueden contener superficies curvas: las esferas y los cilindros, por ejemplo, no son poliedros. 
+Los poliedros no pueden contener superficies curvas: las esferas y los cilindros, por ejemplo, no son poliedros. 
 
- Los polígonos que forman un poliedro se llaman [__caras__](gloss:polyhedron-face) . Las líneas donde se conectan dos caras se llaman [__bordes__](gloss:polyhedron-edge) , y las esquinas donde se encuentran los bordes se llaman [__vértices__](gloss:polyhedron-vertex) . 
+Los polígonos que forman un poliedro se llaman [__caras__](gloss:polyhedron-face) . Las líneas donde se conectan dos caras se llaman [__bordes__](gloss:polyhedron-edge) , y las esquinas donde se encuentran los bordes se llaman [__vértices__](gloss:polyhedron-vertex) . 
 
 ---
 > id: euler
 
- Los poliedros vienen en muchas formas y tamaños diferentes, desde simples cubos o pirámides con solo unas pocas caras, hasta objetos complejos como la estrella de arriba, que tiene 60 caras triangulares. Sin embargo, resulta que _todos los_ poliedros tienen una propiedad importante en común: 
+Los poliedros vienen en muchas formas y tamaños diferentes, desde simples cubos o pirámides con solo unas pocas caras, hasta objetos complejos como la estrella de arriba, que tiene 60 caras triangulares. Sin embargo, resulta que _todos los_ poliedros tienen una propiedad importante en común: 
 
 ::: .theorem
 
- __Fórmula del poliedro de Euler__  
+__Fórmula del poliedro de Euler__  
 En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_ ) es dos más que el número de aristas ( _E_ ). En otras palabras, 
 
 {.text-center}`F + V = E + 2`
 
 :::
 
- Por ejemplo, si un poliedro tiene 12 caras y 18 vértices, sabemos que debe tener [[28]] aristas. 
+Por ejemplo, si un poliedro tiene 12 caras y 18 vértices, sabemos que debe tener [[28]] aristas. 
 
 ---
 > id: euler-1
 
- Esta ecuación fue descubierta por el famoso matemático suizo [Leonard Euler](bio:euler) . Es cierto para cualquier poliedro, siempre que no contenga ningún agujero. 
+Esta ecuación fue descubierta por el famoso matemático suizo [Leonard Euler](bio:euler) . Es cierto para cualquier poliedro, siempre que no contenga ningún agujero. 
 
- Si prueba diferentes poliedros, como los anteriores, encontrará que la fórmula de Euler siempre funciona. En [un curso posterior](/course/graph-theory/planar-graphs) aprenderá cómo demostrarlo matemáticamente. 
+Si prueba diferentes poliedros, como los anteriores, encontrará que la fórmula de Euler siempre funciona. En [un curso posterior](/course/graph-theory/planar-graphs) aprenderá cómo demostrarlo matemáticamente. 
 
 ---
 
@@ -1290,21 +1267,7 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 > section: nets-cross-sections
 > sectionStatus: dev
 
- Nuestro mundo entero es tridimensional, pero a menudo es mucho más fácil dibujar o visualizar objetos planos bidimensionales. Y hay algunas formas diferentes de ver los poliedros tridimensionales de una manera bidimensional. 
-
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
-
- ¿Cuál de estas redes forma un cubo? Haga coincidir la red con el objeto https://github.com/polymake/matchthenet Redes de dibujo 
-
- Describa la sección transversal formada por la intersección del plano y el sólido. 
-
- Una sección transversal es la intersección de un plano con un sólido. Otra forma de representar una figura tridimensional en un plano bidimensional es usar una red. Una red es una representación plana desplegada de los lados de una forma tridimensional. 
-
- girar un cubo para hacer una sección transversal hexagonal 
+TODO
 
 ---
 
@@ -1313,7 +1276,7 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 > section: prisms-pyramids
 > sectionStatus: dev
 
- QUE HACER 
+QUE HACER 
 
 ---
 
@@ -1322,7 +1285,7 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 > section: scaling
 > sectionStatus: dev
 
- QUE HACER 
+QUE HACER 
 
 ---
 
@@ -1330,14 +1293,11 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 > section: platonic
 > id: platonic
+> translated: auto
 
- Al comienzo de este curso definimos [polígonos regulares](gloss:regular-polygon) como [polígonos](gloss:regular-polygon) particularmente "simétricos", donde todos los lados y ángulos son iguales. Podemos hacer algo similar para los poliedros. 
+Al comienzo de este curso definimos [polígonos regulares](gloss:regular-polygon) como [polígonos](gloss:regular-polygon) particularmente "simétricos", donde todos los lados y ángulos son iguales. Podemos hacer algo similar para los poliedros. 
 
- En un _poliedro regular,_ todas las [caras](gloss:polyhedron-face) son del mismo tipo de polígono regular, y la misma cantidad de caras se encuentran en cada [vértice](gloss:polyhedron-vertex) . Los poliedros con estas dos propiedades se llaman [__sólidos platónicos__](gloss:platonic-solid) , llamados así por el filósofo griego [Platón](bio:plato) . 
-
-    //- The pyramid on the right of not a Platonic solid. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
+En un _poliedro regular,_ todas las [caras](gloss:polyhedron-face) son del mismo tipo de polígono regular, y la misma cantidad de caras se encuentran en cada [vértice](gloss:polyhedron-vertex) . Los poliedros con estas dos propiedades se llaman [__sólidos platónicos__](gloss:platonic-solid) , llamados así por el filósofo griego [Platón](bio:plato) . 
 
  Entonces, ¿cómo son los sólidos platónicos y cuántos de ellos hay? Para hacer una forma tridimensional, necesitamos al menos [[3]] caras para encontrarse en cada vértice. Comencemos sistemáticamente con el polígono regular más pequeño: triángulos equiláteros: 
 
@@ -1354,7 +1314,7 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 ::: column.grow
 
- Si creamos un poliedro donde tres [triángulos equiláteros se](gloss:equilateral-triangle) encuentran en cada vértice, obtenemos la forma a la izquierda. Se llama __tetraedro__ y tiene [[4]] caras. _{.reveal(when="blank-0")} ("Tetra" significa "cuatro" en griego)._ 
+Si creamos un poliedro donde tres [triángulos equiláteros se](gloss:equilateral-triangle) encuentran en cada vértice, obtenemos la forma a la izquierda. Se llama __tetraedro__ y tiene [[4]] caras. _{.reveal(when="blank-0")} ("Tetra" significa "cuatro" en griego)._ 
 
 :::
 
@@ -1371,7 +1331,7 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 ::: column.grow
 
- Si cuatro triángulos equiláteros se encuentran en cada vértice, obtenemos un sólido platónico diferente. Se llama __octaedro__ y tiene [[8]] caras. _{.reveal(when="blank-0")} ("Octa" significa "ocho" en griego. Al igual que "Octágono" significa forma de 8 lados, "Octaedro" significa sólido de 8 caras)._ 
+Si cuatro triángulos equiláteros se encuentran en cada vértice, obtenemos un sólido platónico diferente. Se llama __octaedro__ y tiene [[8]] caras. _{.reveal(when="blank-0")} ("Octa" significa "ocho" en griego. Al igual que "Octágono" significa forma de 8 lados, "Octaedro" significa sólido de 8 caras)._ 
 
 :::
 
@@ -1388,7 +1348,7 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 ::: column.grow
 
- Si [[cinco]] triángulos se encuentran en cada vértice, obtenemos el __Icosaedro__ . Tiene [[20]] caras. _{.reveal(when="blank-1")} ("Icosa" significa "veinte" en griego)._ 
+Si [[cinco]] triángulos se encuentran en cada vértice, obtenemos el __Icosaedro__ . Tiene [[20]] caras. _{.reveal(when="blank-1")} ("Icosa" significa "veinte" en griego)._ 
 
 :::
 
@@ -1403,7 +1363,7 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 ::: column.grow
 
- Si [[seis]] triángulos se encuentran en cada vértice, sucede algo diferente: simplemente obtenemos [[una teselación | un cuadrilátero | otro icosaedro]] , _{span.reveal(when="blank-1")} en lugar de un poliedro tridimensional._ 
+Si [[seis]] triángulos se encuentran en cada vértice, sucede algo diferente: simplemente obtenemos [[una teselación | un cuadrilátero | otro icosaedro]] , _{span.reveal(when="blank-1")} en lugar de un poliedro tridimensional._ 
 
 :::
 
@@ -1418,11 +1378,11 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 ::: column.grow
 
- Y siete o más triángulos en cada vértice tampoco producen nuevos poliedros: no hay suficiente espacio alrededor de un vértice, para acomodar tantos triángulos. 
+Y siete o más triángulos en cada vértice tampoco producen nuevos poliedros: no hay suficiente espacio alrededor de un vértice, para acomodar tantos triángulos. 
 
 :::
 
- Esto significa que hemos encontrado [[tres]] sólidos platónicos que consisten en triángulos. Pasemos al siguiente polígono regular: cuadrados. 
+Esto significa que hemos encontrado [[tres]] sólidos platónicos que consisten en triángulos. Pasemos al siguiente polígono regular: cuadrados. 
 
 ---
 > id: platonic-cube
@@ -1437,7 +1397,7 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 ::: column.grow
 
- Si [[tres]] cuadrados se encuentran en cada vértice, obtenemos el __cubo__ . Al igual que los dados, tiene [[6]] caras. _{span.reveal(when="blank-1")} El cubo a veces también se llama _Hexahedron_ , después de la palabra griega "hexa" para "seis"._ 
+Si [[tres]] cuadrados se encuentran en cada vértice, obtenemos el __cubo__ . Al igual que los dados, tiene [[6]] caras. _{span.reveal(when="blank-1")} El cubo a veces también se llama _Hexahedron_ , después de la palabra griega "hexa" para "seis"._ 
 
 :::
 
@@ -1452,14 +1412,14 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 ::: column.grow
 
- Si [[cuatro]] cuadrados se encuentran en cada vértice, obtenemos [[otra teselación | un tetraedro | otro cubo]] _{span.reveal(when="blank-1")} Y como antes, cinco o más cuadrados tampoco funcionarán._ 
+Si [[cuatro]] cuadrados se encuentran en cada vértice, obtenemos [[otra teselación | un tetraedro | otro cubo]] _{span.reveal(when="blank-1")} Y como antes, cinco o más cuadrados tampoco funcionarán._ 
 
 :::
 
 ---
 > id: platonic-dodecahedron
 
- A continuación, intentemos con pentágonos regulares: 
+A continuación, intentemos con pentágonos regulares: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1471,7 +1431,7 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 ::: column.grow
 
- Si [[tres]] pentágonos se encuentran en cada vértice, obtenemos el __Dodecaedro__ . Tiene [[12]] caras. _{.reveal(when="blank-1")} ("Dodeca" significa "doce" en griego)._ 
+Si [[tres]] pentágonos se encuentran en cada vértice, obtenemos el __Dodecaedro__ . Tiene [[12]] caras. _{.reveal(when="blank-1")} ("Dodeca" significa "doce" en griego)._ 
 
 :::
 
@@ -1486,14 +1446,14 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 ::: column.grow
 
- Como antes, cuatro o más pentágonos [[no funcionan | son posibles]] porque no hay suficiente espacio. 
+Como antes, cuatro o más pentágonos [[no funcionan | son posibles]] porque no hay suficiente espacio. 
 
 :::
 
 ---
 > id: platonic-hexagons
 
- El siguiente polígono regular para probar son los hexágonos: 
+El siguiente polígono regular para probar son los hexágonos: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1503,67 +1463,67 @@ En cada poliedro, el número de caras ( _F_ ) más el número de vértices ( _V_
 
 ::: column.grow
 
- Si tres hexágonos se encuentran en cada vértice, inmediatamente obtenemos un [[mosaico | poliedro | hexaedro]] _{span.reveal(when="blank-0")} Dado que no hay espacio para más de tres, parece que no hay sólidos platónicos que consisten en hexágonos._ 
+Si tres hexágonos se encuentran en cada vértice, inmediatamente obtenemos un [[mosaico | poliedro | hexaedro]] _{span.reveal(when="blank-0")} Dado que no hay espacio para más de tres, parece que no hay sólidos platónicos que consisten en hexágonos._ 
 
 :::
 
 ---
 > id: platonic-final
 
- Lo mismo también ocurre para todos los polígonos regulares con más de seis lados. No se teselan, y ciertamente no obtenemos ningún polígono tridimensional. 
+Lo mismo también ocurre para todos los polígonos regulares con más de seis lados. No se teselan, y ciertamente no obtenemos ningún polígono tridimensional. 
 
- ¡Esto significa que solo hay [[cinco]] sólidos platónicos! Echemos un vistazo a todos ellos juntos: 
+¡Esto significa que solo hay [[cinco]] sólidos platónicos! Echemos un vistazo a todos ellos juntos: 
 
 ---
 > id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 
- __Tetraedro__ 
+__Tetraedro__ 
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
- _{span.dual} [[4]] caras_  
+_{span.dual} [[4]] caras_  
 _{span.dual} [[4]] vértices_  
 _{span.dual} [[6]] bordes_ 
 
 ::: column.grow.text-center(width=120)
 
- __Cubo__ 
+__Cubo__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
- _{span.dual(target="dual1")} [[6]] caras_  
+_{span.dual(target="dual1")} [[6]] caras_  
 _{span.dual(target="dual1")} [[8]] vértices_  
 _{span.dual} [[12]] bordes_ 
 
 ::: column.grow.text-center(width=120)
 
- __Octaedro__ 
+__Octaedro__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
- _{span.dual(target="dual1")} [[8]] caras_  
+_{span.dual(target="dual1")} [[8]] caras_  
 _{span.dual(target="dual1")} [[6]] vértices_  
 _{span.dual} [[12]] bordes_ 
 
 ::: column.grow.text-center(width=120)
 
- __Dodecaedro__ 
+__Dodecaedro__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
- _{span.dual(target="dual2")} [[12]] caras_  
+_{span.dual(target="dual2")} [[12]] caras_  
 _{span.dual(target="dual2")} 20 vértices_  
 _{span.dual} 30 bordes_ 
 
 ::: column.grow.text-center(width=120)
 
- __Icosaedro__ 
+__Icosaedro__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
- _{span.dual(target="dual2")} [[20]] caras_  
+_{span.dual(target="dual2")} [[20]] caras_  
 _{span.dual(target="dual2")} 12 vértices_  
 _{span.dual} 30 bordes_ 
 
@@ -1574,7 +1534,7 @@ _{span.dual} 30 bordes_
 ---
 > id: platonic-dual
 
- Podemos convertir un poliedro en su doble, "reemplazando" cada cara con un vértice, y cada vértice con una cara. Estas animaciones muestran cómo: 
+Podemos convertir un poliedro en su doble, "reemplazando" cada cara con un vértice, y cada vértice con una cara. Estas animaciones muestran cómo: 
 
 ::: column(width=300)
 
@@ -1588,12 +1548,12 @@ _{span.dual} 30 bordes_
 
 :::
 
- El tetraedro es dual consigo mismo. Como tiene la misma cantidad de caras y vértices, intercambiarlas no cambiaría nada. 
+El tetraedro es dual consigo mismo. Como tiene la misma cantidad de caras y vértices, intercambiarlas no cambiaría nada. 
 
 ---
 > id: platonic-elements
 
- [Platón](bio:plato) creía que toda la materia en el universo consta de cuatro elementos: aire, tierra, agua y fuego. Pensó que cada elemento corresponde a uno de los sólidos platónicos, mientras que el quinto representaría el universo en su conjunto. Hoy sabemos que hay más de 100 elementos diferentes que consisten en átomos esféricos, no en poliedros. 
+[Platón](bio:plato) creía que toda la materia en el universo consta de cuatro elementos: aire, tierra, agua y fuego. Pensó que cada elemento corresponde a uno de los sólidos platónicos, mientras que el quinto representaría el universo en su conjunto. Hoy sabemos que hay más de 100 elementos diferentes que consisten en átomos esféricos, no en poliedros. 
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
@@ -1605,9 +1565,9 @@ _{span.dual} 30 bordes_
 
 > id: archimedean
 
- Los sólidos platónicos son poliedros particularmente importantes, pero hay muchos otros. 
+Los sólidos platónicos son poliedros particularmente importantes, pero hay muchos otros. 
 
- [__Los sólidos de Arquímedes__](gloss:archimedean-solid) , por ejemplo, todavía tienen que estar formados por [polígonos regulares](gloss:regular-polygon) , pero puedes usar múltiples tipos diferentes. Reciben su nombre de otro matemático griego, [Arquímedes de Siracusa](bio:archimedes) , y hay 13 de ellos: 
+[__Los sólidos de Arquímedes__](gloss:archimedean-solid) , por ejemplo, todavía tienen que estar formados por [polígonos regulares](gloss:regular-polygon) , pero puedes usar múltiples tipos diferentes. Reciben su nombre de otro matemático griego, [Arquímedes de Siracusa](bio:archimedes) , y hay 13 de ellos: 
 
 ::: column(width=170 parent="padded-thin")
 
@@ -1702,16 +1662,12 @@ _{span.dual} 30 bordes_
 
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
-
 ---
 > id: polyhedra-applications
 
 ### Aplicaciones 
 
- Platón se equivocó al creer que todos los elementos consisten en sólidos platónicos. Pero los poliedros regulares tienen muchas propiedades especiales que los hacen aparecer en otras partes de la naturaleza, y podemos copiar estas propiedades en ciencia e ingeniería. 
+Platón se equivocó al creer que todos los elementos consisten en sólidos platónicos. Pero los poliedros regulares tienen muchas propiedades especiales que los hacen aparecer en otras partes de la naturaleza, y podemos copiar estas propiedades en ciencia e ingeniería. 
 
 ::: column(width=180)
 
@@ -1725,7 +1681,7 @@ _{span.dual} 30 bordes_
 
 ::: column.grow
 
- Muchos __virus__ , __bacterias__ y otros __organismos__ pequeños tienen forma de [icosaedro](gloss:icosahedron) . Los virus, por ejemplo, deben encerrar su material genético dentro de un caparazón de muchas unidades de proteínas idénticas. El icosaedro es la forma más eficiente de hacer esto, porque consta de unos pocos elementos regulares pero tiene casi la forma de una esfera. 
+Muchos __virus__ , __bacterias__ y otros __organismos__ pequeños tienen forma de [icosaedro](gloss:icosahedron) . Los virus, por ejemplo, deben encerrar su material genético dentro de un caparazón de muchas unidades de proteínas idénticas. El icosaedro es la forma más eficiente de hacer esto, porque consta de unos pocos elementos regulares pero tiene casi la forma de una esfera. 
 
 :::
 
@@ -1741,9 +1697,9 @@ _{span.dual} 30 bordes_
 
 ::: column.grow
 
- Muchas __moléculas__ tienen forma de poliedros regulares. El ejemplo más famoso es `C_60` que consta de 60 átomos de carbono dispuestos en forma de un [icosaedro truncado](gloss:truncated-icosahedron) . 
+Muchas __moléculas__ tienen forma de poliedros regulares. El ejemplo más famoso es `C_60` que consta de 60 átomos de carbono dispuestos en forma de un [icosaedro truncado](gloss:truncated-icosahedron) . 
 
- Fue descubierto en 1985 cuando los científicos investigaron el polvo interestelar. Lo llamaron "Buckyball" (o Buckminsterfullerene) después del arquitecto [Buckminster Fuller](bio:fuller) , famoso por construir edificios de aspecto similar. 
+Fue descubierto en 1985 cuando los científicos investigaron el polvo interestelar. Lo llamaron "Buckyball" (o Buckminsterfullerene) después del arquitecto [Buckminster Fuller](bio:fuller) , famoso por construir edificios de aspecto similar. 
 
 :::
 
@@ -1759,7 +1715,7 @@ _{span.dual} 30 bordes_
 
 ::: column.grow
 
- La mayoría de los __cristales__ tienen sus átomos dispuestos en una cuadrícula regular que consiste en [tetraedros](gloss:tetrahedron) , [cubos](gloss:cube) u [octaedros](gloss:octahedron) . Cuando se agrietan o se rompen, puedes ver estas formas a mayor escala. 
+La mayoría de los __cristales__ tienen sus átomos dispuestos en una cuadrícula regular que consiste en [tetraedros](gloss:tetrahedron) , [cubos](gloss:cube) u [octaedros](gloss:octahedron) . Cuando se agrietan o se rompen, puedes ver estas formas a mayor escala. 
 
 :::
 
@@ -1775,7 +1731,7 @@ _{span.dual} 30 bordes_
 
 ::: column.grow
 
- El tetraedro y el octaedro son increíblemente rígidos y estables, lo que los hace muy útiles en la __construcción__ . _Los marcos espaciales_ son estructuras poligonales que pueden soportar techos grandes y puentes pesados. 
+El tetraedro y el octaedro son increíblemente rígidos y estables, lo que los hace muy útiles en la __construcción__ . _Los marcos espaciales_ son estructuras poligonales que pueden soportar techos grandes y puentes pesados. 
 
 :::
 
@@ -1791,8 +1747,8 @@ _{span.dual} 30 bordes_
 
 ::: column.grow
 
- Los sólidos platónicos también se usan para crear __dados__ . Debido a su simetría, cada lado tiene la [probabilidad](gloss:probability) de aterrizar hacia arriba, por lo que los dados son justos. 
+Los sólidos platónicos también se usan para crear __dados__ . Debido a su simetría, cada lado tiene la [probabilidad](gloss:probability) de aterrizar hacia arriba, por lo que los dados son justos. 
 
- El [icosaedro truncado](gloss:truncated-icosahedron) es probablemente el poliedro más famoso del mundo: es la forma del fútbol. 
+El [icosaedro truncado](gloss:truncated-icosahedron) es probablemente el poliedro más famoso del mundo: es la forma del fútbol. 
 
 :::

@@ -4,8 +4,9 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
- Muitos conceitos geométricos, como [linhas](gloss:line) ou [polígonos,](gloss:polygon) foram "inventados" por matemáticos. A simetria, por outro lado, está por toda parte. Quase todas as plantas, animais e até nós humanos somos simétricos. 
+Muitos conceitos geométricos, como [linhas](gloss:line) ou [polígonos,](gloss:polygon) foram "inventados" por matemáticos. A simetria, por outro lado, está por toda parte. Quase todas as plantas, animais e até nós humanos somos simétricos. 
 
 ::: column(width=200)
 
@@ -21,7 +22,7 @@
 
 :::
 
- Com o tempo, imitamos a simetria da natureza em arte, arquitetura, tecnologia e design. Formas e padrões simétricos parecem _mais bonitos do_ que não-simétricos. 
+Com o tempo, imitamos a simetria da natureza em arte, arquitetura, tecnologia e design. Formas e padrões simétricos parecem _mais bonitos do_ que não-simétricos. 
 
 ::: column(width=200)
 
@@ -37,15 +38,15 @@
 
 :::
 
- Mas a simetria é muito mais importante do que simplesmente _parecer bonita_ . Está nos próprios fundamentos do nosso universo e pode até explicar as leis mais fundamentais da física. 
+Mas a simetria é muito mais importante do que simplesmente _parecer bonita_ . Está nos próprios fundamentos do nosso universo e pode até explicar as leis mais fundamentais da física. 
 
- _{button.next-step} Continuar_ 
+_{button.next-step} Continuar_ 
 
 ---
 > id: transformations
 > goals: t1 t2 t3
 
- Embora a simetria seja um conceito muito intuitivo, descrevê-la matematicamente é mais difícil do que você imagina. Primeiro, temos que aprender sobre [__transformações__](gloss:transformation) , que são maneiras de converter uma figura geométrica em outra. Aqui estão alguns exemplos: 
+Embora a simetria seja um conceito muito intuitivo, descrevê-la matematicamente é mais difícil do que você imagina. Primeiro, temos que aprender sobre [__transformações__](gloss:transformation) , que são maneiras de converter uma figura geométrica em outra. Aqui estão alguns exemplos: 
 
 ::: column.r(width=200 parent="padded-thin")
 
@@ -70,7 +71,7 @@
 ---
 > id: transformations-1
 
- O resultado de uma transformação é chamado de [__imagem__](gloss:transformation-image) . Nós frequentemente denotamos a imagem de uma forma `A` Como `A'` , pronunciado "A prime". Existem muitos tipos diferentes de transformação, que exploraremos em mais detalhes ao longo deste curso. 
+O resultado de uma transformação é chamado de [__imagem__](gloss:transformation-image) . Nós frequentemente denotamos a imagem de uma forma `A` Como `A'` , pronunciado "A prime". Existem muitos tipos diferentes de transformação, que exploraremos em mais detalhes ao longo deste curso. 
 
 ---
 
@@ -78,10 +79,11 @@
 
 > id: rigid
 > section: rigid
+> translated: auto
 
- Uma [__transformação rígida__](gloss:rigid-transformation) é um tipo especial de transformação que não altera o tamanho ou a forma de uma figura. Poderíamos imaginar que ele é feito de um material sólido, como madeira ou metal: podemos movê-lo, girá-lo ou virar, mas não podemos esticar, dobrar ou deformar. 
+Uma [__transformação rígida__](gloss:rigid-transformation) é um tipo especial de transformação que não altera o tamanho ou a forma de uma figura. Poderíamos imaginar que ele é feito de um material sólido, como madeira ou metal: podemos movê-lo, girá-lo ou virar, mas não podemos esticar, dobrar ou deformar. 
 
- Quais dessas cinco transformações são rígidas? 
+Quais dessas cinco transformações são rígidas? 
 
     x-picker.rigid
       .item: img(src="images/picker-1.svg" width=130 height=240)
@@ -94,7 +96,7 @@
 > id: rigid-1
 > goals: t1 t2 t3
 
- Acontece que existem apenas três tipos diferentes de transformações rígidas: 
+Acontece que existem apenas três tipos diferentes de transformações rígidas: 
 
 ::: column.r(width=200)
 
@@ -125,18 +127,18 @@
 ---
 > id: rigid-2
 
- Também podemos combinar vários tipos de transformação para criar outros mais complexos - por exemplo, uma tradução seguida por uma rotação. 
+Também podemos combinar vários tipos de transformação para criar outros mais complexos - por exemplo, uma tradução seguida por uma rotação. 
 
- Mas primeiro, vamos dar uma olhada em cada um desses tipos de transformações com mais detalhes. 
+Mas primeiro, vamos dar uma olhada em cada um desses tipos de transformações com mais detalhes. 
 
 ---
 > id: translations
 
 ### Traduções 
 
- Uma [__tradução__](gloss:translation) é uma transformação que move todos os pontos de uma figura pela mesma distância na mesma direção. 
+Uma [__tradução__](gloss:translation) é uma transformação que move todos os pontos de uma figura pela mesma distância na mesma direção. 
 
- No plano de coordenadas, podemos especificar uma tradução pela distância que a forma é movida ao longo do eixo _x_ e eixo _y_ . Por exemplo, uma transformação por (3, 5) move uma forma por 3 ao longo do eixo _x_ e por 5 ao longo do eixo _y_ . 
+No plano de coordenadas, podemos especificar uma tradução pela distância que a forma é movida ao longo do eixo _x_ e eixo _y_ . Por exemplo, uma transformação por (3, 5) move uma forma por 3 ao longo do eixo _x_ e por 5 ao longo do eixo _y_ . 
 
 ::: column(width=220)
 
@@ -174,7 +176,7 @@
 > id: translations-1
 > goals: drag-0 drag-1 drag-2
 
- Agora é sua vez - traduza as seguintes formas, como mostrado: 
+Agora é sua vez - traduza as seguintes formas, como mostrado: 
 
 ::: column(width=220)
 
@@ -220,9 +222,9 @@
 
 ### Reflexões 
 
- Um [__reflexo__](gloss:reflection) é uma transformação que "vira" ou "espelha" uma forma através de uma linha. Essa linha é chamada de __linha de reflexão__ . 
+Um [__reflexo__](gloss:reflection) é uma transformação que "vira" ou "espelha" uma forma através de uma linha. Essa linha é chamada de __linha de reflexão__ . 
 
- Desenhe a linha de reflexão em cada um destes exemplos: 
+Desenhe a linha de reflexão em cada um destes exemplos: 
 
 ::: column(width=220)
 
@@ -251,7 +253,7 @@
 > id: reflections-1
 > goals: r0 r1 r2
 
- Agora é sua vez - desenhe o reflexo de cada uma destas formas: 
+Agora é sua vez - desenhe o reflexo de cada uma destas formas: 
 
 ::: column(width=220)
 
@@ -279,12 +281,12 @@
 ---
 > id: reflections-2
 
- Observe que, se um ponto estiver na linha de reflexão, ele [[não se moverá | gira | vira]] quando está refletido: _{span.reveal(when="blank-0")} sua imagem é o mesmo ponto que o original._ 
+Observe que, se um ponto estiver na linha de reflexão, ele [[não se moverá | gira | vira]] quando está refletido: _{span.reveal(when="blank-0")} sua imagem é o mesmo ponto que o original._ 
 
 ---
 > id: reflections-3
 
- Em todos os exemplos acima, a linha de reflexão era horizontal, vertical ou em um ângulo de 45° - o que tornava mais fácil desenhar as reflexões. Se não for esse o caso, a construção exige um pouco mais de trabalho: 
+Em todos os exemplos acima, a linha de reflexão era horizontal, vertical ou em um ângulo de 45° - o que tornava mais fácil desenhar as reflexões. Se não for esse o caso, a construção exige um pouco mais de trabalho: 
 
 ::: column(width=300)
 
@@ -342,9 +344,9 @@
 
 ### Rotações 
 
- Uma [__rotação__](gloss:rotation) é uma transformação que "transforma" uma forma em um determinado ângulo em torno de um ponto fixo. Esse ponto é chamado de [__centro de rotação__](gloss:center-of-rotation) . As rotações podem ser no sentido horário ou anti-horário. 
+Uma [__rotação__](gloss:rotation) é uma transformação que "transforma" uma forma em um determinado ângulo em torno de um ponto fixo. Esse ponto é chamado de [__centro de rotação__](gloss:center-of-rotation) . As rotações podem ser no sentido horário ou anti-horário. 
 
- Tente girar as formas abaixo em torno do centro de rotação vermelho: 
+Tente girar as formas abaixo em torno do centro de rotação vermelho: 
 
 ::: column(width=220)
 
@@ -418,7 +420,7 @@
 
 ::: column.grow
 
- É mais difícil desenhar rotações que não sejam exatamente 90° ou 180°. Vamos tentar girar essa forma ${10*ang}{ang|6|-18,18,1}° em torno do [centro de rotação](target:rot) . 
+É mais difícil desenhar rotações que não sejam exatamente 90° ou 180°. Vamos tentar girar essa forma ${10*ang}{ang|6|-18,18,1}° em torno do [centro de rotação](target:rot) . 
 
 {.r} Como nas reflexões, temos que girar cada ponto de uma forma individualmente. _{button.next-step} Continuar_ 
 
@@ -437,7 +439,7 @@
 ---
 > id: composition-1
 
- As transformações são um conceito importante em muitas partes da matemática, não apenas na geometria. Por exemplo, você pode transformar [_funções_](gloss:function) deslocando ou girando seus [gráficos](gloss:function-graph) . Você também pode usar transformações para determinar se duas formas são [congruentes](gloss:congruent) . 
+As transformações são um conceito importante em muitas partes da matemática, não apenas na geometria. Por exemplo, você pode transformar [_funções_](gloss:function) deslocando ou girando seus [gráficos](gloss:function-graph) . Você também pode usar transformações para determinar se duas formas são [congruentes](gloss:congruent) . 
 
 ---
 
@@ -445,36 +447,9 @@
 
 > section: congruence
 > sectionStatus: dev
+> translated: auto
 
- FAÇAM 
-
----
-
-### Composição das transformações 
-
- Obviamente, podemos combinar várias traduções, reflexões e rotações para criar transformações mais complexas. 
-
-{.todo} Exemplo TODO 
-
- No entanto, como se vê, não importa quantas transformações diferentes você combine: você sempre pode encontrar outra transformação que faz o mesmo de uma só vez! 
-
-{.todo} Calculadora de composição de transformação TODO 
-
- Combinar duas reflexões é particularmente interessante. Há dois casos diferentes que precisamos considerar: 
-
-::: column.grow
-
- Se as duas linhas de reflexão são paralelas, o resultado é uma única tradução. A direção da translação é perpendicular às linhas de reflexão e a distância é duas vezes a distância entre as linhas de reflexão. 
-
-{.todo} Animação TODO 
-
-::: column.grow
-
- Se as duas linhas de reflexão se cruzarem, o resultado será uma rotação única. O centro de rotação é a interseção entre as linhas de reflexão e o ângulo é duas vezes o ângulo entre as linhas de reflexão. 
-
-{.todo} Animação TODO 
-
-:::
+FAÇAM
 
 ---
 
@@ -483,8 +458,9 @@
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
- [__A simetria__](gloss:symmetry) está por toda parte e um conceito intuitivo: diferentes partes de um objeto têm _a mesma_ aparência de alguma maneira. Mas, usando transformações, podemos dar uma definição matemática muito mais precisa do que _realmente_ significa simetria: 
+[__A simetria__](gloss:symmetry) está por toda parte e um conceito intuitivo: diferentes partes de um objeto têm _a mesma_ aparência de alguma maneira. Mas, usando transformações, podemos dar uma definição matemática muito mais precisa do que _realmente_ significa simetria: 
 
 {.definition} Um objeto é _simétrico_ se tiver a mesma aparência, mesmo após aplicar uma certa transformação. 
 
@@ -513,13 +489,13 @@
 
 ### Simetria reflexiva 
 
- Uma forma tem [__simetria reflexiva__](gloss:reflectional-symmetry) se parecer igual após ser refletida. A linha de reflexão é chamada de [__eixo de simetria__](gloss:axis-of-symmetry) e divide a forma em duas [[congruentes | igual |]] metades [[semelhantes]] . Algumas figuras também podem ter mais de um eixo de simetria. 
+Uma forma tem [__simetria reflexiva__](gloss:reflectional-symmetry) se parecer igual após ser refletida. A linha de reflexão é chamada de [__eixo de simetria__](gloss:axis-of-symmetry) e divide a forma em duas [[congruentes | igual |]] metades [[semelhantes]] . Algumas figuras também podem ter mais de um eixo de simetria. 
 
 ---
 > id: reflectional-symmetry-1
 > goals: r0 r1 r2 r3 r4 r5
 
- Desenhe todos os eixos de simetria nestas seis imagens e formas: 
+Desenhe todos os eixos de simetria nestas seis imagens e formas: 
 
 ::: column(width=220)
 
@@ -576,7 +552,7 @@
 ---
 > id: alphabet
 
- Muitas letras do alfabeto têm simetria reflexiva. Selecione todos os que fazem: 
+Muitas letras do alfabeto têm simetria reflexiva. Selecione todos os que fazem: 
 
     x-picker.letters
       - let c = ['#D92120', '#E6642C', '#E68E34', '#D9AD3C', '#B5BD4C', '#7FB972', '#63AD99', '#55A1B1', '#488BC2', '#4065B1', '#413B93', '#781C81']
@@ -590,7 +566,7 @@
 > id: reflectional-symmetry-2
 > goals: r0 r1 r2
 
- Aqui estão mais algumas formas. Complete-os para que tenham simetria reflexiva: 
+Aqui estão mais algumas formas. Complete-os para que tenham simetria reflexiva: 
 
 ::: column(width=220)
 
@@ -623,9 +599,9 @@
 > id: palindromes
 > goals: p0 p1 p2
 
- Formas, letras e imagens podem ter simetria reflexiva, mas também números inteiros, palavras e frases! 
+Formas, letras e imagens podem ter simetria reflexiva, mas também números inteiros, palavras e frases! 
 
- Por exemplo, "25352" e "ANNA" lêem o mesmo de trás para frente. Números ou palavras como essa são chamados [__palíndromos__](gloss:palindrome) . Você consegue pensar em outros palíndromos? 
+Por exemplo, "25352" e "ANNA" lêem o mesmo de trás para frente. Números ou palavras como essa são chamados [__palíndromos__](gloss:palindrome) . Você consegue pensar em outros palíndromos? 
 
     form.palindromes.text-center.form-field
       input(type="text")
@@ -638,7 +614,7 @@
 ---
 > id: palindromes-1
 
- Se ignorarmos espaços e pontuação, as frases curtas abaixo também terão simetria reflexiva. Você pode criar sua própria? 
+Se ignorarmos espaços e pontuação, as frases curtas abaixo também terão simetria reflexiva. Você pode criar sua própria? 
 
 {.text-center} Nunca estranho ou par.  
 Uma [[noz]] para um pote de atum.  
@@ -653,9 +629,9 @@ Ei, [[garoto]] banana!
 
 ::: column.grow
 
- Uma forma tem [__simetria rotacional__](gloss:rotational-symmetry) se tiver a mesma aparência depois de ser girada (menos de 360°). O [centro de rotação](gloss:center-of-rotation) geralmente é apenas o meio da forma. 
+Uma forma tem [__simetria rotacional__](gloss:rotational-symmetry) se tiver a mesma aparência depois de ser girada (menos de 360°). O [centro de rotação](gloss:center-of-rotation) geralmente é apenas o meio da forma. 
 
- A [__ordem de simetria__](gloss:order-of-symmetry) é o número de orientações distintas nas quais a forma tem a mesma aparência. Você também pode pensar nisso como o _número de vezes que podemos rotacionar a forma_ , antes de voltarmos ao início. Por exemplo, este floco de neve tem o pedido [[6]] . 
+A [__ordem de simetria__](gloss:order-of-symmetry) é o número de orientações distintas nas quais a forma tem a mesma aparência. Você também pode pensar nisso como o _número de vezes que podemos rotacionar a forma_ , antes de voltarmos ao início. Por exemplo, este floco de neve tem o pedido [[6]] . 
 
 {.reveal(when="blank-0")} O ângulo de cada rotação é `"360°"/"order"` . No floco de neve, isso é `"360°"/6 = input(60)°` . 
 
@@ -665,12 +641,10 @@ Ei, [[garoto]] banana!
 
 :::
 
-    // Maybe have another alphabeth to select all letters with rotational symmetry?
-
 ---
 > id: rotational-symmetry-1
 
- Encontre a ordem e o ângulo de rotação, para cada uma destas formas: 
+Encontre a ordem e o ângulo de rotação, para cada uma destas formas: 
 
 ::: column(width=220)
 
@@ -696,7 +670,7 @@ Ei, [[garoto]] banana!
 > id: rotational-symmetry-2
 > goals: r0 r1 r2
 
- Agora complete estas formas, para que tenham simetria rotacional: 
+Agora complete estas formas, para que tenham simetria rotacional: 
 
 ::: column(width=220)
 
@@ -741,9 +715,7 @@ Ei, [[garoto]] banana!
 
 > id: groups
 > section: symmetry-groups
-
-    // HINT: To recognise different configurations, we need to highlight the
-    // four corners in different colours.
+> translated: auto
 
  Algumas formas têm mais de uma simetria - vamos dar uma olhada no [quadrado](gloss:square) como um exemplo simples. 
 
@@ -761,7 +733,7 @@ Ei, [[garoto]] banana!
 
 ::: column.grow(width=200)
 
- Você já mostrou acima que um quadrado tem [[4]] eixos de reflexão. 
+Você já mostrou acima que um quadrado tem [[4]] eixos de reflexão. 
 
 {.reveal(when="blank-0")} Também possui simetria rotacional em [[90]]°, [[180]]° e [[270]]°. 
 
@@ -775,7 +747,7 @@ Ei, [[garoto]] banana!
 > id: add-symmetries
 > goals: sum-0 sum-1
 
- Agora podemos começar a fazer aritmética com essas simetrias. Por exemplo, podemos _adicionar_ duas simetrias para obter novas: 
+Agora podemos começar a fazer aritmética com essas simetrias. Por exemplo, podemos _adicionar_ duas simetrias para obter novas: 
 
 ::: column(width=260)
 
@@ -803,7 +775,7 @@ Ei, [[garoto]] banana!
 > title: Symmetry Calculator
 > goals: calculate
 
- Sempre que você adiciona duas simetrias de um quadrado, obtém uma nova. Aqui está uma "calculadora de simetria", na qual você pode tentar: 
+Sempre que você adiciona duas simetrias de um quadrado, obtém uma nova. Aqui está uma "calculadora de simetria", na qual você pode tentar: 
 
     .calculator
       .display
@@ -822,14 +794,14 @@ Ei, [[garoto]] banana!
 ---
 > id: symmetry-arithmetic
 
- Passe algum tempo brincando com a calculadora de simetria e tente encontrar padrões. Você pode completar essas observações? 
+Passe algum tempo brincando com a calculadora de simetria e tente encontrar padrões. Você pode completar essas observações? 
 
- * Adicionar duas rotações sempre dará [[uma rotação | uma reflexão]] (ou a identidade). * Adicionar duas reflexões sempre dará [[uma rotação | uma reflexão]] (ou a identidade). * A adição das mesmas duas simetrias na ordem oposta [[às vezes gera uma diferença | sempre dá uma diferente | sempre dá o mesmo]] resultado. * Adicionar a identidade [[não faz nada | retorna uma reflexão | retorna o oposto]] . 
+* Adicionar duas rotações sempre dará [[uma rotação | uma reflexão]] (ou a identidade). * Adicionar duas reflexões sempre dará [[uma rotação | uma reflexão]] (ou a identidade). * A adição das mesmas duas simetrias na ordem oposta [[às vezes gera uma diferença | sempre dá uma diferente | sempre dá o mesmo]] resultado. * Adicionar a identidade [[não faz nada | retorna uma reflexão | retorna o oposto]] . 
 
 ---
 > id: group-axioms
 
- Você já deve ter percebido que adicionar __{.orange} simetrias__ é realmente muito semelhante à adição __{.green} inteiros__ : 
+Você já deve ter percebido que adicionar __{.orange} simetrias__ é realmente muito semelhante à adição __{.green} inteiros__ : 
 
     ol.proof
     
@@ -894,17 +866,17 @@ Ei, [[garoto]] banana!
 ---
 > id: groups-1
 
- Em matemática, qualquer coleção que possua essas propriedades é chamada de [__grupo__](gloss:group) . Alguns grupos (como o __{.orange} simetrias__ de um quadrado) possuem apenas um número finito de elementos. Outros (como o __{.green} inteiros__ ) são infinitos. 
+Em matemática, qualquer coleção que possua essas propriedades é chamada de [__grupo__](gloss:group) . Alguns grupos (como o __{.orange} simetrias__ de um quadrado) possuem apenas um número finito de elementos. Outros (como o __{.green} inteiros__ ) são infinitos. 
 
- Neste exemplo, começamos com as oito simetrias do quadrado. De fato, toda forma geométrica tem seu próprio __grupo de simetria__ . Todos eles têm elementos diferentes, mas sempre satisfazem as três regras acima. 
+Neste exemplo, começamos com as oito simetrias do quadrado. De fato, toda forma geométrica tem seu próprio __grupo de simetria__ . Todos eles têm elementos diferentes, mas sempre satisfazem as três regras acima. 
 
- Grupos aparecem em todos os lugares na matemática. Os elementos podem ser números ou simetrias, mas também polinômios, permutações, matrizes, funções ... _qualquer coisa_ que obedeça às três regras. A idéia principal da _teoria_ dos _grupos_ é que não estamos interessados nos elementos individuais, apenas em _como eles interagem_ . 
+Grupos aparecem em todos os lugares na matemática. Os elementos podem ser números ou simetrias, mas também polinômios, permutações, matrizes, funções ... _qualquer coisa_ que obedeça às três regras. A idéia principal da _teoria_ dos _grupos_ é que não estamos interessados nos elementos individuais, apenas em _como eles interagem_ . 
 
 ::: column.grow
 
- Por exemplo, os grupos de simetria de diferentes moléculas podem ajudar os cientistas a prever e explicar as propriedades dos materiais correspondentes. 
+Por exemplo, os grupos de simetria de diferentes moléculas podem ajudar os cientistas a prever e explicar as propriedades dos materiais correspondentes. 
 
- Os grupos também podem ser usados para analisar a estratégia vencedora em jogos de tabuleiro, o comportamento dos vírus na medicina, diferentes harmonias na música e muitos outros conceitos ... 
+Os grupos também podem ser usados para analisar a estratégia vencedora em jogos de tabuleiro, o comportamento dos vírus na medicina, diferentes harmonias na música e muitos outros conceitos ... 
 
 ::: column(width=340)
 
@@ -921,13 +893,13 @@ Ei, [[garoto]] banana!
 
 > id: wallpaper-groups
 
- Nas [seções anteriores](/course/transformations/symmetry) , vimos dois tipos diferentes de simetria, correspondentes a duas transformações diferentes: rotações e reflexões. Mas há também uma simetria para o terceiro tipo de transformação rígida: [[traduções | rotaciona | vira]] . 
+Nas [seções anteriores](/course/transformations/symmetry) , vimos dois tipos diferentes de simetria, correspondentes a duas transformações diferentes: rotações e reflexões. Mas há também uma simetria para o terceiro tipo de transformação rígida: [[traduções | rotaciona | vira]] . 
 
 ---
 > id: wallpaper-groups-1
 > goals: play-0 play-1
 
- [__A simetria translacional__](gloss:translational-symmetry) não funciona para objetos isolados, como flores ou borboletas, mas para padrões regulares que se estendem em todas as direções: 
+[__A simetria translacional__](gloss:translational-symmetry) não funciona para objetos isolados, como flores ou borboletas, mas para padrões regulares que se estendem em todas as direções: 
 
 ::: column.grow
 
@@ -952,7 +924,7 @@ Ei, [[garoto]] banana!
 ---
 > id: footsteps
 
- Além da simetria reflexiva, rotacional e translacional, existe ainda um quarto tipo: [__reflexões planas__](gloss:glide-reflection) . Esta é uma combinação de uma reflexão e uma tradução na mesma direção que o eixo de reflexão. 
+Além da simetria reflexiva, rotacional e translacional, existe ainda um quarto tipo: [__reflexões planas__](gloss:glide-reflection) . Esta é uma combinação de uma reflexão e uma tradução na mesma direção que o eixo de reflexão. 
 
     figure
       .footsteps
@@ -963,9 +935,9 @@ Ei, [[garoto]] banana!
 ---
 > id: wallpaper-groups-2
 
- Um padrão pode ter mais de um tipo de simetria. E, assim como nos quadrados, podemos encontrar o [grupo](gloss:symmetry-group) de [simetria](gloss:symmetry-group) de um padrão, que contém todas as suas diferentes simetrias. 
+Um padrão pode ter mais de um tipo de simetria. E, assim como nos quadrados, podemos encontrar o [grupo](gloss:symmetry-group) de [simetria](gloss:symmetry-group) de um padrão, que contém todas as suas diferentes simetrias. 
 
- Esses grupos não informam muito sobre a _aparência_ do padrão (por exemplo, suas cores e formas), exatamente como é _repetido_ . Vários padrões diferentes podem ter o mesmo grupo de simetria - desde que sejam organizados e repetidos da mesma maneira. 
+Esses grupos não informam muito sobre a _aparência_ do padrão (por exemplo, suas cores e formas), exatamente como é _repetido_ . Vários padrões diferentes podem ter o mesmo grupo de simetria - desde que sejam organizados e repetidos da mesma maneira. 
 
 ::: column.grow
 
@@ -989,7 +961,7 @@ Ei, [[garoto]] banana!
 > id: wallpaper-groups-3
 > goals: gallery
 
- Acontece que, embora existam infinitos padrões possíveis, todos eles têm um de apenas 17 grupos de simetria diferentes. Estes são chamados de __Grupos de Papéis de Parede__ . Cada grupo de papel de parede é definido por uma combinação de translações, rotações, reflexões e reflexões planas. Você pode ver os [centros de rotação](gloss:center-of-rotation) e os [eixos de reflexão](gloss:axis-of-symmetry) nesses exemplos? 
+Acontece que, embora existam infinitos padrões possíveis, todos eles têm um de apenas 17 grupos de simetria diferentes. Estes são chamados de __Grupos de Papéis de Parede__ . Cada grupo de papel de parede é definido por uma combinação de translações, rotações, reflexões e reflexões planas. Você pode ver os [centros de rotação](gloss:center-of-rotation) e os [eixos de reflexão](gloss:axis-of-symmetry) nesses exemplos? 
 
     x-gallery(slide-width="320")
       div
@@ -1066,7 +1038,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 > title: Drawing Wallpaper Symmetries
 > goals: draw-1 draw-2 switch
 
- Infelizmente, não há uma razão simples para haver _17_ desses grupos, e provar que isso requer matemática mais avançada. Em vez disso, você pode tentar desenhar seus próprios padrões repetidos para cada um dos 17 grupos de papéis de parede: 
+Infelizmente, não há uma razão simples para haver _17_ desses grupos, e provar que isso requer matemática mais avançada. Em vez disso, você pode tentar desenhar seus próprios padrões repetidos para cada um dos 17 grupos de papéis de parede: 
 
     include ./components/wallpaper
     x-wallpaper
@@ -1082,9 +1054,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- Os grupos de papéis de parede eram sobre padrões planos e bidimensionais. Podemos fazer algo semelhante para padrões tridimensionais: eles são chamados de grupos cristalográficos e existem 219 deles! 
+Os grupos de papéis de parede eram sobre padrões planos e bidimensionais. Podemos fazer algo semelhante para padrões tridimensionais: eles são chamados de grupos cristalográficos e existem 219 deles! 
 
- Além de translações, reflexões, rotações e reflexões de deslizamento, esses grupos incluem simetrias como __planos de deslizamento__ e __eixos de parafuso__ (pense no movimento ao desaparafusar uma garrafa). 
+Além de translações, reflexões, rotações e reflexões de deslizamento, esses grupos incluem simetrias como __planos de deslizamento__ e __eixos de parafuso__ (pense no movimento ao desaparafusar uma garrafa). 
 
 ::: column(width=300)
 
@@ -1101,16 +1073,17 @@ Perpendicular glide reflections, rotations of order 2, translations
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
- Até agora, todas as simetrias que examinamos eram _visuais_ em certo sentido: formas, imagens ou padrões visíveis. De fato, a simetria pode ser um conceito muito mais amplo: _imunidade à mudança_ . 
+Até agora, todas as simetrias que examinamos eram _visuais_ em certo sentido: formas, imagens ou padrões visíveis. De fato, a simetria pode ser um conceito muito mais amplo: _imunidade à mudança_ . 
 
- Por exemplo, se você gosta de suco de maçã tanto quanto de suco de laranja, sua preferência é "simétrica" sob a transformação que troca maçãs e laranjas. 
+Por exemplo, se você gosta de suco de maçã tanto quanto de suco de laranja, sua preferência é "simétrica" sob a transformação que troca maçãs e laranjas. 
 
- Em 1915, o matemático alemão [Emmy Noether](bio:noether) observou que algo semelhante é verdadeiro para as [leis da natureza](gloss:laws-of-nature) . 
+Em 1915, o matemático alemão [Emmy Noether](bio:noether) observou que algo semelhante é verdadeiro para as [leis da natureza](gloss:laws-of-nature) . 
 
 ::: column.grow
 
- Por exemplo, nossa experiência nos diz que as leis da Física são as mesmas em todos os lugares do universo. Não importa se você realiza um experimento em Londres, Nova York ou Marte - as leis da Física devem sempre ser as mesmas. De certa forma, eles têm [[simetria traducional | simetria reflexiva]] . 
+Por exemplo, nossa experiência nos diz que as leis da Física são as mesmas em todos os lugares do universo. Não importa se você realiza um experimento em Londres, Nova York ou Marte - as leis da Física devem sempre ser as mesmas. De certa forma, eles têm [[simetria traducional | simetria reflexiva]] . 
 
 {.reveal(when="blank-0")} Da mesma forma, não importa se realizamos um experimento diante do norte, sul ou leste ou oeste: as leis da natureza têm [[simetria rotacional | simetria de reflexão de deslizamento]] . 
 
@@ -1125,9 +1098,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 ---
 > id: planets-1
 
- Essas "simetrias" podem inicialmente parecer bastante sem sentido, mas podem realmente nos dizer muito sobre o nosso universo. Emmy Noether conseguiu provar que toda simetria corresponde a uma certa quantidade física que é _conservada_ . 
+Essas "simetrias" podem inicialmente parecer bastante sem sentido, mas podem realmente nos dizer muito sobre o nosso universo. Emmy Noether conseguiu provar que toda simetria corresponde a uma certa quantidade física que é _conservada_ . 
 
- Por exemplo, a simetria do tempo implica que a __energia__ deve ser conservada em nosso universo: você pode converter energia de um tipo para outro (por exemplo, luz em eletricidade), mas nunca pode criar ou destruir energia. A quantidade total de energia no universo sempre permanecerá constante. 
+Por exemplo, a simetria do tempo implica que a __energia__ deve ser conservada em nosso universo: você pode converter energia de um tipo para outro (por exemplo, luz em eletricidade), mas nunca pode criar ou destruir energia. A quantidade total de energia no universo sempre permanecerá constante. 
 
     figure
       x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
@@ -1140,9 +1113,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- Acontece que, apenas conhecendo a simetria, os físicos podem derivar a maioria das leis da natureza que governam nosso universo - sem ter que fazer um experimento ou observação. 
+Acontece que, apenas conhecendo a simetria, os físicos podem derivar a maioria das leis da natureza que governam nosso universo - sem ter que fazer um experimento ou observação. 
 
- A simetria pode até prever a existência de partículas fundamentais. Um exemplo é o famoso __Bóson de Higgs__ : foi previsto na década de 1960 por físicos teóricos, mas não foi observado no mundo real até 2012. 
+A simetria pode até prever a existência de partículas fundamentais. Um exemplo é o famoso __Bóson de Higgs__ : foi previsto na década de 1960 por físicos teóricos, mas não foi observado no mundo real até 2012. 
 
 :::
 
@@ -1152,17 +1125,18 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 > id: dilations
 > section: dilations
+> translated: auto
 
- Até agora, acabamos de olhar para [[rígida | congruente |]] transformações [[visuais]] . _{span.reveal(when="blank-0")} Agora, vamos pensar em um que não é: uma [__dilatação__](gloss:dilation) altera o tamanho de uma forma, tornando-a maior ou menor._ 
+Até agora, acabamos de olhar para [[rígida | congruente |]] transformações [[visuais]] . _{span.reveal(when="blank-0")} Agora, vamos pensar em um que não é: uma [__dilatação__](gloss:dilation) altera o tamanho de uma forma, tornando-a maior ou menor._ 
 
 ---
 > id: dilations-1
 
 ::: column.grow
 
- Todas as dilatações têm um [__centro__](target:center) e um [__fator de escala__](->.scale-target) . O centro é o ponto de referência para o fator de dilatação e escala nos diz o quanto a figura estica ou diminui. 
+Todas as dilatações têm um [__centro__](target:center) e um [__fator de escala__](->.scale-target) . O centro é o ponto de referência para o fator de dilatação e escala nos diz o quanto a figura estica ou diminui. 
 
- Se o [fator de escala](gloss:scale-factor) estiver entre 0 e 1, a imagem será [[menor | maior]] que o original. Se o fator de escala for maior que 1, a imagem será [[maior | menor]] que o original. 
+Se o [fator de escala](gloss:scale-factor) estiver entre 0 e 1, a imagem será [[menor | maior]] que o original. Se o fator de escala for maior que 1, a imagem será [[maior | menor]] que o original. 
 
 ::: column(width=300)
 
@@ -1190,20 +1164,6 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 {.todo} EM BREVE - Mais sobre dilatações 
 
-    // Here is how we can construct the dilation of a geometric shape:
-    // 
-    // ::: column(width=300)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // First we draw rays from the center of dilation to every point in the shape.
-    // 
-    // Now let’s measure the distance of all these points from the center of dilation.
-    // Then we can multiply the distance by the scale factor, and the measure the
-    // image of the point along the same ray.
-    // 
-    // All that’s left is to connect the transformed points in the image … all done!
-    // :::
-
 ---
 
 ## Similaridade 
@@ -1212,172 +1172,4 @@ Perpendicular glide reflections, rotations of order 2, translations
 > sectionStatus: dev
 > id: similarity
 
-::: column.grow
-
- Para transformações rígidas, a imagem é sempre [[congruente | maior | menor]] que o original - mas isso [[não]] é [[mais | ainda é]] verdade para dilatações. Em vez disso, dizemos que duas formas são [__semelhantes__](gloss:similar) . Eles têm a mesma forma geral, mas não necessariamente o mesmo tamanho. 
-
- O símbolo de similaridade é `∼` (semelhante ao símbolo de congruência, que foi `≅` ) Neste exemplo, escreveríamos `A ∼ A'` . 
-
-::: column(width=240)
-
-{.todo} EM BREVE - Ilustração de stock 
-
-:::
-
----
-> id: perspective
-
-### Desenhos em perspectiva 
-
- Você deve ter notado que essas dilatações nos raios de conexão quase parecem __desenhos em perspectiva__ . O centro de dilatação é chamado de __ponto de fuga__ , porque parece que é aqui que tudo está "desaparecendo à distância". 
-
- Encontre o ponto de fuga na figura abaixo: 
-
-{.todo} EM BREVE - Interativo 
-
- Agora você pode desenhar outra casa que corresponda às existentes? 
-
----
-> id: similar-polygons
-
-### Polígonos semelhantes 
-
- A semelhança pode nos dizer muito sobre formas. Por exemplo, [círculos](gloss:circle) , [quadrados](gloss:square) e [triângulos equilaterais](gloss:equilateral-triangle) são [[sempre | as vezes | nunca]] parecido. Eles podem ter tamanhos diferentes, mas sempre com a mesma forma geral. 
-
-::: column.grow
-
- Os dois quadriláteros à direita são semelhantes. Nossa primeira observação importante é que, em polígonos semelhantes, todos os pares de ângulos correspondentes são [congruentes](gloss:congruent-angles) . Isso significa que 
-
-{.text-center} [_{.m-red} ∡ABC_ ≅ _{.m-red} ∡A'B'C '_](target:a) _{.space}_ [_{.m-blue} CDBCD_ ≅ _{.m-blue} ∡B'C'D '_](target:b)  
-[_{.m-green} ∡CDE_ ≅ _{.m-green} ∡C'D'E '_](target:c) _{.space}_ [_{.m-yellow} ∡DEA_ ≅ _{.m-yellow} ∡D'E'A '_](target:d) 
-
- O segundo fato importante é que, em polígonos semelhantes, todos os lados são dimensionados __proporcionalmente__ pelo fator de escala da dilatação correspondente. Se o fator de escala for ${k}{k|1.5|0.5,2,0.1} , então 
-
-{.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
-`|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
-
- Em vez disso, podemos reorganizar essas equações e eliminar completamente o fator de escala: 
-
-{.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
-    // This proportional relationship is true not just for the sides of the
-    // polygon, but also for properties like diagonals.
-
- Podemos usar isso para resolver problemas da vida real que envolvem polígonos semelhantes - por exemplo, encontrar o comprimento dos lados ausentes, se conhecermos alguns dos outros lados. Na seção a seguir, você verá alguns exemplos. 
-
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-
-:::
-
----
-> id: similar-triangles
-
-### Triângulos semelhantes 
-
- O conceito de similaridade é particularmente poderoso com triângulos. Já sabemos que os ângulos internos correspondentes em polígonos semelhantes são iguais. 
-
- Para triângulos, o oposto também é verdadeiro: isso significa que, se você tiver dois triângulos com os mesmos três tamanhos de ângulo, os triângulos deverão ser semelhantes. 
-
- E fica ainda melhor! Sabemos que os ângulos internos de um triângulo sempre somam [[180]]°. Isso significa que, se conhecermos dois ângulos em um triângulo, sempre podemos calcular o terceiro. 
-
- Por similaridade, isso significa que também precisamos verificar apenas _dois ângulos_ para determinar se os triângulos são semelhantes. Se dois triângulos têm dois ângulos do mesmo tamanho, o terceiro ângulo também deve ser o mesmo em ambos. 
-
- Às vezes, esse resultado é chamado de [__condição de similaridade de AA__](gloss:triangle-aa) para triângulos. (Os dois _Como_ representam os dois _ângulos_ que comparamos.) 
-
-::: .theorem
-
- Se dois ângulos em um triângulo são congruentes com dois ângulos em outro triângulo, os dois triângulos são semelhantes. 
-
-:::
-
----
-> id: similar-triangles-1
-
- Vamos dar uma olhada em alguns exemplos em que isso é útil: 
-
-::: column(width=320)
-
-{.todo} EM BREVE - Animação 
-
-::: column.grow
-
- Aqui você pode ver a imagem de um grande farol. Juntamente com um amigo, você deseja medir a altura do farol, mas infelizmente não podemos subir ao topo. 
-
- Acontece que, muito bem oculto, o diagrama contém dois triângulos semelhantes: um é formado pelo farol e sua sombra, e um é formado por sua amiga e a sombra dela. 
-
- Ambos os triângulos têm um ângulo reto na parte inferior. Os raios solares são paralelos, o que significa que os outros dois ângulos na parte inferior são ângulos correspondentes e também iguais. Pela condição AA para triângulos, esses dois devem ser semelhantes. 
-
- Podemos medir facilmente o comprimento das sombras e também sabemos a altura do seu amigo. Agora podemos usar a proporcionalidade dos lados em triângulos semelhantes para encontrar a altura do farol: 
-
-{.todo} EM BREVE - Equação 
-
- Portanto, o farol tem 1,5 m de altura. 
-
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-
-{.todo} EM BREVE - Animação 
-
-::: column.grow
-
- Podemos usar a mesma técnica para medir distâncias no chão. Aqui queremos encontrar a largura de um rio grande. Há uma grande árvore em um lado do rio, e eu tenho um galho com um metro de comprimento. 
-
- Tente desenhar outros dois triângulos semelhantes neste diagrama. 
-
- Você pode marcar o ponto ao longo do lado do rio, que fica diretamente na linha de visão, desde o final do bastão até a árvore. Então podemos medir as distâncias para o bastão e para o ponto diretamente oposto à árvore. 
-
- Mais uma vez, esses dois triângulos são semelhantes por causa da condição AA. Ambos têm um ângulo reto e um par de ângulos opostos. 
-
- De acordo com a regra da proporcionalidade, isso significa que 
-
-{.todo} EM BREVE - Equação 
-
- Portanto, a largura do rio é de 45 metros. 
-
-:::
-
----
-
-### Semelhança nos Raios 
-
- Teorema: Se um raio corta o ângulo de um triângulo, divide o lado oposto em segmentos proporcionais aos comprimentos dos outros dois lados. 
-
- Podemos estender esse teorema a uma situação fora dos triângulos, onde temos várias linhas paralelas cortadas por transverais. 
-
- Teorema: Se três ou mais linhas paralelas são cortadas por duas transversais, elas dividem as transversais proporcionalmente. 
-
- Pense em um segmento intermediário de um triângulo. Um segmento intermediário é paralelo a um lado de um triângulo e divide os outros dois lados em metades congruentes. O segmento intermediário divide esses dois lados proporcionalmente. 
-
- Teorema da proporcionalidade do triângulo: se uma linha paralela a um lado de um triângulo cruza os outros dois lados, ele os divide proporcionalmente. 
-
- Teorema da proporcionalidade do triângulo Converse: Se uma linha divide dois lados de um triângulo proporcionalmente, é paralela ao terceiro lado. 
-
----
-
-### Auto-similaridade 
-
- Existem algumas formas matemáticas curiosas que são semelhantes a uma parte menor _de si mesmas_ . Um exemplo é o __triângulo de Sierpinksi__ : o triângulo inteiro é semelhante a qualquer um dos triângulos menores em que consiste. Você poderia ampliar e infinitamente muitos triângulos cada vez menores. 
-
- Formas com essa propriedade são chamadas de __Fractais__ . Eles têm algumas propriedades surpreendentes e verdadeiramente XXX, sobre as quais você aprenderá mais no futuro. 
-
----
-
- Triângulos não são apenas úteis para medir distâncias. No próximo curso, aprenderemos muito mais sobre triângulos e suas propriedades.
+TODO

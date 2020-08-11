@@ -33,12 +33,10 @@ fractions:
   color: 11A465
   level: Foundations
   sections:
-    # TODO Update Sections
     - title: Introduction
-    - title: Simplifying and Expanding Fractions
-    - title: Adding and Subtracting Fractions
-    - title: Multiplying and Dividing Fractions
+    - title: Fraction Arithmetic
     - title: Mixed Numbers
+    - title: Dividing Fractions
 
 decimals:
   title: Decimals
@@ -49,8 +47,7 @@ decimals:
     - title: Introduction
     - title: Adding and Subtracting Decimals
     - title: Ordering Decimals
-    - title: Multiplying Decimals
-    - title: Dividing Decimals
+    - title: Multiplying and Dividing Decimals
     - title: Converting Decimals and Fractions
     - title: Rounding
 
@@ -82,12 +79,6 @@ shapes:
   title: Area and Shapes
   color: 0F82F2
   level: Foundations
-  sections:
-    - title: Introduction
-    - title: Parallelograms and Triangles
-    - title: Polygons
-    - title: Circles and Circumferences
-    - title: Area of Circles
 
 polygons:
   title: Angles and Polygons
@@ -172,14 +163,6 @@ data:
   title: Data and Statistics
   color: 8D2CA1
   level: Foundations
-  sections:
-    - title: Introduction
-    - title: Dot Plots and Histograms
-    - title: Box Plots
-    - title: Mean, Median and Mode
-    - title: Sampling
-    - title: Comparing Populations
-    - title: Scatter Plots and Linear Models
 
 
 # ------------------------------------------------------------------------------
@@ -372,10 +355,8 @@ logic:
   sections:
     - title: Logic and Paradoxes
       preview: /world/Logic_and_Paradoxes
-    - title: Sets, Axioms and Proof
+    - title: Axioms and Proof
       preview: /world/Axioms_and_Proof
-    - title: Proof by Contradiction
-      preview: /world/Axioms_and_Proof#contradiction
     - title: Proof by Induction
       preview: /world/Axioms_and_Proof#induction
     - title: Infinity and Hilbert’s Hotel
@@ -425,13 +406,6 @@ matrices:
   title: Matrices
   color: 5A49C9
   level: Advanced
-  sections:
-    - title: Matrices as Transformations
-    - title: Matrix Arithmetic
-    - title: Determinants
-    - title: Matrix Inverses
-    - title: Cramer’s Rule and Gaussian Elimination
-    - title: Eigenvalues and Eigenvectors
 
 complex:
   title: Complex Numbers
@@ -552,4 +526,9 @@ exploding-dots:
 talks:
   title: Talks and Workshops
   color: A7208A
+  hideIcon: true
+
+cbm:
+  title: Cause or Correlation
+  color: 0db0e3
   hideIcon: true

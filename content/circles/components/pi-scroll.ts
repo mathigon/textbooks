@@ -6,7 +6,7 @@
 
 import {tabulate} from '@mathigon/core';
 import {clamp} from '@mathigon/fermat';
-import {CustomElementView, register, $N, Browser, ElementView} from '@mathigon/boost';
+import {$N, Browser, CustomElementView, ElementView, register} from '@mathigon/boost';
 
 
 const ROW_HEIGHT = 30;
@@ -66,8 +66,8 @@ export class PiScroll extends CustomElementView {
     const rowTop = top / ROW_HEIGHT - (NUM_ELS - VISIBLE_ELS) / 2;
     const newFirstEl = clamp(Math.floor(rowTop), 0, this.numRows - NUM_ELS);
 
-    const [start, end] = (newFirstEl < this.firstEl) ? [newFirstEl, this.firstEl]
-        : [this.firstEl + NUM_ELS, newFirstEl + NUM_ELS];
+    const [start, end] = (newFirstEl < this.firstEl) ? [newFirstEl, this.firstEl] :
+        [this.firstEl + NUM_ELS, newFirstEl + NUM_ELS];
 
     for (let i = start; i < end; ++i) this.updateRow(i);
     this.firstEl = newFirstEl;

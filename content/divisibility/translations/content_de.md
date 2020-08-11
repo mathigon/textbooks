@@ -115,8 +115,6 @@ bis wir in der Mitte angelangt sind.
 Der einzige Sonderfall bei dieser Methode sind Quadratzahlen: In diesem Fall ist zum Schluss
 nur eine einzige Zahl in der Mitte, wie bei 64 = 8 × 8.
 
-    //- TODO Factorisation exercises
-
 ---
 
 ## Teilbarkeitsregeln
@@ -127,7 +125,6 @@ nur eine einzige Zahl in der Mitte, wie bei 64 = 8 × 8.
 Es gibt ein paar verschiedene Regeln, die es dir überraschend einfach machen können, zu überprüfen, ob eine
 Zahl durch eine andere teilbar ist. In diesem Abschnitt werden wir einen Blick auf einige von
 ihnen werfen....
-
 
 ### Teilbarkeit durch 2 und 5
 
@@ -306,8 +303,6 @@ teilbar ist. Beachte, dass dies
 zwar für 6 funktioniert, aber sicherlich nicht für _jede_ Zahl, die das Produkt von zwei anderen ist.
 Mehr dazu später....
 
-    //- TODO Practice exercises
-
 ---
 
 ## Primzahlen
@@ -323,8 +318,6 @@ gewissermaßen zu “Atomen von Zahlen” macht.
 
 Beachte, dass 1 selbst _keine_ Primzahl ist, so dass die ersten Primzahlen
 2, 3, 5, 7, 11, 13,.... sind.
-
-    //- TODO Exercises
 
 ---
 > id: primes1
@@ -376,8 +369,6 @@ Die Anwendung des FdA kann viele Probleme in der Mathematik viel einfacher mache
 Zahlen in ihre Primfaktoren auf, dann lösen wir das Problem für die einzelnen
 Primzahlen, was oft viel einfacher sein kann, kombinieren zum Schluss diese Ergebnisse und
 lösen so das anfängliche Problem.
-
-    //- TODO Exercises
 
 ---
 > id: eratosthenes
@@ -437,10 +428,6 @@ als erster, dass es unendlich viele Primzahlen gibt, mit dem folgenden Argument:
         .text-center #[em.number-ball.green P’] #[span.divides] #[em.number-ball N] + 1
       li In beiden Fällen hätten wir also eine neue Primzahl gefunden, die nicht in unserer ursprünglichen Liste enthalten ist - aber wir hatten ja angenommen, dass #[em alle] Primzahlen in dieser Liste sind.
       li Offensichtlich ist da etwas schiefgelaufen! Aber da die Schritte #[span.proof-step 2]-#[span.proof-step 4] alle korrekt waren, ist die einzige mögliche Erklärung die, dass unsere anfängliche Annahme #[span.proof-step 1] falsch war. Das bedeutet, dass es tatsächlich unendlich viele Primzahlen geben muss.
-
-    // Beachte, dass jede Primzahl, die N teilt, N + 1 nicht teilen kann. (Wenn es so wäre, müsste
-    // sie auch die Differenz zwischen N und N + 1 teilen, die aber 1 ist. Aber
-    // die einzige Zahl, die 1 teilt, ist 1 selbst.)
 
 ---
 > id: primes4
@@ -514,8 +501,6 @@ Hier kannst du deine eigenen Primzahlen mit einer gegebenen Anzahl von Ziffern g
 
 ---
 > id: ulam
-
-    //- Auf einem wissenschaftlichen Treffen 1963 kritzelte Stanislaw M. Ulam während der Präsentation einer "langen und sehr langweiligen Arbeit" herum.
 
 ### Die Ulam-Spirale
 
@@ -854,8 +839,6 @@ Ein Sonderfall sind Primzahlen: Das kgV von zwei verschiedenen Primzahlen ist ei
 [[ihr Produkt|ihre Summe|ihre Differenz]], da sie keine gemeinsamen
 Primfaktoren haben, die “gestrichen” werden würden.
 
-    //- TODO Exercises
-
 ---
 > id: cicadas
 > goals: bound-low bound-high
@@ -898,8 +881,6 @@ bei der Berechnung des kgV keine doppelten Teiler zu löschen haben.
 Natürlich haben die Zikaden keine Ahnung, was Primzahlen sind - aber in Millionen von
 Jahren hat die Evolution herausgefunden, dass Primzahlen für sie am sichersten sind. Das Raubtier
 scheint im Laufe der Zeit ausgestorben zu sein, aber die Primzahlzyklen wurden beibehalten.
-
-    //- TODO Exercises
 
 ---
 

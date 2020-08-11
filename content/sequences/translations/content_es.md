@@ -157,7 +157,6 @@ Para obtener el número del triángulo _n_, tomamos el número del triángulo [[
 ---
 > id: recursive-1
 
-
 Una fórmula que expresa `x_n` en función de términos anteriores en la secuencia se llama [__fórmula recursiva__](gloss:sequence-recursive). Mientras conozcamos el [[primer término|último término|segundo término]] de la secuencia, podremos calcular todos los siguientes.
 
 ---
@@ -510,7 +509,6 @@ Un problema con las fórmulas recursivas es que para encontrar el término núme
 
 Para __{.m-red} secuencias aritméticas__, tenemos que agregar _d_ en cada paso:
 
-
 {.ag-equation} `x_1 =` `a`
 
 {.ag-equation} `x_2 =` `a + d`
@@ -758,7 +756,6 @@ Los números de triángulos parecen aparecer en todas partes en matemáticas, y 
 
 :::
 
-
 {.reveal(when="slide")} El hecho de que esto funcione para _todos_ números enteros fue probado por primera vez en 1796 por el matemático alemán [Carl Friedrich Gauss](bio:gauss) - ¡a la edad de 19 años!
 
 ---
@@ -996,7 +993,6 @@ Esta secuencia de números se llama [__Secuencia de Fibonacci__](gloss:fibonacci
 
 ::: column.grow
 
-
 Cuando Fibonacci nació en 1175, la mayoría de las personas en Europa todavía usaban el [sistema de números romanos](gloss:roman-numerals) para los números (por ejemplo, IVX o MCMLIV). El padre de Fibonacci era un comerciante, y juntos viajaron al norte de África y al Medio Oriente. Fue allí donde Fibonacci aprendió por primera vez el [sistema de numeración árabe](gloss:arabic-numerals).
 
 Cuando regresó a Italia, Fibonacci escribió un libro llamado _Liber Abaci_ (en latín, "El libro de los cálculos"), donde presentó por primera vez los nuevos números arábigos a los comerciantes europeos. Fueron un éxito inmediato, y todavía los usamos hoy.
@@ -1184,7 +1180,6 @@ Podemos aproximar la proporción áurea entre [[dividiendo|sumando|restando]] do
 
 La proporción áurea explica por qué los números de Fibonacci aparecen en la naturaleza, como el cono de girasol y pino que viste al comienzo de esta sección.
 
-
 Ambas plantas crecen hacia afuera desde su centro (una parte de la planta llamada _meristemo_). A medida que se agregan nuevas semillas, hojas o pétalos, empujan los existentes más hacia afuera.
 
 Mueve el control deslizante hacia la derecha para visualizar cómo crece una planta. Observe cómo cada hoja se agrega en una rotación diferente a la anterior. El ángulo entre dos hojas consecutivas es siempre el mismo.
@@ -1313,7 +1308,6 @@ Además de [aritmética](gloss:arithmetic-sequence) y [secuencias geométricas](
 
 ---
 > id: primes
-
 
 ### Números primos
 
@@ -1473,7 +1467,6 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 
 ---
 > id: hailstone-2
-
 
 Parece que la longitud de la secuencia varía mucho, pero siempre terminará en un ciclo 4, 2, 1, sin importar el primer número que elijamos. Incluso podemos visualizar los términos de la secuencia en un gráfico:
 
@@ -1780,7 +1773,6 @@ Colorear cada celda manualmente lleva mucho tiempo, pero aquí puede ver qué su
 ::: column.grow
 
 ¡Guauu! Las celdas de colores siempre aparecen en [[triángulos|cuadrados|pares]] (a excepción de algunas celdas individuales, que podrían verse como triángulos de tamaño 1).
-
 
 Si continuamos el patrón de celdas divisibles por 2, obtenemos uno que es muy similar al __triángulo de Sierpinski__ a la derecha. Las formas como esta, que consisten en un patrón simple que parece continuar para siempre mientras se hacen cada vez más pequeñas, se denominan [__Fractales__](gloss:fractal). Aprenderemos más sobre ellos en el futuro …
 

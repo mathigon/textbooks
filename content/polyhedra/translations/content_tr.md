@@ -5,7 +5,7 @@
 > section: polygons
 > id: polygons
 
- [__Çokgen__](gloss:polygon) , yalnızca düz kenarları olan kapalı, düz bir şekildir. Çokgenlerin herhangi bir sayıda kenarı ve açısı olabilir, ancak kenarlar kavisli olamaz. Aşağıdaki şekillerden hangileri çokgenlerdir? 
+[__Çokgen__](gloss:polygon) , yalnızca düz kenarları olan kapalı, düz bir şekildir. Çokgenlerin herhangi bir sayıda kenarı ve açısı olabilir, ancak kenarlar kavisli olamaz. Aşağıdaki şekillerden hangileri çokgenlerdir? 
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -20,7 +20,7 @@
 ---
 > id: polygons-1
 
- Kaç tarafına bağlı olarak çokgenlere farklı isimler veriyoruz: 
+Kaç tarafına bağlı olarak çokgenlere farklı isimler veriyoruz: 
 
     .row.padded-thin
       div(style="width: 100px")
@@ -47,7 +47,7 @@
 
 ### Çokgenlerde Açılar 
 
- _N_ kenarlı her çokgenin de _n_ [iç açısı vardır](gloss:internal-angle) . Üçgendeki iç açıların toplamının her zaman [[180]]° olduğunu biliyoruz, ama diğer çokgenler ne olacak? 
+_N_ kenarlı her çokgenin de _n_ [iç açısı vardır](gloss:internal-angle) . Üçgendeki iç açıların toplamının her zaman [[180]]° olduğunu biliyoruz, ama diğer çokgenler ne olacak? 
 
 ---
 > id: angles
@@ -92,7 +92,7 @@
 ---
 > id: angles-1
 
- Dörtgen içindeki iç açıların toplamı her zaman [[360]]° 'dir - tam olarak [[iki kez | üç kere | Üçgendeki]] açıların toplamının [[yarısı]] . _{span.reveal(when="blank-0 blank-1")} Bu bir tesadüf değildir: her dörtgen iki üçgene ayrılabilir._ 
+Dörtgen içindeki iç açıların toplamı her zaman [[360]]° 'dir - tam olarak [[iki kez | üç kere | Üçgendeki]] açıların toplamının [[yarısı]] . _{span.reveal(when="blank-0 blank-1")} Bu bir tesadüf değildir: her dörtgen iki üçgene ayrılabilir._ 
 
     .row.padded-thin
       .reveal(when="blank-1" style="width: 140px"): include svg/polygons/triangles-4.svg
@@ -105,7 +105,7 @@
 ---
 > id: internal-angle-sum
 
- İle bir çokgen ${x}{x|7|3,15,1} kenarların iç açı toplamı 180° × ${x-2} = ${(x-2)*180}°. Daha genel olarak, _n_ kenarlı bir çokgen [[n - 2'ye]] bölünebilir [[| n - 1 | n]] üçgenler. Bu nedenle, 
+İle bir çokgen ${x}{x|7|3,15,1} kenarların iç açı toplamı 180° × ${x-2} = ${(x-2)*180}°. Daha genel olarak, _n_ kenarlı bir çokgen [[n - 2'ye]] bölünebilir [[| n - 1 | n]] üçgenler. Bu nedenle, 
 
 {.text-center.reveal(when="blank-0")} _N_ -gon içindeki iç açıların toplamı `= (n - 2) × 180°` . 
 
@@ -118,11 +118,11 @@
 
 ::: column.grow
 
- Çokgenin “içe dönük” bir bölümü varsa [__içbükey__](gloss:concave) olduğunu söylüyoruz. Bu bölümün [“içine girmiş”](target:cave) olduğunu hayal edebilirsiniz. İçbükey _olmayan_ çokgenlere [__dışbükey__](gloss:convex) denir. 
+Çokgenin “içe dönük” bir bölümü varsa [__içbükey__](gloss:concave) olduğunu söylüyoruz. Bu bölümün [“içine girmiş”](target:cave) olduğunu hayal edebilirsiniz. İçbükey _olmayan_ çokgenlere [__dışbükey__](gloss:convex) denir. 
 
- İçbükey çokgenleri kolayca tanımlamanın iki yolu vardır: [180° 'den daha büyük](target:angle) en az bir [iç açıya sahiptirler](target:angle) . Ayrıca [çokgenin _dışında_](target:diagonal) en az bir [köşegenleri vardır](target:diagonal) . 
+İçbükey çokgenleri kolayca tanımlamanın iki yolu vardır: [180° 'den daha büyük](target:angle) en az bir [iç açıya sahiptirler](target:angle) . Ayrıca [çokgenin _dışında_](target:diagonal) en az bir [köşegenleri vardır](target:diagonal) . 
 
- Dışbükey çokgenlerde, tüm iç açılar [[180]]° 'den daha azdır ve tüm köşegenler [[içeride bulunur |]] çokgen [[dışında]] . 
+Dışbükey çokgenlerde, tüm iç açılar [[180]]° 'den daha azdır ve tüm köşegenler [[içeride bulunur |]] çokgen [[dışında]] . 
 
 ::: column(width=240)
 
@@ -146,7 +146,7 @@
 ---
 > id: concave-1
 
- Bu çokgenlerden hangileri içbükeydir? 
+Bu çokgenlerden hangileri içbükeydir? 
 
     x-picker
       .item(data-error="not-concave-1"): include svg/polygons/concave-1.svg
@@ -161,7 +161,7 @@
 
 ### Düzenli Çokgenler 
 
- Tüm kenarları aynı uzunlukta ve tüm açıların aynı boyuta sahip olması durumunda bir çokgenin [__düzenli__](gloss:regular-polygon) olduğunu söylüyoruz. Bu şekillerin hangileri düzenli çokgenlerdir? 
+Tüm kenarları aynı uzunlukta ve tüm açıların aynı boyuta sahip olması durumunda bir çokgenin [__düzenli__](gloss:regular-polygon) olduğunu söylüyoruz. Bu şekillerin hangileri düzenli çokgenlerdir? 
 
     x-picker
       .item: include svg/polygons/regular-1.svg
@@ -174,12 +174,12 @@
 ---
 > id: regular-1
 
- Düzenli çokgenler birçok farklı boyutta olabilir - ancak aynı sayıda tarafa sahip tüm normal çokgenler [[benzerdir | uyumlu | aynı alana sahip]] ! 
+Düzenli çokgenler birçok farklı boyutta olabilir - ancak aynı sayıda tarafa sahip tüm normal çokgenler [[benzerdir | uyumlu | aynı alana sahip]] ! 
 
 ---
 > id: regular-2
 
- Çokgenlerdeki tüm [iç açıların](gloss:internal-angle) toplamını zaten biliyoruz. Normal çokgenler için tüm bu açılar [[aynı boyuta sahiptir | Alternatif açılardır]] , böylece tek bir iç açının boyutunu hesaplayabiliriz: 
+Çokgenlerdeki tüm [iç açıların](gloss:internal-angle) toplamını zaten biliyoruz. Normal çokgenler için tüm bu açılar [[aynı boyuta sahiptir | Alternatif açılardır]] , böylece tek bir iç açının boyutunu hesaplayabiliriz: 
 
 {.text-center.reveal(when="blank-0")} açı = <mfrac><mrow>[[tüm açıların toplamı | açı sayısı]]</mrow><mrow>[[açı sayısı | tüm açıların toplamı]]</mrow></mfrac> _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x` ._ 
 
@@ -217,9 +217,9 @@
 
 ::: column.grow
 
- Burada [düzenli bir çokgen](gloss:regular-polygon) görebilirsiniz. ${n}{n|5|4,12,1} taraf. Her tarafın uzunluğu vardır [{.pill.green} 1m](target:base) . Alanını hesaplamaya çalışalım! 
+Burada [düzenli bir çokgen](gloss:regular-polygon) görebilirsiniz. ${n}{n|5|4,12,1} taraf. Her tarafın uzunluğu vardır [{.pill.green} 1m](target:base) . Alanını hesaplamaya çalışalım! 
 
- İlk olarak, çokgeni bölebiliriz ${toWord(n)} uyumlu, [[ikizkenar | eşkenar | dik açılı]] üçgenler. 
+İlk olarak, çokgeni bölebiliriz ${toWord(n)} uyumlu, [[ikizkenar | eşkenar | dik açılı]] üçgenler. 
 
 {.reveal(when="blank-0")} [[Tabanı]] zaten biliyoruz [[| yükseklik |]] bu üçgenlerin [[alanı]] , ama aynı zamanda [[yüksekliğe]] ihtiyacımız var [[| bacaklar | ortanca]] alanını hesaplayabilme. _{span.reveal(when="blank-2")} Normal çokgenlerde, bu yüksekliğe bazen [{.pill.yellow} apothem](target:apothem) ._ 
 
@@ -261,9 +261,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: quadrilaterals
 > id: quadrilaterals
 
- Bir [önceki derste](/course/triangles) üçgenlerin birçok farklı özelliğini araştırdık. Şimdi dörtgenlere bakalım. 
+Bir [önceki derste](/course/triangles) üçgenlerin birçok farklı özelliğini araştırdık. Şimdi dörtgenlere bakalım. 
 
- _Düzenli dörtgenlere_ [[kare]] denir [[| dikdörtgen | eşkenar dörtgen]] . Tüm kenarları aynı uzunlukta ve tüm açıları eşit. 
+_Düzenli dörtgenlere_ [[kare]] denir [[| dikdörtgen | eşkenar dörtgen]] . Tüm kenarları aynı uzunlukta ve tüm açıları eşit. 
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -289,7 +289,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-1
 
- Biraz daha az düzenli dörtgenler için iki seçeneğimiz var. Sadece _açıların_ eşit olmasını istiyorsak, bir [__dikdörtgen__](gloss:rectangle) elde ederiz. Sadece _tarafların_ eşit olmasını istiyorsak, bir [__eşkenar dörtgen__](gloss:rhombus) elde ederiz. 
+Biraz daha az düzenli dörtgenler için iki seçeneğimiz var. Sadece _açıların_ eşit olmasını istiyorsak, bir [__dikdörtgen__](gloss:rectangle) elde ederiz. Sadece _tarafların_ eşit olmasını istiyorsak, bir [__eşkenar dörtgen__](gloss:rhombus) elde ederiz. 
 
 ::: column.quadrilateral
 
@@ -330,7 +330,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-2
 
- Daha az düzenli olan ancak yine de bazı önemli özelliklere sahip olan birkaç dörtlü daha vardır: 
+Daha az düzenli olan ancak yine de bazı önemli özelliklere sahip olan birkaç dörtlü daha vardır: 
 
 ::: column.quadrilateral
 
@@ -382,11 +382,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-venn
 
- Dörtgenler bu kategorilerin çoğuna girebilir. Farklı dörtlü tiplerin hiyerarşisini bir [Venn diyagramı](gloss:venn-diagram) olarak görselleştirebiliriz: 
+Dörtgenler bu kategorilerin çoğuna girebilir. Farklı dörtlü tiplerin hiyerarşisini bir [Venn diyagramı](gloss:venn-diagram) olarak görselleştirebiliriz: 
 
     figure: include svg/venn.svg
 
- Örneğin, her dikdörtgen aynı zamanda bir [[paralelkenar | eşkenar dörtgen | kare]] ve her [[eşkenar dörtgen | yamuk | paralelkenar]] da bir uçurtmadır. Bir eşkenar dörtgen [[bazen | her zaman | asla]] kare ve dikdörtgen her [[zaman değildir | ara sıra | asla]] yamuk. 
+Örneğin, her dikdörtgen aynı zamanda bir [[paralelkenar | eşkenar dörtgen | kare]] ve her [[eşkenar dörtgen | yamuk | paralelkenar]] da bir uçurtmadır. Bir eşkenar dörtgen [[bazen | her zaman | asla]] kare ve dikdörtgen her [[zaman değildir | ara sıra | asla]] yamuk. 
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} Herhangi bir belirsizlikten kaçınmak için genellikle en spesifik türü kullanırız. 
 
@@ -399,7 +399,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Şimdi soldaki gri kutuda herhangi bir yerde dört nokta seçin. _{span.reveal(when="points")} Hepsini dörtgen oluşturacak şekilde bağlayabiliriz._ 
+Şimdi soldaki gri kutuda herhangi bir yerde dört nokta seçin. _{span.reveal(when="points")} Hepsini dörtgen oluşturacak şekilde bağlayabiliriz._ 
 
 {.reveal(when="points" delay=1000)} Dört tarafın her birinin orta noktasını bulalım. Orta noktaları bağlarsak, [[başka bir dörtgen]] elde ederiz [[| bir üçgen | bir dikdörtgen]] . 
 
@@ -420,7 +420,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Parallelograms 
 
- Paralelkenarların zıt tarafların paralel olması dışında birçok ilginç özelliği olduğu ortaya çıkıyor. Aşağıdaki altı ifadeden hangisi doğrudur? 
+Paralelkenarların zıt tarafların paralel olması dışında birçok ilginç özelliği olduğu ortaya çıkıyor. Aşağıdaki altı ifadeden hangisi doğrudur? 
 
 ::: column.grow
 
@@ -458,7 +458,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: parallelograms-proof
 
- Tabii ki, sadece bu özellikleri “gözlemlemek” yeterli değildir. Her _zaman_ doğru olduklarından emin olmak için, bunları _kanıtlamamız_ gerekir: 
+Tabii ki, sadece bu özellikleri “gözlemlemek” yeterli değildir. Her _zaman_ doğru olduklarından emin olmak için, bunları _kanıtlamamız_ gerekir: 
 
 ::: tab
 
@@ -494,7 +494,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Paralelkenarın karşıt kenarlarının ve açılarının her zaman uyumlu olduğunu kanıtlamaya çalışalım. 
 
- Paralelkenarın köşegenlerinden birini çizerek başlayın. 
+Paralelkenarın köşegenlerinden birini çizerek başlayın. 
 
 {.reveal(when="diagonal")} Diyagonal, paralelkenarın kenarlarıyla dört yeni açı oluşturur. İki [kırmızı açı](target:red-angle) ve iki [mavi açı](target:blue-angle) [alternatif açılardır](gloss:alternate-angles) , bu yüzden her biri [[uyumlu]] olmalıdır [[| bitişik | tamamlayıcı]] . 
 
@@ -505,8 +505,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 :::
 
 {.reveal(when="blank-1")} Bunun tersinin de geçerli olduğu ortaya çıkıyor: eğer bir dörtgen içinde her iki karşıt taraf çifti (veya açıları) uyumlu ise, o zaman dörtgen paralelkenar olmalıdır. 
-
-    //- Adjacent angles are supplementary.
 
 ::: tab
 
@@ -544,9 +542,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Şimdi bir paralelkenardaki iki köşegeninin birbirini ikiye böldüğünü kanıtlayın. 
 
- Çaprazların oluşturduğu iki sarı üçgeni düşünelim: 
+Çaprazların oluşturduğu iki sarı üçgeni düşünelim: 
 
- * [İki yeşil tarafın](target:side1) uyumlu olduğunu kanıtladık, çünkü paralelkenarın karşıt taraflarıdır. * [İki kırmızı açı](target:anglesR) ve [iki mavi açı](target:anglesB) uyumludur, çünkü bunlar [[alternatif açılardır | zıt açılar | dik açılar]] . 
+* [İki yeşil tarafın](target:side1) uyumlu olduğunu kanıtladık, çünkü paralelkenarın karşıt taraflarıdır. * [İki kırmızı açı](target:anglesR) ve [iki mavi açı](target:anglesB) uyumludur, çünkü bunlar [[alternatif açılardır | zıt açılar | dik açılar]] . 
 
 {.reveal(when="blank-2")} [[ASA tarafından | SSS | AAS]] koşulu, bu nedenle her iki sarı üçgen de uyumlu olmalıdır. 
 
@@ -565,9 +563,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Yukarıda iki çift [[zıtlığın |]] bir paralelkenarın [[bitişik]] yanları uyumludur. Bir uçurtmada, iki çift _bitişik_ taraf birbirine uygundur. 
+Yukarıda iki çift [[zıtlığın |]] bir paralelkenarın [[bitişik]] yanları uyumludur. Bir uçurtmada, iki çift _bitişik_ taraf birbirine uygundur. 
 
- _Uçurtma_ adı açıkça şeklinden geliyor: gökyüzünde uçabileceğiniz uçurtmalara benziyor. Bununla birlikte, şimdiye kadar gördüğümüz tüm özel dörtgenler arasında, uçurtma da [içbükey](gloss:concave) olabilen tek kişidir: bir dart veya ok gibi şekillendirilirse: 
+_Uçurtma_ adı açıkça şeklinden geliyor: gökyüzünde uçabileceğiniz uçurtmalara benziyor. Bununla birlikte, şimdiye kadar gördüğümüz tüm özel dörtgenler arasında, uçurtma da [içbükey](gloss:concave) olabilen tek kişidir: bir dart veya ok gibi şekillendirilirse: 
 
 ::: column(width=320)
 
@@ -643,7 +641,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Tüm uçurtmaların [[simetrik]] olduğunu fark etmiş olabilirsiniz [[| benzer]] . _{span.reveal(when="blank-0")} [Simetri ekseni](gloss:axis-of-symmetry) [[köşegenlerden biridir | taraflardan biri | bir orta bölüm]] ._ 
+Tüm uçurtmaların [[simetrik]] olduğunu fark etmiş olabilirsiniz [[| benzer]] . _{span.reveal(when="blank-0")} [Simetri ekseni](gloss:axis-of-symmetry) [[köşegenlerden biridir | taraflardan biri | bir orta bölüm]] ._ 
 
 {.reveal.r(when="blank-1")} Köşegen, uçurtmayı [iki uyumlu üçgene](target:triangle1) böler. [SSS](gloss:triangle-sss) koşulundan uyumlu olduklarını biliyoruz: her iki üçgenin de [üç uyumlu tarafı vardır](target:sss) (kırmızı, yeşil ve mavi). _{button.next-step} Devam et_ 
 
@@ -665,7 +663,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Dörtgen Alanı 
 
- Bir önceki derste üçgen alanını hesaplarken, onu bir [[dikdörtgene]] dönüştürme hilesini kullandık [[| Meydan | beşgen]] . Bazı quadrilaterallar için de bunu yapabileceğimiz ortaya çıkıyor: 
+Bir önceki derste üçgen alanını hesaplarken, onu bir [[dikdörtgene]] dönüştürme hilesini kullandık [[| Meydan | beşgen]] . Bazı quadrilaterallar için de bunu yapabileceğimiz ortaya çıkıyor: 
 
 ::: tab
 
@@ -685,7 +683,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Solda, paralelkenar ile aynı alana sahip bir dikdörtgen çizmeye çalışın. 
+Solda, paralelkenar ile aynı alana sahip bir dikdörtgen çizmeye çalışın. 
 
 {.reveal(when="draw-1")} Soldaki [eksik üçgenin](target:triangle-1) [[tam olarak aynı]] olduğunu görebiliyor musunuz? [[| daha küçük |]] sağdaki [üst üste binen üçgenden](target:triangle-2) [[daha mı büyük]] ? _{span.reveal(when="blank-1")} Bu nedenle paralelkenarın alanı_ 
 
@@ -699,7 +697,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 #### yamuk _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_ 
 
- Yamukların bir çift [paralel tarafı](target:bases) olan dörtgenler olduğunu hatırlayın. Bu paralel taraflara yamuk __tabanları__ denir. 
+Yamukların bir çift [paralel tarafı](target:bases) olan dörtgenler olduğunu hatırlayın. Bu paralel taraflara yamuk __tabanları__ denir. 
 
 ::: column(width=300)
 
@@ -721,7 +719,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Daha önce olduğu gibi, bu yamuk ile aynı alana sahip bir dikdörtgen çizmeye çalışın. _{span.reveal(when="draw-2")} Soldaki ve sağdaki [eksik ve eklenen üçgenlerin](target:triangles-3) nasıl iptal edildiğini görebiliyor musunuz?_ 
+Daha önce olduğu gibi, bu yamuk ile aynı alana sahip bir dikdörtgen çizmeye çalışın. _{span.reveal(when="draw-2")} Soldaki ve sağdaki [eksik ve eklenen üçgenlerin](target:triangles-3) nasıl iptal edildiğini görebiliyor musunuz?_ 
 
 {.reveal(when="draw-2" delay=2000)} [{.pill.green}](target:t-height) bu dikdörtgenin [yüksekliği](target:t-height) [[arasındaki mesafe | ortalama |]] trapezin [paralel kenarlarının](target:bases) [[uzunluğu]] . 
 
@@ -765,9 +763,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Bu uçurtmada, [iki köşegen](target:diag3) uçurtmayı çevreleyen büyük bir [dikdörtgenin](target:rect4) genişliğini ve yüksekliğini oluşturur. 
+Bu uçurtmada, [iki köşegen](target:diag3) uçurtmayı çevreleyen büyük bir [dikdörtgenin](target:rect4) genişliğini ve yüksekliğini oluşturur. 
 
- Bu dikdörtgenin alanı [[iki kat | aynı |]] uçurtma alanının [[üç katı]] . _{span.reveal(when="blank-5")} Uçurtmayı oluşturan [dört üçgenin](target:inside) her birinin, onun dışındaki [dört boşlukla nasıl](target:outside) aynı olduğunu görebiliyor musunuz?_ 
+Bu dikdörtgenin alanı [[iki kat | aynı |]] uçurtma alanının [[üç katı]] . _{span.reveal(when="blank-5")} Uçurtmayı oluşturan [dört üçgenin](target:inside) her birinin, onun dışındaki [dört boşlukla nasıl](target:outside) aynı olduğunu görebiliyor musunuz?_ 
 
 {.reveal(when="blank-5")} Bu diyagonal bir uçurtma alanı anlamına gelir [{.i.pill.green} d1](target:d31) ve [{.i.pill.yellow} d2](target:d32) 
 
@@ -801,7 +799,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- [Eşkenar](gloss:rhombus) dörtgen, dört uyumlu kenarı olan bir dörtgendir. Her eşkenar dörtgenin [[paralelkenar]] olduğunu hatırlayabilirsiniz. [[| dikdörtgen | kare]] - ve ayrıca bir [[uçurtma | altıgen | içbükey çokgen]] . 
+[Eşkenar](gloss:rhombus) dörtgen, dört uyumlu kenarı olan bir dörtgendir. Her eşkenar dörtgenin [[paralelkenar]] olduğunu hatırlayabilirsiniz. [[| dikdörtgen | kare]] - ve ayrıca bir [[uçurtma | altıgen | içbükey çokgen]] . 
 
 {.reveal(when="blank-6 blank-7")} Bu, bir eşkenar dörtgen alanını bulmak için, bir paralelkenar alanı veya bir uçurtma alanı için denklemi kullanabileceğimiz anlamına gelir: 
 
@@ -813,25 +811,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    //- ### Cyclic quadrilaterals
     
-    //- ### Isosceles Trapeziums
-    //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -840,7 +820,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: tessellations
 > id: tessellations
 
- [Çokgenler](gloss:polygon) doğanın her yerinde görülür. Geniş bir alanı döşemek istiyorsanız özellikle kullanışlıdır, çünkü çokgenleri boşluk veya çakışma olmadan birbirine sığdırabilirsiniz. Bunun gibi desenlere [__mozaikleme__](gloss:tessellation) denir. 
+[Çokgenler](gloss:polygon) doğanın her yerinde görülür. Geniş bir alanı döşemek istiyorsanız özellikle kullanışlıdır, çünkü çokgenleri boşluk veya çakışma olmadan birbirine sığdırabilirsiniz. Bunun gibi desenlere [__mozaikleme__](gloss:tessellation) denir. 
 
 ::: column(width=200)
 
@@ -883,7 +863,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellations-1
 
- İnsanlar antik Roma'dan günümüze sanat, mimari ve teknolojideki bu doğal modellerin çoğunu kopyaladılar. İşte birkaç örnek: 
+İnsanlar antik Roma'dan günümüze sanat, mimari ve teknolojideki bu doğal modellerin çoğunu kopyaladılar. İşte birkaç örnek: 
 
 ::: column(width=200)
 
@@ -923,16 +903,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
 
- Burada düzenli çokgenler kullanarak kendi mozaiklerinizi oluşturabilirsiniz. Yeni şekilleri kenar çubuğundan tuvale sürüklemeniz yeterlidir. Hangi şekiller iyi mozaik oluşturur? Hiç mozaik oluşturmayan şekiller var mı? İlginç desenler yaratmaya çalışın! 
+Burada düzenli çokgenler kullanarak kendi mozaiklerinizi oluşturabilirsiniz. Yeni şekilleri kenar çubuğundan tuvale sürüklemeniz yeterlidir. Hangi şekiller iyi mozaik oluşturur? Hiç mozaik oluşturmayan şekiller var mı? İlginç desenler yaratmaya çalışın! 
 
     figure: .tessellation
       x-polypad
@@ -956,12 +931,12 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Normal çokgenlerden mozaikler 
 
- Bazı [düzenli çokgenlerin](gloss:regular-polygon) ( [[kareler]] gibi) [[| beşgenler]] ) kolayca döşenirken, diğerleri ( [[beşgenler]] gibi) [[| üçgenler | altıgenler]] ) hiç mozaik görünmüyor. 
+Bazı [düzenli çokgenlerin](gloss:regular-polygon) ( [[kareler]] gibi) [[| beşgenler]] ) kolayca döşenirken, diğerleri ( [[beşgenler]] gibi) [[| üçgenler | altıgenler]] ) hiç mozaik görünmüyor. 
 
 ---
 > id: tessellation-regular-1
 
- Bu, daha önce hesaplamayı öğrendiğimiz [iç açılarının](gloss:internal-angle) büyüklüğü ile ilgilidir. Mozaikleme işleminin her [köşesinde](gloss:polygon-vertex) , birden çok farklı çokgenin iç açıları birleşir. [[360]]° 'ye kadar eklemek için tüm bu açılara ihtiyacımız var, aksi takdirde bir boşluk veya bir çakışma olacaktır. 
+Bu, daha önce hesaplamayı öğrendiğimiz [iç açılarının](gloss:internal-angle) büyüklüğü ile ilgilidir. Mozaikleme işleminin her [köşesinde](gloss:polygon-vertex) , birden çok farklı çokgenin iç açıları birleşir. [[360]]° 'ye kadar eklemek için tüm bu açılara ihtiyacımız var, aksi takdirde bir boşluk veya bir çakışma olacaktır. 
 
 ---
 > id: tessellation-regular-2
@@ -984,8 +959,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.caption} Beşgenler [[mozaik döşemez | mozaik döşemek]] _{span.reveal(when="blank-2")} çünkü 108° 'nin katları 360°' ye kadar eklemez._ 
 
-    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
-
 ::: column(width=160)
 
     include svg/tessellations/hexagons.svg
@@ -997,9 +970,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-regular-3
 
- Benzer şekilde, tıpkı beşgenler gibi, 7 veya daha fazla kenarı olan herhangi bir normal çokgenin mozaik oluşturmadığını kontrol edebilirsiniz. Bu, mozaikleyen tek normal çokgenlerin üçgenler, kareler ve altıgenler olduğu anlamına gelir! 
+Benzer şekilde, tıpkı beşgenler gibi, 7 veya daha fazla kenarı olan herhangi bir normal çokgenin mozaik oluşturmadığını kontrol edebilirsiniz. Bu, mozaikleyen tek normal çokgenlerin üçgenler, kareler ve altıgenler olduğu anlamına gelir! 
 
- Tabii ki, iç açılarının 360° 'ye kadar çıkabilmesi şartıyla, farklı türde düzenli çokgenleri mozaik içinde birleştirebilirsiniz: 
+Tabii ki, iç açılarının 360° 'ye kadar çıkabilmesi şartıyla, farklı türde düzenli çokgenleri mozaik içinde birleştirebilirsiniz: 
 
     x-gallery(slide-width="520")
       div
@@ -1032,7 +1005,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Düzensiz poligonlardan mozaikler 
 
- Ayrıca, döndürürken ve düzenlerken dikkatli olduğumuz sürece [düzensiz çokgenlerden](gloss:irregular-polygon) mozaikler yapmayı deneyebiliriz. 
+Ayrıca, döndürürken ve düzenlerken dikkatli olduğumuz sürece [düzensiz çokgenlerden](gloss:irregular-polygon) mozaikler yapmayı deneyebiliriz. 
 
 ::: column(width=360)
 
@@ -1052,9 +1025,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Sadece eşkenar üçgenleri değil, _herhangi bir üçgeni_ de döşeyebileceğiniz ortaya çıkıyor! Bu şemadaki [köşeleri](target:vertex) hareket ettirmeyi deneyin. 
+Sadece eşkenar üçgenleri değil, _herhangi bir üçgeni_ de döşeyebileceğiniz ortaya çıkıyor! Bu şemadaki [köşeleri](target:vertex) hareket ettirmeyi deneyin. 
 
- Üçgendeki iç açıların toplamı [[180]]° 'dir. Her açıyı [[iki kez kullanırsak | bir Zamanlar |]] mozaikte her tepe noktasında [[üç kez]] 360° elde ederiz: 
+Üçgendeki iç açıların toplamı [[180]]° 'dir. Her açıyı [[iki kez kullanırsak | bir Zamanlar |]] mozaikte her tepe noktasında [[üç kez]] 360° elde ederiz: 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" cx=100 cy=80)
@@ -1117,7 +1090,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow    
 
- Daha şaşırtıcı bir şekilde, _herhangi bir dörtgen_ ayrıca mozaikler! İç açı toplamları [[360]]°, yani her açıyı bir [[kez kullanırsak | iki defa |]] Mozaikleme işleminin her köşesinde [[üç kez]] 360° elde ederiz. 
+Daha şaşırtıcı bir şekilde, _herhangi bir dörtgen_ ayrıca mozaikler! İç açı toplamları [[360]]°, yani her açıyı bir [[kez kullanırsak | iki defa |]] Mozaikleme işleminin her köşesinde [[üç kez]] 360° elde ederiz. 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
@@ -1159,7 +1132,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-pentagons
 
- Beşgenler biraz daha hileli. _Normal_ beşgenlerin [[mozaik yapmadığını]] zaten gördük [[| tessellate]] , ama normal olmayanlar ne olacak? 
+Beşgenler biraz daha hileli. _Normal_ beşgenlerin [[mozaik yapmadığını]] zaten gördük [[| tessellate]] , ama normal olmayanlar ne olacak? 
 
 ---
 > id: tessellation-pentagons-1
@@ -1178,16 +1151,16 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- İşte beşgenlerle üç farklı mozaik örneği. _Normal_ değildirler, ancak mükemmel şekilde geçerli 5 taraflı çokgenlerdir. 
+İşte beşgenlerle üç farklı mozaik örneği. _Normal_ değildirler, ancak mükemmel şekilde geçerli 5 taraflı çokgenlerdir. 
 
- Şimdiye kadar, matematikçiler (dışbükey) beşgenlerle sadece 15 farklı mozaik türü buldular - en sonuncusu 2015 yılında keşfedildi. Kimse başka olup olmadığını bilmiyor ya da bu 15'in tek olup olmadığını bilmiyor… 
+Şimdiye kadar, matematikçiler (dışbükey) beşgenlerle sadece 15 farklı mozaik türü buldular - en sonuncusu 2015 yılında keşfedildi. Kimse başka olup olmadığını bilmiyor ya da bu 15'in tek olup olmadığını bilmiyor… 
 
 ---
 > id: escher
 
 ### Sanatta Mozaikler 
 
- Mozaikler biz birçok sanatçı, mimar ve tasarımcı - en ünlü Hollandalı sanatçı [MC Escher](bio:escher) için bir araç ve ilham kaynağı. Escher'ın çalışması garip, mutasyona uğramış yaratıklar, desenler ve manzaralar içeriyor: 
+Mozaikler biz birçok sanatçı, mimar ve tasarımcı - en ünlü Hollandalı sanatçı [MC Escher](bio:escher) için bir araç ve ilham kaynağı. Escher'ın çalışması garip, mutasyona uğramış yaratıklar, desenler ve manzaralar içeriyor: 
 
     .row
       div(style="width: 220px")
@@ -1209,7 +1182,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
- Bu sanat eserleri genellikle eğlenceli ve zahmetsiz görünür, ancak altta yatan matematik ilkeleri öncekilerle aynıdır: açılar, rotasyonlar, çeviriler ve çokgenler. Matematik doğru değilse mozaikleme işe yaramaz! 
+Bu sanat eserleri genellikle eğlenceli ve zahmetsiz görünür, ancak altta yatan matematik ilkeleri öncekilerle aynıdır: açılar, rotasyonlar, çeviriler ve çokgenler. Matematik doğru değilse mozaikleme işe yaramaz! 
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
     p.caption “Metamorphosis II” by M. C. Escher (1940)
@@ -1219,9 +1192,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Penrose Tilings 
 
- Şimdiye kadar gördüğümüz tüm mozaiklerin ortak bir yanı var: bunlar __periyodik__ . Bu, tekrar tekrar tekrarlanan düzenli bir kalıptan oluştuğu anlamına gelir. Sonsuza kadar her yöne devam edebilirler ve her yerde aynı görünürler. 
+Şimdiye kadar gördüğümüz tüm mozaiklerin ortak bir yanı var: bunlar __periyodik__ . Bu, tekrar tekrar tekrarlanan düzenli bir kalıptan oluştuğu anlamına gelir. Sonsuza kadar her yöne devam edebilirler ve her yerde aynı görünürler. 
 
- 1970'lerde İngiliz matematikçi ve fizikçi [Roger Penrose](bio:penrose) _periyodik olmayan_ mozaikleri keşfetti - hala her yönden sonsuzca devam ediyorlar, ama _asla_ aynı görünmüyorlar. Bunlara __Penrose eğimleri__ denir ve bir tane oluşturmak için sadece birkaç farklı çokgen __türüne__ ihtiyacınız vardır: 
+1970'lerde İngiliz matematikçi ve fizikçi [Roger Penrose](bio:penrose) _periyodik olmayan_ mozaikleri keşfetti - hala her yönden sonsuzca devam ediyorlar, ama _asla_ aynı görünmüyorlar. Bunlara __Penrose eğimleri__ denir ve bir tane oluşturmak için sadece birkaç farklı çokgen __türüne__ ihtiyacınız vardır: 
 
     figure
       include svg/penrose.svg
@@ -1231,7 +1204,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: penrose-1
 
- Penrose, mozaikleri sadece eğlence için araştırıyordu, ancak bazı gerçek malzemelerin (alüminyum gibi) iç yapısının benzer bir desen izlediği ortaya çıktı. Desen tuvalet kağıdında bile kullanıldı, çünkü üreticiler periyodik olmayan bir desenin herhangi bir çıkıntı olmadan toplanabileceğini fark ettiler. 
+Penrose, mozaikleri sadece eğlence için araştırıyordu, ancak bazı gerçek malzemelerin (alüminyum gibi) iç yapısının benzer bir desen izlediği ortaya çıktı. Desen tuvalet kağıdında bile kullanıldı, çünkü üreticiler periyodik olmayan bir desenin herhangi bir çıkıntı olmadan toplanabileceğini fark ettiler. 
 
 ---
 
@@ -1240,7 +1213,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 > section: polyhedra
 > id: polyhedra
 
- Şimdiye kadar, düz, iki boyutlu bir dünyada çokgenlerle neler yapabileceğimize baktık. Bir [__çokyüzlülük__](gloss:polyhedron) , çokgenlerden oluşan üç boyutlu bir nesnedir. İşte bazı örnekler: 
+Şimdiye kadar, düz, iki boyutlu bir dünyada çokgenlerle neler yapabileceğimize baktık. Bir [__çokyüzlülük__](gloss:polyhedron) , çokgenlerden oluşan üç boyutlu bir nesnedir. İşte bazı örnekler: 
 
 ::: column.padded-thin(width=220)
 
@@ -1256,32 +1229,32 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Çok yüzlü kavisli yüzeyler içeremez - örneğin küreler ve silindirler çok yüzlü değildir. 
+Çok yüzlü kavisli yüzeyler içeremez - örneğin küreler ve silindirler çok yüzlü değildir. 
 
- Bir çokyüzlüyü oluşturan çokgenlere [__yüzleri__](gloss:polyhedron-face) denir. Kenarlar karşılaşacaktır iki yüz [__kenarları__](gloss:polyhedron-edge) denir bağlı hatlar ve köşeler [__köşe__](gloss:polyhedron-vertex) olarak adlandırılır. 
+Bir çokyüzlüyü oluşturan çokgenlere [__yüzleri__](gloss:polyhedron-face) denir. Kenarlar karşılaşacaktır iki yüz [__kenarları__](gloss:polyhedron-edge) denir bağlı hatlar ve köşeler [__köşe__](gloss:polyhedron-vertex) olarak adlandırılır. 
 
 ---
 > id: euler
 
- Polihedra, sadece birkaç yüzlü basit küplerden veya piramitlerden, yukarıdaki yıldız gibi 60 üçgen yüzlü karmaşık nesnelere kadar birçok farklı şekil ve boyutta gelir. Bununla birlikte, _tüm_ polihedranın ortak bir önemli özelliği olduğu ortaya çıktı: 
+Polihedra, sadece birkaç yüzlü basit küplerden veya piramitlerden, yukarıdaki yıldız gibi 60 üçgen yüzlü karmaşık nesnelere kadar birçok farklı şekil ve boyutta gelir. Bununla birlikte, _tüm_ polihedranın ortak bir önemli özelliği olduğu ortaya çıktı: 
 
 ::: .theorem
 
- __Euler Çokyüzlü Formülü__  
+__Euler Çokyüzlü Formülü__  
 Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar sayısından ( _E_ ) iki daha fazladır. Diğer bir deyişle, 
 
 {.text-center}`F + V = E + 2`
 
 :::
 
- Örneğin, bir çokyüzlünün 12 yüzü ve 18 köşesi varsa, [[28]] kenarı olması gerektiğini biliyoruz. 
+Örneğin, bir çokyüzlünün 12 yüzü ve 18 köşesi varsa, [[28]] kenarı olması gerektiğini biliyoruz. 
 
 ---
 > id: euler-1
 
- Bu denklem ünlü İsviçreli matematikçi [Leonard Euler](bio:euler) tarafından keşfedildi. Herhangi bir delik içermediği sürece herhangi bir polihedron için geçerlidir. 
+Bu denklem ünlü İsviçreli matematikçi [Leonard Euler](bio:euler) tarafından keşfedildi. Herhangi bir delik içermediği sürece herhangi bir polihedron için geçerlidir. 
 
- Yukarıdaki gibi farklı bir polihedra denerseniz, Euler formülünün her zaman işe yaradığını göreceksiniz. Daha [sonraki bir derste,](/course/graph-theory/planar-graphs) bunu matematiksel olarak nasıl kanıtlayacağınızı öğreneceksiniz. 
+Yukarıdaki gibi farklı bir polihedra denerseniz, Euler formülünün her zaman işe yaradığını göreceksiniz. Daha [sonraki bir derste,](/course/graph-theory/planar-graphs) bunu matematiksel olarak nasıl kanıtlayacağınızı öğreneceksiniz. 
 
 ---
 
@@ -1290,21 +1263,15 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 > section: nets-cross-sections
 > sectionStatus: dev
 
- Tüm dünyamız üç boyutludur - ancak düz, iki boyutlu nesneleri çizmek veya görselleştirmek çok daha kolaydır. Üç boyutlu polihedra'yı iki boyutlu bir şekilde izlemenin birkaç farklı yolu vardır. 
-
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
+Tüm dünyamız üç boyutludur - ancak düz, iki boyutlu nesneleri çizmek veya görselleştirmek çok daha kolaydır. Üç boyutlu polihedra'yı iki boyutlu bir şekilde izlemenin birkaç farklı yolu vardır. 
 
  Bu ağlardan hangisi bir küp yapar Ağı nesneyle eşleştirin https://github.com/polymake/matchthenet Çizim Ağları 
 
- Düzlem ve katının kesişme noktasının oluşturduğu kesiti tanımlayın. 
+Düzlem ve katının kesişme noktasının oluşturduğu kesiti tanımlayın. 
 
- Enine kesit, bir düzlemin bir katı ile kesişmesidir. İki boyutlu bir düzlemde üç boyutlu bir figürü temsil etmenin bir başka yolu bir ağ kullanmaktır. Bir ağ, üç boyutlu bir şeklin kenarlarının katlanmamış, düz bir temsilidir. 
+Enine kesit, bir düzlemin bir katı ile kesişmesidir. İki boyutlu bir düzlemde üç boyutlu bir figürü temsil etmenin bir başka yolu bir ağ kullanmaktır. Bir ağ, üç boyutlu bir şeklin kenarlarının katlanmamış, düz bir temsilidir. 
 
- altıgen bir kesit oluşturmak için bir küpü döndürün 
+altıgen bir kesit oluşturmak için bir küpü döndürün 
 
 ---
 
@@ -1313,7 +1280,7 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 > section: prisms-pyramids
 > sectionStatus: dev
 
- YAPMAK 
+YAPMAK 
 
 ---
 
@@ -1322,7 +1289,7 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 > section: scaling
 > sectionStatus: dev
 
- YAPMAK 
+YAPMAK 
 
 ---
 
@@ -1331,13 +1298,9 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 > section: platonic
 > id: platonic
 
- Bu dersin başlangıcında, [düzenli çokgenleri](gloss:regular-polygon) özellikle tüm kenarların ve açıların aynı olduğu “simetrik” çokgenler olarak tanımladık. Çokyüzlü için benzer bir şey yapabiliriz. 
+Bu dersin başlangıcında, [düzenli çokgenleri](gloss:regular-polygon) özellikle tüm kenarların ve açıların aynı olduğu “simetrik” çokgenler olarak tanımladık. Çokyüzlü için benzer bir şey yapabiliriz. 
 
- _Normal bir polihedronda_ tüm [yüzler](gloss:polyhedron-face) aynı türdeki çokgenlerdir ve aynı sayıda yüz her [tepe noktasında](gloss:polyhedron-vertex) toplanır. Bu iki özelliğe sahip olan [__polihedra__](gloss:platonic-solid) , Yunan filozofu [Platon'un](bio:plato) adını taşıyan [__Platonik katılar__](gloss:platonic-solid) olarak adlandırılır. 
-
-    //- The pyramid on the right of not a Platonic solid. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
+_Normal bir polihedronda_ tüm [yüzler](gloss:polyhedron-face) aynı türdeki çokgenlerdir ve aynı sayıda yüz her [tepe noktasında](gloss:polyhedron-vertex) toplanır. Bu iki özelliğe sahip olan [__polihedra__](gloss:platonic-solid) , Yunan filozofu [Platon'un](bio:plato) adını taşıyan [__Platonik katılar__](gloss:platonic-solid) olarak adlandırılır. 
 
  Peki Platonik katılar neye benziyor - ve kaç tanesi var? Üç boyutlu bir şekil yapmak için, her tepe noktasında buluşmak için en az [[3]] yüze ihtiyacımız var. Sistematik olarak en küçük düzenli çokgenle başlayalım: eşkenar üçgenler: 
 
@@ -1354,7 +1317,7 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 
 ::: column.grow
 
- Her köşede üç [eşkenar üçgenin](gloss:equilateral-triangle) birleştiği bir çokyüzlü oluşturursak, soldaki şekli alırız. __Tetrahedron__ denir ve [[4]] yüzü vardır. _{.reveal(when="blank-0")} (“Tetra” Yunanca “dört” anlamına gelir)._ 
+Her köşede üç [eşkenar üçgenin](gloss:equilateral-triangle) birleştiği bir çokyüzlü oluşturursak, soldaki şekli alırız. __Tetrahedron__ denir ve [[4]] yüzü vardır. _{.reveal(when="blank-0")} (“Tetra” Yunanca “dört” anlamına gelir)._ 
 
 :::
 
@@ -1371,7 +1334,7 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 
 ::: column.grow
 
- Dört eşkenar üçgen her tepe noktasında toplanırsa, farklı bir Platonik katı elde ederiz. __Oktahedron__ denir ve [[8]] yüzü vardır. _{.reveal(when="blank-0")} (“Sekiz” Yunancada “sekiz” anlamına gelir. “Sekizgen” 8 taraflı şekil anlamına gelir gibi, “Oktahedron” 8 yüzlü katı anlamına gelir.)_ 
+Dört eşkenar üçgen her tepe noktasında toplanırsa, farklı bir Platonik katı elde ederiz. __Oktahedron__ denir ve [[8]] yüzü vardır. _{.reveal(when="blank-0")} (“Sekiz” Yunancada “sekiz” anlamına gelir. “Sekizgen” 8 taraflı şekil anlamına gelir gibi, “Oktahedron” 8 yüzlü katı anlamına gelir.)_ 
 
 :::
 
@@ -1388,7 +1351,7 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 
 ::: column.grow
 
- Her köşede [[beş]] üçgen toplanırsa, __Icosahedron'u__ alırız. [[20]] yüzü vardır. _{.reveal(when="blank-1")} (“Icosa” Yunanca “yirmi” anlamına gelir.)_ 
+Her köşede [[beş]] üçgen toplanırsa, __Icosahedron'u__ alırız. [[20]] yüzü vardır. _{.reveal(when="blank-1")} (“Icosa” Yunanca “yirmi” anlamına gelir.)_ 
 
 :::
 
@@ -1403,7 +1366,7 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 
 ::: column.grow
 
- Her köşede [[altı]] üçgen toplanırsa, farklı bir şey olur: sadece [[bir mozaik]] alırız [[| dörtgen | başka bir Icosahedron]] , _{span.reveal(when="blank-1")} üç boyutlu bir polihedron yerine._ 
+Her köşede [[altı]] üçgen toplanırsa, farklı bir şey olur: sadece [[bir mozaik]] alırız [[| dörtgen | başka bir Icosahedron]] , _{span.reveal(when="blank-1")} üç boyutlu bir polihedron yerine._ 
 
 :::
 
@@ -1418,11 +1381,11 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 
 ::: column.grow
 
- Ve her tepe noktasında yedi veya daha fazla üçgen de yeni polihedra üretmez: bir tepe noktasında o kadar çok üçgene sığacak kadar yer yoktur. 
+Ve her tepe noktasında yedi veya daha fazla üçgen de yeni polihedra üretmez: bir tepe noktasında o kadar çok üçgene sığacak kadar yer yoktur. 
 
 :::
 
- Bu, üçgenlerden oluşan [[üç]] Platonik katı bulduğumuz anlamına gelir. Bir sonraki normal çokgene geçelim: kareler. 
+Bu, üçgenlerden oluşan [[üç]] Platonik katı bulduğumuz anlamına gelir. Bir sonraki normal çokgene geçelim: kareler. 
 
 ---
 > id: platonic-cube
@@ -1437,7 +1400,7 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 
 ::: column.grow
 
- Her köşede [[üç]] kare toplanırsa, __küpü__ alırız. Tıpkı zar gibi [[6]] yüzü var. _{span.reveal(when="blank-1")} Küp bazen Yunanca "altı" için "hexa" kelimesinden sonra _Hexahedron_ olarak da adlandırılır._ 
+Her köşede [[üç]] kare toplanırsa, __küpü__ alırız. Tıpkı zar gibi [[6]] yüzü var. _{span.reveal(when="blank-1")} Küp bazen Yunanca "altı" için "hexa" kelimesinden sonra _Hexahedron_ olarak da adlandırılır._ 
 
 :::
 
@@ -1452,14 +1415,14 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 
 ::: column.grow
 
- Her köşede [[dört]] kare varsa, [[başka bir mozaik]] alırız [[| bir tetrahedron | başka bir küp]] . _{span.reveal(when="blank-1")} Ve daha önce olduğu gibi, beş veya daha fazla kare de çalışmaz._ 
+Her köşede [[dört]] kare varsa, [[başka bir mozaik]] alırız [[| bir tetrahedron | başka bir küp]] . _{span.reveal(when="blank-1")} Ve daha önce olduğu gibi, beş veya daha fazla kare de çalışmaz._ 
 
 :::
 
 ---
 > id: platonic-dodecahedron
 
- Sonra, düzenli beşgenleri deneyelim: 
+Sonra, düzenli beşgenleri deneyelim: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1471,7 +1434,7 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 
 ::: column.grow
 
- Her köşede [[üç]] beşgen toplanırsa, __Dodecahedron'u__ alırız. [[12]] yüzü vardır. _{.reveal(when="blank-1")} (“Dodeca” Yunanca “on iki” anlamına gelir.)_ 
+Her köşede [[üç]] beşgen toplanırsa, __Dodecahedron'u__ alırız. [[12]] yüzü vardır. _{.reveal(when="blank-1")} (“Dodeca” Yunanca “on iki” anlamına gelir.)_ 
 
 :::
 
@@ -1486,14 +1449,14 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 
 ::: column.grow
 
- Daha önce olduğu gibi, dört veya daha fazla beşgen [[çalışmıyor | mümkün]] değil çünkü yeterli alan yok. 
+Daha önce olduğu gibi, dört veya daha fazla beşgen [[çalışmıyor | mümkün]] değil çünkü yeterli alan yok. 
 
 :::
 
 ---
 > id: platonic-hexagons
 
- Denenecek bir sonraki normal çokgen altıgenler: 
+Denenecek bir sonraki normal çokgen altıgenler: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1503,67 +1466,67 @@ Her polihedronda, yüz sayısı ( _F_ ) artı köşe sayısı ( _V_ ) kenar say�
 
 ::: column.grow
 
- Her köşede üç altıgen buluşuyorsa, hemen bir [[mozaikleme]] alırız [[| çok yüzlü cisim | altı yüzlü]] . _{span.reveal(when="blank-0")} Üçten fazla yer olmadığı için altıgenlerden oluşan hiçbir Platonik katı yoktur._ 
+Her köşede üç altıgen buluşuyorsa, hemen bir [[mozaikleme]] alırız [[| çok yüzlü cisim | altı yüzlü]] . _{span.reveal(when="blank-0")} Üçten fazla yer olmadığı için altıgenlerden oluşan hiçbir Platonik katı yoktur._ 
 
 :::
 
 ---
 > id: platonic-final
 
- Aynı şey altıdan fazla kenarı olan tüm normal çokgenler için de geçerlidir. Mozaik vermezler ve kesinlikle üç boyutlu çokgenler almayız. 
+Aynı şey altıdan fazla kenarı olan tüm normal çokgenler için de geçerlidir. Mozaik vermezler ve kesinlikle üç boyutlu çokgenler almayız. 
 
- Bu, sadece [[beş]] Platonik katı olduğu anlamına gelir! Hepsine birlikte bakalım: 
+Bu, sadece [[beş]] Platonik katı olduğu anlamına gelir! Hepsine birlikte bakalım: 
 
 ---
 > id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 
- __dört yüzlü şekil__ 
+__dört yüzlü şekil__ 
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
- _{span.dual} [[4]] Yüz_  
+_{span.dual} [[4]] Yüz_  
 _{span.dual} [[4]] Nokta_  
 _{span.dual} [[6]] Kenar_ 
 
 ::: column.grow.text-center(width=120)
 
- __Küp__ 
+__Küp__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
- _{span.dual(target="dual1")} [[6]] Yüz_  
+_{span.dual(target="dual1")} [[6]] Yüz_  
 _{span.dual(target="dual1")} [[8]] Tepe Noktaları_  
 _{span.dual} [[12]] Kenar_ 
 
 ::: column.grow.text-center(width=120)
 
- __sekizyüzlü__ 
+__sekizyüzlü__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
- _{span.dual(target="dual1")} [[8]] Yüz_  
+_{span.dual(target="dual1")} [[8]] Yüz_  
 _{span.dual(target="dual1")} [[6]] Köşebent_  
 _{span.dual} [[12]] Kenar_ 
 
 ::: column.grow.text-center(width=120)
 
- __oniki yüzlü şekil__ 
+__oniki yüzlü şekil__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
- _{span.dual(target="dual2")} [[12]] Yüz_  
+_{span.dual(target="dual2")} [[12]] Yüz_  
 _{span.dual(target="dual2")} 20 Tepe Noktası_  
 _{span.dual} 30 Kenar_ 
 
 ::: column.grow.text-center(width=120)
 
- __ikosahedron__ 
+__ikosahedron__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
- _{span.dual(target="dual2")} [[20]] Yüz_  
+_{span.dual(target="dual2")} [[20]] Yüz_  
 _{span.dual(target="dual2")} 12 Tepe Noktası_  
 _{span.dual} 30 Kenar_ 
 
@@ -1574,7 +1537,7 @@ _{span.dual} 30 Kenar_
 ---
 > id: platonic-dual
 
- Her yüzünü bir tepe noktasıyla ve her tepe noktasını bir yüzle “değiştirerek” bir çokyüzlüyü ikili haline getirebiliriz. Bu animasyonlar nasıl olduğunu gösterir: 
+Her yüzünü bir tepe noktasıyla ve her tepe noktasını bir yüzle “değiştirerek” bir çokyüzlüyü ikili haline getirebiliriz. Bu animasyonlar nasıl olduğunu gösterir: 
 
 ::: column(width=300)
 
@@ -1588,12 +1551,12 @@ _{span.dual} 30 Kenar_
 
 :::
 
- Tetrahedron kendisiyle ikili. Aynı sayıda yüze ve köşeye sahip olduğundan, onları değiştirmek hiçbir şeyi değiştirmez. 
+Tetrahedron kendisiyle ikili. Aynı sayıda yüze ve köşeye sahip olduğundan, onları değiştirmek hiçbir şeyi değiştirmez. 
 
 ---
 > id: platonic-elements
 
- [Platon](bio:plato) , Evrendeki tüm maddelerin dört elementten oluştuğuna inanıyordu: Hava, Toprak, Su ve Ateş. Her elementin Platonik katılardan birine karşılık geldiğini, beşinci elementin ise bir bütün olarak evreni temsil edeceğini düşündü. Bugün biliyoruz ki, polihedra değil, küresel atomlardan oluşan 100'den fazla farklı element var. 
+[Platon](bio:plato) , Evrendeki tüm maddelerin dört elementten oluştuğuna inanıyordu: Hava, Toprak, Su ve Ateş. Her elementin Platonik katılardan birine karşılık geldiğini, beşinci elementin ise bir bütün olarak evreni temsil edeceğini düşündü. Bugün biliyoruz ki, polihedra değil, küresel atomlardan oluşan 100'den fazla farklı element var. 
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
@@ -1605,9 +1568,9 @@ _{span.dual} 30 Kenar_
 
 > id: archimedean
 
- Platonik katılar özellikle önemli polihedradır, ancak sayısız başkaları da vardır. 
+Platonik katılar özellikle önemli polihedradır, ancak sayısız başkaları da vardır. 
 
- Örneğin [__Arşimet katılar__](gloss:archimedean-solid) hala [normal çokgenlerden oluşmalıdır](gloss:regular-polygon) , ancak birden fazla farklı tip kullanabilirsiniz. Başka bir Yunan matematikçi [olan Syracuse Arşimetlerinin](bio:archimedes) adını alıyorlar ve bunlardan 13 tane var: 
+Örneğin [__Arşimet katılar__](gloss:archimedean-solid) hala [normal çokgenlerden oluşmalıdır](gloss:regular-polygon) , ancak birden fazla farklı tip kullanabilirsiniz. Başka bir Yunan matematikçi [olan Syracuse Arşimetlerinin](bio:archimedes) adını alıyorlar ve bunlardan 13 tane var: 
 
 ::: column(width=170 parent="padded-thin")
 
@@ -1702,16 +1665,12 @@ _{span.dual} 30 Kenar_
 
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
-
 ---
 > id: polyhedra-applications
 
 ### Uygulamalar 
 
- Platon, tüm elementlerin Platonik katılardan oluştuğuna inanmakta yanlıştı. Ancak düzenli polihedra, doğada başka yerlerde görünmelerini sağlayan birçok özel özelliğe sahiptir - ve bu özellikleri bilim ve mühendislikte kopyalayabiliriz. 
+Platon, tüm elementlerin Platonik katılardan oluştuğuna inanmakta yanlıştı. Ancak düzenli polihedra, doğada başka yerlerde görünmelerini sağlayan birçok özel özelliğe sahiptir - ve bu özellikleri bilim ve mühendislikte kopyalayabiliriz. 
 
 ::: column(width=180)
 
@@ -1725,7 +1684,7 @@ _{span.dual} 30 Kenar_
 
 ::: column.grow
 
- Birçok __virüs__ , __bakteri__ ve diğer küçük __organizmalar__ [ikosahedra](gloss:icosahedron) şeklindedir. Örneğin virüsler, genetik materyallerini birçok özdeş protein ünitesinin bir kabuğunun içine koymalıdır. İkosahedron bunu yapmanın en etkili yoludur, çünkü birkaç düzenli elementten oluşur, ancak neredeyse bir küre gibi şekillendirilir. 
+Birçok __virüs__ , __bakteri__ ve diğer küçük __organizmalar__ [ikosahedra](gloss:icosahedron) şeklindedir. Örneğin virüsler, genetik materyallerini birçok özdeş protein ünitesinin bir kabuğunun içine koymalıdır. İkosahedron bunu yapmanın en etkili yoludur, çünkü birkaç düzenli elementten oluşur, ancak neredeyse bir küre gibi şekillendirilir. 
 
 :::
 
@@ -1741,9 +1700,9 @@ _{span.dual} 30 Kenar_
 
 ::: column.grow
 
- Birçok __molekül__ düzenli polihedra şeklindedir. Bunun en ünlü örneği `C_60` bu, bir [Kesik İkosahedron](gloss:truncated-icosahedron) şeklinde düzenlenmiş 60 karbon atomundan oluşur. 
+Birçok __molekül__ düzenli polihedra şeklindedir. Bunun en ünlü örneği `C_60` bu, bir [Kesik İkosahedron](gloss:truncated-icosahedron) şeklinde düzenlenmiş 60 karbon atomundan oluşur. 
 
- Bilim adamları yıldızlararası tozu araştırdıkları 1985 yılında keşfedildi. Benzer görünüşlü binalar inşa etmesiyle ünlü mimar [Buckminster Fuller'ın](bio:fuller) ardından “Buckyball” (veya Buckminsterfullerene) adını verdiler. 
+Bilim adamları yıldızlararası tozu araştırdıkları 1985 yılında keşfedildi. Benzer görünüşlü binalar inşa etmesiyle ünlü mimar [Buckminster Fuller'ın](bio:fuller) ardından “Buckyball” (veya Buckminsterfullerene) adını verdiler. 
 
 :::
 
@@ -1759,7 +1718,7 @@ _{span.dual} 30 Kenar_
 
 ::: column.grow
 
- Çoğu __kristal__ atomlarını [tetrahedra](gloss:tetrahedron) , [küpler](gloss:cube) veya [oktahedradan](gloss:octahedron) oluşan düzenli bir ızgarada düzenler. Çatladıkları veya parçalandıklarında, bu şekilleri daha büyük ölçekte görebilirsiniz. 
+Çoğu __kristal__ atomlarını [tetrahedra](gloss:tetrahedron) , [küpler](gloss:cube) veya [oktahedradan](gloss:octahedron) oluşan düzenli bir ızgarada düzenler. Çatladıkları veya parçalandıklarında, bu şekilleri daha büyük ölçekte görebilirsiniz. 
 
 :::
 
@@ -1775,7 +1734,7 @@ _{span.dual} 30 Kenar_
 
 ::: column.grow
 
- Tetrahedra ve oktahedra inanılmaz derecede sert ve kararlıdır, bu da onları __inşaatta__ çok yararlı kılar. _Uzay çerçeveleri_ , büyük çatıları ve ağır köprüleri destekleyebilen çokgen yapılardır. 
+Tetrahedra ve oktahedra inanılmaz derecede sert ve kararlıdır, bu da onları __inşaatta__ çok yararlı kılar. _Uzay çerçeveleri_ , büyük çatıları ve ağır köprüleri destekleyebilen çokgen yapılardır. 
 
 :::
 
@@ -1791,8 +1750,8 @@ _{span.dual} 30 Kenar_
 
 ::: column.grow
 
- Platonik katılar da __zar__ oluşturmak için kullanılır. simetrileri nedeniyle, her iki tarafın yukarı bakma [olasılığı](gloss:probability) vardır - bu yüzden zarlar adil. 
+Platonik katılar da __zar__ oluşturmak için kullanılır. simetrileri nedeniyle, her iki tarafın yukarı bakma [olasılığı](gloss:probability) vardır - bu yüzden zarlar adil. 
 
- [Kesik Icosahedron](gloss:truncated-icosahedron) muhtemelen dünyanın en ünlü polihedronudur: futbolun şekli. 
+[Kesik Icosahedron](gloss:truncated-icosahedron) muhtemelen dünyanın en ünlü polihedronudur: futbolun şekli. 
 
 :::

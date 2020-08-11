@@ -375,6 +375,23 @@ __normal distribution__.
 
 TODO
 
+---
+
+Sort these events into whether they are independent or not:
+
+    x-buckets.independent
+      .inputs
+        .input(bucket="0") Winning the lottery and running out of milk.
+        .input(bucket="1") Boarding a plane first and finding a good seat.
+        .input(bucket="0") Owning a dog and growing your own herb garden.
+        .input(bucket="0") Getting a parking ticket and winning the lottery.
+        .input(bucket="1") Robbing a bank and going to jail.
+        .input(bucket="1") Driving a car and having a traffic accident.
+      .buckets
+        .bucket
+          .title Independent
+        .bucket
+          .title Dependent
 
 ---
 

@@ -5,6 +5,7 @@
 
 
 @import "../shared/variables";
+@import "../shared/components/buckets";
 
 
 article.gameshow .page-background {
@@ -14,7 +15,9 @@ article.gameshow .page-background {
   transform: translate3D(0,0,0);
 }
 
+
 // -----------------------------------------------------------------------------
+// Introduction
 
 .p-line img {
   float: left;
@@ -53,6 +56,18 @@ article.gameshow .page-background {
 
 
 // -----------------------------------------------------------------------------
+// Conditional Probability
+
+x-buckets.independent {
+  .input { width: 220px; }
+  .bucket { width: 300px; }
+  .bucket:nth-child(1) { background: mix(@teal, @grey-background, 85%); }
+  .bucket:nth-child(2) { background: mix(@purple, @grey-background, 85%); }
+}
+
+
+// -----------------------------------------------------------------------------
+// Monty Hall
 
 .gameshow .btn {
   background: fade(white, 80%);
@@ -136,7 +151,9 @@ article.gameshow .page-background {
 
 #monty-hall .btn { margin: 0 16px; }
 
+
 // -----------------------------------------------------------------------------
+// Randomness
 
 .radioactive circle {
   fill: @red;

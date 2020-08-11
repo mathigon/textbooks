@@ -874,7 +874,7 @@ julia-set:
 
 kite:
   title: Deltoid (Drachenviereck)
-  text: 'Ein __Deltoid__ ist ein Viereck, bei dem zwei Paare benachbarter Seiten die gleiche Länge haben.'
+  text: Ein __Deltoid__ ist ein Viereck, bei dem zwei Paare benachbarter Seiten die gleiche Länge haben.
   link: /course/polyhedra/quadrilaterals#kites
 
 koch-snowflake:
@@ -896,7 +896,7 @@ lcm:
   title: Kleinstes gemeinsames Vielfaches
   keywords: lcm least kgV ggT
   text: Das __kleinste gemeinsame Vielfache__ (kgV) von zwei Zahlen _a_ und _b_ ist die kleinste ganze
-    Zahl, die ein Vielfaches von _a_ und _b_ist.
+    Zahl, die ein Vielfaches von _a_ und _b_ ist.
   link: /course/divisibility/lcm
 
 line:

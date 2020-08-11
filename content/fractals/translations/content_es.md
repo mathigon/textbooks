@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 Al mirar alrededor de la naturaleza, es posible que haya notado plantas complejas como estas:
 
@@ -428,14 +429,12 @@ Si bien los verdaderos fractales nunca pueden aparecer en la naturaleza, hay muc
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Cordillera en Asia central
 
 {sesenta y cinco}
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Delta del río Ganges en India
@@ -448,14 +447,12 @@ Si bien los verdaderos fractales nunca pueden aparecer en la naturaleza, hay muc
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Vasos sanguíneos en la retina
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} Gran Cañón en los EE. UU.
@@ -470,16 +467,12 @@ Si bien los verdaderos fractales nunca pueden aparecer en la naturaleza, hay muc
 
 Todos estos objetos pueden aparecer completamente al azar, pero, al igual que los fractales, hay un patrón subyacente que determina cómo se forman. Las matemáticas pueden ayudarnos a comprender mejor las formas, y los fractales tienen aplicaciones en campos como la medicina, la biología, la geología y la meteorología. [Continuar](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Terreno fractal generado por computadora
@@ -498,6 +491,7 @@ E incluso podemos revertir este proceso para comprimir imágenes digitales, para
 
 > section: sierpinski
 > id: sierpinski
+> translated: auto
 
 ::: column.grow
 
@@ -522,22 +516,18 @@ Aquí hay algunos ejemplos de revestimientos de pisos de diferentes iglesias en 
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -694,6 +684,7 @@ Hay muchas variantes del triángulo de Sierpinski y otros fractales con propieda
 > section: mandelbrot
 > id: iteration
 > goals: move-1 move-2
+> translated: auto
 
 Todos los fractales que vimos en los capítulos anteriores se crearon utilizando un proceso de __iteración__: comienzas con un patrón específico y luego lo repites una y otra vez.
 
@@ -955,14 +946,9 @@ A medida que mueve el valor de [{.pill.red} c](target:c) alrededor del conjunto 
 * {.reveal(when="blank-0")} Las secuencias dentro del [bulbo grande](target:bulb1) en la parte superior [[alcanzan una órbita|converge|diverge]] _{span.reveal(when="blank-1")} que consta de [[3]] puntos._
 * {.reveal(when="blank-2")} Las secuencias en [esta bombilla más pequeña](target:bulb2) tienen órbitas de longitud [[5]].
 
-
 :::
 
 {.reveal(when="blank-3")} Cada bombilla tiene una órbita de diferente tamaño, con bombillas más pequeñas que tienen más y más puntos en sus órbitas. El tamaño de estas órbitas está estrechamente relacionado con el __Mapa logístico__, un concepto importante en [Teoría del caos](/course/chaos).
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 
@@ -988,6 +974,4 @@ En 1985, el set de Mandelbrot apareció en la portada de la revista _Scientific 
 > sectionStatus: dev
 
 {.todo} ¡Próximamente!
-
-
 

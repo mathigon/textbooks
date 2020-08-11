@@ -363,8 +363,6 @@ Assim como as pontes de Königsberg, você rapidamente descobre que esse problem
 
 O [grafo completo](gloss:complete-graph) `K_5` é o menor grafo que não é planar. Qualquer outro grafo que contenha `K_5` como subgrafo também não é planar. Isso inclui `K_6`, `K_7` e todos os grafos completos que são maiores. O grafo no quebra-cabeça dos três serviços (água, energia e gás) é o [grafo bipartido](gloss:bipartite-graph) `K_"3,3"`. Acontece que qualquer grafo não-planar deve conter `K_5` ou `K_"3,3"` (ou uma [subdivisão](gloss:subdivision) desses dois grafos) como subgrafo. Este teorema é chamado de _teorema de Kuratowski_.
 
-    // TODO Add bio of Kazimierz Kuratowski
-
 ---
 > id: planarity
 > goals: planarity
@@ -743,7 +741,6 @@ As formigas querem encontrar as rotas mais curtas possíveis entre o ninho e as 
 * A colônia de formigas envia muitos batedores que inicialmente viajam em direções aleatórias. Uma vez que encontram comida, eles retornam, deixando para trás um rastro de feromônio.
 * Outras formigas tendem a seguir uma trilha quando encontram uma, o que as leva à comida. Na viagem de volta, depositam mais feromônios, reforçando a trilha.
 * Com o tempo, o feromônio evapora. Quanto mais longo o caminho, mais tempo leva para as formigas viajarem, e assim o feromônio tem mais tempo para evaporar. Caminhos curtos, por outro lado, podem ser reforçados mais rapidamente, portanto sua força aumenta mais rapidamente.
-
 
 ::: column(width=240)
 

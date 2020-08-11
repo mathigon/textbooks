@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 Mnoge geometrijske koncepte poput [linija](gloss:line) ili [poligona](gloss:polygon) izmislili su matematičari. S druge strane, simetrija je svugdje oko nas. Gotovo sve biljke, životinje, pa čak i mi ljudi simetrične smo.
 
@@ -80,6 +81,7 @@ Rezultat transformacije se zove [__slika__](gloss:transformation-image). Često 
 
 > id: rigid
 > section: rigid
+> translated: auto
 
 [__kruta transformacija__](gloss:rigid-transformation) posebna je vrsta transformacije koja ne mijenja veličinu ili oblik figure. Mogli bismo zamisliti da je izrađen od čvrstog materijala poput drveta ili metala: možemo ga premjestiti, okrenuti ili preokrenuti, ali ne možemo ga rastezati, savijati ili na drugi način deformirati.
 
@@ -462,6 +464,7 @@ NAPRAVITI
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
 [__Simetrija__](gloss:symmetry) je svuda oko nas, a intuitivan koncept: različiti dijelovi predmeta izgledaju _isto_ na neki način. Ali pomoću transformacija možemo dati mnogo precizniju, matematičku definiciju onoga što simetrija _zaista_ znači:
 
@@ -705,8 +708,9 @@ Pronađite red i ugao rotacije, za svaki od ovih oblika:
 
 > id: groups
 > section: symmetry-groups
+> translated: auto
 
->Neki oblici imaju više od jedne simetrije - pogledajmo [kvadrat](gloss:square) kao jednostavan primjer.
+Neki oblici imaju više od jedne simetrije - pogledajmo [kvadrat](gloss:square) kao jednostavan primjer.
 
 ::: column(width=400 parent="padded-thin")
 
@@ -1039,6 +1043,7 @@ Osim prijevoda, refleksija, rotacija i odmahivanja, ove grupe uključuju simetri
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
 Do sada su sve simetrije koje smo gledali bile _vizualne_ u nekom smislu: vidljivi oblici, slike ili obrasci. U stvari, simetrija može biti puno širi pojam: _imunitet na promjene_.
 
@@ -1090,6 +1095,7 @@ Simetrija čak može predvidjeti postojanje temeljnih čestica. Jedan primjer je
 
 > id: dilations
 > section: dilations
+> translated: auto
 
 Do sada smo samo gledali [[krute|congruent|visual]] transformacije. _{span.reveal(when="blank-0")} Razmislimo o onom koji nije: [__dilatacija__](gloss:dilation) mijenja veličinu oblika čineći ga većim ili manjim._
 

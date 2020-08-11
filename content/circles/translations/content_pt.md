@@ -4,6 +4,7 @@
 
 > section: introduction
 > id: intro
+> translated: auto
 
 ::: column.grow
 
@@ -329,6 +330,7 @@ Existe até um _dia Pi_ a cada ano, que cai em 14 de março, porque `pi ≈ 3.14
 
 > section: radians
 > id: degrees
+> translated: auto
 
 Até agora em geometria, sempre medimos ângulos em [graus](gloss:degrees). Uma rotação do __{.m-red} círculo completo__ é [[360]]°, um meio-círculo __{.m-green}__ é [[180]]°, um __{.m-yellow} quarto de círculo__ é [[90]]° e assim por diante.
 
@@ -569,6 +571,7 @@ O uso de radianos tem uma vantagem particularmente interessante ao usar a funç�
 
 > section: tangets-chords-arcs
 > id: circle-parts
+> translated: auto
 
 Nas seções anteriores, você aprendeu os nomes dados a várias partes diferentes de um círculo - como centro, raio, diâmetro e circunferência. No entanto, existem muitos elementos geométricos relacionados a um círculo, dos quais precisamos resolver problemas mais complexos:
 
@@ -717,11 +720,15 @@ Agora, podemos reorganizar essas equações para encontrar a variável em que es
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} comprimento do arco](pill) | = | `"circumference" × c/360` | | | = | `2 π r × c/360` | {.eqn-system}
+| [{.red} comprimento do arco](pill) | = | `"circumference" × c/360` |
+| | = | `2 π r × c/360` |
+{.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} área do setor](pill) | = | `"circle area" × c/360` | | | = | `π r^2 × c/360` | {.eqn-system}
+| [{.yellow} área do setor](pill) | = | `"circle area" × c/360` |
+| | = | `π r^2 × c/360` |
+{.eqn-system}
 
 :::
 
@@ -888,6 +895,7 @@ Foi uma dessas medidas incorretas que levou Cristóvão Colombo a navegar para o
 
 > section: spheres-cones-cylinders
 > id: solids
+> translated: auto
 
 Nas seções anteriores, estudamos as propriedades dos círculos em uma superfície plana. Mas nosso mundo é realmente tridimensional, então vamos dar uma olhada em alguns sólidos 3D baseados em círculos:
 
@@ -925,7 +933,6 @@ Aqui você pode ver o _Gasômetro cilíndrico_ em Oberhausen, Alemanha. Ele cost
 
 * Quanto gás natural pode ser armazenado? Este é o [[volume|area|diameter]] do cilindro.
 * {.reveal(when="blank-0")} Quanto aço é necessário para construir o Gasômetro? Esta é (aproximadamente) a área de superfície [[do cilindro.
-
 
 {.reveal(when="blank-0 blank-1")} Vamos tentar encontrar fórmulas para esses dois resultados!
 
@@ -1016,7 +1023,6 @@ Existem dois [[círculos|spheres|squares]], um na parte superior e outro na part
 
 * {.reveal(when="blank-0 blank-1")} Os dois círculos cada um têm a área _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 * {.reveal(when="eqn-0")} A altura do retângulo é _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} e a largura do retângulo é a mesma que a [[circunferência|diameter|tangent]] dos círculos:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
-
 
 ::: column(width=320)
 
@@ -1467,6 +1473,7 @@ Para encontrar a área da superfície de uma esfera, podemos mais uma vez aproxi
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
+> translated: auto
 
 O círculo é uma das quatro formas diferentes que podem ser criadas usando “fatias” através de um [cone](gloss:cone). Isso pode ser demonstrado usando o cone de luz de uma tocha:
 
@@ -1518,12 +1525,6 @@ Uma elipse parece quase um "círculo alongado". De fato, você pode pensar nisso
 Se você tiver uma cadeia longa conectada a dois pontos fixos, poderá desenhar uma elipse perfeita rastreando o alcance máximo das cadeias:
 
 {.todo} Em breve: elipses desenhando interativas
-
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
@@ -1633,7 +1634,6 @@ A gravidade é o que faz tudo cair no chão e a gravidade também é o que faz o
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)

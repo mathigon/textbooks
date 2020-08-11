@@ -168,7 +168,6 @@ kreisförmig oder kugelförmig werden und damit ihre Oberfläche reduzieren.
 
 {.caption} _Umfang_ = __{.m-green}100__, _Fläche_ = __${area}__
 
-
 :::
 
 ---
@@ -396,11 +395,7 @@ Raum entspricht, oder der am 22. Juli gefeiert wird, weil `pi ≈ 22/7`, also 22
 
     figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Grad und Radiant
 
@@ -708,11 +703,7 @@ dann gilt `sin(θ) ≈ θ`. Zum Beispiel,
 kann bestimmte Gleichungen, die trigonometrische Funktionen enthalten, erheblich vereinfachen.
 Wir werden darauf später noch näher eingehen.
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Tangenten, Sehnen und Kreisbögen
 
@@ -752,19 +743,19 @@ die wir zur Lösung komplexerer Aufgaben benötigen:
 ::: column.grow(parent="right")
 
 * {.r} Eine [{.red}Sekante](pill:secant) ist eine Gerade, die einen Kreis in
-zwei Punkten schneidet. [Weiter](btn:next)
+  zwei Punkten schneidet. [Weiter](btn:next)
 * {.r.reveal(when="next-0")}Eine [{.green}Sehne](pill:chord) ist eine Strecke,
-deren Endpunkte auf dem Umfang eines Kreises liegen. [Weiter](btn:next)
+  deren Endpunkte auf dem Umfang eines Kreises liegen. [Weiter](btn:next)
 * {.r.reveal(when="next-1")}Eine [{.blue}Tangente](pill:tangent) ist eine Gerade, die
-einen Kreis an genau einem Punkt berührt. Man nennt ihn den
-__Berührungspunkt__. [Weiter](btn:next)
+  einen Kreis an genau einem Punkt berührt. Man nennt ihn den
+  __Berührungspunkt__. [Weiter](btn:next)
 * {.r.reveal(when="next-2")}Ein [{.yellow}Kreisbogen](pill:arc) ist ein Ausschnitt aus
-dem Umfang eines Kreises. [Weiter](btn:next)
+  dem Umfang eines Kreises. [Weiter](btn:next)
 * {.r.reveal(when="next-3")}Ein [{.teal} Sektor](pill:sector) ist ein Teil der
-Kreisfläche, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
+  Kreisfläche, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
   [Weiter](btn:next)
 * {.r.reveal(when="next-4")}Und ein [{.purple} Segment](pill:segment) ist ein
- Teil der Kreisfläche, begrenzt durch einen _Kreisbogen_ und _eine Sehne_.
+  Teil der Kreisfläche, begrenzt durch einen _Kreisbogen_ und _eine Sehne_.
   [Weiter](btn:next)
 
 :::
@@ -783,86 +774,11 @@ diese Definitionen merken musst - du kannst jederzeit im
 
 {.todo} KOMMT BALD!
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
-
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
-    // Point of Tangency: Der Punkt, an dem eine Tangente den Kreis berührt.
-    // 
-    // Die Tangente und der bis zum Berührungspunkt gezeichnete Radius haben eine eindeutige
-    // Beziehung. Let’s investigate it here.
-    // 
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    // 
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    // 
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
-
 ---
 
 ### Sehnen
 
 {.todo} KOMMT BALD!
-
-    // Eine Sehne ist eine Strecke, deren Endpunkte auf einem Kreis liegen. Der Durchmesser ist die
-    // längste Sehne in einem Kreis. There are several theorems that explore the
-    // properties of chords.
-    // 
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    // 
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    // 
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    // 
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    // 
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
-
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 > id: earth-arc
@@ -971,27 +887,19 @@ interessiert. Zum Beispiel,
 ::: column(width=320 parent="padded-thin")
 
 | [{.red}Kreisbogenlänge](pill) | = | `"Umfang" × α/360` |
-|                          | = | `2 r π × α/360`          |
+|                               | = | `2 r π × α/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
 | [{.yellow}Sektorfläche](pill) | = | `"Kreisfläche" × α/360` |
-|                              | = | `r^2 π × α/360`         |
+|                               | = | `r^2 π × α/360`         |
 {.eqn-system}
 
 :::
 
 wobei _r_ der Radius des Kreises ist und _α_ die Größe des
 Mittelpunktswinkels ist.
-
-    // Was die Formeln tun, ist, sie gehen von der Fläche des ganzen Kreises aus, und
-    // nehmen dann einen Bruchteil davon, je nachdem, welchen Bruchteil des Kreises
-    // der Sektor ausfüllt.
-
-    // Die Bogenlänge ist der Abstand entlang der gekrümmten Linie des
-    // Umfangs des Kreises. Sie ist etwas länger als die gerade
-    // Linie, die die beiden gleichen Punkte (die Sehne) verbindet.
 
 ---
 > id: arcs-rad
@@ -1004,13 +912,13 @@ in [Radiant](gloss:radians) anstatt in [Grad](gloss:degrees) angegeben wird, kö
 ::: column(width=320 parent="padded-thin")
 
 | [{.red}Kreisbogenlänge](pill) | = | `2 r π × α/(2π)` |
-|                          | = | `r × α`          |
+|                               | = | `r × α`          |
 {.eqn-system}
 
 ::: column(width=320)
 
 | [{.yellow}Sektorfläche](pill) | = | `r^2 π × α/(2π)` |
-|                              | = | `1/2 r^2 α`      |
+|                               | = | `1/2 r^2 α`      |
 {.eqn-system}
 
 :::
@@ -1156,165 +1064,25 @@ dazwischen: den amerikanischen.
 
 {.todo} KOMMT BALD!
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Die Kreissätze
 
 > section: circle-theorems
 > sectionStatus: dev
 
-https://www.mathsisfun.com/geometry/circle-theorems.html
-https://mathsmadeeasy.co.uk/gcse-maths-revision/circle-theorems-gcse-revision-and-worksheets/
-http://amsi.org.au/teacher_modules/Circle_Geometry.html
-
-__[CC] Identify and describe relationships among inscribed angles, radii, and
-chords. Include the relationship between central, inscribed, and circumscribed
-angles; inscribed angles on a diameter are right angles; the radius of a circle
-is perpendicular to the tangent where the radius intersects the circle.__
-
-An inscribed angle is an angle with its vertex is the circle and its sides
-contain chords. The intercepted arc is the arc that is on the interior of the
-inscribed angle and whose endpoints are on the angle. The vertex of an inscribed
-angle can be anywhere on the circle as long as its sides intersect the circle to
-form an intercepted arc.
-
-__Inscribed Angle Theorem__
-The measure of an inscribed angle is half the measure of its intercepted arc.
-To prove the Inscribed Angle Theorem, you would need to split it up into three
-cases, like the three different angles drawn from the Investigation.
-
-__Congruent Inscribed Angle Theorem__
-Inscribed angles that intercept the same arc are congruent.
-
-__Inscribed Angle Semicircle Theorem__
-An angle that intercepts a semicircle is a right angle.
-
-In the Inscribed Angle Semicircle Theorem we could also say that the angle is
-inscribed in a semicircle. Anytime a right angle is inscribed in a circle, the
-endpoints of the angle are the endpoints of a diameter. Therefore, the converse
-of the Inscribed Angle Semicircle Theorem is also true.
-
-When an angle is on a circle, the vertex is on the circumference of the circle.
-One type of angle on a circle is one formed by a tangent and a chord.
-
-__Chord/Tangent Angle Theorem__
-The measure of an angle formed by a chord and a tangent that intersect on the
-circle is half the measure of the intercepted arc.
-
-From the Chord/Tangent Angle Theorem, we now know that there are two types of
-angles that are half the measure of the intercepted arc; an inscribed angle and
-an angle formed by a chord and a tangent. Therefore, any angle with its vertex
-on a circle will be half the measure of the intercepted arc.
-
-An angle is considered inside a circle when the vertex is somewhere inside the
-circle, but not on the center. All angles inside a circle are formed by two
-intersecting chords.
-
-__Intersecting Chords Angle Theorem__
-The measure of the angle formed by two chords that intersect inside a circle is
-the average of the measure of the intercepted arcs.
-
-An angle is considered to be outside a circle if the vertex of the angle is
-outside the circle and the sides are tangents or secants. There are three types
-of angles that are outside a circle: an angle formed by two tangents, an angle
-formed by a tangent and a secant, and an angle formed by two secants. Just like
-an angle inside or on a circle, an angle outside a circle has a specific
-formula, involving the intercepted arcs.
-
-__Outside Angle Theorem__
-The measure of an angle formed by two secants, two tangents, or a secant and a
-tangent drawn from a point outside the circle is equal to half the difference
-of the measures of the intercepted arcs.
-
-When two chords intersect inside a circle, the two triangles they create are
-similar, making the sides of each triangle in proportion with each other. If we
-remove AD and BC the ratios between AE, EC, DE, and EB will still be the same.
-
-__Intersecting Chords Theorem__
-If two chords intersect inside a circle so that one is divided into segments of
-length a and b and the other into segments of length c and d then ab=cd. In
-other words, the product of the segments of one chord is equal to the product
-of segments of the second chord.
-
-In addition to forming an angle outside of a circle, the circle can divide the
-secants into segments that are proportional with each other.
-
-If we draw in the intersecting chords, we will have two similar triangles.
-
-From the inscribed angles and the Reflexive Property (∠R≅∠R),△PRS∼△TRQ. Because
-the two triangles are similar, we can set up a proportion between the
-corresponding sides. Then, cross-multiply. ac+d=ca+b⇒a(a+b)=c(c+d)
-
-__Two Secants Segments Theorem__
-If two secants are drawn from a common point outside a circle and the segments
-are labeled as above, then a(a+b)=c(c+d). In other words, the product of the
-outer segment and the whole of one secant is equal to the product of the outer
-segment and the whole of the other secant.
-
-If a tangent and secant meet at a common point outside a circle, the segments
-created have a similar relationship to that of two secant rays. Recall that the
-product of the outer portion of a secant and the whole is equal to the same of
-the other secant. If one of these segments is a tangent, it will still be the
-product of the outer portion and the whole. However, for a tangent line, the
-outer portion and the whole are equal.
-
-__Tangent Secant Segment Theorem__
-If a tangent and a secant are drawn from a common point outside the circle (and
-the segments are labeled like the picture to the left), then a2=b(b+c). This
-means that the product of the outside segment of the secant and the whole is
-equal to the square of the tangent segment.
-
----
-
-### Satz des Thales
-
-Nachweis durch gleichschenklige Dreiecke
-
-Kombiniert alle Erkenntnisse der euklidischen Geometrie
-
 {.todo} TODO
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Regelmäßige Vielecke
 
 > sectionStatus: dev
 > section: cyclic-polygons
 
-__[CC] Construct an equilateral triangle, a square, and a regular hexagon
-inscribed in a circle.__
-
-An inscribed polygon is a polygon where every vertex is on a circle. Note, that
-not every quadrilateral or polygon can be inscribed in a circle. Inscribed
-quadrilaterals are also called cyclic quadrilaterals. For these types of
-quadrilaterals, they must have one special property. We will investigate it here.
-
-This investigation shows that the opposite angles in an inscribed quadrilateral
-are supplementary. By cutting the quadrilateral in half, through the diagonal,
-we were able to show that the other two angles (that we did not cut through)
-formed a linear pair when matched up.
-
-Inscribed Quadrilateral Theorem: A quadrilateral is inscribed in a circle if
-and only if the opposite angles are supplementary.
-
-
+{.todo} TODO
 
 --------------------------------------------------------------------------------
-
-
 
 ## Kugeln, Kegel und Zylinder
 
@@ -1368,8 +1136,7 @@ von Interesse sein dürften:
 * Wie viel Erdgas kann gespeichert werden? Das entspricht [[dem Volumen|der Fläche|dem Durchmesser]] des
   Zylinders.
 * {.reveal(when="blank-0")} Wie viel Stahl wird für den Bau des Gasometers benötigt?
-  In diesem Fall geht es (ungefähr) um [[die Oberfläche|den Umfang|die Diagonale]] des
-Zylinders.
+  In diesem Fall geht es (ungefähr) um [[die Oberfläche|den Umfang|die Diagonale]] des Zylinders.
 
 {.reveal(when="blank-0 blank-1")} Wir wollen versuchen, Formeln für diese beiden
 Werte zu finden!
@@ -1469,12 +1236,6 @@ konstant:
 
 :::
 
-    // TODO Du musst immer die _senkrechte_ Höhe verwenden. Dies ist
-    // die vertikale Linie nach links in der obigen Abbildung.
-
-    // TODO Volumen der horizontalen Zylinderteilstücke
-    // https://www.mathopenref.com/cylindervolpartial.html
-
 ---
 > id: cylinder-surface
 
@@ -1495,7 +1256,7 @@ großes [[Rechteck|Quadrat|Trapez]] ist.
 * {.reveal(when="eqn-0")} Die Höhe des Rechtecks ist gleich
   _{x-equation.small(solution="h" keys=" " short-var)}_
   _{span.reveal(when="eqn-1")} und die Breite des Rechtecks ist
-gleich [[dem Umfang|dem Durchmesser|der Tangente]] der Kreise:_
+  gleich [[dem Umfang|dem Durchmesser|der Tangente]] der Kreise:_
   _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
 
 ::: column(width=320)
@@ -1827,7 +1588,6 @@ Formen in einer bestimmten Höhe über der Grundfläche ändert:
 
     x-slider(steps=100)
 
-
 {.reveal(when="slider-0")} Versuchen wir, die Querschnittsfläche
 dieser beiden Körper in einem Abstand der __{span.pill.blue.step-target(data-to="h")}Höhe *h*__
 über der Grundfläche zu berechnen.
@@ -1879,7 +1639,7 @@ und das Volumen des [Kegels](gloss:cone-volume) voneinander abziehen_
 
 ::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
 | `V_"Halbkugel"` | = | `V_"Zylinder" - V_"Kegel"` |
-|                  | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
+|                 | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
 :::
 
 ---
@@ -2002,28 +1762,11 @@ Flächen beginnt das Polyeder immer mehr wie eine Kugel auszusehen.
 
 {.todo} DEMNÄCHST: KOMMT BALD!
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
     
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
     
-    // And therefore,
-    // surface area = 3 * volume / radius = 
     
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
-
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
-
-
 
 --------------------------------------------------------------------------------
-
-
 
 ## Kegelschnitte
 
@@ -2095,12 +1838,6 @@ Wenn du eine lange Schnur mit zwei Fixpunkten verbindest, kannst du eine perfekt
 Ellipse zeichnen, indem du die Schnur gespannt hältst und so ganz herum zeichnest:
 
 {.todo} KOMMT BALD! Ellipsenzeichnung interaktiv
-
-    // ---
-    // > id: ellipses-1
-    // Du kannst auch die Brennpunkte verschieben. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
 
 ---
 > id: ellipses-2
@@ -2228,7 +1965,6 @@ Planeten bewegen, verhindert, dass sie direkt in die Sonne fallen.
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)

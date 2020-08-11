@@ -334,9 +334,9 @@ many handshakes are there in total?
 
 We can represent the handshakes using a graph: every person is [[a vertex|an edge]],
 and every handshake is [[an edge|a vertex]].
- 
+
 {.reveal(when='blank-0 blank-1')} Now it is easy to count the number of edges in the graph. We find
-that there with ${hnd} people, there are ${hnd*(hnd-1)/2} handshakes.
+that with ${hnd} people, there are ${hnd*(hnd-1)/2} handshakes.
 
 ::: column.s-hide(width=240)
 
@@ -832,7 +832,7 @@ ${tsn*(tsn-1)/2} edges in total.
 
 The delivery truck has to visit all cities, in any order. In the Königsberg
 bridges problem we wanted to find paths which travel along _every edge_ exactly
-one. Now we want to find paths which visit _every vertex_ exactly once. These
+once. Now we want to find paths which visit _every vertex_ exactly once. These
 paths are called __Hamiltonian cycles__.
 
 ::: column(width=260)

@@ -5,7 +5,7 @@
 
 
 import {delay, isOneOf} from '@mathigon/core';
-import {round, isInteger, Point, Circle, isLineLike, intersections, Segment, isCircle} from '@mathigon/fermat';
+import {Circle, intersections, isCircle, isInteger, isLineLike, Point, round, Segment} from '@mathigon/fermat';
 import {hover} from '@mathigon/boost';
 import {Geopad, GeoPath, Path, Slider, Step} from '../shared/types';
 
@@ -14,7 +14,7 @@ import {Geopad, GeoPath, Path, Slider, Step} from '../shared/types';
 // Triangle Properties
 
 function waitToDraw($step: Step, $geopad: Geopad, shapes: string[],
-                    classes: string[], targets: string[]) {
+    classes: string[], targets: string[]) {
   $geopad.waitForPaths(shapes, {
     onCorrect(path, i) {
       $step.addHint('correct');

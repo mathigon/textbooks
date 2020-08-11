@@ -87,9 +87,6 @@ Possiamo disegnare il layout di semplici grafi usando cerchi e linee. La posizio
 
 :::
 
-    // TODO maybe include examples of graphs with edges crossing, curved edges, etc.
-    // could include an "is this a graph?" quiz
-
 ---
 
 > id: intro-2
@@ -235,9 +232,6 @@ Innanzitutto, dobbiamo convertire le mappe delle città in grafi con bordi e ver
 > id: bridges-2
 
 Sulla mappa, crea alcuni grafi diversi e poi prova a capire quali possono essere disegnati con un singolo tratto continuo.
-
-    // p Try drawing these graphs with one continuous stroke:
-    // p.todo Interactive coming soon…
 
 ---
 
@@ -537,7 +531,9 @@ __{.red} 90__ Bordi
 
 ---
 > id: maps
-> section: map-colouring ## Colorazione delle mappe
+> section: map-colouring
+
+## Colorazione delle mappe
 
 ::: column.grow
 
@@ -783,7 +779,6 @@ Le formiche vogliono trovare i percorsi più brevi possibili tra il loro nido e 
 * Altre formiche tendono a seguire una scia che le conduce al cibo. Durante il viaggio di ritorno depositano più feromoni, rafforzando così quella pista.
 * Nel tempo, il feromone evapora. Più lungo è un percorso, maggiore è il tempo impiegato dalle formiche per percorrerlo, quindi il feromone ha più tempo per evaporare. I percorsi brevi, d'altra parte, possono essere rinforzati più rapidamente, quindi la loro forza aumenta più velocemente.
 
-
 ::: column(width=240)
 
 {.todo} Diagramma in arrivo ...
@@ -845,10 +840,6 @@ Abbiamo visto molte diverse applicazioni della teoria dei grafi nei capitoli pre
 ::: column.grow
 
 Internet, ad esempio, è un vasto grafo virtuale. Ogni vertice è una singola pagina Web e ogni spigolo indica che esiste un collegamento ipertestuale tra due pagine. Nota che i collegamenti vanno solo in una direzione, quindi questo grafo è [[diretto|multiplo|connesso]] ed è _molto, molto grande_.
-
-    // * "can be viewed as" instead of "is a vast, virtual graph". "Every
-    // vertex represens an individual webpage and every edge a hyperlink
-    // from one page to another".
 
 Alcuni siti Web, come Wikipedia o Facebook, hanno molti collegamenti in entrata, mentre molti siti più piccoli possono avere pochissimi collegamenti in entrata. Questo è il concetto di base che Google utilizza per ordinare i risultati della ricerca.
 

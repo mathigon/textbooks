@@ -4,8 +4,9 @@
 
 > section: polygons
 > id: polygons
+> translated: auto
 
- Một [__đa giác__](gloss:polygon) là một hình dạng khép kín, phẳng, chỉ có các cạnh thẳng. Đa giác có thể có bất kỳ số cạnh và góc, nhưng các cạnh không thể cong. Hình nào dưới đây là đa giác? 
+Một [__đa giác__](gloss:polygon) là một hình dạng khép kín, phẳng, chỉ có các cạnh thẳng. Đa giác có thể có bất kỳ số cạnh và góc, nhưng các cạnh không thể cong. Hình nào dưới đây là đa giác? 
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -20,7 +21,7 @@
 ---
 > id: polygons-1
 
- Chúng tôi đặt tên khác nhau cho đa giác, tùy thuộc vào số lượng chúng có: 
+Chúng tôi đặt tên khác nhau cho đa giác, tùy thuộc vào số lượng chúng có: 
 
     .row.padded-thin
       div(style="width: 100px")
@@ -47,7 +48,7 @@
 
 ### Góc trong đa giác 
 
- Mỗi đa giác có _n_ cạnh cũng có _n_ [góc trong](gloss:internal-angle) . Chúng ta đã biết rằng tổng các góc bên trong một tam giác luôn là [[180]]° nhưng còn các đa giác khác thì sao? 
+Mỗi đa giác có _n_ cạnh cũng có _n_ [góc trong](gloss:internal-angle) . Chúng ta đã biết rằng tổng các góc bên trong một tam giác luôn là [[180]]° nhưng còn các đa giác khác thì sao? 
 
 ---
 > id: angles
@@ -92,7 +93,7 @@
 ---
 > id: angles-1
 
- Có vẻ như tổng các góc bên trong một hình tứ giác luôn là [[360]]° - chính xác [[gấp đôi | ba lần | một nửa]] tổng số góc trong một tam giác. _{span.reveal(when="blank-0 blank-1")} Điều này không phải là ngẫu nhiên: mọi tứ giác đều có thể được chia thành hai hình tam giác._ 
+Có vẻ như tổng các góc bên trong một hình tứ giác luôn là [[360]]° - chính xác [[gấp đôi | ba lần | một nửa]] tổng số góc trong một tam giác. _{span.reveal(when="blank-0 blank-1")} Điều này không phải là ngẫu nhiên: mọi tứ giác đều có thể được chia thành hai hình tam giác._ 
 
     .row.padded-thin
       .reveal(when="blank-1" style="width: 140px"): include svg/polygons/triangles-4.svg
@@ -105,7 +106,7 @@
 ---
 > id: internal-angle-sum
 
- Một đa giác với ${x}{x|7|3,15,1} các cạnh sẽ có tổng góc trong là 180° × ${x-2} = = ${(x-2)*180}°. Tổng quát hơn, một đa giác có _n_ cạnh có thể được chia thành [[n - 2 | n - 1 | n]] hình tam giác. Vì thế, 
+Một đa giác với ${x}{x|7|3,15,1} các cạnh sẽ có tổng góc trong là 180° × ${x-2} = = ${(x-2)*180}°. Tổng quát hơn, một đa giác có _n_ cạnh có thể được chia thành [[n - 2 | n - 1 | n]] hình tam giác. Vì thế, 
 
 {.text-center.reveal(when="blank-0")} Tổng các góc bên trong một đường chéo _n_ `= (n - 2) × 180°` . 
 
@@ -118,11 +119,11 @@
 
 ::: column.grow
 
- Chúng tôi nói rằng một đa giác là [__lõm__](gloss:concave) nếu nó có một phần mà điểm Điểm hướng vào trong. Bạn có thể tưởng tượng rằng phần này có phần được [trích dẫn trong tập sách](target:cave) . Đa giác _không_ lõm được gọi là [__lồi__](gloss:convex) . 
+Chúng tôi nói rằng một đa giác là [__lõm__](gloss:concave) nếu nó có một phần mà điểm Điểm hướng vào trong. Bạn có thể tưởng tượng rằng phần này có phần được [trích dẫn trong tập sách](target:cave) . Đa giác _không_ lõm được gọi là [__lồi__](gloss:convex) . 
 
- Có hai cách bạn có thể dễ dàng xác định các đa giác lõm: chúng có ít nhất một [góc bên trong lớn hơn 180°](target:angle) . Họ cũng có ít nhất một [đường chéo nằm _ngoài_ đa giác](target:diagonal) . 
+Có hai cách bạn có thể dễ dàng xác định các đa giác lõm: chúng có ít nhất một [góc bên trong lớn hơn 180°](target:angle) . Họ cũng có ít nhất một [đường chéo nằm _ngoài_ đa giác](target:diagonal) . 
 
- Mặt khác, trong đa giác lồi, tất cả các góc bên trong đều nhỏ hơn [[180]]° và tất cả các đường chéo nằm [[bên trong | ngoài]] đa giác. 
+Mặt khác, trong đa giác lồi, tất cả các góc bên trong đều nhỏ hơn [[180]]° và tất cả các đường chéo nằm [[bên trong | ngoài]] đa giác. 
 
 ::: column(width=240)
 
@@ -146,7 +147,7 @@
 ---
 > id: concave-1
 
- Những đa giác nào là lõm? 
+Những đa giác nào là lõm? 
 
     x-picker
       .item(data-error="not-concave-1"): include svg/polygons/concave-1.svg
@@ -161,7 +162,7 @@
 
 ### Đa giác thông thường 
 
- Chúng tôi nói rằng một đa giác là [__thường xuyên__](gloss:regular-polygon) nếu tất cả các cạnh của nó có cùng chiều dài và tất cả các góc có cùng kích thước. Những hình dạng nào là đa giác thông thường? 
+Chúng tôi nói rằng một đa giác là [__thường xuyên__](gloss:regular-polygon) nếu tất cả các cạnh của nó có cùng chiều dài và tất cả các góc có cùng kích thước. Những hình dạng nào là đa giác thông thường? 
 
     x-picker
       .item: include svg/polygons/regular-1.svg
@@ -174,12 +175,12 @@
 ---
 > id: regular-1
 
- Đa giác thông thường có thể có nhiều kích cỡ khác nhau - nhưng tất cả các đa giác thông thường có cùng số cạnh [[đều giống nhau | đồng dạng | Có cùng diện tích]] ! 
+Đa giác thông thường có thể có nhiều kích cỡ khác nhau - nhưng tất cả các đa giác thông thường có cùng số cạnh [[đều giống nhau | đồng dạng | Có cùng diện tích]] ! 
 
 ---
 > id: regular-2
 
- Chúng ta đã biết tổng của tất cả [các góc bên](gloss:internal-angle) trong đa giác. Đối với đa giác thông thường, tất cả các góc này có [[cùng kích thước | là các góc thay thế]] , vì vậy chúng ta có thể tính ra kích thước của một góc bên trong duy nhất: 
+Chúng ta đã biết tổng của tất cả [các góc bên](gloss:internal-angle) trong đa giác. Đối với đa giác thông thường, tất cả các góc này có [[cùng kích thước | là các góc thay thế]] , vì vậy chúng ta có thể tính ra kích thước của một góc bên trong duy nhất: 
 
 {.text-center.reveal(when="blank-0")} góc = <mfrac><mrow>[[tổng của tất cả các góc | số góc]]</mrow><mrow>[[số góc | tổng của tất cả các góc]]</mrow></mfrac> _{span.reveal(when="blank-1 blank-2")} = = `(180° × (x-2))/x = 180° - (360°)/x` ._ 
 
@@ -217,9 +218,9 @@
 
 ::: column.grow
 
- Ở đây bạn có thể thấy một [đa giác thông thường](gloss:regular-polygon) với ${n}{n|5|4,12,1} hai bên. Mỗi bên có chiều dài [{.pill.green} 1m](target:base) . Hãy thử tính diện tích của nó! 
+Ở đây bạn có thể thấy một [đa giác thông thường](gloss:regular-polygon) với ${n}{n|5|4,12,1} hai bên. Mỗi bên có chiều dài [{.pill.green} 1m](target:base) . Hãy thử tính diện tích của nó! 
 
- Đầu tiên, chúng ta có thể chia đa giác thành ${toWord(n)} đồng dư, [[cân | bình đẳng |]] tam giác [[vuông góc phải]] . 
+Đầu tiên, chúng ta có thể chia đa giác thành ${toWord(n)} đồng dư, [[cân | bình đẳng |]] tam giác [[vuông góc phải]] . 
 
 {.reveal(when="blank-0")} Chúng tôi đã biết [[cơ sở | Chiều cao | diện tích]] của các hình tam giác này, nhưng chúng ta cũng cần [[chiều cao | chân | trung bình]] để có thể tính diện tích của nó. _{span.reveal(when="blank-2")} Trong đa giác thông thường, chiều cao này đôi khi được gọi là [{.pill.yellow} apothem](target:apothem) ._ 
 
@@ -260,10 +261,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: quadrilaterals
 > id: quadrilaterals
+> translated: auto
 
- Trong [khóa học trước,](/course/triangles) chúng tôi đã nghiên cứu nhiều tính chất khác nhau của hình tam giác. Bây giờ chúng ta hãy nhìn vào tứ giác. 
+Trong [khóa học trước,](/course/triangles) chúng tôi đã nghiên cứu nhiều tính chất khác nhau của hình tam giác. Bây giờ chúng ta hãy nhìn vào tứ giác. 
 
- Một _hình tứ giác_ đều được gọi là [[hình vuông | hình chữ nhật | tứ giác đều]] . Tất cả các cạnh của nó có cùng chiều dài, và tất cả các góc của nó đều bằng nhau. 
+Một _hình tứ giác_ đều được gọi là [[hình vuông | hình chữ nhật | tứ giác đều]] . Tất cả các cạnh của nó có cùng chiều dài, và tất cả các góc của nó đều bằng nhau. 
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -289,7 +291,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-1
 
- Đối với các tứ giác ít thường xuyên hơn một chút, chúng ta có hai lựa chọn. Nếu chúng ta chỉ muốn các _góc_ bằng nhau, chúng ta sẽ có một [__hình chữ nhật__](gloss:rectangle) . Nếu chúng ta chỉ muốn các _cạnh_ bằng nhau, chúng ta sẽ có một [__hình thoi__](gloss:rhombus) . 
+Đối với các tứ giác ít thường xuyên hơn một chút, chúng ta có hai lựa chọn. Nếu chúng ta chỉ muốn các _góc_ bằng nhau, chúng ta sẽ có một [__hình chữ nhật__](gloss:rectangle) . Nếu chúng ta chỉ muốn các _cạnh_ bằng nhau, chúng ta sẽ có một [__hình thoi__](gloss:rhombus) . 
 
 ::: column.quadrilateral
 
@@ -330,7 +332,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-2
 
- Có một vài hình tứ giác khác, thậm chí ít thường xuyên hơn nhưng vẫn có một số tính chất quan trọng nhất định: 
+Có một vài hình tứ giác khác, thậm chí ít thường xuyên hơn nhưng vẫn có một số tính chất quan trọng nhất định: 
 
 ::: column.quadrilateral
 
@@ -382,11 +384,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: quadrilaterals-venn
 
- Tứ giác có thể rơi vào nhiều loại. Chúng ta có thể hình dung thứ bậc của các loại hình tứ giác khác nhau dưới dạng [sơ đồ Venn](gloss:venn-diagram) : 
+Tứ giác có thể rơi vào nhiều loại. Chúng ta có thể hình dung thứ bậc của các loại hình tứ giác khác nhau dưới dạng [sơ đồ Venn](gloss:venn-diagram) : 
 
     figure: include svg/venn.svg
 
- Ví dụ, mỗi hình chữ nhật cũng là một hình [[bình hành | hình thoi | hình vuông]] và mỗi [[hình thoi | hình thang | hình bình hành]] cũng là một con diều. Một hình thoi [[đôi khi | luôn luôn | không bao giờ]] là hình vuông và hình chữ nhật [[luôn | đôi khi | không bao giờ]] là một hình thang. 
+Ví dụ, mỗi hình chữ nhật cũng là một hình [[bình hành | hình thoi | hình vuông]] và mỗi [[hình thoi | hình thang | hình bình hành]] cũng là một con diều. Một hình thoi [[đôi khi | luôn luôn | không bao giờ]] là hình vuông và hình chữ nhật [[luôn | đôi khi | không bao giờ]] là một hình thang. 
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} Để tránh bất kỳ sự mơ hồ, chúng tôi thường chỉ sử dụng loại cụ thể nhất. 
 
@@ -399,7 +401,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Bây giờ chọn bốn điểm, bất cứ nơi nào trong hộp màu xám bên trái. _{span.reveal(when="points")} Chúng ta có thể kết nối tất cả chúng để tạo thành một hình tứ giác._ 
+Bây giờ chọn bốn điểm, bất cứ nơi nào trong hộp màu xám bên trái. _{span.reveal(when="points")} Chúng ta có thể kết nối tất cả chúng để tạo thành một hình tứ giác._ 
 
 {.reveal(when="points" delay=1000)} Chúng ta hãy tìm trung điểm của bốn phía. Nếu chúng ta kết nối các điểm giữa, chúng ta sẽ có [[một hình tứ giác khác | Tam giác | một hình chữ nhật]] . 
 
@@ -420,7 +422,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Hình bình hành 
 
- Nó chỉ ra rằng hình bình hành có nhiều tính chất thú vị khác, ngoài các mặt đối diện là song song. Khẳng định nào sau đây là đúng? 
+Nó chỉ ra rằng hình bình hành có nhiều tính chất thú vị khác, ngoài các mặt đối diện là song song. Khẳng định nào sau đây là đúng? 
 
 ::: column.grow
 
@@ -458,7 +460,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: parallelograms-proof
 
- Tất nhiên, chỉ đơn giản là quan sát những người thuộc tính này là không đủ. Để chắc chắn rằng chúng _luôn luôn_ đúng, chúng ta cần _chứng minh_ chúng: 
+Tất nhiên, chỉ đơn giản là quan sát những người thuộc tính này là không đủ. Để chắc chắn rằng chúng _luôn luôn_ đúng, chúng ta cần _chứng minh_ chúng: 
 
 ::: tab
 
@@ -494,7 +496,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Chúng ta hãy cố gắng chứng minh rằng các cạnh và góc đối diện trong hình bình hành luôn đồng dạng. 
 
- Bắt đầu bằng cách vẽ một trong các đường chéo của hình bình hành. 
+Bắt đầu bằng cách vẽ một trong các đường chéo của hình bình hành. 
 
 {.reveal(when="diagonal")} Đường chéo tạo ra bốn góc mới với các cạnh của hình bình hành. Hai [góc màu đỏ](target:red-angle) và hai [góc màu xanh](target:blue-angle) là [các góc xen kẽ nhau](gloss:alternate-angles) , vì vậy chúng phải [[đồng nhất với nhau | liền kề | bổ sung]] . 
 
@@ -505,8 +507,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 :::
 
 {.reveal(when="blank-1")} Nó chỉ ra rằng điều ngược lại cũng đúng: nếu cả hai cặp cạnh đối diện (hoặc góc) trong một hình tứ giác đều đồng dạng, thì tứ giác phải là hình bình hành. 
-
-    //- Adjacent angles are supplementary.
 
 ::: tab
 
@@ -544,9 +544,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.task} Bây giờ chứng minh rằng hai đường chéo trong hình bình hành chia đôi nhau. 
 
- Hãy nghĩ về hai hình tam giác màu vàng được tạo bởi các đường chéo: 
+Hãy nghĩ về hai hình tam giác màu vàng được tạo bởi các đường chéo: 
 
- * Chúng tôi vừa chứng minh rằng [hai mặt màu xanh lá cây](target:side1) đồng dạng với nhau, bởi vì chúng là hai mặt đối diện của hình bình hành. * [Hai góc màu đỏ](target:anglesR) và [hai góc màu xanh](target:anglesB) đồng dạng, vì chúng là [[các góc xen kẽ | góc đối diện | góc vuông]] . 
+* Chúng tôi vừa chứng minh rằng [hai mặt màu xanh lá cây](target:side1) đồng dạng với nhau, bởi vì chúng là hai mặt đối diện của hình bình hành. * [Hai góc màu đỏ](target:anglesR) và [hai góc màu xanh](target:anglesB) đồng dạng, vì chúng là [[các góc xen kẽ | góc đối diện | góc vuông]] . 
 
 {.reveal(when="blank-2")} Bằng [[ASA | SSS |]] Điều kiện [[AAS]] , do đó cả hai hình tam giác màu vàng cũng phải đồng dạng. 
 
@@ -565,9 +565,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Chúng tôi đã chỉ ra ở trên rằng hai cặp [[đối diện | các]] cạnh bên của hình bình hành là đồng dạng. Trong một con diều, hai cặp _cạnh liền_ nhau. 
+Chúng tôi đã chỉ ra ở trên rằng hai cặp [[đối diện | các]] cạnh bên của hình bình hành là đồng dạng. Trong một con diều, hai cặp _cạnh liền_ nhau. 
 
- Cái tên _Diều_ rõ ràng xuất phát từ hình dạng của nó: nó trông giống như những con diều bạn có thể bay trên bầu trời. Tuy nhiên, trong tất cả các tứ giác đặc biệt mà chúng ta đã thấy cho đến nay, Diều là người duy nhất cũng có thể [lõm](gloss:concave) : nếu nó có hình dạng như phi tiêu hoặc mũi tên: 
+Cái tên _Diều_ rõ ràng xuất phát từ hình dạng của nó: nó trông giống như những con diều bạn có thể bay trên bầu trời. Tuy nhiên, trong tất cả các tứ giác đặc biệt mà chúng ta đã thấy cho đến nay, Diều là người duy nhất cũng có thể [lõm](gloss:concave) : nếu nó có hình dạng như phi tiêu hoặc mũi tên: 
 
 ::: column(width=320)
 
@@ -643,7 +643,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Bạn có thể nhận thấy rằng tất cả các diều là [[đối xứng | tương tự]] _{span.reveal(when="blank-0")} [Trục đối xứng](gloss:axis-of-symmetry) là [[một trong những đường chéo | một trong những phía | một lời giải thích]]_ 
+Bạn có thể nhận thấy rằng tất cả các diều là [[đối xứng | tương tự]] _{span.reveal(when="blank-0")} [Trục đối xứng](gloss:axis-of-symmetry) là [[một trong những đường chéo | một trong những phía | một lời giải thích]]_ 
 
 {.reveal.r(when="blank-1")} Đường chéo chia diều thành [hai hình tam giác đồng dạng](target:triangle1) . Chúng ta biết rằng chúng đồng dạng từ điều kiện [SSS](gloss:triangle-sss) : cả hai hình tam giác đều có [ba cạnh đồng dạng](target:sss) (đỏ, lục và lam). _{button.next-step} Tiếp tục_ 
 
@@ -665,7 +665,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Diện tích tứ giác 
 
- Khi tính diện tích hình tam giác trong khóa trước, chúng tôi đã sử dụng mẹo chuyển đổi nó thành [[hình chữ nhật | Quảng trường | ngũ giác]] . Hóa ra chúng ta cũng có thể làm điều đó cho một số hình tứ giác: 
+Khi tính diện tích hình tam giác trong khóa trước, chúng tôi đã sử dụng mẹo chuyển đổi nó thành [[hình chữ nhật | Quảng trường | ngũ giác]] . Hóa ra chúng ta cũng có thể làm điều đó cho một số hình tứ giác: 
 
 ::: tab
 
@@ -685,7 +685,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Ở bên trái, cố gắng vẽ một hình chữ nhật có cùng diện tích với hình bình hành. 
+Ở bên trái, cố gắng vẽ một hình chữ nhật có cùng diện tích với hình bình hành. 
 
 {.reveal(when="draw-1")} Bạn có thể thấy rằng [hình tam giác bị thiếu](target:triangle-1) ở bên trái [[giống hệt như | nhỏ hơn | lớn hơn]] [tam giác chồng chéo](target:triangle-2) bên phải? _{span.reveal(when="blank-1")} Do đó diện tích của hình bình hành là_ 
 
@@ -699,7 +699,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 #### Hình thang _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_ 
 
- Nhớ lại rằng hình thang là tứ giác có một cặp [cạnh song song](target:bases) . Các mặt song song này được gọi là các __cơ sở__ của hình thang. 
+Nhớ lại rằng hình thang là tứ giác có một cặp [cạnh song song](target:bases) . Các mặt song song này được gọi là các __cơ sở__ của hình thang. 
 
 ::: column(width=300)
 
@@ -721,7 +721,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Giống như trước đây, hãy thử vẽ một hình chữ nhật có cùng diện tích với hình thang này. _{span.reveal(when="draw-2")} Bạn có thể thấy làm thế nào các [hình tam giác bị thiếu và thêm](target:triangles-3) vào bên trái và bên phải hủy bỏ?_ 
+Giống như trước đây, hãy thử vẽ một hình chữ nhật có cùng diện tích với hình thang này. _{span.reveal(when="draw-2")} Bạn có thể thấy làm thế nào các [hình tam giác bị thiếu và thêm](target:triangles-3) vào bên trái và bên phải hủy bỏ?_ 
 
 {.reveal(when="draw-2" delay=2000)} Các [{.pill.green} chiều cao](target:t-height) của hình chữ nhật này là [[khoảng cách giữa | Trung bình của | chiều dài]] các [cạnh song song](target:bases) của hình thang. 
 
@@ -765,9 +765,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Trong con diều này, [hai đường chéo](target:diag3) tạo thành chiều rộng và chiều cao của một [hình chữ nhật](target:rect4) lớn bao quanh con diều. 
+Trong con diều này, [hai đường chéo](target:diag3) tạo thành chiều rộng và chiều cao của một [hình chữ nhật](target:rect4) lớn bao quanh con diều. 
 
- Diện tích của hình chữ nhật này là [[hai lần | giống như | ba lần]] diện tích của diều. _{span.reveal(when="blank-5")} Bạn có thể thấy làm thế nào mỗi [bốn hình tam giác](target:inside) tạo nên con diều giống như [bốn khoảng trống](target:outside) bên ngoài nó không?_ 
+Diện tích của hình chữ nhật này là [[hai lần | giống như | ba lần]] diện tích của diều. _{span.reveal(when="blank-5")} Bạn có thể thấy làm thế nào mỗi [bốn hình tam giác](target:inside) tạo nên con diều giống như [bốn khoảng trống](target:outside) bên ngoài nó không?_ 
 
 {.reveal(when="blank-5")} Điều này có nghĩa là khu vực của một con diều có đường chéo [{.i.pill.green} d1](target:d31) và [{.i.pill.yellow} d2](target:d32) là 
 
@@ -801,7 +801,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- [Hình thoi](gloss:rhombus) là một hình tứ giác có bốn cạnh đồng dạng. Bạn có thể nhớ rằng mỗi hình thoi là một hình [[bình hành | hình chữ nhật | hình vuông]] - và cũng là một [[con diều | Hình lục giác | đa giác lõm]] . 
+[Hình thoi](gloss:rhombus) là một hình tứ giác có bốn cạnh đồng dạng. Bạn có thể nhớ rằng mỗi hình thoi là một hình [[bình hành | hình chữ nhật | hình vuông]] - và cũng là một [[con diều | Hình lục giác | đa giác lõm]] . 
 
 {.reveal(when="blank-6 blank-7")} Điều này có nghĩa là để tìm diện tích hình thoi, chúng ta có thể sử dụng phương trình cho diện tích hình bình hành hoặc diện tích hình diều: 
 
@@ -813,25 +813,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    //- ### Cyclic quadrilaterals
     
-    //- ### Isosceles Trapeziums
-    //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
 
 ---
 
@@ -839,8 +821,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: tessellations
 > id: tessellations
+> translated: auto
 
- [Đa giác](gloss:polygon) xuất hiện ở mọi nơi trong tự nhiên. Chúng đặc biệt hữu ích nếu bạn muốn xếp một khu vực rộng lớn, bởi vì bạn có thể ghép các đa giác lại với nhau mà không có bất kỳ khoảng trống hoặc chồng chéo nào. Các mô hình như thế được gọi là [__tessellations__](gloss:tessellation) . 
+[Đa giác](gloss:polygon) xuất hiện ở mọi nơi trong tự nhiên. Chúng đặc biệt hữu ích nếu bạn muốn xếp một khu vực rộng lớn, bởi vì bạn có thể ghép các đa giác lại với nhau mà không có bất kỳ khoảng trống hoặc chồng chéo nào. Các mô hình như thế được gọi là [__tessellations__](gloss:tessellation) . 
 
 ::: column(width=200)
 
@@ -883,7 +866,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellations-1
 
- Con người đã sao chép nhiều mô hình tự nhiên này trong nghệ thuật, kiến trúc và công nghệ - từ thời La Mã cổ đại cho đến hiện tại. Đây là vài ví dụ: 
+Con người đã sao chép nhiều mô hình tự nhiên này trong nghệ thuật, kiến trúc và công nghệ - từ thời La Mã cổ đại cho đến hiện tại. Đây là vài ví dụ: 
 
 ::: column(width=200)
 
@@ -923,16 +906,11 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
 
- Tại đây bạn có thể tạo các tessellations của riêng mình bằng cách sử dụng đa giác thông thường. Chỉ cần kéo hình dạng mới từ thanh bên vào khung vẽ. Những hình dạng tessellate tốt? Có hình dạng nào không tessellate không? Cố gắng tạo ra các mô hình thú vị! 
+Tại đây bạn có thể tạo các tessellations của riêng mình bằng cách sử dụng đa giác thông thường. Chỉ cần kéo hình dạng mới từ thanh bên vào khung vẽ. Những hình dạng tessellate tốt? Có hình dạng nào không tessellate không? Cố gắng tạo ra các mô hình thú vị! 
 
     figure: .tessellation
       x-polypad
@@ -956,12 +934,12 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Tessellations từ đa giác thông thường 
 
- Bạn có thể nhận thấy rằng một số [đa giác thông thường](gloss:regular-polygon) (như [[hình vuông | ngũ giác]] ) tessellate rất dễ dàng, trong khi những người khác (như [[ngũ giác | Hình tam giác | hình lục giác]] ) dường như không tessellate. 
+Bạn có thể nhận thấy rằng một số [đa giác thông thường](gloss:regular-polygon) (như [[hình vuông | ngũ giác]] ) tessellate rất dễ dàng, trong khi những người khác (như [[ngũ giác | Hình tam giác | hình lục giác]] ) dường như không tessellate. 
 
 ---
 > id: tessellation-regular-1
 
- Điều này có liên quan đến kích thước của các [góc bên trong](gloss:internal-angle) của chúng, mà chúng ta đã học cách tính toán trước đó. Tại mọi [đỉnh](gloss:polygon-vertex) trong phần tử, các góc bên trong của nhiều đa giác khác nhau gặp nhau. Chúng ta cần tất cả các góc này để thêm tới [[360]]°, nếu không sẽ có một khoảng cách hoặc chồng chéo. 
+Điều này có liên quan đến kích thước của các [góc bên trong](gloss:internal-angle) của chúng, mà chúng ta đã học cách tính toán trước đó. Tại mọi [đỉnh](gloss:polygon-vertex) trong phần tử, các góc bên trong của nhiều đa giác khác nhau gặp nhau. Chúng ta cần tất cả các góc này để thêm tới [[360]]°, nếu không sẽ có một khoảng cách hoặc chồng chéo. 
 
 ---
 > id: tessellation-regular-2
@@ -984,8 +962,6 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 {.caption} Ngũ giác [[không tessellate | tessellate]] _{span.reveal(when="blank-2")} bởi vì bội số của 108° không thêm tới 360°._ 
 
-    //- {.caption}3 × 108° = 324° is too small, but 4 × 108° = 432° is too big.
-
 ::: column(width=160)
 
     include svg/tessellations/hexagons.svg
@@ -997,9 +973,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-regular-3
 
- Bạn có thể kiểm tra tương tự rằng, giống như các hình ngũ giác, bất kỳ đa giác thông thường nào có 7 cạnh trở lên không bị xé. Điều này có nghĩa là các đa giác thông thường duy nhất mà tessellate là hình tam giác, hình vuông và hình lục giác! 
+Bạn có thể kiểm tra tương tự rằng, giống như các hình ngũ giác, bất kỳ đa giác thông thường nào có 7 cạnh trở lên không bị xé. Điều này có nghĩa là các đa giác thông thường duy nhất mà tessellate là hình tam giác, hình vuông và hình lục giác! 
 
- Tất nhiên, bạn có thể kết hợp các loại đa giác thông thường khác nhau trong một phần tử, với điều kiện là các góc bên trong của chúng có thể tăng tới 360°: 
+Tất nhiên, bạn có thể kết hợp các loại đa giác thông thường khác nhau trong một phần tử, với điều kiện là các góc bên trong của chúng có thể tăng tới 360°: 
 
     x-gallery(slide-width="520")
       div
@@ -1032,7 +1008,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Tessellations từ đa giác bất thường 
 
- Chúng ta cũng có thể thử tạo ra các phần tử từ [các đa giác không đều](gloss:irregular-polygon) - miễn là chúng ta cẩn thận khi xoay và sắp xếp chúng. 
+Chúng ta cũng có thể thử tạo ra các phần tử từ [các đa giác không đều](gloss:irregular-polygon) - miễn là chúng ta cẩn thận khi xoay và sắp xếp chúng. 
 
 ::: column(width=360)
 
@@ -1052,9 +1028,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow
 
- Nó chỉ ra rằng bạn có thể tessellate không chỉ là tam giác đều, mà _bất kỳ tam giác_ ! Hãy thử di chuyển các [đỉnh](target:vertex) trong sơ đồ này. 
+Nó chỉ ra rằng bạn có thể tessellate không chỉ là tam giác đều, mà _bất kỳ tam giác_ ! Hãy thử di chuyển các [đỉnh](target:vertex) trong sơ đồ này. 
 
- Tổng các góc trong một tam giác là [[180]]°. Nếu chúng ta sử dụng mỗi góc [[hai lần | Một lần | ba lần]] ở mỗi đỉnh trong phần thứ ba, chúng ta nhận được 360°: 
+Tổng các góc trong một tam giác là [[180]]°. Nếu chúng ta sử dụng mỗi góc [[hai lần | Một lần | ba lần]] ở mỗi đỉnh trong phần thứ ba, chúng ta nhận được 360°: 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" cx=100 cy=80)
@@ -1117,7 +1093,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ::: column.grow    
 
- Đáng ngạc nhiên hơn, _bất kỳ tứ giác_ cũng tessellates! Tổng góc bên trong của chúng là [[360]]°, vì vậy nếu chúng ta sử dụng mỗi góc [[một lần | hai lần | ba lần]] ở mỗi đỉnh trong phần thứ ba, chúng ta có 360°. 
+Đáng ngạc nhiên hơn, _bất kỳ tứ giác_ cũng tessellates! Tổng góc bên trong của chúng là [[360]]°, vì vậy nếu chúng ta sử dụng mỗi góc [[một lần | hai lần | ba lần]] ở mỗi đỉnh trong phần thứ ba, chúng ta có 360°. 
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
       circle(name="m" x="point(100,80)")
@@ -1159,7 +1135,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: tessellation-pentagons
 
- Ngũ giác là một chút phức tạp hơn. Chúng ta đã thấy rằng _các_ hình ngũ giác đều _đặn_ [[không tessellate | tessellate]] , nhưng những người không thường xuyên? 
+Ngũ giác là một chút phức tạp hơn. Chúng ta đã thấy rằng _các_ hình ngũ giác đều _đặn_ [[không tessellate | tessellate]] , nhưng những người không thường xuyên? 
 
 ---
 > id: tessellation-pentagons-1
@@ -1178,16 +1154,16 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Dưới đây là ba ví dụ khác nhau về các tessellations với ngũ giác. Chúng không _thường xuyên_ , nhưng chúng là đa giác 5 mặt hoàn toàn hợp lệ. 
+Dưới đây là ba ví dụ khác nhau về các tessellations với ngũ giác. Chúng không _thường xuyên_ , nhưng chúng là đa giác 5 mặt hoàn toàn hợp lệ. 
 
- Cho đến nay, các nhà toán học chỉ tìm thấy 15 loại khác nhau với các hình ngũ giác (lồi) - loại gần đây nhất được phát hiện vào năm 2015. Không ai biết liệu có loại nào khác không, hoặc nếu 15 loại này là những loại duy nhất 
+Cho đến nay, các nhà toán học chỉ tìm thấy 15 loại khác nhau với các hình ngũ giác (lồi) - loại gần đây nhất được phát hiện vào năm 2015. Không ai biết liệu có loại nào khác không, hoặc nếu 15 loại này là những loại duy nhất 
 
 ---
 > id: escher
 
 ### Tessellations trong nghệ thuật 
 
- Tessellations chúng tôi vừa là công cụ vừa là nguồn cảm hứng cho nhiều nghệ sĩ, kiến trúc sư và nhà thiết kế - nổi tiếng nhất là nghệ sĩ người Hà Lan [MC Escher](bio:escher) . Tác phẩm của Escher chứa những sinh vật, mô hình và phong cảnh kỳ lạ, đột biến: 
+Tessellations chúng tôi vừa là công cụ vừa là nguồn cảm hứng cho nhiều nghệ sĩ, kiến trúc sư và nhà thiết kế - nổi tiếng nhất là nghệ sĩ người Hà Lan [MC Escher](bio:escher) . Tác phẩm của Escher chứa những sinh vật, mô hình và phong cảnh kỳ lạ, đột biến: 
 
     .row
       div(style="width: 220px")
@@ -1209,7 +1185,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
- Những tác phẩm nghệ thuật này thường trông vui nhộn và dễ dàng, nhưng các nguyên tắc toán học cơ bản vẫn giống như trước: góc, góc quay, bản dịch và đa giác. Nếu toán học không đúng, thì tessname sẽ không hoạt động! 
+Những tác phẩm nghệ thuật này thường trông vui nhộn và dễ dàng, nhưng các nguyên tắc toán học cơ bản vẫn giống như trước: góc, góc quay, bản dịch và đa giác. Nếu toán học không đúng, thì tessname sẽ không hoạt động! 
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
     p.caption “Metamorphosis II” by M. C. Escher (1940)
@@ -1219,9 +1195,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ### Penrose 
 
- Tất cả các điều mà chúng ta thấy cho đến nay đều có một điểm chung: chúng là __định kỳ__ . Điều đó có nghĩa là chúng bao gồm một mô hình thông thường được lặp đi lặp lại nhiều lần. Chúng có thể tiếp tục mãi mãi theo mọi hướng và chúng sẽ trông giống nhau ở mọi nơi. 
+Tất cả các điều mà chúng ta thấy cho đến nay đều có một điểm chung: chúng là __định kỳ__ . Điều đó có nghĩa là chúng bao gồm một mô hình thông thường được lặp đi lặp lại nhiều lần. Chúng có thể tiếp tục mãi mãi theo mọi hướng và chúng sẽ trông giống nhau ở mọi nơi. 
 
- Vào những năm 1970, nhà toán học và vật lý học người Anh [Roger Penrose đã](bio:penrose) phát hiện ra _những câu chuyện không định kỳ_ - chúng vẫn tiếp tục vô tận theo mọi hướng, nhưng _không bao giờ_ giống hệt nhau. Chúng được gọi là __nghiêng Penrose__ và bạn chỉ cần một vài loại đa giác khác nhau để tạo một: 
+Vào những năm 1970, nhà toán học và vật lý học người Anh [Roger Penrose đã](bio:penrose) phát hiện ra _những câu chuyện không định kỳ_ - chúng vẫn tiếp tục vô tận theo mọi hướng, nhưng _không bao giờ_ giống hệt nhau. Chúng được gọi là __nghiêng Penrose__ và bạn chỉ cần một vài loại đa giác khác nhau để tạo một: 
 
     figure
       include svg/penrose.svg
@@ -1231,7 +1207,7 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 ---
 > id: penrose-1
 
- Penrose đã khám phá các tessellations hoàn toàn cho vui, nhưng hóa ra cấu trúc bên trong của một số vật liệu thực (như nhôm) theo một mô hình tương tự. Mẫu này thậm chí còn được sử dụng trên giấy vệ sinh, bởi vì các nhà sản xuất nhận thấy rằng một mẫu không định kỳ có thể được cuộn lên mà không có bất kỳ chỗ phồng nào. 
+Penrose đã khám phá các tessellations hoàn toàn cho vui, nhưng hóa ra cấu trúc bên trong của một số vật liệu thực (như nhôm) theo một mô hình tương tự. Mẫu này thậm chí còn được sử dụng trên giấy vệ sinh, bởi vì các nhà sản xuất nhận thấy rằng một mẫu không định kỳ có thể được cuộn lên mà không có bất kỳ chỗ phồng nào. 
 
 ---
 
@@ -1239,8 +1215,9 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 > section: polyhedra
 > id: polyhedra
+> translated: auto
 
- Cho đến nay chúng ta chỉ nhìn vào những gì chúng ta có thể làm với đa giác trong một thế giới hai chiều phẳng. [__Đa diện__](gloss:polyhedron) là một vật thể ba chiều được tạo thành từ các đa giác. Dưới đây là một số ví dụ: 
+Cho đến nay chúng ta chỉ nhìn vào những gì chúng ta có thể làm với đa giác trong một thế giới hai chiều phẳng. [__Đa diện__](gloss:polyhedron) là một vật thể ba chiều được tạo thành từ các đa giác. Dưới đây là một số ví dụ: 
 
 ::: column.padded-thin(width=220)
 
@@ -1256,32 +1233,32 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 :::
 
- Khối đa diện không thể chứa các bề mặt cong - hình cầu và hình trụ, ví dụ, không phải là khối đa diện. 
+Khối đa diện không thể chứa các bề mặt cong - hình cầu và hình trụ, ví dụ, không phải là khối đa diện. 
 
- Các đa giác tạo nên một khối đa diện được gọi là các [__mặt__](gloss:polyhedron-face) của nó. Các đường mà hai mặt được kết nối được gọi là [__các cạnh__](gloss:polyhedron-edge) và các góc nơi các cạnh gặp nhau được gọi là [__các đỉnh__](gloss:polyhedron-vertex) . 
+Các đa giác tạo nên một khối đa diện được gọi là các [__mặt__](gloss:polyhedron-face) của nó. Các đường mà hai mặt được kết nối được gọi là [__các cạnh__](gloss:polyhedron-edge) và các góc nơi các cạnh gặp nhau được gọi là [__các đỉnh__](gloss:polyhedron-vertex) . 
 
 ---
 > id: euler
 
- Các khối đa diện có nhiều hình dạng và kích cỡ khác nhau - từ các hình khối hoặc hình chóp đơn giản chỉ với một vài khuôn mặt, đến các vật thể phức tạp như ngôi sao ở trên, có 60 mặt hình tam giác. Tuy nhiên, hóa ra _tất cả các khối_ đa diện đều có một thuộc tính quan trọng chung: 
+Các khối đa diện có nhiều hình dạng và kích cỡ khác nhau - từ các hình khối hoặc hình chóp đơn giản chỉ với một vài khuôn mặt, đến các vật thể phức tạp như ngôi sao ở trên, có 60 mặt hình tam giác. Tuy nhiên, hóa ra _tất cả các khối_ đa diện đều có một thuộc tính quan trọng chung: 
 
 ::: .theorem
 
- __Công thức đa diện của Euber__  
+__Công thức đa diện của Euber__  
 Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V_ ) nhiều hơn hai cạnh so với số cạnh ( _E_ ). Nói cách khác, 
 
 {.text-center}`F + V = E + 2`
 
 :::
 
- Ví dụ: nếu một khối đa diện có 12 mặt và 18 đỉnh, chúng ta biết rằng nó phải có [[28]] cạnh. 
+Ví dụ: nếu một khối đa diện có 12 mặt và 18 đỉnh, chúng ta biết rằng nó phải có [[28]] cạnh. 
 
 ---
 > id: euler-1
 
- Phương trình này được phát hiện bởi nhà toán học nổi tiếng người Thụy Sĩ [Leonard Euler](bio:euler) . Điều này đúng với bất kỳ khối đa diện nào, miễn là nó không chứa bất kỳ lỗ hổng nào. 
+Phương trình này được phát hiện bởi nhà toán học nổi tiếng người Thụy Sĩ [Leonard Euler](bio:euler) . Điều này đúng với bất kỳ khối đa diện nào, miễn là nó không chứa bất kỳ lỗ hổng nào. 
 
- Nếu bạn thử các khối đa diện khác nhau, như các khối đa diện ở trên, bạn sẽ thấy rằng công thức của Euler luôn hoạt động. Trong [một khóa học sau,](/course/graph-theory/planar-graphs) bạn sẽ học cách chứng minh nó một cách toán học. 
+Nếu bạn thử các khối đa diện khác nhau, như các khối đa diện ở trên, bạn sẽ thấy rằng công thức của Euler luôn hoạt động. Trong [một khóa học sau,](/course/graph-theory/planar-graphs) bạn sẽ học cách chứng minh nó một cách toán học. 
 
 ---
 
@@ -1290,21 +1267,7 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 > section: nets-cross-sections
 > sectionStatus: dev
 
- Toàn bộ thế giới của chúng ta là ba chiều - nhưng thường dễ dàng hơn nhiều để vẽ hoặc hình dung các vật thể phẳng, hai chiều. Và có một vài cách khác nhau để xem đa diện ba chiều theo cách hai chiều. 
-
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
-
- Mạng nào trong số này tạo ra một khối Ghép lưới với đối tượng https://github.com/polymake/matchthenet Vẽ lưới 
-
- Mô tả mặt cắt được hình thành bởi giao điểm của mặt phẳng và vật rắn. 
-
- Mặt cắt là giao điểm của mặt phẳng với vật rắn. Một cách khác để biểu diễn hình ba chiều trong mặt phẳng hai chiều là sử dụng mạng. Một mạng lưới là một đại diện phẳng, mở ra của các mặt của hình dạng ba chiều. 
-
- xoay một khối lập phương để tạo ra một mặt cắt hình lục giác 
+TODO
 
 ---
 
@@ -1313,7 +1276,7 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 > section: prisms-pyramids
 > sectionStatus: dev
 
- LÀM 
+LÀM 
 
 ---
 
@@ -1322,7 +1285,7 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 > section: scaling
 > sectionStatus: dev
 
- LÀM 
+LÀM 
 
 ---
 
@@ -1330,14 +1293,11 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 > section: platonic
 > id: platonic
+> translated: auto
 
- Khi bắt đầu khóa học này, chúng tôi đã định nghĩa [các đa giác thông thường là các đa giác](gloss:regular-polygon) đặc biệt đối xứng trực tiếp, trong đó tất cả các cạnh và góc đều giống nhau. Chúng ta có thể làm một cái gì đó tương tự cho khối đa diện. 
+Khi bắt đầu khóa học này, chúng tôi đã định nghĩa [các đa giác thông thường là các đa giác](gloss:regular-polygon) đặc biệt đối xứng trực tiếp, trong đó tất cả các cạnh và góc đều giống nhau. Chúng ta có thể làm một cái gì đó tương tự cho khối đa diện. 
 
- Trong một khối _đa diện_ đều, tất cả các [mặt](gloss:polyhedron-face) đều là cùng một loại đa giác thông thường, và cùng một số mặt gặp nhau ở mọi [đỉnh](gloss:polyhedron-vertex) . Polyhedra với hai tính chất này được gọi là [__chất rắn Platonic__](gloss:platonic-solid) , được đặt theo tên của triết gia Hy Lạp [Plato](bio:plato) . 
-
-    //- The pyramid on the right of not a Platonic solid. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
+Trong một khối _đa diện_ đều, tất cả các [mặt](gloss:polyhedron-face) đều là cùng một loại đa giác thông thường, và cùng một số mặt gặp nhau ở mọi [đỉnh](gloss:polyhedron-vertex) . Polyhedra với hai tính chất này được gọi là [__chất rắn Platonic__](gloss:platonic-solid) , được đặt theo tên của triết gia Hy Lạp [Plato](bio:plato) . 
 
  Vì vậy, các chất rắn Platonic trông như thế nào - và có bao nhiêu trong số chúng? Để tạo hình ba chiều, chúng ta cần ít nhất [[3]] mặt để gặp nhau ở mọi đỉnh. Hãy bắt đầu một cách có hệ thống với đa giác thông thường nhỏ nhất: tam giác đều: 
 
@@ -1354,7 +1314,7 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 ::: column.grow
 
- Nếu chúng ta tạo một khối đa diện trong đó ba [tam giác đều](gloss:equilateral-triangle) gặp nhau ở mọi đỉnh, chúng ta sẽ có được hình bên trái. Nó được gọi là __tứ diện__ và có [[4]] mặt. _{.reveal(when="blank-0")} (Tet Tetra có nghĩa là người Viking bốn người Hy Lạp)._ 
+Nếu chúng ta tạo một khối đa diện trong đó ba [tam giác đều](gloss:equilateral-triangle) gặp nhau ở mọi đỉnh, chúng ta sẽ có được hình bên trái. Nó được gọi là __tứ diện__ và có [[4]] mặt. _{.reveal(when="blank-0")} (Tet Tetra có nghĩa là người Viking bốn người Hy Lạp)._ 
 
 :::
 
@@ -1371,7 +1331,7 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 ::: column.grow
 
- Nếu bốn tam giác đều gặp nhau ở mọi đỉnh, chúng ta sẽ có một chất rắn Platonic khác nhau. Nó được gọi là __Octahedron__ và có [[8]] khuôn mặt. _{.reveal(when="blank-0")} ._ 
+Nếu bốn tam giác đều gặp nhau ở mọi đỉnh, chúng ta sẽ có một chất rắn Platonic khác nhau. Nó được gọi là __Octahedron__ và có [[8]] khuôn mặt. _{.reveal(when="blank-0")} ._ 
 
 :::
 
@@ -1388,7 +1348,7 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 ::: column.grow
 
- Nếu [[năm]] hình tam giác gặp nhau ở mọi đỉnh, chúng ta sẽ có __Icosahedron__ . Nó có [[20]] khuôn mặt. _{.reveal(when="blank-1")} (Tiếng Nhật Icosa có nghĩa là hai mươi tên tiếng Hy Lạp.)_ 
+Nếu [[năm]] hình tam giác gặp nhau ở mọi đỉnh, chúng ta sẽ có __Icosahedron__ . Nó có [[20]] khuôn mặt. _{.reveal(when="blank-1")} (Tiếng Nhật Icosa có nghĩa là hai mươi tên tiếng Hy Lạp.)_ 
 
 :::
 
@@ -1403,7 +1363,7 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 ::: column.grow
 
- Nếu [[sáu]] hình tam giác gặp nhau ở mọi đỉnh, một điều khác biệt sẽ xảy ra: chúng ta chỉ cần có [[một phần tử | một tứ giác | một khối nhựa khác]] , _{span.reveal(when="blank-1")} thay vì đa diện ba chiều._ 
+Nếu [[sáu]] hình tam giác gặp nhau ở mọi đỉnh, một điều khác biệt sẽ xảy ra: chúng ta chỉ cần có [[một phần tử | một tứ giác | một khối nhựa khác]] , _{span.reveal(when="blank-1")} thay vì đa diện ba chiều._ 
 
 :::
 
@@ -1418,11 +1378,11 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 ::: column.grow
 
- Và bảy hoặc nhiều hình tam giác ở mọi đỉnh cũng không tạo ra các khối đa diện mới: không có đủ không gian xung quanh một đỉnh, để phù hợp với nhiều hình tam giác đó. 
+Và bảy hoặc nhiều hình tam giác ở mọi đỉnh cũng không tạo ra các khối đa diện mới: không có đủ không gian xung quanh một đỉnh, để phù hợp với nhiều hình tam giác đó. 
 
 :::
 
- Điều này có nghĩa là chúng tôi đã tìm thấy [[ba]] chất rắn Platonic bao gồm các hình tam giác. Hãy chuyển sang đa giác thông thường tiếp theo: hình vuông. 
+Điều này có nghĩa là chúng tôi đã tìm thấy [[ba]] chất rắn Platonic bao gồm các hình tam giác. Hãy chuyển sang đa giác thông thường tiếp theo: hình vuông. 
 
 ---
 > id: platonic-cube
@@ -1437,7 +1397,7 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 ::: column.grow
 
- Nếu [[ba]] hình vuông gặp nhau ở mọi đỉnh, chúng ta sẽ có được __khối lập phương__ . Giống như súc sắc, nó có [[6]] mặt. _{span.reveal(when="blank-1")} Khối lập phương đôi khi cũng được gọi là _Hexahedron_ , theo từ tiếng Hy Lạp là hex hexa "cho tiếng Sáu Sáu._ 
+Nếu [[ba]] hình vuông gặp nhau ở mọi đỉnh, chúng ta sẽ có được __khối lập phương__ . Giống như súc sắc, nó có [[6]] mặt. _{span.reveal(when="blank-1")} Khối lập phương đôi khi cũng được gọi là _Hexahedron_ , theo từ tiếng Hy Lạp là hex hexa "cho tiếng Sáu Sáu._ 
 
 :::
 
@@ -1452,14 +1412,14 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 ::: column.grow
 
- Nếu [[bốn]] hình vuông gặp nhau ở mọi đỉnh, chúng ta sẽ có [[một phần tử khác | một tứ diện | một khối lập phương khác]] . _{span.reveal(when="blank-1")} Và giống như trước đây, năm ô vuông trở lên cũng không hoạt động._ 
+Nếu [[bốn]] hình vuông gặp nhau ở mọi đỉnh, chúng ta sẽ có [[một phần tử khác | một tứ diện | một khối lập phương khác]] . _{span.reveal(when="blank-1")} Và giống như trước đây, năm ô vuông trở lên cũng không hoạt động._ 
 
 :::
 
 ---
 > id: platonic-dodecahedron
 
- Tiếp theo, hãy thử các hình ngũ giác đều đặn: 
+Tiếp theo, hãy thử các hình ngũ giác đều đặn: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1471,7 +1431,7 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 ::: column.grow
 
- Nếu [[ba]] hình ngũ giác gặp nhau ở mọi đỉnh, chúng ta sẽ có được __Dodecahedron__ . Nó có [[12]] khuôn mặt. _{.reveal(when="blank-1")} (Cúc Dodeca 'có nghĩa là người mười hai người Viking trong tiếng Hy Lạp.)_ 
+Nếu [[ba]] hình ngũ giác gặp nhau ở mọi đỉnh, chúng ta sẽ có được __Dodecahedron__ . Nó có [[12]] khuôn mặt. _{.reveal(when="blank-1")} (Cúc Dodeca 'có nghĩa là người mười hai người Viking trong tiếng Hy Lạp.)_ 
 
 :::
 
@@ -1486,14 +1446,14 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 ::: column.grow
 
- Giống như trước đây, bốn hoặc nhiều hình ngũ giác [[không hoạt động | là có thể]] bởi vì không có đủ không gian. 
+Giống như trước đây, bốn hoặc nhiều hình ngũ giác [[không hoạt động | là có thể]] bởi vì không có đủ không gian. 
 
 :::
 
 ---
 > id: platonic-hexagons
 
- Đa giác thông thường tiếp theo để thử là hình lục giác: 
+Đa giác thông thường tiếp theo để thử là hình lục giác: 
 
 ::: column(width=120 parent="padded-thin")
 
@@ -1503,67 +1463,67 @@ Trong mọi khối đa diện, số mặt ( _F_ ) cộng với số đỉnh ( _V
 
 ::: column.grow
 
- Nếu ba hình lục giác gặp nhau tại mỗi đỉnh, chúng tôi ngay lập tức nhận được một [[tessellation | khối đa diện | khối sáu mặt]] . _{span.reveal(when="blank-0")} Vì không có không gian cho hơn ba, nên có vẻ như không có chất rắn Platonic bao gồm các hình lục giác._ 
+Nếu ba hình lục giác gặp nhau tại mỗi đỉnh, chúng tôi ngay lập tức nhận được một [[tessellation | khối đa diện | khối sáu mặt]] . _{span.reveal(when="blank-0")} Vì không có không gian cho hơn ba, nên có vẻ như không có chất rắn Platonic bao gồm các hình lục giác._ 
 
 :::
 
 ---
 > id: platonic-final
 
- Điều tương tự cũng xảy ra đối với tất cả các đa giác thông thường có nhiều hơn sáu mặt. Họ không tessellate, và chúng tôi chắc chắn không nhận được bất kỳ đa giác ba chiều. 
+Điều tương tự cũng xảy ra đối với tất cả các đa giác thông thường có nhiều hơn sáu mặt. Họ không tessellate, và chúng tôi chắc chắn không nhận được bất kỳ đa giác ba chiều. 
 
- Điều này có nghĩa là chỉ có [[năm]] chất rắn Platonic! Chúng ta hãy cùng nhau xem xét tất cả chúng: 
+Điều này có nghĩa là chỉ có [[năm]] chất rắn Platonic! Chúng ta hãy cùng nhau xem xét tất cả chúng: 
 
 ---
 > id: platonic-overview
 
 ::: column.grow.text-center(width=120 parent="plato padded-thin")
 
- __Tứ diện__ 
+__Tứ diện__ 
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
- _{span.dual} [[4]] khuôn mặt_  
+_{span.dual} [[4]] khuôn mặt_  
 _{span.dual} [[4]] đỉnh_  
 _{span.dual} [[6]] cạnh_ 
 
 ::: column.grow.text-center(width=120)
 
- __Khối lập phương__ 
+__Khối lập phương__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
- _{span.dual(target="dual1")} [[6]] mặt_  
+_{span.dual(target="dual1")} [[6]] mặt_  
 _{span.dual(target="dual1")} [[8]] đỉnh_  
 _{span.dual} [[12]] cạnh_ 
 
 ::: column.grow.text-center(width=120)
 
- __Thiên niên kỷ__ 
+__Thiên niên kỷ__ 
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
- _{span.dual(target="dual1")} [[8]] khuôn mặt_  
+_{span.dual(target="dual1")} [[8]] khuôn mặt_  
 _{span.dual(target="dual1")} [[6]] đỉnh_  
 _{span.dual} [[12]] cạnh_ 
 
 ::: column.grow.text-center(width=120)
 
- __Cây ngải cứu__ 
+__Cây ngải cứu__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
- _{span.dual(target="dual2")} [[12]] mặt_  
+_{span.dual(target="dual2")} [[12]] mặt_  
 _{span.dual(target="dual2")} 20 đỉnh_  
 _{span.dual} 30 cạnh_ 
 
 ::: column.grow.text-center(width=120)
 
- __Icosahedron__ 
+__Icosahedron__ 
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
- _{span.dual(target="dual2")} [[20]] khuôn mặt_  
+_{span.dual(target="dual2")} [[20]] khuôn mặt_  
 _{span.dual(target="dual2")} 12 đỉnh_  
 _{span.dual} 30 cạnh_ 
 
@@ -1574,7 +1534,7 @@ _{span.dual} 30 cạnh_
 ---
 > id: platonic-dual
 
- Chúng ta có thể biến một khối đa diện thành hai mặt của nó, bằng cách thay thế một mặt của mọi mặt bằng một đỉnh và mọi đỉnh bằng một mặt. Những hình ảnh động này cho thấy: 
+Chúng ta có thể biến một khối đa diện thành hai mặt của nó, bằng cách thay thế một mặt của mọi mặt bằng một đỉnh và mọi đỉnh bằng một mặt. Những hình ảnh động này cho thấy: 
 
 ::: column(width=300)
 
@@ -1588,12 +1548,12 @@ _{span.dual} 30 cạnh_
 
 :::
 
- Tứ diện là kép với chính nó. Vì nó có cùng số mặt và đỉnh, nên việc hoán đổi chúng sẽ không thay đổi gì cả. 
+Tứ diện là kép với chính nó. Vì nó có cùng số mặt và đỉnh, nên việc hoán đổi chúng sẽ không thay đổi gì cả. 
 
 ---
 > id: platonic-elements
 
- [Plato](bio:plato) tin rằng tất cả vật chất trong Vũ trụ bao gồm bốn yếu tố: Không khí, Trái đất, Nước và Lửa. Ông nghĩ rằng mọi nguyên tố tương ứng với một trong các chất rắn Platonic, trong khi phần tử thứ năm sẽ đại diện cho toàn bộ vũ trụ. Ngày nay chúng ta biết rằng có hơn 100 nguyên tố khác nhau bao gồm các nguyên tử hình cầu, không phải khối đa diện. 
+[Plato](bio:plato) tin rằng tất cả vật chất trong Vũ trụ bao gồm bốn yếu tố: Không khí, Trái đất, Nước và Lửa. Ông nghĩ rằng mọi nguyên tố tương ứng với một trong các chất rắn Platonic, trong khi phần tử thứ năm sẽ đại diện cho toàn bộ vũ trụ. Ngày nay chúng ta biết rằng có hơn 100 nguyên tố khác nhau bao gồm các nguyên tử hình cầu, không phải khối đa diện. 
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
@@ -1605,9 +1565,9 @@ _{span.dual} 30 cạnh_
 
 > id: archimedean
 
- Chất rắn Platonic là khối đa diện đặc biệt quan trọng, nhưng có vô số khác. 
+Chất rắn Platonic là khối đa diện đặc biệt quan trọng, nhưng có vô số khác. 
 
- [__Các chất rắn Archimedean__](gloss:archimedean-solid) , ví dụ, vẫn phải được tạo thành từ [các đa giác thông thường](gloss:regular-polygon) , nhưng bạn có thể sử dụng nhiều loại khác nhau. Chúng được đặt theo tên của một nhà toán học Hy Lạp khác, [Archimedes of Syracuse](bio:archimedes) , và có 13 người trong số họ: 
+[__Các chất rắn Archimedean__](gloss:archimedean-solid) , ví dụ, vẫn phải được tạo thành từ [các đa giác thông thường](gloss:regular-polygon) , nhưng bạn có thể sử dụng nhiều loại khác nhau. Chúng được đặt theo tên của một nhà toán học Hy Lạp khác, [Archimedes of Syracuse](bio:archimedes) , và có 13 người trong số họ: 
 
 ::: column(width=170 parent="padded-thin")
 
@@ -1702,16 +1662,12 @@ _{span.dual} 30 cạnh_
 
 :::
 
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
-
 ---
 > id: polyhedra-applications
 
 ### Các ứng dụng 
 
- Plato đã sai khi tin rằng tất cả các nguyên tố bao gồm chất rắn Platonic. Nhưng khối đa diện thông thường có nhiều tính chất đặc biệt khiến chúng xuất hiện ở nơi khác trong tự nhiên - và chúng ta có thể sao chép các tính chất này trong khoa học và kỹ thuật. 
+Plato đã sai khi tin rằng tất cả các nguyên tố bao gồm chất rắn Platonic. Nhưng khối đa diện thông thường có nhiều tính chất đặc biệt khiến chúng xuất hiện ở nơi khác trong tự nhiên - và chúng ta có thể sao chép các tính chất này trong khoa học và kỹ thuật. 
 
 ::: column(width=180)
 
@@ -1725,7 +1681,7 @@ _{span.dual} 30 cạnh_
 
 ::: column.grow
 
- Nhiều __virus__ , __vi khuẩn__ và các __sinh vật__ nhỏ __khác__ có hình dạng giống như [icosahedra](gloss:icosahedron) . Virus, ví dụ, phải đặt vật liệu di truyền của chúng bên trong vỏ của nhiều đơn vị protein giống hệt nhau. Các icosahedron là cách hiệu quả nhất để làm điều này, bởi vì nó bao gồm một vài yếu tố thông thường nhưng gần như có hình dạng như một quả cầu. 
+Nhiều __virus__ , __vi khuẩn__ và các __sinh vật__ nhỏ __khác__ có hình dạng giống như [icosahedra](gloss:icosahedron) . Virus, ví dụ, phải đặt vật liệu di truyền của chúng bên trong vỏ của nhiều đơn vị protein giống hệt nhau. Các icosahedron là cách hiệu quả nhất để làm điều này, bởi vì nó bao gồm một vài yếu tố thông thường nhưng gần như có hình dạng như một quả cầu. 
 
 :::
 
@@ -1741,9 +1697,9 @@ _{span.dual} 30 cạnh_
 
 ::: column.grow
 
- Nhiều __phân tử__ có hình dạng như khối đa diện thông thường. Ví dụ nổi tiếng nhất là `C_60` trong đó bao gồm 60 nguyên tử carbon được sắp xếp theo hình [Icosahedron cắt ngắn](gloss:truncated-icosahedron) . 
+Nhiều __phân tử__ có hình dạng như khối đa diện thông thường. Ví dụ nổi tiếng nhất là `C_60` trong đó bao gồm 60 nguyên tử carbon được sắp xếp theo hình [Icosahedron cắt ngắn](gloss:truncated-icosahedron) . 
 
- Nó được phát hiện vào năm 1985 khi các nhà khoa học nghiên cứu bụi liên sao. Họ đặt tên cho nó là Buckyball, (hay Buckminsterfullerene) theo tên của kiến trúc sư [Buckminster Fuller](bio:fuller) , nổi tiếng với việc xây dựng các tòa nhà trông tương tự. 
+Nó được phát hiện vào năm 1985 khi các nhà khoa học nghiên cứu bụi liên sao. Họ đặt tên cho nó là Buckyball, (hay Buckminsterfullerene) theo tên của kiến trúc sư [Buckminster Fuller](bio:fuller) , nổi tiếng với việc xây dựng các tòa nhà trông tương tự. 
 
 :::
 
@@ -1759,7 +1715,7 @@ _{span.dual} 30 cạnh_
 
 ::: column.grow
 
- Hầu hết các __tinh thể__ có các nguyên tử của chúng được sắp xếp trong một lưới thông thường bao gồm [tứ diện](gloss:tetrahedron) , [khối](gloss:cube) hoặc [bát diện](gloss:octahedron) . Khi chúng nứt hoặc vỡ, bạn có thể thấy những hình dạng này ở quy mô lớn hơn. 
+Hầu hết các __tinh thể__ có các nguyên tử của chúng được sắp xếp trong một lưới thông thường bao gồm [tứ diện](gloss:tetrahedron) , [khối](gloss:cube) hoặc [bát diện](gloss:octahedron) . Khi chúng nứt hoặc vỡ, bạn có thể thấy những hình dạng này ở quy mô lớn hơn. 
 
 :::
 
@@ -1775,7 +1731,7 @@ _{span.dual} 30 cạnh_
 
 ::: column.grow
 
- Tetrahedra và octahedra cực kỳ cứng nhắc và ổn định, điều này làm cho chúng rất hữu ích trong __xây dựng__ . _Khung không gian_ là cấu trúc đa giác có thể hỗ trợ mái lớn và cầu nặng. 
+Tetrahedra và octahedra cực kỳ cứng nhắc và ổn định, điều này làm cho chúng rất hữu ích trong __xây dựng__ . _Khung không gian_ là cấu trúc đa giác có thể hỗ trợ mái lớn và cầu nặng. 
 
 :::
 
@@ -1791,8 +1747,8 @@ _{span.dual} 30 cạnh_
 
 ::: column.grow
 
- Chất rắn Platonic cũng được sử dụng để tạo __xúc xắc__ . bởi vì tính đối xứng của chúng, mọi phía đều có [xác suất](gloss:probability) hạ cánh hướng lên - vì vậy xúc xắc là công bằng. 
+Chất rắn Platonic cũng được sử dụng để tạo __xúc xắc__ . bởi vì tính đối xứng của chúng, mọi phía đều có [xác suất](gloss:probability) hạ cánh hướng lên - vì vậy xúc xắc là công bằng. 
 
- [Icosahedron Truncated](gloss:truncated-icosahedron) có lẽ là khối đa diện nổi tiếng nhất trên thế giới: đó là hình dạng của bóng đá. 
+[Icosahedron Truncated](gloss:truncated-icosahedron) có lẽ là khối đa diện nổi tiếng nhất trên thế giới: đó là hình dạng của bóng đá. 
 
 :::

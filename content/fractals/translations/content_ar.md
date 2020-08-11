@@ -62,7 +62,7 @@
 
 ::: column.grow(parent="right")
 
- فركتات اخقرة هو[مثلث سيربينسكس ](gloss:sierpinski-triangle) . في هذه الحالة ، نبدأ بمثلث كبير متساوي الأضلاع ، ثم نقطع بشكل متكرر المثلثات الأصغر من الأجزاء المتبقية.
+فركتات اخقرة هو[مثلث سيربينسكس ](gloss:sierpinski-triangle) . في هذه الحالة ، نبدأ بمثلث كبير متساوي الأضلاع ، ثم نقطع بشكل متكرر المثلثات الأصغر من الأجزاء المتبقية.
 
 {.reveal(when="slider=0")} لاحظ كيف يتكون الشكل النهائي من [ثلاث نسخ متطابقة منه](target:x) ، وكل منها تتكون من نسخ أصغر من المثلث بأكمله! يمكنك الاستمرار في تكبير المثلث إلى الأبد ، وستستمر الأنماط والأشكال في التكرار دائمًا.
 
@@ -116,7 +116,6 @@
 ::: column.grow
 
 المربع له أبعاد [[2]]. _{span.reveal(when="blank-0")} عند قياسه بعامل 2 ، تزداد مساحته بعامل `2^2 =` [[4 ]]._
-
 
 :::
 
@@ -430,14 +429,12 @@
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} سلسلة جبال في آسيا الوسطى
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} دلتا نهر الغانج في الهند
@@ -450,14 +447,12 @@
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} أوعية دموية في الشبكية
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} جراند كانيون في الولايات المتحدة الأمريكية
@@ -472,16 +467,12 @@
 
 قد تظهر جميع هذه الأشياء بشكل عشوائي تمامًا ، ولكن ، تمامًا مثل الفركتلات ، هناك نمط أساسي يحدد كيفية تكوينها. يمكن أن تساعدنا الرياضيات على فهم الأشكال بشكل أفضل ، ولدى الفركتلات تطبيقات في مجالات مثل الطب والبيولوجيا والجيولوجيا والأرصاد الجوية. [متابعة](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} تضاريس صورية تم إنشاؤها بواسطة الكمبيوتر
@@ -524,22 +515,18 @@
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -957,14 +944,9 @@ __الأوتار الخلوية__ عبارة عن شبكة تتكون من ال�
 * {.reveal(when="blank-0")} تصل التسلسلات داخل [لمبة كبيرة](target:bulb1) في الأعلى [[إلى مدار|converge|diverge]] _{span.reveal(when="blank-1")} تتكون من [[3]] نقاط._
 * {.reveal(when="blank-2")} التسلسلات في [هذا المصباح الأصغر](target:bulb2) لها مدارات بطول [[5]].
 
-
 :::
 
 {.reveal(when="blank-3")} يحتوي كل مصباح على مدار مختلف الحجم ، مع المصابيح الأصغر التي تحتوي على المزيد والمزيد من النقاط في مداراتها. يرتبط حجم هذه المدارات ارتباطًا وثيقًا بـ __خريطة لوجستية__ ، وهو مفهوم مهم في [نظرية الفوضى](/course/chaos).
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 

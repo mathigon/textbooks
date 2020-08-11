@@ -105,7 +105,6 @@ Bir sayının tüm bölenlerini bulmak için bu listenin iki ucundan ortada bulu
 
 Bu yöntemle ilgili tek özel durum kare sayılar içindir: Bu durumda, ortada sadece 64 = 8 × 8 gibi yegane bir sayıda karşılaşacaksınız.
 
-    //- TODO Factorisation exercises
 
 ---
 
@@ -256,7 +255,6 @@ to=".digit-sum-is">basamak değerleri toplamı</x-target> 3'ün katıysa ve biz 
 
 Bir sayının 6 ile bölünebilir olup olmadığını kontrol etmek için 2 [[ve|veya]] 3 ile bölünebilir olduğunu kontrol etmeliyiz. Bunun 6 için işe yaradığını görüyoruz fakat bunun kesinlikle iki sayının çarpımı olan _herhangi_ bir sayı da işe yarayacağını düşünmeyin. Devamı daha sonra…
 
-    //- TODO Practice exercises
 
 ---
 
@@ -270,7 +268,6 @@ Bölen çiftleri hesaplarken, bir sayı ilk bölen çifti hariç başka bölen �
 1'in kendisi bir asal sayı _olmadığını_ unutmayın, bu yüzden ilk birkaç asal sayı şunlardır: 2, 3, 5, 7, 11, 13,…
 
 
-    //- TODO Exercises
 
 ---
 > id: primes1
@@ -314,7 +311,6 @@ Her tamsayı bir asal çarpan ayrımına sahiptir ve hiçbir farklı iki tamsay�
 
 ATT'ni kullanımı matematikteki birçok problemin çözümünü çok daha kolaylaştırır: Sayıyı, asal çarpanlarına ayırır, problemi her bir asal için çözeriz ki bu genellikle çok daha kolaydır ve bulduğumuz sonuçları birleştirirerek ana problemin sonucunu elde ederiz.
 
-    //- TODO Exercises
 
 ---
 > id: eratosthenes
@@ -367,9 +363,6 @@ Bir _en büyük_ veya bir _en küçük_ asal sayı var mı?
       li İki durumda da baştaki listemizde olmayan yeni bir asal bulduk – fakat biz #[em bütün] asalların listemizde olduğunu kabul etmiştik.
       li Belli ki bir şeyler ters gitti! Ama #[span.proof-step 2]–#[span.proof-step 4] adımlar arası geçerli olduğunu gördüğümüze göre, yanlış olma ihtimali olan tek yer bizim #[span.proof-step 1]. adımdaki varsayımımız. Bu da bize asal sayıların sonsuz olduğunu söylüyor.
 
-    // Notice that any prime that divides N cannot divide N + 1. (If it would,
-    // it also had to divide the difference between N and N + 1 which is 1. But
-    // the only number that divides 1 is 1 itself.)
 
 ---
 > id: primes4
@@ -436,7 +429,6 @@ Here you can generate your own prime numbers with a given number of digits:
 ---
 > id: ulam
 
-    //- Stanislaw M. Ulam was doodling during the presentation of a "long and very boring paper" at a scientific meeting in 1963.
 
 
 ### Ulam Spirali
@@ -720,7 +712,6 @@ Böylece __{.m-blue}12__, __{.m-green}30__ ve __{.m-yellow}45__'in ekoku
 
 Asal sayılar için özel bir durum: İki asal sayının ekok'u direkt olarak iki sayının [[çarpımıdır|toplamıdır|farkıdır]] çünkü bu sayıların “sadeleştirilebilecek” ortak asal çarpanları yoktur.
 
-    //- TODO Exercises
 
 ---
 > id: cicadas
@@ -755,7 +746,6 @@ Bu sayının, ağustos böceği ortaya çıkış süresi 13, 17 gibi asal bir sa
 
 Tabii ki, ağustos böcekleri asal sayılarla ilgili bir fikre sahip değil - fakat milyonlarca yıldır, evrim asal döngülerin en güvenilir olduğunu ortaya koydu. Avcı hayvanların zamanla soyu tükenmiş görünüyor fakat asal döngüler kalıyor.
 
-    //- TODO Exercises
 
 ---
 

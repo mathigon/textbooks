@@ -4,8 +4,9 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
- [Xəttlər](gloss:line) və ya [çoxbucaqlılar](gloss:polygon) kimi bir çox həndəsi anlayış riyaziyyatçılar tərəfindən "icad edilmişdir". Simmetriya, digər tərəfdən, ətrafımızda hər yerdədir. Demək olar ki, bütün bitkilər, heyvanlar və hətta insanlar simmetrikdirlər. 
+[Xəttlər](gloss:line) və ya [çoxbucaqlılar](gloss:polygon) kimi bir çox həndəsi anlayış riyaziyyatçılar tərəfindən "icad edilmişdir". Simmetriya, digər tərəfdən, ətrafımızda hər yerdədir. Demək olar ki, bütün bitkilər, heyvanlar və hətta insanlar simmetrikdirlər. 
 
 ::: column(width=200)
 
@@ -21,7 +22,7 @@
 
 :::
 
- Zamanla sənətdə, memarlıqda, texnologiyada və dizaynda təbiətin simmetriyasını təqlid etdik. Simmetrik formalar və naxışlar simmetrik olmayanlardan _daha gözəl_ görünür. 
+Zamanla sənətdə, memarlıqda, texnologiyada və dizaynda təbiətin simmetriyasını təqlid etdik. Simmetrik formalar və naxışlar simmetrik olmayanlardan _daha gözəl_ görünür. 
 
 ::: column(width=200)
 
@@ -37,15 +38,15 @@
 
 :::
 
- Ancaq simmetriya sadəcə _gözəl_ görünməkdən daha vacibdir. Kainatımızın ən təməlində yerləşir və fizikanın ən fundamental qanunlarını da izah edə bilər. 
+Ancaq simmetriya sadəcə _gözəl_ görünməkdən daha vacibdir. Kainatımızın ən təməlində yerləşir və fizikanın ən fundamental qanunlarını da izah edə bilər. 
 
- _{button.next-step} Davam edin_ 
+_{button.next-step} Davam edin_ 
 
 ---
 > id: transformations
 > goals: t1 t2 t3
 
- Simmetriya çox intuitiv bir anlayış olsa da, riyazi olaraq təsvir etmək düşündüyünüzdən daha çətindir. Birincisi, bir həndəsi fiquru digərinə çevirmək yolları olan [__dəyişikliklər__](gloss:transformation) haqqında məlumat [__almalıyıq__](gloss:transformation) . Bir neçə nümunə: 
+Simmetriya çox intuitiv bir anlayış olsa da, riyazi olaraq təsvir etmək düşündüyünüzdən daha çətindir. Birincisi, bir həndəsi fiquru digərinə çevirmək yolları olan [__dəyişikliklər__](gloss:transformation) haqqında məlumat [__almalıyıq__](gloss:transformation) . Bir neçə nümunə: 
 
 ::: column.r(width=200 parent="padded-thin")
 
@@ -70,7 +71,7 @@
 ---
 > id: transformations-1
 
- Bir çevrilmənin nəticəsi [__görüntü__](gloss:transformation-image) adlanır. Tez-tez bir forma şəklini ifadə edirik `A` kimi `A'` , tələffüz "bir əsas". Bu kurs boyunca daha ətraflı araşdıracağımız bir çox müxtəlif çevrilmə var. 
+Bir çevrilmənin nəticəsi [__görüntü__](gloss:transformation-image) adlanır. Tez-tez bir forma şəklini ifadə edirik `A` kimi `A'` , tələffüz "bir əsas". Bu kurs boyunca daha ətraflı araşdıracağımız bir çox müxtəlif çevrilmə var. 
 
 ---
 
@@ -78,10 +79,11 @@
 
 > id: rigid
 > section: rigid
+> translated: auto
 
- [__Sərt bir çevrilmə__](gloss:rigid-transformation) , bir rəqəmin ölçüsünü və ya formasını dəyişdirməyən xüsusi bir çevrilmədir. Təsəvvür edə bilərik ki, o, ağac və ya metal kimi möhkəm bir materialdan hazırlanmışdır: onu hərəkətə gətirə, çevirə və ya kənara çevirə bilərik, ancaq uzanmırıq, əyilmək və ya başqa şəkildə deformasiya etmək olmur. 
+[__Sərt bir çevrilmə__](gloss:rigid-transformation) , bir rəqəmin ölçüsünü və ya formasını dəyişdirməyən xüsusi bir çevrilmədir. Təsəvvür edə bilərik ki, o, ağac və ya metal kimi möhkəm bir materialdan hazırlanmışdır: onu hərəkətə gətirə, çevirə və ya kənara çevirə bilərik, ancaq uzanmırıq, əyilmək və ya başqa şəkildə deformasiya etmək olmur. 
 
- Bu beş çevrilmədən hansı sərtdir? 
+Bu beş çevrilmədən hansı sərtdir? 
 
     x-picker.rigid
       .item: img(src="images/picker-1.svg" width=130 height=240)
@@ -94,7 +96,7 @@
 > id: rigid-1
 > goals: t1 t2 t3
 
- Məlum olur ki, sərt çevrilmələrin yalnız üç müxtəlif növü var: 
+Məlum olur ki, sərt çevrilmələrin yalnız üç müxtəlif növü var: 
 
 ::: column.r(width=200)
 
@@ -125,18 +127,18 @@
 ---
 > id: rigid-2
 
- Daha mürəkkəb olanları yaratmaq üçün çox sayda çevrilməni birləşdirə bilərik - məsələn, bir dönüşün ardınca tərcümə. 
+Daha mürəkkəb olanları yaratmaq üçün çox sayda çevrilməni birləşdirə bilərik - məsələn, bir dönüşün ardınca tərcümə. 
 
- Ancaq əvvəlcə bu növ çevrilmələrin hər birinə daha ətraflı nəzər salaq. 
+Ancaq əvvəlcə bu növ çevrilmələrin hər birinə daha ətraflı nəzər salaq. 
 
 ---
 > id: translations
 
 ### Tərcümələr 
 
- [__Tərcümə__](gloss:translation) bir fiqurun hər nöqtəsini eyni məsafədə eyni istiqamətdə hərəkət edən bir çevrilmədir. 
+[__Tərcümə__](gloss:translation) bir fiqurun hər nöqtəsini eyni məsafədə eyni istiqamətdə hərəkət edən bir çevrilmədir. 
 
- Koordinat müstəvisində formanın _x_ -axis və _y_ -axis boyunca nə qədər köçürüldüyünə görə bir tərcümə təyin edə bilərik. Məsələn, (3, 5) bir çevrilmə _x_ -axis boyunca 3, _y_ -axis boyunca 5 ilə bir forma köçürür. 
+Koordinat müstəvisində formanın _x_ -axis və _y_ -axis boyunca nə qədər köçürüldüyünə görə bir tərcümə təyin edə bilərik. Məsələn, (3, 5) bir çevrilmə _x_ -axis boyunca 3, _y_ -axis boyunca 5 ilə bir forma köçürür. 
 
 ::: column(width=220)
 
@@ -174,7 +176,7 @@
 > id: translations-1
 > goals: drag-0 drag-1 drag-2
 
- İndi növbə var - aşağıdakı formaları göstərildiyi kimi tərcümə edin: 
+İndi növbə var - aşağıdakı formaları göstərildiyi kimi tərcümə edin: 
 
 ::: column(width=220)
 
@@ -220,9 +222,9 @@
 
 ### Reflilər 
 
- Bir [__əks__](gloss:reflection) , bir xətt boyunca bir forma "atır" və ya "güzgülərə" qoyur. Bu xətt __əks xətti__ adlanır. 
+Bir [__əks__](gloss:reflection) , bir xətt boyunca bir forma "atır" və ya "güzgülərə" qoyur. Bu xətt __əks xətti__ adlanır. 
 
- Bu misalların hər birində əks xəttini çəkin: 
+Bu misalların hər birində əks xəttini çəkin: 
 
 ::: column(width=220)
 
@@ -251,7 +253,7 @@
 > id: reflections-1
 > goals: r0 r1 r2
 
- İndi növbə var - bu formaların hər birinin əksini çəkin: 
+İndi növbə var - bu formaların hər birinin əksini çəkin: 
 
 ::: column(width=220)
 
@@ -279,12 +281,12 @@
 ---
 > id: reflections-2
 
- Notice əks xəttində bir nöqtəyə yalan [[hərəkət deyil,]] əgər ki, [[| dönər |]] əks olduqda [[artıq flips:]] _{span.reveal(when="blank-0")} onun görüntüsü orijinalla eyni nöqtədir._ 
+Notice əks xəttində bir nöqtəyə yalan [[hərəkət deyil,]] əgər ki, [[| dönər |]] əks olduqda [[artıq flips:]] _{span.reveal(when="blank-0")} onun görüntüsü orijinalla eyni nöqtədir._ 
 
 ---
 > id: reflections-3
 
- Yuxarıdakı nümunələrin hamısında əks xətti üfüqi, şaquli və ya 45° bir açı ilə idi - bu da əks olunmağı asanlaşdırdı. Əgər belə deyilsə, tikinti bir az daha çox iş tələb edir: 
+Yuxarıdakı nümunələrin hamısında əks xətti üfüqi, şaquli və ya 45° bir açı ilə idi - bu da əks olunmağı asanlaşdırdı. Əgər belə deyilsə, tikinti bir az daha çox iş tələb edir: 
 
 ::: column(width=300)
 
@@ -342,9 +344,9 @@
 
 ### Dönüşlər 
 
- [__Fırlanma__](gloss:rotation) , sabit bir nöqtə ətrafında müəyyən bir açı ilə bir forma "çevirən" bir çevrilmədir. Bu nöqtə [__fırlanma mərkəzi__](gloss:center-of-rotation) adlanır. Dönmə saat istiqamətində və ya saat yönünün əksinə ola bilər. 
+[__Fırlanma__](gloss:rotation) , sabit bir nöqtə ətrafında müəyyən bir açı ilə bir forma "çevirən" bir çevrilmədir. Bu nöqtə [__fırlanma mərkəzi__](gloss:center-of-rotation) adlanır. Dönmə saat istiqamətində və ya saat yönünün əksinə ola bilər. 
 
- Aşağıdakı formaları qırmızı fırlanma mərkəzinin ətrafında döndərməyə çalışın: 
+Aşağıdakı formaları qırmızı fırlanma mərkəzinin ətrafında döndərməyə çalışın: 
 
 ::: column(width=220)
 
@@ -418,7 +420,7 @@
 
 ::: column.grow
 
- Dəqiq 90° və ya 180° -ə uyğun olmayan fırlanma çəkmək daha çətindir. Bu formanı döndərməyə çalışaq ${10*ang}{ang|6|-18,18,1} [Fırlanma mərkəzinin](target:rot) ətrafında. 
+Dəqiq 90° və ya 180° -ə uyğun olmayan fırlanma çəkmək daha çətindir. Bu formanı döndərməyə çalışaq ${10*ang}{ang|6|-18,18,1} [Fırlanma mərkəzinin](target:rot) ətrafında. 
 
 {.r} Yansıtmalar üçün olduğu kimi, hər nöqtəni ayrıca bir formada döndərməliyik. _{button.next-step} Davam edin_ 
 
@@ -437,7 +439,7 @@
 ---
 > id: composition-1
 
- Transformasiyalar yalnız həndəsə deyil, riyaziyyatın bir çox hissəsində vacib bir anlayışdır. Məsələn, [_funksiyalarını_](gloss:function) [qrafiklərini](gloss:function-graph) dəyişdirərək və ya dəyişdirərək dəyişdirə bilərsiniz. İki şəklin bir-birinə [uyğun](gloss:congruent) olub olmadığını müəyyən etmək üçün çevrilmələrdən də istifadə edə bilərsiniz. 
+Transformasiyalar yalnız həndəsə deyil, riyaziyyatın bir çox hissəsində vacib bir anlayışdır. Məsələn, [_funksiyalarını_](gloss:function) [qrafiklərini](gloss:function-graph) dəyişdirərək və ya dəyişdirərək dəyişdirə bilərsiniz. İki şəklin bir-birinə [uyğun](gloss:congruent) olub olmadığını müəyyən etmək üçün çevrilmələrdən də istifadə edə bilərsiniz. 
 
 ---
 
@@ -446,35 +448,7 @@
 > section: congruence
 > sectionStatus: dev
 
- ETMƏK 
-
----
-
-### Dəyişikliklərin tərkibi 
-
- Əlbəttə ki, daha mürəkkəb çevrilmələr yaratmaq üçün çoxlu tərcümə, əks və dönüş birləşdirə bilərik. 
-
-{.todo} TODO nümunəsi 
-
- Ancaq göründüyü kimi, neçə fərqli dəyişikliyi birləşdirdiyinizin fərqi yoxdur: hər zaman eyni bir dəyişikliyi edə bilərsiniz. 
-
-{.todo} TODO Çevrilmə tərkibi kalkulyatoru 
-
- İki əksini birləşdirmək xüsusilə maraqlıdır. Hesab etməli olduğumuz iki fərqli hal var: 
-
-::: column.grow
-
- Yansıtmanın iki xətti paraleldirsə, nəticə tək bir tərcümədir. Tərcümə istiqaməti əks sətirlərinə dikdir və məsafə əks xətlər arasındakı məsafədən iki dəfə çoxdur. 
-
-{.todo} TODO Animasiya 
-
-::: column.grow
-
- Yansıtmanın iki xətti kəsişirsə, nəticə tək bir dönüşdür. Fırlanma mərkəzi əks xətlər arasındakı kəsişmədir və bucaq əks xətlər arasındakı iki qat bucaqdır. 
-
-{.todo} TODO Animasiya 
-
-:::
+TODO
 
 ---
 
@@ -483,8 +457,9 @@
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
- [__Simmetriya__](gloss:symmetry) ətrafımızda hər yerdədir və intuitiv bir anlayışdır: bir cismin müxtəlif hissələri müəyyən mənada _eyni_ görünür. Dəyişikliklərdən istifadə edərək simmetriyanın _həqiqətən_ nə demək olduğunu daha dəqiq, riyazi bir tərif verə bilərik: 
+[__Simmetriya__](gloss:symmetry) ətrafımızda hər yerdədir və intuitiv bir anlayışdır: bir cismin müxtəlif hissələri müəyyən mənada _eyni_ görünür. Dəyişikliklərdən istifadə edərək simmetriyanın _həqiqətən_ nə demək olduğunu daha dəqiq, riyazi bir tərif verə bilərik: 
 
 {.definition} Bir obyekt müəyyən bir çevrilməni tətbiq etdikdən sonra da eyni görünsə _simmetrikdir_ . 
 
@@ -513,13 +488,13 @@
 
 ### Reflectional simmetriya 
 
- Bir forma [__əks__](gloss:reflectional-symmetry) olunduqdan sonra eyni görünsə, [__əks etdirici simmetriya__](gloss:reflectional-symmetry) var. Yansıtma xətti [__simmetriya oxu__](gloss:axis-of-symmetry) adlanır və şəkli iki [[konqresə]] bölür [[| bərabərdir | oxşar]] yarılar. Bəzi rəqəmlərdə simmetriyanın birdən çox oxu da ola bilər. 
+Bir forma [__əks__](gloss:reflectional-symmetry) olunduqdan sonra eyni görünsə, [__əks etdirici simmetriya__](gloss:reflectional-symmetry) var. Yansıtma xətti [__simmetriya oxu__](gloss:axis-of-symmetry) adlanır və şəkli iki [[konqresə]] bölür [[| bərabərdir | oxşar]] yarılar. Bəzi rəqəmlərdə simmetriyanın birdən çox oxu da ola bilər. 
 
 ---
 > id: reflectional-symmetry-1
 > goals: r0 r1 r2 r3 r4 r5
 
- Bu altı şəkil və formada simmetriyanın bütün oxlarını çəkin: 
+Bu altı şəkil və formada simmetriyanın bütün oxlarını çəkin: 
 
 ::: column(width=220)
 
@@ -576,7 +551,7 @@
 ---
 > id: alphabet
 
- Əlifba əlifbasında bir çox məktublarda əks simmetriya var. Bütün olanları seçin: 
+Əlifba əlifbasında bir çox məktublarda əks simmetriya var. Bütün olanları seçin: 
 
     x-picker.letters
       - let c = ['#D92120', '#E6642C', '#E68E34', '#D9AD3C', '#B5BD4C', '#7FB972', '#63AD99', '#55A1B1', '#488BC2', '#4065B1', '#413B93', '#781C81']
@@ -590,7 +565,7 @@
 > id: reflectional-symmetry-2
 > goals: r0 r1 r2
 
- Budur daha bir neçə forma. Onları tamamlayın ki, əks simmetriya olsun: 
+Budur daha bir neçə forma. Onları tamamlayın ki, əks simmetriya olsun: 
 
 ::: column(width=220)
 
@@ -623,9 +598,9 @@
 > id: palindromes
 > goals: p0 p1 p2
 
- Şekiller, məktublar və şəkillərdə əks simmetriya ola bilər, ancaq bütöv rəqəmlər, sözlər və cümlələr ola bilər! 
+Şekiller, məktublar və şəkillərdə əks simmetriya ola bilər, ancaq bütöv rəqəmlər, sözlər və cümlələr ola bilər! 
 
- Məsələn "25352" və "ANNA" hər ikisini arxadan qabağa oxudu. Buna oxşar rəqəmlər və ya sözlər [__Palindromes__](gloss:palindrome) adlanır. Başqa palindromları düşünə bilərsinizmi? 
+Məsələn "25352" və "ANNA" hər ikisini arxadan qabağa oxudu. Buna oxşar rəqəmlər və ya sözlər [__Palindromes__](gloss:palindrome) adlanır. Başqa palindromları düşünə bilərsinizmi? 
 
     form.palindromes.text-center.form-field
       input(type="text")
@@ -638,7 +613,7 @@
 ---
 > id: palindromes-1
 
- Boşluqlara və durğu işarələrinə məhəl qoymasaq, aşağıda göstərilən qısa cümlələrdə əksedici simmetriya da var. Öz əlinizlə gələ bilərsinizmi? 
+Boşluqlara və durğu işarələrinə məhəl qoymasaq, aşağıda göstərilən qısa cümlələrdə əksedici simmetriya da var. Öz əlinizlə gələ bilərsinizmi? 
 
 {.text-center} Heç vaxt tək və ya hətta olmayın.  
 Bir jar tuna üçün bir [[qoz]] .  
@@ -653,9 +628,9 @@ Yo, banan [[oğlan]] !
 
 ::: column.grow
 
- Bir forma döndükdən sonra eyni görünsə (360° -dən az) [__fırlanan simmetriyaya__](gloss:rotational-symmetry) malikdir. [Fırlanma mərkəzi](gloss:center-of-rotation) ümumiyyətlə formanın ortasındadır. 
+Bir forma döndükdən sonra eyni görünsə (360° -dən az) [__fırlanan simmetriyaya__](gloss:rotational-symmetry) malikdir. [Fırlanma mərkəzi](gloss:center-of-rotation) ümumiyyətlə formanın ortasındadır. 
 
- [__Simmetriya qaydası__](gloss:order-of-symmetry) , şəklin eyni göründüyü fərqli istiqamətlərin sayıdır. Başlanğıca qayıtmadan əvvəl _şəkli dönə biləcəyimiz sayca_ bu barədə də düşünə _bilərsiniz_ . Məsələn, bu qar uçqununun [[6]] əmri var. 
+[__Simmetriya qaydası__](gloss:order-of-symmetry) , şəklin eyni göründüyü fərqli istiqamətlərin sayıdır. Başlanğıca qayıtmadan əvvəl _şəkli dönə biləcəyimiz sayca_ bu barədə də düşünə _bilərsiniz_ . Məsələn, bu qar uçqununun [[6]] əmri var. 
 
 {.reveal(when="blank-0")} Hər dönüşün bucağıdır `"360°"/"order"` . Qar uçqununda bu `"360°"/6 = input(60)°` . 
 
@@ -665,12 +640,10 @@ Yo, banan [[oğlan]] !
 
 :::
 
-    // Maybe have another alphabeth to select all letters with rotational symmetry?
-
 ---
 > id: rotational-symmetry-1
 
- Bu şekillerin hər biri üçün sıranı və fırlanma bucağını tapın: 
+Bu şekillerin hər biri üçün sıranı və fırlanma bucağını tapın: 
 
 ::: column(width=220)
 
@@ -696,7 +669,7 @@ Yo, banan [[oğlan]] !
 > id: rotational-symmetry-2
 > goals: r0 r1 r2
 
- İndi bu formaları tamamlayın ki, fırlanma simmetriyası olsun: 
+İndi bu formaları tamamlayın ki, fırlanma simmetriyası olsun: 
 
 ::: column(width=220)
 
@@ -741,9 +714,7 @@ Yo, banan [[oğlan]] !
 
 > id: groups
 > section: symmetry-groups
-
-    // HINT: To recognise different configurations, we need to highlight the
-    // four corners in different colours.
+> translated: auto
 
  Bəzi şekillerdə birdən çox simmetriya var - [meydanda](gloss:square) sadə bir nümunə olaraq nəzər salaq. 
 
@@ -761,7 +732,7 @@ Yo, banan [[oğlan]] !
 
 ::: column.grow(width=200)
 
- Artıq yuxarıda göstərmisiniz ki, bir kvadrat [[4]] ox əksinə malikdir. 
+Artıq yuxarıda göstərmisiniz ki, bir kvadrat [[4]] ox əksinə malikdir. 
 
 {.reveal(when="blank-0")} Ayrıca [[90]]°, [[180]]° və [[270]]° ilə fırlanma simmetriyası var. 
 
@@ -775,7 +746,7 @@ Yo, banan [[oğlan]] !
 > id: add-symmetries
 > goals: sum-0 sum-1
 
- İndi bu simmetriyalarla həqiqətən bir arifmetika etməyə başlaya bilərik. Məsələn, yenilərini almaq üçün iki simmetriya _əlavə_ edə bilərik: 
+İndi bu simmetriyalarla həqiqətən bir arifmetika etməyə başlaya bilərik. Məsələn, yenilərini almaq üçün iki simmetriya _əlavə_ edə bilərik: 
 
 ::: column(width=260)
 
@@ -803,7 +774,7 @@ Yo, banan [[oğlan]] !
 > title: Symmetry Calculator
 > goals: calculate
 
- Bir kvadratın iki simmetriyasını əlavə etdiyiniz zaman yenisini alırsınız. Budur özünüzü sınaya biləcəyiniz bir "simmetriya kalkulyatoru": 
+Bir kvadratın iki simmetriyasını əlavə etdiyiniz zaman yenisini alırsınız. Budur özünüzü sınaya biləcəyiniz bir "simmetriya kalkulyatoru": 
 
     .calculator
       .display
@@ -822,14 +793,14 @@ Yo, banan [[oğlan]] !
 ---
 > id: symmetry-arithmetic
 
- Simmetriya kalkulyatoru ilə birlikdə oynamağa bir az vaxt sərf edin və hər hansı bir nümunə tapmağa çalışın. Bu müşahidələri tamamlaya bilərsinizmi? 
+Simmetriya kalkulyatoru ilə birlikdə oynamağa bir az vaxt sərf edin və hər hansı bir nümunə tapmağa çalışın. Bu müşahidələri tamamlaya bilərsinizmi? 
 
- * İki rotasiya əlavə etmək hər zaman [[bir fırlanma]] verəcəkdir [[| bir əks]] (və ya şəxsiyyət). * İki əksini əlavə etmək hər zaman [[bir dönüş]] verəcəkdir [[| bir əks]] (və ya şəxsiyyət). * Eyni qaydada eyni iki simmetriyi əlavə etmək [[bəzən fərqli verir | həmişə fərqli verir | həmişə eyni]] nəticə [[verir]] . * Şəxsiyyət əlavə [[etmək heç bir şey etmir | bir əks qaytarır | əksini qaytarır]] . 
+* İki rotasiya əlavə etmək hər zaman [[bir fırlanma]] verəcəkdir [[| bir əks]] (və ya şəxsiyyət). * İki əksini əlavə etmək hər zaman [[bir dönüş]] verəcəkdir [[| bir əks]] (və ya şəxsiyyət). * Eyni qaydada eyni iki simmetriyi əlavə etmək [[bəzən fərqli verir | həmişə fərqli verir | həmişə eyni]] nəticə [[verir]] . * Şəxsiyyət əlavə [[etmək heç bir şey etmir | bir əks qaytarır | əksini qaytarır]] . 
 
 ---
 > id: group-axioms
 
- Əlavə etməyi artıq başa düşə bilərdiniz __{.orange} simmetriyalar__ əslində əlavə etməyə çox oxşardır __{.green} tam ədədlər__ : 
+Əlavə etməyi artıq başa düşə bilərdiniz __{.orange} simmetriyalar__ əslində əlavə etməyə çox oxşardır __{.green} tam ədədlər__ : 
 
     ol.proof
     
@@ -894,17 +865,17 @@ Yo, banan [[oğlan]] !
 ---
 > id: groups-1
 
- Riyaziyyatda bu xüsusiyyətlərə sahib olan hər hansı bir kolleksiya [__qrup__](gloss:group) adlanır. Bəzi qruplar (kimi.) __{.orange}__ bir kvadratın __simmetriyaları__ ) yalnız sonlu sayda elementə malikdir. Digərləri (kimi.) __{.green} tam ədədlər__ ) sonsuzdur. 
+Riyaziyyatda bu xüsusiyyətlərə sahib olan hər hansı bir kolleksiya [__qrup__](gloss:group) adlanır. Bəzi qruplar (kimi.) __{.orange}__ bir kvadratın __simmetriyaları__ ) yalnız sonlu sayda elementə malikdir. Digərləri (kimi.) __{.green} tam ədədlər__ ) sonsuzdur. 
 
- Bu nümunədə meydanın səkkiz simmetriyasından başladıq. Əslində, hər həndəsi formanın öz __simmetriya qrupu var__ . Hamısının fərqli elementləri var, ancaq yuxarıdakı üç qaydanı həmişə yerinə yetirirlər. 
+Bu nümunədə meydanın səkkiz simmetriyasından başladıq. Əslində, hər həndəsi formanın öz __simmetriya qrupu var__ . Hamısının fərqli elementləri var, ancaq yuxarıdakı üç qaydanı həmişə yerinə yetirirlər. 
 
- Riyaziyyatda hər yerdə qruplar görünür. Elementlər ədəd və ya simmetriya ola bilər, eyni zamanda çoxbucaqlılar, dəyişmələr, matrislər, funksiyalar ... üç qaydaya əməl edən _hər şey_ . _Qrup nəzəriyyəsinin_ əsas fikri, ayrı-ayrı elementlərin _bir-biri ilə necə qarşılıqlı əlaqədə olmaları ilə_ maraqlanmamağımızdır. 
+Riyaziyyatda hər yerdə qruplar görünür. Elementlər ədəd və ya simmetriya ola bilər, eyni zamanda çoxbucaqlılar, dəyişmələr, matrislər, funksiyalar ... üç qaydaya əməl edən _hər şey_ . _Qrup nəzəriyyəsinin_ əsas fikri, ayrı-ayrı elementlərin _bir-biri ilə necə qarşılıqlı əlaqədə olmaları ilə_ maraqlanmamağımızdır. 
 
 ::: column.grow
 
- Məsələn, fərqli molekulların simmetriya qrupları elm adamlarına uyğun materialların xüsusiyyətlərini təxmin etməyə və izah etməyə kömək edə bilər. 
+Məsələn, fərqli molekulların simmetriya qrupları elm adamlarına uyğun materialların xüsusiyyətlərini təxmin etməyə və izah etməyə kömək edə bilər. 
 
- Qruplardan, stolüstü oyunlarda qazanılmış strategiyanı, tibbdəki virusların davranışını, musiqidəki fərqli harmoniyaları və bir çox digər anlayışları təhlil etmək üçün istifadə edilə bilər ... 
+Qruplardan, stolüstü oyunlarda qazanılmış strategiyanı, tibbdəki virusların davranışını, musiqidəki fərqli harmoniyaları və bir çox digər anlayışları təhlil etmək üçün istifadə edilə bilər ... 
 
 ::: column(width=340)
 
@@ -921,13 +892,13 @@ Yo, banan [[oğlan]] !
 
 > id: wallpaper-groups
 
- [Əvvəlki hissələrdə](/course/transformations/symmetry) iki fərqli çevrilməyə uyğun olan iki fərqli simmetriyanı gördük: fırlanma və əks. Ancaq üçüncü növ sərt çevrilmə üçün bir simmetriya da var: [[tərcümələr | fırlanır | uçurur]] . 
+[Əvvəlki hissələrdə](/course/transformations/symmetry) iki fərqli çevrilməyə uyğun olan iki fərqli simmetriyanı gördük: fırlanma və əks. Ancaq üçüncü növ sərt çevrilmə üçün bir simmetriya da var: [[tərcümələr | fırlanır | uçurur]] . 
 
 ---
 > id: wallpaper-groups-1
 > goals: play-0 play-1
 
- [__Tərcümə simmetriyası__](gloss:translational-symmetry) çiçəklər və ya kəpənəklər kimi təcrid olunmuş cisimlər üçün işləmir, ancaq hər tərəfə uzanan müntəzəm naxışlar üçündür: 
+[__Tərcümə simmetriyası__](gloss:translational-symmetry) çiçəklər və ya kəpənəklər kimi təcrid olunmuş cisimlər üçün işləmir, ancaq hər tərəfə uzanan müntəzəm naxışlar üçündür: 
 
 ::: column.grow
 
@@ -952,7 +923,7 @@ Yo, banan [[oğlan]] !
 ---
 > id: footsteps
 
- Yansıtıcı, fırlanma və tərcümə simmetriyasına əlavə olaraq, dördüncü bir növ də var: [__sürüşmə əks etdirmələri__](gloss:glide-reflection) . Bu əks və oxun eyni istiqamətdə bir tərcüməsidir. 
+Yansıtıcı, fırlanma və tərcümə simmetriyasına əlavə olaraq, dördüncü bir növ də var: [__sürüşmə əks etdirmələri__](gloss:glide-reflection) . Bu əks və oxun eyni istiqamətdə bir tərcüməsidir. 
 
     figure
       .footsteps
@@ -963,9 +934,9 @@ Yo, banan [[oğlan]] !
 ---
 > id: wallpaper-groups-2
 
- Bir naxış simmetriyanın birdən çox növünə sahib ola bilər. Eynilə meydanlarda olduğu kimi, bütün fərqli simmetriyalarını özündə ehtiva edən bir naxışın [simmetriya qrupunu](gloss:symmetry-group) tapa bilərik. 
+Bir naxış simmetriyanın birdən çox növünə sahib ola bilər. Eynilə meydanlarda olduğu kimi, bütün fərqli simmetriyalarını özündə ehtiva edən bir naxışın [simmetriya qrupunu](gloss:symmetry-group) tapa bilərik. 
 
- Bu qruplar naxışın necə _göründüyü_ (məsələn, rəngləri və formaları), necə _təkrarlandığı_ haqqında çox şey söyləmir. Çox fərqli naxışlar eyni simmetriya qrupuna sahib ola bilər - uzun müddət eyni şəkildə təkrarlanır və təkrarlanır. 
+Bu qruplar naxışın necə _göründüyü_ (məsələn, rəngləri və formaları), necə _təkrarlandığı_ haqqında çox şey söyləmir. Çox fərqli naxışlar eyni simmetriya qrupuna sahib ola bilər - uzun müddət eyni şəkildə təkrarlanır və təkrarlanır. 
 
 ::: column.grow
 
@@ -989,7 +960,7 @@ Yo, banan [[oğlan]] !
 > id: wallpaper-groups-3
 > goals: gallery
 
- Məlum olur ki, sonsuz sayda çox naxış olsa da, hamısının cəmi 17 fərqli simmetriya qrupundan biri var. Bunlara __divar kağızları qrupları__ deyilir. Hər divar kağızı qrupu tərcümə, dönmə, əks və sürüşmə əks birləşmələri ilə müəyyən edilir. Bu nümunələrdə [fırlanma mərkəzlərini](gloss:center-of-rotation) və [əks oxlarını görə bilərsinizmi](gloss:axis-of-symmetry) ? 
+Məlum olur ki, sonsuz sayda çox naxış olsa da, hamısının cəmi 17 fərqli simmetriya qrupundan biri var. Bunlara __divar kağızları qrupları__ deyilir. Hər divar kağızı qrupu tərcümə, dönmə, əks və sürüşmə əks birləşmələri ilə müəyyən edilir. Bu nümunələrdə [fırlanma mərkəzlərini](gloss:center-of-rotation) və [əks oxlarını görə bilərsinizmi](gloss:axis-of-symmetry) ? 
 
     x-gallery(slide-width="320")
       div
@@ -1066,7 +1037,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 > title: Drawing Wallpaper Symmetries
 > goals: draw-1 draw-2 switch
 
- Təəssüf ki, bu qruplardan _17-_ nin olması üçün sadə bir səbəb yoxdur və bunun daha inkişaf etmiş riyaziyyat tələb olunduğunu sübut etmək. Bunun əvəzinə, 17 divar kağızı qrupunun hər biri üçün öz təkrar nümunələrinizi çəkməyə cəhd edə bilərsiniz: 
+Təəssüf ki, bu qruplardan _17-_ nin olması üçün sadə bir səbəb yoxdur və bunun daha inkişaf etmiş riyaziyyat tələb olunduğunu sübut etmək. Bunun əvəzinə, 17 divar kağızı qrupunun hər biri üçün öz təkrar nümunələrinizi çəkməyə cəhd edə bilərsiniz: 
 
     include ./components/wallpaper
     x-wallpaper
@@ -1082,9 +1053,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- Divar kağızı qrupları hamısı düz, iki ölçülü naxışlar idi. Üç ölçülü naxışlar üçün oxşar bir şey edə bilərik: bunlara kristaloqrafik qruplar deyilir və bunların 219-u var! 
+Divar kağızı qrupları hamısı düz, iki ölçülü naxışlar idi. Üç ölçülü naxışlar üçün oxşar bir şey edə bilərik: bunlara kristaloqrafik qruplar deyilir və bunların 219-u var! 
 
- Tərcümə, əks, dönmə və sürüşmə əks etdirmələrinə əlavə olaraq, bu qruplara __sürüşmə təyyarələri__ və __vida baltaları__ kimi simmetriyalar daxildir (bir şüşə açmadan hərəkət haqqında düşünün). 
+Tərcümə, əks, dönmə və sürüşmə əks etdirmələrinə əlavə olaraq, bu qruplara __sürüşmə təyyarələri__ və __vida baltaları__ kimi simmetriyalar daxildir (bir şüşə açmadan hərəkət haqqında düşünün). 
 
 ::: column(width=300)
 
@@ -1101,16 +1072,17 @@ Perpendicular glide reflections, rotations of order 2, translations
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
- İndiyə qədər baxdığımız bütün simmetriklər müəyyən mənada _vizual_ idi: görünən formalar, şəkillər və ya naxışlar. Əslində simmetriya daha geniş bir konsepsiya ola bilər: _dəyişmə toxunulmazlığı_ . 
+İndiyə qədər baxdığımız bütün simmetriklər müəyyən mənada _vizual_ idi: görünən formalar, şəkillər və ya naxışlar. Əslində simmetriya daha geniş bir konsepsiya ola bilər: _dəyişmə toxunulmazlığı_ . 
 
- Məsələn, alma suyunu portağal suyu istədiyi qədər sevirsinizsə, alma və portağal dəyişdirən çevrilmə altında seçiminiz "simmetrikdir". 
+Məsələn, alma suyunu portağal suyu istədiyi qədər sevirsinizsə, alma və portağal dəyişdirən çevrilmə altında seçiminiz "simmetrikdir". 
 
- 1915-ci ildə alman riyaziyyatçısı [Emmy Noether](bio:noether) bənzər bir şeyin [təbiət qanunlarına](gloss:laws-of-nature) uyğun olduğunu müşahidə etdi. 
+1915-ci ildə alman riyaziyyatçısı [Emmy Noether](bio:noether) bənzər bir şeyin [təbiət qanunlarına](gloss:laws-of-nature) uyğun olduğunu müşahidə etdi. 
 
 ::: column.grow
 
- Məsələn, təcrübəmiz bizə deyir ki, Fizika qanunları kainatın hər yerində eynidir. Londonda və ya Nyu-Yorkda və ya Marsda bir sınaq keçirməyinizin əhəmiyyəti yoxdur - Fizika qanunları həmişə eyni olmalıdır. Bir şəkildə, onlar [[tərcümə simmetriyasına]] sahibdirlər [[| əks simmetriya]] . 
+Məsələn, təcrübəmiz bizə deyir ki, Fizika qanunları kainatın hər yerində eynidir. Londonda və ya Nyu-Yorkda və ya Marsda bir sınaq keçirməyinizin əhəmiyyəti yoxdur - Fizika qanunları həmişə eyni olmalıdır. Bir şəkildə, onlar [[tərcümə simmetriyasına]] sahibdirlər [[| əks simmetriya]] . 
 
 {.reveal(when="blank-0")} Eynilə, Şimal, Cənub, Şərq və ya Qərblə qarşılaşarkən bir təcrübə aparmağımızın əhəmiyyəti yoxdur: təbiət qanunlarında [[fırlanma simmetriyası var | sürüşmə əks simmetriyası]] . 
 
@@ -1125,9 +1097,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 ---
 > id: planets-1
 
- Bu "simmetriyalar" əvvəlcə olduqca mənasız görünə bilər, amma əslində kainatımız haqqında çox şey söyləyə bilər. Emmy Noether hər simmetrinin _qorunub saxlanılan_ müəyyən fiziki miqdara uyğun olduğunu sübut edə bildi. 
+Bu "simmetriyalar" əvvəlcə olduqca mənasız görünə bilər, amma əslində kainatımız haqqında çox şey söyləyə bilər. Emmy Noether hər simmetrinin _qorunub saxlanılan_ müəyyən fiziki miqdara uyğun olduğunu sübut edə bildi. 
 
- Məsələn, vaxt simmetriyası, __enerjinin__ kainatımızda qorunması lazım olduğunu ifadə edir: enerjini bir növdən digərinə (məsələn, elektrik enerjisinə) çevirə bilərsiniz, ancaq heç vaxt enerji yarada və ya məhv edə bilməzsiniz. Kainatdakı ümumi enerji miqdarı daim sabit qalacaq. 
+Məsələn, vaxt simmetriyası, __enerjinin__ kainatımızda qorunması lazım olduğunu ifadə edir: enerjini bir növdən digərinə (məsələn, elektrik enerjisinə) çevirə bilərsiniz, ancaq heç vaxt enerji yarada və ya məhv edə bilməzsiniz. Kainatdakı ümumi enerji miqdarı daim sabit qalacaq. 
 
     figure
       x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
@@ -1140,9 +1112,9 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 ::: column.grow
 
- Belə çıxır ki, simmetriya haqqında bilməklə fiziklər kainatımızı idarə edən çox təbiət qanunlarını - heç bir təcrübə və müşahidə aparmadan əldə edə bilərlər. 
+Belə çıxır ki, simmetriya haqqında bilməklə fiziklər kainatımızı idarə edən çox təbiət qanunlarını - heç bir təcrübə və müşahidə aparmadan əldə edə bilərlər. 
 
- Simmetriya hətta fundamental hissəciklərin mövcudluğunu proqnozlaşdıra bilər. Bir nümunə, məşhur __Higgs Boson__ : 1960-cı illərdə nəzəri fiziklər tərəfindən proqnozlaşdırıldı, ancaq 2012-ci ilə qədər real dünyada müşahidə edilmədi. 
+Simmetriya hətta fundamental hissəciklərin mövcudluğunu proqnozlaşdıra bilər. Bir nümunə, məşhur __Higgs Boson__ : 1960-cı illərdə nəzəri fiziklər tərəfindən proqnozlaşdırıldı, ancaq 2012-ci ilə qədər real dünyada müşahidə edilmədi. 
 
 :::
 
@@ -1152,17 +1124,18 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 > id: dilations
 > section: dilations
+> translated: auto
 
- Bu günə qədər yalnız [[sərt]] baxdı [[| məcmu | vizual]] çevrilmələr. _{span.reveal(when="blank-0")} İndi olmayan biri haqqında düşünək: bir [__dilation__](gloss:dilation) daha böyük və ya kiçik etməklə bir formanın ölçüsünü dəyişdirir._ 
+Bu günə qədər yalnız [[sərt]] baxdı [[| məcmu | vizual]] çevrilmələr. _{span.reveal(when="blank-0")} İndi olmayan biri haqqında düşünək: bir [__dilation__](gloss:dilation) daha böyük və ya kiçik etməklə bir formanın ölçüsünü dəyişdirir._ 
 
 ---
 > id: dilations-1
 
 ::: column.grow
 
- Bütün dilatların bir [__mərkəzi__](target:center) və bir [__miqyas amili var__](->.scale-target) . Mərkəz genişlənmə üçün istinad nöqtəsidir və miqyas amili rəqəmin nə qədər uzandığını və ya kiçildiyini söyləyir. 
+Bütün dilatların bir [__mərkəzi__](target:center) və bir [__miqyas amili var__](->.scale-target) . Mərkəz genişlənmə üçün istinad nöqtəsidir və miqyas amili rəqəmin nə qədər uzandığını və ya kiçildiyini söyləyir. 
 
- [Ölçək amili](gloss:scale-factor) 0 ilə 1 arasındadırsa, görüntü daha [[kiçikdir |]] orijinaldan [[daha]] böyükdür. Ölçək amili 1-dən böyükdürsə, görüntü daha [[böyükdür |]] orijinaldan [[kiçikdir]] . 
+[Ölçək amili](gloss:scale-factor) 0 ilə 1 arasındadırsa, görüntü daha [[kiçikdir |]] orijinaldan [[daha]] böyükdür. Ölçək amili 1-dən böyükdürsə, görüntü daha [[böyükdür |]] orijinaldan [[kiçikdir]] . 
 
 ::: column(width=300)
 
@@ -1190,20 +1163,6 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 {.todo} Tezliklə - Dilations haqqında daha çox 
 
-    // Here is how we can construct the dilation of a geometric shape:
-    // 
-    // ::: column(width=300)
-    // {.todo} COMING SOON – Animation
-    // ::: column.grow
-    // First we draw rays from the center of dilation to every point in the shape.
-    // 
-    // Now let’s measure the distance of all these points from the center of dilation.
-    // Then we can multiply the distance by the scale factor, and the measure the
-    // image of the point along the same ray.
-    // 
-    // All that’s left is to connect the transformed points in the image … all done!
-    // :::
-
 ---
 
 ## Bənzərlik 
@@ -1212,172 +1171,4 @@ Perpendicular glide reflections, rotations of order 2, translations
 > sectionStatus: dev
 > id: similarity
 
-::: column.grow
-
- Sərt dəyişikliklər üçün görüntü həmişə [[uyğun gəlir | daha böyük |]] orijinaldan [[kiçik]] - amma bu [[artıq deyil |]] dilatasyonlar üçün [[hələ də]] doğrudur. Bunun əvəzinə iki şəklin [__oxşar__](gloss:similar) olduğunu söyləyirik. Ümumi forma eyni, lakin mütləq eyni ölçüdə deyil. 
-
- Bənzərliyin simvolu `∼` (olduğu üçün uyğunluq simvoluna bənzəyir `≅` ). Bu nümunədə yazardıq `A ∼ A'` . 
-
-::: column(width=240)
-
-{.todo} GƏLƏCƏK - illüstrasiya 
-
-:::
-
----
-> id: perspective
-
-### Perspektiv rəsmlər 
-
- Birləşdirən şüalarla olan bu uzatmaların, demək olar ki, __perspektiv təsvirlərə bənzədiyini gördünüz__ . Dilation mərkəzi __yoxa çıxma nöqtəsi__ adlanır, çünki hər şeyin "uzaqda yoxa çıxdığı" olduğu kimi görünür. 
-
- Aşağıdakı şəkildəki yox olan nöqtəni tapın: 
-
-{.todo} Tezliklə Gələn - İnteraktiv 
-
- İndi mövcud olanlara uyğun başqa bir ev çəkə bilərsinizmi? 
-
----
-> id: similar-polygons
-
-### Bənzər çoxbucaqlar 
-
- Bənzərlik bizə şekiller haqqında çox şey deyə bilər. Məsələn, [dairələr](gloss:circle) , [meydanlar](gloss:square) və [bərabər tərəfli üçbucaqlar](gloss:equilateral-triangle) [[həmişə olur | bəzən | heç]] oxşar deyil. Fərqli ölçülərə sahib ola bilərlər, lakin həmişə eyni ümumi formaya malikdirlər. 
-
-::: column.grow
-
- Sağdakı iki dördbucaqlı oxşar. İlk vacib müşahidəmiz, bənzər çoxbucaqlılarda, uyğun açıların hamısı bir-birinə [uyğundur](gloss:congruent-angles) . Bu o deməkdir ki 
-
-{.text-center} [_{.m-red} ∡ABC_ ≅ _{.m-red} ∡A'B'C '_](target:a) _{.space}_ [_{.m-blue} ∡BCD_ ≅ _{.m-blue} ∡B'C'D '_](target:b)  
-[_{.m-green} ∡CDE_ ≅ _{.m-green} ∡C'D'E '_](target:c) _{.space}_ [_{.m-yellow} ∡DEA_ ≅ _{.m-yellow} ∡D'E'A '_](target:d) 
-
- İkinci vacib fakt, bənzər çoxbucaqlılarda, bütün tərəflər müvafiq genişlənmənin miqyas amili ilə __mütənasib__ şəkildə ölçülür. Əgər miqyas amili olarsa ${k}{k|1.5|0.5,2,0.1} , sonra 
-
-{.text-center}`|AB| ×`${k}`= |A'B'|` _{.space} _ `|BC| ×`${k}`= |B'C'|`  
-`|CD| ×`${k}`= |C'D'|`_ {.space} _ `|DE| ×`${k}`= |D'E'|`
-
- Bunun əvəzinə bu tənlikləri yenidən düzəldə və miqyas amilini tamamilə aradan qaldıra bilərik: 
-
-{.text-center}`|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
-
-    // This proportional relationship is true not just for the sides of the
-    // polygon, but also for properties like diagonals.
-
- Buna bənzər çoxbucaqlıları cəlb edən həqiqi həyat problemlərini həll etmək üçün istifadə edə bilərik - məsələn, digər tərəfləri bilsək itmiş tərəflərin uzunluğunu tapmaq. Növbəti hissədə bir neçə nümunə görəcəksiniz. 
-
-::: column(width=240)
-
-    x-geopad.sticky(width=240 height=360): svg
-      - var x = ['a', 'b', 'c', 'd']
-      - var initial = {a:[50,70], b:[160,50], c:[200,110], d:[150,160]}
-      - var next = {a:'b', b:'c', c:'d', d:'a'}
-      - var prev = {a:'d', b:'a', c:'b', d:'c'}
-      - var classes = {a:'red', b:'blue', c:'green', d:'yellow'}
-      each l in x
-        circle(name=l x=`point(${initial[l][0]},${initial[l][1]})` r=4 target=l)
-        path(x=`angle(${prev[l]},${l},${next[l]})` target=l class=classes[l])
-        path(x=`segment(${l},${next[l]})` target=`${l} ${next[l]}`)
-        circle(name=l+'1' r=4 x=`${l}.subtract({x:120,y:90}).scale(k).rotate(3).add({x:120,y:270})` target=l)
-        path(x=`angle(${prev[l]}1,${l}1,${next[l]}1)` target=l class=classes[l])
-        path(x=`segment(${l}1,${next[l]}1)` target=`${l} ${next[l]}`)
-
-:::
-
----
-> id: similar-triangles
-
-### Bənzər üçbucaqlar 
-
- Bənzərlik anlayışı üçbucaqlarla xüsusilə güclüdür. Bənzər çoxbucaqlılarda müvafiq daxili açıların bərabər olduğunu artıq bilirik. 
-
- Üçbucaqlar üçün bunun əksi də doğrudur: bu o deməkdir ki, əgər eyni üç bucaq ölçüsü olan iki üçbucaq varsa, onda üçbucaqlar oxşar olmalıdır. 
-
- Və daha da yaxşılaşır! Bilirik ki, üçbucaqdakı daxili açılar həmişə [[180]]° -ə qədər əlavə edir. Bu o deməkdir ki, üçbucaqda iki bucağı bilsək, həmişə üçüncüsünü işləyə bilərik. 
-
- Bənzərlik üçün bu, üçbucaqların oxşar olub olmadığını müəyyən etmək üçün yalnız _iki bucağı_ yoxlamaq lazım olduğunu bildirir. İki üçbucağın eyni ölçülü iki bucağı varsa, üçüncü bucaq hər ikisində də eyni olmalıdır. 
-
- Bu nəticə bəzən üçbucaqlar üçün [__AA oxşarlıq şərti__](gloss:triangle-aa) adlanır. (İki _biz_ müqayisə iki _açılar_ üçün durmaq.) 
-
-::: .theorem
-
- Bir üçbucaqdakı iki bucaq başqa üçbucaqdakı iki bucağa uyğundursa, iki üçbucaq oxşardır. 
-
-:::
-
----
-> id: similar-triangles-1
-
- Bunun faydalı olduğu bir neçə nümunəyə nəzər salaq: 
-
-::: column(width=320)
-
-{.todo} Tezliklə GƏLƏCƏK - Animasiya 
-
-::: column.grow
-
- Burada geniş bir mayak şəklini görə bilərsiniz. Bir dostunuzla birlikdə mayak hündürlüyünü ölçmək istəyirsiniz, amma təəssüf ki, zirvəyə qalxa bilmirik. 
-
- Məlum olur ki, çox yaxşı gizlədilmiş diaqramda iki oxşar üçbucaq var: biri mayak və onun kölgəsi, digəri dostunuz və onun kölgəsi tərəfindən formalaşmışdır. 
-
- Hər iki üçbucağın altındakı bir sağ açı var. Günəş şüaları paraleldir, yəni altındakı digər iki bucaq uyğun açılardır, eyni zamanda bərabərdir. Üçbucaqlar üçün AA şərti ilə bu ikisi oxşar olmalıdır. 
-
- Kölgələrin uzunluğunu asanlıqla ölçə bilərik və dostunuzun boyunu da bilirik. İndi mayakın hündürlüyünü tapmaq üçün oxşar üçbucaqlarda tərəflərin nisbətini istifadə edə bilərik: 
-
-{.todo} Tezliklə - tənlik 
-
- Buna görə mayak 1,5 m hündürdür. 
-
-:::
-
----
-> id: similar-triangles-2
-
-::: column(width=320)
-
-{.todo} Tezliklə GƏLƏCƏK - Animasiya 
-
-::: column.grow
-
- Eyni texnikanı yerdəki məsafələri ölçmək üçün istifadə edə bilərik. Burada böyük bir çayın genişliyini tapmaq istəyirik. Çayın bir tərəfində böyük bir ağac var və uzunluğu bir metr olan bir çubuq var. 
-
- Bu diaqramda başqa iki oxşar üçbucaq çəkməyə çalışın. 
-
- Çayın kənarındakı nöqtəni, çubuqun ucundan ağaca birbaşa görmə xəttində olan nöqtəni qeyd edə bilərsiniz. Sonra məsafəni çubuqa və birbaşa ağacın qarşısındakı nöqtəyə qədər ölçə bilərik. 
-
- Bir daha təkrar edirəm, bu iki üçbucaq AA vəziyyətinə görə oxşardır. Onların hər ikisi düzgün bucaq və bir-birinə əks açılardır. 
-
- Mütənasiblik qaydasına görə, bu o deməkdir 
-
-{.todo} Tezliklə - tənlik 
-
- Buna görə çayın eni 45 metrdir. 
-
-:::
-
----
-
-### Şüalardakı oxşarlıq 
-
- Teorem: Bir şüa üçbucağın bir bucağını bükərsə, əks tərəfi digər iki tərəfin uzunluğuna mütənasib olan hissələrə bölür. 
-
- Bu teoremi transverals ilə kəsilmiş çoxsaylı paralel xətlərin olduğu üçbucaqlardan kənar bir vəziyyətə uzada bilərik. 
-
- Teorem: Əgər üç və ya daha çox paralel xətt iki eninə keçidlə kəsilirsə, o zaman keçidləri mütənasib olaraq bölürlər. 
-
- Üçbucağın ortalama nöqtəsi haqqında düşünün. Bir ortalama üçbucağın bir tərəfinə paralel olur və digər iki tərəfi bərabər tutarlı yarıya bölür. Orta yarı bu iki tərəfi mütənasib olaraq bölür. 
-
- Üçbucağın nisbi teoremi: Üçbucağın bir tərəfinə paralel bir xətt digər iki tərəfi kəsirsə, o tərəfləri mütənasib olaraq bölür. 
-
- Üçbucaq nisbəti teoreminin tərsliyi: Bir xətt üçbucağın iki tərəfini mütənasib olaraq bölürsə, o zaman üçüncü tərəfə paraleldir. 
-
----
-
-### Özünə oxşarlıq 
-
- _Özlərini_ daha kiçik hissəsinə bənzəyən bəzi maraqlı riyazi formalar var. Buna misal olaraq __Sierpinksi Üçbucağıdır__ : bütün üçbucaq, __qurulduğu__ kiçik üçbucaqlardan hər hansı birinə bənzəyir. Böyütmək və sonsuz sayda daha kiçik və kiçik üçbucaq edə bilərsiniz. 
-
- Bu xassəyə malik formalar __Fraktallar__ adlanır. Onların bəzi təəccüblü və həqiqətən XXX xassələri var ki, bunları gələcəkdə daha çox öyrənəcəksiniz. 
-
----
-
- Üçbucaqlar yalnız məsafələri ölçmək üçün yararlı deyil. Növbəti kursda üçbucaqlar və onların xüsusiyyətləri haqqında daha çox şey öyrənəcəyik.
+TODO

@@ -88,7 +88,7 @@ on forever without any specific pattern:
 > goals: unroll
 
 Here is a wheel with diameter 1. As you “unroll” the circumference, you can see
-that its length is exactly [[`pi`|`2 * pi`|3]]:
+that its length is exactly [[`pi`|`2 pi`|3]]:
 
     figure: include svg/wheel.svg
     x-gesture(target="#wheel .wheel" slide="100,0")
