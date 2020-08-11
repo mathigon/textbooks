@@ -5,7 +5,9 @@
 
 /// <reference types="three"/>
 
-import {$, canvasPointerPosition, CanvasView, CustomElementView, ElementView, loadScript, register} from '@mathigon/boost';
+import { $, $N, canvasPointerPosition, CanvasView, CustomElementView, ElementView, loadScript, register} from '@mathigon/boost';
+
+import { RED,BLUE,GREEN,YELLOW,ORANGE,PURPLE } from '../../shared/constants';
 
 import {clamp} from '@mathigon/fermat';
 
@@ -19,8 +21,15 @@ export class VoxelPainter extends CustomElementView {
       convert to using built in mathigon mouse stuff
         especially for save button
         Talk about how to deal with unclicking mouse when not on canvas
-      Try orthographic
       More color variation with sides?
+
+      Bring back underside view
+      let's have the horizon, just stick the platform down a little further
+
+      Talk about 
+        Only calling the update when there is a pointerevent would be problematic because when you move the camera to a non cardinal direction...
+        scale = .00001 is good because less state
+        Can I bring the light with the camera? Weird to do more localToWorlds...
 
       Pull from master
       Create pull request
@@ -37,7 +46,6 @@ export class VoxelPainter extends CustomElementView {
     const v1 = new THREE.Vector3();
     const v2 = new THREE.Vector3();
 
-    const log = console.log;
     const scene = new THREE.Scene();
 
     let rotateOnly = this.attr('rotateOnly');
@@ -51,7 +59,6 @@ export class VoxelPainter extends CustomElementView {
     scene.background = new THREE.Color(0xf0f0f0);
     renderer.setSize(400, 400);
 
-    const updateFunctions: (() => void)[] = [];
     const objectsOnWhichVoxelsCanBePlaced: THREE.Object3D[] = [];
 
     const $canvas = $(renderer.domElement) as CanvasView;
@@ -59,8 +66,7 @@ export class VoxelPainter extends CustomElementView {
 
     // Save button, TODO not appearingS
     if (this.attr('showSaveButton') === 'true') {
-      const $button = $(document.createElement('BUTTON')) as ElementView;
-      log($button);
+      const $button = $N('button');
       this.append($button);
 
       $button.on('click', () => {
@@ -85,10 +91,15 @@ export class VoxelPainter extends CustomElementView {
     }
 
     const rendererSize = renderer.getSize();
-    const camera = new THREE.PerspectiveCamera(45, rendererSize.width / rendererSize.height, 1., 10000.);
-    // const cameraW = 30.;
-    // const cameraH = cameraW * rendererSize.height /rendererSize.width;
-    // const camera = new THREE.OrthographicCamera(-cameraW / 2., cameraW / 2., cameraH / 2., -cameraH / 2., 1., 10000.);
+    let camera = null
+    if (this.attr('cameraStyle') === 'orthographic' )
+    {
+      const cameraW = 30.;
+      const cameraH = cameraW * rendererSize.height /rendererSize.width;
+      camera = new THREE.OrthographicCamera(-cameraW / 2., cameraW / 2., cameraH / 2., -cameraH / 2., 1., 10000.);
+    }
+    else
+      camera = new THREE.PerspectiveCamera(45, rendererSize.width / rendererSize.height, 1., 10000.);
     camera.rotation.order = 'YXZ';
     camera.rotation.y = TAU/8.;
     camera.rotation.x =-TAU / 8.;
@@ -98,12 +109,12 @@ export class VoxelPainter extends CustomElementView {
     const voxelGeo = new THREE.BoxGeometry(1, 1, 1);
     const voxelMaterial = new THREE.MeshLambertMaterial({color: 0xfeb74c});
     if ( this.attr('colorSides') === 'true') {
-      voxelGeo.faces[0].color = new THREE.Color(1., .5, .5);
-      voxelGeo.faces[2].color = new THREE.Color(0., 1., 0.);
-      voxelGeo.faces[4].color = new THREE.Color(1., 1., 0.);
-      voxelGeo.faces[6].color = new THREE.Color(1., 0., 1.);
-      voxelGeo.faces[8].color = new THREE.Color(0., 1., 1.);
-      voxelGeo.faces[10].color = new THREE.Color(1., 1., 1.);
+      voxelGeo.faces[0].color = new THREE.Color().setHex(parseInt("0x"+RED.substr(1,6) ))
+      voxelGeo.faces[2].color = new THREE.Color().setHex(parseInt("0x"+BLUE.substr(1,6) ))
+      voxelGeo.faces[4].color = new THREE.Color().setHex(parseInt("0x"+GREEN.substr(1,6) ))
+      voxelGeo.faces[6].color = new THREE.Color().setHex(parseInt("0x"+YELLOW.substr(1,6) ))
+      voxelGeo.faces[8].color = new THREE.Color().setHex(parseInt("0x"+ORANGE.substr(1,6) ))
+      voxelGeo.faces[10].color = new THREE.Color().setHex(parseInt("0x"+PURPLE.substr(1,6) ))
       for (let i = 0; i < 6; ++i) {
         voxelGeo.faces[i * 2 + 1].color = voxelGeo.faces[i * 2 + 0].color;
       }
@@ -223,11 +234,9 @@ export class VoxelPainter extends CustomElementView {
       }
     }
 
-    const raycaster = new THREE.Raycaster();
-    const oldRay = new THREE.Ray();
+    const pointerRaycaster = new THREE.Raycaster();
 
-    // can be rotating, placing, erasing, null
-    let mouseControlMode = '';
+    let mouseControlMode: 'rotating' | 'placing' | 'erasing' | '' = ''
 
     const placingStart = new THREE.Vector3();
     const placingEnd = new THREE.Vector3();
@@ -266,25 +275,26 @@ export class VoxelPainter extends CustomElementView {
       snapToNearestValidCubeCenterPosition(p);
     }
 
-    const asyncRaycaster = new THREE.Raycaster();
+    const asyncPointerNdc = new THREE.Vector3()
+    const pointerNdc = new THREE.Vector3()
+    const oldPointerNdc = new THREE.Vector3()
     $canvas.on('pointermove', (event: PointerEvent) => {
       event.preventDefault();
 
       const p = canvasPointerPosition(event, $canvas);
       camera.updateMatrixWorld();
-      v1.set((p.x / $canvas.width ) * 2. - 1.,
+      asyncPointerNdc.set((p.x / $canvas.width ) * 2. - 1.,
           -(p.y / $canvas.height) * 2. + 1.);
-      asyncRaycaster.setFromCamera(v1, camera);
     });
 
     $canvas.on('pointerdown', (event: PointerEvent) => {
       event.preventDefault();
 
-      const eraserIntersected = raycaster.intersectObject(eraser)[0] !== undefined;
+      const eraserIntersected = pointerRaycaster.intersectObject(eraser)[0] !== undefined;
       if (eraserIntersected) {
         mouseControlMode = 'erasing';
       } else {
-        const intersection = raycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced)[0];
+        const intersection = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced)[0];
         if (intersection !== undefined && !rotateOnly) {
           mouseControlMode = 'placing';
           setPositionFromVoxelIntersection(placingStart, intersection);
@@ -342,13 +352,6 @@ export class VoxelPainter extends CustomElementView {
       placementVisualizer.scale.setScalar(1.);
     });
 
-    function getCameraSpaceDirectionInAxisPlane(worldSpaceDirection, axisPlane, target) {
-      target.copy(worldSpaceDirection);
-      camera.worldToLocal(target);
-      target[axisPlane] = 0.;
-      target.normalize();
-    }
-
     function getStepTowardDestination(currentValue, destination) {
       const distanceFromDestination = destination - currentValue;
       const sign = distanceFromDestination == 0. ? 0. : distanceFromDestination / Math.abs(distanceFromDestination);
@@ -359,20 +362,19 @@ export class VoxelPainter extends CustomElementView {
       return sign * speed;
     }
 
-    updateFunctions.push(()=> {
+    function loop() {
+      const clockDelta = clock.getDelta();
+      frameDelta = clockDelta < .1 ? clockDelta : .1; // clamped because debugger pauses create weirdness
+
+      oldPointerNdc.copy(pointerNdc)
+      pointerNdc.copy(asyncPointerNdc)
+      pointerRaycaster.setFromCamera(pointerNdc, camera)
+
       // camera
       {
-        if (mouseControlMode === 'rotating') {
-          getCameraSpaceDirectionInAxisPlane(raycaster.ray.direction, 'y', v1);
-          getCameraSpaceDirectionInAxisPlane(oldRay.direction, 'y', v2);
-          const horizontalDelta = v1.angleTo(v2) * (v1.x < v2.x ? 1. : -1.);
-
-          getCameraSpaceDirectionInAxisPlane(raycaster.ray.direction, 'x', v1);
-          getCameraSpaceDirectionInAxisPlane(oldRay.direction, 'x', v2);
-          const verticalDelta = v1.angleTo(v2) * (v1.y > v2.y ? 1. : -1.);
-
-          camera.rotation.y += horizontalDelta * 40.;
-          camera.rotation.x += verticalDelta * 35;
+        if (mouseControlMode === 'rotating') { 
+          camera.rotation.y -= (pointerNdc.x - oldPointerNdc.x)
+          camera.rotation.x += (pointerNdc.y - oldPointerNdc.y)
           camera.rotation.x = clamp(camera.rotation.x, -TAU / 4., TAU / 4.);
         } else {
           const desiredXAngle = -TAU / 14.;
@@ -392,9 +394,9 @@ export class VoxelPainter extends CustomElementView {
       }
 
       if (mouseControlMode === 'placing') {
-        const intersection = raycaster.intersectObjects(placingHelpers)[0];
+        const intersection = pointerRaycaster.intersectObjects(placingHelpers)[0];
         snapToNearestValidCubeCenterPosition(placingEnd);
-        if (intersection !== undefined ) {
+        if (intersection !== undefined) {
           placingEnd.copy(intersection.point);
           snapToNearestValidCubeCenterPosition(placingEnd);
 
@@ -407,7 +409,7 @@ export class VoxelPainter extends CustomElementView {
         if (mouseControlMode === 'rotating' || mouseControlMode === 'erasing' || rotateOnly) {
           placementVisualizer.scale.setScalar(.0000001);
         } else {
-          const intersections = raycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced);
+          const intersections = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced);
           if (intersections.length > 0) {
             setPositionFromVoxelIntersection(placementVisualizer.position, intersections[0]);
             placementVisualizer.scale.setScalar(1.);
@@ -418,12 +420,12 @@ export class VoxelPainter extends CustomElementView {
       }
 
       if (mouseControlMode === 'erasing') {
-        raycaster.ray.at(eraser.position.length(), eraser.position);
+        pointerRaycaster.ray.at(eraser.position.length(), eraser.position);
         camera.updateMatrixWorld();
         camera.worldToLocal(eraser.position);
 
-        const intersections = raycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced);
-        if (intersections.length > 0 ) {
+        const intersections = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced);
+        if (intersections.length > 0) {
           for (let i = 0, il = intersections.length; i < il; ++i) {
             if (intersections[i].object !== floorIntersectionPlane) {
               const voxel = intersections[i].object;
@@ -433,21 +435,9 @@ export class VoxelPainter extends CustomElementView {
             }
           }
         }
-      } else {
+      }
+      else
         eraser.position.lerp(eraser.defaultPosition, .1);
-      }
-    });
-
-    function loop() {
-      const clockDelta = clock.getDelta();
-      frameDelta = clockDelta < .1 ? clockDelta : .1; // clamped because debugger pauses create weirdness
-
-      oldRay.copy(raycaster.ray);
-      raycaster.ray.copy(asyncRaycaster.ray);
-
-      for (let i = 0; i < updateFunctions.length; i++) {
-        updateFunctions[i]();
-      }
 
       ++frameCount;
 
