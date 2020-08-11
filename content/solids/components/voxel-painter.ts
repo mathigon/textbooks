@@ -5,7 +5,7 @@
 
 /// <reference types="three"/>
 
-import { $, $N, canvasPointerPosition, CanvasView, CustomElementView, ElementView, loadScript, register} from '@mathigon/boost';
+import { animate, $, $N, canvasPointerPosition, CanvasView, CustomElementView, slide, loadScript, register} from '@mathigon/boost';
 
 import { RED,BLUE,GREEN,YELLOW,ORANGE,PURPLE } from '../../shared/constants';
 
@@ -18,16 +18,12 @@ export class VoxelPainter extends CustomElementView {
 
     /**
      * TODO
-      convert to using built in mathigon mouse stuff
-      Only update when necessary
+      different approach to eraser?
      */
 
     await loadScript('/resources/shared/vendor/three-91.min.js');
 
     const TAU = Math.PI * 2;
-
-    const clock = new THREE.Clock(true);
-    let frameDelta = 1. / 60.;
 
     const v1 = new THREE.Vector3();
     const v2 = new THREE.Vector3();
@@ -146,6 +142,7 @@ export class VoxelPainter extends CustomElementView {
           function(texture) {
             eraser.material.map = texture;
             eraser.material.needsUpdate = true;
+            updateApplet()
           },
           undefined,
           function(err) {
@@ -281,77 +278,111 @@ export class VoxelPainter extends CustomElementView {
 
       const p = canvasPointerPosition(event, $canvas);
       camera.updateMatrixWorld();
-      asyncPointerNdc.set((p.x / $canvas.width ) * 2. - 1.,
-          -(p.y / $canvas.height) * 2. + 1.);
+      asyncPointerNdc.set( (p.x / $canvas.width ) * 2. - 1.,
+                          -(p.y / $canvas.height) * 2. + 1.);
+
+      updateApplet()
     });
 
-    // slide($canvas, {
-    //   down: () => { },
-    //   move: () => { },
-    //   end: () => { }
-    // })
+    slide($canvas, {
 
-    $canvas.on('pointerdown', (event: PointerEvent) => {
-      event.preventDefault();
+      down: () => {
+        const eraserIntersected = pointerRaycaster.intersectObject(eraser)[0] !== undefined;
+        if (eraserIntersected) {
+          mouseControlMode = 'erasing';
+        } else {
+          const intersection = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced)[0];
+          if (intersection !== undefined && !rotateOnly) {
+            mouseControlMode = 'placing';
+            setPositionFromVoxelIntersection(placingStart, intersection);
+            placingEnd.copy(placingStart);
 
-      const eraserIntersected = pointerRaycaster.intersectObject(eraser)[0] !== undefined;
-      if (eraserIntersected) {
-        mouseControlMode = 'erasing';
-      } else {
-        const intersection = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced)[0];
-        if (intersection !== undefined && !rotateOnly) {
-          mouseControlMode = 'placing';
-          setPositionFromVoxelIntersection(placingStart, intersection);
-          placingEnd.copy(placingStart);
+            // corner of cube that is away from camera
+            getCameraDirectionSnappedToGrid(v1)
+            v1.add(placingStart);
+            for (let i = 0; i < 3; i++) {
+              placingHelpers[i].position.copy(v1);
+              placingHelpers[i].updateMatrixWorld();
+            }
+          } else mouseControlMode = 'rotating';
+        }
+      },
 
-          // corner of cube that is away from camera
-          getCameraDirectionSnappedToGrid(v1)
-          v1.add(placingStart);
-          for (let i = 0; i < 3; i++) {
-            placingHelpers[i].position.copy(v1);
-            placingHelpers[i].updateMatrixWorld();
-          }
-        } else mouseControlMode = 'rotating';
-      }
-    });
+      move: updateApplet,
 
-    $canvas.on('pointerup', (event: PointerEvent) => {
-      event.preventDefault();
+      up: () => {
+        if (mouseControlMode === 'placing') {
+          mouseControlMode = '';
+          
+          let iComponent = 0;
+          if (placingStart.x === placingEnd.x) iComponent = 1;
+          if (placingStart.y === placingEnd.y) iComponent = 2;
+          if (placingStart.z === placingEnd.z) iComponent = 0;
+          const jComponent = (iComponent + 1) % 3;
+          const kComponent = (jComponent + 1) % 3;
+          const k = placingStart.getComponent(kComponent);
 
-      if (mouseControlMode === 'placing') {
-        let iComponent = 0;
-        if (placingStart.x === placingEnd.x) iComponent = 1;
-        if (placingStart.y === placingEnd.y) iComponent = 2;
-        if (placingStart.z === placingEnd.z) iComponent = 0;
-        const jComponent = (iComponent + 1) % 3;
-        const kComponent = (jComponent + 1) % 3;
-        const k = placingStart.getComponent(kComponent);
+          const iStart = Math.min(placingStart.getComponent(iComponent), placingEnd.getComponent(iComponent));
+          const iLimit = Math.max(placingStart.getComponent(iComponent), placingEnd.getComponent(iComponent));
+          const jStart = Math.min(placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent));
+          const jLimit = Math.max(placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent));
 
-        const iStart = Math.min( placingStart.getComponent(iComponent), placingEnd.getComponent(iComponent) );
-        const iLimit = Math.max( placingStart.getComponent(iComponent), placingEnd.getComponent(iComponent) );
-        const jStart = Math.min( placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent) );
-        const jLimit = Math.max( placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent) );
-
-        const potentialNewPosition = new THREE.Vector3();
-        for ( let i = iStart; i <= iLimit; i+= 1.) {
-          for ( let j = jStart; j <= jLimit; j += 1.) {
-            potentialNewPosition.setComponent(kComponent, k);
-            potentialNewPosition.setComponent(iComponent, i);
-            potentialNewPosition.setComponent(jComponent, j);
-            snapToNearestValidCubeCenterPosition(potentialNewPosition);
-            let alreadyOccupied = false;
-            voxels.forEach((voxel)=>{
-              if (voxel.position.equals(potentialNewPosition)) alreadyOccupied = true;
-            });
-            if (!alreadyOccupied)
-              new Voxel().position.copy(potentialNewPosition);
+          const potentialNewPosition = new THREE.Vector3();
+          for (let i = iStart; i <= iLimit; i += 1.) {
+            for (let j = jStart; j <= jLimit; j += 1.) {
+              potentialNewPosition.setComponent(kComponent, k);
+              potentialNewPosition.setComponent(iComponent, i);
+              potentialNewPosition.setComponent(jComponent, j);
+              snapToNearestValidCubeCenterPosition(potentialNewPosition);
+              let alreadyOccupied = false;
+              voxels.forEach((voxel) => {
+                if (voxel.position.equals(potentialNewPosition)) alreadyOccupied = true;
+              });
+              if (!alreadyOccupied)
+                new Voxel().position.copy(potentialNewPosition);
+            }
           }
         }
-      }
 
-      mouseControlMode = '';
-      placementVisualizer.scale.setScalar(1.);
-    });
+        if(mouseControlMode === 'erasing')
+        {
+          mouseControlMode = '';
+
+          animate((timeSinceStart,timeDifference,cancel) => {
+            eraser.position.lerp(eraser.defaultPosition, .1);
+            updateApplet()
+
+            if(eraser.position.distanceToSquared(eraser.defaultPosition) < .001)
+              cancel()
+          },)
+        }
+
+        if(mouseControlMode === 'rotating')
+        {
+          mouseControlMode = '';
+
+          animate((timeSinceStart,timeDifference,cancel) => {
+            // snapspace is where the angles we want are integers
+            const snapSpaceAngleX = camera.rotation.x / (TAU / 14.);
+            let destination = Math.round(snapSpaceAngleX)
+            // destination = clamp(destination, -1, 1)
+            const stepX = getStepTowardDestination(snapSpaceAngleX, destination);
+            const newSnapSpaceAngleX = snapSpaceAngleX + stepX
+            camera.rotation.x = newSnapSpaceAngleX * (TAU / 14.);
+
+            const snapSpaceAngleY = camera.rotation.y / (TAU / 8.);
+            const stepY = getStepTowardDestination(snapSpaceAngleY, Math.round(snapSpaceAngleY));
+            const newSnapSpaceAngleY = snapSpaceAngleY + stepY
+            camera.rotation.y = newSnapSpaceAngleY * (TAU / 8.);
+
+            updateApplet()
+
+            if(stepX == 0. && stepY == 0.)
+              cancel()
+          })
+        }
+      }
+    })
 
     function getStepTowardDestination(currentValue, destination) {
       const distanceFromDestination = destination - currentValue;
@@ -363,31 +394,19 @@ export class VoxelPainter extends CustomElementView {
       return sign * speed;
     }
 
-    function loop() {
-      const clockDelta = clock.getDelta();
-      frameDelta = clockDelta < .1 ? clockDelta : .1; // clamped because debugger pauses create weirdness
+    let lastVoxelIntersectedByEraser = null
 
+    function updateApplet() {
       oldPointerNdc.copy(pointerNdc)
       pointerNdc.copy(asyncPointerNdc)
       pointerRaycaster.setFromCamera(pointerNdc, camera)
 
       // camera
       {
-        if (mouseControlMode === 'rotating') { 
+        if (mouseControlMode === 'rotating') {
           camera.rotation.y -= (pointerNdc.x - oldPointerNdc.x)
           camera.rotation.x += (pointerNdc.y - oldPointerNdc.y)
           camera.rotation.x = clamp(camera.rotation.x, -TAU / 4., TAU / 4.);
-        } else {
-          // snapspace is where the angles we want are integers
-          const snapSpaceAngleX = camera.rotation.x / (TAU / 14.);
-          let destination = Math.round(snapSpaceAngleX)
-          // destination = clamp(destination, -1, 1)
-          const newSnapSpaceAngleX = snapSpaceAngleX + getStepTowardDestination(snapSpaceAngleX, destination );
-          camera.rotation.x = newSnapSpaceAngleX * (TAU / 14.);
-
-          const snapSpaceAngleY = camera.rotation.y / (TAU / 8.);
-          const newSnapSpaceAngleY = snapSpaceAngleY + getStepTowardDestination(snapSpaceAngleY, Math.round(snapSpaceAngleY));
-          camera.rotation.y = newSnapSpaceAngleY * (TAU / 8.);
         }
 
         const currentDistFromCamera = camera.position.length();
@@ -396,6 +415,9 @@ export class VoxelPainter extends CustomElementView {
         camera.localToWorld(v1);
         camera.position.sub(v1);
       }
+
+      if (mouseControlMode === '')
+        placementVisualizer.scale.setScalar(1.)
 
       if (mouseControlMode === 'placing') {
         const intersection = pointerRaycaster.intersectObjects(placingHelpers)[0];
@@ -430,24 +452,22 @@ export class VoxelPainter extends CustomElementView {
         camera.updateMatrixWorld();
         camera.worldToLocal(eraser.position);
 
-        const intersections = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced);
-        if (intersections.length > 0) {
-          for (let i = 0, il = intersections.length; i < il; ++i) {
-            if (intersections[i].object !== floorIntersectionPlane) {
-              const voxel = intersections[i].object;
-              scene.remove(voxel);
-              objectsOnWhichVoxelsCanBePlaced.splice(objectsOnWhichVoxelsCanBePlaced.indexOf(voxel), 1);
-              voxels.splice(voxels.indexOf(voxel), 1);
-            }
-          }
-        }
-      }
-      else
-        eraser.position.lerp(eraser.defaultPosition, .1);
+        let voxelIntersectedByEraser = null
+        const intersections = pointerRaycaster.intersectObjects(voxels);
+        if (intersections.length > 0) voxelIntersectedByEraser = intersections[0].object
 
-      requestAnimationFrame(loop);
+        if (voxels.indexOf(lastVoxelIntersectedByEraser) !== -1 && lastVoxelIntersectedByEraser !== voxelIntersectedByEraser)
+        {
+          scene.remove(lastVoxelIntersectedByEraser);
+          objectsOnWhichVoxelsCanBePlaced.splice(objectsOnWhichVoxelsCanBePlaced.indexOf(lastVoxelIntersectedByEraser), 1);
+          voxels.splice(voxels.indexOf(lastVoxelIntersectedByEraser), 1);
+        }
+        lastVoxelIntersectedByEraser = voxelIntersectedByEraser
+      }
+
       renderer.render(scene, camera);
     }
-    loop();
+    
+    updateApplet()
   }
 }
