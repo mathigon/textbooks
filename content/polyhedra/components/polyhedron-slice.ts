@@ -81,7 +81,8 @@ export class PolyhedronSlice extends CustomElementView {
     const mathPlane = new THREE.Plane();
     const centre = new THREE.Vector3();
 
-    let useMerge = true;
+    // need to settle on an approach - my current implementation of "merge" seems quite laggy
+    let useMerge = false;
     function updateIntersection() {
       if (useMerge)
         updateIntersectionMerge();
