@@ -3,7 +3,7 @@
 // (c) Mathigon
 // =============================================================================
 
-import {Step} from '../shared/types';
+import {Step, Geopad} from '../shared/types';
 import {ElementView} from '@mathigon/boost';
 import {Point} from '@mathigon/fermat';
 
@@ -174,35 +174,43 @@ export function playWithMe($step: Step) {
 
   console.log($step.model);
 
+  const $geopad = $step.$('x-geopad') as Geopad;
+
   // buttons
   const buttons = $step.$$('.button');
 
   // paths
   const _fabric = $step.$$('.fabric');
 
-  // QUESTION: how to animate these instead of just setting them instantly?
   // identity
   buttons[0].on('click', () => {
-    $step.model.ipoint = new Point(1, 0);
-    $step.model.jpoint = new Point(0, 1);
+    $geopad.animatePoint('ipoint', new Point(1, 0), 1000);
+    $geopad.animatePoint('jpoint', new Point(0, 1), 1000);
   });
 
   // skew
   buttons[1].on('click', () => {
-    $step.model.ipoint = new Point(1, 0);
-    $step.model.jpoint = new Point(1, 1);
+    $geopad.animatePoint('ipoint', new Point(1, 0), 1000);
+    $geopad.animatePoint('jpoint', new Point(1, 1), 1000);
   });
 
   // scale
   buttons[2].on('click', () => {
-    $step.model.ipoint = new Point(2, 0);
-    $step.model.jpoint = new Point(0, 2);
+    $geopad.animatePoint('ipoint', new Point(2, 0), 1000);
+    $geopad.animatePoint('jpoint', new Point(0, 2), 1000);
   });
 
   // rotate
   buttons[3].on('click', () => {
-    $step.model.ipoint = new Point(0, 1);
-    $step.model.jpoint = new Point(-1, 0);
+    $geopad.animatePoint('ipoint', new Point(0, 1), 1000);
+    $geopad.animatePoint('jpoint', new Point(-1, 0), 1000);
+  });
+
+  // determinant = 0
+  buttons[4].on('click', () => {
+    $geopad.animatePoint('ipoint', new Point(1, 1), 1000);
+    $geopad.animatePoint('jpoint', new Point(-1, -1), 1000);
+
   });
 }
 
@@ -214,5 +222,45 @@ export function determinants($step:Step) {
     const i = state.ipoint;
     const j = state.jpoint;
     $step.model.determinant = i.x * j.y - i.y * j.x;
+  });
+
+  const $geopad = $step.$('x-geopad') as Geopad;
+
+  // buttons
+  const buttons = $step.$$('.button');
+
+  // paths
+  const _fabric = $step.$$('.fabric');
+
+  // identity
+  buttons[0].on('click', () => {
+    console.log('button');
+    $geopad.animatePoint('ipoint', new Point(1, 0), 1000);
+    $geopad.animatePoint('jpoint', new Point(0, 1), 1000);
+  });
+
+  // skew
+  buttons[1].on('click', () => {
+    $geopad.animatePoint('ipoint', new Point(1, 0), 1000);
+    $geopad.animatePoint('jpoint', new Point(1, 1), 1000);
+  });
+
+  // scale
+  buttons[2].on('click', () => {
+    $geopad.animatePoint('ipoint', new Point(2, 0), 1000);
+    $geopad.animatePoint('jpoint', new Point(0, 2), 1000);
+  });
+
+  // rotate
+  buttons[3].on('click', () => {
+    $geopad.animatePoint('ipoint', new Point(0, 1), 1000);
+    $geopad.animatePoint('jpoint', new Point(-1, 0), 1000);
+  });
+
+  // determinant = 0
+  buttons[4].on('click', () => {
+    $geopad.animatePoint('ipoint', new Point(1, 1), 1000);
+    $geopad.animatePoint('jpoint', new Point(-1, -1), 1000);
+
   });
 }

@@ -218,10 +218,13 @@ Linear transformation means each grid line will remain "parallel and evenly spac
 Here we display the [i](target:i) and [j](target:j) unit vectors.
 Inside the matrix we have i = (${ipoint.x}, ${ipoint.y}) and j = (${jpoint.x}, ${jpoint.y})
 
+Choose one of these buttons.
+
     .button IDENTITY
     .button SKEW
     .button SCALE
     .button ROTATE
+    .button LINE
 
 Press the buttons to...
 
@@ -350,7 +353,7 @@ a point (as in Axiom 3).
 
 > section: determinants
 > sectionStatus: dev
-> id: determinants
+> id: intro
 
 {.todo} COMING SOON
 
@@ -377,6 +380,9 @@ Skew doesn't change it.
 
 ^^^^^ Scrap this for parts ^^^^^^ See we can turn a "rotate" into a more general "applyMatrix" or "transform"
 
+---
+
+> id: determinants
 
 Watch the area change.
 
@@ -405,6 +411,16 @@ Watch the area change.
 Inside the matrix we have i = (${ipoint.x}, ${ipoint.y}) and j = (${jpoint.x}, ${jpoint.y})
 
 The deterimant is ${determinant}
+
+Choose one of these buttons.
+
+    .button IDENTITY
+    .button SKEW
+    .button SCALE
+    .button ROTATE
+    .button LINE
+
+---
 
 > id: det-formula
 
