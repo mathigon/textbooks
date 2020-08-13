@@ -4,29 +4,10 @@
 > sectionStatus: dev
 > id: test
 
-{.todo} COMING SOON
-
-::: column.grow
-
-We rotate point [P](target:p) by ${th + '°'}{th|60|10,350,10} around the origin.
-
-::: column(width=400)
-
-    x-geopad(width=400 x-axis="-5,5,1" y-axis="-5,5,1" axes grid padding=5): svg
-      circle.move.green(name="p" x="point(2,3)" label="P" target="p")
-      circle.green(name="q" x="p.rotate(th/180*pi)" label="P'")
-      
-      path.green(x="segment(point(0,0),p)")
-      path.green(x="segment(point(0,0),q)")
-
-      - var str = ['point(0,0)','p','q'].join(',')
-      path.fill.green(x=`polygon(${str})` label="a²" label-class="white")
-
-:::
+{.todo} IN PROGRESS
 
 We want to draw a spaceship.
 We can represent our spaceship as a collection of points.
-
 
 When we rotate each point A, B, C, etc, we will give the new point the name A’ (A prime), B’, C’
 
@@ -69,7 +50,7 @@ Here is a spaceship we can rotate by ${phi + 'º'}{phi|60|10,350,10} around the 
 
 > id: unit-j
 
-REVISE: put unit-i and unit-j side by side, so there's not so much emphasis on them.
+{.fixme} REVISE: put unit-i and unit-j side by side, so there's not so much emphasis on them.
 
 Now let's look at one point at a time how this might work.
 Let's rotate this point [A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,10} around the origin. Our rotated point is called [A'](target:ap).
@@ -252,7 +233,6 @@ Press the buttons to...
 > section: arithmetic
 > sectionStatus: dev
 
-This is easy.
 * Two matrices can be added only if they have the same dimensions.
 * The resulting matrix will be the same dimension as the matrices added.
 * Each value in location (x,y) of the resulting matrix will be the sum of the values at (x,y) in the other two matrices.
