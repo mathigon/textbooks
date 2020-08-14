@@ -5,10 +5,10 @@
 
 
 import {last} from '@mathigon/core';
-import {register, CustomElementView, slide} from '@mathigon/boost';
+import {CustomElementView, register, slide} from '@mathigon/boost';
 import {clamp, Point} from '@mathigon/fermat';
 import {create3D} from '../../shared/components/webgl';
-import { Material } from 'three';
+import {Material} from 'three';
 
 
 function getGeometry(name: string) {
@@ -40,7 +40,7 @@ export class PolyhedronSlice extends CustomElementView {
     // Create polyhedron object
     const geometry = getGeometry(this.attr('shape') || 'cube');
     const material = new THREE.MeshPhongMaterial({opacity: Number(this.attr('opacity')) || 0.8, color: 0xcd0e66,
-    transparent: true, specular: 0x222222});
+      transparent: true, specular: 0x222222});
     const polyhedron = new THREE.Mesh(geometry, material);
     polyhedron.renderOrder = 5;
     sceneObj.add(polyhedron);
@@ -82,19 +82,20 @@ export class PolyhedronSlice extends CustomElementView {
     const centre = new THREE.Vector3();
 
     // need to settle on an approach - my current implementation of "merge" seems quite laggy
-    let useMerge = false;
+    const useMerge = false;
     function updateIntersection() {
-      if (useMerge)
+      if (useMerge) {
         updateIntersectionMerge();
-      else
+      } else {
         updateIntersectionCurve();
+      }
     }
 
     function updateIntersectionMerge() {
       const planeGeo = (plane.geometry as THREE.Geometry);
       const polyGeo = (polyhedron.geometry as THREE.Geometry);
       // a geometry for the intersection segments
-      let mergedGeometry = new THREE.Geometry();
+      const mergedGeometry = new THREE.Geometry();
 
       mathPlane.setFromCoplanarPoints(planeGeo.vertices[planeGeo.faces[0].a],
           planeGeo.vertices[planeGeo.faces[0].b],
@@ -111,18 +112,17 @@ export class PolyhedronSlice extends CustomElementView {
         for (const l of [[a, b], [b, c], [c, a]]) {
           const line = new THREE.Line3(l[0], l[1]);
           const intersection = mathPlane.intersectLine(line, centre);
-          if (intersection)
-          {
-            let pt:THREE.Vector3 = intersection.clone();
+          if (intersection) {
+            const pt:THREE.Vector3 = intersection.clone();
             const closest = Math.min(...thisvertices.map(p => pt.distanceTo(p)));
-            // I'm occasionally getting three points returned by THREE but 
+            // I'm occasionally getting three points returned by THREE but
             // two of them only differ by round off
-            if (closest > tolerance)
+            if (closest > tolerance) {
               thisvertices.push(pt);
+            }
           }
         }
-        if (thisvertices.length == 2)
-        { 
+        if (thisvertices.length == 2) {
           const line = new THREE.LineCurve3(thisvertices[0], thisvertices[1]);
           const geometry = new THREE.TubeGeometry(line, 1, 0.02, undefined, false);
           mergedGeometry.merge(geometry);
@@ -157,32 +157,30 @@ export class PolyhedronSlice extends CustomElementView {
         for (const l of [[a, b], [b, c], [c, a]]) {
           const line = new THREE.Line3(l[0], l[1]);
           const intersection = mathPlane.intersectLine(line, centre);
-          if (intersection)
-          {
-            let pt:THREE.Vector3 = intersection.clone();
+          if (intersection) {
+            const pt:THREE.Vector3 = intersection.clone();
             const closest = Math.min(...thisvertices.map(p => pt.distanceTo(p)));
-            // I'm occasionally getting three points returned by THREE but 
+            // I'm occasionally getting three points returned by THREE but
             // two of them only differ by round off
-            if (closest > tolerance)
+            if (closest > tolerance) {
               thisvertices.push(pt);
+            }
           }
         }
-        if (thisvertices.length == 2)
-        {
+        if (thisvertices.length == 2) {
           segments.push(thisvertices);
         }
       }
 
       // find the line segment that connects to the current point
-      function findNextSegment(current:THREE.Vector3, segments:THREE.Vector3[][])
-      {
-        for (let i = 0; i < segments.length; ++i)
-        {
+      function findNextSegment(current:THREE.Vector3, segments:THREE.Vector3[][]) {
+        for (let i = 0; i < segments.length; ++i) {
           const s:THREE.Vector3[] = segments[i];
-          if (s[0].distanceTo(current) < tolerance)
-            return {index:i, seg:s};
-          else if (s[1].distanceTo(current) < tolerance)
-            return {index:i, seg:s.reverse()};
+          if (s[0].distanceTo(current) < tolerance) {
+            return {index: i, seg: s};
+          } else if (s[1].distanceTo(current) < tolerance) {
+            return {index: i, seg: s.reverse()};
+          }
         }
         return undefined;
       }
@@ -190,21 +188,21 @@ export class PolyhedronSlice extends CustomElementView {
       const alllinked: THREE.Vector3[] = [];
       let current = segments.shift();
       let sanity = 0;
-      if (current)
-      {
+      if (current) {
         alllinked.push(...current);
-        while (segments.length)
-        {
-          if (++sanity > 30)
+        while (segments.length) {
+          if (++sanity > 30) {
             break;
+          }
           const next = findNextSegment(current[1], segments);
-          if (!next)
+          if (!next) {
             break;
+          }
           alllinked.push(next.seg[1]);  // the first point is already there
           // alllinked.push(...next.seg);
           segments.splice(next.index, 1);
           current = next.seg;
-        };
+        }
 
         const curve = new THREE.CurvePath<THREE.Vector3>();
         for (let i = 0; i < alllinked.length - 2; ++i) {
@@ -259,10 +257,11 @@ export class PolyhedronSlice extends CustomElementView {
           const d = posn.subtract(last).scale(Math.PI / 180 / 2);
           const euler = new THREE.Euler(d.y, d.x, 0, 'XYZ');
           const q = new THREE.Quaternion().setFromEuler(euler);
-          if (target === 'shape')
+          if (target === 'shape') {
             polyhedron.quaternion.multiplyQuaternions(q, polyhedron.quaternion);
-          else
+          } else {
             sceneObj.quaternion.multiplyQuaternions(q, sceneObj.quaternion);
+          }
         }
 
         updateIntersection();
