@@ -362,9 +362,14 @@ __normal distribution__.
 
 > section: trees
 > sectionStatus: dev
+> id: galton-board
+
+Here is a galton board:
+
+    figure
+      svg.galton(width=400 height=500)
 
 {.todo} TODO
-
 
 ---
 
