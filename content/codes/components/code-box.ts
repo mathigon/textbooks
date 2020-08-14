@@ -4,7 +4,7 @@
 // ============================================================================
 
 
-import {CustomElementView, register, ElementView, $N, hover} from '@mathigon/boost';
+import {$N, CustomElementView, ElementView, hover, register} from '@mathigon/boost';
 
 
 type EncodeFn = (s: string, $el: ElementView) => void;

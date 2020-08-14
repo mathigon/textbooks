@@ -4,6 +4,7 @@
 // =============================================================================
 
 
+/// <reference types="THREE"/>
 import {register} from '@mathigon/boost';
 import {Solid} from '../../shared/components/solid';
 
@@ -20,18 +21,17 @@ for (const i of [-1, 0, 1]) {
 }
 
 function step(child: THREE.Object3D) {
-  child.scale.set(1/3, 1/3, 1/3);
+  child.scale.set(1 / 3, 1 / 3, 1 / 3);
   const obj = new THREE.Object3D();
 
   for (const p of positions) {
     const part = child.clone();
-    part.position.set(p[0]/3, p[1]/3, p[2]/3);
+    part.position.set(p[0] / 3, p[1] / 3, p[2] / 3);
     obj.add(part);
   }
 
   return obj;
 }
-
 
 
 @register('x-menger-sponge', {attributes: ['steps']})

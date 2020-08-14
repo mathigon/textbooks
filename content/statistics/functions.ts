@@ -39,8 +39,9 @@ export function roulette($step: Step) {
       if (Math.abs(ballSpeed) > 0.00032) {
         ballAngle = (ballAngle + dt * ballSpeed) % (2 * Math.PI);
       } else {
-        if (!ballOffset) ballOffset =
-            roundTo(ballAngle - angle, 2 * Math.PI / 37);
+        if (!ballOffset) {
+          ballOffset = roundTo(ballAngle - angle, 2 * Math.PI / 37);
+        }
         ballAngle = angle + ballOffset;
       }
 

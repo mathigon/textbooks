@@ -269,7 +269,7 @@ size of the [internal angles](target:int-angle) of the polygon:
 (360°)/var("n")) = var("round(90-180/n,2)")`
 
 {.reveal(when="blank-3")} To find the apothem, we can use the definition of
-[[tangents|sine|cosine]]:
+the [[tangent|sine|cosine]] function:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
 target("opposite", "apothem") / target("adjacent", "half-base") =
@@ -1309,9 +1309,9 @@ knows if there are any others, or if these 15 are the only ones…
 
 ### Tessellations in Art
 
-Tessellations we both a tool and inspiration for many artists, architects and 
-designer – most famously the Dutch artist [M. C. Escher](bio:escher). Escher’s
-work contains strange, mutating creatures, patterns and landscapes:
+Many artists, architects and designers use tessellations in their work. One of the most famous
+examples is the Dutch artist [M. C. Escher](bio:escher). His works contain strange, mutating
+creatures, patterns and landscapes:
 
     .row
       div(style="width: 220px")
@@ -1468,15 +1468,6 @@ is to use a net. A net is an unfolded, flat representation of the sides of a
 three-dimensional shape.
 
 rotate a cube to make a hexagonal cross-section
-
----
-
-## Prisms and Pyramids
-
-> section: prisms-pyramids
-> sectionStatus: dev
-
-TODO
 
 ---
 
