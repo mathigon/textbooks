@@ -348,9 +348,26 @@ __normal distribution__.
 
 > section: trees
 > sectionStatus: dev
+> id: galton-board
 
+
+::: .box.f-red
+
+#### Galton Board
+
+Here is a Galton Board:
+
+    figure
+      svg(width=400 height=445).galton
+      .ballTable.var(:html="ballTable(rows, p)")
+    p.btn-row.no-voice
+      button.btn Drop one ball
+      button.btn Drop 10 balls
+      button.btn Drop 100 balls   
+      
+The Galton Board has ${rows}{rows|8|2,9,1} rows. The probability the ball bounces to the **right** is ${p}{p|0.5|0,1,0.1}.
+:::
 {.todo} TODO
-
 
 ---
 
