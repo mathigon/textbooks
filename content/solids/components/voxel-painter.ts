@@ -55,19 +55,19 @@ export class VoxelPainter extends CustomElementView {
     }
 
     let camera: THREE.Camera;
-    const cameraW = 30.;
-    const cameraNear = 1.;
-    const cameraFar = 10000.;
-    if (this.attr('cameraStyle') === 'orthographic' ) {
+    const cameraW = 30.0;
+    const cameraNear = 1.0;
+    const cameraFar = 10000.0;
+    if (this.attr('cameraStyle') === 'orthographic') {
       const cameraH = cameraW * height / width;
-      camera = new THREE.OrthographicCamera(-cameraW / 2., cameraW / 2., cameraH / 2., -cameraH / 2., cameraNear, cameraFar);
+      camera = new THREE.OrthographicCamera(-cameraW / 2.0, cameraW / 2.0, cameraH / 2.0, -cameraH / 2.0, cameraNear, cameraFar);
     } else {
       camera = new THREE.PerspectiveCamera(45, width / height, cameraNear, cameraFar);
     }
     camera.rotation.order = 'YXZ';
-    camera.rotation.y = TAU/8.;
-    camera.rotation.x =-TAU / 8.;
-    camera.position.x = 40.;
+    camera.rotation.y = TAU / 8.0;
+    camera.rotation.x = -TAU / 8.0;
+    camera.position.x = 40.0;
     scene.add(camera);
 
     {
@@ -83,19 +83,19 @@ export class VoxelPainter extends CustomElementView {
 
     const voxelGeo = new THREE.BoxGeometry(1, 1, 1);
     const voxelMaterial = new THREE.MeshLambertMaterial({color: 0xfeb74c});
-    if ( this.attr('colorSides') === 'true') {
-      voxelGeo.faces[0].color = new THREE.Color().setHex(parseInt('0x'+RED.substr(1, 6) ));
-      voxelGeo.faces[2].color = new THREE.Color().setHex(parseInt('0x'+BLUE.substr(1, 6) ));
-      voxelGeo.faces[4].color = new THREE.Color().setHex(parseInt('0x'+GREEN.substr(1, 6) ));
-      voxelGeo.faces[6].color = new THREE.Color().setHex(parseInt('0x'+YELLOW.substr(1, 6) ));
-      voxelGeo.faces[8].color = new THREE.Color().setHex(parseInt('0x'+ORANGE.substr(1, 6) ));
-      voxelGeo.faces[10].color = new THREE.Color().setHex(parseInt('0x'+PURPLE.substr(1, 6) ));
+    if (this.attr('colorSides') === 'true') {
+      voxelGeo.faces[0].color = new THREE.Color().setHex(parseInt('0x' + RED.substr(1, 6)));
+      voxelGeo.faces[2].color = new THREE.Color().setHex(parseInt('0x' + BLUE.substr(1, 6)));
+      voxelGeo.faces[4].color = new THREE.Color().setHex(parseInt('0x' + GREEN.substr(1, 6)));
+      voxelGeo.faces[6].color = new THREE.Color().setHex(parseInt('0x' + YELLOW.substr(1, 6)));
+      voxelGeo.faces[8].color = new THREE.Color().setHex(parseInt('0x' + ORANGE.substr(1, 6)));
+      voxelGeo.faces[10].color = new THREE.Color().setHex(parseInt('0x' + PURPLE.substr(1, 6)));
       for (let i = 0; i < 6; ++i) {
         voxelGeo.faces[i * 2 + 1].color = voxelGeo.faces[i * 2].color;
       }
 
       voxelMaterial.vertexColors = true;
-      voxelMaterial.color.setRGB(1., 1., 1.);
+      voxelMaterial.color.setRGB(1.0, 1.0, 1.0);
     }
 
     const outlineGeometry = new THREE.Geometry();
@@ -120,10 +120,10 @@ export class VoxelPainter extends CustomElementView {
       }
     }
 
-    const eraser = new THREE.Mesh(new THREE.PlaneBufferGeometry(1., 1.), new THREE.MeshBasicMaterial({transparent: true}));
+    const eraser = new THREE.Mesh(new THREE.PlaneBufferGeometry(1.0, 1.0), new THREE.MeshBasicMaterial({transparent: true}));
     let eraserDefaultPosition: THREE.Vector3;
     {
-      eraser.scale.setScalar(.2);
+      eraser.scale.setScalar(0.2);
       camera.add(eraser);
 
       // eraser picture is from https://www.kissclipart.com/ which is public domain
@@ -141,15 +141,15 @@ export class VoxelPainter extends CustomElementView {
       );
 
       eraserDefaultPosition = new THREE.Vector3();
-      eraserDefaultPosition.z = -cameraNear * 2.;
-      eraserDefaultPosition.x = -.7;
-      eraserDefaultPosition.y = -.7;
+      eraserDefaultPosition.z = -cameraNear * 2.0;
+      eraserDefaultPosition.x = -0.7;
+      eraserDefaultPosition.y = -0.7;
 
       if (this.attr('cameraStyle') === 'orthographic') {
-        eraserDefaultPosition.x = -cameraW * .4;
+        eraserDefaultPosition.x = -cameraW * 0.4;
         eraserDefaultPosition.y = eraserDefaultPosition.x * height / width;
 
-        eraser.scale.setScalar(5.);
+        eraser.scale.setScalar(5.0);
       }
 
       eraser.position.copy(eraserDefaultPosition);
@@ -163,20 +163,20 @@ export class VoxelPainter extends CustomElementView {
       isInShapeFunctions.sphere = (p) => p.distanceTo(sphereCenter) < sphereRadius;
 
       const cuboidDimensions = new THREE.Vector3(4, 3, 5);
-      const cuboidCenter = new THREE.Vector3(0., cuboidDimensions.y / 2. + 1., 0.);
+      const cuboidCenter = new THREE.Vector3(0.0, cuboidDimensions.y / 2.0 + 1.0, 0.0);
       isInShapeFunctions.cuboid = (p) => {
-        return Math.abs(p.x - cuboidCenter.x) < cuboidDimensions.x / 2. &&
-          Math.abs(p.y - cuboidCenter.y) < cuboidDimensions.y / 2. &&
-          Math.abs(p.z - cuboidCenter.z) < cuboidDimensions.z / 2.;
+        return Math.abs(p.x - cuboidCenter.x) < cuboidDimensions.x / 2.0 &&
+          Math.abs(p.y - cuboidCenter.y) < cuboidDimensions.y / 2.0 &&
+          Math.abs(p.z - cuboidCenter.z) < cuboidDimensions.z / 2.0;
       };
 
       const cylinderRadius = 6;
       const cylinderHeight = 4;
-      const cylinderCenter = new THREE.Vector3(0., cylinderHeight/2. + 1., 0.);
+      const cylinderCenter = new THREE.Vector3(0.0, cylinderHeight / 2.0 + 1.0, 0.0);
       isInShapeFunctions.cylinder = (p) => {
         v1.copy(p);
         v1.sub(cylinderCenter);
-        return v1.x * v1.x + v1.z * v1.z < cylinderRadius*cylinderRadius && Math.abs(v1.y) < cylinderHeight / 2.;
+        return v1.x * v1.x + v1.z * v1.z < cylinderRadius * cylinderRadius && Math.abs(v1.y) < cylinderHeight / 2.0;
       };
 
       const shape = this.attr('shape');
@@ -187,7 +187,7 @@ export class VoxelPainter extends CustomElementView {
         for (let i = -10; i < 10; i++) {
           for (let j = -10; j < 10; j++) {
             for (let k = -10; k < 10; k++) {
-              p.set(i, j, k).addScalar(.5);
+              p.set(i, j, k).addScalar(0.5);
               if (isInShapeFunction(p)) {
                 const voxel = new Voxel();
                 voxel.position.copy(p);
@@ -223,10 +223,10 @@ export class VoxelPainter extends CustomElementView {
     floorIntersectionPlaneGeometry.rotateX(-Math.PI / 2);
     scene.add(floorIntersectionPlane);
     objectsOnWhichVoxelsCanBePlaced.push(floorIntersectionPlane);
-    floorIntersectionPlane.position.y -= 2.;
+    floorIntersectionPlane.position.y -= 2.0;
 
     for (let i = 0; i < 3; i++) {
-      const placingHelper = new THREE.Mesh(new THREE.PlaneBufferGeometry(999., 999.), new THREE.MeshBasicMaterial({side: THREE.DoubleSide,
+      const placingHelper = new THREE.Mesh(new THREE.PlaneBufferGeometry(999.0, 999.0), new THREE.MeshBasicMaterial({side: THREE.DoubleSide,
         // transparent:true,
         // opacity:.5,
         visible: false
@@ -234,28 +234,28 @@ export class VoxelPainter extends CustomElementView {
       placingHelpers.push(placingHelper);
       scene.add(placingHelper);
     }
-    placingHelpers[0].geometry.rotateX( TAU / 4.);
-    placingHelpers[1].geometry.rotateY( TAU / 4.);
-    placingHelpers[2].geometry.rotateZ( TAU / 4.);
+    placingHelpers[0].geometry.rotateX(TAU / 4.0);
+    placingHelpers[1].geometry.rotateY(TAU / 4.0);
+    placingHelpers[2].geometry.rotateZ(TAU / 4.0);
     // placingHelpers[0].material.color.setRGB(1.,0.,0.)
     // placingHelpers[1].material.color.setRGB(1.,1.,0.)
     // placingHelpers[2].material.color.setRGB(1.,0.,1.)
 
     function snapToNearestValidCubeCenterPosition(p: THREE.Vector3) {
-      p.floor().addScalar(.5);
+      p.floor().addScalar(0.5);
     }
 
     function setPositionFromVoxelIntersection(p: THREE.Vector3, intersection: THREE.Intersection) {
-      p.copy(intersection!.face!.normal).multiplyScalar(.1);
+      p.copy(intersection!.face!.normal).multiplyScalar(0.1);
       p.add(intersection.point);
       snapToNearestValidCubeCenterPosition(p);
     }
 
     function getCameraDirectionSnappedToGrid(target: THREE.Vector3) {
-      target.set(0., 0., -1.).applyQuaternion(camera.quaternion);
-      target.x = target.x > 0. ? .5 : -.5;
-      target.y = target.y > 0. ? .5 : -.5;
-      target.z = target.z > 0. ? .5 : -.5;
+      target.set(0.0, 0.0, -1.0).applyQuaternion(camera.quaternion);
+      target.x = target.x > 0.0 ? 0.5 : -0.5;
+      target.y = target.y > 0.0 ? 0.5 : -0.5;
+      target.z = target.z > 0.0 ? 0.5 : -0.5;
     }
 
     const asyncPointerNdc = new THREE.Vector3();
@@ -266,7 +266,7 @@ export class VoxelPainter extends CustomElementView {
 
       const p = canvasPointerPosition(event, $canvas);
       camera.updateMatrixWorld();
-      asyncPointerNdc.set( (p.x / $canvas.width ) * 2 - 1,
+      asyncPointerNdc.set((p.x / $canvas.width) * 2 - 1,
           -(p.y / $canvas.height) * 2 + 1, 0);
 
       updateApplet();
@@ -316,8 +316,8 @@ export class VoxelPainter extends CustomElementView {
           const jLimit = Math.max(placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent));
 
           const potentialNewPosition = new THREE.Vector3();
-          for (let i = iStart; i <= iLimit; i += 1.) {
-            for (let j = jStart; j <= jLimit; j += 1.) {
+          for (let i = iStart; i <= iLimit; i += 1.0) {
+            for (let j = jStart; j <= jLimit; j += 1.0) {
               potentialNewPosition.setComponent(kComponent, k);
               potentialNewPosition.setComponent(iComponent, i);
               potentialNewPosition.setComponent(jComponent, j);
@@ -337,10 +337,10 @@ export class VoxelPainter extends CustomElementView {
           mouseControlMode = '';
 
           animate((timeSinceStart, timeDifference, cancel) => {
-            eraser.position.lerp(eraserDefaultPosition, .1);
+            eraser.position.lerp(eraserDefaultPosition, 0.1);
             updateApplet();
 
-            if (eraser.position.distanceToSquared(eraserDefaultPosition) < .001) {
+            if (eraser.position.distanceToSquared(eraserDefaultPosition) < 0.001) {
               cancel();
             }
           },);
@@ -351,21 +351,21 @@ export class VoxelPainter extends CustomElementView {
 
           animate((timeSinceStart, timeDifference, cancel) => {
             // snapspace is where the angles we want are integers
-            const snapSpaceAngleX = camera.rotation.x / (TAU / 14.);
+            const snapSpaceAngleX = camera.rotation.x / (TAU / 14.0);
             const destination = Math.round(snapSpaceAngleX);
             // destination = clamp(destination, -1, 1)
             const stepX = getStepTowardDestination(snapSpaceAngleX, destination);
             const newSnapSpaceAngleX = snapSpaceAngleX + stepX;
-            camera.rotation.x = newSnapSpaceAngleX * (TAU / 14.);
+            camera.rotation.x = newSnapSpaceAngleX * (TAU / 14.0);
 
-            const snapSpaceAngleY = camera.rotation.y / (TAU / 8.);
+            const snapSpaceAngleY = camera.rotation.y / (TAU / 8.0);
             const stepY = getStepTowardDestination(snapSpaceAngleY, Math.round(snapSpaceAngleY));
             const newSnapSpaceAngleY = snapSpaceAngleY + stepY;
-            camera.rotation.y = newSnapSpaceAngleY * (TAU / 8.);
+            camera.rotation.y = newSnapSpaceAngleY * (TAU / 8.0);
 
             updateApplet();
 
-            if (stepX == 0. && stepY == 0.) {
+            if (stepX == 0.0 && stepY == 0.0) {
               cancel();
             }
           });
@@ -375,8 +375,8 @@ export class VoxelPainter extends CustomElementView {
 
     function getStepTowardDestination(currentValue: number, destination: number) {
       const distanceFromDestination = destination - currentValue;
-      const sign = distanceFromDestination == 0. ? 0. : distanceFromDestination / Math.abs(distanceFromDestination);
-      let speed = .01;
+      const sign = distanceFromDestination == 0.0 ? 0.0 : distanceFromDestination / Math.abs(distanceFromDestination);
+      let speed = 0.01;
       if (speed > Math.abs(distanceFromDestination)) {
         speed = Math.abs(distanceFromDestination);
       }
@@ -395,18 +395,18 @@ export class VoxelPainter extends CustomElementView {
         if (mouseControlMode === 'rotating') {
           camera.rotation.y -= (pointerNdc.x - oldPointerNdc.x);
           camera.rotation.x += (pointerNdc.y - oldPointerNdc.y);
-          camera.rotation.x = clamp(camera.rotation.x, -TAU / 4., TAU / 4.);
+          camera.rotation.x = clamp(camera.rotation.x, -TAU / 4.0, TAU / 4.0);
         }
 
         const currentDistFromCamera = camera.position.length();
         camera.updateMatrixWorld();
-        v1.set(0., 0., -currentDistFromCamera);
+        v1.set(0.0, 0.0, -currentDistFromCamera);
         camera.localToWorld(v1);
         camera.position.sub(v1);
       }
 
       if (mouseControlMode === '') {
-        placementVisualizer.scale.setScalar(1.);
+        placementVisualizer.scale.setScalar(1.0);
       }
 
       if (mouseControlMode === 'placing') {
@@ -414,25 +414,25 @@ export class VoxelPainter extends CustomElementView {
         if (intersection !== undefined) {
           // get it off the helpers
           getCameraDirectionSnappedToGrid(placingEnd);
-          placingEnd.negate().setLength(.1);
+          placingEnd.negate().setLength(0.1);
           placingEnd.add(intersection.point);
           snapToNearestValidCubeCenterPosition(placingEnd);
 
-          placementVisualizer.position.addVectors(placingEnd, placingStart).multiplyScalar(.5);
-          placementVisualizer.scale.x = 1. + 2. * Math.abs(placementVisualizer.position.x - placingEnd.x);
-          placementVisualizer.scale.y = 1. + 2. * Math.abs(placementVisualizer.position.y - placingEnd.y);
-          placementVisualizer.scale.z = 1. + 2. * Math.abs(placementVisualizer.position.z - placingEnd.z);
+          placementVisualizer.position.addVectors(placingEnd, placingStart).multiplyScalar(0.5);
+          placementVisualizer.scale.x = 1.0 + 2.0 * Math.abs(placementVisualizer.position.x - placingEnd.x);
+          placementVisualizer.scale.y = 1.0 + 2.0 * Math.abs(placementVisualizer.position.y - placingEnd.y);
+          placementVisualizer.scale.z = 1.0 + 2.0 * Math.abs(placementVisualizer.position.z - placingEnd.z);
         }
       } else {
         if (mouseControlMode === 'rotating' || mouseControlMode === 'erasing' || rotateOnly) {
-          placementVisualizer.scale.setScalar(.0000001);
+          placementVisualizer.scale.setScalar(0.0000001);
         } else {
           const intersections = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced);
           if (intersections.length > 0) {
             setPositionFromVoxelIntersection(placementVisualizer.position, intersections[0]);
-            placementVisualizer.scale.setScalar(1.);
+            placementVisualizer.scale.setScalar(1.0);
           } else {
-            placementVisualizer.scale.setScalar(.0000001);
+            placementVisualizer.scale.setScalar(0.0000001);
           }
         }
       }
