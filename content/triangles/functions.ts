@@ -177,7 +177,7 @@ export async function sssConstruction($step: Step) {
   $geopad.animatePoint(base.components[0].name, new Point(42, 150));
   $geopad.animatePoint(base.components[1].name, new Point(258, 150));
 
-  $geopad.drawPoint(() => intersections(circle1.value!, circle2.value!)[1-i],
+  $geopad.drawPoint(() => intersections(circle1.value!, circle2.value!)[1 - i],
       {target: 'bottom', name: 'd', interactive: false});
 
   await $step.onScore('blank-2');
