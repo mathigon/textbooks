@@ -5,10 +5,13 @@
 
 
 /// <reference types="three"/>
-import {$, $N, animate, canvasPointerPosition, CanvasView, CustomElementView, loadScript, register, slide} from '@mathigon/boost';
+import {$N, animate, canvasPointerPosition, CustomElementView, loadScript, register, slide} from '@mathigon/boost';
 import {Obj} from '@mathigon/core';
+import {create3D} from '../../shared/components/webgl';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../../shared/constants';
 import {clamp} from '@mathigon/fermat';
+
+const TAU = Math.PI * 2;
 
 
 @register('x-voxel-painter')
@@ -19,24 +22,29 @@ export class VoxelPainter extends CustomElementView {
 
     const width = (+this.attr('width')) || 400;
     const height = (+this.attr('height')) || width;
+    this.css({width: width + 'px', height: height + 'px'});
 
-    const TAU = Math.PI * 2;
     const v1 = new THREE.Vector3();
-    const scene = new THREE.Scene();
     const rotateOnly = this.hasAttr('rotateOnly');
 
-    const renderer = new THREE.WebGLRenderer({antialias: true});
-    renderer.localClippingEnabled = true;
-    renderer.setClearColor(0xffffff);
-    scene.background = new THREE.Color(0xf0f0f0);
-    renderer.setSize(width, height);
-    renderer.setPixelRatio(2);
+    let customCamera: THREE.Camera|undefined = undefined;
+    if (this.hasAttr('orthographic')) {
+      const cameraW = 15;
+      const cameraH = cameraW * height / width;
+      customCamera = new THREE.OrthographicCamera(-cameraW, cameraW, cameraH, -cameraH, 1, 1000);
+    }
+
+    const scene = await create3D(this, 45, 2 * width, 2 * height, customCamera);
+    const camera = scene.camera;
+    const $canvas = scene.$canvas;
+
+    camera.rotation.order = 'YXZ';
+    camera.rotation.y = TAU / 8;
+    camera.rotation.x = -TAU / 8;
+    camera.position.x = 40;
 
     const objectsOnWhichVoxelsCanBePlaced: THREE.Object3D[] = [];
     const voxels: THREE.Object3D[] = [];
-
-    const $canvas = $(renderer.domElement) as CanvasView;
-    this.append($canvas);
 
     if (this.attr('showSaveButton') === 'true') {
       const $button = $N('button', {class: 'btn', text: 'Save'}, this);
@@ -54,22 +62,6 @@ export class VoxelPainter extends CustomElementView {
       });
     }
 
-    let camera: THREE.Camera;
-    const cameraW = 30;
-    const cameraNear = 1;
-    const cameraFar = 10000;
-    if (this.attr('cameraStyle') === 'orthographic') {
-      const cameraH = cameraW * height / width;
-      camera = new THREE.OrthographicCamera(-cameraW / 2, cameraW / 2, cameraH / 2, -cameraH / 2, cameraNear, cameraFar);
-    } else {
-      camera = new THREE.PerspectiveCamera(45, width / height, cameraNear, cameraFar);
-    }
-    camera.rotation.order = 'YXZ';
-    camera.rotation.y = TAU / 8;
-    camera.rotation.x = -TAU / 8;
-    camera.position.x = 40;
-    scene.add(camera);
-
     {
       const ambientLight = new THREE.AmbientLight(0x606060);
       scene.add(ambientLight);
@@ -83,17 +75,13 @@ export class VoxelPainter extends CustomElementView {
 
     const voxelGeo = new THREE.BoxGeometry(1, 1, 1);
     const voxelMaterial = new THREE.MeshLambertMaterial({color: 0xfeb74c});
-    if (this.attr('colorSides') === 'true') {
-      voxelGeo.faces[0].color = new THREE.Color().setHex(parseInt('0x' + RED.substr(1, 6)));
-      voxelGeo.faces[2].color = new THREE.Color().setHex(parseInt('0x' + BLUE.substr(1, 6)));
-      voxelGeo.faces[4].color = new THREE.Color().setHex(parseInt('0x' + GREEN.substr(1, 6)));
-      voxelGeo.faces[6].color = new THREE.Color().setHex(parseInt('0x' + YELLOW.substr(1, 6)));
-      voxelGeo.faces[8].color = new THREE.Color().setHex(parseInt('0x' + ORANGE.substr(1, 6)));
-      voxelGeo.faces[10].color = new THREE.Color().setHex(parseInt('0x' + PURPLE.substr(1, 6)));
-      for (let i = 0; i < 6; ++i) {
-        voxelGeo.faces[i * 2 + 1].color = voxelGeo.faces[i * 2].color;
-      }
 
+    if (this.hasAttr('color-sides')) {
+      const faceColours = [RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE];
+      for (let i = 0; i < 6; ++i) {
+        const c = new THREE.Color(faceColours[i]);
+        voxelGeo.faces[i * 2].color = voxelGeo.faces[i * 2 + 1].color = c;
+      }
       voxelMaterial.vertexColors = true;
       voxelMaterial.color.setRGB(1, 1, 1);
     }
@@ -105,8 +93,8 @@ export class VoxelPainter extends CustomElementView {
       outlineGeometry.vertices[i] = voxelGeo.vertices[cubeEdges[i]].clone();
     }
 
-    const placementVisualizer = new THREE.Mesh(voxelGeo, new THREE.MeshBasicMaterial(
-        {color: 0xff0000, opacity: 0.4, transparent: true}));
+    const placementMaterial = new THREE.MeshBasicMaterial({color: 0xff0000, opacity: 0.4, transparent: true});
+    const placementVisualizer = new THREE.Mesh(voxelGeo, placementMaterial);
     scene.add(placementVisualizer);
     placementVisualizer.add(new THREE.LineSegments(outlineGeometry, outlineMaterial));
 
@@ -141,12 +129,12 @@ export class VoxelPainter extends CustomElementView {
       );
 
       eraserDefaultPosition = new THREE.Vector3();
-      eraserDefaultPosition.z = -cameraNear * 2;
+      eraserDefaultPosition.z = -2;
       eraserDefaultPosition.x = -0.7;
       eraserDefaultPosition.y = -0.7;
 
       if (this.attr('cameraStyle') === 'orthographic') {
-        eraserDefaultPosition.x = -cameraW * 0.4;
+        eraserDefaultPosition.x = -30 * 0.4;
         eraserDefaultPosition.y = eraserDefaultPosition.x * height / width;
 
         eraser.scale.setScalar(5);
@@ -266,8 +254,8 @@ export class VoxelPainter extends CustomElementView {
 
       const p = canvasPointerPosition(event, $canvas);
       camera.updateMatrixWorld();
-      asyncPointerNdc.set((p.x / $canvas.width) * 2 - 1,
-          -(p.y / $canvas.height) * 2 + 1, 0);
+      asyncPointerNdc.set((p.x / $canvas.canvasWidth) * 2 - 1,
+          -(p.y / $canvas.canvasHeight) * 2 + 1, 0);
 
       updateApplet();
     });
@@ -376,7 +364,7 @@ export class VoxelPainter extends CustomElementView {
     function getStepTowardDestination(currentValue: number, destination: number) {
       const distanceFromDestination = destination - currentValue;
       const sign = distanceFromDestination == 0 ? 0 : distanceFromDestination / Math.abs(distanceFromDestination);
-      let speed = 01;
+      let speed = 0.01;
       if (speed > Math.abs(distanceFromDestination)) {
         speed = Math.abs(distanceFromDestination);
       }
@@ -454,7 +442,7 @@ export class VoxelPainter extends CustomElementView {
         lastVoxelIntersectedByEraser = voxelIntersectedByEraser;
       }
 
-      renderer.render(scene, camera);
+      scene.draw();
     }
 
     updateApplet();
