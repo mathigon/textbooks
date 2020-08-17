@@ -14,14 +14,13 @@ import {clamp} from '@mathigon/fermat';
 
 const TAU = Math.PI * 2;
 
-
 @register('x-voxel-painter')
 export class VoxelPainter extends CustomElementView {
   voxels: THREE.Object3D[] = [];
 
   async ready() {
     await loadScript('/resources/shared/vendor/three-91.min.js');
-
+    
     const width = (+this.attr('width')) || 400;
     const height = (+this.attr('height')) || width;
     this.css({width: width + 'px', height: height + 'px'});
@@ -29,32 +28,44 @@ export class VoxelPainter extends CustomElementView {
     const v1 = new THREE.Vector3();
     const rotateOnly = this.hasAttr('rotateOnly');
 
-    /* const $eraser = this.$('.eraser')!;
+    const $eraser = this.$('.eraser')!;
     const drag = new Draggable($eraser, this);
     drag.on('move', (posn: Point) => {
       console.log(posn);
-    }); */
+    });
+
+    const defaultGridDimension = 20
+    const gridDimension = this.attr("playingFieldSize") ? this.attr("playingFieldSize") : defaultGridDimension;
+    const playingFieldMin = new THREE.Vector3().setScalar(-gridDimension / 2. + .1)
+    const playingFieldMax = new THREE.Vector3().setScalar(gridDimension / 2. - .1)
+    function pointInPlayingField(p) //best done with a point already on grid
+    {
+      return playingFieldMin.x < p.x && p.x < playingFieldMax.x &&
+        playingFieldMin.y < p.y && p.y < playingFieldMax.y &&
+        playingFieldMin.z < p.z && p.z < playingFieldMax.z
+    }
 
     let customCamera: THREE.Camera|undefined = undefined;
     if (this.hasAttr('orthographic')) {
-      const cameraW = 15;
+      const cameraW = 27. * gridDimension / defaultGridDimension;
       const cameraH = cameraW * height / width;
       customCamera = new THREE.OrthographicCamera(-cameraW, cameraW, cameraH, -cameraH, 1, 1000);
     }
-
+    
     const scene = await create3D(this, 45, 2 * width, 2 * height, customCamera);
     const camera = scene.camera;
+    camera.position.setLength(camera.position.length() * gridDimension / defaultGridDimension)
     const $canvas = scene.$canvas;
 
     camera.rotation.order = 'YXZ';
     camera.rotation.y = TAU / 8;
     camera.rotation.x = -TAU / 8;
-    camera.position.x = 40;
+    camera.position.x = 45.; //the "distance"
 
     const objectsOnWhichVoxelsCanBePlaced: THREE.Object3D[] = [];
     const voxels: THREE.Object3D[] = [];
 
-    if (this.attr('showSaveButton') === 'true') {
+    if (this.hasAttr('showSaveButton') ) {
       const $button = $N('button', {class: 'btn', text: 'Save'}, this);
       this.append($button);
 
@@ -210,16 +221,17 @@ export class VoxelPainter extends CustomElementView {
 
     const placingStart = new THREE.Vector3();
     const placingEnd = new THREE.Vector3();
-    const gridDimension = 20;
     const floorIntersectionPlaneGeometry = new THREE.PlaneBufferGeometry(gridDimension, gridDimension);
-    const floorIntersectionPlane = new THREE.Mesh(floorIntersectionPlaneGeometry, new THREE.MeshBasicMaterial({visible: false}));
-    const placingHelpers: THREE.Mesh[] = [];
-
-    floorIntersectionPlane.add(new THREE.GridHelper(gridDimension, gridDimension));
     floorIntersectionPlaneGeometry.rotateX(-Math.PI / 2);
+    const floorIntersectionPlane = new THREE.Mesh(floorIntersectionPlaneGeometry, new THREE.MeshBasicMaterial({visible: false}));
+    let grid = new THREE.GridHelper(gridDimension, gridDimension)
     scene.add(floorIntersectionPlane);
+    floorIntersectionPlane.add(grid);
+    if (this.attr("hideGrid") === true)
+      grid.visible = false
     objectsOnWhichVoxelsCanBePlaced.push(floorIntersectionPlane);
-    floorIntersectionPlane.position.y -= 2;
+    floorIntersectionPlane.position.y -= gridDimension / 2.;
+    const placingHelpers: THREE.Mesh[] = [];
 
     for (let i = 0; i < 3; i++) {
       const placingHelper = new THREE.Mesh(new THREE.PlaneBufferGeometry(999, 999), new THREE.MeshBasicMaterial({side: THREE.DoubleSide,
@@ -232,7 +244,6 @@ export class VoxelPainter extends CustomElementView {
     }
     placingHelpers[0].geometry.rotateX(TAU / 4);
     placingHelpers[1].geometry.rotateY(TAU / 4);
-    placingHelpers[2].geometry.rotateZ(TAU / 4);
     // placingHelpers[0].material.color.setRGB(1.,0.,0.)
     // placingHelpers[1].material.color.setRGB(1.,1.,0.)
     // placingHelpers[2].material.color.setRGB(1.,0.,1.)
@@ -241,10 +252,10 @@ export class VoxelPainter extends CustomElementView {
       p.floor().addScalar(0.5);
     }
 
-    function setPositionFromVoxelIntersection(p: THREE.Vector3, intersection: THREE.Intersection) {
-      p.copy(intersection!.face!.normal).multiplyScalar(0.1);
-      p.add(intersection.point);
-      snapToNearestValidCubeCenterPosition(p);
+    function setFromVoxelIntersection(target: THREE.Vector3, intersection: THREE.Intersection) {
+      target.copy(intersection!.face!.normal).multiplyScalar(0.1);
+      target.add(intersection.point);
+      snapToNearestValidCubeCenterPosition(target);
     }
 
     function getCameraDirectionSnappedToGrid(target: THREE.Vector3) {
@@ -257,15 +268,18 @@ export class VoxelPainter extends CustomElementView {
     const asyncPointerNdc = new THREE.Vector3();
     const pointerNdc = new THREE.Vector3();
     const oldPointerNdc = new THREE.Vector3();
-    $canvas.on('pointermove', (event: PointerEvent) => {
-      event.preventDefault();
-
-      const p = canvasPointerPosition(event, $canvas);
+    
+    function respondToPointerMovement(p) {
       camera.updateMatrixWorld();
       asyncPointerNdc.set((p.x / $canvas.canvasWidth) * 2 - 1,
-          -(p.y / $canvas.canvasHeight) * 2 + 1, 0);
-
+        -(p.y / $canvas.canvasHeight) * 2 + 1, 0);
       updateApplet();
+    }
+    $canvas.on('pointermove', (event: PointerEvent)=>
+    {
+      event.preventDefault()
+      const p = canvasPointerPosition(event, $canvas);
+      respondToPointerMovement(p);
     });
 
     slide($canvas, {
@@ -275,24 +289,30 @@ export class VoxelPainter extends CustomElementView {
         if (eraserIntersected) {
           mouseControlMode = 'erasing';
         } else {
-          const intersection = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced)[0];
-          if (intersection !== undefined && !rotateOnly) {
-            mouseControlMode = 'placing';
-            setPositionFromVoxelIntersection(placingStart, intersection);
-            placingEnd.copy(placingStart);
+          mouseControlMode = 'rotating';
 
-            // corner of cube that is away from camera
-            getCameraDirectionSnappedToGrid(v1);
-            v1.add(placingStart);
-            for (let i = 0; i < 3; i++) {
-              placingHelpers[i].position.copy(v1);
-              placingHelpers[i].updateMatrixWorld();
+          const intersection = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced)[0];
+          if (!rotateOnly && intersection !== undefined ) {
+            setFromVoxelIntersection(v1, intersection);
+            if (pointInPlayingField(v1))
+            {
+              mouseControlMode = 'placing';
+              placingStart.copy(v1)
+              placingEnd.copy(placingStart);
+
+              // corner of cube that is away from camera
+              getCameraDirectionSnappedToGrid(v1);
+              v1.add(placingStart);
+              for (let i = 0; i < 3; i++) {
+                placingHelpers[i].position.copy(v1);
+                placingHelpers[i].updateMatrixWorld();
+              }
             }
-          } else mouseControlMode = 'rotating';
+          }
         }
       },
 
-      move: updateApplet,
+      move: respondToPointerMovement,
 
       up: () => {
         if (mouseControlMode === 'placing') {
@@ -347,12 +367,12 @@ export class VoxelPainter extends CustomElementView {
 
           animate((timeSinceStart, timeDifference, cancel) => {
             // snapspace is where the angles we want are integers
-            const snapSpaceAngleX = camera.rotation.x / (TAU / 14);
+            const snapSpaceAngleX = camera.rotation.x / (TAU / 16);
             const destination = Math.round(snapSpaceAngleX);
             // destination = clamp(destination, -1, 1)
             const stepX = getStepTowardDestination(snapSpaceAngleX, destination);
             const newSnapSpaceAngleX = snapSpaceAngleX + stepX;
-            camera.rotation.x = newSnapSpaceAngleX * (TAU / 14);
+            camera.rotation.x = newSnapSpaceAngleX * (TAU / 16);
 
             const snapSpaceAngleY = camera.rotation.y / (TAU / 8);
             const stepY = getStepTowardDestination(snapSpaceAngleY, Math.round(snapSpaceAngleY));
@@ -366,6 +386,8 @@ export class VoxelPainter extends CustomElementView {
             }
           });
         }
+
+        updateApplet();
       }
     });
 
@@ -401,17 +423,18 @@ export class VoxelPainter extends CustomElementView {
         camera.position.sub(v1);
       }
 
-      if (mouseControlMode === '') {
-        placementVisualizer.scale.setScalar(1);
-      }
-
       if (mouseControlMode === 'placing') {
-        const intersection = pointerRaycaster.intersectObjects(placingHelpers)[0];
+        let snapSpaceCameraRotationY = (camera.rotation.y - TAU / 8.) / (TAU / 4.)
+        let distanceFromDiagonalViewpoint = Math.abs(snapSpaceCameraRotationY - Math.round(snapSpaceCameraRotationY))
+        let distanceFromTopOrBottomViewpoint = TAU/4. - Math.abs(camera.rotation.x)
+        let placingHelpersArrayToUse = distanceFromDiagonalViewpoint < .1 && distanceFromTopOrBottomViewpoint > .1 ? placingHelpers : [placingHelpers[0]]
+
+        const intersection = pointerRaycaster.intersectObjects(placingHelpersArrayToUse)[0];
         if (intersection !== undefined) {
-          // get it off the helpers
           getCameraDirectionSnappedToGrid(placingEnd);
           placingEnd.negate().setLength(0.1);
           placingEnd.add(intersection.point);
+          placingEnd.clamp(playingFieldMin,playingFieldMax)
           snapToNearestValidCubeCenterPosition(placingEnd);
 
           placementVisualizer.position.addVectors(placingEnd, placingStart).multiplyScalar(0.5);
@@ -420,15 +443,13 @@ export class VoxelPainter extends CustomElementView {
           placementVisualizer.scale.z = 1 + 2 * Math.abs(placementVisualizer.position.z - placingEnd.z);
         }
       } else {
-        if (mouseControlMode === 'rotating' || mouseControlMode === 'erasing' || rotateOnly) {
-          placementVisualizer.scale.setScalar(0.0000001);
-        } else {
+        placementVisualizer.scale.setScalar(0.0000001)
+        if (mouseControlMode === '' ) {
           const intersections = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced);
-          if (intersections.length > 0) {
-            setPositionFromVoxelIntersection(placementVisualizer.position, intersections[0]);
-            placementVisualizer.scale.setScalar(1);
-          } else {
-            placementVisualizer.scale.setScalar(0.0000001);
+          if(intersections.length !== 0) {
+            setFromVoxelIntersection(placementVisualizer.position, intersections[0]);
+            if( pointInPlayingField(placementVisualizer.position))
+              placementVisualizer.scale.setScalar(1);
           }
         }
       }
