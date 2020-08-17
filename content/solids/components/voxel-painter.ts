@@ -5,7 +5,8 @@
 
 
 /// <reference types="three"/>
-import {$N, animate, canvasPointerPosition, CustomElementView, loadScript, register, slide} from '@mathigon/boost';
+import {$N, animate, canvasPointerPosition, CustomElementView, Draggable, loadScript, register, slide} from '@mathigon/boost';
+import {Point} from '@mathigon/fermat';
 import {Obj} from '@mathigon/core';
 import {create3D} from '../../shared/components/webgl';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../../shared/constants';
@@ -16,6 +17,7 @@ const TAU = Math.PI * 2;
 
 @register('x-voxel-painter')
 export class VoxelPainter extends CustomElementView {
+  voxels: THREE.Object3D[] = [];
 
   async ready() {
     await loadScript('/resources/shared/vendor/three-91.min.js');
@@ -26,6 +28,12 @@ export class VoxelPainter extends CustomElementView {
 
     const v1 = new THREE.Vector3();
     const rotateOnly = this.hasAttr('rotateOnly');
+
+    /* const $eraser = this.$('.eraser')!;
+    const drag = new Draggable($eraser, this);
+    drag.on('move', (posn: Point) => {
+      console.log(posn);
+    }); */
 
     let customCamera: THREE.Camera|undefined = undefined;
     if (this.hasAttr('orthographic')) {
@@ -446,5 +454,13 @@ export class VoxelPainter extends CustomElementView {
     }
 
     updateApplet();
+  }
+
+  getSurfaceArea() {
+    return 10;
+  }
+
+  getVolume() {
+    return this.voxels.length;
   }
 }
