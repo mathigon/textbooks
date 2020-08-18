@@ -20,7 +20,7 @@ export class VoxelPainter extends CustomElementView {
 
   async ready() {
     await loadScript('/resources/shared/vendor/three-91.min.js');
-    
+
     const width = (+this.attr('width')) || 400;
     const height = (+this.attr('height')) || width;
     this.css({width: width + 'px', height: height + 'px'});
@@ -28,44 +28,40 @@ export class VoxelPainter extends CustomElementView {
     const v1 = new THREE.Vector3();
     const rotateOnly = this.hasAttr('rotateOnly');
 
-    const $eraser = this.$('.eraser')!;
-    const drag = new Draggable($eraser, this);
-    drag.on('move', (posn: Point) => {
-      console.log(posn);
-    });
-
-    const defaultGridDimension = 20
-    const gridDimension = this.attr("playingFieldSize") ? this.attr("playingFieldSize") : defaultGridDimension;
-    const playingFieldMin = new THREE.Vector3().setScalar(-gridDimension / 2. + .1)
-    const playingFieldMax = new THREE.Vector3().setScalar(gridDimension / 2. - .1)
-    function pointInPlayingField(p) //best done with a point already on grid
-    {
-      return playingFieldMin.x < p.x && p.x < playingFieldMax.x &&
-        playingFieldMin.y < p.y && p.y < playingFieldMax.y &&
-        playingFieldMin.z < p.z && p.z < playingFieldMax.z
+    const defaultGridDimension = 20;
+    let gridDimension = this.attr('playingFieldSize') ? this.attr('playingFieldSize') : defaultGridDimension;
+    if (gridDimension % 2 !== 0) {
+      gridDimension = 2 * Math.ceil(gridDimension / 2);
+    }
+    const playingFieldMin = new THREE.Vector3().setScalar(-gridDimension / 2.0 + 0.1);
+    const playingFieldMax = new THREE.Vector3().setScalar(gridDimension / 2.0 - 0.1);
+    function pointInPlayingField(p) {// best done with a point already on grid
+      const ret = playingFieldMin.x < p.x && p.x < playingFieldMax.x &&
+                playingFieldMin.y < p.y && p.y < playingFieldMax.y &&
+                playingFieldMin.z < p.z && p.z < playingFieldMax.z;
+      return ret;
     }
 
     let customCamera: THREE.Camera|undefined = undefined;
     if (this.hasAttr('orthographic')) {
-      const cameraW = 27. * gridDimension / defaultGridDimension;
+      const cameraW = 27.0 * gridDimension / defaultGridDimension;
       const cameraH = cameraW * height / width;
       customCamera = new THREE.OrthographicCamera(-cameraW, cameraW, cameraH, -cameraH, 1, 1000);
     }
-    
+
     const scene = await create3D(this, 45, 2 * width, 2 * height, customCamera);
     const camera = scene.camera;
-    camera.position.setLength(camera.position.length() * gridDimension / defaultGridDimension)
-    const $canvas = scene.$canvas;
-
     camera.rotation.order = 'YXZ';
     camera.rotation.y = TAU / 8;
     camera.rotation.x = -TAU / 8;
-    camera.position.x = 45.; //the "distance"
+    camera.position.x = 45.0; // the "distance"
+    camera.position.setLength(camera.position.length() * gridDimension / defaultGridDimension);
+    const $canvas = scene.$canvas;
 
     const objectsOnWhichVoxelsCanBePlaced: THREE.Object3D[] = [];
     const voxels: THREE.Object3D[] = [];
 
-    if (this.hasAttr('showSaveButton') ) {
+    if (this.hasAttr('showSaveButton')) {
       const $button = $N('button', {class: 'btn', text: 'Save'}, this);
       this.append($button);
 
@@ -127,40 +123,72 @@ export class VoxelPainter extends CustomElementView {
       }
     }
 
-    const eraser = new THREE.Mesh(new THREE.PlaneBufferGeometry(1, 1), new THREE.MeshBasicMaterial({transparent: true}));
-    let eraserDefaultPosition: THREE.Vector3;
-    {
-      eraser.scale.setScalar(0.2);
-      camera.add(eraser);
+    const $eraser = this.$('.eraser');
+    if ($eraser !== undefined) {
+      const positionMovedTo = new Point();
+      const drag = new Draggable($eraser, this);
+      drag.on('move', (posn: Point) => {
+        positionMovedTo.x = posn.x;
+        positionMovedTo.y = posn.y;
+        mouseControlMode = 'erasing';
 
-      // eraser picture is from https://www.kissclipart.com/ which is public domain
-      const loader = new THREE.TextureLoader();
-      loader.load('/resources/solids/eraser.png',
-          function(texture) {
-            eraser.material.map = texture;
-            eraser.material.needsUpdate = true;
-            updateApplet();
-          },
-          undefined,
-          function(err) {
-            console.error(err);
-          }
-      );
+        const p = canvasPointerPosition(event, $canvas);
+        respondToPointerMovement(p);
+      });
+      drag.on('end', () => {
+        mouseControlMode = '';
 
-      eraserDefaultPosition = new THREE.Vector3();
-      eraserDefaultPosition.z = -2;
-      eraserDefaultPosition.x = -0.7;
-      eraserDefaultPosition.y = -0.7;
+        $eraser.translate(-positionMovedTo.x, -positionMovedTo.y);
 
-      if (this.attr('cameraStyle') === 'orthographic') {
-        eraserDefaultPosition.x = -30 * 0.4;
-        eraserDefaultPosition.y = eraserDefaultPosition.x * height / width;
+        // let numSecondsToGoBack = .7
+        // animate((millisecondsSinceStart, timeDifference, cancel) => {
+        //   let lerpAmount = 1. - millisecondsSinceStart/1000. / numSecondsToGoBack
+        //   if (lerpAmount <= 0.) lerpAmount = 0.
+        //   console.log(lerpAmount)
+        //   $eraser.translate(-positionMovedTo.x * (1.-lerpAmount), -positionMovedTo.y * (1.-lerpAmount))
 
-        eraser.scale.setScalar(5);
-      }
+        //   updateApplet();
 
-      eraser.position.copy(eraserDefaultPosition);
+        //   if (lerpAmount === 0.)
+        //     cancel();
+        // });
+      });
     }
+
+    // const eraser = new THREE.Mesh(new THREE.PlaneBufferGeometry(1, 1), new THREE.MeshBasicMaterial({transparent: true}));
+    // let eraserDefaultPosition: THREE.Vector3;
+    // {
+    //   eraser.scale.setScalar(0.2);
+    //   camera.add(eraser);
+
+    //   // eraser picture is from https://www.kissclipart.com/ which is public domain
+    //   const loader = new THREE.TextureLoader();
+    //   loader.load('/resources/solids/eraser.png',
+    //       function(texture) {
+    //         eraser.material.map = texture;
+    //         eraser.material.needsUpdate = true;
+    //         updateApplet();
+    //       },
+    //       undefined,
+    //       function(err) {
+    //         console.error(err);
+    //       }
+    //   );
+
+    //   eraserDefaultPosition = new THREE.Vector3();
+    //   eraserDefaultPosition.z = -2;
+    //   eraserDefaultPosition.x = -0.7;
+    //   eraserDefaultPosition.y = -0.7;
+
+    //   if (this.attr('cameraStyle') === 'orthographic') {
+    //     eraserDefaultPosition.x = -30 * 0.4;
+    //     eraserDefaultPosition.y = eraserDefaultPosition.x * height / width;
+
+    //     eraser.scale.setScalar(5);
+    //   }
+
+    //   eraser.position.copy(eraserDefaultPosition);
+    // }
 
     {
       const isInShapeFunctions: Obj<(p: THREE.Vector3) => boolean> = {};
@@ -224,13 +252,14 @@ export class VoxelPainter extends CustomElementView {
     const floorIntersectionPlaneGeometry = new THREE.PlaneBufferGeometry(gridDimension, gridDimension);
     floorIntersectionPlaneGeometry.rotateX(-Math.PI / 2);
     const floorIntersectionPlane = new THREE.Mesh(floorIntersectionPlaneGeometry, new THREE.MeshBasicMaterial({visible: false}));
-    let grid = new THREE.GridHelper(gridDimension, gridDimension)
+    const grid = new THREE.GridHelper(gridDimension, gridDimension);
     scene.add(floorIntersectionPlane);
     floorIntersectionPlane.add(grid);
-    if (this.attr("hideGrid") === true)
-      grid.visible = false
+    if (this.hasAttr('hideGrid')) {
+      grid.visible = false;
+    }
     objectsOnWhichVoxelsCanBePlaced.push(floorIntersectionPlane);
-    floorIntersectionPlane.position.y -= gridDimension / 2.;
+    floorIntersectionPlane.position.y -= gridDimension / 2.0;
     const placingHelpers: THREE.Mesh[] = [];
 
     for (let i = 0; i < 3; i++) {
@@ -268,16 +297,15 @@ export class VoxelPainter extends CustomElementView {
     const asyncPointerNdc = new THREE.Vector3();
     const pointerNdc = new THREE.Vector3();
     const oldPointerNdc = new THREE.Vector3();
-    
+
     function respondToPointerMovement(p) {
       camera.updateMatrixWorld();
       asyncPointerNdc.set((p.x / $canvas.canvasWidth) * 2 - 1,
-        -(p.y / $canvas.canvasHeight) * 2 + 1, 0);
+          -(p.y / $canvas.canvasHeight) * 2 + 1, 0);
       updateApplet();
     }
-    $canvas.on('pointermove', (event: PointerEvent)=>
-    {
-      event.preventDefault()
+    $canvas.on('pointermove', (event: PointerEvent)=> {
+      event.preventDefault();
       const p = canvasPointerPosition(event, $canvas);
       respondToPointerMovement(p);
     });
@@ -285,28 +313,22 @@ export class VoxelPainter extends CustomElementView {
     slide($canvas, {
 
       down: () => {
-        const eraserIntersected = pointerRaycaster.intersectObject(eraser)[0] !== undefined;
-        if (eraserIntersected) {
-          mouseControlMode = 'erasing';
-        } else {
-          mouseControlMode = 'rotating';
+        mouseControlMode = 'rotating';
 
-          const intersection = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced)[0];
-          if (!rotateOnly && intersection !== undefined ) {
-            setFromVoxelIntersection(v1, intersection);
-            if (pointInPlayingField(v1))
-            {
-              mouseControlMode = 'placing';
-              placingStart.copy(v1)
-              placingEnd.copy(placingStart);
+        const intersection = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced)[0];
+        if (!rotateOnly && intersection !== undefined) {
+          setFromVoxelIntersection(v1, intersection);
+          if (pointInPlayingField(v1)) {
+            mouseControlMode = 'placing';
+            placingStart.copy(v1);
+            placingEnd.copy(placingStart);
 
-              // corner of cube that is away from camera
-              getCameraDirectionSnappedToGrid(v1);
-              v1.add(placingStart);
-              for (let i = 0; i < 3; i++) {
-                placingHelpers[i].position.copy(v1);
-                placingHelpers[i].updateMatrixWorld();
-              }
+            // corner of cube that is away from camera
+            getCameraDirectionSnappedToGrid(v1);
+            v1.add(placingStart);
+            for (let i = 0; i < 3; i++) {
+              placingHelpers[i].position.copy(v1);
+              placingHelpers[i].updateMatrixWorld();
             }
           }
         }
@@ -347,19 +369,6 @@ export class VoxelPainter extends CustomElementView {
               }
             }
           }
-        }
-
-        if (mouseControlMode === 'erasing') {
-          mouseControlMode = '';
-
-          animate((timeSinceStart, timeDifference, cancel) => {
-            eraser.position.lerp(eraserDefaultPosition, 0.1);
-            updateApplet();
-
-            if (eraser.position.distanceToSquared(eraserDefaultPosition) < 0.001) {
-              cancel();
-            }
-          },);
         }
 
         if (mouseControlMode === 'rotating') {
@@ -424,17 +433,17 @@ export class VoxelPainter extends CustomElementView {
       }
 
       if (mouseControlMode === 'placing') {
-        let snapSpaceCameraRotationY = (camera.rotation.y - TAU / 8.) / (TAU / 4.)
-        let distanceFromDiagonalViewpoint = Math.abs(snapSpaceCameraRotationY - Math.round(snapSpaceCameraRotationY))
-        let distanceFromTopOrBottomViewpoint = TAU/4. - Math.abs(camera.rotation.x)
-        let placingHelpersArrayToUse = distanceFromDiagonalViewpoint < .1 && distanceFromTopOrBottomViewpoint > .1 ? placingHelpers : [placingHelpers[0]]
+        const snapSpaceCameraRotationY = (camera.rotation.y - TAU / 8.0) / (TAU / 4.0);
+        const distanceFromDiagonalViewpoint = Math.abs(snapSpaceCameraRotationY - Math.round(snapSpaceCameraRotationY));
+        const distanceFromTopOrBottomViewpoint = TAU / 4.0 - Math.abs(camera.rotation.x);
+        const placingHelpersArrayToUse = distanceFromDiagonalViewpoint < 0.1 && distanceFromTopOrBottomViewpoint > 0.1 ? placingHelpers : [placingHelpers[0]];
 
         const intersection = pointerRaycaster.intersectObjects(placingHelpersArrayToUse)[0];
         if (intersection !== undefined) {
           getCameraDirectionSnappedToGrid(placingEnd);
           placingEnd.negate().setLength(0.1);
           placingEnd.add(intersection.point);
-          placingEnd.clamp(playingFieldMin,playingFieldMax)
+          placingEnd.clamp(playingFieldMin, playingFieldMax);
           snapToNearestValidCubeCenterPosition(placingEnd);
 
           placementVisualizer.position.addVectors(placingEnd, placingStart).multiplyScalar(0.5);
@@ -443,22 +452,19 @@ export class VoxelPainter extends CustomElementView {
           placementVisualizer.scale.z = 1 + 2 * Math.abs(placementVisualizer.position.z - placingEnd.z);
         }
       } else {
-        placementVisualizer.scale.setScalar(0.0000001)
-        if (mouseControlMode === '' ) {
+        placementVisualizer.scale.setScalar(0.0000001);
+        if (mouseControlMode === '') {
           const intersections = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced);
-          if(intersections.length !== 0) {
+          if (intersections.length !== 0) {
             setFromVoxelIntersection(placementVisualizer.position, intersections[0]);
-            if( pointInPlayingField(placementVisualizer.position))
+            if (pointInPlayingField(placementVisualizer.position)) {
               placementVisualizer.scale.setScalar(1);
+            }
           }
         }
       }
 
       if (mouseControlMode === 'erasing') {
-        pointerRaycaster.ray.at(eraser.position.length(), eraser.position);
-        camera.updateMatrixWorld();
-        camera.worldToLocal(eraser.position);
-
         let voxelIntersectedByEraser: THREE.Object3D|undefined = undefined;
         const intersections = pointerRaycaster.intersectObjects(voxels);
         if (intersections.length > 0) voxelIntersectedByEraser = intersections[0].object;
@@ -478,7 +484,16 @@ export class VoxelPainter extends CustomElementView {
   }
 
   getSurfaceArea() {
-    return 10;
+    let sa = 0;
+    for (let i = 0, il = voxels.length; i < il; ++i) {
+      sa += 6;
+      for (let j = 0; j < il; ++j) {
+        if (i !== j && voxels[i].position.distanceToSquared(voxels[j].position) < 1.1) {
+          sa -= 1;
+        }
+      }
+    }
+    return sa;
   }
 
   getVolume() {

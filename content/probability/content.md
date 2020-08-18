@@ -373,9 +373,177 @@ __normal distribution__.
 > section: conditional
 > sectionStatus: dev
 
-TODO
-
 ---
+
+A team of researchers has discovered a new pill that might help treat patients with a very painful ligament infection. However, before they can start mass production, they have to check that the pill is safe – it doesn’t cause any harmful side effects. They also have to check that taking the pill is worth it - that patients actually recover when they take the pill.
+
+This can be done in a clinical trial at a hospital. First, you have to find a large group of patients with this ligament infection. Then you give some of these patients your new pill, while the others get a placebo: an identically looking pill which is just made of sugar. Finally, you compare what happens to both groups of patients after a couple of weeks.
+
+We can represent the outcome of this research study in a table:
+
+
+TABLE
+
+The pill didn’t help everyone, so it isn’t a miracle cure.
+
+However... maybe it worked a little bit? If this pill is helpful for even a few people, that could take away a lot of pain that people are experiencing!
+
+On the other hand, those pills cost money and time to administer. So we want to be completely, mathematically, certain that taking the pill makes a person more likely to get better. In order to do this, we need to statistically analyse the data in this table, which is what we’ll be doing today!
+
+You can apply conditional probability whenever you have data, like performance of football teams, how well a business strategy worked. To make it easier, we’re going to focus on data that’s easy to collect: what are people wearing!
+
+
+
+Applet: 12x12 square of people. assigned hats, scarves and coats, and glasses. On right, list of these and you can click them to arrange people on the left and right with and without those things on. Student must click a few of them before next text shows up
+
+[Appears above the applet after it’s been played with] If I randomly choose a person from this crowd, what is the chance that they are wearing a scarf? [slider snapping to 0.1 intervals, correct answer is 0.5]
+
+How about the probability that they are wearing a coat? [this time slider snaps to 1/12 intervals, 0.08333. Slider is directly above the square].
+
+And the probability they’re wearing a hat? [this time slider has a label next to it: P(wearing a coat)]
+
+[below applet] Note that the correct answer is putting the slider in the place where the people reach along the side! It makes sense if you think about it. If no one wears a scarf, this probability would be 0, so you wouldn’t even have a sliver of people with the scarf on the side. If everyone wears a scarf, this probability would be 1. In our example, we have a probability of approximately [[0.4]].
+
+[Applet: same again but now there’s another square below it, and the lower square has TWO columns that both say hat, scarf, coat. First makes things go side-by-side, second subdivides in those columns. Again, more text won’t appear until student has played with it a bit]
+
+[imagine that the section saying “coat” is packed with all the people wearing coats, same for other labels]
+(P(A|B) labels should be in plain english)
+
+If I pick a random person from this crowd who is wearing a coat, what’s the probability that they are also wearing a scarf? [slider again, with 0 and 1 labelled]
+
+How about if I pick someone who is wearing a hat - what is the probability that that person is also wearing a scarf? [it is now the case that when they mouse over the applet, “Wearing hat ⋂ wearing scarf” appears imposed on the quadrants of the applet]
+
+If someone is wearing a coat, what’s the probability they are also wearing a hat? [slider again, the answer to this one is 100%, which is important to have an example of]
+
+Is a person more likely to be wearing a scarf if we know they are wearing a coat? [if you get this one wrong, it changes the labels and asks you again]
+
+Let’s try it with you drawing your own picture! Let’s say there’s a crowd of 100 people. A quarter of those 100 people are wearing flip-flops, and a tenth are wearing both flip-flops and sunglasses [there is a picture on the side of a person wearing flip flops and sunglasses]. Draw a picture representing this. What is the probability that someone who is wearing flip-flops will also be wearing sunglasses? [they enter it using text].
+
+There’s some useful notation for situations like this. We say “P( it will rain today )” to mean “the probability that it will rain today”. And as you might have read in set theory, we also use the symbol “⋂” to mean “and”, like “I am wearing a scarf ⋂ I am wearing a coat”. Put those together and you get things like “When it’s cold outside, P( I am wearing a scarf ⋂ I am wearing a coat ) is pretty high!”
+
+[Pair of applets appears again] We’re almost at the point where we can figure out whether the pill helps people with ligament disease. Try this one: the probability that a person is wearing a coat if we know that they’re wearing glasses is []. The probability a person is wearing a coat if they are not wearing glasses is [] So it’s the same! Wearing a coat has nothing to do with whether you are wearing glasses. This is a situation we call “independence”.
+
+The reason that this can be useful for helping cure diseases is because with the pill we wanted to know whether a person getting better is related to, i.e. is it dependent on whether they have taken the pill or not. Whether you wear flip-flops is related to wearing sunglasses. It’s because [multiple choice: these are both things you’ll do on a hot day | the same kinds of people like these items of clothing | these are both things you do on tuesdays]. Wearing scarves and coats are also related.
+
+[picture of chicken soup and ladder] Some things are unrelated. For example, flipping a coin once and seeing it come up heads is unrelated to whether flipping the coin again will cause it to come up heads. Another thing that is unrelated is walking underneath a ladder and getting unlucky later in the day. Sometimes it takes scientific studies to find that two things are unrelated - for example, many studies have looked at whether being vaccinated is related to whether a person will start showing signs of autism, and they have established that these two things are completely unrelated. Of course, there will be some children who receive vaccinations and do develop autism – but the probability is exactly the same as for children who do no receive vaccinations!
+
+When two things really have no effect on each other, we call them independent. Which of these pairs of statements are independent?
+
+[They sort the following pairs of statements into dependent and independent] 
+
+a person’s name contains an A; their name contains a C
+I will win the lottery; I put in my birthday as a my chosen numbers
+Ashley is above average height; Ashley is male
+Dice game, 3 rolls, turns out 1st doesn’t matter?
+P(all of your three siblings have the same gender|first one was female). Can put it in a card game? Wanna be more real than this really. P(sum of two dice rolls > 5 | first dice roll = 3
+P(it will rain this afternoon|it’s raining this morning)
+I brush my teeth; I do or don’t get tooth decay
+P(age > 15 | height <5ft) (it’s about quantities!)
+I tested positive for measles; I have measles
+Bob likes football; Bob is wearing a shirt with “Chelsea” on it
+Asparagus will taste good to me the second time someone served it to me; asparagus tasted bad to me the first time someone served it to me
+
+
+
+
+[applet again. It has numbers appear in a way to emphasize the text] If two things are independent, it means that in pictures like this, the rectangles are all lined up perfectly, they are not broken apart like when you’re asking about wearing a coat and wearing gloves. When this happens, the area of the “both statements are true” corner rectangle is equal to the probabilities of the two sides multiplied together. Try changing the numbers and seeing for yourself!
+
+There’s another important symbol here, which is “|”, which means “given that we know that...”. For example:
+
+Plain language
+Mathematical language
+Probability that someone is wearing given that we know that they are wearing sunglasses
+
+Probability it will rain today given that it rained this morning
+P( wearing sunglasses | wearing flip-flops )
+
+
+P(rain this afternoon | rained this morning)
+
+
+[have one where they write the translation
+
+With these pieces of notation, the things we’ve done above can be put in a formula, which makes it easier to work with. Above, you answered the question “what proportion of the people wearing coats are also wearing scarves?”.
+
+[Applet appears and plays out the below]
+
+So we would say that you worked out the value of P(wearing scarf | wearing coat). The way you got this value involved looking at the number of people who were wearing coats. How many were there? P(wearing coat) * total number of people, which is equal to [0.5 * 144, -0.5*144,]
+
+You also needed to get the number of people wearing both coats and scarves. This was equal to total number of people * P(wearing coat ⋂ wearing scarf), which is equal to [0.5 * 144, -0.5*144,]
+
+To get P(wearing scarf | wearing coat) (the proportion of people wearing coats who are also wearing scarves!) you divided the second number by the first number by the other. As in, you did:
+
+P(wearing scarf | wearing coat) = P(wearing coat ⋂ wearing scarf) * total number of people / P(wearing coat) * total number of people
+
+Using algebra, we can simplify that! It’s just the same as:
+
+P(wearing scarf | wearing coat) = P(wearing coat ⋂ wearing scarf) / P(wearing coat)
+
+[Each of these probabilities should be a "pill" that highlights the corresponding area of the diagram when hovering.]
+
+Which is the ratio between the area of the rectangle containing the people wearing coats and scarves and the area of the combined rectangle containing all the people wearing coats. This makes sense because the more area a rectangle has, the more people are in it!
+
+In fact, this is true for any statement, not just what people are wearing:
+
+P(A | B) = P(A ⋂ B) / P(B)
+
+These letters A and B could be any connected sentences: “This sandwich is mouldy”; “This sandwich will make me sick if I eat it”. They could also be totally unconnected sentences: “This football game will be won by Manchester United”, “The climate change we are seeing is caused by human CO2 emissions”. No matter what they are, this equation will always apply to them!
+
+This equation defines conditional probability, and it was discovered by Reverend Thomas Bayes[picture of him]. One of the first people to use it successfully was Pierre Simone Laplace[picture]. In 1776, he applied it to some observations that had been made on the paths of comets [pic of comet in solar system], and was able to figure out their average behaviour. He later used his findings to work out whether the solar system will eventually break apart!
+
+We can also make a formula for independence too.
+
+[Applet again with just glasses and coats, which as found previously were independent. Controls come in too]
+
+Remember how when two statements are independent, like wearing a coat and wearing glasses, the size of the rectangle in the corner is equal to the size of the probabilities?
+
+[Applet]
+
+
+P(A)*P(B) = P(A⋂B)
+
+If we give 4 more people with coats and glasses [it happens in the applet], suddenly these are no longer independent - it is now the case that you’re more likely to be wearing glasses if you’re wearing a coat. What’s the value of P(glasses⋂coat) now?
+
+P(A)*P(B) ≠ P(A⋂B)
+
+By the way, what is the value of P(wearing coat|wearing glasses)? Not the other way around! P(wearing coat|wearing glasses) and P(wearing glasses|wearing coat) are different from one another - at least when the two variables are dependent. If P(A|B) = P(B|A), that’s another way of knowing they’re independent!
+
+[picture of hospital] Back to the pill. Remember this table:
+
+TABLE
+
+We can look at the same data this way:
+
+[table again, it transforms into rectangles with sizes whose entries. When you mouse over it it transforms back]
+
+
+
+We wanted to help people suffering from the ligament disease. So we wanted to know if taking the pill makes a person more likely to get better.
+
+Alright - and what is P(they got better| they took the pill)? [enter the number with keyboard] - and what is P(they got better|they didn’t take the pill). And this gives us our very important answer: [the pill is worth spending hospital budget on|the pill is not worth spending hospital budget on]! Hundreds of new pills get discovered every year, and many of them don’t work - so knowing how to do this is very useful if we want to help people.
+
+Here’s a more tricky situation.
+
+TABLE
+
+We can add up this data to make it easier to look at
+
+TABLE
+
+Again, we want to know P(recovered|took pill). Remember the formula: P(recovered|took pill) = P(recovered⋂took pill) / P(took pill). By plugging in numbers, you can see that P(recovered|took pill is):[]
+
+Well done! So, it looks like the pill is pretty good.
+
+But let’s check something - what’s the value of P( recovered | old person who was given the pill) and P( recovered| young person who was given pill)?
+
+Crazy! It turns out that the pill is actually a totally useless treatment, even though the combined numbers make it seem good!
+
+Why did this happen? Well, check P(recovered|young). Those young people, they’re much more resilient, pill or no pill! And now check P(young|took pill) and P(old|took pill), what are they?
+
+The doctors happened to give the pill to more young people than old people, so the pill coincidentally was taken by more people who were likely to get better anyway! This is called Simpson’s paradox, and it’s important to avoid it!
+
+Now you know the terminology of conditional probability, you might start seeing it in almost every sentence people say! Use it wisely.
+
 
 Sort these events into whether they are independent or not:
 
