@@ -453,7 +453,7 @@ export class VoxelPainter extends CustomElementView {
         }
       } else {
         placementVisualizer.scale.setScalar(0.0000001);
-        if (mouseControlMode === '') {
+        if (!rotateOnly && mouseControlMode === '') {
           const intersections = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced);
           if (intersections.length !== 0) {
             setFromVoxelIntersection(placementVisualizer.position, intersections[0]);
