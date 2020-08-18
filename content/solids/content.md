@@ -45,7 +45,7 @@ Try to make a shape with a surface area of 10 and a volume of 2
     figure
       x-voxel-painter(width=600 height=400 color-sides,playingFieldSize="4",)
         .eraser()
-        x-icon-btn(icon="check-white")
+        x-icon-btn(surfaceArea=10,volume=2,icon="check-white")
 
 ---
 
