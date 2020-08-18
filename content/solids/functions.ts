@@ -13,8 +13,8 @@ export async function voxelBuilderQuestion($step: Step) {
   const $voxel = $step.$('x-voxel-painter') as VoxelPainter;
   const $button = $voxel.$('x-icon-btn')!;
 
-  const $targetVolume = $button.attr('volume');
-  const $targetSurface = $button.attr('surfaceArea');
+  const $targetVolume = parseInt($button.attr('volume'));
+  const $targetSurface = parseInt($button.attr('surfaceArea'));
 
   $button.on('click', () => {
     const surface = $voxel.getSurfaceArea();
