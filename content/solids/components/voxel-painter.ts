@@ -59,7 +59,7 @@ export class VoxelPainter extends CustomElementView {
     const $canvas = scene.$canvas;
 
     const objectsOnWhichVoxelsCanBePlaced: THREE.Object3D[] = [];
-    const voxels: THREE.Object3D[] = [];
+    const voxels = this.voxels
 
     if (this.hasAttr('showSaveButton')) {
       const $button = $N('button', {class: 'btn', text: 'Save'}, this);
@@ -485,10 +485,10 @@ export class VoxelPainter extends CustomElementView {
 
   getSurfaceArea() {
     let sa = 0;
-    for (let i = 0, il = voxels.length; i < il; ++i) {
+    for (let i = 0, il = this.voxels.length; i < il; ++i) {
       sa += 6;
       for (let j = 0; j < il; ++j) {
-        if (i !== j && voxels[i].position.distanceToSquared(voxels[j].position) < 1.1) {
+        if (i !== j && this.voxels[i].position.distanceToSquared(this.voxels[j].position) < 1.1) {
           sa -= 1;
         }
       }

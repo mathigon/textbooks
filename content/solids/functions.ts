@@ -9,11 +9,11 @@ import './components/voxel-painter';
 import {VoxelPainter} from './components/voxel-painter';
 
 
-export async function voxelBuilder($step: Step) {
+export async function voxelBuilderQuestion($step: Step) {
   const $voxel = $step.$('x-voxel-painter') as VoxelPainter;
   const $button = $voxel.$('x-icon-btn')!;
 
-  const targetVolume = 3;
+  const targetVolume = 2;
   const targetSurface = 10;
 
   $button.on('click', () => {
