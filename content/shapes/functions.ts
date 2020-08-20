@@ -4,9 +4,9 @@
 // =============================================================================
 
 
-import {Polygon, Point, Segment} from '@mathigon/fermat';
-import {CanvasView, loadScript, animate} from '@mathigon/boost';
-import {Step, Geopad, GeoPoint} from '../shared/types';
+import {Point, Polygon, Segment} from '@mathigon/fermat';
+import {animate, CanvasView, loadScript} from '@mathigon/boost';
+import {Geopad, GeoPoint, Step} from '../shared/types';
 
 declare const d3: any;
 
@@ -24,7 +24,7 @@ export async function voronoi($step: Step) {
   $step.model.vorOpacity = 0;
 
   const cafePoints: Point[] = [
-    $step.model.a, $step.model.b, $step.model.c, $step.model.d, 
+    $step.model.a, $step.model.b, $step.model.c, $step.model.d,
     $step.model.e, $step.model.f, $step.model.g, $step.model.h
   ];
 
@@ -40,7 +40,7 @@ export async function voronoi($step: Step) {
       });
       return new Polygon(...cellPoints);
     });
-  
+
   $voronoiButton.on('click', _ => {
     showVor($step);
   });
@@ -53,7 +53,7 @@ export async function voronoi($step: Step) {
     const p = point.value!;
     const edges: Segment[] = [];
 
-    let shortest = {len: Number.POSITIVE_INFINITY, ind: 0};
+    const shortest = {len: Number.POSITIVE_INFINITY, ind: 0};
     cafePoints.forEach((cafePoint, i) => {
       const newEdge = new Segment(cafePoint, p);
       if (newEdge.length < shortest.len) {
@@ -116,10 +116,10 @@ export async function voronoi($step: Step) {
 
 async function handleAnim(index: number, $step: Step) {
   window.setTimeout((_: any) => {
-    const anim = animate((progress, _) => {
-      let edges: {edge: Segment, stroke: string, opacity: number}[] = $step.model.distLines;
+    const _anim = animate((progress, _) => {
+      const edges: {edge: Segment, stroke: string, opacity: number}[] = $step.model.distLines;
       const opacity = 1 - progress;
-      let e = edges[index];
+      const e = edges[index];
       e.opacity = opacity;
       edges[index] = e;
       $step.model.distLines = edges.slice();
