@@ -638,7 +638,7 @@ Now add some buttons and code that make it snap to a set of matrix values.
 ---
 
 ## 3D playground
->id: three-dimensions
+> id: three-dimensions
 
 #### Watch what we can do with a 3d matrix
 Watch what we can do with a 3d matrix.
@@ -652,5 +652,12 @@ Watch what we can do with a 3d matrix.
     x-solid(size=280)
 
 :::
+
+Try adjusting the vector.
+<table class="vector">
+<tr>x = ${x}{x|-2|-2,2,0.1}</tr>
+<tr>y = ${y}{y|-2|-2,2,0.1}</tr>
+<tr>z = ${z}{z|-2|-2,2,0.1}</tr>
+</table>
 
 Neat, huh?

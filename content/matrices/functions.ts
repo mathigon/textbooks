@@ -291,29 +291,34 @@ export function threeDimensions($step: Step) {
     return [bottom];
   });
 
-  $solids[1].addMesh(() => {
+  $solids[1].addMesh((scene) => {
     // $solids[1].addWireframe(new THREE.Line)
 
     // DRAW PLANES
     const PLANE_SIZE = 4;
-    const DISTANCE = 0;
     const zPlaneMaterial = Solid.translucentMaterial(0xcd0e66, 0.3);
     const zPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), zPlaneMaterial);
     zPlane.rotateX(Math.PI/2);
-    zPlane.position.z = -DISTANCE;
+    $solids[1].addArrow([0, 0, 0], [0, 0, 1], 0xcd0e66);
 
     const yPlaneMaterial = Solid.translucentMaterial(0x0f82f2, 0.3);
     const yPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), yPlaneMaterial);
     yPlane.rotateY(Math.PI/2);
-    yPlane.position.z = -DISTANCE;
+    $solids[1].addArrow([0, 0, 0], [0, 1, 0], 0x0f82f2);
 
     const xPlaneMaterial = Solid.translucentMaterial(0x22ab24, 0.3);
     const xPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), xPlaneMaterial);
     xPlane.rotateZ(Math.PI/2);
-    xPlane.position.z = -DISTANCE;
+    $solids[1].addArrow([0, 0, 0], [1, 0, 0], 0x22ab24);
 
-    // draw point
-    $solids[1].addPoint([3, 4, 1-DISTANCE], 0x22ab24);
+    const vectorArrow = $solids[1].addArrow([0, 0, 0], [$step.model.x, $step.model.y, $step.model.z], 0x000000);
+
+    $step.model.watch((state: any) => {
+      // A-HA! This doesn't work, and there's even a TODO to go with it
+      // "TODO Support changing the height of the arrow."
+      vectorArrow.updateEnds!([0, 0, 0], [state.x, state.y, state.z]);
+      scene.draw();
+    });
 
     return [xPlane, yPlane, zPlane];
   });
