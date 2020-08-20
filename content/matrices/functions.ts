@@ -3,9 +3,12 @@
 // (c) Mathigon
 // =============================================================================
 
+/// <reference types="THREE"/>
+
 import {Step, Geopad} from '../shared/types';
 import {ElementView} from '@mathigon/boost';
 import {Point} from '@mathigon/fermat';
+import {Solid} from '../shared/components/solid';
 
 /**
  *
@@ -262,5 +265,56 @@ export function determinants($step:Step) {
     $geopad.animatePoint('ipoint', new Point(1, 1), 1000);
     $geopad.animatePoint('jpoint', new Point(-1, -1), 1000);
 
+  });
+}
+
+
+export function threeDimensions($step: Step) {
+  const $solids = $step.$$('x-solid') as Solid[];
+
+  // scrap this guy for parts
+  $solids[0].addMesh(() => {
+    $solids[0].addArrow([0, -1.4, 0], [1.4, -1.4, 0], 0xcd0e66);
+    $solids[0].addLabel('r', [0.7, -1.4, 0], 0xcd0e66, '-1px 0 0 -3px');
+
+    $solids[0].addArrow([0, -1.4, 0], [0, 1.35, 0], 0x0f82f2);
+    $solids[0].addLabel('h', [0, 0, 0], 0x0f82f2, '-10px 0 0 4px');
+
+    $solids[0].addPoint([0, 1.4, 0], 0x22ab24);
+    $solids[0].addWireframe(new THREE.ConeGeometry(1.4, 2.8, 128, 1, true));
+
+    const bottomMaterial = Solid.translucentMaterial(0xcd0e66, 0.3);
+    const bottom = new THREE.Mesh(new THREE.CircleGeometry(1.4, 32),
+        bottomMaterial);
+    bottom.rotateX(Math.PI / 2);
+    bottom.position.y = -1.4;
+    return [bottom];
+  });
+
+  $solids[1].addMesh(() => {
+    // $solids[1].addWireframe(new THREE.Line)
+
+    // DRAW PLANES
+    const PLANE_SIZE = 4;
+    const DISTANCE = 0;
+    const zPlaneMaterial = Solid.translucentMaterial(0xcd0e66, 0.3);
+    const zPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), zPlaneMaterial);
+    zPlane.rotateX(Math.PI/2);
+    zPlane.position.z = -DISTANCE;
+
+    const yPlaneMaterial = Solid.translucentMaterial(0x0f82f2, 0.3);
+    const yPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), yPlaneMaterial);
+    yPlane.rotateY(Math.PI/2);
+    yPlane.position.z = -DISTANCE;
+
+    const xPlaneMaterial = Solid.translucentMaterial(0x22ab24, 0.3);
+    const xPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), xPlaneMaterial);
+    xPlane.rotateZ(Math.PI/2);
+    xPlane.position.z = -DISTANCE;
+
+    // draw point
+    $solids[1].addPoint([3, 4, 1-DISTANCE], 0x22ab24);
+
+    return [xPlane, yPlane, zPlane];
   });
 }

@@ -633,3 +633,24 @@ Adjust the matrix to see how it changes in the coordinates.
 </table>
 
 Now add some buttons and code that make it snap to a set of matrix values.
+
+
+---
+
+## 3D playground
+>id: three-dimensions
+
+#### Watch what we can do with a 3d matrix
+Watch what we can do with a 3d matrix.
+
+::: column(width=280)
+
+    x-solid(size=280)
+
+::: column(width=280)
+
+    x-solid(size=280)
+
+:::
+
+Neat, huh?
