@@ -59,7 +59,7 @@ export class VoxelPainter extends CustomElementView {
     const $canvas = scene.$canvas;
 
     const objectsOnWhichVoxelsCanBePlaced: THREE.Object3D[] = [];
-    const voxels = this.voxels
+    const voxels = this.voxels;
 
     if (this.hasAttr('showSaveButton')) {
       const $button = $N('button', {class: 'btn', text: 'Save'}, this);
