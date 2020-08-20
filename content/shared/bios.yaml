@@ -2178,6 +2178,21 @@ viete:
     and trigonometry, including calculating _π_ to 10 decimal places using a
     polygon with 393216 sides.
 
+voronoy:
+  born: 1868
+  died: 1908
+  name: Voronoy
+  full: Georgy Voronoy
+  bio: |
+    Georgy Voronoy (1868 – 1908) was a Russian mathematician noted for defining the
+    Voronoi diagram.
+
+    Voronoi diagrams, or tessellations, are used in many areas of science, such as 
+    the analysis of spatially distributed data, having become an important topic in 
+    geophysics, meteorology, condensed matter physics, and Lie groups. They are 
+    also widely used in many areas of computer graphics, from architecture to 
+    film-making and video games.
+
 wallis:
   born: 1616
   died: 1703
