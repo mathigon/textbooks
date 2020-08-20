@@ -32,13 +32,13 @@ School districts  need an accurate estimate of the number of students that may a
       canvas.voronoi(width=600 height=400)
       svg
         circle.red(cx=40 cy=60 name="a")
-        circle.red(cx=500 cy=80 name="b")
-        circle.red(cx=170 cy=130 name="c")
-        circle.red(cx=228 cy=240 name="d")
-        circle.red(cx=400 cy=180 name="e")
+        circle.red(cx=260 cy=40 name="b")
+        circle.red(cx=500 cy=80 name="c")
+        circle.red(cx=400 cy=180 name="d")
+        circle.red(cx=320 cy=138 name="e")
         circle.red(cx=300 cy=330 name="f")
-        circle.red(cx=320 cy=138 name="g")
-        circle.red(cx=260 cy=40 name="h")
+        circle.red(cx=228 cy=240 name="g")
+        circle.red(cx=170 cy=130 name="h")
 
 {.reveal(when="one-point")} Pick 4 other points on the map.
 

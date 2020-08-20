@@ -14,6 +14,8 @@ export async function voronoi($step: Step) {
 
   await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
 
+  const colors = ["3c91e6","ff6b6b","ffe45e","4ecdc4","81366f","c93818","e2c312","6bab90","e4533a"].map(c => '#' + c);
+
   const $canvas = $step.$('canvas.voronoi') as CanvasView;
   const $geopad = $step.$('x-geopad') as Geopad;
   const $voronoiButton = $step.$('button.show-voronoi')!;
@@ -100,8 +102,8 @@ export async function voronoi($step: Step) {
     $canvas.clear();
 
     if ($step.model.vorOpacity != 0) {
-      cellPolys.forEach(cellPoly => {
-        $canvas.draw(cellPoly, {stroke: 'black', strokeWidth: 2, opacity: $step.model.vorOpacity});
+      cellPolys.forEach((cellPoly, i) => {
+        $canvas.draw(cellPoly, {fill: colors[i % 9], stroke: 'black', strokeWidth: 2, opacity: ($step.model.vorOpacity / 3)});
       });
     }
 
