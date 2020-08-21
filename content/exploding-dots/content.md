@@ -380,15 +380,15 @@ We can now develop a __distance formula__, based on how often 10 “goes into”
 into a number multiplicatively. If we can divide a number _a_ by ten a maximum
 of _k_ times while remaining an integer, let’s write
 
-{.text-center} `|a|_(ten) = 1/10^k`
+{.text-center} `abs(a)_(ten) = 1/10^k`
 
-For example, `|850|_(ten) = 1/(10^1) = 0.1`, and `|8500|_(ten) = 1/(10^2) = 0.01`,
-and `|850000|_(ten) =` [[0.0001]].
+For example, `abs(850)_(ten) = 1/(10^1) = 0.1`, and `abs(8500)_(ten) = 1/(10^2) = 0.01`,
+and `abs(850000)_(ten) =` [[0.0001]].
 
 ---
 
 We can also measure the distance between any two different numbers. For example,
-the distance between 3 and 33 is `|33−3|_(ten) = |30|_(ten) = 1/(10^1) = 0.1`.
+the distance between 3 and 33 is `abs(33−3)_(ten) = abs(30)_(ten) = 1/(10^1) = 0.1`.
 
 With this new way to measure distance, 1, 10, 100, 1000, … is a sequence of
 numbers getting closer and closer to [[zero|1|–1|infinity]]. Similarly, 9, 99,
