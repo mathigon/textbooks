@@ -1,6 +1,6 @@
 # Markdown Syntax
 
-Mathigon's courses are written in a custom flavour of Markdown. Most [standard syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) (titles, bold, italic, links, etc.) is supported, but we have added new syntax, and updated the behaviour of some existing elements.
+Mathigon's courses are written in a custom flavour of Markdown. Most [standard syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) (titles, bold, italic, links, etc.) is supported, but we have added many new elements, and updated the behaviour of some existing ones.
 
 Here is the basic outline of a chapter:
 
@@ -21,7 +21,7 @@ Here is a paragraph
 Here is another paragraph
 ```
 
-Notice that every chapter is split into multiple short steps, divided by the `---` characters. Every section contains some *metadata*, indicated by lines starting with `>`. The metadata is parsed as [YAML](http://yaml.org/). (Note that the `>` usually indicates block quotes in standard Markdown syntax.)
+Notice that every chapter is split into multiple short steps, divided by the `---` lines. Every section contains some *metadata* at the beginning, in lines starting with a `>`. The metadata is parsed as [YAML](http://yaml.org/). (Note that the `>` usually indicates block quotes in standard Markdown syntax.)
 
 The `# H1`  heading is the title of the entire course. Every step that starts with an `# H2` heading creates a new chapter/section, and you can use the `> section:` metadata to (optionally) specify a custom ID for this chapter. This ID will appear in the URL, for example `/course/<course-id>/<section-id>`.
 
@@ -36,6 +36,8 @@ The probability of rolling a 6 is `(1+x)/3`.
 Here is some Python code: `{py} x = 0`
 Here is some LaTeX code: `{latex} \frac{1}{2}` 
 ```
+
+There are a few minor differences compared to the standard AsciiMath syntax. Most importantly, it is possible to have arbitrary multi-letter variables, e.g. `ab` would become `<mi>ab</mi>` not `<mi>a</mi><mi>b</mi>`. To create multiple chained single-letter variables, simply add a space in between, e.g. `a b`.
 
 ## **Blanks and Input Fields**
 
