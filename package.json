@@ -17,10 +17,10 @@
     "node": ">=12.0.0"
   },
   "dependencies": {
-    "@mathigon/boost": "0.5.2",
+    "@mathigon/boost": "0.5.4",
     "@mathigon/core": "0.5.2",
-    "@mathigon/fermat": "0.5.2",
-    "@mathigon/hilbert": "0.5.2",
+    "@mathigon/fermat": "0.5.3",
+    "@mathigon/hilbert": "0.5.3",
     "@mathigon/dev-server": "0.5.1",
     "@types/d3": "5.7.2",
     "@types/topojson": "3.2.2",
