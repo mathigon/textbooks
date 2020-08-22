@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "schedule": ["before 5am every Saturday"],
+  "schedule": ["before 5am on Saturday"],
   "packageRules": [{
     "packagePatterns": ["eslint"],
     "groupName": "lint",
