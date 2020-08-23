@@ -85,7 +85,7 @@ export async function voronoi($step: Step) {
 
     if ($step.model.dynPoints.length == 1 && !$step.model.promptMorePoints) {
       $step.score('one-point');
-      $step.model.promptMorePoints == true;
+      $step.model.promptMorePoints = true;
     }
 
     if ($step.model.dynPoints.length == 5 && !$step.model.showButton) {
