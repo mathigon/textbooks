@@ -28,7 +28,7 @@ function markdown() {
 }
 
 function scripts() {
-  return gulp.src(['content/*/*.ts', '!content/shared/**'])
+  return gulp.src(['content/*/*.ts', '!**/*.d.ts', '!content/shared/**'])
       .pipe(rollup({
         plugins: [nodeResolve(), typescript()],
         onwarn(e) {

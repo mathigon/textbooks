@@ -7,10 +7,11 @@
 import {Point, Polygon, Segment} from '@mathigon/fermat';
 import {animate, CanvasView, loadScript} from '@mathigon/boost';
 import {Geopad, GeoPoint, Step} from '../shared/types';
+import {VoronoiCell, VoronoiStep} from './voronoi';
 
 declare const d3: any;
 
-export async function voronoi($step: Step) {
+export async function voronoi($step: VoronoiStep) {
 
   await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
 
