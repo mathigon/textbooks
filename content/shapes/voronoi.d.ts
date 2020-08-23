@@ -9,6 +9,7 @@ declare class VoronoiStep extends Step {
 interface VoronoiModel {
   dynPoints: Point[],
   distLines: DistanceLine[],
+  cells: VoronoiCell[],
   vorOpacity: number,
   // TODO: replace use of these with score checks
   promptMorePoints: boolean,
@@ -32,5 +33,6 @@ interface VoronoiCell {
 interface DistanceLine {
   edge: Segment,
   stroke: string,
+  strokeWidth: number,
   opacity: number
 }

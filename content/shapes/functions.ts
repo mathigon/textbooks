@@ -25,6 +25,7 @@ export async function voronoi($step: VoronoiStep) {
   $step.model.dynPoints = [];
   $step.model.distLines = [];
   $step.model.vorOpacity = 0;
+  $step.model.cells = [];
 
   const cafePoints: Point[] = [
     $step.model.a, $step.model.b, $step.model.c, $step.model.d,
@@ -44,8 +45,20 @@ export async function voronoi($step: VoronoiStep) {
       return new Polygon(...cellPoints);
     });
 
+  $step.model.cells = cellPolys.map(poly => {
+    return {poly, over: false};
+  });
+
   $voronoiButton.on('click', _ => {
     showVor($step);
+  });
+
+  $geopad.$svg.on('mousemove', e => {
+    // console.log(e);
+    $step.model.cells = $step.model.cells.map(cell => {
+      const over = cell.poly.contains(new Point(e.offsetX, e.offsetY));
+      return {...cell, over};
+    });
   });
 
   $geopad.switchTool('point');
@@ -70,7 +83,8 @@ export async function voronoi($step: VoronoiStep) {
 
     edges.forEach((edge, i) => {
       const stroke = i == shortest.ind ? 'red' : 'black';
-      $step.model.distLines.push({edge, stroke, opacity: 1});
+      const strokeWidth = i == shortest.ind ? 2 : 1;
+      $step.model.distLines.push({edge, stroke, strokeWidth, opacity: 1});
       $step.model.distLines = $step.model.distLines.slice();
       if (i != shortest.ind) {
         handleAnim(i + preLen, $step);
@@ -102,23 +116,26 @@ export async function voronoi($step: VoronoiStep) {
 
     $canvas.clear();
 
+    const cells = $step.model.cells;
+
     if ($step.model.vorOpacity != 0) {
-      cellPolys.forEach((cellPoly, i) => {
+      cells.forEach((cell, i) => {
+        const opacity = cell.over ? $step.model.vorOpacity / 2 : $step.model.vorOpacity / 3;
         $canvas.draw(
-            cellPoly,
+            cell.poly,
             {
               fill: colors[i % 9],
               stroke: 'black',
               strokeWidth: 2,
-              opacity: ($step.model.vorOpacity / 3)
+              opacity
             }
         );
       });
     }
 
-    $step.model.distLines.forEach(({edge, stroke, opacity}: {edge: Segment, stroke: string, opacity: number}) => {
+    $step.model.distLines.forEach(({edge, stroke, strokeWidth, opacity}) => {
       if (opacity != 0) {
-        $canvas.draw(edge, {strokeWidth: 2, stroke, opacity});
+        $canvas.draw(edge, {stroke, strokeWidth, opacity});
       }
     });
   });
