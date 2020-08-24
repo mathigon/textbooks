@@ -24,7 +24,7 @@ export function drawSierpinski([a, b, c]: Point[], i: number): string {
 export function drawCarpet([a, b, c, d]: Point[], i: number): string {
   if (i <= 0) return '';
 
-  const rect = new Polygon(a, b, c, d).scale(1/3);
+  const rect = new Polygon(a, b, c, d).scale(1 / 3);
   const width = rect.edges[0].length;
 
   let path = 'M' + rect.points.map(p => `${p.x},${p.y}`).join('L') + 'Z ';
@@ -44,9 +44,9 @@ export function drawKoch(last: Polygon, i: number): Polygon {
 
   const points: Point[] = [];
   for (const e of last.edges) {
-    const a = Point.interpolate(e.p1, e.p2, 1/3);
-    const c = Point.interpolate(e.p1, e.p2, 2/3);
-    const b = c.rotate(-Math.PI/3, a);
+    const a = Point.interpolate(e.p1, e.p2, 1 / 3);
+    const c = Point.interpolate(e.p1, e.p2, 2 / 3);
+    const b = c.rotate(-Math.PI / 3, a);
     points.push(e.p1, a, b, c);
   }
 

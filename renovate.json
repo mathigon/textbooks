@@ -1,19 +1,35 @@
 {
   "extends": ["config:base"],
-  "schedule": ["before 5am every weekend"],
+  "schedule": ["before 5am on Saturday"],
   "packageRules": [{
     "packagePatterns": ["eslint"],
-    "groupName": "eslint",
+    "groupName": "lint",
     "automerge": true,
-    "automergeType":" branch"
+    "automergeType": "branch"
   }, {
-    "packagePatterns": ["^@types"],
+    "packagePatterns": ["^@mathigon"],
+    "groupName": "mathigon",
+    "automerge": true,
+    "automergeType": "branch"
+  }, {
+    "packagePatterns": ["ts-node", "^typescript"],
+    "groupName": "typescript",
+    "automerge": true,
+    "automergeType": "branch"
+  }, {
+    "packagePatterns": ["^@types/"],
     "groupName": "types",
     "automerge": true,
-    "automergeType":" branch"
+    "automergeType": "branch"
+  }, {
+    "packagePatterns": ["^rollup", "^@rollup"],
+    "groupName": "rollup",
+    "automerge": true,
+    "automergeType": "branch"
   }, {
     "updateTypes": ["patch", "pin", "digest"],
-    "groupName": "patch-and-pin",
-    "automerge": true
+    "groupName": "versions",
+    "automerge": true,
+    "automergeType": "branch"
   }]
 }

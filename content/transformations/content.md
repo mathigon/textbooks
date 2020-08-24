@@ -1376,13 +1376,13 @@ The second important fact is that in similar polygons, all sides are scaled
 __proportionally__ by the scale factor of the corresponding dilation. If the
 scale factor is ${k}{k|1.5|0.5,2,0.1}, then
 
-{.text-center} `|AB| ×` ${k} `= |A'B'|`_{.space}_`|BC| ×` ${k} `= |B'C'|`  
-`|CD| ×` ${k} `= |C'D'|`_{.space}_`|DE| ×` ${k} `= |D'E'|`
+{.text-center} `abs(AB) ×` ${k} `= abs(A'B')`_{.space}_`abs(BC) ×` ${k} `= abs(B'C')`  
+`abs(CD) ×` ${k} `= abs(C'D')`_{.space}_`abs(DE) ×` ${k} `= abs(D'E')`
 
 We can instead rearrange these equations and eliminate the scale factor
 entirely:
 
-{.text-center} `|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
+{.text-center} `abs(AB)/abs(A'B') = abs(BC)/abs(B'C') = abs(AB)/abs(A'B') = abs(AB)/abs(A'B')`
 
     // This proportional relationship is true not just for the sides of the
     // polygon, but also for properties like diagonals.

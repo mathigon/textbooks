@@ -1432,6 +1432,19 @@ you’ll learn how to actually prove it mathematically.
 > section: nets-cross-sections
 > sectionStatus: dev
 
+Here is a demo for intersections of a polyhedron and a plane:
+
+    figure.var
+      x-select.tabs(:bind="poly")
+        div(value="tetrahedron") Tetrahedron
+        div(value="cube") Cube
+        div(value="octahedron") Octahedron
+        div(value="dodecahedron") Dodecahedron
+        div(value="icosahedron") Icosahedron
+      x-polyhedron-slice(:shape="poly" :opacity="opacity")
+
+---
+
 Our entire world is three-dimensional – but it is often much easier to draw or
 visualise flat, two-dimensional objects. And there are a few different ways to
 view three-dimensional polyhedra in a two-dimensional way.

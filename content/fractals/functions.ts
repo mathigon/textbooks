@@ -145,7 +145,7 @@ export async function coastlineGrid($step: Step) {
     $grid[1].css('opacity', i < 8 ? 0 : 0.2);
     $cells[1].css('opacity', i < 9.9 ? 0 : 0.7);
 
-    $coast[1].setTransform(coastTransform.scale(1 - i/10), 0, (1 + i/10) / 2);
+    $coast[1].setTransform(coastTransform.scale(1 - i / 10), 0, (1 + i / 10) / 2);
     $coast[1].css('opacity', Math.min(i, 1));
   });
 }
@@ -280,7 +280,7 @@ export async function chaosGame($step: Step) {
 
 export function fractalBuilder($step: Step) {
   const VERTICES = ['x0', 'x1', 'x2', 'x3', 'x4'];
-  const RATIOS = [0.5, 2/3, 1/1.6180339887];
+  const RATIOS = [0.5, 2 / 3, 1 / 1.6180339887];
   const INITIAL: Obj<Point[]> = {
     3: Polygon.regular(3, 235).shift(380, 280).points,
     4: Polygon.regular(4, 240).shift(380, 220).points,

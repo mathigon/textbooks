@@ -585,7 +585,7 @@ export function planarity($section: Step) {
   });
 
   $newBtn.on('click', () => generateGraph($section.model.n));
-  $section.model.watch( () => generateGraph($section.model.n));
+  $section.model.watch(() => generateGraph($section.model.n));
 }
 
 export function euler($section: Step) {
@@ -599,7 +599,7 @@ export function euler($section: Step) {
       if (x === 0) {
         $svg.$$('circle').forEach(($c) => $c.animate({fill: GREEN}));
       } else if (x === 1) {
-        $svg.$$('polygon').forEach(($c) => $c.animate({opacity: .3}));
+        $svg.$$('polygon').forEach(($c) => $c.animate({opacity: 0.3}));
         $notes[(i - x) / 3].enter('fade');
       } else if (x === 2) {
         $svg.$$('line').forEach(($c) => $c.animate({stroke: RED}));
@@ -810,12 +810,12 @@ export function maps2($section: Step) {
 
   $section.onScore('blank-0', () => {
     $vertices.forEach($v => $v.enter('pop', 600));
-    $countries.forEach($c => $c.animate({opacity: [1, .4]}, 800));
+    $countries.forEach($c => $c.animate({opacity: [1, 0.4]}, 800));
   });
 
   $section.onScore('blank-1', () => {
     $edges.forEach($e => $e.enter('draw', 800));
-    $countries.forEach($c => $c.animate({opacity: .1}, 800));
+    $countries.forEach($c => $c.animate({opacity: 0.1}, 800));
   });
 }
 

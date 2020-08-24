@@ -189,21 +189,21 @@ export class Solid extends CustomElementView {
     obj.add(new THREE.Mesh(line, material));
 
     const start = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
-    start.translate(0, height/2 - 0.1, 0);
+    start.translate(0, height / 2 - 0.1, 0);
     obj.add(new THREE.Mesh(start, material));
 
     const end = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
     end.rotateX(Math.PI);
-    end.translate(0, -height/2 + 0.1, 0);
+    end.translate(0, -height / 2 + 0.1, 0);
     obj.add(new THREE.Mesh(end, material));
 
     obj.updateEnds = function(f: Vector, t: Vector) {
       // TODO Support changing the height of the arrow.
       const q = new THREE.Quaternion();
-      const v = new THREE.Vector3(t[0]-f[0], t[1]-f[1], t[2]-f[2]).normalize();
+      const v = new THREE.Vector3(t[0] - f[0], t[1] - f[1], t[2] - f[2]).normalize();
       q.setFromUnitVectors(new THREE.Vector3(0, 1, 0), v);
       obj.setRotationFromQuaternion(q);
-      obj.position.set((f[0]+t[0])/2, (f[1]+t[1])/2, (f[2]+t[2])/2);
+      obj.position.set((f[0] + t[0]) / 2, (f[1] + t[1]) / 2, (f[2] + t[2]) / 2);
     };
 
     obj.updateEnds(from, to);

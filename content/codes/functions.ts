@@ -217,7 +217,7 @@ export function bracket($step: Step) {
     const direction = x - lastStep;
     lastStep = x;
 
-    for (let i=0; i < x; i++) {
+    for (let i = 0; i < x; i++) {
       $rounds[i].show();
     }
     for (let i = x + 1; i < count; i++) {
@@ -230,7 +230,7 @@ export function bracket($step: Step) {
 
     if (x == 0) return;
     if (direction > 0) {
-      const $lines = $rounds[x-1].$$('line');
+      const $lines = $rounds[x - 1].$$('line');
       $lines.forEach((l, i) => {
         if (i % 2 == 0) {
           l.animate({

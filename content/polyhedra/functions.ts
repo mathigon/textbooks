@@ -18,6 +18,7 @@ import '../shared/components/solid';
 import './components/polyhedron';
 import './components/folding';
 import './components/anibutton';
+import './components/polyhedron-slice';
 
 
 function internalAngles(polygon: Polygon) {
