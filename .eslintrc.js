@@ -29,5 +29,9 @@ module.exports = {
     'sort-imports': ['error', {ignoreCase: true, ignoreDeclarationSort: true}],
     'comma-dangle': ['error', 'never'],
     'quote-props': ['error', 'as-needed'],
+    'no-floating-decimal': ['error'],
+    'space-in-parens': ['error', 'never'],
+    'space-infix-ops': ['error', {int32Hint: false}],
+    'space-unary-ops': ['error', {words: true, nonwords: false}]
   }
 };
