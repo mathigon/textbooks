@@ -812,6 +812,15 @@ imaginary:
     Die __imaginäre Einheit__ wird als `i = sqrt(-1)` geschrieben, und andere imaginäre Zahlen
     können als ihre Vielfachen geschrieben werden. Zum Beispiel `sqrt(-5) = 5i`.
 
+independent-events:
+  title: Unabhängige Ereignisse
+  text: |
+    Zwei Ereignisse sind __unabhängig__, wenn das Eintreten des einen die Wahrscheinlichkeit, dass
+    das andere Ereignis eintritt, __nicht_ beeinflusst.
+
+    Formal können wir sagen, dass _A_ und _B_ unabhängig sind, wenn und nur wenn
+    P(*A*|*B*) = P(*A*).
+
 infinity:
   title: Unendlichkeit
   text: |
