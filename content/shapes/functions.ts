@@ -6,8 +6,8 @@
 
 import {Point, Polygon, Segment} from '@mathigon/fermat';
 import {animate, CanvasView, loadScript} from '@mathigon/boost';
-import {Geopad, GeoPoint, Step} from '../shared/types';
-import {VoronoiCell, VoronoiStep} from './voronoi';
+import {Geopad, GeoPoint} from '../shared/types';
+import {VoronoiStep} from './voronoi';
 
 declare const d3: any;
 
@@ -23,7 +23,6 @@ export async function voronoi($step: VoronoiStep) {
   const bounds = [0, 0, $canvas.canvasWidth, $canvas.canvasHeight];
 
   $step.model.dynPoints = [];
-  $step.model.distLines = [];
   $step.model.vorOpacity = 0;
   $step.model.cells = [];
 
@@ -64,35 +63,23 @@ export async function voronoi($step: VoronoiStep) {
   $geopad.switchTool('point');
   $geopad.on('add:point', ({point}: {point: GeoPoint}) => {
 
-    point.lock();
-
-    const p = point.value!;
-    const edges: Segment[] = [];
-
-    const shortest = {len: Number.POSITIVE_INFINITY, ind: 0};
-    cafePoints.forEach((cafePoint, i) => {
-      const newEdge = new Segment(cafePoint, p);
-      if (newEdge.length < shortest.len) {
-        shortest.len = newEdge.length;
-        shortest.ind = i;
-      }
-      edges.push(newEdge);
-    });
-
-    const preLen = $step.model.distLines.length;
-
-    edges.forEach((edge, i) => {
-      const stroke = i == shortest.ind ? 'red' : 'black';
-      const strokeWidth = i == shortest.ind ? 2 : 1;
-      $step.model.distLines.push({edge, stroke, strokeWidth, opacity: 1});
-      $step.model.distLines = $step.model.distLines.slice();
-      if (i != shortest.ind) {
-        handleAnim(i + preLen, $step);
-      }
-    });
-
-    $step.model.dynPoints.push(p);
+    $step.model.dynPoints.push({gPoint: point, dlOpacity: 1});
     $step.model.dynPoints = $step.model.dynPoints.slice();
+
+    handleAnim($step.model.dynPoints.length - 1, $step);
+
+  });
+
+  $geopad.on('move:point', ({gPoint}: {gPoint: GeoPoint}) => {
+
+    $step.model.dynPoints =
+      $step.model.dynPoints.map(dp => {
+        if (gPoint.name == dp.gPoint.name) {
+          return {...dp, gPoint};
+        } else {
+          return dp;
+        }
+      }).slice();
 
   });
 
@@ -133,29 +120,45 @@ export async function voronoi($step: VoronoiStep) {
       });
     }
 
-    $step.model.distLines.forEach(({edge, stroke, strokeWidth, opacity}) => {
-      if (opacity != 0) {
-        $canvas.draw(edge, {stroke, strokeWidth, opacity});
-      }
+    $step.model.dynPoints.forEach(({gPoint, dlOpacity}) => {
+
+      const edges: Segment[] = [];
+
+      let shortest = {len: Number.POSITIVE_INFINITY, ind: 0};
+
+      cafePoints.forEach((cafePoint, i) => {
+        const newEdge = new Segment(cafePoint, gPoint.value!);
+        if (newEdge.length < shortest.len) {
+          shortest = {len: newEdge.length, ind: i};
+        }
+        edges.push(newEdge);
+      });
+
+      edges.forEach((edge, i) => {
+        const stroke = i == shortest.ind ? 'red' : 'black';
+        const strokeWidth = i == shortest.ind ? 2 : 1;
+        const opacity = i == shortest.ind ? 1 : dlOpacity;
+        if (opacity != 0) {
+          $canvas.draw(edge, {stroke, strokeWidth, opacity});
+        }
+      });
     });
   });
 
 }
 
-async function handleAnim(index: number, $step: Step) {
+async function handleAnim(index: number, $step: VoronoiStep) {
   window.setTimeout((_: any) => {
     const _anim = animate((progress, _) => {
-      const edges: {edge: Segment, stroke: string, opacity: number}[] = $step.model.distLines;
-      const opacity = 1 - progress;
-      const e = edges[index];
-      e.opacity = opacity;
-      edges[index] = e;
-      $step.model.distLines = edges.slice();
+      const dlOpacity = 1 - progress;
+      const dp = $step.model.dynPoints;
+      dp[index] = {...dp[index], dlOpacity};
+      $step.model.dynPoints = dp.slice();
     }, 500);
   }, 1000);
 }
 
-async function showVor($step: Step) {
+async function showVor($step: VoronoiStep) {
   const anim = animate((progress, _) => {
     $step.model.vorOpacity = progress;
   }, 2000);

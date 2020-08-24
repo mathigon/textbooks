@@ -1,5 +1,5 @@
 import { Point, Polygon, Segment } from "@mathigon/fermat";
-import { Step } from "../shared/types";
+import { Step, GeoPoint } from "../shared/types";
 import { Observable } from "@mathigon/boost";
 
 declare class VoronoiStep extends Step {
@@ -7,8 +7,7 @@ declare class VoronoiStep extends Step {
 }
 
 interface VoronoiModel {
-  dynPoints: Point[],
-  distLines: DistanceLine[],
+  dynPoints: {gPoint: GeoPoint, dlOpacity: number}[],
   cells: VoronoiCell[],
   vorOpacity: number,
   // TODO: replace use of these with score checks
