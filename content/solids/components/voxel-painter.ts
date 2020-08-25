@@ -29,7 +29,7 @@ export class VoxelPainter extends CustomElementView {
     const rotateOnly = this.hasAttr('rotateOnly');
 
     const defaultGridDimension = 20;
-    let gridDimension = this.attr('playingFieldSize') ? this.attr('playingFieldSize') : defaultGridDimension;
+    let gridDimension = (+this.attr('playingFieldSize')) || defaultGridDimension;
     if (gridDimension % 2 !== 0) {
       gridDimension = 2 * Math.ceil(gridDimension / 2);
     }
@@ -484,16 +484,12 @@ export class VoxelPainter extends CustomElementView {
   }
 
   getSurfaceArea() {
-    let sa = 0;
-    for (let i = 0, il = this.voxels.length; i < il; ++i) {
-      sa += 6;
-      for (let j = 0; j < il; ++j) {
-        if (i !== j && this.voxels[i].position.distanceToSquared(this.voxels[j].position) < 1.1) {
-          sa -= 1;
-        }
-      }
+    let surface = 6 * this.voxels.length;
+    // Subtract hidden adjacent faces
+    for (const v of this.voxels) {
+      surface -= this.voxels.filter(w => w !== v && w.position.distanceToSquared(v.position) < 1.1).length;
     }
-    return sa;
+    return surface;
   }
 
   getVolume() {

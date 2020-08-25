@@ -120,7 +120,7 @@ export interface HintOptions {
   visible?: boolean;
   store?: boolean;
   force?: boolean;
-  variables?: Obj<string>;
+  variables?: Obj<any>;
   timeout?: number;
   toast?: boolean;
 }
