@@ -376,6 +376,20 @@ __normal distribution__.
 TODO
 
 ---
+> id: conditional
+
+::: column.grow
+
+Let's highlight all [{.pill.red} red](target:red) items or all
+[{.pill} circles](target:circle).
+
+::: column(width=300)
+
+    svg.conditional(width=300 height=300)
+
+:::
+
+---
 
 Sort these events into whether they are independent or not:
 

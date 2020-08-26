@@ -88,7 +88,34 @@ export function diceSimulation($step: Step) {
   });
 }
 
+
 // -----------------------------------------------------------------------------
+// Conditional Probability
+
+export function conditional($step: Step) {
+  const $svg = $step.$('svg.conditional')!;
+
+  const items = tabulate2D((i, j) => {
+    const color = Math.random() < 0.5 ? 'red' : 'blue';
+    const size = Math.random() < 0.5 ? 'small' : 'large';
+    const shape = Math.random() < 0.5 ? 'circle' : 'square';
+
+    const radius = size === 'small' ? 8 : 11;
+    const $s = $N('rect', {
+      x: -radius, y: -radius, rx: (shape === 'circle' ? 12 : 0),
+      width: 2 * radius, height: 2 * radius,
+      class: color, target: [color, size, shape].join(' ')
+    }, $svg);
+    $s.setTransform({x: 15 + i * 30, y: 15 + j * 30});
+    return $s;
+  }, 10, 10);
+
+  console.log(items);
+}
+
+
+// -----------------------------------------------------------------------------
+// Monty Hall
 
 class OneTimeButton {
 
