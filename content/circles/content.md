@@ -589,9 +589,13 @@ You can write the radians value either as a multiple of _π_, or as just a singl
 decimal number. Can you fill in this table of equivalent angle sizes in degrees
 and radians?
 
+::: .overflow-wrap.overflow-table
+
 | __{.m-red}degrees__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_    |
 | __{.m-green}radians__   | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2    | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
 {.table-small.grid}
+
+:::
 
 ---
 > id: radians-distance
