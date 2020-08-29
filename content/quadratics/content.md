@@ -88,7 +88,7 @@ for square.
 To work out how to maximise our profit, let’s calculate the profit for a few
 different prices:
 
-::: .overflow-wrap
+::: .overflow-wrap.overflow-table
 
 | _{.pill.purple}price/\$_  | 20   | 40   | 60  | 80  | 100 | 120 | 140 | 160 | 180 |
 | _{.pill.yellow}profit/\$_ | –30k | 17k | [[52]]k | [[75]]k | [[86]]k | [[85]]k | _{span.reveal(when="blank-3")}72k_ | _{span.reveal(when="blank-3" delay=400)}47k_ | _{span.reveal(when="blank-3" delay=800)}10k_ |
