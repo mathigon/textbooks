@@ -7,7 +7,7 @@
 import {Point, Polygon, Segment} from '@mathigon/fermat';
 import {animate, CanvasView, loadScript} from '@mathigon/boost';
 import {Geopad, GeoPoint} from '../shared/types';
-import {VoronoiStep} from './voronoi';
+import {VoronoiStep} from './types';
 
 declare const d3: any;
 
