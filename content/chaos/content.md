@@ -340,7 +340,7 @@ even in movies:
 
 ::: figure
 
-    x-video(src="images/jurassic-park.mp4" poster="images/jurassic-park.jpg" width=480 height=270 audio controls)
+    x-video(src="https://storage.googleapis.com/mathigon-videos/jurassic-park.mp4" poster="images/jurassic-park.jpg" width=480 height=270 audio controls)
 
 {.caption} Extract from the movie _Jurassic Park_ (© Universal Pictures, 1993) 
 
