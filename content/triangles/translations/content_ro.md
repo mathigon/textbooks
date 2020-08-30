@@ -133,7 +133,7 @@ mișca și transforma aceste triunghiuri în mod realist și pentru a le calcula
     x-img(src="images/dolphin.jpg" width=220 height=135)
 :::
 
-    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
+    figure: x-video(src="https://storage.googleapis.com/mathigon-videos/tiger.mp4" poster="images/tiger.jpg" width=480 height=270 credit="© UCTV, The STEAM Channel")
 
 ---
 
