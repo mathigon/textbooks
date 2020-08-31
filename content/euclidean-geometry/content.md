@@ -399,8 +399,8 @@ the _father of geometry_, published the five axioms of geometry:
       path.red(x="segment(a,b)" target="1_line")
 
 {.text-center }__First Axiom__  
-You can join any [{.pill} two points](target:1_point) using exactly one straight [{.pill.red} line
-segment](target:1_line).
+You can join any [two points](target:1_point) using exactly one straight
+[{.red} line segment](target:1_line).
 
 ::: column(width=220)
 
@@ -412,8 +412,8 @@ segment](target:1_line).
       path.blue.transparent(x="segment(c,d)" target="2_line")
 
 {.text-center }__Second Axiom__  
-You can extend any [{.pill} line segment](target:2_segment) to an [{.pill.blue} infinitely long
-line](target:2_line).
+You can extend any [line segment](target:2_segment) to an
+[{.blue} infinitely long line](target:2_line).
 
 ::: column(width=220)
 
@@ -424,8 +424,8 @@ line](target:2_line).
       path.green(x="circle(e,distance(e,f))" target="3_circle")
 
 {.text-center }__Third Axiom__  
-Given a [{.pill} point _P_](target:3_center) and a [{.pill} distance _r_](target:3_radius), you can
-draw a [{.pill.green} circle](target:3_circle) with centre _P_ and radius _r_.
+Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you can draw a
+[{.green} circle](target:3_circle) with centre _P_ and radius _r_.
 
 ::: column(width=220)
 
@@ -445,7 +445,7 @@ draw a [{.pill.green} circle](target:3_circle) with centre _P_ and radius _r_.
       path.dark(x="segment(y,yb)")
 
 {.text-center }__Fourth Axiom__  
-Any two [{.pill.orange} right angles](target:4_angle) are congruent.
+Any two [{.orange} right angles](target:4_angle) are congruent.
 
 ::: column(width=220)
 
@@ -455,9 +455,8 @@ Any two [{.pill.orange} right angles](target:4_angle) are congruent.
       path.yellow(x="line5.parallel(g)" target="5_parallel")
 
 {.text-center }__Fifth Axiom__  
-Given a [{.pill} line _L_](target:5_line) and a [{.pill} point _P_](target:5_point) not on _L_,
-there is exactly [{.pill.yellow} one line](target:5_parallel) through _P_ that is
-[parallel](gloss:parallel) to _L_.
+Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_, there is exactly
+[{.yellow} one line](target:5_parallel) through _P_ that is [parallel](gloss:parallel) to _L_.
 :::
 
 {.r} _{button.next-step} Continue_

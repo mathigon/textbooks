@@ -606,12 +606,12 @@ Nelle sezioni precedenti, hai appreso i nomi dati a diverse parti di un cerchio 
 
 ::: column.grow(parent="right")
 
-* {.r} UN [{.red} secante](pill:secant) è una linea che interseca un cerchio in due punti. [Continua](btn:next)
-* {.r.reveal(when="next-0")} UN [{.green} l'accordo](pill:chord) è un segmento di linea i cui punti finali si trovano sulla circonferenza di un cerchio. [Continua](btn:next)
-* {.r.reveal(when="next-1")} UN [{.blue} tangente](pill:tangent) è una linea che tocca un cerchio esattamente in un punto. Questo è chiamato il __punto di tangenza__ . [Continua](btn:next)
-* {.r.reveal(when="next-2")} Un [{.yellow} l'arco](pill:arc) è una sezione della circonferenza di un cerchio. [Continua](btn:next)
-* {.r.reveal(when="next-3")} UN [{.teal} il settore](pill:sector) è una parte dell'interno di un cerchio, delimitato da un _arco_ e _due raggi_ . [Continua](btn:next)
-* {.r.reveal(when="next-4")} Infine, a [{.purple} il segmento](pill:segment) è una parte dell'interno di un cerchio, delimitato da un _arco_ e _un accordo_ . [Continua](btn:next) 
+* {.r} UN [{.red} secante](target:secant) è una linea che interseca un cerchio in due punti. [Continua](btn:next)
+* {.r.reveal(when="next-0")} UN [{.green} l'accordo](target:chord) è un segmento di linea i cui punti finali si trovano sulla circonferenza di un cerchio. [Continua](btn:next)
+* {.r.reveal(when="next-1")} UN [{.blue} tangente](target:tangent) è una linea che tocca un cerchio esattamente in un punto. Questo è chiamato il __punto di tangenza__ . [Continua](btn:next)
+* {.r.reveal(when="next-2")} Un [{.yellow} l'arco](target:arc) è una sezione della circonferenza di un cerchio. [Continua](btn:next)
+* {.r.reveal(when="next-3")} UN [{.teal} il settore](target:sector) è una parte dell'interno di un cerchio, delimitato da un _arco_ e _due raggi_ . [Continua](btn:next)
+* {.r.reveal(when="next-4")} Infine, a [{.purple} il segmento](target:segment) è una parte dell'interno di un cerchio, delimitato da un _arco_ e _un accordo_ . [Continua](btn:next) 
 
 :::
 
@@ -670,11 +670,11 @@ Sfortunatamente, nessuno sapeva esattamente _quanto fosse grande la_ Terra - fin
 
 ::: column.grow
 
-Come puoi vedere nel diagramma, un [{.red} l'arco](pill:arc) fa parte della [[circonferenza | diametro | tangente]] di un cerchio e a [{.yellow} il settore](pill:sector) fa parte degli [[interni | raggio | perimetro]] di un cerchio. 
+Come puoi vedere nel diagramma, un [{.red} l'arco](target:arc) fa parte della [[circonferenza | diametro | tangente]] di un cerchio e a [{.yellow} il settore](target:sector) fa parte degli [[interni | raggio | perimetro]] di un cerchio. 
 
 ::: .reveal(when="blank-0 blank-1")
 
-L'arco tra due punti _A_ e _B_ è spesso scritto come `arc(AB)` . Questa definizione è leggermente ambigua: esiste un [{.purple} secondo arco](pill:major) che collega _A_ e _B_ ma fa il contrario. 
+L'arco tra due punti _A_ e _B_ è spesso scritto come `arc(AB)` . Questa definizione è leggermente ambigua: esiste un [{.purple} secondo arco](target:major) che collega _A_ e _B_ ma fa il contrario. 
 
 Il più piccolo dei due archi è chiamato __arco minore__ e quello più grande è chiamato __arco maggiore__ . Se i punti _A_ e _B_ sono esattamente uno di fronte all'altro, entrambi gli archi hanno la stessa lunghezza e sono [[semicerchi | diametri | circonferenze]] . 
 
@@ -687,13 +687,13 @@ Il più piccolo dei due archi è chiamato __arco minore__ e quello più grande �
 
 ::: column.grow
 
-Per trovare la lunghezza di un arco o l'area di un settore, dobbiamo conoscere l'angolo corrispondente al centro del cerchio: questo è chiamato il [{.blue} angolo centrale](pill:angle) . 
+Per trovare la lunghezza di un arco o l'area di un settore, dobbiamo conoscere l'angolo corrispondente al centro del cerchio: questo è chiamato il [{.blue} angolo centrale](target:angle) . 
 
-Notare come l'arco, il settore e l'angolo occupino tutti la _stessa proporzione_ di un cerchio completo. Ad esempio, se il [{.blue} l'angolo centrale](pill:angle) è _{span.var-action} 90°_ , occupa [[un quarto | metà | un terzo]] di a [{.teal} cerchio completo](pill:fangle) . 
+Notare come l'arco, il settore e l'angolo occupino tutti la _stessa proporzione_ di un cerchio completo. Ad esempio, se il [{.blue} l'angolo centrale](target:angle) è _{span.var-action} 90°_ , occupa [[un quarto | metà | un terzo]] di a [{.teal} cerchio completo](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
-Ciò significa che il [{.red} anche la lunghezza dell'arco](pill:arc) `1/4` del [{.purple} intera circonferenza](pill:circ) del cerchio e [{.yellow} area del settore](pill:sector) è `1/4` del [{.orange} intera area](pill:area) del cerchio. 
+Ciò significa che il [{.red} anche la lunghezza dell'arco](target:arc) `1/4` del [{.purple} intera circonferenza](target:circ) del cerchio e [{.yellow} area del settore](target:sector) è `1/4` del [{.orange} intera area](target:area) del cerchio. 
 
 Possiamo esprimere questa relazione in un'equazione: 
 
@@ -801,7 +801,7 @@ Eratostene notò che a mezzogiorno del giorno del solstizio d'estate, l'obelisco
 
 ::: .reveal(when="next-0")
 
-Eratostene ha misurato che il [{.teal} l'angolo](pill:angle1) dell'ombra era di 7,2°. Questo è lo stesso del [{.purple} angolo centrale](pill:angle2) del [{.red} arco](pill:arc) da Alessandria a Swenet, perché si [[alternano | verticale |]] angoli [[corrispondenti]] . 
+Eratostene ha misurato che il [{.teal} l'angolo](target:angle1) dell'ombra era di 7,2°. Questo è lo stesso del [{.purple} angolo centrale](target:angle2) del [{.red} arco](target:arc) da Alessandria a Swenet, perché si [[alternano | verticale |]] angoli [[corrispondenti]] . 
 
 :::
 

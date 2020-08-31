@@ -612,13 +612,13 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 ::: column.grow(parent="right")
 
-* {.r} [{.red} 割线](pill:secant) 指的是经过圆上任意两点的直线。[Continue](btn:next)
-* {.r.reveal(when="next-0")} [{.green} 弦](pill:chord) 指的是连接圆上任意两点的线段。 [Continue](btn:next)
-* {.r.reveal(when="next-1")} [{.blue} 切线](pill:tangent) 指的是与圆只有一个交点的直线。这个点成为__切点__。 [Continue](btn:next)
-* {.r.reveal(when="next-2")} [{.yellow} 弧](pill:arc) 指的是圆上任意两点间的部分。[Continue](btn:next)
-* {.r.reveal(when="next-3")}  [{.teal} 扇形](pill:sector) 指的是一条圆_弧_和经过这条圆弧两端的_两条半径_所围成的图形。
+* {.r} [{.red} 割线](target:secant) 指的是经过圆上任意两点的直线。[Continue](btn:next)
+* {.r.reveal(when="next-0")} [{.green} 弦](target:chord) 指的是连接圆上任意两点的线段。 [Continue](btn:next)
+* {.r.reveal(when="next-1")} [{.blue} 切线](target:tangent) 指的是与圆只有一个交点的直线。这个点成为__切点__。 [Continue](btn:next)
+* {.r.reveal(when="next-2")} [{.yellow} 弧](target:arc) 指的是圆上任意两点间的部分。[Continue](btn:next)
+* {.r.reveal(when="next-3")}  [{.teal} 扇形](target:sector) 指的是一条圆_弧_和经过这条圆弧两端的_两条半径_所围成的图形。
   [Continue](btn:next)
-* {.r.reveal(when="next-4")} 还有， [{.purple} 弓形](pill:segment)指的是圆上由一条_弦_和所对的_弧_围成的图形。
+* {.r.reveal(when="next-4")} 还有， [{.purple} 弓形](target:segment)指的是圆上由一条_弦_和所对的_弧_围成的图形。
   [Continue](btn:next)
 
 :::
@@ -674,10 +674,10 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 ::: column.grow
 
-正如你在图中看到的，一条 [{.red} 弧](pill:arc) 是圆的[[直径|周长|切线]]的一部分，而[{.yellow} 扇形](pill:sector)则是圆[[半径|边缘|内部]]的一部分。
+正如你在图中看到的，一条 [{.red} 弧](target:arc) 是圆的[[直径|周长|切线]]的一部分，而[{.yellow} 扇形](target:sector)则是圆[[半径|边缘|内部]]的一部分。
 
 ::: .reveal(when="blank-0 blank-1")
-点 _A_ 和点 _B_ 之间的弧通常记为 `arc(AB)`。这个定义有点不严谨：连接点A和点B之间的弧还有 [{.purple} 另一条弧](pill:major)在圆上的另一边。
+点 _A_ 和点 _B_ 之间的弧通常记为 `arc(AB)`。这个定义有点不严谨：连接点A和点B之间的弧还有 [{.purple} 另一条弧](target:major)在圆上的另一边。
 
 另个中较短的弧称之为 __劣弧__，而较长的则称之为 __优弧__。如果点_A_和点_B_恰好相对且两条弧的长度相等时，我们称之为[[直径|周长|半圆]]。
 :::
@@ -689,12 +689,12 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 ::: column.grow
 
-计算弧长或扇形面积，我们需要知道它们所在圆中所对的角：也就是[{.blue} 圆心角](pill:angle)。
+计算弧长或扇形面积，我们需要知道它们所在圆中所对的角：也就是[{.blue} 圆心角](target:angle)。
 
-注意观察，弧、扇形和圆心角所占一个完整圆的比例是 _相同_ 的。例如，如果[{.blue} 圆心角](pill:angle)为 _{span.var-action}90°_，则占了[{.teal} 整个圆](pill:fangle)的[[one quarter|one half|one third]]。
+注意观察，弧、扇形和圆心角所占一个完整圆的比例是 _相同_ 的。例如，如果[{.blue} 圆心角](target:angle)为 _{span.var-action}90°_，则占了[{.teal} 整个圆](target:fangle)的[[one quarter|one half|one third]]。
 
 ::: .reveal(when="blank-0")
-也就是说 [{.red}弧长](pill:arc) 也是[{.purple} 整个圆周长](pill:circ)的`1/4` ，且 [{.yellow} 扇形的面积](pill:sector) 也是[{.orange} 整个圆面积](pill:area) 的`1/4`。
+也就是说 [{.red}弧长](target:arc) 也是[{.purple} 整个圆周长](target:circ)的`1/4` ，且 [{.yellow} 扇形的面积](target:sector) 也是[{.orange} 整个圆面积](target:area) 的`1/4`。
 
 我们可以用下面的公式表示它们间的关系：
 
@@ -796,7 +796,7 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 {.r} 在这里你可以看到阿斯旺水井和亚历山大方尖碑。太阳光线直射到井中，但是与方尖碑有一个夹角并产生了投影。 [Continue](btn:next)
 
 ::: .reveal(when="next-0")
-埃拉托色尼测量了投影的[{.teal} 角度](pill:angle1) 为7.2°。这个角度与亚历山大港到阿斯旺的[{.red} 弧线](pill:arc) 的[{.purple} 圆心角](pill:angle2) 相等，因为它们是[[内错角|同位角|对顶角]]。
+埃拉托色尼测量了投影的[{.teal} 角度](target:angle1) 为7.2°。这个角度与亚历山大港到阿斯旺的[{.red} 弧线](target:arc) 的[{.purple} 圆心角](target:angle2) 相等，因为它们是[[内错角|同位角|对顶角]]。
 :::
 
 ::: .reveal(when="blank-0")

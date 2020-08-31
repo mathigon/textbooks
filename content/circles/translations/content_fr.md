@@ -606,12 +606,12 @@ Dans les sections précédentes, vous avez appris les noms donnés à plusieurs 
 
 ::: column.grow(parent="right")
 
-* {.r} UNE [{.red} sécante](pill:secant) est une ligne qui coupe un cercle en deux points. [Continuer](btn:next)
-* {.r.reveal(when="next-0")} UNE [{.green} l'accord](pill:chord) est un segment de ligne dont les extrémités se trouvent sur la circonférence d'un cercle. [Continuer](btn:next)
-* {.r.reveal(when="next-1")} UNE [{.blue} tangente](pill:tangent) est une ligne qui touche un cercle à exactement un point. C'est ce qu'on appelle le __point de tangence__ . [Continuer](btn:next)
-* {.r.reveal(when="next-2")} Une [{.yellow} arc](pill:arc) est une section de la circonférence d'un cercle. [Continuer](btn:next)
-* {.r.reveal(when="next-3")} UNE [{.teal} secteur](pill:sector) fait partie de l'intérieur d'un cercle, délimité par un _arc_ et _deux rayons_ . [Continuer](btn:next)
-* {.r.reveal(when="next-4")} Enfin, un [{.purple} segment](pill:segment) est une partie de l'intérieur d'un cercle, délimité par un _arc_ et _un accord_ . [Continuer](btn:next) 
+* {.r} UNE [{.red} sécante](target:secant) est une ligne qui coupe un cercle en deux points. [Continuer](btn:next)
+* {.r.reveal(when="next-0")} UNE [{.green} l'accord](target:chord) est un segment de ligne dont les extrémités se trouvent sur la circonférence d'un cercle. [Continuer](btn:next)
+* {.r.reveal(when="next-1")} UNE [{.blue} tangente](target:tangent) est une ligne qui touche un cercle à exactement un point. C'est ce qu'on appelle le __point de tangence__ . [Continuer](btn:next)
+* {.r.reveal(when="next-2")} Une [{.yellow} arc](target:arc) est une section de la circonférence d'un cercle. [Continuer](btn:next)
+* {.r.reveal(when="next-3")} UNE [{.teal} secteur](target:sector) fait partie de l'intérieur d'un cercle, délimité par un _arc_ et _deux rayons_ . [Continuer](btn:next)
+* {.r.reveal(when="next-4")} Enfin, un [{.purple} segment](target:segment) est une partie de l'intérieur d'un cercle, délimité par un _arc_ et _un accord_ . [Continuer](btn:next) 
 
 :::
 
@@ -670,11 +670,11 @@ Malheureusement, personne ne savait exactement _la taille de la_ Terre - jusqu'�
 
 ::: column.grow
 
-Comme vous pouvez le voir sur le schéma, un [{.red} l'arc](pill:arc) fait partie de la [[circonférence | diamètre | tangente]] d'un cercle, et un [{.yellow} le secteur](pill:sector) fait partie de l' [[intérieur | rayon | périmètre]] d'un cercle. 
+Comme vous pouvez le voir sur le schéma, un [{.red} l'arc](target:arc) fait partie de la [[circonférence | diamètre | tangente]] d'un cercle, et un [{.yellow} le secteur](target:sector) fait partie de l' [[intérieur | rayon | périmètre]] d'un cercle. 
 
 ::: .reveal(when="blank-0 blank-1")
 
-L'arc entre deux points _A_ et _B_ est souvent écrit comme `arc(AB)` . Cette définition est légèrement ambiguë: il existe un [{.purple} deuxième arc](pill:major) qui relie _A_ et _B_ mais fait le contraire dans le cercle. 
+L'arc entre deux points _A_ et _B_ est souvent écrit comme `arc(AB)` . Cette définition est légèrement ambiguë: il existe un [{.purple} deuxième arc](target:major) qui relie _A_ et _B_ mais fait le contraire dans le cercle. 
 
 Le plus petit des deux arcs est appelé __arc mineur__ et le plus grand est appelé __arc majeur__ . Si les points _A_ et _B_ sont exactement opposés, les deux arcs ont la même longueur et sont des [[demi]] - [[cercles | diamètres | circonférences]] . 
 
@@ -687,13 +687,13 @@ Le plus petit des deux arcs est appelé __arc mineur__ et le plus grand est appe
 
 ::: column.grow
 
-Pour trouver la longueur d'un arc ou l'aire d'un secteur, nous devons connaître l'angle correspondant au centre du cercle: c'est ce qu'on appelle le [{.blue} angle central](pill:angle) . 
+Pour trouver la longueur d'un arc ou l'aire d'un secteur, nous devons connaître l'angle correspondant au centre du cercle: c'est ce qu'on appelle le [{.blue} angle central](target:angle) . 
 
-Remarquez comment l'arc, le secteur et l'angle occupent tous la _même proportion_ d'un cercle complet. Par exemple, si le [{.blue} l'angle central](pill:angle) est _{span.var-action} 90°_ , il prend [[un quart | une moitié | un tiers]] d'un [{.teal} cercle complet](pill:fangle) . 
+Remarquez comment l'arc, le secteur et l'angle occupent tous la _même proportion_ d'un cercle complet. Par exemple, si le [{.blue} l'angle central](target:angle) est _{span.var-action} 90°_ , il prend [[un quart | une moitié | un tiers]] d'un [{.teal} cercle complet](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
-Cela signifie que le [{.red} la longueur de l'arc](pill:arc) est également `1/4` du [{.purple} toute la circonférence](pill:circ) du cercle, et la [{.yellow} secteur du secteur](pill:sector) est `1/4` du [{.orange} toute la zone](pill:area) du cercle. 
+Cela signifie que le [{.red} la longueur de l'arc](target:arc) est également `1/4` du [{.purple} toute la circonférence](target:circ) du cercle, et la [{.yellow} secteur du secteur](target:sector) est `1/4` du [{.orange} toute la zone](target:area) du cercle. 
 
 Nous pouvons exprimer cette relation dans une équation: 
 
@@ -801,7 +801,7 @@ Le mathématicien [Eratosthène](bio:eratosthenes) vivait à _Alexandrie_ , à e
 
 ::: .reveal(when="next-0")
 
-Ératosthène a mesuré que le [{.teal} l'angle](pill:angle1) de l'ombre était de 7,2°. C'est le même que le [{.purple} angle central](pill:angle2) du [{.red} arc](pill:arc) d'Alexandrie à Swenet, car ils [[alternent | verticale |]] angles [[correspondants]] . 
+Ératosthène a mesuré que le [{.teal} l'angle](target:angle1) de l'ombre était de 7,2°. C'est le même que le [{.purple} angle central](target:angle2) du [{.red} arc](target:arc) d'Alexandrie à Swenet, car ils [[alternent | verticale |]] angles [[correspondants]] . 
 
 :::
 

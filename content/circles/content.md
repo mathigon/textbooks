@@ -48,12 +48,12 @@ center. This means that they can be drawn using a [compass](gloss:compass):
 {.reveal(when="compass")} There are three important measurements related to
 circles that you need to know:
 
-* {.reveal(when="compass" delay="1000")} The [{.pill.red.b}radius](target:r)
+* {.reveal(when="compass" delay="1000")} The [{.red.b}radius](target:r)
   is the distance from the center of a circle to its outer rim.
-* {.reveal(when="compass" delay="4000")} The [{.pill.blue.b}diameter](target:d)
+* {.reveal(when="compass" delay="4000")} The [{.blue.b}diameter](target:d)
   is the distance between two opposite points on a circle. It goes through its
   center, and its length is [[twice|half|the same as]] the radius.
-* {.reveal(when="blank-0")} The [{.pill.green.b}circumference](target:c) 
+* {.reveal(when="blank-0")} The [{.green.b}circumference](target:c) 
   (or perimeter) is the distance around a circle.
 
 :::
@@ -755,19 +755,19 @@ need to solve more complex problems:
 
 ::: column.grow(parent="right")
 
-* {.r} A [{.red} secant](pill:secant) is a line that intersects a circle at two
+* {.r} A [{.red.b} secant](target:secant) is a line that intersects a circle at two
   points. [Continue](btn:next)
-* {.r.reveal(when="next-0")} A [{.green} chord](pill:chord) is a line segment
+* {.r.reveal(when="next-0")} A [{.green.b} chord](target:chord) is a line segment
   whose endpoints lie on the circumference of a circle. [Continue](btn:next)
-* {.r.reveal(when="next-1")} A [{.blue} tangent](pill:tangent) is a line that
+* {.r.reveal(when="next-1")} A [{.blue.b} tangent](target:tangent) is a line that
   touches a circle at exactly one point. This is called the __point of
   tangency__. [Continue](btn:next)
-* {.r.reveal(when="next-2")} An [{.yellow} arc](pill:arc) is a section of the
+* {.r.reveal(when="next-2")} An [{.yellow.b} arc](target:arc) is a section of the
   circumference of a circle. [Continue](btn:next)
-* {.r.reveal(when="next-3")} A [{.teal} sector](pill:sector) is a part of the
+* {.r.reveal(when="next-3")} A [{.teal.b} sector](target:sector) is a part of the
   interior of a circle, bounded by an _arc_ and _two radii_.
   [Continue](btn:next)
-* {.r.reveal(when="next-4")} Finally, a [{.purple} segment](pill:segment) is a
+* {.r.reveal(when="next-4")} Finally, a [{.purple.b} segment](target:segment) is a
   part of the interior of a circle, bounded by an _arc_ and _a chord_.
   [Continue](btn:next)
 
@@ -907,13 +907,13 @@ knowledge about arcs and sectors of a circle.
 
 ::: column.grow
 
-As you can see in the diagram, an [{.red} arc](pill:arc) is a part of the
-[[circumference|diameter|tangent]] of a circle, and a [{.yellow} sector](pill:sector)
+As you can see in the diagram, an [{.red} arc](target:arc) is a part of the
+[[circumference|diameter|tangent]] of a circle, and a [{.yellow} sector](target:sector)
 is a part of the [[interior|radius|perimeter]] of a circle.
 
 ::: .reveal(when="blank-0 blank-1")
 The arc between two points _A_ and _B_ is often written as `arc(AB)`. This
-definition is slightly ambiguous: there is a [{.purple} second arc](pill:major)
+definition is slightly ambiguous: there is a [{.purple} second arc](target:major)
 that connects _A_ and _B_ but goes the other way around the circle.
 
 The smaller of the two arcs is called the __minor arc__, and the larger one is
@@ -930,7 +930,7 @@ both arcs have the same length and are [[semicircles|diameters|circumferences]].
 
 To find the length of an arc or the area of a sector, we need to know about the
 corresponding angle at the center of the circle: this is called the
-[{.blue} central angle](pill:angle).
+[{.blue.b} central angle](target:angle).
 
 Notice how the arc, sector and angle all take up the _same proportion_ of a
 full circle. For example, if the [{.blue} central angle](pill:angle) is
@@ -938,9 +938,9 @@ _{span.var-action}90°_, it takes up [[one quarter|one half|one third]] of a
 [{.teal} full circle](pill:fangle).
 
 ::: .reveal(when="blank-0")
-This means that the [{.red} length of the arc](pill:arc) is also `1/4` of the
-[{.purple} whole circumference](pill:circ) of the circle, and the [{.yellow} area
-of the sector](pill:sector) is `1/4` of the [{.orange} whole area](pill:area) of
+This means that the [{.red} length of the arc](target:arc) is also `1/4` of the
+[{.purple} whole circumference](target:circ) of the circle, and the [{.yellow} area
+of the sector](target:sector) is `1/4` of the [{.orange} whole area](target:area) of
 the circle.
 
 We can express this relationship in an equation:
@@ -1073,9 +1073,9 @@ The sun rays fall directly into the well, but hit the obelisk at an angle and
 cast a shadow. [Continue](btn:next)
 
 ::: .reveal(when="next-0")
-Eratosthenes measured that the [{.teal} angle](pill:angle1) of the shadow was
-7.2°. This is the same as the [{.purple} central angle](pill:angle2) of the
-[{.red} arc](pill:arc) from Alexandria to Swenet, because they are
+Eratosthenes measured that the [{.teal} angle](target:angle1) of the shadow was
+7.2°. This is the same as the [{.purple} central angle](target:angle2) of the
+[{.red} arc](target:arc) from Alexandria to Swenet, because they are
 [[alternating|vertical|corresponding]] angles.
 :::
 
@@ -1675,8 +1675,8 @@ _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 ::: column.grow
 
 The radius of the __{.m-green}sector__ is the same as the distance from the rim of a cone to its
-vertex. This is called the [{.pill.green.b} slant height *s*](target:s) of the cone, and not the
-same as the normal [{.pill.blue.b} height *h*](target:h). We can find the slant height using
+vertex. This is called the [{.green.b} slant height *s*](target:s) of the cone, and not the
+same as the normal [{.blue.b} height *h*](target:h). We can find the slant height using
 [Pythagoras](gloss:pythagoras-theorem):
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_       |
@@ -1704,8 +1704,8 @@ same as the normal [{.pill.blue.b} height *h*](target:h). We can find the slant 
 
 ::: column.grow
 
-The [{.pill.red} arc length](target:arc) of the sector is the same as the
-[[circumference|diameter|arc]] of the [{.pill.yellow}base](target:base):
+The [{.red} arc length](target:arc) of the sector is the same as the
+[[circumference|diameter|arc]] of the [{.yellow}base](target:base):
 _{span.reveal(when="blank-0")}`2 π r`. Now we can find the area of the sector
 using the [formula](gloss:circle-sector) we derived in a previous section:_
 
@@ -1831,15 +1831,15 @@ shapes at a specific height above the base:
 
 
 {.reveal(when="slider-0")} Let us try to find the cross-sectional area of both these solids, at a
-distance [{.pill.blue} height *h*](target:h) above the base.
+distance [{.blue} height *h*](target:h) above the base.
 
 ::: column.grow
 
 {.reveal(when="slider-0")} The cross-section of the hemisphere is always a
 [[circle|ring|cylinder]].
 
-{.reveal(when="blank-0")} The [{.pill.red} radius *x*](target:x) of the cross-section is part of a
-[{.pill.yellow} right-angled triangle](target:tri), so we can use
+{.reveal(when="blank-0")} The [{.red} radius *x*](target:x) of the cross-section is part of a
+[{.yellow} right-angled triangle](target:tri), so we can use
 [Pythagoras](gloss:pythagoras-theorem):
 
 ::: .reveal(when="blank-0")

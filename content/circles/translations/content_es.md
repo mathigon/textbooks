@@ -608,12 +608,12 @@ En las secciones anteriores, aprendió los nombres dados a varias partes diferen
 
 ::: column.grow(parent="right")
 
-* {.r} A [{.red} secante](pill:secant) es una línea que corta un círculo en dos puntos. [Continuar](btn:next)
-* {.r.reveal(when="next-0")} Un acorde [{.green}](pill:chord) es un segmento de línea cuyos puntos finales se encuentran en la circunferencia de un círculo. [Continuar](btn:next)
-* {.r.reveal(when="next-1")} Una [{.blue} tangente](pill:tangent) es una línea que toca un círculo exactamente en un punto. Esto se llama el __punto de tangencia__. [Continuar](btn:next)
-* {.r.reveal(when="next-2")} Un [{.yellow} arco](pill:arc) es una sección de la circunferencia de un círculo. [Continuar](btn:next)
-* {.r.reveal(when="next-3")} Un [{.teal} sector](pill:sector) es una parte del interior de un círculo, delimitado por un _arco_ y _dos radios_. [Continuar](btn:next)
-* {.r.reveal(when="next-4")} Finalmente, un [{.purple} segmento](pill:segment) es parte del interior de un círculo, delimitado por un _arco_ y _un acorde_. [Continuar](btn:next)
+* {.r} A [{.red} secante](target:secant) es una línea que corta un círculo en dos puntos. [Continuar](btn:next)
+* {.r.reveal(when="next-0")} Un acorde [{.green}](target:chord) es un segmento de línea cuyos puntos finales se encuentran en la circunferencia de un círculo. [Continuar](btn:next)
+* {.r.reveal(when="next-1")} Una [{.blue} tangente](target:tangent) es una línea que toca un círculo exactamente en un punto. Esto se llama el __punto de tangencia__. [Continuar](btn:next)
+* {.r.reveal(when="next-2")} Un [{.yellow} arco](target:arc) es una sección de la circunferencia de un círculo. [Continuar](btn:next)
+* {.r.reveal(when="next-3")} Un [{.teal} sector](target:sector) es una parte del interior de un círculo, delimitado por un _arco_ y _dos radios_. [Continuar](btn:next)
+* {.r.reveal(when="next-4")} Finalmente, un [{.purple} segmento](target:segment) es parte del interior de un círculo, delimitado por un _arco_ y _un acorde_. [Continuar](btn:next)
 
 :::
 
@@ -671,11 +671,11 @@ Desafortunadamente, nadie sabía exactamente _cuán grande era_ la Tierra, hasta
 
 ::: column.grow
 
-Como puede ver en el diagrama, un [{.red} arco](pill:arc) es parte de la [[circunferencia|diameter|tangent]] de un círculo, y un [{.yellow} sector](pill:sector) es una parte del [[interior|radius|perimeter]] de un círculo.
+Como puede ver en el diagrama, un [{.red} arco](target:arc) es parte de la [[circunferencia|diameter|tangent]] de un círculo, y un [{.yellow} sector](target:sector) es una parte del [[interior|radius|perimeter]] de un círculo.
 
 ::: .reveal(when="blank-0 blank-1")
 
-El arco entre dos puntos _A_ y _B_ a menudo se escribe como `arc(AB)`. Esta definición es ligeramente ambigua: hay un [{.purple} segundo arco](pill:major) que conecta _A_ y _B_ pero da la vuelta al círculo.
+El arco entre dos puntos _A_ y _B_ a menudo se escribe como `arc(AB)`. Esta definición es ligeramente ambigua: hay un [{.purple} segundo arco](target:major) que conecta _A_ y _B_ pero da la vuelta al círculo.
 
 El más pequeño de los dos arcos se llama __arco menor__, y el más grande se llama __arco mayor__. Si los puntos _A_ y _B_ son exactamente opuestos, ambos arcos tienen la misma longitud y son [[semicírculos|diameters|circumferences]].
 
@@ -689,13 +689,13 @@ El más pequeño de los dos arcos se llama __arco menor__, y el más grande se l
 
 ::: column.grow
 
-Para encontrar la longitud de un arco o el área de un sector, necesitamos saber sobre el ángulo correspondiente en el centro del círculo: esto se llama [{.blue} ángulo central](pill:angle).
+Para encontrar la longitud de un arco o el área de un sector, necesitamos saber sobre el ángulo correspondiente en el centro del círculo: esto se llama [{.blue} ángulo central](target:angle).
 
-Observe cómo el arco, el sector y el ángulo ocupan la _misma proporción_ de un círculo completo. Por ejemplo, si el [{.blue} ángulo central](pill:angle) es _{span.var-action} 90 °_, ocupa [[un cuarto|one half|one third]] de un [{.teal} círculo completo](pill:fangle).
+Observe cómo el arco, el sector y el ángulo ocupan la _misma proporción_ de un círculo completo. Por ejemplo, si el [{.blue} ángulo central](target:angle) es _{span.var-action} 90 °_, ocupa [[un cuarto|one half|one third]] de un [{.teal} círculo completo](target:fangle).
 
 {sesenta y cinco}
 
-Esto significa que la longitud [{.red} del arco](pill:arc) también es `1/4` de la [{.purple} circunferencia entera](pill:circ) del círculo, y el área [{.yellow} del El sector](pill:sector) es `1/4` del [{.orange} área entera](pill:area) del círculo.
+Esto significa que la longitud [{.red} del arco](target:arc) también es `1/4` de la [{.purple} circunferencia entera](target:circ) del círculo, y el área [{.yellow} del El sector](target:sector) es `1/4` del [{.orange} área entera](target:area) del círculo.
 
 Podemos expresar esta relación en una ecuación:
 
@@ -805,7 +805,7 @@ Eratóstenes notó que al mediodía del día del solsticio de verano, el obelisc
 
 ::: .reveal(when="next-0")
 
-Eratóstenes midió que el [{.teal} ángulo](pill:angle1) de la sombra era 7.2 °. Esto es lo mismo que el [{.purple} ángulo central](pill:angle2) del [{.red} arco](pill:arc) de Alejandría a Swenet, porque son [[ángulos alternos|vertical|corresponding]].
+Eratóstenes midió que el [{.teal} ángulo](target:angle1) de la sombra era 7.2 °. Esto es lo mismo que el [{.purple} ángulo central](target:angle2) del [{.red} arco](target:arc) de Alejandría a Swenet, porque son [[ángulos alternos|vertical|corresponding]].
 
 :::
 

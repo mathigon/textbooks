@@ -606,12 +606,12 @@ A les seccions anteriors, heu après els noms donats a diverses parts diferents 
 
 ::: column.grow(parent="right")
 
-* {.r} A [{.red} secant](pill:secant) és una línia que intersecta un cercle en dos punts. [Continuar](btn:next)
-* {.r.reveal(when="next-0")} A [{.green} la corda](pill:chord) és un segment de línia els extrems del qual es troben en la circumferència d'un cercle. [Continuar](btn:next)
-* {.r.reveal(when="next-1")} A [{.blue} tangent](pill:tangent) és una línia que toca un cercle exactament en un punt. Això s’anomena __punt de tangència__ . [Continuar](btn:next)
-* {.r.reveal(when="next-2")} Un [{.yellow} l’arc](pill:arc) és una secció de la circumferència d’un cercle. [Continuar](btn:next)
-* {.r.reveal(when="next-3")} A [{.teal} El sector](pill:sector) és una part de l’interior d’un cercle, delimitat per un _arc_ i _dos radis_ . [Continuar](btn:next)
-* {.r.reveal(when="next-4")} Finalment, a [{.purple} el segment](pill:segment) és una part de l’interior d’un cercle, delimitat per un _arc_ i _un acord_ . [Continuar](btn:next) 
+* {.r} A [{.red} secant](target:secant) és una línia que intersecta un cercle en dos punts. [Continuar](btn:next)
+* {.r.reveal(when="next-0")} A [{.green} la corda](target:chord) és un segment de línia els extrems del qual es troben en la circumferència d'un cercle. [Continuar](btn:next)
+* {.r.reveal(when="next-1")} A [{.blue} tangent](target:tangent) és una línia que toca un cercle exactament en un punt. Això s’anomena __punt de tangència__ . [Continuar](btn:next)
+* {.r.reveal(when="next-2")} Un [{.yellow} l’arc](target:arc) és una secció de la circumferència d’un cercle. [Continuar](btn:next)
+* {.r.reveal(when="next-3")} A [{.teal} El sector](target:sector) és una part de l’interior d’un cercle, delimitat per un _arc_ i _dos radis_ . [Continuar](btn:next)
+* {.r.reveal(when="next-4")} Finalment, a [{.purple} el segment](target:segment) és una part de l’interior d’un cercle, delimitat per un _arc_ i _un acord_ . [Continuar](btn:next) 
 
 :::
 
@@ -670,11 +670,11 @@ Malauradament, ningú no sabia exactament _com_ era la Terra, fins al voltant de
 
 ::: column.grow
 
-Com es pot veure al diagrama, an [{.red} l’arc](pill:arc) és una part de la [[circumferència | diàmetre | tangent]] d’un cercle, i a [{.yellow} sector](pill:sector) és una part de l’ [[interior | radi | perímetre]] d’un cercle. 
+Com es pot veure al diagrama, an [{.red} l’arc](target:arc) és una part de la [[circumferència | diàmetre | tangent]] d’un cercle, i a [{.yellow} sector](target:sector) és una part de l’ [[interior | radi | perímetre]] d’un cercle. 
 
 ::: .reveal(when="blank-0 blank-1")
 
-L’arc entre dos punts _A_ i _B_ s’escriu sovint com `arc(AB)` . Aquesta definició és lleugerament ambigua: hi ha una [{.purple} segon arc](pill:major) que connecta _A_ i _B,_ però va a la inversa. 
+L’arc entre dos punts _A_ i _B_ s’escriu sovint com `arc(AB)` . Aquesta definició és lleugerament ambigua: hi ha una [{.purple} segon arc](target:major) que connecta _A_ i _B,_ però va a la inversa. 
 
 El més petit dels dos arcs s’anomena __arc menor__ , i el més gran s’anomena __arc major__ . Si els punts _A_ i _B_ estan exactament oposats els dos, els dos arcs tenen la mateixa longitud i són [[semicercles | diàmetres | circumferències]] . 
 
@@ -687,13 +687,13 @@ El més petit dels dos arcs s’anomena __arc menor__ , i el més gran s’anome
 
 ::: column.grow
 
-Per trobar la longitud d’un arc o l’àrea d’un sector, hem de conèixer l’angle corresponent al centre del cercle: això s’anomena [{.blue} angle central](pill:angle) . 
+Per trobar la longitud d’un arc o l’àrea d’un sector, hem de conèixer l’angle corresponent al centre del cercle: això s’anomena [{.blue} angle central](target:angle) . 
 
-Observeu com l’arc, el sector i l’angle ocupen la _mateixa proporció_ d’un cercle complet. Per exemple, si la opció [{.blue} angle central](pill:angle) és _{span.var-action} 90°_ , triga [[un quart | una meitat | un terç]] de l’a [{.teal} cercle complet](pill:fangle) 
+Observeu com l’arc, el sector i l’angle ocupen la _mateixa proporció_ d’un cercle complet. Per exemple, si la opció [{.blue} angle central](target:angle) és _{span.var-action} 90°_ , triga [[un quart | una meitat | un terç]] de l’a [{.teal} cercle complet](target:fangle) 
 
 ::: .reveal(when="blank-0")
 
-Això significa que el [{.red} la longitud de l’arc](pill:arc) també és `1/4` del [{.purple} la circumferència sencera](pill:circ) del cercle i la [{.yellow} l’àrea del sector](pill:sector) és `1/4` del [{.orange} tota la zona](pill:area) del cercle. 
+Això significa que el [{.red} la longitud de l’arc](target:arc) també és `1/4` del [{.purple} la circumferència sencera](target:circ) del cercle i la [{.yellow} l’àrea del sector](target:sector) és `1/4` del [{.orange} tota la zona](target:area) del cercle. 
 
 Podem expressar aquesta relació en una equació: 
 
@@ -799,7 +799,7 @@ Eratòstenes es va adonar que al migdia del dia del solstici d’estiu, l’obel
 
 ::: .reveal(when="next-0")
 
-Eratòstenes va mesurar que el [{.teal} l'angle](pill:angle1) de l'ombra va ser de 7,2°. Això és el mateix que la [{.purple} angle central](pill:angle2) del centre [{.red} arc](pill:arc) d’Alexandria a Swenet, perquè [[s’alternen | vertical |]] angles [[corresponents]] 
+Eratòstenes va mesurar que el [{.teal} l'angle](target:angle1) de l'ombra va ser de 7,2°. Això és el mateix que la [{.purple} angle central](target:angle2) del centre [{.red} arc](target:arc) d’Alexandria a Swenet, perquè [[s’alternen | vertical |]] angles [[corresponents]] 
 
 :::
 

@@ -606,12 +606,12 @@ Trong các phần trước, bạn đã học các tên được đặt cho một
 
 ::: column.grow(parent="right")
 
-* {.r} Một [{.red} secant](pill:secant) là một đường thẳng cắt một vòng tròn tại hai điểm. [Tiếp tục](btn:next)
-* {.r.reveal(when="next-0")} Một [{.green} hợp âm](pill:chord) là một đoạn dòng có điểm cuối nằm trên chu vi của một vòng tròn. [Tiếp tục](btn:next)
-* {.r.reveal(when="next-1")} Một [{.blue} tiếp tuyến](pill:tangent) là một đường chạm vào một vòng tròn tại đúng một điểm. Đây được gọi là __điểm tiếp tuyến__ . [Tiếp tục](btn:next)
-* {.r.reveal(when="next-2")} An [{.yellow} cung](pill:arc) là một phần của chu vi của một vòng tròn. [Tiếp tục](btn:next)
-* {.r.reveal(when="next-3")} Một [{.teal} sector](pill:sector) là một phần bên trong của một vòng tròn, giới hạn bởi một _vòng cung_ và _hai bán kính_ . [Tiếp tục](btn:next)
-* {.r.reveal(when="next-4")} Cuối cùng, một [{.purple} phân khúc](pill:segment) là một phần của nội thất của một vòng tròn, giới hạn bởi một _vòng cung_ và _hợp âm_ . [Tiếp tục](btn:next) 
+* {.r} Một [{.red} secant](target:secant) là một đường thẳng cắt một vòng tròn tại hai điểm. [Tiếp tục](btn:next)
+* {.r.reveal(when="next-0")} Một [{.green} hợp âm](target:chord) là một đoạn dòng có điểm cuối nằm trên chu vi của một vòng tròn. [Tiếp tục](btn:next)
+* {.r.reveal(when="next-1")} Một [{.blue} tiếp tuyến](target:tangent) là một đường chạm vào một vòng tròn tại đúng một điểm. Đây được gọi là __điểm tiếp tuyến__ . [Tiếp tục](btn:next)
+* {.r.reveal(when="next-2")} An [{.yellow} cung](target:arc) là một phần của chu vi của một vòng tròn. [Tiếp tục](btn:next)
+* {.r.reveal(when="next-3")} Một [{.teal} sector](target:sector) là một phần bên trong của một vòng tròn, giới hạn bởi một _vòng cung_ và _hai bán kính_ . [Tiếp tục](btn:next)
+* {.r.reveal(when="next-4")} Cuối cùng, một [{.purple} phân khúc](target:segment) là một phần của nội thất của một vòng tròn, giới hạn bởi một _vòng cung_ và _hợp âm_ . [Tiếp tục](btn:next) 
 
 :::
 
@@ -670,11 +670,11 @@ Thật không may, không ai biết chính xác Trái đất _lớn như thế n
 
 ::: column.grow
 
-Như bạn có thể thấy trong sơ đồ, một [{.red} vòng cung](pill:arc) là một phần của [[chu vi | đường kính | tiếp tuyến]] của một vòng tròn và một [{.yellow} lĩnh vực](pill:sector) này là một phần của [[nội thất | bán kính | chu vi]] của một vòng tròn. 
+Như bạn có thể thấy trong sơ đồ, một [{.red} vòng cung](target:arc) là một phần của [[chu vi | đường kính | tiếp tuyến]] của một vòng tròn và một [{.yellow} lĩnh vực](target:sector) này là một phần của [[nội thất | bán kính | chu vi]] của một vòng tròn. 
 
 ::: .reveal(when="blank-0 blank-1")
 
-Vòng cung giữa hai điểm _A_ và _B_ thường được viết là `arc(AB)` . Định nghĩa này hơi mơ hồ: có một [{.purple} cung thứ hai](pill:major) nối _A_ và _B_ nhưng đi theo hướng khác xung quanh vòng tròn. 
+Vòng cung giữa hai điểm _A_ và _B_ thường được viết là `arc(AB)` . Định nghĩa này hơi mơ hồ: có một [{.purple} cung thứ hai](target:major) nối _A_ và _B_ nhưng đi theo hướng khác xung quanh vòng tròn. 
 
 Cung nhỏ hơn trong hai cung được gọi là __cung nhỏ__ và cung lớn hơn được gọi là __cung chính__ . Nếu các điểm _A_ và _B_ hoàn toàn đối diện nhau, cả hai cung có cùng độ dài và là [[hình bán nguyệt | đường kính | chu vi]] . 
 
@@ -687,13 +687,13 @@ Cung nhỏ hơn trong hai cung được gọi là __cung nhỏ__ và cung lớn 
 
 ::: column.grow
 
-Để tìm độ dài của một cung hoặc diện tích của một khu vực, chúng ta cần biết về góc tương ứng ở tâm của vòng tròn: đây được gọi là [{.blue} góc trung tâm](pill:angle) . 
+Để tìm độ dài của một cung hoặc diện tích của một khu vực, chúng ta cần biết về góc tương ứng ở tâm của vòng tròn: đây được gọi là [{.blue} góc trung tâm](target:angle) . 
 
-Lưu ý rằng tất cả các cung, góc và góc chiếm _cùng một tỷ lệ_ của một vòng tròn đầy đủ. Ví dụ: nếu [{.blue} góc trung tâm](pill:angle) là _{span.var-action} 90°_ , phải mất [[một phần tư | một nửa | một phần ba]] [{.teal} vòng tròn đầy đủ](pill:fangle) . 
+Lưu ý rằng tất cả các cung, góc và góc chiếm _cùng một tỷ lệ_ của một vòng tròn đầy đủ. Ví dụ: nếu [{.blue} góc trung tâm](target:angle) là _{span.var-action} 90°_ , phải mất [[một phần tư | một nửa | một phần ba]] [{.teal} vòng tròn đầy đủ](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
-Điều này có nghĩa là [{.red} chiều dài của cung](pill:arc) cũng là `1/4` sau đó [{.purple} toàn bộ chu vi](pill:circ) của vòng tròn và [{.yellow} diện tích của ngành](pill:sector) là `1/4` sau đó [{.orange} Toàn bộ diện tích](pill:area) hình tròn. 
+Điều này có nghĩa là [{.red} chiều dài của cung](target:arc) cũng là `1/4` sau đó [{.purple} toàn bộ chu vi](target:circ) của vòng tròn và [{.yellow} diện tích của ngành](target:sector) là `1/4` sau đó [{.orange} Toàn bộ diện tích](target:area) hình tròn. 
 
 Chúng ta có thể biểu thị mối quan hệ này theo một phương trình: 
 
@@ -801,7 +801,7 @@ Eratosthenes nhận thấy rằng vào buổi trưa vào ngày hạ chí, obelis
 
 ::: .reveal(when="next-0")
 
-Eratosthenes đo rằng [{.teal} góc](pill:angle1) của bóng là 7,2°. Điều này giống như [{.purple} góc trung tâm](pill:angle2) của [{.red} vòng cung](pill:arc) từ Alexandria đến Swenet, vì chúng [[xen kẽ | theo chiều dọc |]] góc [[tương ứng]] . 
+Eratosthenes đo rằng [{.teal} góc](target:angle1) của bóng là 7,2°. Điều này giống như [{.purple} góc trung tâm](target:angle2) của [{.red} vòng cung](target:arc) từ Alexandria đến Swenet, vì chúng [[xen kẽ | theo chiều dọc |]] góc [[tương ứng]] . 
 
 :::
 
