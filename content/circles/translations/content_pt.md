@@ -442,11 +442,11 @@ Em vez de dividir um círculo em algum número de segmentos (como 360 graus), os
 
 ::: column.grow
 
-Um _{span.var-action} círculo completo_ tem circunferência _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
+Um [círculo completo](action:setState(0)) tem circunferência _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} Para uma rotação de meio círculo _{span.var-action}_, a distância correspondente ao longo da circunferência é _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
+{.reveal(when="eqn-0")} Para uma [rotação de meio círculo](action:setState(1)), a distância correspondente ao longo da circunferência é _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} Para uma rotação de quarto de círculo _{span.var-action}_, a distância ao longo da circunferência é _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
+{.reveal(when="eqn-1")} Para uma rotação de [quarto de círculo](action:setState(2)), a distância ao longo da circunferência é _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
 {.reveal(when="eqn-2")} E assim por diante: essa maneira de medir ângulos é chamada [__radianos__](gloss:radians) (você pode se lembrar disso como “unidades de raio”).
 
@@ -683,7 +683,7 @@ O menor dos dois arcos é chamado arco __menor__, e o maior é chamado arco __ar
 
 Para encontrar o comprimento de um arco ou a área de um setor, precisamos saber sobre o ângulo correspondente no centro do círculo: isso é chamado de ângulo central [{.blue} ângulo central](target:angle).
 
-Observe como o arco, o setor e o ângulo ocupam _a mesma proporção_ de um círculo completo. Por exemplo, se o ângulo central [{.blue}](target:angle) for _{span.var-action} 90 °_, ocupará [[um quarto|one half|one third]] de um círculo completo [{.teal}](target:fangle).
+Observe como o arco, o setor e o ângulo ocupam _a mesma proporção_ de um círculo completo. Por exemplo, se o ângulo central [{.blue}](target:angle) for [90°](action:set90Deg()), ocupará [[um quarto|one half|one third]] de um círculo completo [{.teal}](target:fangle).
 
 ::: .reveal(when="blank-0")
 
@@ -720,13 +720,13 @@ Agora, podemos reorganizar essas equações para encontrar a variável em que es
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} comprimento do arco](pill) | = | `"circumference" × c/360` |
+| [ comprimento do arco](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} área do setor](pill) | = | `"circle area" × c/360` |
+| [ área do setor](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -743,13 +743,13 @@ Se o ângulo central é medido em [radianos](gloss:radians) em vez de [graus](gl
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} comprimento do arco](pill) | = | `2 π r × c/(2π)` |
+| [ comprimento do arco](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} área do setor](pill) | = | `π r^2 × c/(2π)` |
+| [ área do setor](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 

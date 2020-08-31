@@ -438,11 +438,11 @@
 
 ::: column.grow
 
- _{span.var-action} Полный круг_ имеет длину_{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ , 
+ [Полный круг](action:setState(0)) имеет длину _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ , 
 
-{.reveal(when="eqn-0")} _{span.var-action} Повороту на полукруга_ , соответствует расстояние _{x-equation.small(solution="π" keys="+ × π" numeric)}_ , 
+{.reveal(when="eqn-0")} [Повороту на полукруга](action:setState(2)), соответствует расстояние _{x-equation.small(solution="π" keys="+ × π" numeric)}_ , 
 
-{.reveal(when="eqn-1")} Для _{span.var-action} вращения на четверть круга_ , расстояние по окружности _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ , 
+{.reveal(when="eqn-1")} Для [вращения на четверть круга](action:setState(3)), расстояние по окружности _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ , 
 
 {.reveal(when="eqn-2")} И так далее: этот способ измерения углов называется [__радианами__](gloss:radians) . 
 
@@ -681,7 +681,7 @@ Sin (30 рад) = [[-0,988]] _{span.eqn-gap}_ cos (1 рад) = [[0,54]]
 
 Чтобы найти длину дуги или площадь сектора, нам нужно знать величину соответствующего угла с вершиной в центре круга: этот угол называется [{.blue} центральный угол](target:angle) . 
 
-Обратите внимание, что дуга, сектор и угол занимают _одинаковую часть_ полного круга. Например, если [{.blue} центральный угол](target:angle) равен _{span.var-action} 90°_ , то дуга и сектор занимает [[одну четверть|половину|одну треть]] [{.teal} целого круга](target:fangle) 
+Обратите внимание, что дуга, сектор и угол занимают _одинаковую часть_ полного круга. Например, если [{.blue} центральный угол](target:angle) равен [90°](action:set90Deg()), то дуга и сектор занимает [[одну четверть|половину|одну треть]] [{.teal} целого круга](target:fangle) 
 
 ::: .reveal(when="blank-0")
 
@@ -718,13 +718,13 @@ Sin (30 рад) = [[-0,988]] _{span.eqn-gap}_ cos (1 рад) = [[0,54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Длина дуги](pill) | = | `"длина окружности" × c/360` |
+| [Длина дуги](pill:red) | = | `"длина окружности" × c/360` |
 |                          | = | `2 π r × c/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Площадь сектора](pill) | = | `"площадь круга" × c/360` |
+| [Площадь сектора](pill:yellow) | = | `"площадь круга" × c/360` |
 |                                  | = | `π r^2 × c/360`         |
 {.eqn-system}
 
@@ -741,13 +741,13 @@ Sin (30 рад) = [[-0,988]] _{span.eqn-gap}_ cos (1 рад) = [[0,54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Длина дуги](pill) | = | `2 π r × c/(2π)` |
+| [Длина дуги](pill:red) | = | `2 π r × c/(2π)` |
 |                          | = | `r × c`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Площадь сектора](pill) | = | `π r^2 × c/(2π)` |
+| [Площадь сектора](pill:yellow) | = | `π r^2 × c/(2π)` |
 |                                  | = | `1/2 r^2 c`      |
 {.eqn-system}
 

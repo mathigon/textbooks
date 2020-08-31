@@ -440,11 +440,11 @@ En lloc de dividir un cercle en un nombre de segments (com 360 graus), els matem
 
 ::: column.grow
 
-A _{span.var-action} el cercle complet_ té circumferència _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+A [el cercle complet](action:setState(0)) té circumferència _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} Per a _{span.var-action} rotació mig cercle_ , la distància corresponent al llarg de la circumferència és _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} Per a [rotació mig cercle](action:setState(1)), la distància corresponent al llarg de la circumferència és _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-1")} Per a _{span.var-action} gir de quart de cercle_ , la distància al llarg de la circumferència és _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} Per a [gir de quart de cercle](action:setState(2)), la distància al llarg de la circumferència és _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
 
 {.reveal(when="eqn-2")} I així successivament: aquesta manera de mesurar els angles s'anomenen [__radians__](gloss:radians) (ho podríeu recordar com a "unitats de radi"). 
 
@@ -689,7 +689,7 @@ El més petit dels dos arcs s’anomena __arc menor__ , i el més gran s’anome
 
 Per trobar la longitud d’un arc o l’àrea d’un sector, hem de conèixer l’angle corresponent al centre del cercle: això s’anomena [{.blue} angle central](target:angle) . 
 
-Observeu com l’arc, el sector i l’angle ocupen la _mateixa proporció_ d’un cercle complet. Per exemple, si la opció [{.blue} angle central](target:angle) és _{span.var-action} 90°_ , triga [[un quart | una meitat | un terç]] de l’a [{.teal} cercle complet](target:fangle) 
+Observeu com l’arc, el sector i l’angle ocupen la _mateixa proporció_ d’un cercle complet. Per exemple, si la opció [{.blue} angle central](target:angle) és [90°](action:set90Deg()) , triga [[un quart | una meitat | un terç]] de l’a [{.teal} cercle complet](target:fangle) 
 
 ::: .reveal(when="blank-0")
 
@@ -726,13 +726,13 @@ Ara podem reorganitzar aquestes equacions per trobar quina sigui la variable que
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} longitud de l’arc](pill) | = | `"circumference" × c/360` |
+| [ longitud de l’arc](pill:red) | = | `"circumference" × c/360` |
 |                                  | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} àrea sectorial](pill) | = | `"circle area" × c/360` |
+| [ àrea sectorial](pill:yellow) | = | `"circle area" × c/360` |
 |                                  | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -749,13 +749,13 @@ Si l'angle central es mesura en [radiians](gloss:radians) més que en [graus](gl
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} longitud de l’arc](pill) | = | `2 π r × c/(2π)` |
+| [ longitud de l’arc](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} àrea sectorial](pill) | = | `π r^2 × c/(2π)` |
+| [ àrea sectorial](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 

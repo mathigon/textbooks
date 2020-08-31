@@ -440,11 +440,11 @@ Plutôt que de diviser un cercle en un certain nombre de segments (comme 360 deg
 
 ::: column.grow
 
-UNE _{span.var-action} le cercle complet_ a une circonférence _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+UNE [le cercle complet](action:setState(0)) a une circonférence _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} Pour un _{span.var-action} rotation en demi-cercle_ , la distance correspondante le long de la circonférence est _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} Pour un [rotation en demi-cercle](action:setState(1)), la distance correspondante le long de la circonférence est _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-1")} Pour un _{span.var-action} rotation en quart de cercle_ , la distance le long de la circonférence est _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} Pour un [rotation en quart de cercle_ , la distance le long de la circonférence est _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}](action:setState(2)). 
 
 {.reveal(when="eqn-2")} Et ainsi de suite: cette façon de mesurer les angles est appelée [__radians__](gloss:radians) (vous pouvez vous en souvenir comme «unités de rayon»). 
 
@@ -689,7 +689,7 @@ Le plus petit des deux arcs est appelé __arc mineur__ et le plus grand est appe
 
 Pour trouver la longueur d'un arc ou l'aire d'un secteur, nous devons connaître l'angle correspondant au centre du cercle: c'est ce qu'on appelle le [{.blue} angle central](target:angle) . 
 
-Remarquez comment l'arc, le secteur et l'angle occupent tous la _même proportion_ d'un cercle complet. Par exemple, si le [{.blue} l'angle central](target:angle) est _{span.var-action} 90°_ , il prend [[un quart | une moitié | un tiers]] d'un [{.teal} cercle complet](target:fangle) . 
+Remarquez comment l'arc, le secteur et l'angle occupent tous la _même proportion_ d'un cercle complet. Par exemple, si le [{.blue} l'angle central](target:angle) est [90°](action:set90Deg()) , il prend [[un quart | une moitié | un tiers]] d'un [{.teal} cercle complet](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
@@ -726,13 +726,13 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} longueur d'arc](pill) | = | `"circumference" × c/360` |
+| [ longueur d'arc](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} zone sectorielle](pill) | = | `"circle area" × c/360` |
+| [ zone sectorielle](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -751,13 +751,13 @@ Si l'angle central est mesuré en [radians](gloss:radians) plutôt qu'en [degré
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} longueur d'arc](pill) | = | `2 π r × c/(2π)` |
+| [ longueur d'arc](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} zone sectorielle](pill) | = | `π r^2 × c/(2π)` |
+| [ zone sectorielle](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 

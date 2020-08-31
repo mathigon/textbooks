@@ -454,12 +454,12 @@ Bir çemberi belli sayıda parçaya bölmek yerine(360 gibi), matematikçiler ge
 
 ::: column.grow
 
-Bir _{span.var-action}tam çemberin_ çevre uzunluğu
+Bir [tam çemberin](action:setState(0)) çevre uzunluğu
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ dir.
 
-{.reveal(when="eqn-0")} _{span.var-action}Yarın çemberlik bir döndürmeye_ karşılık gelen uzunluk _{x-equation.small(solution="π" keys="+ × π" numeric)}_ dir.
+{.reveal(when="eqn-0")} [Yarın çemberlik bir döndürmeye](action:setState(1)) karşılık gelen uzunluk _{x-equation.small(solution="π" keys="+ × π" numeric)}_ dir.
 
-{.reveal(when="eqn-1")} _{span.var-action}Çeyrek çemberlik döndürmeye_ karşılık gelen uzunluk
+{.reveal(when="eqn-1")} [Çeyrek çemberlik döndürmeye](action:setState(2)) karşılık gelen uzunluk
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ dir.
 
 {.reveal(when="eqn-2")} Ve böyle devam eder: açıyı bu şekilde ölçmek
@@ -709,7 +709,7 @@ _A_ ve _B_ noktaları arasındaki yay genelde ‘arc(AB)’ olarak yazılır. As
 
 Bir yayın uzunluğunu ya da dilimin alanını bulmak için, çemberin merkezinde bu parçalara karşılık gelen açıyı bilmemiz gerekir: buna [{.blue} merkez açı](target:angle) denir.
 
-Yayın, dilimin ve açının nasıl da çemberin bütünü ile _aynı orana_ sahip olduğuna bakın. Örneğin eğer [{.blue} merkez açı](target:angle) _{span.var-action}90°_ ise, [{.teal} bütün çemberin](target:fangle)  [[çeyreğini|yarısını|üçte birini]] oluşturur.
+Yayın, dilimin ve açının nasıl da çemberin bütünü ile _aynı orana_ sahip olduğuna bakın. Örneğin eğer [{.blue} merkez açı](target:angle) [90°](action:set90Deg()) ise, [{.teal} bütün çemberin](target:fangle)  [[çeyreğini|yarısını|üçte birini]] oluşturur.
 
 ::: .reveal(when="blank-0")
 Demek ki [{.red} yayın uzunluğu](target:arc) da çemberin [{.purple} çevresinin](target:circ) `1/4`ü, ve [{.yellow} dilimin alanı](target:sector) da bütün dairenin [{.orange} alanının](target:area) `1/4`ü.
@@ -744,13 +744,13 @@ Bu ilişkiyi bir denklem ile ifade edebiliriz:
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}yay uzunluğu](pill) | = | `"çevre" × c/360` |
+| [yay uzunluğu](pill:red) | = | `"çevre" × c/360` |
 |                          | = | `2 π r × c/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}dilim alanı](pill) | = | `"daire alanı" × c/360` |
+| [dilim alanı](pill:yellow) | = | `"daire alanı" × c/360` |
 |                              | = | `π r^2 × c/360`         |
 {.eqn-system}
 
@@ -766,13 +766,13 @@ Eğer merkez açı [derece](gloss:degrees) yerine [radyan](gloss:radians) cinsin
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}yay uzunluğu](pill) | = | `2 π r × c/(2π)` |
+| [yay uzunluğu](pill:red) | = | `2 π r × c/(2π)` |
 |                          | = | `r × c`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}dilim alanı](pill) | = | `π r^2 × c/(2π)` |
+| [dilim alanı](pill:yellow) | = | `π r^2 × c/(2π)` |
 |                              | = | `1/2 r^2 c`      |
 {.eqn-system}
 

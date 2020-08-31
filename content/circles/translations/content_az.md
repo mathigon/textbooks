@@ -440,11 +440,11 @@ Amma riyazi baxımdan 360 seçim tamamilə özbaşına olur. Əgər Marsda yaşa
 
 ::: column.grow
 
-A _{span.var-action} tam dairənin çevrəsi_ var _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+A [tam dairənin çevrəsi](action:setState(0)) var _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} A üçün _{span.var-action} yarım dairənin fırlanması_ , _dairə_ boyunca müvafiq məsafədir _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} A üçün [yarım dairənin fırlanması](action:setState(1)) , _dairə_ boyunca müvafiq məsafədir _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-1")} A üçün _{span.var-action} dörddə bir dairənin fırlanması_ , _dairə_ boyunca məsafədir _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} A üçün [dörddə bir dairənin fırlanması](action:setState(2)) , _dairə_ boyunca məsafədir _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
 
 {.reveal(when="eqn-2")} Və sair: bucaqları [__ölçməyin__](gloss:radians) bu [__üsuluna radians__](gloss:radians) deyilir (bunu "radius vahidləri" olaraq xatırlaya bilərsiniz). 
 
@@ -683,7 +683,7 @@ _A_ və _B_ nöqtələri arasındakı qövs tez-tez olduğu kimi yazılır `arc(
 
 Bir qövsün uzunluğunu və ya bir sektorun sahəsini tapmaq üçün dairənin mərkəzindəki müvafiq bucaq haqqında bilməliyik: [{.blue} mərkəzi bucaq](target:angle) . 
 
-Qövsün, sektorun və bucağın hamısının tam bir dairə _nisbətini_ necə aldığına diqqət yetirin. Məsələn, əgər [{.blue} mərkəzi bucaqdır](target:angle) _{span.var-action} 90°_ , [[dörddə birini]] alır [[| bir yarım |]] a-nın [[üçdə biri]] [{.teal} tam dairə](target:fangle) . 
+Qövsün, sektorun və bucağın hamısının tam bir dairə _nisbətini_ necə aldığına diqqət yetirin. Məsələn, əgər [{.blue} mərkəzi bucaqdır](target:angle) [90°](action:set90Deg()) , [[dörddə birini]] alır [[| bir yarım |]] a-nın [[üçdə biri]] [{.teal} tam dairə](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
@@ -720,13 +720,13 @@ Bu əlaqəni bir tənlikdə ifadə edə bilərik:
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} qövs uzunluğu](pill) | = | `"circumference" × c/360` |
+| [qövs uzunluğu](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} sektor sahəsi](pill) | = | `"circle area" × c/360` |
+| [sektor sahəsi](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -743,13 +743,13 @@ Mərkəzi bucaq [dərəcə ilə](gloss:degrees) deyil, [radianla](gloss:radians)
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} qövs uzunluğu](pill) | = | `2 π r × c/(2π)` |
+| [qövs uzunluğu](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} sektor sahəsi](pill) | = | `π r^2 × c/(2π)` |
+| [sektor sahəsi](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 

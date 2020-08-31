@@ -440,11 +440,11 @@ I stället för att dela upp en cirkel i ett visst antal segment (som 360 grader
 
 ::: column.grow
 
-EN _{span.var-action} hela cirkeln_ har omkrets _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+EN [hela cirkeln](action:setState(0)) har omkrets _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} För en _{span.var-action} halvcirkelrotation_ , motsvarande avstånd längs omkretsen _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} För en [halvcirkelrotation](action:setState(1)), motsvarande avstånd längs omkretsen _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-1")} För en _{span.var-action} kvartalscirkelrotation_ , avståndet längs omkretsen är _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} För en [kvartalscirkelrotation](action:setState(2)), avståndet längs omkretsen är _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
 
 {.reveal(when="eqn-2")} Och så vidare: detta sätt att mäta vinklar kallas [__radianer__](gloss:radians) (du kan komma ihåg detta som "radienheter"). 
 
@@ -689,7 +689,7 @@ Den mindre av de två bågarna kallas den __mindre bågen__ , och den större ka
 
 För att hitta längden på en båge eller området för en sektor måste vi veta om motsvarande vinkel i mitten av cirkeln: detta kallas [{.blue} central vinkel](target:angle) . 
 
-Lägg märke till hur bågen, sektorn och vinkeln tar upp _samma andel_ av en hel cirkel. Till exempel om [{.blue} central vinkel](target:angle) är _{span.var-action} 90°_ , det tar [[en fjärdedel | en halv | en tredjedel]] av [{.teal} hela cirkeln](target:fangle) . 
+Lägg märke till hur bågen, sektorn och vinkeln tar upp _samma andel_ av en hel cirkel. Till exempel om [{.blue} central vinkel](target:angle) är [90°](action:set90Deg()), det tar [[en fjärdedel | en halv | en tredjedel]] av [{.teal} hela cirkeln](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
@@ -726,13 +726,13 @@ Nu kan vi ordna om dessa ekvationer för att hitta vilken variabel vi är intres
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} båglängd](pill) | = | `"circumference" × c/360` |
+| [ båglängd](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} sektorområde](pill) | = | `"circle area" × c/360` |
+| [ sektorområde](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -751,13 +751,13 @@ Om den centrala vinkeln mäts i [radianer](gloss:radians) snarare än [grader](g
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} båglängd](pill) | = | `2 π r × c/(2π)` |
+| [ båglängd](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} sektorområde](pill) | = | `π r^2 × c/(2π)` |
+| [ sektorområde](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 

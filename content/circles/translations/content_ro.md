@@ -522,14 +522,14 @@ unui [__cerc unitate__](gloss:unit-circle) (un cerc de rază 1).
 
 ::: column.grow
 
-Un _{span.var-action}cerc complet_ are circumferința
+Un [cerc complet](action:setState(0)) are circumferința
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} Pentru o _{span.var-action}rotație de semicerc_, distanța
+{.reveal(when="eqn-0")} Pentru o [rotație de semicerc](action:setState(1)), distanța
 de-a lungul circumferinței este
 _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} Pentru o _{span.var-action}rotație de sfert de cerc_, distanța
+{.reveal(when="eqn-1")} Pentru o [rotație de sfert de cerc](action:setState(2)), distanța
 de-a lungul circumferinței este
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
@@ -823,7 +823,7 @@ unghiul corespunzător din centrul cercului: acesta se numește [{.blue} unghi l
 
 Observă cum arcul, sectorul și unghiul la centru ocupă toate _aceeași proporție_
 dintr-un cerc dat. De exemplu, dacă [{.blue} unghiul la centru](target:angle) este
-_{span.var-action}90°_, el ocupă [[un sfert|o jumătate|o treime]] dintr-un 
+[90°](action:set90Deg()), el ocupă [[un sfert|o jumătate|o treime]] dintr-un 
 [{.teal} cerc complet](target:fangle).
 
 ::: .reveal(when="blank-0")
@@ -862,13 +862,13 @@ De exemplu,
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}lungime arc](pill) | = | `"circumferință" × c/360` |
+| [lungime arc](pill:red) | = | `"circumferință" × c/360` |
 |                           | = | `2 π r × c/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}arie sector](pill) | = | `"arie cerc" × c/360` |
+| [arie sector](pill:yellow) | = | `"arie cerc" × c/360` |
 |                              | = | `π r^2 × c/360`         |
 {.eqn-system}
 
@@ -886,13 +886,13 @@ Dacă unghiul la centru se măsoară mai degrabă în [radiani](gloss:radians) d
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}lungime arc](pill) | = | `2 π r × c/(2π)` |
+| [lungime arc](pill:red) | = | `2 π r × c/(2π)` |
 |                          | = | `r × c`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}arie sector](pill) | = | `π r^2 × c/(2π)` |
+| [arie sector](pill:yellow) | = | `π r^2 × c/(2π)` |
 |                              | = | `1/2 r^2 c`      |
 {.eqn-system}
 

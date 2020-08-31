@@ -441,11 +441,11 @@ Umjesto da podijele krug na neki broj segmenata (poput 360 stupnjeva), matemati�
 
 ::: column.grow
 
-A _{span.var-action} puni krug_ ima opseg _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
+A [puni krug](action:setState(0)) ima opseg _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} Za _{span.var-action} rotaciju polukruga_, odgovarajuća udaljenost duž oboda je _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
+{.reveal(when="eqn-0")} Za [rotaciju polukruga](action:setState(1)), odgovarajuća udaljenost duž oboda je _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} Za _{span.var-action} rotaciju četvrtine kruga_, udaljenost duž oboda je _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
+{.reveal(when="eqn-1")} Za [rotaciju četvrtine kruga](action:setState(2)), udaljenost duž oboda je _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
 {.reveal(when="eqn-2")} I tako dalje: ovaj način mjerenja uglova naziva se [__radijanima__](gloss:radians) (ovo se možeš zapamtiti kao "jedinice radijusa").
 
@@ -679,7 +679,7 @@ Manji od dva luka naziva se __manji luk__, a veći se zove __glavni luk__. Ako s
 
 Da bismo pronašli duljinu luka ili područje jednog sektora, moramo znati odgovarajući kut u središtu kruga: to se zove [{.blue} središnji kut](target:angle).
 
-Primjetite kako luk, sektor i kut zauzimaju _isti omjer_ cijelog kruga. Na primjer, ako je [{.blue} središnji kut](target:angle) _{span.var-action} 90 °_, potrebna je [[jedna četvrtina|one half|one third]] [{.teal} punog kruga](target:fangle).
+Primjetite kako luk, sektor i kut zauzimaju _isti omjer_ cijelog kruga. Na primjer, ako je [{.blue} središnji kut](target:angle) [90°](action:set90Deg()), potrebna je [[jedna četvrtina|one half|one third]] [{.teal} punog kruga](target:fangle).
 
 ::: .reveal(when="blank-0")
 
@@ -716,13 +716,13 @@ Sada možemo preurediti te jednadžbe da bismo pronašli onu varijablu koja nas 
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} Duljina luka](pill) | = | `"circumference" × c/360` |
+| [ Duljina luka](pill:red) | = | `"circumference" × c/360` |
 |                             | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} Područje sektora](pill) | = | `"circle area" × c/360` |
+| [ Područje sektora](pill:yellow) | = | `"circle area" × c/360` |
 |                                    | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -739,13 +739,13 @@ Ako se središnji kut mjeri u [radijanima](gloss:radians) a ne [stupnjeva](gloss
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} Dužina luka](pill) | = | `2 π r × c/(2π)` |
+| [ Dužina luka](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} Područje sektora](pill) | = | `π r^2 × c/(2π)` |
+| [ Područje sektora](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 

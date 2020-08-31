@@ -446,12 +446,12 @@ _{span.reveal(when="blank-2")} 所以三角形的面积近似于_
 
 ::: column.grow
 
-一个 _{span.var-action}完整的_ 圆的周长为 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
+一个 [完整的](action:setState(0)) 圆的周长为 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} 旋转 _{span.var-action}半个圆_ ，相应的距离为
+{.reveal(when="eqn-0")} 旋转 [半个圆](action:setState(1))，相应的距离为
 _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} 旋转 _{span.var-action}四分之一个圆_ ，相应的距离为
+{.reveal(when="eqn-1")} 旋转 [四分之一个圆](action:setState(2))，相应的距离为
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
 {.reveal(when="eqn-2")} 凡此种种：这种表示角度的方式称之为[__弧度制__](gloss:radians)（你可以用“单位半径”来记忆）。
@@ -691,7 +691,7 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 计算弧长或扇形面积，我们需要知道它们所在圆中所对的角：也就是[{.blue} 圆心角](target:angle)。
 
-注意观察，弧、扇形和圆心角所占一个完整圆的比例是 _相同_ 的。例如，如果[{.blue} 圆心角](target:angle)为 _{span.var-action}90°_，则占了[{.teal} 整个圆](target:fangle)的[[one quarter|one half|one third]]。
+注意观察，弧、扇形和圆心角所占一个完整圆的比例是 _相同_ 的。例如，如果[{.blue} 圆心角](target:angle)为 [90°](action:set90Deg())，则占了[{.teal} 整个圆](target:fangle)的[[one quarter|one half|one third]]。
 
 ::: .reveal(when="blank-0")
 也就是说 [{.red}弧长](target:arc) 也是[{.purple} 整个圆周长](target:circ)的`1/4` ，且 [{.yellow} 扇形的面积](target:sector) 也是[{.orange} 整个圆面积](target:area) 的`1/4`。
@@ -726,13 +726,13 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}弧长](pill) | = | `"周长" × c/360` |
+| [弧长](pill:red) | = | `"周长" × c/360` |
 |                    | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}扇形面积](pill) | = | `"圆的面积" × c/360` |
+| [扇形面积](pill:yellow) | = | `"圆的面积" × c/360` |
 |                          | = | `π r^2 × c/360`     |
 {.eqn-system}
 
@@ -748,13 +748,13 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}弧长](pill) | = | `2 π r × c/(2π)` |
+| [弧长](pill:red) | = | `2 π r × c/(2π)` |
 |                    | = | `r × c`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}扇形面积公式](pill) | = | `π r^2 × c/(2π)` |
+| [扇形面积公式](pill:yellow) | = | `π r^2 × c/(2π)` |
 |                             | = | `1/2 r^2 c`      |
 {.eqn-system}
 

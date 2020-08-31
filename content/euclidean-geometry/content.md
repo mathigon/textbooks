@@ -611,15 +611,13 @@ disturb my circles”.
 {.task} Draw an [equilateral triangle](gloss:equilateral-triangle) using just a
 straight-edge and compass.
 
-To begin, draw a line segment anywhere in a box on the right. With the
-<x-target no-margins to="#equilateral .tool:nth-child(3)">line tool</x-target>
-selected, simply drag from start to end. This segment will be one of the sides
-of the triangle.
+To begin, draw a line segment anywhere in a box on the right. With the [{.no-margins} line
+tool](->#equilateral_.tool:nth-child(3)) selected, simply drag from start to end. This segment will
+be one of the sides of the triangle.
 
-{.reveal(when="segment0")} Next, draw two circles that have one of the endpoints
-of the line segments as center, and go through the other endpoint. With
-the <x-target no-margins to="#equilateral .tool:nth-child(5)">circle tool</x-target> selected,
-simply drag from one endpoint to the other.
+{.reveal(when="segment0")} Next, draw two circles that have one of the endpoints of the line
+segments as center, and go through the other endpoint. With the [{.no-margins} circle
+tool](->#equilateral_.tool:nth-child(5)) selected, simply drag from one endpoint to the other.
 
 {.reveal(when="circle1 circle2")} We already have two vertices of the triangle,
 and the third one is the intersection of the two circles. Use the line tool

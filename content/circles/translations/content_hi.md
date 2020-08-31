@@ -440,11 +440,11 @@
 
 ::: column.grow
 
-ए _{span.var-action} पूर्ण वृत्त_ की परिधि है _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ । 
+ए [पूर्ण वृत्त](action:setState(0)) की परिधि है _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ । 
 
-{.reveal(when="eqn-0")} के लिए _{span.var-action} आधा चक्र रोटेशन_ , परिधि के साथ संबंधित दूरी है _{x-equation.small(solution="π" keys="+ × π" numeric)}_ । 
+{.reveal(when="eqn-0")} के लिए [आधा चक्र रोटेशन](action:setState(1)), परिधि के साथ संबंधित दूरी है _{x-equation.small(solution="π" keys="+ × π" numeric)}_ । 
 
-{.reveal(when="eqn-1")} के लिए _{span.var-action} क्वार्टर सर्कल रोटेशन_ , परिधि के साथ दूरी है _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ । 
+{.reveal(when="eqn-1")} के लिए [क्वार्टर सर्कल रोटेशन](action:setState(2)), परिधि के साथ दूरी है _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ । 
 
 {.reveal(when="eqn-2")} और इसी तरह: कोणों को मापने के इस तरीके को [__रेडियन__](gloss:radians) कहा जाता है (आप इसे "त्रिज्या इकाइयों" के रूप में याद कर सकते हैं)। 
 
@@ -689,7 +689,7 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 एक चाप की लंबाई या किसी सेक्टर के क्षेत्र को खोजने के लिए, हमें सर्कल के केंद्र में संबंधित कोण के बारे में जानना होगा: इसे सेक्टर कहा जाता है। [{.blue} केंद्रीय कोण](target:angle) । 
 
-ध्यान दें कि चाप, क्षेत्र और कोण सभी एक पूर्ण वृत्त के _समान अनुपात_ को कैसे लेते हैं। उदाहरण के लिए, यदि [{.blue} केंद्रीय कोण](target:angle) है _{span.var-action} 90°_ , यह [[एक चौथाई]] लेता है [[| एक आधा | एक तिहाई]] [{.teal} पूरा घेरा](target:fangle) । 
+ध्यान दें कि चाप, क्षेत्र और कोण सभी एक पूर्ण वृत्त के _समान अनुपात_ को कैसे लेते हैं। उदाहरण के लिए, यदि [{.blue} केंद्रीय कोण](target:angle) है [90°](action:set90Deg()) , यह [[एक चौथाई]] लेता है [[| एक आधा | एक तिहाई]] [{.teal} पूरा घेरा](target:fangle) । 
 
 ::: .reveal(when="blank-0")
 
@@ -726,13 +726,13 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} चाप की लंबाई](pill) | = | `"circumference" × c/360` |
+| [ चाप की लंबाई](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} सेक्टर क्षेत्र](pill) | = | `"circle area" × c/360` |
+| [ सेक्टर क्षेत्र](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -751,13 +751,13 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} चाप की लंबाई](pill) | = | `2 π r × c/(2π)` |
+| [ चाप की लंबाई](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} सेक्टर क्षेत्र](pill) | = | `π r^2 × c/(2π)` |
+| [ सेक्टर क्षेत्र](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 

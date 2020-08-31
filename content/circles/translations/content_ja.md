@@ -440,11 +440,11 @@ Piは理解しやすいですが、科学と数学では基本的に重要です
 
 ::: column.grow
 
-あ_{span.var-action}全周_に円周があります_{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ 。 
+あ[全周](action:setState(0))に円周があります _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ 。 
 
-{.reveal(when="eqn-0")}のために_{span.var-action}半円回転_ 、円周に沿った対応する距離は_{x-equation.small(solution="π" keys="+ × π" numeric)}_ 。 
+{.reveal(when="eqn-0")}のために[半円回転](action:setState(1))、円周に沿った対応する距離は _{x-equation.small(solution="π" keys="+ × π" numeric)}_ 。 
 
-{.reveal(when="eqn-1")}のために_{span.var-action}四分円回転_ 、円周に沿った距離は_{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ 。 
+{.reveal(when="eqn-1")}のために[四分円回転](action:setState(2))、円周に沿った距離は _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ 。 
 
 {.reveal(when="eqn-2")}このように角度を測定する方法は[__ラジアン__](gloss:radians)と呼ばれます（これを「半径単位」と覚えておくことができます）。 
 
@@ -685,7 +685,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 弧の長さまたは扇形の面積を見つけるには、円の中心での対応する角度を知る必要があります。これは、 [{.blue}中心角](target:angle) 
 
-円弧、扇形、および角度がすべて、完全な円の_同じ割合を占める_ことに注意してください。たとえば、 [{.blue}中心角](target:angle)は_{span.var-action} 90°_ 、それは[[四分の一]]を占めます[[|半分|の3分]]の1 [{.teal}全周](target:fangle) 。 
+円弧、扇形、および角度がすべて、完全な円の_同じ割合を占める_ことに注意してください。たとえば、 [{.blue}中心角](target:angle)は [90°](action:set90Deg()) 、それは[[四分の一]]を占めます[[|半分|の3分]]の1 [{.teal}全周](target:fangle) 。 
 
 ::: .reveal(when="blank-0")
 
@@ -722,13 +722,13 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}弧長](pill) | = | `"circumference" × c/360` |
+| [弧長](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}セクターエリア](pill) | = | `"circle area" × c/360` |
+| [セクターエリア](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -747,13 +747,13 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}弧長](pill) | = | `2 π r × c/(2π)` |
+| [弧長](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}セクターエリア](pill) | = | `π r^2 × c/(2π)` |
+| [セクターエリア](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 

@@ -539,14 +539,14 @@ eines [__Einheitskreises__](gloss:unit-circle) (eines Kreises mit dem Radius 1) 
 
 ::: column.grow
 
-Ein _{span.var-action}ganzer Kreis_ hat dann einen Umfang
+Ein [ganzer Kreis](action:setState(0)) hat dann einen Umfang
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} Bei einer _{span.var-action}halben Drehung_ beträgt der
+{.reveal(when="eqn-0")} Bei einer [halben Drehung](action:setState(1)) beträgt der
 entsprechende Abstand entlang des Umfangs
 _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} Bei einer _{span.var-action}Viertelumdrehung_ beträgt der
+{.reveal(when="eqn-1")} Bei einer [Viertelumdrehung](action:setState(2)) beträgt der
 Abstand entlang des Umfangs
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
@@ -846,7 +846,7 @@ entsprechenden Winkel in der Mitte des Kreises kennen: dieser wird als
 
 Beachte, dass Bogen, Sektor und Winkel jeweils den _gleichen Anteil_ eines
 Vollkreises einnehmen. Wenn beispielsweise der [{.blue} Mittelpunktswinkel](target:angle)
-_{span.var-action}90°_ ist, nimmt er [[ein Viertel|die Hälfte|ein Drittel]] von einem
+[90°](action:set90Deg()) ist, nimmt er [[ein Viertel|die Hälfte|ein Drittel]] von einem
 [{.teal}Vollkreis](target:fangle) ein.
 
 ::: .reveal(when="blank-0")
@@ -886,13 +886,13 @@ interessiert. Zum Beispiel,
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Kreisbogenlänge](pill) | = | `"Umfang" × α/360` |
+| [Kreisbogenlänge](pill:red) | = | `"Umfang" × α/360` |
 |                               | = | `2 r π × α/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Sektorfläche](pill) | = | `"Kreisfläche" × α/360` |
+| [Sektorfläche](pill:yellow) | = | `"Kreisfläche" × α/360` |
 |                               | = | `r^2 π × α/360`         |
 {.eqn-system}
 
@@ -911,13 +911,13 @@ in [Radiant](gloss:radians) anstatt in [Grad](gloss:degrees) angegeben wird, kö
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Kreisbogenlänge](pill) | = | `2 r π × α/(2π)` |
+| [Kreisbogenlänge](pill:red) | = | `2 r π × α/(2π)` |
 |                               | = | `r × α`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Sektorfläche](pill) | = | `r^2 π × α/(2π)` |
+| [Sektorfläche](pill:yellow) | = | `r^2 π × α/(2π)` |
 |                               | = | `1/2 r^2 α`      |
 {.eqn-system}
 

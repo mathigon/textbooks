@@ -440,11 +440,11 @@ Thay vì chia một vòng tròn thành một số phân đoạn (như 360 độ)
 
 ::: column.grow
 
-Một _{span.var-action} vòng tròn đầy đủ_ có chu vi _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+Một [vòng tròn đầy đủ](action:setState(0)) có chu vi _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} Cho một _{span.var-action} Xoay nửa vòng tròn_ , khoảng cách tương ứng dọc theo chu vi là _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} Cho một [Xoay nửa vòng tròn](action:setState(1)), khoảng cách tương ứng dọc theo chu vi là _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-1")} Cho một _{span.var-action} xoay vòng tròn quý_ , khoảng cách dọc theo chu vi là _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} Cho một [xoay vòng tròn quý](action:setState(2)), khoảng cách dọc theo chu vi là _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
 
 {.reveal(when="eqn-2")} Và như vậy: cách đo góc này được gọi là [__radian__](gloss:radians) (bạn có thể nhớ đây là đơn vị bán kính của thang điểm). 
 
@@ -689,7 +689,7 @@ Cung nhỏ hơn trong hai cung được gọi là __cung nhỏ__ và cung lớn 
 
 Để tìm độ dài của một cung hoặc diện tích của một khu vực, chúng ta cần biết về góc tương ứng ở tâm của vòng tròn: đây được gọi là [{.blue} góc trung tâm](target:angle) . 
 
-Lưu ý rằng tất cả các cung, góc và góc chiếm _cùng một tỷ lệ_ của một vòng tròn đầy đủ. Ví dụ: nếu [{.blue} góc trung tâm](target:angle) là _{span.var-action} 90°_ , phải mất [[một phần tư | một nửa | một phần ba]] [{.teal} vòng tròn đầy đủ](target:fangle) . 
+Lưu ý rằng tất cả các cung, góc và góc chiếm _cùng một tỷ lệ_ của một vòng tròn đầy đủ. Ví dụ: nếu [{.blue} góc trung tâm](target:angle) là [90°](action:set90Deg()), phải mất [[một phần tư | một nửa | một phần ba]] [{.teal} vòng tròn đầy đủ](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
@@ -726,13 +726,13 @@ Bây giờ chúng ta có thể sắp xếp lại các phương trình này để
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} chiều dài hồ quang](pill) | = | `"circumference" × c/360` |
+| [ chiều dài hồ quang](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} khu vực ngành](pill) | = | `"circle area" × c/360` |
+| [ khu vực ngành](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -751,13 +751,13 @@ Nếu góc trung tâm được đo [bằng radian](gloss:radians) chứ không p
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} chiều dài hồ quang](pill) | = | `2 π r × c/(2π)` |
+| [ chiều dài hồ quang](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} khu vực ngành](pill) | = | `π r^2 × c/(2π)` |
+| [ khu vực ngành](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 

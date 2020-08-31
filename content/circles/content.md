@@ -545,16 +545,14 @@ of a [__unit circle__](gloss:unit-circle) (a circle with radius 1).
 
 ::: column.grow
 
-A _{span.var-action}full circle_ has circumference
+A [full circle](action:setState(0)) has circumference
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} For a _{span.var-action}half circle rotation_, the
-corresponding distance along the circumference is
-_{x-equation.small(solution="π" keys="+ × π" numeric)}_.
+{.reveal(when="eqn-0")} For a [half circle rotation](action:setState(1)), the corresponding distance
+along the circumference is _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} For a _{span.var-action}quarter circle rotation_, the
-distance along the circumference is
-_{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
+{.reveal(when="eqn-1")} For a [quarter circle rotation](action:setState(2)), the distance along the
+circumference is _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
 {.reveal(when="eqn-2")} And so on: this way of measuring angles is called
 [__radians__](gloss:radians) (you could remember this as “radius units”).
@@ -932,10 +930,9 @@ To find the length of an arc or the area of a sector, we need to know about the
 corresponding angle at the center of the circle: this is called the
 [{.blue.b} central angle](target:angle).
 
-Notice how the arc, sector and angle all take up the _same proportion_ of a
-full circle. For example, if the [{.blue} central angle](pill:angle) is
-_{span.var-action}90°_, it takes up [[one quarter|one half|one third]] of a
-[{.teal} full circle](pill:fangle).
+Notice how the arc, sector and angle all take up the _same proportion_ of a full circle. For
+example, if the [{.blue} central angle](target:angle) is [90°](action:set90Deg()), it takes up
+[[one quarter|one half|one third]] of a [{.teal} full circle](target:fangle).
 
 ::: .reveal(when="blank-0")
 This means that the [{.red} length of the arc](target:arc) is also `1/4` of the
@@ -974,14 +971,14 @@ in. For example,
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}arc length](pill) | = | `"circumference" × c/360` |
-|                          | = | `2 π r × c/360`          |
+| [arc length](pill:red) | = | `"circumference" × c/360` |
+|                        | = | `2 π r × c/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}sector area](pill) | = | `"circle area" × c/360` |
-|                              | = | `π r^2 × c/360`         |
+| [sector area](pill:yellow) | = | `"circle area" × c/360` |
+|                            | = | `π r^2 × c/360`         |
 {.eqn-system}
 
 :::
@@ -1007,14 +1004,14 @@ If the central angle is measured in [radians](gloss:radians) rather than
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}arc length](pill) | = | `2 π r × c/(2π)` |
-|                          | = | `r × c`          |
+| [arc length](pill:red) | = | `2 π r × c/(2π)` |
+|                        | = | `r × c`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}sector area](pill) | = | `π r^2 × c/(2π)` |
-|                              | = | `1/2 r^2 c`      |
+| [sector area](pill:yellow) | = | `π r^2 × c/(2π)` |
+|                            | = | `1/2 r^2 c`      |
 {.eqn-system}
 
 :::
