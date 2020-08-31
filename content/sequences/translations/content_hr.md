@@ -477,15 +477,15 @@ _{span.n}${geometric(b,r,5)}_, …
 
 ::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-Ako je _{span.var-action} `r > 1`_, elementi se [[brzo povećavaju|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, sve do beskonačnosti. Matematičari kažu da niz [__divergira__](gloss:sequence-divergence)_
+Ako je [`r > 1`](action:set(2,2)), elementi se [[brzo povećavaju|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, sve do beskonačnosti. Matematičari kažu da niz [__divergira__](gloss:sequence-divergence)_
 
 ::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
 
-Ako je _{span.var-action} _r_ između -1 i 1_, elementi će se uvijek [[približavati 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Kažemo da niz [__konvergira__](gloss:sequence-convergence)_
+Ako je [_r_ između -1 i 1](action:set(10,0.6)), elementi će se uvijek [[približavati 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Kažemo da niz [__konvergira__](gloss:sequence-convergence)_
 
 ::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
 
-Ako je _{span.var-action} `r < -1`_ elementi niza izmjenjuju se između pozitivnih i negativnih, dok njihova [[apsolutna vrijednost|inverse|difference]] postaje veća.
+Ako je [`r < -1`](action:set(3,-1.4)) elementi niza izmjenjuju se između pozitivnih i negativnih, dok njihova [[apsolutna vrijednost|inverse|difference]] postaje veća.
 
 :::
 
@@ -1220,17 +1220,17 @@ Za cvijeće je važan odgovarajući kut: lišće i sjeme moraju biti približno 
       x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} Ako je kut _{span.fib-action(data-value=0)} 0 °_, sve će sjeme rasti u jednom dugom redu daleko od središta.
+{div(slot="legend")} Ako je kut [0°](action:set(0)), sve će sjeme rasti u jednom dugom redu daleko od središta.
 
-{div.inline(slot="legend")} Ako je kut _{span.fib-action(data-value=0.5)} `1/2`_ punog okretaja (180 °), sjeme će se izmjenjivati između dva odvojena "kraka" koji se odmiču od središta.
+{div.inline(slot="legend")} Ako je kut [`1/2`](action:set(0.5)) punog okretaja (180 °), sjeme će se izmjenjivati između dva odvojena "kraka" koji se odmiču od središta.
 
-{div.inline(slot="legend")} Ako je rotacija neki drugi udio od 360 °, na primjer _{span.fib-action(data-value=2/5)} `2/5`_ ili _{span.fib-action(data-value=1/3)} `1/3`_ ili _{span.fib-action(data-value=3/8)} `3/8`_, tada će broj "krakova" biti isti kao i [[nazivnik|numerator|prime factor]] tog ulomka.
+{div.inline(slot="legend")} Ako je rotacija neki drugi udio od 360 °, na primjer [`2/5`](action:set(2/5)) ili [`1/3`](action:set(1/3)) ili [`3/8`](action:set(3/8)), tada će broj "krakova" biti isti kao i [[nazivnik|numerator|prime factor]] tog ulomka.
 
 {div(slot="legend")} Nažalost, "ruke" su loše, jer znače da sjeme nije ravnomjerno raspoređeno: sav je prostor između krakova izgubljen. Ali ako [racionalni brojevi](gloss:rational-numbers) ne odgovaraju, pokušajmo [iracionalne brojeve](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} Jedan primjer iracionalnog broja je [`pi`](gloss:pi). Ali ako je kut između sjemena _{span.fib-action(data-value=0.31831)} `1/pi`_ 360 °, i dalje imamo oružje: njih 22. To je zato što je razlomak `22/7 = 3.1429…` prilično dobra aproksimacija za `pi`. Ono što nam stvarno treba je iracionalni broj koji se _ne može_ aproksimirati jednostavnim razlomkom.
+{div.inline(slot="legend")} Jedan primjer iracionalnog broja je [`pi`](gloss:pi). Ali ako je kut između sjemena [`1/pi`](action:set(0.31831)) 360 °, i dalje imamo oružje: njih 22. To je zato što je razlomak `22/7 = 3.1429…` prilično dobra aproksimacija za `pi`. Ono što nam stvarno treba je iracionalni broj koji se _ne može_ aproksimirati jednostavnim razlomkom.
 
-{div.inline(slot="legend")} Čini se da je [zlatni rez](gloss:golden-ratio) upravo to: "najracionalniji" od svih iracionalnih brojeva. Ako je kut između sjemena _{span.fib-action(data-value=0.6180339)} `1/phi`_ 360 °, ono izgleda gotovo savršeno raspoređeno. A upravo je to kut koji koriste biljke širom svijeta.
+{div.inline(slot="legend")} Čini se da je [zlatni rez](gloss:golden-ratio) upravo to: "najracionalniji" od svih iracionalnih brojeva. Ako je kut između sjemena [`1/phi`](action:set(0.6180339)) 360 °, ono izgleda gotovo savršeno raspoređeno. A upravo je to kut koji koriste biljke širom svijeta.
 
 :::
 
@@ -1476,7 +1476,7 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
     x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
-{.reveal(when="var-0")} Primjetite kako neke početne točke završavaju vrlo brzo, dok druge (poput _{span.var-action} 31_ ili _{span.var-action} 47_) naprave više od stotinu koraka prije nego što dođu do ciklusa 4, 2, 1.
+{.reveal(when="var-0")} Primjetite kako neke početne točke završavaju vrlo brzo, dok druge (poput [31](action:set(31)) ili [47](action:set(47))) naprave više od stotinu koraka prije nego što dođu do ciklusa 4, 2, 1.
 
 ---
 > id: hailstone-3
