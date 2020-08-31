@@ -216,10 +216,7 @@ export function pythagorasProof($step: Step) {
   });
 
   $step.onScore('blank-1', updateLabels);
-
-  const $targets = $step.$$('.hover-target');
-  hover($targets[0], {enter: () => $slider.set(0)});
-  hover($targets[1], {enter: () => $slider.set(100)});
+  $step.model.set = (n: number) => $slider.moveTo(n);
 
   // -----
 

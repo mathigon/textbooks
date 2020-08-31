@@ -21,7 +21,7 @@
     "@mathigon/core": "0.5.2",
     "@mathigon/fermat": "0.5.3",
     "@mathigon/hilbert": "0.5.3",
-    "@mathigon/dev-server": "0.5.1",
+    "@mathigon/dev-server": "0.5.2",
     "@types/d3": "5.7.2",
     "@types/topojson": "3.2.2",
     "three": "0.120.0"
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@google-cloud/text-to-speech": "3.1.0",
     "@google-cloud/translate": "6.0.2",
-    "@mathigon/parser": "0.5.4",
+    "@mathigon/parser": "0.5.5",
     "@percy/script": "1.1.0",
     "@rollup/plugin-node-resolve": "9.0.0",
     "@typescript-eslint/eslint-plugin": "3.10.1",
