@@ -253,9 +253,8 @@ __{.m-yellow.digit-sum-is}4__.
 
 {.text-center} __{.m-red}6__ + __{.m-blue}3__ + __{.m-green}8__ + __{.m-yellow}4__
 
-这正好是数位和! 所以如果它的<x-target no-margins to=".digit-sum-is">数位和
-</x-target> 是3的一个倍数, 而且我们知道<x-target no-margins to=".digit-sum-else">
-其它每部分</x-target>也是3的倍数, 那么其结果也一定是3的一个倍数。
+这正好是数位和! 所以如果它的[{.no-margins}数位和](->.digit-sum-is)是3的一个倍数,
+而且我们知道[{.no-margins}其它每部分](->.digit-sum-else)也是3的倍数, 那么其结果也一定是3的一个倍数。
 
 ---
 > id: divisibility6

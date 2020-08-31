@@ -282,10 +282,9 @@ over is also divisible by 3 (or 9):
 
 {.text-center} __{.m-red}6__ + __{.m-blue}3__ + __{.m-green}8__ + __{.m-yellow}4__
 
-This just happens to be the digit sum! So if the <x-target no-margins
-to=".digit-sum-is">digit sum</x-target> is a multiple of 3, and we
-know that <x-target no-margins to=".digit-sum-else">everything else</x-target>
-is a multiple of 3, then the result must also be a multiple of 3.
+This just happens to be the digit sum! So if the [{.no-margins}digit sum](->.digit-sum-is) is a
+multiple of 3, and we know that [{.no-margins}everything else](->.digit-sum-else) is a multiple of
+3, then the result must also be a multiple of 3.
 
 ---
 > id: divisibility6

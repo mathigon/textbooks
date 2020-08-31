@@ -303,7 +303,7 @@ Chacune des ${n}{n|5|2,8,1} personnes présentes à la fête serre la main avec 
 
 Malheureusement, cette réponse n’est pas tout à fait correcte: nous avons compté chaque poignée de main [[deux fois|une fois|trois fois]], _{span.reveal(when="blank-0")} une fois pour chacune des deux personnes impliquées._
 
-{.reveal(when="blank-0")} Par exemple, <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)"> les deux premiers les entrées de la rangée supérieure</x-target> sont en fait les mêmes. Le nombre correct de poignées de main pour ${n}{n|5|2,25,1} invités est <mfrac><mrow>${n} × ${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
+{.reveal(when="blank-0")} Par exemple, [les deux premiers les entrées de la rangée supérieure](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) sont en fait les mêmes. Le nombre correct de poignées de main pour ${n}{n|5|2,25,1} invités est <mfrac><mrow>${n} × ${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
 
 ---
 

@@ -310,7 +310,7 @@ Hər biri ${n}{n|5|2,8,1} Yığıncaqdakı insanlar əl sıxır ${n-1} digərlə
 ---
 > id: handshakes-2a
 
-Təəssüf ki, bu cavab düzgün deyil. Diqqət yetirin <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">üst sıra ilk iki giriş</x-target> əslində eynidır, sadəcə ətrafa yuvarlanıblar. 
+Təəssüf ki, bu cavab düzgün deyil. Diqqət yetirin [üst sıra ilk iki giriş](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) əslində eynidır, sadəcə ətrafa yuvarlanıblar. 
 
 Əslində hər əl sıxmağı [[iki dəfə]] saydıq [[| bir dəfə | üç dəfə]] , _{span.reveal(when="blank-0")} cəlb olunan iki nəfərin hər biri üçün bir dəfə. Bu, düzgün əl yığmağın sayı deməkdir ${n}{n|5|2,25,1} qonaqlar `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
 

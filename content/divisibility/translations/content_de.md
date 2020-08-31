@@ -279,10 +279,9 @@ immer durch 3 (oder durch 9) teilbar. Es bleibt nur noch zu prüfen, ob das, was
 
 {.text-center} __{.m-red}6__ + __{.m-blue}3__ + __{.m-green}8__ + __{.m-yellow}4__
 
-Das ist zufällig die Quersumme! Wenn also die <x-target no-margins
-to=".digit-sum-is">Quersumme</x-target> ein Vielfaches von 3 ist, und wir
-wissen, dass <x-target no-margins to=".digit-sum-else">alles andere</x-target>
-ein Vielfaches von 3 ist, dann muss das Ergebnis auch ein Vielfaches von 3 sein.
+Das ist zufällig die Quersumme! Wenn also die [{.no-margins}Quersumme](->.digit-sum-is) ein
+Vielfaches von 3 ist, und wir wissen, dass [{.no-margins}alles andere](->.digit-sum-else) ein
+Vielfaches von 3 ist, dann muss das Ergebnis auch ein Vielfaches von 3 sein.
 
 ---
 > id: divisibility6
