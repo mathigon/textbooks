@@ -36,7 +36,6 @@ x-ab > div {
 }
 
 .card {
-	display: table;
 	background: white;
 	position: absolute;
 	top: 0;
@@ -44,37 +43,19 @@ x-ab > div {
 	height: 200px;
 	width: 150px;
 	border-radius: 8px;
-	transition-property: transform, box-shadow;
-	transition-duration: 0.6s;
-	transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	transition: box-shadow .3s;
+	box-shadow: 0 0 2px 1px rgba(0,0,0,0.5);
+	// transition-property: transform, box-shadow;
+	// transition-duration: 0.6s;
+	// transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.card:last-child, .move-candidate .card:nth-last-child(2) {
-	box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.5);
-	cursor: grab;
-}
-
-.card:not(.top-card), .card.placing, .card.locked {
-	pointer-events: none;
-	cursor: not-allowed;
-}
-
-.card p {
-	display: table-cell;
-	vertical-align: middle;
-	padding: 0 25px;
-}
-
-.card:hover, .card.active {
+.cards .card:hover, .card.active {
 	box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.5);
-	transform: scale(1.1);
+	// transform: scale(1.1);
+	cursor: grab;
 	z-index: 1000;
-}
-
-.card.active {
-	cursor: grabbing;
-}
-
-.card.active, .card.placing {
-	z-index: 1001;
 }

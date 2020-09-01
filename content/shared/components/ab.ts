@@ -1,4 +1,5 @@
-import {$N, CustomElementView, ElementView, register, slide} from '@mathigon/boost';
+import {$html, $N, CustomElementView, ElementView, register, slide} from '@mathigon/boost';
+import {Color} from '@mathigon/core';
 import {Point} from '@mathigon/fermat';
 
 enum SolutionTag {
@@ -104,20 +105,18 @@ class ABStack {
 
 }
 
-@register('x-ab', {attributes: ['a-title', 'b-title', 'oncorrect']})
+@register('x-ab', {templateId: '#ab'})
 export class AB extends CustomElementView {
 
-  private cards!: ABCard[];
+  private cards!: ElementView[];
   private stacks!: ABStack[];
 
   ready() {
 
     this.stacks = [];
 
-    const onCorrectName = this.attr('oncorrect');
 
-    const $bEl = $N('div', {class: 'a-or-b', id: 'b-box'}, this._el._view);
-    const bStack = new ABStack([], $bEl, onCorrectName, SolutionTag.B);
+    /* const bStack = new ABStack([], this.$('.b-box')!, '', SolutionTag.B);
     this.stacks.push(bStack);
     const b = {
       kind: SolutionTag.B,
@@ -126,8 +125,7 @@ export class AB extends CustomElementView {
     };
     $N('h3', {text: this.attr('b-title')}, b.$el);
 
-    const $aEl = $N('div', {class: 'a-or-b', id: 'a-box'}, this._el._view);
-    const aStack = new ABStack([], $aEl, onCorrectName, SolutionTag.A);
+    const aStack = new ABStack([], this.$('.a-box')!, '', SolutionTag.A);
     this.stacks.push(aStack);
     const a = {
       kind: SolutionTag.A,
@@ -137,37 +135,51 @@ export class AB extends CustomElementView {
     $N('h3', {text: this.attr('a-title')}, a.$el);
 
     const initStack = new ABStack(this.$$('.card'), this.$('.cards')!, onCorrectName);
-    this.stacks.push(initStack);
+    this.stacks.push(initStack); */
 
-    this.cards = initStack.cards;
+    this.cards = this.$$('.card');
+    const [$aStacks, $bStack] = this.$$('.a-or-b .stack');
 
-    this.cards.forEach(card => {
-      slide(card.$el, {
+    this.cards.forEach(($card) => {
+      const solution = $card.attr('solution');
+      const hint = $card.attr('hint') || 'incorrect';
+      $card.removeAttr('solution');
+
+      slide($card, {
         start: () => {
-          document.body.style.cursor = 'grabbing';
-          this.stacks.forEach(stack => stack.lockTop());
-          card.stack.$el.addClass('move-candidate');
-          card.originStartPos = new Point(card.$el.parent!.bounds.left, card.$el.parent!.bounds.top);
-          card.$el.addClass('active');
+          $html.addClass('grabbing');
+          // this.stacks.forEach(stack => stack.lockTop());
+          // card.stack.$el.addClass('move-candidate');
+          // card.originStartPos = new Point(card.$el.parent!.bounds.left, card.$el.parent!.bounds.top);
+          $card.addClass('active');
         },
         move: (currentPos: Point, startPos: Point) => {
-          const mouseCardDelta = startPos.subtract(card.originStartPos);
-          const cornerGlobal = currentPos.subtract(mouseCardDelta);
-          const cornerRelative = cornerGlobal.subtract(card.originStartPos).scale(1, 0.25);
-          card.$el.css('left', cornerRelative.x + 'px');
-          card.$el.css('top', cornerRelative.y + 'px');
+          const change = currentPos.subtract(startPos);
+          $card.setTransform(change.scale(1, 0.5), change.x / 400);
+
+          const $target = change.x < 0 ? $aStacks : $bStack;
+
+          $target.css('background', Color.mix('#c00', '#fff', Math.abs(change.x) / 200).toString());
+
         },
         end: (endPos) => {
-          document.body.style.removeProperty('cursor');
-          if (within(endPos, b.$el.bounds)) {
-            this.stackCard(card, b);
-          } else if (within(endPos, a.$el.bounds)) {
-            this.stackCard(card, a);
-          } else {
-            card.$el.removeClass('active');
-            this.stacks.forEach(stack => stack.unlockTop());
-            card.$el.animate({left: '0px', top: '0px'}, 600);
+          $html.removeClass('grabbing');
+          $card.removeClass('active');
+
+          // TODO Don't use /stack for intersection detection
+          const moveToB = within(endPos, $bStack.bounds);
+          const moveToA = within(endPos, $aStacks.bounds);
+
+          if ((moveToA && solution === 'a') || (moveToB && solution === 'b')) {
+            this.trigger('correct');
+            const $target = (solution === 'a') ? $aStacks : $bStack;
+            $target.append($card);
+            // TODO update transform posn
+          } else if (moveToB || moveToA) {
+            this.trigger('incorrect', {hint});
           }
+
+          $card.animate({transform: 'none'});
         }
       });
     });
