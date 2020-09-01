@@ -504,9 +504,9 @@ _self-similar_, like other fractals we’ve seen before. In order to find
 its size, we can draw it on a grid and count the number of cells that
 it intersects with.
 
-{.r.reveal(when="slider-0")} Initially, there are __{.yellow}88__
+{.r.reveal(when="slider-0")} Initially, there are [{.b}88](pill:yellow)
 intersecting cells. If we scale the coastline by a factor of 2, there are
-__{.yellow}197__ intersecting cells – more than twice as many!
+[{.b}197](pill:yellow) intersecting cells – more than twice as many!
 [Continue](btn:next)
 
 {.r.reveal(when="next-0")} The size of the coastline has increased by a factor
