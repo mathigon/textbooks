@@ -30,9 +30,9 @@ TODO
 
 All of these regions in the Voronoi diagram are examples of polygons. A polygon is a closed, two-dimensional shape with straight sides that do not cross each other. A polygon does not have any holes in the shape. Click on a card below and drag it to the “Polygon” or “Non Polygon” side.
 
-    include ../shared/components/ab.pug
+    include ../shared/components/binary-swipe.pug
 
-::: x-ab(a-title="Polygons" b-title="Not Polygons").abshapes
+::: x-binary-swipe(a-title="Polygons" b-title="Not Polygons").abshapes
       
 {div.card.c-red(solution="a")} Card #1 - Regular Polygon
 

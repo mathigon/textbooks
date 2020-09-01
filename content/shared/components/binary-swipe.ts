@@ -17,8 +17,8 @@ function cardOffset(posn: Point, start: Point): [Point, number] {
 }
 
 
-@register('x-ab', {templateId: '#ab'})
-export class AB extends CustomElementView {
+@register('x-binary-swipe', {templateId: '#binary-swipe'})
+export class BinarySwipe extends CustomElementView {
 
   ready() {
     const [$aStacks, $mainStack, $bStack] = this.$$('.stack');
