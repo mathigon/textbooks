@@ -82,15 +82,22 @@ function contains(bounds: DOMRect, posn: Point) {
 
 @register('x-buckets')
 export class Buckets extends CustomElementView {
+  // draggable answer elements
   private $cards!: ElementView[];
+  // current locations (bucket indices) of cards
   private position!: number[];
+  // correct destinations (bucket indices) for answer elements
   private solution!: number[];
 
   ready() {
+    // Initial container element ('pool') for answer elements
     const $input = this.$('.inputs')!;
+    // Destination elements for answers
     const $buckets = this.$$('.bucket');
 
+    // Layout handler for answers pool
     const inputFlow = new FlowGrid($input, 10);
+    // Layout handlers for destination elements
     const bucketFlows = $buckets.map($b => new FlowGrid($b, 10, 150));
 
     this.$cards = this.$$('.input');
@@ -100,44 +107,44 @@ export class Buckets extends CustomElementView {
     let bucketBounds: DOMRect[];
     let targetBucket = -1;
 
-    for (const [i, $i] of this.$cards.entries()) {
-      $i.removeAttr('bucket');
-      slide($i, {
+    for (const [cardIndex, $card] of this.$cards.entries()) {
+      $card.removeAttr('bucket');
+      slide($card, {
         start: () => {
-          $i.addClass('active');
+          $card.addClass('active');
           bucketBounds = $buckets.map($b => $b.bounds);
         },
         move: (p: Point, start: Point) => {
-          $i.setTransform(p.subtract(start));
+          $card.setTransform(p.subtract(start));
 
           const oldTargetBucket = targetBucket;
           targetBucket = bucketBounds.findIndex(b => contains(b, p));
 
           if (targetBucket === oldTargetBucket) return;
           if (oldTargetBucket >= 0) $buckets[oldTargetBucket].removeClass('active');
-          if (targetBucket >= 0 && this.position[i] !== targetBucket) $buckets[targetBucket].addClass('active');
+          if (targetBucket >= 0 && this.position[cardIndex] !== targetBucket) $buckets[targetBucket].addClass('active');
         },
         end: async (p: Point, start: Point) => {
           if (targetBucket >= 0) $buckets[targetBucket].removeClass('active');
 
-          if (targetBucket >= 0 && this.position[i] !== targetBucket) {
+          if (targetBucket >= 0 && this.position[cardIndex] !== targetBucket) {
             const da = $buckets[targetBucket].topLeftPosition;
-            const db = (this.position[i] >= 0 ? $buckets[this.position[i]] : $input).topLeftPosition;
+            const db = (this.position[cardIndex] >= 0 ? $buckets[this.position[cardIndex]] : $input).topLeftPosition;
 
-            $buckets[targetBucket].append($i);
-            $i.setTransform(p.subtract(start).add(db).subtract(da));
+            $buckets[targetBucket].append($card);
+            $card.setTransform(p.subtract(start).add(db).subtract(da));
 
-            if (this.position[i] < 0) inputFlow.reflow();
-            if (this.position[i] >= 0) bucketFlows[this.position[i]].reflow();
+            if (this.position[cardIndex] < 0) inputFlow.reflow();
+            if (this.position[cardIndex] >= 0) bucketFlows[this.position[cardIndex]].reflow();
             bucketFlows[targetBucket].reflow();
 
-            this.position[i] = targetBucket;
+            this.position[cardIndex] = targetBucket;
             targetBucket = -1;
             this.check();
           }
 
-          await $i.animate({transform: 'none'}, 200).promise;
-          $i.removeClass('active');
+          await $card.animate({transform: 'none'}, 200).promise;
+          $card.removeClass('active');
         }
       });
     }
