@@ -32,29 +32,29 @@ All of these regions in the Voronoi diagram are examples of polygons. A polygon 
 
     include ../shared/components/ab.pug
 
-::: x-ab(a-title="Polygons" b-title="Not polygons").abshapes
+::: x-ab(a-title="Polygons" b-title="Not Polygons").abshapes
       
-{div.card(solution="a")} Card #1 - Regular Polygon
+{div.card.c-red(solution="a")} Card #1 - Regular Polygon
 
-{div.card(solution="b")} Card #2 - NOT a Polygon __bold__ `x+y`
+{div.card.c-teal(solution="b")} Card #2 - NOT a Polygon __bold__ `x+y`
 
-{div.card(solution="b")} Card #3 - NOT a Polygon
+{div.card.c-green(solution="b")} Card #3 - NOT a Polygon
 
-{div.card(solution="a")} Card #4 - Irregular Polygon
+{div.card.c-orange(solution="a")} Card #4 - Irregular Polygon
 
-{div.card(solution="a")} Card #5 - Irregular Polygon
+{div.card.c-blue(solution="a")} Card #5 - Irregular Polygon
 
-{div.card(solution="b")} Card #6 - Not a polygon
+{div.card.c-yellow(solution="b")} Card #6 - Not a polygon
 
-{div.card(solution="a")} Card #7 - Regular polygon
+{div.card.c-teal(solution="a")} Card #7 - Regular polygon
 
-{div.card(solution="b")} Card #8 - Not a Polygon
+{div.card.c-orange(solution="b")} Card #8 - Not a Polygon
 
-{div.card(solution="b")} Card #9 - Not a polygon
+{div.card.c-blue(solution="b")} Card #9 - Not a polygon
 
-{div.card(solution="a")} Card #10 - Irregular Polygon
+{div.card.c-red(solution="a")} Card #10 - Irregular Polygon
 
-{div.card(solution="a" hint="This is not correct. Try again!")} Card #11 - Polygon
+{div.card.c-purple(solution="a" hint="This is not correct. Try again!")} Card #11 - Polygon
 
 :::
 
