@@ -1,9 +1,17 @@
 template#enigma
   .enigma
     .lightboard
-      for key in 'qwertyuiopasdfghjklzxcvbnm'.split('')
+      for key in 'qwertzuio'.split('')
+        .key= key
+      for key in 'asdfghjk'.split('')
+        .key= key
+      for key in 'yxcvbnml'.split('')
         .key= key
 
     .keyboard
-      for key in 'qwertyuiopasdfghjklzxcvbnm'.split('')
+      for key in 'qwertzuio'.split('')
+        .key= key
+      for key in 'asdfghjk'.split('')
+        .key= key
+      for key in 'yxcvbnml'.split('')
         .key= key

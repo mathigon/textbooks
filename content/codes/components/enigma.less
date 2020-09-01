@@ -10,21 +10,90 @@
   // ...
 }
 
+.rotor {
+	position:relative;
+	border: black solid 1pt; 
+	padding:2pt; 
+	height:40px; 
+	width:20px; 
+}
+
+.rotors
+{ 
+	border: black solid 1pt; 
+	display:block; 
+	padding: 0;
+	text-align:center;
+	line-height:33px;
+  margin: 5px auto 0px auto;  
+  width:115px;
+  background-color: #333;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.rotorctl
+{
+	width: 100%;
+	background: #333;
+	color:#ddd;
+	font-size: 14pt;
+	cursor: default;
+}
+
+.rotorshow
+{
+	width: 100%;
+	font-family: Tahoma;
+	color: #222222;
+	font-size: 18pt;
+	text-shadow: 0px 1px #AAAAAA;
+	background: linear-gradient(0deg, 
+		rgba(140,140,140,1) 0%, 
+		rgba(216,216,216,1) 31%, 
+		rgba(255,255,255,1) 50%, 
+		rgba(212,212,212,1) 67%, 
+		rgba(140,140,140,1) 100%);
+}
+
+.rotors span
+{ 
+	width: 37px; 
+	display: inline-block;
+	border-right: black solid 1pt; 
+}
+
 .keyboard, .lightboard {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+  user-select: none;
+  text-transform: capitalize;
 
   .key {
     width: 30px;
     height: 30px;
     line-height: 30px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 17px;
     background: grey;
     margin: 10px;
-    color: black;
-    &.glowing { background: yellow; }
+    color: #ddd;
+    &.glowing { background: yellow; color: #333; }
+  }
+}
+
+.keyboard {
+  .key {
+    border: solid #aaa 2px;
+    background: #555;
+  }
+}
+
+.lightboard {
+  .key {
+    border: solid #222 2px;
+    background: #333;
   }
 }
