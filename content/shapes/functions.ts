@@ -6,7 +6,9 @@
 
 import {Point, Polygon, Segment} from '@mathigon/fermat';
 import {animate, CanvasView, loadScript} from '@mathigon/boost';
-import {Geopad, GeoPoint} from '../shared/types';
+import {Geopad, GeoPoint, Step} from '../shared/types';
+import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
+import '../shared/components/binary-swipe';  // import component
 import {VoronoiStep} from './types';
 
 declare const d3: any;
@@ -171,4 +173,14 @@ function getX(p: Point) {
 
 function getY(p: Point) {
   return p.y;
+}
+
+export function sortPolygons($step: Step) {
+  const $sort = $step.$('x-binary-swipe') as BinarySwipe;
+
+  $sort.on('correct', comment => $step.addHint(comment, {class: 'correct'}));
+  $sort.on('incorrect', ({hint}) => $step.addHint(hint, {class: 'incorrect'}));
+  $sort.on('complete', () => {
+    $step.score('cards-sorted');
+  });
 }
