@@ -983,7 +983,11 @@ https://www.youtube.com/watch?v=mcX7iO_XCFA
         span#rotor3dn &#8595;
         span#rotor2dn &#8595;
         span#rotor1dn &#8595;
-        
+
+    p
+
+      button#toggleplugboard Toggle Plugboard        
+
     p
 
     include ./components/enigma

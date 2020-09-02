@@ -383,9 +383,16 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 			x += gap + width;
 		}
 	
-		drawPlugboard(width, gap, x, y, dy, null, null, null, null, machine.getPlugboard().getConnections());				
-	
-		x += gap / 2 + width + 8;
+		if (machine.isUsingPlugboard())
+		{
+			drawPlugboard(width, gap, x, y, dy, null, null, null, null, machine.getPlugboard().getConnections());
+			x += gap / 2 + width + 8;
+		}
+		else
+		{
+			x -= 17;
+		}
+		
 		drawKeyboard(x, y, dy, gap);
 	}
 	
@@ -419,16 +426,29 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 			let rotorin:any = {pts:[], colour:incolour, forward:true};
 			x1 = x + (3 - k) * (width + gap);
 			y1 = getYPos(encodingpath[1 + k], 0);
-			if (k >= 0)
+			if (machine.isUsingPlugboard() || k >= 0)
 			{
-				rotorin.label = {letter: encodingpath[1 + k], pt:makept(x1 + 8, y + y1 * dy - 6), cls:"inletter"};
-				rotorin.arrow = makept(x1 + gap / 2, y + y1 * dy);
+				if ((machine.isUsingPlugboard() && k >= 0) || (k >= 1))
+				{
+					rotorin.label = {letter: encodingpath[1 + k], pt:makept(x1 + 8, y + y1 * dy - 6), cls:"inletter"};
+					rotorin.arrow = makept(x1 + gap / 2, y + y1 * dy);
+				}
+				if (k == -1 || (!machine.isUsingPlugboard() && k == 0))
+					g = y1 % 2 ? 24 : 44;	// staggered keyboard
+				else
+					g = gap;
+				// g = k == -1 || (!machine.isUsingPlugboard() && k == 0) ? y1 % 2 ? 24 : 44 : gap;
+				rotorin.pts.push(makept(x1 + g, y + y1 * dy));
+				rotorin.pts.push(makept(x1, y + y1 * dy));
+				y1 = getYPos(encodingpath[2 + k], 0);
+				rotorin.pts.push(makept(x1 - width, y + y1 * dy));
 			}
-			g = k == -1 ? y1 % 2 ? 24 : 44 : gap;
-			rotorin.pts.push(makept(x1 + g, y + y1 * dy));
-			rotorin.pts.push(makept(x1, y + y1 * dy));
-			y1 = getYPos(encodingpath[2 + k], 0);
-			rotorin.pts.push(makept(x1 - width, y + y1 * dy));
+			else
+			{
+				// handle absent plugboard as a zero length segment - so I don't need to change the animation code
+				rotorin.pts.push(makept(x1, y + y1 * dy));
+				rotorin.pts.push(makept(x1, y + y1 * dy));
+			}
 			rotorsin.push(rotorin);
 		}
 		
@@ -455,17 +475,26 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 			let rotorout:any = {pts:[], colour:outcolour, forward:false};
 			x1 = x + k * (width + gap);
 			y1 = getYPos(encodingpath[5 + k], 0);
-			rotorout.arrow = makept(x1 + gap / 2, y + y1 * dy);
-			rotorout.label = {letter: encodingpath[5 + k], pt:makept(x1 + 8, y + y1 * dy - 6), cls:"outletter"};
-			rotorout.pts.push(makept(x1, y + y1 * dy));
-			rotorout.pts.push(makept(x1 + gap, y + y1 * dy));
-			y1 = getYPos(encodingpath[6 + k], 0);
-			rotorout.pts.push(makept(x1 + width + gap, y + y1 * dy));
+			if (machine.isUsingPlugboard() || k < 3)
+			{
+				rotorout.arrow = makept(x1 + gap / 2, y + y1 * dy);
+				rotorout.label = {letter: encodingpath[5 + k], pt:makept(x1 + 8, y + y1 * dy - 6), cls:"outletter"};
+				rotorout.pts.push(makept(x1, y + y1 * dy));
+				rotorout.pts.push(makept(x1 + gap, y + y1 * dy));
+				y1 = getYPos(encodingpath[6 + k], 0);
+				rotorout.pts.push(makept(x1 + width + gap, y + y1 * dy));
+			}
+			else
+			{
+				// handle absent plugboard as a zero length segment
+				rotorout.pts.push(makept(x1, y + y1 * dy));
+				rotorout.pts.push(makept(x1, y + y1 * dy));
+			}
 			rotorsout.push(rotorout);
 		}
 		
 		// path to lamp
-		x1 = x + 4 * (width + gap);
+		x1 = x + (machine.isUsingPlugboard() ? 4 : 3) * (width + gap);
 		y1 = getYPos(encodingpath[9], 0);
 		tolamp.pts.push(makept(x1, y + y1 * dy));
 		g = y1 % 2 ? 33 : 53;
@@ -504,7 +533,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 			showSegment(stack.pop());
 		}
 	
-		x += 4 * (width + gap) + gap / 2 + 8;
+		x += (machine.isUsingPlugboard() ? 4 : 3) * (width + gap) + gap / 2 + 8;
 		highlightKeys(layer, x, y, dy, gap, encodingpath[0], encodingpath[9]);
 	}
 
@@ -515,7 +544,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 		const inkeyelement = makekey(0, 0, key, incolour, null);
 		
 		let anim = '';
-		
+		 
 		layer.innerHTML += '';
 		anim += "<g id='inkeyanim'><g id='animkey'>" + inkeyelement + '</g>';
 		var i = 0;
@@ -528,7 +557,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 			const pathlength:number = lastpath.getTotalLength();
 			lastpath.setAttribute("stroke-dasharray", pathlength.toString());
 			lastpath.setAttribute("stroke-dashoffset", pathlength.toString());
-			var duration = Math.round(1000 * pathlength / animationspeed) + "ms";
+			var duration = (pathlength ? Math.round(1000 * pathlength / animationspeed) : 1) + "ms";
 			var p = 'path="M' + s.pts.map((pt: { x: string; y: string; }) => pt.x + "," + pt.y).join("L") + '"';
 			var begin = i ? "a" + (i - 1) + ".end" : "indefinite";
 			anim += '<animateMotion id="a' + i + '" begin="' + begin + '" ' + p + 

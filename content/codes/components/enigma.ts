@@ -222,6 +222,7 @@ export class Machine
   private rotors:Rotor[] = [];
   private reflector:Reflector;
   private plugboard:Plugboard;
+  private skipPlugboard:boolean = false;
 
   constructor(rotorChoice:number[], rotorPositions:string[])
   {
@@ -239,6 +240,16 @@ export class Machine
       console.log("Initial state");
       console.log(this.toString());
     }
+  }
+
+  setUsePlugboard(usePlugboard:boolean)
+  {
+    this.skipPlugboard = !usePlugboard;
+  }
+
+  isUsingPlugboard()
+  {
+    return !this.skipPlugboard;
   }
 
   getReflector()
@@ -283,12 +294,18 @@ export class Machine
     if (DEBUG)
       console.log('letter: ' + letter);
 
-		var encoding:string[] = [letter.toUpperCase()];
-		encoding.push(this.plugboard.encode(getLast(encoding)));
+    var encoding:string[] = [letter.toUpperCase()];
+    if (this.skipPlugboard)
+      encoding.push(getLast(encoding)); // copy the entry key so the rotors have something to work with
+    else
+		  encoding.push(this.plugboard.encode(getLast(encoding)));
 		encoding = this.rotors.reduce((acc, r) => [...acc, r.encodeForward(getLast(acc))], encoding);
 		encoding.push(this.reflector.reflect(getLast(encoding)));
 		encoding = this.rotors.reduceRight((acc, r) => [...acc, r.encodeReverse(getLast(acc))], encoding);
-		encoding.push(this.plugboard.encode(getLast(encoding)));
+    if (this.skipPlugboard)
+      encoding.push(getLast(encoding));
+    else
+		  encoding.push(this.plugboard.encode(getLast(encoding)));
 
     if (DEBUG)
       console.log("Encoding path was: " + encoding.join("->"));
@@ -372,6 +389,19 @@ export class Enigma extends CustomElementView {
     this.svgview.drawPath(null);
 
     const plugboardview = new PlugboardView("enigmaview", this.machine, this.svgview);
+    document.getElementById('clearciphertext')!.addEventListener("click", () => {
+      document.getElementById('ciphertext')!.innerHTML='&nbsp;';
+      document.getElementById('cipherpath')!.innerHTML='&nbsp;';
+    });
+
+    document.getElementById('toggleplugboard')!.addEventListener("click", () => this.toggleplugboard());
+  }
+
+  toggleplugboard() {
+    const usePlugboard = document.getElementById('plugboard')!.hidden;
+    document.getElementById('plugboard')!.hidden = !usePlugboard;
+    this.machine.setUsePlugboard(usePlugboard);
+    this.svgview.drawPath(null);
   }
 
   showLight(char: string) {
