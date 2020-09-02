@@ -32,7 +32,10 @@ export class BinarySwipe extends CustomElementView {
       $wrap.append($c);
       $wrap._data.solution = $c.attr('solution');
       $wrap._data.hint = $c.attr('hint') || 'incorrect';
+      $wrap._data.comment = $c.attr('comment') || 'correct';
       $c.removeAttr('solution');
+      $c.removeAttr('hint');
+      $c.removeAttr('comment');
       return $wrap;
     });
 
@@ -79,7 +82,7 @@ export class BinarySwipe extends CustomElementView {
           return;
         }
 
-        this.trigger('correct', $activeCard.attr('comment'));
+        this.trigger('correct', $activeCard._data.comment);
         const $target = (solution === 'a') ? $aStacks : $bStack;
 
         let [posn, angle] = cardOffset(endPos, startPos);
