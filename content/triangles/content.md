@@ -133,7 +133,7 @@ calculate their colour and texture.
     x-img(src="images/dolphin.jpg" width=220 height=135)
 :::
 
-    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
+    figure: x-video(src="https://storage.googleapis.com/mathigon-videos/tiger.mp4" poster="images/tiger.jpg" width=480 height=270 credit="© UCTV, The STEAM Channel")
     //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
 
 ---
@@ -326,11 +326,11 @@ single point. And again, this point has a special property.
 
 {.reveal(when="s0 s1 s2")} Any point on a perpendicular bisector has the same
 distance from the two endpoints of the lines it bisects. For example, any point
-on the [blue bisector](target:b-blue) has the same distance from points _A_ and
-_C_ and any point on the [red bisector](target:b-red) has the same distance from
+on the [{.blue} blue bisector](target:b-blue) has the same distance from points _A_ and
+_C_ and any point on the [{.red} red bisector](target:b-red) has the same distance from
 points [[A and B|A and C|B and C]].
 
-{.reveal(when="blank-1")} The [intersection point](target:center) lies on all
+{.reveal(when="blank-1")} The [{.yellow} intersection point](target:center) lies on all
 three perpendicular bisectors, so it must have the same distance from all three
 [[vertices|sides]] of the triangle.
 
@@ -389,11 +389,11 @@ _{button.next-step} Continue_
 
 {.reveal(when="next-0")} Points that lie on an angle bisector have the same
 distance from the two lines that form the angle. For example any point on the
-[blue bisector](target:b-blue) has the same distance from side _a_ and side _c_,
-and any point on the [red bisector](target:b-red) has the same distance from
+[{.blue} blue bisector](target:b-blue) has the same distance from side _a_ and side _c_,
+and any point on the [{.red} red bisector](target:b-red) has the same distance from
 sides [[a and b|a and c|b and c]].
 
-{.reveal(when="blank-0")} The [intersection point](target:center) lies on all
+{.reveal(when="blank-0")} The [{.yellow} intersection point](target:center) lies on all
 three bisectors. Therefore it must have the same distance from all three
 [[sides|vertices]] of the triangle.
 
@@ -427,8 +427,8 @@ parts of the triangle. This means that the rectangle is
 {.reveal(when="blank-0")} We can easily work out the area of the rectangle, so
 the area of the triangle must be half that:
 
-{.text-center.reveal(when="blank-0")} `A = 1/2 ×` [{.pill.red} base](target:base)
-`×` [{.pill.blue} height](target:height)
+{.text-center.reveal(when="blank-0")} `A = 1/2 ×` [{.red} base](target:base)
+`×` [{.blue} height](target:height)
 ::: column(width=300)
 
     x-geopad.sticky(width=300): svg
@@ -483,7 +483,7 @@ __base__, and then find the corresponding __height__, which is the line that is
 Like the [medians](gloss:triangle-median), [perpendicular
 bisectors](gloss:perpendicular-bisector) and [angle
 bisectors](gloss:angle-bisector), the three altitudes of a triangle
-intersect in a single point. This is called the [__orthocenter__](target:center)
+intersect in a [single point](target:center). This is called the __orthocenter__
 of the triangle.
 
 In [acute triangles](gloss:acute-triangle), the orthocenter
@@ -891,17 +891,16 @@ can see three different examples that each use a different strategy:
 
 ::: column.grow
 
-Have a look at the figure on the right. The square has side length _a_ + _b_,
-and contains [four right-angled triangles](target:triangle), as well as a
-[smaller square](target:square) of area [[<msup><mi>c</mi><mn>2</mn></msup>|_a_ – _b_|_a_ + _b_]].
+Have a look at the figure on the right. The square has side length `a + b`, and contains
+[{.blue} four right-angled triangles](target:triangle), as well as a
+[{.red} smaller square](target:square) of area [[`c^2`|`a - b`|`a + b`]].
 
 {.reveal(when="blank-0")} Now let’s rearrange the triangles in the square. The
 result still contains the four right-angles triangles, as well as two squares
-of size [[<msup><mi>a</mi><mn>2</mn></msup> and <msup><mi>b</mi><mn>2</mn></msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
+of size [[`a^2` and `b^2`|`c^2`|`(a + b)^2`]].
 
-{.reveal(when="blank-1")} Comparing the area of the red area
-_{span.hover-target}before_ and _{span.hover-target}after_ the rearrangement, we
-see that
+{.reveal(when="blank-1")} Comparing the area of the red area [before](action:set(0)) and
+[after](action:set(100)) the rearrangement, we see that
 
 {.text-center.reveal(when="blank-1")} `a^2 + b^2 = c^2`.
 
@@ -952,12 +951,11 @@ see that
 Here we have the same figure as before, but this time we’ll use _algebra_ rather
 than _rearrangement_ to prove Pythagoras’ theorem.
 
-The large square has side length `a + b` and area
-[[(_a_ + _b_)<sup>2</sup>|_a_<sup>2</sup> + _b_<sup>2</sup>|_c_<sup>2</sup>]].
+The large square has side length `a + b` and area [[`(a + b)^2`|`a^2 + b^2`|`c^2`]].
 
-{.reveal(when="blank-2")} It consists of [four triangles](target:triangle), each
-with an area of [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]],
-and [one square](target:square) of area [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
+{.reveal(when="blank-2")} It consists of [{.blue}four triangles](target:triangle), each with an
+area of [[`1/2 a b`|`(a + b)^2`|`1/2 (a + b)`]], and [{.red}one square](target:square) of area
+[[`c^2`|`(a + b)^2`|`a × b`]].
 
 {.reveal(when="blank-3 blank-4")} If we combine all of that information, we have
 
@@ -1011,7 +1009,7 @@ _{span.qed}_
 {.r} Here you can see another right-angled triangle. If we draw one of the
 altitudes, it splits the triangle into two smaller triangle.
 It also divides the hypotenuse _c_ into [two smaller parts](target:hypotenuse)
-which we’ll call [{.i.pill.blue}x](target:x) and [{.i.pill.green}y](target:y).
+which we’ll call [{.i.blue}x](target:x) and [{.i.green}y](target:y).
 _{span.next-step} Continue_
 
 {.r.reveal(when="next-0")} Let’s separate out the two smaller triangles, so that
@@ -1073,10 +1071,10 @@ similar polygons:
           <p class="text-center"><mrow class="step-target pill green" data-to="yb"><mfrac><mi>y</mi><mi>b</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill yellow" data-to="bc"><mfrac><mi>b</mi><mi>c</mi></mfra></mrow></p>
           <p class="text-center"><mi class="step-target pill green" data-to="y">y</mi><mo>=</mo><mfrac><msup><mi>b</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
 
-{.r.reveal(when="blank-5")} _{span.next-step} Continue_
+{.r.reveal(when="blank-5")} [Continue](btn:next)
 
-{.reveal(when="next-2")} But remember that _c_ = [{.i.pill.blue}x](target:x) +
-[{.i.pill.green}y](target:y). Therefore
+{.reveal(when="next-2")} But remember that _c_ = [{.i.blue}x](target:x) +
+[{.i.green}y](target:y). Therefore
 
 {.text-center.reveal(when="next-2")} `c = a^2/c + b^2/c`
 
@@ -1121,11 +1119,11 @@ distances.
 {.r} On the right you can see two points in a coordinate system. We could
 measure their distance using a ruler, but that is not particularly accurate.
 Instead, let’s try using Pythagoras.
-_{span.next-step} Continue_
+[Continue](btn:next)
 
-{.reveal(when="next-0")} We can easily count the [horizontal distance](target:dx)
-along the _x_-axis, and the [vertical distance](target:dy) along the _y_-axis.
-If we draw those two lines, we get a [right-angled triangle](target:triangle).
+{.reveal(when="next-0")} We can easily count the [{.blue}horizontal distance](target:dx) along the
+_x_-axis, and the [{.red}vertical distance](target:dy) along the _y_-axis. If we draw those two
+lines, we get a [{.yellow}right-angled triangle](target:triangle).
 
 {.reveal(when="next-0")} Using Pythagoras,
 
@@ -1315,9 +1313,9 @@ This is where __Trigonometry__ comes in!
 ::: column.grow
 Imagine we have a right-angled triangle, and we also know one of the two other
 angles, __{.m-red}α__. We already know that the longest side is called the
-[__{.m-yellow}hypotenuse__](target:hyp). The other two are usually called the
-[__{.m-green}adjacent__](target:adj) (which is next to angle __{.m-red}α__) and
-the [__{.m-blue}opposite__](target:opp) (which is opposite angle __{.m-red}α__).
+__[{.yellow}hypotenuse](target:hyp)__. The other two are usually called the
+__[{.green}adjacent](target:adj)__ (which is next to angle __{.m-red}α__) and
+the __[{.blue}opposite](target:opp)__ (which is opposite angle __{.m-red}α__).
 ::: column(width=240)
 
     x-geopad(width=240 height=160): svg
@@ -1476,9 +1474,9 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 __Cosine Rule__  
 In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
-{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`  
-`b^2 = c^2 + a^2 - 2ca cos(B)`  
-`a^2 = b^2 + c^2 - 2bc cos(A)`
+{.text-center} `c^2 = a^2 + b^2 - 2a b cos(C)`  
+`b^2 = c^2 + a^2 - 2c a cos(B)`  
+`a^2 = b^2 + c^2 - 2b c cos(A)`
 :::
 
     // {.todo} Even though there are three formulas, they are all very similar. First, notice
@@ -1529,15 +1527,15 @@ have the tools to do it!
         path.yellow(x="segment(x,y)" target="right" label="height")
 
 The surveyors in India measured the angle of the top of a mountain from [two
-different positions](target:points), [{.pill.yellow} 5km apart](target:base).
-The results were [{.pill.red} 23°](target:ang) and [{.pill.blue} 29°](target:ang1).
+different positions](target:points), [{.yellow} 5km apart](target:base).
+The results were [{.red} 23°](target:ang) and [{.blue} 29°](target:ang1).
 
-Because [{.pill.green} angle α](target:a) is a [supplementary angle](gloss:supplementary-angles),
+Because [{.green} angle α](target:a) is a [supplementary angle](gloss:supplementary-angles),
 we know that it must be [[151]]°. _{span.reveal(when="blank-0")}Now we can use the sum of the
-internal angles of a triangle to work out that [{.pill} angle β](target:b) is [[6]]°._
+internal angles of a triangle to work out that [angle β](target:b) is [[6]]°._
 
 {.reveal(when="blank-1")} Now we know [all three angles](target:angles) of the triangle, as well as
-[{.pill.yellow} one of the sides](target:base). This is enough to use the [[sine rule|cosine rule]]
+[{.yellow} one of the sides](target:base). This is enough to use the [[sine rule|cosine rule]]
 to find the distance [_d_](target:d):
 
     table.eqn-system
@@ -1575,7 +1573,7 @@ to find the distance [_d_](target:d):
           mn.pill.yellow.step-target(data-to="d") 23.2 km
 
 {.reveal(when="blank-3 blank-4" delay=2000)} There is one final step: let’s have
-a look at the [big, right-angled triangle](target:right). We already know the
+a look at the [{.yellow}big, right-angled triangle](target:right). We already know the
 length of the hypotenuse, but what we really need is the [[opposite|adjacent]]
 side. _{span.reveal(when="blank-5")}We can find it using the definition of
 *sin*:_

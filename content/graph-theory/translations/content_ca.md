@@ -310,7 +310,7 @@ Cadascun dels ${n}{n|5|2,8,1} la gent de la festa dóna la mà ${n-1} d’altres
 ---
 > id: handshakes-2a
 
-Malauradament aquesta resposta no és del tot correcta. Observeu com <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">les dues primeres entrades a la fila superior</x-target> en realitat són els mateixos, simplement han voltat. 
+Malauradament aquesta resposta no és del tot correcta. Observeu com [les dues primeres entrades a la fila superior](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) en realitat són els mateixos, simplement han voltat. 
 
 De fet, hem comptat cada cop de mà [[dues vegades | un cop | tres vegades]] , _{span.reveal(when="blank-0")} una vegada per cadascuna de les dues persones implicades. Això significa que el nombre correcte de cops de mà ${n}{n|5|2,25,1} convidats ho és `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
 

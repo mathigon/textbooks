@@ -440,15 +440,15 @@ Per definir una seqüència aritmètica o geomètrica, hem de conèixer no nomé
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-Si _{span.var-action}`r > 1`_ , els termes augmentaran [[ràpidament | disminueix ràpidament | apropeu-vos a zero]] _{span.reveal(when="blank-2")} , fins a l’infinit. Els matemàtics diuen que la seqüència [__divergeix__](gloss:sequence-divergence) ._ 
+Si [`r > 1`](action:set(2,2)), els termes augmentaran [[ràpidament | disminueix ràpidament | apropeu-vos a zero]] _{span.reveal(when="blank-2")} , fins a l’infinit. Els matemàtics diuen que la seqüència [__divergeix__](gloss:sequence-divergence) ._ 
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-Si _{span.var-action} _r_ està entre –1 i 1_ , els termes sempre [[s’acostaran a 0 | disminuir fins a l’infinit negatiu | fer-se més petit]] _{span.reveal(when="blank-3")} . Diem que la seqüència [__convergeix__](gloss:sequence-convergence) ._ 
+Si [_r_ està entre –1 i 1](action:set(10,0.6)), els termes sempre [[s’acostaran a 0 | disminuir fins a l’infinit negatiu | fer-se més petit]] _{span.reveal(when="blank-3")} . Diem que la seqüència [__convergeix__](gloss:sequence-convergence) ._ 
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-Si _{span.var-action}`r < -1`_ , els termes alternaran entre positius i negatius, mentre que el seu [[valor absolut | invers | la diferència]] és més gran. 
+Si [`r < -1`](action:set(3,-1.4)), els termes alternaran entre positius i negatius, mentre que el seu [[valor absolut | invers | la diferència]] és més gran. 
 
 :::
 
@@ -1172,17 +1172,17 @@ Desplaceu el control lliscant cap a la dreta per visualitzar com creix una plant
       x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} Si l’angle és _{span.fib-action(data-value=0)} 0°_ , totes les llavors creixeran en una sola fila llarga del centre. 
+{div(slot="legend")} Si l’angle és [0°](action:set(0)) , totes les llavors creixeran en una sola fila llarga del centre. 
 
-{div.inline(slot="legend")} Si l’angle és _{span.fib-action(data-value=0.5)}`1/2`_ de rotació completa (180°), les llavors s’alternaran entre dos “braços” separats que s’allunyen del centre. 
+{div.inline(slot="legend")} Si l’angle és [`1/2`](action:set(0.5)) de rotació completa (180°), les llavors s’alternaran entre dos “braços” separats que s’allunyen del centre. 
 
-{div.inline(slot="legend")} Per exemple, si la rotació és una altra proporció fraccionada de 360° _{span.fib-action(data-value=2/5)}`2/5`_ o _{span.fib-action(data-value=1/3)}`1/3`_ o _{span.fib-action(data-value=3/8)}`3/8`_ , llavors el nombre de "braços" serà el mateix que el [[denominador | numerador | factor principal]] d'aquesta fracció. 
+{div.inline(slot="legend")} Per exemple, si la rotació és una altra proporció fraccionada de 360° [`2/5`](action:set(2/5)) o [`1/3`](action:set(1/3)) o [`3/8`](action:set(3/8)) , llavors el nombre de "braços" serà el mateix que el [[denominador | numerador | factor principal]] d'aquesta fracció. 
 
 {div(slot="legend")} Malauradament, els “braços” són dolents, perquè signifiquen que les llavors no es distribueixen de manera uniforme: es malgasta tot l’espai entre els braços. Però si [els números racionals](gloss:rational-numbers) no funcionen, provem [els números irracionals](gloss:irrational-numbers) . 
 
-{div.inline(slot="legend")} Un exemple de nombre irracional és [`pi`](gloss:pi) . Però si l’angle entre llavors és _{span.fib-action(data-value=0.31831)}`1/pi`_ de 360°, encara sembla tenir armes: 22 d’ells. Això és així perquè la fracció `22/7 = 3.1429…` és una aproximació força bona per a `pi` . El que realment necessitem és un nombre irracional que _no es_ pugui aproximar estretament amb una fracció senzilla. 
+{div.inline(slot="legend")} Un exemple de nombre irracional és [`pi`](gloss:pi) . Però si l’angle entre llavors és [`1/pi`](action:set(0.31831)) de 360°, encara sembla tenir armes: 22 d’ells. Això és així perquè la fracció `22/7 = 3.1429…` és una aproximació força bona per a `pi` . El que realment necessitem és un nombre irracional que _no es_ pugui aproximar estretament amb una fracció senzilla. 
 
-{div.inline(slot="legend")} Resulta que la [proporció daurada](gloss:golden-ratio) és només això: la "més irracional" de tots els nombres irracionals. Si l’angle entre llavors és _{span.fib-action(data-value=0.6180339)}`1/phi`_ de 360°, semblen estar gairebé perfectament espaiades. I aquest és precisament l’angle que utilitzen les plantes de tot el món. 
+{div.inline(slot="legend")} Resulta que la [proporció daurada](gloss:golden-ratio) és només això: la "més irracional" de tots els nombres irracionals. Si l’angle entre llavors és [`1/phi`](action:set(0.6180339)) de 360°, semblen estar gairebé perfectament espaiades. I aquest és precisament l’angle que utilitzen les plantes de tot el món. 
 
 :::
 
@@ -1425,7 +1425,7 @@ Sembla que la longitud de la seqüència varia molt, però sempre acabarà en un
     x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
-{.reveal(when="var-0")} Observeu com alguns punts de partida acaben molt ràpidament, mentre que d’altres (com _{span.var-action} 31_ o _{span.var-action} 47_ ) fer més d’un centenar de passos abans d’arribar al 4, 2, 1 cicle. 
+{.reveal(when="var-0")} Observeu com alguns punts de partida acaben molt ràpidament, mentre que d’altres (com [31](action:set(31)) o [47](action:set(47)) ) fer més d’un centenar de passos abans d’arribar al 4, 2, 1 cicle. 
 
 ---
 > id: hailstone-3

@@ -52,6 +52,7 @@ export function angles($step: Step) {
     overlap[0] = total(s.a1) > 361;
     overlap[1] = total(s.a2) >= 541;
     if (overlap[0] || overlap[1]) $step.addHint('no-overlap');
+    for (const $b of $buttons) $b.setAttr('text', '???');
   });
 
   $buttons[0].one('click', () => $step.addHint('angles-repeat'));

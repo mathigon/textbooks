@@ -176,7 +176,7 @@ In other words, we can _never_ have a perfect weather forecast!
 
 ::: figure
 
-    x-video(src="images/weather.mp4" poster="images/weather.jpg" width=640 height=360 controls credit="© NASA")
+    x-video(src="https://storage.googleapis.com/mathigon-videos/weather.mp4" poster="images/weather.jpg" width=640 height=360 controls credit="© NASA")
     // source: https://svs.gsfc.nasa.gov/12163
 
 {.caption} NASA uses satellites, planes and thousands of ground-based weather
@@ -340,7 +340,7 @@ even in movies:
 
 ::: figure
 
-    x-video(src="images/jurassic-park.mp4" poster="images/jurassic-park.jpg" width=480 height=270 audio controls)
+    x-video(src="https://storage.googleapis.com/mathigon-videos/jurassic-park.mp4" poster="images/jurassic-park.jpg" width=480 height=270 audio controls)
 
 {.caption} Extract from the movie _Jurassic Park_ (© Universal Pictures, 1993) 
 

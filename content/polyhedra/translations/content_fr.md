@@ -234,7 +234,7 @@ Tout d'abord, nous pouvons diviser le polygone en ${toWord(n)} congruente, [[iso
 {.reveal(when="blank-3")} Pour trouver l'apothème, on peut utiliser la définition des [[tangentes | sinus | cosinus]] : 
 
 {.text-center.reveal(when="blank-4")}`tan pill(α, "blue", "alpha") = 
-target("opposite", "apothem") / target("adjacent", "half-base") =
+pill("opposite", "yellow", "apothem") / pill("adjacent", "green", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")}`⇒ pill("apothem", "yellow",

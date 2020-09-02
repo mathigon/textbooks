@@ -310,7 +310,7 @@ Her biri ${n}{n|5|2,8,1} partide insanlar ile el sallar ${n-1} diğerleri. Bu ya
 ---
 > id: handshakes-2a
 
-Ne yazık ki bu cevap pek doğru değil. Nasıl olduğunu fark et <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">üst satırdaki ilk iki giriş</x-target> aslında aynı, sadece çevrilmiş. 
+Ne yazık ki bu cevap pek doğru değil. Nasıl olduğunu fark et [üst satırdaki ilk iki giriş](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) aslında aynı, sadece çevrilmiş. 
 
 Aslında, her el sıkışmasını [[iki kez]] saydık [[| bir Zamanlar | üç kez]] , _{span.reveal(when="blank-0")} ilgili iki kişinin her biri için bir kez. Bu, doğru el sıkışma sayısının ${n}{n|5|2,25,1} misafir `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
 

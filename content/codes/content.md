@@ -844,10 +844,9 @@ Look at this barcode.
 
     x-barcode(value="012345678901")
 
-The guards are on the [{.step-target.pill.b.red}outside](target:.bar-start) and in the
-[{.step-target.pill.b.red}center](target:.bar-middle).
-The first six digits are on the [{.step-target.pill.b.blue}left](target:.bar-left).
-The last six digits are on the [{.step-target.pill.b.green}right](target:.bar-right).
+The guards are on the [{.red}outside](target:.bar-start) and in the
+[{.red}center](target:.bar-middle). The first six digits are on the [{.blue}left](target:.bar-left).
+The last six digits are on the [{.green}right](target:.bar-right).
 
 __The Guards__
 

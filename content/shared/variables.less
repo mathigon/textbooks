@@ -99,7 +99,7 @@
   background: transparent;
   line-height: 28px;
   padding: 0 6px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   background: @colour;
   .caption & { height: 24px; line-height: 24px; }
@@ -115,14 +115,6 @@
     left: 5px;
     right: 5px;
   }
-}
-
-.inline-hover(@color) {
-  .inline-block(transparent);
-  .underline(@color);
-  transition: background .2s, color .2s, box-shadow .2s;
-  cursor: pointer;
-  &:hover { color: fade(black, 80%); box-shadow: @shadow-1; background: @color; }
 }
 
 .circled(@size) {

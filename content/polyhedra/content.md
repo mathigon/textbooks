@@ -138,9 +138,9 @@ We say that a polygon is [__concave__](gloss:concave) if it has a section that
 “points inwards”. You can imagine that this part has [“caved in”](target:cave).
 Polygons that are _not_ concave are called [__convex__](gloss:convex).
 
-There are two ways you can easily identify concave polygons: they have at least
-one [internal angle that is bigger than 180°](target:angle). They also have at
-least one [diagonal that lies _outside_ the polygon](target:diagonal).
+There are two ways you can easily identify concave polygons: they have [at least
+one internal angle](target:angle) that is bigger than 180°. They also have [at
+least one diagonal](target:diagonal) that lies _outside_ the polygon.
 
 In convex polygons, on the other hand, all internal angles are less than
 [[180]]°, and all diagonals lie [[inside|outside]] the polygon.
@@ -246,7 +246,7 @@ ${round(180-360/x)}°._
 
 ::: column.grow
 Here you can see a [regular polygon](gloss:regular-polygon) with ${n}{n|5|4,12,1}
-sides. Every side has length [{.pill.green} 1m](target:base). Let’s
+sides. Every side has length [{.green} 1m](target:base). Let’s
 try to calculate its area!
 
 First, we can split the polygon into ${toWord(n)} congruent,
@@ -255,15 +255,15 @@ First, we can split the polygon into ${toWord(n)} congruent,
 {.reveal(when="blank-0")} We already know the [[base|height|area]] of these
 triangles, but we also need the [[height|legs|medians]] to be able to calculate
 its area. _{span.reveal(when="blank-2")} In regular polygons, this height
-is sometimes called the [{.pill.yellow}apothem](target:apothem)._
+is sometimes called the [{.yellow}apothem](target:apothem)._
 
-{.reveal(when="blank-1 blank-2" delay=1000)} Notice that there is a [right angled
+{.reveal(when="blank-1 blank-2" delay=1000)} Notice that there is a [{.blue} right angled
 triangle](target:right-triangle) formed by the apothem and half the base of the
 isosceles triangle. This means that we can use trigonometry!
 
-{.reveal(when="blank-1 blank-2" delay=2000)} The [{.pill.blue}base angles](target:base-angle)
+{.reveal(when="blank-1 blank-2" delay=2000)} The [{.blue} base angles](target:base-angle)
 of the isosceles triangle (let’s call them α) are [[half the|the same|twice the]]
-size of the [internal angles](target:int-angle) of the polygon:
+size of the [{.red} internal angles](target:int-angle) of the polygon:
 
 {.text-center.reveal(when="blank-3")} `pill(α, "blue", "alpha") = 1/2 (180° -
 (360°)/var("n")) = var("round(90-180/n,2)")`
@@ -272,7 +272,7 @@ size of the [internal angles](target:int-angle) of the polygon:
 the [[tangent|sine|cosine]] function:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
-target("opposite", "apothem") / target("adjacent", "half-base") =
+pill("opposite", "yellow", "apothem") / pill("adjacent", "green", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",
@@ -280,7 +280,7 @@ blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 var("round(tan(pi/2-pi/n)/2,2)")"m"`
 
 {.reveal(when="blank-5 blank-6" delay=2000)} Now, the area of the
-[isosceles triangle](target:isosceles-triangle) is
+[{.blue}isosceles triangle](target:isosceles-triangle) is
 
 {.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "base" × "height"
 = 1/2 pill("1m", "green", "base") × pill(var("round(tan(pi/2-pi/n)/2,2)"),
@@ -325,8 +325,8 @@ All of its sides have the same length, and all of its angles are equal.
       path.red(x="segment(c,d)" target="side" mark="bar")
       path.red(x="segment(d,a)" target="side" mark="bar")
 
-{.caption} A __square__ is a quadrilateral with [four equal sides](target:side)
-and [four equal angles](target:angle).
+{.caption} A __square__ is a quadrilateral with [{.red} four equal sides](target:side)
+and [{.blue} four equal angles](target:angle).
 :::
 
 ---
@@ -353,7 +353,7 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       path.red(x="segment(c,d)")
       path.red(x="segment(d,a)")
 
-{.caption} A __Rectangle__ is a quadrilateral with [four equal angles](target:angle).
+{.caption} A __Rectangle__ is a quadrilateral with [{.blue} four equal angles](target:angle).
 ::: column.quadrilateral
 
     x-geopad(width=210 height=120): svg
@@ -367,7 +367,7 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       path.red(x="segment(g,h)" target="side" mark="bar")
       path.red(x="segment(h,e)" target="side" mark="bar")
 
-{.caption} A __Rhombus__ is a quadrilateral with [four equal sides](target:side).
+{.caption} A __Rhombus__ is a quadrilateral with [{.red} four equal sides](target:side).
 :::
 
 ---
@@ -563,8 +563,8 @@ are always congruent.
 Start by drawing one of the diagonals of the parallelogram.
 
 {.reveal(when="diagonal")} The diagonal creates four new angles with the sides
-of the of the parallelogram. The two [red angles](target:red-angle) and the two
-[blue angles](target:blue-angle) are [alternate angles](gloss:alternate-angles),
+of the of the parallelogram. The two [{.red} red angles](target:red-angle) and the two
+[{.blue} blue angles](target:blue-angle) are [alternate angles](gloss:alternate-angles),
 so they must each be [[congruent|adjacent|supplementary]].
 
 {.reveal(when="blank-0")} Now if we look at the [two triangles](target:triangles)
@@ -826,11 +826,11 @@ Like before, try to draw a rectangle that has the same area as this trapezium.
 _{span.reveal(when="draw-2")} Can you see how the [missing and added
 triangles](target:triangles-3) on the left and the right cancel out?_
 
-{.reveal(when="draw-2" delay=2000)} The [{.pill.green} height](target:t-height)
+{.reveal(when="draw-2" delay=2000)} The [{.green} height](target:t-height)
 of this rectangle is the [[distance between|average of|length of]] the [parallel
 sides](target:bases) of the trapezium.
 
-{.reveal.r(when="blank-2")} The [{.pill.yellow} width](target:t-width)
+{.reveal.r(when="blank-2")} The [{.yellow} width](target:t-width)
 of the rectangle is the distance between the [[midpoints|endpoints]] of the two
 non-parallel sides of the trapezium. _{span.reveal(when="blank-3")} This is
 called the __midsegment__ of the trapezium._
@@ -885,12 +885,12 @@ triangles](target:inside) that make up the kite are the same as the
 [four gaps](target:outside) outside it?_
 
 {.reveal(when="blank-5")} This means that the area of a kite with diagonals
-[{.i.pill.green}d1](target:d31) and
-[{.i.pill.yellow}d2](target:d32) is
+[{.i.green}d1](target:d31) and
+[{.i.yellow}d2](target:d32) is
 
 {.text-center.reveal(when="blank-5")} _Area_ = `1/2`
-[{.i.pill.green}d1](target:d31) ×
-[{.i.pill.yellow}d2](target:d32).
+[{.i.green}d1](target:d31) ×
+[{.i.yellow}d2](target:d32).
 :::
 
 ::: tab
@@ -926,10 +926,8 @@ we can use either the equation for the area of a parallelogram, or that for the
 area of a kite:
 
 {.text-center.reveal(when="blank-6 blank-7")} _Area_ =
-[{.i.pill.blue}base](target:base) ×
-[{.i.pill.red}height](target:height) = `1/2`
-[{.i.pill.green}d1](target:d41) ×
-[{.i.pill.yellow}d2](target:d42).
+[{.i.blue}base](target:base) × [{.i.red}height](target:height) = `1/2`
+[{.i.green}d1](target:d41) × [{.i.yellow}d2](target:d42).
 
 {.reveal(when="blank-6 blank-7" delay=1000)} _In different contexts, you might
 be given different parts of a Rhombus (sides, height, diagonals), and you should

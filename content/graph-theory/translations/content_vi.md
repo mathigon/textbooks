@@ -276,9 +276,8 @@ Vậy là có  ${n} × ${n-1} = ${n×(n-1)} cái bắt tay tất cả. Cho số 
 Tuy nhiên thật ra kết quả này là không đúng: bởi chúng ta đã đếm mỗi cái bắt tay
 [[hai lần|một lần|ba lần]], _{span.reveal(when="blank-0")}vì hai người tham gia chỉ bắt tay một lần với nhau._
 
-{.reveal(when="blank-0")} Ví dụ, <x-target to=".handshakes tr:first-child
-td:first-child, .handshakes tr:first-child td:nth-child(2)"> hai cái bắt tay đầu tiên
-ở hàng trên cùng </x-target> thực ra là một. Số cái bắt tay đúng cho ${n}{n|5|2,25,1} người tham dự là <mfrac><mrow>${n} ×
+{.reveal(when="blank-0")} Ví dụ, [hai cái bắt tay đầu tiên
+ở hàng trên cùng](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) thực ra là một. Số cái bắt tay đúng cho ${n}{n|5|2,25,1} người tham dự là <mfrac><mrow>${n} ×
 ${n-1}</mrow><mn>2</mn></mfrac> = ${n*(n-1)/2}.
 
 ---

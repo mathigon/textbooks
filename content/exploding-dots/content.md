@@ -496,10 +496,9 @@ To see why that’s the case, we need to look at the powers of 2 and 5:
 ---
 > id: flaw-1
 
-Notice how many of the powers of 5 end in <x-target to=".po2" no-margins>other,
-smaller powers of 5</x-target>. The same is also true for powers of 2. It turns
-out that we can create two infinite, 10-adic numbers, that always end in powers
-of 2 or 5 respectively:
+Notice how many of the powers of 5 end in [{.no-margins}other, smaller powers of 5](->.po2). The
+same is also true for powers of 2. It turns out that we can create two infinite, 10-adic numbers,
+that always end in powers of 2 or 5 respectively:
 
 ::: column(width=140)
 

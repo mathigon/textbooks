@@ -234,7 +234,7 @@ _एन_ पक्षों के साथ प्रत्येक बहु�
 {.reveal(when="blank-3")} एपोटेम को खोजने के लिए, हम [[स्पर्शरेखा]] की परिभाषा का उपयोग कर सकते हैं [[| ज्या | कोसाइन]] : 
 
 {.text-center.reveal(when="blank-4")}`tan pill(α, "blue", "alpha") = 
-target("opposite", "apothem") / target("adjacent", "half-base") =
+pill("opposite", "yellow", "apothem") / pill("adjacent", "green", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")}`⇒ pill("apothem", "yellow",

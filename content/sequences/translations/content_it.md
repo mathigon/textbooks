@@ -484,15 +484,15 @@ _{span.n}${geometric(b,r,5)}_, …
 
 ::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-Se _{span.var-action} `r > 1`_, i termini [[aumentano rapidamente|diminuiscono rapidamente|si avvicinano a 0]] _{span.reveal(when="blank-2")}, fino all'infinito. I matematici affermano che la progressione [__diverge__](gloss:sequence-divergence)._
+Se [`r > 1`](action:set(2,2)), i termini [[aumentano rapidamente|diminuiscono rapidamente|si avvicinano a 0]] _{span.reveal(when="blank-2")}, fino all'infinito. I matematici affermano che la progressione [__diverge__](gloss:sequence-divergence)._
 
 ::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
 
-Se _{span.var-action} `r`_ è compreso tra -1 e 1_, i termini [[si avvicinano a 0|tendono all'infinito negativo|diventano più piccoli]] _{span.reveal(when="blank-3")}. Diciamo che la progressione [__converge__](gloss:sequence-convergence)._
+Se [`r`_ è compreso tra -1 e 1](action:set(10,0.6)), i termini [[si avvicinano a 0|tendono all'infinito negativo|diventano più piccoli]] _{span.reveal(when="blank-3")}. Diciamo che la progressione [__converge__](gloss:sequence-convergence)._
 
 ::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
 o
-Se _{span.var-action} `r < -1`_, i termini si alternano tra positivo e negativo, mentre il loro [[valore assoluto|inverso|differenza]] aumenta.
+Se [`r < -1`](action:set(3,-1.4)), i termini si alternano tra positivo e negativo, mentre il loro [[valore assoluto|inverso|differenza]] aumenta.
 
 :::
 
@@ -1257,17 +1257,17 @@ Sposta il cursore a destra per visualizzare come cresce una pianta. Notate come 
       x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} Se l'angolo è _{span.fib-action(data-value=0)} 0°_, tutti i semi cresceranno in un'unica lunga fila dal centro.
+{div(slot="legend")} Se l'angolo è [0°](action:set(0)), tutti i semi cresceranno in un'unica lunga fila dal centro.
 
-{div.inline(slot="legend")} Se l'angolo è _{span.fib-action(data-value=0.5)} `1/2`_ di una rotazione completa (180°), i semi si alterneranno tra due "bracci" separati che si allontanano dal centro.
+{div.inline(slot="legend")} Se l'angolo è [`1/2`](action:set(0.5)) di una rotazione completa (180°), i semi si alterneranno tra due "bracci" separati che si allontanano dal centro.
 
-{div.inline(slot="legend")} Se la rotazione è un'altra proporzione frazionaria di 360°, ad esempio _{span.fib-action(data-value=2/5)} `2/5`_ o _{span.fib-action(data-value=1/3)} `1/3`_ o _{span.fib-action(data-value=3/8)} `3/8`_, il numero di "armi" sarà lo stesso del [[denominatore|numeratore|fattore primo]] di quella frazione.
+{div.inline(slot="legend")} Se la rotazione è un'altra proporzione frazionaria di 360°, ad esempio [`2/5`](action:set(2/5)) o [`1/3`](action:set(1/3)) o [`3/8`](action:set(3/8)), il numero di "armi" sarà lo stesso del [[denominatore|numeratore|fattore primo]] di quella frazione.
 
 {div(slot="legend")} Sfortunatamente, i semi non sono distribuiti uniformemente: tutto lo spazio tra le braccia è sprecato. Ma se i [numeri razionali](gloss:rational-numbers) non funzionano, proviamo con i [numeri irrazionali](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} Un esempio di un numero irrazionale è [`pi`](gloss:pi). Ma se l'angolo tra i semi è _{span.fib-action(data-value=0.31831)} `1/pi`_ di 360 °, sembriamo ancora ottenere 22 braccia. Questo perché la frazione `22/7 = 3.1429…` è un'approssimazione abbastanza buona per `pi`. Ciò di cui abbiamo davvero bisogno è un numero irrazionale che _non può_ essere approssimato con una semplice frazione.
+{div.inline(slot="legend")} Un esempio di un numero irrazionale è [`pi`](gloss:pi). Ma se l'angolo tra i semi è [`1/pi`](action:set(0.31831)) di 360 °, sembriamo ancora ottenere 22 braccia. Questo perché la frazione `22/7 = 3.1429…` è un'approssimazione abbastanza buona per `pi`. Ciò di cui abbiamo davvero bisogno è un numero irrazionale che _non può_ essere approssimato con una semplice frazione.
 
-{div.inline(slot="legend")} Si scopre che la [sezione aurea](gloss:golden-ratio) è proprio questo: il "più irrazionale" di tutti i numeri irrazionali. Se l'angolo è _{span.fib-action(data-value=0.6180339)} `1/phi`_ di 360°, i semi sembrano distanziati quasi alla perfezione. E questa è esattamente l'angolazione utilizzata dalle piante di tutto il mondo.
+{div.inline(slot="legend")} Si scopre che la [sezione aurea](gloss:golden-ratio) è proprio questo: il "più irrazionale" di tutti i numeri irrazionali. Se l'angolo è [`1/phi`](action:set(0.6180339)) di 360°, i semi sembrano distanziati quasi alla perfezione. E questa è esattamente l'angolazione utilizzata dalle piante di tutto il mondo.
 
 :::
 
@@ -1531,7 +1531,7 @@ Sembra che la lunghezza della sequenza vari molto, ma finirà sempre con un cicl
     x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
-{.reveal(when="var-0")} Nota come alcuni punti di partenza finiscono molto rapidamente, mentre altri (come _{span.var-action} 31_ o _{span.var-action} 47_) fanno più di cento passi prima di raggiungere il ciclo 4, 2, 1.
+{.reveal(when="var-0")} Nota come alcuni punti di partenza finiscono molto rapidamente, mentre altri (come [31](action:set(31)) o [47](action:set(47))) fanno più di cento passi prima di raggiungere il ciclo 4, 2, 1.
 
 ---
 

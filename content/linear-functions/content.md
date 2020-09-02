@@ -58,12 +58,8 @@ be similar._
 about similar triangles: the ratio of two of the sides is always constant. Move
 the point again, and watch what happens:
 
-    p.text-center.reveal(when="blank-0" delay=3000): span.math
-      mfrac
-        mrow: span.step-target.pill.var.green(data-to="dy") ${p.y}
-        mrow: span.step-target.pill.var.blue(data-to="dx") ${p.x}
-      mo(value="=") =
-      mn.var ${p.y/p.x || '???'}
+{.reveal.text-center(when="blank-0" delay=3000)}
+`pill(var("p.y"),"green","dy")/pill(var("p.x"),"blue","dx") = var("p.y/p.x || '???'")`
 
 {.reveal(when="slide-point")} But the opposite is also true: any point (_x_, _y_)
 that satisfies this equation must lie somewhere on the line. Therefore we now

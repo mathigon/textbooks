@@ -361,9 +361,9 @@ number of handshakes would be [[`n×(n–1)`|`n×(n+1)`|`n^2`]].
 ---
 > id: handshakes-2a
 
-Unfortunately this answer is not quite right. Notice how <x-target to=".handshakes tr:first-child
-td:first-child, .handshakes tr:first-child td:nth-child(2)">the first two entries on the top
-row</x-target> are actually the same, just flipped around.
+Unfortunately this answer is not quite right. Notice how [the first two entries on the top
+row](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) are
+actually the same, just flipped around.
 
 In fact, we have counted every handshake [[twice|once|three times]], _{span.reveal(when="blank-0")}
 once for each of the two people involved. This means that the correct number of handshakes for

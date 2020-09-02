@@ -358,9 +358,8 @@ heißt das, dass [[`n×(n–1)`|`n×(n+1)`|`n^2`]] mal die Hände geschüttelt w
 ---
 > id: handshakes-2a
 
-Leider ist diese Antwort nicht ganz richtig. Beachte, dass <x-target to=".handshakes tr:first-child
-td:first-child, .handshakes tr:first-child td:nth-child(2)">die ersten beiden Einträge
-in der obersten Zeile</x-target> eigentlich identisch sind, nur umgedreht.
+Leider ist diese Antwort nicht ganz richtig. Beachte, dass [die ersten beiden Einträge
+in der obersten Zeile](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) eigentlich identisch sind, nur umgedreht.
 
 Tatsächlich haben wir jedes Händeschütteln [[zweimal|einmal|dreimal]] gezählt, _{span.reveal(when="blank-0")}
 einmal für jeden der beiden beteiligten Gäste. Das bedeutet, dass die korrekte
