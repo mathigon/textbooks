@@ -79,7 +79,7 @@ export class BinarySwipe extends CustomElementView {
           return;
         }
 
-        this.trigger('correct');
+        this.trigger('correct', $activeCard.attr('comment'));
         const $target = (solution === 'a') ? $aStacks : $bStack;
 
         let [posn, angle] = cardOffset(endPos, startPos);
@@ -95,7 +95,11 @@ export class BinarySwipe extends CustomElementView {
         $activeCard.removeClass('active dragging');
 
         $activeCard = $cards.pop();
-        if ($activeCard) $activeCard.addClass('active');
+        if ($activeCard) {
+          $activeCard.addClass('active');
+        } else {
+          this.trigger('complete');
+        }
         // TODO Show banner once you are done with all cards?
       }
     });
