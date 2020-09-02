@@ -36,7 +36,7 @@ All of these regions in the Voronoi diagram are examples of polygons. A polygon 
       
 {div.card.c-red(solution="a")} Card #1 - Regular Polygon
 
-{div.card.c-teal(solution="b")} Card #2 - NOT a Polygon __bold__ `x+y`
+{div.card.c-teal(solution="b")} Card #2 - NOT a Polygon
 
 {div.card.c-green(solution="b")} Card #3 - NOT a Polygon
 
