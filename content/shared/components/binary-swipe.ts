@@ -48,6 +48,18 @@ export class BinarySwipe extends CustomElementView {
       move: (currentPos: Point, startPos: Point) => {
         if (!$activeCard) return;
         $activeCard.setTransform(...cardOffset(currentPos, startPos));
+        const dx = currentPos.subtract(startPos).x;
+        const tooClose = Math.abs(dx) < 100;
+        if (tooClose) {
+          $activeCard.children[0].removeClass('committed-left');
+          $activeCard.children[0].removeClass('committed-right');
+        } else {
+          if (dx < 0) {
+            $activeCard.children[0].addClass('committed-left');
+          } else {
+            $activeCard.children[0].addClass('committed-right');
+          }
+        }
       },
       end: async (endPos: Point, startPos: Point) => {
         if (!$activeCard) return;
@@ -61,6 +73,8 @@ export class BinarySwipe extends CustomElementView {
         if (tooClose || !isCorrect) {
           if (!tooClose) this.trigger('incorrect', {hint: $activeCard._data.hint});
           $activeCard.removeClass('dragging');
+          $activeCard.children[0].removeClass('committed-left');
+          $activeCard.children[0].removeClass('committed-right');
           $activeCard.animate({transform: 'none'}, 300);
           return;
         }
@@ -71,6 +85,9 @@ export class BinarySwipe extends CustomElementView {
         let [posn, angle] = cardOffset(endPos, startPos);
         posn = posn.add($mainStack.topLeftPosition).subtract($target.topLeftPosition);
         $activeCard.setTransform(posn, angle);
+
+        $activeCard.children[0].removeClass('committed-left');
+        $activeCard.children[0].removeClass('committed-right');
 
         $target.append($activeCard);
         const deg = Random.uniform(-3, 3);
