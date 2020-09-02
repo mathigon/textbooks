@@ -58,6 +58,16 @@ article.gameshow .page-background {
 // -----------------------------------------------------------------------------
 // Conditional Probability
 
+.conditional {
+  rect { transition: transform .9s; }
+  .red { fill: @red; }
+  .grey { fill: @grey; }
+  .blue { fill: @blue; }
+  .green { fill: @green; }
+  .purple { fill: @purple; }
+  .focus & rect:not(.focus) { opacity: 0.2; }
+}
+
 x-buckets.independent {
   .input { width: 220px; }
   .bucket { width: 300px; }

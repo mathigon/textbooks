@@ -88,7 +88,250 @@ export function diceSimulation($step: Step) {
   });
 }
 
+
 // -----------------------------------------------------------------------------
+// Conditional Probability
+
+
+// export function queryClick($step: Step) {
+//   $step.score("click")
+// }
+
+
+//Applet: 12x12 square of people.assigned hats, scarves and coats, and glasses.On right, list of these; you can click them to arrange people on the left and right with and without those things on.
+
+export function conditional($step: Step) {
+  const $svg = $step.$('svg.conditional')!;
+
+  let log = console.log //how about some deliberately bad linting so you remember to remove it?
+
+  function queryBit(i, j) {
+    return (i & 1 << j)>>j
+  }
+
+  const adornmentColors = ['blue', 'red', 'purple', 'green']
+  const $people = []
+  //could have an array of every single darn one
+  //independent unless stated otherwise, you need to make them independent
+  //make them all independent, then adjust
+
+  function conditionalizer(numeratorGivenBit, numeratorGivenNotBit, bit, adornmentBits)
+  {
+    if (adornmentBits !== undefined && adornmentBits !== null)
+      return queryBit(adornmentBits, bit) ? numeratorGivenBit : numeratorGivenNotBit
+    else {
+      let otherNumerator = adornmentNumeratorFunctions[bit]()
+      return (otherNumerator * numeratorGivenBit + (12 - otherNumerator) * numeratorGivenNotBit) / 12
+    }
+  }
+  
+  const adornmentNumeratorFunctions = [
+    ()=>2, 
+    ()=>3, 
+    (adornmentBits) => conditionalizer(12, 4, 1, adornmentBits),
+    ()=>4,
+    // (adornmentBits) => conditionalizer(2, 3, 0, adornmentBits), 
+  ]
+  // log(adornmentNumeratorFunctions[0]())
+  // log(adornmentNumeratorFunctions[3]())
+  // return
+
+  let onlyOneColumn = $step.hasAttr('onlyOneColumn')
+  let buttonWidth = 80
+  let buttonHeight = 30
+  for (let j = 0; j < (onlyOneColumn?1:2); j++)
+  {
+    for (let i = 0; i < 4; i++) {
+      let button = $N('rect', {
+        x: -buttonWidth / 2., y: -buttonHeight / 2., rx: 0,
+        width: buttonWidth, height: buttonHeight,
+        class: adornmentColors[i]
+      }, $svg);
+      button.setTransform({ x: 150 + (j?1:-1) * (buttonWidth / 2. + 30), y: 40 + i * (4 + buttonHeight) });
+      $svg.append(button)
+      button.i = i
+      button.j = j
+      button.on('click', () => { 
+        if (button.j )
+          rearrange(i,currentIndexToPutOnTop) 
+        else
+          rearrange(currentIndexToPutOnLeft, i) 
+      })
+    }
+  }
+
+  function reposition($person,x,y)
+  {
+    let absoluteX = 12 + x * 24
+    let absoluteY = 12 + y * 24
+    $person.setTransform({ x: absoluteX, y: absoluteY });
+
+    $person.$adornments.forEach(($adornment,i) => {
+      if($adornment !== null) 
+        $adornment.setTransform({ x: absoluteX, y: absoluteY - 4 * i + 9 });
+    });
+  }
+
+  for (let i = 0; i < 12; ++i) {
+    for (let j = 0; j < 12; ++j) {
+      const height = 8;
+      const $person = $N('rect', {
+        x: -height / 2, y: -height, rx: 0,
+        width: height, height: 2 * height,
+        class: 'grey', target: ['grey', 'large'].join(' ')
+      }, $svg);
+      
+      $people.push($person)
+      $svg.append($person)
+      $person.randomNumber = Math.random()
+      $person.$adornments = [null,null,null,null]
+    }
+  }
+
+  function logBits(bits) {
+    log( queryBit(bits, 3), queryBit(bits, 2), queryBit(bits, 1), queryBit(bits, 0) )
+  }
+
+  let pIndex = 0
+  let totalProbability = 0
+  for(let adornmentBits = 0; adornmentBits < 16; adornmentBits++) {
+    let numWithThisCombination = 144
+    
+    for(let j = 0; j < 4; ++j) {
+      if (queryBit(adornmentBits,j) )
+        numWithThisCombination *= adornmentNumeratorFunctions[j](adornmentBits)
+      else
+        numWithThisCombination *= (12 - adornmentNumeratorFunctions[j](adornmentBits) )
+      numWithThisCombination /= 12
+    }
+
+    {
+      // let combinationProb = numWithThisCombination / 144
+      // if (numWithThisCombination !== Math.round(numWithThisCombination))
+      //   console.error("non integer combination: ")
+      // totalProbability += combinationProb
+      // logBits(adornmentBits);
+      // log(numWithThisCombination)
+    }
+
+    let limit = pIndex + numWithThisCombination
+    for (pIndex; pIndex < limit; ++pIndex) {
+      for(let j = 0; j < 4; j++) {
+        if (queryBit(adornmentBits,j) ){
+          const $adornment = $N('rect', {
+            x: -5, y: -5, rx: 0,
+            width: 10, height: 3,
+            class: adornmentColors[j]
+          }, $svg);
+          $svg.append($adornment)
+          $people[pIndex].$adornments[j] = $adornment
+        }
+      }
+    }
+  }
+
+  $people.sort((a,b)=>{return a.randomNumber-b.randomNumber})
+  for (let i = 0; i < 12; ++i) {
+    for (let j = 0; j < 12; ++j) {
+      reposition($people[i*12+j], i, j)
+    }
+  }
+
+  let currentIndexToPutOnLeft = -1
+  let currentIndexToPutOnTop = -1
+  function rearrange(indexToPutOnLeft,indexToPutOnTop) 
+  {
+    currentIndexToPutOnLeft = indexToPutOnLeft
+    currentIndexToPutOnTop = indexToPutOnTop
+
+    const leftWidth = adornmentNumeratorFunctions[indexToPutOnLeft]()
+    const rightWidth = 12 - leftWidth
+
+    let numInTopLeft = 0
+    let numInTopRight = 0
+    if(indexToPutOnTop !== -1) {
+      $people.forEach(p => {
+        if ( p.$adornments[indexToPutOnLeft] && p.$adornments[indexToPutOnTop])
+          ++numInTopLeft
+        if (!p.$adornments[indexToPutOnLeft] && p.$adornments[indexToPutOnTop])
+          ++numInTopRight
+      })
+    }
+
+    if (numInTopLeft % leftWidth !== 0 || numInTopRight % rightWidth !== 0)
+    {
+      console.error("indivisible. columns sorted by", indexToPutOnLeft, ", then sorted by ", indexToPutOnTop)
+      if (numInTopLeft % leftWidth !== 0 )
+        log("numInTopLeft",numInTopLeft,"totalInColumn", leftWidth*12)
+      if (numInTopRight % rightWidth !== 0)
+        log("numInTopRight", numInTopRight, "totalInColumn", rightWidth*12)
+    }
+    const topLeftHeight = numInTopLeft / leftWidth
+    const topRightHeight = numInTopRight / rightWidth
+
+    let iTopLeft = 0
+    let iTopRight = 0
+    let iBottomLeft = 0
+    let iBottomRight = 0
+
+    for (let i = 0; i < 12; ++i) {
+      for (let j = 0; j < 12; ++j) {
+        const p = $people[i * 12 + j]
+
+        let iQuadrant = -1
+        let columnWidth = -1
+        let horizontalAddition = 0
+        let verticalAddition = 0
+        if (p.$adornments[indexToPutOnLeft] && p.$adornments[indexToPutOnTop]) {
+          iQuadrant = iTopLeft
+          columnWidth = leftWidth
+          ++iTopLeft
+        }
+        else if (!p.$adornments[indexToPutOnLeft] && p.$adornments[indexToPutOnTop]) {
+          iQuadrant = iTopRight
+          horizontalAddition = leftWidth
+          columnWidth = rightWidth
+          ++iTopRight
+        }
+        else if (p.$adornments[indexToPutOnLeft] && !p.$adornments[indexToPutOnTop]) {
+          iQuadrant = iBottomLeft
+          verticalAddition = topLeftHeight
+          columnWidth = leftWidth
+          ++iBottomLeft
+        }
+        else if (!p.$adornments[indexToPutOnLeft] && !p.$adornments[indexToPutOnTop]) {
+          iQuadrant = iBottomRight
+          horizontalAddition = leftWidth
+          verticalAddition = topRightHeight
+          columnWidth = rightWidth
+          ++iBottomRight
+        }
+
+        const horizontalPosition = horizontalAddition + iQuadrant % columnWidth
+        const verticalPosition = verticalAddition + (iQuadrant - iQuadrant % columnWidth) / columnWidth
+        reposition(p, horizontalPosition, verticalPosition)
+      }
+    }
+  }
+
+  let frameCount = 0
+  function loop() {
+    ++frameCount
+
+    if (frameCount % 3 === 0 && frameCount / 3 < 16) {
+      let bits = frameCount / 3
+      // logBits(biQ- bits % 4) / 4, bits % 4)
+      rearrange((bits - bits % 4)/4, bits%4)
+    }
+
+    setTimeout(loop, 20);
+  }
+  loop()
+}
+
+
+// -----------------------------------------------------------------------------
+// Monty Hall
 
 class OneTimeButton {
 
