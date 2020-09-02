@@ -983,11 +983,11 @@ https://www.youtube.com/watch?v=mcX7iO_XCFA
         span#rotor3dn &#8595;
         span#rotor2dn &#8595;
         span#rotor1dn &#8595;
-
+        
     p
 
     include ./components/enigma
-    x-enigma
+    x-enigma 
     figure: svg(id="enigma_svg" width=800 height=450 viewBox="0 0 600 350")
         defs#enigma_svg_defs
         style#enigma_svg_styles

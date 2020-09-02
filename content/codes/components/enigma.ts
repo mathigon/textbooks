@@ -313,7 +313,7 @@ export class Machine
 	{
 		if (up)
 			this.rotors[index].step();
-		else
+		else 
 		{
 			for (var i = 0; i < 25; ++i)
 				this.rotors[index].step();
@@ -342,7 +342,7 @@ export class Enigma extends CustomElementView {
   private machine:Machine = new Machine(this.rotorChoices, this.initialPositions);
   public svgview:any;
 
-  ready() {
+  ready() { 
     for (const $l of this.$$('.lightboard .key')) {
       this.$lights[$l.text] = $l;
     }
@@ -351,8 +351,12 @@ export class Enigma extends CustomElementView {
       const char = $k.text;
       $k.on('pointerdown', () => {
         const encodepath:string[] = this.encode(char);
-        this.svgview.drawPath(encodepath, false);
+        this.showLight(getLast(encodepath));
         this.updateDisplay(encodepath);
+        this.svgview.drawPath(encodepath, false);
+      });
+      $k.on('pointerup', () => {
+        this.hideLight();
       });
     }
 
@@ -366,12 +370,17 @@ export class Enigma extends CustomElementView {
     this.svgview = createEnigmaPathSVG("enigma_svg", this.machine, keypresscallback);
     this.connectRotorControls();
     this.svgview.drawPath(null);
+
+    const plugboardview = new PlugboardView("enigmaview", this.machine, this.svgview);
   }
 
   showLight(char: string) {
-    const $light = this.$lights[char.toLowerCase()];
+    const $light = this.$lights[char];
     $light.addClass('glowing');
-    setTimeout(() => $light.removeClass('glowing'), 400);
+  }
+
+  hideLight() {
+    setTimeout(() => this.$$('.glowing').forEach(l => l.removeClass('glowing')), 250); // ensure a minimum time lit
   }
 
   encode(char: string) {
@@ -407,7 +416,6 @@ export class Enigma extends CustomElementView {
       return;
     const encodedletter = getLast(encodingpath);
     this.showRotorPositions();		
-    this.showLight(encodedletter);
     document.getElementById('cipherpath')!.innerHTML = encodingpath.join("&#x27f6;");
     const cipherTextEl = document.getElementById('ciphertext') as HTMLElement;
     let curtext = cipherTextEl.innerHTML;
@@ -422,9 +430,9 @@ export class Enigma extends CustomElementView {
 }
 
 class PlugboardView
-{
-  private readonly enigmaview = document.getElementById("enigma");  
+{  
   private readonly plugboard = document.getElementById("plugboard");
+  private readonly enigmaview:HTMLElement;
   private readonly machine:Machine;
   private readonly svgview:any;
   
@@ -505,8 +513,8 @@ class PlugboardView
     			this.cablecount++;
     			this.svgview.drawMachine();
     			this.join = true;
-    		}
-    	});
+    		} 
+    	}); 
     });
     
     // document.getElementById("plugboard").addEventListener('mouseup', function(e)
@@ -539,7 +547,7 @@ class PlugboardView
     this.path = document!.getElementById("path" + this.curcable) as unknown as SVGPathElement;
     var dx = this.mouseStart[0] - endpt[0],
       dy = this.mouseStart[1] - endpt[1],
-      dr = 3 * Math.sqrt(dx * dx + dy * dy) / 4;
+      dr = 6 * Math.sqrt(dx * dx + dy * dy) / 4;
     var start = endpt[0] > this.mouseStart[0] ? this.mouseStart : endpt;
     var end = endpt[0] > this.mouseStart[0] ? endpt : this.mouseStart;
     this.path.setAttribute("d", "M" + end[0] + "," + end[1] + "A" + dr.toFixed(2) + "," + (1.3 * dr).toFixed(2) + 

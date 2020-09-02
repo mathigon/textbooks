@@ -1,17 +1,58 @@
 template#enigma
-  .enigma
-    .lightboard
-      for key in 'qwertzuio'.split('')
-        .key= key
-      for key in 'asdfghjk'.split('')
-        .key= key
-      for key in 'yxcvbnml'.split('')
-        .key= key
+    .enigma#enigmaview
+      .lightboard#lightboard
+        for key in 'QWERTZUIO'.split('')
+          .key= key
+        for key in 'ASDFGHJK'.split('')
+          .key= key
+        for key in 'YXCVBNML'.split('')
+          .key= key
 
-    .keyboard
-      for key in 'qwertzuio'.split('')
-        .key= key
-      for key in 'asdfghjk'.split('')
-        .key= key
-      for key in 'yxcvbnml'.split('')
-        .key= key
+      .keyboard#keyboard
+        for key in 'QWERTZUIO'.split('')
+          .key= key
+        for key in 'ASDFGHJK'.split('')
+          .key= key
+        for key in 'YXCVBNML'.split('')
+          .key= key
+  
+      .plugboard#plugboard
+        <svg id="target" style="position:absolute;display:block;pointer-events:none;width:100%;height:100%;">			
+          <path id="path0" style="stroke:#c30;stroke-width:5px;fill:none;z-index:-10;"></path>		
+          <path id="path1" style="stroke:#c30;stroke-width:5px;fill:none;z-index:-10;"></path>		
+          <path id="path2" style="stroke:#c30;stroke-width:5px;fill:none;z-index:-10;"></path>		
+          <path id="path3" style="stroke:#c30;stroke-width:5px;fill:none;z-index:-10;"></path>		
+          <path id="path4" style="stroke:#c30;stroke-width:5px;fill:none;z-index:-10;"></path>		
+          <path id="path5" style="stroke:#c30;stroke-width:5px;fill:none;z-index:-10;"></path>		
+          <path id="path6" style="stroke:#c30;stroke-width:5px;fill:none;z-index:-10;"></path>		
+          <path id="path7" style="stroke:#c30;stroke-width:5px;fill:none;z-index:-10;"></path>		
+          <path id="path8" style="stroke:#c30;stroke-width:5px;fill:none;z-index:-10;"></path>		
+          <path id="path9" style="stroke:#c30;stroke-width:5px;fill:none;z-index:-10;"></path>		
+        </svg>
+          .plug#plugQ Q
+          .plug#plugW W
+          .plug#plugE E
+          .plug#plugR R
+          .plug#plugT T
+          .plug#plugZ Z
+          .plug#plugU U
+          .plug#plugI I
+          .plug#plugO O
+          
+          .plug#plugA A
+          .plug#plugS S
+          .plug#plugD D
+          .plug#plugF F
+          .plug#plugG G
+          .plug#plugH H
+          .plug#plugJ J
+          .plug#plugK K
+
+          .plug#plugY Y
+          .plug#plugX X
+          .plug#plugC C
+          .plug#plugV V
+          .plug#plugB B
+          .plug#plugN N
+          .plug#plugM M
+          .plug#plugL L

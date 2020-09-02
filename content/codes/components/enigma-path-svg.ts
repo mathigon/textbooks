@@ -189,11 +189,13 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 		me.drawPath(encodingpath, me.animate);
 	}
 
-	function makekey(x:number, y:number, letter:string, keyfill:string)
+	function makekey(x:number, y:number, letter:string, keyfill:string, extraclass:string | null)
 	{
-		const key = '<circle letter="' + letter + '" class="keycircle" cx=' + x + " cy=" + y + " r=" + 9 + " fill='" + keyfill + "' />";
+		let classstring = "keycircle" + (extraclass ? " " + extraclass : "");
+		const key = '<circle letter="' + letter + '" class="' + classstring + '" cx=' + x + " cy=" + y + " r=" + 9 + " fill='" + keyfill + "' />";
+		classstring = "keyletter" + (extraclass ? " " + extraclass : "");
 		const text = '<text letter="' + letter + '" text-anchor="middle" alignment-baseline="middle" x="' + 
-			x + '" y="' + y + '" class="keyletter">' + letter + '</text>';		
+			x + '" y="' + y + '" class="' + classstring + '">' + letter + '</text>';		
 		return key + text;
 	}
 
@@ -204,11 +206,11 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 		while (i < letters.length)
 		{
 			y += dy;
-			content.innerHTML += makekey(x, y, letters[i++], "4c4c4c");
+			content.innerHTML += makekey(x, y, letters[i++], "4c4c4c", null);
 			y += dy;
 			var l = move(x - 10, y) + line(x + 20, y);
 			content.innerHTML += path(l, 0.5, "#888", "none");
-			content.innerHTML += makekey(x + 20, y, letters[i++], "4c4c4c");
+			content.innerHTML += makekey(x + 20, y, letters[i++], "4c4c4c", null);
 		}
 		content.querySelectorAll<SVGElement>(".keyletter, .keycircle").forEach(
 			e => e.addEventListener("click", pressKey));
@@ -218,8 +220,10 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 	{
 		const keyy = getYPos(key, 0);
 		const lampy = getYPos(lamp, 0);
-		layer.innerHTML += makekey(x + (keyy % 2 ? 0 : 20), y + keyy * dy, key, incolour);
-		layer.innerHTML += makekey(x + (lampy % 2 ? 0 : 20), y + lampy * dy, lamp, outcolour);
+		layer.innerHTML += makekey(x + (keyy % 2 ? 0 : 20), y + keyy * dy, key, incolour, "highlight");
+		layer.innerHTML += makekey(x + (lampy % 2 ? 0 : 20), y + lampy * dy, lamp, outcolour, "highlight");
+		layer.querySelectorAll<SVGElement>(".highlight").forEach(
+			e => e.addEventListener("click", pressKey));
 	}
 
 	function drawArrow(layer:SVGGElement, x:number, y:number, forward:boolean)
@@ -508,7 +512,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 		stack: any[], layer: SVGGElement)
 	{
 		const key = encodingpath[0];
-		const inkeyelement = makekey(0, 0, key, incolour);
+		const inkeyelement = makekey(0, 0, key, incolour, null);
 		
 		let anim = '';
 		
