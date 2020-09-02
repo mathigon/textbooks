@@ -60,27 +60,27 @@ All of these regions in the Voronoi diagram are examples of polygons. A polygon 
 
 ::: x-binary-swipe(a-title="Polygons" b-title="Not Polygons")
       
-{div.card.c-red(solution="a")} Card #1 - Regular Polygon
+{div.card.c-red(solution="a" comment="card-1")} Card #1 - Regular Polygon
 
-{div.card.c-teal(solution="b")} Card #2 - NOT a Polygon
+{div.card.c-teal(solution="b" comment="card-2")} Card #2 - NOT a Polygon
 
-{div.card.c-green(solution="b")} Card #3 - NOT a Polygon
+{div.card.c-green(solution="b" comment="card-3")} Card #3 - NOT a Polygon
 
-{div.card.c-orange(solution="a")} Card #4 - Irregular Polygon
+{div.card.c-orange(solution="a" comment="card-4")} Card #4 - Irregular Polygon
 
-{div.card.c-blue(solution="a")} Card #5 - Irregular Polygon
+{div.card.c-blue(solution="a" comment="card-5")} Card #5 - Irregular Polygon
 
-{div.card.c-yellow(solution="b")} Card #6 - Not a polygon
+{div.card.c-yellow(solution="b" comment="card-6")} Card #6 - Not a polygon
 
-{div.card.c-teal(solution="a")} Card #7 - Regular polygon
+{div.card.c-teal(solution="a" comment="card-7")} Card #7 - Regular polygon
 
-{div.card.c-orange(solution="b")} Card #8 - Not a Polygon
+{div.card.c-orange(solution="b" comment="card-8")} Card #8 - Not a Polygon
 
-{div.card.c-blue(solution="b")} Card #9 - Not a polygon
+{div.card.c-blue(solution="b" comment="card-9")} Card #9 - Not a polygon
 
-{div.card.c-red(solution="a")} Card #10 - Irregular Polygon
+{div.card.c-red(solution="a" comment="card-10")} Card #10 - Irregular Polygon
 
-{div.card.c-purple(solution="a" hint="This is not correct. Try again!")} Card #11 - Polygon
+{div.card.c-purple(solution="a" comment="card-11" hint="This is not correct. Try again!")} Card #11 - Polygon
 
 :::
 

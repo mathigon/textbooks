@@ -1,0 +1,11 @@
+card-1: This shape is a REGULAR polygon because all sides are the same length.
+card-2: This shape is NOT a polygon because it has a curved side length.
+card-3: This shape is NOT a polygon because it has a hole.
+card-4: This shape is an IRREGULAR polygon because the side lengths are not all the same.
+card-5: This shape is an IRREGULAR polygon because the side lengths are not all the same.
+card-6: This shape is NOT a polygon because it is not closed.
+card-7: This shape is a REGULAR polygon because all sides are the same length.
+card-8: This shape is NOT a polygon because two of the edges cross over each other.
+card-9: This shape is NOT a polygon because it has curved side lengths.
+card-10: This shape is an IRREGULAR polygon because the side lengths are not all the same.
+card-11: This is an IRREGULAR polygon from the Voronoi diagram above. We’ll find the area of it below.
