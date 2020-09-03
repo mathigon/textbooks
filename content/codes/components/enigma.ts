@@ -37,11 +37,7 @@ interface Substitution {
 
 class Plugboard {
   private count = 0;
-  private connections:Substitution = {};
-
-  getConnections() {
-    return this.connections;
-  }
+  public connections:Substitution = {};
 
   connect(letter1:string, letter2:string) {
     if (letter1 === letter2) {
@@ -76,25 +72,21 @@ class Plugboard {
 }
 
 class Reflector {
-  private forward:Substitution = {};
+  public connections:Substitution = {};
 
   constructor(reflections:string) {
     for (let i = 0; i < letters.length; i++) {
-      this.forward[letters[i]] = reflections[i];
+      this.connections[letters[i]] = reflections[i];
     }
   }
 
-  getConnections() {
-    return this.forward;
-  }
-
   reflect(letter:string):string {
-    const index = charToIndex(this.forward[letter]);
+    const index = charToIndex(this.connections[letter]);
     return letters[index];
   }
 
   toString():string {
-    const str = [...letters].map(l => this.forward[l]).join('');
+    const str = [...letters].map(l => this.connections[l]).join('');
     return 'Reflector\n\tABCDEFGHIJKLMNOPQRSTUVWXYZ\n\t' + str;
   }
 }
@@ -103,12 +95,12 @@ class Rotor {
   private readonly index:number;
   // countdown steps until we need to turnover the adjacent rotor
   stepsToTurnover = 26;
-  private offset = 0;
-  private notch:string;
+  public offset = 0;
+  public notch:string;
   private initialPosition:string;
   private ringSetting:string;
-  private forward:Substitution = {};
-  private reverse:Substitution = {};
+  public forward:Substitution = {};
+  public reverse:Substitution = {};
 
   constructor(index:number, wiringMap:string, notch:string, initialPosition:string, ringSetting:string) {
     this.index = index;
@@ -131,22 +123,6 @@ class Rotor {
       this.updateWires();
       this.offset = ++this.offset % letters.length;
     }
-  }
-
-  getOffset() {
-    return this.offset;
-  }
-
-  getNotch() {
-    return this.notch;
-  }
-
-  getForwardConnections() {
-    return this.forward;
-  }
-
-  getReverseConnections() {
-    return this.reverse;
   }
 
   encodeForward(letter:string):string {
@@ -194,9 +170,9 @@ class Rotor {
 }
 
 export class Machine {
-  private rotors:Rotor[] = [];
-  private reflector:Reflector;
-  private plugboard:Plugboard;
+  public rotors:Rotor[] = [];
+  public reflector:Reflector;
+  public plugboard:Plugboard;
   private skipPlugboard = false;
 
   constructor(rotorChoice:number[], rotorPositions:string[]) {
@@ -220,18 +196,6 @@ export class Machine {
 
   isUsingPlugboard() {
     return !this.skipPlugboard;
-  }
-
-  getReflector() {
-    return this.reflector;
-  }
-
-  getRotor(i:number) {
-    return this.rotors[i];
-  }
-
-  getPlugboard() {
-    return this.plugboard;
   }
 
   encodeLetters(letters:string) {
@@ -293,7 +257,7 @@ export class Machine {
   }
 
   rotorPositions() {
-    return this.rotors.map(r => letters[r.getOffset()]);
+    return this.rotors.map(r => letters[r.offset]);
   }
 
   rotate(index:number, up:boolean) {
@@ -465,7 +429,7 @@ class PlugboardView {
   }
 
   setupListeners() {
-    const plugboard = this.machine.getPlugboard();
+    const plugboard = this.machine.plugboard;
     document.querySelectorAll<HTMLElement>('.plug').forEach(p => {
       p.addEventListener('pointerdown', () => {
         const letter = p.innerText;

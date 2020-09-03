@@ -336,21 +336,21 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     const y = 20;
     let x = 10;
 
-    savedsteps = drawReflector(40, gap, x, y, dy, machine.getReflector().getConnections());
+    savedsteps = drawReflector(40, gap, x, y, dy, machine.reflector.connections);
 
     x += gap + 40;
 
     const headings = ['Slow rotor', 'Medium rotor', 'Fast rotor'];
     for (let i = 2; i >= 0; --i) {
+      const thisrotor = machine.rotors[i];
       drawRotor(width, gap, x, y, dy, headings[2 - i], null, null, null, null,
-          machine.getRotor(i).getOffset(), i != 2 ? machine.getRotor(i + 1).getOffset() : 0,
-          i != 2 ? machine.getRotor(i).getNotch() : null, machine.getRotor(i).getForwardConnections(),
-          true, 'grad_rotor');
+          thisrotor.offset, i != 2 ? machine.rotors[i + 1].offset : 0,
+          i != 2 ? thisrotor.notch : null, thisrotor.forward, true, 'grad_rotor');
       x += gap + width;
     }
 
     if (machine.isUsingPlugboard()) {
-      drawPlugboard(width, gap, x, y, dy, null, null, null, null, machine.getPlugboard().getConnections());
+      drawPlugboard(width, gap, x, y, dy, null, null, null, null, machine.plugboard.connections);
       x += gap / 2 + width + 8;
     } else {
       x -= 17;
