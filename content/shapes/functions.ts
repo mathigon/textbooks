@@ -28,7 +28,7 @@ const locationPoints = [
   new Point(396, 170),
   new Point(415, 232),
   new Point(430, 103),
-  new Point(462, 249),
+  new Point(449, 245),
   new Point(477, 30)
 ];
 
