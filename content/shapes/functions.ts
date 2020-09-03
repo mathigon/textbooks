@@ -14,14 +14,22 @@ import {VoronoiStep} from './types';
 declare const d3: any;
 
 const locationPoints = [
-  new Point(40, 60),
-  new Point(260, 40),
-  new Point(500, 80),
-  new Point(400, 180),
-  new Point(320, 138),
-  new Point(300, 330),
-  new Point(228, 240),
-  new Point(170, 130)
+  new Point(34, 200),
+  new Point(90, 171),
+  new Point(99, 384),
+  new Point(285, 180),
+  new Point(295, 346),
+  new Point(316, 209),
+  new Point(343, 276),
+  new Point(345, 46),
+  new Point(368, 146),
+  new Point(373, 252),
+  new Point(388, 333),
+  new Point(396, 170),
+  new Point(415, 232),
+  new Point(430, 103),
+  new Point(462, 249),
+  new Point(477, 30)
 ];
 
 export async function voronoi($step: VoronoiStep) {
