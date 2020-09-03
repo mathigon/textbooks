@@ -176,6 +176,7 @@ function getY(p: Point) {
 }
 
 export function sortPolygons($step: Step) {
+
   const $sort = $step.$('x-binary-swipe') as BinarySwipe;
 
   $sort.on('correct', comment => $step.addHint(comment, {class: 'correct'}));

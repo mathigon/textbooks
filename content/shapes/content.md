@@ -48,7 +48,32 @@ School districts  need an accurate estimate of the number of students that may a
 
 {.reveal(when="eight-points")} The first person to think about these things was probably [Rene Descartes](bio:descartes) 400 years ago - he was a famous philosopher too!  But they’re named after a Russian mathematician, [Gregory Feodosevich Voronoy](bio:voronoy). Physician John Snow used a version of a Voronoi diagram in 1854 during a [cholera epidemic](https://plus.maths.org/content/uncovering-cause-cholera) In London to locate an infected water pump on Broad Street in London 
 
-{.reveal(when="eight-points")} In our example, using a Voronoi diagram can help schools make estimates of how many students will attend. In London, about 1500 people live in each square kilometer. To use this statistic, we first need to first know the [[area | perimeter]] of each region in the diagram. 
+{.reveal(when="eight-points")} In our example, using a Voronoi diagram can help schools make estimates of how many students will attend. In London, about 1500 people live in each square kilometer. To use this statistic, we first need to first know the [[area | perimeter]] of each region in the diagram.
+
+{.reveal(when="blank-0")} Some of these regions are shapes we’ve learned about in previous chapters. This shape is a triangle and we can find the area by doing [[1/2]] x base x height.
+
+::: .reveal(when="blank-1")
+Click on the side of the triangle you want to use as the base.
+
+    // TODO: show triangle from prev voronoi diagram
+
+:::
+
+{.reveal(when="side-selected")} Now draw in the height that corresponds with the base you selected.
+
+{.reveal(when="height-drawn")} The area of this triangle is [[TODO]] [[square km | km]].
+
+{.text-center.reveal(when="blank-2 blank-3")} `(1500 "\ people") / (1 "\ square km") = (input(0) "\ people") / (TODO "\ square km")`
+
+::: .reveal(when="blank-4")
+
+${peopleCount} people live closest to that school and that can be a good starting point for the school to use to estimate how many students might attend that school. Next, the schools would want to use other statistics to estimate how many of those people are elementary aged students.
+
+The other regions are more complicated. Some have [4 sides](->#four-sided). Some have [5 sides](->#five-sided). And some have [6 sides](->#six-sided).
+
+    // TODO: Display prev voronoi diagram
+
+:::
 
 ---
 
@@ -85,6 +110,40 @@ All of these regions in the Voronoi diagram are examples of polygons. A polygon 
 :::
 
 {.reveal(when="cards-sorted")} A regular polygon has [[all equal | all different]] side lengths. 
+
+---
+
+> id: populations
+
+Let’s revisit the Voronoi diagram and find out how many people live in one of the regions with 5 sides. Note the [region outlined in white](->#population-pentagon) in the image below.
+
+    // TODO: Show voronoi diagram
+
+Just by looking at this region, it seems that [[more | less]] students will attend the school in this region than the school in the triangular region we explored above. The region looks similar in size, so it’s hard to be sure just by looking. Let’s find its area by splitting it up into rectangles and triangles and compare the area to the area of the triangular region. 
+
+    // TODO: Voronoi region area exercise
+
+So, indeed more (less?) students will likely attend the school in the pentagon region than the triangular region.
+
+---
+
+> id: polygon-names
+
+---
+
+> id: simple-tangram
+
+---
+
+> id: football-polygons
+
+---
+
+> id: area-methods
+
+---
+
+> id: triangle-tangram
 
 ---
 
