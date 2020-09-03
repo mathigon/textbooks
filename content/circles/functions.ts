@@ -592,6 +592,10 @@ export function solids($step: Step) {
   });
 }
 
+/**
+ * DIAGRAM mimic this for sharing a variable b/t text and THREE.
+ * @param $step
+ */
 export function cylinderPrism($step: Step) {
   const $solids = $step.$$('x-solid') as Solid[];
 
@@ -605,6 +609,7 @@ export function cylinderPrism($step: Step) {
     $solids[0].addWireframe(
         new THREE.CylinderGeometry(1.4, 1.4, 2.8, 256, 1, true));
 
+    // DIAGRAM a 2d circle
     const topMaterial = Solid.translucentMaterial(0xaaaaaa);
     const top = new THREE.Mesh(new THREE.CircleGeometry(1.4, 32), topMaterial);
     top.rotateX(Math.PI / 2);
@@ -622,6 +627,7 @@ export function cylinderPrism($step: Step) {
   $solids[1].addMesh((scene) => {
     const cylinder = $solids[1].addOutlined(new THREE.Geometry(), 0xaaaaaa);
 
+    // DIAGRAM how to watch for changes to adjust a THREE
     $step.model.watch((state: any) => {
       const geo = new THREE.CylinderGeometry(1.4, 1.4, 2.8, state.n, 1);
       cylinder.updateGeometry!(geo);
@@ -711,6 +717,7 @@ export function cavalieri($step: Step) {
   $solids[0].on('rotate', (e) => $solids[1].rotate(e.quaternion));
 }
 
+// DIAGRAM another cool example
 export function cylinderSurface($step: Step) {
   const $solid = $step.$('x-solid') as Solid;
   const $slider = $step.$('x-slider') as Slider;

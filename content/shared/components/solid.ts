@@ -97,6 +97,7 @@ function createEdges(geometry: THREE.Geometry, material: THREE.Material, maxAngl
 // -----------------------------------------------------------------------------
 // Custom Element
 
+// DIAGRAM lots of useful stuff in here.
 @register('x-solid')
 export class Solid extends CustomElementView {
   private isReady = false;
@@ -180,6 +181,7 @@ export class Solid extends CustomElementView {
     };
   }
 
+  // DIAGRAM gonna need a couple arrows
   addArrow(from: Vector, to: Vector, color = STROKE_COLOR) {
     const material = new THREE.MeshBasicMaterial({color});
     const obj = new THREE.Object3D() as Object3D;
