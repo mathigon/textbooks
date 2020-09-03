@@ -13,6 +13,17 @@ import {VoronoiStep} from './types';
 
 declare const d3: any;
 
+const locationPoints = [
+  new Point(40, 60),
+  new Point(260, 40),
+  new Point(500, 80),
+  new Point(400, 180),
+  new Point(320, 138),
+  new Point(300, 330),
+  new Point(228, 240),
+  new Point(170, 130)
+];
+
 export async function voronoi($step: VoronoiStep) {
 
   await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
@@ -28,12 +39,11 @@ export async function voronoi($step: VoronoiStep) {
   $step.model.vorOpacity = 0;
   $step.model.cells = [];
 
-  const cafePoints: Point[] = [
-    $step.model.a, $step.model.b, $step.model.c, $step.model.d,
-    $step.model.e, $step.model.f, $step.model.g, $step.model.h
-  ];
+  locationPoints.forEach(locationPoint => {
+    $geopad.drawPoint(locationPoint, {classes: 'red', interactive: false});
+  });
 
-  const dt = d3.Delaunay.from(cafePoints, getX, getY);
+  const dt = d3.Delaunay.from(locationPoints, getX, getY);
   const vor = dt.voronoi(bounds);
 
   const cellsRaw: number[][][] = Array.from(vor.cellPolygons());
@@ -128,8 +138,8 @@ export async function voronoi($step: VoronoiStep) {
 
       let shortest = {len: Number.POSITIVE_INFINITY, ind: 0};
 
-      cafePoints.forEach((cafePoint, i) => {
-        const newEdge = new Segment(cafePoint, gPoint.value!);
+      locationPoints.forEach((locationPoint, i) => {
+        const newEdge = new Segment(locationPoint, gPoint.value!);
         if (newEdge.length < shortest.len) {
           shortest = {len: newEdge.length, ind: i};
         }
