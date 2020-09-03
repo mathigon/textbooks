@@ -9,6 +9,8 @@ import {isPrime, lcm, numberFormat, Random} from '@mathigon/fermat';
 import {delay, isOneOf, list, sortBy, total} from '@mathigon/core';
 import {Gameplay, Slideshow, Step} from '../shared/types';
 
+import './components/prime-disk';
+
 
 // -----------------------------------------------------------------------------
 // Shared Utilities and Classes
