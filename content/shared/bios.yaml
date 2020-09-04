@@ -508,6 +508,14 @@ copernicus:
     - title: Planetary Orbits
       url: /course/circles/conic-sections#orbits
 
+curry:
+  born: 1900
+  died: 1982
+  name: Curry
+  full: Haskell Brooks Curry
+  bio: | 
+    __Haskell Brooks Curry__ (1900 – 1982) was an American mathematician and logician. Curry is best known for his work in combinatory logic. While the initial concept of combinatory logic was based on a single paper by Moses Schönfinkel, Curry did much of the development. Curry is also known for _Curry's paradox_ and the _Curry–Howard correspondence_. There are three programming languages named after him, Haskell, Brook and Curry, as well as the concept of currying, a technique used for transforming functions in mathematics and computer science.
+
 de-moivre:
   born: 1667
   died: 1754
