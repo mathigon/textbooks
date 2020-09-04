@@ -5,7 +5,7 @@
 
 
 import {Obj} from '@mathigon/core';
-import {CustomElementView, ElementView, register} from '@mathigon/boost';
+import {$, $$, CustomElementView, ElementView, register} from '@mathigon/boost';
 import {createEnigmaPathSVG} from './enigma-path-svg';
 
 const DEBUG = false;
@@ -286,6 +286,13 @@ export class Machine {
 export class Enigma extends CustomElementView {
   private $lights: Obj<ElementView> = {};
 
+  private $rotorupcontrols: ElementView[] = [];
+  private $rotorsettings: ElementView[] = [];
+  private $rotordncontrols: ElementView[] = [];
+
+  private $ciphertext!: ElementView;
+  private $cipherpath!: ElementView;
+
   private rotorChoices = [2, 1, 0];
   private initialPositions = ['A', 'A', 'A'];
 
@@ -294,6 +301,20 @@ export class Enigma extends CustomElementView {
   public svgview:any;
 
   ready() {
+    this.$$('.rotorup').forEach((r, i) => {
+      r.on('pointerdown', () => this.rotate(i, true));
+      this.$rotorupcontrols.push(r);
+    });
+
+    for (const $r of this.$$('.rotorsetting')) {
+      this.$rotorsettings.push($r);
+    }
+
+    this.$$('.rotordn').forEach((r, i) => {
+      r.on('pointerdown', () => this.rotate(i, false));
+      this.$rotordncontrols.push(r);
+    });
+
     for (const $l of this.$$('.lightboard .key')) {
       this.$lights[$l.text] = $l;
     }
@@ -318,22 +339,23 @@ export class Enigma extends CustomElementView {
     };
 
     this.svgview = createEnigmaPathSVG('enigma_svg', this.machine, keypresscallback);
-    this.connectRotorControls();
     this.svgview.drawPath(null);
 
     new PlugboardView('enigmaview', this.machine, this.svgview);
-    document.getElementById('clearciphertext')!.addEventListener('click', () => {
-      document.getElementById('ciphertext')!.innerHTML = '&nbsp;';
-      document.getElementById('cipherpath')!.innerHTML = '&nbsp;';
+    this.$ciphertext = this.$('.ciphertext pre') as ElementView;
+    this.$cipherpath = this.$('.cipherpath pre') as ElementView;
+    this.$('.clearciphertext')!.on('click', () => {
+      this.$ciphertext.html = '&nbsp;';
+      this.$cipherpath.html = '&nbsp;';
     });
 
-    document.getElementById('toggleplugboard')!.addEventListener('click', () => this.toggleplugboard());
+    $('.toggleplugboard')!.on('click', () => this.toggleplugboard());
   }
 
   toggleplugboard() {
-    const usePlugboard = document.getElementById('plugboard')!.hidden;
-    document.getElementById('plugboard')!.hidden = !usePlugboard;
-    this.machine.setUsePlugboard(usePlugboard);
+    const isUsingPlugboard = this.machine.isUsingPlugboard();
+    $('.plugboard')!.toggle(!isUsingPlugboard);
+    this.machine.setUsePlugboard(!isUsingPlugboard);
     this.svgview.drawPath(null);
   }
 
@@ -352,25 +374,17 @@ export class Enigma extends CustomElementView {
 
   showRotorPositions() {
     const positions = this.machine.rotorPositions();
-    document.getElementById('rotor3setting')!.innerHTML = positions[2];
-    document.getElementById('rotor2setting')!.innerHTML = positions[1];
-    document.getElementById('rotor1setting')!.innerHTML = positions[0];
+    for (let i = 0; i < 3; ++i) {
+      // the 3 rotors are indexed right to left on the machine
+      this.$rotorsettings[i]!.text = positions[2 - i];
+    }
   }
 
   rotate(i:number, up:boolean) {
-    this.machine.rotate(i, up);
+    // the 3 rotors are indexed right to left on the machine
+    this.machine.rotate(2 - i, up);
     this.showRotorPositions();
     this.svgview.drawPath(null);
-  }
-
-  connectRotorControls() {
-    document.getElementById('rotor1up')!.addEventListener('pointerdown', () => this.rotate(0, true));
-    document.getElementById('rotor2up')!.addEventListener('pointerdown', () => this.rotate(1, true));
-    document.getElementById('rotor3up')!.addEventListener('pointerdown', () => this.rotate(2, true));
-    document.getElementById('rotor1dn')!.addEventListener('pointerdown', () => this.rotate(0, false));
-    document.getElementById('rotor2dn')!.addEventListener('pointerdown', () => this.rotate(1, false));
-    document.getElementById('rotor3dn')!.addEventListener('pointerdown', () => this.rotate(2, false));
-    this.showRotorPositions();
   }
 
   updateDisplay(encodingpath:string[]) {
@@ -379,9 +393,8 @@ export class Enigma extends CustomElementView {
     }
     const encodedletter = getLast(encodingpath);
     this.showRotorPositions();
-    document.getElementById('cipherpath')!.innerHTML = encodingpath.join('&#x27f6;');
-    const cipherTextEl = document.getElementById('ciphertext') as HTMLElement;
-    let curtext = cipherTextEl.innerHTML;
+    this.$cipherpath.html = encodingpath.join('&#x27f6;');
+    let curtext = this.$ciphertext.html;
     const l = curtext.replace(/[\s+\\n]/g, '').length;
     if (l && l % 50 == 0) {
       curtext += '\n';
@@ -389,30 +402,32 @@ export class Enigma extends CustomElementView {
       curtext += ' ';
     }
     curtext += encodedletter;
-    cipherTextEl.innerHTML = curtext;
+    this.$ciphertext.html = curtext;
   }
 }
 
 class PlugboardView {
-  private readonly plugboard = document.getElementById('plugboard');
   private readonly enigmaview:HTMLElement;
   private readonly machine:Machine;
   private readonly svgview:any;
 
   private dragging = false;
   private mouseStart:number[] | null = null;
-  private startPlug:HTMLElement | null = null;
+  private startPlug:ElementView | undefined = undefined;
   private join = false;
-  private path:SVGPathElement | null = null;
+  private path:ElementView | undefined = undefined;
   private cablecount = 0;
   private curcable = 0;
   private cables: { [letter: string]: number} = {};
   private freecables = Array(10).fill(true);
+  private cablepaths:ElementView[];
+  private $plugs: Obj<ElementView> = {};
 
   constructor(enigmaviewid:string, machine:Machine, svgview:any) {
     this.enigmaview = document.getElementById(enigmaviewid) as HTMLElement;
     this.machine = machine;
     this.svgview = svgview;
+    this.cablepaths = $$('.plugtarget>path');
     // avoid the I-beam cursor bug when dragging cables
     this.enigmaview.onmouseover = () => {
       document.onselectstart = function() {
@@ -425,14 +440,18 @@ class PlugboardView {
       };
     };
 
+    for (const $p of $$('.plugboard .plug')) {
+      this.$plugs[$p.text] = $p;
+    }
+
     this.setupListeners();
   }
 
   setupListeners() {
     const plugboard = this.machine.plugboard;
-    document.querySelectorAll<HTMLElement>('.plug').forEach(p => {
-      p.addEventListener('pointerdown', () => {
-        const letter = p.innerText;
+    $$('.plug').forEach(p => {
+      p.on('pointerdown', () => {
+        const letter = p.text;
         const check = plugboard.encode(letter);
         if (plugboard.encode(letter) === letter) {
           if (this.cablecount == 10) {
@@ -440,40 +459,40 @@ class PlugboardView {
           }
           this.dragging = true;
           this.mouseStart = this.getPlugCoordinates(p);
-          p.classList.add('plugOn');
+          p.addClass('plugOn');
           this.startPlug = p;
           this.curcable = this.freecables.findIndex(e => e); // next free cable index
           this.join = false;
         } else {
-          p.classList.remove('plugOn');
-          this.startPlug = document.getElementById('plug' + check);
-          plugboard.disconnect(p.innerHTML);
-          this.curcable = this.cables[p.innerHTML];
-          document.getElementById('path' + this.curcable)!.innerHTML = '';
+          p.removeClass('plugOn');
+          this.startPlug = this.$plugs[check];
+          plugboard.disconnect(letter);
+          this.curcable = this.cables[letter];
+          this.cablepaths[this.curcable]!.html = '';
           this.freecables[this.curcable] = true;
-          delete this.cables[p.innerHTML];
+          delete this.cables[letter];
           this.cablecount--;
           this.svgview.drawMachine();
           this.dragging = true;
-          this.mouseStart = this.getPlugCoordinates(this.startPlug as EventTarget);
+          this.mouseStart = this.getPlugCoordinates(this.startPlug as ElementView);
           this.join = false;
         }
         return false;
       });
-      p.addEventListener('pointerup', () => {
+      p.on('pointerup', () => {
         if (!this.startPlug) {
           return;
         }
-        const letter = p.innerText;
-        if (letter === this.startPlug.innerHTML) {
-          this.startPlug.classList.remove('plugOn');
-          this.startPlug = null;
+        const letter = p.text;
+        if (letter === this.startPlug.text) {
+          this.startPlug.removeClass('plugOn');
+          this.startPlug = undefined;
         } else if (plugboard.encode(letter) === letter) {
           this.setCableEndPt(this.getPlugCoordinates(p));
-          p.classList.add('plugOn');
-          plugboard.connect(this.startPlug.innerHTML, p.innerHTML);
-          this.cables[this.startPlug.innerHTML] = this.curcable;
-          this.cables[p.innerHTML] = this.curcable;
+          p.addClass('plugOn');
+          plugboard.connect(this.startPlug.text, letter);
+          this.cables[this.startPlug.text] = this.curcable;
+          this.cables[letter] = this.curcable;
           this.freecables[this.curcable] = false;
           this.cablecount++;
           this.svgview.drawMachine();
@@ -486,16 +505,16 @@ class PlugboardView {
     document.addEventListener('pointerup', () => {
       this.dragging = false;
       if (this.startPlug && !this.join) {
-        this.startPlug.classList.remove('plugOn');
+        this.startPlug.removeClass('plugOn');
         if (this.path) {
-          this.path!.removeAttribute('d');
+          this.path.removeAttr('d');
         }
         this.cablecount--;
       }
-      this.startPlug = null;
+      this.startPlug = undefined;
     });
 
-    document.getElementById('plugboard')!.addEventListener('pointermove', e => {
+    $('.plugboard')!.on('pointermove', e => {
       if (this.dragging) {
         const mouseEnd = this.getClickCoordinates(e, e.currentTarget as EventTarget);
         this.setCableEndPt(mouseEnd);
@@ -507,13 +526,13 @@ class PlugboardView {
     if (!this.mouseStart) {
       return;
     }
-    this.path = document!.getElementById('path' + this.curcable) as unknown as SVGPathElement;
+    this.path = this.cablepaths[this.curcable];
     const dx = this.mouseStart[0] - endpt[0];
     const dy = this.mouseStart[1] - endpt[1];
     const dr = 6 * Math.sqrt(dx * dx + dy * dy) / 4;
     const start = endpt[0] > this.mouseStart[0] ? this.mouseStart : endpt;
     const end = endpt[0] > this.mouseStart[0] ? endpt : this.mouseStart;
-    this.path.setAttribute('d', 'M' + end[0] + ',' + end[1] + 'A' + dr.toFixed(2) + ',' + (1.3 * dr).toFixed(2) +
+    this.path.setAttr('d', 'M' + end[0] + ',' + end[1] + 'A' + dr.toFixed(2) + ',' + (1.3 * dr).toFixed(2) +
       ' 0 0,1 ' + start[0] + ',' + start[1]);
   }
 
@@ -524,13 +543,10 @@ class PlugboardView {
     return [x, y];
   }
 
-  private getPlugCoordinates(plug:EventTarget) {
-    const plugElement = plug as HTMLElement;
-    const rect = plugElement.getBoundingClientRect();
-    const parentrect = plugElement.parentElement!.getBoundingClientRect();
+  private getPlugCoordinates(plug:ElementView) {
     return [
-      rect.x - parentrect.x + plugElement.clientWidth / 2 + 2,
-      rect.y - parentrect.y + plugElement.clientHeight / 2 + 2
+      plug.bounds.left - plug.parent!.bounds.left + plug.width / 2 + 2,
+      plug.bounds.top - plug.parent!.bounds.top + plug.height / 2 + 2
     ];
   }
 }

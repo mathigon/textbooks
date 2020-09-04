@@ -1,6 +1,20 @@
 template#enigma
     .enigma#enigmaview
-      .lightboard#lightboard
+      .rotors
+        .rotorctl
+          span.rotorup &#8593;
+          span.rotorup &#8593;
+          span.rotorup &#8593;
+        .rotorshow
+          span.rotorsetting A
+          span.rotorsetting A
+          span.rotorsetting A
+        .rotorctl
+          span.rotordn &#8595;
+          span.rotordn &#8595;
+          span.rotordn &#8595;
+
+      .lightboard
         for key in 'QWERTZUIO'.split('')
           .key= key
         for key in 'ASDFGHJK'.split('')
@@ -8,7 +22,7 @@ template#enigma
         for key in 'YXCVBNML'.split('')
           .key= key
 
-      .keyboard#keyboard
+      .keyboard
         for key in 'QWERTZUIO'.split('')
           .key= key
         for key in 'ASDFGHJK'.split('')
@@ -17,43 +31,22 @@ template#enigma
           .key= key
   
       .plugboard#plugboard
-          <svg id="target">			
-            <path class="plugcable" id="path0" />
-            <path class="plugcable" id="path1" />
-            <path class="plugcable" id="path2" /> 
-            <path class="plugcable" id="path3" />
-            <path class="plugcable" id="path4" />
-            <path class="plugcable" id="path5" />
-            <path class="plugcable" id="path6" />
-            <path class="plugcable" id="path7" />
-            <path class="plugcable" id="path8" />
-            <path class="plugcable" id="path9" />
-          </svg>
+        svg.plugtarget
+          for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+            path.plugcable
           
-          .plug#plugQ Q
-          .plug#plugW W
-          .plug#plugE E
-          .plug#plugR R
-          .plug#plugT T
-          .plug#plugZ Z
-          .plug#plugU U
-          .plug#plugI I
-          .plug#plugO O
-          
-          .plug#plugA A
-          .plug#plugS S
-          .plug#plugD D
-          .plug#plugF F
-          .plug#plugG G
-          .plug#plugH H
-          .plug#plugJ J
-          .plug#plugK K
-
-          .plug#plugY Y
-          .plug#plugX X
-          .plug#plugC C
-          .plug#plugV V
-          .plug#plugB B
-          .plug#plugN N
-          .plug#plugM M
-          .plug#plugL L
+        for plug in 'QWERTZUIO'.split('')
+          .plug= plug
+        for plug in 'ASDFGHJK'.split('')
+          .plug= plug
+        for plug in 'YXCVBNML'.split('')
+          .plug= plug
+      
+      .showcode
+        p
+        .cipherpath
+          pre
+        p  
+        .ciphertext
+          pre
+        button.clearciphertext Clear

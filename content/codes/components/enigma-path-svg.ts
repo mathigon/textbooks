@@ -3,6 +3,7 @@
  */
 
 import {Machine} from './enigma';
+import {$, $$, ElementView} from '@mathigon/boost';
 
 interface EnigmaPathSVG {
   drawMachine: (encodingpath: any) => void;
@@ -12,8 +13,6 @@ interface EnigmaPathSVG {
 interface SVGAnimateMotionElement extends SVGAnimationElement {
   beginElement(): SVGAnimateMotionElement;
 }
-
-// TODO switch for include/exclude the plugboard
 
 /*
   On a keypress drawPath will be called and the encoded path returned via the callback
@@ -35,8 +34,8 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     return pos ? pos : letters.length;
   }
 
-  function addText(layer: SVGGElement, text: string, x: number, y: number, cls: string) {
-    layer.innerHTML += '<text text-anchor="middle" alignment-baseline="middle" x="' +
+  function addText(layer: ElementView, text: string, x: number, y: number, cls: string) {
+    layer.html += '<text text-anchor="middle" alignment-baseline="middle" x="' +
       x + '" y="' + y + '" class="' + cls + '">' + text + '</text>';
   }
 
@@ -66,7 +65,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     return 'M' + points.map(p => p.x + ',' + p.y).join('L') + (close ? 'Z' : '');
   }
 
-  function addRoundRect(layer:SVGGElement, x:number, y:number, width:number, height:number, rl:number, rr:number,
+  function addRoundRect(layer:ElementView, x:number, y:number, width:number, height:number, rl:number, rr:number,
       stroke:string, fill:string) {
     let path = '<path d="';
     path += move(x + rl, y);
@@ -79,7 +78,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     path += line(x, y + rl);
     path += arc(rl, x + rl, y);
     path += '" stroke-width="1" stroke="' + stroke + '" fill="url(#' + fill + ')" />';
-    layer.innerHTML += path;
+    layer.html += path;
   }
 
   const svgdoc:Document = document.getElementById(svgid) as unknown as Document;
@@ -100,33 +99,32 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
   const labelOuterCol = 'rgb(160, 160, 160)';
   const labelInnerCol = 'rgb(240, 240, 240)';
 
-  const defs = svgdoc.getElementById(svgid + '_defs') as HTMLElement;
-  const styles = svgdoc.getElementById(svgid + '_styles') as HTMLElement;
-  const groups = svgdoc.getElementsByTagName('g');
-  const content = groups[0];
-  const encpath = groups[1];
-  const animpath = groups[2];
+  const defs = $('.' + svgid + '_defs') as ElementView;
+  const styles = $('.' + svgid + '_styles') as ElementView;
+  const content = $('.' + svgid + '_machine_content') as ElementView;
+  const encpath = $('.' + svgid + '_path_content') as ElementView;
+  const animpath = $('.' + svgid + '_animate_content') as ElementView;
 
-  defs.innerHTML += makeLinearGradient('grad_refl', [0, 0, 0, 1],
+  defs.html += makeLinearGradient('grad_refl', [0, 0, 0, 1],
       [{offset: 0, col: reflTopCol},
         {offset: 1, col: reflBotCol}]);
 
-  defs.innerHTML += makeLinearGradient('grad_rotor', [0, 0, 0, 1],
+  defs.html += makeLinearGradient('grad_rotor', [0, 0, 0, 1],
       [{offset: 0, col: rotorTopCol},
         {offset: 1, col: rotorBotCol}]);
 
-  defs.innerHTML += makeLinearGradient('grad_rotor_label', [0, 0, 0, 1],
+  defs.html += makeLinearGradient('grad_rotor_label', [0, 0, 0, 1],
       [{offset: 0, col: labelOuterCol},
         {offset: 0.33, col: labelInnerCol},
         {offset: 0.67, col: labelOuterCol}]);
 
-  defs.innerHTML += makeLinearGradient('grad_plug', [0, 0, 0, 1],
+  defs.html += makeLinearGradient('grad_plug', [0, 0, 0, 1],
       [{offset: 0, col: plugTopCol},
         {offset: 1, col: plugBotCol}]);
 
   // setup the text styles
 
-  styles.innerHTML +=
+  styles.html +=
     '.heading { font: normal 14px sans-serif; fill:black;}' +
     '.normal { font: normal 12px sans-serif; fill:black; }' +
     '.inletter { font: normal 12px sans-serif; fill:' + incolour + '; }' +
@@ -158,7 +156,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     addRoundRect(content, x, y, width, height, rl, rr, 'black', fill);
   }
 
-  function drawInternalWire(layer:SVGGElement, width:number, gap:number, x:number, iny:number, outy:number, step?:number) {
+  function drawInternalWire(layer:ElementView, width:number, gap:number, x:number, iny:number, outy:number, step?:number) {
     const pts = [];
 
     pts.push(makept(x + width + gap / 2, iny));
@@ -172,7 +170,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
       pts.push(makept(x - gap / 2, outy));
     }
 
-    layer.innerHTML += path(pathpts(pts), 0.5, '#888', 'none');
+    layer.html += path(pathpts(pts), 0.5, '#888', 'none');
   }
 
   function pressKey(e:MouseEvent) {
@@ -195,26 +193,24 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 
     while (i < letters.length) {
       y += dy;
-      content.innerHTML += makekey(x, y, letters[i++], '4c4c4c', null);
+      content.html += makekey(x, y, letters[i++], '4c4c4c', null);
       y += dy;
       const l = move(x - 10, y) + line(x + 20, y);
-      content.innerHTML += path(l, 0.5, '#888', 'none');
-      content.innerHTML += makekey(x + 20, y, letters[i++], '4c4c4c', null);
+      content.html += path(l, 0.5, '#888', 'none');
+      content.html += makekey(x + 20, y, letters[i++], '4c4c4c', null);
     }
-    content.querySelectorAll<SVGElement>('.keyletter, .keycircle').forEach(
-        e => e.addEventListener('click', pressKey));
+    $$('.keyletter, .keycircle').forEach(e => e.on('pointerdown', pressKey));
   }
 
-  function highlightKeys(layer:SVGGElement, x:number, y:number, dy:number, gap:number, key:string, lamp:string) {
+  function highlightKeys(layer:ElementView, x:number, y:number, dy:number, gap:number, key:string, lamp:string) {
     const keyy = getYPos(key, 0);
     const lampy = getYPos(lamp, 0);
-    layer.innerHTML += makekey(x + (keyy % 2 ? 0 : 20), y + keyy * dy, key, incolour, 'highlight');
-    layer.innerHTML += makekey(x + (lampy % 2 ? 0 : 20), y + lampy * dy, lamp, outcolour, 'highlight');
-    layer.querySelectorAll<SVGElement>('.highlight').forEach(
-        e => e.addEventListener('click', pressKey));
+    layer.html += makekey(x + (keyy % 2 ? 0 : 20), y + keyy * dy, key, incolour, 'highlight');
+    layer.html += makekey(x + (lampy % 2 ? 0 : 20), y + lampy * dy, lamp, outcolour, 'highlight');
+    $$('.highlight').forEach(e => e.on('pointerdown', pressKey));
   }
 
-  function drawArrow(layer:SVGGElement, x:number, y:number, forward:boolean) {
+  function drawArrow(layer:ElementView, x:number, y:number, forward:boolean) {
     const colour = forward ? incolour : outcolour;
 
     let a;
@@ -223,7 +219,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     } else {
       a = move(x, y) + line(x - 10, y + 7) + line(x - 10, y - 7) + 'Z';
     }
-    layer.innerHTML += path(a, 2, colour, colour);
+    layer.html += path(a, 2, colour, colour);
   }
 
   function drawRotor(width: number, gap: number, x: number, y: number, dy: number, heading: string,
@@ -237,7 +233,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     if (notch) {
       const notchy = y + charToIndex(notch) * dy;
       const l = move(x, notchy + dy) + line(x - gap, y + offset2 * dy + dy);
-      content.innerHTML += path(l, 1, 'orange', 'none');
+      content.html += path(l, 1, 'orange', 'none');
     }
 
     if (connections) {
@@ -269,7 +265,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
       pts.push(makept(labelx + size, labely));
       pts.push(makept(labelx + size, labely + size));
       pts.push(makept(labelx, labely + size));
-      content.innerHTML += path(pathpts(pts, true), 1, 'black', 'url(#grad_rotor_label)');
+      content.html += path(pathpts(pts, true), 1, 'black', 'url(#grad_rotor_label)');
 
       addText(content, letters[offset1], x + width / 2, offsety, 'normal');
     }
@@ -326,9 +322,9 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
   };
 
   me.drawMachine = function() {
-    encpath.innerHTML = '';
-    content.innerHTML = '';
-    animpath.innerHTML = '';
+    encpath.html = '';
+    content.html = '';
+    animpath.html = '';
 
     const width = 60;
     const gap = 50;
@@ -468,10 +464,10 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
   };
 
   function showPath(x: number, y: number, dy: number, gap: number, width: number, encodingpath: string[],
-      stack: any[], layer: SVGGElement) {
+      stack: any[], layer: ElementView) {
     const showSegment = function(seg: { pts: any[]; colour: string; arrow: { x: number; y: number; };
       forward: boolean; label: { letter: string; pt: { x: number; y: number; }; cls: string; }; }) {
-      layer.innerHTML += path(pathpts(seg.pts), 2, seg.colour, 'none');
+      layer.html += path(pathpts(seg.pts), 2, seg.colour, 'none');
       if (seg.arrow) {
         drawArrow(layer, seg.arrow.x, seg.arrow.y, seg.forward);
       }
@@ -480,7 +476,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
       }
     };
 
-    layer.innerHTML = '';
+    layer.html = '';
     while (stack.length) {
       showSegment(stack.pop());
     }
@@ -490,19 +486,19 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
   }
 
   function animatePath(x: number, y: number, dy: number, gap: number, width: number, encodingpath: string[],
-      stack: any[], layer: SVGGElement) {
+      stack: any[], layer: ElementView) {
     const key = encodingpath[0];
     const inkeyelement = makekey(0, 0, key, incolour, null);
 
     let anim = '';
 
-    layer.innerHTML += '';
+    layer.html += '';
     anim += '<g id=\'inkeyanim\'><g id=\'animkey\'>' + inkeyelement + '</g>';
     let i = 0;
     while (i < stack.length) {
       const s = stack[i];
       const pathid = 'p' + i;
-      layer.innerHTML += path(pathpts(s.pts), 2, s.colour, 'none', pathid);
+      layer.html += path(pathpts(s.pts), 2, s.colour, 'none', pathid);
       const lastpath = svgdoc.getElementById(pathid) as unknown as SVGPathElement;
       const pathlength:number = lastpath.getTotalLength();
       lastpath.setAttribute('stroke-dasharray', pathlength.toString());
@@ -529,7 +525,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     anim += '<set attributeName="visibility" to="hidden" begin="a' + i + '.end" />';
     anim += '</g>';
 
-    layer.innerHTML += anim;
+    layer.html += anim;
     svgdoc.querySelectorAll('animateMotion').forEach(am => am.addEventListener('beginEvent',
         am => {
           const thekey = svgdoc.getElementById('animkey') as HTMLElement;
@@ -549,7 +545,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
               break;
             case 'a11':
               setTimeout(() => {
-                layer.innerHTML = '';
+                layer.html = '';
                 showPath(x, y, dy, gap, width, encodingpath, stack, encpath);
               }, 1000);
               break;
