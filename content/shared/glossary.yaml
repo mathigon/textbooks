@@ -192,6 +192,12 @@ base-10:
     commonly used around the world. Every digit in a number can have one of ten
     different values, from 0 to 9.
 
+binary-numbers:
+  title: Binary Numbers
+  text: __Binary numbers__ are a way to express numbers in the base-2 numberal
+    system, typically using the symbols 0 and 1. It is commonly used in digital
+    electronics.
+
 bipartite-graph:
   title: Bipartite graph
   text: A (complete) __bipartite graph__ consists of two sets of vertices. Every
@@ -290,6 +296,26 @@ circumcircle:
     three of its vertices.
   image: circumcircle.svg
   link: /course/triangles/properties#circumcircle-1
+
+chaos:
+  title: Chaos
+  text: |
+    __Chaos theory__ is a branch of mathematics about dynamical systems that
+    look random and irregular. They are often governed by deterministic laws
+    that are highly sensitive to initial conditions.
+
+    The _butterfly effect_ describes how tiny changes in the state of a system
+    can, over time, lead to large changes in a later change.
+
+code:
+  title: Codes
+  text: |
+    A __code__ is a system of rules used to convert _information_ (e.g. letters,
+    sounds, words, or images) into another form. Some codes are secret, and
+    can only be deciphered by the intended recipient. Other codes are designed
+    for a specific transmission or storage medium (e.g. _morse codes_ for
+    telegraph lines, or _binary code_ for computers). Our language and alphabet
+    are other examples of codes.
 
 coefficient:
   title: Coefficient
@@ -523,6 +549,11 @@ dodecahedron:
   text: The __dodecahedron__ is a Platonic solid and consists of 12 faces that
     are regular pentagons. It has 20 vertices and 30 edges.
   link: /course/polyhedra/platonic#platonic-overview
+
+domain:
+  title: Domain
+  text: The __domain__ of a function or relation is the set of all possible
+    _input values_ (often shown on the _x_-axis in a coordinate system).
 
 dot-annihilation:
   title: Annihilation
@@ -1384,6 +1415,11 @@ radioactive:
   text: __Radioactive decay__ is a physical process by which unstable atoms
     break apart and release energy.
 
+range:
+  title: Range
+  text: The __range__ of a function or relation is the set of all possible
+    _output values_ (often shown on the _y_-axis in a coordinate system).
+
 rational-numbers:
   title: Rational numbers
   text: __Rational numbers__ are numbers that can be expressed as a fraction
@@ -1428,6 +1464,14 @@ regular-polygon:
     length and all interior angles have the same size.
   image: regular-polygon.svg
   link: /course/polyhedra/polygons#regular-polygons
+
+relation:
+  title: Relation
+  text: |
+    A __relation__ is a way to represent connections between the elements in
+    two different sets (called the _domain_ and _range_). We can write a
+    relation as a set of ordered pairs (_x_, _y_), where _x_ is an element
+    from the domain, and _y_ is an element from the range.
 
 rhombus:
   title: Rhombus
@@ -1710,6 +1754,12 @@ transformation-image:
   text: After transforming a geometric shape, the result is called its
     __image__. It is often denoted by adding a ’ to the end of its label.
   link: /course/transformations/rigid#transformations
+
+transistor:
+  title: Transistors
+  text: A __transistor__ is a small electronic device consisting of
+    semiconductors like _silicon_. It was first proposed in 1926, and is the
+    fundamental building block of _integrated circuits_ in computers.
 
 translation:
   title: Translation
