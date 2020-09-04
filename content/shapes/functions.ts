@@ -51,20 +51,7 @@ export async function voronoi($step: VoronoiStep) {
     $geopad.drawPoint(locationPoint, {classes: 'red', interactive: false});
   });
 
-  const dt = d3.Delaunay.from(locationPoints, getX, getY);
-  const vor = dt.voronoi(bounds);
-
-  const cellsRaw: number[][][] = Array.from(vor.cellPolygons());
-
-  const cellPolys =
-    cellsRaw.map(cellRaw => {
-      const cellPoints = cellRaw.map(pointRaw => {
-        return new Point(...pointRaw);
-      });
-      return new Polygon(...cellPoints);
-    });
-
-  $step.model.cells = cellPolys.map(poly => {
+  $step.model.cells = getVoronoiPolys(bounds).map(poly => {
     return {poly, over: false};
   });
 
@@ -165,6 +152,20 @@ export async function voronoi($step: VoronoiStep) {
     });
   });
 
+}
+
+function getVoronoiPolys(bounds: number[]) {
+  const dt = d3.Delaunay.from(locationPoints, getX, getY);
+  const vor = dt.voronoi(bounds);
+
+  const cellsRaw: number[][][] = Array.from(vor.cellPolygons());
+
+  return cellsRaw.map(cellRaw => {
+    const cellPoints = cellRaw.map(pointRaw => {
+      return new Point(...pointRaw);
+    });
+    return new Polygon(...cellPoints);
+  });
 }
 
 async function handleAnim(index: number, $step: VoronoiStep) {

@@ -42,7 +42,7 @@ School districts  need an accurate estimate of the number of students that may a
 
 {.reveal(when="eight-points")} In our example, using a Voronoi diagram can help schools make estimates of how many students will attend. In London, about 1500 people live in each square kilometer. To use this statistic, we first need to first know the [[area | perimeter]] of each region in the diagram.
 
-{.reveal(when="blank-0")} Some of these regions are shapes we’ve learned about in previous chapters. This shape is a triangle and we can find the area by doing [[1/2]] x base x height.
+{.reveal(when="blank-0")} Some of these regions are shapes we’ve learned about in previous chapters. [This shape](->#triangle-cell) is a triangle and we can find the area by doing [[1/2]] x base x height.
 
 ::: .reveal(when="blank-1")
 Click on the side of the triangle you want to use as the base.
