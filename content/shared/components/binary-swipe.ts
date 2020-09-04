@@ -8,6 +8,7 @@ import {$html, $N, CustomElementView, ElementView, register, slide} from '@mathi
 import {clamp, Point, Random} from '@mathigon/fermat';
 
 const RESISTANCE = 180000;
+const MIN_MOVE = 100;
 
 
 function cardOffset(posn: Point, start: Point): [Point, number] {
@@ -52,16 +53,10 @@ export class BinarySwipe extends CustomElementView {
         if (!$activeCard) return;
         $activeCard.setTransform(...cardOffset(currentPos, startPos));
         const dx = currentPos.subtract(startPos).x;
-        const tooClose = Math.abs(dx) < 100;
-        if (tooClose) {
-          $activeCard.children[0].removeClass('committed-left');
-          $activeCard.children[0].removeClass('committed-right');
+        if (Math.abs(dx) < MIN_MOVE) {
+          $activeCard.removeClass('committed-left committed-right');
         } else {
-          if (dx < 0) {
-            $activeCard.children[0].addClass('committed-left');
-          } else {
-            $activeCard.children[0].addClass('committed-right');
-          }
+          $activeCard.addClass(dx < 0 ? 'committed-left' : 'committed-right');
         }
       },
       end: async (endPos: Point, startPos: Point) => {
@@ -71,13 +66,11 @@ export class BinarySwipe extends CustomElementView {
         const solution = $activeCard._data.solution;
         const dx = endPos.subtract(startPos).x;
         const isCorrect = (dx < 0 && solution === 'a') || (dx > 0 && solution === 'b');
-        const tooClose = Math.abs(dx) < 100;
+        const tooClose = Math.abs(dx) < MIN_MOVE;
 
         if (tooClose || !isCorrect) {
           if (!tooClose) this.trigger('incorrect', {hint: $activeCard._data.hint});
-          $activeCard.removeClass('dragging');
-          $activeCard.children[0].removeClass('committed-left');
-          $activeCard.children[0].removeClass('committed-right');
+          $activeCard.removeClass('dragging committed-left committed-right');
           $activeCard.animate({transform: 'none'}, 300);
           return;
         }
@@ -89,13 +82,10 @@ export class BinarySwipe extends CustomElementView {
         posn = posn.add($mainStack.topLeftPosition).subtract($target.topLeftPosition);
         $activeCard.setTransform(posn, angle);
 
-        $activeCard.children[0].removeClass('committed-left');
-        $activeCard.children[0].removeClass('committed-right');
-
         $target.append($activeCard);
         const deg = Random.uniform(-3, 3);
         $activeCard.animate({transform: `rotate(${deg}deg)`}, 300).promise;
-        $activeCard.removeClass('active dragging');
+        $activeCard.removeClass('active dragging committed-left committed-right');
 
         $activeCard = $cards.pop();
         if ($activeCard) {
