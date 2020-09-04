@@ -367,3 +367,36 @@
   margin: -10px 5px;
   height: 2em;
 }
+
+.factor-table {
+  column-count: 4;
+  margin: 1.5em 24px;
+  div { margin-bottom: 6px; }
+  @media screen and (max-width: 1110px) { column-count: 3; }
+  @media screen and (max-width: 950px) { column-count: 2; }
+
+  .bulb {
+    background: @blue;
+    display: inline-block;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 18px;
+    text-align: center;
+    line-height: 32px;
+    z-index: 1;
+    position: relative;
+    border: 1px solid white;
+  }
+
+  .factors, .total {
+    background: @light-grey;
+    display: inline-block;
+    margin-left: -10px;
+    color: white;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0 8px 0 16px;
+  }
+  .total { border-radius: 0 4px 4px 0; margin-left: 1px; padding: 0 8px; }
+}

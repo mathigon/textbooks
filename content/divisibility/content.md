@@ -33,16 +33,28 @@
             if i
               td(colspan=i)
 
-    // - var i = 2
-    // while i <= 100
-      x-prime-disk(n=i size=60)
-      - i += 1
-
 By now you should be comfortable with addition, subtraction and multiplication
 of integers. Division is slightly different, because you can’t always divide any
 integer by any other. For example 17 divided by 3 is not a whole number – it is
 somewhere in between 5 and 6. You either have to give a remainder (2), or
 express the answer as a decimal number (5.66…).
+
+    // figure
+      x-factor-diagram.var(:n="n + 1")
+      x-slider(steps=99 :bind="n")
+    // - var i = 2
+    // while i <= 50
+      x-prime-disk(n=i size=60)
+      - i += 1
+    // - factors = (n) => Array(n-2).fill(1).map((x, i) => i+1).filter(i => !(n % i))
+    // - total = (a) => a.reduce((a, c) => a + c, 0)
+    
+    // .factor-table
+      for i in [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+        div
+          span.bulb= i
+          span.factors= factors(i).join(', ')
+          span.total= total(factors(i))
 
     .row.padded
       .grow
@@ -244,7 +256,7 @@ is [[14]].
     +grid(40, function(n) { if (!(n % 3)) { var s = '' + n; return +s[0] + (+s[1] || 0); } })
 
 Here we’ve highlighted all numbers which are multiples of three. You can see
-that their digit sums are always [[a multiple of 3|either 0 or 3|odd numbers]].
+that their digit sums are always [[a multiple of 3|either 0 or 3|odd numbers]].
 
 {.reveal(when="blank-0")} So to determine if any number is divisible by 3, you
 just have to calculate its digit sum, and check if the result is also divisible
