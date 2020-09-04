@@ -205,14 +205,14 @@ We already know the sum of all [internal angles](gloss:internal-angle) in
 polygons. For regular polygons all these angles have [[the same size|are alternate angles]],
 so we can work out the size of a single internal angle:
 
-{.text-center.reveal(when="blank-0")} angle = <mfrac><mrow>[[sum of all angles|number of angles]]</mrow><mrow>[[number of angles|sum of all angles]]</mrow></mfrac>
+{.text-center.reveal(when="blank-0")} `"angle" = blank("sum of all angles","number of angles")/
+blank("number of angles","sum of all angles")`
 _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x`._
 
 {.reveal(when="blank-1 blank-2" delay=1000)} If `n=3` we get the size of the
 internal angles of an equilateral triangle – we already know that it must be
 [[60]]°. _{span.reveal(when="blank-3")} In a regular polygon with ${x}{x|6|3,12,1}
-sides, every internal angle is 180° – <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
-${round(180-360/x)}°._
+sides, every internal angle is 180° – `"360°"/var("x")` = ${round(180-360/x)}°._
 
 ---
 > id: regular-area
