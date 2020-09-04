@@ -1194,7 +1194,7 @@ male and female).
 
 {.r} In the following month you would have 13 pairs of rabbits: the 8 ones from the
 previous month, plus 5 new sets of babies. Can you detect a pattern in this
-sequence? _{button.next-step} Continue_
+sequence? [Continue](btn:next)
 
 ---
 > id: rabbits-2
@@ -1877,7 +1877,7 @@ above. Can you find the pattern?
 {.text-center.s-lime.s-vertical} _{span.n}1_, _{span.n}11_, _{.n}21_,
 _{.n}1211_, _{.n}111221_, _{.n}312211_, …
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: look-and-say-1
@@ -2031,7 +2031,7 @@ Pascal’s triangle can be created using a very simple pattern, but it is filled
 with surprising patterns and properties. That’s why it has fascinated
 mathematicians across the world, for hundreds of years.
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 
 ---

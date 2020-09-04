@@ -155,7 +155,7 @@ We now have an equation for _any_ (non-vertical) line in the coordinate plane:
 {.r} where _{.b.orange}m_ and _{.b.cyan}b_ are two numbers we have to fill in.
 As you saw before, _{.b.orange}m_ is the __{.orange}slope__ of the line, and
 _{.b.cyan}b_ is the __{.cyan}*y*-axis intercept__.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: equation-1

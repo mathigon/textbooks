@@ -33,14 +33,14 @@ So how do you measure the height of a mountain?
 
 {.r} Today we can use satellites to measure the height of mountains to within a
 few centimeters – but these did not exist when Radhanath was surveying India.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-0")} Climbers use _altimeters_ to determine their altitude.
 These devices use the difference in air pressure at different heights. However
 this would have required someone to actually climb to the [top of every
 mountain](->.mountain-top) – an extremely difficult feat that was not achieved
 until a century later.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-1")} You could also try using similar triangles, like we
 did in the [previous course](/course/transformations/similarity).
@@ -48,7 +48,7 @@ This method requires knowing the [distance](->.mountain-distance) to the [base
 of the mountain](->.mountain-base): the point at sea level that directly below
 its summit. We can do this for trees or tall buildings, but for mountains this
 point is hidden underneath hundreds of meters of rock.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: intro-2
@@ -69,7 +69,7 @@ In this course you will learn about many different features and properties of
 triangles. These will allow you to measure the height of mountains, but they are
 also of fundamental importance in many other areas of mathematics, science and
 engineering.
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -385,7 +385,7 @@ the angle you want to bisect._
 You probably expected something like this, but it is important to notice that
 there is no obvious reason why this should happen – triangles are just very
 special shapes!
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal(when="next-0")} Points that lie on an angle bisector have the same
 distance from the two lines that form the angle. For example any point on the
@@ -411,13 +411,13 @@ __incircle__ of the triangle, and the center is called the __incenter__.
 {.r} Finding the area of a [rectangle](gloss:rectangle) is easy: you simply
 multiply its width by its height. Finding the area of a triangle is a bit less
 obvious. Let’s start by “trapping” a triangle inside a rectangle.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-0")} The width of the rectangle is the length of the
 [bottom side](target:base) of the triangle (which is called the __base__). The
 height of the rectangle is the [perpendicular distance](target:height) from the
 base to the opposite vertex.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal(when="next-1")} The height divides the triangle into two parts. Notice
 how the [two gaps in the rectangle](target:gap) are exactly as big as the two

@@ -90,7 +90,7 @@ unpredictably.
 {.r} Chaos appears in many unexpected places in nature and mathematics. In this
 course, we will explore some of these examples, and discover how mathematics can
 help us understand them.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: butterfly
@@ -127,7 +127,7 @@ he had rounded some of the input values to fewer decimal places (for example
 0.506 instead of 0.506127). Even though the difference is tiny, less than 0.1%,
 it seems to have been enough to cause the simulation to make completely
 different forecasts.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: butterfly-1
@@ -299,7 +299,7 @@ two weeks of accuracy.
 how often they’d expect certain weather events (like a tornado) to occur in a
 year. These averages can be very accurate, even if we don’t know _when exactly_
 a tornado might happen.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 :::
 

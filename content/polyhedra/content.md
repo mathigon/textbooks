@@ -732,22 +732,22 @@ _{span.reveal(when="blank-0")} The [axis of symmetry](gloss:axis-of-symmetry) is
 triangles](target:triangle1). We know that they are congruent from the
 [SSS](gloss:triangle-sss) condition: both triangles have [three congruent
 sides](target:sss) (red, green and blue).
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-0")} Using [CPOCT](gloss:cpoct), we therefore know that the
 [corresponding angles](target:angles) must also be congruent.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-1")} This means, for example, that the [diagonal](target:d1)
 is a [[bisector|perpendicular|median]] of the [two angles](target:vAngle) at its
 ends.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-2")} We can go even further: if we draw the other diagonal,
 we get [two more, smaller triangles](target:triangle2). These must also be
 congruent, because of the [SAS](gloss:triangle-sss) condition: they have the
 same [two sides and included angle](target:sas).
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal(when="next-3")} This means that [angle α](target:alpha) must also be
 the same as [angle β](target:beta). Since they are adjacent, [supplementary
