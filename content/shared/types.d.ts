@@ -653,7 +653,10 @@ export class Polypad extends CustomElementView {
     $selection: SVGView;
     $strokes: ElementView;
     $grid: ElementView;
+    canDelete: boolean;
+    canCopy: boolean;
     ready(): void;
+    newTile(type: string, options: string): Tile;
     selectRect(start: Point, end: Point): void;
     snap(...points: Point[]): Point | undefined;
     bindSource($el: ElementView, type: string, options: string, $overlay?: ElementView): void;

@@ -104,6 +104,15 @@ All of these regions in the Voronoi diagram are examples of polygons. A polygon 
 {.reveal(when="cards-sorted")} A regular polygon has [[all equal | all different]] side lengths. 
 
 ---
+> id: tangram
+
+Here is a Tangram canvas:
+
+    figure: .tangram
+      x-polypad
+      .shapes
+
+---
 
 > id: populations
 

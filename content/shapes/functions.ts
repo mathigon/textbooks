@@ -6,7 +6,7 @@
 
 import {Point, Polygon, Segment} from '@mathigon/fermat';
 import {animate, CanvasView, loadScript} from '@mathigon/boost';
-import {Geopad, GeoPoint, Step} from '../shared/types';
+import {Geopad, GeoPoint, Polypad, Step} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
 import {VoronoiStep} from './types';
@@ -202,5 +202,26 @@ export function sortPolygons($step: Step) {
   $sort.on('incorrect', ({hint}) => $step.addHint(hint, {class: 'incorrect'}));
   $sort.on('complete', () => {
     $step.score('cards-sorted');
+  });
+}
+
+export function tangram($step: Step) {
+  const $polypad = $step.$('x-polypad') as Polypad;
+  $polypad.$svg.setAttr('viewBox', '0 0 420 420');
+  $polypad.canDelete = $polypad.canCopy = false;
+
+  const tiles = [[2, 4, -90], [4, 2, 0], [6, 4, 0], [3, 7, 0], [7, 2, -90],
+    [4, 5, 0], [6, 6, 90]];  // initial [x, y, rot]
+
+  for (const [i, t] of tiles.entries()) {
+    const tile = $polypad.newTile('tangram', `${i}`);
+    tile.setPosition(new Point(110 + t[0] * 25, 110 + t[1] * 25));
+    tile.setRotation(t[2]);
+  }
+
+  // TODO Allow students to select different silhouettes
+
+  $polypad.on('move-selection rotate-selection', () => {
+    // TODO Check if a shape has been completed
   });
 }
