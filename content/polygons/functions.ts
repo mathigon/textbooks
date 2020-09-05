@@ -4,7 +4,6 @@
 // =============================================================================
 
 
-import {hover} from '@mathigon/boost';
 import {Point} from '@mathigon/fermat';
 import {Geopad, Step} from '../shared/types';
 

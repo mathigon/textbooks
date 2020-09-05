@@ -6,7 +6,6 @@
 
 import {delay, isOneOf} from '@mathigon/core';
 import {Circle, intersections, isCircle, isInteger, isLineLike, Point, round, Segment} from '@mathigon/fermat';
-import {hover} from '@mathigon/boost';
 import {Geopad, GeoPath, Path, Slider, Step} from '../shared/types';
 
 

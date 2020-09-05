@@ -173,8 +173,7 @@ We can also describe this pattern using a special [formula](gloss:formula):
 
 To get the _n_-th triangle number, we take the [[previous|first|next]] triangle
 number and add _n_. For example, if _n_&nbsp;=&nbsp;${n}{n|5|2,20,1}, the
-formula becomes <msub><mi>x</mi><mn>${n}</mn></msub>
-= <msub><mi>x</mi><mn>${n-1}</mn></msub> + ${n}.
+formula becomes `x_var("n") = x_var("n-1") + var("n")`.
 
 ---
 > id: recursive-1
@@ -1194,7 +1193,7 @@ male and female).
 
 {.r} In the following month you would have 13 pairs of rabbits: the 8 ones from the
 previous month, plus 5 new sets of babies. Can you detect a pattern in this
-sequence? _{button.next-step} Continue_
+sequence? [Continue](btn:next)
 
 ---
 > id: rabbits-2
@@ -1387,12 +1386,12 @@ is the ratio of its width and its height:
 
     include svg/golden-5.svg
 
-{.text-center.no-voice} <mfrac><mn>[[13]]</mn><mn>[[8]]</mn></mfrac> _{span.reveal(when="blank-0 blank-1")}= 1.625_
+{.text-center.no-voice} `input(13) / input(8) reveal(= 1.625, "blank-0 blank-1")`
 ::: column(width=100)
 
     include svg/golden-6.svg
 
-{.text-center.no-voice} <mfrac><mn>[[21]]</mn><mn>[[13]]</mn></mfrac> _{span.reveal(when="blank-2 blank-3")}= 1.62…_
+{.text-center.no-voice} `input(21) / input(13) reveal(= 1.62…, "blank-2 blank-3")`
 :::
 
 ---
@@ -1877,7 +1876,7 @@ above. Can you find the pattern?
 {.text-center.s-lime.s-vertical} _{span.n}1_, _{span.n}11_, _{.n}21_,
 _{.n}1211_, _{.n}111221_, _{.n}312211_, …
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: look-and-say-1
@@ -2031,7 +2030,7 @@ Pascal’s triangle can be created using a very simple pattern, but it is filled
 with surprising patterns and properties. That’s why it has fascinated
 mathematicians across the world, for hundreds of years.
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 
 ---

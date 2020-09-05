@@ -827,8 +827,7 @@ Let us think, once more, about networks and maps. Imagine that a delivery
 service has to visit ${tsn}{tsn|8|2,50,1} different cities to distribute
 parcels. We can think of these cities as the vertices in a graph. If all the
 cities are connected by roads, this is a [[complete graph|cycle|bipartite graph]],
-so there are <mfrac><mrow>${tsn} × (${tsn} – 1)</mrow><mn>2</mn></mfrac> =
-${tsn*(tsn-1)/2} edges in total.
+so there are `(var("tsn") × (var("tsn") – 1)) / 2 = var("tsn*(tsn-1)/2")` edges in total.
 
 The delivery truck has to visit all cities, in any order. In the Königsberg
 bridges problem we wanted to find paths which travel along _every edge_ exactly

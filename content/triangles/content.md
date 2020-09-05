@@ -33,14 +33,14 @@ So how do you measure the height of a mountain?
 
 {.r} Today we can use satellites to measure the height of mountains to within a
 few centimeters – but these did not exist when Radhanath was surveying India.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-0")} Climbers use _altimeters_ to determine their altitude.
 These devices use the difference in air pressure at different heights. However
 this would have required someone to actually climb to the [top of every
 mountain](->.mountain-top) – an extremely difficult feat that was not achieved
 until a century later.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-1")} You could also try using similar triangles, like we
 did in the [previous course](/course/transformations/similarity).
@@ -48,7 +48,7 @@ This method requires knowing the [distance](->.mountain-distance) to the [base
 of the mountain](->.mountain-base): the point at sea level that directly below
 its summit. We can do this for trees or tall buildings, but for mountains this
 point is hidden underneath hundreds of meters of rock.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: intro-2
@@ -69,7 +69,7 @@ In this course you will learn about many different features and properties of
 triangles. These will allow you to measure the height of mountains, but they are
 also of fundamental importance in many other areas of mathematics, science and
 engineering.
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -385,7 +385,7 @@ the angle you want to bisect._
 You probably expected something like this, but it is important to notice that
 there is no obvious reason why this should happen – triangles are just very
 special shapes!
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal(when="next-0")} Points that lie on an angle bisector have the same
 distance from the two lines that form the angle. For example any point on the
@@ -411,13 +411,13 @@ __incircle__ of the triangle, and the center is called the __incenter__.
 {.r} Finding the area of a [rectangle](gloss:rectangle) is easy: you simply
 multiply its width by its height. Finding the area of a triangle is a bit less
 obvious. Let’s start by “trapping” a triangle inside a rectangle.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-0")} The width of the rectangle is the length of the
 [bottom side](target:base) of the triangle (which is called the __base__). The
 height of the rectangle is the [perpendicular distance](target:height) from the
 base to the opposite vertex.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal(when="next-1")} The height divides the triangle into two parts. Notice
 how the [two gaps in the rectangle](target:gap) are exactly as big as the two
@@ -711,7 +711,7 @@ Finally, we can connect the last two vertices, to complete the triangle.
 :::
 
 Of course, we could have drawn the 3cm side first, or picked the other vertex
-to draw the 40° angle around. However in all those cases, the resulting
+to draw the 40° angle around. However, in all those cases, the resulting
 triangles would have been congruent to this one.
 
 ::: tab
@@ -726,7 +726,7 @@ side of length 5cm.
 Let’s start by drawing the first side, using a ruler to measure 5cm.
 
 Now let’s use a protractor to measure an angle of 70° around one of the
-endpoints of the side, and and angle of 50° around the other endpoint. (Which
+endpoints of the side, and an angle of 50° around the other endpoint. (Which
 way round does not matter – the resulting triangles will be congruent.)
 
 Connecting the angle marks to the endpoints completes the triangle.
@@ -748,7 +748,7 @@ And again, we’ll use a protractor to measure an angle of 40° around one of th
 endpoints, and draw the second side of the triangle. However, we don’t yet know
 where this side will end.
 
-Instead, let’s pick any point around this line, pretend it’s the third vertex of
+Instead, let’s pick any point around this line, pretend it is the third vertex of
 the triangle and measure an angle of 50°.
 
 As you can see, this doesn’t quite work: the third side does not yet link up
@@ -852,21 +852,16 @@ wall?
 Notice that there is a right-angled triangle formed by the ladder, the wall and
 the ground. Using Pythagoras’ theorem, we get
 
-    //- Ideal syntax:
-    //- | `green(h^2) + blue(1^2)` | `red(6^2)`          |
-    //- |          `=> green(h^2)` | `= blank(35)`       |
-    //- |            `=> green(h)` | `= sqrt(35) = 5.92` |
-    
     table.eqn-system
       tr
-        <td><mrow class="b m-green"><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow class="b m-blue"><msup><mn>1</mn><mn>2</mn></msup></mrow></td>
-        <td><mo>=</mo><mrow class="b m-red"><msup><mn>6</mn><mn>2</mn></msup></mrow></td>
+        td.md `class(h^2,"b m-green") + class(1^2,"b m-blue")`
+        td.md `= class(6^2,"b m-red")`
       tr
-        <td><mo>⇒</mo><mrow class="b m-green"><msup><mi>h</mi><mn>2</mn></msup></mrow></td>
-        <td><mo>=</mo><x-blank-input solution="35"></x-blank-input></td>
+        td.md `⇒ class(h^2,"b m-green")`
+        td.md `= input(35)`
       tr.reveal(when="blank-0")
-        <td><mo>⇒</mo><mrow class="b m-green"><mi>h</mi></mrow></td>
-        <td><mo>=</mo><msqrt><mn>35</mn></msqrt><mo>=</mo><mn>5.92m</mn></td>
+        td.md `⇒ class(h, "b m-green")`
+        td.md `= sqrt(35) = "5.92m"`
 
 :::
 
@@ -959,21 +954,10 @@ area of [[`1/2 a b`|`(a + b)^2`|`1/2 (a + b)`]], and [{.red}one square](target:s
 
 {.reveal(when="blank-3 blank-4")} If we combine all of that information, we have
 
-    //- Ideal syntax:
-    //- |         `(a+b)^2` | `= 4 xx 1/2ab + c^2` |
-    //- | `a^2 + 2ab + b^2` | `= 2ab + c^2`        |
-    //- |       `a^2 + b^2` | `= c^2`              |
-
-    table.eqn-system.reveal(when="blank-3 blank-4")
-      tr
-        <td><msup><mfenced><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></mfenced><mn>2</mn></msup></td>
-        <td><mo>=</mo><mn>4</mn><mo>×</mo><mfrac><mn>1</mn><mrow><mn>2</mn></mfrac><mi>a</mi><mi>b</mi></mrow><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup></td>
-      tr
-        <td><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mi>a</mi><mi>b</mi></mrow><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><mrow><mn>2</mn><mi>a</mi><mi>b</mi></mrow><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup></td>
-      tr
-        <td><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></td>
+|          `(a+b)^2` | `= 4 × 1/2 a b + c^2` |
+| `a^2 + 2a b + b^2` | `= 2a b + c^2`        |
+|        `a^2 + b^2` | `= c^2`               |
+{.eqn-system.reveal(when="blank-3 blank-4")}
 
 {.reveal(when="blank-3 blank-4")} And, once again, we get Pythagoras’ theorem.
 _{span.qed}_
@@ -1062,19 +1046,14 @@ By the AA condition, all three triangles must be [[similar|congruent|right-angle
 {.reveal(when="blank-5")} Now we can use the equations we already know about
 similar polygons:
 
-    table.proof-table.reveal(when="blank-5")
-      tr
-        td
-          <p class="text-center"><mrow class="step-target pill blue" data-to="xa"><mfrac><mi>x</mi><mi>a</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill red" data-to="ac"><mfrac><mi>a</mi><mi>c</mi></mfra></mrow></p>
-          <p class="text-center"><mi class="step-target pill blue" data-to="x">x</mi><mo>=</mo><mfrac><msup><mi>a</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
-        td
-          <p class="text-center"><mrow class="step-target pill green" data-to="yb"><mfrac><mi>y</mi><mi>b</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill yellow" data-to="bc"><mfrac><mi>b</mi><mi>c</mi></mfra></mrow></p>
-          <p class="text-center"><mi class="step-target pill green" data-to="y">y</mi><mo>=</mo><mfrac><msup><mi>b</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
+    table.proof-table.reveal(when="blank-5"): tr
+      td.md `pill(x/a, "blue", "xa") = pill(x/c, "red", "ac")`<br>`pill(x, "blue", "x") = (a^2)/c`
+      td.md `pill(y/b, "green", "yb") = pill(b/c, "yellow", "bc")`<br>`pill(y, "green", "y") = (b^2)/c`
 
 {.r.reveal(when="blank-5")} [Continue](btn:next)
 
-{.reveal(when="next-2")} But remember that _c_ = [{.i.blue}x](target:x) +
-[{.i.green}y](target:y). Therefore
+{.reveal(when="next-2")} But remember that `c = pill(x,"blue","x") + pill(y,"green","y")`.
+Therefore
 
 {.text-center.reveal(when="next-2")} `c = a^2/c + b^2/c`
 
@@ -1127,16 +1106,10 @@ lines, we get a [{.yellow}right-angled triangle](target:triangle).
 
 {.reveal(when="next-0")} Using Pythagoras,
 
-    table.eqn-system.reveal(when="next-0")
-      tr
-        <td><msup><mi>d</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><msup><mn class="step-target pill blue var" data-to="dx">${b.x-a.x}</mn><mn>2</mn></msup><mo>+</mo><msup><mn class="step-target pill red var" data-to="dy">${b.y-a.y}</mn><mn>2</mn></msup></td>
-      tr
-        <td><msup><mi>d</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><mn class="var">${(b.x-a.x)*(b.x-a.x) + (b.y-a.y)*(b.y-a.y)}</mn></td>
-      tr
-        <td><mi>d</mi></td>
-        <td><mo>=</mo><msqrt><mn class="var">${(b.x-a.x)**2+(a.y-b.y)**2}</mn></msqrt><mo>=</mo><mn class="var">${round(distance(a,b),4)}</mn></td>
+| `d^2` | `= pill(var("b.x-a.x"),"blue","dx")^2 + pill(var("b.y-a.y"),"red","dy")^2`   |
+| `d^2` | `= var("(b.x-a.x)**2 + (b.y-a.y)**2")`                                       |
+| `d`   | `= sqrt(var("(b.x-a.x)**2 + (b.y-a.y)**2")) = var("round(distance(a,b),4)")` |
+{.eqn-system.reveal(when="next-0")}
 
 ::: column(width=300)
 
@@ -1343,18 +1316,11 @@ Since all of these triangles are similar, we know that their sides are
 proportional. In particular, the following ratios are the same for all of these
 triangles:
 
-    p.text-center
-      mfrac
-        mrow: mtext.m-blue.b Opposite
-        mrow: mtext.m-yellow.b Hypotenuse
-      span.space
-      mfrac
-        mrow: mtext.m-green.b Adjacent
-        mrow: mtext.m-yellow.b Hypotenuse
-      span.space
-      mfrac
-        mrow: mtext.m-blue.b Opposite
-        mrow: mtext.m-green.b Adjacent
+{.text-center} `class("Opposite","m-blue b") / class("Hypotenuse","m-yellow b")`
+_{span.space}_
+`class("Adjacent","m-green b") / class("Hypotenuse","m-yellow b")`
+_{span.space}_
+`class("Opposite","m-blue b") / class("Adjacent","m-green b")`
 
 Let’s try to summarise this: we picked a certain value for __{.m-red}α__, and
 got lots of similar, right-angled triangles. All of these triangles have the
@@ -1372,33 +1338,9 @@ a 3-letter abbreviation:
 ::: column.grow
 
     ul
-      li.display
-        strong Sine:
-        .space
-        mtext sin
-        mfenced: mtext.m-red.b α
-        mo =
-        mfrac
-          mrow: mtext.m-blue.b Opposite
-          mrow: mtext.m-yellow.b Hypotenuse
-      li.display
-        strong Cosine:
-        .space
-        mtext cos
-        mfenced: mtext.m-red.b α
-        mo =
-        mfrac
-          mrow: mtext.m-green.b Adjacent
-          mrow: mtext.m-yellow.b Hypotenuse
-      li.display
-        strong Tangent:
-        .space
-        mtext tan
-        mfenced: mtext.m-red.b α
-        mo =
-        mfrac
-          mrow: mtext.m-blue.b Opposite
-          mrow: mtext.m-green.b Adjacent
+      li.display.md __Sine:__ `sin(class(α,"m-red b")) = class("Opposite","m-blue b") / class("Hypotenuse","m-yellow b")`
+      li.display.md __Cosine:__ `cos(class(α,"m-red b")) = class("Adjacent","m-green b") / class("Hypotenuse","m-yellow b")`
+      li.display.md __Tangent:__ `tan(class(α,"m-red b")) = class("Opposite","m-blue b") / class("Adjacent","m-green b")`
 
 ::: column(width=240)
 
@@ -1540,37 +1482,14 @@ to find the distance [_d_](target:d):
 
     table.eqn-system
       tr.reveal(when="blank-2")
-        td
-          mfrac
-            mrow
-              mo sin
-              mn.pill.step-target.green(data-to="a") 151°
-            mrow.md [[d|5]]
-        td
-          mo =
-          mfrac
-            mrow
-              mo sin
-              mn.pill.step-target(data-to="b") 6°
-            mrow.md [[5|d]]
+        td.md `("sin" pill("151°","green","a")) / blank(d,5)`
+        td.md `= ("sin" pill("6°","","b")) / blank(5,d)`
       tr.reveal(when="blank-3 blank-4")
-        td: mi d
-        td
-          mo =
-          mo sin
-          mn.pill.step-target.green(data-to="a") 151°
-          mo ×
-          mfrac
-            mrow: mn.pill.step-target.yellow(data-to="base") 5
-            mrow
-              mo sin
-              mn.pill.step-target(data-to="b") 6°
-
+        td.md `d`
+        td.md `= "sin" pill("151°","green","a") × pill(5,"yellow","base") / ("sin" pill("6°","","b"))`
       tr.reveal(when="blank-3 blank-4" delay=1000)
         td
-        td
-          mo =
-          mn.pill.yellow.step-target(data-to="d") 23.2 km
+        td.md `= pill("23.2 km","yellow","d")`
 
 {.reveal(when="blank-3 blank-4" delay=2000)} There is one final step: let’s have
 a look at the [{.yellow}big, right-angled triangle](target:right). We already know the
@@ -1580,28 +1499,14 @@ side. _{span.reveal(when="blank-5")}We can find it using the definition of
 
     table.eqn-system
       tr.reveal(when="blank-5" delay=1000)
-        td
-          mo sin
-          mn.pill.step-target.red(data-to="ang") 23°
-        td
-          mo =
-          mfrac
-            mrow.md [[height|23]]
-            mrow.md [[23|height]]
+        td.md `"sin" pill("23°","red","ang")`
+        td.md `= blank("height",23) / blank(23,"height")`
       tr.reveal(when="blank-6 blank-7")
-        td: mtext height
-        td
-          mo =
-          mo sin
-          mn.pill.step-target.red(data-to="ang") 23°
-          mo ×
-          mn.pill.step-target.yellow(data-to="d") 23
-
+        td.md `"height"`
+        td.md `= "sin" pill("23°","red","ang") × pill(23,"yellow","d")`
       tr.reveal(when="blank-6 blank-7" delay=1000)
         td
-        td
-          mo =
-          mn.pill.step-target.yellow(data-to="height") 8.987 km
+        td.md `= pill("8.987 km","yellow","height")`
 
 {.reveal(when="blank-6 blank-7" delay=2000)} And that is very close to the
 actual height of Mount Everest, the highest mountain on Earth: 8,848m.

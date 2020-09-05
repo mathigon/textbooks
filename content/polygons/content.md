@@ -61,7 +61,7 @@ ones](target:short) on either side.
 
 {.r} Now it is easy to see that it is impossible to link up the ends of the
 shorter rods, if their combined length is less than the length of the larger rod.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ::: column(width=300)
 

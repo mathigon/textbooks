@@ -205,14 +205,14 @@ We already know the sum of all [internal angles](gloss:internal-angle) in
 polygons. For regular polygons all these angles have [[the same size|are alternate angles]],
 so we can work out the size of a single internal angle:
 
-{.text-center.reveal(when="blank-0")} angle = <mfrac><mrow>[[sum of all angles|number of angles]]</mrow><mrow>[[number of angles|sum of all angles]]</mrow></mfrac>
+{.text-center.reveal(when="blank-0")} `"angle" = blank("sum of all angles","number of angles")/
+blank("number of angles","sum of all angles")`
 _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x`._
 
 {.reveal(when="blank-1 blank-2" delay=1000)} If `n=3` we get the size of the
 internal angles of an equilateral triangle – we already know that it must be
 [[60]]°. _{span.reveal(when="blank-3")} In a regular polygon with ${x}{x|6|3,12,1}
-sides, every internal angle is 180° – <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
-${round(180-360/x)}°._
+sides, every internal angle is 180° – `"360°"/var("x")` = ${round(180-360/x)}°._
 
 ---
 > id: regular-area
@@ -732,22 +732,22 @@ _{span.reveal(when="blank-0")} The [axis of symmetry](gloss:axis-of-symmetry) is
 triangles](target:triangle1). We know that they are congruent from the
 [SSS](gloss:triangle-sss) condition: both triangles have [three congruent
 sides](target:sss) (red, green and blue).
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-0")} Using [CPOCT](gloss:cpoct), we therefore know that the
 [corresponding angles](target:angles) must also be congruent.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-1")} This means, for example, that the [diagonal](target:d1)
 is a [[bisector|perpendicular|median]] of the [two angles](target:vAngle) at its
 ends.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-2")} We can go even further: if we draw the other diagonal,
 we get [two more, smaller triangles](target:triangle2). These must also be
 congruent, because of the [SAS](gloss:triangle-sss) condition: they have the
 same [two sides and included angle](target:sas).
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal(when="next-3")} This means that [angle α](target:alpha) must also be
 the same as [angle β](target:beta). Since they are adjacent, [supplementary
