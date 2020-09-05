@@ -205,13 +205,26 @@ export function sortPolygons($step: Step) {
   });
 }
 
-export function tangram($step: Step) {
+export function simpleTangram($step: Step) {
   const $polypad = $step.$('x-polypad') as Polypad;
   $polypad.$svg.setAttr('viewBox', '0 0 420 420');
   $polypad.canDelete = $polypad.canCopy = false;
 
-  const tiles = [[2, 4, -90], [4, 2, 0], [6, 4, 0], [3, 7, 0], [7, 2, -90],
-    [4, 5, 0], [6, 6, 90]];  // initial [x, y, rot]
+  /*
+    Tile indices key:
+    0: Large pink triangle
+    1: Large blue triangle
+    2: Green square
+    3: Orange parallelogram
+    4: Small red triangle
+    5: Small blue triangle
+    6: Medium purple triangle
+  */
+
+  const tiles = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0],
+    [0, 0, 0], [0, 0, 0]];  // initial [x, y, rot]
+  const _finalStates = [[2, 4, -90], [4, 2, 0], [6, 4, 0], [3, 7, 0], [7, 2, -90],
+    [4, 5, 0], [6, 6, 90]];
 
   for (const [i, t] of tiles.entries()) {
     const tile = $polypad.newTile('tangram', `${i}`);

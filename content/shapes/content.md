@@ -104,15 +104,6 @@ All of these regions in the Voronoi diagram are examples of polygons. A polygon 
 {.reveal(when="cards-sorted")} A regular polygon has [[all equal | all different]] side lengths. 
 
 ---
-> id: tangram
-
-Here is a Tangram canvas:
-
-    figure: .tangram
-      x-polypad
-      .shapes
-
----
 
 > id: populations
 
@@ -175,7 +166,9 @@ The hexagons in the South African flag and the pentagon in the Nepalese flag may
 
 Below are 7 polygons. Move and rotate the polygons to completely fill in the square
 
-    // TODO: Tangram exercise 1
+    figure: .tangram
+      x-polypad
+      .shapes
 
 The set of these 7 polygons is called a tangram. The tangram is an ancient Chinese puzzle invented over 1,000 years ago during the Song Dynasty. In Chinese, the puzzle is called 七巧板. Pronounced “Chi-Chiao Pan,” this translates to “the seven intriguing pieces.” The goal of the puzzle is to use all 7 pieces to form any number of images. Below are just some of the shapes you can try to make at the [Tangram](https://mathigon.org/tangram) activity on Mathigon!
 
