@@ -31,5 +31,6 @@
     "groupName": "versions",
     "automerge": true,
     "automergeType": "branch"
-  }]
+  }],
+  "ignoreDeps": ["marked", "three"]
 }
