@@ -167,6 +167,7 @@ The hexagons in the South African flag and the pentagon in the Nepalese flag may
 Below are 7 polygons. Move and rotate the polygons to completely fill in the square
 
     figure: .tangram
+      .simple-tangram-bg
       x-polypad
       .shapes
 

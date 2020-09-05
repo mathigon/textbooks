@@ -6,7 +6,7 @@
 
 import {Point, Polygon, Segment} from '@mathigon/fermat';
 import {animate, CanvasView, loadScript} from '@mathigon/boost';
-import {Geopad, GeoPoint, Polypad, Step} from '../shared/types';
+import {Geopad, GeoPoint, Polypad, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
 import {VoronoiStep} from './types';
@@ -217,14 +217,12 @@ export function simpleTangram($step: Step) {
     2: Green square
     3: Orange parallelogram
     4: Small red triangle
-    5: Small blue triangle
+    5: Small seafoam triangle
     6: Medium purple triangle
   */
 
-  const tiles = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0],
-    [0, 0, 0], [0, 0, 0]];  // initial [x, y, rot]
-  const _finalStates = [[2, 4, -90], [4, 2, 0], [6, 4, 0], [3, 7, 0], [7, 2, -90],
-    [4, 5, 0], [6, 6, 90]];
+  const tiles = [[5, 1, -90], [5, 9, 0], [8, 3, 0], [-1, 6, 0], [-1, -2, -90],
+    [-1, 2, 0], [9, -2, 90]];  // initial [x, y, rot]
 
   for (const [i, t] of tiles.entries()) {
     const tile = $polypad.newTile('tangram', `${i}`);
@@ -235,6 +233,33 @@ export function simpleTangram($step: Step) {
   // TODO Allow students to select different silhouettes
 
   $polypad.on('move-selection rotate-selection', () => {
-    // TODO Check if a shape has been completed
+    if (tangramComplete($polypad.tiles)) {
+      $step.score('tangram-complete');
+    }
   });
+}
+
+function tangramComplete(tiles: Set<Tile>) {
+
+  const scale = (val: number) => 110 + val * 25;
+
+  const correctStates =
+    [[2, 4, 270], [4, 2, 0], [6, 4, 0], [3, 7, 0], [7, 2, 270], [4, 5, 0], [6, 6, 90]]
+        .map(triple =>
+          [scale(triple[0]), scale(triple[1]), triple[2]]);
+
+  const currentStates = [...tiles].map(tile => {
+    let rot = 0;
+    if (tile.rot > 0) {
+      rot = tile.rot % 360;
+    } else if (tile.rot < 0) {
+      const tempRot = tile.rot % -360;
+      const diffRot = 360 + tempRot;
+      rot = diffRot % 360;
+    }
+    return [tile.posn.x, tile.posn.y, rot];
+  });
+
+  return currentStates == correctStates;
+
 }

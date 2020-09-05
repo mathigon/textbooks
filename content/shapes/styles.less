@@ -12,6 +12,20 @@
 .tangram {
   border-radius: 6px 6px 0 0;
   background: @grey-background;
-  x-polypad { height: 450px; }
-  .shapes { background: @grey; border-radius: 0 0 6px 6px; height: 100px; }
+
+
+  .simple-tangram-bg { 
+    width: 100%;
+    background-image: url('images/square.svg');   
+    background: center no-repeat;
+    background-size: contain;
+    position: absolute;
+    opacity: 0.2;
+  }
+
+  .simple-tangram-bg, x-polypad { height: 450px; }
+
+  //.shapes { background: @grey; border-radius: 0 0 6px 6px; height: 100px; }
+  .shapes { display: none; }
+
 }
