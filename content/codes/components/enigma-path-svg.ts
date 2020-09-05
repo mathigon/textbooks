@@ -3,7 +3,7 @@
  */
 
 import {Machine} from './enigma';
-import {$, $$, ElementView} from '@mathigon/boost';
+import {$, $$, $N, ElementView} from '@mathigon/boost';
 
 interface EnigmaPathSVG {
   drawMachine: (encodingpath: any) => void;
@@ -35,8 +35,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
   }
 
   function addText(layer: ElementView, text: string, x: number, y: number, cls: string) {
-    layer.html += '<text text-anchor="middle" alignment-baseline="middle" x="' +
-      x + '" y="' + y + '" class="' + cls + '">' + text + '</text>';
+    $N('text', {text, x, y, class: cls, 'text-anchor': 'middle', 'alignment-baseline': 'middle'}, layer);
   }
 
   function makept(x:number, y:number) {
@@ -48,9 +47,6 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
   }
   function line(x:number, y:number) {
     return 'L' + x + ',' + y + ' ';
-  }
-  function arc(r:number, x:number, y:number) {
-    return 'A' + r + ',' + r + ' 0 0 1 ' + x + ',' + y + ' ';
   }
 
   function path(p: string, width: number, stroke: string, fill: string, id?: string, dasharray?: number[], dashoffset?: number) {
@@ -65,24 +61,14 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     return 'M' + points.map(p => p.x + ',' + p.y).join('L') + (close ? 'Z' : '');
   }
 
-  function addRoundRect(layer:ElementView, x:number, y:number, width:number, height:number, rl:number, rr:number,
+  function addRoundRect(layer:ElementView, x:number, y:number, width:number, height:number, rx:number,
       stroke:string, fill:string) {
-    let path = '<path d="';
-    path += move(x + rl, y);
-    path += line(x + width - rr, y);
-    path += arc(rr, x + width, y + rr);
-    path += line(x + width, y + height - rr);
-    path += arc(rr, x + width - rr, y + height);
-    path += line(x + rl, y + height);
-    path += arc(rl, x, y + height - rl);
-    path += line(x, y + rl);
-    path += arc(rl, x + rl, y);
-    path += '" stroke-width="1" stroke="' + stroke + '" fill="url(#' + fill + ')" />';
-    layer.html += path;
+    $N('rect', {x, y, width, height, rx, 'stroke-width': 1, stroke, fill: `url(#${fill})`}, layer);
   }
 
   const svgdoc:Document = document.getElementById(svgid) as unknown as Document;
 
+  // FIXME these first two are duplicated in the less file...
   const incolour = 'rgb(205, 14, 102)';
   const outcolour = 'rgb(34, 171, 36)';
   const refcolour = 'rgb(15, 130, 242)';
@@ -99,11 +85,10 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
   const labelOuterCol = 'rgb(160, 160, 160)';
   const labelInnerCol = 'rgb(240, 240, 240)';
 
-  const defs = $('.' + svgid + '_defs') as ElementView;
-  const styles = $('.' + svgid + '_styles') as ElementView;
-  const content = $('.' + svgid + '_machine_content') as ElementView;
-  const encpath = $('.' + svgid + '_path_content') as ElementView;
-  const animpath = $('.' + svgid + '_animate_content') as ElementView;
+  const defs = $(`.${svgid}_defs`) as ElementView;
+  const content = $(`.${svgid}_machine_content`) as ElementView;
+  const encpath = $(`.${svgid}_path_content`) as ElementView;
+  const animpath = $(`.${svgid}_animate_content`) as ElementView;
 
   defs.html += makeLinearGradient('grad_refl', [0, 0, 0, 1],
       [{offset: 0, col: reflTopCol},
@@ -124,36 +109,25 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 
   // setup the text styles
 
-  styles.html +=
-    '.heading { font: normal 14px sans-serif; fill:black;}' +
-    '.normal { font: normal 12px sans-serif; fill:black; }' +
-    '.inletter { font: normal 12px sans-serif; fill:' + incolour + '; }' +
-    '.outletter { font: normal 12px sans-serif; fill:' + outcolour + '; }' +
-    '.keyletter { font: normal 12px sans-serif; fill:#D0D0D0; }' +
-    '.inkey { font: normal 12px sans-serif; fill:' + incolour + '; }' +
-    '.outkey { font: normal 12px sans-serif; fill:' + outcolour + '; }';
-
   const animationspeed = 200;
 
   const me:any = {animate: true};
 
   function makeLinearGradient(id:string, coords:number[], stops:any[]) {
-    let result:string = '<linearGradient id=\'' + id + '\' ';
-    result += 'x1=\'' + coords[0] + '\' y1=\'' + coords[1] + '\' x2=\'' + coords[2] + '\' y2=\'' + coords[3] + '\'>';
+    let result = `<linearGradient id="${id}" x1="${coords[0]}" y1="${coords[1]}" x2="${coords[2]}" y2="${coords[3]}">`;
     stops.forEach(s => {
-      result += '<stop offset=\'' + s.offset + '\' style=\'stop-color:' + s.col + ';\' />';
+      result += `<stop offset="${s.offset}" style="stop-color:${s.col};" />`;
     });
     result += '</linearGradient>';
     return result;
   }
 
-  function drawBasicShape(width:number, dy:number, x:number, y:number, heading:string, fill:string, onesided:boolean) {
-    const rl = 8;
-    const rr = onesided ? 0 : 8;
+  function drawBasicShape(width:number, dy:number, x:number, y:number, heading:string, fill:string) {
+    const r = 8;
     const height = dy * 27;
 
     addText(content, heading, x + width / 2, y - 7, 'heading');
-    addRoundRect(content, x, y, width, height, rl, rr, 'black', fill);
+    addRoundRect(content, x, y, width, height, r, 'black', fill);
   }
 
   function drawInternalWire(layer:ElementView, width:number, gap:number, x:number, iny:number, outy:number, step?:number) {
@@ -179,12 +153,11 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     me.drawPath(encodingpath, me.animate);
   }
 
-  function makekey(x: number, y: number, letter: string, keyfill: string, extraclass: string | null) {
-    let classstring = 'keycircle' + (extraclass ? ' ' + extraclass : '');
-    const key = '<circle letter="' + letter + '" class="' + classstring + '" cx=' + x + ' cy=' + y + ' r=' + 9 + ' fill=\'' + keyfill + '\' />';
-    classstring = 'keyletter' + (extraclass ? ' ' + extraclass : '');
-    const text = '<text letter="' + letter + '" text-anchor="middle" alignment-baseline="middle" x="' +
-      x + '" y="' + y + '" class="' + classstring + '">' + letter + '</text>';
+  function makekey(x: number, y: number, letter: string, keyfill: string, keyclasses: string[]) {
+    const key = `<circle letter="${letter}" class="keycircle" cx=${x} cy=${y} r=9 fill="${keyfill}" />`;
+    const classstring = 'normal keyboardletter ' + keyclasses.join(' ');
+    const text = `<text letter="${letter}" text-anchor="middle" alignment-baseline="middle" x="${x}" y="${y}" 
+        class="${classstring}">${letter}</text>`;
     return key + text;
   }
 
@@ -193,20 +166,20 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 
     while (i < letters.length) {
       y += dy;
-      content.html += makekey(x, y, letters[i++], '4c4c4c', null);
+      content.html += makekey(x, y, letters[i++], '4c4c4c', []);
       y += dy;
       const l = move(x - 10, y) + line(x + 20, y);
       content.html += path(l, 0.5, '#888', 'none');
-      content.html += makekey(x + 20, y, letters[i++], '4c4c4c', null);
+      content.html += makekey(x + 20, y, letters[i++], '4c4c4c', []);
     }
-    $$('.keyletter, .keycircle').forEach(e => e.on('pointerdown', pressKey));
+    $$('.keyboardletter, .keycircle').forEach(e => e.on('pointerdown', pressKey));
   }
 
   function highlightKeys(layer:ElementView, x:number, y:number, dy:number, gap:number, key:string, lamp:string) {
     const keyy = getYPos(key, 0);
     const lampy = getYPos(lamp, 0);
-    layer.html += makekey(x + (keyy % 2 ? 0 : 20), y + keyy * dy, key, incolour, 'highlight');
-    layer.html += makekey(x + (lampy % 2 ? 0 : 20), y + lampy * dy, lamp, outcolour, 'highlight');
+    layer.html += makekey(x + (keyy % 2 ? 0 : 20), y + keyy * dy, key, incolour, ['highlight']);
+    layer.html += makekey(x + (lampy % 2 ? 0 : 20), y + lampy * dy, lamp, outcolour, ['highlight']);
     $$('.highlight').forEach(e => e.on('pointerdown', pressKey));
   }
 
@@ -228,7 +201,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     let iny;
     let outy;
 
-    drawBasicShape(width, dy, x, y, heading, fill, false);
+    drawBasicShape(width, dy, x, y, heading, fill);
 
     if (notch) {
       const notchy = y + charToIndex(notch) * dy;
@@ -282,7 +255,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     let iny; let outy;
     const savedsteps:{ [key: string]: number; } = {};
 
-    drawBasicShape(width, dy, x, y, 'Reflector', 'grad_refl', false);
+    drawBasicShape(width, dy, x, y, 'Reflector', 'grad_refl');
 
     if (connections) {
       const nextsteps: number[] = [];
@@ -387,7 +360,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
       y1 = getYPos(encodingpath[1 + k], 0);
       if (machine.isUsingPlugboard() || k >= 0) {
         if ((machine.isUsingPlugboard() && k >= 0) || (k >= 1)) {
-          rotorin.label = {letter: encodingpath[1 + k], pt: makept(x1 + 8, y + y1 * dy - 6), cls: 'inletter'};
+          rotorin.label = {letter: encodingpath[1 + k], pt: makept(x1 + 8, y + y1 * dy - 6), cls: 'normal inward'};
           rotorin.arrow = makept(x1 + gap / 2, y + y1 * dy);
         }
         if (k == -1 || (!machine.isUsingPlugboard() && k == 0)) {
@@ -411,7 +384,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
     // reflector input path
     x1 = x;
     y1 = getYPos(encodingpath[4], 0);
-    refin.label = {letter: encodingpath[4], pt: makept(x1 + 8, y + y1 * dy - 6), cls: 'inletter'};
+    refin.label = {letter: encodingpath[4], pt: makept(x1 + 8, y + y1 * dy - 6), cls: 'normal inward'};
     refin.pts.push(makept(x1 + gap, y + y1 * dy));
     refin.arrow = makept(x1 + gap / 2, y + y1 * dy);
     refin.pts.push(makept(x1, y + y1 * dy));
@@ -432,7 +405,7 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
       y1 = getYPos(encodingpath[5 + k], 0);
       if (machine.isUsingPlugboard() || k < 3) {
         rotorout.arrow = makept(x1 + gap / 2, y + y1 * dy);
-        rotorout.label = {letter: encodingpath[5 + k], pt: makept(x1 + 8, y + y1 * dy - 6), cls: 'outletter'};
+        rotorout.label = {letter: encodingpath[5 + k], pt: makept(x1 + 8, y + y1 * dy - 6), cls: 'normal outward'};
         rotorout.pts.push(makept(x1, y + y1 * dy));
         rotorout.pts.push(makept(x1 + gap, y + y1 * dy));
         y1 = getYPos(encodingpath[6 + k], 0);
@@ -488,12 +461,12 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
   function animatePath(x: number, y: number, dy: number, gap: number, width: number, encodingpath: string[],
       stack: any[], layer: ElementView) {
     const key = encodingpath[0];
-    const inkeyelement = makekey(0, 0, key, incolour, null);
+    const inkeyelement = makekey(0, 0, key, incolour, []);
 
     let anim = '';
 
-    layer.html += '';
-    anim += '<g id=\'inkeyanim\'><g id=\'animkey\'>' + inkeyelement + '</g>';
+    layer.html = '';
+    anim += `<g id="inkeyanim"><g id="animkey">${inkeyelement}</g>`;
     let i = 0;
     while (i < stack.length) {
       const s = stack[i];
@@ -505,9 +478,8 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
       lastpath.setAttribute('stroke-dashoffset', pathlength.toString());
       const duration = (pathlength ? Math.round(1000 * pathlength / animationspeed) : 1) + 'ms';
       const p = 'path="M' + s.pts.map((pt: { x: string; y: string; }) => pt.x + ',' + pt.y).join('L') + '"';
-      const begin = i ? 'a' + (i - 1) + '.end' : 'indefinite';
-      anim += '<animateMotion id="a' + i + '" begin="' + begin + '" ' + p +
-        ' dur="' + duration + '" repeatCount="1" fill="freeze" />';
+      const begin = i ? `a${i - 1}.end` : 'indefinite';
+      anim += `<animateMotion id="a${i}" begin="${begin}" ${p} dur="${duration}" repeatCount="1" fill="freeze" />`;
 
       const pathanim = document.createElementNS(xmlns, 'animate');
       pathanim.setAttributeNS(null, 'attributeName', 'stroke-dashoffset');
@@ -521,8 +493,8 @@ export function createEnigmaPathSVG(svgid: string, machine: Machine, keypresscal
 
       i++;
     }
-    anim += '<animateMotion id="a' + i + '" begin="a' + (i - 1) + '.end" dur="3s" repeatCount="1" fill="freeze" />';
-    anim += '<set attributeName="visibility" to="hidden" begin="a' + i + '.end" />';
+    anim += `<animateMotion id="a${i}" begin="a${i - 1}.end" dur="3s" repeatCount="1" fill="freeze" />`;
+    anim += `<set attributeName="visibility" to="hidden" begin="a${i}.end" />`;
     anim += '</g>';
 
     layer.html += anim;
