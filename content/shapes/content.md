@@ -171,11 +171,15 @@ Below are 7 polygons. Move and rotate the polygons to completely fill in the squ
       x-polypad
       .shapes
 
+::: .reveal(when="tangram-complete")
+
 The set of these 7 polygons is called a tangram. The tangram is an ancient Chinese puzzle invented over 1,000 years ago during the Song Dynasty. In Chinese, the puzzle is called 七巧板. Pronounced “Chi-Chiao Pan,” this translates to “the seven intriguing pieces.” The goal of the puzzle is to use all 7 pieces to form any number of images. Below are just some of the shapes you can try to make at the [Tangram](https://mathigon.org/tangram) activity on Mathigon!
 
 TODO: Image
 
 In 1815, Shan Chiao published “New Figures of the Tangram” which contained 374 tangram puzzles!
+
+:::
 
 ---
 

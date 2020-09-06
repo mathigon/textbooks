@@ -232,9 +232,12 @@ export function simpleTangram($step: Step) {
 
   // TODO Allow students to select different silhouettes
 
+  let completed = false;
   $polypad.on('move-selection rotate-selection', () => {
-    if (tangramComplete($polypad.tiles)) {
+    if (tangramComplete($polypad.tiles) && !completed) {
       $step.score('tangram-complete');
+      $step.addHint('correct');
+      completed = true;
     }
   });
 }
@@ -260,6 +263,24 @@ function tangramComplete(tiles: Set<Tile>) {
     return [tile.posn.x, tile.posn.y, rot];
   });
 
-  return currentStates == correctStates;
+  const ranges = correctStates.map(state =>
+    [[state[0] - 15, state[0] + 15], [state[1] - 15, state[1] + 15]]
+  );
+
+  let closeEnough = true;
+
+  currentStates.forEach((state, i) => {
+    if (
+      state[0] < ranges[i][0][0] ||
+      state[0] > ranges[i][0][1] ||
+      state[1] < ranges[i][1][0] ||
+      state[1] > ranges[i][1][1] ||
+      state[2] != correctStates[i][2]
+    ) {
+      closeEnough = false;
+    }
+  });
+
+  return closeEnough;
 
 }
