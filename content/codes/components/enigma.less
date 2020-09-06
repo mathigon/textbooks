@@ -4,176 +4,130 @@
 // =============================================================================
 
 
+@import "../../shared/variables";
 
-.enigma {
-  background-color: #333;
-  border-radius: 8px;  
-  text-align: center;
-  margin: 10px auto 20px auto;  
-  border-radius: 8px;
-  -webkit-user-select: none; 
-  user-select: none;
- }
+x-enigma {
+  display: block;
 
-.plugboard {
-	margin-top: 7%;
-  -webkit-user-select: none;
-  user-select: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 20px;
-}
-
-.plugboard svg {
-  position:absolute;
-  display:block;
-  pointer-events:none;
-  width:100%;
-  height:100%;
-}
-
-.plugcable {
-  stroke:rgba(255, 0, 0, 0.5);
-  stroke-width:5px;
-  fill:none;
-  z-index:-10;
-}
-
-.rotor {
-	position:relative;
-	border: black solid 1pt; 
-	padding:2pt; 
-	height:40px; 
-	width:20px; 
-}
-
-.rotors { 
-	border: black solid 1pt; 
-	display:block; 
-	padding: 0;
-	text-align:center;
-	line-height:33px;
-  margin: 5px auto 0px auto;  
-  width:115px;
-  background-color: #333;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-.rotorctl {
-	width: 100%;
-	background: #333;
-	color:#ddd;
-	font-size: 14pt;
-	cursor: default;
-}
-
-.rotorshow {
-	width: 100%;
-	// font-family: Tahoma;
-	color: #222222;
-	font-size: 18pt;
-	text-shadow: 0px 1px #AAAAAA;
-	background: linear-gradient(0deg, 
-		rgba(140,140,140,1) 0%, 
-		rgba(216,216,216,1) 31%, 
-		rgba(255,255,255,1) 50%, 
-		rgba(212,212,212,1) 67%, 
-		rgba(140,140,140,1) 100%);
-}
-
-.rotors span { 
-	width: 37px; 
-	display: inline-block;
-	border-right: black solid 1pt; 
-}
-
-.keyboard, .lightboard {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  user-select: none;
-
-  .key {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+  .enigma {
+    background-color: #333;
+    border-radius: 8px;
     text-align: center;
-    border-radius: 17px;
-    background: grey;
-    margin: 10px;
-    color: #ddd;
-    &.glowing { background: yellow; color: #333; }
+    user-select: none;
+    padding: 20px;
   }
-}
 
-.keyboard {
-  .key {
-    border: solid #aaa 2px;
-    background: #555;
+  .keyboard, .lightboard {
+    margin: 16px 0;
+
+    .key {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 17px;
+      background: grey;
+      margin: 10px;
+      color: #ddd;
+      &.glowing { background: yellow; color: #333; }
+    }
   }
-}
+  .keyboard .key { border: solid #aaa 2px; background: #555; }
+  .lightboard .key { border: solid #222 2px; background: #333; }
 
-.lightboard {
-  .key {
-    border: solid #222 2px;
+  .plugboard svg { display:block; margin: 0 auto; overflow: visible; }
+
+  .plugboard .plug {
+    stroke: grey;
+    stroke-width: 3px;
+    fill: black;
+    &:hover { stroke: white; }
+    &.active { fill: red; }
+  }
+
+  .plugboard .cables { pointer-events: none; }
+  .plugboard .cables path {
+    stroke: fade(red, 50%);
+    stroke-width: 5px;
+    stroke-linecap: round;
+    fill: none;
+  }
+
+  .rotor {
+    position:relative;
+    border: black solid 1pt;
+    padding:2pt;
+    height:40px;
+    width:20px;
+  }
+
+  .rotors {
+    border: black solid 1pt;
+    display:block;
+    padding: 0;
+    text-align:center;
+    line-height:33px;
+    margin: 5px auto 0 auto;
+    width:115px;
+    background-color: #333;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .rotorctl {
+    width: 100%;
     background: #333;
+    color:#ddd;
+    font-size: 14pt;
+    cursor: default;
+  }
+
+  .rotorshow {
+    width: 100%;
+    // font-family: Tahoma;
+    color: #222222;
+    font-size: 18pt;
+    text-shadow: 0 1px #AAAAAA;
+    background: linear-gradient(0deg,
+      rgba(140,140,140,1) 0%,
+      rgba(216,216,216,1) 31%,
+      rgba(255,255,255,1) 50%,
+      rgba(212,212,212,1) 67%,
+      rgba(140,140,140,1) 100%);
+  }
+
+  .rotors span {
+    width: 37px;
+    display: inline-block;
+    border-right: black solid 1pt;
   }
 }
 
-.plug {
-  font-size: 12pt;
-  font-family: Tahoma;
-  color: rgba(0,0,0,0);
-  float: left;
-  border: 3px #AAAAAA solid;
-  border-radius: 50%;
-  width: 16px;
-  height: 16px;
-  margin: 12px 16px;
-  text-shadow: 0px -30px #AAAAAA, -2px -30px #000000;
- 	background: #000000;
-  cursor: default;
+x-enigma-rotors {
+  display: block;
+  user-select: none;
+  svg { display: block; margin: 0 auto; }
+  text { text-anchor: middle; alignment-baseline: middle; }
+
+  .keyboard {
+    circle { fill: @grey; cursor: pointer; transition: fill .2s; }
+    circle:hover { fill: @medium-grey; }
+    circle.in { fill: @green; }
+    circle.out { fill: @yellow; }
+    text { fill: white; font-size: 12px; pointer-events: none; }
+  }
+
+  .label { font-size: 14px; font-weight: 600; fill: @medium-grey; }
+  .layer { stroke: @medium-grey; stroke-width: 1px; }
+
+  .connections { opacity: 0.15; }
+  .connections line, .connections path { fill: none; stroke: black; }
+
+  .overlay path {
+    fill: none;
+    stroke: @yellow;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
 }
-
-.plug:hover {
-  border-color: white;
-  text-shadow: 0px -30px #FFFFFF, -2px -30px #000000;
-  cursor: default;
-}
-
-.plugOn {
-	background: #c30;
-}
-
-.showcode {
-	background: white;
-}
-
-.heading { 
-  font: normal 14px sans-serif; 
-  fill:black;
-}
-
-.normal { 
-  font: normal 12px sans-serif; 
-  fill:black; 
-}
-
-.keyboardletter { 
-  fill:#D0D0D0; 
-}
-
-@incolour:rgb(205, 14, 102);
-@outcolour:rgb(34, 171, 36);
-
-.inward { 
-  fill:@incolour; 
-}
-
-.outward { 
-  fill:@outcolour; 
-}
-

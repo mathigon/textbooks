@@ -1,52 +1,35 @@
-template#enigma
-    .enigma#enigmaview
-      .rotors
-        .rotorctl
-          span.rotorup &#8593;
-          span.rotorup &#8593;
-          span.rotorup &#8593;
-        .rotorshow
-          span.rotorsetting A
-          span.rotorsetting A
-          span.rotorsetting A
-        .rotorctl
-          span.rotordn &#8595;
-          span.rotordn &#8595;
-          span.rotordn &#8595;
+x-enigma
+  .enigma
+    .rotors
+      .rotorctl
+        span.rotorup(@pointerdown="rotate(2,true)") &#8593;
+        span.rotorup(@pointerdown="rotate(1,true)") &#8593;
+        span.rotorup(@pointerdown="rotate(0,true)") &#8593;
+      .rotorshow
+        span.rotorsetting ${rotorPosn[2]}
+        span.rotorsetting ${rotorPosn[1]}
+        span.rotorsetting ${rotorPosn[0]}
+      .rotorctl
+        span.rotordn(@pointerdown="rotate(2)") &#8595;
+        span.rotordn(@pointerdown="rotate(1)") &#8595;
+        span.rotordn(@pointerdown="rotate(0)") &#8595;
 
-      .lightboard
-        for key in 'QWERTZUIO'.split('')
-          .key= key
-        for key in 'ASDFGHJK'.split('')
-          .key= key
-        for key in 'YXCVBNML'.split('')
-          .key= key
+    - var keyboard = ['QWERTZUIO', 'ASDFGHJK', 'PYXCVBNML']
+    for name in ['lightboard', 'keyboard']
+      div(class=name)
+        for row in keyboard
+          .row
+            for key in row.split('')
+              .key= key
 
-      .keyboard
-        for key in 'QWERTZUIO'.split('')
-          .key= key
-        for key in 'ASDFGHJK'.split('')
-          .key= key
-        for key in 'YXCVBNML'.split('')
-          .key= key
-  
-      .plugboard
-        svg.plugtarget
-          for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-            path.plugcable
-          
-        for plug in 'QWERTZUIO'.split('')
-          .plug= plug
-        for plug in 'ASDFGHJK'.split('')
-          .plug= plug
-        for plug in 'YXCVBNML'.split('')
-          .plug= plug
-      
-      .showcode
-        p
-        .cipherpath
-          pre
-        p  
-        .ciphertext
-          pre
-        button.clearciphertext Clear
+    .plugboard
+      svg(width=450 height=150)
+        for row, i in keyboard
+          for key, j in row.split('')
+            circle.plug(data-key=key cx=((1 + i % 2) *25 + j * 50) cy=(25 + i * 50) r=8)
+        g.cables
+
+  .notes
+    .input ${input}
+    .output ${output}
+  button.btn(@click="reset()") Reset

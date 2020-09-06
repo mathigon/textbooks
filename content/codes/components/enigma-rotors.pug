@@ -1,0 +1,32 @@
+x-enigma-rotors
+  svg(width=540 height=420 viewBox="0 0 540 420")
+    defs
+      linearGradient#grad_refl(x1=0 y1=0 x2=0 y2=1)
+        stop(offset=0 style="stop-color: rgb(245, 226, 204);")
+        stop(offset=1 style="stop-color: rgb(178, 160, 143);")
+      linearGradient#grad_rotor(x1=0 y1=0 x2=0 y2=1)
+        stop(offset=0 style="stop-color: rgb(210, 205, 199);")
+        stop(offset=1 style="stop-color: rgb(161, 157, 153);")
+      linearGradient#grad_plug(x1=0 y1=0 x2=0 y2=1)
+        stop(offset=0 style="stop-color: rgb(204, 226, 245);")
+        stop(offset=1 style="stop-color: rgb(143, 160, 178);")
+
+    mixin layer(x, width, label, fill)
+      text.label(x=(x + width/2) y=12)= label
+      rect.layer(x=x y=20 width=width height=395 rx=6 fill=`url(${fill})`)
+
+    +layer(80, 70, 'Plugboard', '#grad_plug')
+    +layer(180, 70, 'Rotor 1', '#grad_rotor')
+    +layer(280, 70, 'Rotor 2', '#grad_rotor')
+    +layer(380, 70, 'Rotor 3', '#grad_rotor')
+    +layer(480, 50, 'Reflector', '#grad_refl')
+
+    g.connections
+    g.overlay
+
+    g.keyboard
+      for key, i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+        - var x = i % 2 ? 40 : 20
+        - var y = 30 + 15 * i
+        circle(data-key=key cx=x cy=y r=9)
+        text(x=x y=(y + 1))= key
