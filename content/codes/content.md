@@ -964,13 +964,22 @@ using substitution ciphers:
 > section: enigma
 > sectionStatus: dev
 
-http://plus.maths.org/content/exploring-enigma
-https://www.youtube.com/watch?v=mcX7iO_XCFA
+    // plus.maths.org/content/exploring-enigma
+    // www.youtube.com/watch?v=mcX7iO_XCFA
 
-{.todo} TODO
+Here is a virtual Engima machine:
 
-    include ./components/enigma
-    x-enigma
+    figure
+      include ./components/enigma
+
+And here are the rotor cross-sections:
+
+    figure
+      include ./components/enigma-rotors
+
+The letter shown inside each rotor indicates the rotation, and the connecting orange lines
+show the link between the notch on one rotor and the rotation position
+of the next rotor.
 
 
 ----------------------------------------------------------------------------------------------------

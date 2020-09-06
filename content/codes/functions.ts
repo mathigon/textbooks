@@ -16,6 +16,7 @@ import {MORSE_CODE} from './components/utilities';
 import './components/code-box';
 import './components/barcode';
 import './components/enigma';
+import './components/enigma-rotors';
 import './components/morse';
 
 
