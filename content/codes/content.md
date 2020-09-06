@@ -967,15 +967,15 @@ using substitution ciphers:
     // plus.maths.org/content/exploring-enigma
     // www.youtube.com/watch?v=mcX7iO_XCFA
 
-And here is the rotora cross-section:
-
-    figure
-      include ./components/enigma-rotors
-
-Here is an engima machine:
+Here is a virtual Engima machine:
 
     figure
       include ./components/enigma
+
+And here are the rotor cross-sections:
+
+    figure
+      include ./components/enigma-rotors
 
 The letter shown inside each rotor indicates the rotation, and the connecting orange lines
 show the link between the notch on one rotor and the rotation position

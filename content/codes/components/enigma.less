@@ -108,24 +108,21 @@ x-enigma-rotors {
   user-select: none;
   svg { display: block; margin: 0 auto; }
   text { text-anchor: middle; alignment-baseline: middle; }
+  .label { font-size: 14px; font-weight: 600; fill: @medium-grey; }
 
   .keyboard {
     circle { fill: @grey; cursor: pointer; transition: fill .2s; }
     circle:hover { fill: @medium-grey; }
-    circle.in { fill: @green; }
+    circle.in { fill: @blue; }
     circle.out { fill: @yellow; }
     text { fill: white; font-size: 12px; pointer-events: none; }
   }
 
-  .label { font-size: 14px; font-weight: 600; fill: @medium-grey; }
-  .layer { stroke: @medium-grey; stroke-width: 1px; }
-
-  .connections { opacity: 0.15; }
+  .connections { opacity: 0.2; }
   .connections line, .connections path { fill: none; stroke: black; }
 
   .overlay path {
     fill: none;
-    stroke: @yellow;
     stroke-width: 4px;
     stroke-linecap: round;
     stroke-linejoin: round;
