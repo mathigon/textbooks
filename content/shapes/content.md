@@ -125,7 +125,8 @@ Just by looking at this region, it seems that [[more | less]] students will atte
 
 We give different names to polygons based on how many sides they have. You may remember some of the names. Drag the names on top of the correct shapes.
 
-    // TODO: Name matching exercise
+    include ../shared/components/relation
+    x-relation
 
 Let’s practice using these names by looking at some examples of polygons out in the world.
 

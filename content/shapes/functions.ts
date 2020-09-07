@@ -9,6 +9,7 @@ import {animate, CanvasView, loadScript} from '@mathigon/boost';
 import {Geopad, GeoPoint, Polypad, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
+import '../shared/components/relation';
 import {VoronoiStep} from './types';
 
 declare const d3: any;
