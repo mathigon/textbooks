@@ -230,13 +230,12 @@ export function simpleTangram($step: Step) {
     tile.setRotation(t[2]);
   }
 
-  // TODO Allow students to select different silhouettes
-
   let completed = false;
   $polypad.on('move-selection rotate-selection', () => {
     if (tangramComplete($polypad.tiles) && !completed) {
       $step.score('tangram-complete');
       $step.addHint('correct');
+      // Without this the hint will fire a bunch of times
       completed = true;
     }
   });
@@ -244,6 +243,7 @@ export function simpleTangram($step: Step) {
 
 function tangramComplete(tiles: Set<Tile>) {
 
+  // Convert from grid units to pixel units
   const scale = (val: number) => 110 + val * 25;
 
   const correctStates =
@@ -251,6 +251,7 @@ function tangramComplete(tiles: Set<Tile>) {
         .map(triple =>
           [scale(triple[0]), scale(triple[1]), triple[2]]);
 
+  // Ensure that rotation values are within the 0-360 range for comparison purposes
   const currentStates = [...tiles].map(tile => {
     let rot = 0;
     if (tile.rot > 0) {
@@ -263,6 +264,7 @@ function tangramComplete(tiles: Set<Tile>) {
     return [tile.posn.x, tile.posn.y, rot];
   });
 
+  // Set up helper for checking whether each shape is within +/- 15 px of its 'correct' position
   const ranges = correctStates.map(state =>
     [[state[0] - 15, state[0] + 15], [state[1] - 15, state[1] + 15]]
   );
