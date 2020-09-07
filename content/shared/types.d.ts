@@ -645,6 +645,9 @@ export abstract class Tile {
     copy(dx?: number, dy?: number): any;
     static action(name: string, selectedTiles: Tile[]): void;
 }
+
+type PolypadTile = 'polygon'|'tangram'|'pentomino'|'fraction-bar'|'number-tile'|'number-bar'|'algebra-tile';
+
 export class Polypad extends CustomElementView {
     tiles: Set<Tile>;
     $svg: SVGParentView;
@@ -656,10 +659,13 @@ export class Polypad extends CustomElementView {
     canDelete: boolean;
     canCopy: boolean;
     ready(): void;
-    newTile(type: string, options: string): Tile;
+    newTile(type: PolypadTile, options: string): Tile;
     selectRect(start: Point, end: Point): void;
     snap(...points: Point[]): Point | undefined;
     bindSource($el: ElementView, type: string, options: string, $overlay?: ElementView): void;
     setColour(c?: string): void;
+    setGrid(option: 'none'|'square-dots'|'square-grid'|'tri-dots'|'tri-grid'): void;
+    setActiveTool(tool: 'move'|'pen'|'eraser'): void;
+    toggleProtractor(): void;
     clear(): void;
 }
