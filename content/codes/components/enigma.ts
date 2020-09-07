@@ -9,7 +9,7 @@
 // TODO Share messages with friends
 
 
-import {last} from '@mathigon/core';
+import {chunk, last} from '@mathigon/core';
 import {$N, CustomElementView, ElementView, observe, register, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {mod, Point} from '@mathigon/fermat';
 import {UPPER_CASE} from './utilities';
@@ -207,6 +207,7 @@ export class Enigma extends CustomElementView {
     const state = observe({
       input: '',
       output: '',
+      chunk: (s: string) => chunk(s.split(''), 5).map(c => c.join('')).join(' – '),
       rotorPosn: this.machine.rotorPositions,
       rotate: (i: number, up = false) => {
         this.machine.rotors[i].rotate(up);

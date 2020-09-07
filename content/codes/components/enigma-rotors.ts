@@ -64,10 +64,11 @@ export class EnigmaRotors extends CustomElementView {
   }
 
   private drawReflectorPath(start: number, end: number) {
+    const i = Math.min(start, end);
     const y1 = this.yOffsets[start];
     const y2 = this.yOffsets[end];
     const x1 = REFLECTOR_X;
-    const x2 = REFLECTOR_X + 8 + Math.min(start, LETTER_COUNT - start) * 3;
+    const x2 = REFLECTOR_X + 8 + Math.min(i, LETTER_COUNT - i) * 3;
     return [{x: x1, y: y1}, {x: x2, y: y1}, {x: x2, y: y2}, {x: x1, y: y2}];
   }
 

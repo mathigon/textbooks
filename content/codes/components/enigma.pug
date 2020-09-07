@@ -30,6 +30,6 @@ x-enigma
         g.cables
 
   .notes
-    .input ${input}
-    .output ${output}
+    .input ${chunk(input)}
+    .output ${chunk(output)}
   button.btn(@click="reset()") Reset
