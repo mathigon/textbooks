@@ -647,10 +647,6 @@ Watch what we can do with a 3d matrix.
 
     x-solid(size=280)
 
-::: column(width=280)
-
-    x-solid(size=280)
-
 :::
 
 Try adjusting the vector.
@@ -663,18 +659,18 @@ Try adjusting the vector.
 Neat, huh?
 
 ### Systems of Equations
-A system of equations is really a line or a plane or whatever.
+A linear equation can be represented as a geometrical object, depending on how many variables it has. A linear equation with two variables can be represented as a [[line|plane|hypercube]]. A linear equation with three variables can be represented as a [[plane|line|point]].
 
 
     x-solid(size=300)
 
 
-Try adjusting the vector.
+Try adjusting the vector (only Z does anything).
 <table class="vector">
 <tr>x = ${xi}{xi|1|-2,2,0.1}</tr>
 <tr>y = ${yi}{yi|1|-2,2,0.1}</tr>
 <tr>z = ${zi}{zi|1|-2,2,0.1}</tr>
 </table>
 
-Above us is a thing with a thing. Two planes intersecting gives us a [[line|plane|point]]
+Above us is a system of three equations, each with three variables. The intersection of two of these planes gives us a [[line|plane|point]]. The intersection of all three of these planes gives us a [[point|line|plane]].
 

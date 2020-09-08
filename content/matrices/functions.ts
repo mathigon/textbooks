@@ -273,26 +273,8 @@ import * as u from './utils3d';
 export function threeDimensions($step: Step) {
   const $solids = $step.$$('x-solid') as Solid[];
 
-  // scrap this guy for parts
-  $solids[0].addMesh(() => {
-    $solids[0].addArrow([0, -1.4, 0], [1.4, -1.4, 0], 0xcd0e66);
-    $solids[0].addLabel('r', [0.7, -1.4, 0], 0xcd0e66, '-1px 0 0 -3px');
-
-    $solids[0].addArrow([0, -1.4, 0], [0, 1.35, 0], 0x0f82f2);
-    $solids[0].addLabel('h', [0, 0, 0], 0x0f82f2, '-10px 0 0 4px');
-
-    $solids[0].addPoint([0, 1.4, 0], 0x22ab24);
-    $solids[0].addWireframe(new THREE.ConeGeometry(1.4, 2.8, 128, 1, true));
-
-    const bottomMaterial = Solid.translucentMaterial(0xcd0e66, 0.3);
-    const bottom = new THREE.Mesh(new THREE.CircleGeometry(1.4, 32),
-        bottomMaterial);
-    bottom.rotateX(Math.PI / 2);
-    bottom.position.y = -1.4;
-    return [bottom];
-  });
-
-  $solids[1].addMesh((scene) => {
+  const basic3d = $solids[0];
+  basic3d.addMesh((scene) => {
     // $solids[1].addWireframe(new THREE.Line)
 
     // DRAW PLANES
@@ -300,19 +282,19 @@ export function threeDimensions($step: Step) {
     const zPlaneMaterial = Solid.translucentMaterial(0xcd0e66, 0.3);
     const zPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), zPlaneMaterial);
     zPlane.rotateX(Math.PI/2);
-    $solids[1].addArrow([0, 0, 0], [0, 0, 1], 0xcd0e66);
+    basic3d.addArrow([0, 0, 0], [0, 0, 1], 0xcd0e66);
 
     const yPlaneMaterial = Solid.translucentMaterial(0x0f82f2, 0.3);
     const yPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), yPlaneMaterial);
     yPlane.rotateY(Math.PI/2);
-    $solids[1].addArrow([0, 0, 0], [0, 1, 0], 0x0f82f2);
+    basic3d.addArrow([0, 0, 0], [0, 1, 0], 0x0f82f2);
 
     const xPlaneMaterial = Solid.translucentMaterial(0x22ab24, 0.3);
     const xPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), xPlaneMaterial);
     xPlane.rotateZ(Math.PI/2);
-    $solids[1].addArrow([0, 0, 0], [1, 0, 0], 0x22ab24);
+    basic3d.addArrow([0, 0, 0], [1, 0, 0], 0x22ab24);
 
-    const vectorArrow = $solids[1].addArrow([0, 0, 0], [$step.model.x, $step.model.y, $step.model.z], 0x000000);
+    const vectorArrow = basic3d.addArrow([0, 0, 0], [$step.model.x, $step.model.y, $step.model.z], 0x000000);
 
     $step.model.watch((state: any) => {
       // A-HA! This doesn't work, and there's even a TODO to go with it
@@ -347,7 +329,7 @@ export function threeDimensions($step: Step) {
     solid.addLine([0, 0, 1], [-1, 1, 1], 0xff0000);
   }
 
-  const soq = $solids[2];
+  const soq = $solids[1];
   soq.addMesh((scene) => {
 
     u.addUnitVectorsToSolid(soq);
