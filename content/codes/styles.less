@@ -41,6 +41,17 @@
   &.pressed path { opacity: 1; }
 }
 
+.satellites {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+
+  .sat, .atm, .bits { position: absolute; top: 0; left: 0; }
+
+  .bits { transform: scale(640/1024,420/666) }
+}
+
 .alphabet {
   column-count: 4;
   margin: 1.5em 24px;

@@ -805,6 +805,7 @@ __and those who don't.__
 
 > section: error-detection
 > sectionStatus: dev
+> id: satellite
 
 ### Introduction
 
@@ -816,7 +817,12 @@ __and those who don't.__
 
 {.todo} satellite streaming bits to a receiver on Earth. // INTERACTIVE
 
-    x-img(src="images/night_sky.png")
+    .satellites
+      img(src="images/satellite/nightsky.png" width=640 height=420)
+      img.sat(src="images/satellite/satellites.png" width=640 height=420)
+      img.atm(src="images/satellite/atmosphere.png" width=640 height=420)
+      figure.bits: include images/satellite/bitstream.svg
+
 
 {.fixme} There is a chance that some of the bits may be incorrect, so we need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
 

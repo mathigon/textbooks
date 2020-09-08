@@ -672,6 +672,10 @@ export function resolution($step: Step) {
   });
 }
 
+export function satellite($step: Step) {
+  // TODO: complete this
+}
+
 export function hammingEncode($step: Step) {
   const $hamming = $step.$('x-hamming') as HammingCode;
   const $testButton = $step.$('#testButton')!;
