@@ -9,6 +9,7 @@ import {animate, CanvasView, loadScript} from '@mathigon/boost';
 import {Geopad, GeoPoint, Polypad, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
+import {Relation} from '../shared/components/relation';
 import '../shared/components/relation';
 import {VoronoiStep} from './types';
 
@@ -286,4 +287,13 @@ function tangramComplete(tiles: Set<Tile>) {
 
   return closeEnough;
 
+}
+
+export function polygonNames($step: Step) {
+
+  const $match = $step.$('x-relation') as Relation;
+
+  $match.on('correct', () => $step.addHint('correct'));
+  $match.on('incorrect', () => $step.addHint('incorrect'));
+  $match.on('complete', () => $step.score('names-matched'));
 }

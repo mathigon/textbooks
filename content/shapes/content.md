@@ -127,6 +127,20 @@ We give different names to polygons based on how many sides they have. You may r
 
     include ../shared/components/relation
     x-relation
+      .item(slot="domain" match="5") Pentagon
+      .item(slot="domain" match="6") Hexagon
+      .item(slot="domain" match="7") Septagon/Heptagon
+      .item(slot="domain" match="8") Octagon
+      .item(slot="domain" match="9") Nonagon
+      .item(slot="domain" match="10") Decagon
+      .item(slot="range" name="5") 5 sides
+      .item(slot="range" name="6") 6 sides
+      .item(slot="range" name="7") 7 sides
+      .item(slot="range" name="8") 8 sides
+      .item(slot="range" name="9") 9 sides
+      .item(slot="range" name="10") 10 sides
+
+::: .reveal(when="names-matched")
 
 Let’s practice using these names by looking at some examples of polygons out in the world.
 
@@ -134,20 +148,36 @@ TODO: Images
 
 The Dome of the Rock is an Islamic Shrine in the Old City of Jerusalem. Built in 692 BCE, the base is a regular [[octagon | pentagon | hexagon]].
 
+:::
+
+::: .reveal(when="blank-0")
+
 TODO: Images
 
 The Giant’s Causeway in Northern Ireland is made up of over 40,000 polygonal basalt (a type of igneous rock) columns sticking out of the sea. The column outlined in white in the photo is a [[hexagon | pentagon | octagon]].
+
+:::
+
+::: .reveal(when="blank-1")
 
 TODO: Images
 
 All sorts of traffic signs are polygons - some regular and some irregular. 
 The sign of the two people crossing the street is a [[irregular | regular]] [[pentagon | hexagon | octagon]].
 
+:::
+
+::: .reveal(when="blank-2 blank-3")
+
 Polygons show up in all sorts of natural objects - honeycomb and starfish - to name a few.
 
 TODO: Images
 
 The 10-sided starfish is a [[decagon | nonagon | octagon]].
+
+:::
+
+::: .reveal(when="blank-4")
 
 TODO: Images
 
@@ -157,9 +187,15 @@ Lastly, many flags use polygons. Drag the name of each country to the correct fl
 
     // TODO: Flags matching exercise
 
+:::
+
+::: .reveal(when="flags-matched")
+
 The hexagons in the South African flag and the pentagon in the Nepalese flag may not appear to be the standard image you may have in your head of a pentagon and a hexagon. Move around the vertices (these are the points where the edges meet) in the regular polygons below to make some irregular polygons of your own.
 
     // TODO: Polygon vertices arrangement exercise
+
+:::
 
 ---
 
