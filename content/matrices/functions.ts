@@ -103,23 +103,23 @@ export function scale($step: Step) {
  *
  * @param $step
  */
-export function skew($step: Step) {
+export function shear($step: Step) {
 
   // here's where we have to do that p5js strategy where we push and pop translates to display it
   // (1) center polygon along the origin (0,0)
   // (2) apply transformation shown in matrix
   // (3) move it to center (110, 110)
 
-  $step.model.polygonSkew = (xskew: number, yskew: number) => {
-    console.log(xskew, yskew);
+  $step.model.polygonShear = (xshear: number, yshear: number) => {
+    console.log(xshear, yshear);
 
     const points = [[30, 10], [10, 70], [70, 70], [50, 10]];
 
     // let's try some d3 style formatting
     const pointString = points.map(p => [p[0]-40, p[1]-40])         // (1) center shape along origin (0,0)
         .map(p => applyTransform([
-          [1, - xskew],  // why is this negative?
-          [-yskew, 1]   // is this the right direction?
+          [1, - xshear],  // why is this negative?
+          [-yshear, 1]   // is this the right direction?
         ], p)) // (2) apply transformation from matrix
         .map(p => [p[0]+110, [p[1]+110]])     // (3) move to center of SVG
         .map(point => point.join(','))        // commas between xy coords
@@ -130,7 +130,7 @@ export function skew($step: Step) {
     return poly;
   };
 
-  console.log('inside of skew');
+  console.log('inside of shear');
   console.log('here is the model');
   console.log($step.model);
 }
@@ -191,7 +191,7 @@ export function playWithMe($step: Step) {
     $geopad.animatePoint('jpoint', new Point(0, 1), 1000);
   });
 
-  // skew
+  // shear
   buttons[1].on('click', () => {
     $geopad.animatePoint('ipoint', new Point(1, 0), 1000);
     $geopad.animatePoint('jpoint', new Point(1, 1), 1000);
@@ -242,7 +242,7 @@ export function determinants($step:Step) {
     $geopad.animatePoint('jpoint', new Point(0, 1), 1000);
   });
 
-  // skew
+  // shear
   buttons[1].on('click', () => {
     $geopad.animatePoint('ipoint', new Point(1, 0), 1000);
     $geopad.animatePoint('jpoint', new Point(1, 1), 1000);

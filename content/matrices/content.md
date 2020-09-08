@@ -274,10 +274,10 @@ What will be the dimensions of the resulting matrix?
       +ij([1,0], [0,-1], "Reflect y=0")
       +ij([0,-1], [-1,0], "Reflect y=-x")
 
-      +ij([1,1], [0,1], "Skew x 1")
-      +ij([1,-1], [0,1], "Skew x -1")
-      +ij([1,0], [1,1], "Skew y 1")
-      +ij([1,0], [-1,1], "Skew y -1")
+      +ij([1,1], [0,1], "Shear x 1")
+      +ij([1,-1], [0,1], "Shear x -1")
+      +ij([1,0], [1,1], "Shear y 1")
+      +ij([1,0], [-1,1], "Shear y -1")
 
 When we multiply two of these matrices, we are applying the same transformations twice. Let's see what happens.
 
@@ -360,7 +360,7 @@ a point (as in Axiom 3).
 The determinant is the change in area.
 {.fixme} How can I draw the area??? I need a polygon
 Scale changes it by a factor of N.
-Skew doesn't change it.
+Shear doesn't change it.
 
 
     x-geopad(width=300): svg
@@ -605,11 +605,11 @@ Cool. Let's now add some code that lets us snap to x-big, x-shrink, x-reverse, y
 
 ---
 
-## Skew
-> id: skew
+## Shear
+> id: shear
 
-#### Skew 
-Now let's try a skew
+#### Shear
+Now let's try a shear
 
 
     svg(width=220 height=220)
@@ -622,14 +622,14 @@ Now let's try a skew
           - var width = i == 110 ? 4 : 2
           - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
           line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
-      g.var.skew(:html="polygonSkew(xskew, yskew)")
+      g.var.shear(:html="polygonShear(xshear, yshear)")
 
 
 Adjust the matrix to see how it changes in the coordinates.
 
 <table>
-<tr><td>1</td><td>${xskew}{xskew|0.0|-2.0,2.0,0.1}</td></tr>
-<tr><td>${yskew}{yskew|0.0|-2.0,2.0,0.1}</td><td>1</td></tr>
+<tr><td>1</td><td>${xshear}{xshear|0.0|-2.0,2.0,0.1}</td></tr>
+<tr><td>${yshear}{yshear|0.0|-2.0,2.0,0.1}</td><td>1</td></tr>
 </table>
 
 Now add some buttons and code that make it snap to a set of matrix values.
