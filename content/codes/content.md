@@ -888,10 +888,10 @@ Look at this barcode. // INTERACTIVE
     // only takes 11 values (last digit is error digit)
     x-barcode(value="01234567890")
 
-The guards are on the [{.step-target.pill.b.red}outside](target:.bar-start) and in the
-[{.step-target.pill.b.red}center](target:.bar-middle).
-The first six digits are on the [{.step-target.pill.b.blue}left](target:.bar-left).
-The last six digits are on the [{.step-target.pill.b.green}right](target:.bar-right).
+The guards are on the [{.step-target.pill.b.red}outside](target:outside) and in the
+[{.step-target.pill.b.red}center](target:middle).
+The first six digits are on the [{.step-target.pill.b.blue}left](target:left).
+The last six digits are on the [{.step-target.pill.b.green}right](target:right).
 
 __The Guards__
 

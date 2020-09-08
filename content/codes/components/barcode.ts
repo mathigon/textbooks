@@ -37,22 +37,22 @@ export class Barcode extends CustomElementView {
     this.$svg.removeChildren();
     this.left = 0;
 
-    this.drawRect('101', 'start', true);
+    this.drawRect('101', 'outside', true);
     this.drawRect(DIGITS[value[0]], 'left', true);
     for (let i = 1; i <= 5; ++i) this.drawRect(DIGITS[value[i]], 'left', false);
     this.drawRect('01010', 'middle', true);
     for (let i = 6; i <= 10; ++i) this.drawRect(DIGITS[value[i]], 'right', false, true);
     // this is the error check digit
     this.drawRect(DIGITS[this.errorDigit], 'right', true, true);
-    this.drawRect('101', 'end', true);
+    this.drawRect('101', 'outside', true);
   }
 
   private drawRect(sequence: string, name: string, long = false, invert = false) {
-    const $group = $N('g', {class: 'bar-' + name}, this.$svg);
+    const $group = $N('g', {class: name, target: name}, this.$svg);
     const height = long ? 200 : 180;
 
     for (let i = 0; i < sequence.length; ++i) {
-      if (sequence[i] === (invert ? '0' : '1')) continue;  // Skip white bar
+      if (sequence[i] === (!invert ? '0' : '1')) continue;  // Skip white bar
       $N('rect', {width: 4, height, x: (this.left + i) * 4}, $group);
     }
     this.left += sequence.length;
