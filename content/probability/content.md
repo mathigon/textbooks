@@ -390,7 +390,7 @@ __normal distribution__.
 
 A team of researchers has made a new pill that might help treat patients with a very painful ligament infection. However, before they can start mass production, they have to check that taking the pill is effective - and to check whether it has nasty side-effects!
 
-When a hospital does an experiment to see if a treatment is helpful, it's called a *clinical trial* [image]. You take a large group of patients with this ligament infection. Then you give some of these patients your new pill, while the others get a *placebo*: pill that looks the same as the new pill, but which is just made of sugar. Finally, you compare what happens to both groups of patients after a couple of weeks.
+When a hospital does an experiment to see if a treatment is helpful, it's called a *clinical trial*. You take a large group of patients with this ligament infection. Then you give some of these patients your new pill, while the others get a *placebo*: pill that looks the same as the new pill, but which is just made of sugar. Finally, you compare what happens to both groups of patients after a couple of weeks.
 
 ::: column(width=360)
     <!-- https://depositphotos.com/stock-photos/placebo-pill.html?filter=all&qview=85016586 -->
@@ -406,11 +406,9 @@ Here's what happened to the people who participated in that clinical trial:
 | After a week, didn't get better         | 89  |62   |
 {.grid}
 
-Well, since there were a whole 62 people who were given the pill but didn't get better, so apparently the pill doesn't work perfectly.
+Well, there were a whole 62 people who were given the pill but didn't get better, so apparently the pill doesn't work perfectly.
 
-But wait... what if the pill was working a *little* bit? If a pill is was helpful for even a few people in the trial, then giving it to more people could can be a very good thing to do!
-
-On the other hand, those pills take money and time to administer. So we want to be completely, mathematically, certain that taking the pill makes a person more likely to get better. In order to do this, we need to statistically analyse the data in that table, which is what we’ll be learning to do today!
+Although, what if the pill was working a *little* bit? If a pill is was helpful for even a few people in the trial, then using it might be a very good thing to do! On the other hand, those pills take money and time to administer. So we want to be completely, mathematically, certain that taking the pill makes a person more likely to get better.
 
 ::: column(width=360)
     <!-- depositphotos_109144654-stock-illustration-goalkeeper-catches-the-ball-football.jpg -->
@@ -418,24 +416,29 @@ On the other hand, those pills take money and time to administer. So we want to 
 
 :::
 
-You can apply statistical analysis whenever you have data, whether your data is how many times a goalkeeper caught a ball, the success of business strategies, or even whether the dating profile you've made is working. But to make it easy to learn, we’re going to focus on data that’s easier to collect: what are people wearing!
+In order to do this, we need to statistically analyse the data in that table, which is what we’ll be learning to do today! You can apply statistical analysis whenever you have data, whether your data is how many times a goalkeeper caught a ball, the success of a marketing strategy, or even whether your dating profile you've made is working.
+
+But to make it easy to learn about statistical analysis, we’re going to focus on data that’s easier to collect: what are people wearing!
 
 <!-- How to get them to line up? And slider is permanent? -->
 ${xskew}{xskew|0.0|0,1,0.0833333333}
 
 ::: column.grow
 
-::: column(width=288)
+::: column(width=340)
 
-    svg.conditional(width=288 height=288)
+    svg.conditional(width=340 height=288, onlyOneColumn="true")
 
 :::
 
-Applet. Student must click a few of them before next text shows up
+<!-- Applet. Student must click a few of them before next text shows up -->
 
 <!-- [Appears above the applet after it’s been played with] -->
-If I randomly choose a person from this crowd, what is the chance that they are wearing a *scarf*? 
+
+If I randomly choose a person, what is the chance that they are wearing a *scarf*?
 <!-- correct answer is 0.5 -->
+
+
 
 <!-- slider is below the text, but text disappears and is replaced by the next question -->
 
@@ -474,7 +477,7 @@ And we can also see that if a person is wearing a coat, their chance of wearing 
 
 :::
 
-Let’s try it with you drawing your own picture! Get out a piece of paper and a pencil. Let’s say there’s a crowd of 100 people. A quarter of those 100 people are wearing flip-flops, and a tenth are wearing both flip-flops and sunglasses. Draw a picture representing this. What is the probability that someone who is wearing flip-flops will also be wearing sunglasses? [they enter it using text].
+Let’s try it with you drawing your own picture! Get out a piece of paper and a pencil. Let’s say there’s a crowd of 100 people. 25 of those 100 people are _{.pill.red} wearing flip-flops_. Of those 25 people, 10 are _{.pill.red} wearing flip-flops_ and _{.pill.blue} wearing sunglasses_. Of those NOT _{.pill.red} wearing flip-flops_, 20 are _{.pill.blue} wearing sunglasses_. Draw a picture of the 100 people arranged in a square, with rectangles like those above, using these numbets. What is the probability that someone who is _{.pill.blue} wearing sunglasses_ will also be _{.pill.red} wearing flip-flops_? [[1/3]]
 
 ::: column(width=360)
 
@@ -482,7 +485,7 @@ Let’s try it with you drawing your own picture! Get out a piece of paper and a
 
 :::
 
-When analysing statistics (like the pill-and-ligament-disease statistics, which we will get back to!), scientists talk about probabilities so often that instead of saying “the probability that it will rain today”, they just write *P( it will rain today )*. Also, when ever they're talking about the probability of more than one thing, like wearing a scarf AND wearing a coat, instead of "and", they'll say "wearing a scarf ⋂ wearing a coat". It's the same ⋂ you might have seen in set theory. Put those together and you get things like “When it’s cold outside, *P( I am wearing a scarf ⋂ I am wearing a coat )* is high!”
+When analysing statistics (like the pill-and-ligament-disease statistics, which we will get back to!), scientists talk about probabilities so often that instead of saying “the probability that it will rain today”, they just write *P( it will rain today )*. Also, whenever they're talking about the probability of more than one thing, like wearing a scarf AND wearing a coat, instead of "and", they'll say "wearing a scarf ⋂ wearing a coat". It's the same ⋂ you might have seen in set theory. Put those together and you get things like “When it’s cold outside, *P( I am wearing a scarf ⋂ I am wearing a coat )* is high!”
 
 [Pair of applets appears again] There's another important word to know about. Try this one: the probability that a person is wearing a coat if we know that they’re wearing glasses is []. The probability a person is wearing a coat if they are not wearing glasses is [] So it’s the same! Wearing a coat has nothing to do with whether you are wearing glasses. This is called *independence* - as in, whether a person is wearing a coat is independent of whether they are wearing glasses.
 
