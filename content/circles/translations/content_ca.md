@@ -4,13 +4,12 @@
 
 > section: introduction
 > id: intro
-> translated: auto
 
 ::: column.grow
 
-Mentre existeixen els humans, hem mirat al cel i hem intentat explicar la vida a la Terra utilitzant el moviment de les estrelles, els planetes i la lluna. 
+Des de que existeixen els humans, hem mirat al cel i hem intentat explicar la vida a la Terra utilitzant el moviment de les estrelles, els planetes i la lluna. 
 
-Els astrònoms grecs antics van ser els primers a descobrir que tots els objectes celestials es mouen per camins regulars, anomenats __òrbites__ . Creien que aquestes òrbites són sempre circulars. Al cap i a la fi, els cercles són els “més perfectes” de totes les formes: simètrics en totes les direccions i, per tant, una elecció adequada per a l’ordre subjacent del nostre univers. 
+Els astrònoms grecs antics van ser els primers a descobrir que tots els objectes celestials es mouen per camins regulars, anomenats __òrbites__ . Creien que aquestes òrbites són sempre circulars. Al cap i a la fi, els cercles són les “més perfectes” de totes les formes: simètrics en totes les direccions i, per tant, una elecció adequada per a l’ordre subjacent del nostre univers. 
 
 ::: column(width=320)
 
@@ -52,7 +51,7 @@ Cada punt d'un [__cercle__](gloss:circle) té la mateixa distància del centre. 
 > id: similar
 > goals: circle-0 circle-1 circle-2
 
-Una propietat important dels cercles és que tots els cercles són [similars](gloss:similar) . Podeu demostrar que mostrant com es poden combinar tots els cercles mitjançant [traduccions](gloss:translation) i [dilacions](gloss:dilation) simplement: 
+Una propietat important dels cercles és que tots els cercles són [semblants](gloss:similar) . Es pot demostrar simplement observant que tots els cercles poden transformar-se els uns en els altres mitjançant [translacions](gloss:translation) i [homotècies](gloss:dilation): 
 
     figure: svg.similar-circles(width=640 height=380 viewBox="0 0 640 380")
 
@@ -60,7 +59,7 @@ Una propietat important dels cercles és que tots els cercles són [similars](gl
 > id: pi-definition
 > goals: digits
 
-Pot recordar que, per a polígons similars, la relació entre els costats corresponents és sempre constant. Alguna cosa similar funciona per cercles: la relació entre la [circumferència](gloss:circle-circumference) i el [diàmetre](gloss:circle-diameter) és igual per a _tots els cercles_ . Sempre és 3.14159 ... - un misteriós número anomenat [__Pi__](gloss:pi) , que sovint s'escriu amb la lletra grega _π_ per a "p". Pi té infinitament nombres decimals que es mantenen per sempre sense cap patró específic: 
+Potser recordes que, per a polígons semblants, la relació entre els costats corresponents és sempre constant. Alguna cosa similar funciona per cercles: la relació entre la [circumferència](gloss:circle-circumference) i el [diàmetre](gloss:circle-diameter) és igual per a _tots els cercles_ . Sempre és 3.14159… - un misteriós número anomenat [__Pi__](gloss:pi) , que sovint s'escriu amb la lletra grega _π_ per a "p". Pi té infinits nombres decimals que es mantenen per sempre sense cap patró específic: 
 
     canvas.pi-spiral(width=800 height=760)
 
@@ -125,7 +124,7 @@ Els cercles són perfectament simètrics i no tenen cap "punt feble" com les can
 
 ::: column.grow
 
-També resulta que un cercle és la forma amb l’àrea més gran per a una circumferència determinada. Per exemple, si teniu una corda de 100 \ m de longitud, podeu utilitzar-la per adjuntar l'espai més gran si formeu un cercle (en lloc d'altres formes com un rectangle o un triangle). 
+També resulta que un cercle és la forma amb l’àrea més gran per a una circumferència determinada. Per exemple, si teniu una corda de 100 \ m de longitud, podeu utilitzar-la per envoltar l'espai més gran si formeu un cercle (en comptes d'altres formes com un rectangle o un triangle). 
 
 A la natura, objectes com les gotes d'aigua o les bombolles d'aire poden _estalviar energia_ convertint-se en circulars o esfèrics i reduint la seva superfície. 
 
@@ -148,7 +147,7 @@ A la natura, objectes com les gotes d'aigua o les bombolles d'aire poden _estalv
 
 ### L’Àrea d’un Cercle 
 
-Però, com calculem realment l’àrea d’un cercle? Provem la mateixa tècnica que vam utilitzar per [trobar l’àrea dels quadrilàters](/course/polyhedra/quadrilaterals) : tallem la forma en diverses parts diferents, i després reorganitzem-les en una forma diferent que ja coneixem l’àrea de (per exemple, un rectangle o un triangle). 
+Però, com calculem realment l’àrea d’un cercle? Provem la mateixa tècnica que vam utilitzar per [trobar l’àrea dels quadrilàters](/course/polyhedra/quadrilaterals): tallem la forma en diverses parts diferents, i després reorganitzem-les en una forma diferent de la qual ja en coneixem l’àrea (per exemple, un rectangle o un triangle). 
 
 L’única diferència és que, com que els cercles són corbats, hem d’utilitzar algunes aproximacions: 
 
@@ -206,7 +205,7 @@ Aquí podeu veure un cercle dividit en ${toWord(n)} anells. Com abans, podeu mou
 ---
 > id: area-2
 
-Si poguéssim utilitzar infinitament anells o falques, les aproximacions anteriors serien perfectes, i ambdues ens donen la mateixa fórmula per a l’àrea d’un cercle: 
+Si poguéssim utilitzar infinits anells o falques, les aproximacions anteriors serien perfectes, i ambdues ens donen la mateixa fórmula per a l’àrea d’un cercle: 
 
 {.text-center.r}`A = π r^2` . [Continuar](btn:next) 
 
@@ -215,9 +214,9 @@ Si poguéssim utilitzar infinitament anells o falques, les aproximacions anterio
 
 ### Càlcul de Pi 
 
-Com heu vist més amunt, `π = 3.1415926…` no és un nombre sencer simple i els seus dígits decimals es mantenen per sempre sense patró de repetició. Els nombres amb aquesta propietat s’anomenen [__números irracionals__](gloss:irrational-numbers) , i vol dir que `π` no es pot expressar com a fracció simple `a/b` . 
+Com heu vist més amunt, `π = 3.1415926…` no és un nombre enter simple i els seus dígits decimals es mantenen per sempre sense cap patró de repetició. Els nombres amb aquesta propietat s’anomenen [__números irracionals__](gloss:irrational-numbers), i vol dir que `π` no es pot expressar com a fracció simple `a/b`.
 
-També vol dir que mai no podem anotar _tots_ els dígits de Pi; al cap i a la fi, n’hi ha infinitament. Els matemàtics grecs i xinesos antics van calcular els primers quatre dígits decimals de Pi aproximant els cercles utilitzant polígons regulars. Observeu com, a mesura que afegiu més costats, el polígon comença a semblar [[més i més | menys | exactament]] com un cercle: 
+També vol dir que mai no podem anotar _tots_ els dígits de Pi; al cap i a la fi, n’hi ha infinits. Els matemàtics grecs i xinesos antics van calcular els primers quatre dígits decimals de Pi aproximant els cercles utilitzant polígons regulars. Observeu com, a mesura que afegiu més costats, el polígon comença a semblar [[més i més | menys | exactament]] com un cercle:
 
     figure: x-img(src="images/polygons.svg" width=460 height=110)
 
@@ -232,9 +231,9 @@ També vol dir que mai no podem anotar _tots_ els dígits de Pi; al cap i a la f
 
 El 1665, [Isaac Newton va](bio:newton) aconseguir calcular 15 dígits. Avui, podem utilitzar ordinadors potents per calcular el valor de Pi amb una precisió molt més alta. 
 
-El registre actual és de 31,4 bilions de dígits. Un llibre imprès que contingués tots els dígits tindria aproximadament 400 \ km de gruix: és l'alçada a la qual l' [Estació Espacial Internacional](gloss:iss) orbita la Terra. 
+El registre actual és de 31,4 bilions de dígits. Un llibre imprès que contingués tots els dígits tindria aproximadament 400 km de gruix: és l'alçada a la qual l' [Estació Espacial Internacional](gloss:iss) orbita la Terra. 
 
-Per descomptat, no cal recordar que molts dígits de Pi. De fet, la fracció `22/7 = 3.142…` és una gran aproximació. 
+Per descomptat, no cal recordar molts dígits de Pi. De fet, la fracció `22/7 = 3.142…` és una gran aproximació. 
 
 :::
 
@@ -245,7 +244,7 @@ Un dels mètodes per calcular Pi és utilitzar infinites seqüències de nombres
 
 {.text-center}`π = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/input(11) + …`
 
-{.reveal(when="blank-0")} A mesura que calculem cada cop més termes d’aquesta sèrie, seguint sempre el mateix patró, el resultat s’acostarà i s’acostarà a Pi. 
+{.reveal(when="blank-0")} A mesura que calculem cada cop més termes d’aquesta sèrie, seguint sempre el mateix patró, el resultat s’acostarà més i més a Pi. 
 
 ---
 > id: pi-colours
@@ -253,9 +252,9 @@ Un dels mètodes per calcular Pi és utilitzar infinites seqüències de nombres
 
 ::: column.grow
 
-Molts matemàtics creuen que Pi té una propietat encara més curiosa: que és un __nombre normal__ . Això vol dir que els dígits del 0 al 9 apareixen completament a l’atzar, com si la natura hagués rodat un dau de 10 cares infinitament moltes vegades, per determinar el valor de Pi. 
+Molts matemàtics creuen que Pi té una propietat encara més curiosa: que és un __nombre normal__ . Això vol dir que els dígits del 0 al 9 apareixen completament a l’atzar, com si la natura hagués rodat un dau de 10 cares infinitament moltes vegades, per determinar el valor de Pi.
 
-Aquí podeu veure els primers 100 dígits de Pi. Desplaceu-vos sobre algunes de les cel·les per veure com es distribueixen els dígits. 
+Aquí podeu veure els primers 100 dígits de Pi. Desplaceu-vos sobre algunes de les cel·les per veure com es distribueixen els dígits.
 
 ::: column(width=330)
 
@@ -294,7 +293,7 @@ Si Pi és normal, vol dir que podeu pensar en _qualsevol_ cadena de dígits i ap
 
 Fins i tot podríem convertir un llibre sencer, com Harry Potter, en una cadena de dígits molt llarga (a = 01, b = 02, etc.). Si Pi és normal, aquesta cadena apareixerà en algun lloc dels seus dígits, però es necessitaran milions d’anys per calcular els dígits suficients per trobar-la. 
 
-El Pi és fàcil d’entendre, però d’importància fonamental en ciències i matemàtiques. Aquesta podria ser una raó per la qual Pi s'ha popularitzat inusualment en la nostra cultura (almenys, en comparació amb altres temes de matemàtiques): 
+Pi és fàcil d’entendre, però té una importància fonamental en ciències i matemàtiques. Aquesta podria ser una raó per la qual Pi s'ha popularitzat inusualment en la nostra cultura (almenys, en comparació amb altres temes de matemàtiques): 
 
 ::: column(width=220 parent="padded-thin")
 
@@ -326,7 +325,6 @@ Fins i tot hi ha un _dia de pi_ cada any, que o bé cau el 14 de març, perquè 
 
 > section: radians
 > id: degrees
-> translated: auto
 
 Fins ara, en geometria, sempre hem mesurat angles en [graus](gloss:degrees) . A __{.m-red} la__ rotació __completa del cercle__ és de [[360]] º, a __{.m-green} el mig cercle__ és de [[180]] º, a __{.m-yellow} quart de cercle__ és de [[90]]°, etc. 
 
@@ -365,7 +363,7 @@ Fins ara, en geometria, sempre hem mesurat angles en [graus](gloss:degrees) . A 
 ---
 > id: degrees-1
 
-{.r} El número 360 és molt convenient perquè és divisible per tants altres nombres: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, etc. Això significa que moltes fraccions d’un cercle també són nombres sencers. Però us heu preguntat mai d’on prové el número 360? [Continuar](btn:next) 
+{.r} El número 360 és molt convenient perquè és divisible per tants altres nombres: 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, etc. Això significa que moltes fraccions d’un cercle també són nombres enters. Però us heu preguntat mai d’on prové el número 360? [Continuar](btn:next) 
 
 ---
 > id: babylon
@@ -388,7 +386,7 @@ Aleshores, una de les aplicacions més importants de les matemàtiques era en as
 > id: constellations
 > goals: rotate
 
-Els astrònoms van notar que les constel·lacions visibles a una hora determinada durant la nit es desplaçaven cada dia una mica minúscul, fins que, després de aproximadament 360 dies, havien tornat a girar cap al seu punt de partida. I potser aquesta va ser la raó per la qual van dividir el cercle en 360 graus. 
+Els astrònoms van notar que les constel·lacions visibles a una hora determinada durant la nit es desplaçaven cada dia una mica, fins que, després d'aproximadament 360 dies, havien tornat a girar cap al seu punt de partida. I potser aquesta va ser la raó per la qual van dividir el cercle en 360 graus. 
 
     figure: .constellations
       .label.md Midnight on day ${day}
@@ -407,7 +405,7 @@ També va funcionar bé amb el seu sistema de números de base-60 existent (des 
 
 ::: column.grow
 
-Per a molts de nosaltres, mesurar angles en graus és una segona naturalesa: hi ha un vídeo a 360°, els patinadors poden treure 540s, i algú que canvia la seva decisió podria fer un gir de 180°. 
+Per a molts de nosaltres, mesurar angles en graus és el més natural: hi ha un vídeo a 360°, els patinadors poden treure 540s, i algú que canvia la seva decisió podria fer un gir de 180°. 
 
 Però des d’un punt de vista matemàtic, l’elecció del 360 és completament arbitrària. Si visquéssim a Mart, un cercle podria tenir 670°, i un any a Júpiter té fins i tot 10.475 dies. 
 
@@ -424,7 +422,7 @@ Però des d’un punt de vista matemàtic, l’elecció del 360 és completament
 
 ### Radians 
 
-En lloc de dividir un cercle en un nombre de segments (com 360 graus), els matemàtics prefereixen mesurar els angles mitjançant la [circumferència](gloss:circle-circumference) d'un [__cercle unitari__](gloss:unit-circle) (un cercle amb radi 1). 
+En comptes de dividir un cercle en un nombre de segments (com 360 graus), els matemàtics prefereixen mesurar els angles mitjançant la [circumferència](gloss:circle-circumference) d'un [__cercle unitari__](gloss:unit-circle) (un cercle amb radi 1). 
 
 ::: column(width=280)
 
@@ -440,20 +438,20 @@ En lloc de dividir un cercle en un nombre de segments (com 360 graus), els matem
 
 ::: column.grow
 
-A [el cercle complet](action:setState(0)) té circumferència _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+Un _{span.var-action} cercle complet_ té perímetre _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} Per a [rotació mig cercle](action:setState(1)), la distància corresponent al llarg de la circumferència és _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} Per a una _{span.var-action} rotació de mig cercle_, la distància corresponent al llarg de la circumferència és _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} Per a [gir de quart de cercle](action:setState(2)), la distància al llarg de la circumferència és _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} Per a un _{span.var-action} gir de quart de cercle_, la distància al llarg de la circumferència és _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
-{.reveal(when="eqn-2")} I així successivament: aquesta manera de mesurar els angles s'anomenen [__radians__](gloss:radians) (ho podríeu recordar com a "unitats de radi"). 
+{.reveal(when="eqn-2")} I així successivament: aquesta manera de mesurar els angles s'anomena [__radians__](gloss:radians) (ho podríeu recordar com a "unitats de radi").
 
 :::
 
 ---
 > id: radians-conversion
 
-Cada angle en graus té una mida equivalent en els radians. La conversió entre les dues és molt fàcil, de la mateixa manera que es pot convertir entre altres unitats com metres i quilòmetres, o Celsius i Fahrenheit: 
+Cada angle en graus té una mida equivalent en els radians. La conversió entre les dues és molt fàcil, de la mateixa manera que es pot convertir entre altres unitats com metres i quilòmetres, o Celsius i Fahrenheit:
 
 {.text-center} __{.m-red} 360°__ _{span.space} =_ __{.m-green} 2 _π_ rad__ 
 
@@ -472,7 +470,7 @@ __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red}
 ---
 > id: radians-table
 
-Podeu escriure el valor de les radianes com a múltiple de _π_ o com un número decimal únic. Podeu emplenar aquesta taula de mides d'angle equivalents en graus i radians? 
+Podeu escriure el valor dels radians com a múltiple de _π_ o com un número decimal únic. Podeu emplenar aquesta taula de mides d'angle equivalents en graus i radians? 
 
 | __{.m-red} graus__ | 0 | 60 | _{x-equation.small(solution="360/π" keys="π frac" numeric)}_ | 180 | _{x-equation.small(solution="270" keys="π frac" numeric)}_ |
 | __{.m-green} radians__ | 0 | _{x-equation.small(solution="π/3" keys="π frac" numeric)}_ | 2 | _{x-equation.small(solution="π" keys="π frac" numeric)}_ | `3/2 pi` |
@@ -528,12 +526,12 @@ Per a la majoria de problemes de geometria simples, graus i radians són complet
 
 ::: column.grow
 
-La majoria de les calculadores tenen un [botó especial](->.button.mode) per canviar entre graus i radians. Les funcions trigonomètriques com [__si,__](gloss:sin) [__cosinus__](gloss:cos) i angles per dur __bronzejat__ com a entrada, i les seves funcions inverses __arcsinus,__ __arccos__ i angles de retorn __arctan__ com de sortida. La configuració actual de la calculadora determina quines unitats s’utilitzen per a aquests angles. 
+La majoria de les calculadores tenen un [botó especial](->.button.mode) per canviar entre graus i radians. Les funcions trigonomètriques com [__sinus__](gloss:sin) [__cosinus__](gloss:cos) i __tangent__ prenen angles com a entrada, i les seves funcions inverses __arcsinus,__ __arccos__ i __arctan__ mostren angles com a sortida. La configuració actual de la calculadora determina quines unitats s’utilitzen per a aquests angles. 
 
-Proveu d'utilitzar aquesta calculadora per calcular-la 
+Proveu d'utilitzar aquesta calculadora per calcular que 
 
-{.text-center} pecat (30°) = [[0,5]] _{span.eqn-gap}_ cos (1°) = [[0,999]]  
-pecat (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]] 
+{.text-center} sin (30°) = [[0,5]] _{span.eqn-gap}_ cos (1°) = [[0,999]]  
+sin (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]] 
 
 ::: column(width=300)
 
@@ -563,11 +561,11 @@ pecat (30 rad) = [[-0.988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 ---
 > id: small-angle
 
-L’ús de radians té un avantatge especialment interessant quan s’utilitza la funció Sine. Si `θ` és doncs un angle molt reduït (inferior a 20° o 0,3 rad), doncs `sin(θ) ≈ θ` . Per exemple, 
+L’ús de radians té un avantatge especialment interessant quan s’utilitza la funció sinus. Si `θ` és un angle molt petit (inferior a 20° o 0,3 rad), aleshores `sin(θ) ≈ θ` . Per exemple, 
 
 {.text-center} pecat ( ${x}{x|0.1|0,0.5,0.05} ) `≈`${sin(x)} ... 
 
-{.reveal(when="var-0")} Això s’anomena __aproximació d’angle petit__ , i pot simplificar molt algunes equacions que contenen funcions trigonomètriques. En el futur aprendreu molt més. 
+{.reveal(when="var-0")} Això s’anomena __aproximació d’angle petit__, i pot simplificar molt algunes equacions que contenen funcions trigonomètriques. En el futur n'aprendreu molt més.
 
 ---
 
@@ -575,9 +573,8 @@ L’ús de radians té un avantatge especialment interessant quan s’utilitza l
 
 > section: tangets-chords-arcs
 > id: circle-parts
-> translated: auto
 
-A les seccions anteriors, heu après els noms donats a diverses parts diferents d’un cercle, com ara el centre, el radi, el diàmetre i la circumferència. Tot i així, hi ha molts elements geomètrics relacionats amb un cercle, que haurem de resoldre problemes més complexos: 
+A les seccions anteriors, heu après els noms donats a diverses parts diferents d’un cercle, com ara el centre, el radi, el diàmetre i la circumferència. Tot i així, hi ha molts elements geomètrics relacionats amb un cercle, que necessitarem per resoldre problemes més complexos: 
 
 ::: column(width=300)
 
@@ -606,12 +603,12 @@ A les seccions anteriors, heu après els noms donats a diverses parts diferents 
 
 ::: column.grow(parent="right")
 
-* {.r} A [{.red} secant](target:secant) és una línia que intersecta un cercle en dos punts. [Continuar](btn:next)
-* {.r.reveal(when="next-0")} A [{.green} la corda](target:chord) és un segment de línia els extrems del qual es troben en la circumferència d'un cercle. [Continuar](btn:next)
-* {.r.reveal(when="next-1")} A [{.blue} tangent](target:tangent) és una línia que toca un cercle exactament en un punt. Això s’anomena __punt de tangència__ . [Continuar](btn:next)
-* {.r.reveal(when="next-2")} Un [{.yellow} l’arc](target:arc) és una secció de la circumferència d’un cercle. [Continuar](btn:next)
-* {.r.reveal(when="next-3")} A [{.teal} El sector](target:sector) és una part de l’interior d’un cercle, delimitat per un _arc_ i _dos radis_ . [Continuar](btn:next)
-* {.r.reveal(when="next-4")} Finalment, a [{.purple} el segment](target:segment) és una part de l’interior d’un cercle, delimitat per un _arc_ i _un acord_ . [Continuar](btn:next) 
+* {.r} Una [{.red} secant](pill:secant) és una línia que interseca un cercle en dos punts. [Continuar](btn:next)
+* {.r.reveal(when="next-0")} Una [{.green} corda](pill:chord) és un segment de línia els extrems del qual es troben en la circumferència d'un cercle. [Continuar](btn:next)
+* {.r.reveal(when="next-1")} Una [{.blue} tangent](pill:tangent) és una línia que toca un cercle exactament en un punt. Això s’anomena __punt de tangència__. [Continuar](btn:next)
+* {.r.reveal(when="next-2")} Un [{.yellow} arc](pill:arc) és una secció de la circumferència d’un cercle. [Continuar](btn:next)
+* {.r.reveal(when="next-3")} Un [{.teal} El sector](pill:sector) és una part de l’interior d’un cercle, delimitat per un _arc_ i _dos radis_ . [Continuar](btn:next)
+* {.r.reveal(when="next-4")} Finalment, un [{.purple} el segment](pill:segment) és una part de l’interior d’un cercle, delimitat per un _arc_ i _una corda_. [Continuar](btn:next) 
 
 :::
 
@@ -626,15 +623,11 @@ En aquest apartat, analitzarem la relació entre tots aquests elements i provare
 
 {.todo} PRÒXIMAMENT! 
 
-    
-
 ---
 
 ### Acords 
 
 {.todo} PRÒXIMAMENT! 
-
-    
 
 ---
 > id: earth-arc
@@ -643,9 +636,9 @@ En aquest apartat, analitzarem la relació entre tots aquests elements i provare
 
 ::: column.grow
 
-La majoria de científics de l’antiga Grècia van coincidir que la Terra és una esfera. Hi havia moltes proves: des de vaixells que desapareixien darrere de l’horitzó al mar, fins al moviment circular de les estrelles durant la nit. 
+La majoria de científics de l’antiga Grècia van coincidir que la Terra és una esfera. Hi havia moltes proves: des de vaixells que desapareixien darrere de l’horitzó al mar, fins al moviment circular de les estrelles durant la nit.
 
-Malauradament, ningú no sabia exactament _com_ era la Terra, fins al voltant del 200 aC, quan el matemàtic [Eratòstenes va](bio:eratosthenes) trobar una manera enginyosa de mesurar el radi de la Terra mitjançant la geometria bàsica. Tot el que necessitem és una mica més de coneixement sobre arcs i sectors d’un cercle. 
+Malauradament, ningú no sabia exactament _com_ era la Terra, fins al voltant del 200 aC, quan el matemàtic [Eratòstenes](bio:eratosthenes) va trobar una manera enginyosa de mesurar el radi de la Terra mitjançant geometria bàsica. Tot el que necessitem és una mica més de coneixement sobre arcs i sectors d’un cercle. 
 
 ::: column(width=280)
 
@@ -670,11 +663,11 @@ Malauradament, ningú no sabia exactament _com_ era la Terra, fins al voltant de
 
 ::: column.grow
 
-Com es pot veure al diagrama, an [{.red} l’arc](target:arc) és una part de la [[circumferència | diàmetre | tangent]] d’un cercle, i a [{.yellow} sector](target:sector) és una part de l’ [[interior | radi | perímetre]] d’un cercle. 
+Com es pot veure al diagrama, un [{.red} l’arc](pill:arc) és una part de la [[circumferència | diàmetre | tangent]] d’un cercle, i un [{.yellow} sector](pill:sector) és una part de l’ [[interior | radi | perímetre]] d’un cercle. 
 
 ::: .reveal(when="blank-0 blank-1")
 
-L’arc entre dos punts _A_ i _B_ s’escriu sovint com `arc(AB)` . Aquesta definició és lleugerament ambigua: hi ha una [{.purple} segon arc](target:major) que connecta _A_ i _B,_ però va a la inversa. 
+L’arc entre dos punts _A_ i _B_ s’escriu sovint com `arc(AB)` . Aquesta definició és lleugerament ambigua: hi ha un [{.purple} segon arc](pill:major) que connecta _A_ i _B,_ però va a la inversa. 
 
 El més petit dels dos arcs s’anomena __arc menor__ , i el més gran s’anomena __arc major__ . Si els punts _A_ i _B_ estan exactament oposats els dos, els dos arcs tenen la mateixa longitud i són [[semicercles | diàmetres | circumferències]] . 
 
@@ -687,15 +680,15 @@ El més petit dels dos arcs s’anomena __arc menor__ , i el més gran s’anome
 
 ::: column.grow
 
-Per trobar la longitud d’un arc o l’àrea d’un sector, hem de conèixer l’angle corresponent al centre del cercle: això s’anomena [{.blue} angle central](target:angle) . 
+Per trobar la longitud d’un arc o l’àrea d’un sector, hem de conèixer l’angle corresponent al centre del cercle: això s’anomena [{.blue} angle central](pill:angle) . 
 
-Observeu com l’arc, el sector i l’angle ocupen la _mateixa proporció_ d’un cercle complet. Per exemple, si la opció [{.blue} angle central](target:angle) és [90°](action:set90Deg()) , triga [[un quart | una meitat | un terç]] de l’a [{.teal} cercle complet](target:fangle) 
+Observeu com l’arc, el sector i l’angle ocupen la _mateixa proporció_ d’un cercle complet. Per exemple, si l'[{.blue} angle central](pill:angle) és _{span.var-action} 90°_ , ocupa [[un quart | una meitat | un terç]] del [{.teal} cercle complet](pill:fangle) 
 
 ::: .reveal(when="blank-0")
 
-Això significa que el [{.red} la longitud de l’arc](target:arc) també és `1/4` del [{.purple} la circumferència sencera](target:circ) del cercle i la [{.yellow} l’àrea del sector](target:sector) és `1/4` del [{.orange} tota la zona](target:area) del cercle. 
+Això significa que [{.red} la longitud de l’arc](pill:arc) també és `1/4` de [{.purple} la circumferència sencera](pill:circ) del cercle i [{.yellow} l’àrea del sector](pill:sector) és `1/4` de [{.orange} tota la zona](pill:area) del cercle. 
 
-Podem expressar aquesta relació en una equació: 
+Podem expressar aquesta relació amb una equació: 
 
 {.text-center}`"arc length" / "circumference" = blank("sector area","circle radius","arc area") / "circle area" = "central angle" / blank("360°","180°","90°")`
 
@@ -722,18 +715,18 @@ Podem expressar aquesta relació en una equació:
 ---
 > id: arcs-2
 
-Ara podem reorganitzar aquestes equacions per trobar quina sigui la variable que ens interessa. Per exemple, 
+Ara podem reorganitzar aquestes equacions per trobar la variable que ens interessi. Per exemple, 
 
 ::: column(width=320 parent="padded-thin")
 
 | [ longitud de l’arc](pill:red) | = | `"circumference" × c/360` |
-|                                  | = | `2 π r × c/360` |
+|                                | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
 | [ àrea sectorial](pill:yellow) | = | `"circle area" × c/360` |
-|                                  | = | `π r^2 × c/360` |
+|                                | = | `π r^2 × c/360` |
 {.eqn-system}
 
 :::
@@ -743,7 +736,7 @@ on _r_ és el radi del cercle i _c_ és la mida de l'angle central.
 ---
 > id: arcs-rad
 
-Si l'angle central es mesura en [radiians](gloss:radians) més que en [graus](gloss:degrees) , podem fer servir les mateixes equacions, però hem de substituir 360° per [[`2 π`|`1/2 π`|`π`]] : 
+Si l'angle central es mesura en [radians](gloss:radians) més que en [graus](gloss:degrees), podem fer servir les mateixes equacions, però hem de substituir 360° per [[`2 π`|`1/2 π`|`π`]] : 
 
 ::: .reveal(when="blank-0")
 
@@ -770,7 +763,7 @@ Ara veiem com podem utilitzar arcs i sectors per calcular la circumferència de 
 ---
 > id: eratosthenes
 
-A l’antic Egipte, la ciutat de _Swenet_ estava situada al llarg del riu Nil. Swenet era famós per un pou amb una curiosa propietat: hi va haver un moment cada any quan la llum del sol arribava al fons mateix del pou, al migdia del 21 de juny, el dia del _solstici d’estiu_ . En aquell moment precís, es va il·luminar el fons del pou, però no els seus costats, el que significa que el Sol es trobava directament a sobre del pou. 
+A l’antic Egipte, la ciutat de _Swenet_ estava situada al llarg del riu Nil. Swenet era famosa per un pou amb una curiosa propietat: hihavia un moment cada any quan la llum del sol arribava al fons mateix del pou, al migdia del 21 de juny, el dia del _solstici d’estiu_ . En aquell moment precís, s'il·luminava el fons del pou, però no els seus costats, fet que significa que el Sol es trobava directament a sobre del pou. 
 
 ::: column(width=300)
 
@@ -788,7 +781,7 @@ A l’antic Egipte, la ciutat de _Swenet_ estava situada al llarg del riu Nil. S
 
 El matemàtic [Eratòstenes](bio:eratosthenes) vivia a _Alexandria_ , a uns 800 \ km al nord de Swenet, on fou director de la Gran Biblioteca. Al centre de la ciutat d’Alexandria s’alçava un obelisc, un monument alt i estret amb una part superior en forma de piràmide. 
 
-Eratòstenes es va adonar que al migdia del dia del solstici d’estiu, l’obelisc va tirar una ombra, el que significa que el sol _no_ estava directament a sobre. Va deduir que això era a causa de la curvatura de la Terra i es va adonar que es podia utilitzar per calcular la circumferència del nostre planeta. 
+Eratòstenes es va adonar que al migdia del dia del solstici d’estiu, l’obelisc projectava una ombra, fet que significa que el sol _no_ estava directament a sobre. Va deduir que això era a causa de la curvatura de la Terra i es va adonar que es podia utilitzar per calcular la circumferència del nostre planeta. 
 
 ---
 > id: eratosthenes-1
@@ -799,7 +792,7 @@ Eratòstenes es va adonar que al migdia del dia del solstici d’estiu, l’obel
 
 ::: .reveal(when="next-0")
 
-Eratòstenes va mesurar que el [{.teal} l'angle](target:angle1) de l'ombra va ser de 7,2°. Això és el mateix que la [{.purple} angle central](target:angle2) del centre [{.red} arc](target:arc) d’Alexandria a Swenet, perquè [[s’alternen | vertical |]] angles [[corresponents]] 
+Eratòstenes va mesurar que [{.teal} l'angle](pill:angle1) de l'ombra era de 7,2°. Això és el mateix que l'[{.purple} angle central](pill:angle2) del centre [{.red} arc](pill:arc) d’Alexandria a Swenet, perquè [[s’alternen | vertical |]] angles [[corresponents]] 
 
 :::
 
@@ -821,7 +814,7 @@ Si reorganitzem això, trobem que la circumferència de la Terra és
 
 ::: .reveal(when="blank-2")
 
-Finalment, sabem que la circumferència d’un cercle és `C = 2 pi r` , així és el radi de la Terra 
+Finalment, sabem que la circumferència d’un cercle és `C = 2 pi r` , així doncs el radi de la Terra és 
 
 {.text-center}`r_"Earth" = (40000 "km") / (2 pi) ≈ 6400 "km"` . 
 
@@ -858,7 +851,7 @@ Finalment, sabem que la circumferència d’un cercle és `C = 2 pi r` , així �
 ---
 > id: eratosthenes-2
 
-El mesurament d’Eratòstenes va ser un dels experiments més importants de l’antiguitat. La seva estimació de la mida de la Terra era sorprenentment exacta, sobretot quan es va considerar que només tenia accés a eines de mesurament molt bàsiques. 
+El mesurament d’Eratòstenes va ser un dels experiments més importants de l’antiguitat. La seva estimació de la mida de la Terra era sorprenentment exacta, sobretot tenint en compte que només tenia accés a eines de mesura molt bàsiques. 
 
 ::: column(width=280)
 
@@ -866,7 +859,7 @@ El mesurament d’Eratòstenes va ser un dels experiments més importants de l�
 
 ::: column.grow
 
-Per descomptat, pot ser difícil traduir els seus resultats originals en unitats modernes com quilòmetres. A l’antiga Grècia, la distància es va mesurar als _estadis_ (aproximadament 160 m), però no hi havia cap estàndard universal. Totes les àrees tenien una versió lleugerament diferent, i no sabem quina Eratòstenes feia servir. 
+Per descomptat, pot ser difícil traduir els seus resultats originals en unitats modernes com quilòmetres. A l’antiga Grècia, la distància es mesurava en _estadis_ (aproximadament 160 m), però no hi havia cap estàndard universal. Totes les àrees tenien una versió lleugerament diferent, i no sabem quina Eratòstenes feia servir. 
 
 Als segles següents, els científics van intentar utilitzar altres mètodes per calcular el radi de la Terra, de vegades amb resultats molt diferents i incorrectes. 
 
@@ -904,7 +897,6 @@ TODO
 
 > section: spheres-cones-cylinders
 > id: solids
-> translated: auto
 
 En els apartats anteriors, es van estudiar les propietats dels cercles en una superfície plana. Però el nostre món és realment tridimensional, de manera que anem a fer una ullada a alguns sòlids 3D basats en cercles: 
 
@@ -928,7 +920,7 @@ En els apartats anteriors, es van estudiar les propietats dels cercles en una su
 
 :::
 
-Observeu com la definició d’una esfera és gairebé la mateixa que la definició d’un [[cercle | radi | cub]] , excepte en tres dimensions. 
+Observeu com la definició d’una esfera és gairebé la mateixa que la definició d’un [[cercle | radi | cub]], excepte en tres dimensions. 
 
 ---
 > id: gasometer
@@ -957,9 +949,9 @@ Aquí podeu veure el _gasòmetre_ cilíndric a Oberhausen, Alemanya. Solia emmag
 
 #### Volum d'un cilindre 
 
-La part superior i inferior d’un cilindre són dos cercles congruents, anomenats __bases__ . El __{.m-blue} l'alçada _h___ d'un cilindre és la distància perpendicular entre aquestes bases i la distància __{.m-red} el radi _r___ d’un cilindre és simplement el radi de les bases circulars. 
+La part superior i inferior d’un cilindre són dos cercles congruents, anomenats __bases__ . L'__{.m-blue} alçada *h*__ d'un cilindre és la distància perpendicular entre aquestes bases i el __{.m-red} radi *r*__ d’un cilindre és simplement el radi de les bases circulars.
 
-Podem aproximar un cilindre utilitzant a ${n}{n|5|3,20,1} [__prisma__](gloss:prism) lateral. A mesura que augmenta el nombre de costats, el prisma comença a semblar cada cop més a un cilindre: 
+Podem aproximar un cilindre utilitzant ${n}{n|5|3,20,1} [__prisma__](gloss:prism) lateral. A mesura que augmenta el nombre de costats, el prisma comença a semblar cada cop més a un cilindre: 
 
 ::: column(width=240)
 
@@ -974,11 +966,11 @@ Podem aproximar un cilindre utilitzant a ${n}{n|5|3,20,1} [__prisma__](gloss:pri
 ---
 > id: cylinder-volume
 
-Tot i que tècnicament un cilindre no és un prisma, comparteixen moltes propietats. En ambdós casos, podem trobar el volum multiplicant l’àrea del seu __{.m-red} base__ amb el seu __{.m-blue} alçada__ . Això significa que un cilindre amb radi _{.b.m-red} r_ i alçada _{.b.m-blue} h_ té volum 
+Tot i que tècnicament un cilindre no és un prisma, comparteixen moltes propietats. En ambdós casos, podem trobar el volum multiplicant l’àrea de la seva __{.m-red} base__ per la seva __{.m-blue} alçada__ . Això significa que un cilindre amb radi _{.b.m-red} r_ i alçada _{.b.m-blue} h_ té volum 
 
 {.text-center}`V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_ 
 
-{.reveal(when="eqn-0")} Recordeu que el radi i l’altura han d’utilitzar les mateixes unitats. Per exemple, si _r_ i _h_ són tots dos en cm, el volum serà dins [[`"cm"^3`|`"cm"^2`| cm]] . 
+{.reveal(when="eqn-0")} Recordeu que el radi i l’altura han d’utilitzar les mateixes unitats. Per exemple, si _r_ i _h_ estan expressats tots dos en cm, el volum serà en [[`"cm"^3`|`"cm"^2`| cm]] . 
 
 ---
 > id: oblique-cylinder
@@ -986,7 +978,7 @@ Tot i que tècnicament un cilindre no és un prisma, comparteixen moltes propiet
 
 ::: column.grow
 
-En els exemples anteriors, les dues bases del cilindre estaven sempre _directament les unes sobre les altres_ : això s’anomena __cilindre dret__ . Si les bases no estan directament les unes sobre les altres, tenim un __cilindre oblic__ . Les bases encara són paral·leles, però els costats semblen "inclinar-se" en un angle que no sigui de 90°. 
+En els exemples anteriors, les dues bases del cilindre estaven sempre _directament les unes sobre les altres_ : això s’anomena __cilindre dret__ . Si les bases no estan directament les unes sobre les altres, tenim un __cilindre oblic__ . Les bases encara són paral·leles, però els costats semblen "inclinar-se" en un angle que no sigui de 90°.
 
     x-solid(size="300,200" static)
     x-gesture(target="#oblique-cylinder x-solid" slide="40,0")
@@ -1018,8 +1010,6 @@ Imagineu que talleu un cilindre en molts discos prims. Podem lliscar aquests dis
 
 :::
 
-    
-
 ---
 > id: cylinder-surface
 
@@ -1027,12 +1017,12 @@ Imagineu que talleu un cilindre en molts discos prims. Podem lliscar aquests dis
 
 ::: column.grow
 
-Per trobar la superfície d’un cilindre, l’hem de “desenrotllar” a la seva [xarxa](gloss:net) plana. Podeu provar-ho vosaltres mateixos, per exemple pelant l'etiqueta sobre una llauna d'aliments. 
+Per trobar la superfície d’un cilindre, l’hem de “desenrotllar” en una [xarxa](gloss:net) plana. Podeu provar-ho vosaltres mateixos, per exemple pelant l'etiqueta sobre una llauna d'aliments. 
 
 Hi ha dos [[cercles | esferes | quadrats]] , un a la part superior i un a la part inferior del cilindre. El costat corbat és en realitat un gran [[rectangle | quadrat | el·lipse]] . 
 
 * {.reveal(when="blank-0 blank-1")} Els dos cercles tenen àrea _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ .
-* {.reveal(when="eqn-0")} L'altura del rectangle és _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} i l'amplada del rectangle és la mateixa que la [[circumferència | diàmetre | tangent]] dels cercles:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ . 
+* {.reveal(when="eqn-0")} L'altura del rectangle és _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} i l'amplada del rectangle és la mateixa que la [[circumferència | diàmetre | tangent]] dels cercles:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
 
 ::: column(width=320)
 
@@ -1064,11 +1054,11 @@ El _gasòmetre_ superior tenia un radi de 35 metres i una alçada de 120 m. Ara 
 
 ::: column.grow
 
-Un [__con__](gloss:cone) és un sòlid tridimensional que té una circular __{.m-red} base__ El seu costat "es desplaça cap a dalt", tal com es mostra al diagrama, i acaba en un sol punt anomenat el __{.m-green} vèrtex__ 
+Un [__con__](gloss:cone) és un sòlid tridimensional que té una __{.m-red} base__ circular El seu costat "es desplaça cap a dalt", tal com es mostra al diagrama, i acaba en un sol punt anomenat el __{.m-green} vèrtex__ 
 
-El __{.m-red} el radi__ del con és el radi de la base circular i el __{.m-blue} l'altura__ del con és la distància perpendicular de la base al vèrtex. 
+El __{.m-red} radi__ del con és el radi de la base circular i l'__{.m-blue} altura__ del con és la distància perpendicular de la base al vèrtex. 
 
-Igual que altres formes que coneixíem abans, els conos són arreu del nostre voltant: cons gelats, cons de trànsit, certs sostres i fins i tot arbres de Nadal. Què més es pot pensar? 
+Igual que altres formes que coneixíem abans, els cons són arreu del nostre voltant: cons gelats, cons de trànsit, certs sostres i fins i tot arbres de Nadal. Què més se t'acut? 
 
 ::: column(width=280)
 
@@ -1107,7 +1097,7 @@ Igual que altres formes que coneixíem abans, els conos són arreu del nostre vo
 
 Abans hem trobat el volum d’un cilindre aproximant-lo mitjançant un prisma. De la mateixa manera, podem trobar el volum d’un con aproximant-lo mitjançant una [__piràmide__](gloss:pyramid) . 
 
-Aquí podeu veure a ${n}{n|5|3,18,1} -piràmide lateral. A mesura que augmenta el nombre de costats, la piràmide comença a semblar cada cop més a un con. De fet, podríem pensar en un con com una piràmide amb _infinitat de_ costats! 
+Aquí podeu veure ${n}{n|5|3,18,1} -piràmide lateral. A mesura que augmenta el nombre de costats, la piràmide comença a semblar-se cada cop més a un con. De fet, podríem pensar en un con com una piràmide amb _infinits_ costats! 
 
 ::: column(width=280)
 
@@ -1132,7 +1122,7 @@ Observeu la similitud amb l’equació del volum d’un cilindre. Imagineu que d
 ---
 > id: cone-hilbert
 
-{.i.lgrey} Nota: podríeu pensar que infinitament molts costats diminuts com a aproximació són una mica "imprecisos". Els matemàtics van passar una bona estona intentant trobar una forma més senzilla de calcular el volum d’un con. El 1900, fins i tot, el gran matemàtic [David Hilbert](bio:hilbert) el va nomenar com un dels 23 problemes més importants que no es resolen en matemàtiques. Avui sabem que en realitat és impossible. 
+{.i.lgrey} Nota: podríeu pensar que utilitzar infinits costats diminuts com a aproximació és una mica "imprecís". Els matemàtics van passar una bona estona intentant trobar una forma més senzilla de calcular el volum d’un con. El 1900, fins i tot el gran matemàtic [David Hilbert](bio:hilbert) el va nomenar com un dels 23 problemes més importants que no s'havien resolt en matemàtiques. Avui sabem que en realitat és impossible. 
 
 ---
 > id: oblique-cone
@@ -1158,9 +1148,9 @@ Una vegada més, podem fer servir el principi de Cavalieri per demostrar que tot
 
 ::: column.grow
 
-Trobar la superfície d’un con és una mica més complicat. Com abans, podem desenterrar un con a la xarxa. Desplaceu el control lliscant per veure què passa: en aquest cas, obtenim un [[sector de]] cercles i un de [[cercle | segment de cercles | arc de cercle]] . 
+Trobar la superfície d’un con és una mica més complicat. Com abans, podem desenvolupar un con en el pla. Desplaceu el control lliscant per veure què passa: en aquest cas, obtenim un [[sector de]] cercles i un de [[cercle | segment de cercles | arc de cercle]] . 
 
-{.reveal(when="blank-0")} Ara només hem de sumar l'àrea d'aquests dos components. El __{.m-yellow} base__ és un cercle amb radi _r_ , per la qual cosa la seva àrea és 
+{.reveal(when="blank-0")} Ara només hem de sumar l'àrea d'aquests dos components. La __{.m-yellow} base__ és un cercle amb radi _r_ , per la qual cosa la seva àrea és 
 
 {.text-center.reveal(when="blank-0")}`pill(A_"Base","yellow","circle") =` _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ . 
 
@@ -1176,10 +1166,10 @@ Trobar la superfície d’un con és una mica més complicat. Com abans, podem d
 
 ::: column.grow
 
-El radi de __{.m-green} sector__ és la mateixa que la distància des de la vora d'un con amb el seu vèrtex. Això s’anomena el [{.pill.green.b} alçada inclinada _S_](target:s) de el con, i no la mateixa que la normal, [{.pill.blue.b} alçada _h_](target:h) . Podem trobar l'alçada inclinada mitjançant [Pitàgores](gloss:pythagoras-theorem) : 
+El radi del __{.m-green} sector__ és la mateixa que la distància des de la vora d'un con amb el seu vèrtex. Això s’anomena l'[{.pill.green.b} alçada inclinada _S_](target:s) del con, i no és la mateixa que la normal, [{.pill.blue.b} alçada _h_](target:h) . Podem trobar l'alçada inclinada mitjançant [Pitàgores](gloss:pythagoras-theorem) : 
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
-| `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
+| `s`   | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
 {.eqn-system}
 
 ::: column(width=280)
@@ -1203,7 +1193,7 @@ El radi de __{.m-green} sector__ és la mateixa que la distància des de la vora
 
 ::: column.grow
 
-El [{.pill.red} la longitud](target:arc) d' [arc](target:arc) del sector és la mateixa que la [[circumferència | diàmetre | arc]] de la [{.pill.yellow} base](target:base) : _{span.reveal(when="blank-0")}`2 π r` . Ara podem trobar l'àrea del sector mitjançant la [fórmula que](gloss:circle-sector) hem derivat en un apartat anterior:_ 
+La [{.pill.red} longitud](target:arc) d' [arc](target:arc) del sector és la mateixa que la [[circumferència | diàmetre | arc]] de la [{.pill.yellow} base](target:base) : _{span.reveal(when="blank-0")}`2 π r`. Ara podem trobar l'àrea del sector mitjançant la [fórmula que](gloss:circle-sector) hem deduït en un apartat anterior:_ 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
@@ -1238,7 +1228,7 @@ El [{.pill.red} la longitud](target:arc) d' [arc](target:arc) del sector és la 
 ---
 > id: cone-surface-2
 
-Finalment, només hem de sumar l’àrea del __{.m-yellow} base__ i l'àrea del __{.m-green} sector,__ per obtenir la superfície total de són de el con: 
+Finalment, només hem de sumar l’àrea de la __{.m-yellow} base__ i l'àrea del __{.m-green} sector,__ per obtenir la superfície total del con: 
 
 {.text-center}`A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ 
 
@@ -1249,9 +1239,9 @@ Finalment, només hem de sumar l’àrea del __{.m-yellow} base__ i l'àrea del 
 
 ::: column.grow
 
-Una [__esfera__](gloss:sphere) és un sòlid tridimensional format per tots els punts que tenen la mateixa distància d'un determinat __{.m-green} centre _C.___ Aquesta distància s'anomena el __{.m-red} radi _r___ de l’esfera. 
+Una [__esfera__](gloss:sphere) és un sòlid tridimensional format per tots els punts que tenen la mateixa distància a un determinat __{.m-green} centre _C.___ Aquesta distància s'anomena el __{.m-red} radi _r___ de l’esfera. 
 
-Es pot pensar en una esfera com un " [cercle](gloss:circle) tridimensional". Igual que un cercle, una esfera també té __{.m-blue} diàmetre _d___ , que és el [[doble | la meitat de]] la longitud del radi, així com els acords i els secants. 
+Es pot pensar en una esfera com un " [cercle](gloss:circle) tridimensional". Igual que un cercle, una esfera també té __{.m-blue} diàmetre _d___ , que és el [[doble | la meitat de]] la longitud del radi, així com les cordes i les secants. 
 
 ::: column(width=240)
 
@@ -1262,7 +1252,7 @@ Es pot pensar en una esfera com un " [cercle](gloss:circle) tridimensional". Igu
 ---
 > id: sphere-1
 
-{.r} En un [apartat anterior](/course/circles/tangets-chords-arcs#eratosthenes-1) , vau conèixer com el matemàtic grec [Eratòstenes](bio:eratosthenes) calculava el radi de la Terra utilitzant l’ombra d’un pol - era de 6.371 km. Ara, anem a buscar el volum i la superfície total de la Terra. [Continuar](btn:next) 
+{.r} En un [apartat anterior](/course/circles/tangets-chords-arcs#eratosthenes-1) , vau veure com el matemàtic grec [Eratòstenes](bio:eratosthenes) calculava el radi de la Terra utilitzant l’ombra d’un pal - era de 6.371 km. Ara, anem a buscar el volum i la superfície total de la Terra. [Continuar](btn:next) 
 
 ---
 > id: sphere-volume
@@ -1320,7 +1310,7 @@ A mesura que moveu el control lliscant a sota, podeu veure la secció transversa
 
 {.reveal(when="slider-0")} La secció transversal de l’hemisferi sempre és un [[cercle | anell | cilindre]] . 
 
-{.reveal(when="blank-0")} El [{.pill.red} El radi _x_](target:x) de la secció transversal forma part de a [{.pill.yellow} triangle amb angle recte](target:tri) , de manera que podem fer servir [Pitàgores](gloss:pythagoras-theorem) : 
+{.reveal(when="blank-0")} El [{.pill.red} El radi _x_](target:x) de la secció transversal forma part d'un [{.pill.yellow} triangle rectangle](target:tri) , de manera que podem fer servir [Pitàgores](gloss:pythagoras-theorem) : 
 
 ::: .reveal(when="blank-0")
 
@@ -1367,7 +1357,7 @@ Sembla que tots dos sòlids tenen la mateixa zona de secció transversal a tots 
 ---
 > id: sphere-volume-2
 
-Una esfera consta de [[dos]] hemisferis, _{span.reveal(when="blank-0")} cosa que vol dir que ha de ser el seu volum_ 
+Una esfera consta de [[dos]] hemisferis, _{span.reveal(when="blank-0")} i per tant ha de ser el seu volum_ 
 
 {.text-center.reveal(when="blank-0")}`V = 4/3 π r^3` . 
 
@@ -1422,7 +1412,7 @@ Si compareu les equacions del volum d’un cilindre, un con i una esfera, podrí
 
 :::
 
-{.reveal(when="eqn-0 eqn-1 eqn-2")} Observeu com, si ens [[sumem | sostreure | multiplicem]] el volum del con i l’esfera, obtenim exactament el volum del cilindre! 
+{.reveal(when="eqn-0 eqn-1 eqn-2")} Observeu com, si [[sumem | restem | multipliquem]] el volum del con i l’esfera, obtenim exactament el volum del cilindre! 
 
 ---
 > id: sphere-maps
@@ -1430,11 +1420,11 @@ Si compareu les equacions del volum d’un cilindre, un con i una esfera, podrí
 
 #### Superfície d’una esfera 
 
-Trobar una fórmula per a la superfície d’una esfera és molt difícil. Una de les raons és que no podem obrir ni “aplanar” la superfície d’una esfera, com abans en els cons i els cilindres. 
+Trobar una fórmula per a la superfície d’una esfera és molt difícil. Una de les raons és que no podem obrir ni “aplanar” la superfície d’una esfera, com abans hem fet amb els cons i els cilindres. 
 
-Aquest és un problema particular quan s’intenta crear mapes. La Terra té una superfície corbada i tridimensional, però cada mapa imprès ha de ser pla i bidimensional. Això vol dir que els geògrafs han d’enganyar: estirant o esquitxant determinades zones. 
+Aquest és un problema particular quan s’intenta crear mapes. La Terra té una superfície corbada i tridimensional, però cada mapa imprès ha de ser pla i bidimensional. Això vol dir que els geògrafs han d’enganyar: estirant o empetitint determinades zones. 
 
-Aquí podeu veure pocs tipus diferents de mapes, anomenats __projeccions__ . Intenta moure el quadrat vermell, i veure el que aquesta zona _en realitat_ s'assembla a un globus: 
+Aquí podeu veure alguns tipus diferents de mapes, anomenats __projeccions__ . Intenta moure el quadrat vermell, i veure que aquesta zona _en realitat_ s'assembla a un globus: 
 
     figure
       x-select.tabs
@@ -1461,14 +1451,9 @@ Aquí podeu veure pocs tipus diferents de mapes, anomenats __projeccions__ . Int
 ---
 > id: sphere-surface
 
-Per trobar la superfície d’una esfera, podem aproximar-la de nou amb una forma diferent (per exemple, un políedre amb moltes cares. A mesura que augmenta el nombre de cares, el políedre comença a semblar cada cop més a una esfera. 
+Per trobar la superfície d’una esfera, podem aproximar-la de nou amb una forma diferent (per exemple, un políedre amb moltes cares). A mesura que augmenta el nombre de cares, el políedre comença a semblar-se cada cop més a una esfera. 
 
 {.todo} COM ARRIBAR: Prova de la superfície de l’esfera 
-
-    
-    
-    
-    
 
 ---
 
@@ -1477,7 +1462,6 @@ Per trobar la superfície d’una esfera, podem aproximar-la de nou amb una form
 > section: conic-sections
 > id: conics
 > goals: ellipse parabola hyperbola
-> translated: auto
 
 El cercle és una de les quatre formes diferents que es poden crear mitjançant “rodanxes” a través d’un [con](gloss:cone) . Això es pot demostrar mitjançant el con de llum d’una torxa: 
 
@@ -1507,11 +1491,11 @@ Si apunteu la torxa verticalment cap avall, veureu un [[cercle | el·lipse | ova
 
 ::: column.grow
 
-Col·lectivament, aquestes quatre formes s’anomenen [__seccions còniques__](gloss:conic-section) . Tot i que semblen molt diferents, estan estretament relacionats: de fet, es poden generar amb la mateixa equació. 
+Col·lectivament, aquestes quatre formes s’anomenen [__seccions còniques__](gloss:conic-section) . Tot i que semblen molt diferents, estan estretament relacionades: de fet, es poden generar amb la mateixa equació. 
 
 Les seccions còniques van ser estudiades per l'antic matemàtic grec [Apol·loci de Pèrga](bio:apollonius) , que també els va donar els seus noms inusuals. 
 
-En els cursos posteriors, aprendràs molt més sobre parabolas i hiperboles. Per ara, mirem de prop l’el·lipse. 
+En els cursos posteriors, aprendràs molt més sobre paràboles i hipèrboles. Per ara, mirem de prop l’el·lipse. 
 
 ::: column(width=300)
 
@@ -1524,7 +1508,7 @@ En els cursos posteriors, aprendràs molt més sobre parabolas i hiperboles. Per
 
 ### Ellipses 
 
-Una el·lipse sembla gairebé com un "cercle allargat". De fet, podríeu pensar-ho com un cercle amb _dos centres_ , que s’anomenen __punts focals__ . Igual que cada punt d'una circumferència té la mateixa distància del centre, cada punt d'una el·lipse té la mateixa _suma de distàncies_ amb els seus dos punts focals. 
+Una el·lipse sembla gairebé com un "cercle allargat". De fet, podríeu pensar-ho com un cercle amb _dos centres_ , que s’anomenen __punts focals__ . Igual que cada punt d'una circumferència té la mateixa distància del centre, cada punt d'una el·lipse té la mateixa _suma de distàncies_ als seus dos punts focals. 
 
 Si teniu una cadena llarga connectada a dos punts fixos, podeu dibuixar una el·lipse perfecta traçant el màxim d’abast de les cadenes: 
 
@@ -1561,13 +1545,13 @@ Hi ha moltes altres representacions físiques de com es pot dibuixar una el·lip
 ---
 > id: orbits
 
-### Brbites planetàries 
+### Òrbites planetàries 
 
 ::: column.grow
 
-Es pot recordar des del principi d’aquest curs, que astrònoms grecs antics creien que la Terra es troba al centre de l’univers i que el sol, la lluna i els planetes es mouen per la Terra en òrbites circulars. 
+Recordem que al principi d’aquest curs, dèiem que astrònoms grecs antics creien que la Terra es trobava al centre de l’univers i que el sol, la lluna i els planetes es movien en òrbites circulars al voltant de la Terra. 
 
-Malauradament, l'observació astronòmica del cel no ho va afavorir. Per exemple, el sol va aparèixer més gran durant algunes parts de l’any i més petit durant d’altres. En un cercle, cada punt hauria de tenir [[el mateix | un creixent | una]] distància [[decreixent]] del seu centre. 
+Malauradament, l'observació astronòmica del cel no ho afavoria. Per exemple, el sol apareixia més gran durant algunes parts de l’any i més petit durant d’altres. En un cercle, cada punt hauria de tenir [[el mateix | un creixent | una]] distància [[decreixent]] del seu centre. 
 
 ::: column(width=330)
 
@@ -1610,9 +1594,9 @@ Per solucionar-ho, els astrònoms van afegir __Epicicles__ al seu model del sist
 
 ::: column.grow
 
-Amb el pas del temps, la gent es va adonar que la Terra era només un dels molts planetes que orbitessin el sol (el __model heliocèntric__ ), però no va ser fins el 1609, quan l’astrònom [Johannes Kepler va](bio:kepler) descobrir que els planetes realment es desplacen en _òrbites el·líptiques_ . 
+Amb el pas del temps, la gent es va adonar que la Terra era només un dels molts planetes que orbitaven el sol (el __model heliocèntric__ ), però no va ser fins el 1609, quan l’astrònom [Johannes Kepler](bio:kepler) va descobrir que els planetes en realitat es desplacen en _òrbites el·líptiques_ . 
 
-El sol es troba en un dels dos punts focals d’aquestes el·lipses. Els planetes s’accelereixen a mesura que s’acosten al sol i s’alenteixen a mesura que s’allunyen més. 
+El sol es troba en un dels dos punts focals d’aquestes el·lipses. Els planetes s’acceleren a mesura que s’acosten al sol i s’alenteixen a mesura que se n’allunyen més. 
 
 ::: column(width=320)
 
@@ -1646,8 +1630,8 @@ La gravetat és el que fa que tot caigui a terra i la gravetat també és el que
 
 ::: column.grow
 
-Mitjançant les lleis de Newton, es pot obtenir el camí que els objectes recorren quan es mouen sota la força de la gravetat. Resulta que els planetes es mouen a el·lipses, però altres objectes com els cometes poden viatjar per camins [parabòlics](gloss:parabola) o [hiperbòlics](gloss:hyperbola) : volen prop del sol abans de donar la volta i disparen cap a l'univers, per no tornar mai més. 
+Mitjançant les lleis de Newton, es pot obtenir el camí que els objectes recorren quan es mouen sota la força de la gravetat. Resulta que els planetes es mouen en el·lipses, però altres objectes com els cometes poden viatjar per trajectòries [parabòliques](gloss:parabola) o [hiperbòliques](gloss:hyperbola): volen a prop del sol abans de donar-hi la volta i sortir disparats cap a l'univers, per no tornar mai més.
 
-Segons la llegenda, una poma que cau va inspirar Newton a pensar en la gravetat. Va ser un dels científics més influents de tots els temps, i les seves idees van donar forma a la nostra comprensió del món durant gairebé 300 anys - fins que Albert Einstein va descobrir la relativitat el 1905. 
+Segons la llegenda, una poma que queia va inspirar Newton a pensar en la gravetat. Va ser un dels científics més influents de tots els temps, i les seves idees van donar forma a la nostra comprensió del món durant gairebé 300 anys - fins que Albert Einstein va descobrir la relativitat el 1905.
 
 :::
