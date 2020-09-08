@@ -661,3 +661,20 @@ Try adjusting the vector.
 </table>
 
 Neat, huh?
+
+### Systems of Equations
+A system of equations is really a line or a plane or whatever.
+
+
+    x-solid(size=300)
+
+
+Try adjusting the vector.
+<table class="vector">
+<tr>x = ${xi}{xi|1|-2,2,0.1}</tr>
+<tr>y = ${yi}{yi|1|-2,2,0.1}</tr>
+<tr>z = ${zi}{zi|1|-2,2,0.1}</tr>
+</table>
+
+Above us is a thing with a thing. Two planes intersecting gives us a [[line|plane|point]]
+

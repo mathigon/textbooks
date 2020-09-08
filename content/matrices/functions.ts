@@ -5,7 +5,7 @@
 
 /// <reference types="THREE"/>
 
-import {Step, Geopad} from '../shared/types';
+import {Geopad, Step} from '../shared/types';
 import {ElementView} from '@mathigon/boost';
 import {Point} from '@mathigon/fermat';
 import {Solid} from '../shared/components/solid';
@@ -268,6 +268,7 @@ export function determinants($step:Step) {
   });
 }
 
+import * as u from './utils3d';
 
 export function threeDimensions($step: Step) {
   const $solids = $step.$$('x-solid') as Solid[];
@@ -321,5 +322,93 @@ export function threeDimensions($step: Step) {
     });
 
     return [xPlane, yPlane, zPlane];
+  });
+
+  /**
+   * Add intersection lines to a solid.
+   * TODO: should use a new function in Fermat.js to calculate intersection lines.
+   *
+   * @param solid
+   */
+  function addIntersectionLinesToSolid(solid: Solid) {
+
+    // intersection b/t Yellow and Cyan planes
+    // x + y + z = 1
+    // y = 1
+    solid.addLine([0, 1, 0], [-1, 1, 1], 0x00ff00);
+
+    // intersection b/t Magenta and Cyan planes
+    // z = 1, y = 1
+    solid.addLine([2, 1, 1], [-1, 1, 1], 0x0000ff);
+
+    // intersection b/t magenta and yellow planes
+    // x + y + z = 1
+    // z = 1
+    solid.addLine([0, 0, 1], [-1, 1, 1], 0xff0000);
+  }
+
+  const soq = $solids[2];
+  soq.addMesh((scene) => {
+
+    u.addUnitVectorsToSolid(soq);
+
+    // Plane for 1*x + 1*y + 1*z = 1
+    const planeYellow = u.planeFromNormal(
+        new THREE.Vector3(1, 1, 1),
+        new THREE.Vector3(1, 0, 0),
+        0xffff00
+    );
+    soq.object.add(planeYellow);
+
+    // Plane for 0*x + 1*y + 0*z = 1
+    // a.k.a. y=1
+    const planeCyan = u.planeFromNormal(
+        new THREE.Vector3(0, 1, 0),
+        new THREE.Vector3(0, 1, 0),
+        0x00ffff
+    );
+    soq.object.add(planeCyan);
+
+    // Plane for 0*x + 0*y + 1*z = 1
+    // a.k.a. z=1
+    const planeMagenta: THREE.Mesh = u.planeFromNormal(
+        new THREE.Vector3(0, 0, 1),
+        new THREE.Vector3(0, 0, 1),
+        0xff00ff
+    );
+    soq.object.add(planeMagenta);
+
+    addIntersectionLinesToSolid(soq);
+
+    // TODO: try this method
+    /* const px: THREE.Mesh = u.planeFromCoplanarPoints(
+        new Vector3(1, 0, 0),
+        new Vector3(0, 1, 0),
+        new Vector3(0, 0, 1),
+        0xff00ff
+    );
+    soq.object.add(px); */
+
+    $step.model.watch((state: any) => {
+
+      // this moves the plane at z=1 to z=zi
+      const newPlane = u.planeFromNormal(
+          new THREE.Vector3(0, 0, state.zi),
+          new THREE.Vector3(0, 0, state.zi),
+          0xff0ff
+      );
+      planeMagenta.geometry.dispose();
+      planeMagenta.geometry = newPlane.geometry;
+      scene.draw();
+
+      // not quite right...
+      /* const plane2 = u.planeFromNormal(
+          new THREE.Vector3(state.xi, state.yi, state.zi),
+          new THREE.Vector3(state.xi, state.yi, state.zi),
+          0xffff00
+      );
+      planeCyan.geometry.dispose();
+      planeCyan.geometry = plane2.geometry; */
+    });
   });
 }
