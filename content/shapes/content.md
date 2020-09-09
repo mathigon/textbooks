@@ -209,7 +209,44 @@ Lastly, many flags use polygons. Drag the name of each country to the correct fl
 
 The hexagons in the South African flag and the pentagon in the Nepalese flag may not appear to be the standard image you may have in your head of a pentagon and a hexagon. Move around the vertices (these are the points where the edges meet) in the regular polygons below to make some irregular polygons of your own.
 
-    // TODO: Polygon vertices arrangement exercise
+:::
+
+::: column.grow(width=220)
+
+    // pentagon
+    x-geopad(width=220 height=220): svg
+      circle.move(name="a" cx=16.304 cy=71.944)
+      circle.move(name="b" cx=119.065 cy=15.526)
+      circle.move(name="c" cx=204.477 cy=95.823)
+      circle.move(name="d" cx=154.503 cy=201.868)
+      circle.move(name="e" cx=38.206 cy=187.109)
+      path(name="pentagon" x="polygon(a,b,c,d,e)")
+
+::: column.grow(width=220)
+
+    // hexagon
+    x-geopad(width=220 height=220): svg
+      circle.move(name="f" cx=17.191 cy=123.874)
+      circle.move(name="g" cx=51.786 cy=35.629)
+      circle.move(name="h" cx=145.507 cy=21.466)
+      circle.move(name="i" cx=204.632 cy=95.55)
+      circle.move(name="j" cx=170.037 cy=183.795)
+      circle.move(name="k" cx=76.316 cy=197.958)
+      path(name="hexagon" x="polygon(f,g,h,i,j,k)")
+
+::: column.grow(width=220)
+
+    // octagon
+    x-geopad(width=220 height=220): svg
+      circle.move(name="l" cx=17.318 cy=93.196)
+      circle.move(name="m" cx=56.41 cy=31.852)
+      circle.move(name="n" cx=127.428 cy=16.119)
+      circle.move(name="o" cx=188.771 cy=55.21)
+      circle.move(name="p" cx=204.505 cy=126.229)
+      circle.move(name="q" cx=165.413 cy=187.572)
+      circle.move(name="r" cx=94.395 cy=203.306)
+      circle.move(name="s" cx=33.052 cy=164.214)
+      path(name="octagon" x="polygon(l,m,n,o,p,q,r,s)")
 
 :::
 
