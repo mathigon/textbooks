@@ -252,8 +252,8 @@ called the [__radius__](gloss:circle-radius).
       path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-class="white")
 
 ::: column.grow
-The two shapes on the right basically look identical. They have the same size
-and shape, and we could [turn and slide](target:move) one of them to exactly
+These two shapes basically look identical. They have the same size
+and shape, and we could [{.green}turn and slide](target:move) one of them to exactly
 match up with the other. In geometry, we say that the two shapes are
 [__congruent__](gloss:congruent).
 
