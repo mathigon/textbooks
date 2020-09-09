@@ -301,4 +301,43 @@ export function polygonNames($step: Step) {
 
   $shapesNames.on('complete', () => $step.score('names-matched'));
   $flagsCountries.on('complete', () => $step.score('flags-matched'));
+
+  const $geopads = $step.$$('x-geopad') as Geopad[];
+
+  const pointsMoved: {[key: string]: boolean}[] = [];
+
+  const atLeastTwoMoved = (points: {[key: string]: boolean}) => {
+    return Object.values(points).filter((pv: boolean) => pv == true).length > 1;
+  };
+
+  let doneMoving = false;
+
+  $geopads.forEach(($geopad, i) => {
+
+    const p: {[key: string]: boolean} = {};
+
+    $geopad.points.forEach(point => {
+
+      p[point.name] = false;
+
+      point.$el.on('mousemove', (e: MouseEvent) => {
+
+        // When mousemove has been fired AND e.buttons == 1 (left mouse button is down), this means we are dragging
+        if (e.buttons == 1) {
+          pointsMoved[i][point.name] = true;
+
+          if (pointsMoved.every(atLeastTwoMoved) && !doneMoving) {
+            doneMoving = true;
+            $step.score('points-moved');
+          }
+        }
+
+      });
+
+    });
+
+    pointsMoved.push(p);
+
+  });
+
 }

@@ -238,14 +238,14 @@ The hexagons in the South African flag and the pentagon in the Nepalese flag may
 
     // octagon
     x-geopad(width=220 height=220): svg
-      circle.move(name="l" cx=17.318 cy=93.196)
-      circle.move(name="m" cx=56.41 cy=31.852)
-      circle.move(name="n" cx=127.428 cy=16.119)
-      circle.move(name="o" cx=188.771 cy=55.21)
-      circle.move(name="p" cx=204.505 cy=126.229)
-      circle.move(name="q" cx=165.413 cy=187.572)
-      circle.move(name="r" cx=94.395 cy=203.306)
-      circle.move(name="s" cx=33.052 cy=164.214)
+      circle.move(name="l" cx=202.682 cy=93.196)
+      circle.move(name="m" cx=163.59 cy=31.852)
+      circle.move(name="n" cx=92.572 cy=16.119)
+      circle.move(name="o" cx=31.229 cy=55.21)
+      circle.move(name="p" cx=15.495 cy=126.229)
+      circle.move(name="q" cx=54.587 cy=187.572)
+      circle.move(name="r" cx=125.605 cy=203.306)
+      circle.move(name="s" cx=186.948 cy=164.214)
       path(name="octagon" x="polygon(l,m,n,o,p,q,r,s)")
 
 :::
