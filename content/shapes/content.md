@@ -101,23 +101,31 @@ All of these regions in the Voronoi diagram are examples of polygons. A polygon 
 
 :::
 
-{.reveal(when="cards-sorted")} A regular polygon has [[all equal | all different]] side lengths. 
-
 ---
 
 > id: populations
+
+A regular polygon has [[all equal | all different]] side lengths.
+
+::: .reveal(when="blank-0")
 
 Let’s revisit the Voronoi diagram and find out how many people live in one of the regions with 5 sides. Note the [region outlined in white](->#population-pentagon) in the image below.
 
     // TODO: Show voronoi diagram
 
-Just by looking at this region, it seems that [[more | less]] students will attend the school in this region than the school in the triangular region we explored above. The region looks similar in size, so it’s hard to be sure just by looking. Let’s find its area by splitting it up into rectangles and triangles and compare the area to the area of the triangular region. 
+Just by looking at this region, it seems that [[more | less]] students will attend the school in this region than the school in the triangular region we explored above. The region looks similar in size, so it’s hard to be sure just by looking. Let’s find its area by splitting it up into rectangles and triangles and compare the area to the area of the triangular region.
+
+:::
+
+::: .reveal(when="blank-1")
 
     // TODO: Voronoi region area exercise
 
+:::
+
 {.reveal(when="area-calculated")} TODO: People equation
 
-{.reveal(when="blank-1")} So, indeed more students will likely attend the school in the pentagon region than the triangular region.
+{.reveal(when="people-calculated")} So, indeed more students will likely attend the school in the pentagon region than the triangular region.
 
 ---
 
@@ -126,7 +134,7 @@ Just by looking at this region, it seems that [[more | less]] students will atte
 We give different names to polygons based on how many sides they have. You may remember some of the names. Drag the names on top of the correct shapes.
 
     include ../shared/components/relation
-    x-relation
+    x-relation.shapes-names
       .item(slot="domain" match="5") Pentagon
       .item(slot="domain" match="6") Hexagon
       .item(slot="domain" match="7") Septagon/Heptagon
@@ -185,7 +193,15 @@ The ground of a dried out desert, the skin patterns on giraffes, and dragonfly w
 
 Lastly, many flags use polygons. Drag the name of each country to the correct flag. Just make a guess if you’re not sure!
 
-    // TODO: Flags matching exercise
+    x-relation.flags-countries
+      .item(slot="domain" match="canada" comment=true) [Canada flag]
+      .item(slot="domain" match="south-africa" comment=true) [South Africa flag]
+      .item(slot="domain" match="finland" comment=true) [Finland flag]
+      .item(slot="domain" match="nepal" comment=true) [Nepal flag]
+      .item(slot="range" name="canada") Canada
+      .item(slot="range" name="south-africa") South Africa
+      .item(slot="range" name="finland") Finland
+      .item(slot="range" name="nepal") Nepal
 
 :::
 

@@ -34,8 +34,16 @@ export class Relation extends CustomElementView {
 
     for (const [i, $el] of this.$inputs.entries()) {
 
-      this.matches.push({name: $el.attr('match'), matched: false});
+      const name = $el.attr('match');
+      this.matches.push({name, matched: false});
       $el.removeAttr('match');
+
+      let comment = $el.attr('comment');
+      if (comment == 'comment') {
+        comment = name;
+      } else {
+        comment = 'correct';
+      }
 
       slide($el, {
         start: () => $currentLine = $N('line', {}, $svg) as SVGView,
@@ -51,7 +59,7 @@ export class Relation extends CustomElementView {
 
             if ($target.attr('name') == this.matches[i].name) {
 
-              this.trigger('correct');
+              this.trigger('correct', comment);
               this.matches[i].matched = true;
 
               if (this.matches.every(m => m.matched == true)) {

@@ -9,3 +9,8 @@ card-8: This shape is NOT a polygon because two of the edges cross over each oth
 card-9: This shape is NOT a polygon because it has curved side lengths.
 card-10: This shape is an IRREGULAR polygon because the side lengths are not all the same.
 card-11: This is an IRREGULAR polygon from the Voronoi diagram above. We’ll find the area of it below.
+
+canada: The leaf has some curved sections, so while not technically a polygon, it closely resembles a 25-sided polygon. This is called a icosikaipentagon!
+south-africa: While it may not initially look like it, the yellow and while shapes in the flag are both hexagons!
+finland: The blue polygon has 12 sides and is called a dodecagon.
+nepal: The flag itself is a pentagon and the bottom image inside the flag is a 24-sided polygon called a icositetragon.

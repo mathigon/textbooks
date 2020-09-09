@@ -291,9 +291,14 @@ function tangramComplete(tiles: Set<Tile>) {
 
 export function polygonNames($step: Step) {
 
-  const $match = $step.$('x-relation') as Relation;
+  const $shapesNames = $step.$('x-relation.shapes-names') as Relation;
+  const $flagsCountries = $step.$('x-relation.flags-countries') as Relation;
 
-  $match.on('correct', () => $step.addHint('correct'));
-  $match.on('incorrect', () => $step.addHint('incorrect'));
-  $match.on('complete', () => $step.score('names-matched'));
+  [$shapesNames, $flagsCountries].map($m => {
+    $m.on('correct', comment => $step.addHint(comment, {class: 'correct'}));
+    $m.on('incorrect', () => $step.addHint('incorrect'));
+  });
+
+  $shapesNames.on('complete', () => $step.score('names-matched'));
+  $flagsCountries.on('complete', () => $step.score('flags-matched'));
 }
