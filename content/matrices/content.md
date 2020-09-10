@@ -221,7 +221,7 @@ Inside the matrix we have i = (${ipoint.x}, ${ipoint.y}) and j = (${jpoint.x}, $
 Choose one of these buttons.
 
     .button IDENTITY
-    .button SKEW
+    .button SHEAR
     .button SCALE
     .button ROTATE
     .button LINE
@@ -484,7 +484,7 @@ The deterimant is ${determinant}
 Choose one of these buttons.
 
     .button IDENTITY
-    .button SKEW
+    .button SHEAR
     .button SCALE
     .button ROTATE
     .button LINE
