@@ -17,3 +17,13 @@ x-geopad .paths .fabric {
 .light {
     opacity: 50%;
 }
+
+#scroller {
+    &.focus td { opacity: 0.4 }
+    &.focus td.focus { opacity: 1 }
+
+    td.cell {
+        margin: 5px;
+        background: lighten(@grey, 70%);
+    }
+}

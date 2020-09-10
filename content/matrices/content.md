@@ -743,3 +743,97 @@ Try adjusting the vector (only Z does anything).
 
 Above us is a system of three equations, each with three variables. The intersection of two of these planes gives us a [[line|plane|point]]. The intersection of all three of these planes gives us a [[point|line|plane]].
 
+
+---
+
+## Scroller playground
+> id: scroller
+
+Let's put a matrix on the right, and text on the left.
+
+::: column(width=300)
+
+    table
+      tr
+        td
+        td(target="feature pref-A-1"): b {.m-red}Outdoors
+        td(target="feature pref-A-2"): b {.m-red}Veggie
+      tr
+        td.name(target="pref-A-1 pref-A-2"): b {.m-green}Alice
+        td.cell(target="pref-A-1") 1
+        td.cell(target="pref-A-2") 4
+      tr
+        td.name: b {.m-green}Bob
+        td.cell 3
+        td.cell 0
+      tr
+        td.name: b {.m-green}Charlie
+        td.cell 0
+        td.cell 4
+      tr
+        td.name: b {.m-green}Dave
+        td.cell 3
+        td.cell 0
+
+    div x
+
+    table
+      tr
+        td
+        td(target="feat-A-1 feat-A-2"): b {.m-blue}Gauss
+        td: b {.m-blue}Laplace
+        td: b {.m-blue}Pizza
+      tr
+        td(target="feature feat-A-1"): b {.m-red}Outdoor
+        td.cell(target="feat-A-1") 3
+        td.cell 1
+        td.cell 3
+      tr
+        td(target="feature feat-A-2"): b {.m-red}Veggie
+        td.cell(target="feat-A-2") 1
+        td.cell 4
+        td.cell 3
+
+    table
+      tr
+        td
+        td(target="rest cell-A"): b {.m-blue}Gauss
+        td(target="rest cell-C"): b {.m-blue}Laplace
+        td(target="rest"): b {.m-blue}Pizza
+      tr
+        td.name(target="friend cell-A"): b {.m-green}Alice
+        td.cell(target="cell-A"): b {.reveal(when="blank-5")} 7
+        td.cell
+        td.cell
+      tr
+        td.name(target="friend"): b {.m-green}Bob
+        td.cell
+        td.cell
+        td.cell
+      tr
+        td.name(target="friend cell-C"): b {.m-green}Charlie
+        td.cell
+        td.cell(target="cell-C"): b {.reveal(when="blank-7")} 16
+        td.cell
+      tr
+        td.name(target="friend"): b {.m-green}Dave
+        td.cell
+        td.cell
+        td.cell
+
+::: column.grow(parent="right")
+
+The result will be a new table with the [{.green} friends](pill:friend) as [[rows|columns]] and the [{.blue} restaurants](pill:rest) as [[columns|rows]].
+
+{.reveal(when="blank-0 blank-1")} How should we fill out this table? The value of each cell should represent how much each person might like each restaurant. For example, the [{.orange} first cell](pill:cell-A) will represent how much Alice might like [[Gauss Grill|Laplace Lounge]].
+
+{.reveal(when="blank-2")} Alice has a [{.orange} preference of 1](pill:pref-A-1) for Outdoor Seating, and Gauss Grill has a [{.orange} value of 3](pill:feat-A-1) for Outdoor Seating, so we multiply these to get [[3]].
+
+{.reveal(when="blank-3")} Alice has a [{.orange} preference of 4](pill:pref-A-2) for Vegetarian Food, and Gauss Grill has a [{.orange}value of 1](pill:feat-A-2) for Vegetarian Food, so we multiply these to get [[4]].
+
+{.reveal(when="blank-4")} We sum together all the products to get [[7]], which we can write in the [{.orange} first cell](pill:cell-A).
+
+{.reveal(when="blank-5")}[Continue](btn:next)
+
+{.reveal(when="next-0")} [{.teal} This cell](pill:cell-C) will represent how much [[Charlie|Bob]] might like [[Laplace Lounge|Pizzathagoras]].
+:::
