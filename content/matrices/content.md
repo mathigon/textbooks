@@ -232,6 +232,75 @@ Press the buttons to...
 
 ## Matrix Arithmetic
 
+### Matrix Multiplication
+
+We learned in the last chapter that matrices can represent linear transformations. However, there are many other things that matrices can represent! Also, matrices do not always have to be [square matrices](gloss:square-matrix), but can have many different dimensional values. Let's explore this with a hypothetical scenario.
+
+Four friends are in a new city and they're looking for a restaurant to eat at together. What are some features they might look for in a restaurant?
+
+- Outdoor seating
+- Vegetarian food
+- Low price
+- Spicy food
+- Kid's menu
+- Good wine selection
+
+Each friend has preferences for how important these things are, which we can quantify with a value 0 (not important) to 4 (very important). If we create a table with friends on the left-most column and restaurant features across the top row, we can fill in the cells of the table with each friend's preference for that feature.
+
+    figure: img(src="images/matrix-1-frn-fea.png")
+
+What we have built here is a 4 by 2 matrix. We have four rows to represent the four [[friends|features|restaurants]], and two columns to represent the two [[features|friends|restaurants]].
+
+The friends have found three restaurants within walking distance, and they have pulled up the websites for each. Lucky for them, each restaurants' website has listed the quality of the features that the friends have quantified: availability of outdoor seating, and vegetarian options.
+
+    figure: img(src="images/matrix-1-fea-res.png")
+
+This is a 2 by 3 matrix. There are two rows to represent the two [[features|restaurants]] and three rows, one to represent each [[restaurant|feature]].
+
+{.fixme} Begin side-by-side column display.
+
+What we would like to do is somehow synthesize these two tables of information so we can get a sense of how much each person might like each restaurant. We can use a procedure called [matrix multiplication](gloss:matrix-multiplication) to do this. The result will be a *new* table with the friends as [[rows]] and the restaurants as [[columns]].
+
+    figure: img(src="images/matrix-1-frn-res-empty.png")
+
+How should we fill out this table? The value of each cell should represent how much each person might like each restaurant.
+
+For example, the first cell will represent how much Alice might like [[Gauss Grill|Laplace Lounge]].
+
+    figure: img(src="images/mult-alice-gauss.png")
+
+Alice has a preference of 1 for Outdoor Seating, and Gauss Grill has a value of 3 for Outdoor Seating, and we multiply these to get [[3]].
+
+Alice has a preference of 4 for Vegetarian food, but Gauss Grill only has a value of 1 for Vegetarian food, and we mutiply these to get [[4]].
+
+We sum together all the products to get [[7]], which we can write in the first cell.
+
+    figure: img(src="images/mult-bob-laplace.png")
+
+How much might Bob like Laplace Lounge?
+[[3]]*[[1]] + [[0]]*[[4]] = [[3]].
+
+When we finish our process, we get a matrix of 4 rows and 3 columns. This makes sense! We had 4 people and 3 restaurants, so we will end up with a row for each person and a column for each restaurant.
+
+    figure: img(src="images/matrix-1-frn-res-full.png")
+
+We can then sum the values in each column to figure out which restaurant is most popular (this is left as an exercise for the reader).
+
+{.fixme} End side-by-side column display.
+
+What we have just done is [matrix multiplication](gloss:matrix-multiplication).
+
+{.fixme} Align these.
+
+    figure: img(src="images/matrix-1-frn-fea.png" width=100)
+    div x
+    figure: img(src="images/matrix-1-fea-res.png" width=200)
+    div =
+    figure: img(src="images/matrix-1-frn-res-full.png" width=200)
+
+#### General rules of Matrix Multiplication
+
+
 ### Matrix Addition
 > section: arithmetic
 > sectionStatus: dev
