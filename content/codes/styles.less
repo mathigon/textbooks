@@ -47,9 +47,15 @@
   overflow: hidden;
   cursor: pointer;
 
-  .sat, .atm, .bits { position: absolute; top: 0; left: 0; }
+  .sat, .atm, .bits, svg { position: absolute; top: 0; left: 0; }
 
   .bits { transform: scale(640/1024,420/666) }
+
+  line { transition: opacity .2s; opacity: 0; stroke-width: 6px; stroke: @red;
+    stroke-dasharray: 0 12px; fill: none; stroke-linecap: round;
+    animation: electrons infinite .5s linear; }
+
+  &.pressed line { opacity: 1; }
 }
 
 .alphabet {

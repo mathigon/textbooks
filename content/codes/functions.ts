@@ -128,6 +128,7 @@ export function transistor($section: Step) {
   let electronPositions: number[];
   const UPDATE_PERIOD = 100;
 
+  // SATELLITE: mimic here
   function move() {
     if (!switchOn) return;
     electronPositions = electronPositions.map(p => {
@@ -673,7 +674,37 @@ export function resolution($step: Step) {
 }
 
 export function satellite($step: Step) {
-  // TODO: complete this
+  // SATELLITE: complete this
+  const $bitstream = $step.$('#bitstream') as SVGView;
+  const $trajectory = $bitstream?.$('line') as SVGView;
+  const $bits = $bitstream?.$$('text');
+
+  // SATELLITE: WAIT for new svg from designer
+  function moveBits() {
+    // There should be a timeout
+    $bits?.forEach((e, i) => {
+      // get point along trajectory
+      const xy = $trajectory.getPointAt(0);
+      // set transform dependent on the bits
+      e.setTransform(new Point(xy.x, xy.y));
+    });
+  }
+
+  function stopBits() {
+    // SATELLITE: stop the bits
+  }
+
+  const $satellites = $step.$('.satellites')!;
+
+  // from Telegraph code. Should replace w/ code to enable 1s and 0s.
+  slide($satellites, {
+    down: () => {
+      $satellites.addClass('pressed');
+    },
+    up: () => {
+      $satellites.removeClass('pressed');
+    }
+  });
 }
 
 export function hammingEncode($step: Step) {
