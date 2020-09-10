@@ -298,7 +298,31 @@ What we have just done is [matrix multiplication](gloss:matrix-multiplication).
     div =
     figure: img(src="images/matrix-1-frn-res-full.png" width=200)
 
-#### General rules of Matrix Multiplication
+#### Formal definition of Matrix Multiplication
+
+The formal defintion for matrix multiplication is as follows:
+
+{.text-center} Given matrix `A` with dimensions `[r_"A", c_"A"]`
+and matrix `B` with dimensions `[r_"B", c_"B"]`
+
+{.text-center} The value of the cell `x_"ij"` in `A × B` is:
+
+{.text-center} `a_"i1"b_"1j"` + ... `a_"iN"b_"Nj"`
+
+{.text-center} where `N = c_"A" = r_"B"`.
+
+
+Notice that, for this algorithm to work, the number of [[columns]] in the first matrix has to be equal to the number of [[rows]] in the second matrix.
+
+For example, if in our restaurant example, each friend had a preference level for spicy food, our preference matrix would be `4x3`.
+
+    figure: img(src="images/matrix-1-extra.png" width=200)
+
+We are now attempting to multiply a `4x3` matrix by a `2x3` matrix, but we don't have any information about which restaurants have spicy food! So we __cannot__ multiply the two matrices.
+
+    figure: img(src="images/matrix-1-extra-mult.png" width=200)
+
+{.fixme} Could end section with a simple checkmark multiple choice, for which multiplications are possible.
 
 
 ### Matrix Addition
