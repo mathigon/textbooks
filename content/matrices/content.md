@@ -325,6 +325,13 @@ We are now attempting to multiply a `4x3` matrix by a `2x3` matrix, but we don't
 {.fixme} Could end section with a simple checkmark multiple choice, for which multiplications are possible.
 
 
+#### Matrix Factorisation
+This type of matrix is used in all sorts of online recommender systems. Movies can be categorized by their genres like Comedy, Action, Romance, or Horror. Songs can be categorized into genres with ever-increasing specificity like Rock, Classical, Pop, Rap, Electro-Funk, Indie Folk, or Norwegian Black Metal. When you watch a movie on Netflix, or listen to a song on Spotify, there's likely a very large matrix somewhere, remembering your taste!
+
+However, this process is slightly different from what we did above. The company running the streaming service *doesn't know* what its users' tastes are. It does know what movies they have watched, and whether they liked them or not. From this information they attempt to figure out each user's possible genre preferences using a process called __matrix factorisation__. Much like in [integer factorisation](gloss:factorisation), where an integer can be written as a product of prime numbers, matrix factorisation is about working backwards from an incomplete product matrix to find possible preference matrices. This algorithm is much more complex than integer factorisation, so we need complex machine leaerning algorithms to perform it.
+
+    figure: img(src="images/factorisation.png")
+
 ### Matrix Addition
 > section: arithmetic
 > sectionStatus: dev
