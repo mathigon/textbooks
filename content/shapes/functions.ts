@@ -226,15 +226,17 @@ export function simpleTangram($step: Step) {
   const tiles = [[5, 1, -90], [5, 9, 0], [8, 3, 0], [-1, 6, 0], [-1, -2, -90],
     [-1, 2, 0], [9, -2, 90]];  // initial [x, y, rot]
 
+  const baseOffset = 110;
+
   for (const [i, t] of tiles.entries()) {
     const tile = $polypad.newTile('tangram', `${i}`);
-    tile.setPosition(new Point(110 + t[0] * 25, 110 + t[1] * 25));
+    tile.setPosition(new Point(baseOffset + t[0] * 25, baseOffset + t[1] * 25));
     tile.setRotation(t[2]);
   }
 
   let completed = false;
   $polypad.on('move-selection rotate-selection', () => {
-    if (tangramComplete($polypad.tiles) && !completed) {
+    if (tangramComplete($polypad.tiles, baseOffset) && !completed) {
       $step.score('tangram-complete');
       $step.addHint('correct');
       // Without this the hint will fire a bunch of times
@@ -243,15 +245,12 @@ export function simpleTangram($step: Step) {
   });
 }
 
-function tangramComplete(tiles: Set<Tile>) {
-
-  // Convert from grid units to pixel units
-  const scale = (val: number) => 110 + val * 25;
+function tangramComplete(tiles: Set<Tile>, baseOffset: number) {
 
   const correctStates =
     [[2, 4, 270], [4, 2, 0], [6, 4, 0], [3, 7, 0], [7, 2, 270], [4, 5, 0], [6, 6, 90]]
         .map(triple =>
-          [scale(triple[0]), scale(triple[1]), triple[2]]);
+          [tangramScale(triple[0], baseOffset), tangramScale(triple[1], baseOffset), triple[2]]);
 
   // Ensure that rotation values are within the 0-360 range for comparison purposes
   const currentStates = [...tiles].map(tile => {
@@ -287,6 +286,10 @@ function tangramComplete(tiles: Set<Tile>) {
 
   return closeEnough;
 
+}
+
+function tangramScale(val: number, shift = 0) {
+  return shift + val * 25;
 }
 
 export function polygonNames($step: Step) {
@@ -340,4 +343,55 @@ export function polygonNames($step: Step) {
 
   });
 
+}
+
+const polys = [
+  // Large red triangle
+  [[0, 0], [8, 0], [8, 3]],
+  // Orange tetronimo
+  [[0, 0], [5, 0], [5, 2], [3, 2], [3, 1], [0, 1]],
+  // Green tetronimo
+  [[0, 0], [3, 0], [3, 1], [5, 1], [5, 2], [0, 2]],
+  // Small blue triangle
+  [[0, 0], [5, 0], [5, 2]]
+];
+
+// Outline
+const _sol = [[0, 0], [8, 0], [13, 0], [13, 0], [13, 2], [11, 2], [11, 1], [8, 1], [8, 3], [13, 3], [13, 5]];
+
+const polyColours = ['red', 'orange', 'green', 'blue'];
+
+export function triangleTangram($step: Step) {
+  const $polypad = $step.$('x-polypad') as Polypad;
+  $polypad.$svg.setAttr('viewBox', '0 0 420 420');
+  $polypad.canDelete = $polypad.canCopy = false;
+
+  const origins =
+    [[0, 2], [15, 2], [9, 1], [9, 3]]
+        .map(([x, y]: number[]) =>
+          [tangramScale(x), tangramScale(y)]);
+
+  polys.forEach((poly, i) => {
+    const polyStr = getTangramPolystr(poly);
+    const tile = $polypad.newTile('polygon', polyStr);
+    tile.setColour(polyColours[i]);
+    tile.setPosition(new Point(origins[i][0], origins[i][1]));
+  });
+}
+
+function getTangramPolystr(polyGridPositions: number[][]) {
+  return formatPoly(polyGridPositions)
+      .map(p => p.join(' ')).join(',');
+}
+
+function formatPoly(positions: number[][]) {
+  let height = 0;
+  positions.forEach(([_, y]: number[]) => {
+    if (y > height) {
+      height = y;
+    }
+  });
+  return positions.map(([x, y]: number[]) =>
+    [tangramScale(x), tangramScale((-y) + height)]
+  );
 }

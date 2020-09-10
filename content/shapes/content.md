@@ -259,7 +259,6 @@ Below are 7 polygons. Move and rotate the polygons to completely fill in the squ
     figure: .tangram
       .simple-tangram-bg
       x-polypad
-      .shapes
 
 ::: .reveal(when="tangram-complete")
 
@@ -309,7 +308,9 @@ No matter which approach we take, the area of the pentagon is 27.5 square units!
 
 Throughout our work on area, we have often used the idea that as parts of a shape are moved around, the area stays the same - as long as the pieces don’t overlap and all the pieces are used.
 
-    // TODO: triangle tangram exercise
+    figure: .triangle-tangram
+      //.triangle-tangram-bg
+      x-polypad
 
 We’ve made a triangle with a base of 13 units and a height of 5 units. The area of this triangle is [[32.5]] square units. So, the area of these 4 pieces must also be [[32.5]] square units.
 
