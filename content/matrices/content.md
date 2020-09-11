@@ -440,6 +440,77 @@ What about other types of transformations?
 
 ---
 
+### Properties of Matrix Arithmetic
+
+Recall operators like addition and multiplication, and how it's useful to think about their properties. Commutative, distributive, and associative properties.
+
+::: tab
+#### Associative
+
+Is matrix multiplication [associative](gloss:associative)?. If it is, then the equation below will be true.
+
+`Ax(BxC) = (AxB)xC`
+
+A good first question to ask is: will the dimensions of the matrices allow this?
+
+If `Ax(BxC)` is possible, then
+
+`columns_"B" = rows_"C"`
+
+`BxC` will have `rows_"B"` number of rows, and will be equal to `columns_"A"`. This means that when attempting `(AxB)xC`, we know we can perform `AxB`. `AxB` will then have `columns_"B"` columns, so we can multiply it by C.
+
+We know we can perform this multiplication based on the dimensions, but will we get the same result? Recall from our section on multiplication that it can be thought of as successive linear transformations.
+
+It turns out that as long as we keep the ordering of the matrices, we will get the same result. Whether we do BxC first or AxB first, it does not matter.
+
+Matrix multiplication __is associative__.
+
+::: tab
+#### Commutative
+
+Is matrix multiplication [commutative](gloss:commutative)?. If it is, then the equation below will be true.
+
+`AxB = BxA`
+
+Recall that when we multiply two matrices, the number of columns of the first must match the number of rows of the second. This means that if we can multiply `AxB`, `columns_"A" = rows_"B"`, but it is not necessarily true that `rows_"A" = columns_"B"`. Therefore, it does not follow that we can multiply `BxA`, and matrix multiplication __is not commutative__.
+
+What if both matrices are square matrices? We can then perform both `AxB` and `BxA`, however we do not know if they will be equal.
+
+If we think of the matrices as transformations, we can imagine scenarios wherein applying two different transformations will be different depending on which direction you multiply them.
+
+If we perform a 90º Rotation, and then a reflection across the x-axis, the final transformation will look like this:
+
+    .cubes
+      +ij([0,1], [-1,0], "Rotate 90º")
+      .cube.op x
+      +ij([-1,0], [0,1], "Reflect x=0")
+      .cube.op =
+      +ij([0,1], [1,0], "Reflect y=x")
+
+However, if we reverse the order of the transformations, the final transformation will look like this.
+
+    .cubes
+      +ij([-1,0], [0,1], "Reflect x=0")
+      .cube.op x
+      +ij([0,1], [-1,0], "Rotate 90º")
+      .cube.op =
+      +ij([0,-1], [1,0], "Reflect y=-x")
+
+There are many more examples of how matrix multiplication does not meet the commutative property, and we encourage you to experiment!
+
+
+::: tab
+#### Distributive
+
+Is matrix multiplication [distributive](gloss:distributive) over matrix addition?. If it is, then the equation below will be true.
+
+`Ax(B+C) = AxB + AxC`
+
+:::
+
+
+---
+
 ## Determinants
 
 > section: determinants
