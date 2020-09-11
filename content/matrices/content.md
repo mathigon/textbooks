@@ -332,22 +332,11 @@ However, this process is slightly different from what we did above. The company 
 
     figure: img(src="images/factorisation.png")
 
-### Matrix Addition
-> section: arithmetic
-> sectionStatus: dev
+[Continue](btn:next)
 
-* Two matrices can be added only if they have the same dimensions.
-* The resulting matrix will be the same dimension as the matrices added.
-* Each value in location (x,y) of the resulting matrix will be the sum of the values at (x,y) in the other two matrices.
+---
 
-{.todo} COMING SOON
-
-### Matrix Multiplication
-
-* Two matrices A, B of dimensions dim(A)=|ra,ca|, dim(B)=|rb,cb| can only be multiplied if ca is equal to rb.
-
-Does this make sense?
-What will be the dimensions of the resulting matrix?
+### Multiplying Linear Transformations
 
 > section: multiply
 > id: multiply
@@ -361,7 +350,44 @@ What will be the dimensions of the resulting matrix?
           path.green(x=jSeg label="j")
         .caption= label
 
-#### Matrix Multiplication as Successive Transformations.
+We have now learned two different ways to think about matrix multiplication. In the first chapter we learned that multiplying a 2x2 matrix by a 2x1 vector, can be thought of as a linear transformation. And we just learned to the detailed rules for how to multiply matrices of any size, like a preference matrix. Let's go back to thinking about matrices as linear transformations.
+
+Recall the 2x2 matrix representing the rotation of 90º about the origin. Let's call it `R_"90"`.
+
+    img(src="images/rotate-90-m.png" width=100)
+    +ij([0,1], [-1,0], "Rotate 90º")
+
+What if we multiply this matrix by the 2x2 matrix for rotation of 180º, `R_"180"`?
+
+    img(src="images/rotate-180-m.png")
+    +ij([-1,0], [0,-1], "Rotate 180º")
+
+The resulting matrix is this:
+
+    img(src="images/rotate-270-m.png")
+    +ij([0,-1], [1,0], "Rotate 270º")
+
+This matrix is the linear transformation for a [[rotation of 270º|identity matrix|rotation of 90º]].
+
+---
+That's right,
+
+`R_"90"` x `R_"180"` = `R_"270"`
+
+In this case, multiplying two rotation matrices give us a *new* rotation matrix with an angle equal to the sum of the first two angles. A more general way to say this is that when we multiplied two transformation matrices, the resulting transformation matrix has the effect applying BOTH of the original two matrices in succession.
+
+This works for all rotation values:
+
+- `R_"90"` x `R_"90"` = `R_"80"`
+- `R_"180"` x `R_"180"` = `R_"360"` = `I`
+
+[Continue](btn:next)
+
+---
+
+What about other types of transformations?
+
+{.fixme} This would be great as a calculator type thing.
 
     .cubes
       +ij([1,0], [0,1], "Identity")
@@ -379,7 +405,10 @@ What will be the dimensions of the resulting matrix?
       +ij([1,0], [1,1], "Shear y 1")
       +ij([1,0], [-1,1], "Shear y -1")
 
-When we multiply two of these matrices, we are applying the same transformations twice. Let's see what happens.
+      +ij([2,0], [0,2], "Scale by 2")
+      +ij([0.5,0], [0, 0.5], "Scale by 1/2")
+      +ij([2,0], [0,1], "Scale x by 2")
+      +ij([1,0], [0,1/2], "Scale y by 1/2")
 
 
 > section: calculator
@@ -409,43 +438,16 @@ Now we can actually start doing some arithmetic with these transformations. For 
 :::
 
 
----
-> id: tools
-> goals: play-l1 play-c1
 
-    figure: img(src="images/divider-1.svg" width=760 height=42)
+### Matrix Addition
+> section: arithmetic
+> sectionStatus: dev
 
-Euclid’ axioms basically tell us _what’s possible_ in his version of geometry.
-It turns out that we just need two very simple tools to be able to sketch this
-on paper:
+* Two matrices can be added only if they have the same dimensions.
+* The resulting matrix will be the same dimension as the matrices added.
+* Each value in location (x,y) of the resulting matrix will be the sum of the values at (x,y) in the other two matrices.
 
-::: column(width=320)
-
-    x-geopad.r(width=300 height=240)
-      svg
-        circle.move(name="a" cx=50 cy=190)
-        circle.move(name="b" cx=250 cy=50)
-        path.red(name="l1" x="segment(a,b)" hidden)
-      x-play-btn
-
-{.text-center} A __straight-edge__ is like a ruler but without any markings. You
-can use it to connect two points (as in Axiom 1), or to extend a line segment
-(as in Axiom 2).
-
-::: column.reveal(width=300 when="play-l1")
-
-    x-geopad.r(width=300 height=240)
-      svg
-        circle.move(name="c" cx=150 cy=120)
-        circle.move(name="d" cx=250 cy=150)
-        path(x="segment(c,d)")
-        path.red(name="c1" x="arc(c,d,1.99*pi)" hidden)
-      x-play-btn
-
-{.text-center} A __compass__ allows you to draw a circle of a given size around
-a point (as in Axiom 3).
-:::
-
+{.todo} COMING SOON
 
 ---
 
