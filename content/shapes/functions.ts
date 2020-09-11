@@ -5,7 +5,7 @@
 
 
 import {Point, Polygon, Segment} from '@mathigon/fermat';
-import {animate, CanvasView, loadScript} from '@mathigon/boost';
+import {$N, animate, CanvasView, loadScript, SVGParentView, SVGView} from '@mathigon/boost';
 import {Geopad, GeoPoint, Polypad, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
@@ -354,10 +354,36 @@ const polys = [
   [[0, 0], [3, 0], [3, 1], [5, 1], [5, 2], [0, 2]],
   // Small blue triangle
   [[0, 0], [5, 0], [5, 2]]
-];
+].map(tangramPrep);
 
-// Outline
-const _sol = [[0, 0], [8, 0], [13, 0], [13, 0], [13, 2], [11, 2], [11, 1], [8, 1], [8, 3], [13, 3], [13, 5]];
+const finalPositions = [
+  // Large red triangle
+  [10, 15],
+  // Orange tetronimo
+  [15, 15],
+  // Green tetronimo
+  [15, 14],
+  // Small blue triangle
+  [15, 12]
+].map(p => p.map(tangramScale));
+
+function tangramPrep(poly: number[][]) {
+  let width = 0;
+  poly.forEach(([x, _]: number[]) => {
+    if (x > width) {
+      width = x;
+    }
+  });
+
+  const halfway = Math.floor(width / 2);
+
+  // TODO: Pending tangram support for poly points with negative values
+  const _shiftedPoly = poly.map(([x, y]: number[]) => [(-x) - halfway, y]);
+  const shiftedPoly = poly.map(([x, y]: number[]) => [(-x) + width, y]);
+
+  return shiftedPoly.map(sp => sp.map(tangramScale));
+
+}
 
 const polyColours = ['red', 'orange', 'green', 'blue'];
 
@@ -365,9 +391,24 @@ export function triangleTangram($step: Step) {
   const $polypad = $step.$('x-polypad') as Polypad;
   $polypad.$svg.setAttr('viewBox', '0 0 420 420');
   $polypad.canDelete = $polypad.canCopy = false;
+  $polypad.setGrid('square-grid');
+
+  const $bg = $step.$('svg.solution-outline')! as SVGParentView;
+  $bg.setAttr('viewBox', '0 0 420 420');
+
+  polys.forEach((polyVals, i) => {
+    const $bgPath = $N('path', {}, $bg) as SVGView;
+    const points = polyVals.map(([x, y]: number[]) => new Point(x, y));
+    const [x, y] = finalPositions[i];
+    const poly = (new Polygon(...points)).rotate(Math.PI).shift(x, y);
+    console.log(poly);
+    $bgPath.draw(poly);
+  });
+
+  // $bgPath.draw(new Polygon(...sol));
 
   const origins =
-    [[0, 2], [15, 2], [9, 1], [9, 3]]
+    [[1, 2], [1, 6], [11, 2], [11, 6]]
         .map(([x, y]: number[]) =>
           [tangramScale(x), tangramScale(y)]);
 
@@ -380,8 +421,7 @@ export function triangleTangram($step: Step) {
 }
 
 function getTangramPolystr(polyGridPositions: number[][]) {
-  return formatPoly(polyGridPositions)
-      .map(p => p.join(' ')).join(',');
+  return polyGridPositions.map(p => p.join(' ')).join(',');
 }
 
 function formatPoly(positions: number[][]) {
