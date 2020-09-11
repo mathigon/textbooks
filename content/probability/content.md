@@ -379,12 +379,22 @@ __normal distribution__.
 
 ---
 > id: conditional
+> goals: slider-probability
 
 
 
 ::: column(width=360)
 
     img(src="images/pillAndPatient.png" width=360 height=254)
+
+:::
+
+<!-- How to get them to line up? And slider is permanent? -->
+${xskew}{xskew|0.0|0,1,0.0833333333}
+
+::: column(width=380)
+
+    svg.conditional(width=380 height=288, only-one-column="false")
 
 :::
 
@@ -408,6 +418,8 @@ Here's what happened to the people who participated in that clinical trial:
 
 Well, there were a whole 62 people who were given the pill but didn't get better, so apparently the pill doesn't work perfectly.
 
+---
+
 Although, what if the pill was working a *little* bit? If a pill is was helpful for even a few people in the trial, then using it might be a very good thing to do! On the other hand, those pills take money and time to administer. So we want to be completely, mathematically, certain that taking the pill makes a person more likely to get better.
 
 ::: column(width=360)
@@ -420,16 +432,7 @@ In order to do this, we need to statistically analyse the data in that table, wh
 
 But to make it easy to learn about statistical analysis, we’re going to focus on data that’s easier to collect: what are people wearing!
 
-<!-- How to get them to line up? And slider is permanent? -->
-${xskew}{xskew|0.0|0,1,0.0833333333}
 
-::: column.grow
-
-::: column(width=340)
-
-    svg.conditional(width=340 height=288, onlyOneColumn="true")
-
-:::
 
 <!-- Applet. Student must click a few of them before next text shows up -->
 
@@ -452,6 +455,17 @@ And the probability they’re wearing a *hat*?
 <!-- Applet: same again but now there’s another square below it, and the lower square has TWO columns that both say hat, scarf, coat. First makes things go side-by-side, second subdivides in those columns. Again, more text won’t appear until student has played with it a bit -->
 
 Here's a tool you can use to filter people and figure out their proportions. That's going to be useful!
+
+<!-- 
+  Police lineup. 
+  Good if there's an illustration of a person walking away who was wearing a coat
+  A crime was committed, the police know that there was a witness who was wearing a coat and glasses"
+
+  Maybe it's pictures of people's faces? Glasses, spots, . But apart from that they look the same, bit weird
+
+  Why would things be conditional?
+    Witness was wearing a scarf
+ -->
 
 <!-- (P(A|B) labels should be in plain english) -->
 

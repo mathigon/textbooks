@@ -6,7 +6,7 @@
 
 import {flatten, list, Obj, repeat, tabulate2D} from '@mathigon/core';
 import {Random} from '@mathigon/fermat';
-import {$, $N, ElementView} from '@mathigon/boost';
+import { $, $N, ElementView, slide} from '@mathigon/boost';
 import {Step} from '../shared/types';
 import '../shared/components/buckets';
 
@@ -103,23 +103,67 @@ export function diceSimulation($step: Step) {
 export function conditional($step: Step) {
   const $svg = $step.$('svg.conditional')!;
 
-  let onlyOneColumn = $svg.attr('nonexistant')
-  console.log(onlyOneColumn)
-  return
-  // const onlyOneColumn = $svg.$('.onlyOneColumn');
-  // console.log(onlyOneColumn)
-  // console.log($svg.attributes)
-  // // console.log($svg.attributes.onlyonecolumnS)
-  // console.log($svg.attributes[3])
-  // let onlyOneColumn = false
+  let log = console.log
+
+  let onlyOneColumn = $svg.attr('only-one-column') === "true"
+  const adornmentColors = ['blue', 'red', 'purple', 'green']
+  const $people = []
+  const personSpacing = 24
+  const firstColumnOfPeopleX = personSpacing / 2.
+  const lastColumnOfPeopleX = 11 * personSpacing + firstColumnOfPeopleX
+  const topColumnOfPeopleY = personSpacing / 2.
+
+  {
+    let verticalPosition = personSpacing
+
+    let horizontalThingWidth = 11 * personSpacing
+    let horizontalThingHeight = personSpacing / 2.
+    let $horizontalThing = $N('rect', {
+      x: firstColumnOfPeopleX, y: verticalPosition, rx: 0,
+      width: horizontalThingWidth, height: horizontalThingHeight,
+    }, $svg);
+    $svg.append($horizontalThing)
+
+    const grabbableThingHeight = horizontalThingHeight * 2.5
+    const grabbableThingVerticalPosition = verticalPosition + horizontalThingHeight / 2. - grabbableThingHeight / 2.
+    let $grabbableThing = $N('rect', {
+      x: horizontalThingWidth / 2., y: grabbableThingVerticalPosition, rx: 0,
+      width: personSpacing / 2., height: grabbableThingHeight,
+      class:'red'
+    }, $svg);
+    $svg.append($grabbableThing)
+
+    slide($grabbableThing, {
+      move:(p,start,last)=> {
+        let displacementFromStart = p.x - start.x
+
+        // let constrainedPosition = p.x < firstColumnOfPeopleX ? firstColumnOfPeopleX : p.x > lastColumnOfPeopleX ? lastColumnOfPeopleX : p.x
+
+        // log(displacementFromStart)
+        $grabbableThing.setTransform({ x: displacementFromStart, y: grabbableThingVerticalPosition - grabbableThingHeight/2.})
+
+        log((p.x-firstColumnOfPeopleX) / horizontalThingWidth)
+
+        let sliderProbability = (p.x - start.x) / horizontalThingWidth
+        // if(sliderProbability < .1)
+        //   $step.score('slider-probability')
+      }
+    });
+  }
 
   function queryBit(i, j) {
     return (i & 1 << j) >> j
   }
-
-  const adornmentColors = ['blue', 'red', 'purple', 'green']
-  const $people = []
-
+  function logBits(bits) {
+    log(queryBit(bits, 3), queryBit(bits, 2), queryBit(bits, 1), queryBit(bits, 0))
+  }
+  const adornmentNumeratorFunctions = [
+    () => 2,
+    () => 3,
+    (adornmentBits) => conditionalizer(12, 4, 1, adornmentBits),
+    () => 4,
+    // (adornmentBits) => conditionalizer(2, 3, 0, adornmentBits), 
+  ]
   function conditionalizer(numeratorGivenBit, numeratorGivenNotBit, bit, adornmentBits) {
     if (adornmentBits !== undefined && adornmentBits !== null)
       return queryBit(adornmentBits, bit) ? numeratorGivenBit : numeratorGivenNotBit
@@ -128,16 +172,8 @@ export function conditional($step: Step) {
       return (otherNumerator * numeratorGivenBit + (12 - otherNumerator) * numeratorGivenNotBit) / 12
     }
   }
-  
-  const adornmentNumeratorFunctions = [
-    ()=>2, 
-    ()=>3, 
-    (adornmentBits) => conditionalizer(12, 4, 1, adornmentBits),
-    ()=>4,
-    // (adornmentBits) => conditionalizer(2, 3, 0, adornmentBits), 
-  ]
 
-  let buttonWidth = 80
+  let buttonWidth = 20
   let buttonHeight = 30
   for (let j = 0; j < (onlyOneColumn?1:2); j++) {
     for (let i = 0; i < 4; i++) {
@@ -146,22 +182,23 @@ export function conditional($step: Step) {
         width: buttonWidth, height: buttonHeight,
         class: adornmentColors[i]
       }, $svg);
-      button.setTransform({ x: 150 + (j?1:-1) * (buttonWidth / 2. + 30), y: 40 + i * (4 + buttonHeight) });
+
+      button.setTransform({ x: lastColumnOfPeopleX + 60 + (j?1:-1) * (buttonWidth / 2. + 2), y: 40 + i * (4 + buttonHeight) });
       $svg.append(button)
       button.i = i
       button.j = j
-      button.on('click', () => { 
-        if (button.j )
-          rearrange(i,currentIndexToPutOnTop) 
+      button.on('click', () => {
+        if (button.j === 0 )
+          rearrange(button.i, indexOnTop)
         else
-          rearrange(currentIndexToPutOnLeft, i) 
+          rearrange(indexOnLeft, button.i) 
       })
     }
   }
 
-  function reposition($person,x,y) {
-    let absoluteX = 12 + x * 24
-    let absoluteY = 12 + y * 24
+  function repositionPerson($person,gridX,gridY) {
+    let absoluteX = firstColumnOfPeopleX + gridX * personSpacing
+    let absoluteY = topColumnOfPeopleY + gridY * personSpacing
     $person.setTransform({ x: absoluteX, y: absoluteY });
 
     $person.$adornments.forEach(($adornment,i) => {
@@ -184,10 +221,6 @@ export function conditional($step: Step) {
       $person.randomNumber = Math.random()
       $person.$adornments = [null,null,null,null]
     }
-  }
-
-  function logBits(bits) {
-    log( queryBit(bits, 3), queryBit(bits, 2), queryBit(bits, 1), queryBit(bits, 0) )
   }
 
   let pIndex = 0
@@ -230,84 +263,98 @@ export function conditional($step: Step) {
   $people.sort((a,b)=>{return a.randomNumber-b.randomNumber})
   for (let i = 0; i < 12; ++i) {
     for (let j = 0; j < 12; ++j) {
-      reposition($people[i*12+j], i, j)
+      repositionPerson($people[i*12+j], i, j)
     }
   }
 
-  let currentIndexToPutOnLeft = -1
-  let currentIndexToPutOnTop = -1
-  function rearrange(indexToPutOnLeft,indexToPutOnTop) {
-    currentIndexToPutOnLeft = indexToPutOnLeft
-    currentIndexToPutOnTop = indexToPutOnTop
+  let indexOnLeft = -1
+  let indexOnTop = -1
+  function getQuadrant(p) {
+    if (indexOnLeft === -1 || p.$adornments[indexOnLeft]) { //if there's no left/right, it goes on the "left"
+      if (indexOnTop === -1 || p.$adornments[indexOnTop])
+        return "tl" //if there's no top/bottom, it goes on the "top"
+      else
+        return "bl"
+    }
+    else { //the right exists and we are there
+      if (indexOnTop === -1 || p.$adornments[indexOnTop])
+        return "tr"
+      else
+        return "br"
+    }
+  }
 
-    const leftWidth = adornmentNumeratorFunctions[indexToPutOnLeft]()
+  function rearrange(newIndexOnLeft,newIndexOnTop) {
+    indexOnLeft = newIndexOnLeft
+    indexOnTop = newIndexOnTop
+
+    const leftWidth = newIndexOnLeft === -1 ? 12 : adornmentNumeratorFunctions[newIndexOnLeft]()
     const rightWidth = 12 - leftWidth
 
-    if(onlyOneColumn) {
+    let numInTopLeft = 0
+    let numInTopRight = 0
+    $people.forEach(p => {
+      let quadrant = getQuadrant(p)
+      if(quadrant === "tl")
+        ++numInTopLeft
+      if(quadrant === "tr")
+        ++numInTopRight
+    })
 
+    // log(newIndexOnLeft,newIndexOnTop)
+    // log(numInTopLeft,numInTopRight)
+
+    if ((leftWidth !== 0 && numInTopLeft % leftWidth !== 0 ) || (rightWidth !== 0 && numInTopRight % rightWidth !== 0 )) {
+      console.error("indivisible:")
+      if (numInTopLeft % leftWidth !== 0)
+        console.error("    Trying to divide ", numInTopLeft, "by", leftWidth)
+      if (numInTopRight % rightWidth !== 0)
+        console.error("    Trying to divide ", numInTopRight, "by", rightWidth )
     }
-    else {
-      let numInTopLeft = 0
-      let numInTopRight = 0
-      if (indexToPutOnTop !== -1) {
-        $people.forEach(p => {
-          if (p.$adornments[indexToPutOnLeft] && p.$adornments[indexToPutOnTop])
-            ++numInTopLeft
-          if (!p.$adornments[indexToPutOnLeft] && p.$adornments[indexToPutOnTop])
-            ++numInTopRight
-        })
+    const topLeftHeight = numInTopLeft / leftWidth
+    const topRightHeight = numInTopRight / rightWidth
+
+    let topLeftNumSoFar = 0
+    let topRightNumSoFar = 0
+    let bottomLeftNumSoFar = 0
+    let bottomRightNumSoFar = 0
+
+    $people.forEach((p) => {
+      let quadrantNumSoFar = -1
+      let columnWidth = -1
+      let horizontalAddition = 0
+      let verticalAddition = 0
+
+      let quadrant = getQuadrant(p)
+      if (quadrant === "tl") {
+        quadrantNumSoFar = topLeftNumSoFar
+        columnWidth = leftWidth
+        ++topLeftNumSoFar
+      }
+      else if (quadrant === "tr") {
+        quadrantNumSoFar = topRightNumSoFar
+        horizontalAddition = leftWidth
+        columnWidth = rightWidth
+        ++topRightNumSoFar
+      }
+      else if (quadrant === "bl") {
+        quadrantNumSoFar = bottomLeftNumSoFar
+        verticalAddition = topLeftHeight
+        columnWidth = leftWidth
+        ++bottomLeftNumSoFar
+      }
+      else if (quadrant === "br") {
+        quadrantNumSoFar = bottomRightNumSoFar
+        horizontalAddition = leftWidth
+        verticalAddition = topRightHeight
+        columnWidth = rightWidth
+        ++bottomRightNumSoFar
       }
 
-      if (numInTopLeft % leftWidth !== 0 || numInTopRight % rightWidth !== 0) {
-        console.error("indivisible. columns sorted by", indexToPutOnLeft, ", then sorted by ", indexToPutOnTop)
-        if (numInTopLeft % leftWidth !== 0)
-          log("numInTopLeft", numInTopLeft, "totalInColumn", leftWidth * 12)
-        if (numInTopRight % rightWidth !== 0)
-          log("numInTopRight", numInTopRight, "totalInColumn", rightWidth * 12)
-      }
-      const topLeftHeight = numInTopLeft / leftWidth
-      const topRightHeight = numInTopRight / rightWidth
-
-      let topLeftNumSoFar = 0
-      let topRightNumSoFar = 0
-      let iBottomLeftNumSoFar = 0
-      let iBottomRightNumSoFar = 0
-
-      $people.forEach( (p) => {
-        let quadrantNumSoFar = -1
-        let columnWidth = -1
-        let horizontalAddition = 0
-        let verticalAddition = 0
-        if (p.$adornments[indexToPutOnLeft] && p.$adornments[indexToPutOnTop]) {
-          quadrantNumSoFar = topLeftNumSoFar
-          columnWidth = leftWidth
-          ++topLeftNumSoFar
-        }
-        else if (!p.$adornments[indexToPutOnLeft] && p.$adornments[indexToPutOnTop]) {
-          quadrantNumSoFar = topRightNumSoFar
-          horizontalAddition = leftWidth
-          columnWidth = rightWidth
-          ++topRightNumSoFar
-        }
-        else if (p.$adornments[indexToPutOnLeft] && !p.$adornments[indexToPutOnTop]) {
-          quadrantNumSoFar = iBottomLeftNumSoFar
-          verticalAddition = topLeftHeight
-          columnWidth = leftWidth
-          ++iBottomLeftNumSoFar
-        }
-        else if (!p.$adornments[indexToPutOnLeft] && !p.$adornments[indexToPutOnTop]) {
-          quadrantNumSoFar = iBottomRightNumSoFar
-          horizontalAddition = leftWidth
-          verticalAddition = topRightHeight
-          columnWidth = rightWidth
-          ++iBottomRightNumSoFar
-        }
-
-        const horizontalPosition = horizontalAddition + quadrantNumSoFar % columnWidth
-        const verticalPosition = verticalAddition + (quadrantNumSoFar - quadrantNumSoFar % columnWidth) / columnWidth
-        reposition(p, horizontalPosition, verticalPosition)
-      })
-    }
+      const horizontalPosition = horizontalAddition + quadrantNumSoFar % columnWidth
+      const verticalPosition = verticalAddition + (quadrantNumSoFar - quadrantNumSoFar % columnWidth) / columnWidth
+      repositionPerson(p, horizontalPosition, verticalPosition)
+    })
   }
 
   // let frameCount = 0
