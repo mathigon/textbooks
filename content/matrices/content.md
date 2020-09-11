@@ -342,7 +342,7 @@ However, this process is slightly different from what we did above. The company 
 > id: multiply
 
     mixin ij(i, j, label)
-      .cube
+      .cube(i=i j=j)
         - var iSeg = "segment(point(0,0),point(" +i[0] + "," + i[1] + "))"
         - var jSeg = "segment(point(0,0),point(" +j[0] + "," + j[1] + "))"
         x-geopad(width=100 x-axis="-2,2,1" y-axis="-2,2,1" grid padding=5): svg
@@ -384,60 +384,46 @@ This works for all rotation values:
 [Continue](btn:next)
 
 ---
+> id: calculator
+> title: Transformation Calculator
+> goals: calculate
 
 What about other types of transformations?
 
-{.fixme} This would be great as a calculator type thing.
+{.fixme} Perhaps let them draw points (like a spaceship), and then the points are transformed by each transformation?
+{.fixme} Should be displayed horizontally, with their matrices across the bottom.
 
-    .cubes
-      +ij([1,0], [0,1], "Identity")
-      +ij([0,1], [-1,0], "Rotate 90º")
-      +ij([-1,0], [0,-1], "Rotate 180º")
-      +ij([0,-1], [1,0], "Rotate 270º")
-      
-      +ij([-1,0], [0,1], "Reflect x=0")
-      +ij([0,1], [1,0], "Reflect y=x")
-      +ij([1,0], [0,-1], "Reflect y=0")
-      +ij([0,-1], [-1,0], "Reflect y=-x")
+    .calculator
+      .display
+        x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+        .operator x
+        x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+        .operator =
+        x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+        .button.clear CLEAR
+        .button.calc CALCULATE
+      .cubes
+        +ij([1,0], [0,1], "Identity")
+        +ij([0,1], [-1,0], "Rotate 90º")
+        +ij([-1,0], [0,-1], "Rotate 180º")
+        +ij([0,-1], [1,0], "Rotate 270º")
 
-      +ij([1,1], [0,1], "Shear x 1")
-      +ij([1,-1], [0,1], "Shear x -1")
-      +ij([1,0], [1,1], "Shear y 1")
-      +ij([1,0], [-1,1], "Shear y -1")
+        +ij([-1,0], [0,1], "Reflect x=0")
+        +ij([0,1], [1,0], "Reflect y=x")
+        +ij([1,0], [0,-1], "Reflect y=0")
+        +ij([0,-1], [-1,0], "Reflect y=-x")
 
-      +ij([2,0], [0,2], "Scale by 2")
-      +ij([0.5,0], [0, 0.5], "Scale by 1/2")
-      +ij([2,0], [0,1], "Scale x by 2")
-      +ij([1,0], [0,1/2], "Scale y by 1/2")
+        +ij([1,1], [0,1], "Shear x 1")
+        +ij([1,-1], [0,1], "Shear x -1")
+        +ij([1,0], [1,1], "Shear y 1")
+        +ij([1,0], [-1,1], "Shear y -1")
 
+        +ij([2,0], [0,2], "Scale by 2")
+        +ij([0.5,0], [0, 0.5], "Scale by 1/2")
+        +ij([2,0], [0,1], "Scale x by 2")
+        +ij([1,0], [0,1/2], "Scale y by 1/2")
 
-> section: calculator
-> id: calculator
-
-Now we can actually start doing some arithmetic with these transformations. For example, we can _multiply_ two transformations to get new ones:
-
-::: column(width=260)
-
-    .text-center
-      +ij([0,1], [-1,0], "Rotate 90º")
-      mo x
-      +ij([-1,0], [0,-1], "Rotate 180º")
-      mo =
-      span.sym-sum.pending(tabindex=0): +ij([0,-1], [1,0], "Rotate 270º")
-    x-gesture(target=".sym-sum")
-
-::: column(width=260)
-
-    .text-center
-      +ij([-1,0], [0,1], "Reflect x=0")
-      mo x
-      +ij([-1,0], [0,1], "Reflect x=0")
-      mo =
-      span.sym-sum.pending(tabindex=0): +ij([1,0], [0,1], "Identity")
-
-:::
-
-
+---
 
 ### Matrix Addition
 > section: arithmetic

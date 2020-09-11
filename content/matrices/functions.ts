@@ -7,7 +7,7 @@
 
 import {Geopad, Step} from '../shared/types';
 import {ElementView} from '@mathigon/boost';
-import {Point} from '@mathigon/fermat';
+import {Matrix, Point} from '@mathigon/fermat';
 import {Solid} from '../shared/components/solid';
 
 /**
@@ -217,6 +217,77 @@ export function playWithMe($step: Step) {
   });
 }
 
+function parseIntArray(str: string): number[]|undefined {
+  const regex = /\[(-?\d+(?:\.?\d+)?),(-?\d+(?:\.?\d+)?)\]/; // could simplify by not allowing float
+  console.log(`parsing string: ${str}`);
+  const result = regex.exec(str)!;
+  console.log(result);
+  return result.slice(1, 3).map(n => Number.parseFloat(n)); // pick 1 and 2
+}
+
+export function calculator($step: Step) {
+  const $cubes = $step.$$('.cube') as ElementView[]; // they're squares, actually
+
+  const $geopads = $step.$('.display')?.$$('x-geopad') as Geopad[];
+
+  const $calc = $step.$('.calc') as ElementView;
+  const $clear = $step.$('.clear') as ElementView;
+
+  let a: number[][] | undefined = undefined;
+  let b: number[][] | undefined = undefined;
+  let c: number[][] | undefined = undefined;
+
+  function drawUnitVectorsToGeo(geo: Geopad, matrix: number[][], name: string) {
+    geo.drawPoint('point(0,0)', {name: 'origin', interactive: false});
+    geo.drawPoint(`point(${matrix[0][0]},${matrix[0][1]})`, {name: `i${name}`, interactive: false});
+    geo.drawPoint(`point(${matrix[1][0]},${matrix[1][1]})`, {name: `j${name}`, interactive: false});
+    geo.drawPath(`segment(origin,i${name})`, {classes: 'red'});
+    geo.drawPath(`segment(origin,j${name})`, {classes: 'green'});
+  }
+
+  for (const [i, $c] of $cubes.entries()) {
+    $c.on('click', () => {
+      console.log(`clicked cube in the ${i} position`);
+
+      if (a === undefined) {
+        a = [];
+        a.push(parseIntArray($c.attr('i'))!);
+        a.push(parseIntArray($c.attr('j'))!);
+        drawUnitVectorsToGeo($geopads[0], a, 'a');
+
+      } else if (b === undefined) {
+        b = [];
+        b.push(parseIntArray($c.attr('i'))!);
+        b.push(parseIntArray($c.attr('j'))!);
+        drawUnitVectorsToGeo($geopads[1], b, 'b');
+
+      }
+    });
+  }
+
+  $clear.on('click', () => {
+    a = undefined;
+    b = undefined;
+    $geopads[0].$svg.$('.paths')!.removeChildren();
+    $geopads[0].$svg.$('.points')!.removeChildren();
+    $geopads[1].$svg.$('.paths')!.removeChildren();
+    $geopads[1].$svg.$('.points')!.removeChildren();
+    $geopads[2].$svg.$('.paths')!.removeChildren();
+    $geopads[2].$svg.$('.points')!.removeChildren();
+  });
+
+  $calc.on('click', () => {
+
+    if (a !== undefined && b !== undefined) {
+      drawUnitVectorsToGeo($geopads[2], a, 'c');
+
+      c = Matrix.product(a, b);
+      $geopads[2].animatePoint('ic', new Point(c[0][0], c[0][1]));
+      $geopads[2].animatePoint('jc', new Point(c[1][0], c[1][1]));
+    }
+  });
+}
+
 /**
  * Show determinant as area.
  */
@@ -269,6 +340,7 @@ export function determinants($step:Step) {
 }
 
 import * as u from './utils3d';
+import { forceSimulation } from 'd3';
 
 export function threeDimensions($step: Step) {
   const $solids = $step.$$('x-solid') as Solid[];
