@@ -236,6 +236,7 @@ export function calculator($step: Step) {
   let a: number[][] | undefined = undefined;
   let b: number[][] | undefined = undefined;
   let c: number[][] | undefined = undefined;
+  let I = Matrix.identity(2);
 
   function drawUnitVectorsToGeo(geo: Geopad, matrix: number[][], name: string) {
     geo.drawPoint('point(0,0)',
@@ -248,6 +249,9 @@ export function calculator($step: Step) {
     geo.drawPath(`segment(origin,j${name})`, {classes: 'green'});
   }
 
+  const WAIT = 200;
+  const ANIMATE = 500;
+
   for (const [i, $c] of $cubes.entries()) {
     $c.on('click', () => {
       console.log(`clicked cube in the ${i} position`);
@@ -256,13 +260,23 @@ export function calculator($step: Step) {
         a = [];
         a.push(parseIntArray($c.attr('i'))!);
         a.push(parseIntArray($c.attr('j'))!);
-        drawUnitVectorsToGeo($geopads[0], a, 'a');
+        drawUnitVectorsToGeo($geopads[0], I, 'a'); // initialize as Identity
+
+        setTimeout(() => {
+          $geopads[0].animatePoint('ia', new Point(a![0][0], a![0][1]), ANIMATE);
+          $geopads[0].animatePoint('ja', new Point(a![1][0], a![1][1]), ANIMATE);
+        }, WAIT);
 
       } else if (b === undefined) {
         b = [];
         b.push(parseIntArray($c.attr('i'))!);
         b.push(parseIntArray($c.attr('j'))!);
-        drawUnitVectorsToGeo($geopads[1], b, 'b');
+        drawUnitVectorsToGeo($geopads[1], I, 'b'); // initialize as Identity
+        // then animate to transformation
+        setTimeout(() => {
+          $geopads[1].animatePoint('ib', new Point(b![0][0], b![0][1]), ANIMATE);
+          $geopads[1].animatePoint('jb', new Point(b![1][0], b![1][1]), ANIMATE);
+        }, WAIT);
 
       }
     });
@@ -282,11 +296,19 @@ export function calculator($step: Step) {
   $calc.on('click', () => {
 
     if (a !== undefined && b !== undefined) {
-      drawUnitVectorsToGeo($geopads[2], a, 'c');
+      drawUnitVectorsToGeo($geopads[2], I, 'c');
 
       c = Matrix.product(a, b);
-      $geopads[2].animatePoint('ic', new Point(c[0][0], c[0][1]));
-      $geopads[2].animatePoint('jc', new Point(c[1][0], c[1][1]));
+
+      // show it animating from I to A to C.
+      setTimeout(() => {
+        $geopads[2].animatePoint('ic', new Point(a![0][0], a![0][1]), ANIMATE);
+        $geopads[2].animatePoint('jc', new Point(a![1][0], a![1][1]), ANIMATE);
+        setTimeout(() => {
+          $geopads[2].animatePoint('ic', new Point(c![0][0], c![0][1]), ANIMATE);
+          $geopads[2].animatePoint('jc', new Point(c![1][0], c![1][1]), ANIMATE);
+        }, ANIMATE);
+      }, WAIT);
     }
   });
 }
