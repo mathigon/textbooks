@@ -238,9 +238,12 @@ export function calculator($step: Step) {
   let c: number[][] | undefined = undefined;
 
   function drawUnitVectorsToGeo(geo: Geopad, matrix: number[][], name: string) {
-    geo.drawPoint('point(0,0)', {name: 'origin', interactive: false});
-    geo.drawPoint(`point(${matrix[0][0]},${matrix[0][1]})`, {name: `i${name}`, interactive: false});
-    geo.drawPoint(`point(${matrix[1][0]},${matrix[1][1]})`, {name: `j${name}`, interactive: false});
+    geo.drawPoint('point(0,0)',
+        {name: 'origin', interactive: false, classes: 'hidden'});
+    geo.drawPoint(`point(${matrix[0][0]},${matrix[0][1]})`,
+        {name: `i${name}`, interactive: false, classes: 'hidden'});
+    geo.drawPoint(`point(${matrix[1][0]},${matrix[1][1]})`,
+        {name: `j${name}`, interactive: false, classes: 'hidden'});
     geo.drawPath(`segment(origin,i${name})`, {classes: 'red'});
     geo.drawPath(`segment(origin,j${name})`, {classes: 'green'});
   }
@@ -340,7 +343,6 @@ export function determinants($step:Step) {
 }
 
 import * as u from './utils3d';
-import { forceSimulation } from 'd3';
 
 export function threeDimensions($step: Step) {
   const $solids = $step.$$('x-solid') as Solid[];

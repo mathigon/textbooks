@@ -395,11 +395,14 @@ What about other types of transformations?
 
     .calculator
       .display
-        x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
-        .operator x
-        x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
-        .operator =
-        x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+        .mat.operator x
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+        .mat.operator =
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
         .button.clear CLEAR
         .button.calc CALCULATE
       .cubes
