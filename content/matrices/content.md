@@ -497,6 +497,57 @@ Great.
 
 This code could be a lot simpler! And why is this not going below the tables?
 
+---
+
+### Scalar Multiplication
+
+Another operation we can perform with a matrix is __scalar multiplication__. A __scalar__ is what we call a real number in matrix and vector arithmetic.
+
+We write scalar multiplication as
+
+`sA`
+
+Scalar multiplication is as simple as multiplying every cell in a matrix `A` times a scalar `s`.
+
+<p>
+<div class="scalar">
+  <div class="scm s">2</div>
+
+  <table class="scm">
+    <tr>
+      <td target="a">[3](pill:a)</td>
+      <td target="b">[1](pill:b)</td>
+    </tr>
+    <tr>
+      <td target="c">[-4](pill:c)</td>
+      <td target="d">[0](pill:d)</td>
+    </tr>
+  </table>
+
+  <div class="scm">=</div>
+
+  <table class="scm">
+    <tr>
+      <td target="a">
+        <strong class="pill step-target" tabindex="0" data-to="a">[[6]]</strong>
+      </td>
+      <td target="b">
+        <strong class="pill step-target" tabindex="0" data-to="b">[[2]]</strong>
+      </td>
+    </tr>
+    <tr>
+      <td target="c">
+        <strong class="pill step-target" tabindex="0" data-to="c">[[-8]]</strong>
+      </td>
+      <td target="d">
+        <strong class="pill step-target" tabindex="0" data-to="d">[[0]]</strong>
+      </td>
+    </tr>
+  </table>
+</div>
+</p>
+
+Note that while it is possible to add two matrices, and to multiply a matrix by a scalar, the operation of adding a scalar to a matrix is __not defined__.
 
 ---
 

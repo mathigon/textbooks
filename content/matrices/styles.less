@@ -43,6 +43,21 @@ table.add td {
     }
 }
 
+.scalar .scm {
+    display: block;
+    float: left;
+}
+
+table.scm td {
+    .focus & {
+        opacity: 0.2;
+    }
+
+    &.focus {
+        opacity: 1.0;
+    }
+}
+
 x-geopad .paths .fabric {
     stroke-width: 1px;
 }
