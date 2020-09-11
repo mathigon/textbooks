@@ -432,11 +432,71 @@ What about other types of transformations?
 > section: arithmetic
 > sectionStatus: dev
 
+Matrices can also be added. Matrix addition does not happen very often, but it is very simple to learn.
+
+We write matrix arithmetic just as you might expect:
+
+`A + B`
+
 * Two matrices can be added only if they have the same dimensions.
 * The resulting matrix will be the same dimension as the matrices added.
-* Each value in location (x,y) of the resulting matrix will be the sum of the values at (x,y) in the other two matrices.
+* Each value in location (i,j) of the resulting matrix will be the sum of the values at (i,j) in the other two matrices.
 
-{.todo} COMING SOON
+Add these two matrices!
+
+<p>
+<div class="addition">
+  <table class="add">
+    <tr>
+      <td target="a">[1](pill:a)</td>
+      <td target="b">[2](pill:b)</td>
+    </tr>
+    <tr>
+      <td target="c">[3](pill:c)</td>
+      <td target="d">[4](pill:d)</td>
+    </tr>
+  </table>
+
+  <div class="add">+</div>
+
+  <table class="add">
+    <tr>
+      <td target="a">[9](pill:a)</td>
+      <td target="b">[8](pill:b)</td>
+    </tr>
+    <tr>
+      <td target="c">[7](pill:c)</td>
+      <td target="d">[6](pill:d)</td>
+    </tr>
+  </table>
+
+  <div class="add">=</div>
+
+  <table class="add">
+    <tr>
+      <td target="a">
+        <strong class="pill step-target" tabindex="0" data-to="a">[[10]]</strong>
+      </td>
+      <td target="b">
+        <strong class="pill step-target" tabindex="0" data-to="b">[[10]]</strong>
+      </td>
+    </tr>
+    <tr>
+      <td target="c">
+        <strong class="pill step-target" tabindex="0" data-to="c">[[10]]</strong>
+      </td>
+      <td target="d">
+        <strong class="pill step-target" tabindex="0" data-to="d">[[10]]</strong>
+      </td>
+    </tr>
+  </table>
+</div>
+</p>
+
+Great.
+
+This code could be a lot simpler! And why is this not going below the tables?
+
 
 ---
 
