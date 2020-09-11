@@ -617,6 +617,8 @@ Is matrix multiplication [distributive](gloss:distributive) over matrix addition
 
 `Ax(B+C) = AxB + AxC`
 
+{.todo} Could demonstrate this by adding basis vectors and applying transformations to them. Or could somehow leave it as an exercise for the reader.
+
 :::
 
 
