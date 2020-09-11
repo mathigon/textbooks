@@ -311,7 +311,7 @@ Throughout our work on area, we have often used the idea that as parts of a shap
     figure: .triangle-tangram
       //.triangle-tangram-bg
       svg.solution-outline
-      x-polypad
+      x-polypad(rotate="no")
 
 We’ve made a triangle with a base of 13 units and a height of 5 units. The area of this triangle is [[32.5]] square units. So, the area of these 4 pieces must also be [[32.5]] square units.
 
