@@ -217,7 +217,12 @@ export function playWithMe($step: Step) {
   });
 }
 
-function parseIntArray(str: string): number[]|undefined {
+/**
+ * Parse a string into array of two numbers.
+ *
+ * @param str Should match [number, number]
+ */
+function parseNumberArray(str: string): number[]|undefined {
   const regex = /\[(-?\d+(?:\.?\d+)?),(-?\d+(?:\.?\d+)?)\]/; // could simplify by not allowing float
   console.log(`parsing string: ${str}`);
   const result = regex.exec(str)!;
@@ -228,16 +233,25 @@ function parseIntArray(str: string): number[]|undefined {
 export function calculator($step: Step) {
   const $cubes = $step.$$('.cube') as ElementView[]; // they're squares, actually
 
+  // g[0] x g[1] = g[2]
   const $geopads = $step.$('.display')?.$$('x-geopad') as Geopad[];
 
+  // buttons
   const $calc = $step.$('.calc') as ElementView;
   const $clear = $step.$('.clear') as ElementView;
 
   let a: number[][] | undefined = undefined;
   let b: number[][] | undefined = undefined;
   let c: number[][] | undefined = undefined;
-  let I = Matrix.identity(2);
+  const I = Matrix.identity(2);
 
+  /**
+   * Currently only used to draw Identity Matrix, but worth keeping.
+   *
+   * @param geo Geopad to draw on.
+   * @param matrix transformation to draw.
+   * @param name name of matrix (gets mapped to i${name} and j${name})
+   */
   function drawUnitVectorsToGeo(geo: Geopad, matrix: number[][], name: string) {
     geo.drawPoint('point(0,0)',
         {name: 'origin', interactive: false, classes: 'hidden'});
@@ -252,32 +266,37 @@ export function calculator($step: Step) {
   const WAIT = 200;
   const ANIMATE = 500;
 
-  for (const [i, $c] of $cubes.entries()) {
+  /**
+   * Animates a Linear Transformation on a GeoPad
+   *
+   * @param geo Geopad
+   * @param iv name of i-unit-vector
+   * @param jv name of j-unit-vector
+   * @param m transformation matrix
+   */
+  function animateTransformationOnGeo(geo: Geopad, iv: string, jv:string, m: number[][]) {
+    geo.animatePoint(iv, new Point(m[0][0], m[0][1]), ANIMATE);
+    geo.animatePoint(jv, new Point(m[1][0], m[1][1]), ANIMATE);
+  }
+
+  for (const [_i, $c] of $cubes.entries()) {
     $c.on('click', () => {
-      console.log(`clicked cube in the ${i} position`);
 
       if (a === undefined) {
         a = [];
-        a.push(parseIntArray($c.attr('i'))!);
-        a.push(parseIntArray($c.attr('j'))!);
+        a.push(parseNumberArray($c.attr('i'))!);
+        a.push(parseNumberArray($c.attr('j'))!);
         drawUnitVectorsToGeo($geopads[0], I, 'a'); // initialize as Identity
-
-        setTimeout(() => {
-          $geopads[0].animatePoint('ia', new Point(a![0][0], a![0][1]), ANIMATE);
-          $geopads[0].animatePoint('ja', new Point(a![1][0], a![1][1]), ANIMATE);
-        }, WAIT);
+        // then animate to transformation
+        setTimeout(() => animateTransformationOnGeo($geopads[0], 'ia', 'ja', a!), WAIT);
 
       } else if (b === undefined) {
         b = [];
-        b.push(parseIntArray($c.attr('i'))!);
-        b.push(parseIntArray($c.attr('j'))!);
+        b.push(parseNumberArray($c.attr('i'))!);
+        b.push(parseNumberArray($c.attr('j'))!);
         drawUnitVectorsToGeo($geopads[1], I, 'b'); // initialize as Identity
         // then animate to transformation
-        setTimeout(() => {
-          $geopads[1].animatePoint('ib', new Point(b![0][0], b![0][1]), ANIMATE);
-          $geopads[1].animatePoint('jb', new Point(b![1][0], b![1][1]), ANIMATE);
-        }, WAIT);
-
+        setTimeout(() => animateTransformationOnGeo($geopads[1], 'ib', 'jb', b!), WAIT);
       }
     });
   }
@@ -302,12 +321,8 @@ export function calculator($step: Step) {
 
       // show it animating from I to A to C.
       setTimeout(() => {
-        $geopads[2].animatePoint('ic', new Point(a![0][0], a![0][1]), ANIMATE);
-        $geopads[2].animatePoint('jc', new Point(a![1][0], a![1][1]), ANIMATE);
-        setTimeout(() => {
-          $geopads[2].animatePoint('ic', new Point(c![0][0], c![0][1]), ANIMATE);
-          $geopads[2].animatePoint('jc', new Point(c![1][0], c![1][1]), ANIMATE);
-        }, ANIMATE);
+        animateTransformationOnGeo($geopads[2], 'ic', 'jc', a!);
+        setTimeout(() => animateTransformationOnGeo($geopads[2], 'ic', 'jc', c!), ANIMATE);
       }, WAIT);
     }
   });
