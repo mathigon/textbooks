@@ -62,7 +62,6 @@ export async function voronoi($step: VoronoiStep) {
   });
 
   $geopad.$svg.on('mousemove', e => {
-    // console.log(e);
     $step.model.cells = $step.model.cells.map(cell => {
       const over = cell.poly.contains(new Point(e.offsetX, e.offsetY));
       return {...cell, over};
