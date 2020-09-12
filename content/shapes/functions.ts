@@ -6,7 +6,7 @@
 
 import {Point, Polygon, Segment} from '@mathigon/fermat';
 import {$N, animate, CanvasView, loadScript, SVGParentView, SVGView} from '@mathigon/boost';
-import {Geopad, GeoPoint, Polypad, Step, Tile} from '../shared/types';
+import {Geopad, GeoPoint, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
 import {Relation} from '../shared/components/relation';
@@ -424,10 +424,41 @@ export function triangleTangram($step: Step) {
     );
     if (allPositioned && !done) {
       done = true;
+      $bg.addClass('hidden');
       $step.addHint('correct');
       $step.score('triangle-complete');
     }
   });
+
+  const nextPoints = [[275, 326], [300, 376], [225, 376], [100, 376]].map(([x, y]: number[]) => new Point(x, y));
+
+  const $rearrangeSlider = $step.$('x-slider.rearrange-triangle') as Slider;
+  const tiles = [...$polypad.tiles];
+  const $tiles = tiles.map(t => t.$el);
+  let rearranged = false;
+  let slid = 0;
+  $rearrangeSlider.on('move', n => {
+    const progress = n / 1000;
+
+    $tiles[0].setTransform(Point.interpolate(tiles[0].posn, nextPoints[0], progress), Math.PI);
+    $tiles[1].setTransform(Point.interpolate(tiles[1].posn, nextPoints[1], progress), Math.PI);
+    $tiles[2].setTransform(Point.interpolate(tiles[2].posn, nextPoints[2], progress), Math.PI);
+    $tiles[3].setTransform(Point.interpolate(tiles[3].posn, nextPoints[3], progress), Math.PI);
+
+    if (progress == 1 && !rearranged) {
+      rearranged = true;
+      $step.score('triangle-rearranged');
+    }
+
+    if (rearranged) {
+      slid = slid + 1;
+    }
+
+    if (slid > 60) {
+      $step.score('triangle-slid');
+    }
+  });
+
 }
 
 function getTangramPolystr(polyGridPositions: number[][]) {
