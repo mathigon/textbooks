@@ -440,6 +440,18 @@ export function triangleTangram($step: Step) {
     }
   });
 
+  const $polypad2 = $step.$('.tangram-polys > x-polypad') as Polypad;
+  $polypad2.$svg.setAttr('viewBox', '0 0 425 225');
+  $polypad2.canDelete = $polypad2.canCopy = false;
+  $polypad2.setGrid('square-grid');
+
+  polys.forEach((poly, index) => {
+    const polyStr = getTangramPolystr(poly);
+    const tile = $polypad2.newTile('polygon', polyStr);
+    tile.setColour(polyColours[index]);
+    tile.setPosition(new Point(origins[index][0], origins[index][1]));
+  });
+
 }
 
 function getTangramPolystr(polyGridPositions: number[][]) {

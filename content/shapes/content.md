@@ -328,7 +328,8 @@ This situation is called Curry’s Paradox. A paradox is a statement or situatio
 
 Let’s take the shape apart and find the area of each piece to help us see what’s happening here. 
 
-TODO: Image? Animation?
+    figure: .tangram-polys
+      x-polypad(rotate="no")
 
 The red triangle has a base of 8 and a height of 3, so the area of the red triangle is [[12]] square units. The area of the blue triangle is [[5]] square units. The area of the green hexagon is [[8]] square units and the area of the orange hexagon is [[7]] square units. So, the total area of all the pieces when pulled apart is [[32]] square units. However, in the first arrangement, they seem to make a triangle with an area of 32.5 square units and in the second arrangement, they seem to have an area of 31.5 square units. The area of these 4 pieces seems to be changing as we are moving them around! What is going on here?
 
