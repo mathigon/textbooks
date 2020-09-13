@@ -452,23 +452,23 @@ export function triangleTangram($step: Step) {
     tile.setPosition(new Point(origins[index][0], origins[index][1]));
   });
 
-  const $zoomPolypad = $step.$('.zoom-1 > x-polypad') as Polypad;
-  $zoomPolypad.$svg.setAttr('viewBox', '0 0 425 250'); // 17 x 10
-  $zoomPolypad.canDelete = $zoomPolypad.canCopy = false;
-  $zoomPolypad.setGrid('square-grid');
+  const $zoomPolypad1 = $step.$('.zoom-1 > x-polypad') as Polypad;
+  $zoomPolypad1.$svg.setAttr('viewBox', '0 0 425 250'); // 17 x 10
+  $zoomPolypad1.canDelete = $zoomPolypad1.canCopy = false;
+  $zoomPolypad1.setGrid('square-grid');
 
   polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
-    const tile = $zoomPolypad.newTile('polygon', polyStr);
+    const tile = $zoomPolypad1.newTile('polygon', polyStr);
     tile.setColour(polyColours[index]);
     tile.setPosition(new Point(finalRel[index][0] + tangramScale(1), finalRel[index][1] + tangramScale(1)));
   });
 
   const outlineStr = getTangramPolystr([[0, 0], [13, 0], [13, -5]].map(p => p.map(tangramScale)));
-  const outlineTile = $zoomPolypad.newTile('polygon', outlineStr);
-  outlineTile.setPosition(new Point(tangramScale(1), tangramScale(6)));
-  const $outline = outlineTile.$el.$('g path.polygon-tile')!;
-  $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+  const outlineTile1 = $zoomPolypad1.newTile('polygon', outlineStr);
+  outlineTile1.setPosition(new Point(tangramScale(1), tangramScale(6)));
+  const $outline1 = outlineTile1.$el.$('g path.polygon-tile')!;
+  $outline1.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
 
   const $zoomSlider1 = $step.$('x-slider.zoom-s-1') as Slider;
   const baseWidth = 17;
@@ -483,12 +483,12 @@ export function triangleTangram($step: Step) {
 
     const scale = 1 - (n / 1100);
     const factor = tangramScale(scale);
-    $zoomPolypad.$svg.setAttr('viewBox', `${9 * (25 - factor)} ${3 * (25 - factor)} ${baseWidth * factor} ${baseHeight * factor}`);
+    $zoomPolypad1.$svg.setAttr('viewBox', `${9 * (25 - factor)} ${3 * (25 - factor)} ${baseWidth * factor} ${baseHeight * factor}`);
     console.log({scale});
-    [...$zoomPolypad.tiles.values()].forEach(tile => {
+    [...$zoomPolypad1.tiles.values()].forEach(tile => {
       tile.$el.$('g path.polygon-tile')?.css({'stroke-width': `${scale}px`});
     });
-    $outline.css({'stroke-width': `${scale * 4}px`});
+    $outline1.css({'stroke-width': `${scale * 4}px`});
   });
 
   const $triangleRefPolypad = $step.$('.triangle-ref > x-polypad') as Polypad;
@@ -502,6 +502,43 @@ export function triangleTangram($step: Step) {
     tile.setColour(polyColours[index]);
     tile.setPosition(new Point(finalRel[index][0] + tangramScale(1), finalRel[index][1] + tangramScale(1)));
     tile.$el.addClass('paradox-poly');
+  });
+
+  // TODO: Use comments to delineate sections
+
+  const $zoomPolypad2 = $step.$('.zoom-2 > x-polypad') as Polypad;
+  $zoomPolypad2.$svg.setAttr('viewBox', '0 0 425 250'); // 17 x 10
+  $zoomPolypad2.canDelete = $zoomPolypad2.canCopy = false;
+  $zoomPolypad2.setGrid('square-grid');
+
+  polys.forEach((poly, index) => {
+    const polyStr = getTangramPolystr(poly);
+    const tile = $zoomPolypad2.newTile('polygon', polyStr);
+    tile.setColour(polyColours[index]);
+    tile.setPosition(new Point(nextRelative[index][0] + tangramScale(1), nextRelative[index][1] + tangramScale(1)));
+  });
+  const outlineTile2 = $zoomPolypad2.newTile('polygon', outlineStr);
+  outlineTile2.setPosition(new Point(tangramScale(1), tangramScale(6)));
+  const $outline2 = outlineTile2.$el.$('g path.polygon-tile')!;
+  $outline2.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+
+  const $zoomSlider2 = $step.$('x-slider.zoom-s-2') as Slider;
+  let zoomed2 = false;
+  $zoomSlider2.on('move', n => {
+
+    if (n > 950 && !zoomed2) {
+      zoomed2 = true;
+      $step.score('second-zoom');
+    }
+
+    const scale = 1 - (n / 1100);
+    const factor = tangramScale(scale);
+    $zoomPolypad2.$svg.setAttr('viewBox', `${6 * (25 - factor)} ${4 * (25 - factor)} ${baseWidth * factor} ${baseHeight * factor}`);
+    console.log({scale});
+    [...$zoomPolypad2.tiles.values()].forEach(tile => {
+      tile.$el.$('g path.polygon-tile')?.css({'stroke-width': `${scale}px`});
+    });
+    $outline2.css({'stroke-width': `${scale * 4}px`});
   });
 
 }

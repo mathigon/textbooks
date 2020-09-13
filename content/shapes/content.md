@@ -345,15 +345,26 @@ Well, it turns out that neither of the shapes we made using the 4 pieces are in 
 
 :::
 
-{.reveal(when="first-zoom")} While the blue and red seem to line up so the ends connect with a straight line, they do not.  Using the formula ½ x b x h to find the area of this [shape](->.paradox-poly) made by the 4 pieces is incorrect because the shape [[is not | is]] a triangle. The area of this shape is 32 square units. Using ½ x b x h, we got 32.5 square units. The extra ½ unit came from the amount of space in between the green line and the actual line connecting the endpoints of the red and blue triangle.
+::: .reveal(when="first-zoom")
 
+While the blue and red seem to line up so the ends connect with a straight line, they do not.  Using the formula ½ x b x h to find the area of this [shape](->.paradox-poly) made by the 4 pieces is incorrect because the shape [[is not | is]] a triangle. The area of this shape is 32 square units. Using ½ x b x h, we got 32.5 square units. The extra ½ unit came from the amount of space in between the green line and the actual line connecting the endpoints of the red and blue triangle.
 
     figure: .triangle-ref
       x-polypad(rotate="no")
 
+:::
+
+::: .reveal(when="blank-10")
+
 In the 2nd arrangement, the shapes also seem to make a triangle with the same total area, but we’ve used one additional square unit. So, our first thought was that the area of these 4 shapes decreased by one. Move the slider below to zoom in on the green line connecting the corners of two triangles.
 
-    // TODO: Slider
+    figure: .zoom-2
+      x-polypad(rotate="no")
+    x-slider(steps=1000 speed=1).zoom-s-2
+
+:::
+
+::: .reveal(when="second-zoom")
 
 Adding the extra square unit into this arrangement of the 4 pieces causes the triangles to bulge outside of the green line. So, this arrangement is not a triangle either! The total area of the pieces is remaining constant at 32!
 
@@ -363,7 +374,9 @@ TODO: Comparison diagram
 
 In the second arrangement, we added in an additional square unit to make the 4 pieces fit inside the green triangle. Again, it seemed to fit, but it actually was ½ square unit too big. Our eyes just couldn’t perceive the extra ½ square unit. 
 
-Phew! Our fundamental idea that the area of shapes remains the same regardless of the arrangement of the shapes remains true. We’ll use this idea to explore circles in the next few chapters. 
+Phew! Our fundamental idea that the area of shapes remains the same regardless of the arrangement of the shapes remains true. We’ll use this idea to explore circles in the next few chapters.
+
+:::
 
 
 ---
