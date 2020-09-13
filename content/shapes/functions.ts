@@ -491,6 +491,19 @@ export function triangleTangram($step: Step) {
     $outline.css({'stroke-width': `${scale * 4}px`});
   });
 
+  const $triangleRefPolypad = $step.$('.triangle-ref > x-polypad') as Polypad;
+  $triangleRefPolypad.$svg.setAttr('viewBox', '0 0 425 250'); // 17 x 10
+  $triangleRefPolypad.canDelete = $triangleRefPolypad.canCopy = false;
+  $triangleRefPolypad.setGrid('square-grid');
+
+  polys.forEach((poly, index) => {
+    const polyStr = getTangramPolystr(poly);
+    const tile = $triangleRefPolypad.newTile('polygon', polyStr);
+    tile.setColour(polyColours[index]);
+    tile.setPosition(new Point(finalRel[index][0] + tangramScale(1), finalRel[index][1] + tangramScale(1)));
+    tile.$el.addClass('paradox-poly');
+  });
+
 }
 
 function getTangramPolystr(polyGridPositions: number[][]) {
