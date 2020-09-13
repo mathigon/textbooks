@@ -335,11 +335,17 @@ The red triangle has a base of 8 and a height of 3, so the area of the red trian
 
 :::
 
+::: .reveal(when="blank-5 blank-6 blank-7 blank-8 blank-9")
+
 Well, it turns out that neither of the shapes we made using the 4 pieces are in fact triangles. Below is the 1st arrangement. It looks like the red and blue triangles line up perfectly, but they do not. Move the slider below to zoom in on the green line connecting the corners of two triangles.
 
-    // TODO: Triangle zoom exercise 1
+    figure: .zoom-1
+      x-polypad(rotate="no")
+    x-slider(steps=1000 speed=1).zoom-s-1
 
-While the blue and red seem to line up so the ends connect with a straight line, they do not.  Using the formula ½ x b x h to find the area of this shape made by the 4 pieces is incorrect because the shape [[is not | is]] a triangle. The area of this shape is 32 square units. Using ½ x b x h, we got 32.5 square units. The extra ½ unit came from the amount of space in between the green line and the actual line connecting the endpoints of the red and blue triangle.
+:::
+
+{.reveal(when="first-zoom")} While the blue and red seem to line up so the ends connect with a straight line, they do not.  Using the formula ½ x b x h to find the area of this shape made by the 4 pieces is incorrect because the shape [[is not | is]] a triangle. The area of this shape is 32 square units. Using ½ x b x h, we got 32.5 square units. The extra ½ unit came from the amount of space in between the green line and the actual line connecting the endpoints of the red and blue triangle.
 
     // TODO: Triangle zoom exercise 2
 
