@@ -355,27 +355,28 @@ const polys = [
   [[0, 0], [5, 0], [5, -2]]
 ].map(poly => poly.map(p => p.map(tangramScale)));
 
-const finalPositions = [
+const finalRel = [
   // Large red triangle
-  [2, 15],
+  [0, 5],
   // Orange tetronimo
-  [10, 15],
+  [8, 5],
   // Green tetronimo
-  [10, 14],
+  [8, 4],
   // Small blue triangle
-  [10, 12]
+  [8, 2]
 ].map(p => p.map(tangramScale));
+const finalPositions = finalRel.map(([x, y]: number[]) => [x + tangramScale(2), y + tangramScale(12)]);
 
 const polyColours = ['red', 'orange', 'green', 'blue'];
 
 export function triangleTangram($step: Step) {
-  const $polypad = $step.$('x-polypad') as Polypad;
-  $polypad.$svg.setAttr('viewBox', '0 0 425 425');
-  $polypad.canDelete = $polypad.canCopy = false;
-  $polypad.setGrid('square-grid');
+  const $polypad1 = $step.$('.triangle-tangram > x-polypad') as Polypad;
+  $polypad1.$svg.setAttr('viewBox', '0 0 425 450');
+  $polypad1.canDelete = $polypad1.canCopy = false;
+  $polypad1.setGrid('square-grid');
 
   const $bg = $step.$('svg.solution-outline')! as SVGParentView;
-  $bg.setAttr('viewBox', '0 0 425 425');
+  $bg.setAttr('viewBox', '0 0 425 450');
 
   polys.forEach((polyVals, i) => {
     const $bgPath = $N('path', {}, $bg) as SVGView;
@@ -392,14 +393,14 @@ export function triangleTangram($step: Step) {
 
   polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
-    const tile = $polypad.newTile('polygon', polyStr);
+    const tile = $polypad1.newTile('polygon', polyStr);
     tile.setColour(polyColours[index]);
     tile.setPosition(new Point(origins[index][0], origins[index][1]));
   });
 
   let done = false;
-  $polypad.on('move-selection', () => {
-    const allPositioned = [...$polypad.tiles.values()].every((tile, index) =>
+  $polypad1.on('move-selection', () => {
+    const allPositioned = [...$polypad1.tiles.values()].every((tile, index) =>
       tile.posn.x == finalPositions[index][0] && tile.posn.y + 2 == finalPositions[index][1]
     );
     if (allPositioned && !done) {
@@ -410,10 +411,11 @@ export function triangleTangram($step: Step) {
     }
   });
 
-  const nextPoints = [[7, 13], [10, 15], [7, 15], [2, 15]].map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y)));
+  const nextRelative = [[5, 3], [8, 5], [5, 5], [0, 5]].map(p => p.map(tangramScale));
+  const nextPoints = nextRelative.map(([x, y]: number[]) => new Point(x + tangramScale(2), y + tangramScale(12)));
 
   const $rearrangeSlider = $step.$('x-slider.rearrange-triangle') as Slider;
-  const tiles = [...$polypad.tiles];
+  const tiles = [...$polypad1.tiles];
   const $tiles = tiles.map(t => t.$el);
   let rearranged = false;
   let slid = 0;
