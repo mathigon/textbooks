@@ -208,7 +208,7 @@ export function sortPolygons($step: Step) {
 
 export function simpleTangram($step: Step) {
   const $polypad = $step.$('x-polypad') as Polypad;
-  $polypad.$svg.setAttr('viewBox', '0 0 420 420');
+  $polypad.$svg.setAttr('viewBox', '0 0 425 425');
   $polypad.canDelete = $polypad.canCopy = false;
 
   /*
@@ -346,65 +346,49 @@ export function polygonNames($step: Step) {
 
 const polys = [
   // Large red triangle
-  [[0, 0], [8, 0], [8, 3]],
+  [[0, 0], [8, 0], [8, -3]],
   // Orange tetronimo
-  [[0, 0], [5, 0], [5, 2], [3, 2], [3, 1], [0, 1]],
+  [[0, 0], [5, 0], [5, -2], [3, -2], [3, -1], [0, -1]],
   // Green tetronimo
-  [[0, 0], [3, 0], [3, 1], [5, 1], [5, 2], [0, 2]],
+  [[0, 0], [3, 0], [3, -1], [5, -1], [5, -2], [0, -2]],
   // Small blue triangle
-  [[0, 0], [5, 0], [5, 2]]
-].map(tangramPrep);
+  [[0, 0], [5, 0], [5, -2]]
+].map(poly => poly.map(p => p.map(tangramScale)));
 
 const finalPositions = [
   // Large red triangle
-  [6, 15],
+  [2, 15],
   // Orange tetronimo
-  [12, 15],
+  [10, 15],
   // Green tetronimo
-  [12, 14],
+  [10, 14],
   // Small blue triangle
-  [12, 12]
+  [10, 12]
 ].map(p => p.map(tangramScale));
-
-function tangramPrep(poly: number[][]) {
-  let width = 0;
-  poly.forEach(([x, _]: number[]) => {
-    if (x > width) {
-      width = x;
-    }
-  });
-
-  const halfway = Math.floor(width / 2);
-
-  const shiftedPoly = poly.map(([x, y]: number[]) => [(-x) + halfway, y]);
-
-  return shiftedPoly.map(sp => sp.map(tangramScale));
-
-}
 
 const polyColours = ['red', 'orange', 'green', 'blue'];
 
 export function triangleTangram($step: Step) {
   const $polypad = $step.$('x-polypad') as Polypad;
-  $polypad.$svg.setAttr('viewBox', '0 0 420 420');
+  $polypad.$svg.setAttr('viewBox', '0 0 425 425');
   $polypad.canDelete = $polypad.canCopy = false;
   $polypad.setGrid('square-grid');
 
   const $bg = $step.$('svg.solution-outline')! as SVGParentView;
-  $bg.setAttr('viewBox', '0 0 420 420');
+  $bg.setAttr('viewBox', '0 0 425 425');
 
   polys.forEach((polyVals, i) => {
     const $bgPath = $N('path', {}, $bg) as SVGView;
-    const points = polyVals.map(([x, y]: number[]) => new Point(x, y));
+    const points = polyVals.map(([x, y]: number[]) => new Point(x, y - 2));
     const [x, y] = finalPositions[i];
-    const poly = (new Polygon(...points)).rotate(Math.PI).shift(x, y);
+    const poly = (new Polygon(...points)).shift(x, y);
     $bgPath.draw(poly);
   });
 
   // $bgPath.draw(new Polygon(...sol));
 
   const origins =
-    [[5, 4], [6, 8], [13, 4], [13, 8]]
+    [[1, 4], [4, 8], [11, 4], [11, 8]]
         .map(([x, y]: number[]) =>
           [tangramScale(x), tangramScale(y)]);
 
@@ -413,13 +397,12 @@ export function triangleTangram($step: Step) {
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(polyColours[index]);
     tile.setPosition(new Point(origins[index][0], origins[index][1]));
-    tile.setRotation(180);
   });
 
   let done = false;
   $polypad.on('move-selection', () => {
     const allPositioned = [...$polypad.tiles.values()].every((tile, index) =>
-      tile.posn.x == finalPositions[index][0] && tile.posn.y == finalPositions[index][1]
+      tile.posn.x == finalPositions[index][0] && tile.posn.y + 2 == finalPositions[index][1]
     );
     if (allPositioned && !done) {
       done = true;
@@ -429,7 +412,7 @@ export function triangleTangram($step: Step) {
     }
   });
 
-  const nextPoints = [[275, 326], [300, 376], [225, 376], [100, 376]].map(([x, y]: number[]) => new Point(x, y));
+  const nextPoints = [[7, 13], [10, 15], [7, 15], [2, 15]].map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y)));
 
   const $rearrangeSlider = $step.$('x-slider.rearrange-triangle') as Slider;
   const tiles = [...$polypad.tiles];
@@ -439,10 +422,10 @@ export function triangleTangram($step: Step) {
   $rearrangeSlider.on('move', n => {
     const progress = n / 1000;
 
-    $tiles[0].setTransform(Point.interpolate(tiles[0].posn, nextPoints[0], progress), Math.PI);
-    $tiles[1].setTransform(Point.interpolate(tiles[1].posn, nextPoints[1], progress), Math.PI);
-    $tiles[2].setTransform(Point.interpolate(tiles[2].posn, nextPoints[2], progress), Math.PI);
-    $tiles[3].setTransform(Point.interpolate(tiles[3].posn, nextPoints[3], progress), Math.PI);
+    $tiles[0].setTransform(Point.interpolate(tiles[0].posn, nextPoints[0], progress));
+    $tiles[1].setTransform(Point.interpolate(tiles[1].posn, nextPoints[1], progress));
+    $tiles[2].setTransform(Point.interpolate(tiles[2].posn, nextPoints[2], progress));
+    $tiles[3].setTransform(Point.interpolate(tiles[3].posn, nextPoints[3], progress));
 
     if (progress == 1 && !rearranged) {
       rearranged = true;
