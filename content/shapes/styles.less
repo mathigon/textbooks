@@ -14,27 +14,32 @@
   border-radius: 6px 6px 0 0;
   background: @grey-background;
 
-
   .simple-tangram-bg { 
-    width: 100%;
     background-image: url('images/square.svg');   
     background: url('images/square.svg') center no-repeat;
     background-size: contain;
-    position: absolute;
     opacity: 0.2;
   }
-
-  .simple-tangram-bg, x-polypad { height: 450px; }
 
 }
 
 .triangle-tangram {
 
-  svg.solution-outline {
+  .solution-outline {
     stroke: black;
     stroke-width: 1px;
     fill: none;
+  }
+
+}
+
+.tangram, .triangle-tangram {
+
+  .simple-tangram-bg, .solution-outline {
+    width: 100%;
     position: absolute;
   }
+
+  .simple-tangram-bg, .solution-outline, x-polypad { height: 450px; }
 
 }
