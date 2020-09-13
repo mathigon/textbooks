@@ -100,7 +100,6 @@ export async function voronoi($step: VoronoiStep) {
 
     if ($step.model.dynPoints.length == 5 && !$step.model.showButton) {
       $step.score('five-points');
-      // TODO show button
       $step.model.showButton = true;
     }
 
