@@ -385,8 +385,6 @@ export function triangleTangram($step: Step) {
     $bgPath.draw(poly);
   });
 
-  // $bgPath.draw(new Polygon(...sol));
-
   const origins =
     [[1, 4], [4, 8], [11, 4], [11, 8]]
         .map(([x, y]: number[]) =>
