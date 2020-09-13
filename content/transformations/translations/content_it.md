@@ -1017,7 +1017,7 @@ Invece, puoi provare a disegnare i tuoi motivi ripetuti per ciascuno dei 17 grup
 > goals: draw-1 draw-2 switch
 
     include ./components/wallpaper
-    x-wallpaper
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin
