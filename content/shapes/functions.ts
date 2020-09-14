@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Point, Polygon, Segment} from '@mathigon/fermat';
+import {Point, Polygon, Rectangle, Segment} from '@mathigon/fermat';
 import {$N, animate, CanvasView, loadScript, SVGParentView, SVGView} from '@mathigon/boost';
 import {Geopad, GeoPoint, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
@@ -40,17 +40,17 @@ export async function voronoi($step: VoronoiStep) {
 
   const colors = ['3c91e6', 'ff6b6b', 'ffe45e', '4ecdc4', '81366f', 'c93818', 'e2c312', '6bab90', 'e4533a'].map(c => '#' + c);
 
-  const $canvas = $step.$('canvas.voronoi') as CanvasView;
-  const $geopad = $step.$('x-geopad') as Geopad;
+  const $geopad1 = $step.$('x-geopad.voronoi-1') as Geopad;
+  const $canvas1 = $geopad1.$('canvas.voronoi') as CanvasView;
   const $voronoiButton = $step.$('button.show-voronoi')!;
-  const bounds = [0, 0, $canvas.canvasWidth, $canvas.canvasHeight];
+  const bounds = [0, 0, $canvas1.canvasWidth, $canvas1.canvasHeight];
 
   $step.model.dynPoints = [];
   $step.model.vorOpacity = 0;
   $step.model.cells = [];
 
   cafeLocationPoints.forEach(locationPoint => {
-    $geopad.drawPoint(locationPoint, {classes: 'red', interactive: false});
+    $geopad1.drawPoint(locationPoint, {classes: 'red', interactive: false});
   });
 
   $step.model.cells = getVoronoiPolys(bounds).map(poly => {
@@ -61,15 +61,15 @@ export async function voronoi($step: VoronoiStep) {
     showVor($step);
   });
 
-  $geopad.$svg.on('mousemove', e => {
+  $geopad1.$svg.on('mousemove', e => {
     $step.model.cells = $step.model.cells.map(cell => {
       const over = cell.poly.contains(new Point(e.offsetX, e.offsetY));
       return {...cell, over};
     });
   });
 
-  $geopad.switchTool('point');
-  $geopad.on('add:point', ({point}: {point: GeoPoint}) => {
+  $geopad1.switchTool('point');
+  $geopad1.on('add:point', ({point}: {point: GeoPoint}) => {
 
     $step.model.dynPoints.push({gPoint: point, dlOpacity: 1});
     $step.model.dynPoints = $step.model.dynPoints.slice();
@@ -78,7 +78,7 @@ export async function voronoi($step: VoronoiStep) {
 
   });
 
-  $geopad.on('move:point', ({gPoint}: {gPoint: GeoPoint}) => {
+  $geopad1.on('move:point', ({gPoint}: {gPoint: GeoPoint}) => {
 
     $step.model.dynPoints =
       $step.model.dynPoints.map(dp => {
@@ -108,14 +108,12 @@ export async function voronoi($step: VoronoiStep) {
       $step.model.eightPoints = true;
     }
 
-    $canvas.clear();
-
-    const cells = $step.model.cells;
+    $canvas1.clear();
 
     if ($step.model.vorOpacity != 0) {
-      cells.forEach((cell, i) => {
+      $step.model.cells.forEach((cell, i) => {
         const opacity = cell.over ? $step.model.vorOpacity / 2 : $step.model.vorOpacity / 3;
-        $canvas.draw(
+        $canvas1.draw(
             cell.poly,
             {
               fill: colors[i % 9],
@@ -146,10 +144,33 @@ export async function voronoi($step: VoronoiStep) {
         const strokeWidth = i == shortest.ind ? 2 : 1;
         const opacity = i == shortest.ind ? 1 : dlOpacity;
         if (opacity != 0) {
-          $canvas.draw(edge, {stroke, strokeWidth, opacity});
+          $canvas1.draw(edge, {stroke, strokeWidth, opacity});
         }
       });
     });
+  });
+
+
+  const $geopad2 = $step.$('x-geopad.voronoi-2') as Geopad;
+
+  $step.model.cells.forEach((cell, i) => {
+    const options = i == 12 ? {class: 'triangle-cell'} : {};
+    const $cell = $N('path', options, $geopad2.$svg) as SVGView;
+    $cell.css({fill: colors[i % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.draw(cell.poly);
+  });
+
+  const triEdges = $step.model.cells[12].poly.edges.slice(0, 3);
+  triEdges.forEach(edge => {
+    const $edgeBox = $N('path', {}, $geopad2.$svg) as SVGView;
+    $edgeBox.css({fill: 'black'});
+    const edgeBox = new Rectangle(edge.p1, 4, edge.length);
+    const shiftBy = edge.perpendicular(edge.p1).at(-2).subtract(edge.p1);
+    const finalBox = edgeBox.rotate(edge.angle - (Math.PI / 2), edge.p1).translate(shiftBy);
+    console.log(finalBox);
+    $edgeBox.draw(finalBox);
+    $edgeBox.on('mouseenter', () => $edgeBox.css({fill: 'white'}));
+    $edgeBox.on('mouseleave', () => $edgeBox.css({fill: 'black'}));
   });
 
 }

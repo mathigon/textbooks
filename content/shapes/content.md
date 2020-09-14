@@ -27,7 +27,7 @@ TODO
 
 School districts  need an accurate estimate of the number of students that may attend their schools. Below is a map of primary schools in London. In general, students attend the school closest to where they live. Click anywhere on the map to see the distance between that point and all the schools on the map.
 
-    figure: x-geopad(width=600 height=400)
+    figure: x-geopad(width=600 height=400).voronoi-1
       img(src="images/map-temp.png" width=600 height=400)
       canvas.voronoi(width=600 height=400)
       svg
@@ -42,14 +42,16 @@ School districts  need an accurate estimate of the number of students that may a
 
 {.reveal(when="eight-points")} In our example, using a Voronoi diagram can help schools make estimates of how many students will attend. In London, about 1500 people live in each square kilometer. To use this statistic, we first need to first know the [[area | perimeter]] of each region in the diagram.
 
-{.reveal(when="blank-0")} Some of these regions are shapes we’ve learned about in previous chapters. [This shape](->#triangle-cell) is a triangle and we can find the area by doing [[1/2]] x base x height.
+::: .reveal(when="blank-0")
 
-::: .reveal(when="blank-1")
-Click on the side of the triangle you want to use as the base.
+    figure: x-geopad(width=600 height=400).voronoi-2
+      svg
 
-    // TODO: show triangle from prev voronoi diagram
+Some of these regions are shapes we’ve learned about in previous chapters. [This shape](->.triangle-cell) is a triangle and we can find the area by doing [[1/2]] x base x height.
 
 :::
+
+{.reveal(when="blank-1")} Click on the side of the triangle you want to use as the base.
 
 {.reveal(when="side-selected")} Now draw in the height that corresponds with the base you selected.
 
@@ -119,7 +121,9 @@ Just by looking at this region, it seems that [[more | less]] students will atte
 
 ::: .reveal(when="blank-1")
 
-    // TODO: Voronoi region area exercise
+    // TODO: Voronoi region area animation
+
+TODO: Voronoi region area exercise table
 
 :::
 
