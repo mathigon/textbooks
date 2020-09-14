@@ -301,6 +301,7 @@ Press the buttons to...
 ## Matrix Arithmetic
 
 ### Matrix Multiplication
+> id: multiplication
 
 We learned in the last chapter that matrices can represent linear transformations. However, there are many other things that matrices can represent! Also, matrices do not always have to be [square matrices](gloss:square-matrix), but can have many different dimensional values. Let's explore this with a hypothetical scenario.
 
@@ -319,11 +320,15 @@ Each friend has preferences for how important these things are, which we can qua
 
 What we have built here is a 4 by 2 matrix. We have four rows to represent the four [[friends|features|restaurants]], and two columns to represent the two [[features|friends|restaurants]].
 
+---
+
 The friends have found three restaurants within walking distance, and they have pulled up the websites for each. Lucky for them, each restaurants' website has listed the quality of the features that the friends have quantified: availability of outdoor seating, and vegetarian options.
 
     figure: img(src="images/matrix-1-fea-res.png")
 
 This is a 2 by 3 matrix. There are two rows to represent the two [[features|restaurants]] and three rows, one to represent each [[restaurant|feature]].
+
+---
 
 {.fixme} Begin side-by-side column display.
 
@@ -368,6 +373,8 @@ What we have just done is [matrix multiplication](gloss:matrix-multiplication).
 
 #### Formal definition of Matrix Multiplication
 
+> id: formal-definition
+
 The formal defintion for matrix multiplication is as follows:
 
 {.text-center} Given matrix `A` with dimensions `[r_"A", c_"A"]`
@@ -394,6 +401,8 @@ We are now attempting to multiply a `4x3` matrix by a `2x3` matrix, but we don't
 
 
 #### Matrix Factorisation
+> id: matrix-factorisation
+
 This type of matrix is used in all sorts of online recommender systems. Movies can be categorized by their genres like Comedy, Action, Romance, or Horror. Songs can be categorized into genres with ever-increasing specificity like Rock, Classical, Pop, Rap, Electro-Funk, Indie Folk, or Norwegian Black Metal. When you watch a movie on Netflix, or listen to a song on Spotify, there's likely a very large matrix somewhere, remembering your taste!
 
 However, this process is slightly different from what we did above. The company running the streaming service *doesn't know* what its users' tastes are. It does know what movies they have watched, and whether they liked them or not. From this information they attempt to figure out each user's possible genre preferences using a process called __matrix factorisation__. Much like in [integer factorisation](gloss:factorisation), where an integer can be written as a product of prime numbers, matrix factorisation is about working backwards from an incomplete product matrix to find possible preference matrices. This algorithm is much more complex than integer factorisation, so we need complex machine leaerning algorithms to perform it.
@@ -406,8 +415,8 @@ However, this process is slightly different from what we did above. The company 
 
 ### Multiplying Linear Transformations
 
-> section: multiply
-> id: multiply
+> section: multiply-transformations
+> id: multiply-transformations
 
     mixin ij(i, j, label)
       .cube(i=i j=j)
@@ -438,6 +447,7 @@ The resulting matrix is this:
 This matrix is the linear transformation for a [[rotation of 270º|identity matrix|rotation of 90º]].
 
 ---
+
 That's right,
 
 `R_"90"` x `R_"180"` = `R_"270"`
@@ -452,7 +462,7 @@ This works for all rotation values:
 [Continue](btn:next)
 
 ---
-> id: calculator
+> id: transforms-calculator
 > title: Transformation Calculator
 > goals: calculate
 
@@ -497,8 +507,9 @@ What about other types of transformations?
 ---
 
 ### Matrix Addition
-> section: arithmetic
+> section: matrix-addition
 > sectionStatus: dev
+> id: matrix-addition
 
 Matrices can also be added. Matrix addition does not happen very often, but it is very simple to learn.
 
@@ -568,6 +579,9 @@ This code could be a lot simpler! And why is this not going below the tables?
 ---
 
 ### Scalar Multiplication
+> section: matrix-multiplication
+> id: scalar-multiplication
+> sectionStatus: dev
 
 Another operation we can perform with a matrix is __scalar multiplication__. A __scalar__ is what we call a real number in matrix and vector arithmetic.
 
@@ -620,6 +634,7 @@ Note that while it is possible to add two matrices, and to multiply a matrix by 
 ---
 
 ### Properties of Matrix Arithmetic
+> id: arith-properties
 
 Recall operators like addition and multiplication, and how it's useful to think about their properties. Commutative, distributive, and associative properties.
 

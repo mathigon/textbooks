@@ -230,7 +230,7 @@ function parseNumberArray(str: string): number[]|undefined {
   return result.slice(1, 3).map(n => Number.parseFloat(n)); // pick 1 and 2
 }
 
-export function calculator($step: Step) {
+export function transformsCalculator($step: Step) {
   const $cubes = $step.$$('.cube') as ElementView[]; // they're squares, actually
 
   // g[0] x g[1] = g[2]
