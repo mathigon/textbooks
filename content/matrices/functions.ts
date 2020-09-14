@@ -185,35 +185,31 @@ export function playWithMe($step: Step) {
   // paths
   const _fabric = $step.$$('.fabric');
 
+  const ANIMATE = 1000;
+
   // identity
   buttons[0].on('click', () => {
-    $geopad.animatePoint('ipoint', new Point(1, 0), 1000);
-    $geopad.animatePoint('jpoint', new Point(0, 1), 1000);
+    animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[1, 0], [0, 1]], ANIMATE);
   });
 
   // shear
   buttons[1].on('click', () => {
-    $geopad.animatePoint('ipoint', new Point(1, 0), 1000);
-    $geopad.animatePoint('jpoint', new Point(1, 1), 1000);
+    animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[1, 0], [1, 1]], ANIMATE);
   });
 
   // scale
   buttons[2].on('click', () => {
-    $geopad.animatePoint('ipoint', new Point(2, 0), 1000);
-    $geopad.animatePoint('jpoint', new Point(0, 2), 1000);
+    animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[2, 0], [0, 2]], ANIMATE);
   });
 
-  // rotate
+  // rotate 90
   buttons[3].on('click', () => {
-    $geopad.animatePoint('ipoint', new Point(0, 1), 1000);
-    $geopad.animatePoint('jpoint', new Point(-1, 0), 1000);
+    animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[0, 1], [-1, 0]], ANIMATE);
   });
 
   // determinant = 0
   buttons[4].on('click', () => {
-    $geopad.animatePoint('ipoint', new Point(1, 1), 1000);
-    $geopad.animatePoint('jpoint', new Point(-1, -1), 1000);
-
+    animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[1, 1], [-1, -1]], ANIMATE);
   });
 }
 
@@ -228,6 +224,19 @@ function parseNumberArray(str: string): number[]|undefined {
   const result = regex.exec(str)!;
   console.log(result);
   return result.slice(1, 3).map(n => Number.parseFloat(n)); // pick 1 and 2
+}
+
+/**
+ * Animates a Linear Transformation on a GeoPad
+ *
+ * @param geo Geopad
+ * @param iv name of i-unit-vector
+ * @param jv name of j-unit-vector
+ * @param m transformation matrix. m[0] is new i-vector and m[1] is new j-vector
+ */
+function animateTransformationOnGeo(geo: Geopad, iv: string, jv:string, m: number[][], time: number) {
+  geo.animatePoint(iv, new Point(m[0][0], m[0][1]), time);
+  geo.animatePoint(jv, new Point(m[1][0], m[1][1]), time);
 }
 
 export function transformsCalculator($step: Step) {
@@ -266,19 +275,6 @@ export function transformsCalculator($step: Step) {
   const WAIT = 200;
   const ANIMATE = 500;
 
-  /**
-   * Animates a Linear Transformation on a GeoPad
-   *
-   * @param geo Geopad
-   * @param iv name of i-unit-vector
-   * @param jv name of j-unit-vector
-   * @param m transformation matrix
-   */
-  function animateTransformationOnGeo(geo: Geopad, iv: string, jv:string, m: number[][]) {
-    geo.animatePoint(iv, new Point(m[0][0], m[0][1]), ANIMATE);
-    geo.animatePoint(jv, new Point(m[1][0], m[1][1]), ANIMATE);
-  }
-
   for (const [_i, $c] of $cubes.entries()) {
     $c.on('click', () => {
 
@@ -288,7 +284,7 @@ export function transformsCalculator($step: Step) {
         a.push(parseNumberArray($c.attr('j'))!);
         drawUnitVectorsToGeo($geopads[0], I, 'a'); // initialize as Identity
         // then animate to transformation
-        setTimeout(() => animateTransformationOnGeo($geopads[0], 'ia', 'ja', a!), WAIT);
+        setTimeout(() => animateTransformationOnGeo($geopads[0], 'ia', 'ja', a!, ANIMATE), WAIT);
 
       } else if (b === undefined) {
         b = [];
@@ -296,7 +292,7 @@ export function transformsCalculator($step: Step) {
         b.push(parseNumberArray($c.attr('j'))!);
         drawUnitVectorsToGeo($geopads[1], I, 'b'); // initialize as Identity
         // then animate to transformation
-        setTimeout(() => animateTransformationOnGeo($geopads[1], 'ib', 'jb', b!), WAIT);
+        setTimeout(() => animateTransformationOnGeo($geopads[1], 'ib', 'jb', b!, ANIMATE), WAIT);
       }
     });
   }
@@ -321,8 +317,8 @@ export function transformsCalculator($step: Step) {
 
       // show it animating from I to A to C.
       setTimeout(() => {
-        animateTransformationOnGeo($geopads[2], 'ic', 'jc', a!);
-        setTimeout(() => animateTransformationOnGeo($geopads[2], 'ic', 'jc', c!), ANIMATE);
+        animateTransformationOnGeo($geopads[2], 'ic', 'jc', a!, ANIMATE);
+        setTimeout(() => animateTransformationOnGeo($geopads[2], 'ic', 'jc', c!, ANIMATE), ANIMATE);
       }, WAIT);
     }
   });
@@ -346,36 +342,31 @@ export function determinants($step:Step) {
   // paths
   const _fabric = $step.$$('.fabric');
 
+  const ANIMATE = 1000;
+
   // identity
   buttons[0].on('click', () => {
-    console.log('button');
-    $geopad.animatePoint('ipoint', new Point(1, 0), 1000);
-    $geopad.animatePoint('jpoint', new Point(0, 1), 1000);
+    animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[1, 0], [0, 1]], ANIMATE);
   });
 
   // shear
   buttons[1].on('click', () => {
-    $geopad.animatePoint('ipoint', new Point(1, 0), 1000);
-    $geopad.animatePoint('jpoint', new Point(1, 1), 1000);
+    animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[1, 0], [1, 1]], ANIMATE);
   });
 
   // scale
   buttons[2].on('click', () => {
-    $geopad.animatePoint('ipoint', new Point(2, 0), 1000);
-    $geopad.animatePoint('jpoint', new Point(0, 2), 1000);
+    animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[2, 0], [0, 2]], ANIMATE);
   });
 
-  // rotate
+  // rotate 90
   buttons[3].on('click', () => {
-    $geopad.animatePoint('ipoint', new Point(0, 1), 1000);
-    $geopad.animatePoint('jpoint', new Point(-1, 0), 1000);
+    animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[0, 1], [-1, 0]], ANIMATE);
   });
 
   // determinant = 0
   buttons[4].on('click', () => {
-    $geopad.animatePoint('ipoint', new Point(1, 1), 1000);
-    $geopad.animatePoint('jpoint', new Point(-1, -1), 1000);
-
+    animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[1, 1], [-1, -1]], ANIMATE);
   });
 }
 

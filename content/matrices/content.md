@@ -711,7 +711,7 @@ Is matrix multiplication [distributive](gloss:distributive) over matrix addition
 
 > section: determinants
 > sectionStatus: dev
-> id: determinants-intro
+> id: det-intro
 
 {.todo} COMING SOON - When we look at matrices as linear transformations, we can notice some things about how each transformation changes space.
 
