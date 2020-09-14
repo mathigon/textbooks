@@ -711,32 +711,9 @@ Is matrix multiplication [distributive](gloss:distributive) over matrix addition
 
 > section: determinants
 > sectionStatus: dev
-> id: intro
+> id: determinants-intro
 
-{.todo} COMING SOON
-
-The determinant is the change in area.
-{.fixme} How can I draw the area??? I need a polygon
-Scale changes it by a factor of N.
-Shear doesn't change it.
-
-
-    x-geopad(width=300): svg
-      circle.move(name="a" cx=82 cy=160 target="hypot")
-      circle.move(name="b" cx=218 cy=160 target="hypot")
-      circle.move(name="c" cx=120 cy=100 project="arc(line(a,b).midpoint,a,pi).contract(0.2)")
-
-      path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-class="white")
-      path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-class="white")
-      path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-class="white")
-
-      path.dark(x="segment(b,c)" label="a")
-      path.dark(x="segment(a,c)" label="b")
-      path.dark(x="segment(a,b)" label="c" target="hypot")
-      path.dark.thin(x="angle(b,c,a)")
-
-
-^^^^^ Scrap this for parts ^^^^^^ See we can turn a "rotate" into a more general "applyMatrix" or "transform"
+{.todo} COMING SOON - When we look at matrices as linear transformations, we can notice some things about how each transformation changes space.
 
 ---
 
@@ -777,6 +754,19 @@ Choose one of these buttons.
     .button SCALE
     .button ROTATE
     .button LINE
+
+---
+
+> id: examples
+
+{.todo} Demonstrate how basic transformations effect the determinant
+{.todo} Demonstrate possible values: less than 1, greater than 1, negative, zero
+
+---
+
+> id: zero-det
+
+{.todo} Matrices can have a determinant of zero. What does this mean?
 
 ---
 
@@ -831,6 +821,11 @@ Let's see why this is true geometrically.
 
 {.fixme} Could do an animation that shows how the triangles fit together, like in Pythagoras.
 
+---
+
+> id: nonsquare
+
+{.todo} Determinants only exist for square matrices.
 
 ---
 
