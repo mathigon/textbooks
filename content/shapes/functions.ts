@@ -15,7 +15,7 @@ import {VoronoiStep} from './types';
 
 declare const d3: any;
 
-const locationPoints = [
+const cafeLocationPoints = [
   new Point(34, 200),
   new Point(90, 171),
   new Point(99, 384),
@@ -49,7 +49,7 @@ export async function voronoi($step: VoronoiStep) {
   $step.model.vorOpacity = 0;
   $step.model.cells = [];
 
-  locationPoints.forEach(locationPoint => {
+  cafeLocationPoints.forEach(locationPoint => {
     $geopad.drawPoint(locationPoint, {classes: 'red', interactive: false});
   });
 
@@ -133,7 +133,7 @@ export async function voronoi($step: VoronoiStep) {
 
       let shortest = {len: Number.POSITIVE_INFINITY, ind: 0};
 
-      locationPoints.forEach((locationPoint, i) => {
+      cafeLocationPoints.forEach((locationPoint, i) => {
         const newEdge = new Segment(locationPoint, gPoint.value!);
         if (newEdge.length < shortest.len) {
           shortest = {len: newEdge.length, ind: i};
@@ -155,7 +155,7 @@ export async function voronoi($step: VoronoiStep) {
 }
 
 function getVoronoiPolys(bounds: number[]) {
-  const dt = d3.Delaunay.from(locationPoints, getX, getY);
+  const dt = d3.Delaunay.from(cafeLocationPoints, getX, getY);
   const vor = dt.voronoi(bounds);
 
   const cellsRaw: number[][][] = Array.from(vor.cellPolygons());
@@ -343,32 +343,33 @@ export function polygonNames($step: Step) {
 
 }
 
-const polys = [
-  // Large red triangle
-  [[0, 0], [8, 0], [8, -3]],
-  // Orange tetronimo
-  [[0, 0], [5, 0], [5, -2], [3, -2], [3, -1], [0, -1]],
-  // Green tetronimo
-  [[0, 0], [3, 0], [3, -1], [5, -1], [5, -2], [0, -2]],
-  // Small blue triangle
-  [[0, 0], [5, 0], [5, -2]]
-].map(poly => poly.map(p => p.map(tangramScale)));
-
-const finalRel = [
-  // Large red triangle
-  [0, 5],
-  // Orange tetronimo
-  [8, 5],
-  // Green tetronimo
-  [8, 4],
-  // Small blue triangle
-  [8, 2]
-].map(p => p.map(tangramScale));
-const finalPositions = finalRel.map(([x, y]: number[]) => [x + tangramScale(2), y + tangramScale(12)]);
-
-const polyColours = ['red', 'orange', 'green', 'blue'];
-
 export function triangleTangram($step: Step) {
+
+  const polys = [
+    // Large red triangle
+    [[0, 0], [8, 0], [8, -3]],
+    // Orange tetronimo
+    [[0, 0], [5, 0], [5, -2], [3, -2], [3, -1], [0, -1]],
+    // Green tetronimo
+    [[0, 0], [3, 0], [3, -1], [5, -1], [5, -2], [0, -2]],
+    // Small blue triangle
+    [[0, 0], [5, 0], [5, -2]]
+  ].map(poly => poly.map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y))));
+
+  const finalRel = [
+    // Large red triangle
+    [0, 5],
+    // Orange tetronimo
+    [8, 5],
+    // Green tetronimo
+    [8, 4],
+    // Small blue triangle
+    [8, 2]
+  ].map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y)));
+  const finalPositions = finalRel.map(p => p.shift(tangramScale(2), tangramScale(12)));
+
+  const polyColours = ['red', 'orange', 'green', 'blue'];
+
   const $polypad1 = $step.$('.triangle-tangram > x-polypad') as Polypad;
   $polypad1.$svg.setAttr('viewBox', '0 0 425 450');
   $polypad1.canDelete = $polypad1.canCopy = false;
@@ -379,28 +380,26 @@ export function triangleTangram($step: Step) {
 
   polys.forEach((polyVals, i) => {
     const $bgPath = $N('path', {}, $bg) as SVGView;
-    const points = polyVals.map(([x, y]: number[]) => new Point(x, y - 2));
-    const [x, y] = finalPositions[i];
-    const poly = (new Polygon(...points)).shift(x, y);
+    const poly = (new Polygon(...polyVals)).translate(finalPositions[i]);
     $bgPath.draw(poly);
   });
 
   const origins =
     [[1, 4], [4, 8], [11, 4], [11, 8]]
         .map(([x, y]: number[]) =>
-          [tangramScale(x), tangramScale(y)]);
+          new Point(tangramScale(x), tangramScale(y)));
 
   polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad1.newTile('polygon', polyStr);
     tile.setColour(polyColours[index]);
-    tile.setPosition(new Point(origins[index][0], origins[index][1]));
+    tile.setPosition(origins[index]);
   });
 
   let done = false;
   $polypad1.on('move-selection', () => {
     const allPositioned = [...$polypad1.tiles.values()].every((tile, index) =>
-      tile.posn.x == finalPositions[index][0] && tile.posn.y + 2 == finalPositions[index][1]
+      tile.posn.equals(finalPositions[index])
     );
     if (allPositioned && !done) {
       done = true;
@@ -410,8 +409,8 @@ export function triangleTangram($step: Step) {
     }
   });
 
-  const nextRelative = [[5, 3], [8, 5], [5, 5], [0, 5]].map(p => p.map(tangramScale));
-  const nextPoints = nextRelative.map(([x, y]: number[]) => new Point(x + tangramScale(2), y + tangramScale(12)));
+  const nextRelative = [[5, 3], [8, 5], [5, 5], [0, 5]].map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y)));
+  const nextPoints = nextRelative.map(p => p.shift(tangramScale(2), tangramScale(12)));
 
   const $rearrangeSlider = $step.$('x-slider.rearrange-triangle') as Slider;
   const tiles = [...$polypad1.tiles];
@@ -449,7 +448,7 @@ export function triangleTangram($step: Step) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad2.newTile('polygon', polyStr);
     tile.setColour(polyColours[index]);
-    tile.setPosition(new Point(origins[index][0], origins[index][1]));
+    tile.setPosition(origins[index]);
   });
 
   const $zoomPolypad1 = $step.$('.zoom-1 > x-polypad') as Polypad;
@@ -463,10 +462,11 @@ export function triangleTangram($step: Step) {
     const polyStr = getTangramPolystr(poly);
     const tile = $zoomPolypad1.newTile('polygon', polyStr);
     tile.setColour(polyColours[index]);
-    tile.setPosition(new Point(finalRel[index][0] + tangramScale(1), finalRel[index][1] + tangramScale(2)));
+    tile.setPosition(finalRel[index].shift(tangramScale(1), tangramScale(2)));
   });
 
-  const outlineStr = getTangramPolystr([[0, 0], [13, 0], [13, -5]].map(p => p.map(tangramScale)));
+  const outlinePoints = [[0, 0], [13, 0], [13, -5]].map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y)));
+  const outlineStr = getTangramPolystr(outlinePoints);
   const outlineTile1 = $zoomPolypad1.newTile('polygon', outlineStr);
   outlineTile1.setPosition(new Point(tangramScale(1), tangramScale(7)));
   const $outline1 = outlineTile1.$el.$('g path.polygon-tile')!;
@@ -501,7 +501,7 @@ export function triangleTangram($step: Step) {
     const polyStr = getTangramPolystr(poly);
     const tile = $triangleRefPolypad.newTile('polygon', polyStr);
     tile.setColour(polyColours[index]);
-    tile.setPosition(new Point(finalRel[index][0] + tangramScale(1), finalRel[index][1] + tangramScale(2)));
+    tile.setPosition(finalRel[index].shift(tangramScale(1), tangramScale(2)));
     tile.$el.addClass('paradox-poly');
   });
 
@@ -516,7 +516,7 @@ export function triangleTangram($step: Step) {
     const polyStr = getTangramPolystr(poly);
     const tile = $zoomPolypad2.newTile('polygon', polyStr);
     tile.setColour(polyColours[index]);
-    tile.setPosition(new Point(nextRelative[index][0] + tangramScale(1), nextRelative[index][1] + tangramScale(2)));
+    tile.setPosition(nextRelative[index].shift(tangramScale(1), tangramScale(2)));
   });
   const outlineTile2 = $zoomPolypad2.newTile('polygon', outlineStr);
   outlineTile2.setPosition(new Point(tangramScale(1), tangramScale(7)));
@@ -551,11 +551,11 @@ export function triangleTangram($step: Step) {
 
     const tile1 = $comparisonPolypad.newTile('polygon', polyStr);
     tile1.setColour(polyColours[index]);
-    tile1.setPosition(new Point(finalRel[index][0] + tangramScale(1), finalRel[index][1] + tangramScale(1)));
+    tile1.setPosition(finalRel[index].shift(tangramScale(1), tangramScale(1)));
 
     const tile2 = $comparisonPolypad.newTile('polygon', polyStr);
     tile2.setColour(polyColours[index]);
-    tile2.setPosition(new Point(nextRelative[index][0] + tangramScale(1), nextRelative[index][1] + tangramScale(7)));
+    tile2.setPosition(nextRelative[index].shift(tangramScale(1), tangramScale(7)));
   });
   const outlineTile3 = $comparisonPolypad.newTile('polygon', outlineStr);
   outlineTile3.setPosition(new Point(tangramScale(1), tangramScale(18)));
@@ -564,6 +564,6 @@ export function triangleTangram($step: Step) {
 
 }
 
-function getTangramPolystr(polyGridPositions: number[][]) {
-  return polyGridPositions.map(p => p.join(' ')).join(',');
+function getTangramPolystr(polyGridPositions: Point[]) {
+  return polyGridPositions.map(p => p.x + ' ' + p.y).join(',');
 }
