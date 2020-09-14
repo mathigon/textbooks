@@ -370,7 +370,8 @@ Adding the extra square unit into this arrangement of the 4 pieces causes the tr
 
 So, we’ve made sense of this paradox. The area of the green triangle is 32.5 square units and the area of the 4 pieces is 32 square units. The pieces do NOT fit perfectly inside the triangle. When we tried just using the 4 pieces, we still had ½ of a square unit to fill in within the triangle. At first, we just didn’t notice the ½ of the square unit missing.
 
-TODO: Comparison diagram
+    figure: .paradox-comparison
+      x-polypad(rotate="no")
 
 In the second arrangement, we added in an additional square unit to make the 4 pieces fit inside the green triangle. Again, it seemed to fit, but it actually was ½ square unit too big. Our eyes just couldn’t perceive the extra ½ square unit. 
 
