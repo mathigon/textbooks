@@ -2,7 +2,7 @@
 
 > section: transformations
 > sectionStatus: dev
-> id: test
+> id: intro
 
 {.todo} IN PROGRESS
 
@@ -48,9 +48,14 @@ Here is a spaceship we can rotate by ${phi + 'º'}{phi|60|10,350,10} around the 
 
 ---
 
-> id: unit-j
+### Calculating the rotation of two points
 
-{.fixme} REVISE: put unit-i and unit-j side by side, so there's not so much emphasis on them.
+> id: two-points
+
+Let's try calculating the formula for two rotated points.
+
+::: tab
+#### (0,3)
 
 Now let's look at one point at a time how this might work.
 Let's rotate this point [A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,10} around the origin. Our rotated point is called [A'](target:ap).
@@ -68,7 +73,6 @@ Let's rotate this point [A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,10} aro
       path.red(x="segment(point(0,ap.y), point(ap.x, ap.y))" target="xp" label="x'")
       path.yellow(x="segment(point(0,0), point(0, ap.y))" target="yp" label="y'")
 
-
 :::
 
 What is a formula to get the new coordinates for A’? We can call our new x value [x'](target:xp), and our new y value [y'](target:yp). Both x' and y' will be dependent on the length of __A__, which is 3.
@@ -79,10 +83,8 @@ x' = 3 * [[-sinθ|sinθ|cosθ]]
 y' = 3 * [[cosθ|sinθ]]
 
 
-
----
-
-> id: unit-i
+::: tab
+#### (3,0)
 
 Let's look at another point.
 Rotate the point [B](target:b) (3,0) ${t1 + 'º'}{t1|60|10,90,10} around the origin.
@@ -110,7 +112,12 @@ x' = 3 * [[cosθ|sinθ]]
 
 y' = 3 * [[sinθ|cosθ]]
 
+:::
+
+
 ---
+
+> id: linear-combination
 
 Now that we have computed the formula for two points, can we say anthing about the general formula for rotation?
 
@@ -139,6 +146,10 @@ y'       x * sinTH + y * cosTH
 
 Notice that there are like terms in here: both are dependent on X and Y.
 
+---
+
+> id: matrices
+
 Mathematicians came up with a concept called the "matrix", to do this easier, and you'll see this is a very powerful construct.
 
 A matrix is like a spreadsheet.
@@ -146,6 +157,63 @@ A matrix is like a spreadsheet.
 This is a 2x2 matrix, but they can be any size.
 
 ***Here's some formatting for how a matrix times a vector works.***
+
+---
+
+> id: identity
+
+What if we want to leave `x` and `y` unchanged? That is, we want `x' = x` and `y' = y`.
+
+We can write this matrix:
+
+This is the [identity matrix](gloss:identity-matrix)
+
+---
+
+> id: basic-transformations
+
+We already saw how we can use this matrix `R` to apply the rotation transformation about the origin. What other transformations exist?
+
+::: tab
+#### Scale
+
+{.todo} Insert something about the scale transformations
+
+::: tab
+#### Reflections
+
+{.todo} Insert something about the reflection transformations
+
+::: tab
+#### Shear
+
+{.todo} Insert something about the shear transformations
+
+::: tab
+#### Other
+
+Of course, matrices can have any values in them, and thus can transform in many ways. Play with the values here and see how the transformation is still some combination of the basic transformations.
+
+{.todo} Free reign to do whatever they want.
+
+:::
+
+---
+
+> id: translate
+
+{.todo} You may have noticed we have not discussed one type of transformation. We cannot move space!
+
+---
+
+> id: three-dimensions
+
+Matrices do not have to represent transformations in 2 dimensions. They can also represent 3 or higher dimensions.
+
+{.todo} An interaction with a 3d transformation.
+
+
+---
 
 > id: play-with-me
 
