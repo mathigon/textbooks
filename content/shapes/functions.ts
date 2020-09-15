@@ -144,7 +144,16 @@ export async function voronoi($step: VoronoiStep) {
   const $geopad2 = $step.$('x-geopad.voronoi-2') as Geopad;
 
   $step.model.cells.forEach((cell, i) => {
-    const options = i == 12 ? {class: 'triangle-cell'} : {};
+    let options = {};
+    if (i == 12) {
+      options = {class: 'triangle-cell'};
+    } else if (i == 6) {
+      options = {class: 'four-sided'};
+    } else if (i == 3) {
+      options = {class: 'five-sided'};
+    } else if (i == 5) {
+      options = {class: 'six-sided'};
+    }
     const $cell = $N('path', options, $geopad2.$paths) as SVGView;
     $cell.css({fill: colors[i % 9], stroke: 'black', 'stroke-width': '2px'});
     $cell.draw(cell.poly);
@@ -157,7 +166,7 @@ export async function voronoi($step: VoronoiStep) {
   tri.edges.slice(0, 3).forEach((edge, i) => {
     const edgePath = $geopad2.drawPath(edge);
     edgePath.$el.css({'stroke-width': '4px', color: '#000000'});
-    // TODO: Replace with stylesheet-based css
+    // TODO: Replace with stylesheet-based css?
     edgePath.$el.on('mouseenter', () => {
       if (selectedEdge != i) {
         edgePath.$el.css({color: '#ffffff'});
@@ -173,8 +182,8 @@ export async function voronoi($step: VoronoiStep) {
         edgeChosen = true;
         edgePath.$el.css({color: '#ff0000'});
         selectedEdge = i;
-        edgePath.setLabel(edge.length.toString());
-        $step.score('edge-selected');
+        edgePath.setLabel(edge.length.toFixed(2).toString());
+        $step.score('side-selected');
 
         const pointsEq = (a: Point, b: Point) => {
           const precision = 0.001;
@@ -183,30 +192,37 @@ export async function voronoi($step: VoronoiStep) {
         const heightPoint = tri.points.filter(point => !pointsEq(point, edge.p1) && !pointsEq(point, edge.p2)).pop()!;
         const height = (new Segment(heightPoint, edge.project(heightPoint))).length;
         const heightLine = edge.parallel(heightPoint);
-        // TODO: Replace with translated copy of edge
-        const heightSegment = new Segment(heightPoint, heightLine.at(-1));
+        const heightSegment = new Segment(heightLine.project(edge.p1), heightLine.project(edge.p2));
         const heightPath = $geopad2.drawPath(heightSegment);
         heightPath.$el.hide();
+        heightPath.$el.css({color: '#000000', 'stroke-dasharray': '6'});
 
         $step.model.nearby = false;
         $geopad2.switchTool('line');
+        let p: GeoPath;
+        let cb: EventCallback;
         $geopad2.on('begin:path', ({path, _}: {path: GeoPath, _: any}) => {
-          const cb: EventCallback = _ => handlePathing(path, edgePath, heightPath, height, () => $step.model.nearby = true, () => $step.model.nearby = false);
+          p = path;
+          cb = _ => handlePathing(path, edgePath, heightPath, height, () => $step.model.nearby = true, () => $step.model.nearby = false);
           path.$parent.on('mousemove', cb);
-          $geopad2.on('add:path', _ => {
-            $geopad2.off('mousemove', cb);
-            if ($step.model.nearby) {
-              const p1 = (path.value as Segment).p1;
-              const p2 = heightLine.project(p1);
-              path.delete;
-              const finalPath = $geopad2.drawPath(new Segment(p1, p2));
-              finalPath.setLabel(height.toString());
-              finalPath.$el.css({color: 'red'});
-            } else {
-              path.delete();
-              $step.addHint('incorrect');
-            }
-          });
+        });
+        $geopad2.on('add:path', _ => {
+          $geopad2.off('mousemove', cb);
+          if ($step.model.nearby) {
+            $step.score('height-drawn');
+            $step.addHint('correct');
+            const p1 = (p.value as Segment).p1;
+            const p2 = heightLine.project(p1);
+            p.delete;
+            const finalPath = $geopad2.drawPath(new Segment(p1, p2));
+            finalPath.setLabel(height.toFixed(2).toString());
+            finalPath.$el.css({color: 'red'});
+          } else {
+            p.components.forEach(c => c.delete());
+            p.delete();
+            heightPath.$el.hide();
+            $step.addHint('incorrect');
+          }
         });
       }
     });

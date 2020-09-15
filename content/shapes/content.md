@@ -49,8 +49,6 @@ School districts  need an accurate estimate of the number of students that may a
 
 Some of these regions are shapes we’ve learned about in previous chapters. [This shape](->.triangle-cell) is a triangle and we can find the area by doing [[1/2]] x base x height.
 
-:::
-
 {.reveal(when="blank-1")} Click on the side of the triangle you want to use as the base.
 
 {.reveal(when="side-selected")} Now draw in the height that corresponds with the base you selected.
@@ -59,11 +57,13 @@ Some of these regions are shapes we’ve learned about in previous chapters. [Th
 
 {.text-center.reveal(when="blank-2 blank-3")} `(1500 "\ people") / (1 "\ square km") = (input(0) "\ people") / (TODO "\ square km")`
 
+:::
+
 ::: .reveal(when="blank-4")
 
 ${peopleCount} people live closest to that school and that can be a good starting point for the school to use to estimate how many students might attend that school. Next, the schools would want to use other statistics to estimate how many of those people are elementary aged students.
 
-The other regions are more complicated. Some have [4 sides](->#four-sided). Some have [5 sides](->#five-sided). And some have [6 sides](->#six-sided).
+The other regions are more complicated. Some have [4 sides](->.four-sided). Some have [5 sides](->.five-sided). And some have [6 sides](->.six-sided).
 
     // TODO: Display prev voronoi diagram
 
