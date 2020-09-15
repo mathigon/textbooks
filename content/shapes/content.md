@@ -65,7 +65,8 @@ ${peopleCount} people live closest to that school and that can be a good startin
 
 The other regions are more complicated. Some have [4 sides](->.four-sided). Some have [5 sides](->.five-sided). And some have [6 sides](->.six-sided).
 
-    // TODO: Display prev voronoi diagram
+    figure: x-geopad(width=600 height=400).voronoi-3
+      svg
 
 :::
 

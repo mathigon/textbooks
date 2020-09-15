@@ -147,12 +147,6 @@ export async function voronoi($step: VoronoiStep) {
     let options = {};
     if (i == 12) {
       options = {class: 'triangle-cell'};
-    } else if (i == 6) {
-      options = {class: 'four-sided'};
-    } else if (i == 3) {
-      options = {class: 'five-sided'};
-    } else if (i == 5) {
-      options = {class: 'six-sided'};
     }
     const $cell = $N('path', options, $geopad2.$paths) as SVGView;
     $cell.css({fill: colors[i % 9], stroke: 'black', 'stroke-width': '2px'});
@@ -229,6 +223,21 @@ export async function voronoi($step: VoronoiStep) {
   });
 
   $geopad2.showLabels = true;
+
+  const $geopad3 = $step.$('x-geopad.voronoi-3') as Geopad;
+  $step.model.cells.forEach((cell, i) => {
+    let options = {};
+    if (i == 6) {
+      options = {class: 'four-sided'};
+    } else if (i == 3) {
+      options = {class: 'five-sided'};
+    } else if (i == 5) {
+      options = {class: 'six-sided'};
+    }
+    const $cell = $N('path', options, $geopad3.$paths) as SVGView;
+    $cell.css({fill: colors[i % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.draw(cell.poly);
+  });
 }
 
 function handlePathing(path: GeoPath, base: GeoPath, heightPath: GeoPath, height: number, whenClose: VoidFunction, whenFar: VoidFunction) {
