@@ -55,16 +55,17 @@ Some of these regions are shapes we’ve learned about in previous chapters. [Th
 
 {.reveal(when="height-drawn")} The area of this triangle is [[TODO]] [[square km | km]].
 
-{.text-center.reveal(when="blank-2 blank-3")} `(1500 "\ people") / (1 "\ square km") = (input(0) "\ people") / (TODO "\ square km")`
+{.text-center.reveal(when="blank-2 blank-3")} `(1500 "\ people") / (1 "\ square km") = (input(0) "\ people") / ([TODO] "\ square km")`
 
 :::
 
 ::: .reveal(when="blank-4")
 
-${peopleCount} people live closest to that school and that can be a good starting point for the school to use to estimate how many students might attend that school. Next, the schools would want to use other statistics to estimate how many of those people are elementary aged students.
+\[TODO] people live closest to that school and that can be a good starting point for the school to use to estimate how many students might attend that school. Next, the schools would want to use other statistics to estimate how many of those people are elementary aged students.
 
 The other regions are more complicated. Some have [4 sides](->.four-sided). Some have [5 sides](->.five-sided). And some have [6 sides](->.six-sided).
 
+    // [TODO]: Probably don't need geopad for this
     figure: x-geopad(width=600 height=400).voronoi-3
       svg
 
