@@ -21,7 +21,8 @@ interface VoronoiModel {
   e: Point,
   f: Point,
   g: Point,
-  h: Point
+  h: Point,
+  nearby: boolean
 }
 
 interface VoronoiCell {

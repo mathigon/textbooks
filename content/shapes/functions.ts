@@ -4,9 +4,9 @@
 // =============================================================================
 
 
-import {Point, Polygon, Rectangle, Segment} from '@mathigon/fermat';
-import {$N, animate, CanvasView, loadScript, SVGParentView, SVGView} from '@mathigon/boost';
-import {Geopad, GeoPoint, Polypad, Slider, Step, Tile} from '../shared/types';
+import {nearlyEquals, Point, Polygon, Segment} from '@mathigon/fermat';
+import {$N, animate, CanvasView, EventCallback, loadScript, SVGParentView, SVGView} from '@mathigon/boost';
+import {Geopad, GeoPath, GeoPoint, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
 import {Relation} from '../shared/components/relation';
@@ -145,24 +145,101 @@ export async function voronoi($step: VoronoiStep) {
 
   $step.model.cells.forEach((cell, i) => {
     const options = i == 12 ? {class: 'triangle-cell'} : {};
-    const $cell = $N('path', options, $geopad2.$svg) as SVGView;
+    const $cell = $N('path', options, $geopad2.$paths) as SVGView;
     $cell.css({fill: colors[i % 9], stroke: 'black', 'stroke-width': '2px'});
     $cell.draw(cell.poly);
   });
 
-  const triEdges = $step.model.cells[12].poly.edges.slice(0, 3);
-  triEdges.forEach(edge => {
-    const $edgeBox = $N('path', {}, $geopad2.$svg) as SVGView;
-    $edgeBox.css({fill: 'black'});
-    const edgeBox = new Rectangle(edge.p1, 4, edge.length);
-    const shiftBy = edge.perpendicular(edge.p1).at(-2).subtract(edge.p1);
-    const finalBox = edgeBox.rotate(edge.angle - (Math.PI / 2), edge.p1).translate(shiftBy);
-    console.log(finalBox);
-    $edgeBox.draw(finalBox);
-    $edgeBox.on('mouseenter', () => $edgeBox.css({fill: 'white'}));
-    $edgeBox.on('mouseleave', () => $edgeBox.css({fill: 'black'}));
+
+  let selectedEdge = -1;
+  let edgeChosen = false;
+  const tri = $step.model.cells[12].poly;
+  tri.edges.slice(0, 3).forEach((edge, i) => {
+    const edgePath = $geopad2.drawPath(edge);
+    edgePath.$el.css({'stroke-width': '4px', color: '#000000'});
+    // TODO: Replace with stylesheet-based css
+    edgePath.$el.on('mouseenter', () => {
+      if (selectedEdge != i) {
+        edgePath.$el.css({color: '#ffffff'});
+      }
+    });
+    edgePath.$el.on('mouseleave', () => {
+      if (selectedEdge != i) {
+        edgePath.$el.css({color: '#000000'});
+      }
+    });
+    edgePath.$el.on('click', () => {
+      if (!edgeChosen) {
+        edgeChosen = true;
+        edgePath.$el.css({color: '#ff0000'});
+        selectedEdge = i;
+        edgePath.setLabel(edge.length.toString());
+        $step.score('edge-selected');
+
+        const pointsEq = (a: Point, b: Point) => {
+          const precision = 0.001;
+          return nearlyEquals(a.x, b.x, precision) && nearlyEquals(a.y, b.y, precision);
+        };
+        const heightPoint = tri.points.filter(point => !pointsEq(point, edge.p1) && !pointsEq(point, edge.p2)).pop()!;
+        const height = (new Segment(heightPoint, edge.project(heightPoint))).length;
+        const heightLine = edge.parallel(heightPoint);
+        // TODO: Replace with translated copy of edge
+        const heightSegment = new Segment(heightPoint, heightLine.at(-1));
+        const heightPath = $geopad2.drawPath(heightSegment);
+        heightPath.$el.hide();
+
+        $step.model.nearby = false;
+        $geopad2.switchTool('line');
+        $geopad2.on('begin:path', ({path, _}: {path: GeoPath, _: any}) => {
+          const cb: EventCallback = _ => handlePathing(path, edgePath, heightPath, height, () => $step.model.nearby = true, () => $step.model.nearby = false);
+          path.$parent.on('mousemove', cb);
+          $geopad2.on('add:path', _ => {
+            $geopad2.off('mousemove', cb);
+            if ($step.model.nearby) {
+              const p1 = (path.value as Segment).p1;
+              const p2 = heightLine.project(p1);
+              path.delete;
+              const finalPath = $geopad2.drawPath(new Segment(p1, p2));
+              finalPath.setLabel(height.toString());
+              finalPath.$el.css({color: 'red'});
+            } else {
+              path.delete();
+              $step.addHint('incorrect');
+            }
+          });
+        });
+      }
+    });
   });
 
+  $geopad2.showLabels = true;
+}
+
+function handlePathing(path: GeoPath, base: GeoPath, heightPath: GeoPath, height: number, whenClose: VoidFunction, whenFar: VoidFunction) {
+  const pathSegment = path.value as Segment;
+  const angleRange = 1 * (Math.PI / 180);
+  const correctAngle = (base.value as Segment).perpendicular(pathSegment.p1).angle % Math.PI;
+  const pathAngle = pathSegment.angle % Math.PI;
+  const perpendicular = pathAngle > correctAngle - angleRange && pathAngle < correctAngle + angleRange;
+  if (perpendicular) {
+    path.$el.css({color: 'red'});
+  } else {
+    path.$el.css({color: 'blue'});
+  }
+
+  const heightRange = 10;
+  const atHeight = pathSegment.length > height - heightRange && pathSegment.length < height + heightRange;
+  if (atHeight) {
+    heightPath.$el.show();
+  } else {
+    heightPath.$el.hide();
+  }
+
+  if (perpendicular && atHeight) {
+    whenClose();
+  } else {
+    whenFar();
+  }
 }
 
 function getVoronoiPolys(bounds: number[]) {
