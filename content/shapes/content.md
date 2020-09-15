@@ -23,7 +23,7 @@ TODO
 > section: polygons
 > sectionStatus: dev
 > id: voronoi
-> goals: one-point five-points voronoi-diagram eight-points
+> goals: blank-4
 
 School districts  need an accurate estimate of the number of students that may attend their schools. Below is a map of primary schools in London. In general, students attend the school closest to where they live. Click anywhere on the map to see the distance between that point and all the schools on the map.
 
@@ -73,6 +73,7 @@ The other regions are more complicated. Some have [4 sides](->.four-sided). Some
 ---
 
 > id: sort-polygons
+> goals: cards-sorted
 
 All of these regions in the Voronoi diagram are examples of polygons. A polygon is a closed, two-dimensional shape with straight sides that do not cross each other. A polygon does not have any holes in the shape. Click on a card below and drag it to the “Polygon” or “Non Polygon” side.
 
