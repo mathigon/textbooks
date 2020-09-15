@@ -57,7 +57,7 @@ export async function voronoi($step: VoronoiStep) {
     return {poly, over: false};
   });
 
-  $voronoiButton.on('click', _ => {
+  $voronoiButton.on('click', () => {
     showVor($step);
   });
 
@@ -78,40 +78,30 @@ export async function voronoi($step: VoronoiStep) {
 
   });
 
-  $geopad1.on('move:point', ({gPoint}: {gPoint: GeoPoint}) => {
-
-    $step.model.dynPoints =
-      $step.model.dynPoints.map(dp => {
-        if (gPoint.name == dp.gPoint.name) {
-          return {...dp, gPoint};
-        } else {
-          return dp;
-        }
-      }).slice();
-
-  });
-
   $step.model.watch(() => {
 
-    if ($step.model.dynPoints.length == 1 && !$step.model.promptMorePoints) {
+    const dynPoints = $step.model.dynPoints;
+
+    if (dynPoints.length == 1 && !$step.model.promptMorePoints) {
       $step.score('one-point');
       $step.model.promptMorePoints = true;
     }
 
-    if ($step.model.dynPoints.length == 5 && !$step.model.showButton) {
+    if (dynPoints.length == 5 && !$step.model.showButton) {
       $step.score('five-points');
       $step.model.showButton = true;
     }
 
-    if ($step.model.dynPoints.length == 8 && !$step.model.eightPoints) {
+    if (dynPoints.length == 8 && !$step.model.eightPoints) {
       $step.score('eight-points');
       $step.model.eightPoints = true;
     }
 
     $canvas1.clear();
 
+    const cells = $step.model.cells;
     if ($step.model.vorOpacity != 0) {
-      $step.model.cells.forEach((cell, i) => {
+      cells.forEach((cell, i) => {
         const opacity = cell.over ? $step.model.vorOpacity / 2 : $step.model.vorOpacity / 3;
         $canvas1.draw(
             cell.poly,
@@ -125,7 +115,7 @@ export async function voronoi($step: VoronoiStep) {
       });
     }
 
-    $step.model.dynPoints.forEach(({gPoint, dlOpacity}) => {
+    dynPoints.forEach(({gPoint, dlOpacity}) => {
 
       const edges: Segment[] = [];
 
