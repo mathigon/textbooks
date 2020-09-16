@@ -527,12 +527,12 @@ Add these two matrices!
 <div class="addition">
   <table class="add">
     <tr>
-      <td target="a">[1](pill:a)</td>
-      <td target="b">[2](pill:b)</td>
+      <td target="a">[1](target:a)</td>
+      <td target="b">[2](target:b)</td>
     </tr>
     <tr>
-      <td target="c">[3](pill:c)</td>
-      <td target="d">[4](pill:d)</td>
+      <td target="c">[3](target:c)</td>
+      <td target="d">[4](target:d)</td>
     </tr>
   </table>
 
@@ -540,12 +540,12 @@ Add these two matrices!
 
   <table class="add">
     <tr>
-      <td target="a">[9](pill:a)</td>
-      <td target="b">[8](pill:b)</td>
+      <td target="a">[9](target:a)</td>
+      <td target="b">[8](target:b)</td>
     </tr>
     <tr>
-      <td target="c">[7](pill:c)</td>
-      <td target="d">[6](pill:d)</td>
+      <td target="c">[7](target:c)</td>
+      <td target="d">[6](target:d)</td>
     </tr>
   </table>
 
@@ -597,12 +597,12 @@ Scalar multiplication is as simple as multiplying every cell in a matrix `A` tim
 
   <table class="scm">
     <tr>
-      <td target="a">[3](pill:a)</td>
-      <td target="b">[1](pill:b)</td>
+      <td target="a">[3](target:a)</td>
+      <td target="b">[1](target:b)</td>
     </tr>
     <tr>
-      <td target="c">[-4](pill:c)</td>
-      <td target="d">[0](pill:d)</td>
+      <td target="c">[-4](target:c)</td>
+      <td target="d">[0](target:d)</td>
     </tr>
   </table>
 
@@ -1107,17 +1107,17 @@ Let's put a matrix on the right, and text on the left.
 
 ::: column.grow(parent="right")
 
-The result will be a new table with the [{.green} friends](pill:friend) as [[rows|columns]] and the [{.blue} restaurants](pill:rest) as [[columns|rows]].
+The result will be a new table with the [{.green} friends](target:friend) as [[rows|columns]] and the [{.blue} restaurants](target:rest) as [[columns|rows]].
 
-{.reveal(when="blank-0 blank-1")} How should we fill out this table? The value of each cell should represent how much each person might like each restaurant. For example, the [{.orange} first cell](pill:cell-A) will represent how much Alice might like [[Gauss Grill|Laplace Lounge]].
+{.reveal(when="blank-0 blank-1")} How should we fill out this table? The value of each cell should represent how much each person might like each restaurant. For example, the [{.orange} first cell](target:cell-A) will represent how much Alice might like [[Gauss Grill|Laplace Lounge]].
 
-{.reveal(when="blank-2")} Alice has a [{.orange} preference of 1](pill:pref-A-1) for Outdoor Seating, and Gauss Grill has a [{.orange} value of 3](pill:feat-A-1) for Outdoor Seating, so we multiply these to get [[3]].
+{.reveal(when="blank-2")} Alice has a [{.orange} preference of 1](target:pref-A-1) for Outdoor Seating, and Gauss Grill has a [{.orange} value of 3](target:feat-A-1) for Outdoor Seating, so we multiply these to get [[3]].
 
-{.reveal(when="blank-3")} Alice has a [{.orange} preference of 4](pill:pref-A-2) for Vegetarian Food, and Gauss Grill has a [{.orange}value of 1](pill:feat-A-2) for Vegetarian Food, so we multiply these to get [[4]].
+{.reveal(when="blank-3")} Alice has a [{.orange} preference of 4](target:pref-A-2) for Vegetarian Food, and Gauss Grill has a [{.orange}value of 1](target:feat-A-2) for Vegetarian Food, so we multiply these to get [[4]].
 
-{.reveal(when="blank-4")} We sum together all the products to get [[7]], which we can write in the [{.orange} first cell](pill:cell-A).
+{.reveal(when="blank-4")} We sum together all the products to get [[7]], which we can write in the [{.orange} first cell](target:cell-A).
 
 {.reveal(when="blank-5")}[Continue](btn:next)
 
-{.reveal(when="next-0")} [{.teal} This cell](pill:cell-C) will represent how much [[Charlie|Bob]] might like [[Laplace Lounge|Pizzathagoras]].
+{.reveal(when="next-0")} [{.teal} This cell](target:cell-C) will represent how much [[Charlie|Bob]] might like [[Laplace Lounge|Pizzathagoras]].
 :::
