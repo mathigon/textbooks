@@ -5,7 +5,7 @@
 > section: introduction
 > sectionStatus: dev
 
-TODO
+[TODO]
 
 ---
 
@@ -14,7 +14,7 @@ TODO
 > section: parallelograms-triangles
 > sectionStatus: dev
 
-TODO
+[TODO]
 
 ---
 
@@ -53,7 +53,7 @@ Some of these regions are shapes we’ve learned about in previous chapters. [Th
 
 {.reveal(when="side-selected")} Now draw in the height that corresponds with the base you selected.
 
-{.reveal(when="height-drawn")} The area of this triangle is [[TODO]] [[square km | km]].
+{.reveal(when="height-drawn")} The area of this triangle is [[ [TODO] ]] [[square km | km]].
 
 {.text-center.reveal(when="blank-2 blank-3")} `(1500 "\ people") / (1 "\ square km") = (input(0) "\ people") / ([TODO] "\ square km")`
 
@@ -61,7 +61,7 @@ Some of these regions are shapes we’ve learned about in previous chapters. [Th
 
 ::: .reveal(when="blank-4")
 
-\[TODO] people live closest to that school and that can be a good starting point for the school to use to estimate how many students might attend that school. Next, the schools would want to use other statistics to estimate how many of those people are elementary aged students.
+[TODO] people live closest to that school and that can be a good starting point for the school to use to estimate how many students might attend that school. Next, the schools would want to use other statistics to estimate how many of those people are elementary aged students.
 
 The other regions are more complicated. Some have [4 sides](->.four-sided). Some have [5 sides](->.five-sided). And some have [6 sides](->.six-sided).
 
@@ -124,13 +124,13 @@ Just by looking at this region, it seems that [[more | less]] students will atte
 
 ::: .reveal(when="blank-1")
 
-    // TODO: Voronoi region area animation
+    // [TODO]: Voronoi region area animation
 
 TODO: Voronoi region area exercise table
 
 :::
 
-{.reveal(when="area-calculated")} TODO: People equation
+{.reveal(when="area-calculated")} [TODO]: People equation
 
 {.reveal(when="people-calculated")} So, indeed more students will likely attend the school in the pentagon region than the triangular region.
 
@@ -159,7 +159,7 @@ We give different names to polygons based on how many sides they have. You may r
 
 Let’s practice using these names by looking at some examples of polygons out in the world.
 
-TODO: Images
+    // [TODO]: Images
 
 The Dome of the Rock is an Islamic Shrine in the Old City of Jerusalem. Built in 692 BCE, the base is a regular [[octagon | pentagon | hexagon]].
 
@@ -167,7 +167,7 @@ The Dome of the Rock is an Islamic Shrine in the Old City of Jerusalem. Built in
 
 ::: .reveal(when="blank-0")
 
-TODO: Images
+    // [TODO]: Images
 
 The Giant’s Causeway in Northern Ireland is made up of over 40,000 polygonal basalt (a type of igneous rock) columns sticking out of the sea. The column outlined in white in the photo is a [[hexagon | pentagon | octagon]].
 
@@ -175,7 +175,7 @@ The Giant’s Causeway in Northern Ireland is made up of over 40,000 polygonal b
 
 ::: .reveal(when="blank-1")
 
-TODO: Images
+    // [TODO]: Images
 
 All sorts of traffic signs are polygons - some regular and some irregular. 
 The sign of the two people crossing the street is a [[irregular | regular]] [[pentagon | hexagon | octagon]].
@@ -186,7 +186,7 @@ The sign of the two people crossing the street is a [[irregular | regular]] [[pe
 
 Polygons show up in all sorts of natural objects - honeycomb and starfish - to name a few.
 
-TODO: Images
+    // [TODO]: Images
 
 The 10-sided starfish is a [[decagon | nonagon | octagon]].
 
@@ -194,7 +194,7 @@ The 10-sided starfish is a [[decagon | nonagon | octagon]].
 
 ::: .reveal(when="blank-4")
 
-TODO: Images
+    // [TODO]: Images
 
 The ground of a dried out desert, the skin patterns on giraffes, and dragonfly wings look strikingly similar to Voronoi diagrams!
 
@@ -271,7 +271,7 @@ Below are 7 polygons. Move and rotate the polygons to completely fill in the squ
 
 The set of these 7 polygons is called a tangram. The tangram is an ancient Chinese puzzle invented over 1,000 years ago during the Song Dynasty. In Chinese, the puzzle is called 七巧板. Pronounced “Chi-Chiao Pan,” this translates to “the seven intriguing pieces.” The goal of the puzzle is to use all 7 pieces to form any number of images. Below are just some of the shapes you can try to make at the [Tangram](https://mathigon.org/tangram) activity on Mathigon!
 
-TODO: Image
+    // [TODO]: Image
 
 In 1815, Shan Chiao published “New Figures of the Tangram” which contained 374 tangram puzzles!
 
@@ -283,17 +283,17 @@ In 1815, Shan Chiao published “New Figures of the Tangram” which contained 3
 
 Now that we have a firm understanding of polygons, let’s revisit thinking about the area of polygons. The football below is made up of 12 black [[pentagons | hexagons | octagons]] and 20 white [[hexagons | pentagons | octagons]]. The mathematical name for this is 3D shape is a truncated icosahedron. A football is slightly more rounded than a true truncated icosahedron since the pentagons and hexagons bulge out due to the air pressure inside.
 
-TODO: Image
+    // [TODO]: Image
 
 Most footballs are made of synthetic leather. Manufacturers make so many footballs that they pay great attention to the amount of synthetic leather they need to produce each football. Let’s find the amount of synthetic leather needed to make one professional football.
 
-TODO: Football 'unfolding' animation
+    // [TODO]: Football 'unfolding' animation
 
-    // TODO: Pentagons and hexagons area exercise
+    // [TODO]: Pentagons and hexagons area exercise
 
 Recently, football manufacturers have begun to experiment with different shaped panels other than hexagons and pentagons. Here are some of the official footballs from the recent men’s World Cup tournaments.
 
-TODO: Images
+    // [TODO]: Images
 
 While these designs are creative and interesting, some studies have shown that the different shaped panels impact how the ball travels through the air!
 
@@ -303,9 +303,9 @@ While these designs are creative and interesting, some studies have shown that t
 
 Below is a polygon from a different Voronoi diagram. Each grid represents 1 square kilometer. Let’s find the area of this region in a few different ways.
 
-TODO: Polygon image
+    // [TODO]: Polygon image
 
-    // TODO: Polygon area methods exercise
+    // [TODO]: Polygon area methods exercise
 
 No matter which approach we take, the area of the pentagon is 27.5 square units!
 
@@ -394,7 +394,7 @@ Phew! Our fundamental idea that the area of shapes remains the same regardless o
 > section: circles
 > sectionStatus: dev
 
-TODO
+    // [TODO]
 
 ---
 
@@ -403,4 +403,4 @@ TODO
 > section: circle-area
 > sectionStatus: dev
 
-TODO
+    // [TODO]
