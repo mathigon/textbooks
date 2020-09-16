@@ -160,7 +160,7 @@ export async function voronoi($step: VoronoiStep) {
   tri.edges.slice(0, 3).forEach((edge, i) => {
     const edgePath = $geopad2.drawPath(edge);
     edgePath.$el.css({'stroke-width': '4px', color: '#000000'});
-    // TODO: Replace with stylesheet-based css?
+    // [TODO]: Replace with stylesheet-based css?
     edgePath.$el.on('mouseenter', () => {
       if (selectedEdge != i) {
         edgePath.$el.css({color: '#ffffff'});
@@ -618,7 +618,7 @@ export function triangleTangram($step: Step) {
     tile.$el.addClass('paradox-poly');
   });
 
-  // TODO: Use comments to delineate sections
+  // [TODO]: Use comments to delineate sections
 
   const $zoomPolypad2 = $step.$('.zoom-2 > x-polypad') as Polypad;
   $zoomPolypad2.$svg.setAttr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
