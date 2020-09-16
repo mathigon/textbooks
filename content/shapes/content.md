@@ -114,9 +114,11 @@ A regular polygon has [[all equal | all different]] side lengths.
 
 ::: .reveal(when="blank-0")
 
-Let’s revisit the Voronoi diagram and find out how many people live in one of the regions with 5 sides. Note the [region outlined in white](->#population-pentagon) in the image below.
+Let’s revisit the Voronoi diagram and find out how many people live in one of the regions with 5 sides. Note the [region outlined in white](->.population-pentagon) in the image below.
 
-    // TODO: Show voronoi diagram
+    // [TODO]: Voronoi region area exercise
+    figure: x-geopad(width=600 height=400).voronoi-1
+      svg
 
 Just by looking at this region, it seems that [[more | less]] students will attend the school in this region than the school in the triangular region we explored above. The region looks similar in size, so it’s hard to be sure just by looking. Let’s find its area by splitting it up into rectangles and triangles and compare the area to the area of the triangular region.
 
@@ -124,9 +126,13 @@ Just by looking at this region, it seems that [[more | less]] students will atte
 
 ::: .reveal(when="blank-1")
 
-    // [TODO]: Voronoi region area animation
-
-TODO: Voronoi region area exercise table
+| The total area is equal to the area of the rectangle plus the area of [[2]] triangles. | Total Area = Area of Rect + Area of Triangle 1 + Area of Triangle 2 |
+| Area of a rectangle = b x h and Area of a triangle = [[½]] x b x h | Total Area = b x h + ½ x b x h + ½ x b x h |
+| Click on the base and height of the rectangle | Total area = # x # + ½ x b x h + ½ x b x h |
+| Click on the base you want to use for triangle #1 and then draw in the corresponding height. | Total area = # x # + ½ x # x # + ½ x b x h |
+| Click on the base you want to use for triangle #2 and then draw in the corresponding height. | Total area = # x # + ½ x # x # + ½ x # x #Calculate the area of each shape |
+| Calculate the area of each shape | Total area = [[#]] + [[#]] + [[#]] |
+| Calculate the total area | Total area = [[#]] sq km |
 
 :::
 

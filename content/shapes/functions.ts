@@ -34,11 +34,11 @@ const cafeLocationPoints = [
   new Point(477, 30)
 ];
 
+const voronoiColours = ['3c91e6', 'ff6b6b', 'ffe45e', '4ecdc4', '81366f', 'c93818', 'e2c312', '6bab90', 'e4533a'].map(c => '#' + c);
+
 export async function voronoi($step: VoronoiStep) {
 
   await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
-
-  const colors = ['3c91e6', 'ff6b6b', 'ffe45e', '4ecdc4', '81366f', 'c93818', 'e2c312', '6bab90', 'e4533a'].map(c => '#' + c);
 
   const $geopad1 = $step.$('x-geopad.voronoi-1') as Geopad;
   const $canvas1 = $geopad1.$('canvas.voronoi') as CanvasView;
@@ -106,7 +106,7 @@ export async function voronoi($step: VoronoiStep) {
         $canvas1.draw(
             cell.poly,
             {
-              fill: colors[i % 9],
+              fill: voronoiColours[i % 9],
               stroke: 'black',
               strokeWidth: 2,
               opacity
@@ -149,7 +149,7 @@ export async function voronoi($step: VoronoiStep) {
       options = {class: 'triangle-cell'};
     }
     const $cell = $N('path', options, $geopad2.$paths) as SVGView;
-    $cell.css({fill: colors[i % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.css({fill: voronoiColours[i % 9], stroke: 'black', 'stroke-width': '2px'});
     $cell.draw(cell.poly);
   });
 
@@ -235,7 +235,7 @@ export async function voronoi($step: VoronoiStep) {
       options = {class: 'six-sided'};
     }
     const $cell = $N('path', options, $geopad3.$paths) as SVGView;
-    $cell.css({fill: colors[i % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.css({fill: voronoiColours[i % 9], stroke: 'black', 'stroke-width': '2px'});
     $cell.draw(cell.poly);
   });
 }
@@ -315,6 +315,34 @@ export function sortPolygons($step: Step) {
   $sort.on('incorrect', ({hint}) => $step.addHint(hint, {class: 'incorrect'}));
   $sort.on('complete', () => {
     $step.score('cards-sorted');
+  });
+}
+
+export async function populations($step: Step) {
+
+  await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
+
+  const $geopad1 = $step.$('x-geopad.voronoi-1') as Geopad;
+
+  const cells = getVoronoiPolys([0, 0, 600, 400]).map((poly, i) => {
+    return {poly, color: voronoiColours[i % 9]};
+  });
+  const pentagon = cells[8];
+  cells[8] = cells.pop()!;
+  cells.push(pentagon);
+  cells.forEach((cell, i) => {
+    let options = {};
+    let css: Record<string, any> = {fill: cell.color, stroke: 'black', 'stroke-width': '2px'};
+    if (i == cells.length - 1) {
+      options = {class: 'population-pentagon'};
+      css = {fill: cell.color, stroke: 'white', 'stroke-width': '3px'};
+    }
+    const $cell = $N('path', options, $geopad1.$paths) as SVGView;
+    $cell.css(css);
+    $cell.draw(cell.poly);
+    if (cell.poly.edges.length == 6) {
+      console.log({i, $el: $cell._el});
+    }
   });
 }
 
