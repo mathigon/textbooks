@@ -165,7 +165,15 @@ We give different names to polygons based on how many sides they have. You may r
 
 Let’s practice using these names by looking at some examples of polygons out in the world.
 
-    // [TODO]: Images
+::: column(width=300)
+
+    x-img(src="https://static4.depositphotos.com/1010232/271/i/950/depositphotos_2712874-stock-photo-dome-of-the-rock-jerusalem.jpg" width=300 height=199)
+
+::: column(width=300)
+
+    x-img(src="https://ak7.picdn.net/shutterstock/videos/20482537/thumb/8.jpg" with=300 height=169)
+
+:::
 
 The Dome of the Rock is an Islamic Shrine in the Old City of Jerusalem. Built in 692 BCE, the base is a regular [[octagon | pentagon | hexagon]].
 
@@ -173,15 +181,39 @@ The Dome of the Rock is an Islamic Shrine in the Old City of Jerusalem. Built in
 
 ::: .reveal(when="blank-0")
 
-    // [TODO]: Images
+::: column(width=300)
 
-The Giant’s Causeway in Northern Ireland is made up of over 40,000 polygonal basalt (a type of igneous rock) columns sticking out of the sea. The column outlined in white in the photo is a [[hexagon | pentagon | octagon]].
+    x-img(src="https://st2.depositphotos.com/1457640/9876/i/950/depositphotos_98761548-stock-photo-giants-causeway-and-cliffs-in.jpg" width=300 height=200)
+
+::: column(width=300)
+
+    object(type="image/svg+xml" data="/resources/shapes/images/giants-causeway-shape.svg" width=300 height=219).column-photo
+
+:::
+
+The Giant’s Causeway in Northern Ireland is made up of over 40,000 polygonal basalt (a type of igneous rock) columns sticking out of the sea. The column outlined in white in [the photo](->.column-photo) is a [[hexagon | pentagon | octagon]].
 
 :::
 
 ::: .reveal(when="blank-1")
 
-    // [TODO]: Images
+::: column(width=150)
+
+    x-img(src="https://static5.depositphotos.com/1008458/490/i/950/depositphotos_4906550-stock-photo-red-stop-sign.jpg" width=150 height=150)
+
+::: column(width=150)
+
+    x-img(src="https://st.depositphotos.com/1259239/2593/v/950/depositphotos_25933337-stock-illustration-usa-yield-sign.jpg" width=150 height=150)
+
+::: column(width=150)
+
+    x-img(src="https://static8.depositphotos.com/1259239/1058/v/950/depositphotos_10588449-stock-illustration-fork-in-road-sign.jpg" width=150 height=150)
+
+::: column(width=150)
+
+    x-img(src="https://st.depositphotos.com/1669155/2769/i/450/depositphotos_27698627-stock-photo-road-sign.jpg" width=150 height=225)
+
+:::
 
 All sorts of traffic signs are polygons - some regular and some irregular. 
 The sign of the two people crossing the street is a [[irregular | regular]] [[pentagon | hexagon | octagon]].
@@ -192,7 +224,15 @@ The sign of the two people crossing the street is a [[irregular | regular]] [[pe
 
 Polygons show up in all sorts of natural objects - honeycomb and starfish - to name a few.
 
-    // [TODO]: Images
+::: column(width=300)
+
+    x-img(src="https://static8.depositphotos.com/1491329/1068/i/950/depositphotos_10680850-stock-photo-worker-bees-on-honeycomb.jpg" width=300 height=199)
+
+::: column(width=300)
+
+    x-img(src="https://st.depositphotos.com/1054213/2023/i/950/depositphotos_20238089-stock-photo-starfish-asterias-rubens.jpg" width=300 height=200)
+
+:::
 
 The 10-sided starfish is a [[decagon | nonagon | octagon]].
 
@@ -207,10 +247,14 @@ The ground of a dried out desert, the skin patterns on giraffes, and dragonfly w
 Lastly, many flags use polygons. Drag the name of each country to the correct flag. Just make a guess if you’re not sure!
 
     x-relation.flags-countries
-      .item(slot="domain" match="canada" comment=true) [Canada flag]
-      .item(slot="domain" match="south-africa" comment=true) [South Africa flag]
-      .item(slot="domain" match="finland" comment=true) [Finland flag]
-      .item(slot="domain" match="nepal" comment=true) [Nepal flag]
+      .item(slot="domain" match="canada" comment=true)
+        object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg")
+      .item(slot="domain" match="south-africa" comment=true)
+        object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg")
+      .item(slot="domain" match="finland" comment=true)
+        object(type="image/svg+xml" data="/resources/shapes/images/Flag_of_Finland.svg")
+      .item(slot="domain" match="nepal" comment=true)
+        object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg")
       .item(slot="range" name="canada") Canada
       .item(slot="range" name="south-africa") South Africa
       .item(slot="range" name="finland") Finland
@@ -295,7 +339,15 @@ Most footballs are made of synthetic leather. Manufacturers make so many footbal
 
     // [TODO]: Football 'unfolding' animation
 
-    // [TODO]: Pentagons and hexagons area exercise
+    // [TODO]: Pentagon and hexagon diagram/animation
+
+| A football is made up of [[12]] pentagons and [[20]] hexagons | Total Area = 12 pentagons + 20 hexagons |
+| Let’s split the pentagon into [[5]] congruent triangles and the hexagon into [[6]] congruent triangles..  Note - at this point, the triangles will appear on the pentagon and hexagon | Total Area = 12 x (Area of 5 triangles) + 20 x (Area of 6 triangles) |
+| The area formula for a triangle is [[½]] x base x height. | Total area = 12 x (5 x ½ x b x h) + 20 x (6 x ½ x b x h) |
+| In the pentagon, click on the side you want to use as the base and then draw in the height. | Total area = 12 x  (5 x ½ x 4.56 x 3.138) + 20 x (6 x ½ x b x h) |
+| Calculate the area of one pentagon and one hexagon | Total area = 12 x [[35.7732]] + 20 x [[54.0223]] |
+| Calculate the area of the 12 pentagons and the 20 hexagons | Total area = [[429.28]] + [[1080.45]] |
+| Calculate the total area | Total area = [[1509.73]] square cm |
 
 Recently, football manufacturers have begun to experiment with different shaped panels other than hexagons and pentagons. Here are some of the official footballs from the recent men’s World Cup tournaments.
 
