@@ -459,27 +459,21 @@ export function polygonNames($step: Step) {
     const p: {[key: string]: boolean} = {};
 
     $geopad.points.forEach(point => {
-
       p[point.name] = false;
-
       point.$el.on('mousemove', (e: MouseEvent) => {
 
         // When mousemove has been fired AND e.buttons == 1 (left mouse button is down), this means we are dragging
         if (e.buttons == 1) {
           pointsMoved[i][point.name] = true;
-
           if (pointsMoved.every(atLeastTwoMoved) && !doneMoving) {
             doneMoving = true;
             $step.score('points-moved');
           }
         }
-
       });
-
     });
 
     pointsMoved.push(p);
-
   });
 
 }
@@ -533,6 +527,9 @@ export function triangleTangram($step: Step) {
   polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad1.newTile('polygon', polyStr);
+    if (index == 0) {
+      tile.$el.addClass('red-tri');
+    }
     tile.setColour(polyColours[index]);
     tile.setPosition(origins[index]);
   });
