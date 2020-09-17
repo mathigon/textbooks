@@ -266,8 +266,6 @@ Lastly, many flags use polygons. Drag the name of each country to the correct fl
 
 The hexagons in the South African flag and the pentagon in the Nepalese flag may not appear to be the standard image you may have in your head of a pentagon and a hexagon. Move around the vertices (these are the points where the edges meet) in the regular polygons below to make some irregular polygons of your own.
 
-:::
-
 ::: column.grow(width=220)
 
     // pentagon
@@ -304,6 +302,8 @@ The hexagons in the South African flag and the pentagon in the Nepalese flag may
       circle.move(name="r" cx=125.605 cy=203.306)
       circle.move(name="s" cx=186.948 cy=164.214)
       path(name="octagon" x="polygon(l,m,n,o,p,q,r,s)")
+
+:::
 
 :::
 
