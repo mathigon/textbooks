@@ -240,7 +240,23 @@ The 10-sided starfish is a [[decagon | nonagon | octagon]].
 
 ::: .reveal(when="blank-4")
 
-    // [TODO]: Images
+::: column(width=150)
+
+    x-img(src="https://static9.depositphotos.com/1013513/1148/i/950/depositphotos_11488218-stock-photo-drought-land-and-hot-weather.jpg" width=150 height=100)
+
+::: column(width=150)
+
+    x-img(src="https://static5.depositphotos.com/1011160/517/i/950/depositphotos_5177840-stock-photo-texture-of-dry-cracked-soil.jpg" width=150 height=100)
+
+::: column(width=150)
+
+    x-img(src="https://st.depositphotos.com/1594920/1698/i/950/depositphotos_16982455-stock-photo-somali-giraffe-commonly-known-as.jpg" width=150 height=109)
+
+::: column(width=150)
+
+    x-img(src="https://static3.depositphotos.com/1003348/177/i/950/depositphotos_1773326-stock-photo-dragonfly.jpg" width=150 height=100)
+
+:::
 
 The ground of a dried out desert, the skin patterns on giraffes, and dragonfly wings look strikingly similar to Voronoi diagrams!
 
@@ -351,7 +367,22 @@ Most footballs are made of synthetic leather. Manufacturers make so many footbal
 
 Recently, football manufacturers have begun to experiment with different shaped panels other than hexagons and pentagons. Here are some of the official footballs from the recent men’s World Cup tournaments.
 
-    // [TODO]: Images
+**2006 World Cup**
+
+    x-img(src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Teamgeist_Ball_World_Cup_2006_Finale.jpg" width=400 height=300)
+
+**2010 World Cup**
+
+    x-img(src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Jo%27bulani.jpg" width=400 height=419)
+
+**2014 World Cup**
+
+    x-img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Deutsches_Fu%C3%9Fballmuseum_2015_3.jpg/1280px-Deutsches_Fu%C3%9Fballmuseum_2015_3.jpg" width=400 height=300)
+
+**2018 World Cup**
+
+    x-img(src="https://upload.wikimedia.org/wikipedia/commons/5/50/Adidas_Telstar_18_in_Russia_vs._Argentina.jpg" width=400 height=400)
+
 
 While these designs are creative and interesting, some studies have shown that the different shaped panels impact how the ball travels through the air!
 
