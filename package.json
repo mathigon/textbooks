@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@google-cloud/text-to-speech": "3.1.0",
-    "@google-cloud/translate": "6.0.2",
+    "@google-cloud/translate": "6.0.3",
     "@mathigon/parser": "0.5.7",
     "@percy/script": "1.1.0",
     "@rollup/plugin-node-resolve": "9.0.0",
