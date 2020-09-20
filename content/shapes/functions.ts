@@ -207,10 +207,9 @@ export async function voronoi($step: VoronoiStep) {
             $step.addHint('correct');
             const p1 = (p.value as Segment).p1;
             const p2 = heightLine.project(p1);
-            p.delete;
-            const finalPath = $geopad2.drawPath(new Segment(p1, p2));
-            finalPath.setLabel(height.toFixed(2).toString());
-            finalPath.$el.css({color: 'red'});
+            p.components[0].setValue(p1);
+            p.components[1].setValue(p2);
+            p.setLabel(height.toFixed(2).toString());
           } else {
             p.components.forEach(c => c.delete());
             p.delete();
