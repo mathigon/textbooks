@@ -484,7 +484,266 @@ Phew! Our fundamental idea that the area of shapes remains the same regardless o
 > section: circles
 > sectionStatus: dev
 
-    // [TODO]
+In the previous chapters, we’ve been exploring and learning about shapes with straight side lengths. Of course, many interesting items - all sorts of foods, entertaining attractions, objects in nature, and tires, just to name a few - all have curved edges.
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1689882/1219/i/950/depositphotos_12195072-stock-photo-grapefruit-isolated-on-white-background.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://static3.depositphotos.com/1005504/200/i/950/depositphotos_2003912-stock-photo-london-eye.jpg"  width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1872017/1625/i/950/depositphotos_16253565-stock-photo-top-view-of-pizza-margherita.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1001469/2018/i/950/depositphotos_20187853-stock-photo-automobile-tire-isolated-on-white.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://lh3.googleusercontent.com/ur9ajZgRO1ENrL4gl5CrRuMe2DOucBJoKeFP7wsgNqv6axRuCqDOUoM7xVufuSeQf0uGITvFzT5li2WE05052xknJMMRiv_HNquH6gGTFnYYzL-p4PmlMHLDL82-0ufc9kwEH16b" width=110 height=110)
+
+:::
+
+As you likely know, a circle is the line connecting all points that are the same distance away from a center point.
+
+    // ANIMATION-01: Construct circle
+
+The Indianapolis Motor Speedway in Indiana in the United States is one of the most well-known race tracks in the world.
+
+::: column.grow(width=350)
+
+    x-img(src="https://st3.depositphotos.com/2942339/35223/i/1600/depositphotos_352234002-stock-photo-indianapolis-circa-march-2020-gate.jpg" width=350 height=255)
+
+::: column.grow(width=350)
+
+    x-img(src="https://image.shutterstock.com/z/stock-photo-may-indianapolis-in-helio-castroneves-of-brazil-heads-through-the-turns-to-practice-1407372011.jpg" width=350 height=257)
+
+:::
+
+The Indianapolis 500 is the most famous race at the track. In this race, cars must drive 500 miles. This race began in 1911 and it is the world's oldest car race still taking place today. Teams supporting the drivers must change the times many times during a race. The rubber on the tires wears out quickly because of the heat that is generated when driving at high speeds. The tires need to be changed after about 52,000 revolutions. While this may seem like a lot, the average tire on a car can last upwards of [[31,000,000 | 310,000, 3,100,000]] revolutions.
+
+Drivers make pit stops during the race to have the tires changed and refuel.
+
+::: column(width=560)
+
+    iframe(width="560" height="315" src="https://www.youtube-nocookie.com/embed/ql5h00xcHLQ" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+:::
+
+Teams need to know when to make a pit stop. If they wait too long and wear out the tires, their speed will decrease and they’ll run the risk of this happening...
+
+::: column(width=560)
+
+    iframe(width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZMZJ3ZaEcIQ" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+:::
+
+Let’s try to determine the number of laps the cars can go before a pit stop is needed. To answer this, we need to think about how far a tire travels in one revolution. Below are 4 vehicles with very different tire sizes. Move each vehicle so the tire makes one full rotation.
+
+    // INTERACTIVE-01: Wheel distances
+
+The distance the vehicle travels in one revolution of the tire is the same as the distance [around | across] the tire. In general, distance around a shape is the [[perimeter | area]] of the shape. However, the perimeter of a circle has a unique name - the circumference.
+
+    // DIAGRAM: Tire and track
+
+To determine how far the car goes in one revolution of the tire, we need to know the [[circumference | area ] of each tire. We also need to know the length of each lap. The straight-aways are simple enough. However, each of the four turns come together to form a [[full | half]] circle, so we’ll also need a way to calculate the distance around that full circle.
+
+We could use a piece of string and a ruler to determine the distance around a tire. Or we could use some sort of flexible measuring tool. Or we could walk around a circular track to determine the distance. However, it would be helpful if there was some relationship between the straight distance across a circle and the distance around a circle. Straight lines are much easier to measure with tools such as rulers and tape measures. We are going to explore this idea in this chapter.
+
+    // ESTIMATING THE CIRCUMFERENCE OF A TIRE BY ENCASEMENT
+
+In our previous geometry chapters, we used what we had learned about earlier shapes to help us with new ones. For example, we re-arranged parallelograms into rectangles to understand how to find the area of parallelograms. Let’s first find an estimate of the distance around the tire by using what we know about the perimeter of polygons. Place the square around the circle so it totally encloses the circle.
+
+    // INTERACTIVE-02: Tire circumference estimation
+
+The tire fits inside the square, so the circumference of the tire is [[less than | more than]] the perimeter of the square. The perimeter of the square is [[108]] cm so the distance around the tire is less than 108 cm.
+
+As we increase the number of sides of the polygon, our estimate gets closer and closer to the distance around the tire. This process helps get a good estimate of the circumference around a circle. But what if we need to be exact? Can we use the straight lines in a circle to help find the circumference? Before exploring this further, let’s learn some of the names of the parts of a circle.
+
+The RADIUS of a circle is a line from the center of the circle to a point on the circle. The DIAMETER of a circle is a line connecting two points on the circle that passes through the center point.
+
+    // DIAGRAM: Radius and diameter
+
+Draw 3 radii (this is the plural for radius!) and 3 diameters on the circle below:
+
+    // INTERACTIVE-03: Drawing radii and diameters
+
+Now, let’s identify parts of a circle in the objects below:
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1689882/1219/i/950/depositphotos_12195072-stock-photo-grapefruit-isolated-on-white-background.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://static3.depositphotos.com/1005504/200/i/950/depositphotos_2003912-stock-photo-london-eye.jpg"  width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1872017/1625/i/950/depositphotos_16253565-stock-photo-top-view-of-pizza-margherita.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://st.depositphotos.com/1001469/2018/i/950/depositphotos_20187853-stock-photo-automobile-tire-isolated-on-white.jpg" width=110 height=110)
+
+::: column.grow(width=110)
+
+    x-img(src="https://lh3.googleusercontent.com/ur9ajZgRO1ENrL4gl5CrRuMe2DOucBJoKeFP7wsgNqv6axRuCqDOUoM7xVufuSeQf0uGITvFzT5li2WE05052xknJMMRiv_HNquH6gGTFnYYzL-p4PmlMHLDL82-0ufc9kwEH16b" width=110 height=110)
+
+:::
+
+One of the white lines in the grapefruit is a [[radius | diameter | circumference]], A spoke of the ferris wheel is a [[radius | diameter | circumference]]. The crust of the pizza is the [[circumference | radius | diameter]]. The height of the tire is the [[diameter | radius | circumference]]. The width of the log is the [[diameter | radius | circumference]].
+
+While it’s not typical to think of the “diameter” of a square, it could be the line from one side to the other that passes through the center.
+
+    // ANIMATION-02: Diameter of a square
+
+It takes [[4]] “diameters” of a square to wrap around a square and therefore create the perimeter of the square. Upon entering in the 4: In a square, the distance around is 4 times as long as the distance across. Let’s think about this same question with circles. How many diameters of a circle do you think are needed to wrap around the circle? [[--]].
+
+Let’s find out!
+
+    // INTERACTIVE-04: 'Wrapping' circumference
+
+1. Draw a circle. 
+2. Drag the diameter outside of the circle and wrap it around the circumference. 
+3. Keep doing this until you cover as much of the circumference as possible using full diameters. 
+4. Repeat this process with two different sized circles.
+
+    // HANDS-ON ICON
+
+This is a great time to step away from your device and try this at home. Find any circular object. It could be something in your kitchen like a glass or a plate or a can of vegetables. Or it could be something in your room like a round clock, or a marker, or a bottle of something. Anything circular will work! Use a piece of string and mark of the length of the diameter. Then use a ruler to place a mark on the string that is 3 diameters long. Wrap the string around the circle and see how close the length of three diameters gets to making it all the way around the circle!
+
+You predicted it would take [[--]] diameters to wrap around the circle. It seems to take a little more than [[3]] diameters to fit around a circle. But what is this “little bit more than?” Can we determine how much of a diameter this is? Is it 1/10 of a diameter? 1/5th of a diameter? 1/4th of the diameter? Before answering this question, let’s work with this idea.
+
+::: column.grow(width=350)
+
+    x-img(src="https://static8.depositphotos.com/1051392/952/i/950/depositphotos_9520930-stock-photo-3d-running-around-diagram.jpg" width=350 height=219)
+
+::: column.grow(width=350)
+
+    x-img(src="https://static6.depositphotos.com/1016225/556/i/950/depositphotos_5562081-stock-photo-barefoot-frame.jpg" width=350 height=350)
+
+:::
+
+Imagine you are going to run around a circular track that has a diameter of 500 meters and you want to estimate how far you’lll run. This distance around the track is [[3]] times as long as the distance across, so you’ll run about [[1500]] meters. This is 1.5 kilometers. The actual distance is a little [[more than | less than]] this, but as an estimate for a distance that you’ll run, this works well.
+
+::: column(width=400)
+
+    x-img(src="https://st2.depositphotos.com/2222024/5609/i/950/depositphotos_56093859-stock-photo-happy-little-orange-havanese-puppy.jpg" width=400 height=267)
+
+:::
+
+Now imagine you want to build a fence to enclose a circular play area for your dog. You have measured the distance across the circle to be 60 meters and you know the distance around the circle is about [[3]] times the distance across. Therefore, you buy 180 meters of fencing. You use all the fencing in an attempt to create perfect circle and find out that you have purchased [[not enough fencing | too much fencing | just the right amount of fencing]].
+
+It takes a little more than 3 diameters to equal the circumference. Using 3 as an approximation is fine for some general estimates, but we need to keep working to get to a point where we can more accurately calculate the circumference of a circle.
+
+    // FIND 3.14 AND ESTABLISH FORMULA
+
+Let’s see if we can determine how much more of the 4th diameter is needed to fully wrap around the circle. Draw a line below and watch as it is then formed into a circle.
+
+    // INTERACTIVE-05: Finding PI
+
+Let’s think about how many diameters are needed to make the circumference. Determining how many times one number is needed to make another is represented by [[division | multiplication | subtraction]]. 
+
+Dividing the length of the circumference by the length of the diameter will determine how many diameters are needed to equal the circumference. Do that division and enter the value in the table.
+
+Try it again with a different length starting line.
+
+The little bit more of the 4th diameter that is needed to wrap around a circle is 0.14 of a diameter. While it took 4 diameters off a square to wrap around the square, it only takes [[3.14]] diameters to fit around a circle.
+
+    // HANDS-ON ICON
+
+Now is another great time to step away from your device and try this on any circle at home. Use a ruler to measure the diameter of a circle. Then, wrap a piece of string around the circle and make a mark where the string meets the starting point. Measure this length of string with a ruler. Divide the circumference by the diameter. Do you get a result close to 3.14?
+
+We’ve now established the idea that the circumference of a circle can be found by measuring the diameter of a circle and [[multiplying | dividing]] it by [[ 3.14 | 4 | 5]]. This idea written as a formula is C = 3.14 x D. Let’s add this formula to our toolkit. Since the diameter is [[double | half]] of the radius, we can also measure the radius, double it and then multiply by 3.14. This gives another version of the formula: C = 3.14 x [[2]] x R.
+
+::: column(width=400)
+
+    x-img(src="https://st2.depositphotos.com/2222024/5609/i/950/depositphotos_56093859-stock-photo-happy-little-orange-havanese-puppy.jpg" width=400 height=267)
+
+:::
+
+Now we can accurately calculate the amount of fencing needed to enclose a circle with a diameter of 60 meters. Recall that 180 meters was [[not enough | too much]] fencing. If the diameter is 60, we find the circumference by multiplying 60 by [[3.14]]. The actual circumference is [[188.4]]. If you can only buy fencing whole-meter sections, you should buy [[189]] meters of fencing. Only using 180 meters of fencing as we originally estimated would have left almost a 10 meter opening!
+
+Some of the earliest civilizations have pondered the question of how many diameters are needed to equal the circumference of a circle. A Babylonian clay tablet dated between 1900 BC to 1600 BC described the number of diameters needed to be 3 ⅛, or 3.125. This is only [[0.15]] away from the 3.14 we established above. The Rhind Mathematical Papyrus from around 1650 shows the Greeks used 3.16 as the number of diameters needed. This is only [[0.02]] from 3.14.
+
+::: column(width=600)
+
+    x-img(src="https://media.britishmuseum.org/media/Repository/Documents/2014_10/5_19/595e9f4b_efb3_481a_9257_a3bb013ab718/mid_00366139_001.jpg" width=600 height=109)
+
+:::
+
+The Shatapatha Brahmans, an Indian text from 400-300 BC, shows that Indians used 3.139. This is only [[0.001]] away from 3.14.
+
+It turns out that 3.14 is not the exact number of diameters needed to equal the circumference. In the 3rd century BCE, Greek mathematician Archimedes placed polygons inside and outside of circles to estimate the number to be 3.1418. 400 years later, Greek mathematician Ptolemy used polygons with 360 sides to estimate the number to be 3.1418.
+
+Through the work of these and other mathematicians around the world, the number became more and more precise. When describing this number, mathematicians would say things like “the quantity which, when the diameter is multiplied by it, yields the circumference,” or other wordy descriptions.
+
+In 1706, William Jones, a Welsh mathematician, simplified things by using a letter of the Greek alphabet to stand for this number. The greek work “perimetros” roughly translates to “around” so Jones used the first letter of the word “perimetros.” The Greek alphabet uses different symbols than the English alphabet. In Greek, “perimetros” is written περίμετρος. The first letter of this word is π and pronounced “Pi” in English. Swiss mathematician Leonard Euler popularized the π symbol when he began using it in 1737. It’s just a coincidence that the English pronunciation of the Greek letter π also happens to be the name of a circular dessert!
+
+::: column(width=480)
+
+    x-img(src="https://media.giphy.com/media/3ohjUZawOtwng26rN6/giphy.gif" width=480 height=360)
+
+:::
+
+So what is the exact value of π? Is it 3.14? 3.141? It turns out that mathematicians have discovered patterns and rules that can determine each next digit of π. Today, mathematicians have programs on supercomputers to determine digits of π. Mathematicians currently know over 30 trillion digits after the decimal point! The first 5 digits of π after the decimal are 3.14159. You’ll learn more about the decimal expansion of π in future mathigon chapters. The most commonly used fractional approximation of π is 22/7 or 3 1/7 since this equals 3.142857.
+
+Let’s not let the ever-expanding decimal expansion of π detract from the simplicity here. The number π represents how many diameters of a circle are needed to equal the circumference.
+
+In the rest of this chapter, we’ll use the approximation of 3.14.
+
+We had written the formulas as C = 3.14 x D and C = 3.14 x 2 x [[R | D]]. Now that we know the Greek letter π is used to represent the exact number of diameters needed to equal the circumference, we can replace 3.14 with π in these formulas. C = π x [[ D | R ]] or C = π x [[2] x R. The formulas are often written without the multiplication symbols as follows: C = πD and C = 2πR. Let’s update our toolkit with these versions of the formulas.
+
+Traffic is a concern in cities around the world. In an attempt to keep traffic outside of the city-center, many cities have circular highways going around the city. Let’s explore three examples around the world.
+
+    // INTERACTIVE-06: Circular highways
+
+::: column(width=400)
+
+    x-img(src="https://st4.depositphotos.com/13193824/19879/i/1600/depositphotos_198799636-stock-photo-young-smiling-woman-sunglasses-riding.jpg" width=400 height=292)
+
+:::
+
+An average road bike tire has a diameter of 68 cm. Recall that the distance a tire travels in one revolution is the same as the [[circumference | diameter]] of the tire. In one revolution of the tires of an average road bike, the bike travels [[214]] cm. The loop around Moscow is 15.1 km. This equals 1,510,000 cm. If you were to ride your bike around this loop, your wheels would make about [[7,056]] revolutions!
+
+    // BACK TO INTRODUCTORY TIRE/LAP EXAMPLE
+
+    // DIAGRAM: Track
+
+We are now ready to answer the question from the start of the chapter! Recall that the tires need to be changed after about 52,000 revolutions and that we want to know how many laps around the track equals 52,000 tire revolutions.
+
+The diameter of the tire is [[27]] inches so the circumference is [[85]] inches. 52,000 revolutions gives a distance traveled of [[4,420,000]] inches. This equals about 70 miles.
+
+Now, calculate the distance around 1 lap. The 4 straight sections have a total distance of [[7,920]] feet. Combining the 4 turns of the track creates [[1 | ½ | 2]] circles.
+
+    // ANIMATION-03: Lap distance
+
+The radius of the circle is [[840.8]] feet, so the distance around the circle is [[5,280]] feet. Therefore, the total distance of 1 lap is [[13,200]] feet. This equals 2.5 miles.
+
+Each set of tires last 70 miles and the distance around one lap is 2.5 miles, so the tires should be changed after [[28]] laps. 
+
+The race is called the Indy 500 because cars must drive 500 miles. Each lap is 2.5 miles, so the race is [[200]] laps long. That means there are about [[7]] tire changes over the course of the race. That’s a lot of tires!
+
+Let’s end this chapter with one final question. What do you think is longer - the height of the can of tennis balls or the distance around the can? [[the height of the can | the distance around the can]].
+
+    // IMG
+
+A tennis ball has a diameter of 6.7 cm and the can holds 3 of them with no extra room at the top or the bottom. Therefore, the height of the can is [[20.1]] cm.
+
+The distance around the can is the same as the [[circumference | diameter | radius]] of the cap of the can.
+
+    // IMG
+
+The circumference of the cap is 3.14 x [[D | R]]. The distance around the can is [[21]] cm. The longer distance is the [[distance around the can | height of the can]].
+
+We could have answered this question without doing any calculations! The height of the can is the same as [[3]] diameters of the tennis balls. The distance around the can is 𝞹 [[diameters  radii]]. The number 𝞹 is [[more than | less than]] 3, so the distance around any can (like this can of squash balls) that perfectly holds 3 circular objects is more than the height of that can!
+
+    // IMG
 
 ---
 
