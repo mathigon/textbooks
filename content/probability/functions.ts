@@ -97,56 +97,78 @@ export function diceSimulation($step: Step) {
 //   $step.score("click")
 // }
 
+//need the probability as a decimal on the thing
+
 
 //Applet: 12x12 square of people.assigned hats, scarves and coats, and glasses.On right, list of these; you can click them to arrange people on the left and right with and without those things on.
 
 export function conditional($step: Step) {
   const $svg = $step.$('svg.conditional')!;
 
-  let log = console.log
+  if(0)
+  {
+    const $testText = document.getElementById('boogle')
+    console.log($testText)
+    let frameCount = 0
+    function loop() {
+      ++frameCount
+      $testText.setTransform({ x: frameCount, y: frameCount })
+      setTimeout(loop, 20);
+    }
+    loop()
+  }
 
   let onlyOneColumn = $svg.attr('only-one-column') === "true"
   const adornmentColors = ['blue', 'red', 'purple', 'green']
   const $people = []
   const personSpacing = 24
-  const firstColumnOfPeopleX = personSpacing / 2.
+  const firstColumnOfPeopleX = personSpacing
   const lastColumnOfPeopleX = 11 * personSpacing + firstColumnOfPeopleX
-  const topColumnOfPeopleY = personSpacing / 2.
+  const topColumnOfPeopleY = personSpacing * 1.5
 
+  //slider
   {
-    let verticalPosition = personSpacing
+    let verticalPosition = topColumnOfPeopleY - personSpacing
 
-    let horizontalThingWidth = 11 * personSpacing
-    let horizontalThingHeight = personSpacing / 2.
-    let $horizontalThing = $N('rect', {
-      x: firstColumnOfPeopleX, y: verticalPosition, rx: 0,
-      width: horizontalThingWidth, height: horizontalThingHeight,
+    let railWidth = 12 * personSpacing
+    let railHeight = 10
+    let railX = firstColumnOfPeopleX - personSpacing / 2.
+    let $rail = $N('rect', {
+      x: railX, y: verticalPosition - railHeight/2., rx: 0,
+      width: railWidth, height: railHeight,
     }, $svg);
-    $svg.append($horizontalThing)
+    $svg.append($rail)
 
-    const grabbableThingHeight = horizontalThingHeight * 2.5
-    const grabbableThingVerticalPosition = verticalPosition + horizontalThingHeight / 2. - grabbableThingHeight / 2.
-    let $grabbableThing = $N('rect', {
-      x: horizontalThingWidth / 2., y: grabbableThingVerticalPosition, rx: 0,
-      width: personSpacing / 2., height: grabbableThingHeight,
+    //wasn't getting sane values from svg!
+    let handleWidth = 10.
+    const handleHeight = railHeight * 2.5
+    let $handle = $N('rect', {
+      x: railX - handleWidth/2., y: verticalPosition, rx: 0,
+      width: handleWidth, height: handleHeight,
       class:'red'
     }, $svg);
-    $svg.append($grabbableThing)
+    $svg.append($handle)
+    
 
-    slide($grabbableThing, {
+    let specifiedProbabilityValue = 0.
+    let handleX = railWidth * specifiedProbabilityValue
+    $handle.setTransform({ x: handleX, y: verticalPosition - handleHeight })
+
+    //wanna hit the horizontal thing too
+    slide($svg, {
       move:(p,start,last)=> {
-        let displacementFromStart = p.x - start.x
+        specifiedProbabilityValue = (p.x - railX) / railWidth
+        if (specifiedProbabilityValue < 0.)
+          specifiedProbabilityValue = 0.
+        if (specifiedProbabilityValue > 1.)
+          specifiedProbabilityValue = 1.
 
-        // let constrainedPosition = p.x < firstColumnOfPeopleX ? firstColumnOfPeopleX : p.x > lastColumnOfPeopleX ? lastColumnOfPeopleX : p.x
+        $handle.setTransform({ x: railWidth * specifiedProbabilityValue, y: verticalPosition - handleHeight })
 
-        // log(displacementFromStart)
-        $grabbableThing.setTransform({ x: displacementFromStart, y: grabbableThingVerticalPosition - grabbableThingHeight/2.})
-
-        log((p.x-firstColumnOfPeopleX) / horizontalThingWidth)
-
-        let sliderProbability = (p.x - start.x) / horizontalThingWidth
-        // if(sliderProbability < .1)
-        //   $step.score('slider-probability')
+        if(specifiedProbabilityValue > .9){
+          $step.score('slider-probability')
+          console.log("scored...?")
+        }
       }
     });
   }
@@ -155,7 +177,7 @@ export function conditional($step: Step) {
     return (i & 1 << j) >> j
   }
   function logBits(bits) {
-    log(queryBit(bits, 3), queryBit(bits, 2), queryBit(bits, 1), queryBit(bits, 0))
+    console.log(queryBit(bits, 3), queryBit(bits, 2), queryBit(bits, 1), queryBit(bits, 0))
   }
   const adornmentNumeratorFunctions = [
     () => 2,
@@ -173,6 +195,7 @@ export function conditional($step: Step) {
     }
   }
 
+  let buttons = []
   let buttonWidth = 20
   let buttonHeight = 30
   for (let j = 0; j < (onlyOneColumn?1:2); j++) {
@@ -183,15 +206,24 @@ export function conditional($step: Step) {
         class: adornmentColors[i]
       }, $svg);
 
+      buttons.push(button)
+
       button.setTransform({ x: lastColumnOfPeopleX + 60 + (j?1:-1) * (buttonWidth / 2. + 2), y: 40 + i * (4 + buttonHeight) });
       $svg.append(button)
       button.i = i
       button.j = j
+      button.clickedAtSomePoint = false
       button.on('click', () => {
         if (button.j === 0 )
           rearrange(button.i, indexOnTop)
         else
           rearrange(indexOnLeft, button.i) 
+
+        button.clickedAtSomePoint = true
+        let numClicked = 0
+        buttons.forEach((b)=>{if(b.clickedAtSomePoint) ++numClicked})
+        if (numClicked >= 3)
+          $step.score('press-all-buttons')
       })
     }
   }
@@ -241,7 +273,7 @@ export function conditional($step: Step) {
       //   console.error("non integer combination: ")
       // totalProbability += combinationProb
       // logBits(adornmentBits);
-      // log(numWithThisCombination)
+      // console.log(numWithThisCombination)
     }
 
     let limit = pIndex + numWithThisCombination
@@ -301,8 +333,8 @@ export function conditional($step: Step) {
         ++numInTopRight
     })
 
-    // log(newIndexOnLeft,newIndexOnTop)
-    // log(numInTopLeft,numInTopRight)
+    // console.log(newIndexOnLeft,newIndexOnTop)
+    // console.log(numInTopLeft,numInTopRight)
 
     if ((leftWidth !== 0 && numInTopLeft % leftWidth !== 0 ) || (rightWidth !== 0 && numInTopRight % rightWidth !== 0 )) {
       console.error("indivisible:")
@@ -356,20 +388,6 @@ export function conditional($step: Step) {
       repositionPerson(p, horizontalPosition, verticalPosition)
     })
   }
-
-  // let frameCount = 0
-  // function loop() {
-  //   ++frameCount
-
-  //   if (frameCount % 3 === 0 && frameCount / 3 < 16) {
-  //     let bits = frameCount / 3
-  //     // logBits(biQ- bits % 4) / 4, bits % 4)
-  //     rearrange((bits - bits % 4)/4, bits%4)
-  //   }
-
-  //   setTimeout(loop, 20);
-  // }
-  // loop()
 }
 
 
