@@ -361,9 +361,9 @@ number of handshakes would be [[`n×(n–1)`|`n×(n+1)`|`n^2`]].
 ---
 > id: handshakes-2a
 
-Unfortunately this answer is not quite right. Notice how <x-target to=".handshakes tr:first-child
-td:first-child, .handshakes tr:first-child td:nth-child(2)">the first two entries on the top
-row</x-target> are actually the same, just flipped around.
+Unfortunately this answer is not quite right. Notice how [the first two entries on the top
+row](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) are
+actually the same, just flipped around.
 
 In fact, we have counted every handshake [[twice|once|three times]], _{span.reveal(when="blank-0")}
 once for each of the two people involved. This means that the correct number of handshakes for
@@ -827,8 +827,7 @@ Let us think, once more, about networks and maps. Imagine that a delivery
 service has to visit ${tsn}{tsn|8|2,50,1} different cities to distribute
 parcels. We can think of these cities as the vertices in a graph. If all the
 cities are connected by roads, this is a [[complete graph|cycle|bipartite graph]],
-so there are <mfrac><mrow>${tsn} × (${tsn} – 1)</mrow><mn>2</mn></mfrac> =
-${tsn*(tsn-1)/2} edges in total.
+so there are `(var("tsn") × (var("tsn") – 1)) / 2 = var("tsn*(tsn-1)/2")` edges in total.
 
 The delivery truck has to visit all cities, in any order. In the Königsberg
 bridges problem we wanted to find paths which travel along _every edge_ exactly

@@ -19,7 +19,7 @@ for the skateboards – and it turns out that building them is not cheap:
 
 In other words, the __cost__ of producing _n_ skateboards is
 
-{.text-center.no-voice} _{.pill.orange}cost_ = _{x-equation(solution="5000+30×n")}_.
+{.text-center.no-voice} [cost](pill:orange) = _{x-equation(solution="5000+30×n")}_.
 
 ---
 > id: demand
@@ -47,7 +47,7 @@ A higher price means that fewer people want to buy a skateboards, so the graph
 of the function has to move downwards. After doing some market research,
 economists came up with the following equation:
 
-{.text-center} _{.pill.teal}demand_ = 2800 – 15 × _{.pill.purple}price_
+{.text-center} [demand](pill:teal) = 2800 – 15 × [price](pill:purple)
 
 For example, if a skateboard costs \$80, the demand will be [[1600]] units.
 
@@ -59,12 +59,12 @@ For example, if a skateboard costs \$80, the demand will be [[1600]] units.
 The __revenue__ of our company is the total income we make. It is the number of
 skateboards sold (the _demand_) times the price of each:
 
-{.text-center} _{.pill.green}revenue_ = _{.pill.teal}demand_ × _{.pill.purple}price_
+{.text-center} [revenue](pill:green) = [demand](pill:teal) × [price](pill:purple)
 
 But the number we are more interested in is our __profit__: the revenue we make
 from selling skateboards, minus the cost of producing them. Can you find an
-equation that expresses our  _{.pill.yellow}profit_ in terms of just the
-_{.pill.purple}price_ of every skateboard?
+equation that expresses our [profit](pill:yellow) in terms of just the
+[price](pill:purple) of every skateboard?
 
     x-equation-system(steps="demand*price-(5000 + 30*demand) | (2800-15*price)*price-5000-30*(2800-15*price)" hints="intro-1|intro-2|intro-3")
       table
@@ -80,9 +80,8 @@ _{.pill.purple}price_ of every skateboard?
 ---
 > id: intro-table
 
-Notice that this equation contains _{.pill.purple}price_ as well as
-_{.pill.purple}`price^2`_. It is called a [__Quadratic
-Equation__](gloss:quadratic-equation), named after the Latin word “quadratus”
+Notice that this equation contains [price](pill:purple) as well as [`price^2`](pill:purple). It is
+called a [__Quadratic Equation__](gloss:quadratic-equation), named after the Latin word “quadratus”
 for square.
 
 To work out how to maximise our profit, let’s calculate the profit for a few
@@ -90,8 +89,8 @@ different prices:
 
 ::: .overflow-wrap.overflow-table
 
-| _{.pill.purple}price/\$_  | 20   | 40   | 60  | 80  | 100 | 120 | 140 | 160 | 180 |
-| _{.pill.yellow}profit/\$_ | –30k | 17k | [[52]]k | [[75]]k | [[86]]k | [[85]]k | _{span.reveal(when="blank-3")}72k_ | _{span.reveal(when="blank-3" delay=400)}47k_ | _{span.reveal(when="blank-3" delay=800)}10k_ |
+| [price/$](pill:purple)  | 20   | 40   | 60  | 80  | 100 | 120 | 140 | 160 | 180 |
+| [profit/$](pill:yellow) | –30k | 17k | [[52]]k | [[75]]k | [[86]]k | [[85]]k | _{span.reveal(when="blank-3")}72k_ | _{span.reveal(when="blank-3" delay=400)}47k_ | _{span.reveal(when="blank-3" delay=800)}10k_ |
 {.grid}
 
 :::
@@ -174,9 +173,8 @@ we would just have [[a linear equation|zero|no solution]].
 ---
 > id: parabola
 
-Like you saw in the [introduction](/course/quadratics/introduction), plotting
-the graph of a quadratic function in a coordinate system gives a curved shape
-called a __Parabola__:
+Like you saw in the [introduction](/course/quadratics/introduction), plotting the graph of a
+quadratic function in a coordinate system gives a curved shape called a __Parabola__:
 
     x-coordinate-system(x-axis="-5,5,1" y-axis="-3,5,1")
 
@@ -184,21 +182,16 @@ called a __Parabola__:
 
 Try changing the values of _a_, _b_ and _c_, and see how the parabola changes.
 
----
-
-To solve a quadratic equation, we have to find the points where `y = 0`. These
-are the points where the graph of the parabola [[crosses the x-axis|crosses the
+{.reveal(when="var-0 var-1 var-2")} To solve a quadratic equation, we have to find the points where
+`y = 0`. These are the points where the graph of the parabola [[crosses the x-axis|crosses the
 y-axis|turns around]].
 
-{.reveal(when="blank-0")} While linear equations always have exactly one
-solution, we can see from the diagram that quadratic equations can sometimes
-have and _{span.var-action}no solution_, _{span.var-action}one solution_, or
-even _{span.var-action}two solutions_.
+{.reveal(when="blank-0")} While linear equations always have exactly one solution, we can see from
+the diagram that quadratic equations can sometimes have and [no solution](action:set(1,-2,2)),
+[one solution](action:set(1,2,1)), or even [two solutions](action:set(1,-4,2)).
 
-
-{.reveal(when="blank-1")} In the following sections we will discover why that
-is the case, learn several different methods to find all solutions of a
-quadratic equation.
+In the following sections we will discover why that is the case, learn several different methods to
+find all solutions of a quadratic equation.
 
 ---
 

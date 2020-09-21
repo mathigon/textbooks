@@ -441,11 +441,11 @@ Umjesto da podijele krug na neki broj segmenata (poput 360 stupnjeva), matemati�
 
 ::: column.grow
 
-A _{span.var-action} puni krug_ ima opseg _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
+A [puni krug](action:setState(0)) ima opseg _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} Za _{span.var-action} rotaciju polukruga_, odgovarajuća udaljenost duž oboda je _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
+{.reveal(when="eqn-0")} Za [rotaciju polukruga](action:setState(1)), odgovarajuća udaljenost duž oboda je _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} Za _{span.var-action} rotaciju četvrtine kruga_, udaljenost duž oboda je _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
+{.reveal(when="eqn-1")} Za [rotaciju četvrtine kruga](action:setState(2)), udaljenost duž oboda je _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
 {.reveal(when="eqn-2")} I tako dalje: ovaj način mjerenja uglova naziva se [__radijanima__](gloss:radians) (ovo se možeš zapamtiti kao "jedinice radijusa").
 
@@ -601,12 +601,12 @@ U prethodnim smo odjeljcima naučili nazive dane nekoliko različitih dijelova k
 
 ::: column.grow(parent="right")
 
-* {.r} [{.red} seant](pill:secant) je linija koja presijeca krug u dvije točke. [Nastaviti](btn:next)
-* {.r.reveal(when="next-0")} A [{.green} akord](pill:chord) je linijski segment čije krajnje točke leže na obodu kruga. [Nastaviti](btn:next)
-* {.r.reveal(when="next-1")} A [{.blue} tangenta](pill:tangent) je linija koja dodiruje krug u točno jednoj točki. To se zove __točka tangencije__. [Nastaviti](btn:next)
-* {.r.reveal(when="next-2")} [{.yellow} luk](pill:arc) presjek je kruga. [Nastaviti](btn:next)
-* {.r.reveal(when="next-3")} [{.teal} sektor](pill:sector) deo je unutrašnjosti kruga, omeđen _lukom_ i _dva radijusa_. [Nastaviti](btn:next)
-* {.r.reveal(when="next-4")} Konačno, [{.purple} segment](pill:segment) je dio unutrašnjosti kruga, omeđen _lukom_ i _akordom_. [Nastaviti](btn:next)
+* {.r} [{.red} seant](target:secant) je linija koja presijeca krug u dvije točke. [Nastaviti](btn:next)
+* {.r.reveal(when="next-0")} A [{.green} akord](target:chord) je linijski segment čije krajnje točke leže na obodu kruga. [Nastaviti](btn:next)
+* {.r.reveal(when="next-1")} A [{.blue} tangenta](target:tangent) je linija koja dodiruje krug u točno jednoj točki. To se zove __točka tangencije__. [Nastaviti](btn:next)
+* {.r.reveal(when="next-2")} [{.yellow} luk](target:arc) presjek je kruga. [Nastaviti](btn:next)
+* {.r.reveal(when="next-3")} [{.teal} sektor](target:sector) deo je unutrašnjosti kruga, omeđen _lukom_ i _dva radijusa_. [Nastaviti](btn:next)
+* {.r.reveal(when="next-4")} Konačno, [{.purple} segment](target:segment) je dio unutrašnjosti kruga, omeđen _lukom_ i _akordom_. [Nastaviti](btn:next)
 
 :::
 
@@ -661,11 +661,11 @@ Nažalost, nitko nije točno znao _koliko je bila velika_ Zemlja - sve do oko 20
 
 ::: column.grow
 
-Kao što možete vidjeti na dijagramu, [{.red} luk](pill:arc) dio je [[obima|diameter|tangent]] kruga, a [{.yellow} sektor](pill:sector) dio [[unutrašnjosti|radius|perimeter]] kruga.
+Kao što možete vidjeti na dijagramu, [{.red} luk](target:arc) dio je [[obima|diameter|tangent]] kruga, a [{.yellow} sektor](target:sector) dio [[unutrašnjosti|radius|perimeter]] kruga.
 
 ::: .reveal(when="blank-0 blank-1")
 
-Luk između dvije točke _A_ i _B_ često se piše kao `arc(AB)`. Ova je definicija malo dvosmislena: postoji [{.purple} drugi luk](pill:major) koji povezuje _A_ i _B_, ali ide obrnuto.
+Luk između dvije točke _A_ i _B_ često se piše kao `arc(AB)`. Ova je definicija malo dvosmislena: postoji [{.purple} drugi luk](target:major) koji povezuje _A_ i _B_, ali ide obrnuto.
 
 Manji od dva luka naziva se __manji luk__, a veći se zove __glavni luk__. Ako su točke _A_ i _B_ točno jedna nasuprot, oba luka imaju jednaku duljinu i [[polukrugovi|diameters|circumferences]].
 
@@ -677,13 +677,13 @@ Manji od dva luka naziva se __manji luk__, a veći se zove __glavni luk__. Ako s
 
 ::: column.grow
 
-Da bismo pronašli duljinu luka ili područje jednog sektora, moramo znati odgovarajući kut u središtu kruga: to se zove [{.blue} središnji kut](pill:angle).
+Da bismo pronašli duljinu luka ili područje jednog sektora, moramo znati odgovarajući kut u središtu kruga: to se zove [{.blue} središnji kut](target:angle).
 
-Primjetite kako luk, sektor i kut zauzimaju _isti omjer_ cijelog kruga. Na primjer, ako je [{.blue} središnji kut](pill:angle) _{span.var-action} 90 °_, potrebna je [[jedna četvrtina|one half|one third]] [{.teal} punog kruga](pill:fangle).
+Primjetite kako luk, sektor i kut zauzimaju _isti omjer_ cijelog kruga. Na primjer, ako je [{.blue} središnji kut](target:angle) [90°](action:set90Deg()), potrebna je [[jedna četvrtina|one half|one third]] [{.teal} punog kruga](target:fangle).
 
 ::: .reveal(when="blank-0")
 
-To znači da je [{.red} dužina luka](pill:arc) takođe `1/4` [{.purple} cijelog opsega](pill:circ) kruga, a [{.yellow} područje](pill:sector) `1/4` od [{.orange} cijelog područja](pill:area) kruga.
+To znači da je [{.red} dužina luka](target:arc) takođe `1/4` [{.purple} cijelog opsega](target:circ) kruga, a [{.yellow} područje](target:sector) `1/4` od [{.orange} cijelog područja](target:area) kruga.
 
 Taj odnos možemo izraziti jednadžbom:
 
@@ -716,13 +716,13 @@ Sada možemo preurediti te jednadžbe da bismo pronašli onu varijablu koja nas 
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} Duljina luka](pill) | = | `"circumference" × c/360` |
+| [ Duljina luka](pill:red) | = | `"circumference" × c/360` |
 |                             | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} Područje sektora](pill) | = | `"circle area" × c/360` |
+| [ Područje sektora](pill:yellow) | = | `"circle area" × c/360` |
 |                                    | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -739,13 +739,13 @@ Ako se središnji kut mjeri u [radijanima](gloss:radians) a ne [stupnjeva](gloss
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} Dužina luka](pill) | = | `2 π r × c/(2π)` |
+| [ Dužina luka](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} Područje sektora](pill) | = | `π r^2 × c/(2π)` |
+| [ Područje sektora](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 
@@ -789,7 +789,7 @@ Eratosten je primijetio da je u podne na dan ljetnog solsticija obelisk bacio sj
 
 ::: .reveal(when="next-0")
 
-Eratosteni su izmjerili da je [{.teal} kut](pill:angle1) sjene 7,2 °. To je isto kao [{.purple} središnji kut](pill:angle2) [{.red} luk](pill:arc) od Aleksandrije do Sweneta, jer su [[naizmjenični|vertical|corresponding]] kutovi.
+Eratosteni su izmjerili da je [{.teal} kut](target:angle1) sjene 7,2 °. To je isto kao [{.purple} središnji kut](target:angle2) [{.red} luk](target:arc) od Aleksandrije do Sweneta, jer su [[naizmjenični|vertical|corresponding]] kutovi.
 
 :::
 ::: .reveal(when="blank-0")

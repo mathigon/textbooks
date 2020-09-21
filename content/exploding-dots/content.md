@@ -75,7 +75,7 @@ in the 15th century.
 {.r} There is one important property of numbers that we usually take for
 granted: all numbers are __unique__. In other words, there are no two different
 numbers that are equal. 5 and 8 are different, just like 100 is different from
-101, and so on. _{button.next-step} Continue_
+101, and so on. [Continue](btn:next)
 
 ::: column(width=300)
 
@@ -120,7 +120,7 @@ Since we humans are not God-like, you might decide that the question is
 meaningless. But that seems like a very unsatisfactory solution – and new
 discoveries always start by asking _“what if…”_
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: numberline
@@ -319,7 +319,7 @@ __{.m-yellow}1__ = __{.m-red}0__.*
 
 :::
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: warp-1
@@ -336,7 +336,7 @@ abstruse to think that _{span.nowrap}…999999_ could possibly equal –1.
 
     figure: include svg/number-line-1.svg
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: warp-2
@@ -360,7 +360,7 @@ and __division__.
 be divided any number of times by any integer, and still give an integer result
 (namely 0). If we focus on our number base of 10, we can see that 0 can be
 divided by 10 once, or twice, or thirty-seven times, or a million times.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: zero-list
@@ -496,10 +496,9 @@ To see why that’s the case, we need to look at the powers of 2 and 5:
 ---
 > id: flaw-1
 
-Notice how many of the powers of 5 end in <x-target to=".po2" no-margins>other,
-smaller powers of 5</x-target>. The same is also true for powers of 2. It turns
-out that we can create two infinite, 10-adic numbers, that always end in powers
-of 2 or 5 respectively:
+Notice how many of the powers of 5 end in [{.no-margins}other, smaller powers of 5](->.po2). The
+same is also true for powers of 2. It turns out that we can create two infinite, 10-adic numbers,
+that always end in powers of 2 or 5 respectively:
 
 ::: column(width=140)
 
@@ -517,7 +516,7 @@ __{.i.m-yellow}N__ = …1953125
 
 :::
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: flaw-2
@@ -609,7 +608,7 @@ into any [[even|odd|prime]] number of equal triangles.
 
 {.r.reveal(when="blank-0")} But what about _odd_ numbers? Draw a square on a
 sheet of paper, and then try dividing it into 3, 5 or 7 triangles of equal area.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: square-3

@@ -442,11 +442,11 @@ Em vez de dividir um círculo em algum número de segmentos (como 360 graus), os
 
 ::: column.grow
 
-Um _{span.var-action} círculo completo_ tem circunferência _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
+Um [círculo completo](action:setState(0)) tem circunferência _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} Para uma rotação de meio círculo _{span.var-action}_, a distância correspondente ao longo da circunferência é _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
+{.reveal(when="eqn-0")} Para uma [rotação de meio círculo](action:setState(1)), a distância correspondente ao longo da circunferência é _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} Para uma rotação de quarto de círculo _{span.var-action}_, a distância ao longo da circunferência é _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
+{.reveal(when="eqn-1")} Para uma rotação de [quarto de círculo](action:setState(2)), a distância ao longo da circunferência é _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
 {.reveal(when="eqn-2")} E assim por diante: essa maneira de medir ângulos é chamada [__radianos__](gloss:radians) (você pode se lembrar disso como “unidades de raio”).
 
@@ -602,12 +602,12 @@ Nas seções anteriores, você aprendeu os nomes dados a várias partes diferent
 
 ::: column.grow(parent="right")
 
-* {.r} Uma [{.red} secante](pill:secant) é uma linha que cruza um círculo em dois pontos. [Continuar](btn:next)
-* {.r.reveal(when="next-0")} Um acorde [{.green}](pill:chord) é um segmento de linha cujos pontos finais estão na circunferência de um círculo. [Continuar](btn:next)
-* {.r.reveal(when="next-1")} Uma tangente [{.blue}](pill:tangent) é uma linha que tocou um círculo exatamente em um ponto. Isso é chamado de __ponto de tangência__. [Continuar](btn:next)
-* {.r.reveal(when="next-2")} Um arco [{.yellow}](pill:arc) é uma seção da circunferência de um círculo. [Continuar](btn:next)
-* {.r.reveal(when="next-3")} Um setor [{.teal}](pill:sector) é uma parte do interior de um círculo, limitado por um _arco_ e _dois raios_. [Continuar](btn:next)
-* {.r.reveal(when="next-4")} Finalmente, um segmento [{.purple}](pill:segment) é uma parte do interior de um círculo, limitado por um _arco_ e _por um acorde_. [Continuar](btn:next)
+* {.r} Uma [{.red} secante](target:secant) é uma linha que cruza um círculo em dois pontos. [Continuar](btn:next)
+* {.r.reveal(when="next-0")} Um acorde [{.green}](target:chord) é um segmento de linha cujos pontos finais estão na circunferência de um círculo. [Continuar](btn:next)
+* {.r.reveal(when="next-1")} Uma tangente [{.blue}](target:tangent) é uma linha que tocou um círculo exatamente em um ponto. Isso é chamado de __ponto de tangência__. [Continuar](btn:next)
+* {.r.reveal(when="next-2")} Um arco [{.yellow}](target:arc) é uma seção da circunferência de um círculo. [Continuar](btn:next)
+* {.r.reveal(when="next-3")} Um setor [{.teal}](target:sector) é uma parte do interior de um círculo, limitado por um _arco_ e _dois raios_. [Continuar](btn:next)
+* {.r.reveal(when="next-4")} Finalmente, um segmento [{.purple}](target:segment) é uma parte do interior de um círculo, limitado por um _arco_ e _por um acorde_. [Continuar](btn:next)
 
 :::
 
@@ -665,11 +665,11 @@ Infelizmente, ninguém sabia exatamente o tamanho da Terra - até cerca de 200 a
 
 ::: column.grow
 
-Como você pode ver no diagrama, um arco [{.red}](pill:arc) faz parte da [[circunferência|diameter|tangent]] de um círculo e um setor [{.yellow}](pill:sector) faz parte do [[interior|radius|perimeter]] de um círculo.
+Como você pode ver no diagrama, um arco [{.red}](target:arc) faz parte da [[circunferência|diameter|tangent]] de um círculo e um setor [{.yellow}](target:sector) faz parte do [[interior|radius|perimeter]] de um círculo.
 
 ::: .reveal(when="blank-0 blank-1")
 
-O arco entre dois pontos _A_ e _B_ é geralmente escrito como `arc(AB)`. Essa definição é um pouco ambígua: existe um segundo arco [{.purple}](pill:major) que conecta _A_ e _B_, mas faz o contrário.
+O arco entre dois pontos _A_ e _B_ é geralmente escrito como `arc(AB)`. Essa definição é um pouco ambígua: existe um segundo arco [{.purple}](target:major) que conecta _A_ e _B_, mas faz o contrário.
 
 O menor dos dois arcos é chamado arco __menor__, e o maior é chamado arco __arco principal__. Se os pontos _A_ e _B_ são exatamente opostos um ao outro, ambos os arcos têm o mesmo comprimento e são [[semicírculos|diameters|circumferences]].
 
@@ -681,13 +681,13 @@ O menor dos dois arcos é chamado arco __menor__, e o maior é chamado arco __ar
 
 ::: column.grow
 
-Para encontrar o comprimento de um arco ou a área de um setor, precisamos saber sobre o ângulo correspondente no centro do círculo: isso é chamado de ângulo central [{.blue} ângulo central](pill:angle).
+Para encontrar o comprimento de um arco ou a área de um setor, precisamos saber sobre o ângulo correspondente no centro do círculo: isso é chamado de ângulo central [{.blue} ângulo central](target:angle).
 
-Observe como o arco, o setor e o ângulo ocupam _a mesma proporção_ de um círculo completo. Por exemplo, se o ângulo central [{.blue}](pill:angle) for _{span.var-action} 90 °_, ocupará [[um quarto|one half|one third]] de um círculo completo [{.teal}](pill:fangle).
+Observe como o arco, o setor e o ângulo ocupam _a mesma proporção_ de um círculo completo. Por exemplo, se o ângulo central [{.blue}](target:angle) for [90°](action:set90Deg()), ocupará [[um quarto|one half|one third]] de um círculo completo [{.teal}](target:fangle).
 
 ::: .reveal(when="blank-0")
 
-Isso significa que o [{.red} comprimento do arco](pill:arc) também é `1/4` de [{.purple} toda a circunferência](pill:circ) do círculo e a área [{.yellow} do o setor](pill:sector) é `1/4` de [{.orange} toda a área](pill:area) do círculo.
+Isso significa que o [{.red} comprimento do arco](target:arc) também é `1/4` de [{.purple} toda a circunferência](target:circ) do círculo e a área [{.yellow} do o setor](target:sector) é `1/4` de [{.orange} toda a área](target:area) do círculo.
 
 Podemos expressar essa relação em uma equação:
 
@@ -720,13 +720,13 @@ Agora, podemos reorganizar essas equações para encontrar a variável em que es
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} comprimento do arco](pill) | = | `"circumference" × c/360` |
+| [ comprimento do arco](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} área do setor](pill) | = | `"circle area" × c/360` |
+| [ área do setor](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -743,13 +743,13 @@ Se o ângulo central é medido em [radianos](gloss:radians) em vez de [graus](gl
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} comprimento do arco](pill) | = | `2 π r × c/(2π)` |
+| [ comprimento do arco](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} área do setor](pill) | = | `π r^2 × c/(2π)` |
+| [ área do setor](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 
@@ -793,7 +793,7 @@ Aqui você pode ver o poço em Swenet e o obelisco em Alexandria. Os raios solar
 
 ::: .reveal(when="next-0")
 
-Eratóstenes mediu que o ângulo [{.teal}](pill:angle1) da sombra era de 7,2 °. É o mesmo que o ângulo central [{.purple}](pill:angle2) do arco [{.red}](pill:arc) de Alexandria para Swenet, porque são ângulos [[alternados|vertical|corresponding]] .
+Eratóstenes mediu que o ângulo [{.teal}](target:angle1) da sombra era de 7,2 °. É o mesmo que o ângulo central [{.purple}](target:angle2) do arco [{.red}](target:arc) de Alexandria para Swenet, porque são ângulos [[alternados|vertical|corresponding]] .
 
 :::
 ::: .reveal(when="blank-0")

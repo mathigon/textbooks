@@ -16,8 +16,8 @@ const autoprefixer = require('autoprefixer');
 const gulpTextbooks = require('@mathigon/parser').gulp;
 const rtl = require('postcss-rtl');
 
-const LANGUAGES = ['en', 'ar', 'az', 'ca', 'cn', 'de', 'es', 'fr', 'hi', 'hr',
-  'it', 'ja', 'pt', 'ro', 'ru', 'sv', 'tr', 'vi'];
+const LANGUAGES = ['en'/*, 'ar', 'az', 'ca', 'cn', 'de', 'es', 'fr', 'hi', 'hr',
+  'it', 'ja', 'pt', 'ro', 'ru', 'sv', 'tr', 'vi'*/];
 const CACHE = __dirname + '/build/.cache.json';
 
 
@@ -51,7 +51,8 @@ function stylesheets() {
 }
 
 exports.watch = () => {
-  gulp.watch('content/**/*.{md,yaml}', markdown);
+  // TODO Also listen to YAML and SVG dependencies of .md files
+  gulp.watch('content/**/*.{md,pug}', markdown);
   gulp.watch('content/**/*.ts', scripts);
   gulp.watch('content/**/*.less', stylesheets);
 };

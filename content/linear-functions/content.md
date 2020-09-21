@@ -58,33 +58,18 @@ be similar._
 about similar triangles: the ratio of two of the sides is always constant. Move
 the point again, and watch what happens:
 
-    p.text-center.reveal(when="blank-0" delay=3000): span.math
-      mfrac
-        mrow: span.step-target.pill.var.green(data-to="dy") ${p.y}
-        mrow: span.step-target.pill.var.blue(data-to="dx") ${p.x}
-      mo(value="=") =
-      mn.var ${p.y/p.x || '???'}
+{.reveal.text-center(when="blank-0" delay=3000)}
+`pill(var("p.y"),"green","dy")/pill(var("p.x"),"blue","dx") = var("p.y/p.x || '???'")`
 
 {.reveal(when="slide-point")} But the opposite is also true: any point (_x_, _y_)
 that satisfies this equation must lie somewhere on the line. Therefore we now
 have an “equation” for the line:
 
-    p.text-center.reveal(when="slide-point" delay=1000): span.math
-      mfrac
-        mrow: mi.step-target.pill.green(data-to="dy") y
-        mrow: mi.step-target.pill.blue(data-to="dx") x
-      mo(value="=") =
-      mn 1.5
-    
-    p.r.text-center.reveal(when="slide-point" delay=2000)
-      span.math
-        mo(value="⇔") ⇔
-        mi.step-target.pill.green(data-to="dy") y
-        mo(value="=") =
-        mn 1.5
-        mi.step-target.pill.blue(data-to="dx") x
-      button.next-step Continue
+{.text-center.reveal(when="slide-point" delay=1000)} `pill(y,"green","dy") / pill(x,"blue","dx") = 1.5`
 
+{.r.text-center.reveal(when="slide-point" delay=2000)}
+`⇔ pill(y,"green","dy") = 1.5 pill(x,"blue","dx")`
+[Continue](btn:next)
 
 :::
 
@@ -147,19 +132,12 @@ the point where the line crosses the [[_y_-axis|_x_-axis]].
 
 We now have an equation for _any_ (non-vertical) line in the coordinate plane:
 
-    p.text-center: span.math
-      mi y
-      mo(value="=") =
-      mtext.b.i.orange m
-      mi x
-      mo +
-      mtext.b.i.cyan b
-      mtext ,
+{.text-center} `y = class(m,"b orange") x + class(b,"b cyan")`,
 
 {.r} where _{.b.orange}m_ and _{.b.cyan}b_ are two numbers we have to fill in.
 As you saw before, _{.b.orange}m_ is the __{.orange}slope__ of the line, and
 _{.b.cyan}b_ is the __{.cyan}*y*-axis intercept__.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: equation-1

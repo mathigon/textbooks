@@ -235,7 +235,7 @@
 {.reveal(when="blank-3")} للعثور على التأليه ، يمكننا استخدام تعريف [[tangent | sine | cosine]] : 
 
 {.text-center.reveal(when="blank-4")}`tan pill(α, "blue", "alpha") = 
-target("مقابل", "apothem") / target("متجاور", "half-base") =
+pill("مقابل", "yellow", "apothem") / pill("متجاور", "green", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")}`⇒ pill("تأليه", "yellow",

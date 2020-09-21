@@ -267,7 +267,7 @@ un [angolo interno](target:int-angle) del poligono:
 [[tangente|seno|coseno]]:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
-target("cateto opposto", "apothem") / target("cateto adiacente", "half-base") =
+pill("cateto opposto", "yellow", "apothem") / pill("cateto adiacente", "green", "half-base") =
 blank("apotema", "s", "s/2") / blank("s/2", "s", "apotema")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apotema", "yellow",

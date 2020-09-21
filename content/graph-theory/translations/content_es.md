@@ -310,7 +310,7 @@ Cada una de las ${n}{n|5|2,8,1} la gente en la fiesta se da la mano con ${n-1} o
 ---
 > id: handshakes-2a
 
-Lamentablemente, esta respuesta no es del todo correcta. Date cuenta cómo <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">las dos primeras entradas en la fila superior</x-target> en realidad son lo mismo, solo volteado. 
+Lamentablemente, esta respuesta no es del todo correcta. Date cuenta cómo [las dos primeras entradas en la fila superior](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) en realidad son lo mismo, solo volteado. 
 
 De hecho, hemos contado cada apretón de manos [[dos veces | una vez | tres veces]] _{span.reveal(when="blank-0")} una vez para cada una de las dos personas involucradas. Esto significa que la cantidad correcta de apretones de manos para ${n}{n|5|2,25,1} invitados es `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
 

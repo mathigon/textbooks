@@ -24,14 +24,14 @@
     figure.mountain: include svg/mountain.svg
 
 {.r} 今天，我们可以用卫星去测量山峰的高度，并且精确到厘米  —— 但是在 Radhanath 勘察印度的时候，没有这样的测量方法。
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-0")} 登山者一般使用 _高度计_ 来测量高度，这种装置主要是利用不同高度的气压差来计算，这就需要有人真正地爬到[每座山的山顶](->.mountain-top) —— 这是一项极其困难的任务，直到一个世纪后才真正实现。
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-1")} 
 你也可以尝试使用相似三角形来实现，就像我们在[前面课程](/course/transformations/similarity)中做的那样，但这种方法需要知从山脚到[山顶正下方](->.mountain-base)（山顶正下方的海平面点）的[距离](->.mountain-distance)，在测量树木或建筑的时候我们可以这样做，但对于高山来说，海平面点完全隐藏在数百米的岩石之下。
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: intro-2
@@ -46,7 +46,7 @@ _{button.next-step} Continue_
 当然，还有更先进的几何技术，[Radhanath](bio:sikdar) 用它发现了地球上最高的山峰：现在叫做 _珠穆朗玛峰_ ，他的测量只比今天官方公布的 8848 米差几米。
 
 在本课程中，你将学习三角形多种不同的特征和性质，你可以用它们来测量山峰高度，它们也是数学、科学与工程等众多领域的重要基础。
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -316,7 +316,7 @@ _{span.reveal(when="blank-0")}这个点叫作
 回想一下，[角平分线](gloss:angle-bisector) 把一个角分成两个相等的角。画出旁边三角形三个角的角平分线，要画角平分线，你需要依次点击形成被平分那个角的三个点。
 
 {.r.reveal(when="s0 s1 s2")} 三条平分线又再次相交于同一点，你可能也预料到会这样，但没有明显的理由表明为什么会这样 —— 三角形只是一种非常特殊的形状！
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal(when="next-0")} 位于角平分线上的点与构成角的两条直线之间的距离相等。例如，[蓝色角平分线](target:b-blue)上的任意点到边 _a_ 和边 _b_ 的距离相等，[红色平分线](target:b-red) 上的任意点到 [[a 和 b|a 和 c|b 和 c]] 边的距离相等。
 

@@ -234,7 +234,7 @@ Primero, podemos dividir el polígono en ${toWord(n)} congruente, [[isósceles |
 {.reveal(when="blank-3")} Para encontrar la apotema, podemos usar la definición de [[tangentes | seno | coseno]] : 
 
 {.text-center.reveal(when="blank-4")}`tan pill(α, "blue", "alpha") = 
-target("opposite", "apothem") / target("adjacent", "half-base") =
+pill("opposite", "yellow", "apothem") / pill("adjacent", "green", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")}`⇒ pill("apothem", "yellow",

@@ -581,12 +581,12 @@ omorât de către invadatorii romani. Ultimele sale cuvinte au fost “nu îmi d
 dreptarul și compasul.
 
 Începe prin a desena un segment de dreaptă oriunde în chenarul din dreapta. Cu
-<x-target no-margins to="#equilateral .tool:nth-child(3)">unealta linie</x-target>
+[unealta linie](->#equilateral_.tool:nth-child(3))
 selectată, trage de la început la sfârșit. Acest segment va fi una din laturile triunghiului.
 
 {.reveal(when="segment0")} Apoi desenează două cercuri care au ca centru unul din capetele segmentului
 și mergi până la celălalt capăt. Cu 
-<x-target no-margins to="#equilateral .tool:nth-child(5)">unealta cerc</x-target> selectată,
+[unealta cerc](->#equilateral_.tool:nth-child(5)) selectată,
 trage de la un capăt până la celălalt.
 
 {.reveal(when="circle1 circle2")} Deja avem două dintre vârfurile triunghiului,

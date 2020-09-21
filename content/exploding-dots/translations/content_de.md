@@ -504,10 +504,9 @@ Um zu sehen, warum das der Fall ist, müssen wir uns die Potenzen 2 und 5 ansehe
 ---
 > id: flaw-1
 
-Beachte, wie viele der 5er-Potenzen mit <x-target to=".po2" no-margins>anderen,
-kleineren Potenzen von 5</x-target> enden. Das Gleiche gilt auch für die 2er
-Potenzen: Es stellt sich heraus, dass wir zwei unendliche, 10-adische Zahlen
-erzeugen können, die immer mit 2er bzw. 5er Potenzen enden:
+Beachte, wie viele der 5er-Potenzen mit [{.no-margins}anderen, kleineren Potenzen von 5](->.po2)
+enden. Das Gleiche gilt auch für die 2er Potenzen: Es stellt sich heraus, dass wir zwei unendliche,
+10-adische Zahlen erzeugen können, die immer mit 2er bzw. 5er Potenzen enden:
 
 ::: column(width=140)
 
