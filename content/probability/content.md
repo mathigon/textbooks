@@ -433,11 +433,9 @@ But to make it easy to learn about statistical analysis, we’re going to focus 
 ::: column(width=380)
 
     svg.conditional(width=380 height=288, only-one-column="true")
-      <g id="boogle" fill="#C53F51">
-        <text id="&gt;-id">
-          <tspan x="2.016" y="11">id</tspan>
-        </text>
-      </g>
+      g.slider(fill="#C53F51")
+        text(x="2.016" y="11")
+      g.people
 
 :::
 
