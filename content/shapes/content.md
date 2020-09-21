@@ -621,10 +621,16 @@ While it’s not typical to think of the “diameter” of a square, it could be
 
 It takes [[4]] “diameters” of a square to wrap around a square and therefore create the perimeter of the square. Upon entering in the 4: In a square, the distance around is 4 times as long as the distance across. Let’s think about this same question with circles. How many diameters of a circle do you think are needed to wrap around the circle? [[--]].
 
+---
+> id: circle-drawing
+
 Let’s find out!
 
-    // INTERACTIVE-04: 'Wrapping' circumference
-
+    x-geopad(width=300 height=300)
+      svg
+        path.light(x="circle(point(150,150),100)")
+      x-icon-btn.restore(icon="restore")
+    
 1. Draw a circle. 
 2. Drag the diameter outside of the circle and wrap it around the circumference. 
 3. Keep doing this until you cover as much of the circumference as possible using full diameters. 
@@ -635,6 +641,8 @@ Let’s find out!
 This is a great time to step away from your device and try this at home. Find any circular object. It could be something in your kitchen like a glass or a plate or a can of vegetables. Or it could be something in your room like a round clock, or a marker, or a bottle of something. Anything circular will work! Use a piece of string and mark of the length of the diameter. Then use a ruler to place a mark on the string that is 3 diameters long. Wrap the string around the circle and see how close the length of three diameters gets to making it all the way around the circle!
 
 You predicted it would take [[--]] diameters to wrap around the circle. It seems to take a little more than [[3]] diameters to fit around a circle. But what is this “little bit more than?” Can we determine how much of a diameter this is? Is it 1/10 of a diameter? 1/5th of a diameter? 1/4th of the diameter? Before answering this question, let’s work with this idea.
+
+---
 
 ::: column.grow(width=350)
 

@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import {nearlyEquals, Point, Polygon, Segment} from '@mathigon/fermat';
-import {$N, animate, CanvasView, EventCallback, loadScript, SVGParentView, SVGView} from '@mathigon/boost';
+import {isBetween, nearlyEquals, Point, Polygon, Polyline, Segment} from '@mathigon/fermat';
+import {$N, animate, CanvasView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Geopad, GeoPath, GeoPoint, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
@@ -703,4 +703,33 @@ export function triangleTangram($step: Step) {
 
 function getTangramPolystr(polyGridPositions: Point[]) {
   return polyGridPositions.map(p => p.x + ' ' + p.y).join(',');
+}
+
+export function circleDrawing($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const colours = ['red', 'blue', 'green', 'yellow', 'purple'];
+  const center = new Point(150, 150);
+
+  let pending: string|undefined;
+
+  slide($geopad.$svg, {
+    start: (p: Point) => {
+      pending = colours.shift();
+      if (!pending) return;
+      $step.model[pending] = new Polyline(p);
+      $geopad.drawPath(pending, {classes: pending + ' thick'});
+    },
+    move: (p: Point) => {
+      if (!pending) return;
+      $step.model[pending] = new Polyline(...$step.model[pending].points, p);
+      // TODO Add a new Polyline.length method
+      if ($step.model[pending].circumference > 100) pending = undefined;
+      if (!isBetween(Point.distance(p, center), 90, 110)) {
+        $step.addHint('Make sure that you trace along the circumference of the circle.');
+      }
+    }
+  });
+
+  // TODO Add reset button
+  // TODO Check if students have used ~3.14 of rope
 }
