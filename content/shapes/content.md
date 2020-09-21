@@ -554,7 +554,6 @@ To determine how far the car goes in one revolution of the tire, we need to know
 
 We could use a piece of string and a ruler to determine the distance around a tire. Or we could use some sort of flexible measuring tool. Or we could walk around a circular track to determine the distance. However, it would be helpful if there was some relationship between the straight distance across a circle and the distance around a circle. Straight lines are much easier to measure with tools such as rulers and tape measures. We are going to explore this idea in this chapter.
 
-    // ESTIMATING THE CIRCUMFERENCE OF A TIRE BY ENCASEMENT
 
 In our previous geometry chapters, we used what we had learned about earlier shapes to help us with new ones. For example, we re-arranged parallelograms into rectangles to understand how to find the area of parallelograms. Let’s first find an estimate of the distance around the tire by using what we know about the perimeter of polygons. Place the square around the circle so it totally encloses the circle.
 
@@ -641,8 +640,6 @@ Now imagine you want to build a fence to enclose a circular play area for your d
 
 It takes a little more than 3 diameters to equal the circumference. Using 3 as an approximation is fine for some general estimates, but we need to keep working to get to a point where we can more accurately calculate the circumference of a circle.
 
-    // FIND 3.14 AND ESTABLISH FORMULA
-
 Let’s see if we can determine how much more of the 4th diameter is needed to fully wrap around the circle. Draw a line below and watch as it is then formed into a circle.
 
     // INTERACTIVE-05: Finding PI
@@ -711,8 +708,6 @@ Traffic is a concern in cities around the world. In an attempt to keep traffic o
 
 An average road bike tire has a diameter of 68 cm. Recall that the distance a tire travels in one revolution is the same as the [[circumference | diameter]] of the tire. In one revolution of the tires of an average road bike, the bike travels [[214]] cm. The loop around Moscow is 15.1 km. This equals 1,510,000 cm. If you were to ride your bike around this loop, your wheels would make about [[7,056]] revolutions!
 
-    // BACK TO INTRODUCTORY TIRE/LAP EXAMPLE
-
     // DIAGRAM: Track
 
 We are now ready to answer the question from the start of the chapter! Recall that the tires need to be changed after about 52,000 revolutions and that we want to know how many laps around the track equals 52,000 tire revolutions.
@@ -731,19 +726,23 @@ The race is called the Indy 500 because cars must drive 500 miles. Each lap is 2
 
 Let’s end this chapter with one final question. What do you think is longer - the height of the can of tennis balls or the distance around the can? [[the height of the can | the distance around the can]].
 
-    // IMG
+    // DIAGRAM: Tennis ball can comparison
 
 A tennis ball has a diameter of 6.7 cm and the can holds 3 of them with no extra room at the top or the bottom. Therefore, the height of the can is [[20.1]] cm.
 
 The distance around the can is the same as the [[circumference | diameter | radius]] of the cap of the can.
 
-    // IMG
+    // DIAGRAM: Tennis ball lid overlay
 
 The circumference of the cap is 3.14 x [[D | R]]. The distance around the can is [[21]] cm. The longer distance is the [[distance around the can | height of the can]].
 
 We could have answered this question without doing any calculations! The height of the can is the same as [[3]] diameters of the tennis balls. The distance around the can is 𝞹 [[diameters  radii]]. The number 𝞹 is [[more than | less than]] 3, so the distance around any can (like this can of squash balls) that perfectly holds 3 circular objects is more than the height of that can!
 
-    // IMG
+::: column(width=400)
+
+    x-img(src="https://images-na.ssl-images-amazon.com/images/I/61ZdvJup6PL._AC_SX679_.jpg" width=400 height=691)
+
+:::
 
 ---
 
