@@ -141,7 +141,6 @@ Just by looking at this region, it seems that [[more | less]] students will atte
 {.reveal(when="people-calculated")} So, indeed more students will likely attend the school in the pentagon region than the triangular region.
 
 ---
-
 > id: polygon-names
 
 We give different names to polygons based on how many sides they have. You may remember some of the names. Drag the names on top of the correct shapes.
@@ -161,9 +160,14 @@ We give different names to polygons based on how many sides they have. You may r
       .item(slot="range" name="9") 9 sides
       .item(slot="range" name="10") 10 sides
 
-::: .reveal(when="names-matched")
+---
+> id: jerusalem
+
+### Polygons in real life
 
 Let’s practice using these names by looking at some examples of polygons out in the world.
+
+The Dome of the Rock is an Islamic Shrine in the Old City of Jerusalem. Built in 692 BCE, the base is a regular [[octagon | pentagon | hexagon]].
 
 ::: column(width=300)
 
@@ -175,11 +179,10 @@ Let’s practice using these names by looking at some examples of polygons out i
 
 :::
 
-The Dome of the Rock is an Islamic Shrine in the Old City of Jerusalem. Built in 692 BCE, the base is a regular [[octagon | pentagon | hexagon]].
+---
+> id: giants-causeway
 
-:::
-
-::: .reveal(when="blank-0")
+The Giant’s Causeway in Northern Ireland is made up of over 40,000 polygonal basalt (a type of igneous rock) columns sticking out of the sea. The column outlined in white in [the photo](->.column-photo) is a [[hexagon | pentagon | octagon]].
 
 ::: column(width=300)
 
@@ -191,38 +194,43 @@ The Dome of the Rock is an Islamic Shrine in the Old City of Jerusalem. Built in
 
 :::
 
-The Giant’s Causeway in Northern Ireland is made up of over 40,000 polygonal basalt (a type of igneous rock) columns sticking out of the sea. The column outlined in white in [the photo](->.column-photo) is a [[hexagon | pentagon | octagon]].
+---
+> id: signs
+
+Most traffic signs are polygons - some regular and some irregular:
+
+::: column(width=160 parent="padded-thin")
+
+    // https://depositphotos.com/9417440/stock-illustration-set-of-14-highway-sign.html
+    x-img(src="images/sign-1.jpg" width=160 height=160)
+
+{.caption} [[Regular Octagon | Regular Hexagon | Regular Pentagon]]
+
+::: column(width=160)
+
+    x-img(src="images/sign-2.jpg" width=160 height=160)
+
+{.caption} [[Regular | Irregular]] pentagon
+
+::: column(width=160)
+
+    x-img(src="images/sign-3.jpg" width=160 height=160)
+
+{.caption} Regular triangle
+
+::: column(width=160)
+
+    x-img(src="images/sign-4.jpg" width=160 height=160)
+
+{.caption} Regular [[quadrilateral | triangle | diamond]]
 
 :::
 
-::: .reveal(when="blank-1")
+---
+> id: animals
 
-::: column(width=150)
-
-    x-img(src="https://static5.depositphotos.com/1008458/490/i/950/depositphotos_4906550-stock-photo-red-stop-sign.jpg" width=150 height=150)
-
-::: column(width=150)
-
-    x-img(src="https://st.depositphotos.com/1259239/2593/v/950/depositphotos_25933337-stock-illustration-usa-yield-sign.jpg" width=150 height=150)
-
-::: column(width=150)
-
-    x-img(src="https://static8.depositphotos.com/1259239/1058/v/950/depositphotos_10588449-stock-illustration-fork-in-road-sign.jpg" width=150 height=150)
-
-::: column(width=150)
-
-    x-img(src="https://st.depositphotos.com/1669155/2769/i/450/depositphotos_27698627-stock-photo-road-sign.jpg" width=150 height=225)
-
-:::
-
-All sorts of traffic signs are polygons - some regular and some irregular. 
-The sign of the two people crossing the street is a [[irregular | regular]] [[pentagon | hexagon | octagon]].
-
-:::
-
-::: .reveal(when="blank-2 blank-3")
-
-Polygons show up in all sorts of natural objects - honeycomb and starfish - to name a few.
+Polygons show up in all sorts of natural objects - honeycomb and starfish - to name a few. The
+10-sided starfish is a [[decagon | nonagon | octagon]]:
 
 ::: column(width=300)
 
@@ -234,11 +242,10 @@ Polygons show up in all sorts of natural objects - honeycomb and starfish - to n
 
 :::
 
-The 10-sided starfish is a [[decagon | nonagon | octagon]].
+---
+> id: nature-voronoi
 
-:::
-
-::: .reveal(when="blank-4")
+The ground of a dried out desert, the skin patterns on giraffes, and dragonfly wings look strikingly similar to Voronoi diagrams!
 
 ::: column(width=150)
 
@@ -258,7 +265,8 @@ The 10-sided starfish is a [[decagon | nonagon | octagon]].
 
 :::
 
-The ground of a dried out desert, the skin patterns on giraffes, and dragonfly wings look strikingly similar to Voronoi diagrams!
+---
+> id: flags
 
 Lastly, many flags use polygons. Drag the name of each country to the correct flag. Just make a guess if you’re not sure!
 
@@ -276,9 +284,8 @@ Lastly, many flags use polygons. Drag the name of each country to the correct fl
       .item(slot="range" name="finland") Finland
       .item(slot="range" name="nepal") Nepal
 
-:::
-
-::: .reveal(when="flags-matched")
+---
+> id: flags-1
 
 The hexagons in the South African flag and the pentagon in the Nepalese flag may not appear to be the standard image you may have in your head of a pentagon and a hexagon. Move around the vertices (these are the points where the edges meet) in the regular polygons below to make some irregular polygons of your own.
 
@@ -321,11 +328,10 @@ The hexagons in the South African flag and the pentagon in the Nepalese flag may
 
 :::
 
-:::
-
 ---
-
 > id: simple-tangram
+
+### Tangram
 
 Below are 7 polygons. Move and rotate the polygons to completely fill in the square
 
@@ -344,8 +350,9 @@ In 1815, Shan Chiao published “New Figures of the Tangram” which contained 3
 :::
 
 ---
-
 > id: football-polygons
+
+### Area of Polygons
 
 Now that we have a firm understanding of polygons, let’s revisit thinking about the area of polygons. The football below is made up of 12 black [[pentagons | hexagons | octagons]] and 20 white [[hexagons | pentagons | octagons]]. The mathematical name for this is 3D shape is a truncated icosahedron. A football is slightly more rounded than a true truncated icosahedron since the pentagons and hexagons bulge out due to the air pressure inside.
 
@@ -364,30 +371,40 @@ Most footballs are made of synthetic leather. Manufacturers make so many footbal
 | Calculate the area of one pentagon and one hexagon | Total area = 12 x [[35.7732]] + 20 x [[54.0223]] |
 | Calculate the area of the 12 pentagons and the 20 hexagons | Total area = [[429.28]] + [[1080.45]] |
 | Calculate the total area | Total area = [[1509.73]] square cm |
+{.grid}
 
 Recently, football manufacturers have begun to experiment with different shaped panels other than hexagons and pentagons. Here are some of the official footballs from the recent men’s World Cup tournaments.
 
-**2006 World Cup**
+::: column(width=160 parent="padded-thin")
 
-    x-img(src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Teamgeist_Ball_World_Cup_2006_Finale.jpg" width=400 height=300)
+    // https://commons.wikimedia.org/wiki/File:Teamgeist_Ball_World_Cup_2006_Brazil_vs._Croatia.jpg
+    x-img(src="images/ball-2006.jpg" width=160 height=160 credit="Jürgen Siebert, CC-BY-SA")
 
-**2010 World Cup**
+{.caption} 2006 World Cup
 
-    x-img(src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Jo%27bulani.jpg" width=400 height=419)
+::: column(width=160)
 
-**2014 World Cup**
+    x-img(src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Jo%27bulani.jpg" width=160 height=160)
 
-    x-img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Deutsches_Fu%C3%9Fballmuseum_2015_3.jpg/1280px-Deutsches_Fu%C3%9Fballmuseum_2015_3.jpg" width=400 height=300)
+{.caption} 2010 World Cup
 
-**2018 World Cup**
+::: column(width=160)
 
-    x-img(src="https://upload.wikimedia.org/wikipedia/commons/5/50/Adidas_Telstar_18_in_Russia_vs._Argentina.jpg" width=400 height=400)
+    x-img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Deutsches_Fu%C3%9Fballmuseum_2015_3.jpg/1280px-Deutsches_Fu%C3%9Fballmuseum_2015_3.jpg" width=160 height=160)
 
+{.caption} 2014 World Cup
+
+::: column(width=160)
+
+    x-img(src="https://upload.wikimedia.org/wikipedia/commons/5/50/Adidas_Telstar_18_in_Russia_vs._Argentina.jpg" width=160 height=160)
+
+{.caption} 2018 World Cup
+
+:::
 
 While these designs are creative and interesting, some studies have shown that the different shaped panels impact how the ball travels through the air!
 
 ---
-
 > id: area-methods
 
 Below is a polygon from a different Voronoi diagram. Each grid represents 1 square kilometer. Let’s find the area of this region in a few different ways.
@@ -399,8 +416,9 @@ Below is a polygon from a different Voronoi diagram. Each grid represents 1 squa
 No matter which approach we take, the area of the pentagon is 27.5 square units!
 
 ---
-
 > id: triangle-tangram
+
+### Curry’s Paradox
 
 Throughout our work on area, we have often used the idea that as parts of a shape are moved around, the area stays the same - as long as the pieces don’t overlap and all the pieces are used.
 
