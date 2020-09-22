@@ -9,7 +9,6 @@ import {$N, animate, CanvasView, EventCallback, loadScript, SVGParentView, SVGVi
 import {Geopad, GeoPath, GeoPoint, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
-import {Relation} from '../shared/components/relation';
 import '../shared/components/relation';
 import {VoronoiStep} from './types';
 
@@ -36,21 +35,21 @@ const cafeLocationPoints = [
 
 const voronoiColours = ['3c91e6', 'ff6b6b', 'ffe45e', '4ecdc4', '81366f', 'c93818', 'e2c312', '6bab90', 'e4533a'].map(c => '#' + c);
 
-export async function voronoi($step: VoronoiStep) {
+export async function voronoi1($step: VoronoiStep) {
 
   await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
 
-  const $geopad1 = $step.$('x-geopad.voronoi-1') as Geopad;
-  const $canvas1 = $geopad1.$('canvas.voronoi') as CanvasView;
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $canvas = $geopad.$('canvas') as CanvasView;
   const $voronoiButton = $step.$('button.show-voronoi')!;
-  const bounds = [0, 0, $canvas1.canvasWidth, $canvas1.canvasHeight];
+  const bounds = [0, 0, $canvas.canvasWidth, $canvas.canvasHeight];
 
   $step.model.dynPoints = [];
   $step.model.vorOpacity = 0;
   $step.model.cells = [];
 
   cafeLocationPoints.forEach(locationPoint => {
-    $geopad1.drawPoint(locationPoint, {classes: 'red', interactive: false});
+    $geopad.drawPoint(locationPoint, {classes: 'red', interactive: false});
   });
 
   $step.model.cells = getVoronoiPolys(bounds).map(poly => {
@@ -61,15 +60,15 @@ export async function voronoi($step: VoronoiStep) {
     showVor($step);
   });
 
-  $geopad1.$svg.on('mousemove', e => {
+  $geopad.$svg.on('mousemove', e => {
     $step.model.cells = $step.model.cells.map(cell => {
       const over = cell.poly.contains(new Point(e.offsetX, e.offsetY));
       return {...cell, over};
     });
   });
 
-  $geopad1.switchTool('point');
-  $geopad1.on('add:point', ({point}: {point: GeoPoint}) => {
+  $geopad.switchTool('point');
+  $geopad.on('add:point', ({point}: {point: GeoPoint}) => {
 
     $step.model.dynPoints.push({gPoint: point, dlOpacity: 1});
     $step.model.dynPoints = $step.model.dynPoints.slice();
@@ -97,13 +96,13 @@ export async function voronoi($step: VoronoiStep) {
       $step.model.eightPoints = true;
     }
 
-    $canvas1.clear();
+    $canvas.clear();
 
     const cells = $step.model.cells;
     if ($step.model.vorOpacity != 0) {
       cells.forEach((cell, i) => {
         const opacity = cell.over ? $step.model.vorOpacity / 2 : $step.model.vorOpacity / 3;
-        $canvas1.draw(
+        $canvas.draw(
             cell.poly,
             {
               fill: voronoiColours[i % 9],
@@ -134,21 +133,48 @@ export async function voronoi($step: VoronoiStep) {
         const strokeWidth = i == shortest.ind ? 2 : 1;
         const opacity = i == shortest.ind ? 1 : dlOpacity;
         if (opacity != 0) {
-          $canvas1.draw(edge, {stroke, strokeWidth, opacity});
+          $canvas.draw(edge, {stroke, strokeWidth, opacity});
         }
       });
     });
   });
+}
 
+async function handleAnim(index: number, $step: VoronoiStep) {
+  window.setTimeout((_: any) => {
+    const _anim = animate((progress, _) => {
+      const dlOpacity = 1 - progress;
+      const dp = $step.model.dynPoints;
+      dp[index] = {...dp[index], dlOpacity};
+      $step.model.dynPoints = dp.slice();
+    }, 500);
+  }, 1000);
+}
 
-  const $geopad2 = $step.$('x-geopad.voronoi-2') as Geopad;
+async function showVor($step: VoronoiStep) {
+  const anim = animate((progress, _) => {
+    $step.model.vorOpacity = progress;
+  }, 2000);
+  anim.promise.then(_ => $step.score('voronoi-diagram'));
+}
 
-  $step.model.cells.forEach((cell, i) => {
+export async function voronoi2($step: VoronoiStep) {
+
+  await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
+
+  const $geopad = $step.$('x-geopad') as Geopad;
+
+  const bounds = [0, 0, $geopad.innerWidth, $geopad.innerHeight];
+  const cells = getVoronoiPolys(bounds).map(poly => {
+    return {poly, over: false};
+  });
+
+  cells.forEach((cell, i) => {
     let options = {};
     if (i == 12) {
       options = {class: 'triangle-cell'};
     }
-    const $cell = $N('path', options, $geopad2.$paths) as SVGView;
+    const $cell = $N('path', options, $geopad.$paths) as SVGView;
     $cell.css({fill: voronoiColours[i % 9], stroke: 'black', 'stroke-width': '2px'});
     $cell.draw(cell.poly);
   });
@@ -156,9 +182,9 @@ export async function voronoi($step: VoronoiStep) {
 
   let selectedEdge = -1;
   let edgeChosen = false;
-  const tri = $step.model.cells[12].poly;
+  const tri = cells[12].poly;
   tri.edges.slice(0, 3).forEach((edge, i) => {
-    const edgePath = $geopad2.drawPath(edge);
+    const edgePath = $geopad.drawPath(edge);
     edgePath.$el.css({'stroke-width': '4px', color: '#000000'});
     // [TODO]: Replace with stylesheet-based css?
     edgePath.$el.on('mouseenter', () => {
@@ -187,21 +213,21 @@ export async function voronoi($step: VoronoiStep) {
         const height = (new Segment(heightPoint, edge.project(heightPoint))).length;
         const heightLine = edge.parallel(heightPoint);
         const heightSegment = new Segment(heightLine.project(edge.p1), heightLine.project(edge.p2));
-        const heightPath = $geopad2.drawPath(heightSegment);
+        const heightPath = $geopad.drawPath(heightSegment);
         heightPath.$el.hide();
         heightPath.$el.css({color: '#000000', 'stroke-dasharray': '6'});
 
         $step.model.nearby = false;
-        $geopad2.switchTool('line');
+        $geopad.switchTool('line');
         let p: GeoPath;
         let cb: EventCallback;
-        $geopad2.on('begin:path', ({path, _}: {path: GeoPath, _: any}) => {
+        $geopad.on('begin:path', ({path, _}: {path: GeoPath, _: any}) => {
           p = path;
           cb = _ => handlePathing(path, edgePath, heightPath, height, () => $step.model.nearby = true, () => $step.model.nearby = false);
           path.$parent.on('mousemove', cb);
         });
-        $geopad2.on('add:path', _ => {
-          $geopad2.off('mousemove', cb);
+        $geopad.on('add:path', _ => {
+          $geopad.off('mousemove', cb);
           if ($step.model.nearby) {
             $step.score('height-drawn');
             $step.addHint('correct');
@@ -221,22 +247,7 @@ export async function voronoi($step: VoronoiStep) {
     });
   });
 
-  $geopad2.showLabels = true;
-
-  const $geopad3 = $step.$('x-geopad.voronoi-3') as Geopad;
-  $step.model.cells.forEach((cell, i) => {
-    let options = {};
-    if (i == 6) {
-      options = {class: 'four-sided'};
-    } else if (i == 3) {
-      options = {class: 'five-sided'};
-    } else if (i == 5) {
-      options = {class: 'six-sided'};
-    }
-    const $cell = $N('path', options, $geopad3.$paths) as SVGView;
-    $cell.css({fill: voronoiColours[i % 9], stroke: 'black', 'stroke-width': '2px'});
-    $cell.draw(cell.poly);
-  });
+  $geopad.showLabels = true;
 }
 
 function handlePathing(path: GeoPath, base: GeoPath, heightPath: GeoPath, height: number, whenClose: VoidFunction, whenFar: VoidFunction) {
@@ -266,6 +277,30 @@ function handlePathing(path: GeoPath, base: GeoPath, heightPath: GeoPath, height
   }
 }
 
+export async function voronoi3($step: VoronoiStep) {
+
+  const $geopad = $step.$('x-geopad') as Geopad;
+
+  const bounds = [0, 0, $geopad.innerWidth, $geopad.innerHeight];
+  const cells = getVoronoiPolys(bounds).map(poly => {
+    return {poly, over: false};
+  });
+
+  cells.forEach((cell, i) => {
+    let options = {};
+    if (i == 6) {
+      options = {class: 'four-sided'};
+    } else if (i == 3) {
+      options = {class: 'five-sided'};
+    } else if (i == 5) {
+      options = {class: 'six-sided'};
+    }
+    const $cell = $N('path', options, $geopad.$paths) as SVGView;
+    $cell.css({fill: voronoiColours[i % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.draw(cell.poly);
+  });
+}
+
 function getVoronoiPolys(bounds: number[]) {
   const dt = d3.Delaunay.from(cafeLocationPoints, getX, getY);
   const vor = dt.voronoi(bounds);
@@ -278,24 +313,6 @@ function getVoronoiPolys(bounds: number[]) {
     });
     return new Polygon(...cellPoints);
   });
-}
-
-async function handleAnim(index: number, $step: VoronoiStep) {
-  window.setTimeout((_: any) => {
-    const _anim = animate((progress, _) => {
-      const dlOpacity = 1 - progress;
-      const dp = $step.model.dynPoints;
-      dp[index] = {...dp[index], dlOpacity};
-      $step.model.dynPoints = dp.slice();
-    }, 500);
-  }, 1000);
-}
-
-async function showVor($step: VoronoiStep) {
-  const anim = animate((progress, _) => {
-    $step.model.vorOpacity = progress;
-  }, 2000);
-  anim.promise.then(_ => $step.score('voronoi-diagram'));
 }
 
 function getX(p: Point) {
@@ -321,7 +338,7 @@ export async function populations($step: Step) {
 
   await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
 
-  const $geopad1 = $step.$('x-geopad.voronoi-1') as Geopad;
+  const $geopad = $step.$('x-geopad.voronoi-1') as Geopad;
 
   const cells = getVoronoiPolys([0, 0, 600, 400]).map((poly, i) => {
     return {poly, color: voronoiColours[i % 9]};
@@ -336,12 +353,58 @@ export async function populations($step: Step) {
       options = {class: 'population-pentagon'};
       css = {fill: cell.color, stroke: 'white', 'stroke-width': '3px'};
     }
-    const $cell = $N('path', options, $geopad1.$paths) as SVGView;
+    const $cell = $N('path', options, $geopad.$paths) as SVGView;
     $cell.css(css);
     $cell.draw(cell.poly);
-    if (cell.poly.edges.length == 6) {
-      console.log({i, $el: $cell._el});
-    }
+  });
+}
+
+export function polygonNames($step: Step) {
+  const $rel = $step.$('x-relation')!;
+  $rel.on('correct', comment => $step.addHint(comment, {class: 'correct'}));
+  $rel.on('incorrect', () => $step.addHint('incorrect'));
+  $rel.on('complete', () => $step.score('names-matched'));
+}
+
+export function flags($step: Step) {
+  const $rel = $step.$('x-relation')!;
+
+  $rel.on('correct', comment => $step.addHint(comment, {class: 'correct'}));
+  $rel.on('incorrect', () => $step.addHint('incorrect'));
+  $rel.on('complete', () => $step.score('flags-matched'));
+}
+
+export function polyVerts($step: Step) {
+  const $geopads = $step.$$('x-geopad') as Geopad[];
+
+  const pointsMoved: {[key: string]: boolean}[] = [];
+
+  const atLeastTwoMoved = (points: {[key: string]: boolean}) => {
+    return Object.values(points).filter((pv: boolean) => pv == true).length > 1;
+  };
+
+  let doneMoving = false;
+
+  $geopads.forEach(($geopad, i) => {
+
+    const p: {[key: string]: boolean} = {};
+
+    $geopad.points.forEach(point => {
+      p[point.name] = false;
+      point.$el.on('mousemove', (e: MouseEvent) => {
+
+        // When mousemove has been fired AND e.buttons == 1 (left mouse button is down), this means we are dragging
+        if (e.buttons == 1) {
+          pointsMoved[i][point.name] = true;
+          if (pointsMoved.every(atLeastTwoMoved) && !doneMoving) {
+            doneMoving = true;
+            $step.score('verts-moved');
+          }
+        }
+      });
+    });
+
+    pointsMoved.push(p);
   });
 }
 
@@ -430,57 +493,9 @@ function tangramScale(val: number, shift = 0) {
   return shift + val * 25;
 }
 
-export function polygonNames($step: Step) {
-
-  const $shapesNames = $step.$('x-relation.shapes-names') as Relation;
-  const $flagsCountries = $step.$('x-relation.flags-countries') as Relation;
-
-  [$shapesNames, $flagsCountries].map($m => {
-    $m.on('correct', comment => $step.addHint(comment, {class: 'correct'}));
-    $m.on('incorrect', () => $step.addHint('incorrect'));
-  });
-
-  $shapesNames.on('complete', () => $step.score('names-matched'));
-  $flagsCountries.on('complete', () => $step.score('flags-matched'));
-
-  const $geopads = $step.$$('x-geopad') as Geopad[];
-
-  const pointsMoved: {[key: string]: boolean}[] = [];
-
-  const atLeastTwoMoved = (points: {[key: string]: boolean}) => {
-    return Object.values(points).filter((pv: boolean) => pv == true).length > 1;
-  };
-
-  let doneMoving = false;
-
-  $geopads.forEach(($geopad, i) => {
-
-    const p: {[key: string]: boolean} = {};
-
-    $geopad.points.forEach(point => {
-      p[point.name] = false;
-      point.$el.on('mousemove', (e: MouseEvent) => {
-
-        // When mousemove has been fired AND e.buttons == 1 (left mouse button is down), this means we are dragging
-        if (e.buttons == 1) {
-          pointsMoved[i][point.name] = true;
-          if (pointsMoved.every(atLeastTwoMoved) && !doneMoving) {
-            doneMoving = true;
-            $step.score('points-moved');
-          }
-        }
-      });
-    });
-
-    pointsMoved.push(p);
-  });
-
-}
-
-export function triangleTangram($step: Step) {
-
-  const polys = [
-    // Large red triangle
+const paradoxData = {
+  polys: [
+  // Large red triangle
     [[0, 0], [8, 0], [8, -3]],
     // Orange tetronimo
     [[0, 0], [5, 0], [5, -2], [3, -2], [3, -1], [0, -1]],
@@ -488,10 +503,10 @@ export function triangleTangram($step: Step) {
     [[0, 0], [3, 0], [3, -1], [5, -1], [5, -2], [0, -2]],
     // Small blue triangle
     [[0, 0], [5, 0], [5, -2]]
-  ].map(poly => poly.map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y))));
-
-  const finalRel = [
-    // Large red triangle
+  ].map(poly => poly.map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y)))),
+  polyColours: ['red', 'orange', 'green', 'blue'],
+  finalRel: [
+  // Large red triangle
     [0, 5],
     // Orange tetronimo
     [8, 5],
@@ -499,43 +514,58 @@ export function triangleTangram($step: Step) {
     [8, 4],
     // Small blue triangle
     [8, 2]
-  ].map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y)));
-  const finalPositions = finalRel.map(p => p.shift(tangramScale(2), tangramScale(12)));
+  ].map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y))),
+  polyOrigins:
+    [[1, 4], [4, 8], [11, 4], [11, 8]]
+        .map(([x, y]: number[]) =>
+          new Point(tangramScale(x), tangramScale(y))),
+  nextRelative: [[5, 3], [8, 5], [5, 5], [0, 5]].map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y))),
+  outlineStr:
+    getTangramPolystr(
+        [[0, 0], [13, 0], [13, -5]].map(
+            ([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y))
+        )
+    ),
+  viewWidth: 425,
+  viewHeight: 225,
+  get baseWidth() {
+    return this.viewWidth / 25;
+  },
+  get baseHeight() {
+    return this.viewHeight / 25;
+  }
+};
 
-  const polyColours = ['red', 'orange', 'green', 'blue'];
+export function currysParadox1($step: Step) {
+  const finalPositions = paradoxData.finalRel.map(p => p.shift(tangramScale(2), tangramScale(12)));
 
-  const $polypad1 = $step.$('.triangle-tangram > x-polypad') as Polypad;
-  $polypad1.$svg.setAttr('viewBox', '0 0 425 450');
-  $polypad1.canDelete = $polypad1.canCopy = false;
-  $polypad1.setGrid('square-grid');
+  const $polypad = $step.$('.triangle-tangram > x-polypad') as Polypad;
+  $polypad.$svg.setAttr('viewBox', '0 0 425 450');
+  $polypad.canDelete = $polypad.canCopy = false;
+  $polypad.setGrid('square-grid');
 
   const $bg = $step.$('svg.solution-outline')! as SVGParentView;
   $bg.setAttr('viewBox', '0 0 425 450');
 
-  polys.forEach((polyVals, i) => {
+  paradoxData.polys.forEach((polyVals, i) => {
     const $bgPath = $N('path', {}, $bg) as SVGView;
     const poly = (new Polygon(...polyVals)).translate(finalPositions[i]);
     $bgPath.draw(poly);
   });
 
-  const origins =
-    [[1, 4], [4, 8], [11, 4], [11, 8]]
-        .map(([x, y]: number[]) =>
-          new Point(tangramScale(x), tangramScale(y)));
-
-  polys.forEach((poly, index) => {
+  paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
-    const tile = $polypad1.newTile('polygon', polyStr);
+    const tile = $polypad.newTile('polygon', polyStr);
     if (index == 0) {
       tile.$el.addClass('red-tri');
     }
-    tile.setColour(polyColours[index]);
-    tile.setPosition(origins[index]);
+    tile.setColour(paradoxData.polyColours[index]);
+    tile.setPosition(paradoxData.polyOrigins[index]);
   });
 
   let done = false;
-  $polypad1.on('move-selection', () => {
-    const allPositioned = [...$polypad1.tiles.values()].every((tile, index) =>
+  $polypad.on('move-selection', () => {
+    const allPositioned = [...$polypad.tiles.values()].every((tile, index) =>
       tile.posn.equals(finalPositions[index])
     );
     if (allPositioned && !done) {
@@ -546,11 +576,10 @@ export function triangleTangram($step: Step) {
     }
   });
 
-  const nextRelative = [[5, 3], [8, 5], [5, 5], [0, 5]].map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y)));
-  const nextPoints = nextRelative.map(p => p.shift(tangramScale(2), tangramScale(12)));
+  const nextPoints = paradoxData.nextRelative.map(p => p.shift(tangramScale(2), tangramScale(12)));
 
   const $rearrangeSlider = $step.$('x-slider.rearrange-triangle') as Slider;
-  const tiles = [...$polypad1.tiles];
+  const tiles = [...$polypad.tiles];
   const $tiles = tiles.map(t => t.$el);
   let rearranged = false;
   let slid = 0;
@@ -575,45 +604,48 @@ export function triangleTangram($step: Step) {
       $step.score('triangle-slid');
     }
   });
+}
 
-  const $polypad2 = $step.$('.tangram-polys > x-polypad') as Polypad;
-  $polypad2.$svg.setAttr('viewBox', '0 0 425 225');
-  $polypad2.canDelete = $polypad2.canCopy = false;
-  $polypad2.setGrid('square-grid');
+function getTangramPolystr(polyGridPositions: Point[]) {
+  return polyGridPositions.map(p => p.x + ' ' + p.y).join(',');
+}
 
-  polys.forEach((poly, index) => {
+export function currysParadox2($step: Step) {
+
+  const $polypad = $step.$('.tangram-polys > x-polypad') as Polypad;
+  $polypad.$svg.setAttr('viewBox', '0 0 425 225');
+  $polypad.canDelete = $polypad.canCopy = false;
+  $polypad.setGrid('square-grid');
+
+  paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
-    const tile = $polypad2.newTile('polygon', polyStr);
-    tile.setColour(polyColours[index]);
-    tile.setPosition(origins[index]);
+    const tile = $polypad.newTile('polygon', polyStr);
+    tile.setColour(paradoxData.polyColours[index]);
+    tile.setPosition(paradoxData.polyOrigins[index]);
   });
+}
 
-  const $zoomPolypad1 = $step.$('.zoom-1 > x-polypad') as Polypad;
-  const viewWidth = 425;
-  const viewHeight = 225;
-  $zoomPolypad1.$svg.setAttr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
-  $zoomPolypad1.canDelete = $zoomPolypad1.canCopy = false;
-  $zoomPolypad1.setGrid('square-grid');
+export function currysParadox3($step: Step) {
 
-  polys.forEach((poly, index) => {
+  const $polypad = $step.$('.zoom-1 > x-polypad') as Polypad;
+  $polypad.$svg.setAttr('viewBox', `0 0 ${paradoxData.viewWidth} ${paradoxData.viewHeight}`);
+  $polypad.canDelete = $polypad.canCopy = false;
+  $polypad.setGrid('square-grid');
+
+  paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
-    const tile = $zoomPolypad1.newTile('polygon', polyStr);
-    tile.setColour(polyColours[index]);
-    tile.setPosition(finalRel[index].shift(tangramScale(1), tangramScale(2)));
+    const tile = $polypad.newTile('polygon', polyStr);
+    tile.setColour(paradoxData.polyColours[index]);
+    tile.setPosition(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(2)));
   });
+  const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
+  outlineTile.setPosition(new Point(tangramScale(1), tangramScale(7)));
+  const $outline = outlineTile.$el.$('g path.polygon-tile')!;
+  $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
 
-  const outlinePoints = [[0, 0], [13, 0], [13, -5]].map(([x, y]: number[]) => new Point(tangramScale(x), tangramScale(y)));
-  const outlineStr = getTangramPolystr(outlinePoints);
-  const outlineTile1 = $zoomPolypad1.newTile('polygon', outlineStr);
-  outlineTile1.setPosition(new Point(tangramScale(1), tangramScale(7)));
-  const $outline1 = outlineTile1.$el.$('g path.polygon-tile')!;
-  $outline1.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
-
-  const $zoomSlider1 = $step.$('x-slider.zoom-s-1') as Slider;
-  const baseWidth = viewWidth / 25;
-  const baseHeight = viewHeight / 25;
+  const $zoomSlider = $step.$('x-slider.zoom-s-1') as Slider;
   let zoomed1 = false;
-  $zoomSlider1.on('move', n => {
+  $zoomSlider.on('move', n => {
 
     if (n > 950 && !zoomed1) {
       zoomed1 = true;
@@ -622,47 +654,50 @@ export function triangleTangram($step: Step) {
 
     const scale = 1 - (n / 1100);
     const factor = tangramScale(scale);
-    $zoomPolypad1.$svg.setAttr('viewBox', `${9 * (tangramScale(1) - factor)} ${4 * (tangramScale(1) - factor)} ${baseWidth * factor} ${baseHeight * factor}`);
-    [...$zoomPolypad1.tiles.values()].forEach(tile => {
+    $polypad.$svg.setAttr('viewBox', `${9 * (tangramScale(1) - factor)} ${4 * (tangramScale(1) - factor)} ${paradoxData.baseWidth * factor} ${paradoxData.baseHeight * factor}`);
+    [...$polypad.tiles.values()].forEach(tile => {
       tile.$el.$('g path.polygon-tile')?.css({'stroke-width': `${scale}px`});
     });
-    $outline1.css({'stroke-width': `${scale * 4}px`});
+    $outline.css({'stroke-width': `${scale * 4}px`});
   });
+}
 
-  const $triangleRefPolypad = $step.$('.triangle-ref > x-polypad') as Polypad;
-  $triangleRefPolypad.$svg.setAttr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
-  $triangleRefPolypad.canDelete = $triangleRefPolypad.canCopy = false;
-  $triangleRefPolypad.setGrid('square-grid');
+export function currysParadox4($step: Step) {
+  const $polypad = $step.$('.triangle-ref > x-polypad') as Polypad;
+  $polypad.$svg.setAttr('viewBox', `0 0 ${paradoxData.viewWidth} ${paradoxData.viewHeight}`);
+  $polypad.canDelete = $polypad.canCopy = false;
+  $polypad.setGrid('square-grid');
 
-  polys.forEach((poly, index) => {
+  paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
-    const tile = $triangleRefPolypad.newTile('polygon', polyStr);
-    tile.setColour(polyColours[index]);
-    tile.setPosition(finalRel[index].shift(tangramScale(1), tangramScale(2)));
+    const tile = $polypad.newTile('polygon', polyStr);
+    tile.setColour(paradoxData.polyColours[index]);
+    tile.setPosition(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(2)));
     tile.$el.addClass('paradox-poly');
   });
+}
 
-  // [TODO]: Use comments to delineate sections
+export function currysParadox5($step: Step) {
 
-  const $zoomPolypad2 = $step.$('.zoom-2 > x-polypad') as Polypad;
-  $zoomPolypad2.$svg.setAttr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
-  $zoomPolypad2.canDelete = $zoomPolypad2.canCopy = false;
-  $zoomPolypad2.setGrid('square-grid');
+  const $polypad = $step.$('.zoom-2 > x-polypad') as Polypad;
+  $polypad.$svg.setAttr('viewBox', `0 0 ${paradoxData.viewWidth} ${paradoxData.viewHeight}`);
+  $polypad.canDelete = $polypad.canCopy = false;
+  $polypad.setGrid('square-grid');
 
-  polys.forEach((poly, index) => {
+  paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
-    const tile = $zoomPolypad2.newTile('polygon', polyStr);
-    tile.setColour(polyColours[index]);
-    tile.setPosition(nextRelative[index].shift(tangramScale(1), tangramScale(2)));
+    const tile = $polypad.newTile('polygon', polyStr);
+    tile.setColour(paradoxData.polyColours[index]);
+    tile.setPosition(paradoxData.nextRelative[index].shift(tangramScale(1), tangramScale(2)));
   });
-  const outlineTile2 = $zoomPolypad2.newTile('polygon', outlineStr);
-  outlineTile2.setPosition(new Point(tangramScale(1), tangramScale(7)));
-  const $outline2 = outlineTile2.$el.$('g path.polygon-tile')!;
-  $outline2.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+  const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
+  outlineTile.setPosition(new Point(tangramScale(1), tangramScale(7)));
+  const $outline = outlineTile.$el.$('g path.polygon-tile')!;
+  $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
 
-  const $zoomSlider2 = $step.$('x-slider.zoom-s-2') as Slider;
+  const $zoomSlider = $step.$('x-slider.zoom-s-2') as Slider;
   let zoomed2 = false;
-  $zoomSlider2.on('move', n => {
+  $zoomSlider.on('move', n => {
 
     if (n > 950 && !zoomed2) {
       zoomed2 = true;
@@ -671,36 +706,33 @@ export function triangleTangram($step: Step) {
 
     const scale = 1 - (n / 1100);
     const factor = tangramScale(scale);
-    $zoomPolypad2.$svg.setAttr('viewBox', `${6 * (tangramScale(1) - factor)} ${5 * (tangramScale(1) - factor)} ${baseWidth * factor} ${baseHeight * factor}`);
-    [...$zoomPolypad2.tiles.values()].forEach(tile => {
+    $polypad.$svg.setAttr('viewBox', `${6 * (tangramScale(1) - factor)} ${5 * (tangramScale(1) - factor)} ${paradoxData.baseWidth * factor} ${paradoxData.baseHeight * factor}`);
+    [...$polypad.tiles.values()].forEach(tile => {
       tile.$el.$('g path.polygon-tile')?.css({'stroke-width': `${scale}px`});
     });
-    $outline2.css({'stroke-width': `${scale * 4}px`});
+    $outline.css({'stroke-width': `${scale * 4}px`});
   });
-
-  const $comparisonPolypad = $step.$('.paradox-comparison > x-polypad') as Polypad;
-  $comparisonPolypad.$svg.setAttr('viewBox', '0 0 425 475');
-  $comparisonPolypad.canDelete = $comparisonPolypad.canCopy = false;
-  $comparisonPolypad.setGrid('square-grid');
-
-  polys.forEach((poly, index) => {
-    const polyStr = getTangramPolystr(poly);
-
-    const tile1 = $comparisonPolypad.newTile('polygon', polyStr);
-    tile1.setColour(polyColours[index]);
-    tile1.setPosition(finalRel[index].shift(tangramScale(1), tangramScale(1)));
-
-    const tile2 = $comparisonPolypad.newTile('polygon', polyStr);
-    tile2.setColour(polyColours[index]);
-    tile2.setPosition(nextRelative[index].shift(tangramScale(1), tangramScale(7)));
-  });
-  const outlineTile3 = $comparisonPolypad.newTile('polygon', outlineStr);
-  outlineTile3.setPosition(new Point(tangramScale(1), tangramScale(18)));
-  const $outline3 = outlineTile3.$el.$('g path.polygon-tile')!;
-  $outline3.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
-
 }
 
-function getTangramPolystr(polyGridPositions: Point[]) {
-  return polyGridPositions.map(p => p.x + ' ' + p.y).join(',');
+export function currysParadox6($step: Step) {
+  const $polypad = $step.$('.paradox-comparison > x-polypad') as Polypad;
+  $polypad.$svg.setAttr('viewBox', '0 0 425 475');
+  $polypad.canDelete = $polypad.canCopy = false;
+  $polypad.setGrid('square-grid');
+
+  paradoxData.polys.forEach((poly, index) => {
+    const polyStr = getTangramPolystr(poly);
+
+    const tile1 = $polypad.newTile('polygon', polyStr);
+    tile1.setColour(paradoxData.polyColours[index]);
+    tile1.setPosition(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(1)));
+
+    const tile2 = $polypad.newTile('polygon', polyStr);
+    tile2.setColour(paradoxData.polyColours[index]);
+    tile2.setPosition(paradoxData.nextRelative[index].shift(tangramScale(1), tangramScale(7)));
+  });
+  const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
+  outlineTile.setPosition(new Point(tangramScale(1), tangramScale(18)));
+  const $outline = outlineTile.$el.$('g path.polygon-tile')!;
+  $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
 }

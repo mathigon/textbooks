@@ -22,14 +22,14 @@
 
 > section: polygons
 > sectionStatus: dev
-> id: voronoi
-> goals: blank-4
+> id: voronoi-1
+> goals: eight-points
 
-School districts  need an accurate estimate of the number of students that may attend their schools. Below is a map of primary schools in London. In general, students attend the school closest to where they live. Click anywhere on the map to see the distance between that point and all the schools on the map.
+School districts need an accurate estimate of the number of students that may attend their schools. Below is a map of primary schools in London. In general, students attend the school closest to where they live. Click anywhere on the map to see the distance between that point and all the schools on the map.
 
-    figure: x-geopad(width=600 height=400).voronoi-1
+    figure: x-geopad(width=600 height=400)
       img(src="images/map-temp.png" width=600 height=400)
-      canvas.voronoi(width=600 height=400)
+      canvas(width=600 height=400)
       svg
 
 {.reveal(when="one-point")} Pick 4 other points on the map.
@@ -38,41 +38,40 @@ School districts  need an accurate estimate of the number of students that may a
 
 {.reveal(when="voronoi-diagram")} We’ve just made a Voronoi diagram. Each region contains all the points on the map that are closest to the school in that region. Click a few spots in different regions to check.
 
-{.reveal(when="eight-points")} The first person to think about these things was probably [Rene Descartes](bio:descartes) 400 years ago - he was a famous philosopher too!  But they’re named after a Russian mathematician, [Gregory Feodosevich Voronoy](bio:voronoy). Physician John Snow used a version of a Voronoi diagram in 1854 during a [cholera epidemic](https://plus.maths.org/content/uncovering-cause-cholera) In London to locate an infected water pump on Broad Street in London 
+---
 
-{.reveal(when="eight-points")} In our example, using a Voronoi diagram can help schools make estimates of how many students will attend. In London, about 1500 people live in each square kilometer. To use this statistic, we first need to first know the [[area | perimeter]] of each region in the diagram.
+The first person to think about these things was probably [Rene Descartes](bio:descartes) 400 years ago - he was a famous philosopher too!  But they’re named after a Russian mathematician, [Gregory Feodosevich Voronoy](bio:voronoy). Physician John Snow used a version of a Voronoi diagram in 1854 during a [cholera epidemic](https://plus.maths.org/content/uncovering-cause-cholera) In London to locate an infected water pump on Broad Street in London 
 
-::: .reveal(when="blank-0")
+In our example, using a Voronoi diagram can help schools make estimates of how many students will attend. In London, about 1500 people live in each square kilometer. To use this statistic, we first need to first know the [[area | perimeter]] of each region in the diagram.
 
-    figure: x-geopad(width=600 height=400).voronoi-2
+---
+> id: voronoi-2
+
+    figure: x-geopad(width=600 height=400)
       svg
 
 Some of these regions are shapes we’ve learned about in previous chapters. [This shape](->.triangle-cell) is a triangle and we can find the area by doing [[1/2]] x base x height.
 
-{.reveal(when="blank-1")} Click on the side of the triangle you want to use as the base.
+{.reveal(when="blank-0")} Click on the side of the triangle you want to use as the base.
 
 {.reveal(when="side-selected")} Now draw in the height that corresponds with the base you selected.
 
-{.reveal(when="height-drawn")} The area of this triangle is [[ [TODO] ]] [[square km | km]].
+{.reveal(when="height-drawn")} The area of this triangle is [TODO] [[0]] [[square km | km]].
 
-{.text-center.reveal(when="blank-2 blank-3")} `(1500 "\ people") / (1 "\ square km") = (input(0) "\ people") / ([TODO] "\ square km")`
+{.text-center.reveal(when="blank-1 blank-2")} `(1500 "\ people") / (1 "\ square km") = (input(0) "\ people") / ([TODO] "\ square km")`
 
-:::
-
-::: .reveal(when="blank-4")
+---
+> id: voronoi-3
 
 [TODO] people live closest to that school and that can be a good starting point for the school to use to estimate how many students might attend that school. Next, the schools would want to use other statistics to estimate how many of those people are elementary aged students.
 
 The other regions are more complicated. Some have [4 sides](->.four-sided). Some have [5 sides](->.five-sided). And some have [6 sides](->.six-sided).
 
     // [TODO]: Probably don't need geopad for this
-    figure: x-geopad(width=600 height=400).voronoi-3
+    figure: x-geopad(width=600 height=400)
       svg
 
-:::
-
 ---
-
 > id: sort-polygons
 > goals: cards-sorted
 
@@ -108,11 +107,10 @@ All of these regions in the Voronoi diagram are examples of polygons. A polygon 
 
 ---
 
-> id: populations
-
 A regular polygon has [[all equal | all different]] side lengths.
 
-::: .reveal(when="blank-0")
+---
+> id: populations
 
 Let’s revisit the Voronoi diagram and find out how many people live in one of the regions with 5 sides. Note the [region outlined in white](->.population-pentagon) in the image below.
 
@@ -122,9 +120,7 @@ Let’s revisit the Voronoi diagram and find out how many people live in one of 
 
 Just by looking at this region, it seems that [[more | less]] students will attend the school in this region than the school in the triangular region we explored above. The region looks similar in size, so it’s hard to be sure just by looking. Let’s find its area by splitting it up into rectangles and triangles and compare the area to the area of the triangular region.
 
-:::
-
-::: .reveal(when="blank-1")
+::: .reveal(when="blank-0")
 
 | The total area is equal to the area of the rectangle plus the area of [[2]] triangles. | Total Area = Area of Rect + Area of Triangle 1 + Area of Triangle 2 |
 | Area of a rectangle = b x h and Area of a triangle = [[½]] x b x h | Total Area = b x h + ½ x b x h + ½ x b x h |
@@ -142,11 +138,12 @@ Just by looking at this region, it seems that [[more | less]] students will atte
 
 ---
 > id: polygon-names
+> goals: names-matched
 
 We give different names to polygons based on how many sides they have. You may remember some of the names. Drag the names on top of the correct shapes.
 
     include ../shared/components/relation
-    x-relation.shapes-names
+    x-relation
       .item(slot="domain" match="5") Pentagon
       .item(slot="domain" match="6") Hexagon
       .item(slot="domain" match="7") Septagon/Heptagon
@@ -210,7 +207,7 @@ Most traffic signs are polygons - some regular and some irregular:
 
     x-img(src="images/sign-2.jpg" width=160 height=160)
 
-{.caption} [[Regular | Irregular]] pentagon
+{.caption} [[Irregular | Regular]] pentagon
 
 ::: column(width=160)
 
@@ -267,10 +264,11 @@ The ground of a dried out desert, the skin patterns on giraffes, and dragonfly w
 
 ---
 > id: flags
+> goals: flags-matched
 
 Lastly, many flags use polygons. Drag the name of each country to the correct flag. Just make a guess if you’re not sure!
 
-    x-relation.flags-countries
+    x-relation
       .item(slot="domain" match="canada" comment=true)
         object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg")
       .item(slot="domain" match="south-africa" comment=true)
@@ -285,7 +283,8 @@ Lastly, many flags use polygons. Drag the name of each country to the correct fl
       .item(slot="range" name="nepal") Nepal
 
 ---
-> id: flags-1
+> id: poly-verts
+> goals: verts-moved
 
 The hexagons in the South African flag and the pentagon in the Nepalese flag may not appear to be the standard image you may have in your head of a pentagon and a hexagon. Move around the vertices (these are the points where the edges meet) in the regular polygons below to make some irregular polygons of your own.
 
@@ -330,6 +329,7 @@ The hexagons in the South African flag and the pentagon in the Nepalese flag may
 
 ---
 > id: simple-tangram
+> goals: tangram-complete
 
 ### Tangram
 
@@ -416,7 +416,8 @@ Below is a polygon from a different Voronoi diagram. Each grid represents 1 squa
 No matter which approach we take, the area of the pentagon is 27.5 square units!
 
 ---
-> id: triangle-tangram
+> id: currys-paradox-1
+> goals: blank-0 blank-1 triangle-rearranged triangle-slid
 
 ### Curry’s Paradox
 
@@ -431,13 +432,15 @@ Throughout our work on area, we have often used the idea that as parts of a shap
 
 ::: .reveal(when="blank-0 blank-1")
 
-    x-slider(steps=1000 speed=1).rearrange-triangle
+    x-slider(steps=1000 speed=1 continuous).rearrange-triangle
 
 :::
 
 {.reveal(when="triangle-rearranged")} This triangle also has a base of [[13]] and a height of [[5]] so the area of the triangle has stayed the same at 32.5 square units. However, now it seems the area of the 4 pieces is one [[less than | more than]] the area of the triangle! How can this be when we expect the area of shapes to stay the same when we move them around? Move the slider back and forth to see this again.
 
-::: .reveal(when="triangle-slid blank-2 blank-3 blank-4")
+---
+> id: currys-paradox-2
+> goals: blank-0 blank-1 blank-2 blank-3 blank-4
 
 This situation is called Curry’s Paradox. A paradox is a statement or situation that contradicts itself. This paradox, created by American mathematician [Haskell Curry](bio:curry), is that the area of the 4 pieces first seemed to equal 32.5 square units and then they seem to equal 31.5 square units!
 
@@ -448,38 +451,37 @@ Let’s take the shape apart and find the area of each piece to help us see what
 
 The red triangle has a base of 8 and a height of 3, so the area of the red triangle is [[12]] square units. The area of the blue triangle is [[5]] square units. The area of the green hexagon is [[8]] square units and the area of the orange hexagon is [[7]] square units. So, the total area of all the pieces when pulled apart is [[32]] square units. However, in the first arrangement, they seem to make a triangle with an area of 32.5 square units and in the second arrangement, they seem to have an area of 31.5 square units. The area of these 4 pieces seems to be changing as we are moving them around! What is going on here?
 
-:::
+---
+> id: currys-paradox-3
+> goals: first-zoom
 
-::: .reveal(when="blank-5 blank-6 blank-7 blank-8 blank-9")
 
 Well, it turns out that neither of the shapes we made using the 4 pieces are in fact triangles. Below is the 1st arrangement. It looks like the red and blue triangles line up perfectly, but they do not. Move the slider below to zoom in on the green line connecting the corners of two triangles.
 
     figure: .zoom-1
       x-polypad(rotate="no")
-    x-slider(steps=1000 speed=1).zoom-s-1
+    x-slider(steps=1000 speed=1 continuous).zoom-s-1
 
-:::
-
-::: .reveal(when="first-zoom")
+---
+> id: currys-paradox-4
 
 While the blue and red seem to line up so the ends connect with a straight line, they do not.  Using the formula ½ x b x h to find the area of this [shape](->.paradox-poly) made by the 4 pieces is incorrect because the shape [[is not | is]] a triangle. The area of this shape is 32 square units. Using ½ x b x h, we got 32.5 square units. The extra ½ unit came from the amount of space in between the green line and the actual line connecting the endpoints of the red and blue triangle.
 
     figure: .triangle-ref
       x-polypad(rotate="no")
 
-:::
-
-::: .reveal(when="blank-10")
+---
+> id: currys-paradox-5
+> goals: second-zoom
 
 In the 2nd arrangement, the shapes also seem to make a triangle with the same total area, but we’ve used one additional square unit. So, our first thought was that the area of these 4 shapes decreased by one. Move the slider below to zoom in on the green line connecting the corners of two triangles.
 
     figure: .zoom-2
       x-polypad(rotate="no")
-    x-slider(steps=1000 speed=1).zoom-s-2
+    x-slider(steps=1000 speed=1 continuous).zoom-s-2
 
-:::
-
-::: .reveal(when="second-zoom")
+---
+> id: currys-paradox-6
 
 Adding the extra square unit into this arrangement of the 4 pieces causes the triangles to bulge outside of the green line. So, this arrangement is not a triangle either! The total area of the pieces is remaining constant at 32!
 
@@ -491,9 +493,6 @@ So, we’ve made sense of this paradox. The area of the green triangle is 32.5 s
 In the second arrangement, we added in an additional square unit to make the 4 pieces fit inside the green triangle. Again, it seemed to fit, but it actually was ½ square unit too big. Our eyes just couldn’t perceive the extra ½ square unit. 
 
 Phew! Our fundamental idea that the area of shapes remains the same regardless of the arrangement of the shapes remains true. We’ll use this idea to explore circles in the next few chapters.
-
-:::
-
 
 ---
 
