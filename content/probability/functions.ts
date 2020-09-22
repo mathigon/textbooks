@@ -6,7 +6,7 @@
 
 import {flatten, list, Obj, repeat, tabulate2D} from '@mathigon/core';
 import {Random} from '@mathigon/fermat';
-import {$, $N, ElementView, slide} from '@mathigon/boost';
+import { $, $N, ElementView, register, slide} from '@mathigon/boost';
 import {Step} from '../shared/types';
 import '../shared/components/buckets';
 
@@ -102,6 +102,7 @@ export function diceSimulation($step: Step) {
 
 // Applet: 12x12 square of people.assigned hats, scarves and coats, and glasses.On right, list of these; you can click them to arrange people on the left and right with and without those things on.
 
+// @register('x-conditional-probability')
 export function conditional($step: Step) {
   const $svg = $step.$('svg.conditional')!;
 
@@ -237,24 +238,13 @@ export function conditional($step: Step) {
     }
   }
 
-  function repositionPerson($person, gridX, gridY) {
-    const absoluteX = firstColumnOfPeopleX + gridX * personSpacing;
-    const absoluteY = topColumnOfPeopleY + gridY * personSpacing;
-    $person.setTransform({x: absoluteX, y: absoluteY});
-
-    $person.$adornments.forEach(($adornment, i) => {
-      if ($adornment !== null) {
-        $adornment.setTransform({x: absoluteX, y: absoluteY - 4 * i + 9});
-      }
-    });
-  }
-
   for (let i = 0; i < 12; ++i) {
     for (let j = 0; j < 12; ++j) {
-      const height = 8;
+      const width = 10;
+      const height = 2*width
       const $person = $N('rect', {
-        x: -height / 2, y: -height, rx: 0,
-        width: height, height: 2 * height,
+        width: width, height: height,
+        x: -width / 2, y: -height/2, rx: 0,
         class: 'grey', target: ['grey', 'large'].join(' ')
       }, $svg);
 
@@ -264,6 +254,8 @@ export function conditional($step: Step) {
       $person.$adornments = [null, null, null, null];
     }
   }
+
+  const adornmentHeight = 5
 
   let pIndex = 0;
   for (let adornmentBits = 0; adornmentBits < 16; adornmentBits++) {
@@ -291,9 +283,10 @@ export function conditional($step: Step) {
     for (pIndex; pIndex < limit; ++pIndex) {
       for (let j = 0; j < 4; j++) {
         if (queryBit(adornmentBits, j)) {
+          const adornmentWidth = 18
           const $adornment = $N('rect', {
-            x: -5, y: -5, rx: 0,
-            width: 10, height: 3,
+            width: adornmentWidth, height: adornmentHeight,
+            x: -adornmentWidth / 2., y: -adornmentHeight/2., rx: 0,
             class: adornmentColors[j]
           }, $svg);
           $grid.append($adornment);
@@ -301,6 +294,18 @@ export function conditional($step: Step) {
         }
       }
     }
+  }
+
+  function repositionPerson($person, gridX, gridY) {
+    const absoluteX = firstColumnOfPeopleX + gridX * personSpacing;
+    const absoluteY = topColumnOfPeopleY + gridY * personSpacing;
+    $person.setTransform({ x: absoluteX, y: absoluteY });
+
+    $person.$adornments.forEach(($adornment, i) => {
+      if ($adornment !== null) {
+        $adornment.setTransform({ x: absoluteX, y: absoluteY + adornmentHeight * (i - 1.5) });
+      }
+    });
   }
 
   $people.sort((a, b)=>{
