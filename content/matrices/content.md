@@ -8,9 +8,22 @@
 
 When we play video games with 3d graphics, what we are really looking at are millions of tiny triangles. Everything from the mountains and grass that make up the environment, to the goblins that guard the precious treasure, to the spaceship that you pilot through an asteroid belt, is made up of many small triangles. The computer in your video game console runs trillions of computations to figure out how each shape will be displayed on the screen.
 
-What kind of computations is our computer performing? Before we try displaying intricate three-dimensional landscapes, let's imagine we want to draw a 2-d spaceship that we can rotate to shoot incoming asteroids.
+What kind of computations is our computer performing? Before we try displaying intricate three-dimensional landscapes and characters, let's imagine we want to draw a 2d spaceship that we can rotate to shoot incoming asteroids.
 
-    figure: img(src="images/proto-1/spaceship-1.png")
+    x-geopad(width=400 x-axis="-20,20,5" y-axis="-20,20,5" padding=5): svg
+      - var points = [[0,3], [2,0], [2,-2], [0,-1], [-2,-2], [-2,0]];
+
+      circle.green.shot(name="s0", x="point(0,0)")
+      circle.green.shot(name="s1", x="point(0,0)")
+      circle.green.shot(name="s2", x="point(0,0)")
+      circle.green.shot(name="s3", x="point(0,0)")
+      circle.green.shot(name="s4", x="point(0,0)")
+      circle.green.shot(name="s5", x="point(0,0)")
+      circle.green.shot(name="s6", x="point(0,0)")
+      circle.green.shot(name="s7", x="point(0,0)")
+
+      - var path = points.map(p => `point(${p[0]},${p[1]}).rotate(th)`).join(',')
+      path.fill.green(x=`polygon(${path})` label-class="gray")
 
 
 Here is our humble spaceship. Like the shapes displayed in video games, we can represent our spaceship as a collection of points, with lines connecting them. We can draw it on the xy coordinate plane, centered on the origin, with each point labelled as an (x, y) value.
@@ -26,17 +39,15 @@ Each point `P_"n"` is rotated about the origin to get point `P_"n"'` (pronounced
 
 Here is a spaceship we can rotate by ${phi + 'º'}{phi|60|10,350,10} around the origin.
 
-{.fixme} Display theta in both Geopads.
-
 ::: column(width=400)
 
     x-geopad(width=400 x-axis="-5,5,1" y-axis="-5,5,1" axes grid padding=5): svg
       circle.green(name="a" x="point(0,3)" label="A" target="a")
-      circle.green(name="b" x="point(3,0)" label="B")
-      circle.green(name="c" x="point(3,-3)" label="C")
+      circle.green(name="b" x="point(2,0)" label="B")
+      circle.green(name="c" x="point(2,-2)" label="C")
       circle.green(name="d" x="point(0,-1)" label="D")
-      circle.green(name="e" x="point(-3,-3)" label="E")
-      circle.green(name="f" x="point(-3,0)" label="F")
+      circle.green(name="e" x="point(-2,-2)" label="E")
+      circle.green(name="f" x="point(-2,0)" label="F")
 
       circle.blue(name="ap" x="a.rotate(phi/180*pi)" label="A'")
       circle.blue(name="bp" x="b.rotate(phi/180*pi)" label="B'")
@@ -79,6 +90,8 @@ Let's start by calculating this formula for two different points.
 > id: two-points
 
 For our two points, let's pick `(3,0)` and `(0,3)`, and determine their formulas one at a time.
+
+{.fixme} Display theta in both Geopads.
 
 ::: tab
 #### (0,3)
