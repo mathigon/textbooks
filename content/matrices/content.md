@@ -316,7 +316,7 @@ Four friends are in a new city and they're looking for a restaurant to eat at to
 
 Each friend has preferences for how important these things are, which we can quantify with a value 0 (not important) to 4 (very important). If we create a table with friends on the left-most column and restaurant features across the top row, we can fill in the cells of the table with each friend's preference for that feature.
 
-    figure: img(src="images/matrix-1-frn-fea.png")
+    figure: img(src="images/proto-2/matrix-1-frn-fea.png")
 
 What we have built here is a 4 by 2 matrix. We have four rows to represent the four [[friends|features|restaurants]], and two columns to represent the two [[features|friends|restaurants]].
 
@@ -324,7 +324,7 @@ What we have built here is a 4 by 2 matrix. We have four rows to represent the f
 
 The friends have found three restaurants within walking distance, and they have pulled up the websites for each. Lucky for them, each restaurants' website has listed the quality of the features that the friends have quantified: availability of outdoor seating, and vegetarian options.
 
-    figure: img(src="images/matrix-1-fea-res.png")
+    figure: img(src="images/proto-2/matrix-1-fea-res.png")
 
 This is a 2 by 3 matrix. There are two rows to represent the two [[features|restaurants]] and three rows, one to represent each [[restaurant|feature]].
 
@@ -334,13 +334,13 @@ This is a 2 by 3 matrix. There are two rows to represent the two [[features|rest
 
 What we would like to do is somehow synthesize these two tables of information so we can get a sense of how much each person might like each restaurant. We can use a procedure called [matrix multiplication](gloss:matrix-multiplication) to do this. The result will be a *new* table with the friends as [[rows]] and the restaurants as [[columns]].
 
-    figure: img(src="images/matrix-1-frn-res-empty.png")
+    figure: img(src="images/proto-2/matrix-1-frn-res-empty.png")
 
 How should we fill out this table? The value of each cell should represent how much each person might like each restaurant.
 
 For example, the first cell will represent how much Alice might like [[Gauss Grill|Laplace Lounge]].
 
-    figure: img(src="images/mult-alice-gauss.png")
+    figure: img(src="images/proto-2/mult-alice-gauss.png")
 
 Alice has a preference of 1 for Outdoor Seating, and Gauss Grill has a value of 3 for Outdoor Seating, and we multiply these to get [[3]].
 
@@ -348,14 +348,14 @@ Alice has a preference of 4 for Vegetarian food, but Gauss Grill only has a valu
 
 We sum together all the products to get [[7]], which we can write in the first cell.
 
-    figure: img(src="images/mult-bob-laplace.png")
+    figure: img(src="images/proto-2/mult-bob-laplace.png")
 
 How much might Bob like Laplace Lounge?
 [[3]]*[[1]] + [[0]]*[[4]] = [[3]].
 
 When we finish our process, we get a matrix of 4 rows and 3 columns. This makes sense! We had 4 people and 3 restaurants, so we will end up with a row for each person and a column for each restaurant.
 
-    figure: img(src="images/matrix-1-frn-res-full.png")
+    figure: img(src="images/proto-2/matrix-1-frn-res-full.png")
 
 We can then sum the values in each column to figure out which restaurant is most popular (this is left as an exercise for the reader).
 
@@ -365,11 +365,11 @@ What we have just done is [matrix multiplication](gloss:matrix-multiplication).
 
 {.fixme} Align these.
 
-    figure: img(src="images/matrix-1-frn-fea.png" width=100)
+    figure: img(src="images/proto-2/matrix-1-frn-fea.png" width=100)
     div x
-    figure: img(src="images/matrix-1-fea-res.png" width=200)
+    figure: img(src="images/proto-2/matrix-1-fea-res.png" width=200)
     div =
-    figure: img(src="images/matrix-1-frn-res-full.png" width=200)
+    figure: img(src="images/proto-2/matrix-1-frn-res-full.png" width=200)
 
 #### Formal definition of Matrix Multiplication
 
@@ -391,11 +391,11 @@ Notice that, for this algorithm to work, the number of [[columns]] in the first 
 
 For example, if in our restaurant example, each friend had a preference level for spicy food, our preference matrix would be `4x3`.
 
-    figure: img(src="images/matrix-1-extra.png" width=200)
+    figure: img(src="images/proto-2/matrix-1-extra.png" width=200)
 
 We are now attempting to multiply a `4x3` matrix by a `2x3` matrix, but we don't have any information about which restaurants have spicy food! So we __cannot__ multiply the two matrices.
 
-    figure: img(src="images/matrix-1-extra-mult.png" width=200)
+    figure: img(src="images/proto-2/matrix-1-extra-mult.png" width=200)
 
 {.fixme} Could end section with a simple checkmark multiple choice, for which multiplications are possible.
 
@@ -407,7 +407,7 @@ This type of matrix is used in all sorts of online recommender systems. Movies c
 
 However, this process is slightly different from what we did above. The company running the streaming service *doesn't know* what its users' tastes are. It does know what movies they have watched, and whether they liked them or not. From this information they attempt to figure out each user's possible genre preferences using a process called __matrix factorisation__. Much like in [integer factorisation](gloss:factorisation), where an integer can be written as a product of prime numbers, matrix factorisation is about working backwards from an incomplete product matrix to find possible preference matrices. This algorithm is much more complex than integer factorisation, so we need complex machine leaerning algorithms to perform it.
 
-    figure: img(src="images/factorisation.png")
+    figure: img(src="images/proto-2/factorisation.png")
 
 [Continue](btn:next)
 
@@ -431,17 +431,17 @@ We have now learned two different ways to think about matrix multiplication. In 
 
 Recall the 2x2 matrix representing the rotation of 90º about the origin. Let's call it `R_"90"`.
 
-    img(src="images/rotate-90-m.png" width=100)
+    img(src="images/proto-2/rotate-90-m.png" width=100)
     +ij([0,1], [-1,0], "Rotate 90º")
 
 What if we multiply this matrix by the 2x2 matrix for rotation of 180º, `R_"180"`?
 
-    img(src="images/rotate-180-m.png")
+    img(src="images/proto-2/rotate-180-m.png")
     +ij([-1,0], [0,-1], "Rotate 180º")
 
 The resulting matrix is this:
 
-    img(src="images/rotate-270-m.png")
+    img(src="images/proto-2/rotate-270-m.png")
     +ij([0,-1], [1,0], "Rotate 270º")
 
 This matrix is the linear transformation for a [[rotation of 270º|identity matrix|rotation of 90º]].
@@ -1037,7 +1037,7 @@ Let's put a matrix on the right, and text on the left.
 
 ::: column(width=300)
 
-    // figure: img(src="images/matrix-1-frn-fea.png")
+    // figure: img(src="images/proto-2/matrix-1-frn-fea.png")
     table
       tr
         td
@@ -1062,7 +1062,7 @@ Let's put a matrix on the right, and text on the left.
 
     div x
 
-    // figure: img(src="images/matrix-1-fea-res.png")
+    // figure: img(src="images/proto-2/matrix-1-fea-res.png")
     table
       tr
         td
@@ -1080,10 +1080,10 @@ Let's put a matrix on the right, and text on the left.
         td.cell 4
         td.cell 3
 
-    // figure: img(src="images/matrix-1-frn-res-empty.png")
-    // figure: img(src="images/mult-alice-gauss.png") (and above)
-    // figure: img(src="images/mult-bob-laplace.png") (and above)
-    // figure: img(src="images/matrix-1-frn-res-full.png") (change into)
+    // figure: img(src="images/proto-2/matrix-1-frn-res-empty.png")
+    // figure: img(src="images/proto-2/mult-alice-gauss.png") (and above)
+    // figure: img(src="images/proto-2/mult-bob-laplace.png") (and above)
+    // figure: img(src="images/proto-2/matrix-1-frn-res-full.png") (change into)
     table
       tr
         td
