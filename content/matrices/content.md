@@ -3,6 +3,7 @@
 > section: transformations
 > sectionStatus: dev
 > id: intro
+> goals: projectile
 
 {.todo} IN PROGRESS
 
@@ -25,11 +26,32 @@ What kind of computations is our computer performing? Before we try displaying i
       - var path = points.map(p => `point(${p[0]},${p[1]}).rotate(th)`).join(',')
       path.fill.green(x=`polygon(${path})` label-class="gray")
 
+---
 
 Here is our humble spaceship. Like the shapes displayed in video games, we can represent our spaceship as a collection of points, with lines connecting them. We can draw it on the xy coordinate plane, centered on the origin, with each point labelled as an (x, y) value.
 
-    figure: img(src="images/proto-1/spaceship-2.png")
+::: column(width=400)
 
+    x-geopad(width=400 x-axis="-5,5,1" y-axis="-5,5,1" axes grid padding=5): svg
+      circle.green(name="a" x="point(0,3)" label="A" target="a")
+      circle.green(name="b" x="point(2,0)" label="B")
+      circle.green(name="c" x="point(2,-2)" label="C")
+      circle.green(name="d" x="point(0,-1)" label="D")
+      circle.green(name="e" x="point(-2,-2)" label="E")
+      circle.green(name="f" x="point(-2,0)" label="F")
+
+      path.green(x="segment(a,b)")
+      path.green(x="segment(b,c)")
+      path.green(x="segment(c,d)")
+      path.green(x="segment(d,e)")
+      path.green(x="segment(e,f)")
+      path.green(x="segment(f,a)")
+
+:::
+
+Here the point A has coordinates ([[0]], [[3]]).
+
+---
 
 We would like to give our spaceship the ability to rotate in place, so the player can point it at incoming asteroids. This rotation is something we call a [transformation](gloss:transformation). Let's notify the Rotation of the spaceship through angle θ as `R_"θ"`.
 
@@ -96,7 +118,7 @@ For our two points, let's pick `(3,0)` and `(0,3)`, and determine their formulas
 ::: tab
 #### (0,3)
 
-Let's rotate this point [A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,10} around the origin. Our rotated point is called [A'](target:ap).
+Let's rotate this point [{.green}A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,10} around the origin. Our rotated point is called [{.blue}A'](target:ap).
 
 ::: column(width=400)
 
@@ -113,42 +135,52 @@ Let's rotate this point [A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,10} aro
 
 :::
 
-What is a formula to get the new coordinates for A’? We can call our new x value [x'](target:xp), and our new y value [y'](target:yp). Both x' and y' will be dependent on the length of __A__, which is 3.
+What is a formula to get the new coordinates for A’? We can call our new x value [{.red}x'](target:xp), and our new y value [{.yellow}y'](target:yp). Both x' and y' will be dependent on the length of __A__, which is 3.
 
+These points form a right angle, so we can draw upon our knowledge of trigonometry to find the formulas for `x'` and `y'`.
 
-x' = 3 * [[-sinθ|sinθ|cosθ]]
+Our [{.red}x'](target:xp) value is the opposite of the known angle, so we can use the formula for [sine](gloss:sin) to determine that:
 
-y' = 3 * [[cosθ|sinθ]]
+`x' = 3 * `[[-sin(θ)|sin(θ)|cos(θ)]]
+
+Our [{.yellow}y'](target:yp) value is the adjacent side of a right triangle, so we can use the formula for [cosine](gloss:cos) to determine that:
+
+`y' = 3 * `[[cos(θ)|sin(θ)]]
 
 
 ::: tab
-#### (3,0)
+#### (2,0)
 
 Let's look at another point.
-Rotate the point [B](target:b) (3,0) ${t1 + 'º'}{t1|60|10,90,10} around the origin.
+Rotate the point [{.green}B](target:b) (2,0) ${t2 + 'º'}{t2|60|10,350,10} around the origin. Our rotated point is called [{.blue}B'](target:bp).
 
 ::: column(width=400)
 
     x-geopad(width=400 x-axis="-5,5,1" y-axis="-5,5,1" axes grid padding=5): svg
-      circle.green(name="a" x="point(3,0)" label="B" target="b")
+      circle.green(name="b" x="point(2,0)" label="B" target="b")
 
-      circle.blue(name="ap" x="a.rotate(t1/180*pi)" label="B'" target="bp")
+      circle.blue(name="bp" x="b.rotate(t2/180*pi)" label="B'" target="bp")
 
-      path.green(x="segment(point(0,0),a)")
+      path.green(x="segment(point(0,0),b)")
 
-      path.blue(x="segment(point(0,0),ap)")
-      path.red(x="segment(point(0,0), point(ap.x, 0))" label="x'" target="xp")
-      path.yellow(x="segment(point(ap.x, 0), point(ap.x, ap.y))" label="y'" target="yp")
+      path.blue(x="segment(point(0,0),bp)")
+      path.red(x="segment(point(0,0), point(bp.x, 0))" label="x'" target="xp")
+      path.yellow(x="segment(point(bp.x, 0), point(bp.x, bp.y))" label="y'" target="yp")
 
 
 :::
 
-What is a formula to get the new coordinates for [B’](target:bp)? We can call our new x value [x'](target:xp), and our new y value [y'](target:yp). Both x' and y' will be dependent on the length of __B__, which is 3.
+What is a formula to get the new coordinates for [{.blue}B’](target:bp)? We can call our new x value [{.red}x'](target:xp), and our new y value [{.yellow}y'](target:yp). Both x' and y' will be dependent on the length of __B__, which is 2.
 
+These points form a right angle, so we can draw upon our knowledge of trigonometry to find the formulas for `x'` and `y'`.
 
-x' = 3 * [[cosθ|sinθ]]
+Our [{.red}x'](target:xp) value is the adjacent side of the known angle, so we can use the formula for [cosine](gloss:cos) to determine that:
 
-y' = 3 * [[sinθ|cosθ]]
+`x' = 2 * `[[cos(θ)|sin(θ)]]
+
+Our [{.yellow}y'](target:yp) value is the opposite side of the known angle, so we can use the formula for [sine](gloss:sin) to determine that:
+
+`y' = 2 * `[[sin(θ)|cos(θ)]]
 
 :::
 
@@ -157,9 +189,9 @@ y' = 3 * [[sinθ|cosθ]]
 
 > id: linear-combination
 
-Now that we have computed the formula for two points, can we say anthing about the general formula for rotation?
+We now have equations for the `x'` and `y'` values of the two points `P_"1"` and `P_"2"`. There are still four more points to calculate, but is there a way we can save some work and use what we already have?
 
-Remember from our last course that any vector can be treated as a sum of the two unit vectors <uv>__i__</uv> and <uv>__j__</uv>.
+Remember from our last course on [vectors](link/to/course) that any vector can be treated as a sum of the two unit vectors <uv>__i__</uv> and <uv>__j__</uv>.
 
 Our points __A__ and __B__ were the unit vectors <uv>__j__</uv> and <uv>__i__</uv>, each multiplied by 3.
 

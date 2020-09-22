@@ -75,6 +75,8 @@ export function intro($step: Step) {
   $step.model.th = 0; // initialize here
 
   $geo.on('click', () => {
+    $step.score('projectile');
+
     fireShot($geo, shotIndex, $step.model.th);
     shotIndex = (shotIndex + 1) % shots.length;
   });
