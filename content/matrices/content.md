@@ -1037,6 +1037,7 @@ Let's put a matrix on the right, and text on the left.
 
 ::: column(width=300)
 
+    // figure: img(src="images/matrix-1-frn-fea.png")
     table
       tr
         td
@@ -1061,6 +1062,7 @@ Let's put a matrix on the right, and text on the left.
 
     div x
 
+    // figure: img(src="images/matrix-1-fea-res.png")
     table
       tr
         td
@@ -1078,6 +1080,10 @@ Let's put a matrix on the right, and text on the left.
         td.cell 4
         td.cell 3
 
+    // figure: img(src="images/matrix-1-frn-res-empty.png")
+    // figure: img(src="images/mult-alice-gauss.png") (and above)
+    // figure: img(src="images/mult-bob-laplace.png") (and above)
+    // figure: img(src="images/matrix-1-frn-res-full.png") (change into)
     table
       tr
         td
