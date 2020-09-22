@@ -516,7 +516,7 @@ discriminant:
 
 distributive:
   title: Distributive Property
-  text: An operation • is __distributive__ over another operation ⚬ if `a•(b⚬c) = a•b ⚬ a•c`. For example,
+  text: An operation • is __distributive__ over another operation * if `a•(b*c) = a•b * a•c`. For example,
     multiplication (×) of numbers is distributive over addition (+).
 
 dna:
