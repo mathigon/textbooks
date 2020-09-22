@@ -6,12 +6,27 @@
 
 {.todo} IN PROGRESS
 
-We want to draw a spaceship.
-We can represent our spaceship as a collection of points.
+When we play video games with 3d graphics, what we are really looking at are millions of tiny triangles. Everything from the mountains and grass that make up the environment, to the goblins that guard the precious treasure, to the spaceship that you pilot through an asteroid belt, is made up of many small triangles. The computer in your video game console runs trillions of computations to figure out how each shape will be displayed on the screen.
 
-When we rotate each point A, B, C, etc, we will give the new point the name A’ (A prime), B’, C’
+What kind of computations is our computer performing? Before we try displaying intricate three-dimensional landscapes, let's imagine we want to draw a 2-d spaceship that we can rotate to shoot incoming asteroids.
+
+    figure: img(src="images/proto-1/spaceship-1.png")
+
+
+Here is our humble spaceship. Like the shapes displayed in video games, we can represent our spaceship as a collection of points, with lines connecting them. We can draw it on the xy coordinate plane, centered on the origin, with each point labelled as an (x, y) value.
+
+    figure: img(src="images/proto-1/spaceship-2.png")
+
+
+We would like to give our spaceship the ability to rotate in place, so the player can point it at incoming asteroids. This rotation is something we call a [transformation](gloss:transformation). Let's notify the Rotation of the spaceship through angle θ as `R_"θ"`.
+
+`{P_"1", P_"2", P_"3", P_"4", P_"5", P_"6"}` --- `R_"θ"` ---> `{P_"1"', P_"2"', P_"3"', P_"4"', P_"5"', P_"6"'}`
+
+Each point `P_"n"` is rotated about the origin to get point `P_"n"'` (pronounced "P n prime").
 
 Here is a spaceship we can rotate by ${phi + 'º'}{phi|60|10,350,10} around the origin.
+
+{.fixme} Display theta in both Geopads.
 
 ::: column(width=400)
 
@@ -46,18 +61,28 @@ Here is a spaceship we can rotate by ${phi + 'º'}{phi|60|10,350,10} around the 
 
 :::
 
+Here are some things we can say about the shape of our spaceship.
+- The spaceship must retain its shape. That is, it must be congruent to the original.
+- The ship will have the same size.
+- It only rotates, and does not move up and down.
+
+We would like a formula to convert any point `P` into its rotated point `P'`.
+
+Let's start by calculating this formula for two different points.
+
+[Continue](btn:next)
+
 ---
 
 ### Calculating the rotation of two points
 
 > id: two-points
 
-Let's try calculating the formula for two rotated points.
+For our two points, let's pick `(3,0)` and `(0,3)`, and determine their formulas one at a time.
 
 ::: tab
 #### (0,3)
 
-Now let's look at one point at a time how this might work.
 Let's rotate this point [A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,10} around the origin. Our rotated point is called [A'](target:ap).
 
 ::: column(width=400)
