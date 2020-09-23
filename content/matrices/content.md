@@ -133,6 +133,8 @@ Let's rotate this point [{.green}A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350
       path.red(x="segment(point(0,ap.y), point(ap.x, ap.y))" target="xp" label="x'")
       path.yellow(x="segment(point(0,0), point(0, ap.y))" target="yp" label="y'")
 
+      path.purple(x="angle(ap,point(0,0),a)" round size=40)
+
 :::
 
 What is a formula to get the new coordinates for A’? We can call our new x value [{.red}x'](target:xp), and our new y value [{.yellow}y'](target:yp). Both x' and y' will be dependent on the length of __A__, which is 3.
@@ -166,6 +168,7 @@ Rotate the point [{.green}B](target:b) (2,0) ${t2 + 'º'}{t2|60|10,350,10} aroun
       path.blue(x="segment(point(0,0),bp)")
       path.red(x="segment(point(0,0), point(bp.x, 0))" label="x'" target="xp")
       path.yellow(x="segment(point(bp.x, 0), point(bp.x, bp.y))" label="y'" target="yp")
+      path.purple(x="angle(bp,point(0,0),b)" round size=40)
 
 
 :::
