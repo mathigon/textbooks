@@ -125,21 +125,23 @@ Let's rotate this point [{.green}A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350
     x-geopad(width=400 x-axis="-5,5,1" y-axis="-5,5,1" axes grid padding=5): svg
       circle.green(name="a" x="point(0,3)" label="A" target="a")
 
-      circle.blue(name="ap" x="a.rotate(t1/180*pi)" label="A'" target="ap")
+      circle.blue(name="ap" x="a.rotate(t1/180*pi)" label="A'" target="ap tri1")
 
       path.green(x="segment(point(0,0),a)")
 
-      path.blue(x="segment(point(0,0),ap)")
-      path.red(x="segment(point(0,ap.y), point(ap.x, ap.y))" target="xp" label="x'")
-      path.yellow(x="segment(point(0,0), point(0, ap.y))" target="yp" label="y'")
+      path.blue(x="segment(point(0,0),ap)" target="tri1")
+      path.red(x="segment(point(0,ap.y), point(ap.x, ap.y))" target="xp tri1" label="x'")
+      path.yellow(x="segment(point(0,0), point(0, ap.y))" target="yp tri1" label="y'")
 
-      path.purple(x="angle(ap,point(0,0),a)" round size=40)
+      path.purple(x="angle(ap,point(0,0),a)" target="tri1" round size=40)
 
 :::
 
 What is a formula to get the new coordinates for A’? We can call our new x value [{.red}x'](target:xp), and our new y value [{.yellow}y'](target:yp). Both x' and y' will be dependent on the length of __A__, which is 3.
 
-These points form a right angle, so we can draw upon our knowledge of trigonometry to find the formulas for `x'` and `y'`.
+These points form a [right triangle](target:tri1), so we can draw upon our knowledge of trigonometry to find the formulas for `x'` and `y'`.
+
+{.fixme} This might be confusing for theta > 90º
 
 Our [{.red}x'](target:xp) value is the opposite of the known angle, so we can use the formula for [sine](gloss:sin) to determine that:
 
@@ -161,21 +163,23 @@ Rotate the point [{.green}B](target:b) (2,0) ${t2 + 'º'}{t2|60|10,350,10} aroun
     x-geopad(width=400 x-axis="-5,5,1" y-axis="-5,5,1" axes grid padding=5): svg
       circle.green(name="b" x="point(2,0)" label="B" target="b")
 
-      circle.blue(name="bp" x="b.rotate(t2/180*pi)" label="B'" target="bp")
+      circle.blue(name="bp" x="b.rotate(t2/180*pi)" label="B'" target="bp tri2")
 
       path.green(x="segment(point(0,0),b)")
 
-      path.blue(x="segment(point(0,0),bp)")
-      path.red(x="segment(point(0,0), point(bp.x, 0))" label="x'" target="xp")
-      path.yellow(x="segment(point(bp.x, 0), point(bp.x, bp.y))" label="y'" target="yp")
-      path.purple(x="angle(bp,point(0,0),b)" round size=40)
+      path.blue(x="segment(point(0,0),bp)" target="tri2")
+      path.red(x="segment(point(0,0), point(bp.x, 0))" label="x'" target="xp tri2")
+      path.yellow(x="segment(point(bp.x, 0), point(bp.x, bp.y))" label="y'" target="yp tri2")
+      path.purple(x="angle(bp,point(0,0),b)" target="tri2" round size=40)
 
 
 :::
 
 What is a formula to get the new coordinates for [{.blue}B’](target:bp)? We can call our new x value [{.red}x'](target:xp), and our new y value [{.yellow}y'](target:yp). Both x' and y' will be dependent on the length of __B__, which is 2.
 
-These points form a right angle, so we can draw upon our knowledge of trigonometry to find the formulas for `x'` and `y'`.
+These points form a [right triangle](target:tri2), so we can draw upon our knowledge of trigonometry to find the formulas for `x'` and `y'`.
+
+{.fixme} This might be confusing for theta > 90º
 
 Our [{.red}x'](target:xp) value is the adjacent side of the known angle, so we can use the formula for [cosine](gloss:cos) to determine that:
 
