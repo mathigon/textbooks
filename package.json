@@ -17,7 +17,7 @@
     "node": "12.x"
   },
   "dependencies": {
-    "@mathigon/boost": "0.5.6",
+    "@mathigon/boost": "0.5.7",
     "@mathigon/core": "0.5.2",
     "@mathigon/dev-server": "0.5.5",
     "@mathigon/fermat": "0.5.3",
