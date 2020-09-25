@@ -4,7 +4,6 @@
 // =============================================================================
 
 
-import {hover} from '@mathigon/boost';
 import {Point} from '@mathigon/fermat';
 import {Geopad, Step} from '../shared/types';
 
@@ -43,24 +42,13 @@ export function triangleInequality($step: Step) {
 }
 
 export function triangleInequality3($step: Step) {
-  const $targets = $step.$$('.hover-target');
   const $geopad = $step.$('x-geopad') as Geopad;
 
-  hover($targets[0], {
-    enter() {
-      $geopad.animatePoint('b', new Point(50, 127), 1200);
-      $geopad.animatePoint('c', new Point(250, 127), 1200);
-      $step.score('target-0');
-    }
-  });
-
-  hover($targets[1], {
-    enter() {
-      $geopad.animatePoint('b', new Point(90, 45), 1200);
-      $geopad.animatePoint('c', new Point(125, 65), 1200);
-      $step.score('target-1');
-    }
-  });
+  $step.model.hover = (a: number, b: number, c: number, d: number, i: number) => {
+    $geopad.animatePoint('b', new Point(a, b), 1200);
+    $geopad.animatePoint('c', new Point(c, d), 1200);
+    $step.score('target-' + i);
+  };
 
   const $rubber = $step.$('.orange')!;
   $geopad.model.watch(state => {

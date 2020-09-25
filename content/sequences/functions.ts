@@ -153,10 +153,7 @@ export function arithmeticGeometricGraph($step: Step) {
     $plots[1].drawPoints(p2);
   });
 
-  const $actions = $step.$$('.var-action');
-  $actions[0].on('click', () => $step.model.assign({b: 2, r: 2}));
-  $actions[1].on('click', () => $step.model.assign({b: 10, r: 0.6}));
-  $actions[2].on('click', () => $step.model.assign({b: 3, r: -1.4}));
+  $step.model.set = (b: number, r: number) => $step.model.assign({b, r});
 }
 
 export function payItForward($step: Step) {
@@ -374,10 +371,7 @@ export function hailstone2($step: Step) {
   const $plot = $step.$('x-coordinate-system') as CoordinateSystem;
 
   $step.model.watch((m: any) => $plot.setPoints([...cached(m.n), 4, 2, 1]));
-
-  const $actions = $step.$$('.var-action');
-  $actions[0].on('click', () => $step.model.n = 31);
-  $actions[1].on('click', () => $step.model.n = 47);
+  $step.model.set = (n: number) => ($step.model.n = n);
 }
 
 export function quiz($step: Step) {
@@ -565,11 +559,7 @@ export function sunflowerSpiral($step: Step) {
     if (x === 5) $slider.moveTo($slider.steps * 0.6180339);
   });
 
-  for (const $a of $step.$$('.fib-action')) {
-    const x = $slider.steps * (+$a.data.value!);
-    $a.on('click', () => $slider.moveTo(x));
-  }
-
+  $step.model.set = (n: number) => $slider.moveTo($slider.steps * n);
   $slider.set(0.411 * $slider.steps);
 }
 

@@ -1012,7 +1012,7 @@ Ispada da, iako postoji beskonačno mnogo mogućih obrazaca, svi imaju jednu od 
 Nažalost, ne postoji jednostavan razlog zašto postoji _17_ ovih grupa, a dokazivanje toga zahtijeva napredniju matematiku. Umjesto toga, možete pokušati nacrtati vlastite ponovljene uzorke za svaku od 17 grupa pozadina:
 
     include ./components/wallpaper
-    x-wallpaper
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin

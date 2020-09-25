@@ -6,7 +6,6 @@
 
 import {delay, isOneOf} from '@mathigon/core';
 import {Circle, intersections, isCircle, isInteger, isLineLike, Point, round, Segment} from '@mathigon/fermat';
-import {hover} from '@mathigon/boost';
 import {Geopad, GeoPath, Path, Slider, Step} from '../shared/types';
 
 
@@ -177,7 +176,7 @@ export async function sssConstruction($step: Step) {
   $geopad.animatePoint(base.components[0].name, new Point(42, 150));
   $geopad.animatePoint(base.components[1].name, new Point(258, 150));
 
-  $geopad.drawPoint(() => intersections(circle1.value!, circle2.value!)[1-i],
+  $geopad.drawPoint(() => intersections(circle1.value!, circle2.value!)[1 - i],
       {target: 'bottom', name: 'd', interactive: false});
 
   await $step.onScore('blank-2');
@@ -216,10 +215,7 @@ export function pythagorasProof($step: Step) {
   });
 
   $step.onScore('blank-1', updateLabels);
-
-  const $targets = $step.$$('.hover-target');
-  hover($targets[0], {enter: () => $slider.set(0)});
-  hover($targets[1], {enter: () => $slider.set(100)});
+  $step.model.set = (n: number) => $slider.moveTo(n);
 
   // -----
 

@@ -310,7 +310,7 @@ Var och en av ${n}{n|5|2,8,1} folk på festen skakar hand med ${n-1} andra. Det 
 ---
 > id: handshakes-2a
 
-Tyvärr är detta svar inte helt rätt. Lägg märke till hur <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">de två första posterna på den översta raden</x-target> är faktiskt samma, bara vänt runt. 
+Tyvärr är detta svar inte helt rätt. Lägg märke till hur [de två första posterna på den översta raden](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) är faktiskt samma, bara vänt runt. 
 
 Vi har faktiskt räknat varje handskakning [[två gånger | en gång | tre gånger]] , _{span.reveal(when="blank-0")} en gång för var och en av de två inblandade. Detta betyder att rätt antal handskakningar för ${n}{n|5|2,25,1} gäster är `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
 

@@ -235,8 +235,8 @@ Tabii ki, __{.m-green}9__, __{.m-blue}99__, __{.m-red}999__, ve devamı her zama
 
 {.text-center} __{.m-red}6__ + __{.m-blue}3__ + __{.m-green}8__ + __{.m-yellow}4__
 
-Bu sadece basamak değerleri toplamı olur! Eğer <x-target no-margins
-to=".digit-sum-is">basamak değerleri toplamı</x-target> 3'ün katıysa ve biz <x-target no-margins to=".digit-sum-else">diğer her şeyin</x-target>
+Bu sadece basamak değerleri toplamı olur! Eğer [{.no-margins}basamak değerleri toplamı](->.digit-sum-is)
+3'ün katıysa ve biz [{.no-margins}diğer her şeyin](->.digit-sum-else)
 3'ün katı olduğunu biliyorsak, o zaman toplam da 3'ün katıdır.
 
 ---

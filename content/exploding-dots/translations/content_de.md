@@ -387,15 +387,15 @@ Wir können jetzt eine __Abstandsformel__ erstellen, die darauf basiert, wie oft
 Zahl als Multiplikator "steckt". Wenn wir eine Zahl _a_ maximal _k_ mal durch zehn teilen
 können und dabei eine ganze Zahl erhalten, schreiben wir
 
-{.text-center} `|a|_(zehn) = 1/10^k`
+{.text-center} `abs(a)_(zehn) = 1/10^k`
 
-Zum Beispiel, `|850|_(zehn) = 1/(10^1) = 0,1` und `|8500|_(zehn) = 1/(10^2) = 0,01`
-und `|850000|_(zehn) =` [[0,0001]].
+Zum Beispiel, `abs(850)_(zehn) = 1/(10^1) = 0,1` und `abs(8500)_(zehn) = 1/(10^2) = 0,01`
+und `abs(850000)_(zehn) =` [[0,0001]].
 
 ---
 
 Wir können auch den Abstand zwischen zwei beliebigen Zahlen messen. Zum Beispiel ist der
-Abstand zwischen 3 und 33 gleich `|33−3|_(zehn) = |30|_(zehn) = 1/(10^1) = 0,1`.
+Abstand zwischen 3 und 33 gleich `abs(33−3)_(zehn) = abs(30)_(zehn) = 1/(10^1) = 0,1`.
 
 Mit dieser neuen Art, den Abstand zu messen, ist 1, 10, 100, 1000, … eine Zahlenfolge,
 die sich immer mehr [[Null|1|-1|unendlich]] annähert. In ähnlicher Weise kommt 9, 99, 999,
@@ -504,10 +504,9 @@ Um zu sehen, warum das der Fall ist, müssen wir uns die Potenzen 2 und 5 ansehe
 ---
 > id: flaw-1
 
-Beachte, wie viele der 5er-Potenzen mit <x-target to=".po2" no-margins>anderen,
-kleineren Potenzen von 5</x-target> enden. Das Gleiche gilt auch für die 2er
-Potenzen: Es stellt sich heraus, dass wir zwei unendliche, 10-adische Zahlen
-erzeugen können, die immer mit 2er bzw. 5er Potenzen enden:
+Beachte, wie viele der 5er-Potenzen mit [{.no-margins}anderen, kleineren Potenzen von 5](->.po2)
+enden. Das Gleiche gilt auch für die 2er Potenzen: Es stellt sich heraus, dass wir zwei unendliche,
+10-adische Zahlen erzeugen können, die immer mit 2er bzw. 5er Potenzen enden:
 
 ::: column(width=140)
 

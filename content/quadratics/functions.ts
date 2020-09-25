@@ -116,16 +116,13 @@ export function parabola($step: Step) {
     $chart.setFunctions(fn);
     $chart.drawPoints(zeros(s.a, s.b, s.c).map(p => new Point(p, fn(p))));
   });
+
+  $step.model.set = (a: number, b: number, c: number) => {
+    $step.model.a = a;
+    $step.model.b = b;
+    $step.model.c = c;
+  };
 }
-
-/* export function s3($step: Step) {
-  $step.model.zeros = zeros;
-
-  let $actions = $step.$$('.action');
-  $actions[0].on('click', () => $step.model.a = 1; $step.model.b = -2; $step.model.c = 2; });
-  $actions[1].on('click', () => $step.model.a = 1; $step.model.b = 2; $step.model.c = 1; });
-  $actions[2].on('click', () => $step.model.a = 1; $step.model.b = -4; $step.model.c = 2; });
-} */
 
 export function directrix($step: Step) {
   $step.model.qy = (p: Point, d: Point) => {

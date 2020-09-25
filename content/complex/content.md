@@ -131,6 +131,38 @@ What made Cardano special is that, instead of stopping and giving up, he took a 
 
 ---
 
+## Euler’s Identity
+
+> section: euler
+> sectionStatus: dev
+
+* Know and use e^(iθ) = cos(θ) + i sin(θ) and the form z = re^(iθ).
+* Use De Moivre’s theorem to find multiple angle formulae and sums of series
+* De Moivre’s theorem and its application to trigonometric identities and to roots of a complex number.
+
+---
+> id: euler-approx
+
+Here is a geopad with axes and coordinate system
+
+    figure
+      p.md x = ${round(x,2)} and m = ${m+1}
+      x-geopad(width=400 height=400 x-axis="-2,2,1" y-axis="-2,2,1" axes grid padding=5 label-suffix=",i" axis-names="Real, Imaginary"): svg
+        circle.blue(hidden x="point(1, x/(m+1))" name="p0")
+        path.blue(x="segment(point(0,0),p0)")
+        path.blue(x=`segment(point(1,0),p0)`)
+        for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+          circle.blue(hidden x=`m > ${i} ? complexPower(p0,${i+1}): q` name=`p${i}`)
+          path.blue(x=`segment(point(0,0),p${i})`)
+          path.blue(x=`segment(p${i-1},p${i})`)
+        circle.red(x=`complexPower(p0,m)` name=`pm`)
+        path.red(x=`segment(point(0,0),pm)`)
+            
+      x-slider(:bind="x" steps=5 continuous)
+      x-slider(:bind="m" steps=29)
+
+---
+
 ## Quadratic, Cubic and Quartic Equations
 
 > section: polynomials
@@ -147,17 +179,6 @@ What made Cardano special is that, instead of stopping and giving up, he took a 
 * Solve cubic or quartic equations with real coefficients (given sufficient
   information to deduce at least one root for cubics or at least one complex
   root or quadratic factor for quartics).
-
----
-
-## Euler’s Identity
-
-> section: euler
-> sectionStatus: dev
-
-* Know and use e^(iθ) = cos(θ) + i sin(θ) and the form z = re^(iθ).
-* Use De Moivre’s theorem to find multiple angle formulae and sums of series
-* De Moivre’s theorem and its application to trigonometric identities and to roots of a complex number.
 
 ---
 

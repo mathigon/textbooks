@@ -503,9 +503,9 @@ _{button.next-step} 继续_
 ::: column.grow
 {.task} 使用直尺和圆规画一个[等边三角形](gloss:equilateral-triangle) 。
 
-首先，选择<x-target no-margins to="#equilateral .tool:nth-child(3)">画线工具</x-target>，在右边的框中任意位置画一条线段，简单的从起始点拖到终点即可，这条线段作为三角形的一条边。
+首先，选择[画线工具](->#equilateral_.tool:nth-child(3))，在右边的框中任意位置画一条线段，简单的从起始点拖到终点即可，这条线段作为三角形的一条边。
 
-{.reveal(when="segment0")} 接下来，选择<x-target no-margins to="#equilateral .tool:nth-child(5)">画圆工具</x-target>，以该线段的端点为圆心画两个圆，只需要从其中一个端点拖到另一个端点即可。
+{.reveal(when="segment0")} 接下来，选择[画圆工具](->#equilateral_.tool:nth-child(5))，以该线段的端点为圆心画两个圆，只需要从其中一个端点拖到另一个端点即可。
 
 {.reveal(when="circle1 circle2")} 三角形的其中两个端点我们已经有了，而两个圆的交点是第三个交点，再次用直线工具将缺失的边画上就完成了三角形的绘制。
 

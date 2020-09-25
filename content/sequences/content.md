@@ -173,8 +173,7 @@ We can also describe this pattern using a special [formula](gloss:formula):
 
 To get the _n_-th triangle number, we take the [[previous|first|next]] triangle
 number and add _n_. For example, if _n_&nbsp;=&nbsp;${n}{n|5|2,20,1}, the
-formula becomes <msub><mi>x</mi><mn>${n}</mn></msub>
-= <msub><mi>x</mi><mn>${n-1}</mn></msub> + ${n}.
+formula becomes `x_var("n") = x_var("n-1") + var("n")`.
 
 ---
 > id: recursive-1
@@ -542,19 +541,19 @@ behave completely differently based on the values of `a` and *r*:
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-If _{span.var-action}`r > 1`_, the terms will [[quickly get bigger|quickly
-decrease|get closer to zero]]_{span.reveal(when="blank-2")}, up to infinity.
-Mathematicians say that the sequence [__diverges__](gloss:sequence-divergence)._
+If [`r > 1`](action:set(2,2)), the terms will [[quickly get bigger|quickly decrease|get closer to
+zero]], _{span.reveal(when="blank-2")}up to infinity. Mathematicians say that the sequence
+[__diverges__](gloss:sequence-divergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-If _{span.var-action}*r* is between –1 and 1_, the terms will always [[get
-closer to 0|decrease to negative infinity|get smaller]]_{span.reveal(when="blank-3")}.
-We say that the sequence [__converges__](gloss:sequence-convergence)._
+If [`–1 < r < 1`](action:set(10,0.6)), the terms will always [[get closer to 0|decrease to negative
+infinity|get smaller]]. _{span.reveal(when="blank-3")}We say that the sequence
+[__converges__](gloss:sequence-convergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-If _{span.var-action}`r < -1`_, the terms will alternate between positive and
+If [`r < -1`](action:set(3,-1.4)), the terms will alternate between positive and
 negative, while their [[absolute value|inverse|difference]] gets bigger.
 
 :::
@@ -1194,7 +1193,7 @@ male and female).
 
 {.r} In the following month you would have 13 pairs of rabbits: the 8 ones from the
 previous month, plus 5 new sets of babies. Can you detect a pattern in this
-sequence? _{button.next-step} Continue_
+sequence? [Continue](btn:next)
 
 ---
 > id: rabbits-2
@@ -1387,12 +1386,12 @@ is the ratio of its width and its height:
 
     include svg/golden-5.svg
 
-{.text-center.no-voice} <mfrac><mn>[[13]]</mn><mn>[[8]]</mn></mfrac> _{span.reveal(when="blank-0 blank-1")}= 1.625_
+{.text-center.no-voice} `input(13) / input(8) reveal(= 1.625, "blank-0 blank-1")`
 ::: column(width=100)
 
     include svg/golden-6.svg
 
-{.text-center.no-voice} <mfrac><mn>[[21]]</mn><mn>[[13]]</mn></mfrac> _{span.reveal(when="blank-2 blank-3")}= 1.62…_
+{.text-center.no-voice} `input(21) / input(13) reveal(= 1.62…, "blank-2 blank-3")`
 :::
 
 ---
@@ -1492,38 +1491,30 @@ might look like with different angles between its seeds:
       x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} If the angle is _{span.fib-action(data-value=0)}0°_,
-all seeds will grow in a single long row away from the center.
+{div(slot="legend")} If the angle is [0°](action:set(0)), all seeds will grow in a single long row
+away from the center.
 
-{div.inline(slot="legend")} If the angle is _{span.fib-action(data-value=0.5)}`1/2`_
-of a full a rotation (180°), the seeds will alternate between two separate
-“arms” that move away from the center.
+{div.inline(slot="legend")} If the angle is [`1/2`](action:set(0.5)) of a full a rotation (180°),
+the seeds will alternate between two separate “arms” that move away from the center.
 
-{div.inline(slot="legend")} If the rotation is another fractional proportion of
-360°, for example _{span.fib-action(data-value=2/5)}`2/5`_ or
-_{span.fib-action(data-value=1/3)}`1/3`_ or _{span.fib-action(data-value=3/8)}`3/8`_,
-then the number of “arms” will be the same as the [[denominator|numerator|prime
-factor]] of that fraction.
+{div.inline(slot="legend")} If the rotation is another fractional proportion of 360°, for example
+[`2/5`](action:set(2/5)) or [`1/3`](action:set(1/3)) or [`3/8`](action:set(3/8)), then the number
+of “arms” will be the same as the [[denominator|numerator|prime factor]] of that fraction.
 
-{div(slot="legend")} Unfortunately “arms” are bad, because they mean that
-the seeds are not evenly distributed: all of the space between the arms is
-wasted. But if [rational numbers](gloss:rational-numbers) aren’t going to work,
-let’s try [irrational numbers](gloss:irrational-numbers)!
+{div(slot="legend")} Unfortunately “arms” are bad, because they mean that the seeds are not evenly
+distributed: all of the space between the arms is wasted. But if [rational numbers](gloss:rational-numbers)
+aren’t going to work, let’s try [irrational numbers](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} One example of an irrational number is [`pi`](gloss:pi).
-But if the angle between seeds is _{span.fib-action(data-value=0.31831)}`1/pi`_
-of 360°, we still seem to get arms: 22 of them. That’s because the fraction
-`22/7 = 3.1429…` is a pretty good approximation for `pi`. What we really need is
-an irrational number that _can’t_ be closely approximated by a simple fraction.
+{div.inline(slot="legend")} One example of an irrational number is [`pi`](gloss:pi). But if the
+angle between seeds is [`1/pi`](action:set(0.31831)) of 360°, we still seem to get arms: 22 of them.
+That’s because the fraction `22/7 = 3.1429…` is a pretty good approximation for `pi`. What we really
+need is an irrational number that _can’t_ be closely approximated by a simple fraction.
 
-{div.inline(slot="legend")} It turns out that the [golden ratio](gloss:golden-ratio)
-is just that: the “most irrational” of all irrational numbers. If the angle
-between seeds is _{span.fib-action(data-value=0.6180339)}`1/phi`_ of 360°, they
-seem to be almost perfectly spaced. And this is precisely the angle that plants
-around the world are using.
+{div.inline(slot="legend")} It turns out that the [golden ratio](gloss:golden-ratio) is just that:
+the “most irrational” of all irrational numbers. If the angle between seeds is
+[`1/phi`](action:set(0.6180339)) of 360°, they seem to be almost perfectly spaced. This is
+precisely the angle that plants around the world are using.
 :::
-
-    x-gesture(target=".fib-action")
 
 ---
 > id: sunflower-spiral-1
@@ -1839,7 +1830,7 @@ the terms of the sequence in a chart:
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")} Notice how some starting points end very quickly,
-while others (like _{span.var-action}31_ or _{span.var-action}47_) take more
+while others (like [31](action:set(31)) or [47](action:set(47))) take more
 than one hundreds steps before they reach the 4, 2, 1 cycle.
 
 ---
@@ -1885,7 +1876,7 @@ above. Can you find the pattern?
 {.text-center.s-lime.s-vertical} _{span.n}1_, _{span.n}11_, _{.n}21_,
 _{.n}1211_, _{.n}111221_, _{.n}312211_, …
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: look-and-say-1
@@ -2039,7 +2030,7 @@ Pascal’s triangle can be created using a very simple pattern, but it is filled
 with surprising patterns and properties. That’s why it has fascinated
 mathematicians across the world, for hundreds of years.
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 
 ---

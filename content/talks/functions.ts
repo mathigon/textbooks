@@ -81,9 +81,9 @@ export function circles($step: Step) {
     [147, 0.735]
   ];
 
-  const initial = Polygon.regular(data.length + 1, 130).shift(140, 140);
+  const initial = Polygon.regular(data.length + 1, 130).shift(160, 160);
 
-  const outerCircle = new Circle(new Point(140, 140), 108.07);
+  const outerCircle = new Circle(new Point(160, 160), 108.07);
 
   const $svg = $step.$('svg.circles') as SVGParentView;
   const circles: Disk[] = [];

@@ -440,11 +440,11 @@ I stället för att dela upp en cirkel i ett visst antal segment (som 360 grader
 
 ::: column.grow
 
-EN _{span.var-action} hela cirkeln_ har omkrets _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+EN [hela cirkeln](action:setState(0)) har omkrets _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} För en _{span.var-action} halvcirkelrotation_ , motsvarande avstånd längs omkretsen _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} För en [halvcirkelrotation](action:setState(1)), motsvarande avstånd längs omkretsen _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-1")} För en _{span.var-action} kvartalscirkelrotation_ , avståndet längs omkretsen är _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} För en [kvartalscirkelrotation](action:setState(2)), avståndet längs omkretsen är _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
 
 {.reveal(when="eqn-2")} Och så vidare: detta sätt att mäta vinklar kallas [__radianer__](gloss:radians) (du kan komma ihåg detta som "radienheter"). 
 
@@ -606,12 +606,12 @@ I de föregående avsnitten lärde du dig namnen som givits till flera olika del
 
 ::: column.grow(parent="right")
 
-* {.r} EN [{.red} secant](pill:secant) är en linje som skär en cirkel vid två punkter. [Fortsätt](btn:next)
-* {.r.reveal(when="next-0")} EN [{.green} ackord](pill:chord) är ett linjesegment vars ändpunkter ligger på en cirkelns omkrets. [Fortsätt](btn:next)
-* {.r.reveal(when="next-1")} EN [{.blue} tangent](pill:tangent) är en linje som vidrör en cirkel på exakt en punkt. Detta kallas __punkten för tangens__ . [Fortsätt](btn:next)
-* {.r.reveal(when="next-2")} En [{.yellow} båge](pill:arc) är en sektion av en cirkelns omkrets. [Fortsätt](btn:next)
-* {.r.reveal(when="next-3")} EN [{.teal} sektor](pill:sector) är en del av det inre av en cirkel, avgränsat av en _båge_ och _två radier_ . [Fortsätt](btn:next)
-* {.r.reveal(when="next-4")} Slutligen, a [{.purple} segment](pill:segment) är en del av det inre av en cirkel, avgränsat av en _båge_ och _ett ackord_ . [Fortsätta](btn:next) 
+* {.r} EN [{.red} secant](target:secant) är en linje som skär en cirkel vid två punkter. [Fortsätt](btn:next)
+* {.r.reveal(when="next-0")} EN [{.green} ackord](target:chord) är ett linjesegment vars ändpunkter ligger på en cirkelns omkrets. [Fortsätt](btn:next)
+* {.r.reveal(when="next-1")} EN [{.blue} tangent](target:tangent) är en linje som vidrör en cirkel på exakt en punkt. Detta kallas __punkten för tangens__ . [Fortsätt](btn:next)
+* {.r.reveal(when="next-2")} En [{.yellow} båge](target:arc) är en sektion av en cirkelns omkrets. [Fortsätt](btn:next)
+* {.r.reveal(when="next-3")} EN [{.teal} sektor](target:sector) är en del av det inre av en cirkel, avgränsat av en _båge_ och _två radier_ . [Fortsätt](btn:next)
+* {.r.reveal(when="next-4")} Slutligen, a [{.purple} segment](target:segment) är en del av det inre av en cirkel, avgränsat av en _båge_ och _ett ackord_ . [Fortsätta](btn:next) 
 
 :::
 
@@ -670,11 +670,11 @@ Tyvärr visste ingen exakt _hur stor_ jorden var - förrän omkring 200 f.Kr., n
 
 ::: column.grow
 
-Som du kan se i diagrammet, en [{.red} båge](pill:arc) är en del av [[omkretsen | diameter | tangent]] för en cirkel, och a [{.yellow} sektor](pill:sector) är en del av [[interiören | radie | omkretsen]] av en cirkel. 
+Som du kan se i diagrammet, en [{.red} båge](target:arc) är en del av [[omkretsen | diameter | tangent]] för en cirkel, och a [{.yellow} sektor](target:sector) är en del av [[interiören | radie | omkretsen]] av en cirkel. 
 
 ::: .reveal(when="blank-0 blank-1")
 
-Bågen mellan två punkter _A_ och _B_ skrivs ofta som `arc(AB)` . Denna definition är något tvetydig: det finns en [{.purple} andra bågen](pill:major) som förbinder _A_ och _B_ men går tvärtom runt cirkeln. 
+Bågen mellan två punkter _A_ och _B_ skrivs ofta som `arc(AB)` . Denna definition är något tvetydig: det finns en [{.purple} andra bågen](target:major) som förbinder _A_ och _B_ men går tvärtom runt cirkeln. 
 
 Den mindre av de två bågarna kallas den __mindre bågen__ , och den större kallas den __stora bågen__ . Om punkterna _A_ och _B_ är exakt mitt emot varandra, har båda bågarna samma längd och är [[halvcirklar | diametrar | omkretser]] . 
 
@@ -687,13 +687,13 @@ Den mindre av de två bågarna kallas den __mindre bågen__ , och den större ka
 
 ::: column.grow
 
-För att hitta längden på en båge eller området för en sektor måste vi veta om motsvarande vinkel i mitten av cirkeln: detta kallas [{.blue} central vinkel](pill:angle) . 
+För att hitta längden på en båge eller området för en sektor måste vi veta om motsvarande vinkel i mitten av cirkeln: detta kallas [{.blue} central vinkel](target:angle) . 
 
-Lägg märke till hur bågen, sektorn och vinkeln tar upp _samma andel_ av en hel cirkel. Till exempel om [{.blue} central vinkel](pill:angle) är _{span.var-action} 90°_ , det tar [[en fjärdedel | en halv | en tredjedel]] av [{.teal} hela cirkeln](pill:fangle) . 
+Lägg märke till hur bågen, sektorn och vinkeln tar upp _samma andel_ av en hel cirkel. Till exempel om [{.blue} central vinkel](target:angle) är [90°](action:set90Deg()), det tar [[en fjärdedel | en halv | en tredjedel]] av [{.teal} hela cirkeln](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
-Detta innebär att [{.red} längden på bågen](pill:arc) är också `1/4` av [{.purple} hela omkretsen](pill:circ) av cirkeln och [{.yellow} sektoren](pill:sector) är `1/4` av [{.orange} hela området](pill:area) av cirkeln. 
+Detta innebär att [{.red} längden på bågen](target:arc) är också `1/4` av [{.purple} hela omkretsen](target:circ) av cirkeln och [{.yellow} sektoren](target:sector) är `1/4` av [{.orange} hela området](target:area) av cirkeln. 
 
 Vi kan uttrycka detta förhållande i en ekvation: 
 
@@ -726,13 +726,13 @@ Nu kan vi ordna om dessa ekvationer för att hitta vilken variabel vi är intres
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} båglängd](pill) | = | `"circumference" × c/360` |
+| [ båglängd](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} sektorområde](pill) | = | `"circle area" × c/360` |
+| [ sektorområde](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -751,13 +751,13 @@ Om den centrala vinkeln mäts i [radianer](gloss:radians) snarare än [grader](g
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} båglängd](pill) | = | `2 π r × c/(2π)` |
+| [ båglängd](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} sektorområde](pill) | = | `π r^2 × c/(2π)` |
+| [ sektorområde](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 
@@ -801,7 +801,7 @@ Eratosthenes märkte att vid middagstid dagen på sommarsolståndet kastade obel
 
 ::: .reveal(when="next-0")
 
-Eratosthenes mätte att [{.teal} skuggvinkeln](pill:angle1) var 7,2°. Detta är samma sak som [{.purple} centrala vinkeln](pill:angle2) på [{.red} båge](pill:arc) från Alexandria till Swenet, för de [[växlar | vertikal | motsvarande]] vinklar. 
+Eratosthenes mätte att [{.teal} skuggvinkeln](target:angle1) var 7,2°. Detta är samma sak som [{.purple} centrala vinkeln](target:angle2) på [{.red} båge](target:arc) från Alexandria till Swenet, för de [[växlar | vertikal | motsvarande]] vinklar. 
 
 :::
 

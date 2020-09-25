@@ -40,8 +40,8 @@ function fireShot($geo: Geopad, index: number, angle: number) {
   const MAX_RADIUS = 30; // approximated from sqrt(2*20^2)
 
   const aimAt = new Point(
-      MAX_RADIUS * Math.cos(angle + Math.PI/2),
-      MAX_RADIUS * Math.sin(angle + Math.PI/2)
+      MAX_RADIUS * Math.cos(angle + Math.PI / 2),
+      MAX_RADIUS * Math.sin(angle + Math.PI / 2)
   );
 
   const origin = new Point(0, 0);
@@ -111,8 +111,8 @@ export function translations($step: Step) {
 function applyTransform(A: number[][], v: number[]): number[] {
 
   return [
-    A[0][0]*v[0] + A[0][1]*v[1],
-    A[1][0]*v[0] + A[1][1]*v[1]
+    A[0][0] * v[0] + A[0][1] * v[1],
+    A[1][0] * v[0] + A[1][1] * v[1]
   ];
 }
 
@@ -128,12 +128,12 @@ export function basicTransformations($step: Step) {
     // (2) apply transformation shown in matrix
     // (3) move it to center (110, 110)
     // let's try some d3 style formatting
-    const pointString = SHAPE.map(p => [p[0]-40, p[1]-40])         // (1) center shape along origin (0,0)
+    const pointString = SHAPE.map(p => [p[0] - 40, p[1] - 40])         // (1) center shape along origin (0,0)
         .map(p => applyTransform([
-          [1, - xshear],  // why is this negative?
+          [1, -xshear],  // why is this negative?
           [-yshear, 1]   // is this the right direction?
         ], p)) // (2) apply transformation from matrix
-        .map(p => [p[0]+110, [p[1]+110]])     // (3) move to center of SVG
+        .map(p => [p[0] + 110, [p[1] + 110]])     // (3) move to center of SVG
         .map(point => point.join(','))        // commas between xy coords
         .join(' ');                            // spaces between coord pairs
 
@@ -148,12 +148,12 @@ export function basicTransformations($step: Step) {
     // (2) apply transformation shown in matrix
     // (3) move it to center (110, 110)
     // let's try some d3 style formatting
-    const pointString = SHAPE.map(p => [p[0]-40, p[1]-40])         // (1) center shape along origin (0,0)
+    const pointString = SHAPE.map(p => [p[0] - 40, p[1] - 40])         // (1) center shape along origin (0,0)
         .map(p => applyTransform([            // (2) apply transformation from matrix
           [xscale, 0],
           [0, yscale]
         ], p))
-        .map(p => [p[0]+110, [p[1]+110]])     // (3) move to center of SVG
+        .map(p => [p[0] + 110, [p[1] + 110]])     // (3) move to center of SVG
         .map(point => point.join(','))        // commas between xy coords
         .join(' ');                            // spaces between coord pairs
 
@@ -181,12 +181,12 @@ export function mathigonMatrix($step: Step) {
     // (2) apply transformation shown in matrix
     // (3) move it to center (110, 110)
     // let's try some d3 style formatting
-    const pointString = shape.map(p => [p[0]-40, p[1]-40])         // (1) center shape along origin (0,0)
+    const pointString = shape.map(p => [p[0] - 40, p[1] - 40])         // (1) center shape along origin (0,0)
         .map(p => applyTransform([            // (2) apply transformation from matrix
           [a, b],
           [c, d]
         ], p))
-        .map(p => [p[0]+110, [p[1]+110]])     // (3) move to center of SVG
+        .map(p => [p[0] + 110, [p[1] + 110]])     // (3) move to center of SVG
         .map(point => point.join(','))        // commas between xy coords
         .join(' ');                            // spaces between coord pairs
 
@@ -406,17 +406,17 @@ export function threeDimensions($step: Step) {
     const PLANE_SIZE = 4;
     const zPlaneMaterial = Solid.translucentMaterial(0xcd0e66, 0.3);
     const zPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), zPlaneMaterial);
-    zPlane.rotateX(Math.PI/2);
+    zPlane.rotateX(Math.PI / 2);
     basic3d.addArrow([0, 0, 0], [0, 0, 1], 0xcd0e66);
 
     const yPlaneMaterial = Solid.translucentMaterial(0x0f82f2, 0.3);
     const yPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), yPlaneMaterial);
-    yPlane.rotateY(Math.PI/2);
+    yPlane.rotateY(Math.PI / 2);
     basic3d.addArrow([0, 0, 0], [0, 1, 0], 0x0f82f2);
 
     const xPlaneMaterial = Solid.translucentMaterial(0x22ab24, 0.3);
     const xPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), xPlaneMaterial);
-    xPlane.rotateZ(Math.PI/2);
+    xPlane.rotateZ(Math.PI / 2);
     basic3d.addArrow([0, 0, 0], [1, 0, 0], 0x22ab24);
 
     const vectorArrow = basic3d.addArrow([0, 0, 0], [$step.model.x, $step.model.y, $step.model.z], 0x000000);
@@ -518,4 +518,8 @@ export function threeDimensions($step: Step) {
       planeCyan.geometry = plane2.geometry; */
     });
   });
+}
+
+export function noop() {
+  // TODO
 }

@@ -233,7 +233,7 @@
 {.reveal(when="blank-3")} Чтобы найти апофему, мы можем использовать определение [[тангенса|синуса|косинуса]] : 
 
 {.text-center.reveal(when="blank-4")}`tg pill(α, "blue", "alpha") = 
-target("противолежащий катет", "apothem") / target("прилежащий катет", "half-base") =
+pill("противолежащий катет", "yellow", "apothem") / pill("прилежащий катет", "green", "half-base") =
 blank("апофема", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")}`⇒ pill("апофема", "yellow",

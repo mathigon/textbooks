@@ -56,8 +56,8 @@ export class JuliaCanvas {
           const y = this.range[2] + j * this.resolution;
           const yV = vB.yMin + (y - pB.yMin) / (pB.dy) * (vB.dy);
           const yV1 = vB.yMin + (-y - pB.yMin) / (pB.dy) * (vB.dy);
-          context.rect(xV * 2 - scale, yV * 2 - scale, scale * 2+0.1, scale * 2+0.1);
-          context.rect(xV1 * 2 - scale, yV1 * 2 - scale, scale * 2+0.1, scale * 2+0.1);
+          context.rect(xV * 2 - scale, yV * 2 - scale, scale * 2 + 0.1, scale * 2 + 0.1);
+          context.rect(xV1 * 2 - scale, yV1 * 2 - scale, scale * 2 + 0.1, scale * 2 + 0.1);
         }
       }
     }

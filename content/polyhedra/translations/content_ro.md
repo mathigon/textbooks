@@ -272,7 +272,7 @@ măsura [unghiului intern](target:int-angle) al poligonului:
 [[tangentei|sinusului|cosinusului]]:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
-target("latura opusă", "apothem") / target("latura alăturată", "half-base") =
+pill("olatura opusă", "yellow", "apothem") / pill("latura alăturată", "green", "half-base") =
 blank("apotema", "s", "s/2") / blank("s/2", "s", "apotema")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",

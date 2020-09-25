@@ -44,7 +44,7 @@ agnesi:
 
     Agnesi also studied a bell-shaped curve described by the equation
     `y=a^3/(x^2+a^2)`. This function is now called the _Witch of Agnesi_. The
-    strage name might come from a pun in the Italian language, were the word
+    strange name might come from a pun in the Italian language, were the word
     “versiera” for “witch” sounds similar to the ropes used when sailing.
 
 al-haytham:
@@ -1425,7 +1425,7 @@ mascheroni:
   name: Mascheroni
   full: Lorenzo Mascheroni
   bio: |
-    __Lorenzo Mascheroni__ (1750 – 1800) was in Italian mathematician and son
+    __Lorenzo Mascheroni__ (1750 – 1800) was an Italian mathematician and son
     of a wealthy landowner. He was ordained to priesthood at the age of 17, and
     taught rhetoric as well as physics and mathematics.
 
@@ -1650,6 +1650,7 @@ noether:
   full: Amalie Emmy Noether
   born: 1882
   died: 1935
+  small: true
   keywords: Woman Female
   bio: __Amalie Emmy Noether__ (1882 – 1935) was a German mathematician who made
     important discoveries in abstract algebra and theoretical physics, including
@@ -1954,10 +1955,10 @@ russell:
 shannon:
   name: Shannon
   full: Claude Shannon
-  born: 1898
-  died: 1972
+  born: 1916
+  died: 2001
   location: america
-  bio: __Claude Shannon__ (1898 – 1972) was an American mathematician and
+  bio: __Claude Shannon__ (1916 – 2001) was an American mathematician and
     electrical engineer, remembered as the “father of information theory”. He
     worked on cryptography, including codebreaking for national defence during
     World War II, but he was also interested in juggling, unicycling and chess.
@@ -2224,6 +2225,7 @@ zhenyi:
   name: Wang
   full: Wang Zhenyi
   location: asia
+  overflow: true
   keywords: China Woman Female
   bio: |
     __Wang Zhenyi__ (王贞仪, 1768 – 1797) was a Chinese scientist and

@@ -464,11 +464,7 @@ export function radians($step: Step) {
       $step.model.b = arc2.at(p);
     }, 600);
   }
-
-  const $actions = $step.$$('.var-action');
-  $actions[0].on('click', () => setState(0));
-  $actions[1].on('click', () => setState(1));
-  $actions[2].on('click', () => setState(2));
+  $step.model.setState = setState;
 
   const $equations = $step.$$('x-equation');
   $equations[0].on('solve', () => setState(1));
@@ -554,13 +550,11 @@ export function earthArc($step: Step) {
 }
 
 export function arcs1($step: Step) {
-  const $action = $step.$('.var-action')!;
   const $geopad = $step.$('x-geopad') as Geopad;
-
-  $action.on('click', () => {
+  $step.model.set90Deg = () => {
     $geopad.animatePoint('b', new Point(240, 140));
     $geopad.animatePoint('b', new Point(140, 40));
-  });
+  };
 }
 
 export function eratosthenes1($step: Step) {

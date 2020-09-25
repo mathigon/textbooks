@@ -602,13 +602,13 @@ Kreise nicht".
 geraden Leiste und einem Zirkel.
 
 Zeichne zunächst eine Strecke an einer beliebigen Stelle im Feld rechts. Wähle das
-<x-target no-margins to="#equilateral .tool:nth-child(3)">Linienwerkzeug</x-target>
+[{.no-margins} Linienwerkzeug](->#equilateral_.tool:nth-child(3))
 aus und ziehe damit einfach vom Anfang bis zum Ende. Diese Strecke wird eine der Seiten
 des Dreiecks sein.
 
 {.reveal(when="segment0")} Zeichne anschließend zwei Kreise, die jeweils einen der Endpunkte
 der Strecke als Mittelpunkt haben und durch den anderen Endpunkt gehen. Wähle das
-<x-target no-margins to="#equilateral .tool:nth-child(5)">Kreiswerkzeug</x-target>
+[{.no-margins} Kreiswerkzeug](->#equilateral_.tool:nth-child(5))
 aus und ziehe damit einfach jeweils von einem Endpunkt zum anderen.
 
 {.reveal(when="circle1 circle2")} Wir haben bereits zwei Eckpunkte des Dreiecks,

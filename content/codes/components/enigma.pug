@@ -1,9 +1,35 @@
-template#enigma
+x-enigma
   .enigma
-    .lightboard
-      for key in 'qwertyuiopasdfghjklzxcvbnm'.split('')
-        .key= key
+    .rotors
+      .rotorctl
+        span.rotorup(@pointerdown="rotate(2,true)") &#8593;
+        span.rotorup(@pointerdown="rotate(1,true)") &#8593;
+        span.rotorup(@pointerdown="rotate(0,true)") &#8593;
+      .rotorshow
+        span.rotorsetting ${rotorPosn[2]}
+        span.rotorsetting ${rotorPosn[1]}
+        span.rotorsetting ${rotorPosn[0]}
+      .rotorctl
+        span.rotordn(@pointerdown="rotate(2)") &#8595;
+        span.rotordn(@pointerdown="rotate(1)") &#8595;
+        span.rotordn(@pointerdown="rotate(0)") &#8595;
 
-    .keyboard
-      for key in 'qwertyuiopasdfghjklzxcvbnm'.split('')
-        .key= key
+    - var keyboard = ['QWERTZUIO', 'ASDFGHJK', 'PYXCVBNML']
+    for name in ['lightboard', 'keyboard']
+      div(class=name)
+        for row in keyboard
+          .row
+            for key in row.split('')
+              .key= key
+
+    .plugboard
+      svg(width=450 height=150)
+        for row, i in keyboard
+          for key, j in row.split('')
+            circle.plug(data-key=key cx=((1 + i % 2) *25 + j * 50) cy=(25 + i * 50) r=8)
+        g.cables
+
+  .notes
+    .input ${chunk(input)}
+    .output ${chunk(output)}
+  button.btn(@click="reset()") Reset

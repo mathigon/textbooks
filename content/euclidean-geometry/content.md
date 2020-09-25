@@ -35,11 +35,11 @@ _{span.reveal(when="p1 p2")} Let’s draw a semicircle around these points._
 {.reveal(when="p1 p2")} Now pick a third point that lies somewhere on the
 [circumference](target:circumf) of the semicircle.
 
-{.reveal(when="p3")} We can draw a [triangle](target:triangle) formed by the two corners of the
+{.reveal(when="p3")} We can draw a [{.red}triangle](target:triangle) formed by the two corners of the
 semicircle, as well as the point you picked on the circumference.
 
 {.reveal(when="p3" delay=1000)} Try moving the position of the three points and
-observe what happens to the [angle](target:angle) at the top of the triangle.
+observe what happens to the [{.yellow}angle](target:angle) at the top of the triangle.
 _{span.reveal(when="move")} It seems like it is always [[90]]°!_
 _{span.reveal(when="blank-0")} This means that the triangle is
 [[right-angled|equilateral|acute]]._
@@ -143,7 +143,7 @@ capital letters.
 {.r} In Mathigon, [large, solid dots](target:move) indicate interactive points
 you can move around, while [smaller, outlined dots](target:no-move) indicate
 fixed points which you can’t move.
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -169,7 +169,7 @@ refer to them using two points that lie on the line, for example
 <span class="math"><mover><mi>PQ</mi><mo value="↔">↔</mo></mover></span> or
 <span class="math"><mover><mi>QP</mi><mo value="↔">↔</mo></mover></span>. The
 order of the points does not matter.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 :::
 
@@ -191,7 +191,7 @@ _{button.next-step} Continue_
 points, without extending to infinity. We can label them just like lines, but
 without arrows on the bar above: `bar(AB)` or `bar(BA)`. Like, before the order
 of the points does not matter.
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -214,7 +214,7 @@ they start at a point (the sun) and then keep going forever.
 
 {.r} When labelling rays, the arrow shows the direction where it extends to
 infinity, for example `vec(AB)`. This time, the order of the points _does_ matter.
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -235,7 +235,7 @@ _{button.next-step} Continue_
 {.r} A [__circle__](gloss:circle) is the collection of points that all have the
 same [distance](target:radius) from a point in the center. This distance is
 called the [__radius__](gloss:circle-radius).
-_{button.next-step} Continue_
+[Continue](btn:next)
 :::
 
 ---
@@ -252,8 +252,8 @@ _{button.next-step} Continue_
       path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-class="white")
 
 ::: column.grow
-The two shapes on the right basically look identical. They have the same size
-and shape, and we could [turn and slide](target:move) one of them to exactly
+These two shapes basically look identical. They have the same size
+and shape, and we could [{.green}turn and slide](target:move) one of them to exactly
 match up with the other. In geometry, we say that the two shapes are
 [__congruent__](gloss:congruent).
 
@@ -399,8 +399,8 @@ the _father of geometry_, published the five axioms of geometry:
       path.red(x="segment(a,b)" target="1_line")
 
 {.text-center }__First Axiom__  
-You can join any [{.pill} two points](target:1_point) using exactly one straight [{.pill.red} line
-segment](target:1_line).
+You can join any [two points](target:1_point) using exactly one straight
+[{.red} line segment](target:1_line).
 
 ::: column(width=220)
 
@@ -412,8 +412,8 @@ segment](target:1_line).
       path.blue.transparent(x="segment(c,d)" target="2_line")
 
 {.text-center }__Second Axiom__  
-You can extend any [{.pill} line segment](target:2_segment) to an [{.pill.blue} infinitely long
-line](target:2_line).
+You can extend any [line segment](target:2_segment) to an
+[{.blue} infinitely long line](target:2_line).
 
 ::: column(width=220)
 
@@ -424,8 +424,8 @@ line](target:2_line).
       path.green(x="circle(e,distance(e,f))" target="3_circle")
 
 {.text-center }__Third Axiom__  
-Given a [{.pill} point _P_](target:3_center) and a [{.pill} distance _r_](target:3_radius), you can
-draw a [{.pill.green} circle](target:3_circle) with centre _P_ and radius _r_.
+Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you can draw a
+[{.green} circle](target:3_circle) with centre _P_ and radius _r_.
 
 ::: column(width=220)
 
@@ -445,7 +445,7 @@ draw a [{.pill.green} circle](target:3_circle) with centre _P_ and radius _r_.
       path.dark(x="segment(y,yb)")
 
 {.text-center }__Fourth Axiom__  
-Any two [{.pill.orange} right angles](target:4_angle) are congruent.
+Any two [{.orange} right angles](target:4_angle) are congruent.
 
 ::: column(width=220)
 
@@ -455,12 +455,11 @@ Any two [{.pill.orange} right angles](target:4_angle) are congruent.
       path.yellow(x="line5.parallel(g)" target="5_parallel")
 
 {.text-center }__Fifth Axiom__  
-Given a [{.pill} line _L_](target:5_line) and a [{.pill} point _P_](target:5_point) not on _L_,
-there is exactly [{.pill.yellow} one line](target:5_parallel) through _P_ that is
-[parallel](gloss:parallel) to _L_.
+Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_, there is exactly
+[{.yellow} one line](target:5_parallel) through _P_ that is [parallel](gloss:parallel) to _L_.
 :::
 
-{.r} _{button.next-step} Continue_
+{.r} [Continue](btn:next)
 
 ---
 > id: jefferson
@@ -612,15 +611,13 @@ disturb my circles”.
 {.task} Draw an [equilateral triangle](gloss:equilateral-triangle) using just a
 straight-edge and compass.
 
-To begin, draw a line segment anywhere in a box on the right. With the
-<x-target no-margins to="#equilateral .tool:nth-child(3)">line tool</x-target>
-selected, simply drag from start to end. This segment will be one of the sides
-of the triangle.
+To begin, draw a line segment anywhere in a box on the right. With the [{.no-margins} line
+tool](->#equilateral_.tool:nth-child(3)) selected, simply drag from start to end. This segment will
+be one of the sides of the triangle.
 
-{.reveal(when="segment0")} Next, draw two circles that have one of the endpoints
-of the line segments as center, and go through the other endpoint. With
-the <x-target no-margins to="#equilateral .tool:nth-child(5)">circle tool</x-target> selected,
-simply drag from one endpoint to the other.
+{.reveal(when="segment0")} Next, draw two circles that have one of the endpoints of the line
+segments as center, and go through the other endpoint. With the [{.no-margins} circle
+tool](->#equilateral_.tool:nth-child(5)) selected, simply drag from one endpoint to the other.
 
 {.reveal(when="circle1 circle2")} We already have two vertices of the triangle,
 and the third one is the intersection of the two circles. Use the line tool

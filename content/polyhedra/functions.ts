@@ -18,6 +18,7 @@ import '../shared/components/solid';
 import './components/polyhedron';
 import './components/folding';
 import './components/anibutton';
+import './components/polyhedron-slice';
 
 
 function internalAngles(polygon: Polygon) {
@@ -51,6 +52,7 @@ export function angles($step: Step) {
     overlap[0] = total(s.a1) > 361;
     overlap[1] = total(s.a2) >= 541;
     if (overlap[0] || overlap[1]) $step.addHint('no-overlap');
+    for (const $b of $buttons) $b.setAttr('text', '???');
   });
 
   $buttons[0].one('click', () => $step.addHint('angles-repeat'));

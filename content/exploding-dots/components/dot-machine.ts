@@ -6,13 +6,12 @@
 
 import {defer, EventTarget, last} from '@mathigon/core';
 import {numberFormat, Point} from '@mathigon/fermat';
-import {$N, CustomElementView, ElementView, pointerPosition, register} from '@mathigon/boost';
-import {AudioPlayer} from '../../shared/components/audio';
+import {$N, AudioPlayer, CustomElementView, ElementView, pointerPosition, register} from '@mathigon/boost';
 
 
-const enterAudio = new AudioPlayer('/resources/exploding-dots/audio/enter.m4a');
-const explodeAudio = new AudioPlayer('/resources/exploding-dots/audio/explode.m4a');
-const annihilateAudio = new AudioPlayer('/resources/exploding-dots/audio/annihilate.m4a');
+const enterAudio = new AudioPlayer('/audio/appear.mp3');
+const explodeAudio = new AudioPlayer('/audio/whoosh.mp3');
+const annihilateAudio = new AudioPlayer('/audio/disappear.mp3');
 
 // -----------------------------------------------------------------------------
 
