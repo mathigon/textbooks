@@ -734,18 +734,48 @@ export function currysParadox6($step: Step) {
   $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
 }
 
+export function encasementEstimation($step: Step) {
+  const $svg = $step.$('figure .tire-circumference')!.$('svg') as SVGParentView;
+  const onComplete = () => {
+    $step.score('tire-encapsulated');
+    $step.addHint('correct');
+  };
+  const targetBounds = new Rectangle(new Point(185, 8), 230, 230); // Approx size + loc of tire
+  const _box = new ResizeableSquare($svg, 100, new Point(15, 15), targetBounds, onComplete);
+}
+
 class ResizeableSquare {
-  private $el: SVGView;
+  private $edges: SVGView[] = [];
+  private $box: SVGView;
   private poly: Polygon;
   private corners: {rect: Rectangle, $el: SVGView}[] = [];
   private grabDelta: Point;
   private topLeft: Point;
+  private isComplete: boolean;
 
-  constructor(private $svg: SVGParentView, initSize: number, initPos: Point, private onMove: (b: DOMRect) => void) {
-    this.$el = $N('path', {}, $svg) as SVGView;
-    this.$el.css({'stroke-width': '2px', stroke: 'black', fill: 'rgba(0, 0, 0, 0)'});
+  constructor(
+    private $svg: SVGParentView,
+    initSize: number,
+    initPos: Point,
+    private targetBounds: Rectangle,
+    private onComplete: () => void
+  ) {
+
+    this.isComplete = false;
+
     this.poly = new Rectangle(initPos, initSize, initSize).polygon;
-    this.$el.draw(this.poly);
+
+    this.edges.forEach(edge => {
+      const $el = $N('path', {}, $svg) as SVGView;
+      $el.css({'stroke-width': '2px', stroke: 'black'});
+      $el.draw(edge);
+      this.$edges.push($el);
+    });
+
+    this.$box = $N('path', {}, $svg) as SVGView;
+    this.$box.css({fill: 'rgba(0, 0, 0, 0)'});
+    this.$box.draw(this.poly);
+
     this.grabDelta = new Point(0, 0);
     this.topLeft = new Point(0, 0);
 
@@ -810,10 +840,16 @@ class ResizeableSquare {
 
           this.poly.points[aIndex] = aNext;
           this.poly.points[bIndex] = bNext;
-          this.$el.draw(this.poly);
+          this.$box.draw(this.poly);
+
+          const edges = this.edges;
+          this.$edges.forEach(($edge, index) => $edge.draw(edges[index]));
+
+          this.handleBounds();
 
         },
         end: () => {
+
           this.poly.points.forEach((_, index2) => {
             const cornerRect =
               this.corners[index2].rect
@@ -824,31 +860,96 @@ class ResizeableSquare {
             this.corners[index2].rect = cornerRect;
             this.corners[index2].$el.draw(cornerRect);
           });
+
+          if (this.isComplete) {
+            this.onComplete();
+          }
+
         }
       });
     });
 
-    slide(this.$el, {
+    slide(this.$box, {
       start: (posn: Point) => {
-        this.topLeft = new Point(this.$el.bounds.left - this.$svg.bounds.left, this.$el.bounds.top - this.$svg.bounds.top);
+        this.topLeft = new Point(this.$box.bounds.left - this.$svg.bounds.left, this.$box.bounds.top - this.$svg.bounds.top);
         this.grabDelta = posn.subtract(this.topLeft);
-        this.onMove(this.$el.bounds);
       },
-      move: (posn: Point, _start, _last) => {
+      move: (posn: Point, _start, last: Point) => {
         const newPos = posn.subtract(this.topLeft).subtract(this.grabDelta);
-        this.$el.translate(newPos.x, newPos.y);
-        this.onMove(this.$el.bounds);
+
+        this.$box.translate(newPos.x, newPos.y);
+        this.$edges.forEach($edge => $edge.translate(newPos.x, newPos.y));
+
+        this.poly = this.poly.translate(posn.subtract(last));
+
+        this.handleBounds();
       },
       end: (last: Point, start: Point) => {
-        this.poly = this.poly.translate(last.subtract(start));
-        this.$el.setTransform(new Point(0, 0));
-        this.$el.draw(this.poly);
+        this.$box.setTransform(new Point(0, 0));
+        this.$box.draw(this.poly);
+
+        const edges = this.edges;
+        this.$edges.forEach(($edge, index) => {
+          $edge.setTransform(new Point(0, 0));
+          $edge.draw(edges[index]);
+        });
+
         this.poly.points.forEach((_point, index) => {
           this.corners[index].rect = this.corners[index].rect.translate(last.subtract(start));
           this.corners[index].$el.draw(this.corners[index].rect);
         });
+
+        if (this.isComplete) {
+          this.onComplete();
+        }
       }
     });
-
   }
+
+  handleBounds() {
+    let complete = true;
+    const closeness = 2;
+    this.edges.forEach((edge, index) => {
+      switch (index) {
+        case 0: // top
+          if (nearlyEquals(edge.p1.y, this.targetBounds.points[0].y, closeness)) {
+            this.$edges[0].css({stroke: 'lime'});
+          } else {
+            this.$edges[0].css({stroke: 'black'});
+            complete = false;
+          }
+          break;
+        case 1: // right
+          if (nearlyEquals(edge.p1.x, this.targetBounds.points[1].x, closeness)) {
+            this.$edges[1].css({stroke: 'lime'});
+          } else {
+            this.$edges[1].css({stroke: 'black'});
+            complete = false;
+          }
+          break;
+        case 2: // bottom
+          if (nearlyEquals(edge.p1.y, this.targetBounds.points[2].y, closeness)) {
+            this.$edges[2].css({stroke: 'lime'});
+          } else {
+            this.$edges[2].css({stroke: 'black'});
+            complete = false;
+          }
+          break;
+        case 3: // left
+          if (nearlyEquals(edge.p1.x, this.targetBounds.points[3].x, closeness)) {
+            this.$edges[3].css({stroke: 'lime'});
+          } else {
+            this.$edges[3].css({stroke: 'black'});
+            complete = false;
+          }
+          break;
+      }
+    });
+    this.isComplete = complete;
+  }
+
+  get edges() {
+    return this.poly.points.map((point, index) => new Segment(point, this.poly.points[(index + 1) % 4]));
+  }
+
 }
