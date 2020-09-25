@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import {nearlyEquals, Point, Polygon, Segment} from '@mathigon/fermat';
-import {$N, animate, CanvasView, EventCallback, loadScript, SVGParentView, SVGView} from '@mathigon/boost';
+import {Line, nearlyEquals, Point, Polygon, Rectangle, Segment} from '@mathigon/fermat';
+import {$N, animate, CanvasView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Geopad, GeoPath, GeoPoint, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
@@ -732,4 +732,123 @@ export function currysParadox6($step: Step) {
   outlineTile.setPosition(new Point(tangramScale(1), tangramScale(18)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
   $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+}
+
+class ResizeableSquare {
+  private $el: SVGView;
+  private poly: Polygon;
+  private corners: {rect: Rectangle, $el: SVGView}[] = [];
+  private grabDelta: Point;
+  private topLeft: Point;
+
+  constructor(private $svg: SVGParentView, initSize: number, initPos: Point, private onMove: (b: DOMRect) => void) {
+    this.$el = $N('path', {}, $svg) as SVGView;
+    this.$el.css({'stroke-width': '2px', stroke: 'black', fill: 'rgba(0, 0, 0, 0)'});
+    this.poly = new Rectangle(initPos, initSize, initSize).polygon;
+    this.$el.draw(this.poly);
+    this.grabDelta = new Point(0, 0);
+    this.topLeft = new Point(0, 0);
+
+    const cornerSize = 10;
+    this.poly.points.forEach((point, index) => {
+
+      const pos = point.shift(-cornerSize / 2, -cornerSize / 2);
+
+      const cornerRect = new Rectangle(pos, cornerSize, cornerSize);
+      const $corner = $N('path', {}, $svg) as SVGView;
+      $corner.css({fill: 'rgba(0, 0, 0, 0)'});
+
+      let dir = '';
+      if (index % 2 == 0) {
+        $corner.addClass('nwse-corner');
+        dir = 'nwse';
+      } else {
+        $corner.addClass('nesw-corner');
+        dir = 'nesw';
+      }
+
+      this.corners.push({rect: cornerRect, $el: $corner});
+      $corner.draw(cornerRect);
+
+      slide($corner, {
+        move: (posn: Point, _start, last: Point) => {
+
+          const delta = posn.subtract(last);
+          this.corners[index].rect = this.corners[index].rect.translate(delta);
+          $corner.draw(this.corners[index].rect);
+
+          let scaleLine = new Line(this.poly.points[index], this.poly.points[index].translate(new Point(10, 0)));
+
+          if (dir == 'nwse') {
+            scaleLine = scaleLine.rotate(Math.PI / 4, this.poly.points[index]);
+          } else if (dir == 'nesw') {
+            scaleLine = scaleLine.rotate(-Math.PI / 4, this.poly.points[index]);
+          }
+
+          const scalePoint = scaleLine.project(this.corners[index].rect.p);
+          const pointDelta = scalePoint.subtract(this.poly.points[index]);
+
+          const aIndex = (index + 3) % 4;
+          const bIndex = (index + 1) % 4;
+          let aNext = this.poly.points[aIndex];
+          let bNext = this.poly.points[bIndex];
+
+          this.poly.points[index] = this.poly.points[index].translate(pointDelta);
+
+          switch (index) {
+            case 0: // a is below, b is to the right
+            case 2: // a is above, b is to the left
+              aNext = new Point(this.poly.points[index].x, aNext.y);
+              bNext = new Point(bNext.x, this.poly.points[index].y);
+              break;
+            case 1: // a is to the left, b is below
+            case 3: // a is to the right, b is above
+              aNext = new Point(aNext.x, this.poly.points[index].y);
+              bNext = new Point(this.poly.points[index].x, bNext.y);
+              break;
+          }
+
+          this.poly.points[aIndex] = aNext;
+          this.poly.points[bIndex] = bNext;
+          this.$el.draw(this.poly);
+
+        },
+        end: () => {
+          this.poly.points.forEach((_, index2) => {
+            const cornerRect =
+              this.corners[index2].rect
+                  .translate(
+                      this.poly.points[index2].subtract(this.corners[index2].rect.p)
+                  )
+                  .shift(-cornerSize / 2, -cornerSize / 2);
+            this.corners[index2].rect = cornerRect;
+            this.corners[index2].$el.draw(cornerRect);
+          });
+        }
+      });
+    });
+
+    slide(this.$el, {
+      start: (posn: Point) => {
+        this.topLeft = new Point(this.$el.bounds.left - this.$svg.bounds.left, this.$el.bounds.top - this.$svg.bounds.top);
+        this.grabDelta = posn.subtract(this.topLeft);
+        this.onMove(this.$el.bounds);
+      },
+      move: (posn: Point, _start, _last) => {
+        const newPos = posn.subtract(this.topLeft).subtract(this.grabDelta);
+        this.$el.translate(newPos.x, newPos.y);
+        this.onMove(this.$el.bounds);
+      },
+      end: (last: Point, start: Point) => {
+        this.poly = this.poly.translate(last.subtract(start));
+        this.$el.setTransform(new Point(0, 0));
+        this.$el.draw(this.poly);
+        this.poly.points.forEach((_point, index) => {
+          this.corners[index].rect = this.corners[index].rect.translate(last.subtract(start));
+          this.corners[index].$el.draw(this.corners[index].rect);
+        });
+      }
+    });
+
+  }
 }
