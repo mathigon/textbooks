@@ -103,6 +103,7 @@ export function translations($step: Step) {
 }
 
 /**
+ * FIXME: replace with code from Fermat.js
  *
  * @param A 2x2 matrix
  * @param v 2x1 vector
@@ -117,8 +118,10 @@ function applyTransform(A: number[][], v: number[]): number[] {
 
 export function basicTransformations($step: Step) {
 
+  // FIXME: different shape
   const SHAPE = [[30, 10], [10, 70], [60, 70], [50, 10]];
   // Shear
+  // FIXME: refactor these into a single function.
   $step.model.polygonShear = (xshear: number, yshear: number) => {
     // here's where we have to do that p5js strategy where we push and pop translates to display it
     // (1) center polygon along the origin (0,0)

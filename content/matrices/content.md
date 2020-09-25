@@ -49,15 +49,15 @@ Here is our humble spaceship. Like the shapes displayed in video games, we can r
 
 :::
 
-Here the point A has coordinates ([[0]], [[3]]).
+Here the point [{.green} A](target:a) has coordinates ([[0]], [[3]]).
 
 ---
 
 We would like to give our spaceship the ability to rotate in place, so the player can point it at incoming asteroids. This rotation is something we call a [transformation](gloss:transformation). Let's notify the Rotation of the spaceship through angle θ as `R_"θ"`.
 
-`{P_"1", P_"2", P_"3", P_"4", P_"5", P_"6"}` --- `R_"θ"` ---> `{P_"1"', P_"2"', P_"3"', P_"4"', P_"5"', P_"6"'}`
+{.text-center} `{P_"1", P_"2", P_"3", P_"4", P_"5", P_"6"}` --- `R_"θ"` ---> `{P_"1"', P_"2"', P_"3"', P_"4"', P_"5"', P_"6"'}`
 
-Each point `P_"n"` is rotated about the origin to get point `P_"n"'` (pronounced "P n prime").
+Each point `P_"n"` has the transformation `R_"θ"` applied to it, which  rotates the point around the origin to get point `P_"n"'` (pronounced "P n prime").
 
 Here is a spaceship we can rotate by ${phi + 'º'}{phi|60|10,350,10} around the origin.
 
@@ -94,10 +94,10 @@ Here is a spaceship we can rotate by ${phi + 'º'}{phi|60|10,350,10} around the 
 
 :::
 
-Here are some things we can say about the shape of our spaceship.
-- The spaceship must retain its shape. That is, it must be congruent to the original.
-- The ship will have the same size.
-- It only rotates, and does not move up and down.
+Here are some things we can say about the shape of our spaceship as it rotates:
+- The spaceship must retain its shape.
+- The spaceship will have the same size.
+- It does not move up and down.
 
 We would like a formula to convert any point `P` into its rotated point `P'`.
 
@@ -111,14 +111,12 @@ Let's start by calculating this formula for two different points.
 
 > id: two-points
 
-For our two points, let's pick `(3,0)` and `(0,3)`, and determine their formulas one at a time.
-
-{.fixme} Display theta in both Geopads.
+For our two points, let's pick [{.green} A](target:a) = `(0,3)` and [{.green} B](target:b) = `(2,0)`. We can determine the formulas for their rotation θ around the origin one at a time.
 
 ::: tab
 #### (0,3)
 
-Let's rotate this point [{.green}A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,10} around the origin. Our rotated point is called [{.blue}A'](target:ap).
+If we rotate the point [{.green}A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,10} around the origin, it has a new `(x,y)` value. We can call our rotated point [{.blue}A'](target:ap) (A prime), with coordinates `(x', y')` (x prime and y prime).
 
 ::: column(width=400)
 
@@ -137,9 +135,9 @@ Let's rotate this point [{.green}A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350
 
 :::
 
-What is a formula to get the new coordinates for A’? We can call our new x value [{.red}x'](target:xp), and our new y value [{.yellow}y'](target:yp). Both x' and y' will be dependent on the length of __A__, which is 3.
+What is a formula to get the new coordinates for A’? We can call our new x value [{.red}x'](target:xp), and our new y value [{.yellow}y'](target:yp). Both __x'__ and __y'__ will be dependent on the length of __A__, which is 3.
 
-These points form a [right triangle](target:tri1), so we can draw upon our knowledge of trigonometry to find the formulas for `x'` and `y'`.
+These points form a [right triangle](target:tri1), so we can draw upon our knowledge of trigonometry to find the formulas for __x'__ and __y'__.
 
 {.fixme} This might be confusing for theta > 90º
 
@@ -156,7 +154,7 @@ Our [{.yellow}y'](target:yp) value is the adjacent side of a right triangle, so 
 #### (2,0)
 
 Let's look at another point.
-Rotate the point [{.green}B](target:b) (2,0) ${t2 + 'º'}{t2|60|10,350,10} around the origin. Our rotated point is called [{.blue}B'](target:bp).
+If we rotate the point [{.green}B](target:b) at (2,0) ${t2 + 'º'}{t2|60|10,350,10} around the origin, it has a new `(x,y)` We can call our rotated point [{.blue}B'](target:bp) (B prime), with coordinates `(x', y')` (x prime and y prime).
 
 ::: column(width=400)
 
@@ -175,9 +173,9 @@ Rotate the point [{.green}B](target:b) (2,0) ${t2 + 'º'}{t2|60|10,350,10} aroun
 
 :::
 
-What is a formula to get the new coordinates for [{.blue}B’](target:bp)? We can call our new x value [{.red}x'](target:xp), and our new y value [{.yellow}y'](target:yp). Both x' and y' will be dependent on the length of __B__, which is 2.
+What is a formula to get the new coordinates for [{.blue}B’](target:bp)? We can call our new x value [{.red}x'](target:xp), and our new y value [{.yellow}y'](target:yp). Both __x'__ and __y'__ will be dependent on the length of __B__, which is 2.
 
-These points form a [right triangle](target:tri2), so we can draw upon our knowledge of trigonometry to find the formulas for `x'` and `y'`.
+These points form a [right triangle](target:tri2), so we can draw upon our knowledge of trigonometry to find the formulas for __x'__ and __y'__.
 
 {.fixme} This might be confusing for theta > 90º
 
@@ -196,46 +194,155 @@ Our [{.yellow}y'](target:yp) value is the opposite side of the known angle, so w
 
 > id: linear-combination
 
-We now have equations for the `x'` and `y'` values of the two points `P_"1"` and `P_"2"`. There are still four more points to calculate, but is there a way we can save some work and use what we already have?
+::: column
 
-Remember from our last course on [vectors](link/to/course) that any vector can be treated as a sum of the two unit vectors <uv>__i__</uv> and <uv>__j__</uv>.
+We now have equations for the `(x', y')` coordinates of the two points `A'` and `B'`. We still have four more rotated points to calculate (`C'`, etc), but is there a shortcut where we can use what we already have?
 
-Our points __A__ and __B__ were the unit vectors <uv>__j__</uv> and <uv>__i__</uv>, each multiplied by 3.
+::: column
 
-Instead of using trigonometry to find rotated point of (1, -1) or (0, -0.5), we can re-write these as... i - j.
-It turns out that we can apply blah blah blah... linear transformation.
 
-for x...
+    table
+      tr
+        td Name
+        td xy
+        td Rotated
+        td Rxy
+      tr
+        td A
+        td (0, 2)
+        td A'
+        td (-2sin(θ), 2cos(θ))
+      tr
+        td B
+        td (3, 0)
+        td B'
+        td 3cos(θ), 3sin(θ))
+      each p in [['C', [2, -2]] , ['D', [0, -1]], ['E', [-2, -2]], ['F', [-2, 0]]]
+        - var pp = p[0] + "'"
+        tr
+          td= p[0]
+          td= p[1]
+          td= pp
+          td
 
-x' = xi + xj
-x' = x * cosTH - y * sinTH
+:::
 
-for y...
-
-y' = yi + yj
-y' = x * sinTH + y * cosTH
-
-put it together and...
-
-x'       x * cosTH - y * sinTH
-     = 
-y'       x * sinTH + y * cosTH
-
-Notice that there are like terms in here: both are dependent on X and Y.
+[Continue](btn:next)
 
 ---
 
+Remember from our last course on [vectors](link/to/course) that any vector can be treated as a [linear combination](gloss:linear-combination) of the two unit vectors <uv>__i__</uv> and <uv>__j__</uv>.
+
+We can use the formulas we calculated for rotations of __A__ and __B__ to find the rotation for any other point! __A__ lies along the y-axis so it is just a scaled version of the unit vector [[j|i]], and __B__ lies upon the x-axis so it is just a scaled version of the unit vector [[i|j]].
+
+---
+
+When we divide the lengths of A and B from the respective coordinates in A' and B', we can get the formulas for the rotations of the unit vectors.
+
+{.fixme} What kind of notation should we use? Unit Vectors? Points? 
+
+`(1, 0)` becomes `(sinθ, -cosθ)` and `(0, 1)` becomes `(cosθ, sinθ)`.
+
+---
+
+We can then write the equation for __any__ rotated point by writing it as a linear combination of the unit vectors.
+
+for `x'`...
+
+{.text-center} `x' = pill(x, "teal") * cosθ - pill(y, "purple") * sinθ`
+
+for `y'`...
+
+{.text-center} `y' = pill(x, "teal") * sinθ + pill(y, "purple") * cosθ`
+
+
+We can rewrite this as a new vector.
+
+{.text-center} `§[[x'] [y']]` = `§[[(pill(x, "teal", "x", "x") * cosθ - pill(y, "purple") * sinθ)] [(pill(x, "teal") * sinθ + pill(y, "purple") * cosθ)]]`
+
+
+Notice that both x' and y' are dependent on [{.teal}x](target:x) and [{.purple}y.](target:y)
+
+[Continue](btn:next)
+
+---
+
+#### Matrices
 > id: matrices
 
-Mathematicians came up with a concept called the "matrix", to do this easier, and you'll see this is a very powerful construct.
+Mathematicians came up with a very powerful concept called a [matrix](gloss:matrix), that can help us write this in a new way. A matrix is like a spreadsheet table, with cells each containing their own numbers.
 
-A matrix is like a spreadsheet.
+This matrix has 2 rows and 2 columns so it is a 2x2 matrix, but they can be any size.
 
-This is a 2x2 matrix, but they can be any size.
+{.text-center}`§[[cosθ (-sinθ)] [sinθ cosθ]]`
 
 ***Here's some formatting for how a matrix times a vector works.***
 
+We can rewrite our calculations for the coordinates `x'` and `y'` in the following way:
+
+{.text-center}`§[[x'] [y']]` = `§[[cosθ (-sinθ)] [sinθ cosθ]]` x `§[[pill(x, "teal")] [pill(y, "purple")]]` = `§[[(pill(x, "teal", "x", "x") * cosθ - pill(y, "purple") * sinθ)] [(pill(x, "teal") * sinθ + pill(y, "purple") * cosθ)]]`
+
+This is a [matrix multiplication](gloss:matrix-multiplication), wherein we multiply a matrix times a vector `(x,y)` to get a new vector `(x', y')`. [This matrix](target:rotation-matrix) is the transformation `R_"θ"` that we have been looking for! When we change the values within this matrix, we can change the transformation.
+
+{.fixme} Here is another representation:
+
+::: column(width=100)
+
+    table.vector
+      tr: td(target="feature pref-A-1"): b x'
+      tr: td(target="feature pref-A-2"): b y'
+
+::: column(width=20)
+
+    div.op =
+
+::: column(width=200)
+
+    table.matrix
+      tr
+        td(target="feature pref-A-1"): b cosθ
+        td(target="feature pref-A-2"): b -sinθ
+      tr
+        td.name(target="pref-A-1 pref-A-2"): b {.m-green}sinθ
+        td.cell(target="pref-A-1") cosθ
+
+::: column(width=20)
+
+    div.op x
+
+::: column(width=100)
+
+    table.vector
+      tr: td(target="feature pref-A-1"): b x
+      tr: td(target="feature pref-A-2"): b y
+
+::: column(width=20)
+
+    div.op =
+
+::: column(width=400)
+
+    table.vector
+      tr: td
+          div(target="x") cosθ * x
+          div.op + 
+          div(target="y") -sinθ * y
+      tr: td
+          div(target="x") sinθ * x
+          div.op + 
+          div(target="y") cosθ * y
+      
+:::
+
+{.fixme} Activity where student can drag slider to adjust θ and the matrix values are updated (up to two decimal points).
+
+[Hover x](target:x) and [Hover y](target:y)
+
+[Continue](btn:next)
+
 ---
+
+#### Identity Matrix
 
 > id: identity
 
@@ -352,7 +459,9 @@ Adjust the matrix to see how it changes in the coordinates.
 <tr><td>0</td><td>1</td></tr>
 </table>
 
-`§[[1 b] [0 1]]` x `§[[x] [y]]` = `§[[x+by] [y]]`
+      // https://github.com/mathigon/textbooks/blob/master/docs/markdown.md#inline-elements-in-equations
+
+`§[[1 b] [0 1]]` x `§[[x] [y]]` = `§[[(x+by)] [y]]`
 
 {.fixme} formatting
 
