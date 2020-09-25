@@ -80,3 +80,27 @@ x-geopad .paths .fabric {
         background: lighten(@grey, 70%);
     }
 }
+
+g.mathigon {
+    &.red { fill: @red; }
+    &.yellow { fill: @yellow; }
+    &.green { fill: @green; }
+    &.blue { fill: @blue; }
+}
+
+table {
+    &.yellow x-var {
+        background: @yellow;
+    }
+    &.yellow bubble {
+        background: @yellow; // can't seem to get these to change
+    }
+
+    &.green x-var {
+        background: @green;
+    }
+
+    &.blue x-var {
+        background: @blue;
+    }
+}

@@ -163,6 +163,39 @@ export function basicTransformations($step: Step) {
   };
 }
 
+export function mathigonMatrix($step: Step) {
+  // These are on a scale of ... 0 to 220 (why???)
+
+  const SHAPES: { [id: string] : number[][]; } = {
+    red: [[10, 10], [40, 40], [10, 70]],
+    yellow: [[40, 40], [10, 70], [40, 70]],
+    blue: [[40, 40], [40, 70], [70, 70], [70, 40]],
+    green: [[40, 40], [70, 40], [70, 10]]
+  };
+
+  $step.model.polygonTransform = (a: number, b: number, c: number, d: number, color: string) => {
+
+    const shape = SHAPES[color];
+    // here's where we have to do that p5js strategy where we push and pop translates to display it
+    // (1) center polygon along the origin (0,0)
+    // (2) apply transformation shown in matrix
+    // (3) move it to center (110, 110)
+    // let's try some d3 style formatting
+    const pointString = shape.map(p => [p[0]-40, p[1]-40])         // (1) center shape along origin (0,0)
+        .map(p => applyTransform([            // (2) apply transformation from matrix
+          [a, b],
+          [c, d]
+        ], p))
+        .map(p => [p[0]+110, [p[1]+110]])     // (3) move to center of SVG
+        .map(point => point.join(','))        // commas between xy coords
+        .join(' ');                            // spaces between coord pairs
+
+    const poly = `<polygon points="${pointString}" opacity="0.5" />`;
+
+    return poly;
+  };
+}
+
 export function playWithMe($step: Step) {
 
   console.log($step.model);

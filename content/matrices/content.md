@@ -615,6 +615,62 @@ Matrices do not have to represent transformations in 2 dimensions. They can also
 
 ---
 
+> id: mathigon-matrix
+
+Let's mess around with the Mathigon Logo!
+
+    svg(width=220 height=220)
+      g.grid
+        each i in [10,30,50,70,90,110,130,150,170,190,210]
+          - var width = i == 110 ? 4 : 2
+          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
+          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
+        each i in [10,30,50,70,90,110,130,150,170,190,210]
+          - var width = i == 110 ? 4 : 2
+          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
+          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
+      g.var.mathigon.red(:html="polygonTransform(m1a, m1b, m1c, m1d, 'red')")
+      g.var.mathigon.green(:html="polygonTransform(m2a, m2b, m2c, m2d, 'green')")
+      g.var.mathigon.yellow(:html="polygonTransform(m3a, m3b, m3c, m3d, 'yellow')")
+      g.var.mathigon.blue(:html="polygonTransform(m4a, m4b, m4c, m4d, 'blue')")
+
+
+<table>
+  <tr>
+    <td>
+      <table>
+        <tr><td>${m1a}{m1a|1|-2.0,2.0,0.1}</td><td>${m1b}{m1b|0.0|-2.0,2.0,0.1}</td></tr>
+        <tr><td>${m1c}{m1c|0.0|-2.0,2.0,0.1}</td><td>${m1d}{m1d|1|-2.0,2.0,0.1}</td></tr>
+      </table>
+    </td>
+    <td>
+      <table class="green">
+        <tr><td>${m2a}{m2a|1|-2.0,2.0,0.1}</td><td>${m2b}{m2b|0.0|-2.0,2.0,0.1}</td></tr>
+        <tr><td>${m2c}{m2c|0.0|-2.0,2.0,0.1}</td><td>${m2d}{m2d|1|-2.0,2.0,0.1}</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table class="yellow">
+        <tr><td>${m3a}{m3a|1|-2.0,2.0,0.1}</td><td>${m3b}{m3b|0.0|-2.0,2.0,0.1}</td></tr>
+        <tr><td>${m3c}{m3c|0.0|-2.0,2.0,0.1}</td><td>${m3d}{m3d|1|-2.0,2.0,0.1}</td></tr>
+      </table>
+    </td>
+    <td>
+      <table class="blue">
+        <tr><td>${m4a}{m4a|1|-2.0,2.0,0.1}</td><td>${m4b}{m4b|0.0|-2.0,2.0,0.1}</td></tr>
+        <tr><td>${m4c}{m4c|0.0|-2.0,2.0,0.1}</td><td>${m4d}{m4d|1|-2.0,2.0,0.1}</td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+{.todo} Possible Activities: switch Orange and Green, reflect/scale the whole thing, make shapes.
+
+---
+
+
 
 ## Matrix Arithmetic
 
