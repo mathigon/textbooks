@@ -56,6 +56,7 @@ Here the point [{.green} A](target:a) has coordinates ([[0]], [[3]]).
 We would like to give our spaceship the ability to rotate in place, so the player can point it at incoming asteroids. This rotation is something we call a [transformation](gloss:transformation). Let's notify the Rotation of the spaceship through angle θ as `R_"θ"`.
 
 {.text-center} `{P_"1", P_"2", P_"3", P_"4", P_"5", P_"6"}` --- `R_"θ"` ---> `{P_"1"', P_"2"', P_"3"', P_"4"', P_"5"', P_"6"'}`
+{.fixme} Could be nice with hover points to graphic.
 
 Each point `P_"n"` has the transformation `R_"θ"` applied to it, which  rotates the point around the origin to get point `P_"n"'` (pronounced "P n prime").
 
@@ -111,7 +112,7 @@ Let's start by calculating this formula for two different points.
 
 > id: two-points
 
-For our two points, let's pick [{.green} A](target:a) = `(0,3)` and [{.green} B](target:b) = `(2,0)`. We can determine the formulas for their rotation θ around the origin one at a time.
+For our two points, let's pick [{.green} A](target:a) = `(0,3)` and [{.green} B](target:b) = `(2,0)`. We can determine the formulas for their rotation [{.purple} θ](target:theta) around the origin one at a time.
 
 ::: tab
 #### (0,3)
@@ -131,7 +132,7 @@ If we rotate the point [{.green}A](target:a) at (0,3) ${t1 + 'º'}{t1|60|10,350,
       path.red(x="segment(point(0,ap.y), point(ap.x, ap.y))" target="xp tri1" label="x'")
       path.yellow(x="segment(point(0,0), point(0, ap.y))" target="yp tri1" label="y'")
 
-      path.purple(x="angle(ap,point(0,0),a)" target="tri1" round size=40)
+      path.purple(x="angle(ap,point(0,0),a)" target="theta tri1" round size=40)
 
 :::
 
@@ -227,6 +228,8 @@ We now have equations for the `(x', y')` coordinates of the two points `A'` and 
 
 :::
 
+{.fixme} Table needs to look a lot nicer.
+
 [Continue](btn:next)
 
 ---
@@ -276,9 +279,8 @@ This matrix has 2 rows and 2 columns so it is a 2x2 matrix, but they can be any 
 
 {.text-center}`§[[cosθ (-sinθ)] [sinθ cosθ]]`
 
-***Here's some formatting for how a matrix times a vector works.***
 
-We can rewrite our calculations for the coordinates `x'` and `y'` in the following way:
+**We can rewrite our calculations for the coordinates `x'` and `y'` in the following way:**
 
 {.text-center}`§[[x'] [y']]` = `§[[cosθ (-sinθ)] [sinθ cosθ]]` x `§[[pill(x, "teal")] [pill(y, "purple")]]` = `§[[(pill(x, "teal", "x", "x") * cosθ - pill(y, "purple") * sinθ)] [(pill(x, "teal") * sinθ + pill(y, "purple") * cosθ)]]`
 
@@ -359,6 +361,8 @@ What happens when we apply this transformation to the vector `§[[x] [y]]`?
 {.fixme} The student should fill in these values on their own.
 
 This transformation [[has no effect on|reverses|negates]] the vector `§[[x] [y]]`.
+
+---
 
 {.text-center}`x' = x` and `y' = y`
 
@@ -589,6 +593,7 @@ Choose one of these buttons to snap to different transformations.
     .button ROTATE
     .button LINE
 
+[Continue](btn:next)
 
 ---
 
@@ -596,21 +601,45 @@ Choose one of these buttons to snap to different transformations.
 
 {.todo} How does this relate to video games?
 
+Video games can manipulate and millions of shapes per second with use of a __Graphical Processing Unit__ (GPU). GPUs are specially designed to perform many matrix multiplications at once. 
+
+[Continue](btn:next)
 
 ---
 
 > id: translate
 
-{.todo} You may have noticed we have not discussed one type of transformation. We cannot move our shapes through space!
+You may have noticed we have not discussed one type of transformation. We cannot move our shapes through space! To transform our shapes so they are centered anywhere but the origin, we need a special kind of matrix called a __Translation Matrix__.
+
+{.text-center} `§[[1 0 dx] [0 1 dy] [0 0 1]]`
+
+We add an extra row and column to our 2x2 matrix, and we add an extra row to our vector (which will not change).
+
+The factor [dx](target:dx) will be multiplied by [1](target:bottom1) and added to the final [x'](target:xprime) value.
+The factor [dy](target:dy) will be multiplied by [1](target:bottom1) and added to the final [y'](target:xprime) value.
+
+{.text-center} `§[[1 0 dx] [0 1 dy] [0 0 1]]` x `§[[x] [y] [1]]` = `§[[(x + dx)] [(y + dy)] [1]]`
+
+{.fixme} Focus effects.
+
+{.todo} Possibly an interactive like ncase?
+
+[Continue](btn:next)
 
 
 ---
 
 > id: three-d
 
-Matrices do not have to represent transformations in 2 dimensions. They can also represent 3 or higher dimensions.
+Matrices do not have to represent transformations in 2 dimensions. They can also exist in 3 or higher dimensions.
+
+This is the identity matrix for three dimensions
+
+{.text-center} `§[[1 0 0] [0 1 0] [0 0 1]]` x `§[[x] [y] [z]]` = `§[[x] [y] [z]]`
 
 {.todo} An interaction with a 3d transformation.
+
+[Continue](btn:next)
 
 
 ---
