@@ -338,6 +338,8 @@ This is a [matrix multiplication](gloss:matrix-multiplication), wherein we multi
 
 [Hover x](target:x) and [Hover y](target:y)
 
+{.todo} Stronger Connection between matrices and what it means to be a "transformation"
+
 [Continue](btn:next)
 
 ---
@@ -346,36 +348,39 @@ This is a [matrix multiplication](gloss:matrix-multiplication), wherein we multi
 
 > id: identity
 
-What if we want to leave `x` and `y` unchanged? That is, we want `x' = x` and `y' = y`.
+What if for our matrix, we wrote this instead? 
 
-We can write this matrix:
+{.text-center} `§[[1 0] [0 1]]`
 
-`§[[1 0] [0 1]]`
+What happens when we apply this transformation to the vector `§[[x] [y]]`?
 
-This is the [identity matrix](gloss:identity-matrix).
+{.text-center} `§[[1 0] [0 1]]` x `§[[x] [y]]` = `§[[(1*x + 0*y)] [(0*x + 1*y)]]` = `§[[x] [y]]`
 
-When we multiply the identity matrix by a vector
+{.fixme} The student should fill in these values on their own.
 
-`§[[x] [y]]`
+This transformation [[has no effect on|reverses|negates]] the vector `§[[x] [y]]`.
 
-we get
+{.text-center}`x' = x` and `y' = y`
 
-`§[[1 0] [0 1]]` x `§[[x] [y]]` = `§[[1*x + 0*y] [0*x + 1*y]]` = `§[[x] [y]]`
+For any vector, the result of the transforation will be the same. This is called the [identity matrix](gloss:identity-matrix), because its product with any 2x1 vector is that identical 2x1 vector. This is much like `1` is the identity function for integer multiplication (`1 x n = n`) and `0` is the identity function for addition (`0 + n = n`).
 
-This is called the identity matrix its product with any matrix is that same matrix, much like any number `m` times `1` is `m`, and any number `n` plus `0` is `n`.
+[Continue](btn:next)
 
 ---
 
 > id: basic-transformations
 
-We already saw how we can use this matrix `R` to apply the rotation transformation about the origin. What other transformations exist?
+We have already seen how we can multiply a vector by a 2x2 matrix to rotate that vector about the origin, and we have seen how the identity matrix leaves the vector unchanged. What other transformations exist?
 
 ::: tab
 #### Scale
 
-{.todo} Insert something about the scale transformations
+What if we adjust the top-left and bottom-right numbers of our transformation matrix?
 
-Let's try a scale transformation.
+<table>
+<tr><td>${xscale}{xscale|1.0|-2.0,2.0,0.1}</td><td>0</td></tr>
+<tr><td>0</td><td>${yscale}{yscale|1.0|-2.0,2.0,0.1}</td></tr>
+</table>
 
     svg(width=220 height=220)
       g.grid
@@ -389,27 +394,28 @@ Let's try a scale transformation.
           line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
       g.var.scale(:html="polygonScale(xscale, yscale)")
 
+Changing the [top-left](target:ma) value scales x' along the x-axis.
 
-Adjust the matrix to see how it changes in the coordinates.
+Changing the [bottom-right](target:md) value scales y' along the y-axis.
 
-<table>
-<tr><td>${xscale}{xscale|1.0|-2.0,2.0,0.1}</td><td>0</td></tr>
-<tr><td>0</td><td>${yscale}{yscale|1.0|-2.0,2.0,0.1}</td></tr>
-</table>
+{.text-center} `§[[a 0] [0 d]]` x `§[[x] [y]]` = `§[[a*x + 0*y] [0*x + d*y]]` = `§[[ax] [dy]]`
 
-`§[[a 0] [0 d]]` x `§[[x] [y]]` = `§[[a*x + 0*y] [0*x + d*y]]` = `§[[ax] [dy]]`
+{.fixme} formatting and input.
 
-{.fixme} formatting
-
-Cool. Let's now add some code that lets us snap to x-big, x-shrink, x-reverse, y-big, y-shrink, y-reverse.
+{.fixme} Add some code that lets us snap to x-big, x-shrink, x-reverse, y-big, y-shrink, y-reverse, etc. 
 
 
 ::: tab
 #### Reflections
 
-{.todo} Insert something about the reflection transformations
+What happens when we make the top-left and bottom-right values negative or positive?
 
-Let's try a reflection transformation.
+Adjust the matrix to see how it changes in the coordinates.
+
+<table>
+<tr><td>${xreflect}{xreflect|1.0|-1,1,2}</td><td>0</td></tr>
+<tr><td>0</td><td>${yreflect}{yreflect|1.0|-1,1,2}</td></tr>
+</table>
 
     svg(width=220 height=220)
       g.grid
@@ -424,19 +430,18 @@ Let's try a reflection transformation.
       g.var.scale(:html="polygonScale(xreflect, yreflect)")
 
 
-Adjust the matrix to see how it changes in the coordinates.
+Flipping the sign of the [top-left](target:ma) value reflects the transformation across the [[x-axis|y-axis]], and flipping the sign of the [bottom-right](target:ma) value reflects the transformation across the [[y-axis|x-axis]].
 
-<table>
-<tr><td>${xreflect}{xreflect|1.0|-1,1,2}</td><td>0</td></tr>
-<tr><td>0</td><td>${yreflect}{yreflect|1.0|-1,1,2}</td></tr>
-</table>
+{.text-center} `§[[a 0] [0 d]]` x `§[[x] [y]]` = `§[[a*x + 0*y] [0*x + d*y]]` = `§[[ax] [dy]]`
 
-`§[[a 0] [0 d]]` x `§[[x] [y]]` = `§[[a*x + 0*y] [0*x + d*y]]` = `§[[ax] [dy]]`
+{.fixme} formatting and input.
 
 ::: tab
 #### Shear
 
-{.todo} Insert something about the shear transformations
+What if we adjust the values in the [top-right](target:mb) and [bottom-left](target:mc) corners of the matrix?
+
+Adjust the matrices to see how they change the transformations.
 
 ::: column(width=220)
 
@@ -459,11 +464,9 @@ Adjust the matrix to see how it changes in the coordinates.
 <tr><td>0</td><td>1</td></tr>
 </table>
 
-      // https://github.com/mathigon/textbooks/blob/master/docs/markdown.md#inline-elements-in-equations
-
 `§[[1 b] [0 1]]` x `§[[x] [y]]` = `§[[(x+by)] [y]]`
 
-{.fixme} formatting
+{.fixme} formatting and inputs
 
 ::: column(width=220)
 
@@ -488,43 +491,28 @@ Adjust the matrix to see how it changes in the coordinates.
 
 `§[[1 0] [c 1]]` x `§[[x] [y]]` = `§[[x] [cx+y]]`
 
-{.fixme} formatting
+{.fixme} formatting and inputs
 
 :::
 
-Adjust the matrix to see how it changes in the coordinates.
-
 Now add some buttons and code that make it snap to a set of matrix values.
+
+These types of transformations are called [shear transformations](gloss:shear), because they shear the coordinate system in a perpindicular proportion (?phrasing?).
 
 ::: tab
 #### Other
 
 Of course, matrices can have any values in them, and thus can transform in many ways. Play with the values here and see how the transformation is still some combination of the basic transformations.
 
-{.todo} Free reign to do whatever they want.
+{.todo} Free reign to do whatever they want. Or just keep this separate, as shown below.
 
 :::
 
 ---
 
-> id: translate
-
-{.todo} You may have noticed we have not discussed one type of transformation. We cannot move space!
-
----
-
-> id: three-d
-
-Matrices do not have to represent transformations in 2 dimensions. They can also represent 3 or higher dimensions.
-
-{.todo} An interaction with a 3d transformation.
-
-
----
-
 > id: play-with-me
 
-Linear transformation means each grid line will remain "parallel and evenly spaced". Now play with it.
+Try adjusting the values in the matrix and see what kind of transformations you can make!
 
     // try w/ grid on or off, to compare underlying grid w/ transformation
     - var GRID = 8
@@ -593,7 +581,7 @@ Linear transformation means each grid line will remain "parallel and evenly spac
 Here we display the [i](target:i) and [j](target:j) unit vectors.
 Inside the matrix we have i = (${ipoint.x}, ${ipoint.y}) and j = (${jpoint.x}, ${jpoint.y})
 
-Choose one of these buttons.
+Choose one of these buttons to snap to different transformations.
 
     .button IDENTITY
     .button SHEAR
@@ -601,9 +589,32 @@ Choose one of these buttons.
     .button ROTATE
     .button LINE
 
-Press the buttons to...
 
 ---
+
+> id: gpu
+
+{.todo} How does this relate to video games?
+
+
+---
+
+> id: translate
+
+{.todo} You may have noticed we have not discussed one type of transformation. We cannot move our shapes through space!
+
+
+---
+
+> id: three-d
+
+Matrices do not have to represent transformations in 2 dimensions. They can also represent 3 or higher dimensions.
+
+{.todo} An interaction with a 3d transformation.
+
+
+---
+
 
 ## Matrix Arithmetic
 
