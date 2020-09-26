@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Line, nearlyEquals, Point, Polygon, Rectangle, Segment} from '@mathigon/fermat';
+import {Arc, Circle, clamp, Line, nearlyEquals, Point, Polygon, Rectangle, Segment} from '@mathigon/fermat';
 import {$N, animate, CanvasView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Geopad, GeoPath, GeoPoint, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
@@ -732,6 +732,59 @@ export function currysParadox6($step: Step) {
   outlineTile.setPosition(new Point(tangramScale(1), tangramScale(18)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
   $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+}
+
+export function wheels($step: Step) {
+  const $svg = $step.$('svg') as SVGParentView;
+
+  const wheels = [
+    {a: 'wheel-1', b: 50},
+    {a: 'wheel-2', b: 75},
+    {a: 'wheel-3', b: 100},
+    {a: 'wheel-4', b: 125}
+  ].map(({a, b}) => {
+    return {$el: $svg.$('.' + a) as SVGView, radius: b / 2};
+  });
+
+  wheels.forEach(wheel => {
+    const startTopLeft = new Point(wheel.$el.bounds.left - $svg.bounds.left, wheel.$el.bounds.top - $svg.bounds.top);
+    const startBottom = startTopLeft.shift(wheel.radius, (wheel.radius * 2));
+
+    const outlineColor = 'red';
+    const outlineWidth = '3px';
+
+    const $distLine = $N('path', {}, $svg) as SVGView;
+    $distLine.css({stroke: outlineColor, 'stroke-width': outlineWidth});
+
+    const $outline = $N('path', {}, $svg) as SVGView;
+    $outline.css({stroke: outlineColor, 'stroke-width': outlineWidth, fill: 'none'});
+
+    const outlineInitCenter = startBottom.shift(0, -wheel.radius);
+    const initOutline = new Circle(outlineInitCenter, wheel.radius);
+
+    $outline.draw(initOutline);
+    slide(wheel.$el, {
+      move: (posn, start, _) => {
+        const translate = new Point(clamp(posn.subtract(start).x, 0, 2 * Math.PI * wheel.radius), 0);
+        const rotate = translate.x / wheel.radius;
+
+        wheel.$el.setTransform(translate, rotate);
+
+        const distance = translate.x + startBottom.x;
+        $distLine.draw(new Segment(startBottom, new Point(distance, startBottom.y)));
+
+        if (translate.x > 0) {
+          const outlineCenter = outlineInitCenter.translate(translate);
+          const outlineStart = outlineCenter.shift(0, wheel.radius);
+          const outline = new Arc(outlineCenter, outlineStart, -rotate);
+          $outline.draw(outline.rotate(rotate, outlineCenter));
+        } else {
+          $outline.draw(initOutline);
+        }
+      }
+    });
+
+  });
 }
 
 export function encasementEstimation($step: Step) {

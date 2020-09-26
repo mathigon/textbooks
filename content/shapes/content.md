@@ -559,9 +559,17 @@ Teams need to know when to make a pit stop. If they wait too long and wear out t
 
 :::
 
+---
+
+> id: wheels
+
 Let’s try to determine the number of laps the cars can go before a pit stop is needed. To answer this, we need to think about how far a tire travels in one revolution. Below are 4 vehicles with very different tire sizes. Move each vehicle so the tire makes one full rotation.
 
     // INTERACTIVE-01: Wheel distances
+
+    figure: include svg/wheels.svg
+
+---
 
 The distance the vehicle travels in one revolution of the tire is the same as the distance [around | across] the tire. In general, distance around a shape is the [[perimeter | area]] of the shape. However, the perimeter of a circle has a unique name - the circumference.
 
