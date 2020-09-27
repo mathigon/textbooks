@@ -5,9 +5,9 @@
 
 
 /// <reference types="THREE"/>
-import {total} from '@mathigon/core';
+import {Color, total} from '@mathigon/core';
 import {Angle, clamp, isLineLike, lerp, Point, Polygon, Rectangle, Segment, toWord} from '@mathigon/fermat';
-import {$, Browser, slide} from '@mathigon/boost';
+import {Browser, slide} from '@mathigon/boost';
 import {Geopad, GeoPath, Path, Polypad, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';
 import {Graphics3D} from '../shared/components/webgl';
@@ -193,7 +193,7 @@ export function quadrilateralsArea($step: Step) {
 
 export function tessellationDrawing($step: Step) {
   const $polypad = $step.$('x-polypad') as Polypad;
-  const $overlayTiles = $('.overlay .tiles')!;
+  const $overlayTiles = $step.$('.overlay .tiles')!;
 
   // TODO Save and restore progress
   let polygons = 0;
@@ -203,8 +203,7 @@ export function tessellationDrawing($step: Step) {
     $a.$('svg')!.setAttr('viewBox', '0 0 80 80');
   }
 
-  const [$clear, $download] = $step.$$('.tessellation .btn');
-  $clear.on('click', () => $polypad.clear());
+  const $download = $step.$('.tessellation x-icon-btn')!;
   $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
 
   $polypad.on('move-selection rotate-selection add-tile', () => {
@@ -226,6 +225,29 @@ export function tessellationDrawing($step: Step) {
     polygons += 1;
     if (polygons >= 3) $step.score('shapes0');
     if (polygons >= 5) $step.score('shapes1');
+  });
+}
+
+export function pentagons($step: Step) {
+  const $polypad = $step.$('x-polypad') as Polypad;
+  const $overlayTiles = $step.$('.overlay .tiles')!;
+  const $thumbnails = $step.$$('.tessellation .add');
+  const colours = Color.rainbow($thumbnails.length);
+
+  for (const [i, $a] of $thumbnails.entries()) {
+    const colour = colours[i].toString();
+    $polypad.bindSource($a, 'polygon', $a.data.shape!, $overlayTiles, colour);
+    $a.$('svg')!.setAttr('viewBox', '0 0 80 80');
+  }
+
+  const [$flip, $download] = $step.$$('.tessellation x-icon-btn');
+  $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
+  $flip.on('click', () => $polypad.selection.action('polygon', 'flip'));
+
+  let polygons = 0;
+  $polypad.on('add-tile', () => {
+    polygons += 1;
+    if (polygons >= 3) $step.score('shapes');
   });
 }
 

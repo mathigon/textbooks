@@ -1054,9 +1054,7 @@ patterns!
       .menu
         for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
           .add(data-shape=s)
-      .btn-row
-        button.btn Clear
-        button.btn Download
+      .btn-row: x-icon-btn(icon="download" title="Download image")
       svg.overlay: g.tiles.active
     x-gesture(target=".tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
@@ -1284,6 +1282,9 @@ tessellate|tessellate]], but what about non-regular ones?
 ---
 > id: tessellation-pentagons-1
 
+Here are three different examples of tessellations with pentagons. They are not
+_regular_, but they are perfectly valid 5-sided polygons:
+
 ::: column(width=220)
     include svg/tessellations/pentagons-1.svg
 ::: column(width=220)
@@ -1292,12 +1293,38 @@ tessellate|tessellate]], but what about non-regular ones?
     include svg/tessellations/pentagons-3.svg
 :::
 
-Here are three different examples of tessellations with pentagons. They are not
-_regular_, but they are perfectly valid 5-sided polygons.
-
 So far, mathematicians have only found 15 different kinds of tessellations with
 (convex) pentagons – the most recent of which was discovered in 2015. No one
-knows if there are any others, or if these 15 are the only ones…
+knows if there are any others, or if these 15 are the only ones.
+
+---
+> id: pentagons
+> goals: shapes
+
+Can you make tessellations using some of these irregular pentagons?
+
+    figure: .tessellation
+      x-polypad
+      .menu
+        .add(data-shape="-13.9 -70.5,40.5 -70.5,40.5 24.4,13.1 70.5,-40.5 -23.5")
+        .add(data-shape="-46 47.3,-1.4 47.3,46 0,-1.4 -47.3,-45.5 3")
+        .add(data-shape="-28 -43.1,9.3 -43.1,59.2 43.1,-40.5 43.1,-59.2 10.8")
+        .add(data-shape="-53.6 -40.2,-28.7 2.9,14.8 40.2,53.6 9,46 -40.2")
+        .add(data-shape="11.5 40.5,54.6 21,19 -40.5,-52 -40.4,-54.6 -4.4")
+        .add(data-shape="43.3 28.5,-4.3 43.2,-54.3 -42.9,45.3 -43.2,54.3 -20")
+        .add(data-shape="-49.1 23.1,-5.4 35.5,73.4 -35.5,-32.7 -35.5,-73.4 -15.4")
+        .add(data-shape="-57 -33,37.3 -33.3,57 13.7,10 33.3,-37.2 14")
+        .add(data-shape="29.8 50.4,-31.5 8.2,-53.2 -50,8.9 -50.4,53.2 -7")
+        .add(data-shape="-37.5 -2.8,-16.5 63.5,17.2 3,37.5 -63.3,-31.6 -63.5")
+        .add(data-shape="43.4 -43.4,-43.4 -43.1,-43.4 43.4,0 43.4,43.4 0")
+        .add(data-shape="-30.8 0,10.3 71.1,30.8 35.6,30.8 -71.1,10.3 -71.1")
+        .add(data-shape="-36.9 -23.4,-9.9 -70.3,36.8 -43,36.9 70.2,17.4 70.3")
+        .add(data-shape="-74.9 36.4,40 36.4,75.1 12.1,4.8 -36.4,-75.1 -6.3")
+        .add(data-shape="-37.5 24.9,-12.4 -68,37.4 -68,37.5 -18.3,-12.4 68")
+      .btn-row
+        x-icon-btn(icon="flip" title="Flip selection")
+        x-icon-btn(icon="download" title="Download image")
+      svg.overlay: g.tiles.active
 
 ---
 > id: escher
