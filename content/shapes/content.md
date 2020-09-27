@@ -599,9 +599,17 @@ The RADIUS of a circle is a line from the center of the circle to a point on the
 
     // DIAGRAM: Radius and diameter
 
-Draw 3 radii (this is the plural for radius!) and 3 diameters on the circle below:
+---
 
-    // INTERACTIVE-03: Drawing radii and diameters
+> id: radii-diameters
+> goals: radii-diameters-drawn
+
+Draw 3 radii (this is the plural for radius!) and 3 diameters on the circle below: 
+
+    figure: x-geopad(width=400 height=400)
+      svg
+
+---
 
 Now, let’s identify parts of a circle in the objects below:
 

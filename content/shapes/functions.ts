@@ -6,7 +6,7 @@
 
 import {Arc, Circle, clamp, Line, nearlyEquals, Point, Polygon, Rectangle, Segment} from '@mathigon/fermat';
 import {$N, animate, CanvasView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
-import {Geopad, GeoPath, GeoPoint, Polypad, Slider, Step, Tile} from '../shared/types';
+import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
@@ -1005,4 +1005,55 @@ class ResizeableSquare {
     return this.poly.points.map((point, index) => new Segment(point, this.poly.points[(index + 1) % 4]));
   }
 
+}
+
+export function radiiDiameters($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const center = new Point(200, 200);
+  const radius = 180;
+  const circle = new Circle(center, radius);
+  $geopad.drawPoint(center, {interactive: false});
+  $geopad.drawPath(circle, {interactive: true});
+  $geopad.switchTool('line');
+  let drawing = false;
+  let $target: GeoPoint | null = null;
+  let radii = 0;
+  let diameters = 0;
+  $geopad.on('begin:path', ({start}: {path: Path, start: GeoPoint}) => {
+    drawing = true;
+    const startPos = start.value!;
+    if (nearlyEquals(startPos.subtract(center).length, radius)) {
+      const diamTarget = startPos.reflect((new Line(startPos, center)).perpendicular(center));
+      $target = $geopad.drawPoint(diamTarget, {interactive: false});
+    }
+  });
+  $geopad.on('add:path', ({path}: {path: GeoPath}) => {
+    const cand = path.value as Line;
+    drawing = false;
+    const d1 = cand.p1.subtract(center).length;
+    const d2 = cand.p2.subtract(center).length;
+    if (nearlyEquals(d1, radius) && nearlyEquals(d2, radius) && nearlyEquals(cand.length, radius * 2)) {
+      // drew a diameter
+      diameters++;
+      $step.addHint('correct');
+    } else if (nearlyEquals(d1, radius) && nearlyEquals(d2, 0)) {
+      // drew a radius
+      radii++;
+      $step.addHint('correct');
+      $target!.delete();
+    } else {
+      $step.addHint('incorrect');
+      path.delete();
+      path.components.forEach(c => c.delete());
+      $target!.delete();
+    }
+    if (diameters > 2 && radii > 2) {
+      $step.score('radii-diameters-drawn');
+    }
+  });
+  $geopad.on('mousemove', () => {
+    if (drawing) {
+      console.log('moving');
+    }
+  });
 }
