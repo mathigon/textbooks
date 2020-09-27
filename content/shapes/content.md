@@ -565,7 +565,7 @@ Teams need to know when to make a pit stop. If they wait too long and wear out t
 
 Let’s try to determine the number of laps the cars can go before a pit stop is needed. To answer this, we need to think about how far a tire travels in one revolution. Below are 4 vehicles with very different tire sizes. Move each vehicle so the tire makes one full rotation.
 
-    // INTERACTIVE-01: Wheel distances
+    // INTERACTIVE-01: Wheel distances (page 3)
 
     figure: include svg/wheels.svg
 
@@ -585,7 +585,7 @@ We could use a piece of string and a ruler to determine the distance around a ti
 
 In our previous geometry chapters, we used what we had learned about earlier shapes to help us with new ones. For example, we re-arranged parallelograms into rectangles to understand how to find the area of parallelograms. Let’s first find an estimate of the distance around the tire by using what we know about the perimeter of polygons. Place the square around the circle so it totally encloses the circle.
 
-    // INTERACTIVE-02: Tire circumference estimation
+    // INTERACTIVE-02: Tire circumference estimation (page 5)
 
     figure: .tire-circumference
       img(src="https://st.depositphotos.com/1001469/2018/i/950/depositphotos_20187853-stock-photo-automobile-tire-isolated-on-white.jpg")
@@ -645,7 +645,7 @@ It takes [[4]] “diameters” of a square to wrap around a square and therefore
 
 Let’s find out!
 
-    // INTERACTIVE-04: 'Wrapping' circumference
+    // INTERACTIVE-04: 'Wrapping' circumference (page 7)
 
 1. Draw a circle. 
 2. Drag the diameter outside of the circle and wrap it around the circumference. 
@@ -682,7 +682,7 @@ It takes a little more than 3 diameters to equal the circumference. Using 3 as a
 
 Let’s see if we can determine how much more of the 4th diameter is needed to fully wrap around the circle. Draw a line below and watch as it is then formed into a circle.
 
-    // INTERACTIVE-05: Finding PI
+    // INTERACTIVE-05: Finding PI (pages 9-10)
 
 Let’s think about how many diameters are needed to make the circumference. Determining how many times one number is needed to make another is represented by [[division | multiplication | subtraction]]. 
 
@@ -738,7 +738,7 @@ We had written the formulas as C = 3.14 x D and C = 3.14 x 2 x [[R | D]]. Now th
 
 Traffic is a concern in cities around the world. In an attempt to keep traffic outside of the city-center, many cities have circular highways going around the city. Let’s explore three examples around the world.
 
-    // INTERACTIVE-06: Circular highways
+    // INTERACTIVE-06: Circular highways (pages 13-14)
 
 ::: column(width=400)
 
