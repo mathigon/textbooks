@@ -22,6 +22,14 @@ function table(data: any[][]) {
 }
 
 
+//Buckets
+
+export function buckets($step: Step) {
+  const $buckets = $step.$('x-buckets')!;
+  $buckets.on('correct', () => $step.score('buckets'));
+}
+
+
 // N[Normalize[With[{n = 6}, CoefficientList[Expand[(x + x^2 + x^3 + x^4 + x^5 + x^6)^n], x]], Total], 2]
 const probabilities: Obj<number[]> = {
   1: [0, 0.17, 0.17, 0.17, 0.17, 0.17, 0.17],
@@ -169,6 +177,7 @@ export function conditional($step: Step) {
         }
 
         $label.text = specifiedProbabilityValue;
+        // $label.text = "<i>hey Capital 0.4</i>"
         $handle.setTransform({x: railWidth * specifiedProbabilityValue, y: verticalPosition - handleHeight});
 
         if (specifiedProbabilityValue > 0.9) {
@@ -211,7 +220,6 @@ export function conditional($step: Step) {
         width: buttonWidth, height: buttonHeight,
         class: adornmentColors[i]
       }, $svg);
-
       buttons.push(button);
 
       button.setTransform({x: lastColumnOfPeopleX + 60 + (j ? 1 : -1) * (buttonWidth / 2.0 + 2), y: 40 + i * (4 + buttonHeight)});
@@ -237,6 +245,14 @@ export function conditional($step: Step) {
       });
     }
   }
+
+  // const test = $N('text', {
+  //   html: "hello", 
+  //   x: -buttonWidth / 2.0, y: -buttonHeight / 2.0, rx: 0,
+  //   class: 'white'
+  // }, $svg);
+  // test.setTransform({ x: lastColumnOfPeopleX + 60 + (j ? 1 : -1) * (buttonWidth / 2.0 + 2), y: 40 + i * (4 + buttonHeight) });
+  // $svg.append(test);
 
   for (let i = 0; i < 12; ++i) {
     for (let j = 0; j < 12; ++j) {
