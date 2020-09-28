@@ -643,14 +643,23 @@ While it’s not typical to think of the “diameter” of a square, it could be
 
 It takes [[4]] “diameters” of a square to wrap around a square and therefore create the perimeter of the square. Upon entering in the 4: In a square, the distance around is 4 times as long as the distance across. Let’s think about this same question with circles. How many diameters of a circle do you think are needed to wrap around the circle? [[--]].
 
+---
+
+> id: diameter-circumference
+> goals: diameters-drawn
+
 Let’s find out!
 
     // INTERACTIVE-04: 'Wrapping' circumference (page 7)
+    figure: x-geopad(width=400 height=400)
+      svg
 
 1. Draw a circle. 
 2. Drag the diameter outside of the circle and wrap it around the circumference. 
 3. Keep doing this until you cover as much of the circumference as possible using full diameters. 
 4. Repeat this process with two different sized circles.
+
+---
 
     // HANDS-ON ICON
 

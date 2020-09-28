@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Arc, Circle, clamp, Line, nearlyEquals, Point, Polygon, Rectangle, Segment} from '@mathigon/fermat';
+import {Arc, Circle, clamp, Line, nearlyEquals, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/fermat';
 import {$N, animate, CanvasView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
@@ -1056,4 +1056,63 @@ export function radiiDiameters($step: Step) {
       console.log('moving');
     }
   });
+}
+
+export function diameterCircumference($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const colours = ['red', 'blue', 'green'];
+  const drawn: { [x: string]: boolean; } = {};
+  colours.forEach(c => drawn[c] = false);
+
+  const circle = new Circle(new Point(200, 200), 160);
+  $geopad.drawPath(circle);
+
+  const lineY = circle.c.y + circle.r + 12.5;
+  const lineStart = new Point(circle.c.x - circle.r, lineY);
+  const lineEnd = new Point(circle.c.x + circle.r, lineY);
+  const diameterLine = new Segment(lineStart, lineEnd);
+  $geopad.drawPath(diameterLine);
+
+  $step.model['progress'] = new Segment(lineStart.shift(0, 7.5), lineStart.shift(0, 7.5));
+  const progress = $geopad.drawPath('progress');
+  progress.$el.css({stroke: 'none'});
+
+  let pending: string | undefined;
+
+  slide($geopad.$svg, {
+    start: (p: Point) => {
+      pending = colours.shift();
+      if (!pending) return;
+      $step.model[pending] = new Polyline(p);
+      $geopad.drawPath(pending, {classes: pending});
+      progress.$el.css({stroke: pending});
+    },
+    move: (p: Point) => {
+      if (!pending) return;
+      const len = length($step.model[pending]);
+      if (len <= circle.r * 2) {
+        if (Math.abs(Point.distance(p, circle.c) - circle.r) > 20) {
+          $step.addHint('Make sure you are drawing over the circle', {class: 'incorrect'});
+        }
+        $step.model[pending] = new Polyline(...$step.model[pending].points, p);
+        $step.model['progress'] = new Segment(lineStart.shift(0, 7.5), lineStart.shift(len, 7.5));
+      } else {
+        $step.model['progress'] = new Segment(lineStart.shift(0, 7.5), lineEnd.shift(0, 7.5));
+        drawn[pending] = true;
+        pending = undefined;
+      }
+    },
+    end: () => {
+      if (Object.values(drawn).every(v => v == true)) {
+        $step.score('diameters-wrapped');
+        $step.addHint('correct');
+      }
+    }
+  });
+}
+
+function length(pl: Polyline) {
+  return pl.edges.reduce((totalLength, edge) => {
+    return totalLength + edge.length;
+  }, 0);
 }
