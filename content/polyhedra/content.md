@@ -1293,15 +1293,15 @@ _regular_, but they are perfectly valid 5-sided polygons:
     include svg/tessellations/pentagons-3.svg
 :::
 
-So far, mathematicians have only found 15 different kinds of tessellations with
-(convex) pentagons – the most recent of which was discovered in 2015. No one
-knows if there are any others, or if these 15 are the only ones.
+Over time, mathematicians have only found 15 different kinds of tessellations with (convex)
+pentagons – the most recent of which was discovered in 2015.
 
 ---
 > id: pentagons
 > goals: shapes
 
-Can you make tessellations using some of these irregular pentagons?
+Two years later, in 2017, _Michaël Rao_ published a proof that there are no other possibilities,
+except the 15 that had already been found. Can you make a tessellation using all of them?
 
     figure: .tessellation
       x-polypad
