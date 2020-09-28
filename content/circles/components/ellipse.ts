@@ -4,7 +4,8 @@
 // =============================================================================
 
 
-import {Circle, Ellipse, Line, mod, Point, Polygon} from '@mathigon/fermat';
+import {mod} from '@mathigon/fermat';
+import {Circle, Ellipse, Line, Point, Polygon} from '@mathigon/euclid';
 import {$N, CanvasView, CustomElementView, register} from '@mathigon/boost';
 import {Trail} from '../../chaos/components/simulation';
 import {Geopad} from '../../shared/types';
