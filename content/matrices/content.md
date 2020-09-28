@@ -374,6 +374,19 @@ For any vector, the result of the transforation will be the same. This is called
 
 > id: basic-transformations
 
+    // values hard-coded for now, should take variable w&h (or just use Geopad?)
+    mixin grid220
+      g.grid
+        each i in [10,30,50,70,90,110,130,150,170,190,210]
+          - var width = i == 110 ? 4 : 2
+          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
+          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
+        each i in [10,30,50,70,90,110,130,150,170,190,210]
+          - var width = i == 110 ? 4 : 2
+          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
+          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
+
+
 We have already seen how we can multiply a vector by a 2x2 matrix to rotate that vector about the origin, and we have seen how the identity matrix leaves the vector unchanged. What other transformations exist?
 
 ::: tab
@@ -387,15 +400,7 @@ What if we adjust the top-left and bottom-right numbers of our transformation ma
 </table>
 
     svg(width=220 height=220)
-      g.grid
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
+      +grid220
       g.var.scale(:html="polygonTransform(xscale, 0, 0, yscale)")
 
 Changing the [top-left](target:ma) value scales x' along the x-axis.
@@ -422,15 +427,7 @@ Adjust the matrix to see how it changes in the coordinates.
 </table>
 
     svg(width=220 height=220)
-      g.grid
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
+      +grid220
       g.var.scale(:html="polygonTransform(xreflect, 0, 0, yreflect)")
 
 
@@ -452,15 +449,7 @@ Adjust the matrices to see how they change the transformations.
 {.caption} A shear in the x direction.
 
     svg(width=220 height=220)
-      g.grid
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
+      +grid220
       g.var.shear(:html="polygonTransform(1, xshear, 0, 1)")
 
 <table>
@@ -477,15 +466,7 @@ Adjust the matrices to see how they change the transformations.
 {.caption} A shear in the y direction.
 
     svg(width=220 height=220)
-      g.grid
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
+      +grid220
       g.var.shear(:html="polygonTransform(1, 0, yshear, 1)")
 
 <table>
@@ -649,15 +630,7 @@ This is the identity matrix for three dimensions
 Let's mess around with the Mathigon Logo!
 
     svg(width=220 height=220)
-      g.grid
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
+      +grid220
       g.var.mathigon.red(:html="polygonTransform(m1a, m1b, m1c, m1d, 'red')")
       g.var.mathigon.green(:html="polygonTransform(m2a, m2b, m2c, m2d, 'green')")
       g.var.mathigon.yellow(:html="polygonTransform(m3a, m3b, m3c, m3d, 'yellow')")
