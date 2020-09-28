@@ -10,7 +10,7 @@ import {animate, AnimationResponse, CanvasView, Observable} from '@mathigon/boos
 import {Geopad} from '../../shared/types';
 
 
-class Trail {
+export class Trail {
   private tail: Float32Array;
   private length = 0;
   private index = 0;
