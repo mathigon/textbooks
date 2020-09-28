@@ -1084,6 +1084,7 @@ export function diameterCircumference($step: Step) {
       pending = colours.shift();
       if (!pending) return;
       $step.model[pending] = new Polyline(p);
+      // [TODO]: Add some documentation about this approach (auto-listening to model property)
       $geopad.drawPath(pending, {classes: pending});
       progress.$el.css({stroke: pending});
     },
