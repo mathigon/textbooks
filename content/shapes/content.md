@@ -582,6 +582,7 @@ We could use a piece of string and a ruler to determine the distance around a ti
 ---
 
 > id: encasement-estimation
+> goals: eight-sides
 
 In our previous geometry chapters, we used what we had learned about earlier shapes to help us with new ones. For example, we re-arranged parallelograms into rectangles to understand how to find the area of parallelograms. Let’s first find an estimate of the distance around the tire by using what we know about the perimeter of polygons. Place the square around the circle so it totally encloses the circle.
 
@@ -591,7 +592,11 @@ In our previous geometry chapters, we used what we had learned about earlier sha
       img(src="https://st.depositphotos.com/1001469/2018/i/950/depositphotos_20187853-stock-photo-automobile-tire-isolated-on-white.jpg")
       svg
 
-The tire fits inside the square, so the circumference of the tire is [[less than | more than]] the perimeter of the square. The perimeter of the square is [[108]] cm so the distance around the tire is less than 108 cm.
+The tire fits inside the square, so the circumference of the tire is [[less than | more than]] the perimeter of the square. The perimeter of the _{span.shape-name}square_ is [[108]] cm so the distance around the tire is less than 108 cm.
+
+    x-slider.tire-encasement.reveal(steps=4 when="blank-0 blank-1")
+
+---
 
 As we increase the number of sides of the polygon, our estimate gets closer and closer to the distance around the tire. This process helps get a good estimate of the circumference around a circle. But what if we need to be exact? Can we use the straight lines in a circle to help find the circumference? Before exploring this further, let’s learn some of the names of the parts of a circle.
 

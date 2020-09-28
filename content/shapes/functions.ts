@@ -789,12 +789,49 @@ export function wheels($step: Step) {
 
 export function encasementEstimation($step: Step) {
   const $svg = $step.$('figure .tire-circumference')!.$('svg') as SVGParentView;
-  const onComplete = () => {
+  const $shapeName = $step.$('span.shape-name')!;
+  const targetBounds = new Rectangle(new Point(185, 8), 230, 230); // Approx size + loc of tire
+  let circleA = new Circle(new Point(0, 0), 0);
+  let circleB = new Circle(new Point(0, 0), 0);
+  const onComplete = (a: Circle, b: Circle) => {
     $step.score('tire-encapsulated');
     $step.addHint('correct');
+    circleA = a;
+    circleB = b;
   };
-  const targetBounds = new Rectangle(new Point(185, 8), 230, 230); // Approx size + loc of tire
-  const _box = new ResizeableSquare($svg, 100, new Point(15, 15), targetBounds, onComplete);
+  const box = new ResizeableSquare($svg, 100, new Point(15, 15), targetBounds, onComplete);
+
+  const $shapeDisp = $N('path', {}, $svg) as SVGView;
+  $shapeDisp.css({fill: 'none', stroke: 'lime', 'stroke-width': '2px'});
+  const $slider = $step.$('x-slider') as Slider;
+  $slider.on('move', n => {
+    box.hide();
+    const points: Point[] = [];
+    const sides = n + 4;
+    const circle = sides == 4 ? circleA : circleB;
+    for (let i = 0; i < sides; i++) {
+      points.push(circle.at(i * (1 / sides)));
+    }
+    $shapeDisp.draw((new Polygon(...points)).rotate(-Math.PI / 4, circle.c));
+    switch (sides) {
+      case 4:
+        $shapeName.text = 'square';
+        break;
+      case 5:
+        $shapeName.text = 'pentagon';
+        break;
+      case 6:
+        $shapeName.text = 'hexagon';
+        break;
+      case 7:
+        $shapeName.text = 'heptagon';
+        break;
+      case 8:
+        $shapeName.text = 'octagon';
+        $step.score('eight-sides');
+        break;
+    }
+  });
 }
 
 class ResizeableSquare {
@@ -811,7 +848,7 @@ class ResizeableSquare {
     initSize: number,
     initPos: Point,
     private targetBounds: Rectangle,
-    private onComplete: () => void
+    private onComplete: (a: Circle, b: Circle) => void
   ) {
 
     this.isComplete = false;
@@ -915,7 +952,10 @@ class ResizeableSquare {
           });
 
           if (this.isComplete) {
-            this.onComplete();
+            this.onComplete(
+                new Circle(this.center, this.radiusA),
+                new Circle(this.center, this.radiusB)
+            );
           }
 
         }
@@ -953,7 +993,10 @@ class ResizeableSquare {
         });
 
         if (this.isComplete) {
-          this.onComplete();
+          this.onComplete(
+              new Circle(this.center, this.radiusA),
+              new Circle(this.center, this.radiusB)
+          );
         }
       }
     });
@@ -1005,55 +1048,62 @@ class ResizeableSquare {
     return this.poly.points.map((point, index) => new Segment(point, this.poly.points[(index + 1) % 4]));
   }
 
+  get radiusA() {
+    return Point.distance(this.poly.points[0], this.poly.points[2]) / 2;
+  }
+
+  get radiusB() {
+    return this.poly.edges[0].length / 2;
+  }
+
+  get center() {
+    return (new Line(this.poly.points[0], this.poly.points[2])).midpoint;
+  }
+
+  hide() {
+    this.$box.remove();
+    this.$edges.forEach($edge => $edge.remove());
+  }
+
 }
 
 export function radiiDiameters($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
-  const center = new Point(200, 200);
-  const radius = 180;
-  const circle = new Circle(center, radius);
-  $geopad.drawPoint(center, {interactive: false});
+  const circle = new Circle(new Point(200, 200), 180);
+  $geopad.drawPoint(circle.c, {interactive: false});
   $geopad.drawPath(circle, {interactive: true});
   $geopad.switchTool('line');
-  let drawing = false;
-  let $target: GeoPoint | null = null;
+  let $diameterTarget: GeoPoint | null = null;
   let radii = 0;
   let diameters = 0;
   $geopad.on('begin:path', ({start}: {path: Path, start: GeoPoint}) => {
-    drawing = true;
     const startPos = start.value!;
-    if (nearlyEquals(startPos.subtract(center).length, radius)) {
-      const diamTarget = startPos.reflect((new Line(startPos, center)).perpendicular(center));
-      $target = $geopad.drawPoint(diamTarget, {interactive: false});
+    if (nearlyEquals(startPos.subtract(circle.c).length, circle.r)) {
+      const diamTarget = startPos.rotate(Math.PI, circle.c);
+      $diameterTarget = $geopad.drawPoint(diamTarget, {interactive: false});
     }
   });
   $geopad.on('add:path', ({path}: {path: GeoPath}) => {
     const cand = path.value as Line;
-    drawing = false;
-    const d1 = cand.p1.subtract(center).length;
-    const d2 = cand.p2.subtract(center).length;
-    if (nearlyEquals(d1, radius) && nearlyEquals(d2, radius) && nearlyEquals(cand.length, radius * 2)) {
+    const d1 = cand.p1.subtract(circle.c).length;
+    const d2 = cand.p2.subtract(circle.c).length;
+    if (nearlyEquals(d1, circle.r) && nearlyEquals(d2, circle.r) && nearlyEquals(cand.length, circle.r * 2)) {
       // drew a diameter
       diameters++;
       $step.addHint('correct');
-    } else if (nearlyEquals(d1, radius) && nearlyEquals(d2, 0)) {
+    } else if (nearlyEquals(d1, circle.r) && nearlyEquals(d2, 0)) {
       // drew a radius
       radii++;
       $step.addHint('correct');
-      $target!.delete();
+      $diameterTarget!.delete();
     } else {
       $step.addHint('incorrect');
       path.delete();
       path.components.forEach(c => c.delete());
-      $target!.delete();
+      $diameterTarget!.delete();
     }
     if (diameters > 2 && radii > 2) {
       $step.score('radii-diameters-drawn');
-    }
-  });
-  $geopad.on('mousemove', () => {
-    if (drawing) {
-      console.log('moving');
     }
   });
 }
