@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Circle, Line, mod, Point, Polygon} from '@mathigon/fermat';
+import {Circle, Ellipse, Line, mod, Point, Polygon} from '@mathigon/fermat';
 import {$N, CanvasView, CustomElementView, register} from '@mathigon/boost';
 import {Trail} from '../../chaos/components/simulation';
 import {Geopad} from '../../shared/types';
@@ -45,6 +45,7 @@ class Rope {
       const d1 = Point.distance(p, before);
       const d2 = Point.distance(p, after);
 
+      // TODO Avoid the rope "shrinking" when not neccessary
       if (Math.abs(d1 - d2) > threshold) {
         this.points[i] = Point.interpolate(before, after);
       }
@@ -59,23 +60,21 @@ class Rope {
       this.applyPegs(pegs, threshold);
       this.applyTension(threshold / 100);
       iterations += 1;
-    } while (this.hasChanged && iterations < 20);
+    } while (this.hasChanged && iterations < 30);
   }
 }
 
 
 @register('x-ellipse')
-export class Ellipse extends CustomElementView {
+export class EllipseDrawing extends CustomElementView {
 
   ready() {
     const $geopad = this.$('x-geopad') as Geopad;
     const $canvas = $N('canvas', {width: 1200, height: 800}) as CanvasView;
     $canvas.css({position: 'absolute', width: '100%', height: '100%'});
     $geopad.prepend($canvas);
-    const trail = new Trail('path', 'ccc', 4, 400);
 
     const stringLength = 8;
-    const rope = new Rope(13, 250);
     const threshold = 0.01;
 
     const pen = $geopad.drawPoint(new Point(0, 0), {interactive: true, name: 'c', classes: 'red'});
@@ -85,30 +84,28 @@ export class Ellipse extends CustomElementView {
     $geopad.model.watch((s: any) => {
       const p = pen.value!;
       const d = Point.distance(p, s.a) + Point.distance(p, s.b);
-
-      if (d > stringLength + threshold) {
-        const c = Point.distance(s.a, s.b) / 2;  // Half distance between foci.
-        const a = stringLength / 2;  // Parameter a of ellipse.
-        const b = Math.sqrt(a ** 2 - c ** 2);  // Parameter b of ellipse.
-        const th = p.angle(Point.average(s.a, s.b));  // Angle of pen.
-        const k = a * b / Math.sqrt((b * Math.cos(th)) ** 2 + (a * Math.sin(th)) ** 2);
-        pen.setValue(new Point(k * Math.cos(th), k * Math.sin(th)));
-      }
+      const ellipse = Ellipse.fromFoci(s.a, s.b, stringLength);
+      if (d > stringLength + threshold) pen.setValue(ellipse.project(p));
     });
 
     // Draw a new path that connects the foci and pencil position.
     let lastC = pen.value!;
+    const rope = new Rope(13, 250);
     $geopad.model.watch((s: any) => {
+      const ca = new Circle(s.a, 0.25);
+      const cb = new Circle(s.b, 0.25);
       const l = new Line(lastC, pen.value!);
+      // if (l.length < threshold) return;
       const n = l.length * 50;
       for (let i = 0; i < n; ++i) {
-        rope.update([s.a, s.b, l.at(i / n)].map(p => new Circle(p, 0.25)), threshold);
+        rope.update([ca, cb, new Circle(l.at(i / n), 0.25)], threshold);
       }
       lastC = pen.value!;
       path.setValue(rope.path);
     });
 
     // Draw a pencil trail whenever model.c changes.
+    const trail = new Trail('path', 'ccc', 4, 400);
     $geopad.model.watch((s: any) => {
       $canvas.clear();
       trail.push($geopad.toViewportCoords(s.c));
