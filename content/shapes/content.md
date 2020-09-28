@@ -689,15 +689,34 @@ Now imagine you want to build a fence to enclose a circular play area for your d
 
 It takes a little more than 3 diameters to equal the circumference. Using 3 as an approximation is fine for some general estimates, but we need to keep working to get to a point where we can more accurately calculate the circumference of a circle.
 
+---
+
+> id: finding-pi
+
 Let’s see if we can determine how much more of the 4th diameter is needed to fully wrap around the circle. Draw a line below and watch as it is then formed into a circle.
 
     // INTERACTIVE-05: Finding PI (pages 9-10)
+    column(width=200)
+      x-geopad(width=200 height=200)
+        svg
+    column(width=400)
+      table.finding-pi.reveal(when="line-drawn")
+        tr
+          th CIRCUMFERENCE
+          th DIAMETER
+          th.reveal(when="blank-0") NUMBER OF DIAMETERS NEEDED TO EQUAL CIRCUMFERENCE
+        tr
+          td.circumference 0
+          td.diameter 0
+          <td class="reveal" when="blank-0"><x-blank-input solution="3.14"></x-blank-input></td>
 
 Let’s think about how many diameters are needed to make the circumference. Determining how many times one number is needed to make another is represented by [[division | multiplication | subtraction]]. 
 
 Dividing the length of the circumference by the length of the diameter will determine how many diameters are needed to equal the circumference. Do that division and enter the value in the table.
 
 Try it again with a different length starting line.
+
+---
 
 The little bit more of the 4th diameter that is needed to wrap around a circle is 0.14 of a diameter. While it took 4 diameters off a square to wrap around the square, it only takes [[3.14]] diameters to fit around a circle.
 

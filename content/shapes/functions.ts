@@ -1117,3 +1117,21 @@ function length(pl: Polyline) {
     return totalLength + edge.length;
   }, 0);
 }
+
+export function findingPi($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $circumference = $step.$('td.circumference')!;
+  const $diameter = $step.$('td.diameter')!;
+  $geopad.switchTool('line');
+  $geopad.on('add:path', ({path}: {path: GeoPath}) => {
+    const line = path.value as Line;
+    const len = line.length;
+    const lenStr = len.toFixed(2);
+    path.setLabel(lenStr);
+    const circle = new Circle(line.midpoint, len / 2);
+    $geopad.drawPath(circle);
+    $diameter.text = lenStr;
+    $circumference.text = circle.circumference.toFixed(2);
+    $step.score('line-drawn');
+  });
+}
