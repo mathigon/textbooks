@@ -7,7 +7,7 @@
 /// <reference types="THREE"/>
 import {Color, total} from '@mathigon/core';
 import {clamp, lerp, toWord} from '@mathigon/fermat';
-import {Angle, isLineLike, Point, Polygon, Rectangle, Segment} from '@mathigon/euclid';
+import {Angle, intersections, isLineLike, Point, Polygon, Rectangle, Segment} from '@mathigon/euclid';
 import {Browser, slide} from '@mathigon/boost';
 import {Geopad, GeoPath, Path, Polypad, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';
@@ -84,9 +84,9 @@ export async function midsegments($step: Step) {
   let d = await $geopad.waitForPoint();
 
   // Reorder the points to be clockwise.
-  if (Segment.intersect(new Segment(a.value!, b.value!), new Segment(c.value!, d.value!))) {
+  if (intersections(new Segment(a.value!, b.value!), new Segment(c.value!, d.value!)).length) {
     [b, c] = [c, b];
-  } else if (Segment.intersect(new Segment(a.value!, d.value!), new Segment(b.value!, c.value!))) {
+  } else if (intersections(new Segment(a.value!, d.value!), new Segment(b.value!, c.value!)).length) {
     [c, d] = [d, c];
   }
 

@@ -6,7 +6,7 @@
 
 import {Color, isOneOf, last, list, Obj, repeat2D, tabulate, tabulate2D} from '@mathigon/core';
 import {factorial, lerp, numberFormat, Random, subsets, toOrdinal} from '@mathigon/fermat';
-import {Point, Segment, SimplePoint} from '@mathigon/euclid';
+import {intersections, Point, Segment, SimplePoint} from '@mathigon/euclid';
 import {$, $$, $N, animate, Draggable, SVGParentView, svgPointerPosn, SVGView} from '@mathigon/boost';
 import {Slideshow, Step} from '../shared/types';
 
@@ -529,7 +529,7 @@ export function planarity($section: Step) {
       const e1 = edgeToSegment(edges[i]);
       for (let j = i + 1; j < edges.length; ++j) {
         const e2 = edgeToSegment(edges[j]);
-        if (Segment.intersect(e1, e2)) {
+        if (intersections(e1, e2).length) {
           edges[i].intersect =
               edges[j].intersect = edges[i].vertices[0].intersect =
                   edges[i].vertices[1].intersect =
@@ -556,7 +556,7 @@ export function planarity($section: Step) {
       const edge = new Segment(points[u], points[v]);
       for (let i = 0; i < edges.length; ++i) {
         const e2 = new Segment(points[edges[i][0]], points[edges[i][1]]);
-        if (edge.equals(e2) || Segment.intersect(edge, e2)) return;
+        if (edge.equals(e2) || intersections(edge, e2).length) return;
       }
 
       edges.push([u, v]);

@@ -6,7 +6,7 @@
 
 import {EventTarget, last} from '@mathigon/core';
 import {isBetween} from '@mathigon/fermat';
-import {Point, Segment, SimplePoint} from '@mathigon/euclid';
+import {intersections, Point, Segment, SimplePoint} from '@mathigon/euclid';
 import {$body, $N, slide, SVGParentView, SVGView} from '@mathigon/boost';
 
 
@@ -103,7 +103,7 @@ export class Sketch extends EventTarget {
       const points2 = path2.points as Point[];
       for (let j = 1; j < points2.length - 2; ++j) {
         const line2 = new Segment(points2[j], points2[j + 1]);
-        const t = Segment.intersect(line1, line2);
+        const t = intersections(line1, line2)[0];
         if (t) {
           this.trigger('intersect', {point: t, paths: [path1, path2]});
           return;
