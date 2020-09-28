@@ -103,20 +103,6 @@ export function translations($step: Step) {
 }
 
 /**
- * FIXME: replace with code from Fermat.js
- *
- * @param A 2x2 matrix
- * @param v 2x1 vector
- */
-function applyTransform(A: number[][], v: number[]): number[] {
-
-  return [
-    A[0][0] * v[0] + A[0][1] * v[1],
-    A[1][0] * v[0] + A[1][1] * v[1]
-  ];
-}
-
-/**
  * This applies a transformation to a shape
  * while scaling it from [0, 80] to [0, 110]
  *
@@ -124,14 +110,17 @@ function applyTransform(A: number[][], v: number[]): number[] {
  */
 function generateTransformFunction(shape: number[][]) {
 
-  // b and c must be negative to account for... ?
+  // b and c must be negative to account for... what exactly??
   return function(a: number, b: number, c: number, d: number) {
-    const pointString = shape.map(p => [p[0] - 40, p[1] - 40])
-        .map(p => applyTransform([
+    const pointString = shape
+        .map(p => [p[0] - 40, p[1] - 40]) // normalize from [0, 80] to [-1, 1]
+        .map(p => [[p[0]], [p[1]]]) // map to a matrix
+        .map(p => Matrix.product([
           [a, -b],
           [-c, d]
         ], p))
-        .map(p => [p[0] + 110, p[1] + 110])
+        .map(p => [p[0][0], p[1][0]]) // map back to vector
+        .map(p => [p[0] + 110, p[1] + 110]) // scale from [-1, 1] to [0, 220]
         .map(point => point.join(','))
         .join(' ');
 
