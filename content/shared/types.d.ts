@@ -1,5 +1,5 @@
 import {Obj, EventTarget} from '@mathigon/core';
-import {Point, Angle, Arc, Circle, Line, TransformMatrix, Polygon, Rectangle, Bounds, Segment, Ray, Sector, Polyline, Triangle, intersections} from '@mathigon/fermat';
+import {Point, Angle, Arc, Circle, Line, TransformMatrix, Polygon, Rectangle, Bounds, Segment, Ray, Sector, Polyline, Triangle, intersections} from '@mathigon/euclid';
 import {CustomElementView, ElementView, SVGView, Observable, AnimationResponse, SVGParentView} from '@mathigon/boost';
 import {ExprElement} from '@mathigon/hilbert';
 

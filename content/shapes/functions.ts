@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Point} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {BinarySwipe} from '../shared/components/binary-swipe';
 import {Polypad, Step} from '../shared/types';
 import '../shared/components/binary-swipe';  // import component

@@ -4,7 +4,8 @@
 // =============================================================================
 
 
-import {Complex, Point} from '@mathigon/fermat';
+import {Complex} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {Step} from '../shared/types';
 
 

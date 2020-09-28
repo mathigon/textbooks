@@ -5,7 +5,8 @@
 
 
 import {$html, $N, CustomElementView, ElementView, register, slide} from '@mathigon/boost';
-import {clamp, Point, Random} from '@mathigon/fermat';
+import {clamp, Random} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 
 const RESISTANCE = 180000;
 const MIN_MOVE = 100;

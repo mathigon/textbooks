@@ -6,7 +6,8 @@
 
 /// <reference types="THREE"/>
 import {Color, total} from '@mathigon/core';
-import {Angle, clamp, isLineLike, lerp, Point, Polygon, Rectangle, Segment, toWord} from '@mathigon/fermat';
+import {clamp, lerp, toWord} from '@mathigon/fermat';
+import {Angle, isLineLike, Point, Polygon, Rectangle, Segment} from '@mathigon/euclid';
 import {Browser, slide} from '@mathigon/boost';
 import {Geopad, GeoPath, Path, Polypad, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';

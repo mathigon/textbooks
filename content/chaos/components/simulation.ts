@@ -5,7 +5,7 @@
 
 
 import {Obj} from '@mathigon/core';
-import {Point, Segment} from '@mathigon/fermat';
+import {Point, Segment} from '@mathigon/euclid';
 import {animate, AnimationResponse, CanvasView, Observable} from '@mathigon/boost';
 import {Geopad} from '../../shared/types';
 

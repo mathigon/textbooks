@@ -5,7 +5,8 @@
 
 
 import {EventTarget, last} from '@mathigon/core';
-import {isBetween, Point, Segment, SimplePoint} from '@mathigon/fermat';
+import {isBetween} from '@mathigon/fermat';
+import {Point, Segment, SimplePoint} from '@mathigon/euclid';
 import {$body, $N, slide, SVGParentView, SVGView} from '@mathigon/boost';
 
 

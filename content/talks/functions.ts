@@ -4,7 +4,8 @@
 // =============================================================================
 
 
-import {Circle, intersections, nearlyEquals, Point, Polygon} from '@mathigon/fermat';
+import {nearlyEquals} from '@mathigon/fermat';
+import {Circle, intersections, Point, Polygon} from '@mathigon/euclid';
 import {$html, $N, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Step} from '../shared/types';
 

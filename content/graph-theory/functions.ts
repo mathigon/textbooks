@@ -5,7 +5,8 @@
 
 
 import {Color, isOneOf, last, list, Obj, repeat2D, tabulate, tabulate2D} from '@mathigon/core';
-import {factorial, lerp, numberFormat, Point, Random, Segment, SimplePoint, subsets, toOrdinal} from '@mathigon/fermat';
+import {factorial, lerp, numberFormat, Random, subsets, toOrdinal} from '@mathigon/fermat';
+import {Point, Segment, SimplePoint} from '@mathigon/euclid';
 import {$, $$, $N, animate, Draggable, SVGParentView, svgPointerPosn, SVGView} from '@mathigon/boost';
 import {Slideshow, Step} from '../shared/types';
 

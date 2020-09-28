@@ -5,7 +5,8 @@
 
 
 import {last} from '@mathigon/core';
-import {lerp, SimplePoint} from '@mathigon/fermat';
+import {lerp} from '@mathigon/fermat';
+import {SimplePoint} from '@mathigon/euclid';
 import {$N, animate, CustomElementView, ElementView, register, SVGView} from '@mathigon/boost';
 import {Machine} from './enigma';
 import {UPPER_CASE} from './utilities';

@@ -5,7 +5,8 @@
 
 
 import {$N, CustomElementView, register} from '@mathigon/boost';
-import {Point, Polygon, primeFactorisation} from '@mathigon/fermat';
+import {primeFactorisation} from '@mathigon/fermat';
+import {Point, Polygon} from '@mathigon/euclid';
 import {BLUE, GREEN, PURPLE, RED, YELLOW} from '../../shared/constants';
 
 const ORIGIN = new Point(0, 0);
