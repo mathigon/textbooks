@@ -1234,7 +1234,7 @@ Let's see why this is true geometrically.
 
 
 ## 3D playground
-> id: three-dimensions
+> id: three-vector
 
 #### Watch what we can do with a 3d matrix
 Watch what we can do with a 3d matrix.
@@ -1254,7 +1254,12 @@ Try adjusting the vector.
 
 Neat, huh?
 
+---
+
 ### Systems of Equations
+
+> id: three-soeq
+
 A linear equation can be represented as a geometrical object, depending on how many variables it has. A linear equation with two variables can be represented as a [[line|plane|hypercube]]. A linear equation with three variables can be represented as a [[plane|line|point]].
 
 
@@ -1270,6 +1275,40 @@ Try adjusting the vector (only Z does anything).
 
 Above us is a system of three equations, each with three variables. The intersection of two of these planes gives us a [[line|plane|point]]. The intersection of all three of these planes gives us a [[point|line|plane]].
 
+
+---
+
+### 3d Transformations
+
+> id: three-transform
+
+We can perform 3d transformations in the three-dimensional space.
+
+    x-solid(size=300)
+
+Now adjust the sliders.
+
+<table class="vector">
+  <tr>
+    <td>${xa}{xa|1|-2,2,0.1}</td>
+    <td>${xb}{xb|0|-2,2,0.1}</td>
+    <td>${xc}{xc|0|-2,2,0.1}</td>
+  </tr>
+  <tr>
+    <td>${ya}{ya|0|-2,2,0.1}</td>
+    <td>${yb}{yb|1|-2,2,0.1}</td>
+    <td>${yc}{yc|0|-2,2,0.1}</td>
+  </tr>
+  <tr>
+    <td>${za}{za|0|-2,2,0.1}</td>
+    <td>${zb}{zb|0|-2,2,0.1}</td>
+    <td>${zc}{zc|1|-2,2,0.1}</td>
+  </tr>
+</table>
+
+    .button IDENTITY
+
+Neat-o.
 
 ---
 

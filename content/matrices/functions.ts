@@ -347,8 +347,9 @@ export function determinants($step:Step) {
 }
 
 import * as u from './utils3d';
+import { DoubleSide, Side } from 'three';
 
-export function threeDimensions($step: Step) {
+export function threeVector($step: Step) {
   const $solids = $step.$$('x-solid') as Solid[];
 
   const basic3d = $solids[0];
@@ -383,31 +384,36 @@ export function threeDimensions($step: Step) {
 
     return [xPlane, yPlane, zPlane];
   });
+}
 
-  /**
-   * Add intersection lines to a solid.
-   * TODO: should use a new function in Fermat.js to calculate intersection lines.
-   *
-   * @param solid
-   */
-  function addIntersectionLinesToSolid(solid: Solid) {
+/**
+ * Add intersection lines to a solid.
+ * TODO: should use a new function in Fermat.js to calculate intersection lines.
+ *
+ * @param solid
+ */
+function addIntersectionLinesToSolid(solid: Solid) {
 
-    // intersection b/t Yellow and Cyan planes
-    // x + y + z = 1
-    // y = 1
-    solid.addLine([0, 1, 0], [-1, 1, 1], 0x00ff00);
+  // intersection b/t Yellow and Cyan planes
+  // x + y + z = 1
+  // y = 1
+  solid.addLine([0, 1, 0], [-1, 1, 1], 0x00ff00);
 
-    // intersection b/t Magenta and Cyan planes
-    // z = 1, y = 1
-    solid.addLine([2, 1, 1], [-1, 1, 1], 0x0000ff);
+  // intersection b/t Magenta and Cyan planes
+  // z = 1, y = 1
+  solid.addLine([2, 1, 1], [-1, 1, 1], 0x0000ff);
 
-    // intersection b/t magenta and yellow planes
-    // x + y + z = 1
-    // z = 1
-    solid.addLine([0, 0, 1], [-1, 1, 1], 0xff0000);
-  }
+  // intersection b/t magenta and yellow planes
+  // x + y + z = 1
+  // z = 1
+  solid.addLine([0, 0, 1], [-1, 1, 1], 0xff0000);
+}
 
-  const soq = $solids[1];
+export function threeSoeq($step: Step) {
+
+  const $solids = $step.$$('x-solid') as Solid[];
+  const soq = $solids[0];
+
   soq.addMesh((scene) => {
 
     u.addUnitVectorsToSolid(soq);
@@ -470,6 +476,90 @@ export function threeDimensions($step: Step) {
       planeCyan.geometry.dispose();
       planeCyan.geometry = plane2.geometry; */
     });
+  });
+}
+
+// Octohedron
+const OCTOHEDRON = {
+  vertices: [
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1],
+    [-1, 0, 0],
+    [0, -1, 0],
+    [0, 0, -1]
+  ],
+  // whoa... half are one way, half the other
+  faces: [
+    [0, 1, 2],
+    [0, 5, 1],
+    [0, 4, 2],
+    [0, 5, 4],
+    [3, 2, 1],
+    [3, 1, 5],
+    [3, 2, 4],
+    [3, 4, 5]
+  ]
+};
+
+export function threeTransform($step: Step) {
+  const $solid = $step.$('x-solid') as Solid;
+
+  const $buttons = $step.$$('.button') as ElementView[];
+
+  $solid.addMesh((scene) => {
+    // do nothing
+
+    const meshes: THREE.Mesh[] = [];
+
+    OCTOHEDRON.faces.forEach(f => {
+      const geom = new THREE.Geometry();
+      f.forEach(vi => {
+        const v = OCTOHEDRON.vertices[vi];
+        geom.vertices.push(new THREE.Vector3(v[0], v[1], v[2]));
+      });
+      geom.faces.push(new THREE.Face3(0, 1, 2));
+      geom.computeFaceNormals();
+      // gotta make it double sided, otherwise unwanted (but very cool) behavior
+      const mesh = new THREE.Mesh(geom, new THREE.MeshNormalMaterial({side: DoubleSide}));
+      meshes.push(mesh);
+      $solid.object.add(mesh);
+    });
+
+
+    $step.model.watch((state: any) => {
+      const newMatrix = [
+        [state.xa, state.xb, state.xc],
+        [state.ya, state.yb, state.yc],
+        [state.za, state.zb, state.zc]
+      ];
+      console.log(newMatrix);
+
+      OCTOHEDRON.faces.forEach((f, i) => {
+        const geom = new THREE.Geometry();
+        f.forEach(vi => {
+          const v = OCTOHEDRON.vertices[vi];
+          const vTransform = Matrix.product(
+              newMatrix, [[v[0]], [v[1]], [v[2]]]
+          );
+          geom.vertices.push(new THREE.Vector3(
+              vTransform[0][0], vTransform[1][0], vTransform[2][0]));
+        });
+        geom.faces.push(new THREE.Face3(0, 1, 2));
+        geom.computeFaceNormals();
+        // gotta make it double sided, otherwise unwanted (but very cool) behavior
+        const mesh = new THREE.Mesh(geom, new THREE.MeshNormalMaterial({side: DoubleSide}));
+        meshes[i].geometry.dispose();
+        meshes[i].geometry = mesh.geometry;
+      });
+
+      scene.draw();
+    });
+    // return meshes;
+  });
+
+  $buttons[0].on('click', _e => {
+    // DO SOMETHING
   });
 }
 
