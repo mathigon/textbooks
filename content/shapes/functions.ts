@@ -1135,3 +1135,157 @@ export function findingPi($step: Step) {
     $step.score('line-drawn');
   });
 }
+
+export function circularHighways($step: Step) {
+  const $geopadRome = $step.$('x-geopad.rome') as Geopad;
+
+  let romeDrawn = false;
+  let romeSketch: GeoPath | null = null;
+  let romeCircle = new Circle(new Point(0, 0), 0);
+
+  slide($geopadRome.$svg, {
+    start: point => {
+      if (!romeDrawn) {
+        $step.model['romeSketch'] = new Polyline(point);
+        romeSketch = $geopadRome.drawPath('romeSketch');
+      }
+    },
+    move: position => {
+      if (!romeDrawn) {
+        $step.model['romeSketch'] = new Polyline(...$step.model['romeSketch'].points, position);
+      }
+    },
+    end: () => {
+      if (!romeDrawn) {
+        romeCircle = new Circle($step.model['romeSketch'].centroid, $step.model['romeSketch'].circumference / (2 * Math.PI));
+        $geopadRome.drawPath(romeCircle, {interactive: true});
+        $step.score('rome-circle');
+        romeSketch?.delete();
+        $geopadRome.switchTool('line');
+        romeDrawn = true;
+      }
+    }
+  });
+
+  let $romeDiameterTarget: GeoPoint | null = null;
+  $geopadRome.on('begin:path', ({start}: {path: Path, start: GeoPoint}) => {
+    const startPos = start.value!;
+    if (nearlyEquals(startPos.subtract(romeCircle.c).length, romeCircle.r)) {
+      const diamTarget = startPos.rotate(Math.PI, romeCircle.c);
+      $romeDiameterTarget = $geopadRome.drawPoint(diamTarget, {interactive: false});
+    }
+  });
+
+  $geopadRome.on('add:path', ({path}: {path: GeoPath}) => {
+    const cand = path.value as Line;
+    const d1 = cand.p1.subtract(romeCircle.c).length;
+    const d2 = cand.p2.subtract(romeCircle.c).length;
+    if (nearlyEquals(d1, romeCircle.r) && nearlyEquals(d2, romeCircle.r) && nearlyEquals(cand.length, romeCircle.r * 2)) {
+      // drew a diameter
+      path.setLabel(`${(path.value as Line).length} km`);
+      $step.addHint('correct');
+      $step.score('rome-diameter');
+    } else {
+      $step.addHint('incorrect');
+      path.delete();
+      path.components.forEach(c => c.delete());
+      $romeDiameterTarget!.delete();
+    }
+  });
+
+  const $geopadMoscow = $step.$('x-geopad.moscow') as Geopad;
+
+  let moscowDrawn = false;
+  let moscowSketch: GeoPath | null = null;
+  let moscowCircle = new Circle(new Point(0, 0), 0);
+
+  slide($geopadMoscow.$svg, {
+    start: point => {
+      if (!moscowDrawn) {
+        $step.model['moscowSketch'] = new Polyline(point);
+        moscowSketch = $geopadMoscow.drawPath('moscowSketch');
+      }
+    },
+    move: position => {
+      if (!moscowDrawn) {
+        $step.model['moscowSketch'] = new Polyline(...$step.model['moscowSketch'].points, position);
+      }
+    },
+    end: () => {
+      if (!moscowDrawn) {
+        moscowCircle = new Circle($step.model['moscowSketch'].centroid, $step.model['moscowSketch'].circumference / (2 * Math.PI));
+        $geopadMoscow.drawPath(moscowCircle, {interactive: true});
+        $step.score('moscow-circle');
+        $geopadMoscow.drawPoint(moscowCircle.c, {interactive: false});
+        moscowSketch?.delete();
+        $geopadMoscow.switchTool('line');
+        moscowDrawn = true;
+      }
+    }
+  });
+
+  let $moscowDiameterTarget: GeoPoint | null = null;
+  $geopadMoscow.on('begin:path', ({start}: {path: Path, start: GeoPoint}) => {
+    const startPos = start.value!;
+    if (nearlyEquals(startPos.subtract(moscowCircle.c).length, moscowCircle.r)) {
+      const diamTarget = startPos.rotate(Math.PI, moscowCircle.c);
+      $moscowDiameterTarget = $geopadMoscow.drawPoint(diamTarget, {interactive: false});
+    }
+  });
+
+  $geopadMoscow.on('add:path', ({path}: {path: GeoPath}) => {
+    const cand = path.value as Line;
+    const drewRadius =
+      nearlyEquals(cand.length, moscowCircle.r) &&
+      (cand.p1.equals(moscowCircle.c) || cand.p2.equals(moscowCircle.c));
+    if (drewRadius) {
+      // drew a radius
+      path.setLabel(`${(path.value as Line).length} km`);
+      $step.addHint('correct');
+      $step.score('moscow-radius');
+    } else {
+      $step.addHint('incorrect');
+      path.delete();
+      path.components.forEach(c => c.delete());
+      $moscowDiameterTarget!.delete();
+    }
+  });
+
+  const $geopadLondon = $step.$('x-geopad.london') as Geopad;
+
+  let londonDrawn = false;
+  let londonSketch: GeoPath | null = null;
+  let londonCircle = new Circle(new Point(0, 0), 0);
+
+  slide($geopadLondon.$svg, {
+    start: point => {
+      if (!londonDrawn) {
+        $step.model['londonSketch'] = new Polyline(point);
+        londonSketch = $geopadLondon.drawPath('londonSketch');
+      }
+    },
+    move: position => {
+      if (!londonDrawn) {
+        $step.model['londonSketch'] = new Polyline(...$step.model['londonSketch'].points, position);
+      }
+    },
+    end: () => {
+      if (!londonDrawn) {
+        londonCircle = new Circle($step.model['londonSketch'].centroid, $step.model['londonSketch'].circumference / (2 * Math.PI));
+        $geopadLondon.drawPath(londonCircle, {interactive: true});
+        $step.score('london-circle');
+        londonSketch?.delete();
+        $geopadLondon.switchTool('line');
+        londonDrawn = true;
+      }
+    }
+  });
+
+  $step.onScore('blank-3 blank-4', () => {
+    const diameter = $geopadLondon.drawPath(new Segment(
+        new Point(londonCircle.c.x, londonCircle.c.y - londonCircle.r),
+        new Point(londonCircle.c.x, londonCircle.c.y + londonCircle.r)
+    ));
+    diameter.setLabel('54 km');
+  });
+}

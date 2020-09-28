@@ -704,11 +704,12 @@ Let’s see if we can determine how much more of the 4th diameter is needed to f
         tr
           th CIRCUMFERENCE
           th DIAMETER
-          th.reveal(when="blank-0") NUMBER OF DIAMETERS NEEDED TO EQUAL CIRCUMFERENCE
+          th.reveal(when="blank-1") NUMBER OF DIAMETERS NEEDED TO EQUAL CIRCUMFERENCE
         tr
           td.circumference 0
           td.diameter 0
-          <td class="reveal" when="blank-0"><x-blank-input solution="3.14"></x-blank-input></td>
+          td.reveal(when="blank-1")
+            x-blank-input(solution="3.14")
 
 Let’s think about how many diameters are needed to make the circumference. Determining how many times one number is needed to make another is represented by [[division | multiplication | subtraction]]. 
 
@@ -764,9 +765,45 @@ In the rest of this chapter, we’ll use the approximation of 3.14.
 
 We had written the formulas as C = 3.14 x D and C = 3.14 x 2 x [[R | D]]. Now that we know the Greek letter π is used to represent the exact number of diameters needed to equal the circumference, we can replace 3.14 with π in these formulas. C = π x [[ D | R ]] or C = π x [[2] x R. The formulas are often written without the multiplication symbols as follows: C = πD and C = 2πR. Let’s update our toolkit with these versions of the formulas.
 
+---
+
+> id: circular-highways
+
 Traffic is a concern in cities around the world. In an attempt to keep traffic outside of the city-center, many cities have circular highways going around the city. Let’s explore three examples around the world.
 
     // INTERACTIVE-06: Circular highways (pages 13-14)
+    // [TODO]: Document tabs (if not documented already)
+
+::: tab
+
+#### Rome _{span.check(when="blank-0 blank-1")}_
+
+    figure: x-geopad(width=400 height=400).rome
+      svg
+
+Draw in a circle that covers the highway shown. _{span.reveal(when="rome-circle")}Draw in a diameter of the circle._ _{span.reveal(when="rome-diameter")}The distance around this road is [[64.37]] [[km | m | cm]]._
+
+::: tab
+
+#### Moscow _{span.check(when="blank-2")}_
+
+    figure: x-geopad(width=400 height=400).moscow
+      svg
+
+Draw in a circle that covers the highway shown. _{span.reveal(when="moscow-circle")}Draw in a radius of the circle._ _{span.reveal(when="moscow-radius")}The distance around this road is [[15.1]] km._
+
+::: tab
+
+#### London _{span.check(when="blank-5")}_
+
+    figure: x-geopad(width=400 height=400).london
+      svg
+
+Draw in a circle that covers the highway shown. _{span.reveal(when="london-circle")}The distance around this highway is about [[170]] km. If you instead wanted to drive straight across the circle through the center, this distance is [[54]] km._ _{span.reveal(when="blank-3 blank-4")}This distance is the [[diameter | radius ]] of the circle._
+
+:::
+
+---
 
 ::: column(width=400)
 
