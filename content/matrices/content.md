@@ -396,7 +396,7 @@ What if we adjust the top-left and bottom-right numbers of our transformation ma
           - var width = i == 110 ? 4 : 2
           - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
           line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
-      g.var.scale(:html="polygonScale(xscale, yscale)")
+      g.var.scale(:html="polygonTransform(xscale, 0, 0, yscale)")
 
 Changing the [top-left](target:ma) value scales x' along the x-axis.
 
@@ -431,7 +431,7 @@ Adjust the matrix to see how it changes in the coordinates.
           - var width = i == 110 ? 4 : 2
           - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
           line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
-      g.var.scale(:html="polygonScale(xreflect, yreflect)")
+      g.var.scale(:html="polygonTransform(xreflect, 0, 0, yreflect)")
 
 
 Flipping the sign of the [top-left](target:ma) value reflects the transformation across the [[x-axis|y-axis]], and flipping the sign of the [bottom-right](target:ma) value reflects the transformation across the [[y-axis|x-axis]].
@@ -461,7 +461,7 @@ Adjust the matrices to see how they change the transformations.
           - var width = i == 110 ? 4 : 2
           - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
           line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
-      g.var.shear(:html="polygonShear(xshear, 0)")
+      g.var.shear(:html="polygonTransform(1, xshear, 0, 1)")
 
 <table>
 <tr><td>1</td><td>${xshear}{xshear|0.0|-2.0,2.0,0.1}</td></tr>
@@ -486,7 +486,7 @@ Adjust the matrices to see how they change the transformations.
           - var width = i == 110 ? 4 : 2
           - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
           line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
-      g.var.shear(:html="polygonShear(0, yshear)")
+      g.var.shear(:html="polygonTransform(1, 0, yshear, 1)")
 
 <table>
 <tr><td>1</td><td>0</td></tr>

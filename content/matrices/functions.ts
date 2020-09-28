@@ -116,56 +116,38 @@ function applyTransform(A: number[][], v: number[]): number[] {
   ];
 }
 
+/**
+ * This applies a transformation to a shape
+ * while scaling it from [0, 80] to [0, 110]
+ *
+ * @param shape
+ */
+function generateTransformFunction(shape: number[][]) {
+
+  // b and c must be negative to account for... ?
+  return function(a: number, b: number, c: number, d: number) {
+    const pointString = shape.map(p => [p[0] - 40, p[1] - 40])
+        .map(p => applyTransform([
+          [a, -b],
+          [-c, d]
+        ], p))
+        .map(p => [p[0] + 110, p[1] + 110])
+        .map(point => point.join(','))
+        .join(' ');
+
+    return `<polygon points="${pointString}" opacity="0.5" />`;
+  };
+}
+
 export function basicTransformations($step: Step) {
 
   // FIXME: different shape
   const SHAPE = [[30, 10], [10, 70], [60, 70], [50, 10]];
-  // Shear
-  // FIXME: refactor these into a single function.
-  $step.model.polygonShear = (xshear: number, yshear: number) => {
-    // here's where we have to do that p5js strategy where we push and pop translates to display it
-    // (1) center polygon along the origin (0,0)
-    // (2) apply transformation shown in matrix
-    // (3) move it to center (110, 110)
-    // let's try some d3 style formatting
-    const pointString = SHAPE.map(p => [p[0] - 40, p[1] - 40])         // (1) center shape along origin (0,0)
-        .map(p => applyTransform([
-          [1, -xshear],  // why is this negative?
-          [-yshear, 1]   // is this the right direction?
-        ], p)) // (2) apply transformation from matrix
-        .map(p => [p[0] + 110, [p[1] + 110]])     // (3) move to center of SVG
-        .map(point => point.join(','))        // commas between xy coords
-        .join(' ');                            // spaces between coord pairs
-
-    const poly = `<polygon points="${pointString}" fill="#ff941f" opacity="0.5" />`;
-
-    return poly;
-  };
-
-  $step.model.polygonScale = (xscale: number, yscale: number) => {
-    // here's where we have to do that p5js strategy where we push and pop translates to display it
-    // (1) center polygon along the origin (0,0)
-    // (2) apply transformation shown in matrix
-    // (3) move it to center (110, 110)
-    // let's try some d3 style formatting
-    const pointString = SHAPE.map(p => [p[0] - 40, p[1] - 40])         // (1) center shape along origin (0,0)
-        .map(p => applyTransform([            // (2) apply transformation from matrix
-          [xscale, 0],
-          [0, yscale]
-        ], p))
-        .map(p => [p[0] + 110, [p[1] + 110]])     // (3) move to center of SVG
-        .map(point => point.join(','))        // commas between xy coords
-        .join(' ');                            // spaces between coord pairs
-
-    const poly = `<polygon points="${pointString}" fill="#ff941f" opacity="0.5" />`;
-
-    return poly;
-  };
+  $step.model.polygonTransform = generateTransformFunction(SHAPE);
 }
 
 export function mathigonMatrix($step: Step) {
-  // These are on a scale of ... 0 to 220 (why???)
-
+  // These are on a scale of ... 0 to 80, then 0 to 220 (why???)
   const SHAPES: { [id: string] : number[][]; } = {
     red: [[10, 10], [40, 40], [10, 70]],
     yellow: [[40, 40], [10, 70], [40, 70]],
@@ -174,25 +156,7 @@ export function mathigonMatrix($step: Step) {
   };
 
   $step.model.polygonTransform = (a: number, b: number, c: number, d: number, color: string) => {
-
-    const shape = SHAPES[color];
-    // here's where we have to do that p5js strategy where we push and pop translates to display it
-    // (1) center polygon along the origin (0,0)
-    // (2) apply transformation shown in matrix
-    // (3) move it to center (110, 110)
-    // let's try some d3 style formatting
-    const pointString = shape.map(p => [p[0] - 40, p[1] - 40])         // (1) center shape along origin (0,0)
-        .map(p => applyTransform([            // (2) apply transformation from matrix
-          [a, b],
-          [c, d]
-        ], p))
-        .map(p => [p[0] + 110, [p[1] + 110]])     // (3) move to center of SVG
-        .map(point => point.join(','))        // commas between xy coords
-        .join(' ');                            // spaces between coord pairs
-
-    const poly = `<polygon points="${pointString}" opacity="0.5" />`;
-
-    return poly;
+    return generateTransformFunction(SHAPES[color])(a, b, c, d);
   };
 }
 
