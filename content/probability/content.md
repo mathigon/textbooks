@@ -426,8 +426,9 @@ But to make it easy to learn about statistical analysis, we’re going to focus 
 <!-- [Appears above the applet after it’s been played with] -->
 
     figure
-      x-conditional-grid(width=380 height=288, only-one-column="true")
-        g.people
+      x-conditional-grid
+        svg.conditional(width=380 height=288, only-one-column="true")
+          g.people
 
 Try clicking those buttons - you'll find them useful for what's next!
 

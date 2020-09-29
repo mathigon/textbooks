@@ -17,13 +17,6 @@ export class Conditional extends CustomElementView {
     const $label = this.$('.slider text')!;
     const $grid = this.$('.people');
 
-    const width = (+this.attr('width')) || 400;
-    const height = (+this.attr('height')) || width;
-    this.css({ width: width + 'px', height: height + 'px' });
-    console.log(width,height)
-
-    return
-
     // $label.text = specifiedProbabilityValue;
     // $label.text = "<i>hey Capital 0.4</i>"
 
