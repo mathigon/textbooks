@@ -347,7 +347,7 @@ export function determinants($step:Step) {
 }
 
 import * as u from './utils3d';
-import { DoubleSide, Side } from 'three';
+import {DoubleSide} from 'three';
 
 export function threeVector($step: Step) {
   const $solids = $step.$$('x-solid') as Solid[];
@@ -479,8 +479,12 @@ export function threeSoeq($step: Step) {
   });
 }
 
+import _WEBSHIP from './obj/webship';
+import _ARWING from './obj/arwing';
+import KOOPA from './obj/koopa';
+
 // Octohedron
-const OCTOHEDRON = {
+const _OCTOHEDRON = {
   vertices: [
     [1, 0, 0],
     [0, 1, 0],
@@ -499,8 +503,22 @@ const OCTOHEDRON = {
     [3, 1, 5],
     [3, 2, 4],
     [3, 4, 5]
-  ]
+  ],
+  index: 0
 };
+
+/**
+ * Normalize shape to be no larger than [-1, 1]
+ * @param shape
+ */
+function normalizeShape(shape: number[][]): number[][] {
+  let max = 0;
+  shape.forEach(vertex => vertex.forEach(point => {
+    if (Math.abs(point) > max) max = Math.abs(point);
+  }));
+
+  return shape.map(vertex => vertex.map(point => point / max));
+}
 
 export function threeTransform($step: Step) {
   const $solid = $step.$('x-solid') as Solid;
@@ -512,10 +530,14 @@ export function threeTransform($step: Step) {
 
     const meshes: THREE.Mesh[] = [];
 
-    OCTOHEDRON.faces.forEach(f => {
+    const SHAPE = KOOPA;
+    const VERTICES = normalizeShape(SHAPE.vertices);
+
+    SHAPE.faces.forEach((f: number[]) => {
+      const offset = SHAPE.index;
       const geom = new THREE.Geometry();
       f.forEach(vi => {
-        const v = OCTOHEDRON.vertices[vi];
+        const v = VERTICES[vi - offset];
         geom.vertices.push(new THREE.Vector3(v[0], v[1], v[2]));
       });
       geom.faces.push(new THREE.Face3(0, 1, 2));
@@ -533,12 +555,13 @@ export function threeTransform($step: Step) {
         [state.ya, state.yb, state.yc],
         [state.za, state.zb, state.zc]
       ];
-      console.log(newMatrix);
 
-      OCTOHEDRON.faces.forEach((f, i) => {
+      // FIXME: refactor redundant code
+      SHAPE.faces.forEach((f: number[], i: number) => {
+        const offset = SHAPE.index;
         const geom = new THREE.Geometry();
         f.forEach(vi => {
-          const v = OCTOHEDRON.vertices[vi];
+          const v = VERTICES[vi - offset];
           const vTransform = Matrix.product(
               newMatrix, [[v[0]], [v[1]], [v[2]]]
           );
