@@ -790,29 +790,26 @@ export function wheels($step: Step) {
 export function encasementEstimation($step: Step) {
   const $svg = $step.$('figure .tire-circumference')!.$('svg') as SVGParentView;
   const $shapeName = $step.$('span.shape-name')!;
-  const targetBounds = new Rectangle(new Point(185, 8), 230, 230); // Approx size + loc of tire
-  let circleA = new Circle(new Point(0, 0), 0);
-  let circleB = new Circle(new Point(0, 0), 0);
-  const onComplete = (a: Circle, b: Circle) => {
+  const targetBounds = new Rectangle(new Point(185, 33), 230, 230); // Approx size + loc of tire
+  let center = new Point(0, 0);
+  let apothem = 0;
+  const onComplete = (c: Point, a: number) => {
     $step.score('tire-encapsulated');
     $step.addHint('correct');
-    circleA = a;
-    circleB = b;
+    center = c;
+    apothem = a;
   };
-  const box = new ResizeableSquare($svg, 100, new Point(15, 15), targetBounds, onComplete);
+  const strokeWidth = 3;
+  const box = new ResizeableSquare($svg, 100, new Point(15, 15), strokeWidth, targetBounds, onComplete);
 
   const $shapeDisp = $N('path', {}, $svg) as SVGView;
-  $shapeDisp.css({fill: 'none', stroke: 'lime', 'stroke-width': '2px'});
+  $shapeDisp.css({fill: 'none', stroke: 'lime', 'stroke-width': `${strokeWidth}px`});
   const $slider = $step.$('x-slider') as Slider;
   $slider.on('move', n => {
     box.hide();
-    const points: Point[] = [];
     const sides = n + 4;
-    const circle = sides == 4 ? circleA : circleB;
-    for (let i = 0; i < sides; i++) {
-      points.push(circle.at(i * (1 / sides)));
-    }
-    $shapeDisp.draw((new Polygon(...points)).rotate(-Math.PI / 4, circle.c));
+    const radius = apothem / Math.cos(Math.PI / sides);
+    $shapeDisp.draw(Polygon.regular(sides, radius).translate(center));
     switch (sides) {
       case 4:
         $shapeName.text = 'square';
@@ -847,8 +844,9 @@ class ResizeableSquare {
     private $svg: SVGParentView,
     initSize: number,
     initPos: Point,
+    strokeWidth: number,
     private targetBounds: Rectangle,
-    private onComplete: (a: Circle, b: Circle) => void
+    private onComplete: (center: Point, apothem: number) => void
   ) {
 
     this.isComplete = false;
@@ -857,7 +855,7 @@ class ResizeableSquare {
 
     this.edges.forEach(edge => {
       const $el = $N('path', {}, $svg) as SVGView;
-      $el.css({'stroke-width': '2px', stroke: 'black'});
+      $el.css({'stroke-width': `${strokeWidth}px`, stroke: 'black'});
       $el.draw(edge);
       this.$edges.push($el);
     });
@@ -952,10 +950,7 @@ class ResizeableSquare {
           });
 
           if (this.isComplete) {
-            this.onComplete(
-                new Circle(this.center, this.radiusA),
-                new Circle(this.center, this.radiusB)
-            );
+            this.onComplete(this.center, this.apothem);
           }
 
         }
@@ -993,10 +988,7 @@ class ResizeableSquare {
         });
 
         if (this.isComplete) {
-          this.onComplete(
-              new Circle(this.center, this.radiusA),
-              new Circle(this.center, this.radiusB)
-          );
+          this.onComplete(this.center, this.apothem);
         }
       }
     });
@@ -1048,11 +1040,7 @@ class ResizeableSquare {
     return this.poly.points.map((point, index) => new Segment(point, this.poly.points[(index + 1) % 4]));
   }
 
-  get radiusA() {
-    return Point.distance(this.poly.points[0], this.poly.points[2]) / 2;
-  }
-
-  get radiusB() {
+  get apothem() {
     return this.poly.edges[0].length / 2;
   }
 

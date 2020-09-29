@@ -594,6 +594,7 @@ In our previous geometry chapters, we used what we had learned about earlier sha
 
 The tire fits inside the square, so the circumference of the tire is [[less than | more than]] the perimeter of the square. The perimeter of the _{span.shape-name}square_ is [[108]] cm so the distance around the tire is less than 108 cm.
 
+    // [TODO]: consider using inline variable slider instead
     x-slider.tire-encasement.reveal(steps=4 when="blank-0 blank-1")
 
 ---
