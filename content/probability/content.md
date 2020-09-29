@@ -398,52 +398,53 @@ A team of researchers has made a new pill to try to treat a very painful ligamen
     img(src="images/placebo.jpg" width=180)
 
 ::: column.grow
-When a hospital does an experiment to see if a treatment is helpful, it's called a *clinical trial*. You take a large group of patients with this ligament infection, then you give *some* of these patients your new pill, and others don't get the treatment (they might get a *placebo*: a pill that looks the same as the new pill, but doesn't do anything at all). Then you wait, and see who gets better.
+When a hospital does an experiment to see if a treatment is helpful, it's called a *clinical trial*. You take a large group of patients with this ligament infection, then you give *some* of these patients are _{.pill.red}given the pill_, and others _{.pill.red}don't get the pill_(they might get a *placebo*: a pill that looks the same as the new pill, but doesn't do anything at all). Then you wait, and see which ones _{.pill.blue}get better_.
 :::
 
 Here's what happened to the people who participated in that clinical trial:
 
 |         |  _{.pill.red}Not given pill_       |  _{.pill.red}Given pill_   |
 |---------|---|---|
-| After a week, _{.pill.blue}got better_    |53   |34   |
-| After a week, _{.pill.blue}didn't get better_         | 89  |62   |
+| After a week, _{.pill.blue}got better_    |34   |53   |
+| After a week, _{.pill.blue}didn't get better_    |62   |89   |
 {.grid}
 
-Alright, there were a whole 62 people who _{.pill.red}were given the pill_ but _{.pill.blue}didn't get better_ - so apparently the pill doesn't work perfectly!
+Alright, there were a whole 89 people who _{.pill.red}were given the pill_ but _{.pill.blue}didn't get better_ - so apparently the pill doesn't work perfectly!
 
-Although, what if the pill was working a *little* bit? What if a few of the people who _{.pill.red}were given the pill_ _{.pill.blue}did get better_ as a result? Even a pill that only works a little bit can still be good! On the other hand, those pills take money and time to administer. So we want to be completely, *mathematically certain* about whether a person being _{.pill.red}given the pill_ does, or does not, make them more likely to _{.pill.blue}get better_.
+But what if the pill was working a *little* bit? What if a few of the people who _{.pill.red}were given the pill_ _{.pill.blue}did get better_ as a result? Even a pill that only works for some people can still be good! On the other hand, those pills take money and time to administer. So we want to be completely, *mathematically certain* about whether a person being _{.pill.red}given the pill_ does, or does not, make them more likely to _{.pill.blue}get better_.
 
 ::: column(width=250)
     <!-- depositphotos_109144654-stock-illustration-goalkeeper-catches-the-ball-football.jpg -->
     img(src="images/goalkeeper.jpg" width=250)
 
 ::: column.grow
-In order to do this, we need to **statistically analyse** the data in that table, which is what this will teach you to do. You can apply statistics whenever you're trying to find a connection between two things, whether you're trying to estimate whether a goalkeeper is _{.pill.red}catching enough goals_ that you should _{.pill.blue}pay them more_, or you're checking whether _{.pill.red}advertizing your business_ lead to _{.pill.blue}getting more customers_ - or even whether _{.pill.red}changing your dating profile picture_ lead to _{.pill.blue}more dates_.
+In order to do this, we need to **statistically analyse** the data in that table, which is what this will teach you to do. You can apply statistics whenever you're trying to find a connection between two things, whether you're trying to estimate whether a goalkeeper is _{.pill.red}catching enough goals_ that you should _{.pill.blue}pay them more_, or you're checking whether _{.pill.red}advertizing your business_ lead to _{.pill.blue}getting more customers_ - or even whether _{.pill.red}changing your dating profile picture_ lead to _{.pill.blue}more good dates_.
 :::
 
-But to make it easy to learn about statistical analysis, we’re going to focus on data that’s easier to collect: what are people wearing!
+But to make it easy to learn about statistical analysis, we’re going to focus on data that’s easier to visualize: categorizing birds!
 
 <!-- [Appears above the applet after it’s been played with] -->
 
-::: column(width=380)
-
-    svg.conditional(width=380 height=288, only-one-column="false")
-      g.slider(fill="#C53F51")
-        text(x="2.016" y="11")
-      g.people
-
-:::
+    figure
+      x-conditional-grid(width=380 height=288, only-one-column="true")
+        g.people
 
 Try clicking those buttons - you'll find them useful for what's next!
 
 ---
 > id: first-question
 
-<!-- need some warning that you have to try the buttons. Probably. -->
+::: column(width=180)
 
-Suppose I randomly choose someone from this crowd. What's the probability that they are _{.pill.red}wearing a scarf_? 
-<!-- sliders are separate? -->
-<!-- correct answer is 0.5 -->
+    img(src="images/bird.jpg" width=180)
+
+::: column.grow
+
+Some of the biggest breakthroughs in biology have come from looking at different kinds of bird. The drawings here were done by Darwin, who was using them to argue for evolution. Understanding bird variety is also very important in *conservation*. The *Eastern Whipbird* in the lower picture is an example of a bird that is _{.pill.red}dark-breasted_ and _{.pill.blue}short-tailed_, which means it's more likely to be found in colder regions. Because of this, it's currently believed that it will be more threatened by global warming. But, we might be wrong - _{.pill.blue}short tailed_ birds might end up more affected by global warming, so we'll see the number of them go down. As time goes on, in order to know where we should put our effort, we need to know what sorts of birds are being seen where.
+
+:::
+
+Suppose we've been out in the field for a while, and we've observed the birds below:
 
 ::: column(width=380)
 
@@ -454,92 +455,90 @@ Suppose I randomly choose someone from this crowd. What's the probability that t
 
 :::
 
+Suppose I randomly choose a bird from this flock. What's the probability the bird is _{.pill.red}dark-breasted_?
+
 <!-- slider is below the text, but text disappears and is replaced by the next question -->
 
+How about the probability that a random bird in the flock is _{.pill.blue}short-tailed_?
 
-
-How about the probability that a person in the crowd is _{.pill.blue}wearing a coat_?
-
-And the probability they are _{.pill.green}wearing a hat_?
-<!-- this time slider has a label next to it: P(wearing a coat) -->
+And the probability they have _{.pill.green}webbed feet_?
 
 <!-- below applet -->
-Notice how the correct probability has the slider in the place where the people reach along the side. It makes sense if you think about it! If there's a crowd where nobody is _{.pill.red}wearing a scarf_, the probability that a random person from that crowd is _{.pill.red}wearing a scarf_ would be [[0]], so you wouldn’t even have a sliver of people with the scarf on the side. If there's a crowd where everyone is _{.pill.red}wearing a scarf_, this probability is 1.
+Notice how the correct probability has the slider in the place where the people reach along the side. It makes sense if you think about it! If there's a flock where none of them are _{.pill.red}dark-breasted_, the probability that a random bird from that crowd is _{.pill.red}dark-breasted_ would be [[0]], so you wouldn’t even have a sliver of birds on the side. If there's a flock where they're *all* _{.pill.red}dark-breasted_, this probability is [[1]].
 
 <!-- Applet: same again but now there’s another square below it, and the lower square has TWO columns that both say hat, scarf, coat. First makes things go side-by-side, second subdivides in those columns. Again, more text won’t appear until student has played with it a bit -->
 
-That's very basic probability. We want to answer **conditional** questions though, like "What is Anna's probability of _{.pill.red}getting better_ **given that** Anna _{.pill.blue}took that pill_?". Here's another a tool that's, this time it can help answer questions like that!
+::: column(width=160)
 
-<!-- 
-  Maybe it's animals / birds, how they're adapting
-    Beak size
-    Eye size
-    Claw
-    Color
-    Tail length
--->
+    img(src="images/rain.jpg" width=160)
 
-<!-- (P(A|B) labels should be in plain english) -->
-<!-- phrase this in terms of police thing -->
-Suppose I'm going to pick one of the coat-wearers at random. What’s the probability that the coat-wearer is also _{.pill.red}wearing a scarf_? 
-
-What proportion of people wearing hats are also _{.pill.blue}wearing coats_?
-
-<!-- want 0 and 1 labelled on slider-->
-
-<!-- if they get it wrong/do nothing, remind them to use the buttons -->
-
-<!-- it is now the case that when they mouse over the applet, “Wearing hat ⋂ wearing scarf” appears imposed on the quadrants of the applet -->
-
-If someone is wearing a coat, what’s the probability they are also wearing a hat?
-<!-- slider again, the answer to this one is 100%, which is important to have an example of -->
-
-And we can also see that if a person is wearing a coat, their chance of wearing a scarf is [[increased|decreased]]
-<!-- if you get this one wrong, it changes the labels and asks you again -->
+::: column.grow
 
 When analysing statistics (like the pill-and-ligament-disease statistics, which we will get back to!), scientists have to talk about probabilities so often that instead of saying “the probability that _{.pill.red}it'll rain today_ ”, they just write "P( _{.pill.red}it'll rain today_ )".
 
 ::: column.grow
-Let’s try it without the applet - but you can draw a picture if you like!. Imagine a crowd of 100 people. 25 of those 100 people are _{.pill.yellow}wearing flip-flops_. Of those 25 people, 10 are _{.pill.yellow}wearing flip-flops_ AND they're _{.pill.green}wearing sunglasses_. Of those NOT _{.pill.yellow}wearing flip-flops_, 20 are _{.pill.green}wearing sunglasses_. What is the probability that someone who is _{.pill.green}wearing sunglasses_ will also be _{.pill.yellow}wearing flip-flops_? [[1/3]]
+That's very basic probability. We want to answer **conditional** questions though, like "What is Anna's probability of _{.pill.red}getting better_ **given that** Anna _{.pill.blue}took that pill_?".
 
-::: column(width=180)
+Here's another a tool that's, this time it can help answer questions like that!
+
+::: column(width=160)
+
+    img(src="images/taking-pill.png" width=160)
+
+:::
+
+[Applet]
+
+Suppose I'm going to pick a bird at random again, but **I'm going to purposefully pick one of the _{.pill.red}dark-breasted_ birds**. For my random _{.pill.red}dark-breasted_ bird, what is the value of P(_{.pill.blue}short-tailed_)?  [[0.5]]
+
+And of those birds who are _{.pill.blue}short-tailed_, what proportion of them have a _{.pill.purple}long beak_?
+
+<!-- want 0 and 1 labelled on slider-->
+
+<!-- it is now the case that when they mouse over the applet, “Wearing hat ⋂ dark-breasted” appears imposed on the quadrants of the applet -->
+
+If we know a bird is _{.pill.red}dark-breasted_, what’s the probability they have a _{.pill.blue}short-tailed_?
+<!-- slider again, the answer to this one is 100%, which is important to have an example of -->
+
+::: column.grow
+Let’s try it without the applet - but you can draw the rectangles if you like! Imagine a crowd of 100 people. 25 of those 100 people are _{.pill.yellow}wearing flip-flops_. Of those 25 people, 10 are _{.pill.yellow}wearing flip-flops_ AND they're _{.pill.green}wearing sunglasses_. Of those NOT _{.pill.yellow}wearing flip-flops_, 20 are _{.pill.green}wearing sunglasses_. What is the probability that someone who is _{.pill.green}wearing sunglasses_ will also be _{.pill.yellow}wearing flip-flops_? [[1/3]]
+
+::: column(width=120)
 
     img(src="images/flipFlopsSunglasses.jpg" width=180)
 
 :::
 
-Another bit of terminology:, whenever they're talking about the probability of more than one thing, like _{.pill.green}wearing sunglasses_ AND _{.pill.yellow}wearing flip-flops_, instead of "and", they say "_{.pill.green}wearing sunglasses_" ⋂ _{.pill.yellow}wearing flip-flops_". It's the same "⋂" you might have seen in [set theory]. Put those together and you get things like “When it’s cold outside, P( _{.pill.blue}I am wearing a scarf_ ⋂ _{.pill.green}I am wearing a coat_ ) is high!”
+Another bit of terminology: whenever they're talking about the probability of more than one thing, like _{.pill.blue}short-tailed_ **and** _{.pill.yellow} being threatened by climate change_, instead of **and**, scientists say **⋂** "_{.pill.blue}short-tailed_" **⋂** _{.pill.yellow}threatened by climate change_". It's the same "⋂" you might have seen in [set theory]. Put those together and you get statements like “When it’s hot outside, P( _{.pill.green}people will buy sunglasses_ ⋂ _{.pill.purple}people will buy flip-flops_ ) is increased”
 <!-- might be nice for "set theory" to be a link -->
 
 <!-- Pair of applets appears again -->
-There's another important word to know about. Try pressing the buttons for this one: the probability that a person is _{.pill.red}wearing a coat_ if we know that they’re _{.pill.blue}wearing glasses_ is []. The probability a person is _{.pill.red}wearing a coat_ if they _{.pill.blue}**not** wearing glasses_ is [] So it’s the same! _{.pill.red}Wearing a coat_ has nothing to do with whether you are _{.pill.red}wearing glasses_. This is called *independence* - we say _{.pill.red}wearing a coat_ **is independent of** whether a person is _{.pill.blue}wearing glasses_.
+There's another important word to know about. Try pressing the buttons for this one: the probability that a bird is _{.pill.red}dark-breasted_ if we know that they’re _{.pill.blue}short-tailed_ is []. The probability a bird is _{.pill.red}dark-breasted_ if they are **not** _{.pill.blue}short-tailed_ is [[]] So it’s the same! _{.pill.red}dark-breasted_ has nothing to do with whether a bird is _{.pill.blue}short-tailed_. This is called *independence* - we say _{.pill.red}dark-breasted_ **is independent of** whether a bird is _{.pill.blue}short-tailed_.
 
 <!-- TODO all "wearing a coat" are the same -->
 
-*Wearing flip-flops* **is** related to whether or not someone is *wearing sunglasses*. It’s because [[these are both things you’ll do on a hot day | these are both things you do on tuesdays | they're both cheap items of clothing]]. _{.pill.blue}Wearing a scarf_ and _{.pill.green}wearing a coat_ are also related. The reason that this can be useful for helping cure diseases is because we wanted to know whether a person _{.pill.red}getting better_ is *related* to _{.pill.blue}them taking the pill_, i.e. is it dependent on whether they have taken the pill or not.
+_{.pill.yellow}Wearing flip-flops_ **is** related to whether or not someone is _{.pill.green}wearing sunglasses_. It’s because [[these are both things you’ll do on a hot day | these are both things you do on tuesdays | they're both cheap items of clothing]]. Being _{.pill.blue}short-tailed_ and _{.pill.green}having webbed feet_ are also related. The reason that this can be useful for helping cure diseases is because we wanted to know whether a person _{.pill.red}getting better_ is *related* to _{.pill.blue}them taking the pill_, i.e. is it dependent on whether they have taken the pill or not.
 
 ---
 > id: buckets
 > goals: buckets
 
-<!-- picture of chicken soup and ladder and coins -->
 When two things really have no effect on each other, we call them **independent**. Which of these pairs of statements are independent?
 
 
     x-buckets.independent
       .inputs
-        .input(bucket="1") Boarding a plane first <br><strong>and...</strong><br> finding a good seat.
-        .input(bucket="1") Getting rain in the morning <br><strong>and...</strong><br> getting rain in the afternoon.
-        .input(bucket="0") When flipping a coin, having it come up heads on a first throw <br><strong>and...</strong><br> having it come up heads on your second throw.
-        .input(bucket="1") Committing a crime <br><strong>and...</strong><br> getting arrested.
-        .input(bucket="1") Someone having a mohawk <br><strong>and...</strong><br> them being a fan of punk music.
-        .input(bucket="0") Getting a parking ticket <br><strong>and...</strong><br> winning the lottery.
-        .input(bucket="1") Being above average height <br><strong>and...</strong><br> being male.
-        .input(bucket="1") Being above average height <br><strong>and...</strong><br> being an adult.
-        .input(bucket="0") Your horoscope saying that you will make a new friend today <br><strong>and...</strong><br> actually making a new friend today.
-        .input(bucket="1") Brushing your teeth regularly <br><strong>and...</strong><br> having nice breath.
-        .input(bucket="1") Enjoying a musician's first album <br><strong>and...</strong><br> enjoying their second album
-        .input(bucket="0") Three siblings being the same gender <br><strong>and...</strong><br> the first one being female.
+        .input(bucket="1") Boarding a plane first <br><strong>and...</strong><br> finding a good seat
+        .input(bucket="1") Getting rain in the morning <br><strong>and...</strong><br> getting rain in the afternoon
+        .input(bucket="0") When flipping a coin, having it come up heads on a first throw <br><strong>and...</strong><br> having it come up heads on your second throw
+        .input(bucket="1") Committing a crime <br><strong>and...</strong><br> getting arrested
+        .input(bucket="1") Someone having a mohawk <br><strong>and...</strong><br> them being a fan of punk music
+        .input(bucket="0") Getting a parking ticket <br><strong>and...</strong><br> winning the lottery
+        .input(bucket="1") Being above average height <br><strong>and...</strong><br> being male
+        .input(bucket="1") Being above average height <br><strong>and...</strong><br> being an adult
+        .input(bucket="0") Your horoscope saying that you will make a new friend today <br><strong>and...</strong><br> actually making a new friend today
+        .input(bucket="1") Brushing your teeth regularly <br><strong>and...</strong><br> having nice breath
+        .input(bucket="0") Three siblings being the same gender <br><strong>and...</strong><br> the first one being female
       .buckets
         .bucket
           .title Independent
@@ -549,7 +548,7 @@ When two things really have no effect on each other, we call them **independent*
 ---
 > id: afterBuckets
 
-Sometimes it takes scientific studies to find that two things are independent - for example, many studies have looked at whether _{.pill.red}getting vaccinated_ is related to whether a person will _{.pill.blue}developing autism_. They have established that **these two things have no relationship to each other** - they are **independent**. Of course, there will be *some* children who _{.pill.red}get vaccinated_ and do _{.pill.blue}develop autism_ – but the probability is exactly the same as for children who _{.pill.red}didn't get vaccinated_!
+Sometimes it takes scientific studies to prove that two things are **independent** - for example, many studies have looked at whether _{.pill.red}getting vaccinated_ is related to whether a person will _{.pill.blue}become autistic_. They have established that **these two things have no relationship to each other** - they are **independent**. We know that there will be *some* children who _{.pill.red}get vaccinated_ and also _{.pill.blue}develop autism_ – but the probability is *exactly* the same as for children who _{.pill.red}didn't get vaccinated_!
 
 [applet again. It has numbers appear in a way to emphasize the text] If two things are independent, it means that in pictures like this, the rectangles are all lined up perfectly, they are not broken apart like when you’re asking about wearing a coat and wearing gloves. When this happens, the area of the “both statements are true” corner rectangle is equal to the probabilities of the two sides multiplied together. Try changing the numbers and seeing for yourself!
 
@@ -558,31 +557,33 @@ There’s another important symbol here, which is **|**. It means “given we kn
 |Plain language|Mathematical language|
 |---------|---|
 |The probability that someone is wearing flip-flops given that we know that they are wearing sunglasses|P(_{.pill.yellow}Wearing flip-flops_\|_{.pill.green}wearing sunglasses_)|
-|The probability it'll rain in the afternoon, on a day when it did rain in the morning| P(_{.pill.red}rain in afternoon_\|_{.pill.red}rain in morning_)|
-|The probability I'll enjoy Bo Burnham's new album given that I enjoyed his last one| [[ P(_{.pill.yellow}I'll enjoy his new album_|_{.pill.green}I enjoyed his previous one one_) |
+|The probability it'll rain in the afternoon, on a day when rained in the morning| P(_{.pill.red}rain in afternoon_\|_{.pill.blue}rain in morning_)|
+|The probability I'll like Bo Burnham's new album given that I liked his last one| P(_{.pill.yellow}I'll like his new album_\|_{.pill.green}I liked his last one_) |
 {.grid}
 
-With formulas, you can ask questions about connections between things in a more precise way. Above, you answered the question “what proportion of the people wearing coats are also wearing scarves?”. That's the same thing as calculating P(_{.pill.red}wearing scarf_ | _{.pill.blue}wearing coat_).
+(note that the above should have a puzzle)
 
-[Applet appears and plays out the below]
+With formulas, you can ask questions about connections between things in a more precise way. Above, you answered the question “what proportion of the birds who were _{.pill.blue}short-tailed_ are also _{.pill.red}dark-breasted_?”. That's the same thing as calculating P(_{.pill.blue}short-tailed_|_{.pill.red}dark-breasted_).
 
-The way you got this value involved looking at the number of people who were _{.pill.blue}wearing coats_. How many were there? P(_{.pill.blue}wearing coat_) * _{.pill.purple} total number of people_, which is equal to [[0.5 * 144, -0.5*144]]
+<!-- you need to explain how you take the total number who have a certain property and divide by the total number -->
 
-You also needed to get the number of people wearing both coats and scarves. This was equal to _{.pill.purple} total number of people_ * P(_{.pill.blue}wearing coat_ ⋂ _{.pill.red}wearing scarf_), which is equal to [0.5 * 144, -0.5*144,]
+The way you got this value involved looking at the number of birds who were _{.pill.blue}short-tailed_. How many were there? P(_{.pill.blue}short-tailed_) * _{.pill.yellow} total number of birds_, which is equal to [[0.5 * 144, -0.5*144]]
 
-To get P(_{.pill.red}wearing scarf_ | _{.pill.blue}wearing coat_), you divided the second number by the first number. As in, you did:
+You also needed to get the number of birds that are _{.pill.blue}short-tailed_ and _{.pill.red}dark-breasted_. This was equal to _{.pill.yellow} total number of birds_ * P(_{.pill.blue}short-tailed_ ⋂ _{.pill.red}dark-breasted_), which is equal to [0.5 * 144, -0.5*144,]
 
-P(_{.pill.red}wearing scarf_ | _{.pill.blue}wearing coat_) = P(_{.pill.blue}wearing coat_ ⋂ _{.pill.red}wearing scarf_) * _{.pill.purple} total number of people_ / P(_{.pill.blue}wearing coat_) * _{.pill.purple}total number of people_.
+To get P(_{.pill.red}dark-breasted_|_{.pill.blue}short-tailed_), you divided the second number by the first number. As in, you did:
 
-Using algebra, we can simplify that! It’s just the same as:
+{.text-center}`P(pill("short-tailed","blue")cap pill("dark-breasted","red")) * pill("total number of birds","yellow") / P(pill("dark-breasted","blue")) * pill("total number of birds","yellow")`
 
-{.text-center}`P(pill("wearing scarf", "red") | pill("wearing coat", "blue")) = P(pill("wearing coat", "blue") cap pill("wearing scarf", "red")) / P(pill("wearing scarf", "red"))`
+Using algebra, we can simplify that expression! It’s just the same as saying P(_{.pill.red}dark-breasted_|_{.pill.blue}short-tailed_) is equal to:
 
-Which is the ratio between the area of the rectangle containing the people _{.pill.blue}wearing coats_ and _{.pill.red}wearing scarves_ and the area of the combined rectangle containing all the people wearing  coats. This makes sense because the more area a rectangle has, the more people are in it!
+{.text-center}`P(pill("short-tailed", "blue")cap pill("dark-breasted", "red")) / P(pill("dark-breasted", "red"))`
+
+Which is the ratio between the area of the rectangle containing the birds that were _{.pill.blue}short-tailed_ and _{.pill.red}dark-breasted_ and the area of the combined rectangle containing all the birds that were _{.pill.red}dark-breasted_. This makes sense because the more area a rectangle has, the more birds are in it!
   
-In fact, this is true for any statement, not just what people are wearing:
+In fact, this is true for any statement, not just what birds look like:
 
-{.text-center}`P(pill("A", "red") | pill("B", "blue")) = P(pill("B", "blue") cap pill("A", "red")) / P(pill("A", "red"))`
+{.text-center}`P(pill("A", "red") | pill("B", "blue")) = P(pill("B", "blue")cap pill("A", "red")) / P(pill("A", "red"))`
 
 These letters _{.pill.red}A_ and _{.pill.blue}B_ could be **any pair of sentences**! Usually they're somehow dependent on each other: _{.pill.red}this bread has a bit of mould on it_; _{.pill.blue}this bread will make me sick if I eat it_. They could also be totally unconnected sentences: _{.pill.red}The next world cup will be won by France_ and _{.pill.blue}human CO2 emissions are causing climate change_. No matter what they are, this equation will always apply to them!
 
@@ -597,17 +598,11 @@ This equation tells us what conditional probability is. One of the first people 
 
 We can also make a formula for **independence** too:
 
-{.text-center}*If* `pill("A", "red")` and `pill("B", "blue")` are **independent**, *then* `P(pill("A", "red"))*P(pill("B", "blue")) = P(pill("A", "red") cap pill("B", "blue"))`
+{.text-center}*If* `pill("A", "red")` and `pill("B", "blue")` are **independent**, *then* `P(pill("A", "red"))*P(pill("B", "blue")) = P(pill("A", "red")cap pill("B", "blue"))`
 
 <!-- Applet again with just glasses and coats, which as found previously were independent. Controls come in too -->
 
-Remember how when two statements are independent, like wearing a coat and wearing glasses, the size of the rectangle in the corner is equal to the size of the probabilities?
-
-<!-- Applet -->
-
-If we give 4 more people with coats and glasses [it happens in the applet], suddenly these are no longer independent - it is now the case that you’re more likely to be _{.pill.blue}wearing glasses_ if you’re _{.pill.red}wearing a coat_. What’s the value of P(_{.pill.blue}wearing glasses_ ⋂ _{.pill.red}wearing coat_) now?
-
-**Warning!!** P(_{.pill.red}wearing coat_|_{.pill.blue}wearing glasses_) is different from P(_{.pill.blue}wearing glasses_|_{.pill.red}wearing coat_). Think about it: the probability (think of some strict subset...) You may be asked the value of P(_{.pill.red}wearing coat_|_{.pill.blue}wearing glasses_), and that is **different** from P(_{.pill.blue}wearing glasses_|_{.pill.red}wearing coat_).
+**Warning!!** P(_{.pill.red}dark-breasted_|_{.pill.blue}short-tailed_) is different from P(_{.pill.blue}short-tailed_|_{.pill.red}dark-breasted_). Think about it: the probability _{.pill.red}Ben is from Europe_ given that _{.pill.blue}Ben is from France_ is **certain**, but the probability _{.pill.blue}Ben is from France_ given _{.pill.red}Ben is from Europe_ is uncertain, it's something you'd need to work out. You'll learn more about this if you study **Bayes' theorem**.
 
 ::: column(width=300)
     <!-- https://depositphotos.com/stock-photos/hospital-bed.html?filter=all&qview=21643093 -->
@@ -615,68 +610,66 @@ If we give 4 more people with coats and glasses [it happens in the applet], sudd
 
 ::: column.grow
 
-At least, they are different when the two variables are *dependent*. Occasionally, P(_{.pill.red}A_|_{.pill.blue}B_) *is* the same as P(_{.pill.blue}B_|_{.pill.red}A_). Why only sometimes? Well, they'll only be the same if _{.pill.red}A_ and _{.pill.blue}B_ are **independent** - in fact, that's an equivalent way of figuring out that two things are **independent**. The formula we've given you above can be used to prove this - try doing that if you feel like challenging yourself!
+Well, at least P(_{.pill.red}A_|_{.pill.blue}B_) ≠ P(_{.pill.blue}B_|_{.pill.red}A_) is true when the two variables are *dependent*. Occasionally, P(_{.pill.red}A_|_{.pill.blue}B_) *is* the same as P(_{.pill.blue}B_|_{.pill.red}A_). Why only sometimes? Well, they'll only be the same if _{.pill.red}A_ and _{.pill.blue}B_ are **independent** - in fact, that's an equivalent way of figuring out that two things are independent. The formula we've given you above can be used to prove this - try doing that if you feel like challenging yourself!
 :::
 
 Back to the ligament infection though! Remember this table:
 
-<!-- transform into applet!! -->
-
 |         |_{.pill.blue}Not given pill_       |_{.pill.blue}Given pill_   |
 |---------|---|---|
-| After a week, _{.pill.red}got better_    |53   |34   |
-| After a week, _{.pill.red}didn't get better_    | 89  |62   |
+| After a week, _{.pill.red}got better_    |34   |53   |
+| After a week, _{.pill.red}didn't get better_    |62   |89   |
 {.grid}
-
-We can look at the same data this way:
-
-<!-- table again, it transforms into rectangles with sizes whose entries. When you mouse over it it transforms back -->
 
 We wanted to help people suffering from the ligament disease. So we wanted to know if being _{.pill.blue}given the pill_ makes a person more likely to _{.pill.red}get better_.
 
-So here we go! What is P(_{.pill.red}got better_ |_{.pill.blue}given pill_)? - and what is P(_{.pill.red}got better_|_{.pill.blue}they didn’t take the pill_)? And this gives us our very important answer: [[the pill is worth spending hospital budget on|the pill is not worth spending hospital budget on]]! Hundreds of new pills get discovered every year, and many of them don’t work - so knowing how to do this is very useful if we want to help people.
+So here we go! What is P(_{.pill.red}got better_|_{.pill.blue}given pill_)? - and what is P(_{.pill.red}got better_|_{.pill.blue}they didn’t take the pill_)? And this gives us our very important answer: [[the pill works a bit | the pill doesn't work at all]].
 
-The same doctors conducted a different study on a new pill called pill X.
+Hundreds of new pills get discovered every year, and many of them don’t work - so knowing how to do this is very useful if we want to help people.
 
-|         |_{.pill.blue}Not given pill X_       |_{.pill.blue}Given pill X_   |
+The same doctors did a study on another pill, pill 2. It had interesting results but they decided pill 2 didn't work. These were the results they got:
+
+|         |_{.pill.blue}Not given pill 2_       |_{.pill.blue}Given pill 2_   |
 |---------|---|---|
-| _{.pill.yellow}Old_ people who _{.pill.red}got better_|81|234|
-| _{.pill.yellow}Old_ people who _{.pill.red}didn’t get better_|6|36|
-| _{.pill.yellow}Young_ people who _{.pill.red}got better_|192|55|
-| _{.pill.yellow}Young_ people who _{.pill.red}didn’t get better_|71|25|
+|_{.pill.yellow}Old_ people who _{.pill.red}got better_|81|234|
+|_{.pill.yellow}Old_ people who _{.pill.red}didn’t get better_|6|36|
+|_{.pill.yellow}Young_ people who _{.pill.red}got better_|192|55|
+|_{.pill.yellow}Young_ people who _{.pill.red}didn’t get better_|71|25|
 {.grid}
 
 We can add up this data to make it easier to look at
 
-|         |_{.pill.blue}Not given pill X_       |_{.pill.blue}Given pill X_   |
+|         |_{.pill.blue}Not given pill 2_       |_{.pill.blue}Given pill 2_   |
 |---------|---|---|
 | All people who _{.pill.red}got better_|273|289 |
 | All people who _{.pill.red}didn’t get better_|77|61 |
 {.grid}
 
-Again, we want to know P(_{.pill.red}got better_|_{.pill.blue}given pill X_). Remember the formula: P(_{.pill.red}got better_|_{.pill.blue}given pill X_ ) = P(_{.pill.red}got better_ ⋂ _{.pill.blue}given pill X_) / P(_{.pill.blue}given pill X_). By plugging in numbers, you can see that P(_{.pill.red}got better_|_{.pill.blue}given pill X_) is:[[]]
+The _{.pill.yellow}total number of people_ in this study was 81+234+6+36+192+55+71+25 = 700. So in this study:
 
-Well done! So, it looks like pill X is pretty good.
+{.text-center}`P( pill("who got better","red") cap pill(given pill 2,"blue") ) = number people pill("who got better","red") cap pill(given pill 2,"blue") / pill("total number of people","yellow")` = (234 + 55) / 700 = [[289 / 700]]
 
-Wait a second though, let’s check something. Look at the table above for _{.pill.yellow}young_ and _{.pill.yellow}old_ people. *For old people* the value of P( _{.pill.red}got better_ | _{.pill.blue}given pill X_) is [[]]. And *for young people*... P( _{.pill.red}got better_| _{.pill.blue}given pill X_) is [[]]?
+{.text-center}`P( pill("who got better","red") cap pill(not given pill 2,"blue") ) = number people pill("who got better","red") cap pill(not given pill 2,"blue") / pill("total number of people","yellow")` = (192+81) / 700 = [[273/700]]
 
-Crazy! It turns out that pill X is actually a totally useless treatment, even though the combined numbers make it seem good!
+Well done! So, it looks like pill 2 is pretty good. But wait, the doctors decided it didn't work! Why?
 
-Why did this happen? Well, check P(_{.pill.red}got better_|_{.pill.yellow}old_). People who are _{.pill.yellow}young_, are much more resilient, _{.pill.blue}pill_ or _{.pill.blue}no pill X_! And now check P(_{.pill.yellow}young_|_{.pill.blue}given pill X_) and P(_{.pill.yellow}not young_|_{.pill.blue}given pill X_), what are they?
+Well, let’s check something. Look at the table above for _{.pill.yellow}young_ and _{.pill.yellow}old_ people. *For old people* the value of P( _{.pill.red}got better_|_{.pill.blue}given pill 2_) is [[]]. And *for young people*... P( _{.pill.red}got better_|_{.pill.blue}given pill 2_) is [[]]?
 
-::: column(width=360)
-    <!-- https://depositphotos.com/stock-photos/child-elder-hospital.html?filter=all&qview=374659724 -->
+Crazy! It turns out that pill 2 is actually a totally useless treatment, even though the numbers added together make it seem good!
+
+::: column(width=240)
+    
     img(src="images/childAndElder.jpg" width=360 height=254)
 
+::: column.grow
+Why did this happen? Well, if you check P(_{.pill.red}got better_|_{.pill.yellow}young_), you'll see that people who are _{.pill.yellow}young_ are much more likely to get better - whether they were _{.pill.blue}given pill 2_ or _{.pill.blue}not given pill 2_...
 :::
 
-viewTemplate
+Notice how different numbers of young and old people were _{.pill.blue}given pill 2_. Basically, there were people who were _{.pill.blue}given pill 2_, and they were people who were likely to _{.pill.red}get better_ anyway - that made it *look* as though being _{.pill.blue}given pill 2_ helped people! By accident, the doctors monitored too many _{.pill.yellow}young people_ who were _{.pill.blue}given pill 2_, i.e. they accidentally made it so that being _{.pill.yellow}young_ was **not independent** of being _{.pill.blue}given pill 2_. Either way, the doctors should have been more careful in this clinical trial, they should have _{.pill.blue}given pill 2_ equally to _{.pill.yellow}young_ and _{.pill.yellow}old_ people.
 
-Basically, there were people who were _{.pill.blue}given pill X_, and they were people who were likely to _{.pill.red}get better_ anyway - that made it *look* as though being _{.pill.blue}given pill X_ helped people! By accident, the doctors monitored too many _{.pill.yellow}old_ people who were _{.pill.blue}not given pill X_. Or instead you might say that they monitored too many  _{.pill.yellow}young_ people who were _{.pill.blue}given pill X_. To put it another way, being _{.pill.yellow}young_ was **not independent** of being _{.pill.blue}given pill X_. Either way, the doctors should have been more careful in this clinical trial, they should have _{.pill.blue}given pill X_ equally to _{.pill.yellow}young_ and _{.pill.yellow}old_ people.
+This is called **Simpson’s paradox**. It's a kind of *bias* that hides in data, and it’s important to be able to spot Simpson's paradox. You could save people's lives!
 
-This is called *Simpson’s paradox*. It's a kind of bias in data, and it’s important to be able to spot it. You could save people's lives.
-
-Now you know the terminology of conditional probability, try to look out for it - and you might start seeing it in what people say all the time!
+Now you know the terminology of conditional probability, try to look out for it - and you might start seeing it in what people say all the time.
 
 ---
 
