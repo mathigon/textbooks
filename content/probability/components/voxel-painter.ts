@@ -3,7 +3,7 @@
 // (c) Mathigon
 // =============================================================================
 
-//could add the "filled/unfilled" thing
+// could add the "filled/unfilled" thing
 
 
 /// <reference types="three"/>
@@ -11,7 +11,7 @@ import {$N, animate, canvasPointerPosition, CustomElementView, Draggable, loadSc
 import {Point} from '@mathigon/fermat';
 import {Obj} from '@mathigon/core';
 import {create3D} from '../../shared/components/webgl';
-import { BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW, GREY} from '../../shared/constants';
+import {BLUE, GREEN, GREY, ORANGE, PURPLE, RED, YELLOW} from '../../shared/constants';
 import {clamp} from '@mathigon/fermat';
 
 const TAU = Math.PI * 2;
@@ -28,7 +28,7 @@ export class VoxelPainter extends CustomElementView {
     this.css({width: width + 'px', height: height + 'px'});
 
     const v1 = new THREE.Vector3();
-    const explodeOnGrab = this.hasAttr('explodeOnGrab')
+    const explodeOnGrab = this.hasAttr('explodeOnGrab');
     const rotateOnly = this.hasAttr('rotateOnly') || explodeOnGrab;
 
     const defaultGridDimension = 20;
@@ -55,13 +55,15 @@ export class VoxelPainter extends CustomElementView {
     const scene = await create3D(this, 45, 2 * width, 2 * height, customCamera);
     const camera = scene.camera;
     camera.rotation.order = 'YXZ';
-    
+
     camera.rotation.y = TAU / 8;
     camera.rotation.x = -TAU / 8;
-    if(this.hasAttr('startingYRotation'))
-      camera.rotation.y = this.attr('startingYRotation') / 360 * TAU
-    if (this.hasAttr('startingXRotation'))
-      camera.rotation.x = this.attr('startingXRotation') / 360 * TAU
+    if (this.hasAttr('startingYRotation')) {
+      camera.rotation.y = this.attr('startingYRotation') / 360 * TAU;
+    }
+    if (this.hasAttr('startingXRotation')) {
+      camera.rotation.x = this.attr('startingXRotation') / 360 * TAU;
+    }
 
     camera.position.x = 45.0; // the "distance"
     camera.position.setLength(camera.position.length() * gridDimension / defaultGridDimension);
@@ -73,21 +75,22 @@ export class VoxelPainter extends CustomElementView {
     const $potentialSaveButton = this.$('x-icon-btn')!;
     if ($potentialSaveButton !== undefined && $potentialSaveButton.hasAttr('saveButton')) {
       $potentialSaveButton.on('click', () => {
-        let topY = -Infinity
-        let bottomY = Infinity
+        let topY = -Infinity;
+        let bottomY = Infinity;
         for (let i = 0; i < voxels.length; i++) {
-          topY = Math.max(voxels[i].position.y, topY)
-          bottomY = Math.min(voxels[i].position.y, bottomY)
+          topY = Math.max(voxels[i].position.y, topY);
+          bottomY = Math.min(voxels[i].position.y, bottomY);
         }
-        let middleY = Math.round((topY+bottomY)/2.)
+        const middleY = Math.round((topY + bottomY) / 2.0);
 
         let outputString = '"';
         for (let i = 0; i < voxels.length; i++) {
           for (let j = 0; j < 3; j++) {
-            if(j !== 1)
+            if (j !== 1) {
               outputString += voxels[i].position.getComponent(j) + ',';
-            else
-              outputString += (voxels[i].position.getComponent(j)-middleY) + ',';
+            } else {
+              outputString += (voxels[i].position.getComponent(j) - middleY) + ',';
+            }
           }
         }
         outputString += '"';
@@ -111,12 +114,12 @@ export class VoxelPainter extends CustomElementView {
 
     const faceColours = [RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE];
     const faceColorDirections = [
-      new THREE.Vector3(1., 0., 0.),
-      new THREE.Vector3(-1., 0., 0.),
-      new THREE.Vector3(0., 1., 0.),
-      new THREE.Vector3(0.,-1., 0.),
-      new THREE.Vector3(0., 0., 1.),
-      new THREE.Vector3(0., 0.,-1.)]
+      new THREE.Vector3(1.0, 0.0, 0.0),
+      new THREE.Vector3(-1.0, 0.0, 0.0),
+      new THREE.Vector3(0.0, 1.0, 0.0),
+      new THREE.Vector3(0.0, -1.0, 0.0),
+      new THREE.Vector3(0.0, 0.0, 1.0),
+      new THREE.Vector3(0.0, 0.0, -1.0)];
     if (this.hasAttr('color-sides')) {
       for (let i = 0; i < 6; ++i) {
         const c = new THREE.Color(faceColours[i]);
@@ -215,7 +218,7 @@ export class VoxelPainter extends CustomElementView {
     //   eraser.position.copy(eraserDefaultPosition);
     // }
 
-    //setting up voxels
+    // setting up voxels
     {
       const isInShapeFunctions: Obj<(p: THREE.Vector3) => boolean> = {};
 
@@ -269,18 +272,19 @@ export class VoxelPainter extends CustomElementView {
       }
 
       if (explodeOnGrab) {
-        let p = new THREE.Vector3()
+        const p = new THREE.Vector3();
         for (let i = 0, il = this.voxels.length; i < il; ++i) {
           for (let k = 0; k < 6; k++) {
-            let nothingInThisDirection = true
-            p.copy(this.voxels[i].position).add(faceColorDirections[k])
-            for(let j = 0; j < il; ++j) {
-              if ( this.voxels[j].position.distanceToSquared(p) < .01)
-                nothingInThisDirection = false
+            let nothingInThisDirection = true;
+            p.copy(this.voxels[i].position).add(faceColorDirections[k]);
+            for (let j = 0; j < il; ++j) {
+              if (this.voxels[j].position.distanceToSquared(p) < 0.01) {
+                nothingInThisDirection = false;
+              }
             }
-            if(!nothingInThisDirection) {
-              this.voxels[i].geometry.faces[k*2+0].color.setRGB(.4, .4, .4)
-              this.voxels[i].geometry.faces[k*2+1].color.setRGB(.4, .4, .4)
+            if (!nothingInThisDirection) {
+              this.voxels[i].geometry.faces[k * 2 + 0].color.setRGB(0.4, 0.4, 0.4);
+              this.voxels[i].geometry.faces[k * 2 + 1].color.setRGB(0.4, 0.4, 0.4);
             }
           }
         }
@@ -354,19 +358,20 @@ export class VoxelPainter extends CustomElementView {
       respondToPointerMovement(p);
     });
 
-    let pointToExplodeFrom = new THREE.Vector3()
-    let initialPositions = Array(voxels.length)
-    for(let i = 0, il = voxels.length; i < il; ++i) {
-      pointToExplodeFrom.add(voxels[i].position)
-      initialPositions[i] = voxels[i].position.clone()
+    const pointToExplodeFrom = new THREE.Vector3();
+    const initialPositions = Array(voxels.length);
+    for (let i = 0, il = voxels.length; i < il; ++i) {
+      pointToExplodeFrom.add(voxels[i].position);
+      initialPositions[i] = voxels[i].position.clone();
     }
-    pointToExplodeFrom.multiplyScalar(1./voxels.length)
+    pointToExplodeFrom.multiplyScalar(1.0 / voxels.length);
     function setVoxelPositionsFromExplodedness(explodedness) {
-      for (let i = 0, il = voxels.length; i < il; ++i)
-        voxels[i].position.copy(initialPositions[i]).sub(pointToExplodeFrom).multiplyScalar(1. + explodedness).add(pointToExplodeFrom)
+      for (let i = 0, il = voxels.length; i < il; ++i) {
+        voxels[i].position.copy(initialPositions[i]).sub(pointToExplodeFrom).multiplyScalar(1.0 + explodedness).add(pointToExplodeFrom);
+      }
     }
 
-    if(!this.hasAttr('noInteraction')) {
+    if (!this.hasAttr('noInteraction')) {
       slide($canvas, {
 
         down: () => {
@@ -446,16 +451,17 @@ export class VoxelPainter extends CustomElementView {
               camera.rotation.y = newSnapSpaceAngleY * (TAU / 8);
 
               if (stepX == 0 && stepY == 0) {
-                if (explodeOnGrab)
-                  setVoxelPositionsFromExplodedness(0.)
+                if (explodeOnGrab) {
+                  setVoxelPositionsFromExplodedness(0.0);
+                }
 
                 updateApplet();
                 cancel();
-              }
-              else {
-                if (explodeOnGrab)
-                  setVoxelPositionsFromExplodedness(.8)
-                  
+              } else {
+                if (explodeOnGrab) {
+                  setVoxelPositionsFromExplodedness(0.8);
+                }
+
                 updateApplet();
               }
             });
@@ -490,8 +496,9 @@ export class VoxelPainter extends CustomElementView {
           camera.rotation.x += (pointerNdc.y - oldPointerNdc.y);
           camera.rotation.x = clamp(camera.rotation.x, -TAU / 4, TAU / 4);
 
-          if (explodeOnGrab)
-            setVoxelPositionsFromExplodedness(.8)
+          if (explodeOnGrab) {
+            setVoxelPositionsFromExplodedness(0.8);
+          }
         }
 
         const currentDistFromCamera = camera.position.length();

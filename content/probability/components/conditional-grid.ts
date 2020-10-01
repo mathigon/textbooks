@@ -3,11 +3,11 @@
 // (c) Mathigon
 // =============================================================================
 
-//could add the "filled/unfilled" thing
+// could add the "filled/unfilled" thing
 
 
-import { $, $N, ElementView, CustomElementView, register, slide } from '@mathigon/boost';
-import { Step } from '../shared/types';
+import {$, $N, CustomElementView, ElementView, register, slide} from '@mathigon/boost';
+import {Step} from '../shared/types';
 
 const TAU = Math.PI * 2;
 
@@ -17,12 +17,13 @@ export class Conditional extends CustomElementView {
     const $grid = this.$('.people');
     const $buttons = this.$('.buttons');
 
-    //sorry, forgot how to get these properly!
-    const self = this
+    // sorry, forgot how to get these properly!
+    const self = this;
     function getAttribute(name) {
-      for(let i = 0; i < self.attributes.length; ++i) {
-        if(self.attributes[i].nodeName === name)
-          return self.attributes[i].nodeValue
+      for (let i = 0; i < self.attributes.length; ++i) {
+        if (self.attributes[i].nodeName === name) {
+          return self.attributes[i].nodeValue;
+        }
       }
     }
 
@@ -43,9 +44,9 @@ export class Conditional extends CustomElementView {
     const adornmentNumeratorFunctions = [
       () => 2,
       () => 3,
-      (adornmentBits) => conditionalizer(1, 12, 4, adornmentBits), //purple(2) depends on red(1)
+      (adornmentBits) => conditionalizer(1, 12, 4, adornmentBits), // purple(2) depends on red(1)
       // () => 4,
-      (adornmentBits) => conditionalizer(0, 0, 12, adornmentBits), //green(3) depends on blue(0)
+      (adornmentBits) => conditionalizer(0, 0, 12, adornmentBits) // green(3) depends on blue(0)
     ];
     function conditionalizer(bitToCheck, numeratorIfBitTrue, numeratorIfBitFalse, adornmentBits) {
       if (adornmentBits !== undefined && adornmentBits !== null) {
@@ -58,7 +59,7 @@ export class Conditional extends CustomElementView {
     }
 
     const buttons = [];
-    this.buttons = buttons
+    this.buttons = buttons;
     const buttonWidth = 30;
     const buttonHeight = 25;
     for (let j = 0; j < (onlyOneColumn ? 1 : 2); j++) {
@@ -70,7 +71,7 @@ export class Conditional extends CustomElementView {
         }, this);
         buttons.push(button);
 
-        button.setTransform({ x: lastColumnOfPeopleX + 60 + (j ? 1 : -1) * (buttonWidth / 2.0 + 2), y: 40 + i * (4 + buttonHeight) });
+        button.setTransform({x: lastColumnOfPeopleX + 60 + (j ? 1 : -1) * (buttonWidth / 2.0 + 2), y: 40 + i * (4 + buttonHeight)});
         $buttons.append(button);
         button.i = i;
         button.j = j;
@@ -90,7 +91,7 @@ export class Conditional extends CustomElementView {
     for (let i = 0; i < 12; ++i) {
       for (let j = 0; j < 12; ++j) {
         const width = 10;
-        const height = 2 * width
+        const height = 2 * width;
         const $person = $N('rect', {
           width: width, height: height,
           x: -width / 2, y: -height / 2, rx: 0,
@@ -104,18 +105,19 @@ export class Conditional extends CustomElementView {
       }
     }
 
-    const adornmentHeight = 5
+    const adornmentHeight = 5;
 
     let birdIndex = 0;
-    //go through every combination, allocate the amount that are needed
+    // go through every combination, allocate the amount that are needed
     for (let adornmentBits = 0; adornmentBits < 16; adornmentBits++) {
       let numWithThisCombination = 144;
 
       for (let j = 0; j < 4; ++j) {
-        if (queryBit(adornmentBits, j))
+        if (queryBit(adornmentBits, j)) {
           numWithThisCombination *= adornmentNumeratorFunctions[j](adornmentBits);
-        else
+        } else {
           numWithThisCombination *= (12 - adornmentNumeratorFunctions[j](adornmentBits));
+        }
         numWithThisCombination /= 12;
       }
 
@@ -130,14 +132,15 @@ export class Conditional extends CustomElementView {
 
       const limit = birdIndex + numWithThisCombination;
       for (birdIndex; birdIndex < limit; ++birdIndex) {
-        if ($birds[birdIndex] === undefined)
-          console.log(adornmentBits,birdIndex,numWithThisCombination)
+        if ($birds[birdIndex] === undefined) {
+          console.log(adornmentBits, birdIndex, numWithThisCombination);
+        }
         for (let j = 0; j < 4; j++) {
           if (queryBit(adornmentBits, j)) {
-            const adornmentWidth = 18
+            const adornmentWidth = 18;
             const $adornment = $N('rect', {
               width: adornmentWidth, height: adornmentHeight,
-              x: -adornmentWidth / 2., y: -adornmentHeight / 2., rx: 0,
+              x: -adornmentWidth / 2.0, y: -adornmentHeight / 2.0, rx: 0,
               class: adornmentColors[j]
             }, this);
             $grid.append($adornment);
@@ -150,11 +153,11 @@ export class Conditional extends CustomElementView {
     function repositionPerson($person, gridX, gridY) {
       const absoluteX = firstColumnOfPeopleX + gridX * personSpacing;
       const absoluteY = topColumnOfPeopleY + gridY * personSpacing;
-      $person.setTransform({ x: absoluteX, y: absoluteY });
+      $person.setTransform({x: absoluteX, y: absoluteY});
 
       $person.$adornments.forEach(($adornment, i) => {
         if ($adornment !== null) {
-          $adornment.setTransform({ x: absoluteX, y: absoluteY + adornmentHeight * (i - 1.5) });
+          $adornment.setTransform({x: absoluteX, y: absoluteY + adornmentHeight * (i - 1.5)});
         }
       });
     }
@@ -198,10 +201,12 @@ export class Conditional extends CustomElementView {
       let numInTopRight = 0;
       $birds.forEach(p => {
         const quadrant = getQuadrant(p);
-        if (quadrant === 'tl')
+        if (quadrant === 'tl') {
           ++numInTopLeft;
-        if (quadrant === 'tr')
+        }
+        if (quadrant === 'tr') {
           ++numInTopRight;
+        }
       });
 
       // console.log(newIndexOnLeft,newIndexOnTop)

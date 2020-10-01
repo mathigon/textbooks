@@ -6,12 +6,12 @@
 
 import {flatten, list, Obj, repeat, tabulate2D} from '@mathigon/core';
 import {Random} from '@mathigon/fermat';
-import { $, $N, ElementView, register, slide} from '@mathigon/boost';
+import {$, $N, ElementView, register, slide} from '@mathigon/boost';
 import {Step} from '../shared/types';
 import '../shared/components/buckets';
 
 import './components/conditional-grid';
-import { Conditional } from './components/conditional-grid';
+import {Conditional} from './components/conditional-grid';
 
 // -----------------------------------------------------------------------------
 // Utilities
@@ -24,7 +24,7 @@ function table(data: any[][]) {
 }
 
 
-//Buckets
+// Buckets
 
 export function buckets($step: Step) {
   const $buckets = $step.$('x-buckets')!;
@@ -99,7 +99,6 @@ export function diceSimulation($step: Step) {
 }
 
 
-
 // -----------------------------------------------------------------------------
 // Conditional Probability
 
@@ -108,16 +107,18 @@ export function p0($step: Step) {
   const $conditionalGrid = $step.$('x-conditional-grid') as Conditional;
 
   const $buttons = $conditionalGrid.buttons;
-  for(let i = 0; i < 4; ++i) {
-    $buttons[i].on('click',()=>{
+  for (let i = 0; i < 4; ++i) {
+    $buttons[i].on('click', ()=>{
       let numClicked = 0;
       $buttons.forEach((b) => {
-        if (b.clickedAtSomePoint)
+        if (b.clickedAtSomePoint) {
           ++numClicked;
+        }
       });
-      if (numClicked >= 3)
+      if (numClicked >= 3) {
         $step.score('press-all-buttons');
-    })
+      }
+    });
   }
 }
 
@@ -129,12 +130,14 @@ export function p1($step: Step) {
     $buttons[i].on('click', () => {
       let numClicked = 0;
       $buttons.forEach((b) => {
-        if (b.clickedAtSomePoint)
+        if (b.clickedAtSomePoint) {
           ++numClicked;
+        }
       });
-      if (numClicked >= 3)
+      if (numClicked >= 3) {
         $step.score('press-all-buttons');
-    })
+      }
+    });
   }
 }
 
@@ -146,14 +149,15 @@ export function p2($step: Step) {
     $buttons[i].on('click', () => {
       let numClicked = 0;
       $buttons.forEach((b) => {
-        if (b.clickedAtSomePoint)
+        if (b.clickedAtSomePoint) {
           ++numClicked;
+        }
       });
       if (numClicked >= 3) {
         $step.score('press-second-column-buttons');
-        //THIS ISN'T AFFECTING
+        // THIS ISN'T AFFECTING
       }
-    })
+    });
   }
 }
 
