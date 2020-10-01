@@ -14,81 +14,25 @@ const TAU = Math.PI * 2;
 @register('x-conditional-grid')
 export class Conditional extends CustomElementView {
   async ready() {
-    const $label = this.$('.slider text')!;
     const $grid = this.$('.people');
+    const $buttons = this.$('.buttons');
 
-    // $label.text = specifiedProbabilityValue;
-    // $label.text = "<i>hey Capital 0.4</i>"
-
-    if (0) {
-      const $testText = document.getElementById('boogle');
-      console.log($testText);
-      let frameCount = 0;
-      function loop() {
-        ++frameCount;
-        $testText.setTransform({ x: frameCount, y: frameCount });
-        setTimeout(loop, 20);
+    //sorry, forgot how to get these properly!
+    const self = this
+    function getAttribute(name) {
+      for(let i = 0; i < self.attributes.length; ++i) {
+        if(self.attributes[i].nodeName === name)
+          return self.attributes[i].nodeValue
       }
-      loop();
     }
 
-    const onlyOneColumn = this.attr('only-one-column') === 'true';
+    const onlyOneColumn = getAttribute('only-one-column') === 'true';
     const adornmentColors = ['blue', 'red', 'purple', 'green'];
-    const $people = [];
+    const $birds = [];
     const personSpacing = 24;
     const firstColumnOfPeopleX = personSpacing;
     const lastColumnOfPeopleX = 11 * personSpacing + firstColumnOfPeopleX;
     const topColumnOfPeopleY = personSpacing * 1.5;
-
-    // slider
-    {
-      const verticalPosition = topColumnOfPeopleY - personSpacing;
-
-      const railWidth = 12 * personSpacing;
-      const railHeight = 10;
-      const railX = firstColumnOfPeopleX - personSpacing / 2.0;
-      const $rail = $N('rect', {
-        x: railX, y: verticalPosition - railHeight / 2.0, rx: 0,
-        width: railWidth, height: railHeight
-      }, this);
-      this.append($rail);
-
-      // wasn't getting sane values from svg!
-      const handleWidth = 10.0;
-      const handleHeight = railHeight * 2.5;
-      const $handle = $N('rect', {
-        x: railX - handleWidth / 2.0, y: verticalPosition, rx: 0,
-        width: handleWidth, height: handleHeight,
-        class: 'red'
-      }, this);
-      this.append($handle);
-
-
-      let specifiedProbabilityValue = 0.0;
-      const handleX = railWidth * specifiedProbabilityValue;
-      $handle.setTransform({ x: handleX, y: verticalPosition - handleHeight });
-
-      // wanna hit the horizontal thing too
-      slide(this, {
-        move: (p, start, last) => {
-          specifiedProbabilityValue = (p.x - railX) / railWidth;
-          if (specifiedProbabilityValue < 0.0) {
-            specifiedProbabilityValue = 0.0;
-          }
-          if (specifiedProbabilityValue > 1.0) {
-            specifiedProbabilityValue = 1.0;
-          }
-
-          $label.text = specifiedProbabilityValue;
-          // $label.text = "<i>hey Capital 0.4</i>"
-          $handle.setTransform({ x: railWidth * specifiedProbabilityValue, y: verticalPosition - handleHeight });
-
-          if (specifiedProbabilityValue > 0.9) {
-            console.log('scored!');
-          }
-        }
-      });
-    }
 
     function queryBit(i, j) {
       return (i & 1 << j) >> j;
@@ -99,22 +43,24 @@ export class Conditional extends CustomElementView {
     const adornmentNumeratorFunctions = [
       () => 2,
       () => 3,
-      (adornmentBits) => conditionalizer(12, 4, 1, adornmentBits),
-      () => 4
-      // (adornmentBits) => conditionalizer(2, 3, 0, adornmentBits),
+      (adornmentBits) => conditionalizer(1, 12, 4, adornmentBits), //purple(2) depends on red(1)
+      // () => 4,
+      (adornmentBits) => conditionalizer(0, 0, 12, adornmentBits), //green(3) depends on blue(0)
     ];
-    function conditionalizer(numeratorGivenBit, numeratorGivenNotBit, bit, adornmentBits) {
+    function conditionalizer(bitToCheck, numeratorIfBitTrue, numeratorIfBitFalse, adornmentBits) {
       if (adornmentBits !== undefined && adornmentBits !== null) {
-        return queryBit(adornmentBits, bit) ? numeratorGivenBit : numeratorGivenNotBit;
+        // console.log(adornmentBits)
+        return queryBit(adornmentBits, bitToCheck) ? numeratorIfBitTrue : numeratorIfBitFalse;
       } else {
-        const otherNumerator = adornmentNumeratorFunctions[bit]();
-        return (otherNumerator * numeratorGivenBit + (12 - otherNumerator) * numeratorGivenNotBit) / 12;
+        const otherNumerator = adornmentNumeratorFunctions[bitToCheck]();
+        return (otherNumerator * numeratorIfBitTrue + (12 - otherNumerator) * numeratorIfBitFalse) / 12;
       }
     }
 
     const buttons = [];
-    const buttonWidth = 20;
-    const buttonHeight = 30;
+    this.buttons = buttons
+    const buttonWidth = 30;
+    const buttonHeight = 25;
     for (let j = 0; j < (onlyOneColumn ? 1 : 2); j++) {
       for (let i = 0; i < 4; i++) {
         const button = $N('rect', {
@@ -125,7 +71,7 @@ export class Conditional extends CustomElementView {
         buttons.push(button);
 
         button.setTransform({ x: lastColumnOfPeopleX + 60 + (j ? 1 : -1) * (buttonWidth / 2.0 + 2), y: 40 + i * (4 + buttonHeight) });
-        this.append(button);
+        $buttons.append(button);
         button.i = i;
         button.j = j;
         button.clickedAtSomePoint = false;
@@ -137,23 +83,9 @@ export class Conditional extends CustomElementView {
           }
 
           button.clickedAtSomePoint = true;
-          let numClicked = 0;
-          buttons.forEach((b) => {
-            if (b.clickedAtSomePoint) ++numClicked;
-          });
-          if (numClicked >= 3)
-            console.log('scored: press-all-buttons')
         });
       }
     }
-
-    // const test = $N('text', {
-    //   html: "hello", 
-    //   x: -buttonWidth / 2.0, y: -buttonHeight / 2.0, rx: 0,
-    //   class: 'white'
-    // }, this);
-    // test.setTransform({ x: lastColumnOfPeopleX + 60 + (j ? 1 : -1) * (buttonWidth / 2.0 + 2), y: 40 + i * (4 + buttonHeight) });
-    // this.append(test);
 
     for (let i = 0; i < 12; ++i) {
       for (let j = 0; j < 12; ++j) {
@@ -165,7 +97,7 @@ export class Conditional extends CustomElementView {
           class: 'grey', target: ['grey', 'large'].join(' ')
         }, this);
 
-        $people.push($person);
+        $birds.push($person);
         $grid.append($person);
         $person.randomNumber = Math.random();
         $person.$adornments = [null, null, null, null];
@@ -174,16 +106,16 @@ export class Conditional extends CustomElementView {
 
     const adornmentHeight = 5
 
-    let pIndex = 0;
+    let birdIndex = 0;
+    //go through every combination, allocate the amount that are needed
     for (let adornmentBits = 0; adornmentBits < 16; adornmentBits++) {
       let numWithThisCombination = 144;
 
       for (let j = 0; j < 4; ++j) {
-        if (queryBit(adornmentBits, j)) {
+        if (queryBit(adornmentBits, j))
           numWithThisCombination *= adornmentNumeratorFunctions[j](adornmentBits);
-        } else {
+        else
           numWithThisCombination *= (12 - adornmentNumeratorFunctions[j](adornmentBits));
-        }
         numWithThisCombination /= 12;
       }
 
@@ -196,8 +128,10 @@ export class Conditional extends CustomElementView {
         // console.log(numWithThisCombination)
       }
 
-      const limit = pIndex + numWithThisCombination;
-      for (pIndex; pIndex < limit; ++pIndex) {
+      const limit = birdIndex + numWithThisCombination;
+      for (birdIndex; birdIndex < limit; ++birdIndex) {
+        if ($birds[birdIndex] === undefined)
+          console.log(adornmentBits,birdIndex,numWithThisCombination)
         for (let j = 0; j < 4; j++) {
           if (queryBit(adornmentBits, j)) {
             const adornmentWidth = 18
@@ -207,7 +141,7 @@ export class Conditional extends CustomElementView {
               class: adornmentColors[j]
             }, this);
             $grid.append($adornment);
-            $people[pIndex].$adornments[j] = $adornment;
+            $birds[birdIndex].$adornments[j] = $adornment;
           }
         }
       }
@@ -225,12 +159,12 @@ export class Conditional extends CustomElementView {
       });
     }
 
-    $people.sort((a, b) => {
+    $birds.sort((a, b) => {
       return a.randomNumber - b.randomNumber;
     });
     for (let i = 0; i < 12; ++i) {
       for (let j = 0; j < 12; ++j) {
-        repositionPerson($people[i * 12 + j], i, j);
+        repositionPerson($birds[i * 12 + j], i, j);
       }
     }
 
@@ -262,14 +196,12 @@ export class Conditional extends CustomElementView {
 
       let numInTopLeft = 0;
       let numInTopRight = 0;
-      $people.forEach(p => {
+      $birds.forEach(p => {
         const quadrant = getQuadrant(p);
-        if (quadrant === 'tl') {
+        if (quadrant === 'tl')
           ++numInTopLeft;
-        }
-        if (quadrant === 'tr') {
+        if (quadrant === 'tr')
           ++numInTopRight;
-        }
       });
 
       // console.log(newIndexOnLeft,newIndexOnTop)
@@ -292,7 +224,7 @@ export class Conditional extends CustomElementView {
       let bottomLeftNumSoFar = 0;
       let bottomRightNumSoFar = 0;
 
-      $people.forEach((p) => {
+      $birds.forEach((p) => {
         let quadrantNumSoFar = -1;
         let columnWidth = -1;
         let horizontalAddition = 0;
@@ -326,5 +258,5 @@ export class Conditional extends CustomElementView {
         repositionPerson(p, horizontalPosition, verticalPosition);
       });
     }
-  } 
+  }
 }

@@ -104,8 +104,57 @@ export function diceSimulation($step: Step) {
 // Conditional Probability
 
 
-export function conditional($step: Step) {
-  //yeah, this is happenning
+export function p0($step: Step) {
+  const $conditionalGrid = $step.$('x-conditional-grid') as Conditional;
+
+  const $buttons = $conditionalGrid.buttons;
+  for(let i = 0; i < 4; ++i) {
+    $buttons[i].on('click',()=>{
+      let numClicked = 0;
+      $buttons.forEach((b) => {
+        if (b.clickedAtSomePoint)
+          ++numClicked;
+      });
+      if (numClicked >= 3)
+        $step.score('press-all-buttons');
+    })
+  }
+}
+
+export function p1($step: Step) {
+  const $conditionalGrid = $step.$('x-conditional-grid') as Conditional;
+
+  const $buttons = $conditionalGrid.buttons;
+  for (let i = 0; i < 4; ++i) {
+    $buttons[i].on('click', () => {
+      let numClicked = 0;
+      $buttons.forEach((b) => {
+        if (b.clickedAtSomePoint)
+          ++numClicked;
+      });
+      if (numClicked >= 3)
+        $step.score('press-all-buttons');
+    })
+  }
+}
+
+export function p2($step: Step) {
+  const $conditionalGrid = $step.$('x-conditional-grid') as Conditional;
+
+  const $buttons = $conditionalGrid.buttons;
+  for (let i = 4; i < 8; ++i) {
+    $buttons[i].on('click', () => {
+      let numClicked = 0;
+      $buttons.forEach((b) => {
+        if (b.clickedAtSomePoint)
+          ++numClicked;
+      });
+      if (numClicked >= 3) {
+        $step.score('press-second-column-buttons');
+        //THIS ISN'T AFFECTING
+      }
+    })
+  }
 }
 
 
