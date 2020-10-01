@@ -43,7 +43,7 @@
     "gulp": "4.0.2",
     "gulp-better-rollup": "4.0.1",
     "gulp-less": "4.0.1",
-    "gulp-postcss": "8.0.0",
+    "gulp-postcss": "9.0.0",
     "gulp-rename": "2.0.0",
     "js-yaml": "3.14.0",
     "jsdom": "16.4.0",
