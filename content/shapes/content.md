@@ -701,21 +701,26 @@ It takes a little more than 3 diameters to equal the circumference. Using 3 as a
 
 Let’s see if we can determine how much more of the 4th diameter is needed to fully wrap around the circle. Draw a line below and watch as it is then formed into a circle.
 
+::: column.grow
+
     // INTERACTIVE-05: Finding PI (pages 9-10)
-    column(width=200)
-      x-geopad(width=200 height=200)
-        svg
-    column(width=400)
-      table.finding-pi.reveal(when="line-drawn")
-        tr
-          th CIRCUMFERENCE
-          th DIAMETER
-          th.reveal(when="blank-1") NUMBER OF DIAMETERS NEEDED TO EQUAL CIRCUMFERENCE
-        tr
-          td.circumference 0
-          td.diameter 0
-          td.reveal(when="blank-1")
-            x-blank-input(solution="3.14")
+    x-geopad(width=200 height=200)
+      svg
+
+::: column(width=450)
+
+    table.finding-pi.reveal(when="line-drawn")
+      tr
+        th CIRCUMFERENCE
+        th DIAMETER
+        th.reveal(when="blank-1") NUMBER OF DIAMETERS NEEDED TO EQUAL CIRCUMFERENCE
+      tr
+        td.circumference 0
+        td.diameter 0
+        td.reveal(when="blank-1")
+          x-blank-input(solution="3.14")
+
+:::
 
 Let’s think about how many diameters are needed to make the circumference. Determining how many times one number is needed to make another is represented by [[division | multiplication | subtraction]]. 
 
