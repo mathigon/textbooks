@@ -1079,7 +1079,7 @@ export function radiiDiameters($step: Step) {
       // drew a diameter
       diameters++;
       $step.addHint('correct');
-    } else if (nearlyEquals(d1, circle.r) && nearlyEquals(d2, 0)) {
+    } else if ((nearlyEquals(d1, circle.r) && nearlyEquals(d2, 0)) || (nearlyEquals(d2, circle.r) && nearlyEquals(d1, 0))) {
       // drew a radius
       radii++;
       $step.addHint('correct');
@@ -1087,6 +1087,9 @@ export function radiiDiameters($step: Step) {
     } else {
       $step.addHint('incorrect');
       path.delete();
+      if (nearlyEquals(d1, 0) || nearlyEquals(d2, 0)) {
+        $geopad.drawPoint(circle.c, {interactive: false});
+      }
       path.components.forEach(c => c.delete());
       $diameterTarget!.delete();
     }
