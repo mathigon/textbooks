@@ -1,12 +1,11 @@
-# Transformacije i simetrija
+# Preslikavanja i simetrija
 
 ## Uvod
 
 > id: intro
 > section: introduction
-> translated: auto
 
-Mnoge geometrijske koncepte poput [linija](gloss:line) ili [poligona](gloss:polygon) izmislili su matematičari. S druge strane, simetrija je svugdje oko nas. Gotovo sve biljke, životinje, pa čak i mi ljudi simetrične smo.
+Mnoge geometrijske koncepte poput [crte](gloss:line) ili [poligona](gloss:polygon) mateatičari su izmislili. S druge strane, simetrija je svugdje oko nas. Gotovo sve biljke, životinje, pa čak i mi ljudi, simetrični smo.
 
 ::: column(width=200)
 
@@ -22,7 +21,7 @@ Mnoge geometrijske koncepte poput [linija](gloss:line) ili [poligona](gloss:poly
 
 :::
 
-Vremenom smo oponašali simetriju prirode u umjetnosti, arhitekturi, tehnologiji i dizajnu. Simetrični oblici i obrasci samo izgledaju _ljepše_ od nesimetričnih.
+Kroz vrijeme, oponašali smo simetriju prirode u umjetnosti, arhitekturi, tehnologiji i dizajnu. Simetrični oblici i obrasci jednostavno izgledaju _ljepše_ od onih koji nisu simetrični.
 
 ::: column(width=200)
 
@@ -38,16 +37,15 @@ Vremenom smo oponašali simetriju prirode u umjetnosti, arhitekturi, tehnologiji
 
 :::
 
-Ali simetrija je mnogo važnija od toga da jednostavno _izgleda lijepo_. Leži u samim temeljima našeg svemira i može objasniti čak i najosnovnije zakone fizike.
+Ali simetrija je mnogo važnija od toga da samo _izgleda lijepo_. Ona postoji u samim temeljima našeg svemira i može objasniti čak i najosnovnije zakone fizike.
 
 _{button.next-step} Nastavi_
 
 ---
-
 > id: transformations
 > goals: t1 t2 t3
 
-Iako je simetrija vrlo intuitivan pojam, opisati je matematički teže nego što možda mislite. Prvo moramo naučiti o [__transformacijama__](gloss:transformation), koji su načini pretvaranja jedne geometrijske figure u drugu. Evo nekoliko primjera:
+Iako je simetrija vrlo intuitivan pojam, opisati simetriju matematički teže je nego što možda mislite. Prvo moramo naučiti o [__preslikavanjima__](gloss:transformation), načinima pretvaranja jednog geometrijskog lika u drugi. Evo nekoliko primjera:
 
 ::: column.r(width=200 parent="padded-thin")
 
@@ -70,22 +68,20 @@ Iako je simetrija vrlo intuitivan pojam, opisati je matematički teže nego što
 :::
 
 ---
-
 > id: transformations-1
 
-Rezultat transformacije se zove [__slika__](gloss:transformation-image). Često označavamo sliku oblika `A` kao `A'`, koja se izgovara sa "premijerom". Postoji mnogo različitih vrsta transformacija koje ćemo detaljnije istražiti tijekom ovog tečaja.
+Rezultat preslikavanja zove se [__slika__](gloss:transformation-image). Sliku oblika `A` često označavamo kao `A'`, koja se izgovara "A crtano". Postoji mnogo različitih vrsta preslikavanja koje ćemo detaljnije istražiti tijekom ovog tečaja.
 
 ---
 
-## Krute transformacije
+## Preslikavanja koja čuvaju udaljenost (izometrije)
 
 > id: rigid
 > section: rigid
-> translated: auto
 
-[__kruta transformacija__](gloss:rigid-transformation) posebna je vrsta transformacije koja ne mijenja veličinu ili oblik figure. Mogli bismo zamisliti da je izrađen od čvrstog materijala poput drveta ili metala: možemo ga premjestiti, okrenuti ili preokrenuti, ali ne možemo ga rastezati, savijati ili na drugi način deformirati.
+[__Preslikavanje koje čuva udaljenost__](gloss:rigid-transformation) posebna je vrsta preslikavanja kojim se ne mijenja veličina i oblik lika. Mogli bismo zamisliti da je lik izrađen od čvrstog materijala poput drveta ili metala: možemo ga premjestiti, okrenuti ili preokrenuti, ali ne možemo ga rastezati, savijati ili na drugi način deformirati.
 
-Koja je od ovih pet transformacija kruta?
+Koje je od ovih pet preslikavanja izometrija?
 
     x-picker.rigid
       .item: img(src="images/picker-1.svg" width=130 height=240)
@@ -95,11 +91,10 @@ Koja je od ovih pet transformacija kruta?
       .item: img(src="images/picker-5.svg" width=130 height=240)
 
 ---
-
 > id: rigid-1
 > goals: t1 t2 t3
 
-Ispada da postoje samo tri različite vrste krutih transformacija:
+Postoje samo tri različite vrste izometrija:
 
 ::: column.r(width=200)
 
@@ -107,7 +102,7 @@ Ispada da postoje samo tri različite vrste krutih transformacija:
       include svg/rigid-1.svg
       x-play-btn
 
-{.text-center} Transformacija koja jednostavno _pomiče_ oblik zove se [__prijevod__](gloss:translation).
+{.text-center} Preslikavanje koja samo _pomiče_ lik zove se [__translacija__](gloss:translation).
 
 ::: column.r(width=200)
 
@@ -115,7 +110,7 @@ Ispada da postoje samo tri različite vrste krutih transformacija:
       include svg/rigid-2.svg
       x-play-btn
 
-{.text-center} Transformacija koja _okreće_ oblik preko naziva se [__odraz__](gloss:reflection).
+{.text-center} Preslikavanje koje _okreće_ lik na drugu stranu zove se [__zrcaljenje__](gloss:reflection).
 
 ::: column.r(width=200)
 
@@ -123,27 +118,25 @@ Ispada da postoje samo tri različite vrste krutih transformacija:
       include svg/rigid-3.svg
       x-play-btn
 
-{.text-center} Transformacija koja _vrti_ oblik naziva se [__rotacija__](gloss:rotation).
+{.text-center} Preslikavanje koje _vrti_ lik zove se [__rotacija__](gloss:rotation).
 
 :::
 
 ---
-
 > id: rigid-2
 
-Također možemo kombinirati više vrsta transformacije kako bismo stvorili složenije - primjerice, prijevod praćen rotacijom.
+Možemo kombinirati više vrsta preslikavanja kako bismo stvorili složenije preslikavanje - na primjer, translacija praćena rotacijom.
 
-Prvo, pogledajmo detaljnije svaku od tih vrsta transformacija.
+Pogledajmo detaljnije svaku od tih vrsta preslikavanja.
 
 ---
-
 > id: translations
 
-### Prijevodi
+### Translacije
 
-[__prijevod__](gloss:translation) transformacija je koja pomiče svaku točku figure jednakom udaljenošću u istom smjeru.
+[__Translacija__](gloss:translation) je preslikavanje koje pomiče svaku točku lika za istu udaljenost u istom smjeru.
 
-U koordinatnoj ravnini možemo odrediti prijevod prema tome koliko je oblik pomaknut prema osi _x_ i osi _y_. Na primjer, transformacija pomoću (3, 5) pomiče oblik za 3 duž osi _x_ i za 5 kroz osovinu _y_.
+U koordinatnoj ravnini možemo opisati translaciju prema tome za koliko se lik pomiče prema osi _x_ i osi _y_. Na primjer, transformacija za (3, 5) pomiče lik za 3 duž osi _x_ i za 5 duž osi _y_.
 
 ::: column(width=220)
 
@@ -153,7 +146,7 @@ U koordinatnoj ravnini možemo odrediti prijevod prema tome koliko je oblik poma
       path.reveal(x="segment(point(4,5),point(9,5))" mark="arrow" when="blank-0" animation="draw")
       path.reveal(x="segment(point(9,5),point(9,4))" mark="arrow" when="blank-1" animation="draw")
 
-{.caption} Preveo ([[5]], [[1]])
+{.caption} Translacija za ([[5]], [[1]])
 
 ::: column(width=220)
 
@@ -163,7 +156,7 @@ U koordinatnoj ravnini možemo odrediti prijevod prema tome koliko je oblik poma
       path.reveal(x="segment(point(6,5),point(2,5))" mark="arrow" when="blank-2" animation="draw")
       path.reveal(x="segment(point(2,5),point(2,3))" mark="arrow" when="blank-3" animation="draw")
 
-{.caption} Preveo ([[-4]], [[2]])
+{.caption} Translacija za ([[-4]], [[2]])
 
 ::: column(width=220)
 
@@ -173,16 +166,15 @@ U koordinatnoj ravnini možemo odrediti prijevod prema tome koliko je oblik poma
       path.reveal(x="segment(point(2,6),point(6,6))" mark="arrow" when="blank-4" animation="draw")
       path.reveal(x="segment(point(2,4),point(2,6))" mark="arrow" when="blank-5" animation="draw")
 
-{.caption} Preveo ([[4]], [[-2]])
+{.caption} Translacija za ([[4]], [[-2]])
 
 :::
 
 ---
-
 > id: translations-1
 > goals: drag-0 drag-1 drag-2
 
-Sada je na vama red - prevedite sljedeće oblike kao što je prikazano:
+Sad je na vama red - translatirajte sljedeće likove kao što je prikazano:
 
 ::: column(width=220)
 
@@ -194,7 +186,7 @@ Sada je na vama red - prevedite sljedeće oblike kao što je prikazano:
       polygon(points="30,10 10,70 70,70 50,10" style="fill: #289782; opacity: .5;")
       polygon(points="30,10 10,70 70,70 50,10" style="fill: #289782; cursor: move")
 
-{.caption} Prevedi po (3, 1) _{span.check(when="drag-0")}_
+{.caption} Translatiraj za (3, 1) _{span.check(when="drag-0")}_
 
 ::: column(width=220)
 
@@ -206,7 +198,7 @@ Sada je na vama red - prevedite sljedeće oblike kao što je prikazano:
       polygon(points="50,10 90,50 50,90 10,50" style="fill: #2ba058; opacity: .5;")
       polygon(points="50,10 90,50 50,90 10,50" style="fill: #2ba058; cursor: move")
 
-{.caption} Prevedi po (–4, –2) _{span.check(when="drag-1")}_
+{.caption} Translatiraj za (–4, –2) _{span.check(when="drag-1")}_
 
 ::: column(width=220)
 
@@ -218,20 +210,19 @@ Sada je na vama red - prevedite sljedeće oblike kao što je prikazano:
       polygon(points="10,10 30,10 30,50 50,50 50,10 70,10 70,70 10,70" style="fill: #2ea92e; opacity: .5;")
       polygon(points="10,10 30,10 30,50 50,50 50,10 70,10 70,70 10,70" style="fill: #2ea92e; cursor: move")
 
-{.caption} Prevedi po (5, -1) _{span.check(when="drag-2")}_
+{.caption} Translatiraj za (5, -1) _{span.check(when="drag-2")}_
 
 :::
 
 ---
-
 > id: reflections
 > goals: r0 r1 r2
 
-### Razmišljanja
+### Zrcaljenja
 
-[__odraz__](gloss:reflection) je transformacija koja "okreće" ili "ogledala" oblik preko crte. Ova linija naziva se __linija refleksije__.
+[__Zrcaljenje__](gloss:reflection) je preslikavanje koje "okreće" ili "zrcali" lik preko crte. Ta crta zove se __os simetrije__.
 
-Nacrtajte liniju razmišljanja u svakom od ovih primjera:
+Nacrtajte os simetrije u svakom od ovih primjera:
 
 ::: column(width=220)
 
@@ -260,7 +251,7 @@ Nacrtajte liniju razmišljanja u svakom od ovih primjera:
 > id: reflections-1
 > goals: r0 r1 r2
 
-Sada je na vama red - nacrtajte odraz svakog od ovih oblika:
+Sad je na vama red - nacrtajte odraz svakog od ovih likova:
 
 ::: column(width=220)
 
@@ -288,12 +279,12 @@ Sada je na vama red - nacrtajte odraz svakog od ovih oblika:
 ---
 > id: reflections-2
 
-Primijetite da ako točka leži na liniji refleksije, [[se ne pomiče|rotates|flips over]] kada se odražava: _{span.reveal(when="blank-0")} njegova slika je ista točka kao i izvornik._
+Primijetite da ako točka leži na osi simetrije, [[ne pomiče se|rotira se|zrcali se]] kada se zrcali: _{span.reveal(when="blank-0")} njezina slika je ista točka kao i original._
 
 ---
 > id: reflections-3
 
-U svim gore navedenim primjerima linija refleksije bila je vodoravna, okomita ili pod kutom od 45 ° - što je olakšalo crtanje odraz. Ako to nije slučaj, za izgradnju je potrebno malo više posla:
+U svim gore navedenim primjerima os simetrije bila je vodoravna, okomita ili pod kutom od 45 ° - što je olakšalo crtanje slike. Ako to nije slučaj, za crtanje je potrebno malo više posla:
 
 ::: column(width=300)
 
@@ -333,15 +324,15 @@ U svim gore navedenim primjerima linija refleksije bila je vodoravna, okomita il
 
 ::: column.grow
 
-{.r} Da bismo ovaj oblik prikazali kroz [liniju refleksije](target:refl), moramo odražavati svaku [verteks](gloss:polygon-vertex), a zatim ih ponovo povezati. _{button.next-step} Nastavi_
+{.r} Da bismo ovaj lik preslikali po [osi refleksije](target:refl), moramo posebno preslikati svaki [vrh](gloss:polygon-vertex), a zatim vrhove ponovo povezati. _{button.next-step} Nastavi_
 
-{.r.reveal(when="next-0")} Odaberemo jednu od vrhova i povučemo crtu preko te vrhove koja je okomita na liniju refleksije. _{button.next-step} Nastavi_
+{.r.reveal(when="next-0")} Odaberimo jedan od vrhova i povucimo kroz taj vrh pravac koji je okomit na os refleksije. _{button.next-step} Nastavi_
 
-{.r.reveal(when="next-1")} Sada možemo izmjeriti [udaljenost](target:d1) od vrha do linije refleksije i napraviti točku koja ima [isto razmak](target:d2) na drugoj strani. _{span.lgrey} (Možemo koristiti ravnalo ili [kompas](target:circ) za to.)_ _{button.next-step} Nastavite_
+{.r.reveal(when="next-1")} Sad možemo izmjeriti [udaljenost](target:d1) od vrha do osi refleksije i označiti točku koja je [jednalo udaljena](target:d2) na drugoj strani. _{span.lgrey} (Za to možemo koristiti ravnalo ili [šestar](target:circ).)_ _{button.next-step} Nastavite_
 
-{.r.reveal(when="next-2")} To možemo učiniti za sve ostale vrhove našeg oblika. _{button.next-step} Nastavi_
+{.r.reveal(when="next-2")} Ponovimo postupak za sve ostale vrhove našeg lika. _{button.next-step} Nastavi_
 
-{.r.reveal(when="next-3")} Sada moramo spojiti reflektirane vrhove u ispravnom redoslijedu i pronašli smo odraz!
+{.r.reveal(when="next-3")} Ako sada spojimo preslikane vrhove odgovarajućim redoslijedom, pronašli smo odraz!
 
 :::
 
@@ -351,9 +342,9 @@ U svim gore navedenim primjerima linija refleksije bila je vodoravna, okomita il
 
 ### Rotacije
 
-[__rotacija__](gloss:rotation) je transformacija koja "okreće" oblik pod određenim uglom oko fiksne točke. Ta se točka zove [__središte rotacije__](gloss:center-of-rotation). Rotacije mogu biti u smjeru kazaljke na satu ili obrnuto.
+[__Rotacija__](gloss:rotation) je transformacija koja "okreće" oblik pod određenim kutom oko fiksne točke. Ta se točka zove [__centar rotacije__](gloss:center-of-rotation). Rotacije mogu biti u smjeru kazaljke na satu ili obrnuto.
 
-Pokušajte zakrenuti oblike ispod crvenog središta rotacije:
+Pokušajte rotirati oblike oko crvenog središta rotacije:
 
 ::: column(width=220)
 
@@ -362,7 +353,7 @@ Pokušajte zakrenuti oblike ispod crvenog središta rotacije:
       circle.red(x="point(5,6)" name="c0")
       path.finished(hidden x="from0.rotate(pi/2,c0)" name="to0" style="fill: rgba(34,132,213,0.4)")
 
-{.caption} Zakrenite za 90 ° u smjeru kazaljke na satu.
+{.caption} Rotirajte za 90° u smjeru kazaljke na satu.
 
 ::: column(width=220)
 
@@ -371,7 +362,7 @@ Pokušajte zakrenuti oblike ispod crvenog središta rotacije:
       circle.red(x="point(5,4)" name="c1")
       path.finished(hidden x="from1.rotate(pi,c1)" name="to1" style="fill: rgba(40,151,130,0.4)")
 
-{.caption} Zakrenite za 180 °.
+{.caption} Rotirajte za 180°.
 
 ::: column(width=220)
 
@@ -380,7 +371,7 @@ Pokušajte zakrenuti oblike ispod crvenog središta rotacije:
       circle.red(x="point(6,3)" name="c2")
       path.finished(hidden x="from2.rotate(-pi/2,c2)" name="to2" style="fill: rgba(46,169,46,0.4)")
 
-{.caption} Zakrenite za 90 ° u smjeru suprotnom od kazaljke na satu.
+{.caption} Rotirajte za 90° u smjeru suprotnom od kazaljke na satu.
 
 :::
 
@@ -427,30 +418,30 @@ Pokušajte zakrenuti oblike ispod crvenog središta rotacije:
 
 ::: column.grow
 
-Teže je crtati rotacije koje nisu točno 90 ° ili 180 °. Pokušajmo zakretati ovaj oblik za ${10*ang}{ang|6|-18,18,1} ° oko [središta rotacije](target:rot).
+Puno je teže crtati rotacije koje nisu točno 90° ili 180°. Pokušajmo rotirati ovaj lik za ${10*ang}{ang|6|-18,18,1} ° oko [centra rotacije](target:rot).
 
-{.r} Kao i za odraz, moramo svaku točku u obliku rotirati pojedinačno. _{button.next-step} Nastavi_
+{.r} Kao i za zrcaljenje, svaki vrh u liku moramo rotirati pojedinačno. _{button.next-step} Nastavi_
 
-{.r.reveal(when="next-0")} Počinjemo odabirom jednog od vrhova i crtanjem crte do središta rotacije. _{button.next-step} Nastavi_
+{.r.reveal(when="next-0")} Počinjemo odabirom jednog od vrhova i crtanjem crte do centra rotacije. _{button.next-step} Nastavi_
 
-{.r.reveal(when="next-1")} Koristeći [nosač](target:protractor), možemo izmjeriti [kut ${ang*10} °](target:angle) oko središta rotacije. Nacrtajmo [drugu liniju](target:l2) pod tim kutom. _{button.next-step} Nastavi_
+{.r.reveal(when="next-1")} Koristeći [kutomjer](target:protractor), možemo izmjeriti [kut ${ang*10} °](target:angle) oko centra rotacije. Nacrtajmo [drugi pravac](target:l2) pod tim kutom. _{button.next-step} Nastavi_
 
-{.r.reveal(when="next-2")} Koristeći [kompas](target:compass) ili ravnalo, možemo pronaći [točku](target:a1) na ovoj liniji koja ima istu udaljenost od središta rotacije kao i izvorna točka. _{button.next-step} Nastavi_
+{.r.reveal(when="next-2")} Koristeći [šestar](target:compass) ili ravnalo, možemo pronaći [točku](target:a1) na ovom pravcu koja ima istu udaljenost od centra rotacije kao i izvorna točka. _{button.next-step} Nastavi_
 
-{.r.reveal(when="next-3")} Sada moramo ponoviti ove korake za sve ostale vrhove našeg oblika. _{button.next-step} Nastavi_
+{.r.reveal(when="next-3")} Sada moramo ponoviti ove korake za sve ostale vrhove našeg lika. _{button.next-step} Nastavi_
 
-{.reveal(when="next-4")} I na kraju, kao i prije, možemo povezati pojedinačne vrhove da bismo dobili zakrenutu sliku našeg izvornog oblika.
+{.reveal(when="next-4")} Na kraju, kao i u prethodnom primjeru, povežemo pojedinačne vrhove da bismo dobili rotiranu sliku našeg izvornog lika.
 
 :::
 
 ---
 > id: composition-1
 
-Transformacije su važan pojam u mnogim dijelovima matematike, a ne samo u geometriji. Na primjer, možete transformirati [_funkcije_](gloss:function) pomicanjem ili rotiranjem njihovih [grafova](gloss:function-graph). Pomoću transformacija možete odrediti jesu li dva oblika [kongruentna](gloss:congruent).
+Preslikavanja su važan pojam u mnogim dijelovima matematike, a ne samo u geometriji. Na primjer, mogu se preslikavati [_funkcije_](gloss:function) pomicanjem ili rotiranjem njihovih [grafova](gloss:function-graph). Pomoću preslikavanja također možemo odrediti jesu li dva oblika [kongruentna](gloss:congruent).
 
 ---
 
-## Congruence
+## Kongruencija
 
 > section: congruence
 > sectionStatus: dev
@@ -464,11 +455,10 @@ NAPRAVITI
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
-> translated: auto
 
-[__Simetrija__](gloss:symmetry) je svuda oko nas, a intuitivan koncept: različiti dijelovi predmeta izgledaju _isto_ na neki način. Ali pomoću transformacija možemo dati mnogo precizniju, matematičku definiciju onoga što simetrija _zaista_ znači:
+[__Simetrija__](gloss:symmetry) je svuda oko nas, a također je i intuitivan koncept: različiti dijelovi predmeta izgledaju _isto_ na neki način. Pomoću preslikavanja možemo dati mnogo precizniju, matematičku definiciju onoga što simetrija _zaista_ znači:
 
-{.definition} Objekt je _simetričan_ ako izgleda isto, čak i nakon primjene određene transformacije.
+{.definition} Objekt je _simetričan_ ako izgleda isto, čak i nakon primjene određenog preslikavanja.
 
 ::: column.grow
 
@@ -477,7 +467,7 @@ NAPRAVITI
       img(src="images/symmetry-1.png" width=320 height=240)
       x-play-btn
 
-{.text-center} Možemo odraziti ovog leptira, a nakon toga izgleda isto. Kažemo da ima __odraznu simetriju__.
+{.text-center} Ovog leptira možemo zrcaliti, i nakon toga će izgledati isto. Kažemo da je __osno simetričan__.
 
 ::: column.grow
 
@@ -486,7 +476,7 @@ NAPRAVITI
       img(src="images/symmetry-2.jpg" width=320 height=240)
       x-play-btn
 
-{.text-center} Ovaj cvijet možemo zakretati, a on će nakon toga izgledati isto. Kažemo da ima __rotacijsku simetriju__.
+{.text-center} Ovaj cvijet možemo rotirati, i on će nakon toga izgledati isto. Kažemo da je __centralno simetričan__.
 
 :::
 
@@ -495,13 +485,13 @@ NAPRAVITI
 
 ### Reflektivna simetrija
 
-Oblik ima [__reflektirajuću simetriju__](gloss:reflectional-symmetry) ako izgleda isto nakon što se odrazi. Linija refleksije naziva se [__simetrija osi__](gloss:axis-of-symmetry) i dijeli oblik na dvije [[kongruentne|equal|similar]] polovice. Neke figure mogu imati i više od jedne osi simetrije.
+Lik je [__osno simetričan__](gloss:reflectional-symmetry) ako izgleda isto nakon što se zrcali. Pravac simetrije naziva se [__os simetrije__](gloss:axis-of-symmetry) i dijeli lik na dvije [[kongruentne|jednake|slične]] polovice. Neki likovi mogu imati više od jedne osi simetrije.
 
 ---
 > id: reflectional-symmetry-1
 > goals: r0 r1 r2 r3 r4 r5
 
-Nacrtajte sve osi simetrije u ovih šest slika i oblika:
+Nacrtajte sve osi simetrije kod ovih šest slika i likova:
 
 ::: column(width=220)
 
@@ -531,7 +521,7 @@ Nacrtajte sve osi simetrije u ovih šest slika i oblika:
       path(hidden name="line3a" x="line(point(-1,4),point(11,4))")
       path(hidden name="line3b" x="line(point(5,-1),point(5,9))")
 
-{.caption} Ovaj oblik ima [[2]] osi simetrije.
+{.caption} Ovaj lik ima [[2]] osi simetrije.
 
 ::: column(width=220)
 
@@ -542,7 +532,7 @@ Nacrtajte sve osi simetrije u ovih šest slika i oblika:
       path(hidden name="line4c" x="line(point(0,-1),point(10,9))")
       path(hidden name="line4d" x="line(point(10,-1),point(0,9))")
 
-{.caption} Kvadrat ima [[4]] ose simetrije.
+{.caption} Kvadrat ima [[4]] osi simetrije.
 
 ::: column(width=220)
 
@@ -551,14 +541,14 @@ Nacrtajte sve osi simetrije u ovih šest slika i oblika:
       path(hidden name="line5a" x="line(point(-2,1),point(13,6))")
       path(hidden name="line5b" x="line(point(7,-1),point(3,11))")
 
-{.caption} Ovaj oblik ima [[2]] ose simetrije.
+{.caption} Ovaj lik ima [[2]] osi simetrije.
 
 :::
 
 ---
 > id: alphabet
 
-Mnoga slova u abecedi imaju reflektirajuću simetriju. Odaberite sve one koji rade:
+Mnoga slova u abecedi su osno simetrična. Označite ona koja jesu:
 
     x-picker.letters
       - let c = ['#D92120', '#E6642C', '#E68E34', '#D9AD3C', '#B5BD4C', '#7FB972', '#63AD99', '#55A1B1', '#488BC2', '#4065B1', '#413B93', '#781C81']
@@ -572,7 +562,7 @@ Mnoga slova u abecedi imaju reflektirajuću simetriju. Odaberite sve one koji ra
 > id: reflectional-symmetry-2
 > goals: r0 r1 r2
 
-Evo još nekoliko oblika. Ispunite ih tako da imaju reflektirajuću simetriju:
+Evo još nekoliko likova. Nadopunite ih tako da budu osno simetrična:
 
 ::: column(width=220)
 
@@ -605,9 +595,9 @@ Evo još nekoliko oblika. Ispunite ih tako da imaju reflektirajuću simetriju:
 > id: palindromes
 > goals: p0 p1 p2
 
-Oblici, slova i slike mogu imati odraznu simetriju, ali mogu postojati i cijeli brojevi, riječi i rečenice!
+LIkovi, slova i slike mogu biti osno simetrični, a mogu to biti i neki brojevi, riječi ili rečenice!
 
-Na primjer, "25352" i "ANNA" čitaju isto od naprijed. Brojevi ili riječi poput ove se nazivaju [__Palindromi__](gloss:palindrome). Možete li se sjetiti bilo kojeg drugog palindroma?
+Na primjer, "25352" i "ANNA" čitaju se isto prema naprijed i unazad. Brojevi ili riječi poput ovih nazivaju se [__Palindromi__](gloss:palindrome). Možete li se sjetiti još nekog palindroma?
 
     form.palindromes.text-center.form-field
       input(type="text")
@@ -620,16 +610,16 @@ Na primjer, "25352" i "ANNA" čitaju isto od naprijed. Brojevi ili riječi poput
 ---
 > id: palindromes-1
 
-Ako zanemarimo razmake i interpunkcijske znakove, kratke rečenice u nastavku također imaju odraznu simetriju. Možete li smisliti svoje? {.text-center} Nikad neparno ili parno. <br> [[orah]] za staklenku tunjevine. <br> Yo, banana [[dečko]]! {.reveal(when="blank-0 blank-1")} Ali Palindromi nisu samo zabava, oni zapravo imaju praktičnu važnost. Prije nekoliko godina, znanstvenici su otkrili da su dijelovi našeg [DNA](gloss:dna) palindromni. To ih čini otpornijima na mutacije ili oštećenja - jer postoji svaka sigurnosna kopija svakog komada.
+Ako zanemarimo razmake i interpunkcijske znakove, kratke rečenice u nastavku također su osno simetrične. Možete li smisliti svoje? {.text-center} Never odd or even. <br> [A [nut]] for a jar of tun. <br> Yo, banana [[boy]]! {.reveal(when="blank-0 blank-1")} Palindromi nisu samo zabavni, oni zapravo imaju i praktičnu vrijednost. Prije nekoliko godina, znanstvenici su otkrili da su dijelovi našeg [DNA](gloss:dna) palindromni. To ih čini otpornijima na mutacije ili oštećenja - jer za svaki dio postoji sigurnosna kopija.
 
 ---
 > id: rotational-symmetry
 
-### Rotaciona simetrija
+### Osna simetrija
 
 ::: column.grow
 
-Oblik ima [__rotacijsku simetriju__](gloss:rotational-symmetry) ako izgleda isto nakon zakretanja (za manje od 360 °). [Središte rotacije](gloss:center-of-rotation) obično je samo sredina oblika. [__red simetrije__](gloss:order-of-symmetry) je broj različitih orijentacija u kojima oblik izgleda isto. Možete razmišljati i o tome _koliko puta možemo okretati oblik_, prije nego što se vratimo na početak. Na primjer, ova snježna pahuljica ima redoslijed [[6]]. {.reveal(when="blank-0")} Kut svake rotacije je `"360°"/"order"`. U pahuljici, ovo je `"360°"/6 = input(60)°`.
+Lik je [__osno simetričan__](gloss:rotational-symmetry) ako izgleda isto nakon rotiranja (za manje od 360 °). [Središte rotacije](gloss:center-of-rotation) obično je samo središte lika. [__Red simetrije__](gloss:order-of-symmetry) je broj različitih orijentacija za koje lik izgleda isto. Možete razmišljati i na način _koliko puta možemo okretati lik_, prije nego što se vratimo na početak. Na primjer, ova snježna pahuljica ima red [[6]]. {.reveal(when="blank-0")} Kut svake rotacije je `"360°"/"order"`. U pahuljici, ovo je `"360°"/6 = input(60)°`.
 
 ::: column(width=240)
 
@@ -640,19 +630,19 @@ Oblik ima [__rotacijsku simetriju__](gloss:rotational-symmetry) ako izgleda isto
 ---
 > id: rotational-symmetry-1
 
-Pronađite red i ugao rotacije, za svaki od ovih oblika:
+Za svaki od ovih likova odredite red i kut rotacije:
 
 ::: column(width=220)
 
     img(src="images/clover.jpg" width=200 height=200)
 
-{.caption} Redoslijed [[4]], kut [[90]]°
+{.caption} Red [[4]], kut [[90]]°
 
 ::: column(width=220)
 
     img(src="images/playing-card.jpg" width=200 height=200)
 
-{.caption} Naredba [[2]], kut [[180]]°
+{.caption} Red [[2]], kut [[180]]°
 
 ::: column(width=220)
 
@@ -664,7 +654,9 @@ Pronađite red i ugao rotacije, za svaki od ovih oblika:
 
 ---
 > id: rotational-symmetry-2
-> goals: r0 r1 r2 Dovršite ove oblike tako da imaju rotacijsku simetriju:
+> goals: r0 r1 r2
+
+Dopunite ove likove tako da budu centralno simetrični:
 
 ::: column(width=220)
 
@@ -687,7 +679,7 @@ Pronađite red i ugao rotacije, za svaki od ovih oblika:
       path.red(x="segment(point(5,-1),point(5,9))")
       path(hidden x="from1.rotate(pi,c1)" name="to1")
 
-{.caption} Redoslijed 2
+{.caption} Red 2
 
 ::: column(width=220)
 
@@ -699,18 +691,17 @@ Pronađite red i ugao rotacije, za svaki od ovih oblika:
       path.red(x="segment(point(5,4),point(-1,4))")
       path(hidden x="polyline(point(4,4),point(2,6),point(3,7),point(5,5),point(7,7),point(8,6),point(6,4),point(8,2),point(7,1),point(5,3))" name="to2")
 
-{.caption} Naredba 4
+{.caption} Red 4
 
 :::
 
 ---
-## Grupe simetrije i pozadine
+## Grupe simetrija i pozadine
 
 > id: groups
 > section: symmetry-groups
-> translated: auto
 
-Neki oblici imaju više od jedne simetrije - pogledajmo [kvadrat](gloss:square) kao jednostavan primjer.
+Neki likovi imaju više od jedne simetrije - pogledajmo [kvadrat](gloss:square) kao jednostavan primjer.
 
 ::: column(width=400 parent="padded-thin")
 
@@ -726,13 +717,13 @@ Neki oblici imaju više od jedne simetrije - pogledajmo [kvadrat](gloss:square) 
 
 ::: column.grow(width=200)
 
-Već ste pokazali da kvadrat ima [[4]] ose refleksije.
+Već ste zaključili da kvadrat ima [[4]] osi simetrije.
 
-{.reveal(when="blank-0")} Također ima rotacijsku simetriju za [[90]]°, [[180]]° i [[270]]°.
+{.reveal(when="blank-0")} Također je i centralno simetričan za [[90]]°, [[180]]° i [[270]]°.
 
-{.reveal(when="blank-1 blank-2 blank-3")} I na kraju, možemo razmišljati o tome da ne radimo ništa kao drugu posebnu simetriju - jer je rezultat (očito) isti kao prije. To se ponekad naziva __identitet__.
+{.reveal(when="blank-1 blank-2 blank-3")} I na kraju, možemo razmišljati i na način da je "ne raditi ništa" posebna vrsta simetrije - jer je rezultat (očito) isti kao na početku. Ovo se ponekad naziva __identitet__.
 
-{.reveal(when="blank-1 blank-2 blank-3" delay=1000)} Ukupno smo pronašli [[8]] različite "simetrije kvadrata".
+{.reveal(when="blank-1 blank-2 blank-3" delay=1000)} Ukupno smo pronašli [[8]] različitih vrsta "simetrije kvadrata".
 
 :::
 
@@ -740,7 +731,7 @@ Već ste pokazali da kvadrat ima [[4]] ose refleksije.
 > id: add-symmetries
 > goals: sum-0 sum-1
 
-Sada zapravo možemo početi raditi aritmetiku s tim simetrijama. Na primjer, možemo _dodati_ dvije simetrije kako bismo dobili nove:
+Sada možemo početi računati s ovim simetrijama. Na primjer, možemo _dodati_ dvije simetrije kako bismo dobili nove:
 
 ::: column(width=260)
 
@@ -768,7 +759,7 @@ Sada zapravo možemo početi raditi aritmetiku s tim simetrijama. Na primjer, mo
 > title: Symmetry Calculator
 > goals: calculate
 
-Kad god dodate dvije simetrije kvadrata, nabavite novi. Ovdje je "kalkulator simetrije", gdje možete i sami da ga isprobate:
+Kad god zbrojimo dvije simetrije kvadrata, rezultat je nova simetrija. Ovo je "kalkulator simetrije", gdje to možete i sami isprobati:
 
     .calculator
       .display
@@ -787,21 +778,21 @@ Kad god dodate dvije simetrije kvadrata, nabavite novi. Ovdje je "kalkulator sim
 ---
 > id: symmetry-arithmetic
 
-Provedite malo vremena igrajući se s računalom simetrije i pokušajte pronaći bilo koji obrazac. Možete li dovršiti ova zapažanja?
+Provedite malo vremena igrajući se s kalkulatorom simetrije i pokušajte pronaći neki obrazac. Možete li dopuniti ova zapažanja?
 
-* Dodavanje dvije rotacije uvijek će [[postići|a reflection]] rotaciju (ili identitet).
-* Dodavanje dva razmišljanja uvijek će omogućiti [[rotaciju|a reflection]] (ili identitet).
-* Dodavanje istih dviju simetrija u suprotnom redoslijedu [[ponekad daje drukčiji|always gives a different|always gives the same]] rezultat.
-* Dodavanje identiteta [[ne znači ništa|returns a reflection|returns the opposite]].
+* Zbrajanje dviju rotacija uvijek daje [[rotaciju|refleksiju]] (ili identitet).
+* Zvrajanje dviju refleksija uvijek daje [[rotaciju|refleksiju]] (ili identitet).
+* Zbrajanje dviju istih simetrija u suprotnom redoslijedu [[ponekad daje drukčiji|uvijek daje drukčiji|uvijek daje jednaki]] rezultat.
+* Zbrajanje identiteta [[ne mijenja ništa|daje refleksiju|daje suprotan lik]].
 
 ---
 > id: group-axioms
 
-Možda ste shvatili da je dodavanje __{.orange} simetrija__ zapravo vrlo slično dodavanju __{.green} celih brojeva__:
+Možda ste primjetili da je zbrajanje __{.orange} simetrija__ zapravo vrlo slično zbrajanju __{.green} cijelih brojeva__:
 
     ol.proof    
       li.r
-        | Adding two #[strong.orange symmetries]/#[strong.green integers] always gives another #[strong.orange symmetry]/#[strong.green integer]:
+        | Zbrajanje dviju #[strong.orange simetrija]/#[strong.green cijelih brojeva] uvijek daje novu #[strong.orange simetriju]/#[strong.green cijeli broj]:
         .text-center.axiom 
           img.cube(src="images/cube-2.svg" width=32 height=32)
           mo +
@@ -817,7 +808,7 @@ Možda ste shvatili da je dodavanje __{.orange} simetrija__ zapravo vrlo slično
         .next-step Continue
     
       li.r.reveal(when="next-0")
-        span.md Adding #[strong.orange symmetries]/#[strong.green integers] is [associative](gloss:associative):
+        span.md Zbrajanje #[strong.orange simetrija]/#[strong.green cijelih brojeva] je [asocijativno](gloss:associative):
         .text-center.axiom 
           mfenced
             img.cube(src="images/cube-1.svg" width=32 height=32)
@@ -843,7 +834,7 @@ Možda ste shvatili da je dodavanje __{.orange} simetrija__ zapravo vrlo slično
         .next-step Continue
     
       li.r.reveal(when="next-1")
-        | Every #[strong.orange symmetry]/#[strong.green integer] has an #[strong inverse], another #[strong.orange symmetry]/#[strong.green integer] which, when added, gives the identity:
+        | Svaka #[strong.orange simetrija]/#[strong.green cijeli broj] ima #[strong inverz], drugu #[strong.orange simetriju]/#[strong.green cijeli broj] koji, kad zbrajamo s njim, daje identitet:
         .text-center.axiom 
           img.cube(src="images/cube-1.svg" width=32 height=32)
           mo +
@@ -861,33 +852,33 @@ Možda ste shvatili da je dodavanje __{.orange} simetrija__ zapravo vrlo slično
 ---
 > id: groups-1
 
-u matematike, svaka zbirka koja ima ta svojstva naziva se [__grupa__](gloss:group). Neke grupe (poput __{.orange} simetrije__ kvadrata) imaju samo konačan broj elemenata. Drugi (poput __{.green} celih brojeva__) su beskonačni. U ovom primjeru započeli smo s osam simetrija kvadrata. U stvari, svaki geometrijski oblik ima svoju __grupu simetrije__. Svi imaju različite elemente, ali uvijek zadovoljavaju tri gore navedena pravila. Grupe se pojavljuju svugdje u matematici. Elementi mogu biti brojevi ili simetrije, ali također i polinomi, permutacije, matrice, funkcije ... _bilo što_ što se pridržava tri pravila. Ključna ideja _teorije grupa_ je da nas ne zanimaju pojedini elementi, baš u _kako oni međusobno djeluju_.
+U matematici, svaki skup koja ima ta svojstva zove se [__grupa__](gloss:group). Neke grupe (poput __{.orange} simetrije__ kvadrata) imaju konačan broj elemenata. Druge (poput __{.green} cijelih brojeva__) imaju beskonačno mnogo elemenata. U ovom primjeru započeli smo s osam simetrija kvadrata. Zapravo, svaki geometrijski lik ima svoju __grupu simetrija__. Te grupe sadrže različite elemente, ali uvijek zadovoljavaju tri gore navedena pravila. Grupe se pojavljuju svugdje u matematici. Elementi grupe mogu biti brojevi ili simetrije, ali i polinomi, permutacije, matrice, funkcije ... _bilo što_ što zadovoljava tri pravila grupe. Ključna ideja _teorije grupa_ je da nas ne zanimaju pojedini elementi gremo, nego _kako oni međusobno djeluju jedni na druge_.
 
 ::: column.grow
 
-Na primjer, simetrijske skupine različitih molekula mogu znanstvenicima pomoći da predvide i objasne svojstva odgovarajućih materijala. Grupe se također mogu koristiti za analizu pobjedničke strategije u društvenim igrama, ponašanja virusa u medicini, različitih harmonija u glazbi i mnogih drugih koncepata ...
+Na primjer, grupe simetrija različitih molekula mogu znanstvenicima pomoći predvidjeti i objasniti svojstva nekih materijala. Grupe se također mogu koristiti za analizu pobjedničke strategije u društvenim igrama, ponašanja virusa u medicini, različitih harmonija u glazbi i mnogih drugih koncepata ...
 
 ::: column(width=340)
 
     img(src="images/molecule.jpg" width=160 height=160 style="margin-right: 20px")
     img(src="images/virus.jpg" width=160 height=160)
 
-{.caption} Svojstva molekule CCl <sub>4</sub> (lijevo) a Adenovirus (desno) određen je njihovim simetrijama.
+{.caption} Svojstva molekule CCl <sub>4</sub> (lijevo) i Adenovirusa (desno) određena su njihovim simetrijama.
 
 :::
 
 ---
 > id: wallpaper-groups
 
-### Grupe pozadina
+### Popoločavanja ravnine
 
-U [prethodnim odjeljcima](/course/transformations/symmetry) vidjeli smo dvije različite vrste simetrije koje odgovaraju dvije različite transformacije: rotacije i refleksije. Ali postoji i simetrija za treću vrstu krute transformacije: [[prijevodi|spins|flips]].
+U [prethodnim odjeljcima](/course/transformations/symmetry) vidjeli smo dvije različite vrste simetrija kojima odgovaraju dvije različite transformacije: rotacije i refleksije. Ali postoji i simetrija za treću vrstu transformacije u ravnini: [[translacije|vrtnja|prebacivanja]].
 
 ---
 > id: wallpaper-groups-1
 > goals: play-0 play-1
 
-[__Translacijska simetrija__](gloss:translational-symmetry) ne djeluje na izolirane predmete poput cvijeća ili leptira, ali radi se na uobičajenim obrascima koji se protežu u svakom smjeru:
+[__Translacija__](gloss:translational-symmetry) nije primjenjiva na izolirane predmete poput cvijeća ili leptira, ali jest na pravilnim uzorcima koji se protežu u svakom smjeru:
 
 ::: column.grow
 
@@ -896,7 +887,7 @@ U [prethodnim odjeljcima](/course/transformations/symmetry) vidjeli smo dvije ra
       img(src="images/honeycomb.jpg" width=376 height=276 style="margin: 0 0 -36px -56px; max-width: none;")
       x-play-btn
 
-{.caption} Šesterokutna honiecomb
+{.caption} Šesterokutne saće
 
 ::: column.grow
 
@@ -905,14 +896,14 @@ U [prethodnim odjeljcima](/course/transformations/symmetry) vidjeli smo dvije ra
       img(src="images/tiling.jpg" width=376 height=240 style="margin-left: -56px; max-width: none;")
       x-play-btn
 
-{.caption} Keramička zidna obloga
+{.caption} Keramičke zidne pločice
 
 :::
 
 ---
 > id: footsteps
 
-Uz reflektirajuću, rotacijsku i translacijsku simetriju, postoji čak i četvrta vrsta: [__refleksije klizanja__](gloss:glide-reflection). Ovo je kombinacija refleksije i prijevoda u istom smjeru kao i os refleksije.
+Osim translacije, osne i centralne simetrije, postoji čak i četvrta vrsta: [__klizno zrcaljenje__](gloss:glide-reflection). Ovo je kombinacija osne simetrije i translacije u istom smjeru kao i os simetrije.
 
     figure
       .footsteps
@@ -923,9 +914,9 @@ Uz reflektirajuću, rotacijsku i translacijsku simetriju, postoji čak i četvrt
 ---
 > id: wallpaper-groups-2
 
-Uzorak može imati više vrsta simetrije. Kao i kod kvadrata, možemo pronaći [grupu simetrije](gloss:symmetry-group) obrasca, koja sadrži sve njegove različite simetrije.
+Uzorak može imati više vrsta simetrije. Kao i kod kvadrata, možemo pronaći [grupu simetrija](gloss:symmetry-group) uzorka, koja sadrži sve njegove različite simetrije.
 
-Te vam grupe ne govore mnogo o tome kako izgleda _obrazac_ (npr. Njegove boje i oblici), koliko se _ponavlja_. Više različitih uzoraka može imati istu skupinu simetrije - sve dok su raspoređeni i ponovljeni na isti način.
+Ove grupe ne govore mnogo o tome kako izgleda uzorak _<<<<_ (npr. njegovu boju i oblik), nego samo kako se ponavlja _<<<<_. Više različitih uzoraka može imati istu grupu simetrija - sve dok su raspoređeni i ponavljaju se na isti način.
 
 ::: column.grow
 
@@ -933,7 +924,7 @@ Te vam grupe ne govore mnogo o tome kako izgleda _obrazac_ (npr. Njegove boje i 
       img(src="images/wallpaper-1.svg" width=150 height=150 style="margin: 0 10px")
       img(src="images/wallpaper-2.svg" width=150 height=150 style="margin: 0 10px")
 
-{.caption} Ova dva uzorka imaju iste simetrije, iako izgledaju vrlo različito. Ali simetrije se ne tiču boja ili površnih oblika.
+{.caption} Ova dva uzorka imaju iste simetrije, iako izgledaju posve različito. Ali simetrije se ni ne bave bojama ili oblicima na površini.
 
 ::: column.grow
 
@@ -941,7 +932,7 @@ Te vam grupe ne govore mnogo o tome kako izgleda _obrazac_ (npr. Njegove boje i 
       img(src="images/wallpaper-3.svg" width=150 height=150 style="margin: 0 10px")
       img(src="images/wallpaper-4.svg" width=150 height=150 style="margin: 0 10px")
 
-{.caption} Ova dva obrasca također imaju iste simetrije - iako izgledaju sličnije odgovarajućim obrascima na lijevoj strani, nego jedni drugima.
+{.caption} Ova dva uzorka također imaju iste simetrije - iako izgledaju sličnije odgovarajućim uzorcima na lijevoj strani, nego jedni drugima.
 
 :::
 
@@ -949,7 +940,7 @@ Te vam grupe ne govore mnogo o tome kako izgleda _obrazac_ (npr. Njegove boje i 
 > id: wallpaper-groups-3
 > goals: gallery
 
-Ispada da, iako postoji beskonačno mnogo mogućih obrazaca, svi imaju jednu od samo 17 različitih skupina simetrije. Nazivaju se __pozadinske grupe__. Svaka skupina pozadina definirana je kombinacijom prijevoda, rotacija, odraz i odraz klizanja. Možete li vidjeti [središta rotacije](gloss:center-of-rotation) i [osi refleksije](gloss:axis-of-symmetry) u ovim primjerima?
+Iako postoji beskonačno mnogo mogućih uzoraka, svi oni pripadaju jednoj od samo 17 različitih grupa simetrija. Te grupe zovu se __popločavanja ravnine__. Svako popločavanje ravnine definirano je kombinacijom translacija, rotacija, osnih simetrija i kliznih zrcaljenja. Možete li vidjeti [centre rotacije](gloss:center-of-rotation) i [osi simetrije](gloss:axis-of-symmetry) u ovim primjerima?
 
     x-gallery(slide-width="320")
       div
@@ -1009,12 +1000,12 @@ Ispada da, iako postoji beskonačno mnogo mogućih obrazaca, svi imaju jednu od 
 > title: Drawing Wallpaper Symmetries
 > goals: draw-1 draw-2 switch
 
-Nažalost, ne postoji jednostavan razlog zašto postoji _17_ ovih grupa, a dokazivanje toga zahtijeva napredniju matematiku. Umjesto toga, možete pokušati nacrtati vlastite ponovljene uzorke za svaku od 17 grupa pozadina:
+Nažalost, ne postoji jednostavan razlog zašto ovih grupa ima točno _17_, a dokazivanje toga zahtijeva provodi se pomoću naprednije matematike. Umjesto toga, pokušajte nacrtati vlastite ponovljene uzorke za svaku od 17 popločavanja ravnine:
 
     include ./components/wallpaper
-    figure: x-wallpaper
+    x-wallpaper
     .other-students.reveal(when="draw-1 switch")
-      h4 Examples of other students’ drawings
+      h4 Primjeri crteža drugih učenika
       .row.padded-thin
         div(style="width: 224px"): img(src="images/user/wallpaper-1.png" width=240 height=160)
         div(style="width: 224px"): img(src="images/user/wallpaper-2.png" width=240 height=160)
@@ -1025,15 +1016,15 @@ Nažalost, ne postoji jednostavan razlog zašto postoji _17_ ovih grupa, a dokaz
 
 ::: column.grow
 
-Skupine tapeta bile su sve o ravnim, dvodimenzionalnim uzorcima. Za trodimenzionalne uzorke možemo učiniti nešto slično: to se naziva kristalografskim skupinama, a ima ih 219!
+Popločavanja ravnine odnose se na ravne, dvodimenzionalne uzorke. Za trodimenzionalne uzorke možemo učiniti nešto slično: radi se o grupama kristala, a ima ih 219!
 
-Osim prijevoda, refleksija, rotacija i odmahivanja, ove grupe uključuju simetrije poput __aviona za klizanje__ i __osi vijka__ (razmislite o pokretu prilikom odvrtanja boce).
+Osim translacija, refleksija, rotacija i kliznih zrcaljenja, ove grupe uključuju simetrije poput __klizanja ravnine__ i __zavijanja osi__ (usporedite s pokretom prilikom odvrtanja čepa na boci).
 
 ::: column(width=300)
 
     img(src="images/crystal.jpg" width=300 height=240)
 
-{.caption} Bor-nitrid ima svoje molekule raspoređene u ovoj kristalnoj rešetki koja ima trodimenzionalnu grupu simetrije.
+{.caption} Molekule bor-nitrida raspoređene su u ovoj kristalnoj rešetki koja ima trodimenzionalnu grupu simetrija.
 
 :::
 
@@ -1043,21 +1034,20 @@ Osim prijevoda, refleksija, rotacija i odmahivanja, ove grupe uključuju simetri
 > id: planets
 > sectionBackground: dark stars
 > section: physics
-> translated: auto
 
-Do sada su sve simetrije koje smo gledali bile _vizualne_ u nekom smislu: vidljivi oblici, slike ili obrasci. U stvari, simetrija može biti puno širi pojam: _imunitet na promjene_.
+Do sada su sve simetrije koje smo gledali bile _vizualne_ u nekom smislu: vidljivi likovi, slike ili obrasci. Zapravo, simetrija može biti puno širi pojam: _otpornost na promjenu_.
 
-Na primjer, ako volite sok od jabuke onoliko koliko volite sok od naranče, onda je vaša preferencija "simetrična" pod preobrazbom koja zamjenjuje jabuke i naranče.
+Na primjer, ako volite sok od jabuke onoliko koliko volite sok od naranče, onda je vaša preferencija "simetrična" za transformaciju koja zamjenjuje jabuke i naranče.
 
 Godine 1915. njemački matematičar [Emmy Noether](bio:noether) primijetio je da nešto slično vrijedi za [zakone prirode](gloss:laws-of-nature).
 
 ::: column.grow
 
-Na primjer, naše iskustvo govori nam da su zakoni Fizike jednaki svuda u svemiru. Nije važno je li eksperiment izveo u Londonu, New Yorku ili Marsu - zakoni fizike uvijek bi trebali biti isti. Na neki način imaju [[translacijsku simetriju|reflectional symmetry]].
+Na primjer, iskustvo nam govori da su zakoni fizike jednaki svuda u svemiru. Nije važno je li eksperiment proveden u Londonu, New Yorku ili na Marsu - zakoni fizike uvijek bi trebali biti isti. Na neki način oni imaju [[translacijsku simetriju|refleksivnu simetriju]].
 
-{.reveal(when="blank-0")} Slično tome, ne bi trebalo biti da provedemo eksperiment dok smo okrenuti sjeveru, jugu, istoku ili zapadu: zakoni prirode imaju [[rotacijsku simetriju|glide reflection symmetry]].
+{.reveal(when="blank-0")} Slično tome, trebalo bi biti svejedno da provodimo li eksperiment dok smo okrenuti prema sjeveru, jugu, istoku ili zapadu: zakoni prirode imaju [[rotacijsku simetriju|kliznu simetriju]].
 
-{.reveal(when="blank-1")} I na kraju, ne bi trebalo biti važno da li ćemo eksperiment provesti danas, sutra ili za godinu dana. Zakoni prirode su "vremenski simetrični".
+{.reveal(when="blank-1")} I na kraju, ne bi trebalo biti važno provodimo li eksperiment danas, sutra ili za godinu dana. Zakoni prirode su "vremenski simetrični".
 
 ::: column(width=300)
 
@@ -1068,13 +1058,13 @@ Na primjer, naše iskustvo govori nam da su zakoni Fizike jednaki svuda u svemir
 ---
 > id: planets-1
 
-Te „simetrije“ mogu se u početku činiti potpuno besmislenim, ali zapravo nam mogu reći puno o našem svemiru. Emmy Noether uspio je dokazati da svaka simetrija odgovara određenoj fizičkoj veličini koju je _sačuvano_.
+Ove „simetrije“ mogu se u početku činiti potpuno besmislenima, ali zapravo nam mogu reći puno o svemiru. Emmy Noether uspio je dokazati da svaka simetrija odgovara određenoj fizičkoj veličini koju je _očuvana_.
 
-Na primjer, vremenska simetrija podrazumijeva da se u našem svemiru mora čuvati __Energija__: energiju možete pretvoriti iz jedne vrste u drugu (npr. Svjetlost u električnu energiju), ali nikad ne možete stvoriti ili uništiti energiju. Ukupna količina energije u svemiru uvijek će ostati konstantna.
+Na primjer, vremenska simetrija podrazumijeva da se u našem svemiru mora očuvati __Energija__: energiju se može pretvariti iz jedne vrste u drugu (npr. svjetlost u električnu energiju), ali nikad se ne može stvoriti ili uništiti. Ukupna količina energije u svemiru uvijek će ostati konstantna.
 
     figure
       x-img(src="images/cern.jpg" width=760 height=400 credit="© CERN" alt="Large Hadron Collider in CERN")
-      p.caption CERN is the world’s largest particle accelerator. Scientists smash together fundamental particles at enormous speeds, to learn more about their properties. Can you see the person at the bottom, for size comparison?
+      p.caption CERN je najveći akcelerator čestica na svijetu. Znanstvenici sudaraju elementarne čestice pri nevjerojatnim brzinama kako bi naučili više o njihovim svojstvima. Za usporedbu veličine, vidite li osobu pri dnu fotografije?
 
 ::: column(width=220)
 
@@ -1083,28 +1073,27 @@ Na primjer, vremenska simetrija podrazumijeva da se u našem svemiru mora čuvat
 
 ::: column.grow
 
-Ispada da, samo znajući za simetriju, fizičari mogu izvući većinu prirodnih zakona koji upravljaju našim svemirom - bez da ikada moraju raditi eksperiment ili opažanje.
+Čini se da, poznajući simetriju, fizičari mogu izvesti većinu prirodnih zakona koji upravljaju našim svemirom - bez da ikada moraju raditi eksperiment ili opažati.
 
-Simetrija čak može predvidjeti postojanje temeljnih čestica. Jedan primjer je poznati __Higgs Boson__: predviđali su ga 1960-ih teorijski fizičari, ali nisu ga promatrali u stvarnom svijetu do 2012. godine.
+Simetrija čak može predvidjeti postojanje elementarnih čestica. Jedan od primjera je poznati __Higgsov Bozon__: teorijski fizičari predviđali su ga još 1960-ih, ali nisu ga uočili u stvarnom svijetu do 2012. godine.
 
 :::
 
 ---
 
-## Razredi
+## Homotetija
 
 > id: dilations
 > section: dilations
-> translated: auto
 
-Do sada smo samo gledali [[krute|congruent|visual]] transformacije. _{span.reveal(when="blank-0")} Razmislimo o onom koji nije: [__dilatacija__](gloss:dilation) mijenja veličinu oblika čineći ga većim ili manjim._
+Do sada smo samo gledali [[krute|kongruentne|vizualne]] transformacije. _{span.reveal(when="blank-0")} Razmislimo sada o transformaciji koja nije takva: [__homotetija__](gloss:dilation) mijenja veličinu lika čineći ga većim ili manjim._
 
 ---
 > id: dilations-1
 
 ::: column.grow
 
-Sve dilatacije imaju [__središte__](target:center) i [__faktor razmjera__](->.scale-target). Središte je referentne točke za faktor dilatacije i razmjera govori koliko se lik rasteže ili smanjuje. Ako je [faktor skaliranja](gloss:scale-factor) između 0 i 1, slika je [[manja|larger]] od originala. Ako je faktor skaliranja veći od 1, slika je [[veća|smaller]] od originala.
+Sve homotetije imaju [__središte__](target:center) i [__koeficijent homotetije__](->.scale-target). Središte je referentna točka, a koeficijent homotetije govori o tome koliko se lik povećava ili smanjuje. Ako je [koeficijent](gloss:scale-factor) između 0 i 1, slika je [[manja|veća]] od originala. Ako je koeficijent veći od 1, slika je [[veća|manja]] od originala.
 
 ::: column(width=300)
 
@@ -1130,7 +1119,7 @@ Sve dilatacije imaju [__središte__](target:center) i [__faktor razmjera__](->.s
 
 :::
 
-{.todo} DOLAZI - Više o dilatacijama
+{.todo} DOLAZI - Više o homotetiji
 
 ---
 
