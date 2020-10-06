@@ -13,13 +13,11 @@ integers:
   color: 22AB24
   level: Foundations
   sections:
-    # TODO Update Sections
-    - title: Commutative, Associative and Distributive Laws
-    - title: Order of Operations
+    - title: Arithmetic
     - title: The Number Line
-    - title: Arithmetic with Negative Numbers
-    - title: Properties of Zero
+    - title: Negative Numbers
     - title: Absolute Value
+    - title: Properties of Zero
     - title: Place Value
 
 divisibility:
@@ -63,18 +61,6 @@ percentages:
     - title: Interest
     - title: Ratios and Rates
 
-exponents:
-  title: Roots and Exponents
-  color: 0497B9
-  level: Foundations
-  sections:
-    # TODO Update Sections
-    - title: Square and Cube Roots
-    - title: Rational and Irrational Numbers
-    - title: Powers and Exponents
-    - title: Large and Small Numbers
-    - title: Scientific Notation
-
 shapes:
   title: Area and Shapes
   color: 0F82F2
@@ -107,38 +93,35 @@ algebra:
   color: FD8C00
   level: Foundations
   sections:
-    # TODO Update Sections
-    - title: Introduction
-    - title: Constants and Variables
+    - title: Proportional Relationships
+    - title: Graphs an Variables
     - title: Manipulating Expressions
     - title: Modelling
 
-proportional:
-  title: Proportional Relationships
+linear-equations:
+  title: Linear Equations
   color: F7750D
   level: Foundations
   sections:
-    # TODO Update Sections
-    - title: Introduction
-    - title: Direct and Inverse Proportion
-    - title: Graphing Proportional Relationships
-    - title: Constant of Proportionality
-
-linear-equations:
-  title: Linear Equations
-  color: F15E19
-  level: Foundations
-  sections:
-    - title: Reasoning with Tape Diagrams
     - title: Weighing and Balancing
-    - title: Manipulating Equations
+    - title: Tape Diagrams
     - title: Solving Linear Equations
     - title: Inequalities
 
 linear-functions:
   title: Linear Functions
+  color: F15E19
+  level: Foundations
+
+exponents:
+  title: Roots and Exponents
   color: EB4726
   level: Foundations
+  sections:
+    - title: Square and Cube Roots
+    - title: Rational and Irrational Numbers
+    - title: Powers and Exponents
+    - title: Scientific Notation
 
 basic-probability:
   title: Introduction to Probability
@@ -156,8 +139,6 @@ combinatorics:
       preview: /world/Combinatorics#permutations
     - title: Combinations
       preview: /world/Combinatorics#combinations
-    - title: Winning the Lottery
-      preview: /world/Combinatorics#lottery
 
 data:
   title: Data and Statistics
