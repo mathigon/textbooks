@@ -680,7 +680,7 @@ explains his idea for making the world a better place:
 The essence of Trevor’s idea is that, if everyone “pays it forward”, a single
 person can have a huge impact on the world:
 
-    figure: img(src="images/pay-it-forward.png" width=700 height=220)
+    figure: img.invert(src="images/pay-it-forward.png" width=700 height=220)
 
 Notice how the number of people at every step forms a [[geometric sequence|arithmetic
 sequence|triangle number]], _{span.reveal(when="blank-0")}with common ratio [[3]]:_
