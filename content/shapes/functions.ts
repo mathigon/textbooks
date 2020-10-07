@@ -737,16 +737,17 @@ export function currysParadox6($step: Step) {
 export function wheels($step: Step) {
   const $svg = $step.$('svg') as SVGParentView;
 
-  const wheels = [
+  type Wheel = {$el: SVGView, radius: number, distance: number};
+  $step.model['wheels'] = [
     {a: 'wheel-1', b: 50},
     {a: 'wheel-2', b: 75},
     {a: 'wheel-3', b: 100},
     {a: 'wheel-4', b: 125}
   ].map(({a, b}) => {
-    return {$el: $svg.$('.' + a) as SVGView, radius: b / 2};
+    return {$el: $svg.$('.' + a) as SVGView, radius: b / 2, distance: 0};
   });
 
-  wheels.forEach(wheel => {
+  $step.model['wheels'].forEach((wheel: Wheel) => {
     const startTopLeft = new Point(wheel.$el.bounds.left - $svg.bounds.left, wheel.$el.bounds.top - $svg.bounds.top);
     const startBottom = startTopLeft.shift(wheel.radius, (wheel.radius * 2));
 
@@ -763,15 +764,25 @@ export function wheels($step: Step) {
     const initOutline = new Circle(outlineInitCenter, wheel.radius);
 
     $outline.draw(initOutline);
+    let initDistance = 0;
     slide(wheel.$el, {
+      start: () => {
+        initDistance = wheel.distance;
+      },
       move: (posn, start, _) => {
-        const translate = new Point(clamp(posn.subtract(start).x, 0, 2 * Math.PI * wheel.radius), 0);
-        const rotate = translate.x / wheel.radius;
+        wheel.distance =
+          clamp(
+              posn.subtract(start).x + initDistance,
+              0,
+              2 * Math.PI * wheel.radius
+          );
+        const translate = new Point(wheel.distance, 0);
+        const rotate = wheel.distance / wheel.radius;
 
         wheel.$el.setTransform(translate, rotate);
 
-        const distance = translate.x + startBottom.x;
-        $distLine.draw(new Segment(startBottom, new Point(distance, startBottom.y)));
+        const distanceLine = wheel.distance + startBottom.x;
+        $distLine.draw(new Segment(startBottom, new Point(distanceLine, startBottom.y)));
 
         if (translate.x > 0) {
           const outlineCenter = outlineInitCenter.translate(translate);
