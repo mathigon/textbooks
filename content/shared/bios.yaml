@@ -1752,10 +1752,13 @@ penrose:
   born: 1931
   bio: |
     __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
-    who is known for his groundbreaking work in general relativity and cosmology
-    – often collaborating with other famous scientists like Stephen Hawking and
-    Michael Atiyah. He also discovered _Penrose Tilings_: self-similar,
-    non-periodic tessellations.
+    who is known for his groundbreaking work in general relativity and
+    cosmology. He also discovered _Penrose Tilings_: self-similar, non-periodic
+    tessellations using only two different tiles.
+
+    In 1988, he shared the _Wolf Prize_ with Stephen Hawking, and in 2020, he
+    received the Nobel Prize in physics for discoveries about the formation
+    of black holes.
   links:
     - title: Penrose Tilings
       url: /course/polyhedra/tessellations#penrose
