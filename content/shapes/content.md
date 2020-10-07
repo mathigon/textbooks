@@ -793,8 +793,10 @@ Traffic is a concern in cities around the world. In an attempt to keep traffic o
 
 #### Rome _{span.check(when="blank-0 blank-1")}_
 
-    figure: x-geopad(width=400 height=400).rome
-      svg
+    figure: .rome
+      x-geopad(width=400 height=400)
+        svg
+      button.btn.reset Reset
 
 Draw in a circle that covers the highway shown. _{span.reveal(when="rome-circle")}Draw in a diameter of the circle._ _{span.reveal(when="rome-diameter")}The distance around this road is [[64.37]] [[km | m | cm]]._
 
@@ -802,8 +804,10 @@ Draw in a circle that covers the highway shown. _{span.reveal(when="rome-circle"
 
 #### Moscow _{span.check(when="blank-2")}_
 
-    figure: x-geopad(width=400 height=400).moscow
-      svg
+    figure: .moscow
+      x-geopad(width=400 height=400)
+        svg
+      button.btn.reset Reset
 
 Draw in a circle that covers the highway shown. _{span.reveal(when="moscow-circle")}Draw in a radius of the circle._ _{span.reveal(when="moscow-radius")}The distance around this road is [[15.1]] km._
 
@@ -811,8 +815,10 @@ Draw in a circle that covers the highway shown. _{span.reveal(when="moscow-circl
 
 #### London _{span.check(when="blank-5")}_
 
-    figure: x-geopad(width=400 height=400).london
-      svg
+    figure: .london
+      x-geopad(width=400 height=400)
+        svg
+      button.btn.reset Reset
 
 Draw in a circle that covers the highway shown. _{span.reveal(when="london-circle")}The distance around this highway is about [[170]] km. If you instead wanted to drive straight across the circle through the center, this distance is [[54]] km._ _{span.reveal(when="blank-3 blank-4")}This distance is the [[diameter | radius ]] of the circle._
 

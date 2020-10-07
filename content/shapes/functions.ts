@@ -1234,8 +1234,10 @@ export function findingPi($step: Step) {
 }
 
 export function circularHighways($step: Step) {
-  const $geopadRome = $step.$('x-geopad.rome') as Geopad;
+  const $geopadRome = $step.$('.rome x-geopad') as Geopad;
   $geopadRome.switchTool('circle');
+
+  const $romeReset = $step.$('.rome button.reset');
 
   let romeCircle: null | Circle = null;
 
@@ -1275,8 +1277,16 @@ export function circularHighways($step: Step) {
     }
   });
 
-  const $geopadMoscow = $step.$('x-geopad.moscow') as Geopad;
+  $romeReset?.on('click', () => {
+    geopadReset($geopadRome);
+    romeCircle = null;
+  });
+
+  const $geopadMoscow = $step.$('.moscow x-geopad') as Geopad;
   $geopadMoscow.switchTool('circle');
+
+  const $moscowReset = $step.$('.moscow button.reset');
+
   let moscowCircle: null | Circle = null;
 
   $geopadMoscow.on('add:path', ({path}: {path: GeoPath}) => {
@@ -1303,8 +1313,15 @@ export function circularHighways($step: Step) {
     }
   });
 
-  const $geopadLondon = $step.$('x-geopad.london') as Geopad;
+  $moscowReset?.on('click', () => {
+    geopadReset($geopadMoscow);
+    moscowCircle = null;
+  });
+
+  const $geopadLondon = $step.$('.london x-geopad') as Geopad;
   $geopadLondon.switchTool('circle');
+
+  const $londonReset = $step.$('.london button.reset');
 
   let londonCircle: null | Circle = null;
 
@@ -1322,5 +1339,17 @@ export function circularHighways($step: Step) {
         new Point(londonCircle!.c.x, londonCircle!.c.y + londonCircle!.r)
     ));
     diameter.setLabel('54 km');
+    $londonReset?.setAttr('disabled', true);
   });
+
+  $londonReset?.on('click', () => {
+    geopadReset($geopadLondon);
+    londonCircle = null;
+  });
+}
+
+function geopadReset($pad: Geopad) {
+  $pad.paths.forEach(path => path.delete());
+  $pad.points.forEach(point => point.delete());
+  $pad.switchTool('circle');
 }
