@@ -1143,7 +1143,10 @@ export function radiiDiameters($step: Step) {
 
 export function diameterCircumference($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
-  const colours = ['red', 'blue', 'green'];
+
+  const $reset = $step.$('button.reset');
+
+  let colours = ['red', 'blue', 'green'];
   const drawn: { [x: string]: boolean; } = {};
   colours.forEach(c => drawn[c] = false);
 
@@ -1161,6 +1164,17 @@ export function diameterCircumference($step: Step) {
   progress.$el.css({stroke: 'none'});
 
   let pending: string | undefined;
+
+  $reset?.on('click', () => {
+    colours = ['red', 'blue', 'green'];
+    colours.forEach(c => {
+      drawn[c] = false;
+      $step.model[c] = new Polyline();
+      $step.model['progress'] = new Segment(lineStart.shift(0, 7.5), lineStart.shift(0, 7.5));
+      progress.$el.css({stroke: 'none'});
+    });
+    pending = undefined;
+  });
 
   slide($geopad.$svg, {
     start: (p: Point) => {

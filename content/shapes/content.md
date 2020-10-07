@@ -659,8 +659,10 @@ It takes [[4]] “diameters” of a square to wrap around a square and therefore
 Let’s find out!
 
     // INTERACTIVE-04: 'Wrapping' circumference (page 7)
-    figure: x-geopad(width=400 height=400)
-      svg
+    figure: .diameter-drawing
+      x-geopad(width=400 height=400)
+        svg
+      button.btn.reset Reset
 
 1. Draw a circle. 
 2. Drag the diameter outside of the circle and wrap it around the circumference. 
