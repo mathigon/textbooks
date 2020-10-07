@@ -737,33 +737,55 @@ export function currysParadox6($step: Step) {
 export function wheels($step: Step) {
   const $svg = $step.$('svg') as SVGParentView;
 
-  type Wheel = {$el: SVGView, radius: number, distance: number};
+  const outlineColor = 'red';
+  const outlineWidth = '3px';
+
+  const $reset = $step.$('button.reset');
+
+  type Wheel = {
+    $el: SVGView,
+    radius: number,
+    startBottom: Point,
+    initOutline: Circle,
+    $outline: SVGView,
+    distance: number,
+    $distLine: SVGView
+  };
+
   $step.model['wheels'] = [
     {a: 'wheel-1', b: 50},
     {a: 'wheel-2', b: 75},
     {a: 'wheel-3', b: 100},
     {a: 'wheel-4', b: 125}
   ].map(({a, b}) => {
-    return {$el: $svg.$('.' + a) as SVGView, radius: b / 2, distance: 0};
-  });
 
-  $step.model['wheels'].forEach((wheel: Wheel) => {
-    const startTopLeft = new Point(wheel.$el.bounds.left - $svg.bounds.left, wheel.$el.bounds.top - $svg.bounds.top);
-    const startBottom = startTopLeft.shift(wheel.radius, (wheel.radius * 2));
+    const $el = $svg.$('.' + a) as SVGView;
 
-    const outlineColor = 'red';
-    const outlineWidth = '3px';
+    const radius = b / 2;
+
+    const startTopLeft = new Point($el.bounds.left - $svg.bounds.left, $el.bounds.top - $svg.bounds.top);
+    const startBottom = startTopLeft.shift(radius, radius * 2);
 
     const $distLine = $N('path', {}, $svg) as SVGView;
     $distLine.css({stroke: outlineColor, 'stroke-width': outlineWidth});
 
     const $outline = $N('path', {}, $svg) as SVGView;
     $outline.css({stroke: outlineColor, 'stroke-width': outlineWidth, fill: 'none'});
-
-    const outlineInitCenter = startBottom.shift(0, -wheel.radius);
-    const initOutline = new Circle(outlineInitCenter, wheel.radius);
-
+    const initOutline = new Circle(startBottom.shift(0, -radius), radius);
     $outline.draw(initOutline);
+
+    return {
+      $el,
+      radius,
+      startBottom,
+      initOutline,
+      $outline,
+      distance: 0,
+      $distLine
+    };
+  });
+
+  $step.model['wheels'].forEach((wheel: Wheel) => {
     let initDistance = 0;
     slide(wheel.$el, {
       start: () => {
@@ -781,20 +803,29 @@ export function wheels($step: Step) {
 
         wheel.$el.setTransform(translate, rotate);
 
-        const distanceLine = wheel.distance + startBottom.x;
-        $distLine.draw(new Segment(startBottom, new Point(distanceLine, startBottom.y)));
+        const distanceLine = wheel.distance + wheel.startBottom.x;
+        wheel.$distLine.draw(new Segment(wheel.startBottom, new Point(distanceLine, wheel.startBottom.y)));
 
         if (translate.x > 0) {
-          const outlineCenter = outlineInitCenter.translate(translate);
+          const outlineCenter = wheel.initOutline.c.translate(translate);
           const outlineStart = outlineCenter.shift(0, wheel.radius);
           const outline = new Arc(outlineCenter, outlineStart, -rotate);
-          $outline.draw(outline.rotate(rotate, outlineCenter));
+          wheel.$outline.draw(outline.rotate(rotate, outlineCenter));
         } else {
-          $outline.draw(initOutline);
+          wheel.$outline.draw(wheel.initOutline);
         }
       }
     });
 
+  });
+
+  $reset?.on('click', () => {
+    $step.model['wheels'].forEach((wheel: Wheel) => {
+      wheel.distance = 0;
+      wheel.$el.setTransform(undefined, undefined);
+      wheel.$outline.draw(wheel.initOutline);
+      wheel.$distLine.draw(new Segment(wheel.startBottom, wheel.startBottom));
+    });
   });
 }
 

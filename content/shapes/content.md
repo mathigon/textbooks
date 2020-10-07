@@ -567,11 +567,13 @@ Let’s try to determine the number of laps the cars can go before a pit stop is
 
     // INTERACTIVE-01: Wheel distances (page 3)
 
-    figure: include svg/wheels.svg
+    figure: .wheel-distances
+      include svg/wheels.svg
+      button.btn.reset Reset
 
 ---
 
-The distance the vehicle travels in one revolution of the tire is the same as the distance [around | across] the tire. In general, distance around a shape is the [[perimeter | area]] of the shape. However, the perimeter of a circle has a unique name - the circumference.
+The distance the vehicle travels in one revolution of the tire is the same as the distance [[around | across]] the tire. In general, distance around a shape is the [[perimeter | area]] of the shape. However, the perimeter of a circle has a unique name - the circumference.
 
     // DIAGRAM: Tire and track
 
