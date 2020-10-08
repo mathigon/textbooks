@@ -140,6 +140,9 @@ What is a formula to get the new coordinates for A’? We can call our new x val
 
 These points form a [right triangle](target:tri1), so we can draw upon our knowledge of trigonometry to find the formulas for __x'__ and __y'__.
 
+{.fixme} Add label for theta.
+{.fixme} Dotted line between A and A'
+
 {.fixme} This might be confusing for theta > 90º
 
 Our [{.red}x'](target:xp) value is the opposite of the known angle, so we can use the formula for [sine](gloss:sin) to determine that:
@@ -243,8 +246,9 @@ We can use the formulas we calculated for rotations of __A__ and __B__ to find t
 When we divide the lengths of A and B from the respective coordinates in A' and B', we can get the formulas for the rotations of the unit vectors.
 
 {.fixme} What kind of notation should we use? Unit Vectors? Points? 
+{.fixme} clarify--- 1, 0 rotated thru theta becomes: , and (0,1)... etc
 
-`(1, 0)` becomes `(sinθ, -cosθ)` and `(0, 1)` becomes `(cosθ, sinθ)`.
+`(1, 0)` rotates through `θ` to become `(cosθ, sinθ)` and `(0, 1)` becomes rotates through `θ` to become `(-sinθ, cosθ)`.
 
 ---
 
@@ -281,6 +285,9 @@ This matrix has 2 rows and 2 columns so it is a 2x2 matrix, but they can be any 
 
 
 **We can rewrite our calculations for the coordinates `x'` and `y'` in the following way:**
+
+{.fixme} Re-write as a plus and a minus.
+{.fixme} "xy" is the input values, 4 things are the transformation (do the function box notation).
 
 {.text-center}`§[[x'] [y']]` = `§[[cosθ (-sinθ)] [sinθ cosθ]]` x `§[[pill(x, "teal")] [pill(y, "purple")]]` = `§[[(pill(x, "teal", "x", "x") * cosθ - pill(y, "purple") * sinθ)] [(pill(x, "teal") * sinθ + pill(y, "purple") * cosθ)]]`
 
