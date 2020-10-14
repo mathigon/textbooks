@@ -542,8 +542,25 @@ discriminant:
 
 distributive:
   title: Distributive Property
-  text: An operation • is __distributive__ over another operation * if `a•(b*c) = a•b * a•c`. For example,
-    multiplication (×) of numbers is distributive over addition (+).
+  text: An operation • is __distributive__ over another operation * if
+    `a•(b*c) = a•b * a•c`. For example, multiplication (×) of numbers is
+    distributive over addition (+).
+
+divisibility-tests:
+  title: Divisibility Tests
+  text: |
+    __Divisibility tests__ can help you quickly decide whether a number is
+    divisibile by another.
+
+    * A number is divisible by __2__ if is even.
+    * A number is divisible by __3__ if its sum of digits is divisible by 3.
+    * A number is divisible by __4__ if its last two digits are divisible by 4.
+    * A number is divisible by __5__ if its last digit is a 0 or a 5.
+    * A number is divisible by __6__ if it is divisible by both 3 and 4.
+    * _There is no easy divisibility test for 7._
+    * A number is divisible by __8__ if its last three digits are divisible by 8.
+    * A number is divisible by __9__ if its sum of digits is divisible by 9.
+    * A number is divisible by __10__ if its last digit is a 0.
 
 dna:
   title: DNA
@@ -1745,6 +1762,12 @@ tetrahedron:
   text: The __tetrahedron__ is a Platonic solid and consists of four faces that
     are equilateral triangles. It has four vertices and six edges.
   link: /course/polyhedra/platonic#platonic-overview
+
+tetris:
+  title: Tetris
+  text: __Tetris__ is a popular video game that was first published in 1984.
+    Players have to move falling tetrominoes (shapes consisting of four
+    connected squares) to complete entire rows.
 
 theorem:
   title: Theorem

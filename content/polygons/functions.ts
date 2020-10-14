@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Point} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {Geopad, Step} from '../shared/types';
 
 

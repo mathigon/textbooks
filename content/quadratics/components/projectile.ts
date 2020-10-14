@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Line, Point} from '@mathigon/fermat';
+import {Line, Point} from '@mathigon/euclid';
 import {$N, animate, CustomElementView, register, slide, SVGView} from '@mathigon/boost';
 
 

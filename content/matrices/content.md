@@ -1,11 +1,11 @@
-## Matrices as Transformations
+# Matrices
+
+## Transformations
 
 > section: transformations
 > sectionStatus: dev
 > id: intro
 > goals: projectile
-
-{.todo} IN PROGRESS
 
 When we play video games with 3d graphics, what we are really looking at are millions of tiny triangles. Everything from the mountains and grass that make up the environment, to the goblins that guard the precious treasure, to the spaceship that you pilot through an asteroid belt, is made up of many small triangles. The computer in your video game console runs trillions of computations to figure out how each shape will be displayed on the screen.
 
@@ -107,10 +107,9 @@ Let's start by calculating this formula for two different points.
 [Continue](btn:next)
 
 ---
+> id: two-points
 
 ### Calculating the rotation of two points
-
-> id: two-points
 
 For our two points, let's pick [{.green} A](target:a) = `(0,3)` and [{.green} B](target:b) = `(2,0)`. We can determine the formulas for their rotation [{.purple} θ](target:theta) around the origin one at a time.
 
@@ -192,7 +191,6 @@ Our [{.yellow}y'](target:yp) value is the opposite side of the known angle, so w
 
 
 ---
-
 > id: linear-combination
 
 ::: column
@@ -269,9 +267,9 @@ Notice that both x' and y' are dependent on [{.teal}x](target:x) and [{.purple}y
 [Continue](btn:next)
 
 ---
+> id: matrices
 
 #### Matrices
-> id: matrices
 
 Mathematicians came up with a very powerful concept called a [matrix](gloss:matrix), that can help us write this in a new way. A matrix is like a spreadsheet table, with cells each containing their own numbers.
 
@@ -345,10 +343,9 @@ This is a [matrix multiplication](gloss:matrix-multiplication), wherein we multi
 [Continue](btn:next)
 
 ---
+> id: identity
 
 #### Identity Matrix
-
-> id: identity
 
 What if for our matrix, we wrote this instead? 
 
@@ -494,6 +491,180 @@ Of course, matrices can have any values in them, and thus can transform in many 
 :::
 
 ---
+> id: play-with-me
+
+Try adjusting the values in the matrix and see what kind of transformations you can make!
+
+    // try w/ grid on or off, to compare underlying grid w/ transformation
+    - var GRID = 8
+    x-geopad(width=400 x-axis=`-${GRID},${GRID},1` y-axis=`-${GRID},${GRID},1` grid padding=5): svg
+      circle.green.move(name="ipoint" x="point(1,0)" target="i")
+      circle.blue.move(name="jpoint" x="point(0,1)" target="j")
+      circle(name="origin", x="point(0,0)")
+
+
+        // right values for these? Ideally we'd show to "infinity", but this might render slowly?
+      - var MINMAX = GRID*2
+      - for (var b=-MINMAX; b <=MINMAX; ++b)
+        // .fabric as in "fabric of reality"
+        // can also try class ".grid" for default grid
+        path.fabric(x=`line(point(${b}*jpoint.x, ${b}*jpoint.y), point(ipoint.x + ${b}*jpoint.x, ipoint.y + ${b}*jpoint.y))`)
+        path.fabric(x=`line(point(${b}*ipoint.x, ${b}*ipoint.y), point(${b}*ipoint.x + jpoint.x, ${b}*ipoint.y + jpoint.y))`)
+
+      - var DRAW_SHIP = false
+      - var SPACESHIP = [[3,0], [0,3], [-3,0], [-3,-3], [0,-1], [3,-3]]
+      if DRAW_SHIP
+        each p,i in SPACESHIP
+          circle.red(name=`s${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          path.red(x=`segment(s${i}, s${(i+1)%SPACESHIP.length})`)
+
+      - var DRAW_BOAT = true
+      - var BOAT_RED = [[0.25,-2.5], [6.5,-2.5], [0.25,7]]
+      - var BOAT_PURPLE = [[-0.25,-1.5], [-4.25,-1.5], [-0.25,7]]
+      - var BOAT_ORANGE = [[0,5], [0,7.5], [-3.75,6.25]]
+      - var BOAT_GREEN = [[7, -4], [5,-6], [-5,-6], [-7,-4]]
+      - var BOAT_GRAY = [[-0.25,-4],[0.25,-4],[0.25,7],[-0.25,7]]
+      if DRAW_BOAT
+        - var gray = BOAT_GRAY.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+        path.fill.gray(x=`polygon(${gray})` label-class="gray")
+        - var red = BOAT_RED.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+        path.fill.red(x=`polygon(${red})` label-class="red")
+        - var purple = BOAT_PURPLE.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+        path.fill.purple(x=`polygon(${purple})` label-class="purple")
+        - var orange = BOAT_ORANGE.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+        path.fill.orange(x=`polygon(${orange})` label-class="orange")
+        - var green = BOAT_GREEN.map(p => `point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`).join(',')
+        path.fill.green(x=`polygon(${green})` label-class="green")
+
+
+        // each p,i in BOAT_GRAY
+          // circle.gray(name=`bgy${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          // path.gray(x=`segment(bgy${i}, bgy${(i+1)%BOAT_GRAY.length})`)
+          
+        // each p,i in BOAT_RED
+          // circle.red(name=`brd${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          // path.red(x=`segment(brd${i}, brd${(i+1)%BOAT_RED.length})`)
+        // each p,i in BOAT_PURPLE
+          // circle.purple(name=`bpp${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          // path.purple(x=`segment(bpp${i}, bpp${(i+1)%BOAT_PURPLE.length})`)
+        // each p,i in BOAT_ORANGE
+          // circle.orange(name=`bor${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          // path.orange(x=`segment(bor${i}, bor${(i+1)%BOAT_ORANGE.length})`)
+        each p,i in BOAT_GREEN
+          circle.green(name=`bgn${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
+          // path.green(x=`segment(bgn${i}, bgn${(i+1)%BOAT_GREEN.length})`)
+
+      path.green(x="segment(point(0,0),ipoint)", label="i", target="i")
+      path.blue(x="segment(point(0,0),jpoint)", label="j", target="j")
+
+
+
+Here we display the [i](target:i) and [j](target:j) unit vectors.
+Inside the matrix we have i = (${ipoint.x}, ${ipoint.y}) and j = (${jpoint.x}, ${jpoint.y})
+
+Choose one of these buttons to snap to different transformations.
+
+    .button IDENTITY
+    .button SHEAR
+    .button SCALE
+    .button ROTATE
+    .button LINE
+
+[Continue](btn:next)
+
+---
+> id: gpu
+
+{.todo} How does this relate to video games?
+
+Video games can manipulate and millions of shapes per second with use of a __Graphical Processing Unit__ (GPU). GPUs are specially designed to perform many matrix multiplications at once. 
+
+[Continue](btn:next)
+
+---
+> id: translate
+
+You may have noticed we have not discussed one type of transformation. We cannot move our shapes through space! To transform our shapes so they are centered anywhere but the origin, we need a special kind of matrix called a __Translation Matrix__.
+
+{.text-center} `§[[1 0 dx] [0 1 dy] [0 0 1]]`
+
+We add an extra row and column to our 2x2 matrix, and we add an extra row to our vector (which will not change).
+
+The factor [dx](target:dx) will be multiplied by [1](target:bottom1) and added to the final [x'](target:xprime) value.
+The factor [dy](target:dy) will be multiplied by [1](target:bottom1) and added to the final [y'](target:xprime) value.
+
+{.text-center} `§[[1 0 dx] [0 1 dy] [0 0 1]]` x `§[[x] [y] [1]]` = `§[[(x + dx)] [(y + dy)] [1]]`
+
+{.fixme} Focus effects.
+
+{.todo} Possibly an interactive like ncase?
+
+[Continue](btn:next)
+
+
+---
+> id: three-d
+
+Matrices do not have to represent transformations in 2 dimensions. They can also exist in 3 or higher dimensions.
+
+This is the identity matrix for three dimensions
+
+{.text-center} `§[[1 0 0] [0 1 0] [0 0 1]]` x `§[[x] [y] [z]]` = `§[[x] [y] [z]]`
+
+{.todo} An interaction with a 3d transformation.
+
+[Continue](btn:next)
+
+
+---
+> id: mathigon-matrix
+
+Let's mess around with the Mathigon Logo!
+
+    svg(width=220 height=220)
+      +grid220
+      g.var.mathigon.red(:html="polygonTransform(m1a, m1b, m1c, m1d, 'red')")
+      g.var.mathigon.green(:html="polygonTransform(m2a, m2b, m2c, m2d, 'green')")
+      g.var.mathigon.yellow(:html="polygonTransform(m3a, m3b, m3c, m3d, 'yellow')")
+      g.var.mathigon.blue(:html="polygonTransform(m4a, m4b, m4c, m4d, 'blue')")
+
+
+<table>
+  <tr>
+    <td>
+      <table>
+        <tr><td>${m1a}{m1a|1|-2.0,2.0,0.1}</td><td>${m1b}{m1b|0.0|-2.0,2.0,0.1}</td></tr>
+        <tr><td>${m1c}{m1c|0.0|-2.0,2.0,0.1}</td><td>${m1d}{m1d|1|-2.0,2.0,0.1}</td></tr>
+      </table>
+    </td>
+    <td>
+      <table class="green">
+        <tr><td>${m2a}{m2a|1|-2.0,2.0,0.1}</td><td>${m2b}{m2b|0.0|-2.0,2.0,0.1}</td></tr>
+        <tr><td>${m2c}{m2c|0.0|-2.0,2.0,0.1}</td><td>${m2d}{m2d|1|-2.0,2.0,0.1}</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table class="yellow">
+        <tr><td>${m3a}{m3a|1|-2.0,2.0,0.1}</td><td>${m3b}{m3b|0.0|-2.0,2.0,0.1}</td></tr>
+        <tr><td>${m3c}{m3c|0.0|-2.0,2.0,0.1}</td><td>${m3d}{m3d|1|-2.0,2.0,0.1}</td></tr>
+      </table>
+    </td>
+    <td>
+      <table class="blue">
+        <tr><td>${m4a}{m4a|1|-2.0,2.0,0.1}</td><td>${m4b}{m4b|0.0|-2.0,2.0,0.1}</td></tr>
+        <tr><td>${m4c}{m4c|0.0|-2.0,2.0,0.1}</td><td>${m4d}{m4d|1|-2.0,2.0,0.1}</td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+{.todo} Possible Activities: switch Orange and Green, reflect/scale the whole thing, make shapes.
+
+
+----------------------------------------------------------------------------------------------------
+
 
 > id: play-with-me
 
@@ -676,8 +847,10 @@ Let's mess around with the Mathigon Logo!
 
 ## Matrix Arithmetic
 
-### Matrix Multiplication
 > id: multiplication
+> section: arithmetic
+
+### Matrix Multiplication
 
 We learned in the last chapter that matrices can represent linear transformations. However, there are many other things that matrices can represent! Also, matrices do not always have to be [square matrices](gloss:square-matrix), but can have many different dimensional values. Let's explore this with a hypothetical scenario.
 
@@ -747,9 +920,10 @@ What we have just done is [matrix multiplication](gloss:matrix-multiplication).
     div =
     figure: img(src="images/proto-2/matrix-1-frn-res-full.png" width=200)
 
-#### Formal definition of Matrix Multiplication
-
+---
 > id: formal-definition
+
+#### Formal definition of Matrix Multiplication
 
 The formal defintion for matrix multiplication is as follows:
 
@@ -775,9 +949,10 @@ We are now attempting to multiply a `4x3` matrix by a `2x3` matrix, but we don't
 
 {.fixme} Could end section with a simple checkmark multiple choice, for which multiplications are possible.
 
+---
+> id: matrix-factorisation
 
 #### Matrix Factorisation
-> id: matrix-factorisation
 
 This type of matrix is used in all sorts of online recommender systems. Movies can be categorized by their genres like Comedy, Action, Romance, or Horror. Songs can be categorized into genres with ever-increasing specificity like Rock, Classical, Pop, Rap, Electro-Funk, Indie Folk, or Norwegian Black Metal. When you watch a movie on Netflix, or listen to a song on Spotify, there's likely a very large matrix somewhere, remembering your taste!
 
@@ -788,11 +963,9 @@ However, this process is slightly different from what we did above. The company 
 [Continue](btn:next)
 
 ---
+> id: multiply-transformations
 
 ### Multiplying Linear Transformations
-
-> section: multiply-transformations
-> id: multiply-transformations
 
     mixin ij(i, j, label)
       .cube(i=i j=j)
@@ -839,7 +1012,6 @@ This works for all rotation values:
 
 ---
 > id: transforms-calculator
-> title: Transformation Calculator
 > goals: calculate
 
 What about other types of transformations?
@@ -881,11 +1053,9 @@ What about other types of transformations?
         +ij([1,0], [0,1/2], "Scale y by 1/2")
 
 ---
+> id: matrix-addition
 
 ### Matrix Addition
-> section: matrix-addition
-> sectionStatus: dev
-> id: matrix-addition
 
 Matrices can also be added. Matrix addition does not happen very often, but it is very simple to learn.
 
@@ -899,7 +1069,6 @@ We write matrix arithmetic just as you might expect:
 
 Add these two matrices!
 
-<p>
 <div class="addition">
   <table class="add">
     <tr>
@@ -946,18 +1115,15 @@ Add these two matrices!
     </tr>
   </table>
 </div>
-</p>
 
 Great.
 
 This code could be a lot simpler! And why is this not going below the tables?
 
 ---
+> id: scalar-multiplication
 
 ### Scalar Multiplication
-> section: matrix-multiplication
-> id: scalar-multiplication
-> sectionStatus: dev
 
 Another operation we can perform with a matrix is __scalar multiplication__. A __scalar__ is what we call a real number in matrix and vector arithmetic.
 
@@ -967,7 +1133,6 @@ We write scalar multiplication as
 
 Scalar multiplication is as simple as multiplying every cell in a matrix `A` times a scalar `s`.
 
-<p>
 <div class="scalar">
   <div class="scm s">2</div>
 
@@ -1003,14 +1168,13 @@ Scalar multiplication is as simple as multiplying every cell in a matrix `A` tim
     </tr>
   </table>
 </div>
-</p>
 
 Note that while it is possible to add two matrices, and to multiply a matrix by a scalar, the operation of adding a scalar to a matrix is __not defined__.
 
 ---
+> id: arith-properties
 
 ### Properties of Matrix Arithmetic
-> id: arith-properties
 
 Recall operators like addition and multiplication, and how it's useful to think about their properties. Commutative, distributive, and associative properties.
 
@@ -1081,18 +1245,13 @@ Is matrix multiplication [distributive](gloss:distributive) over matrix addition
 :::
 
 
----
+----------------------------------------------------------------------------------------------------
+
 
 ## Determinants
 
 > section: determinants
 > sectionStatus: dev
-> id: det-intro
-
-{.todo} COMING SOON - When we look at matrices as linear transformations, we can notice some things about how each transformation changes space.
-
----
-
 > id: determinants
 
 Watch the area change.
@@ -1132,20 +1291,17 @@ Choose one of these buttons.
     .button LINE
 
 ---
-
 > id: examples
 
 {.todo} Demonstrate how basic transformations effect the determinant
 {.todo} Demonstrate possible values: less than 1, greater than 1, negative, zero
 
 ---
-
 > id: zero-det
 
 {.todo} Matrices can have a determinant of zero. What does this mean?
 
 ---
-
 > id: det-formula
 
 The formula for the determinant of a 2x2 matrix is:
@@ -1198,12 +1354,13 @@ Let's see why this is true geometrically.
 {.fixme} Could do an animation that shows how the triangles fit together, like in Pythagoras.
 
 ---
-
 > id: nonsquare
 
 {.todo} Determinants only exist for square matrices.
 
----
+
+----------------------------------------------------------------------------------------------------
+
 
 ## Matrix Inverses
 
@@ -1212,7 +1369,9 @@ Let's see why this is true geometrically.
 
 {.todo} COMING SOON
 
----
+
+----------------------------------------------------------------------------------------------------
+
 
 ## Cramer’s Rule and Gaussian Elimination
 
@@ -1221,7 +1380,9 @@ Let's see why this is true geometrically.
 
 {.todo} COMING SOON
 
----
+
+----------------------------------------------------------------------------------------------------
+
 
 ## Eigenvalues and Eigenvectors
 

@@ -6,7 +6,8 @@
 
 import {$N, CustomElementView, register, SVGParentView} from '@mathigon/boost';
 import {Color, flatten} from '@mathigon/core';
-import {Point, Polygon, primeFactorisation} from '@mathigon/fermat';
+import {primeFactorisation} from '@mathigon/fermat';
+import {Point, Polygon} from '@mathigon/euclid';
 import {RED} from '../../shared/constants';
 
 

@@ -5,7 +5,8 @@
 
 
 import {Color, wait} from '@mathigon/core';
-import {numberFormat, Point, Random, Rectangle} from '@mathigon/fermat';
+import {numberFormat, Random} from '@mathigon/fermat';
+import {Point, Rectangle} from '@mathigon/euclid';
 import {$N, Observable} from '@mathigon/boost';
 import {Slideshow, Step} from '../shared/types';
 import {DotMachine} from './components/dot-machine';

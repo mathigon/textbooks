@@ -1660,6 +1660,25 @@ noether:
     - title: Symmetry in Physics
       url: /course/transformations/physics
 
+nunes:
+  name: Pedro Nunes
+  born: 1502
+  died: 1578
+  bio: |
+    __Pedro Nunes__ (1502 – 1578) was a Portuguese mathematician and astronomer.
+    As _Royal Cosmographer of Portugal_ he taught navigational skills to many
+    sailors and explorers.
+
+    Nunes first noticed that if a ship always follows the same compass bearing,
+    it won’t travel on a straight line or great circle. Instead, it will follow
+    a path called a _rhumb line_ or _loxodrome_, which spirals towards the
+    North or South pole.
+
+    Nunes also tried to calculate which day in the hear has the fewwest hours
+    of sunlight, he disproved previous attempts to solve classical geometry
+    problems like trisecting an angle, and he invented a system for measuring
+    fractional parts of angles.
+
 oresme:
   born: 1323
   died: 1382
@@ -1733,10 +1752,13 @@ penrose:
   born: 1931
   bio: |
     __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
-    who is known for his groundbreaking work in general relativity and cosmology
-    – often collaborating with other famous scientists like Stephen Hawking and
-    Michael Atiyah. He also discovered _Penrose Tilings_: self-similar,
-    non-periodic tessellations.
+    who is known for his groundbreaking work in general relativity and
+    cosmology. He also discovered _Penrose Tilings_: self-similar, non-periodic
+    tessellations using only two different tiles.
+
+    In 1988, he shared the _Wolf Prize_ with Stephen Hawking, and in 2020, he
+    received the Nobel Prize in physics for discoveries about the formation
+    of black holes.
   links:
     - title: Penrose Tilings
       url: /course/polyhedra/tessellations#penrose
