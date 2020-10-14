@@ -5,78 +5,30 @@
 
 
 /// <reference types="THREE"/>
+import {wait} from '@mathigon/core';
 import {Matrix} from '@mathigon/fermat';
-import {Angle, Point} from '@mathigon/euclid';
-import {ElementView, ScreenEvent} from '@mathigon/boost';
+import {Angle, ORIGIN, Point} from '@mathigon/euclid';
+import {ElementView, ScreenEvent, svgPointerPosn} from '@mathigon/boost';
 import {Geopad, Step} from '../shared/types';
 
 
-/**
- * Given a Geopad and PointerEvent, calculate the Angle between y-axis and mouse point
- *
- * @param $geo Geopad position
- * @param event PointerEvent (for x and y)
- */
-function mouseToGeopad($geo: Geopad, event: PointerEvent): Angle {
-  const p1 = $geo.toPlotCoords(
-      new Point(
-          event.clientX - $geo.topLeftPosition.x,
-          event.clientY - $geo.topLeftPosition.y));
-
-  return new Angle(new Point(0, 3), new Point(0, 0), p1);
-}
-
-/**
- * Animate a shot emanating from the spaceship.
- *
- * @param $geo Geopad
- * @param index which (recycled) shot is fired
- * @param angle angle at which to fire
- */
-function fireShot($geo: Geopad, index: number, angle: number) {
-  const shots = $geo.$$('.shot');
-  shots[index].show(); // this doesn't really do anything...
-
-  const SHOT_TIME = 750;
-  const MAX_RADIUS = 30; // approximated from sqrt(2*20^2)
-
-  const aimAt = new Point(
-      MAX_RADIUS * Math.cos(angle + Math.PI / 2),
-      MAX_RADIUS * Math.sin(angle + Math.PI / 2)
-  );
-
-  const origin = new Point(0, 0);
-
-  $geo.animatePoint(`s${index}`, aimAt, SHOT_TIME);
-  setTimeout(() => {
-    $geo.animatePoint(`s${index}`, origin, 1);
-    shots[index].hide();
-  }, SHOT_TIME);
-}
-
-export function intro($step: Step) {
+export function rocket($step: Step) {
   const $geo = $step.$('x-geopad') as Geopad;
-  const shots = $geo.$$('.shot') as ElementView[];
-  shots.forEach(s => s.hide()); // doesn't matter since they blend in.
+  $step.model.th = 0;
 
-  let shotIndex = 0;
-  $step.model.th = 0; // initialize here
-
-  $geo.on('click', () => {
+  $geo.on('click', async () => {
+    const $p = $geo.drawPoint(ORIGIN, {classes: 'green shot'});
+    const angle = $step.model.th + Math.PI / 2;
+    const target = new Point(30 * Math.cos(angle), 30 * Math.sin(angle));
+    $geo.animatePoint($p.name, target, 750);
+    await wait(750);
+    $p.delete();
     $step.score('projectile');
-
-    fireShot($geo, shotIndex, $step.model.th);
-    shotIndex = (shotIndex + 1) % shots.length;
   });
 
   $geo.on('pointermove', (e: ScreenEvent) => {
-
-    if (e instanceof PointerEvent && e.pointerType === 'mouse') {
-      const ev = e as PointerEvent;
-      const angle: Angle = mouseToGeopad($geo, ev);
-
-      $step.model.th = angle.rad;
-    }
+    const p = $geo.toPlotCoords(svgPointerPosn(e, $geo.$svg));
+    $step.model.th = new Angle(new Point(0, 3), ORIGIN, p).rad;
   });
 }
 

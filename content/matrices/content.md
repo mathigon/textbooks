@@ -4,27 +4,22 @@
 
 > section: transformations
 > sectionStatus: dev
-> id: intro
+> id: rocket
 > goals: projectile
+
+::: column.grow
 
 When we play video games with 3d graphics, what we are really looking at are millions of tiny triangles. Everything from the mountains and grass that make up the environment, to the goblins that guard the precious treasure, to the spaceship that you pilot through an asteroid belt, is made up of many small triangles. The computer in your video game console runs trillions of computations to figure out how each shape will be displayed on the screen.
 
+::: column.fit
+
+    x-geopad(width=400 x-axis="-18,18,5" y-axis="-18,18,5" padding=5): svg
+      - var path = "point(0,3),point(2,0),point(2,-2),point(0,-1),point(-2,-2),point(-2,0)"
+      path.fill.green(x=`polygon(${path}).rotate(th)`)
+
+:::
+
 What kind of computations is our computer performing? Before we try displaying intricate three-dimensional landscapes and characters, let's imagine we want to draw a 2d spaceship that we can rotate to shoot incoming asteroids.
-
-    x-geopad(width=400 x-axis="-20,20,5" y-axis="-20,20,5" padding=5): svg
-      - var points = [[0,3], [2,0], [2,-2], [0,-1], [-2,-2], [-2,0]];
-
-      circle.green.shot(name="s0", x="point(0,0)")
-      circle.green.shot(name="s1", x="point(0,0)")
-      circle.green.shot(name="s2", x="point(0,0)")
-      circle.green.shot(name="s3", x="point(0,0)")
-      circle.green.shot(name="s4", x="point(0,0)")
-      circle.green.shot(name="s5", x="point(0,0)")
-      circle.green.shot(name="s6", x="point(0,0)")
-      circle.green.shot(name="s7", x="point(0,0)")
-
-      - var path = points.map(p => `point(${p[0]},${p[1]}).rotate(th)`).join(',')
-      path.fill.green(x=`polygon(${path})` label-class="gray")
 
 ---
 
