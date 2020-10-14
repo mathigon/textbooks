@@ -697,7 +697,7 @@ _风筝_ 这个名字显然来自其形状：看起来就像你可以在空中�
 
 {.reveal(when="draw-1")}你能看出左侧[缺少的三角形](target:triangle-1)[[精确的等于|小于|大于]]右侧[{.green}重叠的三角形](target:triangle-2)么？ _{span.reveal(when="blank-1")}因此，平行四边形的面积为_ 
 
-{.text-center.reveal(when="blank-1")} 面积 = __{.i.m-green}基数__ × __{.i.m-yellow}高度__ 
+{.text-center.reveal(when="blank-1")} 面积 = __{.i.m-green}底边__ × __{.i.m-yellow}高度__ 
 
 {.reveal(when="blank-1" delay=1000)} _测量平行四边形的高度时要小心：它通常与两边的边长不同。_ 
 
@@ -815,7 +815,7 @@ _{button.next-step.reveal(when="blank-3")}继续_
 {.reveal(when="blank-6 blank-7")}这意味着要找到菱形的面积，我们可以将其方程式用平行四边形的面积公式表示，也可以用风筝形的面积公式表示： 
 
 {.text-center.reveal(when="blank-6 blank-7")} _面积_ =
-[{.i.blue}base](target:base) × [{.i.red}height](target:height) = `1/2`
+[{.i.blue}底边](target:base) × [{.i.red}高](target:height) = `1/2`
 [{.i.green}d1](target:d41) × [{.i.yellow}d2](target:d42). 
 
 {.reveal(when="blank-6 blank-7" delay=1000)} _在不同的情况下，可能会提供给你菱形的不同部分信息(边长，高度，对角线长度），你应该选择最方便的方程式来计算面积。_ 
@@ -913,8 +913,12 @@ _{button.next-step.reveal(when="blank-3")}继续_
     x-img(credit="© M. C. Escher", src="images/tessellations/escher.jpg", width="200", height="200")
 
 {.caption} _爬行动物平面规则划分的研究_ 
-
 :::
+
+    // TODO Carbon Nanotube
+    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
+    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
+    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
 
 ---
 > id: tessellation-drawing
@@ -1530,7 +1534,7 @@ __立方体__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
-_{span.dual(target="dual1")} [[6]]个面 
+_{span.dual(target="dual1")} [[6]]个面_ 
 _{span.dual(target="dual1")} [[8]]个顶点_  
 _{span.dual} [[12]]条边_  
 
@@ -1540,7 +1544,7 @@ __八面体__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
-_{span.dual(target="dual1")} [[8]]个面 
+_{span.dual(target="dual1")} [[8]]个面_
 _{span.dual(target="dual1")} [[6]]个顶点_  
 _{span.dual} [[12]]条边_  
 
@@ -1550,7 +1554,7 @@ __十二面体__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
-_{span.dual(target="dual2")} [[12]]个面 
+_{span.dual(target="dual2")} [[12]]个面_ 
 _{span.dual(target="dual2")} 20个顶点_  
 _{span.dual} 30条边_ 
 
@@ -1560,7 +1564,7 @@ __二十面体__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
-_{span.dual(target="dual2")} [[20]]个面 
+_{span.dual(target="dual2")} [[20]]个面_ 
 _{span.dual(target="dual2")} 12个顶点_  
 
 _{span.dual} 30条边_ 
@@ -1595,7 +1599,7 @@ _{span.dual} 30条边_
 
     figure
       img(src="images/elements.jpg" width=600 height=153)
-      p.caption Images from Johannes Kepler’s book “Harmonices Mundi” (1619)
+      p.caption 图片来自约翰内斯·开普勒的《和谐世界》(1619)
 
 ---
 
@@ -1625,7 +1629,7 @@ _{span.dual} 30条边_
 
     x-polyhedron(size=170 shape="TruncatedCube")
 
-{.caption} __截头立方体__  
+{.caption} __截断的立方体__  
 14个面，24个顶点，36个边
 
 ::: column(width=170)
@@ -1776,12 +1780,12 @@ _{span.dual} 30条边_
 ::: column(width=180)
 
     x-img(lightbox width="180", height="180", src="images/football.jpg")
-    p.caption Football
+    p.caption 足球
 
 ::: column(width=180)
 
     x-img(lightbox width="180", height="180", src="images/dice.jpg")
-    p.caption Polygonal role-playing dice
+    p.caption 用于角色扮演游戏的多面体骰子
 
 ::: column.grow
 
