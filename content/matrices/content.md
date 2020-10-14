@@ -1,6 +1,6 @@
 # Matrices
 
-## Matrices as Transformations
+## Transformations
 
 > section: transformations
 > sectionStatus: dev

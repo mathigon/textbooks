@@ -97,7 +97,6 @@ function createEdges(geometry: THREE.Geometry, material: THREE.Material, maxAngl
 // -----------------------------------------------------------------------------
 // Custom Element
 
-// DIAGRAM lots of useful stuff in here.
 @register('x-solid')
 export class Solid extends CustomElementView {
   private isReady = false;
@@ -181,7 +180,6 @@ export class Solid extends CustomElementView {
     };
   }
 
-  // DIAGRAM gonna need a couple arrows
   addArrow(from: Vector, to: Vector, color = STROKE_COLOR) {
     const material = new THREE.MeshBasicMaterial({color});
     const obj = new THREE.Object3D() as Object3D;
@@ -206,33 +204,6 @@ export class Solid extends CustomElementView {
       q.setFromUnitVectors(new THREE.Vector3(0, 1, 0), v);
       obj.setRotationFromQuaternion(q);
       obj.position.set((f[0] + t[0]) / 2, (f[1] + t[1]) / 2, (f[2] + t[2]) / 2);
-    };
-
-    obj.updateEnds(from, to);
-    this.object.add(obj);
-    return obj;
-  }
-
-  /**
-   * Draw a line. It's like drawing an arrow without cones on the end.
-   * @param from starting Vector
-   * @param to ending Vector
-   * @param color stroke color
-   */
-  addLine(from: Vector, to: Vector, color = STROKE_COLOR) {
-    const material = new THREE.MeshBasicMaterial({color});
-    const obj = new THREE.Object3D() as Object3D;
-
-    const height = new THREE.Vector3(...from).distanceTo(new THREE.Vector3(...to));
-    const line = new THREE.CylinderGeometry(0.02, 0.02, height, 8, 1, false);
-    obj.add(new THREE.Mesh(line, material));
-
-    obj.updateEnds = function(f: Vector, t: Vector) {
-      const q = new THREE.Quaternion();
-      const v = new THREE.Vector3(t[0]-f[0], t[1]-f[1], t[2]-f[2]).normalize();
-      q.setFromUnitVectors(new THREE.Vector3(0, 1, 0), v);
-      obj.setRotationFromQuaternion(q);
-      obj.position.set((f[0]+t[0])/2, (f[1]+t[1])/2, (f[2]+t[2])/2);
     };
 
     obj.updateEnds(from, to);
@@ -276,11 +247,6 @@ export class Solid extends CustomElementView {
     return obj;
   }
 
-  addPlane(plane: THREE.Object3D) {
-    this.object.add(plane);
-    return plane;
-  }
-
   // TODO merge addOutlined() and addWireframe(), by looking at
   //      geometry.isConeGeometry etc.
 
@@ -299,7 +265,6 @@ export class Solid extends CustomElementView {
       solidMaterial.clippingPlanes = planes;
     };
 
-    // DIAGRAM: this is what we need!
     obj.updateGeometry = function(geo: THREE.Geometry) {
       solid.geometry.dispose();
       solid.geometry = geo;
@@ -344,7 +309,6 @@ export class Solid extends CustomElementView {
       }
     };
 
-    // DIAGRAM: this is also what we need!
     obj.updateGeometry = function(geo: THREE.Geometry) {
       if (solid.updateGeometry) solid.updateGeometry(geo);
       for (const mesh of [outline, knockout]) {
