@@ -1391,10 +1391,12 @@ Let's see why this is true geometrically.
 
 {.todo} COMING SOON
 
----
+
+----------------------------------------------------------------------------------------------------
 
 
 ## 3D playground
+
 > id: three-dimensions
 
 #### Watch what we can do with a 3d matrix
