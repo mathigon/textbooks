@@ -26,6 +26,10 @@ divisibility:
   color: 1AA845
   level: Foundations
 
+divisibility2:
+  title: Divisibility and Primes
+  color: 1AA845
+
 fractions:
   title: Fractions
   color: 11A465
