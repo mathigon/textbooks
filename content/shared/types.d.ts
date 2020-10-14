@@ -1018,3 +1018,12 @@ export function showAlert(key: string, duration?: number): Promise<void>|undefin
 export class Math extends CustomElementView {
   ready(): void;
 }
+
+export class Tabbox extends CustomElementView {
+  private $body;
+  private $titles;
+  private $tabs;
+  private active;
+  ready(): void;
+  makeActive(i: number): void;
+}
