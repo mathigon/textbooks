@@ -3,7 +3,104 @@
 // (c) Mathigon
 // =============================================================================
 
-
 @import "../shared/variables";
 
-// TODO
+.cubes {
+    .clearfix();
+    .cube {
+        display: block;
+        float: left;
+        margin: 10px;
+        cursor: pointer;
+    }
+}
+
+// shots will blend in w/ spaceship
+x-geopad .points circle.shot {
+    fill: currentColor
+}
+
+.display {
+    .mat {
+        display: block;
+        float: left;
+        margin: 10px;
+    }
+
+    // don't want to see the points
+    .hidden {
+        display: none;
+    }
+}
+
+.addition .add {
+    display: block;
+    float: left;
+}
+
+table.add td {
+    .focus & {
+        opacity: 0.2;
+    }
+
+    &.focus {
+        opacity: 1.0;
+    }
+}
+
+.scalar .scm {
+    display: block;
+    float: left;
+}
+
+table.scm td {
+    .focus & {
+        opacity: 0.2;
+    }
+
+    &.focus {
+        opacity: 1.0;
+    }
+}
+
+x-geopad .paths .fabric {
+    stroke-width: 1px;
+}
+
+.light {
+    opacity: 50%;
+}
+
+#scroller {
+    &.focus td { opacity: 0.4 }
+    &.focus td.focus { opacity: 1 }
+
+    td.cell {
+        margin: 5px;
+        background: lighten(@grey, 70%);
+    }
+}
+
+g.mathigon {
+    &.red { fill: @red; }
+    &.yellow { fill: @yellow; }
+    &.green { fill: @green; }
+    &.blue { fill: @blue; }
+}
+
+table {
+    &.yellow x-var {
+        background: @yellow;
+    }
+    &.yellow bubble {
+        background: @yellow; // can't seem to get these to change
+    }
+
+    &.green x-var {
+        background: @green;
+    }
+
+    &.blue x-var {
+        background: @blue;
+    }
+}

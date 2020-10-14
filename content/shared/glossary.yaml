@@ -328,6 +328,11 @@ collinear:
   title: Collinear points
   text: Three or more points are __collinear__ if they lie on the same line.
 
+commutative:
+  title: Commutative Property
+  text: An operation • is __commutative__ if `a•b = b•a`. For example,
+    both addition (+) and multiplication (×) of numbers is commutative.
+
 compass:
   title: Compass
   text: A __compass__ is a drawing tool used for creating circles or arcs. It
@@ -534,6 +539,12 @@ discriminant:
     equation. If the discriminant is greater than 0, there are two solution. If it
     is equal to 0, there is just one solution. If it is less than 0, there are no
     (real) solutions.
+
+distributive:
+  title: Distributive Property
+  text: An operation • is __distributive__ over another operation * if
+    `a•(b*c) = a•b * a•c`. For example, multiplication (×) of numbers is
+    distributive over addition (+).
 
 divisibility-tests:
   title: Divisibility Tests
