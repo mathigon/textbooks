@@ -940,11 +940,19 @@ Delivered pizzas can sometimes sit around for too long and get cold. People ofte
 
 Unfortunately, most pizzas are too big to fit in standard ovens. Rearrange the 8 slices onto this baking sheet that can fit in the oven.
 
-    // INTERACTIVE-04: Pizza slices arrangement (pages 8-9)
+---
 
-8 slices is pretty common in pizzas, but it could be cut into any number of equal slices. If we increase the number of slices to [[20]], the shape begins to look more and more like a [[parallelogram | triangle | square]].
+> id: slices-arrangement
+
+    // INTERACTIVE-04: Pizza slices arrangement (pages 8-9)
+    figure: x-geopad(width=630 height=700)
+      include svg/pizza_2.svg
+
+8 slices is pretty common in pizzas, but it could be cut into any number of equal slices. If we increase the number of slices to ${n1}{n1|8|8,30,1} , the shape begins to look more and more like a [[parallelogram | triangle | square]].
 
 We used all the pizza and the slices aren’t overlapping, so the area of the parallelogram is [[equal to | different than]] the area of the circle. The formula for the area of a parallelogram is base x height when the height makes a [[right | acute | obtuse]] angle with the base._{span.reveal} Click on the side of the parallelogram you want to use as the base._ _{span.reveal} Draw in the height that corresponds with this base._
+
+---
 
 Move the slider back and forth to see the base and height of the parallelogram in the circle.
 

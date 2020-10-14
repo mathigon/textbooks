@@ -5,7 +5,7 @@
 
 
 import {clamp, nearlyEquals} from '@mathigon/fermat';
-import {$N, animate, CanvasView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
+import {$N, animate, AnimationResponse, CanvasView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Arc, Circle, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
 
 import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
@@ -1357,4 +1357,369 @@ function geopadReset($pad: Geopad) {
   $pad.paths.forEach(path => path.delete());
   $pad.points.forEach(point => point.delete());
   $pad.switchTool('circle');
+}
+
+export function slicesArrangement($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const radius = 175;
+  const center = new Point(315, radius + 25);
+  const sliceZone = new Rectangle(new Point(5, 400), 620, radius + 20);
+  const $sliceZone = $N('path', {}, $geopad.$paths) as SVGView;
+  $sliceZone.css({fill: 'brown'});
+  $sliceZone.draw(sliceZone);
+  const slices = initPizza(8, center, radius, {aColor: 'black', bColor: 'black'}, $geopad);
+  $geopad.switchTool('move');
+  let currentSlice: Slice | undefined;
+  let placedCount = 0;
+  // let startDelta: Point;
+  let startDelta = new Point(0, 0);
+  let startLocation = new Point(0, 0);
+  let startAngle = 0;
+  slide($geopad, {
+    $box: $geopad.$svg,
+    start: posn => {
+      currentSlice = slices.all.find(slice => slice.bounds.contains(posn));
+      startLocation = currentSlice!.pivot;
+      startAngle = currentSlice!.angle;
+      startDelta = startLocation.subtract(posn);
+    },
+    move: (current, _start, _last) => {
+      if (currentSlice && !$step.scores.has('arranged')) {
+        currentSlice.moveTo(current.add(startDelta));
+      }
+    },
+    end: (last, _start) => {
+      if (!$step.scores.has('arranged')) {
+        if (sliceZone.contains(last) && currentSlice) {
+          const flip = placedCount > 3;
+          const halfWidth = currentSlice.width / 2;
+          const targetBase = center.shift((-620 / 2) + halfWidth, (1.5 * radius) + 35);
+          const target =
+            flip ?
+              targetBase.shift(((placedCount - 4) * currentSlice.width) + halfWidth, 0) :
+              targetBase.shift(placedCount * currentSlice.width, 0);
+          currentSlice.moveTo(target, 500);
+          currentSlice.rotateTo(flip ? Math.PI : 0, {duration: 500});
+          placedCount++;
+          if (placedCount == 8) {
+            setTimeout(() => {
+              $step.model.lSlices = slices;
+              $step.model.pSlices = initPizza(8, center, radius, {aColor: 'black', bColor: 'black'}, $geopad);
+              $step.model.arranged = true;
+              $step.score('arranged');
+              $step.addHint('correct');
+            }, 500);
+          }
+        } else {
+          currentSlice?.moveTo(startLocation, 500);
+          currentSlice?.rotateTo(startAngle, {duration: 500});
+        }
+      }
+    }
+  });
+  // [TODO]: refactor this to use reactive $step.model.watch drawing approach
+  let aColor = 'black';
+  let bColor = 'black';
+  $step.model.watch((state: any) => {
+    const sliceCount = state.n1;
+    if (state.arranged) {
+      state.pSlices.all.forEach((slice: Slice) => slice.remove());
+      state.lSlices.all.forEach((slice: Slice) => slice.remove());
+      state.pSlices = initPizza(sliceCount, center, radius, {aColor, bColor}, $geopad);
+      state.lSlices = initLineup(sliceCount, center.shift(0, (1.5 * radius) + 35), radius, {aColor, bColor}, $geopad);
+    }
+  });
+  let hovering: null | {s: Slice[], g: string} = null;
+  let selected = false;
+  $geopad.on('mousemove', b => {
+    if ($step.model.arranged && !selected) {
+      const distances: {d: number, group: string}[] = [];
+      $step.model.lSlices.groupA.forEach((slice: Slice) => {
+        const d = slice.distanceToArc(new Point(b.offsetX, b.offsetY));
+        distances.push({d, group: 'a'});
+      });
+      $step.model.lSlices.groupB.forEach((slice: Slice) => {
+        const d = slice.distanceToArc(new Point(b.offsetX, b.offsetY));
+        distances.push({d, group: 'b'});
+      });
+      const shortest = distances.sort((a, b) => a.d - b.d)[0];
+      if (shortest.d <= 10) {
+        const pGroup: Slice[] = shortest.group === 'a' ? $step.model.pSlices.groupA : $step.model.pSlices.groupB;
+        const pOther: Slice[] = shortest.group === 'b' ? $step.model.pSlices.groupA : $step.model.pSlices.groupB;
+        const lGroup: Slice[] = shortest.group === 'a' ? $step.model.lSlices.groupA : $step.model.lSlices.groupB;
+        const lOther: Slice[] = shortest.group === 'b' ? $step.model.lSlices.groupA : $step.model.lSlices.groupB;
+        aColor = shortest.group === 'a' ? 'aqua' : 'black';
+        bColor = shortest.group === 'b' ? 'aqua' : 'black';
+        hovering = {
+          s: pGroup.concat(lGroup),
+          g: shortest.group
+        };
+        hovering.s.forEach(slice => slice.setArcColor('aqua'));
+        pOther.concat(lOther).forEach(slice => slice.setArcColor('black'));
+      } else {
+        hovering = null;
+        aColor = bColor = 'black';
+        $step.model.pSlices.all.forEach((slice: Slice) => slice.setArcColor('black'));
+        $step.model.lSlices.all.forEach((slice: Slice) => slice.setArcColor('black'));
+      }
+    }
+  });
+  $geopad.on('click', () => {
+    if (hovering != null) {
+      hovering.s.forEach(slice => slice.setArcColor('lime'));
+      aColor = hovering.g === 'a' ? 'lime' : 'black';
+      bColor = hovering.g === 'b' ? 'lime' : 'black';
+      selected = true;
+    }
+  });
+}
+
+function shortAngle(angle: number): number {
+  if (angle > Math.PI * 2) {
+    return shortAngle(angle - (2 * Math.PI));
+  } else if (angle < -(Math.PI * 2)) {
+    return shortAngle(angle + (2 * Math.PI));
+  } else {
+    return angle;
+  }
+}
+
+function equivAngle(angle: number): number {
+  if (angle > Math.PI) {
+    return -((2 * Math.PI) - angle);
+  } else if (angle < -Math.PI) {
+    return (2 * Math.PI) + angle;
+  } {
+    return angle;
+  }
+}
+
+function initPizza(slices: number, center: Point, radius: number, colors: {aColor: string, bColor: string}, $geopad: Geopad) {
+  const halfCount = Math.ceil(slices / 2);
+  const arcAngle = (2 * Math.PI) / slices;
+  const initAngle = arcAngle / 2;
+  const all: Slice[] = [];
+  const groupA: Slice[] = [];
+  const groupB: Slice[] = [];
+  [...Array(slices).keys()].forEach(index => {
+    const slice = new Slice(true, $geopad, radius, arcAngle, center, initAngle + (index * arcAngle));
+    if (index < halfCount) {
+      slice.setArcColor(colors.aColor);
+      groupA.push(slice);
+    } else {
+      slice.setArcColor(colors.bColor);
+      groupB.push(slice);
+    }
+    all.push(slice);
+  });
+  return {all, groupA, groupB};
+}
+
+function initLineup(slices: number, center: Point, radius: number, colors: {aColor: string, bColor: string}, $geopad: Geopad) {
+  const halfCount = Math.ceil(slices / 2);
+  const arcAngle = (2 * Math.PI) / slices;
+  const all: Slice[] = [];
+  const groupA: Slice[] = [];
+  const groupB: Slice[] = [];
+  [...Array(slices).keys()].forEach(index => {
+    const flip = index > halfCount - 1;
+    const slice = new Slice(false, $geopad, radius, arcAngle, center);
+    const halfWidth = slice.width / 2;
+    const targetBase = center.shift((-620 / 2) + halfWidth, 0);
+    const target =
+      flip ?
+        targetBase.shift(((index - halfCount) * slice.width) + halfWidth, 0) :
+        targetBase.shift(index * slice.width, 0);
+    slice.moveTo(target);
+    slice.rotateTo(flip ? Math.PI : 0);
+    if (!flip) {
+      slice.setArcColor(colors.aColor);
+      groupA.push(slice);
+    } else {
+      slice.setArcColor(colors.bColor);
+      groupB.push(slice);
+    }
+    all.push(slice);
+    slice.draw();
+  });
+  return {all, groupA, groupB};
+}
+
+class Slice {
+
+  private sides: {
+    path: GeoPath | null,
+    poly: Polyline
+  }
+  private arc: {
+    path: GeoPath | null,
+    poly: Arc
+  }
+  private _bounds: Polygon
+  readonly width: number;
+  private _tip: Point
+  private _pivot: Point
+  private _angle: number
+  private transAnim: AnimationResponse | null
+  private rotAnim: AnimationResponse | null
+  private rotTarget: number | null;
+  private transTarget: Point | null;
+  private firstDraw = true;
+
+  constructor(private selfDraw: boolean, private $geopad: Geopad, radius: number, arcAngle: number, circleCenter: Point, initAngle?: number) {
+    this._angle = initAngle ?? 0;
+    this._tip = circleCenter;
+    const pointA = circleCenter.shift(0, -radius);
+    const pointB = pointA.rotate(arcAngle, circleCenter);
+    this.width = Point.distance(pointA, pointB);
+    const sliceArc = (new Arc(circleCenter, pointA, arcAngle)).rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
+    const sliceSides = (new Polyline(pointA, circleCenter, pointB)).rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
+    this.sides = {
+      path: $geopad.drawPath(sliceSides, {classes: 'slice-outline'}),
+      poly: sliceSides
+    };
+    this.arc = {
+      path: $geopad.drawPath(sliceArc, {classes: 'slice-outline'}),
+      poly: sliceArc
+    };
+    this._bounds = new Polygon(...sliceSides.points);
+    this._pivot = (new Segment((new Segment(pointA, pointB)).midpoint, circleCenter)).midpoint.rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
+    this.transAnim = null;
+    this.rotAnim = null;
+    this.rotTarget = null;
+    this.transTarget = null;
+    if (this.selfDraw) this.draw();
+  }
+
+  get bounds() {
+    return this._bounds;
+  }
+
+  get tip() {
+    return this._tip;
+  }
+
+  get pivot() {
+    return this._pivot;
+  }
+
+  get angle() {
+    return this._angle;
+  }
+
+  moveBy(by: Point, duration?: number) {
+    if (duration) {
+      this.transAnim?.cancel();
+      const startLoc = this.pivot;
+      this.transAnim = animate((p, _d, _c) => {
+        const newLoc = startLoc.shift(by.x * p, by.y * p);
+        this.moveTo(newLoc);
+      }, duration);
+      this.transAnim.promise.then(() => {
+        this.transTarget = null;
+        this.transAnim = null;
+      });
+    } else {
+      this.arc = {
+        ...this.arc,
+        poly: this.arc.poly.translate(by)
+      };
+      this.sides = {
+        ...this.sides,
+        poly: this.sides.poly.translate(by)
+      };
+      this._bounds = this.bounds.translate(by);
+      this._tip = this.tip.translate(by);
+      this._pivot = this.pivot.translate(by);
+      if (this.selfDraw) this.draw();
+    }
+  }
+
+  moveTo(loc: Point, duration?: number) {
+    const trans = loc.subtract(this.pivot);
+    if (this.transAnim != null) {
+      if (this.transTarget == null || !loc.equals(this.transTarget)) {
+        this.transTarget = loc;
+        this.moveBy(trans, duration);
+      }
+    } else {
+      this.transTarget = loc;
+      this.moveBy(trans, duration);
+    }
+  }
+
+  tipMoveTo(loc: Point) {
+    const trans = loc.subtract(this.tip);
+    this.moveBy(trans);
+  }
+
+  rotateBy(amount: number, options?: {duration?: number, around?: Point}) {
+    if (options?.duration) {
+      this.rotAnim?.cancel();
+      const startAngle = this.angle;
+      this.rotAnim = animate((p, _d, _c) => {
+        const newAngle = (amount * p) + startAngle;
+        this.rotateTo(newAngle, {around: options?.around});
+      }, options.duration);
+      this.rotAnim.promise.then(() => {
+        this.rotTarget = null;
+        this.rotAnim = null;
+      });
+    } else {
+      this._angle = this.angle + amount;
+      const c = options?.around ?? this.pivot;
+      this.arc = {
+        ...this.arc,
+        poly: this.arc.poly.rotate(amount, c)
+      };
+      this.sides = {
+        ...this.sides,
+        poly: this.sides.poly.rotate(amount, c)
+      };
+      this._bounds = this.bounds.rotate(amount, c);
+      this._tip = this.tip.rotate(amount, c);
+      this._pivot = this.pivot.rotate(amount, c);
+      if (this.selfDraw) this.draw();
+    }
+  }
+
+  rotateTo(angle: number, options?: {duration?: number, around?: Point}) {
+    const diff = equivAngle(shortAngle(angle - this.angle));
+    if (this.rotAnim != null) {
+      if (this.rotTarget != angle) {
+        this.rotTarget = angle;
+        this.rotateBy(diff, options);
+      }
+    } else {
+      this.rotTarget = angle;
+      this.rotateBy(diff, options);
+    }
+  }
+
+  setArcColor(name: string) {
+    this.arc.path?.$el.css({stroke: name});
+  }
+
+  distanceToArc(from: Point) {
+    return Point.distance(from, this.arc.poly.project(from));
+  }
+
+  draw() {
+    if (this.arc.path == null) {
+      this.firstDraw = false;
+      this.arc.path = this.$geopad.drawPath(this.arc.poly, {animated: 0});
+      this.sides.path = this.$geopad.drawPath(this.sides.poly, {animated: 0});
+    } else {
+      this.arc.path.redraw(this.arc.poly);
+      this.sides.path!.redraw(this.sides.poly);
+    }
+  }
+
+  remove() {
+    this.arc.path?.delete(0);
+    this.sides.path?.delete(0);
+  }
+
+}
+
 }
