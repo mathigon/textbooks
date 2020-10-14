@@ -5,7 +5,8 @@
 
 
 import {Color, delay, list, Obj, repeat, wait} from '@mathigon/core';
-import {Circle, Complex, isBetween, nearlyEquals, numberFormat, Point, Polygon, Polyline} from '@mathigon/fermat';
+import {Complex, isBetween, nearlyEquals, numberFormat} from '@mathigon/fermat';
+import {Circle, Point, Polygon, Polyline} from '@mathigon/euclid';
 import {$html, $N, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, GeoPoint, Select, Slider, Slideshow, Step} from '../shared/types';

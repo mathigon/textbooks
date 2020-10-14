@@ -5,7 +5,8 @@
 
 
 import {defer, EventTarget, last} from '@mathigon/core';
-import {numberFormat, Point} from '@mathigon/fermat';
+import {numberFormat} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {$N, AudioPlayer, CustomElementView, ElementView, pointerPosition, register} from '@mathigon/boost';
 
 

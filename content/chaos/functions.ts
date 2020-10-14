@@ -5,7 +5,8 @@
 
 
 import {Obj} from '@mathigon/core';
-import {isBetween, Point} from '@mathigon/fermat';
+import {isBetween} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {$N, animate, AnimationResponse, AudioPlayer, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, PlayToggle, Step} from '../shared/types';

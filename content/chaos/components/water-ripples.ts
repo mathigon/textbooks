@@ -5,7 +5,8 @@
 
 
 import {repeat2D, tabulate2D} from '@mathigon/core';
-import {clamp, isBetween, Point} from '@mathigon/fermat';
+import {clamp, isBetween} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {$N, animate, CanvasView, CustomElementView, register, slide} from '@mathigon/boost';
 
 

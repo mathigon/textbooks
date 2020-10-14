@@ -5,7 +5,7 @@
 
 
 import {delay, wait} from '@mathigon/core';
-import {Point} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {$N, ElementView, InputView, loadScript, slide, SVGView} from '@mathigon/boost';
 import {Slider, Slideshow, Step} from '../shared/types';
 

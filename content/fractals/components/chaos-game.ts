@@ -5,7 +5,8 @@
 
 
 import {list} from '@mathigon/core';
-import {Circle, Point, Random} from '@mathigon/fermat';
+import {Random} from '@mathigon/fermat';
+import {Circle, Point} from '@mathigon/euclid';
 import {CanvasView} from '@mathigon/boost';
 
 import {GREY} from '../../shared/constants';

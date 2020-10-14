@@ -11,7 +11,8 @@
 
 import {chunk, last} from '@mathigon/core';
 import {$N, CustomElementView, ElementView, observe, register, slide, SVGParentView, SVGView} from '@mathigon/boost';
-import {mod, Point} from '@mathigon/fermat';
+import {mod} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {UPPER_CASE} from './utilities';
 
 
