@@ -519,7 +519,7 @@ export abstract class CoordinatePlane extends CustomElementView {
 export class Geopad extends CoordinatePlane {
   shapes: Map<string, GeoShape<Line|Point|Circle|Arc|Polygon|Rectangle|Sector|Angle>>;
   points: Set<GeoPoint>;
-  paths: Set<GeoPath<Path>>;
+  paths: Set<GeoPath>;
   polygons: Set<GeoPolygon>;
   intersections: Set<Intersection>;
   snapToGrid: number;
@@ -555,19 +555,19 @@ export class Geopad extends CoordinatePlane {
   delete(): void;
   redraw(): void;
   getPointAt(posn: Point, min?: number): GeoPoint|undefined;
-  getPathAt(posn: Point, min?: number): GeoPath<Path>|undefined;
+  getPathAt(posn: Point, min?: number): GeoPath|undefined;
   getIntersectionAt(posn: Point, min?: number): Intersection|undefined;
   getPolygonAt(posn: Point): GeoPolygon|undefined;
   updateIntersections(): void;
   updateInferredPolygons(newPath: GeoPath): void;
-  drawPath(x: string|GeoValue<Path>, options?: GeoOptions): GeoPath<Path>;
+  drawPath(x: string|GeoValue<Path>, options?: GeoOptions): GeoPath;
   drawPoint(x: string|GeoValue<Point>, options?: GeoOptions): GeoPoint;
   animatePoint(name: string, target: Point, duration?: number): void;
   animateConstruction(name: string, duration?: number): Promise<void>;
   showGesture(from: string, to?: string): void;
   waitForPoint(): Promise<GeoPoint>;
-  waitForPath<T extends Path = Path>(validate: PathDefinition, options?: WaitForPathsOptions): Promise<GeoPath<Path>>;
-  waitForPaths<T extends Path = Path>(paths: PathDefinition[], options?: WaitForPathsOptions): Promise<GeoPath<Path>[]>;
+  waitForPath<T extends Path = Path>(validate: PathDefinition, options?: WaitForPathsOptions): Promise<GeoPath<T>>;
+  waitForPaths<T extends Path = Path>(paths: PathDefinition[], options?: WaitForPathsOptions): Promise<GeoPath<T>[]>;
 }
 
 export abstract class GeoShape<T extends Point|Path = Point|Path> {

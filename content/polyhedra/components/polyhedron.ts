@@ -54,7 +54,7 @@ export class Polyhedron extends Solid {
       faceGeometry.computeFaceNormals();
       faceGeometry.computeVertexNormals();
       const faceMaterial = new THREE.MeshPhongMaterial({
-        vertexColors: THREE.FaceColors,
+        vertexColors: THREE.FaceColors as any,
         side: THREE.DoubleSide,
         transparent: true,
         opacity: 0.9,

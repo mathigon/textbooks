@@ -1752,6 +1752,12 @@ tetrahedron:
     are equilateral triangles. It has four vertices and six edges.
   link: /course/polyhedra/platonic#platonic-overview
 
+tetris:
+  title: Tetris
+  text: __Tetris__ is a popular video game that was first published in 1984.
+    Players have to move falling tetrominoes (shapes consisting of four
+    connected squares) to complete entire rows.
+
 theorem:
   title: Theorem
   text: A __theorem__ is a particularly important result or observation in
