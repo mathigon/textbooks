@@ -1008,17 +1008,16 @@ as the value of `pill(c,"red","c")`:
             strong.var.m-blue(:show="converges" data-display="inline") Bounded!
             strong.var(:show="!converges" data-display="inline") Diverges!
 
-{div(slot="legend")} We already know what happens if
-[`c = 0`](action:animate(0,0)) – that’s the same as the example above.
-The sequence convergence as long as `x_0` lies within the unit circle.
+We already know what happens if [`c = 0`](action:animate(0,0)) – that’s the same as the example
+above. The sequence convergence as long as `x_0` lies within the unit circle.
 
-{div(slot="legend")} As soon as we change the value of _c_, something wonderful
-happens. The circle transforms into a highly complex, fractal shape.
+As soon as we change the value of _c_, something wonderful happens. The circle transforms into a
+highly complex, fractal shape.
 
-{div(slot="legend")} When [`c = –0.54 + 0.5i`](action:animate(-0.54,0.5)), the
-shape divides into infinitely many tiny elements arranged in spirals.
+When [`c = –0.54 + 0.5i`](action:animate(-0.54,0.5)), the shape divides into infinitely many tiny
+elements arranged in spirals.
 
-::: div(slot="legend")
+::: div
 In some cases, the sequence doesn’t converge to a _single
 point_ – instead it reaches a cycle of multiple points, like a triangle. These
 cycles are called __orbits__.
@@ -1029,10 +1028,9 @@ white mean the corresponding sequence __diverges__: it is not bounded, and
 eventually blows up to infinity.
 :::
 
-{div(slot="legend")} What else can you find? Have a look at the patterns when
-[`c = 0.4 + 0.21i`](action:animate(0.4,0.21)) or when
-[`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)). There are also some values of
-_c_ where _every_ sequence diverges, so the entire complex plane remains white.
+What else can you find? Have a look at the patterns when [`c = 0.4 + 0.21i`](action:animate(0.4,0.21))
+or when [`c = 0.38 – 0.25i`](action:animate(0.38,-0.25)). There are also some values of _c_ where
+_every_ sequence diverges, so the entire complex plane remains white.
 
 :::
 

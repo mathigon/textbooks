@@ -207,6 +207,10 @@ export function palindromes($step: Step) {
 
 // -----------------------------------------------------------------------------
 
+export function groups($step: Step) {
+  $step.groupBlanks(1, 2, 3);
+}
+
 export function addSymmetries($step: Step) {
   $step.$$('.sym-sum').forEach(($s, i) => {
     $s.one('click', () => {
