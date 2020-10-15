@@ -931,9 +931,7 @@ _{button.next-step.reveal(when="blank-3")}继续_
       .menu
         for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
           .add(data-shape=s)
-      .btn-row
-        button.btn 清除
-        button.btn 下载
+      .btn-row x-icon-btn(icon="download" title="下载图片")
       svg.overlay: g.tiles.active
     x-gesture(target=".tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
