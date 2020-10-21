@@ -12,12 +12,14 @@ import {Slider, Slideshow, Step} from '../shared/types';
 import {beep, Beep} from './components/beep';
 import {CodeBox} from './components/code-box';
 import {MORSE_CODE} from './components/utilities';
+import {HammingCode} from './components/hamming';
 
 import './components/code-box';
 import './components/barcode';
 import './components/enigma';
 import './components/enigma-rotors';
 import './components/morse';
+import './components/hamming';
 
 
 // -----------------------------------------------------------------------------
@@ -128,6 +130,7 @@ export function transistor($section: Step) {
   let electronPositions: number[];
   const UPDATE_PERIOD = 100;
 
+  // SATELLITE: mimic here
   function move() {
     if (!switchOn) return;
     electronPositions = electronPositions.map(p => {
@@ -659,4 +662,45 @@ export function resolution($step: Step) {
       $N('span', {class: x === '•' ? 'dash' : 'dot'}, $el);
     }
   });
+}
+
+export function satellite($step: Step) {
+  // SATELLITE: complete this
+  const $bitstream = $step.$('#bitstream') as SVGView;
+  const $trajectory = $bitstream?.$('line') as SVGView;
+  const $bits = $bitstream?.$$('text');
+
+  // SATELLITE: WAIT for new svg from designer
+  function moveBits() {
+    // There should be a timeout
+    $bits?.forEach((e, i) => {
+      // get point along trajectory
+      const xy = $trajectory.getPointAt(0);
+      // set transform dependent on the bits
+      e.setTransform(new Point(xy.x, xy.y));
+    });
+  }
+
+  function stopBits() {
+    // SATELLITE: stop the bits
+  }
+
+  const $satellites = $step.$('.satellites')!;
+
+  // from Telegraph code. Should replace w/ code to enable 1s and 0s.
+  slide($satellites, {
+    down: () => {
+      $satellites.addClass('pressed');
+    },
+    up: () => {
+      $satellites.removeClass('pressed');
+    }
+  });
+}
+
+export function hammingEncode($step: Step) {
+  const $hamming = $step.$('x-hamming') as HammingCode;
+  const $testButton = $step.$('#testButton')!;
+
+  $testButton.on('click', () => $hamming.makeRoomForParities());
 }

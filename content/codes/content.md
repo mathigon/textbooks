@@ -798,19 +798,57 @@ __and those who don't.__
 
 ----------------------------------------------------------------------------------------------------
 
+    // EDC photo resources
+    // https://commons.wikimedia.org/wiki/File:Barcodedmail.JPG
+    // Satellite
+    // https://commons.wikimedia.org/wiki/File:Erdfunkstelle_Raisting_2.jpg
+    // https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Night_Sky.png/1024px-Night_Sky.png
+    // https://upload.wikimedia.org/wikipedia/commons/6/61/Satellite_Cylinder_%28PSF%29.png
 
 ## Error Detection 
 
 > section: error-detection
 > sectionStatus: dev
+> id: satellite
 
 ### Introduction
 
 {.todo} Satellite Communications
 
-{.fixme} We send satellites _very far away_. Voyager 1 is now _13 billion miles_ away from Earth. NASA spent three years making this satellite, investing millions of dollars and millions of work-hours into its creation.... etc
+{.fixme} We receive some bits from space. They have come from a satellite, perhaps *billions of miles* away from earth. Now NASA has spent 3 years making this satellite and invested millions of dollars and hours into making it, getting it *just right*. Perhaps this data is a photo of Jupiter's great red spot? Or perhaps it's data about the temperature on Neptune? Or movement data of asteroids? Regardless of what the message is we received, how do we know that the data we've received is accurate?
 
-{.todo} animation of a satellite streaming bits to a receiver on Earth.
+{.fixme} Unforuntately, our atmosphere gets in the way of our messages. Just like looking through a glass of water distorts what's behind it, the charged particles in our atmosphere might distort some of the signals coming from the satellite.
+
+{.todo} satellite streaming bits to a receiver on Earth. // INTERACTIVE
+
+    .satellites
+      img(src="images/satellite/nightsky.png" width=640 height=420)
+      img.sat(src="images/satellite/satellites.png" width=640 height=420)
+      img.atm(src="images/satellite/atmosphere.png" width=640 height=420)
+      figure.bits: include images/satellite/bitstream.svg
+      svg(width=640 height=420): line(x1=145 y1=265 x2=525 y2=95)
+
+
+{.fixme} There is a chance that some of the bits may be incorrect, so we need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
+
+{.todo} Section on different ways to do error detection: multiple copies, etc  // INTERACTIVE
+
+{.fixme} Let's think about some ways we could possibly make sure that we know the correct message.
+
+Perhaps the simplest way to do it would be to send multiple copies of the same message.
+If we send two copies (DIAGRAM), then we know that there's an error, but we won't know which is the correct message (if you've ever seen a movie where there are two people and one might be an evil twin, you've experienced this before!). This would be an [Error Detecting Code](gloss)
+If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss)
+But this would consume a lot of space! Imagine if you bought a state-of-the-art smartphone with 96 GB of memory, used this type of error correction. It would only be able to hold less than [[32]] GB of memory! Two thirds of it would be repeated data.
+
+There must be a better way.
+
+#### Parity Bit
+One very simple and cost-effective way to detect an error is via a __parity bit__.
+The parity bit is added as a last bit to make the sum of the whole number even.
+If the sum is even, the parity bit is [[0]].
+If the sum is odd, the parity bit is [[1]]
+
+This gives us a hint into how we can build more complex error detection and correction schemes. Before we do that, let's look at an example that we encounter quite often.
 
 ---
 
@@ -820,7 +858,15 @@ __and those who don't.__
 
 ### Bar Codes
 
-{.todo} Bar Code
+{.fixme} CUT Before we solve the problem of satellites sending messages across the vast regions of space, let's start with an example that's a bit closer to home.
+
+We encounter error detecting and correcting codes every time we go to the supermarket, in the form of bar codes. Besides items at the store, bar codes are used for identifying all sorts of things like driver's licenses or babies in hospitals. And in the last decade, 2-dimensional barcodes (QR codes) have been adapted for ticketing at events like concerts or airplane flights.
+
+{.todo} photos of Bar Codes on license, ticket, baby wristband, can of food // PHOTOGRAPH: examples of bar codes
+
+Bar codes were invented as a way to make it easier for stores to track which items a customer is buying. Numbers are easy for us humans to read, but it's much harder for computers. For example, 1 and 7 or 6 and 8 might look almost the same to a low-resolution camera. A new system was needed, so that cashiers or nurses didn't have to manually type all these numbers into a computer.
+
+Joe Woodland, one of the inventors of Bar Code was sitting on the beach, trying to think of a way to encode information for a light scanner to understand.
 
     div
       .quote
@@ -828,9 +874,17 @@ __and those who don't.__
       .author
         Joe Woodland, inventor of the Bar Code
 
+Woodland used his knowledge of Morse Code as a foundation to invent a new type of code. By learning about different types of codes, we can build our own knowledge foundation and perhaps invent our own codes!
+
+{.todo} Photo of original barcode patent (circular) with caption: "the original barcode was invented as a circle, but in the 1970s an IBM engineer George Laurer figured out that a rectangle would be more compact than Woodland's bulls-eye. // PHOTOGRAPH: original barcode patent
+
+{.todo} Photo of Barcode scanner for tracking trains, with caption "another early use of barcode scanners was tracking train cars for logistics" // PHOTOGRAPH: train car
+
 #### So how does it work?
 
 {.fixme} Each bar code is a 12-digit number. See here that we can read the numbers written on the bottom. But how does a computer read it?
+
+{.fixme} There are 95 columns, each of which can be black or white. The computer uses a laser to identify each stripes color, based on how much light is reflected. These 95 columns are grouped into 15 groups of columns. (continue below)
 
 {.todo} image/interaction of a bar code
 
@@ -840,9 +894,10 @@ __and those who don't.__
 
 > id: barcode-drawing
 
-Look at this barcode.
+Look at this barcode. // INTERACTIVE
 
-    x-barcode(value="012345678901")
+    // only takes 11 values (last digit is error digit)
+    x-barcode(value="01234567890")
 
 The guards are on the [{.red}outside](target:.bar-start) and in the
 [{.red}center](target:.bar-middle). The first six digits are on the [{.blue}left](target:.bar-left).
@@ -856,10 +911,65 @@ __The Guards__
 
 __The Digits__
 
-| LEFT SIDE | | RIGHT SIDE | |
-|---|---|---|---|
-| 0 | 0001101 | 0 | 1110010 |
-| 1 | 0xxxxx1 | 1 | 1xxxxx0 |
+{.fixme} Let's recognize that these values are **not** the same as the binary representations we learned last chapter. They are still a binary code because they use two values (black and white), but the code to represent the digits is different.s
+
+| DIGIT | LEFT SIDE | RIGHT SIDE |
+|---|---|---|
+| 0 | 0001101 | 1110010 |
+| 1 | 0011001 | 1100110 |
+| 2 | 0010011 | 1101100 |
+| 3 | 0111101 | 1000010 |
+| 4 | 0100011 | 1011100 |
+| 5 | 0110001 | 1001110 |
+| 6 | 0101111 | 1010000 |
+| 7 | 0111011 | 1000100 |
+| 8 | 0110111 | 1001000 |
+| 9 | 0001011 | 1110100 |
+
+{.fixme} There are a few interesting patterns we can recognize here. First, notice that the codes on the left side are different from the codes on the right side. This allows the bar code to be read upside down or backwards.
+
+{.fixme} Oh jeez... barcodes are [different](https://www.nationwidebarcode.com/are-upc-a-and-ean-13-the-same/) in the US and in Europe. But it's very simple. The Europe code has an extra digit at the beginning for a country code.
+
+{.fixme} THIS IS VERY FUNNY... "Because there are more than 9 countries, the country flags have been further subdivided by using the next two digits for various uses and countries. The US and Canada have the country flag 0 and subdivisions 000 thru 139. The publishing industry produces so many products that it is its own country called "Bookland" for number assignment purposes. Bookland has been given two subdivisions of the country flag 9. They are 978 and 979" // REVISE:
+
+{.fixme} Combinatorics // REVISE:
+- The first digit represents what type of object it is (0 - Standard; 2 - Weighted item like fruit; 3 - Pharmacy; 5 - Coupon)
+- Digits 2-6 (highlight) represent the *Manufacturer's Code*
+- The 7-11 (highlight) represent the *Product Code*
+- The final, 12th digit (highlight) is the __Error-Detection digit__, also called the __Modulo Check Character__
+
+{.fixme} Also, every binary representation of digits on the left begins with a 0 and ends with a 1, and every digit on the right begins with a 1 and ends with a 0. This results in a pattern: there will always be a 10 (on the left side) or a 01 (on the right side) on the edge between digits.
+
+{.todo} Must clarify why L-R digit patterns are helpful. RESEARCH
+
+#### Error Checking.
+{.fixme} Just like our case with the satellite signals, there is a chance that the laser reading the barcode can make a mistake. Perhaps there is some dirt, or a scratch, or the laser reads it incorrectly. For that reason, barcodes have a special way of determining whether there's been a mistake.
+
+{.fixme} The 12th digit is dependent on the first 11 digits, so that if any of the digits is wrong, we will know (most of the time). Can you guess how the 12th digit can indicate information about the first 11?
+
+{.todo} Here we will show the original digits moving into the new equation. Odd digits moving into the parantheses, and the even digits moving to the righ. // INTERACTIVE
+
+{.todo} empty box where they write the modulo check character
+
+{.fixme} The odd digit places are summed and multiplied by three. Then we calculate the sum of the even places, and sum these two values together. The __Modulo Check Character__ is 10 minus the ones digit of this number.
+
+When the computer scans the digits of a barcode, it performs this calculation. If the modulo check doesn't match up, we immediately know that the barcode hasn't been read correctly. In a supermarket, the cash register won't beep, and you can try again -- or, as a last resort, enter the numbers manually.
+
+{.todo} TIPS AND TRICKS: when you're adding these numbers, you only need to keep the ones digit. If you do 3x(2+3+1+9), which is 3x15, you can do 3x5 instead. Every digit above the ones digit will be thrown out.
+
+{.todo} ACTIVITY: Look around you for something with a barcode (pretty much anything you can buy at a store). Hide the numbers with paper or tape, and try to decode the numbers. After you've written down your answer, see if you're correct! And then you can try the error detection formula and confirm that it is correct. (PHOTOS also)
+
+{.todo} ACTIVITY: combinatorics problem where students calculate possible number of barcodes.
+How many different combinations? [[10^11]] or one hundred [[billion|million|trillion]] different combinations.
+It's actually not quite as simple as giving the five digits 2-6 to each individual manufacturer. If this were the case, there would be only [[100000]] different manufacturers possible. Things are more complex! (see research)
+
+    // RESEARCH
+    // http://www.waspbarcode.com/buzz/barcode lots of info on subdivisions
+    // http://www.waspbarcode.com/buzz/why-small-businesses-must-avoid-reusing-barcodes don't reuse
+    // http://www.waspbarcode.com/buzz/60th-anniversary-of-the-barcode first ever use of barcode
+
+#### Barcode Conclusion
+{.fixme} These are only the UPC bar codes. There are many other types of bar codes listed here: http://www.makebarcode.com/specs/barcodechart.html
 
 ---
 
@@ -867,12 +977,32 @@ __The Digits__
 
 {.todo} Hamming Codes
 
+Let's go back to our original problem of how we might detect errors sent from a satellite. The information received from the satellite is unknown, and there is no backup plan, like a cashier who can look at a number and type it into the computer.
+
+A mathematician named [Richard Hamming](bio:hamming) had this same problem not with data from satellites, but from computers.
+
+Computers used to be programmed with [punch cards](gloss: punch cards). In 1947, Hamming programmed a computer to perform a long and complex series of calculations while he went home over the weekend. When he returned, he discovered an error had occurred and his entire calculation was useless. He felt a need to invent a way to correct when an error had happened.
+
+---
+> id: hamming-encode
+
+// INTERACTIVE --- Encoding a Hamming Code
+
+    x-hamming(value="10101010")
+    button#testButton SLIDE
+
+
 ---
 
 ### Other Error Detection and Correction
 
 {.todo} CDs and DVDs
 
+{.todo} // PHOTOS
+- credit cards use "Luhn's algorithm" to compare the last digit ... RESEARCH
+- MD5 or SHA-1 hash included with a software application
+- CDs
+- Snapchat/Facebook profile codes
 
 ----------------------------------------------------------------------------------------------------
 
