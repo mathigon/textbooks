@@ -54,7 +54,7 @@ al-haytham:
   full: Hasan Ibn al-Haytham
   location: middle-east
   bio: |
-    __Hasan Ibn al-Haytham__ (أبو علي، الحسن بن الحسن بن الهيثم, c. 965 – 1050)
+    __Hasan Ibn al-Haytham__ (أبو علي، الحسن بن الحسن بن الهيثم, c. 965 – 1050)
     lived in Cairo during the Islamic Golden Age, and studied mathematics,
     physics, astronomy, philosophy, and medicine. He was a proponent of the
     _scientific method_: the belief that any scientific hypothesis must be
@@ -87,7 +87,7 @@ al-khwarizmi:
   overflow: true
   location: middle-east
   bio: |
-    The Persian mathematician __Muhammad Al-Khwarizmi__ (محمد بن موسى الخوارزمي‎,
+    The Persian mathematician __Muhammad Al-Khwarizmi__ (محمد بن موسى الخوارزمي,
     780 – 850) lived during the golden age of the Muslim Abbasid regime in
     Baghdad. He worked at the “House of Wisdom”, which contained the first large
     collection of academic books since the destruction of the Library of
@@ -304,8 +304,8 @@ brahmagupta:
   overflow: true
   location: asia
   keywords: India
-  bio: The Indian mathematician __Brahmagupta__ (c. 598 – 668 CE) invented the
-    rules for addition, subtraction and multiplication with zero and negative
+  bio: The Indian mathematician __Brahmagupta__ (c. 598 – 668 CE) invented
+    the rules for addition, subtraction and multiplication with zero and negative
     numbers. He was also an astronomer and made many other discoveries in
     mathematics. Unfortunately, his writings did not contain any proofs, so we
     don’t know how he derived his results.
@@ -511,8 +511,14 @@ copernicus:
 curry:
   name: Curry
   full: Haskell Brooks Curry
-  bio: |
-    __Haskell Brooks Curry__ (1900 – 1982) was an American mathematician and logician. Curry is best known for his work in combinatory logic. While the initial concept of combinatory logic was based on a single paper by Moses Schönfinkel, Curry did much of the development. Curry is also known for _Curry's paradox_ and the _Curry–Howard correspondence_. There are three programming languages named after him, Haskell, Brook and Curry, as well as the concept of currying, a technique used for transforming functions in mathematics and computer science.
+  bio: __Haskell Brooks Curry__ (1900 – 1982) was an American mathematician and
+    logician. Curry is best known for his work in combinatory logic. While the
+    initial concept of combinatory logic was based on a single paper by Moses
+    Schönfinkel, Curry did much of the development. Curry is also known for
+    _Curry's paradox_ and the _Curry–Howard correspondence_. There are three
+    programming languages named after him, Haskell, Brook and Curry, as well as
+    the concept of currying, a technique used for transforming functions in
+    mathematics and computer science.
 
 de-moivre:
   born: 1667
@@ -1390,7 +1396,7 @@ madhava:
   keywords: India
   location: asia
   bio: |
-    __Madhava of Sangamagramma__ (c. 1340 – 1425) was a mathematician and
+    __Madhava of Sangamagramma__ (c. 1340 – 1425) was a mathematician and
     astronomer from southern India. All of his original work has been lost, but
     he had a great impact on the development of mathematics.
 
@@ -2153,7 +2159,7 @@ tusi:
   keywords: Arabic Middle East
   location: middle-east
   bio: |
-    __Nasir al-Din Tusi__ (1201 – 1274, نصیر الدین طوسی‎), also known as Muhammad
+    __Nasir al-Din Tusi__ (1201 – 1274, نصیر الدین طوسی), also known as Muhammad
     ibn Muhammad ibn al-Hasan al-Tūsī, was an architect, philospher, physician,
     scientist, and theologian, as well as a prolific writer.
 
@@ -2211,14 +2217,14 @@ voronoy:
   name: Voronoy
   full: Georgy Voronoy
   bio: |
-    Georgy Voronoy (1868 – 1908) was a Russian mathematician noted for defining the
-    Voronoi diagram.
+    __Georgy Voronoy__ (1868 – 1908) was a Russian mathematician noted for
+    defining the Voronoi diagram.
 
-    Voronoi diagrams, or tessellations, are used in many areas of science, such as
-    the analysis of spatially distributed data, having become an important topic in
-    geophysics, meteorology, condensed matter physics, and Lie groups. They are
-    also widely used in many areas of computer graphics, from architecture to
-    film-making and video games.
+    Voronoi diagrams (or Voronoi tessellations) are used in many areas of
+    science, such as the analysis of spatially distributed data. They have
+    become an important topic in geophysics, meteorology, condensed matter
+    physics, and Lie groups. They are also widely used in many areas of computer
+    graphics, from architecture to film-making and video games.
 
 wallis:
   born: 1616
