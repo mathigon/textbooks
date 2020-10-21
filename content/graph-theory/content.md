@@ -698,7 +698,7 @@ but most complex maps need more.
 
 ::: column(width=240 style="margin-top: -10px")
 
-    x-img.shifted(src="images/globe.jpg" width=240 height=320)
+    x-img(src="images/globe.jpg" width=240 height=320)
 
 :::
 
