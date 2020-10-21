@@ -1037,7 +1037,7 @@ Yo, banana [[boy]]!
 > goals: draw-1 draw-2 switch
 
     include ./components/wallpaper
-    x-wallpaper(dir="ltr")
+    figure: x-wallpaper(dir="ltr")
     .other-students.reveal(when="draw-1 switch")
       h4 مثال على رسومات الطلاب الآخرين
       .row.padded-thin

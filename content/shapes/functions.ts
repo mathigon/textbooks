@@ -4,15 +4,19 @@
 // =============================================================================
 
 
-import {Arc, Circle, clamp, Line, nearlyEquals, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/fermat';
+import {clamp, nearlyEquals} from '@mathigon/fermat';
 import {$N, animate, CanvasView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
+import {Arc, Circle, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
+
 import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
-import '../shared/components/binary-swipe';  // import component
-import '../shared/components/relation';
 import {VoronoiStep} from './types';
 
+import '../shared/components/binary-swipe';  // import component
+import '../shared/components/relation';
+
 declare const d3: any;
+
 
 const cafeLocationPoints = [
   new Point(34, 200),
@@ -252,7 +256,7 @@ export async function voronoi2($step: VoronoiStep) {
 
 function handlePathing(path: GeoPath, base: GeoPath, heightPath: GeoPath, height: number, whenClose: VoidFunction, whenFar: VoidFunction) {
   const pathSegment = path.value as Segment;
-  const angleRange = 1 * (Math.PI / 180);
+  const angleRange = Math.PI / 180;
   const correctAngle = (base.value as Segment).perpendicular(pathSegment.p1).angle % Math.PI;
   const pathAngle = pathSegment.angle % Math.PI;
   const perpendicular = pathAngle > correctAngle - angleRange && pathAngle < correctAngle + angleRange;
@@ -380,7 +384,7 @@ export function polyVerts($step: Step) {
   const pointsMoved: {[key: string]: boolean}[] = [];
 
   const atLeastTwoMoved = (points: {[key: string]: boolean}) => {
-    return Object.values(points).filter((pv: boolean) => pv == true).length > 1;
+    return Object.values(points).filter(pv => pv).length > 1;
   };
 
   let doneMoving = false;
@@ -683,6 +687,7 @@ export function currysParadox5($step: Step) {
   const $polypad = $step.$('.zoom-2 > x-polypad') as Polypad;
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight);
 
+  // TODO Cleanup duplicate code!
   paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);

@@ -1040,7 +1040,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 Təəssüf ki, bu qruplardan _17-_ nin olması üçün sadə bir səbəb yoxdur və bunun daha inkişaf etmiş riyaziyyat tələb olunduğunu sübut etmək. Bunun əvəzinə, 17 divar kağızı qrupunun hər biri üçün öz təkrar nümunələrinizi çəkməyə cəhd edə bilərsiniz: 
 
     include ./components/wallpaper
-    x-wallpaper
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin

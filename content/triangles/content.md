@@ -1047,7 +1047,7 @@ By the AA condition, all three triangles must be [[similar|congruent|right-angle
 similar polygons:
 
     table.proof-table.reveal(when="blank-5"): tr
-      td.md `pill(x/a, "blue", "xa") = pill(x/c, "red", "ac")`<br>`pill(x, "blue", "x") = (a^2)/c`
+      td.md `pill(x/a, "blue", "xa") = pill(a/c, "red", "ac")`<br>`pill(x, "blue", "x") = (a^2)/c`
       td.md `pill(y/b, "green", "yb") = pill(b/c, "yellow", "bc")`<br>`pill(y, "green", "y") = (b^2)/c`
 
 {.r.reveal(when="blank-5")} [Continue](btn:next)

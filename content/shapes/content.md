@@ -81,27 +81,27 @@ All of these regions in the Voronoi diagram are examples of polygons. A polygon 
 
 ::: x-binary-swipe(a-title="Polygons" b-title="Not Polygons")
       
-{div.card.c-red(solution="a" comment="card-1")} Card #1 - Regular Polygon
+{div.card.c-red(solution="a" comment="polygon-regular")} Card #1 - Regular Polygon
 
-{div.card.c-teal(solution="b" comment="card-2")} Card #2 - NOT a Polygon
+{div.card.c-teal(solution="b" comment="not-polygon-curved")} Card #2 - NOT a Polygon
 
-{div.card.c-green(solution="b" comment="card-3")} Card #3 - NOT a Polygon
+{div.card.c-green(solution="b" comment="not-polygon-hole")} Card #3 - NOT a Polygon
 
-{div.card.c-orange(solution="a" comment="card-4")} Card #4 - Irregular Polygon
+{div.card.c-orange(solution="a" comment="polygon-irregular")} Card #4 - Irregular Polygon
 
-{div.card.c-blue(solution="a" comment="card-5")} Card #5 - Irregular Polygon
+{div.card.c-blue(solution="a" comment="polygon-irregular")} Card #5 - Irregular Polygon
 
-{div.card.c-yellow(solution="b" comment="card-6")} Card #6 - Not a polygon
+{div.card.c-yellow(solution="b" comment="not-polygon-closed")} Card #6 - Not a polygon
 
-{div.card.c-teal(solution="a" comment="card-7")} Card #7 - Regular polygon
+{div.card.c-teal(solution="a" comment="polygon-regular")} Card #7 - Regular polygon
 
-{div.card.c-orange(solution="b" comment="card-8")} Card #8 - Not a Polygon
+{div.card.c-orange(solution="b" comment="not-polygon-crossing")} Card #8 - Not a Polygon
 
-{div.card.c-blue(solution="b" comment="card-9")} Card #9 - Not a polygon
+{div.card.c-blue(solution="b" comment="not-polygon-curved")} Card #9 - Not a polygon
 
-{div.card.c-red(solution="a" comment="card-10")} Card #10 - Irregular Polygon
+{div.card.c-red(solution="a" comment="polygon-irregular")} Card #10 - Irregular Polygon
 
-{div.card.c-purple(solution="a" comment="card-11" hint="This is not correct. Try again!")} Card #11 - Polygon
+{div.card.c-purple(solution="a" comment="polygon-voronoi")} Card #11 - Polygon
 
 :::
 
@@ -188,6 +188,143 @@ The Giant’s Causeway in Northern Ireland is made up of over 40,000 polygonal b
 ::: column(width=300)
 
     object(type="image/svg+xml" data="/resources/shapes/images/giants-causeway-shape.svg" width=300 height=219).column-photo
+
+:::
+
+---
+> id: signs
+
+Most traffic signs are polygons - some regular and some irregular:
+
+::: column(width=160 parent="padded-thin")
+
+    // https://depositphotos.com/9417440/stock-illustration-set-of-14-highway-sign.html
+    x-img(src="images/sign-1.jpg" width=160 height=160)
+
+{.caption} [[Regular Octagon | Regular Hexagon | Regular Pentagon]]
+
+::: column(width=160)
+
+    x-img(src="images/sign-2.jpg" width=160 height=160)
+
+{.caption} [[Irregular | Regular]] pentagon
+
+::: column(width=160)
+
+    x-img(src="images/sign-3.jpg" width=160 height=160)
+
+{.caption} Regular triangle
+
+::: column(width=160)
+
+    x-img(src="images/sign-4.jpg" width=160 height=160)
+
+{.caption} Regular [[quadrilateral | triangle | diamond]]
+
+:::
+
+---
+> id: animals
+
+Polygons show up in all sorts of natural objects - honeycomb and starfish - to name a few. The
+10-sided starfish is a [[decagon | nonagon | octagon]]:
+
+::: column(width=300)
+
+    x-img(src="https://static8.depositphotos.com/1491329/1068/i/950/depositphotos_10680850-stock-photo-worker-bees-on-honeycomb.jpg" width=300 height=199)
+
+::: column(width=300)
+
+    x-img(src="https://st.depositphotos.com/1054213/2023/i/950/depositphotos_20238089-stock-photo-starfish-asterias-rubens.jpg" width=300 height=200)
+
+:::
+
+---
+> id: nature-voronoi
+
+The ground of a dried out desert, the skin patterns on giraffes, and dragonfly wings look strikingly similar to Voronoi diagrams!
+
+::: column(width=150)
+
+    x-img(src="https://static9.depositphotos.com/1013513/1148/i/950/depositphotos_11488218-stock-photo-drought-land-and-hot-weather.jpg" width=150 height=100)
+
+::: column(width=150)
+
+    x-img(src="https://static5.depositphotos.com/1011160/517/i/950/depositphotos_5177840-stock-photo-texture-of-dry-cracked-soil.jpg" width=150 height=100)
+
+::: column(width=150)
+
+    x-img(src="https://st.depositphotos.com/1594920/1698/i/950/depositphotos_16982455-stock-photo-somali-giraffe-commonly-known-as.jpg" width=150 height=109)
+
+::: column(width=150)
+
+    x-img(src="https://static3.depositphotos.com/1003348/177/i/950/depositphotos_1773326-stock-photo-dragonfly.jpg" width=150 height=100)
+
+:::
+
+---
+> id: flags
+> goals: flags-matched
+
+Lastly, many flags use polygons. Drag the name of each country to the correct flag. Just make a guess if you’re not sure!
+
+    x-relation
+      .item(slot="domain" match="canada" comment=true)
+        object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg")
+      .item(slot="domain" match="south-africa" comment=true)
+        object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg")
+      .item(slot="domain" match="finland" comment=true)
+        object(type="image/svg+xml" data="/resources/shapes/images/finland.svg")
+      .item(slot="domain" match="nepal" comment=true)
+        object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg")
+      .item(slot="range" name="canada") Canada
+      .item(slot="range" name="south-africa") South Africa
+      .item(slot="range" name="finland") Finland
+      .item(slot="range" name="nepal") Nepal
+
+---
+> id: poly-verts
+> goals: verts-moved
+
+The hexagons in the South African flag and the pentagon in the Nepalese flag may not appear to be the standard image you may have in your head of a pentagon and a hexagon. Move around the vertices (these are the points where the edges meet) in the regular polygons below to make some irregular polygons of your own.
+
+::: column.grow(width=220)
+
+    // pentagon
+    x-geopad(width=220 height=220): svg
+      circle.move(name="a" cx=16.304 cy=71.944)
+      circle.move(name="b" cx=119.065 cy=15.526)
+      circle.move(name="c" cx=204.477 cy=95.823)
+      circle.move(name="d" cx=154.503 cy=201.868)
+      circle.move(name="e" cx=38.206 cy=187.109)
+      path(name="pentagon" x="polygon(a,b,c,d,e)")
+
+::: column.grow(width=220)
+
+    // hexagon
+    x-geopad(width=220 height=220): svg
+      circle.move(name="f" cx=17.191 cy=123.874)
+      circle.move(name="g" cx=51.786 cy=35.629)
+      circle.move(name="h" cx=145.507 cy=21.466)
+      circle.move(name="i" cx=204.632 cy=95.55)
+      circle.move(name="j" cx=170.037 cy=183.795)
+      circle.move(name="k" cx=76.316 cy=197.958)
+      path(name="hexagon" x="polygon(f,g,h,i,j,k)")
+
+::: column.grow(width=220)
+
+    // octagon
+    x-geopad(width=220 height=220): svg
+      circle.move(name="l" cx=202.682 cy=93.196)
+      circle.move(name="m" cx=163.59 cy=31.852)
+      circle.move(name="n" cx=92.572 cy=16.119)
+      circle.move(name="o" cx=31.229 cy=55.21)
+      circle.move(name="p" cx=15.495 cy=126.229)
+      circle.move(name="q" cx=54.587 cy=187.572)
+      circle.move(name="r" cx=125.605 cy=203.306)
+      circle.move(name="s" cx=186.948 cy=164.214)
+      path(name="octagon" x="polygon(l,m,n,o,p,q,r,s)")
+>>>>>>> master
 
 :::
 
@@ -560,7 +697,6 @@ Teams need to know when to make a pit stop. If they wait too long and wear out t
 :::
 
 ---
-
 > id: wheels
 
 Let’s try to determine the number of laps the cars can go before a pit stop is needed. To answer this, we need to think about how far a tire travels in one revolution. Below are 4 vehicles with very different tire sizes. Move each vehicle so the tire makes one full rotation.
@@ -582,7 +718,6 @@ To determine how far the car goes in one revolution of the tire, we need to know
 We could use a piece of string and a ruler to determine the distance around a tire. Or we could use some sort of flexible measuring tool. Or we could walk around a circular track to determine the distance. However, it would be helpful if there was some relationship between the straight distance across a circle and the distance around a circle. Straight lines are much easier to measure with tools such as rulers and tape measures. We are going to explore this idea in this chapter.
 
 ---
-
 > id: encasement-estimation
 > goals: eight-sides
 

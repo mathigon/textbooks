@@ -12,34 +12,27 @@
   border-radius: 6px 6px 0 0;
   background: @grey-background;
 
-  .simple-tangram-bg { 
-    background-image: url('images/square.svg');   
+  .simple-tangram-bg {
     background: url('images/square.svg') center no-repeat;
     background-size: contain;
     opacity: 0.2;
   }
-
 }
 
 .triangle-tangram {
-
   .solution-outline {
     stroke: black;
     stroke-width: 1px;
     fill: none;
   }
-
 }
 
 .tangram, .triangle-tangram {
-
   .simple-tangram-bg, .solution-outline {
     width: 100%;
     position: absolute;
   }
-
   .simple-tangram-bg, .solution-outline, x-polypad { height: 450px; }
-
 }
 
 .tangram-polys x-polypad { height: 225px; }
@@ -48,14 +41,13 @@
   x-polypad { height: 225px; }
 }
 
-x-slider.zoom-s-1, x-slider.zoom-s-2, x-slider.tire-encasement {
+x-slider.zoom-s-1, x-slider.zoom-s-2 {
   button.play { display: none; }
 }
 
 .paradox-comparison x-polypad { height: 475px; }
 
 figure .tire-circumference {
-
   width: 600px;
   margin: auto;
   position: relative;
@@ -76,7 +68,6 @@ figure .tire-circumference {
   svg {
     height: 300px;
   }
-
 }
 
 .nesw-corner:hover {
@@ -111,9 +102,4 @@ figure svg {
     height: 400px;
     position: absolute;
   }
-
-  > geopad {
-    position: absolute;
-  }
-
 }

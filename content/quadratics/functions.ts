@@ -5,7 +5,8 @@
 
 
 import {list} from '@mathigon/core';
-import {nearlyEquals, Point} from '@mathigon/fermat';
+import {nearlyEquals} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {CoordinateSystem, EquationSystem, Step} from '../shared/types';
 
 import './components/projectile';

@@ -1,6 +1,6 @@
 {
   "extends": ["config:base"],
-  "schedule": ["before 5am on Saturday"],
+  "schedule": ["before 5am on the first day of the month"],
   "packageRules": [{
     "packagePatterns": ["eslint"],
     "groupName": "lint",
@@ -9,6 +9,7 @@
   }, {
     "packagePatterns": ["^@mathigon"],
     "groupName": "mathigon",
+    "schedule": ["at any time"],
     "automerge": true,
     "automergeType": "branch"
   }, {
@@ -32,5 +33,5 @@
     "automerge": true,
     "automergeType": "branch"
   }],
-  "ignoreDeps": ["marked", "three"]
+  "ignoreDeps": ["marked", "three", "autoprefixer", "gulp-postcss", "postcss-rtl"]
 }

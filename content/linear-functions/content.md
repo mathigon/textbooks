@@ -1,17 +1,8 @@
 # Linear Functions
 
-## Input and Output
+## Input, Output and Graphs
 
-> section: input-output
-> sectionStatus: dev
-
-TODO
-
----
-
-## Graphing Functions
-
-> section: graphing
+> section: graphs
 > sectionStatus: dev
 
 TODO
@@ -199,16 +190,7 @@ TODO
 
 ---
 
-## Linear Functions
-
-> section: linear
-> sectionStatus: dev
-
-TODO
-
----
-
-## Piecewise Functions and Systems of Equations
+## Systems of Equations
 
 > section: systems
 > sectionStatus: dev

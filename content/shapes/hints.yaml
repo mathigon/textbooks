@@ -1,14 +1,10 @@
-card-1: This shape is a REGULAR polygon because all sides are the same length.
-card-2: This shape is NOT a polygon because it has a curved side length.
-card-3: This shape is NOT a polygon because it has a hole.
-card-4: This shape is an IRREGULAR polygon because the side lengths are not all the same.
-card-5: This shape is an IRREGULAR polygon because the side lengths are not all the same.
-card-6: This shape is NOT a polygon because it is not closed.
-card-7: This shape is a REGULAR polygon because all sides are the same length.
-card-8: This shape is NOT a polygon because two of the edges cross over each other.
-card-9: This shape is NOT a polygon because it has curved side lengths.
-card-10: This shape is an IRREGULAR polygon because the side lengths are not all the same.
-card-11: This is an IRREGULAR polygon from the Voronoi diagram above. We’ll find the area of it below.
+polygon-regular: This shape is a __regular__ polygon because all sides are the same length.
+not-polygon-curved: This shape is __not__ a polygon because it has curved sides.
+not-polygon-hole: This shape is __not__ a polygon because it has a hole.
+polygon-irregular: This shape is an __irregular__ polygon because the side lengths are not all the same.
+not-polygon-closed: This shape is __not__ a polygon because it is not closed.
+not-polygon-crossing: This shape is __not__ a polygon because two of the edges cross over each other.
+polygon-voronoi: This is an __irregular__ polygon from the Voronoi diagram above. We’ll find the area of it below.
 
 canada: The leaf has some curved sections, so while not technically a polygon, it closely resembles a 25-sided polygon. This is called a icosikaipentagon!
 south-africa: While it may not initially look like it, the yellow and while shapes in the flag are both hexagons!
