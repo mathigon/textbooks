@@ -394,9 +394,9 @@ _Cytosine_ if placed within a strand of DNA letters.
 > goals: switch
 > sectionStatus: dev
 
-Computers are all around us. You’re reading this on a computer right now! But how many people actually know how computers work? How many people, when they scroll through their social media feed, or search for a recipe, or stream a movie, actually know how the magic little box actually works?
+Computers are all around us. You’re reading this on a computer right now! But how many people actually know how computers work? How many of us, as we scroll through our social media feeds, or search for a recipe, or watch a movie from our favorite streaming service know how what's happening actually works?
 
-There are many many complex layers and processes that operate together get information from all over the world and display it on your screen. But at the lowest level of every computer are [transistors](gloss:transistor). Transistors are the building blocks of how computers store and manipulate information.
+There are many many complex layers and processes that operate together to get information from all over the world and display it on your screen. But at the lowest level of every computer are [transistors](gloss:transistor). Transistors are the building blocks of how computers store and manipulate information.
 
 ::: column(width=320)
 
@@ -405,9 +405,9 @@ There are many many complex layers and processes that operate together get infor
 
 ::: column.grow
 
-Transistors are like tiny tiny tiny, microscopic electrical switches that transmit ELECTRONS. Turn it on, the electrons flow. Turn it off, the electrons stop (Does this sound familiar to another device? Perhaps the telegraph?).
+Transistors are like tiny microscopic electrical switches that transmit electrons. Turn on a transistor and the electrons flow. Turn it off and the electrons stop (Perhaps this sounds familiar to the telegraph).
 
-But how can a simple on/off switch store information as complex as videos? We learned in the last chapter about Morse Code. But Transistors are interpreted by a computer through very different means.
+But how can a simple on/off switch store information as complex as sound, images, and videos? We learned in the last chapter about Morse Code, which is used to communicate letters via sound or light. But transistors store data that is interpreted by a computer through very different means.
 
 :::
 
@@ -415,17 +415,12 @@ But how can a simple on/off switch store information as complex as videos? We le
 > id: finger5
 > sectionStatus: dev
 
-To understand how all sorts of different codes can be stored in the transistors of a computer, let’s try a thought exercise…
+To understand how all sorts of different codes can be stored in the transistors of a computer, let’s try a thought exercise. We've just looked at how a transistor can be turned on or off, now let's look at how we can count on our fingers by putting them up or down.
 
 
-### Fingers
+### Playing with Digits
 
 How high can you count using only one hand, without skipping any numbers? When we count with our hands, we traditionally use how many fingers are up to represent the number. We have five fingers, so that means the highest we can count with one hand is [[five|four|ten]].
-
-{.TODO PHILIPP how to make them appear after entering value into blank?}
-
-
-    button.appear APPEAR
 
     table.finger-grid
       tr
@@ -493,7 +488,8 @@ If we want to use each combination of ups and downs to represent a different num
 | 4 | [[16]] |
 | 5 | [[32]] |
 
-More generally, with N fingers we can represent [[2^N]] possible combinations. Remember that our fingers are merely serving as a metaphor for binary numbers. This means that __any N-digit number can represent up to 2^N different values__.
+More generally, with __n__ fingers we can represent _{x-equation.small(solution="2^n" keys="n sup" numeric)}_. possible combinations. Remember that our fingers are merely serving as a metaphor for binary numbers. This means that __any n-digit number can represent up to 2^n different values__.
+
 
 
 ---
@@ -583,7 +579,6 @@ We can represent any five-digit binary number by following any path from beginni
 
 ---
 
-#### Fingers
 > id: finger32
 
 Yes, there are [[32]] different combinations we can make with five fingers.
@@ -604,17 +599,12 @@ Yes, there are [[32]] different combinations we can make with five fingers.
                     x-img(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=64 height=64)
                     .caption.dec= n
                     .caption.bin= ""+b0+b1+b2+b3+b4
-          
-
-    button.appear APPEAR
-    button.switch SWITCH
-    // delete these buttons. Replace APPEAR w/ .reveal, SWITCH w/ .segmented
 
 
 {.TODO PHILIPP how to make them appear after entering value into blank?}
 
 (we'll find out soon why we started with zero).
-Click on the [SWITCH](->.switch) button to toggle between our binary values and their decimal counterparts. These are the values
+Change the [tabs](->.segmented) to toggle between the binary values and their decimal counterparts.
 
 ---
 
@@ -660,24 +650,24 @@ Binary numbers work very similarly except they use a base-two number system. So 
 Let's examine the binary number _{.ns.g}11111_ (5 consecutive 1s). How much is each digit worth?
 
 | __{.m-red}digit__ | 1 | 1 | 1 | 1 | 1 |
-| __{.m-green}digit value__   | {.s-green}_{.n}[[16]]_ | {.s-green}_{.n}[[8]]_ | {.s-green}_{.n}[[4]]_ | {.s-green}_{.n}[[2]]_ | {.s-green}_{.n}[[1]]_ |
+| __{.m-green}digit value__   | {.s-green}_{.hex}[[16]]_ | {.s-green}_{.hex}[[8]]_ | {.s-green}_{.hex}[[4]]_ | {.s-green}_{.hex}[[2]]_ | {.s-green}_{.hex}[[1]]_ |
 {.table-small.grid}
 
 ---
 
 We can find the decimal value of this binary number _{.ns.g}11111_ by adding up the digit values. So its value is _not_ eleven thousand, one-hundred and eleven, but is 
 
-{.text-center.s-red} _{.n}16_ + _{.n}8_ + _{.n}4_ + _{.n}2_ + _{.n}1_ = _{.n}[[31]]_
+{.text-center.s-red} _{.hex}16_ + _{.hex}8_ + _{.hex}4_ + _{.hex}2_ + _{.hex}1_ = _{.hex}[[31]]_
 
 ---
 
 Here are some 6-digit binary numbers. Let's convert them to decimal by first writing the values of each digit, and then adding the digits together.
 
-{.text-center.s-purple} _{.ns}100110_ = _{.n}[[32]]_ + _{.n.z}0_ + _{.n.z}0_ + _{.n}[[4]]_ + _{.n}[[2]]_ + _{.n.z}0_ = _{.n}[[38]]_
+{.text-center.s-purple} _{.ns}100110_ = _{.hex}[[32]]_ + _{.hex.z}0_ + _{.hex.z}0_ + _{.hex}[[4]]_ + _{.hex}[[2]]_ + _{.hex.z}0_ = _{.hex}[[38]]_
 
-{.text-center.s-yellow} _{.ns.y}111000_ = _{.n}[[32]]_ + _{.n}[[16]]_ + _{.n}[[8]]_ + _{.n.z}0_ + _{.n.z}0_ + _{.n.z}0_ = _{.n}[[56]]_
+{.text-center.s-yellow} _{.ns.y}111000_ = _{.hex}[[32]]_ + _{.hex}[[16]]_ + _{.hex}[[8]]_ + _{.hex.z}0_ + _{.hex.z}0_ + _{.hex.z}0_ = _{.hex}[[56]]_
 
-{.text-center.s-teal} _{.ns.g}101011_ = _{.n}[[32]]_ + _{.n.z}0_ + _{.n}[[8]]_ + _{.n.z}0_ + _{.n}[[2]]_ + _{.n}[[1]]_ = _{.n}[[43]]_
+{.text-center.s-teal} _{.ns.g}101011_ = _{.hex}[[32]]_ + _{.hex.z}0_ + _{.hex}[[8]]_ + _{.hex.z}0_ + _{.hex}[[2]]_ + _{.hex}[[1]]_ = _{.hex}[[43]]_
 
 
 When computers (including digital calculators) add and subtract numbers, this is how the numbers are represented at the level of the transistor!
