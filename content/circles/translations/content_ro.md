@@ -522,14 +522,14 @@ unui [__cerc unitate__](gloss:unit-circle) (un cerc de rază 1).
 
 ::: column.grow
 
-Un _{span.var-action}cerc complet_ are circumferința
+Un [cerc complet](action:setState(0)) are circumferința
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} Pentru o _{span.var-action}rotație de semicerc_, distanța
+{.reveal(when="eqn-0")} Pentru o [rotație de semicerc](action:setState(1)), distanța
 de-a lungul circumferinței este
 _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} Pentru o _{span.var-action}rotație de sfert de cerc_, distanța
+{.reveal(when="eqn-1")} Pentru o [rotație de sfert de cerc](action:setState(2)), distanța
 de-a lungul circumferinței este
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
@@ -722,18 +722,18 @@ legate de cerc de care vom avea nevoie pentru a rezolva probleme mai complexe:
 
 ::: column.grow(parent="right")
 
-* {.r} O [{.red} secantă](pill:secant) este o dreaptă care intersectează un cerc
+* {.r} O [{.red} secantă](target:secant) este o dreaptă care intersectează un cerc
   în două puncte [Continuă](btn:next)
-* {.r.reveal(when="next-0")} O [{.green} coardă](pill:chord) este un segment de dreaptă
+* {.r.reveal(when="next-0")} O [{.green} coardă](target:chord) este un segment de dreaptă
   care unește două puncte care se află pe circumferința unui cerc. [Continuă](btn:next)
-* {.r.reveal(when="next-1")} O [{.blue} tangentă](pill:tangent) este o dreaptă care atinge 
+* {.r.reveal(when="next-1")} O [{.blue} tangentă](target:tangent) este o dreaptă care atinge 
   un cerc într-un singur punct. Acesta se numește __punct de tangență__. [Continuă](btn:next)
-* {.r.reveal(when="next-2")} Un [{.yellow} arc de cerc](pill:arc) este o porțiune din
+* {.r.reveal(when="next-2")} Un [{.yellow} arc de cerc](target:arc) este o porțiune din
   circumferința unui cerc. [Continuă](btn:next)
-* {.r.reveal(when="next-3")} Un [{.teal} sector circular](pill:sector) este o porțiune 
+* {.r.reveal(when="next-3")} Un [{.teal} sector circular](target:sector) este o porțiune 
   din interiorul unui cerc, mărginită de un _arc de cerc_ și _două raze_.
   [Continuă](btn:next)
-* {.r.reveal(when="next-4")} În cele din urmă, un [{.purple} segment circular](pill:segment) 
+* {.r.reveal(when="next-4")} În cele din urmă, un [{.purple} segment circular](target:segment) 
   este o porțiune din interiorul unui cerc, mărginită de un _arc de cerc_ și _o coardă_.
   [Continuă](btn:next)
 
@@ -797,13 +797,13 @@ despre arcurile și sectoarele unui cerc.
 
 ::: column.grow
 
-După cum se poate vedea în diagramă, un [{.red} arc de cerc](pill:arc) este o porțiune din 
-[[circumferința|diametrul|tangenta]] unui cerc și un [{.yellow} sector circular](pill:sector)
+După cum se poate vedea în diagramă, un [{.red} arc de cerc](target:arc) este o porțiune din 
+[[circumferința|diametrul|tangenta]] unui cerc și un [{.yellow} sector circular](target:sector)
 este o porțiune din [[interiorul|raza|perimetrul]] unui cerc.
 
 ::: .reveal(when="blank-0 blank-1")
 Arcul de cerc dintre două puncte _A_ și _B_ este adesea scris `arc(AB)`. Această definiție este
-ușor ambiguă: există un [{.purple} al doilea arc de cerc](pill:major)
+ușor ambiguă: există un [{.purple} al doilea arc de cerc](target:major)
 care unește _A_ și _B_, dar merge în sens invers.
 
 Cel mai mic dintre cele două arce se numește __arcul mic__, iar cel mai mare se numește
@@ -819,17 +819,17 @@ ambele arce au aceeași lungime și sunt [[semicercuri|diametre|circumferințe]]
 ::: column.grow
 
 Pentru a afla lungimea unui arc de cerc sau aria unui sector circular avem nevoie să cunoaștem 
-unghiul corespunzător din centrul cercului: acesta se numește [{.blue} unghi la centru](pill:angle).
+unghiul corespunzător din centrul cercului: acesta se numește [{.blue} unghi la centru](target:angle).
 
 Observă cum arcul, sectorul și unghiul la centru ocupă toate _aceeași proporție_
-dintr-un cerc dat. De exemplu, dacă [{.blue} unghiul la centru](pill:angle) este
-_{span.var-action}90°_, el ocupă [[un sfert|o jumătate|o treime]] dintr-un 
-[{.teal} cerc complet](pill:fangle).
+dintr-un cerc dat. De exemplu, dacă [{.blue} unghiul la centru](target:angle) este
+[90°](action:set90Deg()), el ocupă [[un sfert|o jumătate|o treime]] dintr-un 
+[{.teal} cerc complet](target:fangle).
 
 ::: .reveal(when="blank-0")
-Asta înseamnă că [{.red} lungimea arcului](pill:arc) este și ea `1/4` din 
-[{.purple} circumferința totală](pill:circ) și 
-[{.yellow} aria sectorului](pill:sector) este `1/4` din [{.orange} aria totală](pill:area).
+Asta înseamnă că [{.red} lungimea arcului](target:arc) este și ea `1/4` din 
+[{.purple} circumferința totală](target:circ) și 
+[{.yellow} aria sectorului](target:sector) este `1/4` din [{.orange} aria totală](target:area).
 
 Putem exprima această relație sub forma unei ecuații:
 
@@ -862,13 +862,13 @@ De exemplu,
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}lungime arc](pill) | = | `"circumferință" × c/360` |
+| [lungime arc](pill:red) | = | `"circumferință" × c/360` |
 |                           | = | `2 π r × c/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}arie sector](pill) | = | `"arie cerc" × c/360` |
+| [arie sector](pill:yellow) | = | `"arie cerc" × c/360` |
 |                              | = | `π r^2 × c/360`         |
 {.eqn-system}
 
@@ -886,13 +886,13 @@ Dacă unghiul la centru se măsoară mai degrabă în [radiani](gloss:radians) d
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}lungime arc](pill) | = | `2 π r × c/(2π)` |
+| [lungime arc](pill:red) | = | `2 π r × c/(2π)` |
 |                          | = | `r × c`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}arie sector](pill) | = | `π r^2 × c/(2π)` |
+| [arie sector](pill:yellow) | = | `π r^2 × c/(2π)` |
 |                              | = | `1/2 r^2 c`      |
 {.eqn-system}
 
@@ -950,9 +950,9 @@ Razele soarelui cad direct în interiorul fântânii, dar lovesc obeliscul într
 se produce o umbră. [Continuă](btn:next)
 
 ::: .reveal(when="next-0")
-Eratostene a făcut măsurători și a aflat că [{.teal} unghiul](pill:angle1) 
-umbrei era de 7.2°. Această valoare este la fel ca măsura [{.purple} unghiului la centru](pill:angle2)
-al [{.red} arcului](pill:arc) dintre Alexandria și Swenet pentru că sunt unghiuri
+Eratostene a făcut măsurători și a aflat că [{.teal} unghiul](target:angle1) 
+umbrei era de 7.2°. Această valoare este la fel ca măsura [{.purple} unghiului la centru](target:angle2)
+al [{.red} arcului](target:arc) dintre Alexandria și Swenet pentru că sunt unghiuri
 [[alternante|verticale|corespunzătoare]].
 :::
 

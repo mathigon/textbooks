@@ -289,14 +289,24 @@ vertices|only has “even” vertices|has no vertices with an order larger than
 4|has an odd number of vertices|has no vertices of order 3]]. This condition can
 be explained if we look at just a single vertex in the graph:
 
-    x-slideshow
-      .stage(slot="stage"): include svg/konigsberg-proof.svg
-      .legend(slot="legend") Here you can see a single, magnified vertex in a graph.
-      .legend(slot="legend") If we draw the graph, we will eventually have an edge leading towards this vertex, and then another one leading away. This makes two edges meeting at the vertex.
-      .legend(slot="legend") Maybe the vertex is a crossing rather than a corner. In that case there will be another edge leading towards the vertex, and another edge leading away. Now we have four edges.
-      .legend(slot="legend") And in some graphs, there may even be a third pair of edges leading towards and away from the vertex. Now there are six edges.
-      .legend(slot="legend") Notice that, either way, there always is an even number of edges meeting at the vertex.
-      .legend(slot="legend") The only two exceptions are the vertices where the path starts, and where it ends – these two may have an odd number of edges. If the start and end point are the same, all vertices in the graph are even.
+::: x-slideshow
+
+    .stage(slot="stage"): include svg/konigsberg-proof.svg
+
+Here you can see a single, magnified vertex in a graph.
+
+If we draw the graph, we will eventually have an edge leading towards this vertex, and then another
+one leading away. This makes two edges meeting at the vertex.
+
+Maybe the vertex is a crossing rather than a corner. In that case there will be another edge leading towards the vertex, and another edge leading away. Now we have four edges.
+
+And in some graphs, there may even be a third pair of edges leading towards and away from the vertex. Now there are six edges.
+
+Notice that, either way, there always is an even number of edges meeting at the vertex.
+
+The only two exceptions are the vertices where the path starts, and where it ends – these two may have an odd number of edges. If the start and end point are the same, all vertices in the graph are even.
+
+:::
 
 ---
 > id: bridges-5
@@ -334,9 +344,9 @@ many handshakes are there in total?
 
 We can represent the handshakes using a graph: every person is [[a vertex|an edge]],
 and every handshake is [[an edge|a vertex]].
- 
+
 {.reveal(when='blank-0 blank-1')} Now it is easy to count the number of edges in the graph. We find
-that there with ${hnd} people, there are ${hnd*(hnd-1)/2} handshakes.
+that with ${hnd} people, there are ${hnd*(hnd-1)/2} handshakes.
 
 ::: column.s-hide(width=240)
 
@@ -361,9 +371,9 @@ number of handshakes would be [[`n×(n–1)`|`n×(n+1)`|`n^2`]].
 ---
 > id: handshakes-2a
 
-Unfortunately this answer is not quite right. Notice how <x-target to=".handshakes tr:first-child
-td:first-child, .handshakes tr:first-child td:nth-child(2)">the first two entries on the top
-row</x-target> are actually the same, just flipped around.
+Unfortunately this answer is not quite right. Notice how [the first two entries on the top
+row](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) are
+actually the same, just flipped around.
 
 In fact, we have counted every handshake [[twice|once|three times]], _{span.reveal(when="blank-0")}
 once for each of the two people involved. This means that the correct number of handshakes for
@@ -553,35 +563,45 @@ see if Euler’s equation works. Instead, we can try to find a simple
 ---
 > id: euler-2
 
-    x-slideshow
-      .stage(slot="stage")
-        svg(viewBox="0 0 640 200")
-          line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
-          line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
-          line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
-          line.link(style="stroke-width: 3px" x1="390" y1="100" x2="270" y2="30")
-          circle.node(cx=270 cy=30  r=7)
-          circle.node(cx=150 cy=100 r=7 style="display: none")
-          circle.node(cx=270 cy=170 r=7 style="display: none")
-          circle.node(cx=390 cy=100 r=7 style="display: none")
+::: x-slideshow
 
-        .euler-table
-          table.grid.table-small
-            tr
-              td: strong.blue.i F
-              td: strong.green.i V
-              td: strong.red.i E
-            tr
-              td.xf 0
-              td.xv 1
-              td.xe 0
-          p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
+    .stage(slot="stage")
+      svg(viewBox="0 0 640 200")
+        line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
+        line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
+        line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
+        line.link(style="stroke-width: 3px" x1="390" y1="100" x2="270" y2="30")
+        circle.node(cx=270 cy=30  r=7)
+        circle.node(cx=150 cy=100 r=7 style="display: none")
+        circle.node(cx=270 cy=170 r=7 style="display: none")
+        circle.node(cx=390 cy=100 r=7 style="display: none")
 
-      .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
-      .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler’s equation still works.
-      .legend(slot="legend") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler’s equation still works.
-      .legend(slot="legend") Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler’s equation works.
-      .legend(slot="legend") Let’s keep going: if we now create a quadrilateral we add one vertex, two edges and one face. Euler’s equation still works.
+      .euler-table
+        table.grid.table-small
+          tr
+            td: strong.blue.i F
+            td: strong.green.i V
+            td: strong.red.i E
+          tr
+            td.xf 0
+            td.xv 1
+            td.xe 0
+        p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
+
+The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
+
+Let us add a new vertex to our graph. We also have to add an edge, and Euler’s equation still works.
+
+If we want to add a third vertex to the graph we have two possibilities. We could create a small
+triangle: this adds one vertex, one face and two edges, so Euler’s equation still works.
+
+Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler’s
+equation works.
+
+Let’s keep going: if we now create a quadrilateral we add one vertex, two edges and one face.
+Euler’s equation still works.
+
+:::
 
 ---
 > id: euler-3
@@ -678,7 +698,7 @@ but most complex maps need more.
 
 ::: column(width=240 style="margin-top: -10px")
 
-    x-img.shifted(src="images/globe.jpg" width=240 height=320)
+    x-img(src="images/globe.jpg" width=240 height=320)
 
 :::
 
@@ -827,12 +847,11 @@ Let us think, once more, about networks and maps. Imagine that a delivery
 service has to visit ${tsn}{tsn|8|2,50,1} different cities to distribute
 parcels. We can think of these cities as the vertices in a graph. If all the
 cities are connected by roads, this is a [[complete graph|cycle|bipartite graph]],
-so there are <mfrac><mrow>${tsn} × (${tsn} – 1)</mrow><mn>2</mn></mfrac> =
-${tsn*(tsn-1)/2} edges in total.
+so there are `(var("tsn") × (var("tsn") – 1)) / 2 = var("tsn*(tsn-1)/2")` edges in total.
 
 The delivery truck has to visit all cities, in any order. In the Königsberg
 bridges problem we wanted to find paths which travel along _every edge_ exactly
-one. Now we want to find paths which visit _every vertex_ exactly once. These
+once. Now we want to find paths which visit _every vertex_ exactly once. These
 paths are called __Hamiltonian cycles__.
 
 ::: column(width=260)

@@ -1133,7 +1133,7 @@ Stattdessen kannst du versuchen, deine eigenen sich wiederholenden Muster für j
 Ornamentgruppen zu zeichnen:
 
     include ./components/wallpaper
-    x-wallpaper
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Beispiele von Zeichnungen anderer Schüler
       .row.padded-thin

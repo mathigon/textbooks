@@ -4,15 +4,15 @@
 // =============================================================================
 
 
-import {EventTarget, defer, last} from '@mathigon/core';
-import {Point, numberFormat} from '@mathigon/fermat';
-import {CustomElementView, register, $N, pointerPosition, ElementView} from '@mathigon/boost';
-import {AudioPlayer} from '../../shared/components/audio';
+import {defer, EventTarget, last} from '@mathigon/core';
+import {numberFormat} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
+import {$N, AudioPlayer, CustomElementView, ElementView, pointerPosition, register} from '@mathigon/boost';
 
 
-const enterAudio = new AudioPlayer('/resources/exploding-dots/audio/enter.m4a');
-const explodeAudio = new AudioPlayer('/resources/exploding-dots/audio/explode.m4a');
-const annihilateAudio = new AudioPlayer('/resources/exploding-dots/audio/annihilate.m4a');
+const enterAudio = new AudioPlayer('/audio/appear.mp3');
+const explodeAudio = new AudioPlayer('/audio/whoosh.mp3');
+const annihilateAudio = new AudioPlayer('/audio/disappear.mp3');
 
 // -----------------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ class Cell extends EventTarget {
 
 
   constructor(private readonly $dotMachine: DotMachine, initial = 0,
-              index = 0) {
+      index = 0) {
     super();
     this.value = initial;
 
@@ -44,9 +44,13 @@ class Cell extends EventTarget {
     }
   }
 
-  get $fullDots() { return this.$dots.filter($d => !$d.data.anti); }
+  get $fullDots() {
+    return this.$dots.filter($d => !$d.data.anti);
+  }
 
-  get $antiDots() { return this.$dots.filter($d => $d.data.anti); }
+  get $antiDots() {
+    return this.$dots.filter($d => $d.data.anti);
+  }
 
   getDotPosition(i: number) {
     const s = this.$dotMachine.spacing;
@@ -70,7 +74,7 @@ class Cell extends EventTarget {
   }
 
   addDot(posn?: Point,
-         {className = '', dx = 0, audio = false, count = true} = {}) {
+      {className = '', dx = 0, audio = false, count = true} = {}) {
     if (!posn) posn = this.getDotPosition(this.$dots.length);
     if (audio) enterAudio.play();
 

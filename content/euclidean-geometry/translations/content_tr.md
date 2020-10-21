@@ -498,9 +498,9 @@ Bu aletler ne kadar ilkel görünseler de bunlarla çok fazla sayıda şekil çi
 ::: column.grow
 {.task} Pergel ve düz kenar ile [eşkenar üçgen](gloss:equilateral-triangle) çizimi.
 
-Başlangıç için, sol üstteki kutucuklardan <x-target no-margins to="#equilateral .tool:nth-child(3)">çizgi kutucuğu</x-target> ile çizgi çiziyoruz. Seçili çizgi kutucuğu ile basitçe bir noktadan diğerine sürüklüyoruz.  Bu parça eşkenar üçgenin bir kenarını oluşturacak.
+Başlangıç için, sol üstteki kutucuklardan [çizgi kutucuğu](->#equilateral_.tool:nth-child(3)) ile çizgi çiziyoruz. Seçili çizgi kutucuğu ile basitçe bir noktadan diğerine sürüklüyoruz.  Bu parça eşkenar üçgenin bir kenarını oluşturacak.
 
-{.reveal(when="segment0")} Sırada çizgi üzerindeki bir noktayı merkez kabul edip diğer noktada biten iki çember çizmek var.  <x-target no-margins to="#equilateral .tool:nth-child(5)">Çember kutucuğu</x-target> ile basitçe bir noktadan diğerine sürüklüyoruz. 
+{.reveal(when="segment0")} Sırada çizgi üzerindeki bir noktayı merkez kabul edip diğer noktada biten iki çember çizmek var.  [Çember kutucuğu](->#equilateral_.tool:nth-child(5)) ile basitçe bir noktadan diğerine sürüklüyoruz. 
 
 {.reveal(when="circle1 circle2")} Şimdiden üçgenimizin iki köşesi oluştu ve üçüncüsü de iki çemberin kesiştiği nokta olacak. Yine çizgi kutucuğunu kullanarak üçgenin kayıp iki kenarını oluşturup üçgeni tamamlayabilirsiniz. 
 

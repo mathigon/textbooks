@@ -4,8 +4,9 @@
 // =============================================================================
 
 
-import {Angle, clamp, Point} from '@mathigon/fermat';
-import {slide, animate, ElementView, AnimationResponse, SVGView} from '@mathigon/boost';
+import {clamp} from '@mathigon/fermat';
+import {Angle, Point} from '@mathigon/euclid';
+import {animate, AnimationResponse, ElementView, slide, SVGView} from '@mathigon/boost';
 
 
 interface Options {

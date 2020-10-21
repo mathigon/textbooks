@@ -192,6 +192,12 @@ base-10:
     commonly used around the world. Every digit in a number can have one of ten
     different values, from 0 to 9.
 
+binary-numbers:
+  title: Binary Numbers
+  text: __Binary numbers__ are a way to express numbers in the base-2 numberal
+    system, typically using the symbols 0 and 1. It is commonly used in digital
+    electronics.
+
 bipartite-graph:
   title: Bipartite graph
   text: A (complete) __bipartite graph__ consists of two sets of vertices. Every
@@ -247,7 +253,7 @@ circle:
 
 circle-area:
   title: Area of a circle
-  text: The __area of a circle__ with radius _r_ is given by the folmula
+  text: The __area of a circle__ with radius _r_ is given by the formula
     `A = pi r^2`.
 
 circle-circumference:
@@ -291,6 +297,26 @@ circumcircle:
   image: circumcircle.svg
   link: /course/triangles/properties#circumcircle-1
 
+chaos:
+  title: Chaos
+  text: |
+    __Chaos theory__ is a branch of mathematics about dynamical systems that
+    look random and irregular. They are often governed by deterministic laws
+    that are highly sensitive to initial conditions.
+
+    The _butterfly effect_ describes how tiny changes in the state of a system
+    can, over time, lead to large changes in a later change.
+
+code:
+  title: Codes
+  text: |
+    A __code__ is a system of rules used to convert _information_ (e.g. letters,
+    sounds, words, or images) into another form. Some codes are secret, and
+    can only be deciphered by the intended recipient. Other codes are designed
+    for a specific transmission or storage medium (e.g. _morse codes_ for
+    telegraph lines, or _binary code_ for computers). Our language and alphabet
+    are other examples of codes.
+
 coefficient:
   title: Coefficient
   text: __Coefficients__ are the numbers in front of the variables in a
@@ -301,6 +327,11 @@ coefficient:
 collinear:
   title: Collinear points
   text: Three or more points are __collinear__ if they lie on the same line.
+
+commutative:
+  title: Commutative Property
+  text: An operation • is __commutative__ if `a•b = b•a`. For example,
+    both addition (+) and multiplication (×) of numbers is commutative.
 
 compass:
   title: Compass
@@ -478,6 +509,13 @@ denominator:
   text: The __denominator__ is the bottom number in a fraction. For example, in
     `4/7`, the number 7 is the denominator.
 
+dependent-events:
+  title: Dependent Events
+  text: |
+    Two events are __dependent__ if the occurrence of one of them changes the
+    propability that the other event occuring. For example, _A_ and _B_ could
+    be dependent if P(*A*|*B*) ≠ P(*A*)`.
+
 dilation:
   title: Dilation
   text: A __dilation__ is a transformation that resizes a geometric shape, by
@@ -502,6 +540,28 @@ discriminant:
     is equal to 0, there is just one solution. If it is less than 0, there are no
     (real) solutions.
 
+distributive:
+  title: Distributive Property
+  text: An operation • is __distributive__ over another operation * if
+    `a•(b*c) = a•b * a•c`. For example, multiplication (×) of numbers is
+    distributive over addition (+).
+
+divisibility-tests:
+  title: Divisibility Tests
+  text: |
+    __Divisibility tests__ can help you quickly decide whether a number is
+    divisibile by another.
+
+    * A number is divisible by __2__ if is even.
+    * A number is divisible by __3__ if its sum of digits is divisible by 3.
+    * A number is divisible by __4__ if its last two digits are divisible by 4.
+    * A number is divisible by __5__ if its last digit is a 0 or a 5.
+    * A number is divisible by __6__ if it is divisible by both 3 and 4.
+    * _There is no easy divisibility test for 7._
+    * A number is divisible by __8__ if its last three digits are divisible by 8.
+    * A number is divisible by __9__ if its sum of digits is divisible by 9.
+    * A number is divisible by __10__ if its last digit is a 0.
+
 dna:
   title: DNA
   text: __DNA__ (deoxyribonucleic acid) is a molecule that contains the genetic
@@ -516,6 +576,11 @@ dodecahedron:
   text: The __dodecahedron__ is a Platonic solid and consists of 12 faces that
     are regular pentagons. It has 20 vertices and 30 edges.
   link: /course/polyhedra/platonic#platonic-overview
+
+domain:
+  title: Domain
+  text: The __domain__ of a function or relation is the set of all possible
+    _input values_ (often shown on the _x_-axis in a coordinate system).
 
 dot-annihilation:
   title: Annihilation
@@ -793,6 +858,15 @@ imaginary:
 
     The __imaginary unit__ is written as `i = sqrt(−1)`, and other imaginary
     numbers can be written as its multiples. For example, `sqrt(-5) = 5i`.
+
+independent-events:
+  title: Independent Events
+  text: |
+    Two events are __independent__ if the occurrence of any one of them _does
+    not_ affect the propability that the other event occuring.
+
+    More formally, we can say that _A_ and _B_ are independent if and only if
+    P(*A*|*B*) = P(*A*).
 
 infinity:
   title: "Infinity"
@@ -1368,6 +1442,11 @@ radioactive:
   text: __Radioactive decay__ is a physical process by which unstable atoms
     break apart and release energy.
 
+range:
+  title: Range
+  text: The __range__ of a function or relation is the set of all possible
+    _output values_ (often shown on the _y_-axis in a coordinate system).
+
 rational-numbers:
   title: Rational numbers
   text: __Rational numbers__ are numbers that can be expressed as a fraction
@@ -1412,6 +1491,14 @@ regular-polygon:
     length and all interior angles have the same size.
   image: regular-polygon.svg
   link: /course/polyhedra/polygons#regular-polygons
+
+relation:
+  title: Relation
+  text: |
+    A __relation__ is a way to represent connections between the elements in
+    two different sets (called the _domain_ and _range_). We can write a
+    relation as a set of ordered pairs (_x_, _y_), where _x_ is an element
+    from the domain, and _y_ is an element from the range.
 
 rhombus:
   title: Rhombus
@@ -1676,6 +1763,12 @@ tetrahedron:
     are equilateral triangles. It has four vertices and six edges.
   link: /course/polyhedra/platonic#platonic-overview
 
+tetris:
+  title: Tetris
+  text: __Tetris__ is a popular video game that was first published in 1984.
+    Players have to move falling tetrominoes (shapes consisting of four
+    connected squares) to complete entire rows.
+
 theorem:
   title: Theorem
   text: A __theorem__ is a particularly important result or observation in
@@ -1694,6 +1787,12 @@ transformation-image:
   text: After transforming a geometric shape, the result is called its
     __image__. It is often denoted by adding a ’ to the end of its label.
   link: /course/transformations/rigid#transformations
+
+transistor:
+  title: Transistors
+  text: A __transistor__ is a small electronic device consisting of
+    semiconductors like _silicon_. It was first proposed in 1926, and is the
+    fundamental building block of _integrated circuits_ in computers.
 
 translation:
   title: Translation

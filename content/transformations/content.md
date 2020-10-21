@@ -45,7 +45,7 @@ But symmetry is much more important than simply _looking beautiful_. It lies at
 the very foundations of our universe, and can even explain the most fundamental
 laws of physics.
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: transformations
@@ -91,7 +91,7 @@ transformation, which we’ll explore in more detail throughout this course.
 > section: rigid
 
 A [__rigid transformation__](gloss:rigid-transformation) is a special kind of transformation that
-don’t change the size or shape of a figure. We could imagine that it is made out of a solid material
+doesn’t change the size or shape of a figure. We could imagine that it is made out of a solid material
 like wood or metal: we can move it, turn it, or flip it over, but we can’t stretch, bend, or
 otherwise deform it.
 
@@ -346,21 +346,21 @@ the case, the construction requires a bit more work:
 {.r} To reflect this shape across the [line of reflection](target:refl), we have
 to reflect every [vertex](gloss:polygon-vertex) individually and then connect
 them again.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-0")} Let’s pick one of the vertices and draw the line
 through this vertex that is perpendicular to the line of reflection.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-1")} Now we can measure the [distance](target:d1) from the
 vertex to the line of the reflection, and make the point that has the [same
 distance](target:d2) on the other side. _{span.lgrey}(We can either use a ruler
 or a [compass](target:circ) to do this.)_
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-2")} We can do the same for all the other vertices of our
 shape.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-3")} Now we just have to connect the reflected vertices in
 the correct order, and we’ve found the reflection!
@@ -453,24 +453,24 @@ try to rotate this shape by ${10*ang}{ang|6|-18,18,1}° around the [center of
 rotation](target:rot).
 
 {.r} Like for reflections, we have to rotate every point in a shape individually.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-0")} We start by picking one of the vertices and drawing a line to the center of 
 rotation.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-1")} Using a [protractor](target:protractor), we can
 measure an [angle of ${ang*10}°](target:angle) around the center of rotation.
 Let’s draw a [second line](target:l2) at that angle.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-2")} Using a [compass](target:compass) or ruler, we can
 find a [point](target:a1) on this line that has the same distance from the
 center of rotation as the original point.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.r.reveal(when="next-3")} Now we have to repeat these steps for all other vertices of our shape.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal(when="next-4")} And finally, like before, we can connect the individual
 vertices to get the rotated image of our original shape.
@@ -1157,7 +1157,7 @@ more advanced mathematics. Instead, you can try drawing your own repeated patter
 17 wallpaper groups:
 
     include ./components/wallpaper
-    x-wallpaper
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin
@@ -1376,13 +1376,13 @@ The second important fact is that in similar polygons, all sides are scaled
 __proportionally__ by the scale factor of the corresponding dilation. If the
 scale factor is ${k}{k|1.5|0.5,2,0.1}, then
 
-{.text-center} `|AB| ×` ${k} `= |A'B'|`_{.space}_`|BC| ×` ${k} `= |B'C'|`  
-`|CD| ×` ${k} `= |C'D'|`_{.space}_`|DE| ×` ${k} `= |D'E'|`
+{.text-center} `abs(AB) ×` ${k} `= abs(A'B')`_{.space}_`abs(BC) ×` ${k} `= abs(B'C')`  
+`abs(CD) ×` ${k} `= abs(C'D')`_{.space}_`abs(DE) ×` ${k} `= abs(D'E')`
 
 We can instead rearrange these equations and eliminate the scale factor
 entirely:
 
-{.text-center} `|AB|/|A'B'| = |BC|/|B'C'| = |AB|/|A'B'| = |AB|/|A'B'|`
+{.text-center} `abs(AB)/abs(A'B') = abs(BC)/abs(B'C') = abs(AB)/abs(A'B') = abs(AB)/abs(A'B')`
 
     // This proportional relationship is true not just for the sides of the
     // polygon, but also for properties like diagonals.

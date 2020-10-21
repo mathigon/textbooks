@@ -138,9 +138,9 @@ We say that a polygon is [__concave__](gloss:concave) if it has a section that
 “points inwards”. You can imagine that this part has [“caved in”](target:cave).
 Polygons that are _not_ concave are called [__convex__](gloss:convex).
 
-There are two ways you can easily identify concave polygons: they have at least
-one [internal angle that is bigger than 180°](target:angle). They also have at
-least one [diagonal that lies _outside_ the polygon](target:diagonal).
+There are two ways you can easily identify concave polygons: they have [at least
+one internal angle](target:angle) that is bigger than 180°. They also have [at
+least one diagonal](target:diagonal) that lies _outside_ the polygon.
 
 In convex polygons, on the other hand, all internal angles are less than
 [[180]]°, and all diagonals lie [[inside|outside]] the polygon.
@@ -205,14 +205,14 @@ We already know the sum of all [internal angles](gloss:internal-angle) in
 polygons. For regular polygons all these angles have [[the same size|are alternate angles]],
 so we can work out the size of a single internal angle:
 
-{.text-center.reveal(when="blank-0")} angle = <mfrac><mrow>[[sum of all angles|number of angles]]</mrow><mrow>[[number of angles|sum of all angles]]</mrow></mfrac>
+{.text-center.reveal(when="blank-0")} `"angle" = blank("sum of all angles","number of angles")/
+blank("number of angles","sum of all angles")`
 _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x`._
 
 {.reveal(when="blank-1 blank-2" delay=1000)} If `n=3` we get the size of the
 internal angles of an equilateral triangle – we already know that it must be
 [[60]]°. _{span.reveal(when="blank-3")} In a regular polygon with ${x}{x|6|3,12,1}
-sides, every internal angle is 180° – <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
-${round(180-360/x)}°._
+sides, every internal angle is 180° – `"360°"/var("x")` = ${round(180-360/x)}°._
 
 ---
 > id: regular-area
@@ -246,7 +246,7 @@ ${round(180-360/x)}°._
 
 ::: column.grow
 Here you can see a [regular polygon](gloss:regular-polygon) with ${n}{n|5|4,12,1}
-sides. Every side has length [{.pill.green} 1m](target:base). Let’s
+sides. Every side has length [{.green} 1m](target:base). Let’s
 try to calculate its area!
 
 First, we can split the polygon into ${toWord(n)} congruent,
@@ -255,24 +255,24 @@ First, we can split the polygon into ${toWord(n)} congruent,
 {.reveal(when="blank-0")} We already know the [[base|height|area]] of these
 triangles, but we also need the [[height|legs|medians]] to be able to calculate
 its area. _{span.reveal(when="blank-2")} In regular polygons, this height
-is sometimes called the [{.pill.yellow}apothem](target:apothem)._
+is sometimes called the [{.yellow}apothem](target:apothem)._
 
-{.reveal(when="blank-1 blank-2" delay=1000)} Notice that there is a [right angled
+{.reveal(when="blank-1 blank-2" delay=1000)} Notice that there is a [{.blue} right angled
 triangle](target:right-triangle) formed by the apothem and half the base of the
 isosceles triangle. This means that we can use trigonometry!
 
-{.reveal(when="blank-1 blank-2" delay=2000)} The [{.pill.blue}base angles](target:base-angle)
+{.reveal(when="blank-1 blank-2" delay=2000)} The [{.blue} base angles](target:base-angle)
 of the isosceles triangle (let’s call them α) are [[half the|the same|twice the]]
-size of the [internal angles](target:int-angle) of the polygon:
+size of the [{.red} internal angles](target:int-angle) of the polygon:
 
 {.text-center.reveal(when="blank-3")} `pill(α, "blue", "alpha") = 1/2 (180° -
 (360°)/var("n")) = var("round(90-180/n,2)")`
 
 {.reveal(when="blank-3")} To find the apothem, we can use the definition of
-[[tangents|sine|cosine]]:
+the [[tangent|sine|cosine]] function:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
-target("opposite", "apothem") / target("adjacent", "half-base") =
+pill("opposite", "yellow", "apothem") / pill("adjacent", "green", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",
@@ -280,7 +280,7 @@ blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 var("round(tan(pi/2-pi/n)/2,2)")"m"`
 
 {.reveal(when="blank-5 blank-6" delay=2000)} Now, the area of the
-[isosceles triangle](target:isosceles-triangle) is
+[{.blue}isosceles triangle](target:isosceles-triangle) is
 
 {.text-center.reveal(when="blank-5 blank-6" delay=2000)} `1/2 "base" × "height"
 = 1/2 pill("1m", "green", "base") × pill(var("round(tan(pi/2-pi/n)/2,2)"),
@@ -325,8 +325,8 @@ All of its sides have the same length, and all of its angles are equal.
       path.red(x="segment(c,d)" target="side" mark="bar")
       path.red(x="segment(d,a)" target="side" mark="bar")
 
-{.caption} A __square__ is a quadrilateral with [four equal sides](target:side)
-and [four equal angles](target:angle).
+{.caption} A __square__ is a quadrilateral with [{.red} four equal sides](target:side)
+and [{.blue} four equal angles](target:angle).
 :::
 
 ---
@@ -353,7 +353,7 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       path.red(x="segment(c,d)")
       path.red(x="segment(d,a)")
 
-{.caption} A __Rectangle__ is a quadrilateral with [four equal angles](target:angle).
+{.caption} A __Rectangle__ is a quadrilateral with [{.blue} four equal angles](target:angle).
 ::: column.quadrilateral
 
     x-geopad(width=210 height=120): svg
@@ -367,7 +367,7 @@ want the _sides_ to be equal, we get a [__rhombus__](gloss:rhombus).
       path.red(x="segment(g,h)" target="side" mark="bar")
       path.red(x="segment(h,e)" target="side" mark="bar")
 
-{.caption} A __Rhombus__ is a quadrilateral with [four equal sides](target:side).
+{.caption} A __Rhombus__ is a quadrilateral with [{.red} four equal sides](target:side).
 :::
 
 ---
@@ -563,8 +563,8 @@ are always congruent.
 Start by drawing one of the diagonals of the parallelogram.
 
 {.reveal(when="diagonal")} The diagonal creates four new angles with the sides
-of the of the parallelogram. The two [red angles](target:red-angle) and the two
-[blue angles](target:blue-angle) are [alternate angles](gloss:alternate-angles),
+of the of the parallelogram. The two [{.red} red angles](target:red-angle) and the two
+[{.blue} blue angles](target:blue-angle) are [alternate angles](gloss:alternate-angles),
 so they must each be [[congruent|adjacent|supplementary]].
 
 {.reveal(when="blank-0")} Now if we look at the [two triangles](target:triangles)
@@ -620,18 +620,18 @@ quadrilateral has to be a parallelogram.
 
 Let’s think about the two yellow triangles generated by the diagonals:
 
-* We have just proved that the [two green sides](target:side1) are congruent,
-  because they are opposite sides of a parallelogram.
-* The [two red angles](target:anglesR) and [two blue angles](target:anglesB) are
+* We have just proved that the [{.green} two green sides](target:side1) are congruent, because they
+  are opposite sides of a parallelogram.
+* The [{.red} two red angles](target:anglesR) and [{.blue} two blue angles](target:anglesB) are
   congruent, because they are [[alternate angles|opposite angles|right angles]].
 
 {.reveal(when="blank-2")} By the [[ASA|SSS|AAS]] condition, both of the yellow
 triangles must therefore also be congruent.
 
-{.reveal(when="blank-3")} Now we can use the fact the corresponding parts of
-congruent triangles are also congruent, to conclude that [`bar(AM)`](target:AM)
-= [`bar(CM)`](target:CM) and [`bar(BM)`](target:BM) = [`bar(DM)`](target:DM). In
-other words, the two diagonals intersect at their midpoints. _{span.qed}_
+{.reveal(when="blank-3")} Now we can use the fact the corresponding parts of congruent triangles are
+also congruent, to conclude that [{.yellow} `bar(AM)`](target:AM) = [{.yellow} `bar(CM)`](target:CM)
+and [{.yellow} `bar(BM)`](target:BM) = [{.yellow} `bar(DM)`](target:DM). In other words, the two
+diagonals intersect at their midpoints. _{span.qed}_
 :::
 
 {.reveal(when="blank-3")} Like before, the opposite is also true: if the two
@@ -732,26 +732,26 @@ _{span.reveal(when="blank-0")} The [axis of symmetry](gloss:axis-of-symmetry) is
 triangles](target:triangle1). We know that they are congruent from the
 [SSS](gloss:triangle-sss) condition: both triangles have [three congruent
 sides](target:sss) (red, green and blue).
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-0")} Using [CPOCT](gloss:cpoct), we therefore know that the
 [corresponding angles](target:angles) must also be congruent.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
-{.reveal.r(when="next-1")} This means, for example, that the [diagonal](target:d1)
+{.reveal.r(when="next-1")} This means, for example, that the [{.red} diagonal](target:d1)
 is a [[bisector|perpendicular|median]] of the [two angles](target:vAngle) at its
 ends.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 {.reveal.r(when="next-2")} We can go even further: if we draw the other diagonal,
 we get [two more, smaller triangles](target:triangle2). These must also be
 congruent, because of the [SAS](gloss:triangle-sss) condition: they have the
 same [two sides and included angle](target:sas).
-_{button.next-step} Continue_
+[Continue](btn:next)
 
-{.reveal(when="next-3")} This means that [angle α](target:alpha) must also be
-the same as [angle β](target:beta). Since they are adjacent, [supplementary
-angles](gloss:supplementary-angles) both α and β must be [[90]]°.
+{.reveal(when="next-3")} This means that [{.yellow} angle α](target:alpha) must
+also be the same as [{.yellow} angle β](target:beta). Since they are adjacent,
+[supplementary angles](gloss:supplementary-angles) both α and β must be [[90]]°.
 
 {.reveal(when="blank-3")} In other words, the diagonals of a kite are always
 [[perpendicular|parallel]].
@@ -779,15 +779,15 @@ we can also do that for some quadrilaterals:
       circle.transparent(name="d1" x="point(2,9)")
       path.fill.blue.light(x="polygon(a1,b1,c1,d1)")
       path.fill.red.transparent(x="polygon(point(2,3),a1,d1)" target="triangle-1")
-      path.fill.red.transparent(x="polygon(point(10,3),b1,c1)" target="triangle-2")
+      path.fill.green.transparent(x="polygon(point(10,3),b1,c1)" target="triangle-2")
       path.blue(x="polygon(a1,b1,c1,d1)")
 
 ::: column.grow
 On the left, try to draw a rectangle that has the same area as the
 parallelogram.
 
-{.reveal(when="draw-1")} Can you see that the [missing triangle](target:triangle-1)
-on the left is [[exactly the same as|smaller than|bigger than]] the [overlapping
+{.reveal(when="draw-1")} Can you see that the [{.red} missing triangle](target:triangle-1)
+on the left is [[exactly the same as|smaller than|bigger than]] the [{.green} overlapping
 triangle](target:triangle-2) on the right?
 _{span.reveal(when="blank-1")}Therefore the area of a parallelogram is_
 
@@ -800,7 +800,7 @@ parallelogram: it is usually not the same as one of the two sides._
 ::: tab
 #### Trapezium _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_
 
-Recall that trapeziums are quadrilaterals with one pair of [parallel sides](target:bases).
+Recall that trapeziums are quadrilaterals with one pair of [{.blue} parallel sides](target:bases).
 These parallel sides are called the __bases__ of the trapezium.
 
 ::: column(width=300)
@@ -826,11 +826,11 @@ Like before, try to draw a rectangle that has the same area as this trapezium.
 _{span.reveal(when="draw-2")} Can you see how the [missing and added
 triangles](target:triangles-3) on the left and the right cancel out?_
 
-{.reveal(when="draw-2" delay=2000)} The [{.pill.green} height](target:t-height)
-of this rectangle is the [[distance between|average of|length of]] the [parallel
+{.reveal(when="draw-2" delay=2000)} The [{.green} height](target:t-height)
+of this rectangle is the [[distance between|average of|length of]] the [{.blue} parallel
 sides](target:bases) of the trapezium.
 
-{.reveal.r(when="blank-2")} The [{.pill.yellow} width](target:t-width)
+{.reveal.r(when="blank-2")} The [{.yellow} width](target:t-width)
 of the rectangle is the distance between the [[midpoints|endpoints]] of the two
 non-parallel sides of the trapezium. _{span.reveal(when="blank-3")} This is
 called the __midsegment__ of the trapezium._
@@ -841,9 +841,9 @@ midsegment of a trapezium is [[parallel to|perpendicular to|the same length as]]
 its two bases. The length of the midsegment is the average of the lengths of the
 bases: `(a+c)/2`.
 
-{.reveal(when="blank-4")} If we combine all of this, we get an equation for the
-area of a trapezium with parallel sides [_a_](target:base-2) and [_c_](target:base-1),
-and height [_h_](target:t-height):
+{.reveal(when="blank-4")} If we combine all of this, we get an equation for the area of a trapezium
+with parallel sides [{.blue} _a_](target:base-2) and [{.blue} _c_](target:base-1), and height
+[{.green} _h_](target:t-height):
 
 {.text-center.reveal(when="blank-4")} `A = h xx ((a+c) / 2)`
 :::
@@ -885,12 +885,9 @@ triangles](target:inside) that make up the kite are the same as the
 [four gaps](target:outside) outside it?_
 
 {.reveal(when="blank-5")} This means that the area of a kite with diagonals
-[{.i.pill.green}d1](target:d31) and
-[{.i.pill.yellow}d2](target:d32) is
+[{.green}`d_1`](target:d31) and [{.yellow}`d_2`](target:d32) is
 
-{.text-center.reveal(when="blank-5")} _Area_ = `1/2`
-[{.i.pill.green}d1](target:d31) ×
-[{.i.pill.yellow}d2](target:d32).
+{.text-center.reveal(when="blank-5")} `"Area" = 1/2 pill(d_1,"green","d31") × pill(d_2,"yellow","d32")`.
 :::
 
 ::: tab
@@ -926,10 +923,8 @@ we can use either the equation for the area of a parallelogram, or that for the
 area of a kite:
 
 {.text-center.reveal(when="blank-6 blank-7")} _Area_ =
-[{.i.pill.blue}base](target:base) ×
-[{.i.pill.red}height](target:height) = `1/2`
-[{.i.pill.green}d1](target:d41) ×
-[{.i.pill.yellow}d2](target:d42).
+[{.i.blue}base](target:base) × [{.i.red}height](target:height) = `1/2`
+[{.i.green}d1](target:d41) × [{.i.yellow}d2](target:d42).
 
 {.reveal(when="blank-6 blank-7" delay=1000)} _In different contexts, you might
 be given different parts of a Rhombus (sides, height, diagonals), and you should
@@ -1059,9 +1054,7 @@ patterns!
       .menu
         for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
           .add(data-shape=s)
-      .btn-row
-        button.btn Clear
-        button.btn Download
+      .btn-row: x-icon-btn(icon="download" title="Download image")
       svg.overlay: g.tiles.active
     x-gesture(target=".tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
@@ -1289,6 +1282,9 @@ tessellate|tessellate]], but what about non-regular ones?
 ---
 > id: tessellation-pentagons-1
 
+Here are three different examples of tessellations with pentagons. They are not
+_regular_, but they are perfectly valid 5-sided polygons:
+
 ::: column(width=220)
     include svg/tessellations/pentagons-1.svg
 ::: column(width=220)
@@ -1297,21 +1293,47 @@ tessellate|tessellate]], but what about non-regular ones?
     include svg/tessellations/pentagons-3.svg
 :::
 
-Here are three different examples of tessellations with pentagons. They are not
-_regular_, but they are perfectly valid 5-sided polygons.
+Over time, mathematicians have only found 15 different kinds of tessellations with (convex)
+pentagons – the most recent of which was discovered in 2015.
 
-So far, mathematicians have only found 15 different kinds of tessellations with
-(convex) pentagons – the most recent of which was discovered in 2015. No one
-knows if there are any others, or if these 15 are the only ones…
+---
+> id: pentagons
+> goals: shapes
+
+Two years later, in 2017, _Michaël Rao_ published a proof that there are no other possibilities,
+except the 15 that had already been found. Can you make a tessellation using all of them?
+
+    figure: .tessellation
+      x-polypad
+      .menu
+        .add(data-shape="-13.9 -70.5,40.5 -70.5,40.5 24.4,13.1 70.5,-40.5 -23.5")
+        .add(data-shape="-46 47.3,-1.4 47.3,46 0,-1.4 -47.3,-45.5 3")
+        .add(data-shape="-28 -43.1,9.3 -43.1,59.2 43.1,-40.5 43.1,-59.2 10.8")
+        .add(data-shape="-53.6 -40.2,-28.7 2.9,14.8 40.2,53.6 9,46 -40.2")
+        .add(data-shape="11.5 40.5,54.6 21,19 -40.5,-52 -40.4,-54.6 -4.4")
+        .add(data-shape="43.3 28.5,-4.3 43.2,-54.3 -42.9,45.3 -43.2,54.3 -20")
+        .add(data-shape="-49.1 23.1,-5.4 35.5,73.4 -35.5,-32.7 -35.5,-73.4 -15.4")
+        .add(data-shape="-57 -33,37.3 -33.3,57 13.7,10 33.3,-37.2 14")
+        .add(data-shape="29.8 50.4,-31.5 8.2,-53.2 -50,8.9 -50.4,53.2 -7")
+        .add(data-shape="-37.5 -2.8,-16.5 63.5,17.2 3,37.5 -63.3,-31.6 -63.5")
+        .add(data-shape="43.4 -43.4,-43.4 -43.1,-43.4 43.4,0 43.4,43.4 0")
+        .add(data-shape="-30.8 0,10.3 71.1,30.8 35.6,30.8 -71.1,10.3 -71.1")
+        .add(data-shape="-36.9 -23.4,-9.9 -70.3,36.8 -43,36.9 70.2,17.4 70.3")
+        .add(data-shape="-74.9 36.4,40 36.4,75.1 12.1,4.8 -36.4,-75.1 -6.3")
+        .add(data-shape="-37.5 24.9,-12.4 -68,37.4 -68,37.5 -18.3,-12.4 68")
+      .btn-row
+        x-icon-btn(icon="flip" title="Flip selection")
+        x-icon-btn(icon="download" title="Download image")
+      svg.overlay: g.tiles.active
 
 ---
 > id: escher
 
 ### Tessellations in Art
 
-Tessellations we both a tool and inspiration for many artists, architects and 
-designer – most famously the Dutch artist [M. C. Escher](bio:escher). Escher’s
-work contains strange, mutating creatures, patterns and landscapes:
+Many artists, architects and designers use tessellations in their work. One of the most famous
+examples is the Dutch artist [M. C. Escher](bio:escher). His works contain strange, mutating
+creatures, patterns and landscapes:
 
     .row
       div(style="width: 220px")
@@ -1432,6 +1454,19 @@ you’ll learn how to actually prove it mathematically.
 > section: nets-cross-sections
 > sectionStatus: dev
 
+Here is a demo for intersections of a polyhedron and a plane:
+
+    figure.var
+      x-select.tabs(:bind="poly")
+        div(value="tetrahedron") Tetrahedron
+        div(value="cube") Cube
+        div(value="octahedron") Octahedron
+        div(value="dodecahedron") Dodecahedron
+        div(value="icosahedron") Icosahedron
+      x-polyhedron-slice(:shape="poly" :opacity="opacity")
+
+---
+
 Our entire world is three-dimensional – but it is often much easier to draw or
 visualise flat, two-dimensional objects. And there are a few different ways to
 view three-dimensional polyhedra in a two-dimensional way.
@@ -1455,15 +1490,6 @@ is to use a net. A net is an unfolded, flat representation of the sides of a
 three-dimensional shape.
 
 rotate a cube to make a hexagonal cross-section
-
----
-
-## Prisms and Pyramids
-
-> section: prisms-pyramids
-> sectionStatus: dev
-
-TODO
 
 ---
 

@@ -440,11 +440,11 @@ Piは理解しやすいですが、科学と数学では基本的に重要です
 
 ::: column.grow
 
-あ_{span.var-action}全周_に円周があります_{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ 。 
+あ[全周](action:setState(0))に円周があります _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ 。 
 
-{.reveal(when="eqn-0")}のために_{span.var-action}半円回転_ 、円周に沿った対応する距離は_{x-equation.small(solution="π" keys="+ × π" numeric)}_ 。 
+{.reveal(when="eqn-0")}のために[半円回転](action:setState(1))、円周に沿った対応する距離は _{x-equation.small(solution="π" keys="+ × π" numeric)}_ 。 
 
-{.reveal(when="eqn-1")}のために_{span.var-action}四分円回転_ 、円周に沿った距離は_{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ 。 
+{.reveal(when="eqn-1")}のために[四分円回転](action:setState(2))、円周に沿った距離は _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ 。 
 
 {.reveal(when="eqn-2")}このように角度を測定する方法は[__ラジアン__](gloss:radians)と呼ばれます（これを「半径単位」と覚えておくことができます）。 
 
@@ -606,12 +606,12 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column.grow(parent="right")
 
-* {.r}あ[{.red}割線](pill:secant)は、2点で円と交差する線です。 [続行](btn:next)
-* {.r.reveal(when="next-0")}あ[{.green}弦](pill:chord)は、端点が円の円周上にある線分です。 [続行](btn:next)
-* {.r.reveal(when="next-1")}あ[{.blue}接線](pill:tangent)は、正確に1点で円に接する線です。これは__接点__と呼ばれます。 [続行](btn:next)
-* {.r.reveal(when="next-2")}あ[{.yellow}円弧](pill:arc)は円周の一部です。 [続行](btn:next)
-* {.r.reveal(when="next-3")}あ[{.teal}セクター](pill:sector)は、 _円弧_と_2つの半径_で囲まれた円の内部の一部です。 [続行](btn:next)
-* {.r.reveal(when="next-4")}最後に、 [{.purple}セグメント](pill:segment)は、 _円弧_と_弦_で囲まれた円の内部の一部です。 [継続する](btn:next) 
+* {.r}あ[{.red}割線](target:secant)は、2点で円と交差する線です。 [続行](btn:next)
+* {.r.reveal(when="next-0")}あ[{.green}弦](target:chord)は、端点が円の円周上にある線分です。 [続行](btn:next)
+* {.r.reveal(when="next-1")}あ[{.blue}接線](target:tangent)は、正確に1点で円に接する線です。これは__接点__と呼ばれます。 [続行](btn:next)
+* {.r.reveal(when="next-2")}あ[{.yellow}円弧](target:arc)は円周の一部です。 [続行](btn:next)
+* {.r.reveal(when="next-3")}あ[{.teal}セクター](target:sector)は、 _円弧_と_2つの半径_で囲まれた円の内部の一部です。 [続行](btn:next)
+* {.r.reveal(when="next-4")}最後に、 [{.purple}セグメント](target:segment)は、 _円弧_と_弦_で囲まれた円の内部の一部です。 [継続する](btn:next) 
 
 :::
 
@@ -666,11 +666,11 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column.grow
 
-図からわかるように、 [{.red}弧](pill:arc)は[[円周の]]一部です[[|直径|]]円の[[接線]] 、および[{.yellow}セクター](pill:sector)は[[インテリアの]]一部です[[|半径|]]円の[[周囲]] 。 
+図からわかるように、 [{.red}弧](target:arc)は[[円周の]]一部です[[|直径|]]円の[[接線]] 、および[{.yellow}セクター](target:sector)は[[インテリアの]]一部です[[|半径|]]円の[[周囲]] 。 
 
 ::: .reveal(when="blank-0 blank-1")
 
-2つの点_A_と_Bの_間の弧は、 `arc(AB)` 。この定義は少しあいまいです。 [{.purple}](pill:major) _A_と_B_を結ぶ[2番目の円弧](pill:major)ですが、円の周りを逆方向に進みます。 
+2つの点_A_と_Bの_間の弧は、 `arc(AB)` 。この定義は少しあいまいです。 [{.purple}](target:major) _A_と_B_を結ぶ[2番目の円弧](target:major)ですが、円の周りを逆方向に進みます。 
 
 2つの円弧の小さい方が__マイナーアーク__と呼ばれ、大きい方が__大きな弧を__呼ばれています。点_A_と_B_が互いに正反対の場合、両方の弧は同じ長さで[[半円に]]なります[[|直径|円周]] 。 
 
@@ -683,13 +683,13 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column.grow
 
-弧の長さまたは扇形の面積を見つけるには、円の中心での対応する角度を知る必要があります。これは、 [{.blue}中心角](pill:angle) 
+弧の長さまたは扇形の面積を見つけるには、円の中心での対応する角度を知る必要があります。これは、 [{.blue}中心角](target:angle) 
 
-円弧、扇形、および角度がすべて、完全な円の_同じ割合を占める_ことに注意してください。たとえば、 [{.blue}中心角](pill:angle)は_{span.var-action} 90°_ 、それは[[四分の一]]を占めます[[|半分|の3分]]の1 [{.teal}全周](pill:fangle) 。 
+円弧、扇形、および角度がすべて、完全な円の_同じ割合を占める_ことに注意してください。たとえば、 [{.blue}中心角](target:angle)は [90°](action:set90Deg()) 、それは[[四分の一]]を占めます[[|半分|の3分]]の1 [{.teal}全周](target:fangle) 。 
 
 ::: .reveal(when="blank-0")
 
-これは、 [{.red}弧の長さ](pill:arc)も`1/4`の[{.purple}](pill:circ)円の[全周](pill:circ) 、そして[{.yellow}セクターの面積](pill:sector)は`1/4`の[{.orange}](pill:area)サークル[全体](pill:area) 。 
+これは、 [{.red}弧の長さ](target:arc)も`1/4`の[{.purple}](target:circ)円の[全周](target:circ) 、そして[{.yellow}セクターの面積](target:sector)は`1/4`の[{.orange}](target:area)サークル[全体](target:area) 。 
 
 この関係を方程式で表すことができます。 
 
@@ -722,13 +722,13 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}弧長](pill) | = | `"circumference" × c/360` |
+| [弧長](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}セクターエリア](pill) | = | `"circle area" × c/360` |
+| [セクターエリア](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -747,13 +747,13 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}弧長](pill) | = | `2 π r × c/(2π)` |
+| [弧長](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}セクターエリア](pill) | = | `π r^2 × c/(2π)` |
+| [セクターエリア](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 
@@ -797,7 +797,7 @@ sin（30 rad）= [[-0.988]] _{span.eqn-gap}_ cos（1 rad）= [[0.54]]
 
 ::: .reveal(when="next-0")
 
-エラトステネスは、 [{.teal}](pill:angle1)影の[角度](pill:angle1)は7.2°でした。これは同じです[{.purple}の中心角](pill:angle2) [{.red}](pill:arc)アレクサンドリアからSwenetに[アーク](pill:arc) 、彼らは[[、交流]]であるため、 [[|垂直|対応する]]角度。 
+エラトステネスは、 [{.teal}](target:angle1)影の[角度](target:angle1)は7.2°でした。これは同じです[{.purple}の中心角](target:angle2) [{.red}](target:arc)アレクサンドリアからSwenetに[アーク](target:arc) 、彼らは[[、交流]]であるため、 [[|垂直|対応する]]角度。 
 
 :::
 

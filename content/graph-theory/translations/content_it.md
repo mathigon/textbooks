@@ -309,7 +309,7 @@ Per i grafi di grandi dimensioni, invece di contare tutti gli spigoli, potremmo 
 ---
 > id: handshakes-2a
 
-Purtroppo questa risposta non è del tutto corretta. Notare come <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)"> le prime due voci nella riga superiore </x-target> sono in realtà le stesse, invertite. In effetti, abbiamo contato ogni stretta di mano [[due volte|una volta|tre volte]], _{span.reveal(when="blank-0")} per ciascuna delle due persone coinvolte. Ciò significa che il numero corretto di strette di mano per ${n}{n|5|2,25,1} ospiti è `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")`._
+Purtroppo questa risposta non è del tutto corretta. Notare come [le prime due voci nella riga superiore](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) sono in realtà le stesse, invertite. In effetti, abbiamo contato ogni stretta di mano [[due volte|una volta|tre volte]], _{span.reveal(when="blank-0")} per ciascuna delle due persone coinvolte. Ciò significa che il numero corretto di strette di mano per ${n}{n|5|2,25,1} ospiti è `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")`._
 
 ---
 > id: handshakes-3
@@ -531,7 +531,9 @@ __{.red} 90__ Bordi
 
 ---
 > id: maps
-> section: map-colouring ## Colorazione delle mappe
+> section: map-colouring
+
+## Colorazione delle mappe
 
 ::: column.grow
 

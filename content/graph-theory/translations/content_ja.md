@@ -310,7 +310,7 @@ __グラフ理論__は、グラフとその特性の研究です。数学の中�
 ---
 > id: handshakes-2a
 
-残念ながら、この回答は正しくありません。方法に注意してください<x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">一番上の行の最初の2つのエントリ</x-target>実際には同じですが、反転します。 
+残念ながら、この回答は正しくありません。方法に注意してください[一番上の行の最初の2つのエントリ](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2))実際には同じですが、反転します。 
 
 実際、すべてのハンドシェイクを[[2回]]カウント[[しました|かつて| 3回]] 、 _{span.reveal(when="blank-0")}関係する2人それぞれに1回ずつ。これは、正しい数のハンドシェイクが${n}{n|5|2,25,1}ゲストは`(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` 。_ 
 

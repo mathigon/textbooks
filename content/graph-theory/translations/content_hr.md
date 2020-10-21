@@ -300,7 +300,7 @@ Umjesto da prebrojimo sve rubove u velikim grafovima, mogli bismo pokušati pron
 ---
 > id: handshakes-2a
 
-Nažalost, ovaj odgovor nije sasvim tačan. Primjetite kako <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)"> prva dva unosa u gornji red </x-target> su zapravo isti, samo ih je okolo. Zapravo smo brojili svaki stisak ruke [[dva puta|once|three times]], _{span.reveal(when="blank-0")} jednom za dvoje uključenih ljudi. To znači da je točan broj rukovanja za ${n}{n|5|2,25,1} gostiju `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")`._
+Nažalost, ovaj odgovor nije sasvim tačan. Primjetite kako [prva dva unosa u gornji red](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) su zapravo isti, samo ih je okolo. Zapravo smo brojili svaki stisak ruke [[dva puta|once|three times]], _{span.reveal(when="blank-0")} jednom za dvoje uključenih ljudi. To znači da je točan broj rukovanja za ${n}{n|5|2,25,1} gostiju `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")`._
 
 ---
 > id: handshakes-3
@@ -534,8 +534,10 @@ __{.red} 90__ Rubovi
 
 ---
 > id: maps
-> section: map-colouring ## Bojanje karte
+> section: map-colouring
 > translated: auto
+
+## Bojanje karte
 
 ::: column.grow
 

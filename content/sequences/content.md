@@ -173,8 +173,7 @@ We can also describe this pattern using a special [formula](gloss:formula):
 
 To get the _n_-th triangle number, we take the [[previous|first|next]] triangle
 number and add _n_. For example, if _n_&nbsp;=&nbsp;${n}{n|5|2,20,1}, the
-formula becomes <msub><mi>x</mi><mn>${n}</mn></msub>
-= <msub><mi>x</mi><mn>${n-1}</mn></msub> + ${n}.
+formula becomes `x_var("n") = x_var("n-1") + var("n")`.
 
 ---
 > id: recursive-1
@@ -542,19 +541,19 @@ behave completely differently based on the values of `a` and *r*:
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-If _{span.var-action}`r > 1`_, the terms will [[quickly get bigger|quickly
-decrease|get closer to zero]]_{span.reveal(when="blank-2")}, up to infinity.
-Mathematicians say that the sequence [__diverges__](gloss:sequence-divergence)._
+If [`r > 1`](action:set(2,2)), the terms will [[quickly get bigger|quickly decrease|get closer to
+zero]], _{span.reveal(when="blank-2")}up to infinity. Mathematicians say that the sequence
+[__diverges__](gloss:sequence-divergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-If _{span.var-action}*r* is between –1 and 1_, the terms will always [[get
-closer to 0|decrease to negative infinity|get smaller]]_{span.reveal(when="blank-3")}.
-We say that the sequence [__converges__](gloss:sequence-convergence)._
+If [`–1 < r < 1`](action:set(10,0.6)), the terms will always [[get closer to 0|decrease to negative
+infinity|get smaller]]. _{span.reveal(when="blank-3")}We say that the sequence
+[__converges__](gloss:sequence-convergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-If _{span.var-action}`r < -1`_, the terms will alternate between positive and
+If [`r < -1`](action:set(3,-1.4)), the terms will alternate between positive and
 negative, while their [[absolute value|inverse|difference]] gets bigger.
 
 :::
@@ -681,7 +680,7 @@ explains his idea for making the world a better place:
 The essence of Trevor’s idea is that, if everyone “pays it forward”, a single
 person can have a huge impact on the world:
 
-    figure: img(src="images/pay-it-forward.png" width=700 height=220)
+    figure: img.invert(src="images/pay-it-forward.png" width=700 height=220)
 
 Notice how the number of people at every step forms a [[geometric sequence|arithmetic
 sequence|triangle number]], _{span.reveal(when="blank-0")}with common ratio [[3]]:_
@@ -1125,76 +1124,89 @@ They are very special rabbits, because they never die, and the female one gives
 birth to a new pair of rabbits exactly once every month (always another pair of
 male and female).
 
-    x-slideshow
-      .stage.rabbits(slot="stage")
-        .rabbits-wrap.s-orange.s-small
-          svg(width=760 height=456 viewBox="0 0 760 456")
-            line(y1=51  x2=760 y2=51)
-            line(y1=130 x2=760 y2=130)
-            line(y1=209 x2=760 y2=209)
-            line(y1=287 x2=760 y2=287)
-            line(y1=366 x2=760 y2=366)
-            path(d="M84,91c223.68,0,405,7,405,45")
-            path(d="M84,170c124.82,0,226,14,226,45")
-            path(d="M84,248c74.56,0,135,20.15,135,45")
-            path(d="M534,248c74.56,0,135,20.15,135,45")
-            path(d="M84,327a45,45,0,0,1,45,45")
-            path(d="M354,327a45,45,0,0,1,45,45")
-            path(d="M534,327a45,45,0,0,1,45,45")
-            polygon(points="489 150 481 130 489 135 497 130 489 150")
-            polygon(points="310 229 302 209 310 214 318 209 310 229")
-            polygon(points="219 307 211 287 219 292 227 287 219 307")
-            polygon(points="669 307 661 287 669 292 677 287 669 307")
-            polygon(points="129 386 121 366 129 371 137 366 129 386")
-            polygon(points="399 386 391 366 399 371 407 366 399 386")
-            polygon(points="579 386 571 366 579 371 587 366 579 386")
+::: x-slideshow
 
-          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
+    .stage.rabbits(slot="stage")
+      .rabbits-wrap.s-orange.s-small
+        svg(width=760 height=456 viewBox="0 0 760 456")
+          line(y1=51  x2=760 y2=51)
+          line(y1=130 x2=760 y2=130)
+          line(y1=209 x2=760 y2=209)
+          line(y1=287 x2=760 y2=287)
+          line(y1=366 x2=760 y2=366)
+          path(d="M84,91c223.68,0,405,7,405,45")
+          path(d="M84,170c124.82,0,226,14,226,45")
+          path(d="M84,248c74.56,0,135,20.15,135,45")
+          path(d="M534,248c74.56,0,135,20.15,135,45")
+          path(d="M84,327a45,45,0,0,1,45,45")
+          path(d="M354,327a45,45,0,0,1,45,45")
+          path(d="M534,327a45,45,0,0,1,45,45")
+          polygon(points="489 150 481 130 489 135 497 130 489 150")
+          polygon(points="310 229 302 209 310 214 318 209 310 229")
+          polygon(points="219 307 211 287 219 292 227 287 219 307")
+          polygon(points="669 307 661 287 669 292 677 287 669 307")
+          polygon(points="129 386 121 366 129 371 137 366 129 386")
+          polygon(points="399 386 391 366 399 371 407 366 399 386")
+          polygon(points="579 386 571 366 579 371 587 366 579 386")
 
-          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
+        img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
 
-          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
-          img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
+        img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
 
-          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
-          img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
-          img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
+        img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
+        img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
 
-          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
-          img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
-          img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
-          img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
-          img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
+        img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
+        img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
+        img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
 
-          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
-          img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
-          img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
-          img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 81%")
-          img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 49%; top: 85%; width: 7%")
-          img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
-          img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
-          img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
+        img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
+        img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
+        img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
+        img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
+        img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
 
-          .hex(style="top: 0%") 1
-          .hex(style="top: 15%") 1
-          .hex(style="top: 32%") 2
-          .hex(style="top: 49%") 3
-          .hex(style="top: 66%") 5
-          .hex(style="top: 84%") 8
+        img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
+        img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
+        img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
+        img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 81%")
+        img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 49%; top: 85%; width: 7%")
+        img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
+        img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
+        img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
 
-      .legend(slot="legend") In the first month, the rabbits are very small and can’t do much – but they grow very quickly.
-      .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
-      .legend(slot="legend") … and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
-      .legend(slot="legend") In the next month, your pair of rabbits will give birth to another couple. Meanwhile, the first pair of kids have grown up. You now have three pairs in total.
-      .legend(slot="legend") In the fifth month, your original pair of rabbits will give birth to a new pair. At the same time, their first pair of kids is now old enough to give birth to grandchildren. You now have five pairs of rabbits.
-      .legend(slot="legend") In the sixth month, there are three more couples that give birth: the original one, as well as their first two pairs or kids.
+        .n(style="top: 0%") 1
+        .n(style="top: 15%") 1
+        .n(style="top: 32%") 2
+        .n(style="top: 49%") 3
+        .n(style="top: 66%") 5
+        .n(style="top: 84%") 8
+
+In the first month, the rabbits are very small and can’t do much – but they grow very quickly.
+
+After one month, the rabbits are grown up and can start mating…
+
+… and after another month, they will give birth to their first pair of kids. You now have two pairs
+of rabbits.
+
+In the next month, your pair of rabbits will give birth to another couple. Meanwhile, the first pair
+of kids have grown up. You now have three pairs in total.
+
+In the fifth month, your original pair of rabbits will give birth to a new pair. At the same time,
+their first pair of kids is now old enough to give birth to grandchildren. You now have five pairs
+of rabbits.
+
+In the sixth month, there are three more couples that give birth: the original one, as well as their
+first two pairs or kids.
+
+:::
 
 ---
 > id: rabbits-1
 
 {.r} In the following month you would have 13 pairs of rabbits: the 8 ones from the
 previous month, plus 5 new sets of babies. Can you detect a pattern in this
-sequence? _{button.next-step} Continue_
+sequence? [Continue](btn:next)
 
 ---
 > id: rabbits-2
@@ -1231,7 +1243,7 @@ Sequence__](gloss:fibonacci-numbers), named after the Italian mathematician
 
 ::: column.grow
 When Fibonacci was born in 1175, most people in Europe still used the [Roman
-numeral system](gloss:roman-numerals) for numbers (like IVX or MCMLIV).
+numeral system](gloss:roman-numerals) for numbers (like XIV or MCMLIV).
 Fibonacci’s father was a merchant, and together they travelled to Northern
 Africa as well as the Middle East. It was there that Fibonacci first learned the
 [Arabic numeral system](gloss:arabic-numerals).
@@ -1347,14 +1359,24 @@ Just like the [triangle](gloss:triangle-numbers) and [square
 numbers](gloss:square-numbers), and other sequences we’ve seen before, the
 Fibonacci sequence can be visualised using a geometric pattern:
 
-    x-slideshow.golden-spiral
-      .stage(slot="stage"): include svg/spiral.svg
-      .legend(slot="legend") We start with two small squares of size 1.
-      .legend(slot="legend") Next, we add a new square of size 2, to form a larger rectangle.
-      .legend(slot="legend") Next, we add a square of size 3, to form an even larger rectangle.
-      .legend(slot="legend") The next square has size 5. Can you see that we’re recreating the Fibonacci numbers?
-      .legend(slot="legend") If we continue adding squares, they will have size 8, 13, 21, and so on.
-      .legend(slot="legend") You might have noticed that, as the rectangles get larger, they seem to start “spiraling” outwards. We can even visualise this by drawing a perfect spiral that connects the corners of the squares.
+::: x-slideshow.golden-spiral
+    
+    .stage(slot="stage"): include svg/spiral.svg
+
+We start with two small squares of size 1.
+
+Next, we add a new square of size 2, to form a larger rectangle.
+
+Next, we add a square of size 3, to form an even larger rectangle.
+
+The next square has size 5. Can you see that we’re recreating the Fibonacci numbers?
+
+If we continue adding squares, they will have size 8, 13, 21, and so on.
+
+You might have noticed that, as the rectangles get larger, they seem to start “spiraling” outwards.
+We can even visualise this by drawing a perfect spiral that connects the corners of the squares.
+
+:::
 
 ---
 > id: golden-ratio
@@ -1387,12 +1409,12 @@ is the ratio of its width and its height:
 
     include svg/golden-5.svg
 
-{.text-center.no-voice} <mfrac><mn>[[13]]</mn><mn>[[8]]</mn></mfrac> _{span.reveal(when="blank-0 blank-1")}= 1.625_
+{.text-center.no-voice} `input(13) / input(8) reveal(= 1.625, "blank-0 blank-1")`
 ::: column(width=100)
 
     include svg/golden-6.svg
 
-{.text-center.no-voice} <mfrac><mn>[[21]]</mn><mn>[[13]]</mn></mfrac> _{span.reveal(when="blank-2 blank-3")}= 1.62…_
+{.text-center.no-voice} `input(21) / input(13) reveal(= 1.62…, "blank-2 blank-3")`
 :::
 
 ---
@@ -1401,7 +1423,7 @@ is the ratio of its width and its height:
 
 Notice how, as we add more and more squares, the aspect ratio seems to get
 closer and closer to a specific number around 1.6. This number is called the
-[__golden ratio__](gloss:golden-ratio) and usually represented by the Greek
+[__golden ratio__](gloss:golden-ratio) and is usually represented by the Greek
 letter `φ` (“phi”). Its exact value is
 
 {.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
@@ -1492,38 +1514,30 @@ might look like with different angles between its seeds:
       x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} If the angle is _{span.fib-action(data-value=0)}0°_,
-all seeds will grow in a single long row away from the center.
+If the angle is [0°](action:set(0)), all seeds will grow in a single long row away from the center.
 
-{div.inline(slot="legend")} If the angle is _{span.fib-action(data-value=0.5)}`1/2`_
-of a full a rotation (180°), the seeds will alternate between two separate
-“arms” that move away from the center.
+If the angle is [`1/2`](action:set(0.5)) of a full a rotation (180°), the seeds will alternate
+between two separate “arms” that move away from the center.
 
-{div.inline(slot="legend")} If the rotation is another fractional proportion of
-360°, for example _{span.fib-action(data-value=2/5)}`2/5`_ or
-_{span.fib-action(data-value=1/3)}`1/3`_ or _{span.fib-action(data-value=3/8)}`3/8`_,
-then the number of “arms” will be the same as the [[denominator|numerator|prime
-factor]] of that fraction.
+If the rotation is another fractional proportion of 360°, for example [`2/5`](action:set(2/5)) or
+[`1/3`](action:set(1/3)) or [`3/8`](action:set(3/8)), then the number of “arms” will be the same as
+the [[denominator|numerator|prime factor]] of that fraction.
 
-{div(slot="legend")} Unfortunately “arms” are bad, because they mean that
-the seeds are not evenly distributed: all of the space between the arms is
-wasted. But if [rational numbers](gloss:rational-numbers) aren’t going to work,
-let’s try [irrational numbers](gloss:irrational-numbers)!
+Unfortunately “arms” are bad, because they mean that the seeds are not evenly distributed: all of
+the space between the arms is wasted. But if [rational numbers](gloss:rational-numbers) aren’t going
+to work, let’s try [irrational numbers](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} One example of an irrational number is [`pi`](gloss:pi).
-But if the angle between seeds is _{span.fib-action(data-value=0.31831)}`1/pi`_
-of 360°, we still seem to get arms: 22 of them. That’s because the fraction
-`22/7 = 3.1429…` is a pretty good approximation for `pi`. What we really need is
-an irrational number that _can’t_ be closely approximated by a simple fraction.
+One example of an irrational number is [`pi`](gloss:pi). But if the angle between seeds is
+[`1/pi`](action:set(0.31831)) of 360°, we still seem to get arms: 22 of them. That’s because the
+fraction `22/7 = 3.1429…` is a pretty good approximation for `pi`. What we really need is an
+irrational number that _can’t_ be closely approximated by a simple fraction.
 
-{div.inline(slot="legend")} It turns out that the [golden ratio](gloss:golden-ratio)
-is just that: the “most irrational” of all irrational numbers. If the angle
-between seeds is _{span.fib-action(data-value=0.6180339)}`1/phi`_ of 360°, they
-seem to be almost perfectly spaced. And this is precisely the angle that plants
-around the world are using.
+It turns out that the [golden ratio](gloss:golden-ratio) is just that: the “most irrational” of all
+irrational numbers. If the angle between seeds is [`1/phi`](action:set(0.6180339)) of 360°, they
+seem to be almost perfectly spaced. This is precisely the angle that plants around the world are
+using.
+
 :::
-
-    x-gesture(target=".fib-action")
 
 ---
 > id: sunflower-spiral-1
@@ -1543,7 +1557,7 @@ Nature also can’t solve equations to calculate the golden ratio – but over t
 course of millions of years, plants had plenty of time to try out different
 angles and discover the best one.
 
-Plants and animals always want grow in the most efficient way, and that is why
+Plants and animals always want to grow in the most efficient way, and that is why
 nature is full of regular, mathematical patterns.
 
 :::
@@ -1839,7 +1853,7 @@ the terms of the sequence in a chart:
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")} Notice how some starting points end very quickly,
-while others (like _{span.var-action}31_ or _{span.var-action}47_) take more
+while others (like [31](action:set(31)) or [47](action:set(47))) take more
 than one hundreds steps before they reach the 4, 2, 1 cycle.
 
 ---
@@ -1885,7 +1899,7 @@ above. Can you find the pattern?
 {.text-center.s-lime.s-vertical} _{span.hex}1_, _{span.hex}11_, _{.hex}21_,
 _{.hex}1211_, _{.hex}111221_, _{.hex}312211_, …
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: look-and-say-1
@@ -2039,7 +2053,7 @@ Pascal’s triangle can be created using a very simple pattern, but it is filled
 with surprising patterns and properties. That’s why it has fascinated
 mathematicians across the world, for hundreds of years.
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 
 ---
@@ -2124,7 +2138,7 @@ Since 3003 is a triangle number, it actually appears two more times in the
 _third_ diagonals of the triangle – that makes eight occurrences in total.
 
 It is unknown if there are any other numbers that appear eight times in the
-triangle, or if there numbers that appear more than eight times. The American
+triangle, or if there are numbers that appear more than eight times. The American
 mathematician [David Singmaster](bio:singmaster) hypothesised that there is a
 fixed limit on how often numbers can appear in Pascal’s triangle – but it hasn’t
 been proven yet.

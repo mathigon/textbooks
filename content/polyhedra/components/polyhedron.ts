@@ -4,6 +4,7 @@
 // =============================================================================
 
 
+/// <reference types="THREE"/>
 import {register} from '@mathigon/boost';
 import {Obj} from '@mathigon/core';
 import {Solid} from '../../shared/components/solid';
@@ -39,7 +40,7 @@ export class Polyhedron extends Solid {
     this.addMesh(() => {
       const polyhedron = new THREE.Object3D();
       const vertices = data.vertex.map(v =>
-          new THREE.Vector3(v[0], v[1], v[2]).multiplyScalar(scale));
+        new THREE.Vector3(v[0], v[1], v[2]).multiplyScalar(scale));
 
       const faceGeometry = new THREE.Geometry();
       faceGeometry.vertices = vertices;
@@ -53,7 +54,7 @@ export class Polyhedron extends Solid {
       faceGeometry.computeFaceNormals();
       faceGeometry.computeVertexNormals();
       const faceMaterial = new THREE.MeshPhongMaterial({
-        vertexColors: THREE.FaceColors,
+        vertexColors: THREE.FaceColors as any,
         side: THREE.DoubleSide,
         transparent: true,
         opacity: 0.9,

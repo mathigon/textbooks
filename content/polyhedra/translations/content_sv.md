@@ -234,7 +234,7 @@ Först kan vi dela in polygonen i ${toWord(n)} kongruenta, [[isosceles | liksidi
 {.reveal(when="blank-3")} För att hitta apotemet kan vi använda definitionen av [[tangenser | sinus | kosinus]] : 
 
 {.text-center.reveal(when="blank-4")}`tan pill(α, "blue", "alpha") = 
-target("opposite", "apothem") / target("adjacent", "half-base") =
+pill("opposite", "yellow", "apothem") / pill("adjacent", "green", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
 {.text-center.reveal(when="blank-5 blank-6")}`⇒ pill("apothem", "yellow",

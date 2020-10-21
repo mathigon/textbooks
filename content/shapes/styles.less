@@ -5,5 +5,45 @@
 
 
 @import "../shared/variables";
+@import "../shared/components/binary-swipe";
+@import "../shared/components/relation";
 
-// TODO
+
+.tangram {
+  border-radius: 6px 6px 0 0;
+  background: @grey-background;
+
+  .simple-tangram-bg {
+    background: url('images/square.svg') center no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+  }
+}
+
+.triangle-tangram {
+  .solution-outline {
+    stroke: black;
+    stroke-width: 1px;
+    fill: none;
+  }
+}
+
+.tangram, .triangle-tangram {
+  .simple-tangram-bg, .solution-outline {
+    width: 100%;
+    position: absolute;
+  }
+  .simple-tangram-bg, .solution-outline, x-polypad { height: 450px; }
+}
+
+.tangram-polys x-polypad { height: 225px; }
+
+.zoom-1, .triangle-ref, .zoom-2 {
+  x-polypad { height: 225px; }
+}
+
+x-slider.zoom-s-1, x-slider.zoom-s-2 {
+  button.play { display: none; }
+}
+
+.paradox-comparison x-polypad { height: 475px; }

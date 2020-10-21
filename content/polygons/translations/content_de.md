@@ -128,8 +128,8 @@ Stellen wir uns das wieder als eine Konstruktion aus Bauteilen vor: zwei Seiten 
 Dreiecks sind Metallstäbe der Länge 4 und 6, und die dritte Seite ist ein Gummiband
 , das sich dehnen oder zusammenziehen kann.
 
-Jetzt sehen wir, dass das Gummiband immer _{span.hover-target} kürzer als_
-`6+4=10` und _{span.hover-target} länger als_ `6-4=2` ist.
+Jetzt sehen wir, dass das Gummiband immer [kürzer als](action:hover(50,127,250,127,0))
+`6+4=10` und [länger als](action:hover(90,45,125,65,1)) `6-4=2` ist.
 
 ::: column(width=300)
 

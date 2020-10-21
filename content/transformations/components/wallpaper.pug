@@ -7,5 +7,5 @@ template#wallpaper
     for i in [1, 2, 3, 4, 5, 6, 7, 8]
       .colour
   .btn-row
-    a.btn.save(download target="_blank") Download
-    button.btn.clear Clear
+    x-icon-btn.save(icon="download" title="Download image")
+    x-icon-btn.clear(icon="restore" title="Clear canvas")

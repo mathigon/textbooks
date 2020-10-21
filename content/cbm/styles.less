@@ -1,0 +1,18 @@
+// =============================================================================
+// CBM Demo
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../shared/variables";
+@import "../shared/components/buckets";
+
+
+x-buckets {
+  .input { width: 230px; }
+  .bucket { width: 300px; }
+  .bucket:nth-child(1) { background: mix(@orange, @grey-background, 85%); }
+  .bucket:nth-child(2) { background: mix(@purple, @grey-background, 85%); }
+}
+
+iframe.wolfram { margin: 1.5em auto; display: block; }

@@ -4,7 +4,8 @@
 // =============================================================================
 
 
-import {Circle, intersections, nearlyEquals, Point, Polygon} from '@mathigon/fermat';
+import {nearlyEquals} from '@mathigon/fermat';
+import {Circle, intersections, Point, Polygon} from '@mathigon/euclid';
 import {$html, $N, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Step} from '../shared/types';
 
@@ -23,7 +24,7 @@ class Disk {
   posn: Point;
 
   constructor($svg: SVGParentView, allDisks: Disk[], outer: Circle,
-              label: number, readonly r: number, initial: Point) {
+      label: number, readonly r: number, initial: Point) {
 
     const $c = $N('circle', {class: 'inner', r}, $svg) as SVGView;
     const $t = $N('text', {text: label}, $svg) as SVGView;
@@ -46,7 +47,7 @@ class Disk {
 
         // Snap to outer circle
         if (nearlyEquals(Point.distance(this.posn, outer.c), outer.r - r, 2)) {
-          snapCircles.push(new Circle(outer.c, outer.r - r))
+          snapCircles.push(new Circle(outer.c, outer.r - r));
         }
 
         // Snap to inner circles
@@ -61,7 +62,7 @@ class Disk {
           this.posn = snapCircles[0].project(this.posn);
         } else if (snapCircles.length > 1) {
           for (const p of intersections(snapCircles[0], snapCircles[1])) {
-            if (Point.distance(p, this.posn) < 3) this.posn = p
+            if (Point.distance(p, this.posn) < 3) this.posn = p;
           }
         }
 
@@ -81,9 +82,9 @@ export function circles($step: Step) {
     [147, 0.735]
   ];
 
-  const initial = Polygon.regular(data.length + 1, 130).shift(140, 140);
+  const initial = Polygon.regular(data.length + 1, 130).shift(160, 160);
 
-  const outerCircle = new Circle(new Point(140, 140), 108.07);
+  const outerCircle = new Circle(new Point(160, 160), 108.07);
 
   const $svg = $step.$('svg.circles') as SVGParentView;
   const circles: Disk[] = [];
