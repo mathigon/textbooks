@@ -665,6 +665,7 @@ Let's mess around with the Mathigon Logo!
 
 > id: multiplication
 > section: arithmetic
+> sectionStatus: dev
 
 ### Matrix Multiplication
 
