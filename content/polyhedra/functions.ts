@@ -210,7 +210,7 @@ export function tessellationDrawing($step: Step) {
   $polypad.on('move-selection rotate-selection add-tile', () => {
     const tiles = Array.from($polypad.tiles) as any;
     for (const t of tiles) t.$body.removeClass('overlap');
-    // Refer to this for tangram correctness checking
+
     const n = tiles.length;
     for (let i = 0; i < n; ++i) {
       for (let j = i + 1; j < n; ++j) {
