@@ -1,0 +1,3 @@
+voxel-surface: This shape has a surface area of $a, but you want a surface area of $b.
+voxel-volume: This shape has a volume of $a, but you  want a volume of $b.
+voxel-error: Make sure that this shape has a volume of $a and a surface area of $b.
