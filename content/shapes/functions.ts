@@ -687,6 +687,7 @@ export function currysParadox5($step: Step) {
   const $polypad = $step.$('.zoom-2 > x-polypad') as Polypad;
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight);
 
+  // TODO Cleanup duplicate code!
   paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);

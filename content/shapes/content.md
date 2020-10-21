@@ -81,27 +81,27 @@ All of these regions in the Voronoi diagram are examples of polygons. A polygon 
 
 ::: x-binary-swipe(a-title="Polygons" b-title="Not Polygons")
       
-{div.card.c-red(solution="a" comment="card-1")} Card #1 - Regular Polygon
+{div.card.c-red(solution="a" comment="polygon-regular")} Card #1 - Regular Polygon
 
-{div.card.c-teal(solution="b" comment="card-2")} Card #2 - NOT a Polygon
+{div.card.c-teal(solution="b" comment="not-polygon-curved")} Card #2 - NOT a Polygon
 
-{div.card.c-green(solution="b" comment="card-3")} Card #3 - NOT a Polygon
+{div.card.c-green(solution="b" comment="not-polygon-hole")} Card #3 - NOT a Polygon
 
-{div.card.c-orange(solution="a" comment="card-4")} Card #4 - Irregular Polygon
+{div.card.c-orange(solution="a" comment="polygon-irregular")} Card #4 - Irregular Polygon
 
-{div.card.c-blue(solution="a" comment="card-5")} Card #5 - Irregular Polygon
+{div.card.c-blue(solution="a" comment="polygon-irregular")} Card #5 - Irregular Polygon
 
-{div.card.c-yellow(solution="b" comment="card-6")} Card #6 - Not a polygon
+{div.card.c-yellow(solution="b" comment="not-polygon-closed")} Card #6 - Not a polygon
 
-{div.card.c-teal(solution="a" comment="card-7")} Card #7 - Regular polygon
+{div.card.c-teal(solution="a" comment="polygon-regular")} Card #7 - Regular polygon
 
-{div.card.c-orange(solution="b" comment="card-8")} Card #8 - Not a Polygon
+{div.card.c-orange(solution="b" comment="not-polygon-crossing")} Card #8 - Not a Polygon
 
-{div.card.c-blue(solution="b" comment="card-9")} Card #9 - Not a polygon
+{div.card.c-blue(solution="b" comment="not-polygon-curved")} Card #9 - Not a polygon
 
-{div.card.c-red(solution="a" comment="card-10")} Card #10 - Irregular Polygon
+{div.card.c-red(solution="a" comment="polygon-irregular")} Card #10 - Irregular Polygon
 
-{div.card.c-purple(solution="a" comment="card-11" hint="This is not correct. Try again!")} Card #11 - Polygon
+{div.card.c-purple(solution="a" comment="polygon-voronoi")} Card #11 - Polygon
 
 :::
 
