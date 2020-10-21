@@ -7,7 +7,7 @@
 import {delay, wait} from '@mathigon/core';
 import {Point} from '@mathigon/euclid';
 import {$N, ElementView, InputView, loadScript, slide, SVGView} from '@mathigon/boost';
-import {Step, Slider, Slideshow, Select} from '../shared/types';
+import {Select, Slider, Slideshow, Step} from '../shared/types';
 
 import {beep, Beep} from './components/beep';
 import {CodeBox} from './components/code-box';
@@ -584,7 +584,7 @@ export function finger5($section: Step) {
   const delay = 300;
 
   $section.onScore('blank-0', () => $fingers.forEach(
-    $f => $f.enter('slide', 500, i++ * delay)
+      $f => $f.enter('slide', 500, i++ * delay)
   ));
 }
 
@@ -601,7 +601,7 @@ export function finger32($section: Step) {
   let i = 0;
   const delay = 200;
   $section.onScore('blank-0', () => $fingers.forEach(
-    $f => $f.enter('slide', 500, i++ * delay)
+      $f => $f.enter('slide', 500, i++ * delay)
   ));
 
   const $select = $section.$('x-select') as Select;
@@ -663,25 +663,6 @@ export function resolution($step: Step) {
 
 export function satellite($step: Step) {
   // SATELLITE: complete this
-  const $bitstream = $step.$('#bitstream') as SVGView;
-  const $trajectory = $bitstream?.$('line') as SVGView;
-  const $bits = $bitstream?.$$('text');
-
-  // SATELLITE: WAIT for new svg from designer
-  function moveBits() {
-    // There should be a timeout
-    $bits?.forEach((e, i) => {
-      // get point along trajectory
-      const xy = $trajectory.getPointAt(0);
-      // set transform dependent on the bits
-      e.setTransform(new Point(xy.x, xy.y));
-    });
-  }
-
-  function stopBits() {
-    // SATELLITE: stop the bits
-  }
-
   const $satellites = $step.$('.satellites')!;
 
   // from Telegraph code. Should replace w/ code to enable 1s and 0s.
