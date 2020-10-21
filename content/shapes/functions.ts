@@ -10,7 +10,7 @@ import {Arc, Circle, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@
 
 import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
-import {VoronoiStep} from './types';
+import {VoronoiStep} from './components/voronoi';
 
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
