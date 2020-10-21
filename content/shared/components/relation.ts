@@ -7,6 +7,10 @@
 import {$N, CustomElementView, ElementView, hover, register, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Point} from '@mathigon/euclid';
 
+type Match = {
+  name: string
+  matched: boolean
+}
 
 @register('x-relation', {templateId: '#relation'})
 export class Relation extends CustomElementView {
@@ -16,6 +20,7 @@ export class Relation extends CustomElementView {
   private lastWidth = 0;
   private inputTargets: Point[] = [];
   private outputTargets: Point[] = [];
+  private matches: Match[] = [];
 
   ready() {
     const $svg = this.$('svg.connections') as SVGParentView;
@@ -28,14 +33,43 @@ export class Relation extends CustomElementView {
     let activeTarget = -1;
 
     for (const [i, $el] of this.$inputs.entries()) {
+
+      const name = $el.attr('match');
+      this.matches.push({name, matched: false});
+      $el.removeAttr('match');
+
+      let comment = $el.attr('comment');
+      if (comment == 'comment') {
+        comment = name;
+      } else {
+        comment = 'correct';
+      }
+
       slide($el, {
         start: () => $currentLine = $N('line', {}, $svg) as SVGView,
         move: (p: Point) => {
           $currentLine!.setLine(this.inputTargets[i], this.outputTargets[activeTarget] || p);
         },
         end: () => {
+
           if (activeTarget >= 0) {
-            this.$outputs[activeTarget].removeClass('active');
+
+            const $target = this.$outputs[activeTarget];
+            $target.removeClass('active');
+
+            if ($target.attr('name') == this.matches[i].name) {
+
+              this.trigger('correct', comment);
+              this.matches[i].matched = true;
+
+              if (this.matches.every(m => m.matched == true)) {
+                this.trigger('complete');
+              }
+
+            } else {
+              this.trigger('incorrect');
+            }
+
           } else {
             $currentLine!.exit('draw', 300, 0, true);
           }
@@ -47,6 +81,7 @@ export class Relation extends CustomElementView {
     }
 
     for (const [i, $el] of this.$outputs.entries()) {
+
       hover($el, {
         enter: () => {
           if (!$currentLine || i === activeTarget) return;

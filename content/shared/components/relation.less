@@ -21,6 +21,10 @@ x-relation {
     margin: 6px 0;
     border-radius: 4px;
     &.active { background: mix(@grey-background, @border-light); }
+    img, svg, object {
+      width: 100%;
+      pointer-events: none;
+    }
   }
 
   .domain, .range { width: 100/3%; }
