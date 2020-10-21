@@ -6,7 +6,8 @@
 
 /// <reference types="THREE"/>
 import {Color, isOneOf, list, Obj, tabulate, wait} from '@mathigon/core';
-import {Angle, clamp, numberFormat, Point, Polygon, Random, Rectangle, round, roundTo, Sector, toWord} from '@mathigon/fermat';
+import {clamp, numberFormat, Random, round, roundTo, toWord} from '@mathigon/fermat';
+import {Angle, Point, Polygon, Rectangle, Sector} from '@mathigon/euclid';
 import {$N, animate, CanvasView, Draggable, ElementView, hover, InputView, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Burst} from '../shared/components/burst';
 import {ConicSection} from '../shared/components/conic-section';
@@ -18,6 +19,7 @@ import {PiScroll} from './components/pi-scroll';
 
 import '../shared/components/conic-section';
 import './components/pi-scroll';
+import './components/ellipse';
 
 
 // -----------------------------------------------------------------------------

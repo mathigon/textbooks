@@ -1224,8 +1224,8 @@ kovalevskaya:
     __Sofia Kovalevskaya__ (Софья Васильевна Ковалевская 1850 – 1891) was a
     Russian mathematician, and the first woman to earn a modern doctorate in
     mathematics. She was also the first woman to hold full professorship in
-    Nothern Europe, and is among the first women to be an editor of a scietific
-    journal.
+    Northern Europe, and is among the first women to be an editor of a
+    scientific journal.
 
     Kovalevskaya made major contributions to analysis, partial differential
     equations, and mechanics. She also wrote several works about her life
@@ -1658,6 +1658,7 @@ noether:
   full: Amalie Emmy Noether
   born: 1882
   died: 1935
+  small: true
   keywords: Woman Female
   bio: __Amalie Emmy Noether__ (1882 – 1935) was a German mathematician who made
     important discoveries in abstract algebra and theoretical physics, including
@@ -1666,6 +1667,25 @@ noether:
   links:
     - title: Symmetry in Physics
       url: /course/transformations/physics
+
+nunes:
+  name: Pedro Nunes
+  born: 1502
+  died: 1578
+  bio: |
+    __Pedro Nunes__ (1502 – 1578) was a Portuguese mathematician and astronomer.
+    As _Royal Cosmographer of Portugal_ he taught navigational skills to many
+    sailors and explorers.
+
+    Nunes first noticed that if a ship always follows the same compass bearing,
+    it won’t travel on a straight line or great circle. Instead, it will follow
+    a path called a _rhumb line_ or _loxodrome_, which spirals towards the
+    North or South pole.
+
+    Nunes also tried to calculate which day in the hear has the fewwest hours
+    of sunlight, he disproved previous attempts to solve classical geometry
+    problems like trisecting an angle, and he invented a system for measuring
+    fractional parts of angles.
 
 oresme:
   born: 1323
@@ -1740,10 +1760,13 @@ penrose:
   born: 1931
   bio: |
     __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
-    who is known for his groundbreaking work in general relativity and cosmology
-    – often collaborating with other famous scientists like Stephen Hawking and
-    Michael Atiyah. He also discovered _Penrose Tilings_: self-similar,
-    non-periodic tessellations.
+    who is known for his groundbreaking work in general relativity and
+    cosmology. He also discovered _Penrose Tilings_: self-similar, non-periodic
+    tessellations using only two different tiles.
+
+    In 1988, he shared the _Wolf Prize_ with Stephen Hawking, and in 2020, he
+    received the Nobel Prize in physics for discoveries about the formation
+    of black holes.
   links:
     - title: Penrose Tilings
       url: /course/polyhedra/tessellations#penrose
@@ -1962,10 +1985,10 @@ russell:
 shannon:
   name: Shannon
   full: Claude Shannon
-  born: 1898
-  died: 1972
+  born: 1916
+  died: 2001
   location: america
-  bio: __Claude Shannon__ (1898 – 1972) was an American mathematician and
+  bio: __Claude Shannon__ (1916 – 2001) was an American mathematician and
     electrical engineer, remembered as the “father of information theory”. He
     worked on cryptography, including codebreaking for national defence during
     World War II, but he was also interested in juggling, unicycling and chess.
@@ -2134,7 +2157,7 @@ tusi:
   bio: |
     __Nasir al-Din Tusi__ (1201 – 1274, نصیر الدین طوسی‎), also known as Muhammad
     ibn Muhammad ibn al-Hasan al-Tūsī, was an architect, philospher, physician,
-    scientis, and theologian, as well as a prolific writer.
+    scientist, and theologian, as well as a prolific writer.
 
     Many consider Al-Din Tusi to be the father of trigonometry, and he was
     perhaps the first person to work on trigonometry independent of astronomy.
@@ -2247,6 +2270,7 @@ zhenyi:
   name: Wang
   full: Wang Zhenyi
   location: asia
+  overflow: true
   keywords: China Woman Female
   bio: |
     __Wang Zhenyi__ (王贞仪, 1768 – 1797) was a Chinese scientist and

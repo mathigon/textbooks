@@ -5,7 +5,8 @@
 
 
 import {Browser, CustomElementView, ElementView, register, slide} from '@mathigon/boost';
-import {isBetween, Point} from '@mathigon/fermat';
+import {isBetween} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 
 
 class FlowGrid {

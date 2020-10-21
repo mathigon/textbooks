@@ -5,7 +5,8 @@
 
 
 import {CanvasView} from '@mathigon/boost';
-import {Bounds, Point, roundTo} from '@mathigon/fermat';
+import {roundTo} from '@mathigon/fermat';
+import {Bounds, Point} from '@mathigon/euclid';
 import {BLUE} from '../../shared/constants';
 
 

@@ -1157,7 +1157,7 @@ more advanced mathematics. Instead, you can try drawing your own repeated patter
 17 wallpaper groups:
 
     include ./components/wallpaper
-    x-wallpaper
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin

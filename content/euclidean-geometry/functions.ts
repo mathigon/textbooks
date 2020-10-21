@@ -5,7 +5,7 @@
 
 
 import {Obj} from '@mathigon/core';
-import {isLineLike, Point, Segment} from '@mathigon/fermat';
+import {isLineLike, Point, Segment} from '@mathigon/euclid';
 import {$N, slide, SVGView} from '@mathigon/boost';
 import {Geopad, GeoPoint, Path, PlayBtn, Step, Video} from '../shared/types';
 
@@ -36,7 +36,7 @@ export function thales($step: Step) {
       c = point.name;
       point.project('semicirc.contract(0.2)');
       $geopad.drawPath(m => m.angle(m[b], m[c], m[a]),
-          {animated: 500, target: 'angle', classes: 'red thin'});
+          {animated: 500, target: 'angle', classes: 'yellow thin'});
       $geopad.drawPath(m => m.triangle(m[a], m[c], m[b]),
           {animated: 2000, target: 'triangle', classes: 'red'});
       $step.score('p3');

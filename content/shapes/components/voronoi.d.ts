@@ -1,6 +1,13 @@
-import { Point, Polygon, Segment } from "@mathigon/fermat";
-import { Step, GeoPoint } from "../shared/types";
-import { Observable } from "@mathigon/boost";
+// =============================================================================
+// Voronoi Declarations
+// (c) Mathigon
+// =============================================================================
+
+
+import {Point, Polygon, Segment} from '@mathigon/euclid';
+import {Observable} from '@mathigon/boost';
+import {Step, GeoPoint} from '../../shared/types';
+
 
 declare class VoronoiStep extends Step {
   model: Observable<VoronoiModel>;

@@ -128,8 +128,9 @@ Once again, we can think about this using physical objects: two sides of the
 triangle are metal rods of length 4 and 6, and the third side is a rubber band
 that can expand or contract.
 
-Now you can see that the rubber band will always be [shorter than](action:hover(50,127,250,127,0))
-`6+4=10` and [longer than](action:hover(90,45,125,65,1)) `6-4=2`.
+Now you can see that the length of the rubber band will always be
+[at least](action:hover(90,45,118,69,1)) `6-4=2` and [at most](action:hover(50,127,250,127,0))
+`6+4=10`.
 
 ::: column(width=300)
 
@@ -139,7 +140,7 @@ Now you can see that the rubber band will always be [shorter than](action:hover(
       circle.move(name="c" cx=300 cy=110 project="circle(a,80)")
       path.thick(x="segment(a,b)" label="6")
       path.thick(x="segment(a,c)" label="4")
-      path.orange(x="segment(b,c)" label="${floor(distance(b,c)/20+0.01)}")
+      path.orange(x="segment(b,c)" label="${round(distance(b,c)/20,1)}")
 
 :::
 

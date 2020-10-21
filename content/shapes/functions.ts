@@ -4,15 +4,19 @@
 // =============================================================================
 
 
-import {nearlyEquals, Point, Polygon, Segment} from '@mathigon/fermat';
+import {nearlyEquals} from '@mathigon/fermat';
 import {$N, animate, CanvasView, EventCallback, loadScript, SVGParentView, SVGView} from '@mathigon/boost';
+import {Point, Polygon, Segment} from '@mathigon/euclid';
+
 import {Geopad, GeoPath, GeoPoint, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
+import {VoronoiStep} from './components/voronoi';
+
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
-import {VoronoiStep} from './types';
 
 declare const d3: any;
+
 
 const cafeLocationPoints = [
   new Point(34, 200),
@@ -252,7 +256,7 @@ export async function voronoi2($step: VoronoiStep) {
 
 function handlePathing(path: GeoPath, base: GeoPath, heightPath: GeoPath, height: number, whenClose: VoidFunction, whenFar: VoidFunction) {
   const pathSegment = path.value as Segment;
-  const angleRange = 1 * (Math.PI / 180);
+  const angleRange = Math.PI / 180;
   const correctAngle = (base.value as Segment).perpendicular(pathSegment.p1).angle % Math.PI;
   const pathAngle = pathSegment.angle % Math.PI;
   const perpendicular = pathAngle > correctAngle - angleRange && pathAngle < correctAngle + angleRange;
@@ -380,7 +384,7 @@ export function polyVerts($step: Step) {
   const pointsMoved: {[key: string]: boolean}[] = [];
 
   const atLeastTwoMoved = (points: {[key: string]: boolean}) => {
-    return Object.values(points).filter((pv: boolean) => pv == true).length > 1;
+    return Object.values(points).filter(pv => pv).length > 1;
   };
 
   let doneMoving = false;

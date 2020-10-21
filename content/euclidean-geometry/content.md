@@ -35,11 +35,11 @@ _{span.reveal(when="p1 p2")} Let’s draw a semicircle around these points._
 {.reveal(when="p1 p2")} Now pick a third point that lies somewhere on the
 [circumference](target:circumf) of the semicircle.
 
-{.reveal(when="p3")} We can draw a [triangle](target:triangle) formed by the two corners of the
+{.reveal(when="p3")} We can draw a [{.red}triangle](target:triangle) formed by the two corners of the
 semicircle, as well as the point you picked on the circumference.
 
 {.reveal(when="p3" delay=1000)} Try moving the position of the three points and
-observe what happens to the [angle](target:angle) at the top of the triangle.
+observe what happens to the [{.yellow}angle](target:angle) at the top of the triangle.
 _{span.reveal(when="move")} It seems like it is always [[90]]°!_
 _{span.reveal(when="blank-0")} This means that the triangle is
 [[right-angled|equilateral|acute]]._
@@ -252,8 +252,8 @@ called the [__radius__](gloss:circle-radius).
       path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-class="white")
 
 ::: column.grow
-The two shapes on the right basically look identical. They have the same size
-and shape, and we could [turn and slide](target:move) one of them to exactly
+These two shapes basically look identical. They have the same size
+and shape, and we could [{.green}turn and slide](target:move) one of them to exactly
 match up with the other. In geometry, we say that the two shapes are
 [__congruent__](gloss:congruent).
 

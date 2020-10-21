@@ -1040,7 +1040,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 不幸的是，没有简单的理由说明为什么有_17_个这样的小组，要证明这一点需要更高级的数学。相反，您可以尝试为17个壁纸组的每一个绘制自己的重复图案： 
 
     include ./components/wallpaper
-    x-wallpaper
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin

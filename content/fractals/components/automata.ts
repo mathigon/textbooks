@@ -5,7 +5,7 @@
 
 
 import {tabulate2D} from '@mathigon/core';
-import {Point} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {$N, CustomElementView, ElementView, Observable, observe, pointerOver, register, SVGParentView} from '@mathigon/boost';
 
 

@@ -5,7 +5,8 @@
 
 
 import {CustomElementView, register, slide} from '@mathigon/boost';
-import {clamp, Point} from '@mathigon/fermat';
+import {clamp} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {create3D} from '../../shared/components/webgl';
 
 

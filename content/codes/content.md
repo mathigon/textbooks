@@ -895,7 +895,7 @@ Upon receiving the letter Octavian eagerly opens the message and reads:
 dwcru cqnw. SL”
 
 As you can see, the message makes no sense. Knowing that his message might fall into enemy hands,
-Caesar protected it by using a [cipher](gloss:cipher).
+Caesar protected it by using a cipher.
 
 [Continue](btn:next)
 
