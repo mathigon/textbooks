@@ -274,7 +274,7 @@ Lastly, many flags use polygons. Drag the name of each country to the correct fl
       .item(slot="domain" match="south-africa" comment=true)
         object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg")
       .item(slot="domain" match="finland" comment=true)
-        object(type="image/svg+xml" data="/resources/shapes/images/Flag_of_Finland.svg")
+        object(type="image/svg+xml" data="/resources/shapes/images/finland.svg")
       .item(slot="domain" match="nepal" comment=true)
         object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg")
       .item(slot="range" name="canada") Canada
