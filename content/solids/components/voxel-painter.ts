@@ -3,13 +3,15 @@
 // (c) Mathigon
 // =============================================================================
 
+//could add the "filled/unfilled" thing
+
 
 /// <reference types="three"/>
 import {$N, animate, canvasPointerPosition, CustomElementView, Draggable, loadScript, register, slide} from '@mathigon/boost';
 import {Point} from '@mathigon/fermat';
 import {Obj} from '@mathigon/core';
 import {create3D} from '../../shared/components/webgl';
-import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../../shared/constants';
+import { BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW, GREY} from '../../shared/constants';
 import {clamp} from '@mathigon/fermat';
 
 const TAU = Math.PI * 2;
@@ -26,7 +28,8 @@ export class VoxelPainter extends CustomElementView {
     this.css({width: width + 'px', height: height + 'px'});
 
     const v1 = new THREE.Vector3();
-    const rotateOnly = this.hasAttr('rotateOnly');
+    const explodeOnGrab = this.hasAttr('explodeOnGrab')
+    const rotateOnly = this.hasAttr('rotateOnly') || explodeOnGrab;
 
     const defaultGridDimension = 20;
     let gridDimension = (+this.attr('playingFieldSize')) || defaultGridDimension;
@@ -52,8 +55,14 @@ export class VoxelPainter extends CustomElementView {
     const scene = await create3D(this, 45, 2 * width, 2 * height, customCamera);
     const camera = scene.camera;
     camera.rotation.order = 'YXZ';
+    
     camera.rotation.y = TAU / 8;
     camera.rotation.x = -TAU / 8;
+    if(this.hasAttr('startingYRotation'))
+      camera.rotation.y = this.attr('startingYRotation') / 360 * TAU
+    if (this.hasAttr('startingXRotation'))
+      camera.rotation.x = this.attr('startingXRotation') / 360 * TAU
+
     camera.position.x = 45.0; // the "distance"
     camera.position.setLength(camera.position.length() * gridDimension / defaultGridDimension);
     const $canvas = scene.$canvas;
@@ -61,15 +70,24 @@ export class VoxelPainter extends CustomElementView {
     const objectsOnWhichVoxelsCanBePlaced: THREE.Object3D[] = [];
     const voxels = this.voxels;
 
-    if (this.hasAttr('showSaveButton')) {
-      const $button = $N('button', {class: 'btn', text: 'Save'}, this);
-      this.append($button);
+    const $potentialSaveButton = this.$('x-icon-btn')!;
+    if ($potentialSaveButton !== undefined && $potentialSaveButton.hasAttr('saveButton')) {
+      $potentialSaveButton.on('click', () => {
+        let topY = -Infinity
+        let bottomY = Infinity
+        for (let i = 0; i < voxels.length; i++) {
+          topY = Math.max(voxels[i].position.y, topY)
+          bottomY = Math.min(voxels[i].position.y, bottomY)
+        }
+        let middleY = Math.round((topY+bottomY)/2.)
 
-      $button.on('click', () => {
         let outputString = '"';
         for (let i = 0; i < voxels.length; i++) {
           for (let j = 0; j < 3; j++) {
-            outputString += voxels[i].position.getComponent(j) + ',';
+            if(j !== 1)
+              outputString += voxels[i].position.getComponent(j) + ',';
+            else
+              outputString += (voxels[i].position.getComponent(j)-middleY) + ',';
           }
         }
         outputString += '"';
@@ -91,8 +109,15 @@ export class VoxelPainter extends CustomElementView {
     const voxelGeo = new THREE.BoxGeometry(1, 1, 1);
     const voxelMaterial = new THREE.MeshLambertMaterial({color: 0xfeb74c});
 
+    const faceColours = [RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE];
+    const faceColorDirections = [
+      new THREE.Vector3(1., 0., 0.),
+      new THREE.Vector3(-1., 0., 0.),
+      new THREE.Vector3(0., 1., 0.),
+      new THREE.Vector3(0.,-1., 0.),
+      new THREE.Vector3(0., 0., 1.),
+      new THREE.Vector3(0., 0.,-1.)]
     if (this.hasAttr('color-sides')) {
-      const faceColours = [RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE];
       for (let i = 0; i < 6; ++i) {
         const c = new THREE.Color(faceColours[i]);
         voxelGeo.faces[i * 2].color = voxelGeo.faces[i * 2 + 1].color = c;
@@ -115,7 +140,7 @@ export class VoxelPainter extends CustomElementView {
 
     class Voxel extends THREE.Mesh {
       constructor() {
-        super(voxelGeo, voxelMaterial);
+        super(voxelGeo.clone(), voxelMaterial);
         this.add(new THREE.LineSegments(outlineGeometry, outlineMaterial));
         voxels.push(this);
         objectsOnWhichVoxelsCanBePlaced.push(this);
@@ -190,6 +215,7 @@ export class VoxelPainter extends CustomElementView {
     //   eraser.position.copy(eraserDefaultPosition);
     // }
 
+    //setting up voxels
     {
       const isInShapeFunctions: Obj<(p: THREE.Vector3) => boolean> = {};
 
@@ -240,6 +266,24 @@ export class VoxelPainter extends CustomElementView {
             parseFloat(coords[i * 3 + 1]),
             parseFloat(coords[i * 3 + 2]));
         snapToNearestValidCubeCenterPosition(voxel.position);
+      }
+
+      if (explodeOnGrab) {
+        let p = new THREE.Vector3()
+        for (let i = 0, il = this.voxels.length; i < il; ++i) {
+          for (let k = 0; k < 6; k++) {
+            let nothingInThisDirection = true
+            p.copy(this.voxels[i].position).add(faceColorDirections[k])
+            for(let j = 0; j < il; ++j) {
+              if ( this.voxels[j].position.distanceToSquared(p) < .01)
+                nothingInThisDirection = false
+            }
+            if(!nothingInThisDirection) {
+              this.voxels[i].geometry.faces[k*2+0].color.setRGB(.4, .4, .4)
+              this.voxels[i].geometry.faces[k*2+1].color.setRGB(.4, .4, .4)
+            }
+          }
+        }
       }
     }
 
@@ -310,95 +354,117 @@ export class VoxelPainter extends CustomElementView {
       respondToPointerMovement(p);
     });
 
-    slide($canvas, {
+    let pointToExplodeFrom = new THREE.Vector3()
+    let initialPositions = Array(voxels.length)
+    for(let i = 0, il = voxels.length; i < il; ++i) {
+      pointToExplodeFrom.add(voxels[i].position)
+      initialPositions[i] = voxels[i].position.clone()
+    }
+    pointToExplodeFrom.multiplyScalar(1./voxels.length)
+    function setVoxelPositionsFromExplodedness(explodedness) {
+      for (let i = 0, il = voxels.length; i < il; ++i)
+        voxels[i].position.copy(initialPositions[i]).sub(pointToExplodeFrom).multiplyScalar(1. + explodedness).add(pointToExplodeFrom)
+    }
 
-      down: () => {
-        mouseControlMode = 'rotating';
+    if(!this.hasAttr('noInteraction')) {
+      slide($canvas, {
 
-        const intersection = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced)[0];
-        if (!rotateOnly && intersection !== undefined) {
-          setFromVoxelIntersection(v1, intersection);
-          if (pointInPlayingField(v1)) {
-            mouseControlMode = 'placing';
-            placingStart.copy(v1);
-            placingEnd.copy(placingStart);
+        down: () => {
+          mouseControlMode = 'rotating';
 
-            // corner of cube that is away from camera
-            getCameraDirectionSnappedToGrid(v1);
-            v1.add(placingStart);
-            for (let i = 0; i < 3; i++) {
-              placingHelpers[i].position.copy(v1);
-              placingHelpers[i].updateMatrixWorld();
-            }
-          }
-        }
-      },
+          const intersection = pointerRaycaster.intersectObjects(objectsOnWhichVoxelsCanBePlaced)[0];
+          if (!rotateOnly && intersection !== undefined) {
+            setFromVoxelIntersection(v1, intersection);
+            if (pointInPlayingField(v1)) {
+              mouseControlMode = 'placing';
+              placingStart.copy(v1);
+              placingEnd.copy(placingStart);
 
-      move: respondToPointerMovement,
-
-      up: () => {
-        if (mouseControlMode === 'placing') {
-          mouseControlMode = '';
-
-          let iComponent = 0;
-          if (placingStart.x === placingEnd.x) iComponent = 1;
-          if (placingStart.y === placingEnd.y) iComponent = 2;
-          if (placingStart.z === placingEnd.z) iComponent = 0;
-          const jComponent = (iComponent + 1) % 3;
-          const kComponent = (jComponent + 1) % 3;
-          const k = placingStart.getComponent(kComponent);
-
-          const iStart = Math.min(placingStart.getComponent(iComponent), placingEnd.getComponent(iComponent));
-          const iLimit = Math.max(placingStart.getComponent(iComponent), placingEnd.getComponent(iComponent));
-          const jStart = Math.min(placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent));
-          const jLimit = Math.max(placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent));
-
-          const potentialNewPosition = new THREE.Vector3();
-          for (let i = iStart; i <= iLimit; i += 1) {
-            for (let j = jStart; j <= jLimit; j += 1) {
-              potentialNewPosition.setComponent(kComponent, k);
-              potentialNewPosition.setComponent(iComponent, i);
-              potentialNewPosition.setComponent(jComponent, j);
-              snapToNearestValidCubeCenterPosition(potentialNewPosition);
-              let alreadyOccupied = false;
-              voxels.forEach((voxel) => {
-                if (voxel.position.equals(potentialNewPosition)) alreadyOccupied = true;
-              });
-              if (!alreadyOccupied) {
-                new Voxel().position.copy(potentialNewPosition);
+              // corner of cube that is away from camera
+              getCameraDirectionSnappedToGrid(v1);
+              v1.add(placingStart);
+              for (let i = 0; i < 3; i++) {
+                placingHelpers[i].position.copy(v1);
+                placingHelpers[i].updateMatrixWorld();
               }
             }
           }
-        }
+        },
 
-        if (mouseControlMode === 'rotating') {
-          mouseControlMode = '';
+        move: respondToPointerMovement,
 
-          animate((timeSinceStart, timeDifference, cancel) => {
-            // snapspace is where the angles we want are integers
-            const snapSpaceAngleX = camera.rotation.x / (TAU / 16);
-            const destination = Math.round(snapSpaceAngleX);
-            // destination = clamp(destination, -1, 1)
-            const stepX = getStepTowardDestination(snapSpaceAngleX, destination);
-            const newSnapSpaceAngleX = snapSpaceAngleX + stepX;
-            camera.rotation.x = newSnapSpaceAngleX * (TAU / 16);
+        up: () => {
+          if (mouseControlMode === 'placing') {
+            mouseControlMode = '';
 
-            const snapSpaceAngleY = camera.rotation.y / (TAU / 8);
-            const stepY = getStepTowardDestination(snapSpaceAngleY, Math.round(snapSpaceAngleY));
-            const newSnapSpaceAngleY = snapSpaceAngleY + stepY;
-            camera.rotation.y = newSnapSpaceAngleY * (TAU / 8);
+            let iComponent = 0;
+            if (placingStart.x === placingEnd.x) iComponent = 1;
+            if (placingStart.y === placingEnd.y) iComponent = 2;
+            if (placingStart.z === placingEnd.z) iComponent = 0;
+            const jComponent = (iComponent + 1) % 3;
+            const kComponent = (jComponent + 1) % 3;
+            const k = placingStart.getComponent(kComponent);
 
-            updateApplet();
+            const iStart = Math.min(placingStart.getComponent(iComponent), placingEnd.getComponent(iComponent));
+            const iLimit = Math.max(placingStart.getComponent(iComponent), placingEnd.getComponent(iComponent));
+            const jStart = Math.min(placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent));
+            const jLimit = Math.max(placingStart.getComponent(jComponent), placingEnd.getComponent(jComponent));
 
-            if (stepX == 0 && stepY == 0) {
-              cancel();
+            const potentialNewPosition = new THREE.Vector3();
+            for (let i = iStart; i <= iLimit; i += 1) {
+              for (let j = jStart; j <= jLimit; j += 1) {
+                potentialNewPosition.setComponent(kComponent, k);
+                potentialNewPosition.setComponent(iComponent, i);
+                potentialNewPosition.setComponent(jComponent, j);
+                snapToNearestValidCubeCenterPosition(potentialNewPosition);
+                let alreadyOccupied = false;
+                voxels.forEach((voxel) => {
+                  if (voxel.position.equals(potentialNewPosition)) alreadyOccupied = true;
+                });
+                if (!alreadyOccupied) {
+                  new Voxel().position.copy(potentialNewPosition);
+                }
+              }
             }
-          });
-        }
+          }
 
-        updateApplet();
-      }
-    });
+          if (mouseControlMode === 'rotating') {
+            mouseControlMode = '';
+
+            animate((timeSinceStart, timeDifference, cancel) => {
+              // snapspace is where the angles we want are integers
+              const snapSpaceAngleX = camera.rotation.x / (TAU / 16);
+              const destination = Math.round(snapSpaceAngleX);
+              // destination = clamp(destination, -1, 1)
+              const stepX = getStepTowardDestination(snapSpaceAngleX, destination);
+              const newSnapSpaceAngleX = snapSpaceAngleX + stepX;
+              camera.rotation.x = newSnapSpaceAngleX * (TAU / 16);
+
+              const snapSpaceAngleY = camera.rotation.y / (TAU / 8);
+              const stepY = getStepTowardDestination(snapSpaceAngleY, Math.round(snapSpaceAngleY));
+              const newSnapSpaceAngleY = snapSpaceAngleY + stepY;
+              camera.rotation.y = newSnapSpaceAngleY * (TAU / 8);
+
+              if (stepX == 0 && stepY == 0) {
+                if (explodeOnGrab)
+                  setVoxelPositionsFromExplodedness(0.)
+
+                updateApplet();
+                cancel();
+              }
+              else {
+                if (explodeOnGrab)
+                  setVoxelPositionsFromExplodedness(.8)
+                  
+                updateApplet();
+              }
+            });
+          }
+
+          updateApplet();
+        }
+      });
+    }
 
     function getStepTowardDestination(currentValue: number, destination: number) {
       const distanceFromDestination = destination - currentValue;
@@ -423,6 +489,9 @@ export class VoxelPainter extends CustomElementView {
           camera.rotation.y -= (pointerNdc.x - oldPointerNdc.x);
           camera.rotation.x += (pointerNdc.y - oldPointerNdc.y);
           camera.rotation.x = clamp(camera.rotation.x, -TAU / 4, TAU / 4);
+
+          if (explodeOnGrab)
+            setVoxelPositionsFromExplodedness(.8)
         }
 
         const currentDistFromCamera = camera.position.length();

@@ -370,81 +370,106 @@ __normal distribution__.
 
 ## Conditional Probability
 
+
 > section: conditional
 > sectionStatus: dev
 
----
 
-A team of researchers has discovered a new pill that might help treat patients with a very painful ligament infection. However, before they can start mass production, they have to check that the pill is safe – it doesn’t cause any harmful side effects. They also have to check that taking the pill is worth it - that patients actually recover when they take the pill.
+::: column(width=360)
 
-This can be done in a clinical trial at a hospital. First, you have to find a large group of patients with this ligament infection. Then you give some of these patients your new pill, while the others get a placebo: an identically looking pill which is just made of sugar. Finally, you compare what happens to both groups of patients after a couple of weeks.
+    img(src="images/pillAndPatient.png" width=360 height=254)
 
-We can represent the outcome of this research study in a table:
+:::
+A team of researchers has made a new pill that might help treat patients with a very painful ligament infection. However, before they can start mass production, they have to check that taking the pill is effective - and to check whether it has nasty side-effects!
 
+When a hospital does an experiment to see if a treatment is helpful, it's called a *clinical trial* [image]. You take a large group of patients with this ligament infection. Then you give some of these patients your new pill, while the others get a *placebo*: pill that looks the same as the new pill, but which is just made of sugar. Finally, you compare what happens to both groups of patients after a couple of weeks.
 
-TABLE
+Here's what happened to the people who participated in that clinical trial:
 
-The pill didn’t help everyone, so it isn’t a miracle cure.
+|         |Not given pill       |Given pill   |
+|---------|---|---|
+| After a week, got better    |53   |34   |
+| After a week, didn't get better         | 89  |62   |
 
-However... maybe it worked a little bit? If this pill is helpful for even a few people, that could take away a lot of pain that people are experiencing!
+Well, since there were a whole 62 people who were given the pill but didn't get better, so apparently the pill doesn't work perfectly.
 
-On the other hand, those pills cost money and time to administer. So we want to be completely, mathematically, certain that taking the pill makes a person more likely to get better. In order to do this, we need to statistically analyse the data in this table, which is what we’ll be doing today!
+But wait... what if the pill was working a *little* bit? If a pill is was helpful for even a few people in the trial, then giving it to more people could can be a very good thing to do!
 
-You can apply conditional probability whenever you have data, like performance of football teams, how well a business strategy worked. To make it easier, we’re going to focus on data that’s easy to collect: what are people wearing!
+On the other hand, those pills take money and time to administer. So we want to be completely, mathematically, certain that taking the pill makes a person more likely to get better. In order to do this, we need to statistically analyse the data in that table, which is what we’ll be learning to do today!
 
+::: column(width=360)
+    <!-- depositphotos_109144654-stock-illustration-goalkeeper-catches-the-ball-football.jpg -->
+    img(src="images/goalkeeper.jpg" width=360 height=254)
 
+:::
 
-Applet: 12x12 square of people. assigned hats, scarves and coats, and glasses. On right, list of these and you can click them to arrange people on the left and right with and without those things on. Student must click a few of them before next text shows up
+You can apply statistical analysis whenever you have data, whether your data is how many times a goalkeeper caught a ball, the success of business strategies, or even whether the dating profile you've made is working. But to make it easy to learn, we’re going to focus on data that’s easier to collect: what are people wearing!
 
-[Appears above the applet after it’s been played with] If I randomly choose a person from this crowd, what is the chance that they are wearing a scarf? [slider snapping to 0.1 intervals, correct answer is 0.5]
+Applet: 12x12 square of people. assigned hats, scarves and coats, and glasses. On right, list of these; you can click them to arrange people on the left and right with and without those things on. Student must click a few of them before next text shows up
 
-How about the probability that they are wearing a coat? [this time slider snaps to 1/12 intervals, 0.08333. Slider is directly above the square].
+[Appears above the applet after it’s been played with] If I randomly choose a person from this crowd, what is the chance that they are wearing a *scarf*? [slider snapping to 0.1 intervals, correct answer is 0.5]
 
-And the probability they’re wearing a hat? [this time slider has a label next to it: P(wearing a coat)]
+[slider is below the text, but text disappears and is replaced by the next question]
+
+How about the probability that a person in the crowd is wearing a *coat*? [this time slider snaps to 1/12 intervals, 0.08333. Slider is directly above the square].
+
+And the probability they’re wearing a *hat*? [this time slider has a label next to it: P(wearing a coat)]
 
 [below applet] Note that the correct answer is putting the slider in the place where the people reach along the side! It makes sense if you think about it. If no one wears a scarf, this probability would be 0, so you wouldn’t even have a sliver of people with the scarf on the side. If everyone wears a scarf, this probability would be 1. In our example, we have a probability of approximately [[0.4]].
 
 [Applet: same again but now there’s another square below it, and the lower square has TWO columns that both say hat, scarf, coat. First makes things go side-by-side, second subdivides in those columns. Again, more text won’t appear until student has played with it a bit]
 
+Here's a tool you can use to filter people and figure out their proportions. That's going to be useful!
+
 [imagine that the section saying “coat” is packed with all the people wearing coats, same for other labels]
 (P(A|B) labels should be in plain english)
 
-If I pick a random person from this crowd who is wearing a coat, what’s the probability that they are also wearing a scarf? [slider again, with 0 and 1 labelled]
+[maybe phrase the first one as "what proportion of people wearing x are wearing y?"]
 
-How about if I pick someone who is wearing a hat - what is the probability that that person is also wearing a scarf? [it is now the case that when they mouse over the applet, “Wearing hat ⋂ wearing scarf” appears imposed on the quadrants of the applet]
+Hey what are the actual numbers?
+
+Suppose I'm going to pick one of the coat-wearers at random. What’s the probability that the coat-wearer is *also wearing a scarf*? [slider again, with 0 and 1 labelled] [if they get it wrong/do nothing, remind them to use the buttons]
+
+Suppose I pick someone who is wearing a hat - what is the probability that that person is also wearing a coat? [it is now the case that when they mouse over the applet, “Wearing hat ⋂ wearing scarf” appears imposed on the quadrants of the applet]
 
 If someone is wearing a coat, what’s the probability they are also wearing a hat? [slider again, the answer to this one is 100%, which is important to have an example of]
 
 Is a person more likely to be wearing a scarf if we know they are wearing a coat? [if you get this one wrong, it changes the labels and asks you again]
 
-Let’s try it with you drawing your own picture! Let’s say there’s a crowd of 100 people. A quarter of those 100 people are wearing flip-flops, and a tenth are wearing both flip-flops and sunglasses [there is a picture on the side of a person wearing flip flops and sunglasses]. Draw a picture representing this. What is the probability that someone who is wearing flip-flops will also be wearing sunglasses? [they enter it using text].
+[pic: paper with square on it and pencil] Let’s try it with you drawing your own picture! Get out a piece of paper and a pencil. Let’s say there’s a crowd of 100 people. A quarter of those 100 people are wearing flip-flops, and a tenth are wearing both flip-flops and sunglasses [there is a picture on the side of a person wearing flip flops and sunglasses]. Draw a picture representing this. What is the probability that someone who is wearing flip-flops will also be wearing sunglasses? [they enter it using text].
 
-There’s some useful notation for situations like this. We say “P( it will rain today )” to mean “the probability that it will rain today”. And as you might have read in set theory, we also use the symbol “⋂” to mean “and”, like “I am wearing a scarf ⋂ I am wearing a coat”. Put those together and you get things like “When it’s cold outside, P( I am wearing a scarf ⋂ I am wearing a coat ) is pretty high!”
+When analysing statistics (like the pill-and-ligament-disease statistics, which we will get back to!), scientists talk about probabilities so often that instead of saying “the probability that it will rain today”, they just write “P( it will rain today )”. Also, when ever they're talking about the probability of more than one thing, like wearing a scarf AND wearing a coat, instead of "and", they'll say "wearing a scarf ⋂ wearing a coat". It's the same ⋂ you might have seen in set theory. Put those together and you get things like “When it’s cold outside, P( I am wearing a scarf ⋂ I am wearing a coat ) is high!”
 
-[Pair of applets appears again] We’re almost at the point where we can figure out whether the pill helps people with ligament disease. Try this one: the probability that a person is wearing a coat if we know that they’re wearing glasses is []. The probability a person is wearing a coat if they are not wearing glasses is [] So it’s the same! Wearing a coat has nothing to do with whether you are wearing glasses. This is a situation we call “independence”.
+[Pair of applets appears again] There's another important word to know about. Try this one: the probability that a person is wearing a coat if we know that they’re wearing glasses is []. The probability a person is wearing a coat if they are not wearing glasses is [] So it’s the same! Wearing a coat has nothing to do with whether you are wearing glasses. This is called *independence* - as in, whether a person is wearing a coat is independent of whether they are wearing glasses.
 
-The reason that this can be useful for helping cure diseases is because with the pill we wanted to know whether a person getting better is related to, i.e. is it dependent on whether they have taken the pill or not. Whether you wear flip-flops is related to wearing sunglasses. It’s because [multiple choice: these are both things you’ll do on a hot day | the same kinds of people like these items of clothing | these are both things you do on tuesdays]. Wearing scarves and coats are also related.
+Whether you wear flip-flops **is** related to wearing sunglasses. It’s because [multiple choice: these are both things you’ll do on a hot day | the same kinds of people like these items of clothing | these are both things you do on tuesdays]. Wearing scarves and coats are also related. The reason that this can be useful for helping cure diseases is because we wanted to know whether *a person getting better* is *related* to them *taking the pill*, i.e. is it dependent on whether they have taken the pill or not.
 
-[picture of chicken soup and ladder] Some things are unrelated. For example, flipping a coin once and seeing it come up heads is unrelated to whether flipping the coin again will cause it to come up heads. Another thing that is unrelated is walking underneath a ladder and getting unlucky later in the day. Sometimes it takes scientific studies to find that two things are unrelated - for example, many studies have looked at whether being vaccinated is related to whether a person will start showing signs of autism, and they have established that these two things are completely unrelated. Of course, there will be some children who receive vaccinations and do develop autism – but the probability is exactly the same as for children who do no receive vaccinations!
+[picture of chicken soup and ladder and coins] Some things are unrelated. For example, flipping a coin once and seeing it come up heads is unrelated to whether flipping the coin again will cause it to come up heads. Another thing that is unrelated is walking underneath a ladder and getting unlucky later in the day. Sometimes it takes scientific studies to find that two things are unrelated - for example, many studies have looked at whether being vaccinated is related to whether a person will start showing signs of autism, and they have established that these two things are completely unrelated. Of course, there will be some children who receive vaccinations and do develop autism – but the probability is exactly the same as for children who do no receive vaccinations!
 
 When two things really have no effect on each other, we call them independent. Which of these pairs of statements are independent?
 
-[They sort the following pairs of statements into dependent and independent] 
+Sort these events into whether they are independent or not:
 
-a person’s name contains an A; their name contains a C
-I will win the lottery; I put in my birthday as a my chosen numbers
-Ashley is above average height; Ashley is male
-Dice game, 3 rolls, turns out 1st doesn’t matter?
-P(all of your three siblings have the same gender|first one was female). Can put it in a card game? Wanna be more real than this really. P(sum of two dice rolls > 5 | first dice roll = 3
-P(it will rain this afternoon|it’s raining this morning)
-I brush my teeth; I do or don’t get tooth decay
-P(age > 15 | height <5ft) (it’s about quantities!)
-I tested positive for measles; I have measles
-Bob likes football; Bob is wearing a shirt with “Chelsea” on it
-Asparagus will taste good to me the second time someone served it to me; asparagus tasted bad to me the first time someone served it to me
-
-
-
+    x-buckets.independent
+      .inputs
+        .input(bucket="0") Getting a parking ticket and winning the lottery.
+        .input(bucket="0") Choosing your birthday as your lottery numbers and winning the lottery.
+        .input(bucket="1") Boarding a plane first and finding a good seat.
+        .input(bucket="1") Having rain this afternoon and having had rain this morning.
+        .input(bucket="1") Testing positive for flu and having flu.
+        .input(bucket="1") Robbing a bank and going to jail.
+        .input(bucket="1") Someone having a mohawk, and them enjoying punk music.
+        .input(bucket="1") Someone being above average height, and them being male.
+        .input(bucket="1") Brushing your teeth regularly, and having nice breath.
+        .input(bucket="1") Driving a car and having a traffic accident.
+        .input(bucket="1") Being younger than 17 and being below 5 foot.
+        .input(bucket="1") I will like the second episode of a show, and I did not like the first episode.
+        .input(bucket="0") Three siblings being the same gender, and the first one being female.
+      .buckets
+        .bucket
+          .title Independent
+        .bucket
+          .title Dependent
 
 [applet again. It has numbers appear in a way to emphasize the text] If two things are independent, it means that in pictures like this, the rectangles are all lined up perfectly, they are not broken apart like when you’re asking about wearing a coat and wearing gloves. When this happens, the area of the “both statements are true” corner rectangle is equal to the probabilities of the two sides multiplied together. Try changing the numbers and seeing for yourself!
 
@@ -453,15 +478,10 @@ There’s another important symbol here, which is “|”, which means “given 
 Plain language
 Mathematical language
 Probability that someone is wearing given that we know that they are wearing sunglasses
-
 Probability it will rain today given that it rained this morning
 P( wearing sunglasses | wearing flip-flops )
-
-
 P(rain this afternoon | rained this morning)
-
-
-[have one where they write the translation
+[they write one in]
 
 With these pieces of notation, the things we’ve done above can be put in a formula, which makes it easier to work with. Above, you answered the question “what proportion of the people wearing coats are also wearing scarves?”.
 
@@ -485,7 +505,13 @@ Which is the ratio between the area of the rectangle containing the people weari
 
 In fact, this is true for any statement, not just what people are wearing:
 
-P(A | B) = P(A ⋂ B) / P(B)
+::: .theorem
+__The definition of Conditional probability__  
+
+{.text-center} `P(A  B) = P(A S B) / P(B)`
+<!-- it doesn't like the | or ⋂ symbols -->
+
+:::
 
 These letters A and B could be any connected sentences: “This sandwich is mouldy”; “This sandwich will make me sick if I eat it”. They could also be totally unconnected sentences: “This football game will be won by Manchester United”, “The climate change we are seeing is caused by human CO2 emissions”. No matter what they are, this equation will always apply to them!
 
@@ -545,21 +571,7 @@ The doctors happened to give the pill to more young people than old people, so t
 Now you know the terminology of conditional probability, you might start seeing it in almost every sentence people say! Use it wisely.
 
 
-Sort these events into whether they are independent or not:
 
-    x-buckets.independent
-      .inputs
-        .input(bucket="0") Winning the lottery and running out of milk.
-        .input(bucket="1") Boarding a plane first and finding a good seat.
-        .input(bucket="0") Owning a dog and growing your own herb garden.
-        .input(bucket="0") Getting a parking ticket and winning the lottery.
-        .input(bucket="1") Robbing a bank and going to jail.
-        .input(bucket="1") Driving a car and having a traffic accident.
-      .buckets
-        .bucket
-          .title Independent
-        .bucket
-          .title Dependent
 
 ---
 
