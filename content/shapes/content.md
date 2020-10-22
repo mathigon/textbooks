@@ -94,6 +94,9 @@ Clubs often choose between squares of grass or artificial turf to replace the wo
 Below is a picture of a worn out football field. Drag new squares of grass onto the worn out field below to model replacing the grass.
 
     // [TODO]: INTERACTIVE-03: Field grass placement (page 6)
+    figure: .grass-placement.rect-placement
+      x-img(width=525 height=350 src="https://static4.depositphotos.com/1008169/329/i/950/depositphotos_3297355-stock-photo-grunge-soccer-field.jpg")
+      x-polypad(rotate="no")
 
 Let’s make an estimate of how many squares of grass we’ll need to replace the field. Just look at the picture of the field and make a quick guess. Enter the guess here: [TODO]
 
@@ -116,6 +119,9 @@ Now that the new grass is in place, we need to paint the lines on the field.
 Drag each strip of white onto the field to model painting a while line around the field. One white strip equals one can of paint.
 
     // [TODO]: INTERACTIVE-04: Field stripes placement (page 7)
+    figure: .strip-placement.rect-placement
+      div.field(style="width:525px;height:350px;position:absolute;margin-left:75px;background-color:green")
+      x-polypad(rotate="no")
 
 Make an estimate of how many cans of paint we’ll need to paint a line around the outside of the field. Just look at the picture of the field and make a quick guess. Enter the guess here: [TODO]
 

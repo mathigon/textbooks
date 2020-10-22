@@ -8,6 +8,33 @@
 @import "../shared/components/binary-swipe";
 @import "../shared/components/relation";
 
+.rect-placement {
+
+  x-img {
+    position: absolute;
+  }
+
+  x-polypad .active .tile .outline {
+    stroke-width: 2px;
+  }
+
+}
+
+.grass-placement, .strip-placement {
+
+  width: 600px;
+  height: 350px;
+
+  x-img, div.field {
+    margin-left: 75px;
+  }
+
+  div.field {
+    width: 525px;
+    height: 350px;
+  }
+
+}
 
 .tangram {
   border-radius: 6px 6px 0 0;

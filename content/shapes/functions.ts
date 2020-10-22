@@ -222,6 +222,49 @@ function constrainDistance(point: Point, anchor: Point, distance: number) {
   return point.subtract(anchor).unitVector.scale(distance).add(anchor);
 }
 
+const fieldLength = 110;
+const scale = 1 / 5;
+const imageWidth = 525;
+const tileSize = imageWidth / (fieldLength * scale);
+
+export function grassPlacement($step: Step) {
+  const $polypad = $step.$('.grass-placement > x-polypad') as Polypad;
+  polypadPrep($polypad, 600, 350, false);
+  const options = {
+    count: 2,
+    dimensions: new Point(tileSize, tileSize),
+    initLocations: [new Point(10, 50), new Point(40, 50)]
+  };
+  setupDraggableRectangles($polypad, options);
+}
+
+type DraggableRectanglesOptions = {
+  count: number,
+  dimensions: Point,
+  initLocations?: Point[]
+}
+
+function setupDraggableRectangles($polypad: Polypad, options: DraggableRectanglesOptions) {
+  // [TODO]: Make 'infinite' rectangles if count == 0
+  [...Array(options.count)].forEach((_, index) => {
+    const initLoc = options.initLocations != null ? options.initLocations[index] : new Point(0, 0);
+    const r = new Rectangle(new Point(0, 0), options.dimensions.x, options.dimensions.y);
+    const tile = $polypad.newTile('polygon', getTangramPolystr(r.points));
+    tile.setPosition(initLoc);
+  });
+}
+
+export function stripPlacement($step: Step) {
+  const $polypad = $step.$('.strip-placement > x-polypad') as Polypad;
+  polypadPrep($polypad, 600, 350, false);
+  const options = {
+    count: 2,
+    dimensions: new Point(tileSize, tileSize / 4),
+    initLocations: [new Point(10, 50), new Point(40, 50)]
+  };
+  setupDraggableRectangles($polypad, options);
+}
+
 
 declare const d3: any;
 
@@ -754,7 +797,7 @@ export function currysParadox1($step: Step) {
   const viewHeight = 450;
 
   const $polypad = $step.$('.triangle-tangram > x-polypad') as Polypad;
-  polypadPrep($polypad, viewWidth, viewHeight);
+  polypadPrep($polypad, viewWidth, viewHeight, true);
 
   const $bg = $step.$('svg.solution-outline')! as SVGParentView;
   $bg.setAttr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
@@ -818,10 +861,10 @@ export function currysParadox1($step: Step) {
   });
 }
 
-function polypadPrep($polypad: Polypad, viewWidth: number, viewHeight: number) {
+function polypadPrep($polypad: Polypad, viewWidth: number, viewHeight: number, grid: boolean) {
   $polypad.$svg.setAttr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
   $polypad.canDelete = $polypad.canCopy = false;
-  $polypad.setGrid('square-grid');
+  if (grid) $polypad.setGrid('square-grid');
 }
 
 function getTangramPolystr(polyGridPositions: Point[]) {
@@ -831,7 +874,7 @@ function getTangramPolystr(polyGridPositions: Point[]) {
 export function currysParadox2($step: Step) {
 
   const $polypad = $step.$('.tangram-polys > x-polypad') as Polypad;
-  polypadPrep($polypad, 425, 225);
+  polypadPrep($polypad, 425, 225, true);
 
   paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
@@ -844,7 +887,7 @@ export function currysParadox2($step: Step) {
 export function currysParadox3($step: Step) {
 
   const $polypad = $step.$('.zoom-1 > x-polypad') as Polypad;
-  polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight);
+  polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
   paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
@@ -878,7 +921,7 @@ export function currysParadox3($step: Step) {
 
 export function currysParadox4($step: Step) {
   const $polypad = $step.$('.triangle-ref > x-polypad') as Polypad;
-  polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight);
+  polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
   paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
@@ -892,7 +935,7 @@ export function currysParadox4($step: Step) {
 export function currysParadox5($step: Step) {
 
   const $polypad = $step.$('.zoom-2 > x-polypad') as Polypad;
-  polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight);
+  polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
   // TODO Cleanup duplicate code!
   paradoxData.polys.forEach((poly, index) => {
@@ -927,7 +970,7 @@ export function currysParadox5($step: Step) {
 
 export function currysParadox6($step: Step) {
   const $polypad = $step.$('.paradox-comparison > x-polypad') as Polypad;
-  polypadPrep($polypad, 425, 475);
+  polypadPrep($polypad, 425, 475, true);
 
   paradoxData.polys.forEach((poly, index) => {
     const polyStr = getTangramPolystr(poly);
