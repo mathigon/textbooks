@@ -2016,4 +2016,64 @@ class Slice {
 
 }
 
+export function pizzaRings($step: Step) {
+  const $svg = $step.$('.circle-area')!;
+  console.log($svg);
+  const $slider = $step.$('x-slider') as Slider;
+  const $circle = $N('g', {class: 'circle'}, $svg);
+  const triangle = $N('g', {class: 'circle'}, $svg);
+
+  const r = 60;
+
+  function drawRings(element: ElementView, p: number) {
+    const $rings = element.children;
+
+    const rmin = Math.pow(20 + p * 100, 1 + p) - 20;
+    const dr = r / $step.model.n2;
+
+    const cx = 170 + p * (10 - 165);
+    const cy = 65 + p * (150 - 65) - rmin;
+
+    for (let i = 0; i < $step.model.n2; ++i) {
+      const angle = Math.PI - 1.999 * Math.PI * ((i + 0.5) * dr) /
+                    (rmin + (i + 0.5) * dr);
+      const d = ring(cx, cy, rmin + i * dr, rmin + (i + 1) * dr, Math.PI,
+          angle);
+      $rings[i].setAttr('d', d);
+    }
+
+    triangle.css('transform', `scale(${1 - 0.1 * p})`);
+    if (p > 0.95) $step.score('slider');
+  }
+
+  $step.model.watch((state: any) => {
+    // TODO Reuse elements for better performance.
+    triangle.removeChildren();
+    $circle.removeChildren();
+
+    for (let i = 0; i < state.n2; ++i) {
+      $N('path', {}, triangle);
+      $N('path', {}, $circle);
+    }
+
+    drawRings($circle, 0);
+    drawRings(triangle, $slider.current / $slider.steps);
+  });
+
+  $slider.on('move', (x) => drawRings(triangle, x / $slider.steps));
+}
+
+function ring(cx: number, cy: number, r1: number, r2: number, fromAngle: number, toAngle: number) {
+  if (fromAngle > toAngle) [fromAngle, toAngle] = [toAngle, fromAngle];
+  fromAngle -= Math.PI / 2;
+  toAngle -= Math.PI / 2;
+
+  const A = Point.fromPolar(toAngle);
+  const B = Point.fromPolar(fromAngle);
+  const flag = (toAngle - fromAngle <= Math.PI) ? 0 : 1;
+
+  return `M ${A.x * r1 + cx} ${A.y * r1 + cy}` +
+         `A ${r1} ${r1} 0 ${flag} 0 ${B.x * r1 + cx} ${B.y * r1 + cy}` +
+         `L ${B.x * r2 + cx} ${B.y * r2 + cy}` +
+         `A ${r2} ${r2} 0 ${flag} 1 ${A.x * r2 + cx} ${A.y * r2 + cy} Z`;
 }

@@ -984,6 +984,10 @@ Move the slider back and forth to see the base and height of the parallelogram i
 
 The area of the parallelogram is the same as the area of the circle, so we can find the area of a circle by doing ½ x C x R!
 
+---
+
+> id: pizza-rings
+
 People like to eat pizza in all sorts of unusual ways.
 
     figure: x-img(src="https://media.giphy.com/media/ToMjGpPXUoKCyBGW7lu/giphy.gif" width=300 height=300)
@@ -996,11 +1000,25 @@ This pizza becomes a little more difficult to arrange on the baking sheet but it
 
     // INTERACTIVE-06: Circle rings (pages 10-11)
 
-Move the slider to see the rings being arranged on the baking sheet. If we increase the number of rings up to 15, the shape starts to look more and more like a [[triangle | parallelogram | circle]].
+::: column(width=340)
+
+    svg.circle-area.blue(width=340 height=245)
+      g.labels
+        line.reveal(x1=20 y1=156 x2=20 y2=206 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-1")
+        line.reveal(x1=34 y1=218 x2=355 y2=218 marker-start="url(#area-arrow)" marker-end="url(#area-arrow)" when="blank-2")
+        text.reveal(x=10 y=185 when="blank-1") r
+        text.reveal(x=165 y=236 when="blank-2") 2πr
+    x-slider(steps=400)
+
+:::
+
+Move the slider to see the rings being arranged on the baking sheet. If we increase the number of rings up to ${n2}{n2|4|4,15,1}, the shape starts to look more and more like a [[triangle | parallelogram | circle]].
 
 We used all the pizza and the rings aren’t overlapping, so the area of the triangle is [[equal to | different than]] the area of the circle. The formula for the area of a triangle is [[½]] x base x height when the height makes a right angle with the base. _{span.reveal} Click on the side of the triangle you want to use as the base._ _{span.reveal} Draw in the height that corresponds with this base._
 
 Move the slider back and forth to see the base and height of the triangle in the circle.
+
+---
 
     // INTERACTIVE-07: QA formula sequence (page 11)
 

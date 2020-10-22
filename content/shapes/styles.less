@@ -133,3 +133,23 @@ x-geopad {
     stroke-width: 4px;
   }
 }
+
+.circle-area {
+  overflow: visible;
+  .circle path { stroke: white; stroke-width: 1.5px; }
+  .circle:first-child { opacity: 0.5; }
+
+  &.red .circle path {
+    fill: @red;
+    &:nth-child(2n) { fill: darken(@red, 10%); }
+  }
+
+  &.blue .circle path {
+    fill: @blue;
+    &:nth-child(2n) { fill: darken(@blue, 10%); }
+  }
+
+  .labels line, marker path { fill: none; stroke: @light-grey; stroke-linecap: round; }
+  .labels line { stroke-width: 2px; }
+  .labels text { fill: @light-grey; font-size: 16px; font-style: italic; }
+}
