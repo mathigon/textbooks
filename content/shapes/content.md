@@ -20,6 +20,8 @@ Imagine you are a street performer and you need to lay out a red rope to mark-of
 \ 
 
     // [TODO]: INTERACTIVE-01: Performance area 1 (pages 1-2)
+    figure: x-geopad(width=600 height=400)
+      svg
 
 Now, let’s focus on the shape we made out of the rope and imagine it as a shape drawn on a piece of paper. Recall that perimeter is the length of the boundary, or outside, of a shape, and area is the how much space a shape covers or encloses.
 

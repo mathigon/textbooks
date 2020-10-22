@@ -15,8 +15,89 @@ import {VoronoiStep} from './components/voronoi';
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
 
-declare const d3: any;
+type ShapesModel = {
+  firstArea?: {
+    ropeUsed?: number
+    cobblestones?: number
+    points?: Point[]
+  }
+}
 
+export function performance1($step: Step) {
+  const courseModel = getCourseModel($step);
+  const $geopad = $step.$('x-geopad') as Geopad;
+  $geopad.switchTool('move');
+  const scale = (600 / 30) * 4; // Pixels per meter
+  const blockSize = (1 / 4) * scale;
+  const blocks: {poly: Rectangle, path: GeoPath}[] = [];
+  [...Array(30).keys()].forEach(column =>
+    [...Array(20).keys()].forEach(row => {
+      const block = new Rectangle(
+          new Point(column * blockSize, row * blockSize),
+          blockSize,
+          blockSize
+      );
+      const path = $geopad.drawPath(block);
+      path.$el.css({'stroke-width': 2});
+      blocks.push({poly: block, path});
+    })
+  );
+  setupRope('performance-1', 20 * scale, $geopad, $step, (line: Polyline, reset: VoidFunction) => {
+    const areaBlocks = blocks.filter(block => block.poly.points.every(point => line.contains(point)));
+    areaBlocks.forEach(block => block.path.$el.css({fill: 'lime'}));
+    if (areaBlocks.length >= 200) {
+      courseModel.firstArea = {
+        ropeUsed: length(line) / scale,
+        cobblestones: areaBlocks.length,
+        points: line.points
+      };
+      $step.model.firstArea = courseModel.firstArea;
+      $step.score('rope-drawn');
+      $step.addHint('correct');
+    } else reset();
+  });
+}
+
+function getCourseModel($step: Step) {
+  return $step.getParentModel().$course.model as ShapesModel;
+}
+
+function setupRope(id: string, maxLength: number, $geopad: Geopad, $step: Step, onComplete: (final: Polyline, reset: VoidFunction) => void) {
+  let reset = false;
+  let rope: GeoPath;
+  let ropeLine: Polyline;
+  slide($geopad, {
+    $box: $geopad.$svg,
+    start: (p: Point) => {
+      ropeLine = new Polyline(p);
+      rope = $geopad.drawPath(ropeLine);
+      rope.$el.css({stroke: 'red'});
+    },
+    move: (p: Point) => {
+      if (!reset) {
+        ropeLine = new Polyline(...ropeLine.points, p);
+        if (length(ropeLine) > maxLength) {
+          $step.addHint('incorrect');
+          ropeLine = new Polyline();
+          reset = true;
+        }
+        rope.redraw(ropeLine);
+      }
+    },
+    end: () => {
+      if (!reset) {
+        onComplete(ropeLine, () => {
+          ropeLine = new Polyline();
+          rope.redraw(ropeLine);
+          $step.addHint('incorrect');
+        });
+      } else reset = false;
+    }
+  });
+}
+
+
+declare const d3: any;
 
 const cafeLocationPoints = [
   new Point(34, 200),
