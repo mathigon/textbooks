@@ -104,3 +104,32 @@ figure svg {
     position: absolute;
   }
 }
+
+x-geopad {
+  path.large-slice, path.medium-slice {
+    transition-property: transform, opacity;
+    transition-duration: 1.5s;
+  }
+
+  path.slice-guide {
+    stroke: black;
+    stroke-width: 4px;
+    stroke-dasharray: 10;
+    stroke-linecap: unset;
+  }
+
+  path.pizza-outline {
+    stroke: white;
+    stroke-width: 4px;
+  }
+
+  path.slice-outline {
+    stroke: black;
+    stroke-width: 4px;
+  }
+
+  path.slice-dimension {
+    stroke: lime;
+    stroke-width: 4px;
+  }
+}

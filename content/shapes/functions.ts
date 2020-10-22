@@ -1359,6 +1359,300 @@ function geopadReset($pad: Geopad) {
   $pad.switchTool('circle');
 }
 
+type Guide = {path: GeoPath, segment: Segment, index: number};
+type GuideNode = {node: Point, guide: Guide};
+
+export function slicing1($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const largeCenter = new Point(200, 200);
+  const mediumCenter = new Point(550, 200);
+
+  const largeGuides: Guide[] = [...Array(4).keys()].map(index => {
+    const baseSegment = (new Segment(largeCenter.shift(0, -175), largeCenter.shift(0, 175)));
+    const rotateBy = (Math.PI / 4) * index;
+    const segment = baseSegment.rotate(rotateBy, largeCenter);
+    const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, largeCenter));
+    path.$el.css({stroke: 'black', 'stroke-width': '4px', 'stroke-dasharray': '10', 'stroke-linecap': 'unset'});
+    return {path, segment, index};
+  });
+  const $largeSlices = $geopad.$svg.$$('.large-slice').map(e => e as SVGView);
+  $step.model.largeCuts = [...Array(4).keys()].map(() => {
+    return {path: null, segment: null};
+  });
+
+  const mediumGuides: Guide[] = [...Array(4).keys()].map(index => {
+    const baseSegment = (new Segment(mediumCenter.shift(0, -125), mediumCenter.shift(0, 125)));
+    const rotateBy = (Math.PI / 4) * index;
+    const segment = baseSegment.rotate(rotateBy, mediumCenter);
+    const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, mediumCenter), {classes: 'slice-guide'});
+    return {path, segment, index};
+  });
+  const $mediumSlices = $geopad.$svg.$$('.medium-slice').map(e => e as SVGView);
+  $step.model.largeCuts = [...Array(4).keys()].map(() => {
+    return {path: null, segment: null};
+  });
+  $step.model.mediumCuts = [...Array(4).keys()].map(() => {
+    return {path: null, segment: null};
+  });
+
+  const collectNodes =
+    (prevNodes: GuideNode[], guide: Guide) =>
+      prevNodes.concat({node: guide.segment.p1, guide}, {node: guide.segment.p2, guide});
+  const guideNodes = largeGuides.reduce(
+      collectNodes,
+      mediumGuides.reduce(collectNodes, [])
+  );
+
+  let startNode: null | GuideNode = null;
+  let endNode: null | Point = null;
+  let currentGuide: null | Guide = null;
+  let $cutInProgress: null | SVGView = null;
+  slide($geopad, {
+    $box: $geopad.$svg,
+    start: pos => {
+      startNode = nearest(pos, guideNodes);
+      currentGuide = startNode.guide;
+      endNode = startNode.node.equals(currentGuide.segment.p1) ? currentGuide.segment.p2 : currentGuide.segment.p1;
+      $cutInProgress = $N('path', {}, $geopad.$svg) as SVGView;
+      $cutInProgress.addClass('pizza-outline');
+    },
+    move: (current, _start, _last) => {
+      const projected = currentGuide!.segment.project(current);
+      const endsX = [startNode!.node.x, endNode!.x].sort((a, b) => a - b);
+      const endsY = [startNode!.node.y, endNode!.y].sort((a, b) => a - b);
+      const cutProgress = new Point(clamp(projected.x, endsX[0], endsX[1]), clamp(projected.y, endsY[0], endsY[1]));
+      $cutInProgress!.draw(new Segment(startNode!.node, cutProgress));
+    },
+    end: () => {
+      $cutInProgress!.remove();
+      const cutFinal = new Segment(startNode!.node, endNode!);
+      if (largeGuides.includes(currentGuide!)) {
+        if ($step.model.largeCuts.every((cut: {path: GeoPath | null, segment: Segment | null}) => !cut.segment?.equals(cutFinal))) {
+          largeGuides[currentGuide!.index].path.delete();
+          const nextIndex = (currentGuide!.index + 1) % largeGuides.length;
+          const prevIndex = (currentGuide!.index + (largeGuides.length - 1)) % largeGuides.length;
+          if ($step.model.largeCuts[nextIndex].segment != null) {
+            $step.model.largeCuts[nextIndex].path?.delete(0);
+            const index1 = currentGuide!.index;
+            const index2 = index1 + 4;
+            separateSlices(index1, index2, $largeSlices, largeCenter, 25);
+          }
+          if ($step.model.largeCuts[prevIndex].segment != null) {
+            $step.model.largeCuts[prevIndex].path?.delete(0);
+            const index1 = (currentGuide!.index + 7) % 8;
+            const index2 = (index1 + 4) % 8;
+            separateSlices(index1, index2, $largeSlices, largeCenter, 25);
+          }
+          if ($step.model.largeCuts[nextIndex].segment == null && $step.model.largeCuts[prevIndex].segment == null) {
+            const path = $geopad.drawPath(cutFinal, {animated: 400, classes: 'pizza-outline'});
+            $step.model.largeCuts[currentGuide!.index] = {path, segment: cutFinal};
+          } else {
+            $step.model.largeCuts[currentGuide!.index] = {path: null, segment: cutFinal};
+          }
+        }
+      } else {
+        if ($step.model.mediumCuts.every((cut: {path: GeoPath | null, segment: Segment | null}) => !cut.segment?.equals(cutFinal))) {
+          mediumGuides[currentGuide!.index].path.delete();
+          const nextIndex = (currentGuide!.index + 1) % mediumGuides.length;
+          const prevIndex = (currentGuide!.index + (mediumGuides.length - 1)) % mediumGuides.length;
+          if ($step.model.mediumCuts[nextIndex].segment != null) {
+            $step.model.mediumCuts[nextIndex].path?.delete(0);
+            const index1 = currentGuide!.index;
+            const index2 = index1 + 4;
+            separateSlices(index1, index2, $mediumSlices, mediumCenter, 15);
+          }
+          if ($step.model.mediumCuts[prevIndex].segment != null) {
+            $step.model.mediumCuts[prevIndex].path?.delete(0);
+            const index1 = (currentGuide!.index + 7) % 8;
+            const index2 = (index1 + 4) % 8;
+            separateSlices(index1, index2, $mediumSlices, mediumCenter, 15);
+          }
+          if ($step.model.mediumCuts[nextIndex].segment == null && $step.model.mediumCuts[prevIndex].segment == null) {
+            const path = $geopad.drawPath(cutFinal, {animated: 400, classes: 'pizza-outline'});
+            $step.model.mediumCuts[currentGuide!.index] = {path, segment: cutFinal};
+          } else {
+            $step.model.mediumCuts[currentGuide!.index] = {path: null, segment: cutFinal};
+          }
+        }
+      }
+      startNode = endNode = currentGuide = $cutInProgress = null;
+      if ($step.model.largeCuts.every((cut: {segment: Segment | null}) => cut.segment != null)) {
+        if (!$step.scores.has('large-slices')) {
+          $step.score('large-slices');
+          if ($step.scores.has('medium-slices')) $step.addHint('correct');
+        }
+      }
+      if ($step.model.mediumCuts.every((cut: {segment: Segment | null}) => cut.segment != null)) {
+        if (!$step.scores.has('medium-slices')) {
+          $step.score('medium-slices');
+          if ($step.scores.has('large-slices')) $step.addHint('correct');
+        }
+      }
+    }
+  });
+
+  $step.onScore('blank-0', () => {
+
+    const largeSlicePoints =
+      [largeCenter, largeGuides[0].segment.p1, largeGuides[3].segment.p2]
+          .map(p =>
+            p.translate(
+                largeCenter.subtract(
+                    largeCenter
+                        .shift(0, 25)
+                        .rotate(-Math.PI / 8, largeCenter)
+                )
+            ));
+    const largeOutline = new Polygon(...largeSlicePoints);
+    const largeBase = new Segment(largeSlicePoints[1], largeSlicePoints[2]);
+    const largeHeight = new Segment(largeSlicePoints[0], largeBase.midpoint);
+    $geopad.drawPath(largeOutline, {classes: 'slice-outline'});
+    $geopad.drawPath(largeBase, {classes: 'slice-dimension'}).setLabel('16.8 cm');
+    $geopad.drawPath(largeHeight, {classes: 'slice-dimension'}).setLabel('20.3 cm');
+    $largeSlices.forEach(($slice, index) => {
+      if (index != 7) $slice.css({opacity: 0.5});
+    });
+
+    const mediumSlicePoints =
+      [mediumCenter, mediumGuides[0].segment.p1, mediumGuides[3].segment.p2]
+          .map(p =>
+            p.translate(
+                mediumCenter.subtract(
+                    mediumCenter
+                        .shift(0, 15)
+                        .rotate(-Math.PI / 8, mediumCenter)
+                )
+            ));
+    const mediumOutline = new Polygon(...mediumSlicePoints);
+    const mediumBase = new Segment(mediumSlicePoints[1], mediumSlicePoints[2]);
+    const mediumHeight = new Segment(mediumSlicePoints[0], mediumBase.midpoint);
+    $geopad.drawPath(mediumOutline, {classes: 'slice-outline'});
+    $geopad.drawPath(mediumBase, {classes: 'slice-dimension'}).setLabel('12.2 cm');
+    $geopad.drawPath(mediumHeight, {classes: 'slice-dimension'}).setLabel('14.8 cm');
+    $mediumSlices.forEach(($slice, index) => {
+      if (index != 7) $slice.css({opacity: 0.5});
+    });
+  });
+
+}
+
+function separateSlices(index1: number, index2: number, $slices: SVGView[], center: Point, slideDistance: number) {
+  const rotateFactor = Math.PI / 4;
+  const rotate1 = (rotateFactor * index1) + (Math.PI / 8);
+  const rotate2 = (rotateFactor * index2) + (Math.PI / 8);
+  const trans1 = center.shift(0, -slideDistance).rotate(rotate1, center).subtract(center);
+  const trans2 = center.shift(0, -slideDistance).rotate(rotate2, center).subtract(center);
+  $slices[index1].setTransform(trans1);
+  $slices[index2].setTransform(trans2);
+}
+
+function nearest(to: Point, of: {node: Point, guide: Guide}[]) {
+  return of.map(point => {
+    return {distance: Point.distance(point.node, to), point};
+  }).sort((a, b) => a.distance - b.distance)[0].point;
+}
+
+function nearestSimple(to: Point, of: Point[]) {
+  return of.map(point => {
+    return {distance: Point.distance(point, to), point};
+  }).sort((a, b) => a.distance - b.distance)[0].point;
+}
+
+export function slicing2($step: Step) {
+  const $svg = $step.$('svg') as SVGParentView;
+  const center = new Point(100, 100);
+  const topLeft = new Point(25, 25);
+  const topRight = new Point(175, 25);
+  const bottomRight = new Point(175, 175);
+  const bottomLeft = new Point(25, 175);
+  type Guide = {$el: SVGView, segment: Segment};
+  const guides: Guide[] = [...Array(2).keys()].map(i => {
+    const $el = $N('path', {}, $svg) as SVGView;
+    $el.css({stroke: 'black', 'stroke-width': '1px', 'stroke-dasharray': '3'});
+    const baseSegment = (new Segment(center.shift(0, -75), center));
+    const rotateBy = (Math.PI / 2) * i;
+    const segment = baseSegment.rotate(rotateBy, center);
+    $el.draw((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2)).rotate(rotateBy, center));
+    return {$el, segment};
+  });
+  const radius = new Segment(new Point(25, 100), center);
+  const $radius = $N('path', {}, $svg) as SVGView;
+  $radius.css({stroke: 'black', 'stroke-width': '1px'});
+  $radius.draw(radius);
+  let startNode: null | Point = null;
+  let endNode: null | Point = null;
+  let currentGuide: null | Guide = null;
+  let cutInProgress: null | Segment = null;
+  let $cutInProgress: null | SVGView = null;
+  const cuts: Segment[] = [];
+  const $cuts: SVGView[] = [];
+  const guideNodes = guides.map(guide => guide.segment.p1);
+  const nodes = guideNodes.concat(center);
+  slide($svg, {
+    start: pos => {
+      startNode = nearestSimple(pos, nodes);
+      if (!startNode.equals(center)) {
+        currentGuide = guides.find(g => (g.segment.p1.equals(startNode!) || g.segment.p2.equals(startNode!)))!;
+        endNode = center;
+      }
+      $cutInProgress = $N('path', {}, $svg) as SVGView;
+    },
+    move: (current, _start, _last) => {
+      if (currentGuide == null) {
+        endNode = nearestSimple(current, guideNodes);
+        currentGuide = guides.find(g => (g.segment.p1.equals(endNode!) || g.segment.p2.equals(endNode!)))!;
+      }
+      $cutInProgress!.css({stroke: 'cyan', 'stroke-width': '1px'});
+      const projected = currentGuide.segment.project(current);
+      const endsX = [startNode!.x, endNode!.x].sort((a, b) => a - b);
+      const endsY = [startNode!.y, endNode!.y].sort((a, b) => a - b);
+      const cutProgress = new Point(clamp(projected.x, endsX[0], endsX[1]), clamp(projected.y, endsY[0], endsY[1]));
+      cutInProgress = new Segment(startNode!, cutProgress);
+      $cutInProgress!.draw(cutInProgress);
+    },
+    end: () => {
+      $cutInProgress!.remove();
+      const cutFinal = new Segment(cutInProgress!.p1, endNode!);
+      if (cuts.every(cut => !cut.equals(cutFinal))) cuts.push(cutFinal);
+      const $cut = $N('path', {}, $svg) as SVGView;
+      $cut.css({stroke: 'black', 'stroke-width': '1px'});
+      $cut.draw(cutFinal);
+      $cuts.push($cut);
+      startNode = endNode = currentGuide = cutInProgress = $cutInProgress = null;
+      if (cuts.length == 2) {
+        $step.score('sliced');
+        const sideA = new Segment(center.shift(0, -75), topRight);
+        const $sideA = $N('path', {}, $svg) as SVGView;
+        const css = {stroke: 'black', 'stroke-width': '1px'};
+        $sideA.css(css);
+        $sideA.draw(sideA);
+        const sideB = new Segment(center.shift(75, 0), topRight);
+        const $sideB = $N('path', {}, $svg) as SVGView;
+        $sideB.css(css);
+        $sideB.draw(sideB);
+        guides.forEach(guide => guide.$el.remove());
+        $radius.remove();
+      }
+    }
+  });
+  $step.onScore('blank-1', () => {
+    [
+      new Segment(topLeft, center.shift(0, -75)),
+      new Segment(topLeft, center.shift(-75, 0)),
+      new Segment(bottomRight, center.shift(0, 75)),
+      new Segment(bottomRight, center.shift(75, 0)),
+      new Segment(center, center.shift(0, 75)),
+      new Segment(bottomLeft, center.shift(-75, 0)),
+      new Segment(bottomLeft, center.shift(0, 75)),
+      new Segment(center, center.shift(-75, 0))
+    ].forEach(segment => {
+      const $e = $N('path', {}, $svg) as SVGView;
+      $e.css({stroke: 'black', 'stroke-width': '1px'});
+      $e.draw(segment);
+    });
+  });
+}
+
 export function slicesArrangement($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
   const radius = 175;

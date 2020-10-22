@@ -885,27 +885,45 @@ We could have answered this question without doing any calculations! The height 
 
 At a local pizza place, Tetromino’s Pizza, 1 large pizza costs the same as 2 medium pizzas. Which option do you think you should buy if you want as much pizza as possible? [[1 large | 2 medium]]. To decide which is the better purchase, we need to know the [[area | circumference]] of each circular pizza.
 
+---
+
+> id: slicing-1
+
 As we’ve done in previous chapters, let’s use what we know about polygons to help us understand the area of circles  Estimate the area of each pizza by cutting them into 8 equal triangles.
 
     // INTERACTIVE-01: Pizza slicing (pages 1-2)
+    figure: x-geopad(width=1000 height=400)
+      include svg/pizza.svg
 
-Recall that the area of a [triangle](/course/shapes/parallelograms-triangles) can be found by using the formula ½ x base x height, as long as the base forms a [[right | acute | obtuse]] angle with the base.
+{.reveal(when="large-slices medium-slices")} Recall  that the area of a [triangle](/course/shapes/parallelograms-triangles) can be found by using the formula ½ x base x height, as long as the base forms a [[right | acute | obtuse]] angle with the base.
+
+---
 
 The larger triangle has [[170.52]] square cm of pizza and the smaller triangle has [[90.28]] square cm of pizza. In total, 1 large pizza has about [[1,364]] square cm of pizza and the 2 medium pizzas have about [[1,444]] square cm of pizza. So, it seems the 2 medium pizzas give more pizza.
 
+---
+
 This process is helpful for making good estimates, but our answers are [[less than | more than]] the actual areas. Maybe the 1 large pizza actually gives more pizza? Let’s keep working to see if we can develop a process for calculating the exact area of a circle.
+
+---
+
+> id: slicing-2
 
 In the [Circumference](/course/shapes/circles) chapter, we thought about the distance around a square to help us think about the distance around a circle. Let’s take the same approach with area. Below is a square pizza with one dimension labeled as “R.” While it’s not typical to think about the radius of a square, this line is the shortest distance from the center of the square to the outside side length.
 
     // INTERACTIVE-02: Square slice of square pizza (pages 2-4)
+    figure: .slices-2
+      include svg/square_pizza.svg
 
 Cut out a square piece of this pizza that is a square with side lengths “R.”
 
-The area of one of those pieces is [[R x R]]. Recall that this can also be written as `R^2`.
+{.reveal(when="sliced")} The area of one of those pieces is [[R x R]]. Recall that this can also be written as `R^2`.
 
-If each person receives one of the `R^2`-sized pieces, this pizza can serve [[4]] people.
+{.reveal(when="blank-0")} If each person receives one of the `R^2`-sized pieces, this pizza can serve [[4]] people.
 
-Therefore the area of this square is [[4R^2]]. Each side length of the square is [[2R]], we can also find the area of the square by doing [[2R x 2R]]. This also equals $4R^2$. Either way, we see that it takes 4 “R by R” squares to fill in a square when R represents the radius of the square. Let’s see if we can use this idea to discover a way to find the area of a circle.
+{.reveal(when="blank-1")} Therefore the area of this square is [[4R^2]]. Each side length of the square is [[2R]], we can also find the area of the square by doing [[2R x 2R]]. This also equals $4R^2$. Either way, we see that it takes 4 “R by R” squares to fill in a square when R represents the radius of the square. Let’s see if we can use this idea to discover a way to find the area of a circle.
+
+---
 
 Below is a circular pizza with the radius labeled.
 
