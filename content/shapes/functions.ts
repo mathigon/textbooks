@@ -96,6 +96,132 @@ function setupRope(id: string, maxLength: number, $geopad: Geopad, $step: Step, 
   });
 }
 
+export function performance2($step: Step) {
+  const courseModel = getCourseModel($step);
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const initRope = new RopePoly(...courseModel.firstArea!.points!);
+  const ropePath = $geopad.drawPath(initRope.poly);
+  const handle = $geopad.drawPoint(new Point(-10, -10), {interactive: true});
+  $geopad.switchTool('move');
+  let moving = false;
+  let nearest: {point: Point, index: number};
+  $geopad.on('mousemove', b => {
+    const m = new Point(b.offsetX, b.offsetY);
+    if (!moving) {
+      nearest = initRope.getNearest(m);
+      handle.redraw(nearest.point);
+    } else {
+      handle.redraw(m);
+      initRope.movePoint(nearest.index, m);
+      ropePath.redraw(initRope.poly);
+    }
+  });
+  $geopad.on('mousedown', () => moving = true);
+  $geopad.on('mouseup', () => moving = false);
+}
+
+type CircularPoint = {
+  left: CircularPoint,
+  right: CircularPoint,
+  self: Point
+}
+
+type CircularPointUnsafe = {
+  left?: CircularPointUnsafe,
+  right?: CircularPointUnsafe,
+  self: Point
+}
+
+/* eslint-disable no-invalid-this */
+class RopePoints {
+  points: CircularPoint[] = [];
+  addPoint = (p: Point) => {
+    let temp: CircularPointUnsafe = {
+      self: p
+    };
+    const l = this.points.pop();
+    if (l != undefined) this.points.push(l);
+    const r = this.points.shift();
+    if (r != undefined) this.points.unshift(r);
+    temp = {
+      ...temp,
+      left: l ?? temp,
+      right: r ?? temp
+    };
+    const final = temp as CircularPoint;
+    if (this.points.length > 0) {
+      this.points[0].left = final;
+      this.points[this.points.length - 1].right = final;
+    }
+    this.points.push(final);
+  }
+  movePoint = (index: number, to: Point) => {
+    const rightCap = Math.ceil(this.points.length / 2);
+    const leftCap = Math.floor(this.points.length / 2);
+    let rCount = 0;
+    let lCount = rCount;
+    let rDist = Point.distance(this.points[index].self, this.points[index].right.self);
+    let lDist = Point.distance(this.points[index].self, this.points[index].left.self);
+    this.points[index].self = to;
+    let currentR = this.points[index];
+    let currentL = currentR;
+    while (rCount < rightCap) {
+      currentR = currentR.right;
+      rCount++;
+      const nextDist = Point.distance(currentR.self, currentR.right.self);
+      currentR.self = constrainDistance(currentR.self, currentR.left.self, rDist);
+      rDist = nextDist;
+    }
+    while (lCount < leftCap) {
+      currentL = currentL.left;
+      lCount++;
+      const nextDist = Point.distance(currentL.self, currentL.left.self);
+      currentL.self = constrainDistance(currentL.self, currentL.right.self, lDist);
+      lDist = nextDist;
+    }
+  }
+}
+/* eslint-enable no-invalid-this */
+
+class RopePoly {
+  private cPoints: RopePoints
+  private _poly: Polygon
+  constructor(...points: Point[]) {
+    this._poly = new Polygon(...points);
+    this.cPoints = new RopePoints();
+    points.forEach(this.cPoints.addPoint);
+    console.log(this.cPoints);
+  }
+  getNearest(to: Point) {
+    let nearest = {
+      point: this.points[0],
+      index: 0
+    };
+    this.points.forEach((point, index) => {
+      const d1 = Point.distance(point, to);
+      const d2 = Point.distance(nearest.point, to);
+      if (d1 < d2) {
+        nearest = {point, index};
+      }
+    });
+    return nearest;
+  }
+  movePoint(index: number, to: Point) {
+    this.cPoints.movePoint(index, to);
+    this._poly = new Polygon(...this.cPoints.points.map(cp => cp.self));
+  }
+  get points() {
+    return this.poly.points;
+  }
+  get poly() {
+    return this._poly;
+  }
+}
+
+function constrainDistance(point: Point, anchor: Point, distance: number) {
+  return point.subtract(anchor).unitVector.scale(distance).add(anchor);
+}
+
 
 declare const d3: any;
 

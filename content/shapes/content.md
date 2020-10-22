@@ -40,6 +40,8 @@ The shape used ${firstArea.ropeUsed.toFixed(2)} meters of rope. Below, create th
 > id: performance-2
 
     // [TODO]: INTERACTIVE-02: Performance areas (page 2)
+    figure: x-geopad(width=600 height=400)
+      svg
 
 You used the [[same | different]] amount of rope each time, but created shapes with [[different | the same]] number of cobblestones roped off. Different shapes with the [[same | different]] perimeter can have [[different | the same]] areas.
 
