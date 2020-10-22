@@ -4,8 +4,238 @@
 
 > section: introduction
 > sectionStatus: dev
+> id: performance-1
 
-[TODO]
+Around the world, street performers delight audiences with their up-close and engaging shows. As shown here in Covent Gardens in London, performers often lay out rope to keep audience members outside of their performing space. 
+
+    figure: x-img(src="https://st3.depositphotos.com/1817276/19080/i/1600/depositphotos_190806246-stock-photo-london-circa-january-2018-knife.jpg" width=600 height=438)
+
+Imagine you are a street performer and you need to lay out a red rope to mark-off your stage. Pick up the red rope below and create a stage on the cobblestones so that:
+
+1. You rope off 200 __or more__ cobblestones.
+2. You use 20 meters of rope or less.
+3. The space is fully enclosed (the ends of the rope touch each other).
+4. The rope does not cross over itself.\ 
+
+\ 
+
+    // [TODO]: INTERACTIVE-01: Performance area 1 (pages 1-2)
+
+Now, let’s focus on the shape we made out of the rope and imagine it as a shape drawn on a piece of paper. Recall that perimeter is the length of the boundary, or outside, of a shape, and area is the how much space a shape covers or encloses.
+
+::: .reveal(when="rope-drawn")
+
+Your shape used ${firstArea.ropeUsed.toFixed(2)} meters of rope. So, ${firstArea.ropeUsed.toFixed(2)} meters is the [[perimeter | area | volume ]] of the shape. 
+
+Your shape roped off ${firstArea.cobblestones} cobblestones. So, ${firstArea.cobblestones} cobblestones is the  [[area | perimeter | volume ]] of the shape. 
+
+The shape used ${firstArea.ropeUsed.toFixed(2)} meters of rope. Below, create three different performing spaces with the same length of rope.
+
+:::
+
+---
+
+> id: performance-2
+
+    // [TODO]: INTERACTIVE-02: Performance areas (page 2)
+
+You used the [[same | different]] amount of rope each time, but created shapes with [[different | the same]] number of cobblestones roped off. Different shapes with the [[same | different]] perimeter can have [[different | the same]] areas.
+
+---
+
+Now, let’s work on the difference between perimeter and area of a shape. Let’s think through five examples that highlight this difference.
+
+::: column.grow
+1. If we need to know how much carpet to buy to for our living room floor, we would need to find the [[area | perimeter]] of our living room floor.
+::: column(width=200)
+    x-img(width=200 height=133 src="https://st.depositphotos.com/1017986/4242/i/950/depositphotos_42423393-stock-photo-close-up-of-male-hands.jpg")
+:::
+::: column.grow
+2. If we need to know much fencing is needed to surround a field, we would need to find the [[perimeter | area]] of the field.
+::: column(width=200)
+    x-img(width=200 height=132 src="https://st.depositphotos.com/1653005/3304/i/950/depositphotos_33047243-stock-photo-horse-stables.jpg")
+:::
+::: column.grow
+3. If we need to know how much ribbon we need to decorate the outside a mirror, we would need to find the [[perimeter | area]] of the mirror.
+::: column(width=200)
+    x-img(width=200 height=200 src="https://st2.depositphotos.com/1192512/5199/v/950/depositphotos_51997521-stock-illustration-big-mirror-with-blurry-reflection.jpg")
+:::
+::: column.grow
+4. If we need to determine how much coastline there is of an island, we would need to find the [[perimeter | area]] of the island.
+:::
+::: column.grow
+5. If we need to know how much material is needed to replace the floor of a gym, we would need to find the [[area | perimeter]] of the gym.
+::: column(width=200)
+    x-img(width=200 height=133 src="https://static3.depositphotos.com/1006422/205/i/950/depositphotos_2050132-stock-photo-the-gymnasium.jpg")
+:::
+
+---
+
+Football clubs often need to replace the grass field after it has been worn down. In 2018, the Estadio Azteca in Mexico City looked like this before the field was replaced.
+
+    figure: x-img(width=600 height=450 src="https://pbs.twimg.com/media/Dr505QhUcAAkArx?format=jpg&name=medium")
+
+Clubs often choose between squares of grass or artificial turf to replace the worn down grass:
+
+::: column(width=300)
+    x-img(width=300 height=199 src="https://st.depositphotos.com/1022214/2042/i/950/depositphotos_20421735-stock-photo-artificial-turf.jpg")
+::: column(width=300)
+    x-img(width=300 height=219 src="https://st3.depositphotos.com/1011434/14373/i/1600/depositphotos_143733669-stock-photo-gardener-applying-turf-rolls.jpg")
+:::
+
+---
+
+> id: grass-placement
+
+Below is a picture of a worn out football field. Drag new squares of grass onto the worn out field below to model replacing the grass.
+
+    // [TODO]: INTERACTIVE-03: Field grass placement (page 6)
+
+Let’s make an estimate of how many squares of grass we’ll need to replace the field. Just look at the picture of the field and make a quick guess. Enter the guess here: [TODO]
+
+::: column.grow
+Since it is a square and each side length is 1 [[meter | centimeter | kilometer]], we call this shape a square meter.
+::: column(width=200)
+    // [TODO]: DIAGRAM-01: Turf square (page 6)
+:::
+
+Recall your estimate of the [[area | perimeter ]] of the field is ____ [[square meters | meters | square centimeters]]. We’ll find out later in this chapter how close your estimate is!
+
+---
+
+> id: strip-placement
+
+Now that the new grass is in place, we need to paint the lines on the field.
+
+    figure: x-img(width=600 height=400 src="https://artificialgrassrecyclers.com/wp-content/uploads/2017/04/painting-turf.jpg")
+
+Drag each strip of white onto the field to model painting a while line around the field. One white strip equals one can of paint.
+
+    // [TODO]: INTERACTIVE-04: Field stripes placement (page 7)
+
+Make an estimate of how many cans of paint we’ll need to paint a line around the outside of the field. Just look at the picture of the field and make a quick guess. Enter the guess here: [TODO]
+
+Each can of paint can make a line 1 meter long. Recallyour estimate of the [[perimeter | area ]] of the field is ___ [[meters | square meters | centimeters]]. Again, we’ll find out later how close your estimate is.
+
+---
+
+> id: centimeters
+
+Now, let’s move on to thinking more deeply about the area of rectangles. Below are a bunch of square centimeters. Remember, these are squares whose sides lengths are each [[1]] centimeter long. Drag square centimeters into the rectangle so you fill in the rectangle.
+
+    // [TODO]: INTERACTIVE-05: Rectangle squares (pages 8-9)
+
+This rectangle has [[3]] rows, and every row has [[5]] squares, so we used 3 x 5 = [[15]] squares in total. 
+
+Each square is one square centimeter, so the [[area | perimeter]] of this rectangle is [[15]] [[square centimeters | centimeters | square meters]]. 
+
+Again, the length of the side of each square is [[1]] centimeter. So we know, the length of the base of the rectangle is [[5]] centimeters and the length of the height of the rectangle is [[3]] centimeters. The perimeter of the rectangle is [[16]] [[centimeters | square centimeters]].
+
+---
+
+Before we continue on with area and perimeter, let’s discuss some commonly used units for perimeter and area. In this chapter, we’ll use centimeters, meters and kilometers. 
+
+A centimeter is about the [[width of a staple | length of a guitar | distance of about two laps around a track]]. 
+
+A meter is about the [[length of a guitar | width of a staple | distance of about two laps around a track]]. 
+
+A kilometer is about [[distance of about two laps around a track | length of a guitar | width of a staple]]. 
+
+---
+
+Area is the amount of space inside an object., To determine the area of a shape, we’ve been filling up the space inside an object with squares. We could use other shapes as well. You can study that idea in a chapter on tessellations.
+
+Square meters are squares with side lenghts of [[1]] [[meter | centimeter | kilometer]], and square centimeters are [[squares | circles | triangles]] with side lenghts of [[1]] [[centimeter | meter | kilometer]]. So, a square kilometer is a square with side lengths of [[1]] [[kilometer | meter | centimeter]]. 
+
+When we talk about a certain number of square meters, say 7 of them, we can write it as “7 square meters” or “7 m2”. In fact, the “m2’ is read as “meters squared.” Any power of “2” is often read as “squared.” For example,  we can read92 as “9 squared” because we would need to multiply 9 x 9 when finding the [[area | perimeter]] of a square with side length 9. 
+
+---
+
+Sort the units of measure below into those that measure length and those that measure area:
+
+    // [TODO]: INTERACTIVE-06: Measurement units (pages 10-11)
+
+Now, sort the units of measure for area. Each unit of measure is represented in three different ways. Drag each of the labels into the correct square.
+
+---
+
+> id: half-meters
+
+Below is a square meter and a bin of squares that are ½ meter on each side. See how many ½ square meters you need to fill in the square meter:
+
+    // [TODO]: INTERACTIVE-07: Square meter filling (pages 11-12)
+
+It takes [[4]] ½ square centimeters to fill in 1 square meter. So, the area of a square with a ½ meter on each side is [[¼]] of the area of 1 square meter.
+
+---
+
+Let’s apply our understanding of area to another example. Begin exploring the area of the rectangle below by dragging in any 3 of the area shapes on the left into the blue rectangle.
+
+    // [TODO]: INTERACTIVE-08: Rectangle filling (pages 12-13)
+
+Let’s see if we can determine the area of the blue rectangle. The base is [[3.5]] centimeters long and the height is [[2.5]] centimeters long. The area of the rectangle is [[8 ¾]] [[square centimeters | centimeters | square meters]].
+
+---
+
+The area of the rectangle is 8 ¾ square centimeters.
+
+    // [TODO]: ANIMATION-01: Rectangle area (page 14)
+
+---
+
+Our first area example has 3 rows of  5 square centimeters each for a total of [[15]] [[square centimeters | centimeters]]. 3 x 5 = [[15]].
+
+This example has [[2 ½]] rows of 3 ½ square centimeters. So, to find the area we could do [[ 2 ½ x 3 ½ ]] which does indeed equal [[8 3/4]]. 
+
+If you forget how to calculate 2 ½ x 3 ½, you can review the chapter on Multiplying and Dividing Fractions. 2 ½ x 3 ½ means 2 ½ groups of 3 ½.
+
+---
+
+    // [TODO]: ANIMATION-02: Areas (pages 15-16)
+
+This arrangement looks familiar! 2 ½ x 3 ½ = [[8 ¾]].
+
+---
+
+So, by counting the number of rows and number of columns, and [[multiplying | adding | subtracting | dividing]] those numbers, we have found the formula for the area of any [[rectangle | circle | triangle]]. 
+
+Area of Rectangle = number of units along the base [[ x | + | -]] number of units along the [[height | diagonal]]. We can abbreviate this formula as:
+
+Area of Rectangle = base  [[ x | + | -]] [[height | base | diagonal]].
+
+---
+
+    // [TODO]: DIAGRAM-01: Rectangle area (page 16)
+
+Let’s think about the perimeter of this same rectangle. Below are some calculations using the side lengths of the rectangle above. Sort the calculations into those that will give you the correct perimeter and those that will not.
+
+    // [TODO]: INTERACTIVE-09: Area calculation sorting (page 17)
+
+---
+
+The perimeter of the rectangle is [[12]] [[centimeters | square meters | square centimeters]].
+
+---
+
+Let’s end this chapter by coming back to our work with the football field. You guessed the area of the field to be  ____ [[square meters | meters]]. Below is the image of the field as well as a picture of your estimation:
+
+    // [TODO]: DIAGRAM-02: Field rectangle comparison (page 17)
+
+It seems that your estimate of the area was [[too big | too small].
+
+---
+
+Now, let’s find the actual area of the football field.
+
+    // [TODO]: DIAGRAM-03: Field dimensions (page 18)
+
+The length of the base is [[110]] [[meters | square meters]] and the length of the height is [[75]] [[meters | square meters]]. This means, we would need [[75]] rows of [[110]] pieces of square meter grass to cover the field. To calculate the area, we need to multiply [[110 x 75]]. This gives us an area of [[8250]] [[square meters | meters]]. Your estimate was ____ square meters away.
+
+---
+
+Let’s revisit your perimeter guess. You guessed the perimeter of the field to be ____ [[ meters | square meters]]. Below is a picture of the field as well as a field with your estimated perimeter.
+
+    // [TODO]: Talk to Philipp about the end of this chapter (I'm not sure what to include)
 
 ---
 
