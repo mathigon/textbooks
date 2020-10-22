@@ -5,7 +5,7 @@
 
 
 import {clamp, nearlyEquals} from '@mathigon/fermat';
-import {$N, animate, AnimationResponse, CanvasView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
+import {$N, animate, AnimationResponse, CanvasView, ElementView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Arc, Circle, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
 
 import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
