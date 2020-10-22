@@ -134,6 +134,8 @@ Each can of paint can make a line 1 meter long. Recallyour estimate of the [[per
 Now, let’s move on to thinking more deeply about the area of rectangles. Below are a bunch of square centimeters. Remember, these are squares whose sides lengths are each [[1]] centimeter long. Drag square centimeters into the rectangle so you fill in the rectangle.
 
     // [TODO]: INTERACTIVE-05: Rectangle squares (pages 8-9)
+    figure: x-geopad(width=600 height=400)
+      svg
 
 This rectangle has [[3]] rows, and every row has [[5]] squares, so we used 3 x 5 = [[15]] squares in total. 
 
@@ -174,6 +176,8 @@ Now, sort the units of measure for area. Each unit of measure is represented in 
 Below is a square meter and a bin of squares that are ½ meter on each side. See how many ½ square meters you need to fill in the square meter:
 
     // [TODO]: INTERACTIVE-07: Square meter filling (pages 11-12)
+    figure: x-geopad(width=600 height=400)
+      svg
 
 It takes [[4]] ½ square centimeters to fill in 1 square meter. So, the area of a square with a ½ meter on each side is [[¼]] of the area of 1 square meter.
 

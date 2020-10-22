@@ -265,6 +265,124 @@ export function stripPlacement($step: Step) {
   setupDraggableRectangles($polypad, options);
 }
 
+export function centimeters($step: Step) {
+  const dropAreaPxWidth = 400;
+  const centimeterSize = dropAreaPxWidth / 5;
+  const dropAreaDimensions = (new Point(5, 3)).scale(centimeterSize);
+  fillSquares($step, centimeterSize, dropAreaDimensions, '5 centimeters', '3 centimeters', false, () => $step.addHint('correct'));
+}
+
+export function halfMeters($step: Step) {
+  const dropAreaPxWidth = 300;
+  const meterSize = dropAreaPxWidth / 3;
+  const dropAreaDimensions = (new Point(3, 3)).scale(meterSize);
+  fillSquares($step, dropAreaDimensions.x / 2, dropAreaDimensions, '1 meter', '1 meter', true, () => $step.addHint('correct'));
+}
+
+function fillSquares($step: Step, squareSize: number, dropAreaSize: Point, dropAreaWidthLabel: string, dropAreaHeightLabel: string, showBeforeComplete: boolean, onComplete: VoidFunction) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const dropAreaPoly = setupDropArea($geopad, dropAreaSize, dropAreaWidthLabel, dropAreaHeightLabel, showBeforeComplete);
+  setupSquares($geopad, squareSize, dropAreaPoly, onComplete);
+}
+
+function setupDropArea($geopad: Geopad, dimensions: Point, widthLabel: string, heightLabel: string, showBeforeComplete: boolean) {
+  const leftLoc = $geopad.boundsRect.w - dimensions.x - 30;
+  const topLoc = 30;
+  const topLeft = new Point(leftLoc, topLoc);
+  const dropArea = new Rectangle(topLeft, dimensions.x, dimensions.y);
+  const bottomLeft = topLeft.shift(0, dimensions.y);
+  const bottomRight = bottomLeft.shift(dimensions.x, 0);
+  const topRight = bottomRight.shift(0, -dimensions.y);
+  $geopad.drawPath(dropArea);
+  const widthPath = $geopad.drawPath(new Segment(bottomLeft, bottomRight));
+  if (showBeforeComplete) widthPath.setLabel(widthLabel);
+  const heightPath = $geopad.drawPath(new Segment(bottomRight, topRight));
+  if (showBeforeComplete) heightPath.setLabel(heightLabel);
+  return dropArea;
+}
+
+function setupSquares($geopad: Geopad, size: number, dropAreaPoly: Rectangle, onComplete: VoidFunction) {
+  const squareTemplate = new Rectangle(new Point(20, 20), size, size);
+  let currentSquare = new FillSquare(squareTemplate, $geopad);
+  let dropSpot = 0;
+  const onEnd = (last: Point) => {
+    if (dropAreaPoly.contains(last)) {
+      currentSquare.moveTo(getSpotCoords(dropSpot, size, dropAreaPoly));
+      currentSquare = new FillSquare(squareTemplate, $geopad);
+      if (isLastSquare(dropSpot, size, dropAreaPoly)) {
+        onComplete();
+      } else {
+        dropSpot++;
+        setupGeopadDraggable(currentSquare, $geopad, onEnd);
+      }
+    }
+  };
+  setupGeopadDraggable(currentSquare, $geopad, onEnd);
+  return;
+}
+
+function getSpotCoords(dropSpot: number, squareSize: number, dropAreaPoly: Rectangle) {
+  const squaresPerRow = dropAreaPoly.w / squareSize;
+  const currentColumn = dropSpot % squaresPerRow;
+  const currentRow = Math.floor(dropSpot / squaresPerRow);
+  return new Point(dropAreaPoly.p.x + currentColumn * squareSize, dropAreaPoly.p.y + currentRow * squareSize);
+}
+
+function isLastSquare(dropSpot: number, squareSize: number, dropAreaPoly: Rectangle) {
+  const rows = dropAreaPoly.h / squareSize;
+  const columns = dropAreaPoly.w / squareSize;
+  const totalSpots = rows * columns;
+  return dropSpot === totalSpots - 1;
+}
+
+class FillSquare {
+  private rect: Rectangle
+  private path: GeoPath
+  constructor(template: Rectangle, $geopad: Geopad) {
+    this.rect = template;
+    this.path = $geopad.drawPath(this.rect);
+    this.path.$el.css({fill: 'red'});
+  }
+  moveBy(by: Point) {
+    this.rect = this.rect.translate(by);
+    this.path.redraw(this.rect);
+  }
+  moveTo(loc: Point) {
+    this.moveBy(loc.subtract(this.rect.p));
+  }
+  contains(point: Point) {
+    return this.rect.contains(point);
+  }
+  get pos() {
+    return this.rect.p;
+  }
+}
+
+function setupGeopadDraggable(obj: FillSquare, $geopad: Geopad, onEnd?: (last: Point) => void) {
+  let mouseOffset = new Point(0, 0);
+  let dragging = false;
+  slide($geopad, {
+    $box: $geopad.$svg,
+    start: pos => {
+      if (obj.contains(pos)) {
+        dragging = true;
+        mouseOffset = obj.pos.subtract(pos);
+      }
+    },
+    move: (current, _start, _last) => {
+      if (dragging) {
+        const newLoc = current.add(mouseOffset);
+        obj.moveTo(newLoc);
+      }
+    },
+    end: (last, _start) => {
+      if (dragging) {
+        if (onEnd != null) onEnd(last);
+        dragging = false;
+      }
+    }
+  });
+}
 
 declare const d3: any;
 
