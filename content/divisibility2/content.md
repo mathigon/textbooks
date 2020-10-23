@@ -9,7 +9,8 @@
 Here is a simple game similar to [Tetris](gloss:tetris). Rectangular blocks fill slowly fall from
 the top, and you have to arrange them to fill entire rows. Can you work out what the rules are?
 
-    figure: x-factris
+    link(href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet")
+    figure: x-factris(highscore="no")
 
 ---
 > id: factris-1
@@ -22,7 +23,7 @@ Here you can see 24 squares arranged in a 2 x 12 rectangle. Move the tab and see
 create other rectangles consisting of 24 squares:
 
     figure
-      x-factor-rect(size="12:2" color="blue")
+      x-factor-rect.blue(size="12:2")
 
 | Number of rows    | 10 |
 | Number of columns | 10 |
@@ -182,10 +183,10 @@ In this arrangement of 12 circles, we can see 3 groups of [[4]] circles. We can 
 
 Upon correct answers, have the animation continue up to the number 17. Then, show this question.
 
-::: column(width=320)
+::: column.fit
 
     figure
-      x-factor-circles.var(:n="n + 1")
+      x-factor-circles.var(size="400" :n="n + 1")
       x-slider(steps=99 :bind="n")
 
 :::

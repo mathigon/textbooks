@@ -4,16 +4,17 @@
 // =============================================================================
 
 
-import {$N, CustomElementView, ElementView, register, slide} from '@mathigon/boost';
+import {$html, $N, CustomElementView, ElementView, register, slide, SVGParentView} from '@mathigon/boost';
 import {tabulate} from '@mathigon/core';
 import {clamp} from '@mathigon/fermat';
 
 const SIZE = 25;
-const HANDLE = `M0,0h${SIZE}a${SIZE},${SIZE} 0 0 1 ${SIZE},${SIZE}a${SIZE},${SIZE} 0 0 1 0,${SIZE}h0z`;
+const HANDLE = `M${SIZE / 2},0H0V${SIZE}H${SIZE / 2}A${SIZE / 2},${SIZE / 2},0,0,0,${SIZE / 2},0Z`;
 
 
 @register('x-factor-rect')
 export class FactorRect extends CustomElementView {
+  private $svg!: SVGParentView;
   private $rects!: ElementView[];
   private $handle!: ElementView;
   private size!: number;
@@ -21,20 +22,20 @@ export class FactorRect extends CustomElementView {
 
   ready() {
     const [x, y] = this.attr('size').split(':').map(x => +x);
-    const fill = this.attr('color');
-    const attributes = {width: SIZE, height: SIZE, fill};
-
-    const $svg = $N('svg', {}, this);
-
     this.size = x * y;
-    this.$rects = tabulate(() => $N('rect', attributes, $svg), this.size);
+    this.$svg = $N('svg', {}, this) as SVGParentView;
 
-    $svg.setAttr('width', (this.size + 1) * SIZE);
-    $svg.setAttr('height', (y + 1) * SIZE);
+    const attributes = {width: SIZE, height: SIZE};
+    this.$rects = tabulate(() => $N('rect', attributes, this.$svg), this.size);
 
-    this.$handle = $N('path', {x: HANDLE}, $svg);
+    this.$svg.setAttr('width', (this.size + 2) * SIZE);
+    this.$svg.setAttr('height', (y + 1) * SIZE);
+
+    this.$handle = $N('path', {d: HANDLE, class: 'handle'}, this.$svg);
     slide(this.$handle, {
-      move: (posn) => this.setWidth(Math.round(posn.x / SIZE) - 0.5)
+      start: () => $html.addClass('grabbing'),
+      move: (posn) => this.setWidth(Math.round(posn.x / SIZE - 0.5)),
+      end: () => $html.removeClass('grabbing')
     });
 
     this.setWidth(x);
@@ -45,11 +46,16 @@ export class FactorRect extends CustomElementView {
     if (columns === this.columns) return;
     this.columns = columns;
 
+    const rows = Math.ceil(this.size / columns);
+    const max = Math.floor(this.size / columns) * columns;
+
     for (const [i, $r] of this.$rects.entries()) {
       $r.setAttr('x', SIZE / 2 + (i % columns) * SIZE);
       $r.setAttr('y', SIZE / 2 + Math.floor(i / columns) * SIZE);
+      $r.setClass('wrong', i >= max);
     }
 
-    this.$handle.setTransform({x: (columns + 1) * SIZE, y: SIZE});
+    this.$svg.setAttr('height', (rows + 1) * SIZE);
+    this.$handle.setTransform({x: (columns + 0.5) * SIZE, y: SIZE / 2});
   }
 }

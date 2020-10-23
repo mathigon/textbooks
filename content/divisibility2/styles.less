@@ -18,7 +18,15 @@ x-factris { position: relative; width: fit-content; margin: 58px auto 4px; }
 
 x-factor-rect {
   display: block;
-  rect { stroke: white; }
+  margin: 0 auto;
+
+  rect, .handle { stroke: white; fill: @blue; transition: color .2s; }
+  .handle { fill: @grey; cursor: grab; }
+
+  &.green rect { fill: @green; }
+  &.yellow rect { fill: @yellow; }
+  &.purple rect { fill: @purple; }
+  rect.wrong { fill: @red; }
 }
 
 x-image-sequence { display: block; }
