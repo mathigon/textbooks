@@ -728,12 +728,17 @@ euclid:
   born: -330
   died: -270
   location: africa
-  bio: __Euclid of Alexandria__ (around 300 BCE) was a Greek mathematician and
-    is often called the _father of geometry_. He published a book _Elements_
-    that first introduced Euclidean geometry and contained many important proofs
-    in geometry and number theory. It was the main mathematics textbook until
-    the 19th century. He taught mathematics in Alexandria, but very little else
-    is known about his life.
+  bio: |
+    __Euclid of Alexandria__ (Εὐκλείδης, around 300 BCE) was a Greek
+    mathematician and is often called the _father of geometry_. He book _The
+    Elements_ first introduced Euclidean geometry, defines its five axioms, and
+    contains many important proofs in geometry and number theory – including
+    that there are infinitely many prime numbers. It is one of the most
+    influential books ever published, and was used as textbook in mathematics
+    until the 19th century.
+
+    Euclid taught mathematics in Alexandria, but not much else is known about
+    his life.
   links:
     - title: Euclid’s Axioms
       url: /course/euclidean-geometry/euclids-axioms
