@@ -1290,6 +1290,12 @@ And here are the rotor cross-sections:
     figure
       include ./components/enigma-rotors
 
+Here is an ar enigma
+
+    figure
+      // https://sketchfab.com/3d-models/enigma-machine-1934-c8ee76c383654e3095ea4cc9e7990274
+      x-img(src="" ar="")
+
 The letter shown inside each rotor indicates the rotation, and the connecting orange lines
 show the link between the notch on one rotor and the rotation position
 of the next rotor.
