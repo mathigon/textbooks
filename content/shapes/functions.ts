@@ -1117,6 +1117,7 @@ export function wheels($step: Step) {
 
   type Wheel = {
     $el: SVGView,
+    $wheel: SVGView,
     radius: number,
     startBottom: Point,
     initOutline: Circle,
@@ -1132,7 +1133,8 @@ export function wheels($step: Step) {
     {a: 'wheel-4', b: 125}
   ].map(({a, b}) => {
 
-    const $el = $svg.$('.' + a) as SVGView;
+    const $el = $svg.$('circle.' + a) as SVGView;
+    const $wheel = $svg.$('path.' + a) as SVGView;
 
     const radius = b / 2;
 
@@ -1149,6 +1151,7 @@ export function wheels($step: Step) {
 
     return {
       $el,
+      $wheel,
       radius,
       startBottom,
       initOutline,
@@ -1159,6 +1162,7 @@ export function wheels($step: Step) {
   });
 
   $step.model['wheels'].forEach((wheel: Wheel) => {
+    wheel.$el.css({fill: 'rgba(0, 0, 0, 0'});
     let initDistance = 0;
     slide(wheel.$el, {
       start: () => {
@@ -1175,6 +1179,7 @@ export function wheels($step: Step) {
         const rotate = wheel.distance / wheel.radius;
 
         wheel.$el.setTransform(translate, rotate);
+        wheel.$wheel.setTransform(translate, rotate);
 
         const distanceLine = wheel.distance + wheel.startBottom.x;
         wheel.$distLine.draw(new Segment(wheel.startBottom, new Point(distanceLine, wheel.startBottom.y)));
