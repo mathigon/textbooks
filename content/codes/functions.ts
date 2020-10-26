@@ -711,43 +711,37 @@ export function satellite($step: Step) {
 // HAMMING: function code
 export function hammingEncode($step: Step) {
   const $hamming = $step.$('x-hamming') as HammingCode;
-  const $testButton = $step.$('#testButton')!;
-
-  $testButton.on('click', () => $hamming.makeRoomForParities());
-
-  function noop() {
-    // do nothing
-  }
-
-  function highlight(digit: number) {
-    console.log(`highlight(${digit})`);
-  }
-
-  function parity(digit: number, value: number) {
-    console.log(`parity(${digit}, ${value})`);
-  }
 
   // Slide functions.
-  const slides = [
-    () => noop(),
+  const slideNext = [
+    () => $hamming.noop(),
 
-    () => console.log('Shift data bits'),
+    () => $hamming.makeRoomForParities(),
 
-    () => highlight(1),
-    () => parity(1, 1),
+    () => $hamming.highlight(1),
+    () => $hamming.parity(1, 1),
 
-    () => highlight(2),
-    () => parity(2, 1),
+    () => $hamming.highlight(2),
+    () => $hamming.parity(2, 1),
 
-    () => highlight(4),
-    () => parity(4, 0),
+    () => $hamming.highlight(4),
+    () => $hamming.parity(4, 0),
 
-    () => console.log('This is the full data!')
+    () => $hamming.showAll()
   ];
+
+  const slideBack = [
+    () => $hamming.hideParityBits(),
+  ]
 
   const $slideshow = $step.$('x-slideshow') as Slideshow;
   $slideshow.on('next', (x: number) => {
-    if (x >= 0 && x < slides.length)
-      slides[x]()
+    if (x >= 0 && x < slideNext.length)
+      slideNext[x]()
+  })
+
+  $slideshow.on('back', (x: number) => {
+    if (x >= 0 && x < slideBack.length)
+      slideBack[x]()
   })
 }
