@@ -7,6 +7,7 @@ import { register, CustomElementView, $N, SVGParentView, ElementView } from "@ma
 
 const WIDTH = 20, BUFFER = 5;
 const HEIGHT = 40, RX = 6;
+const YVAL = 20;
 
 class HammingDigit {
 
@@ -64,7 +65,7 @@ class HammingDigit {
         this.g = $N('g', gAttr, $parent);
         this.g.animate({transform: [
             'none',
-            `translate(${this.getIndexLocation(this.places[0])}px, 0px)`,
+            `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`,
         ]}, 0);
 
         this.rect = $N('rect', rectDefault, this.g);
@@ -84,15 +85,15 @@ class HammingDigit {
 
     makeRoom() {
         this.g.animate({transform: [
-            `translate(${this.getIndexLocation(this.places[0])}px, 0px)`,
-            `translate(${this.getIndexLocation(this.places[1])}px, 0px)`]});
+            `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`,
+            `translate(${this.getIndexLocation(this.places[1])}px, ${YVAL}px)`]});
     }
 
     // back to data digit
     squeezeRoom() {
         this.g.animate({transform: [
-            `translate(${this.getIndexLocation(this.places[1])}px, 0px)`,
-            `translate(${this.getIndexLocation(this.places[0])}px, 0px)`]});
+            `translate(${this.getIndexLocation(this.places[1])}px, ${YVAL}px)`,
+            `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`]});
     }
 
     bold() {
@@ -140,8 +141,7 @@ export class HammingCode extends CustomElementView {
 
     ready() {
         // initialize SVG parent view
-        this.$svg = $N('svg', {viewBox: '0 0 400 200'}, this) as SVGParentView;
-        this.$svg.removeChildren();
+        this.$svg = $N('svg', {viewBox: `0 0 400 ${HEIGHT*2}`}, this) as SVGParentView;
 
         const value = this.attr('value');
 

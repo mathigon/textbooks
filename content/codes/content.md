@@ -983,23 +983,37 @@ Computers used to be programmed with [punch cards](gloss: punch cards). In 1947,
 ---
 > id: hamming-encode
 
-// INTERACTIVE --- Encoding a Hamming Code
+#### Encoding a Hamming Code
 
-Let's try it in slideshow form.
+Click through the slides to see how to encode a string of bits using Hamming Codes.
 
     x-hamming(value="11001110")
-    x-slideshow
-      .legend(slot="legend") Let's say we want to encode this string of 8 bits.
-      .legend(slot="legend") First we must shift the data bits to the right to make room for the parity bits (pink). The parity bits must go into any bit position that is a power of 2.
-      .legend(slot="legend") We must figure out the values that go into the parity bits. Let's start with the first bit at position 1. Choose every other one bit.
-      .legend(slot="legend") This group of bits has an *odd* parity. So we give it value *1*.
-      .legend(slot="legend") Let's do the next bit at position 2. Choose every other 2 bits.
-      .legend(slot="legend") This group of bits has an *odd* parity. So we give it value *1*.
-      .legend(slot="legend") Let's do the next bit at position 4. Choose every other 4 bits.
-      .legend(slot="legend") This group of bits has an *even* parity. So we give it value *0*.
-      .legend(slot="legend") Let's do the next bit at position 8. Choose every other 8 bits.
-      .legend(slot="legend") This group of bits has an *even* parity. So we give it value *0*.
-      .legend(slot="legend") Here is our final encoded string of bits to send!
+
+::: x-slideshow
+
+{div.inline(slot="legend")} Let's say we want to encode this string of 8 bits.
+
+{div.inline(slot="legend")} First we must shift the data bits to the right to make room for the _{.red}parity bits_. The parity bits must go into any bit position that is a power of 2.
+
+{div.inline(slot="legend")} We must figure out the values that go into the parity bits. Let's start with the first bit at position 1. Choose every other one bit.
+
+{div.inline(slot="legend")} This group of bits has an [[even|odd]] parity, so we give the parity bit value [[0]].
+
+{div.inline(slot="legend")} Let's do the next bit at position 2. Choose every other 2 bits.
+
+{div.inline(slot="legend")} This group of bits has an [[odd|even]] parity, so we give the parity bit value [[1]].
+
+{div.inline(slot="legend")} Let's do the next bit at position 4. Choose every other 4 bits.
+
+{div.inline(slot="legend")} This group of bits has an [[odd|even]] parity, so we give the parity bit value [[1]].
+
+{div.inline(slot="legend")} Let's do the next bit at position 8. Choose every other 8 bits.
+
+{div.inline(slot="legend")} This group of bits has an [[odd|even]] parity, so we give the parity bit value [[1]].
+
+{div.inline(slot="legend")} Here is our final encoded string of bits to send!
+
+:::
 
 ---
 

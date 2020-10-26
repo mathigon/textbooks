@@ -708,7 +708,6 @@ export function satellite($step: Step) {
   });
 }
 
-// HAMMING: function code
 export function hammingEncode($step: Step) {
   const $hamming = $step.$('x-hamming') as HammingCode;
 
