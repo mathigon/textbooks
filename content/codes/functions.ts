@@ -719,19 +719,38 @@ export function hammingEncode($step: Step) {
     () => $hamming.makeRoomForParities(),
 
     () => $hamming.highlight(1),
-    () => $hamming.parity(1, 1),
+    () => $hamming.showParity(1),
 
     () => $hamming.highlight(2),
-    () => $hamming.parity(2, 1),
+    () => $hamming.showParity(2),
 
     () => $hamming.highlight(4),
-    () => $hamming.parity(4, 0),
+    () => $hamming.showParity(4),
+
+    () => $hamming.highlight(8),
+    () => $hamming.showParity(8),
 
     () => $hamming.showAll()
   ];
 
   const slideBack = [
     () => $hamming.hideParityBits(),
+
+    () => $hamming.showAll(),
+
+    () => $hamming.hideParity(1),
+    () => $hamming.highlight(1),
+
+    () => $hamming.hideParity(2),
+    () => $hamming.highlight(2),
+
+    () => $hamming.hideParity(4),
+    () => $hamming.highlight(4),
+
+    () => $hamming.hideParity(8),
+    () => $hamming.highlight(8),
+
+    () => $hamming.noop()
   ]
 
   const $slideshow = $step.$('x-slideshow') as Slideshow;

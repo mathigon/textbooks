@@ -987,7 +987,7 @@ Computers used to be programmed with [punch cards](gloss: punch cards). In 1947,
 
 Let's try it in slideshow form.
 
-    x-hamming(value="10101010")
+    x-hamming(value="11001110")
     x-slideshow
       .legend(slot="legend") Let's say we want to encode this string of 8 bits.
       .legend(slot="legend") First we must shift the data bits to the right to make room for the parity bits (pink). The parity bits must go into any bit position that is a power of 2.
@@ -996,6 +996,8 @@ Let's try it in slideshow form.
       .legend(slot="legend") Let's do the next bit at position 2. Choose every other 2 bits.
       .legend(slot="legend") This group of bits has an *odd* parity. So we give it value *1*.
       .legend(slot="legend") Let's do the next bit at position 4. Choose every other 4 bits.
+      .legend(slot="legend") This group of bits has an *even* parity. So we give it value *0*.
+      .legend(slot="legend") Let's do the next bit at position 8. Choose every other 8 bits.
       .legend(slot="legend") This group of bits has an *even* parity. So we give it value *0*.
       .legend(slot="legend") Here is our final encoded string of bits to send!
 

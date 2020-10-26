@@ -15,8 +15,11 @@ class HammingDigit {
 
     public parity: boolean;
     private places: number[];
+    public value: number;
 
-    private element: ElementView;
+    private g: ElementView;
+    private rect: ElementView;
+    private text: ElementView;
 
     /**
      *
@@ -29,55 +32,82 @@ class HammingDigit {
 
         this.parity = parity;
         this.places = places;
+        this.value = value;
 
         const color = parity ? this.RED : this.GREEN;
 
         const x = this.getIndexLocation(places[0]);
         const y = 200;
 
+        const gAttr = {
+            x, y: y-HEIGHT
+        }
         const rectDefault = {
             stroke: color,
             'stroke-width': 3,
-            fill: "#FAFFFB",
+            fill: color,
             width: WIDTH,
             height: HEIGHT,
             rx: RX,
-            x, y: y-HEIGHT
         }
 
+        const textAttr = {
+            x: WIDTH/4, y: 5*HEIGHT/8,
+            width: WIDTH,
+            height: HEIGHT,
+            'font-size': 20,
+            'font-weight': 'normal',
+            fill: '#FFFFFF',
+            text: value > -1 ? value: '_'
+        }
+
+        this.g = $N('g', gAttr, $parent);
+        this.g.animate({transform: [
+            'none',
+            `translate(${this.getIndexLocation(this.places[0])}px, 0px)`,
+        ]}, 0);
+
+        this.rect = $N('rect', rectDefault, this.g);
+        this.text = $N('text', textAttr, this.g);
+
         // only display data digits at first
-        this.element = $N('rect', rectDefault, $parent);
-        if (parity) this.element.hide();
+        if (parity) this.g.hide();
     }
 
     show() {
-        this.element.show()
+        this.g.show()
     }
 
     hide() {
-        this.element.hide()
+        this.g.hide()
     }
 
     makeRoom() {
-        const xTranslate = this.getIndexLocation(this.places[1] - this.places[0]) - BUFFER; // sub
-        this.element.animate({transform: ['none', `translate(${xTranslate}px, 0px)`]});
+        this.g.animate({transform: [
+            `translate(${this.getIndexLocation(this.places[0])}px, 0px)`,
+            `translate(${this.getIndexLocation(this.places[1])}px, 0px)`]});
     }
 
     // back to data digit
     squeezeRoom() {
-        // go from place[1] to place[0]
-        const xTranslate = this.getIndexLocation(this.places[1] - this.places[0]) - BUFFER;
-        this.element.animate({transform: [`translate(${xTranslate}px, 0px)`, 'none']});
+        this.g.animate({transform: [
+            `translate(${this.getIndexLocation(this.places[1])}px, 0px)`,
+            `translate(${this.getIndexLocation(this.places[0])}px, 0px)`]});
     }
 
     bold() {
-        this.element.removeClass('dim')
-        this.element.addClass('bold')
+        this.g.removeClass('dim')
+        this.g.addClass('bold')
+        // HAMMING: would be nice to bold/dim with a keyframe
     }
 
     dim() {
-        this.element.removeClass('bold')
-        this.element.addClass('dim')
+        this.g.removeClass('bold')
+        this.g.addClass('dim')
+    }
+
+    updateValue(value: number) {
+        this.text.text = value > -1 ? value.toString() : '_'
     }
 
     /**
@@ -86,7 +116,7 @@ class HammingDigit {
      * 4 --> 4, 5, 6, 7...
      * @param parity 1, 2, 4, 8... etc
      */
-    getParityMatch(parity: number): boolean {
+    isParityMatch(parity: number): boolean {
         const d = this.places[1];
 
         // e.g.  7,4 ==> 7 % 8 = 7; 7 >= 4;
@@ -155,14 +185,33 @@ export class HammingCode extends CustomElementView {
      * @param group parity digit
      */
     highlight(group: number) {
-        this.digits.forEach(hd => hd.getParityMatch(group) ? hd.bold() : hd.dim())
+        this.digits.forEach(hd => hd.isParityMatch(group) ? hd.bold() : hd.dim())
     }
 
-    parity(digit: number, value: number) {
-        console.log(`parity(${digit}, ${value})`);
+    showParity(digit: number) {
+        const value = this.getParityValue(digit);
+        this.digits[digit - 1].updateValue(value);
+    }
+
+    hideParity(digit: number) {
+        this.digits[digit - 1].updateValue(-1);
     }
 
     showAll() {
         this.digits.forEach(hd => hd.bold())
+    }
+
+    /**
+     * Sum the values of all data digits in a parity group.
+     * @param group 1, 2, 4, 8
+     */
+    private getParityValue(group: number) {
+        const parity = this.digits
+            .filter(hd => !hd.parity)
+            .filter(hd => hd.isParityMatch(group))
+            .map(hd => hd.value)
+            .reduce((acc, val) => acc + val);
+
+        return parity % 2;
     }
 }
