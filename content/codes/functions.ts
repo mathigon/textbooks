@@ -252,6 +252,7 @@ export function bracket($step: Step) {
 
 /**
  * Slideshow for animating decimal to binary.
+ * HAMMING: mimic this
  */
 export function dec2bin($section: Step) {
   const $slideshow = $section.$('x-slideshow') as Slideshow;
@@ -707,9 +708,46 @@ export function satellite($step: Step) {
   });
 }
 
+// HAMMING: function code
 export function hammingEncode($step: Step) {
   const $hamming = $step.$('x-hamming') as HammingCode;
   const $testButton = $step.$('#testButton')!;
 
   $testButton.on('click', () => $hamming.makeRoomForParities());
+
+  function noop() {
+    // do nothing
+  }
+
+  function highlight(digit: number) {
+    console.log(`highlight(${digit})`);
+  }
+
+  function parity(digit: number, value: number) {
+    console.log(`parity(${digit}, ${value})`);
+  }
+
+  // Slide functions.
+  const slides = [
+    () => noop(),
+
+    () => console.log('Shift data bits'),
+
+    () => highlight(1),
+    () => parity(1, 1),
+
+    () => highlight(2),
+    () => parity(2, 1),
+
+    () => highlight(4),
+    () => parity(4, 0),
+
+    () => console.log('This is the full data!')
+  ];
+
+  const $slideshow = $step.$('x-slideshow') as Slideshow;
+  $slideshow.on('next', (x: number) => {
+    if (x >= 0 && x < slides.length)
+      slides[x]()
+  })
 }
