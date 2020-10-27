@@ -116,6 +116,11 @@ apollonius:
 
 appel:
   name: Appel
+  full: Kenneth Appel
+  born: 1932
+  died: 2013
+  location: america
+  small: true
   bio: |
     __Kenneth Appel__ (1932 – 2013) was an American mathematician, known for his
     proof of the Four Colour Theorem with Wolfgang Haken.
@@ -238,12 +243,26 @@ bernoulli-2:
     At the age of 34, he was banned from his father’s house for beating him at
     an award from the Paris Academy, for which they both submitted an entry.
 
-bhaskara:
+bhaskara-1:
+  born: 600
+  died: 680
+  name: Bhaskara I
+  keywords: India
+  location: asia
+  image: false
+  bio: __Bhaskara I__ (c. 600 – 680 CE) was an Indian mathematician, and the
+    first to write numbers in the Hindu decimal system with a circle as zero.
+    His commentary on Aryabhata’s work is one of the oldest known Sanskrit prose
+    works on mathematics and astronomy, and includes a unique rational
+    approximation for the _sin_ function.
+
+bhaskara-2:
   born: 1114
   died: 1185
   name: Bhaskara II
   keywords: India
   location: asia
+  image: false
   bio: __Bhaskara II__ (1114 – 1185) was an Indian mathematician and astronomer.
     He discovered some of the basic concepts of calculus, more than 500 years
     before Leibnitz and Newton. Bhaskara also established that division by zero
@@ -315,6 +334,7 @@ cantor:
   died: 1918
   name: Cantor
   full: Georg Cantor
+  small: true
   bio: |
     The German mathematician __Georg Cantor__ (1845 – 1918) was the inventor of
     set theory, and a pioneer in our understanding of infinity. For most of his
@@ -371,6 +391,17 @@ carroll:
     However, Carroll was also a brilliant mathematician. He always tried to
     incorporate puzzles and logic into his children’s stories, making them more
     enjoyable and memorable.
+
+cartwright:
+  born: 1900
+  died: 1998
+  name: Cartwright
+  full: Mary Cartwright
+  small: true
+  bio: "__Mary Lucy Cartwright__ (1900 – 1998) was a British mathematician and
+    one of the pioneers of _Chaos theory_. Together with _Littlewood_, she
+    discovered curious solutions to a problem: an example of what we now
+    call the _Butterfly effect_."
 
 cauchy:
   born: 1789
@@ -440,7 +471,6 @@ chatelet:
   died: 1749
   name: Du Châtelet
   full: Émilie du Châtelet
-  small: true
   bio: |
     __Émilie du Châtelet__ (1706 – 1749) was a French scientist and
     mathematician. As a women, she was often excluded from the scientific
@@ -466,6 +496,23 @@ collatz:
   bio: __Lothar Collatz__ (1910 – 1990) was a German mathematician working on
     differential equations and optimisation problems. The _Collatz conjecture_
     or `3x+1` problem is named after him – and still unsolved.
+
+cohen:
+  name: Cohen
+  full: Paul Cohen
+  born: 1934
+  died: 2007
+  location: america
+  small: true
+  bio: __Paul Joseph Cohen__ (1934 – 2007) was an American mathematician who
+    proved the _continuum hypothesis_, and that the _axiom of choice_ is
+    independent from the other _Zermelo–Fraenkel_ axioms of set theory. He
+    received the Fields medal for his work.
+  links:
+    - title: Continuum Hypothesis
+      url: /world/Infinity
+    - title: Axiom of Choice
+      url: /world/Axioms_and_Proof
 
 conway:
   name: Conway
@@ -508,6 +555,22 @@ copernicus:
     - title: Planetary Orbits
       url: /course/circles/conic-sections#orbits
 
+cox:
+  name: Cox
+  full: Elbert Cox
+  born: 1895
+  died: 1969
+  location: america
+  small: true
+  bio: |
+    __Elbert Cox__ (1895 – 1969) was the first African-American mathematician
+    to receive a PhD. Universities in England and Germany refused to accept
+    his thesis at the time, but Japan’s _Tohoku Imperial University_ did.
+
+    Cox taught at _Howard University_ in the United States, he studied
+    polynomial solutions to _differential equations_, generalised the _Boole
+    summation formula_, and compared different grading systems.
+
 curry:
   name: Curry
   full: Haskell Brooks Curry
@@ -524,7 +587,7 @@ de-moivre:
   born: 1667
   died: 1754
   name: De Moivre
-  full: Abraham de Moivre
+  full: Abraham De Moivre
   bio: |
     __Abraham de Moivre__ (1667 – 1754) was a French mathematician who worked
     in probability and analytic geometry. He is most remembered for _de Moivre’s
@@ -636,7 +699,7 @@ easley:
   small: true
   name: Easley
   full: Annie Easley
-  keywords: Woman Female NASA
+  keywords: Woman Female NASA Black
   location: america
   bio: |
     __Annie Easley__ (1933 – 2011) was an American mathematician and computer
@@ -977,6 +1040,7 @@ goldbach:
   born: 1690
   died: 1764
   image: false
+  small: true
   bio: __Christian Goldbach__ (1690 – 1764) was a Prussian mathematician and
     contemporary of Euler, Leibniz and Bernoulli. He was tutor of Russian Tsar
     Peter II, and is remembered for his “Goldbach Conjecture“.
@@ -989,7 +1053,6 @@ grothendieck:
   died: 2014
   name: Grothendieck
   full: Alexander Grothendieck
-  small: true
   bio: The French mathematician __Alexander Grothendieck__ (1928 – 2014) was one
     of the key figures in the development of _algebraic geometry_. He extended
     the scope of the field to apply to many new problems in mathematics,
@@ -1161,8 +1224,9 @@ johnson:
   died: 2020
   name: Johnson
   full: Katherine Johnson
-  keywords: Woman Female NASA
+  keywords: Woman Female NASA Black
   location: america
+  small: true
   bio: |
     __Katherine Johnson__ (1918 – 2020) was an African-American mathematician.
     While working at NASA, Johnson calculated the orbits taken by American
@@ -1273,6 +1337,7 @@ langlands:
   name: Langlands
   full: Robert Langlands
   location: america
+  small: true
   bio: |
     __Robert Langlands__ (born 1936) is an American-Canadian mathematician. He
     studied at Yale University, and later returned there as a professor. Now he
@@ -1441,6 +1506,7 @@ mascheroni:
   died: 1800
   name: Mascheroni
   full: Lorenzo Mascheroni
+  small: true
   bio: |
     __Lorenzo Mascheroni__ (1750 – 1800) was an Italian mathematician and son
     of a wealthy landowner. He was ordained to priesthood at the age of 17, and
@@ -1572,6 +1638,7 @@ nash:
   name: Nash
   full: John Forbes Nash
   location: america
+  small: true
   bio: |
     __John Forbes Nash__ (1928 – 2015) was an American mathematician who worked
     on game theory, differential geometry and partial differential equations.
@@ -1648,7 +1715,6 @@ nightingale:
   died: 1910
   name: Nightingale
   full: Florence Nightingale
-  small: true
   bio: |
     __Florence Nightingale__ (1820 – 1910) was an English nurse and
     statistician. During the Crimean War, she nursed wounded British soldiers,
@@ -1804,6 +1870,7 @@ pingala:
   born: -330
   died: -270
   location: asia
+  image: false
   bio: __Pingala__ (पिङ्गल) was an ancient Indian poet and mathematician who
     lived around 300 BCE, but very little is known about his life. He wrote the
     Chandaḥśāstra, where he analysed Sanskrit poetry mathematically. It also
@@ -2179,6 +2246,7 @@ uhlenbeck:
   full: Karen Uhlenbeck
   location: america
   keywords: Woman Female
+  small: true
   bio: |
     __Karen Uhlenbeck__ (born 1942) is an American mathematician, professor
     emeritus at the University of Texas, and distinguished visiting professor
@@ -2189,7 +2257,11 @@ uhlenbeck:
     in mathematics.
 
 ulam:
+  born: 1909
+  died: 1984
   name: Ulam
+  full: Stanisław Ulam
+  small: true
   bio: __Stanisław Ulam__ (1909 – 1984) was a Polish-American mathematician. He
     played an important part in the American _Manhattan Project_ that developed
     the first nuclear weapons. He also worked on rocket propulsion using nuclear
@@ -2236,6 +2308,7 @@ wallis:
   died: 1703
   name: Wallis
   full: John Wallis
+  small: true
   bio: The English mathematician __John Wallis__ (1616 – 1703) contributed to
     the development of calculus, invented the number line and the symbol ∞ for
     infinity, and served as chief cryptographer for Parliament and the royal
