@@ -991,7 +991,7 @@ Computers used to be programmed with [punch cards](gloss: punch cards). In 1947,
 
 Click through the slides to see how to encode a string of bits using Hamming Codes.
 
-    x-hamming(value="11001110")
+    x-hamming(value="11001110" direction="encode")
 
 ::: x-slideshow
 
@@ -1016,6 +1016,33 @@ Click through the slides to see how to encode a string of bits using Hamming Cod
 {div.inline(slot="legend")} This group of bits has an [[odd|even]] parity, so we give the parity bit value [[1]].
 
 {div.inline(slot="legend")} Here is our final encoded string of bits to send!
+
+:::
+
+---
+
+> id: hamming-decode
+
+#### Decoding a Hamming Code
+
+Click through the slides to see how to decode a string of bits using Hamming Codes.
+
+    x-hamming(value="011110011110" direction="decode")
+
+::: x-slideshow
+
+{div.inline(slot="legend")} What if we receive this packet of information? Assume we know that is has been encoded using Hamming encoding.
+
+{div.inline(slot="legend")} First let's check parity group 1. The parity is [[even|odd]]. There is [[nothing|something]] wrong here!
+
+{div.inline(slot="legend")} Now let's check parity group 2. The parity is [[even|odd]]. There is [[nothing|something]] wrong here!
+
+{div.inline(slot="legend")} Now let's check parity group 4. The parity is [[even|odd]]. There is [[nothing|something]] wrong here!
+
+{div.inline(slot="legend")} Now let's check parity group 8. The parity is [[even|odd]]. There is [[nothing|something]] wrong here!
+
+{div.inline(slot="legend")} We identified there is nothing wrong with this one. So our final bit string is this string of data bits.
+
 
 :::
 

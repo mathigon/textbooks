@@ -15,7 +15,8 @@ class HammingDigit {
     GREEN = '#22AC24';
 
     public parity: boolean;
-    private places: number[];
+    private fullIndex: number;
+    private dataIndex: number;
     public value: number;
 
     private g: ElementView;
@@ -26,23 +27,23 @@ class HammingDigit {
      *
      * @param $parent SVG parent
      * @param parity is this a parity bit or a data bit?
-     * @param places two indices: first is data bit index, second is with parity bits included
+     * @param fullIndex index in the fully encoded bit string
+     * @param dataIndex index as a data bit
      * @param value digit value
      */
-    constructor($parent: SVGParentView, parity: boolean, places: number[], value: number) {
+    constructor($parent: SVGParentView, parity: boolean, fullIndex: number, dataIndex: number, value: number) {
 
       this.parity = parity;
-      this.places = places;
+      this.fullIndex = fullIndex;
+      this.dataIndex = dataIndex;
       this.value = value;
 
       const color = parity ? this.RED : this.GREEN;
 
-      const x = this.getIndexLocation(places[0]);
-      const y = 200;
-
       const gAttr = {
-        x, y: y - HEIGHT,
-        target: parity ? 'parity' : 'data'
+        target: parity ? 'parity' : 'data',
+        fullIndex,
+        dataIndex
       };
       const rectDefault = {
         stroke: color,
@@ -64,18 +65,10 @@ class HammingDigit {
       };
 
       this.g = $N('g', gAttr, $parent);
-      this.g.animate({transform: [
-        'none',
-        `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`
-      ]}, 0);
-
       this.rect = $N('rect', rectDefault, this.g);
       this.text = $N('text', textAttr, this.g);
 
       this.g.addClass('bold');
-
-      // only display data digits at first
-      if (parity) this.g.hide();
     }
 
     show() {
@@ -86,17 +79,45 @@ class HammingDigit {
       this.g.hide();
     }
 
-    makeRoom() {
+    snapToDataPosition() {
       this.g.animate({transform: [
-        `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`,
-        `translate(${this.getIndexLocation(this.places[1])}px, ${YVAL}px)`]});
+        'none',
+        `translate(${this.getIndexLocation(this.parity ? this.fullIndex : this.dataIndex)}px, ${YVAL}px)`
+      ]}, 0);
     }
 
-    // back to data digit
-    squeezeRoom() {
+    snapToFullPosition() {
       this.g.animate({transform: [
-        `translate(${this.getIndexLocation(this.places[1])}px, ${YVAL}px)`,
-        `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`]});
+        'none',
+        `translate(${this.getIndexLocation(this.fullIndex)}px, ${YVAL}px)`
+      ]}, 0);
+    }
+
+    /**
+     * Make room for parity bits
+     */
+    makeRoom() {
+      this.slideBetweenIndices(this.dataIndex, this.fullIndex);
+    }
+
+    /**
+     * Strip out the parity bits
+     */
+    squeezeRoom() {
+      this.slideBetweenIndices(this.fullIndex, this.dataIndex);
+    }
+
+    /**
+     * Slide Digit between two indices
+     *
+     * @param begin index to start animation at
+     * @param end index to end animation at
+     */
+    private slideBetweenIndices(begin: number, end: number) {
+      this.g.animate({transform: [
+        `translate(${this.getIndexLocation(begin)}px, ${YVAL}px)`,
+        `translate(${this.getIndexLocation(end)}px, ${YVAL}px)`
+      ]});
     }
 
     bold() {
@@ -120,7 +141,7 @@ class HammingDigit {
      * @param parity 1, 2, 4, 8... etc
      */
     isParityMatch(parity: number): boolean {
-      const d = this.places[1];
+      const d = this.fullIndex;
 
       // e.g.  7,4 ==> 7 % 8 = 7; 7 >= 4;
       return d % (parity * 2) >= parity;
@@ -135,28 +156,75 @@ class HammingDigit {
     }
 }
 
-@register('x-hamming', {attributes: ['value']})
+@register('x-hamming', {attributes: ['value', 'direction']})
 export class HammingCode extends CustomElementView {
 
     private $svg!: SVGParentView;
     private digits: HammingDigit[] = [];
+    private value!: string;
+    private direction!: string; // 'encode' or 'decode'
 
     ready() {
       // initialize SVG parent view
       this.$svg = $N('svg', {viewBox: `0 0 400 ${HEIGHT * 2}`}, this) as SVGParentView;
+      this.value = this.attr('value');
 
-      const value = this.attr('value');
+      this.direction = this.attr('direction');
+      if (!['encode', 'decode'].includes(this.direction)) {
+        throw Error('x-hamming must have a direction of "encode" or "decode"');
+      }
 
+      switch (this.direction) {
+        case 'encode':
+          this.initializeEncoding();
+          break;
+
+        case 'decode':
+          this.initializeDecoding();
+          break;
+      }
+
+    }
+
+    /**
+     * Initialize a Hamming Code for Encoding.
+     */
+    private initializeEncoding() {
       // Iterate through each place until you've gone through all data digits.
       let dataDigits = 1; let index = 1;
-      while (dataDigits < value.length) {
+      while (dataDigits <= this.value.length) {
         if ([0, 1, 2, 3, 4, 5].map(n => Math.pow(2, n)).includes(index)) {
           // new parity bit
-          this.digits.push(new HammingDigit(this.$svg, true, [index, index], -1));
+          const p = new HammingDigit(this.$svg, true, index, -1, -1);
+          this.digits.push(p);
+          p.snapToFullPosition();
+          p.hide();
         } else {
           // new data bit
-          const val = parseInt(value.charAt(dataDigits - 1)); // 0-index string, 1-index bits
-          this.digits.push(new HammingDigit(this.$svg, false, [dataDigits, index], val));
+          const val = parseInt(this.value.charAt(dataDigits - 1)); // 0-index string, 1-index bits
+          const d = new HammingDigit(this.$svg, false, index, dataDigits, val);
+          this.digits.push(d);
+          d.snapToDataPosition();
+          dataDigits++;
+        }
+        index++;
+      }
+    }
+
+    private initializeDecoding() {
+
+      let index = 1; let dataDigits = 1;
+      while (index <= this.value.length) {
+        const val = parseInt(this.value.charAt(index - 1)); // 0-index string, 1-index bits
+        if ([0, 1, 2, 3, 4, 5].map(n => Math.pow(2, n)).includes(index)) {
+          // new parity bit
+          const p = new HammingDigit(this.$svg, true, index, -1, val);
+          this.digits.push(p);
+          p.snapToFullPosition();
+        } else {
+          const d = new HammingDigit(this.$svg, false, index, dataDigits, val);
+          this.digits.push(d);
+          d.snapToFullPosition();
           dataDigits++;
         }
         index++;

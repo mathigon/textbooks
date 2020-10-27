@@ -770,3 +770,41 @@ export function hammingEncode($step: Step) {
     }
   });
 }
+
+export function hammingDecode($step: Step) {
+  const $hamming = $step.$('x-hamming') as HammingCode;
+
+  const slideNext = [
+    () => $hamming.noop(),
+    () => $hamming.highlight(1),
+    () => $hamming.highlight(2),
+    () => $hamming.highlight(4),
+    () => $hamming.highlight(8),
+    () => {
+      $hamming.showAll(); $hamming.hideParityBits();
+    }
+  ];
+
+  const slideBack = [
+    () => $hamming.showAll(),
+    () => $hamming.highlight(1),
+    () => $hamming.highlight(2),
+    () => $hamming.highlight(4),
+    () => {
+      $hamming.highlight(8); $hamming.makeRoomForParities();
+    }
+  ];
+
+  const $slideshow = $step.$('x-slideshow') as Slideshow;
+  $slideshow.on('next', (x: number) => {
+    if (x >= 0 && x < slideNext.length) {
+      slideNext[x]();
+    }
+  });
+
+  $slideshow.on('back', (x: number) => {
+    if (x >= 0 && x < slideBack.length) {
+      slideBack[x]();
+    }
+  });
+}
