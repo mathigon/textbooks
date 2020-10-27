@@ -993,7 +993,7 @@ Click through the slides to see how to encode a string of bits using Hamming Cod
 
 {div.inline(slot="legend")} Let's say we want to encode this string of 8 bits.
 
-{div.inline(slot="legend")} First we must shift the data bits to the right to make room for the _{.red}parity bits_. The parity bits must go into any bit position that is a power of 2.
+{div.inline(slot="legend")} First we must shift the [{.pill.green}data bits](target:data) to the right to make room for the [{.pill.red}parity bits](target:parity). The parity bits must go into any bit position that is a power of 2.
 
 {div.inline(slot="legend")} We must figure out the values that go into the parity bits. Let's start with the first bit at position 1. Choose every other one bit.
 

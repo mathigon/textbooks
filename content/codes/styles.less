@@ -423,3 +423,13 @@ x-hamming {
     animation: fadeIn 1000ms;
   }
 }
+
+
+x-hamming {
+  .focus & g.focus { opacity: 1; }
+
+  .focus & g:not(.focus) {
+    opacity: 0.1;
+    animation: fadeOut 400ms;
+  }
+}

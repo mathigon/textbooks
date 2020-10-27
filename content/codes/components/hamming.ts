@@ -41,7 +41,8 @@ class HammingDigit {
         const y = 200;
 
         const gAttr = {
-            x, y: y-HEIGHT
+            x, y: y-HEIGHT,
+            target: parity ? 'parity' : 'data'
         }
         const rectDefault = {
             stroke: color,
