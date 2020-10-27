@@ -61,15 +61,15 @@ export class Barcode extends CustomElementView {
   // TODO: could move this to a separate utility file
   private computeParityDigit(value: string) {
     // TODO do this here.
-    let odds = 0, evens = 0;
+    let odds = 0; let evens = 0;
     // 1-indexed. Only check first 11.
-    for (let i=1; i < 12; i++) {
-      const digitVal = parseInt(value.charAt(i-1));
-      if (i%2==0) evens += digitVal
+    for (let i = 1; i < 12; i++) {
+      const digitVal = parseInt(value.charAt(i - 1));
+      if (i % 2 == 0) evens += digitVal;
       else odds += digitVal;
     }
-    const sum = 3*odds + evens;
+    const sum = 3 * odds + evens;
 
-    this.errorDigit = 10 - sum%10;
+    this.errorDigit = 10 - sum % 10;
   }
 }

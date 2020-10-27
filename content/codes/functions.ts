@@ -9,9 +9,9 @@ import {Point} from '@mathigon/euclid';
 import {$N, ElementView, InputView, loadScript, slide, SVGView} from '@mathigon/boost';
 import {Slider, Slideshow, Step} from '../shared/types';
 
-import {beep, Beep} from './components/beep'
-import {CodeBox} from './components/code-box'
-import {MORSE_CODE} from './components/utilities'
+import {beep, Beep} from './components/beep';
+import {CodeBox} from './components/code-box';
+import {MORSE_CODE} from './components/utilities';
 import {HammingCode} from './components/hamming';
 
 
@@ -668,7 +668,7 @@ export function resolution($step: Step) {
 
 export function satellite($step: Step) {
   // SATELLITE: complete this
-  const $bitstream = $step.$('#bitstream') as SVGView;
+  /* const $bitstream = $step.$('#bitstream') as SVGView;
   const $trajectory = $bitstream?.$('line') as SVGView;
   const $bits = $bitstream?.$$('text');
 
@@ -681,11 +681,11 @@ export function satellite($step: Step) {
       // set transform dependent on the bits
       e.setTransform(new Point(xy.x, xy.y));
     });
-  }
+  } */
 
-  function stopBits() {
+  /* function stopBits() {
     // SATELLITE: stop the bits
-  }
+  } */
 
   const $satellites = $step.$('.satellites')!;
 
@@ -708,13 +708,13 @@ export function hammingEncode($step: Step) {
     'blank-0 blank-1': 1,
     'blank-2 blank-3': 2,
     'blank-4 blank-5': 4,
-    'blank-6 blank-7': 8,
-  }
+    'blank-6 blank-7': 8
+  };
   Object.keys(BLANK_MAP).forEach(k => {
     $step.onScore(k, () => {
-      $hamming.showParity(BLANK_MAP[k])
-    })
-  })
+      $hamming.showParity(BLANK_MAP[k]);
+    });
+  });
 
   // Slide functions.
   const slideNext = [
@@ -755,16 +755,18 @@ export function hammingEncode($step: Step) {
     () => $hamming.highlight(8),
 
     () => $hamming.noop()
-  ]
+  ];
 
   const $slideshow = $step.$('x-slideshow') as Slideshow;
   $slideshow.on('next', (x: number) => {
-    if (x >= 0 && x < slideNext.length)
-      slideNext[x]()
-  })
+    if (x >= 0 && x < slideNext.length) {
+      slideNext[x]();
+    }
+  });
 
   $slideshow.on('back', (x: number) => {
-    if (x >= 0 && x < slideBack.length)
-      slideBack[x]()
-  })
+    if (x >= 0 && x < slideBack.length) {
+      slideBack[x]();
+    }
+  });
 }

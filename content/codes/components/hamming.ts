@@ -3,16 +3,16 @@
 // (c) Mathigon
 // ============================================================================
 
-import { register, CustomElementView, $N, SVGParentView, ElementView } from "@mathigon/boost";
+import {$N, CustomElementView, ElementView, register, SVGParentView} from '@mathigon/boost';
 
-const WIDTH = 20, BUFFER = 5;
-const HEIGHT = 40, RX = 6;
+const WIDTH = 20; const BUFFER = 5;
+const HEIGHT = 40; const RX = 6;
 const YVAL = 20;
 
 class HammingDigit {
 
-    RED = "#CC0E66";
-    GREEN = "#22AC24";
+    RED = '#CC0E66';
+    GREEN = '#22AC24';
 
     public parity: boolean;
     private places: number[];
@@ -31,86 +31,86 @@ class HammingDigit {
      */
     constructor($parent: SVGParentView, parity: boolean, places: number[], value: number) {
 
-        this.parity = parity;
-        this.places = places;
-        this.value = value;
+      this.parity = parity;
+      this.places = places;
+      this.value = value;
 
-        const color = parity ? this.RED : this.GREEN;
+      const color = parity ? this.RED : this.GREEN;
 
-        const x = this.getIndexLocation(places[0]);
-        const y = 200;
+      const x = this.getIndexLocation(places[0]);
+      const y = 200;
 
-        const gAttr = {
-            x, y: y-HEIGHT,
-            target: parity ? 'parity' : 'data'
-        }
-        const rectDefault = {
-            stroke: color,
-            'stroke-width': 3,
-            fill: color,
-            width: WIDTH,
-            height: HEIGHT,
-            rx: RX,
-        }
+      const gAttr = {
+        x, y: y - HEIGHT,
+        target: parity ? 'parity' : 'data'
+      };
+      const rectDefault = {
+        stroke: color,
+        'stroke-width': 3,
+        fill: color,
+        width: WIDTH,
+        height: HEIGHT,
+        rx: RX
+      };
 
-        const textAttr = {
-            x: WIDTH/4, y: 5*HEIGHT/8,
-            width: WIDTH,
-            height: HEIGHT,
-            'font-size': 20,
-            'font-weight': 'normal',
-            fill: '#FFFFFF',
-            text: value > -1 ? value: '_'
-        }
+      const textAttr = {
+        x: WIDTH / 4, y: 5 * HEIGHT / 8,
+        width: WIDTH,
+        height: HEIGHT,
+        'font-size': 20,
+        'font-weight': 'normal',
+        fill: '#FFFFFF',
+        text: value > -1 ? value : '_'
+      };
 
-        this.g = $N('g', gAttr, $parent);
-        this.g.animate({transform: [
-            'none',
-            `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`,
-        ]}, 0);
+      this.g = $N('g', gAttr, $parent);
+      this.g.animate({transform: [
+        'none',
+        `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`
+      ]}, 0);
 
-        this.rect = $N('rect', rectDefault, this.g);
-        this.text = $N('text', textAttr, this.g);
+      this.rect = $N('rect', rectDefault, this.g);
+      this.text = $N('text', textAttr, this.g);
 
-        this.g.addClass('bold')
+      this.g.addClass('bold');
 
-        // only display data digits at first
-        if (parity) this.g.hide();
+      // only display data digits at first
+      if (parity) this.g.hide();
     }
 
     show() {
-        this.g.show()
+      this.g.show();
     }
 
     hide() {
-        this.g.hide()
+      this.g.hide();
     }
 
     makeRoom() {
-        this.g.animate({transform: [
-            `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`,
-            `translate(${this.getIndexLocation(this.places[1])}px, ${YVAL}px)`]});
+      this.g.animate({transform: [
+        `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`,
+        `translate(${this.getIndexLocation(this.places[1])}px, ${YVAL}px)`]});
     }
 
     // back to data digit
     squeezeRoom() {
-        this.g.animate({transform: [
-            `translate(${this.getIndexLocation(this.places[1])}px, ${YVAL}px)`,
-            `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`]});
+      this.g.animate({transform: [
+        `translate(${this.getIndexLocation(this.places[1])}px, ${YVAL}px)`,
+        `translate(${this.getIndexLocation(this.places[0])}px, ${YVAL}px)`]});
     }
 
     bold() {
-        this.g.removeClass('dim')
-        this.g.addClass('bold')
+      this.g.removeClass('dim');
+      this.g.addClass('bold');
     }
 
     dim() {
-        this.g.removeClass('bold')
-        this.g.addClass('dim')
+      this.g.removeClass('bold');
+      this.g.addClass('dim');
     }
 
     updateValue(value: number) {
-        this.text.text = value > -1 ? value.toString() : '_'
+      this.text.text = value > -1 ? value.toString() : '_';
     }
 
     /**
@@ -120,18 +120,18 @@ class HammingDigit {
      * @param parity 1, 2, 4, 8... etc
      */
     isParityMatch(parity: number): boolean {
-        const d = this.places[1];
+      const d = this.places[1];
 
-        // e.g.  7,4 ==> 7 % 8 = 7; 7 >= 4;
-        return d % (parity * 2) >= parity;
+      // e.g.  7,4 ==> 7 % 8 = 7; 7 >= 4;
+      return d % (parity * 2) >= parity;
     }
 
     /**
      * Returns location to draw the digit at index
-     * @param index 
+     * @param index
      */
     private getIndexLocation(index: number) {
-        return BUFFER + index*(WIDTH+BUFFER);
+      return BUFFER + index * (WIDTH + BUFFER);
     }
 }
 
@@ -142,44 +142,44 @@ export class HammingCode extends CustomElementView {
     private digits: HammingDigit[] = [];
 
     ready() {
-        // initialize SVG parent view
-        this.$svg = $N('svg', {viewBox: `0 0 400 ${HEIGHT*2}`}, this) as SVGParentView;
+      // initialize SVG parent view
+      this.$svg = $N('svg', {viewBox: `0 0 400 ${HEIGHT * 2}`}, this) as SVGParentView;
 
-        const value = this.attr('value');
+      const value = this.attr('value');
 
-        // Iterate through each place until you've gone through all data digits.
-        let dataDigits = 1, index = 1;
-        while (dataDigits < value.length) {
-            if ([0, 1, 2, 3, 4, 5].map(n => Math.pow(2, n)).includes(index)) {
-                // new parity bit
-                this.digits.push(new HammingDigit(this.$svg, true, [index, index], -1))
-            } else {
-                // new data bit
-                const val = parseInt(value.charAt(dataDigits-1)); // 0-index string, 1-index bits
-                this.digits.push(new HammingDigit(this.$svg, false, [dataDigits, index], val))
-                dataDigits++;
-            }
-            index++;
+      // Iterate through each place until you've gone through all data digits.
+      let dataDigits = 1; let index = 1;
+      while (dataDigits < value.length) {
+        if ([0, 1, 2, 3, 4, 5].map(n => Math.pow(2, n)).includes(index)) {
+          // new parity bit
+          this.digits.push(new HammingDigit(this.$svg, true, [index, index], -1));
+        } else {
+          // new data bit
+          const val = parseInt(value.charAt(dataDigits - 1)); // 0-index string, 1-index bits
+          this.digits.push(new HammingDigit(this.$svg, false, [dataDigits, index], val));
+          dataDigits++;
         }
+        index++;
+      }
     }
 
     noop() {
-        // do nothing
+      // do nothing
     }
 
     /**
      * Slide data bits to make room for parity bits
      */
     makeRoomForParities() {
-        // data bits move over
-        this.digits.filter(hd => !hd.parity).forEach(hd => hd.makeRoom());
-        // parity bits show
-        setTimeout(() => this.digits.filter(hd => hd.parity).forEach(hd => hd.show()), 400)
+      // data bits move over
+      this.digits.filter(hd => !hd.parity).forEach(hd => hd.makeRoom());
+      // parity bits show
+      setTimeout(() => this.digits.filter(hd => hd.parity).forEach(hd => hd.show()), 400);
     }
 
     hideParityBits() {
-        this.digits.filter(hd => hd.parity).forEach(hd => hd.hide())
-        this.digits.filter(hd => !hd.parity).forEach(hd => hd.squeezeRoom());
+      this.digits.filter(hd => hd.parity).forEach(hd => hd.hide());
+      this.digits.filter(hd => !hd.parity).forEach(hd => hd.squeezeRoom());
     }
 
     /**
@@ -187,20 +187,20 @@ export class HammingCode extends CustomElementView {
      * @param group parity digit
      */
     highlight(group: number) {
-        this.digits.forEach(hd => hd.isParityMatch(group) ? hd.bold() : hd.dim())
+      this.digits.forEach(hd => hd.isParityMatch(group) ? hd.bold() : hd.dim());
     }
 
     showParity(digit: number) {
-        const value = this.getParityValue(digit);
-        this.digits[digit - 1].updateValue(value);
+      const value = this.getParityValue(digit);
+      this.digits[digit - 1].updateValue(value);
     }
 
     hideParity(digit: number) {
-        this.digits[digit - 1].updateValue(-1);
+      this.digits[digit - 1].updateValue(-1);
     }
 
     showAll() {
-        this.digits.forEach(hd => hd.bold())
+      this.digits.forEach(hd => hd.bold());
     }
 
     /**
@@ -208,12 +208,12 @@ export class HammingCode extends CustomElementView {
      * @param group 1, 2, 4, 8
      */
     private getParityValue(group: number) {
-        const parity = this.digits
-            .filter(hd => !hd.parity)
-            .filter(hd => hd.isParityMatch(group))
-            .map(hd => hd.value)
-            .reduce((acc, val) => acc + val);
+      const parity = this.digits
+          .filter(hd => !hd.parity)
+          .filter(hd => hd.isParityMatch(group))
+          .map(hd => hd.value)
+          .reduce((acc, val) => acc + val);
 
-        return parity % 2;
+      return parity % 2;
     }
 }
