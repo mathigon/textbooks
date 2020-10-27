@@ -15,7 +15,7 @@ class HammingDigit {
     GREEN = '#22AC24';
 
     public parity: boolean;
-    private fullIndex: number;
+    public fullIndex: number;
     private dataIndex: number;
     public value: number;
 
@@ -283,5 +283,22 @@ export class HammingCode extends CustomElementView {
           .reduce((acc, val) => acc + val);
 
       return parity % 2;
+    }
+
+    /**
+     * Update model
+     * @param model model to update
+     */
+    updateModel(model: any) {
+      this.digits
+        .filter(hd => hd.parity)
+        .map(hd => [hd.fullIndex, this.getParityValue(hd.fullIndex)])
+        .forEach(hd => {
+          let bit = hd[1] % 2;
+          model[`parity${hd[0]}right`] = bit === 0 ? 'even' : 'odd';
+          model[`parity${hd[0]}wrong`] = bit === 0 ? 'odd' : 'even';
+          model[`pb${hd[0]}r`] = bit === 0 ? 0 : 1;
+          model[`pb${hd[0]}w`] = bit === 0 ? 1 : 0;
+        });
     }
 }

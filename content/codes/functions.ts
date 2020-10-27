@@ -703,6 +703,9 @@ export function satellite($step: Step) {
 export function hammingEncode($step: Step) {
   const $hamming = $step.$('x-hamming') as HammingCode;
 
+  // updates the model based on the value
+  $hamming.updateModel($step.model);
+
   // Map Blank pairs to the parity bits they represent
   const BLANK_MAP: {[key: string]: number} = {
     'blank-0 blank-1': 1,

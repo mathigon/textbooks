@@ -991,29 +991,29 @@ Computers used to be programmed with [punch cards](gloss: punch cards). In 1947,
 
 Click through the slides to see how to encode a string of bits using Hamming Codes.
 
-    x-hamming(value="11001110" direction="encode")
+    x-hamming(value="11001111" direction="encode")
 
 ::: x-slideshow
 
-{div.inline(slot="legend")} Let's say we want to encode this string of 8 bits.
+{div.inline(slot="legend")} Let's say we want to encode this string of 8 bits. We call these 8 bits the **{.pill.green}data bits**.
 
 {div.inline(slot="legend")} First we must shift the [{.pill.green}data bits](target:data) to the right to make room for the [{.pill.red}parity bits](target:parity). The parity bits must go into any bit position that is a power of 2.
 
 {div.inline(slot="legend")} We must figure out the values that go into the parity bits. Let's start with the first parity group. Start at the parity bit in position 1, then choose every other one bit.
 
-{div.inline(slot="legend")} This group of bits has an [[even|odd]] parity, so we give the parity bit value [[0]].
+{div.inline(slot="legend")} This group of bits has an [[${parity1right}|${parity1wrong}]] parity, so we give the parity bit value [[${pb1r}|${pb1w}]].
 
 {div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in position 2, then choose every other 2 bits.
 
-{div.inline(slot="legend")} This group of bits has an [[odd|even]] parity, so we give the parity bit value [[1]].
+{div.inline(slot="legend")} This group of bits has an [[${parity2right}|${parity2wrong}]] parity, so we give the parity bit value [[${pb2r}|${pb2w}]].
 
 {div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in position 4, then choose every other 4 bits.
 
-{div.inline(slot="legend")} This group of bits has an [[odd|even]] parity, so we give the parity bit value [[1]].
+{div.inline(slot="legend")} This group of bits has an [[${parity4right}|${parity4wrong}]] parity, so we give the parity bit value [[${pb4r}|${pb4w}]].
 
 {div.inline(slot="legend")} Now let's do the last parity group. Start at the parity bit in position 8, then choose every other 8 bits.
 
-{div.inline(slot="legend")} This group of bits has an [[odd|even]] parity, so we give the parity bit value [[1]].
+{div.inline(slot="legend")} This group of bits has an [[${parity8right}|${parity8wrong}]] parity, so we give the parity bit value [[${pb8r}|${pb8w}]].
 
 {div.inline(slot="legend")} Here is our final encoded string of bits to send!
 
