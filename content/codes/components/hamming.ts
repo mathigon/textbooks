@@ -71,6 +71,8 @@ class HammingDigit {
         this.rect = $N('rect', rectDefault, this.g);
         this.text = $N('text', textAttr, this.g);
 
+        this.g.addClass('bold')
+
         // only display data digits at first
         if (parity) this.g.hide();
     }
@@ -99,7 +101,6 @@ class HammingDigit {
     bold() {
         this.g.removeClass('dim')
         this.g.addClass('bold')
-        // HAMMING: would be nice to bold/dim with a keyframe
     }
 
     dim() {
@@ -172,7 +173,7 @@ export class HammingCode extends CustomElementView {
         // data bits move over
         this.digits.filter(hd => !hd.parity).forEach(hd => hd.makeRoom());
         // parity bits show
-        this.digits.filter(hd => hd.parity).forEach(hd => hd.show())
+        setTimeout(() => this.digits.filter(hd => hd.parity).forEach(hd => hd.show()), 400)
     }
 
     hideParityBits() {

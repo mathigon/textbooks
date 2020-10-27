@@ -394,8 +394,32 @@ x-barcode {
   .focus & .focus rect { opacity: 1; }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 x-hamming {
   g.dim {
-    opacity: 0.1
+    opacity: 0.1;
+    animation: fadeOut 1000ms;
+  }
+
+  g.bold {
+    opacity: 1;
+    animation: fadeIn 1000ms;
   }
 }
