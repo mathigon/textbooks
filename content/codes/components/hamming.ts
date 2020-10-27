@@ -148,14 +148,14 @@ export class HammingCode extends CustomElementView {
         const value = this.attr('value');
 
         // Iterate through each place until you've gone through all data digits.
-        let dataDigits = 0, index = 1;
+        let dataDigits = 1, index = 1;
         while (dataDigits < value.length) {
             if ([0, 1, 2, 3, 4, 5].map(n => Math.pow(2, n)).includes(index)) {
                 // new parity bit
                 this.digits.push(new HammingDigit(this.$svg, true, [index, index], -1))
             } else {
                 // new data bit
-                const val = parseInt(value.charAt(dataDigits));
+                const val = parseInt(value.charAt(dataDigits-1)); // 0-index string, 1-index bits
                 this.digits.push(new HammingDigit(this.$svg, false, [dataDigits, index], val))
                 dataDigits++;
             }
