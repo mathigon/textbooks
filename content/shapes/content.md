@@ -249,13 +249,257 @@ The length of the base is [[110]] [[meters | square meters]] and the length of t
 
 Let’s revisit your perimeter guess. You guessed the perimeter of the field to be ____ [[ meters | square meters]]. Below is a picture of the field as well as a field with your estimated perimeter.
 
-    // [TODO]: Talk to Philipp about the end of this chapter (I'm not sure what to include)
+    // [TODO] (DISCUSS): Talk to Philipp about the end of this chapter (I'm not sure what to include)
 
 ---
 
-## Parallelograms and Triangles
+## Parallelograms
 
-> section: parallelograms-triangles
+> section: parallelograms
+> sectionStatus: dev
+
+The Dockland Office Building in Hamburg, Germany has a “silhouette that gives the distinct impression of a ship.”
+
+    // building img (page 1)
+    figure: x-img(width=600 height=400 src='https://st3.depositphotos.com/1034044/12761/i/950/depositphotos_127611452-stock-photo-the-dockland-office-building-in.jpg')
+
+Most office buildings however, like the United Nations Headquarters in New York City, have a rectangular facade.
+
+    // [TODO] DIAGRAM-01 building (page 2)
+
+Let’s assume the side we see in this picture is only made of glass. The amount of glass used on this side is [[13,398]] [[square meters | meters]].
+
+    // [TODO] DIAGRAM-02 building (page 3)
+
+Likewise, let’s also assume the side we see in the Dockland Office Building is also only made of glass. Predict how much glass is used on this side of the building: ______  [[square meters | meters]].
+
+What best describes how you made your estimate?
+A)	I multiplied 70 and 132.
+B)	I tried to compare the size of the UN building to this building and used the answer from the UN building to make an estimate.
+C)	I had no idea, so I just typed in a number. 
+D)	I did something else not listed here.
+
+Here is how other students answered this question.
+
+To check our estimate, imagine the Dockland Office Building was actually three separate buildings on barges or cranes that could be moved around to create different possible arrangements. The red lines show the imaginary separation of the three pieces. Move around some of the pieces to make a rectangle.
+
+    // [TODO] INTERACTIVE-01: Building rectangle (pages 4-5)
+---
+---
+
+Super!
+
+Now that we see the building as a rectangle, the amount of glass on this side of the building is [[28.4 x 132]] [[square meters | meters]]. 
+
+Some students found an estimate of the amount of glass by multiplying the measurements in the original picture:
+
+    // [TODO] DIAGRAM-03 building (page 5)
+
+So, these students did [[70 x 132]] which equals 9,240 [[square meters]]. This estimate is over [[5,000 | 1,000 | 500]] [[square meters | meters]] away from the actual answer! This is about 2.5 times more than the actual area! So, multiplying these measurements [[does not | does]] come close to the area of this shape. In this chapter, we’ll work towards developing a formula to find the area of this kind of shape.
+
+---
+Below is an architect’s initial idea for part of a building. Each square represents one square meter of glass and the architect needs to plan for steel going around the entirety of the glass section.
+
+    // [TODO] INTERACTIVE-02 Glass area (page 6)
+
+The total amount of glass needed is the [[area | perimeter]] of the shape and is measured in [[square meters | meters]]. The amount of steel needed to surround the glass is the [[perimeter | area]] of the shape and is measured in [[meters | square meters]]. 
+
+The area is [[12]] [square meters | meters | square centimeters]] and the perimeter is [[14]] [meters | square meters | centimeters]]. 
+
+    // [TODO] Table, pairs with INTERACTIVE-02 above
+
+Move around the square pieces of glass to make a different shape that uses the same amount of glass. When you have one you like, click “I’m happy with my shape.”
+
+Great work! Now make a different arrangement and then click “I’m happy with my shape” when you’re done.
+---
+
+Look at the data in the table. Notice that all the arrangements have the same [[area | perimeter]], but they don’t have the same [[perimeter | area]].
+
+---
+Let’s look at how some other students approached this task. Watch each one and decide if the new arrangement has maintained the same amount of glass as the original design:
+
+    // [TODO] ANIMATION-01: Glass area animations (page 7)
+
+Great work! We’ve established one of the most fundamental ideas of area and perimeter of two-dimensional shapes - When moving around parts of a shape, as long as no parts [[overlap | touch]] and all parts of the shape are [[used | not used]], the total [[area | perimeter]] stays the same even as the perimeter [[likely changes | also stays the same]]. 
+
+In fact, this is such an important idea, it is going to stay with us for the rest of this chapter. 
+
+When moving around parts of a shape, as long as no parts overlap and all parts of the shape are used, the total area stays the same even as the perimeter likely changes.
+
+---
+Below is some cookie dough and some square cookie cutters. Place 4 cookie cutters on the dough to get a sense of how many cookies you can make with this amount of dough.
+
+    // [TODO] INTERACTIVE-04: Cookie dough cutting (pages 8-9)
+
+Super! How many cookies do you think you’ll be able to make? Just make a guess: ____ cookies. This is same as the [[area | perimeter ]] of cookie dough.
+---
+
+To determine the exact area, let’s move around some of the cookie dough, keeping in mind our big idea of moving around parts of shapes. Use the knife to cut off some of the dough and move it around the pan to arrange the dough into a rectangle.
+
+    // [TODO] INTERACTIVE-05: Dough cutting 2 (pages 9-11)
+
+Great. We [[did not | did]] overlap any of the dough and we [[did | did not]] use all the dough, so the area of this new dough is [[the same | not the same]] as the area of the original dough.
+
+To determine the area of the dough, drag in squares or simply click the Auto-fill button.
+
+Great! Click play on the animation to see the triangle move back and forth.
+
+The area of the rectangle we made is [[15]] [[square units | units]], and the area of the rectangle is [[the same | different]] than the area of the original cookie dough. So, the area of the original dough is [[15]] [[square units | units]]. Your original guess was ___ square units. Nice! Only ___ square units away!
+
+---
+Great. Let’s keep thinking about this idea. Below is another piece of cookie dough. Rotate the dough so it can fit on the baking sheet.
+
+    // [TODO]? (DISCUSS: possibly redundant) INTERACTIVE-05: Dough cutting 3 (pages 12)
+
+Nice! Now, use the knife to cut off one piece of dough. Move that piece around so the dough makes a rectangle.
+
+---
+The area of the new rectangle is [[70]] [[square cm | cm ]]. 
+
+We [[did not | did]] overlap any of the pieces and we [[did | did not]] use all the area, so the area of the rectangle is [[the same | not the same]] as the area of the original dough. So, the area of the dough is also [[70]] [[square cm | cm ]]. 
+
+Super work! Let’s do this again. You have the same starting amount of dough, but a different sized baking sheet. Rotate the dough so it can fit on the baking sheet.
+
+    // [TODO]? (DISCUSS: possibly redundant) INTERACTIVE-06: Dough cutting 4 (pages 13)
+
+Nice! Now, use the knife to cut off one piece of dough. Move that piece around so the dough makes a rectangle.
+
+The area of the new rectangle is [[70]] [[square cm | cm ]]. 
+
+We [[did not | did]] overlap any of the pieces and we [[did | did not]] use all the area, so the area of the rectangle is [[the same | not the same]] as the area of the original dough. So, we see once again that the area of the original dough is [[70]] [[square cm | cm ]].
+
+Notice how we started with the same shaped cookie dough and cut it up two different ways. In the first example, we made a rectangle that was [[5]] by [[14]]. In the 2nd attempt, we made a rectangle that was [[7]] by [[10]]. Either way, we determined the area of the original shape to be [[70]] [[square cm | cm ]].
+
+Before we move on, let’s discuss the perimeter of these three shapes.
+
+    // [TODO] ANIMATION-02: (page 14)
+
+Remember, when we moved parts of the dough around, the area [[stayed the same | changed]]. Let’s see what happened to the perimeter:
+
+The perimeter of the original cookie dough shape is [[48]] [[cm | sq. cm]]. 
+The perimeter of the first dough rectangle is [[38]] [[cm | sq. cm]].
+The perimeter of the second dough rectangle is [[34]] [[cm | sq. cm]].
+
+So, when we moved around parts of the dough, the area [[stayed the same | changed]], but the perimeter [[changed | also stayed the same]]. One final food for thought question: what shape with 70 square cm of cookie dough would have the smallest perimeter? What shape with 70 square cm of cookie dough would have the largest perimeter? This question will be explored in future Mathigon chapters, but chew on it for now!
+
+Great work! Let’s now think about all the shapes we’ve been working with so far:
+
+    // [TODO] DIAGRAM-04: Parallelograms
+
+You likely notice that all these shapes have [[4]] sides and the opposite sides are [[parallel | perpendicular]].
+
+Great! It should make sense then that these shapes are called [[parallelograms | trapezoids | hexagons]].  ANY quadrilateral with parallel opposite sides is a parallelogram. Below, click on all the shapes that are parallelograms:
+
+    // [TODO] INTERACTIVE-08: Parallelogram selection (page 16)
+---
+---
+
+Great!
+
+As you see, some shapes that meet the requirements to be a parallelogram also have other names. For example, this shape:
+
+    // [todo] DIAGRAM-05: Rectangle (page 16)
+
+has opposite sides [[parallel | perpendicular ]] and therefore is a [[parallelogram | triangle | sphere]], but we more often refer to it as a [[rectangle | trapezoid | pentagon]]. Another shape that is a parallelogram but we often call a different name is a [[square | hexagon | circle]]. You can learn more about the different names and relationships of all sorts of quadrilaterals in a different Mathigon chapter.
+
+We are close to establishing a formula for finding the formula of any parallelogram. Our last step is to explore the heights of real-world situations involving parallelograms. Look at the picture again of the Dockland Office Building in Hamburg, Germany.
+
+    // [TODO] DIAGRAM-06: Building measurements
+
+Imagine there is a rule in the Hamburg harbor that all buildings must be less than 40 meters tall. The height of this building is [[28.4]] [[meters | square meters]]. Even though the side of the building is [[70]] [[meters | square meters]], that length [[is not | is]] how tall the building is. So, this building [[does | does not]] meet the pretend rule that buildings must be below 40 meters.
+
+Great! Notice that the line representing the height of the building makes a [[right | acute | obtuse]] angle with the bottom length.
+
+Many apartment buildings in cities around the world have staircases on the exterior of the buildings for residents to use in case of emergencies. Here is a picture of one in Harlem, New York City. Imagine the two balconies on each floor were instead one large balcony. Draw a parallelogram on top of the picture to represent this.
+---
+
+    // [TODO] INTERACTIVE-08: Apartments parallelogram (pages 18-19)
+
+Imagine you need to know the height between the two balconies. Draw a line representing this height.
+
+---
+Great! Is seems that this yellow line [[is not | is]] the same lengths as the ladders.
+
+Good thought. Let’s check it.
+
+Super! In both of these example, we see that the height of a parallelogram [[is | is not]] the same as the length of the side of the parallelogram. Rather, the height of a parallelogram is the length of the line that makes a [[right | acute | obtuse]] angle with the base.
+
+We are now ready to think about a general approach for finding the area of any parallelogram. Our approach has been to move around parts of the parallelogram to make it into a [[rectangle | triangle | circle]] and then use the formula [[ base x height | base + base + height + height ]] to find the area.
+
+Sometimes, it can be easy to visualize rearranging the parallelogram into a rectangle and finding the base and height.
+
+    // [TODO] ANIMATION-03: Parallelogram -> triangle (page 20)
+
+So, to find area of this parallelogram, multiply the base of [[10]] by the height of [[3]] to get an area of [[30]] [[square cm | cm]].
+
+However, when we visualize the other side of the same parallelogram as the base, rearranging into a rectangle becomes a little more difficult. Cutting it in either of the two places shown here won’t easily give us a rectangle.
+
+    // [TODO] DIAGRAM-07: Parallelogram cuts 1 (page 20)
+
+However, if this were a building, think about the height of the building. Draw in a line to represent the height.
+
+    // [TODO] DIAGRAM-07: Parallelogram cuts 2 (page 20)
+
+Super! So, let’s see if we can rearrange this parallelogram into a [[rectangle | triangle | circle ]] with that height.
+
+    // [TODO] ANIMATION-04: Parallelogram rearrange (page 20)
+
+So, when we take the same parallelogram from the first example, but think of the shorter side as the base, we see the base has a length of [[4 cm]], the height is [[7.5 cm]] and the area is still [[30]] [[square cm | cm]]. 
+
+So, to find the area of any parallelogram, we have to first identify what side we want to think of as the [[base | diagonal | center point]]. Then, we need to identify the line that makes a [[right | acute | obtuse ]] angle with the base. We call this the [[height | diagonal]] of the parallelogram. Finally, to find the area of the parallelogram, we take the lengths of the base and the height and [[multiply | add | divide]] them together. So, a simplified formula for the area of a parallelogram is [[base | radius ]] [[ x | + | -]] [[height | diameter]].
+
+Now that we’ve derived a formula for the area of a parallelogram, let’s do a few examples of identifying pairs of bases and heights in a few parallelograms.
+
+    // [TODO]? (DISCUSS: possibly redundant, see source doc comment) INTERACTIVE-09: (page 21)
+
+Click on one side of the parallelogram shown. 
+
+Good choice! Now, click on the green line that represents the height of the parallelogram. 
+
+Yes! Watch as the parallelogram rearranges into a rectangle and then back into the original parallelogram. 
+
+Super! Now, click the other side of the parallelogram. 
+
+Now, click on the green line that represents the height of the parallelogram. 
+
+Yes! Watch as the parallelogram rearranges into a rectangle and then back into the original parallelogram. 
+
+To conclude our work with parallelograms, let’s look at two final examples of parallelograms in architecture. 
+
+In 2006, Architects from the firm Tham & Videgard designed a house for an island in the archipelago outside of Stockholm, Sweden. In describing their plans, Tham and Videgard write “The geometry of the plan is generated by the specifics of the site. The house sits on a flat surface between two rocky outcrops” As you can see in the design picture below, the architects had to fit the house in on a flat piece of land between sloping rocky ledges. So, a parallelogram is the best shape to maximize the living space in the house!
+
+    // IMAGE (page 22)
+    figure: x-img(width=600 height=537 src='/resources/shapes/images/siteplan.png')
+
+Here are some actual pictures of the house:
+
+    // House images (page 23)
+
+::: column(width=300)
+
+    x-img(width=300 height=220.58 src='/resources/shapes/images/house-1.jpg')
+    x-img(width=300 height=220 src='/resources/shapes/images/house-3.jpg')
+
+::: column(width=300)
+
+    x-img(width=300 height=409 src='/resources/shapes/images/house-2.jpg')
+
+:::
+
+
+Finally, here is one picture of the blueprints of the house:
+
+    // IMAGE: House blueprint (page 23)
+    figure: x-img(width=600 height=742 src='/resources/shapes/images/floorplan.png')
+
+
+Use the information provided to find the area of the house. [[ --- ]] [[square meters | meters]].
+
+---
+
+## Triangles
+
+> section: triangles
 > sectionStatus: dev
 
 [TODO]
