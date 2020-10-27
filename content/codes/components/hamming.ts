@@ -23,6 +23,9 @@ class HammingDigit {
     private rect: ElementView;
     private text: ElementView;
 
+    private errorDiv: ElementView | undefined;
+    private errors: number = 0;
+
     /**
      *
      * @param $parent SVG parent
@@ -154,6 +157,32 @@ class HammingDigit {
     private getIndexLocation(index: number) {
       return BUFFER + index * (WIDTH + BUFFER);
     }
+
+    /**
+     * When decoding, we can use this to mark errors.
+     */
+    markError() {
+      if (this.errors === 0) {
+        const errorAttr = {
+          x: 0, y: 0,
+          width: WIDTH,
+          height: HEIGHT,
+          'font-size': 10,
+          'font-weight': 'normal',
+          fill: this.RED,
+          text: 'x'
+        };
+        this.errorDiv = $N('text', errorAttr, this.g);
+      } else {
+        this.errorDiv!.text = this.errorDiv!.text + 'x';
+      }
+      this.errors++;
+    }
+
+    unmarkError() {
+      if (this.errors === 0) return;
+      this.errorDiv!.text = this.errorDiv!.text.substring(0, --this.errors);
+    }
 }
 
 @register('x-hamming', {attributes: ['value', 'direction']})
@@ -269,6 +298,22 @@ export class HammingCode extends CustomElementView {
 
     showAll() {
       this.digits.forEach(hd => hd.bold());
+    }
+
+    /**
+     * Mark each digit with an error.
+     * @param group the parity group
+     */
+    markGroupError(group: number) {
+      this.digits
+        .filter(hd => hd.isParityMatch(group))
+        .forEach(hd => hd.markError());
+    }
+
+    unmarkGroupError(group: number) {
+      this.digits
+        .filter(hd => hd.isParityMatch(group))
+        .forEach(hd => hd.unmarkError())
     }
 
     /**

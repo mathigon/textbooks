@@ -777,11 +777,30 @@ export function hammingEncode($step: Step) {
 export function hammingDecode($step: Step) {
   const $hamming = $step.$('x-hamming') as HammingCode;
 
+  // parity group 1
+  $step.onScore('blank-0 blank-1', () => {
+    $hamming.markGroupError(1)
+  });
+
+  // parity group 4
+  $step.onScore('blank-4 blank-5', () => {
+    $hamming.markGroupError(5);
+  });
+
   const slideNext = [
     () => $hamming.noop(),
-    () => $hamming.highlight(1),
-    () => $hamming.highlight(2),
-    () => $hamming.highlight(4),
+    () => {
+      $hamming.highlight(1);
+      // $hamming.markGroupError(1); // should not be group error, should just track parity bits
+    },
+    () => {
+      $hamming.highlight(2);
+      // $hamming.markGroupError(2);
+    },
+    () => {
+      $hamming.highlight(4);
+      // $hamming.markGroupError(4);
+    },
     () => $hamming.highlight(8),
     () => {
       $hamming.showAll(); $hamming.hideParityBits();
@@ -789,10 +808,20 @@ export function hammingDecode($step: Step) {
   ];
 
   const slideBack = [
-    () => $hamming.showAll(),
-    () => $hamming.highlight(1),
-    () => $hamming.highlight(2),
-    () => $hamming.highlight(4),
+    () => {
+      $hamming.showAll();
+      $hamming.unmarkGroupError(1);
+    },
+    () => {
+      $hamming.highlight(1);
+    },
+    () => {
+      $hamming.highlight(2);
+      $hamming.unmarkGroupError(4);
+    },
+    () => {
+      $hamming.highlight(4);
+    },
     () => {
       $hamming.highlight(8); $hamming.makeRoomForParities();
     }
