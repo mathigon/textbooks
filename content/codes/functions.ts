@@ -711,6 +711,19 @@ export function satellite($step: Step) {
 export function hammingEncode($step: Step) {
   const $hamming = $step.$('x-hamming') as HammingCode;
 
+  // Map Blank pairs to the parity bits they represent
+  const BLANK_MAP: {[key: string]: number} = {
+    'blank-0 blank-1': 1,
+    'blank-2 blank-3': 2,
+    'blank-4 blank-5': 4,
+    'blank-6 blank-7': 8,
+  }
+  Object.keys(BLANK_MAP).forEach(k => {
+    $step.onScore(k, () => {
+      $hamming.showParity(BLANK_MAP[k])
+    })
+  })
+
   // Slide functions.
   const slideNext = [
     () => $hamming.noop(),
@@ -718,16 +731,16 @@ export function hammingEncode($step: Step) {
     () => $hamming.makeRoomForParities(),
 
     () => $hamming.highlight(1),
-    () => $hamming.showParity(1),
+    () => $hamming.noop(),
 
     () => $hamming.highlight(2),
-    () => $hamming.showParity(2),
+    () => $hamming.noop(),
 
     () => $hamming.highlight(4),
-    () => $hamming.showParity(4),
+    () => $hamming.noop(),
 
     () => $hamming.highlight(8),
-    () => $hamming.showParity(8),
+    () => $hamming.noop(),
 
     () => $hamming.showAll()
   ];
