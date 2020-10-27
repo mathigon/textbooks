@@ -750,16 +750,16 @@ export function hammingEncode($step: Step) {
 
     () => $hamming.showAll(),
 
-    () => $hamming.hideParity(1),
+    () => $hamming.noop(), // $hamming.hideParity(1),
     () => $hamming.highlight(1),
 
-    () => $hamming.hideParity(2),
+    () => $hamming.noop(), // $hamming.hideParity(2),
     () => $hamming.highlight(2),
 
-    () => $hamming.hideParity(4),
+    () => $hamming.noop(), // $hamming.hideParity(4),
     () => $hamming.highlight(4),
 
-    () => $hamming.hideParity(8),
+    () => $hamming.noop(), // $hamming.hideParity(8),
     () => $hamming.highlight(8),
 
     () => $hamming.noop()
