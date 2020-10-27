@@ -4,32 +4,46 @@
 // =============================================================================
 
 
-import {Sector, Point} from '@mathigon/fermat';
-import {SVGView, $N} from '@mathigon/boost';
-import {rotateDisk} from '../shared/components/disk';
-import {Step} from '../shared/types';
+import {wait} from '@mathigon/core';
+import {CoordinateSystem, Step} from '../shared/types';
+import {CoinFlip} from './components/coin';
+
+import '../shared/components/buckets';
+import './components/coin';
 
 
-export function intro($step: Step) {
+// -----------------------------------------------------------------------------
+// Introduction
 
-  const $svg = $step.$('.spinner') as SVGView
-  const $spinner = $step.$('.spinner rect') as SVGView
+export function buckets($step: Step) {
+  const $buckets = $step.$('x-buckets')!;
+  $buckets.on('correct', () => $step.score('buckets'));
+}
 
-  const s1 = new Sector(new Point(150, 150), new Point(250, 150), 1);
+export function simulation($step: Step) {
+  const $coordinateSystem = $step.$('x-coordinate-system') as CoordinateSystem;
+  const $coin = $step.$('x-coin-flip') as CoinFlip;
 
-  $N('path', {class: 'sector-1', path: s1}, $svg)
+  $step.model.numberOfFlips = 0;
+  $step.model.numberOfHeads = 0;
+  let points: number[] = [];
 
-  rotateDisk($spinner, {
-    start() {
-      $step.score('spin');
-    },
-    draw(angle) {
-      $spinner.setTransform(undefined, angle);
-    },
-    final(angle: number) {
-      console.log('done');
-    },
-    resistance: 0.99
-  });
+  $step.model.flip = async (n = 1) => {
+    $step.score('flip');
+    $coin.flip();
+    for (let i = 0; i < n; ++i) {
+      $step.model.numberOfFlips += 1;
+      $step.model.numberOfHeads += Math.random() < 0.5 ? 1 : 0;
+      points.push($step.model.numberOfHeads / $step.model.numberOfFlips);
+      $coordinateSystem.setPoints(points);
+      await wait(10);
+    }
+  };
 
+  $step.model.reset = () => {
+    points = [];
+    $step.model.numberOfFlips = 0;
+    $step.model.numberOfHeads = 0;
+    $step.model.flip();
+  };
 }

@@ -34,10 +34,27 @@
               td(colspan=i)
 
 By now you should be comfortable with addition, subtraction and multiplication
-of integers. Division is slightly different, because you can’t always divide any
+of integers. Division is slightly different, because you can’t always divide any
 integer by any other. For example 17 divided by 3 is not a whole number – it is
 somewhere in between 5 and 6. You either have to give a remainder (2), or
 express the answer as a decimal number (5.66…).
+
+    // figure
+      x-factor-diagram.var(:n="n + 1")
+      x-slider(steps=99 :bind="n")
+    // - var i = 2
+    // while i <= 50
+      x-prime-disk(n=i size=60)
+      - i += 1
+    // - factors = (n) => Array(n-2).fill(1).map((x, i) => i+1).filter(i => !(n % i))
+    // - total = (a) => a.reduce((a, c) => a + c, 0)
+    
+    // .factor-table
+      for i in [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+        div
+          span.bulb= i
+          span.factors= factors(i).join(', ')
+          span.total= total(factors(i))
 
     .row.padded
       .grow
@@ -62,18 +79,21 @@ of __{.green}7__, and we can write __{.green}7__|__{.orange}21__.
 In this short game you have to determine which numbers are factors or multiples,
 as fast as possible. Click the [play button](->#divisibility-game_.toggle) to start.
 
-    .box.problem-box
-      .box-title: h3 Factors and Multiples Quiz
-      x-gameplay.box-body
-        .factors-row
-          .factor-number ${x}
-          | is a
-          .factor-value
-            .factor-bubble: .btn.btn-blue factor
-            .factor-bubble: .btn.btn-blue multiple
-            .factor-bubble: .btn.btn-blue neither
-          | of
-          .factor-number ${y}
+::: .box.f-blue.no-padding
+#### Factors and Multiples Quiz
+
+    x-gameplay
+      .factors-row
+        .factor-number ${x}
+        | is a
+        .factor-value
+          .factor-bubble: .btn.btn-blue factor
+          .factor-bubble: .btn.btn-blue multiple
+          .factor-bubble: .btn.btn-blue neither
+        | of
+        .factor-number ${y}
+
+:::
 
 ---
 > id: factors
@@ -236,7 +256,7 @@ is [[14]].
     +grid(40, function(n) { if (!(n % 3)) { var s = '' + n; return +s[0] + (+s[1] || 0); } })
 
 Here we’ve highlighted all numbers which are multiples of three. You can see
-that their digit sums are always [[a multiple of 3|either 0 or 3|odd numbers]].
+that their digit sums are always [[a multiple of 3|either 0 or 3|odd numbers]].
 
 {.reveal(when="blank-0")} So to determine if any number is divisible by 3, you
 just have to calculate its digit sum, and check if the result is also divisible
@@ -279,10 +299,9 @@ over is also divisible by 3 (or 9):
 
 {.text-center} __{.m-red}6__ + __{.m-blue}3__ + __{.m-green}8__ + __{.m-yellow}4__
 
-This just happens to be the digit sum! So if the <x-target no-margins
-to=".digit-sum-is">digit sum</x-target> is a multiple of 3, and we
-know that <x-target no-margins to=".digit-sum-else">everything else</x-target>
-is a multiple of 3, then the result must also be a multiple of 3.
+This just happens to be the digit sum! So if the [{.no-margins}digit sum](->.digit-sum-is) is a
+multiple of 3, and we know that [{.no-margins}everything else](->.digit-sum-else) is a multiple of
+3, then the result must also be a multiple of 3.
 
 ---
 > id: divisibility6

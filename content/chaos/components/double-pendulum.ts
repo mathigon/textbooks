@@ -5,7 +5,7 @@
 
 
 import {Obj} from '@mathigon/core';
-import {Point} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 
 
 const PI2 = Math.PI / 2;

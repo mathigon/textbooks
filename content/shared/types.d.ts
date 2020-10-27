@@ -1,5 +1,5 @@
 import {Obj, EventTarget} from '@mathigon/core';
-import {Point, Angle, Arc, Circle, Line, TransformMatrix, Polygon, Rectangle, Bounds, Segment, Ray, Sector, Polyline, Triangle, intersections} from '@mathigon/fermat';
+import {Point, Angle, Arc, Circle, Line, TransformMatrix, Polygon, Rectangle, Bounds, Segment, Ray, Sector, Polyline, Triangle, intersections} from '@mathigon/euclid';
 import {CustomElementView, ElementView, SVGView, Observable, AnimationResponse, SVGParentView} from '@mathigon/boost';
 import {ExprElement} from '@mathigon/hilbert';
 
@@ -645,6 +645,37 @@ export abstract class Tile {
     copy(dx?: number, dy?: number): any;
     static action(name: string, selectedTiles: Tile[]): void;
 }
+
+type PolypadTile = 'polygon'|'tangram'|'pentomino'|'fraction-bar'|'number-tile'|'number-bar'|'algebra-tile';
+
+export class Selection {
+  private rect;
+  private angle;
+  private center;
+  private startAngle;
+  private $tools;
+  private $rect;
+  private $rotateBar;
+  private $rotateCircle;
+  tiles: Set<Tile>;
+  constructor($parent: Polypad);
+  get size(): number;
+  add(tile: Tile, clear?: boolean): void;
+  remove(tile: Tile): void;
+  copy(): void;
+  delete(): void;
+  clear(): void;
+  private getTileProperty;
+  private update;
+  private positionTools;
+  private moveStart;
+  private move;
+  private rotateStart;
+  private rotate;
+  matchesType(type: string): boolean;
+  action(type: string, name: string): void;
+}
+
 export class Polypad extends CustomElementView {
     tiles: Set<Tile>;
     $svg: SVGParentView;
@@ -653,10 +684,17 @@ export class Polypad extends CustomElementView {
     $selection: SVGView;
     $strokes: ElementView;
     $grid: ElementView;
+    canDelete: boolean;
+    canCopy: boolean;
     ready(): void;
+    selection: Selection;
+    newTile(type: PolypadTile, options: string): Tile;
     selectRect(start: Point, end: Point): void;
     snap(...points: Point[]): Point | undefined;
-    bindSource($el: ElementView, type: string, options: string, $overlay?: ElementView): void;
+    bindSource($el: ElementView, type: string, options: string, $overlay?: ElementView, colour?: string): void;
     setColour(c?: string): void;
+    setGrid(option: 'none'|'square-dots'|'square-grid'|'tri-dots'|'tri-grid'): void;
+    setActiveTool(tool: 'move'|'pen'|'eraser'): void;
+    toggleProtractor(): void;
     clear(): void;
 }

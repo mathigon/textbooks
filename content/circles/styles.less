@@ -15,6 +15,7 @@
 .similar-circles {
   background: @grey-background;
   border-radius: 4px;
+  .dark-mode & { background: @dark-mode-background; }
 
   .handle:not(.fixed) { cursor: move; transition: r .2s; fill: @red; }
   .handle:not(.fixed):hover { r: 20 }
@@ -31,26 +32,7 @@
 
 .pi-spiral { margin: 1em auto; max-width: 100%; width: 400px; }
 
-.area-tabs {
-  display: flex;
-  margin: 0 auto .5em;
-  width: fit-content;
-
-  > * {
-    width: 80px;
-    text-align: center;
-    border: 1px solid @red;
-    border-left: none;
-    transition: color .2s, background .2s;
-    cursor: pointer;
-    font-size: 16px;
-
-    &:first-child { border-radius: 6px 0 0 6px; border-left: 1px solid @red; }
-    &:last-child { border-radius: 0 6px 6px 0; }
-    &:hover { background: fade(@red, 20%);  }
-    &.active { color: white; background: @red; cursor: default; }
-  }
-}
+#max-area x-select.segmented > * { width: 80px; font-size: 16px; }
 
 #max-area  {
   path { fill: fade(@blue, 10%); stroke: @green; stroke-width: 8px; stroke-linejoin: round; }
@@ -82,7 +64,7 @@
 .pi-left { display: flex; }
 .pi-mid { display: flex; flex-wrap: wrap; width: 10 * (@cell + 2px); }
 .pi-right { display: flex; flex-direction: column; justify-content: flex-end; }
-.pi-cell { width: @cell; color: fade(white, 50%); transition: opacity .2s; }
+.pi-cell { width: @cell; color: fade(white, 65%); transition: opacity .2s; }
 .pi-cell.hide { opacity: 0.2; }
 .pi-operator { padding: 0 4px; }
 
@@ -99,22 +81,24 @@
   .pi-cell { color: white; margin: 20px 3px 0 3px; }
 }
 
+.pi-box { padding: 0; }
 .pi-controls {
   margin-bottom: 1px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   padding: 12px 20px 11px;
+  border-bottom: 1px solid white;
   .clearfix();
   input { background: white; padding: 4px 8px; margin: -4px 0 -4px 8px; border-radius: 4px; width: 120px; }
   .pi-warning { color: @red; font-style: italic; float: right; }
 }
 
-x-pi-scroll.box-body {
+x-pi-scroll {
   height: 300px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   padding: 12px 20px 12px 40px;
-  .first-row { position: absolute; left: 16px; }
+  .first-row { margin: 0 0 -29px -24px; }
 }
 
 
@@ -170,7 +154,7 @@ x-pi-scroll.box-body {
     height: 33px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0 /* rtl:ignore */;
     background: url(/resources/circles/images/iss.svg);
     background-size: contain;
     margin: -17px -29px;
@@ -276,20 +260,12 @@ x-geopad.sketch {
 }
 
 .sphere-maps {
-  margin: 1.5rem 0;
-  @media screen and (max-width: @browser-small) { margin: 1.5em -24px; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-  .map-body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background: @grey-background;
-    border-radius: 6px;
-    padding-top: 18px;
-  }
-
-  .left { width: 240px; margin: 12px; }
+.left { width: 240px; margin: 12px; }
   .right { width: 400px; flex-grow: 1; margin: 12px; }
   svg { width: 100%; }
   .right svg { touch-action: none; }

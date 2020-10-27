@@ -2,14 +2,6 @@
 
 ## Einführung
 
-    // SOURCES
-    // http://onlineroulette.org.uk/stories/karl-pearson/
-    // http://www.eprisner.de/MAT109/FermatPascal.html
-    // http://mathforum.org/isaac/problems/prob1.html
-    // https://en.wikipedia.org/wiki/Penney%27s_game
-    // https://en.wikipedia.org/wiki/Edward_O._Thorp
-    // http://edwardothorp.com/id26.html
-
     mixin dice(n)
       svg(width=20, height=20)
         if n==1 || n==3 || n==5
@@ -158,9 +150,6 @@ Das Werfen einer (fairen) Münze hat zwei mögliche Ergebnisse, _Kopf_ und _Zahl
 beide gleich wahrscheinlich sind. Nach der obigen Gleichung muss die Wahrscheinlichkeit dafür,
  dass die Münze auf _Kopf_ landet  `1/2` = 0,5 oder 50% betragen.
 
-    // TODO Die Gleichung ist jedoch nicht sehr hilfreich, wenn die verschiedenen Ergebnisse
-    // nicht alle gleich wahrscheinlich sind, oder wenn es unendlich viele mögliche Ergebnisse gibt.
-
 Beachte, dass diese Wahrscheinlichkeit _zwischen_ 0 und 1 liegt, auch wenn nur eines der
 Ergebnisse tatsächlich eintreten kann. Aber Wahrscheinlichkeiten haben sehr wenig mit den
 tatsächlichen Ergebnissen zu tun: Wenn wir eine Münze viele Male werfen, wissen wir, dass
@@ -207,9 +196,6 @@ wenn wir die Münze _viele Male_ werfen.
 {.text-center} Die __subjektivistische__ Wahrscheinlichkeit beruht darauf, wie stark wir
 _glauben_, dass die Münze auf Kopf landen wird.
 :::
-
-    // TODO Notice that subjectivist probabilities may be different for
-    // different people – often depending on how much they know.
 
 Denke daran, dass Wahrscheinlichkeiten für _Schätzungen und Vorhersagen_ zwar eine großartige Sache sind, wir
 aber nie sagen können, was _tatsächlich_ passieren wird.
@@ -326,15 +312,20 @@ genauer.
 In dieser Animation kannst du viele "virtuelle" Würfel auf einmal werfen und sehen, wie die
 Ergebnisse im Vergleich zu den vorhergesagten Wahrscheinlichkeiten ausfallen:
 
-    .box
-      .box-title: h3 Würfeln
-      .box-body
-        .probTable.var(:html="probTable(d)")
-        p.md Wir werfen ${d}{d|2|1,6,1} Würfel auf einmal und notieren die #[span.dice(style="width: auto; padding: 0 4px;") SUMME] ihrer Augenzahlen. Die #[strong.m-green grünen Linien] stellen die Wahrscheinlichkeiten jedes möglichen Ergebnisses dar, wie es durch die Wahrscheinlichkeitstheorie vorhergesagt wird, und die #[strong.m-blue blauen Balken] zeigen, wie oft jedes Ergebnis in diesem computergenerierten Experiment aufgetreten ist.
-        p.btn-row.no-voice
-          button.btn Einmal werfen
-          button.btn 100 mal werfen
-          button.btn 1000 mal werfen
+::: .box.f-red
+
+#### Würfeln
+
+    .probTable.var(:html="probTable(d)")
+
+Wir werfen ${d}{d|2|1,6,1} Würfel auf einmal und notieren die _{span.dice(style="width: auto; padding: 0 4px;")} SUMME_ ihrer Augenzahlen. Die __{.m-green} grünen Linien__ stellen die Wahrscheinlichkeiten jedes möglichen Ergebnisses dar, wie es durch die Wahrscheinlichkeitstheorie vorhergesagt wird, und die __{.m-blue} blauen Balken__ zeigen, wie oft jedes Ergebnis in diesem computergenerierten Experiment aufgetreten ist.
+
+    p.btn-row.no-voice
+      button.btn Einmal werfen
+      button.btn 100 mal werfen
+      button.btn 1000 mal werfen
+
+:::
 
 {.reveal(when="roll")} Beachte, wie die beobachteten
 Häufigkeiten mit zunehmende Würfen immer näher an die Häufigkeiten herankommen, die wir mit Hilfe der
@@ -346,9 +337,7 @@ Würfel) zu einem Dreieck (zwei Würfel) und dann zu einer "glockenförmigen" Ku
 als __Zentraler Grenzwertsatz__ bekannt, und die glockenförmige Kurve wird als
 __Normalverteilung__ bezeichnet.
 
-
 ---
-
 
 ## Probability Trees
 
@@ -380,9 +369,7 @@ you get two marbles with different colours are xxx + xxx = xxx.
 Probability trees can be used to solve many problems that consist of
 multiple steps that happen one after the other.
 
-
 ---
-
 
 ## Venn-Diagramme
 
@@ -403,7 +390,6 @@ students studying just Biology so we write that in the remaining part of
 the Biology circle.
 How many students at the school study neither Mathematics nor Biology?
 
-
 ---
 
 ## Conditional Probability
@@ -413,9 +399,7 @@ How many students at the school study neither Mathematics nor Biology?
 
 TODO
 
-
 ---
-
 
 ## Das Ziegenproblem
 
@@ -498,9 +482,7 @@ einfach indem wir alle verschiedenen Möglichkeiten auflisten:
 Bei den 9 Möglichkeiten ist es in [[6]] Fällen nötig, die Türen zu wechseln, um zu gewinnen. Daraus ergibt sich eine
 Chance von `6/9 = 2/3` wie vorher.
 
-
 ---
-
 
 ## Das Geburtstagsproblem
 
@@ -509,9 +491,7 @@ Chance von `6/9 = 2/3` wie vorher.
 
 TODO
 
-
 ---
-
 
 ## Echte Zufälligkeit
 
@@ -576,9 +556,6 @@ Prozess wird __Kohlenstoffdatierung__ genannt.
     p.text-center.btn-row.no-voice: button.btn Zerfall starten
 
 :::
-
-    // TODO Possible probability distributions of the position of an electron in
-    // a hydrogen atom. Lighter areas represent more likely locations of the electron.
 
 ---
 > id: radioactive-1

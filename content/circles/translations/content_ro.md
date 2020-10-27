@@ -155,7 +155,7 @@ devenind circulare sau sferice și reducându-și astfel suprafața.
 
 ::: column(width=320)
 
-    x-select.area-tabs
+    x-select.segmented
       div(data-value="0") Triunghi
       div(data-value="1") Pătrat
       div(data-value="2") Pentagon
@@ -335,14 +335,17 @@ vedea cum sunt distribuite zecimalele.
 Dacă Pi este un număr normal, asta înseamnă că ne putem gândi la _orice_ șir de cifre și el va apărea 
 undeva între zecimalele lui. Aici poți căuta în primul milion de zecimale ale lui Pi - conțin ele ziua ta de naștere?
 
-    .box
-      .box-title: h3 Primul milion de zecimale ale lui Pi
-      .box-body.pi-controls
-        | Caută un șir de zecimale:
-        input(type="text" pattern="[0-9]*" maxlength=12)
-        .pi-warning
-      x-pi-scroll.box-body
-        .first-row 3.
+::: .box.f-red.pi-box
+#### Primul milion de zecimale ale lui Pi
+
+    .pi-controls
+      | Caută un șir de zecimale:
+      input(type="text" pattern="[0-9]*" maxlength=12)
+      .pi-warning
+    x-pi-scroll
+      .first-row 3.
+
+:::
 
 ---
 > id: pi-movies
@@ -380,11 +383,7 @@ fie pe 22 iulie, pentru că `pi ≈ 22/7`.
 
     figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Grade și Radiani
 
@@ -523,14 +522,14 @@ unui [__cerc unitate__](gloss:unit-circle) (un cerc de rază 1).
 
 ::: column.grow
 
-Un _{span.var-action}cerc complet_ are circumferința
+Un [cerc complet](action:setState(0)) are circumferința
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} Pentru o _{span.var-action}rotație de semicerc_, distanța
+{.reveal(when="eqn-0")} Pentru o [rotație de semicerc](action:setState(1)), distanța
 de-a lungul circumferinței este
 _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} Pentru o _{span.var-action}rotație de sfert de cerc_, distanța
+{.reveal(when="eqn-1")} Pentru o [rotație de sfert de cerc](action:setState(2)), distanța
 de-a lungul circumferinței este
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
@@ -685,10 +684,7 @@ atunci `sin(θ) ≈ θ`. De exemplu,
 anumite ecuații ce conțin funcții trigonometrice.
 Vei afla mai multe despre toate acestea în viitor.
 
-
 --------------------------------------------------------------------------------
-
-
 
 ## Tangente, Corzi și Arce
 
@@ -726,18 +722,18 @@ legate de cerc de care vom avea nevoie pentru a rezolva probleme mai complexe:
 
 ::: column.grow(parent="right")
 
-* {.r} O [{.red} secantă](pill:secant) este o dreaptă care intersectează un cerc
+* {.r} O [{.red} secantă](target:secant) este o dreaptă care intersectează un cerc
   în două puncte [Continuă](btn:next)
-* {.r.reveal(when="next-0")} O [{.green} coardă](pill:chord) este un segment de dreaptă
+* {.r.reveal(when="next-0")} O [{.green} coardă](target:chord) este un segment de dreaptă
   care unește două puncte care se află pe circumferința unui cerc. [Continuă](btn:next)
-* {.r.reveal(when="next-1")} O [{.blue} tangentă](pill:tangent) este o dreaptă care atinge 
+* {.r.reveal(when="next-1")} O [{.blue} tangentă](target:tangent) este o dreaptă care atinge 
   un cerc într-un singur punct. Acesta se numește __punct de tangență__. [Continuă](btn:next)
-* {.r.reveal(when="next-2")} Un [{.yellow} arc de cerc](pill:arc) este o porțiune din
+* {.r.reveal(when="next-2")} Un [{.yellow} arc de cerc](target:arc) este o porțiune din
   circumferința unui cerc. [Continuă](btn:next)
-* {.r.reveal(when="next-3")} Un [{.teal} sector circular](pill:sector) este o porțiune 
+* {.r.reveal(when="next-3")} Un [{.teal} sector circular](target:sector) este o porțiune 
   din interiorul unui cerc, mărginită de un _arc de cerc_ și _două raze_.
   [Continuă](btn:next)
-* {.r.reveal(when="next-4")} În cele din urmă, un [{.purple} segment circular](pill:segment) 
+* {.r.reveal(when="next-4")} În cele din urmă, un [{.purple} segment circular](target:segment) 
   este o porțiune din interiorul unui cerc, mărginită de un _arc de cerc_ și _o coardă_.
   [Continuă](btn:next)
 
@@ -756,86 +752,11 @@ definițiilor deocamdata - poți utiliza întotdeauna [glosarul](->.footer-link[
 
 {.todo} îN CURÂND!
 
-    // https://www.mathopenref.com/tangentline.html
-    // https://www.mathopenref.com/consttangents.html
-    // https://www.mathopenref.com/consttangent.html
-
-    // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
-    // Point of Tangency: The point where a tangent line touches the circle.
-    // 
-    // The tangent line and the radius drawn to the point of tangency have a unique
-    // relationship. Let’s investigate it here.
-    // 
-    // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
-    // line is perpendicular to the radius drawn to the point of tangency.
-    // 
-    // To prove this theorem, the easiest way to do so is indirectly (proof by
-    // contradiction). Also, notice that this theorem uses the words “if and only if,”
-    // making it a biconditional statement. Therefore, the converse of this theorem is
-    // also true. Now let’s look at two tangent segments, drawn from the same external
-    // point. If we were to measure these two segments, we would find that they are equal.
-    // 
-    // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
-    // point, then the segments are equal.
-    //
-    // Tangents are actually a much more universal concept,
-    // Tangent Circles: Two or more circles that intersect at one point.
-    // Two circles can be tangent to each other in two different ways, either
-    // internally tangent or externally tangent.
-
 ---
 
 ### Corzi
 
 {.todo}  îN CURÂND!
-
-    // A chord is a line segment whose endpoints are on a circle. A diameter is the
-    // longest chord in a circle. There are several theorems that explore the
-    // properties of chords.
-    // 
-    // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
-    // congruent if and only if their corresponding chords are congruent.
-    // 
-    // Notice the “if and only if” in the middle of the theorem. This means that Chord
-    // Theorem #1 is a biconditional statement. Taking this theorem one step further,
-    // any time two central angles are congruent, the chords and arcs from the
-    // endpoints of the sides of the central angles are also congruent. In both of
-    // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
-    // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
-    // radii (SAS). By CPCTC, BE≅CD.
-    // 
-    // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
-    // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
-    // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
-    // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
-    // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
-    // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
-    // bisects the chord and its corresponding arc.
-    // 
-    // Investigation: Properties of Congruent Chords
-    // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
-    // 2. From the center, draw the perpendicular segment to AB and CD.
-    // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
-    // Chord Theorem #4: In the same circle or congruent circles, two chords are
-    // congruent if and only if they are equidistant from the center.
-    // 
-    // Recall that two lines are equidistant from the same point if and only if the
-    // shortest distance from the point to the line is congruent. The shortest distance
-    // from any point to a line is the perpendicular line between them. In this
-    // theorem, the fact that FE=EG means that AB and CD are equidistant to the center
-    // and AB≅CD.
-
-    // Concentric Circles: Two or more circles that have the same center, but different radii.
-    // Congruent Circles: Two or more circles with the same radius, but different centers.
 
 ---
 > id: earth-arc
@@ -876,13 +797,13 @@ despre arcurile și sectoarele unui cerc.
 
 ::: column.grow
 
-După cum se poate vedea în diagramă, un [{.red} arc de cerc](pill:arc) este o porțiune din 
-[[circumferința|diametrul|tangenta]] unui cerc și un [{.yellow} sector circular](pill:sector)
+După cum se poate vedea în diagramă, un [{.red} arc de cerc](target:arc) este o porțiune din 
+[[circumferința|diametrul|tangenta]] unui cerc și un [{.yellow} sector circular](target:sector)
 este o porțiune din [[interiorul|raza|perimetrul]] unui cerc.
 
 ::: .reveal(when="blank-0 blank-1")
 Arcul de cerc dintre două puncte _A_ și _B_ este adesea scris `arc(AB)`. Această definiție este
-ușor ambiguă: există un [{.purple} al doilea arc de cerc](pill:major)
+ușor ambiguă: există un [{.purple} al doilea arc de cerc](target:major)
 care unește _A_ și _B_, dar merge în sens invers.
 
 Cel mai mic dintre cele două arce se numește __arcul mic__, iar cel mai mare se numește
@@ -898,17 +819,17 @@ ambele arce au aceeași lungime și sunt [[semicercuri|diametre|circumferințe]]
 ::: column.grow
 
 Pentru a afla lungimea unui arc de cerc sau aria unui sector circular avem nevoie să cunoaștem 
-unghiul corespunzător din centrul cercului: acesta se numește [{.blue} unghi la centru](pill:angle).
+unghiul corespunzător din centrul cercului: acesta se numește [{.blue} unghi la centru](target:angle).
 
 Observă cum arcul, sectorul și unghiul la centru ocupă toate _aceeași proporție_
-dintr-un cerc dat. De exemplu, dacă [{.blue} unghiul la centru](pill:angle) este
-_{span.var-action}90°_, el ocupă [[un sfert|o jumătate|o treime]] dintr-un 
-[{.teal} cerc complet](pill:fangle).
+dintr-un cerc dat. De exemplu, dacă [{.blue} unghiul la centru](target:angle) este
+[90°](action:set90Deg()), el ocupă [[un sfert|o jumătate|o treime]] dintr-un 
+[{.teal} cerc complet](target:fangle).
 
 ::: .reveal(when="blank-0")
-Asta înseamnă că [{.red} lungimea arcului](pill:arc) este și ea `1/4` din 
-[{.purple} circumferința totală](pill:circ) și 
-[{.yellow} aria sectorului](pill:sector) este `1/4` din [{.orange} aria totală](pill:area).
+Asta înseamnă că [{.red} lungimea arcului](target:arc) este și ea `1/4` din 
+[{.purple} circumferința totală](target:circ) și 
+[{.yellow} aria sectorului](target:sector) este `1/4` din [{.orange} aria totală](target:area).
 
 Putem exprima această relație sub forma unei ecuații:
 
@@ -941,27 +862,19 @@ De exemplu,
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}lungime arc](pill) | = | `"circumferință" × c/360` |
-|                          | = | `2 π r × c/360`          |
+| [lungime arc](pill:red) | = | `"circumferință" × c/360` |
+|                           | = | `2 π r × c/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}arie sector](pill) | = | `"arie cerc" × c/360` |
+| [arie sector](pill:yellow) | = | `"arie cerc" × c/360` |
 |                              | = | `π r^2 × c/360`         |
 {.eqn-system}
 
 :::
 
 unde _r_ este raza cercului și _c_ este măsura unghiului la centru.
-
-    // What the formulae are doing is taking the area of the whole circle, and
-    // then taking a fraction of that depending on what fraction of the circle
-    // the sector fills.
-
-    // The length of an arc is the distance along the curved line of the
-    // circumference of the circle. It is slightly longer than the straight
-    // line connecting the same two points (the chord).
 
 ---
 > id: arcs-rad
@@ -973,13 +886,13 @@ Dacă unghiul la centru se măsoară mai degrabă în [radiani](gloss:radians) d
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}lungime arc](pill) | = | `2 π r × c/(2π)` |
+| [lungime arc](pill:red) | = | `2 π r × c/(2π)` |
 |                          | = | `r × c`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}arie sector](pill) | = | `π r^2 × c/(2π)` |
+| [arie sector](pill:yellow) | = | `π r^2 × c/(2π)` |
 |                              | = | `1/2 r^2 c`      |
 {.eqn-system}
 
@@ -1037,9 +950,9 @@ Razele soarelui cad direct în interiorul fântânii, dar lovesc obeliscul într
 se produce o umbră. [Continuă](btn:next)
 
 ::: .reveal(when="next-0")
-Eratostene a făcut măsurători și a aflat că [{.teal} unghiul](pill:angle1) 
-umbrei era de 7.2°. Această valoare este la fel ca măsura [{.purple} unghiului la centru](pill:angle2)
-al [{.red} arcului](pill:arc) dintre Alexandria și Swenet pentru că sunt unghiuri
+Eratostene a făcut măsurători și a aflat că [{.teal} unghiul](target:angle1) 
+umbrei era de 7.2°. Această valoare este la fel ca măsura [{.purple} unghiului la centru](target:angle2)
+al [{.red} arcului](target:arc) dintre Alexandria și Swenet pentru că sunt unghiuri
 [[alternante|verticale|corespunzătoare]].
 :::
 
@@ -1125,16 +1038,7 @@ diferit care se afla între: America.
 
 {.todo} În curând!
 
-    // The last part of a circle that we can find the area of is called a segment, not
-    // to be confused with a line segment. A segment of a circle is the area of a
-    // circle that is bounded by a chord and the arc with the same endpoints as the
-    // chord. The area of a segment is Asegment=Asector−A△ABC
-
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Teorema Cercului
 
@@ -1252,11 +1156,7 @@ Combines all of Euclidean Geometry
 
 {.todo} TODO
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Poligoane ciclice
 
@@ -1281,11 +1181,7 @@ and only if the opposite angles are supplementary.
 
 https://www.youtube.com/watch?v=bJOuzqu3MUQ
 
-
-
 --------------------------------------------------------------------------------
-
-
 
 ## Sfere, Conuri și Cilindri
 
@@ -1437,12 +1333,6 @@ cilindrul devine oblic, de aceea volumul total rămâne constant:
 
 :::
 
-    // TODO You must always use the _perpendicular_ height. This is
-    // the vertical line to left in the figure above.
-
-    // TODO Volume of horizontal cylinder segments
-    // https://www.mathopenref.com/cylindervolpartial.html
-
 ---
 > id: cylinder-surface
 
@@ -1487,7 +1377,6 @@ _h_ este dată de
 
 Cilindrii se află peste tot în lumea noastră - de la conserve de băuturi carbogazoase 
 până la hârtie igienică sau conducte de apă. Poți găsi și alte exemple?
-
 
 _Gazoometrul_ de deasupra avea raza de 35m și înălțimea de 120m. Acum îi putem 
 calcula volumul care este aproximativ [[461,000 ± 1000]]`"m"^3`, iar aria sa 
@@ -1932,13 +1821,13 @@ sau turtirea anumitor zone.
 Aici se pot vedea diferite tipuri de hărți, numite __proiecții__. Încearcă să muți 
 pătratul roșu și privește cum arată _de fapt_ această zona pe un glob:
 
-    .sphere-maps
+    figure
       x-select.tabs
         .projection(data-name="mercator") Mercator
         .projection(data-name="cylindrical") Cilindrică
         .projection(data-name="robinson") Robinson
         .projection(data-name="mollweide") Mollweide
-      .map-body
+      .box.no-padding.sphere-maps
         .left
           svg.sphere-map(width=240 height=240 viewBox="0 0 240 280")
             path.outline
@@ -1963,28 +1852,11 @@ de exemplu, un poliedru cu o mulțime de fețe. Pe măsură ce numarul fețelor 
 
 {.todo} ÎN CURÂND: Demonstrația pentru calcularea ariei sferei
 
-    // If we connect the small polygons to the center of the sphere, we get
-    // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
-    // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
     
-    // Here is a
-    // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
     
-    // And therefore,
-    // surface area = 3 * volume / radius = 
     
-    // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
-
-    // ---
-    // > id: earth-surface
-    // 
-    // surface of earth
-
-
 
 --------------------------------------------------------------------------------
-
-
 
 ## Secțiuni conice
 
@@ -2056,12 +1928,6 @@ trasând întinderea maximă a firelor:
 
 {.todo} ÎN CURÂND: Desenarea interactivă a elipselor
 
-    // ---
-    // > id: ellipses-1
-    // You can also move the focal points around. Notice how, if they are further
-    // apart, the ellipse will be [[more|less]] elongated. If they are close together,
-    // it will look almost like a [[circle|parabola|trapezium]].
-
 ---
 > id: ellipses-2
 > goals: v0 v1 v2 v3
@@ -2122,7 +1988,6 @@ Pentru a rezolva această problemă, astronomii au adăugat __epicicluri__ model
 de sistem solar: planetele se mișcă pe un cerc mare în jurul Pământului, în timp ce se 
 simultan se rotesc și pe un cerc mai mic. Acesta a fost modelul universului nostru cel mai acceptat
 timp de peste 1000 de ani, în ciuda faptului că era foarte complicat:
-
 
 ::: column(width=320)
 
@@ -2188,7 +2053,6 @@ cu care se mișcă planetele este cea care previne ca acestea să cada direct î
 
 ::: column(width=280)
 
-    // Source: https://www.flickr.com/photos/hikingartist/6217869031
     .newton.interactive
       img(src="images/newton-2.jpg" width=280 height=370)
       img.over(src="images/newton-1.jpg" width=280 height=370)

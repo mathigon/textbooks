@@ -128,12 +128,6 @@ Bilgisayar bir paket sigara büyüklüğündeydi ve bellerine sarılmıştı. Ru
 
 Thorp sonuçlar hakkında bilimsel bir makale yazdı ve sonra tabii ki bilgisayarlar kumarhanelerde yasaklandı. Thorp da Las Vegas’taki tüm kumarhanelerden yasaklandı fakat o andan itibaren daha karlı bir işe yöneldi: matematiği ve bilgisayarı borsa da kullanmak.
 
-    // Shannon cryptography and code-breaking during World War II, and would go
-    // on to become known as the father of information theory - and, indeed, the
-    // information age. Shannon taught him to juggle three balls, and that he
-    // rode a unicycle on a steel cable strung between two tree stumps. "He
-    // later reached his goal," he wrote, "which was to juggle the balls while
-    // riding the unicycle on the tightrope."
 
 
 

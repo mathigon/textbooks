@@ -81,9 +81,6 @@ meinen, das wäre eine unbedeutende Menge, aber dein Körper enthält etwa `8 ×
 was bedeutet, dass auch etwa `8 × 10^23` Kohlenstoff-14 Atome dabei sind. Das sind fast eine Million Millionen
 Millionen Millionen Atome!
 
-    // Kohlenstoff ist ein wesentlicher Bestandteil unseres Körpers, weil er lange,
-    // komplexe Moleküle bilden kann. 
-
 ---
 > id: radioactive-1
 > goals: decay

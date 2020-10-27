@@ -133,8 +133,6 @@ Olasılıkları genelde üzerinde çok düşünmeden günlük hayatta sıklıkla
 
 (Hilesiz) Madeni bir para atmanın iki muhtemel sonucu vardır; eşit olasılığa sahip olan _tura_ ve _yazı_. Yukarıdaki denkleme göre, atılan bir madeni paranın _tura_ gelme olasılığı `1/2` = 0,5 veya %50 olmalıdır.
 
-    // TODO However, the equation is not very helpful if the different outcomes
-    // are not all equally likely, or if there are infinitely many possible outcomes.
 
 Sadece sonuçlardan biri gerçekleşebilir olsa bile bu olasılığın  0 ile 1 _arasında_ olduğunu not edelim. Fakat olasılıkların gerçek sonuçlarla çok az ilgisi vardır: eğer madeni bir parayı çok kez atarsak sonuçların [[yaklaşık olarak yarısının|tam olarak yarısının|hepsinin|hiçbirinin]] tura olacağını biliyoruz – ama _tam olarak hangi_ atışların tura geleceğini tahmin etmemizin hiçbir yolu yok.
 
@@ -170,8 +168,6 @@ Olasılıkları düşünmenin çok farklı yolları vardır ancak pratikte sıkl
 {.text-center} __Öznel__ olasılık bize paranın tura geleceğine ne kadar _inandığımızı_ söyler.
 :::
 
-    // TODO Notice that subjectivist probabilities may be different for
-    // different people – often depending on how much they know.
 
 Olasılıklar _tahmin etmek ve öngörmek_ için harika iken, _aslında_ ne olacağını hiçbir zaman söyleyemediğimizi hatırlayın.
 
@@ -275,15 +271,20 @@ Eğer 30 defa zar atarsak, yaklaşık `1/6 × 30 = 5` defa altı geleceğini bil
 
 Bu animasyonda aynı anda bir çok defa “sanal” zar atabilir ve gelen sonuçları öngördüğümüz olasılıklarla karşılaştırabilirsiniz:
 
-    .box
-      .box-title: h3 Zar atmak
-      .box-body
-        .probTable.var ${ probTable(d) }
-        p.md Aynı anda ${d}{d|2|1,6,1} tane zar atıyoruz ve gelen sayıların #[span.dice(style="width: auto; padding: 0 4px;") TOPLAMINI] not ediyoruz. #[strong.m-green yeşil çizgiler] olasılık teorisinin öngördüğü, her sonucun gelme olasılığını temsil ediyor ve  #[strong.m-blue mavi çizgiler] bu bilgisayar deneyinde her bir sonucun ne sıklıkla elde edildiğini gösteriyor
-        p.btn-row
-          button.btn Zar at
-          button.btn Roll 100 defa zar at
-          button.btn Roll 1000 defa zar at
+::: .box.f-red
+
+#### Zar atmak
+
+    .probTable.var(:html="probTable(d)")
+
+Aynı anda ${d}{d|2|1,6,1} tane zar atıyoruz ve gelen sayıların _{span.dice(style="width: auto; padding: 0 4px;")} TOPLAMINI_ not ediyoruz. __{.m-green} yeşil çizgiler__ olasılık teorisinin öngördüğü, her sonucun gelme olasılığını temsil ediyor ve  __{.m-blue} mavi çizgiler__ bu bilgisayar deneyinde her bir sonucun ne sıklıkla elde edildiğini gösteriyor
+
+    p.btn-row.no-voice
+      button.btn Zar at
+      button.btn Roll 100 defa zar at
+      button.btn Roll 1000 defa zar at
+
+:::
 
 {.reveal(when="roll")} Dikkat ederseniz, gittikçe daha fazla zar atarsak, gözlemlediğimiz frekanslar, olasılık teorisi kullanarak öngördüğümüz frekanslara gittikçe yaklaşıyor. Bu prensibi bütün olasılık deneylerine uygulanabilir, buna __Büyük Sayılar Yasası__ diyoruz.
 
@@ -448,8 +449,6 @@ Diğer bir yandan, bütün bir parçanın zaman içinde bozunma oranı o kadar d
 
 :::
 
-    // TODO Possible probability distributions of the position of an electron in
-    // a hydrogen atom. Lighter areas represent more likely locations of the electron.
 
 ---
 > id: radioactive-1

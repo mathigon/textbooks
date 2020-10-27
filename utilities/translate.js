@@ -6,7 +6,7 @@
 
 // ======== EDIT THESE VALUES ========
 const KEY = `../../mathigon.org/data/service-account.json`;
-const COURSES = [];
+const COURSES = ['circles', 'fractals', 'graph-theory', 'polyhedra', 'transformations'];
 const LANGUAGES = ['ar', 'az', 'cn', 'de', 'es', 'fr', 'hi', 'hr', 'it', 'ja',
   'pt', 'ro', 'ru', 'sv', 'tr', 'vi'];
 // ===================================
@@ -32,8 +32,7 @@ async function loadFromGoogle(string, lang) {
 async function translate(string, lang) {
   if (!string) return '';
   const [str, store] = encode(string);
-  return decode(await loadFromGoogle(str[0], lang), store)
-      .replace(/>>>>/g, '').replace(/<<<</g, '').trim();
+  return decode(await loadFromGoogle(str[0], lang), store).trim();
 }
 
 // -----------------------------------------------------------------------------
@@ -86,9 +85,9 @@ async function run() {
       console.log(`>> Generating ${l} translations for ${c}...`);
 
       let translated = '';
-      for (const i of items) translated += (await loadFromGoogle(i, l)) + '\n\n';
+      for (const i of items) translated += (await loadFromGoogle(i, l));
 
-      const output = decode(translated, store).trim() + '\n';
+      const output = decode(translated, store);
       fs.writeFileSync(`${ROOT}/${c}/translations/content_${l}.md`, output);
     }
   }

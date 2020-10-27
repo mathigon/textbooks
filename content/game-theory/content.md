@@ -223,14 +223,14 @@ However, if the players can work out each other’s preferred strategies, this w
 > sectionStatus: dev
 
 In all the games we’ve seen so far, there was an element of _uncertainty_: you didn't know what the
-other player might do (like in the [prisoners’ dilemma](gloss:prisoners-dilemma)), or you didn't
+other player might do (like in the [prisoners’ dilemma](gloss!:prisoners-dilemma)), or you didn't
 know the result when rolling dice, flipping coins or shuffling cards.
 
 ::: column.grow
 
 In this chapter we will look at a different kind of game, where there is no _chance_ or _luck_, and
 where all players know the current state of the game. Games like this are called [__combinatorial
-games__](gloss:combinatorial:games).
+games__](gloss!:combinatorial-games).
 
 One of the most famous combinatorial games is __chess__. A player doesn’t know what the other one
 might do in the future, but all players know the current position of every piece on the chess board.
@@ -260,7 +260,7 @@ Here you can try playing this game against the computer. Simply tap all the choc
 If you play the game a few times, you might notice that you [[always lose|lose if you take more than
 one chocolate at once|lose if you take any chocolates from box 3]].
 
-{.fixme} After some time you may notice that you always lose. In fact, it it clear from the beginning that the computer always wins unless it makes a mistake. The following sections will explore different methods to analyse combinatorial games, to find <em>winning strategies</em> and to determine whether it is better to go first or to go second.
+{.fixme} After some time you may notice that you always lose. In fact, it is clear from the beginning that the computer always wins unless it makes a mistake. The following sections will explore different methods to analyse combinatorial games, to find <em>winning strategies</em> and to determine whether it is better to go first or to go second.
 
 ---
 
@@ -361,14 +361,15 @@ INTERACTIVE
 Notice that it doesn&#8217;t matter which order the piles are in, or whether there are additional piles with zero counters. For example, (2,5,4) = (5,0,4,2). We have already shown that (1,1), (2,2), (3,3), &#8230; are all <em><strong>P</strong></em>-positions, and there is a simple method for determining whether positions with three or more piles are <em><strong>P</strong></em> or <em><strong>N</strong></em>. <span class="lgrey">This method may seem quite unexpected and unrelated to game theory. It arises when you analyse
  <em><strong>P</strong></em> and <em><strong>N</strong></em>-positions mathematically.</span>
 
-A Nim state (<em>a</em>, <em>b</em>, <em>c</em>, &#8230;) is a <strong><em>P</em></strong>-position if the <em>binary digital sum</em> or <em>Nim sum</em> of <em>a</em>, <em>b</em>, <em>c</em>, &#8230; is 0. Otherwise it is a <em><strong>N</strong></em>-position. The Nim sum is often written as <em>a</em> &oplus; <em>b</em> &oplus;<em> c</em> &oplus; &#8230; and can be calculates as shown in the following example.</p>
-  <p>To find the Nim sum 3 ⊕ 6 ⊕ 7 we proceed as follows:</p>
+A Nim state (_a_, _b_, _c_, …) is a <strong><em>P</em></strong>-position if the _binary digital sum_ or __Nim sum__ of _a_, _b_, _c_, … is 0. Otherwise it is a __{.i}N__-position. The Nim sum is often written as _a_ ⊕ _b_ ⊕ _c_ ⊕ … and can be calculated as shown in the following example.
+
+To find the Nim sum 3 ⊕ 6 ⊕ 7 we proceed as follows:
 
 ---
 
 ::: x-slideshow
 
-{div(slot="legend")} Above you can see the three numbers <strong class="red">3</strong>, <strong class="red">6</strong> and <strong class="red">7</strong> in different rows and  powers of 2 (<strong class="blue">1</strong>, <strong class="blue">2</strong>, <strong class="blue">4</strong>, 8, &#8230;) in different columns. We first need to write 3, 6 and 7 in binary, which means writing them as a sum of powers of 2.
+{div(slot="legend")} Above you can see the three numbers __{.red}3__, <strong class="red">6</strong> and <strong class="red">7</strong> in different rows and  powers of 2 (<strong class="blue">1</strong>, <strong class="blue">2</strong>, <strong class="blue">4</strong>, 8, &#8230;) in different columns. We first need to write 3, 6 and 7 in binary, which means writing them as a sum of powers of 2.
 
 {div(slot="legend")} Note that <strong class="green">3 = 1 + 2</strong>. We need to add the powers 1 and 2, but we don&#8217;t need 4. Therefore <strong class="green">3 = 011</strong> in binary.
 

@@ -148,8 +148,7 @@ poter calcolare il loro colore e la loro struttura.
 
 :::
 
-    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
-    //- src: https://www.youtube.com/watch?v=Y9PYzdFsVio
+    figure: x-video(src="https://storage.googleapis.com/mathigon-videos/tiger.mp4" poster="images/tiger.jpg" width=480 height=270 credit="© UCTV, The STEAM Channel")
 
 ---
 
@@ -287,23 +286,6 @@ orizzontale ad un filo che è attaccato al baricentro:
 
 Funziona perché il peso del triangolo è distribuito in modo uniforme attorno al
 baricentro. In fisica, questo punto è spesso chiamato il __centro di massa__.
-
-    // Ogni linea retta che passa per il baricentro divide il triangolo in due
-    // parti che hanno aree identiche. Sposta il [punto blu](target:move) nella
-    // figura a destra. L'area rossa e quella verde saranno sempre uguali.
-
-    // x-geopad(width=220): svg
-      circle.move(name="a" cx=70 cy=50)
-      circle.move(name="b" cx=60 cy=160)
-      circle.move(name="c" cx=180 cy=130)
-      circle.yellow(x="triangle(a,b,c).centroid" name="d")
-      circle.move.blue.pulsate(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
-      circle(hidden name="q" x="p.rotate(pi,d)")
-
-      path.dark(x="triangle(a,b,c)" name="t")
-      path.fill.green.light(x="t.intersect(polygon(p,q,p.rotate(pi/2,q),q.rotate(-pi/2,p)))")
-      path.fill.red.light(x="t.intersect(polygon(p,q,p.rotate(-pi/2,q),q.rotate(pi/2,p)))")
-      path.blue(x="line(p,d)")
 
 ---
 > id: circumcircle
@@ -844,10 +826,6 @@ sul muro?
 Nota che la scala, la parete e il pavimento formano
 un triangolo rettangolo. Usando il teorema di Pitagora otteniamo
 
-    //- Ideal syntax:
-    //- | `green(h^2) + blue(1^2)` | `red(6^2)`          |
-    //- |          `=> green(h^2)` | `= blank(35)`       |
-    //- |            `=> green(h)` | `= sqrt(35) = 5.92` |
     
     table.eqn-system
       tr
@@ -951,11 +929,6 @@ di area  [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfr
 e [un quadrato](target:square) di area [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
 
 {.reveal(when="blank-3 blank-4")} Combinando queste informazioni, otteniamo
-
-    //- Ideal syntax:
-    //- |         `(a+b)^2` | `= 4 xx 1/2ab + c^2` |
-    //- | `a^2 + 2ab + b^2` | `= 2ab + c^2`        |
-    //- |       `a^2 + b^2` | `= c^2`              |
 
     table.eqn-system.reveal(when="blank-3 blank-4")
       tr
@@ -1205,13 +1178,6 @@ un numero intero. Usando il sistema di coordinate sotto, sapresti trovare altre 
 
 {.reveal(when="p0 p1 p2 p3 p4 p5")} Noti una regolarità nella distribuzione di questi punti? 
 
-    // Il matematico Euclide trovò un metodo astuto per generare nuove
-    // terne pitagoriche. Per cominciare, dobbiamo scegliere due numeri naturali _m_ and _n_:
-    // {.text-center} _m_ = ${m}{m|2|1,20,1} _{span.space}_ _n_ = ${n}{n|2|1,20,1}
-    // Ora possiamo calcolare i tre numeri che formano la terna:
-    // {.text-center} `2mn =` ${2×m×n}, `m^2 - n^2 =` ${m×m-n×n},  `m^2 + n^2 =` ${m×m+n×n}
-    // Ed ecco la nostra tenra pitagorica! puoi verificare che a2 + b2 = c2.
-
 ----
 
 ## Triangoli isosceli e equilateri
@@ -1233,28 +1199,6 @@ Proof by constructing angle bisector and using SAS result.
 
 {.todo} COMING SOON – Trova l'altezza di un triangolo isoscele usando Pitagora
 
-    // {.todo} Gli angoli tra i lati obliqui e la base sono
-    // chiamati angoli alla base. L'angolo formato dai due lati obliqui è
-    // chiamato l'angolo al vertice.
-    // 
-    // {.todo} Teorema diretto dei triangoli isosceli: Gli angoli alla base di un triangolo isoscele sono congruenti.
-    // Per dimostrare questo teorema costruiremo la bisettrice dell'angolo
-    // al vertice di un triangolo isoscele.
-    // 
-    // {.todo} Teorema dei triangoli isosceli: La bisettrice dell'angolo al vertice in un
-    // triangolo isoscele è anche l'asse della base.
-    // 
-    // {.todo} L'opposto è vero per entrambi i teoremi
-    // . Se due angoli in un triangolo sono congruenti, allora
-    // i lati opposti sono anch'essi congruenti. E se l'asse della base di un triangolo
-    // corrisponde con la bisettrice dell'angolo opposto, allora il triangolo è isoscele.
-    // 
-    // {.todo} In altre parole, se △ABC è isoscele, AD⊥CB and CD≅DB, then ∠CAD≅∠BAD.
-    // 
-    // {.todo} Trova l'altezza di un triangolo isoscele
-    // Un'applicazione del teorema di Pitagora consiste nell'identificare l'altezza di un triangolo isoscele
-    // per poterne calcolare l'area.
-
 ---
 > id: equilateral
 
@@ -1263,14 +1207,6 @@ Proof by constructing angle bisector and using SAS result.
 Un triangolo si dice [__equilatero__](todo:equilateral-triangle) se tutti i suoi
 lati hanno la stessa lunghezza. Abbiamo [già visto](/course/euclidean-geometry/geometric-construction) come costruire un
 triangolo equilatero usando riga e compasso.
-
-    // Ogni triangolo equilatero è anche isoscele. Secondo il teorema diretto dei triangoli sosceli
-    // sappiamo che gli angoli opposti ai lati congruenti sono congruenti tra loro.
-    // In un triangolo equilatero, tutti i lati sono congruenti, quindi tutti gli angoli
-    // dovranno essere congruenti.
-    // 
-    // Siccome sappiamo che la somma dei tre angoli vale 180°, ogni angolo
-    // in un triangolo equilatero deve valere [[60]]°.
 
 {.todo} COMING SOON – Ampiezza degli angoli di un triangolo equilatero
 
@@ -1403,31 +1339,12 @@ Le tre funzioni trigonometriche sono relazioni tra gli angoli e il rapportotra i
 
 {.todo} COMING SOON – Approfondimento di trigonometria
 
-    // {.todo} COMING SOON – Abbreviations: sin x, cos y
-    // {.todo} COMING SOON – Using calculators
-    // {.todo} COMING SOON – Examples
-    // {.todo} COMING SOON – Rationalize the denominator
-
 ---
 > id: inverse-trig
 
 ### Funzioni trigonometriche inverse 
 
 {.todo} COMING SOON – Funzioni inverse
-
-    // Conoscerai probabilmente il termine "inversa". In matematica, dopo aver imparato come
-    // fare un'operazione, si impara anche come “disfarla” . Per esempio, ti
-    // ricorderai che l'addizione e la sottrazione sono considerate operazioni inverse.
-    // Anche la moltiplicazione e la divisione sono operazioni inverse. In algebra hai usato
-    // le operazioni inverse per risolvere equazioni e disequazioni. Quando utilizziamo il termine
-    // inversa ai rapporti trigonometrici, possiamo trovare la misura dell'angolo acuto
-    // in un triangolo rettangolo. Normalmente, se conosci un angolo e un lato di un
-    // triangolo rettangolo, puoi trovare gli altri due lati usando il seno, il coseno o la tangente. Con
-    // i rapporti trigonometrici inversi, puoi trovare la misura dell'angolo conoscendo due lati.
-
-    // Sulla maggior parte delle calcolatrici scientifiche e grafiche i tasti sono
-    // [SIN−1],[COS−1], e [TAN−1]. Normalmente, occorre usare il tasto shift
-    // per accedere a queste funzioni.
 
 ---
 
@@ -1448,10 +1365,6 @@ In un triangolo con lati _a_, _b_ e _c_, e angoli _A_, _B_ e _C_,
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
 :::
 
-    // {.todo} Use Law of Sines when given:
-    // An angle and its opposite side.
-    // Any two angles and one side.
-
 ::: column.grow
 ::: .theorem
 __Teorema del coseno__  
@@ -1462,21 +1375,12 @@ In un triangolo con lati _a_, _b_ e _c_, e angoli _A_, _B_ e _C_,
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
-    // {.todo} Anche se si tratta di tre formule, sono tutte molto simili. Dapprima, nota
-    // che il lato opposto all'angolo che è l'argomento del coseno si trova a sinistra 
-    // dell'uguaglianza.
-    // 
-    // {.todo} Use Law of Cosines when given:
-    // Two sides and the included angle.
-    // All three sides.
 :::
 
 ---
 > id: trigonometry-4
 
 {.todo} COMING SOON – Dimostrazione, esempi e applicazioni
-
-    // TODO Future stuff about trigonometry
 
 ---
 > id: mountains

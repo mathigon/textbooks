@@ -4,9 +4,9 @@
 // =============================================================================
 
 
-/// <reference types="three"/>
+/// <reference types="THREE"/>
 import {Obj} from '@mathigon/core';
-import {loadScript, $N, CanvasView, ElementView} from '@mathigon/boost';
+import {$html, $N, CanvasView, ElementView, loadScript} from '@mathigon/boost';
 
 
 const url = '/resources/shared/vendor/three-91.min.js';
@@ -24,7 +24,7 @@ function getRenderer(width: number, height: number) {
 
   const renderer = new THREE.WebGLRenderer({antialias: true});
   renderer.localClippingEnabled = true;
-  renderer.setClearColor(0xffffff, 1);
+  renderer.setClearColor($html.hasClass('dark-mode') ? 0x22212e : 0xffffff, 1);
   renderer.setSize(width, height);
   return renderers[id] = renderer;
 }
@@ -39,7 +39,7 @@ export interface Graphics3D {
 }
 
 export async function create3D($el: ElementView, fov: number, width: number,
-                               height = width): Promise<Graphics3D> {
+    height = width): Promise<Graphics3D> {
 
   const $canvas = $N('canvas',
       {width, height, style: 'max-width: 100%'}, $el) as CanvasView;

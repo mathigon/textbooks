@@ -5,7 +5,7 @@
 
 
 import {Obj} from '@mathigon/core';
-import {CustomElementView, register, $N, SVGParentView} from '@mathigon/boost';
+import {$N, CustomElementView, register, SVGParentView} from '@mathigon/boost';
 
 
 const DIGITS: Obj<string> = {

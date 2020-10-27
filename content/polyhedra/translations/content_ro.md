@@ -272,7 +272,7 @@ măsura [unghiului intern](target:int-angle) al poligonului:
 [[tangentei|sinusului|cosinusului]]:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
-target("latura opusă", "apothem") / target("latura alăturată", "half-base") =
+pill("olatura opusă", "yellow", "apothem") / pill("latura alăturată", "green", "half-base") =
 blank("apotema", "s", "s/2") / blank("s/2", "s", "apotema")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("apothem", "yellow",
@@ -574,8 +574,6 @@ sunt congruente și ambele [perechi de unghiuri opuse](target:angles) sunt congr
 {.reveal(when="blank-1")} Și reciproca este adevărată: dacă ambele perechi de 
 laturi (sau unghiuri) opuse ale unui patrulater sunt congruente, atunci 
 patrulaterul este un paralelogram.
-
-    //- Unghiurile alăturate sunt suplementare.
 
 ::: tab
 #### Diagonale _{span.check(when="diagonal blank-2 blank-3")}_
@@ -930,26 +928,6 @@ oricare ecuație ce se potrivește mai bine._
 
 :::
 
-    //- ### Cyclic quadrilaterals
-
-    //- ### Isosceles Trapeziums
-    //- 
-    //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
-    //- congruent. The third trapezoid above is an example of an isosceles
-    //- trapezoid. Think of it as an isosceles triangle with the top cut off.
-    //- Isosceles trapezoids also have parts that are labeled much like an
-    //- isosceles triangle. Both parallel sides are called bases.
-    //- 
-    //- In an isosceles triangle, the two base angles are congruent. This
-    //- property holds true for isosceles trapezoids.
-    //- 
-    //- The converse is also true: If a trapezoid has congruent base angles,
-    //- then it is an isosceles trapezoid.
-    //-
-    //- That the diagonals of a rectangle are congruent AND they isect each
-    //- other. The diagonals of an isosceles trapezoid are also congruent, but
-    //- they do NOT bisect each other.
-
 ---
 
 ## Mozaicări
@@ -1032,11 +1010,6 @@ tehnologie – din Roma Antică până în prezent. Iată câteva exemple:
 {.caption} _Studiul diviziunii regulate a planului cu reptile_, M. C. Escher
 :::
 
-    // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
-    // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
-    // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
-
 ---
 > id: tessellation-drawing
 > goals: shapes0 shapes1
@@ -1096,7 +1069,6 @@ de toate aceste unghiuri pentru a însuma [[360]]°, altfel vor exista goluri sa
 {.caption} Pentagons [[don’t tessellate|tessellate]] _{span.reveal(when="blank-2")} pentru că multiplii lui 108°
 nu se pot însuma până la 360°._
 
-    //- {.caption}3 × 108° = 324° este prea mic, dar 4 × 108° = 432° este prea mare.
 ::: column(width=160)
     include svg/tessellations/hexagons.svg
 
@@ -1227,7 +1199,6 @@ Se pare că putem mozaica nu doar triunghiuri echilaterale, ci _orice triunghi_!
           if x || y
             path.blue.fill(x=`x.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
             path.green.fill(x=`y.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
-
 
 ::: column.grow    
 Și mai surprinzător, și _orice patrulater_ se poate mozaica! Suma unghiurilor interne 
@@ -1424,12 +1395,6 @@ vei învăța cum să o demonstrezi matematic.
 să desenăm sau să vizualizăm în plan, obiecte bidimensionale. Există câteva
 moduri diferite de a vedea poliedrele tridimensionale în formă bidimensională.
 
-    //- x-folding(shape="Tetrahedron" size=400)
-    //- x-folding(shape="Cube" size=400)
-    //- x-folding(shape="Octahedron" size=400)
-    //- x-folding(shape="Dodecahedron" size=400)
-    //- x-folding(shape="Icosahedron" size=400)
-
 Care dintre aceste plase formează un cub
 Potrivește plasa cu obiectul
 https://github.com/polymake/matchthenet
@@ -1479,10 +1444,6 @@ același tip de poligon regulat și în fiecare [vârf](gloss:polyhedron-vertex)
 se întâlnesc același număr de fețe. Poliedrele care au aceste două proprietăți
 se numesc [__corpuri platonice__](gloss:platonic-solid), numite după
 folosoful grec [Platon](bio:plato).
-
-    //- The pyramid on the right of not a Platonic solid. It consists of two
-    //- different kinds of polygons (squares and triangles), and it has [[4]]
-    //- faces meeting at the top vertex, but only [[3]] at the bottom vertices.
 
 Așadar cum arată corpurile platonice – și câte sunt? Pentru a construi o formă
 tridimensională avem nevoie de cel puțin [[3]] fețe care să se întâlnească în
@@ -1826,10 +1787,6 @@ tipuri diferite. Numele lor e dat după un alt matematician grec,
 {.caption} __Dodecahedron simum__  
 92 faces, 60 vertices, 150 edges
 :::
-
-    // Prisms and antiprisms, whose symmetry groups are the dihedral groups, are
-    // generally not considered to be Archimedean solids, despite meeting the
-    // above definition.
 
 ---
 > id: polyhedra-applications

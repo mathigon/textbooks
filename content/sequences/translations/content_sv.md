@@ -36,7 +36,6 @@ Bankirer tittar också på historiska uppgifter om aktiekurser, räntor och valu
 Professionella matematiker använder mycket komplexa algoritmer för att hitta och analysera alla dessa mönster, men vi kommer att börja med något mer grundläggande.
 
 ---
-
 > id: simple-patterns
 
 ### Enkla sekvenser
@@ -70,7 +69,6 @@ _{.n}[[64]]*{span.arrow(hidden)}×2*_, …
 _{span.pattern.reveal(when="blank-6 blank-7")} Mönster: "Multiplicera föregående nummer med 2 för att få nästa."_
 
 ---
-
 > id: simple-patterns-1
 
 Prickarna (...) i slutet betyder helt enkelt att sekvensen kan fortsätta för alltid. När vi refererar till sådana sekvenser i matematik, representerar vi ofta varje term med en speciell [variabel](gloss:variable):
@@ -86,13 +84,7 @@ Prickarna (...) i slutet betyder helt enkelt att sekvensen kan fortsätta för a
 
 Det lilla antalet efter _x_ kallas ett __-underlag__ och indikerar termens position i sekvensen. Det betyder att vi kan representera _n_ termen i sekvensen med [[`x_n`|`x_i`|`x_2`]].
 
-    // You might think that it would be easier to label the terms in the
-    // sequence as _a_, _b_, _c_, _d_, and so on. However you’ll eventually
-    // [[run out of letters|reach 100|forget a letter]], while the sequence
-    // might go on forever!
-
 ---
-
 > id: triangles
 
 ### Triangel- och fyrkantiga siffror
@@ -138,7 +130,6 @@ Sekvenser i matematik behöver inte alltid vara siffror. Här är en sekvens som
 :::
 
 ---
-
 > id: triangle-1
 
 I varje steg lägger vi till ytterligare en rad till den föregående triangeln. Längden på dessa nya rader ökar också med en varje gång. Kan du se mönstret?
@@ -150,7 +141,6 @@ _{.n}[[28]]*{span.arrow.reveal(when="blank-0")}+7*_,
 _{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
 
 ---
-
 > id: recursive
 
 Vi kan också beskriva detta mönster med en speciell [formel](gloss:formula):
@@ -165,14 +155,11 @@ Vi kan också beskriva detta mönster med en speciell [formel](gloss:formula):
 För att få _n_ -de triangelnumret tar vi [[föregående|first|next]] triangelnummer och lägger till _n_. Om till exempel _n_ = ${n}{n|5|2,20,1} blir formeln <msub><mi>x</mi><mn>${n}</mn> </msub> = <msub> <mi > x </mi> <mn> ${n-1} </mn> </msub> + ${n}.
 
 ---
-
 > id: recursive-1
-
 
 En formel som uttrycker `x_n` som en funktion av tidigare termer i sekvensen kallas en [__rekursiv formel__](gloss:sequence-recursive). Så länge du känner till [[första termen|last term|second term]] i sekvensen kan du beräkna alla följande.
 
 ---
-
 > id: squares
 
     hr
@@ -218,7 +205,6 @@ En annan sekvens som består av geometriska former är __kvadratnumren__. Varje 
 :::
 
 ---
-
 > id: square-1
 
 För triangelnumren hittade vi en rekursiv formel som säger _nästa_ term i sekvensen som en funktion av dess _tidigare_ termer. För kvadratiska siffror kan vi göra ännu bättre: en formel som berättar _n_: e termen direkt utan att först behöva beräkna alla tidigare:
@@ -226,13 +212,11 @@ För triangelnumren hittade vi en rekursiv formel som säger _nästa_ term i sek
 {.text-center.s-purple} _{.n} `x_n`_ = _{x-equation(solution="n^2")}_
 
 ---
-
 > id: explicit
 
 Detta kallas en [__uttrycklig formel__](gloss:sequence-explicit). Vi kan till exempel använda det för att beräkna att det 13: e kvadratnumret är [[169]], utan att först hitta de tidigare 12 kvadratnumren.
 
 ---
-
 > id: definitions
 
     hr
@@ -250,7 +234,6 @@ En [__uttrycklig formel__](gloss:sequence-explicit) för en sekvens berättar v�
 :::
 
 ---
-
 > id: action-sequence
 
 ### Action Sequence Photography
@@ -264,7 +247,6 @@ Låt oss dock först se på något helt annat: __fotografering av åtgärdssekve
 Kan du se hur skidåkaren bildar en sekvens? Mönstret är inte tillägg eller multiplikation, utan en geometrisk [transformation](gloss:rigid-transformation). Mellan på varandra följande steg översätts och [[roteras|reflected|dilated]].
 
 ---
-
 > id: action-sequence-1
 
 Här är några fler exempel på action-sekvensfotografering för din njutning:
@@ -316,7 +298,6 @@ Halley kom ihåg att andra astronomer hade observerat liknande kometer mycket ti
 :::
 
 ---
-
 > id: halley-1
 
 Halley drog slutsatsen att alla tre observationerna i själva verket var av samma komet - som nu kallas _Halleys komet_. Den kretsar runt solen och passerar jorden ungefär vart 76 år. Han förutspådde också när kometen skulle bli synlig nästa:
@@ -327,7 +308,6 @@ _{.n}1758*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
 _{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
 
 ---
-
 > id: halley-2
 
 Faktiskt är tidsintervallet inte alltid _exakt_ 76 år: det kan variera med ett eller två år, eftersom kometens bana avbryts av andra planeter. Idag vet vi att Halleys komet observerades av forntida astronomer redan 240 f.Kr.
@@ -341,7 +321,6 @@ Faktiskt är tidsintervallet inte alltid _exakt_ 76 år: det kan variera med ett
       p.caption Depections of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
 
 ---
-
 > id: ball
 
 En annan grupp forskare undersöker beteendet hos en studsande tennisboll. De tappade bollen från en höjd av 10 meter och mätte dess position över tid. Med varje studs förlorar bollen en del av sin ursprungliga höjd:
@@ -352,7 +331,6 @@ En annan grupp forskare undersöker beteendet hos en studsande tennisboll. De ta
     x-slider(steps=400 speed=0.5)
 
 ---
-
 > id: ball-1
 > goals: reveals
 
@@ -367,7 +345,6 @@ _{span.n.reveal}2.621*{span.arrow}×0.8*_*{span.reveal},*
 _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 
 ---
-
 > id: arithmetic-geometric
 
 ### Definitioner
@@ -375,7 +352,6 @@ _{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
 Om du jämför båda dessa problem, kanske du märker att det finns många likheter: sekvensen för Halleys komet har samma [[skillnad|ratio|product]] mellan på varandra följande termer, medan sekvensen av tennisbollsprång har samma [[-förhållande { 619} mellan på varandra följande villkor.
 
 ---
-
 > id: arithmetic-geometric-1
 
 Sekvenser med dessa egenskaper har ett speciellt namn:
@@ -407,7 +383,6 @@ Varje term multipliceras eller delas med samma antal för att producera nästa.
 :::
 
 ---
-
 > id: arithmetic-geometric-select
 
 Här är några olika sekvenser. Kan du bestämma vilka som är aritmetiska, geometriska eller varken, och vilka värden för _{.b.m-red} d_ och _{.b.m-green} r_ är?
@@ -455,7 +430,6 @@ Här är några olika sekvenser. Kan du bestämma vilka som är aritmetiska, geo
 :::
 
 ---
-
 > id: arithmetic-geometric-graph
 
 För att definiera en aritmetisk eller geometrisk sekvens måste vi veta inte bara den vanliga skillnaden eller förhållandet, utan också det initiala värdet (kallad `a`). Här kan du generera dina egna sekvenser och plotta deras värden på en graf genom att ändra värdena på `a`, _d_ och _r_. Kan du hitta några mönster?
@@ -497,24 +471,23 @@ _{span.n}${geometric(b,r,5)}_, …
 
 {.reveal(when="blank-0 blank-1")} Geometriska sekvenser kan å andra sidan bete sig helt annorlunda baserat på värdena på `a` och _r_:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-Om _{span.var-action} `r > 1`_ kommer termerna [[snabbt att bli större|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, upp till oändlighet. Matematiker säger att sekvensen [__avviker__](gloss:sequence-divergence)._
+Om [`r > 1`](action:set(2,2)) kommer termerna [[snabbt att bli större|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, upp till oändlighet. Matematiker säger att sekvensen [__avviker__](gloss:sequence-divergence)._
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-Om _{span.var-action} *r* är mellan –1 och 1_ kommer termerna alltid [[att närma sig 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Vi säger att sekvensen [__konvergerar__](gloss:sequence-convergence)._
+Om [*r* är mellan –1 och 1](action:set(10,0.6)) kommer termerna alltid [[att närma sig 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Vi säger att sekvensen [__konvergerar__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-Om _{span.var-action} `r < -1`_, kommer termerna att växla mellan positivt och negativt, medan deras [[absoluta värde|inverse|difference]] blir större.
+Om [`r < -1`](action:set(3,-1.4)), kommer termerna att växla mellan positivt och negativt, medan deras [[absoluta värde|inverse|difference]] blir större.
 
 :::
 
 {.reveal(when="blank-4 blank-5")} Du lär dig mer om konvergens och avvikelse i [sista avsnittet](/course/sequences/convergence) i den här kursen.
 
 ---
-
 > id: arithmetic-geometric-recursive
 
 ### Rekursiva och explicita formler
@@ -532,7 +505,6 @@ I det föregående avsnittet fick du veta att en [__rekursiv formel__](gloss:seq
 :::
 
 ---
-
 > id: arithmetic-geometric-explicit
 
 Ett problem med rekursiva formler är att för att hitta den 100: e termen, till exempel, måste vi först beräkna de tidigare 99 termerna - och det kan ta lång tid. Istället kan vi försöka hitta en [__uttrycklig formel__](gloss:sequence-explicit), som säger värdet på _n_: e termen direkt.
@@ -540,7 +512,6 @@ Ett problem med rekursiva formler är att för att hitta den 100: e termen, till
 ::: column.grow
 
 För __{.m-red} aritmetiska sekvenser__ måste vi lägga till _d_ i varje steg:
-
 
 {.ag-equation} `x_1 =` `a`
 
@@ -577,7 +548,6 @@ För __{.m-green} geometriska sekvenser__ måste vi multiplicera _r_ vid varje s
 :::
 
 ---
-
 > id: arithmetic-geometric-explicit-1
 
 Här är en sammanfattning av alla definitioner och formler som du hittills har sett:
@@ -611,7 +581,6 @@ En __{.m-green} geometrisk sekvens__ har första term `a` och gemensamt förhål
 Låt oss nu titta på några exempel där vi kan använda allt detta!
 
 ---
-
 > id: pay-it-forward
 > goals: video
 
@@ -624,7 +593,6 @@ Här är ett kort klipp från filmen _Pay it Forward_, där 12-åriga Trevor fö
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
-
 > id: pay-it-forward-1
 
 Kärnan i Trevors idé är att om alla ”betalar ut det” kan en enda person ha en enorm inverkan på världen:
@@ -639,7 +607,6 @@ _{span.n}[[27]]*{span.arrow}×3*_, _{span.n}[[81]]*{span.arrow}×3*_,
 _{span.n}[[243]]*{span.arrow}×3*_, …
 
 ---
-
 > id: pay-it-forward-2
 
 Med hjälp av den [explicita formeln](gloss:sequence-explicit) för geometriska sekvenser kan vi ta reda på hur många nya människor som påverkas i vilket steg som helst:
@@ -647,7 +614,6 @@ Med hjälp av den [explicita formeln](gloss:sequence-explicit) för geometriska 
 {.text-center} `x_n` = _{x-equation(solution="3^(n-1)")}_
 
 ---
-
 > id: pay-it-forward-3
 
 Antalet människor ökar otroligt snabbt. På 10: e steget skulle du nå 19 683 nya, och efter 22 steg skulle du ha nått fler människor än som för närvarande lever på jorden.
@@ -658,7 +624,6 @@ Denna sekvens av siffror har ett speciellt namn: __krafter på 3__. Som ni ser �
 _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 
 ---
-
 > id: millionaire
 
 ### ​​Vem vill bli miljonär?
@@ -666,7 +631,6 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
 {.todo} KOMMER FÖR!
 
 ---
-
 > id: chessboard
 
 ### Chessboard-problemet
@@ -685,7 +649,6 @@ Namnet på [geometriska sekvenser](gloss:geometric-sequence) är ganska förvirr
 Men det finns många andra sekvenser som _är_ baserat på vissa geometriska former - av vilka du redan såg i [introduktion](/course/sequences/introduction). Dessa sekvenser kallas ofta [__figurnummer__](gloss:figurate-numbers), och i det här avsnittet kommer vi att titta närmare på några av dem.
 
 ---
-
 > id: triangle-numbers
 
 ### Triangelnummer
@@ -733,7 +696,6 @@ __triangelnumren__ genereras genom att skapa trianglar med gradvis större storl
 Du har redan sett den rekursiva formeln för triangelnummer: `x_n =` [[`x_(n-1) + n`|`n^2 - 1`|`2 × x_(n-1) - 1`]].
 
 ---
-
 > id: billiard-pool
 
 Det är ingen slump att det alltid finns 10 stift vid bowling eller 15 bollar när man spelar biljard: de är båda triangeln!
@@ -749,36 +711,22 @@ Det är ingen slump att det alltid finns 10 stift vid bowling eller 15 bollar n�
 :::
 
 ---
-
 > id: triangle-proof
 
 Tyvärr är den rekursiva formeln inte så bra om vi vill hitta det 100: e eller det 5000: e triangelnumret utan att först beräkna alla tidigare. Men som vi gjorde med aritmetiska och geometriska sekvenser, kan vi försöka hitta en uttrycklig formel för triangelnumren.
 
 {.todo} COMING SOON: Animerat bevis för triangelnummerformeln
 
-    // ::: column(width=300)
     
-    // svg(width=300 height=300)
       g
     
-    // ::: column.grow
-    // Let’s start with a triangle of size ${x}{x|5|1,10,1}.
     
-    // First, we need to make a second copy of the triangle.
     
-    // Now we can rearrange the two triangles, to fit together in a rectangle.
     
-    // The size of the rectangle is ${x} × ${x + 1}, so it must have an area of
-    // ${x * (x + 1)}
     
-    // Since the rectangle is twice as large as the original triangle, we know that
-    // the ${n}th triangle number must be ${x*(x+1)/2}.
     
-    // In general, the *n*th triangle number is `T_n = (n × (n + 1)) / 2`.
-    // :::
 
 ---
-
 > id: triangle-sums
 
 Triangelnummer verkar dyka upp överallt i matematik, och du kommer att se dem igen under hela denna kurs. Ett särskilt intressant faktum är att _alla_ heltal kan skrivas som summan av högst tre triangelnummer:
@@ -822,18 +770,14 @@ Triangelnummer verkar dyka upp överallt i matematik, och du kommer att se dem i
 
 :::
 
-
 {.reveal(when="slide")} Det faktum att detta fungerar för _alla_ hela siffror bevisades först 1796 av den tyska matematikern [Carl Friedrich Gauss](bio:gauss) - vid 19 års ålder!
 
 ---
-
 > id: triangle-investigate
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem Solving
-
-::: .box-body
+#### Problem Solving
 
 Vilken är summan av de första 100 positiva [heltal](gloss:integer)? Med andra ord, vad är värdet av
 
@@ -843,10 +787,7 @@ I stället för att manuellt lägga till allt, kan du använda [triangelnumren](
 
 :::
 
-:::
-
 ---
-
 > id: square-numbers
 
 ### Kvadratiska och polygonala siffror
@@ -865,7 +806,6 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} Du kan beräkna siffrorna är denna sekvens genom att kvadratera hela heltalet (`1^2`, `2^2`, `3^2`, ...), men det visar sig att det finns ett annat mönster: skillnaderna mellan på varandra följande kvadratiska nummer är [[udda siffror|triangle numbers|integers]] i ökande ordning!
 
 ---
-
 > id: square-numbers-1
 
 ::: column.grow
@@ -884,13 +824,11 @@ Detta betyder också att det _n_: e kvadratnumret bara är summan av de första 
 :::
 
 ---
-
 > id: square-numbers-2
 
 Dessutom är varje kvadratnummer också summan av två på varandra följande [triangelnummer](gloss:triangle-numbers). Till exempel ${n×n}{n|4|1,20,1} = ${n×(n+1)/2} + ${n×(n-1)/2}. Kan du se hur vi kan dela varje kvadrat längs dess diagonal, i två trianglar?
 
 ---
-
 > id: polygon-numbers
 
 ::: column(width=300)
@@ -910,7 +848,6 @@ Kan du hitta rekursiva och explicita formler för _n_ th månghörnigt tal som h
 :::
 
 ---
-
 > id: tetrahedral
 
 ### Tetraedriska och kubiska siffror
@@ -950,7 +887,6 @@ Naturligtvis behöver vi inte begränsa oss till tvådimensionella former och m�
 :::
 
 ---
-
 > id: tetrahedral-1
 
 Matematiker kallar ofta dessa pyramider [__tetrahedra__](gloss:tetrahedron), och den resulterande sekvensen [__tetrahedralnummer__](gloss:tetrahedral-numbers).
@@ -1040,13 +976,11 @@ Föreställ dig att du har fått ett par babykaniner, en hane och en kvinna. De 
       .legend(slot="legend") In the sixth month, there are three more couples that give birth: the original one, as well as their first two pairs or kids.
 
 ---
-
 > id: rabbits-1
 
 {.r} Under följande månad skulle du ha 13 par kaniner: de åtta från föregående månad, plus 5 nya uppsättningar av spädbarn. Kan du upptäcka ett mönster i den här sekvensen? _{button.next-step} Fortsätt_
 
 ---
-
 > id: rabbits-2
 
 Antalet kaniner under en viss månad är [[summan av de två tidigare siffrorna|twice the previous number]]. _{span.reveal(when="blank-0")} Med andra ord måste du lägga till _tidigare två_ termer i sekvensen för att få nästa. Sekvensen börjar med två 1s, och [rekursiv formel](gloss:sequence-recursive) är_
@@ -1055,7 +989,6 @@ Antalet kaniner under en viss månad är [[summan av de två tidigare siffrorna|
 *{span.n}`x_(n-1)`* + *{span.n}`x_(n-2)`*
 
 ---
-
 > id: rabbits-3
 
 Kan du beräkna antalet kaniner efter några månader till?
@@ -1070,13 +1003,11 @@ _{.n}[[144]]_, …
       x-img(src="images/rabbits.jpg" width=600 height=230)
 
 ---
-
 > id: fibonacci
 
 Denna sekvens av nummer kallas [__Fibonacci Sequence__](gloss:fibonacci-numbers), uppkallad efter den italienska matematikern [Leonardo Fibonacci](bio:fibonacci).
 
 ::: column.grow
-
 
 När Fibonacci föddes 1175 använde de flesta människor i Europa fortfarande det [romerska siffrsystemet](gloss:roman-numerals) för nummer (t.ex. IVX eller MCMLIV). Fibonciens far var köpman och tillsammans reste de både till norra Afrika och Mellanöstern. Det var där Fibonacci först lärde sig [arabiska siffersystemet](gloss:arabic-numerals).
 
@@ -1096,7 +1027,6 @@ På en av sidorna i sin bok undersökte han också kaninernas avelsmönster - de
       p.caption Pages from Fibonacci’s #[em Liber Abaci]
 
 ---
-
 > id: spirals
 
 Naturligtvis är Fibonacci-siffrorna inte hur kaniner _faktiskt_ befolkar i verkliga livet. Kaniner har inte exakt en manlig och en kvinnlig avkom varje månad, och vi har inte redovisat att kaniner dör så småningom.
@@ -1105,7 +1035,7 @@ Men det visar sig att det finns många andra platser i naturen där Fibonacci-nu
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1117,7 +1047,7 @@ Men det visar sig att det finns många andra platser i naturen där Fibonacci-nu
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1130,7 +1060,6 @@ Men det visar sig att det finns många andra platser i naturen där Fibonacci-nu
 :::
 
 ---
-
 > id: spirals-1
 
 I båda fallen är antalet spiraler i följd Fibonacci-nummer. Detsamma gäller för många andra växter: nästa gång du går ut, räkna antalet kronblad i en blomma eller antalet löv på en stjälk. Mycket ofta kommer du att upptäcka att det är Fibonacci-nummer!
@@ -1138,12 +1067,11 @@ I båda fallen är antalet spiraler i följd Fibonacci-nummer. Detsamma gäller 
 Naturligtvis är detta inte bara en slump. Det finns ett viktigt skäl till att naturen gillar Fibonacci-sekvensen, som du lär dig mer om senare.
 
 ---
-
 > id: bees
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1165,7 +1093,6 @@ Detta betyder att kvinnliga bin har [[två föräldrar|one parent]], medan manli
 :::
 
 ---
-
 > id: golden-spiral
 
 ### Golden Ratio
@@ -1182,7 +1109,6 @@ Precis som [triangeln](gloss:triangle-numbers) och [kvadratiska siffrorna](gloss
       .legend(slot="legend") You might have noticed that, as the rectangles get larger, they seem to start “spiraling” outwards. We can even visualise this by drawing a perfect spiral that connects the corners of the squares.
 
 ---
-
 > id: golden-ratio
 
 Vid varje steg bildar rutorna en större rektangel. Dess bredd och höjd är alltid två Fibonacci-nummer i följd. Rektangelns __bildförhållande__ är förhållandet mellan dess bredd och höjd:
@@ -1226,7 +1152,6 @@ Vid varje steg bildar rutorna en större rektangel. Dess bredd och höjd är all
 :::
 
 ---
-
 > id: golden-ratio-1
 > goals: img-0 img-1
 
@@ -1256,7 +1181,6 @@ Många tror att det gyllene förhållandet är särskilt estetiskt tilltalande. 
 :::
 
 ---
-
 > id: golden-ratio-2
 
 Vi kan ungefärligt gyllene förhållandet genom att [[dela|adding|subtracting]] två Fibonacci-nummer i följd.
@@ -1264,7 +1188,6 @@ Vi kan ungefärligt gyllene förhållandet genom att [[dela|adding|subtracting]]
 {.reveal(when="blank-0")} Det visar sig emellertid att det exakta värdet för `φ` inte kan skrivas som en enkel bråk: det är ett [__irrationellt nummer__](gloss:irrational-numbers), precis som [`π`](gloss:pi) och `sqrt(2)` och några andra nummer du har sett tidigare.
 
 ---
-
 > id: sunflower-growing
 
 ### Fibonacci-spiraler
@@ -1272,7 +1195,6 @@ Vi kan ungefärligt gyllene förhållandet genom att [[dela|adding|subtracting]]
 ::: column.grow
 
 Det gyllene förhållandet förklarar varför Fibonacci-siffror visas i naturen, som solrosen och kotten som du såg i början av detta avsnitt.
-
 
 Båda dessa växter växer utåt från deras centrum (en del av växten som kallas _meristem_). När nya frön, löv eller kronblad läggs, skjuter de de befintliga längre utåt.
 
@@ -1292,12 +1214,9 @@ Flytta reglaget till höger för att visualisera hur en växt växer. Lägg mär
 :::
 
 ---
-
 > id: sunflower-spiral
 
 Det är viktigt för blommor att välja en lämplig vinkel: bladen eller frönna måste vara ungefär lika fördelade så att de får den största mängden solljus och näringsämnen. I diagrammet nedan kan du undersöka hur en solros kan se ut med olika vinklar mellan dess frön:
-
-    // Notice how even tiny changes to the angle can produce a completely different arrangement:
 
 ::: x-slideshow
 
@@ -1306,24 +1225,23 @@ Det är viktigt för blommor att välja en lämplig vinkel: bladen eller frönna
       x-slider(steps=1000 speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} Om vinkeln är _{span.fib-action(data-value=0)} 0 °_ kommer alla frön att växa i en enda lång rad bort från mitten.
+{div(slot="legend")} Om vinkeln är [0°](action:set(0)) kommer alla frön att växa i en enda lång rad bort från mitten.
 
-{div.inline(slot="legend")} Om vinkeln är _{span.fib-action(data-value=0.5)} `1/2`_ av en hel rotation (180 °) kommer fröna att växla mellan två separata "armar" som rör sig bort från mitten.
+{div.inline(slot="legend")} Om vinkeln är [`1/2`](action:set(0.5)) av en hel rotation (180 °) kommer fröna att växla mellan två separata "armar" som rör sig bort från mitten.
 
-{div.inline(slot="legend")} Om rotationen är en annan del av 360 °, till exempel _{span.fib-action(data-value=2/5)} `2/5`_ eller _{span.fib-action(data-value=1/3)} `1/3`_ eller _{span.fib-action(data-value=3/8)} {1402 }_, då kommer antalet "armar" att vara detsamma som [[nämnaren|numerator|prime factor]] för den fraktionen.
+{div.inline(slot="legend")} Om rotationen är en annan del av 360 °, till exempel [`2/5`](action:set(2/5)) eller [`1/3`](action:set(1/3)) eller [`3/8`](action:set(3/8)), då kommer antalet "armar" att vara detsamma som [[nämnaren|numerator|prime factor]] för den fraktionen.
 
 {div(slot="legend")} Tyvärr är "armar" dåliga, eftersom de betyder att fröna inte är jämnt fördelade: allt utrymmet mellan armarna slösas bort. Men om [rationella siffror](gloss:rational-numbers) inte kommer att fungera, låt oss försöka [irrationella siffror](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} Ett exempel på ett irrationellt nummer är [`pi`](gloss:pi). Men om vinkeln mellan frön är _{span.fib-action(data-value=0.31831)} `1/pi`_ på 360 °, verkar vi fortfarande få armar: 22 av dem. Det beror på att fraktionen `22/7 = 3.1429…` är en ganska bra approximation för `pi`. Det vi verkligen behöver är ett irrationellt tal som _inte_ kan närmas med en enkel bråk.
+{div.inline(slot="legend")} Ett exempel på ett irrationellt nummer är [`pi`](gloss:pi). Men om vinkeln mellan frön är [`1/pi`](action:set(0.31831)) på 360 °, verkar vi fortfarande få armar: 22 av dem. Det beror på att fraktionen `22/7 = 3.1429…` är en ganska bra approximation för `pi`. Det vi verkligen behöver är ett irrationellt tal som _inte_ kan närmas med en enkel bråk.
 
-{div.inline(slot="legend")} Det visar sig att [gyllene förhållandet](gloss:golden-ratio) bara är det: det 'mest irrationella' av alla irrationella siffror. Om vinkeln mellan frön är _{span.fib-action(data-value=0.6180339)} `1/phi`_ på 360 °, verkar de vara nästan perfekt åtskilda. Och det är just den vinkel som växter runt om i världen använder.
+{div.inline(slot="legend")} Det visar sig att [gyllene förhållandet](gloss:golden-ratio) bara är det: det 'mest irrationella' av alla irrationella siffror. Om vinkeln mellan frön är [`1/phi`](action:set(0.6180339)) på 360 °, verkar de vara nästan perfekt åtskilda. Och det är just den vinkel som växter runt om i världen använder.
 
 :::
 
     x-gesture(target=".fib-action")
 
 ---
-
 > id: sunflower-spiral-1
 
 ::: column(width=240)
@@ -1341,7 +1259,6 @@ Växter och djur vill alltid växa på det mest effektiva sättet, och det är d
 :::
 
 ---
-
 > id: lucas-numbers
 
 ### Fibonachos
@@ -1357,16 +1274,13 @@ Det visar sig att oavsett två startnummer du väljer, de resulterande sekvenser
 {.text-center.s-purple.s-small} ${a}{a|1|0,10,1}, ${b}{b|1|0,10,1}, _{span.n} ${a+b}<<<<_, _{span.n} ${a+2×b}<<<<_, _{span.n} ${2×a+3×b}<<<<_, _{span.n} ${3×a+5×b}<<<<_ , _{span.n} ${5×a+8×b}<<<<_, _{span.n} ${8×a+13×b}<<<<_, ...
 
 ---
-
 > id: fibonacci-puzzles
 
 Det finns många andra pussel, mönster och applikationer relaterade till Fibonacci-nummer. Här är några exempel som du kan prova själv:
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Problem solving
-
-::: .box-body
+#### Problem solving
 
 __1. Fibonacci delbarhet__
 
@@ -1392,8 +1306,6 @@ Hur många alternativ finns det för trappa med 6, 7 eller 8 steg? Kan du upptä
 
 :::
 
-:::
-
     figure
       x-img(src="images/fibonachos.jpg" width=600 height=282)
       p.caption © FoxTrot, by Bill Amend
@@ -1408,16 +1320,13 @@ Hur många alternativ finns det för trappa med 6, 7 eller 8 steg? Kan du upptä
 Förutom [aritmetiska](gloss:arithmetic-sequence) och [geometriska](gloss:geometric-sequence) sekvenser, [Fibonacci-nummer](gloss:fibonacci-numbers) och [figurnummer](gloss:figurate-numbers) finns det otaliga intressanta sekvenser som inte följer en liknande , vanligt mönster.
 
 ---
-
 > id: primes
-
 
 ### Prime Numbers
 
 Ett exempel som du redan har sett tidigare är [__Primnummer__](gloss:prime). Vi säger att ett tal är _prim_ om det inte har några [faktorer](gloss:factor) [[annat än 1 och sig själv|other than 1 and 2|and no multiples]].
 
 ---
-
 > id: primes-1
 
 Här är de första huvudnumren:
@@ -1426,7 +1335,6 @@ Här är de första huvudnumren:
 _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
 ---
-
 > id: primes-2
 > goals: p2 p3 p5 p7
 
@@ -1456,7 +1364,6 @@ Primtal har inte heller en enkel geometrisk representation som [triangel](gloss:
 :::
 
 ---
-
 > id: primes-3
 
 Du kan lära dig mer om dessa och andra egenskaper hos primtal i vår kurs om [Delbarhet och primes](/course/divisibility/primes). De är några av de viktigaste och mest mystiska begreppen i matematik!
@@ -1464,7 +1371,6 @@ Du kan lära dig mer om dessa och andra egenskaper hos primtal i vår kurs om [D
     figure: img(src="images/primes.svg" width=480 height=156) 
 
 ---
-
 > id: perfect
 
 ### perfekta siffror
@@ -1492,27 +1398,25 @@ För att avgöra om ett tal är [prim](gloss:prime) måste vi hitta alla dess [f
             td= total(factors(i))
 
 ---
-
 > id: perfect-1
 
 Låt oss jämföra dessa siffror med deras summa av faktorer:
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 För de flesta siffror är summan av dess faktorer [[mindre än|greater than|equal to]] själv. Dessa nummer kallas __bristfälliga nummer__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 För några få siffror är summan av dess faktorer större än sig själv. Dessa nummer kallas __rikligt med__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 Endast ett nummer i listan ovan har en summa av faktorer som är _lika_ till sig själv: [[6]]. Detta kallas ett [__perfekt nummer__](gloss:perfect-numbers).
 
 :::
 
 ---
-
 > id: perfect-2
 
 Nästa perfekta nummer är 28, för om vi lägger till alla dess faktorer får vi `1 + 2 + 4 + 7 + 14 = 28`. Därefter blir perfekta siffror mycket sällsyntare:
@@ -1524,7 +1428,6 @@ _{.n}137,438,691,328_, _{.n}2,305,843,008,139,952,128_, …
 Lägg märke till att alla dessa siffror är [[till och med|multiples of 3|2 more than a square number]]. _{span.reveal(when="blank-0")} Det visar sig att de också alla är triangelnummer!_
 
 ---
-
 > id: perfect-3
 
 ::: column.grow
@@ -1542,7 +1445,6 @@ Idag har matematiker använt datorer för att kontrollera de första 10 <sup> 15
 :::
 
 ---
-
 > id: hailstone
 
 ### The Hailstone Sequence
@@ -1569,7 +1471,6 @@ _{.n}[[2]]*{span.arrow.reveal(when="blank-5")}÷2*_,
 _{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
 
 ---
-
 > id: hailstone-1
 
 Det ser ut som att efter några termer, sekvensen når en "cykel": 4, 2, 1 kommer att fortsätta att upprepa om och om igen, för alltid.
@@ -1581,19 +1482,16 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
 *{span.s-blue}_{.n}4_, _{.n}2_, _{.n}1_, …*
 
 ---
-
 > id: hailstone-2
-
 
 Det verkar som att sekvensens längd varierar mycket, men den kommer alltid att hamna i en cykel på 4, 2, 1 - oavsett vilket första nummer vi väljer. Vi kan till och med visualisera termerna i sekvensen i ett diagram:
 
     x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
-{.reveal(when="var-0")} Lägg märke till hur vissa startpunkter slutar mycket snabbt, medan andra (som _{span.var-action} 31_ eller _{span.var-action} 47_) tar mer än hundra steg innan de når 4, 2, 1 cykel.
+{.reveal(when="var-0")} Lägg märke till hur vissa startpunkter slutar mycket snabbt, medan andra (som [31](action:set(31)) eller [47](action:set(47))) tar mer än hundra steg innan de når 4, 2, 1 cykel.
 
 ---
-
 > id: hailstone-3
 
 ::: column.grow
@@ -1613,7 +1511,6 @@ Men det finns oändligt många heltal. Det är omöjligt att kontrollera var och
 Precis som sökandet efter udda perfekta siffror är detta fortfarande ett öppet problem i matematik. Det är fantastiskt att dessa enkla mönster för sekvenser kan leda till frågor som har mystifierat till och med de bästa matematikerna i världen i århundraden!
 
 ---
-
 > id: look-and-say
 
 ### Look-and-Say-sekvensen
@@ -1626,7 +1523,6 @@ _{.n}1211_, _{.n}111221_, _{.n}312211_, …
 _{button.next-step} Fortsätt_
 
 ---
-
 > id: look-and-say-1
 
 Denna sekvens kallas __Look-and-Say__ -sekvensen, och mönstret är precis vad namnet säger: du börjar med en 1, och varje följande term är vad du får om du "läser högt" föregående. Här är ett exempel:
@@ -1639,19 +1535,16 @@ Kan du nu hitta nästa termer?
 _{.n}[[1113213211]]_, …
 
 ---
-
 > id: look-and-say-2
 
 Denna sekvens används ofta som ett pussel för att resa upp matematiker - eftersom mönstret verkar vara helt icke-matematiskt. Men som det visar sig har sekvensen många intressanta egenskaper. Till exempel slutar varje term på [[1]], och ingen siffra som är större än [[3]] kommer någonsin att användas.
 
 ---
-
 > id: look-and-say-3
 
 Den brittiska matematikern [John Conway](bio:conway) upptäckte att oavsett vilket nummer du väljer som utgångsvärde kommer sekvensen så småningom att delas upp i distinkta "sektioner" som inte längre interagerar med varandra. Conway kallade detta den _kosmologiska teorem_ och namngav de olika sektionerna med hjälp av de kemiska elementen _väte_, _helium_, _litium_, ... _Plutonium_.
 
 ---
-
 > id: quiz
 
 ### Sequence Quiz
@@ -1660,11 +1553,9 @@ Du har nu sett otaliga olika matematiska sekvenser - några baserade på geometr
 
 I denna frågesport kan du kombinera all din kunskap om sekvenser. Det finns bara ett mål: hitta mönstret och beräkna de kommande två termerna!
 
-::: .box.problem-box
+::: .box.f-blue
 
-    .box-title: h3 Find the next number
-
-::: .box-body
+#### Find the next number
 
 {.text-center.s-yellow} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1696,8 +1587,6 @@ _{span.pattern.reveal(when="blank-12 blank-13")} Mönster: Udda kvadratiska numm
 
 :::
 
-:::
-
 ---
 
 ## Pascal's Triangle
@@ -1724,13 +1613,11 @@ Nedan kan du se en talpyramid som skapas med ett enkelt mönster: den börjar me
         - i += 1;
 
 ---
-
 > id: pascal-intro-1
 
 Detta diagram visade bara de första tolv raderna, men vi kunde fortsätta för evigt och lägga till nya rader längst ner. Lägg märke till att triangeln är [[symmetrisk|right-angled|equilateral]], vilket kan hjälpa dig att beräkna några av cellerna.
 
 ---
-
 > id: pascal-triangle
 
 Triangeln heter [__Pascal triangel__](gloss:pascals-triangle), uppkallad efter den franska matematikern [Blaise Pascal](bio:pascal). Han var en av de första europeiska matematikerna som undersökte dess mönster och egenskaper, men den var känd för andra civilisationer många århundraden tidigare:
@@ -1760,7 +1647,6 @@ Pascal triangel kan skapas med ett mycket enkelt mönster, men den är fylld med
 _{button.next-step} Fortsätt_
 
 ---
-
 > id: pascal-sequences
 
 ### Hitta sekvenser
@@ -1832,7 +1718,6 @@ Diagrammet ovan belyser de "grunda" diagonalerna i olika färger. Om vi ​​l�
 :::
 
 ---
-
 > id: pascal-sequences-1
 
 Naturligtvis har vart och ett av dessa mönster ett matematiskt skäl som förklarar varför det visas. Kanske kan du hitta några av dem!
@@ -1840,7 +1725,6 @@ Naturligtvis har vart och ett av dessa mönster ett matematiskt skäl som förkl
 En annan fråga du kan ställa är hur ofta ett nummer visas i Pascals triangel. Det finns uppenbarligen oändligt många 1, en 2, och alla andra nummer visas [[minst två gånger|at least once|exactly twice]], _{span.reveal(when="blank-0")} i den andra diagonalen på båda sidor._
 
 ---
-
 > id: pascal-sequences-2
 
 Vissa siffror i mitten av triangeln visas också tre eller fyra gånger. Det finns till och med några som visas sex gånger: du kan se både [120](->.s120) och [3003](->.s3003) fyra gånger i triangeln ovan, och de kommer att visas ytterligare två gånger vardera i raderna 120 och 3003 .
@@ -1850,7 +1734,6 @@ Eftersom 3003 är ett triangelnummer visas det faktiskt ytterligare två gånger
 Det är okänt om det finns några andra nummer som visas åtta gånger i triangeln, eller om det finns nummer som visas mer än åtta gånger. Den amerikanska matematikern [David Singmaster](bio:singmaster) antog att det finns en fast limed på hur ofta siffror kan uppträda i Pascals triangel - men det har ännu inte bevisats.
 
 ---
-
 > id: modular
 > goals: select
 
@@ -1875,7 +1758,6 @@ Vissa mönster i Pascal triangel är inte lika lätt att upptäcka. I diagrammet
 {.reveal(when="select")} Det ser ut som att jämnt tal i Pascals triangel bildar en annan, mindre [[triangel|matrix|square]].
 
 ---
-
 > id: modular-1
 > goals: c2 c3 c4 c5
 
@@ -1904,13 +1786,11 @@ Att färga varje cell manuellt tar lång tid, men här kan du se vad som händer
         button.btn.btn-yellow(data-value="5") Divisible by 5
 
 ---
-
 > id: modular-2
 
 ::: column.grow
 
 Wow! De färgade cellerna visas alltid i [[trianglar|squares|pairs]] (utom några få enskilda celler, som kan ses som trianglar i storlek 1).
-
 
 Om vi fortsätter med mönstret av celler som kan delas med 2, får vi ett som är mycket likt __Sierpinski triangeln__ till höger. Formar som denna, som består av ett enkelt mönster som verkar fortsätta för alltid medan det blir mindre och mindre, kallas [__Fraktaler__](gloss:fractal). Du kommer att lära dig mer om dem i framtiden ...
 
@@ -1922,7 +1802,6 @@ Om vi fortsätter med mönstret av celler som kan delas med 2, får vi ett som �
 :::
 
 ---
-
 > id: pascal-binomial
 
 ### Binomialkoefficienter

@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> translated: auto
 
 Molti concetti geometrici, come [linee](gloss:line) e [punti](gloss:point), sono stati "inventati" dai matematici. La simmetria, d'altra parte, è ovunque intorno a noi. Quasi tutte le piante, gli animali e persino noi umani sono simmetrici.
 
@@ -45,7 +46,7 @@ _{button.next-step} Continua_
 > id: transformations
 > goals: t1 t2 t3
 
-Mentre la simmetria è un concetto molto intuitivo, descriverla matematicamente è più difficile di quanto si possa pensare. Innanzitutto, dobbiamo conoscere le trasformazioni [__<<<<__](gloss:transformation), che sono modi per convertire una figura geometrica in un'altra. Ecco alcuni esempi:
+Mentre la simmetria è un concetto molto intuitivo, descriverla matematicamente è più difficile di quanto si possa pensare. Innanzitutto, dobbiamo conoscere le [__trasformazioni__](gloss:transformation), che sono modi per convertire una figura geometrica in un'altra. Ecco alcuni esempi:
 
 ::: column.r(width=200)
 
@@ -80,6 +81,7 @@ Il [primo esempio](->#star) sopra è speciale, perché sposta e ruota solo la st
 
 > id: rigid
 > section: rigid
+> translated: auto
 
 Una [__trasformazione rigida__](gloss:rigid-transformation) è un tipo speciale di trasformazione che non cambia le dimensioni e la forma della figura originale. Immagina che sia fatto di un materiale solido come il legno o il metallo: possiamo spostarlo, girarlo e capovolgerlo, ma non possiamo allungarlo o deformarlo in altro modo.
 
@@ -136,7 +138,7 @@ Ma prima, diamo un'occhiata a ciascuno di questi tipi di trasformazioni in modo 
 
 ### Traduzioni
 
-Una traduzione [__<<<<__](gloss:translation) è una trasformazione che sposta ogni punto di una figura della stessa distanza nella stessa direzione.
+Una [__traduzione__](gloss:translation) è una trasformazione che sposta ogni punto di una figura della stessa distanza nella stessa direzione.
 
 Nel piano delle coordinate, possiamo specificare una traduzione di quanto la forma viene spostata lungo l'asse _x_ e l'asse _y_. Ad esempio, una trasformazione di (3, 5) sposta una forma di 3 lungo l'asse _x_ e di 5 lungo l'asse _y_.
 
@@ -457,6 +459,7 @@ TODO
 > id: symmetry
 > goals: play-0 play-1
 > section: symmetry
+> translated: auto
 
 [__Symmetry__](gloss:symmetry) è ovunque intorno a noi e un concetto intuitivo: parti diverse di un oggetto sembrano _lo stesso_ in qualche modo. Ma usando le trasformazioni, possiamo dare una definizione matematica molto più precisa di ciò che la simmetria _in realtà_ significa:
 
@@ -709,8 +712,9 @@ Completa ora queste forme, in modo che abbiano una simmetria rotazionale:
 
 > id: groups
 > section: symmetry-groups
+> translated: auto
 
- Alcune forme hanno più di una simmetria - diamo un'occhiata al [square](gloss:square) come semplice esempio.
+Alcune forme hanno più di una simmetria - diamo un'occhiata al [square](gloss:square) come semplice esempio.
 
 ::: column(width=400 parent="padded-thin")
 
@@ -925,7 +929,7 @@ Oltre alla simmetria riflessiva, rotazionale e traslazionale, esiste anche un qu
 
 Un modello può avere più di un tipo di simmetria. E proprio come per i quadrati, possiamo trovare il [gruppo di simmetria](gloss:symmetry-group) di un modello, che contiene tutte le sue diverse simmetrie.
 
-Questi gruppi non ti dicono molto su come appare il modello _<<<<_ (ad esempio i suoi colori e forme), come è ripetuto _<<<<_. Più modelli diversi possono avere lo stesso gruppo di simmetria, purché siano disposti e ripetuti allo stesso modo.
+Questi gruppi non ti dicono molto su come appare il _modello_ (ad esempio i suoi colori e forme), come è _ripetuto_. Più modelli diversi possono avere lo stesso gruppo di simmetria, purché siano disposti e ripetuti allo stesso modo.
 
 ::: column.grow
 
@@ -1013,7 +1017,7 @@ Invece, puoi provare a disegnare i tuoi motivi ripetuti per ciascuno dei 17 grup
 > goals: draw-1 draw-2 switch
 
     include ./components/wallpaper
-    x-wallpaper
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin
@@ -1045,6 +1049,7 @@ Oltre alle traduzioni, riflessioni, rotazioni e riflessi di planata, questi grup
 > id: planets
 > sectionBackground: dark stars
 > section: physics
+> translated: auto
 
 Finora, tutte le simmetrie che abbiamo esaminato erano _visive_ in un certo senso: forme, immagini o motivi visibili. In effetti, la simmetria può essere un concetto molto più ampio: _immunità al cambiamento_.
 
@@ -1096,6 +1101,7 @@ La simmetria può persino prevedere l'esistenza di particelle fondamentali. Un e
 
 > id: dilations
 > section: dilations
+> translated: auto
 
 Finora abbiamo appena esaminato [[rigide trasformazioni|congruent|visual]]. _{span.reveal(when="blank-0")} Ora pensiamo a uno che non lo è: una [__dilatazione__](gloss:dilation) cambia la dimensione di una forma rendendola più grande o più piccola._
 

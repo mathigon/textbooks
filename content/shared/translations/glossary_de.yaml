@@ -3,11 +3,12 @@
 # ==============================================================================
 
 absolute-value:absolute-value:
-  title: Absoluter Wert
-  text: |
-    Der __Absolutwert__ einer Zahl ist der Abstand von 0 auf der Zahlenlinie. Es macht negative
+  title: Absolutwert
+  text: Der __Absolutwert__ einer Zahl ist der Abstand von 0 auf der Zahlenlinie. Er macht negative
     Zahlen positiv, lässt aber positive Zahlen unverändert. Der absolute Wert von `x` wird als `|x|`
     geschrieben. Zum Beispiel `|-5| = 5` und `|3| = 3`.
+  # Der Absolutwert einer Zahl ist der Abstand zwischen der Zahl und dem Nullpunkt. Dies verbindet
+  # den Begriff des _Absolutwerts_ mit dem Betrag einer komplexen Zahl und der Grösse eines Vektors.
 
 acute-angle:
   title: Spitzer Winkel
@@ -34,8 +35,7 @@ adjacent-angles:
 
 aleph-zero:
   title: Alef-Null
-  text: |
-    Alef-Null, geschrieben mit dem hebräischen Buchstaben א‎, ist die Mächtigkeit einer abzählbar
+  text: __Alef-Null__, geschrieben mit dem hebräischen Buchstaben א‎, ist die Mächtigkeit einer abzählbar
     unendlichen Menge (z.B. der natürlichen Zahlen).
 
 algebraic-numbers:
@@ -74,8 +74,8 @@ amino-acid:
     __Aminosäuren__ sind winzige organische Verbindungen, aus denen __Proteine__ bestehen. Sie sind
     einige der Schlüsselbausteine aller lebenden Organismen.
 
-    In unserem Körper werden Aminosäuren verwendet, um Nahrung abzubauen, Körpergewebe zu
-    reparieren, Energie zu speichern und für viele andere Funktionen.
+    In unserem Körper werden Aminosäuren zum Abbau von Nahrung, zur Reparatur von Körpergewebe, zur
+    Energiespeicherung und für viele andere Funktionen verwendet.
 
 angle:
   title: Winkel
@@ -147,8 +147,7 @@ arithmetic series:
 
 associative:
   title: Assoziativgesetz
-  text: |
-    Eine Operation • ist assoziativ, wenn gilt `a•(b•c) = (a•b)•c`. Beispielsweise sind Addition (+)
+  text: Eine Operation • ist __assoziativ__, wenn gilt `a•(b•c) = (a•b)•c`. Beispielsweise sind Addition (+)
     und Multiplikation (×) von Zahlen assoziativ.
 
 atom:
@@ -241,7 +240,7 @@ circle:
 
 circle-area:
   title: Fläche eines Kreises
-  text: Die __Fläche__ eines Kreises mit Radius _r_ wird durch die Folmel `A = r^2 pi` bestimmt.
+  text: Die __Fläche eines Kreises__ mit Radius _r_ wird durch die Folmel `A = r^2 pi` bestimmt.
 
 circle-circumference:
   title: Umfang eines Kreises
@@ -373,7 +372,7 @@ congruent:
     In der Geometrie sind zwei Figuren __kongruent__ (deckungsgleich), wenn sie in Größe, Form und
     Maß identisch sind. Das bedeutet, dass wir sie so bewegen, drehen oder wenden können, dass sie
     exakt übereinander zu liegen kommen.
-  link: /course/euclidean-geometry/definitions#congruence
+  link: /course/euclidean-geometry/axioms#congruence
 
 congruent-angles:
   title: Kongruente Winkel
@@ -454,12 +453,11 @@ cube:
 
 cube-volume:
   title: Volumen eines Würfels
-  text: Ein Würfel mit Seitenlänge _a_ hat das Volumen `V = a^3`.
+  text: Das __Volumen eines Würfels__ mit Seitenlänge _a_ erhält man mit `V = a^3`.
 
 cylinder:
   title: Zylinder
-  text: |
-    Ein __Zylinder__ ist ein dreidimensionaler Körper, der aus zwei kongruenten, parallelen,
+  text: Ein __Zylinder__ ist ein dreidimensionaler Körper, der aus zwei kongruenten, parallelen,
     kreisförmigen Flächen (den _Grund- und Deckflächen_) besteht, die durch eine gekrümmte
     Oberfläche verbunden sind. Man könnte sich einen Zylinder auch als "rundes Prisma" vorstellen.
   link: /course/circles/spheres-cones-cylinders#cylinder-prism
@@ -468,7 +466,7 @@ cylinder:
 cylinder-volume:
   title: Volumen eines Zylinders
   text: |
-    Das Volumen eines Zylinders ergibt sich aus der Formel
+    Das __Volumen eines Zylinders__ ergibt sich aus der Formel
 
     {.text-center} `V = π r^2 h`,
 
@@ -598,9 +596,10 @@ factorial:
     Per Definition ist `0! = 1.`
 
 factorisation:
-  title: Primfaktorenzerlegung
-  text: |
-    Mittels der __Primfaktorenzerlegung__ kann jede Zahl als Produkt von Primzahlen dargestellt werden.
+  title: Primfaktorzerlegung
+  text: Die __ Primfaktorzerlegung__ einer Zahl ist eine Methode, sie als ein Produkt von Primzahlen
+    zu schreiben. Zum Beispiel lautet die Primfaktorzerlegung von 12 gleich `12 = 2 × 2 × 3`, weil
+    sowohl 2 als auch 3 Primzahlen sind.
   link: /course/divisibility/primes
 
 fermat-last:
@@ -657,9 +656,8 @@ fta:
 function:
   title: Funktion
   text: |
-    Eine __Funktion__ ist eine mathematische Beziehung, die einen Eingang (_x_) in genau einen
-    Ausgang (_y_) umwandelt. Funktionen werden oft als mathematische Gleichungen der Form `f(x)`
-    ausgedrückt.
+    Eine __Funktion__ ist eine mathematische Verknüpfung, durch die eine Eingangsgröße `x`
+    in genau eine Ausgangsgröße `f(x)` umgewandelt wird.
 
 function-graph:
   title: Funktionsdiagramme
@@ -669,10 +667,10 @@ function-graph:
 
 gcf:
   title: Größter gemeinsamer Teiler
-  text: |
-    Der __größte gemeinsame Teiler__ (ggT) von zwei Zahlen _a_ und _b_ ist die größte ganze Zahl,
+  keywords: gcf gcd divisor ggT kgV Teiler
+  text: Der __größte gemeinsame Teiler__ (ggT) von zwei Zahlen _a_ und _b_ ist die größte ganze Zahl,
     die gleichzeitig ein Divisor von _a_ und von _b_ ist.
-  link: /course/divisibility/greatest-common-factors
+  link: /course/divisibility/gcf
 
 geometric-sequence:
   title: Geometrische Folge
@@ -754,15 +752,15 @@ gravity:
 group:
   title: Gruppe
   text: |
-    Eine Gruppe ist eine Sammlung von "Elementen" (wie Zahlen oder Symmetrien), die drei
+    Eine __Gruppe__ ist eine Sammlung von "Elementen" (wie Zahlen oder Symmetrien), die drei
     verschiedenen Regeln folgen:
 
     1. Du kannst zwei der Elemente addieren/kombinieren, um ein anderes zu
        erhalten, das ebenfalls Element der Gruppe ist.
-    2. Die Elemente sind _assoziativ_, was bedeutet, dass `a+(b+c) = (a+b)+c`. 3. Es gibt ein
-    _neutrales Element_, und jedes Element e hat ein
-       _Umkehr-Element (inverses Element)_, das, wenn es mit e verknüpft wird,
-    das neutrale Element ergibt.
+    2. Die Elemente sind _assoziativ_, was bedeutet, dass `a+(b+c) = (a+b)+c`. 
+    3. Es gibt ein _neutrales Element_, und jedes Element e hat ein
+       _Umkehr-Element (inverses Element)_, das, wenn es mit e verknüpft wird, das
+       neutrale Element ergibt.
   link: /course/transformations/symmetry-groups#groups-1
 
 hailstone-sequence:
@@ -771,7 +769,8 @@ hailstone-sequence:
     __Hagelschlagzahlen__ können erzeugt werden, indem man eine beliebige ganze Zahl als
     Ausgangspunkt wählt und dann diesen Regeln folgt:
 
-    * Wenn `x_n` gerade ist, `x_(n+1) = x_n / 2`. * Wenn `x_n` ungerade ist, `x_(n+1) = 3 * x_n + 1`
+    * Wenn `x_n` gerade ist, `x_(n+1) = x_n / 2`. 
+    * Wenn `x_n` ungerade ist, `x_(n+1) = 3 * x_n + 1`
   link: /course/sequences/special#hailstone
 
 heptagon:
@@ -812,6 +811,15 @@ imaginary:
 
     Die __imaginäre Einheit__ wird als `i = sqrt(-1)` geschrieben, und andere imaginäre Zahlen
     können als ihre Vielfachen geschrieben werden. Zum Beispiel `sqrt(-5) = 5i`.
+
+independent-events:
+  title: Unabhängige Ereignisse
+  text: |
+    Zwei Ereignisse sind __unabhängig__, wenn das Eintreten des einen die Wahrscheinlichkeit, dass
+    das andere Ereignis eintritt, __nicht_ beeinflusst.
+
+    Formal können wir sagen, dass _A_ und _B_ unabhängig sind, wenn und nur wenn
+    P(*A*|*B*) = P(*A*).
 
 infinity:
   title: Unendlichkeit
@@ -875,7 +883,7 @@ julia-set:
 
 kite:
   title: Deltoid (Drachenviereck)
-  text: 'Ein __Deltoid__ ist ein Viereck, bei dem zwei Paare benachbarter Seiten die gleiche Länge haben.'
+  text: Ein __Deltoid__ ist ein Viereck, bei dem zwei Paare benachbarter Seiten die gleiche Länge haben.
   link: /course/polyhedra/quadrilaterals#kites
 
 koch-snowflake:
@@ -895,10 +903,10 @@ laws-of-nature:
 
 lcm:
   title: Kleinstes gemeinsames Vielfaches
-  text: |
-    Das __kleinste gemeinsame Vielfache__ (kgV) von zwei Zahlen _a_ und _b_ ist die kleinste ganze
-    Zahl, die ein Vielfaches von _a_ und _b_ist.
-  link: /course/divisibility/least-common-multiples
+  keywords: lcm least kgV ggT
+  text: Das __kleinste gemeinsame Vielfache__ (kgV) von zwei Zahlen _a_ und _b_ ist die kleinste ganze
+    Zahl, die ein Vielfaches von _a_ und _b_ ist.
+  link: /course/divisibility/lcm
 
 line:
   title: Gerade
@@ -1007,14 +1015,14 @@ morse-code:
 
 multiple:
   title: Vielfache
-  text: 'Eine Zahl _a_ ist ein __Vielfaches__ einer Zahl _b_, wenn _b_ ein Faktor von _a_ist.'
+  text: Eine Zahl _a_ ist ein __Vielfaches__ einer Zahl _b_, wenn _b_ ein Faktor von _a_ ist.'
   link: /course/divisibility/factors-and-multiples
 
 natural-numbers:
   title: Natürliche Zahlen
   text: |
-    The __natural numbers__ are the positive whole numbers starting at 1: 1, 2, 3, 4,…. Sie werden
-    oft mit dem Symbol `NN` bezeichnet.
+    Die __natürlichen Zahlen__ sind die positiven ganzen Zahlen beginnend mit 1: 1, 2, 3, 4, ….
+    Sie werden oft mit dem Symbol `NN` bezeichnet.
 
 net:
   title: Netze von Polyedern
@@ -1349,7 +1357,7 @@ pyramid:
 
 protractor:
   title: Winkelmesser
-  text: 'Ein Winkelmesser ist ein Werkzeug, um einen Winkel in Grad zu messen.'
+  text: Ein __Winkelmesser__ ist ein Werkzeug, um einen Winkel in Grad zu messen.
 
 pythagoras-theorem:
   title: Der Satz des Pythagoras
@@ -1460,7 +1468,7 @@ reflection:
 
 reflectional-symmetry:
   title: Spiegelsymmetrie
-  text: 'Eine Form nennt man spiegelsymmetrisch, wenn sie nach einer Spiegelung gleich aussieht.'
+  text: Eine Form nennt man __spiegelsymmetrisch__, wenn sie nach einer Spiegelung gleich aussieht.
   image: reflectional-symmetry.svg
   link: /course/transformations/symmetry#reflectional-symmetry
 
@@ -1521,7 +1529,7 @@ rotation:
 rotational-symmetry:
   title: Rotationssymmetrie
   text: |
-    Eine Form nennt man rotationssymmetrisch, wenn sie nach einer Drehung um weniger als 360° gleich
+    Eine Form nennt man __rotationssymmetrisch__, wenn sie nach einer Drehung um weniger als 360° gleich
     aussieht.
   image: rotational-symmetry.svg
   link: /course/transformations/symmetry#rotational-symmetry
@@ -1603,8 +1611,7 @@ sequence-term:
 
 sierpinski-triangle:
   title: Sierpinski-Dreieck
-  text: |
-    Das __Sierpinski-Dreieck__ ist ein selbstähnliches Fraktal. Es besteht aus einem gleichseitigen
+  text: Das __Sierpinski-Dreieck__ ist ein selbstähnliches Fraktal. Es besteht aus einem gleichseitigen
     Dreieck, wobei kleinere gleichseitige Dreiecke rekursiv aus seiner verbleibenden Fläche entfernt
     werden.
   link: /course/fractals/sierpinski
@@ -1612,8 +1619,7 @@ sierpinski-triangle:
 
 sieve-eratosthenes:
   title: Das Sieb des Eratosthenes
-  text: |
-    Das __Sieb des Eratosthenes__ ist ein Verfahren zum Auffinden von Primzahlen, indem Schritt für
+  text: Das __Sieb des Eratosthenes__ ist ein Verfahren zum Auffinden von Primzahlen, indem Schritt für
     Schritt Zahlen eliminiert werden, die _nicht_ Primzahlen sind.
   link: /course/divisibility/primes#eratosthenes
 
@@ -1719,6 +1725,12 @@ tangent:
     Eine __Tangente__ ist eine Gerade, die eine Kurve oder einen Kreis an einem einzigen Punkt
     berührt, ohne diese zu schneiden. Man nennt diesen Punkt den __Berührungspunkt__.
 
+telegraph:
+  title: Telegraf
+  text: | 
+    Ein __Telegraf__ ist ein Gerät zur Übermittlung von Nachrichten über große Entfernungen,
+    indem elektrische Signale über Drähte gesendet werden.
+
 term:
   title: Term (Algebra)
   text: |
@@ -1788,7 +1800,7 @@ translational-symmetry:
 
 transversal:
   title: Transversale
-  text: 'Eine Transversale ist eine Gerade, die zwei weitere Geraden schneidet.'
+  text: Eine __Transversale__ ist eine Gerade, die zwei weitere Geraden schneidet.
 
 trapezium:
   title: Trapez
@@ -1881,8 +1893,7 @@ truncated-icosahedron:
 
 twin-primes:
   title: Primzahlzwillinge
-  text: |
-    __Primzahlzwillinge__ sind Paare von Primzahlen wie 17 und 19 oder 101 und 103, deren Abstand
+  text: __Primzahlzwillinge__ sind Paare von Primzahlen wie 17 und 19 oder 101 und 103, deren Abstand
     genau 2 ist. Es ist unbekannt, ob es unendlich viele Paare von Primzahlzwillingen gibt.
   link: /course/divisibility/the-distribution-of-primes#twin-primes
 
@@ -1911,7 +1922,9 @@ vertical-angles:
 
 whole-numbers:
   title: Natürliche Zahlen
-  text: 'Die Natürlichen Zahlen sind die Zählzahlen inklusive der Null 0, 1, 2, 3, 4, …"'
+  text: |
+    Die Natürlichen Zahlen sind die Zählzahlen inklusive der Null:
+    0, 1, 2, 3, 4, …
 
 zero-product:
   title: Satz vom Nullprodukt

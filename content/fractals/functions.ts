@@ -5,8 +5,9 @@
 
 
 import {Color, delay, list, Obj, repeat, wait} from '@mathigon/core';
-import {Point, Polyline, Complex, Polygon, Circle, numberFormat, isBetween, nearlyEquals} from '@mathigon/fermat';
-import {$N, CanvasView, SVGView} from '@mathigon/boost';
+import {Complex, isBetween, nearlyEquals, numberFormat} from '@mathigon/fermat';
+import {Circle, Point, Polygon, Polyline} from '@mathigon/euclid';
+import {$html, $N, CanvasView, SVGView} from '@mathigon/boost';
 
 import {Geopad, GeoPoint, Select, Slider, Slideshow, Step} from '../shared/types';
 import {BLUE} from '../shared/constants';
@@ -15,7 +16,7 @@ import {CellularAutomaton} from './components/automata';
 import {ChaosGame} from './components/chaos-game';
 import {COASTLINE} from './components/coastline';
 import {drawKoch, drawSierpinski} from './components/fractals';
-import {JuliaCanvas, converges} from './components/mandelbrot';
+import {converges, JuliaCanvas} from './components/mandelbrot';
 
 import './components/menger-sponge';
 import './components/sierpinski-tetrahedra';
@@ -145,7 +146,7 @@ export async function coastlineGrid($step: Step) {
     $grid[1].css('opacity', i < 8 ? 0 : 0.2);
     $cells[1].css('opacity', i < 9.9 ? 0 : 0.7);
 
-    $coast[1].setTransform(coastTransform.scale(1 - i/10), 0, (1 + i/10) / 2);
+    $coast[1].setTransform(coastTransform.scale(1 - i / 10), 0, (1 + i / 10) / 2);
     $coast[1].css('opacity', Math.min(i, 1));
   });
 }
@@ -234,7 +235,7 @@ export async function chaosGame($step: Step) {
   let startPoint: GeoPoint;
 
   if ($step.scores.has('point')) {
-    startPoint = $geopad.drawPoint('point(150, 200)', {classes: 'blue'})
+    startPoint = $geopad.drawPoint('point(150, 200)', {classes: 'blue'});
   } else {
     $geopad.switchTool('point');
     startPoint = await $geopad.waitForPoint();
@@ -280,7 +281,7 @@ export async function chaosGame($step: Step) {
 
 export function fractalBuilder($step: Step) {
   const VERTICES = ['x0', 'x1', 'x2', 'x3', 'x4'];
-  const RATIOS = [0.5, 2/3, 1/1.6180339887];
+  const RATIOS = [0.5, 2 / 3, 1 / 1.6180339887];
   const INITIAL: Obj<Point[]> = {
     3: Polygon.regular(3, 235).shift(380, 280).points,
     4: Polygon.regular(4, 240).shift(380, 220).points,
@@ -326,14 +327,14 @@ export function fractalBuilder($step: Step) {
       $step.model.assign({shape: '5', ratio: '2', rule: 'none'});
       game.reset();
       game.play(10000);
-    },
+    }
   });
 }
 
 export function cellular($step: Step) {
   const correct = ['01110000', '0101_0__', '01110101', '01111110'];
   const match = (a: string, b: string) =>
-      a.split('').every((c, i) => c === b[i] || c === '_');
+    a.split('').every((c, i) => c === b[i] || c === '_');
 
   const automaton = $step.$('x-automaton') as CellularAutomaton;
 
@@ -401,7 +402,7 @@ export function julia($step: Step) {
   const origin = $geopad.toViewportCoords(new Point(0, 0)).scale(2);
   $canvases[0].draw(new Circle(origin, $geopad.plotScale * 2), {fill: BLUE});
 
-  $canvases[1].fill('#fff');
+  $canvases[1].fill($html.hasClass('dark-mode') ? '#22212e' : '#fff');
   $step.model.watch((s: any) => {
     const c = $geopad.toViewportCoords(s.x0).scale(2);
     $canvases[1].clearCircle(c, 25);
@@ -451,7 +452,7 @@ export function mandelPaint($step: Step) {
   $step.model.assign({iterate, spiral, complex});
   $step.model.setComputed('converges', (s: any) => converges(s.x0, s.c));
 
-  $canvas.fill('#fff');
+  $canvas.fill($html.hasClass('dark-mode') ? '#22212e' : '#fff');
   $step.model.watch((s: any) => {
     const c = $geopad.toViewportCoords(s.c).scale(2);
     $canvas.clearCircle(c, 25);

@@ -21,11 +21,15 @@
 @light-grey:  #c5c2cc;
 
 @text-dark:   #333;
+@text-normal: #666;
 @text-medium: #999;
 @text-light:  #aaa;
 
 @border-light: #c5c2cc;
-@grey-background: mix(@grey, white, 4%);
+
+@grey-background: mix(@grey, white, 5%);
+@dark-mode: mix(@grey, @dark-grey, 30%);
+@dark-mode-background: mix(@dark-mode, white, 95%);
 
 @bounce: cubic-bezier(.33,1.9,.52,.7);
 
@@ -83,7 +87,7 @@
   background: @background url('data:image/svg+xml;utf8,@{url}') no-repeat center;
 }
 
-.iconBackground(@foreground, @background, @path, @size: 24, @box: 28) {
+.iconBackground(@foreground, @background, @path, @size: 24, @box: 24) {
   .svgBackground('<path fill="@{foreground}" d="@{path}"/>', @size, @size, @background, ' viewBox="0 0 @{box} @{box}"');
 }
 
@@ -95,7 +99,7 @@
   background: transparent;
   line-height: 28px;
   padding: 0 6px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   background: @colour;
   .caption & { height: 24px; line-height: 24px; }
@@ -111,14 +115,6 @@
     left: 5px;
     right: 5px;
   }
-}
-
-.inline-hover(@color) {
-  .inline-block(transparent);
-  .underline(@color);
-  transition: background .2s, color .2s, box-shadow .2s;
-  cursor: pointer;
-  &:hover { color: fade(black, 80%); box-shadow: @shadow-1; background: @color; }
 }
 
 .circled(@size) {

@@ -9,12 +9,12 @@
 @media screen and (min-width: 680px) { .shift-1 { margin-top: -70px !important; } }
 
 .space { display: inline-block; width: 20px; }
-.hover-target { .inline-hover(mix(@green, white, 60%)); }
 
 .mountain {
   background: white;
   z-index: 100;
   box-shadow: 0 0 30px 10px white;
+  .dark-mode & { background: @dark-mode; box-shadow: 0 0 30px 10px @dark-mode; }
 }
 
 .task {
@@ -57,7 +57,7 @@
 }
 
 .proof-table {
-  .pill { border-radius: 12px; }
+  .pill { border-radius: 12px; margin-bottom: 6px; }
   .pill mfrac { margin: .2em 0; }
   p { margin-bottom: 8px !important; }
 }

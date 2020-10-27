@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-
+/// <reference types="THREE"/>
 import {$N, CustomElementView, register} from '@mathigon/boost';
 import {Obj} from '@mathigon/core';
 import {create3D} from '../../shared/components/webgl';
@@ -24,7 +24,7 @@ function drawFace(face: number[], vertices: THREE.Vector3[]) {
   const faceGeometry = new THREE.Geometry();
   faceGeometry.vertices = vertices;
   for (let i = 1; i < face.length - 1; i++) {
-    const faceObj = new THREE.Face3(face[0], face[i], face[i+1]);
+    const faceObj = new THREE.Face3(face[0], face[i], face[i + 1]);
     faceObj.color = new THREE.Color(colours[face.length]);
     faceGeometry.faces.push(faceObj);
   }
@@ -37,7 +37,7 @@ function getFolding(data: FoldingDataItem) {
   const vertices = data.vertices.map(v => new THREE.Vector3(...v));
   const hinges = data.hinges;
 
-  function buildTree(f: number, side=0, angle=Math.PI, parent?: THREE.Object3D) {
+  function buildTree(f: number, side = 0, angle = Math.PI, parent?: THREE.Object3D) {
     const node = new THREE.Object3D();
     node.name = '' + f;
 
@@ -119,12 +119,12 @@ export class Folding extends CustomElementView {
 
     const $slider = $N('x-slider', {steps: 100}, this);
     $slider.on('move', p => {
-      updateHinges(polyhedron, p/100);
+      updateHinges(polyhedron, p / 100);
 
-      const a = 0.5 * (p/100) * Math.PI / 2;
-      const r = 25 - p/100 * 15;
+      const a = 0.5 * (p / 100) * Math.PI / 2;
+      const r = 25 - p / 100 * 15;
       scene.camera.position.set(0, r * Math.sin(a), r * Math.cos(a));
-      scene.camera.lookAt(0,0,0);
+      scene.camera.lookAt(0, 0, 0);
     });
   }
 }

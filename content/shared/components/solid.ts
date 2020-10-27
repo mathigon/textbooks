@@ -4,6 +4,7 @@
 // =============================================================================
 
 
+/// <reference types="THREE"/>
 import {chunk} from '@mathigon/core';
 import {$html, $N, Browser, CustomElementView, register, slide} from '@mathigon/boost';
 import {create3D, Graphics3D} from './webgl';
@@ -44,8 +45,11 @@ function rotate($solid: Solid, animate = true, speed = 1) {
   }
 
   if (autoRotate) {
-    $solid.scene.$canvas.on('enterViewport', () => { visible = true; frame(); });
-    $solid.scene.$canvas.on('exitViewport', () => { visible = false; });
+    $solid.scene.$canvas.on('enterViewport', () => {
+      visible = true;
+      frame();
+    });
+    $solid.scene.$canvas.on('exitViewport', () => visible = false);
   } else {
     setTimeout(frame);
   }
@@ -88,7 +92,6 @@ function createEdges(geometry: THREE.Geometry, material: THREE.Material, maxAngl
 
   return obj;
 }
-
 
 
 // -----------------------------------------------------------------------------
@@ -136,7 +139,7 @@ export class Solid extends CustomElementView {
 
   addMeshCallback(fn: (scene: Graphics3D) => THREE.Object3D[]|void) {
     const items = fn(this.scene) || [];
-    for (const i of items)  this.object.add(i);
+    for (const i of items) this.object.add(i);
 
     if (!this.hasAttr('static')) {
       const speed = +this.attr('rotate') || 1;
@@ -186,21 +189,21 @@ export class Solid extends CustomElementView {
     obj.add(new THREE.Mesh(line, material));
 
     const start = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
-    start.translate(0, height/2 - 0.1, 0);
+    start.translate(0, height / 2 - 0.1, 0);
     obj.add(new THREE.Mesh(start, material));
 
     const end = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
     end.rotateX(Math.PI);
-    end.translate(0, -height/2 + 0.1, 0);
+    end.translate(0, -height / 2 + 0.1, 0);
     obj.add(new THREE.Mesh(end, material));
 
     obj.updateEnds = function(f: Vector, t: Vector) {
       // TODO Support changing the height of the arrow.
       const q = new THREE.Quaternion();
-      const v = new THREE.Vector3(t[0]-f[0], t[1]-f[1], t[2]-f[2]).normalize();
+      const v = new THREE.Vector3(t[0] - f[0], t[1] - f[1], t[2] - f[2]).normalize();
       q.setFromUnitVectors(new THREE.Vector3(0, 1, 0), v);
       obj.setRotationFromQuaternion(q);
-      obj.position.set((f[0]+t[0])/2, (f[1]+t[1])/2, (f[2]+t[2])/2);
+      obj.position.set((f[0] + t[0]) / 2, (f[1] + t[1]) / 2, (f[2] + t[2]) / 2);
     };
 
     obj.updateEnds(from, to);
@@ -286,7 +289,7 @@ export class Solid extends CustomElementView {
     outlineMaterial.onBeforeCompile = function(shader) {
       const token = '#include <begin_vertex>';
       const customTransform = '\nvec3 transformed = position + vec3(normal) * 0.02;\n';
-      shader.vertexShader = shader.vertexShader.replace(token,customTransform)
+      shader.vertexShader = shader.vertexShader.replace(token, customTransform);
     };
     const outline = new THREE.Mesh(geometry, outlineMaterial);
 
@@ -301,8 +304,9 @@ export class Solid extends CustomElementView {
 
     obj.setClipPlanes = function(planes: THREE.Plane[]) {
       if (solid.setClipPlanes) solid.setClipPlanes(planes);
-      for (const m of [outlineMaterial, knockoutMaterial])
+      for (const m of [outlineMaterial, knockoutMaterial]) {
         m.clippingPlanes = planes;
+      }
     };
 
     obj.updateGeometry = function(geo: THREE.Geometry) {

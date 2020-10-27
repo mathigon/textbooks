@@ -325,15 +325,23 @@ and more often.
 In this animation you can roll many “virtual” dice at once and see how the
 results compare to the predicted probabilities:
 
-    .box
-      .box-title: h3 Rolling Dice
-      .box-body
-        .probTable.var(:html="probTable(d)")
-        p.md We roll ${d}{d|2|1,6,1} dice at once and record the #[span.dice(style="width: auto; padding: 0 4px;") SUM] of their scores. The #[strong.m-green green lines] represent the probabilities of every possible outcome predicted by probability theory and the #[strong.m-blue blue bars] show how often each outcome happened in this computer generated experiment.
-        p.btn-row.no-voice
-          button.btn Roll once
-          button.btn Roll 100 times
-          button.btn Roll 1000 times
+::: .box.f-red
+
+#### Rolling Dice
+
+    .probTable.var(:html="probTable(d)")
+
+We roll ${d}{d|2|1,6,1} dice at once and record the _{span.dice(style="width: auto; padding: 0 4px;")} SUM_
+of their scores. The __{.m-green} green lines__ represent the probabilities of every possible
+outcome predicted by probability theory and the __{.m-blue} blue bars__ show how often each outcome
+happened in this computer generated experiment.
+
+    p.btn-row.no-voice
+      button.btn Roll once
+      button.btn Roll 100 times
+      button.btn Roll 1000 times
+
+:::
 
 {.reveal(when="roll")} Notice how, as we roll more and more dice, the observed
 frequencies become closer and closer to the frequencies we predicted using
@@ -350,58 +358,12 @@ __normal distribution__.
 ---
 
 
-## Probability Trees
+## Probability Trees and Venn Diagrams
 
 > section: trees
 > sectionStatus: dev
 
-{.fixme} In real life, coins never have exactly a probability of 0.5. It might be 0.4932
-or 0.500012, depending on their exact shape or physical properties. In
-mathematics we don’t have to worry about these tiny inaccuracies: we can simply
-assume that our “mathematical model” of a coin has exactly a 0.5 probability of
-landing heads and is truly random. With this simplification, we can start
-answering much more interesting questions.
-Now let’s try a more difficult game: there is a bag that contains five
-red and three blue marbles. When picking two marbles at random, what is
-the probability that both of them are red?
-We already know how to calculate the probability that the first marble is
-red: it is 5/8 = 0.625.
-However, once we have picked the first marble, the probabilities change:
-now there are only 7 marbles left, and only four of them are red.
-Therefore the probability that the second marble is red is 4/7 = 0.571.
-To calculate the probability that #[em both] marbles are red, we simply
-have to multiply these probabilities: the final answer is 0.625 × 0.571 = 0.357.
-There are four possible outcomes in total: red-red, red-blue, blue-red
-and blue-blue. We can represent all these possibilities in a single diagram:
-slideshow
-Now we can simply read off the probability of the different outcomes. The
-probability that both marbles are blue is xxx, and the probability that
-you get two marbles with different colours are xxx + xxx = xxx.
-Probability trees can be used to solve many problems that consist of
-multiple steps that happen one after the other.
-
-
----
-
-
-## Venn Diagrams
-
-> section: venn-diagrams
-> sectionStatus: dev
-
-{.fixme} Opposite probabilities always add up to 1. This means that you can
-calculate the opposite of a probability by subtracting it from 1.
-Venn Diagrams and set operations
-Independent and Mutually Exclusive Events
-There are 200 kids in a school. 140 students are taking Mathematics, and
-100 students are taking Biology. 80 students are studying both Maths and Biology.
-The corresponding Venn Diagram corresponds to two overlapping circles for
-Maths and Biology. We can write 80 in their interx-step.
-There are 140 - 80 = 60 students studying just Mathematics, so we write
-than in the remaining part of the Maths circle.  There are 100 - 80 = 20
-students studying just Biology so we write that in the remaining part of
-the Biology circle.
-How many students at the school study neither Mathematics nor Biology?
+{.todo} TODO
 
 
 ---
@@ -413,6 +375,23 @@ How many students at the school study neither Mathematics nor Biology?
 
 TODO
 
+---
+
+Sort these events into whether they are independent or not:
+
+    x-buckets.independent
+      .inputs
+        .input(bucket="0") Winning the lottery and running out of milk.
+        .input(bucket="1") Boarding a plane first and finding a good seat.
+        .input(bucket="0") Owning a dog and growing your own herb garden.
+        .input(bucket="0") Getting a parking ticket and winning the lottery.
+        .input(bucket="1") Robbing a bank and going to jail.
+        .input(bucket="1") Driving a car and having a traffic accident.
+      .buckets
+        .bucket
+          .title Independent
+        .bucket
+          .title Dependent
 
 ---
 

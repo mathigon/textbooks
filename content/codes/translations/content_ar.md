@@ -14,7 +14,6 @@
 
 ::: column(width=260)
 
-    // https://depositphotos.com/97306690/stock-photo-jungle-in-colombian-green-mountains.html
     x-img(src="images/rainforest.jpg" width=260 height=320)
 
 :::
@@ -49,22 +48,21 @@
 > id: telegraph
 > goals: press
 
-### مورس
+###  رمز مورس
 
 في أوائل القرن التاسع عشر ، كانت الطريقة الوحيدة لإرسال الرسائل عبر مسافات طويلة هي بريدي أو عن طريق المراسلة. قامت شركات مثل "Pony Express" بتشغيل طرق التوصيل مع شركات النقل التي تركب الخيل ، ولكن قد يستغرق الأمر أيامًا أو حتى أسابيع لإرسال رسالة بين المدن البعيدة.
 
-كل هذا تغير في عام 1837 ، مع اختراع [__تلغراف__](gloss:telegraph). باستخدام الكابلات الكهربائية المنتشرة في جميع أنحاء البلاد ، كان من الممكن إرسال الرسائل على الفور تقريبًا.
+كل هذا تغير في عام 1837 ، مع اختراع [__التلغراف__](gloss:telegraph). باستخدام الكابلات الكهربائية المنتشرة في جميع أنحاء البلاد ، كان من الممكن إرسال الرسائل على الفور تقريبًا.
 
 ::: figure
 
-    // https://commons.wikimedia.org/wiki/File:The_Overland_Pony_Express.jpg
     img(src="images/pony-express.jpg" width=525 height=260)
 
 {.caption} المهر السريع بجوار خط التلغراف قيد الإنشاء - لوحة رسمها _جورج أوتينجر_
 
 :::
 
-تم تطوير أول تلغراف تجاري بواسطة William Forthergill Cooke و Charles Wheatstone ، واستخدموا إبر البوصلة للإشارة إلى أحرف مختلفة على الشاشة.
+تم تطوير أول تلغراف تجاري بواسطة وليام فورثيرجيل كوك و تشارلز ويتستون ، واستخدموا إبر البوصلة للإشارة إلى أحرف مختلفة على الشاشة.
 
 ::: column.grow
 
@@ -86,30 +84,29 @@
 ---
 > id: morse
 
-لإرسال رسائل أكثر تعقيدًا ، مثل مورس كل حرف في الأبجدية باستخدام تسلسل فريد من أصوات التنبيه القصيرة (تسمى dits أو dots) وإشارات صوتية طويلة (تسمى dahs أو شرطات):
+لإرسال رسائل أكثر تعقيدًا ، مثل مورس كل حرف في الأبجدية باستخدام تسلسل فريد من زمارة القصيرة (تسمى dits أو dots) زمارة طويلة (تسمى dahs أو dashes):
 
-    .alphabet
+    .alphabet(dir="ltr")
       for letter, index in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
         div
          strong= letter
          x-morse(char=letter)
 
-على سبيل المثال ، لإرسال الحرف E ، علينا فقط إرسال [[صوت صفير قصير|long beep]]. لإرسال الحرف U ، علينا إرسال [[dot-dot-dash|dot-dash-dot|dash-dash-dot]]. اخترع مورس "لغة" جديدة ، والتي نسميها الآن [شفرة مورس](gloss:morse-code).
+على سبيل المثال ، لإرسال الحرف E ، علينا فقط إرسال [[زمارة قصيرة
+|زمارة طويلة]]. لإرسال الحرف U ، علينا إرسال [[نفطة-نقطة-خط|نقطة-خط-نقطة|خط-خط-نفطة]]. اخترع مورس "لغة" جديدة ، والتي نسميها الآن [رمز مورس](gloss:morse-code).
 
 ---
 > id: morse-1
 
 ::: column(width=280)
 
-    // https://depositphotos.com/59221337/stock-photo-vintage-morse-telegraph-machine.html
-    // alternative: https://americanhistory.si.edu/collections/search/object/nmah_1096762
     x-img(src="images/morse.jpg" width=280 height=300)
 
 {.caption} تقوم آلة التلغراف هذه أيضًا بتسجيل الرسائل على شريط طويل من الورق.
 
 ::: column.grow
 
-الآن يمكننا إرسال أي رسالة عن طريق تحويل أحرفها أولاً إلى شفرة مورس ، ثم النقر على النقاط والشرطات المقابلة على التلغراف.
+الآن يمكننا إرسال أي رسالة عن طريق تحويل أحرفها أولاً إلى رمز مورس ، ثم النقر على النقاط و الخطوط المقابلة على التلغراف.
 
 كان أحد أهداف مورس هو جعل الرسائل قصيرة قدر الإمكان. هذا هو السبب في أن الأحرف الشائعة مثل E و T لها رمز قصير جدًا ، في حين أن الأحرف غير الشائعة مثل J أو Q لها رموز أطول بكثير.
 
@@ -121,9 +118,9 @@
 > id: morse-encoding
 > goals: type
 
-أشهر إشارة مورس هي "SOS" ، والتي تشير إلى أن لديك حالة طوارئ وتحتاج إلى مساعدة. وتتكون من ثلاث نقاط ، تليها ثلاث شرطات ، تليها ثلاث نقاط أخرى. حاول كتابة كلمات أو جمل أخرى في هذا المربع ، وشاهد كيف يتم تشفيرها برمز مورس:
+أشهر رمز مورس هي "SOS" ، والتي تشير إلى أن لديك حالة طوارئ وتحتاج إلى مساعدة. وتتكون من ثلاث نقاط ، تليها ثلاث شرطات ، تليها ثلاث نقاط أخرى. حاول كتابة كلمات أو جمل أخرى في هذا المربع ، وشاهد كيف يتم تشفيرها برمز مورس:
 
-    x-code-box
+    x-code-box(dir='ltr')
       .input(contenteditable="true" spellcheck="false") SOS
       .output.morse
 
@@ -133,26 +130,24 @@
 
 كان رمز مورس أيضًا ما استخدمه الجيش الكولومبي لإرسال رسالة إلى الرهائن. كانت الرسالة المترجمة من الإسبانية هي _19 شخصًا تم إنقاذهم. انت التالي. لا تستسلم._ استمع إلى الأغنية مرة أخرى ، وتحقق مما إذا كان بإمكانك سماع النقاط والشرطات في الخلفية:
 
-    figure: x-img(src="images/radio.png" width=225 height=220 style="margin-top: -24px")
+    figure: x-img(src="images/radio.png" width=225 height=220 style="margin-top: -24px" dir='ltr')
       button.radio-play
     x-gesture(target=".radio-play")
-    // TODO Show actual morse code while playing
 
 ---
 > id: morse-applications
 > goals: play
 
-إذا كنت لا تعرف شفرة مورس ، فقد يبدو هذا وكأنه جزء من الموسيقى - لكن الرهائن كانوا جنودًا تم تدريبهم على شفرة مورس ، وتعرفوا عليها في الأغنية عندما سمعوها في الراديو. وبعد بضعة أيام ، تم إنقاذهم وعادوا إلى منازلهم بأمان.
+إذا كنت لا تعرف رمز مورس ، فقد يبدو هذا وكأنه جزء من الموسيقى - لكن الرهائن كانوا جنودًا تم تدريبهم على رمز مورس ، وتعرفوا عليها في الأغنية عندما سمعوها في الراديو. وبعد بضعة أيام ، تم إنقاذهم وعادوا إلى منازلهم بأمان.
 
-اتضح أن هناك العديد من الأمثلة الأخرى عبر التاريخ ، حيث تم استخدام شفرة مورس لإيصال الرسائل السرية (أو ليست سرية للغاية):
+اتضح أن هناك العديد من الأمثلة الأخرى عبر التاريخ ، حيث تم استخدام رمز مورس لإيصال الرسائل السرية (أو ليست سرية للغاية):
 
 ::: column(width=220 parent="padded-thin")
 
-    // https://depositphotos.com/310187600/stock-photo-capital-records-building.html
     x-img(src="images/capitol-records.jpg" width=220 height=280)
       .capitol-light
 
-{.caption} ضوء التحذير الأحمر في الجزء العلوي من مبنى _Capitol Records_ في لوس أنجلوس يومض كلمة _HOLLYWOOD_ في شفرة مورس.
+{.caption} ضوء التحذير الأحمر في الجزء العلوي من مبنى _Capitol Records_ في لوس أنجلوس يومض كلمة _HOLLYWOOD_ في رمز مورس.
 
 ::: column(width=220)
 
@@ -162,7 +157,6 @@
 
 ::: column(width=220)
 
-    // https://www.wired.com/2012/01/british-pow-uses-morse-code-to-stitch-hidden-message-during-wwii/
     x-img(src="images/stitching.jpg" width=220 height=280 lightbox credit="David Fearn / newsteam")
 
 {.caption} خلال الحرب العالمية الثانية ، أُجبر سجين بريطاني على عمل غرز زخرفية مثل هذه. هل يمكنك العثور على (وفك) رسائل مورس المخفية؟
@@ -176,7 +170,8 @@
 
 أينما نظرنا ، نحن محاطون [__بالمعلومات__](gloss:information) ، مثل الكتب والصحف والأرقام والرسوم البيانية والصور أو الصور أو الموسيقى أو مقاطع الأفلام.
 
-رمز [__<<<<__](gloss:code) هو قاعدة أو خوارزمية يمكن استخدامها للتعبير عن المعلومات بتنسيق معين. أحد الأمثلة على ذلك هو _الأبجدية_ ، والتي يمكن استخدامها للتعبير عن اللغة على أنها سلسلة من الرموز المكتوبة (تسمى _الحروف_). مثال آخر رأيناه من قبل هو [شفرة مورس](gloss:morse-code) ، التي تعبر عن الكلمات على أنها تسلسلات من [[النقاط والشرطات|letters and spaces|radio music]].
+[__رمز__](gloss:code) هو قاعدة أو خوارزمية يمكن استخدامها للتعبير عن المعلومات بتنسيق معين. أحد الأمثلة على ذلك هو _الأبجدية_ ، والتي يمكن استخدامها للتعبير عن اللغة على أنها سلسلة من الرموز المكتوبة (تسمى _الحروف_). مثال آخر رأيناه من قبل هو [رمز مورس](gloss:morse-code) ، التي تعبر عن الكلمات على أنها تسلسلات من [[النقاط و الخطوط|حروف و فراغ|موسيقى راديو
+ ]].
 
 ---
 > id: smoke-signals
@@ -194,7 +189,6 @@
 ::: column(width=280)
 
     x-img(src="images/smoke-signals.jpg" width=280 height=350 lightbox)
-    // https://commons.wikimedia.org/wiki/File:John_Mix_Stanley_-_Indian_Telegraph.jpg
 
 {.caption} إشارات الدخان الأمريكية الأصلية - لوحة بواسطة _جون ميكس ستانلي_
 
@@ -229,14 +223,12 @@
 ::: column(width=320)
 
     x-img(src="images/maritime-flags-1.jpg" width=320 height=220 lightbox)
-    // https://commons.wikimedia.org/wiki/File:Nautical_signal_flags_-_USS_Bonhomme_Richard_(LHD_6).jpg
 
 {.caption} تخزين لأعلام الإشارة على متن سفينة تابعة للبحرية الأمريكية
 
 ::: column(width=320 parent="padded-thin")
 
     x-img(src="images/maritime-flags-2.jpg" width=320 height=220 lightbox)
-    // https://depositphotos.com/39723603/stock-photo-colourful-signal-flags-on-a.html
 
 {.caption} أعلام زخرفية على مركب شراعي
 
@@ -250,15 +242,14 @@
           img(src=`images/maritime/${l.toLowerCase()}.svg` alt=l width=50 height=50)
           strong= l
 
-على سبيل المثال ، إذا رأيت الأعلام _{img(src="images/maritime/i.svg" width=20 height=20)}_ _{img(src="images/maritime/c.svg" width=20 height=20)}_ _{img(src="images/maritime/e.svg" width=20 height=20)}_ على متن سفينة عابرة ، فعليك [[مراقبة الجبال الجليدية|give them assistance|reduce speed]].
+على سبيل المثال ، إذا رأيت الأعلام _{img(src="images/maritime/i.svg" width=20 height=20)}_ _{img(src="images/maritime/c.svg" width=20 height=20)}_ _{img(src="images/maritime/e.svg" width=20 height=20)}_ على متن سفينة عابرة ، فعليك [[مراقبة الجبال الجليدية|أعطهم المساعدة|خفف السرعة]].
 
 ::: tab
 
-#### إبلاغ Semaphore _{span.check(when="blank-2")}_
+#### علام Semaphore _{span.check(when="blank-2")}_
 
-__Flag Semaphore__ هي طريقة أخرى للتواصل باستخدام الأعلام ، والتي تم استخدامها قبل وقت طويل من اختراع التلغراف. في هذه الحالة ، تكون جميع الأعلام متشابهة ، ولكن حملها في مواضع مختلفة يشير إلى أحرف مختلفة:
+__علام Semaphore__ هي طريقة أخرى للتواصل باستخدام الأعلام ، والتي تم استخدامها قبل وقت طويل من اختراع التلغراف. في هذه الحالة ، تكون جميع الأعلام متشابهة ، ولكن حملها في مواضع مختلفة يشير إلى أحرف مختلفة:
 
-    // https://depositphotos.com/77499298/stock-illustration-semaphore-alphabet-flags-on-a.html
     .flags
       for l in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
         div
@@ -273,7 +264,6 @@ __Flag Semaphore__ هي طريقة أخرى للتواصل باستخدام ال
 
 ::: column(width=200)
 
-    // https://en.wikipedia.org/wiki/File:Help!_(The_Beatles_album_-_cover_art).jpg - FAIR USE
     x-img.beatles(src="images/help-album.jpg" width=200 height=200 credit="© Parlophone")
 
 :::
@@ -283,7 +273,7 @@ __Flag Semaphore__ هي طريقة أخرى للتواصل باستخدام ال
 ---
 > id: genetic
 
-### الكود الجيني
+### الرمز الجيني
 
 تظهر الرموز حتى داخل أجسادنا! [DNA](gloss:dna) هو جزيء [طويل](gloss:molecule) يظهر في كل خلية في جسمك ، ويحتوي على الإرشادات الجينية لكيفية عمل جميع الكائنات الحية. وتتكون من أربعة مكونات مختلفة تسمى _نيوكليوتيدات_:
 
@@ -295,14 +285,13 @@ __Flag Semaphore__ هي طريقة أخرى للتواصل باستخدام ال
 
 ::: column(width=260)
 
-    // https://depositphotos.com/220660220/stock-photo-dna-spiral-molecule-high-detailed.html
     x-img(src="images/dna.jpg" width=260 height=380)
 
 ::: column.grow
 
-تتكون سلسلة من الحمض النووي من مليارات من هذه النوكليوتيدات _<<<<_ ، والتي تحتوي على تعليمات لتطوير وعمل أجسامنا. يمكننا تمثيلهم باستخدام تسلسلات من الأحرف __{.m-red} A__ و __{.m-blue} T__ و __{.m-green} C__ و __{.m-yellow} G__.
+سلسلة من الحمض النووي من مليارات من هذه النوكليوتيدات _تتكون_ ، والتي تحتوي على تعليمات لتطوير وعمل أجسامنا. يمكننا تمثيلهم باستخدام تسلسلات من الأحرف __{.m-red} A__ و __{.m-blue} T__ و __{.m-green} C__ و __{.m-yellow} G__.
 
-على غرار شفرة مورس ، تتطابق كل ثلاثة نيوكليوتيدات متتالية مع [_حمض أميني_](gloss:amino-acid) محدد ، وهو مكون صغير تستخدمه الخلايا في الجسم. على سبيل المثال ، __{.m-red} AA__ __{.m-yellow} G__ يمثل _Lysine_ ، وهو حمض أميني نستهلكه من خلال تناول الطعام مثل البيض أو اللحم أو فول الصويا.
+على غرار رمز مورس ، تتطابق كل ثلاثة نيوكليوتيدات متتالية مع [_حمض أميني_](gloss:amino-acid) محدد ، وهو مكون صغير تستخدمه الخلايا في الجسم. على سبيل المثال ، __{.m-red} AA__ __{.m-yellow} G__ يمثل _Lysine_ ، وهو حمض أميني نستهلكه من خلال تناول الطعام مثل البيض أو اللحم أو فول الصويا.
 
 تحتوي الشفرة الوراثية على مساحة لـ `4^3 = 64` من الأحماض الأمينية (أربعة خيارات لكل من النيوكليوتيدات الثلاثة في الثلاثي) ، لكن هناك حاجة إلى 20 فقط في الجسم.
 
@@ -320,7 +309,7 @@ __Flag Semaphore__ هي طريقة أخرى للتواصل باستخدام ال
 > section: binary
 > sectionStatus: dev
 
-{.todo} TODO
+{.todo} قريبًا
 
 ---
 
@@ -329,7 +318,7 @@ __Flag Semaphore__ هي طريقة أخرى للتواصل باستخدام ال
 > section: error-detection
 > sectionStatus: dev
 
-{.todo} TODO
+{.todo} قريبًا
 
 ---
 
@@ -338,7 +327,7 @@ __Flag Semaphore__ هي طريقة أخرى للتواصل باستخدام ال
 > section: cryptography
 > sectionStatus: dev
 
-{.todo} TODO
+{.todo} قريبًا
 
 ---
 
@@ -347,7 +336,7 @@ __Flag Semaphore__ هي طريقة أخرى للتواصل باستخدام ال
 > section: enigma
 > sectionStatus: dev
 
-{.todo} TODO
+{.todo} قريبًا
 
 ---
 
@@ -356,4 +345,4 @@ __Flag Semaphore__ هي طريقة أخرى للتواصل باستخدام ال
 > section: rsa
 > sectionStatus: dev
 
-{.todo} TODO
+{.todo} قريبًا

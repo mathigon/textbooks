@@ -4,10 +4,12 @@
 // =============================================================================
 
 
-import {total} from '@mathigon/core';
-import {clamp, toWord, Segment, Point, Angle, lerp, Rectangle, Polygon, isLineLike} from '@mathigon/fermat';
-import {$, Browser, slide} from '@mathigon/boost';
-import {Geopad, GeoPath, Path, Slider, Step, Polypad} from '../shared/types';
+/// <reference types="THREE"/>
+import {Color, total} from '@mathigon/core';
+import {clamp, lerp, toWord} from '@mathigon/fermat';
+import {Angle, intersections, isLineLike, Point, Polygon, Rectangle, Segment} from '@mathigon/euclid';
+import {Browser, slide} from '@mathigon/boost';
+import {Geopad, GeoPath, Path, Polypad, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';
 import {Graphics3D} from '../shared/components/webgl';
 import {Anibutton} from './components/anibutton';
@@ -17,6 +19,7 @@ import '../shared/components/solid';
 import './components/polyhedron';
 import './components/folding';
 import './components/anibutton';
+import './components/polyhedron-slice';
 
 
 function internalAngles(polygon: Polygon) {
@@ -50,6 +53,7 @@ export function angles($step: Step) {
     overlap[0] = total(s.a1) > 361;
     overlap[1] = total(s.a2) >= 541;
     if (overlap[0] || overlap[1]) $step.addHint('no-overlap');
+    for (const $b of $buttons) $b.setAttr('text', '???');
   });
 
   $buttons[0].one('click', () => $step.addHint('angles-repeat'));
@@ -80,9 +84,9 @@ export async function midsegments($step: Step) {
   let d = await $geopad.waitForPoint();
 
   // Reorder the points to be clockwise.
-  if (Segment.intersect(new Segment(a.value!, b.value!), new Segment(c.value!, d.value!))) {
+  if (intersections(new Segment(a.value!, b.value!), new Segment(c.value!, d.value!)).length) {
     [b, c] = [c, b];
-  } else if (Segment.intersect(new Segment(a.value!, d.value!), new Segment(b.value!, c.value!))) {
+  } else if (intersections(new Segment(a.value!, d.value!), new Segment(b.value!, c.value!)).length) {
     [c, d] = [d, c];
   }
 
@@ -164,7 +168,7 @@ export function quadrilateralsArea($step: Step) {
       $geopads[0].animatePoint(path.components[1].name, new Point(10, 9));
       $step.addHint('correct');
       $step.score('draw-1');
-      $geopads[0].switchTool('move')
+      $geopads[0].switchTool('move');
     } else {
       $step.addHint('incorrect');
       path.delete();
@@ -178,7 +182,7 @@ export function quadrilateralsArea($step: Step) {
       $geopads[1].animatePoint(path.components[1].name, new Point(11, 9));
       $step.addHint('correct');
       $step.score('draw-2');
-      $geopads[1].switchTool('move')
+      $geopads[1].switchTool('move');
     } else {
       $step.addHint('incorrect');
       path.delete();
@@ -190,7 +194,7 @@ export function quadrilateralsArea($step: Step) {
 
 export function tessellationDrawing($step: Step) {
   const $polypad = $step.$('x-polypad') as Polypad;
-  const $overlayTiles = $('.overlay .tiles')!;
+  const $overlayTiles = $step.$('.overlay .tiles')!;
 
   // TODO Save and restore progress
   let polygons = 0;
@@ -200,8 +204,7 @@ export function tessellationDrawing($step: Step) {
     $a.$('svg')!.setAttr('viewBox', '0 0 80 80');
   }
 
-  const [$clear, $download] = $step.$$('.tessellation .btn');
-  $clear.on('click', () => $polypad.clear());
+  const $download = $step.$('.tessellation x-icon-btn')!;
   $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
 
   $polypad.on('move-selection rotate-selection add-tile', () => {
@@ -223,6 +226,29 @@ export function tessellationDrawing($step: Step) {
     polygons += 1;
     if (polygons >= 3) $step.score('shapes0');
     if (polygons >= 5) $step.score('shapes1');
+  });
+}
+
+export function pentagons($step: Step) {
+  const $polypad = $step.$('x-polypad') as Polypad;
+  const $overlayTiles = $step.$('.overlay .tiles')!;
+  const $thumbnails = $step.$$('.tessellation .add');
+  const colours = Color.rainbow($thumbnails.length);
+
+  for (const [i, $a] of $thumbnails.entries()) {
+    const colour = colours[i].toString();
+    $polypad.bindSource($a, 'polygon', $a.data.shape!, $overlayTiles, colour);
+    $a.$('svg')!.setAttr('viewBox', '0 0 80 80');
+  }
+
+  const [$flip, $download] = $step.$$('.tessellation x-icon-btn');
+  $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
+  $flip.on('click', () => $polypad.selection.action('polygon', 'flip'));
+
+  let polygons = 0;
+  $polypad.on('add-tile', () => {
+    polygons += 1;
+    if (polygons >= 3) $step.score('shapes');
   });
 }
 

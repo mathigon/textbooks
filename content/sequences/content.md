@@ -173,8 +173,7 @@ We can also describe this pattern using a special [formula](gloss:formula):
 
 To get the _n_-th triangle number, we take the [[previous|first|next]] triangle
 number and add _n_. For example, if _n_&nbsp;=&nbsp;${n}{n|5|2,20,1}, the
-formula becomes <msub><mi>x</mi><mn>${n}</mn></msub>
-= <msub><mi>x</mi><mn>${n-1}</mn></msub> + ${n}.
+formula becomes `x_var("n") = x_var("n-1") + var("n")`.
 
 ---
 > id: recursive-1
@@ -540,21 +539,21 @@ sequences__ look very similar: if the difference is positive, they steadily
 {.reveal(when="blank-0 blank-1")} Geometric sequences, on the other hand, can
 behave completely differently based on the values of `a` and *r*:
 
-::: column.ag-limit-box.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-If _{span.var-action}`r > 1`_, the terms will [[quickly get bigger|quickly
-decrease|get closer to zero]]_{span.reveal(when="blank-2")}, up to infinity.
-Mathematicians say that the sequence [__diverges__](gloss:sequence-divergence)._
+If [`r > 1`](action:set(2,2)), the terms will [[quickly get bigger|quickly decrease|get closer to
+zero]], _{span.reveal(when="blank-2")}up to infinity. Mathematicians say that the sequence
+[__diverges__](gloss:sequence-divergence)._
 
-::: column.reveal.ag-limit-box(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-If _{span.var-action}*r* is between –1 and 1_, the terms will always [[get
-closer to 0|decrease to negative infinity|get smaller]]_{span.reveal(when="blank-3")}.
-We say that the sequence [__converges__](gloss:sequence-convergence)._
+If [`–1 < r < 1`](action:set(10,0.6)), the terms will always [[get closer to 0|decrease to negative
+infinity|get smaller]]. _{span.reveal(when="blank-3")}We say that the sequence
+[__converges__](gloss:sequence-convergence)._
 
-::: column.reveal.ag-limit-box(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-If _{span.var-action}`r < -1`_, the terms will alternate between positive and
+If [`r < -1`](action:set(3,-1.4)), the terms will alternate between positive and
 negative, while their [[absolute value|inverse|difference]] gets bigger.
 
 :::
@@ -681,7 +680,7 @@ explains his idea for making the world a better place:
 The essence of Trevor’s idea is that, if everyone “pays it forward”, a single
 person can have a huge impact on the world:
 
-    figure: img(src="images/pay-it-forward.png" width=700 height=220)
+    figure: img.invert(src="images/pay-it-forward.png" width=700 height=220)
 
 Notice how the number of people at every step forms a [[geometric sequence|arithmetic
 sequence|triangle number]], _{span.reveal(when="blank-0")}with common ratio [[3]]:_
@@ -961,9 +960,9 @@ Gauss](bio:gauss) – at the age of 19!
 ---
 > id: triangle-investigate
 
-::: .box.problem-box
-    .box-title: h3 Problem Solving
-::: .box-body
+::: .box.f-blue
+
+#### Problem Solving
 
 What is the sum of the first 100 positive [integers](gloss:integer)? In other
 words, what is the value of
@@ -974,7 +973,6 @@ Rather than manually adding up everything, can you use the [triangle
 numbers](gloss:triangle-numbers) to help you? What about the sum of the first
 1000 positive integers?
 
-:::
 :::
 
 ---
@@ -1195,7 +1193,7 @@ male and female).
 
 {.r} In the following month you would have 13 pairs of rabbits: the 8 ones from the
 previous month, plus 5 new sets of babies. Can you detect a pattern in this
-sequence? _{button.next-step} Continue_
+sequence? [Continue](btn:next)
 
 ---
 > id: rabbits-2
@@ -1232,7 +1230,7 @@ Sequence__](gloss:fibonacci-numbers), named after the Italian mathematician
 
 ::: column.grow
 When Fibonacci was born in 1175, most people in Europe still used the [Roman
-numeral system](gloss:roman-numerals) for numbers (like IVX or MCMLIV).
+numeral system](gloss:roman-numerals) for numbers (like XIV or MCMLIV).
 Fibonacci’s father was a merchant, and together they travelled to Northern
 Africa as well as the Middle East. It was there that Fibonacci first learned the
 [Arabic numeral system](gloss:arabic-numerals).
@@ -1269,7 +1267,7 @@ spirals there are in each direction?
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1282,7 +1280,7 @@ counterclockwise spirals.
 
 ::: column(width=320)
 
-    x-select.spiral-tabs
+    x-select.segmented
       div Original
       div(data-value="cw") Clockwise
       div(data-value="ccw") Countercw.
@@ -1311,7 +1309,7 @@ nature likes the Fibonacci sequence, which you’ll learn more about later.
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.segmented   
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1388,12 +1386,12 @@ is the ratio of its width and its height:
 
     include svg/golden-5.svg
 
-{.text-center.no-voice} <mfrac><mn>[[13]]</mn><mn>[[8]]</mn></mfrac> _{span.reveal(when="blank-0 blank-1")}= 1.625_
+{.text-center.no-voice} `input(13) / input(8) reveal(= 1.625, "blank-0 blank-1")`
 ::: column(width=100)
 
     include svg/golden-6.svg
 
-{.text-center.no-voice} <mfrac><mn>[[21]]</mn><mn>[[13]]</mn></mfrac> _{span.reveal(when="blank-2 blank-3")}= 1.62…_
+{.text-center.no-voice} `input(21) / input(13) reveal(= 1.62…, "blank-2 blank-3")`
 :::
 
 ---
@@ -1402,7 +1400,7 @@ is the ratio of its width and its height:
 
 Notice how, as we add more and more squares, the aspect ratio seems to get
 closer and closer to a specific number around 1.6. This number is called the
-[__golden ratio__](gloss:golden-ratio) and usually represented by the Greek
+[__golden ratio__](gloss:golden-ratio) and is usually represented by the Greek
 letter `φ` (“phi”). Its exact value is
 
 {.text-center} `(1 + sqrt(5))/2 = 1.61803398875…`
@@ -1493,38 +1491,30 @@ might look like with different angles between its seeds:
       x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} If the angle is _{span.fib-action(data-value=0)}0°_,
-all seeds will grow in a single long row away from the center.
+{div(slot="legend")} If the angle is [0°](action:set(0)), all seeds will grow in a single long row
+away from the center.
 
-{div.inline(slot="legend")} If the angle is _{span.fib-action(data-value=0.5)}`1/2`_
-of a full a rotation (180°), the seeds will alternate between two separate
-“arms” that move away from the center.
+{div.inline(slot="legend")} If the angle is [`1/2`](action:set(0.5)) of a full a rotation (180°),
+the seeds will alternate between two separate “arms” that move away from the center.
 
-{div.inline(slot="legend")} If the rotation is another fractional proportion of
-360°, for example _{span.fib-action(data-value=2/5)}`2/5`_ or
-_{span.fib-action(data-value=1/3)}`1/3`_ or _{span.fib-action(data-value=3/8)}`3/8`_,
-then the number of “arms” will be the same as the [[denominator|numerator|prime
-factor]] of that fraction.
+{div.inline(slot="legend")} If the rotation is another fractional proportion of 360°, for example
+[`2/5`](action:set(2/5)) or [`1/3`](action:set(1/3)) or [`3/8`](action:set(3/8)), then the number
+of “arms” will be the same as the [[denominator|numerator|prime factor]] of that fraction.
 
-{div(slot="legend")} Unfortunately “arms” are bad, because they mean that
-the seeds are not evenly distributed: all of the space between the arms is
-wasted. But if [rational numbers](gloss:rational-numbers) aren’t going to work,
-let’s try [irrational numbers](gloss:irrational-numbers)!
+{div(slot="legend")} Unfortunately “arms” are bad, because they mean that the seeds are not evenly
+distributed: all of the space between the arms is wasted. But if [rational numbers](gloss:rational-numbers)
+aren’t going to work, let’s try [irrational numbers](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} One example of an irrational number is [`pi`](gloss:pi).
-But if the angle between seeds is _{span.fib-action(data-value=0.31831)}`1/pi`_
-of 360°, we still seem to get arms: 22 of them. That’s because the fraction
-`22/7 = 3.1429…` is a pretty good approximation for `pi`. What we really need is
-an irrational number that _can’t_ be closely approximated by a simple fraction.
+{div.inline(slot="legend")} One example of an irrational number is [`pi`](gloss:pi). But if the
+angle between seeds is [`1/pi`](action:set(0.31831)) of 360°, we still seem to get arms: 22 of them.
+That’s because the fraction `22/7 = 3.1429…` is a pretty good approximation for `pi`. What we really
+need is an irrational number that _can’t_ be closely approximated by a simple fraction.
 
-{div.inline(slot="legend")} It turns out that the [golden ratio](gloss:golden-ratio)
-is just that: the “most irrational” of all irrational numbers. If the angle
-between seeds is _{span.fib-action(data-value=0.6180339)}`1/phi`_ of 360°, they
-seem to be almost perfectly spaced. And this is precisely the angle that plants
-around the world are using.
+{div.inline(slot="legend")} It turns out that the [golden ratio](gloss:golden-ratio) is just that:
+the “most irrational” of all irrational numbers. If the angle between seeds is
+[`1/phi`](action:set(0.6180339)) of 360°, they seem to be almost perfectly spaced. This is
+precisely the angle that plants around the world are using.
 :::
-
-    x-gesture(target=".fib-action")
 
 ---
 > id: sunflower-spiral-1
@@ -1544,7 +1534,7 @@ Nature also can’t solve equations to calculate the golden ratio – but over t
 course of millions of years, plants had plenty of time to try out different
 angles and discover the best one.
 
-Plants and animals always want grow in the most efficient way, and that is why
+Plants and animals always want to grow in the most efficient way, and that is why
 nature is full of regular, mathematical patterns.
 
 :::
@@ -1579,9 +1569,9 @@ _{span.n}${8×a+13×b}_, …
 There are many other puzzles, patterns and applications related to Fibonacci
 numbers. Here are a few examples, which you can try yourself:
 
-::: .box.problem-box
-    .box-title: h3 Problem solving
-::: .box-body
+::: .box.f-blue
+
+#### Problem solving
 
 __1. Fibonacci Divisibility__
 
@@ -1612,7 +1602,6 @@ choices:
 How many choices are there for staircase with 6, 7 or 8 steps? Can you detect
 a pattern? And how is this related to the Fibonacci numbers?
 
-:::
 :::
 
     figure
@@ -1735,17 +1724,17 @@ of a number (excluding the number itself):
 
 Let’s compare these numbers with their sum of factors:
 
-::: column.perfect-box(width=220 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
 
 For most numbers, the sum of its factors is [[less than|greater than|equal to]]
 itself. These numbers are called __deficient numbers__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" width=220)
+::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 For a few numbers, the sum of its factors is greater than itself. These numbers
 are called __abundant numbers__.
 
-::: column.reveal.perfect-box(when="blank-0" animation="pop" delay=500 width=220)
+::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 Only one number in the list above has a sum of factors that is _equal_ to itself:
 [[6]]. This is called a [__perfect number__](gloss:perfect-numbers).
@@ -1841,7 +1830,7 @@ the terms of the sequence in a chart:
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")} Notice how some starting points end very quickly,
-while others (like _{span.var-action}31_ or _{span.var-action}47_) take more
+while others (like [31](action:set(31)) or [47](action:set(47))) take more
 than one hundreds steps before they reach the 4, 2, 1 cycle.
 
 ---
@@ -1887,7 +1876,7 @@ above. Can you find the pattern?
 {.text-center.s-lime.s-vertical} _{span.n}1_, _{span.n}11_, _{.n}21_,
 _{.n}1211_, _{.n}111221_, _{.n}312211_, …
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: look-and-say-1
@@ -1932,9 +1921,9 @@ to behave almost randomly.
 In this quiz you can combine all your knowledge about sequences. There is just
 one goal: find the pattern and calculate the next two terms!
 
-::: .box.problem-box
-    .box-title: h3 Find the next number
-::: .box-body
+::: .box.f-blue
+
+#### Find the next number
 
 {.text-center.s-yellow.no-voice} _{span.n}7_, _{span.n}11_, _{.n}15_, _{.n}19_, _{.n}23_,
 _{.n}27_, _{.n}[[31]]_, _{.n}[[35]]_, …
@@ -1964,7 +1953,6 @@ _{span.pattern.reveal(when="blank-10 blank-11")} Pattern: +1, +2, ÷2, +1, +2, �
 _{.n}121_, _{.n}[[169]]_, _{.n}[[225]]_, …
 _{span.pattern.reveal(when="blank-12 blank-13")} Pattern: Odd square numbers_
 
-:::
 :::
 
 
@@ -2042,7 +2030,7 @@ Pascal’s triangle can be created using a very simple pattern, but it is filled
 with surprising patterns and properties. That’s why it has fascinated
 mathematicians across the world, for hundreds of years.
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 
 ---
@@ -2127,7 +2115,7 @@ Since 3003 is a triangle number, it actually appears two more times in the
 _third_ diagonals of the triangle – that makes eight occurrences in total.
 
 It is unknown if there are any other numbers that appear eight times in the
-triangle, or if there numbers that appear more than eight times. The American
+triangle, or if there are numbers that appear more than eight times. The American
 mathematician [David Singmaster](bio:singmaster) hypothesised that there is a
 fixed limit on how often numbers can appear in Pascal’s triangle – but it hasn’t
 been proven yet.

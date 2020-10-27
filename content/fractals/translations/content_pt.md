@@ -428,14 +428,12 @@ Embora os fractais verdadeiros nunca possam aparecer na natureza, há muitos obj
 
 ::: column(width=200)
 
-    // https://visibleearth.nasa.gov/images/72291/the-hindu-kush
     x-img(src="images/nature/mountains.jpg" width=200 height=200 lightbox credit="NASA/GSFC")
 
 {.caption} Cordilheira na Ásia Central
 
 ::: column(width=200)
 
-    // https://de.wikipedia.org/wiki/Datei:Sundarbans.jpg
     x-img(src="images/nature/rivers.jpg" width=200 height=200 lightbox credit="NASA")
 
 {.caption} Delta do rio Ganges na Índia
@@ -448,14 +446,12 @@ Embora os fractais verdadeiros nunca possam aparecer na natureza, há muitos obj
 
 ::: column(width=200)
 
-    // https://commons.wikimedia.org/wiki/File:Fundus_photograph_of_normal_right_eye.jpg
     x-img(src="images/nature/retina.jpg" width=200 height=200 lightbox credit="Mikael Häggström, CC-BY-SA")
 
 {.caption} Vasos sanguíneos na retina
 
 ::: column(width=200)
 
-    // https://www.flickr.com/photos/usgeologicalsurvey/11188773133
     x-img(src="images/nature/canyons.jpg" width=200 height=200 lightbox credit="US Geological Survey")
 
 {.caption} Grand Canyon nos EUA
@@ -470,16 +466,12 @@ Embora os fractais verdadeiros nunca possam aparecer na natureza, há muitos obj
 
 Todos esses objetos podem parecer completamente aleatórios, mas, assim como os fractais, existe um padrão subjacente que determina como eles são formados. A matemática pode nos ajudar a entender melhor as formas, e os fractais têm aplicações em áreas como medicina, biologia, geologia e meteorologia. [Continuar](btn:next)
 
-    // TODO https://en.wikipedia.org/wiki/Fractal_antenna
-    // TODO Fractals in African Art
-
 ---
 
 > id: technology
 
 ::: column(width=300)
 
-    // https://commons.wikimedia.org/wiki/File:Fractal_terrain_texture.jpg
     x-img(src="images/terrain.jpg" width=360 height=270 lightbox)
 
 {.caption} Terreno fractal gerado por computador
@@ -522,22 +514,18 @@ Aqui estão alguns exemplos de ladrilhos de diferentes igrejas em Roma:
 
 ::: column(width=140 parent="padded-thin")
 
-    // https://commons.wikimedia.org/wiki/File:Santa_Maria_in_Cosmedin_(Roma).jpg
     x-img(src="images/floor-1.jpg" width=140 height=140 credit="Wiki LIC, CC-BY-SA-4.0")
 
 ::: column(width=140)
 
-    // Permission from Elisa Conversano
     x-img(src="images/floor-2a.jpg" width=140 height=140 credit="San Clemente, Carlini und Conversano, 2010")
 
 ::: column(width=140)
 
-    // https://www.cattedraledianagni.it/
     x-img(src="images/floor-2.jpg" width=140 height=140 credit="© cattedraledianagni.it")
 
 ::: column(width=140)
 
-    // http://matheuro.overblog.com/2014/05/sierpinski-s-triangle-the-nave-of-the-roman-basilica-of-santa-maria-in-comesdin.html
     x-img(src="images/floor-3.jpg" width=140 height=140 credit="© Lycée Baudelaire")
 
 :::
@@ -730,15 +718,15 @@ Vamos usar a fórmula recursiva `§x_n = x_(n-1)^2` como exemplo e plotar seus t
 
 Observe como a sequência resultante pode se comportar de maneira muito diferente, dependendo do valor inicial `x_0`:
 
-::: column.sequence-cell(width=180 parent="padded-thin")
+::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
 
 Se `x_0 > 1`, a sequência [[diverge|converge]]: _{span.reveal(when="blank-0")} continua crescendo, até o infinito._
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Se `x_0` estiver entre –1 e 1, a sequência [[converge|diverge]].
 
-::: column.sequence-cell(width=180)
+::: column.frame.f-blue.text-center(width=212)
 
 Se `x_0 < -1`, a sequência [[diverge|converge]].
 
@@ -955,14 +943,9 @@ Ao mover o valor de [{.pill.red} c](target:c) ao redor do conjunto de Mandelbrot
 * {.reveal(when="blank-0")} As sequências dentro do [bulbo grande](target:bulb1) no topo [[atingem uma órbita|convergem|divergem]] _{span.reveal(when="blank-1")} consistindo em [[3]] pontos._
 * {.reveal(when="blank-2")} Sequências [neste bulbo menor](target:bulb2) têm órbitas de período [[5]].
 
-
 :::
 
 {.reveal(when="blank-3")} Todo bulbo tem uma órbita de tamanho diferente, com bulbos menores tendo cada vez mais pontos em suas órbitas. O tamanho dessas órbitas está intimamente relacionado ao __mapa logístico__, um conceito importante na [teoria do caos](/course/chaos).
-
-    // TODO: Generic pan+zoom (see http://mandel.gart.nz)
-    // TODO: Relationship between Julia and Mandelbrot sets
-    // TODO: Fibonacci Numbers in the Mandelbrot sets
 
 ---
 
@@ -988,6 +971,4 @@ Em 1985, o conjunto de Mandelbrot apareceu na capa da revista _Scientific Americ
 > sectionStatus: dev
 
 {.todo} Em breve!
-
-
 

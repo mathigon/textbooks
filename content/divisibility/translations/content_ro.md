@@ -62,18 +62,21 @@ de __{.green}7__ și putem scrie __{.green}7__|__{.orange}21__.
 În acest scurt joc trebuie să determini cât de repede posibil care numere sunt divizori și care multipli. 
 Apasă [butonul play](->#divisibility-game_.toggle) pentru a începe.
 
-    .box.problem-box
-      .box-title: h3 Chestionar Divizori și Multipli
-      x-gameplay.box-body
-        .factors-row
-          .factor-number ${x}
-          | este un
-          .factor-value
-            .factor-bubble: .btn.btn-blue divizor
-            .factor-bubble: .btn.btn-blue multiplu
-            .factor-bubble: .btn.btn-blue niciunul
-          | al lui
-          .factor-number ${y}
+::: .box.f-blue.no-padding
+#### Chestionar Divizori și Multipli
+
+    x-gameplay
+      .factors-row
+        .factor-number ${x}
+        | este un
+        .factor-value
+          .factor-bubble: .btn.btn-blue divizor
+          .factor-bubble: .btn.btn-blue multiplu
+          .factor-bubble: .btn.btn-blue niciunul
+        | al lui
+        .factor-number ${y}
+
+:::
 
 ---
 > id: factors
@@ -111,8 +114,6 @@ până ajungem la mijloc.
 
 Singurul caz special al acestei metode apare la numerele pătrate perfecte: în acest caz, punctul de întâlnire din mijloc este un singur număr, precum 64 = 8 × 8.
 
-    //- TODO Factorisation exercises
-
 ---
 
 ## Criterii de Divizibilitate
@@ -123,7 +124,6 @@ Singurul caz special al acestei metode apare la numerele pătrate perfecte: în 
 Există câteva criterii diferite care pot ușura surprinzător de mult verificarea dacă 
 un număr este divizibil cu altul. În acest capitol vom arunca o privire asupra 
 câtorva dintre acestea...
-
 
 ### Criteriul de divizibilitate cu 2 și 5
 
@@ -279,10 +279,9 @@ rămas este de asemenea divizibil cu 3 (sau cu 9):
 
 {.text-center} __{.m-red}6__ + __{.m-blue}3__ + __{.m-green}8__ + __{.m-yellow}4__
 
-Aceasta este totodată și suma cifrelor! Deci, dacă <x-target no-margins
-to=".digit-sum-is">suma cifrelor</x-target> este multiplu de 3 și știm că
-<x-target no-margins to=".digit-sum-else">restul</x-target>
-e multiplu de 3, atunci rezultatul va fi și el un multiplu de 3.
+Aceasta este totodată și suma cifrelor! Deci, dacă [{.no-margins}suma cifrelor](->.digit-sum-is)
+este multiplu de 3 și știm că [{.no-margins}restul](->.digit-sum-else) e multiplu de 3, atunci
+rezultatul va fi și el un multiplu de 3.
 
 ---
 > id: divisibility6
@@ -303,8 +302,6 @@ este divizibil cu 2 [[și|sau]] 3. De reținut că această regulă funcționeaz
 pentru 6, dar cu siguranță nu pentru _orice_ număr care este produsul a două numere.
 Mai multe despre toate acestea mai târziu…
 
-    //- TODO Practice exercises
-
 ---
 
 ## Numere Prime
@@ -319,8 +316,6 @@ sub forma unui produs de numere mai mici, iar asta le face, într-un fel sa fie 
 
 Să observăm că 1 _nu_ este număr prim, așa că primele numere prime sunt
 2, 3, 5, 7, 11, 13, …
-
-    //- TODO Exercises
 
 ---
 > id: primes1
@@ -373,8 +368,6 @@ Folosirea TFA poate simplifica multe probleme de matematică: descompunem numere
 factori primi, rezolvăm problema pentru numerele prime individuale, care
 adesea poate fi mult mai ușoară, iar apoi combinăm aceste rezultate pentru a rezolva
 problema inițială.
-
-    //- TODO Exercises
 
 ---
 > id: eratosthenes
@@ -433,10 +426,6 @@ că există o infinitate de numere prime, folosind următorul raționament:
         .text-center #[em.number-ball.green P’] #[span.divides] #[em.number-ball N] + 1
       li În ambele cazuri am găsit un nou număr prim care nu se află în lista noastră inițială, dar am presupus ca #[em toate] numerele prime se aflau în această listă.
       li Cu siguranță că ceva nu e în regulă! Dar, având în vedere că pașii #[span.proof-step 2]–#[span.proof-step 4] erau mai mult ca sigur valizi, singura posibilitate este că presupunerea noastră inițială din pasul #[span.proof-step 1] a fost greșită. Așadar, există o infinitate de numere prime.
-
-    // Notice that any prime that divides N cannot divide N + 1. (If it would,
-    // it also had to divide the difference between N and N + 1 which is 1. But
-    // the only number that divides 1 is 1 itself.)
 
 ---
 > id: primes4
@@ -508,8 +497,6 @@ Aici poți genera propriile tale numere prime cu un număr dat de cifre:
 
 ---
 > id: ulam
-
-    //- Stanislaw M. Ulam was doodling during the presentation of a "long and very boring paper" at a scientific meeting in 1963.
 
 ### Spirala Ulam
 
@@ -846,8 +833,6 @@ Numerele prime sunt un caz special: cmmmc pentru două numere prime diferite est
 [[produsul|suma|diferența]] lor, pentru că ele nu au niciun factor prim comun care 
 s-ar putea “tăia”.
 
-    //- TODO Exercises
-
 ---
 > id: cicadas
 > goals: bound-low bound-high
@@ -891,8 +876,6 @@ Bineînțeles că cicadele nu au nicio idee ce sunt numerele prime, dar de-a lun
 de ani evoluția a stabilit că numerele prime sunt cea mai sigură opțiune pentru durata 
 ciclului de viață. Animalul prădător pare să fi dispărut de-a lungul timpului, dar 
 ciclurile de viață cu numere prime au ramas.
-
-    //- TODO Exercises
 
 ---
 
