@@ -33,7 +33,7 @@ To use these, you put the word "figure" then "x-voxel-painter()" indented beneat
 6. If you want no interaction at all, even rotating, put noInteraction
 7. To have the color of interior cubs shown sometimes, have "explodeOnGrab" as well. Warning: this induces "rotateOnly" mode
 
-# Examples
+### Examples
 
 Take a look at this cube. Some of the faces, the ones on the inside you'll see, are grey. The ones that aren't grey are on its surface. How many non-grey faces are there?
 
