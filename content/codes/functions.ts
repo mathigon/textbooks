@@ -7,13 +7,12 @@
 import {delay, wait} from '@mathigon/core';
 import {Point} from '@mathigon/euclid';
 import {$N, ElementView, InputView, loadScript, slide, SVGView} from '@mathigon/boost';
-import {Slider, Slideshow, Step} from '../shared/types';
+import {Select, Slider, Slideshow, Step} from '../shared/types';
 
 import {beep, Beep} from './components/beep';
 import {CodeBox} from './components/code-box';
 import {MORSE_CODE} from './components/utilities';
 import {HammingCode} from './components/hamming';
-
 
 import './components/code-box';
 import './components/barcode';
@@ -585,12 +584,9 @@ export function finger5($section: Step) {
   let i = 0;
   const delay = 300;
 
-  // FINGERZ: replace button with goal completion
-  $section.$('.appear')?.on('click', () => $fingers.forEach(
+  $section.onScore('blank-0', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
   ));
-  // I love how this looks
-
 }
 
 export function finger32($section: Step) {
@@ -599,19 +595,19 @@ export function finger32($section: Step) {
 
   const $decCaptions = $section.$$('.dec');
   const $binCaptions = $section.$$('.bin');
+  let showingBin = false;
 
   $binCaptions.forEach($f => $f.hide());
 
   let i = 0;
   const delay = 200;
-  $section.$('.appear')?.on('click', () => $fingers.forEach(
+  $section.onScore('blank-0', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
   ));
 
-  let showingBin = false;
-
-  // switch between binary and decimal display
-  $section.$('.switch')?.on('click', () => {
+  const $select = $section.$('x-select') as Select;
+  $select.on('change', ($el: ElementView) => {
+    console.log($el.data.name);
     (showingBin ? $binCaptions : $decCaptions).forEach($f => $f.hide());
     (showingBin ? $decCaptions : $binCaptions).forEach($f => $f.show());
 

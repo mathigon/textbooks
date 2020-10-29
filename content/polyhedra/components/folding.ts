@@ -45,7 +45,7 @@ function getFolding(data: FoldingDataItem) {
     const faceGeometry = drawFace(face, vertices);
 
     const faceMaterial = new THREE.MeshPhongMaterial({
-      vertexColors: THREE.FaceColors,
+      vertexColors: THREE.FaceColors as any,
       side: THREE.DoubleSide,
       transparent: true,
       opacity: 0.9,

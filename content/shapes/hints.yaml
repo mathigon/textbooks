@@ -1,0 +1,12 @@
+polygon-regular: This shape is a __regular__ polygon because all sides are the same length.
+not-polygon-curved: This shape is __not__ a polygon because it has curved sides.
+not-polygon-hole: This shape is __not__ a polygon because it has a hole.
+polygon-irregular: This shape is an __irregular__ polygon because the side lengths are not all the same.
+not-polygon-closed: This shape is __not__ a polygon because it is not closed.
+not-polygon-crossing: This shape is __not__ a polygon because two of the edges cross over each other.
+polygon-voronoi: This is an __irregular__ polygon from the Voronoi diagram above. We’ll find the area of it below.
+
+canada: The leaf has some curved sections, so while not technically a polygon, it closely resembles a 25-sided polygon. This is called a icosikaipentagon!
+south-africa: While it may not initially look like it, the yellow and while shapes in the flag are both hexagons!
+finland: The blue polygon has 12 sides and is called a dodecagon.
+nepal: The flag itself is a pentagon and the bottom image inside the flag is a 24-sided polygon called a icositetragon.
