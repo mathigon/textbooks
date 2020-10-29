@@ -1020,6 +1020,22 @@ hamilton:
     Hamilton also made significant contributions to physics, including optics
     and Newtonian mechanics.
 
+hamming:
+  born: 1915
+  died: 1998
+  name: Hamming
+  full: Richard Hamming
+  bio: |
+    __Richard Hamming__ ,(1915 – 1998) was an American mathematician and early
+    computer programmer. He invented the _Hamming code_, a method of detecting and
+    correcting errors in computer science and telecommunications.
+
+    Hamming played an important role in the Manhattan Project, programming the
+    computers that ran the simulations provided by the project's physicists.
+  links:
+    - title: Hamming Codes
+      url: /course/codes/error-detection#hamming
+
 hardy:
   born: 1877
   died: 1947

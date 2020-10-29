@@ -975,14 +975,32 @@ It's actually not quite as simple as giving the five digits 2-6 to each individu
 ---
 
 ### Hamming Codes
+> id: hamming
 
-{.todo} Hamming Codes
+Let's go back to our original problem of how we might detect errors in a message received from a satellite. We don't know the message the satellite intended to send, and unlike with barcodes there is no way to find it, such as a cashier who can look at the number and type it into the computer.
 
-Let's go back to our original problem of how we might detect errors sent from a satellite. The information received from the satellite is unknown, and there is no backup plan, like a cashier who can look at a number and type it into the computer.
+A mathematician named [Richard Hamming](bio:hamming) encountered a very similar problem not with data from satellites, but with mechanical computers.
 
-A mathematician named [Richard Hamming](bio:hamming) had this same problem not with data from satellites, but from computers.
+::: column.grow
 
-Computers used to be programmed with [punch cards](gloss: punch cards). In 1947, Hamming programmed a computer to perform a long and complex series of calculations while he went home over the weekend. When he returned, he discovered an error had occurred and his entire calculation was useless. He felt a need to invent a way to correct when an error had happened.
+Computers used to be programmed by creating holes in special [punch cards](gloss:punch-card), which were then fed into the computer. These were time-consuming to program, and the calculations could take hours or even days to complete. In 1947, Hamming wrote a program to perform a long and complex series of calculations while he went home over the weekend. When he returned, he discovered that an error had occurred somewhere early in the calculation and his entire result was useless. He felt a need to invent a way to correct when an error had happened.
+
+::: column(width=280)
+
+    x-img(src="images/punch-card.png" width=640 height=288 lightbox)
+    // https://commons.wikimedia.org/wiki/File:Blue-punch-card-front-horiz.png
+
+{.caption} A blue IBM punched card.
+
+:::
+
+{.quote}If the computer can tell when an error has occurred, surely there is a way of telling where the error is so that the computer can correct the error itself. - Richard Hamming
+
+{.todo} How it works
+
+How could we do this when the original message is a sequence of binary numbers? The solution involves inserting new bits into the message that will tell us information about the values of those original bits. This is much like the last digit of a barcode tells us information about the first 11 digits, but with binary numbers.
+
+[Continue](btn:next)
 
 ---
 > id: hamming-encode
@@ -997,27 +1015,32 @@ Click through the slides to see how to encode a string of bits using Hamming Cod
 
 {div.inline(slot="legend")} Let's say we want to encode this string of 8 bits. We call these 8 bits the **{.pill.green}data bits**.
 
-{div.inline(slot="legend")} First we must shift the [{.pill.green}data bits](target:data) to the right to make room for the [{.pill.red}parity bits](target:parity). The parity bits must go into any bit position that is a power of 2.
+{div.inline(slot="legend")} First we must shift the [{.pill.green}data bits](target:data) to the right to make room for the [{.pill.red}parity bits](target:parity). The parity bits must go into any bit position that is a power of 2. Here we place parity bits at [1](target:p1), [2](target:p2), [4](target:p4), and [8](target:p8).
 
-{div.inline(slot="legend")} We must figure out the values that go into the parity bits. Let's start with the first parity group. Start at the parity bit in position 1, then choose every other one bit.
+{div.inline(slot="legend")} We must figure out the values that go into the parity bits. Let's start with the first parity group. Start at the parity bit in position 1, then choose every other **one** bit.
 
 {div.inline(slot="legend")} This group of bits has an [[${parity1right}|${parity1wrong}]] parity, so we give the parity bit value [[${pb1r}|${pb1w}]].
 
-{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in position 2, then choose every other 2 bits.
+{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in position 2, then choose every other **2** bits.
 
 {div.inline(slot="legend")} This group of bits has an [[${parity2right}|${parity2wrong}]] parity, so we give the parity bit value [[${pb2r}|${pb2w}]].
 
-{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in position 4, then choose every other 4 bits.
+{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in position 4, then choose every other **4** bits.
 
 {div.inline(slot="legend")} This group of bits has an [[${parity4right}|${parity4wrong}]] parity, so we give the parity bit value [[${pb4r}|${pb4w}]].
 
-{div.inline(slot="legend")} Now let's do the last parity group. Start at the parity bit in position 8, then choose every other 8 bits.
+{div.inline(slot="legend")} Now let's do the last parity group. Start at the parity bit in position 8, then choose every other **8** bits.
 
 {div.inline(slot="legend")} This group of bits has an [[${parity8right}|${parity8wrong}]] parity, so we give the parity bit value [[${pb8r}|${pb8w}]].
 
 {div.inline(slot="legend")} Here is our final encoded string of bits to send!
 
 :::
+
+{.todo} Logic of how we decide parity groups.
+
+1. Convert place numbers to binary
+2. For each parity group, select any digit whose place number has a **1** in that position.
 
 ---
 

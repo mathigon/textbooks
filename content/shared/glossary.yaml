@@ -1349,6 +1349,13 @@ protractor:
   title: Protractor
   text: A __protractor__ is a tool used to measure an angle in degrees.
 
+punch-card:
+  title: Punch Card
+  text: |
+    A __punch card__ is a stiff paper card in which holes can be punched to
+    represent computer data or instructions. These were fed into a card reader
+    and converted into electrical signals, which were processed by the computer.
+
 pythagoras-theorem:
   title: Pythagoras’ theorem
   text: __Pythagoras’ theorem__ states that in every right-angled triangle,
