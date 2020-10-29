@@ -721,10 +721,18 @@ export function hammingEncode($step: Step) {
 
   // Slide functions.
   const slideNext = [
+    // "Let's say..."
     () => $hamming.noop(),
 
+    // "First we must shift..."
     () => $hamming.makeRoomForParities(),
+    // "The parity bits will go into..."
+    () => $hamming.noop(),
 
+    // "We must figure out..."
+    () => $hamming.noop(),
+
+    // "Let's start with the first parity group..."
     () => $hamming.highlight(1),
     () => $hamming.noop(),
 
@@ -743,6 +751,7 @@ export function hammingEncode($step: Step) {
   const slideBack = [
     () => $hamming.hideParityBits(),
 
+    () => $hamming.noop(),
     () => $hamming.showAll(),
 
     () => $hamming.noop(), // $hamming.hideParity(1),

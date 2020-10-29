@@ -1010,23 +1010,27 @@ Click through the slides to see how to encode a string of bits using a Hamming C
 
 ::: x-slideshow
 
-{div.inline(slot="legend")} Let's say we want to encode this string of 8 bits. We call these 8 bits the **{.pill.green}data bits**.
+{div.inline(slot="legend")} Let's say we want to encode this string of 8 bits. We call these 8 bits the [{.pill.green}data bits](target:data).
 
-{div.inline(slot="legend")} First we must shift the [{.pill.green}data bits](target:data) to the right to make room for the [{.pill.red}parity bits](target:parity). The parity bits must go into any bit position that is a power of 2. Here we place parity bits at [1](target:p1), [2](target:p2), [4](target:p4), and [8](target:p8).
+{div.inline(slot="legend")} First we must shift the [{.pill.green}data bits](target:data) to the right to make room for the [{.pill.red}parity bits](target:parity). The parity bits will encode information about the data bits.
 
-{div.inline(slot="legend")} We must figure out the values that go into the parity bits. Let's start with the first parity group. Start at the parity bit in position 1, then choose every other **1** bit.
+{div.inline(slot="legend")} The [{.pill.red}parity bits](target:parity) will go into any position that is a power of 2. Here we place parity bits at [{.pill.red}1](target:p1), [{.pill.red}2](target:p2), [{.pill.red}4](target:p4), and [{.pill.red}8](target:p8).
+
+{div.inline(slot="legend")} We must figure out the values that go into the parity bits. We do this by dividing the sequence into one __parity group__ for each parity bit. We then assign the parity bit whatever value will make the parity of the group even.
+
+{div.inline(slot="legend")} Let's start with the first parity group. Start at the parity bit in [{.pill.red}position 1](target:p1), then choose every other **1** bit.
 
 {div.inline(slot="legend")} This group of bits has an [[${parity1right}|${parity1wrong}]] parity, so we give the parity bit value [[${pb1r}|${pb1w}]].
 
-{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in position 2, then choose every other **2** bits.
+{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in [{.pill.red}position 2](target:p2), then choose every other **2** bits.
 
 {div.inline(slot="legend")} This group of bits has an [[${parity2right}|${parity2wrong}]] parity, so we give the parity bit value [[${pb2r}|${pb2w}]].
 
-{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in position 4, then choose every other **4** bits.
+{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in [{.pill.red}position 4](target:p4), then choose every other **4** bits.
 
 {div.inline(slot="legend")} This group of bits has an [[${parity4right}|${parity4wrong}]] parity, so we give the parity bit value [[${pb4r}|${pb4w}]].
 
-{div.inline(slot="legend")} Now let's do the last parity group. Start at the parity bit in position 8, then choose every other **8** bits.
+{div.inline(slot="legend")} Now let's do the last parity group. Start at the parity bit in [{.pill.red}position 8](target:p8), then choose every other **8** bits.
 
 {div.inline(slot="legend")} This group of bits has an [[${parity8right}|${parity8wrong}]] parity, so we give the parity bit value [[${pb8r}|${pb8w}]].
 
@@ -1036,7 +1040,7 @@ Click through the slides to see how to encode a string of bits using a Hamming C
 
 ---
 
-Did you notice anything about how the bits for each parity group are selected? The answer has to do with the [[binary value|divisibility]] of each digit place.
+Did you notice anything about how the bits for each parity group are selected? The answer has to do with the [[binary value|divisibility]] of each digit position.
 
 ---
 
@@ -1047,11 +1051,11 @@ Here is how to select the digits to include in a parity group.
       li Identify the parity groups. Each will be a power of 2.
       li For each parity group, select any digit whose binary place number has a **1** in that position.
 
-::: column.grow
-
 [Continue](btn:next)
 
 ---
+
+::: column.grow
 
 | group | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -1059,7 +1063,6 @@ Here is how to select the digits to include in a parity group.
 | 2 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 |
 | 4 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 1 |
 | 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
-
 
 ::: column(width=300)
 
@@ -1076,6 +1079,24 @@ The 6th digit in the encoded bit sequence will be part of parity groups [[2 and 
 > id: hamming-decode
 
 #### Decoding a Hamming Code
+
+Now that we have an encoded message, how can we extract the data from it? We must reverse the process.
+
+::: column
+
+__Encoding__
+1. Make room for parity bits
+2. Identify parity groups.
+3. Define parity bits.
+
+::: column
+
+__Decoding__
+1. Check parity bits.
+2. Make corrections.
+3. Remove parity bits.
+
+:::
 
 Click through the slides to see how to decode a string of bits using Hamming Codes.
 
@@ -1097,6 +1118,10 @@ Click through the slides to see how to decode a string of bits using Hamming Cod
 
 
 :::
+
+---
+
+This is not a perfect system. This type of code will not correctly detect an error when there are more than [[1]] errors.
 
 ---
 
