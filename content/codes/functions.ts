@@ -787,52 +787,89 @@ export function hammingDecode($step: Step) {
   const $hamming = $step.$('x-hamming') as HammingCode;
 
   // parity group 1
-  $step.onScore('blank-0 blank-1', () => {
-    $hamming.markGroupError(1)
+  $step.onScore('blank-1 blank-2', () => {
+    $hamming.markSingleBitError(1);
   });
 
   // parity group 4
-  $step.onScore('blank-4 blank-5', () => {
-    $hamming.markGroupError(5);
+  $step.onScore('blank-5 blank-6', () => {
+    $hamming.markSingleBitError(4);
+  });
+
+  $step.onScore('blank-9', () => {
+    $hamming.unmarkSingleBitError(1);
+    $hamming.unmarkSingleBitError(4);
+    $hamming.markSingleBitError(5);
+  });
+
+  $step.onScore('blank-10', () => {
+    $hamming.correctDataBit(5);
+    $hamming.unmarkSingleBitError(5);
   });
 
   const slideNext = [
+    // "What if..."
     () => $hamming.noop(),
+
+    // "First let's check parity group 1..."
     () => {
       $hamming.highlight(1);
-      // $hamming.markGroupError(1); // should not be group error, should just track parity bits
     },
+
+    // "Now let's check parity group 2..."
     () => {
       $hamming.highlight(2);
-      // $hamming.markGroupError(2);
     },
+
+    // "Now let's check parity group 4..."
     () => {
       $hamming.highlight(4);
-      // $hamming.markGroupError(4);
     },
+
+    // "Now let's check..."
     () => $hamming.highlight(8),
+
+    // "We identified there is something wrong..."
     () => {
-      $hamming.showAll(); $hamming.hideParityBits();
+      $hamming.showAll();
+    },
+
+    // "Now can remove..."
+    () => {
+      $hamming.hideParityBits();
     }
   ];
 
   const slideBack = [
+    // "What if..."
     () => {
       $hamming.showAll();
-      $hamming.unmarkGroupError(1);
+      // $hamming.unmarkSingleBitError(1);
     },
+    // "First let's check parity group 1..."
     () => {
       $hamming.highlight(1);
     },
+    // "Now let's check parity group 2..."
     () => {
       $hamming.highlight(2);
-      $hamming.unmarkGroupError(4);
+      // $hamming.unmarkSingleBitError(4);
     },
+    // "Now let's check parity group 4..."
     () => {
       $hamming.highlight(4);
     },
+    // "Now let's check parity group 8..."
     () => {
-      $hamming.highlight(8); $hamming.makeRoomForParities();
+      $hamming.highlight(8);
+    },
+    // "We identified..."
+    () => {
+      $hamming.makeRoomForParities();
+    },
+    // "Now we can remove..."
+    () => {
+      $hamming.noop();
     }
   ];
 

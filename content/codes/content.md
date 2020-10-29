@@ -1104,7 +1104,7 @@ Click through the slides to see how to decode a string of bits using Hamming Cod
 
 ::: x-slideshow
 
-{div.inline(slot="legend")} What if we receive this packet of information? Assume we know that is has been encoded using Hamming encoding.
+{div.inline(slot="legend")} What if we receive this packet of information? Assume we know that is has been encoded using Hamming encoding. This means that each parity group should have an [[even|odd]] parity. As we check each group, we can mark which have an incorrect bit.
 
 {div.inline(slot="legend")} First let's check parity group 1. The parity is [[odd|even]]. There is [[something|nothing]] wrong here!
 
@@ -1114,7 +1114,9 @@ Click through the slides to see how to decode a string of bits using Hamming Cod
 
 {div.inline(slot="legend")} Now let's check parity group 8. The parity is [[even|odd]]. There is [[nothing|something]] wrong here!
 
-{div.inline(slot="legend")} We identified there is something wrong in the 1st and 4th parity group. There is an error with bit [[5]]. We flip this bit to a [[1]], and remove the parity bits to fully decode our message.
+{div.inline(slot="legend")} We identified there is something wrong in the [{.pill.red}1st](target:pg1) and [{.pill.red}4th](target:pg4) parity groups. We can add these values to determine that there is an error with bit [[5]]. We flip this bit to a [[1]].
+
+{div.inline(slot="legend")} Now we can remove the parity bits to fully decode our message.
 
 
 :::

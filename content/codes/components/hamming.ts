@@ -9,6 +9,64 @@ const WIDTH = 20; const BUFFER = 5;
 const HEIGHT = 40; const RX = 6;
 const YVAL = 20;
 
+/**
+ * The outline of a digit. Could be used to demonstrate groups.
+ */
+class _DigitOutline {
+
+  private fullIndex: number;
+  private yIndex: number;
+
+  private g: ElementView;
+  private rect: ElementView;
+
+  /**
+   * Constructor
+   * @param $parent the SVGParentView
+   * @param fullIndex index of the digit when fully encoded
+   * @param yIndex y-position index
+   */
+  constructor($parent: SVGParentView, fullIndex: number, yIndex: number) {
+
+    this.fullIndex = fullIndex;
+    this.yIndex = yIndex;
+
+    const gAttr = {
+      fullIndex
+    };
+
+    const rectOutline = {
+      stroke: 'gray',
+      'stroke-width': 2,
+      fill: 'none',
+      width: WIDTH,
+      height: HEIGHT,
+      rx: RX
+    };
+
+    this.g = $N('g', gAttr, $parent);
+    this.rect = $N('rect', rectOutline, this.g);
+  }
+
+  moveToPosition() {
+    this.g.animate({transform: [
+      'none',
+      `translate(${this.getIndexLocation(this.fullIndex)}px, ${this.getYIndexLocation(this.yIndex)}px)`
+    ]});
+  }
+
+  private getYIndexLocation(yIndex: number) {
+    return YVAL + yIndex * (HEIGHT + BUFFER);
+  }
+  /**
+     * Returns location to draw the digit at index
+     * @param index
+     */
+  private getIndexLocation(index: number) {
+    return BUFFER + index * (WIDTH + BUFFER);
+  }
+}
+
 class HammingDigit {
 
     RED = '#CC0E66';
@@ -24,7 +82,7 @@ class HammingDigit {
     private text: ElementView;
 
     private errorDiv: ElementView | undefined;
-    private errors: number = 0;
+    private errors = 0;
 
     /**
      *
@@ -43,14 +101,21 @@ class HammingDigit {
 
       const color = parity ? this.RED : this.GREEN;
 
+      // for target attribute
+      const targets = [1, 2, 4, 8]
+          .filter(p => this.isParityMatch(p))
+          .map(p => `pg${p}`)
+          .join(' ');
+
       const gAttr = {
-        target: parity ? 'parity' : 'data',
+        target: parity ? `parity p${fullIndex} pg${fullIndex}` : 'data ' + targets,
         fullIndex,
-        dataIndex
+        dataIndex,
+        mask: 'url(#hole)'
       };
       const rectDefault = {
         stroke: color,
-        'stroke-width': 3,
+        'stroke-width': 0,
         fill: color,
         width: WIDTH,
         height: HEIGHT,
@@ -183,6 +248,14 @@ class HammingDigit {
       if (this.errors === 0) return;
       this.errorDiv!.text = this.errorDiv!.text.substring(0, --this.errors);
     }
+
+    hideErrorMarks() {
+      if (this.errorDiv) this.errorDiv.hide();
+    }
+
+    reverseBit() {
+      this.text.text = `${[1, 0][parseInt(this.text.text)]}`;
+    }
 }
 
 @register('x-hamming', {attributes: ['value', 'direction']})
@@ -197,6 +270,16 @@ export class HammingCode extends CustomElementView {
       // initialize SVG parent view
       this.$svg = $N('svg', {viewBox: `0 0 400 ${HEIGHT * 2}`}, this) as SVGParentView;
       this.value = this.attr('value');
+
+      /* const defs = $N('defs', {}, this.$svg);
+      const mask = $N('mask', {id: 'hole'}, defs);
+      const maskRect = $N('rect', {width: WIDTH/2, height: HEIGHT/2, rx: RX, fill: 'black'}, mask);
+      // const maskCircle = $N('circle', {r: '50', cx: '100', cy: '100', fill: 'black'}, mask);
+
+      mask.animate({transform:
+        ['none', 'translate(400px, 0px)']
+      }, 2000);
+      */
 
       this.direction = this.attr('direction');
       if (!['encode', 'decode'].includes(this.direction)) {
@@ -301,19 +384,53 @@ export class HammingCode extends CustomElementView {
     }
 
     /**
+     * Mark only the parity bit which has an error
+     * @param group parity group 1,2,4,8
+     */
+    markSingleBitError(group: number) {
+      this.digits
+          .filter(hd => hd.fullIndex === group)
+          .forEach(hd => hd.markError());
+    }
+
+    unmarkSingleBitError(group: number) {
+      this.digits
+          .filter(hd => hd.fullIndex === group)
+          .forEach(hd => hd.unmarkError());
+    }
+
+    /**
      * Mark each digit with an error.
      * @param group the parity group
      */
     markGroupError(group: number) {
       this.digits
-        .filter(hd => hd.isParityMatch(group))
-        .forEach(hd => hd.markError());
+          .filter(hd => hd.isParityMatch(group))
+          .forEach(hd => hd.markError());
     }
 
     unmarkGroupError(group: number) {
       this.digits
-        .filter(hd => hd.isParityMatch(group))
-        .forEach(hd => hd.unmarkError())
+          .filter(hd => hd.isParityMatch(group))
+          .forEach(hd => hd.unmarkError());
+    }
+
+    /**
+     * Show DigitOutlines for a group
+     * @param group parity group 1,2,4,8
+     * @param yIndex position in the y-direction
+     */
+    _showGroupFilter(group: number, yIndex: number) {
+      this.digits
+          .filter(hd => hd.isParityMatch(group))
+          .forEach(hd => {
+            const g = new _DigitOutline(this.$svg, hd.fullIndex, yIndex);
+            g.moveToPosition();
+          });
+    }
+
+    correctDataBit(index: number) {
+      this.digits[index - 1].reverseBit();
     }
 
     /**
@@ -336,14 +453,14 @@ export class HammingCode extends CustomElementView {
      */
     updateModel(model: any) {
       this.digits
-        .filter(hd => hd.parity)
-        .map(hd => [hd.fullIndex, this.getParityValue(hd.fullIndex)])
-        .forEach(hd => {
-          let bit = hd[1] % 2;
-          model[`parity${hd[0]}right`] = bit === 0 ? 'even' : 'odd';
-          model[`parity${hd[0]}wrong`] = bit === 0 ? 'odd' : 'even';
-          model[`pb${hd[0]}r`] = bit === 0 ? 0 : 1;
-          model[`pb${hd[0]}w`] = bit === 0 ? 1 : 0;
-        });
+          .filter(hd => hd.parity)
+          .map(hd => [hd.fullIndex, this.getParityValue(hd.fullIndex)])
+          .forEach(hd => {
+            const bit = hd[1] % 2;
+            model[`parity${hd[0]}right`] = bit === 0 ? 'even' : 'odd';
+            model[`parity${hd[0]}wrong`] = bit === 0 ? 'odd' : 'even';
+            model[`pb${hd[0]}r`] = bit === 0 ? 0 : 1;
+            model[`pb${hd[0]}w`] = bit === 0 ? 1 : 0;
+          });
     }
 }
