@@ -996,18 +996,15 @@ Computers used to be programmed by creating holes in special [punch cards](gloss
 
 {.quote}If the computer can tell when an error has occurred, surely there is a way of telling where the error is so that the computer can correct the error itself. - Richard Hamming
 
-{.todo} How it works
+How can we detect and correct an error in a messaage that is just a sequence of binary numbers? A [Hamming Code](gloss:hamming-code) can be used to do just this. The solution involves inserting new bits into the message that will tell us information about the values of those original bits. If we know the location of where an error occurred, then we know the original value of that bit because [[binary digits can only have two values|we can just look at the number under the barcode]].
 
-How could we do this when the original message is a sequence of binary numbers? The solution involves inserting new bits into the message that will tell us information about the values of those original bits. This is much like the last digit of a barcode tells us information about the first 11 digits, but with binary numbers.
-
-[Continue](btn:next)
 
 ---
 > id: hamming-encode
 
 #### Encoding a Hamming Code
 
-Click through the slides to see how to encode a string of bits using Hamming Codes.
+Click through the slides to see how to encode a string of bits using a Hamming Code.
 
     x-hamming(value="11001111" direction="encode")
 
@@ -1017,7 +1014,7 @@ Click through the slides to see how to encode a string of bits using Hamming Cod
 
 {div.inline(slot="legend")} First we must shift the [{.pill.green}data bits](target:data) to the right to make room for the [{.pill.red}parity bits](target:parity). The parity bits must go into any bit position that is a power of 2. Here we place parity bits at [1](target:p1), [2](target:p2), [4](target:p4), and [8](target:p8).
 
-{div.inline(slot="legend")} We must figure out the values that go into the parity bits. Let's start with the first parity group. Start at the parity bit in position 1, then choose every other **one** bit.
+{div.inline(slot="legend")} We must figure out the values that go into the parity bits. Let's start with the first parity group. Start at the parity bit in position 1, then choose every other **1** bit.
 
 {div.inline(slot="legend")} This group of bits has an [[${parity1right}|${parity1wrong}]] parity, so we give the parity bit value [[${pb1r}|${pb1w}]].
 
@@ -1037,10 +1034,42 @@ Click through the slides to see how to encode a string of bits using Hamming Cod
 
 :::
 
-{.todo} Logic of how we decide parity groups.
+---
 
-1. Convert place numbers to binary
-2. For each parity group, select any digit whose place number has a **1** in that position.
+Did you notice anything about how the bits for each parity group are selected? The answer has to do with the [[binary value|divisibility]] of each digit place.
+
+---
+
+Here is how to select the digits to include in a parity group.
+
+    ol.proof
+      li Convert the place numbers to binary.
+      li Identify the parity groups. Each will be a power of 2.
+      li For each parity group, select any digit whose binary place number has a **1** in that position.
+
+::: column.grow
+
+[Continue](btn:next)
+
+---
+
+| group | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
+| 2 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 |
+| 4 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 1 |
+| 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
+
+
+::: column(width=300)
+
+The 9th digit in the encoded bit sequence will be part of parity groups [[1 and 8|1, 2, and 4|1, 2, and 8]]
+
+The 6th digit in the encoded bit sequence will be part of parity groups [[2 and 4|1 and 4|2 and 8]]
+
+:::
+
+{.fixme} Some table formatting would be nice.
 
 ---
 

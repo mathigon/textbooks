@@ -795,6 +795,12 @@ hailstone-sequence:
     * If `x_n` is odd, `x_(n+1) = 3 x_n + 1`.
   link: /course/sequences/special#hailstone
 
+hamming-code:
+  title: Hamming Code
+  text: |
+    A __Hamming Code__ is an error-correcting code that can be used to identify
+    and correct errors in a binary sequence.
+
 heptagon:
   title: Heptagon
   text: A __heptagon__ is a polygon with seven sides.
