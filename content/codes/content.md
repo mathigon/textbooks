@@ -1122,7 +1122,7 @@ A mathematician named [Richard Hamming](bio:hamming) had this same problem not w
 Computers used to be programmed with [punch cards](gloss: punch cards). In 1947, Hamming programmed a computer to perform a long and complex series of calculations while he went home over the weekend. When he returned, he discovered an error had occurred and his entire calculation was useless. He felt a need to invent a way to correct when an error had happened.
 
 ---
-> id: hamming-encode
+> id: hamming-encode-2
 
 // INTERACTIVE --- Encoding a Hamming Code
 
