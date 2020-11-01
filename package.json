@@ -32,7 +32,7 @@
     "@google-cloud/translate": "6.0.3",
     "@mathigon/parser": "0.6.0",
     "@percy/script": "1.1.0",
-    "@rollup/plugin-node-resolve": "9.0.0",
+    "@rollup/plugin-node-resolve": "10.0.0",
     "@typescript-eslint/eslint-plugin": "4.3.0",
     "@typescript-eslint/parser": "4.3.0",
     "autoprefixer": "9.8.6",
