@@ -254,6 +254,7 @@ export function bracket($step: Step) {
 
 /**
  * Slideshow for animating decimal to binary.
+ * HAMMING: mimic this
  */
 export function dec2bin($section: Step) {
   const $slideshow = $section.$('x-slideshow') as Slideshow;
@@ -663,6 +664,25 @@ export function resolution($step: Step) {
 
 export function satellite($step: Step) {
   // SATELLITE: complete this
+  /* const $bitstream = $step.$('#bitstream') as SVGView;
+  const $trajectory = $bitstream?.$('line') as SVGView;
+  const $bits = $bitstream?.$$('text');
+
+  // SATELLITE: WAIT for new svg from designer
+  function moveBits() {
+    // There should be a timeout
+    $bits?.forEach((e, i) => {
+      // get point along trajectory
+      const xy = $trajectory.getPointAt(0);
+      // set transform dependent on the bits
+      e.setTransform(new Point(xy.x, xy.y));
+    });
+  } */
+
+  /* function stopBits() {
+    // SATELLITE: stop the bits
+  } */
+
   const $satellites = $step.$('.satellites')!;
 
   // from Telegraph code. Should replace w/ code to enable 1s and 0s.
@@ -678,7 +698,187 @@ export function satellite($step: Step) {
 
 export function hammingEncode($step: Step) {
   const $hamming = $step.$('x-hamming') as HammingCode;
-  const $testButton = $step.$('#testButton')!;
 
-  $testButton.on('click', () => $hamming.makeRoomForParities());
+  // updates the model based on the value
+  $hamming.updateModel($step.model);
+
+  // Map Blank pairs to the parity bits they represent
+  const BLANK_MAP: {[key: string]: number} = {
+    'blank-0 blank-1': 1,
+    'blank-2 blank-3': 2,
+    'blank-4 blank-5': 4,
+    'blank-6 blank-7': 8
+  };
+  Object.keys(BLANK_MAP).forEach(k => {
+    $step.onScore(k, () => {
+      $hamming.showParity(BLANK_MAP[k]);
+    });
+  });
+
+  // Slide functions.
+  const slideNext = [
+    // "Let's say..."
+    () => $hamming.noop(),
+
+    // "First we must shift..."
+    () => $hamming.makeRoomForParities(),
+    // "The parity bits will go into..."
+    () => $hamming.noop(),
+
+    // "We must figure out..."
+    () => $hamming.noop(),
+
+    // "Let's start with the first parity group..."
+    () => $hamming.highlight(1),
+    () => $hamming.noop(),
+
+    () => $hamming.highlight(2),
+    () => $hamming.noop(),
+
+    () => $hamming.highlight(4),
+    () => $hamming.noop(),
+
+    () => $hamming.highlight(8),
+    () => $hamming.noop(),
+
+    () => $hamming.showAll()
+  ];
+
+  const slideBack = [
+    () => $hamming.hideParityBits(),
+
+    () => $hamming.noop(),
+    () => $hamming.showAll(),
+
+    () => $hamming.noop(), // $hamming.hideParity(1),
+    () => $hamming.highlight(1),
+
+    () => $hamming.noop(), // $hamming.hideParity(2),
+    () => $hamming.highlight(2),
+
+    () => $hamming.noop(), // $hamming.hideParity(4),
+    () => $hamming.highlight(4),
+
+    () => $hamming.noop(), // $hamming.hideParity(8),
+    () => $hamming.highlight(8),
+
+    () => $hamming.noop()
+  ];
+
+  const $slideshow = $step.$('x-slideshow') as Slideshow;
+  $slideshow.on('next', (x: number) => {
+    if (x >= 0 && x < slideNext.length) {
+      slideNext[x]();
+    }
+  });
+
+  $slideshow.on('back', (x: number) => {
+    if (x >= 0 && x < slideBack.length) {
+      slideBack[x]();
+    }
+  });
+}
+
+export function hammingDecode($step: Step) {
+  const $hamming = $step.$('x-hamming') as HammingCode;
+
+  // parity group 1
+  $step.onScore('blank-1 blank-2', () => {
+    $hamming.markSingleBitError(1);
+  });
+
+  // parity group 4
+  $step.onScore('blank-5 blank-6', () => {
+    $hamming.markSingleBitError(4);
+  });
+
+  $step.onScore('blank-9', () => {
+    $hamming.unmarkSingleBitError(1);
+    $hamming.unmarkSingleBitError(4);
+    $hamming.markSingleBitError(5);
+  });
+
+  $step.onScore('blank-10', () => {
+    $hamming.correctDataBit(5);
+    $hamming.unmarkSingleBitError(5);
+  });
+
+  const slideNext = [
+    // "What if..."
+    () => $hamming.noop(),
+
+    // "First let's check parity group 1..."
+    () => {
+      $hamming.highlight(1);
+    },
+
+    // "Now let's check parity group 2..."
+    () => {
+      $hamming.highlight(2);
+    },
+
+    // "Now let's check parity group 4..."
+    () => {
+      $hamming.highlight(4);
+    },
+
+    // "Now let's check..."
+    () => $hamming.highlight(8),
+
+    // "We identified there is something wrong..."
+    () => {
+      $hamming.showAll();
+    },
+
+    // "Now can remove..."
+    () => {
+      $hamming.hideParityBits();
+    }
+  ];
+
+  const slideBack = [
+    // "What if..."
+    () => {
+      $hamming.showAll();
+      // $hamming.unmarkSingleBitError(1);
+    },
+    // "First let's check parity group 1..."
+    () => {
+      $hamming.highlight(1);
+    },
+    // "Now let's check parity group 2..."
+    () => {
+      $hamming.highlight(2);
+      // $hamming.unmarkSingleBitError(4);
+    },
+    // "Now let's check parity group 4..."
+    () => {
+      $hamming.highlight(4);
+    },
+    // "Now let's check parity group 8..."
+    () => {
+      $hamming.highlight(8);
+    },
+    // "We identified..."
+    () => {
+      $hamming.makeRoomForParities();
+    },
+    // "Now we can remove..."
+    () => {
+      $hamming.noop();
+    }
+  ];
+
+  const $slideshow = $step.$('x-slideshow') as Slideshow;
+  $slideshow.on('next', (x: number) => {
+    if (x >= 0 && x < slideNext.length) {
+      slideNext[x]();
+    }
+  });
+
+  $slideshow.on('back', (x: number) => {
+    if (x >= 0 && x < slideBack.length) {
+      slideBack[x]();
+    }
+  });
 }

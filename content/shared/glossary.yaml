@@ -822,6 +822,12 @@ hailstone-sequence:
     * If `x_n` is odd, `x_(n+1) = 3 x_n + 1`.
   link: /course/sequences/special#hailstone
 
+hamming-code:
+  title: Hamming Code
+  text: |
+    A __Hamming Code__ is an error-correcting code that can be used to identify
+    and correct errors in a binary sequence.
+
 heptagon:
   title: Heptagon
   text: A __heptagon__ is a polygon with seven sides.
@@ -1375,6 +1381,13 @@ pyramid:
 protractor:
   title: Protractor
   text: A __protractor__ is a tool used to measure an angle in degrees.
+
+punch-card:
+  title: Punch Card
+  text: |
+    A __punch card__ is a stiff paper card in which holes can be punched to
+    represent computer data or instructions. These were fed into a card reader
+    and converted into electrical signals, which were processed by the computer.
 
 pythagoras-theorem:
   title: Pythagoras’ theorem

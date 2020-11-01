@@ -23,7 +23,7 @@ be hopeful: the army was approaching, and planning to rescue them shortly.
 
 :::
 
-Unfortunately, it seemed impossible to tell the prisoners that help was coming, without also
+Unfortunately, it seemed impossible to tell the prisoners that lp was coming, without also
 alerting their capturers – that is, until Colonel Jose Espejo came up with an ingenious idea. With
 his team, he wrote a new pop song, embedded a secret message in the chorus, and then played it
 thousands of times over the radio.
@@ -889,9 +889,10 @@ Look at this barcode. // INTERACTIVE
     // only takes 11 values (last digit is error digit)
     x-barcode(value="01234567890")
 
-The guards are on the [{.red}outside](target:.bar-start) and in the
-[{.red}center](target:.bar-middle). The first six digits are on the [{.blue}left](target:.bar-left).
-The last six digits are on the [{.green}right](target:.bar-right).
+The guards are on the [{.step-target.pill.b.red}outside](target:outside) and in the
+[{.step-target.pill.b.red}center](target:middle).
+The first six digits are on the [{.step-target.pill.b.blue}left](target:left).
+The last six digits are on the [{.step-target.pill.b.green}right](target:right).
 
 __The Guards__
 
@@ -964,8 +965,155 @@ It's actually not quite as simple as giving the five digits 2-6 to each individu
 ---
 
 ### Hamming Codes
+> id: hamming
 
-{.todo} Hamming Codes
+Let's go back to our original problem of how we might detect errors in a message received from a satellite. We don't know the message the satellite intended to send, and unlike with barcodes there is no way to find it, such as a cashier who can look at the number and type it into the computer.
+
+A mathematician named [Richard Hamming](bio:hamming) encountered a very similar problem not with data from satellites, but with mechanical computers.
+
+::: column.grow
+
+Computers used to be programmed by creating holes in special [punch cards](gloss:punch-card), which were then fed into the computer. These were time-consuming to program, and the calculations could take hours or even days to complete. In 1947, Hamming wrote a program to perform a long and complex series of calculations while he went home over the weekend. When he returned, he discovered that an error had occurred somewhere early in the calculation and his entire result was useless. He felt a need to invent a way to correct when an error had happened.
+
+::: column(width=280)
+
+    x-img(src="images/punch-card.png" width=640 height=288 lightbox)
+    // https://commons.wikimedia.org/wiki/File:Blue-punch-card-front-horiz.png
+
+{.caption} A blue IBM punched card.
+
+:::
+
+{.quote}If the computer can tell when an error has occurred, surely there is a way of telling where the error is so that the computer can correct the error itself. - Richard Hamming
+
+How can we detect and correct an error in a messaage that is just a sequence of binary numbers? A [Hamming Code](gloss:hamming-code) can be used to do just this. The solution involves inserting new bits into the message that will tell us information about the values of those original bits. If we know the location of where an error occurred, then we know the original value of that bit because [[binary digits can only have two values|we can just look at the number under the barcode]].
+
+
+---
+> id: hamming-encode
+
+#### Encoding a Hamming Code
+
+Click through the slides to see how to encode a string of bits using a Hamming Code.
+
+    x-hamming(value="11001111" direction="encode")
+
+::: x-slideshow
+
+{div.inline(slot="legend")} Let's say we want to encode this string of 8 bits. We call these 8 bits the [{.pill.green}data bits](target:data).
+
+{div.inline(slot="legend")} First we must shift the [{.pill.green}data bits](target:data) to the right to make room for the [{.pill.red}parity bits](target:parity). The parity bits will encode information about the data bits.
+
+{div.inline(slot="legend")} The [{.pill.red}parity bits](target:parity) will go into any position that is a power of 2. Here we place parity bits at [{.pill.red}1](target:p1), [{.pill.red}2](target:p2), [{.pill.red}4](target:p4), and [{.pill.red}8](target:p8).
+
+{div.inline(slot="legend")} We must figure out the values that go into the parity bits. We do this by dividing the sequence into one __parity group__ for each parity bit. We then assign the parity bit whatever value will make the parity of the group even.
+
+{div.inline(slot="legend")} Let's start with the first parity group. Start at the parity bit in [{.pill.red}position 1](target:p1), then choose every other **1** bit.
+
+{div.inline(slot="legend")} This group of bits has an [[${parity1right}|${parity1wrong}]] parity, so we give the parity bit value [[${pb1r}|${pb1w}]].
+
+{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in [{.pill.red}position 2](target:p2), then choose every other **2** bits.
+
+{div.inline(slot="legend")} This group of bits has an [[${parity2right}|${parity2wrong}]] parity, so we give the parity bit value [[${pb2r}|${pb2w}]].
+
+{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in [{.pill.red}position 4](target:p4), then choose every other **4** bits.
+
+{div.inline(slot="legend")} This group of bits has an [[${parity4right}|${parity4wrong}]] parity, so we give the parity bit value [[${pb4r}|${pb4w}]].
+
+{div.inline(slot="legend")} Now let's do the last parity group. Start at the parity bit in [{.pill.red}position 8](target:p8), then choose every other **8** bits.
+
+{div.inline(slot="legend")} This group of bits has an [[${parity8right}|${parity8wrong}]] parity, so we give the parity bit value [[${pb8r}|${pb8w}]].
+
+{div.inline(slot="legend")} Here is our final encoded string of bits to send!
+
+:::
+
+---
+
+Did you notice anything about how the bits for each parity group are selected? The answer has to do with the [[binary value|divisibility]] of each digit position.
+
+---
+
+Here is how to select the digits to include in a parity group.
+
+    ol.proof
+      li Convert the place numbers to binary.
+      li Identify the parity groups. Each will be a power of 2.
+      li For each parity group, select any digit whose binary place number has a **1** in that position.
+
+[Continue](btn:next)
+
+---
+
+::: column.grow
+
+| group | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
+| 2 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 |
+| 4 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 1 |
+| 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
+
+::: column(width=300)
+
+The 9th digit in the encoded bit sequence will be part of parity groups [[1 and 8|1, 2, and 4|1, 2, and 8]]
+
+The 6th digit in the encoded bit sequence will be part of parity groups [[2 and 4|1 and 4|2 and 8]]
+
+:::
+
+{.fixme} Some table formatting would be nice.
+
+---
+
+> id: hamming-decode
+
+#### Decoding a Hamming Code
+
+Now that we have an encoded message, how can we extract the data from it? We must reverse the process.
+
+::: column
+
+__Encoding__
+1. Make room for parity bits
+2. Identify parity groups.
+3. Define parity bits.
+
+::: column
+
+__Decoding__
+1. Check parity bits.
+2. Make corrections.
+3. Remove parity bits.
+
+:::
+
+Click through the slides to see how to decode a string of bits using Hamming Codes.
+
+    x-hamming(value="011100011110" direction="decode")
+
+::: x-slideshow
+
+{div.inline(slot="legend")} What if we receive this packet of information? Assume we know that is has been encoded using Hamming encoding. This means that each parity group should have an [[even|odd]] parity. As we check each group, we can mark which have an incorrect bit.
+
+{div.inline(slot="legend")} First let's check parity group 1. The parity is [[odd|even]]. There is [[something|nothing]] wrong here!
+
+{div.inline(slot="legend")} Now let's check parity group 2. The parity is [[even|odd]]. There is [[nothing|something]] wrong here!
+
+{div.inline(slot="legend")} Now let's check parity group 4. The parity is [[odd|even]]. There is [[something|nothing]] wrong here!
+
+{div.inline(slot="legend")} Now let's check parity group 8. The parity is [[even|odd]]. There is [[nothing|something]] wrong here!
+
+{div.inline(slot="legend")} We identified there is something wrong in the [{.pill.red}1st](target:pg1) and [{.pill.red}4th](target:pg4) parity groups. We can add these values to determine that there is an error with bit [[5]]. We flip this bit to a [[1]].
+
+{div.inline(slot="legend")} Now we can remove the parity bits to fully decode our message.
+
+
+:::
+
+---
+
+This is not a perfect system. This type of code will not correctly detect an error when there are more than [[1]] errors.
 
 Let's go back to our original problem of how we might detect errors sent from a satellite. The information received from the satellite is unknown, and there is no backup plan, like a cashier who can look at a number and type it into the computer.
 
