@@ -1168,10 +1168,7 @@ hamilton:
     and Newtonian mechanics.
 
 hamming:
-  born: 1915
-  died: 1998
   name: Hamming
-  full: Richard Hamming
   bio: |
     __Richard Hamming__ ,(1915 – 1998) was an American mathematician and early
     computer programmer. He invented the _Hamming code_, a method of detecting and
