@@ -23,7 +23,7 @@
     "@mathigon/fermat": "0.6.0",
     "@mathigon/euclid": "0.6.4",
     "@mathigon/hilbert": "0.6.0",
-    "@types/d3": "5.16.1",
+    "@types/d3": "5.16.3",
     "@types/topojson": "3.2.2",
     "three": "0.120.0"
   },
