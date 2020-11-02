@@ -55,11 +55,10 @@ export class Barcode extends CustomElementView {
   }
 
   generateNewCode() {
-    console.log('new code');
-    const newValue = '';
+    let newValue = '';
     for (let i = 0; i < 11; i++) {
       const digit = Math.floor(Math.random() * 10);
-      newValue.concat('' + digit);
+      newValue = newValue.concat('' + digit);
     }
 
     this.computeParityDigit(newValue);
@@ -80,8 +79,6 @@ export class Barcode extends CustomElementView {
       widthSum += w;
       BAR_START_INDICES.push(widthSum);
     });
-
-    console.log(BAR_START_INDICES);
   }
 
   private draw(value: string) {
@@ -175,5 +172,6 @@ export class Barcode extends CustomElementView {
     const sum = 3 * odds + evens;
 
     this.errorDigit = 10 - sum % 10;
+    if (this.errorDigit === 10) this.errorDigit = 0;
   }
 }
