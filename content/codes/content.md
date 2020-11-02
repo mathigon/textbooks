@@ -859,7 +859,7 @@ Joe Woodland, one of the inventors of Bar Code was sitting on the beach, trying 
 
     div
       .quote
-        I remember I was thinking about dots and dashes when I poked my four fingers into the sand and, for whatever reason--I didn't know--I pulled my hand toward me and I had four lines. I said 'Golly! Now I have four lines and they could be wide lines and narrow lines, instead of dots and dashes. Now I have a better chance of finding the doggone thing.' Then only seconds later, I took my four fingers--they were still in the sand--and I swept them round in a circle.
+        I remember I was thinking about dots and dashes when I poked my four fingers into the sand and, for whatever reason--I didn't know--I pulled my hand toward me and I had four lines. I said 'Golly! Now I have four lines and they could be wide lines and narrow lines, instead of dots and dashes.'
       .author
         Joe Woodland, inventor of the Bar Code
 
@@ -874,8 +874,6 @@ Woodland used his knowledge of Morse Code as a foundation to invent a new type o
 {.fixme} Each bar code is a 12-digit number. See here that we can read the numbers written on the bottom. But how does a computer read it?
 
 {.fixme} There are 95 columns, each of which can be black or white. The computer uses a laser to identify each stripe's color, based on how much light is reflected. These 95 columns are grouped into 15 groups of columns. (continue below)
-
-{.todo} image/interaction of a bar code
 
 ---
 
@@ -962,6 +960,28 @@ __The Digits__
 When the computer scans the digits of a barcode, it performs this calculation. If the modulo check doesn't match up, we immediately know that the barcode hasn't been read correctly. In a supermarket, the cash register won't beep, and you can try again -- or, as a last resort, enter the numbers manually.
 
 {.todo} TIPS AND TRICKS: when you're adding these numbers, you only need to keep the ones digit. If you do 3x(2+3+1+9), which is 3x15, you can do 3x5 instead. Every digit above the ones digit will be thrown out.
+
+{.text-center} **Calculating the Modulo-Check Character**
+
+{.text-center} `X = 3 * (∑ oddDigits) + ∑ evenDigits`
+
+{.text-center} `N = ones(10-x)`
+
+{.text-center} **Example**
+
+{.text-center} `X = 3 * (0 + 1 + 0 + 0 + 2 + 1) + (5 + 0 + 0 + 1 + 5)`
+
+{.text-center} `X = 3 * (4) + (11)`
+
+{.text-center} `X = 12 + 11`
+
+{.text-center} `X = 23`
+
+{.text-center} `N = ones(10-23)`
+
+{.text-center} `N = ones(-17)`
+
+{.text-center} `N = 7`
 
 {.todo} ACTIVITY: Look around you for something with a barcode (pretty much anything you can buy at a store). Hide the numbers with paper or tape, and try to decode the numbers. After you've written down your answer, see if you're correct! And then you can try the error detection formula and confirm that it is correct. (PHOTOS also)
 
