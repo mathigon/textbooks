@@ -884,7 +884,7 @@ Woodland used his knowledge of Morse Code as a foundation to invent a new type o
 ::: column.grow
 
     // only takes 11 values (last digit is error digit)
-    x-barcode(value="01234567890")
+    x-barcode(value="05100001251")
 
     // FIXME: should not be buttons, but individual digits?
     button.zoom GL

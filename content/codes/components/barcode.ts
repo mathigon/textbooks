@@ -17,13 +17,17 @@ const DIGITS: Obj<string> = {
 @register('x-barcode', {attributes: ['value']})
 export class Barcode extends CustomElementView {
   private $svg!: SVGParentView;
+
+  // BARCODE: start with a buffer on either size.
   private left = 0;
 
   private errorDigit = 0;
 
   ready() {
     console.log('barcode.ready');
-    this.$svg = $N('svg', {viewBox: '0 0 400 200'}, this) as SVGParentView;
+    const WIDTH = 400; // BARCODE: should be computed... #BARS*BAR_WIDTH + 2*BUFFER
+    const HEIGHT = 200;
+    this.$svg = $N('svg', {viewBox: `0 0 ${WIDTH} ${HEIGHT}`}, this) as SVGParentView;
     const value = this.attr('value');
     this.computeParityDigit(value);
     this.draw(value);
@@ -69,6 +73,7 @@ export class Barcode extends CustomElementView {
         $N('rect', {class: 'black', width: 4, height, x: (this.left + i) * 4}, $group);
       }
     }
+    // BARCODE: this should be calculated ahead of time instead of iterativelys
     this.left += sequence.length;
   }
 
@@ -106,6 +111,7 @@ export class Barcode extends CustomElementView {
       y = 200;
     } else if (place === 11) {
       x = MAX + OFFSET;
+      y = 200;
     } else if (place >= 1 && place <= 5) {
       x = LEFT.START + (LEFT.END - LEFT.START) * (place - 1) / (5 - 1);
       y = 200;
@@ -114,7 +120,7 @@ export class Barcode extends CustomElementView {
       y = 200;
     }
 
-    $N('text', {text: value, class: `d${place}`, x, y}, $group);
+    $N('text', {text: value, class: `d${place}`, x, y, 'font-size': 20}, $group);
   }
 
   // TODO: could move this to a separate utility file
