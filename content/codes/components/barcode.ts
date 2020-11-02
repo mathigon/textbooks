@@ -47,7 +47,7 @@ export class Barcode extends CustomElementView {
     this.drawRect('101', ['outside'], true);
   }
 
-  // BARCODE: insert a hover class
+  // BARCODE: add a class for values
   /**
    * Draw a section of a barcode. Corresponds to a guard or a digit.
    *

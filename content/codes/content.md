@@ -881,7 +881,7 @@ Woodland used his knowledge of Morse Code as a foundation to invent a new type o
 
 > id: barcode-drawing
 
-Look at this barcode. // INTERACTIVE
+::: column.grow
 
     // only takes 11 values (last digit is error digit)
     x-barcode(value="01234567890")
@@ -903,6 +903,8 @@ Look at this barcode. // INTERACTIVE
     button.zoom D12
     button.zoom GR
 
+::: column(width=320)
+
 The guards are on the [{.step-target.pill.b.red}outside](target:outside) and in the
 [{.step-target.pill.b.red}center](target:middle).
 The first six digits are on the [{.step-target.pill.b.blue}left](target:left).
@@ -912,17 +914,13 @@ __The Guards__
 
 | LEFT | CENTER | RIGHT |
 | --- | --- | --- |
-| 101 | 01010 | 101 |
+| [{.step-target.pill.b.red}101](target:outside) | [{.step-target.pill.b.red}01010](target:middle) | [{.step-target.pill.b.red}101](target:outside) |
 
----
 __The Digits__
-> id: barcode-digits
-
-{.fixme} Let's recognize that these values are **not** the same as the binary representations we learned last chapter. They are still a binary code because they use two values (black and white), but the code to represent the digits is different.
 
 | DIGIT | LEFT SIDE | RIGHT SIDE |
 |---|---|---|
-| 0 | 0001101 | 1110010 |
+| 0 | [{.step-target.pill.b.gray}0001101](target:v0) | 1110010 |
 | 1 | 0011001 | 1100110 |
 | 2 | 0010011 | 1101100 |
 | 3 | 0111101 | 1000010 |
@@ -932,6 +930,8 @@ __The Digits__
 | 7 | 0111011 | 1000100 |
 | 8 | 0110111 | 1001000 |
 | 9 | 0001011 | 1110100 |
+
+:::
 
 {.fixme} There are a few interesting patterns we can recognize here. First, notice that the codes on the left side are different from the codes on the right side. This allows the bar code to be read upside down or backwards.
 
