@@ -882,3 +882,28 @@ export function hammingDecode($step: Step) {
     }
   });
 }
+
+export function barcodeDrawing($step: Step) {
+
+  const transforms = [
+    'scale(4) translate(50%, 0)',
+    `scale(4) translate(${50 - 50 * 1 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 2 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 3 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 4 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 5 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 6 / 7}%, 0)`,
+    'scale(4) translate(0%, 0)',
+    `scale(4) translate(${50 - 50 * 8 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 9 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 10 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 11 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 12 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 13 / 7}%, 0)`,
+    'scale(4) translate(-50%, 0)'
+  ];
+  const $svg = $step.$('svg');
+  $step.$$('.zoom').forEach((button, i) => {
+    button.on('click', () => $svg?.css('transform', transforms[i]));
+  });
+}

@@ -889,6 +889,22 @@ Look at this barcode. // INTERACTIVE
     // only takes 11 values (last digit is error digit)
     x-barcode(value="01234567890")
 
+    button.zoom GL
+    button.zoom D1
+    button.zoom D2
+    button.zoom D3
+    button.zoom D4
+    button.zoom D5
+    button.zoom D6
+    button.zoom GC
+    button.zoom D7
+    button.zoom D8
+    button.zoom D9
+    button.zoom D10
+    button.zoom D11
+    button.zoom D12
+    button.zoom GR
+
 The guards are on the [{.step-target.pill.b.red}outside](target:outside) and in the
 [{.step-target.pill.b.red}center](target:middle).
 The first six digits are on the [{.step-target.pill.b.blue}left](target:left).
