@@ -37,23 +37,35 @@ export class Barcode extends CustomElementView {
     this.$svg.removeChildren();
     this.left = 0;
 
-    this.drawRect('101', 'outside', true);
-    this.drawRect(DIGITS[value[0]], 'left', true);
-    for (let i = 1; i <= 5; ++i) this.drawRect(DIGITS[value[i]], 'left', false);
-    this.drawRect('01010', 'middle', true);
-    for (let i = 6; i <= 10; ++i) this.drawRect(DIGITS[value[i]], 'right', false, true);
+    this.drawRect('101', ['outside'], true);
+    this.drawRect(DIGITS[value[0]], ['left', `d0`], true);
+    for (let i = 1; i <= 5; ++i) this.drawRect(DIGITS[value[i]], ['left', `d${i}`], false);
+    this.drawRect('01010', ['middle'], true);
+    for (let i = 6; i <= 10; ++i) this.drawRect(DIGITS[value[i]], ['right', `d${i}`], false, true);
     // this is the error check digit
-    this.drawRect(DIGITS[this.errorDigit], 'right', true, true);
-    this.drawRect('101', 'outside', true);
+    this.drawRect(DIGITS[this.errorDigit], ['right', `d11`], true, true);
+    this.drawRect('101', ['outside'], true);
   }
 
-  private drawRect(sequence: string, name: string, long = false, invert = false) {
-    const $group = $N('g', {class: name, target: name}, this.$svg);
+  // BARCODE: insert a hover class
+  /**
+   * Draw a section of a barcode. Corresponds to a guard or a digit.
+   *
+   * @param sequence the sequence of digits, as a string of 0s and 1s
+   * @param names the class names
+   * @param long whether to draw long bars
+   * @param invert black/white vs white/black
+   */
+  private drawRect(sequence: string, names: string[], long = false, invert = false) {
+    const $group = $N('g', {class: names.join(' '), target: names.join(' ')}, this.$svg);
     const height = long ? 200 : 180;
 
     for (let i = 0; i < sequence.length; ++i) {
-      if (sequence[i] === (!invert ? '0' : '1')) continue;  // Skip white bar
-      $N('rect', {width: 4, height, x: (this.left + i) * 4}, $group);
+      if (sequence[i] === (!invert ? '0' : '1')) {
+        $N('rect', {class: 'white', width: 4, height, x: (this.left + i) * 4}, $group);
+      } else {
+        $N('rect', {class: 'black', width: 4, height, x: (this.left + i) * 4}, $group);
+      }
     }
     this.left += sequence.length;
   }

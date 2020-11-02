@@ -382,7 +382,9 @@ x-barcode {
   width: 400px;
   height: 200px;
   margin: 1em auto;
-  rect { fill: @grey; transition: opacity .2s }
+
+  rect.black { fill: @dark-grey; transition: opacity .2s }
+  rect.white { fill: #ffffff; transition: opacity .2s }
 
   .focus & rect { opacity: 0.4; }
   .focus & .focus rect { opacity: 1; }
