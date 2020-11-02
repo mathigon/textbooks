@@ -42,9 +42,7 @@ export class Barcode extends CustomElementView {
   private errorDigit = 0;
 
   ready() {
-    BAR_START_INDICES.push(0);
-    BAR_START_INDICES.push(GUARDS['outside'].length);
-    // for (let i=0; i < )
+    this.initDrawLines();
 
     this.$svg = $N('svg', {viewBox: `0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}, this) as SVGParentView;
     const value = this.attr('value');
@@ -59,28 +57,37 @@ export class Barcode extends CustomElementView {
     }); // I suspect this looks for changes in the "value" attribute.
   }
 
+  private initDrawLines() {
+    BAR_START_INDICES.push(0);
+    BAR_START_INDICES.push(GUARDS['outside'].length);
+    for (let i = 1; i <= 6; i++) BAR_START_INDICES.push(DIGITS[0].length);
+    BAR_START_INDICES.push(GUARDS['outside'].length);
+    for (let i = 7; i <= 12; i++) BAR_START_INDICES.push(DIGITS[0].length);
+  }
+
   private draw(value: string) {
     this.$svg.removeChildren();
     this.left = 0;
 
-    this.drawRect(GUARDS['outside'], ['outside'], true);
-    this.drawRect(DIGITS[value[0]], ['left', `d0`, `v${value[0]}`], true);
-    for (let i = 1; i <= 5; ++i) this.drawRect(DIGITS[value[i]], ['left', `d${i}`, `v${value[i]}`], false);
-    this.drawRect(GUARDS['middle'], ['middle'], true);
-    for (let i = 6; i <= 10; ++i) this.drawRect(DIGITS[value[i]], ['right', `d${i}`, `v${value[i]}`], false, true);
-    this.drawRect(DIGITS[this.errorDigit], ['right', `d11`], true, true);
-    this.drawRect(GUARDS['outside'], ['outside'], true);
+    this.drawRect(0, GUARDS['outside'], ['outside'], true);
+    this.drawRect(1, DIGITS[value[0]], ['left', `d0`, `v${value[0]}`], true);
+    for (let i = 1; i <= 5; ++i) this.drawRect(1 + i, DIGITS[value[i]], ['left', `d${i}`, `v${value[i]}`], false);
+    this.drawRect(7, GUARDS['middle'], ['middle'], true);
+    for (let i = 6; i <= 10; ++i) this.drawRect(2 + i, DIGITS[value[i]], ['right', `d${i}`, `v${value[i]}`], false, true);
+    this.drawRect(13, DIGITS[this.errorDigit], ['right', `d11`], true, true);
+    this.drawRect(14, GUARDS['outside'], ['outside'], true);
   }
 
   /**
    * Draw a section of a barcode. Corresponds to a guard or a digit.
    *
+   * @param drawLineIndex the "index". It's like the place, but includes the guards.
    * @param sequence the sequence of digits, as a string of 0s and 1s
    * @param names the class names
    * @param long whether to draw long bars
    * @param invert black/white vs white/black
    */
-  private drawRect(sequence: string, names: string[], long = false, invert = false) {
+  private drawRect(drawLineIndex: number, sequence: string, names: string[], long = false, invert = false) {
     const $group = $N('g', {class: names.join(' '), target: names.join(' ')}, this.$svg);
     const height = long ? HEIGHT_LONG : HEIGHT_SHORT;
 
