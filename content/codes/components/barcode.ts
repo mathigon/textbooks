@@ -22,9 +22,13 @@ export class Barcode extends CustomElementView {
   private errorDigit = 0;
 
   ready() {
+    console.log('barcode.ready');
     this.$svg = $N('svg', {viewBox: '0 0 400 200'}, this) as SVGParentView;
-    this.computeParityDigit(this.attr('value'));
-    this.draw(this.attr('value'));
+    const value = this.attr('value');
+    this.computeParityDigit(value);
+    this.draw(value);
+    this.writeNumbers(value);
+
     this.on('attr:value', (e) => {
       this.computeParityDigit(e.newAttr);
       this.draw(e.newAttr);
@@ -33,8 +37,6 @@ export class Barcode extends CustomElementView {
   }
 
   private draw(value: string) {
-    console.log('drawing barcode', value);
-    console.log('parity digit =', this.errorDigit);
     this.$svg.removeChildren();
     this.left = 0;
 
@@ -74,7 +76,6 @@ export class Barcode extends CustomElementView {
     const $group = $N('g', {class: 'text'}, this.$svg);
 
     for (let i = 0; i < value.length; i++) {
-      console.log('writing number ' + i);
       this.writeNumber(i, value[i], $group);
     }
     this.writeNumber(11, '' + this.errorDigit, $group);
@@ -83,8 +84,8 @@ export class Barcode extends CustomElementView {
 
   private writeNumber(place: number, value: string, $group: ElementView) {
     // 0 and 11 go on outsides... 0: MIN - OFFSET, 11: MAX + OFFSET
-    // 1,2,3,4,5 fit into left side.... between [D1 + OFFSET, CENTER.BEGIN - OFFSET]
-    // 6,7,8,9,10 fit into right side... between 
+    // 1,2,3,4,5 fit into left side.... between [D1.END + OFFSET, CENTER.BEGIN - OFFSET]
+    // 6,7,8,9,10 fit into right side... between [CENTER.END + OFFSET, D10.BEGIN - OFFSET]
     $N('text', {text: value}, $group);
   }
 
