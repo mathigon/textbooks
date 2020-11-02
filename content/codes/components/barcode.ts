@@ -13,6 +13,20 @@ const DIGITS: Obj<string> = {
   5: '0110001', 6: '0101111', 7: '0111011', 8: '0110111', 9: '0001011'
 };
 
+const GUARDS: Obj<string> = {
+  outside: '101',
+  middle: '01010'
+};
+
+
+const OUTER_BUFFER = 20;
+const DIGIT_PADDING = 5;
+
+const HEIGHT_LONG = 200;
+const HEIGHT_SHORT = 180;
+
+const BAR_WIDTH = 4;
+
 
 @register('x-barcode', {attributes: ['value']})
 export class Barcode extends CustomElementView {
@@ -44,14 +58,13 @@ export class Barcode extends CustomElementView {
     this.$svg.removeChildren();
     this.left = 0;
 
-    this.drawRect('101', ['outside'], true);
+    this.drawRect(GUARDS['outside'], ['outside'], true);
     this.drawRect(DIGITS[value[0]], ['left', `d0`, `v${value[0]}`], true);
     for (let i = 1; i <= 5; ++i) this.drawRect(DIGITS[value[i]], ['left', `d${i}`, `v${value[i]}`], false);
-    this.drawRect('01010', ['middle'], true);
+    this.drawRect(GUARDS['middle'], ['middle'], true);
     for (let i = 6; i <= 10; ++i) this.drawRect(DIGITS[value[i]], ['right', `d${i}`, `v${value[i]}`], false, true);
-    // this is the error check digit
     this.drawRect(DIGITS[this.errorDigit], ['right', `d11`], true, true);
-    this.drawRect('101', ['outside'], true);
+    this.drawRect(GUARDS['outside'], ['outside'], true);
   }
 
   /**
@@ -64,13 +77,13 @@ export class Barcode extends CustomElementView {
    */
   private drawRect(sequence: string, names: string[], long = false, invert = false) {
     const $group = $N('g', {class: names.join(' '), target: names.join(' ')}, this.$svg);
-    const height = long ? 200 : 180;
+    const height = long ? HEIGHT_LONG : HEIGHT_SHORT;
 
     for (let i = 0; i < sequence.length; ++i) {
       if (sequence[i] === (!invert ? '0' : '1')) {
-        $N('rect', {class: 'white', width: 4, height, x: (this.left + i) * 4}, $group);
+        $N('rect', {class: 'white', width: BAR_WIDTH, height, x: (this.left + i) * 4}, $group);
       } else {
-        $N('rect', {class: 'black', width: 4, height, x: (this.left + i) * 4}, $group);
+        $N('rect', {class: 'black', width: BAR_WIDTH, height, x: (this.left + i) * 4}, $group);
       }
     }
     // BARCODE: this should be calculated ahead of time instead of iterativelys
