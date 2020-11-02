@@ -36,9 +36,6 @@ const BAR_START_INDICES: number[] = [];
 export class Barcode extends CustomElementView {
   private $svg!: SVGParentView;
 
-  // BARCODE: start with a buffer on either size.
-  private left = 0;
-
   private errorDigit = 0;
 
   ready() {
@@ -100,12 +97,15 @@ export class Barcode extends CustomElementView {
     const $group = $N('g', {class: names.join(' '), target: names.join(' ')}, this.$svg);
     const height = long ? HEIGHT_LONG : HEIGHT_SHORT;
 
+    let color;
     for (let i = 0; i < sequence.length; ++i) {
       if (sequence[i] === (!invert ? '0' : '1')) {
-        $N('rect', {class: 'white', width: BAR_WIDTH, height, x: (BAR_START_INDICES[drawLineIndex] + i) * BAR_WIDTH}, $group);
+        color = 'white';
       } else {
-        $N('rect', {class: 'black', width: BAR_WIDTH, height, x: (BAR_START_INDICES[drawLineIndex] + i) * BAR_WIDTH}, $group);
+        color = 'black';
       }
+      $N('rect', {class: color, width: BAR_WIDTH, height,
+        x: OUTER_BUFFER + (BAR_START_INDICES[drawLineIndex] + i) * BAR_WIDTH, y: OUTER_BUFFER}, $group);
     }
     // BARCODE: this should be calculated ahead of time instead of iterativelys
     this.left += sequence.length;

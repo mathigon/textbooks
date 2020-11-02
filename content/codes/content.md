@@ -903,7 +903,7 @@ Woodland used his knowledge of Morse Code as a foundation to invent a new type o
     button.zoom D12
     button.zoom GR
 
-::: column(width=320)
+::: column(width=300)
 
 The guards are on the [{.step-target.pill.b.red}outside](target:outside) and in the
 [{.step-target.pill.b.red}center](target:middle).
