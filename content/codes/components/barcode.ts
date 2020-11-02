@@ -30,7 +30,7 @@ const BAR_WIDTH = 4;
 const SVG_WIDTH = 2 * OUTER_BUFFER + BAR_WIDTH * (2 * GUARDS['outside'].length + GUARDS['middle'].length + 12 * DIGITS[0].length);
 const SVG_HEIGHT = 2 * OUTER_BUFFER + HEIGHT_LONG;
 
-let BAR_START_INDICES = [];
+const BAR_START_INDICES: number[] = [];
 
 @register('x-barcode', {attributes: ['value']})
 export class Barcode extends CustomElementView {
@@ -58,11 +58,20 @@ export class Barcode extends CustomElementView {
   }
 
   private initDrawLines() {
-    BAR_START_INDICES.push(0);
-    BAR_START_INDICES.push(GUARDS['outside'].length);
-    for (let i = 1; i <= 6; i++) BAR_START_INDICES.push(DIGITS[0].length);
-    BAR_START_INDICES.push(GUARDS['outside'].length);
-    for (let i = 7; i <= 12; i++) BAR_START_INDICES.push(DIGITS[0].length);
+    const widths = [];
+    widths.push(0);
+    widths.push(GUARDS['outside'].length);
+    for (let i = 1; i <= 6; i++) widths.push(DIGITS[0].length);
+    widths.push(GUARDS['outside'].length);
+    for (let i = 7; i <= 12; i++) widths.push(DIGITS[0].length);
+
+    let widthSum = 0;
+    widths.forEach(w => {
+      widthSum += w;
+      BAR_START_INDICES.push(widthSum);
+    });
+
+    console.log(BAR_START_INDICES);
   }
 
   private draw(value: string) {
@@ -93,9 +102,9 @@ export class Barcode extends CustomElementView {
 
     for (let i = 0; i < sequence.length; ++i) {
       if (sequence[i] === (!invert ? '0' : '1')) {
-        $N('rect', {class: 'white', width: BAR_WIDTH, height, x: (this.left + i) * 4}, $group);
+        $N('rect', {class: 'white', width: BAR_WIDTH, height, x: (BAR_START_INDICES[drawLineIndex] + i) * BAR_WIDTH}, $group);
       } else {
-        $N('rect', {class: 'black', width: BAR_WIDTH, height, x: (this.left + i) * 4}, $group);
+        $N('rect', {class: 'black', width: BAR_WIDTH, height, x: (BAR_START_INDICES[drawLineIndex] + i) * BAR_WIDTH}, $group);
       }
     }
     // BARCODE: this should be calculated ahead of time instead of iterativelys
