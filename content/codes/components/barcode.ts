@@ -90,6 +90,14 @@ export class Barcode extends CustomElementView {
     const MIN = 0;
     const MAX = 400;
     const OFFSET = 5;
+    const LEFT = {
+      START: 50,
+      END: 190
+    };
+    const RIGHT = {
+      START: 210,
+      END: 350
+    };
 
     let x;
     let y;
@@ -99,10 +107,10 @@ export class Barcode extends CustomElementView {
     } else if (place === 11) {
       x = MAX + OFFSET;
     } else if (place >= 1 && place <= 5) {
-      x = 100;
+      x = LEFT.START + (LEFT.END - LEFT.START) * (place - 1) / (5 - 1);
       y = 200;
     } else if (place >= 6 && place <= 10) {
-      x = 300;
+      x = RIGHT.START + (RIGHT.END - RIGHT.START) * (place - 6) / (10 - 6);
       y = 200;
     }
 
