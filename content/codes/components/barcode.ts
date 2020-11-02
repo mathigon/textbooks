@@ -73,7 +73,6 @@ export class Barcode extends CustomElementView {
 
   private draw(value: string) {
     this.$svg.removeChildren();
-    this.left = 0;
 
     this.drawRect(0, GUARDS['outside'], ['outside'], true);
     this.drawRect(1, DIGITS[value[0]], ['left', `d0`, `v${value[0]}`], true);
@@ -107,8 +106,6 @@ export class Barcode extends CustomElementView {
       $N('rect', {class: color, width: BAR_WIDTH, height,
         x: OUTER_BUFFER + (BAR_START_INDICES[drawLineIndex] + i) * BAR_WIDTH, y: OUTER_BUFFER}, $group);
     }
-    // BARCODE: this should be calculated ahead of time instead of iterativelys
-    this.left += sequence.length;
   }
 
   private writeNumbers(value: string) {
