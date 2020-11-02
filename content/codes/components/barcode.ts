@@ -5,7 +5,7 @@
 
 
 import {Obj} from '@mathigon/core';
-import {$N, CustomElementView, register, SVGParentView} from '@mathigon/boost';
+import {$N, CustomElementView, ElementView, register, SVGParentView} from '@mathigon/boost';
 
 
 const DIGITS: Obj<string> = {
@@ -28,6 +28,7 @@ export class Barcode extends CustomElementView {
     this.on('attr:value', (e) => {
       this.computeParityDigit(e.newAttr);
       this.draw(e.newAttr);
+      this.writeNumbers(e.newAttr);
     }); // I suspect this looks for changes in the "value" attribute.
   }
 
@@ -67,6 +68,18 @@ export class Barcode extends CustomElementView {
       }
     }
     this.left += sequence.length;
+  }
+
+  private writeNumbers(value: string) {
+    const $group = $N('g', {class: 'text'}, this.$svg);
+
+    this.writeNumber(value[0], $group);
+
+  }
+
+  private writeNumber(value: string, $group: ElementView) {
+
+    $N('text', {text: value}, $group);
   }
 
   // TODO: could move this to a separate utility file
