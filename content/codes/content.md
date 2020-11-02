@@ -886,6 +886,7 @@ Look at this barcode. // INTERACTIVE
     // only takes 11 values (last digit is error digit)
     x-barcode(value="01234567890")
 
+    // FIXME: should not be buttons, but individual digits?
     button.zoom GL
     button.zoom D1
     button.zoom D2
@@ -913,9 +914,11 @@ __The Guards__
 | --- | --- | --- |
 | 101 | 01010 | 101 |
 
+---
 __The Digits__
+> id: barcode-digits
 
-{.fixme} Let's recognize that these values are **not** the same as the binary representations we learned last chapter. They are still a binary code because they use two values (black and white), but the code to represent the digits is different.s
+{.fixme} Let's recognize that these values are **not** the same as the binary representations we learned last chapter. They are still a binary code because they use two values (black and white), but the code to represent the digits is different.
 
 | DIGIT | LEFT SIDE | RIGHT SIDE |
 |---|---|---|
@@ -932,34 +935,27 @@ __The Digits__
 
 {.fixme} There are a few interesting patterns we can recognize here. First, notice that the codes on the left side are different from the codes on the right side. This allows the bar code to be read upside down or backwards.
 
-{.fixme} Oh jeez... barcodes are [different](https://www.nationwidebarcode.com/are-upc-a-and-ean-13-the-same/) in the US and in Europe. But it's very simple. The Europe code has an extra digit at the beginning for a country code.
+##### Barcodes in different countries
+These barcodes with 12 digits are how they work in the US. In Europe, there are 13 digits. And other countries have different protocols for how barcodes. work.
 
-{.fixme} THIS IS VERY FUNNY... "Because there are more than 9 countries, the country flags have been further subdivided by using the next two digits for various uses and countries. The US and Canada have the country flag 0 and subdivisions 000 thru 139. The publishing industry produces so many products that it is its own country called "Bookland" for number assignment purposes. Bookland has been given two subdivisions of the country flag 9. They are 978 and 979" // REVISE:
+##### Digit Value
 
-{.fixme} Combinatorics // REVISE:
 - The first digit represents what type of object it is (0 - Standard; 2 - Weighted item like fruit; 3 - Pharmacy; 5 - Coupon)
 - Digits 2-6 (highlight) represent the *Manufacturer's Code*
 - The 7-11 (highlight) represent the *Product Code*
 - The final, 12th digit (highlight) is the __Error-Detection digit__, also called the __Modulo Check Character__
 
-{.fixme} Also, every binary representation of digits on the left begins with a 0 and ends with a 1, and every digit on the right begins with a 1 and ends with a 0. This results in a pattern: there will always be a 10 (on the left side) or a 01 (on the right side) on the edge between digits.
+##### Different between Left and Right
+Every binary representation of digits on the left begins with a 0 and ends with a 1, and every digit on the right begins with a 1 and ends with a 0. This results in a pattern: there will always be a 10 (on the left side) or a 01 (on the right side) on the edge between digits.
 
-{.todo} Must clarify why L-R digit patterns are helpful. RESEARCH
 
 #### Error Checking.
-{.fixme} Just like our case with the satellite signals, there is a chance that the laser reading the barcode can make a mistake. Perhaps there is some dirt, or a scratch, or the laser reads it incorrectly. For that reason, barcodes have a special way of determining whether there's been a mistake.
+Just like our case with the satellite signals, there is a chance that the laser reading the barcode can make a mistake. Perhaps there is some dirt, or a scratch, or the laser reads it incorrectly. For that reason, barcodes have a special way of determining whether there's been a mistake.
 
-{.fixme} The 12th digit is dependent on the first 11 digits, so that if any of the digits is wrong, we will know (most of the time). Can you guess how the 12th digit can indicate information about the first 11?
-
-{.todo} Here we will show the original digits moving into the new equation. Odd digits moving into the parantheses, and the even digits moving to the righ. // INTERACTIVE
-
-{.todo} empty box where they write the modulo check character
+The 12th digit is dependent on the first 11 digits, so that if any of the digits is wrong, we will know (most of the time). Can you guess how the 12th digit can indicate information about the first 11?
 
 {.fixme} The odd digit places are summed and multiplied by three. Then we calculate the sum of the even places, and sum these two values together. The __Modulo Check Character__ is 10 minus the ones digit of this number.
 
-When the computer scans the digits of a barcode, it performs this calculation. If the modulo check doesn't match up, we immediately know that the barcode hasn't been read correctly. In a supermarket, the cash register won't beep, and you can try again -- or, as a last resort, enter the numbers manually.
-
-{.todo} TIPS AND TRICKS: when you're adding these numbers, you only need to keep the ones digit. If you do 3x(2+3+1+9), which is 3x15, you can do 3x5 instead. Every digit above the ones digit will be thrown out.
 
 {.text-center} **Calculating the Modulo-Check Character**
 
@@ -983,16 +979,10 @@ When the computer scans the digits of a barcode, it performs this calculation. I
 
 {.text-center} `N = 7`
 
+When the computer scans the digits of a barcode, it performs this calculation. If the modulo check doesn't match up, we immediately know that the barcode hasn't been read correctly. In a supermarket, the cash register won't beep, and you can try again -- or, as a last resort, enter the numbers manually.
+
+
 {.todo} ACTIVITY: Look around you for something with a barcode (pretty much anything you can buy at a store). Hide the numbers with paper or tape, and try to decode the numbers. After you've written down your answer, see if you're correct! And then you can try the error detection formula and confirm that it is correct. (PHOTOS also)
-
-{.todo} ACTIVITY: combinatorics problem where students calculate possible number of barcodes.
-How many different combinations? [[10^11]] or one hundred [[billion|million|trillion]] different combinations.
-It's actually not quite as simple as giving the five digits 2-6 to each individual manufacturer. If this were the case, there would be only [[100000]] different manufacturers possible. Things are more complex! (see research)
-
-    // RESEARCH
-    // http://www.waspbarcode.com/buzz/barcode lots of info on subdivisions
-    // http://www.waspbarcode.com/buzz/why-small-businesses-must-avoid-reusing-barcodes don't reuse
-    // http://www.waspbarcode.com/buzz/60th-anniversary-of-the-barcode first ever use of barcode
 
 #### Barcode Conclusion
 {.fixme} These are only the UPC bar codes. There are many other types of bar codes listed here: http://www.makebarcode.com/specs/barcodechart.html
