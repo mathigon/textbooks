@@ -38,16 +38,15 @@ export class Barcode extends CustomElementView {
     this.left = 0;
 
     this.drawRect('101', ['outside'], true);
-    this.drawRect(DIGITS[value[0]], ['left', `d0`], true);
-    for (let i = 1; i <= 5; ++i) this.drawRect(DIGITS[value[i]], ['left', `d${i}`], false);
+    this.drawRect(DIGITS[value[0]], ['left', `d0`, `v${value[0]}`], true);
+    for (let i = 1; i <= 5; ++i) this.drawRect(DIGITS[value[i]], ['left', `d${i}`, `v${value[i]}`], false);
     this.drawRect('01010', ['middle'], true);
-    for (let i = 6; i <= 10; ++i) this.drawRect(DIGITS[value[i]], ['right', `d${i}`], false, true);
+    for (let i = 6; i <= 10; ++i) this.drawRect(DIGITS[value[i]], ['right', `d${i}`, `v${value[i]}`], false, true);
     // this is the error check digit
     this.drawRect(DIGITS[this.errorDigit], ['right', `d11`], true, true);
     this.drawRect('101', ['outside'], true);
   }
 
-  // BARCODE: add a class for values
   /**
    * Draw a section of a barcode. Corresponds to a guard or a digit.
    *

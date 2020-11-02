@@ -920,16 +920,16 @@ __The Digits__
 
 | DIGIT | LEFT SIDE | RIGHT SIDE |
 |---|---|---|
-| 0 | [{.step-target.pill.b.gray}0001101](target:v0) | 1110010 |
-| 1 | 0011001 | 1100110 |
-| 2 | 0010011 | 1101100 |
-| 3 | 0111101 | 1000010 |
-| 4 | 0100011 | 1011100 |
-| 5 | 0110001 | 1001110 |
-| 6 | 0101111 | 1010000 |
-| 7 | 0111011 | 1000100 |
-| 8 | 0110111 | 1001000 |
-| 9 | 0001011 | 1110100 |
+| 0 | [{.step-target.pill.b.gray}0001101](target:v0) | [{.step-target.pill.b.gray}1110010](target:v0) |
+| 1 | [{.step-target.pill.b.gray}0011001](target:v1) | [{.step-target.pill.b.gray}1100110](target:v1) |
+| 2 | [{.step-target.pill.b.gray}0010011](target:v2) | [{.step-target.pill.b.gray}1101100](target:v2) |
+| 3 | [{.step-target.pill.b.gray}0111101](target:v3) | [{.step-target.pill.b.gray}1000010](target:v3) |
+| 4 | [{.step-target.pill.b.gray}0100011](target:v4) | [{.step-target.pill.b.gray}1011100](target:v4) |
+| 5 | [{.step-target.pill.b.gray}0110001](target:v5) | [{.step-target.pill.b.gray}1001110](target:v5) |
+| 6 | [{.step-target.pill.b.gray}0101111](target:v6) | [{.step-target.pill.b.gray}1010000](target:v6) |
+| 7 | [{.step-target.pill.b.gray}0111011](target:v7) | [{.step-target.pill.b.gray}1000100](target:v7) |
+| 8 | [{.step-target.pill.b.gray}0110111](target:v8) | [{.step-target.pill.b.gray}1001000](target:v8) |
+| 9 | [{.step-target.pill.b.gray}0001011](target:v9) | [{.step-target.pill.b.gray}1110100](target:v9) |
 
 :::
 
