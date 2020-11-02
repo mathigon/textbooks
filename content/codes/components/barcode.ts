@@ -59,7 +59,7 @@ export class Barcode extends CustomElementView {
     widths.push(0);
     widths.push(GUARDS['outside'].length);
     for (let i = 1; i <= 6; i++) widths.push(DIGITS[0].length);
-    widths.push(GUARDS['outside'].length);
+    widths.push(GUARDS['middle'].length);
     for (let i = 7; i <= 12; i++) widths.push(DIGITS[0].length);
 
     let widthSum = 0;
@@ -125,33 +125,28 @@ export class Barcode extends CustomElementView {
 
     const MIN = 0;
     const MAX = 400;
-    const OFFSET = 5;
     const LEFT = {
-      START: 50,
-      END: 190
+      START: 70,
+      END: 170
     };
     const RIGHT = {
-      START: 210,
-      END: 350
+      START: 230,
+      END: 330
     };
+    const y = 200 + OUTER_BUFFER;
 
     let x;
-    let y;
     if (place === 0) {
-      x = MIN - OFFSET;
-      y = 200;
+      x = MIN + TEXT_PADDING;
     } else if (place === 11) {
-      x = MAX + OFFSET;
-      y = 200;
+      x = MAX + TEXT_PADDING;
     } else if (place >= 1 && place <= 5) {
       x = LEFT.START + (LEFT.END - LEFT.START) * (place - 1) / (5 - 1);
-      y = 200;
     } else if (place >= 6 && place <= 10) {
       x = RIGHT.START + (RIGHT.END - RIGHT.START) * (place - 6) / (10 - 6);
-      y = 200;
     }
 
-    $N('text', {text: value, class: `d${place}`, x, y, 'font-size': 20}, $group);
+    $N('text', {text: value, class: `d${place}`, x, y, 'font-size': 24}, $group);
   }
 
   // TODO: could move this to a separate utility file
