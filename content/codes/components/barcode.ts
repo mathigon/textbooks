@@ -20,13 +20,17 @@ const GUARDS: Obj<string> = {
 
 
 const OUTER_BUFFER = 20;
-const DIGIT_PADDING = 5;
+const TEXT_PADDING = 5;
 
 const HEIGHT_LONG = 200;
 const HEIGHT_SHORT = 180;
 
 const BAR_WIDTH = 4;
 
+const SVG_WIDTH = 2 * OUTER_BUFFER + BAR_WIDTH * (2 * GUARDS['outside'].length + GUARDS['middle'].length + 12 * DIGITS[0].length);
+const SVG_HEIGHT = 2 * OUTER_BUFFER + HEIGHT_LONG;
+
+let BAR_START_INDICES = [];
 
 @register('x-barcode', {attributes: ['value']})
 export class Barcode extends CustomElementView {
@@ -38,10 +42,11 @@ export class Barcode extends CustomElementView {
   private errorDigit = 0;
 
   ready() {
-    console.log('barcode.ready');
-    const WIDTH = 400; // BARCODE: should be computed... #BARS*BAR_WIDTH + 2*BUFFER
-    const HEIGHT = 200;
-    this.$svg = $N('svg', {viewBox: `0 0 ${WIDTH} ${HEIGHT}`}, this) as SVGParentView;
+    BAR_START_INDICES.push(0);
+    BAR_START_INDICES.push(GUARDS['outside'].length);
+    // for (let i=0; i < )
+
+    this.$svg = $N('svg', {viewBox: `0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}, this) as SVGParentView;
     const value = this.attr('value');
     this.computeParityDigit(value);
     this.draw(value);
