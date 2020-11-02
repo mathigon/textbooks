@@ -54,6 +54,19 @@ export class Barcode extends CustomElementView {
     }); // I suspect this looks for changes in the "value" attribute.
   }
 
+  generateNewCode() {
+    console.log('new code');
+    const newValue = '';
+    for (let i = 0; i < 11; i++) {
+      const digit = Math.floor(Math.random() * 10);
+      newValue.concat('' + digit);
+    }
+
+    this.computeParityDigit(newValue);
+    this.draw(newValue);
+    this.writeNumbers(newValue);
+  }
+
   private initDrawLines() {
     const widths = [];
     widths.push(0);

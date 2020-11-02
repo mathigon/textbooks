@@ -20,6 +20,7 @@ import './components/enigma';
 import './components/enigma-rotors';
 import './components/morse';
 import './components/hamming';
+import { Barcode } from './components/barcode';
 
 
 // -----------------------------------------------------------------------------
@@ -905,5 +906,10 @@ export function barcodeDrawing($step: Step) {
   const $svg = $step.$('svg');
   $step.$$('.zoom').forEach((button, i) => {
     button.on('click', () => $svg?.css('transform', transforms[i]));
+  });
+
+  const $barcode = $step.$('x-barcode') as Barcode;
+  $step.$('.generate')?.on('click', () => {
+    $barcode.generateNewCode();
   });
 }

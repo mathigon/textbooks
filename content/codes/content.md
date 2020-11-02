@@ -886,6 +886,7 @@ Woodland used his knowledge of Morse Code as a foundation to invent a new type o
     // only takes 11 values (last digit is error digit)
     x-barcode(value="05100001251")
 
+    button.generate NEW BARCODE
     // FIXME: should not be buttons, but individual digits?
     button.zoom GL
     button.zoom D1
