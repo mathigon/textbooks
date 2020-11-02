@@ -848,14 +848,13 @@ This gives us a hint into how we can build more complex error detection and corr
 
 ### Bar Codes
 
-{.fixme} CUT Before we solve the problem of satellites sending messages across the vast regions of space, let's start with an example that's a bit closer to home.
-
-We encounter error detecting and correcting codes every time we go to the supermarket, in the form of bar codes. Besides items at the store, bar codes are used for identifying all sorts of things like driver's licenses or babies in hospitals. And in the last decade, 2-dimensional barcodes (QR codes) have been adapted for ticketing at events like concerts or airplane flights.
+We encounter error-detecting codes every time we go to the supermarket, in the form of bar codes. Bar codes are also used for identifying all sorts of things like driver's licenses or babies in hospitals. And in the last decade, 2-dimensional barcodes (QR codes) have been adapted for ticketing at events like concerts or airplane flights.
 
 {.todo} photos of Bar Codes on license, ticket, baby wristband, can of food // PHOTOGRAPH: examples of bar codes
 
 Bar codes were invented as a way to make it easier for stores to track which items a customer is buying. Numbers are easy for us humans to read, but it's much harder for computers. For example, 1 and 7 or 6 and 8 might look almost the same to a low-resolution camera. A new system was needed, so that cashiers or nurses didn't have to manually type all these numbers into a computer.
 
+{.fixme} Transition: similar to morse code.
 Joe Woodland, one of the inventors of Bar Code was sitting on the beach, trying to think of a way to encode information for a light scanner to understand.
 
     div
@@ -874,7 +873,7 @@ Woodland used his knowledge of Morse Code as a foundation to invent a new type o
 
 {.fixme} Each bar code is a 12-digit number. See here that we can read the numbers written on the bottom. But how does a computer read it?
 
-{.fixme} There are 95 columns, each of which can be black or white. The computer uses a laser to identify each stripes color, based on how much light is reflected. These 95 columns are grouped into 15 groups of columns. (continue below)
+{.fixme} There are 95 columns, each of which can be black or white. The computer uses a laser to identify each stripe's color, based on how much light is reflected. These 95 columns are grouped into 15 groups of columns. (continue below)
 
 {.todo} image/interaction of a bar code
 
