@@ -86,7 +86,27 @@ export class Barcode extends CustomElementView {
     // 0 and 11 go on outsides... 0: MIN - OFFSET, 11: MAX + OFFSET
     // 1,2,3,4,5 fit into left side.... between [D1.END + OFFSET, CENTER.BEGIN - OFFSET]
     // 6,7,8,9,10 fit into right side... between [CENTER.END + OFFSET, D10.BEGIN - OFFSET]
-    $N('text', {text: value}, $group);
+
+    const MIN = 0;
+    const MAX = 400;
+    const OFFSET = 5;
+
+    let x;
+    let y;
+    if (place === 0) {
+      x = MIN - OFFSET;
+      y = 200;
+    } else if (place === 11) {
+      x = MAX + OFFSET;
+    } else if (place >= 1 && place <= 5) {
+      x = 100;
+      y = 200;
+    } else if (place >= 6 && place <= 10) {
+      x = 300;
+      y = 200;
+    }
+
+    $N('text', {text: value, class: `d${place}`, x, y}, $group);
   }
 
   // TODO: could move this to a separate utility file
