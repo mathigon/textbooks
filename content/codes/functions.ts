@@ -665,34 +665,81 @@ export function resolution($step: Step) {
 
 export function satellite($step: Step) {
   // SATELLITE: complete this
-  /* const $bitstream = $step.$('#bitstream') as SVGView;
-  const $trajectory = $bitstream?.$('line') as SVGView;
-  const $bits = $bitstream?.$$('text');
+  const $trajectory = $step?.$('.bitstream') as SVGView;
+
+  const $svg = $step.$('svg');
+
+  const $g = $N('g', {class: 'text'}, $svg);
+
+  const NUM_BITS = 12;
+  const FONT_SIZE = 30;
+  // based on [start, end] points of satellite transmitter, receiver
+  const START = $trajectory.getPointAt(1);
+  const END = $trajectory.getPointAt(0);
+  const ANGLE = Math.atan2(END.y - START.y, END.x - START.x);
+
+  // Initialize bitstream
+  const dataStream: ElementView[] = [];
+  for (let i = 0; i < NUM_BITS; i++) {
+    dataStream.push($N('text', {text: Math.floor(Math.random() * 2), 'font-size': FONT_SIZE, fill: '#FAFFFB'}, $g));
+    dataStream[i].hide();
+  }
+
+  let time = 0;
+  const SPEED = 0.0010;
+
+  let isMoving = false;
+
+
+  function moveRecurse() {
+    time += SPEED;
+    dataStream.forEach((p, i) => {
+      const progress = i / dataStream.length + time;
+      if (Math.floor(progress) > Math.floor(progress - SPEED)) {
+        console.log(`Bit #${i} is resetting`);
+        p.textStr = Math.floor(Math.random() * 2);
+      }
+      const xy = $trajectory.getPointAt((progress * 1000) % 1000 / 1000); // decimal
+      // set transform dependent on the bits
+      p.setTransform(new Point(xy.x, xy.y), ANGLE);
+    });
+
+    if (isMoving) {
+      setTimeout(() => {
+        moveRecurse();
+      }, 10);
+    }
+  }
 
   // SATELLITE: WAIT for new svg from designer
   function moveBits() {
-    // There should be a timeout
-    $bits?.forEach((e, i) => {
-      // get point along trajectory
-      const xy = $trajectory.getPointAt(0);
-      // set transform dependent on the bits
-      e.setTransform(new Point(xy.x, xy.y));
-    });
-  } */
 
-  /* function stopBits() {
-    // SATELLITE: stop the bits
-  } */
+    isMoving = true;
+    moveRecurse();
+    // There should be a timeout
+    dataStream?.forEach(p => {
+      p.show();
+    });
+  }
+
+  function stopBits() {
+    isMoving = false;
+    dataStream.forEach(p => {
+      p.hide();
+    });
+  }
 
   const $satellites = $step.$('.satellites')!;
 
   // from Telegraph code. Should replace w/ code to enable 1s and 0s.
   slide($satellites, {
     down: () => {
-      $satellites.addClass('pressed');
+      moveBits();
+      // $satellites.addClass('pressed');
     },
     up: () => {
-      $satellites.removeClass('pressed');
+      stopBits();
+      // $satellites.removeClass('pressed');
     }
   });
 }
