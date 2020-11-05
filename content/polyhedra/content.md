@@ -1378,10 +1378,18 @@ directions, but _never_ look exactly the same. These are called __Penrose
 tilings__, and you only need a few different kinds of polygons to
 create one:
 
-    figure
-      include svg/penrose.svg
-      x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
-      p.caption Move the slider to reveal the underlying structure of this tessellation. Notice how you have the same patterns at various scales: the small yellow pentagons, blue stars, orange rhombi and green ‘ships’ appear in their original size, in a #[strong.blue slightly larger size] and an #[strong.red even larger size]. This #[em self-similarity] can be used to prove that this Penrose tiling is non-periodic.
+::: figure
+
+    include svg/penrose.svg
+    x-slider(steps=100, style="max-width: 400px; margin: 24px auto")
+
+{.caption} Move the slider to reveal the underlying structure of this tessellation. Notice how the
+same patterns appear at various scales: the yellow pentagons, blue stars, purple rhombi and green
+‘ships’ appear in their original size, in a __{.blue} slightly larger size__ and an __{.red} even
+larger size__. This _self-similarity_ can be used to prove that a Penrose tiling is always
+non-periodic.
+
+:::
 
 ---
 > id: penrose-1
