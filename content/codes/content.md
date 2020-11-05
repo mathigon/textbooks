@@ -918,6 +918,14 @@ __The Guards__
 
 __The Digits__
 
+{.fixme} Explicitly say relationships between 0/1 and White/Black
+
+{.fixme} Clarify that these are not binary numbers, but a different code.
+
+{.fixme} LEFT and RIGHT sides should only point to their sides.
+
+{.fixme} why is left and right different?
+
 | DIGIT | LEFT SIDE | RIGHT SIDE |
 |---|---|---|
 | 0 | [{.step-target.pill.b.gray}0001101](target:v0) | [{.step-target.pill.b.gray}1110010](target:v0) |
@@ -956,6 +964,7 @@ The 12th digit is dependent on the first 11 digits, so that if any of the digits
 
 {.fixme} The odd digit places are summed and multiplied by three. Then we calculate the sum of the even places, and sum these two values together. The __Modulo Check Character__ is 10 minus the ones digit of this number.
 
+{.fixme} put a barcode next to this.
 
 {.text-center} **Calculating the Modulo-Check Character**
 
