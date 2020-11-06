@@ -669,7 +669,7 @@ export function satellite($step: Step) {
 
   const $svg = $step.$('svg');
 
-  const $g = $N('g', {class: 'text'}, $svg);
+  const $bitstream = $N('g', {class: 'text'}, $svg);
 
   const NUM_BITS = 12;
   const FONT_SIZE = 30;
@@ -681,23 +681,44 @@ export function satellite($step: Step) {
   // Initialize bitstream
   const dataStream: ElementView[] = [];
   for (let i = 0; i < NUM_BITS; i++) {
-    dataStream.push($N('text', {text: Math.floor(Math.random() * 2), 'font-size': FONT_SIZE, fill: '#FAFFFB'}, $g));
+    const $g = $N('g', {}, $bitstream);
+    $N('text', {text: Math.floor(Math.random() * 2), 'font-size': FONT_SIZE, fill: '#FAFFFB'}, $g);
+    const $errorFlash = $N('rect', {fill: '#CC0E66', x: -2, y: -26, width: 20, height: 30, rx: 6, ry: 6, 'fill-opacity': 0.5}, $g);
+    $errorFlash.hide();
+    dataStream.push($g);
     dataStream[i].hide();
   }
 
   let time = 0;
   const SPEED = 0.0010;
+  const ERROR_CHANCE = 0.2;
+  const FLASH_TIME = 150;
 
   let isMoving = false;
-
 
   function moveRecurse() {
     time += SPEED;
     dataStream.forEach((p, i) => {
       const progress = i / dataStream.length + time;
+
+      // Check for when bit reaches the end (1s digit goes from N to N+1)
       if (Math.floor(progress) > Math.floor(progress - SPEED)) {
-        console.log(`Bit #${i} is resetting`);
-        p.textStr = Math.floor(Math.random() * 2);
+        p.$('text')!.textStr = Math.floor(Math.random() * 2);
+        p.$('rect')!.hide();
+      }
+
+      // Check when bit crosses the center (tenths digit goes from 4 to 5)
+      if (Math.floor((progress * 10) % 10) === 5 && Math.floor((progress - SPEED) * 10 % 10) === 4) {
+
+        if (Math.random() < ERROR_CHANCE) {
+          // console.log(`ERROR in bit ${i}`);
+          const prevVal = p.$('text')!.text;
+
+          // flashing effecT
+          p.$('rect')!.enter('fade', FLASH_TIME, 0);
+          setTimeout(() => p.$('text')!.textStr = prevVal === '1' ? 0 : 1, FLASH_TIME);
+          p.$('rect')!.exit('fade', FLASH_TIME, FLASH_TIME);
+        }
       }
       const xy = $trajectory.getPointAt((progress * 1000) % 1000 / 1000); // decimal
       // set transform dependent on the bits
