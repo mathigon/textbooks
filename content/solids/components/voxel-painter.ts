@@ -6,8 +6,9 @@
 
 /// <reference types="three"/>
 import {Obj} from '@mathigon/core';
+import {animate, canvasPointerPosition, CustomElementView, loadScript, register, slide} from '@mathigon/boost';
 import {Point} from '@mathigon/euclid';
-import {animate, canvasPointerPosition, CustomElementView, Draggable, loadScript, register, slide} from '@mathigon/boost';
+import {Vector3} from 'three';
 
 import {create3D} from '../../shared/components/webgl';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../../shared/constants';
@@ -18,7 +19,7 @@ const TAU = Math.PI * 2;
 
 @register('x-voxel-painter')
 export class VoxelPainter extends CustomElementView {
-  voxels: THREE.Object3D[] = [];
+  voxels: THREE.Mesh<THREE.Geometry>[] = [];
 
   async ready() {
     await loadScript('/resources/shared/vendor/three-91.min.js');
@@ -36,13 +37,14 @@ export class VoxelPainter extends CustomElementView {
     if (gridDimension % 2 !== 0) {
       gridDimension = 2 * Math.ceil(gridDimension / 2);
     }
+
     const playingFieldMin = new THREE.Vector3().setScalar(-gridDimension / 2.0 + 0.1);
     const playingFieldMax = new THREE.Vector3().setScalar(gridDimension / 2.0 - 0.1);
-    function pointInPlayingField(p) {// best done with a point already on grid
-      const ret = playingFieldMin.x < p.x && p.x < playingFieldMax.x &&
+
+    function pointInPlayingField(p: Vector3) {// best done with a point already on grid
+      return playingFieldMin.x < p.x && p.x < playingFieldMax.x &&
                 playingFieldMin.y < p.y && p.y < playingFieldMax.y &&
                 playingFieldMin.z < p.z && p.z < playingFieldMax.z;
-      return ret;
     }
 
     let customCamera: THREE.Camera|undefined = undefined;
@@ -109,7 +111,7 @@ export class VoxelPainter extends CustomElementView {
     scene.add(placementVisualizer);
     placementVisualizer.add(new THREE.LineSegments(outlineGeometry, outlineMaterial));
 
-    class Voxel extends THREE.Mesh {
+    class Voxel extends THREE.Mesh<THREE.BoxGeometry> {
       constructor() {
         super(voxelGeo.clone(), voxelMaterial);
         this.add(new THREE.LineSegments(outlineGeometry, outlineMaterial));
@@ -117,25 +119,6 @@ export class VoxelPainter extends CustomElementView {
         objectsOnWhichVoxelsCanBePlaced.push(this);
         scene.add(this);
       }
-    }
-
-    const $eraser = this.$('.eraser');
-    if ($eraser !== undefined) {
-      const positionMovedTo = new Point();
-      const drag = new Draggable($eraser, this);
-      drag.on('move', (posn: Point) => {
-        positionMovedTo.x = posn.x;
-        positionMovedTo.y = posn.y;
-        mouseControlMode = 'erasing';
-
-        const p = canvasPointerPosition(event!, $canvas);
-        respondToPointerMovement(p);
-      });
-      drag.on('end', () => {
-        mouseControlMode = '';
-
-        $eraser.translate(-positionMovedTo.x, -positionMovedTo.y);
-      });
     }
 
     {
@@ -262,7 +245,7 @@ export class VoxelPainter extends CustomElementView {
     const pointerNdc = new THREE.Vector3();
     const oldPointerNdc = new THREE.Vector3();
 
-    function respondToPointerMovement(p) {
+    function respondToPointerMovement(p: Point) {
       camera.updateMatrixWorld();
       asyncPointerNdc.set((p.x / $canvas.canvasWidth) * 2 - 1,
           -(p.y / $canvas.canvasHeight) * 2 + 1, 0);
@@ -281,7 +264,7 @@ export class VoxelPainter extends CustomElementView {
       initialPositions[i] = voxels[i].position.clone();
     }
     pointToExplodeFrom.multiplyScalar(1.0 / voxels.length);
-    function setVoxelPositionsFromExplodedness(explodedness) {
+    function setVoxelPositionsFromExplodedness(explodedness: number) {
       for (let i = 0, il = voxels.length; i < il; ++i) {
         voxels[i].position.copy(initialPositions[i]).sub(pointToExplodeFrom).multiplyScalar(1.0 + explodedness).add(pointToExplodeFrom);
       }
@@ -398,7 +381,7 @@ export class VoxelPainter extends CustomElementView {
       return sign * speed;
     }
 
-    let lastVoxelIntersectedByEraser: THREE.Object3D|undefined = undefined;
+    let lastVoxelIntersectedByEraser: THREE.Mesh<THREE.Geometry>|undefined = undefined;
 
     function updateApplet() {
       oldPointerNdc.copy(pointerNdc);
@@ -457,9 +440,9 @@ export class VoxelPainter extends CustomElementView {
       }
 
       if (mouseControlMode === 'erasing') {
-        let voxelIntersectedByEraser: THREE.Object3D|undefined = undefined;
+        let voxelIntersectedByEraser: THREE.Mesh<THREE.Geometry>|undefined = undefined;
         const intersections = pointerRaycaster.intersectObjects(voxels);
-        if (intersections.length > 0) voxelIntersectedByEraser = intersections[0].object;
+        if (intersections.length > 0) voxelIntersectedByEraser = intersections[0].object as THREE.Mesh<THREE.Geometry>;
 
         if (lastVoxelIntersectedByEraser && voxels.indexOf(lastVoxelIntersectedByEraser) !== -1 && lastVoxelIntersectedByEraser !== voxelIntersectedByEraser) {
           scene.remove(lastVoxelIntersectedByEraser);

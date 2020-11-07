@@ -753,8 +753,8 @@ export function cylinderSurface($step: Step) {
       bottomLabel.updatePosition(
           [0.5, -1 - Math.sin(angle), -1 + Math.cos(angle)]);
 
-      scene.camera.zoom = 1 - n / 250;
-      scene.camera.updateProjectionMatrix();
+      (scene.camera as any).zoom = 1 - n / 250;
+      (scene.camera as any).updateProjectionMatrix();
 
       if (!hasMoved) {
         $solid.object.setRotationFromEuler(new THREE.Euler(-n / 200, 0, 0));
@@ -897,8 +897,8 @@ export function coneSurface($step: Step) {
           [r / 2, -h / 2 - r * Math.sin(angle), Math.cos(angle) - 1]);
       slantLabel.updatePosition([0, (p.x - h / 2) / 2, (p.y - r) / 2]);
 
-      scene.camera.zoom = 1.05 - n / 600;
-      scene.camera.updateProjectionMatrix();
+      (scene.camera as any).zoom = 1.05 - n / 600;
+      (scene.camera as any).updateProjectionMatrix();
       if (!hasMoved) {
         $solid.object.setRotationFromEuler(new THREE.Euler(-n / 250, 0, 0));
       }

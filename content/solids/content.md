@@ -44,8 +44,7 @@ The following can be used to create and save:
 
     figure
       x-voxel-painter(width=600 height=400 color-sides playingFieldSize="20" )
-        .eraser()
-        x-icon-btn(icon="check-white",saveButton)
+        x-icon-btn(icon="eraser")
 
 The volume of the cuboid below is 3 x 4 x 7 = [[72]].
 
@@ -78,9 +77,6 @@ Can you make a 3D shape that looks like these?
     figure
       x-voxel-painter(width=600 height=400 color-sides,shape="-0.5,-0.5,-0.5,0.5,-0.5,-0.5,-0.5,-0.5,0.5,0.5,-0.5,0.5,1.5,-0.5,-0.5,-0.5,0.5,-0.5,",playingFieldSize="4",hideGrid,rotateOnly)
 
-
-      
-
 ---
 > id: voxel-builder-question
 > goal: problem
@@ -89,7 +85,7 @@ Try to make a shape with a surface area of 10 and a volume of 2
 
     figure
       x-voxel-painter(width=600 height=400 color-sides,playingFieldSize="4")
-        .eraser()
+        x-icon-btn(icon="eraser")
         x-icon-btn(surfaceArea=10,volume=2,icon="check-white")
 
 ---
