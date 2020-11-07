@@ -194,7 +194,7 @@ export function quadrilateralsArea($step: Step) {
 
 export function tessellationDrawing($step: Step) {
   const $polypad = $step.$('x-polypad') as Polypad;
-  const $overlayTiles = $step.$('.overlay .tiles')!;
+  const $overlayTiles = $step.$('.overlay')!;
 
   // TODO Save and restore progress
   let polygons = 0;
@@ -231,7 +231,7 @@ export function tessellationDrawing($step: Step) {
 
 export function pentagons($step: Step) {
   const $polypad = $step.$('x-polypad') as Polypad;
-  const $overlayTiles = $step.$('.overlay .tiles')!;
+  const $overlayTiles = $step.$('.overlay')!;
   const $thumbnails = $step.$$('.tessellation .add');
   const colours = Color.rainbow($thumbnails.length);
 
