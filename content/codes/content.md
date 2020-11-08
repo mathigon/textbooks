@@ -827,7 +827,6 @@ Let's think about some ways we could possibly make sure that we know the correct
 ::: column.grow
 
     x-img(src="images/envelopes-2.png" width=100 height=200)
-    .caption With two copies, we know there is an error but we don't know which envelope is correct.
 
 ::: column(width=330)
 
@@ -837,21 +836,19 @@ Perhaps the simplest way to do it would be to send multiple copies of the same m
 
 ---
 
-
 ::: column.grow
 
-    x-img(src="images/envelopes-3.png" width=100 height=300)
-    .caption With three copies, we can tell what the correct messages is even if one of the messages is wrong.
+If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss). In this example to the left, we know that the [[blue|green]] envelope will be the correct message.
 
 ::: column(width=300)
 
-If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss).
+    x-img(src="images/envelopes-3.png" width=100 height=300)
 
 :::
 
 ---
 
-But this would consume a lot of space! Imagine if you bought a state-of-the-art smartphone with 96 GB of memory which used this type of error correction. [[Two thirds|one third|one half]] of the space would be redundant data. The phone would only be able to hold less than [[32]] GB of memory!
+This message-encoding scheme would consume a lot of space! Imagine if you bought a state-of-the-art smartphone with 96 GB of memory which used this type of error correction. [[Two thirds|One third|One half]] of the space would be redundant data. The phone would only be able to hold less than [[32]] GB of memory!
 
 There must be a better way.
 
@@ -996,7 +993,15 @@ The 12th digit is dependent on the first 11 digits, so that if any of the digits
 
 {.fixme} The odd digit places are summed and multiplied by three. Then we calculate the sum of the even places, and sum these two values together. The __Modulo Check Character__ is 10 minus the ones digit of this number.
 
-{.fixme} put a barcode next to this.
+---
+
+> id: barcode-error
+
+::: column.grow
+
+    x-barcode(value="05100001251")
+
+::: column(width=330)
 
 {.text-center} **Calculating the Modulo-Check Character**
 
@@ -1019,6 +1024,10 @@ The 12th digit is dependent on the first 11 digits, so that if any of the digits
 {.text-center} `N = ones(-17)`
 
 {.text-center} `N = 7`
+
+:::
+
+---
 
 When the computer scans the digits of a barcode, it performs this calculation. If the modulo check doesn't match up, we immediately know that the barcode hasn't been read correctly. In a supermarket, the cash register won't beep, and you can try again -- or, as a last resort, enter the numbers manually.
 
