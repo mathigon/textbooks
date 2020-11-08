@@ -815,23 +815,31 @@ Unforuntately, our atmosphere gets in the way of our messages. Just like looking
     .caption Hold down to transmit bits back to Earth.
 
 
-When we receive a message, transmitted as many packets of binary numbers, there is a chance that some of the bits may be incorrect, so we need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
+When we receive a message, transmitted as many packets of binary numbers, there is a chance that some of the bits may be incorrect. We need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
 
 ---
 > id: messages
 
-{.todo} Section on different ways to do error detection: multiple copies, etc  // INTERACTIVE
+Let's think about some ways we could possibly make sure that we know the correct message.
 
+    // TODO: image with two envelopes of different colors: 1b, 1g
     figure: include svg/envelope.svg
+    .caption With two copies, we know there is an error but we don't know which envelope is correct.
 
-{.fixme} Let's think about some ways we could possibly make sure that we know the correct message.
 
-Perhaps the simplest way to do it would be to send multiple copies of the same message.
-If we send two copies (DIAGRAM), then we know that there's an error, but we won't know which is the correct message (if you've ever seen a movie where there are two people and one might be an evil twin, you've experienced this before!). This would be an [Error Detecting Code](gloss)
-If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss)
+Perhaps the simplest way to do it would be to send multiple copies of the same message. If we send two copies, then we know that there's an error, but we won't know what the error is because [[we don't know which message is correct|something else]]. This would be an [Error Detecting Code](gloss).
+
+    // TODO: image with three envelopes of different colors: 2b, 1g
+
+If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss).
+
 But this would consume a lot of space! Imagine if you bought a state-of-the-art smartphone with 96 GB of memory, used this type of error correction. It would only be able to hold less than [[32]] GB of memory! Two thirds of it would be repeated data.
 
 There must be a better way.
+
+---
+
+> id: parity-bit
 
 #### Parity Bit
 One very simple and cost-effective way to detect an error is via a __parity bit__.
