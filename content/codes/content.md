@@ -803,18 +803,19 @@ __and those who don't.__
 
 ### Introduction
 
-{.fixme} We receive some bits from space. They have come from a satellite, perhaps *billions of miles* away from earth. Now NASA has spent 3 years making this satellite and invested millions of dollars and hours into making it, getting it *just right*. Perhaps this data is a photo of Jupiter's great red spot? Or perhaps it's data about the temperature on Neptune? Or movement data of asteroids? Regardless of what the message is we received, how do we know that the data we've received is accurate?
+Scientists and engineers have worked very hard to make satellites that travel very far from Earth. Voyager 1 is now _13 billion miles_ away from Earth.  When a satellite captures information about space, it must then transmit this data back to a satellite dish back on Earth. Perhaps this data is a photo of Jupiter's great red spot? Or perhaps it's data about the temperature on Neptune? Or movement data of asteroids? Regardless of what the message is we received, how do we know that the data we've received is accurate?
 
-{.fixme} Unforuntately, our atmosphere gets in the way of our messages. Just like looking through a glass of water distorts what's behind it, the charged particles in our atmosphere might distort some of the signals coming from the satellite.
+Unforuntately, our atmosphere gets in the way of our messages. Just like looking through a glass of water distorts the image of what's behind it, the charged particles in our atmosphere might distort some of the signals coming from the satellite.
 
     .satellites
       img(src="images/satellite/nightsky.png" width=640 height=420)
       img.sat(src="images/satellite/satellites.png" width=640 height=420)
       img.atm(src="images/satellite/atmosphere.png" width=640 height=420)
       svg(width=640 height=420): line(class="bitstream" x1=525 y1=95 x2=145 y2=265)
+    .caption Hold down to transmit bits back to Earth.
 
 
-{.fixme} There is a chance that some of the bits may be incorrect, so we need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
+When we receive a message, transmitted as many packets of binary numbers, there is a chance that some of the bits may be incorrect, so we need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
 
 ---
 > id: messages
