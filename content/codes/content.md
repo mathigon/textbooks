@@ -909,6 +909,8 @@ Woodland used his knowledge of Morse Code as a foundation to invent a new type o
 
 > id: barcode-drawing
 
+{.fixme} Barcode digits should be hoverable.
+
 ::: column.grow
 
     // only takes 11 values (last digit is error digit)
@@ -957,16 +959,16 @@ __The Digits__
 
 | DIGIT | LEFT SIDE | RIGHT SIDE |
 |---|---|---|
-| 0 | [{.step-target.pill.b.gray}0001101](target:v0) | [{.step-target.pill.b.gray}1110010](target:v0) |
-| 1 | [{.step-target.pill.b.gray}0011001](target:v1) | [{.step-target.pill.b.gray}1100110](target:v1) |
-| 2 | [{.step-target.pill.b.gray}0010011](target:v2) | [{.step-target.pill.b.gray}1101100](target:v2) |
-| 3 | [{.step-target.pill.b.gray}0111101](target:v3) | [{.step-target.pill.b.gray}1000010](target:v3) |
-| 4 | [{.step-target.pill.b.gray}0100011](target:v4) | [{.step-target.pill.b.gray}1011100](target:v4) |
-| 5 | [{.step-target.pill.b.gray}0110001](target:v5) | [{.step-target.pill.b.gray}1001110](target:v5) |
-| 6 | [{.step-target.pill.b.gray}0101111](target:v6) | [{.step-target.pill.b.gray}1010000](target:v6) |
-| 7 | [{.step-target.pill.b.gray}0111011](target:v7) | [{.step-target.pill.b.gray}1000100](target:v7) |
-| 8 | [{.step-target.pill.b.gray}0110111](target:v8) | [{.step-target.pill.b.gray}1001000](target:v8) |
-| 9 | [{.step-target.pill.b.gray}0001011](target:v9) | [{.step-target.pill.b.gray}1110100](target:v9) |
+| 0 | [{.step-target.pill.b.gray}WWWBBWB](target:l0) | [{.step-target.pill.b.gray}BBBWWBW](target:r0) |
+| 1 | [{.step-target.pill.b.gray}WWBBWWB](target:l1) | [{.step-target.pill.b.gray}BBWWBBW](target:r1) |
+| 2 | [{.step-target.pill.b.gray}WWBWWBB](target:l2) | [{.step-target.pill.b.gray}BBWBBWW](target:r2) |
+| 3 | [{.step-target.pill.b.gray}0111101](target:l3) | [{.step-target.pill.b.gray}1000010](target:r3) |
+| 4 | [{.step-target.pill.b.gray}0100011](target:l4) | [{.step-target.pill.b.gray}1011100](target:r4) |
+| 5 | [{.step-target.pill.b.gray}0110001](target:l5) | [{.step-target.pill.b.gray}1001110](target:r5) |
+| 6 | [{.step-target.pill.b.gray}0101111](target:l6) | [{.step-target.pill.b.gray}1010000](target:r6) |
+| 7 | [{.step-target.pill.b.gray}0111011](target:l7) | [{.step-target.pill.b.gray}1000100](target:r7) |
+| 8 | [{.step-target.pill.b.gray}0110111](target:l8) | [{.step-target.pill.b.gray}1001000](target:r8) |
+| 9 | [{.step-target.pill.b.gray}0001011](target:l9) | [{.step-target.pill.b.gray}1110100](target:r9) |
 
 :::
 
@@ -997,13 +999,13 @@ The 12th digit is dependent on the first 11 digits, so that if any of the digits
 
 > id: barcode-error
 
+{.text-center} **Calculating the Error-Check Digit**
+
 ::: column.grow
 
     x-barcode(value="05100001251")
 
 ::: column(width=330)
-
-{.text-center} **Calculating the Modulo-Check Character**
 
 {.text-center} `X = 3 * (∑ oddDigits) + ∑ evenDigits`
 
