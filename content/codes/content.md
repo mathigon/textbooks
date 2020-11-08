@@ -800,6 +800,7 @@ __and those who don't.__
 > section: error-detection
 > sectionStatus: dev
 > id: satellite
+> goals: transmit
 
 ### Introduction
 
@@ -814,6 +815,7 @@ Unforuntately, our atmosphere gets in the way of our messages. Just like looking
       svg(width=640 height=420): line(class="bitstream" x1=525 y1=95 x2=145 y2=265)
     .caption Hold down to transmit bits back to Earth.
 
+---
 
 When we receive a message, transmitted as many packets of binary numbers, there is a chance that some of the bits may be incorrect. We need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
 
@@ -832,6 +834,8 @@ Let's think about some ways we could possibly make sure that we know the correct
 Perhaps the simplest way to do it would be to send multiple copies of the same message. If we send two copies, then we know that there's an error, but we won't know what the error is because [[we don't know which message is correct|something else]]. This would be an [Error Detecting Code](gloss).
 
 :::
+
+---
 
 
 ::: column.grow
@@ -865,7 +869,9 @@ For example we can add one more bit to the end of a sequence of binary numbers d
 
 {.text-center} If the sum is odd, the parity bit is __1__.
 
-This gives us a hint into how we can build more complex error detection and correction schemes. Before we do that, let's look at an example that we encounter quite often.
+With this scheme, after the parity bit has been appended, the sum of the entire encoded number will be [[even|odd]].
+
+This gives us a hint into how we can build more complex error detection and correction schemes. Before we do that, let's look at an example that we experience quite often.
 
 ---
 

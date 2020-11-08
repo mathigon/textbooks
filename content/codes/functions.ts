@@ -696,6 +696,8 @@ export function satellite($step: Step) {
 
   let isMoving = false;
 
+  let numErrors = 0;
+
   function moveRecurse() {
     time += SPEED;
     dataStream.forEach((p, i) => {
@@ -711,6 +713,12 @@ export function satellite($step: Step) {
       if (Math.floor((progress * 10) % 10) === 5 && Math.floor((progress - SPEED) * 10 % 10) === 4) {
 
         if (Math.random() < ERROR_CHANCE) {
+
+          // let user advance after 2 errors
+          numErrors++;
+          if (numErrors == 2) {
+            $step.score('transmit');
+          }
           // console.log(`ERROR in bit ${i}`);
           const prevVal = p.$('text')!.text;
 
