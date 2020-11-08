@@ -156,7 +156,7 @@ export class Barcode extends CustomElementView {
       x = RIGHT.START + (RIGHT.END - RIGHT.START) * (place - 6) / (10 - 6);
     }
 
-    $N('text', {text: value, class: `d${place}`, x, y, 'font-size': 24}, $group);
+    $N('text', {text: value, class: `d${place} step-target`, x, y, 'font-size': 24, 'data-to': `l${place}`}, $group);
   }
 
   // TODO: could move this to a separate utility file

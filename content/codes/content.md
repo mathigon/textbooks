@@ -949,12 +949,6 @@ __The Guards__
 
 __The Digits__
 
-{.fixme} Explicitly say relationships between 0/1 and White/Black
-
-{.fixme} Clarify that these are not binary numbers, but a different code.
-
-{.fixme} LEFT and RIGHT sides should only point to their sides.
-
 {.fixme} why is left and right different?
 
 | DIGIT | LEFT SIDE | RIGHT SIDE |
@@ -962,13 +956,13 @@ __The Digits__
 | 0 | [{.step-target.pill.b.gray}WWWBBWB](target:l0) | [{.step-target.pill.b.gray}BBBWWBW](target:r0) |
 | 1 | [{.step-target.pill.b.gray}WWBBWWB](target:l1) | [{.step-target.pill.b.gray}BBWWBBW](target:r1) |
 | 2 | [{.step-target.pill.b.gray}WWBWWBB](target:l2) | [{.step-target.pill.b.gray}BBWBBWW](target:r2) |
-| 3 | [{.step-target.pill.b.gray}0111101](target:l3) | [{.step-target.pill.b.gray}1000010](target:r3) |
-| 4 | [{.step-target.pill.b.gray}0100011](target:l4) | [{.step-target.pill.b.gray}1011100](target:r4) |
-| 5 | [{.step-target.pill.b.gray}0110001](target:l5) | [{.step-target.pill.b.gray}1001110](target:r5) |
-| 6 | [{.step-target.pill.b.gray}0101111](target:l6) | [{.step-target.pill.b.gray}1010000](target:r6) |
-| 7 | [{.step-target.pill.b.gray}0111011](target:l7) | [{.step-target.pill.b.gray}1000100](target:r7) |
-| 8 | [{.step-target.pill.b.gray}0110111](target:l8) | [{.step-target.pill.b.gray}1001000](target:r8) |
-| 9 | [{.step-target.pill.b.gray}0001011](target:l9) | [{.step-target.pill.b.gray}1110100](target:r9) |
+| 3 | [{.step-target.pill.b.gray}WBBBBWB](target:l3) | [{.step-target.pill.b.gray}BWWWWBW](target:r3) |
+| 4 | [{.step-target.pill.b.gray}WBWWWBB](target:l4) | [{.step-target.pill.b.gray}BWBBBWW](target:r4) |
+| 5 | [{.step-target.pill.b.gray}WBBWWWB](target:l5) | [{.step-target.pill.b.gray}BWWBBBW](target:r5) |
+| 6 | [{.step-target.pill.b.gray}WBWBBBB](target:l6) | [{.step-target.pill.b.gray}BWBWWWW](target:r6) |
+| 7 | [{.step-target.pill.b.gray}WBBBWBB](target:l7) | [{.step-target.pill.b.gray}BWWWBWW](target:r7) |
+| 8 | [{.step-target.pill.b.gray}WBBWBBB](target:l8) | [{.step-target.pill.b.gray}BWWBWWW](target:r8) |
+| 9 | [{.step-target.pill.b.gray}WWWBWBB](target:l9) | [{.step-target.pill.b.gray}BBBWBWW](target:r9) |
 
 :::
 
