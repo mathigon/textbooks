@@ -803,13 +803,9 @@ __and those who don't.__
 
 ### Introduction
 
-{.todo} Satellite Communications
-
 {.fixme} We receive some bits from space. They have come from a satellite, perhaps *billions of miles* away from earth. Now NASA has spent 3 years making this satellite and invested millions of dollars and hours into making it, getting it *just right*. Perhaps this data is a photo of Jupiter's great red spot? Or perhaps it's data about the temperature on Neptune? Or movement data of asteroids? Regardless of what the message is we received, how do we know that the data we've received is accurate?
 
 {.fixme} Unforuntately, our atmosphere gets in the way of our messages. Just like looking through a glass of water distorts what's behind it, the charged particles in our atmosphere might distort some of the signals coming from the satellite.
-
-{.todo} satellite streaming bits to a receiver on Earth. // INTERACTIVE
 
     .satellites
       img(src="images/satellite/nightsky.png" width=640 height=420)
@@ -820,7 +816,12 @@ __and those who don't.__
 
 {.fixme} There is a chance that some of the bits may be incorrect, so we need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
 
+---
+> id: messages
+
 {.todo} Section on different ways to do error detection: multiple copies, etc  // INTERACTIVE
+
+    figure: include svg/envelope.svg
 
 {.fixme} Let's think about some ways we could possibly make sure that we know the correct message.
 
@@ -857,10 +858,8 @@ Bar codes were invented as a way to make it easier for stores to track which ite
 Joe Woodland, one of the inventors of Bar Code was sitting on the beach, trying to think of a way to encode information for a light scanner to understand.
 
     div
-      .quote
-        I remember I was thinking about dots and dashes when I poked my four fingers into the sand and, for whatever reason--I didn't know--I pulled my hand toward me and I had four lines. I said 'Golly! Now I have four lines and they could be wide lines and narrow lines, instead of dots and dashes.'
-      .author
-        Joe Woodland, inventor of the Bar Code
+      .quote I remember I was thinking about dots and dashes when I poked my four fingers into the sand and, for whatever reason--I didn't know--I pulled my hand toward me and I had four lines. I said 'Golly! Now I have four lines and they could be wide lines and narrow lines, instead of dots and dashes.'
+      .author Joe Woodland, inventor of the Bar Code
 
 Woodland used his knowledge of Morse Code as a foundation to invent a new type of code. By learning about different types of codes, we can build our own knowledge foundation and perhaps invent our own codes!
 
