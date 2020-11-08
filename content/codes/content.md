@@ -822,18 +822,32 @@ When we receive a message, transmitted as many packets of binary numbers, there 
 
 Let's think about some ways we could possibly make sure that we know the correct message.
 
-    figure: include images/envelopes-2.png
+::: column.grow
+
+    x-img(src="images/envelopes-2.png" width=100 height=200)
     .caption With two copies, we know there is an error but we don't know which envelope is correct.
 
+::: column(width=330)
 
 Perhaps the simplest way to do it would be to send multiple copies of the same message. If we send two copies, then we know that there's an error, but we won't know what the error is because [[we don't know which message is correct|something else]]. This would be an [Error Detecting Code](gloss).
 
-    figure: include images/envelopes-3.png
+:::
+
+
+::: column.grow
+
+    x-img(src="images/envelopes-3.png" width=100 height=300)
     .caption With three copies, we can tell what the correct messages is even if one of the messages is wrong.
+
+::: column(width=300)
 
 If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss).
 
-But this would consume a lot of space! Imagine if you bought a state-of-the-art smartphone with 96 GB of memory which used this type of error correction. It would only be able to hold less than [[32]] GB of memory! [[Two thirds|one third|one half]] of the space would be redundant data.
+:::
+
+---
+
+But this would consume a lot of space! Imagine if you bought a state-of-the-art smartphone with 96 GB of memory which used this type of error correction. [[Two thirds|one third|one half]] of the space would be redundant data. The phone would only be able to hold less than [[32]] GB of memory!
 
 There must be a better way.
 
@@ -848,6 +862,7 @@ The parity bit is added to the end of the message to tell us something about the
 For example we can add one more bit to the end of a sequence of binary numbers depending on the sum of the first bits.
 
 {.text-center} If the sum is even, the parity bit is __0__.
+
 {.text-center} If the sum is odd, the parity bit is __1__.
 
 This gives us a hint into how we can build more complex error detection and correction schemes. Before we do that, let's look at an example that we encounter quite often.
