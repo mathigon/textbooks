@@ -822,14 +822,14 @@ When we receive a message, transmitted as many packets of binary numbers, there 
 
 Let's think about some ways we could possibly make sure that we know the correct message.
 
-    // TODO: image with two envelopes of different colors: 1b, 1g
-    figure: include svg/envelope.svg
+    figure: include images/envelopes-2.png
     .caption With two copies, we know there is an error but we don't know which envelope is correct.
 
 
 Perhaps the simplest way to do it would be to send multiple copies of the same message. If we send two copies, then we know that there's an error, but we won't know what the error is because [[we don't know which message is correct|something else]]. This would be an [Error Detecting Code](gloss).
 
-    // TODO: image with three envelopes of different colors: 2b, 1g
+    figure: include images/envelopes-3.png
+    .caption With three copies, we can tell what the correct messages is even if one of the messages is wrong.
 
 If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss).
 
