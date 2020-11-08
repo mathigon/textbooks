@@ -54,6 +54,7 @@ export class Barcode extends CustomElementView {
     }); // I suspect this looks for changes in the "value" attribute.
   }
 
+  // FIXME: when new barcode generated, hover/target stops working
   generateNewCode() {
     let newValue = '';
     for (let i = 0; i < 11; i++) {
@@ -156,7 +157,16 @@ export class Barcode extends CustomElementView {
       x = RIGHT.START + (RIGHT.END - RIGHT.START) * (place - 6) / (10 - 6);
     }
 
-    $N('text', {text: value, class: `d${place} step-target`, x, y, 'font-size': 24, 'data-to': `l${place}`}, $group);
+    const side = place < 6 ? 'l' : 'r';
+
+    $N('text', {
+      x, y,
+      'font-size': 24,
+      text: value,
+      class: `d${place} step-target`,
+      'data-to': `d${place}`,
+      target: `d${place} ${side}${value}`
+    }, $group);
   }
 
   // TODO: could move this to a separate utility file

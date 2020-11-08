@@ -909,30 +909,11 @@ Woodland used his knowledge of Morse Code as a foundation to invent a new type o
 
 > id: barcode-drawing
 
-{.fixme} Barcode digits should be hoverable.
-
 ::: column.grow
 
     // only takes 11 values (last digit is error digit)
     x-barcode(value="05100001251")
-
     button.generate NEW BARCODE
-    // FIXME: should not be buttons, but individual digits?
-    button.zoom GL
-    button.zoom D1
-    button.zoom D2
-    button.zoom D3
-    button.zoom D4
-    button.zoom D5
-    button.zoom D6
-    button.zoom GC
-    button.zoom D7
-    button.zoom D8
-    button.zoom D9
-    button.zoom D10
-    button.zoom D11
-    button.zoom D12
-    button.zoom GR
 
 ::: column(width=250)
 
