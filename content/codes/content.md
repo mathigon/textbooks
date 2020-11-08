@@ -833,7 +833,7 @@ Perhaps the simplest way to do it would be to send multiple copies of the same m
 
 If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss).
 
-But this would consume a lot of space! Imagine if you bought a state-of-the-art smartphone with 96 GB of memory, used this type of error correction. It would only be able to hold less than [[32]] GB of memory! Two thirds of it would be repeated data.
+But this would consume a lot of space! Imagine if you bought a state-of-the-art smartphone with 96 GB of memory which used this type of error correction. It would only be able to hold less than [[32]] GB of memory! [[Two thirds|one third|one half]] of the space would be redundant data.
 
 There must be a better way.
 
@@ -842,10 +842,13 @@ There must be a better way.
 > id: parity-bit
 
 #### Parity Bit
-One very simple and cost-effective way to detect an error is via a __parity bit__.
-The parity bit is added as a last bit to make the sum of the whole number even.
-If the sum is even, the parity bit is [[0]].
-If the sum is odd, the parity bit is [[1]]
+One very simple and cost-effective way to detect an error in a sequences of numbers is with a __parity bit__.
+The parity bit is added to the end of the message to tell us something about the rest of the message.
+
+For example we can add one more bit to the end of a sequence of binary numbers depending on the sum of the first bits.
+
+{.text-center} If the sum is even, the parity bit is __0__.
+{.text-center} If the sum is odd, the parity bit is __1__.
 
 This gives us a hint into how we can build more complex error detection and correction schemes. Before we do that, let's look at an example that we encounter quite often.
 
