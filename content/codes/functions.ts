@@ -664,7 +664,6 @@ export function resolution($step: Step) {
 }
 
 export function satellite($step: Step) {
-  // SATELLITE: complete this
   const $trajectory = $step?.$('.bitstream') as SVGView;
 
   const $svg = $step.$('svg');

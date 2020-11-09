@@ -1042,7 +1042,7 @@ How can we detect and correct an error in a messaage that is just a sequence of 
 
 
 ---
-> id: hamming-encode
+> id: hamming-encode-2
 
 #### Encoding a Hamming Code
 
