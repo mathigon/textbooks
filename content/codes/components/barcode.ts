@@ -87,11 +87,12 @@ export class Barcode extends CustomElementView {
 
     this.drawRect(0, GUARDS['outside'], ['outside'], true);
 
+    // Place is one-indexed
     this.drawRect(1, DIGITS[value[0]], [
       'left',
       `d0`,
       `l${value[0]}`,
-      'evens'
+      'odds'
     ], true);
 
     for (let i = 1; i <= 5; ++i) {
@@ -99,7 +100,7 @@ export class Barcode extends CustomElementView {
         'left',
         `d${i}`,
         `l${value[i]}`,
-        i % 2 === 0 ? 'evens' : 'odds'
+        (i + 1) % 2 === 0 ? 'evens' : 'odds'
       ], false);
     }
 
@@ -110,7 +111,7 @@ export class Barcode extends CustomElementView {
         'right',
         `d${i}`,
         `r${value[i]}`,
-        i % 2 === 0 ? 'evens' : 'odds'
+        (i + 1) % 2 === 0 ? 'evens' : 'odds'
       ], false, true);
     }
 
@@ -184,7 +185,7 @@ export class Barcode extends CustomElementView {
 
     const side = place < 6 ? 'l' : 'r';
 
-    const evenOdd = place === 11 ? '' : place % 2 === 0 ? 'evens' : 'odds';
+    const evenOdd = place === 11 ? '' : (place + 1) % 2 === 0 ? 'evens' : 'odds';
     $N('text', {
       x, y,
       'font-size': 24,

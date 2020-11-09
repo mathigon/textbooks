@@ -994,19 +994,19 @@ The 12th digit is dependent on the first 11 digits, so that if any of the digits
 
 {.text-center} **Example**
 
-{.text-center} `X = 3 * (0 + 1 + 0 + 0 + 2 + 1) + (5 + 0 + 0 + 1 + 5)`
+{.text-center} X = 3 * (0 + 1 + 0 + 0 + [[2]] + [[1]]) + (5 + 0 + 0 + [[1]] + [[5]])
 
-{.text-center} `X = 3 * (4) + (11)`
+{.text-center.reveal(when="blank-0 blank-1 blank-2 blank-3")} X = 3 * ([[4]]) + ([[11]])
 
-{.text-center} `X = 12 + 11`
+{.text-center.reveal(when="blank-0 blank-1 blank-2 blank-3 blank-4 blank-5")} X = [[12]] + 11
 
-{.text-center} `X = 23`
+{.text-center.reveal(when="blank-0 blank-1 blank-2 blank-3 blank-4 blank-5 blank-6")} X = [[23]]
 
-{.text-center} `N = 10 - ones(23)`
+{.text-center.reveal(when="blank-0 blank-1 blank-2 blank-3 blank-4 blank-5 blank-6 blank-7")} `N = 10 - ones(23)`
 
-{.text-center} `N = 10 - 3`
+{.text-center.reveal(when="blank-0 blank-1 blank-2 blank-3 blank-4 blank-5 blank-6 blank-7")} N = 10 - [[3]]
 
-{.text-center} `N = 7`
+{.text-center.reveal(when="blank-0 blank-1 blank-2 blank-3 blank-4 blank-5 blank-6 blank-7 blank-8")} N = [[7]]
 
 :::
 
