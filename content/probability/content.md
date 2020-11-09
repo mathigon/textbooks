@@ -364,11 +364,19 @@ __normal distribution__.
 > sectionStatus: dev
 > id: galton-board
 
-Here is a galton board:
+
+::: .box.f-red
+
+#### Galton Board
+
+Here is a Galton Board:
 
     figure
-      svg.galton(width=400 height=500)
-
+      svg(width=400 height=500).galton
+      .drawBoard.var(:html="drawBoard(d)")
+    
+Click to drop a ball.
+:::
 {.todo} TODO
 
 ---

@@ -215,25 +215,56 @@ export function radioactive($step: Step) {
   $step.$('.btn')!.one('click', decay);
 }
 
+// -----------------------------------------------------------------------------
 export function galtonBoard($step: Step) {
-
   const $svg = $step.$('.galton')!;
-
-  for (let i = 0; i < 10; ++i) {  // rows
-    for (let j = 0; j <= i; ++j) {  // columns
+  const rowCnt = 10;
+  let rows: number[] = [];
+  rows = repeat(rowCnt + 1, 0);
+  rows[0] = 50 + 40 * -1 + 25;
+  for (let i = 0; i < rowCnt; i++) {  // rows
+    for (let j = 0; j <= i; j++) {  // columns
       const cx = 200 + (j - i / 2) * 40;
       const cy = 50 + 40 * i;
+      rows[i + 1] = cy + 25;
       $N('circle', {cx, cy, r: 5}, $svg);
     }
   }
 
+  // tabulate number of balls in each ending position
 
-  $svg.on('click', () => {
-    const $ball = $N('circle', {cx: 200, cy: 30, r: 10, class: 'ball'}, $svg);
-    animate((p: number) => {
-      $ball.setAttr('cy', lerp(30, 400, p));
-    }, 2000);
+  const firstPos = 200 - 20 * rowCnt;
+  const finalToInd: number[] = [];
+  for (let i = 0; i <= rowCnt; i++) {
+    finalToInd[firstPos + i * 40] = i;
+  }
+  const cnt: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+  $svg.on('click', async () => {
+    const $ball = $N('circle', {cx: 200, cy: 10, r: 10, class: 'ball'}, $svg);
+    await animate((p: number) => {
+      $ball.setAttr('cy', lerp(10, rows[0], p));
+    }, 200).promise;
+    let cur = 200;
+    const ht = 100; // adjust to taste, height of ball bounce
+    for (let i = 0; i < rowCnt; i++) {
+      const nextDir = Math.random() < 0.5;
+      await animate((p: number) => {
+        const height = ht * p * (p - 1 + 40 / ht) + rows[i]; // quadratic bounce of ball
+        $ball.setAttr('cy', height);
+        if (nextDir) {
+          $ball.setAttr('cx', lerp(cur, cur + 20, p));
+        } else {
+          $ball.setAttr('cx', lerp(cur, cur - 20, p));
+        }
+      }, 300).promise;
+      if (i < rowCnt - 1) {
+        nextDir ? cur += 20 : cur -= 20;
+      } else {
+        break;
+      }
+    }
+    cnt[finalToInd[Number($ball.attr('cx'))]]++;
   });
-
 }
 
