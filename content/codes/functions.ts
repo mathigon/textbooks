@@ -20,7 +20,7 @@ import './components/enigma';
 import './components/enigma-rotors';
 import './components/morse';
 import './components/hamming';
-import { Barcode } from './components/barcode';
+import {Barcode} from './components/barcode';
 
 
 // -----------------------------------------------------------------------------
