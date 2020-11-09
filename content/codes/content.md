@@ -868,7 +868,13 @@ For example we can add one more bit to the end of a sequence of binary numbers d
 
 With this scheme, after the parity bit has been appended, the sum of the entire encoded number will be [[even|odd]].
 
-This gives us a hint into how we can build more complex error detection and correction schemes. Before we do that, let's look at an example that we experience quite often.
+---
+
+Adding one parity bit will not always allow the receiver to detect an error. If an [[even|odd|prime]] number of bits have flipped, the parity will still be even, and no error will be detected.
+
+---
+
+This simple method of adding a parity bit gives us a hint into how we can build more complex error detection and correction schemes. Before we do that, let's look at an example that we experience quite often.
 
 ---
 
