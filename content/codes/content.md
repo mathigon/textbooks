@@ -886,7 +886,10 @@ This simple method of adding a parity bit gives us a hint into how we can build 
 
 We encounter error-detecting codes every time we go to the supermarket, in the form of bar codes. Bar codes are also used for identifying all sorts of things like driver's licenses or babies in hospitals. And in the last decade, 2-dimensional barcodes (QR codes) have been adapted for ticketing at events like concerts or airplane flights.
 
-{.todo} photos of Bar Codes on license, ticket, baby wristband, can of food // PHOTOGRAPH: examples of bar codes
+    // https://previews.agefotostock.com/previewimage/medibigoff/2d9a55ab36e1de8cce7899216a9f4c09/fot-1046044.jpg
+    x-img(src="images/baby-wristband.jpg" width=200 height=300)
+
+{.caption} Barcodes are used for many things!
 
 Bar codes were invented as a way to make it easier for stores to track which items a customer is buying. Numbers are easy for us humans to read, but it's much harder for computers. For example, 1 and 7 or 6 and 8 might look almost the same to a low-resolution camera. A new system was needed, so that cashiers or nurses didn't have to manually type all these numbers into a computer.
 
@@ -899,9 +902,21 @@ Joe Woodland, one of the inventors of Bar Code was sitting on the beach, trying 
 
 Woodland used his knowledge of Morse Code as a foundation to invent a new type of code. By learning about different types of codes, we can build our own knowledge foundation and perhaps invent our own codes!
 
-{.todo} Photo of original barcode patent (circular) with caption: "the original barcode was invented as a circle, but in the 1970s an IBM engineer George Laurer figured out that a rectangle would be more compact than Woodland's bulls-eye. // PHOTOGRAPH: original barcode patent
+    // https://www.smithsonianmag.com/innovation/history-bar-code-180956704/
+    // https://thumbs-prod.si-cdn.com/auNtLAvrz9_5FxqGlbnQjAzcKiQ=/fit-in/1072x0/https://public-media.si-cdn.com/filer/cc/08/cc08d39a-0576-4794-a264-0eaf3a6923bb/barcode-patent.jpg
+    x-img(src="images/barcode-patent.jpg" width=500 height=400)
 
-{.todo} Photo of Barcode scanner for tracking trains, with caption "another early use of barcode scanners was tracking train cars for logistics" // PHOTOGRAPH: train car
+{.caption} The original barcode was invented as a circle, but in the 1970s an IBM engineer figured out that a rectangle would be more compact than a bulls-eye.
+
+
+    // https://www.vice.com/en/article/qv38wp/how-the-railroad-industry-invented-then-immediately-discarded-the-barcode
+    // https://video-images.vice.com/articles/59ef239aa525153b1140ebc5/lede/1508845007190-image2.jpeg
+    x-img(src="images/train-barcode.jpeg" width=300 height=200)
+
+    // https://www.youtube.com/watch?v=trtuf_iX1lM&t=4m32s
+    x-img(src="images/barcode-scanner-train.png" width=300 height=200)
+
+{.caption} An early use of barcodes was for tracking train cars.
 
 #### So how does it work?
 
@@ -1020,6 +1035,7 @@ When the computer scans the digits of a barcode, it performs this calculation. I
 
 Pick the barcodes that have a valid error-check character.
 
+    // TODO: make barcodes much bigger
     x-picker
       .item: x-barcode(value="22456923745" targets="off")
       .item(data-error="no-6"): x-barcode(value="270761927055" targets="off")
