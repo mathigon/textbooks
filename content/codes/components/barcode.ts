@@ -38,7 +38,7 @@ export class Barcode extends CustomElementView {
 
   private errorDigit = 0;
 
-  private targets: boolean;
+  private targets!: boolean;
 
   ready() {
     this.initDrawLines();
@@ -206,6 +206,13 @@ export class Barcode extends CustomElementView {
 
   // TODO: could move this to a separate utility file
   private computeParityDigit(value: string) {
+
+    // if 12th bit is included we don't need to compute
+    if (value.length === 12) {
+      this.errorDigit = parseInt(value.charAt(11));
+      return;
+    }
+
     // TODO do this here.
     let odds = 0; let evens = 0;
     // 1-indexed. Only check first 11.

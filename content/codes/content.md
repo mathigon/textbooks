@@ -1022,8 +1022,8 @@ Pick the barcodes that have a valid error-check character.
 
     x-picker
       .item: x-barcode(value="22456923745" targets="off")
-      .item(data-error="no-1"): x-barcode(value="27076192705" targets="off")
-      .item(data-error="no-2"): x-barcode(value="64780588904" targets="off")
+      .item(data-error="no-6"): x-barcode(value="270761927055" targets="off")
+      .item(data-error="no-3"): x-barcode(value="647805889041" targets="off")
       .item: x-barcode(value="35802034085" targets="off")
       .item: x-barcode(value="35802034085" targets="off")
       .item: x-barcode(value="35802034085" targets="off")
