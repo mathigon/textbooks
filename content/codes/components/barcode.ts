@@ -119,7 +119,9 @@ export class Barcode extends CustomElementView {
       ], false, true);
     }
 
-    this.drawRect(13, DIGITS[this.errorDigit], ['right', `d11`], true, true);
+    this.drawRect(13, DIGITS[this.errorDigit], [
+      'right', `d11`, `r${this.errorDigit}`
+    ], true, true);
 
     this.drawRect(14, GUARDS['outside'], ['outside'], true);
   }
