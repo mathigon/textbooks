@@ -940,16 +940,16 @@ __The Digits__
 
 | DIGIT | LEFT SIDE | RIGHT SIDE |
 |---|---|---|
-| 0 | [{.step-target.pill.b.gray}WWWBBWB](target:l0) | [{.step-target.pill.b.gray}BBBWWBW](target:r0) |
-| 1 | [{.step-target.pill.b.gray}WWBBWWB](target:l1) | [{.step-target.pill.b.gray}BBWWBBW](target:r1) |
-| 2 | [{.step-target.pill.b.gray}WWBWWBB](target:l2) | [{.step-target.pill.b.gray}BBWBBWW](target:r2) |
-| 3 | [{.step-target.pill.b.gray}WBBBBWB](target:l3) | [{.step-target.pill.b.gray}BWWWWBW](target:r3) |
-| 4 | [{.step-target.pill.b.gray}WBWWWBB](target:l4) | [{.step-target.pill.b.gray}BWBBBWW](target:r4) |
-| 5 | [{.step-target.pill.b.gray}WBBWWWB](target:l5) | [{.step-target.pill.b.gray}BWWBBBW](target:r5) |
-| 6 | [{.step-target.pill.b.gray}WBWBBBB](target:l6) | [{.step-target.pill.b.gray}BWBWWWW](target:r6) |
-| 7 | [{.step-target.pill.b.gray}WBBBWBB](target:l7) | [{.step-target.pill.b.gray}BWWWBWW](target:r7) |
-| 8 | [{.step-target.pill.b.gray}WBBWBBB](target:l8) | [{.step-target.pill.b.gray}BWWBWWW](target:r8) |
-| 9 | [{.step-target.pill.b.gray}WWWBWBB](target:l9) | [{.step-target.pill.b.gray}BBBWBWW](target:r9) |
+| 0 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWWBBWB.svg" width=80)}_](target:l0) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBBWWBW.svg" width=80)}_](target:r0) |
+| 1 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWBBWWB.svg" width=100)}_](target:l1) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBWWBBW.svg" width=100)}_](target:r1) |
+| 2 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWBWWBB.svg" width=100)}_](target:l2) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBWBBWW.svg" width=100)}_](target:r2) |
+| 3 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBBBWB.svg" width=100)}_](target:l3) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWWWBW.svg" width=100)}_](target:r3) |
+| 4 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBWWWBB.svg" width=100)}_](target:l4) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWBBBWW.svg" width=100)}_](target:r4) |
+| 5 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBWWWB.svg" width=100)}_](target:l5) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWBBBW.svg" width=100)}_](target:r5) |
+| 6 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBWBBBB.svg" width=100)}_](target:l6) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWBWWWW.svg" width=100)}_](target:r6) |
+| 7 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBBWBB.svg" width=100)}_](target:l7) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWWBWW.svg" width=100)}_](target:r7) |
+| 8 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBWBBB.svg" width=100)}_](target:l8) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWBWWW.svg" width=100)}_](target:r8) |
+| 9 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWWBWBB.svg" width=100)}_](target:l9) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBBWBWW.svg" width=100)}_](target:r9) |
 
 :::
 

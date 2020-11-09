@@ -43,7 +43,7 @@ export class Barcode extends CustomElementView {
   ready() {
     this.initDrawLines();
 
-    this.targets = (this.attr('targets') === undefined); // off
+    this.targets = (this.attr('targets') === ''); // off
 
     this.$svg = $N('svg', {viewBox: `0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}, this) as SVGParentView;
     const value = this.attr('value');
