@@ -984,7 +984,7 @@ The 12th digit is dependent on the first 11 digits, so that if any of the digits
 
 {.text-center} `X = 3 * (∑ oddDigits) + ∑ evenDigits`
 
-{.text-center} `N = ones(10-x)`
+{.text-center} `N = 10 - ones(X)`
 
 {.text-center} **Example**
 
@@ -996,9 +996,9 @@ The 12th digit is dependent on the first 11 digits, so that if any of the digits
 
 {.text-center} `X = 23`
 
-{.text-center} `N = ones(10-23)`
+{.text-center} `N = 10 - ones(23)`
 
-{.text-center} `N = ones(-17)`
+{.text-center} `N = 10 - 3`
 
 {.text-center} `N = 7`
 
@@ -1167,17 +1167,11 @@ Click through the slides to see how to decode a string of bits using Hamming Cod
 
 This is not a perfect system. This type of code will not correctly detect an error when there are more than [[1]] errors.
 
-Let's go back to our original problem of how we might detect errors sent from a satellite. The information received from the satellite is unknown, and there is no backup plan, like a cashier who can look at a number and type it into the computer.
-
-A mathematician named [Richard Hamming](bio:hamming) had this same problem not with data from satellites, but from computers.
-
-Computers used to be programmed with [punch cards](gloss: punch cards). In 1947, Hamming programmed a computer to perform a long and complex series of calculations while he went home over the weekend. When he returned, he discovered an error had occurred and his entire calculation was useless. He felt a need to invent a way to correct when an error had happened.
-
 ---
 
 ### Other Error Detection and Correction
 
-{.todo} CDs and DVDs
+{.todo} CDs and DVDs are scratch resistant and can fill in some of the gaps.
 
 {.todo} // PHOTOS
 - credit cards use "Luhn's algorithm" to compare the last digit ... RESEARCH
