@@ -830,7 +830,7 @@ Let's think about some ways we could possibly make sure that we know the correct
 
 ::: column(width=330)
 
-Perhaps the simplest way to do it would be to send multiple copies of the same message. If we send two copies, then we know that there's an error, but we won't know what the error is because [[we don't know which message is correct|something else]]. This would be an [Error Detecting Code](gloss).
+Perhaps the simplest way to do it would be to send multiple copies of the same message. If we send two copies, then we know that there's an error, but we won't know what the error is because [[we don't know which message is correct|something else]]. This would be an [Error Detecting Code](gloss:error-detecting-code).
 
 :::
 
@@ -838,7 +838,7 @@ Perhaps the simplest way to do it would be to send multiple copies of the same m
 
 ::: column.grow
 
-If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss). In this example to the left, we know that the [[blue|green]] envelope will be the correct message.
+If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss:error-correcting-code). In this example to the left, we know that the [[blue|green]] envelope will be the correct message.
 
 ::: column(width=300)
 
