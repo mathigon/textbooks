@@ -86,11 +86,36 @@ export class Barcode extends CustomElementView {
     this.$svg.removeChildren();
 
     this.drawRect(0, GUARDS['outside'], ['outside'], true);
-    this.drawRect(1, DIGITS[value[0]], ['left', `d0`, `l${value[0]}`], true);
-    for (let i = 1; i <= 5; ++i) this.drawRect(1 + i, DIGITS[value[i]], ['left', `d${i}`, `l${value[i]}`], false);
+
+    this.drawRect(1, DIGITS[value[0]], [
+      'left',
+      `d0`,
+      `l${value[0]}`,
+      'evens'
+    ], true);
+
+    for (let i = 1; i <= 5; ++i) {
+      this.drawRect(1 + i, DIGITS[value[i]], [
+        'left',
+        `d${i}`,
+        `l${value[i]}`,
+        i % 2 === 0 ? 'evens' : 'odds'
+      ], false);
+    }
+
     this.drawRect(7, GUARDS['middle'], ['middle'], true);
-    for (let i = 6; i <= 10; ++i) this.drawRect(2 + i, DIGITS[value[i]], ['right', `d${i}`, `r${value[i]}`], false, true);
+
+    for (let i = 6; i <= 10; ++i) {
+      this.drawRect(2 + i, DIGITS[value[i]], [
+        'right',
+        `d${i}`,
+        `r${value[i]}`,
+        i % 2 === 0 ? 'evens' : 'odds'
+      ], false, true);
+    }
+
     this.drawRect(13, DIGITS[this.errorDigit], ['right', `d11`], true, true);
+
     this.drawRect(14, GUARDS['outside'], ['outside'], true);
   }
 
@@ -159,13 +184,14 @@ export class Barcode extends CustomElementView {
 
     const side = place < 6 ? 'l' : 'r';
 
+    const evenOdd = place === 11 ? '' : place % 2 === 0 ? 'evens' : 'odds';
     $N('text', {
       x, y,
       'font-size': 24,
       text: value,
       class: `d${place} step-target`,
       'data-to': `d${place}`,
-      target: `d${place} ${side}${value}`
+      target: `d${place} ${side}${value} ${evenOdd}`
     }, $group);
   }
 

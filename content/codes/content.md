@@ -988,7 +988,7 @@ The 12th digit is dependent on the first 11 digits, so that if any of the digits
 
 ::: column(width=330)
 
-{.text-center} `X = 3 * (∑ oddDigits) + ∑ evenDigits`
+{.text-center} X = 3 * (∑ [oddDigits](target:odds)) + ∑ [evenDigits](target:evens)
 
 {.text-center} `N = 10 - ones(X)`
 
