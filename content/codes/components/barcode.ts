@@ -32,14 +32,18 @@ const SVG_HEIGHT = 2 * OUTER_BUFFER + HEIGHT_LONG;
 
 const BAR_START_INDICES: number[] = [];
 
-@register('x-barcode', {attributes: ['value']})
+@register('x-barcode', {attributes: ['value', 'targets']})
 export class Barcode extends CustomElementView {
   private $svg!: SVGParentView;
 
   private errorDigit = 0;
 
+  private targets: boolean;
+
   ready() {
     this.initDrawLines();
+
+    this.targets = (this.attr('targets') === undefined); // off
 
     this.$svg = $N('svg', {viewBox: `0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`}, this) as SVGParentView;
     const value = this.attr('value');
@@ -130,7 +134,11 @@ export class Barcode extends CustomElementView {
    * @param invert black/white vs white/black
    */
   private drawRect(drawLineIndex: number, sequence: string, names: string[], long = false, invert = false) {
-    const $group = $N('g', {class: names.join(' '), target: names.join(' ')}, this.$svg);
+    const $group = $N('g', {
+      class: names.join(' '),
+      target: this.targets ? names.join(' ') : undefined
+    }, this.$svg);
+
     const height = long ? HEIGHT_LONG : HEIGHT_SHORT;
 
     let color;
@@ -190,9 +198,9 @@ export class Barcode extends CustomElementView {
       x, y,
       'font-size': 24,
       text: value,
-      class: `d${place} step-target`,
-      'data-to': `d${place}`,
-      target: `d${place} ${side}${value} ${evenOdd}`
+      class: `d${place}` + (this.targets ? ' step-target' : ''),
+      'data-to': this.targets ? `d${place}` : undefined,
+      target: this.targets ? `d${place} ${side}${value} ${evenOdd}` : undefined
     }, $group);
   }
 

@@ -1014,6 +1014,20 @@ The 12th digit is dependent on the first 11 digits, so that if any of the digits
 
 When the computer scans the digits of a barcode, it performs this calculation. If the modulo check doesn't match up, we immediately know that the barcode hasn't been read correctly. In a supermarket, the cash register won't beep, and you can try again -- or, as a last resort, enter the numbers manually.
 
+---
+
+> id: barcode-exercise
+
+Pick the barcodes that have a valid error-check character.
+
+    x-picker
+      .item: x-barcode(value="22456923745" targets="off")
+      .item(data-error="no-1"): x-barcode(value="27076192705" targets="off")
+      .item(data-error="no-2"): x-barcode(value="64780588904" targets="off")
+      .item: x-barcode(value="35802034085" targets="off")
+      .item: x-barcode(value="35802034085" targets="off")
+      .item: x-barcode(value="35802034085" targets="off")
+
 
 {.todo} ACTIVITY: Look around you for something with a barcode (pretty much anything you can buy at a store). Hide the numbers with paper or tape, and try to decode the numbers. After you've written down your answer, see if you're correct! And then you can try the error detection formula and confirm that it is correct. (PHOTOS also)
 
