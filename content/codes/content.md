@@ -1191,13 +1191,33 @@ This is not a perfect system. This type of code will not correctly detect an err
 
 ### Other Error Detection and Correction
 
-{.todo} CDs and DVDs are scratch resistant and can fill in some of the gaps.
+::: column(width=220 parent="padded-thin")
 
-{.todo} // PHOTOS
-- credit cards use "Luhn's algorithm" to compare the last digit ... RESEARCH
-- MD5 or SHA-1 hash included with a software application
-- CDs
-- Snapchat/Facebook profile codes
+    x-img(src="images/credit-cards.jpg" width=200 height=200)
+    // https://commons.wikimedia.org/wiki/File:Credit-cards.jpg
+      .
+
+{.caption} Credit cards use a checksum digit calculated with __Luhn's algorithm__ to check for errors.
+
+::: column(width=220)
+
+    x-img(src="images/compact-disc.jpg" width=200 height=200)
+    // https://commons.wikimedia.org/wiki/File:Compact_disc_1.jpg
+
+{.caption} CDs and DVDs use the __Reed-Solomon__ error-correcting code to allow playback even when the disc has scratches.
+
+::: column(width=220)
+
+    x-img(src="images/snapchat-qr.png" width=180 height=180)
+    // https://support.snapchat.com/en-GB/a/about-snapcodes
+
+{.caption} __QR Codes__ such as Snapchat profile codes also use a __Reed-Solomon__ error-correction code.
+
+:::
+
+
+{.fixme} PHOTO? Software applications often include a __MD5__ or __SHA-1__ checksum that indicates they came from a valid source.
+
 
 ----------------------------------------------------------------------------------------------------
 
