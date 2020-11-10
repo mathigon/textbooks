@@ -1437,10 +1437,6 @@ Choose one of these buttons.
     .button LINE
 
 ---
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 > id: examples
 
 {.todo} Demonstrate how basic transformations effect the determinant
