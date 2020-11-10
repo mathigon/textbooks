@@ -41,6 +41,23 @@
   &.pressed path { opacity: 1; }
 }
 
+.satellites {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+
+  .sat, .atm, .bits, svg { position: absolute; top: 0; left: 0; }
+
+  .bits { transform: scale(640/1024,420/666) }
+
+  line { transition: opacity .2s; opacity: 0; stroke-width: 6px; stroke: @red;
+    stroke-dasharray: 0 12px; fill: none; stroke-linecap: round;
+    animation: electrons infinite .5s linear; }
+
+  &.pressed line { opacity: 1; }
+}
+
 .alphabet {
   column-count: 4;
   margin: 1.5em 24px;
@@ -186,7 +203,6 @@ x-code-box .morse > span {
   x-blank-input .target { display: block; margin: 0; height: 24px; box-shadow: 0 0 0 1px fade(white, 75%); }
   x-blank-input input { min-width: 0; display: block; width: 100%; height: 24px; }
   x-blank-input.done, x-blank-input.done .target { display: inline; line-height: inherit; box-shadow: none; color: white; }
-
 }
 
 // modified from divisibility
@@ -369,9 +385,48 @@ x-barcode {
   rect { fill: @grey; transition: opacity .2s }
 
   .focus & rect { opacity: 0.4; }
-  .focus & rect.focus { opacity: 1; }
+  .focus & .focus rect { opacity: 1; }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+x-hamming {
+  g.dim {
+    opacity: 0.1;
+    animation: fadeOut 1000ms;
+  }
+
+  g.bold {
+    opacity: 1;
+    animation: fadeIn 1000ms;
+  }
+}
+
+
+x-hamming {
+  .focus & g.focus { opacity: 1; }
+
+  .focus & g:not(.focus) {
+    opacity: 0.1;
+    animation: fadeOut 400ms;
+  }
+}
 
 // -----------------------------------------------------------------------------
 // Secret Codes

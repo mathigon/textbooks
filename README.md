@@ -1,6 +1,6 @@
 # Mathigon Textbooks
 
-![](https://mathigon.org/images/hero.png)
+![](https://mathigon.org/images/hero.jpg)
 
 Welcome to [Mathigon](https://mathigon.org), an award-winning mathematics education platform for
 students aged 12 to 18. Part textbook and part virtual personal tutor, it uses cutting-edge
@@ -14,9 +14,9 @@ This repository contains the source code and assets for all our courses.
 Every course is a subfolder in the [content](content) directory, and consists of these components:
 
 * `content.md` contains the source code and metadata for a course. It is written in a custom
-  extension of Markdown. [Docs…](docs/markdown.md)
+  extension of Markdown. [More documentation…](docs/markdown.md)
 * `functions.ts` contains all the TypeScript code for all the interactive elements in this course.
-  [Docs…](docs/interactives.md)
+  [More documentation…](docs/interactives.md)
 * `styles.less` contains all course-specific styles, using [LESS](http://lesscss.org/) format.
 * `hints.yaml` (optional) contains any messages that can be sent by Mathigon's virtual tutor.
 

@@ -6,12 +6,177 @@
 
 @import "../shared/variables";
 @import "../shared/components/binary-swipe";
+@import "../shared/components/relation";
 
-// TODO
+.rect-placement {
+
+  x-img {
+    position: absolute;
+  }
+
+  x-polypad .active .tile .outline {
+    stroke-width: 2px;
+  }
+
+}
+
+.grass-placement, .strip-placement {
+
+  width: 600px;
+  height: 350px;
+
+  x-img, div.field {
+    margin-left: 75px;
+  }
+
+  div.field {
+    width: 525px;
+    height: 350px;
+  }
+
+}
 
 .tangram {
   border-radius: 6px 6px 0 0;
   background: @grey-background;
-  x-polypad { height: 450px; }
-  .shapes { background: @grey; border-radius: 0 0 6px 6px; height: 100px; }
+
+  .simple-tangram-bg {
+    background: url('images/square.svg') center no-repeat;
+    background-size: contain;
+    opacity: 0.2;
+  }
+}
+
+.triangle-tangram {
+  .solution-outline {
+    stroke: black;
+    stroke-width: 1px;
+    fill: none;
+  }
+}
+
+.tangram, .triangle-tangram {
+  .simple-tangram-bg, .solution-outline {
+    width: 100%;
+    position: absolute;
+  }
+  .simple-tangram-bg, .solution-outline, x-polypad { height: 450px; }
+}
+
+.tangram-polys x-polypad { height: 225px; }
+
+.zoom-1, .triangle-ref, .zoom-2 {
+  x-polypad { height: 225px; }
+}
+
+x-slider.zoom-s-1, x-slider.zoom-s-2 {
+  button.play { display: none; }
+}
+
+.paradox-comparison x-polypad { height: 475px; }
+
+figure .tire-circumference {
+  width: 600px;
+  margin: auto;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 0;
+    width: 600px;
+  }
+
+  img {
+    width: 300px;
+    height: 250px;
+    margin-left: 150px;
+    margin-top: 25px;
+  }
+
+  svg {
+    height: 300px;
+  }
+}
+
+.nesw-corner:hover {
+  cursor: nesw-resize;
+}
+
+.nwse-corner:hover {
+  cursor: nwse-resize;
+}
+
+button.reset {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: block;
+}
+
+figure svg {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.map {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  > svg {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+  }
+}
+
+x-geopad {
+  path.large-slice, path.medium-slice {
+    transition-property: transform, opacity;
+    transition-duration: 1.5s;
+  }
+
+  path.slice-guide {
+    stroke: black;
+    stroke-width: 4px;
+    stroke-dasharray: 10;
+    stroke-linecap: unset;
+  }
+
+  path.pizza-outline {
+    stroke: white;
+    stroke-width: 4px;
+  }
+
+  path.slice-outline {
+    stroke: black;
+    stroke-width: 4px;
+  }
+
+  path.slice-dimension {
+    stroke: lime;
+    stroke-width: 4px;
+  }
+}
+
+.circle-area {
+  overflow: visible;
+  .circle path { stroke: white; stroke-width: 1.5px; }
+  .circle:first-child { opacity: 0.5; }
+
+  &.red .circle path {
+    fill: @red;
+    &:nth-child(2n) { fill: darken(@red, 10%); }
+  }
+
+  &.blue .circle path {
+    fill: @blue;
+    &:nth-child(2n) { fill: darken(@blue, 10%); }
+  }
+
+  .labels line, marker path { fill: none; stroke: @light-grey; stroke-linecap: round; }
+  .labels line { stroke-width: 2px; }
+  .labels text { fill: @light-grey; font-size: 16px; font-style: italic; }
 }

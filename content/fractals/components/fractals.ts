@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Point, Polygon} from '@mathigon/fermat';
+import {Point, Polygon} from '@mathigon/euclid';
 
 
 export function drawSierpinski([a, b, c]: Point[], i: number): string {

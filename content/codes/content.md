@@ -23,7 +23,7 @@ be hopeful: the army was approaching, and planning to rescue them shortly.
 
 :::
 
-Unfortunately, it seemed impossible to tell the prisoners that help was coming, without also
+Unfortunately, it seemed impossible to tell the prisoners that lp was coming, without also
 alerting their capturers – that is, until Colonel Jose Espejo came up with an ingenious idea. With
 his team, he wrote a new pop song, embedded a secret message in the chorus, and then played it
 thousands of times over the radio.
@@ -394,9 +394,9 @@ _Cytosine_ if placed within a strand of DNA letters.
 > goals: switch
 > sectionStatus: dev
 
-Computers are all around us. You’re reading this on a computer right now! But how many people actually know how computers work? How many people, when they scroll through their social media feed, or search for a recipe, or stream a movie, actually know how the magic little box actually works?
+Computers are all around us. You’re reading this on a computer right now! But how many people actually know how computers work? How many of us, as we scroll through our social media feeds, or search for a recipe, or watch a movie from our favorite streaming service know how what's happening actually works?
 
-There are many many complex layers and processes that operate together get information from all over the world and display it on your screen. But at the lowest level of every computer are [transistors](gloss:transistor). Transistors are the building blocks of how computers store and manipulate information.
+There are many many complex layers and processes that operate together to get information from all over the world and display it on your screen. But at the lowest level of every computer are [transistors](gloss:transistor). Transistors are the building blocks of how computers store and manipulate information.
 
 ::: column(width=320)
 
@@ -405,9 +405,9 @@ There are many many complex layers and processes that operate together get infor
 
 ::: column.grow
 
-Transistors are like tiny tiny tiny, microscopic electrical switches that transmit ELECTRONS. Turn it on, the electrons flow. Turn it off, the electrons stop (Does this sound familiar to another device? Perhaps the telegraph?).
+Transistors are like tiny microscopic electrical switches that transmit electrons. Turn on a transistor and the electrons flow. Turn it off and the electrons stop (Perhaps this sounds familiar to the telegraph).
 
-But how can a simple on/off switch store information as complex as videos? We learned in the last chapter about Morse Code. But Transistors are interpreted by a computer through very different means.
+But how can a simple on/off switch store information as complex as sound, images, and videos? We learned in the last chapter about Morse Code, which is used to communicate letters via sound or light. But transistors store data that is interpreted by a computer through very different means.
 
 :::
 
@@ -415,17 +415,12 @@ But how can a simple on/off switch store information as complex as videos? We le
 > id: finger5
 > sectionStatus: dev
 
-To understand how all sorts of different codes can be stored in the transistors of a computer, let’s try a thought exercise…
+To understand how all sorts of different codes can be stored in the transistors of a computer, let’s try a thought exercise. We've just looked at how a transistor can be turned on or off, now let's look at how we can count on our fingers by putting them up or down.
 
 
-### Fingers
+### Playing with Digits
 
 How high can you count using only one hand, without skipping any numbers? When we count with our hands, we traditionally use how many fingers are up to represent the number. We have five fingers, so that means the highest we can count with one hand is [[five|four|ten]].
-
-{.TODO PHILIPP how to make them appear after entering value into blank?}
-
-
-    button.appear APPEAR
 
     table.finger-grid
       tr
@@ -493,7 +488,8 @@ If we want to use each combination of ups and downs to represent a different num
 | 4 | [[16]] |
 | 5 | [[32]] |
 
-More generally, with N fingers we can represent [[2^N]] possible combinations. Remember that our fingers are merely serving as a metaphor for binary numbers. This means that __any N-digit number can represent up to 2^N different values__.
+More generally, with __n__ fingers we can represent _{x-equation.small(solution="2^n" keys="n sup" numeric)}_. possible combinations. Remember that our fingers are merely serving as a metaphor for binary numbers. This means that __any n-digit number can represent up to 2^n different values__.
+
 
 
 ---
@@ -583,7 +579,6 @@ We can represent any five-digit binary number by following any path from beginni
 
 ---
 
-#### Fingers
 > id: finger32
 
 Yes, there are [[32]] different combinations we can make with five fingers.
@@ -604,17 +599,12 @@ Yes, there are [[32]] different combinations we can make with five fingers.
                     x-img(src="images/fingers/binary_" + (n < 10 ? "0"+n : n) + ".jpg" width=64 height=64)
                     .caption.dec= n
                     .caption.bin= ""+b0+b1+b2+b3+b4
-          
-
-    button.appear APPEAR
-    button.switch SWITCH
-    // delete these buttons. Replace APPEAR w/ .reveal, SWITCH w/ .segmented
 
 
 {.TODO PHILIPP how to make them appear after entering value into blank?}
 
 (we'll find out soon why we started with zero).
-Click on the [SWITCH](->.switch) button to toggle between our binary values and their decimal counterparts. These are the values
+Change the [tabs](->.segmented) to toggle between the binary values and their decimal counterparts.
 
 ---
 
@@ -660,24 +650,24 @@ Binary numbers work very similarly except they use a base-two number system. So 
 Let's examine the binary number _{.ns.g}11111_ (5 consecutive 1s). How much is each digit worth?
 
 | __{.m-red}digit__ | 1 | 1 | 1 | 1 | 1 |
-| __{.m-green}digit value__   | {.s-green}_{.n}[[16]]_ | {.s-green}_{.n}[[8]]_ | {.s-green}_{.n}[[4]]_ | {.s-green}_{.n}[[2]]_ | {.s-green}_{.n}[[1]]_ |
+| __{.m-green}digit value__   | {.s-green}_{.hex}[[16]]_ | {.s-green}_{.hex}[[8]]_ | {.s-green}_{.hex}[[4]]_ | {.s-green}_{.hex}[[2]]_ | {.s-green}_{.hex}[[1]]_ |
 {.table-small.grid}
 
 ---
 
 We can find the decimal value of this binary number _{.ns.g}11111_ by adding up the digit values. So its value is _not_ eleven thousand, one-hundred and eleven, but is 
 
-{.text-center.s-red} _{.n}16_ + _{.n}8_ + _{.n}4_ + _{.n}2_ + _{.n}1_ = _{.n}[[31]]_
+{.text-center.s-red} _{.hex}16_ + _{.hex}8_ + _{.hex}4_ + _{.hex}2_ + _{.hex}1_ = _{.hex}[[31]]_
 
 ---
 
 Here are some 6-digit binary numbers. Let's convert them to decimal by first writing the values of each digit, and then adding the digits together.
 
-{.text-center.s-purple} _{.ns}100110_ = _{.n}[[32]]_ + _{.n.z}0_ + _{.n.z}0_ + _{.n}[[4]]_ + _{.n}[[2]]_ + _{.n.z}0_ = _{.n}[[38]]_
+{.text-center.s-purple} _{.ns}100110_ = _{.hex}[[32]]_ + _{.hex.z}0_ + _{.hex.z}0_ + _{.hex}[[4]]_ + _{.hex}[[2]]_ + _{.hex.z}0_ = _{.hex}[[38]]_
 
-{.text-center.s-yellow} _{.ns.y}111000_ = _{.n}[[32]]_ + _{.n}[[16]]_ + _{.n}[[8]]_ + _{.n.z}0_ + _{.n.z}0_ + _{.n.z}0_ = _{.n}[[56]]_
+{.text-center.s-yellow} _{.ns.y}111000_ = _{.hex}[[32]]_ + _{.hex}[[16]]_ + _{.hex}[[8]]_ + _{.hex.z}0_ + _{.hex.z}0_ + _{.hex.z}0_ = _{.hex}[[56]]_
 
-{.text-center.s-teal} _{.ns.g}101011_ = _{.n}[[32]]_ + _{.n.z}0_ + _{.n}[[8]]_ + _{.n.z}0_ + _{.n}[[2]]_ + _{.n}[[1]]_ = _{.n}[[43]]_
+{.text-center.s-teal} _{.ns.g}101011_ = _{.hex}[[32]]_ + _{.hex.z}0_ + _{.hex}[[8]]_ + _{.hex.z}0_ + _{.hex}[[2]]_ + _{.hex}[[1]]_ = _{.hex}[[43]]_
 
 
 When computers (including digital calculators) add and subtract numbers, this is how the numbers are represented at the level of the transistor!
@@ -798,19 +788,57 @@ __and those who don't.__
 
 ----------------------------------------------------------------------------------------------------
 
+    // EDC photo resources
+    // https://commons.wikimedia.org/wiki/File:Barcodedmail.JPG
+    // Satellite
+    // https://commons.wikimedia.org/wiki/File:Erdfunkstelle_Raisting_2.jpg
+    // https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Night_Sky.png/1024px-Night_Sky.png
+    // https://upload.wikimedia.org/wikipedia/commons/6/61/Satellite_Cylinder_%28PSF%29.png
 
 ## Error Detection 
 
 > section: error-detection
 > sectionStatus: dev
+> id: satellite
 
 ### Introduction
 
 {.todo} Satellite Communications
 
-{.fixme} We send satellites _very far away_. Voyager 1 is now _13 billion miles_ away from Earth. NASA spent three years making this satellite, investing millions of dollars and millions of work-hours into its creation.... etc
+{.fixme} We receive some bits from space. They have come from a satellite, perhaps *billions of miles* away from earth. Now NASA has spent 3 years making this satellite and invested millions of dollars and hours into making it, getting it *just right*. Perhaps this data is a photo of Jupiter's great red spot? Or perhaps it's data about the temperature on Neptune? Or movement data of asteroids? Regardless of what the message is we received, how do we know that the data we've received is accurate?
 
-{.todo} animation of a satellite streaming bits to a receiver on Earth.
+{.fixme} Unforuntately, our atmosphere gets in the way of our messages. Just like looking through a glass of water distorts what's behind it, the charged particles in our atmosphere might distort some of the signals coming from the satellite.
+
+{.todo} satellite streaming bits to a receiver on Earth. // INTERACTIVE
+
+    .satellites
+      img(src="images/satellite/nightsky.png" width=640 height=420)
+      img.sat(src="images/satellite/satellites.png" width=640 height=420)
+      img.atm(src="images/satellite/atmosphere.png" width=640 height=420)
+      figure.bits: include images/satellite/bitstream.svg
+      svg(width=640 height=420): line(x1=145 y1=265 x2=525 y2=95)
+
+
+{.fixme} There is a chance that some of the bits may be incorrect, so we need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
+
+{.todo} Section on different ways to do error detection: multiple copies, etc  // INTERACTIVE
+
+{.fixme} Let's think about some ways we could possibly make sure that we know the correct message.
+
+Perhaps the simplest way to do it would be to send multiple copies of the same message.
+If we send two copies (DIAGRAM), then we know that there's an error, but we won't know which is the correct message (if you've ever seen a movie where there are two people and one might be an evil twin, you've experienced this before!). This would be an [Error Detecting Code](gloss)
+If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss)
+But this would consume a lot of space! Imagine if you bought a state-of-the-art smartphone with 96 GB of memory, used this type of error correction. It would only be able to hold less than [[32]] GB of memory! Two thirds of it would be repeated data.
+
+There must be a better way.
+
+#### Parity Bit
+One very simple and cost-effective way to detect an error is via a __parity bit__.
+The parity bit is added as a last bit to make the sum of the whole number even.
+If the sum is even, the parity bit is [[0]].
+If the sum is odd, the parity bit is [[1]]
+
+This gives us a hint into how we can build more complex error detection and correction schemes. Before we do that, let's look at an example that we encounter quite often.
 
 ---
 
@@ -820,7 +848,15 @@ __and those who don't.__
 
 ### Bar Codes
 
-{.todo} Bar Code
+{.fixme} CUT Before we solve the problem of satellites sending messages across the vast regions of space, let's start with an example that's a bit closer to home.
+
+We encounter error detecting and correcting codes every time we go to the supermarket, in the form of bar codes. Besides items at the store, bar codes are used for identifying all sorts of things like driver's licenses or babies in hospitals. And in the last decade, 2-dimensional barcodes (QR codes) have been adapted for ticketing at events like concerts or airplane flights.
+
+{.todo} photos of Bar Codes on license, ticket, baby wristband, can of food // PHOTOGRAPH: examples of bar codes
+
+Bar codes were invented as a way to make it easier for stores to track which items a customer is buying. Numbers are easy for us humans to read, but it's much harder for computers. For example, 1 and 7 or 6 and 8 might look almost the same to a low-resolution camera. A new system was needed, so that cashiers or nurses didn't have to manually type all these numbers into a computer.
+
+Joe Woodland, one of the inventors of Bar Code was sitting on the beach, trying to think of a way to encode information for a light scanner to understand.
 
     div
       .quote
@@ -828,9 +864,17 @@ __and those who don't.__
       .author
         Joe Woodland, inventor of the Bar Code
 
+Woodland used his knowledge of Morse Code as a foundation to invent a new type of code. By learning about different types of codes, we can build our own knowledge foundation and perhaps invent our own codes!
+
+{.todo} Photo of original barcode patent (circular) with caption: "the original barcode was invented as a circle, but in the 1970s an IBM engineer George Laurer figured out that a rectangle would be more compact than Woodland's bulls-eye. // PHOTOGRAPH: original barcode patent
+
+{.todo} Photo of Barcode scanner for tracking trains, with caption "another early use of barcode scanners was tracking train cars for logistics" // PHOTOGRAPH: train car
+
 #### So how does it work?
 
 {.fixme} Each bar code is a 12-digit number. See here that we can read the numbers written on the bottom. But how does a computer read it?
+
+{.fixme} There are 95 columns, each of which can be black or white. The computer uses a laser to identify each stripes color, based on how much light is reflected. These 95 columns are grouped into 15 groups of columns. (continue below)
 
 {.todo} image/interaction of a bar code
 
@@ -840,13 +884,15 @@ __and those who don't.__
 
 > id: barcode-drawing
 
-Look at this barcode.
+Look at this barcode. // INTERACTIVE
 
-    x-barcode(value="012345678901")
+    // only takes 11 values (last digit is error digit)
+    x-barcode(value="01234567890")
 
-The guards are on the [{.red}outside](target:.bar-start) and in the
-[{.red}center](target:.bar-middle). The first six digits are on the [{.blue}left](target:.bar-left).
-The last six digits are on the [{.green}right](target:.bar-right).
+The guards are on the [{.step-target.pill.b.red}outside](target:outside) and in the
+[{.step-target.pill.b.red}center](target:middle).
+The first six digits are on the [{.step-target.pill.b.blue}left](target:left).
+The last six digits are on the [{.step-target.pill.b.green}right](target:right).
 
 __The Guards__
 
@@ -856,16 +902,233 @@ __The Guards__
 
 __The Digits__
 
-| LEFT SIDE | | RIGHT SIDE | |
-|---|---|---|---|
-| 0 | 0001101 | 0 | 1110010 |
-| 1 | 0xxxxx1 | 1 | 1xxxxx0 |
+{.fixme} Let's recognize that these values are **not** the same as the binary representations we learned last chapter. They are still a binary code because they use two values (black and white), but the code to represent the digits is different.s
+
+| DIGIT | LEFT SIDE | RIGHT SIDE |
+|---|---|---|
+| 0 | 0001101 | 1110010 |
+| 1 | 0011001 | 1100110 |
+| 2 | 0010011 | 1101100 |
+| 3 | 0111101 | 1000010 |
+| 4 | 0100011 | 1011100 |
+| 5 | 0110001 | 1001110 |
+| 6 | 0101111 | 1010000 |
+| 7 | 0111011 | 1000100 |
+| 8 | 0110111 | 1001000 |
+| 9 | 0001011 | 1110100 |
+
+{.fixme} There are a few interesting patterns we can recognize here. First, notice that the codes on the left side are different from the codes on the right side. This allows the bar code to be read upside down or backwards.
+
+{.fixme} Oh jeez... barcodes are [different](https://www.nationwidebarcode.com/are-upc-a-and-ean-13-the-same/) in the US and in Europe. But it's very simple. The Europe code has an extra digit at the beginning for a country code.
+
+{.fixme} THIS IS VERY FUNNY... "Because there are more than 9 countries, the country flags have been further subdivided by using the next two digits for various uses and countries. The US and Canada have the country flag 0 and subdivisions 000 thru 139. The publishing industry produces so many products that it is its own country called "Bookland" for number assignment purposes. Bookland has been given two subdivisions of the country flag 9. They are 978 and 979" // REVISE:
+
+{.fixme} Combinatorics // REVISE:
+- The first digit represents what type of object it is (0 - Standard; 2 - Weighted item like fruit; 3 - Pharmacy; 5 - Coupon)
+- Digits 2-6 (highlight) represent the *Manufacturer's Code*
+- The 7-11 (highlight) represent the *Product Code*
+- The final, 12th digit (highlight) is the __Error-Detection digit__, also called the __Modulo Check Character__
+
+{.fixme} Also, every binary representation of digits on the left begins with a 0 and ends with a 1, and every digit on the right begins with a 1 and ends with a 0. This results in a pattern: there will always be a 10 (on the left side) or a 01 (on the right side) on the edge between digits.
+
+{.todo} Must clarify why L-R digit patterns are helpful. RESEARCH
+
+#### Error Checking.
+{.fixme} Just like our case with the satellite signals, there is a chance that the laser reading the barcode can make a mistake. Perhaps there is some dirt, or a scratch, or the laser reads it incorrectly. For that reason, barcodes have a special way of determining whether there's been a mistake.
+
+{.fixme} The 12th digit is dependent on the first 11 digits, so that if any of the digits is wrong, we will know (most of the time). Can you guess how the 12th digit can indicate information about the first 11?
+
+{.todo} Here we will show the original digits moving into the new equation. Odd digits moving into the parantheses, and the even digits moving to the righ. // INTERACTIVE
+
+{.todo} empty box where they write the modulo check character
+
+{.fixme} The odd digit places are summed and multiplied by three. Then we calculate the sum of the even places, and sum these two values together. The __Modulo Check Character__ is 10 minus the ones digit of this number.
+
+When the computer scans the digits of a barcode, it performs this calculation. If the modulo check doesn't match up, we immediately know that the barcode hasn't been read correctly. In a supermarket, the cash register won't beep, and you can try again -- or, as a last resort, enter the numbers manually.
+
+{.todo} TIPS AND TRICKS: when you're adding these numbers, you only need to keep the ones digit. If you do 3x(2+3+1+9), which is 3x15, you can do 3x5 instead. Every digit above the ones digit will be thrown out.
+
+{.todo} ACTIVITY: Look around you for something with a barcode (pretty much anything you can buy at a store). Hide the numbers with paper or tape, and try to decode the numbers. After you've written down your answer, see if you're correct! And then you can try the error detection formula and confirm that it is correct. (PHOTOS also)
+
+{.todo} ACTIVITY: combinatorics problem where students calculate possible number of barcodes.
+How many different combinations? [[10^11]] or one hundred [[billion|million|trillion]] different combinations.
+It's actually not quite as simple as giving the five digits 2-6 to each individual manufacturer. If this were the case, there would be only [[100000]] different manufacturers possible. Things are more complex! (see research)
+
+    // RESEARCH
+    // http://www.waspbarcode.com/buzz/barcode lots of info on subdivisions
+    // http://www.waspbarcode.com/buzz/why-small-businesses-must-avoid-reusing-barcodes don't reuse
+    // http://www.waspbarcode.com/buzz/60th-anniversary-of-the-barcode first ever use of barcode
+
+#### Barcode Conclusion
+{.fixme} These are only the UPC bar codes. There are many other types of bar codes listed here: http://www.makebarcode.com/specs/barcodechart.html
 
 ---
 
 ### Hamming Codes
+> id: hamming
 
-{.todo} Hamming Codes
+Let's go back to our original problem of how we might detect errors in a message received from a satellite. We don't know the message the satellite intended to send, and unlike with barcodes there is no way to find it, such as a cashier who can look at the number and type it into the computer.
+
+A mathematician named [Richard Hamming](bio:hamming) encountered a very similar problem not with data from satellites, but with mechanical computers.
+
+::: column.grow
+
+Computers used to be programmed by creating holes in special [punch cards](gloss:punch-card), which were then fed into the computer. These were time-consuming to program, and the calculations could take hours or even days to complete. In 1947, Hamming wrote a program to perform a long and complex series of calculations while he went home over the weekend. When he returned, he discovered that an error had occurred somewhere early in the calculation and his entire result was useless. He felt a need to invent a way to correct when an error had happened.
+
+::: column(width=280)
+
+    x-img(src="images/punch-card.png" width=640 height=288 lightbox)
+    // https://commons.wikimedia.org/wiki/File:Blue-punch-card-front-horiz.png
+
+{.caption} A blue IBM punched card.
+
+:::
+
+{.quote}If the computer can tell when an error has occurred, surely there is a way of telling where the error is so that the computer can correct the error itself. - Richard Hamming
+
+How can we detect and correct an error in a messaage that is just a sequence of binary numbers? A [Hamming Code](gloss:hamming-code) can be used to do just this. The solution involves inserting new bits into the message that will tell us information about the values of those original bits. If we know the location of where an error occurred, then we know the original value of that bit because [[binary digits can only have two values|we can just look at the number under the barcode]].
+
+
+---
+> id: hamming-encode
+
+#### Encoding a Hamming Code
+
+Click through the slides to see how to encode a string of bits using a Hamming Code.
+
+    x-hamming(value="11001111" direction="encode")
+
+::: x-slideshow
+
+{div.inline(slot="legend")} Let's say we want to encode this string of 8 bits. We call these 8 bits the [{.pill.green}data bits](target:data).
+
+{div.inline(slot="legend")} First we must shift the [{.pill.green}data bits](target:data) to the right to make room for the [{.pill.red}parity bits](target:parity). The parity bits will encode information about the data bits.
+
+{div.inline(slot="legend")} The [{.pill.red}parity bits](target:parity) will go into any position that is a power of 2. Here we place parity bits at [{.pill.red}1](target:p1), [{.pill.red}2](target:p2), [{.pill.red}4](target:p4), and [{.pill.red}8](target:p8).
+
+{div.inline(slot="legend")} We must figure out the values that go into the parity bits. We do this by dividing the sequence into one __parity group__ for each parity bit. We then assign the parity bit whatever value will make the parity of the group even.
+
+{div.inline(slot="legend")} Let's start with the first parity group. Start at the parity bit in [{.pill.red}position 1](target:p1), then choose every other **1** bit.
+
+{div.inline(slot="legend")} This group of bits has an [[${parity1right}|${parity1wrong}]] parity, so we give the parity bit value [[${pb1r}|${pb1w}]].
+
+{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in [{.pill.red}position 2](target:p2), then choose every other **2** bits.
+
+{div.inline(slot="legend")} This group of bits has an [[${parity2right}|${parity2wrong}]] parity, so we give the parity bit value [[${pb2r}|${pb2w}]].
+
+{div.inline(slot="legend")} Now do the next parity group. Start at the parity bit in [{.pill.red}position 4](target:p4), then choose every other **4** bits.
+
+{div.inline(slot="legend")} This group of bits has an [[${parity4right}|${parity4wrong}]] parity, so we give the parity bit value [[${pb4r}|${pb4w}]].
+
+{div.inline(slot="legend")} Now let's do the last parity group. Start at the parity bit in [{.pill.red}position 8](target:p8), then choose every other **8** bits.
+
+{div.inline(slot="legend")} This group of bits has an [[${parity8right}|${parity8wrong}]] parity, so we give the parity bit value [[${pb8r}|${pb8w}]].
+
+{div.inline(slot="legend")} Here is our final encoded string of bits to send!
+
+:::
+
+---
+
+Did you notice anything about how the bits for each parity group are selected? The answer has to do with the [[binary value|divisibility]] of each digit position.
+
+---
+
+Here is how to select the digits to include in a parity group.
+
+    ol.proof
+      li Convert the place numbers to binary.
+      li Identify the parity groups. Each will be a power of 2.
+      li For each parity group, select any digit whose binary place number has a **1** in that position.
+
+[Continue](btn:next)
+
+---
+
+::: column.grow
+
+| group | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
+| 2 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 |
+| 4 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 1 |
+| 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
+
+::: column(width=300)
+
+The 9th digit in the encoded bit sequence will be part of parity groups [[1 and 8|1, 2, and 4|1, 2, and 8]]
+
+The 6th digit in the encoded bit sequence will be part of parity groups [[2 and 4|1 and 4|2 and 8]]
+
+:::
+
+{.fixme} Some table formatting would be nice.
+
+---
+
+> id: hamming-decode
+
+#### Decoding a Hamming Code
+
+Now that we have an encoded message, how can we extract the data from it? We must reverse the process.
+
+::: column
+
+__Encoding__
+1. Make room for parity bits
+2. Identify parity groups.
+3. Define parity bits.
+
+::: column
+
+__Decoding__
+1. Check parity bits.
+2. Make corrections.
+3. Remove parity bits.
+
+:::
+
+Click through the slides to see how to decode a string of bits using Hamming Codes.
+
+    x-hamming(value="011100011110" direction="decode")
+
+::: x-slideshow
+
+{div.inline(slot="legend")} What if we receive this packet of information? Assume we know that is has been encoded using Hamming encoding. This means that each parity group should have an [[even|odd]] parity. As we check each group, we can mark which have an incorrect bit.
+
+{div.inline(slot="legend")} First let's check parity group 1. The parity is [[odd|even]]. There is [[something|nothing]] wrong here!
+
+{div.inline(slot="legend")} Now let's check parity group 2. The parity is [[even|odd]]. There is [[nothing|something]] wrong here!
+
+{div.inline(slot="legend")} Now let's check parity group 4. The parity is [[odd|even]]. There is [[something|nothing]] wrong here!
+
+{div.inline(slot="legend")} Now let's check parity group 8. The parity is [[even|odd]]. There is [[nothing|something]] wrong here!
+
+{div.inline(slot="legend")} We identified there is something wrong in the [{.pill.red}1st](target:pg1) and [{.pill.red}4th](target:pg4) parity groups. We can add these values to determine that there is an error with bit [[5]]. We flip this bit to a [[1]].
+
+{div.inline(slot="legend")} Now we can remove the parity bits to fully decode our message.
+
+
+:::
+
+---
+
+This is not a perfect system. This type of code will not correctly detect an error when there are more than [[1]] errors.
+
+Let's go back to our original problem of how we might detect errors sent from a satellite. The information received from the satellite is unknown, and there is no backup plan, like a cashier who can look at a number and type it into the computer.
+
+A mathematician named [Richard Hamming](bio:hamming) had this same problem not with data from satellites, but from computers.
+
+Computers used to be programmed with [punch cards](gloss: punch cards). In 1947, Hamming programmed a computer to perform a long and complex series of calculations while he went home over the weekend. When he returned, he discovered an error had occurred and his entire calculation was useless. He felt a need to invent a way to correct when an error had happened.
+
+---
+> id: hamming-encode-2
+
+// INTERACTIVE --- Encoding a Hamming Code
+
+    x-hamming(value="10101010")
+    button#testButton SLIDE
+
 
 ---
 
@@ -873,6 +1136,11 @@ __The Digits__
 
 {.todo} CDs and DVDs
 
+{.todo} // PHOTOS
+- credit cards use "Luhn's algorithm" to compare the last digit ... RESEARCH
+- MD5 or SHA-1 hash included with a software application
+- CDs
+- Snapchat/Facebook profile codes
 
 ----------------------------------------------------------------------------------------------------
 
@@ -895,7 +1163,7 @@ Upon receiving the letter Octavian eagerly opens the message and reads:
 dwcru cqnw. SL”
 
 As you can see, the message makes no sense. Knowing that his message might fall into enemy hands,
-Caesar protected it by using a [cipher](gloss:cipher).
+Caesar protected it by using a cipher.
 
 [Continue](btn:next)
 

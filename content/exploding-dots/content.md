@@ -28,22 +28,20 @@ invulnerable. On one day, he was challenged to race … by a tortoise!
       img(src="images/achilles.png" width=80 height=110 style="left: 0%; z-index: 1;")
       img(src="images/tortoise.png" width=80 height=50 style="left: 54%; margin-top: 8%;")
 
-{div(slot="legend")} Achilles knew that he could run _ten times_ as fast as
+Achilles knew that he could run _ten times_ as fast as
 the tortoise. He felt very confident, and decided to give it a 100m head start.
 
-{div(slot="legend")} And the race began. In the time it took Achilles to reach
+And the race began. In the time it took Achilles to reach
 the 100m mark, the tortoise moved by [[10]]m: _{span.reveal(when="blank-0")}it
 was now at 110m._
 
-{div(slot="legend")} When Achilles arrived at 110m, the tortoise had moved by
+When Achilles arrived at 110m, the tortoise had moved by
 [[one]] more meter(s): _{span.reveal(when="blank-1")}it was now at 111m._
 
-{div(slot="legend")} When Achilles arrived at the 111m mark, the tortoise had
-moved by 10cm.
+When Achilles arrived at the 111m mark, the tortoise had moved by 10cm.
 
-{div(slot="legend")} At every step, Achilles gets closer to the tortoise. But
-since the tortoise keeps moving, he never quite reaches it. And since he can’t
-overtake it, the tortoise wins the race!
+At every step, Achilles gets closer to the tortoise. But since the tortoise keeps moving, he never
+quite reaches it. And since he can’t overtake it, the tortoise wins the race!
 
 :::
 

@@ -283,7 +283,9 @@ Se scorri indietro sulla mappa di Königsberg, scoprirai che ci sono più di due
 
 ---
 > id: handshakes-1
-> section: handshakes ## Strette di mano e appuntamenti
+> section: handshakes
+
+## Strette di mano e appuntamenti
 
 ::: column.grow
 
@@ -820,7 +822,6 @@ Trovare un algoritmo veloce per risolvere il problema del commesso viaggiatore r
 :::
 
 ---
-
 > section: scheduling
 > sectionStatus: dev
 
@@ -829,7 +830,6 @@ Trovare un algoritmo veloce per risolvere il problema del commesso viaggiatore r
 IN COSTRUZIONE
 
 ---
-
 > id: applications
 > section: applications
 

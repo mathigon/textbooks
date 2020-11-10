@@ -33,5 +33,5 @@
     "automerge": true,
     "automergeType": "branch"
   }],
-  "ignoreDeps": ["marked", "three", "autoprefixer", "postcss"]
+  "ignoreDeps": ["marked", "three", "autoprefixer", "gulp-postcss", "postcss-rtl"]
 }

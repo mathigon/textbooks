@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="984px" height="110px" viewBox="0 0 984 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>byte/12/filter/p1 copy 3</title>
+    <g id="√-encoding-example" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="p4+before" fill="#D8D8D8" fill-rule="nonzero">
+            <g id="byte/12/filter/p4">
+                <g id="filter/allow" transform="translate(902.000000, 0.000000)">
+                    <path d="M82,0 L82,110 L0,110 L0,0 L82,0 Z M47,10 L35,10 C21.1928813,10 10,21.1928813 10,35 L10,35 L10,75 C10,88.8071187 21.1928813,100 35,100 L35,100 L47,100 C60.8071187,100 72,88.8071187 72,75 L72,75 L72,35 C72,21.1928813 60.8071187,10 47,10 L47,10 Z" id="Combined-Shape"></path>
+                </g>
+                <g id="filter/allow" transform="translate(820.000000, 0.000000)">
+                    <path d="M82,0 L82,110 L0,110 L0,0 L82,0 Z M47,10 L35,10 C21.1928813,10 10,21.1928813 10,35 L10,35 L10,75 C10,88.8071187 21.1928813,100 35,100 L35,100 L47,100 C60.8071187,100 72,88.8071187 72,75 L72,75 L72,35 C72,21.1928813 60.8071187,10 47,10 L47,10 Z" id="Combined-Shape"></path>
+                </g>
+                <g id="filter/allow" transform="translate(738.000000, 0.000000)">
+                    <path d="M82,0 L82,110 L0,110 L0,0 L82,0 Z M47,10 L35,10 C21.1928813,10 10,21.1928813 10,35 L10,35 L10,75 C10,88.8071187 21.1928813,100 35,100 L35,100 L47,100 C60.8071187,100 72,88.8071187 72,75 L72,75 L72,35 C72,21.1928813 60.8071187,10 47,10 L47,10 Z" id="Combined-Shape"></path>
+                </g>
+                <g id="filter/allow" transform="translate(656.000000, 0.000000)">
+                    <path d="M82,0 L82,110 L0,110 L0,0 L82,0 Z M47,10 L35,10 C21.1928813,10 10,21.1928813 10,35 L10,35 L10,75 C10,88.8071187 21.1928813,100 35,100 L35,100 L47,100 C60.8071187,100 72,88.8071187 72,75 L72,75 L72,35 C72,21.1928813 60.8071187,10 47,10 L47,10 Z" id="Combined-Shape"></path>
+                </g>
+                <g id="filter/allow" transform="translate(574.000000, 0.000000)">
+                    <path d="M82,0 L82,110 L0,110 L0,0 L82,0 Z M47,10 L35,10 C21.1928813,10 10,21.1928813 10,35 L10,35 L10,75 C10,88.8071187 21.1928813,100 35,100 L35,100 L47,100 C60.8071187,100 72,88.8071187 72,75 L72,75 L72,35 C72,21.1928813 60.8071187,10 47,10 L47,10 Z" id="Combined-Shape"></path>
+                </g>
+                <g id="filter/block" transform="translate(492.000000, 0.000000)">
+                    <rect id="Combined-Shape" x="0" y="0" width="82" height="110"></rect>
+                </g>
+                <g id="filter/block" transform="translate(410.000000, 0.000000)">
+                    <rect id="Combined-Shape" x="0" y="0" width="82" height="110"></rect>
+                </g>
+                <g id="filter/block" transform="translate(328.000000, 0.000000)">
+                    <rect id="Combined-Shape" x="0" y="0" width="82" height="110"></rect>
+                </g>
+                <g id="filter/block" transform="translate(246.000000, 0.000000)">
+                    <rect id="Combined-Shape" x="0" y="0" width="82" height="110"></rect>
+                </g>
+                <g id="filter/block" transform="translate(164.000000, 0.000000)">
+                    <rect id="Combined-Shape" x="0" y="0" width="82" height="110"></rect>
+                </g>
+                <g id="filter/block" transform="translate(82.000000, 0.000000)">
+                    <rect id="Combined-Shape" x="0" y="0" width="82" height="110"></rect>
+                </g>
+                <g id="filter/block">
+                    <rect id="Combined-Shape" x="0" y="0" width="82" height="110"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
