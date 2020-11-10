@@ -1,4 +1,4 @@
-import {Solid} from '../shared/components/solid';
+import {Solid} from '../../../shared/components/solid';
 import {Vector3} from 'three';
 
 
