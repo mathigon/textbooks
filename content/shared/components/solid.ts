@@ -229,10 +229,10 @@ export class Solid extends CustomElementView {
 
     obj.updateEnds = function(f: Vector, t: Vector) {
       const q = new THREE.Quaternion();
-      const v = new THREE.Vector3(t[0]-f[0], t[1]-f[1], t[2]-f[2]).normalize();
+      const v = new THREE.Vector3(t[0] - f[0], t[1] - f[1], t[2] - f[2]).normalize();
       q.setFromUnitVectors(new THREE.Vector3(0, 1, 0), v);
       obj.setRotationFromQuaternion(q);
-      obj.position.set((f[0]+t[0])/2, (f[1]+t[1])/2, (f[2]+t[2])/2);
+      obj.position.set((f[0] + t[0]) / 2, (f[1] + t[1]) / 2, (f[2] + t[2]) / 2);
     };
 
     obj.updateEnds(from, to);

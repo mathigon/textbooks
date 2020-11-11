@@ -36,15 +36,15 @@ export function planeFromNormal(normal: THREE.Vector3, centroid: THREE.Vector3, 
    * @param y number of stacked unit vectors in y-direction
    * @param z number of stacked unit vectors in z-direction
    */
-export function addUnitVectorsToSolid(solid: Solid, x=1, y=1, z=1) {
+export function addUnitVectorsToSolid(solid: Solid, x = 1, y = 1, z = 1) {
   // X
-  [...Array(x).keys()].forEach(i => solid.addArrow([i, 0, 0], [i+1, 0, 0], 0x22ab24));
+  [...Array(x).keys()].forEach(i => solid.addArrow([i, 0, 0], [i + 1, 0, 0], 0x22ab24));
 
   // Y -- add Y-unit vectors from 0 to 1
-  [...Array(y).keys()].forEach(i => solid.addArrow([0, i, 0], [0, i+1, 0], 0x0f82f2));
+  [...Array(y).keys()].forEach(i => solid.addArrow([0, i, 0], [0, i + 1, 0], 0x0f82f2));
 
   // Z -- add Z-unit vectors from 0 to 1
-  [...Array(z).keys()].forEach(i => solid.addArrow([0, 0, i], [0, 0, i+1], 0xcd0e66));
+  [...Array(z).keys()].forEach(i => solid.addArrow([0, 0, i], [0, 0, i + 1], 0xcd0e66));
 }
 
 export function planeFromCoplanarPoints(a: Vector3, b: Vector3, c: Vector3, color: number) {
@@ -147,7 +147,7 @@ export function rotatedXPlane(rX: number) {
 export function generateXPlane(x: number) {
   const material = Solid.translucentMaterial(0x5A49C9, 0.2);
   const plane = new THREE.Mesh(new THREE.PlaneGeometry(4, 4, 10, 10), material);
-  plane.rotateZ(Math.PI/2);
+  plane.rotateZ(Math.PI / 2);
   plane.position.x = x;
   return plane;
 }
@@ -160,7 +160,7 @@ export function generateXPlane(x: number) {
 export function generateYPlane(y: number) {
   const material = Solid.translucentMaterial(0x5A49C9, 0.2);
   const plane = new THREE.Mesh(new THREE.PlaneGeometry(4, 4, 10, 10), material);
-  plane.rotateX(Math.PI/2);
+  plane.rotateX(Math.PI / 2);
   plane.position.y = y;
   return plane;
 }
@@ -174,13 +174,13 @@ export function generateYPlane(y: number) {
 export function generateXYPlane(a: number, b: number, k: number) {
   const material = Solid.translucentMaterial(0x5A49C9, 0.2);
   const plane = new THREE.Mesh(new THREE.PlaneGeometry(4, 4, 10, 10), material);
-  plane.rotateX(Math.PI/2);
-  const angle = Math.atan2(1/b, 1/a);
+  plane.rotateX(Math.PI / 2);
+  const angle = Math.atan2(1 / b, 1 / a);
   console.log(angle);
   plane.rotateY(-angle); // <--- magic number
-  if (a !== 0) plane.position.x = (k/a)/2; // <--- freakin' magic number
+  if (a !== 0) plane.position.x = (k / a) / 2; // <--- freakin' magic number
   console.log(plane.position.x);
-  if (b !== 0) plane.position.y = (k/b)/2; // <---
+  if (b !== 0) plane.position.y = (k / b) / 2; // <---
   console.log(plane.position.y);
 
   return plane;
@@ -190,7 +190,7 @@ export function generateXYPlane(a: number, b: number, k: number) {
  * Generate plane at x+z=k, y=anything
  * [0]
  */
-export function generateXZPlane(k: number) {
+export function generateXZPlane(_k: number) {
   const material = Solid.translucentMaterial(0x5A49C9, 0.2);
   const plane = new THREE.Mesh(new THREE.PlaneGeometry(4, 4, 10, 10), material);
   // plane.rotateX(Math.PI/2);
