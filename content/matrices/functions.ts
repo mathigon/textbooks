@@ -22,9 +22,3 @@ export {
 export {
   determinants
 } from './chapters/ch3-determinants';
-
-
-// Test chapters
-export {
-  threeVector, threeSoeq, threeTransform
-} from './chapters/extra';
