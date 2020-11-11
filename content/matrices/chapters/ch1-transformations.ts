@@ -1,9 +1,15 @@
-
+// =============================================================================
+// Matrices
+// Chapter 1: Matrices as Linear Transformations
+// (c) Mathigon
+// =============================================================================
 
 import {Geopad, Step} from '../../shared/types';
 import {Angle, Point} from '@mathigon/euclid';
 import {ElementView, ScreenEvent} from '@mathigon/boost';
 import {Matrix} from '@mathigon/fermat';
+
+import {animateTransformationOnGeo} from './utils/utils-geo';
 
 /**
  * Given a Geopad and PointerEvent, calculate the Angle between y-axis and mouse point
@@ -120,19 +126,6 @@ export function mathigonMatrix($step: Step) {
   $step.model.polygonTransform = (a: number, b: number, c: number, d: number, color: string) => {
     return generateTransformFunction(SHAPES[color])(a, b, c, d);
   };
-}
-
-/**
- * Animates a Linear Transformation on a GeoPad
- *
- * @param geo Geopad
- * @param iv name of i-unit-vector
- * @param jv name of j-unit-vector
- * @param m transformation matrix. m[0] is new i-vector and m[1] is new j-vector
- */
-function animateTransformationOnGeo(geo: Geopad, iv: string, jv:string, m: number[][], time: number) {
-  geo.animatePoint(iv, new Point(m[0][0], m[0][1]), time);
-  geo.animatePoint(jv, new Point(m[1][0], m[1][1]), time);
 }
 
 export function playWithMe($step: Step) {

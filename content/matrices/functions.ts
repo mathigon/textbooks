@@ -4,20 +4,25 @@
 // =============================================================================
 
 // Move chapters into different files
+
+// Chapter 1: Matrices as Transformations
 export {
   intro,
   basicTransformations,
   mathigonMatrix,
   playWithMe
-} from './chapters/transformations';
+} from './chapters/ch1-transformations';
 
+// Chapter 2: Matrix Arithmetic
 export {
   transformsCalculator
-} from './chapters/matrix-arithmetic';
+} from './chapters/ch2-matrix-arithmetic';
 
+// Chapter 3: Determinants
 export {
   determinants
-} from './chapters/determinants';
+} from './chapters/ch3-determinants';
+
 
 // Test chapters
 export {
