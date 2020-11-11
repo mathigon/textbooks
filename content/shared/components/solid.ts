@@ -97,7 +97,6 @@ function createEdges(geometry: THREE.Geometry, material: THREE.Material, maxAngl
 // -----------------------------------------------------------------------------
 // Custom Element
 
-// DIAGRAM lots of useful stuff in here.
 @register('x-solid')
 export class Solid extends CustomElementView {
   private isReady = false;
@@ -181,7 +180,6 @@ export class Solid extends CustomElementView {
     };
   }
 
-  // DIAGRAM gonna need a couple arrows
   addArrow(from: Vector, to: Vector, color = STROKE_COLOR) {
     const material = new THREE.MeshBasicMaterial({color});
     const obj = new THREE.Object3D() as Object3D;
@@ -299,7 +297,6 @@ export class Solid extends CustomElementView {
       solidMaterial.clippingPlanes = planes;
     };
 
-    // DIAGRAM: this is what we need!
     obj.updateGeometry = function(geo: THREE.Geometry) {
       solid.geometry.dispose();
       solid.geometry = geo;
@@ -344,7 +341,6 @@ export class Solid extends CustomElementView {
       }
     };
 
-    // DIAGRAM: this is also what we need!
     obj.updateGeometry = function(geo: THREE.Geometry) {
       if (solid.updateGeometry) solid.updateGeometry(geo);
       for (const mesh of [outline, knockout]) {
