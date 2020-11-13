@@ -11,10 +11,9 @@
 .space { display: inline-block; width: 20px; }
 
 .mountain {
-  background: white;
+  .theme(background, white, @dark-mode);
+  .theme(box-shadow, 0 0 30px 10px white, 0 0 30px 10px @dark-mode);
   z-index: 100;
-  box-shadow: 0 0 30px 10px white;
-  .dark-mode & { background: @dark-mode; box-shadow: 0 0 30px 10px @dark-mode; }
 }
 
 .task {
