@@ -1156,7 +1156,6 @@ Unfortunately there is no simple reason why there are _17_ of these groups, and 
 more advanced mathematics. Instead, you can try drawing your own repeated patterns for each of the
 17 wallpaper groups:
 
-    include ./components/wallpaper
     figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings

@@ -7,6 +7,8 @@
 import {$html, $N, CustomElementView, ElementView, register, slide} from '@mathigon/boost';
 import {clamp, Random} from '@mathigon/fermat';
 import {Point} from '@mathigon/euclid';
+import template from './binary-swipe.pug';
+
 
 const RESISTANCE = 180000;
 const MIN_MOVE = 100;
@@ -19,7 +21,7 @@ function cardOffset(posn: Point, start: Point): [Point, number] {
 }
 
 
-@register('x-binary-swipe', {templateId: '#binary-swipe'})
+@register('x-binary-swipe', {template})
 export class BinarySwipe extends CustomElementView {
 
   ready() {

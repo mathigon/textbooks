@@ -1040,7 +1040,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 Infelizmente, não há uma razão simples para haver _17_ desses grupos, e provar que isso requer matemática mais avançada. Em vez disso, você pode tentar desenhar seus próprios padrões repetidos para cada um dos 17 grupos de papéis de parede: 
 
-    include ./components/wallpaper
+
     figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings

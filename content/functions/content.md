@@ -24,7 +24,6 @@ Try sorting each of these students into one of the four house:
 
 :::
 
-    include ../shared/components/relation
     x-relation
       .item(slot="domain" name="a") **Current User**
       .item(slot="domain" name="b") Phineas Lynch

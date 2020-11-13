@@ -8,6 +8,7 @@ import {flatten, Obj, tabulate2D} from '@mathigon/core';
 import {Line, Point} from '@mathigon/euclid';
 import {CanvasView, CustomElementView, register, slide} from '@mathigon/boost';
 import {Select} from '../../shared/types';
+import template from './wallpaper.pug';
 
 
 // -------------------------------------------------------------------------
@@ -235,7 +236,7 @@ function drawPoint(ctx: CanvasRenderingContext2D, group: string, point: Point) {
   }
 }
 
-@register('x-wallpaper', {templateId: '#wallpaper'})
+@register('x-wallpaper', {template})
 export class Wallpaper extends CustomElementView {
 
   ready() {

@@ -1132,7 +1132,7 @@ Der Beweis dafür erfordert eine viel fortgeschrittenere Mathematik…
 Stattdessen kannst du versuchen, deine eigenen sich wiederholenden Muster für jede der 17
 Ornamentgruppen zu zeichnen:
 
-    include ./components/wallpaper
+
     figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Beispiele von Zeichnungen anderer Schüler

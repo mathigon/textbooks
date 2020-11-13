@@ -1039,7 +1039,7 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 Tyvärr finns det ingen enkel anledning till att det finns _17_ av dessa grupper, och för att bevisa att det kräver mer avancerad matematik. Istället kan du prova att rita dina egna upprepade mönster för var och en av de 17 tapetgrupperna: 
 
-    include ./components/wallpaper
+
     figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings

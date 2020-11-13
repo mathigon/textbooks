@@ -1002,7 +1002,7 @@ Iako postoji beskonačno mnogo mogućih uzoraka, svi oni pripadaju jednoj od sam
 
 Nažalost, ne postoji jednostavan razlog zašto ovih grupa ima točno _17_, a dokazivanje toga zahtijeva provodi se pomoću naprednije matematike. Umjesto toga, pokušajte nacrtati vlastite ponovljene uzorke za svaku od 17 popločavanja ravnine:
 
-    include ./components/wallpaper
+
     x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Primjeri crteža drugih učenika
