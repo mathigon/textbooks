@@ -1040,7 +1040,7 @@ Yo, banana [[boy]]!
 > title: Drawing Wallpaper Symmetries
 > goals: draw-1 draw-2 switch
 
-    include ./components/wallpaper
+
     figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings

@@ -1682,7 +1682,7 @@ same as the normal [{.blue.b} height *h*](target:h). We can find the slant heigh
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=200): svg
+    x-geopad.geo-sketch.no-background(width=280 height=200): svg
       circle(x="point(140, 10)" name="a" hidden)
       circle(x="point(140, 170)" name="b" hidden)
       circle(x="point(220, 170)" name="c" hidden)
@@ -1713,7 +1713,7 @@ using the [formula](gloss:circle-sector) we derived in a previous section:_
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
+    x-geopad.geo-sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
       circle(x="point(140,110)" name="c1" hidden)
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)
@@ -2092,10 +2092,12 @@ focal points.
 If you have a long string connected to two fixed points, you can draw a perfect
 ellipse by tracing the maximum reach of the strings:
 
-{.todo} Coming soon: Ellipses drawing interactive
+    p.todo Coming soon: Ellipses drawing interactive
+    //- figure: x-ellipse
+      x-geopad(width=600 height=400 x-axis="-6,6,1" y-axis="-4,4,1"): svg.r
+        circle.move(name="a" x="point(-2,0)" project="segment(point(-4,0),point(-0.5,0))")
+        circle.move(name="b" x="point(2,0)" project="segment(point(0.5,0),point(4,0))")
 
-    // ---
-    // > id: ellipses-1
     // You can also move the focal points around. Notice how, if they are further
     // apart, the ellipse will be [[more|less]] elongated. If they are close together,
     // it will look almost like a [[circle|parabola|trapezium]].

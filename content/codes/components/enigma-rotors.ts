@@ -5,10 +5,12 @@
 
 
 import {last} from '@mathigon/core';
-import {lerp, SimplePoint} from '@mathigon/fermat';
+import {lerp} from '@mathigon/fermat';
+import {SimplePoint} from '@mathigon/euclid';
 import {$N, animate, CustomElementView, ElementView, register, SVGView} from '@mathigon/boost';
 import {Machine} from './enigma';
 import {UPPER_CASE} from './utilities';
+import template from './enigma-rotors.pug';
 
 
 const LETTER_COUNT = UPPER_CASE.length;
@@ -25,7 +27,7 @@ function setAttr($el: ElementView, name: string, value: number, animated: boolea
 }
 
 
-@register('x-enigma-rotors')
+@register('x-enigma-rotors', {template})
 export class EnigmaRotors extends CustomElementView {
   machine = new Machine();
   private yOffsets!: number[];

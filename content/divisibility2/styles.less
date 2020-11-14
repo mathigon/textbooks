@@ -1,0 +1,119 @@
+// =============================================================================
+// Divisibility and Primes
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../shared/variables";
+
+@import "./components/number-grid";
+@import "./components/prime-disk";
+@import "./components/prime-picker";
+
+
+// -----------------------------------------------------------------------------
+// Factors and Multiples
+
+x-factris { position: relative; width: fit-content; margin: 58px auto 4px; }
+
+x-factor-rect {
+  display: block;
+  margin: 0 auto;
+
+  rect, .handle { stroke: white; fill: @blue; transition: color .2s; }
+  .handle { fill: @grey; cursor: grab; }
+
+  &.green rect { fill: @green; }
+  &.yellow rect { fill: @yellow; }
+  &.purple rect { fill: @purple; }
+  rect.wrong { fill: @red; }
+}
+
+x-image-sequence { display: block; }
+
+.factor-game {
+  align-items: center;
+}
+
+.factor-game-text {
+  text-align: center;
+  width: 200px;
+  .column { margin: -70px 0; display: inline-block; width: 117px; }
+  .btn { width: 100px;}
+}
+
+.factor-game-number {
+  width: 140px !important; height: 140px;
+  line-height: 140px;
+  text-align: center;
+  background: @red;
+  border-radius: 100%;
+  color: white;
+  font-size: 36px;
+}
+
+
+// -----------------------------------------------------------------------------
+// Divisibility Rules
+
+// TODO
+
+
+// -----------------------------------------------------------------------------
+// Prime Numbers
+
+.calculator {
+  max-width: 400px;
+  background: @grey;
+  border-radius: 8px;
+  margin: 2em auto;
+  padding: 20px;
+  text-align: center;
+
+  h3 { margin: 0 0 1em; color: white; }
+
+  p { margin: 0; color: fade(white, 60%); font-size: .9em; }
+  .result { font-size: 1.2em; color: white; margin: 0; height: 30px; line-height: 1.2; }
+
+  input {
+    display: block;
+    margin: 10px auto;
+    background: @light-grey;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: black;
+  }
+
+  .loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('/images/loading-white.gif');
+    background-size: 20px 20px;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Prime Factorisation
+
+// TODO
+
+
+// -----------------------------------------------------------------------------
+// Greatest Common Factors
+
+// TODO
+
+
+// -----------------------------------------------------------------------------
+// Lowest Common Multiples
+
+// TODO
+
+
+// -----------------------------------------------------------------------------
+// Distribution of Primes
+
+// TODO

@@ -5,19 +5,21 @@
 
 
 import {delay, wait} from '@mathigon/core';
-import {Point} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {$N, ElementView, InputView, loadScript, slide, SVGView} from '@mathigon/boost';
-import {Slider, Slideshow, Step} from '../shared/types';
+import {Select, Slider, Slideshow, Step} from '../shared/types';
 
 import {beep, Beep} from './components/beep';
 import {CodeBox} from './components/code-box';
 import {MORSE_CODE} from './components/utilities';
+import {HammingCode} from './components/hamming';
 
 import './components/code-box';
 import './components/barcode';
 import './components/enigma';
 import './components/enigma-rotors';
 import './components/morse';
+import './components/hamming';
 
 
 // -----------------------------------------------------------------------------
@@ -128,6 +130,7 @@ export function transistor($section: Step) {
   let electronPositions: number[];
   const UPDATE_PERIOD = 100;
 
+  // SATELLITE: mimic here
   function move() {
     if (!switchOn) return;
     electronPositions = electronPositions.map(p => {
@@ -251,6 +254,7 @@ export function bracket($step: Step) {
 
 /**
  * Slideshow for animating decimal to binary.
+ * HAMMING: mimic this
  */
 export function dec2bin($section: Step) {
   const $slideshow = $section.$('x-slideshow') as Slideshow;
@@ -580,12 +584,9 @@ export function finger5($section: Step) {
   let i = 0;
   const delay = 300;
 
-  // FINGERZ: replace button with goal completion
-  $section.$('.appear')?.on('click', () => $fingers.forEach(
+  $section.onScore('blank-0', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
   ));
-  // I love how this looks
-
 }
 
 export function finger32($section: Step) {
@@ -594,19 +595,19 @@ export function finger32($section: Step) {
 
   const $decCaptions = $section.$$('.dec');
   const $binCaptions = $section.$$('.bin');
+  let showingBin = false;
 
   $binCaptions.forEach($f => $f.hide());
 
   let i = 0;
   const delay = 200;
-  $section.$('.appear')?.on('click', () => $fingers.forEach(
+  $section.onScore('blank-0', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
   ));
 
-  let showingBin = false;
-
-  // switch between binary and decimal display
-  $section.$('.switch')?.on('click', () => {
+  const $select = $section.$('x-select') as Select;
+  $select.on('change', ($el: ElementView) => {
+    console.log($el.data.name);
     (showingBin ? $binCaptions : $decCaptions).forEach($f => $f.hide());
     (showingBin ? $decCaptions : $binCaptions).forEach($f => $f.show());
 
@@ -657,6 +658,227 @@ export function resolution($step: Step) {
   $codeBox.encode((char: string, $el: ElementView) => {
     for (const x of MORSE_CODE[char.toLowerCase()].split('')) {
       $N('span', {class: x === '•' ? 'dash' : 'dot'}, $el);
+    }
+  });
+}
+
+export function satellite($step: Step) {
+  // SATELLITE: complete this
+  /* const $bitstream = $step.$('#bitstream') as SVGView;
+  const $trajectory = $bitstream?.$('line') as SVGView;
+  const $bits = $bitstream?.$$('text');
+
+  // SATELLITE: WAIT for new svg from designer
+  function moveBits() {
+    // There should be a timeout
+    $bits?.forEach((e, i) => {
+      // get point along trajectory
+      const xy = $trajectory.getPointAt(0);
+      // set transform dependent on the bits
+      e.setTransform(new Point(xy.x, xy.y));
+    });
+  } */
+
+  /* function stopBits() {
+    // SATELLITE: stop the bits
+  } */
+
+  const $satellites = $step.$('.satellites')!;
+
+  // from Telegraph code. Should replace w/ code to enable 1s and 0s.
+  slide($satellites, {
+    down: () => {
+      $satellites.addClass('pressed');
+    },
+    up: () => {
+      $satellites.removeClass('pressed');
+    }
+  });
+}
+
+export function hammingEncode($step: Step) {
+  const $hamming = $step.$('x-hamming') as HammingCode;
+
+  // updates the model based on the value
+  $hamming.updateModel($step.model);
+
+  // Map Blank pairs to the parity bits they represent
+  const BLANK_MAP: {[key: string]: number} = {
+    'blank-0 blank-1': 1,
+    'blank-2 blank-3': 2,
+    'blank-4 blank-5': 4,
+    'blank-6 blank-7': 8
+  };
+  Object.keys(BLANK_MAP).forEach(k => {
+    $step.onScore(k, () => {
+      $hamming.showParity(BLANK_MAP[k]);
+    });
+  });
+
+  // Slide functions.
+  const slideNext = [
+    // "Let's say..."
+    () => $hamming.noop(),
+
+    // "First we must shift..."
+    () => $hamming.makeRoomForParities(),
+    // "The parity bits will go into..."
+    () => $hamming.noop(),
+
+    // "We must figure out..."
+    () => $hamming.noop(),
+
+    // "Let's start with the first parity group..."
+    () => $hamming.highlight(1),
+    () => $hamming.noop(),
+
+    () => $hamming.highlight(2),
+    () => $hamming.noop(),
+
+    () => $hamming.highlight(4),
+    () => $hamming.noop(),
+
+    () => $hamming.highlight(8),
+    () => $hamming.noop(),
+
+    () => $hamming.showAll()
+  ];
+
+  const slideBack = [
+    () => $hamming.hideParityBits(),
+
+    () => $hamming.noop(),
+    () => $hamming.showAll(),
+
+    () => $hamming.noop(), // $hamming.hideParity(1),
+    () => $hamming.highlight(1),
+
+    () => $hamming.noop(), // $hamming.hideParity(2),
+    () => $hamming.highlight(2),
+
+    () => $hamming.noop(), // $hamming.hideParity(4),
+    () => $hamming.highlight(4),
+
+    () => $hamming.noop(), // $hamming.hideParity(8),
+    () => $hamming.highlight(8),
+
+    () => $hamming.noop()
+  ];
+
+  const $slideshow = $step.$('x-slideshow') as Slideshow;
+  $slideshow.on('next', (x: number) => {
+    if (x >= 0 && x < slideNext.length) {
+      slideNext[x]();
+    }
+  });
+
+  $slideshow.on('back', (x: number) => {
+    if (x >= 0 && x < slideBack.length) {
+      slideBack[x]();
+    }
+  });
+}
+
+export function hammingDecode($step: Step) {
+  const $hamming = $step.$('x-hamming') as HammingCode;
+
+  // parity group 1
+  $step.onScore('blank-1 blank-2', () => {
+    $hamming.markSingleBitError(1);
+  });
+
+  // parity group 4
+  $step.onScore('blank-5 blank-6', () => {
+    $hamming.markSingleBitError(4);
+  });
+
+  $step.onScore('blank-9', () => {
+    $hamming.unmarkSingleBitError(1);
+    $hamming.unmarkSingleBitError(4);
+    $hamming.markSingleBitError(5);
+  });
+
+  $step.onScore('blank-10', () => {
+    $hamming.correctDataBit(5);
+    $hamming.unmarkSingleBitError(5);
+  });
+
+  const slideNext = [
+    // "What if..."
+    () => $hamming.noop(),
+
+    // "First let's check parity group 1..."
+    () => {
+      $hamming.highlight(1);
+    },
+
+    // "Now let's check parity group 2..."
+    () => {
+      $hamming.highlight(2);
+    },
+
+    // "Now let's check parity group 4..."
+    () => {
+      $hamming.highlight(4);
+    },
+
+    // "Now let's check..."
+    () => $hamming.highlight(8),
+
+    // "We identified there is something wrong..."
+    () => {
+      $hamming.showAll();
+    },
+
+    // "Now can remove..."
+    () => {
+      $hamming.hideParityBits();
+    }
+  ];
+
+  const slideBack = [
+    // "What if..."
+    () => {
+      $hamming.showAll();
+      // $hamming.unmarkSingleBitError(1);
+    },
+    // "First let's check parity group 1..."
+    () => {
+      $hamming.highlight(1);
+    },
+    // "Now let's check parity group 2..."
+    () => {
+      $hamming.highlight(2);
+      // $hamming.unmarkSingleBitError(4);
+    },
+    // "Now let's check parity group 4..."
+    () => {
+      $hamming.highlight(4);
+    },
+    // "Now let's check parity group 8..."
+    () => {
+      $hamming.highlight(8);
+    },
+    // "We identified..."
+    () => {
+      $hamming.makeRoomForParities();
+    },
+    // "Now we can remove..."
+    () => {
+      $hamming.noop();
+    }
+  ];
+
+  const $slideshow = $step.$('x-slideshow') as Slideshow;
+  $slideshow.on('next', (x: number) => {
+    if (x >= 0 && x < slideNext.length) {
+      slideNext[x]();
+    }
+  });
+
+  $slideshow.on('back', (x: number) => {
+    if (x >= 0 && x < slideBack.length) {
+      slideBack[x]();
     }
   });
 }

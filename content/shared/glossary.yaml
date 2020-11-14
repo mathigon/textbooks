@@ -328,6 +328,11 @@ collinear:
   title: Collinear points
   text: Three or more points are __collinear__ if they lie on the same line.
 
+commutative:
+  title: Commutative Property
+  text: An operation • is __commutative__ if `a•b = b•a`. For example,
+    both addition (+) and multiplication (×) of numbers is commutative.
+
 compass:
   title: Compass
   text: A __compass__ is a drawing tool used for creating circles or arcs. It
@@ -534,6 +539,28 @@ discriminant:
     equation. If the discriminant is greater than 0, there are two solution. If it
     is equal to 0, there is just one solution. If it is less than 0, there are no
     (real) solutions.
+
+distributive:
+  title: Distributive Property
+  text: An operation • is __distributive__ over another operation * if
+    `a•(b*c) = a•b * a•c`. For example, multiplication (×) of numbers is
+    distributive over addition (+).
+
+divisibility-tests:
+  title: Divisibility Tests
+  text: |
+    __Divisibility tests__ can help you quickly decide whether a number is
+    divisibile by another.
+
+    * A number is divisible by __2__ if is even.
+    * A number is divisible by __3__ if its sum of digits is divisible by 3.
+    * A number is divisible by __4__ if its last two digits are divisible by 4.
+    * A number is divisible by __5__ if its last digit is a 0 or a 5.
+    * A number is divisible by __6__ if it is divisible by both 3 and 4.
+    * _There is no easy divisibility test for 7._
+    * A number is divisible by __8__ if its last three digits are divisible by 8.
+    * A number is divisible by __9__ if its sum of digits is divisible by 9.
+    * A number is divisible by __10__ if its last digit is a 0.
 
 dna:
   title: DNA
@@ -794,6 +821,12 @@ hailstone-sequence:
     * If `x_n` is even, `x_(n+1) = 1/2 x_n`.
     * If `x_n` is odd, `x_(n+1) = 3 x_n + 1`.
   link: /course/sequences/special#hailstone
+
+hamming-code:
+  title: Hamming Code
+  text: |
+    A __Hamming Code__ is an error-correcting code that can be used to identify
+    and correct errors in a binary sequence.
 
 heptagon:
   title: Heptagon
@@ -1349,6 +1382,13 @@ protractor:
   title: Protractor
   text: A __protractor__ is a tool used to measure an angle in degrees.
 
+punch-card:
+  title: Punch Card
+  text: |
+    A __punch card__ is a stiff paper card in which holes can be punched to
+    represent computer data or instructions. These were fed into a card reader
+    and converted into electrical signals, which were processed by the computer.
+
 pythagoras-theorem:
   title: Pythagoras’ theorem
   text: __Pythagoras’ theorem__ states that in every right-angled triangle,
@@ -1735,6 +1775,12 @@ tetrahedron:
   text: The __tetrahedron__ is a Platonic solid and consists of four faces that
     are equilateral triangles. It has four vertices and six edges.
   link: /course/polyhedra/platonic#platonic-overview
+
+tetris:
+  title: Tetris
+  text: __Tetris__ is a popular video game that was first published in 1984.
+    Players have to move falling tetrominoes (shapes consisting of four
+    connected squares) to complete entire rows.
 
 theorem:
   title: Theorem

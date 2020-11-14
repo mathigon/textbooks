@@ -5,7 +5,8 @@
 
 
 import {EventTarget, list, run} from '@mathigon/core';
-import {clamp, nearlyEquals, Point, Segment, SimplePoint, Vector} from '@mathigon/fermat';
+import {clamp, nearlyEquals, Vector} from '@mathigon/fermat';
+import {Point, Segment, SimplePoint} from '@mathigon/euclid';
 import {$N, animate, ElementView, slide, SVGParentView, SVGView} from '@mathigon/boost';
 
 

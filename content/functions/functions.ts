@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import './components/relation';
+import '../shared/components/relation';
 import {Step} from '../shared/types';
 
 
