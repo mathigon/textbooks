@@ -283,8 +283,15 @@ Here is how other students answered this question.
 
 To check our estimate, imagine the Dockland Office Building was actually three separate buildings on barges or cranes that could be moved around to create different possible arrangements. The red lines show the imaginary separation of the three pieces. Move around some of the pieces to make a rectangle.
 
-    // [TODO] INTERACTIVE-01: Building rectangle (pages 4-5)
 ---
+
+> id: boat-building
+> goals: arranged
+
+    // INTERACTIVE-01: Building rectangle (pages 4-5)
+    figure: x-geopad(width=600, height=400)
+      svg
+
 ---
 
 Super!
@@ -298,24 +305,54 @@ Some students found an estimate of the amount of glass by multiplying the measur
 So, these students did [[70 x 132]] which equals 9,240 [[square meters]]. This estimate is over [[5,000 | 1,000 | 500]] [[square meters | meters]] away from the actual answer! This is about 2.5 times more than the actual area! So, multiplying these measurements [[does not | does]] come close to the area of this shape. In this chapter, we’ll work towards developing a formula to find the area of this kind of shape.
 
 ---
+
+> id: glass-area
+
 Below is an architect’s initial idea for part of a building. Each square represents one square meter of glass and the architect needs to plan for steel going around the entirety of the glass section.
 
-    // [TODO] INTERACTIVE-02 Glass area (page 6)
+    // INTERACTIVE-02 Glass area (page 6)
+    figure: .glass-area
+      x-polypad
 
 The total amount of glass needed is the [[area | perimeter]] of the shape and is measured in [[square meters | meters]]. The amount of steel needed to surround the glass is the [[perimeter | area]] of the shape and is measured in [[meters | square meters]]. 
 
-The area is [[12]] [square meters | meters | square centimeters]] and the perimeter is [[14]] [meters | square meters | centimeters]]. 
+_{span.reveal(when='blank-0 blank-1 blank-2 blank-3')}The area is [[12]] [[square meters | meters | square centimeters]] and the perimeter is [[14]] [[meters | square meters | centimeters]]._
 
-    // [TODO] Table, pairs with INTERACTIVE-02 above
+    // Table, pairs with INTERACTIVE-02 above
+    table.reveal(when='blank-0 blank-1 blank-2 blank-3')
+      tr
+        th Field #
+        th Area
+        th Perimeter
+      tr
+        td 1
+        td.reveal(when='blank-4') 12
+        td.reveal(when='blank-6') 14
+      tr
+        td.reveal(when='figure-2') 2
+        td.reveal(when='figure-2') 12
+        td.perimeter2
+      tr
+        td.reveal(when='figure-3') 3
+        td.reveal(when='figure-3') 12
+        td.perimeter3
+
+::: .reveal(when='blank-4 blank-5 blank-6 blank-7')
 
 Move around the square pieces of glass to make a different shape that uses the same amount of glass. When you have one you like, click “I’m happy with my shape.”
 
-Great work! Now make a different arrangement and then click “I’m happy with my shape” when you’re done.
+_{button.btn.submit-shape} I’m happy with my shape_
+
+:::
+
+_{span.reveal(when='figure-2')}Great work! Now make a different arrangement and then click “I’m happy with my shape” when you’re done._
+
 ---
 
 Look at the data in the table. Notice that all the arrangements have the same [[area | perimeter]], but they don’t have the same [[perimeter | area]].
 
 ---
+
 Let’s look at how some other students approached this task. Watch each one and decide if the new arrangement has maintained the same amount of glass as the original design:
 
     // [TODO] ANIMATION-01: Glass area animations (page 7)
@@ -327,26 +364,41 @@ In fact, this is such an important idea, it is going to stay with us for the res
 When moving around parts of a shape, as long as no parts overlap and all parts of the shape are used, the total area stays the same even as the perimeter likely changes.
 
 ---
+
+> id: dough
+
 Below is some cookie dough and some square cookie cutters. Place 4 cookie cutters on the dough to get a sense of how many cookies you can make with this amount of dough.
 
-    // [TODO] INTERACTIVE-04: Cookie dough cutting (pages 8-9)
+    // INTERACTIVE-03: Cookie dough cutting (pages 8-9)
+    figure: x-geopad(width=600 height=400)
+      svg
 
-Super! How many cookies do you think you’ll be able to make? Just make a guess: ____ cookies. This is same as the [[area | perimeter ]] of cookie dough.
+_{span.reveal(when='cutters-placed')}Super! How many cookies do you think you’ll be able to make? Just make a guess: __TODO: BLANK__ cookies. This is same as the [[area | perimeter ]] of cookie dough._
+
 ---
+
+> id: dough-2
 
 To determine the exact area, let’s move around some of the cookie dough, keeping in mind our big idea of moving around parts of shapes. Use the knife to cut off some of the dough and move it around the pan to arrange the dough into a rectangle.
 
-    // [TODO] INTERACTIVE-05: Dough cutting 2 (pages 9-11)
+    // INTERACTIVE-04: Dough cutting 2 (pages 9-11)
+    figure: x-geopad(width=600 height=400)
+      svg
 
-Great. We [[did not | did]] overlap any of the dough and we [[did | did not]] use all the dough, so the area of this new dough is [[the same | not the same]] as the area of the original dough.
+_{span.reveal(when='dough-arranged')}Great. We [[did not | did]] overlap any of the dough and we [[did | did not]] use all the dough, so the area of this new dough is [[the same | not the same]] as the area of the original dough._
 
-To determine the area of the dough, drag in squares or simply click the Auto-fill button.
+_{span.reveal(when='blank-0 blank-1 blank-2')}To determine the area of the dough, drag in squares or simply click the Auto-fill button._
+
+::: .reveal(when='area-filled')
 
 Great! Click play on the animation to see the triangle move back and forth.
 
 The area of the rectangle we made is [[15]] [[square units | units]], and the area of the rectangle is [[the same | different]] than the area of the original cookie dough. So, the area of the original dough is [[15]] [[square units | units]]. Your original guess was ___ square units. Nice! Only ___ square units away!
 
+:::
+
 ---
+
 Great. Let’s keep thinking about this idea. Below is another piece of cookie dough. Rotate the dough so it can fit on the baking sheet.
 
     // [TODO]? (DISCUSS: possibly redundant) INTERACTIVE-05: Dough cutting 3 (pages 12)
@@ -354,6 +406,7 @@ Great. Let’s keep thinking about this idea. Below is another piece of cookie d
 Nice! Now, use the knife to cut off one piece of dough. Move that piece around so the dough makes a rectangle.
 
 ---
+
 The area of the new rectangle is [[70]] [[square cm | cm ]]. 
 
 We [[did not | did]] overlap any of the pieces and we [[did | did not]] use all the area, so the area of the rectangle is [[the same | not the same]] as the area of the original dough. So, the area of the dough is also [[70]] [[square cm | cm ]]. 
@@ -390,8 +443,15 @@ You likely notice that all these shapes have [[4]] sides and the opposite sides 
 
 Great! It should make sense then that these shapes are called [[parallelograms | trapezoids | hexagons]].  ANY quadrilateral with parallel opposite sides is a parallelogram. Below, click on all the shapes that are parallelograms:
 
-    // [TODO] INTERACTIVE-08: Parallelogram selection (page 16)
 ---
+
+> id: identify-parallelograms
+> goals: selected
+
+    // INTERACTIVE-07: Parallelogram selection (page 16)
+    figure: .parallelogram-selection
+      include svg/shapes.svg
+
 ---
 
 Great!
@@ -410,14 +470,20 @@ Imagine there is a rule in the Hamburg harbor that all buildings must be less th
 
 Great! Notice that the line representing the height of the building makes a [[right | acute | obtuse]] angle with the bottom length.
 
-Many apartment buildings in cities around the world have staircases on the exterior of the buildings for residents to use in case of emergencies. Here is a picture of one in Harlem, New York City. Imagine the two balconies on each floor were instead one large balcony. Draw a parallelogram on top of the picture to represent this.
 ---
 
+> id: apartments
+
+Many apartment buildings in cities around the world have staircases on the exterior of the buildings for residents to use in case of emergencies. Here is a picture of one in Harlem, New York City. Imagine the two balconies on each floor were instead one large balcony. _{button.btn.show-parallelogram} Show parallelogram_
+
     // [TODO] INTERACTIVE-08: Apartments parallelogram (pages 18-19)
+    figure: x-geopad(width=600 height=400)
+      svg
 
 Imagine you need to know the height between the two balconies. Draw a line representing this height.
 
 ---
+
 Great! Is seems that this yellow line [[is not | is]] the same lengths as the ladders.
 
 Good thought. Let’s check it.
@@ -516,25 +582,53 @@ As part of any building design process, architects need to calculate how much of
 
 ---
 
+> id: world-trade-center
+> goals: arranged
+
 Let’s calculate the amount of glass needed to make one of the triangles. In the parallelogram chapter, we moved around parts of a parallelogram into a rectangle. Use the two copies of the triangle to create a parallelogram or a rectangle.
 
     // INTERACTIVE-01 (pages 2-3)
+    figure: .wtc
+      x-polypad
+
 ---
 
 We’ve used two identical triangles to create a parallelogram. The area of the triangle is [[half | double]] of the area of the parallelogram and can be found by doing base x height. We just need to make sure the height forms a [[right | acute | obtuse]] angle with the base. The area of the parallelogram is [[21,960]] square meters. So, the area of the triangle is [[10,980]] square meters.
 
 ---
+
+> id: congruent-triangles
+> goals: arranged
+
 We just used two congruent triangles to create a [[parallelogram | triangle | pentagon]]. Do the same on these triangles.
+
+_{button.btn.copies} Make copies_
+
     // INTERACTIVE-02 (page 4)
+    figure: .congruent-tris
+      x-polypad
+
 ---
 
 It seems that when we create a copy of a triangle, we can use those two identical pieces to create a [[parallelogram | circle | hexagon]] that is [[double | triple | half ]] the size of the triangle.
 
 ---
+
+> id: area-3
+> goals: complete
+
 Now, let’s use this idea to find the area of the triangle below.
+
     // INTERACTIVE-03 (page 5)
+    figure: .area
+      x-polypad
+      x-geopad(width=600 height=400)
+        svg
+
 Start by creating a parallelogram from two of the triangles.
+
 _{span.reveal(when='arranged')}Now, let’s find the area of the parallelogram. Click on the side of the parallelogram you’d like to use as the base._
+
 _{span.reveal(when='side-selected')}Draw in the height that matches up with the base you’ve chosen. We call exact matches like this “corresponding.”_
 
 ---
@@ -546,9 +640,41 @@ The area of the parallelogram is [[    ]] square cm. The parallelogram is made u
 We can generalize this approach to create a process for finding the area of any triangle. Every triangle can be seen as [[a half of | a third of | double]] a parallelogram. The formula for the area of a parallelogram is b x h, so the formula for the area of a triangle must be `(b * h) / input(2)`. We can also write this as `input(1) / input(2) * b * h`. Great! We can now add this formula to our toolkit!
 
 ---
+
+> id: triangle-bases
+> goals: a-done b-done c-done
+
 Just as any side of a parallelogram can be used as the base, any side of a triangle can be used as the base when finding the area of the triangle.
 
     // INTERACTIVE-04 (pages 6-8)
+
+::: tab
+
+#### Side A _{span.check(when="a-done")}_
+
+    figure: .side-a
+      x-geopad(width=600 height=200)
+        svg
+
+::: tab
+
+#### Side B _{span.check(when="b-done")}_
+
+    figure: .side-b
+      x-geopad(width=600 height=200)
+        svg
+
+::: tab
+
+#### Side C _{span.check(when="c-done")}_
+
+    figure: .side-c
+      x-geopad(width=600 height=200)
+        svg
+
+:::
+
+
 ---
 
 We see that when using the formula Area of a Triangle = ½ x b x h , we can use ANY side as the base as long as we choose the height that makes a [[right | acute | obtuse]] angle with the chosen base. Sometimes, as we saw in the last example, the base we select will create a height that is OUTSIDE the triangle.
@@ -570,8 +696,17 @@ The top concrete block of this climbing structure looks pretty close to a triang
 The height of the climber off the ground is the same as the [[height | base ]] of the triangle!
 
 ---
+
+> id: triangle-selection
+
 Knowing that the formula for the area of a triangle is ½ x b x h is nice, but we need to make sure we can correctly identify the correct height for each base. All the triangles below have possible base-height pairs highlighted in green. Click on triangles that have base-height pairs that could correctly be used to find the area of the given triangle.
+
     // [TODO]: INTERACTIVE-05 (pages 9-11)
+    figure: .tri-select
+      // [TODO]: run through imageoptim (preserve ids/classes)
+      include svg/tris.svg
+
+
 _{span.reveal(when='clicks')}Now, for each incorrect base-height pair, move the green line that is the incorrect height into the correct position so it is indeed the height matched up with the green base._
 
 ---
