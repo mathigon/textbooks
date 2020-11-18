@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="100%" height="100%" viewBox="0 0 600 400" version="1.1" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;" xmlns="http://www.w3.org/2000/svg">
+  <g id="tri1">
+    <title>tri1</title>
+    <path id="original1" d="M22.861,25.999L188.494,95.836L22.861,95.836L22.861,25.999Z" style="fill:rgb(162,232,255);">
+      <title>original</title>
+    </path>
+    <path id="partner1" d="M188.494,95.836L22.861,25.999L188.494,25.999L188.494,95.836Z" style="fill: rgb(255, 162, 33); opacity: 0;">
+      <title>partner</title>
+    </path>
+    <path id="base" d="M22.861,95.836L188.494,95.836" style="fill:none;stroke:rgb(164,255,115);stroke-width:2px;">
+      <title>base</title>
+    </path>
+    <path id="height" d="M22.861,25.999L22.861,95.836L22.861,25.999Z" style="stroke:rgb(164,255,115);stroke-width:2px;">
+      <title>height</title>
+    </path>
+  </g>
+  <g id="t2">
+    <title>tri2</title>
+    <path id="original2" d="M27.72,163.637L210.695,175.448L81.787,205.529L27.72,163.637Z" style="fill:rgb(162,232,255);">
+      <title>original</title>
+    </path>
+    <path id="partner2" d="M210.695,175.448L27.72,163.637L156.628,133.556L210.695,175.448Z" style="fill: rgb(255, 162, 33); opacity: 0;">
+      <title>partner</title>
+    </path>
+    <path id="base1" d="M81.787,205.529L210.695,175.448" style="fill:none;stroke:rgb(164,255,115);stroke-width:2px;">
+      <title>base</title>
+    </path>
+    <path id="height1" d="M27.72,163.637L39.783,215.331L27.72,163.637Z" style="stroke:rgb(164,255,115);stroke-width:2px;">
+      <title>height</title>
+    </path>
+  </g>
+  <g id="tri3">
+    <title>tri3</title>
+    <path id="original3" d="M109.421,262.075L166.67,345.653L43.415,319.433L109.421,262.075Z" style="fill:rgb(162,232,255);">
+      <title>original</title>
+    </path>
+    <path id="partner3" d="M166.67,345.653L109.421,262.075L232.676,288.295L166.67,345.653Z" style="fill: rgb(255, 163, 33); opacity: 0;">
+      <title>partner</title>
+    </path>
+    <path id="base2" d="M43.415,319.433L166.67,345.653" style="fill:none;stroke:rgb(164,255,115);stroke-width:2px;">
+      <title>base</title>
+    </path>
+    <path id="height2" d="M109.421,262.075L94.889,330.383L109.421,262.075Z" style="stroke:rgb(164,255,115);stroke-width:2px;">
+      <title>height</title>
+    </path>
+  </g>
+</svg>
