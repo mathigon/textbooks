@@ -502,7 +502,125 @@ Use the information provided to find the area of the house. [[ --- ]] [[square m
 > section: triangles
 > sectionStatus: dev
 
-[TODO]
+The One World Trade Center skyscraper in New York City is one of the tallest buildings in the world. The building was opened in 2014 after 8 years of construction. The building is also known as the Freedom Tower and is built on the site of the former Twin Towers that were destroyed in a terrorist attack on September 11th, 2001.
+
+    // [TODO]: IMAGE
+
+A rectangular structure forms the base of the tower. Then, 8 triangles make up the design of the remaining exterior of the tower.
+
+    // [TODO]: IMAGES
+
+As part of any building design process, architects need to calculate how much of each material will be needed for construction - steel, concrete, glass, etc. Each side of the base structure is a rectangle that measures 61 meters wide and 56 meters tall. So, the amount of glass needed for one side of the base is [[3,416 ]] square meters.
+
+    // [TODO]: IMAGE
+
+---
+
+Let’s calculate the amount of glass needed to make one of the triangles. In the parallelogram chapter, we moved around parts of a parallelogram into a rectangle. Use the two copies of the triangle to create a parallelogram or a rectangle.
+
+    // INTERACTIVE-01 (pages 2-3)
+---
+
+We’ve used two identical triangles to create a parallelogram. The area of the triangle is [[half | double]] of the area of the parallelogram and can be found by doing base x height. We just need to make sure the height forms a [[right | acute | obtuse]] angle with the base. The area of the parallelogram is [[21,960]] square meters. So, the area of the triangle is [[10,980]] square meters.
+
+---
+We just used two congruent triangles to create a [[parallelogram | triangle | pentagon]]. Do the same on these triangles.
+    // INTERACTIVE-02 (page 4)
+---
+
+It seems that when we create a copy of a triangle, we can use those two identical pieces to create a [[parallelogram | circle | hexagon]] that is [[double | triple | half ]] the size of the triangle.
+
+---
+Now, let’s use this idea to find the area of the triangle below.
+    // INTERACTIVE-03 (page 5)
+Start by creating a parallelogram from two of the triangles.
+_{span.reveal(when='arranged')}Now, let’s find the area of the parallelogram. Click on the side of the parallelogram you’d like to use as the base._
+_{span.reveal(when='side-selected')}Draw in the height that matches up with the base you’ve chosen. We call exact matches like this “corresponding.”_
+
+---
+
+The area of the parallelogram is [[    ]] square cm. The parallelogram is made up of two congruent triangles, so the area of the triangle is [[   ]] square cm.
+
+---
+
+We can generalize this approach to create a process for finding the area of any triangle. Every triangle can be seen as [[a half of | a third of | double]] a parallelogram. The formula for the area of a parallelogram is b x h, so the formula for the area of a triangle must be `(b * h) / input(2)`. We can also write this as `input(1) / input(2) * b * h`. Great! We can now add this formula to our toolkit!
+
+---
+Just as any side of a parallelogram can be used as the base, any side of a triangle can be used as the base when finding the area of the triangle.
+
+    // INTERACTIVE-04 (pages 6-8)
+---
+
+We see that when using the formula Area of a Triangle = ½ x b x h , we can use ANY side as the base as long as we choose the height that makes a [[right | acute | obtuse]] angle with the chosen base. Sometimes, as we saw in the last example, the base we select will create a height that is OUTSIDE the triangle.
+
+---
+
+    // [TODO]: Animation-01 (page 8)
+
+---
+
+Visualizing the height outside of a triangle can sometimes be difficult. Let’s look at an actual triangle to help.
+
+    // [TODO]: Animation-02 (pages 8-9)
+
+---
+
+The top concrete block of this climbing structure looks pretty close to a triangle. Imagine this concrete block much bigger and much higher off the ground.
+
+The height of the climber off the ground is the same as the [[height | base ]] of the triangle!
+
+---
+Knowing that the formula for the area of a triangle is ½ x b x h is nice, but we need to make sure we can correctly identify the correct height for each base. All the triangles below have possible base-height pairs highlighted in green. Click on triangles that have base-height pairs that could correctly be used to find the area of the given triangle.
+    // [TODO]: INTERACTIVE-05 (pages 9-11)
+_{span.reveal(when='clicks')}Now, for each incorrect base-height pair, move the green line that is the incorrect height into the correct position so it is indeed the height matched up with the green base._
+
+---
+
+Now that we’ve developed a deep understanding of finding the area of triangles, find the areas of the two triangles below. Select the line you want to use as the base and then draw in the correct height.
+
+    // [TODO]? (DISCUSS may be redundant): INTERACTIVE-06 (page 11)
+
+The area of the first triangles is [[  ]] square cm and the area of the second triangle is [[   ]] square cm.
+
+---
+
+Now, think about the perimeter of each triangle above. When finding the perimeter of each of these triangles, the height [[ is | is not | is sometimes]] part of the perimeter. Click on any line in the triangle to find it’s length.
+
+The perimeter of the first triangles is [[  ]] [[cm | square cm]] and the area of the second triangle is [[   ]] cm.
+
+---
+
+    // [TODO]: ANIMATION-03 (page 12)
+
+---
+
+Each triangle has a base of [[4]] and a height of [[5]], so the area of each triangle is [[10]] square cm.
+
+---
+
+Make 3 more triangles that have the exact same base and also have a height of 5.
+
+    // [TODO]? (DISCUSS to clarify UX): INTERACTIVE-07 (page 12)
+
+Create one more triangle with the same base and same area, but with the smallest perimeter possible.
+
+---
+
+Notice that the triangle with the smallest area has a base of 4 and two other sides that are [[equal | different]] in length. You may recall that this is called an isosceles triangle.
+
+---
+
+So far, we’ve been using two congruent triangles to create a parallelogram that is double the area of one of the triangles. However, there are other options as well.
+
+    // [TODO]: ANIMATION-04 (page 13-15)
+
+In the first two approaches, the original triangle and the copy was used to make a parallelogram. So the area of the parallelogram is [[twice | equal to]] the area of the triangle. In the last approach, the triangle was cut into pieces and the pieces were used to make a parallelogram, so the area of the parallelogram is [[equal to | twice]] the area of the triangle. Notice in the third example, the height of the parallelogram is [[half | equal to]] of the height of the original triangle.
+
+---
+
+We use rectangles, parallelograms and triangles to estimate the area of different countries.
+
+    // [TODO] (DISCUSS to clarify UX): INTERACTIVE-08 (pages 15-17)
 
 ---
 
@@ -1377,7 +1495,7 @@ At a local pizza place, Tetromino’s Pizza, 1 large pizza costs the same as 2 m
 
 > id: slicing-1
 
-As we’ve done in previous chapters, let’s use what we know about polygons to help us understand the area of circles  Estimate the area of each pizza by cutting them into 8 equal triangles.
+As we’ve done in previous chapters, let’s use what we know about polygons to help us understand the area of circles. Estimate the area of each pizza by cutting them into 8 equal triangles.
 
     // INTERACTIVE-01: Pizza slicing (pages 1-2)
     figure: x-geopad(width=1000 height=400)
