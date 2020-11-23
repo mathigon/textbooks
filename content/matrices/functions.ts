@@ -336,3 +336,35 @@ export function introInverses($step:Step) {
     // $transforms[i].disable()
   });
 }
+
+export function calculateInverse($step: Step) {
+  const $geopad = $step.$('.inverse-row')?.$('x-geopad') as Geopad;
+
+  const I = Matrix.identity(2);
+
+  drawUnitVectorsToGeo($geopad, I, 'shear');
+
+  const $transform = $step.$('.inverse-row')?.$('.transform') as ElementView;
+  const matrix = [
+    [[1, 0], [1, 1]]
+  ];
+
+  // it just goes back to normal so we don't need these
+  /* const inverses = [
+    [[0.5, 0], [0, 0.5]],
+    [[0.5, 0], [0, 0.5]],
+    [[0.5, 0], [0, 0.5]]
+  ]; */
+  const $reverse = $step.$('.inverse-row')?.$('.reverse') as ElementView;
+
+  $transform.on('click', () => {
+    animateTransformationOnGeo($geopad,
+        `ishear`, `jshear`, matrix[0], 300);
+  });
+
+  $reverse.on('click', () => {
+    animateTransformationOnGeo($geopad,
+        `ishear`, `jshear`, I, 300);
+  });
+  // $transforms[i].disable()
+}

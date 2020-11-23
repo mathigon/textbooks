@@ -1231,47 +1231,77 @@ How is the inverse of a matrix calculated? Let's compare matrix multiplication t
 - Given **x**, adding 7 and then subtracting 7 is the same as adding by [[0]] (which does not change **x**)**.**
 - Given a vector **v**, multiplying by the matrix **A** and the inverse of that matrix **`A^(-1)`** will be the same as multiplying by [[the identity matrix|a matrix of all ones|a matrix of all zeros|one]], which does not change **v.**
 
+{.text-center.big-equation} `A^(-1)•A=I`
 
-    figure: img(src="images/proto-4/Untitled.png")
+Another way to write this is:
+
+{.text-center.big-equation} `A^(-1)•A•v = v = I•v`
+
+{.text-center.big-equation} `A^(-1)•A = I`
 
 
-Another way to write this is 
-
-```markdown
-**A * `A^(-1)` v = v = I v
-A * `A^(-1)` = I**
-```
-
-**Example**
+#### Example
 
 As an example, let's look at a shear in the x-direction and calculate its inverse transformation.
 
+{.text-center} `§[[e f] [g h]]`•`§[[1 1] [0 1]]`=`§[[1 0] [0 1]]`
+
 - [ ]  **x-geopad:matrix([1 1, 0 1])**
 
-```markdown
 x-algebra
 
-*** the inverse times the shear matrix is the identity matrix**
-`A^(-1)` [1 1, 0 1] = I
+{.text-center} `A^(-1)`• `§[[1 1] [0 1]]` = I
 
-*** give our inverse variable names**
-[e f, g h][1 1, 0 1] = [1 0, 0 1]
+{.caption} the inverse times the shear matrix is the identity matrix
 
-*** expand into a system of equations**
-...solve this for e,f,g,h (see Docs)
-...
-...
 
-*** answer**
+{.text-center} `§[[e f] [g h]]`•`§[[1 1] [0 1]]`=`§[[1 0] [0 1]]`
+
+{.caption} give our inverse variable names**
+
+
+{.text-center} `§[[e e+f] [g g+h]]` = `§[[1 0] [0 1]]`
+
+{.caption} expand into a system of equations
+
+::: tab
+#### Solve for e and f
+
+We know that `e = 1` and `e + f = 0`
+
+Sub `e = 1` into `e+f = 0` and get f = [[-1]]
+
+::: tab
+#### Solve for g and h
+
+We know that `g = 0` and `g + h = 1`
+
+Sub `g = 0` into `g + h = 1` and get h = [[1]]
+
+:::
+
+**Answer**
+
 `A^(-1)` = [1 -1, 0 1]
 
-* **confirm that we get Identity Matrix when we multiply**
+<table>
+  <tr><td>[[1]]</td><td>[[-1]]</td></tr>
+  <tr><td>[[0]]</td><td>[[1]]</td></tr>
+</table>
+
+---
+
+{.fixme} confirm that we get Identity Matrix when we multiply
 [1 -1, 0 1]x[1 1, 0 1] = [1 0, 0 1]
-```
 
 Notice that this inverse matrix is simply a shear matrix in the opposite direction – which is what you would expect!
 
-- [ ]  **x-geopad:** can apply transformations **A** and **`A^(-1)`**
+    .inverse-row
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+          .buttons
+            .button.transform A
+            .button.reverse INVERSE
 
 ---
 > id: inverse-formula
