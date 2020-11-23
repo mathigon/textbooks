@@ -1183,8 +1183,294 @@ Let's see why this is true geometrically.
 
 > section: inverses
 > sectionStatus: dev
+> id: inverses
 
-{.todo} COMING SOON
+### Intro: Inverse as the reverse of a transformation
+
+Every 2x2 matrix can be thought of as a linear transformation. What does it mean to "undo" a linear transformation? 
+
+{.fixme} Have a more interesting example here, why undoing a transformation is useful?
+
+**Examples/Interactive:** Each of these transformations has a respective transformation that will reverse it and send each point back to their original location.
+
+```markdown
+- rotate by 90º, rotate by -90º
+- scale by 2, scale by 1/2
+- reflect across y-axis, reflect back across y-axis
+```
+
+Matrix transformations are just like the simple mathematical operators addition and multiplication, in that they can be undone by multiplying by the [inverse matrix](gloss:inverse-matrix).
+
+{.fixme} Explain that `A^(-1) ≠ 1/A`
+
+- When we multiply a number **x** by 3, we can undo that operation by multiplying by [[1/3]].
+- When we add 7 to a number **x**, we can undo that operation by adding [[-7]].
+- When we apply a transformation **A** to a vector **v**, we can undo that operation by multiplying by the [[inverse|obverse|converse|reciprocal]] of **A**.
+
+The **inverse matrix** of **A** is the matrix that undoes the transformation of **A**. This means When the inverse is applied, all of the points will go back to their original position. We use __`A^(-1)`__ to denote the inverse of matrix **A.**
+
+---
+> id: calculate-inverse
+
+### Example: calcuating **an inverse matrix**
+
+How is the inverse of a matrix calculated? Let's compare matrix multiplication to our basic operations again.
+
+- Multiplying **x** by 3 and 1/3 is the same as multiplying it by [[1]] (which does not change **x**).
+- Given **x**, adding 7 and then subtracting 7 is the same as adding by [[0]] (which does not change **x**)**.**
+- Given a vector **v**, multiplying by the matrix **A** and the inverse of that matrix **`A^(-1)`** will be the same as multiplying by [[the identity matrix|a matrix of all ones|a matrix of all zeros|one]], which does not change **v.**
+
+
+    figure: img(src="images/proto-4/Untitled.png")
+
+
+Another way to write this is 
+
+```markdown
+**A * `A^(-1)` v = v = I v
+A * `A^(-1)` = I**
+```
+
+**Example**
+
+As an example, let's look at a shear in the x-direction and calculate its inverse transformation.
+
+- [ ]  **x-geopad:matrix([1 1, 0 1])**
+
+```markdown
+x-algebra
+
+*** the inverse times the shear matrix is the identity matrix**
+`A^(-1)` [1 1, 0 1] = I
+
+*** give our inverse variable names**
+[e f, g h][1 1, 0 1] = [1 0, 0 1]
+
+*** expand into a system of equations**
+...solve this for e,f,g,h (see Docs)
+...
+...
+
+*** answer**
+`A^(-1)` = [1 -1, 0 1]
+
+* **confirm that we get Identity Matrix when we multiply**
+[1 -1, 0 1]x[1 1, 0 1] = [1 0, 0 1]
+```
+
+Notice that this inverse matrix is simply a shear matrix in the opposite direction – which is what you would expect!
+
+- [ ]  **x-geopad:** can apply transformations **A** and **`A^(-1)`**
+
+---
+> id: inverse-formula
+
+### **The general formula for an inverse matrix**
+
+Let's derive this formula:
+
+    figure: image(src="images/proto-4/Screenshot_2020-11-23_at_12.16.18.png")
+
+More generally the equation for the inverse of a 2x2 matrix [a b, c d] is:
+
+    figure: image(src="images/proto-4/Untitled%201.png")
+
+The equation for the inverse of a two-by-two matrix.
+
+*(we could show how multiplying the inverse x A gives the Identity Matrix)*
+
+What is the value in the [{.pill.red}denominator](target:denominator)? This is the [[determinant]].
+
+Notice that if the determinant is zero then we cannot divide by zero. These are a specific type of matrix we will talk about later.
+
+    figure: image(src="images/proto-4/Untitled%202.png")
+
+Inverse equation with determinant
+
+---
+> id: rotation-inverse
+
+### Example: Inverse of a Rotation Matrix
+
+In chapter 1 we derived the matrix representing a rotation through the angle *theta*. The inverse of this matrix will be the rotation through the angle [[-theta]]. Verify that a rotation matrix by -øº is the same as the inverse of a rotation matrix by øº.
+
+```markdown
+*** Here is the rotation matrix through ø**
+A = | cosø   -sinø  |
+    | sinø    cosø  |
+
+*** To find the inverse, first calculate the determinant**
+det(A) = cos(ø)^2 + sin(ø)^2
+*** This is 1**
+det(a) = 1
+*** So the term 1/det(A) is 1**
+
+* **Inverse**
+`A^(-1)` = |  cosø   sinø  |
+      | -sinø   cosø  |
+
+*** Think about a unit circle to see why these are true**
+cos(ø) = cos(-ø)
+sin(ø) = -sin(-ø)
+
+*** Now substitute**
+`A^(-1)` =  |  cos(-ø)   -sin(-ø) |
+       |  sin(-ø)    cos(-ø) |
+
+*** We have proved it!**
+```
+
+---
+
+Verify that a rotation matrix by -x° is the same as the inverse of a rotation matrix by x°.
+
+{.fixme} Add some examples where students have to calculate inverses to solve problems.
+
+- **Possibilities**
+    - Ray Tracing?
+    - Linear Regression?
+    - Calculating the probability that you were in a previous step in a Markov Chain
+    - Linear programming, optimization?
+
+---
+> id: inverse-intersection
+
+### **Inverse matrices for solving line intersection**
+
+There is another way we can look at matrices. Observe the following graph of two lines with the following equations. What if we want to find the intersection of these two lines?
+
+    figure: img(src="images/proto-4/Untitled%204.png")
+
+    figure: img(src="images/proto-4/Untitled%205.png")
+
+y = x + 4 and y = 2x + 2
+
+We can already observe that the lines intersect at point (2, 6). But there's also a way to solve this with matrices. How? We can rewrite these two lines as a **system of equations**, and then treat is as a matrix multiplication problem.
+
+```markdown
+*** write the two equations**
+     y = x + 4         y = 2x + 2
+
+*** now put variables on one side for both**
+-x + y = 4       -2x + y = 2
+
+*** now line up the variables**
+-1*x + 1*y = 4
+-2*x + 1*y = 2
+
+* **now write it as a matrix multiplication**
+[ -1  1 ] | x | = | 4 |
+[ -2  1 ] | y | = | 2 |
+
+*** we can solve for [x, y] by finding the inverse and multiplying by [4, 2]**
+* **find the inverse**
+1/det * [ 1 -1, 2 -1 ]
+
+*** find the determinant**
+det = a * d - b * c = -1 - (-2) = 1
+det = 1
+
+*** this is our inverse matrix**
+[ 1 -1, 2 -1 ]
+
+*** now perform matrix multiplication against [4 2]**
+[  1  -1 ] | 4 |   | x |
+[  2  -1 ] | 2 | = | y |
+
+*** simplify**
+x = [ 4 - 2 ] = 2
+y = [ 8 - 2 ] = 6
+
+*** indeed, the intersection point is...**
+(2, 6)
+```
+
+Lesson: this was a long way to solve a problem we already knew the answer to, but it shows that we can use matrices for more than just transformations! This type of matrix calculation is very useful for higher order problems. There are better ways to solve multi-dimensional matrix problems, as we will see next chapter. 
+
+{.fixme} Again, I think we should have 1-2 examples where students can find the intersection of two lines.
+
+
+--- 
+> id: singular-matrices
+
+### Singular matrices (swap after next)
+
+The formula for the inverse of a matrix contains a determinant in the denominator. This will give us a problem when the determinant of a matrix is [[zero]]. The inverse [[cannot be calculated]]! 
+
+Matrices with determinant zero are called **singular matrices**, meaning they do not have an inverse.
+
+This is just like the number 0 which has no inverse: You can multiply by 0, but you cannot divide by 0.
+
+Recall last chapter how the determinant of a matrix represents what happens when we apply that matrix's transformation to a set of points. If the determinant is zero, then the resulting area of the transformed space will be [[zero]]. 
+
+    figure: img(src="images/proto-4/Untitled%203.png")
+
+zero determinant
+
+{.fixme} I would maybe explain this with 1:1 or many:1 functions. A matrix transform is a 1:1 function. For every input, there is one, unique output. That makes it easy to invert it. For singular matrices, lots of points get mapped to the same output, so there is no way to tell where you came from.
+
+Does it make sense that a matrix with a transformation that collapses space onto zero area will not have an inverse? If the area is zero, no matter what point is put into the transformation, the resulting point will [[lie along the same line]].
+
+This transformation has squeezed space onto a single line. 
+
+There are no ways to "undo" this transformation. All of the points now lie on the same line. 
+
+- [ ]  Many-to-one, cannot go back to being a one-to-one.
+
+📈Geopad — like 3b1b with arrows pointing from straight line onto plane
+
+Here is a collection of points that have been multiplied by a **singular matrix**. Try multiplying them to get a line back out.
+
+📈Interactive where student can adjust a matrix that multiplies by a singular matrix, but the resulting transform will always be a line.
+
+---
+> id: singular-lines
+
+### **Non-intersecting lines (singular matrices)**
+
+We have seen how matrices with determinant = zero do not have inverses and are called **singular matrices**. This means that when a 2x2 matrix representing two lines is singular, it means the lines [[do not have a single solution|do not intersect|are parallel]] (tricky wording). 
+
+**Example:** these two lines are actually the same. When we rewrite their line equations in matrix multiplication form, the matrix has a determinant of zero. There is no inverse, and thus [[no unique solution|no solution]]
+
+    figure: img(src="images/proto-4/Untitled%206.png")
+
+Two lines y = -x + 3 and -4y = 4x - 12, are actually the same line
+
+    figure: img(src="images/proto-4/Untitled%207.png")
+
+two equations
+
+    figure: img(src="images/proto-4/Untitled%208.png")
+
+equations rewritten as a matrix
+
+**Example:** these two lines are parallel. When we rewrite their line equations in matrix multiplication form, it has a determinant of zero. There is no inverse, and thus [[no unique solution]]
+
+    figure: img(src="images/proto-4/Untitled%209.png")
+
+Two parallel lines y=3x+2, y=3x-4, have no intersection
+
+    figure: img(src="images/proto-4/Untitled%2010.png")
+
+two line equations
+
+    figure: img(src="images/proto-4/Untitled%2011.png")
+
+equations rewritten as a matrix
+
+---
+> id: inverse-conclusion
+
+### Conclusion/Cliff-Hanger
+
+Here is the formula for calculating a 3x3 matrix. There is a way to calculate inverses of larger matrices, which we will observe next chapter.
+
+{.fixme} Formula for inverses of 3x3 matrices (and maybe the pattern for larger matrices)
+
+- Maybe a large formula?
+- Maybe a list of steps that show what to do.
+
+"Throughout history mathematicians have done many ways to solve inverses... for example (statistics and orbit of planets). But our current methods are not enough to solve these, we need something better!"
 
 
 ----------------------------------------------------------------------------------------------------
