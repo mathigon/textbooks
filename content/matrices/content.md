@@ -1183,7 +1183,7 @@ Let's see why this is true geometrically.
 
 > section: inverses
 > sectionStatus: dev
-> id: inverses
+> id: intro-inverses
 
 ### Intro: Inverse as the reverse of a transformation
 
@@ -1193,21 +1193,32 @@ Every 2x2 matrix can be thought of as a linear transformation. What does it mean
 
 **Examples/Interactive:** Each of these transformations has a respective transformation that will reverse it and send each point back to their original location.
 
-```markdown
-- rotate by 90º, rotate by -90º
-- scale by 2, scale by 1/2
-- reflect across y-axis, reflect back across y-axis
-```
+    .inverses1
+      .inverse-row
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+          .buttons
+            .button.transform ROTATE
+            .button.reverse UNDO
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+          .buttons
+            .button.transform SCALE
+            .button.reverse UNDO
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+          .buttons
+            .button.transform REFLECT
+            .button.reverse UNDO
 
-Matrix transformations are just like the simple mathematical operators addition and multiplication, in that they can be undone by multiplying by the [inverse matrix](gloss:inverse-matrix).
 
-{.fixme} Explain that `A^(-1) ≠ 1/A`
+Matrix transformations are just like the simple mathematical operators addition and multiplication, in that they can be undone by multiplying by the [inverse matrix](gloss:inverse-matrix). Note that this is __not the same__ as dividing by the matrix, `1/A`. Division for matrices is not a defined operation.
 
-- When we multiply a number **x** by 3, we can undo that operation by multiplying by [[1/3]].
-- When we add 7 to a number **x**, we can undo that operation by adding [[-7]].
-- When we apply a transformation **A** to a vector **v**, we can undo that operation by multiplying by the [[inverse|obverse|converse|reciprocal]] of **A**.
+- When we multiply a number `x` by `3`, we can undo that operation by multiplying by [[1/3]].
+- When we add `7` to a number `x`, we can undo that operation by adding [[-7]].
+- When we apply a transformation `A` to a vector `v`, we can undo that operation by multiplying by the [[inverse|obverse|converse|reciprocal]] of `A`.
 
-The **inverse matrix** of **A** is the matrix that undoes the transformation of **A**. This means When the inverse is applied, all of the points will go back to their original position. We use __`A^(-1)`__ to denote the inverse of matrix **A.**
+The **inverse matrix** of matrix `A` is the matrix that undoes the transformation of `A`. This means When the inverse is applied, all of the points will go back to their original position. We use __`A^(-1)`__ to denote the inverse of matrix **A.**
 
 ---
 > id: calculate-inverse

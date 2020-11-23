@@ -163,6 +163,24 @@ function animateTransformationOnGeo(geo: Geopad, iv: string, jv:string, m: numbe
   geo.animatePoint(jv, new Point(m[1][0], m[1][1]), time);
 }
 
+/**
+   * Currently only used to draw Identity Matrix, but worth keeping.
+   *
+   * @param geo Geopad to draw on.
+   * @param matrix transformation to draw.
+   * @param name name of matrix (gets mapped to i${name} and j${name})
+   */
+function drawUnitVectorsToGeo(geo: Geopad, matrix: number[][], name: string) {
+  geo.drawPoint('point(0,0)',
+      {name: 'origin', interactive: false, classes: 'hidden'});
+  geo.drawPoint(`point(${matrix[0][0]},${matrix[0][1]})`,
+      {name: `i${name}`, interactive: false, classes: 'hidden'});
+  geo.drawPoint(`point(${matrix[1][0]},${matrix[1][1]})`,
+      {name: `j${name}`, interactive: false, classes: 'hidden'});
+  geo.drawPath(`segment(origin,i${name})`, {classes: 'red'});
+  geo.drawPath(`segment(origin,j${name})`, {classes: 'green'});
+}
+
 export function transformsCalculator($step: Step) {
   const $cubes = $step.$$('.cube') as ElementView[]; // they're squares, actually
 
@@ -177,24 +195,6 @@ export function transformsCalculator($step: Step) {
   let b: number[][] | undefined = undefined;
   let c: number[][] | undefined = undefined;
   const I = Matrix.identity(2);
-
-  /**
-   * Currently only used to draw Identity Matrix, but worth keeping.
-   *
-   * @param geo Geopad to draw on.
-   * @param matrix transformation to draw.
-   * @param name name of matrix (gets mapped to i${name} and j${name})
-   */
-  function drawUnitVectorsToGeo(geo: Geopad, matrix: number[][], name: string) {
-    geo.drawPoint('point(0,0)',
-        {name: 'origin', interactive: false, classes: 'hidden'});
-    geo.drawPoint(`point(${matrix[0][0]},${matrix[0][1]})`,
-        {name: `i${name}`, interactive: false, classes: 'hidden'});
-    geo.drawPoint(`point(${matrix[1][0]},${matrix[1][1]})`,
-        {name: `j${name}`, interactive: false, classes: 'hidden'});
-    geo.drawPath(`segment(origin,i${name})`, {classes: 'red'});
-    geo.drawPath(`segment(origin,j${name})`, {classes: 'green'});
-  }
 
   const WAIT = 200;
   const ANIMATE = 500;
@@ -291,5 +291,48 @@ export function determinants($step:Step) {
   // determinant = 0
   buttons[4].on('click', () => {
     animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[1, 1], [-1, -1]], ANIMATE);
+  });
+}
+
+export function introInverses($step:Step) {
+  // TODO: complete
+  const $geopads = $step.$('.inverse-row')?.$$('x-geopad') as Geopad[];
+
+  const I = Matrix.identity(2);
+
+  const names = ['rotate', 'scale', 'reflect'];
+  names.forEach((name, i) => {
+    drawUnitVectorsToGeo($geopads[i], I, name);
+  });
+
+  const $transforms = $step.$('.inverse-row')?.$$('.transform') as ElementView[];
+  const matrices = [
+    [[0, -1], [1, 0]],
+    [[2, 0], [0, 2]],
+    [[-1, 0], [0, 1]]
+  ];
+
+  // it just goes back to normal so we don't need these
+  /* const inverses = [
+    [[0.5, 0], [0, 0.5]],
+    [[0.5, 0], [0, 0.5]],
+    [[0.5, 0], [0, 0.5]]
+  ]; */
+  const $reverses = $step.$('.inverse-row')?.$$('.reverse') as ElementView[];
+
+  $transforms.forEach((t, i) => {
+    t.on('click', () => {
+      animateTransformationOnGeo($geopads[i],
+          `i${names[i]}`, `j${names[i]}`, matrices[i], 300);
+    });
+    // $reverses[i].disable()
+  });
+
+  $reverses.forEach((t, i) => {
+    t.on('click', () => {
+      animateTransformationOnGeo($geopads[i],
+          `i${names[i]}`, `j${names[i]}`, I, 300);
+    });
+    // $transforms[i].disable()
   });
 }
