@@ -1306,15 +1306,81 @@ Notice that this inverse matrix is simply a shear matrix in the opposite directi
 ---
 > id: inverse-formula
 
-### **The general formula for an inverse matrix**
+### The general formula for an inverse matrix
+
+
+::: .box.f-green
+
+#### Deriving the Formula for the Inverse
 
 Let's derive this formula:
 
-    figure: image(src="images/proto-4/Screenshot_2020-11-23_at_12.16.18.png")
+**We want to solve for this**
 
-More generally the equation for the inverse of a 2x2 matrix [a b, c d] is:
+{.text-center} `§[[a b] [c d]]` • `§[[w x] [y z]]` = `§[[1 0] [0 1]]`
 
-{.text-center} `A` = `§[[a b] [c d]]` ... `A^(-1)` = `1/(ad-bc)` `§[[d (-b)] [(-c) a]]`
+**Write out the meaning**
+
+::: column.grow
+{.text-center} __eq1__ `aw + by = 1`
+
+{.text-center} __eq3__ `cw + dy = 0`
+::: column.grow
+{.text-center} __eq2__ `ax + bz = 0`
+
+{.text-center} __eq4__ `cx + dz = 1`
+:::
+
+
+**Solve for y**
+
+{.text-center} Multiply-subtract `c`•__eq1__ - `a`•__eq3__
+
+{.text-center} `caw + cby = c`
+
+{.text-center} `caw + ady = 0`
+
+{.text-center} `0 + (cb - ad)y = c`
+
+{.text-center} `y = c/(cb-ad)`
+
+**Solve for w**
+
+{.text-center} Substitute `y` into __eq3__
+
+{.text-center} `cw + dc/(cb-ad) = 0`
+
+{.text-center} `w = -d/(cb-ad)`
+
+**Solve for x**
+
+{.text-center} Multiply-add `d`•__eq2__ - `b`•__eq4__
+
+{.text-center} `d`•__eq2__ --> `dax + dbz = 0`
+
+{.text-center} `b`•__eq4__ --> `bcx + bdz = b`
+
+{.text-center} `(da - bc)x + 0 = -b`
+
+{.text-center} `x = -b/(ad - bc)`
+
+**Solve for z**
+
+{.text-center} Substitute `x` into __eq2__
+
+{.text-center} `a(-b/(ad-bc)) + bz = 0`
+
+{.text-center} `-a/(ad-bc) + z = 0`
+
+{.text-center} `z = a/(ad-bc)`
+
+**Put them all together**
+
+{.text-center} `§[[(d/(ad-bc)) (-b/(ad-bc))] [(-c/(ad-bc)) (a/(ad-bc))]]`
+
+**Extract the common factor**
+
+{.text-center} `1/(ad-bc)` • `§[[d (-b)] [(-c) a]]`
 
 {.caption} The equation for the inverse of a two-by-two matrix.
 
@@ -1325,6 +1391,8 @@ Notice that if the determinant is zero then we cannot divide by zero. These are 
 {.text-center} `A^(-1)` = `1/det(A)` `§[[d (-b)] [(-c) a]]`
 
 Inverse equation with determinant
+
+:::
 
 ---
 > id: rotation-inverse
