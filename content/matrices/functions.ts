@@ -368,3 +368,7 @@ export function calculateInverse($step: Step) {
   });
   // $transforms[i].disable()
 }
+
+export function rotationInverse(_$step: Step) {
+  // TODO: put an x-matrix-solver here
+}

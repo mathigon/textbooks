@@ -1314,17 +1314,15 @@ Let's derive this formula:
 
 More generally the equation for the inverse of a 2x2 matrix [a b, c d] is:
 
-    figure: image(src="images/proto-4/Untitled%201.png")
+{.text-center} `A` = `§[[a b] [c d]]` ... `A^(-1)` = `1/(ad-bc)` `§[[d (-b)] [(-c) a]]`
 
-The equation for the inverse of a two-by-two matrix.
-
-*(we could show how multiplying the inverse x A gives the Identity Matrix)*
+{.caption} The equation for the inverse of a two-by-two matrix.
 
 What is the value in the [{.pill.red}denominator](target:denominator)? This is the [[determinant]].
 
 Notice that if the determinant is zero then we cannot divide by zero. These are a specific type of matrix we will talk about later.
 
-    figure: image(src="images/proto-4/Untitled%202.png")
+{.text-center} `A^(-1)` = `1/det(A)` `§[[d (-b)] [(-c) a]]`
 
 Inverse equation with determinant
 
@@ -1333,37 +1331,64 @@ Inverse equation with determinant
 
 ### Example: Inverse of a Rotation Matrix
 
-In chapter 1 we derived the matrix representing a rotation through the angle *theta*. The inverse of this matrix will be the rotation through the angle [[-theta]]. Verify that a rotation matrix by -øº is the same as the inverse of a rotation matrix by øº.
-
-```markdown
-*** Here is the rotation matrix through ø**
-A = | cosø   -sinø  |
-    | sinø    cosø  |
-
-*** To find the inverse, first calculate the determinant**
-det(A) = cos(ø)^2 + sin(ø)^2
-*** This is 1**
-det(a) = 1
-*** So the term 1/det(A) is 1**
-
-* **Inverse**
-`A^(-1)` = |  cosø   sinø  |
-      | -sinø   cosø  |
-
-*** Think about a unit circle to see why these are true**
-cos(ø) = cos(-ø)
-sin(ø) = -sin(-ø)
-
-*** Now substitute**
-`A^(-1)` =  |  cos(-ø)   -sin(-ø) |
-       |  sin(-ø)    cos(-ø) |
-
-*** We have proved it!**
-```
+In chapter 1 we derived the matrix representing a rotation through the angle `θ`. The inverse of this matrix will be the rotation through the angle [[-θ|180-θ]].
 
 ---
 
-Verify that a rotation matrix by -x° is the same as the inverse of a rotation matrix by x°.
+::: .box.f-blue
+
+#### Inverse of Rotation matrix
+
+Let's verify that the inverse of the rotation matrix by θº is the same as the rotation matrix by -θ.
+
+**Here is the rotation matrix through θ**
+
+{.text-center} A = `§[[cosθ (-sinθ)] [sinθ cosθ]]`
+
+**To find the inverse, first calculate the determinant**
+
+{.fixme} Formula editor here, with options cosθ, sinθ, and exponent
+
+{.text-center} det(A) = `cos(θ)^2 + sin(θ)^2`
+
+**Remembering the trigonometric identities...**
+
+{.text-center}  det(A) = [[1]]
+
+**The term `1/det(A)` is 1**
+
+
+**By the formula for the Inverse matrix:**
+
+{.text-center} `A^(-1)` = `§[[cosθ sinθ] [(-sinθ) cosθ]]`
+
+**Now let's confirm this matrix is a rotation through -θ**
+
+**Think about a unit circle to see why these are true**
+
+::: column.grow
+
+{.text-center} `cos(θ) = cos(-θ)`
+
+::: column.grow
+
+{.text-center} `sin(θ) = -sin(-θ)`
+
+:::
+
+{.fixme} multi-choice or equation editor
+
+**Now substitute these values into our inverse matrix**
+
+{.text-center} `A^(-1)` =  `§[[(cos(-θ)) (-sin(-θ))] [(sin(-θ)) (cos(-θ))]]`
+
+**This is the same as the rotation matrix for -θ.**
+
+**We have proved it!**
+
+:::
+
+---
 
 {.fixme} Add some examples where students have to calculate inverses to solve problems.
 
@@ -1434,7 +1459,7 @@ Lesson: this was a long way to solve a problem we already knew the answer to, bu
 --- 
 > id: singular-matrices
 
-### Singular matrices (swap after next)
+### Singular matrices
 
 The formula for the inverse of a matrix contains a determinant in the denominator. This will give us a problem when the determinant of a matrix is [[zero]]. The inverse [[cannot be calculated]]! 
 
