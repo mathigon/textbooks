@@ -1405,51 +1405,76 @@ Let's verify that the inverse of the rotation matrix by θº is the same as the 
 
 There is another way we can look at matrices. Observe the following graph of two lines with the following equations. What if we want to find the intersection of these two lines?
 
-    figure: img(src="images/proto-4/Untitled%204.png")
+    x-geopad(width=300 x-axis="-8,8,1" y-axis="-8,8,1" grid axes): svg
+      path.blue(x="line(point(0,4),point(2,6))" target="l1")
+      path.green(x="line(point(0,2),point(2,6))" target="l2")
 
-    figure: img(src="images/proto-4/Untitled%205.png")
-
-y = x + 4 and y = 2x + 2
+[{.pill.blue}y = x + 4](target:l1) and [{.pill.green}y = 2x + 2](target:l2)
 
 We can already observe that the lines intersect at point (2, 6). But there's also a way to solve this with matrices. How? We can rewrite these two lines as a **system of equations**, and then treat is as a matrix multiplication problem.
 
-```markdown
-*** write the two equations**
-     y = x + 4         y = 2x + 2
+::: .box.f-yellow
 
-*** now put variables on one side for both**
--x + y = 4       -2x + y = 2
+#### Intersection
 
-*** now line up the variables**
--1*x + 1*y = 4
--2*x + 1*y = 2
+**Write the two equations**
 
-* **now write it as a matrix multiplication**
-[ -1  1 ] | x | = | 4 |
-[ -2  1 ] | y | = | 2 |
+::: column.grow
+{.text-center} [{.pill.blue}`y = x + 4`](target:l1)
+::: column.grow
+{.text-center} [{.pill.green}`y = 2x + 2`](target:l2)
+:::
 
-*** we can solve for [x, y] by finding the inverse and multiplying by [4, 2]**
-* **find the inverse**
-1/det * [ 1 -1, 2 -1 ]
+**For both equations, isolate the variables on one side.**
 
-*** find the determinant**
-det = a * d - b * c = -1 - (-2) = 1
-det = 1
+::: column.grow
+{.text-center} [{.pill.blue}`-x + y = 4`](target:l1)
+::: column.grow
+{.text-center} [{.pill.green}`-2x + y = 2`](target:l2)
+:::
 
-*** this is our inverse matrix**
-[ 1 -1, 2 -1 ]
+**Line up the variables and write the coefficients**
 
-*** now perform matrix multiplication against [4 2]**
-[  1  -1 ] | 4 |   | x |
-[  2  -1 ] | 2 | = | y |
+{.text-center} [{.pill.blue}`-1*x + 1*y = 4`](target:l1)
 
-*** simplify**
-x = [ 4 - 2 ] = 2
-y = [ 8 - 2 ] = 6
+{.text-center} [{.pill.green}`-2*x + 1*y = 2`](target:l2)
+
+**Rewrite it as a matrix multiplication**
+
+{.text-center} `§[[(-1) 1] [(-2) 1]]` • `§[[x] [y]]` = `§[[4] [2]]`
+
+
+**We can solve for [x, y] by finding the inverse and multiplying by [4, 2]**
+
+**Write the formula for the inverse**
+
+{.text-center} `1/det(A)` • `§[[1 (-1)] [2 (-1)]]`
+
+**Find the determinant**
+
+{.text-center} `det(A)` = `a * d - b * c` = `-1 - (-2)` = `1`
+
+{.text-center} `det(A) = 1`
+
+**This is our inverse matrix**
+
+{.text-center} `A^(-1)` = `§[[1 (-1)] [2 (-1)]]`
+
+**Now perform matrix multiplication with the inverse and [4 2]**
+
+{.text-center} `§[[1 (-1)] [2 (-1)]]` • `§[[4] [2]]` = `§[[x] [y]]`
+
+**Simplify**
+::: column.grow
+{.text-center} `x = [ 4 - 2 ] = 2`
+::: column.grow
+{.text-center} `y = [ 8 - 2 ] = 6`
+:::
 
 *** indeed, the intersection point is...**
 (2, 6)
-```
+
+:::
 
 Lesson: this was a long way to solve a problem we already knew the answer to, but it shows that we can use matrices for more than just transformations! This type of matrix calculation is very useful for higher order problems. There are better ways to solve multi-dimensional matrix problems, as we will see next chapter. 
 
