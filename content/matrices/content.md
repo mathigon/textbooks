@@ -1643,6 +1643,143 @@ Here is the formula for calculating a 3x3 matrix. There is a way to calculate in
 {.todo} COMING SOON
 
 
+> id: two-equations
+
+::: column.grow
+
+**write the two equations**
+```markdown
+EQ1: y = x + 4
+EQ2: y = 2x + 2
+```
+EQ1: [{.pill.blue}y = x + 4](target:l1)
+EQ2: [{.pill.green}y = 2x + 2](target:l2)
+
+**now put variables on the same side**
+```markdown
+EQ1:  -x + y = 4
+EQ2: -2x + y = 2
+```
+EQ1: [{.pill.blue}-x + y = 4](target:l1)
+EQ2: [{.pill.green}-2x + y = 2](target:l2)
+
+**now write in augmented matrix form**
+```markdown
+R1   | -1  1 : 4 |
+R2   | -2  1 : 2 |
+```
+
+::: column(width=200)
+
+**original system of equations**
+
+    x-geopad(width=300 x-axis="-8,8,1" y-axis="-8,8,1" grid axes): svg
+      path.blue(x="line(point(0,4),point(2,6))" target="l1")
+      path.green(x="line(point(0,2),point(2,6))" target="l2")
+
+{.caption} y = x + 4; y = 2x + 2;
+
+:::
+
+[Continue](btn:next)
+
+---
+
+::: column.grow
+
+**now start row-reduction**
+
+**first goal: 0s in bottom left**
+```markdown
+R1           | -1  1   : 4 |
+1/2*R2 -> R2 | -1  1/2 : 1 |
+
+R1           | -1    1  :  4 |
+R2-R1 -> R2  |  0  -1/2 : -3 |
+
+```
+
+**simplify (make coefficient a 1)**
+```markdown
+R1           | -1    1  :  4 |
+-2*R2 -> R2  |  0    1  :  6 |
+```
+
+::: column(width=200)
+
+**after R2 - R1 → R2**
+
+    x-geopad(width=300 x-axis="-8,8,1" y-axis="-8,8,1" grid axes): svg
+      path.blue.dashed(x="line(point(0,4),point(2,6))" target="l1")
+      path.blue(x="line(point(0,6),point(2,6))" target="l1p")
+      path.green(x="line(point(0,2),point(2,6))" target="l2")
+
+{.caption} y = x + 4;  y = 6;
+
+{.fixme} animate this as row is substituted!
+
+:::
+
+[Continue](btn:next)
+
+---
+
+::: column.grow
+
+**now perform back-substitution**
+```markdown
+R1-R2 -> R1 | -1    0  : -2 |
+R2          |  0    1  :  6 |
+```
+
+**and simplify**
+```markdown
+-1*R1 -> R1 |  1  0  :  2 |
+R2          |  0  1  :  6 |
+```
+
+::: column(width=200)
+
+**after back-substitution**
+
+**R1 - R2 → R1**
+
+    x-geopad(width=300 x-axis="-8,8,1" y-axis="-8,8,1" grid axes): svg
+      path.blue(x="line(point(0,6),point(2,6))" target="l1p")
+      path.green.dashed(x="line(point(0,2),point(2,6))" target="l2")
+      path.green(x="line(point(2,2),point(2,6))" target="l2p")
+
+{.caption} x = 2; y = 6;
+
+{.fixme} animate this as row is substituted!
+
+:::
+
+[Continue](btn:next)
+
+---
+
+::: column.grow
+
+**we have our solution!**
+```markdown
+x = 2
+y = 6
+```
+[{.pill.green}x = 2](target:l2p)
+[{.pill.blue}y = 6](target:l1p)
+
+::: column(width=200)
+
+    x-geopad(width=300 x-axis="-8,8,1" y-axis="-8,8,1" grid axes): svg
+      path.blue(x="line(point(0,6),point(2,6))" target="l1p")
+      path.green(x="line(point(2,2),point(2,6))" target="l2p")
+
+{.caption} x = 2; y = 6;
+
+:::
+
+
 ----------------------------------------------------------------------------------------------------
 
 
