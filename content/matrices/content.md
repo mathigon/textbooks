@@ -1868,7 +1868,9 @@ y = 6
 > id: network-analysis
 
 ::: .box.f-blue
-#### Network analysis
+#### 🚦 Traffic Network Analysis
+
+[Networks](linkto:networks) are everywhere. We find networks in economic models, electric circuits, and traffic patterns.
 
 ::: column.grow
 
@@ -1898,6 +1900,55 @@ e3 - e2 - e7 = 0
 :::
 
 :::
+
+---
+> id: electric-bill
+
+::: .box.f-blue
+#### 🔌 Electric Bill
+
+A restaurant owner wants to measure the power consumption of her most commonly used appliances.
+
+The three main uses of power are:
+
+🥶 Freezer
+🍕 Oven
+🧼 Dishwasher
+
+She wants to calculate how much it costs to run each appliance for an hour.
+
+She has three weekly electric bills and also knows how often she was using each appliance for that week.
+
+**Hours + Bills per Week**
+
+| Week | Freezer | Oven | Dishwasher | Bill |
+|---|---|---|---|---|
+| Week 1 | 168 | 20 | 20 | $1400 |
+| Week 2 | 168 | 28 | 12 | $1336 |
+| Week 3 | 168 | 42 | 18 | $1824 |
+
+
+    // use values: f=5, o=20, d=8
+    - x = [5, 20, 8]
+    - A = [[168, 20, 20], [168, 20, 12], [168, 42, 18]]
+    - w1 = A[0][0]*x[0] + A[0][1]*x[1] + A[0][2]*x[2]
+    - w2 = A[1][0]*x[0] + A[1][1]*x[1] + A[1][2]*x[2]
+    - w3 = A[2][0]*x[0] + A[2][1]*x[1] + A[2][2]*x[2]
+    // ul Answers:
+      // li= w1
+      // li= w2
+      // li= w3
+
+**Rewrite this as a matrix**
+
+{.text-center} `Cost` = `A` * `hourly`
+
+{.text-center} `§[[1400] [1336] [1824]]` = `§[[168 20 20] [168 28 12] [168 42 18]]` • `§[[f] [o] [d]]`
+
+**Now perform Gaussian Elimination to find the cost-per-hour of each appliance**
+
+:::
+
 
 ---
 
