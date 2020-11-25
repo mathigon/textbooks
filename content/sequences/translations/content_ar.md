@@ -588,7 +588,7 @@ __{.m-green} تسلسل هندسي__ له الحد الأول `a` والنسبة
 في ما يلي مقطع قصير من فيلم _Pay it Forward_ ، حيث يشرح تريفور البالغ من العمر 12 عامًا فكرته عن جعل العالم مكانًا أفضل:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption استخراج من “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
