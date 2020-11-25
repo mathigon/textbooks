@@ -1618,6 +1618,90 @@ two line equations
 equations rewritten as a matrix
 
 ---
+> id: least-squares
+
+The "Method of Least Squares" is a way to estimate a trend for data.
+
+::: .box.f-yellow
+#### Method of Least Squares
+
+{.fixme} Different points (these are copied from a LinAlg textbook)
+
+We have a set of points. Can we find a best fit line?
+
+::: column.grow
+
+    - points = [[1,1], [2,2], [3,4], [4,4], [5,6]]
+    table.data
+      tr: td var1
+        td var2
+      for p in points
+        tr
+          td= p[0]
+          td= p[1]
+
+::: column(width=300)
+
+    - points = [[1,1], [2,2], [3,4], [4,4], [5,6]]
+    x-geopad(width=300 x-axis="-1, 8, 1" y-axis="-1, 8, 1" grid axes): svg
+      for p,i in points
+        circle.blue(name=`p${i}` x=`point(${p[0]}, ${p[1]})`)
+        path.red(x=`segment(point(${p[0]},${p[1]}), point(${p[0]},${1*p[0]+0}))` target="error")
+      path.blue(x="line(point(0,0),point(1,1))" target="guess1")
+
+:::
+
+We want to see how a best-fit line would work.
+
+{.text-center} `y = mx + b`
+
+We want to find some function `f(x)` that fits this line best. A possible best fit line is [{.pill.blue}y = x](target:guess1).
+
+How can we minimize the total [{.pill.red}error](target:error)?
+
+{.fixme} is it possible to automate this, i.e. put it in PUG?
+
+::: column.grow
+**Write X like this**
+
+`X` = `§[[1 1] [1 2] [1 3] [1 4] [1 5]]`
+::: column.grow
+**Write Y like this**
+
+`Y` = `§[[1] [2] [4] [4] [6]]`
+:::
+
+{.text-center} `Y = XA + E`
+
+**The formula to minimize the error**
+
+{.text-center} `A = (X^(T)*X)^(-1)*X^T*Y`
+
+**New Notation**
+
+`X^T` is the [transpose](gloss:transpose-matrix) of the matrix `X`. This is a very simple operation, it just means you switch the rows and the columns.
+
+```markdown
+X = [...]5x2
+X^T = [...]2x5
+
+X^(T)•X = [....]2x2
+(X^(T)•X)^-1 = 1/det[...]2x2
+
+**now multiply it by Y**
+NY = [...]2x1
+
+**and write the equation**
+f(x): y = mx + b
+
+// here is where we draw the line
+```
+WOW!
+this is truly magic. To learn more about how this works, check the course on statistical methods and machine learning
+
+:::
+
+---
 > id: inverse-conclusion
 
 ### Conclusion/Cliff-Hanger
