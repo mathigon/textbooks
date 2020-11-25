@@ -1779,6 +1779,43 @@ y = 6
 
 :::
 
+---
+
+> id: network-analysis
+
+::: .box.f-blue
+#### Network analysis
+
+::: column.grow
+
+**Write a system of equations representing this network.**
+
+```markdown
+e1 + e7 - e5 - e6 = 0
+-e1 + e2 = 0
+e3 - e2 - e7 = 0
+-e3 + e4 + e6 = 0
+-e4 + e5 = 0
+```
+
+**Now write it as an augmented matrix**
+```markdown
+|  1   0   0   0  -1  -1   1 : 0 |
+| -1   1   0   0   0   0   0 : 0 |
+|  0  -1   1   0   0   0  -1 : 0 |
+|  0   0  -1   1   0   1   0 : 0 |
+|  0   0   0  -1   1   0   0 : 0 |
+```
+
+::: column(width=300)
+    // prototype here:
+    // https://editor.p5js.org/kevindeland/sketches/ud4f-fl-b
+    img(src="images/proto-5/network-label.gif")
+:::
+
+:::
+
+---
 
 ----------------------------------------------------------------------------------------------------
 
