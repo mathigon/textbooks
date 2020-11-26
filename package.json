@@ -19,9 +19,9 @@
   "dependencies": {
     "@mathigon/boost": "0.6.3",
     "@mathigon/core": "0.5.2",
-    "@mathigon/dev-server": "0.6.2",
+    "@mathigon/dev-server": "0.6.3",
     "@mathigon/fermat": "0.6.0",
-    "@mathigon/euclid": "0.6.4",
+    "@mathigon/euclid": "0.6.5",
     "@mathigon/hilbert": "0.6.0",
     "@types/d3": "5.16.3",
     "@types/topojson": "3.2.2",
@@ -30,7 +30,7 @@
   "devDependencies": {
     "@google-cloud/text-to-speech": "3.1.1",
     "@google-cloud/translate": "6.0.3",
-    "@mathigon/parser": "0.6.1",
+    "@mathigon/parser": "0.6.2",
     "@percy/script": "1.1.0",
     "@rollup/plugin-node-resolve": "10.0.0",
     "@typescript-eslint/eslint-plugin": "4.6.0",
