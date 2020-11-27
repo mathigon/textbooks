@@ -2,7 +2,7 @@
 # MATHIGON HINTS
 # ==============================================================================
 
-welcome: 'Benvenuto in Mathigon! Sono Archie, il tuo tutor personale. :mortar_board:'
+welcome: 'Benvenuto in Mathigon! Sono Archie, il tuo tutor personale. :graduation-cap:'
 
 account: 'Puoi [creare un account gratuito](->#login-btn) per salvare i tuoi progressi.'
 
@@ -15,25 +15,25 @@ tutorial2: |
   avevi interrotto.
 
 correct:
-  - 'Ben fatto :relaxed:'
-  - 'Ottimo lavoro! :relieved:'
-  - 'Fantastico :grinning:'
-  - 'Brillante :thumbsup:'
-  - 'Eccellente! :ok_hand:'
-  - 'Fantastico :sunglasses:'
-  - 'Bello! :v:'
-  - 'Ben fatto! :blush:'
-  - 'Dolce :relaxed:'
+  - 'Ben fatto :smiling-face:'
+  - 'Ottimo lavoro! :relieved-face:'
+  - 'Fantastico :grinning-face:'
+  - 'Brillante :thumbs-up:'
+  - 'Eccellente! :ok-hand:'
+  - 'Fantastico :smiling-face-with-sunglasses:'
+  - 'Bello! :victory-hand:'
+  - 'Ben fatto! :smiling-face-with-smiling-eyes:'
+  - 'Dolce :smiling-face:'
   - 'Degno di nota! :trophy:'
-  - 'Eccezionale :grin:'
+  - 'Eccezionale :grinning-face:'
   - 'Stupendo! :star:'
-  - 'Meraviglioso! :smiley:'
+  - 'Meraviglioso! :smiling-face:'
 
 incorrect:
-  - 'Non è del tutto corretto :white_frowning_face:'
-  - 'Sei sicuro di questo? :thinking_face:'
-  - 'Non sembra giusto. :hushed:'
-  - 'Riprova! :confused:'
+  - 'Non è del tutto corretto :frowning-face:'
+  - 'Sei sicuro di questo? :thinking-face:'
+  - 'Non sembra giusto. :hushed-face:'
+  - 'Riprova! :confused-face:'
 
 welcomeMorning: Buongiorno!
 
@@ -49,4 +49,4 @@ welcomeEveningNamed: 'Buonasera, $name!'
 
 serverError: |
   Spiacente, non posso aiutarti al momento. Controlla la tua connessione Internet o riprova più
-  tardi. :confused:
+  tardi. :confused-face:
