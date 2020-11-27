@@ -11,7 +11,7 @@ abel:
     Niels Henrik Abel__ (1802 - 1829) a fost un mare matematician norvegian. În ciuda faptului că a
     murit la 26 de ani, el a avut contribuții inovatoare într-un număr mare de subiecte.
 
-    La 16 ani, Abel a demonstrat Binomul lui Newton. Trei ani mai târziu, a demonstrat că 
+    La 16 ani, Abel a demonstrat Binomul lui Newton. Trei ani mai târziu, a demonstrat că
     demonstrarea ecuațiilor cvintice - prin inventarea independentă a teoriei grupurilor. Aceasta a
     fost o problemă deschisă timp de peste 350 de ani! De asemenea, el a lucrat cu  funcțiile
     eliptice și a descoperit funcțiile _abeliene_.
@@ -713,7 +713,7 @@ gauss:
     iar mai târziu a îndrumat ca profesor mulți matematicieni faimoși.
   links:
     - title: Prime Number Theorem
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -767,7 +767,7 @@ goldbach:
     conjectura sa - “Conjectura Goldbach“.
   links:
     - title: Goldbach Conjecture
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -1148,7 +1148,7 @@ mersenne:
     acustica și armonicile unui șir vibrant și a scris despre teologie și filozofie.
   links:
     - title: Large Primes
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1569,7 +1569,7 @@ riemann:
     și a făcut descoperiri inovatoare cu privire la distribuția numerelor prime.
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872

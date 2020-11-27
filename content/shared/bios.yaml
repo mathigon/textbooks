@@ -1037,7 +1037,7 @@ gauss:
     teenager, and later tutored many other famous mathematicians as Professor.
   links:
     - title: Prime Number Theorem
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -1100,7 +1100,7 @@ goldbach:
     Peter II, and is remembered for his “Goldbach Conjecture“.
   links:
     - title: Goldbach Conjecture
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 gowers:
   name: Gowers
@@ -1731,7 +1731,7 @@ mersenne:
     and wrote about theology and philosophy.
   links:
     - title: Large Primes
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 matiyasevich:
   born: 1947
@@ -2254,7 +2254,7 @@ riemann:
     regarding the distribution of prime numbers.
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 robinson:
   born: 1919

@@ -544,7 +544,7 @@ gauss:
     伝説によると、彼は3歳のときに父親の会計の誤りを修正し、8歳のときに1から100までのすべての整数をすばやく合計する方法を見つけました。彼はまだ10代の間に最初の重要な発見をしました、後に教授として他の多くの有名な数学者を指導した。
   links:
     - title: Prime Number Theorem
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -586,7 +586,7 @@ goldbach:
     1764）はプロイセンの数学者であり、オイラー、ライプニッツ、ベルヌーイの同時代人でした。彼はロシア皇帝ピーター2世の家庭教師であり、彼の「ゴールドバッハ予想」で記憶されています。
   links:
     - title: Goldbach Conjecture
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -881,7 +881,7 @@ mersenne:
     1`と表記できる素数で覚えています。最大の既知の素数のほとんどはこのタイプです。彼はまた、音響学と振動する弦の調和を研究し、神学と哲学について書きました。
   links:
     - title: Large Primes
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1199,7 +1199,7 @@ riemann:
     1866）は、分析と数論の分野で働いていたドイツの数学者でした。彼は統合の最初の厳密な定義を思い付き、一般相対性理論の基礎を築く微分幾何学を研究し、素数の分布に関する画期的な発見をしました。
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872

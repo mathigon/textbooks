@@ -1845,7 +1845,7 @@ twin-primes:
   text: |
     __I numeri primi gemelli__ sono coppie di numeri primi come 17 e 19 o 101 e 103, che sono
     esattamente due a parte. Non è noto se ci siano infinite coppie di numeri primi gemelli.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Cerchio unitario

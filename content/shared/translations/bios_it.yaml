@@ -682,7 +682,7 @@ galois:
     equazioni polinomiali di grado cinque o superiore.
 
     Sfortunatamente, altri matematici con cui condivideva queste scoperte smarrivano o semplicemente
-    gli restituivano il suo lavoro. Concentrandosi su un lavoro molto più complesso, fallì gli esami 
+    gli restituivano il suo lavoro. Concentrandosi su un lavoro molto più complesso, fallì gli esami
     scolastici e universitari.
 
     All'età di 21 anni, Galois fu colpito in un duello (alcuni dicono una faida su una donna), e in
@@ -708,7 +708,7 @@ gauss:
     molti altri famosi matematici.
   links:
     - title: Prime Number Theorem
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -763,7 +763,7 @@ goldbach:
     di Goldbach".
   links:
     - title: Goldbach Conjecture
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -808,7 +808,7 @@ hamilton:
     inventato i _quaternioni_, il primo esempio di "algebra non commutativa", che hanno importanti
     applicazioni in matematica, fisica e informatica.
 
-    Formulò questa idea per la prima volta mentre camminava lungo il Royal Canal a Dublino, e 
+    Formulò questa idea per la prima volta mentre camminava lungo il Royal Canal a Dublino, e
     incise la formula: `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1` su una pietra del ponte.
 
     Hamilton ha anche dato un contributo significativo alla fisica, compresa l'ottica e la meccanica
@@ -861,7 +861,7 @@ hypatia:
     suo tempo e ha costruito astrolabi e idrometri.
 
     Fu rinomata durante la sua vita come grande insegnante e consigliera di Oreste, prefetto romano di
-    Alessandria. Morì assassinata da un folla di cristiani durante una faida di Oreste con Cirillo, 
+    Alessandria. Morì assassinata da un folla di cristiani durante una faida di Oreste con Cirillo,
     il vescovo di Alessandria.
 
 jacobi:
@@ -896,7 +896,7 @@ jiushao:
 
     Qin ha inizialmente sviluppato un metodo per risolvere numericamente equazioni polinomiali, che
     ora è noto come _metodo di Horner_. Trovò una formula per l'area di un triangolo in base alla
-    lunghezza dei suoi tre lati, calcolò la somma delle serie aritmetiche e introdusse un simbolo 
+    lunghezza dei suoi tre lati, calcolò la somma delle serie aritmetiche e introdusse un simbolo
     corrispondente allo "zero" nella matematica cinese.
 
     Qin ha anche inventato i _bacini di Tianchi_, che sono stati usati per misurare le precipitazioni
@@ -967,7 +967,7 @@ lagrange:
   died: 1813
   name: Lagrange
   bio: |
-    __Joseph-Louis Lagrange (Giuseppe Luigi Lagrangia)__ (1736-1813) era un matematico italiano che 
+    __Joseph-Louis Lagrange (Giuseppe Luigi Lagrangia)__ (1736-1813) era un matematico italiano che
     succedette a Leonard Euler (Eulero) come direttore dell'Accademia delle Scienze di Berlino.
 
     Lavorò sull'analisi e sul calcolo delle variazioni, inventò nuovi metodi per risolvere equazioni
@@ -1139,7 +1139,7 @@ mersenne:
     teologia e filosofia.
   links:
     - title: Large Primes
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1540,7 +1540,7 @@ riemann:
     rivoluzionarie sulla distribuzione dei numeri primi.
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872
@@ -1675,7 +1675,7 @@ turing:
     e il _test di Turing_, che può essere usato per giudicare l'abilità dell'intelligenza
     artificiale.
 
-    Turing era gay, e siccome questo era ancora considerato un crimine, i suoi risultati rivoluzionari 
+    Turing era gay, e siccome questo era ancora considerato un crimine, i suoi risultati rivoluzionari
     non furono mai pienamente riconosciuti. Si suicidò all'età di 41 anni.
 
 ulam:

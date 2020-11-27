@@ -1863,7 +1863,7 @@ twin-primes:
   text: |
     __Los primos gemelos__ son pares de números primos como 17 y 19 o 101 y 103, que están
     exactamente separados por dos. Se desconoce si hay infinitos pares de primos gemelos.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Circulo unitario

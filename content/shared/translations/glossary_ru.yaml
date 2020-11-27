@@ -1851,7 +1851,7 @@ twin-primes:
     __Двойные простые числа__ являются парами простых чисел, таких как 17 и 19 или 101 и 103,
     которые в точности равны двум. Неизвестно, существует ли бесконечно много пар одинарных простых
     чисел.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Блок Круг

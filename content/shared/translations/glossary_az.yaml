@@ -1774,7 +1774,7 @@ twin-primes:
   text: |
     __Əkiz nöqtələr__, 17 və 19 və ya 101 və 103 kimi cüt ədədlərdir, bunlar tamamilə iki ayrıdır.
     Sonsuz çoxlu cüt cütlük varsa, bilinmir.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Birlik dairəsi

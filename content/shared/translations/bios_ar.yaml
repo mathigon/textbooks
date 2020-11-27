@@ -648,7 +648,7 @@ gauss:
     الآخرين كأستاذ.
   links:
     - title: نظرية الأعداد الأولية
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: الهندسة غير الإقليدية
       url: /world/Dimensions_and_Distortions
     - title: مجموع أرقام المثلث
@@ -698,7 +698,7 @@ goldbach:
     مدرسًا للقيصر الروسي بيتر الثاني ، ويتذكره "تخمين غولدباخ".
   links:
     - title: تخمين غولدباخ
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -1050,7 +1050,7 @@ mersenne:
     عن اللاهوت والفلسفة.
   links:
     - title: الأعداد الأولية الكبرة
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1417,7 +1417,7 @@ riemann:
     باكتشافات رائدة فيما يتعلق بتوزيع الأعداد الأولية.
   links:
     - title: فرضية ريمان
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872

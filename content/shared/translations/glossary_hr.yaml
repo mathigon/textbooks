@@ -1771,7 +1771,7 @@ twin-primes:
   text: |
     __Twin primes__ su parovi pravih brojeva poput 17 i 19 ili 101 i 103, koji su točno dva. Nije
     poznato postoji li beskonačno mnogo parova blizanaca.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Jedinstveni krug
