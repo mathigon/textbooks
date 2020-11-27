@@ -342,7 +342,7 @@ The Delians did not double the altar - they made it 8 times bigger.
 
 They should have doubled the volume instead of the side lengths.
 
-::: column
+::: column.fit
 
 {.todo} IMAGE: base-height
 
@@ -492,13 +492,451 @@ We now know about how to find the volume of the cuboids, can we find another mea
 ----------------------------------------------------------------------------------------------------
 
 
-
 ## Nets and Surface Area
 
 > section: surface-area
 > sectionStatus: dev
 
-{.todo} COMING SOON
+### Meaning
+
+::: column.fit
+
+    // https://imgur.com/iJVU7
+    x-img(width=300 height=179 src="https://i.imgur.com/iJVU7.jpeg")
+
+::: column.grow
+
+_As a prank, you may want to cover your friend’s car with lots of sticky notes. But how many will you need?_
+
+:::
+
+---
+
+Let’s create a model of the car to estimate the number of sticky notes we will need.
+
+We can use the unit cubes to create the model of the car:
+
+::: column.fit
+
+{.todo} INTERACTIVE: car model
+
+::: column.grow
+
+You can rotate the model to find how many square units it takes to cover all the faces of this three-dimensional (3D) model excluding the bottom.
+
+The sum of the faces of the front and back = [[8]] squares.
+
+Top of the model: [[8]] squares.
+
+Total of the left and right sides: [[12]] squares.
+
+The total area is [[28]] __square units__, excluding the bottom.
+
+:::
+
+---
+
+{.todo} DISCUSS: Do we need this blank? Perhaps we should do something else with it.
+
+This means the surface area of the actual car is approximately 28 __square__ [[meters | centimeters | inches | feet]].
+
+---
+
+{.todo} DISCUSS: use equation editor instead?
+
+If each sticky note is `0.006 m^2`, then 
+we will need to have `input(28)-:input(0.006)=4467` sticky notes to cover the car!
+
+---
+
+Here, we have calculated the __surface area__ of the car model to find the total number of sticky notes needed.
+
+    // page 2
+
+__The surface area of a 3D solid is the number of square units that cover all the faces of the polyhedron, without any gaps or overlaps.__
+
+::: column.grow
+
+Here is a rectangular prism built up of [[12]] cubes.
+
+It has [[6]] faces, but we only see three of them in the sketch.
+
+::: column.fit
+
+{.todo} INTERACTIVE: Faces rotation
+
+:::
+
+---
+
+Rotate the shape to look at all of its faces.
+
+{.todo} INTERACTIVE: Faces area display
+
+---
+
+Surface Area = [[32]] __square units__.
+The units used to measure the surface area are square meter (`"m"^2`), square centimeter (`"cm"^2`), square inches (`"in"^2`), square feet (`"ft"^2`), and so forth.
+
+---
+
+### SA : V
+
+Surface area and [volume](gloss:volume) are different attributes of 3D figures.  The key difference between them is that the [[surface area | volume]] is a 2D measurement and the [[volume | surface area]] is a 3D measurement of a solid.
+
+---
+
+You may build different solids by using the same number of cubes.
+
+::: column.fit
+
+{.todo} INTERACTIVE: voxel painting
+
+::: column.grow
+
+Use 6 cubes to create a solid with the greatest possible surface area.
+
+A cuboid with the surface area of [[26]] unit squares is the maximum surface area we can create by using the six cubes.
+
+Now, create a solid with the smallest possible surface area.
+
+:::
+
+---
+
+The minimum surface area is [[22]] unit squares.
+
+---
+
+    // page 3
+
+Both of the solids you have created have a volume of [[6]] cubic units but have different surface areas. Notice the cubes that form solids with the more surface area are more [[spread out | compact]]. More of their faces are exposed.
+
+---
+
+In nature, having a large or small surface area with respect to the volume determines the vital characteristics of living things. 
+
+The relation between the surface area and the volume of an object is so important that it affects where an animal can live when a cell has to divide, or the size of the wings of an airbus plane.
+
+For instance, do you know why elephants have giant ears?
+
+    // https://depositphotos.com/11745121/stock-photo-elephant-isolated-on-white.html
+    figure: x-img(width=600 height=400 src="https://static9.depositphotos.com/1007373/1174/i/950/depositphotos_11745121-stock-photo-elephant-isolated-on-white.jpg")
+
+African elephants are the largest land animals on Earth. They can be identified by their larger ears with respect to other elephant species. They grow up to 4 meters and weigh 6 tones on average.  
+
+Elephants and all animals generate heat internally in proportion to their volume. Larger animals produce more heat with respect to small ones like mice.
+
+Most of the reactions like heat transfer occur at the surface of the objects and living things. It means if a large animal lives in a hot environment, then it needs to lose heat by [[maximizing | minimizing]] its surface area.
+
+---
+
+::: column.fit
+
+{.todo} INTERACTIVE: Elephant cuboid
+
+::: column.grow
+
+You may think of elephants as a 4 x 4 x 2 cuboid which has a surface area of [[64]] square units and a volume of [[32]] cubic units.  They need to increase their surface area to lose the heat produced by their large volume faster.
+
+:::
+
+---
+
+    // page 4
+
+::: column.grow
+
+The ear of the African elephant is on average 180 cm by 110 cm.  Both ears add a total of [[8]] `"m"^2` surface area to the elephant. The ears increase the elephant’s surface area, while barely increasing the volume to make the heat loss faster.
+
+::: column.fit
+
+    // https://www.robertharding.com/preview/832-379041/african-elephant-loxodonta-africana-portrait-extended-ears-aggressive/
+    x-img(width=200 height=134 src="https://www.robertharding.com/watermark.php?type=preview&im=RF/RH_RF/HORIZONTAL/832-379041")
+
+:::
+
+---
+
+Alternatively, if you were living in the Antarctic you would want a small surface area to volume ratio. This would reduce heat loss and conserve it in the body. That’s why polar versions of animals are usually [[bigger | smaller]] with respect to the other species in the same family.
+
+---
+
+    // https://www.deviantart.com/bigfancat/art/The-bears-size-fancat-766492662
+    figure: x-img(width=760 height=358 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2344a679-4e4d-4a4c-86e1-d5c45b2f06cf/dcocliu-eb3044fa-3a87-43e4-8c3a-de95a11fdb0f.jpg/v1/fill/w_1024,h_482,q_75,strp/the_bears_size__fancat__by_bigfancat_dcocliu-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00ODIiLCJwYXRoIjoiXC9mXC8yMzQ0YTY3OS00ZTRkLTRhNGMtODZlMS1kNWM0NWIyZjA2Y2ZcL2Rjb2NsaXUtZWIzMDQ0ZmEtM2E4Ny00M2U0LThjM2EtZGU5NWExMWZkYjBmLmpwZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.V_Q04x86SQC81P2wJ0lKXKN3EP_NXKhmeYV71ayTVgU")
+
+The relationship between the volume and the surface area as a shape's dimensions changes is a mathematical principle called the [square-cube law](gloss:square-cube-law). __(SA:V).__
+
+Animals can be thought of as simple cubes:
+
+{.todo} INTERACTIVE: Cube surface areas and volumes
+
+    // page 5
+
+As you continue to increase the edge size of the cube, [[Volume |Surface Area]] will grow
+faster.
+
+---
+
+    figure: x-img(width=600 height=475 src="images/volume-area.png")
+
+[Galileo](bio:galileo) might have been the first to formally recognize this when he stated in his 1638 book, Two New Science. In addition to biology, it has many applications in different scientific fields like mechanics, ecology, engineering.
+
+### Surface Area vs Volume
+
+    // page 6
+
+Let’s drag the examples of quantities related to volume and surface area to complete the diagram:
+
+{.todo} INTERACTIVE: Mind map
+
+---
+
+_{button.btn.continue}Continue_
+
+---
+
+### Nets
+
+Artists and mathematicians like [Leonardo Da Vinci](bio:leonardo) devoted much effort to represent 3D objects on 2D paper. Da Vinci’s greatest accomplishment in this area is the illustrations for [Luca Pacioli](bio:pacioli)'s 1509 book _The Divine Proportion_. Da Vinci drew roughly 60 different illustrations of polyhedra in the book.
+
+    // page 7
+
+    // https://www.georgehart.com/virtual-polyhedra/leonardo.html
+
+::: column.fit
+
+    x-img(width=150 height=207 src="https://www.georgehart.com/virtual-polyhedra/figs/leonardo-72-solid.jpg")
+
+::: column.fit
+
+    x-img(width=150 height=219 src="https://www.georgehart.com/virtual-polyhedra/figs/leonardo-72-vacuum.jpg")
+
+::: column.fit
+
+    x-img(width=150 height=184 src="https://www.georgehart.com/virtual-polyhedra/figs/leonardo-dodec-solid.jpg")
+
+::: column.fit
+
+    x-img(width=150 height=199 src="https://www.georgehart.com/virtual-polyhedra/figs/leonardo-dodec.jpg")
+
+:::
+
+Since we don't all have Da Vinci's artistic skills, we can use grid paper to help us draw polyhedra. Let’s start by drawing a __cube__ on the dotted grid.
+
+{.todo} INTERACTIVE: Cube drawing
+
+---
+
+When the solids get complicated, drawing them on a 2D paper gets harder too. But there is another way to represent the 3D solids on a 2D plane.
+
+    // page 8
+
+We can use the [nets](gloss:net) of the solids which are composed of polygons that form the faces of a polyhedron.
+
+{.todo} INTERACTIVE: 3D Solids with a slider to open and close the net. (Maybe Da Vinci’s examples’ nets can be included)
+
+---
+
+__They are the 2D coats that cover up the entire surface of 3D solids.__
+
+For instance, the net of a cube consists of [[6]] squares. With the correct arrangement of the squares, they can fold up a cube.
+
+---
+
+Let’s try to draw the __net__ of a cube:
+
+::: column.fit
+
+{.todo} INTERACTIVE: Cube net drawing
+
+::: column.grow
+
+There are many different ways to arrange six squares to fold up as a cube.
+
+Let’s have a look at which one of the below can be folded to a cube.
+
+::: column.fit
+
+    x-img(width=177 height=154 src="images/cubenet.png")
+
+:::
+
+---
+
+{.todo} Net animations
+
+    // COMMENT: After each animation
+
+    // page 9
+
+    // COMMENT: After A: 
+
+The row of squares in Shape A can be folded into a ring and then the nearest square to the ring will close off a face, but the other square will have to overlap an existing face.
+
+    // COMMENT: After B: 
+
+The row of squares in Shape B can be folded into a ring, and the other two squares can close off the other two faces. You can visualize those two faces as the bases of the cube.
+
+    // COMMENT: After C: 
+
+When you fold the row of squares in Shape C into a ring, the fifth square will overlap the first one.
+
+    // COMMENT: After D: 
+
+The row of squares in Shape D can be folded into a ring, and the other two squares can close off the other two faces. You can visualize those two faces as the bases of the cube.
+
+    // COMMENT: After zooming on B and D:
+
+One of the most common cubes we come across every day are dice.
+
+---
+
+Let’s try to build our own fair die by inserting the faces correctly.
+
+Opposite faces of a fair die always add up to 7.
+
+{.todo} INTERACTIVE: Die faces nets matching
+
+---
+
+Now that we can identify opposite faces of a die using nets, let's try another puzzle:
+
+::: column.fit
+
+{.todo} INTERACTIVE: Face colors
+
+::: column.grow
+
+Each face of a cube is painted with a different color. 
+
+Here are the different views of this painted die.
+
+:::
+
+---
+
+The opposite face of the yellow is painted [[blue|purple|pink|green|red]].
+
+---
+
+The opposite face of the green is painted [[pink|blue|purple|green|red]].
+
+---
+
+The opposite face of the red is painted [[purple|blue|pink|green|red]].
+
+---
+
+    // page 10
+
+_{button.btn.continue}Continue_
+
+---
+
+    // COMMENT: I have a matching game at the prisms and pyramids section that I can drag here? There I also used to game to review types of prims and pyramids too
+
+    // COMMENT: Instead can we have an applet here that has regular triangle, pentagon, hexagon square  to let them create their nets with the help of number slider  - than we can open / close them to see their solids - in this way  we may have some questioning like the min number of faces for a polyhedron
+
+{.todo} INTERACTIVE: Net construction
+
+---
+
+### Using nets to calculate the surface area
+
+A __net__ allows us to see all the faces of a 3D solid at once. We can use the nets to find the surface areas of the cuboids instead of counting the numbers of squares in each face one by one.
+
+    // page 11
+
+Let’s find the surface area of this cuboid by using its net
+
+::: column.fit
+
+{.todo} INTERACTIVE: solid with a slider (solid <-> net)
+
+::: column.grow
+
+The net of the cuboid box shows three pairs of rectangles:
+
+4 cm by 2 cm,
+
+[[3]] cm by [[2]] cm, and
+
+[[4]] cm by [[3]] cm.
+
+With this information, we can now calculate the amount of cardboard needed to make the box; `(4 * 2) + (4 * 2) + (3 * 2) + (4 * 3) + (4 * 3) = input(52)  "square centimeters"`
+
+The surface area of the cuboid is 52 `blank("cm^2", "cm")`.
+
+:::
+
+---
+
+Use the slider to open the cuboid to its net. Then drag the side length measures to corresponding sides to find the surface area.
+
+{.todo} INTERACTIVE: solid <-> net
+
+---
+
+The pink rectangles have a total area of [[64]] `"m"^2`
+
+---
+
+The yellow rectangles have a total area of [[48]] `"m"^2`
+
+---
+
+The orange rectangles have a total area of [[24]] `"m"^2`
+
+---
+
+So the cuboid has a total area of [[136]] `"m"^2`.
+
+---
+
+Can we come up with shortcuts to find the surface area of the cuboids?
+
+Let’s have a look at the cuboids here:
+
+    // page 12
+
+Use the sliders to open the nets of the cuboids.
+
+{.todo} INTERACTIVE: solid <-> net
+
+Drag the area calculations on the corresponding regions.
+
+---
+
+::: column.grow
+
+`"Surface Area of the Cuboid" = ` _{x-equation(solution="2ab" keys="a b c" numeric)}_ ` + ` _{x-equation(solution="2bc" keys="a b c" numeric)}_ ` + ` _{x-equation(solution="2ac" keys="a b c" numeric)}_
+
+::: column(width=250)
+
+`"Surface Area of the Cube" = ` _{x-equation(solution="6 a^2" keys="a b c sup" numeric)}_
+
+:::
+
+---
+
+Since nets are composed of plane figures that form the faces of a 3D Solid, we can always use them to calculate the surface area of even more complex solids.
+
+::: column.fit
+
+{.todo} Embed: https://www.geogebra.org/m/bXhjS2KJ
+
+::: column.grow
+
+Have a look at the soccer ball here, use the slider to open to its net. There are [[12]] pentagons and [[20]] hexagons. If the area of each pentagon is 30 `"cm"^2` and the area of each hexagon is 45 `"cm"^2`, then the surface area of the ball is [[1260]] `"cm"^2`.
+
+:::
+
+---
+
+    // page 13
+
+In the next chapter, we are going to look at the nets, surface area, and volume of different types of polyhedra.
 
 ---
 
