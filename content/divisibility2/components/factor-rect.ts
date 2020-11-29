@@ -4,8 +4,9 @@
 // =============================================================================
 
 
-import {$html, $N, CustomElementView, ElementView, register, slide, SVGParentView} from '@mathigon/boost';
+import {$html, $N, CustomElementView, ElementView, register, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {tabulate} from '@mathigon/core';
+import {Point, Rectangle} from '@mathigon/euclid';
 import {clamp} from '@mathigon/fermat';
 
 const SIZE = 25;
@@ -16,6 +17,8 @@ const HANDLE = `M${SIZE / 2},0H0V${SIZE}H${SIZE / 2}A${SIZE / 2},${SIZE / 2},0,0
 export class FactorRect extends CustomElementView {
   private $svg!: SVGParentView;
   private $rects!: ElementView[];
+  private $correct!: SVGView;
+  private $labels!: SVGView[];
   private $handle!: ElementView;
   private size!: number;
   private columns!: number;
@@ -26,16 +29,18 @@ export class FactorRect extends CustomElementView {
     this.$svg = $N('svg', {}, this) as SVGParentView;
 
     const attributes = {width: SIZE, height: SIZE};
+    this.$correct = $N('rect', {class: 'correct'}, this.$svg) as SVGView;
     this.$rects = tabulate(() => $N('rect', attributes, this.$svg), this.size);
+    this.$labels = tabulate((i) => $N('text', {'text-anchor': ['middle', 'end'][i]}, this.$svg) as SVGView, 2);
 
-    this.$svg.setAttr('width', (this.size + 2) * SIZE);
-    this.$svg.setAttr('height', (y + 1) * SIZE);
+    this.$svg.setAttr('width', (this.size + 2.5) * SIZE);
 
     this.$handle = $N('path', {d: HANDLE, class: 'handle'}, this.$svg);
     slide(this.$handle, {
       start: () => $html.addClass('grabbing'),
-      move: (posn) => this.setWidth(Math.round(posn.x / SIZE - 0.5)),
-      end: () => $html.removeClass('grabbing')
+      move: (posn) => this.setWidth(Math.round(posn.x / SIZE - 1)),
+      end: () => $html.removeClass('grabbing'),
+      accessible: true
     });
 
     this.setWidth(x);
@@ -50,12 +55,21 @@ export class FactorRect extends CustomElementView {
     const max = Math.floor(this.size / columns) * columns;
 
     for (const [i, $r] of this.$rects.entries()) {
-      $r.setAttr('x', SIZE / 2 + (i % columns) * SIZE);
-      $r.setAttr('y', SIZE / 2 + Math.floor(i / columns) * SIZE);
+      $r.setTransform({x: (i % columns + 1) * SIZE, y: Math.floor(1 + i / columns) * SIZE});
       $r.setClass('wrong', i >= max);
     }
 
-    this.$svg.setAttr('height', (rows + 1) * SIZE);
-    this.$handle.setTransform({x: (columns + 0.5) * SIZE, y: SIZE / 2});
+    this.$labels[0].text = '' + columns;
+    this.$labels[0].setCenter({x: (1 + columns / 2) * SIZE, y: 20});
+
+    this.$labels[1].text = '' + rows;
+    this.$labels[1].setCenter({x: 20, y: (1 + rows / 2) * SIZE + 5});
+
+    this.$correct.toggle(max === this.size);
+    this.$correct.setRect(new Rectangle(new Point(SIZE, SIZE), columns * SIZE, rows * SIZE));
+
+    this.$svg.setAttr('height', (rows + 1.5) * SIZE);
+    this.$svg.setAttr('viewBox', `0 0 ${(this.size + 2.5) * SIZE} ${(rows + 1.5) * SIZE}`);
+    this.$handle.setTransform({x: (columns + 1) * SIZE, y: SIZE});
   }
 }

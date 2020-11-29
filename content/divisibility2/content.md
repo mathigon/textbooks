@@ -7,57 +7,65 @@
 > goals: play
 
 Here is a simple game similar to [Tetris](gloss:tetris). Rectangular blocks fill slowly fall from
-the top, and you have to arrange them to fill entire rows. Can you work out what the rules are?
+the top, and you have to arrange them using the arrow keys, to fill entire rows. Can you work out
+what the rules are, and what the [rearrange button](->.key-up) does?
 
     link(href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet")
     figure: x-factris(highscore="no")
 
+{.reveal(when="play")} Well done – you scored ${factris} points! :party-popper: You may have noticed
+that the _rearrange button_ changes the shape of the falling rectangle: for example, a 1 × 6
+rectangle might become a 2 × 3 rectangle. Maybe we can improve your score by learning more about
+these rectangular arrangements of various numbers. 
+
 ---
-> id: factris-1
+> id: rectangle-1
 
-In this course
+### Factors
 
-You may have noticed that when clicking the "rearrange" button, the
-
-Here you can see 24 squares arranged in a 2 x 12 rectangle. Move the tab and see if you can
-create other rectangles consisting of 24 squares:
+Here you can see a row of 24 squares. Move the black tab on the right, and see if you can create
+other rectangles consisting of 24 squares:
 
     figure
-      x-factor-rect.blue(size="12:2")
-
-| Number of rows    | 10 |
-| Number of columns | 10 |
-
-After playing one round: Great playing! Your score is ----. Let’s see if you can improve upon that score by learning more about creating rectangular arrangements of various numbers. 
-
-One arrangement of 24 tiles is 2 rows of 12 tiles. Move the tab to create all the other possible arrangements. 
-
-As students drag the tab, each time a rectangle is made, another column of this table gets filled in automatically. The one in red below is already filled in from the starting example. Students cannot move on until they find all the possibilities in the table. 
-
-Note: The picture on the left (below) is 8 rows of 3 and the picture on the right is 3 rows of 8. 
+      x-factor-rect(size="12:2")
+    // TODO Table with factors, filled in automatically
 
 ---
+> id: rectangle-2
 
-This rectangle has 18 tiles. Shown below is 2 rows of 9 tiles. Again, move the tab to create all possible arrangements. 
+Here is another rectangle with 2 × 9 = 18 tiles. Once again, try to find other rectangular
+arrangements of these tiles:
 
+    figure
+      x-factor-rect.m-yellow(size="9:2")
+    // TODO Table with factors, filled in automatically.
 
-Again, the table fills in as the students create rectangles and students can’t move on until they’ve filled in all the columns. 
+---
+> id: rectangle-3
 
-----
+You might have noticed that each every rectangular arrangement corresponds to a multiplication
+problem:
 
-You might have noticed that each every rectangular arrangement corresponds to a multiplication problem:
+::: column.text-center(width=140)
 
+18 = 3 × 6
 
-18 = 3 x 6
+::: column.text-center(width=140)
 
-18 = 2 x [[9]]
+18 = 2 × [[9]]
 
-18 = 18 x 1
+::: column.text-center(width=140)
+
+18 = 18 × 1
+
+:::
+
+---
 
 By finding all the possible rectangular arrangements of 18 desks, we’ve also found all the ways to multiply to 18: 1 x [[18]], 2 x [[9]], and 3 x [[6]]. Rotating the rectangle simply swaps the order. 
 Show image of 3 x 6 rotating to make 6 x 3. 
 
-All of these numbers 1, 2, 3, 6, 9 and 18 are the factors of 18 because they can be multiplied with another whole number to equal 18. Said another way, a factor of a number can divide into that number without a reminder. 
+All of these numbers 1, 2, 3, 6, 9 and 18 are the [factors](gloss:factor) of 18 because they can be multiplied with another whole number to equal 18. Said another way, a factor of a number can divide into that number without a reminder. TODO definine "divisible"
 
 ::: column.grow
 
@@ -73,115 +81,151 @@ All of these numbers 1, 2, 3, 6, 9 and 18 are the factors of 18 because they can
 
 :::
 
+---
+
+::: tab
+
+#### 20
+
 Move the tab in the rectangle below to find all the factors of 20. Start with 1 row of 20. Now, anytime a rectangle is made, the numbers show up on the sides and then the factors get automatically added into the list. The list starts out with blanks in it where the numbers will go so students will know when they have found all the factors. 
+
+    figure
+      x-factor-rect.m-yellow(size="20:1")
+
+::: tab
+
+#### 28
+
+    figure
+      x-factor-rect.m-yellow(size="28:1")
 
 Example #2 - Students will now do the same thing with the factors of 28, but this time, students will need to fill in the blanks as they make the different rectangles. I’ve left out the picture of the rectangle here, but it would be the same as above. It would start as one row of 28 tiles. 
 
-Start: 1  [[2]]  [[4]]  [[7]]  [[14]]  28				End: 1  2  4  7  14  28
+Start: 1  [[2]]  [[4]]  [[7]]  [[14]]  28
+
+::: tab
+
+#### 11
+
+    figure
+      x-factor-rect.m-yellow(size="11:1")
 
 Example #3 - Students will now do the same thing with the factors of 11. They will see there is only one blank to fill in, but can’t move on until they at least try to create other rectangles by moving around the tabs. 
 
-Start: 1  [[11]]							End: 1  11
+Start: 1  [[11]]
 
-Some numbers, like 11, don’t have any factors other than 1 and itself. We’ll learn more about these numbers and what makes these numbers special in a future chapter. 
-
----
-
-Now that we have a better understanding of factors, try Factris again and see if you can beat your first score of ---. 
-
-After playing one game: If you want to play Factris more, it’s always available here. See if you can beat the current weekly high score of --------?
+:::
 
 ---
 
-### Finding Factors
+Some numbers, like 11, don’t have any factors other than 1 and itself. In one of the upcoming
+chapters, we’ll learn more about these numbers and what makes these numbers special.
 
-The opposite of a factor is a __multiple__. We know that 5 is a factor of 20, so we say that 20 is
-a multiple of 5. Said another way, the multiples of 5 are all the numbers you get when you count by
-5 (starting at 0). The list of the multiples of 5 is 0, 5, [[10]], [[15]] and so on. Upon correct answer, show a 10 x 10 number grid with all the multiples of 5 being highlighted one at a time. 
-
-In general, a number divisible by N if that number divided by N equals a whole number. 
+Now that we have a better understanding of factors, try playing [Factris](/factris) again. Can you
+beat your previous score of ${factris}? Or can you even get a place on our highscore?
 
 ---
 > id: grid
 
-::: column.fit(parent="right")
+### Multiples
+
+::: column.fit
 
     x-number-grid.medium
 
 ::: column.grow
 
-Next, show a blank 10 x 10 grid and the following instruction. Click any number to see all the multiples of that number. Upon clicking a starting number, all of its multiples will light up. 
 
-After trying 3 different numbers, the following appears: You may have noticed some nice patterns in multiples of numbers. Here are all the multiples of 9. 
+The opposite of a factor is a [__multiple__](gloss:multiple). We know that 5 is a factor of 20, so we say that 20 is
+a multiple of 5. Said another way, the multiples of 5 are all the numbers you get when you count by
+5 (starting at 0). The list of the multiples of 5 is 0, 5, [[10]], [[15]] and so on.
 
-Show the 10 x 10 grid with all multiples of 9 highlighted.
+In general, a number divisible by N if that number divided by N equals a whole number. 
+Click any number to see all the multiples of that number.
 
 :::
 
+---
+
+You may have noticed some nice patterns in multiples of numbers.
+There are many different patterns hidden in these multiples. Take a look at the multiples of 3 and
+9 – what do you notice and wonder? We'll learn more about the patterns in multiples in the next chapter. 
+
     x-free-text
 
-In the text box below, write down some of your observations about the multiples of 9. 
-We’ll learn more about the patterns in multiples of 9 (and others!) in the next chapter. 
-
 ---
-> id: divisibility-game
+> id: factors-quiz
 
-It’s easy to sometimes confuse the words factors and multiples. Factors divide into whole numbers without remainders. The factors of 10 are 1, 2, 5 and 10. Multiples of a number are the list of numbers obtained by counting by that number. For example, 30 is a multiple of 10 because 30 is on the list of numbers resulting from counting by 10: 10, 20, 30, 40, 50 and so on. Practice with these words by playing the short game below. You have to determine which numbers are factors or multiples. Click the [play button](->#divisibility-game_.toggle) to start. Can we consider taking out the speed component - some students could find this stressful. Or maybe not have the moving bar going across. 
+Factors and multiples are opposites of each other, and it is easy to confuse the words! A
+[__factor__](gloss:factor) is always the _smaller_ number: it divides another number without
+remainder. For example, the factors of 10 and 1, 2, 5 and 10.
+
+A [__multiple__](gloss:multiple) is always the _larger_ number. You can obtain the multiples of a
+number by “counting by that number”. For example, the multiples of 10 are 10, 20, 30, 40, 50 and so
+on. Let’s practice this terminology with a simple quiz:
 
 ::: .box.f-blue.no-padding
 #### Factors and Multiples Quiz
 
-    x-gameplay
-      .factors-row
-        .factor-number ${x}
-        | is a
-        .factor-value
-          .factor-bubble: .btn.btn-blue factor
-          .factor-bubble: .btn.btn-blue multiple
-          .factor-bubble: .btn.btn-blue neither
-        | of
-        .factor-number ${y}
+    x-gameplay.factors-quiz
+      .circled ${x}
+      | is a
+      .factor-value
+        .factor-bubble: .btn.btn-blue factor
+        .factor-bubble: .btn.btn-blue multiple
+        .factor-bubble: .btn.btn-blue neither
+      | of
+      .circled ${y}
+
+:::
+
+---
+> id: factor-pairs
+
+### Finding Factors
+
+As we’ve seen, arranging numbers into rectangular arrays is a great technique for finding factors of numbers. Sometimes, though, we may just want to make a list of all the factors of a number. One technique is to start with the first factor pair, 1 and the number itself, and work towards the middle.
+
+::: x-slideshow(step="auto")
+
+    svg(width=310 height=110 viewBox="0 0 310 110" slot="stage" style="margin: 0 auto 24px")
+      g(text-anchor="middle" font-size=20 font-weight=600)
+        text(x=20 y=25 fill="#333") 40
+        text(x=60 y=25 fill="#eb4726") 1
+        text(x=90 y=25 fill="#cd0e66" slide="1-") 2
+        text(x=120 y=25 fill="#6d3bbf" slide="2") 3
+        text(x=120 y=25 fill="#6d3bbf" slide="3-") 4
+        text(x=150 y=25 fill="#0f82f2" slide="4-") 5
+        text.reveal(x=200 y=25 when="blank-5" fill="#0f82f2" slide="4-") 8
+        text.reveal(x=230 y=25 when="blank-4" fill="#6d3bbf" slide="3-") 10
+        text.reveal(x=260 y=25 when="blank-2" fill="#cd0e66" slide="1-") 20
+        text.reveal(x=290 y=25 when="blank-0" fill="#eb4726") 40
+      g(fill="none" stroke-linecap="round" stroke-width=2 opacity=0.5)
+        line(x1="42" y1="3" x2="42" y2="33" stroke="#333")
+        path.reveal(d="M60,30c0,38.11,51.49,69,115,69S290,68.11,290,30" stroke="#eb4726" animation="draw" when="blank-0")
+        path.reveal(d="M90,30c0,28.17,38.06,51,85,51s85-22.83,85-51" stroke="#cd0e66" animation="draw" when="blank-1" slide="1-")
+        path.reveal(d="M120,30c0,18.23,24.62,33,55,33s55-14.77,55-33" stroke="#6d3bbf" animation="draw" when="blank-4" slide="3-")
+        path.reveal(d="M150,30c0,8.28,11.19,15,25,15s25-6.72,25-15" stroke="#0f82f2" animation="draw" when="blank-5" slide="4-")
+
+Let's try to find all factors of 40. In this case, the first factor pair is 1 and [[40]].
+
+The next smallest integer is 2, which [[is also | isn’t]] a factor of 40, _{span.reveal(when="blank-1")} and 2 × [[20]] = 40._
+
+The next number is 3, which [[is not | is]] a factor of 40, _{span.reveal(when="blank-3")} so we skip it._
+
+The next number is 4, which is a factor of 40, because 4 × [[10]] = 40.
+
+The next number is 5 which is also a factor of 40, because 5 × [[8]] = 40.
+
+Finally, 6 [[is not | is]] a factor of 40 and 7 [[is also not | is]] a factor.
+_{span.reveal("blank-6 blank-7")} We’ve met in the middle, which means that we’ve found **all** factors of 40._
 
 :::
 
 ---
 
-As we’ve seen, arranging numbers into rectangular arrays is a great technique for finding factors of numbers. Sometimes, though, we may just want to make a list of all the factors of a number. One technique is to start with the first factor pair - 1 and the number itself - and work towards the middle. Insert this element from current mathigon chapter:
-
----
-> id: factors2
-
-::: x-slideshow
-
-    .todo TODO
-
-Let’s use this technique to find all the factors of 40. The first pair we start with is 1 and [[40]].
-
-2 [[is | is not]] a factor of 40. Upon correct answer: 2 x [[20]] = 40.
-
-3 [[is not | is]] a factor of 40.
-
-4 is a factor of 40 since 4 x [[10]] = 40.
-
-5 is a factor of 40 since 5 x [[8]] = 40.
-
-6 [[is not | is]] a factor of 40. 7 [[is not | is]] a factor of 40.
-
-We are now at 8 which is already on our list from the factor pair 5 x 8. So, we’ve met in the middle and found all the factors of 40. 
-
-:::
-
----
-
-::: column.grow
-
-Arranging squares into rectangular arrays can help see factor pairs. Play this animation to see another way to represent numbers that also shows the factor pairs. 
-
-When the animation stops at 12, show these questions. 
-
-In this arrangement of 12 circles, we can see 3 groups of [[4]] circles. We can also see [[6]] pairs of 2 circles. So, this diagram shows the factor pairs 2 x 6 and 3 x 4. When we include 1 x 12, we have all the factor pairs for 12. 
-
-Upon correct answers, have the animation continue up to the number 17. Then, show this question.
+We’ve now seen how to find the factors of a numbers using rectangles or by making a list of factor
+pairs – but there are many other representations.
 
 ::: column.fit
 
@@ -189,10 +233,17 @@ Upon correct answers, have the animation continue up to the number 17. Then, sho
       x-factor-circles.var(size="400" :n="n + 1")
       x-slider(steps=99 :bind="n")
 
-:::
+::: column.grow
+
+Play this animation to see another way to represent numbers that also shows the factor pairs. When the animation stops at 12, show these questions. 
+
+In this arrangement of 12 circles, we can see 3 groups of [[4]] circles. We can also see [[6]] pairs of 2 circles. So, this diagram shows the factor pairs 2 x 6 and 3 x 4. When we include 1 x 12, we have all the factor pairs for 12. 
+
+Upon correct answers, have the animation continue up to the number 17. Then, show this question.
 
 Since the only factor pair for 17 is [[1]] x 17, the dots are arranged in one large circle. Upon correct answers, have the animation continue up to the number 40 Then, show this question.
 
+:::
 
 We found the factor pairs of 40 above - 1 x 40, 2 x 20, 4 x 10 and 5 x 8. In this arrangement, we can see [[20]] groups of , [[10]] groups of  and [[5]] groups of .
 
@@ -208,13 +259,25 @@ Upon correct answers, play the animation up to 60. After reaching 60, move on to
 
 ::: column.grow
 
-Scientists and mathematicians have been thinking about the factors of different numbers for thousands of years. One of these mathematicians was Diophantus, who lived in Alexandria, a town in Egypt famous for its large library.
+Scientists and mathematicians have been thinking about the factors of different numbers for
+thousands of years. One of these mathematicians was Diophantus, who lived in Alexandria, a coastal
+town in Egypt famous for its large library.
 
-Diophantus noticed – just like you might have done above– that some numbers like 24, seem to have many factors while other numbers like 17 or 22 have very few factors.
+Diophantus noticed – just like you might have done above – that some numbers like 24, seem to have
+many factors while other numbers like 17 or 22 have very few factors.
+[Continue](btn:next)
 
 :::
 
-One way to provide some structure to this observation is to add up all the factors of a number, except the number itself, and compare it to the original number. For example, the factors of 8 are 1, 2, 4 and 8. Removing 8 from the list, we are left with 1, 2 and 4. 1 + 2 + 4 = [[7]]. Reveal the table upon correct answers. The table will look like the one below. 
+{.reveal(when="next-0")} One way to think about this observation mathematically is to add up all
+the factors of a number, except for the number itself. For example, the factors of 8 are 1, 2, 4
+and 8. If we add up all factors except 8 itself, we get 1 + 2 + 4 = [[7]].
+
+---
+> id: perfect-1
+
+Here you can see all numbers from 1 to 18 together with their factors. Try to fill in the missing
+totals – do you notice any patterns?
 
     - factors = (n) => Array(n-2).fill(1).map((x, i) => i+1).filter(i => !(n % i))
     - total = (a) => a.reduce((a, c) => a + c, 0)
@@ -225,26 +288,50 @@ One way to provide some structure to this observation is to add up all the facto
           span.factors= factors(i).join(', ')
           span.total= total(factors(i))
 
-Upon all correct answer, show questions as shown in the texts boxes below (from the Intermediate chapter) with some slight scaffolds for the Foundations chapter:
+::: column.frame.f-red.text-center(width=235 parent="padded-thin")
 
-For most numbers on this list, this sum of its factors (other than itself) is [[less than | more than | equal to]] itself. These numbers are called deficient numbers. Deficient means “not having enough” and these numbers don’t have enough factors to add up to equal itself. Upon correct answer, all the rows of deficient numbers are highlighted in the same pink color of the text box below (from the Intermediate course).
+For most numbers on this list, this sum of its factors is [[less than | more than | equal to]] itself. These numbers are called __deficient numbers__. Deficient means _“not having enough”_ and these numbers don’t have enough factors to add up to equal itself.
 
-For some numbers on this list, the sum of its factors (other than itself) is greater than itself: 12 and [[18]]. These are called abundant numbers. Abundant means “having plenty of” and these numbers have more than enough factors to add up to more than itself. Upon correct answer, all the rows of abundant numbers are highlighted in the same blue color of the text box below. 
+    // Upon correct answer, all the rows of deficient numbers are highlighted in the same pink color of the text box below (from the Intermediate course).
 
-Only one number on this list has a sum of factors (other than itself) that is equal to itself: [[6]]. This is called a perfect number. These numbers have the perfect amount of factors to equal itself! Upon correct answer, the row of the perfect number is highlighted in the same green color of the text box below.
+::: column.frame.f-green.text-center(width=235)
+
+For some numbers on this list, the sum of its factors is greater than itself: 12 and [[18]]. These are called __abundant numbers__. Abundant means _“having plenty of”_ and these numbers have more than enough factors to add up to more than itself.
+
+    // Upon correct answer, all the rows of abundant numbers are highlighted in the same blue color of the text box below. 
+
+::: column.frame.f-yellow.text-center(width=235)
+
+Only one number on this list has a sum of factors that is equal to itself: [[6]]. This is called a __perfect number__: it has the perfect amount of factors to equal itself!
+
+    // Upon correct answer, the row of the perfect number is highlighted in the same green color of the text box below.
+
+:::
 
 ---
 
-Let’s explore numbers in the 20’s and see how many of each type we have. Show the table below with all numbers filled in, but with the panels still in gray (no pink, green or blue yet)
+Let’s explore numbers in the 20’s and see how many of each type we have. First, click on any numbers in the table that are abundant. Now click on any numbers in the table that are perfect.
 
-Click on any numbers in the table that are abundant. Upon doing so, the panels for 20 and 24 turn green. Then, this instruction appears: Click on any numbers in the table that are perfect. Upon doing so, the panel for 28 turns blue and then all the other numbers turn pink. 
+    // Show the table below with all numbers filled in, but with the panels still in gray (no pink, green or blue yet)
+    // Upon doing so, the panels for 20 and 24 turn green.
+    //Upon doing so, the panel for 28 turns blue and then all the other numbers turn pink. 
+
+    - factors = (n) => Array(n-2).fill(1).map((x, i) => i+1).filter(i => !(n % i))
+    - total = (a) => a.reduce((a, c) => a + c, 0)
+    .factor-table
+      for i in [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+        div
+          span.bulb= i
+          span.factors= factors(i).join(', ')
+          span.total= total(factors(i))
+
+--
 
 Again, most of these numbers are [[deficient | abundant | perfect]]. There are 2 abundant numbers and 1 perfect number. If we extend our list through 100, we might expect a similar distribution of deficient, abundant and perfect numbers. Place the 3rd star on the number line below where you think the next perfect number might be. Just make a guess. 
 
-Notes on this image and interactive:
-Tick marks at every number aren’t needed. Just at the 10’s is fine. This is just the image I found to use for a number line. And make the font size of the multiple of 10’s smaller than the font size of 6 and 28 so the perfect numbers numbers stand out more. 
-Students will drag the 3rd star somewhere on the number line
-Students can click the “zoom out” button if they want to go above 100. Each time, the number line will be bigger by 100, from 0-200, then 0-300 and so on. 
+    // Tick marks at every number aren’t needed. Just at the 10’s is fine. This is just the image I found to use for a number line. And make the font size of the multiple of 10’s smaller than the font size of 6 and 28 so the perfect numbers numbers stand out more. 
+    // Students will drag the 3rd star somewhere on the number line
+    // Students can click the “zoom out” button if they want to go above 100. Each time, the number line will be bigger by 100, from 0-200, then 0-300 and so on. 
 
 After students place their star, a tutor comment will say “Good guess. But the next perfect number is actually 496.” At this point the 3rd star will rise above the number they placed it, the number line will zoom out to 0-500 and the three stars will be at 6, 28 and 496. Then, the following text will appear under the numberline. 
 
@@ -269,10 +356,11 @@ Notice that all these perfect numbers are [[even | odd]]. In fact, all known 51 
 
 The idea of even and odd also comes up when we look at how many factors each number has. Let’s now move back to including the number itself as one of the factors. Since factors come in pairs, we might initially think that all numbers have an even number of factors. For example, the factor pairs for 20 are 1 x 20, 2 x [[10]] and 4 x [[5]]. So, 20 has 6 factors which is indeed [[even | odd ]]. However, let’s explore all the factors of 36. As you did before, more the tab to create all possible factor pairs for 36. 
 
-Start with 2 rows of 18 with the 1st two factor pairs listed. Now, anytime a rectangle is made, the numbers show up on the sides and then the factors get added into the list. The list starts out with blanks in it where the numbers will go so students will know when they are done or not. 
-START STATE:
+    // Start with 2 rows of 18 with the 1st two factor pairs listed. Now, anytime a rectangle is made, the numbers show up on the sides and then the factors get added into the list. The list starts out with blanks in it where the numbers will go so students will know when they are done or not. 
 
-Upon all factors:
+    figure
+      x-factor-rect.m-purple(size="18:2")
+
 36 has [[9]] total factors which is an [[odd | even]] number of factors. How did this happen? You may have noticed that one of the arrangements for 36 is a 6 by 6 square. 
 
 6 x 6 does equal 36. However, when we list the factors of 36, we only need to list the 6 once. This gives us an odd number of factors! So, any number that can be formed into a square will give an odd number of factors. Below are the first 8 numbers that can be made with a square number of tiles.
@@ -295,7 +383,8 @@ You can learn more about square numbers and triangular numbers and other shaped 
 
 ::: tab
 
-Tab 2 with an interactive and hints. 
+#### Hints
+
 Let’s look at locker 10 as an example. Play the animation below. 
 	Student 1 opens it.
 	Student 2 closes it.
@@ -313,7 +402,8 @@ Student 1 opens it.
 
 ::: tab
 
-Tab 3 with the answer. Don’t unlock this tab until students complete tab #2. 
+#### Solution
+
 All lockers with an odd number of factors are lockers that are square numbers: 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100.
 
 :::
