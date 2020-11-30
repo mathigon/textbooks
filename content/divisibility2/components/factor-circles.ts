@@ -4,36 +4,57 @@
 // =============================================================================
 
 
-import {$N, CustomElementView, register, SVGParentView} from '@mathigon/boost';
-import {Color, flatten} from '@mathigon/core';
-import {primeFactorisation} from '@mathigon/fermat';
-import {Point, Polygon} from '@mathigon/euclid';
+import {$N, CustomElementView, ElementView, register, SVGParentView} from '@mathigon/boost';
+import {Color, join, tabulate} from '@mathigon/core';
+import {ORIGIN, Point} from '@mathigon/euclid';
+import {TWO_PI} from '@mathigon/euclid/src/utilities';
 import {RED} from '../../shared/constants';
 
 
-function getPoints(center: Point, factors: number[], radius: number, angle: number): Point[] {
-  // TODO Better sizing for powers of 2
-  const polygon = Polygon.regular(factors[0], radius).rotate(angle).translate(center);
-  if (factors.length === 1) return polygon.points;
-
-  const newRadius = polygon.edges[0].length / (factors[0] === 2 ? 3 : 4);
-  const newFactors = factors.slice(1);
-  return flatten(polygon.points.map(p => {
-    let angle = p.angle(center);
-    if (factors[0] === 2) angle += Math.PI / 2;
-    return getPoints(p, newFactors, newRadius, angle);
-  }));
+function regular(n: number, radius: number) {
+  const da = TWO_PI / n;
+  return tabulate((i) =>
+    new Point(radius * Math.sin(da * i), radius * Math.cos(da * i)), n);
 }
+
+function primeFactors(n: number): number[] {
+  if (n <= 1) return [];
+  if (n % 4 === 0) return [4, ...primeFactors(n / 4)];  // hack
+  if (n % 2 === 0) return [2, ...primeFactors(n / 2)];
+
+  const max = Math.sqrt(n);
+  for (let i = 3; i <= max; i += 2) {
+    if (n % i === 0) return [i, ...primeFactors(n / i)];
+  }
+  return [n];
+}
+
+function getPoints(factors: number[], size: number): Point[] {
+  if (factors.length <= 0) return [ORIGIN];
+
+  const n = factors.pop()!;
+  const radius = (n * size) / (n + 2);
+  const angle = n === 2 ? Math.PI / 2 : n === 4 ? Math.PI / 4 : 0;
+  const dy = n % 2 === 0 ? 0 : (radius / 2) * (1 - Math.cos(Math.PI / n));
+
+  const polygon = regular(n, radius).map(p => p.rotate(angle).shift(0, -dy));
+  const dotRadius = (2 * size) / (n + 2);
+  const children = getPoints(factors, dotRadius);
+
+  return join(...polygon.map(p => children.map(c => c.add(p))));
+}
+
 
 @register('x-factor-circles', {attributes: ['n']})
 export class FactorCircles extends CustomElementView {
-  private center!: Point;
+  private size!: number;
   private $svg!: SVGParentView;
+  private $label!: ElementView;
 
   ready() {
-    const size = +this.attr('size') || 400;
-    this.$svg = $N('svg', {width: size, height: size}, this) as SVGParentView;
-    this.center = new Point(size / 2, size / 2);
+    this.size = +this.attr('size') || 400;
+    this.$svg = $N('svg', {width: this.size, height: this.size}, this) as SVGParentView;
+    this.$label = $N('text', {x: 10, y: 20}, this);
 
     this.drawPoints(+this.attr('n'));
     this.on('attr:n', e => this.drawPoints(+e.newVal));
@@ -42,22 +63,18 @@ export class FactorCircles extends CustomElementView {
   drawPoints(n: number) {
     // TODO Reuse existing children, add transitions
     this.$svg.removeChildren();
+    this.$label.text = '' + n;
 
-    if (n <= 1) {
-      return $N('circle', {cx: this.center.x, cy: this.center.y, r: 100,
-        fill: RED}, this.$svg);
-    }
+    const c = this.size / 2;
+    if (n <= 1) return $N('circle', {cx: c, cy: c, r: 100, fill: RED}, this.$svg);
 
-    const factors = primeFactorisation(n).reverse();
-    const points = getPoints(this.center, factors, 100, 0);
-    const r = Point.distance(points[0], points[1]) * 0.4;
-    const colours = Color.rainbow(points.length);
-
-    // const maxR = Math.max(...points.map(p => Point.distance(this.center, p)));
-    // points = points.map(p => p.scale(180 / maxR, 180 / maxR, this.center));
+    const factors = primeFactors(n);
+    const points = getPoints(factors, 0.9 * c);
+    const r = 0.4 * Point.distance(points[0], points[1]);
+    const colours = Color.rainbow(points.length).reverse();
 
     for (const [i, p] of points.entries()) {
-      $N('circle', {cx: p.x, cy: p.y, r, fill: colours[i]}, this.$svg);
+      $N('circle', {cx: c - p.x, cy: c - p.y, r, fill: colours[i]}, this.$svg);
     }
   }
 }

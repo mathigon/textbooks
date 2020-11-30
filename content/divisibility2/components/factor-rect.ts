@@ -19,7 +19,9 @@ export class FactorRect extends CustomElementView {
   private $rects!: ElementView[];
   private $correct!: SVGView;
   private $labels!: SVGView[];
-  private $handle!: ElementView;
+  private $handle?: ElementView;
+
+  private isStatic!: boolean;
   private size!: number;
   private columns!: number;
 
@@ -33,15 +35,17 @@ export class FactorRect extends CustomElementView {
     this.$rects = tabulate(() => $N('rect', attributes, this.$svg), this.size);
     this.$labels = tabulate((i) => $N('text', {'text-anchor': ['middle', 'end'][i]}, this.$svg) as SVGView, 2);
 
-    this.$svg.setAttr('width', (this.size + 2.5) * SIZE);
+    this.isStatic = this.hasAttr('static');
+    this.$svg.setAttr('width', (this.isStatic ? x + 1.5 : this.size + 2.5) * SIZE);
 
-    this.$handle = $N('path', {d: HANDLE, class: 'handle'}, this.$svg);
-    slide(this.$handle, {
-      start: () => $html.addClass('grabbing'),
-      move: (posn) => this.setWidth(Math.round(posn.x / SIZE - 1)),
-      end: () => $html.removeClass('grabbing'),
-      accessible: true
-    });
+    if (!this.isStatic) {
+      this.$handle = $N('path', {d: HANDLE, class: 'handle'}, this.$svg);
+      slide(this.$handle, {
+        start: () => $html.addClass('grabbing'),
+        move: (posn) => this.setWidth(Math.round(posn.x / SIZE - 1)),
+        end: () => $html.removeClass('grabbing'), accessible: true
+      });
+    }
 
     this.setWidth(x);
   }
@@ -68,8 +72,10 @@ export class FactorRect extends CustomElementView {
     this.$correct.toggle(max === this.size);
     this.$correct.setRect(new Rectangle(new Point(SIZE, SIZE), columns * SIZE, rows * SIZE));
 
+    const width = this.isStatic ? columns + 1.5 : this.size + 2.5;
+    this.$svg.setAttr('viewBox', `0 0 ${width * SIZE} ${(rows + 1.5) * SIZE}`);
     this.$svg.setAttr('height', (rows + 1.5) * SIZE);
-    this.$svg.setAttr('viewBox', `0 0 ${(this.size + 2.5) * SIZE} ${(rows + 1.5) * SIZE}`);
-    this.$handle.setTransform({x: (columns + 1) * SIZE, y: SIZE});
+
+    this.$handle?.setTransform({x: (columns + 1) * SIZE, y: SIZE});
   }
 }
