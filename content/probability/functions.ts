@@ -218,27 +218,34 @@ export function radioactive($step: Step) {
 // -----------------------------------------------------------------------------
 export function galtonBoard($step: Step) {
   const $svg = $step.$('.galton')!;
-  const rowCnt = 10;
   let rows: number[] = [];
-  rows = repeat(rowCnt + 1, 0);
-  rows[0] = 50 + 40 * -1 + 25;
-  for (let i = 0; i < rowCnt; i++) {  // rows
-    for (let j = 0; j <= i; j++) {  // columns
-      const cx = 200 + (j - i / 2) * 40;
-      const cy = 50 + 40 * i;
-      rows[i + 1] = cy + 25;
-      $N('circle', {cx, cy, r: 5}, $svg);
-    }
-  }
-
-  // tabulate number of balls in each ending position
-
-  const firstPos = 200 - 20 * rowCnt;
+  let rowCnt: number;
+  let p: number;
+  let firstPos;
   const finalToInd: number[] = [];
-  for (let i = 0; i <= rowCnt; i++) {
-    finalToInd[firstPos + i * 40] = i;
-  }
-  const cnt: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let cnt: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+  $step.model.watch(() => {
+    $svg.removeChildren();
+    rowCnt = $step.model.rows;
+    p = $step.model.p;
+    rows = repeat(rowCnt + 1, 0);
+    rows[0] = 50 + 40 * -1 + 25;
+    for (let i = 0; i < rowCnt; i++) {  // rows
+      for (let j = 0; j <= i; j++) {  // columns
+        const cx = 200 + (j - i / 2) * 40;
+        const cy = 50 + 40 * i;
+        rows[i + 1] = cy + 25;
+        $N('circle', {cx, cy, r: 5}, $svg);
+      }
+    }
+
+    firstPos = 200 - 20 * rowCnt;
+    for (let i = 0; i <= rowCnt; i++) {
+      finalToInd[firstPos + i * 40] = i;
+    }
+    cnt = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  });
 
   $svg.on('click', async () => {
     const $ball = $N('circle', {cx: 200, cy: 10, r: 10, class: 'ball'}, $svg);
@@ -248,7 +255,7 @@ export function galtonBoard($step: Step) {
     let cur = 200;
     const ht = 100; // adjust to taste, height of ball bounce
     for (let i = 0; i < rowCnt; i++) {
-      const nextDir = Math.random() < 0.5;
+      const nextDir = Math.random() < p;
       await animate((p: number) => {
         const height = ht * p * (p - 1 + 40 / ht) + rows[i]; // quadratic bounce of ball
         $ball.setAttr('cy', height);
@@ -265,6 +272,7 @@ export function galtonBoard($step: Step) {
       }
     }
     cnt[finalToInd[Number($ball.attr('cx'))]]++;
+    console.log(cnt);
   });
 }
 
