@@ -505,7 +505,7 @@ export function utilities1($section: Step) {
 }
 
 export function planarity($section: Step) {
-  const $svg = $section.$$('svg')[1] as SVGParentView;
+  const $svg = $section.$('svg#planarity') as SVGParentView;
   const $newBtn = $section.$('.btn')!;
   const $solveds = $section.$$('x-solved');
 
