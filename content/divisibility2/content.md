@@ -232,7 +232,7 @@ pairs – but there are many other representations.
 
     figure
       x-factor-circles.var(size="400" :n="n + 1")
-      x-slider(steps=99 :bind="n")
+      x-slider(steps=99 speed=0.1 :bind="n")
 
 ::: column.grow
 
@@ -437,7 +437,26 @@ numbers and other shaped numbers [in the future](/course/sequences/figurate).
 ::: .box.f-blue
 #### The Locker Problem
 
-100 students are lined up at the beginning of a long school hallway with lockers numbered 1-100. The first student goes down the hall and opens every locker. The 2nd students goes down the hall and closes every 2nd locker, starting at locker #2. The 3rd student begins at locker #3 and reverses the state (if it’s open, they close it. If it’s closed, they open it) of that locker and every 3rd locker. The 4th student begins at locker #4 and reverses the state of that locker and every 4th locker. This continues until all 100 students have gone down the hallway. What numbered lockers are open at the end?
+100 students are lined up at the beginning of a long school hallway with lockers numbered from 1 to 
+100.
+
+::: x-slideshow
+
+    .todo(slot="stage") diagram
+
+The first student goes down the hall and opens every locker.
+
+The second students goes down the hall and closes every second locker, starting at locker #2.
+
+The third student begins at locker #3 and reverses the state of every third locker: if it’s open,
+they close it, and if it’s closed, they open it. 
+
+The fourth student begins at locker #4 and reverses the state of that locker and every four locker,
+like before. This continues until all 100 students have gone down the hallway.
+
+:::
+
+What numbered lockers are open at the end?
 
 Let’s look at locker 10 as an example. Play the animation below. 
 	Student 1 opens it.

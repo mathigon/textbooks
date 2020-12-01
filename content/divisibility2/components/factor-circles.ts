@@ -4,11 +4,10 @@
 // =============================================================================
 
 
-import {$N, CustomElementView, ElementView, register, SVGParentView} from '@mathigon/boost';
+import {$N, Browser, CustomElementView, ElementView, register, SVGParentView, SVGView} from '@mathigon/boost';
 import {Color, join, tabulate} from '@mathigon/core';
 import {ORIGIN, Point} from '@mathigon/euclid';
 import {TWO_PI} from '@mathigon/euclid/src/utilities';
-import {RED} from '../../shared/constants';
 
 
 function regular(n: number, radius: number) {
@@ -50,31 +49,41 @@ export class FactorCircles extends CustomElementView {
   private size!: number;
   private $svg!: SVGParentView;
   private $label!: ElementView;
+  private $points: SVGView[] = [];
 
   ready() {
     this.size = +this.attr('size') || 400;
     this.$svg = $N('svg', {width: this.size, height: this.size}, this) as SVGParentView;
-    this.$label = $N('text', {x: 10, y: 20}, this);
+    this.$label = $N('text', {x: 6, y: 30}, this.$svg);
 
     this.drawPoints(+this.attr('n'));
     this.on('attr:n', e => this.drawPoints(+e.newVal));
   }
 
   drawPoints(n: number) {
-    // TODO Reuse existing children, add transitions
-    this.$svg.removeChildren();
     this.$label.text = '' + n;
 
     const c = this.size / 2;
-    if (n <= 1) return $N('circle', {cx: c, cy: c, r: 100, fill: RED}, this.$svg);
-
     const factors = primeFactors(n);
     const points = getPoints(factors, 0.9 * c);
-    const r = 0.4 * Point.distance(points[0], points[1]);
-    const colours = Color.rainbow(points.length).reverse();
+    const r = points.length > 1 ? 0.4 * Point.distance(points[0], points[1]) : 0.6 * c;
+    const colours = Color.rainbow(points.length > 1 ? points.length : 2).reverse();
 
+    // Create any missing circles
+    for (let i = this.$points.length; i < points.length; ++i) {
+      this.$points.push($N('circle', {r: 100, style: 'opacity:0'}, this.$svg) as SVGView);
+    }
+
+    // Update all circles
     for (const [i, p] of points.entries()) {
-      $N('circle', {cx: c - p.x, cy: c - p.y, r, fill: colours[i]}, this.$svg);
+      this.$points[i].setTransform({x: c - p.x, y: c - p.y}, undefined, r / 100);
+      this.$points[i].setAttr('fill', colours[i]);
+    }
+
+    // Hide or show circles
+    Browser.redraw();
+    for (let i = 0; i < this.$points.length; ++i) {
+      this.$points[i].css('opacity', i < points.length ? 1 : 0);
     }
   }
 }
