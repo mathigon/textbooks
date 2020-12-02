@@ -6,6 +6,7 @@
 
 import {Step} from '../shared/types';
 import {VoxelPainter} from './components/voxel-painter';
+import '../shared/components/solid';
 
 import './components/voxel-painter';
 import '../shared/components/solid';
