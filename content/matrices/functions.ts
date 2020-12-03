@@ -11,6 +11,8 @@ import {Angle, ORIGIN, Point} from '@mathigon/euclid';
 import {ElementView, ScreenEvent, svgPointerPosn} from '@mathigon/boost';
 import {Geopad, Step} from '../shared/types';
 
+import './components/gaussian';
+
 
 export function rocket($step: Step) {
   const $geo = $step.$('x-geopad') as Geopad;
@@ -371,4 +373,8 @@ export function calculateInverse($step: Step) {
 
 export function rotationInverse(_$step: Step) {
   // TODO: put an x-matrix-solver here
+}
+
+export function gaussianSolve(_$step: Step) {
+  // okay?
 }

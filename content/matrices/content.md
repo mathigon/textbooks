@@ -1725,8 +1725,39 @@ Here is the formula for calculating a 3x3 matrix. There is a way to calculate in
 > sectionStatus: dev
 
 {.todo} COMING SOON
+> id: gaussian-solve
 
+Here is a Gaussian component
 
+::: x-gaussian(dimension="2x2")
+
+{div(slot="matrix")} `§[[(-1) 1] [(-2) 1]]` • `§[[x] [y]]` = `§[[4] [2]]`
+
+* Here is step one
+* Here is step two
+* Here is step three
+
+:::
+
+---
+> id: gaussian-solve2
+
+::: x-gaussian(dimension="3x3")
+
+{div(slot="matrix")} `§[[168 20 20] [168 28 12] [168 42 18]]` • `§[[x] [y] [z]]` = `§[[1400] [1336] [1824]]`
+
+:::
+
+---
+> id: gaussian-solve3
+
+::: x-gaussian(dimension="5x7")
+
+{div(slot="matrix")} `§[[1 0 0 0 -1 -1 1] [-1 1 0 0 0 0 0] [0 -1 1 0 0 0 -1] [0 0 -1 1 0 1 0] [0 0 0 -1 1 0 0]]` • `§[[e1] [e2] [e3] [e4] [e5] [e6] [e7]]` = `§[[0] [0] [0] [0] [0]]`
+
+:::
+
+---
 > id: two-equations
 
 ::: column.grow
