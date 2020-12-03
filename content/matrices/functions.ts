@@ -12,6 +12,7 @@ import {ElementView, ScreenEvent, svgPointerPosn} from '@mathigon/boost';
 import {Geopad, Step} from '../shared/types';
 
 import './components/gaussian';
+import {Gaussian} from './components/gaussian';
 
 
 export function rocket($step: Step) {
@@ -376,5 +377,26 @@ export function rotationInverse(_$step: Step) {
 }
 
 export function gaussianSolve(_$step: Step) {
-  // okay?
+  const $gauss = _$step.$('x-gaussian') as Gaussian;
+
+  const back = $gauss.$('.btn.back');
+  const next = $gauss.$('.btn.next');
+  // FIXME: create a "step-setter" function for Gaussians
+  // FIXME: possibly copy the cheesecake thing in how the next steps work
+  // $gauss.setSteps({});
+
+  back?.on('click', () => {
+    $gauss.backStep();
+  });
+
+  next?.on('click', () => {
+    $gauss.nextStep();
+  });
+
+  // TODO: pseudocode
+  const steps = [
+    'new',
+    'r1.r1',
+    'r2=0.5*r2'
+  ];
 }

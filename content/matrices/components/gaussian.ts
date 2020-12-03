@@ -13,10 +13,7 @@ export class Gaussian extends CustomElementView {
   private $matrices!: SVGParentView[];
 
   private $leftMatrix!: SVGView;
-  private $row1!: SVGView;
-  private $row2!: SVGView;
-
-  private $row3?: SVGView;
+  private $rightMatrix!: SVGView;
 
   private numVars!: number;
   private numRows!: number;
@@ -27,6 +24,8 @@ export class Gaussian extends CustomElementView {
   private rows!: number[][];
 
   private $rows!: SVGView[];
+
+  private stepNumber = 0;
 
   ready() {
     console.log('This is the Gaussian');
@@ -42,7 +41,29 @@ export class Gaussian extends CustomElementView {
     this.displayRows();
   }
 
-  parseMatrix() {
+  nextStep() {
+    console.log(`On Step ${this.stepNumber}`);
+    const steps = [
+      () => this.createBlankRightMatrix(), // 0
+      () => this.drawArrow(), // 1
+      () => this.copyRow(0), // 2
+      () => this.copyRow(1), // 3
+      () => this.moveRightMatrixToLeft(), // 4
+
+      () => this.createBlankRightMatrix(), // 5
+      () => this.copyRow(0),
+      () => this.copyRow(1),
+      () => this.moveRightMatrixToLeft()
+    ];
+    steps[this.stepNumber]();
+    this.stepNumber++; // = this.stepNumber + 1;
+  }
+
+  backStep() {
+    // TODO:
+  }
+
+  private parseMatrix() {
     const matrices = this.$('.matrix')?.$$('x-math') as ElementView[];
     if (matrices.length != 3) throw new Error('Three matrices expected');
 
@@ -82,7 +103,7 @@ export class Gaussian extends CustomElementView {
     console.log(this.rows);
   }
 
-  displayRow($row: SVGView, rowNumber: number) {
+  private displayRow($row: SVGView, rowNumber: number) {
 
     const allTextAttr = {
       class: 'row-text',
@@ -114,10 +135,9 @@ export class Gaussian extends CustomElementView {
       const _text3 = $N('text', Object.assign({x: (74 + 74 - 20), text: this.rows[rowNumber][2]}, textAttr), $row) as SVGView;
       const _text4 = $N('text', Object.assign({x: (74 + 74 - 20 + 134 - 74), text: this.rows[rowNumber][3]}, textAttr), $row) as SVGView;
     }
-
   }
 
-  displayRows() {
+  private displayRows() {
     this.$rows = [];
     this.$leftMatrix = $N('g', {x: 30, y: 25}, this.$frame) as SVGView;
 
@@ -137,4 +157,58 @@ export class Gaussian extends CustomElementView {
       this.$rows.push($row);
     }
   }
+
+  createBlankRightMatrix() {
+    console.log('createBlankRightMatrix');
+    this.$rightMatrix = $N('g', {x: 400, y: 25}, this.$frame) as SVGView;
+    console.log(this.$rightMatrix);
+    const matrixHeight = this.numRows * 37 + (this.numRows + 1) * 13;
+    const fillAttr = {
+      class: 'matrix-right', x: 400, y: 0, width: 186, height: matrixHeight, rx: 0
+    };
+    const _fill = $N('rect', fillAttr, this.$rightMatrix) as SVGView;
+  }
+
+  drawArrow() {
+    // TODO: check fibonacci for how arrow/paths are drawn
+  }
+
+  copyRow(_rowNumber: number) {
+    const newRow = this.$rows[_rowNumber].copy(true, false);
+    this.$rightMatrix.append(newRow);
+    newRow.animate({transform: [
+      `translate(0px, 0px)`,
+      `translate(400px, 0px)`
+    ]}, 800, 500);
+  }
+
+  multiplyRow(_rowNumber: number, _multiplier: number) {
+    // TODO: draw arrow with a multiplier circle
+  }
+
+  comboRow(_rowSrc1: number, _rowSrc2: number, _rowDest: number, _m1: number, _m2: number) {
+    // TODO: draw multiple arrows into one
+  }
+
+  moveRightMatrixToLeft() {
+    // remove old Left.
+    this.$leftMatrix.remove();
+    // copy and append to frame
+    this.$leftMatrix = this.$rightMatrix.copy(true, false) as SVGView;
+    this.$frame.append(this.$leftMatrix);
+    // change fill to indicate it's our current matrix
+    const fill = this.$leftMatrix.$('.matrix-right');
+    fill?.setClass('matrix-right', false);
+    fill?.setClass('matrix', true);
+    // remove the right matrix
+    this.$rightMatrix.remove();
+    // animate it to the left
+    this.$leftMatrix.animate({
+      transform: [
+        `translate(0px, 0px)`,
+        `translate(-400px, 0px)`
+      ]
+    }, 800, 0);
+  }
+
 }
