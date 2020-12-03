@@ -44,15 +44,56 @@ export class Gaussian extends CustomElementView {
   nextStep() {
     console.log(`On Step ${this.stepNumber}`);
     const steps = [
-      () => this.createBlankRightMatrix(), // 0
-      () => this.drawArrow(), // 1
-      () => this.copyRow(0), // 2
-      () => this.copyRow(1), // 3
-      () => this.moveRightMatrixToLeft(), // 4
-
-      () => this.createBlankRightMatrix(), // 5
+      // Step 1: set to 1.
+      () => this.createBlankRightMatrix(),
+      () => this.multiplyRow(0, -1),
+      // () => this.drawArrow(0),
+      () => this.hideArrows(),
       () => this.copyRow(0),
+      () => this.drawArrow(1),
+      // () => this.multiplyRow(1, 3),
       () => this.copyRow(1),
+      () => this.hideArrows(),
+      () => this.moveRightMatrixToLeft(),
+
+      // Step 2: multiply by 1/2
+      () => this.createBlankRightMatrix(),
+      () => this.multiplyRow(1, 1 / 2),
+      () => this.drawArrow(1),
+      () => this.copyRow(1),
+      () => this.hideArrows(),
+      () => this.drawArrow(0),
+      () => this.copyRow(0),
+      () => this.hideArrows(),
+      () => this.moveRightMatrixToLeft(),
+
+      // Step 3: Add rows 1 and 2 into row 2
+      () => this.createBlankRightMatrix(),
+      () => this.drawArrow(0),
+      () => this.copyRow(0),
+      () => this.hideArrows(),
+      () => this.comboRow(0, 1, 1, 1, 1),
+      () => this.copyRow(1),
+      () => this.moveRightMatrixToLeft(),
+
+      // Step 4: Put 1 in the diagonal.
+      () => this.createBlankRightMatrix(),
+      () => this.drawArrow(0),
+      () => this.copyRow(0),
+      () => this.hideArrows(),
+      () => this.multiplyRow(1, -2),
+      () => this.drawArrow(1),
+      () => this.copyRow(1),
+      () => this.hideArrows(),
+      () => this.moveRightMatrixToLeft(),
+
+      // Step 5: Add Rows 1 and 2.
+      () => this.createBlankRightMatrix(),
+      () => this.comboRow(0, 1, 0, 1, 1),
+      () => this.copyRow(0),
+      () => this.drawArrow(1),
+      () => this.copyRow(1),
+      () => this.hideArrows(),
       () => this.moveRightMatrixToLeft()
     ];
     steps[this.stepNumber]();
@@ -169,12 +210,25 @@ export class Gaussian extends CustomElementView {
     const _fill = $N('rect', fillAttr, this.$rightMatrix) as SVGView;
   }
 
-  drawArrow() {
+  drawArrow(rowNumber: number) {
     // TODO: check fibonacci for how arrow/paths are drawn
+    const y = 14 + rowNumber * 50 + 37 / 2;
+    const $arrow1 = $N('line', {class: 'arrow', x1: 186 - 13, x2: 400 + 13, y1: y, y2: y});
+    // for ordering
+    // FIXME: what's the right way to order these??? Ideally over the matrix but behind the rows.
+    this.$leftMatrix.insertBefore($arrow1);
+    $arrow1.hide();
+    // FIXME: draw arrow head when it finishes (or draw it with?)
+    $arrow1.enter('draw', 200);
   }
 
-  copyRow(_rowNumber: number) {
-    const newRow = this.$rows[_rowNumber].copy(true, false);
+  hideArrows() {
+    this.$frame.$$('.arrow').forEach(a => a.remove());
+    this.$frame.$$('.multiplier').forEach(a => a.remove());
+  }
+
+  copyRow(rowNumber: number) {
+    const newRow = this.$rows[rowNumber].copy(true, false);
     this.$rightMatrix.append(newRow);
     newRow.animate({transform: [
       `translate(0px, 0px)`,
@@ -182,12 +236,37 @@ export class Gaussian extends CustomElementView {
     ]}, 800, 500);
   }
 
-  multiplyRow(_rowNumber: number, _multiplier: number) {
+  multiplyRow(rowNumber: number, multiplier: number) {
     // TODO: draw arrow with a multiplier circle
+    this.drawArrow(rowNumber);
+    const cx = (186 + (400 - 186) / 2);
+    const cy = 14 + rowNumber * 50 + 37 / 2;
+    const r = 15;
+    const $circle = $N('circle', {class: 'multiplier', cx, cy, r, fill: 'red'}, this.$frame);
+    const $label = $N('text', {class: 'multiplier', x: cx, y: cy, fill: 'white', 'text-anchor': 'middle', 'dominant-baseline': 'central', text: `x${multiplier}`}, this.$frame);
+
+    const $text = this.$rows[rowNumber].$$('text');
+    const numbers = this.rows[rowNumber];
+    const newNumbers = numbers.map(n => n * multiplier);
+    newNumbers.forEach((n, i) => {
+      $text[i].textStr = n;
+      this.rows[rowNumber][i] = n;
+    });
+
   }
 
   comboRow(_rowSrc1: number, _rowSrc2: number, _rowDest: number, _m1: number, _m2: number) {
     // TODO: draw multiple arrows into one
+
+    const src1 = this.rows[_rowSrc1].map(s1 => s1 * _m1);
+    const src2 = this.rows[_rowSrc2].map(s2 => s2 * _m2);
+    const newNumbers = src1.map((s1, i) => s1 + src2[i]);
+
+    const $text = this.$rows[_rowDest].$$('text');
+    newNumbers.forEach((n, i) => {
+      $text[i].textStr = n;
+      this.rows[_rowDest][i] = n;
+    });
   }
 
   moveRightMatrixToLeft() {
