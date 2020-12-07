@@ -1583,41 +1583,6 @@ Here is a collection of points that have been multiplied by a **singular matrix*
 📈Interactive where student can adjust a matrix that multiplies by a singular matrix, but the resulting transform will always be a line.
 
 ---
-> id: singular-lines
-
-### **Non-intersecting lines (singular matrices)**
-
-We have seen how matrices with determinant = zero do not have inverses and are called **singular matrices**. This means that when a 2x2 matrix representing two lines is singular, it means the lines [[do not have a single solution|do not intersect|are parallel]] (tricky wording). 
-
-**Example:** these two lines are actually the same. When we rewrite their line equations in matrix multiplication form, the matrix has a determinant of zero. There is no inverse, and thus [[no unique solution|no solution]]
-
-    figure: img(src="images/proto-4/Untitled%206.png")
-
-Two lines y = -x + 3 and -4y = 4x - 12, are actually the same line
-
-    figure: img(src="images/proto-4/Untitled%207.png")
-
-two equations
-
-    figure: img(src="images/proto-4/Untitled%208.png")
-
-equations rewritten as a matrix
-
-**Example:** these two lines are parallel. When we rewrite their line equations in matrix multiplication form, it has a determinant of zero. There is no inverse, and thus [[no unique solution]]
-
-    figure: img(src="images/proto-4/Untitled%209.png")
-
-Two parallel lines y=3x+2, y=3x-4, have no intersection
-
-    figure: img(src="images/proto-4/Untitled%2010.png")
-
-two line equations
-
-    figure: img(src="images/proto-4/Untitled%2011.png")
-
-equations rewritten as a matrix
-
----
 > id: least-squares
 
 The "Method of Least Squares" is a way to estimate a trend for data.
