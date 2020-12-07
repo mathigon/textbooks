@@ -1667,16 +1667,27 @@ this is truly magic. To learn more about how this works, check the course on sta
 :::
 
 ---
+> id: three-by-three
+
+#### Larger Matrices
+
+::: column(width=300)
+
+Here is the formula for calculating a 3x3 matrix. There is a way to calculate inverses of larger matrices, which we will observe next chapter.
+
+::: column.grow
+
+
+`§[[a b c] [d e f] [g h i]]^(-1)` = `1/det(A)` • `§[[(ei-fh) (ch-bi) (bf-ce)] [(fg-di) (ai-cg) (cd-af)] [(dh-eg) (bg-ah) (ae-bd)]]`
+
+:::
+
+
+---
 > id: inverse-conclusion
 
 ### Conclusion/Cliff-Hanger
 
-Here is the formula for calculating a 3x3 matrix. There is a way to calculate inverses of larger matrices, which we will observe next chapter.
-
-{.fixme} Formula for inverses of 3x3 matrices (and maybe the pattern for larger matrices)
-
-- Maybe a large formula?
-- Maybe a list of steps that show what to do.
 
 "Throughout history mathematicians have done many ways to solve inverses... for example (statistics and orbit of planets). But our current methods are not enough to solve these, we need something better!"
 
