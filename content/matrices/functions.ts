@@ -379,11 +379,64 @@ export function rotationInverse(_$step: Step) {
 export function gaussianSolve(_$step: Step) {
   const $gauss = _$step.$('x-gaussian') as Gaussian;
 
+  $gauss.setNextSteps(
+      [
+        // Step 1: set to 1.
+        () => $gauss.createBlankRightMatrix(),
+        () => $gauss.multiplyRow(0, -1),
+        // () => $gauss.drawArrow(0),
+        () => $gauss.hideArrows(),
+        () => $gauss.copyRow(0),
+        () => $gauss.drawArrow(1),
+        // () => $gauss.multiplyRow(1, 3),
+        () => $gauss.copyRow(1),
+        () => $gauss.hideArrows(),
+        () => $gauss.moveRightMatrixToLeft(),
+
+        // Step 2: multiply by 1/2
+        () => $gauss.createBlankRightMatrix(),
+        () => $gauss.multiplyRow(1, 1 / 2),
+        () => $gauss.drawArrow(1),
+        () => $gauss.copyRow(1),
+        () => $gauss.hideArrows(),
+        () => $gauss.drawArrow(0),
+        () => $gauss.copyRow(0),
+        () => $gauss.hideArrows(),
+        () => $gauss.moveRightMatrixToLeft(),
+
+        // Step 3: Add rows 1 and 2 into row 2
+        () => $gauss.createBlankRightMatrix(),
+        () => $gauss.drawArrow(0),
+        () => $gauss.copyRow(0),
+        () => $gauss.hideArrows(),
+        () => $gauss.comboRow(0, 1, 1, 1, 1),
+        () => $gauss.copyRow(1),
+        () => $gauss.moveRightMatrixToLeft(),
+
+        // Step 4: Put 1 in the diagonal.
+        () => $gauss.createBlankRightMatrix(),
+        () => $gauss.drawArrow(0),
+        () => $gauss.copyRow(0),
+        () => $gauss.hideArrows(),
+        () => $gauss.multiplyRow(1, -2),
+        () => $gauss.drawArrow(1),
+        () => $gauss.copyRow(1),
+        () => $gauss.hideArrows(),
+        () => $gauss.moveRightMatrixToLeft(),
+
+        // Step 5: Add Rows 1 and 2.
+        () => $gauss.createBlankRightMatrix(),
+        () => $gauss.comboRow(0, 1, 0, 1, 1),
+        () => $gauss.copyRow(0),
+        () => $gauss.drawArrow(1),
+        () => $gauss.copyRow(1),
+        () => $gauss.hideArrows(),
+        () => $gauss.moveRightMatrixToLeft()
+      ]
+  );
+
   const back = $gauss.$('.btn.back');
   const next = $gauss.$('.btn.next');
-  // FIXME: create a "step-setter" function for Gaussians
-  // FIXME: possibly copy the cheesecake thing in how the next steps work
-  // $gauss.setSteps({});
 
   back?.on('click', () => {
     $gauss.backStep();
@@ -392,11 +445,71 @@ export function gaussianSolve(_$step: Step) {
   next?.on('click', () => {
     $gauss.nextStep();
   });
+}
 
-  // TODO: pseudocode
-  const steps = [
-    'new',
-    'r1.r1',
-    'r2=0.5*r2'
-  ];
+export function gaussianSolve2($step: Step) {
+  const $gauss = $step.$('x-gaussian') as Gaussian;
+
+  $gauss.setNextSteps(
+      [
+        // Step 1: set to 1.
+        () => $gauss.createBlankRightMatrix(),
+        () => $gauss.multiplyRow(0, 1 / 168),
+        // () => $gauss.drawArrow(0),
+        () => $gauss.hideArrows(),
+        () => $gauss.copyRow(0),
+
+        () => $gauss.drawArrow(1),
+        () => $gauss.copyRow(1),
+        () => $gauss.hideArrows(),
+
+        () => $gauss.drawArrow(2),
+        () => $gauss.copyRow(2),
+        () => $gauss.hideArrows(),
+
+        () => $gauss.moveRightMatrixToLeft(),
+
+        // Step 2: multiply by 1/168
+        () => $gauss.createBlankRightMatrix(),
+        () => $gauss.multiplyRow(1, 1 / 168),
+        () => $gauss.drawArrow(1),
+        () => $gauss.copyRow(1),
+        () => $gauss.hideArrows(),
+
+        () => $gauss.drawArrow(0),
+        () => $gauss.copyRow(0),
+        () => $gauss.hideArrows(),
+        () => $gauss.drawArrow(2),
+        () => $gauss.copyRow(2),
+        () => $gauss.hideArrows(),
+
+
+        () => $gauss.moveRightMatrixToLeft(),
+
+        // Step 3: Add rows 1 and 2 into row 2
+        () => $gauss.createBlankRightMatrix(),
+        () => $gauss.drawArrow(0),
+        () => $gauss.copyRow(0),
+        () => $gauss.hideArrows(),
+
+        () => $gauss.comboRow(0, 1, 1, 1, -1),
+        () => $gauss.copyRow(1),
+
+        () => $gauss.drawArrow(2),
+        () => $gauss.copyRow(2),
+        () => $gauss.hideArrows(),
+
+        () => $gauss.moveRightMatrixToLeft()
+      ]
+  );
+  const back = $gauss.$('.btn.back');
+  const next = $gauss.$('.btn.next');
+
+  back?.on('click', () => {
+    $gauss.backStep();
+  });
+
+  next?.on('click', () => {
+    $gauss.nextStep();
+  });
 }

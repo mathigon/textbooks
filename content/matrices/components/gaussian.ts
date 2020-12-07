@@ -26,6 +26,7 @@ export class Gaussian extends CustomElementView {
   private $rows!: SVGView[];
 
   private stepNumber = 0;
+  private steps: (() => void)[];
 
   ready() {
     console.log('This is the Gaussian');
@@ -41,62 +42,13 @@ export class Gaussian extends CustomElementView {
     this.displayRows();
   }
 
+  setNextSteps(stepList: (() => void)[]) {
+    this.steps = stepList;
+  }
+
   nextStep() {
     console.log(`On Step ${this.stepNumber}`);
-    const steps = [
-      // Step 1: set to 1.
-      () => this.createBlankRightMatrix(),
-      () => this.multiplyRow(0, -1),
-      // () => this.drawArrow(0),
-      () => this.hideArrows(),
-      () => this.copyRow(0),
-      () => this.drawArrow(1),
-      // () => this.multiplyRow(1, 3),
-      () => this.copyRow(1),
-      () => this.hideArrows(),
-      () => this.moveRightMatrixToLeft(),
-
-      // Step 2: multiply by 1/2
-      () => this.createBlankRightMatrix(),
-      () => this.multiplyRow(1, 1 / 2),
-      () => this.drawArrow(1),
-      () => this.copyRow(1),
-      () => this.hideArrows(),
-      () => this.drawArrow(0),
-      () => this.copyRow(0),
-      () => this.hideArrows(),
-      () => this.moveRightMatrixToLeft(),
-
-      // Step 3: Add rows 1 and 2 into row 2
-      () => this.createBlankRightMatrix(),
-      () => this.drawArrow(0),
-      () => this.copyRow(0),
-      () => this.hideArrows(),
-      () => this.comboRow(0, 1, 1, 1, 1),
-      () => this.copyRow(1),
-      () => this.moveRightMatrixToLeft(),
-
-      // Step 4: Put 1 in the diagonal.
-      () => this.createBlankRightMatrix(),
-      () => this.drawArrow(0),
-      () => this.copyRow(0),
-      () => this.hideArrows(),
-      () => this.multiplyRow(1, -2),
-      () => this.drawArrow(1),
-      () => this.copyRow(1),
-      () => this.hideArrows(),
-      () => this.moveRightMatrixToLeft(),
-
-      // Step 5: Add Rows 1 and 2.
-      () => this.createBlankRightMatrix(),
-      () => this.comboRow(0, 1, 0, 1, 1),
-      () => this.copyRow(0),
-      () => this.drawArrow(1),
-      () => this.copyRow(1),
-      () => this.hideArrows(),
-      () => this.moveRightMatrixToLeft()
-    ];
-    steps[this.stepNumber]();
+    this.steps[this.stepNumber]();
     this.stepNumber++; // = this.stepNumber + 1;
   }
 
@@ -148,6 +100,7 @@ export class Gaussian extends CustomElementView {
 
     const allTextAttr = {
       class: 'row-text',
+      'text-anchor': 'middle',
       'dominant-baseline': 'central',
       fill: 'white'
     };
@@ -159,7 +112,8 @@ export class Gaussian extends CustomElementView {
 
     const divX = this.numVars === 2 ? 129 : 175;
     const dividerAttr = {
-      x1: divX, x2: divX, stroke: 'white', 'stroke-width': '2', 'stroke-dasharray': '2 2'
+      x1: divX, x2: divX,
+      class: 'divider'
     };
 
     const _rowFill = $N('rect', Object.assign({y}, fillAttr), $row) as SVGView;
@@ -233,7 +187,7 @@ export class Gaussian extends CustomElementView {
     newRow.animate({transform: [
       `translate(0px, 0px)`,
       `translate(400px, 0px)`
-    ]}, 800, 500);
+    ]}, 800);
   }
 
   multiplyRow(rowNumber: number, multiplier: number) {
@@ -242,12 +196,12 @@ export class Gaussian extends CustomElementView {
     const cx = (186 + (400 - 186) / 2);
     const cy = 14 + rowNumber * 50 + 37 / 2;
     const r = 15;
-    const $circle = $N('circle', {class: 'multiplier', cx, cy, r, fill: 'red'}, this.$frame);
-    const $label = $N('text', {class: 'multiplier', x: cx, y: cy, fill: 'white', 'text-anchor': 'middle', 'dominant-baseline': 'central', text: `x${multiplier}`}, this.$frame);
+    const _$circle = $N('circle', {class: 'multiplier', cx, cy, r, fill: 'red'}, this.$frame);
+    const _$label = $N('text', {class: 'multiplier', x: cx, y: cy, fill: 'white', 'text-anchor': 'middle', 'dominant-baseline': 'central', text: `x${multiplier}`}, this.$frame);
 
     const $text = this.$rows[rowNumber].$$('text');
     const numbers = this.rows[rowNumber];
-    const newNumbers = numbers.map(n => n * multiplier);
+    const newNumbers = numbers.map(n => Math.round(n * multiplier * 100) / 100);
     newNumbers.forEach((n, i) => {
       $text[i].textStr = n;
       this.rows[rowNumber][i] = n;
@@ -258,8 +212,8 @@ export class Gaussian extends CustomElementView {
   comboRow(_rowSrc1: number, _rowSrc2: number, _rowDest: number, _m1: number, _m2: number) {
     // TODO: draw multiple arrows into one
 
-    const src1 = this.rows[_rowSrc1].map(s1 => s1 * _m1);
-    const src2 = this.rows[_rowSrc2].map(s2 => s2 * _m2);
+    const src1 = this.rows[_rowSrc1].map(s1 => Math.round(s1 * _m1 * 100) / 100);
+    const src2 = this.rows[_rowSrc2].map(s2 => Math.round(s2 * _m2 * 100) / 100);
     const newNumbers = src1.map((s1, i) => s1 + src2[i]);
 
     const $text = this.$rows[_rowDest].$$('text');
