@@ -1320,7 +1320,7 @@ jia:
   bio: |
     Jia Xian (賈憲, c. 1010 – 1070) was a Chinese mathematician during the Song
     dynasty. He described _Pascal’s triangle_, more than six centuries before
-    Pascal, and used to to calculate square and cube roots.
+    Pascal, and used it to calculate square and cube roots.
   links:
     - title: Pascal’s Triangle
       url: /course/sequences/pascals-triangle
