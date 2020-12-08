@@ -955,29 +955,27 @@ Bees collect nectar and pollen from flowers to make honey for their colony.  Hon
 
     figure: x-img(src="images/ch3_69.png" width="600" height="600")
 
-    figure: x-img(src="images/ch3_43.png" width="1" height="1")
-
-These homes are called **honeycombs. **All the bees on earth are using the same shape to create their honeycombs._**[Hexagonal ](pill:blue)**__**[Base](pill:blue)**__**[An ınteractive solid](pill:blue)**__**[Hexagonal ](pill:green)**__**[Base](pill:green)**__**[An ınteractive solid](pill:blue)**_
-
-_**[Hexagonal ](pill:green)**_
-
-_**[Base](pill:green)**_
-
-_**[An ınteractive solid](pill:blue)**_
+These homes are called **honeycombs.** All the bees on earth are using the same shape to create their honeycombs.
 
 _But why do bees_ create honeycombs in the shape they do?
 
 ---
 
-Honeycomb cells are actually a special kind of polyhedra called _{span.comments(text="(gloss:prism)")}**prisms**_**. **
+Honeycomb cells are actually a special kind of polyhedra called [prisms](gloss:prism).
 
-_{span.comments(text="I wonder if there's an interactive that could go here first before diving in the vocab and various examples of prisms? Perhaps students can try to multiple copies of various prisms - some that can be aligned without any gaps and some that do create gaps? Then, for the ones that don't create gaps, they could think about which ones would build the best structure for bees? This might provide a better entry point before jumping into the vocab. | This could set up the "maximum storage" section on the next page nicely. | In fact, that hexagonal prism can pill the words 'congruent', 'parallel' and 'bases'  to introduce the prism concept. On the other hand, I wanted to talk about 'which prisms can tile' concept later\* | Have you gotten the direction or conversation you need to make a decision here? | The interactive with\*\* can do this I guess - I also try to create an applet that can be used in the cylinders chapters as well")}A prism_ is a type of polyhedron with _**two**_ _**congruent **__**polygonal faces**_ that are[ parallel ](pill:orange)to each other.
+_{span.comments(text="I wonder if there's an interactive that could go here first before diving in the vocab and various examples of prisms? Perhaps students can try to multiple copies of various prisms - some that can be aligned without any gaps and some that do create gaps? Then, for the ones that don't create gaps, they could think about which ones would build the best structure for bees? This might provide a better entry point before jumping into the vocab. | This could set up the 'maximum storage' section on the next page nicely. | In fact, that hexagonal prism can pill the words 'congruent', 'parallel' and 'bases'  to introduce the prism concept. On the other hand, I wanted to talk about 'which prisms can tile' concept later* | Have you gotten the direction or conversation you need to make a decision here? | The interactive with** can do this I guess - I also try to create an applet that can be used in the cylinders chapters as well")}A prism_ is a type of polyhedron with _**two**_ [congruent](pill:orange) _**polygonal faces**_ that are [parallel](pill:orange) to each other.
 
-    figure: x-img(src="images/ch3_32.png" width="600" height="442")
+Those identical faces are called _{span.comments(text="(gloss:base)I you provided a glossary definition draft in a previous chapter. If so, no need to rewrite it there.")}**[bases](pill:orange)**_. They are often used to indicate the _top_ and _bottom_ of the prism. Actually, prisms are named according to the shape of their bases. That’s why honeycomb shapes are called [[hexagonal | rectangular |triangular]] prisms.
 
-Those identical faces are called_{span.comments(text="(gloss:base)I you provided a glossary definition draft in a previous chapter. If so, no need to rewrite it there.")} **[bases](pill:orange)**_**[.](pill:purple)** They are often used to indicate the _top _and _bottom _of the prism. Actually, prisms are named according to the shape of their bases. That’s why honeycomb shapes are called [[hexagonal | rectangular |triangular]] prisms._{span.comments(text="We should add a paragraph (and interactive diagram) that shows that all cross sections parallel to the bases are congruent.")} _
+    // COMMENT: We should add a paragraph (and interactive diagram) that shows that all cross sections parallel to the bases are congruent.
 
 ---
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_32.png" width="200" height="147")
+
+::: column.grow
 
 Imagine slicing a prism into lots of thin layers parallel to its base.
 
@@ -985,15 +983,17 @@ All cross sections will be exactly the same shape and size. The cross sections  
 
 Think of a loaf of sliced bread, each bread slice has the same shape and size. The shape of the bread is a prism.
 
-There are all kinds of prisms like triangular prisms, rectangular prisms, pentagonal prisms, and so on. The **cuboids** we’ve seen in the previous chapter are also prisms: [[_**rectangular]]**_** prisms.**
+:::
+
+There are all kinds of prisms like triangular prisms, rectangular prisms, pentagonal prisms, and so on. The **cuboids** we’ve seen in the previous chapter are also prisms: [[rectangular|triangular|pentagonal|hexagonal]] **prisms.**
 
 ---
 
     figure: x-img(src="images/ch3_62.png" width="600" height="257")
 
- **[3D solids](pill:blue)**
+    // COMMENT: 3D Solids
 
-         (Cuboids)
+    // COMMENT: (Cuboids)
 
 Honeycomb cells are always horizontally aligned. They share walls with the neighbor cell to decrease the amount of wax used to build each cell.
 
@@ -1001,13 +1001,13 @@ Honeycomb cells are always horizontally aligned. They share walls with the neigh
 
     figure: x-img(src="images/ch3_21.png" width="596" height="492")
 
-Those shared walls are the _{span.comments(text="(gloss:lateral-face)needs definition | Bumping this. | Lateral faces of a three-dimensional figure are the quadrilateral faces ( mostly rectangular) apart from the bases of the solid.")}**[lateral faces](pill:green)**_ of the hexagonal prisms. The lateral faces are [[rectangles]].
+Those shared walls are the _{span.comments(text="(gloss:lateral-face)needs definition | Bumping this. | Lateral faces of a three-dimensional figure are the quadrilateral faces ( mostly rectangular) apart from the bases of the solid.")}**[lateral faces](pill:green)**_ of the hexagonal prisms. The lateral faces are [[rectangles|triangles|squares|pentagons|hexagons]].
 
 ---
 
-In all kinds of prisms, the bases are connected by a set of rectangles _(or sometimes parallelograms) _regardless of the type of the base.
+In all kinds of prisms, the bases are connected by a set of rectangles _(or sometimes parallelograms)_ regardless of the type of the base.
 
-The _{span.comments(text="(gloss:net)")}**net**_ of the hexagonal prism can provide a better view of all the faces. There are totally [[8]] _{span.comments(text="Interactive Solid with a slider - color-coded faces, vertices, edges")}**[faces,](pill:blue)**_ [[2]] of them are the hexagonal bases and the remaining [[6]] of them are the rectangular lateral faces.
+The [net](gloss:net) of the hexagonal prism can provide a better view of all the faces. There are totally [[8]] _{span.comments(text="Interactive Solid with a slider - color-coded faces, vertices, edges")}**[faces](pill:blue)**_, [[2]] of them are the hexagonal bases and the remaining [[6]] of them are the rectangular lateral faces.
 
 ---
 
@@ -1017,27 +1017,25 @@ A hexagonal prism has  [[12]] _{span.comments(text="(gloss:vertex)I you provided
 
 **Why do bees choose hexagonal prisms over the other prisms?**
 
-\---
-
-[\*\*An Interactive where the students can tile different prisms  to see which ones can tile ](pill:blue)
+    // COMMENT: An Interactive where the students can tile different prisms  to see which ones can tile
 
     figure: x-img(src="images/ch3_50.png" width="600" height="482")
 
 _{span.comments(text="students can choose a prism and try to tile - triangular prisms give a check mark, pentagonal give a cross and so on...")}_
 
-[Hexagonal prisms can be aligned next to each other without any gaps or overlaps but also do ](pill:blue)_{span.comments(text="Pill")}[cuboids](pill:blue)_[ and ](pill:blue)_{span.comments(text="Pill")}[triangular prisms](pill:blue)_[. ](pill:blue)
+Hexagonal prisms can be aligned next to each other without any gaps or overlaps but also so can [cuboids](pill:blue) and [triangular prisms](pill:blue).
 
     figure: x-img(src="images/ch3_67.png" width="452" height="149")
 
-    figure: x-img(src="images/ch3_29.png" width="1" height="1")
-
 _{span.comments(text="This can be the next step of the previous animation")}_
 
-Bees also need to have **maximum storage **for the honey without wasting more wax than necessary. This means that they need to use as little wax as possible to create their comb which can store as much honey as possible.
+Bees also need to have **maximum storage** for the honey without wasting more wax than necessary. This means that they need to use as little wax as possible to create their comb which can store as much honey as possible.
 
 Recall the method we use to calculate the volume of the cuboids.
 
-**Volume**= [[Base Area]] x [[height]]
+    // TODO?: Use math rendering
+
+**Volume** = [[Base Area | Base Perimeter]] x [[height|width]]
 
 ---
 
@@ -1049,23 +1047,25 @@ Can we use the same formula for all prisms?
 
     figure: x-img(src="images/ch3_9.png" width="600" height="318")
 
-The reason that the volume of a cuboid is calculated as _{span.comments(text="pill to the sliced cuboid")}**base area x height **_is that; the cuboids are formed by repeated layers of the same size base. 
+The reason that the volume of a cuboid is calculated as _{span.comments(text="pill to the sliced cuboid")}**base area x height**_ is that; the cuboids are formed by repeated layers of the same size base. 
 
 Let’s look at these prisms to see if they are all made up of the multiple layers of the same polygon that they have as a base.  
 
-[First scene: different prisms are given (non-sliced view) and not always in the upright position. Students can rotate the prisms to find and select the base area.](pill:blue)
+    // COMMENT: First scene: different prisms are given (non-sliced view) and not always in the upright position. Students can rotate the prisms to find and select the base area.
 
-[Second scene: After each selection, prisms can be sliced parallel to their bases to show they are made up of congruent polygons](pill:blue)
+    // COMMENT: Second scene: After each selection, prisms can be sliced parallel to their bases to show they are made up of congruent polygons
 
 Rotate the prisms to select their bases. 
 
-[For the triangular prism:](pill:blue) Let's look at the different slices of the prism.
+    // COMMENT: [For the triangular prism:
+
+Let's look at the different slices of the prism.
 
 All the triangular layers are the [[ same | different ]] size of the base.
 
 ---
 
-[For the hexagonal  prism:](pill:blue) Let's look at the different slices of the prism.
+    // COMMENT: For the hexagonal  prism: Let's look at the different slices of the prism.
 
 All the hexagonal layers are the [[ same | different ]] size of the base.
 
@@ -1075,7 +1075,9 @@ Since all prisms are made up from the multiple layers of their base, we [[can | 
 
 ---
 
-**[Volume](pill:purple)****[Prisms](pill:purple)****[= [[Base Area\]\] x  [[height\]\]](pill:purple)**
+    // TODO: Make purple
+
+`"Volume"_"Prisms"` = [[Base Area]] x [[height]]
 
 ---
 
@@ -1491,8 +1493,6 @@ Match each net with the solid it belongs to.
 
     figure: x-img(src="images/ch3_15.png" width="600" height="389")
 
- 
-
     figure: x-img(src="images/ch3_55.png" width="600" height="99")
 
     figure: x-img(src="images/ch3_78.png" width="600" height="568")
@@ -1501,7 +1501,7 @@ Match each net with the solid it belongs to.
 
     figure: x-img(src="images/ch3_55.png" width="600" height="99")
 
-_{span.comments(text="This is also like an overview of different prisms and pyramids - I was thinking about giving real-life examples about each one of them next to the explanation - but it can conflict with the game-like nature of the activity? | I think it could work, especially since the question is "unlocked". The text could be in a column, and the photo could be in a column. The photo could have a brief caption explaining the connection. To me, this fits the gaming idea of unlocking hidden information. | OR maybe student match the net to the real-life example? | maybe after matching with the actual prism,  the prism can turn to real-life example? I am not sure | Definitely run this one by Philipp. I think you're on to something interesting.")}**[(After each correct match, net folds-up to enclose the solid.)](pill:blue)**_
+_{span.comments(text="This is also like an overview of different prisms and pyramids - I was thinking about giving real-life examples about each one of them next to the explanation - but it can conflict with the game-like nature of the activity? | I think it could work, especially since the question is 'unlocked'. The text could be in a column, and the photo could be in a column. The photo could have a brief caption explaining the connection. To me, this fits the gaming idea of unlocking hidden information. | OR maybe student match the net to the real-life example? | maybe after matching with the actual prism,  the prism can turn to real-life example? I am not sure | Definitely run this one by Philipp. I think you're on to something interesting.")}**[(After each correct match, net folds-up to enclose the solid.)](pill:blue)**_
 
 **[After each correct match;](pill:blue)**
 
@@ -1659,7 +1659,7 @@ We can use one large rectangle instead of separate smaller ones.
 
 We can treat the prism-like house as having three parts: two identical bases, and one long rectangle that has been taped along the edges of the bases. 
 
-The rectangle has the [[**same**]] [height](pill:red) as the prism, and its width is the [[**[PERIMETER OF THE BASE](pill:red)**]]. 
+The rectangle has the **[[same|different]]** [height](pill:red) as the prism, and its width is the **[[PERIMETER OF THE BASE|WIDTH OF THE BASE]]**. 
 
 ---
 
@@ -1675,15 +1675,13 @@ So the area of the big rectangle that covers all the lateral face of the prism i
 
 [Scene 3](pill:green) 
 
-Now, all we are going to do is to add two [[[base areas](pill:blue)]] to the [[[lateral area](pill:red)]]. 
+Now, all we are going to do is to add two [[base areas|base perimeters]] to the [[lateral area|lateral perimeter]]. 
 
 ---
 
-So the surface area is [[66]]m2.
+So the surface area is [[66]] `m^2`.
 
 ---
-
-\----
 
 What about the volume?
 
@@ -1705,24 +1703,17 @@ _{span.comments(text="I am not sure to include this part since the chapter is ge
 
     figure: x-img(src="images/ch3_61.png" width="450" height="450")
 
- 
----- 
+    // COMMENT: On the given shapes, students can be asked to trace the base area.
 
-[On the given shapes, students can be asked to trace the base area.](pill:blue)
+    // COMMENT: On the given shapes, students can be asked to trace the base area.After the correct base area creation; the Value of the Base Area appears.
 
-[After the correct base area creation; the Value of the Base Area appears.](pill:blue)
+    // COMMENT: On the given shapes, students can be asked to trace the base area.Then we may ask the students to trace the height.
 
-[Then we may ask the students to trace the height.](pill:blue)
+    // COMMENT: On the given shapes, students can be asked to trace the base area. And the value of height appears.
 
-[And the value of height appears.](pill:blue)
+    // COMMENT: On the given shapes, students can be asked to trace the base area.Then they can enter the values needed to calculate the Volume.
 
-[Then they can enter the values needed to calculate the Volume.](pill:blue)
-
-[And the value of volume appears.](pill:blue)
-
-[CHAPTER 4](pill:blue)
-
-
+    // COMMENT: On the given shapes, students can be asked to trace the base area.And the value of volume appears.](pill:blue)
 
 ---
 
