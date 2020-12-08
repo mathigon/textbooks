@@ -545,7 +545,7 @@ This means the surface area of the actual car is approximately 28 __square__ [[m
 {.todo} DISCUSS: use equation editor instead?
 
 If each sticky note is `0.006 m^2`, then 
-we will need to have `input(28)-:input(0.006)=4467` sticky notes to cover the car!
+we will need to have `input(28)/input(0.006)=4467` sticky notes to cover the car!
 
 ---
 
@@ -688,6 +688,8 @@ faster.
 
 Let’s drag the examples of quantities related to volume and surface area to complete the diagram:
 
+    // COMMENT: Use Tinder component for this for now
+
 {.todo} INTERACTIVE: Mind map
 
 ---
@@ -826,8 +828,6 @@ The opposite face of the green is painted [[pink|blue|purple|green|red]].
 
 The opposite face of the red is painted [[purple|blue|pink|green|red]].
 
----
-
     // page 10
 
 _{button.btn.continue}Continue_
@@ -866,13 +866,15 @@ The net of the cuboid box shows three pairs of rectangles:
 
 With this information, we can now calculate the amount of cardboard needed to make the box; `(4 * 2) + (4 * 2) + (3 * 2) + (4 * 3) + (4 * 3) = input(52)  "square centimeters"`
 
-The surface area of the cuboid is 52 `blank("cm^2", "cm")`.
+The surface area of the cuboid is 52 [[`"cm"^2`|cm]].
 
 :::
 
 ---
 
 Use the slider to open the cuboid to its net. Then drag the side length measures to corresponding sides to find the surface area.
+
+    // COMMENT: For now just include labels
 
 {.todo} INTERACTIVE: solid <-> net
 
