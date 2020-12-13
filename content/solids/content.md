@@ -947,7 +947,798 @@ In the next chapter, we are going to look at the nets, surface area, and volume 
 > section: prism-pyramid
 > sectionStatus: dev
 
-{.todo} COMING SOON
+::: column.fit
+
+    figure: x-img(src="images/ch3_35.png" width="300" height="176")
+
+::: column.grow
+
+The amazing structure of the honey bee cells has attracted the attention of humans for centuries. 
+
+Bees collect nectar and pollen from flowers to make honey for their colony.  Honey provides bees the energy they need to survive and reproduce, as well as to build their homes.
+
+:::
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_hex_prism.svg" width="218" height="205")
+
+::: column.grow
+
+These homes are called **honeycombs.** All the bees on earth are using the same shape to create their honeycombs.
+
+_But why do bees_ create honeycombs in the shape they do?
+
+:::
+
+---
+
+Honeycomb cells are actually a special kind of polyhedra called [prisms](gloss:prism).
+
+_{span.comments(text="I wonder if there's an interactive that could go here first before diving in the vocab and various examples of prisms? Perhaps students can try to multiple copies of various prisms - some that can be aligned without any gaps and some that do create gaps? Then, for the ones that don't create gaps, they could think about which ones would build the best structure for bees? This might provide a better entry point before jumping into the vocab. | This could set up the 'maximum storage' section on the next page nicely. | In fact, that hexagonal prism can pill the words 'congruent', 'parallel' and 'bases'  to introduce the prism concept. On the other hand, I wanted to talk about 'which prisms can tile' concept later* | Have you gotten the direction or conversation you need to make a decision here? | The interactive with** can do this I guess - I also try to create an applet that can be used in the cylinders chapters as well")}A prism_ is a type of polyhedron with _**two**_ [congruent](pill:orange) _**polygonal faces**_ that are [parallel](pill:orange) to each other.
+
+Those identical faces are called _{span.comments(text="(gloss:base)I you provided a glossary definition draft in a previous chapter. If so, no need to rewrite it there.")}**[bases](pill:orange)**_. They are often used to indicate the _top_ and _bottom_ of the prism. Actually, prisms are named according to the shape of their bases. That’s why honeycomb shapes are called [[hexagonal | rectangular |triangular]] prisms.
+
+    // COMMENT: We should add a paragraph (and interactive diagram) that shows that all cross sections parallel to the bases are congruent.
+
+---
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_32.png" width="200" height="147")
+
+::: column.grow
+
+Imagine slicing a prism into lots of thin layers parallel to its base.
+
+All cross sections will be exactly the same shape and size. The cross sections  will be **congruent.**
+
+Think of a loaf of sliced bread, each bread slice has the same shape and size. The shape of the bread is a prism.
+
+:::
+
+There are all kinds of prisms like triangular prisms, rectangular prisms, pentagonal prisms, and so on. The **cuboids** we’ve seen in the previous chapter are also prisms: [[rectangular|triangular|pentagonal|hexagonal]] **prisms.**
+
+---
+
+    figure: x-img(src="images/ch3_62.png" width="600" height="257")
+
+    // COMMENT: 3D Solids
+
+    // COMMENT: (Cuboids)
+
+Honeycomb cells are always horizontally aligned. They share walls with the neighbor cell to decrease the amount of wax used to build each cell.
+
+::: column.grow
+
+Those shared walls are the _{span.comments(text="(gloss:lateral-face)needs definition | Bumping this. | Lateral faces of a three-dimensional figure are the quadrilateral faces ( mostly rectangular) apart from the bases of the solid.")}**[lateral faces](pill:green)**_ of the hexagonal prisms. The lateral faces are [[rectangles|triangles|squares|pentagons|hexagons]].
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_58.png" width="100" height="59")
+
+:::
+
+---
+
+::: column.grow
+
+In all kinds of prisms, the bases are connected by a set of rectangles _(or sometimes parallelograms)_ regardless of the type of the base.
+
+The [net](gloss:net) of the hexagonal prism can provide a better view of all the faces. There are totally [[8]] _{span.comments(text="Interactive Solid with a slider - color-coded faces, vertices, edges")}**[faces](pill:blue)**_, [[2]] of them are the hexagonal bases and the remaining [[6]] of them are the rectangular lateral faces.
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_21.png" width="200" height="165")
+
+:::
+
+---
+
+A hexagonal prism has  [[12]] _{span.comments(text="(gloss:vertex)I you provided a glossary definition draft in a previous chapter. If so, no need to rewrite it there.")}**[vertices](pill:blue)**_ and [[18]] _{span.comments(text="(gloss:polyhedron-edge)")}**[edges](pill:green)**_ 
+
+---
+
+**Why do bees choose hexagonal prisms over the other prisms?**
+
+    // COMMENT: An Interactive where the students can tile different prisms  to see which ones can tile
+
+    figure: x-img(src="images/ch3_50.png" width="600" height="482")
+
+_{span.comments(text="students can choose a prism and try to tile - triangular prisms give a check mark, pentagonal give a cross and so on...")}_
+
+Hexagonal prisms can be aligned next to each other without any gaps or overlaps but also so can [cuboids](pill:blue) and [triangular prisms](pill:blue).
+
+    figure: x-img(src="images/ch3_67.svg" width="444" height="159")
+
+_{span.comments(text="This can be the next step of the previous animation")}_
+
+Bees also need to have **maximum storage** for the honey without wasting more wax than necessary. This means that they need to use as little wax as possible to create their comb which can store as much honey as possible.
+
+Recall the method we use to calculate the volume of the cuboids.
+
+    // TODO?: Use math rendering
+
+**Volume** = [[Base Area | Base Perimeter]] x [[height|width]]
+
+---
+
+Can we use the same formula for all prisms?
+
+    figure: x-img(src="images/ch3_9.png" width="600" height="318")
+
+::: column.grow
+
+The reason that the volume of a cuboid is calculated as _{span.comments(text="pill to the sliced cuboid")}**`base area xx height`**_ is that; the cuboids are formed by repeated layers of the same size base. 
+
+Let’s look at these prisms to see if they are all made up of the multiple layers of the same polygon that they have as a base.
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_11.png" width="200" height="217")
+
+:::
+
+    // COMMENT: First scene: different prisms are given (non-sliced view) and not always in the upright position. Students can rotate the prisms to find and select the base area.
+
+    // COMMENT: Second scene: After each selection, prisms can be sliced parallel to their bases to show they are made up of congruent polygons
+
+Rotate the prisms to select their bases. 
+
+    // COMMENT: For the triangular prism:
+
+Let's look at the different slices of the prism.
+
+All the triangular layers are the [[same|different]] size of the base.
+
+---
+
+    // COMMENT: For the hexagonal prism: Let's look at the different slices of the prism.
+
+All the hexagonal layers are the [[same|different]] size of the base.
+
+---
+
+Since all prisms are made up from the multiple layers of their base, we [[can|cannot]] use the same formula
+
+---
+
+    // TODO?: Make purple
+
+`"Volume"_"Prisms"` = [[Base Area|Base Perimeter]] x [[height|width]]
+
+---
+
+Now, use the slider to try the different polygons as the base of the prism that could be used as a honeycomb. Average cell width and length for a honeycomb is approximately 4mm and the depth is 10 mm.
+
+Number of sides of the base polygon: _{span.comments(text="TODO: Variable Slider")}[<<3>>](pill:green)_
+
+#### Triangular Prism
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_16.png" width="200" height="162")
+
+::: column.grow
+
+Since the base of the prism an equilateral triangle, _{span.comments(text="pill to yellow area")}[Base Area](pill:blue)_ can be found by the `1/2 ("base" xx "height")`
+
+`"A"_"Base" = (4 * 3.5) / 2 = 7 "mm"^2`
+
+`"V"_"Prism" = "A"_"Base" xx "Height of the Prism"`
+
+`"V"_"Prism" = ` _{span.comments(text="We can create equation fields for all the calculations")}_ `7 xx 10 = 70 "mm"^3`
+
+:::
+
+#### Square Prism
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_42.png" width="200" height="157")
+
+::: column.grow
+
+Since the base of the prism a square, _{span.comments(text="pill to yellow area")}[Base Area](pill:blue)_ can be found by squaring the side length 
+
+`"A"_"Base" = 4 xx 4 = 16 "mm"^2`
+
+`"V"_"Prism" = "A"_"Base" xx "Height of the Prism"`
+
+`"V"_"Prism" = `_{span.comments(text="Equation Field")}`16 xx 10 = 160 "mm"^3`_
+
+:::
+
+#### Hexagonal Prism
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_53.png" width="200" height="169")
+
+::: column.grow
+
+Since the base of the prism a hexagon,
+
+_{span.comments(text="pill to yellow area")}Base Area_ is the six equilateral triangle's area that the hexagon is made of.
+
+    // COMMENT: Since the base of the prism an equilateral triangle,Base Area can be found by the ½ (base x height)ABase = (4 x 3.5)/2= 7 `"mm"^2`
+
+`"A"_"Base" = 6 xx 7 = 42 "mm"^2`
+
+`"V"_"Prism" = "A"_"Base" xx "Height of the Prism"`
+
+    // COMMENT: equation field
+
+`"V"_"Prism" = 42 xx 10 = 420 "mm"^3`
+
+:::
+
+Compared to the other prisms that leave no gaps or overlaps (such as triangular and square), the hexagon prism creates a comb with the maximum volume. 
+
+Remember, bees also need to use the least amount of wax possible to construct these combs. Since they can only produce 1 oz of wax by using 8 oz of honey, the wax is very precious for them too. They cannot spend more wax than necessary.
+
+For finding the amount of wax needed to build walls of the combs, we need to find the [[surface area|volume]] of the prisms.
+
+---
+
+Using [[nets|projections]] can help us to calculate the surface areas of the prisms.
+
+---
+
+We have already found the base area of the prisms.
+
+    // COMMENT: (3D Solids with a slider to open to their nets and close back)
+
+_{span.comments(text="Variable Slider")}Number of sides of the base polygon [<<3>>](pill:blue)_
+
+#### Triangular Prism
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_16.png" width="200" height="162")
+
+::: column.grow
+
+    // COMMENT: Pill:
+
+`"A"_"Base" = (4 * 3.5) / 2 = 7 "mm"^2`
+
+There are [[3]] _{span.comments(text="Pill: the lateral faces on the net")}rectangular lateral faces_ with the [[3]]x[[10]] = [[30]] `"mm"^2` area.
+
+So the sum of all the areas of the faces will be
+
+    // COMMENT: tutor prompt: Since only one end of the honeycombs is closed, we only include one base area in the surface area calculation.
+
+`"A"_"Prism" = "A"_"Base" + pill("A"_"Lateral face", "blue") = [[37]]  "mm"^2`
+
+:::
+
+---
+
+#### Square Prism
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_42.png" width="200" height="157")
+
+::: column.grow
+
+`"A"_"Base" = 4 xx 4 = 16 "mm"^2`
+
+There are [[4]] _{span.comments(text="Pill: the lateral faces on the net")}rectangular lateral faces_ with the [[4]] x [[10]] = [[40]] `"mm"^2` area.
+So the sum of all the areas of the faces will be
+
+`"A"_"Prism" = pill("A"_"Base", "green") + pill("A"_"Lateral face", "blue") = [[56]]  "mm"^2`
+
+:::
+
+---
+
+#### Hexagonal Prism
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_53.png" width="200" height="169")
+
+::: column.grow
+
+    // COMMENT: Since the base of the prism an equilateral triangle,Base Area can be found by the ½ (base x height)ABase = (4 x 3.5)/2= 7 `mm^2
+
+`"A"_"Base" = 6 xx 7 = 42 "mm"^2`
+
+There are [[6]] _{span.comments(text="Pill: the lateral faces on the net")}rectangular lateral faces_ with the [[6]]x[[10]] = [[60]] `"mm"^2` area.
+
+So the sum of all the areas of the faces will be
+
+`"A"_"Prism" = pill("A"_"Base", "blue") + pill("A"_"Lateral face", "green") = [[102]] "mm"^2`
+
+:::
+
+---
+
+_{span.comments(text="Here, also we can align them next to each other, show the shared walls - and recalculate the surface areas accordingly. But this can be complicated ? | I wonder if an animation that shows how surface area changes as more prisms are stacked would do the trick? Students wouldn't need to recalculate. | Yes that would be definitely better | This can be done with the applet  I mentioned before")}Although it seems that the surface area of the hexagonal prism higher, this amount of wax has to be produced to create a volume of  420 `"mm"^3`_
+
+    figure: x-img(src="images/ch3_63.png" width="600" height="403")
+
+Let’s look at the different shaped honeycombs to see how many cells are needed to create a volume of 420 `"mm"^3`
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_56.png" width="271" height="200")
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_65.png" width="225" height="200")
+
+:::
+
+    // COMMENT: An animation can be done like in the circles unit;
+
+_{span.comments(text="A quick animation can be shown as the 6 horizontally layered triangular combs to compare the hexagonal comb. | Maybe these three animations could happen simultaneously? Or maybe in a gallery/slideshow scroll. It could be powerful for students to watch and compare side-by-side.")}To create_ 420 `"mm"^3` volume with the triangular prisms, you need to use [[6]] of them. So the Surface area of 6 triangular prisms will be 6 times [[37]], so 222 `"mm"^2`
+
+---
+
+_{span.comments(text="A quick animation can be shown as the 2-3 horizontally layered square combs to compare the hexagonal comb.")}To create_ 420 `"mm"^3` volume with the square prisms, you need to use more than 2 prisms which have a surface are more than 102 `"mm"^2`
+
+::: column.grow
+
+To create the same volume for storage, bees need to use more wax as the surface area of the triangular or square prisms. That’s why (Neglecting the _{span.comments(text="The closed ends of the honeycomb cells are also an example of geometric efficiency, the ends consists of three intersecting planes to provide the perfect alignment. The shape of the cells is such that two opposing honeycomb layers nest into each other, with each face of the closed ends being shared by opposing cells. | en.wikipedia.org/wiki/Honeycomb | @philipp I have been wondering if having another repository of interesting facts would be worth building. This could live there and appear like glossary and biography entries do. I have a few ideas from my chapters, too.")}closed ends_ of the combs), honeycombs are in the shape of hexagonal prisms. 
+
+The closed ends of the honeycomb cells are a bit more complicated. 
+
+They are composed of three flat planes to ensure the back-to-back ends of cells fit against each other and still the overall shape of the honeycomb cell minimizes surface area for a given volume.
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_17.png" width="150" height="94")
+
+:::
+
+Nowadays, It is also being argued that bees build cylindrical cells that later transform into hexagonal prisms through a process that is still debated like physical forces and mechanical shaping.
+
+**Charles Darwin** described the honeycomb as a masterpiece of engineering that is **_“absolutely perfect in economizing labor and wax.”_**
+
+Architectural Design imitates nature when seeking solutions of _{span.comments(text="I don't think that's the case here – most of the shapes in the examples below are simply chosen because of the street grid and available space.")}sustainability and efficiency_. All kinds of prisms are regularly used in architecture.
+
+An interactive slideshow :
+
+    figure: x-img(src="images/ch3_10.png" width="600" height="337")
+
+    figure: x-img(src="images/ch3_1.png" width="183" height="275")
+
+    figure: x-img(src="images/ch3_4.png" width="225" height="225")
+
+    figure: x-img(src="images/ch3_22.png" width="600" height="865")
+
+Hexagonal Cabins
+
+22-story Triangular Prism Building 
+
+Flat Iron, Manhattan, NYC
+
+A 30 story Pentagonal Prism  Building 
+
+Baltimore World Trade Center
+
+A 38 story Rectangular prism Building 
+
+Seagram Building
+
+Let’s have a look at the tallest buildings in the world.
+
+    figure: x-img(src="images/ch3_66.png" width="600" height="250")
+
+    // COMMENT: Probably not needed but for some reason, this got me thinking of the Olympic Village in Montreal that is somewhat of a pyramid: en.wikipedia.org/wiki/Olympic_Village_(Montreal)
+
+_{span.comments(text="I really like this transition!")}When the buildings become taller and taller they start losing their prism-like shapes and become more triangular_. Pyramids are a particular type of architecture developed since ancient times and still used today for modern buildings. The first pyramids were built in Mesopotamia, but the most famous pyramids are the Egyptian and Mayan pyramids.
+
+    figure: x-img(src="images/ch3_41.png" width="425" height="282")
+
+Egyptians knew vertical walls got less stable as they got taller, that’s why they first tried stacked bricks at an incline. They realized that a pyramid gets you the most stability for the least material.
+
+Thanks to the stability of the triangular structure The Great Pyramid of Giza remained the tallest building of the world for 4000 years until the Eiffel Tower was built in 1889. The Great Pyramid is the oldest monument on the list of the Seven Wonders of the Ancient World, built almost 4600 years ago.  
+
+Can you imagine the number of stones needed to build these giant ancient wonders?
+
+    // COMMENT: https://depositphotos.com/15412875/stock-photo-view-of-the-pyramids-near.html
+
+    figure: x-img(src="images/ch3_47.png" width="600" height="243")
+
+The Great Pyramid of Giza along with the Pyramid of Menkaure and the Pyramid of Khafre 
+
+Like prisms, pyramids are polyhedra too. But unlike prisms, **pyramids** only have [[one|two|three]] polygonal **base**. All of the other faces of the pyramid meet at a single [[vertex|face|edge]] called _{span.comments(text="(gloss:apex)new entry - needs definition | Apex is the top vertex of the pyramids that lateral faces meet.")}**apex**_.
+
+---
+
+There are lots of different kinds of pyramids, depending on the shape of their base.
+
+**Just like prisms, Pyramids are named for the shape of their** _{span.comments(text="Maybe create an interactive piece here in which students have the click on the base as I described in the prism section? Not as crucial here, but a good connection at least.")}**base**_.
+
+    figure: x-img(src="images/ch3_79.png" width="600" height="237")
+
+    figure: x-img(src="images/ch3_71.png" width="327" height="393")
+
+    figure: x-img(src="images/ch3_57.png" width="600" height="417")
+
+For example, if the _{span.comments(text="Interactive solid with a slider to open its net w/ color-coded parts")}base_ is a **square**, then it is called a “[[square|triangular]] **pyramid.**”
+
+---
+
+Regardless of the shape of its base, a pyramid always has [[triangular|square]] **lateral faces.**
+
+---
+
+Before starting to work on a pyramid, Egyptian builders had to calculate its volume in order to acquire the right amount of stone needed to build the pyramid.
+
+    figure: x-img(src="images/ch3_68.png" width="600" height="600")
+
+Imagine slicing a pyramid into lots of thin layers parallel to its base.
+
+All cross sections will be exactly the same shape but different in size. When you go up, the size of the slices decreases proportionally to the base of the pyramid.  The cross sections of a pyramid parallel to its base are similar but not [[congruent|equal]].
+
+---
+
+Since pyramids are made up of decreasing the size of layers of the same base, we [[cannot|can]] use ‘**_area of the base times the height_**’ to calculate the **volume**.
+
+---
+
+This is sure a great advantage during the construction, but it requires a different method to calculate the volume of the pyramids._{span.comments(text="We should add a paragraph (and interactive diagram) that shows that all cross sections parallel to the bases are similar (but not congruent).")}_
+
+    figure: x-img(src="images/ch3_38.jpg" width="600" height="338")
+
+    figure: x-img(src="images/ch3_77.jpg" width="600" height="338")
+
+_{span.comments(text="docs.google.com/presentation/d/1PW_E6QjsT9qLr2h2XewZRjzCMXNsTimmOT-fC7c48aI/edit?usp=sharing")}**Tabbed Box**_ **:** _{span.comments(text="When I teach this in school, we have a set of many different prisms and pyramids with the same base and same height. Students predict how many pyramids it will take to fill up the related prism. Then, students use rice or pasta or water to check their hypothesis. They fill up the pyramid and pour it into the prism and count how many it takes to fill it up. I found this a really powerful and effective lesson. I wonder how some of that could be incorporated here? I image the GIF on the first slide has some animation of that, but I wonder if there is a way to make students do it? There could be an empty square based pyramid and an empty cuboid and the fill up the pyramid with water by placing it under a sink and then they have to drag it over to the cuboid and fill up the cube. Then, they'd actually have to do it 3 times. Not quite as powerful as doing it in person I think, but if they do it 2-3 times, they helps build understanding of the formula. | I totally agree - I was doing the same experiment with my students with the set of geo solids.. I was planning to talk with Philipp about the animations, pills, hover targets in this section. This part has to be really interactive for kids to grab the formula | Jumping in to agree with you both here. An interactive element that really lets students explore here will take pressure off of the language/text. Since this is such an important, and sometimes challenging, concept. It may be worthwhile to require as little effort on reading as possible.And I think all of the slides help lay a foundation for the interactive! | @philipp this is a great discussion on an interactive element. What's possible?")}_
+
+    figure: x-img(src="images/ch3_39.jpg" width="600" height="338")
+
+    figure: x-img(src="images/ch3_26.jpg" width="600" height="338")
+
+`"Volume"_"Pyramids" = ("Base Area" * "Height") / 3`
+
+Now we are able to calculate the number of stones needed to build the Great Pyramid of Giza.
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_pyramid_3.png" width="326" height="202")
+
+::: column.grow
+
+The height of the Great Pyramid of Giza is 146.7 m. 
+
+Be sure you do not confuse the **slant height** of a pyramid with its **solid height.** 
+
+_{span.comments(text="(gloss:slant-height)new term - needs definition. The definition here is good start. | Slant height is a measure along a triangular face. It is the height of the lateral face.")}**Slant height**_ is a measure along a triangular face. It is the height of the lateral face.
+
+:::
+
+_{span.comments(text="(gloss:solid-height)new term - needs definition. The definition here is good start. | Solid height is an internal measure from the apex to the center of the base.")}**Solid height**_ is an internal measure from the apex to the **center **of the base. 
+
+To be able to calculate the volume of a pyramid, you need to know the [[solid height|slant height]].
+
+---
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_70.png" width="300" height="268")
+
+::: column.grow
+
+The base of the Great Pyramid is a square with each side measuring 230 m and covering an area of [[52900]] `"m"^2`.
+
+How much is that? Imagine a football field. Nearly 10 football fields could fit within the base of the Great Pyramid. 
+
+Recall that the volume of the pyramid is [[one-third|half]] of the product of base area and height.
+
+So the volume is: `"Volume" = ("Base Area" * "Height") / 3 = 2.6 "million" "m"^3`
+
+:::
+
+---
+
+It is plenty of room for the Pharaoh and his belongings. It is estimated 2.3 million stone blocks each weigh an average of 2.5 to 15 tons were used to build a pyramid that size. Legend has it that the structure was constructed in just 20 years' time, meaning that a block had to have been moved into place about every 5 minutes of each day and night.
+
+    figure: x-img(src="images/ch3_45.png" width="600" height="489")
+
+    figure: x-img(src="images/ch3_25.jpg" width="600" height="681")
+
+_{span.comments(text="Maybe by using these two images a before -after animation can be made.")}_ A not very well known fact about The Great Pyramid Giza is that it was covered with the smooth white _{span.comments(text="The outer stone layer of the pyramid of Khufu was built with Tura stones. This is a specially beautiful white limestone and is quarried in Tura, which lies to the southeast of Giza on the other side of the Nile.")}Tura_ limestone casing, which now only exists on the upper cap._{span.comments(text="Another very nice transition.")} This stone covered the outer layer of the lateral faces of the pyramid to make them completely smooth_.
+
+It was polished until it shone so that the pyramid would have gleamed in the sun.
+
+Think about how many limestone blocks were needed only to cover the Great Pyramid.  To determine how many blocks were needed, we need to know the [[surface area|volume]] of the 4 triangular lateral faces of the pyramid.
+
+---
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_72.png" width="300" height="268")
+
+::: column.grow
+
+Recall that all pyramids also have a slant height, which is the height of its [[ lateral faces|base]]. It is usually denoted either `s` or `l`.
+
+The slant height is used to calculate the [[areas|perimeters]] of the lateral faces.
+
+:::
+
+---
+
+Slant Height of the Great Pyramid is 186.6m. Each triangle face’s area is [[½ (base xx height) | base area xx height]] which is 21,500 `"m"^2`.
+
+---
+
+::: column.fit
+
+    x-img(src="images/ch3_pyramid_side.svg" width="200" height="164")
+
+::: column.grow
+
+Since we have [[4]] lateral faces, the total **lateral area** is _{span.comments(text="Instead of the direct result, this can be an equation filed too")}[[86000]]_.
+
+Each block of limestone covered about 1.25 square meters. So the Egyptians need almost 70 000 extra white limestones to cover the lateral faces of the pyramid.
+
+While it still stays as a mystery how Egyptians build the pyramids, _{span.comments(text="gph.is/1yqexne")} it is no longer a mystery for us how many stones are used to build or cover them_.
+
+:::
+
+---
+
+Surface Area calculations in prisms and pyramids have longer steps than finding their volume. 
+
+In surface area calculations, **nets** allow us to see all the faces of the solid at once. While calculating surface area, base or lateral area, instead of working on a picture of the solid, drawing nets helps us to visualize the hidden faces. 
+
+_{span.comments(text="Maybe as a fun-fact, this info can be added too (without further explanation)?.")}Do you know that?_
+
+What is the most efficient way to stack fruits?
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_12.png" width="200" height="146")
+
+::: column.grow
+
+On market stalls or street vendor carts, fruits like apples, and oranges are mostly arranged as [[pyramids|prisms]].
+
+In 1611 Johannes Kepler stated that putting each fruit on top of a gap in the layer of fruit underneath is the most efficient arrangement of spherical objects.
+
+After almost 400 years, in 1998, Thomas Hales presented a proof of the Kepler Conjecture. The proof was 300 pages long and it took a computer to verify its correctness.
+
+:::
+
+Apparently, when it comes to stacking stones and fruits or piling cannonballs on ships, pyramids are always the most convenient shape!
+
+---
+
+### Nets of Prisms and Pyramids
+
+**Remember**, nets are composed of [[polygons|cuboids|squares]] that form the faces of a polyhedron. 
+
+---
+
+    // COMMENT: Folding the Net of different polyhedra animation: Solids w/ Slider
+
+    figure: x-img(src="images/ch3_14.jpg" width="600" height="349")
+
+    figure: x-img(src="images/ch3_59.png" width="316" height="159")
+
+    figure: x-img(src="images/ch3_3.png" width="500" height="302")
+
+---
+
+    // COMMENT: Matching Game
+
+Here you have the nets of different prisms or pyramids. 
+
+Match each net with the solid it belongs to.
+
+    figure: x-img(src="images/ch3_51.png" width="600" height="134")
+
+    figure: x-img(src="images/ch3_5.png" width="298" height="282")
+
+    figure: x-img(src="images/ch3_44.png" width="309" height="223")
+
+    figure: x-img(src="images/ch3_2.png" width="460" height="220")
+
+    figure: x-img(src="images/ch3_15.png" width="600" height="389")
+
+    figure: x-img(src="images/ch3_55.png" width="600" height="99")
+
+    figure: x-img(src="images/ch3_78.png" width="600" height="568")
+
+    figure: x-img(src="images/ch3_74.png" width="259" height="292")
+
+    figure: x-img(src="images/ch3_55.png" width="600" height="99")
+
+    // COMMENT: After each correct match, net folds-up to enclose the solid.
+
+_{span.comments(text="This is also like an overview of different prisms and pyramids - I was thinking about giving real-life examples about each one of them next to the explanation - but it can conflict with the game-like nature of the activity? | I think it could work, especially since the question is 'unlocked'. The text could be in a column, and the photo could be in a column. The photo could have a brief caption explaining the connection. To me, this fits the gaming idea of unlocking hidden information. | OR maybe student match the net to the real-life example? | maybe after matching with the actual prism,  the prism can turn to real-life example? I am not sure | Definitely run this one by Philipp. I think you're on to something interesting.")}_
+
+    // COMMENT: After each correct match:
+
+    // COMMENT: For the rectangular prism
+
+A rectangular prism has [[three|four|five|two]] pairs of rectangles, ie. six rectangular faces. Remember, rectangular prisms are also called [[cuboids|rectoids]].
+
+---
+
+    // COMMENT: For the triangular pyramid
+
+A triangular pyramid has [[4]] triangular faces. If all the triangles are the same, then it is a **regular polyhedron** and called a **tetrahedron. Tetrahedron has 4 congruent equilateral triangles.**
+
+---
+
+    // COMMENT: For the octagonal prism
+
+An octagonal prism has [[2]] octagonal bases and [[8]] rectangular lateral faces.
+
+---
+
+    // COMMENT: For the hexagonal pyramid
+
+A hexagonal pyramid has [[1]] hexagonal base and [[6]] triangular lateral faces.
+
+---
+
+    // COMMENT: For the cube
+
+A cube has [[6]] square faces which are all _congruent_ to each other. A **Cube** is also a [[regular polyhedron|regular polygon]].
+
+---
+
+    // COMMENT: For the triangular prism
+
+A triangular prism has [[2]] triangular bases and [[3]] triangular lateral faces.
+
+---
+
+Nets of the polyhedra can give you a lot of information about the faces and the other characteristics of the solid.  Properties of the nets can help us to compare and contrast the prisms and pyramids.
+
+Drag the properties to the part of the [Venn diagram](gloss:venn-diagram) which it is associated with. 
+
+If it matches both, place it in the intersection of the circles.
+
+    // COMMENT: Drag & Drop Activity:
+
+    figure: x-img(src="images/ch3_sorting.svg" width="600" height="432")
+
+---
+
+In the previous chapter, we have also seen that there are many nets for a cube. What about the prisms and pyramids?
+
+Is there only one possible net for them?
+
+    figure: x-img(src="images/ch3_48.png" width="600" height="359")
+
+_The polygons can be arranged in [[different ways | only one way]]  to be assembled into the same prism or pyramid._
+
+---
+
+You can arrange these triangles and rectangles in different ways to fold up a  triangular prism.
+
+Use the grid to draw one of the possible nets of a triangular prism.
+
+    // COMMENT: Then the other possible nets will appear.
+
+    figure: x-img(src="images/ch3_23.png" width="507" height="87")
+
+    // COMMENT: like a shape-shifter ‘ a net closes forms the prism, then opens as another net and continues like that ‘
+
+    figure: x-img(src="images/ch3_60.png" width="564" height="846")
+
+---
+
+We may not build a pyramid or the tallest building of the world yet, but we can start planning for a treehouse (Playhouse / tent…).
+
+Like Egyptians do, before we start building one, we need to calculate the amount of material we are going to use for the outer surface of our model.
+
+A house-shaped prism is created by attaching a [[triangular prism triangular pyramid | square pyramid]] on top of a [[rectangular prism|pentagonal prism]]. 
+
+---
+
+These types of solids are called **Composite solids**.
+
+A _{span.comments(text="(gloss:composite-solid)new term - needs definition. The definition here is good start. | A composite solid is a figure that is made up of more than one solid.")}**composite solid**_ is a figure that is made up of more than one solid.
+
+::: column.fit
+
+    figure: x-img(src="images/ch3_76.svg" width="300" height="264")
+
+::: column.grow
+
+    // TODO: Decide what to do with this (can blanks be pills?)
+
+The base of the house-shaped prism consists of a [[[rectangle]]](pill:teal) and a [[[triangle]]](pill:orange).
+
+We may find the area of the rectangle and triangle separately and then add them up to find the [[base area|base perimeter]].
+
+[Rectangle’s area](pill:teal)is _{span.comments(text="Equation field")}`3 xx 2 = 6 "m"^2`_ and the [triangle’s area](pill:orange) is _{span.comments(text="Equation Field")}`(1/2) (3 xx 2) = 3 "m"2`_
+
+So each base area is [[9]] `"m"^2`
+
+:::
+
+---
+
+Now we can find the **lateral area** of the model;
+
+Is there a way to simplify the calculations?  
+
+Imagine unfolding the prism into a net. Use the slider to see the **net** of the house-shaped prism.
+
+    figure: x-img(src="images/ch3_40.png" width="600" height="315")
+
+    // COMMENT: Color coded - rotatable - Interactive model with a slider to open its net
+
+    // COMMENT: When the lateral faces open:
+
+Sometimes we can simplify the process by combining the lateral faces and finding the area of the combined region.
+
+    figure: x-img(src="images/ch3_52.png" width="600" height="551")
+
+    // COMMENT: Scene 1
+
+We can use one large rectangle instead of separate smaller ones.
+
+We can treat the prism-like house as having three parts: two identical bases, and one long rectangle that has been taped along the edges of the bases. 
+
+The rectangle has the [[same|different]] height as the prism, and its width is the [[perimeter of the base|width of the base]]. 
+
+---
+
+    // COMMENT: Scene 2
+
+    figure: x-img(src="images/ch3_8.png" width="600" height="569")
+
+**In fact, for all the prisms,  you can combine each rectangular lateral face and find the entire area by multiplying the height of the prism by the perimeter of the base.**
+
+So the area of the big rectangle that covers all the lateral face of the prism is [[12]] xx 4 = [[48]] `"m"^2`.
+
+---
+
+    // COMMENT: Scene 3
+
+Now, all we are going to do is to add two [[base areas|base perimeters]] to the [[lateral area|lateral perimeter]]. 
+
+---
+
+So the surface area is [[66]] `"m"^2`.
+
+---
+
+What about the volume?
+
+The Base Area was 9 `"m"^2` and the height is [[4]] `"m"`.
+
+---
+
+Therefore, after completing the construction, your treehouse will have a volume of [[36]] `"m"^3`
+
+---
+
+You may have different designs for your treehouse but, as long as they are prism-like shapes, their volume will always be calculated as `"Base Area" xx "Height"`.
+
+_{span.comments(text="I am not sure to include this part since the chapter is getting longer and longer.  For example, we can create a house with a pyramid and a prism to find the volume. Shall I include those examples too? Or is it more like an intermediate content? | You're right, I think this would add length. If you end up building the volume interactive above, I think the idea is similar enough to this that you won't need to build houses. | I wonder if this is worth a quick conversation in slack or on a call? I keep going back and forth with ideas.")}_
+
+    // COMMENT: animated Gallery
+
+    figure: x-img(src="images/ch3_73.png" width="600" height="572")
+
+    figure: x-img(src="images/ch3_18.png" width="563" height="372")
+
+    figure: x-img(src="images/ch3_61.png" width="450" height="450")
+
+    // COMMENT: On the given shapes, students can be asked to trace the base area.
+
+    // COMMENT: On the given shapes, students can be asked to trace the base area.After the correct base area creation; the Value of the Base Area appears.
+
+    // COMMENT: On the given shapes, students can be asked to trace the base area.Then we may ask the students to trace the height.
+
+    // COMMENT: On the given shapes, students can be asked to trace the base area. And the value of height appears.
+
+    // COMMENT: On the given shapes, students can be asked to trace the base area.Then they can enter the values needed to calculate the Volume.
+
+    // COMMENT: On the given shapes, students can be asked to trace the base area.And the value of volume appears.](pill:blue)
 
 ---
 
