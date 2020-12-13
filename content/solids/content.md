@@ -580,7 +580,7 @@ The units used to measure the surface area are square meter (`"m"^2`), square ce
 
 ---
 
-### SA : V
+### Surface Area vs Volume
 
 Surface area and [volume](gloss:volume) are different attributes of 3D figures.  The key difference between them is that the [[surface area | volume]] is a 2D measurement and the [[volume | surface area]] is a 3D measurement of a solid.
 
@@ -688,13 +688,7 @@ faster.
 
 Let’s drag the examples of quantities related to volume and surface area to complete the diagram:
 
-    // COMMENT: Use Tinder component for this for now
-
-{.todo} INTERACTIVE: Mind map
-
----
-
-_{button.btn.continue}Continue_
+{.todo} INTERACTIVE: Use Tinder-drag component
 
 ---
 
@@ -1111,7 +1105,7 @@ Since all prisms are made up from the multiple layers of their base, we [[can|ca
 
 Now, use the slider to try the different polygons as the base of the prism that could be used as a honeycomb. Average cell width and length for a honeycomb is approximately 4mm and the depth is 10 mm.
 
-Number of sides of the base polygon: _{span.comments(text="TODO: Variable Slider")}[<<3>>](pill:green)_
+::: tab
 
 #### Triangular Prism
 
@@ -1130,6 +1124,7 @@ Since the base of the prism an equilateral triangle, _{span.comments(text="pill 
 `"V"_"Prism" = ` _{span.comments(text="We can create equation fields for all the calculations")}_ `7 xx 10 = 70 "mm"^3`
 
 :::
+::: tab
 
 #### Square Prism
 
@@ -1148,6 +1143,7 @@ Since the base of the prism a square, _{span.comments(text="pill to yellow area"
 `"V"_"Prism" = `_{span.comments(text="Equation Field")}`16 xx 10 = 160 "mm"^3`_
 
 :::
+::: tab
 
 #### Hexagonal Prism
 
@@ -1172,6 +1168,7 @@ _{span.comments(text="pill to yellow area")}Base Area_ is the six equilateral tr
 `"V"_"Prism" = 42 xx 10 = 420 "mm"^3`
 
 :::
+:::
 
 Compared to the other prisms that leave no gaps or overlaps (such as triangular and square), the hexagon prism creates a comb with the maximum volume. 
 
@@ -1189,7 +1186,7 @@ We have already found the base area of the prisms.
 
     // COMMENT: (3D Solids with a slider to open to their nets and close back)
 
-_{span.comments(text="Variable Slider")}Number of sides of the base polygon [<<3>>](pill:blue)_
+::: tab
 
 #### Triangular Prism
 
@@ -1212,8 +1209,7 @@ So the sum of all the areas of the faces will be
 `"A"_"Prism" = "A"_"Base" + pill("A"_"Lateral face", "blue") = [[37]]  "mm"^2`
 
 :::
-
----
+::: tab
 
 #### Square Prism
 
@@ -1231,8 +1227,7 @@ So the sum of all the areas of the faces will be
 `"A"_"Prism" = pill("A"_"Base", "green") + pill("A"_"Lateral face", "blue") = [[56]]  "mm"^2`
 
 :::
-
----
+::: tab
 
 #### Hexagonal Prism
 
@@ -1252,6 +1247,7 @@ So the sum of all the areas of the faces will be
 
 `"A"_"Prism" = pill("A"_"Base", "blue") + pill("A"_"Lateral face", "green") = [[102]] "mm"^2`
 
+:::
 :::
 
 ---
@@ -1296,41 +1292,51 @@ They are composed of three flat planes to ensure the back-to-back ends of cells 
 
 Nowadays, It is also being argued that bees build cylindrical cells that later transform into hexagonal prisms through a process that is still debated like physical forces and mechanical shaping.
 
-**Charles Darwin** described the honeycomb as a masterpiece of engineering that is **_“absolutely perfect in economizing labor and wax.”_**
+[Charles Darwin](bio:darwin) described the honeycomb as a masterpiece of engineering that is _“absolutely perfect in economizing labor and wax.”_
+
+---
 
 Architectural Design imitates nature when seeking solutions of _{span.comments(text="I don't think that's the case here – most of the shapes in the examples below are simply chosen because of the street grid and available space.")}sustainability and efficiency_. All kinds of prisms are regularly used in architecture.
 
-An interactive slideshow :
+::: column(width=300)
 
     figure: x-img(src="images/ch3_10.png" width="600" height="337")
 
+{.caption} Hexagonal Cabins
+
+::: column(width=300)
+
     figure: x-img(src="images/ch3_1.png" width="183" height="275")
+
+{.caption} The Flat Iron building in New York City, a 22-story [[triangular|hexagonal|pentagonal]] prism
+
+::: column(width=300)
 
     figure: x-img(src="images/ch3_4.png" width="225" height="225")
 
+{.caption} The Baltimore World Trade Center, a 30-story [[pentagonal|triangular|hexagonal]] prism
+
+::: column(width=300)
+
     figure: x-img(src="images/ch3_22.png" width="600" height="865")
 
-Hexagonal Cabins
+{.caption} The Seagram Building in XXX, a 38-story [[rectangular|square|triangular]] prism
 
-22-story Triangular Prism Building 
+:::
 
-Flat Iron, Manhattan, NYC
-
-A 30 story Pentagonal Prism  Building 
-
-Baltimore World Trade Center
-
-A 38 story Rectangular prism Building 
-
-Seagram Building
+---
 
 Let’s have a look at the tallest buildings in the world.
 
     figure: x-img(src="images/ch3_66.png" width="600" height="250")
 
-    // COMMENT: Probably not needed but for some reason, this got me thinking of the Olympic Village in Montreal that is somewhat of a pyramid: en.wikipedia.org/wiki/Olympic_Village_(Montreal)
+When the buildings become taller and taller they start losing their prism-like shapes and become more triangular.
 
-_{span.comments(text="I really like this transition!")}When the buildings become taller and taller they start losing their prism-like shapes and become more triangular_. Pyramids are a particular type of architecture developed since ancient times and still used today for modern buildings. The first pyramids were built in Mesopotamia, but the most famous pyramids are the Egyptian and Mayan pyramids.
+---
+
+### Pyramids
+
+Pyramids are a particular type of architecture developed since ancient times and still used today for modern buildings. The first pyramids were built in Mesopotamia, but the most famous pyramids are the Egyptian and Mayan pyramids.
 
     figure: x-img(src="images/ch3_41.png" width="425" height="282")
 
@@ -1382,17 +1388,37 @@ Since pyramids are made up of decreasing the size of layers of the same base, we
 
 ---
 
-This is sure a great advantage during the construction, but it requires a different method to calculate the volume of the pyramids._{span.comments(text="We should add a paragraph (and interactive diagram) that shows that all cross sections parallel to the bases are similar (but not congruent).")}_
+This is sure a great advantage during the construction, but it requires a different method to calculate the volume of the pyramids.
+
+{.fixme} We should add a paragraph (and interactive diagram) that shows that all cross sections parallel to the bases are similar (but not congruent).
+
+{.fixme} When I teach this in school, we have a set of many different prisms and pyramids with the same base and same height. Students predict how many pyramids it will take to fill up the related prism. Then, students use rice or pasta or water to check their hypothesis. They fill up the pyramid and pour it into the prism and count how many it takes to fill it up. I found this a really powerful and effective lesson. I wonder how some of that could be incorporated here? I image the GIF on the first slide has some animation of that, but I wonder if there is a way to make students do it? There could be an empty square based pyramid and an empty cuboid and the fill up the pyramid with water by placing it under a sink and then they have to drag it over to the cuboid and fill up the cube. Then, they'd actually have to do it 3 times. Not quite as powerful as doing it in person I think, but if they do it 2-3 times, they helps build understanding of the formula. | I totally agree - I was doing the same experiment with my students with the set of geo solids.. I was planning to talk with Philipp about the animations, pills, hover targets in this section. This part has to be really interactive for kids to grab the formula | Jumping in to agree with you both here. An interactive element that really lets students explore here will take pressure off of the language/text. Since this is such an important, and sometimes challenging, concept. It may be worthwhile to require as little effort on reading as possible.And I think all of the slides help lay a foundation for the interactive!
+
+---
+
+::: tab
+
+#### Experiments
 
     figure: x-img(src="images/ch3_38.jpg" width="600" height="338")
 
-    figure: x-img(src="images/ch3_77.jpg" width="600" height="338")
+::: tab
 
-_{span.comments(text="docs.google.com/presentation/d/1PW_E6QjsT9qLr2h2XewZRjzCMXNsTimmOT-fC7c48aI/edit?usp=sharing")}**Tabbed Box**_ **:** _{span.comments(text="When I teach this in school, we have a set of many different prisms and pyramids with the same base and same height. Students predict how many pyramids it will take to fill up the related prism. Then, students use rice or pasta or water to check their hypothesis. They fill up the pyramid and pour it into the prism and count how many it takes to fill it up. I found this a really powerful and effective lesson. I wonder how some of that could be incorporated here? I image the GIF on the first slide has some animation of that, but I wonder if there is a way to make students do it? There could be an empty square based pyramid and an empty cuboid and the fill up the pyramid with water by placing it under a sink and then they have to drag it over to the cuboid and fill up the cube. Then, they'd actually have to do it 3 times. Not quite as powerful as doing it in person I think, but if they do it 2-3 times, they helps build understanding of the formula. | I totally agree - I was doing the same experiment with my students with the set of geo solids.. I was planning to talk with Philipp about the animations, pills, hover targets in this section. This part has to be really interactive for kids to grab the formula | Jumping in to agree with you both here. An interactive element that really lets students explore here will take pressure off of the language/text. Since this is such an important, and sometimes challenging, concept. It may be worthwhile to require as little effort on reading as possible.And I think all of the slides help lay a foundation for the interactive! | @philipp this is a great discussion on an interactive element. What's possible?")}_
+#### Decomposition
 
-    figure: x-img(src="images/ch3_39.jpg" width="600" height="338")
+    figure
+        x-img(src="images/ch3_77.jpg" width="600" height="338")
+        x-img(src="images/ch3_39.jpg" width="600" height="338")
+
+::: tab
+
+#### Cubes
 
     figure: x-img(src="images/ch3_26.jpg" width="600" height="338")
+
+:::
+
+---
 
 `"Volume"_"Pyramids" = ("Base Area" * "Height") / 3`
 
@@ -2668,26 +2694,12 @@ Let’s compare the size of the moon and other planets with respect to the radiu
 
 ---
 
-    // TODO: Include images in table
-
-    // figure: x-img(src="images/ch5_14.png" width="600" height="600")
-    // Earth
-
-    // figure: x-img(src="images/ch5_6.png" width="600" height="600")
-    // Moon
-
-    // figure: x-img(src="images/ch5_17.png" width="512" height="512")
-    // Mars
-
-    //figure: x-img(src="images/ch5_20.png" width="324" height="156")
-    // Saturn
-
-| Solar System | Radius | Volume | Surface Area |
-|-|-|-|-|
-| Earth | __r__ | __V__ | __A__ |
-| Moon | `"r"/4` | `"V"/input(64)` | `"A"/16` |
-| Mars | `"r"/2` | `"V"/8` | `"A"/input(4)` |
-| Saturn | `input(10) * "r"` | `1000"V"` | `input(100) * "A"` |
+|                                                            | Radius | Volume | Surface Area |
+| ---------------------------------------------------------- | --- | ---- | ---- |
+| _{img(src="images/ch5_14.png" width=30 height=30)}_ Earth  | __r__ | __V__ | __A__ |
+| _{img(src="images/ch5_6.png" width=30 height=30)}_ Moon    | `"r"/4` | `"V"/input(64)` | `"A"/16` |
+| _{img(src="images/ch5_17.png" width=30 height=30)}_ Mars   | `"r"/2` | `"V"/8` | `"A"/input(4)` |
+| _{img(src="images/ch5_20.png" width=30 height=30)}_ Saturn | `input(10) * "r"` | `1000"V"` | `input(100) * "A"` |
 
 ---
 
@@ -2781,5 +2793,3 @@ Biosphère (Montreal, Canada)
 Also, for the same reason of soap bubbles being spherical, the spherical shapes distribute the load of the building throughout the entire structure, which gives the building great strength.
 
     figure: x-img(src="images/ch5_12.png" width="600" height="599")
-
-**May the more volume be with you!**
