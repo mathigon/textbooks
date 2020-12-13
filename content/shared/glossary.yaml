@@ -1682,6 +1682,10 @@ square-area:
   title: Area of a square
   text: The __area__ of a square with side length _s_ is `A = s^2`.
 
+square-cube-law:
+  title: Square-Cube Law
+  text: The __square–cube law__ (or __cube–square law__) is a mathematical principle, applied in a variety of scientific fields, which describes the relationship between the volume and the surface area as a shape's size increases or decreases. This principle states that, as a shape grows in size, its volume grows faster than its surface area.
+
 square-matrix:
   title: Square matrix
   text: A __square matrix__ is a matrix that has the same number of rows and
@@ -1930,6 +1934,10 @@ vertical-angles:
   title: Vertical angles
   text: __Vertical angles__ are pairs of opposite angles created by
     intersecting lines. Vertical angles are always _congruent_.
+
+volume:
+  title: volume
+  text: __Volume__ is the quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains.
 
 whole-numbers:
   title: Whole numbers
