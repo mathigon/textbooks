@@ -40,3 +40,35 @@
   padding-bottom: 56.25%;
   iframe { .fillParent(); }
 }
+
+.arrow-paragraph {
+  position: relative;
+  transition: opacity .2s;
+  cursor: pointer;
+  opacity: 0.8;
+
+  &:hover { opacity: 0.9; }
+  &.active { opacity: 1; cursor: default; }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -6px; bottom: -6px;
+    left: -6px; right: -6px;
+    z-index: -1;
+    opacity: 0;
+
+    background: linear-gradient(to right, transparent, @light-grey);
+    transition: transform .2s, opacity .2s;
+    @path: 'M279.1,23.7,266.6,4c-1.5-2.2-5.3-4-8.6-4H0V50H258c3.3,0,7.1-1.8,8.6-4l12.5-19.7A2.4,2.4,0,0,0,279.1,23.7Z';
+    @mask: escape('<svg xmlns="http://www.w3.org/2000/svg" width="280" height="50"><path d="@{path}"/></svg>');
+    mask-image: url('data:image/svg+xml;utf8,@{mask}');
+    mask-size: 100% 100%;
+  }
+
+  &:hover:after { transform: translateX(10px); opacity: 0.5; }
+  &:hover:after { transform: translateX(20px); opacity: 1; }
+
+
+}
+

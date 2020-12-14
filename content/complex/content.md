@@ -160,23 +160,27 @@ Simplify 28 by finding the highest perfect square that goes into 28.
 {.fixme} In this way, we can think of multiplying by -1 as a pure [[rotation | dilation | translation]] by [[180°]].
 
 ---
+> id: plane
 
 {.fixme} With this geometric understanding of multiplication, we can begin to think where imaginary numbers might fit into this picture. We already know that i × i = [[–1]]. To understand what the imaginary number i really means, let’s also think about it as a transformation. What transformation can we apply twice, starting from 1, to arrive at –1?
 
-::: column.grow
+::: column(width=240).var
 
-{.fixme} Subtract –1 twice.
-When clicked: This does indeed give us –1, but “subtracting” is not a valid transformation. We could stretch 1 to 0, but then there is no way to stretch 0 to become –1.
+{.arrow-paragraph} Subtract –1 twice.
 
-{.fixme} Rotate by 180° twice.
-When clicked: Unfortunately, this does not work. Rotating twice by 180° takes us back to our starting place: +1, not –1.
+{.arrow-paragraph} Rotate by 180° twice.
 
-{.fixme} Rotate by 90° twice.
-When clicked: This works! If we rotate the number 1 twice, by 90° we arrive at –1. However this leads to a new problem: we’re leaving the number line! What does it even mean for a number to not be on the number line?
+{.arrow-paragraph} Rotate by 90° twice.
 
 ::: column.grow
 
 {.fixme} Three diagrams for each of the options on the left that students can click on.
+
+    // When clicked: This does indeed give us –1, but “subtracting” is not a valid transformation. We could stretch 1 to 0, but then there is no way to stretch 0 to become –1.
+
+    // When clicked: Unfortunately, this does not work. Rotating twice by 180° takes us back to our starting place: +1, not –1.
+
+    // When clicked: This works! If we rotate the number 1 twice, by 90° we arrive at –1. However this leads to a new problem: we’re leaving the number line! What does it even mean for a number to not be on the number line?
 
 :::
 
