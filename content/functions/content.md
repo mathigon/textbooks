@@ -239,9 +239,9 @@ The lowest y-value on the graph is about [[1250+-50 depending on scale]]. Let’
 
 The Olympics is full of incredible athletic feats. It’s also full of interesting data. Graphs help us visualize that data. During our time together today, we will watch Olympic competitions and analyse their graphs for interesting information. Let’s head over to the gymnastics arena!
 
-::: column(width240)
+::: column(width=240)
 
-[Ri](https://www.gettyimages.dk/detail/news-photo/derval-orourke-of-ireland-sally-pearson-of-australia-and-news-photo/123295200)
+![Ri](https://media.gettyimages.com/photos/derval-orourke-of-ireland-sally-pearson-of-australia-and-brigitte-of-picture-id123295200)
 
 ::: column.grow
 
@@ -271,29 +271,20 @@ Let’s build some intuition for what graphs of different events look like. Matc
     // Organized as a table in the Google Doc, so I (Dani) put it in a table here. The idea is to make it cards.
     // Match graphs to sports of time functions
 
-| Triple Jump | | 50 M Freestyle | | 100 M Hurdles | | Vault | | Diving | | Skiing | |       |
-| :---------: | | :------------: | | :-----------: | | :---: | | :----: | | :----: | | :---: |
-| [Graph](https://www.desmos.com/calculator/qxfugm6xpi) | | [Graph](https://www.desmos.com/calculator/z07xkap2bl) | | [Graph](https://www.desmos.com/calculator/fwgpfln0ne) | | [Graph](https://www.desmos.com/calculator/td3fynck7q) | | [Graph](https://www.desmos.com/calculator/es8ugnvxeq) | | [Graph](https://www.desmos.com/calculator/x58olmjtkl) I'm having a tough time getting the shape to work with the scale. It might be easier to get the shape then layer the axes over - make this a static image. [sketch](https://drive.google.com/file/d/1uh9_0Abfs0lYIa8q6uZxUYFoRnHeLKtr/view?usp=sharing) disegard notes dotted graph | |     |
-| [Photo](https://www.spokesman.com/photos/2008/aug/18/57761/) | | [Photo](https://www.alamy.com/genova-italy-08-nov-2019-cesar-cielo-filho-brazil-during-trofeo-nicola-sapio-swimming-credit-lpsdanilo-vigoalamy-live-news-image332214503.html?pv=1&stamp=2&imageid=4E4EF72A-A00B-4C2E-9F1F-FA7688F2F792&p=1229576&n=0&orientation=0&pn=1&searchtype=0&IsFromSearch=1&srch=foo%3dbar%26st%3d0%26pn%3d1%26ps%3d100%26sortby%3d2%26resultview%3dsortbyPopular%26npgs%3d0%26qt%3dcesar%2520cielo%26qt_raw%3dcesar%2520cielo%26lic%3d3%26mr%3d0%26pr%3d0%26ot%3d0%26creative%3d%26ag%3d0%26hc%3d0%26pc%3d%26blackwhite%3d%26cutout%3d%26tbar%3d1%26et%3d0x000000000000000000000%26vp%3d0%26loc%3d0%26imgt%3d0%26dtfr%3d%26dtto%3d%26size%3d0xFF%26archive%3d1%26groupid%3d%26pseudoid%3d%26a%3d%26cdid%3d%26cdsrt%3d%26name%3d%26qn%3d%26apalib%3d%26apalic%3d%26lightbox%3d%26gname%3d%26gtype%3d%26xstx%3d0%26simid%3d%26saveQry%3d%26editorial%3d1%26nu%3d%26t%3d%26edoptin%3d%26customgeoip%3d%26cap%3d1%26cbstore%3d1%26vd%3d0%26lb%3d%26fi%3d2%26edrf%3d%26ispremium%3d1%26flip%3d0%26pl%3d) | | [Photo](https://www.gettyimages.dk/detail/news-photo/derval-orourke-of-ireland-sally-pearson-of-australia-and-news-photo/123295200) | | [Photo](https://www.gettyimages.dk/detail/news-photo/derval-orourke-of-ireland-sally-pearson-of-australia-and-news-photo/123295200) | | [Photo](https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2016/08/19/Production/Daily/Style/Images/2016-08-18T192657Z_01_OLYGK111_RTRIDSP_3_OLYMPICS-RIO-DIVING-W-10MPLATFORM.jpg?uuid=BvCIjGYKEeaLJ7uLo5SXog) | | [Photo](https://depositphotos.com/stock-photos/alpine-slalom.html?filter=all&qview=29111391) | |     |
-| [Video](https://www.youtube.com/watch?v=wVqYjmK-T3w) | | [Video](https://www.youtube.com/watch?v=qZvdhv9uhi0) | | [Video](https://www.youtube.com/watch?v=AFNqbhJ3kmw) | | [Video](https://www.youtube.com/watch?v=85v0Un19A94) | | [Video](https://www.youtube.com/watch?v=wTX13JZFHd4) | | [Video](https://www.youtube.com/watch?v=kU0a-kvvKW4) | |     |
-|       | |       | | :50-1:05 | |All videos are either of stills from 2016 or from other competitions. | | 0:00-0:12  All videos are either of stills from 2016 or from other competitions. | | 7:42-8:32| |     |
-| [Françoise Mbango Etone](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Cameroon holds the Olympic record in women’s triple jump with a length of 15.39 meters. | | [César Cielo](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Brazil holds the Olympic record for the men’s 50 meter with a time of 21.47 seconds. | | [Sally Pearson](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Australia holds the Olympic record in the women’s 100 meter hurdles with a time of 12.35 seconds. | | [Ri Se-gwang](https://en.wikipedia.org/wiki/Gymnastics_at_the_2016_Summer_Olympics_%E2%80%93_Men%27s_vault) of the People’s Republic of Korea won the gold medal for the vault in the 2016 Summer Olympic Games. | | [Ren Qian](https://en.wikipedia.org/wiki/Diving_at_the_2016_Summer_Olympics_–_Women%27s_10_metre_platform) of China won the gold medal for diving in the 2016 Summer Olympic Games. | |     | |     |
-| https://www.spokesman.com/copyright/ | | I like this as an action cut out. The lighting isn't amazing, though. And not for $20. I can look for others if we decide having an action photo of each of these record holders is worth having. | | $$ | |      | | Too good not to include as a reference. | | Start | | 985m |
-|       | |       | |        | |       | |       | | Finish | | 805m |
-|       | |       | |        | |       | |       | | Vertical drop| | 180m |
-|       | |       | |        | |       | |       | | Gates| | 66|
-|       | |       | |        | |       | |       | | Finish time | | 48.33|
+    // I'm having a tough time getting the shape to work with the scale. It might be easier to get the shape then layer the axes over - make this a static image. [sketch](https://drive.google.com/file/d/1uh9_0Abfs0lYIa8q6uZxUYFoRnHeLKtr/view?usp=sharing) disegard notes dotted graph
+
+| Triple Jump | 50 M Freestyle | 100 M Hurdles | Vault | Diving | Skiing |
+| ----------- | -------------- | ------------- | ----- | ------ | ------ |
+| [Graph](https://www.desmos.com/calculator/qxfugm6xpi) | [Graph](https://www.desmos.com/calculator/z07xkap2bl) | [Graph](https://www.desmos.com/calculator/fwgpfln0ne) | [Graph](https://www.desmos.com/calculator/td3fynck7q) | [Graph](https://www.desmos.com/calculator/es8ugnvxeq) | [Graph](https://www.desmos.com/calculator/x58olmjtkl) |
+| ![Photo](https://thumb.spokesman.com/LzzALA-yzk6jmSOYmVPZ6rdEsbU=/1170x0/media.spokesman.com/photos/2008/08/18/triplejumppic18_08-18-2008_ILE22PC.jpg) | ![Photo](https://c7.alamy.com/comp/2A8DJYK/genova-italy-08-nov-2019-cesar-cielo-filho-brazil-during-trofeo-nicola-sapio-swimming-credit-lpsdanilo-vigoalamy-live-news-2A8DJYK.jpg) | ![Photo](https://media.gettyimages.com/photos/derval-orourke-of-ireland-sally-pearson-of-australia-and-brigitte-of-picture-id123295200?s=2048x2048) | ![Photo](https://www.gettyimages.dk/detail/news-photo/derval-orourke-of-ireland-sally-pearson-of-australia-and-news-photo/123295200) | ![Photo](https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2016/08/19/Production/Daily/Style/Images/2016-08-18T192657Z_01_OLYGK111_RTRIDSP_3_OLYMPICS-RIO-DIVING-W-10MPLATFORM.jpg?uuid=BvCIjGYKEeaLJ7uLo5SXog) | ![Photo](https://st.depositphotos.com/2579941/2911/i/950/depositphotos_29111391-stock-photo-fra-alpine-skiing-val-disere.jpg) |
+| [Video](https://www.youtube.com/watch?v=wVqYjmK-T3w) | [Video](https://www.youtube.com/watch?v=qZvdhv9uhi0) | [Video](https://www.youtube.com/watch?v=AFNqbhJ3kmw) | [Video](https://www.youtube.com/watch?v=85v0Un19A94) | [Video](https://www.youtube.com/watch?v=wTX13JZFHd4) | [Video](https://www.youtube.com/watch?v=kU0a-kvvKW4) |
+| [Françoise Mbango Etone](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Cameroon holds the Olympic record in women’s triple jump with a length of 15.39 meters. | [César Cielo](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Brazil holds the Olympic record for the men’s 50 meter with a time of 21.47 seconds. | [Sally Pearson](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Australia holds the Olympic record in the women’s 100 meter hurdles with a time of 12.35 seconds. | [Ri Se-gwang](https://en.wikipedia.org/wiki/Gymnastics_at_the_2016_Summer_Olympics_%E2%80%93_Men%27s_vault) of the People’s Republic of Korea won the gold medal for the vault in the 2016 Summer Olympic Games. | [Ren Qian](https://en.wikipedia.org/wiki/Diving_at_the_2016_Summer_Olympics_–_Women%27s_10_metre_platform) of China won the gold medal for diving in the 2016 Summer Olympic Games. |
+| Start: 985m | Finish: 805m | Vertical drop: 180m | Gates: 66 | Finish time: 48.33 |
 
 As you can see there are several different perspectives for graphing motion. One perspective is distance as a function of time. Select the events represented with this perspective.
 
     // NOTES
     // Multiple Select
-
-[option 1](Triple Jump)
-[option 2](50 M Freestyle)
-[option 3](100 M Hurdles)
-[option 4](Vault)
-[option 5](Diving)
 
 We see the other two events are [[height | distance]] as a function of [[distance | height]].  We will look at two of these functions in more detail. Let’s head over to the pool.
 
@@ -308,31 +299,26 @@ We are just in time for the men’s 50 meter freestyle finals. Keep a close eye 
 
 César Cielo of Brazil holds the Olympic record for the men’s 50 meter with a time of 21.47 seconds.
 
-::: column(width240)
+::: column(width=240)
 
-    // EDITORIAL USE ONLY
-
-[César Cielo](https://www.alamy.com/genova-italy-08-nov-2019-cesar-cielo-filho-brazil-during-trofeo-nicola-sapio-swimming-credit-lpsdanilo-vigoalamy-live-news-image332214503.html?pv=1&stamp=2&imageid=4E4EF72A-A00B-4C2E-9F1F-FA7688F2F792&p=1229576&n=0&orientation=0&pn=1&searchtype=0&IsFromSearch=1&srch=foo%3dbar%26st%3d0%26pn%3d1%26ps%3d100%26sortby%3d2%26resultview%3dsortbyPopular%26npgs%3d0%26qt%3dcesar%2520cielo%26qt_raw%3dcesar%2520cielo%26lic%3d3%26mr%3d0%26pr%3d0%26ot%3d0%26creative%3d%26ag%3d0%26hc%3d0%26pc%3d%26blackwhite%3d%26cutout%3d%26tbar%3d1%26et%3d0x000000000000000000000%26vp%3d0%26loc%3d0%26imgt%3d0%26dtfr%3d%26dtto%3d%26size%3d0xFF%26archive%3d1%26groupid%3d%26pseudoid%3d%26a%3d%26cdid%3d%26cdsrt%3d%26name%3d%26qn%3d%26apalib%3d%26apalic%3d%26lightbox%3d%26gname%3d%26gtype%3d%26xstx%3d0%26simid%3d%26saveQry%3d%26editorial%3d1%26nu%3d%26t%3d%26edoptin%3d%26customgeoip%3d%26cap%3d1%26cbstore%3d1%26vd%3d0%26lb%3d%26fi%3d2%26edrf%3d%26ispremium%3d1%26flip%3d0%26pl%3d)
+![César Cielo](https://c7.alamy.com/comp/2A8DJYK/genova-italy-08-nov-2019-cesar-cielo-filho-brazil-during-trofeo-nicola-sapio-swimming-credit-lpsdanilo-vigoalamy-live-news-2A8DJYK.jpg)
 
 :::
-
 ::: column.grow
 
 What an emotional race for Cielo! He broke the world and olympic records with this swim. The graph shows Cielo’s record-breaking swim. The shape is one we have seen before in [graphing linear functions](/linear-functions/graphing-functions). Recall this graph represents all the ordered pairs matching inputs to outputs. We can use information from the graph to write the function describing Cielo’s swim. Let’s call the function f(t).
 
 Remember the general form for [__linear function__](gloss:linear-function) like this is y=mx+c, where m is the slope and c is the y-intercept. We replace y with the name of the function, and we replace x with the input variable for this function.
 
-{.text-center.follows} `y=mx+c`
-{.text-center.follows} `=>`
-{.text-center.follows} `f(t)=m[[t]]+c`
+{.text-center} `y=mx+c`  
+`=> f(t)=m[[t]]+c`
 
 This means we need to find [[slope {.fixme} also accept "m"]] and [[y-intercept {.fixme} also accept "c"]] from the graph.
 
 Notice the [horizontal-axis](target:1_xAxis), in this graph shows [[time]] in seconds. The [vertical-axis](target:1_yAxis) is the distance from the starting block to the opposite end of the pool measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) is [[00]] meters, which represent the [[distance | time | number of laps]] of the race.
 
-{.text-center.follows} `y=mx+c`
-{.text-center.follows} `=>`
-{.text-center.follows} `f(t)=mt+[[0]]`
+{.text-center} `y=mx+c`  
+`=> f(t)=mt+[[0]]`
 
 We are only missing slope. In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
@@ -347,8 +333,7 @@ y=mx+c
 
 f(t)=[[2.35]]t+0
 
-
-::: column(width240)
+::: column(width=240)
 
 [Cielo race mock-up](https://www.desmos.com/calculator/o3de2a7odh)
 
@@ -359,10 +344,10 @@ Let’s say we want to know how long it took Cielo to swim the first 10 meters. 
     // NOTE
     // Algebra Flow
 
-{.text-center.follows} `f(t)=2.35t`
-{.text-center.follows} `10=2.35t`
-{.text-center.follows} `(10)/(2.35)=t`
-{.text-center.follows} `4.25=t`
+{.text-center} `f(t)=2.35t`  
+`10=2.35t`  
+`(10)/(2.35)=t`  
+`4.25=t`
 
 Cielo swims the first 10 meters in just over [[4.1+-0.1]] seconds.
 
@@ -379,7 +364,7 @@ Take a look at the top four finishers during this race:
 | Alain Bernard | | b(t) | | blue |
 | Ashley Callus | | c(t) | | red |
 
-::: column(width240)
+::: column(width=240)
 
 [50 free mock-up](https://www.desmos.com/calculator/ahx1i7lkau)
 
@@ -419,11 +404,11 @@ Ren Qian is among the youngest Olympic medalists. She is diving now - let’s [w
 
 Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games.
 
-::: column(width240)
+::: column(width=240)
 
 [Ren image mock-up](https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2016/08/19/Production/Daily/Style/Images/2016-08-18T192657Z_01_OLYGK111_RTRIDSP_3_OLYMPICS-RIO-DIVING-W-10MPLATFORM.jpg?uuid=BvCIjGYKEeaLJ7uLo5SXog)
 
-::: column(width240)
+::: column(width=240)
 
     // NOTES
     // make sticky  
@@ -573,7 +558,7 @@ Let’s head over to the track for the women’s 800 meter final. Looks like we 
 
 [800 M mock-up](https://www.desmos.com/calculator/msryjohuz9)
 
-When we have two or more function on the same coordinate plane, we call them a [[__system of equations__]](gloss:system-of-equations). Systems like this add key features that help us further understand what is happening in the race between Tracey, Boufaarirane, and Rogers. For example, something interesting is happening when the graphs intersect. Select all the true statements about the intersection points in this system.
+When we have two or more function on the same coordinate plane, we call them a [__system of equations__](gloss:system-of-equations). Systems like this add key features that help us further understand what is happening in the race between Tracey, Boufaarirane, and Rogers. For example, something interesting is happening when the graphs intersect. Select all the true statements about the intersection points in this system.
 
     // NOTES
     // Multiple select
@@ -597,11 +582,11 @@ The slopes of each function tell us each runner’s [[speed | distance | cadence
     // We looked at counting slope above. This is a review of calculating slope. They need to pull the values off of the graph.
     // Algebra Flow
 
-{.text-center.follows} `m=(y_2 - y_1)/(x_2 - x_1)`
-{.text-center.follows} `m= (y_2 - 590)/(x_2 - 90.63)`
-{.text-center.follows} `m= (800-590)/(120.2-90.63)`
-{.text-center.follows} `m= (210)/(29.57)`
-{.text-center.follows} `m=7.1`
+{.text-center} `m=(y_2 - y_1)/(x_2 - x_1)`  
+`m= (y_2 - 590)/(x_2 - 90.63)`  
+`m= (800-590)/(120.2-90.63)`  
+`m= (210)/(29.57)`  
+`m=7.1`
 
 Roger’s speed is [[0.6+-0.2]] meters per second faster than Boufaarirane and [[1.4+-0.2]] meters per second faster than Tracey.
 
@@ -665,7 +650,7 @@ Multisport races test athletes endurance. Swimrun is a rather new multi sport co
 
     // [map view](https://www.google.com/maps/dir/Sandhamn,+Sweden/Ut%C3%B6+V%C3%A4rdshus,+Pr%C3%A4stbacken+22,+130+56+Ut%C3%B6,+Sweden/@59.1054899,18.3165704,10z/data=!4m14!4m13!1m5!1m1!1s0x46f5741069214bbf:0xbfee8fb6ece8997c!2m2!1d18.9108304!2d59.2878703!1m5!1m1!1s0x46f58b4425a902e9:0xb792bc38be8de224!2m2!1d18.329336!2d58.967417!3e4)
 
-[Sandham](https://upload.wikimedia.org/wikipedia/commons/c/c1/Sandhamn_February_2013_04.jpg)
+![Sandham](https://upload.wikimedia.org/wikipedia/commons/c/c1/Sandhamn_February_2013_04.jpg)
 
 The race ended up taking over 24 hours! The friends did the same race the next year, and the idea for the ÖtillÖ (island to island) was born.
 
@@ -675,10 +660,9 @@ The race ended up taking over 24 hours! The friends did the same race the next y
 
     // NOTES
     // Something like this would be awesome. Transition from water to run. Setting. Dressed for water in Sweden.
-
     // EDITORIAL ONLY
 
-[https://www.flickr.com/photos/otillorace/48213036251/in/album-72157709467500756/](https://www.flickr.com/photos/otillorace/48213036251/in/album-72157709467500756/)
+![](https://live.staticflickr.com/65535/48213036251_c9ae4edc7b_b.jpg)
 
 ::: column.grow
 
@@ -716,13 +700,19 @@ The 400 meter medley relay in swimming includes four swimmers. Each athlete swim
 ::: column(width=240)
 
     // EDITORIAL USE ONLY
-    // [image](https://depositphotos.com/stock-photos/backstroke-start.html?filter=all&qview=115180204)
+
+![](https://depositphotos.com/stock-photos/backstroke-start.html?filter=all&qview=115180204)
+
     // NOTES
     // Add vertical line test tool.
     // [200 Medley Mock-up](https://www.desmos.com/calculator/y3zz7gphmo)
     // Graph above is the object of the targets in relay paragraph.
 
+:::
+
 Recall that functions cannot have one input going to [[more than one | only one]] output value.  The [__vertical line test__](gloss:vertical-line-test) is a tool to test whether a relation is a function. Use the vertical line above to test this relation.
+
+:::
 
 ---
 
@@ -879,9 +869,9 @@ MathiPong pays homage to this titan in gaming history. The objective is to direc
 
 ::: column(width=240)
 
-![https://upload.wikimedia.org/wikipedia/commons/3/32/Signed_Pong_Cabinet.jpg](https://upload.wikimedia.org/wikipedia/commons/3/32/Signed_Pong_Cabinet.jpg)
+![](https://upload.wikimedia.org/wikipedia/commons/3/32/Signed_Pong_Cabinet.jpg)
 
-[citation](https://commons.wikimedia.org/wiki/File:Signed_Pong_Cabinet.jpg)
+    // Source: https://commons.wikimedia.org/wiki/File:Signed_Pong_Cabinet.jpg
 
 :::
 
@@ -889,7 +879,7 @@ MathiPong pays homage to this titan in gaming history. The objective is to direc
     // onboard the game. User uses arrow keys to move platform. Platform is wider than the point shown.
     // User plays several rounds.
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-06-29_at_13.53.44.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-06-29_at_13.53.44.png)
+![](/resources/functions/images/4/Screenshot_2020-06-29_at_13.53.44.png)
 
 Now that you've played a few rounds and have the idea of how the game works, let's think about a strategy for hitting the target. Let's take a look at the game on a coordinate plane.
 
@@ -954,9 +944,9 @@ So far, when we have been graphing functions, we have been either plotting point
 
 ::: column(width=240)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.18.28.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.18.28.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.18.28.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.47.44.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.47.44.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_14.47.44.png)
 
 ::: column.grow
 
@@ -972,9 +962,9 @@ Then let's reflect it over the x-axis.
 
 ::: column(width=240)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.50.39.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.50.39.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_14.50.39.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.53.38.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_14.53.38.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_14.53.38.png)
 
 ::: column.grow
 
@@ -1017,7 +1007,7 @@ Match the function with its graph. Keep in mind the shifts f(x)=|x-h|+k where h 
 
     // Functions for cards.
 
-[https://lh6.googleusercontent.com/bjmVukpDAuueGt7ShvzlA7ciunIpVLBrQPg-WNbdw0JZSFb59imu8XM4rDi_sS1mIn8FcooZjyUbeJnj04TExksgfPn70I0CdNL6kN65eIHZ611gFplehLVgMMnl11QhTOUUl0C-](https://lh6.googleusercontent.com/bjmVukpDAuueGt7ShvzlA7ciunIpVLBrQPg-WNbdw0JZSFb59imu8XM4rDi_sS1mIn8FcooZjyUbeJnj04TExksgfPn70I0CdNL6kN65eIHZ611gFplehLVgMMnl11QhTOUUl0C-)
+[](https://lh6.googleusercontent.com/bjmVukpDAuueGt7ShvzlA7ciunIpVLBrQPg-WNbdw0JZSFb59imu8XM4rDi_sS1mIn8FcooZjyUbeJnj04TExksgfPn70I0CdNL6kN65eIHZ611gFplehLVgMMnl11QhTOUUl0C-)
 
     // Graph mock-ups for cards.
 
@@ -1040,33 +1030,33 @@ Let's return to this idea of reflecting a graph over the x-axis. This is actuall
     // This could be a cool graph drawing interactive once your tool is done.
     // Function mock-ups. Left column is original graph. Right column is absolute value Superimposed over original.
 
-::: column (width240)
+::: column (width=240)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.27.58.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.27.58.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.27.58.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.30.12.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.30.12.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.30.12.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.35.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.35.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.29.35.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.36.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.36.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.28.36.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.31.06.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.31.06.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.31.06.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.58.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.58.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.29.58.png)
 
-::: column(width240)
+::: column(width=240)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.23.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.23.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.29.23.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.13.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.13.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.28.13.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.30.22.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.30.22.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.30.22.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.47.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.29.47.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.29.47.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.55.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.28.55.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.28.55.png)
 
-![4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.31.30.png](4%20Absolute%20Value%20Functions%205297933ab8b74fa0bcd2489d9175f097/Screenshot_2020-07-10_at_15.31.30.png)
+![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.31.30.png)
 
 :::
 
@@ -1154,7 +1144,7 @@ Take a look at the end of season tournament brackets.
 
 ::: column(width=240)
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_16.50.26.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_16.50.26.png)
+![](/resources/functions/images/5/Screenshot_2020-07-01_at_16.50.26.png)
 
 Example brackets. Fill in with teams matched to colours.
 
@@ -1194,10 +1184,9 @@ Let's look at this mapping relationship in a function machine. Choose a team to 
     // Apples are team names. Lemons are jersey colours. Label the first machine with `f(team)` and the second with `f^1(colour)`.
     // EDITORIAL USE ONLY
 
-![https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG](https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG)
+![](https://upload.wikimedia.org/wikipedia/commons/f/fe/Fruit_function_and_inverse.PNG)
 
-    // Technical inspiration
-[https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html](https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html)
+[Inspiration](https://phet.colorado.edu/sims/html/function-builder/latest/function-builder_en.html)
 
 Every time you pass `{team}` through both machines, you get out the team's [[name | jersey color]]. Algebraically we write this as `f(f^1(x))=x`. We will look more closely at why this is important throughout the chapter.
 
@@ -1233,7 +1222,7 @@ Take a stroll through the market and decide what you want to buy.
     // Souvenir cards
     // Images have local price. Rollover shows price in `{home currency}`. Even cooler, user calculates and inputs on the back of the card.
 
-[https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FAItjhFAz9DsTkH0elhIbNt%2FUntitled%3Fnode-id%3D10%253A5%26viewport%3D-720%252C470%252C0.9163351058959961%26scaling%3Dmin-zoom](https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FAItjhFAz9DsTkH0elhIbNt%2FUntitled%3Fnode-id%3D10%253A5%26viewport%3D-720%252C470%252C0.9163351058959961%26scaling%3Dmin-zoom)
+[Figma](https://www.figma.com/embed?embed_host=notion&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FAItjhFAz9DsTkH0elhIbNt%2FUntitled%3Fnode-id%3D10%253A5%26viewport%3D-720%252C470%252C0.9163351058959961%26scaling%3Dmin-zoom)
 
 [Souvenirs by city](https://www.notion.so/20a2f11c078940b6ae0170578e84c4ea)
 
@@ -1252,8 +1241,6 @@ In fact, the most important difference is that the input and output values are s
 ---
 
 The graphs of inverse functions have some interesting features. First, this idea of switching inout and output values helps us plot points for `f^(-1)({home currency})`. Let's plot the souvenir points for the inverse function.
-
-::: column(width=240)
 
     // NOTES
     // f(x)=3.54x where x is soles and f(x) is dollars. The souvenir labels would be stronger if they were the name of the souvenir purchased.
@@ -1285,11 +1272,11 @@ This distance is the same as the vertical distance you measured! Make the same m
     // NOTES
     // Interactive states
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.09.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.09.png)
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_14.58.09.png)
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.39.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.58.39.png)
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_14.58.39.png)
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.00.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.00.png)
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_14.59.00.png)
 
 
 Notice that the intersection points of each of these measurements fall on their own line.
@@ -1297,11 +1284,11 @@ Notice that the intersection points of each of these measurements fall on their 
     // NOTES
     // Interactive states
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.38.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.59.38.png)
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_14.59.38.png)
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.00.10.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.00.10.png)
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.00.10.png)
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.11.11.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_14.11.11.png)
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_14.11.11.png)
 
 The equation of this [line](target:2_souvenirGraph) is y= [[1]]m+[[0]]
 
@@ -1319,9 +1306,9 @@ In fact, all inverse functions are symmetric over the line y=x. The tools we use
 
     // NOTES
     // Interactive states - not shown: vertical line test
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.29.04.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.29.04.png)
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.29.04.png)
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.33.18.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.33.18.png)
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.33.18.png)
 
 ::: column.grow
 
@@ -1337,7 +1324,7 @@ The parabola passes the vertical line test, so it is a function. We just observe
     // NOTES
     // New parabola can snap to inverse when user gets close.
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.37.42.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.37.42.png)
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.37.42.png)
 
 ::: column.grow
 
@@ -1352,7 +1339,8 @@ Fill in the table with the coordinate points for each key feature in the origina
 
     // NOTES
     // **Note** students should check several points to verify.
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.43.10.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.43.10.png)
+
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.43.10.png)
 
 :::
 
@@ -1362,7 +1350,7 @@ Fill in the table with the coordinate points for each key feature in the origina
 
 ::: column(width=240)
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.47.25.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-06-30_at_15.47.25.png)
+![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.47.25.png)
 
 
 ::: column.grow
@@ -1389,7 +1377,7 @@ When we change the [domain](gloss:domain) of the original parabola, we can make 
 
 ::: column(width=240)
 
-![5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_21.27.34.png](5%20Inverse%20Functions%20e2acdc6faffd4536b653ef484bf6fd8c/Screenshot_2020-07-01_at_21.27.34.png)
+![](/resources/functions/images/5/Screenshot_2020-07-01_at_21.27.34.png)
 
 [https://stock.adobe.com/images/beachside-hammock/328924634?prev_url=detail](https://stock.adobe.com/images/beachside-hammock/328924634?prev_url=detail)
 
@@ -1442,13 +1430,11 @@ This is a familiar process for solving equations. We can use this same process t
 
 ::: column(width=240)
 
-{.text-center.follows} Original Function
-{.text-center.follows} $27=\frac{5}{9}(x-32) $
+{.text-center} Original Function: $27=\frac{5}{9}(x-32) $
 
 ::: column(width=240)
 
-{.text-center.follows} Inverse Function
-{.text-center.follows} $\frac{9}{5}x27+32=x$
+{.text-center} Inverse Function: $\frac{9}{5}x27+32=x$
 
 :::
 
@@ -1456,13 +1442,11 @@ Recall that we substituted 27 in for C(x) since it was our given temperature. Le
 
 ::: column.grow
 
-{.text-center.follows} Original Function
-{.text-center.follows} $y=\frac{5}{9}(x-32) $
+{.text-center} Original Function $y=\frac{5}{9}(x-32) $
 
 ::: column(width=240)
 
-{.text-center.follows} Inverse Function
-{.text-center.follows} $\frac{9}{5}y+32=x$
+{.text-center} Inverse Function: $\frac{9}{5}y+32=x$
 
 ::: column.grow
 
@@ -1470,7 +1454,7 @@ Now remember that to graph the inverse function when we were buying souvenirs at
 
 ::: column(width=240)
 
-{.text-center.follows} $\frac{9}{5}x+32=y$
+{.text-center} $\frac{9}{5}x+32=y$
 
 ::: column.grow
 
@@ -1480,15 +1464,15 @@ Take another look at the original and inverse functions side-by-side.
 
 ::: column(width=240)
 
-{.text-center.follows} $\frac{9}{5}x+32=C^{-1}(x)$
+{.text-center} $\frac{9}{5}x+32=C^{-1}(x)$
 
 ::: column.grow
 
-{.text-center.follows} $C(x)=\frac{5}{9}(x-32) $
+{.text-center} $C(x)=\frac{5}{9}(x-32) $
 
 ::: column(width=240)
 
-{.text-center.follows} $\frac{9}{5}x+32=C^{-1}(x)$
+{.text-center} $\frac{9}{5}x+32=C^{-1}(x)$
 
 :::
 
@@ -1500,7 +1484,7 @@ Take another look at the original and inverse functions side-by-side.
 
 Let's determine whether these two functions are inverses.
 
-{.text-center.follows} $f(x)=4-\frac{3}{2}x\\ g(x)=\frac{1}{2}x+\frac{3}{2}$
+{.text-center} $f(x)=4-\frac{3}{2}x\\ g(x)=\frac{1}{2}x+\frac{3}{2}$
 
     // NOTES
     // Students use function machine. They see they are not inverses.
@@ -1514,7 +1498,7 @@ Let's find the inverse function of f(x).
     // NOTES
     // Students put the steps cards in order, then match the equation cards to the steps cards.
 
-{.text-center.follows} $f(x)=4-\frac{3}{2}x $
+{.text-center} $f(x)=4-\frac{3}{2}x $
 
     // NOTES
     // Several columns to show alignment between text and steps. Does not need to remain as several columns.
@@ -1523,7 +1507,7 @@ Let's find the inverse function of f(x).
 
 ::: column(width=240)
 
-{.text-center.follows} $y=4-\frac{3}{2}x$
+{.text-center} $y=4-\frac{3}{2}x$
 
 ::: column(width=240)
 
@@ -1531,7 +1515,7 @@ substitute y in for f(x)
 
 ::: column(width=240)
 
-{.text-center.follows} $x=4-\frac{3}{2}y$
+{.text-center} $x=4-\frac{3}{2}y$
 
 ::: column(width=240)
 
@@ -1539,7 +1523,7 @@ switch x and y
 
 ::: column(width=240)
 
-{.text-center.follows} $x-4=-\frac{3}{2}y$
+{.text-center} $x-4=-\frac{3}{2}y$
 
 ::: column(width=240)
 
@@ -1547,13 +1531,12 @@ solve for y as usual
 
 ::: column(width=240)
 
-{.text-center.follows} $-2(x-4)={3}y$
-
-{.text-center.follows} $\frac{-2x+8}{3}=y$
+{.text-center} $-2(x-4)={3}y$  
+$\frac{-2x+8}{3}=y$
 
 ::: column(width=240)
 
-{.text-center.follows} $\frac{-2x+8}{3}=f^{-1}(x)$
+{.text-center} $\frac{-2x+8}{3}=f^{-1}(x)$
 
 ::: column(width=240)
 
@@ -1594,7 +1577,7 @@ Math can help us understand the scale and impact of disease outbreaks. Today we 
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.52.32.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.52.32.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_09.52.32.png)
 
 ::: column.grow
 
@@ -1607,7 +1590,7 @@ This word cumulative means current total over all time. That means this number o
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.52.45.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.52.45.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_09.52.45.png)
 
 ::: column.grow
 
@@ -1615,7 +1598,7 @@ For example, we can place points on the graph to the right on January 26 and Jun
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.53.21.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_09.53.21.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_09.53.21.png)
 
 ::: column.grow
 
@@ -1623,7 +1606,7 @@ This line estimates the confirmed cases have been increasing at a rate of over [
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.00.25.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.00.25.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_10.00.25.png)
 
 ::: column.grow
 
@@ -1633,7 +1616,7 @@ Let's see if there is a way to make the average rate of change better estimate t
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.11.24.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.11.24.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_10.11.24.png)
 
 ::: column.grow
 
@@ -1651,7 +1634,7 @@ Average rate of change can also give a way to compare change among different cou
 
 {.fixme} Students can use crosshairs to read data from the graphs. They can also draw lines between interesting point (as noted in the text) to visualize rate of change.
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.43.53.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.43.53.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_10.43.53.png)
 
 ::: column.grow
 
@@ -1659,7 +1642,7 @@ We can see that Italy had a higher cumulative case count until March [[27]]. Thi
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.52.43.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.52.43.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_10.52.43.png)
 
 :::
 
@@ -1671,7 +1654,7 @@ It makes sense that the country with the highest case count would be seeing a hi
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.49.26.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_10.49.26.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_10.49.26.png)
 
 :::
 
@@ -1685,7 +1668,7 @@ While it may seem opposite of our expectations, this odd relationship between av
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_11.01.15.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_11.01.15.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_11.01.15.png)
 
 :::
 
@@ -1697,7 +1680,7 @@ As we have seen, average rates of change can be helpful for understanding statis
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_13.03.48.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_13.03.48.png)
+![](/resources/functions/images/6/Screenshot_2020-07-02_at_13.03.48.png)
 
 ::: column.grow
 
@@ -1715,7 +1698,7 @@ The laws of gasses and pressures are such that the air we breathe, even with scu
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.28.42.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.28.42.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_13.28.42.png)
 
 {.fixme} Lots of great options in Adobe Stock with search: SS Thistlegorm.
 
@@ -1731,11 +1714,11 @@ The diver's maximum depth was about [[30+-.25]] meters about [[40+-2]] minutes i
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.30.23.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.30.23.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_13.30.23.png)
 
 {.fixme} The above is a mock-up of a more realistic profile. Combine this with the noise elements of the image below.
 
-![https://upload.wikimedia.org/wikipedia/commons/d/db/Dive_computer_recorded_profile_example.png](https://upload.wikimedia.org/wikipedia/commons/d/db/Dive_computer_recorded_profile_example.png)
+![](https://upload.wikimedia.org/wikipedia/commons/d/db/Dive_computer_recorded_profile_example.png)
 
 [image citation](https://en.wikipedia.org/wiki/File:Dive_computer_recorded_profile_example.png)
 
@@ -1775,23 +1758,23 @@ We can use average rates of change to smooth out this graph just like we did in 
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.52.19.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.52.19.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_13.52.19.png)
 
 {.fixme} The above is a mock-up of a more realistic profile. Combine this with the noise elements of the image below.
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_14.41.47.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_14.41.47.png)
+![](/resources/functions/images/6/Screenshot_2020-07-02_at_14.41.47.png)
 
-::: column.growing
+::: column.grow
 
 We see that the diver's position function more or less increases from (45, -30) to ([[60+-5, [[0]]). These two points give us enough information to calculate the diver's **average rate of change** of [[2]] meters per minute, well below the threshold of 10-15 meters per minute. So far, it seems like this diver prevents decompression illness.
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.56.16.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_13.56.16.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_13.56.16.png)
 
 {.fixme} The above is a mock-up of a more realistic profile. Combine this with the noise elements of the image below.
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_14.46.02.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_14.46.02.png)
+![](/resources/functions/images/6/Screenshot_2020-07-02_at_14.46.02.png)
 
 ::: column.grow
 
@@ -1807,11 +1790,11 @@ Use the slider to see how changing the number of averages affects the relative a
 
 {.fixme} Approximate states for slider. Design similar for the "depth vs. time" data. Images are mock-ups based on old data.
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_14.47.24.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_14.47.24.png)
+![](/resources/functions/images/6/Screenshot_2020-07-02_at_14.47.24.png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_14.48.09.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_14.48.09.png)
+![](/resources/functions/images/6/Screenshot_2020-07-02_at_14.48.09.png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_14.48.36.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_14.48.36.png)
+![](/resources/functions/images/6/Screenshot_2020-07-02_at_14.48.36.png)
 
 The more lines representing average rates of change there are, the secant lines gets [[closer to | farther from]] the graph. Select the other true statements.
 
@@ -1833,7 +1816,7 @@ Slope of the secant line changes.
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.06.21.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.06.21.png)
+![](/resources/functions/images/6/Screenshot_2020-07-02_at_15.06.21.png)
 
 {.fisxme} Just highlighted some noise. We can decide how detailed we want to be here.
 
@@ -1843,7 +1826,7 @@ Data based in GPS reading like this often have a lot of "noise", or points that 
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.16.57.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.16.57.png)
+![](/resources/functions/images/6/Screenshot_2020-07-02_at_15.16.57.png)
 
 {.fixme} Eyeballing this. Mock-up level accuracy.
 
@@ -1855,7 +1838,7 @@ To do this, we are going to look at *many* average rates of change.
 
 ::: column(width=240)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.22.50.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-02_at_15.22.50.png)
+![](/resources/functions/images/6/Screenshot_2020-07-02_at_15.22.50.png)
 
 ::: column.grow
 
@@ -1875,9 +1858,9 @@ We can plot the slopes of the tangent lines on a new graph. Notice the x-axis is
 
 {.fixme} This seems like it will work best with either *more* sliders, this time moving time along like scrubbing, or as an animation with actual scrubbing. Images are state mock-ups.
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_14.16.53.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_14.16.53.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_14.16.53.png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_14.17.08.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-09_at_14.17.08.png)
+![](/resources/functions/images/6/Screenshot_2020-07-09_at_14.17.08.png)
 
 The position and speed graphs look very different but are generated from the same data. The position graph is most useful for knowing exactly how deep the diver is during any moment during the dive. The speed graph is most useful for knowing how well the diver regulated their decompression. The maximum y-value on the speed graph is about [[8+-.2]] meters per min, so the diver did take good care of their decompression.
 
@@ -1931,11 +1914,11 @@ Space shuttle flights like the Discovery's are split into four phases: ascent, e
 
 {.fixme} Students use the same tangent tool as above to make the speed graph. Images below are state mock-ups.
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-08_at_15.09.45.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-08_at_15.09.45.png)
+![](/resources/functions/images/6/Screenshot_2020-07-08_at_15.09.45.png)
 
 The x-axis would be easier to read if gridlines were at the minute (e.g. 60, 120, etc).
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-08_at_14.53.25.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-08_at_14.53.25.png)
+![](/resources/functions/images/6/Screenshot_2020-07-08_at_14.53.25.png)
 
 The Discovery does reach the required speed at about [[470+-10]] seconds.  It only takes about [[25+-5]] seconds to break the sound barrier at 343 meters per second. That's an incredible change in speed. The space shuttle goes from 0 to over 343 meters per second in about half a minute. That kind of [acceleration](gloss:acceleration) will flatten an astronaut to their seat.
 
@@ -1945,13 +1928,13 @@ We typically think of acceleration in terms of fast cars. Think "This Ferrari go
 
 {.fixme} Students use the same tangent tool as above to make the acceleration graph. The images are state mock-ups.
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-08_at_15.09.45.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-08_at_15.09.45.png)
+![](/resources/functions/images/6/Screenshot_2020-07-08_at_15.09.45.png)
 
 {.fixme} The x-axis would be easier to read if gridlines were at the minute (e.g. 60, 120, etc).
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-08_at_14.53.25.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-08_at_14.53.25.png)
+![](/resources/functions/images/6/Screenshot_2020-07-08_at_14.53.25.png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-08_at_15.16.08.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/Screenshot_2020-07-08_at_15.16.08.png)
+![](/resources/functions/images/6/Screenshot_2020-07-08_at_15.16.08.png)
 
 The maximum acceleration during this ascent phase is about [[28+-1]] meters per second, just at the safety limit. Remember that it only take the Discovery about 30 seconds to break the speed of sound. The acceleration at 30 seconds is [[17+-2]] meters per `second^2`, not even close to the maximum acceleration the crew and shuttle experience later in the ascent phase.
 
@@ -1989,26 +1972,26 @@ From virus spread to diving decompression to space flights, the relationship bet
 
 {.fixme} shuffle the cards below. Students match.
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart.png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart.png)
+![](/resources/functions/images/6/chart.png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(3).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(3).png)
+![](/resources/functions/images/6/chart_(3).png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(5).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(5).png)
+![](/resources/functions/images/6/chart_(5).png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(7).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(7).png)
+![](/resources/functions/images/6/chart_(7).png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(9).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(9).png)
+![](/resources/functions/images/6/chart_(9).png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(11).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(11).png)
+![](/resources/functions/images/6/chart_(11).png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(1).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(1).png)
+![](/resources/functions/images/6/chart_(1).png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(2).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(2).png)
+![](/resources/functions/images/6/chart_(2).png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(4).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(4).png)
+![](/resources/functions/images/6/chart_(4).png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(6).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(6).png)
+![](/resources/functions/images/6/chart_(6).png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(8).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(8).png)
+![](/resources/functions/images/6/chart_(8).png)
 
-![6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(10).png](6%20Rates%20of%20Change%20550e8612632547d6ace6b31770aa95a6/chart_(10).png)
+![](/resources/functions/images/6/chart_(10).png)
