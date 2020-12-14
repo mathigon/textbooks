@@ -1266,10 +1266,11 @@ pi:
 
 piecewise:
   title: Piecewise functions
-  text: A __piecewise function__ is function that uses different rules for different parts of its domain.
+  text: |
+    A __piecewise function__ is function that uses different rules for
+    different parts of its domain. For example,
 
-        For example,
-        f(x)= {(3-x, x<10),(x^3,10<=x<=40), (5, x>40:}
+    {.text-center} `f(x)= {(3-x, x<10), (x^3, 10<=x<=40), (5, x>40)}`
 
 platonic-solid:
   title: Platonic solid
@@ -1504,7 +1505,7 @@ radioactive:
 range:
   title: Range
   text: The __range__ of a function or relation is the set of all possible
-    _output values_ (often shown on the _y_-axis in a coordinate system).
+    _output values_ (often shown on the vertical axis in a coordinate system).
 
 rational-numbers:
   title: Rational numbers
@@ -1518,12 +1519,6 @@ ray:
   text: A __ray__ is the part of a line that starts at a point and extends
     infinitely in one direction. We can label rays starting at `A` as `vec(AB)`.
   link: /course/euclidean-geometry/axioms#rays
-
-range:
-  title: Range
-  text: A __range__ is the set of elements that make up the _output_ of a
-    function or relation. Range usually contains _y-values_. The elements of a
-    domain can be called _dependent variables_.
 
 real-numbers:
   title: Real numbers
@@ -1563,7 +1558,7 @@ relation:
     A __relation__ is a way to represent connections between the elements in
     two different sets. It is a rule that assigns each input from the first
     set to one or more outputs from the second set.
-    
+
     We can write a relation as a set of ordered pairs (_x_, _y_), where _x_
     is an element from the first set (called _domain_), and _y_ is an element
     from the second set (called _range_).
