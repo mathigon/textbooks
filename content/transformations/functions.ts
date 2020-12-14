@@ -4,18 +4,17 @@
 // =============================================================================
 
 
-import {isPalindrome, words, flatten} from '@mathigon/core';
-import {Line, Point} from '@mathigon/fermat';
-import {Draggable, $N, InputView, ElementView} from '@mathigon/boost';
+import {flatten, isPalindrome, words} from '@mathigon/core';
+import {Line, Point} from '@mathigon/euclid';
+import {$N, Draggable, ElementView, InputView} from '@mathigon/boost';
 import {Geopad, GeoPoint, PlayBtn, Slider, Step} from '../shared/types';
 import {Wallpaper} from './components/wallpaper';
 
 import './components/wallpaper';
 
 
-
 function play($step: Step, $el: ElementView, duration: number, score: string,
-              callback: () => void) {
+    callback: () => void) {
   const $play = $el.$('x-play-btn') as PlayBtn;
   $play.on('play', () => {
     callback();
@@ -31,7 +30,7 @@ function expandSegment($geopad: Geopad, [e1, e2]: GeoPoint[], line: Line) {
 }
 
 function drawShape($step: Step, $geopad: Geopad, goal: string, shape: string,
-                   expand = false) {
+    expand = false) {
   // `shape` should be names of a polygon, segment or line.
   const lines = flatten(
       words(shape).map(s => $geopad.model[s].edges || $geopad.model[s]));
@@ -207,6 +206,10 @@ export function palindromes($step: Step) {
 }
 
 // -----------------------------------------------------------------------------
+
+export function groups($step: Step) {
+  $step.groupBlanks(1, 2, 3);
+}
 
 export function addSymmetries($step: Step) {
   $step.$$('.sym-sum').forEach(($s, i) => {

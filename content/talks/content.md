@@ -165,7 +165,7 @@ What happens when three plants orbit around each other in space?
         path.thin(x="segment(b, b.translate(vb))" arrows="end")
         path.thin(x="segment(c, c.translate(vc))" arrows="end")
       x-play-toggle
-      x-icon-btn.restore(icon="restore")
+      x-icon-btn.restore(icon="restart")
 
 ---
 > id: bridges-v2
@@ -305,5 +305,5 @@ original point to that vertex. Then you continue from that new point. What shape
 
 Can you place all smaller circles inside the big one?
 
-    svg.circles(width=400 height=400 viewBox="0 0 280 280")
-      circle.outer(cx=140 cy=140 r=108.07)
+    svg.circles(width=600 height=600 viewBox="0 0 320 320")
+      circle.outer(cx=160 cy=160 r=108.07)

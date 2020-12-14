@@ -539,14 +539,14 @@ eines [__Einheitskreises__](gloss:unit-circle) (eines Kreises mit dem Radius 1) 
 
 ::: column.grow
 
-Ein _{span.var-action}ganzer Kreis_ hat dann einen Umfang
+Ein [ganzer Kreis](action:setState(0)) hat dann einen Umfang
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-0")} Bei einer _{span.var-action}halben Drehung_ beträgt der
+{.reveal(when="eqn-0")} Bei einer [halben Drehung](action:setState(1)) beträgt der
 entsprechende Abstand entlang des Umfangs
 _{x-equation.small(solution="π" keys="+ × π" numeric)}_.
 
-{.reveal(when="eqn-1")} Bei einer _{span.var-action}Viertelumdrehung_ beträgt der
+{.reveal(when="eqn-1")} Bei einer [Viertelumdrehung](action:setState(2)) beträgt der
 Abstand entlang des Umfangs
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
@@ -742,19 +742,19 @@ die wir zur Lösung komplexerer Aufgaben benötigen:
 
 ::: column.grow(parent="right")
 
-* {.r} Eine [{.red}Sekante](pill:secant) ist eine Gerade, die einen Kreis in
+* {.r} Eine [{.red}Sekante](target:secant) ist eine Gerade, die einen Kreis in
   zwei Punkten schneidet. [Weiter](btn:next)
-* {.r.reveal(when="next-0")}Eine [{.green}Sehne](pill:chord) ist eine Strecke,
+* {.r.reveal(when="next-0")}Eine [{.green}Sehne](target:chord) ist eine Strecke,
   deren Endpunkte auf dem Umfang eines Kreises liegen. [Weiter](btn:next)
-* {.r.reveal(when="next-1")}Eine [{.blue}Tangente](pill:tangent) ist eine Gerade, die
+* {.r.reveal(when="next-1")}Eine [{.blue}Tangente](target:tangent) ist eine Gerade, die
   einen Kreis an genau einem Punkt berührt. Man nennt ihn den
   __Berührungspunkt__. [Weiter](btn:next)
-* {.r.reveal(when="next-2")}Ein [{.yellow}Kreisbogen](pill:arc) ist ein Ausschnitt aus
+* {.r.reveal(when="next-2")}Ein [{.yellow}Kreisbogen](target:arc) ist ein Ausschnitt aus
   dem Umfang eines Kreises. [Weiter](btn:next)
-* {.r.reveal(when="next-3")}Ein [{.teal} Sektor](pill:sector) ist ein Teil der
+* {.r.reveal(when="next-3")}Ein [{.teal} Sektor](target:sector) ist ein Teil der
   Kreisfläche, begrenzt durch einen _Kreisbogen_ und _zwei Radien_.
   [Weiter](btn:next)
-* {.r.reveal(when="next-4")}Und ein [{.purple} Segment](pill:segment) ist ein
+* {.r.reveal(when="next-4")}Und ein [{.purple} Segment](target:segment) ist ein
   Teil der Kreisfläche, begrenzt durch einen _Kreisbogen_ und _eine Sehne_.
   [Weiter](btn:next)
 
@@ -819,13 +819,13 @@ Wissen über die Kreisbögen und Sektoren eines Kreises.
 
 ::: column.grow
 
-Wie du im Diagramm sehen kannst, ist ein [{.red} Kreisbogen](pill:arc) ein Teil des
-[[Umfangs|Durchmesser|Radius]] eines Kreises, und ein [{.yellow} Sektor](pill:sector)
+Wie du im Diagramm sehen kannst, ist ein [{.red} Kreisbogen](target:arc) ein Teil des
+[[Umfangs|Durchmesser|Radius]] eines Kreises, und ein [{.yellow} Sektor](target:sector)
 ist ein Teil des [[Flächeninhalts|Radius|Umfangs]] eines Kreises.
 
 ::: .reveal(when="blank-0 blank-1")
 Der Kreisbogen zwischen zwei Punkten _A_ und _B_ wird oft als `arc(AB)` geschrieben. Diese
-Definition ist etwas zweideutig: Es gibt einen [{.purple} zweiten Kreisbogen](pill:major),
+Definition ist etwas zweideutig: Es gibt einen [{.purple} zweiten Kreisbogen](target:major),
 der _A_ und _B_ verbindet, aber den anderen Weg um den Kreis herum geht.
 
 Der kleinere der beiden Bögen wird als __Minor__ bezeichnet, der größere
@@ -842,17 +842,17 @@ beide Bögen die gleiche Länge und sind [[Halbkreise|Durchmesser|Umfänge]].
 
 Um die Länge eines Bogens oder die Fläche eines Sektors zu ermitteln, müssen wir den
 entsprechenden Winkel in der Mitte des Kreises kennen: dieser wird als
-[{.blue}Mittelpunktswinkel](pill:angle) bezeichnet.
+[{.blue}Mittelpunktswinkel](target:angle) bezeichnet.
 
 Beachte, dass Bogen, Sektor und Winkel jeweils den _gleichen Anteil_ eines
-Vollkreises einnehmen. Wenn beispielsweise der [{.blue} Mittelpunktswinkel](pill:angle)
-_{span.var-action}90°_ ist, nimmt er [[ein Viertel|die Hälfte|ein Drittel]] von einem
-[{.teal}Vollkreis](pill:fangle) ein.
+Vollkreises einnehmen. Wenn beispielsweise der [{.blue} Mittelpunktswinkel](target:angle)
+[90°](action:set90Deg()) ist, nimmt er [[ein Viertel|die Hälfte|ein Drittel]] von einem
+[{.teal}Vollkreis](target:fangle) ein.
 
 ::: .reveal(when="blank-0")
-Das bedeutet, dass die [{.red} Länge des Kreisbogens](pill:arc) auch `1/4` des
-[{.purple}gesamten Umfangs](pill:circ) des Kreises ist, und die [{.yellow} Fläche
-des Sektors](pill:sector) `1/4` der [{.orange} gesamten Fläche](pill:area) 
+Das bedeutet, dass die [{.red} Länge des Kreisbogens](target:arc) auch `1/4` des
+[{.purple}gesamten Umfangs](target:circ) des Kreises ist, und die [{.yellow} Fläche
+des Sektors](target:sector) `1/4` der [{.orange} gesamten Fläche](target:area) 
 des Kreises.
 
 Wir können diese Beziehung in einer Gleichung ausdrücken:
@@ -886,13 +886,13 @@ interessiert. Zum Beispiel,
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Kreisbogenlänge](pill) | = | `"Umfang" × α/360` |
+| [Kreisbogenlänge](pill:red) | = | `"Umfang" × α/360` |
 |                               | = | `2 r π × α/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Sektorfläche](pill) | = | `"Kreisfläche" × α/360` |
+| [Sektorfläche](pill:yellow) | = | `"Kreisfläche" × α/360` |
 |                               | = | `r^2 π × α/360`         |
 {.eqn-system}
 
@@ -911,13 +911,13 @@ in [Radiant](gloss:radians) anstatt in [Grad](gloss:degrees) angegeben wird, kö
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}Kreisbogenlänge](pill) | = | `2 r π × α/(2π)` |
+| [Kreisbogenlänge](pill:red) | = | `2 r π × α/(2π)` |
 |                               | = | `r × α`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}Sektorfläche](pill) | = | `r^2 π × α/(2π)` |
+| [Sektorfläche](pill:yellow) | = | `r^2 π × α/(2π)` |
 |                               | = | `1/2 r^2 α`      |
 {.eqn-system}
 
@@ -978,8 +978,8 @@ die Sonnenstrahlen fallen direkt in den Brunnen, treffen aber schräg auf den Ob
 werfen einen Schatten. [Weiter](btn:next)
 
 ::: .reveal(when="next-0")
-Eratosthenes machte eine Messung des [{.teal} Winkels](pill:angle1) dieses Schattens. Der Winkel betrug 7,2°. Dieser Wert muss mit dem [{.purple} Mittelpunktswinkel](pill:angle2) des
-[{.red}Kreisbogens](pill:arc) von Alexandria nach Syene übereinstimmen, da es sich bei beiden um
+Eratosthenes machte eine Messung des [{.teal} Winkels](target:angle1) dieses Schattens. Der Winkel betrug 7,2°. Dieser Wert muss mit dem [{.purple} Mittelpunktswinkel](target:angle2) des
+[{.red}Kreisbogens](target:arc) von Alexandria nach Syene übereinstimmen, da es sich bei beiden um
 [[Wechselwinkel|Komplementärwinkel|Supplementärwinkel]] handelt.
 :::
 
@@ -1444,7 +1444,7 @@ mit Hilfe des [Satzes von Pythagoras](gloss:pythagoras-theorem) ermitteln:
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=200): svg
+    x-geopad.geo-sketch.no-background(width=280 height=200): svg
       circle(x="point(140, 10)" name="a" hidden)
       circle(x="point(140, 170)" name="b" hidden)
       circle(x="point(220, 170)" name="c" hidden)
@@ -1475,7 +1475,7 @@ mit der [Formel](gloss:circle-sector) finden, die wir in einem vorherigen Abschn
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
+    x-geopad.geo-sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
       circle(x="point(140,110)" name="c1" hidden)
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)

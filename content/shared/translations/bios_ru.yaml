@@ -697,7 +697,7 @@ gauss:
     будучи еще подростком, а затем обучал многих других известных математиков в качестве профессора.
   links:
     - title: Теорема простых чисел
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: Неевклидова геометрия
       url: /world/Dimensions_and_Distortions
     - title: Суммы треугольных чисел
@@ -749,7 +749,7 @@ goldbach:
     Бернулли. Он был репетитором русского царя Петра II, и его помнят за его «гипотезу Гольдбаха».
   links:
     - title: Проблема Гольдбаха
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -1120,7 +1120,7 @@ mersenne:
     вибрирующей струны, и писал о теологии и философии.
   links:
     - title: Большие простые числа
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1534,7 +1534,7 @@ riemann:
     касающиеся распределения простых чисел.
   links:
     - title: Гипотеза Римана
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872

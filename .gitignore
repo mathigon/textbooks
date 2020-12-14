@@ -27,9 +27,8 @@ nbproject
 
 # Folders to ignore
 node_modules
-server/assets/resources
 ts_build
-content/.cache.json
+build
 _*.yaml
 utilities/.tmp
 
@@ -37,6 +36,4 @@ utilities/.tmp
 *_ger.*
 *.7z
 *.WinMerge
-
-content/donotcommit
 Icon

@@ -1,0 +1,39 @@
+<svg viewBox="0 0 360 80" width="360" height="80">
+  <line y1="54.5" x2="360" y2="54.5" stroke="#ccc"/>
+  <line x1="14.5" y1="55" x2="14.5" y2="63" stroke="#ccc"/>
+  <line x1="42.5" y1="55" x2="42.5" y2="63" stroke="#ccc"/>
+  <line x1="70.5" y1="55" x2="70.5" y2="63" stroke="#ccc"/>
+  <line x1="97.5" y1="55" x2="97.5" y2="63" stroke="#ccc"/>
+  <line x1="125.5" y1="55" x2="125.5" y2="63" stroke="#ccc"/>
+  <line x1="153.5" y1="55" x2="153.5" y2="63" stroke="#ccc"/>
+  <line x1="181.5" y1="55" x2="181.5" y2="63" stroke="#ccc"/>
+  <line x1="208.5" y1="55" x2="208.5" y2="63" stroke="#ccc"/>
+  <line x1="236.5" y1="55" x2="236.5" y2="63" stroke="#ccc"/>
+  <line x1="264.5" y1="55" x2="264.5" y2="63" stroke="#ccc"/>
+  <line x1="292.5" y1="55" x2="292.5" y2="63" stroke="#ccc"/>
+  <line x1="319.5" y1="55" x2="319.5" y2="63" stroke="#ccc"/>
+  <line x1="347.5" y1="55" x2="347.5" y2="63" stroke="#ccc"/>
+  <rect x="14" y="28" width="334" height="24" rx="4" ry="4" fill="#cd0e66"/>
+  <rect x="98" y="2" width="82" height="24" rx="4" ry="4" fill="#fd8c00"/>
+  <rect x="182" y="2" width="82" height="24" rx="4" ry="4" fill="#fd8c00"/>
+  <rect x="266" y="2" width="82" height="24" rx="4" ry="4" fill="#fd8c00"/>
+  <text transform="translate(10.7 76)" opacity="0.8" font-size="14" fill="#ccc">0</text>
+  <text transform="translate(39.5 76)" opacity="0.8" font-size="14" fill="#ccc">1</text>
+  <text transform="translate(67.3 76)" opacity="0.8" font-size="14" fill="#ccc">2</text>
+  <text transform="translate(94.4 76)" opacity="0.8" font-size="14" fill="#ccc">3</text>
+  <text transform="translate(121.9 76)" opacity="0.8" font-size="14" fill="#ccc">4</text>
+  <text transform="translate(150.3 76)" opacity="0.8" font-size="14" fill="#ccc">5</text>
+  <text transform="translate(178.1 76)" opacity="0.8" font-size="14" fill="#ccc">6</text>
+  <text transform="translate(205.3 76)" opacity="0.8" font-size="14" fill="#ccc">7</text>
+  <text transform="translate(233 76)" opacity="0.8" font-size="14" fill="#ccc">8</text>
+  <text transform="translate(261.1 76)" opacity="0.8" font-size="14" fill="#ccc">9</text>
+  <text transform="translate(286.2 76)" opacity="0.8" font-size="14" fill="#ccc">10</text>
+  <text transform="translate(315 76)" opacity="0.8" font-size="14" fill="#ccc">11</text>
+  <text transform="translate(341.8 76)" opacity="0.8" font-size="14" fill="#ccc">12</text>
+  <text transform="translate(134.4 20)" opacity="0.8" font-size="18" fill="#fff">3</text>
+  <rect x="14" y="2" width="82" height="24" rx="4" ry="4" fill="#ff941f"/>
+  <text transform="translate(50.4 20)" opacity="0.8" font-size="18" fill="#fff">3</text>
+  <text transform="translate(173 46.2)" opacity="0.8" font-size="18" fill="#fff">12</text>
+  <text transform="translate(218.4 20)" opacity="0.8" font-size="18" fill="#fff">3</text>
+  <text transform="translate(302.4 20)" opacity="0.8" font-size="18" fill="#fff">3</text>
+</svg>

@@ -1,0 +1,14 @@
+firstGraphSolved: "Alle [Darstellungen von Graphen](->#graph0) in diesem Kurs sind interaktiv - versuche die Knoten zu verschieben."
+crossWater: Vorsicht - du darfst nicht ins Wasser treten.
+bridgeCrossedBefore: Du hast diese Brücke schon einmal überquert. Versuche, eine andere Route zu finden.
+tryDifferentMapA: Vielleicht gibt es keine Lösung für diese Stadt ... versuche eine der anderen Karten!
+tryDifferentMapB: Vielleicht hat diese Karte auch keine Lösung. Also weiter geht's!
+tryDifferentStartPoint: Der Startpunkt könnte wichtig sein. Schau, was passiert, wenn du auf einer anderen Insel startest.
+mapKeepTrying: Versuche es weiter! Vielleicht solltest du an einem anderen Ort anfangen.
+housesToEachOther: Du brauchst nur die Häuser mit den Fabriken zu verbinden, aber nicht die Häuser untereinander.
+factoriesToEachOther: Du brauchst nur die Fabriken mit den Häusern zu verbinden, aber nicht die Fabriken untereinander.
+linesCross: "Vorsicht: die Linien dürfen sich nicht kreuzen."
+edgeDrawnBefore: Pass auf, diese Kante hast du schon einmal nachgezeichnet.
+utilitiesImpossible: "Ich glaube, dieses Rätsel könnte auch unlösbar sein... Tut mir leid, dass ich dich ausgetrickst habe :winking-face:"
+mapError: Du kannst diese Farbe hier nicht verwenden, weil sie bereits in einem der benachbarten Gebiete verwendet wird.
+mapFewer: Gut gemacht! Aber kannst du diese Karte mit weniger Farben ausmalen?

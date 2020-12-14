@@ -16,17 +16,17 @@ export function travellingSalesman(dist: number[][]) {
   let minPath = undefined;
 
   loop1:
-      for (const path of permutations(cities)) {
-        let length = 0;
-        for (let i = 0; i < n - 1; ++i) {
-          length += dist[path[i]][path[i + 1]];
-          if (length > minLength) continue loop1;
-        }
-        if (length < minLength) {
-          minLength = length;
-          minPath = path;
-        }
-      }
+  for (const path of permutations(cities)) {
+    let length = 0;
+    for (let i = 0; i < n - 1; ++i) {
+      length += dist[path[i]][path[i + 1]];
+      if (length > minLength) continue loop1;
+    }
+    if (length < minLength) {
+      minLength = length;
+      minPath = path;
+    }
+  }
 
   return {path: minPath, length: minLength};
 }
@@ -34,7 +34,7 @@ export function travellingSalesman(dist: number[][]) {
 const COLOURS = [1, 2, 3, 4];
 
 function canColour(adjMatrix: number[][], colours: number[], index: number,
-                   colour: number) {
+    colour: number) {
   for (let i = 0; i < index; ++i) {
     if (adjMatrix[i][index] && colours[i] === colour) return false;
   }

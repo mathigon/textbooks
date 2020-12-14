@@ -440,11 +440,11 @@ Plutôt que de diviser un cercle en un certain nombre de segments (comme 360 deg
 
 ::: column.grow
 
-UNE _{span.var-action} le cercle complet_ a une circonférence _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+UNE [le cercle complet](action:setState(0)) a une circonférence _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} Pour un _{span.var-action} rotation en demi-cercle_ , la distance correspondante le long de la circonférence est _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} Pour un [rotation en demi-cercle](action:setState(1)), la distance correspondante le long de la circonférence est _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-1")} Pour un _{span.var-action} rotation en quart de cercle_ , la distance le long de la circonférence est _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} Pour un [rotation en quart de cercle_ , la distance le long de la circonférence est _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}](action:setState(2)). 
 
 {.reveal(when="eqn-2")} Et ainsi de suite: cette façon de mesurer les angles est appelée [__radians__](gloss:radians) (vous pouvez vous en souvenir comme «unités de rayon»). 
 
@@ -606,12 +606,12 @@ Dans les sections précédentes, vous avez appris les noms donnés à plusieurs 
 
 ::: column.grow(parent="right")
 
-* {.r} UNE [{.red} sécante](pill:secant) est une ligne qui coupe un cercle en deux points. [Continuer](btn:next)
-* {.r.reveal(when="next-0")} UNE [{.green} l'accord](pill:chord) est un segment de ligne dont les extrémités se trouvent sur la circonférence d'un cercle. [Continuer](btn:next)
-* {.r.reveal(when="next-1")} UNE [{.blue} tangente](pill:tangent) est une ligne qui touche un cercle à exactement un point. C'est ce qu'on appelle le __point de tangence__ . [Continuer](btn:next)
-* {.r.reveal(when="next-2")} Une [{.yellow} arc](pill:arc) est une section de la circonférence d'un cercle. [Continuer](btn:next)
-* {.r.reveal(when="next-3")} UNE [{.teal} secteur](pill:sector) fait partie de l'intérieur d'un cercle, délimité par un _arc_ et _deux rayons_ . [Continuer](btn:next)
-* {.r.reveal(when="next-4")} Enfin, un [{.purple} segment](pill:segment) est une partie de l'intérieur d'un cercle, délimité par un _arc_ et _un accord_ . [Continuer](btn:next) 
+* {.r} UNE [{.red} sécante](target:secant) est une ligne qui coupe un cercle en deux points. [Continuer](btn:next)
+* {.r.reveal(when="next-0")} UNE [{.green} l'accord](target:chord) est un segment de ligne dont les extrémités se trouvent sur la circonférence d'un cercle. [Continuer](btn:next)
+* {.r.reveal(when="next-1")} UNE [{.blue} tangente](target:tangent) est une ligne qui touche un cercle à exactement un point. C'est ce qu'on appelle le __point de tangence__ . [Continuer](btn:next)
+* {.r.reveal(when="next-2")} Une [{.yellow} arc](target:arc) est une section de la circonférence d'un cercle. [Continuer](btn:next)
+* {.r.reveal(when="next-3")} UNE [{.teal} secteur](target:sector) fait partie de l'intérieur d'un cercle, délimité par un _arc_ et _deux rayons_ . [Continuer](btn:next)
+* {.r.reveal(when="next-4")} Enfin, un [{.purple} segment](target:segment) est une partie de l'intérieur d'un cercle, délimité par un _arc_ et _un accord_ . [Continuer](btn:next) 
 
 :::
 
@@ -670,11 +670,11 @@ Malheureusement, personne ne savait exactement _la taille de la_ Terre - jusqu'�
 
 ::: column.grow
 
-Comme vous pouvez le voir sur le schéma, un [{.red} l'arc](pill:arc) fait partie de la [[circonférence | diamètre | tangente]] d'un cercle, et un [{.yellow} le secteur](pill:sector) fait partie de l' [[intérieur | rayon | périmètre]] d'un cercle. 
+Comme vous pouvez le voir sur le schéma, un [{.red} l'arc](target:arc) fait partie de la [[circonférence | diamètre | tangente]] d'un cercle, et un [{.yellow} le secteur](target:sector) fait partie de l' [[intérieur | rayon | périmètre]] d'un cercle. 
 
 ::: .reveal(when="blank-0 blank-1")
 
-L'arc entre deux points _A_ et _B_ est souvent écrit comme `arc(AB)` . Cette définition est légèrement ambiguë: il existe un [{.purple} deuxième arc](pill:major) qui relie _A_ et _B_ mais fait le contraire dans le cercle. 
+L'arc entre deux points _A_ et _B_ est souvent écrit comme `arc(AB)` . Cette définition est légèrement ambiguë: il existe un [{.purple} deuxième arc](target:major) qui relie _A_ et _B_ mais fait le contraire dans le cercle. 
 
 Le plus petit des deux arcs est appelé __arc mineur__ et le plus grand est appelé __arc majeur__ . Si les points _A_ et _B_ sont exactement opposés, les deux arcs ont la même longueur et sont des [[demi]] - [[cercles | diamètres | circonférences]] . 
 
@@ -687,13 +687,13 @@ Le plus petit des deux arcs est appelé __arc mineur__ et le plus grand est appe
 
 ::: column.grow
 
-Pour trouver la longueur d'un arc ou l'aire d'un secteur, nous devons connaître l'angle correspondant au centre du cercle: c'est ce qu'on appelle le [{.blue} angle central](pill:angle) . 
+Pour trouver la longueur d'un arc ou l'aire d'un secteur, nous devons connaître l'angle correspondant au centre du cercle: c'est ce qu'on appelle le [{.blue} angle central](target:angle) . 
 
-Remarquez comment l'arc, le secteur et l'angle occupent tous la _même proportion_ d'un cercle complet. Par exemple, si le [{.blue} l'angle central](pill:angle) est _{span.var-action} 90°_ , il prend [[un quart | une moitié | un tiers]] d'un [{.teal} cercle complet](pill:fangle) . 
+Remarquez comment l'arc, le secteur et l'angle occupent tous la _même proportion_ d'un cercle complet. Par exemple, si le [{.blue} l'angle central](target:angle) est [90°](action:set90Deg()) , il prend [[un quart | une moitié | un tiers]] d'un [{.teal} cercle complet](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
-Cela signifie que le [{.red} la longueur de l'arc](pill:arc) est également `1/4` du [{.purple} toute la circonférence](pill:circ) du cercle, et la [{.yellow} secteur du secteur](pill:sector) est `1/4` du [{.orange} toute la zone](pill:area) du cercle. 
+Cela signifie que le [{.red} la longueur de l'arc](target:arc) est également `1/4` du [{.purple} toute la circonférence](target:circ) du cercle, et la [{.yellow} secteur du secteur](target:sector) est `1/4` du [{.orange} toute la zone](target:area) du cercle. 
 
 Nous pouvons exprimer cette relation dans une équation: 
 
@@ -726,13 +726,13 @@ Nous pouvons maintenant réorganiser ces équations pour trouver la variable qui
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} longueur d'arc](pill) | = | `"circumference" × c/360` |
+| [ longueur d'arc](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} zone sectorielle](pill) | = | `"circle area" × c/360` |
+| [ zone sectorielle](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -751,13 +751,13 @@ Si l'angle central est mesuré en [radians](gloss:radians) plutôt qu'en [degré
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} longueur d'arc](pill) | = | `2 π r × c/(2π)` |
+| [ longueur d'arc](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} zone sectorielle](pill) | = | `π r^2 × c/(2π)` |
+| [ zone sectorielle](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 
@@ -801,7 +801,7 @@ Le mathématicien [Eratosthène](bio:eratosthenes) vivait à _Alexandrie_ , à e
 
 ::: .reveal(when="next-0")
 
-Ératosthène a mesuré que le [{.teal} l'angle](pill:angle1) de l'ombre était de 7,2°. C'est le même que le [{.purple} angle central](pill:angle2) du [{.red} arc](pill:arc) d'Alexandrie à Swenet, car ils [[alternent | verticale |]] angles [[correspondants]] . 
+Ératosthène a mesuré que le [{.teal} l'angle](target:angle1) de l'ombre était de 7,2°. C'est le même que le [{.purple} angle central](target:angle2) du [{.red} arc](target:arc) d'Alexandrie à Swenet, car ils [[alternent | verticale |]] angles [[correspondants]] . 
 
 :::
 
@@ -1186,7 +1186,7 @@ Le rayon du __{.m-green} secteur__ est la même que la distance entre le bord d'
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=200): svg
+    x-geopad.geo-sketch.no-background(width=280 height=200): svg
       circle(x="point(140, 10)" name="a" hidden)
       circle(x="point(140, 170)" name="b" hidden)
       circle(x="point(220, 170)" name="c" hidden)
@@ -1216,7 +1216,7 @@ le [{.pill.red} la longueur d'arc](target:arc) du secteur est la même que la [[
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
+    x-geopad.geo-sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
       circle(x="point(140,110)" name="c1" hidden)
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)

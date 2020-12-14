@@ -473,15 +473,15 @@ _{span.n}${geometric(b,r,5)}_, …
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-Om _{span.var-action} `r > 1`_ kommer termerna [[snabbt att bli större|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, upp till oändlighet. Matematiker säger att sekvensen [__avviker__](gloss:sequence-divergence)._
+Om [`r > 1`](action:set(2,2)) kommer termerna [[snabbt att bli större|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, upp till oändlighet. Matematiker säger att sekvensen [__avviker__](gloss:sequence-divergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-Om _{span.var-action} *r* är mellan –1 och 1_ kommer termerna alltid [[att närma sig 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Vi säger att sekvensen [__konvergerar__](gloss:sequence-convergence)._
+Om [*r* är mellan –1 och 1](action:set(10,0.6)) kommer termerna alltid [[att närma sig 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Vi säger att sekvensen [__konvergerar__](gloss:sequence-convergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-Om _{span.var-action} `r < -1`_, kommer termerna att växla mellan positivt och negativt, medan deras [[absoluta värde|inverse|difference]] blir större.
+Om [`r < -1`](action:set(3,-1.4)), kommer termerna att växla mellan positivt och negativt, medan deras [[absoluta värde|inverse|difference]] blir större.
 
 :::
 
@@ -589,7 +589,7 @@ Låt oss nu titta på några exempel där vi kan använda allt detta!
 Här är ett kort klipp från filmen _Pay it Forward_, där 12-åriga Trevor förklarar sin idé för att göra världen till en bättre plats:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
@@ -1225,17 +1225,17 @@ Det är viktigt för blommor att välja en lämplig vinkel: bladen eller frönna
       x-slider(steps=1000 speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} Om vinkeln är _{span.fib-action(data-value=0)} 0 °_ kommer alla frön att växa i en enda lång rad bort från mitten.
+{div(slot="legend")} Om vinkeln är [0°](action:set(0)) kommer alla frön att växa i en enda lång rad bort från mitten.
 
-{div.inline(slot="legend")} Om vinkeln är _{span.fib-action(data-value=0.5)} `1/2`_ av en hel rotation (180 °) kommer fröna att växla mellan två separata "armar" som rör sig bort från mitten.
+{div.inline(slot="legend")} Om vinkeln är [`1/2`](action:set(0.5)) av en hel rotation (180 °) kommer fröna att växla mellan två separata "armar" som rör sig bort från mitten.
 
-{div.inline(slot="legend")} Om rotationen är en annan del av 360 °, till exempel _{span.fib-action(data-value=2/5)} `2/5`_ eller _{span.fib-action(data-value=1/3)} `1/3`_ eller _{span.fib-action(data-value=3/8)} {1402 }_, då kommer antalet "armar" att vara detsamma som [[nämnaren|numerator|prime factor]] för den fraktionen.
+{div.inline(slot="legend")} Om rotationen är en annan del av 360 °, till exempel [`2/5`](action:set(2/5)) eller [`1/3`](action:set(1/3)) eller [`3/8`](action:set(3/8)), då kommer antalet "armar" att vara detsamma som [[nämnaren|numerator|prime factor]] för den fraktionen.
 
 {div(slot="legend")} Tyvärr är "armar" dåliga, eftersom de betyder att fröna inte är jämnt fördelade: allt utrymmet mellan armarna slösas bort. Men om [rationella siffror](gloss:rational-numbers) inte kommer att fungera, låt oss försöka [irrationella siffror](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} Ett exempel på ett irrationellt nummer är [`pi`](gloss:pi). Men om vinkeln mellan frön är _{span.fib-action(data-value=0.31831)} `1/pi`_ på 360 °, verkar vi fortfarande få armar: 22 av dem. Det beror på att fraktionen `22/7 = 3.1429…` är en ganska bra approximation för `pi`. Det vi verkligen behöver är ett irrationellt tal som _inte_ kan närmas med en enkel bråk.
+{div.inline(slot="legend")} Ett exempel på ett irrationellt nummer är [`pi`](gloss:pi). Men om vinkeln mellan frön är [`1/pi`](action:set(0.31831)) på 360 °, verkar vi fortfarande få armar: 22 av dem. Det beror på att fraktionen `22/7 = 3.1429…` är en ganska bra approximation för `pi`. Det vi verkligen behöver är ett irrationellt tal som _inte_ kan närmas med en enkel bråk.
 
-{div.inline(slot="legend")} Det visar sig att [gyllene förhållandet](gloss:golden-ratio) bara är det: det 'mest irrationella' av alla irrationella siffror. Om vinkeln mellan frön är _{span.fib-action(data-value=0.6180339)} `1/phi`_ på 360 °, verkar de vara nästan perfekt åtskilda. Och det är just den vinkel som växter runt om i världen använder.
+{div.inline(slot="legend")} Det visar sig att [gyllene förhållandet](gloss:golden-ratio) bara är det: det 'mest irrationella' av alla irrationella siffror. Om vinkeln mellan frön är [`1/phi`](action:set(0.6180339)) på 360 °, verkar de vara nästan perfekt åtskilda. Och det är just den vinkel som växter runt om i världen använder.
 
 :::
 
@@ -1489,7 +1489,7 @@ Det verkar som att sekvensens längd varierar mycket, men den kommer alltid att 
     x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
-{.reveal(when="var-0")} Lägg märke till hur vissa startpunkter slutar mycket snabbt, medan andra (som _{span.var-action} 31_ eller _{span.var-action} 47_) tar mer än hundra steg innan de når 4, 2, 1 cykel.
+{.reveal(when="var-0")} Lägg märke till hur vissa startpunkter slutar mycket snabbt, medan andra (som [31](action:set(31)) eller [47](action:set(47))) tar mer än hundra steg innan de når 4, 2, 1 cykel.
 
 ---
 > id: hailstone-3

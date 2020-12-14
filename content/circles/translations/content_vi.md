@@ -440,11 +440,11 @@ Thay vì chia một vòng tròn thành một số phân đoạn (như 360 độ)
 
 ::: column.grow
 
-Một _{span.var-action} vòng tròn đầy đủ_ có chu vi _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+Một [vòng tròn đầy đủ](action:setState(0)) có chu vi _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} Cho một _{span.var-action} Xoay nửa vòng tròn_ , khoảng cách tương ứng dọc theo chu vi là _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} Cho một [Xoay nửa vòng tròn](action:setState(1)), khoảng cách tương ứng dọc theo chu vi là _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-1")} Cho một _{span.var-action} xoay vòng tròn quý_ , khoảng cách dọc theo chu vi là _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} Cho một [xoay vòng tròn quý](action:setState(2)), khoảng cách dọc theo chu vi là _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
 
 {.reveal(when="eqn-2")} Và như vậy: cách đo góc này được gọi là [__radian__](gloss:radians) (bạn có thể nhớ đây là đơn vị bán kính của thang điểm). 
 
@@ -606,12 +606,12 @@ Trong các phần trước, bạn đã học các tên được đặt cho một
 
 ::: column.grow(parent="right")
 
-* {.r} Một [{.red} secant](pill:secant) là một đường thẳng cắt một vòng tròn tại hai điểm. [Tiếp tục](btn:next)
-* {.r.reveal(when="next-0")} Một [{.green} hợp âm](pill:chord) là một đoạn dòng có điểm cuối nằm trên chu vi của một vòng tròn. [Tiếp tục](btn:next)
-* {.r.reveal(when="next-1")} Một [{.blue} tiếp tuyến](pill:tangent) là một đường chạm vào một vòng tròn tại đúng một điểm. Đây được gọi là __điểm tiếp tuyến__ . [Tiếp tục](btn:next)
-* {.r.reveal(when="next-2")} An [{.yellow} cung](pill:arc) là một phần của chu vi của một vòng tròn. [Tiếp tục](btn:next)
-* {.r.reveal(when="next-3")} Một [{.teal} sector](pill:sector) là một phần bên trong của một vòng tròn, giới hạn bởi một _vòng cung_ và _hai bán kính_ . [Tiếp tục](btn:next)
-* {.r.reveal(when="next-4")} Cuối cùng, một [{.purple} phân khúc](pill:segment) là một phần của nội thất của một vòng tròn, giới hạn bởi một _vòng cung_ và _hợp âm_ . [Tiếp tục](btn:next) 
+* {.r} Một [{.red} secant](target:secant) là một đường thẳng cắt một vòng tròn tại hai điểm. [Tiếp tục](btn:next)
+* {.r.reveal(when="next-0")} Một [{.green} hợp âm](target:chord) là một đoạn dòng có điểm cuối nằm trên chu vi của một vòng tròn. [Tiếp tục](btn:next)
+* {.r.reveal(when="next-1")} Một [{.blue} tiếp tuyến](target:tangent) là một đường chạm vào một vòng tròn tại đúng một điểm. Đây được gọi là __điểm tiếp tuyến__ . [Tiếp tục](btn:next)
+* {.r.reveal(when="next-2")} An [{.yellow} cung](target:arc) là một phần của chu vi của một vòng tròn. [Tiếp tục](btn:next)
+* {.r.reveal(when="next-3")} Một [{.teal} sector](target:sector) là một phần bên trong của một vòng tròn, giới hạn bởi một _vòng cung_ và _hai bán kính_ . [Tiếp tục](btn:next)
+* {.r.reveal(when="next-4")} Cuối cùng, một [{.purple} phân khúc](target:segment) là một phần của nội thất của một vòng tròn, giới hạn bởi một _vòng cung_ và _hợp âm_ . [Tiếp tục](btn:next) 
 
 :::
 
@@ -670,11 +670,11 @@ Thật không may, không ai biết chính xác Trái đất _lớn như thế n
 
 ::: column.grow
 
-Như bạn có thể thấy trong sơ đồ, một [{.red} vòng cung](pill:arc) là một phần của [[chu vi | đường kính | tiếp tuyến]] của một vòng tròn và một [{.yellow} lĩnh vực](pill:sector) này là một phần của [[nội thất | bán kính | chu vi]] của một vòng tròn. 
+Như bạn có thể thấy trong sơ đồ, một [{.red} vòng cung](target:arc) là một phần của [[chu vi | đường kính | tiếp tuyến]] của một vòng tròn và một [{.yellow} lĩnh vực](target:sector) này là một phần của [[nội thất | bán kính | chu vi]] của một vòng tròn. 
 
 ::: .reveal(when="blank-0 blank-1")
 
-Vòng cung giữa hai điểm _A_ và _B_ thường được viết là `arc(AB)` . Định nghĩa này hơi mơ hồ: có một [{.purple} cung thứ hai](pill:major) nối _A_ và _B_ nhưng đi theo hướng khác xung quanh vòng tròn. 
+Vòng cung giữa hai điểm _A_ và _B_ thường được viết là `arc(AB)` . Định nghĩa này hơi mơ hồ: có một [{.purple} cung thứ hai](target:major) nối _A_ và _B_ nhưng đi theo hướng khác xung quanh vòng tròn. 
 
 Cung nhỏ hơn trong hai cung được gọi là __cung nhỏ__ và cung lớn hơn được gọi là __cung chính__ . Nếu các điểm _A_ và _B_ hoàn toàn đối diện nhau, cả hai cung có cùng độ dài và là [[hình bán nguyệt | đường kính | chu vi]] . 
 
@@ -687,13 +687,13 @@ Cung nhỏ hơn trong hai cung được gọi là __cung nhỏ__ và cung lớn 
 
 ::: column.grow
 
-Để tìm độ dài của một cung hoặc diện tích của một khu vực, chúng ta cần biết về góc tương ứng ở tâm của vòng tròn: đây được gọi là [{.blue} góc trung tâm](pill:angle) . 
+Để tìm độ dài của một cung hoặc diện tích của một khu vực, chúng ta cần biết về góc tương ứng ở tâm của vòng tròn: đây được gọi là [{.blue} góc trung tâm](target:angle) . 
 
-Lưu ý rằng tất cả các cung, góc và góc chiếm _cùng một tỷ lệ_ của một vòng tròn đầy đủ. Ví dụ: nếu [{.blue} góc trung tâm](pill:angle) là _{span.var-action} 90°_ , phải mất [[một phần tư | một nửa | một phần ba]] [{.teal} vòng tròn đầy đủ](pill:fangle) . 
+Lưu ý rằng tất cả các cung, góc và góc chiếm _cùng một tỷ lệ_ của một vòng tròn đầy đủ. Ví dụ: nếu [{.blue} góc trung tâm](target:angle) là [90°](action:set90Deg()), phải mất [[một phần tư | một nửa | một phần ba]] [{.teal} vòng tròn đầy đủ](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
-Điều này có nghĩa là [{.red} chiều dài của cung](pill:arc) cũng là `1/4` sau đó [{.purple} toàn bộ chu vi](pill:circ) của vòng tròn và [{.yellow} diện tích của ngành](pill:sector) là `1/4` sau đó [{.orange} Toàn bộ diện tích](pill:area) hình tròn. 
+Điều này có nghĩa là [{.red} chiều dài của cung](target:arc) cũng là `1/4` sau đó [{.purple} toàn bộ chu vi](target:circ) của vòng tròn và [{.yellow} diện tích của ngành](target:sector) là `1/4` sau đó [{.orange} Toàn bộ diện tích](target:area) hình tròn. 
 
 Chúng ta có thể biểu thị mối quan hệ này theo một phương trình: 
 
@@ -726,13 +726,13 @@ Bây giờ chúng ta có thể sắp xếp lại các phương trình này để
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} chiều dài hồ quang](pill) | = | `"circumference" × c/360` |
+| [ chiều dài hồ quang](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} khu vực ngành](pill) | = | `"circle area" × c/360` |
+| [ khu vực ngành](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -751,13 +751,13 @@ Nếu góc trung tâm được đo [bằng radian](gloss:radians) chứ không p
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} chiều dài hồ quang](pill) | = | `2 π r × c/(2π)` |
+| [ chiều dài hồ quang](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} khu vực ngành](pill) | = | `π r^2 × c/(2π)` |
+| [ khu vực ngành](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 
@@ -801,7 +801,7 @@ Eratosthenes nhận thấy rằng vào buổi trưa vào ngày hạ chí, obelis
 
 ::: .reveal(when="next-0")
 
-Eratosthenes đo rằng [{.teal} góc](pill:angle1) của bóng là 7,2°. Điều này giống như [{.purple} góc trung tâm](pill:angle2) của [{.red} vòng cung](pill:arc) từ Alexandria đến Swenet, vì chúng [[xen kẽ | theo chiều dọc |]] góc [[tương ứng]] . 
+Eratosthenes đo rằng [{.teal} góc](target:angle1) của bóng là 7,2°. Điều này giống như [{.purple} góc trung tâm](target:angle2) của [{.red} vòng cung](target:arc) từ Alexandria đến Swenet, vì chúng [[xen kẽ | theo chiều dọc |]] góc [[tương ứng]] . 
 
 :::
 
@@ -1186,7 +1186,7 @@ Bán kính của __{.m-green} sector__ giống như khoảng cách từ vành c�
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=200): svg
+    x-geopad.geo-sketch.no-background(width=280 height=200): svg
       circle(x="point(140, 10)" name="a" hidden)
       circle(x="point(140, 170)" name="b" hidden)
       circle(x="point(220, 170)" name="c" hidden)
@@ -1216,7 +1216,7 @@ Các [{.pill.red} chiều dài cung](target:arc) của ngành giống như [[chu
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
+    x-geopad.geo-sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
       circle(x="point(140,110)" name="c1" hidden)
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)

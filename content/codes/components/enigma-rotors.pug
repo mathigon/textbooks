@@ -1,0 +1,32 @@
+mixin layer(x, width, label, fill)
+  text.label(x=(x + width / 2) y=12)= label
+  rect.layer(x=x y=20 width=width height=395 rx=6 fill=`url(${fill})`)
+
+mixin gradient(id, from, to, dir)
+  linearGradient(id=id x1=0 y1=0 x2=dir y2=(1 - dir))
+    stop(offset=0 style=`stop-color: ${from}`)
+    stop(offset=1 style=`stop-color: ${to}`)
+
+svg(width=540 height=420 viewBox="0 0 540 420")
+  defs
+    +gradient('grad-refl', '#fec680', '#cb9e66', 0)
+    +gradient('grad-rotor', '#9d9ba2', '#7d7c82', 0)
+    +gradient('grad-plug', '#87c1f9', '#6c9ac7', 0)
+    +gradient('grad-in', '#0f82f2', '#cd0e66', 1)
+    +gradient('grad-out', '#fd8c00', '#cd0e66', 1)
+
+  +layer(80, 70, 'Plugboard', '#grad-plug')
+  +layer(180, 70, 'Rotor 1', '#grad-rotor')
+  +layer(280, 70, 'Rotor 2', '#grad-rotor')
+  +layer(380, 70, 'Rotor 3', '#grad-rotor')
+  +layer(480, 50, 'Reflector', '#grad-refl')
+
+  g.connections
+  g.overlay
+
+  g.keyboard
+    for key, i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+      - var x = i % 2 ? 40 : 20
+      - var y = 30 + 15 * i
+      circle(data-key=key cx=x cy=y r=10)
+      text(x=x y=(y + 1))= key

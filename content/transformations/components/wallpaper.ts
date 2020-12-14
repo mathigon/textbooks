@@ -4,10 +4,11 @@
 // =============================================================================
 
 
-import {flatten, tabulate2D, Obj} from '@mathigon/core';
-import {Point, Line} from '@mathigon/fermat';
+import {flatten, Obj, tabulate2D} from '@mathigon/core';
+import {Line, Point} from '@mathigon/euclid';
 import {CanvasView, CustomElementView, register, slide} from '@mathigon/boost';
 import {Select} from '../../shared/types';
+import template from './wallpaper.pug';
 
 
 // -------------------------------------------------------------------------
@@ -28,11 +29,11 @@ const lineSI = new Line(new Point(0, 720), new Point(720, 0));
 
 function grid(points: Point[], x: number, y: number) {
   return flatten<Point>(tabulate2D((i, j) =>
-      points.map((p: Point) => p.shift(i * x, j * y)), width / x, height / y));
+    points.map((p: Point) => p.shift(i * x, j * y)), width / x, height / y));
 }
 
 function applyTransforms(point: Point, [x, y]: [number, number],
-                         transforms: ((p: Point) => Point)[]) {
+    transforms: ((p: Point) => Point)[]) {
   let points = [point.mod(x, y)];
 
   for (const t of transforms) {
@@ -230,12 +231,12 @@ export const TRANSFORMATIONS: Obj<(p: Point) => Point[]> = {
 function drawPoint(ctx: CanvasRenderingContext2D, group: string, point: Point) {
   for (const p of TRANSFORMATIONS[group](point)) {
     ctx.beginPath();
-    ctx.arc(p.x, p.y, 8, 0, 2 * Math.PI);
+    ctx.arc(p.x, p.y, 6, 0, 2 * Math.PI);
     ctx.fill();
   }
 }
 
-@register('x-wallpaper', {templateId: '#wallpaper'})
+@register('x-wallpaper', {template})
 export class Wallpaper extends CustomElementView {
 
   ready() {
@@ -257,13 +258,13 @@ export class Wallpaper extends CustomElementView {
     });
 
     this.$('.clear')!.on('click', () => context.clearRect(0, 0, 1e10, 1e10));
-    this.$('.save')!.on('click', e => e.target.href = $canvas.pngImage);
+    this.$('.save')!.on('click', () => $canvas.downloadImage('wallpaper'));
 
     slide($canvas, {
       down: p => drawPoint(context, activeGroup, p),
       move(p, _, last) {
         const l = new Line(last, p);
-        const n = l.length / 8;
+        const n = Math.ceil(l.length / 4);
         for (let i = 0; i < n; ++i) drawPoint(context, activeGroup, l.at(i / n));
       },
       end: () => this.trigger('draw'),

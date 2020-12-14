@@ -440,11 +440,11 @@ Amma riyazi baxımdan 360 seçim tamamilə özbaşına olur. Əgər Marsda yaşa
 
 ::: column.grow
 
-A _{span.var-action} tam dairənin çevrəsi_ var _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
+A [tam dairənin çevrəsi](action:setState(0)) var _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-0")} A üçün _{span.var-action} yarım dairənin fırlanması_ , _dairə_ boyunca müvafiq məsafədir _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
+{.reveal(when="eqn-0")} A üçün [yarım dairənin fırlanması](action:setState(1)) , _dairə_ boyunca müvafiq məsafədir _{x-equation.small(solution="π" keys="+ × π" numeric)}_ . 
 
-{.reveal(when="eqn-1")} A üçün _{span.var-action} dörddə bir dairənin fırlanması_ , _dairə_ boyunca məsafədir _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
+{.reveal(when="eqn-1")} A üçün [dörddə bir dairənin fırlanması](action:setState(2)) , _dairə_ boyunca məsafədir _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ . 
 
 {.reveal(when="eqn-2")} Və sair: bucaqları [__ölçməyin__](gloss:radians) bu [__üsuluna radians__](gloss:radians) deyilir (bunu "radius vahidləri" olaraq xatırlaya bilərsiniz). 
 
@@ -605,12 +605,12 @@ Sine funksiyasından istifadə edərkən radianların istifadəsi xüsusilə mar
 
 ::: column.grow(parent="right")
 
-* {.r} A [{.red} secant](pill:secant) iki nöqtədə bir dairəni kəsən bir xəttdir. [Davam et](btn:next)
-* {.r.reveal(when="next-0")} A [{.green} akkord](pill:chord) son nöqtələri bir dairənin ətrafına uzanan bir xətt seqmentidir. [Davam et](btn:next)
-* {.r.reveal(when="next-1")} A [{.blue} tangent](pill:tangent) tam bir nöqtədə bir dairəyə toxunan bir xəttdir. Buna __toxluq nöqtəsi deyilir__ . [Davam et](btn:next)
-* {.r.reveal(when="next-2")} Bir [{.yellow} qövs](pill:arc) bir dairənin çevrəsinin bir hissəsidir. [Davam et](btn:next)
-* {.r.reveal(when="next-3")} A [{.teal} sektor](pill:sector) bir _qövs_ və _iki radii ilə bağlanmış_ bir dairənin daxili hissəsidir. [Davam et](btn:next)
-* {.r.reveal(when="next-4")} Nəhayət, a [{.purple} seqment](pill:segment) bir _qövs_ və _bir akkordla_ bağlanmış bir dairənin daxili hissəsidir. [Davam edin](btn:next) 
+* {.r} A [{.red} secant](target:secant) iki nöqtədə bir dairəni kəsən bir xəttdir. [Davam et](btn:next)
+* {.r.reveal(when="next-0")} A [{.green} akkord](target:chord) son nöqtələri bir dairənin ətrafına uzanan bir xətt seqmentidir. [Davam et](btn:next)
+* {.r.reveal(when="next-1")} A [{.blue} tangent](target:tangent) tam bir nöqtədə bir dairəyə toxunan bir xəttdir. Buna __toxluq nöqtəsi deyilir__ . [Davam et](btn:next)
+* {.r.reveal(when="next-2")} Bir [{.yellow} qövs](target:arc) bir dairənin çevrəsinin bir hissəsidir. [Davam et](btn:next)
+* {.r.reveal(when="next-3")} A [{.teal} sektor](target:sector) bir _qövs_ və _iki radii ilə bağlanmış_ bir dairənin daxili hissəsidir. [Davam et](btn:next)
+* {.r.reveal(when="next-4")} Nəhayət, a [{.purple} seqment](target:segment) bir _qövs_ və _bir akkordla_ bağlanmış bir dairənin daxili hissəsidir. [Davam edin](btn:next) 
 
 :::
 
@@ -665,11 +665,11 @@ Təəssüf ki, heç kim Yerin _nə qədər böyük_ olduğunu dəqiq bilmirdi - 
 
 ::: column.grow
 
-Diaqramda gördüyünüz kimi, bir [{.red} arc](pill:arc) [[dövrə]] bir hissəsidir [[| Diametr |]] bir dairənin [[tangensi]] və a [{.yellow} sektor](pill:sector) [[daxili]] bir hissəsidir [[| radius |]] bir dairənin [[perimetri]] . 
+Diaqramda gördüyünüz kimi, bir [{.red} arc](target:arc) [[dövrə]] bir hissəsidir [[| Diametr |]] bir dairənin [[tangensi]] və a [{.yellow} sektor](target:sector) [[daxili]] bir hissəsidir [[| radius |]] bir dairənin [[perimetri]] . 
 
 ::: .reveal(when="blank-0 blank-1")
 
-_A_ və _B_ nöqtələri arasındakı qövs tez-tez olduğu kimi yazılır `arc(AB)` . Bu tərif bir qədər qeyri-müəyyəndir: a var [{.purple}](pill:major) _A_ və _B-_ ni birləşdirən _,_ lakin dairə boyunca başqa bir şəkildə gedən [ikinci qövs](pill:major) . 
+_A_ və _B_ nöqtələri arasındakı qövs tez-tez olduğu kimi yazılır `arc(AB)` . Bu tərif bir qədər qeyri-müəyyəndir: a var [{.purple}](target:major) _A_ və _B-_ ni birləşdirən _,_ lakin dairə boyunca başqa bir şəkildə gedən [ikinci qövs](target:major) . 
 
 İki __qövsün__ ən __kiçikinə kiçik qövs__ , daha __böyüyünə__ isə __əsas qövs__ deyilir. _A_ və _B_ nöqtələri tam bir-birinə tam ziddirsə, hər iki qövs eyni uzunluğa malikdir və [[yarı dairələrdir | çaplar | dairələr]] . 
 
@@ -681,13 +681,13 @@ _A_ və _B_ nöqtələri arasındakı qövs tez-tez olduğu kimi yazılır `arc(
 
 ::: column.grow
 
-Bir qövsün uzunluğunu və ya bir sektorun sahəsini tapmaq üçün dairənin mərkəzindəki müvafiq bucaq haqqında bilməliyik: [{.blue} mərkəzi bucaq](pill:angle) . 
+Bir qövsün uzunluğunu və ya bir sektorun sahəsini tapmaq üçün dairənin mərkəzindəki müvafiq bucaq haqqında bilməliyik: [{.blue} mərkəzi bucaq](target:angle) . 
 
-Qövsün, sektorun və bucağın hamısının tam bir dairə _nisbətini_ necə aldığına diqqət yetirin. Məsələn, əgər [{.blue} mərkəzi bucaqdır](pill:angle) _{span.var-action} 90°_ , [[dörddə birini]] alır [[| bir yarım |]] a-nın [[üçdə biri]] [{.teal} tam dairə](pill:fangle) . 
+Qövsün, sektorun və bucağın hamısının tam bir dairə _nisbətini_ necə aldığına diqqət yetirin. Məsələn, əgər [{.blue} mərkəzi bucaqdır](target:angle) [90°](action:set90Deg()) , [[dörddə birini]] alır [[| bir yarım |]] a-nın [[üçdə biri]] [{.teal} tam dairə](target:fangle) . 
 
 ::: .reveal(when="blank-0")
 
-Bu o deməkdir ki [{.red} qövsün uzunluğu](pill:arc) da `1/4` nin [{.purple}](pill:circ) dairənin [bütün ətrafı](pill:circ) və [{.yellow} sektorun sahəsi](pill:sector) `1/4` nin [{.orange}](pill:area) dairənin [bütün sahəsi](pill:area) . 
+Bu o deməkdir ki [{.red} qövsün uzunluğu](target:arc) da `1/4` nin [{.purple}](target:circ) dairənin [bütün ətrafı](target:circ) və [{.yellow} sektorun sahəsi](target:sector) `1/4` nin [{.orange}](target:area) dairənin [bütün sahəsi](target:area) . 
 
 Bu əlaqəni bir tənlikdə ifadə edə bilərik: 
 
@@ -720,13 +720,13 @@ Bu əlaqəni bir tənlikdə ifadə edə bilərik:
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} qövs uzunluğu](pill) | = | `"circumference" × c/360` |
+| [qövs uzunluğu](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} sektor sahəsi](pill) | = | `"circle area" × c/360` |
+| [sektor sahəsi](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -743,13 +743,13 @@ Mərkəzi bucaq [dərəcə ilə](gloss:degrees) deyil, [radianla](gloss:radians)
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} qövs uzunluğu](pill) | = | `2 π r × c/(2π)` |
+| [qövs uzunluğu](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} sektor sahəsi](pill) | = | `π r^2 × c/(2π)` |
+| [sektor sahəsi](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 
@@ -793,7 +793,7 @@ Eratosthenes, yaz ayının günorta saatlarında obelisk bir kölgə atdığın�
 
 ::: .reveal(when="next-0")
 
-Eratosthenes ölçüldü [{.teal}](pill:angle1) kölgənin [açısı](pill:angle1) 7,2° idi. Bu, eynidir [{.purple} mərkəzi açı](pill:angle2) [{.red}](pill:arc) İsgəndəriyyədən Swenetə qədər olan [qövs](pill:arc) , çünki onlar [[alternativdirlər | şaquli | uyğun]] açılar. 
+Eratosthenes ölçüldü [{.teal}](target:angle1) kölgənin [açısı](target:angle1) 7,2° idi. Bu, eynidir [{.purple} mərkəzi açı](target:angle2) [{.red}](target:arc) İsgəndəriyyədən Swenetə qədər olan [qövs](target:arc) , çünki onlar [[alternativdirlər | şaquli | uyğun]] açılar. 
 
 :::
 
@@ -1178,7 +1178,7 @@ Radiusu __{.m-green} sektor__ bir konusun halqasından onun ucuna qədər olan m
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=200): svg
+    x-geopad.geo-sketch.no-background(width=280 height=200): svg
       circle(x="point(140, 10)" name="a" hidden)
       circle(x="point(140, 170)" name="b" hidden)
       circle(x="point(220, 170)" name="c" hidden)
@@ -1208,7 +1208,7 @@ The [{.pill.red}](target:arc) sektorun [qövs uzunluğu](target:arc) [[ətraf]] 
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
+    x-geopad.geo-sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
       circle(x="point(140,110)" name="c1" hidden)
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)

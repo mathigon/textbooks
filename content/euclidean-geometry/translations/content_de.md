@@ -602,13 +602,13 @@ Kreise nicht".
 geraden Leiste und einem Zirkel.
 
 Zeichne zunächst eine Strecke an einer beliebigen Stelle im Feld rechts. Wähle das
-<x-target no-margins to="#equilateral .tool:nth-child(3)">Linienwerkzeug</x-target>
+[{.no-margins} Linienwerkzeug](->#equilateral_.tool:nth-child(3))
 aus und ziehe damit einfach vom Anfang bis zum Ende. Diese Strecke wird eine der Seiten
 des Dreiecks sein.
 
 {.reveal(when="segment0")} Zeichne anschließend zwei Kreise, die jeweils einen der Endpunkte
 der Strecke als Mittelpunkt haben und durch den anderen Endpunkt gehen. Wähle das
-<x-target no-margins to="#equilateral .tool:nth-child(5)">Kreiswerkzeug</x-target>
+[{.no-margins} Kreiswerkzeug](->#equilateral_.tool:nth-child(5))
 aus und ziehe damit einfach jeweils von einem Endpunkt zum anderen.
 
 {.reveal(when="circle1 circle2")} Wir haben bereits zwei Eckpunkte des Dreiecks,
@@ -762,7 +762,7 @@ und es ist wichtig, dabei extrem genau zu arbeiten. Aber mit ein wenig Übung sc
 
 ::: column.sticky-video(width=360)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
+    x-video(src="https://static.mathigon.org/videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
 
 ::: column.grow
 {.step.active(data-t=0)} Du brauchst nur ein quadratisches Blatt Papier. Falte
@@ -882,7 +882,7 @@ in der Technologie und Technik unglaublich nützlich sein können:
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
+    x-video(src="https://static.mathigon.org/videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
 
 ::: column.grow
 
@@ -904,7 +904,7 @@ und andere mechanische Komponenten.
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
+    x-video(src="https://static.mathigon.org/videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
 
 ::: column.grow
 
@@ -944,7 +944,7 @@ Hiroshima University in Japan entworfen wurde.
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
+    x-video(src="https://static.mathigon.org/videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
 
 ::: column.grow
 
@@ -988,7 +988,7 @@ die höchste "Faltungsrate" im Tierreich:
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
+    x-video(src="https://static.mathigon.org/videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
 
 :::
 
@@ -1012,7 +1012,7 @@ sich selbst zusammenlegende Campingzelte sein.
 
 ::: column(width=320)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
+    x-video(src="https://static.mathigon.org/videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
 
 ::: column.grow
 

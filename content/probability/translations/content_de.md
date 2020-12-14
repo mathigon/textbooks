@@ -132,11 +132,11 @@ ist [[größer|kleiner]] als 0,5 - also wahrscheinlich.
 Ziehe nun die folgenden Ereignisse in die richtige Reihenfolge, von wahrscheinlich bis unwahrscheinlich:
 
     x-sortable
-      .item.md(data-index="3") Du wirfst einen Würfel :game_die: und er landet auf 6.
+      .item.md(data-index="3") Du wirfst einen Würfel :game-die: und er landet auf 6.
       .item.md(data-index="5") Pinguine :penguin: leben am Nordpol.
-      .item.md(data-index="1") Im November wird es regnen :rain_cloud:.
-      .item.md(data-index="0") Heute wird in China ein Baby geboren. :baby_bottle:
-      .item.md(data-index="4") Du kaufst einen Lottoschein und gewinnst den Jackpot :tada:.
+      .item.md(data-index="1") Im November wird es regnen :cloud-with-rain:.
+      .item.md(data-index="0") Heute wird in China ein Baby geboren. :baby-bottle:
+      .item.md(data-index="4") Du kaufst einen Lottoschein und gewinnst den Jackpot :party-popper:.
       .item.md(data-index="2") Ein neugeborenes Baby wird ein Mädchen sein :girl:.
 
 Im Alltag sprechen wir oft von Wahrscheinlichkeiten und Chancen, meist ohne
@@ -156,7 +156,7 @@ tatsächlichen Ergebnissen zu tun: Wenn wir eine Münze viele Male werfen, wisse
 [[ungefähr die Hälfte der|genau die Hälfte der|alle|keine]] Ergebnisse Kopf lauten werden - aber wir
 haben keine Möglichkeit, vorherzusagen, _welche Würfe genau_ auf Kopf landen.
 
-Selbst Ereignisse mit verschwindend kleinen Wahrscheinlichkeiten (wie z.B. ein Lottogewinn :tada:)
+Selbst Ereignisse mit verschwindend kleinen Wahrscheinlichkeiten (wie z.B. ein Lottogewinn :party-popper:)
 _können dennoch eintreten_ - und sie _treten ein_ - andauernd, aber eben nur für sehr wenige
 Teilnehmer.
 

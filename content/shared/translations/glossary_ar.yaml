@@ -1692,7 +1692,7 @@ twin-primes:
   text: |
     __البدايات المزدوجة__ هي أزواج من الأعداد الأولية مثل 17 و 19 أو 101 و 103 ، وهما منفصلان
     تمامًا. من غير المعروف ما إذا كان هناك عدد لا نهائي من الأزواج من التوائم الأولية.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: دائرة الوحدة

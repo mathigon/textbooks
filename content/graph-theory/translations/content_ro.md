@@ -310,7 +310,7 @@ Fiecare din ${n}{n|5|2,8,1} oamenii de la petrecere dau mâna cu ${n-1} alții. 
 ---
 > id: handshakes-2a
 
-Din păcate, acest răspuns nu este chiar corect. Observați cum <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)">primele două intrări din rândul de sus</x-target> sunt de fapt aceleași, doar răsucite. 
+Din păcate, acest răspuns nu este chiar corect. Observați cum [primele două intrări din rândul de sus](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) sunt de fapt aceleași, doar răsucite. 
 
 De fapt, am numărat fiecare strângere de mână de [[două ori | o singura data | de trei ori]] , _{span.reveal(when="blank-0")} o dată pentru fiecare dintre cele două persoane implicate. Acest lucru înseamnă că numărul corect de strângeri de mână pentru ${n}{n|5|2,25,1} oaspeții este `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
 

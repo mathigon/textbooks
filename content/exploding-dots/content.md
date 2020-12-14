@@ -28,22 +28,20 @@ invulnerable. On one day, he was challenged to race … by a tortoise!
       img(src="images/achilles.png" width=80 height=110 style="left: 0%; z-index: 1;")
       img(src="images/tortoise.png" width=80 height=50 style="left: 54%; margin-top: 8%;")
 
-{div(slot="legend")} Achilles knew that he could run _ten times_ as fast as
+Achilles knew that he could run _ten times_ as fast as
 the tortoise. He felt very confident, and decided to give it a 100m head start.
 
-{div(slot="legend")} And the race began. In the time it took Achilles to reach
+And the race began. In the time it took Achilles to reach
 the 100m mark, the tortoise moved by [[10]]m: _{span.reveal(when="blank-0")}it
 was now at 110m._
 
-{div(slot="legend")} When Achilles arrived at 110m, the tortoise had moved by
+When Achilles arrived at 110m, the tortoise had moved by
 [[one]] more meter(s): _{span.reveal(when="blank-1")}it was now at 111m._
 
-{div(slot="legend")} When Achilles arrived at the 111m mark, the tortoise had
-moved by 10cm.
+When Achilles arrived at the 111m mark, the tortoise had moved by 10cm.
 
-{div(slot="legend")} At every step, Achilles gets closer to the tortoise. But
-since the tortoise keeps moving, he never quite reaches it. And since he can’t
-overtake it, the tortoise wins the race!
+At every step, Achilles gets closer to the tortoise. But since the tortoise keeps moving, he never
+quite reaches it. And since he can’t overtake it, the tortoise wins the race!
 
 :::
 
@@ -70,12 +68,12 @@ Our number notation is incredibly powerful, and has allowed us to make amazing
 discoveries in mathematics, science and engineering. In Europe, mathematicians
 first used the [Roman numeral system](gloss:roman-numerals) (numbers like I, V,
 X, …) before the [Arabic numbers](gloss:arabic-numerals) were introduced
-in the 15th century.
+in the 12th century.
 
 {.r} There is one important property of numbers that we usually take for
 granted: all numbers are __unique__. In other words, there are no two different
 numbers that are equal. 5 and 8 are different, just like 100 is different from
-101, and so on. _{button.next-step} Continue_
+101, and so on. [Continue](btn:next)
 
 ::: column(width=300)
 
@@ -120,7 +118,7 @@ Since we humans are not God-like, you might decide that the question is
 meaningless. But that seems like a very unsatisfactory solution – and new
 discoveries always start by asking _“what if…”_
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: numberline
@@ -319,7 +317,7 @@ __{.m-yellow}1__ = __{.m-red}0__.*
 
 :::
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: warp-1
@@ -336,7 +334,7 @@ abstruse to think that _{span.nowrap}…999999_ could possibly equal –1.
 
     figure: include svg/number-line-1.svg
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: warp-2
@@ -360,7 +358,7 @@ and __division__.
 be divided any number of times by any integer, and still give an integer result
 (namely 0). If we focus on our number base of 10, we can see that 0 can be
 divided by 10 once, or twice, or thirty-seven times, or a million times.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: zero-list
@@ -380,15 +378,15 @@ We can now develop a __distance formula__, based on how often 10 “goes into”
 into a number multiplicatively. If we can divide a number _a_ by ten a maximum
 of _k_ times while remaining an integer, let’s write
 
-{.text-center} `|a|_(ten) = 1/10^k`
+{.text-center} `abs(a)_(ten) = 1/10^k`
 
-For example, `|850|_(ten) = 1/(10^1) = 0.1`, and `|8500|_(ten) = 1/(10^2) = 0.01`,
-and `|850000|_(ten) =` [[0.0001]].
+For example, `abs(850)_(ten) = 1/(10^1) = 0.1`, and `abs(8500)_(ten) = 1/(10^2) = 0.01`,
+and `abs(850000)_(ten) =` [[0.0001]].
 
 ---
 
 We can also measure the distance between any two different numbers. For example,
-the distance between 3 and 33 is `|33−3|_(ten) = |30|_(ten) = 1/(10^1) = 0.1`.
+the distance between 3 and 33 is `abs(33−3)_(ten) = abs(30)_(ten) = 1/(10^1) = 0.1`.
 
 With this new way to measure distance, 1, 10, 100, 1000, … is a sequence of
 numbers getting closer and closer to [[zero|1|–1|infinity]]. Similarly, 9, 99,
@@ -496,10 +494,9 @@ To see why that’s the case, we need to look at the powers of 2 and 5:
 ---
 > id: flaw-1
 
-Notice how many of the powers of 5 end in <x-target to=".po2" no-margins>other,
-smaller powers of 5</x-target>. The same is also true for powers of 2. It turns
-out that we can create two infinite, 10-adic numbers, that always end in powers
-of 2 or 5 respectively:
+Notice how many of the powers of 5 end in [{.no-margins}other, smaller powers of 5](->.po2). The
+same is also true for powers of 2. It turns out that we can create two infinite, 10-adic numbers,
+that always end in powers of 2 or 5 respectively:
 
 ::: column(width=140)
 
@@ -517,7 +514,7 @@ __{.i.m-yellow}N__ = …1953125
 
 :::
 
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: flaw-2
@@ -609,7 +606,7 @@ into any [[even|odd|prime]] number of equal triangles.
 
 {.r.reveal(when="blank-0")} But what about _odd_ numbers? Draw a square on a
 sheet of paper, and then try dividing it into 3, 5 or 7 triangles of equal area.
-_{button.next-step} Continue_
+[Continue](btn:next)
 
 ---
 > id: square-3

@@ -454,12 +454,12 @@ Bir çemberi belli sayıda parçaya bölmek yerine(360 gibi), matematikçiler ge
 
 ::: column.grow
 
-Bir _{span.var-action}tam çemberin_ çevre uzunluğu
+Bir [tam çemberin](action:setState(0)) çevre uzunluğu
 _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ dir.
 
-{.reveal(when="eqn-0")} _{span.var-action}Yarın çemberlik bir döndürmeye_ karşılık gelen uzunluk _{x-equation.small(solution="π" keys="+ × π" numeric)}_ dir.
+{.reveal(when="eqn-0")} [Yarın çemberlik bir döndürmeye](action:setState(1)) karşılık gelen uzunluk _{x-equation.small(solution="π" keys="+ × π" numeric)}_ dir.
 
-{.reveal(when="eqn-1")} _{span.var-action}Çeyrek çemberlik döndürmeye_ karşılık gelen uzunluk
+{.reveal(when="eqn-1")} [Çeyrek çemberlik döndürmeye](action:setState(2)) karşılık gelen uzunluk
 _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ dir.
 
 {.reveal(when="eqn-2")} Ve böyle devam eder: açıyı bu şekilde ölçmek
@@ -628,13 +628,13 @@ Geçtiğimiz bölümlerde merkez, çap, yarıçap ve çevre gibi çemberin çeş
 
 ::: column.grow(parent="right")
 
-* {.r}  [{.red} Kesen](pill:secant) bir çemberi iki noktada kesen doğrudur. [Devam](btn:next)
-* {.r.reveal(when="next-0")} [{.green} Kiriş](pill:chord) uç noktaları çemberin çevresinde yer alan doğru parçasıdır. [Devam](btn:next)
-* {.r.reveal(when="next-1")}  [{.blue} Teğet](pill:tangent) bir çembere tek bir noktada değen doğrudur. Bu noktaya __teğet noktası__ denir. [Devam](btn:next)
-* {.r.reveal(when="next-2")} [{.yellow} Yay](pill:arc) çemberin çevresinin bir parçasıdır. [Devam](btn:next)
-* {.r.reveal(when="next-3")} [{.teal} Dilim](pill:sector) çemberin içindeki bölgede, bir _yay_ ile _iki yarıçap_ arasında kalan yerdir.
+* {.r}  [{.red} Kesen](target:secant) bir çemberi iki noktada kesen doğrudur. [Devam](btn:next)
+* {.r.reveal(when="next-0")} [{.green} Kiriş](target:chord) uç noktaları çemberin çevresinde yer alan doğru parçasıdır. [Devam](btn:next)
+* {.r.reveal(when="next-1")}  [{.blue} Teğet](target:tangent) bir çembere tek bir noktada değen doğrudur. Bu noktaya __teğet noktası__ denir. [Devam](btn:next)
+* {.r.reveal(when="next-2")} [{.yellow} Yay](target:arc) çemberin çevresinin bir parçasıdır. [Devam](btn:next)
+* {.r.reveal(when="next-3")} [{.teal} Dilim](target:sector) çemberin içindeki bölgede, bir _yay_ ile _iki yarıçap_ arasında kalan yerdir.
   [Devam](btn:next)
-* {.r.reveal(when="next-4")} Son olarak [{.purple} segment](pill:segment) çemberin iç bölgesinde bir _yay_ ile _bir kiriş_ arasında kalan yerdir..
+* {.r.reveal(when="next-4")} Son olarak [{.purple} segment](target:segment) çemberin iç bölgesinde bir _yay_ ile _bir kiriş_ arasında kalan yerdir..
   [Devam](btn:next)
 
 :::
@@ -690,12 +690,12 @@ Ne yazık ki kimse Dünyanın _ne kadar büyük_ olduğunu bilmiyordu, taa ki M.
 
 ::: column.grow
 
-Çizimden görebildiğiniz gibi, bir [{.red} yay](pill:arc) çemberin
-[[çevresinin|çapının|teğetinin]] bir parçasıdır, ve bir [{.yellow} dilim](pill:sector) çemberin
+Çizimden görebildiğiniz gibi, bir [{.red} yay](target:arc) çemberin
+[[çevresinin|çapının|teğetinin]] bir parçasıdır, ve bir [{.yellow} dilim](target:sector) çemberin
 [[iç bölgesinin|yarıçapının|çevresinin]] bir parçasıdır.
 
 ::: .reveal(when="blank-0 blank-1")
-_A_ ve _B_ noktaları arasındaki yay genelde ‘arc(AB)’ olarak yazılır. Aslında bu tanım biraz muğlak: _A_ ve _B_’yi bağlayan ancak çemberin öteki tarafından dolaşan [{.purple} ikinci bir yay](pill:major) da var. 
+_A_ ve _B_ noktaları arasındaki yay genelde ‘arc(AB)’ olarak yazılır. Aslında bu tanım biraz muğlak: _A_ ve _B_’yi bağlayan ancak çemberin öteki tarafından dolaşan [{.purple} ikinci bir yay](target:major) da var. 
 
 İki yaydan küçük olanına _küçük(minör) yay_ ve büyük olanına _büyük(majör) yay_ denir. Eğer _A_ ve _B_ noktaları tam zıt konumlardaysa iki yayın da uzunluğu aynıdır ve ikisi de [[yarıçember|çap|çevre]] oluşturur.
 :::
@@ -707,12 +707,12 @@ _A_ ve _B_ noktaları arasındaki yay genelde ‘arc(AB)’ olarak yazılır. As
 
 ::: column.grow
 
-Bir yayın uzunluğunu ya da dilimin alanını bulmak için, çemberin merkezinde bu parçalara karşılık gelen açıyı bilmemiz gerekir: buna [{.blue} merkez açı](pill:angle) denir.
+Bir yayın uzunluğunu ya da dilimin alanını bulmak için, çemberin merkezinde bu parçalara karşılık gelen açıyı bilmemiz gerekir: buna [{.blue} merkez açı](target:angle) denir.
 
-Yayın, dilimin ve açının nasıl da çemberin bütünü ile _aynı orana_ sahip olduğuna bakın. Örneğin eğer [{.blue} merkez açı](pill:angle) _{span.var-action}90°_ ise, [{.teal} bütün çemberin](pill:fangle)  [[çeyreğini|yarısını|üçte birini]] oluşturur.
+Yayın, dilimin ve açının nasıl da çemberin bütünü ile _aynı orana_ sahip olduğuna bakın. Örneğin eğer [{.blue} merkez açı](target:angle) [90°](action:set90Deg()) ise, [{.teal} bütün çemberin](target:fangle)  [[çeyreğini|yarısını|üçte birini]] oluşturur.
 
 ::: .reveal(when="blank-0")
-Demek ki [{.red} yayın uzunluğu](pill:arc) da çemberin [{.purple} çevresinin](pill:circ) `1/4`ü, ve [{.yellow} dilimin alanı](pill:sector) da bütün dairenin [{.orange} alanının](pill:area) `1/4`ü.
+Demek ki [{.red} yayın uzunluğu](target:arc) da çemberin [{.purple} çevresinin](target:circ) `1/4`ü, ve [{.yellow} dilimin alanı](target:sector) da bütün dairenin [{.orange} alanının](target:area) `1/4`ü.
 
 Bu ilişkiyi bir denklem ile ifade edebiliriz:
 
@@ -744,13 +744,13 @@ Bu ilişkiyi bir denklem ile ifade edebiliriz:
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}yay uzunluğu](pill) | = | `"çevre" × c/360` |
+| [yay uzunluğu](pill:red) | = | `"çevre" × c/360` |
 |                          | = | `2 π r × c/360`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}dilim alanı](pill) | = | `"daire alanı" × c/360` |
+| [dilim alanı](pill:yellow) | = | `"daire alanı" × c/360` |
 |                              | = | `π r^2 × c/360`         |
 {.eqn-system}
 
@@ -766,13 +766,13 @@ Eğer merkez açı [derece](gloss:degrees) yerine [radyan](gloss:radians) cinsin
 ::: .reveal(when="blank-0")
 ::: column(width=320 parent="padded-thin")
 
-| [{.red}yay uzunluğu](pill) | = | `2 π r × c/(2π)` |
+| [yay uzunluğu](pill:red) | = | `2 π r × c/(2π)` |
 |                          | = | `r × c`          |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow}dilim alanı](pill) | = | `π r^2 × c/(2π)` |
+| [dilim alanı](pill:yellow) | = | `π r^2 × c/(2π)` |
 |                              | = | `1/2 r^2 c`      |
 {.eqn-system}
 
@@ -816,7 +816,7 @@ Eratosthenes yaz gündönümü öğle vaktinde dikilitaşın gölgesini fark ett
 
 ::: .reveal(when="next-0")
 
-Eratosthenes gölgenin [{.teal} açısını](pill:angle1) 7.2° olarak ölçtü. Bu İskenderiye’den Asvan’a olan [{.red} yayın](pill:arc) [{.purple} merkez açısı](pill:angle2) kadardı, çünkü bunlar [[zıt|dikey|denk]] açılar.
+Eratosthenes gölgenin [{.teal} açısını](target:angle1) 7.2° olarak ölçtü. Bu İskenderiye’den Asvan’a olan [{.red} yayın](target:arc) [{.purple} merkez açısı](target:angle2) kadardı, çünkü bunlar [[zıt|dikey|denk]] açılar.
 
 :::
 
@@ -1329,7 +1329,7 @@ __{.m-green}Dilim__in yarıçapı ise koninin tabanındaki çemberin bir noktas�
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=200): svg
+    x-geopad.geo-sketch.no-background(width=280 height=200): svg
       circle(x="point(140, 10)" name="a" hidden)
       circle(x="point(140, 170)" name="b" hidden)
       circle(x="point(220, 170)" name="c" hidden)
@@ -1359,7 +1359,7 @@ _{span.reveal(when="blank-0")}`2 π r`. Şimdi dilimin alanını öndeki kısım
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
+    x-geopad.geo-sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
       circle(x="point(140,110)" name="c1" hidden)
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)

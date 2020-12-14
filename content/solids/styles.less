@@ -5,5 +5,17 @@
 
 
 @import "../shared/variables";
+@import "../shared/components/solid";
 
-// TODO
+x-polyhedron { display: block; margin: 0 auto; }
+
+x-voxel-painter {
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+
+  .eraser { position: absolute; width: 40px; height: 40px; background: red; }
+  x-icon-btn { position: absolute; bottom: 6px; right: 6px; }
+}

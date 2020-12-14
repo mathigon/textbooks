@@ -472,15 +472,15 @@ _{span.n}${geometric(b,r,5)}_, …
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-إذا _{span.var-action} `r > 1`_ ، فإن الشروط [[ستزداد بسرعة|تنخفض بسرعة|تقترب إلي الصفر]] _{span.reveal(when="blank-2")}_ حتى اللانهاية. يقول علماء الرياضيات أن التسلسل [تتباعد](gloss:sequence-divergence)
+إذا [`r > 1`](action:set(2,2)) ، فإن الشروط [[ستزداد بسرعة|تنخفض بسرعة|تقترب إلي الصفر]] _{span.reveal(when="blank-2")}_ حتى اللانهاية. يقول علماء الرياضيات أن التسلسل [تتباعد](gloss:sequence-divergence)
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-إذا كان _{span.var-action} _r_ بين –1 و 1_ ، فستقترب البنود [[دائمًا من 0|ارخفاض إلي الانهاية السلبية|اصغر]] _{span.reveal(when="blank-3")}. نقول أن التسلسل [__يتقارب__](gloss:sequence-convergence)._
+إذا كان [_r_ بين –1 و 1](action:set(10,0.6)) ، فستقترب البنود [[دائمًا من 0|ارخفاض إلي الانهاية السلبية|اصغر]] _{span.reveal(when="blank-3")}. نقول أن التسلسل [__يتقارب__](gloss:sequence-convergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-إذا كانت _{span.var-action} `r < -1`_ ، فستتبادل المصطلحات بين الإيجابية والسلبية ، بينما تصبح [[قيمتها المطلقة|معكوس|فرق]] أكبر.
+إذا كانت [`r < -1`](action:set(3,-1.4)) ، فستتبادل المصطلحات بين الإيجابية والسلبية ، بينما تصبح [[قيمتها المطلقة|معكوس|فرق]] أكبر.
 
 :::
 
@@ -588,7 +588,7 @@ __{.m-green} تسلسل هندسي__ له الحد الأول `a` والنسبة
 في ما يلي مقطع قصير من فيلم _Pay it Forward_ ، حيث يشرح تريفور البالغ من العمر 12 عامًا فكرته عن جعل العالم مكانًا أفضل:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption استخراج من “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
@@ -1215,17 +1215,17 @@ _{.n}[[144]]_, …
       x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} إذا كانت الزاوية _{span.fib-action(data-value=0)} 0 °_ ، فسوف تنمو جميع البذور في صف واحد طويل بعيدًا عن المركز.
+{div(slot="legend")} إذا كانت الزاوية [0°](action:set(0)) ، فسوف تنمو جميع البذور في صف واحد طويل بعيدًا عن المركز.
 
-{div.inline(slot="legend")} إذا كانت الزاوية _{span.fib-action(data-value=0.5)} `1/2`_ لدوران كامل (180 درجة) ، فستتبادل البذور بين "ذراعيْن" منفصلين يبتعدان عن المركز.
+{div.inline(slot="legend")} إذا كانت الزاوية [`1/2`](action:set(0.5)) لدوران كامل (180 درجة) ، فستتبادل البذور بين "ذراعيْن" منفصلين يبتعدان عن المركز.
 
-{div.inline(slot="legend")} إذا كان الدوران نسبة كسرية أخرى تبلغ 360 درجة ، على سبيل المثال _{span.fib-action(data-value=2/5)} `2/5`_ أو _{span.fib-action(data-value=1/3)} `1/3`_ أو _{span.fib-action(data-value=3/8)} `3/8`_ ، فسيكون عدد "الأسلحة" هو نفسه [[المقام|بسط|العامل الرئيسي]] لهذا الكسر.
+{div.inline(slot="legend")} إذا كان الدوران نسبة كسرية أخرى تبلغ 360 درجة ، على سبيل المثال [`2/5`](action:set(2/5)) أو [`1/3`](action:set(1/3)) أو [`3/8`](action:set(3/8)) ، فسيكون عدد "الأسلحة" هو نفسه [[المقام|بسط|العامل الرئيسي]] لهذا الكسر.
 
 {div(slot="legend")} للأسف "الأسلحة" سيئة ، لأنها تعني أن البذور غير موزعة بالتساوي: كل المساحة بين الذراعين تضيع. ولكن إذا لم تعمل [الأرقام المنطقية](gloss:rational-numbers) ، فلنجرّب [الأرقام غير المنطقية](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} أحد الأمثلة لرقم غير منطقي هو [`pi`](gloss:pi). ولكن إذا كانت الزاوية بين البذور _{span.fib-action(data-value=0.31831)} `1/pi`_ بزاوية 360 درجة ، فلا يزال يبدو أننا نحصل على الأسلحة: 22 منها. ذلك لأن الكسر `22/7 = 3.1429…` هو تقريب جيد جدًا لـ `pi`. ما نحتاجه حقًا هو رقم غير منطقي _لا يمكن_ تقريبه تقريبًا بواسطة كسر بسيط.
+{div.inline(slot="legend")} أحد الأمثلة لرقم غير منطقي هو [`pi`](gloss:pi). ولكن إذا كانت الزاوية بين البذور [`1/pi`](action:set(0.31831)) بزاوية 360 درجة ، فلا يزال يبدو أننا نحصل على الأسلحة: 22 منها. ذلك لأن الكسر `22/7 = 3.1429…` هو تقريب جيد جدًا لـ `pi`. ما نحتاجه حقًا هو رقم غير منطقي _لا يمكن_ تقريبه تقريبًا بواسطة كسر بسيط.
 
-{div.inline(slot="legend")} اتضح أن [النسبة الذهبية](gloss:golden-ratio) هي: "الأكثر غير منطقية" من جميع الأرقام غير المنطقية. إذا كانت الزاوية بين البذور _{span.fib-action(data-value=0.6180339)} `1/phi`_ بزاوية 360 درجة ، فيبدو أنها متباعدة تمامًا. وهذه بالضبط هي الزاوية التي تستخدمها النباتات حول العالم.
+{div.inline(slot="legend")} اتضح أن [النسبة الذهبية](gloss:golden-ratio) هي: "الأكثر غير منطقية" من جميع الأرقام غير المنطقية. إذا كانت الزاوية بين البذور [`1/phi`](action:set(0.6180339)) بزاوية 360 درجة ، فيبدو أنها متباعدة تمامًا. وهذه بالضبط هي الزاوية التي تستخدمها النباتات حول العالم.
 
 :::
 
@@ -1473,7 +1473,7 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
     x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
-{.reveal(when="var-0")} لاحظ كيف تنتهي بعض نقاط البداية بسرعة كبيرة ، بينما تأخذ نقاط أخرى (مثل _{span.var-action} 31_ أو _{span.var-action} 47_) أكثر من مائة خطوة قبل أن تصل إلى النقاط الأربع ، 2 ، 1 دورة.
+{.reveal(when="var-0")} لاحظ كيف تنتهي بعض نقاط البداية بسرعة كبيرة ، بينما تأخذ نقاط أخرى (مثل [31](action:set(31)) أو [47](action:set(47))) أكثر من مائة خطوة قبل أن تصل إلى النقاط الأربع ، 2 ، 1 دورة.
 
 ---
 > id: hailstone-3

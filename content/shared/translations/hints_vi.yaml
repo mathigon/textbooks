@@ -2,7 +2,7 @@
 # MATHIGON HINTS
 # ==============================================================================
 
-welcome: 'Chào mừng đến với Mathigon! Tôi là Archm Archie, gia sư cá nhân của bạn. :mortar_board:'
+welcome: 'Chào mừng đến với Mathigon! Tôi là Archm Archie, gia sư cá nhân của bạn. :graduation-cap:'
 
 account: 'Bạn có thể [tạo tài khoản miễn phí](->#login-btn) để lưu tiến trình của mình.'
 
@@ -15,25 +15,25 @@ tutorial2: |
   bạn rời đi.
 
 correct:
-  - 'Làm tốt lắm :relaxed:'
-  - 'Công việc tuyệt vời! :relieved:'
-  - 'Tuyệt vời :grinning:'
-  - 'Rực rỡ :thumbsup:'
-  - 'Thông minh! :ok_hand:'
-  - 'Tuyệt vời :sunglasses:'
-  - 'Đẹp! :v:'
-  - 'Con đường để đi! :blush:'
-  - 'Ngọt ngào :relaxed:'
+  - 'Làm tốt lắm :smiling-face:'
+  - 'Công việc tuyệt vời! :relieved-face:'
+  - 'Tuyệt vời :grinning-face:'
+  - 'Rực rỡ :thumbs-up:'
+  - 'Thông minh! :ok-hand:'
+  - 'Tuyệt vời :smiling-face-with-sunglasses:'
+  - 'Đẹp! :victory-hand:'
+  - 'Con đường để đi! :smiling-face-with-smiling-eyes:'
+  - 'Ngọt ngào :smiling-face:'
   - 'Ấn tượng! :trophy:'
-  - 'Nổi bật :grin:'
+  - 'Nổi bật :grinning-face:'
   - 'Tuyệt vời! :star:'
-  - 'Tuyệt vời! :smiley:'
+  - 'Tuyệt vời! :smiling-face:'
 
 incorrect:
-  - 'Điều đó không hoàn toàn đúng :white_frowning_face:'
-  - 'Bạn có chắc chắn về điều đó không? :thinking_face:'
-  - 'Điều đó không đúng. :hushed:'
-  - 'Thử lại! :confused:'
+  - 'Điều đó không hoàn toàn đúng :frowning-face:'
+  - 'Bạn có chắc chắn về điều đó không? :thinking-face:'
+  - 'Điều đó không đúng. :hushed-face:'
+  - 'Thử lại! :confused-face:'
 
 welcomeMorning: Buổi sáng tốt lành!
 
@@ -49,4 +49,4 @@ welcomeEveningNamed: 'Chào buổi tối, $name!'
 
 serverError: |
   Xin lỗi, tôi có thể giúp đỡ vào lúc này. Kiểm tra kết nối internet của bạn hoặc thử lại sau.
-  :confused:
+  :confused-face:

@@ -1830,7 +1830,7 @@ twin-primes:
     __Numerele Prime Gemene__ sunt perechi de numere prime precum 17 și 19 sau 101 și 103, care se
     află la o distanță de două unități. Nu se știe dacă există o infinitate de perechi de numere
     prime gemene.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Cerc unitate

@@ -689,7 +689,7 @@ gauss:
     kəşflərini etdi və daha sonra professor kimi bir çox digər məşhur riyaziyyatçılara dərs verdi.
   links:
     - title: Prime Number Theorem
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -741,7 +741,7 @@ goldbach:
     çağdaşları idi. Rus Çarı Peter II-nin tərbiyəçisi idi və "Qoldbax Coneksiyası" ilə yadda qalır.
   links:
     - title: Goldbach Conjecture
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -1107,7 +1107,7 @@ mersenne:
     simli harmonikanı araşdırdı və ilahiyyat və fəlsəfə haqqında yazdı.
   links:
     - title: Large Primes
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1518,7 +1518,7 @@ riemann:
     qoyan diferensial həndəsə öyrəndi və baş ədədlərin paylanması ilə bağlı əsaslı kəşflər etdi.
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872

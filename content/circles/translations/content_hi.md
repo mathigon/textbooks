@@ -440,11 +440,11 @@
 
 ::: column.grow
 
-ए _{span.var-action} पूर्ण वृत्त_ की परिधि है _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ । 
+ए [पूर्ण वृत्त](action:setState(0)) की परिधि है _{x-equation.small(solution="2 π" keys="+ × π" numeric)}_ । 
 
-{.reveal(when="eqn-0")} के लिए _{span.var-action} आधा चक्र रोटेशन_ , परिधि के साथ संबंधित दूरी है _{x-equation.small(solution="π" keys="+ × π" numeric)}_ । 
+{.reveal(when="eqn-0")} के लिए [आधा चक्र रोटेशन](action:setState(1)), परिधि के साथ संबंधित दूरी है _{x-equation.small(solution="π" keys="+ × π" numeric)}_ । 
 
-{.reveal(when="eqn-1")} के लिए _{span.var-action} क्वार्टर सर्कल रोटेशन_ , परिधि के साथ दूरी है _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ । 
+{.reveal(when="eqn-1")} के लिए [क्वार्टर सर्कल रोटेशन](action:setState(2)), परिधि के साथ दूरी है _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_ । 
 
 {.reveal(when="eqn-2")} और इसी तरह: कोणों को मापने के इस तरीके को [__रेडियन__](gloss:radians) कहा जाता है (आप इसे "त्रिज्या इकाइयों" के रूप में याद कर सकते हैं)। 
 
@@ -606,12 +606,12 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: column.grow(parent="right")
 
-* {.r} ए [{.red} secant](pill:secant) एक ऐसी रेखा है जो दो बिंदुओं पर एक वृत्त को काटती है। [जारी रखें](btn:next)
-* {.r.reveal(when="next-0")} ए [{.green} कॉर्ड](pill:chord) एक लाइन सेगमेंट है जिसका एंडपॉइंट एक सर्कल की परिधि पर स्थित है। [जारी रखें](btn:next)
-* {.r.reveal(when="next-1")} ए [{.blue} स्पर्शरेखा](pill:tangent) वह रेखा है जो किसी वृत्त को बिल्कुल एक बिंदु पर [स्पर्श करती](pill:tangent) है। इसे __स्पर्शरेखा__ का __बिंदु__ कहा जाता है। [जारी रखें](btn:next)
-* {.r.reveal(when="next-2")} एक [{.yellow} चाप](pill:arc) एक वृत्त की परिधि का एक खंड है। [जारी रखें](btn:next)
-* {.r.reveal(when="next-3")} ए [{.teal} सेक्टर](pill:sector) एक सर्कल के इंटीरियर का एक हिस्सा है, जो एक _चाप_ और _दो रेडी_ द्वारा घिरा हुआ है। [जारी रखें](btn:next)
-* {.r.reveal(when="next-4")} अंत में, ए [{.purple} सेगमेंट](pill:segment) एक सर्कल के इंटीरियर का एक हिस्सा है, जो एक _चाप_ और _एक कॉर्ड_ द्वारा घिरा हुआ है। [जारी रखें](btn:next) 
+* {.r} ए [{.red} secant](target:secant) एक ऐसी रेखा है जो दो बिंदुओं पर एक वृत्त को काटती है। [जारी रखें](btn:next)
+* {.r.reveal(when="next-0")} ए [{.green} कॉर्ड](target:chord) एक लाइन सेगमेंट है जिसका एंडपॉइंट एक सर्कल की परिधि पर स्थित है। [जारी रखें](btn:next)
+* {.r.reveal(when="next-1")} ए [{.blue} स्पर्शरेखा](target:tangent) वह रेखा है जो किसी वृत्त को बिल्कुल एक बिंदु पर [स्पर्श करती](target:tangent) है। इसे __स्पर्शरेखा__ का __बिंदु__ कहा जाता है। [जारी रखें](btn:next)
+* {.r.reveal(when="next-2")} एक [{.yellow} चाप](target:arc) एक वृत्त की परिधि का एक खंड है। [जारी रखें](btn:next)
+* {.r.reveal(when="next-3")} ए [{.teal} सेक्टर](target:sector) एक सर्कल के इंटीरियर का एक हिस्सा है, जो एक _चाप_ और _दो रेडी_ द्वारा घिरा हुआ है। [जारी रखें](btn:next)
+* {.r.reveal(when="next-4")} अंत में, ए [{.purple} सेगमेंट](target:segment) एक सर्कल के इंटीरियर का एक हिस्सा है, जो एक _चाप_ और _एक कॉर्ड_ द्वारा घिरा हुआ है। [जारी रखें](btn:next) 
 
 :::
 
@@ -670,11 +670,11 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: column.grow
 
-जैसा कि आप आरेख में देख सकते हैं, ए [{.red} चाप](pill:arc) [[परिधि]] का एक हिस्सा है [[| व्यास |]] एक वृत्त की [[स्पर्शरेखा]] , और a [{.yellow} सेक्टर](pill:sector) [[इंटीरियर]] का एक हिस्सा है [[| त्रिज्या |]] एक वृत्त की [[परिधि]] । 
+जैसा कि आप आरेख में देख सकते हैं, ए [{.red} चाप](target:arc) [[परिधि]] का एक हिस्सा है [[| व्यास |]] एक वृत्त की [[स्पर्शरेखा]] , और a [{.yellow} सेक्टर](target:sector) [[इंटीरियर]] का एक हिस्सा है [[| त्रिज्या |]] एक वृत्त की [[परिधि]] । 
 
 ::: .reveal(when="blank-0 blank-1")
 
-दो बिंदुओं _A_ और _B के_ बीच के आर्क को अक्सर लिखा जाता है `arc(AB)` । यह परिभाषा थोड़ी अस्पष्ट है: एक है [{.purple} दूसरा चाप](pill:major) जो _ए_ और _बी को_ जोड़ता है लेकिन सर्कल के चारों ओर दूसरा रास्ता जाता है। 
+दो बिंदुओं _A_ और _B के_ बीच के आर्क को अक्सर लिखा जाता है `arc(AB)` । यह परिभाषा थोड़ी अस्पष्ट है: एक है [{.purple} दूसरा चाप](target:major) जो _ए_ और _बी को_ जोड़ता है लेकिन सर्कल के चारों ओर दूसरा रास्ता जाता है। 
 
 दो चापों में से __छोटे__ को __लघु चाप__ कहा जाता है, और बड़े को __प्रमुख चाप__ कहा जाता है। यदि अंक _A_ और _B_ एक दूसरे के बिल्कुल विपरीत हैं, तो दोनों चापों की लंबाई समान है और [[अर्धवृत्त हैं | व्यास | परिधि]] । 
 
@@ -687,13 +687,13 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: column.grow
 
-एक चाप की लंबाई या किसी सेक्टर के क्षेत्र को खोजने के लिए, हमें सर्कल के केंद्र में संबंधित कोण के बारे में जानना होगा: इसे सेक्टर कहा जाता है। [{.blue} केंद्रीय कोण](pill:angle) । 
+एक चाप की लंबाई या किसी सेक्टर के क्षेत्र को खोजने के लिए, हमें सर्कल के केंद्र में संबंधित कोण के बारे में जानना होगा: इसे सेक्टर कहा जाता है। [{.blue} केंद्रीय कोण](target:angle) । 
 
-ध्यान दें कि चाप, क्षेत्र और कोण सभी एक पूर्ण वृत्त के _समान अनुपात_ को कैसे लेते हैं। उदाहरण के लिए, यदि [{.blue} केंद्रीय कोण](pill:angle) है _{span.var-action} 90°_ , यह [[एक चौथाई]] लेता है [[| एक आधा | एक तिहाई]] [{.teal} पूरा घेरा](pill:fangle) । 
+ध्यान दें कि चाप, क्षेत्र और कोण सभी एक पूर्ण वृत्त के _समान अनुपात_ को कैसे लेते हैं। उदाहरण के लिए, यदि [{.blue} केंद्रीय कोण](target:angle) है [90°](action:set90Deg()) , यह [[एक चौथाई]] लेता है [[| एक आधा | एक तिहाई]] [{.teal} पूरा घेरा](target:fangle) । 
 
 ::: .reveal(when="blank-0")
 
-इसका मतलब यह है कि [{.red} चाप की लंबाई](pill:arc) भी है `1/4` का [{.purple}](pill:circ) सर्कल की [पूरी परिधि](pill:circ) , और [{.yellow} क्षेत्र का क्षेत्र](pill:sector) है `1/4` का [{.orange}](pill:area) सर्कल के [पूरे क्षेत्र](pill:area) । 
+इसका मतलब यह है कि [{.red} चाप की लंबाई](target:arc) भी है `1/4` का [{.purple}](target:circ) सर्कल की [पूरी परिधि](target:circ) , और [{.yellow} क्षेत्र का क्षेत्र](target:sector) है `1/4` का [{.orange}](target:area) सर्कल के [पूरे क्षेत्र](target:area) । 
 
 हम इस रिश्ते को एक समीकरण में व्यक्त कर सकते हैं: 
 
@@ -726,13 +726,13 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} चाप की लंबाई](pill) | = | `"circumference" × c/360` |
+| [ चाप की लंबाई](pill:red) | = | `"circumference" × c/360` |
 | | = | `2 π r × c/360` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} सेक्टर क्षेत्र](pill) | = | `"circle area" × c/360` |
+| [ सेक्टर क्षेत्र](pill:yellow) | = | `"circle area" × c/360` |
 | | = | `π r^2 × c/360` |
 {.eqn-system}
 
@@ -751,13 +751,13 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: column(width=320 parent="padded-thin")
 
-| [{.red} चाप की लंबाई](pill) | = | `2 π r × c/(2π)` |
+| [ चाप की लंबाई](pill:red) | = | `2 π r × c/(2π)` |
 | | = | `r × c` |
 {.eqn-system}
 
 ::: column(width=320)
 
-| [{.yellow} सेक्टर क्षेत्र](pill) | = | `π r^2 × c/(2π)` |
+| [ सेक्टर क्षेत्र](pill:yellow) | = | `π r^2 × c/(2π)` |
 | | = | `1/2 r^2 c` |
 {.eqn-system}
 
@@ -801,7 +801,7 @@ sin (30 रेड) = [[-0.988]] _{span.eqn-gap}_ cos (1 रेड) = [[0.54]]
 
 ::: .reveal(when="next-0")
 
-एराटोस्थनीज ने मापा कि द [{.teal}](pill:angle1) छाया का [कोण](pill:angle1) 7.2° था। यह भी वैसा ही है [{.purple} का केंद्रीय कोण](pill:angle2) [{.red}](pill:arc) अलेक्जेंड्रिया से स्वेनेट तक [आर्क](pill:arc) , क्योंकि वे [[बारी]] - [[बारी से हैं | खड़ा | संगत]] कोण। 
+एराटोस्थनीज ने मापा कि द [{.teal}](target:angle1) छाया का [कोण](target:angle1) 7.2° था। यह भी वैसा ही है [{.purple} का केंद्रीय कोण](target:angle2) [{.red}](target:arc) अलेक्जेंड्रिया से स्वेनेट तक [आर्क](target:arc) , क्योंकि वे [[बारी]] - [[बारी से हैं | खड़ा | संगत]] कोण। 
 
 :::
 
@@ -1186,7 +1186,7 @@ __{.m-red}__ शंकु की __त्रिज्या__ परिपत्
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=200): svg
+    x-geopad.geo-sketch.no-background(width=280 height=200): svg
       circle(x="point(140, 10)" name="a" hidden)
       circle(x="point(140, 170)" name="b" hidden)
       circle(x="point(220, 170)" name="c" hidden)
@@ -1216,7 +1216,7 @@ __{.m-red}__ शंकु की __त्रिज्या__ परिपत्
 
 ::: column(width=280)
 
-    x-geopad.sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
+    x-geopad.geo-sketch.no-background(width=280 height=300 style="margin-top: -20px"): svg
       circle(x="point(140,110)" name="c1" hidden)
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)

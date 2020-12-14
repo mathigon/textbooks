@@ -491,17 +491,17 @@ _{span.n}${geometric(b,r,5)}_, …
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-如果 _{span.var-action}`r > 1`_, 则后面项将[[快速变大|快速变小|趋近0]]_{span.reveal(when="blank-2")}, 直到无穷。数学家称该序列[__发散__](gloss:sequence-divergence)._
+如果 [`r > 1`](action:set(2,2)), 则后面项将[[快速变大|快速变小|趋近0]]_{span.reveal(when="blank-2")}, 直到无穷。数学家称该序列[__发散__](gloss:sequence-divergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-如果 _{span.var-action}*r* 是介于 –1 和 1_之间, 后面项将总是
+如果 [*r* 是介于 –1 和 1](action:set(10,0.6))之间, 后面项将总是
 [[趋近0|降至负无穷|变小]]_{span.reveal(when="blank-3")}.
 我们称该序列[__收敛__](gloss:sequence-convergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-如果_{span.var-action}`r < -1`_，则后面项将在正数和负数之间交替，而它们的
+如果[`r < -1`](action:set(3,-1.4))，则后面项将在正数和负数之间交替，而它们的
 [[绝对值|相反数|差]]将变大。
 
 :::
@@ -610,7 +610,7 @@ _{span.n}${geometric(b,r,5)}_, …
 这是电影_让爱传出去_的一个简短片段，12岁的特雷弗在其中解释了他让世界变得更好的想法：
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption 节选自“让爱传出去” (2000), ©华纳兄弟娱乐
 
 ---
@@ -1255,26 +1255,26 @@ _{.n}[[144]]_, …
       x-slider(steps=1000 speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} 如果角度为_{span.fib-action(data-value=0)}0°_，则所有种子
+{div(slot="legend")} 如果角度为[0°](action:set(0))，则所有种子
 将在远离中心的一个长条中生长。
 
-{div.inline(slot="legend")}如果角度为圆周的_{span.fib-action(data-value=0.5)}`1/2`_(180°)，
+{div.inline(slot="legend")}如果角度为圆周的[`1/2`](action:set(0.5))(180°)，
 则种子将在远离中心的两个独立“臂”之间交替。
 
 {div.inline(slot="legend")}如果旋转角度是360°的另一个分数比例，例如
-_{span.fib-action(data-value=2/5)}`2/5`_ 或 _{span.fib-action(data-value=1/3)}`1/3`_
-或 _{span.fib-action(data-value=3/8)}`3/8`_，则“臂数”将与那个分数的[[分母|分子|质因数]]相同。
+[`2/5`](action:set(2/5)) 或 [`1/3`](action:set(1/3))
+或 [`3/8`](action:set(3/8))，则“臂数”将与那个分数的[[分母|分子|质因数]]相同。
 
 不幸的是，“臂”不好，因为它们意味着种子分布不均匀：臂之间的所有空间都被浪费了。
 但是如果[有理数](gloss:rational-numbers)不起作用，让我们试试[无理数](gloss:irrational-numbers)！
 
 {div.inline(slot="legend")}无理数的一个例子是[`pi`](gloss:pi)。但是，如果种子
-之间的夹角为360°的_{span.fib-action(data-value=0.31831)}`1/pi`_，我们仍然可以
+之间的夹角为360°的[`1/pi`](action:set(0.31831))，我们仍然可以
 得到这些臂：22只。这是因为分数`22/7=3.1429…`是一个很好的`pi`近似值。我们
 真正需要的是一个无理数，它_不能_用一个简单的分数来近似。
 
 {div.inline(slot="legend")} 事实证明，[黄金分割率](gloss:golden-ratio)是所有无
-理数字中“最不合理的”。如果种子之间的夹角为360°的_{span.fib-action(data-value=0.6180339)}`1/phi`_，
+理数字中“最不合理的”。如果种子之间的夹角为360°的[`1/phi`](action:set(0.6180339))，
 则它们看起来几乎是完全间隔的。这正是世界各地植物所使用的角度。
 :::
 
@@ -1555,7 +1555,7 @@ _{.n}2_, _{.n}1_,* *{span.s-purple}_{.n}4_, _{.n}2_, _{.n}1_,*
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
 {.reveal(when="var-0")}注意一些起始点是如何非常快速结束的， 而其他
-(如_{span.var-action}31_或_{span.var-action}47_)在达到4、2、1个循环之前有
+(如[31](action:set(31))或[47](action:set(47)))在达到4、2、1个循环之前有
 上百步。
 
 ---

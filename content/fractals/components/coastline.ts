@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Point} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 
 // This is a hard-coded result of the computation below, which takes very long
 // in a browser!

@@ -271,7 +271,7 @@ groß wie der [Innenwinkel](target:int-angle) des Vielecks:
 [[Tangens|Sinus|Kosinus]]funktion verwenden:
 
 {.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
-target("Gegenkathete", "apothem") / target("Ankathete", "half-base") =
+pill("Gegenkathete", "yellow", "apothem") / pill("Ankathete", "green", "half-base") =
 blank("Apothema", "s", "s/2") / blank("s/2", "s", "Apothema")`
 
 {.text-center.reveal(when="blank-5 blank-6")} `⇒ pill("Apothema", "yellow",

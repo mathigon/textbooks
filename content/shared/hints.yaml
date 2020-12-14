@@ -3,31 +3,31 @@
 # ==============================================================================
 
 
-welcome: "Welcome to Mathigon! I’m Archie, your personal tutor. :mortar_board:"
+welcome: "Welcome to Mathigon! I’m Archie, your personal tutor. :graduation-cap:"
 account: You can [create a free account](->#login-btn) to save your progress.
 tutorial1: Our content is divided into small steps. You have to complete the activities to reveal what’s next.
 tutorial2: We will save all your progress, so you can come back later and continue right where you left off.
 
 correct:
-  - "Well done :relaxed:"
-  - "Great Work! :relieved:"
-  - "Awesome :grinning:"
-  - "Brilliant :thumbsup:"
-  - "Excellent! :ok_hand:"
-  - "Cool :sunglasses:"
-  - "Nice! :v:"
-  - "Way to go! :blush:"
-  - "Sweet :relaxed:"
+  - "Well done :smiling-face:"
+  - "Great Work! :relieved-face:"
+  - "Awesome :grinning-face:"
+  - "Brilliant :thumbs-up:"
+  - "Excellent! :ok-hand:"
+  - "Cool :smiling-face-with-sunglasses:"
+  - "Nice! :victory-hand:"
+  - "Way to go! :smiling-face-with-smiling-eyes:"
+  - "Sweet :smiling-face:"
   - "Impressive! :trophy:"
-  - "Outstanding :grin:"
+  - "Outstanding :grinning-face:"
   - "Superb! :star:"
-  - "Wonderful! :smiley:"
+  - "Wonderful! :smiling-face:"
 
 incorrect:
-  - "That’s not quite right :white_frowning_face:"
-  - "Are you sure about that? :thinking_face:"
-  - "That doesn’t look right. :hushed:"
-  - "Try again! :confused:"
+  - "That’s not quite right :frowning-face:"
+  - "Are you sure about that? :thinking-face:"
+  - "That doesn’t look right. :hushed-face:"
+  - "Try again! :confused-face:"
 
 welcomeMorning: Good morning!
 welcomeAfternoon: Good afternoon!
@@ -37,4 +37,4 @@ welcomeMorningNamed: Good morning, $name!
 welcomeAfternoonNamed: Good afternoon, $name!
 welcomeEveningNamed: Good evening, $name!
 
-serverError: "Sorry, I can’t help at the moment. Check your internet connection or try again later. :confused:"
+serverError: "Sorry, I can’t help at the moment. Check your internet connection or try again later. :confused-face:"

@@ -5,7 +5,8 @@
 
 
 import {list} from '@mathigon/core';
-import {nearlyEquals, Point} from '@mathigon/fermat';
+import {nearlyEquals} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
 import {CoordinateSystem, EquationSystem, Step} from '../shared/types';
 
 import './components/projectile';
@@ -77,8 +78,8 @@ export function intro4($step: Step) {
 
   $system.isFinal = (expr) => {
     const str = expr.toString();
-    return (expr.variables.length === 1) && expr.functions.includes('sup')
-           && str.includes('89000') && str.includes('3250') &&
+    return (expr.variables.length === 1) && expr.functions.includes('sup') &&
+           str.includes('89000') && str.includes('3250') &&
            !str.includes('(');
   };
 
@@ -116,16 +117,13 @@ export function parabola($step: Step) {
     $chart.setFunctions(fn);
     $chart.drawPoints(zeros(s.a, s.b, s.c).map(p => new Point(p, fn(p))));
   });
+
+  $step.model.set = (a: number, b: number, c: number) => {
+    $step.model.a = a;
+    $step.model.b = b;
+    $step.model.c = c;
+  };
 }
-
-/* export function s3($step: Step) {
-  $step.model.zeros = zeros;
-
-  let $actions = $step.$$('.action');
-  $actions[0].on('click', () => $step.model.a = 1; $step.model.b = -2; $step.model.c = 2; });
-  $actions[1].on('click', () => $step.model.a = 1; $step.model.b = 2; $step.model.c = 1; });
-  $actions[2].on('click', () => $step.model.a = 1; $step.model.b = -4; $step.model.c = 2; });
-} */
 
 export function directrix($step: Step) {
   $step.model.qy = (p: Point, d: Point) => {

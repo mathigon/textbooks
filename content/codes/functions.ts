@@ -5,18 +5,21 @@
 
 
 import {delay, wait} from '@mathigon/core';
-import {Point} from '@mathigon/fermat';
-import {$N, ElementView, slide, InputView, SVGView, loadScript} from '@mathigon/boost';
-import {Step, Slider, Slideshow} from '../shared/types';
+import {Point} from '@mathigon/euclid';
+import {$N, ElementView, InputView, loadScript, slide, SVGView} from '@mathigon/boost';
+import {Select, Slider, Slideshow, Step} from '../shared/types';
 
-import {beep, Beep} from './components/beep'
-import {CodeBox} from './components/code-box'
-import {MORSE_CODE} from './components/utilities'
+import {beep, Beep} from './components/beep';
+import {CodeBox} from './components/code-box';
+import {MORSE_CODE} from './components/utilities';
+import {HammingCode} from './components/hamming';
 
 import './components/code-box';
 import './components/barcode';
 import './components/enigma';
+import './components/enigma-rotors';
 import './components/morse';
+import './components/hamming';
 
 
 // -----------------------------------------------------------------------------
@@ -26,6 +29,7 @@ export function intro($step: Step) {
   let hasSeenHint = false;
   loadScript('https://w.soundcloud.com/player/api.js').then(() => {
     // Trigger and event when students press 'play' in the iframe.
+    // eslint-disable-next-line new-cap
     const widget = (window as any).SC.Widget($step.$('iframe')!._el);
     widget.bind('play', () => {
       if (!hasSeenHint) setTimeout(() => $step.addHint('song'), 5000);
@@ -96,7 +100,7 @@ export function morseApplications($step: Step) {
 export function radio($step: Step) {
   const audio = new Audio('/resources/codes/images/better-days-audio.mp3');
   audio.preload = 'true';
-  const $btn = $step.$('.radio-play')!
+  const $btn = $step.$('.radio-play')!;
 
   $btn.on('click', () => audio.paused ? audio.play() : audio.pause());
   audio.addEventListener('play', () => $btn.addClass('playing'));
@@ -126,46 +130,47 @@ export function transistor($section: Step) {
   let electronPositions: number[];
   const UPDATE_PERIOD = 100;
 
+  // SATELLITE: mimic here
   function move() {
     if (!switchOn) return;
     electronPositions = electronPositions.map(p => {
-        let pp = p + 0.02;
-        if (pp >= 1) pp = (pp - 1);
-        return pp;
-    })
+      let pp = p + 0.02;
+      if (pp >= 1) pp = (pp - 1);
+      return pp;
+    });
 
     $electrons.forEach((e, i) => {
-        const xy = $pathOn.getPointAt(electronPositions[i]);
-        const xyShift = new Point(xy.x - 12, xy.y - 12);
-        e.setTransform(xyShift);
+      const xy = $pathOn.getPointAt(electronPositions[i]);
+      const xyShift = new Point(xy.x - 12, xy.y - 12);
+      e.setTransform(xyShift);
     });
 
     setTimeout(move, UPDATE_PERIOD);
-}
+  }
 
   function turnOn() {
-      // show all
-      $electrons.forEach((e) => e.show());
-      const totalLength = $pathOn.strokeLength;
-      const gap = totalLength / $electrons.length; // gap between electrons
-      // need way to scale this from linear to non-linear and back
-      electronPositions = $electrons.map((e, i) => (i * gap) / totalLength); // each electron has a position
+    // show all
+    $electrons.forEach((e) => e.show());
+    const totalLength = $pathOn.strokeLength;
+    const gap = totalLength / $electrons.length; // gap between electrons
+    // need way to scale this from linear to non-linear and back
+    electronPositions = $electrons.map((e, i) => (i * gap) / totalLength); // each electron has a position
 
-      setTimeout(move, UPDATE_PERIOD);
+    setTimeout(move, UPDATE_PERIOD);
   }
 
   function turnOff() {
-      // NEXT: e[0:3] move to pathOff.pointAt(0.2, 0.4, 0.6, 0.8);
-      // hide them
-      $electrons.forEach((e, i) => {
-          if (i > 3) {
-              e.hide();
-          } else {
-              const xy = $pathOff.getPointAt([0.11, 0.37, 0.63, 0.89][i]); // one of four points
-              const xyShift = new Point(xy.x - 12, xy.y - 12);
-              e.setTransform(xyShift);
-          }
-      });
+    // NEXT: e[0:3] move to pathOff.pointAt(0.2, 0.4, 0.6, 0.8);
+    // hide them
+    $electrons.forEach((e, i) => {
+      if (i > 3) {
+        e.hide();
+      } else {
+        const xy = $pathOff.getPointAt([0.11, 0.37, 0.63, 0.89][i]); // one of four points
+        const xyShift = new Point(xy.x - 12, xy.y - 12);
+        e.setTransform(xyShift);
+      }
+    });
   }
 
   $switch.on('click', () => {
@@ -173,7 +178,7 @@ export function transistor($section: Step) {
     switchOn = !switchOn;
     if (switchOn) turnOn();
     else turnOff();
-});
+  });
 }
 
 /**
@@ -184,7 +189,7 @@ export function transistor($section: Step) {
  * @param filter the function to decide what matches
  */
 function numberGrid($grid: ElementView, time: number, className: string,
-                    filter: (i: string) => boolean) {
+    filter: (i: string) => boolean) {
   for (const $i of $grid.children) {
     if (!filter($i.text)) continue;
     delay(() => $i.addClass(className), time);
@@ -216,39 +221,40 @@ export function bracket($step: Step) {
     const direction = x - lastStep;
     lastStep = x;
 
-        for (let i=0; i < x; i++) {
-            $rounds[i].show();
-        }
-        for (let i = x + 1; i < count; i++) {
-            $rounds[i].hide();
-        }
-
-        if (direction < 0 && x == 0) {
-            $rounds[0].hide();
-        }
-
-        if (x == 0) return;
-        if (direction > 0) {
-            let $lines = $rounds[x-1].$$('line');
-            $lines.forEach((l, i) => {
-                if (i % 2 == 0) {
-                    l.animate({
-                        transform: [
-                            `translate(-50px, 0px) scale(0.0, 1.0)`,
-                            `translate(0px, 0px) scale(1.0, 1.0)`
-                    ]}, 400, 100);
-                }
-            });
-        }
+    for (let i = 0; i < x; i++) {
+      $rounds[i].show();
+    }
+    for (let i = x + 1; i < count; i++) {
+      $rounds[i].hide();
     }
 
-    $slider.on('move', move);
-    move(-1);
+    if (direction < 0 && x == 0) {
+      $rounds[0].hide();
+    }
+
+    if (x == 0) return;
+    if (direction > 0) {
+      const $lines = $rounds[x - 1].$$('line');
+      $lines.forEach((l, i) => {
+        if (i % 2 == 0) {
+          l.animate({
+            transform: [
+              `translate(-50px, 0px) scale(0.0, 1.0)`,
+              `translate(0px, 0px) scale(1.0, 1.0)`
+            ]}, 400, 100);
+        }
+      });
+    }
+  }
+
+  $slider.on('move', move);
+  move(-1);
 }
 
 
 /**
  * Slideshow for animating decimal to binary.
+ * HAMMING: mimic this
  */
 export function dec2bin($section: Step) {
   const $slideshow = $section.$('x-slideshow') as Slideshow;
@@ -275,8 +281,8 @@ export function dec2bin($section: Step) {
   const BLOCK_X_POSITIONS = [0, 227, 374, 445, 496]; // translate.x vals
 
   // timing constants
-  const DURATION1 = 400,
-      DURATION2 = 400;
+  const DURATION1 = 400;
+  const DURATION2 = 400;
 
   // values for N=25
   const Nvals = [25, 9, 1, 1, 1];
@@ -292,9 +298,9 @@ export function dec2bin($section: Step) {
 
     const $grab = $claw.$('path') as SVGView;
     $grab.animate({
-          transform: ['none', `translate(0px, ${CLAW_END_Y - CLAW_START_Y}px)`]
-        }
-        , DURATION1, grabbed ? 0 : DURATION2);
+      transform: ['none', `translate(0px, ${CLAW_END_Y - CLAW_START_Y}px)`]
+    }
+    , DURATION1, grabbed ? 0 : DURATION2);
 
     const $arm: SVGView = $claw.$('rect') as SVGView;
     $arm.animate({transform: ['none', `scale(1.0, ${ARM_Y_SCALE})`]},
@@ -359,22 +365,22 @@ export function dec2bin($section: Step) {
                    Nbinary[startDigit] ? getClawEnd(startDigit) :
                    getClawStart(startDigit);
       $blockN.animate({
-            transform: [
-              `translate(${startX}px, ${BLOCK_Y}px)`,
-              `translate(${getClawStart(endDigit)}px, ${BLOCK_Y}px)`]
-          },
-          DURATION1);
+        transform: [
+          `translate(${startX}px, ${BLOCK_Y}px)`,
+          `translate(${getClawStart(endDigit)}px, ${BLOCK_Y}px)`]
+      },
+      DURATION1);
     } else {
       // right to left
       const endX = endDigit < 0 ? BLOCK_X_START :
                  Nbinary[endDigit] ? getClawEnd(endDigit) :
                  getClawStart(endDigit);
       $blockN.animate({
-            transform: [
-              `translate(${getClawStart(startDigit)}px, ${BLOCK_Y}px)`,
-              `translate(${endX}px, ${BLOCK_Y}px)`]
-          },
-          DURATION2, DURATION1);
+        transform: [
+          `translate(${getClawStart(startDigit)}px, ${BLOCK_Y}px)`,
+          `translate(${endX}px, ${BLOCK_Y}px)`]
+      },
+      DURATION2, DURATION1);
     }
   }
 
@@ -427,11 +433,11 @@ export function dec2bin($section: Step) {
       $blockN.show();
       $blockN.$('rect')?.setAttr('width', newN * 10);
       $blockN.animate({
-            transform: [
-              `translate(${basex + BLOCK_X_POSITIONS[digitIndex]}px, ${BLOCK_Y}px)`,
-              `translate(${basex + BLOCK_X_POSITIONS[digitIndex]}px, ${BLOCK_Y}px)`]
-          },
-          DURATION1, DURATION2);
+        transform: [
+          `translate(${basex + BLOCK_X_POSITIONS[digitIndex]}px, ${BLOCK_Y}px)`,
+          `translate(${basex + BLOCK_X_POSITIONS[digitIndex]}px, ${BLOCK_Y}px)`]
+      },
+      DURATION1, DURATION2);
       // $blockN moves back to the beginning of the thing
       const textBuffer = newN >= 10 ? 14 : 7; // make room for two-digit or one
       $blockN.$('tspan')!.setAttr('x', (newN * 10) / 2 - textBuffer); // text positioning
@@ -442,7 +448,7 @@ export function dec2bin($section: Step) {
   $slideshow.on('next', (x: number) => {
     // BUTTER: these could be abstracted by checking even/odd and using single index
     switch (x) {
-        // 16
+      // 16
       case 1:
         lowerClaw(0, false);
         moveBlockBetweenDigits(-1, 0);
@@ -453,7 +459,7 @@ export function dec2bin($section: Step) {
         setTimeout(() => $digitText[0].show(), DURATION1);
         break;
 
-        //8
+        // 8
       case 3:
         lowerClaw(1, false);
         moveBlockBetweenDigits(0, 1);
@@ -576,14 +582,11 @@ export function finger5($section: Step) {
   // reveal: like fade, but elements below slide down
   // reveal-left/right: each element slides in from the left/right
   let i = 0;
-  let delay = 300;
+  const delay = 300;
 
-  // FINGERZ: replace button with goal completion
-  $section.$('.appear')?.on('click', () => $fingers.forEach(
+  $section.onScore('blank-0', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
   ));
-  // I love how this looks
-
 }
 
 export function finger32($section: Step) {
@@ -592,39 +595,28 @@ export function finger32($section: Step) {
 
   const $decCaptions = $section.$$('.dec');
   const $binCaptions = $section.$$('.bin');
+  let showingBin = false;
 
   $binCaptions.forEach($f => $f.hide());
 
   let i = 0;
-  let delay = 200;
-  $section.$('.appear')?.on('click', () => $fingers.forEach(
+  const delay = 200;
+  $section.onScore('blank-0', () => $fingers.forEach(
       $f => $f.enter('slide', 500, i++ * delay)
   ));
 
-  let showingBin = false;
-
-  // switch between binary and decimal display
-  $section.$('.switch')?.on('click', () => {
+  const $select = $section.$('x-select') as Select;
+  $select.on('change', ($el: ElementView) => {
+    console.log($el.data.name);
     (showingBin ? $binCaptions : $decCaptions).forEach($f => $f.hide());
     (showingBin ? $decCaptions : $binCaptions).forEach($f => $f.show());
 
     showingBin = !showingBin;
-  })
+  });
 }
 
 // BINPATTERN: how to re-render with a drop down? (see Graph Theory?)
 export function binaryTable($section: Step) {
-  function f2(i: string) {
-    console.log(i);
-    return i[4] === '0';
-  }
-
-  function f4(i: number) { return i % 4 === 0; }
-
-  function f8(i: number) { return i % 8 === 0; }
-
-  function f16(i: number) { return i % 16 === 0; }
-
   function fx(digit: number) {
     return (i: string) => {
       const s = '' + i;
@@ -666,6 +658,227 @@ export function resolution($step: Step) {
   $codeBox.encode((char: string, $el: ElementView) => {
     for (const x of MORSE_CODE[char.toLowerCase()].split('')) {
       $N('span', {class: x === '•' ? 'dash' : 'dot'}, $el);
+    }
+  });
+}
+
+export function satellite($step: Step) {
+  // SATELLITE: complete this
+  /* const $bitstream = $step.$('#bitstream') as SVGView;
+  const $trajectory = $bitstream?.$('line') as SVGView;
+  const $bits = $bitstream?.$$('text');
+
+  // SATELLITE: WAIT for new svg from designer
+  function moveBits() {
+    // There should be a timeout
+    $bits?.forEach((e, i) => {
+      // get point along trajectory
+      const xy = $trajectory.getPointAt(0);
+      // set transform dependent on the bits
+      e.setTransform(new Point(xy.x, xy.y));
+    });
+  } */
+
+  /* function stopBits() {
+    // SATELLITE: stop the bits
+  } */
+
+  const $satellites = $step.$('.satellites')!;
+
+  // from Telegraph code. Should replace w/ code to enable 1s and 0s.
+  slide($satellites, {
+    down: () => {
+      $satellites.addClass('pressed');
+    },
+    up: () => {
+      $satellites.removeClass('pressed');
+    }
+  });
+}
+
+export function hammingEncode($step: Step) {
+  const $hamming = $step.$('x-hamming') as HammingCode;
+
+  // updates the model based on the value
+  $hamming.updateModel($step.model);
+
+  // Map Blank pairs to the parity bits they represent
+  const BLANK_MAP: {[key: string]: number} = {
+    'blank-0 blank-1': 1,
+    'blank-2 blank-3': 2,
+    'blank-4 blank-5': 4,
+    'blank-6 blank-7': 8
+  };
+  Object.keys(BLANK_MAP).forEach(k => {
+    $step.onScore(k, () => {
+      $hamming.showParity(BLANK_MAP[k]);
+    });
+  });
+
+  // Slide functions.
+  const slideNext = [
+    // "Let's say..."
+    () => $hamming.noop(),
+
+    // "First we must shift..."
+    () => $hamming.makeRoomForParities(),
+    // "The parity bits will go into..."
+    () => $hamming.noop(),
+
+    // "We must figure out..."
+    () => $hamming.noop(),
+
+    // "Let's start with the first parity group..."
+    () => $hamming.highlight(1),
+    () => $hamming.noop(),
+
+    () => $hamming.highlight(2),
+    () => $hamming.noop(),
+
+    () => $hamming.highlight(4),
+    () => $hamming.noop(),
+
+    () => $hamming.highlight(8),
+    () => $hamming.noop(),
+
+    () => $hamming.showAll()
+  ];
+
+  const slideBack = [
+    () => $hamming.hideParityBits(),
+
+    () => $hamming.noop(),
+    () => $hamming.showAll(),
+
+    () => $hamming.noop(), // $hamming.hideParity(1),
+    () => $hamming.highlight(1),
+
+    () => $hamming.noop(), // $hamming.hideParity(2),
+    () => $hamming.highlight(2),
+
+    () => $hamming.noop(), // $hamming.hideParity(4),
+    () => $hamming.highlight(4),
+
+    () => $hamming.noop(), // $hamming.hideParity(8),
+    () => $hamming.highlight(8),
+
+    () => $hamming.noop()
+  ];
+
+  const $slideshow = $step.$('x-slideshow') as Slideshow;
+  $slideshow.on('next', (x: number) => {
+    if (x >= 0 && x < slideNext.length) {
+      slideNext[x]();
+    }
+  });
+
+  $slideshow.on('back', (x: number) => {
+    if (x >= 0 && x < slideBack.length) {
+      slideBack[x]();
+    }
+  });
+}
+
+export function hammingDecode($step: Step) {
+  const $hamming = $step.$('x-hamming') as HammingCode;
+
+  // parity group 1
+  $step.onScore('blank-1 blank-2', () => {
+    $hamming.markSingleBitError(1);
+  });
+
+  // parity group 4
+  $step.onScore('blank-5 blank-6', () => {
+    $hamming.markSingleBitError(4);
+  });
+
+  $step.onScore('blank-9', () => {
+    $hamming.unmarkSingleBitError(1);
+    $hamming.unmarkSingleBitError(4);
+    $hamming.markSingleBitError(5);
+  });
+
+  $step.onScore('blank-10', () => {
+    $hamming.correctDataBit(5);
+    $hamming.unmarkSingleBitError(5);
+  });
+
+  const slideNext = [
+    // "What if..."
+    () => $hamming.noop(),
+
+    // "First let's check parity group 1..."
+    () => {
+      $hamming.highlight(1);
+    },
+
+    // "Now let's check parity group 2..."
+    () => {
+      $hamming.highlight(2);
+    },
+
+    // "Now let's check parity group 4..."
+    () => {
+      $hamming.highlight(4);
+    },
+
+    // "Now let's check..."
+    () => $hamming.highlight(8),
+
+    // "We identified there is something wrong..."
+    () => {
+      $hamming.showAll();
+    },
+
+    // "Now can remove..."
+    () => {
+      $hamming.hideParityBits();
+    }
+  ];
+
+  const slideBack = [
+    // "What if..."
+    () => {
+      $hamming.showAll();
+      // $hamming.unmarkSingleBitError(1);
+    },
+    // "First let's check parity group 1..."
+    () => {
+      $hamming.highlight(1);
+    },
+    // "Now let's check parity group 2..."
+    () => {
+      $hamming.highlight(2);
+      // $hamming.unmarkSingleBitError(4);
+    },
+    // "Now let's check parity group 4..."
+    () => {
+      $hamming.highlight(4);
+    },
+    // "Now let's check parity group 8..."
+    () => {
+      $hamming.highlight(8);
+    },
+    // "We identified..."
+    () => {
+      $hamming.makeRoomForParities();
+    },
+    // "Now we can remove..."
+    () => {
+      $hamming.noop();
+    }
+  ];
+
+  const $slideshow = $step.$('x-slideshow') as Slideshow;
+  $slideshow.on('next', (x: number) => {
+    if (x >= 0 && x < slideNext.length) {
+      slideNext[x]();
+    }
+  });
+
+  $slideshow.on('back', (x: number) => {
+    if (x >= 0 && x < slideBack.length) {
+      slideBack[x]();
     }
   });
 }

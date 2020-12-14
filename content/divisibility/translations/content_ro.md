@@ -279,10 +279,9 @@ rămas este de asemenea divizibil cu 3 (sau cu 9):
 
 {.text-center} __{.m-red}6__ + __{.m-blue}3__ + __{.m-green}8__ + __{.m-yellow}4__
 
-Aceasta este totodată și suma cifrelor! Deci, dacă <x-target no-margins
-to=".digit-sum-is">suma cifrelor</x-target> este multiplu de 3 și știm că
-<x-target no-margins to=".digit-sum-else">restul</x-target>
-e multiplu de 3, atunci rezultatul va fi și el un multiplu de 3.
+Aceasta este totodată și suma cifrelor! Deci, dacă [{.no-margins}suma cifrelor](->.digit-sum-is)
+este multiplu de 3 și știm că [{.no-margins}restul](->.digit-sum-else) e multiplu de 3, atunci
+rezultatul va fi și el un multiplu de 3.
 
 ---
 > id: divisibility6

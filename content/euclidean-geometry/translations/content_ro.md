@@ -581,12 +581,12 @@ omorât de către invadatorii romani. Ultimele sale cuvinte au fost “nu îmi d
 dreptarul și compasul.
 
 Începe prin a desena un segment de dreaptă oriunde în chenarul din dreapta. Cu
-<x-target no-margins to="#equilateral .tool:nth-child(3)">unealta linie</x-target>
+[unealta linie](->#equilateral_.tool:nth-child(3))
 selectată, trage de la început la sfârșit. Acest segment va fi una din laturile triunghiului.
 
 {.reveal(when="segment0")} Apoi desenează două cercuri care au ca centru unul din capetele segmentului
 și mergi până la celălalt capăt. Cu 
-<x-target no-margins to="#equilateral .tool:nth-child(5)">unealta cerc</x-target> selectată,
+[unealta cerc](->#equilateral_.tool:nth-child(5)) selectată,
 trage de la un capăt până la celălalt.
 
 {.reveal(when="circle1 circle2")} Deja avem două dintre vârfurile triunghiului,
@@ -754,7 +754,7 @@ Dar cu un pic de exercițiu, vei putea construi și tu!
 
 ::: column.sticky-video(width=360)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
+    x-video(src="https://static.mathigon.org/videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
 
 ::: column.grow
 {.step.active(data-t=0)} Ai nevoie doar de o bucată pătrată de hârtie. Începe prin a îndoi foaia 
@@ -869,7 +869,7 @@ origami pot fi incredibil de utile în tehnologie și inginerie:
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
+    x-video(src="https://static.mathigon.org/videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
 
 ::: column.grow
 
@@ -891,7 +891,7 @@ Tehnicile Origami permit panourilor solare să se “deschidă” atunci când a
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
+    x-video(src="https://static.mathigon.org/videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
 
 ::: column.grow
 
@@ -929,7 +929,7 @@ după cutremure sau tsunamiuri. Aceasta este imaginea unui prototip proiectat la
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
+    x-video(src="https://static.mathigon.org/videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
 
 ::: column.grow
 
@@ -971,7 +971,7 @@ Atunci când este deschisă dimensiunea aripii crește de 10 ori – cel mai mar
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
+    x-video(src="https://static.mathigon.org/videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
 
 :::
 
@@ -994,7 +994,7 @@ panouri solare extensibile pentru sateliți sau poate chiar corturi ce se pot pl
 
 ::: column(width=320)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
+    x-video(src="https://static.mathigon.org/videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
 
 ::: column.grow
 

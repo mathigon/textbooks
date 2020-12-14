@@ -148,7 +148,7 @@ poter calcolare il loro colore e la loro struttura.
 
 :::
 
-    figure: x-video(src="images/tiger.mp4" width=480 height=270 credit="© UCTV, The STEAM Channel")
+    figure: x-video(src="https://static.mathigon.org/videos/tiger.mp4" poster="images/tiger.jpg" width=480 height=270 credit="© UCTV, The STEAM Channel")
 
 ---
 

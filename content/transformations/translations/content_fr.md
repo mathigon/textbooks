@@ -1039,8 +1039,8 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 Malheureusement, il n'y a pas de raison simple pour laquelle il y a _17_ de ces groupes, et prouver qu'il nécessite des mathématiques plus avancées. Au lieu de cela, vous pouvez essayer de dessiner vos propres motifs répétés pour chacun des 17 groupes de fonds d'écran: 
 
-    include ./components/wallpaper
-    x-wallpaper
+
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin

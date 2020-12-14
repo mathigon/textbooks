@@ -276,7 +276,7 @@ Em vez de contar todas as arestas em grafos grandes, também podemos tentar enco
 ---
 > id: handshakes-2a
 
-Infelizmente, esta resposta não está correta. Note como <x-target to=".handshakes tr:first-child td:first-child, .handshakes tr:first-child td:nth-child(2)"> os primeiros elementos da linha do topo </x-target> são na realidade os mesmos, só que virados ao contrário.
+Infelizmente, esta resposta não está correta. Note como [os primeiros elementos da linha do topo](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) são na realidade os mesmos, só que virados ao contrário.
 
 De fato, contamos cada aperto de mão [[duas vezes|uma única vez|três vezes]], _{span.reveal(when="blank-0")} pois contamos cada aperto de cada uma das duas pessoas que apertaram as mãos. Isso significa que o número correto de apertos de mãos para ${n}{n|5|2,25,1} convidados é `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")`._
 

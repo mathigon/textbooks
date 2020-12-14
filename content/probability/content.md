@@ -139,11 +139,11 @@ or of a train arriving on time is [[more|less]] than 0.5 – which means likely.
 Now drag the following events into the correct order, from likely to unlikely:
 
     x-sortable
-      .item.md(data-index="3") You throw a die :game_die: and it lands on 6.
+      .item.md(data-index="3") You throw a die :game-die: and it lands on 6.
       .item.md(data-index="5") Penguins :penguin: live on the North Pole.
-      .item.md(data-index="1") It’s going to rain :rain_cloud: in November.
-      .item.md(data-index="0") A baby will be born in China today. :baby_bottle:
-      .item.md(data-index="4") You buy a lottery ticket and win the Jackpot :tada:.
+      .item.md(data-index="1") It’s going to rain :cloud-with-rain: in November.
+      .item.md(data-index="0") A baby will be born in China today. :baby-bottle:
+      .item.md(data-index="4") You buy a lottery ticket and win the Jackpot :party-popper:.
       .item.md(data-index="2") A newborn baby will be a girl :girl:.
 
 We often use probabilities and likelihoods in everyday life, usually without
@@ -166,7 +166,7 @@ actual results: if we toss a coin many times we know that
 [[approximately half|exactly half|all|none]] of the results are heads – but we
 have no way of predicting _exactly which_ tosses landed heads.
 
-Even events with tiny probabilities (like winning the lottery :tada:) _can
+Even events with tiny probabilities (like winning the lottery :party-popper:) _can
 still happen_ – and they _do happen_ all the time (but to a very small
 proportion of the people who participate).
 
@@ -375,6 +375,23 @@ __normal distribution__.
 
 TODO
 
+---
+
+Sort these events into whether they are independent or not:
+
+    x-buckets.independent
+      .inputs
+        .input(bucket="0") Winning the lottery and running out of milk.
+        .input(bucket="1") Boarding a plane first and finding a good seat.
+        .input(bucket="0") Owning a dog and growing your own herb garden.
+        .input(bucket="0") Getting a parking ticket and winning the lottery.
+        .input(bucket="1") Robbing a bank and going to jail.
+        .input(bucket="1") Driving a car and having a traffic accident.
+      .buckets
+        .bucket
+          .title Independent
+        .bucket
+          .title Dependent
 
 ---
 

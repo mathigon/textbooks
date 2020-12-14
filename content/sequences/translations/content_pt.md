@@ -475,15 +475,15 @@ _{span.n}${geometric(b,r,5)}_, …
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
-Se _{span.var-action} `r > 1`_, os termos [[rapidamente aumentarão|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, até o infinito. Os matemáticos dizem que a sequência [__diverge__](gloss:sequence-divergence)._
+Se [`r > 1`](action:set(2,2)), os termos [[rapidamente aumentarão|quickly decrease|get closer to zero]] _{span.reveal(when="blank-2")}, até o infinito. Os matemáticos dizem que a sequência [__diverge__](gloss:sequence-divergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
-Se _{span.var-action} _r_ estiver entre –1 e 1_, os termos sempre [[se aproximarão de 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Dizemos que a sequência [__converge__](gloss:sequence-convergence)._
+Se [_r_ estiver entre –1 e 1](action:set(10,0.6)), os termos sempre [[se aproximarão de 0|decrease to negative infinity|get smaller]] _{span.reveal(when="blank-3")}. Dizemos que a sequência [__converge__](gloss:sequence-convergence)._
 
 ::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
-Se _{span.var-action} `r < -1`_, os termos alternarão entre positivo e negativo, enquanto o seu [[valor absoluto|inverse|difference]] aumenta.
+Se [`r < -1`](action:set(3,-1.4)), os termos alternarão entre positivo e negativo, enquanto o seu [[valor absoluto|inverse|difference]] aumenta.
 
 :::
 
@@ -591,7 +591,7 @@ Agora, vamos dar uma olhada em alguns exemplos em que podemos usar tudo isso!
 Aqui está um pequeno clipe do filme _Pay it Forward_, onde Trevor, de 12 anos, explica sua idéia de tornar o mundo um lugar melhor:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---
@@ -1220,17 +1220,17 @@ Mova o controle deslizante à direita para visualizar como uma planta cresce. Ob
       x-slider(steps=1000 continuous speed=0.1 no-play)
       svg(width=400 height=400 viewBox="0 0 400 400")
 
-{div(slot="legend")} Se o ângulo for _{span.fib-action(data-value=0)} 0 °_, todas as sementes crescerão em uma única linha longa longe do centro.
+{div(slot="legend")} Se o ângulo for [0°](action:set(0)), todas as sementes crescerão em uma única linha longa longe do centro.
 
-{div.inline(slot="legend")} Se o ângulo é _{span.fib-action(data-value=0.5)} `1/2`_ de uma rotação completa (180 °), as sementes alternam entre dois “braços” separados que se afastam do centro.
+{div.inline(slot="legend")} Se o ângulo é [`1/2`](action:set(0.5)) de uma rotação completa (180 °), as sementes alternam entre dois “braços” separados que se afastam do centro.
 
-{div.inline(slot="legend")} Se a rotação for outra proporção fracionária de 360 °, por exemplo _{span.fib-action(data-value=2/5)} `2/5`_ ou _{span.fib-action(data-value=1/3)} `1/3`_ ou _{span.fib-action(data-value=3/8)} `3/8`_, o número de “armas” será o mesmo que o [[denominador|numerator|prime factor]] dessa fração.
+{div.inline(slot="legend")} Se a rotação for outra proporção fracionária de 360 °, por exemplo [`2/5`](action:set(2/5)) ou [`1/3`](action:set(1/3)) ou [`3/8`](action:set(3/8)), o número de “armas” será o mesmo que o [[denominador|numerator|prime factor]] dessa fração.
 
 {div(slot="legend")} Infelizmente, “braços” são ruins, porque significam que as sementes não são distribuídas igualmente: todo o espaço entre os braços é desperdiçado. Mas se [números racionais](gloss:rational-numbers) não estão funcionando, vamos tentar [números irracionais](gloss:irrational-numbers)!
 
-{div.inline(slot="legend")} Um exemplo de número irracional é [`pi`](gloss:pi). Mas se o ângulo entre as sementes é _{span.fib-action(data-value=0.31831)} `1/pi`_ de 360 °, ainda parecemos ter braços: 22 deles. Isso ocorre porque a fração `22/7 = 3.1429…` é uma aproximação muito boa para `pi`. O que realmente precisamos é de um número irracional que _não possa ser_ aproximado por uma fração simples.
+{div.inline(slot="legend")} Um exemplo de número irracional é [`pi`](gloss:pi). Mas se o ângulo entre as sementes é [`1/pi`](action:set(0.31831)) de 360 °, ainda parecemos ter braços: 22 deles. Isso ocorre porque a fração `22/7 = 3.1429…` é uma aproximação muito boa para `pi`. O que realmente precisamos é de um número irracional que _não possa ser_ aproximado por uma fração simples.
 
-{div.inline(slot="legend")} Acontece que a proporção áurea de [é exatamente isso: o “mais irracional” de todos os números irracionais. Se o ângulo entre as sementes for _{span.fib-action(data-value=0.6180339)} `1/phi`_ de 360 °, elas parecem estar quase perfeitamente espaçadas. E este é precisamente o ângulo que as plantas ao redor do mundo estão usando.
+{div.inline(slot="legend")} Acontece que a proporção áurea de [é exatamente isso: o “mais irracional” de todos os números irracionais. Se o ângulo entre as sementes for [`1/phi`](action:set(0.6180339)) de 360 °, elas parecem estar quase perfeitamente espaçadas. E este é precisamente o ângulo que as plantas ao redor do mundo estão usando.
 
 :::
 
@@ -1484,7 +1484,7 @@ Parece que a duração da sequência varia muito, mas sempre termina em um ciclo
     x-coordinate-system(width=600 height=400 padding="12 12 24 40")
       .hailstone-slider.md #[span Start value:]${n}{n|12|1,50,1}
 
-{.reveal(when="var-0")} Observe como alguns pontos de partida terminam muito rapidamente, enquanto outros (como _{span.var-action} 31_ ou _{span.var-action} 47_) executam mais de uma centena de passos antes de atingirem os 4, 2, 1 ciclo.
+{.reveal(when="var-0")} Observe como alguns pontos de partida terminam muito rapidamente, enquanto outros (como [31](action:set(31)) ou [47](action:set(47))) executam mais de uma centena de passos antes de atingirem os 4, 2, 1 ciclo.
 
 ---
 > id: hailstone-3

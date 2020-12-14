@@ -1039,8 +1039,8 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 दुर्भाग्य से कोई सरल कारण नहीं है कि इनमें से _17_ समूह क्यों हैं, और यह साबित करने के लिए अधिक उन्नत गणित की आवश्यकता है। इसके बजाय, आप 17 वॉलपेपर समूहों में से प्रत्येक के लिए अपने खुद के दोहराया पैटर्न खींचने की कोशिश कर सकते हैं: 
 
-    include ./components/wallpaper
-    x-wallpaper
+
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin

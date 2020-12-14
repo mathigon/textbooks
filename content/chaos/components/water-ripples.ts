@@ -5,8 +5,9 @@
 
 
 import {repeat2D, tabulate2D} from '@mathigon/core';
-import {isBetween, clamp, Point} from '@mathigon/fermat';
-import {CustomElementView, register, $N, slide, animate, CanvasView} from '@mathigon/boost';
+import {clamp, isBetween} from '@mathigon/fermat';
+import {Point} from '@mathigon/euclid';
+import {$N, animate, CanvasView, CustomElementView, register, slide} from '@mathigon/boost';
 
 
 const THRESHOLD = 0.05;
@@ -169,7 +170,6 @@ export class WaterCanvas extends CustomElementView {
 
     for (let x = 0; x < this.sx; x++) {
       for (let y = 0; y < this.sy; y++) {
-
         const left = (x === 0) ? 0 : this.depthMap1[x - 1][y];
         const right = (x === this.sx - 1) ? 0 : this.depthMap1[x + 1][y];
         const top = (y === 0) ? 0 : this.depthMap1[x][y - 1];
@@ -189,5 +189,4 @@ export class WaterCanvas extends CustomElementView {
 
     return noChange;
   }
-
 }

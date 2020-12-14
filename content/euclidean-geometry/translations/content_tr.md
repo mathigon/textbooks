@@ -498,9 +498,9 @@ Bu aletler ne kadar ilkel görünseler de bunlarla çok fazla sayıda şekil çi
 ::: column.grow
 {.task} Pergel ve düz kenar ile [eşkenar üçgen](gloss:equilateral-triangle) çizimi.
 
-Başlangıç için, sol üstteki kutucuklardan <x-target no-margins to="#equilateral .tool:nth-child(3)">çizgi kutucuğu</x-target> ile çizgi çiziyoruz. Seçili çizgi kutucuğu ile basitçe bir noktadan diğerine sürüklüyoruz.  Bu parça eşkenar üçgenin bir kenarını oluşturacak.
+Başlangıç için, sol üstteki kutucuklardan [çizgi kutucuğu](->#equilateral_.tool:nth-child(3)) ile çizgi çiziyoruz. Seçili çizgi kutucuğu ile basitçe bir noktadan diğerine sürüklüyoruz.  Bu parça eşkenar üçgenin bir kenarını oluşturacak.
 
-{.reveal(when="segment0")} Sırada çizgi üzerindeki bir noktayı merkez kabul edip diğer noktada biten iki çember çizmek var.  <x-target no-margins to="#equilateral .tool:nth-child(5)">Çember kutucuğu</x-target> ile basitçe bir noktadan diğerine sürüklüyoruz. 
+{.reveal(when="segment0")} Sırada çizgi üzerindeki bir noktayı merkez kabul edip diğer noktada biten iki çember çizmek var.  [Çember kutucuğu](->#equilateral_.tool:nth-child(5)) ile basitçe bir noktadan diğerine sürüklüyoruz. 
 
 {.reveal(when="circle1 circle2")} Şimdiden üçgenimizin iki köşesi oluştu ve üçüncüsü de iki çemberin kesiştiği nokta olacak. Yine çizgi kutucuğunu kullanarak üçgenin kayıp iki kenarını oluşturup üçgeni tamamlayabilirsiniz. 
 
@@ -625,7 +625,7 @@ Böyle şekilleri yapmak çok vakit alabilir ve son derece hassas çalışmayı 
 
 ::: column(width=360)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=400 height=400 controls)
+    x-video(src="https://static.mathigon.org/videos/crane.mp4" poster="images/crane.jpg" width=400 height=400 controls)
 
 ::: column.grow
 {.step.active(data-t=0)} Sadece kare bir kağıda ihtiyacınız var. Kağıdı iki köşegeninden katlayarak başlayın.
@@ -722,7 +722,7 @@ Origami kadim bir sanat, ve çok uzun bir süre boyunca gerçek hayata bir uygul
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
+    x-video(src="https://static.mathigon.org/videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
 
 ::: column.grow
 
@@ -741,7 +741,7 @@ Origami teknikleri sayesinde güneş panelleri, uydu uzaya ulaştığı zaman ka
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
+    x-video(src="https://static.mathigon.org/videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
 
 ::: column.grow
 
@@ -775,7 +775,7 @@ Deprem ve tsunami gibi felaket durumlarında da, acil müdahale araçlarına ge�
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
+    x-video(src="https://static.mathigon.org/videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
 
 ::: column.grow
 
@@ -808,7 +808,7 @@ Bu fotoğrafta bir __kulağa kaçan__’ın dahice bir örüntü ile katlanabile
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
+    x-video(src="https://static.mathigon.org/videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
 
 :::
 
@@ -825,7 +825,7 @@ Bilim insanları, teknoloji ve mühendislikte taklit edebilmek umuduyla bu böce
 
 ::: column(width=320)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
+    x-video(src="https://static.mathigon.org/videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
 
 ::: column.grow
 

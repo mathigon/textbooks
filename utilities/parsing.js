@@ -93,7 +93,7 @@ module.exports.encode = function(content) {
 
   // Parse Markdown (but override HTML detection)
   const lexer = new marked.Lexer();
-  lexer.rules.html = /^<.*[\n]{2,}/;
+  lexer.tokenizer.rules.block.html = /^<.*[\n]{2,}/;
   const tokens = lexer.lex(content);
   let parsed = marked.Parser.parse(tokens, {renderer});
 

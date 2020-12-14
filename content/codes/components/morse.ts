@@ -4,7 +4,7 @@
 // ============================================================================
 
 
-import {CustomElementView, register, $N} from '@mathigon/boost';
+import {$N, CustomElementView, register} from '@mathigon/boost';
 import {beep} from './beep';
 import {MORSE_CODE} from './utilities';
 

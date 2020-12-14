@@ -24,21 +24,17 @@ x-parallax.full-width {
 
 .drawing-path {
 	fill: none;
-  stroke: fade(black, 70%);
+  .theme(stroke, fade(black, 70%), fade(white, 80%));
   stroke-width: 6px;
   stroke-linecap: round;
   stroke-linejoin: round;
   pointer-events: none;
-  .dark-mode & { stroke: fade(white, 80%); }
 }
 
-.node { stroke: @grey-background; fill: @red; stroke-width: 2px; cursor: move; }
+.node { .theme(stroke, @grey-background, @dark-mode-background); fill: @red; stroke-width: 2px; cursor: move; }
 .link { stroke: @light-grey; stroke-width: 2px; fill: transparent; }
 .arrow { fill: @light-grey; }
-.graph { background: @grey-background; border-radius: 4px; }
-
-.dark-mode .node { stroke: @dark-mode-background; }
-.dark-mode .graph { background: @dark-mode-background; }
+.graph { .theme(background, @grey-background, @dark-mode-background); border-radius: 4px; }
 
 #graph0 .node { transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform: scale(1); transform-origin: center; }
 #graph0.novertices .node { transform: scale(0); cursor: default; }
@@ -63,8 +59,7 @@ x-parallax.full-width {
   }
 }
 
-.house { fill: #eee; }
-.dark-mode .house { fill: mix(@dark-mode-background, white, 95%) ;}
+.house { .theme(fill, #eee, mix(@dark-mode-background, white, 95%)); }
 .bridge { fill: @yellow; stroke: transparent; stroke-width: 16px; transition: fill .2s; }
 .bridge.green { fill: @green; }
 .bridge.red { fill: @red; }
@@ -92,7 +87,7 @@ x-parallax.full-width {
 .box > .btn, .tab .btn { position: absolute; bottom: 10px; left: 10px; }
 .tab .btn.right { left: auto; right: 10px; }
 
-.four-colour-icons { display: flex; justify-content: center; margin-bottom: 1em; }
+.four-colour-icons { display: flex; justify-content: center; margin-bottom: 1em; flex-wrap: wrap; }
 .four-colour-icon { width: 40px; height: 40px; border: 5px solid transparent;
   margin: 0 4px; cursor: pointer; border-radius: 100%; opacity: 0.6; }
 .four-colour-icon.on { border-color: fade(black, 60%); opacity: 1; }

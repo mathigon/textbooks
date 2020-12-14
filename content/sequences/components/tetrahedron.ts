@@ -4,9 +4,10 @@
 // =============================================================================
 
 
+/// <reference types="THREE"/>
 import {register} from '@mathigon/boost';
 import {Solid} from '../../shared/components/solid';
-import {trianglePoints, triangleOffset} from './polygons';
+import {triangleOffset, trianglePoints} from './polygons';
 
 
 const COLOURS = [0xff941f, 0xec7031, 0xd94c44, 0xc62857, 0xb30469];  // TODO New Colours

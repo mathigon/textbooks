@@ -1039,8 +1039,8 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 残念ながら、これらのグループが_17個_ある単純な理由はなく、それを証明するにはより高度な数学が必要です。代わりに、17の壁紙グループのそれぞれに独自の繰り返しパターンを描画してみることができます。 
 
-    include ./components/wallpaper
-    x-wallpaper
+
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin

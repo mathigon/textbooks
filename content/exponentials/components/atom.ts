@@ -4,6 +4,7 @@
 // =============================================================================
 
 
+/// <reference types="THREE"/>
 import {Random} from '@mathigon/fermat';
 import {register} from '@mathigon/boost';
 import {Solid} from '../../shared/components/solid';

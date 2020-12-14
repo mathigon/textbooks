@@ -1040,8 +1040,8 @@ Perpendicular glide reflections, rotations of order 2, translations
 
 Thật không may, không có lý do đơn giản tại sao có _17_ nhóm này, và chứng minh nó đòi hỏi toán học tiên tiến hơn. Thay vào đó, bạn có thể thử vẽ các mẫu lặp lại của riêng mình cho mỗi trong số 17 nhóm hình nền: 
 
-    include ./components/wallpaper
-    x-wallpaper
+
+    figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
       h4 Examples of other students’ drawings
       .row.padded-thin
