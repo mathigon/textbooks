@@ -5,11 +5,15 @@
 > section: introduction
 > sectionStatus: dev
 
+    // General observations:- I find the mix of historical storylines and interactives captivating.- Consider adding a few more 'check for understanding' kinds of questions to break up text and transition from one section/sub-section to another.- Spatial reasoning can take a lot of work for some students to pick up. consider adding tutor prompts that are unique to the topic your discussing.- Think about standardizing how you want to write 2D and 3D +philipp@mathigon.org would be a big help here.- The transitions and storyline references dwindle toward the end of the chapter. I'm excited to see this one in action!
+
+    // Glossary entry - Dimension: Dimensions in mathematics are the measure of the size or distance of an object.
+
 So far, we’ve only looked at the geometry of flat, 2-dimensional objects like circles or rectangles – but we live in a three-dimensional world. Every object we see or touch has three __dimensions__.
 
-::: column
+::: column.fit
 
-{.todo} IMAGE: Dimensions gif 
+    figure: x-img(src="images/ch1_2.gif" width="300" height="300")
 
 ::: column.grow
 
@@ -31,9 +35,9 @@ Solid Geometry is the study of three-dimensional (3D) shapes that have depth or 
 
     // Page 2
 
-::: column
+::: column.fit
 
-{.todo} IMAGE: Egyptian pyramids
+    figure: x-img(src="images/ch1_42.jpg" width="200" height="133")
 
 ::: column.grow
 
@@ -43,7 +47,21 @@ Since then, architects have been using 3D geometry to define the spatial form of
 
 :::
 
-{.todo} IMAGES
+::: column(width=300)
+
+    // https://commons.wikimedia.org/wiki/File:Barcelona_Cube-Ball-Pyramid_roof.jpg
+    figure: x-img(src="images/ch1_26.png" width="300" height="225")
+
+{.caption} Barcelona Cube-Ball-Pyramid roof
+
+::: column(width=300)
+
+    // https://www.frazierdeeter.com/nationally-ranked-u-s-accounting-and-advisory-firm-expands-to-u-k/london-skyline/
+    figure: x-img(src="images/ch1_18.png" width="300" height="188.5")
+
+{.caption} London Skyline
+
+:::
 
 ---
 > id: examples
@@ -65,7 +83,21 @@ They can be as simple as a cube or a pyramid, or as complex as a star polyhedron
 
     // Page 3
 
-{.todo} [DISCUSS] INTERACTIVE: Polyhedra parts
+    // [DISCUSS] INTERACTIVE: Polyhedra parts
+
+    // An interactive zoom-in tool to show the parts of the polyhedra with the definitions
+
+::: column.fit
+
+    figure: x-img(src="images/ch1_39.png" width="380" height="200")
+
+::: column.fit
+
+    figure: x-img(src="images/ch1_49.png" width="228" height="200")
+
+:::
+
+    // Glossary links
 
 FACE:  The polygons that make up its surface of the polyhedron.
 EDGE: The line segments where two of its faces are connected.
@@ -91,6 +123,8 @@ Even though we live in a 3D world, grasping 3D shapes and their properties may b
 
 {.todo} EMBED: Flatland trailer
 
+    // http://www.flatlandthemovie.com/index.html
+
 ::: column.grow
 
 The Flatland is an animated film based on Edwin Abbott’s book Flatland: A Romance of Many Dimensions. The movie revolves around the inability of 2D shapes to grasp the third dimension. Characters are circles, triangles, and squares living in a 2D world. Their reality is shattered when a sphere from the 3D World comes to visit.
@@ -107,7 +141,7 @@ Without realising, you will have seen many different types of polyhedra before:
 
 ::: column.grow
 
-{.todo} IMAGE: Football
+    figure: x-img(src="images/ch1_38.png" width="200" height="200")
 
 A football consists of [[pentagons]] and [[hexagons]]. Mathematicians call this shape a truncated icosahedron.
 
@@ -123,7 +157,9 @@ Try this puzzle now.
 
 Can you create 4 congruent triangles by using 6 toothpicks without bending or cutting them?
 
-{.todo} [LATER] INTERACTIVE: Toothpicks puzzle
+    // TODO (LATER): INTERACTIVE: Toothpicks puzzle
+
+    figure: x-img(src="images/ch1_toothpicks.png" width="434" height="262")
 
 The trick is again thinking in 3D instead of 2D.
 
@@ -135,13 +171,33 @@ The trick is again thinking in 3D instead of 2D.
 
 One of the most common types of 3D solids is a cube.
 
-{.todo} IMAGES
+::: column.fit
+
+    figure: x-img(src="images/ch1_47.png" width="106" height="80")
+
+::: column.fit
+
+    figure: x-img(src="images/ch1_27.png" width="80" height="80")
+
+::: column.fit
+
+    figure: x-img(src="images/ch1_5.png" width="80" height="80")
+
+::: column.fit
+
+    figure: x-img(src="images/ch1_7.png" width="142" height="80")
+
+::: column.fit
+
+    figure: x-img(src="images/ch1_9.png" width="142" height="80")
+
+:::
 
 A cube is a 3d shape that has 6 faces all of which are [[squares]].
 
-::: column
+::: column.fit
 
-{.todo} IMAGE: Rubik's Cube
+    figure: x-img(src="images/ch1_3.png" width="200" height="207")
 
 ::: column.grow
 
@@ -160,6 +216,8 @@ The 3D solids below consist of unit cubes. Can we find out the number of cubes u
 Rotate the solids below to find the number of cubes that used to build them.
 
 {.todo} INTERACTIVE: Cube-counting
+
+    // https://www.nctm.org/Classroom-Resources/Illuminations/Interactives/Isometric-Drawing-Tool/
 
 ::: column(width=300)
 
@@ -191,9 +249,9 @@ A __cuboid__ is a box-shaped, where all six sides are rectangles. For example, p
 
 Cuboids are some of the most common polyhedra we use every day.
 
-::: column(width=200)
+::: column.fit
 
-{.todo} IMAGE: Boxes
+    figure: x-img(src="images/ch1_10.jpg" width="200" height="156")
 
 :::
 
@@ -205,7 +263,7 @@ Basically, a cuboid is a polyhedron with six rectangular faces. The opposite fac
 
 ::: column(width=200)
 
-{.todo} IMAGE: Pizza box
+    figure: x-img(src="images/ch1_8.png" width="200" height="200")
 
 ::: column.grow
 
@@ -220,22 +278,22 @@ Sometimes a cuboid has two square faces and four rectangular faces like most of 
 
 An average cereal box has dimensions of 30 cm x 20 cm x 8 cm.
 
-::: column
+::: column.fit
 
-{.todo} IMAGE: Crunchy O's
+    figure: x-img(src="images/ch1_46.png" width="301" height="189")
 
 ::: column.grow
 
 A Marketing agency built a 6 meters tall tipped-over cereal box outside the Vancouver Art Gallery in 2012.
 Can you guess the dimensions of this cereal box?
-Length: [[4 m]]   Width: [[1.6 m]]  Height: 6 m        
+Length: [[4 m]]   Width: [[1.6 m]]  Height: 6 m
 A cereal box is a cuboid with six [[rectangular]] faces.
 
 :::
 
 ---
 
-{.todo} IMAGE: Delivery box dimensions
+    figure: x-img(src="images/ch1_48.png" width="600" height="257")
 
 When you try to send boxes from one place to another via delivery services, the company asks you the dimensions of your package in the form of  “l x w x h” to calculate the size and weight of the box to determine the shipping rate. 
 
@@ -277,9 +335,11 @@ Try identifying the dimensions of the cuboids in the form of  “l x w x h”:
 
     // Page 9
 
-::: column
+### Volume
 
-{.todo} IMAGE: Temple model
+::: column.fit
+
+    figure: x-img(src="images/ch1_36.png" width="200" height="138")
 
 ::: column.grow
 
@@ -344,7 +404,7 @@ They should have doubled the volume instead of the side lengths.
 
 ::: column.fit
 
-{.todo} IMAGE: base-height
+    figure: x-img(src="images/ch1_43.png" width="200" height="133")
 
 ::: column.grow
 
@@ -371,7 +431,7 @@ In other words, the volume of a cube is the product of its length, [[width]], an
 
 `Volume = length x width x height`
 
-::: column
+::: column.grow
 
 A cube has the same value as its length, width, and height. 
 The volume of a cube with a side length of “a” units is 
@@ -379,9 +439,11 @@ The volume of a cube with a side length of “a” units is
 
 Multiplying three edge lengths allows us to determine the volume of cube efficiently.
 
-::: column
+::: column.fit
 
-{.todo} INTERACTIVE: cube
+    figure: x-img(src="images/ch1_29.png" width="92" height="87")
+
+    // TODO INTERACTIVE: cube
 
 :::
 
@@ -397,13 +459,15 @@ Greek temples have a very predictable layout. At the center, there is a section 
 
 Helping to prevent any future conflicts, we can find a general method to find the volume of all cuboids?
 
-{.todo} IMAGE: temple model
+    figure: x-img(src="images/ch1_45.png" width="600" height="400")
 
-::: column
+{.caption} The Model of Aphrodite Temple in Greece
 
-{.todo} IMAGE: floorplan
+::: column.fit
 
-::: column
+    figure: x-img(src="images/ch1_blueprint.png" width="200" height="132")
+
+::: column.grow
 
 The first layer of the cuboid has [[24]] cubes. It means the base area is 24 square units.
 
@@ -478,11 +542,17 @@ By finding the missing dimensions of the different cuboids with a volume of 24 c
 
     // Page 14
 
-{.todo} IMAGE: left column
+::: column.fit
+
+    figure: x-img(src="images/ch1_12.png" width="200" height="140")
+
+::: column.grow
 
 If the base area of a cuboid smaller than the other, then its height has to be [[bigger | smaller | equal to]] to have the same volume.
 
-If two cuboids have the same height, then the one with the greater base area has a [[greater]] volume.
+If two cuboids have the same height, then the one with the greater base area has a [[greater|lesser]] volume.
+
+:::
 
 We now know about how to find the volume of the cuboids, can we find another measure about them as well?
 
