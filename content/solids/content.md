@@ -502,7 +502,7 @@ We now know about how to find the volume of the cuboids, can we find another mea
 ::: column.fit
 
     // https://imgur.com/iJVU7
-    x-img(width=300 height=179 src="https://i.imgur.com/iJVU7.jpeg")
+    x-img(width=300 height=179 src="images/ch2_sticky_notes_car.svg")
 
 ::: column.grow
 
@@ -631,9 +631,13 @@ Most of the reactions like heat transfer occur at the surface of the objects and
 
 ---
 
-::: column.fit
+::: column(width=200)
 
 {.todo} INTERACTIVE: Elephant cuboid
+
+::: column.fit
+
+    figure: x-img(src="images/ch2_42.png" width="204" height="200")
 
 ::: column.grow
 
@@ -742,7 +746,7 @@ For instance, the net of a cube consists of [[6]] squares. With the correct arra
 
 Let’s try to draw the __net__ of a cube:
 
-::: column.fit
+::: column(width=300)
 
 {.todo} INTERACTIVE: Cube net drawing
 
@@ -754,7 +758,7 @@ Let’s have a look at which one of the below can be folded to a cube.
 
 ::: column.fit
 
-    x-img(width=177 height=154 src="images/cubenet.png")
+    x-img(width=100 height=87 src="images/cubenet.png")
 
 :::
 
@@ -857,6 +861,14 @@ The net of the cuboid box shows three pairs of rectangles:
 [[3]] cm by [[2]] cm, and
 
 [[4]] cm by [[3]] cm.
+
+:::
+
+::: column.fit
+
+    figure: x-img(src="images/ch2_16.png" width="300" height="154")
+
+::: column.grow
 
 With this information, we can now calculate the amount of cardboard needed to make the box; `(4 * 2) + (4 * 2) + (3 * 2) + (4 * 3) + (4 * 3) = input(52)  "square centimeters"`
 
