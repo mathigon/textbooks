@@ -28,6 +28,8 @@ export class VoxelPainter extends CustomElementView {
     const height = (+this.attr('height')) || width;
     this.css({width: width + 'px', height: height + 'px'});
 
+    const defaultColor = this.attr('color') || 0xfeb74c;
+
     const v1 = new THREE.Vector3();
     const explodeOnGrab = this.hasAttr('explodeOnGrab');
     const rotateOnly = this.hasAttr('rotateOnly') || explodeOnGrab;
@@ -80,7 +82,7 @@ export class VoxelPainter extends CustomElementView {
     camera.add(directionalLight);
 
     const voxelGeo = new THREE.BoxGeometry(1, 1, 1);
-    const voxelMaterial = new THREE.MeshLambertMaterial({color: 0xfeb74c});
+    const voxelMaterial = new THREE.MeshLambertMaterial({color: defaultColor});
 
     const faceColours = [RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE];
     const faceColorDirections = [
