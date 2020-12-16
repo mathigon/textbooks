@@ -166,10 +166,37 @@ export class VoxelPainter extends CustomElementView {
       const coords = shape.split(',');
       for (let i = 0, il = Math.floor(coords.length / 3); i < il; ++i) {
         const voxel = new Voxel();
-        voxel.position.set(
-            parseFloat(coords[i * 3]),
-            parseFloat(coords[i * 3 + 1]),
-            parseFloat(coords[i * 3 + 2]));
+        const [x, y, z] = [
+          parseFloat(coords[i * 3]),
+          parseFloat(coords[i * 3 + 1]),
+          parseFloat(coords[i * 3 + 2])
+        ];
+        /*
+          We swap Y and Z so that coords specified to the component are displayed as if
+          X and Y are 'towards' the camera in the positive direction, and +Z is 'up':
+
+                                        |
+                                        |  +Z
+                                        |
+                                        |
+                                        |
+                                        |
+                                        |
+                                        |
+                                        |
+                                      /--\
+                                    /--    --\
+                                  /-          -\
+                              /--              --\
+                            /--                    --\
+                          /-                          -\
+                      /--                              --\   +X
+                    /--   +Y                               --\
+                  /-                                          -\
+              /--                                              --\
+
+        */
+        voxel.position.set(x, z, y);
         snapToNearestValidCubeCenterPosition(voxel.position);
       }
 
