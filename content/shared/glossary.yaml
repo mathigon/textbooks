@@ -711,6 +711,16 @@ fractal:
     an equation infinitely many times.
   link: /course/fractals/introduction
 
+fraction:
+  title: Fraction
+  text: |
+    A __fraction__ represents parts of a whole. It is written as `a/b`,
+    where _a_ is called the __numerator__ and _b_ is the __denominator__. It
+    is equivalent to writing `a ÷ b`.
+
+    The denominator _b_ is the number of equal parts the whole has been divided
+    into. The numerator _a_ indicates how many of these parts are counted.
+
 fta:
   title: Fundamental theorem of arithemtic
   text: The __fundamental theorem of arithemtic__ (FTA) says that every integer
@@ -718,8 +728,8 @@ fta:
 
 function:
   title: Function
-  text: A __function__ is a mathematical relation that converts an input `x`
-    into exactly one output `f(x)`.
+  text: A __function__ is a mathematical relation that assigns to each input `x`
+    in the _domain_ exactly one output `f(x)`.
 
 function-graph:
   title: Graphs of functions
@@ -1424,6 +1434,12 @@ pyramid:
     In a __right regular pyramid__, the base is a _regular polygon_ and the
     vertex is directly above the center of the base.
   image: pyramid.svg
+
+pyramid-height:
+  title: height of a Pyramid
+  text: |
+    The __height__ of __altitude__ of a pyramid is the perpendicular distance
+    between the apex and the base of a pyramid.
 
 protractor:
   title: Protractor
