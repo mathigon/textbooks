@@ -28,6 +28,8 @@ export class VoxelPainter extends CustomElementView {
     const height = (+this.attr('height')) || width;
     this.css({width: width + 'px', height: height + 'px'});
 
+    const defaultColor = this.attr('color') || 0xfeb74c;
+
     const v1 = new THREE.Vector3();
     const explodeOnGrab = this.hasAttr('explodeOnGrab');
     const rotateOnly = this.hasAttr('rotateOnly') || explodeOnGrab;
@@ -80,7 +82,7 @@ export class VoxelPainter extends CustomElementView {
     camera.add(directionalLight);
 
     const voxelGeo = new THREE.BoxGeometry(1, 1, 1);
-    const voxelMaterial = new THREE.MeshLambertMaterial({color: 0xfeb74c});
+    const voxelMaterial = new THREE.MeshLambertMaterial({color: defaultColor});
 
     const faceColours = [RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE];
     const faceColorDirections = [
@@ -100,6 +102,7 @@ export class VoxelPainter extends CustomElementView {
     }
 
     const outlineGeometry = new THREE.Geometry();
+    // TODO: Setting linewidth > 1.0 does nothing for many GPUs, so we need an alternative
     const outlineMaterial = new THREE.LineBasicMaterial();
     const cubeEdges = [0, 1, 2, 3, 5, 4, 7, 6, 0, 2, 1, 3, 5, 7, 4, 6, 0, 5, 1, 4, 2, 7, 3, 6];
     for (let i = 0; i < cubeEdges.length; i++) {
@@ -166,10 +169,37 @@ export class VoxelPainter extends CustomElementView {
       const coords = shape.split(',');
       for (let i = 0, il = Math.floor(coords.length / 3); i < il; ++i) {
         const voxel = new Voxel();
-        voxel.position.set(
-            parseFloat(coords[i * 3]),
-            parseFloat(coords[i * 3 + 1]),
-            parseFloat(coords[i * 3 + 2]));
+        const [x, y, z] = [
+          parseFloat(coords[i * 3]),
+          parseFloat(coords[i * 3 + 1]),
+          parseFloat(coords[i * 3 + 2])
+        ];
+        /*
+          We swap Y and Z so that coords specified to the component are displayed as if
+          X and Y are 'towards' the camera in the positive direction, and +Z is 'up':
+
+                                        |
+                                        |  +Z
+                                        |
+                                        |
+                                        |
+                                        |
+                                        |
+                                        |
+                                        |
+                                      /--\
+                                    /--    --\
+                                  /-          -\
+                              /--              --\
+                            /--                    --\
+                          /-                          -\
+                      /--                              --\   +X
+                    /--   +Y                               --\
+                  /-                                          -\
+              /--                                              --\
+
+        */
+        voxel.position.set(x, z, y);
         snapToNearestValidCubeCenterPosition(voxel.position);
       }
 
