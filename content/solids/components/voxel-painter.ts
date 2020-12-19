@@ -102,6 +102,7 @@ export class VoxelPainter extends CustomElementView {
     }
 
     const outlineGeometry = new THREE.Geometry();
+    // TODO: Setting linewidth > 1.0 does nothing for many GPUs, so we need an alternative
     const outlineMaterial = new THREE.LineBasicMaterial();
     const cubeEdges = [0, 1, 2, 3, 5, 4, 7, 6, 0, 2, 1, 3, 5, 7, 4, 6, 0, 5, 1, 4, 2, 7, 3, 6];
     for (let i = 0; i < cubeEdges.length; i++) {
