@@ -996,11 +996,11 @@ Drag the area calculations on the corresponding regions.
 
 ::: column.grow
 
-`"Surface Area of the Cuboid" = ` _{x-equation(solution="2ab" keys="a b c" numeric)}_ ` + ` _{x-equation(solution="2bc" keys="a b c" numeric)}_ ` + ` _{x-equation(solution="2ac" keys="a b c" numeric)}_
+`"Surface Area of the Cuboid" = ` _{x-equation(solution="2ab" keys="" short-var)}_ ` + ` _{x-equation(solution="2bc" keys="" short-var)}_ ` + ` _{x-equation(solution="2ac" keys="" short-var)}_
 
 ::: column(width=250)
 
-`"Surface Area of the Cube" = ` _{x-equation(solution="6 a^2" keys="a b c sup" numeric)}_
+`"Surface Area of the Cube" = ` _{x-equation(solution="6 a^2" keys="sup" short-var)}_
 
 :::
 
@@ -2001,7 +2001,7 @@ Like the prisms, a cylinder has a volume equal to the **product of its** [[base 
 
 ---
 
-Recall that the ratio of the area of a circle to its square radius is a constant number called _{x-equation.small(solution="π" keys="π")}_. So the area of a circle is _{x-equation.small(solution="π r^2" keys="π sup")}_.
+Recall that the ratio of the area of a circle to its square radius is a constant number called _{x-equation.small(solution="π" keys="π")}_. So the area of a circle is _{x-equation.small(solution="π r^2" keys="π sup" short-var)}_.
 
 ---
 
@@ -2017,7 +2017,7 @@ The volume of a cylinder is,
 
 {.text-center} `"V"_"Cylinder" = "Base Area" xx "Height"`
 
-{.text-center} `"V"_"Cylinder" = ` _{x-equation.small(solution="π r^2 * h" keys="π sup")}_
+{.text-center} `"V"_"Cylinder" = ` _{x-equation.small(solution="π r^2 × h" keys="π sup ×" short-var)}_
 
 ---
 
@@ -2070,17 +2070,17 @@ It takes the contents of [[3]] cones to fill the cylinder with the same base and
 
 ---
 
-{.text-center} `"V"_"Cone" =` _{x-equation.small(solution="1 / 3" keys="frac")}_ `xx blank("Base Area", "Base Perimeter") xx blank("height", "width")`
+{.text-center} `"V"_"Cone" =` _{x-equation.small(solution="1 / 3" keys="frac" numeric)}_ `xx blank("Base Area", "Base Perimeter") xx blank("height", "width")`
 
 ---
 
-{.text-center} `"V"_"Cone" =` _{x-equation.small(solution="(1 / 3) × π r^2 × h" keys="frac sup π ×")}_
+{.text-center} `"V"_"Cone" =` _{x-equation.small(solution="(1 / 3) × π r^2 × h" keys="frac sup π ×" short-var)}_
 
 ---
 
 Nose cone has the same radius with the cylinder and has to hold 550 thousand liters of oxygen. Therefore the conical tank has to have a volume of 550 cubic meters.
 
-{.text-center} `550 =` _{x-equation.small(solution="1 / 3" keys="frac")}_ `*` _{x-equation.small(solution="π" keys="π")}_ `* input(4)^2 * blank("Height"_"OxygenTank","Radius"_"OxygenTank")`
+{.text-center} `550 =` _{x-equation.small(solution="1 / 3" keys="frac" numeric)}_ `*` _{x-equation.small(solution="π" keys="π")}_ `* input(4)^2 * blank("Height"_"OxygenTank","Radius"_"OxygenTank")`
 
 ---
 
@@ -2120,7 +2120,7 @@ Again, we can think of the cylinder and the cone separately.
 
 ::: column.grow
 
-The net of the cylinder has two [[circles|rectangles]] with the area of _{x-equation.small(solution="π r^2" keys="π sup")}_ each. The curved face is actually a large [[rectangle|square|triangle|pentagon]].
+The net of the cylinder has two [[circles|rectangles]] with the area of _{x-equation.small(solution="π r^2" keys="π sup" short-var)}_ each. The curved face is actually a large [[rectangle|square|triangle|pentagon]].
 
 The height of the rectangle is [[h|w|b]] and the width of the rectangle is the same as the [[circumference of the base|base area|diameter of the base]] of the circles.
 
@@ -2138,7 +2138,7 @@ Since the lateral face of the cylinder is a rectangle, we can find the area by [
 
 It is basically the [[circumference|radius|diameter]] of the base times the [[height|width]] of the cylinder.
 
-Therefore, the lateral area is _{x-equation.small(solution="2 π r" keys="π")}_ `* blank("h","w")`.
+Therefore, the lateral area is _{x-equation.small(solution="2 π r" keys="π" short-var)}_ `* blank("h","w")`.
 
 :::
 
@@ -2146,7 +2146,7 @@ Therefore, the lateral area is _{x-equation.small(solution="2 π r" keys="π")}_
 
 So the **Surface Area** of a cylinder is the sum of all the face areas.
 
-{.text-center} `"A"_"Cylinder" = ` _{x-equation.small(solution="2 π r × 2" keys="π ×")}_ `+` _{x-equation.small(solution="2 π r × h" keys="π ×")}_
+{.text-center} `"A"_"Cylinder" = ` _{x-equation.small(solution="2 π r^2" keys="π sup" short-var)}_ `+` _{x-equation.small(solution="2 π r × h" keys="π ×" short-var)}_
 
 ---
 
@@ -2176,7 +2176,7 @@ Now we just have to add up the area of both faces;
 
 The base of the cone  is a circle with radius r, so its area is
 
-`"A"_"base" =` _{x-equation.small(solution="π r^2" keys="π sup")}_
+`"A"_"base" =` _{x-equation.small(solution="π r^2" keys="π sup" short-var)}_
 
 ::: column.fit
 
@@ -2202,17 +2202,17 @@ Recall that the area of a triangle is one [[half|third|quarter]] of the product 
 
 ---
 
-`"A"_"lateral" = 1/2 ` _{x-equation.small(solution="2 π r" keys="π")}_ `* blank("s","h","l")`
+`"A"_"lateral" = 1/2 ` _{x-equation.small(solution="2 π r" keys="π" short-var)}_ `* blank("s","h","l")`
 
 ---
 
-`"A"_"lateral" =` _{x-equation.small(solution="π r s" keys="π")}_
+`"A"_"lateral" =` _{x-equation.small(solution="π r s" keys="π" short-var)}_
 
 ---
 
 Then, the total area of the cone is 
 
-{.text-center} `"A"_"cone" =` _{x-equation.small(solution="π r^2 + π r s" keys="π sup")}_
+{.text-center} `"A"_"cone" =` _{x-equation.small(solution="π r^2 + π r s" keys="π sup +" short-var)}_
 
 ---
 
@@ -2411,17 +2411,17 @@ To find the amount of grain that the silo holds, we need to calculate the [[volu
 
 Top and Bottom cones have a radius of [[6]] m and a height of [[5]] m;
 
-The volume of each cone is: _{x-equation.small(solution="1 / 3" keys="frac")}_ `xx` _{x-equation.small(solution="36 π" keys="π")}_ `xx input(5) =` _{x-equation.small(solution="60 π" keys="π")}_ cubic meters
+The volume of each cone is: _{x-equation.small(solution="1 / 3" keys="frac" numeric)}_ `xx` _{x-equation.small(solution="36 π" keys="π" numeric)}_ `xx input(5) =` _{x-equation.small(solution="60 π" keys="π" numeric)}_ cubic meters
 
 :::
 
 ---
 
-Cylinder has the [[same|different]] circular base and a [[10]] m height. So the volume of the cylinder is: _{x-equation.small(solution="36 π" keys="π")}_ `xx input(10) =` _{x-equation.small(solution="360 π" keys="π")}_ cubic meters.
+Cylinder has the [[same|different]] circular base and a [[10]] m height. So the volume of the cylinder is: _{x-equation.small(solution="36 π" keys="π" numeric)}_ `xx input(10) =` _{x-equation.small(solution="360 π" keys="π" numeric)}_ cubic meters.
 
 ---
 
-The total volume of the grain silo is _{x-equation.small(solution="480 π" keys="π")}_ cubic meters which is approximately 1500 cubic meters.
+The total volume of the grain silo is _{x-equation.small(solution="480 π" keys="π" numeric)}_ cubic meters which is approximately 1500 cubic meters.
 
 ---
 
@@ -2578,7 +2578,7 @@ _{span.comments(text="pills")}[[2r]] x [[2r]] x [[r]]_
 
 ---
 
-So the volume of the prism is _{x-equation.small(solution="4 r^3" keys="sup")}_.
+So the volume of the prism is _{x-equation.small(solution="4 r^3" keys="sup" short-var)}_.
 
 ---
 
@@ -2594,7 +2594,7 @@ This time let's put the hemisphere in a cylinder.
 
 The smallest possible cylinder that we can fit the hemisphere has the same [[radius|volume]] with the hemisphere and its radius is equal to its [[height|width]].
 
-The volume of this cylinder is _{x-equation.small(solution="π r^2" keys="sup π")}_ `*` _{x-equation.small(solution="r")}_ `=` _{x-equation.small(solution="π r^3" keys="sup π")}_ and again the volume of the hemisphere is [[less|greater]] than that.
+The volume of this cylinder is _{x-equation.small(solution="π r^2" keys="sup π" short-var)}_ `*` _{x-equation.small(solution="r" short-var)}_ `=` _{x-equation.small(solution="π r^3" keys="sup π" short-var)}_ and again the volume of the hemisphere is [[less|greater]] than that.
 
 :::
 
@@ -2610,7 +2610,7 @@ This time, let’s insert a cone with the maximum possible volume inside of the 
 
 The cone shares the same [[base|volume|surface area]] with the hemisphere and also its height is equal to [[its radius|twice the radius]].
 
-The volume of this cone is _{x-equation.small(solution="(1/3) π r^3" keys="sup frac π")}_. This time, the volume of the hemisphere is [[more | less]] than the cone.
+The volume of this cone is _{x-equation.small(solution="(1/3) π r^3" keys="sup frac π" short-var)}_. This time, the volume of the hemisphere is [[more | less]] than the cone.
 
 :::
 
@@ -2620,7 +2620,7 @@ If we **double** these boundaries to reach the volume of a whole sphere;
 
 `"V"_"CONE" < "V"_"SPHERE" < "V"_"CYLINDER"`
 
-_{x-equation.small(solution="(2/3) π r^3" keys="sup frac π")}_ `< "V"_"SPHERE" <` _{x-equation.small(solution="2 π r^3" keys="sup π")}_
+_{x-equation.small(solution="(2/3) π r^3" keys="sup frac π" short-var)}_ `< "V"_"SPHERE" <` _{x-equation.small(solution="2 π r^3" keys="sup π" short-var)}_
 
 ---
 
@@ -2698,13 +2698,13 @@ We have just demonstrated that the volume of the sphere is the `input(2) / input
 
 `"V"_"SPHERE" = (2/3) "V"_"CYLINDER"`
 
-`"V"_"SPHERE" = 2 / 3` _{x-equation.small(solution="π r^2 h" keys="π sup")}_ since `"h" = 2"r"`, we can replace `"h"`
+`"V"_"SPHERE" = 2 / 3` _{x-equation.small(solution="π r^2 h" keys="π sup" short-var)}_ since `"h" = 2"r"`, we can replace `"h"`
 
-`"V"_"SPHERE" = (2/3) pi r^2 *` _{x-equation.small(solution="2 r")}_
+`"V"_"SPHERE" = (2/3) pi r^2 *` _{x-equation.small(solution="2 r" short-var)}_
 
-`"V"_"SPHERE" = (2/3) * 2 pi *` _{x-equation.small(solution="r^3" keys="sup")}_
+`"V"_"SPHERE" = (2/3) * 2 pi *` _{x-equation.small(solution="r^3" keys="sup" short-var)}_
 
-`"V"_"SPHERE" =` _{x-equation.small(solution="π r^3" keys="π sup")}_
+`"V"_"SPHERE" =` _{x-equation.small(solution="π r^3" keys="π sup" short-var)}_
 
 :::
 
@@ -2712,11 +2712,11 @@ We have just demonstrated that the volume of the sphere is the `input(2) / input
 
 Archimedes has also found that the **same ratio** exists between the **surface areas** of the cylinder and sphere as well.
 
-Surface Area of a Cylinder = _{x-equation.small(solution="(2 π r^2) + (2 π r h)" keys="π sup +")}_
+Surface Area of a Cylinder = _{x-equation.small(solution="(2 π r^2) + (2 π r h)" keys="π sup +" short-var)}_
 
 ---
 
-Surface Area of the Cylinder with `"h" = "2"` is: `2 pi r^2 + 2 pi r *` _{x-equation.small(solution="2 r")}_ `=` [[`6 pi "r"^2` | `4 pi "r"^2` | `8 pi "r"^2`]]
+Surface Area of the Cylinder with `"h" = "2"` is: `2 pi r^2 + 2 pi r *` _{x-equation.small(solution="2 r" short-var)}_ `=` [[`6 pi "r"^2` | `4 pi "r"^2` | `8 pi "r"^2`]]
 
 ---
 
@@ -2724,7 +2724,7 @@ If we use the same ratio of `input(2) / input(3)` to find the surface area of th
 
 ---
 
-`"A"_"SPHERE" =` _{x-equation.small(solution="4 π r^2" keys="π sup")}_
+`"A"_"SPHERE" =` _{x-equation.small(solution="4 π r^2" keys="π sup" short-var)}_
 
 ---
 
@@ -2744,9 +2744,9 @@ Thanks to Archimedes, now we can go back to our initial question. We can calcula
 
 The radius of Earth at the equator is 6378 kilometers. Although it is not a perfect sphere, we can still use the sphere’s volume formula to make a fair approximation.
 
-`V_Earth =` _{x-equation.small(solution="π r^3" keys="π sup")}_ `= * pi * input(6378)^3 = 108.3 xx 10^10 "km"^3` **(approximately 1 trillion cubic kilometers)**
+`V_Earth =` _{x-equation.small(solution="π r^3" keys="π sup" short-var)}_ `= * pi * input(6378)^3 = 108.3 xx 10^10 "km"^3` **(approximately 1 trillion cubic kilometers)**
 
-The **surface area** of the Earth can also be found by using the Archimedes formula _{x-equation.small(solution="4 π r^2" keys="π sup")}_.
+The **surface area** of the Earth can also be found by using the Archimedes formula _{x-equation.small(solution="4 π r^2" keys="π sup" short-var)}_.
 
 `"A"_"Earth" = 4 pi r^2 = 4 * pi * input(6378)^2 =` **510 million square kilometers.**
 
