@@ -593,7 +593,8 @@ We can use the unit cubes to create the model of the car:
 
 ::: column.fit
 
-{.todo} INTERACTIVE: car model
+    figure
+      x-voxel-painter(width=300 height=300 shape="0.5,-0.5,0.5,0.5,-0.5,-0.5,-0.5,-0.5,0.5,0.5,-1.5,-0.5,-0.5,-0.5,-0.5,-0.5,-1.5,-0.5,0.5,0.5,0.5,-0.5,0.5,0.5,0.5,1.5,-0.5,0.5,0.5,-0.5,-0.5,1.5,-0.5,-0.5,0.5,-0.5" playingFieldSize="2" orthographic color-sides rotateOnly hideGrid)
 
 ::: column.grow
 
@@ -638,7 +639,8 @@ It has [[6]] faces, but we only see three of them in the sketch.
 
 ::: column.fit
 
-{.todo} INTERACTIVE: Faces rotation
+    figure
+      x-voxel-painter(width=300 height=300 shape="0.5,-0.5,-0.0,0.5,-0.5,-1.0,-0.5,-0.5,-0.0,0.5,-0.5,1.0,-0.5,-0.5,-1.0,-0.5,-0.5,1.0,0.5,0.5,-0.0,-0.5,0.5,-0.0,0.5,0.5,1.0,-0.5,0.5,1.0,0.5,0.5,-1.0,-0.5,0.5,-1.0" playingFieldSize="3" color-sides rotateOnly hideGrid)
 
 :::
 
@@ -708,7 +710,8 @@ Most of the reactions like heat transfer occur at the surface of the objects and
 
 ::: column(width=200)
 
-{.todo} INTERACTIVE: Elephant cuboid
+    figure
+      x-voxel-painter(width=200 height=200 shape="0.5,-1.5,-0.5,0.5,-1.5,-1.5,-0.5,-1.5,-0.5,0.5,-1.5,0.5,-0.5,-1.5,-1.5,-0.5,-1.5,0.5,0.5,-0.5,-0.5,-0.5,-0.5,-0.5,0.5,-0.5,0.5,-0.5,-0.5,0.5,0.5,0.5,-1.5,-0.5,0.5,-1.5,0.5,1.5,-1.5,-0.5,1.5,-1.5,0.5,0.5,-0.5,0.5,-0.5,-1.5,-0.5,0.5,-0.5,-0.5,-0.5,-1.5,0.5,1.5,-0.5,-0.5,1.5,-0.5,0.5,0.5,0.5,-0.5,0.5,0.5,0.5,1.5,0.5,-0.5,1.5,0.5,0.5,-1.5,1.5,-0.5,-1.5,1.5,0.5,-0.5,1.5,-0.5,-0.5,1.5,0.5,0.5,1.5,-0.5,0.5,1.5,0.5,1.5,1.5,-0.5,1.5,1.5" playingFieldSize="4" color="rgb(129,129,129)" rotateOnly hideGrid)
 
 ::: column.fit
 
