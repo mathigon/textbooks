@@ -355,12 +355,14 @@ Volume is the number of cubic units that fill a 3D region, without any gaps or o
 
 ---
 
+> id: temple-display-1
+
 Let’s look at Apollo’s altar. If the edge length of the original altar was 5 units, then its base is a 5x5 square that has [[25]] unit cubes.
 
 ::: column.fit
 
     figure
-      x-voxel-painter(width=200 height=200 shape="-2.0,-2.0,-2.0,-1.0,-2.0,-2.0,-2.0,-1.0,-2.0,-1.0,0.0,-2.0,-1.0,-1.0,-2.0,-1.0,1.0,-2.0,0.0,0.0,-2.0,0.0,1.0,-2.0,1.0,0.0,-2.0,1.0,1.0,-2.0,1.0,-2.0,-2.0,1.0,-1.0,-2.0,2.0,-2.0,-2.0,2.0,-1.0,-2.0,2.0,0.0,-2.0,0.0,-2.0,-2.0,2.0,1.0,-2.0,0.0,-1.0,-2.0,-2.0,0.0,-2.0,-2.0,1.0,-2.0,-1.0,2.0,-2.0,0.0,2.0,-2.0,1.0,2.0,-2.0,2.0,2.0,-2.0,-2.0,2.0,-2.0,2.0,-2.0,-1.0,2.0,-2.0,0.0,2.0,-2.0,1.0,-1.0,-2.0,2.0,0.0,-2.0,2.0,1.0,-2.0,2.0,2.0,-2.0,2.0,-2.0,-2.0,2.0,-2.0,-2.0,-1.0,-2.0,-2.0,0.0,-2.0,-2.0,1.0,-2.0,2.0,-1.0,-2.0,2.0,0.0,-2.0,2.0,1.0,-2.0,-1.0,2.0,-2.0,0.0,2.0,-2.0,1.0,2.0,-2.0,2.0,2.0" playingFieldSize="5" rotateOnly hideGrid)
+      x-voxel-painter(width=200 height=200 shape="" playingFieldSize="5" rotateOnly hideGrid)
 
 ::: column.grow
 
@@ -417,12 +419,14 @@ To find the volume of the cube, the number of cubes in the first layer is multip
 
 ---
 
+> id: temple-display-2
+
     // Page 11
 
 ::: column.fit
 
     figure
-      x-voxel-painter(width=200 height=200 shape="-2.0,-2.0,-2.0,-1.0,-2.0,-2.0,-2.0,-1.0,-2.0,-1.0,0.0,-2.0,-1.0,-1.0,-2.0,-1.0,1.0,-2.0,0.0,0.0,-2.0,0.0,1.0,-2.0,1.0,0.0,-2.0,1.0,1.0,-2.0,1.0,-2.0,-2.0,1.0,-1.0,-2.0,2.0,-2.0,-2.0,2.0,-1.0,-2.0,2.0,0.0,-2.0,0.0,-2.0,-2.0,2.0,1.0,-2.0,0.0,-1.0,-2.0,-2.0,0.0,-2.0,-2.0,1.0,-2.0,-1.0,2.0,-2.0,0.0,2.0,-2.0,1.0,2.0,-2.0,2.0,2.0,-2.0,-2.0,2.0,-2.0,2.0,-2.0,-1.0,2.0,-2.0,0.0,2.0,-2.0,1.0,-1.0,-2.0,2.0,0.0,-2.0,2.0,1.0,-2.0,2.0,2.0,-2.0,2.0,-2.0,-2.0,2.0,-2.0,-2.0,-1.0,-2.0,-2.0,0.0,-2.0,-2.0,1.0,-2.0,2.0,-1.0,-2.0,2.0,0.0,-2.0,2.0,1.0,-2.0,-1.0,2.0,-2.0,0.0,2.0,-2.0,1.0,2.0,-2.0,2.0,2.0" playingFieldSize="5" rotateOnly hideGrid)
+      x-voxel-painter(width=200 height=200 shape="" playingFieldSize="5" rotateOnly hideGrid)
 
 ::: column.grow
 
@@ -432,6 +436,8 @@ The number of layers we added constitutes the [[height]] of the altar.
 We calculated the volume of the cubic altar by multiplying [[Base Area]] and [[height]].
 
 :::
+
+---
 
 Base Area => `ABase = input(5) x input(5) =25 m^2` and height is 5 meters
 
