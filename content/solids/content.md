@@ -347,7 +347,7 @@ We can find the volume of more complex shapes by determining how many cubes of v
 
 The Apollo’s altar was a cubical temple with dimensions of five meters as its length, width, and height.
 
-The Delians doubled the sides of the altar, but the plague did not stop. What went wrong? 
+The Delians doubled the sides of the altar, but the plague did not stop. What went wrong?
 
 One way to find the volume of a cuboid is to fill the cuboid with unit cubes.
 
@@ -380,7 +380,7 @@ There must be `5 x 25 = input(125)` cubes to fill the entire altar.
 
 __It means the original cubic altar has a volume of 125 cubic units.__
 
-The Delians did not follow the instructions carefully. They [[doubled each side]] of the altar. 
+The Delians did not follow the instructions carefully. They [[doubled each side]] of the altar.
 Let’s see what happened when they doubled the sides. 
 
 ::: column.fit
