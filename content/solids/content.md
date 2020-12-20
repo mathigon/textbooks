@@ -371,12 +371,17 @@ The first layer is a 5 x 5 square made up from [[25]] cubes.
 
 ---
 
+> id: temple-filling
+
     // Page 10
 
-{.todo} INTERACTIVE: Area filling animation
+    figure
+      x-voxel-painter(width=300 height=300 shape="" playingFieldSize="5" rotateOnly hideGrid)
 
 There will be [[5]] layers of 25 cubes.
-There must be `5 x 25 = input(125)` cubes to fill the entire altar. 
+There must be `5 x 25 = input(125)` cubes to fill the entire altar.
+
+---
 
 __It means the original cubic altar has a volume of 125 cubic units.__
 
