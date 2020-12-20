@@ -44,7 +44,7 @@ function getPoints(factors: number[], size: number): Point[] {
 }
 
 
-@register('x-factor-circles', {attributes: ['n']})
+@register('x-factor-circles')
 export class FactorCircles extends CustomElementView {
   private size!: number;
   private $svg!: SVGParentView;
@@ -55,9 +55,7 @@ export class FactorCircles extends CustomElementView {
     this.size = +this.attr('size') || 400;
     this.$svg = $N('svg', {width: this.size, height: this.size}, this) as SVGParentView;
     this.$label = $N('text', {x: 6, y: 30}, this.$svg);
-
-    this.drawPoints(+this.attr('n'));
-    this.on('attr:n', e => this.drawPoints(+e.newVal));
+    this.onAttr('n', n => this.drawPoints(+n));
   }
 
   drawPoints(n: number) {

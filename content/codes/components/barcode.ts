@@ -14,7 +14,7 @@ const DIGITS: Obj<string> = {
 };
 
 
-@register('x-barcode', {attributes: ['value']})
+@register('x-barcode')
 export class Barcode extends CustomElementView {
   private $svg!: SVGParentView;
   private left = 0;
@@ -25,10 +25,10 @@ export class Barcode extends CustomElementView {
     this.$svg = $N('svg', {viewBox: '0 0 400 200'}, this) as SVGParentView;
     this.computeParityDigit(this.attr('value'));
     this.draw(this.attr('value'));
-    this.on('attr:value', (e) => {
-      this.computeParityDigit(e.newAttr);
-      this.draw(e.newAttr);
-    }); // I suspect this looks for changes in the "value" attribute.
+    this.onAttr('value', d => {
+      this.computeParityDigit(d);
+      this.draw(d);
+    });
   }
 
   private draw(value: string) {

@@ -18,7 +18,7 @@ function getGeometry(name: string) {
   return new THREE.BoxGeometry(1.2, 1.2, 1.2);
 }
 
-@register('x-polyhedron-slice', {attributes: ['shape', 'opacity']})
+@register('x-polyhedron-slice')
 export class PolyhedronSlice extends CustomElementView {
 
   async ready() {
@@ -47,16 +47,16 @@ export class PolyhedronSlice extends CustomElementView {
     sceneObj.add(polyhedron);
 
     // Listen to the 'shape' attribute and update the graphics.
-    this.on('attr:shape', e => {
-      polyhedron.geometry = getGeometry(e.newVal);
-      updateIntersection();
-      scene.draw();
+    this.onAttr('shape', (shape, initial) => {
+      polyhedron.geometry = getGeometry(shape);
+      if (!initial) updateIntersection();
+      if (!initial) scene.draw();
     });
 
     // Listen to the 'opacity' attribute and update the graphics.
-    this.on('attr:opacity', e => {
-      polyhedron.material.opacity = 0.4 + (+e.newVal) / 25;
-      scene.draw();
+    this.onAttr('opacity', (opacity, initial) => {
+      polyhedron.material.opacity = 0.4 + (+opacity) / 25;
+      if (!initial) scene.draw();
     });
 
     // The intersecting plane

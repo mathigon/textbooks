@@ -8,7 +8,7 @@ import {$N, animate, CustomElementView, ease, ElementView, register, SVGParentVi
 import {Burst} from '../../shared/components/burst';
 
 
-@register('x-anibutton', {attributes: ['text']})
+@register('x-anibutton')
 export class Anibutton extends CustomElementView {
   $text!: ElementView;
   burst!: Burst;
@@ -16,10 +16,9 @@ export class Anibutton extends CustomElementView {
 
   ready() {
     const $svg = $N('svg', {width: 160, height: 160}, this) as SVGParentView;
-    this.$text = $N('span', {html: this.attr('text')}, this);
+    this.$text = $N('span', {}, this);
     this.burst = new Burst($svg, 20);
-
-    this.on('attr:text', e => this.$text.text = e.newVal);
+    this.onAttr('text', text => this.$text.text = text);
   }
 
   play() {
