@@ -442,16 +442,6 @@ export class VoxelPainter extends CustomElementView {
     this.updateApplet();
   }
 
-  clearVoxels() {
-    if (this.scene != undefined) {
-      for (const voxel of this.voxels) {
-        this.scene.remove(voxel);
-      }
-      this.voxels = [];
-      this.updateApplet();
-    }
-  }
-
   private setFromVoxelIntersection(target: THREE.Vector3, intersection: THREE.Intersection) {
     target.copy(intersection!.face!.normal).multiplyScalar(0.1);
     target.add(intersection.point);
@@ -635,6 +625,16 @@ export class VoxelPainter extends CustomElementView {
       this.addVoxel(...position, color);
     }
     this.updateApplet();
+  }
+
+  clearVoxels() {
+    if (this.scene != undefined) {
+      for (const voxel of this.voxels) {
+        this.scene.remove(voxel);
+      }
+      this.voxels = [];
+      this.updateApplet();
+    }
   }
 
   getSurfaceArea() {
