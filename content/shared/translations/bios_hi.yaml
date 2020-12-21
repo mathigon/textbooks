@@ -701,7 +701,7 @@ gauss:
     गणितज्ञों को पढ़ाया।
   links:
     - title: Prime Number Theorem
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -754,7 +754,7 @@ goldbach:
     जाता है।
   links:
     - title: Goldbach Conjecture
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -1122,7 +1122,7 @@ mersenne:
     हार्मोनिक्स का भी अध्ययन किया, और धर्मशास्त्र और दर्शन के बारे में लिखा।
   links:
     - title: Large Primes
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1534,7 +1534,7 @@ riemann:
     सामान्य सापेक्षता के लिए नींव रखी, और अभाज्य संख्याओं के वितरण के बारे में खोज की।
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872

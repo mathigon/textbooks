@@ -2,7 +2,7 @@
 # MATHIGON HINTS
 # ==============================================================================
 
-welcome: 'Välkommen till Mathigon! Jag är Archie, din personliga handledare. :mortar_board:'
+welcome: 'Välkommen till Mathigon! Jag är Archie, din personliga handledare. :graduation-cap:'
 
 account: 'Du kan [skapa ett gratis konto](->#login-btn) för att spara dina framsteg.'
 
@@ -15,25 +15,25 @@ tutorial2: |
   slutade.
 
 correct:
-  - 'Bra gjort :relaxed:'
-  - 'Bra jobbat! :relieved:'
-  - 'Fantastiskt :grinning:'
-  - 'Lysande :thumbsup:'
-  - 'Excellent! :ok_hand:'
-  - 'Cool :sunglasses:'
-  - 'Trevlig! :v:'
-  - 'Bra jobbat! :blush:'
-  - 'Sweet :relaxed:'
+  - 'Bra gjort :smiling-face:'
+  - 'Bra jobbat! :relieved-face:'
+  - 'Fantastiskt :grinning-face:'
+  - 'Lysande :thumbs-up:'
+  - 'Excellent! :ok-hand:'
+  - 'Cool :smiling-face-with-sunglasses:'
+  - 'Trevlig! :victory-hand:'
+  - 'Bra jobbat! :smiling-face-with-smiling-eyes:'
+  - 'Sweet :smiling-face:'
   - 'Imponerande! :trophy:'
-  - 'Utestående :grin:'
+  - 'Utestående :grinning-face:'
   - 'Utmärkt! :star:'
-  - 'Underbar! :smiley:'
+  - 'Underbar! :smiling-face:'
 
 incorrect:
-  - 'Det är inte riktigt :white_frowning_face:'
-  - 'Är du säker på det? :thinking_face:'
-  - 'Det ser inte bra ut. :hushed:'
-  - 'Försök igen! :confused:'
+  - 'Det är inte riktigt :frowning-face:'
+  - 'Är du säker på det? :thinking-face:'
+  - 'Det ser inte bra ut. :hushed-face:'
+  - 'Försök igen! :confused-face:'
 
 welcomeMorning: God morgon!
 
@@ -49,4 +49,4 @@ welcomeEveningNamed: 'God kväll, $name!'
 
 serverError: |
   Tyvärr kan jag inte hjälpa just nu. Kontrollera din internetanslutning eller försök igen senare.
-  :confused:
+  :confused-face:

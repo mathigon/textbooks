@@ -119,11 +119,11 @@ __Olasılık__ belirli bir __olayın__ gerçekleşme ihtimalini tanımlayan 0 il
 İşte bazı olaylar: gerçekleşme ihtimali yüksek olandan az olana doğru sıralayın:
 
     x-sortable
-      .item.md(data-index="3") Bir zar atıyorsunuz :game_die: ve 6 geliyor.
+      .item.md(data-index="3") Bir zar atıyorsunuz :game-die: ve 6 geliyor.
       .item.md(data-index="5") Penguenler :penguin: Kuzey Kutbu’nda yaşar.
-      .item.md(data-index="1") Kasım ayında yağmur yağacak. :rain_cloud:
-      .item.md(data-index="0") Bugün Çin’de bir bebek doğacak. :baby_bottle:
-      .item.md(data-index="4") Bir piyango bileti alıyorsun ve büyük ikramiyeyi kazanıyorsun :tada:.
+      .item.md(data-index="1") Kasım ayında yağmur yağacak. :cloud-with-rain:
+      .item.md(data-index="0") Bugün Çin’de bir bebek doğacak. :baby-bottle:
+      .item.md(data-index="4") Bir piyango bileti alıyorsun ve büyük ikramiyeyi kazanıyorsun :party-popper:.
       .item.md(data-index="2") Yeni doğmuş bir bebek kız olacak. :girl:
 
 Olasılıkları genelde üzerinde çok düşünmeden günlük hayatta sıklıkla kullanıyoruz.  Yarının yağmurlu olma olasılığı nedir? Otobüsü kaçırmam ne kadar muhtemeldir? Bu oyunu kazanma olasılığım nedir?
@@ -136,7 +136,7 @@ Olasılıkları genelde üzerinde çok düşünmeden günlük hayatta sıklıkla
 
 Sadece sonuçlardan biri gerçekleşebilir olsa bile bu olasılığın  0 ile 1 _arasında_ olduğunu not edelim. Fakat olasılıkların gerçek sonuçlarla çok az ilgisi vardır: eğer madeni bir parayı çok kez atarsak sonuçların [[yaklaşık olarak yarısının|tam olarak yarısının|hepsinin|hiçbirinin]] tura olacağını biliyoruz – ama _tam olarak hangi_ atışların tura geleceğini tahmin etmemizin hiçbir yolu yok.
 
-Çok az olasılıklı olaylar bile (örneğin  piyangoyu kazanma :tada:) _yine de gerçekleşebilir_ – ve gerçekten de her zaman _gerçekleşir_ (fakat katılan insanların çok küçük bir bölümü için).
+Çok az olasılıklı olaylar bile (örneğin  piyangoyu kazanma :party-popper:) _yine de gerçekleşebilir_ – ve gerçekten de her zaman _gerçekleşir_ (fakat katılan insanların çok küçük bir bölümü için).
 
 ---
 > id: prob-line-3

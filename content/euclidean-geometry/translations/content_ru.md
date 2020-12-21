@@ -653,7 +653,7 @@ TODO
 
 ::: column.sticky-video(width=360)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
+    x-video(src="https://static.mathigon.org/videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
 
 ::: column.grow
 
@@ -758,7 +758,7 @@ TODO
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
+    x-video(src="https://static.mathigon.org/videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
 
 ::: column.grow
 
@@ -777,7 +777,7 @@ TODO
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
+    x-video(src="https://static.mathigon.org/videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
 
 ::: column.grow
 
@@ -812,7 +812,7 @@ TODO
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
+    x-video(src="https://static.mathigon.org/videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
 
 ::: column.grow
 
@@ -847,7 +847,7 @@ TODO
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
+    x-video(src="https://static.mathigon.org/videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
 
 :::
 
@@ -866,7 +866,7 @@ TODO
 
 ::: column(width=320)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
+    x-video(src="https://static.mathigon.org/videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
 
 ::: column.grow
 

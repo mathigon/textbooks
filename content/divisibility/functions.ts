@@ -32,55 +32,43 @@ function numberGrid($grid: ElementView, time: number, className: string,
 export function divisibilityGame($step: Step) {
   const $gameplay = $step.$('x-gameplay') as Gameplay;
 
-  $gameplay.setFirstSlide($el => $el.bindModel(observe({x: '?', y: '?'})));
+  $gameplay.setSlideGenerator(($el, success, error) => {
+    const answer = Random.smart(3, 'factor-quiz');
+    const n1 = Random.smart(9, 'factor-quiz-number') + 2;
+    const n2 = Random.smart(9, 'factor-quiz-number') + 2;
 
-  $gameplay.slideGenerator = ($el, success, error) => {
-    const answer = Random.smart(3, 'divisibility-game');
-    const n1 = Random.smart(9, 'divisibility-game-number') + 2;
-    const n2 = Random.smart(9, 'divisibility-game-number') + 2;
-
-    let x;
-    let y;
-
-    switch (answer) {
-      case 0:
-        x = n1;
-        y = n1 * n2;
-        break;  // factor
-      case 1:
-        x = n1 * n2;
-        y = n1;
-        break;  // multiple
-      case 2:
-        x = n1;
-        y = (n1 * n2) + [1, -1][Random.integer(1)];  // neither
-        if (Random.integer(1)) [x, y] = [y, x];
+    const val = [n1, n1];
+    if (answer === 0) {  // factor
+      val[1] = n1 * n2;
+    } else if (answer === 1) { // multiple
+      val[0] = n1 * n2;
+    } else {  // neither
+      val[1] = (n1 * n2) + Random.find([1, -1]);
+      if (Random.bernoulli()) val.reverse();
     }
+    $el.bindModel(observe({x: val[0], y: val[1]}));
 
-    $el.bindModel(observe({x, y}));
+    const $buttons = $el.$$('.factor-bubble .btn');
+    $buttons[0].on('click', () => grade(answer === 0));
+    $buttons[1].on('click', () => grade(answer === 1));
+    $buttons[2].on('click', () => grade(answer > 1));
 
-    const $buttons = $el.$$('.factor-bubble');
-    $buttons[0].on('click', answer === 0 ? success : error);
-    $buttons[1].on('click', answer === 1 ? success : error);
-    $buttons[2].on('click', answer > 1 ? success : error);
-
-    $el.on('success', () => {
+    const grade = (correct: boolean) => {
       for (const [i, $b] of $buttons.entries()) {
-        if (answer === i) {
-          $b.addClass('success');
-          $b.css('transform', 'none');
+        if (correct && answer === i) {
+          $b.removeClass('btn-blue');
+          $b.addClass('btn-green');
+          $b.parent!.css('transform', 'none');
+        } else if (correct) {
+          $b.exit('pop');
         } else {
-          $b.children[0].exit('pop');
+          $b.removeClass('btn-blue');
+          $b.addClass(answer === i ? 'btn-green' : 'btn-red');
         }
       }
-    });
-
-    $el.on('error', () => {
-      for (const [i, $b] of $buttons.entries()) {
-        $b.addClass(answer === i ? 'success' : 'error');
-      }
-    });
-  };
+      correct ? success() : error();
+    };
+  });
 }
 
 export function divisibility2($section: Step) {

@@ -19,5 +19,8 @@
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "typeAcquisition": {
+    "include": ["content/shared/templates.d.ts"]
+  }
 }

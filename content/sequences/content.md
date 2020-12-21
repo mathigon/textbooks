@@ -671,7 +671,7 @@ Here is a short clip from the movie _Pay it Forward_, where 12-year-old Trevor
 explains his idea for making the world a better place:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward-poster.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward-poster.jpg" width=640 height=360 controls audio)
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---

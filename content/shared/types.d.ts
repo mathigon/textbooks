@@ -324,25 +324,21 @@ export class Gallery extends CustomElementView {
   ready(): void;
 }
 
+type SlideGenerator = (el: ElementView, success: () => void, error: () => void) => void;
+
 export class Gameplay extends CustomElementView implements StepComponent {
-  private $progress;
   private $dots;
+  private $currentSlide;
   private slideTemplate;
-  private time;
-  private currentAnimation?;
   private history;
-  private goal;
-  private $currentSlide?;
-  playing: boolean;
-  completed: boolean;
-  slideGenerator: (el: ElementView, success: (e: any) => void, error: (e: any) => void) => void;
+  private target;
+  private slideGenerator;
+  private completed: boolean;
   ready(): void;
   setup($step: Step): void;
+  setSlideGenerator(g: SlideGenerator): void;
   private score;
   private makeSlide;
-  setFirstSlide(fn: (slide: ElementView) => void): void;
-  play(): void;
-  pause(): void;
 }
 
 export class Gloss extends CustomElementView {

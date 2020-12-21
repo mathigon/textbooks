@@ -34,7 +34,7 @@ function step(child: THREE.Object3D) {
 }
 
 
-@register('x-menger-sponge', {attributes: ['steps']})
+@register('x-menger-sponge')
 export class MengerSponge extends Solid {
 
   created() {
@@ -58,9 +58,9 @@ export class MengerSponge extends Solid {
       return cubes;
     });
 
-    this.on('attr:steps', (e) => {
+    this.onAttr('steps', (steps) => {
       for (const c of cubes) c.visible = false;
-      if (cubes[+e.newVal]) cubes[+e.newVal].visible = true;
+      if (cubes[+steps]) cubes[+steps].visible = true;
       if (this.scene) this.scene.draw();
     });
   }

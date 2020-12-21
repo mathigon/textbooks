@@ -5,8 +5,11 @@
 
 
 import {Step} from '../shared/types';
-import './components/voxel-painter';
 import {VoxelPainter} from './components/voxel-painter';
+
+import './components/voxel-painter';
+import '../shared/components/solid';
+import '../polyhedra/components/polyhedron';
 
 
 export async function voxelBuilderQuestion($step: Step) {

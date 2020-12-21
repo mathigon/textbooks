@@ -683,7 +683,7 @@ _折纸_ _{span.no-voice}(折り紙)_ 一词源于日语 _oru_ (折叠) and _kam
 
 ::: column.sticky-video(width=360)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
+    x-video(src="https://static.mathigon.org/videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
 
 ::: column.grow
 {.step.active(data-t=0)} 你只需要一张正方形的纸，首先，沿两条对角线对折。
@@ -775,7 +775,7 @@ _折纸_ _{span.no-voice}(折り紙)_ 一词源于日语 _oru_ (折叠) and _kam
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
+    x-video(src="https://static.mathigon.org/videos/space.mp4" poster="images/space.jpg" width=300 height=225 credit="© Brigham Young University")
 
 ::: column.grow
 
@@ -798,7 +798,7 @@ _折纸_ _{span.no-voice}(折り紙)_ 一词源于日语 _oru_ (折叠) and _kam
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
+    x-video(src="https://static.mathigon.org/videos/stents.mp4" poster="images/stents.jpg" width=300 height=225 credit="© Virtual Point")
 
 ::: column.grow
 
@@ -831,7 +831,7 @@ _折纸_ _{span.no-voice}(折り紙)_ 一词源于日语 _oru_ (折叠) and _kam
     // 
     // ::: column(width=300)
     // 
-    // x-video(src="https://storage.googleapis.com/mathigon-videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
+    // x-video(src="https://static.mathigon.org/videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
     // 
     // ::: column.grow
     // #### Stadium Roofs
@@ -850,7 +850,7 @@ _折纸_ _{span.no-voice}(折り紙)_ 一词源于日语 _oru_ (折叠) and _kam
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
+    x-video(src="https://static.mathigon.org/videos/marine.mp4" poster="images/marine.jpg" width=300 height=225 credit="© Harvard University")
 
 ::: column.grow
 
@@ -883,7 +883,7 @@ _折纸_ _{span.no-voice}(折り紙)_ 一词源于日语 _oru_ (折叠) and _kam
 
 ::: column(width=300)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
+    x-video(src="https://static.mathigon.org/videos/wing-animation.mp4" poster="images/wing-animation.jpg" width=300 height=170 credit="© ETH Zürich")
 
 :::
 
@@ -900,7 +900,7 @@ _折纸_ _{span.no-voice}(折り紙)_ 一词源于日语 _oru_ (折叠) and _kam
 
 ::: column(width=320)
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
+    x-video(src="https://static.mathigon.org/videos/dna.mp4" poster="images/dna.jpg" width=320 height=240 credit="© PyMOL")
 
 ::: column.grow
 

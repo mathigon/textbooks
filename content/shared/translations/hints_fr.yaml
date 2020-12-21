@@ -2,28 +2,28 @@
 # MATHIGON HINTS
 # ==============================================================================
 
-welcome: "Bienvenue chez Mathigon! Je suis Archie, ton tuteur personnel. :mortar_board:"
+welcome: "Bienvenue chez Mathigon! Je suis Archie, ton tuteur personnel. :graduation-cap:"
 account: Vous pouvez créer un compte gratuit pour enregistrer vos progrès.
 tutorial1: Notre contenu est divisé en petites étapes. Vous devez compléter les activités pour révéler la suite.
 tutorial2: Nous enregistrerons tous vos progrès afin que vous puissiez revenir plus tard et continuer là où vous l'avez laissé.
 
 correct:
-  - "Bien joué :relaxed:"
-  - "Bon travail! :relieved:"
-  - "Brilliant :thumbsup:"
-  - "Excellent! :ok_hand:"
-  - "Cool :sunglasses:"
-  - "Agréable! :v:"
-  - "Marche à suivre! :blush:"
-  - "Exceptionnel :grin:"
+  - "Bien joué :smiling-face:"
+  - "Bon travail! :relieved-face:"
+  - "Brilliant :thumbs-up:"
+  - "Excellent! :ok-hand:"
+  - "Cool :smiling-face-with-sunglasses:"
+  - "Agréable! :victory-hand:"
+  - "Marche à suivre! :smiling-face-with-smiling-eyes:"
+  - "Exceptionnel :grinning-face:"
   - "Superbe! :star:"
-  - "Merveilleux! :smiley:"
+  - "Merveilleux! :smiling-face:"
 
 incorrect:
-  - "Ce n'est pas tout à fait juste :white_frowning_face:"
-  - "Êtes-vous sûr de cela? :thinking_face:"
-  - "Cela ne semble pas juste. :hushed:"
-  - "Réessayer! :confused:"
+  - "Ce n'est pas tout à fait juste :frowning-face:"
+  - "Êtes-vous sûr de cela? :thinking-face:"
+  - "Cela ne semble pas juste. :hushed-face:"
+  - "Réessayer! :confused-face:"
 
 welcomeMorning: Bonjour!
 welcomeAfternoon: Bonjour!
@@ -33,4 +33,4 @@ welcomeMorningNamed: Bonjour, $name!
 welcomeAfternoonNamed: Bonjour, $name!
 welcomeEveningNamed: Bonsoir, $name!
 
-serverError: "Désolé, je ne peux pas aider pour le moment. Vérifiez votre connexion Internet ou réessayez plus tard. :confused:"
+serverError: "Désolé, je ne peux pas aider pour le moment. Vérifiez votre connexion Internet ou réessayez plus tard. :confused-face:"

@@ -708,7 +708,7 @@ gauss:
     là Giáo sư.
   links:
     - title: Prime Number Theorem
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -762,7 +762,7 @@ goldbach:
     Gold Gold Conjecture của ông.
   links:
     - title: Goldbach Conjecture
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -1136,7 +1136,7 @@ mersenne:
     nghiên cứu âm học và hòa âm của một chuỗi rung động, và viết về thần học và triết học.
   links:
     - title: Large Primes
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1552,7 +1552,7 @@ riemann:
     phân phối số nguyên tố.
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872

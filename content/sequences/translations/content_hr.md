@@ -593,7 +593,7 @@ Pogledajmo nekoliko primjera gdje sve to možemo upotrijebiti!
 Evo kratkog isječka iz filma _Šalji dalje_, gdje 12-godišnji Trevor objašnjava svoju ideju kako učiniti svijet boljim mjestom:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---

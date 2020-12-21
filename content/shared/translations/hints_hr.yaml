@@ -2,7 +2,7 @@
 # MATHIGON HINTS
 # ==============================================================================
 
-welcome: 'Dobrodošli u Mathigon! Ja sam Archie, vaš osobni učitelj. :mortar_board:'
+welcome: 'Dobrodošli u Mathigon! Ja sam Archie, vaš osobni učitelj. :graduation-cap:'
 
 account: 'Možete [stvoriti besplatni račun](->#login-btn) da biste spremili svoj napredak.'
 
@@ -13,25 +13,25 @@ tutorial1: |
 tutorial2: 'Uštedit ćemo sav vaš napredak, tako da se možete vratiti kasnije i nastaviti tamo gdje ste stali.'
 
 correct:
-  - 'Bravo :relaxed:'
-  - 'Dobar posao! :relieved:'
-  - 'Awesome :grinning:'
-  - 'Sjajan :thumbsup:'
-  - 'Izvrsno! :ok_hand:'
-  - 'Super :sunglasses:'
-  - 'Lijepo! :v:'
-  - 'Put! :blush:'
-  - 'Slatko :relaxed:'
+  - 'Bravo :smiling-face:'
+  - 'Dobar posao! :relieved-face:'
+  - 'Awesome :grinning-face:'
+  - 'Sjajan :thumbs-up:'
+  - 'Izvrsno! :ok-hand:'
+  - 'Super :smiling-face-with-sunglasses:'
+  - 'Lijepo! :victory-hand:'
+  - 'Put! :smiling-face-with-smiling-eyes:'
+  - 'Slatko :smiling-face:'
   - 'Impresivan! :trophy:'
-  - 'Izvanredan :grin:'
+  - 'Izvanredan :grinning-face:'
   - 'Super! :star:'
-  - 'Divno! :smiley:'
+  - 'Divno! :smiling-face:'
 
 incorrect:
-  - 'To nije sasvim u redu :white_frowning_face:'
-  - 'Jesi li siguran? :thinking_face:'
-  - 'To ne izgleda dobro. :hushed:'
-  - 'Pokušaj ponovo! :confused:'
+  - 'To nije sasvim u redu :frowning-face:'
+  - 'Jesi li siguran? :thinking-face:'
+  - 'To ne izgleda dobro. :hushed-face:'
+  - 'Pokušaj ponovo! :confused-face:'
 
 welcomeMorning: Dobro jutro!
 
@@ -47,4 +47,4 @@ welcomeEveningNamed: 'Dobra večer, $name!'
 
 serverError: |
   Žao mi je, trenutno ne mogu pomoći Provjerite internetsku vezu ili pokušajte ponovo kasnije.
-  :confused:
+  :confused-face:

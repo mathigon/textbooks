@@ -7,57 +7,65 @@
 > goals: play
 
 Here is a simple game similar to [Tetris](gloss:tetris). Rectangular blocks fill slowly fall from
-the top, and you have to arrange them to fill entire rows. Can you work out what the rules are?
+the top, and you have to arrange them using the arrow keys, to fill entire rows. Can you work out
+what the rules are, and what the [{.red}rearrange button](->.key-up) does?
 
     link(href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet")
     figure: x-factris(highscore="no")
 
+{.reveal(when="play")} Well done – you scored ${factris} points! :party-popper: You may have noticed
+that the _rearrange button_ changes the shape of the falling rectangle: for example, a 1 × 6
+rectangle might become a 2 × 3 rectangle. Maybe we can improve your score by learning more about
+these rectangular arrangements of various numbers. 
+
 ---
-> id: factris-1
+> id: rectangle-1
 
-In this course
+### Factors
 
-You may have noticed that when clicking the "rearrange" button, the
-
-Here you can see 24 squares arranged in a 2 x 12 rectangle. Move the tab and see if you can
-create other rectangles consisting of 24 squares:
+Here you can see a row of 24 squares. Move the black tab on the right, and see if you can create
+other rectangles consisting of 24 squares:
 
     figure
-      x-factor-rect.blue(size="12:2")
+      x-factor-rect(size="24:1")
+    // TODO Table with factors, filled in automatically
 
-| Number of rows    | 10 |
-| Number of columns | 10 |
+---
+> id: rectangle-2
 
-After playing one round: Great playing! Your score is ----. Let’s see if you can improve upon that score by learning more about creating rectangular arrangements of various numbers. 
+Here is another rectangle with 2 × 9 = 18 tiles. Once again, try to find other rectangular
+arrangements of these tiles:
 
-One arrangement of 24 tiles is 2 rows of 12 tiles. Move the tab to create all the other possible arrangements. 
+    figure
+      x-factor-rect.m-yellow(size="9:2")
+    // TODO Table with factors, filled in automatically.
 
-As students drag the tab, each time a rectangle is made, another column of this table gets filled in automatically. The one in red below is already filled in from the starting example. Students cannot move on until they find all the possibilities in the table. 
+---
+> id: rectangle-3
 
-Note: The picture on the left (below) is 8 rows of 3 and the picture on the right is 3 rows of 8. 
+You might have noticed that each every rectangular arrangement corresponds to a multiplication
+problem:
+
+::: column.text-center(width=140)
+
+18 = 3 × 6
+
+::: column.text-center(width=140)
+
+18 = 2 × [[9]]
+
+::: column.text-center(width=140)
+
+18 = 18 × 1
+
+:::
 
 ---
 
-This rectangle has 18 tiles. Shown below is 2 rows of 9 tiles. Again, move the tab to create all possible arrangements. 
+By finding all the possible rectangular arrangements of 18 desks, we’ve also found all the ways to multiply to 18: 1 × [[18]], 2 × [[9]], and 3 × [[6]]. Rotating the rectangle simply swaps the order. 
+Show image of 3 × 6 rotating to make 6 × 3. 
 
-
-Again, the table fills in as the students create rectangles and students can’t move on until they’ve filled in all the columns. 
-
-----
-
-You might have noticed that each every rectangular arrangement corresponds to a multiplication problem:
-
-
-18 = 3 x 6
-
-18 = 2 x [[9]]
-
-18 = 18 x 1
-
-By finding all the possible rectangular arrangements of 18 desks, we’ve also found all the ways to multiply to 18: 1 x [[18]], 2 x [[9]], and 3 x [[6]]. Rotating the rectangle simply swaps the order. 
-Show image of 3 x 6 rotating to make 6 x 3. 
-
-All of these numbers 1, 2, 3, 6, 9 and 18 are the factors of 18 because they can be multiplied with another whole number to equal 18. Said another way, a factor of a number can divide into that number without a reminder. 
+All of these numbers 1, 2, 3, 6, 9 and 18 are the [factors](gloss:factor) of 18 because they can be multiplied with another whole number to equal 18. Said another way, a factor of a number can divide into that number without a reminder. TODO definine "divisible"
 
 ::: column.grow
 
@@ -73,128 +81,172 @@ All of these numbers 1, 2, 3, 6, 9 and 18 are the factors of 18 because they can
 
 :::
 
+---
+
+::: tab
+
+#### 20
+
 Move the tab in the rectangle below to find all the factors of 20. Start with 1 row of 20. Now, anytime a rectangle is made, the numbers show up on the sides and then the factors get automatically added into the list. The list starts out with blanks in it where the numbers will go so students will know when they have found all the factors. 
+
+    figure
+      x-factor-rect.m-yellow(size="20:1")
+
+::: tab
+
+#### 28
+
+    figure
+      x-factor-rect.m-yellow(size="28:1")
 
 Example #2 - Students will now do the same thing with the factors of 28, but this time, students will need to fill in the blanks as they make the different rectangles. I’ve left out the picture of the rectangle here, but it would be the same as above. It would start as one row of 28 tiles. 
 
-Start: 1  [[2]]  [[4]]  [[7]]  [[14]]  28				End: 1  2  4  7  14  28
+Start: 1  [[2]]  [[4]]  [[7]]  [[14]]  28
+
+::: tab
+
+#### 11
+
+    figure
+      x-factor-rect.m-yellow(size="11:1")
 
 Example #3 - Students will now do the same thing with the factors of 11. They will see there is only one blank to fill in, but can’t move on until they at least try to create other rectangles by moving around the tabs. 
 
-Start: 1  [[11]]							End: 1  11
+Start: 1  [[11]]
 
-Some numbers, like 11, don’t have any factors other than 1 and itself. We’ll learn more about these numbers and what makes these numbers special in a future chapter. 
-
----
-
-Now that we have a better understanding of factors, try Factris again and see if you can beat your first score of ---. 
-
-After playing one game: If you want to play Factris more, it’s always available here. See if you can beat the current weekly high score of --------?
+:::
 
 ---
 
-### Finding Factors
+Some numbers, like 11, don’t have any factors other than 1 and itself. In one of the upcoming
+chapters, we’ll learn more about these numbers and what makes these numbers special.
 
-The opposite of a factor is a __multiple__. We know that 5 is a factor of 20, so we say that 20 is
-a multiple of 5. Said another way, the multiples of 5 are all the numbers you get when you count by
-5 (starting at 0). The list of the multiples of 5 is 0, 5, [[10]], [[15]] and so on. Upon correct answer, show a 10 x 10 number grid with all the multiples of 5 being highlighted one at a time. 
-
-In general, a number divisible by N if that number divided by N equals a whole number. 
+Now that we have a better understanding of factors, try playing [Factris](/factris) again. Can you
+beat your previous score of ${factris}? Or can you even get a place on our highscore?
 
 ---
 > id: grid
 
-::: column.fit(parent="right")
+### Multiples
+
+::: column.fit
 
     x-number-grid.medium
 
 ::: column.grow
 
-Next, show a blank 10 x 10 grid and the following instruction. Click any number to see all the multiples of that number. Upon clicking a starting number, all of its multiples will light up. 
 
-After trying 3 different numbers, the following appears: You may have noticed some nice patterns in multiples of numbers. Here are all the multiples of 9. 
+The opposite of a factor is a [__multiple__](gloss:multiple). We know that 5 is a factor of 20, so we say that 20 is
+a multiple of 5. Said another way, the multiples of 5 are all the numbers you get when you count by
+5 (starting at 0). The list of the multiples of 5 is 0, 5, [[10]], [[15]] and so on.
 
-Show the 10 x 10 grid with all multiples of 9 highlighted.
+In general, a number divisible by N if that number divided by N equals a whole number. 
+Click any number to see all the multiples of that number.
 
 :::
 
+---
+
+You may have noticed some nice patterns in multiples of numbers.
+There are many different patterns hidden in these multiples. Take a look at the multiples of 3 and
+9 – what do you notice and wonder? We'll learn more about the patterns in multiples in the next chapter. 
+
     x-free-text
 
-In the text box below, write down some of your observations about the multiples of 9. 
-We’ll learn more about the patterns in multiples of 9 (and others!) in the next chapter. 
-
 ---
-> id: divisibility-game
+> id: factors-quiz
 
-It’s easy to sometimes confuse the words factors and multiples. Factors divide into whole numbers without remainders. The factors of 10 are 1, 2, 5 and 10. Multiples of a number are the list of numbers obtained by counting by that number. For example, 30 is a multiple of 10 because 30 is on the list of numbers resulting from counting by 10: 10, 20, 30, 40, 50 and so on. Practice with these words by playing the short game below. You have to determine which numbers are factors or multiples. Click the [play button](->#divisibility-game_.toggle) to start. Can we consider taking out the speed component - some students could find this stressful. Or maybe not have the moving bar going across. 
+Factors and multiples are opposites of each other, and it is easy to confuse the words! A
+[__factor__](gloss:factor) is always the _smaller_ number: it divides another number without
+remainder. For example, the factors of 10 and 1, 2, 5 and 10.
+
+A [__multiple__](gloss:multiple) is always the _larger_ number. You can obtain the multiples of a
+number by “counting by that number”. For example, the multiples of 10 are 10, 20, 30, 40, 50 and so
+on. Let’s practice this terminology with a simple quiz:
 
 ::: .box.f-blue.no-padding
 #### Factors and Multiples Quiz
 
-    x-gameplay
-      .factors-row
-        .factor-number ${x}
-        | is a
-        .factor-value
-          .factor-bubble: .btn.btn-blue factor
-          .factor-bubble: .btn.btn-blue multiple
-          .factor-bubble: .btn.btn-blue neither
-        | of
-        .factor-number ${y}
+    x-gameplay.factors-quiz
+      .circled ${x}
+      | is a
+      .factor-value
+        .factor-bubble: .btn.btn-blue factor
+        .factor-bubble: .btn.btn-blue multiple
+        .factor-bubble: .btn.btn-blue neither
+      | of
+      .circled ${y}
 
 :::
 
 ---
+> id: factor-pairs
 
-As we’ve seen, arranging numbers into rectangular arrays is a great technique for finding factors of numbers. Sometimes, though, we may just want to make a list of all the factors of a number. One technique is to start with the first factor pair - 1 and the number itself - and work towards the middle. Insert this element from current mathigon chapter:
+### Finding Factors
 
----
-> id: factors2
+As we’ve seen, arranging numbers into rectangular arrays is a great technique for finding factors of numbers. Sometimes, though, we may just want to make a list of all the factors of a number. One technique is to start with the first factor pair, 1 and the number itself, and work towards the middle.
 
-::: x-slideshow
+::: x-slideshow(step="auto")
 
-    .todo TODO
+    svg(width=310 height=110 viewBox="0 0 310 110" slot="stage" style="margin: 0 auto 24px")
+      g(text-anchor="middle" font-size=20 font-weight=600)
+        text(x=20 y=25 fill="#333") 40
+        text(x=60 y=25 fill="#eb4726") 1
+        text(x=90 y=25 fill="#cd0e66" slide="1-") 2
+        text(x=120 y=25 fill="#6d3bbf" slide="2") 3
+        text(x=120 y=25 fill="#6d3bbf" slide="3-") 4
+        text(x=150 y=25 fill="#0f82f2" slide="4-") 5
+        text.reveal(x=200 y=25 when="blank-5" fill="#0f82f2" slide="4-") 8
+        text.reveal(x=230 y=25 when="blank-4" fill="#6d3bbf" slide="3-") 10
+        text.reveal(x=260 y=25 when="blank-2" fill="#cd0e66" slide="1-") 20
+        text.reveal(x=290 y=25 when="blank-0" fill="#eb4726") 40
+      g(fill="none" stroke-linecap="round" stroke-width=2 opacity=0.5)
+        line(x1="42" y1="3" x2="42" y2="33" stroke="#333")
+        path.reveal(d="M60,30c0,38.11,51.49,69,115,69S290,68.11,290,30" stroke="#eb4726" animation="draw" when="blank-0")
+        path.reveal(d="M90,30c0,28.17,38.06,51,85,51s85-22.83,85-51" stroke="#cd0e66" animation="draw" when="blank-1" slide="1-")
+        path.reveal(d="M120,30c0,18.23,24.62,33,55,33s55-14.77,55-33" stroke="#6d3bbf" animation="draw" when="blank-4" slide="3-")
+        path.reveal(d="M150,30c0,8.28,11.19,15,25,15s25-6.72,25-15" stroke="#0f82f2" animation="draw" when="blank-5" slide="4-")
 
-Let’s use this technique to find all the factors of 40. The first pair we start with is 1 and [[40]].
+Let's try to find all factors of 40. In this case, the first factor pair is 1 and [[40]].
 
-2 [[is | is not]] a factor of 40. Upon correct answer: 2 x [[20]] = 40.
+The next smallest integer is 2, which [[is also | isn’t]] a factor of 40, _{span.reveal(when="blank-1")} and 2 × [[20]] = 40._
 
-3 [[is not | is]] a factor of 40.
+The next number is 3, which [[is not | is]] a factor of 40, _{span.reveal(when="blank-3")} so we skip it._
 
-4 is a factor of 40 since 4 x [[10]] = 40.
+The next number is 4, which is a factor of 40, because 4 × [[10]] = 40.
 
-5 is a factor of 40 since 5 x [[8]] = 40.
+The next number is 5 which is also a factor of 40, because 5 × [[8]] = 40.
 
-6 [[is not | is]] a factor of 40. 7 [[is not | is]] a factor of 40.
-
-We are now at 8 which is already on our list from the factor pair 5 x 8. So, we’ve met in the middle and found all the factors of 40. 
+Finally, 6 [[is not | is]] a factor of 40 and 7 [[is also not | is]] a factor.
+_{span.reveal("blank-6 blank-7")} We’ve met in the middle, which means that we’ve found **all** factors of 40._
 
 :::
 
 ---
+> id: factor-circles
 
-::: column.grow
-
-Arranging squares into rectangular arrays can help see factor pairs. Play this animation to see another way to represent numbers that also shows the factor pairs. 
-
-When the animation stops at 12, show these questions. 
-
-In this arrangement of 12 circles, we can see 3 groups of [[4]] circles. We can also see [[6]] pairs of 2 circles. So, this diagram shows the factor pairs 2 x 6 and 3 x 4. When we include 1 x 12, we have all the factor pairs for 12. 
-
-Upon correct answers, have the animation continue up to the number 17. Then, show this question.
+We’ve now seen how to find the factors of a numbers using rectangles or by making a list of factor
+pairs – but there are many other representations.
 
 ::: column.fit
 
     figure
       x-factor-circles.var(size="400" :n="n + 1")
-      x-slider(steps=99 :bind="n")
+      x-slider(steps=99 speed=0.1 :bind="n")
+
+::: column.grow
+
+Play this animation to see another way to represent numbers that also shows the factor pairs. When the animation stops at 12, show these questions. 
+
+In this arrangement of 12 circles, we can see 3 groups of [[4]] circles. We can also see [[6]] pairs of 2 circles. So, this diagram shows the factor pairs 2 × 6 and 3 × 4. When we include 1 × 12, we have all the factor pairs for 12. 
+
+Upon correct answers, have the animation continue up to the number 17. Then, show this question.
+
+Since the only factor pair for 17 is [[1]] × 17, the dots are arranged in one large circle. Upon correct answers, have the animation continue up to the number 40 Then, show this question.
 
 :::
 
-Since the only factor pair for 17 is [[1]] x 17, the dots are arranged in one large circle. Upon correct answers, have the animation continue up to the number 40 Then, show this question.
-
-
-We found the factor pairs of 40 above - 1 x 40, 2 x 20, 4 x 10 and 5 x 8. In this arrangement, we can see [[20]] groups of , [[10]] groups of  and [[5]] groups of .
+We found the factor pairs of 40 above - 1 × 40, 2 × 20, 4 × 10 and 5 × 8. In this arrangement, we can see [[20]] groups of , [[10]] groups of  and [[5]] groups of .
 
 Upon correct answers, play the animation up to 60. After reaching 60, move on to the next section. 
 
@@ -202,19 +254,35 @@ Upon correct answers, play the animation up to 60. After reaching 60, move on to
 
 ### Perfect Numbers
 
-::: column(width=300)
-
-{.fixme} Alexandria image
-
 ::: column.grow
 
-Scientists and mathematicians have been thinking about the factors of different numbers for thousands of years. One of these mathematicians was Diophantus, who lived in Alexandria, a town in Egypt famous for its large library.
+Scientists and mathematicians have been thinking about the factors of different numbers for
+thousands of years. One of these mathematicians was [Diophantus](bio:diophantus), who lived in
+Alexandria, a coastal town in Egypt famous for its large library.
 
-Diophantus noticed – just like you might have done above– that some numbers like 24, seem to have many factors while other numbers like 17 or 22 have very few factors.
+Diophantus noticed, just like you might have done above, that some numbers like 24 seem to have
+many factors while other numbers like 17 or 22 have very few factors.
+[Continue](btn:next)
+
+::: column(width=320)
+
+    // https://commons.wikimedia.org/wiki/File:Incendie_Alexandrie_by_Hermann_Goll_1876.jpg
+    x-img(src="images/alexandria.jpg" width=320 height=225 lightbox credit="Hermann Göll, 1876")
+
+{.caption} The Library of Alexandria was one of the largest in the ancient world. It partially
+burned down in 48 BCE during a siege by Julius Caesar.
 
 :::
 
-One way to provide some structure to this observation is to add up all the factors of a number, except the number itself, and compare it to the original number. For example, the factors of 8 are 1, 2, 4 and 8. Removing 8 from the list, we are left with 1, 2 and 4. 1 + 2 + 4 = [[7]]. Reveal the table upon correct answers. The table will look like the one below. 
+{.reveal(when="next-0")} One way to think about this observation mathematically is to add up all
+the factors of a number, except for the number itself. For example, the factors of 8 are 1, 2, 4
+and 8. If we add up all factors except 8 itself, we get 1 + 2 + 4 = [[7]].
+
+---
+> id: perfect-1
+
+Here you can see all numbers from 1 to 18 together with their factors. Try to fill in the missing
+totals – do you notice any patterns?
 
     - factors = (n) => Array(n-2).fill(1).map((x, i) => i+1).filter(i => !(n % i))
     - total = (a) => a.reduce((a, c) => a + c, 0)
@@ -225,37 +293,61 @@ One way to provide some structure to this observation is to add up all the facto
           span.factors= factors(i).join(', ')
           span.total= total(factors(i))
 
-Upon all correct answer, show questions as shown in the texts boxes below (from the Intermediate chapter) with some slight scaffolds for the Foundations chapter:
+::: column.frame.f-red.text-center(width=235 parent="padded-thin")
 
-For most numbers on this list, this sum of its factors (other than itself) is [[less than | more than | equal to]] itself. These numbers are called deficient numbers. Deficient means “not having enough” and these numbers don’t have enough factors to add up to equal itself. Upon correct answer, all the rows of deficient numbers are highlighted in the same pink color of the text box below (from the Intermediate course).
+For most numbers on this list, this sum of its factors is [[less than | more than | equal to]] itself. These numbers are called __deficient numbers__. Deficient means _“not having enough”_ and these numbers don’t have enough factors to add up to equal itself.
 
-For some numbers on this list, the sum of its factors (other than itself) is greater than itself: 12 and [[18]]. These are called abundant numbers. Abundant means “having plenty of” and these numbers have more than enough factors to add up to more than itself. Upon correct answer, all the rows of abundant numbers are highlighted in the same blue color of the text box below. 
+    // Upon correct answer, all the rows of deficient numbers are highlighted in the same pink color of the text box below (from the Intermediate course).
 
-Only one number on this list has a sum of factors (other than itself) that is equal to itself: [[6]]. This is called a perfect number. These numbers have the perfect amount of factors to equal itself! Upon correct answer, the row of the perfect number is highlighted in the same green color of the text box below.
+::: column.frame.f-green.text-center(width=235)
+
+For some numbers on this list, the sum of its factors is greater than itself: 12 and [[18]]. These are called __abundant numbers__. Abundant means _“having plenty of”_ and these numbers have more than enough factors to add up to more than itself.
+
+    // Upon correct answer, all the rows of abundant numbers are highlighted in the same blue color of the text box below. 
+
+::: column.frame.f-yellow.text-center(width=235)
+
+Only one number on this list has a sum of factors that is equal to itself: [[6]]. This is called a __perfect number__: it has the perfect amount of factors to equal itself!
+
+    // Upon correct answer, the row of the perfect number is highlighted in the same green color of the text box below.
+
+:::
 
 ---
 
-Let’s explore numbers in the 20’s and see how many of each type we have. Show the table below with all numbers filled in, but with the panels still in gray (no pink, green or blue yet)
+Let’s explore numbers in the 20’s and see how many of each type we have. First, click on any numbers in the table that are abundant. Now click on any numbers in the table that are perfect.
 
-Click on any numbers in the table that are abundant. Upon doing so, the panels for 20 and 24 turn green. Then, this instruction appears: Click on any numbers in the table that are perfect. Upon doing so, the panel for 28 turns blue and then all the other numbers turn pink. 
+    // Show the table below with all numbers filled in, but with the panels still in gray (no pink, green or blue yet)
+    // Upon doing so, the panels for 20 and 24 turn green.
+    //Upon doing so, the panel for 28 turns blue and then all the other numbers turn pink. 
 
-Again, most of these numbers are [[deficient | abundant | perfect]]. There are 2 abundant numbers and 1 perfect number. If we extend our list through 100, we might expect a similar distribution of deficient, abundant and perfect numbers. Place the 3rd star on the number line below where you think the next perfect number might be. Just make a guess. 
+    - factors = (n) => Array(n-2).fill(1).map((x, i) => i+1).filter(i => !(n % i))
+    - total = (a) => a.reduce((a, c) => a + c, 0)
+    .factor-table
+      for i in [19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+        div
+          span.bulb= i
+          span.factors= factors(i).join(', ')
+          span.total= total(factors(i))
 
-Notes on this image and interactive:
-Tick marks at every number aren’t needed. Just at the 10’s is fine. This is just the image I found to use for a number line. And make the font size of the multiple of 10’s smaller than the font size of 6 and 28 so the perfect numbers numbers stand out more. 
-Students will drag the 3rd star somewhere on the number line
-Students can click the “zoom out” button if they want to go above 100. Each time, the number line will be bigger by 100, from 0-200, then 0-300 and so on. 
+---
 
-After students place their star, a tutor comment will say “Good guess. But the next perfect number is actually 496.” At this point the 3rd star will rise above the number they placed it, the number line will zoom out to 0-500 and the three stars will be at 6, 28 and 496. Then, the following text will appear under the numberline. 
+Again, most of these numbers are [[deficient | abundant | perfect]]. There are 2 abundant numbers and 1 perfect number. If we extend our list through 100, we might expect a similar distribution of deficient, abundant and perfect numbers.
 
-The next perfect number doesn’t appear until 8,128! Then, the number line will zoom out quickly to 0 to 10,000 with stars above 6, 28 (maybe one below and one above the number line since they’ll probably be right on top of eachother on this number line), 496 and 8128.
+    // Place the 3rd star on the number line below where you think the next perfect number might be. Just make a guess. 
+    // Tick marks at every number aren’t needed. Just at the 10’s is fine. This is just the image I found to use for a number line. And make the font size of the multiple of 10’s smaller than the font size of 6 and 28 so the perfect numbers numbers stand out more. 
+    // Students will drag the 3rd star somewhere on the number line
+    // Students can click the “zoom out” button if they want to go above 100. Each time, the number line will be bigger by 100, from 0-200, then 0-300 and so on. 
+    // After students place their star, a tutor comment will say “Good guess. But the next perfect number is actually 496.” At this point the 3rd star will rise above the number they placed it, the number line will zoom out to 0-500 and the three stars will be at 6, 28 and 496. Then, the following text will appear under the numberline. 
 
-After playing the animation:
-
+The next perfect number doesn’t appear until 8,128! Then, the number line will zoom out quickly to 0 to 10,000 with stars above 6, 28, 496 and 8128.
 The gaps between perfect numbers continue to grow and grow. The first 8 perfect numbers are:
 
 The first four of these numbers were already known to ancient Greek mathematicians, and the last one in the list above was calculated by the famous mathematician Leonard Euler in 1772.
-Today, mathematicians use supercomputers to check for perfect numbers. The latest one - the 51st perfect numbers - was discovered in 2018 and is 49,724,095 digits long! That’s not the number - that’s how many digits it has. The number begins as 110847779864… and ends with …007191207936. Click here for text file. Maybe instead have a pop up of the number they can scroll through if they want? I think it’s pretty cool just to open it and scroll for a while...
+
+Today, mathematicians use supercomputers to check for perfect numbers. The latest one - the 51st perfect numbers - was discovered in 2018 and is 49,724,095 digits long! That’s not the number - that’s how many digits it has. The number begins as 110847779864… and ends with …007191207936.
+
+    // Click here for text file. Maybe instead have a pop up of the number they can scroll through if they want? I think it’s pretty cool just to open it and scroll for a while...
 
     //- x-modal#share: .modal-body
       h2 The Largest Perfect number
@@ -267,35 +359,105 @@ Notice that all these perfect numbers are [[even | odd]]. In fact, all known 51 
 
 ### Square Numbers
 
-The idea of even and odd also comes up when we look at how many factors each number has. Let’s now move back to including the number itself as one of the factors. Since factors come in pairs, we might initially think that all numbers have an even number of factors. For example, the factor pairs for 20 are 1 x 20, 2 x [[10]] and 4 x [[5]]. So, 20 has 6 factors which is indeed [[even | odd ]]. However, let’s explore all the factors of 36. As you did before, more the tab to create all possible factor pairs for 36. 
+The idea of even and odd also comes up when we look at how many factors each number has. Let’s now move back to including the number itself as one of the factors. Since factors come in pairs, we might initially think that all numbers have an even number of factors. For example, the factor pairs for 20 are 1 × 20, 2 × [[10]] and 4 × [[5]]. So, 20 has 6 factors which is indeed [[even | odd ]]. However, let’s explore all the factors of 36. As you did before, more the tab to create all possible factor pairs for 36. 
 
-Start with 2 rows of 18 with the 1st two factor pairs listed. Now, anytime a rectangle is made, the numbers show up on the sides and then the factors get added into the list. The list starts out with blanks in it where the numbers will go so students will know when they are done or not. 
-START STATE:
+    // Start with 2 rows of 18 with the 1st two factor pairs listed. Now, anytime a rectangle is made, the numbers show up on the sides and then the factors get added into the list. The list starts out with blanks in it where the numbers will go so students will know when they are done or not. 
 
-Upon all factors:
+    figure
+      x-factor-rect.m-purple(size="18:2")
+
 36 has [[9]] total factors which is an [[odd | even]] number of factors. How did this happen? You may have noticed that one of the arrangements for 36 is a 6 by 6 square. 
 
-6 x 6 does equal 36. However, when we list the factors of 36, we only need to list the 6 once. This gives us an odd number of factors! So, any number that can be formed into a square will give an odd number of factors. Below are the first 8 numbers that can be made with a square number of tiles.
+6 × 6 does equal 36. However, when we list the factors of 36, we only need to list the 6 once. This gives us an odd number of factors! So, any number that can be formed into a square will give an odd number of factors.
 
+---
+> id: square-list
 
-Underneath each picture will be a blank for students to fill in the number of tiles for each picture:
-[[1]]	[[4]]	[[9]]	[[16]]	[[25]]	[[36]]	[[49]]	[[64]]
+Below are the first 8 numbers that can be made with a square number of tiles.
 
-In fact, this sequence of numbers is called square numbers. All of these numbers have have an [[odd | even]] number of total factors. 
+::: column.fit(parent="padded-thin")
 
-You can learn more about square numbers and triangular numbers and other shaped numbers in this Mathigon course!
+    x-factor-rect.m-yellow(size="1:1" static)
+
+{.caption} 1 square
+
+::: column.fit
+
+    x-factor-rect.m-orange(size="2:2" static)
+    
+{.caption} 4 squares
+
+::: column.fit
+
+    x-factor-rect.m-red(size="3:3" static)
+
+{.caption} [[9]] squares
+
+::: column.fit
+
+    x-factor-rect.m-purple(size="4:4" static)
+
+{.caption} [[16]] squares
+
+::: column.fit
+
+    x-factor-rect.m-blue(size="5:5" static)
+
+{.caption} [[25]] squares
+
+::: column.fit
+
+    x-factor-rect.m-teal(size="6:6" static)
+
+{.caption} [[36]] squares
+
+::: column.fit
+
+    x-factor-rect.m-green(size="7:7" static)
+
+{.caption} [[49]] squares
+
+::: column.fit
+
+    x-factor-rect.m-lime(size="8:8" static)
+
+{.caption} [[64]] squares
+
+:::
 
 ---
 
-::: tab
+These numbers are called [__square numbers__](gloss:square-number), and they all have an
+[[odd|even]] number of factors. We will explore this sequence of numbers, as well as triangular
+numbers and other shaped numbers [in the future](/course/sequences/figurate).
 
-#### Question
+---
+> id: locker-problem
 
-100 students are lined up at the beginning of a long school hallway with lockers numbered 1-100. The first student goes down the hall and opens every locker. The 2nd students goes down the hall and closes every 2nd locker, starting at locker #2. The 3rd student begins at locker #3 and reverses the state (if it’s open, they close it. If it’s closed, they open it) of that locker and every 3rd locker. The 4th student begins at locker #4 and reverses the state of that locker and every 4th locker. This continues until all 100 students have gone down the hallway. What numbered lockers are open at the end?
+::: .box.f-blue
+#### The Locker Problem
 
-::: tab
+100 students are lined up at the beginning of a long school hallway with lockers numbered from 1 to 
+100.
 
-Tab 2 with an interactive and hints. 
+::: x-slideshow
+
+    .todo(slot="stage") diagram
+
+The first student goes down the hall and opens every locker.
+
+The second students goes down the hall and closes every second locker, starting at locker #2.
+
+The third student begins at locker #3 and reverses the state of every third locker: if it’s open,
+they close it, and if it’s closed, they open it. 
+
+The fourth student begins at locker #4 and reverses the state of that locker and every four locker,
+like before. This continues until all 100 students have gone down the hallway.
+
+:::
+
+What numbered lockers are open at the end?
+
 Let’s look at locker 10 as an example. Play the animation below. 
 	Student 1 opens it.
 	Student 2 closes it.
@@ -311,9 +473,6 @@ Student 1 opens it.
 	Student 16 opens it.
 16 is a square number so it has an [[odd | even]] number of factors. Since the factors don’t come in pairs, the locker will remain [[opened | closed]] at the end. Therefore, all lockers with an [[odd | even]] number of factors will remain open. 
 
-::: tab
-
-Tab 3 with the answer. Don’t unlock this tab until students complete tab #2. 
 All lockers with an odd number of factors are lockers that are square numbers: 1, 4, 9, 16, 25, 36, 49, 64, 81 and 100.
 
 :::
@@ -385,7 +544,7 @@ both of these numbers [[are|are not]] divisible by 2 and [[are not|are]] divisib
 
 {.fixme} Put the rectangles together to make one big rectangle. Show a hand directing students to slide the blue rectangle over to the right. Change both rectangles to purple upon making one rectangle. 
 
-{.fixme} Our new rectangle is [[8]] groups of 4. So, (3 x 4) + (5 x 4) = (8 x 4). The purple rectangle is also a [[multiple | factor]] of 4. So, adding two multiples of 4 produces another multiple of 4. Upon correct answer, students go through a similar example with less text.
+{.fixme} Our new rectangle is [[8]] groups of 4. So, (3 × 4) + (5 × 4) = (8 × 4). The purple rectangle is also a [[multiple | factor]] of 4. So, adding two multiples of 4 produces another multiple of 4. Upon correct answer, students go through a similar example with less text.
 
 {.fixme} Upon correct answer, a hand shows up showing students to combine the rectangles as above. Here is the End State to that:
 
@@ -418,17 +577,17 @@ both of these numbers [[are|are not]] divisible by 2 and [[are not|are]] divisib
 Divisible by 5?
 Divisible by 10?
 6,380
-[[ ✅  | x ]]
-[[ ✅  | x ]]
-[[ ✅  | x ]]
+[[ ✅  | × ]]
+[[ ✅  | × ]]
+[[ ✅  | × ]]
 5
-[[ x | ✅  ]]
-[[ ✅  | x ]]
-[[ x | ✅  ]]
+[[ × | ✅  ]]
+[[ ✅  | × ]]
+[[ × | ✅  ]]
 6,385
-[[ x | ✅  ]]
-[[ ✅  | x ]]
-[[ x | ✅  ]]
+[[ × | ✅  ]]
+[[ ✅  | × ]]
+[[ × | ✅  ]]
 Fill in the cell of the table green or red based on the correct answer.
 
 {.fixme} Upon correct answer:
@@ -438,15 +597,15 @@ We don’t need to go through this process each time while performing the divisi
 Divisible by 5?
 Divisible by 10?
 3,546
-[[ ✅  | x ]]
-[[ x | ✅  ]]
-[[ x | ✅  ]]
+[[ ✅  | × ]]
+[[ × | ✅  ]]
+[[ × | ✅  ]]
 
 {.fixme} Fill in the a digit to make this number divisible by 2, 5 and 10:	47,62[[0]].
 
 ---
 
-{.fixme} Show a 10 x 10 grid with all the multiples of 2, 5 and 10 in a different color. Notice how the multiples of 2, 5 and 10 line up in the grid below. The digits in the ones place confirm the divisibility tests we just learned. As you move this slider again to show the multiples of , notice that both the visual pattern and the pattern of digits in the ones place is not as clear as it is for 2, 5 and 10. So, the divisibility tests for other numbers becomes more complicated. 
+{.fixme} Show a 10 × 10 grid with all the multiples of 2, 5 and 10 in a different color. Notice how the multiples of 2, 5 and 10 line up in the grid below. The digits in the ones place confirm the divisibility tests we just learned. As you move this slider again to show the multiples of , notice that both the visual pattern and the pattern of digits in the ones place is not as clear as it is for 2, 5 and 10. So, the divisibility tests for other numbers becomes more complicated. 
 
 ---
 
@@ -456,13 +615,13 @@ Divisible by 10?
 
 {.fixme} The smallest place value that is divisible by 4 is the [[10s | 100s | 1000s]] place. So, any number that ends with two 0’s is a multiple of 100 and therefore also a multiple of 4:
 
-{.fixme} 4500 = 45 x [[100]]
-    = 45 x (25 x [[4]])
-    = 1125 x 4
+{.fixme} 4500 = 45 × [[100]]
+    = 45 × (25 × [[4]])
+    = 1125 × 4
 
-{.fixme} 4 x 1125 = 4500, so 4500 [[is | is not]] divisible by 4. Adding any multiple of 4 onto to 4500 will create another number that is divisible by 4. Fill in the blanks below to create numbers that are divisible by 4:
+{.fixme} 4 × 1125 = 4500, so 4500 [[is | is not]] divisible by 4. Adding any multiple of 4 onto to 4500 will create another number that is divisible by 4. Fill in the blanks below to create numbers that are divisible by 4:
 
-{.fixme} Upon a correct answer, the number turns green. If incorrect, it turns red. When turning green, maybe underneath it, have it show the factor pair with 4. So, if students enter 16 and make 4516, underneath 4516, 4 x 1129 would show up in a light gray underneath it. For the last two, there are multiple answers of course, When students enter the correct answer, have the tutor comment tell them all the other possible answers. 
+{.fixme} Upon a correct answer, the number turns green. If incorrect, it turns red. When turning green, maybe underneath it, have it show the factor pair with 4. So, if students enter 16 and make 4516, underneath 4516, 4 × 1129 would show up in a light gray underneath it. For the last two, there are multiple answers of course, When students enter the correct answer, have the tutor comment tell them all the other possible answers. 
 
 {.fixme} 45[[ _ _ ]]			452[[ _ ]]				45[[ _ ]]2
 
@@ -486,7 +645,7 @@ Divisible by 10?
 
 ### Divisibility by 8
 
-{.fixme} The smallest place value that is divisible by 8 is the [[10s | 100s | 1000s]] place. Upon correct answer: 8 x 125 = 1000, so every number ending in “000” is divisible by 8. We just need to check to see if the number formed by the first three place values is divisible by 8. 
+{.fixme} The smallest place value that is divisible by 8 is the [[10s | 100s | 1000s]] place. Upon correct answer: 8 × 125 = 1000, so every number ending in “000” is divisible by 8. We just need to check to see if the number formed by the first three place values is divisible by 8. 
 
 {.fixme} 271,325 = 271,000 + 325	
 Always divisible by 8 [[is not | is]] divisible by 8
@@ -532,38 +691,38 @@ Make a quiz like the Factors/Multiples quiz. The set up will be:
 
 {.fixme} Each one is [[1]] less than a place value in our number system. We can use this pattern to figure out a divisibility test for 3. Let’s take the number 6,384. Make this whole next section a slide show:
 
-{.fixme} 6384 = 6 x [[1000]] + 3 x [[100]]	+ 	8 x [[10]]	+ 	4
+{.fixme} 6384 = 6 × [[1000]] + 3 × [[100]]	+ 	8 × [[10]]	+ 	4
 
 {.fixme} Upon correct answer show each addend above moving to stack in a column as shown below:
 
-{.fixme} 6 x 1000 		= 		6 x 999	+ 	[[6]]
+{.fixme} 6 × 1000 		= 		6 × 999	+ 	[[6]]
 (1000 groups of 6)			(999 groups of 6)	(upon correct answer, show 1 group of 6)
 
-{.fixme} 3 x 100		=		3 x 99		+ 	[[3]]
+{.fixme} 3 × 100		=		3 × 99		+ 	[[3]]
 (100 groups of 3)			(99 groups of 3)	(upon correct answer, show 1 group of 3)
 
-{.fixme} 8 x 10			=		8 x 9		+	[[8]]
+{.fixme} 8 × 10			=		8 × 9		+	[[8]]
 (10 groups of 8)			(9 groups of 8)		(upon correct answer, show 1 group of 8)
 
 {.fixme} Upon correct answers, an animation happens showing the red and green pieces above moving back into place to show create the following:
 
-{.fixme} 6384	=  6 x 999 + 6	+ 3 x 99 + 3 + 8 x 9 + 8 + 4
+{.fixme} 6384	=  6 × 999 + 6	+ 3 × 99 + 3 + 8 × 9 + 8 + 4
 
 {.fixme} Rearranging the order of items being added [[does | does not]] change the answer. Upon correct answer, rearrange the red and green to make the following:
 
-{.fixme} 6384 = 6 x 999 + 3 x 99 + 8 x 9 + 6 + 3 +8 + 4
+{.fixme} 6384 = 6 × 999 + 3 × 99 + 8 × 9 + 6 + 3 +8 + 4
 
 {.fixme} This arrangement can help us check to see if 6384 is divisible by 3. Since 9, 99, and 999 are divisible by 3, each item in red [[is | is not]] divisible by 3. Adding multiples of 3 creates another multiple of 3 so the entire sum of the red numbers [[is | is not]] divisible of 3. Upon correct answer, add a label under the red items as follows:
 
-{.fixme} 6384 = 6 x 999 + 3 x 99 + 8 x 9 + 6 + 3 + 8 + 4
+{.fixme} 6384 = 6 × 999 + 3 × 99 + 8 × 9 + 6 + 3 + 8 + 4
 	     (DIVISIBLE BY 3)
 
 {.fixme} We now need to check the numbers in green. 6 + 3 + 8 + 4 = [[21]]. 21 is divisible by 3 as well. Upon correct answer show:
 
-{.fixme} 6384 = 6 x 999 + 3 x 99 + 8 x 9 + 6 + 3 + 8 + 4
+{.fixme} 6384 = 6 × 999 + 3 × 99 + 8 × 9 + 6 + 3 + 8 + 4
 	     (DIVISIBLE BY 3)  +   (DIVISIBLE BY 3)
 
-{.fixme} 6384 is the sum of two numbers that are divisible by 3, so 6384 [[is also | is not]] divisible by 3. 2128 x 3 = 6384
+{.fixme} 6384 is the sum of two numbers that are divisible by 3, so 6384 [[is also | is not]] divisible by 3. 2128 × 3 = 6384
 
 ---
 
@@ -571,9 +730,9 @@ Make a quiz like the Factors/Multiples quiz. The set up will be:
 
 {.fixme} Make this a quick slideshow as well. After each line, they push a button or an arrow to show the next line. They don’t need to enter in answers here, but I think seeing the breakdown of the numbers again is helpful. 
 
-{.fixme} 32652 = (3 x 10000) + (2 x 1000) + (6 x 100) + (5 x 10) + 2
-	= (3 x 9999 + 3) + (2 x 999 + 2) + (6 x 99 + 6) + (5 x 9 + 5) + 2
-	= (3 x 9999 + 2 x 999 + 6 x 99 + 5 x 9) + (3 + 2 + 6 + 5 + 2)
+{.fixme} 32652 = (3 × 10000) + (2 × 1000) + (6 × 100) + (5 × 10) + 2
+	= (3 × 9999 + 3) + (2 × 999 + 2) + (6 × 99 + 6) + (5 × 9 + 5) + 2
+	= (3 × 9999 + 2 × 999 + 6 × 99 + 5 × 9) + (3 + 2 + 6 + 5 + 2)
 	= (some number that we know is divisible by 3) + 18
 
 {.fixme} Try these two:
@@ -582,10 +741,10 @@ Make a quiz like the Factors/Multiples quiz. The set up will be:
 Divisible by 3
 4,381
 [[16]]
-[[ x | ✅  ]]
+[[ × | ✅  ]]
 831,348
 [[27]]
-[[ ✅  | x ]]
+[[ ✅  | × ]]
 
 ---
 
@@ -593,9 +752,9 @@ Divisible by 3
 
 {.fixme} We developed the test for 3 based on the fact that each place value is 1 above a number that is divisible by 3. Those numbers were 9, 99, 999, 9999 and so on. Well, these numbers are also divisible by 9. So, the same approach applies to determine if a number, say 8,726, is divisible by 9. Students click through to see each line below
 
-{.fixme} 8,726 	= 8 x 1000 + 7 x 100 + 2 x 10 + 6
-	= 8 x 999 + 8 + 7 x 99 + 7 + 2 x 9 + 2 + 6
-	= 8 x 999 + 7 x 99 + 2 x 9 + 8 + 7 + 2 + 6
+{.fixme} 8,726 	= 8 × 1000 + 7 × 100 + 2 × 10 + 6
+	= 8 × 999 + 8 + 7 × 99 + 7 + 2 × 9 + 2 + 6
+	= 8 × 999 + 7 × 99 + 2 × 9 + 8 + 7 + 2 + 6
 	= Always divisible by 9 + we need to check and see
 	= Divisible by 9 + 23
 	= Divisible by 9 + A number that [[is not | is]] divisible by 9
@@ -606,10 +765,10 @@ Divisible by 3
 Divisible by 3
 42,093
 [[18]]
-[[ ✅  | x ]]
+[[ ✅  | × ]]
 8,437
 [[22]]
-[[ x | ✅  ]]
+[[ × | ✅  ]]
 
 ---
 
@@ -627,25 +786,25 @@ Divisible by 3
 Divisible by 3?
 Divisible by 6?
 414
-[[ ✅  | x ]]
-[[ ✅  | x ]]
-[[ ✅  | x ]]
+[[ ✅  | × ]]
+[[ ✅  | × ]]
+[[ ✅  | × ]]
 8036
-[[ ✅  | x ]]
-[[ x | ✅  ]]
-[[ x | ✅  ]]
+[[ ✅  | × ]]
+[[ × | ✅  ]]
+[[ × | ✅  ]]
 903
-[[ x | ✅  ]]
-[[ ✅  | x ]]
-[[ x | ✅  ]]
+[[ × | ✅  ]]
+[[ ✅  | × ]]
+[[ × | ✅  ]]
 
-{.fixme} 2 x 3 = 6 and this test happens to work for 6, but not for any number that is the product of two other numbers. For example, 2 x 10 = 20, but 30 is divisible by 2 and 10, but not by 20. We’ll learn more about when tests like this do and don’t work in future Mathigon chapters. 
+{.fixme} 2 × 3 = 6 and this test happens to work for 6, but not for any number that is the product of two other numbers. For example, 2 × 10 = 20, but 30 is divisible by 2 and 10, but not by 20. We’ll learn more about when tests like this do and don’t work in future Mathigon chapters. 
 
 ---
 
 ### Divisibility by 11
 
-{.fixme} The beauty of the structure of mathematics shows up even more in the 11 divisibility test. For this test, we’ll start with how the test works and then explain the underlying mathematics. 948,453 is divisible by 11 because 86,223 x 11 = 948,453. 
+{.fixme} The beauty of the structure of mathematics shows up even more in the 11 divisibility test. For this test, we’ll start with how the test works and then explain the underlying mathematics. 948,453 is divisible by 11 because 86,223 × 11 = 948,453. 
 
 {.fixme} To show the test, students read the instruction on the left, then click “Show Me,” and then see it happen on the right. Then, the next instruction appears below it. 
 
@@ -661,7 +820,7 @@ Show the 9, 8 and 5 moving into place below and the same with the 4, 4, and 3.
 
 {.fixme} Notice that the difference of the sums is 11 and 948,453 is divisible by 11! This process is the divisibility test for 11. If the answer to the final subtraction problem is a multiple of 11 (0, 11, 22, 33 etc..), then the number is divisible by 11. Let’s check it out one more time before we work to understand the math behind the scene. 
 
-{.fixme} Create a number divisible by 11 by entering in any 4-digit number: 	11 x [[----]] = --------
+{.fixme} Create a number divisible by 11 by entering in any 4-digit number: 	11 × [[----]] = --------
 
 {.fixme} Now, show the students the same process outlined above for the multiple of 11 they just created. 
 
@@ -688,14 +847,14 @@ Mult of 11:	100,001	9999		1001		99		11		0
 
 {.fixme} Notice that each place value is either [[1]] above or 1 [[below | above]] a number that is divisible by 11. This is helpful when we check if a number like 836 is divisible by 11:
 
-{.fixme} 836 = 		8 x [[100]] 	+ 		3 x [[10]] 	+ 		6
+{.fixme} 836 = 		8 × [[100]] 	+ 		3 × [[10]] 	+ 		6
 
-{.fixme} 836 = 	 (8 x 99)   [[+ | -]]      8		+ 	3 x 11         [[- | +]]     3	+            6
+{.fixme} 836 = 	 (8 × 99)   [[+ | -]]      8		+ 	3 × 11         [[- | +]]     3	+            6
         (99 groups of 8) + (1 group of 8)        (11 groups of 3)  -  (1 group of 3)
 
 {.fixme} Upon correct answer, show regrouping to the following
 
-{.fixme} 836 = (8 x 99) + (3 x 11) + 8 - 3 + 6
+{.fixme} 836 = (8 × 99) + (3 × 11) + 8 - 3 + 6
 	(divisible by 11)     (we need to check)	
 
 {.fixme} The red items above are divisible by 11, so we just need to check the single digits left over. 8 - 3 + 6 = [[11]]. This shows that 836 is the result of adding up numbers divisible by 11 so 836 [[is | is not]] divisible by 11. All we really had to check is the result of adding and subtracting the digits in the number. 
@@ -706,9 +865,9 @@ Mult of 11:	100,001	9999		1001		99		11		0
 
 {.fixme} Click through the slideshow below to see this analysis for the number 58,234. Pay attention to the alternating of adding and subtracting the digits.
 
-{.fixme} 58234 = (5 x 10,000) + (8 x 1,000) + (2 x 100) + (3 x 10) + 4
-	= (5 x 9999 + 5) + (8 x 1001 - 8) + (2 x 99 + 2) + (3 x 11 - 3) + 4
-	= (5 x 9999 + 8 x 1001 + 2 x 99 + 3 x 11) + 5 - 8 + 2 - 3 + 4
+{.fixme} 58234 = (5 × 10,000) + (8 × 1,000) + (2 × 100) + (3 × 10) + 4
+	= (5 × 9999 + 5) + (8 × 1001 - 8) + (2 × 99 + 2) + (3 × 11 - 3) + 4
+	= (5 × 9999 + 8 × 1001 + 2 × 99 + 3 × 11) + 5 - 8 + 2 - 3 + 4
 	     (always divisible by 11)		(we need to check)
 
 {.fixme} We can group all the yellow and green numbers as follows:
@@ -799,7 +958,7 @@ Is NOT divisible by
 	= [[9]] groups of A + [[0]] groups of B
 
 {.fixme} Upon correct answer:
-The final result is 9 groups of A. A is the number in the [[tens | ones]] place of the starting number. 9 x A will always be a multiple of 9 so we’ve proven that the final number in this series of calculations will indeed be divisible by 9, no matter what 2-digit number you start with!
+The final result is 9 groups of A. A is the number in the [[tens | ones]] place of the starting number. 9 × A will always be a multiple of 9 so we’ve proven that the final number in this series of calculations will indeed be divisible by 9, no matter what 2-digit number you start with!
 
 
 
@@ -948,7 +1107,7 @@ divisibility tests and check the digit sum!
 
 ---
 
-{.fixme} Our divisibility tests are helpful, but they won’t sort all numbers correctly. 91 is [[odd | even]] and ends in a 1, so it is not divisible by 2, 4, 5, 6 or 10. It’s digit sum is [[10]], so it is not divisible by 3 or 9. And 91 [[is not | is]] divisible by 11. All our divisibility tests fail, so we may initially think it is prime, but 13 x [[7]] = 91. 91 is [[composite | prime]]. So, don’t automatically assume a number is prime if all our divisibility tests fail. 
+{.fixme} Our divisibility tests are helpful, but they won’t sort all numbers correctly. 91 is [[odd | even]] and ends in a 1, so it is not divisible by 2, 4, 5, 6 or 10. It’s digit sum is [[10]], so it is not divisible by 3 or 9. And 91 [[is not | is]] divisible by 11. All our divisibility tests fail, so we may initially think it is prime, but 13 × [[7]] = 91. 91 is [[composite | prime]]. So, don’t automatically assume a number is prime if all our divisibility tests fail. 
 
 {.fixme} Play a few rounds of the game [Is it Prime](https://isthisprime.com/game/). Let students control the challenge level by using a slider to set the highest number (from 50 to 150).
 
@@ -998,7 +1157,7 @@ Between 10,000 and 10,100, there are only 11 primes.
 
 {.fixme} Let first answer the question if the list of prime numbers ever stops. We are going to use a process first used by Ancient Greek mathematician Euclid of Alexandria.
 
-{.fixme} Imagine the only prime numbers you know are 2, 3, 5 and 7. 2 x 3 x 5 x 7 =[[210]]. 210 is a [[multiple | factor]] of 2, 3, 5, and 7
+{.fixme} Imagine the only prime numbers you know are 2, 3, 5 and 7. 2 × 3 × 5 × 7 =[[210]]. 210 is a [[multiple | factor]] of 2, 3, 5, and 7
 Upon correct answer, show a number grid similar to the 1-100 grid, but have it go from 200 to 300. 210 should be split into fourths with each fourth a different color - red, blue, green and purple (or other colors). This is not the correct grid - just placing here as an example. 
 
 {.fixme} Once 210 becomes colored, show the following text:
@@ -1024,7 +1183,7 @@ Now let’s think about the number 211 - the number that is 1 more than the prod
 
 {.fixme} So, either 30,031 is [[prime | composite]] or there is some other prime number it is divisible by. 
 
-{.fixme} It turns out 30,031 is not prime. It must have some other prime factors then. It turns out 509 x [[59]] equals 30,031. Upon correct answer: 59 and 509 are both prime numbers. We started this analysis assuming 2, 3, 5, 7, 11 and 13 were the only prime numbers and we found 2 more!
+{.fixme} It turns out 30,031 is not prime. It must have some other prime factors then. It turns out 509 × [[59]] equals 30,031. Upon correct answer: 59 and 509 are both prime numbers. We started this analysis assuming 2, 3, 5, 7, 11 and 13 were the only prime numbers and we found 2 more!
 
 ---
 
@@ -1128,14 +1287,14 @@ Now, move the slider to see the possibilities for other numbers.
 Now, moving the slider changes the number and reveals all the possibilities for each number. Once they’ve moved the slider back and forth, show the following questions. They can use the slider to answer the questions. Reveal the questions one at a time.
 
 One of the many ways to add primes to equal 27 is [[ -- ]]. 
-The only way to multiply primes to equal 24 is [[ 3 x 3 x 3]]. 
+The only way to multiply primes to equal 24 is [[ 3 × 3 × 3]]. 
 
 One of the many ways to add primes to equal 30 is [[ -- ]]. 
-The only way to multiply primes to equal 30 is [[ 2 x 3 x 5]]. 
+The only way to multiply primes to equal 30 is [[ 2 × 3 × 5]]. 
 
 ---
 
-As you may suspect, for every number there is only ONE way to multiply primes to equal that number. For example, 2 x 2 x 3 x 7 is the only way to multiple primes to equal [[84]]. This is called the prime factorization of 84 and 2, 3, and 7 are its prime factors. Note that some primes, like 2 in this case, can appear multiple times in a prime factorization. 
+As you may suspect, for every number there is only ONE way to multiply primes to equal that number. For example, 2 × 2 × 3 × 7 is the only way to multiple primes to equal [[84]]. This is called the prime factorization of 84 and 2, 3, and 7 are its prime factors. Note that some primes, like 2 in this case, can appear multiple times in a prime factorization. 
 
 The Fundamental Theorem of Arithmetic states that every integer has a different prime factorization and that every integer has only 1 prime factorization. You’ll likely prove this algebraically later in your math career. 
 
@@ -1243,17 +1402,17 @@ So, rather than spending time learning various techniques for finding prime fact
 Knowing the prime factorization of a number can be helpful for finding all sorts of information about a number. We are going to explore a number of areas below. 
 
 What can the prime factorization tell us about the number?
-Let’s think about the number with the prime factorization of 2 x 2 x 3 x 5 x 5. Resist the urge to do out the multiplication and answer these questions instead. 
+Let’s think about the number with the prime factorization of 2 × 2 × 3 × 5 × 5. Resist the urge to do out the multiplication and answer these questions instead. 
 
 Show the PF diagram for this number, but don’t put the actual number in the middle. The sections for the number above would have 2 orange parts, 1 green part, and 2 blue parts. Here is the one for 72 just as a placeholder in the document to show that an image would go here. 
 
 The prime factorization contains a 2, so we know the number is [[even | odd]]. Upon correct answer, have one of the orange parts of the ring pop up for a second and then show:
 
-The prime factorization of 15 is [[3 x 5]], which [[is | is not]] in the prime factorization of this number. So, this number [[is | is not]] a multiple of 15. Upon correct answer, have a green and blue part of the ring pop up for a second and show:
+The prime factorization of 15 is [[3 × 5]], which [[is | is not]] in the prime factorization of this number. So, this number [[is | is not]] a multiple of 15. Upon correct answer, have a green and blue part of the ring pop up for a second and show:
 
-The prime factorization of 22 is [[2 x 11]], which [[is not | is]] in the prime factorization of this number. So, 11 [[is not | is]] a factor of this number. Upon correct answer, have the full red ring for 11 hover next to the circle for this number showing that 11 is not a part of it, and then show:
+The prime factorization of 22 is [[2 × 11]], which [[is not | is]] in the prime factorization of this number. So, 11 [[is not | is]] a factor of this number. Upon correct answer, have the full red ring for 11 hover next to the circle for this number showing that 11 is not a part of it, and then show:
 
-The prime factorization of 100 is [[2 x 2 x 5 x 5]], which [[is | is not]] in the prime factorization of this number. So, 100 is a factor of this number and therefore it must end with [[2]] zeros. Upon correct answer, show two orange and two blue parts of the ring pop up for a second, and then show:
+The prime factorization of 100 is [[2 × 2 × 5 × 5]], which [[is | is not]] in the prime factorization of this number. So, 100 is a factor of this number and therefore it must end with [[2]] zeros. Upon correct answer, show two orange and two blue parts of the ring pop up for a second, and then show:
 
 The number we’ve been thinking of is [[300]]. 
 
@@ -1282,7 +1441,7 @@ https://drive.google.com/file/d/1VLsKIZt5v5yHnmf-k56IWvEbT4J_iO2I/view?usp=shari
 
 Let’s use the prime factorization of 24 to find all the factors of 24.
 
-		24 = 2 x 2 x 2 x 3
+		24 = 2 × 2 × 2 × 3
 
 Make factors of 24 by selecting prime factors from the visual above. 
 
@@ -1293,14 +1452,14 @@ Pick 1
 
 End State
 Pick 1		Pick 2			Pick 3			Pick 4
-2		2 x 2			2 x 2 x 2		2 x 2 x 2 x 3
-3		2 x 3			2 x 2 x 3
+2		2 × 2			2 × 2 × 2		2 × 2 × 2 × 3
+3		2 × 3			2 × 2 × 3
 
 One number that is a factor of 24 is missing from this list: [[1]]. Add “1” to the list above as follows:
 
 Pick None	Pick 1		Pick 2			Pick 3			Pick 4
-1		2		2 x 2			2 x 2 x 2		2 x 2 x 2 x 3
-3		2 x 3			2 x 2 x 3
+1		2		2 × 2			2 × 2 × 2		2 × 2 × 2 × 3
+3		2 × 3			2 × 2 × 3
 
 Since 1 is a factor of every number, we don’t need to pick any prime factors to create the factor of 1. 
 
@@ -1338,11 +1497,11 @@ https://drive.google.com/file/d/1Cwsiwmuc0pCmJj7uSv4UcGmnkULYfAIZ/view?usp=shari
 
 Upon finishing that one, show the following:
 529,984 is also a square number. Break it up into two numbers to find out the side length of the square array that will give 529,984. 
-The same process above happens here. Students are shown the visual for 529,984 ( 2 x 2 x 2 x 2 x 2 x 2 x 7 x 7 x 13 x 13) and find its square root (728) by doing the same process as above. 
+The same process above happens here. Students are shown the visual for 529,984 ( 2 × 2 × 2 × 2 × 2 × 2 × 7 × 7 × 13 × 13) and find its square root (728) by doing the same process as above. 
 
 Upon completion, show the following. 
 Let’s use this approach to check to see if 67,500 is a square number. 
-The same process happens here, but 67,500 is 2 x 2 x 3 x 3 x 3 x 5 x 5 x 5 x 5. The three 3’s can’t be split up evenly so it’s not a square number. 
+The same process happens here, but 67,500 is 2 × 2 × 3 × 3 × 3 × 5 × 5 × 5 × 5. The three 3’s can’t be split up evenly so it’s not a square number. 
 
 After a few attempts, show the following (I think it more important than a tutor comment)
 We can split up the 2’s and the 5’s into two equal groups because there are an [[even | odd]] amount of each of them. However, we have an [[odd | even]] number of 3’s in the prime factorization of 67,500 so they can’t be split into two equal groups. A square number must have an [[even | odd]] number of each prime factor that is part of its prime factorization. 
@@ -1353,7 +1512,7 @@ The “calculator” works as follows:
 Students enter any number they want and click “enter” or something.
 The prime factorization of the number shows up - both just the list of the prime factors and the visual with the colored rings. 
 Each get of prime factors is grouped together - if it is an even number, it’s highlighted in green with a check mark or something. If it’s an odd number, it’s highlighted in red with an x. 
-Then some sentence comment, either “Yes! --- is a square numbre. --- x --- = -------.” Or “--- is not a square number. There is not an even amount of all different prime factors in its prime factorization.”
+Then some sentence comment, either “Yes! --- is a square numbre. --- × --- = -------.” Or “--- is not a square number. There is not an even amount of all different prime factors in its prime factorization.”
 
 ---
 
@@ -1373,11 +1532,11 @@ An architect is planning the floor for a large courtyard that measures 24 m by 4
 
 The slider goes from 1 to 24. As students move the slider, the following lists get automatically filled in (Consider just having the “Possible Options” List and follow-up questions about the other ones…)
 
-Possible options:		1 x 1, 2 x 2, 3 x 3, 4 x 4, 8 x 8	
-Works for 24 but not 40:	6 x 6, 12 x 12, 24 x 24 
-Works for 40, but not 24: 	5 x 5, 10 x 10, 20 x 20
-Doesn’t work for either:	7 x 7, 9 x 9, 11 x 11, 13 x 13, 14 x 14, 15 x 15, 16 x 16, 17 x 17, 
-18 x 18, 19 x 19, 21 x 21, 22 x 22, 23 x 23
+Possible options:		1 × 1, 2 × 2, 3 × 3, 4 × 4, 8 × 8	
+Works for 24 but not 40:	6 × 6, 12 × 12, 24 × 24 
+Works for 40, but not 24: 	5 × 5, 10 × 10, 20 × 20
+Doesn’t work for either:	7 × 7, 9 × 9, 11 × 11, 13 × 13, 14 × 14, 15 × 15, 16 × 16, 17 × 17, 
+18 × 18, 19 × 19, 21 × 21, 22 × 22, 23 × 23
 
 The numbers that work for each side are the [[factors | multiples]] of the dimensions of the courtyard. The tile sizes that work for both must be factors of both numbers. We call these common factors. If the architect is interested in the largest square tiles that will work, she will choose tiles with a side length of [[8]] m. This is called the greatest common factor (GCF) of 24 and 40. 
 
@@ -1552,7 +1711,7 @@ Quick video of animation:
 https://drive.google.com/file/d/1Q91R6hKbHVo9RXGSpcQUxTJ7rBxCW7Fr/view?usp=sharing
 When animation is over, show the following:
 
-The Venn Diagram shows us that 132 and 198 share the following prime factors: 2, 3 and [[11]]. To build the GCF, we [[multiply | add]] the greatest collection of shared prime factors. 2 x 3 x 11 = [[66]], which is the same GCF we found using the colored, prime factor diagrams. 
+The Venn Diagram shows us that 132 and 198 share the following prime factors: 2, 3 and [[11]]. To build the GCF, we [[multiply | add]] the greatest collection of shared prime factors. 2 × 3 × 11 = [[66]], which is the same GCF we found using the colored, prime factor diagrams. 
 
 Let’s practice using Venn Diagrams and the prime factorization diagrams to find greatest common factors. 
 
@@ -1584,7 +1743,7 @@ The side length of the largest possible cube is the [[GCF | LCM]] of 24, 132 and
 Upon correct answer:
 Use the workspace below to calculate the GCF of 24, 132 and 168. The workspace will be the same as above, but with 3 numbers, 3 prime factorization rings, and a 3-circle Venn Diagram:
 
-The GCF of 24, 132, and 168 is [[12]]. Upon correct answer, show the rectangular prism as above cut into 12 x 12 x 12 cubes. Sliced like this, the cake can serve [[308]] people!
+The GCF of 24, 132, and 168 is [[12]]. Upon correct answer, show the rectangular prism as above cut into 12 × 12 × 12 cubes. Sliced like this, the cake can serve [[308]] people!
 
 
 
@@ -1670,8 +1829,8 @@ As the gears move, a counter will be underneath each gear indicating the number 
 
 In gears, the little bits sticking out are often called teeth. The blue gear has [[8]] teeth and the gray one has [[6]] teeth. In order for the red dots to line up again, the blue gear made [[3]] full revolutions and the gray one made [[4]].
 
-	Blue: 8 teeth x 3 revolutions = [[24]]
-	Gray: 6 teeth x 4 revolutions = [[24]]. 
+	Blue: 8 teeth × 3 revolutions = [[24]]
+	Gray: 6 teeth × 4 revolutions = [[24]]. 
 
 You may recall from the chapter GCF and LCM Introduction, that 24 is the [[ LCM | GCF ]] of 8 and 6. In that chapter, to find the LCM of a set of numbers, we just listed the multiples of each and found the smallest one common to both.
 
@@ -1700,7 +1859,7 @@ https://drive.google.com/file/d/10G1OgzEdcdFnE4zmFhSodwLcj66IdyU7/view?usp=shari
 Upon final answer, students will have made the following. Note - unlike in the other chapter, I think it is worthwhile here to have the prime factors labeled in the sections around the number:
 
 Upon finding the correct prime factorization, show the following.
-As we learned in the Prime Factorization chapter, when building multiples a target number, the prime factorization of the multiple must contain all the prime factors of that target number. For example, we see that 40 [[is | is not]] a multiple of 8, because 2 x 2 x 2 is in the prime factorization of 40. Upon correct answer, show an arrow going from the “2 x 2 x 2” in the text to three “2”s in the prime factorization ring of 40. Similarly, 18 [[is | is not]] a multiple of 6. Upon correct answer, have the “2” and “3” in the prime factorization ring for 18 hover outside or above the ring for a second or two. Then, show the following:
+As we learned in the Prime Factorization chapter, when building multiples a target number, the prime factorization of the multiple must contain all the prime factors of that target number. For example, we see that 40 [[is | is not]] a multiple of 8, because 2 × 2 × 2 is in the prime factorization of 40. Upon correct answer, show an arrow going from the “2 × 2 × 2” in the text to three “2”s in the prime factorization ring of 40. Similarly, 18 [[is | is not]] a multiple of 6. Upon correct answer, have the “2” and “3” in the prime factorization ring for 18 hover outside or above the ring for a second or two. Then, show the following:
 
 Let’s use this idea to build a number that is a multiple of 18 and 40 while using the fewest prime factors as possible. Remember, we want the [[least | greatest]] common multiple. Upon correct answer, show the two factor rings again and the gumball machine of prime factors:
 
@@ -1720,7 +1879,7 @@ Multiples of 18: 18, 36, 54, 72, 90, 108, 126, 144, 162, 180, 198, 216, 234, 252
 Multiples of 40: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400
 
 After finishing the animation, show the following:
-The gears could keep spinning around and around to create more common multiples. Any multiple of 360 will be a common multiple of 18 and 40. For example, 3 x 360 = [[1,080]]. The prime factorization of 1,080 is 2 x 2 x 2 x 3 x 3 x 3 x 5. Watch the animation below to see 18 and 40 in the prime factorization of 1,080:
+The gears could keep spinning around and around to create more common multiples. Any multiple of 360 will be a common multiple of 18 and 40. For example, 3 × 360 = [[1,080]]. The prime factorization of 1,080 is 2 × 2 × 2 × 3 × 3 × 3 × 5. Watch the animation below to see 18 and 40 in the prime factorization of 1,080:
 
 Video of animation:
 https://drive.google.com/file/d/1yUjY6Prh0GC6RX7RYeN8Kcs-xoMox6j6/view?usp=sharing
@@ -1734,9 +1893,9 @@ Using a Venn Diagram helps identify the common prime factors and therefore helps
 
 Find the LCM of 45 and 126 using the Venn Diagram below:
 
-List the fewest prime factors needed to create a multiple of 126 and 45: [[2 x 7 x 3 x 3 x 5]]. Upon correct answer: So, the LCM of 126 and 45 is [[630]]. We created the LCM using only [[2]] 3’s since both 45 and 126 have 2 3’s in their prime factorization. Additionally, we can see in the diagram that:
+List the fewest prime factors needed to create a multiple of 126 and 45: [[2 × 7 × 3 × 3 × 5]]. Upon correct answer: So, the LCM of 126 and 45 is [[630]]. We created the LCM using only [[2]] 3’s since both 45 and 126 have 2 3’s in their prime factorization. Additionally, we can see in the diagram that:
 
-126 x [[5]] = 630 and 45 x [[14]] = 630. When students enter in the correct answer, the circle for 126 and 45 become highlighted for a second to show 126 x 5 in the diagram and 45 x 14. Something like this for the two end states:
+126 × [[5]] = 630 and 45 × [[14]] = 630. When students enter in the correct answer, the circle for 126 and 45 become highlighted for a second to show 126 × 5 in the diagram and 45 × 14. Something like this for the two end states:
 
 In general, to find the GCF, we just multiply the prime factors [[in the overlapping regions | in the outside regions]]. To find the LCM, we must multiply [[all the prime factors in the diagram | just the prime factors NOT in the overlapping region]].
 
@@ -1757,13 +1916,13 @@ The LCM of 18, 45, and 75 is [[450]]. We can use the Venn Diagram to determine h
 
 Make each number (18, 45, and 75) a hover target so when students hover on the number, that circle in the Venn becomes highlighted. So when they hover on 18, they will see the following:
 
-This visual should help them see that 18 x 25 = 450. Maybe there could even be a quick animation like the following showing the 18 x 35 a little more clearly:
+This visual should help them see that 18 × 25 = 450. Maybe there could even be a quick animation like the following showing the 18 × 35 a little more clearly:
 
 https://drive.google.com/file/d/1Hk2p8bqGiEzaYPPz18nSaiU6XFv7gkYn/view?usp=sharing
 
-18 x [[25]] = 450. So, this gear must spin [[25]] times. 
-45 x [[10]] = 450. So this gear must spin [[10]] times. 
-75 x [[6]] = 450. So this gear must spin [[6[[ times. 
+18 × [[25]] = 450. So, this gear must spin [[25]] times. 
+45 × [[10]] = 450. So this gear must spin [[10]] times. 
+75 × [[6]] = 450. So this gear must spin [[6[[ times. 
 
 Upon correct answers, show the gears spinning the correct number of times. Make it go pretty quick to get to 25 for the smallest one. Have the counters as before. 
 
@@ -1787,7 +1946,7 @@ Students will see the following numbers in the middle of the screen. Each will b
 
 Numbers to show on the screen: 43, 51, 59, 67, 75, 91, 93, 97, 101, 111 (The underlined numbers are prime)
 
-Can the checker list the factors of numbers that are not prime, or even 1 factor pair? So, here it could say “is not prime. 3 x 19 is 57.” 
+Can the checker list the factors of numbers that are not prime, or even 1 factor pair? So, here it could say “is not prime. 3 × 19 is 57.” 
 
 ---
 
@@ -1941,15 +2100,15 @@ Is 2N - 1 Prime or Composite?
 [[1]]
 Neither
 2
-22 = 2 x 2 = [[4]]
+22 = 2 × 2 = [[4]]
 [[3]]
 [[Prime | Composite]]
 3
-23 = 2 x 2 x 2 = [[8]]
+23 = 2 × 2 × 2 = [[8]]
 [[7]]
 [[Prime | Composite]]
 4
-24 = 2 x 2 x 2 x 2 = [[16]]
+24 = 2 × 2 × 2 × 2 = [[16]]
 [[15]]
 [[Composite | Prime]]
 5
@@ -1992,7 +2151,7 @@ Look carefully at all the rows in which 2N-1 is prime. Notice the starting value
 8191
 [[Composite | Prime]]
 
-Unfortunately, 2047 is composite. 23 x [[89]] = 2047. So, when N is prime, 2N - 1 is [[sometimes | always | never]] prime. Upon correct answer: Since this sometimes works, mathematicians use this pattern to try to find bigger and bigger prime numbers. Prime numbers of the form 2N - 1 are named Mersenne Primes after French mathematician Marin Mersenne. Mersenne studied these numbers in the early 17th century. 
+Unfortunately, 2047 is composite. 23 × [[89]] = 2047. So, when N is prime, 2N - 1 is [[sometimes | always | never]] prime. Upon correct answer: Since this sometimes works, mathematicians use this pattern to try to find bigger and bigger prime numbers. Prime numbers of the form 2N - 1 are named Mersenne Primes after French mathematician Marin Mersenne. Mersenne studied these numbers in the early 17th century. 
 
 Mathematicians know of 51 Mersenne Primes and the current largest known prime number was found using this process. People around the world are using their computers to search for the 52nd Mersenne Prime. You can put your computer to work and maybe find it yourself! Read more about how to get involved at the Great Internet Mersenne Prime Search.  
 
@@ -2032,7 +2191,7 @@ https://drive.google.com/file/d/1RbckOKp9YXu_zESPqWIZPdmsGk3XemHf/view?usp=shari
 
 Upon finishing the graph, show the following:
 As we zoom out , the blue line becomes very smooth. 
-Upon zooming out, now include the x/log x function in red on the graph. Then show the following:
+Upon zooming out, now include the x/log × function in red on the graph. Then show the following:
 Gauss noticed that the shape of the blue line looks very similar to the function x/(log x) (shown in red). He predicted that the two functions are always “approximately similar.” This was proven to be true in 1896. 
 
 However, as you can see, there is a significant gap between the actual number of primes in blue and Gauss’s approximation in red. In 1859, mathematician [Bernhard Riemann](bio:riemann) discovered an approximation that looked much better, but he wasn’t able to prove that it would always work. His process allows mathematicians to determine how many prime numbers exist between any two numbers. His idea has become known as the Riemann Hypothesis. 

@@ -706,7 +706,7 @@ gauss:
     outros matemáticos famosos como professor.
   links:
     - title: Prime Number Theorem
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: Non-Euclidean Geometry
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -758,7 +758,7 @@ goldbach:
     Bernoulli. Ele foi tutor do czar russo Peter II e é lembrado por sua "Conjectura de Goldbach".
   links:
     - title: Goldbach Conjecture
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -1136,7 +1136,7 @@ mersenne:
     filosofia.
   links:
     - title: Large Primes
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1555,7 +1555,7 @@ riemann:
     sobre a distribuição de números primos.
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872

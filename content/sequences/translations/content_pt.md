@@ -591,7 +591,7 @@ Agora, vamos dar uma olhada em alguns exemplos em que podemos usar tudo isso!
 Aqui está um pequeno clipe do filme _Pay it Forward_, onde Trevor, de 12 anos, explica sua idéia de tornar o mundo um lugar melhor:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---

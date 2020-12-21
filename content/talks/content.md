@@ -165,7 +165,7 @@ What happens when three plants orbit around each other in space?
         path.thin(x="segment(b, b.translate(vb))" arrows="end")
         path.thin(x="segment(c, c.translate(vc))" arrows="end")
       x-play-toggle
-      x-icon-btn.restore(icon="restore")
+      x-icon-btn.restore(icon="restart")
 
 ---
 > id: bridges-v2

@@ -1391,7 +1391,7 @@ truncated-icosahedron:
 twin-primes:
   title: ツインプライム
   text: __ツイン素数__は、17と19または101と103のような素数のペアであり、正確に2つ離れています。双子素数のペアが無限にあるかどうかは不明です。
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: ユニットサークル
