@@ -817,6 +817,8 @@ Since we don't all have Da Vinci's artistic skills, we can use grid paper to hel
 
 ---
 
+> id: net-1
+
 When the solids get complicated, drawing them on a 2D paper gets harder too. But there is another way to represent the 3D solids on a 2D plane.
 
     // page 8
@@ -824,6 +826,10 @@ When the solids get complicated, drawing them on a 2D paper gets harder too. But
 We can use the [nets](gloss:net) of the solids which are composed of polygons that form the faces of a polyhedron.
 
 {.todo} INTERACTIVE: 3D Solids with a slider to open and close the net. (Maybe Da Vinci’s examples’ nets can be included)
+
+    figure
+      x-net(size=300 :p="progress")
+      x-slider(:bind="progress" steps=1000 speed=1)
 
 ---
 

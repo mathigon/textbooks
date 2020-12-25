@@ -4,10 +4,12 @@
 // =============================================================================
 
 
-import {Step} from '../shared/types';
+import {Slider, Step} from '../shared/types';
 import {VoxelPainter} from './components/voxel-painter';
+import {Net} from './components/net';
 
 import './components/voxel-painter';
+import './components/net';
 import '../shared/components/solid';
 import '../polyhedra/components/polyhedron';
 import {BLUE, GREEN, GREY, LIME, RED, YELLOW} from '../shared/constants';
@@ -144,6 +146,22 @@ export async function templeDisplay2($step: Step) {
   const $voxelPainter = $step.$('x-voxel-painter') as VoxelPainter;
   // await $voxelPainter.ready();
   templeDisplay($voxelPainter);
+}
+
+export function net1($step: Step) {
+  const $net = $step.$('x-net') as Net;
+  const $slider = $step.$('x-slider') as Slider;
+  $net.addCuboidNet(1, 1, 1);
+  /*
+  $net.onAttr('p', v => {
+    console.log('sliding');
+    console.log(v);
+  });
+  */
+  $slider.on('move', n => {
+    const progress = n / 1000;
+    $net.fold(progress);
+  });
 }
 
 export async function voxelBuilderQuestion($step: Step) {
