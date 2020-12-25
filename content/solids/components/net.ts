@@ -12,15 +12,10 @@ import {Solid} from '../../shared/components/solid';
 
 type Hinge = [number, number, number];
 
-type HingeOrientation = {
-  axis: THREE.Vector3,
-  direction: 1 | -1
-};
-
 type HingeBone = {
   bone: THREE.Bone,
   verts: Point[],
-  orientation: HingeOrientation,
+  axis: THREE.Vector3,
   maxAngle: number
 };
 
@@ -59,10 +54,7 @@ export class Net extends Solid {
     const rootHingeBone: HingeBone = {
       bone: rootBone,
       verts: faces[0].points,
-      orientation: {
-        axis: new THREE.Vector3(0, 0, 0),
-        direction: 1
-      },
+      axis: new THREE.Vector3(0, 0, 0),
       maxAngle: 0
     };
 
@@ -232,17 +224,10 @@ function boneHingesForFace(
     const [_a, _b, maxAngleDeg] = hinge!;
     const maxAngle = angleFromDegrees(maxAngleDeg).rad;
 
-    const direction = 1; // TODO;
-
-    const orientation: HingeOrientation = {
-      axis,
-      direction
-    };
-
     const boneHinge = {
       bone,
       verts,
-      orientation,
+      axis,
       maxAngle
     };
 
@@ -354,5 +339,5 @@ function angleFromRadians(val: number): Angle {
 
 function setHingeBendAmount(hinge: HingeBone, amount: number) {
   const rotAngle = hinge.maxAngle * amount;
-  hinge.bone.setRotationFromAxisAngle(hinge.orientation.axis, rotAngle);
+  hinge.bone.setRotationFromAxisAngle(hinge.axis, rotAngle);
 }
