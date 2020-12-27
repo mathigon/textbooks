@@ -189,6 +189,15 @@ aryabhata:
     - title: Quadratic Equations
       url: /course/quadratics/introduction
 
+avila:
+  born: 1979
+  name: Avila
+  full: Artur Avila
+  location: america
+  bio: __Artur Avila__ (born 1979) is a Brazilian mathematician, and the first
+    Latin-American to receive the Fields medal. He made numerous discoveries
+    related to chaos theory and dynamical systems.
+
 babbage:
   born: 1791
   died: 1871
@@ -284,7 +293,6 @@ bhaskara-2:
   name: Bhaskara II
   keywords: India
   location: asia
-  image: false
   bio: __Bhaskara II__ (1114 – 1185) was an Indian mathematician and astronomer.
     He discovered some of the basic concepts of calculus, more than 500 years
     before Leibnitz and Newton. Bhaskara also established that division by zero
@@ -337,6 +345,16 @@ boole:
     and NOT (rather than addition or multiplication) and can be used when
     working with sets. This was the foundation for formal mathematical logic,
     and has many applications in computer science.
+
+bourgain:
+  born: 1954
+  died: 2018
+  name: Bourgain
+  full: Jean Bourgain
+  small: true
+  bio: __Jean Bourgain__ (1954 – 2018) was a Belgian mathematician who studied
+    topics like Banach spaces, harmonic analysis, ergodic theory and non-linear
+    partial differential equations. He received the Fields medal in 1994.
 
 brahmagupta:
   born: 598
@@ -514,6 +532,19 @@ chatelet:
     day. She died just a few days after giving birth to a daughter, but her
     completed work was published posthumously, and is still used today.
 
+chern:
+  born: 1911
+  died: 2004
+  name: Chern
+  full: Shiing-Shen Chern
+  location: asia
+  keywords: China
+  small: true
+  bio: __Shiing-Shen Chern__ (1911 – 2004) was a Chinese-American mathematician
+    and poet. He is the father of modern _differential geometry_. His work on
+    geometry, topology, and knot theory even has applications in string theory
+    and quantum mechanics.
+
 collatz:
   name: Collatz
   bio: __Lothar Collatz__ (1910 – 1990) was a German mathematician working on
@@ -606,6 +637,18 @@ curry:
     the concept of currying, a technique used for transforming functions in
     mathematics and computer science.
 
+daubechies:
+  born: 1954
+  name: Daubechies
+  full: Ingrid Daubechies
+  keywords: Female
+  bio: |
+    __Ingrid Daubechies__ (born 1954) is a Belgian physicist and mathematician.
+    She was the first female president of the International Mathematical Union
+    (IMU).
+
+    Daubechies studied different types of wavelets, which are now an essential
+    part of image compression formats like JPEG.
 de-moivre:
   born: 1667
   died: 1754
@@ -1105,7 +1148,6 @@ goldbach:
 gowers:
   name: Gowers
   full: Timothy Gowers
-  born: 1963
   bio: |
     __Sir Timothy Gowers__ (born 1963) is a British mathematician, and currently
     holds the _Rouse Ball chair_ at Cambridge University. In 1998, he received
@@ -1120,6 +1162,7 @@ grothendieck:
   died: 2014
   name: Grothendieck
   full: Alexander Grothendieck
+  small: true
   bio: The French mathematician __Alexander Grothendieck__ (1928 – 2014) was one
     of the key figures in the development of _algebraic geometry_. He extended
     the scope of the field to apply to many new problems in mathematics,
@@ -1217,7 +1260,7 @@ heron:
   name: Heron
   full: Heron of Alexandria
   location: africa
-  overflow: true
+  image: false
   bio: |
     __Heron of Alexandria__ ( Ἥρων ὁ Ἀλεξανδρεύς, c. 10 – 70 CE) was a Greek
     mathematician and engineer. He lived in the city of Alexandria in Egypt,
@@ -1567,7 +1610,6 @@ li:
   born: 1192
   died: 1279
   name: Li Ye
-  image: false
   location: asia
   keywords: China
   bio: __Li Ye__ (李冶, 1192 – 1279) was a Chinese mathematician. He improved
@@ -1668,6 +1710,7 @@ mandelbrot:
   died: 2010
   name: Mandelbrot
   full: Benoit Mandelbrot
+  small: true
   bio: |
     The mathematician __Benoit Mandelbrot__ was born in Poland, grew up in
     France, and eventually moved to the United States. He was one of the
@@ -2051,6 +2094,7 @@ penrose:
   name: Penrose
   full: Roger Penrose
   born: 1931
+  small: true
   bio: |
     __Sir Roger Penrose__ (born 1931) is a British mathematician and physicist
     who is known for his groundbreaking work in general relativity and
@@ -2088,7 +2132,6 @@ pingala:
   born: -330
   died: -270
   location: asia
-  image: false
   bio: __Pingala__ (पिङ्गल) was an ancient Indian poet and mathematician who
     lived around 300 BCE, but very little is known about his life. He wrote the
     Chandaḥśāstra, where he analysed Sanskrit poetry mathematically. It also
@@ -2198,7 +2241,7 @@ ramanujan:
   died: 1920
   name: Ramanujan
   full: Srinivasa Ramanujan
-  overflow: true
+  small: true
   location: asia
   keywords: India
   bio: |
@@ -2313,6 +2356,27 @@ seki:
     His work laid foundations for a distinct type of Japanese mathematics, known
     as _wasan_ (和算), which was continued by his successors.
 
+serre:
+  born: 1926
+  name: Serre
+  full: Jean-Pierre Serre
+  keywords: Female
+  small: true
+  bio: __Jean-Pierre Serre__ (born 1926) is a French mathematician who helped
+    shape the fields of topology, number theory and algebraic geometry. He is
+    the first person to receive the Fields medal, the Abel Prize and the Wolf
+    Prize – the three highest awards in mathematics.
+
+shamir:
+  born: 1952
+  name: Shamir
+  full: Adi Shamir
+  location: middle-east
+  bio: __Adi Shamir__ (born 1952) is an Israeli mathematician and cryptographer.
+    Together with Ron Rivest and Len Adleman, he invented the RSA algorithm,
+    which uses the difficulty of factoring prime numbers to encode secret
+    messages.
+
 shannon:
   name: Shannon
   full: Claude Shannon
@@ -2389,6 +2453,18 @@ singmaster:
     particularly well known for his mathematical puzzles and brain teasers. He
     was the first to come up with mathematical algorithms for analysing and
     solving the _Rubik’s Cube_.
+
+somerville:
+  born: 1780
+  died:  1872
+  name: Somerville
+  full: Mary Somerville
+  keywords: Female
+  small: true
+  bio: __Mary Somerville__ (1780 – 1872) was a Scottish scientist and writer. In
+    her obituary, she was called the “Queen of Science”. Somerville first
+    suggested the existence of Neptune and was also an excellent writer and
+    communicator of science.
 
 stevin:
   born: 1548
@@ -2712,6 +2788,18 @@ yang:
     Yang also wrote geometric proofs, and was known for his ability to
     manipulate decimal fractions.
 
+yau:
+  born: 1949
+  name: Yau
+  full: Shing-Tung Yau
+  location: asia
+  keywords: China
+  small: true
+  bio: __Shing-Tung Yau__ (丘成桐, born 1949) is an American mathematician,
+    originally from Shantou in China. He studied partial differential equations
+    and geometric analysis, and his work has many applications – including in
+    general relativity and string theory.
+
 zeno:
   born: -495
   died: -430
@@ -2734,7 +2822,6 @@ zhang:
   full: Yitang Zhang
   location: asia
   keywords: China
-  small: true
   bio: |
     __Yitang Zhang__ (张益唐, born 1955) was born in China and is now a
     professor of mathematics at the University of California.
