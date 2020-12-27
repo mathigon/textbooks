@@ -31,6 +31,7 @@ development. Simply follow our [setup instructions](docs/setup.md).
 [![Build Status](https://travis-ci.org/mathigon/textbooks.svg?branch=master)](https://travis-ci.org/mathigon/textbooks)
 ![GitHub repo size](https://img.shields.io/github/repo-size/mathigon/textbooks)
 ![GitHub issues](https://img.shields.io/github/issues-raw/mathigon/textbooks)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmathigon%2Ftextbooks.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmathigon%2Ftextbooks?ref=badge_shield)
 
 We welcome any contributions to Mathigon – from bug fixes and correcting typos to creating entirely
 new courses. If you find any bugs or mistakes, please [file an issue](https://github.com/mathigon/textbooks/issues).
@@ -53,3 +54,7 @@ If you want to work for Mathigon, visit our [careers page](https://mathigon.org/
 [![Twitter Follow](https://img.shields.io/twitter/follow/MathigonOrg?style=social)](https://twitter.com/intent/follow?screen_name=MathigonOrg)
 
 © Mathigon 2016–2020, All rights reserved
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmathigon%2Ftextbooks.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmathigon%2Ftextbooks?ref=badge_large)
