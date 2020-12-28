@@ -21,6 +21,13 @@ function table(data: any[][]) {
   return `<table>${rows}</table>`;
 }
 
+/** Converts a 2-dimensional data array into an HTML <table> string with a given width and ID. */
+function tableID(data: any[][], id: String, width: number) {
+  const rows = data.map(tr => '<tr>' + tr.map(td => `<td>${td}</td>`)
+      .join('') + '</tr>').join('');
+  return `<table id=${id} width=${width}px>${rows}</table>`;
+}
+
 
 // N[Normalize[With[{n = 6}, CoefficientList[Expand[(x + x^2 + x^3 + x^4 + x^5 + x^6)^n], x]], Total], 2]
 const probabilities: Obj<number[]> = {
@@ -216,6 +223,21 @@ export function radioactive($step: Step) {
 }
 
 // -----------------------------------------------------------------------------
+const pascal: Obj<number[]> = {
+  0: [1],
+  1: [1, 1],
+  2: [1, 2, 1],
+  3: [1, 3, 3, 1],
+  4: [1, 4, 6, 4, 1],
+  5: [1, 5, 10, 10, 5, 1],
+  6: [1, 6, 15, 20, 15, 6, 1],
+  7: [1, 7, 21, 35, 35, 21, 7, 1],
+  8: [1, 8, 28, 56, 70, 56, 28, 8, 1],
+  9: [1, 9, 36, 84, 126, 126, 84, 39, 9, 1],
+  10: [1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1],
+  11: [1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1]
+};
+
 export function galtonBoard($step: Step) {
   const $svg = $step.$('.galton')!;
   let rows: number[] = [];
@@ -224,6 +246,8 @@ export function galtonBoard($step: Step) {
   let firstPos;
   const finalToInd: number[] = [];
   let cnt: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let actualProb: number[] = [];
+  let dropped: number = 0;
 
   $step.model.watch(() => {
     $svg.removeChildren();
@@ -245,16 +269,31 @@ export function galtonBoard($step: Step) {
       finalToInd[firstPos + i * 40] = i;
     }
     cnt = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    actualProb.length = 0;
+    for (let i = 0; i <= rowCnt + 1; i++) {
+      let val = Math.pow(p, i) * Math.pow(1 - p, rowCnt + 1 - i) * pascal[rowCnt + 1][i];
+      actualProb.push(val);
+    }
+    dropped = 0;
   });
 
-  $svg.on('click', async () => {
+  $step.model.ballTable = () => {
+    const row: String[] = [];
+    for (let i = 0; i < rowCnt + 1; ++i) {
+      row.push(`<div class="pBox"><div class="ballCount" id="col${i}"></div></div>`)
+    }
+    return tableID([row], "ballTable", (rowCnt + 1) * 40);
+  };
+
+  async function dropBall() {
+    $('#ballTable')!.css('width', (rowCnt + 1) * 40);
     const $ball = $N('circle', {cx: 200, cy: 10, r: 10, class: 'ball'}, $svg);
     await animate((p: number) => {
       $ball.setAttr('cy', lerp(10, rows[0], p));
     }, 200).promise;
     let cur = 200;
     const ht = 100; // adjust to taste, height of ball bounce
-    for (let i = 0; i < rowCnt; i++) {
+    for (let i = 0; i < rowCnt; ++i) {
       const nextDir = Math.random() < p;
       await animate((p: number) => {
         const height = ht * p * (p - 1 + 40 / ht) + rows[i]; // quadratic bounce of ball
@@ -271,8 +310,27 @@ export function galtonBoard($step: Step) {
         break;
       }
     }
+    dropped++;
     cnt[finalToInd[Number($ball.attr('cx'))]]++;
-    console.log(cnt);
+    for (let i = 0; i < rowCnt + 1; ++i) {
+      $('#col' + i)!.css('height', cnt[i] * 100.00000 / dropped + '%');
+    }
+  }
+
+  $svg.on('click', () => {
+    dropBall();
+  });
+
+  const buttons = $step.$$('.btn');
+
+  buttons[0].on('click', dropBall);
+
+  buttons[1].on('click', () => {
+    for (let i = 0; i < 10; ++i) setTimeout(dropBall, 100 * i);
+  });
+
+  buttons[2].on('click', () => {
+    for (let i = 0; i < 100; ++i) setTimeout(dropBall, 100 * i);
   });
 }
 
