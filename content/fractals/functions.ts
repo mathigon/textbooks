@@ -26,7 +26,7 @@ import './components/automata';
 // -----------------------------------------------------------------------------
 // Introduction
 
-const colours = Color.gradient('#22ab24', '#0f82f2', 9).map(c => c.toString());
+const colours = Color.gradient(['#22ab24', '#0f82f2'], 9).map(c => c.toString());
 
 /** Returns the image of x, if a-b is mapped onto b-c. */
 function transform(a: Point, b: Point, c: Point, x: Point) {
