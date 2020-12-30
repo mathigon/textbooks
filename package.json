@@ -21,7 +21,7 @@
     "@mathigon/core": "0.6.3",
     "@mathigon/dev-server": "0.6.3",
     "@mathigon/fermat": "0.6.3",
-    "@mathigon/euclid": "0.6.7",
+    "@mathigon/euclid": "0.6.8",
     "@mathigon/hilbert": "0.6.1",
     "@types/d3": "5.16.3",
     "@types/topojson": "3.2.2",
