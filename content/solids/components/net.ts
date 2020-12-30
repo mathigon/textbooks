@@ -6,7 +6,7 @@
 
 /// <reference types="THREE"/>
 import {register} from '@mathigon/boost';
-import {Angle, Point, Polygon, Rectangle} from '@mathigon/euclid';
+import {Angle, ORIGIN, Point, Polygon, Rectangle} from '@mathigon/euclid';
 import {round} from '@mathigon/fermat';
 import {Solid} from '../../shared/components/solid';
 
@@ -61,7 +61,7 @@ export class Net extends Solid {
     const hingeBonesTail =
       boneHingesForFace(
           0,
-          null,
+          undefined,
           rootBone,
           faces,
           hinges
@@ -91,15 +91,8 @@ export class Net extends Solid {
     geometry.addAttribute('skinIndex', new THREE.Uint16BufferAttribute(skinIndices, 4));
     geometry.addAttribute('skinWeight', new THREE.Float32BufferAttribute(skinWeights, 4));
 
-    const mat = new THREE.MeshPhongMaterial({
-      color: 'green',
-      skinning: true,
-      side: THREE.DoubleSide,
-      transparent: true,
-      opacity: 0.9,
-      specular: 0x222222,
-      flatShading: true
-    });
+    const mat = Solid.solidMaterial(0x22ab24, true);
+    mat.skinning = true;
 
     const mesh = new THREE.SkinnedMesh(geometry, mat);
 
@@ -128,7 +121,7 @@ export class Net extends Solid {
   }
 
   addCuboidNet(width: number, height: number, depth: number) {
-    const p = new Point(0, 0);
+    const p = ORIGIN;
     const faces = [
       new Rectangle(p, width, depth), // bottom (base)
       new Rectangle(p.shift(width, 0), height, depth), // 'right'
@@ -172,17 +165,17 @@ export class Net extends Solid {
 
 }
 
-function parentHinge(hinge: Hinge, parentFaceIndex: number | null) {
-  if (parentFaceIndex === null) return false;
-  else {
-    return hinge[0] == parentFaceIndex ||
-           hinge[1] == parentFaceIndex;
-  }
+function parentHinge(hinge: Hinge, parentFaceIndex?: number) {
+  if (parentFaceIndex === undefined) return false;
+
+  return hinge[0] == parentFaceIndex ||
+         hinge[1] == parentFaceIndex;
+
 }
 
 function boneHingesForFace(
     currentFaceIndex: number,
-    previousFaceIndex: number | null,
+    previousFaceIndex: number | undefined,
     previousBone: THREE.Bone,
     faces: Polygon[],
     hinges: Hinge[]
@@ -198,7 +191,7 @@ function boneHingesForFace(
 
   const boneHinges = nextFaces.reduce((acc: HingeBone[], faceIndex) => {
     const nextFace = faces[faceIndex];
-    const hingeEdge = getCommonEdge(currentFace, nextFace);
+    const hingeEdge = getCommonEdge(currentFace, nextFace)!;
     const midpoint = hingeEdge.midpoint;
 
     const angle = angleFromRadians(hingeEdge.angle);
@@ -251,7 +244,7 @@ function boneHingesForFace(
   * Assumes that `a` and `b` are adjacent
   */
 function getCommonEdge(a: Polygon, b: Polygon) {
-  return a.edges.filter(aEdge => b.edges.some(bEdge => aEdge.equals(bEdge)))[0];
+  return a.edges.find(aEdge => b.edges.some(bEdge => aEdge.equals(bEdge)));
 }
 
 function getBoneIndexFromPoint(point: Point, hingeBones: HingeBone[]) {
@@ -280,14 +273,6 @@ function otherFaceIndex(currentFaceIndex: number, hinge: Hinge) {
   else return hinge[0];
 }
 
-function mergePolys(polys: Polygon[]) {
-  const pointSet = new PointSet();
-  for (const poly of polys) {
-    pointSet.add(poly.points);
-  }
-  return new Polygon(...pointSet.points);
-}
-
 function triangulateFace(face: Polygon): Array<[Point, Point, Point]> {
   const verts = face.points;
   return verts.slice(1, verts.length - 1).map((vert, index) => {
@@ -298,28 +283,14 @@ function triangulateFace(face: Polygon): Array<[Point, Point, Point]> {
   });
 }
 
-class PointSet {
-  private _points: Point[] = [];
-
-  constructor(points?: Point[]) {
-    if (points != undefined) this.add(points);
-  }
-
-  add(points: Point[]) {
-    for (const point of points) {
-      this.push(point);
+function mergePolys(polys: Polygon[]) {
+  const points: Point[] = [];
+  for (const poly of polys) {
+    for (const point of poly.points) {
+      if (points.every(p => !p.equals(point))) points.push(point);
     }
   }
-
-  push(point: Point) {
-    const isNew = this.points.every(p => !p.equals(point));
-    if (isNew) this.points.push(point);
-  }
-
-  get points() {
-    return this._points;
-  }
-
+  return new Polygon(...points);
 }
 
 function angleFromDegrees(val: number): Angle {
