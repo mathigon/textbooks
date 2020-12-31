@@ -194,7 +194,7 @@ function boneHingesForFace(
     const hingeEdge = getCommonEdge(currentFace, nextFace)!;
     const midpoint = hingeEdge.midpoint;
 
-    const angle = angleFromRadians(hingeEdge.angle);
+    const angle = Angle.fromRadians(hingeEdge.angle);
     const angleCoords = (new Point(1, 0)).rotate(angle.rad, new Point(0, 0));
     const axis = new THREE.Vector3(round(angleCoords.x, 10), round(angleCoords.y, 10), 0);
 
@@ -215,7 +215,7 @@ function boneHingesForFace(
 
     const hinge = hingeForFaces(faceIndex, currentFaceIndex, hinges);
     const [_a, _b, maxAngleDeg] = hinge!;
-    const maxAngle = angleFromDegrees(maxAngleDeg).rad;
+    const maxAngle = Angle.fromDegrees(maxAngleDeg).rad;
 
     const boneHinge = {
       bone,
@@ -291,21 +291,6 @@ function mergePolys(polys: Polygon[]) {
     }
   }
   return new Polygon(...points);
-}
-
-function angleFromDegrees(val: number): Angle {
-  const radians = val * (Math.PI / 180);
-  const c = new Point(0, 0);
-  const p1 = new Point(1, 0);
-  const p2 = p1.rotate(radians, c);
-  return new Angle(p1, c, p2);
-}
-
-function angleFromRadians(val: number): Angle {
-  const c = new Point(0, 0);
-  const p1 = new Point(1, 0);
-  const p2 = p1.rotate(val, c);
-  return new Angle(p1, c, p2);
 }
 
 function setHingeBendAmount(hinge: HingeBone, amount: number) {
