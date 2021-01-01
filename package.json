@@ -28,7 +28,7 @@
     "three": "0.120.0"
   },
   "devDependencies": {
-    "@google-cloud/text-to-speech": "3.1.2",
+    "@google-cloud/text-to-speech": "3.1.3",
     "@google-cloud/translate": "6.0.5",
     "@mathigon/parser": "0.6.2",
     "@percy/script": "1.1.0",
