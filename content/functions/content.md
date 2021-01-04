@@ -90,6 +90,7 @@ A connection between two sets is called a [__relation__](gloss:relation). Relati
 | Houses | Classes | Wands |
 | ------ | ------- | ----- |
 |Multiple students can be in a single house. A relation like this is called [[many-to-one\|one-to-one\|one-to-many\|many-to-many]].|Multiple students can be in multiple classes. A relation like this is called [[many-to-many\|one-to-one\|one-to-many\|many-to-one]].|A single wand chooses a single student. A relation like this is called [[one-to-one\|many-to-many\|one-to-many\|many-to-one]].|
+|Conversely, a single house contains multiple students—a [[one-to-many\|one-to-one\|many-to-one\|many-to-many]] relation.|Conversely, multiple classes contain multiple students—a [[many-to-many\|one-to-one\|many-to-one\|one-to-many]] relation.|Conversely, a single student has one wand—a [[one-to-one\|one-to-many\|many-to-one\|many-to-many]] relation.|
 
 ---
 
