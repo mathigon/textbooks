@@ -6,10 +6,10 @@
 
 /// <reference types="THREE"/>
 import {Obj} from '@mathigon/core';
-import {animate, canvasPointerPosition, CustomElementView, loadScript, register, slide} from '@mathigon/boost';
+import {animate, canvasPointerPosition, CustomElementView, register, slide} from '@mathigon/boost';
 import {Point} from '@mathigon/euclid';
 
-import {create3D, Graphics3D} from '../../shared/components/webgl';
+import {create3D, Graphics3D, loadTHREE} from '../../shared/components/webgl';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../../shared/constants';
 import {clamp} from '@mathigon/fermat';
 
@@ -65,7 +65,7 @@ export class VoxelPainter extends CustomElementView {
   private lastVoxelIntersectedByEraser?: THREE.Mesh<THREE.Geometry>;
 
   async ready() {
-    await loadScript('/resources/shared/vendor/three-91.min.js');
+    await loadTHREE();
 
     class Voxel extends THREE.Mesh<THREE.BoxGeometry> {
       constructor(
