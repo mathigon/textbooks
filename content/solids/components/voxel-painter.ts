@@ -7,17 +7,21 @@
 /// <reference types="THREE"/>
 import {Obj} from '@mathigon/core';
 import {animate, canvasPointerPosition, CustomElementView, register, slide} from '@mathigon/boost';
-import {Point} from '@mathigon/euclid';
+import {Angle, Point} from '@mathigon/euclid';
 
 import {create3D, Graphics3D, loadTHREE} from '../../shared/components/webgl';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../../shared/constants';
-import {clamp} from '@mathigon/fermat';
+import {clamp, nearlyEquals} from '@mathigon/fermat';
 
 const TAU = Math.PI * 2;
 
 function snapToNearestValidCubeCenterPosition(p: THREE.Vector3) {
   p.floor().addScalar(0.5);
 }
+
+type SideColor =
+  'red' | 'purple' | 'blue' | 'orange' |'green' | 'yellow' | 'none';
+type Side = [SideColor, [number, number, number]];
 
 @register('x-voxel-painter')
 export class VoxelPainter extends CustomElementView {
@@ -48,6 +52,18 @@ export class VoxelPainter extends CustomElementView {
 
   private explodeOnGrab!: boolean;
   private rotateOnly!: boolean;
+
+  private targetVolume?: number;
+  private targetSurface?: number;
+
+  private onTargetVolumeMet?:
+    (voxels: [number, number, number][]) => void;
+  private onTargetSurfaceMet?:
+    (voxels: [number, number, number][]) => void;
+    private onTargetVolumeAreaMet?:
+    (voxels: [number, number, number][]) => void;
+
+  private onSnap?: (side: Side) => void;
 
   private pointToExplodeFrom!: THREE.Vector3;
   private initialPositions!: THREE.Vector3[];
@@ -118,6 +134,9 @@ export class VoxelPainter extends CustomElementView {
     this.v1 = new THREE.Vector3();
     this.explodeOnGrab = this.hasAttr('explodeOnGrab');
     this.rotateOnly = this.hasAttr('rotateOnly') || this.explodeOnGrab;
+
+    this.targetVolume = +this.attr('targetVolume');
+    this.targetSurface = +this.attr('targetSurface');
 
     const defaultGridDimension = 20;
     let gridDimension = (+this.attr('playingFieldSize')) || defaultGridDimension;
@@ -385,6 +404,19 @@ export class VoxelPainter extends CustomElementView {
                       this.objectsOnWhichVoxelsCanBePlaced,
                       this.scene!
                   ).position.copy(potentialNewPosition);
+                  if (
+                    this.getVolume() == this.targetVolume &&
+                    this.getSurfaceArea() == this.targetSurface
+                  ) {
+                    this.onTargetVolumeAreaMet?.(this.voxelPositions);
+                  } else {
+                    if (this.getVolume() == this.targetVolume) {
+                      this.onTargetVolumeMet?.(this.voxelPositions);
+                    }
+                    if (this.getSurfaceArea() == this.targetSurface) {
+                      this.onTargetSurfaceMet?.(this.voxelPositions);
+                    }
+                  }
                 }
               }
             }
@@ -421,6 +453,26 @@ export class VoxelPainter extends CustomElementView {
 
                 this.updateApplet();
               }
+
+            }).promise.catch((reason) => console.log('anim promise error:', reason)).then(() => {
+              const [y, x, z] = camera.rotation.toArray().slice(0, 3).map(a => Angle.fromRadians(a).deg);
+              let sideColor: SideColor = 'none';
+              if (nearlyEquals(y, 0) && nearlyEquals(z, 0)) {
+                if (nearlyEquals(x, 90)) sideColor = 'red';
+                else if (nearlyEquals(x, 180)) sideColor = 'purple';
+                else if (nearlyEquals(x, 270)) sideColor = 'blue';
+                else if (nearlyEquals(x, 360) || nearlyEquals(x, 0)) sideColor = 'orange';
+              } else if (
+                nearlyEquals(x, 0) ||
+                nearlyEquals(x, 90) ||
+                nearlyEquals(x, 180) ||
+                nearlyEquals(x, 270) ||
+                nearlyEquals(x, 360)
+              ) {
+                if (nearlyEquals(y, 270)) sideColor = 'green';
+                else if (nearlyEquals(y, 90)) sideColor = 'yellow';
+              }
+              this.onSnap?.([sideColor, [y, x, z]]);
             });
           }
 
@@ -440,6 +492,29 @@ export class VoxelPainter extends CustomElementView {
     }
 
     this.updateApplet();
+  }
+
+  get voxelPositions(): [number, number, number][] {
+    return this.voxels.map(voxel => {
+      const pos = voxel.position;
+      return [pos.x, pos.y, pos.z];
+    });
+  }
+
+  onVolumeMet(fn: (positions: [number, number, number][]) => void) {
+    this.onTargetVolumeMet = fn;
+  }
+
+  onSurfaceMet(fn: (positions: [number, number, number][]) => void) {
+    this.onTargetSurfaceMet = fn;
+  }
+
+  onVolumeAreaMet(fn: (positions: [number, number, number][]) => void) {
+    this.onTargetVolumeAreaMet = fn;
+  }
+
+  onCameraSnap(fn: (side: Side) => void) {
+    this.onSnap = fn;
   }
 
   private setFromVoxelIntersection(target: THREE.Vector3, intersection: THREE.Intersection) {

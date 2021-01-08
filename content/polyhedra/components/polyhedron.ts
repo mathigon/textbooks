@@ -10,6 +10,7 @@ import {Obj} from '@mathigon/core';
 import {Solid} from '../../shared/components/solid';
 import {PolyhedronData} from './polyhedron-data';
 
+type Part = 'vertex' | 'edge' | 'face';
 
 const colours: Obj<number> = {
   3: 0xfd8c00,  // yellow
@@ -35,7 +36,8 @@ export class Polyhedron extends Solid {
     if (!data) return console.error('Unknown polyhedron:', shape);
 
     const scale = scales[shape] || 1.65;
-    this.setAttr('rotate', '1');
+
+    if (!this.hasAttr('rotate')) this.setAttr('rotate', '1');
 
     this.addMesh(() => {
       const polyhedron = new THREE.Object3D();
@@ -74,4 +76,66 @@ export class Polyhedron extends Solid {
       return [polyhedron];
     });
   }
+
+  getComponentPosn(partKind: Part, [meshIndex, partIndex]: [number, number]) {
+    const obj = this.object.children[meshIndex];
+    const mesh = obj.children.filter(obj3D => obj3D.type == 'Mesh')[0] as THREE.Mesh;
+    let geo!: THREE.Geometry;
+    if (mesh.geometry.type == 'Geometry') geo = mesh.geometry as THREE.Geometry;
+    else if (mesh.geometry.type == 'BufferGeometry') {
+      geo = new THREE.Geometry();
+      geo.fromBufferGeometry(mesh.geometry as THREE.BufferGeometry);
+    }
+    let posn: [number, number, number];
+    switch (partKind) {
+      case 'vertex':
+        posn = [
+          geo.vertices[partIndex].x,
+          geo.vertices[partIndex].y,
+          geo.vertices[partIndex].z
+        ];
+        break;
+      case 'edge':
+        posn = handleEdge(geo, partIndex);
+        break;
+      case 'face':
+        posn = handleFace(geo, partIndex);
+        break;
+    }
+    return posn;
+  }
+
+  addComponentLabel(text: string, partKind: Part, [meshIndex, partIndex]: [number, number], color = 0x666666, margin = '') {
+    const posn = this.getComponentPosn(partKind, [meshIndex, partIndex]);
+    this.addLabel(text, posn, color, margin);
+    /*
+    this.onRotate = () => {
+      updatePosition(this.getComponentPosn(partKind, [meshIndex, partIndex]));
+    };
+    */
+  }
+}
+
+function handleEdge(geo: THREE.Geometry, partIndex: number): [number, number, number] {
+  const edges: [number, number][] = [];
+  // TODO: Optimize
+  for (const face of geo.faces) {
+    const e1: [number, number] = [face.a, face.b];
+    const e2:[number, number] = [face.a, face.c];
+    const e3:[number, number] = [face.b, face.c];
+    edges.push(e1, e2, e3);
+  }
+  const [a, b] = edges[partIndex];
+  const edge = new THREE.Line3(geo.vertices[a], geo.vertices[b]);
+  const mid = new THREE.Vector3();
+  edge.getCenter(mid);
+  return [mid.x, mid.y, mid.z];
+}
+
+function handleFace(geo: THREE.Geometry, partIndex: number): [number, number, number] {
+  const {a, b, c} = geo.faces[partIndex];
+  const face = new THREE.Triangle(geo.vertices[a], geo.vertices[b], geo.vertices[c]);
+  const mid = new THREE.Vector3();
+  face.getMidpoint(mid);
+  return [mid.x, mid.y, mid.z];
 }

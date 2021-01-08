@@ -27,55 +27,6 @@ interface Object3D extends THREE.Object3D {
   updateEnds?: (f: Vector, t: Vector) => void;
 }
 
-function rotate($solid: Solid, animate = true, speed = 1) {
-  // TODO Damping after mouse movement
-  // TODO Better mouse-to-point mapping
-
-  // Only Chrome is fast enough to support auto-rotation.
-  const autoRotate = animate && Browser.isChrome && !Browser.isMobile;
-  $solid.css('cursor', 'grab');
-
-  let dragging = false;
-  let visible = false;
-
-  function frame() {
-    if (visible && autoRotate) requestAnimationFrame(frame);
-    $solid.scene.draw();
-    if (!dragging) $solid.object.rotation.y += speed * 0.012;
-  }
-
-  if (autoRotate) {
-    $solid.scene.$canvas.on('enterViewport', () => {
-      visible = true;
-      frame();
-    });
-    $solid.scene.$canvas.on('exitViewport', () => visible = false);
-  } else {
-    setTimeout(frame);
-  }
-
-  // The 1.1 creates rotations that are slightly faster than the mouse/finger.
-  const s = Math.PI / 2 / $solid.scene.$canvas.width * 1.1;
-
-  slide($solid.scene.$canvas, {
-    start() {
-      dragging = true;
-      $html.addClass('grabbing');
-    },
-    move(posn, start, last) {
-      const d = posn.subtract(last).scale(s);
-      const q = new THREE.Quaternion().setFromEuler(new THREE.Euler(d.y, d.x));
-      $solid.object.quaternion.multiplyQuaternions(q, $solid.object.quaternion);
-      $solid.trigger('rotate', {quaternion: $solid.object.quaternion});
-      if (!autoRotate) frame();
-    },
-    end() {
-      dragging = false;
-      $html.removeClass('grabbing');
-    }
-  });
-}
-
 function createEdges(geometry: THREE.Geometry, material: THREE.Material, maxAngle?: number) {
   const obj = new THREE.Object3D();
   if (!maxAngle) return obj;
@@ -142,8 +93,9 @@ export class Solid extends CustomElementView {
     for (const i of items) this.object.add(i);
 
     if (!this.hasAttr('static')) {
-      const speed = +this.attr('rotate') || 1;
-      rotate(this, this.hasAttr('rotate'), speed);
+      const rt = parseFloat(this.attr('rotate'));
+      const speed = isNaN(rt) ? 1 : rt;
+      this.handleRotation(this.hasAttr('rotate'), speed);
     }
 
     this.scene.draw();
@@ -154,23 +106,74 @@ export class Solid extends CustomElementView {
     this.scene.draw();
   }
 
+  private handleRotation(animate = true, speed = 1) {
+    // TODO Damping after mouse movement
+    // TODO Better mouse-to-point mapping
+
+    // Only Chrome is fast enough to support auto-rotation.
+    const autoRotate = animate && Browser.isChrome && !Browser.isMobile;
+    this.css('cursor', 'grab');
+
+    let dragging = false;
+    let visible = false;
+
+    const frame = () => {
+      if (visible && autoRotate) requestAnimationFrame(frame);
+      this.scene.draw();
+      if (!dragging) this.object.rotation.y += speed * 0.012;
+    };
+
+    if (autoRotate) {
+      this.scene.$canvas.on('enterViewport', () => {
+        visible = true;
+        frame();
+      });
+      this.scene.$canvas.on('exitViewport', () => visible = false);
+    } else {
+      setTimeout(frame);
+    }
+
+    // The 1.1 creates rotations that are slightly faster than the mouse/finger.
+    const s = Math.PI / 2 / this.scene.$canvas.width * 1.1;
+
+    // eslint-disable-next-line @typescript-eslint/no-this-alias
+    const self = this;
+    slide(this.scene.$canvas, {
+      start() {
+        dragging = true;
+        $html.addClass('grabbing');
+      },
+      move(posn, start, last) {
+        const d = posn.subtract(last).scale(s);
+        const q = new THREE.Quaternion().setFromEuler(new THREE.Euler(d.y, d.x));
+        self.object.quaternion.multiplyQuaternions(q, self.object.quaternion);
+        self.trigger('rotate', {quaternion: self.object.quaternion});
+        if (!autoRotate) frame();
+      },
+      end() {
+        dragging = false;
+        $html.removeClass('grabbing');
+      }
+    });
+  }
+
 
   // ---------------------------------------------------------------------------
   // Element Creation Utilities
 
-  addLabel(text: string, posn: Vector, color = STROKE_COLOR, margin = '') {
+  addLabel(text: string, posn: Vector, color = STROKE_COLOR, margin = [0, 0]) {
     const $label = $N('div', {text, class: 'label3d'});
     $label.css('color', '#' + color.toString(16).padStart(6, '0'));
-    if (margin) $label.css('margin', margin);
 
     let posn1 = new THREE.Vector3(...posn);
+
     this.scene.$canvas.insertAfter($label);
 
     this.scene.onDraw(() => {
       const p = posn1.clone().applyQuaternion(this.object.quaternion)
           .add(this.object.position).project(this.scene.camera);
-      $label.css('left', (1 + p.x) * this.scene.$canvas.width / 2 + 'px');
-      $label.css('top', (1 - p.y) * this.scene.$canvas.height / 2 + 'px');
+      $label.css('left', (1 + p.x) * this.scene.$canvas.width / 2 + margin[0] + 'px');
+      $label.css('top', (1 - p.y) * this.scene.$canvas.height / 2 + margin[1] + 'px');
     });
 
     return {
