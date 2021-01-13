@@ -1029,9 +1029,9 @@ Imaginez trancher un cylindre en beaucoup de disques minces. On peut alors faire
 
 ::: column.grow
 
-Pour trouver la surface d'un cylindre, il faut le «dérouler» dans son [filet](gloss:net) plat. Vous pouvez l'essayer vous-même, par exemple en décollant l'étiquette sur une boîte de nourriture. 
+Pour trouver la surface d'un cylindre, il faut «aplanir» l'objet, et on obtient son [patron](gloss:net). Vous pouvez l'essayer vous-même, par exemple en décollant l'étiquette sur une boîte de nourriture. 
 
-Il y a deux [[cercles | sphères | carrés]] , un en haut et un en bas du cylindre. Le côté incurvé est en fait un grand [[rectangle | carré | ellipse]] . 
+Il y a deux [[cercles | sphères | carrés]], un en haut et un en bas du cylindre. Le côté incurvé est en fait un grand [[rectangle | carré | ellipse]] . 
 
 * {.reveal(when="blank-0 blank-1")} Les deux cercles ont chacun une aire _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ .
 * {.reveal(when="eqn-0")} La hauteur du rectangle est _{x-equation.small(solution="h" keys=" " short-var)}_ _{span.reveal(when="eqn-1")} et la largeur du rectangle est la même que la [[circonférence | diamètre | tangente]] des cercles:_ _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_ . 
@@ -1070,7 +1070,7 @@ Un [__cône__](gloss:cone) est un solide en trois dimensions qui a une circulair
 
 le __{.m-red} rayon__ du cône est le rayon de la base circulaire, et le __{.m-blue} la hauteur__ du cône est la distance perpendiculaire de la base au sommet. 
 
-Tout comme les autres formes que nous avons rencontrées auparavant, les cônes sont partout autour de nous : des cônes de crème glacée, des cônes de signalisation, certains toits et même des arbres de Noël. De quoi d'autre pouvez vous penser? 
+Tout comme les autres formes que nous avons rencontrées auparavant, les cônes sont partout autour de nous : des cônes de crème glacée, des cônes de signalisation, certains toits et même des arbres de Noël. À quoi d'autre pouvez vous penser? 
 
 ::: column(width=280)
 
@@ -1162,7 +1162,7 @@ Encore une fois, nous pouvons utiliser le principe de Cavalieri pour montrer que
 
 Trouver la surface d'un cône est un peu plus délicat. Comme auparavant, nous pouvons démêler un cône dans son filet. Déplacez le curseur pour voir ce qui se passe : dans ce cas, nous obtenons un cercle et un [[secteur de cercle | segment de cercle | arc de cercle]] . 
 
-{.reveal(when="blank-0")} Il ne nous reste plus qu'à additionner la surface de ces deux composants. le __{.m-yellow} la base__ est un cercle de rayon _r_ , donc son aire est 
+{.reveal(when="blank-0")} Il ne nous reste plus qu'à additionner la surface de ces deux composants. la __{.m-yellow} base__ est un cercle de rayon _r_ , donc son aire est 
 
 {.text-center.reveal(when="blank-0")}`pill(A_"Base","yellow","circle") =` _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_ . 
 
@@ -1178,7 +1178,7 @@ Trouver la surface d'un cône est un peu plus délicat. Comme auparavant, nous p
 
 ::: column.grow
 
-Le rayon du __{.m-green} secteur__ est la même que la distance entre le bord d'un cône et son sommet. C'est ce qu'on appelle le [{.pill.green.b} hauteur inclinée _s_](target:s) du cône, et pas la même que la normale [{.pill.blue.b} hauteur _h_](target:h) . Nous pouvons trouver la hauteur inclinée en utilisant [Pythagore](gloss:pythagoras-theorem) : 
+Le rayon du __{.m-green} secteur__ est la même que la distance entre le bord d'un cône et son sommet. C'est ce qu'on appelle la [{.pill.green.b} hauteur inclinée _s_](target:s) du cône, et elle n'est pas égale à la  [{.pill.blue.b} hauteur normale _h_](target:h). Nous pouvons trouver la hauteur inclinée en utilisant le théorème de [Pythagore](gloss:pythagoras-theorem) : 
 
 | `s^2` | `=` | _{x-equation(solution="r^2 + h^2" keys="+ × π sup")}_ |
 | `s` | `=` | _{x-equation(solution="sqrt(r^2 + h^2)" keys="+ × sup sqrt")}_ |
@@ -1205,11 +1205,11 @@ Le rayon du __{.m-green} secteur__ est la même que la distance entre le bord d'
 
 ::: column.grow
 
-le [{.pill.red} la longueur d'arc](target:arc) du secteur est la même que la [[circonférence | diamètre | arc]] de la [{.pill.yellow} base](target:base) : _{span.reveal(when="blank-0")}`2 π r` . Maintenant, nous pouvons trouver l'aire du secteur en utilisant la [formule que](gloss:circle-sector) nous avons dérivée dans une section précédente:_ 
+La [{.pill.red} longueur de l'arc](target:arc) du secteur est la même que la [[circonférence | diamètre | arc]] de la [{.pill.yellow} base](target:base) : _{span.reveal(when="blank-0")}`2 π r` . Maintenant, nous pouvons trouver l'aire du secteur en utilisant la [formule que](gloss:circle-sector) nous avons dérivée dans une section précédente:_ 
 
 ::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
 
-| `pill(A_"Sector","green","sector")` | `=` | `pill(A_"Circle","teal","circle") × pill("arc","red","arc") / pill("circumference","teal","circumference")` |
+| `pill(A_"Secteur","green","sector")` | `=` | `pill(A_"Cercle","teal","circle") × pill(L_"arc","red","arc") / pill("Circonférence","teal","circumference")` |
 | | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ | 
 
 :::
@@ -1240,7 +1240,7 @@ le [{.pill.red} la longueur d'arc](target:arc) du secteur est la même que la [[
 ---
 > id: cone-surface-2
 
-Enfin, il suffit d'ajouter la zone de la __{.m-yellow} base__ et la zone de la __{.m-green} secteur__ , pour obtenir la surface totale sont du cône: 
+Enfin, il suffit d'ajouter la zone de la __{.m-yellow} base__ et la zone du __{.m-green} secteur__ , pour obtenir la surface totale du cône: 
 
 {.text-center}`A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ 
 
@@ -1253,7 +1253,7 @@ Enfin, il suffit d'ajouter la zone de la __{.m-yellow} base__ et la zone de la _
 
 Une [__sphère__](gloss:sphere) est un solide tridimensionnel composé de tous les points qui ont la même distance par rapport à un __{.m-green} centre _C.___ Cette distance est appelée __{.m-red} rayon _r___ de la sphère. 
 
-Vous pouvez considérer une sphère comme un « [cercle](gloss:circle) tridimensionnel». Tout comme un cercle, une sphère a également un __{.m-blue} diamètre _d___ , qui est [[deux fois | la moitié de]] la longueur du rayon, ainsi que les cordes et les sécants. 
+Vous pouvez considérer une sphère comme un « [cercle](gloss:circle) tridimensionnel». Tout comme un cercle, une sphère a également un __{.m-blue} diamètre _d___ , qui est [[deux fois | la moitié de]] la longueur du rayon, ainsi que des cordes et des sécants. 
 
 ::: column(width=240)
 
@@ -1316,13 +1316,13 @@ Lorsque vous déplacez le curseur ci-dessous, vous pouvez voir la coupe transver
 
     x-slider(steps=100)
 
-{.reveal(when="slider-0")} Essayons de trouver l'aire de la section transversale de ces deux solides, à distance [{.pill.blue} hauteur _h_](target:h) au-dessus de la base. 
+{.reveal(when="slider-0")} Essayons de trouver l'aire de la section transversale de ces deux solides, à une [{.pill.blue} hauteur _h_](target:h) au-dessus de la base. 
 
 ::: column.grow
 
-{.reveal(when="slider-0")} La section transversale de l'hémisphère est toujours un [[cercle | bague | cylindre]] . 
+{.reveal(when="slider-0")} La section transversale de l'hémisphère est toujours un [[cercle | anneau | cylindre]] . 
 
-{.reveal(when="blank-0")} le [{.pill.red} le rayon _x_](target:x) de la section fait partie d'un [{.pill.yellow} triangle rectangle](target:tri) , nous pouvons donc utiliser [Pythagore](gloss:pythagoras-theorem) : 
+{.reveal(when="blank-0")} Le [{.pill.red} le rayon _x_](target:x) de la section fait partie d'un [{.pill.yellow} triangle rectangle](target:tri) , nous pouvons donc utiliser le théorème de [Pythagore](gloss:pythagoras-theorem) : 
 
 ::: .reveal(when="blank-0")
 
@@ -1504,7 +1504,7 @@ Si vous pointez la torche verticalement vers le bas, vous voyez un [[cercle | el
 
 ::: column.grow
 
-Collectivement, ces quatre formes sont appelées [__sections coniques__](gloss:conic-section) . Même s'ils ont tous l'air très différents, ils sont étroitement liés : en fait, ils peuvent tous être générés en utilisant la même équation! 
+Collectivement, ces quatre formes sont appelées [__sections coniques__](gloss:conic-section) . Même si elles ont tous l'air très différentes, elles sont étroitement liées : en fait, elles peuvent tous être générées en utilisant la même équation! 
 
 Les sections coniques ont d'abord été étudiées par le mathématicien grec ancien [Apollonius de Perga](bio:apollonius) , qui leur a également donné leurs noms inhabituels. 
 
@@ -1564,7 +1564,7 @@ Il existe de nombreuses autres représentations physiques de la façon dont vous
 
 Vous vous souvenez peut-être dès le début de ce cours, que les anciens astronomes grecs croyaient que la Terre était au centre de l'univers et que le soleil, la lune et les planètes se déplaçaient autour de la Terre sur des orbites circulaires. 
 
-Malheureusement, l'observation astronomique du ciel ne supportait pas tout à fait cela. Par exemple, le soleil est apparu plus grand pendant certaines parties de l'année et plus petit pendant d'autres. Sur un cercle, chaque point doit avoir [[le même | une augmentation | une]] distance [[décroissante]] de son centre. 
+Malheureusement, l'observation astronomique du ciel ne correspondait pas tout à fait à cela. Par exemple, le soleil apparaissait plus grand pendant certaines parties de l'année et plus petit pendant d'autres. Sur un cercle, chaque point doit avoir [[le même | une augmentation | une]] distance [[décroissante]] de son centre. 
 
 ::: column(width=330)
 
@@ -1643,7 +1643,7 @@ La gravité est ce qui fait tout tomber au sol et la gravité est également ce 
 
 ::: column.grow
 
-En utilisant les lois de Newton, vous pouvez dériver le chemin emprunté par les objets lorsqu'ils se déplacent sous la force de la gravité. Il s'avère que les planètes se déplacent sur des ellipses, mais d'autres objets comme les comètes peuvent voyager sur [des](gloss:parabola) chemins [paraboliques](gloss:parabola) ou [hyperboliques](gloss:hyperbola) : ils volent près du soleil avant de se retourner et de décoller dans l'univers, pour ne jamais revenir. 
+En utilisant les lois de Newton, vous pouvez calculer le chemin emprunté par les objets lorsqu'ils se déplacent sous la force de la gravité. Il s'avère que les planètes se déplacent sur des ellipses, mais d'autres objets comme les comètes peuvent voyager sur [des](gloss:parabola) chemins [paraboliques](gloss:parabola) ou [hyperboliques](gloss:hyperbola) : ils volent près du soleil avant de se retourner et de décoller dans l'univers, pour ne jamais revenir. 
 
 Selon la légende, une pomme qui tombe a inspiré Newton à penser à la gravité. Il était l'un des scientifiques les plus influents de tous les temps, et ses idées ont façonné notre compréhension du monde pendant près de 300 ans - jusqu'à ce qu'Albert Einstein découvre la relativité en 1905. 
 
