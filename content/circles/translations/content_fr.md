@@ -4,7 +4,6 @@
 
 > section: introduction
 > id: intro
-> translated: auto
 
 ::: column.grow
 
