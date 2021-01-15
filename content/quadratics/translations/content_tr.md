@@ -74,10 +74,11 @@ En yüksek kârı nasıl elde edeceğimizi bulmak için birkaç farklı fiyat ku
 
 ::: .overflow-wrap.overflow-table
 
-| [fiyat/$](pill:purple)  | 20   | 40   | 60  | 80  | 100 | 120 | 140 | 160 | 180 |
-| [kâr/$](pill:yellow) | –30k | 17k | [[52]]k | [[75]]k | [[86]]k | [[85]]k | _{span.reveal(when="blank-3")}72k_ | _{span.reveal(when="blank-3" delay=400)}47k_ | _{span.reveal(when="blank-3" delay=800)}10k_ |
+|     |     |     |     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [fiyat/\$](pill:purple) | 20   | 40   | 60  | 80  | 100 | 120 | 140 | 160 | 180 |
+| [kâr/\$](pill:yellow)   | –30k | 17k | [[52]]k | [[75]]k | [[86]]k | [[85]]k | _{span.reveal(when="blank-3")}72k_ | _{span.reveal(when="blank-3" delay=400)}47k_ | _{span.reveal(when="blank-3" delay=800)}10k_ |
 {.grid}
-
 
 :::
 
