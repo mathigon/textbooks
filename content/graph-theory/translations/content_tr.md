@@ -1,48 +1,47 @@
-# Grafikler ve Ağlar 
+# Çizgeler ve Ağlar
 
-## Giriş 
+## Giriş
 
 > id: intro-0
 > section: introduction
-> translated: auto
 
-Her gün sayısız bağlantı ve ağ ile çevriliyiz: yollar ve demiryolu hatları, telefon hatları, internet, elektronik devreler ve hatta moleküler bağlar. Arkadaşlar ve aileler arasında _sosyal ağlar_ bile var. Başka örnekler düşünebilir misiniz? 
+Her gün sayısız bağ ve ağ ile çevriliyizdir: araba ve tren yolları, telefon hatları, internet, elektrik devreleri ve hatta moleküler bağlar. Ayrıca arkadaşlar ve aileler arasındaki _sosyal ağlar_ da var.
 
 ::: column(width=220 parent="padded-thin")
 
     x-img(src="images/network1.jpg" width=220 height=220 lightbox)
 
-{.caption} Kara ve Demiryolu Ağları 
+{.caption} Yollar ve Demir Ağları
 
 ::: column(width=220)
 
     x-img(src="images/network6.jpg" width=220 height=220 lightbox)
 
-{.caption} Bilgisayar çipleri 
+{.caption} Elektrik Devreleri
 
 ::: column(width=220)
 
     x-img(src="images/network3.jpg" width=220 height=220 lightbox)
 
-{.caption} Tedarik zinciri 
+{.caption} Ulaşım Ağları
 
 ::: column(width=220)
 
     x-img(src="images/network2.jpg" width=220 height=220 lightbox)
 
-{.caption} arkadaşlıklar 
+{.caption} Arkadaşlıklar
 
 ::: column(width=220)
 
     x-img(src="images/network7.jpg" width=220 height=220 lightbox)
 
-{.caption} Sinirsel Bağlantılar 
+{.caption} Sinir Ağları
 
 ::: column(width=220)
 
     x-img(src="images/network4.jpg" width=220 height=220 lightbox)
 
-{.caption} İnternet 
+{.caption} İnternet
 
 :::
 
@@ -51,9 +50,9 @@ Her gün sayısız bağlantı ve ağ ile çevriliyiz: yollar ve demiryolu hatlar
 
 ::: column.grow
 
-Matematik olarak, tüm bu örnekler, (a fonksiyon _grafiği_ ile karıştırılmamalıdır) [__grafik__](gloss:graph) olarak temsil edilebilir. Bir grafik [[köşeler]] adı verilen belirli _noktalardan_ oluşur [[| çevreler |]] bazıları [[kenarlarla]] bağlanan [[geçişler]] [[| sınırları | çiftleri]] . 
+Bütün bu sistemler kimileri [[çizgiler|sınırlar|çiftler]] ile birbirine bağlanmış [[noktalar|çemberler|çarpılar]] adındaki belli _noktalardan_ oluşur. Matematikte buna bir [__çizge__](gloss:graph) denir.
 
-__Grafik teorisi__ , grafiklerin ve özelliklerinin incelenmesidir. Matematiğin en heyecan verici ve görsel alanlarından biridir ve sayısız önemli uygulamaya sahiptir. 
+__Çizgeler teorisi__ çizgeleri ve özelliklerini inceleyen dalın adıdır. Matematiğin en heyecanlı ve en görsel alanlarından birisidir, sayılamayacak çoklukta önemli uygulamaları vardır:
 
 ::: column(width=180)
 
@@ -64,32 +63,35 @@ __Grafik teorisi__ , grafiklerin ve özelliklerinin incelenmesidir. Matematiğin
 ---
 > id: intro-1
 
-Daireler ve çizgiler kullanarak basit grafiklerin düzenini çizebiliriz. Köşelerin pozisyonu ve kenarların uzunluğu önemsizdir - sadece birbirlerine _nasıl bağlandıklarını_ önemsiyoruz. Kenarlar birbirini bile geçebilir ve düz olması gerekmez. 
+Basit çizgelerin yapılarını çemberler ve çizgiler kullanarak çizebiliriz. Çemberlerin yerinin ve çizgilerin uzunluğunun bir önemi yok, sadece çemberlerin birbirleri ile _nasıl bağlı_ oldukları önemli bizim için. Hatta çizgilerin düz olmasına da gerek yok, ve birbirlerinin üzerinden geçebilirler.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.caption} Bazı grafiklerde, kenarlar yalnızca bir yöne gider. Bunlara [__yönlendirilmiş grafikler__](gloss:directed-graph) denir. 
+{.caption} Kimi çizgelerde çizgiler tek yönlü olurlar. Bunlara [__yönlü çizgeler__](gloss:directed-graph) diyoruz.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.caption} Bazı grafikler, kenarlarıyla birbirine bağlı olmayan birden çok köşe grubundan oluşur. Bu grafiklerin __bağlantısı kesildi__ . 
+{.caption} Kimi çizgeler birbiriyle bağlantısı olmayan çeşitli parçalardan oluşur. Bunlara __bağlantısız__ diyoruz.
 
 ::: column(width=200)
 
     svg.graph(height=120 width=200 style="margin: 0 auto .8em")
 
-{.caption} Diğer grafikler, aynı çift çiftler veya kendilerine (köşeler) bağlı köşeler arasında birden fazla kenar içerebilir. 
+{.caption} Kimi çizgelerse aynı iki nokta arasında birden çok çizgiye sahiptirler, ya da kimi noktalar kendilerine bağlıdırlar (ilmekler).
 
 :::
+
+    // TODO maybe include examples of graphs with edges crossing, curved edges, etc.
+    // could include an "is this a graph?" quiz
 
 ---
 > id: intro-2
 
-Bazı köşeleri ve kenarları kaldırarak mevcut bir grafikten yeni grafikler oluşturabiliriz. Sonuç bir [__alt çizgi__](gloss:subgraph) olarak adlandırılır. Burada, renkli kenarları ve köşeleri olası bir alt grafiği gösteren birkaç grafik örneği daha görebilirsiniz: 
+Elimizde bir çizge varsa, kimi noktaları ya da çizgileri silerek yeni bir çizge elde edebiliriz. Böyle yaparak elde edeceğimiz çizgelere [__altçizge__](gloss:subgraph) denir. İşte bir kaç çizge ve altçizge örneği:
 
 ::: column(width=212 parent="padded-thin")
 
@@ -111,61 +113,61 @@ Bazı köşeleri ve kenarları kaldırarak mevcut bir grafikten yeni grafikler o
 ---
 > id: intro-3
 
-Bir grafiğin [__sırasının__](gloss:graph-order) sahip olduğu köşe sayısı olduğunu söylüyoruz. Bir tepe noktasının [__derecesi__](gloss:graph-degree) , bu tepe noktasında buluşan kenar sayısıdır. 
+Bir çizgenin [__derecesi__](gloss:graph-order) nokta sayısıdır. Bir çizgedeki bir noktanın [__derecesi__](gloss:graph-degree) ise o noktada birleşen çizgilerin sayısıdır.
 
 ::: column(width=130)
 
     svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
-{.text-center} Sıra: [[5]] 
+{.text-center} Order: [[5]]
 
 ::: column(width=130)
 
     svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
-{.text-center} Sıra: [[8]] 
+{.text-center} Order: [[8]]
 
 ::: column(width=130)
 
     svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
-{.text-center} Derece: [[3]] 
+{.text-center} Degree: [[3]]
 
 ::: column(width=130)
 
     svg.graph(height=120 width=120 style='margin: 0 auto .8em')
 
-{.text-center} Derece: [[6]] 
+{.text-center} Degree: [[6]]
 
 :::
 
 ---
 > id: intro-4
 
-Köşe tek bir döngü oluşur Grafikler [__çevrimler olarak__](gloss:graph-cycle) adlandırılır. Tüm döngüler [[aynı sayıda kenar ve köşeye sahiptir | köşelerden daha fazla kenar | köşelerden daha az kenar]] . 
+Noktaların tek bir halka oluşturduğu çizgelere [__döngü__](gloss:graph-cycle) denir. Bütün döngüler [[aynı sayıda çizgi ve noktaya|noktalardan daha çok çizgiye|noktalardan daha az çizgiye]] sahiptir.
 
     .row
       svg.graph(style='width: 120px; height: 120px;')
       svg.graph(style='width: 120px; height: 120px;')
       svg.graph(style='width: 120px; height: 120px;')
 
-{.reveal(when="blank-0")} Bu yeni tanımlarla donatılmış olarak, grafiklerin büyüleyici özelliklerini ve uygulamalarını keşfedelim. 
+{.reveal(when="blank-0")} Bu yeni tanımlarla beraber çizgelerin bazı büyüleyici özelliklerini ve uygulamalarını inceleyelim.
 
 ---
 > id: bridges-0
 > title: The Bridges of Königsberg
 > section: bridges
-> translated: auto
 
-## Königsberg Köprüleri 
+## Königsberg Köprüleri
 
 ::: column.grow
 
-Grafikler ve ağlar hakkında düşünen ilk matematikçilerden biri [Leonhard Euler idi](bio:euler) . Euler, Baltık Denizi yakınlarındaki Königsberg kasabasıyla ilgili eski bir sorundan etkilendi. 
+Çizgeler ve ağlar hakkında ilk defa düşünen matematikçilerden birisi [Leonhard
+Euler](bio:euler)di. Euler Baltık denizinin yakınlarındaki Königsberg kasabasıyla ilgili eski bir problem üzerinde düşünüyordu.
 
-Pregel nehri, Königsberg'i yedi köprü ile birbirine bağlanan dört ayrı parçaya ayırır. Tüm köprüleri tam olarak bir kez geçerek - birden fazla değil, şehirde dolaşmak mümkün mü? (Her yerde başlayabilir ve bitirebilirsiniz, aynı yerde olması gerekmez.) 
+Pregel nehri Königsberg’i dört parçaya ayırır, ve bu parçaları bağlayan yedi köprü vardır. Her köprüden tam olarak bir kez geçerek şehri dolaşmak mümkün mü? (Yola istediğiniz yerden başlayıp istediğiniz yerde bitirebilirsiniz, aynı yerden başlayıp bitirmeniz şart değil.)
 
-Şu haritalarda çizim yaparak geçerli bir rota bulmaya çalışın: 
+Bu haritalar üzerinde çizerek böyle bir yol bulmaya çalışabilirsiniz:
 
 ::: column(width=250)
 
@@ -180,41 +182,40 @@ Pregel nehri, Königsberg'i yedi köprü ile birbirine bağlanan dört ayrı par
 
     x-tabbox.full-width
       .tab
-        h3 Map 1#[span.check.incorrect(when="bridge-0")]
+        h3 Harita 1#[span.check.incorrect(when="bridge-0")]
         x-solved
         include svg/bridges-1.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Temizle
+        button.btn.right Geç
       .tab
-        h3 Map 2#[span.check(when="bridge-1")]
+        h3 Harita 2#[span.check(when="bridge-1")]
         x-solved
         include svg/bridges-2.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Temizle
+        button.btn.right Geç
       .tab
-        h3 Map 3#[span.check(when="bridge-2")]
+        h3 Harita 3#[span.check(when="bridge-2")]
         x-solved
         include svg/bridges-3.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Temizle
+        button.btn.right Geç
       .tab
-        h3 Map 4 #[span.check.incorrect(when="bridge-3")]
+        h3 Harita 4 #[span.check.incorrect(when="bridge-3")]
         x-solved
         include svg/bridges-4.svg
-        button.btn Clear
-        button.btn.right Skip
+        button.btn Temizle
+        button.btn.right Geç
 
 ---
 > id: bridges-1
 
-Königsberg örneğinde, geçerli bir rota bulmak imkansız gibi görünüyor, ancak diğer bazı şehirler çalışıyor. Euler, grafik teorisini kullanarak pek çok olasılığı denemek zorunda kalmadan herhangi bir şehre uygulanabilecek basit bir kural bulmayı başardı. 
+Köningsberg için böyle bir yol bulmak imkansız gibi görünüyor, ancak başka şehirler için mümkün olabilir. Euler çizgeler kuramını kullanarak herhangi bir şehir için çalışan basit bir kural bulmayı başardı, böylece bir sürü deneme yapmaya gerek kalmıyordu. 
 
 ::: column.grow
 
-İlk olarak, şehir haritalarını kenarları ve köşeleri olan grafiklere dönüştürmemiz gerekiyor. Her ada veya bölge [[bir tepe noktasıyla]] temsil edilir [[| kenar | bir alan]] ve iki bölgeyi birbirine bağlayan her köprü karşılık gelen bir [[kenar]] ile temsil edilir [[| tepe | sokak]] . 
+Öncelikle şehir haritalarını noktaları ve çizgileri olan çizgelere çevirmemiz gerek. Bu çizgede her ada ya da kara parçası bir [[nokta|çizgi|alan]] ile ve her köprü bir [[nokta|çizgi|sokak]] ile gösterilecek.
 
-{.reveal(when="blank-0 blank-1")} Şimdi “her köprüyü tam olarak bir kez geçerken bir şehri gezmek” sorunu, “her kenarı tam olarak bir kez izleyerek bir sürekli vuruşla bir grafik çizmek” sorunu haline geldi. 
-
+{.reveal(when="blank-0 blank-1")} Şimdi “bütün köprülerden sadece bir kez geçerek şehri dolaşma” sorusu “bir çizgeyi aynı çizginin üzerinden iki kez geçmeden tek hamlede çizebilir miyiz” sorusuna dönüştü. 
 ::: column(width=200)
 
     include svg/konigsberg.svg
@@ -224,48 +225,60 @@ Königsberg örneğinde, geçerli bir rota bulmak imkansız gibi görünüyor, a
 ---
 > id: bridges-2
 
-Kağıt üzerinde birkaç farklı grafik oluşturun ve hangilerinin tek bir sürekli konturla çizilebileceğini bulmaya çalışın. 
+Kağıt üzerinde bir kaç farklı çizge çizip hangilerinin sürekli bir hamle ile çizilebileceğini görmeye çalışın.
+
+    // p Try drawing these graphs with one continuous stroke:
+    // p.todo Interactive coming soon…
 
 ---
 > id: bridges-3
 > goals: size prime eo
 
-Tıpkı daha önceki şehir haritalarında olduğu gibi, bazı grafiklerin mümkün olduğunu, bazılarının ise mümkün olmadığını görüyoruz. Nedenini anlamamıza yardımcı olmak için, her köşeyi [derecesi](gloss:graph-degree) ile etiketleyelim. Ardından köşeleri farklı şekillerde renklendirebilir ve bir desen ortaya çıkarmaya çalışabiliriz: 
+Aynı şehir haritalarında olduğu gibi, kimi çizgelerde bu mümkünken kimi çizgelerde değil. Bunun nedenini anlamak için her noktayı [derecesi](gloss:graph-degree) ile numaralayalım:
 
     figure
       x-select.var.tabs(:bind="colour")
-        div(value="val") Value
-        div(value="size") Size
-        div(value="prime") Prime Numbers
-        div(value="eo") Even and Odd
+        div(value="val") Değere göre
+        div(value="size") Büyüklüğe göre
+        div(value="prime") Asallık ve bileşikliğe göre
+        div(value="eo") Tek ve çiftliğe göre
       .box
-        p.no-voice(style="margin: 0"): strong These graphs are possible:
+        p.no-voice(style="margin: 0"): strong Bu çizgeler için mümkün:
         include svg/vertex-orders-1.svg
-        p.no-voice(style="margin: 1em 0 0"): strong These graphs are not possible:
+        p.no-voice(style="margin: 1em 0 0"): strong Bu çizgeler için mümkün değil:
         include svg/vertex-orders-2.svg
 
 ---
 > id: bridges-4
 
-Mümkün olan ve mümkün olmayan grafikler için bu sayıların karşılaştırılması, [[ikiden fazla “tek” köşesi]] yoksa bir grafiğin çizilebileceği anlaşılmaktadır. [[| sadece "eşit" köşeleri vardır | 4'ten büyük bir sıraya sahip köşeleri yok | tek sayıda köşe noktası var | 3. sırada köşe yok]] . Grafikte yalnızca tek bir tepe noktasına bakarsak bu durum açıklanabilir: 
+Bu çizgelere ve noktalardaki sayılara baktığımız zaman sanki bir çizgenin [[ikiden fazla “tek” noktası varsa|sadece “çift” noktaları varsa|4’ten büyük numaralı noktası yoksa|tek sayıda noktası varsa|derecesi 3 olan noktası yoksa]] tek seferde çizilebilir gibi görünüyor. Bu koşul çizgedeki sadece tek bir noktaya bakarak açıklanabilir:
 
-    x-slideshow
-      .stage(slot="stage"): include svg/konigsberg-proof.svg
-      .legend(slot="legend") Here you can see a single, magnified vertex in a graph.
-      .legend(slot="legend") If we draw the graph, we will eventually have an edge leading towards this vertex, and then another one leading away. This makes two edges meeting at the vertex.
-      .legend(slot="legend") Maybe the vertex is a crossing rather than a corner. In that case there will be another edge leading towards the vertex, and another edge leading away. Now we have four edges.
-      .legend(slot="legend") And in some graphs, there may even be a third pair of edges leading towards and away from the vertex. Now there are six edges.
-      .legend(slot="legend") Notice that, either way, there always is an even number of edges meeting at the vertex.
-      .legend(slot="legend") The only two exceptions are the vertices where the path starts, and where it ends – these two may have an odd number of edges. If the start and end point are the same, all vertices in the graph are even.
+::: x-slideshow
+
+    .stage(slot="stage"): include svg/konigsberg-proof.svg
+
+Burada çizgenin tek bir noktasını büyütülmüş olarak görebilirsiniz.
+
+Eğer çizgeyi çizersek sonuçta bu noktaya doğru gelen ve bu noktadan çıkan birer çizgi olmalı. Böylece bu noktada buluşan iki çizgimiz olacak.
+
+Belki bu nokta bir köşe değildir de bir geçişi gösteriyordur. Bu durumda bu noktaya doğru gelen başka bir çizgi daha olacaktır, ve bu noktadan ayrılan bir çizgi. Şimdi dört çizgimiz oldu.
+
+Ve kimi çizgelerde üçüncü bir çizgi çifti daha olabilir. Şimdi altı çizgi var.
+
+Her durumda bir noktada hep çift sayıda çizgi olduğuna dikkat edin.
+
+Buna tek istisna yolun başladığı ve bittiği noktalar olacak – bunların tek sayıda çizgisi olabilir. Eğer başlangıç ve bitiş noktaları aynıysa bütün noktaların çift derecesi olur.
+
+:::
 
 ---
 > id: bridges-5
 
 ::: column.grow(parent="right")
 
-Königsberg haritasına geri dönerseniz, tek sayıda köprüye sahip ikiden fazla ada olduğunu göreceksiniz. Bu nedenle, her köprüyü tam olarak bir kez geçen bir rota gerçekten imkansızdır - ve Leonard Euler keşfetti. 
+Eğer yeniden Königsberg haritasına dönüp bakarsanız tek sayıda köprü bağlantısı olan ada sayısının ikiden fazla olduğunu görürsünüz. Bu yüzden bütün köprülerden tek bir sefer geçen bir yol olması imkansız, ve Euler de bunu keşfetmişti.
 
-Euler'nin keşfi gerçek hayatta özellikle yararlı görünmeyebilir, ancak grafikler iki konum arasında yön bulma gibi diğer birçok coğrafi sorunun temelini oluşturur. Daha sonra bu uygulamalardan daha fazlasını keşfedeceğiz. 
+Euler’in keşfi gerçek hayatta işlevsiz gibi görünebilir, ancak çizgeler iki konum arasında yol bulma gibi bir sürü coğrafi problemin temelinde yatar. Bu uygulamalar hakkında daha fazlasını ileride göreceğiz.
 
 ::: column(width=240)
 
@@ -276,19 +289,19 @@ Euler'nin keşfi gerçek hayatta özellikle yararlı görünmeyebilir, ancak gra
 ---
 > id: handshakes-1
 > section: handshakes
-> translated: auto
 
-## El Sıkışma ve Flört 
+## El sıkışma ve Partiler
 
 ::: column.grow
 
-Arkadaşlarınızla birlikte harika bir doğum günü partisine davet edildiniz. Kendiniz ve ev sahibi dahil olmak üzere ${hnd}{hnd|5|3,15,1} insanlar mevcut. 
+Çok büyük bir doğum günü partisine davet edildiniz. Partide siz ve doğum günü sahibi dahil toplam ${hnd}{hnd|5|3,15,1} kişi var.
 
-Akşamları, konuklar ayrılmaya hazırlanırken, herkes diğer herkesle el sıkışır. Toplamda kaç el sıkışma var? 
+Akşam partiden ayrılmaya hazırlanırken herkes diğer herkes ile el sıkışıyor. Toplam kaç el sıkışması olur?
 
-El sıkışmalarını bir grafik kullanarak temsil edebiliriz: her insan [[bir köşe noktasıdır | bir kenar]] ve her el sıkışma [[bir kenar | bir tepe noktası]] . 
+El sıkışmaları bir çizge ile gösterebiliriz: her insan bir [[nokta|çizgi]] ve her el sıkışma bir [[çizgi|nokta]].
 
-{.reveal(when='blank-0 blank-1')} Şimdi grafikteki kenar sayısını saymak kolaydır. Orada buluyoruz ${hnd} insanlar var ${hnd*(hnd-1)/2} tokalaşma. 
+
+{.reveal(when='blank-0 blank-1')} Şimdi çizgedeki çizgileri saymak kolay. Partide ${hnd} kişi olduğunu ve toplam ${hnd*(hnd-1)/2} el sıkışma olduğunu görüyoruz.
 
 ::: column.s-hide(width=240)
 
@@ -300,9 +313,9 @@ El sıkışmalarını bir grafik kullanarak temsil edebiliriz: her insan [[bir k
 ---
 > id: handshakes-2
 
-Büyük grafiklerde tüm kenarları saymak yerine, _herhangi bir_ sayıda konuk için sonucu bize bildiren basit bir formül bulmaya çalışabiliriz. 
+Büyük çizgelerdeki bütün çizgileri saymak yerine, _herhangi_ sayıdaki davetli için bize sonucu verecek basit bir formül bulmaya da çalışabiliriz.
 
-Her biri ${n}{n|5|2,8,1} partide insanlar ile el sallar ${n-1} diğerleri. Bu yapar ${n} x ${n-1} = ${n×(n-1)} toplam el sıkışma. _N_ kişi için, el sıkışma sayısı [[`n×(n–1)`|`n×(n+1)`|`n^2`]] . 
+Partideki ${n}{n|5|2,8,1} kişiden her biri diğer ${n-1} kişi ile el sıkışacak. Bu da toplamda ${n} × ${n-1} = ${n×(n-1)} el sıkışması demek. Yani _n_ kişi için el sıkışma sayısı [[_n_ × (_n_ – 1)|_n_ × (_n_ + 1)|_n_<sup>2</sup>]] tanedir.
 
     p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
@@ -310,16 +323,16 @@ Her biri ${n}{n|5|2,8,1} partide insanlar ile el sallar ${n-1} diğerleri. Bu ya
 ---
 > id: handshakes-2a
 
-Ne yazık ki bu cevap pek doğru değil. Nasıl olduğunu fark et [üst satırdaki ilk iki giriş](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) aslında aynı, sadece çevrilmiş. 
+Ne yazık ki cevabımız tam olarak doğru değil. [en üst satırdaki ilk iki girdi](->.handshakes_tr:first-child_td:first-child,_.handshakes_tr:first-child_td:nth-child(2)) aslında aynı.
 
-Aslında, her el sıkışmasını [[iki kez]] saydık [[| bir Zamanlar | üç kez]] , _{span.reveal(when="blank-0")} ilgili iki kişinin her biri için bir kez. Bu, doğru el sıkışma sayısının ${n}{n|5|2,25,1} misafir `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")` ._ 
+Hatta, her el sıkışmasını [[iki|bir|üç]] defa saydık, _{span.reveal(when="blank-0")} el sıkışan iki kişinin her ikisi için birden. Bu da demek oluyor ki ${n}{n|5|2,25,1} davetli için el sıkışma sayısı `(var("n") × var("n-1"))/2 = var("n*(n-1)/2")`._
 
 ---
 > id: handshakes-3
 
-El sıkışma grafikleri özeldir çünkü her tepe noktası diğer tepe noktalarına bağlıdır. Bu özelliğe sahip __grafiklere tam grafik__ denir. 4 köşeli tüm grafik genellikle şu şekilde kısaltılır: `K_4` , 5 köşeli tüm grafik olarak bilinir `K_5` , ve bunun gibi. 
+Bu el sıkışma çizgeleri özeller, çünkü her nokta diğer her noktaya bağlı. Bu özelliğe sahip çizgelere _tam çizge_ denir. 4 noktası olan tam çizgeyi `K_4` olarak, 5 noktası olanı `K_5` olarak gösteririz. 
 
-Az önce `n` köşe, `K_n` , vardır `(n × (n-1))/2` kenarları. 
+Yukarıda ‘n’ noktası olan tam çizgenin, yani `K_n`’nin `(n × (n-1))/2` tane çizgisi olduğunu gösterdik.
 
     .row
       svg.graph(style="width: 90px; height: 90px")
@@ -332,11 +345,11 @@ Az önce `n` köşe, `K_n` , vardır `(n × (n-1))/2` kenarları.
 
     figure: img(src="images/flags.jpg" width=855 height=100)
 
-Farklı bir günde, için bir hızlı tanışma etkinliğine davet edildiniz ${m}{m|5|2,8,1} erkekler ve ${f}{f|4|2,8,1} kızlar. Birçok küçük masa var ve her oğlan her bir kız ile 5 dakika geçiriyor. Toplamda kaç tane “tarih” var? 
+Başka bir gün ise ${m}{m|5|2,8,1} erkeğin ve ${f}{f|4|2,8,1} kızın olduğu bir hızlı tanışma etkinliğine davet edildiniz. Bir sürü küçük masa var ve her erkek her kız ile 5 dakika geçiriyor. Toplam kaç tane diyalog yaşanır?
 
 ::: column.grow
 
-Bu durumda, karşılık gelen grafik iki ayrı köşe kümesinden oluşur. Her köşe [[tam tersi]] tüm köşelere bağlanır [[| kendi]] seti, ama [[kendi başına]] köşe noktaları yok [[| karşı]] küme. Bu düzene sahip __grafiklere iki taraflı grafikler__ denir. 
+Bu duruma karşılık gelen çizgenin iki ayrı nokta kümesi olacak. Her nokta [[diğer kümedeki|kendi kümesindeki]] her nokta ile bağlantılı olacak, ancak [[diğer kümedeki|kendi kümesindeki]] hiç bir nokta ile bağlantılı olmayacak. Bu özelliğe sahip çizgelere _ikili çizge_ denir.
 
 ::: column(width=300)
 
@@ -344,21 +357,21 @@ Bu durumda, karşılık gelen grafik iki ayrı köşe kümesinden oluşur. Her k
 
 :::
 
-{.reveal(when="blank-0 blank-1")} _X_ ve _y_ boyutlarında iki takım içeren iki taraflı grafik genellikle şu şekilde yazılır: `K_"x,y"` . Vardır [[`x×y`|`x+y`|`2x–y`]] kenarları, _{span.reveal(when="blank-2")} yani yukarıdaki örnekte ${m} x ${f} = ${m×f} tarih._ 
+{.reveal(when="blank-0 blank-1")} Bir tarafında _x_, bir tarafında _y_ tane nokta olan ikili çizgeleri genelde `K_"x,y"` ile gösteririz. Bunun [[_x_ × _y_|_x_ + _y_|2_x_ – _y_]] tane çizgisi vardır,, _{span.reveal(when="blank-2")} yani yukarıdaki örnekte toplam
+${m} × ${f} = ${m×f} diyalog yaşanır._
 
 ---
 > id: utilities
 > goals: try-three-times
 > section: planar-graphs
-> translated: auto
 
-## Düzlemsel Grafikler 
+## Düzlemsel Çizgeler
 
 ::: column.grow
 
-İşte grafik teorisi ile ilgili başka bir bulmaca. 
+İşte size çizgelerle ilgili başka bir bulmaca.
 
-Küçük bir köyde su, elektrik ve gaz üreten üç ev ve üç tesis vardır. Kursların her birini yardımcı tesislerin her birine bağlamamız gerekiyor, ancak köyün düzeni nedeniyle, farklı boru ve kabloların geçmesine izin verilmiyor. 
+Küçük bir kasabada su, elektrik ve gaz üreten üç üretim merkezi var. Ve aynı kasabada hizmet bekleyen üç ev var. Ne yazık ki kasabanın alt yapısından dolayı boruların ve kabloların birbirinin üstünden geçmesine olanak yok.
 
 ::: column(width=300)
 
@@ -366,43 +379,45 @@ Küçük bir köyde su, elektrik ve gaz üreten üç ev ve üç tesis vardır. K
 
 :::
 
-Evlerin her birini, herhangi bir hattınız kesişmeden aşağıdaki yardımcı şirketlere bağlamaya çalışın: 
+Bu üretim merkezlerinin her birini evlerin her biri ile çizgileri kesiştirmeden bağlamaya çalışın:
 
     .box.no-padding
       include svg/utilities.svg
-      button.btn Clear
+      button.btn Temizle
 
 ---
 > id: utilities-1
 
-Tıpkı Königsberg köprülerinde olduğu gibi, bu sorunun da imkansız olduğunu çabucak keşfediyorsunuz. Bazı grafikler üst üste binen kenarlar olmadan çizilebilir - buna __düzlemsel grafikler__ denir - ancak diğerleri çizilemez. 
+Daha önceki Königsberg köprüleri gibi bu problemin de imkansız olduğunu çabucak fark edebilirsiniz. Sanki kimi çizgeler düzlemde kesişmeyen çizgiler ile çizilebilirken (bunlara __düzlemsel çizge__ denir) kimileri için bu mümkün değil gibi görünüyor.
 
 ::: column(width=200)
 
     svg.graph(width=200 height=200 style="margin-bottom: .4em")
 
-{.text-center}`K_3` düzlemseldir. 
+{.text-center} `K_3` düzlemsel.
 
 ::: column(width=200)
 
     svg.graph#planar-2(width=200 height=200 style="margin-bottom: .4em")
 
-{.text-center}`K_4` [[düzlemsel | düzlemsel değil]] . 
+{.text-center} `K_4` [[düzlemsel|düzlemsel değil]].
 
 ::: column(width=200)
 
     svg.graph#planar-3(width=200 height=200 style="margin-bottom: .4em;")
 
-{.text-center}`K_5` [[düzlemsel değil | düzlemseldir]] . 
+{.text-center} `K_5` [[düzlemsel değil|düzlemsel]].
 
 :::
 
 ---
 > id: utilities-2
 
-[Grafiğin tamamı](gloss:complete-graph) `K_5` düzlemsel olmayan en küçük grafiktir. İçeren tüm diğer grafikler `K_5` bir şekilde bir alt-tabaka da düzlemsel değildir. Bu içerir `K_6` , `K_7` ve daha büyük tam grafikler. 
+[Tam çizge](gloss:complete-graph) `K_5` düzlemsel olmayan en küçük çizge. `K_5`i bir şekilde alt çizgesi olarak içeren hiç bir çizge de düzlemsel değildir. Bu liste `K_6`, `K_7` ve daha büyük diğer tam çizgeleri de içeriyor.
 
-Üç yardımcı program bulmacasındaki [grafik iki taraflı grafiktir](gloss:bipartite-graph) `K_"3,3"` . Herhangi bir düzlemsel olmayan grafiğin bir `K_5` veya bir `K_"3,3"` (veya bu iki grafiğin bir [alt bölümü](gloss:subdivision) ) bir alt grafik olarak. Buna _Kuratowski teoremi_ denir. 
+Yukarıda baktığımız soru `K_"3,3"` [ikili çizgesi](gloss:bipartite-graph) ile ilgili. Biraz çalışarak şunu göstermek mümkün: Düzlemsel olmayan her çizge ya `K_5`i ya `K_"3,3"`ü ya da bunların bir [bölümlenmesini](gloss:subdivision) alt çizge olarak içermek zorunda.
+
+    // TODO Add bio of Kazimierz Kuratowski
 
 ---
 > id: planarity
@@ -410,106 +425,115 @@ Tıpkı Königsberg köprülerinde olduğu gibi, bu sorunun da imkansız olduğu
 
 ::: .box.f-blue
 
-#### Düzlemsellik 
+#### Düzlemsellik
 
     x-solved
     svg#planarity(viewBox="0 0 720 360")
 
-Bu düzlemsel bir grafik, ancak ${n}{n|7|5,20,1} köşeler karıştırıldı. Köşeleri, kenarların hiçbiri çakışmayacak şekilde yeniden düzenleyin. 
+Bu düzlemsel bir çizge, ancak  ${n}{n|7|5,20,1} noktası karıştırılmış durumda. Bu noktaları hiç bir çizgi bir diğerine değmeyecek şekilde yeniden sıralayın.
 
-    p.btn-row: button.btn New Random Graph
+    p.btn-row: button.btn Yeni Rastgele Çizge
+    // TODO Maybe mention that the restriction to straight line edges in the Planarity puzzle isn't
+    // a restriction that matters (Fáry's Theorem).
 
 :::
 
 ---
 > id: euler
 
-### Euler Formülü 
+### Euler Formülü
 
-Tüm düzlemsel grafikler, çizildikleri düzlemi __yüz__ adı verilen bir dizi alana bölerler. 
+Bütün çizgeler çizildikleri düzlemi bölgelere ayırırlar, bu bölgelere __yüzler__ denir.
 
 ::: column(width=200)
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Köşebent  
+{.text-center} [[6]] Köşe  
 [[5]] Yüz  
-[[10]] Kenar  
-_{span.euler-sum} 11 Noktalar + Yüzler_ 
+[[10]] Çizgi  
+_{span.euler-sum} 11 Nokta + Yüz_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] Tepe Noktaları  
+{.text-center} [[8]] Köşe  
 [[7]] Yüz  
-[[14]] Kenar  
-_{span.euler-sum} 15 Tepe Noktası + Yüzler_ 
+[[14]] Çizgi  
+_{span.euler-sum} 15 Nokta + Yüz_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] Tepe Noktası  
-[[13]] Yüzler  
-[[24]] Kenar  
-_{span.euler-sum} 25 Tepe Noktası + Yüzler_ 
+{.text-center} [[12]] Köşe  
+[[13]] Yüz  
+[[24]] Çizgi  
+_{span.euler-sum} 25 Nokta + Yüz_
 
 :::
 
 ---
 > id: euler-1
 
-Bu sayıları karşılaştırırken, kenar sayısının her zaman [[bir daha az]] olduğunu göreceksiniz. [[| Daha büyük |]] yüz sayısı artı köşe sayısı ile [[aynıdır]] . Diğer bir deyişle, _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + 1. Bu sonuca __Euler denklemi__ denir ve adını Königsberg Bridges problemini çözen aynı [matematikçiden alır](bio:euler) . 
+Bu sayıları karşılaştırırken çizgi sayısının her zaman yüz sayısı artı nokta sayısından [[bir düşük|büyük|aynı]] olduğuna dikkat edin. Başka bir deyişle _{.b.blue}Y_ + _{.b.green}N_ = _{.b.red}Ç_ + 1. Bu sonuca __Euler denklemi__ denir ve adını Köningsberg Köprüsü problemini çözen aynı [matematikçiden](bio:euler) alır.
 
-Ne yazık ki, sonsuz sayıda grafik var ve Euler denkleminin işe yarayıp yaramadığını görmek için her birini kontrol edemiyoruz. Bunun yerine, herhangi bir grafik için işe yarayan basit bir [kanıt](gloss:proof) bulmaya çalışabiliriz… 
+Ne yazık ki sonsuz sayıda çizge var ve Euler denkleminin çalışıp çalışmadığını görmek için hepsini tek tek kontrol edemeyiz. Ancak onun yerine herhangi bir çizge için çalışacak basit bir [kanıt](gloss:proof) arayabiliriz...
 
 ---
 > id: euler-2
 
-    x-slideshow
-      .stage(slot="stage")
-        svg(viewBox="0 0 640 200")
-          line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
-          line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
-          line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
-          line.link(style="stroke-width: 3px" x1="390" y1="100" x2="270" y2="30")
-          circle.node(cx=270 cy=30  r=7)
-          circle.node(cx=150 cy=100 r=7 style="display: none")
-          circle.node(cx=270 cy=170 r=7 style="display: none")
-          circle.node(cx=390 cy=100 r=7 style="display: none")
-    
-        .euler-table
-          table.grid.table-small
-            tr
-              td: strong.blue.i F
-              td: strong.green.i V
-              td: strong.red.i E
-            tr
-              td.xf 0
-              td.xv 1
-              td.xe 0
-          p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
-    
-      .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
-      .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler’s equation still works.
-      .legend(slot="legend") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler’s equation still works.
-      .legend(slot="legend") Instead we could simply extend the line by one: this adds one vertex and one edge, and Euler’s equation works.
-      .legend(slot="legend") Let’s keep going: if we now create a quadrilateral we add one vertex, two edges and one face. Euler’s equation still works.
+::: x-slideshow
+
+    .stage(slot="stage")
+      svg(viewBox="0 0 640 200")
+        line.link(style="stroke-width: 3px; display: none" x1=270 y1=30  x2=150 y2=100)
+        line.link(style="stroke-width: 3px; display: none" x1=150 y1=100 x2=270 y2=170)
+        line.link(style="stroke-width: 3px; display: none" x1=270 y1=170 x2=390 y2=100)
+        line.link(style="stroke-width: 3px" x1="390" y1="100" x2="270" y2="30")
+        circle.node(cx=270 cy=30  r=7)
+        circle.node(cx=150 cy=100 r=7 style="display: none")
+        circle.node(cx=270 cy=170 r=7 style="display: none")
+        circle.node(cx=390 cy=100 r=7 style="display: none")
+
+      .euler-table
+        table.grid.table-small
+          tr
+            td: strong.blue.i Y
+            td: strong.green.i N
+            td: strong.red.i Ç
+          tr
+            td.xf 0
+            td.xv 1
+            td.xe 0
+        p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
+
+En basit çizge tek bir noktadan oluşur. Bunun için Euler denkleminin çalıştığını görebiliriz.
+
+Hadi çizgemize yeni bir nokta ekleyelim. Tabi bir çizgi de eklememiz gerek, ve Euler denklemi yine çalışıyor.
+
+Çizgemize üçüncü bir nokta eklemek için iki seçeneğimiz var. Küçük bir üçgen yaratabiliriz:  bu bir nokta, bir yüz ve iki çizgi ekler, yani Euler denklemi hala çalışır.
+
+Ya da sadece doğrumuzu biraz daha uzatabiliriz: Bu bir nokta ve bir çizgi ekler, yani yine Euler denklemi çalışır.
+
+Devam edelim: Eğer bir dörtgen yaparsak bir nokta, iki kenar ve bir yüz ekleriz. Euler denklemi yine çalışır.
+
+:::
 
 ---
 > id: euler-3
 
-Herhangi bir (sonlu) grafik, bir tepe noktasıyla başlayıp tek tek daha fazla köşe ekleyerek oluşturulabilir. Yeni köşeler eklesek de Euler denkleminin geçerli olduğunu gösterdik. Bu nedenle tüm grafikler için geçerlidir. 
+(Sonlu) her çizge tek bir nokta ile başlayıp birer birer noktalar ekleyerek elde edilebilir. Bu noktaları nasıl eklersek ekleyelim Euler denkleminin çalıştığını gösterdik. Yani her çizge için doğru.
 
-Kullandığımız sürece __matematiksel tümevarım__ denir. Sadece en basit durumdan başlayarak ve daha karmaşık vakalar oluştururken sonucun her adımda geçerli olduğunu göstererek, sonsuz sayıda vakada sonuçları kanıtlamak için çok yararlı bir tekniktir. 
+Kanıt için kullandığımız bu yöntemin adı __matematiksel tümevarım__. Bir önermeyi sonsuz durum için göstermekte çok faydalı. En basit durum için başlarız, sonra daha karmaşık durumları inşa ederken attığımız her adımda doğru kaldığını gösteririz.
 
     .svg-block: include svg/dominoes.svg
 
 ---
 > id: euler-4
 
-Bir çok düzlemsel grafikleri [polyhedra](gloss:polyhedron) ağları, [poligon](gloss:polygon) yüzeye üç boyutlu şekiller, çok benzer. Çokyüzlüyü elastik bantlardan yapılmış olarak düşünürsek, düz, düzlemsel grafikler olana kadar onları uzatarak hayal edebiliriz: 
+Çizgelerin çoğu [çokyüzlülerin](gloss:polyhedron) ağlarına benzer, [çokgen](gloss:polygon) yüzlere sahip üç boyutlu şekillere. Eğer çokyüzlülerin elastik bantlardan yapıldığını düşünürsek onları düz olana kadar bastırıp düz hale geldiklerini, düzlemsel çizgeye dönüştüklerini hayal edebiliriz:
 
 ::: column(width=300)
 
@@ -526,57 +550,57 @@ Bir çok düzlemsel grafikleri [polyhedra](gloss:polyhedron) ağları, [poligon]
 ---
 > id: euler-5
 
-Bu, Euler formülünü sadece düzlemsel grafikler için değil, aynı zamanda tüm polihedra için de kullanabileceğimiz anlamına gelir - küçük bir fark. Polihedra grafiklere dönüştürülürken, yüzlerden biri kaybolur: polihedranın en üst yüzü “dış” olur; grafikleri. 
+Bu durumda Euler formülünü sadece düzlemsel çizgeler için değil, bütün çokyüzlüler için kullanabiliriz, sadece tek bir farkla. Çokyüzlüleri çizgeye çevirirken bir yüz yok olur: çokyüzlünün en üstteki yüzü çizgenin “dışı” haline gelir.
 
-Başka bir deyişle, __{.red} kenarlar__ , __{.blue} yüzler__ ve __{.green}__ _Herhangi bir_ polihedronun __köşeleri__ , _{.b.blue} F_ + _{.b.green} V_ = _{.b.red} E_ + [[2]] . 
+Başka bir deyişle herhangi bir çokyüzlünün __{.red}çizgi__, __{.blue}yüz__ ve
+__{.green}nokta__ sayısını sayarsak _{.b.blue}Y_ + _{.b.green}N_ = _{.b.red}Ç_ + [[2]] buluruz.
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
-{.caption} __ikosahedron__  
-__{.blue} 20__ Yüz  
-__{.green} 12__ Tepe Noktası  
-__{.red} 30__ Kenar 
+{.caption} __Onikiyüzlü__  
+__{.blue}20__ Yüz  
+__{.green}12__ Nokta  
+__{.red}30__ Çizgi
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Rhombicosidodecahedron__  
-__{.blue} 62__ Yüzler  
-__{.green} 60__ Tepe Noktası  
-__{.red} 120__ Kenar 
+{.caption} __Rombikosidodecahedron__  
+__{.blue}62__ Yüz  
+__{.green}60__ Nokta  
+__{.red}120__ Çizgi
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
-{.caption} __Kesik İkosahedron__  
-__{.blue} 32__ Yüz (12 siyah, 20 beyaz)  
-__{.green} 60__ Tepe Noktası  
-__{.red} 90__ Kenar 
+{.caption} __Kırpılmış Onikiyüzlü__  
+__{.blue}32__ Yüz (12 siyah, 20 beyaz)  
+__{.green}60__ Nokta  
+__{.red}90__ Çizgi
 
 :::
 
 ---
 > id: maps
 > section: map-colouring
-> translated: auto
 
-## Harita Boyama 
+## Harita Boyama
 
 ::: column.grow
 
-Belli haritalarla grafik teorisini zaten kullandık. Uzaklaştıkça, bireysel yollar ve köprüler kayboluyor ve bunun yerine tüm ülkelerin ana hatlarını görüyoruz. 
+Kimi haritalar için daha önce çizgelerden yararlandık. Daha yukarıdan baktıkça tek tek yollar ve köprüler kaybolur, onun yerine ülkelerin sınırlarını görmeye başlarız.
 
-Bir haritayı - veya farklı bölgelerden oluşan başka bir çizimi - renklendirirken, bitişik ülkeler aynı renge sahip olamaz. Mümkün olduğunca az farklı renk kullanmak da isteyebiliriz. 
+Bir haritayı ya da farklı bölgelerden oluşan bir çizimi renklendirirken komşu bölgeler için aynı rengi kullanamayız. Ayrıca olabildiğince az renk de kullanmak isteyebiliriz.
 
-Bir satranç tahtası gibi bazı basit “haritalar” sadece iki renge (siyah beyaz) ihtiyaç duyar, ancak çoğu karmaşık harita daha fazlasına ihtiyaç duyar. 
+Satranç tahtası gibi kimi basit “haritalar” için sadece iki renk gerekir (siyah ve beyaz), ancak daha karmaşık haritalar için daha çok renge ihtiyaç duyarız.
 
 ::: column(width=240 style="margin-top: -10px")
 
-    x-img.shifted(src="images/globe.jpg" width=240 height=320)
+    x-img(src="images/globe.jpg" width=240 height=320)
 
 :::
 
@@ -585,39 +609,37 @@ Bir satranç tahtası gibi bazı basit “haritalar” sadece iki renge (siyah b
 > goals: map-0 map-1 map-2 map-3
 > title: Colouring Maps
 
-ABD eyaletlerinin haritasını renklendirirken, 50 renk yeterlidir, ancak çok daha azı gereklidir. Aşağıdaki haritaları olabildiğince az renkle boyamayı deneyin: 
+ABD’nin eyaletlerini boyarken 50 renk fazlasıyla yeterli olacaktır, ancak çok daha azı da yetebilir. Aşağıdaki haritayı olabildiğince az renk kullanarak boyamaya çalışın.
 
     .four-colour-icons
       for i in [1, 2, 3, 4, 5, 6, 7]
         .four-colour-icon(tabindex=0)
-    
+
     x-tabbox.four-colours.full-width
       .tab
-        h3 United States #[span.check(when="map-0")]
+        h3 Amerika Birleşik Devletleri #[span.check(when="map-0")]
         x-solved
-        .colour-count(style="margin-bottom: -32px") #[span 0] colours used
+        .colour-count(style="margin-bottom: -32px") #[span 0] renk kullanıldı
         include svg/colours-1.svg
-        button.btn.clear Clear
-        // Note that states or countries which only share a corner are allowed to have the same colour.
-        // Alaska and Hawaii are isolated from all of the other states and can have any colour.
+        button.btn.clear Temizle
       .tab
-        h3 South America #[span.check(when="map-1")]
+        h3 Güney Amerika #[span.check(when="map-1")]
         x-solved
-        .colour-count #[span 0] colours used
+        .colour-count #[span 0] renk kullanıldı
         include svg/colours-2.svg
-        button.btn.clear Clear
+        button.btn.clear Temizle
       .tab
-        h3 Germany #[span.check(when="map-2")]
+        h3 Almanya #[span.check(when="map-2")]
         x-solved
-        .colour-count #[span 0] colours used
+        .colour-count #[span 0] renk kullanıldı
         include svg/colours-3.svg
-        button.btn.clear Clear
+        button.btn.clear Temizle
       .tab
-        h3 England #[span.check(when="map-3")]
+        h3 İngiltere #[span.check(when="map-3")]
         x-solved
-        .colour-count #[span 0] colours used
+        .colour-count #[span 0] renk kullanıldı
         include svg/colours-4.svg
-        button.btn.clear Clear
+        button.btn.clear Temizle
 
 ---
 > id: maps-2
@@ -625,7 +647,7 @@ ABD eyaletlerinin haritasını renklendirirken, 50 renk yeterlidir, ancak çok d
 
 ::: column.grow
 
-Bu haritaların hepsi sadece dört farklı renkle renklendirilebilir, ancak diğer çok karmaşık haritaların daha fazla renge ihtiyacı olabileceğini hayal etmek zor değildir. Aslında, bazı haritaların hepsi birbirine bağlı dört ülke içerdiğinde __en az__ dört renge ihtiyaç duyar. 
+Bütün bu haritalar sadece dört renk ile boyanabilir, fakat çok daha karmaşık haritalar için daha fazla rengin gerekeceğini hayal etmek çok zor değil. Aslında kimi haritalar için __en azından__ dört gerekir: hepsi birbirine komşu dört ülke olduğu zaman.
 
 ::: column(width=200)
 
@@ -633,11 +655,11 @@ Bu haritaların hepsi sadece dört farklı renkle renklendirilebilir, ancak diğ
 
 :::
 
-Daha önce olduğu gibi, ülkeleri ve sınırları olan bir haritayı düzlemsel bir grafiğe dönüştürebiliriz: her ülke [[bir tepe noktası]] haline gelir [[| kenar | bir yüz]] ve [[bir sınırı paylaşan]] ülkeler [[| aynı renk]] bir kenarla bağlanır: 
+Daha önce yaptığımız gibi ülkelerin ve sınırların olduğu bir haritayı düzlemsel bir çizgeye dönüştürebiliriz: her ülke bir [[nokta|çizgi|yüz]] olur ve [[komşu olan|aynı renkte olan]] ülkeler birbirine bir çizgi ile bağlanır.
 
     .svg-block: include svg/colour-graph.svg
 
-{.reveal(when="blank-0 blank-1")} Şimdi bir grafiğin köşelerini renklendirmek istiyoruz ve bir kenarla bağlanırlarsa iki köşenin farklı bir rengi olmalıdır. 
+{.reveal(when="blank-0 blank-1")} Şimdi bu çizgenin noktalarını boyamak istiyoruz, ve aralarında çizgi olan iki noktanın farklı renkleri olsun istiyoruz.
 
 ---
 > id: maps-3
@@ -648,58 +670,58 @@ Daha önce olduğu gibi, ülkeleri ve sınırları olan bir haritayı düzlemsel
 
 ::: column.grow
 
-1852'de, botanik öğrencisi [Francis Guthrie](bio:guthrie) İngiltere'de bir il haritasına renk vermek zorunda kaldı. Denediği herhangi bir harita için dört rengin yeterli göründüğünü gözlemledi, ancak _tüm_ haritalar için işe yarayan bir kanıt bulamadı. Bu son derece zor bir problem olarak ortaya çıktı ve __dört renk teoremi__ olarak biliniyordu. 
+1852’de botanik öğrencisi [Francis Guthrie](bio:guthrie) İngilteredeki bölgelerin haritasını renklendirmek zorundaydı. Denediği her harita için dört rengin yeterli olduğunu gözlemledi, ancak _her_ harita için bunu gösterecek bir kanıt bulmayı başaramadı. Sonuçta bunun bir hayli zor bir soru olduğu ortaya çıktı ve __dört renk teoremi__ adıyla anılmaya başladı.
 
-Takip eden 100 yıl boyunca, birçok matematikçi sadece daha sonra bulunacak hatalar için dört renk teoremine “kanıt” yayınladı. Bu geçersiz ispatlardan bazıları o kadar ikna ediciydi ki hataları bulmak 10 yıldan fazla sürdü. 
+İlerleyen 100 yılda pek çok matematikçi dört renk teoremi için “kanıtlar” yayınladılar, ama hepsinde sonradan hatalar bulundu. Bu geçersiz kanıtlardan bazıları o kadar ikna ediciydi ki içerdikleri hatayı bulmak 10 yıldan uzun sürdü.
 
-Uzun bir süre, matematikçiler ya dört rengin yeterli olduğunu kanıtlayamadı ya da dörtten fazla renge ihtiyaç duyan bir harita bulamadılar. 
+Uzunca bir süre matematikçiler dört rengin yeterli olduğunu da kanıtlayamadılar, dörtten fazla renge ihtiyaç duyulan bir harita da bulamadılar.
 
 :::
 
 ---
 > id: maps-4
 
-[Wolfgang Haken](bio:haken) ve [Kenneth Appel'in](bio:appel) nihayet çözmek için bir bilgisayar kullandıkları 1976'ya kadar dört renk probleminde çok az ilerleme kaydedildi. Her biri toplamda 1000 saatten fazla süren bir bilgisayar tarafından kontrol edilen 1936 özel vakasına sonsuz sayıda olası haritayı indirdiler. 
+1976’da [Wolfgang Haken](bio:haken) ve [Kenneth Appel](bio:appel) sonunda soruyu bilgisayar yardımı ile çözene kadar dört renk probleminde çok ilerleme kaydedilemedi. Haken ve Appel sonsuz harita seçeneğini 1936 özel duruma indirip her birisini bilgisayara kontrol ettirdiler, hesaplar toplamda 1000 saatten uzun sürdü.
 
     x-parallax.full-width(background="images/ibm-360.jpg")
 
 ---
 > id: maps-5
 
-Dört renk teoremi, bilgisayar kullanılarak kanıtlanmış ilk bilinen matematiksel teoremdir, o zamandan beri çok daha yaygın ve daha az tartışmalı hale gelen bir şeydir. Daha hızlı bilgisayarlar ve daha verimli bir algoritma, bugün bir dizüstü bilgisayarda dört renk teoremini birkaç saat içinde kanıtlayabileceğiniz anlamına gelir. 
+__Dört renk teoremi__ bilgisayar yardımıyla kanıtlanmış ilk ünlü matematiksel teorem, o günden bu güne kanıtlarda bilgisayar kullanmak çok daha yaygınlaştı ve daha az tepki görmeye başladı. Hızlı bilgisayarlar ve etkin algoritmalar sayesinde bugün dört renk teoremini kendi bilgisayarınızda bir kaç saatte kanıtlayabilirsiniz.
 
     figure
       x-img(src="images/suffice.jpg" width=320 height=80 credit="http://www.math.illinois.edu/History/postmarks.pdf")
-      p.caption Postmark for the Department of Mathematics at the University of<br/>Illinois Urbana-Champaign, where Haken and Appel worked.
+      p.caption Haken ve Appel’in çalıştığı Illinois Urbana-Champaign Üniversitesi<br/>Matematik Bölümünün posta işareti
 
 ---
 > id: maps-6
 
 ::: column.grow
 
-Dört renk teoremi yalnızca düz bir düzlemde veya bir küre üzerinde ve tüm ülkelerin tek bir alandan oluştuğu haritalar için çalışır. 
+Dört renk teoremi sadece bir düzlemde ya da küre yüzeyinde yer alan ve her ülkenin tek bir bölgeden oluştuğu haritalar için geçerli.
 
-Ancak matematikçiler, ülkelerin birden fazla bağlantısız bileşenden oluşabileceği _imparatorluk_ haritalarına ve bir torus (çörek şekli) gibi farklı şekilli gezegenlerdeki haritalara da baktılar. Bu durumlarda dörtten fazla renge ihtiyacınız olabilir ve provalar daha da zorlaşır. 
+Tabi matematikçiler ülkelerin birden fazla bağlantısız bölgelerinin olabildiği _imparatorluk_ haritalarını da çalıştılar, ve torus(simit şekli) gibi başka şekildeki gezegenlerin haritalarını da. Bu durumlarda dörtten fazla renge ihtiyacınız olabilir ve kanıtı yapmak daha da zorlaşıyor.
 
 ::: column(width=300)
 
     x-video(width=300 height=220 src="images/torus.mp4" hover loop)
-    p.caption This map on a torus requires seven colours.
+    p.caption Torus üzerindeki bu haritayı boyamak için yedi renk gerekli.
 
 :::
 
 ---
 > id: salesman
 > section: travelling-salesman
-> translated: auto
 
-## Gezgin Satıcı Sorunu 
+## Gezgin Satıcı Problemi
 
 ::: column.grow(parent="right")
 
-Bir kez daha ağlar ve haritalar hakkında düşünelim. Bir dağıtım hizmetinin ziyaret etmesi gerektiğini düşünün ${tsn}{tsn|8|2,50,1} parsel dağıtmak için farklı şehirler. Bu şehirleri bir grafikteki köşe noktaları olarak düşünebiliriz. Tüm şehirler karayollarıyla birbirine bağlıysa, bu [[tam bir grafiktir | döngü | bipartit grafiği]] , yani <mfrac><mrow>${tsn} × ( ${tsn} - 1)</mrow><mn>2</mn></mfrac> = ${tsn*(tsn-1)/2} toplam kenarlar. 
+Bir defa daha ağlar ve haritalar üzerine düşünelim. Bir kargo şirketinin ürünleri ${tsn}{tsn|8|2,50,1} farklı şehrine dağıtması gerektiğini düşünün. Bu şehirleri çizgemizdeki noktalar olarak ele alabiliriz. Eğer bütün şehirler yollar ile bağlı ise, bu bir [[tam çizgedir|döngüdür|ikili çizgedir]]
+yani toplamda `(var("tsn") × (var("tsn") – 1)) / 2 = var("tsn*(tsn-1)/2")` çizgisi vardır.
 
-Dağıtım kamyonu tüm şehirleri herhangi bir sırayla ziyaret etmelidir. Königsberg köprüsü probleminde _her kenardan_ tam olarak bir tane giden yollar bulmak istedik. Şimdi _her köşeyi_ tam olarak bir kez ziyaret eden yollar bulmak istiyoruz. Bu yollara __Hamilton çevrimleri__ denir. 
+Dağıtım kamyonu her şehri ziyaret etmek zorunda, istediği sırayı izleyebilir. Köningsberg Köprüleri probleminde _her çizgi_ üzerinden tam bir defa geçen yolları arıyorduk. Şimdiyse _her noktadan_ tam olarak bir defa geçen yollar arıyoruz. Böyle yollara __Hamilton döngüleri__ denir.
 
 ::: column(width=260)
 
@@ -710,7 +732,7 @@ Dağıtım kamyonu tüm şehirleri herhangi bir sırayla ziyaret etmelidir. Kön
 ---
 > id: salesman-1
 
-Tam grafiklerde Hamilton döngüleri için sayısız farklı olasılık vardır. Aslında, herhangi bir tepe noktasını başlangıç tepe noktası olarak seçebilir ve ardından kalan şehirlerden herhangi birini herhangi bir sırayla seçebiliriz: 
+Tam bir çizgede Halimton döngüleri için çok fazla seçenek vardır. Aslında başlangıç noktası olarak herhangi bir noktayı seçebiliriz, ve sonra kalan şehirleri de istediğimiz sırayla seçebiliriz.
 
     .row
       .grow: p.todo Diagram coming soon…
@@ -719,22 +741,27 @@ Tam grafiklerde Hamilton döngüleri için sayısız farklı olasılık vardır.
 ---
 > id: salesman-2
 
-İle bir grafikte ${tsn1}{tsn1|4|2,10,1} şehirlerde, her Hamilton döngüsünde ${tsn1} şehirler. Şimdi, 
+10 şehirli bir çizgede her Hamilton döngüsü ${tsn1} şehire uğramak zorunda. O halde 
 
-    ul.var(:html="tsmString(tsn1)")
+* İlk şehir için 10 seçenek var.
+* Gidilecek ilk şehri seçtikten sonra geriye ikinci şehir için 9 seçenek kalıyor.
+* Ardından 3. şehir için 8 seçeneğimiz var.
+* Ardından 4. şehir için 7 seçeneğimiz var.
+* …
+* Son olarak, geriye 10. Şehir için 1 seçeneğimiz kalıyor.
 
-Bu, toplamda, ${tsnPaths(tsn1)} olası yollar. Bu ürün için bir kısayol ${tsn1} ! veya ${tsn1} __Faktöriyel__ . 
+Yani toplamda ${tsnPaths(10)} olası yol var. Bu çarpımı kısaca yazmanın bir yolu 10! Ya da 10 __Faktöriyel__.
 
-Başka bir şehirden geçmeden doğrudan iki şehir arasında seyahat etmenin mümkün olmayabileceğini hayal edebilirsiniz. Bu durumda artık tam bir grafiğe sahip değiliz ve eğer varsa, Hamilton döngülerinin sayısını bulmak çok daha zor hale geliyor. 
+Herhangi iki şehir arasında doğrudan bir olmayabilir, başka bir şehre uğramak gerekiyor olabilir. Bu durumda artık elimizde tam bir çizge yoktur ve eğer Hamilton döngüleri varsa onları bulmak çok daha zorlaşır.
 
 ---
 > id: salesman-3
 
 ::: column.grow(parent="right")
 
-Şimdiye kadar bazı şehirlerin diğerlerinden daha uzak olabileceği gerçeğini görmezden geldik. Bununla birlikte, gerçek hayatta bu çok önemli bir husustur: sadece _bir_ yol bulmak istemiyoruz, aynı zamanda en kısa yolu bulmak istiyoruz. Buna __Gezgin Satıcı Sorunu__ denir. Sadece nakliye ve lojistikte değil, aynı zamanda transistörleri mikroçiplere yerleştirirken, daha hızlı bilgisayarlar yapmak için veya [DNA'nın](gloss:dna) yapısını analiz ederken de çözülmelidir. 
+Şimdiye kadar kimi şehirlerin daha uzakta olabileceğini göz ardı ettik. Oysa gerçek hayatta bu çok önemli bir kıstas: _herhangi_ bir yol bulmak istemiyoruz, en kısa yolu bulmak istiyoruz. Bu sorunun adı _Gezgin Satıcı Problemi_. Sadece ulaşım ve taşımacılıkta değil, örneğin bilgisayarları hızlandırmak için mikroçiplerin üzerine tranzistörleri yerleştirirken de, [DNA](gloss:dna) yapısını incelerken de çözülmesi gerekiyor.
 
-Basit bir yöntem, olası tüm yolları denemek, her birinin uzunluğunu bulmak ve sonra en kısa olanı seçmek olacaktır. Ancak, bunu ${tsn2}{tsn2|10|2,20,1} şehirler var ${tsn2} ! = ${factorial(tsn2)} olası yollar. Yüzlerce veya binlerce köşe noktasına sahip olduğunuzda, güçlü bilgisayarlar kullanarak bile tüm olası yolları denemek imkansız hale gelir. 
+Basit bir yöntem olası bütün yolları hesaplamak, her birinin uzunluğunu bulmak ve en kısa olanı seçmek olabilir. Ancak daha az önce sadece ${tsn2}{tsn2|10|2,20,1} şehir için bile ${tsn2}! = ${factorial(tsn2)} olası yol olduğunu gösterdik. Yüzlerce ya da binlerce nokta ele aldığımızda olası bütün seçeneklere bakmak çok güçlü bilgisayarlar için bile imkansız.
 
 ::: column(width=220)
 
@@ -746,9 +773,9 @@ Basit bir yöntem, olası tüm yolları denemek, her birinin uzunluğunu bulmak 
 > id: salesman-4
 > goals: move
 
-Maalesef, seyahat eden satıcı problemini çözmek için daha etkili bir algoritma yoktur. Bunun yerine, matematikçiler ve bilgisayar bilimcileri, en iyisi olmasalar bile, _iyi_ çözümler bulan çeşitli algoritmalar geliştirdiler. Sadece yaklaşık çözümler veren bu algoritmalara __Sezgisel__ denir. 
+Ne yazık ki gezgin satıcı problemini çözmek için daha etkili bir algoritma yok. Onun yerine matematikçiler ve bilgisayar bilimciler _iyi_ çözümleri bulmak için çeşitli algoritmalar geliştirdiler. Böylece en iyi çözümü bulamasak da iyi bir çözüm bulabiliyoruz. Yaklaşık çözüm sunan bu algoritmalara _deneyimsel_ diyoruz.
 
-Bu haritadaki şehirleri yeniden düzenlemeyi deneyin ve aralarındaki en kısa yolun nasıl değiştiğini izleyin. Şehirlere dokunarak onları kaldırabilir ve haritada herhangi bir yeri tıklayarak (8'e kadar) şehirler ekleyebilirsiniz: 
+Haritadaki şehirleri yeniden düzenlemeyi deneyin ve aralarındaki en kısa yolun nasıl değiştiğini gözlemleyin. Tıklayarak şehirleri kaldırabilir, ya da haritadaki boş bir yere tıklayarak (8e kadar) yeni şehirler ekleyebilirsiniz.
 
     figure: .tsm
       svg(width=760 height=480 viewBox="0 0 760 480")
@@ -758,48 +785,50 @@ Bu haritadaki şehirleri yeniden düzenlemeyi deneyin ve aralarındaki en kısa 
 
 ::: column.grow
 
-__Açgözlü Algoritma__ (veya En Yakın Komşu Algoritması) çok basittir: rastgele bir şehirde başlarsınız ve art arda daha önce ziyaret etmediğiniz en yakın şehre taşınırsınız. Tüm şehirleri ziyaret ettikten sonra durursunuz. 
+__Açgözlü Algoritma__ (ya da En Yakın Komşu Algoritması) çok basit: rastgele bir şehirden başlıyorsunuz ve sırayla daha önce ziyaret etmediğiniz en yakın şehre gidiyorsunuz. Bütün şehirlere gidince duruyorsunuz.
 
 ::: column(width=300)
 
-{.todo} Animasyon çok yakında… 
+{.todo} Animation coming soon…
 
 :::
 
-Açgözlü algoritmayı kullanarak bulunan yolların ortalama olarak mümkün olan en kısa yoldan% 25 daha uzun olduğunu gösterebilirsiniz. 
+Açgözlü algoritma ile bulunan yolların en kısa yoldan ortalama olarak %25 daha uzun olduğu gösterilebilir.
 
 ---
 > id: salesman-6
 
 ::: column.grow
 
-__2-Opt Algoritması__ rastgele olası bir yolla başlar. Sonra tekrar tekrar iki kenar seçin ve yolun uzunluğunu azaltacaksa onları takas edin. Herhangi bir kenar çiftini değiştirerek uzunluğu daha fazla azaltamayacağınız zaman durursunuz. 
+__2-Opt Algoritması__ rastgele bir yol ile başlar. Sonra sürekli iki çizgi seçip yerlerini değiştirince yolun kısalıp kısalmadığına bakarsınız. Herhangi çizgi ikilisini değiştirerek yolu daha kısaltamadığınızda durursunuz.
 
 ::: column(width=300)
 
-{.todo} Animasyon çok yakında… 
+{.todo} Animation coming soon…
 
 :::
 
 ---
 > id: ants
 
-Bilgisayarların var olmasından çok önce, Doğa'nın farklı konumlar arasında en uygun yolları bulmanın akıllı bir yolunu bulduğu ortaya çıktı: karınca kolonileri. 
+Öyle görünüyor ki bilgisayarlardan henüz icat edilmeden çok daha önce doğa iki konum arasındaki en kısa yolu bulma sorusuna akıllıca bir çözüm geliştirmişti: karınca kolonileri.
 
     x-parallax.full-width(background="images/ants.jpg")
 
-Karıncalar yuvaları ile olası gıda kaynakları arasında mümkün olan en kısa yolları bulmak ister. İzleri boyunca bıraktıkları ve diğer karıncaların takip edebileceği kimyasallar aracılığıyla birbirleriyle iletişim kurabilirler. 
+Karıncalar besin kaynakları ve evleri arasındaki en kısa yolu bulmak istiyorlar. Yol üzerinde bıraktıkları kimyasallar ile aralarında iletişim kurabiliyorlar.
 
 ---
 > id: ants-1
 
 ::: column.grow
 
-* Karınca kolonisi başlangıçta rastgele yönlere giden birçok izci gönderir. Yiyecek bulduklarında, bir feromon izi bırakarak geri dönerler. * Diğer karıncalar bulduklarında bir yolu takip etme eğilimindedir ve bu da onları yeme yönlendirir. Dönüş yolculuğunda daha fazla feromon biriktirir, böylece izi güçlendirir. * Zamanla feromon buharlaşır. Bir yol ne kadar uzun olursa, karıncalar boyunca seyahat etmek o kadar zaman alır ve bu nedenle feromonun buharlaşması için daha fazla zaman olur. Öte yandan, kısa yollar daha hızlı bir şekilde güçlendirilebilir, böylece güçleri daha hızlı artar. 
+* Karınca kolonisi ilk başta pek çok kaşifi rastgele yönlerde yolluyor. Besin bulduktan sonra geri dönüyorlar ve arkalarında feromonden oluşan bir yol bırakıyorlar.
+* Diğer karıncalar bu yola denk geldikleri zaman takip edip besine ulaşabiliyorlar. Dönüş yolunca onlar da feromon bırakıyorlar, böylece yol daha belirginleşiyor.
+* Zaman içinde feromon buharlaşır. Yol ne kadar uzunsa karıncaların da yürümesi o kadar uzun sürüyor, böylece feromonun buharlaşmak için daha çok zamanı oluyor. Diğer yanda kısa yollar sıklıkla destekleniyorlar ve daha kalıcı oluyorlar.
 
 ::: column(width=240)
 
-{.todo} Diyagram çok yakında… 
+{.todo} Diagram coming soon…
 
 :::
 
@@ -812,9 +841,9 @@ Karıncalar yuvaları ile olası gıda kaynakları arasında mümkün olan en k�
 
 ::: column.grow
 
-Karınca Kolonisi Sistemi (ACS) algoritmaları, bu davranışı birçok "sanal" karınca kullanarak bilgisayarlarda kopyalamaya çalışır. Seyahat eden satıcı sorunu için hızlı bir şekilde çok iyi çözümler bulabilirler. 
+Karınca Koloni Sistemi(KKS) algoritması bu davranışı bilgisayarlarda “sanal” karıncalar kullanarak kopyalamaya çalışıyor. Gezgin satıcı problemi için hızlı bir şekilde çok iyi çözümler bulabiliyor.
 
-ACS algoritmalarının özellikle kullanışlı bir özelliği, sürekli olarak çalışabilmeleri ve grafikteki değişikliklere gerçek zamanlı olarak uyarlanabilmeleridir. Bu değişikliklere, trafik kazaları ve sokak ağlarındaki yol kapanmaları veya bilgisayar ağlarındaki web sunucularına yönelik trafik artışları neden olabilir. 
+KKS algoritmasının öne çıkan bir tarafı sürekli bir şekilde çalışabilmesi ve çizgedeki gerçek zamanlı değişimlere uyum sağlayabilmesi. Bu değişimler araba kazaları, yol çalışmaları ya da bilgisayar ağları arasındaki trafik sıkışıklıkları yüzünden olabilir.
 
 :::
 
@@ -827,11 +856,11 @@ ACS algoritmalarının özellikle kullanışlı bir özelliği, sürekli olarak 
 
 ::: column.grow
 
-Gezgin Satıcı problemi [NP-zordur](gloss:np) , yani bilgisayarlar (en azından çok sayıda şehir için) tarafından çözülmesi çok zordur. 
+Gezgin Satıcı Problemi [NP-zor](gloss:np) bir problem, yani bilgisayarlar için çözmesi çok zor(en azından çok sayıda şehir olduğunda).
 
-Hızlı ve kesin bir algoritma bulmanın bilgisayar bilimi alanında ciddi etkileri olacaktır: bu, NP zorluğu olan _tüm_ problemler için hızlı algoritmalar olduğu anlamına gelir. Ayrıca, İnternet güvenliğinin çoğunu işe yaramaz hale getirir, bu da bazı sorunların bilgisayarlar için çok zor olduğuna inanılır. 
+Hızlı ve kesin çözüm üreten bir algoritma bulunursa bilgisayar bilimleri alanında çok ciddi sonuçları olacak: _bütün_ NP-zor problemler için hızlı bir algoritma olduğu anlamına gelecek. Ayrıca çoğu internet güvenliği uygulamasını işe yaramaz hale getirecek, çünkü bu yöntemler kimi problemlerin bilgisayar tarafından çözülmesinin çok zor olmasına dayalı.
 
-Gezgin Satıcı problemini çözmek için hızlı bir algoritma bulmak, matematik ve bilgisayar bilimlerindeki en ünlü açık problemlerden birini, __P vs NP__ problemini de çözecektir. Her biri 1 milyon dolar ödül alan yedi [Milenyum Ödül Probleminden](gloss:millennium-prize) biridir. 
+Ayrıca gezgin satıcı problemini çözen hızlı bir algoritma bulunursa matematik ve bilgisayar bilimleri alanındaki en ünlü açık sorulardan birisi çözülmüş olacak: __P’ye karşılık NP__ problemi. Bu her biri \$1m ödüllü olan yedi [Milenyum Problemi](gloss:millennium-prize)nden biri.
 
 :::
 
@@ -839,24 +868,23 @@ Gezgin Satıcı problemini çözmek için hızlı bir algoritma bulmak, matemati
 > section: scheduling
 > sectionStatus: dev
 
-## Zamanlama Sorunları 
+## Scheduling Problems
 
-{.todo} Çok yakında 
+{.todo} Coming Soon
 
 ---
 > id: applications
 > section: applications
-> translated: auto
 
-## Günlük Yaşamda Grafikler 
+## Günlük Hayatta Çizgeler
 
-Önceki bölümlerde grafik teorisinin birçok farklı uygulamasını gördük, ancak bazıları biraz karışıktı. Bununla birlikte, grafikler günlük yaşamdaki birçok nesne, kavram ve sürecin temelini oluşturmaktadır. 
+Bu ders boyunca bazıları yapmacık olsa da çizgeler kuramının pek çok uygulamasını gördük. Oysa çizgeler günlük hayattaki çoğu kavramın ve nesnenin tam kalbindeler.
 
 ::: column.grow
 
-Örneğin İnternet, geniş, sanal bir grafiktir. Her köşe tek bir web sayfasıdır ve her kenar iki sayfa arasında bir köprü olduğu anlamına gelir. Bağlantıların yalnızca tek yönlü olduğunu unutmayın, bu nedenle bu grafik [[yönlendirilir | çok hatlı | aracılığı]] ve bu grafik _çok, daha büyüktür._ 
+Örneğin internet devasa bir sanal çizge. Her noktası bir internet sayfası ve iki sayfa arasında bir hiperbağlantı olduğunda sayfaların arasında bir çizgi var. Bağlantıların tek yönlü olduğunu unutmamak gerek, yani aslında bu [[yönlü|çok çizgili|bağlantılı]] bir çizge, ve bu çizge _çok ama çok büyük_.
 
- Wikipedia veya Facebook gibi bazı web sitelerinde çok sayıda gelen bağlantı bulunurken, birçok küçük web sitesinde çok az gelen bağlantı olabilir. Bu, Google'ın arama sonuçlarını sıralamak için kullandığı temel kavramdır. 
+Wikipedia ya da Facebook gibi kimi internet sitelerini gösteren pek çok bağlantı var, daha küçük çoğu internet sitesini gösteren bağlantı sayısı ise çok daha az. İşte Google’ın arama sonuçlarını sıralarken kullandığı kavram bu.
 
 ::: column(width=240)
 
@@ -867,12 +895,12 @@ Gezgin Satıcı problemini çözmek için hızlı bir algoritma bulmak, matemati
 ---
 > id: applications-1
 
-Daha fazla gelen bağlantı içeren web siteleri daha yüksek kalitede olma eğilimindedir ve arama sonuçlarının üstünde gösterilmelidir. Örneğin, “Londra” yı ararken, Londra'daki küçük mağazalardan veya Londra'da yaşayan kişilerin bloglarından önce resmi turistik bilgi siteleri gösterilir. Grafik teorisinden gelen bu basit fikir, __Sayfa Sıralaması Algoritması__ , Google'ı diğer erken arama motorlarından önemli ölçüde daha iyi hale getirdi. 
+Kendisine bağlantılar olan internet siteleri daha kaliteli oluyorlar ve arama sonuçlarında üst sıralarda yer almalılar. Örneğin “Londra” kelimesini aradığınızda resmi turist bilgilendirme sitesi Londra’daki küçük dükkanların sitelerinden daha önce karşımıza geliyor. __Sayfa Sıralama Algoritması__ adındaki bu basit çizgeler kuramı fikri Google’ı diğer arama motorlarından çok daha iyi yaptı.
 
 ---
 > id: applications-2
 
-İnternet, insanlık tarafından şimdiye kadar oluşturulan en büyük ağdır. Bu görüntü, İnternet'e bağlı tüm sunucuların çok küçük bir bölümünü göstermektedir: 
+İnternet insanlığın yarattığı en büyük ağ. Aşağıdaki resim internete bağlı bütün sunucuların küçük bir kısmını gösteriyor:
 
     x-parallax.full-width(background="images/internet.jpg")
       .credit © LyonLabs, LLC and Barrett Lyon, 2014
@@ -880,11 +908,11 @@ Daha fazla gelen bağlantı içeren web siteleri daha yüksek kalitede olma eği
 ---
 > id: applications-3
 
-Web siteleri ve köprüler _sanal bir_ grafik oluştururken, bilgisayarların, sunucuların, yönlendiricilerin, telefon hatlarının ve kabloların _fiziksel_ ağı da vardır. 
+İnternet siteleri ve hiper bağlantılar birer _sanal_ çizge oluştursalar da, bilgisayarlar, sunucular, telefon hatları ve kablolardan oluşan _fiziki_ bir ağ da var.
 
 ::: column.grow(parent="right")
 
-Her telefon görüşmesi yaptığınızda veya bir web sitesi yüklediğinizde, şebeke operatörleri, herhangi bir kablo veya bağlantının kapasitesini aşmadan, göndereni ve alıcıyı bağlamanın bir yolunu bulmak zorundadır. Grafik teorisi ve olasılığı, örneğin belirli bir bağlantı meşgul olduğunda sapmalar bularak güvenilir bir hizmetin garanti edilmesini mümkün kılar. 
+Ne zaman bir telefon araması yapsanız ya da bir internet sitesi açsanız, bağlantı operatörleri gönderici ile alıcıyı bağlamak için bir yol bulmalılar. Üstelik bunu hiç bir bağlantı kablosunun kapasitesini aşmadan yapmalılar. Çizgeler kuramı ve olasılık örneğin bir hat meşgul olduğunda başka yollar bularak güvenilir bir servis sağlıyorlar.
 
 ::: column(width=220)
 
@@ -895,7 +923,7 @@ Her telefon görüşmesi yaptığınızda veya bir web sitesi yüklediğinizde, 
 ---
 > id: applications-4
 
-Grafikler ayrıca ulaşım ve navigasyonda da önemli bir rol oynamaktadır. Tüm uçuş, tren ve metro ağları, verimli programlar oluştururken kullanılabilecek grafikler oluşturur. En tanınmış grafiklerden biri Londra Metrosu haritası: 
+Çizgeler aynı zamanda gemicilik ve taşımacılıkta da önemli bir role sahipler. Bütün uçuş, tren ve metro ağları etkili bir zamanlama yaratmakta kullanılan birer çizge oluştururlar. En ünlü çizgelerden biri Londra metro haritasıdır:
 
     figure: x-img(lightbox src="images/tube-map.png" width=720 height=480 credit="© Transport for London")
 
@@ -904,82 +932,81 @@ Grafikler ayrıca ulaşım ve navigasyonda da önemli bir rol oynamaktadır. Tü
 
 ::: column.grow
 
-Tüm yollar ve otoyollar ayrıca, verilen iki nokta arasındaki en kısa rota üzerinde çalışırken Google Haritalar gibi navigasyon hizmetleri tarafından kullanılan büyük bir ağ oluşturur. 
+Bütün araba yolları ve otoyollar da kocaman bir ağ oluştururlar. Bu ağlar verilen iki nokta arasındaki en kısa yolu bulmak için Google Maps gibi navigasyon servisleri tarafından kullanılır.
 
 ::: column(width=60)
 
     x-img(credit="© Google" src="images/google-maps.jpg" width=70 height=70)
 
 :::
-
 ::: column(width=280)
 
     x-img(lightbox src="images/congestion.jpg" width=280 height=170)
 
 ::: column.grow
 
-Gelecekte, __Akıllı Ulaşım Sistemleri__ , akıllı telefonlardan ve kendi kendini süren araçlardan toplanan konum verilerini kullanarak arabaları daha verimli bir şekilde yönlendirerek tıkanıklığı ve kazaları azaltacaktır. Bu, her yıl yolda milyonlarca saat kaybını önleyebilir, kirliliği önemli ölçüde azaltabilir ve acil servislerin daha hızlı seyahat etmesini sağlayabilir. 
+Gelecekte __Akıllı Taşıma Sistemleri__ arabaları daha etkili bir şekilde yönlendirerek, cep telefonlarından gelen konum bilgilerini kullanarak ve otomatik sürüş yapan arabalar ile trafik sıkışıklıklarını ve kazaları azaltacaklar. Bu her yıl yolda harcanan milyonlarca saatten tasarruf edecek, kirletme oranını ciddi oranda düşürecek ve acil durum servislerinin daha hızlı hareket etmesini sağlayacak.
 
 :::
 
 ---
 > id: applications-6
 
-Bu görüntü, Kuzey Avrupa'daki ticari havayolu uçuşları ağını göstermektedir. 
+Bu resim kuzey Avrupa’daki ticari uçuş ağlarını gösteriyor.
 
     x-parallax.full-width(background="images/flights.jpg")
 
 ---
 > id: applications-7
 
-Bilim, mühendislik veya günlük yaşamda sayısız grafik var: 
+Bilim, mühendislik ve günlük hayatta sayamayacağımız kadar çok çizge vardır.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/molecules.jpg" width=200 height=200)
 
-{.caption} __Moleküllerdeki__ atomlar ve kristal ızgaralar arasındaki bağlantılar bir grafik oluşturur. 
+{.caption} __Moleküllerde__ ve kristallerde atomlar arası bağlar birer çizge oluştururlar.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/epidemic.jpg" width=200 height=200)
 
-{.caption} __Hastalıkların__ ve salgın __hastalıkların yayılması__ bir ağ kullanılarak modellenebilir. 
+{.caption} __Hastalıkların yayılması__ ve salgınlar ağlar kullanarak modellenebilirler.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/evolution.jpg" width=200 height=200)
 
-{.caption} Biyolojide, türlerin soyunu gösteren __evrim ağaçları__ bir grafik oluşturur. 
+{.caption} Biyolojide türlerin atalarını gösteren __evrim ağaçları__ birer çizgedir.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/network6.jpg" width=200 height=200)
 
-{.caption} __Elektrik devrelerinin__ ve bilgisayar çiplerinin farklı bileşenleri bir ağ oluşturur. 
+{.caption} __Elektrik devrelerinin__ ve bilgisayar işlemcilerinin çeşitli kısımları birer ağ oluştururlar.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/letters.jpg" width=200 height=200)
 
-{.caption} __Dillerin__ dilbilgisel yapısı, örneğin çeviri algoritmaları oluşturmak için grafikler kullanılarak modellenebilir. 
+{.caption} __Dillerin__ dil bilgisel yapıları çizgeler ile modellenebilir, böylece tercüme algoritmaları yazılabilir.
 
 ::: column(width=200)
 
     x-img(lightbox src="images/finance.jpg" width=200 height=200)
 
-{.caption} Grafiklerin __olasılık__ , __oyun teorisi__ ve __finansal matematik alanlarında__ da birçok uygulaması vardır. 
+{.caption} Çizgelerin __olasılık__, __oyun teorisi__ ve __finansal matematikte__ de pek çok uygulaması vardır.
 
 :::
 
 ---
 > id: social
 
-### Sosyal ağlar 
+### Sosyal Ağlar
 
-Son olarak, günlük hayatta var olan grafiklerin özellikle iyi bir örneğini düşünelim: sosyal medya. Burada köşeler [[insanları]] temsil eder [[| Arkadaşlar | ağlar]] ve kenarlar arkadaşlıkları, beğenileri, abonelikleri veya takipçileri temsil eder. 
+Son olarak günlük hayatımızda çok yeri olan güzel birkaç çizge örneğine bakalım: sosyal medya. Burada köşeler [[insanları|arkadaşları|ağları]] temsil eder, çizgiler de arkadaşlıkları, beğenileri, abonelikleri ya da takipçileri.
 
-Sosyal medya grafikleri çizdiğimizde, aynı okula gitmiş veya aynı şehirde yaşayan bazı karşılıklı arkadaş __kümeleri__ görebiliriz. Ayrıca, bir tepe noktasının ne kadar iyi bağlandığına bağlı olan ve bir kişinin sosyal medyadaki popülaritesinin bir ölçüsü olabilecek insanların __merkeziliğini__ belirleyebiliriz. 
+Sosyal medya çizgelerini çizmeye başladığımızda kimi ortak arkadaşlık kümelerini açıkça görebiliriz, bunlar aynı okula gitmiş ya da aynı şehirde yaşıyor olabilirler. Ayrıca insanların __merkeziliğini__ de ölçebiliriz, bu bir köşenin diğerleri ile ne kadar bağantısı olduğu ile ilişkili. Bu bir kişinin sosyal medyadaki popülerliğinin bir ölçütü olabilir.
 
     figure: x-img(lightbox src="images/social-network.png" width=720 height=500)
 
@@ -988,9 +1015,9 @@ Sosyal medya grafikleri çizdiğimizde, aynı okula gitmiş veya aynı şehirde 
 
 ::: column.grow
 
-2014 yılında Facebook'un 1,4 milyar aktif kullanıcısı ve toplam 200 milyardan fazla arkadaşı vardı. Tüm Facebook kullanıcılarının yarısının 200'den fazla arkadaşı var ve arkadaşlarımızın çoğunun benzer sayıda arkadaşı olduğundan, on binlerce _arkadaşımız_ kolayca olabilir. 
+2014’te Facebook’un 1.4 milyar aktif kullanıcısı ve toplam 200 milyardan fazla arkadaşlığı vardı. Facebook kullanıcılarının yarısından çoğu 200’den fazla arkadaşa sahipler ve arkadaşlarımızın çoğunun da bu kadar arkadaşı olduğu için, çoğumuzun on binlerce _arkadaşının arkadaşı_ var.
 
-Heyecan verici bir soru şu olurdu: İki rastgele Facebook kullanıcısı seçerseniz, birinden diğerine geçmek için kaç “arkadaşlık kenarı” takip etmeniz gerekir? Örneğin, arkadaşlar arasındaki mesafe [[1]] , arkadaşların arkadaşları arasındaki mesafe [[2'dir]] . 
+İlginç bir soru şu olabilir: iki rastgele Facebook kullanıcısı seçersek, birinden diğerine ulaşmak için kaç tane “arkadaşlık çizgisi” ilerlememiz gerek? Örneğin iki arkadaş arasındaki mesafe [[1]], ve arkadaşınızın arkadaşı ile mesafeniz [[2]].
 
 ::: column(width=200)
 
@@ -1001,13 +1028,14 @@ Heyecan verici bir soru şu olurdu: İki rastgele Facebook kullanıcısı seçer
 ---
 > id: social-2
 
-2016 yılında Facebook, kullanıcılarının birbirine nasıl bağlandığını belirlemek için [bir çalışma yaptı](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/) . Ortalama olarak, Facebook'ta en fazla 3.57 kişi aracılığıyla _başka birine_ bağlı olduğunuzu buldular. Ve buna ünlüler, politikacılar ve hatta telif dahildir! 
+Facebook’un 2016’da yürüttüğü bir [araştırmaya](https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/) göre Facebook’taki başka bir kişiye olan ortalama mesafeniz 3.57: bu durumda __ayrılık derecesi__ 3.57 diyoruz.
 
-Başka bir deyişle, dünyanın her yerinden milyarlarca Facebook kullanıcısından birini seçerseniz, muhtemelen arkadaşlarınızdan birinin arkadaşını tanıyan bir arkadaşınızın arkadaşı olacaktır. 3,57 __derece ayrılma__ olduğunu söylüyoruz. 
+Başka bir deyişle dünyanın her yerindeki bir milyar Facebook kullanıcısından herhangi bir tanesini seçerseniz, o kişi sizin arkadaşınızın arkadaşını tanıyan bir arkadaşa, ya da onu tanıyan bir arkadaşa sahip olacak. Ve bu ünlüleri, politikacaları, kraliyet ailelerini de kapsıyor…
+
 
     figure
       x-img(lightbox src="images/facebook.jpg" width=720 height=360 credit="© Facebook")
-      p.caption Geographic visualisation of all Facebook friendships in 2010.
+      p.caption 2010’daki bütün Facebook arkadaşlıklarının coğrafi gösterimi.
 
 ---
 > id: social-3
@@ -1018,10 +1046,9 @@ Başka bir deyişle, dünyanın her yerinden milyarlarca Facebook kullanıcısı
 
 ::: column.grow
 
-1929'da, Macar yazar [Frigyes Karinthy](bio:karinthy) ilk olarak “altı derecelik Ayrılık” fikrini önerdiğinde, internet ya da sosyal medya yoktu, ancak dünya zaten daha fazla birbirine bağlı hale gelmişti. 
+İlk defa 1929’da Macar yazar [Frigyes Karinthy](bio:karinthy) “altı ayrılık derecesi” fikrini ortaya attı. İnternet ya da sosyal medya henüz yoktu, ama yine de dünyadaki insanlar arası bağlar güçlenmeye başlamıştı.
 
-1967'de [Stanley Milgram](bio:milgram) , Nebraska ve Kansas'ta yaşayan 296 katılımcıdan Boston, Massachusetts'te yaşayan belirli bir kişiye mektup göndermesinin istendiği ilk deneysel deneyi gerçekleştirdi. Hepsi mektubu göndermek için bir arkadaş seçmek zorunda kaldılar, sonra başka bir arkadaş seçtiler. Her adımda mektup Boston'a yaklaştı. Milgram, ortalama olarak sadece 5.2 ara arkadaş olduğunu - 5.2 derece ayrılma olduğunu buldu. 
-
+İlk defa 1967’de [Stanley Milgram](bio:milgram) ampirik bir deney yaptı, Nebraska ve Kansas’ta yaşayan 296 katılımcıdan Boston, Massachusetts’deki bir kişiye bir posta göndermelerini istedi. Hepsi alıcı olarak bir arkadaşlarını seçeceklerdi, sonra arkadaşları kendi arkadaşını seçecekti. Her adımda mektup Boston’a biraz daha yaklaştı. Milgram’ın bulgularına göre ortalama olarak sadece 5.2 tane aracı arkadaş vardı &#8211; ayrılık derecesi 5.2.
 :::
 
-Bugün, hepimiz sosyal etkileşimlerimizin, seyahatimizin, İnternet ve teknolojimizin, bilimin ve çok daha fazlasının altında yatan sayısız görünmez grafiğin bir parçasıyız.
+Bugün hepimiz görünmez devasa bir çizgenin parçasıyız. Bu çizge bizim sosyal ilişkilerimizin, yolculuklarımızın, internetin ve teknolojinin, bilimin ve daha fazlasının altında yatıyor.
