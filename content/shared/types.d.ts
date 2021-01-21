@@ -656,8 +656,8 @@ export class Geopad extends CoordinatePlane {
   animateConstruction(name: string, duration?: number): Promise<void>;
   showGesture(from: string, to?: string): void;
   waitForPoint(): Promise<GeoPoint>;
-  waitForPath<T extends Path = Path>(validate: PathDefinition, options?: WaitForPathsOptions): Promise<GeoPath<Path>>;
-  waitForPaths<T extends Path = Path>(paths: PathDefinition[], options?: WaitForPathsOptions): Promise<GeoPath<Path>[]>;
+  waitForPath<T extends Path = Path>(validate: PathDefinition, options?: WaitForPathsOptions): Promise<GeoPath<T>>;
+  waitForPaths<T extends Path = Path>(paths: PathDefinition[], options?: WaitForPathsOptions): Promise<GeoPath<T>[]>;
 }
 export abstract class GeoShape$<T extends Point|Path = Point|Path> {
   readonly $parent: Geopad;

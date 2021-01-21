@@ -258,7 +258,7 @@ class HammingDigit {
     }
 }
 
-@register('x-hamming', {attributes: ['value', 'direction']})
+@register('x-hamming')
 export class HammingCode extends CustomElementView {
 
     private $svg!: SVGParentView;
