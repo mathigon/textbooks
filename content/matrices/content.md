@@ -1700,6 +1700,18 @@ Here is the formula for calculating a 3x3 matrix. There is a way to calculate in
 > section: systems
 > sectionStatus: dev
 
+> id: cartography
+
+Here's a map
+
+    figure: include svg/map-with-dots.svg
+
+
+A map of Netherlands that Gauss helped fix.
+
+---
+
+
 {.todo} COMING SOON
 > id: gaussian-solve
 

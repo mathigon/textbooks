@@ -15,6 +15,30 @@ import './components/gaussian';
 import {Gaussian} from './components/gaussian';
 
 
+export function map($step: Step) {
+  console.log('map');
+  const $map = $step.$('#map-with-dots');
+  const $netherlands = $step.$('#netherlands');
+  // const $linesKeep = $step.$('#lines-keep');
+  const $linesHide = $step.$('#lines-hide');
+  const $mapHide = $step.$('#points-map-hide');
+  // const $mapShow = $step.$('#points-map-show');
+
+  console.log($map);
+  setTimeout(() => {
+    $netherlands?.exit('fade');
+  }, 2000);
+
+  setTimeout(() => {
+    $linesHide?.exit('fade');
+    $mapHide?.exit('fade');
+  }, 3000);
+
+  setTimeout(() => {
+    $map?.css('transform', 'scale(2) translate(-50%,0)');
+  }, 6000);
+}
+
 export function rocket($step: Step) {
   const $geo = $step.$('x-geopad') as Geopad;
   $step.model.th = 0;
