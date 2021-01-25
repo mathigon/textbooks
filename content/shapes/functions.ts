@@ -15,6 +15,7 @@ import {VoronoiStep} from './components/voronoi';
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
 import {ORANGE, TEAL} from '../shared/constants';
+import {list} from '@mathigon/core';
 
 // SECTION: introduction / rectangles
 
@@ -33,8 +34,8 @@ export function performance1($step: Step) {
   const scale = (600 / 30) * 4; // Pixels per meter
   const blockSize = (1 / 4) * scale;
   const blocks: {poly: Rectangle, path: GeoPath}[] = [];
-  [...Array(30).keys()].forEach(column =>
-    [...Array(20).keys()].forEach(row => {
+  for (const column of list(30)) {
+    for (const row of list(20)) {
       const block = new Rectangle(
           new Point(column * blockSize, row * blockSize),
           blockSize,
@@ -43,11 +44,11 @@ export function performance1($step: Step) {
       const path = $geopad.drawPath(block);
       path.$el.css({'stroke-width': 2});
       blocks.push({poly: block, path});
-    })
-  );
+    }
+  }
   setupRope('performance-1', 20 * scale, $geopad, $step, (line: Polyline, reset: VoidFunction) => {
     const areaBlocks = blocks.filter(block => block.poly.points.every(point => line.contains(point)));
-    areaBlocks.forEach(block => block.path.$el.css({fill: 'lime'}));
+    for (const block of areaBlocks) block.path.$el.css({fill: 'lime'});
     if (areaBlocks.length >= 200) {
       courseModel.firstArea = {
         ropeUsed: length(line) / scale,
@@ -193,20 +194,20 @@ class RopePoly {
   constructor(...points: Point[]) {
     this._poly = new Polygon(...points);
     this.cPoints = new RopePoints();
-    points.forEach(this.cPoints.addPoint);
+    for (const point of points) this.cPoints.addPoint(point);
   }
   getNearest(to: Point) {
     let nearest = {
       point: this.points[0],
       index: 0
     };
-    this.points.forEach((point, index) => {
+    for (const [index, point] of this.points.entries()) {
       const d1 = Point.distance(point, to);
       const d2 = Point.distance(nearest.point, to);
       if (d1 < d2) {
         nearest = {point, index};
       }
-    });
+    }
     return nearest;
   }
   movePoint(index: number, to: Point) {
@@ -249,12 +250,12 @@ type DraggableRectanglesOptions = {
 
 function setupDraggableRectangles($polypad: Polypad, options: DraggableRectanglesOptions) {
   // [TODO]: Make 'infinite' rectangles if count == 0
-  [...Array(options.count)].forEach((_, index) => {
+  for (const index of list(options.count)) {
     const initLoc = options.initLocations != null ? options.initLocations[index] : new Point(0, 0);
     const r = new Rectangle(new Point(0, 0), options.dimensions.x, options.dimensions.y);
     const tile = $polypad.newTile('polygon', getTangramPolystr(r.points));
     tile.setTransform(initLoc);
-  });
+  }
 }
 
 export function stripPlacement($step: Step) {
@@ -447,7 +448,7 @@ export function boatBuilding($step: Step) {
           ...r.poly.points
         ]);
         if (finishedRect != null) {
-          pieces.forEach(piece => piece.erase());
+          for (const piece of pieces) piece.erase();
           $geopad.drawPath(finishedRect);
           $step.addHint('correct');
           $step.score('arranged');
@@ -476,10 +477,10 @@ export function boatBuilding($step: Step) {
   );
   pieces.push(right);
   // [TODO] handle this via constructor option rather than external function
-  pieces.forEach((geopoly, index) => {
-    geopoly.addSnapFriend(pieces[(index + 1) % 3]);
-    geopoly.addSnapFriend(pieces[(index + 2) % 3]);
-  });
+  for (const [index, geoPoly] of pieces.entries()) {
+    geoPoly.addSnapFriend(pieces[(index + 1) % 3]);
+    geoPoly.addSnapFriend(pieces[(index + 2) % 3]);
+  }
   $geopad.switchTool('move');
   $step.onScore('arranged', () => {
     const rect = finishedRect!;
@@ -503,14 +504,14 @@ export function glassArea($step: Step) {
   $polypad.$svg.setAttr('viewBox', '0 0 600 400');
   $polypad.canDelete = $polypad.canCopy = false;
   const tiles: Tile[] = [];
-  [...Array(12).keys()].forEach((_, index) => {
+  for (const index of list(12)) {
     const t = $polypad.newTile('tangram', '2');
     t.setRotation(45);
     const xOffset = squareSize * (index % 4);
     const yOffset = squareSize * Math.floor(index / 4);
     t.setPosition(startCorner.shift(xOffset, yOffset), 1);
     tiles.push(t);
-  });
+  }
   // top left: 0, bottom right: 2
   let figure = 2;
   $step.$('button.btn.submit-shape')?.on('click', () => {
@@ -530,8 +531,8 @@ function touches(pairs: [Polygon, Polygon][], _size: number): number[] {
   return filterMap(pairs, ([a, b]) => {
     let overlap = 0;
     if (intersections(a, b).length == 0) {
-      a.edges.forEach(aEdge =>
-        b.edges.forEach(bEdge => {
+      for (const aEdge of a.edges) {
+        for (const bEdge of b.edges) {
           if (parallel(aEdge, bEdge)) {
             if (aEdge.equals(bEdge)) {
               overlap = 1;
@@ -557,8 +558,8 @@ function touches(pairs: [Polygon, Polygon][], _size: number): number[] {
               }
             }
           }
-        })
-      );
+        }
+      }
     }
     return overlap == 0 ? null : overlap;
   });
@@ -572,11 +573,11 @@ function parallel(a: Line, b: Line) {
 
 function pairs<T>(set: T[]): [T, T][] {
   const ps: [T, T][] = [];
-  set.forEach((item, index) => {
-    set.slice(index + 1).forEach(item2 => {
+  for (const [index, item] of set.entries()) {
+    for (const item2 of set.slice(index + 1)) {
       ps.push([item, item2]);
-    });
-  });
+    }
+  }
   return ps;
 }
 
@@ -714,7 +715,7 @@ class RenderedPoly {
   }
   erase() {
     this.path.delete();
-    this.path.components.forEach(c => c.delete());
+    for (const c of this.path.components) c.delete();
   }
   translate(by: Point) {
     this._poly = this._poly.translate(by);
@@ -769,7 +770,7 @@ export function dough($step: Step) {
         {color: 'blue'}
     );
   const cutters: RenderedPoly[] = [];
-  [...Array(4)].forEach((_, index) => {
+  for (const index of list(4)) {
     const cutterSize = 30;
     const padding = (areaSize - (cutterSize * 2)) / 3;
     const spacing = cutterSize + padding;
@@ -798,7 +799,7 @@ export function dough($step: Step) {
           }
       );
     cutters.push(cutter);
-  });
+  }
 }
 
 export function dough2($step: Step) {
@@ -832,7 +833,7 @@ export function dough2($step: Step) {
     const seg = cutLine!.value as Line;
     const cut = new Line(seg.p1, new Point(seg.p1.x, seg.p2.y));
     cutLine?.delete();
-    cutLine?.components.forEach(c => c.delete());
+    if (cutLine != undefined) for (const c of cutLine.components) c.delete();
     para.erase();
     const cutPolys = para.cut(cut, {draggable: true, snap: true, onEnd: _arg => {
       const [a, b] = cutPolys!;
@@ -920,7 +921,7 @@ function filterMap<CT, RT>(arr: CT[], pred: (elem: CT) => RT | null): RT[] {
 export function identifyParallelograms($step: Step) {
   const $svg = $step.$('svg') as SVGParentView;
   let identified = 0;
-  $svg.$$('path').forEach($path => {
+  for (const $path of $svg.$$('path')) {
     if ($path.hasClass('parallelogram')) {
       $path.on('click', () => {
         if (!$path.hasAttr('clicked')) {
@@ -934,7 +935,7 @@ export function identifyParallelograms($step: Step) {
     } else {
       $path.on('click', () => $step.addHint('incorrect'));
     }
-  });
+  }
 }
 
 export function apartments($step: Step) {
@@ -1099,15 +1100,15 @@ export function congruentTriangles($step: Step) {
     }
   };
   $step.$('button.copies')?.on('click', () => {
-    $tris.forEach($tri => {
+    for (const $tri of $tris) {
       const $copy = $tri.copy() as Tile;
       $copy.setColour(ORANGE);
       $pairs.push([$tri, $copy]);
-    });
-    $pairs.forEach(([$a, $b]) => {
+    }
+    for (const [$a, $b] of $pairs) {
       $a.$el.on('mouseup', checkDone);
       $b.$el.on('mouseup', checkDone);
-    });
+    }
   });
 }
 
@@ -1117,7 +1118,7 @@ function convexHull(points: Point[]) {
     return a.x != b.x ? a.x - b.x : a.y - b.y;
   });
   const lower: Point[] = [];
-  sorted.forEach(point => {
+  for (const point of sorted) {
     while (
       lower.length >= 2 &&
       crossProd(lower[lower.length - 2], lower[lower.length - 1], point) <= 0
@@ -1125,9 +1126,9 @@ function convexHull(points: Point[]) {
       lower.pop();
     }
     lower.push(point);
-  });
+  }
   const upper: Point[] = [];
-  sorted.reverse().forEach(point => {
+  for (const point of sorted.reverse()) {
     while (
       upper.length >= 2 &&
       crossProd(upper[upper.length - 2], upper[upper.length - 1], point) <= 0
@@ -1135,7 +1136,7 @@ function convexHull(points: Point[]) {
       upper.pop();
     }
     upper.push(point);
-  });
+  }
   upper.pop();
   lower.pop();
   return new Polygon(...lower, ...upper);
@@ -1159,7 +1160,7 @@ function setupBaseHeight(
   }) {
   let selectedEdge = -1;
   let edgeChosen = false;
-  initPoly.edges.forEach((edge, index) => {
+  for (const [index, edge] of initPoly.edges.entries()) {
     const edgePath = $geopad.drawPath(edge);
     edgePath.$el.css({'stroke-width': '4px', color: '#000000'});
     // [TODO]: Replace with stylesheet-based css?
@@ -1185,13 +1186,13 @@ function setupBaseHeight(
 
         const poly =
           options?.partner != undefined ?
-            convexHull([...options.partner.poly.points, ...initPoly.points]) :
+            convexHull(options.partner.poly.points.concat(initPoly.points)) :
             initPoly;
         if (options?.partner != undefined) {
-          options.partner.poly.edges.forEach(partnerEdge => {
+          for (const partnerEdge of options.partner.poly.edges) {
             const partnerEdgePath = $geopad.drawPath(partnerEdge);
             partnerEdgePath.$el.css({'stroke-width': '4px', color: '#000000'});
-          });
+          }
         }
 
         const pointsEq = (a: Point, b: Point) => {
@@ -1224,7 +1225,7 @@ function setupBaseHeight(
             p.components[1].setValue(p2);
             p.setLabel(height.toFixed(2).toString());
           } else {
-            p.components.forEach(c => c.delete());
+            for (const c of p.components) c.delete();
             p.delete();
             heightPath.$el.hide();
             options?.onIncorrect?.();
@@ -1232,7 +1233,7 @@ function setupBaseHeight(
         });
       }
     });
-  });
+  }
 }
 
 export function area3($step: Step) {
@@ -1333,7 +1334,7 @@ export function triangleSelection($step: Step) {
     ];
   });
   let clicks = 0;
-  $pairs.forEach(([$a, $b]) => {
+  for (const [$a, $b] of $pairs) {
     $a.on('click', () => {
       if (!$a.hasAttr('clicked')) {
         $step.addHint('correct');
@@ -1343,7 +1344,7 @@ export function triangleSelection($step: Step) {
         if (clicks == 3) $step.score('clicks');
       }
     });
-  });
+  }
 }
 
 // SECTION: Polygons
@@ -1384,9 +1385,9 @@ export async function voronoi1($step: VoronoiStep) {
   $step.model.vorOpacity = 0;
   $step.model.cells = [];
 
-  cafeLocationPoints.forEach(locationPoint => {
+  for (const locationPoint of cafeLocationPoints) {
     $geopad.drawPoint(locationPoint, {classes: 'red', interactive: false});
-  });
+  }
 
   $step.model.cells = getVoronoiPolys(bounds).map(poly => {
     return {poly, over: false};
@@ -1436,43 +1437,43 @@ export async function voronoi1($step: VoronoiStep) {
 
     const cells = $step.model.cells;
     if ($step.model.vorOpacity != 0) {
-      cells.forEach((cell, i) => {
+      for (const [index, cell] of cells.entries()) {
         const opacity = cell.over ? $step.model.vorOpacity / 2 : $step.model.vorOpacity / 3;
         $canvas.draw(
             cell.poly,
             {
-              fill: voronoiColours[i % 9],
+              fill: voronoiColours[index % 9],
               stroke: 'black',
               strokeWidth: 2,
               opacity
             }
         );
-      });
+      }
     }
 
-    dynPoints.forEach(({gPoint, dlOpacity}) => {
+    for (const {gPoint, dlOpacity} of dynPoints) {
 
       const edges: Segment[] = [];
 
       let shortest = {len: Number.POSITIVE_INFINITY, ind: 0};
 
-      cafeLocationPoints.forEach((locationPoint, i) => {
+      for (const [index, locationPoint] of cafeLocationPoints.entries()) {
         const newEdge = new Segment(locationPoint, gPoint.value!);
         if (newEdge.length < shortest.len) {
-          shortest = {len: newEdge.length, ind: i};
+          shortest = {len: newEdge.length, ind: index};
         }
         edges.push(newEdge);
-      });
+      }
 
-      edges.forEach((edge, i) => {
-        const stroke = i == shortest.ind ? 'red' : 'black';
-        const strokeWidth = i == shortest.ind ? 2 : 1;
-        const opacity = i == shortest.ind ? 1 : dlOpacity;
+      for (const [index, edge] of edges.entries()) {
+        const stroke = index == shortest.ind ? 'red' : 'black';
+        const strokeWidth = index == shortest.ind ? 2 : 1;
+        const opacity = index == shortest.ind ? 1 : dlOpacity;
         if (opacity != 0) {
           $canvas.draw(edge, {stroke, strokeWidth, opacity});
         }
-      });
-    });
+      }
+    }
   });
 }
 
@@ -1505,31 +1506,31 @@ export async function voronoi2($step: VoronoiStep) {
     return {poly, over: false};
   });
 
-  cells.forEach((cell, i) => {
+  for (const [index, cell] of cells.entries()) {
     let options = {};
-    if (i == 12) {
+    if (index == 12) {
       options = {class: 'triangle-cell'};
     }
     const $cell = $N('path', options, $geopad.$paths) as SVGView;
-    $cell.css({fill: voronoiColours[i % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.css({fill: voronoiColours[index % 9], stroke: 'black', 'stroke-width': '2px'});
     $cell.draw(cell.poly);
-  });
+  }
 
 
   let selectedEdge = -1;
   let edgeChosen = false;
   const tri = cells[12].poly;
-  tri.edges.slice(0, 3).forEach((edge, i) => {
+  for (const [index, edge] of tri.edges.slice(0, 3).entries()) {
     const edgePath = $geopad.drawPath(edge);
     edgePath.$el.css({'stroke-width': '4px', color: '#000000'});
     // [TODO]: Replace with stylesheet-based css?
     edgePath.$el.on('mouseenter', () => {
-      if (selectedEdge != i) {
+      if (selectedEdge != index) {
         edgePath.$el.css({color: '#ffffff'});
       }
     });
     edgePath.$el.on('mouseleave', () => {
-      if (selectedEdge != i) {
+      if (selectedEdge != index) {
         edgePath.$el.css({color: '#000000'});
       }
     });
@@ -1537,7 +1538,7 @@ export async function voronoi2($step: VoronoiStep) {
       if (!edgeChosen) {
         edgeChosen = true;
         edgePath.$el.css({color: '#ff0000'});
-        selectedEdge = i;
+        selectedEdge = index;
         edgePath.setLabel(edge.length.toFixed(2).toString());
         $step.score('side-selected');
 
@@ -1573,7 +1574,7 @@ export async function voronoi2($step: VoronoiStep) {
             p.components[1].setValue(p2);
             p.setLabel(height.toFixed(2).toString());
           } else {
-            p.components.forEach(c => c.delete());
+            for (const c of p.components) c.delete();
             p.delete();
             heightPath.$el.hide();
             $step.addHint('incorrect');
@@ -1581,7 +1582,7 @@ export async function voronoi2($step: VoronoiStep) {
         });
       }
     });
-  });
+  }
 
   $geopad.showLabels = true;
 }
@@ -1622,19 +1623,19 @@ export async function voronoi3($step: VoronoiStep) {
     return {poly, over: false};
   });
 
-  cells.forEach((cell, i) => {
+  for (const [index, cell] of cells.entries()) {
     let options = {};
-    if (i == 6) {
+    if (index == 6) {
       options = {class: 'four-sided'};
-    } else if (i == 3) {
+    } else if (index == 3) {
       options = {class: 'five-sided'};
-    } else if (i == 5) {
+    } else if (index == 5) {
       options = {class: 'six-sided'};
     }
     const $cell = $N('path', options, $geopad.$paths) as SVGView;
-    $cell.css({fill: voronoiColours[i % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.css({fill: voronoiColours[index % 9], stroke: 'black', 'stroke-width': '2px'});
     $cell.draw(cell.poly);
-  });
+  }
 }
 
 function getVoronoiPolys(bounds: number[]) {
@@ -1682,17 +1683,17 @@ export async function populations($step: Step) {
   const pentagon = cells[8];
   cells[8] = cells.pop()!;
   cells.push(pentagon);
-  cells.forEach((cell, i) => {
+  for (const [index, cell] of cells.entries()) {
     let options = {};
     let css: Record<string, any> = {fill: cell.color, stroke: 'black', 'stroke-width': '2px'};
-    if (i == cells.length - 1) {
+    if (index == cells.length - 1) {
       options = {class: 'population-pentagon'};
       css = {fill: cell.color, stroke: 'white', 'stroke-width': '3px'};
     }
     const $cell = $N('path', options, $geopad.$paths) as SVGView;
     $cell.css(css);
     $cell.draw(cell.poly);
-  });
+  }
 }
 
 export function polygonNames($step: Step) {
@@ -1721,27 +1722,27 @@ export function polyVerts($step: Step) {
 
   let doneMoving = false;
 
-  $geopads.forEach(($geopad, i) => {
+  for (const [index, $geopad] of $geopads.entries()) {
 
     const p: {[key: string]: boolean} = {};
 
-    $geopad.points.forEach(point => {
+    for (const point of $geopad.points) {
       p[point.name] = false;
       point.$el.on('mousemove', (e: MouseEvent) => {
 
         // When mousemove has been fired AND e.buttons == 1 (left mouse button is down), this means we are dragging
         if (e.buttons == 1) {
-          pointsMoved[i][point.name] = true;
+          pointsMoved[index][point.name] = true;
           if (pointsMoved.every(atLeastTwoMoved) && !doneMoving) {
             doneMoving = true;
             $step.score('verts-moved');
           }
         }
       });
-    });
+    }
 
     pointsMoved.push(p);
-  });
+  }
 }
 
 export function simpleTangram($step: Step) {
@@ -1808,17 +1809,17 @@ function tangramComplete(tiles: Set<Tile>, baseOffset: number) {
 
   let closeEnough = true;
 
-  currentStates.forEach((state, i) => {
+  for (const [index, state] of currentStates.entries()) {
     if (
-      state[0] < ranges[i][0][0] ||
-      state[0] > ranges[i][0][1] ||
-      state[1] < ranges[i][1][0] ||
-      state[1] > ranges[i][1][1] ||
-      state[2] != correctStates[i][2]
+      state[0] < ranges[index][0][0] ||
+      state[0] > ranges[index][0][1] ||
+      state[1] < ranges[index][1][0] ||
+      state[1] > ranges[index][1][1] ||
+      state[2] != correctStates[index][2]
     ) {
       closeEnough = false;
     }
-  });
+  }
 
   return closeEnough;
 
@@ -1883,13 +1884,13 @@ export function currysParadox1($step: Step) {
   const $bg = $step.$('svg.solution-outline')! as SVGParentView;
   $bg.setAttr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
 
-  paradoxData.polys.forEach((polyVals, i) => {
+  for (const [index, polyVals] of paradoxData.polys.entries()) {
     const $bgPath = $N('path', {}, $bg) as SVGView;
-    const poly = (new Polygon(...polyVals)).translate(finalPositions[i]);
+    const poly = (new Polygon(...polyVals)).translate(finalPositions[index]);
     $bgPath.draw(poly);
-  });
+  }
 
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     if (index == 0) {
@@ -1897,7 +1898,7 @@ export function currysParadox1($step: Step) {
     }
     tile.setColour(paradoxData.polyColours[index]);
     tile.setTransform(paradoxData.polyOrigins[index]);
-  });
+  }
 
   let done = false;
   $polypad.on('move-selection', () => {
@@ -1957,12 +1958,12 @@ export function currysParadox2($step: Step) {
   const $polypad = $step.$('.tangram-polys > x-polypad') as Polypad;
   polypadPrep($polypad, 425, 225, true);
 
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
     tile.setTransform(paradoxData.polyOrigins[index]);
-  });
+  }
 }
 
 export function currysParadox3($step: Step) {
@@ -1970,12 +1971,12 @@ export function currysParadox3($step: Step) {
   const $polypad = $step.$('.zoom-1 > x-polypad') as Polypad;
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
     tile.setTransform(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(2)));
-  });
+  }
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
   outlineTile.setTransform(new Point(tangramScale(1), tangramScale(7)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
@@ -1993,9 +1994,9 @@ export function currysParadox3($step: Step) {
     const scale = 1 - (n / 1100);
     const factor = tangramScale(scale);
     $polypad.$svg.setAttr('viewBox', `${9 * (tangramScale(1) - factor)} ${4 * (tangramScale(1) - factor)} ${paradoxData.baseWidth * factor} ${paradoxData.baseHeight * factor}`);
-    [...$polypad.tiles.values()].forEach(tile => {
+    for (const tile of $polypad.tiles) {
       tile.$el.$('g path.polygon-tile')?.css({'stroke-width': `${scale}px`});
-    });
+    }
     $outline.css({'stroke-width': `${scale * 4}px`});
   });
 }
@@ -2004,13 +2005,13 @@ export function currysParadox4($step: Step) {
   const $polypad = $step.$('.triangle-ref > x-polypad') as Polypad;
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
     tile.setTransform(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(2)));
     tile.$el.addClass('paradox-poly');
-  });
+  }
 }
 
 export function currysParadox5($step: Step) {
@@ -2019,12 +2020,12 @@ export function currysParadox5($step: Step) {
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
   // TODO Cleanup duplicate code!
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
     tile.setTransform(paradoxData.nextRelative[index].shift(tangramScale(1), tangramScale(2)));
-  });
+  }
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
   outlineTile.setTransform(new Point(tangramScale(1), tangramScale(7)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
@@ -2042,9 +2043,9 @@ export function currysParadox5($step: Step) {
     const scale = 1 - (n / 1100);
     const factor = tangramScale(scale);
     $polypad.$svg.setAttr('viewBox', `${6 * (tangramScale(1) - factor)} ${5 * (tangramScale(1) - factor)} ${paradoxData.baseWidth * factor} ${paradoxData.baseHeight * factor}`);
-    [...$polypad.tiles.values()].forEach(tile => {
+    for (const tile of $polypad.tiles) {
       tile.$el.$('g path.polygon-tile')?.css({'stroke-width': `${scale}px`});
-    });
+    }
     $outline.css({'stroke-width': `${scale * 4}px`});
   });
 }
@@ -2053,7 +2054,7 @@ export function currysParadox6($step: Step) {
   const $polypad = $step.$('.paradox-comparison > x-polypad') as Polypad;
   polypadPrep($polypad, 425, 475, true);
 
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
 
     const tile1 = $polypad.newTile('polygon', polyStr);
@@ -2063,7 +2064,7 @@ export function currysParadox6($step: Step) {
     const tile2 = $polypad.newTile('polygon', polyStr);
     tile2.setColour(paradoxData.polyColours[index]);
     tile2.setTransform(paradoxData.nextRelative[index].shift(tangramScale(1), tangramScale(7)));
-  });
+  }
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
   outlineTile.setTransform(new Point(tangramScale(1), tangramScale(18)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
@@ -2126,7 +2127,7 @@ export function wheels($step: Step) {
     };
   });
 
-  $step.model['wheels'].forEach((wheel: Wheel) => {
+  for (const wheel of $step.model['wheels'] as Wheel[]) {
     wheel.$el.css({fill: 'rgba(0, 0, 0, 0'});
     let initDistance = 0;
     slide(wheel.$el, {
@@ -2160,15 +2161,15 @@ export function wheels($step: Step) {
       }
     });
 
-  });
+  }
 
   $reset?.on('click', () => {
-    $step.model['wheels'].forEach((wheel: Wheel) => {
+    for (const wheel of $step.model['wheels'] as Wheel[]) {
       wheel.distance = 0;
       wheel.$el.setTransform(undefined, undefined);
       wheel.$outline.draw(wheel.initOutline);
       wheel.$distLine.draw(new Segment(wheel.startBottom, wheel.startBottom));
-    });
+    }
   });
 }
 
@@ -2238,12 +2239,12 @@ class ResizeableSquare {
 
     this.poly = new Rectangle(initPos, initSize, initSize).polygon;
 
-    this.edges.forEach(edge => {
+    for (const edge of this.edges) {
       const $el = $N('path', {}, $svg) as SVGView;
       $el.css({'stroke-width': `${strokeWidth}px`, stroke: 'black'});
       $el.draw(edge);
       this.$edges.push($el);
-    });
+    }
 
     this.$box = $N('path', {}, $svg) as SVGView;
     this.$box.css({fill: 'rgba(0, 0, 0, 0)'});
@@ -2253,7 +2254,7 @@ class ResizeableSquare {
     this.topLeft = new Point(0, 0);
 
     const cornerSize = 10;
-    this.poly.points.forEach((point, index) => {
+    for (const [index, point] of this.poly.points.entries()) {
 
       const pos = point.shift(-cornerSize / 2, -cornerSize / 2);
 
@@ -2316,14 +2317,14 @@ class ResizeableSquare {
           this.$box.draw(this.poly);
 
           const edges = this.edges;
-          this.$edges.forEach(($edge, index) => $edge.draw(edges[index]));
+          for (const [index, $edge] of this.$edges.entries()) $edge.draw(edges[index]);
 
           this.handleBounds();
 
         },
         end: () => {
 
-          this.poly.points.forEach((_, index2) => {
+          for (const index2 of this.poly.points.keys()) {
             const cornerRect =
               this.corners[index2].rect
                   .translate(
@@ -2332,7 +2333,7 @@ class ResizeableSquare {
                   .shift(-cornerSize / 2, -cornerSize / 2);
             this.corners[index2].rect = cornerRect;
             this.corners[index2].$el.draw(cornerRect);
-          });
+          }
 
           if (this.isComplete) {
             this.onComplete(this.center, this.apothem);
@@ -2340,7 +2341,7 @@ class ResizeableSquare {
 
         }
       });
-    });
+    }
 
     slide(this.$box, {
       start: (posn: Point) => {
@@ -2351,7 +2352,7 @@ class ResizeableSquare {
         const newPos = posn.subtract(this.topLeft).subtract(this.grabDelta);
 
         this.$box.translate(newPos.x, newPos.y);
-        this.$edges.forEach($edge => $edge.translate(newPos.x, newPos.y));
+        for (const $edge of this.$edges) $edge.translate(newPos.x, newPos.y);
 
         this.poly = this.poly.translate(posn.subtract(last));
 
@@ -2362,15 +2363,15 @@ class ResizeableSquare {
         this.$box.draw(this.poly);
 
         const edges = this.edges;
-        this.$edges.forEach(($edge, index) => {
+        for (const [index, $edge] of this.$edges.entries()) {
           $edge.setTransform(new Point(0, 0));
           $edge.draw(edges[index]);
-        });
+        }
 
-        this.poly.points.forEach((_point, index) => {
+        for (const index of this.poly.points.keys()) {
           this.corners[index].rect = this.corners[index].rect.translate(last.subtract(start));
           this.corners[index].$el.draw(this.corners[index].rect);
-        });
+        }
 
         if (this.isComplete) {
           this.onComplete(this.center, this.apothem);
@@ -2382,7 +2383,7 @@ class ResizeableSquare {
   handleBounds() {
     let complete = true;
     const closeness = 2;
-    this.edges.forEach((edge, index) => {
+    for (const [index, edge] of this.edges.entries()) {
       switch (index) {
         case 0: // top
           if (nearlyEquals(edge.p1.y, this.targetBounds.points[0].y, closeness)) {
@@ -2417,7 +2418,7 @@ class ResizeableSquare {
           }
           break;
       }
-    });
+    }
     this.isComplete = complete;
   }
 
@@ -2435,7 +2436,7 @@ class ResizeableSquare {
 
   hide() {
     this.$box.remove();
-    this.$edges.forEach($edge => $edge.remove());
+    for (const $edge of this.$edges) $edge.remove();
   }
 
 }
@@ -2475,7 +2476,7 @@ export function radiiDiameters($step: Step) {
       if (nearlyEquals(d1, 0) || nearlyEquals(d2, 0)) {
         $geopad.drawPoint(circle.c, {interactive: false});
       }
-      path.components.forEach(c => c.delete());
+      for (const c of path.components) c.delete();
       $diameterTarget!.delete();
     }
     if (diameters > 2 && radii > 2) {
@@ -2491,7 +2492,7 @@ export function diameterCircumference($step: Step) {
 
   let colours = ['red', 'blue', 'green'];
   const drawn: { [x: string]: boolean; } = {};
-  colours.forEach(c => drawn[c] = false);
+  for (const c of colours) drawn[c] = false;
 
   const circle = new Circle(new Point(200, 200), 160);
   $geopad.drawPath(circle);
@@ -2510,12 +2511,12 @@ export function diameterCircumference($step: Step) {
 
   $reset?.on('click', () => {
     colours = ['red', 'blue', 'green'];
-    colours.forEach(c => {
+    for (const c of colours) {
       drawn[c] = false;
       $step.model[c] = new Polyline();
       $step.model['progress'] = new Segment(lineStart.shift(0, 7.5), lineStart.shift(0, 7.5));
       progress.$el.css({stroke: 'none'});
-    });
+    }
     pending = undefined;
   });
 
@@ -2614,7 +2615,7 @@ export function circularHighways($step: Step) {
       } else {
         $step.addHint('incorrect');
         path.delete();
-        path.components.forEach(c => c.delete());
+        for (const c of path.components) c.delete();
         $romeDiameterTarget!.delete();
       }
     }
@@ -2651,7 +2652,7 @@ export function circularHighways($step: Step) {
       } else {
         $step.addHint('incorrect');
         path.delete();
-        path.components.forEach(c => c.delete());
+        for (const c of path.components) c.delete();
       }
     }
   });
@@ -2692,8 +2693,8 @@ export function circularHighways($step: Step) {
 }
 
 function geopadReset($pad: Geopad) {
-  $pad.paths.forEach(path => path.delete());
-  $pad.points.forEach(point => point.delete());
+  for (const path of $pad.paths) path.delete();
+  for (const point of $pad.points) point.delete();
   $pad.switchTool('circle');
 }
 
@@ -2849,9 +2850,9 @@ export function slicing1($step: Step) {
     $geopad.drawPath(largeOutline, {classes: 'slice-outline'});
     $geopad.drawPath(largeBase, {classes: 'slice-dimension'}).setLabel('16.8 cm');
     $geopad.drawPath(largeHeight, {classes: 'slice-dimension'}).setLabel('20.3 cm');
-    $largeSlices.forEach(($slice, index) => {
+    for (const [index, $slice] of $largeSlices.entries()) {
       if (index != 7) $slice.css({opacity: 0.5});
-    });
+    }
 
     const mediumSlicePoints =
       [mediumCenter, mediumGuides[0].segment.p1, mediumGuides[3].segment.p2]
@@ -2869,9 +2870,9 @@ export function slicing1($step: Step) {
     $geopad.drawPath(mediumOutline, {classes: 'slice-outline'});
     $geopad.drawPath(mediumBase, {classes: 'slice-dimension'}).setLabel('12.2 cm');
     $geopad.drawPath(mediumHeight, {classes: 'slice-dimension'}).setLabel('14.8 cm');
-    $mediumSlices.forEach(($slice, index) => {
+    for (const [index, $slice] of $mediumSlices.entries()) {
       if (index != 7) $slice.css({opacity: 0.5});
-    });
+    }
   });
 
 }
@@ -2970,26 +2971,27 @@ export function slicing2($step: Step) {
         const $sideB = $N('path', {}, $svg) as SVGView;
         $sideB.css(css);
         $sideB.draw(sideB);
-        guides.forEach(guide => guide.$el.remove());
+        for (const guide of guides) guide.$el.remove();
         $radius.remove();
       }
     }
   });
   $step.onScore('blank-1', () => {
-    [
-      new Segment(topLeft, center.shift(0, -75)),
-      new Segment(topLeft, center.shift(-75, 0)),
-      new Segment(bottomRight, center.shift(0, 75)),
-      new Segment(bottomRight, center.shift(75, 0)),
-      new Segment(center, center.shift(0, 75)),
-      new Segment(bottomLeft, center.shift(-75, 0)),
-      new Segment(bottomLeft, center.shift(0, 75)),
-      new Segment(center, center.shift(-75, 0))
-    ].forEach(segment => {
+    for (const segment of
+      [
+        new Segment(topLeft, center.shift(0, -75)),
+        new Segment(topLeft, center.shift(-75, 0)),
+        new Segment(bottomRight, center.shift(0, 75)),
+        new Segment(bottomRight, center.shift(75, 0)),
+        new Segment(center, center.shift(0, 75)),
+        new Segment(bottomLeft, center.shift(-75, 0)),
+        new Segment(bottomLeft, center.shift(0, 75)),
+        new Segment(center, center.shift(-75, 0))
+      ]) {
       const $e = $N('path', {}, $svg) as SVGView;
       $e.css({stroke: 'black', 'stroke-width': '1px'});
       $e.draw(segment);
-    });
+    }
   });
 }
 
@@ -3057,8 +3059,8 @@ export function slicesArrangement($step: Step) {
   $step.model.watch((state: any) => {
     const sliceCount = state.n1;
     if (state.arranged) {
-      state.pSlices.all.forEach((slice: Slice) => slice.remove());
-      state.lSlices.all.forEach((slice: Slice) => slice.remove());
+      for (const slice of state.pSlices.all as Slice[]) slice.remove();
+      for (const slice of state.lSlices.all as Slice[]) slice.remove();
       state.pSlices = initPizza(sliceCount, center, radius, {aColor, bColor}, $geopad);
       state.lSlices = initLineup(sliceCount, center.shift(0, (1.5 * radius) + 35), radius, {aColor, bColor}, $geopad);
     }
@@ -3068,14 +3070,14 @@ export function slicesArrangement($step: Step) {
   $geopad.on('mousemove', b => {
     if ($step.model.arranged && !selected) {
       const distances: {d: number, group: string}[] = [];
-      $step.model.lSlices.groupA.forEach((slice: Slice) => {
+      for (const slice of $step.model.lSlices.groupA as Slice[]) {
         const d = slice.distanceToArc(new Point(b.offsetX, b.offsetY));
         distances.push({d, group: 'a'});
-      });
-      $step.model.lSlices.groupB.forEach((slice: Slice) => {
+      }
+      for (const slice of $step.model.lSlices.groupB as Slice[]) {
         const d = slice.distanceToArc(new Point(b.offsetX, b.offsetY));
         distances.push({d, group: 'b'});
-      });
+      }
       const shortest = distances.sort((a, b) => a.d - b.d)[0];
       if (shortest.d <= 10) {
         const pGroup: Slice[] = shortest.group === 'a' ? $step.model.pSlices.groupA : $step.model.pSlices.groupB;
@@ -3088,19 +3090,19 @@ export function slicesArrangement($step: Step) {
           s: pGroup.concat(lGroup),
           g: shortest.group
         };
-        hovering.s.forEach(slice => slice.setArcColor('aqua'));
-        pOther.concat(lOther).forEach(slice => slice.setArcColor('black'));
+        for (const slice of hovering.s) slice.setArcColor('aqua');
+        for (const slice of pOther.concat(lOther)) slice.setArcColor('black');
       } else {
         hovering = null;
         aColor = bColor = 'black';
-        $step.model.pSlices.all.forEach((slice: Slice) => slice.setArcColor('black'));
-        $step.model.lSlices.all.forEach((slice: Slice) => slice.setArcColor('black'));
+        for (const slice of $step.model.pSlices.all as Slice[]) slice.setArcColor('black');
+        for (const slice of $step.model.lSlices.all as Slice[]) slice.setArcColor('black');
       }
     }
   });
   $geopad.on('click', () => {
     if (hovering != null) {
-      hovering.s.forEach(slice => slice.setArcColor('lime'));
+      for (const slice of hovering.s) slice.setArcColor('lime');
       aColor = hovering.g === 'a' ? 'lime' : 'black';
       bColor = hovering.g === 'b' ? 'lime' : 'black';
       selected = true;
@@ -3135,7 +3137,7 @@ function initPizza(slices: number, center: Point, radius: number, colors: {aColo
   const all: Slice[] = [];
   const groupA: Slice[] = [];
   const groupB: Slice[] = [];
-  [...Array(slices).keys()].forEach(index => {
+  for (const index of list(slices)) {
     const slice = new Slice(true, $geopad, radius, arcAngle, center, initAngle + (index * arcAngle));
     if (index < halfCount) {
       slice.setArcColor(colors.aColor);
@@ -3145,7 +3147,7 @@ function initPizza(slices: number, center: Point, radius: number, colors: {aColo
       groupB.push(slice);
     }
     all.push(slice);
-  });
+  }
   return {all, groupA, groupB};
 }
 
@@ -3155,7 +3157,7 @@ function initLineup(slices: number, center: Point, radius: number, colors: {aCol
   const all: Slice[] = [];
   const groupA: Slice[] = [];
   const groupB: Slice[] = [];
-  [...Array(slices).keys()].forEach(index => {
+  for (const index of list(slices)) {
     const flip = index > halfCount - 1;
     const slice = new Slice(false, $geopad, radius, arcAngle, center);
     const halfWidth = slice.width / 2;
@@ -3175,7 +3177,7 @@ function initLineup(slices: number, center: Point, radius: number, colors: {aCol
     }
     all.push(slice);
     slice.draw();
-  });
+  }
   return {all, groupA, groupB};
 }
 
