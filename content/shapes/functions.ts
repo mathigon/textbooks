@@ -498,7 +498,8 @@ export function boatBuilding($step: Step) {
 export function glassArea($step: Step) {
   const $polypad = $step.$('x-polypad') as Polypad;
   const measureTile = $polypad.newTile('tangram', '2') as Tile;
-  const squareSize = Point.distance(measureTile.points[0], measureTile.points[1]);
+  const points = (measureTile.path as Polygon).points;
+  const squareSize = Point.distance(points[0], points[1]);
   measureTile.delete();
   const startCorner = new Point(squareSize, squareSize);
   $polypad.$svg.setAttr('viewBox', '0 0 600 400');
@@ -506,16 +507,19 @@ export function glassArea($step: Step) {
   const tiles: Tile[] = [];
   for (const index of list(12)) {
     const t = $polypad.newTile('tangram', '2');
-    t.setRotation(45);
     const xOffset = squareSize * (index % 4);
     const yOffset = squareSize * Math.floor(index / 4);
-    t.setPosition(startCorner.shift(xOffset, yOffset), 1);
+    t.setTransform(startCorner.shift(xOffset, yOffset), 45);
     tiles.push(t);
   }
   // top left: 0, bottom right: 2
   let figure = 2;
   $step.$('button.btn.submit-shape')?.on('click', () => {
-    const tileTouches = touches(pairs(tiles.map(tile => new Polygon(...tile.points))), squareSize);
+    const tileTouches =
+      touches(
+          pairs(tiles.map(tile => tile.path as Polygon)),
+          squareSize
+      );
     const tilesPerimeters = tiles.length * 4;
     // [TODO]?: Check whether all tiles are touching
     $step.score(`figure-${figure}`);
@@ -1005,12 +1009,10 @@ export function worldTradeCenter($step: Step) {
         new Point(width / 2, height)
     );
   const $tri1 = $polypad.newTile('polygon', getTangramPolystr(tri.points)) as Tile;
-  $tri1.setRotation(180);
-  $tri1.setPosition(new Point(400, 250));
+  $tri1.setTransform(new Point(400, 250), 180);
   $tri1.setColour('lightskyblue');
   const $tri2 = $polypad.newTile('polygon', getTangramPolystr(tri.points)) as Tile;
-  $tri2.setRotation(180);
-  $tri2.setPosition(new Point(480, 250));
+  $tri2.setTransform(new Point(400, 250), 180);
   $tri2.setColour('lightskyblue');
   const checkDone = () => {
     const xdiff = Math.abs($tri1.posn.x - $tri2.posn.x);
@@ -1025,7 +1027,7 @@ export function worldTradeCenter($step: Step) {
       $step.score('arranged');
       const $height = $N('path', {}, $polypad.$svg) as SVGView;
       $height.css({stroke: 'lime', 'stroke-width': '2px'});
-      const baseX = (new Polygon(...$tri1.points)).centroid.x;
+      const baseX = ($tri1.path as Polygon).centroid.x;
       $height.draw(
           new Segment(
               new Point(baseX, $tri1.posn.y),
@@ -1078,8 +1080,7 @@ export function congruentTriangles($step: Step) {
         .map((triPoints, index) => {
           const $tile = $polypad.newTile('polygon', getTangramPolystr(triPoints)) as Tile;
           const [x, y] = shifts[index];
-          $tile.setPosition(new Point(x, y));
-          $tile.setRotation(rots[index]);
+          $tile.setTransform(new Point(x, y), rots[index]);
           $tile.setColour(TEAL);
           return $tile;
         });
@@ -1088,8 +1089,8 @@ export function congruentTriangles($step: Step) {
     const allTouching = $pairs.every(([$a, $b]) => {
       const over = $a.posn.equals($b.posn) && $a.rot == $b.rot;
       if (over) return false;
-      return (new Polygon(...$a.points)).edges.some(
-          aEdge => (new Polygon(...$b.points)).edges.some(
+      return ($a.path as Polygon).edges.some(
+          aEdge => ($b.path as Polygon).edges.some(
               bEdge => aEdge.equals(bEdge)
           )
       );
@@ -1246,15 +1247,13 @@ export function area3($step: Step) {
   const height = 175;
   const triTemplate = new Polygon(new Point(0, 0), new Point(width / 2, height), new Point(width, 0));
   const $tri1 = $polypad.newTile('polygon', getTangramPolystr(triTemplate.points)) as Tile;
-  $tri1.setPosition(new Point(300, 100));
-  $tri1.setRotation(35);
+  $tri1.setTransform(new Point(300, 100), 35);
   $tri1.setColour('navy');
   const $tri2 = $polypad.newTile('polygon', getTangramPolystr(triTemplate.points)) as Tile;
-  $tri2.setPosition(new Point(300, 100));
-  $tri2.setRotation(35);
+  $tri2.setTransform(new Point(300, 100), 35);
   $tri2.setColour('orange');
   const checkDone = () => {
-    const para = toParallelogram($tri1.points, $tri2.points);
+    const para = toParallelogram(($tri1.path as Polygon).points, ($tri2.path as Polygon).points);
     if (para != null) {
       $step.addHint('correct');
       $step.score('arranged');
