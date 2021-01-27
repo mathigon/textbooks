@@ -17,7 +17,7 @@ import '../shared/components/relation';
 import {ORANGE, TEAL} from '../shared/constants';
 import {list} from '@mathigon/core';
 
-// SECTION: introduction / rectangles
+// SECTION 1: Introduction
 
 type ShapesModel = {
   firstArea?: {
@@ -42,13 +42,13 @@ export function performance1($step: Step) {
           blockSize
       );
       const path = $geopad.drawPath(block);
-      path.$el.css({'stroke-width': 2});
+      path.$el.addClass('performance-unit');
       blocks.push({poly: block, path});
     }
   }
   setupRope('performance-1', 20 * scale, $geopad, $step, (line: Polyline, reset: VoidFunction) => {
     const areaBlocks = blocks.filter(block => block.poly.points.every(point => line.contains(point)));
-    for (const block of areaBlocks) block.path.$el.css({fill: 'lime'});
+    for (const block of areaBlocks) block.path.$el.addClass('performance-unit-selected');
     if (areaBlocks.length >= 200) {
       courseModel.firstArea = {
         ropeUsed: length(line) / scale,
@@ -63,8 +63,8 @@ export function performance1($step: Step) {
 }
 
 function getCourseModel($step: Step) {
-  const parentModel = $step.getParentModel();
-  return parentModel.$course.model as ShapesModel;
+  const parentModel: any | undefined = $step.getParentModel();
+  return (parentModel?.$course.model ?? {}) as ShapesModel;
 }
 
 function setupRope(id: string, maxLength: number, $geopad: Geopad, $step: Step, onComplete: (final: Polyline, reset: VoidFunction) => void) {
@@ -76,7 +76,7 @@ function setupRope(id: string, maxLength: number, $geopad: Geopad, $step: Step, 
     start: (p: Point) => {
       ropeLine = new Polyline(p);
       rope = $geopad.drawPath(ropeLine);
-      rope.$el.css({stroke: 'red'});
+      rope.$el.addClass('rope');
     },
     move: (p: Point) => {
       if (!reset) {
@@ -232,7 +232,7 @@ const imageWidth = 525;
 const tileSize = imageWidth / (fieldLength * scale);
 
 export function grassPlacement($step: Step) {
-  const $polypad = $step.$('.grass-placement > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, 600, 350, false);
   const options = {
     count: 2,
@@ -353,7 +353,7 @@ class FillSquare {
   constructor(template: Rectangle, $geopad: Geopad) {
     this.rect = template;
     this.path = $geopad.drawPath(this.rect);
-    this.path.$el.css({fill: 'red'});
+    this.path.$el.addClass('fill-square');
   }
   moveBy(by: Point) {
     this.rect = this.rect.translate(by);
@@ -396,7 +396,7 @@ function setupGeopadDraggableFillSquare(obj: FillSquare, $geopad: Geopad, onEnd?
   });
 }
 
-// SECTION: Parallelograms
+// SECTION 2: Parallelograms
 
 export function boatBuilding($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
@@ -635,7 +635,15 @@ type RenderedOptions = {
   draggable?: boolean,
   snap?: boolean,
   onEnd?: (last: Point) => void,
-  color?: string
+  color?:
+    'red' |
+    'green' |
+    'blue' |
+    'yellow' |
+    'orange' |
+    'purple' |
+    'teal' |
+    'lime'
 };
 
 class RenderedPoly {
@@ -651,11 +659,11 @@ class RenderedPoly {
     else this._poly = new HelperPoly(...poly.points);
     this.path = $geopad.drawPath(this.poly);
     if (options != undefined) {
-      let color = 'rgba(0, 0, 0, 0)';
+      let colorClass = 'rendered-poly';
       if (options.color != undefined) {
-        color = options.color;
+        colorClass += options.color;
       }
-      this.path.$el.css({fill: color});
+      this.path.$el.addClass(colorClass);
       if (options.draggable != undefined && options.draggable === true) {
         let mouseOffset = new Point(0, 0);
         let dragging = false;
@@ -930,7 +938,7 @@ export function identifyParallelograms($step: Step) {
       $path.on('click', () => {
         if (!$path.hasAttr('clicked')) {
           $path.setAttr('clicked', true);
-          $path.css({fill: 'lime'});
+          $path.addClass('parallelogram-selected');
           $step.addHint('correct');
           identified++;
           if (identified == 6) $step.score('selected');
@@ -995,7 +1003,7 @@ export function apartments($step: Step) {
   });
 }
 
-// SECTION: Triangles
+// SECTION 3: Triangles
 
 export function worldTradeCenter($step: Step) {
   const $polypad = $step.$('x-polypad') as Polypad;
@@ -1026,7 +1034,7 @@ export function worldTradeCenter($step: Step) {
       $step.addHint('correct');
       $step.score('arranged');
       const $height = $N('path', {}, $polypad.$svg) as SVGView;
-      $height.css({stroke: 'lime', 'stroke-width': '2px'});
+      $height.addClass('height');
       const baseX = ($tri1.path as Polygon).centroid.x;
       $height.draw(
           new Segment(
@@ -1159,20 +1167,20 @@ function setupBaseHeight(
       onComplete?: VoidFunction,
       onIncorrect?: VoidFunction
   }) {
+  $geopad.addClass('base-height');
   let selectedEdge = -1;
   let edgeChosen = false;
   for (const [index, edge] of initPoly.edges.entries()) {
     const edgePath = $geopad.drawPath(edge);
-    edgePath.$el.css({'stroke-width': '4px', color: '#000000'});
-    // [TODO]: Replace with stylesheet-based css?
+    edgePath.$el.addClass('edge');
     edgePath.$el.on('mouseenter', () => {
       if (selectedEdge != index) {
-        edgePath.$el.css({color: '#ffffff'});
+        edgePath.$el.addClass('edge-hover');
       }
     });
     edgePath.$el.on('mouseleave', () => {
       if (selectedEdge != index) {
-        edgePath.$el.css({color: '#000000'});
+        edgePath.$el.removeClass('edge-hover');
       }
     });
     let nearby = false;
@@ -1180,7 +1188,7 @@ function setupBaseHeight(
       if (options?.partner != undefined && options.partner.baseIndex != index) return;
       if (!edgeChosen) {
         edgeChosen = true;
-        edgePath.$el.css({color: '#ff0000'});
+        edgePath.$el.addClass('selected-edge');
         selectedEdge = index;
         edgePath.setLabel(edge.length.toFixed(2).toString());
         options?.onSideSelected?.(selectedEdge);
@@ -1192,7 +1200,7 @@ function setupBaseHeight(
         if (options?.partner != undefined) {
           for (const partnerEdge of options.partner.poly.edges) {
             const partnerEdgePath = $geopad.drawPath(partnerEdge);
-            partnerEdgePath.$el.css({'stroke-width': '4px', color: '#000000'});
+            partnerEdgePath.$el.addClass('edge');
           }
         }
 
@@ -1206,7 +1214,7 @@ function setupBaseHeight(
         const heightSegment = new Segment(heightLine.project(edge.p1), heightLine.project(edge.p2));
         const heightPath = $geopad.drawPath(heightSegment);
         heightPath.$el.hide();
-        heightPath.$el.css({color: '#000000', 'stroke-dasharray': '6'});
+        heightPath.$el.addClass('height');
 
         $geopad.switchTool('line');
         let p: GeoPath;
@@ -1241,8 +1249,7 @@ export function area3($step: Step) {
   const $container = $step.$('.area')!;
   const $polypad = $container.$('x-polypad') as Polypad;
   const $geopad = $container.$('x-geopad') as Geopad;
-  $geopad.css({opacity: 0});
-  $polypad.css({width: '600px', height: '400px'});
+  $geopad.addClass('init');
   const width = 300;
   const height = 175;
   const triTemplate = new Polygon(new Point(0, 0), new Point(width / 2, height), new Point(width, 0));
@@ -1258,7 +1265,7 @@ export function area3($step: Step) {
       $step.addHint('correct');
       $step.score('arranged');
       $polypad._el.remove();
-      $geopad.css({opacity: 1});
+      $geopad.addClass('vis');
       $geopad.switchTool('move');
       const options = {
         onSideSelected: () => $step.score('side-selected'),
@@ -1338,7 +1345,7 @@ export function triangleSelection($step: Step) {
       if (!$a.hasAttr('clicked')) {
         $step.addHint('correct');
         $a.setAttr('clicked', true);
-        $b.css({opacity: 1});
+        $b.addClass('vis');
         clicks++;
         if (clicks == 3) $step.score('clicks');
       }
@@ -1346,7 +1353,7 @@ export function triangleSelection($step: Step) {
   }
 }
 
-// SECTION: Polygons
+// SECTION 4: Polygons
 
 declare const d3: any;
 
@@ -1511,7 +1518,7 @@ export async function voronoi2($step: VoronoiStep) {
       options = {class: 'triangle-cell'};
     }
     const $cell = $N('path', options, $geopad.$paths) as SVGView;
-    $cell.css({fill: voronoiColours[index % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.addClass(`voronoi-${(index % 9) + 1}`);
     $cell.draw(cell.poly);
   }
 
@@ -1521,22 +1528,22 @@ export async function voronoi2($step: VoronoiStep) {
   const tri = cells[12].poly;
   for (const [index, edge] of tri.edges.slice(0, 3).entries()) {
     const edgePath = $geopad.drawPath(edge);
-    edgePath.$el.css({'stroke-width': '4px', color: '#000000'});
+    edgePath.$el.addClass('edge');
     // [TODO]: Replace with stylesheet-based css?
     edgePath.$el.on('mouseenter', () => {
       if (selectedEdge != index) {
-        edgePath.$el.css({color: '#ffffff'});
+        edgePath.$el.addClass('edge-hover');
       }
     });
     edgePath.$el.on('mouseleave', () => {
       if (selectedEdge != index) {
-        edgePath.$el.css({color: '#000000'});
+        edgePath.$el.removeClass('edge-hover');
       }
     });
     edgePath.$el.on('click', () => {
       if (!edgeChosen) {
         edgeChosen = true;
-        edgePath.$el.css({color: '#ff0000'});
+        edgePath.$el.addClass('selected-edge');
         selectedEdge = index;
         edgePath.setLabel(edge.length.toFixed(2).toString());
         $step.score('side-selected');
@@ -1551,7 +1558,7 @@ export async function voronoi2($step: VoronoiStep) {
         const heightSegment = new Segment(heightLine.project(edge.p1), heightLine.project(edge.p2));
         const heightPath = $geopad.drawPath(heightSegment);
         heightPath.$el.hide();
-        heightPath.$el.css({color: '#000000', 'stroke-dasharray': '6'});
+        heightPath.$el.addClass('height');
 
         $step.model.nearby = false;
         $geopad.switchTool('line');
@@ -1593,9 +1600,11 @@ function handlePathing(path: GeoPath, base: GeoPath, heightPath: GeoPath, height
   const pathAngle = pathSegment.angle % Math.PI;
   const perpendicular = pathAngle > correctAngle - angleRange && pathAngle < correctAngle + angleRange;
   if (perpendicular) {
-    path.$el.css({color: 'red'});
+    path.$el.addClass('angle-perpendicular');
+    path.$el.removeClass('angle-other');
   } else {
-    path.$el.css({color: 'blue'});
+    path.$el.addClass('angle-other');
+    path.$el.removeClass('angle-perpendicular');
   }
 
   const heightRange = 10;
@@ -1632,7 +1641,7 @@ export async function voronoi3($step: VoronoiStep) {
       options = {class: 'six-sided'};
     }
     const $cell = $N('path', options, $geopad.$paths) as SVGView;
-    $cell.css({fill: voronoiColours[index % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.addClass(`voronoi-${(index % 9) + 1}`);
     $cell.draw(cell.poly);
   }
 }
@@ -1677,20 +1686,18 @@ export async function populations($step: Step) {
   const $geopad = $step.$('x-geopad.voronoi-1') as Geopad;
 
   const cells = getVoronoiPolys([0, 0, 600, 400]).map((poly, i) => {
-    return {poly, color: voronoiColours[i % 9]};
+    return {poly, color: (i % 9) + 1};
   });
   const pentagon = cells[8];
   cells[8] = cells.pop()!;
   cells.push(pentagon);
   for (const [index, cell] of cells.entries()) {
     let options = {};
-    let css: Record<string, any> = {fill: cell.color, stroke: 'black', 'stroke-width': '2px'};
     if (index == cells.length - 1) {
       options = {class: 'population-pentagon'};
-      css = {fill: cell.color, stroke: 'white', 'stroke-width': '3px'};
     }
     const $cell = $N('path', options, $geopad.$paths) as SVGView;
-    $cell.css(css);
+    $cell.addClass(`voronoi-${cell.color}`);
     $cell.draw(cell.poly);
   }
 }
@@ -1877,7 +1884,7 @@ export function currysParadox1($step: Step) {
   const viewWidth = 425;
   const viewHeight = 450;
 
-  const $polypad = $step.$('.triangle-tangram > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, viewWidth, viewHeight, true);
 
   const $bg = $step.$('svg.solution-outline')! as SVGParentView;
@@ -1954,7 +1961,7 @@ function getTangramPolystr(polyGridPositions: Point[]) {
 
 export function currysParadox2($step: Step) {
 
-  const $polypad = $step.$('.tangram-polys > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, 425, 225, true);
 
   for (const [index, poly] of paradoxData.polys.entries()) {
@@ -1967,7 +1974,7 @@ export function currysParadox2($step: Step) {
 
 export function currysParadox3($step: Step) {
 
-  const $polypad = $step.$('.zoom-1 > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
   for (const [index, poly] of paradoxData.polys.entries()) {
@@ -1979,9 +1986,9 @@ export function currysParadox3($step: Step) {
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
   outlineTile.setTransform(new Point(tangramScale(1), tangramScale(7)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
-  $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+  $outline.addClass('curry-outline');
 
-  const $zoomSlider = $step.$('x-slider.zoom-s-1') as Slider;
+  const $zoomSlider = $step.$('x-slider') as Slider;
   let zoomed1 = false;
   $zoomSlider.on('move', n => {
 
@@ -2001,7 +2008,7 @@ export function currysParadox3($step: Step) {
 }
 
 export function currysParadox4($step: Step) {
-  const $polypad = $step.$('.triangle-ref > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
   for (const [index, poly] of paradoxData.polys.entries()) {
@@ -2015,7 +2022,7 @@ export function currysParadox4($step: Step) {
 
 export function currysParadox5($step: Step) {
 
-  const $polypad = $step.$('.zoom-2 > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
   // TODO Cleanup duplicate code!
@@ -2028,9 +2035,9 @@ export function currysParadox5($step: Step) {
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
   outlineTile.setTransform(new Point(tangramScale(1), tangramScale(7)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
-  $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+  $outline.addClass('curry-outline');
 
-  const $zoomSlider = $step.$('x-slider.zoom-s-2') as Slider;
+  const $zoomSlider = $step.$('x-slider') as Slider;
   let zoomed2 = false;
   $zoomSlider.on('move', n => {
 
@@ -2050,7 +2057,7 @@ export function currysParadox5($step: Step) {
 }
 
 export function currysParadox6($step: Step) {
-  const $polypad = $step.$('.paradox-comparison > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, 425, 475, true);
 
   for (const [index, poly] of paradoxData.polys.entries()) {
@@ -2067,10 +2074,10 @@ export function currysParadox6($step: Step) {
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
   outlineTile.setTransform(new Point(tangramScale(1), tangramScale(18)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
-  $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+  $outline.addClass('curry-outline');
 }
 
-// SECTION: circles
+// SECTION 5: circles
 
 export function wheels($step: Step) {
   const $svg = $step.$('svg') as SVGParentView;
@@ -2697,7 +2704,7 @@ function geopadReset($pad: Geopad) {
   $pad.switchTool('circle');
 }
 
-// SECTION: circle-area
+// SECTION 6: Area of Circles
 
 type Guide = {path: GeoPath, segment: Segment, index: number};
 type GuideNode = {node: Point, guide: Guide};

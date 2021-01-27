@@ -311,8 +311,7 @@ So, these students did [[70 x 132]] which equals 9,240 [[square meters]]. This e
 Below is an architect’s initial idea for part of a building. Each square represents one square meter of glass and the architect needs to plan for steel going around the entirety of the glass section.
 
     // INTERACTIVE-02 Glass area (page 6)
-    figure: .glass-area
-      x-polypad
+    figure: x-polypad
 
 The total amount of glass needed is the [[area | perimeter]] of the shape and is measured in [[square meters | meters]]. The amount of steel needed to surround the glass is the [[perimeter | area]] of the shape and is measured in [[meters | square meters]]. 
 
@@ -1076,7 +1075,7 @@ The hexagons in the South African flag and the pentagon in the Nepalese flag may
 
 Below are 7 polygons. Move and rotate the polygons to completely fill in the square
 
-    figure: .tangram
+    figure
       .simple-tangram-bg
       x-polypad
 
@@ -1164,10 +1163,10 @@ No matter which approach we take, the area of the pentagon is 27.5 square units!
 
 Throughout our work on area, we have often used the idea that as parts of a shape are moved around, the area stays the same - as long as the pieces don’t overlap and all the pieces are used.
 
-    figure: .triangle-tangram
+    figure
       svg.solution-outline
       x-polypad(rotate="no")
-    x-gesture(target=".triangle-tangram x-polypad svg" slide="25,325" offset="-50, -150")
+    x-gesture(target="#currys-paradox-1 x-polypad svg" slide="25,325" offset="-50, -150")
 
 {.reveal(when="triangle-complete")} We’ve made a triangle with a base of 13 units and a height of 5 units. The area of this triangle is [[32.5]] square units. So, the area of these 4 pieces must also be [[32.5]] square units.
 
@@ -1187,8 +1186,7 @@ This situation is called Curry’s Paradox. A paradox is a statement or situatio
 
 Let’s take the shape apart and find the area of each piece to help us see what’s happening here. 
 
-    figure: .tangram-polys
-      x-polypad(rotate="no")
+    figure: x-polypad(rotate="no")
 
 The red triangle has a base of 8 and a height of 3, so the area of the red triangle is [[12]] square units. The area of the blue triangle is [[5]] square units. The area of the green hexagon is [[8]] square units and the area of the orange hexagon is [[7]] square units. So, the total area of all the pieces when pulled apart is [[32]] square units. However, in the first arrangement, they seem to make a triangle with an area of 32.5 square units and in the second arrangement, they seem to have an area of 31.5 square units. The area of these 4 pieces seems to be changing as we are moving them around! What is going on here?
 
@@ -1199,17 +1197,15 @@ The red triangle has a base of 8 and a height of 3, so the area of the red trian
 
 Well, it turns out that neither of the shapes we made using the 4 pieces are in fact triangles. Below is the 1st arrangement. It looks like the red and blue triangles line up perfectly, but they do not. Move the slider below to zoom in on the green line connecting the corners of two triangles.
 
-    figure: .zoom-1
-      x-polypad(rotate="no")
-    x-slider(steps=1000 speed=1 continuous).zoom-s-1
+    figure: x-polypad(rotate="no")
+    x-slider(steps=1000 speed=1 continuous)
 
 ---
 > id: currys-paradox-4
 
 While the blue and red seem to line up so the ends connect with a straight line, they do not.  Using the formula ½ x b x h to find the area of this [shape](->.paradox-poly) made by the 4 pieces is incorrect because the shape [[is not | is]] a triangle. The area of this shape is 32 square units. Using ½ x b x h, we got 32.5 square units. The extra ½ unit came from the amount of space in between the green line and the actual line connecting the endpoints of the red and blue triangle.
 
-    figure: .triangle-ref
-      x-polypad(rotate="no")
+    figure: x-polypad(rotate="no")
 
 ---
 > id: currys-paradox-5
@@ -1217,8 +1213,7 @@ While the blue and red seem to line up so the ends connect with a straight line,
 
 In the 2nd arrangement, the shapes also seem to make a triangle with the same total area, but we’ve used one additional square unit. So, our first thought was that the area of these 4 shapes decreased by one. Move the slider below to zoom in on the green line connecting the corners of two triangles.
 
-    figure: .zoom-2
-      x-polypad(rotate="no")
+    figure: x-polypad(rotate="no")
     x-slider(steps=1000 speed=1 continuous).zoom-s-2
 
 ---
@@ -1228,8 +1223,7 @@ Adding the extra square unit into this arrangement of the 4 pieces causes the tr
 
 So, we’ve made sense of this paradox. The area of the green triangle is 32.5 square units and the area of the 4 pieces is 32 square units. The pieces do NOT fit perfectly inside the triangle. When we tried just using the 4 pieces, we still had ½ of a square unit to fill in within the triangle. At first, we just didn’t notice the ½ of the square unit missing.
 
-    figure: .paradox-comparison
-      x-polypad(rotate="no")
+    figure: x-polypad(rotate="no")
 
 In the second arrangement, we added in an additional square unit to make the 4 pieces fit inside the green triangle. Again, it seemed to fit, but it actually was ½ square unit too big. Our eyes just couldn’t perceive the extra ½ square unit. 
 

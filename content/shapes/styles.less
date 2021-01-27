@@ -10,6 +10,21 @@
 
 // Section 1: Introduction
 
+#performance-1 {
+  x-geopad .paths {
+    path.rope {
+      stroke: @red;
+    }
+    path.performance-unit {
+      stroke-width: 2px;
+    }
+    path.performance-unit-selected {
+      fill: @green;
+    }
+  }
+}
+
+// step: grass-placement and strip-placement
 .rect-placement {
 
   x-img {
@@ -38,39 +53,172 @@
 
 }
 
+// fill squares
+x-geopad .paths path.fill-square {
+  fill: @red;
+}
+
 // Section 2: Parallelograms
 
-.glass-area {
+#glass-area {
   x-polypad {
     width: 600px;
     height: 400px;
   }
 }
 
-// Section 3: Triangles
-
-// Section 4: Polygons
-
-.tangram {
-  border-radius: 6px 6px 0 0;
-  background: @grey-background;
-
-  .simple-tangram-bg {
-    background: url('images/square.svg') center no-repeat;
-    background-size: contain;
-    opacity: 0.2;
+#identify-parallelograms {
+  svg path.parallelogram-selected {
+    fill: @lime;
   }
 }
 
-.triangle-tangram {
-  .solution-outline {
+// RenderedPoly
+x-geopad .paths path.rendered-poly {
+
+  fill: rgba(0, 0, 0, 0); // default
+
+  &-red {
+    fill: @red;
+  }
+  &-green {
+    fill: @green;
+  }
+  &-blue {
+    fill: @blue;
+  }
+  &-yellow {
+    fill: @yellow;
+  }
+  &-orange {
+    fill: @orange;
+  }
+  &-purple {
+    fill: @purple;
+  }
+  &-teal {
+    fill: @teal;
+  }
+  &-lime {
+    fill: @lime;
+  }
+}
+
+// Section 3: Triangles
+
+#world-trade-center {
+  x-polypad svg path.height {
+    stroke: @lime;
+    stroke-width: 2px;
+  }
+}
+
+// for setupBaseHeight in functions.ts
+x-geopad.base-height .paths path {
+  &.edge {
+    color: #000;
+    stroke-width: 4px;
+  }
+  &.edge-hover {
+    color: #fff;
+  }
+  &.selected-edge {
+    color: @red;
+  }
+  &.height {
+    stroke-dasharray: 6;
+  }
+}
+
+#area-3 {
+  x-geopad {
+    &.init {
+      opacity: 0;
+    }
+    &.vis {
+      opacity: 1;
+    }
+  }
+  x-polypad {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+#triangle-selection svg path.vis {
+  opacity: 1;
+}
+
+// handlePathing
+x-geopad svg .paths path {
+  &.angle-other {
+    color: @blue !important;
+  } 
+  &.angle-perpendicular {
+    color: @red !important;
+  }
+}
+
+// Section 4: Polygons
+
+@voronoi-colors: #3c91e6, #ff6b6b, #ffe45e, #4ecdc4, #81366f, #c93818, #e2c312, #6bab90, #e4533a;
+
+x-geopad .paths path.voronoi {
+  each(@voronoi-colors, {
+    &-@{index} { 
+      fill: @value;
+      stroke: black;
+      stroke-width: 2px;
+    }
+  });
+}
+
+#voronoi-2 x-geopad svg .paths path {
+  &.edge {
+    stroke-width: 4px;
+    color: #000;
+  }
+  &.edge-hover {
+    color: #fff;
+  }
+  &.selected-edge {
+    color: @red;
+  }
+  &.height {
+    stroke-dasharray: 6;
+  }
+}
+
+#populations x-geopad svg .paths path.population-pentagon {
+  stroke: white;
+  stroke-width: 3px;
+}
+
+#simple-tangram {
+
+  figure {
+
+    border-radius: 6px 6px 0 0;
+    background: @grey-background;
+
+    .simple-tangram-bg {
+      background: url('images/square.svg') center no-repeat;
+      background-size: contain;
+      opacity: 0.2;
+    }
+
+  }
+}
+
+#currys-paradox-1 {
+  svg.solution-outline {
     stroke: black;
     stroke-width: 1px;
     fill: none;
   }
 }
 
-.tangram, .triangle-tangram {
+#simple-tangram, #currys-paradox-1 {
   .simple-tangram-bg, .solution-outline {
     width: 100%;
     position: absolute;
@@ -78,40 +226,54 @@
   .simple-tangram-bg, .solution-outline, x-polypad { height: 450px; }
 }
 
-.tangram-polys x-polypad { height: 225px; }
+#currys-paradox-2 x-polypad { height: 225px; }
 
-.zoom-1, .triangle-ref, .zoom-2 {
+#currys-paradox-3, #currys-paradox-4, #currys-paradox-5 {
   x-polypad { height: 225px; }
 }
 
-x-slider.zoom-s-1, x-slider.zoom-s-2 {
-  button.play { display: none; }
+#currys-paradox-3, #currys-paradox-5 {
+  x-slider {
+    button.play { display: none; }
+  }
 }
 
-.paradox-comparison x-polypad { height: 475px; }
+#currys-paradox-6 x-polypad { height: 475px; }
 
-figure .tire-circumference {
-  width: 600px;
-  margin: auto;
-  position: relative;
+#currys-paradox-3, #currys-paradox-5, #currys-paradox-6 {
+  x-polypad svg g.tiles g.tile path.curry-outline { 
+    stroke: @lime;
+    stroke-width: 4px;
+    fill: none;
+  }
+}
 
-  svg {
-    position: absolute;
-    top: 0;
+#encasement-estimation {
+  figure .tire-circumference {
     width: 600px;
-  }
-
-  img {
-    width: 300px;
-    height: 250px;
-    margin-left: 150px;
-    margin-top: 25px;
-  }
-
-  svg {
-    height: 300px;
+    margin: auto;
+    position: relative;
+  
+    svg {
+      position: absolute;
+      top: 0;
+      width: 600px;
+    }
+  
+    img {
+      width: 300px;
+      height: 250px;
+      margin-left: 150px;
+      margin-top: 25px;
+    }
+  
+    svg {
+      height: 300px;
+    }
   }
 }
+
+// ResizeableSquare
 
 .nesw-corner:hover {
   cursor: nesw-resize;
