@@ -610,7 +610,7 @@ _{span.n}${geometric(b,r,5)}_, …
 这是电影_让爱传出去_的一个简短片段，12岁的特雷弗在其中解释了他让世界变得更好的想法：
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption 节选自“让爱传出去” (2000), ©华纳兄弟娱乐
 
 ---

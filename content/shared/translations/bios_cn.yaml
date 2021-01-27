@@ -506,7 +506,7 @@ gauss:
     后来又以教授的身份辅导了许多著名的数学家。
   links:
     - title: 素数定理
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: 非欧几里得几何
       url: /world/Dimensions_and_Distortions
     - title: Sums of Triangle Numbers
@@ -546,7 +546,7 @@ goldbach:
   bio: __克里斯蒂安·戈德巴赫__（1690年至1764年）是普鲁士的数学家，是欧拉，莱布尼兹和伯努利的当代作品。他曾是俄罗斯沙皇彼得二世的家教，并因其“哥德巴赫猜想”而闻名。
   links:
     - title: Goldbach Conjecture
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -604,7 +604,7 @@ hilbert:
   bio: |
     __大卫•希尔伯特__（1862 – 1943）是二十世纪最有影响力的数学家之一。他几乎致力于数学的所有领域，对建立大一统的数学理论特别感兴趣。
 
-    希尔伯特在哥廷根（德国）工作，在那里他培养了大量后来成为著名数学家的学生。在1900年的国际数学家大会期间，他列出了23个待解决的问题清单。这个给   
+    希尔伯特在哥廷根（德国）工作，在那里他培养了大量后来成为著名数学家的学生。在1900年的国际数学家大会期间，他列出了23个待解决的问题清单。这个给
     未来的数学研究奠定了方向——至今仍有四个问题有待解决！
   links:
     - title: Hilbert’s Hotel
@@ -818,7 +818,7 @@ mersenne:
     今天，我们大多数人都记得他是_梅森素数_的素数，素数可以写为`2^n - 1`。大多数最大的已知质数都是这种类型的。他还研究了振动弦的声学和和声，并撰写了有关神学和哲学的文章。
   links:
     - title: Large Primes
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1113,7 +1113,7 @@ riemann:
     对素数的分布作出了开创性的发现。
   links:
     - title: Riemann Hypothesis
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872

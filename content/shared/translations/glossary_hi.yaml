@@ -1762,7 +1762,7 @@ twin-primes:
   text: |
     __ट्विन प्राइम्स १ 17 और १ ९ या १०१ और १०३ जैसी प्रमुख संख्याओं के जोड़े हैं, जो ठीक दो अलग हैं।
     यह अज्ञात है अगर वहाँ अनन्त रूप से कई जोड़े जुड़वां प्राइम हैं।
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: यूनिट सर्कल

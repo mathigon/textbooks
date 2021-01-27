@@ -1775,7 +1775,7 @@ twin-primes:
   text: |
     __İkiz asal__, tam olarak iki ayrı olan 17 ve 19 veya 101 ve 103 gibi asal sayı çiftidir. Sonsuz
     sayıda çift ikiz prim olup olmadığı bilinmemektedir.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Birim çember

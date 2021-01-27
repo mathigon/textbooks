@@ -1790,7 +1790,7 @@ twin-primes:
   text: |
     __Số nguyên tố sinh đôi__ là các cặp số nguyên tố như 17 và 19 hoặc 101 và 103, cách nhau hai
     chính xác. Không biết có vô số cặp số nguyên tố sinh đôi hay không.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Vòng tròn đơn vị

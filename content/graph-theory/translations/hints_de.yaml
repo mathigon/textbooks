@@ -9,6 +9,6 @@ housesToEachOther: Du brauchst nur die Häuser mit den Fabriken zu verbinden, ab
 factoriesToEachOther: Du brauchst nur die Fabriken mit den Häusern zu verbinden, aber nicht die Fabriken untereinander.
 linesCross: "Vorsicht: die Linien dürfen sich nicht kreuzen."
 edgeDrawnBefore: Pass auf, diese Kante hast du schon einmal nachgezeichnet.
-utilitiesImpossible: "Ich glaube, dieses Rätsel könnte auch unlösbar sein... Tut mir leid, dass ich dich ausgetrickst habe :wink:"
+utilitiesImpossible: "Ich glaube, dieses Rätsel könnte auch unlösbar sein... Tut mir leid, dass ich dich ausgetrickst habe :winking-face:"
 mapError: Du kannst diese Farbe hier nicht verwenden, weil sie bereits in einem der benachbarten Gebiete verwendet wird.
 mapFewer: Gut gemacht! Aber kannst du diese Karte mit weniger Farben ausmalen?

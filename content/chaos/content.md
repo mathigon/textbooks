@@ -176,7 +176,7 @@ In other words, we can _never_ have a perfect weather forecast!
 
 ::: figure
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/weather.mp4" poster="images/weather.jpg" width=640 height=360 controls credit="© NASA")
+    x-video(src="https://static.mathigon.org/videos/weather.mp4" poster="images/weather.jpg" width=640 height=360 controls credit="© NASA")
     // source: https://svs.gsfc.nasa.gov/12163
 
 {.caption} NASA uses satellites, planes and thousands of ground-based weather
@@ -340,7 +340,7 @@ even in movies:
 
 ::: figure
 
-    x-video(src="https://storage.googleapis.com/mathigon-videos/jurassic-park.mp4" poster="images/jurassic-park.jpg" width=480 height=270 audio controls)
+    x-video(src="https://static.mathigon.org/videos/jurassic-park.mp4" poster="images/jurassic-park.jpg" width=480 height=270 audio controls)
 
 {.caption} Extract from the movie _Jurassic Park_ (© Universal Pictures, 1993) 
 
@@ -432,7 +432,7 @@ Poincare etc.
         path.thin(x="segment(b, b.translate(vb))" arrows="end")
         path.thin(x="segment(c, c.translate(vc))" arrows="end")
       x-play-toggle
-      x-icon-btn.restore(icon="restore")
+      x-icon-btn.restore(icon="restart")
 
 {.fixme} There are two chaotic systems which affect us greatly. The first is the weather. Although weather equations are pretty well understood and are solved by computers every day, it is impossible to take into account all the factors influencing the weather (remember the butterfly). No set of data is perfect, nor are computers perfect at solving the equations. The effects of these small
  errors build up remarkably quickly. After about ten days it is essentially impossible to forecast weather with any degree of accuracy.

@@ -12,6 +12,13 @@ absolute-value:
   # origin. This connects the notion of _absolute value_ to the modulus of a
   # complex number and the magnitude of a vector.
 
+acceleration:
+  title: Acceleration
+  text: Acceleration is change in velocity over time. In calculus, we understand
+    acceleration to be the derivative of velocity. In everyday life, we typically
+    of acceleration in terms of vehicles. For example, a top speed car can
+    accelerate from 0 to 100 kilometers per hour in 3 seconds.
+
 acute-angle:
   title: Acute angle
   text: An __acute angle__ is an angle of size less than 90°.
@@ -509,12 +516,17 @@ denominator:
   text: The __denominator__ is the bottom number in a fraction. For example, in
     `4/7`, the number 7 is the denominator.
 
+derivative:
+  title: Derivative
+  text: A derivative is the function that descriibes the slope of a curve.
+  ## definition needs to be fleshed out
+
 dependent-events:
   title: Dependent Events
   text: |
     Two events are __dependent__ if the occurrence of one of them changes the
     propability that the other event occuring. For example, _A_ and _B_ could
-    be dependent if P(*A*|*B*) ≠ P(*A*)`.
+    be dependent if `P(A|B) ≠ P(A)`.
 
 dilation:
   title: Dilation
@@ -580,7 +592,7 @@ dodecahedron:
 domain:
   title: Domain
   text: The __domain__ of a function or relation is the set of all possible
-    _input values_ (often shown on the _x_-axis in a coordinate system).
+    _input values_ (often shown on the horizontal axis in a coordinate system).
 
 dot-annihilation:
   title: Annihilation
@@ -699,6 +711,16 @@ fractal:
     an equation infinitely many times.
   link: /course/fractals/introduction
 
+fraction:
+  title: Fraction
+  text: |
+    A __fraction__ represents parts of a whole. It is written as `a/b`,
+    where _a_ is called the __numerator__ and _b_ is the __denominator__. It
+    is equivalent to writing `a ÷ b`.
+
+    The denominator _b_ is the number of equal parts the whole has been divided
+    into. The numerator _a_ indicates how many of these parts are counted.
+
 fta:
   title: Fundamental theorem of arithemtic
   text: The __fundamental theorem of arithemtic__ (FTA) says that every integer
@@ -706,8 +728,8 @@ fta:
 
 function:
   title: Function
-  text: A __function__ is a mathematical relation that converts an input `x`
-    into exactly one output `f(x)`.
+  text: A __function__ is a mathematical relation that assigns to each input `x`
+    in the _domain_ exactly one output `f(x)`.
 
 function-graph:
   title: Graphs of functions
@@ -892,11 +914,38 @@ integer:
     zero: …, –3, –2, –1, 0, 1, 2, 3, …. They are often denoted using the
     symbol `ZZ`.
 
+intercept:
+  title: Intercept
+  text: A __intercept__ is the point where a graph crosses an axis. It is often names after the axis, so the y-intercept is the point of intersection between the graph and the y-axis.
+  ## Include graph with x- and y-intercepts highlighted.
+
 internal-angle:
   title: Internal angles
   text: The __internal angles__ of a polygon are the angles on the inside, at
     every vertex.
   image: internal-angle.svg
+
+interval:
+  title: Interval
+  text: |
+    An __interval__ is a set of numbers between to two endpoints. The endpoints
+    may be included or excluded from the interval depending on the context.
+
+    _Closed_ intervals include the endpoints. (e.g. 3<=x<=6)
+
+    _Open_ intervals exclude the endpoints. (e.g. 3<x<6)
+
+    _Half-open_ or _half-closed_ intervals include one endpoint and exclude the
+    other. (e.g 3<=x<6 or 3<x<=6)
+
+inverse-function:
+  title: Inverse Function
+  text: An __inverse function__ is the relation which maps a function's range to its domain. Not all inverse functions are themselves functions. In fact, only one-to-one functions have inverse functions that qualify as functions.
+
+inverse-operation:
+  title: Inverse Function
+  text: An __inverse operation__ reverses a previous operation. One way to check if operations are inverses is see if they combine to give an inverse. For example, combining 3 and -3 gives 0, the additive identity. Likewise combining 3 and 1/3 gives 1, the multiplicative idetity.
+  ## Determine linking structure among glossary entries. Or change the technical components to be more approachable.
 
 irrational-numbers:
   title: Irrational numbers
@@ -1225,6 +1274,14 @@ pi:
     and its value is approximately 3.14159265…
   link: /course/circles/introduction#pi-definition
 
+piecewise:
+  title: Piecewise functions
+  text: |
+    A __piecewise function__ is function that uses different rules for
+    different parts of its domain. For example,
+
+    {.text-center} `f(x)= {(3-x, x<10), (x^3, 10<=x<=40), (5, x>40)}`
+
 platonic-solid:
   title: Platonic solid
   text: |
@@ -1378,6 +1435,12 @@ pyramid:
     vertex is directly above the center of the base.
   image: pyramid.svg
 
+pyramid-height:
+  title: height of a Pyramid
+  text: |
+    The __height__ of __altitude__ of a pyramid is the perpendicular distance
+    between the apex and the base of a pyramid.
+
 protractor:
   title: Protractor
   text: A __protractor__ is a tool used to measure an angle in degrees.
@@ -1458,7 +1521,7 @@ radioactive:
 range:
   title: Range
   text: The __range__ of a function or relation is the set of all possible
-    _output values_ (often shown on the _y_-axis in a coordinate system).
+    _output values_ (often shown on the vertical axis in a coordinate system).
 
 rational-numbers:
   title: Rational numbers
@@ -1509,9 +1572,12 @@ relation:
   title: Relation
   text: |
     A __relation__ is a way to represent connections between the elements in
-    two different sets (called the _domain_ and _range_). We can write a
-    relation as a set of ordered pairs (_x_, _y_), where _x_ is an element
-    from the domain, and _y_ is an element from the range.
+    two different sets. It is a rule that assigns each input from the first
+    set to one or more outputs from the second set.
+
+    We can write a relation as a set of ordered pairs (_x_, _y_), where _x_
+    is an element from the first set (called _domain_), and _y_ is an element
+    from the second set (called _range_).
 
 rhombus:
   title: Rhombus
@@ -1590,6 +1656,12 @@ scientific-notation:
     `1 ≤ a < 10`.
 
     For example, the number 4600 could be written as `4.6 × 10^3`.
+
+secant:
+  title: Secant Line
+  text: A secant line is a line that intersects a curve at least twice. For
+    example, line AB intersects circle P at two points.
+  # TODO Insert described diagram
 
 set:
   title: Set
@@ -1682,6 +1754,10 @@ square-area:
   title: Area of a square
   text: The __area__ of a square with side length _s_ is `A = s^2`.
 
+square-cube-law:
+  title: Square-Cube Law
+  text: The __square–cube law__ (or __cube–square law__) is a mathematical principle, applied in a variety of scientific fields, which describes the relationship between the volume and the surface area as a shape's size increases or decreases. This principle states that, as a shape grows in size, its volume grows faster than its surface area.
+
 square-matrix:
   title: Square matrix
   text: A __square matrix__ is a matrix that has the same number of rows and
@@ -1692,6 +1768,11 @@ square-numbers:
   text: A __square number__ is a number that can be expressed as the square of
     another integer. The first square numbers are 1, 4, 9, 16, 25, …
   link: /course/sequences/introduction#squares
+
+step-function:
+  title: Step Function
+  test: A step function is a piecewise function that has only constant rules (components). For example, f(x)={(3,0<=x<4),(-2, 4<=x<5),(0, 6<=x<10):}
+  ## Include accompanying graph.
 
 subdivision:
   title: Subdivisions
@@ -1720,6 +1801,16 @@ symmetry-group:
     its _symmetries_ (as well as the _identity_).
   link: /course/transformations/symmetry-groups#groups-1
 
+system-of-equations:
+  title: Systems of Equations
+  text: |
+    A __system of equations__ is two or more equations that share common
+    variables. For example,
+
+    {.text-center} `4x+y=20`<br>`x+y=-1`
+
+    Typically, systems of equations are used together to solve for each variable.
+
 tan:
   title: Tangent
   text: |
@@ -1740,6 +1831,9 @@ tangent:
   # Formally, it is a line through a point of a differentiable curve, which has
   # the same slop as the slope of the curve at that point.
   # A line tangent to a circle is perpendicular to the radius at that point.
+  # A tangent line is a line that has exactly one point of intersection with a
+  # curve. This means a tangent line with touch a curve without crossing it.
+  # TODO Image
 
 telegraph:
   title: Telegraph
@@ -1794,6 +1888,8 @@ transformation:
     are many different types of transformations, like _reflections_ or
     _dilations_.
   link: /course/transformations/rigid#transformations
+  ## Add something like: A __transformation__ changes the shape of a graph. Graph transformations can come in
+  ## form of shifts, reflections, and dialations or compressions.
 
 transformation-image:
   title: Image of a transformation
@@ -1930,6 +2026,10 @@ vertical-angles:
   title: Vertical angles
   text: __Vertical angles__ are pairs of opposite angles created by
     intersecting lines. Vertical angles are always _congruent_.
+
+volume:
+  title: volume
+  text: __Volume__ is the quantity of three-dimensional space enclosed by a closed surface, for example, the space that a substance (solid, liquid, gas, or plasma) or shape occupies or contains.
 
 whole-numbers:
   title: Whole numbers

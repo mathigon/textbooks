@@ -25,7 +25,7 @@ function getPoints(center: Point, factors: number[], radius: number, angle: numb
   }));
 }
 
-@register('x-factor-diagram', {attributes: ['n']})
+@register('x-factor-diagram')
 export class FactorDiagram extends CustomElementView {
   private center!: Point;
   private $svg!: SVGParentView;
@@ -34,9 +34,7 @@ export class FactorDiagram extends CustomElementView {
     const size = +this.attr('size') || 400;
     this.$svg = $N('svg', {width: size, height: size}, this) as SVGParentView;
     this.center = new Point(size / 2, size / 2);
-
-    this.drawPoints(+this.attr('n'));
-    this.on('attr:n', e => this.drawPoints(+e.newVal));
+    this.onAttr('n', n => this.drawPoints(+n));
   }
 
   drawPoints(n: number) {

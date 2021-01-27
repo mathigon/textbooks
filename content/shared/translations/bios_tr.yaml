@@ -104,7 +104,7 @@ archimedes:
 
     Arşimed, banyo yaparken, cisimlerin suya batırılımasıyla meydana gelen suyun yer değiştirme
     miktarını kullanarak düzensiz cisimlerin hacmini belirlemenin bir yolunu buldu. Bu keşif
-    sayesinde öylesine heyecanlandı ki, sokakta, hala soyunmuş halde iken _“Eureka!”_ diye bağırdı 
+    sayesinde öylesine heyecanlandı ki, sokakta, hala soyunmuş halde iken _“Eureka!”_ diye bağırdı
     (Yunanca’da _“Onu buldum!”_).
 
     Sicilya'daki memleketi Syracuse'nin kuşatması sırasında, bir mühendis olarak, ustalıkla savunma
@@ -350,7 +350,7 @@ collatz:
   name: Collatz
   bio: |
     __Lothar Collatz__ (1910 – 1990) diferansiyel denklemler ve optimizasyon problemleri üzerine
-    çalışmış Alman matematikçidir. Hala çözülememiş olan ve `3x+1` problemi olarak da anılan 
+    çalışmış Alman matematikçidir. Hala çözülememiş olan ve `3x+1` problemi olarak da anılan
     _Collatz Sanısı_nın isim babasıdır.
 
 conway:
@@ -704,7 +704,7 @@ gauss:
     çağındaydı. Daha sonra üniversitede çalışırken birçok önemli matematikçiye ders vermiştir.
   links:
     - title: Asal Sayı Teoremi
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
     - title: Öklid dışı geometri
       url: /world/Dimensions_and_Distortions
     - title: Üçgen sayıların toplamı
@@ -757,7 +757,7 @@ goldbach:
     Bernoulli’nin çağdaşıydı. Rus çarı 2. Peter’ın eğitmeniydi. “Goldbach Sanısı” ile anılır.
   links:
     - title: Goldbach Sanısı
-      url: /course/divisibility/the-distribution-of-primes#goldbach1
+      url: /course/divisibility/distribution-of-primes#goldbach1
 
 grothendieck:
   born: 1928
@@ -766,7 +766,7 @@ grothendieck:
   small: true
   bio: |
     Fransız matematikçi  __Alexander Grothendieck__ (1928 – 2014) _cebirsel geometri_nin
-    gelişimindeki kilit isimlerdendir. Bu alanı, Fermat’nın son teoremi dahil olmak üzere, 
+    gelişimindeki kilit isimlerdendir. Bu alanı, Fermat’nın son teoremi dahil olmak üzere,
     matematikteki bir sürü yeni probleme uygulanabilecek şekilde genişletmiştir. 1966 yılında Fields
     madalyası ile ödüllendirilmiştir.
 
@@ -1025,7 +1025,7 @@ leonardo:
     en çeşitli yeteneklere sahip olan kişilerden biriydi.
 
     Leonardo, Vinci’de doğmuş, Floransa’da eğitim görmüş ve Milano, Roma, Bolonya ve Venedik’te
-    çalışmıştır. Günümüzde elimizde sadece 15 adet resmi vardır, ancak bunların içinde _Mona Lisa_  
+    çalışmıştır. Günümüzde elimizde sadece 15 adet resmi vardır, ancak bunların içinde _Mona Lisa_
     ve _Son Akşam Yemeği_ gibi, dünyanın en iyi tanınan, en çok kopyalanmış eserleri vardır.
 
     Defterleri ilk uçak makineler, helikopterler, hidrolik pompalar, köprüler gibi yüzlerce çizim,
@@ -1133,7 +1133,7 @@ mersenne:
     harmoniği üzerinde çalışmış, teoloji ve felsefe üzerine yazmıştır.
   links:
     - title: Büyük Asallar
-      url: /course/divisibility/the-distribution-of-primes#prime-test-1
+      url: /course/divisibility/distribution-of-primes#prime-test-1
 
 milgram:
   name: Milgram
@@ -1547,7 +1547,7 @@ riemann:
     sayıların dağılımıyla alakalı çığır açan keşifleri de olmuştur.
   links:
     - title: Riemann Hipotezi
-      url: /course/divisibility/the-distribution-of-primes#riemann
+      url: /course/divisibility/distribution-of-primes#riemann
 
 russell:
   born: 1872
@@ -1686,7 +1686,7 @@ ulam:
   bio: |
     __Stanisław Ulam__ (1909 – 1984) Polonyalı-Amerikalı bir matematikçiydi. Amerika’nın ilk nükleer
     silahlarının geliştirildiği _Manhatten Projesi_nde önemli rol oynamıştır. Ayrıca nükleer
-    yayılımı kullanan roket ateşleme üzerine çalışmış ve istatistikteki önemli bir kavram olan 
+    yayılımı kullanan roket ateşleme üzerine çalışmış ve istatistikteki önemli bir kavram olan
     _Monte Carlo metodu_nu geliştirmiştir.
 
 venn:

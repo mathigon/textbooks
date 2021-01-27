@@ -1281,7 +1281,7 @@ truncated-icosahedron:
 twin-primes:
   title: 孪生素数
   text: '__孪生素数__ 是像17和19一样的成对素数, 它们正好相隔两个数。仍然不知道 是否有无穷多对双素数。'
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: 单位圆

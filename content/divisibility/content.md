@@ -39,23 +39,6 @@ integer by any other. For example 17 divided by 3 is not a whole number – it i
 somewhere in between 5 and 6. You either have to give a remainder (2), or
 express the answer as a decimal number (5.66…).
 
-    // figure
-      x-factor-diagram.var(:n="n + 1")
-      x-slider(steps=99 :bind="n")
-    // - var i = 2
-    // while i <= 50
-      x-prime-disk(n=i size=60)
-      - i += 1
-    // - factors = (n) => Array(n-2).fill(1).map((x, i) => i+1).filter(i => !(n % i))
-    // - total = (a) => a.reduce((a, c) => a + c, 0)
-    
-    // .factor-table
-      for i in [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-        div
-          span.bulb= i
-          span.factors= factors(i).join(', ')
-          span.total= total(factors(i))
-
     .row.padded
       .grow
         include svg/divisibility-1.svg
@@ -76,22 +59,20 @@ of __{.green}7__, and we can write __{.green}7__|__{.orange}21__.
 ---
 > id: divisibility-game
 
-In this short game you have to determine which numbers are factors or multiples,
-as fast as possible. Click the [play button](->#divisibility-game_.toggle) to start.
+In this short game you have to determine which numbers are factors or multiples:
 
 ::: .box.f-blue.no-padding
 #### Factors and Multiples Quiz
 
-    x-gameplay
-      .factors-row
-        .factor-number ${x}
-        | is a
-        .factor-value
-          .factor-bubble: .btn.btn-blue factor
-          .factor-bubble: .btn.btn-blue multiple
-          .factor-bubble: .btn.btn-blue neither
-        | of
-        .factor-number ${y}
+    x-gameplay.factors-quiz
+      .circled ${x}
+      | is a
+      .factor-value
+        .factor-bubble: .btn.btn-blue factor
+        .factor-bubble: .btn.btn-blue multiple
+        .factor-bubble: .btn.btn-blue neither
+      | of
+      .circled ${y}
 
 :::
 

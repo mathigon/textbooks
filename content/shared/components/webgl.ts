@@ -13,7 +13,7 @@ const url = '/resources/shared/vendor/three-91.min.js';
 const renderers: Obj<THREE.WebGLRenderer> = {};
 let threePromise: Promise<any>;
 
-function loadTHREE() {
+export function loadTHREE() {
   if (!threePromise) threePromise = loadScript(url);
   return threePromise;
 }

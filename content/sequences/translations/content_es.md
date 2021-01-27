@@ -585,7 +585,7 @@ Una secuencia geométrica __{.m-green}__ tiene el primer término `a` y una rela
 Aquí hay un breve clip de la película _Pay it Forward_, donde Trevor, de 12 años, explica su idea de hacer del mundo un lugar mejor:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward.jpg" width=640 height=360 controls audio)
       .caption Extracto de “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---

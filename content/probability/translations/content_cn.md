@@ -114,11 +114,11 @@ __概率__ 是介绍于 0 和 1 之间的一个数字，用来描述 __特定事
 现在将下列事件按正确顺序拖动，按可能到不可能依次排序：
 
     x-sortable
-      .item.md(data-index="3") 掷一个骰子 :game_die: ，刚好得到 6 点
+      .item.md(data-index="3") 掷一个骰子 :game-die: ，刚好得到 6 点
       .item.md(data-index="5") 企鹅 :penguin: 住在北极
-      .item.md(data-index="1") 11月将要下雨 :rain_cloud: 
-      .item.md(data-index="0") 今天在中国将诞生一个婴儿 :baby_bottle:
-      .item.md(data-index="4") 你买了一张彩票，中了头奖 :tada:.
+      .item.md(data-index="1") 11月将要下雨 :cloud-with-rain: 
+      .item.md(data-index="0") 今天在中国将诞生一个婴儿 :baby-bottle:
+      .item.md(data-index="4") 你买了一张彩票，中了头奖 :party-popper:.
       .item.md(data-index="2") 一个新生儿是女孩 :girl:.
 
 我们在日常生活中经常会使用到概率和可能性，通常会不加思考。明天下雨的有多大可能？错过公共汽车的可能性？赢得一场比赛的概率是多少？

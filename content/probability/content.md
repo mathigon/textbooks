@@ -139,11 +139,11 @@ or of a train arriving on time is [[more|less]] than 0.5 – which means likely.
 Now drag the following events into the correct order, from likely to unlikely:
 
     x-sortable
-      .item.md(data-index="3") You throw a die :game_die: and it lands on 6.
+      .item.md(data-index="3") You throw a die :game-die: and it lands on 6.
       .item.md(data-index="5") Penguins :penguin: live on the North Pole.
-      .item.md(data-index="1") It’s going to rain :rain_cloud: in November.
-      .item.md(data-index="0") A baby will be born in China today. :baby_bottle:
-      .item.md(data-index="4") You buy a lottery ticket and win the Jackpot :tada:.
+      .item.md(data-index="1") It’s going to rain :cloud-with-rain: in November.
+      .item.md(data-index="0") A baby will be born in China today. :baby-bottle:
+      .item.md(data-index="4") You buy a lottery ticket and win the Jackpot :party-popper:.
       .item.md(data-index="2") A newborn baby will be a girl :girl:.
 
 We often use probabilities and likelihoods in everyday life, usually without
@@ -166,7 +166,7 @@ actual results: if we toss a coin many times we know that
 [[approximately half|exactly half|all|none]] of the results are heads – but we
 have no way of predicting _exactly which_ tosses landed heads.
 
-Even events with tiny probabilities (like winning the lottery :tada:) _can
+Even events with tiny probabilities (like winning the lottery :party-popper:) _can
 still happen_ – and they _do happen_ all the time (but to a very small
 proportion of the people who participate).
 
@@ -474,8 +474,8 @@ simply by listing all different possibilities:
 
     figure: img(src="images/monty.png" width=694 height=468)
 
-Out of the 9 possibilities [[6]] need you to switch doors, to win. This gives a
-chance of `6/9 = 2/3` like before.
+Out of the 9 possibilities, there are [[6]] where you need you to switch doors, in order to win.
+This gives a  chance of `6/9 = 2/3` like before.
 
 
 ---

@@ -1795,7 +1795,7 @@ twin-primes:
   text: |
     __Twin primes__ are pairs of prime numbers like 17 and 19 or 101 and 103, which are exactly two
     apart. It is unknown if there are infinitely many pairs of twin primes.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Unit Circle

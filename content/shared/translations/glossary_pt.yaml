@@ -1832,7 +1832,7 @@ twin-primes:
   text: |
     __Primos gêmeos__ são pares de números primos como 17 e 19 ou 101 e 103, que são exatamente dois
     separados. Não se sabe se existem infinitamente muitos pares de primos gêmeos.
-  link: /course/divisibility/the-distribution-of-primes#twin-primes
+  link: /course/divisibility/distribution-of-primes#twin-primes
 
 unit-circle:
   title: Círculo unitário
