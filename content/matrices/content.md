@@ -1700,6 +1700,22 @@ Here is the formula for calculating a 3x3 matrix. There is a way to calculate in
 > section: systems
 > sectionStatus: dev
 
+> id: babylon
+
+Here is a Gaussian component
+
+::: x-gaussian(dimension="2x2")
+
+{div(slot="matrix")} `§[[1 1] [(2/3) (-1/2)]]` • `§[[x] [y]]` = `§[[1800] [500]]`
+
+* Here is step one
+* Here is step two
+* Here is step three
+
+:::
+
+---
+
 > id: cartography
 
 Here's a map

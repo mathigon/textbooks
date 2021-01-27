@@ -400,12 +400,56 @@ export function rotationInverse(_$step: Step) {
   // TODO: put an x-matrix-solver here
 }
 
+class LinearCombinationStep {
+
+  constructor(
+    public multiply: number[],
+    public into: number,
+    public description: string) {
+    //
+  }
+}
+
+export function babylon($step: Step) {
+  const $gaussian = $step.$('x-gaussian') as Gaussian;
+
+  const linearCombinationSteps = [
+    new LinearCombinationStep([-2 / 3, 1], 2, 'do a thing'),
+    new LinearCombinationStep([0, -6 / 7], 2, 'simplify to solve R2'),
+    new LinearCombinationStep([1, -1], 1, 'back substitute')
+  ];
+
+  // -- how to figure out this part? Step-by-step...
+  const _functionSteps = linearCombinationSteps.map(lc => {
+
+    const multiplySteps = lc.multiply.map((multiplier, i) => {
+      return [
+        () => $gaussian.createBlankRightMatrix(),
+        () => $gaussian.multiplyRow(multiplier, i - 1),
+        () => $gaussian.hideArrows(),
+        () => $gaussian.copyRow(0), // another loop
+        () => $gaussian.drawArrow(i - 1),
+        () => $gaussian.copyRow(1), // should be i - 1
+        () => $gaussian.hideArrows(),
+        () => $gaussian.moveRightMatrixToLeft()
+      ];
+    });
+
+    return multiplySteps;
+  });
+  /// MAP AND APPEND OR SOMETHING
+  // $gaussian.setNextSteps(functionSteps); // why??? type not work???
+}
+
+// ==========================
+// ===  GAUSSIAN SOLVER  ====
+// ==========================
 export function gaussianSolve(_$step: Step) {
   const $gauss = _$step.$('x-gaussian') as Gaussian;
 
   $gauss.setNextSteps(
       [
-        // Step 1: set to 1.
+        // -- Step 1: set to 1.
         () => $gauss.createBlankRightMatrix(),
         () => $gauss.multiplyRow(0, -1),
         // () => $gauss.drawArrow(0),
@@ -417,7 +461,7 @@ export function gaussianSolve(_$step: Step) {
         () => $gauss.hideArrows(),
         () => $gauss.moveRightMatrixToLeft(),
 
-        // Step 2: multiply by 1/2
+        // --  Step 2: multiply by 1/2
         () => $gauss.createBlankRightMatrix(),
         () => $gauss.multiplyRow(1, 1 / 2),
         () => $gauss.drawArrow(1),
@@ -428,7 +472,7 @@ export function gaussianSolve(_$step: Step) {
         () => $gauss.hideArrows(),
         () => $gauss.moveRightMatrixToLeft(),
 
-        // Step 3: Add rows 1 and 2 into row 2
+        // --  Step 3: Add rows 1 and 2 into row 2
         () => $gauss.createBlankRightMatrix(),
         () => $gauss.drawArrow(0),
         () => $gauss.copyRow(0),
@@ -437,7 +481,7 @@ export function gaussianSolve(_$step: Step) {
         () => $gauss.copyRow(1),
         () => $gauss.moveRightMatrixToLeft(),
 
-        // Step 4: Put 1 in the diagonal.
+        // -- Step 4: Put 1 in the diagonal.
         () => $gauss.createBlankRightMatrix(),
         () => $gauss.drawArrow(0),
         () => $gauss.copyRow(0),
@@ -448,7 +492,7 @@ export function gaussianSolve(_$step: Step) {
         () => $gauss.hideArrows(),
         () => $gauss.moveRightMatrixToLeft(),
 
-        // Step 5: Add Rows 1 and 2.
+        // -- Step 5: Add Rows 1 and 2.
         () => $gauss.createBlankRightMatrix(),
         () => $gauss.comboRow(0, 1, 0, 1, 1),
         () => $gauss.copyRow(0),
@@ -471,12 +515,15 @@ export function gaussianSolve(_$step: Step) {
   });
 }
 
+// ==========================
+// ===  GAUSSIAN SOLVER  ====
+// ==========================
 export function gaussianSolve2($step: Step) {
   const $gauss = $step.$('x-gaussian') as Gaussian;
 
   $gauss.setNextSteps(
       [
-        // Step 1: set to 1.
+        // -- Step 1: set to 1.
         () => $gauss.createBlankRightMatrix(),
         () => $gauss.multiplyRow(0, 1 / 168),
         // () => $gauss.drawArrow(0),
@@ -493,7 +540,7 @@ export function gaussianSolve2($step: Step) {
 
         () => $gauss.moveRightMatrixToLeft(),
 
-        // Step 2: multiply by 1/168
+        // -- Step 2: multiply by 1/168
         () => $gauss.createBlankRightMatrix(),
         () => $gauss.multiplyRow(1, 1 / 168),
         () => $gauss.drawArrow(1),
@@ -510,7 +557,7 @@ export function gaussianSolve2($step: Step) {
 
         () => $gauss.moveRightMatrixToLeft(),
 
-        // Step 3: Add rows 1 and 2 into row 2
+        // -- Step 3: Add rows 1 and 2 into row 2
         () => $gauss.createBlankRightMatrix(),
         () => $gauss.drawArrow(0),
         () => $gauss.copyRow(0),
