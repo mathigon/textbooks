@@ -453,7 +453,7 @@ export class VoxelPainter extends CustomElementView {
                 this.updateApplet();
               }
 
-            }).promise.catch((reason) => console.log('anim promise error:', reason)).then(() => {
+            }).promise.catch(() => undefined).then(() => {
               const [y, x, z] = camera.rotation.toArray().slice(0, 3).map(a => Angle.fromRadians(a).deg);
               let sideColor: SideColor = 'none';
               if (nearlyEquals(y, 0) && nearlyEquals(z, 0)) {
