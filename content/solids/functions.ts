@@ -274,42 +274,42 @@ export function sidesRotation($step: Step) {
     if (color == 'none') $step.addHint('incorrect');
     else $step.score(color);
   });
-  $step.onScore('red', () => {
+  $step.onScore('front', () => {
     const $t = $faceDisplay.newTile('number-tile', '2:6');
     $t.setTransform(new Point(50, 50));
     $t.setColour(RED);
     $t.locked = true;
     $step.addHint('correct');
   });
-  $step.onScore('purple', () => {
+  $step.onScore('right', () => {
     const $t = $faceDisplay.newTile('number-tile', '2:6');
     $t.setTransform(new Point(150, 50));
     $t.setColour(PURPLE);
     $t.locked = true;
     $step.addHint('correct');
   });
-  $step.onScore('blue', () => {
+  $step.onScore('back', () => {
     const $t = $faceDisplay.newTile('number-tile', '2:6');
     $t.setTransform(new Point(250, 50));
     $t.setColour(BLUE);
     $t.locked = true;
     $step.addHint('correct');
   });
-  $step.onScore('orange', () => {
+  $step.onScore('left', () => {
     const $t = $faceDisplay.newTile('number-tile', '2:6');
     $t.setTransform(new Point(350, 50));
     $t.setColour(ORANGE);
     $t.locked = true;
     $step.addHint('correct');
   });
-  $step.onScore('green', () => {
+  $step.onScore('top', () => {
     const $t = $faceDisplay.newTile('number-tile', '2:4');
     $t.setTransform(new Point(450, 62.5));
     $t.setColour(GREEN);
     $t.locked = true;
     $step.addHint('correct');
   });
-  $step.onScore('yellow', () => {
+  $step.onScore('bottom', () => {
     const $t = $faceDisplay.newTile('number-tile', '2:4');
     $t.setTransform(new Point(550, 62.5));
     $t.setColour(YELLOW);

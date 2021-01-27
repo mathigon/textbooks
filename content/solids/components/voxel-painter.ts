@@ -19,9 +19,9 @@ function snapToNearestValidCubeCenterPosition(p: THREE.Vector3) {
   p.floor().addScalar(0.5);
 }
 
-type SideColor =
-  'red' | 'purple' | 'blue' | 'orange' |'green' | 'yellow' | 'none';
-type Side = [SideColor, [number, number, number]];
+type FaceName =
+  'front' | 'back' | 'right' | 'left' |'top' | 'bottom' | 'none';
+type Side = [FaceName, [number, number, number]];
 
 /*
   Events:
@@ -455,12 +455,12 @@ export class VoxelPainter extends CustomElementView {
 
             }).promise.catch(() => undefined).then(() => {
               const [y, x, z] = camera.rotation.toArray().slice(0, 3).map(a => Angle.fromRadians(a).deg);
-              let sideColor: SideColor = 'none';
+              let faceName: FaceName = 'none';
               if (nearlyEquals(y, 0) && nearlyEquals(z, 0)) {
-                if (nearlyEquals(x, 90)) sideColor = 'red'; // TODO: Use top bottom left right front back
-                else if (nearlyEquals(x, 180)) sideColor = 'purple';
-                else if (nearlyEquals(x, 270)) sideColor = 'blue';
-                else if (nearlyEquals(x, 360) || nearlyEquals(x, 0)) sideColor = 'orange';
+                if (nearlyEquals(x, 90)) faceName = 'front'; // TODO: Use top bottom left right front back
+                else if (nearlyEquals(x, 180)) faceName = 'right';
+                else if (nearlyEquals(x, 270)) faceName = 'back';
+                else if (nearlyEquals(x, 360) || nearlyEquals(x, 0)) faceName = 'left';
               } else if (
                 nearlyEquals(x, 0) ||
                 nearlyEquals(x, 90) ||
@@ -468,10 +468,10 @@ export class VoxelPainter extends CustomElementView {
                 nearlyEquals(x, 270) ||
                 nearlyEquals(x, 360)
               ) {
-                if (nearlyEquals(y, 270)) sideColor = 'green';
-                else if (nearlyEquals(y, 90)) sideColor = 'yellow';
+                if (nearlyEquals(y, 270)) faceName = 'top';
+                else if (nearlyEquals(y, 90)) faceName = 'bottom';
               }
-              this.trigger('snap', [sideColor, [y, x, z]] as Side);
+              this.trigger('snap', [faceName, [y, x, z]] as Side);
             });
           }
 
