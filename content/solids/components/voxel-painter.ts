@@ -23,6 +23,14 @@ type SideColor =
   'red' | 'purple' | 'blue' | 'orange' |'green' | 'yellow' | 'none';
 type Side = [SideColor, [number, number, number]];
 
+/*
+  Events:
+  'snap'(Side)
+  'volume-target-met'(voxelPositions: [number, number, number][])
+  'area-target-met'(voxelPositions: [number, number, number][])
+  'both-targets-met'(voxelPositions: [number, number, number][])
+*/
+
 @register('x-voxel-painter')
 export class VoxelPainter extends CustomElementView {
 
@@ -55,15 +63,6 @@ export class VoxelPainter extends CustomElementView {
 
   private targetVolume?: number;
   private targetSurface?: number;
-
-  private onTargetVolumeMet?:
-    (voxels: [number, number, number][]) => void;
-  private onTargetSurfaceMet?:
-    (voxels: [number, number, number][]) => void;
-    private onTargetVolumeAreaMet?:
-    (voxels: [number, number, number][]) => void;
-
-  private onSnap?: (side: Side) => void;
 
   private pointToExplodeFrom!: THREE.Vector3;
   private initialPositions!: THREE.Vector3[];
@@ -408,13 +407,13 @@ export class VoxelPainter extends CustomElementView {
                     this.getVolume() == this.targetVolume &&
                     this.getSurfaceArea() == this.targetSurface
                   ) {
-                    this.onTargetVolumeAreaMet?.(this.voxelPositions);
+                    this.trigger('both-targets-met', this.voxelPositions);
                   } else {
                     if (this.getVolume() == this.targetVolume) {
-                      this.onTargetVolumeMet?.(this.voxelPositions);
+                      this.trigger('volume-target-met', this.voxelPositions);
                     }
                     if (this.getSurfaceArea() == this.targetSurface) {
-                      this.onTargetSurfaceMet?.(this.voxelPositions);
+                      this.trigger('area-target-met', this.voxelPositions);
                     }
                   }
                 }
@@ -458,7 +457,7 @@ export class VoxelPainter extends CustomElementView {
               const [y, x, z] = camera.rotation.toArray().slice(0, 3).map(a => Angle.fromRadians(a).deg);
               let sideColor: SideColor = 'none';
               if (nearlyEquals(y, 0) && nearlyEquals(z, 0)) {
-                if (nearlyEquals(x, 90)) sideColor = 'red';
+                if (nearlyEquals(x, 90)) sideColor = 'red'; // TODO: Use top bottom left right front back
                 else if (nearlyEquals(x, 180)) sideColor = 'purple';
                 else if (nearlyEquals(x, 270)) sideColor = 'blue';
                 else if (nearlyEquals(x, 360) || nearlyEquals(x, 0)) sideColor = 'orange';
@@ -472,7 +471,7 @@ export class VoxelPainter extends CustomElementView {
                 if (nearlyEquals(y, 270)) sideColor = 'green';
                 else if (nearlyEquals(y, 90)) sideColor = 'yellow';
               }
-              this.onSnap?.([sideColor, [y, x, z]]);
+              this.trigger('snap', [sideColor, [y, x, z]] as Side);
             });
           }
 
@@ -499,22 +498,6 @@ export class VoxelPainter extends CustomElementView {
       const pos = voxel.position;
       return [pos.x, pos.y, pos.z];
     });
-  }
-
-  onVolumeMet(fn: (positions: [number, number, number][]) => void) {
-    this.onTargetVolumeMet = fn;
-  }
-
-  onSurfaceMet(fn: (positions: [number, number, number][]) => void) {
-    this.onTargetSurfaceMet = fn;
-  }
-
-  onVolumeAreaMet(fn: (positions: [number, number, number][]) => void) {
-    this.onTargetVolumeAreaMet = fn;
-  }
-
-  onCameraSnap(fn: (side: Side) => void) {
-    this.onSnap = fn;
   }
 
   private setFromVoxelIntersection(target: THREE.Vector3, intersection: THREE.Intersection) {

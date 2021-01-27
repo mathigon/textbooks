@@ -205,7 +205,7 @@ export async function templeDisplay2($step: Step) {
 
 export function painting1($step: Step) {
   const $voxelPainter = $step.$('x-voxel-painter') as VoxelPainter;
-  $voxelPainter.onVolumeMet(positions => {
+  $voxelPainter.on('volume-target-met', positions => {
     if (isCuboid(positions)) {
       console.log('correct');
       $step.score('vol');
@@ -270,7 +270,7 @@ function cartesian3D(a: number[][], b: number[]): number[][] {
 export function sidesRotation($step: Step) {
   const $v = $step.$('x-voxel-painter') as VoxelPainter;
   const $faceDisplay = $step.$('x-polypad') as Polypad;
-  $v.onCameraSnap(([color, _angles]) => {
+  $v.on('snap', ([color, _angles]) => {
     if (color == 'none') $step.addHint('incorrect');
     else $step.score(color);
   });
@@ -320,7 +320,7 @@ export function sidesRotation($step: Step) {
 
 export function voxelSurface($step: Step) {
   const $voxelPainter = $step.$('x-voxel-painter') as VoxelPainter;
-  $voxelPainter.onVolumeAreaMet(positions => {
+  $voxelPainter.on('both-targets-met', positions => {
     if (isContiguous(positions)) {
       console.log('correct');
       $step.score('area');
