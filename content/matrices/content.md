@@ -1700,7 +1700,68 @@ Here is the formula for calculating a 3x3 matrix. There is a way to calculate in
 > section: systems
 > sectionStatus: dev
 
-> id: babylon
+> id: gauss-intro-piazzi
+
+### Intro
+
+The year is 1801. Giuseppe Piazzi is an Italian astronomer who has catalogued the precise position of over 7,000 stars. He published the Catalog of Stars, observed from the Palermo observatory.
+
+On January 2nd, 1801, Piazzi observed a celestial body[1] whose location did not match his previous observation. Had Piazzi committed an error in measurement, or had this body moved through the night sky? He repeated the observation over the next two days and surely enough it had moved across the sky. The next day Piazzi could not make another measurement because this unknown entity had moved behind the sun.
+
+The mathematics of the time were not sufficient to calculate the orbit of this body using only three points. Fortunately, Friedrich Gauss[2] learned of this predicament and took on the challenge. He invented a new method to predict the orbit of this celestial body and predicted its location in December of 1801. Surely enough, it was found exactly where he predicted it would be! The body was found to be a dwarf planet with an orbit between Mars and Jupiter. It was named Ceres, after a Roman goddess of agriculture.
+
+---
+
+> id: ceres-orbit
+
+### Orbit of Ceres
+
+To calculate Ceres’ orbit around the sun, Gauss needed to do some complex math with triangles. The three Es here represent the locations of the Earth as it moves around the sun, the lines labeled L represent the line of sight that Gauss measured, and the positions P1, P2, P3 are the calculated positions of Ceres relative to the sun.
+
+{.todo} IMAGE_NEEDED of diagrams
+
+The goal was to replace the three positions of Ceres with parameters that represented the orbit around the sun.[3] When searching for these positions of Ceres, Gauss encountered a mathematical problem with a very long history, that dates back to almost 4,000 years ago!
+
+
+---
+
+> id: babylon-intro
+
+### Ancient Babylonians: 2x2
+
+The problem of how to calculate the orbit of Ceres can ultimately be considered a system of equations. What if you have multiple unknown variables, and multiple equations that represent the relationships between those unknowns? This was not a new problem - in fact, it dates back to at least the ancient Babylonians in 1800 BCE.
+
+The Babylonians[4][5] used Cuneiform tablets to teach algebra. Their culture and society was very dependent on agriculture. Here is a problem that was found inscribed on a tablet. It was translated by historians/linguists.
+
+{.todo} IMAGE_NEEDED of Cuneiform
+
+---
+
+> id: babylon-setup
+
+::: .box.f-green
+
+I have two fields that total 1800 sar (square meters). Yields for each field are ⅔ kur of grain per sar and ½ kur of grain per sar. The first field gave 500 more kur than the second. What are the areas of each field?[4][5]
+
+:::
+
+The units are unfamiliar, but we just need to know what kind of unit they represent (area, volume/mass) and we can repeat the techniques with whatever units we choose.
+
+Now let’s follow some steps to solve this system of equations:
+
+
+---
+
+> id: babylon-problem
+
+### Babylon Problem
+
+::: .box.f-red
+
+{.todo} PROBLEM_SOLVE details needed of problem
+
+:::
+
 
 Here is a Gaussian component
 
@@ -1714,16 +1775,116 @@ Here is a Gaussian component
 
 :::
 
+Great! The problem we just solved was likely solved by maths students in an ancient civilization! Let’s see what else we can do with this.
+
 ---
 
-> id: cartography
+> id: chinese-intro
+
+### Ancient Chinese: 3x3
+
+Interestingly, the ancient Chinese also used a similar method to calculate agricultural yields (a lot more people were farmers back then!). This example was found in Jiuzhang Suanshu, or Nine Chapters of the Mathematical Art.
+
+Instead of measuring grain, this problem measures rice, from rice paddies. The area of the volume is measured in dou, and the yield is a sheaves, which is a bundle of rice stalks.
+
+{.todo} IMAGE_NEEDED of rice paddies
+
+
+---
+
+> id: chinese-problem
+
+Here is the problem:
+
+::: .box.f-green
+
+There are three grades of rice paddies, top-grade, medium-grade, and low-grade. The combined yield of the first paddy is 39 dou of grain for 3 sheaves from top-grade paddies, 2 from medium-grade, and 1 from low-grade; and similarly for two more collections of sheaves. The other two rice paddies have the yields shown in the table.
+
+**What is the expected yield from one sheave from a top-grade field, a medium-grade field, and a low-grade field?**
+
+:::
+
+
+Here is a Gaussian component:
+
+::: .box.f-red
+
+{.todo} PROBLEM_SOLVE details needed of problem
+
+:::
+
+What we just did with the help of computers, Ancient Chinese Mathematicians actually used a table with counting rods (similar to an abacus). Before they had computers, they found a way to do this!
+
+---
+
+> id: rules-gaussian
+
+### Rules of Gaussian Elimination
+
+Great job! We just worked through two problems that were likely solved by maths students in ancient civilizations!  These kinds of problems have troubled mathematicians for ages. Despite being used long ago, the method we used in those two problems is what we now call [Gaussian Elimination](gloss:gaussian-elimination).
+
+Gaussian Elimination is used to solve a system of equations. It is a procedure in which a system of equations can be written as a matrix problem, and then simplified to find solutions for variables.
+
+::: .box.f-yellow
+
+**Process**
+
+- Write the system of equations as an augmented matrix form.
+- Follow the steps until the identity matrix is reached
+  - Get zeros in the bottom-left diagonal of the matrix. (This is called upper Triangle matrix)
+    - Replace each row with a linear combination of that row, and the row above it. Choose a linear combination so that the leading coefficient is zero. ((NOTE: this does NOT add new information or change the meaning of the equations. It is like performing the same operation on multiple sides of an equation)).
+    - Divide to make the leading coefficient 1.
+  - Perform “back-substitution” to get zeros in the top-right diagonal of the matrix. This will leave you with the identity matrix.
+
+:::
+
+
+---
+
+> id: solving-ceres
+
+### Ceres
+
+Solving Ceres
+
+
+---
+
+> id: cartography-intro
+
+### Cartography
+
+Gauss also used this approach to solve other problems people were struggling with. Here's another example. At the turn of the 19th century there was a large trend of national governments wanting accurate geographical maps of their country, for purposes of military safety, navigation, and urban planning. The land was mapped by picking landmarks throughout the country. At each location, a “surveyor” would establish a line of sight from their location to two other landmarks. They then measured angles between the lines of sight. 
+
+{.todo} IMAGE_NEEDED of landmarks & measuring
+
+These landmarks were spread across very large distances, so measuring the angle off by even a degree could send the point off by many miles. Thus, it was essential to get the measurements as close as possible. Also, many points were inaccessible due to being on mountains. 
+
 
 Here's a map
 
     figure: include svg/map-with-dots.svg
 
+Here you can see all the measurements made by surveyors working for the Dutch government in 1826. Here is a map of Holland, with many landmarks picked out. The yellow lines are the lines of sight between landmarks.  
 
-A map of Netherlands that Gauss helped fix.
+The problem we will do below is only a slight approximation to what Gauss actually did, which was to use a method called Least Squares, which is out of scope for this chapter. Least Squares is not for solving but for minimizing total error over many variables. Gauss used this method of least squares to minimize the error over all of the measurements. Imagine how complex it would be to minimize the error over a map with dozens of locations and hundreds of angles. Gauss’s methods of elimination were essential to devising accurate maps.
+
+
+
+---
+
+> id: cartography-problem
+
+### Cartography Problem
+
+Let's simplify this problem by picking just 6 landmarks and some angles between them.
+
+::: .box.f-green
+
+{.todo} PROBLEM_SOLVE details needed of problem
+
+:::
+
 
 ---
 
