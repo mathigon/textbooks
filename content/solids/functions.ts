@@ -6,7 +6,7 @@
 
 import {Polypad, Slider, Step} from '../shared/types';
 import {VoxelPainter} from './components/voxel-painter';
-import {Hinge, Net} from './components/net';
+import {Net} from './components/net';
 import {Polyhedron} from '../polyhedra/components/polyhedron';
 
 import './components/voxel-painter';
@@ -14,10 +14,12 @@ import './components/net';
 import '../shared/components/solid';
 import '../shared/components/binary-swipe';
 import '../polyhedra/components/polyhedron';
-import {BLUE, GREEN, GREY, LIME, ORANGE, PURPLE, RED, YELLOW} from '../shared/constants';
+import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../shared/constants';
 import {Solid} from '../shared/components/solid';
 import {list} from '@mathigon/core';
-import {Angle, Point, Polygon} from '@mathigon/euclid';
+import {Point} from '@mathigon/euclid';
+import {layers, templeParts} from './voxel-data';
+import {pyramid1, triangularPrism, truncatedIcosahedron} from './net-data';
 
 export function polyParts($step: Step) {
   const $p = $step.$('x-polyhedron') as Polyhedron;
@@ -76,75 +78,6 @@ export async function templeFilling($step: Step) {
   handleLayers($voxelPainter, 0);
 }
 
-type VoxelData = {
-  locs: Array<[number, number, number]>,
-  color: string
-};
-
-const layers: VoxelData[] = [
-  {locs: [], color: ''},
-  {
-    locs: [
-      [-1, -2, -2], [0, -2, -2], [1, -2, -2], [2, -2, -2],
-      [-2, -2, -2], [-2, -1, -2], [-2, 0, -2], [-2, 1, -2],
-      [-2, 2, -2], [-1, -1, -2], [-1, 0, -2], [-1, 1, -2],
-      [-1, 2, -2], [0, -1, -2], [0, 0, -2], [0, 1, -2],
-      [0, 2, -2], [1, -1, -2], [1, 0, -2], [1, 1, -2],
-      [1, 2, -2], [2, -1, -2], [2, 0, -2], [2, 1, -2],
-      [2, 2, -2]
-    ],
-    color: BLUE
-  },
-  {
-    locs: [
-      [-1, -2, -1], [0, -2, -1], [1, -2, -1], [2, -2, -1],
-      [-2, -2, -1], [-2, -1, -1], [-2, 0, -1], [-2, 1, -1],
-      [-2, 2, -1], [-1, -1, -1], [-1, 0, -1], [-1, 1, -1],
-      [-1, 2, -1], [0, -1, -1], [0, 0, -1], [0, 1, -1],
-      [0, 2, -1], [1, -1, -1], [1, 0, -1], [1, 1, -1],
-      [1, 2, -1], [2, -1, -1], [2, 0, -1], [2, 1, -1],
-      [2, 2, -1]
-    ],
-    color: GREEN
-  },
-  {
-    locs: [
-      [-1, -2, 0], [0, -2, 0], [1, -2, 0], [2, -2, 0],
-      [-2, -2, 0], [-2, -1, 0], [-2, 0, 0], [-2, 1, 0],
-      [-2, 2, 0], [-1, -1, 0], [-1, 0, 0], [-1, 1, 0],
-      [-1, 2, 0], [0, -1, 0], [0, 0, 0], [0, 1, 0],
-      [0, 2, 0], [1, -1, 0], [1, 0, 0], [1, 1, 0],
-      [1, 2, 0], [2, -1, 0], [2, 0, 0], [2, 1, 0],
-      [2, 2, 0]
-    ],
-    color: YELLOW
-  },
-  {
-    locs: [
-      [-1, -2, 1], [0, -2, 1], [1, -2, 1], [2, -2, 1],
-      [-2, -2, 1], [-2, -1, 1], [-2, 0, 1], [-2, 1, 1],
-      [-2, 2, 1], [-1, -1, 1], [-1, 0, 1], [-1, 1, 1],
-      [-1, 2, 1], [0, -1, 1], [0, 0, 1], [0, 1, 1],
-      [0, 2, 1], [1, -1, 1], [1, 0, 1], [1, 1, 1],
-      [1, 2, 1], [2, -1, 1], [2, 0, 1], [2, 1, 1],
-      [2, 2, 1]
-    ],
-    color: RED
-  },
-  {
-    locs: [
-      [-1, -2, 2], [0, -2, 2], [1, -2, 2], [2, -2, 2],
-      [-2, -2, 2], [-2, -1, 2], [-2, 0, 2], [-2, 1, 2],
-      [-2, 2, 2], [-1, -1, 2], [-1, 0, 2], [-1, 1, 2],
-      [-1, 2, 2], [0, -1, 2], [0, 0, 2], [0, 1, 2],
-      [0, 2, 2], [1, -1, 2], [1, 0, 2], [1, 1, 2],
-      [1, 2, 2], [2, -1, 2], [2, 0, 2], [2, 1, 2],
-      [2, 2, 2]
-    ],
-    color: LIME
-  }
-];
-
 function handleLayers($vp: VoxelPainter, currentLayer: number) {
   if (currentLayer > 0) {
     $vp.addVoxels(layers[currentLayer].locs, layers[currentLayer].color);
@@ -153,37 +86,6 @@ function handleLayers($vp: VoxelPainter, currentLayer: number) {
   }
   setTimeout(() => handleLayers($vp, (currentLayer + 1) % layers.length), 1000);
 }
-
-const templeParts: VoxelData[] = [
-  { // Floor
-    locs: [
-      [-1, -2, -2], [0, -2, -2], [1, -2, -2], [2, -2, -2],
-      [-2, -2, -2], [-2, -1, -2], [-2, 0, -2], [-2, 1, -2],
-      [-2, 2, -2], [-1, -1, -2], [-1, 0, -2], [-1, 1, -2],
-      [-1, 2, -2], [0, -1, -2], [0, 0, -2], [0, 1, -2],
-      [0, 2, -2], [1, -1, -2], [1, 0, -2], [1, 1, -2],
-      [1, 2, -2], [2, -1, -2], [2, 0, -2], [2, 1, -2],
-      [2, 2, -2]
-    ],
-    color: BLUE
-  },
-  { // Pillars
-    locs: [
-      [2, -2, 0], [-2, -2, 0], [-2, 2, 0], [2, -2, -1],
-      [-2, -2, -1], [-2, 2, -1], [2, -2, 1], [-2, -2, 1],
-      [-2, 2, 1]
-    ],
-    color: GREY
-  },
-  { // Top
-    locs: [
-      [-1, -2, 2], [0, -2, 2], [1, -2, 2], [2, -2, 2],
-      [-2, -2, 2], [-2, -1, 2], [-2, 0, 2], [-2, 1, 2],
-      [-2, 2, 2]
-    ],
-    color: YELLOW
-  }
-];
 
 function templeDisplay($vp: VoxelPainter) {
   for (const part of templeParts) {
@@ -372,80 +274,10 @@ export function net1($step: Step) {
   const $net1 = $step.$('.s1 x-net') as Net;
   const $slider = $step.$('x-slider') as Slider;
   $net1.addCuboidNet(1, 1, 1);
-  const faces2 = [
-    new Polygon( // Circle
-        new Point(-0.866, 0.5),
-        new Point(0, -1),
-        new Point(0.866, 0.5)
-    ),
-    new Polygon( // Circle.001
-        new Point(1.7321, -1),
-        new Point(0, -1),
-        new Point(0.866, 0.5)
-    ),
-    new Polygon( // Circle.002
-        new Point(0, 2.0),
-        new Point(0.866, 0.5),
-        new Point(-0.866, 0.5)
-    ),
-    new Polygon( // Circle.003
-        new Point(-1.7321, -1),
-        new Point(0, -1),
-        new Point(-0.866, 0.5)
-    )
-  ];
-  const dihed2 = 180 - 70.528779;
-  const hinges2: Hinge[] = [
-    [0, 1, dihed2],
-    [0, 2, dihed2],
-    [0, 3, dihed2]
-  ];
   const $net2 = $step.$('.s2 x-net') as Net;
-  $net2.addNet(faces2, hinges2);
-  const a = 3;
-  const b = 2;
-  const c = Math.sqrt((b ** 2) - ((a / 2) ** 2));
-  const d = a / 2;
-  const e = d + b;
-  const faces3 = [
-    new Polygon(
-        new Point(-a, -d),
-        new Point(a, -d),
-        new Point(a, d),
-        new Point(-a, d)
-    ),
-    new Polygon(
-        new Point(-a, -d),
-        new Point(-a, -e),
-        new Point(a, -e),
-        new Point(a, -d)
-    ),
-    new Polygon(
-        new Point(-a, d),
-        new Point(a, d),
-        new Point(a, e),
-        new Point(-a, e)
-    ),
-    new Polygon(
-        new Point(a, d),
-        new Point(a, -d),
-        new Point(a + c, 0)
-    ),
-    new Polygon(
-        new Point(-a, d),
-        new Point(-a, -d),
-        new Point(-(a + c), 0)
-    )
-  ];
-  const angle = Angle.fromRadians(Math.asin(c / b)).deg;
-  const hinges3: Hinge[] = [
-    [0, 1, 180 - angle],
-    [0, 2, 180 - angle],
-    [0, 3, 90],
-    [0, 4, 90]
-  ];
+  $net2.addNet(pyramid1.faces, pyramid1.hinges);
   const $net3 = $step.$('.s3 x-net') as Net;
-  $net3.addNet(faces3, hinges3, 0.4);
+  $net3.addNet(triangularPrism.faces, triangularPrism.hinges, 0.4);
   $slider.on('move', n => {
     const progress = n / 1000;
     $net1.fold(progress);
@@ -461,273 +293,9 @@ export function cubeNetDraw($step: Step) {
 }
 
 export function soccerNet($step: Step) {
-  const faces = [
-    new Polygon( // base
-        new Point(0, -1.3951),
-        new Point(1.2085, -0.6976),
-        new Point(1.2085, 0.6976),
-        new Point(0, 1.3951),
-        new Point(-1.2085, 0.6976),
-        new Point(-1.2085, -0.6976)
-    ),
-    new Polygon( // Curve.001
-        new Point(-2.4169, 2.7902),
-        new Point(-1.2085, 3.4878),
-        new Point(-1.2085, 4.8829),
-        new Point(-2.4169, 5.5805),
-        new Point(-3.6254, 4.8829),
-        new Point(-3.6254, 3.4878)
-    ),
-    new Polygon( // Curve.002
-        new Point(0, 2.7902),
-        new Point(1.2085, 3.4878),
-        new Point(1.2085, 4.8829),
-        new Point(0, 5.5805),
-        new Point(-1.2085, 4.8829),
-        new Point(-1.2085, 3.4878)
-    ),
-    new Polygon( // Curve.003
-        new Point(1.2085, 0.6976),
-        new Point(2.4169, 1.3951),
-        new Point(2.4169, 2.7902),
-        new Point(1.2085, 3.4878),
-        new Point(0, 2.7902),
-        new Point(0, 1.3951)
-    ),
-    new Polygon( // Curve.004
-        new Point(1.2085, -3.4879),
-        new Point(2.4169, -2.7903),
-        new Point(2.4169, -1.3952),
-        new Point(1.2085, -0.6976),
-        new Point(0, -1.3952),
-        new Point(0, -2.7903)
-    ),
-    new Polygon( // Curve.005
-        new Point(3.6254, -3.4878),
-        new Point(4.8338, -2.7902),
-        new Point(4.8338, -1.3951),
-        new Point(3.6254, -0.6976),
-        new Point(2.4169, -1.3951),
-        new Point(2.4169, -2.7902)
-    ),
-    new Polygon( // Curve.006
-        new Point(4.8339, -5.5805),
-        new Point(6.0423, -4.883),
-        new Point(6.0423, -3.4879),
-        new Point(4.8339, -2.7903),
-        new Point(3.6254, -3.4879),
-        new Point(3.6254, -4.883)
-    ),
-    new Polygon( // Curve.007
-        new Point(-2.4169, -1.3951),
-        new Point(-1.2084, -0.6976),
-        new Point(-1.2084, 0.6976),
-        new Point(-2.4169, 1.3951),
-        new Point(-3.6254, 0.6976),
-        new Point(-3.6254, -0.6976)
-    ),
-    new Polygon( // Curve.008
-        new Point(-3.6254, -3.4878),
-        new Point(-2.4169, -2.7903),
-        new Point(-2.4169, -1.3951),
-        new Point(-3.6254, -0.6976),
-        new Point(-4.8338, -1.3951),
-        new Point(-4.8338, -2.7903)
-    ),
-    new Polygon( // Curve.009
-        new Point(-2.4169, -5.5805),
-        new Point(-1.2085, -4.8829),
-        new Point(-1.2085, -3.4878),
-        new Point(-2.4169, -2.7903),
-        new Point(-3.6254, -3.4878),
-        new Point(-3.6254, -4.8829)
-    ),
-    new Polygon( // Curve.010
-        new Point(3.6254, 0.6975),
-        new Point(4.8339, 1.3951),
-        new Point(4.8339, 2.7902),
-        new Point(3.6254, 3.4878),
-        new Point(2.4169, 2.7902),
-        new Point(2.4169, 1.3951)
-    ),
-    new Polygon( // Curve.011
-        new Point(1.2085, 4.8829),
-        new Point(2.4169, 5.5804),
-        new Point(2.4169, 6.9756),
-        new Point(1.2085, 7.6731),
-        new Point(0, 6.9756),
-        new Point(0, 5.5804)
-    ),
-    new Polygon( // Curve.012
-        new Point(0, 6.9756),
-        new Point(1.2085, 7.6731),
-        new Point(1.2085, 9.0683),
-        new Point(0, 9.7658),
-        new Point(-1.2085, 9.0683),
-        new Point(-1.2085, 7.6731)
-    ),
-    new Polygon( // Curve.013
-        new Point(-3.6254, 4.8829),
-        new Point(-2.4169, 5.5805),
-        new Point(-2.4169, 6.9756),
-        new Point(-3.6254, 7.6731),
-        new Point(-4.8339, 6.9756),
-        new Point(-4.8339, 5.5805)
-    ),
-    new Polygon( // Curve.014
-        new Point(-6.0423, 4.8829),
-        new Point(-4.8339, 5.5804),
-        new Point(-4.8339, 6.9756),
-        new Point(-6.0423, 7.6731),
-        new Point(-7.2508, 6.9756),
-        new Point(-7.2508, 5.5804)
-    ),
-    new Polygon( // Curve.015
-        new Point(-0.1715, 5.8164),
-        new Point(-1.2085, 4.8829),
-        new Point(-2.4169, 5.5805),
-        new Point(-2.1268, 6.9451),
-        new Point(-0.739, 7.0909)
-    ),
-    new Polygon( // Curve.016
-        new Point(3.4539, 7.9091),
-        new Point(2.4169, 6.9756),
-        new Point(1.2084, 7.6731),
-        new Point(1.4986, 9.0378),
-        new Point(2.8863, 9.1836)
-    ),
-    new Polygon( // Curve.017
-        new Point(3.3558, 4.1853),
-        new Point(2.5356, 3.0567),
-        new Point(1.2085, 3.4878),
-        new Point(1.2085, 4.8829),
-        new Point(2.5356, 5.314)
-    ),
-    new Polygon( // Curve.018
-        new Point(6.9812, 2.0927),
-        new Point(6.161, 0.964),
-        new Point(4.8339, 1.3951),
-        new Point(4.8339, 2.7902),
-        new Point(6.161, 3.2213)
-    ),
-    new Polygon( // Curve.019
-        new Point(-5.7727, 0),
-        new Point(-4.9525, -1.1287),
-        new Point(-3.6254, -0.6976),
-        new Point(-3.6254, 0.6975),
-        new Point(-4.9525, 1.1287)
-    ),
-    new Polygon( // Curve.020
-        new Point(-5.8708, 7.9091),
-        new Point(-4.8338, 6.9756),
-        new Point(-3.6254, 7.6731),
-        new Point(-3.9155, 9.0378),
-        new Point(-5.3033, 9.1836)
-    ),
-    new Polygon( // Curve.021
-        new Point(-0.1714, 2.5543),
-        new Point(-1.2084, 3.4878),
-        new Point(-2.4169, 2.7902),
-        new Point(-2.1268, 1.4256),
-        new Point(-0.739, 1.2798)
-    ),
-    new Polygon( // Curve.022
-        new Point(3.454, -3.7238),
-        new Point(2.417, -2.7903),
-        new Point(1.2086, -3.4878),
-        new Point(1.4987, -4.8524),
-        new Point(2.8865, -4.9983)
-    ),
-    new Polygon( // Curve.023
-        new Point(3.4539, 0.4616),
-        new Point(2.4169, 1.3951),
-        new Point(1.2085, 0.6975),
-        new Point(1.4986, -0.6671),
-        new Point(2.8863, -0.8129)
-    ),
-    new Polygon( // Curve.024
-        new Point(-2.2454, -1.6311),
-        new Point(-1.2084, -0.6976),
-        new Point(0, -1.3951),
-        new Point(-0.2901, -2.7598),
-        new Point(-1.6779, -2.9056)
-    ),
-    new Polygon( // Curve.025
-        new Point(5.0053, -5.8164),
-        new Point(6.0423, -4.8829),
-        new Point(7.2508, -5.5805),
-        new Point(6.9607, -6.9451),
-        new Point(5.5729, -7.0909)
-    ),
-    new Polygon( // Curve.026
-        new Point(-5.8708, -3.7238),
-        new Point(-4.8338, -2.7903),
-        new Point(-3.6254, -3.4878),
-        new Point(-3.9155, -4.8524),
-        new Point(-5.3033, -4.9983)
-    ),
-    new Polygon( // Curve.027
-        new Point(4.8339, 2.7902),
-        new Point(6.0423, 3.4878),
-        new Point(6.0423, 4.8829),
-        new Point(4.8339, 5.5804),
-        new Point(3.6254, 4.8829),
-        new Point(3.6254, 3.4878)
-    ),
-    new Polygon( // Curve.028
-        new Point(7.2508, -5.5805),
-        new Point(8.4592, -4.8829),
-        new Point(8.4592, -3.4878),
-        new Point(7.2508, -2.7902),
-        new Point(6.0423, -3.4878),
-        new Point(6.0423, -4.8829)
-    ),
-    new Polygon( // Curve.029
-        new Point(8.4592, -7.6732),
-        new Point(9.6676, -6.9757),
-        new Point(9.6676, -5.5805),
-        new Point(8.4592, -4.883),
-        new Point(7.2507, -5.5805),
-        new Point(7.2507, -6.9757)
-    ),
-    new Polygon( // Curve.030
-        new Point(7.2506, -9.7658),
-        new Point(8.4591, -9.0683),
-        new Point(8.4591, -7.6732),
-        new Point(7.2506, -6.9756),
-        new Point(6.0422, -7.6732),
-        new Point(6.0422, -9.0683)
-    ),
-    new Polygon( // Curve.031
-        new Point(3.6253, -7.6732),
-        new Point(4.8338, -6.9756),
-        new Point(4.8338, -5.5805),
-        new Point(3.6253, -4.8829),
-        new Point(2.4169, -5.5805),
-        new Point(2.4169, -6.9756)
-    )
-  ];
-  const hh = 180 - 138.189685;
-  const hp = 180 - 142.62263;
-  const hinges: Hinge[] = [
-    [0, 3, hh], [0, 7, hh], [0, 24, hp], [0, 4, hh],
-    [7, 19, hp], [7, 8, hh],
-    [8, 26, hp], [8, 9, hh],
-    [4, 22, hp], [4, 5, hh],
-    [5, 6, hh],
-    [6, 31, hh], [6, 28, hh],
-    [28, 25, hp], [28, 29, hh],
-    [29, 30, hh],
-    [3, 23, hp], [3, 10, hh], [3, 2, hh],
-    [10, 18, hp], [10, 27, hh],
-    [2, 17, hp], [2, 11, hh], [2, 1, hh],
-    [11, 16, hp], [11, 12, hh],
-    [1, 15, hp], [1, 13, hh], [1, 21, hp],
-    [13, 20, hp], [13, 14, hh]
-  ];
   const $n = $step.$('x-net') as Net;
   const $slider = $step.$('x-slider') as Slider;
-  $n.addNet(faces, hinges, 0.25);
+  $n.addNet(truncatedIcosahedron.faces, truncatedIcosahedron.hinges, 0.25);
   $slider.on('move', n => {
     const progress = n / 1000;
     $n.fold(progress);
