@@ -161,9 +161,10 @@ export class Solid extends CustomElementView {
   // ---------------------------------------------------------------------------
   // Element Creation Utilities
 
-  addLabel(text: string, posn: Vector, color = STROKE_COLOR, margin = [0, 0]) {
+  addLabel(text: string, posn: Vector, color = STROKE_COLOR, margin?: string) {
     const $label = $N('div', {text, class: 'label3d'});
     $label.css('color', '#' + color.toString(16).padStart(6, '0'));
+    if (margin) $label.css('margin', margin);
 
     let posn1 = new THREE.Vector3(...posn);
 
@@ -172,8 +173,8 @@ export class Solid extends CustomElementView {
     this.scene.onDraw(() => {
       const p = posn1.clone().applyQuaternion(this.object.quaternion)
           .add(this.object.position).project(this.scene.camera);
-      $label.css('left', (1 + p.x) * this.scene.$canvas.width / 2 + margin[0] + 'px');
-      $label.css('top', (1 - p.y) * this.scene.$canvas.height / 2 + margin[1] + 'px');
+      $label.css('left', (1 + p.x) * this.scene.$canvas.width / 2 + 'px');
+      $label.css('top', (1 - p.y) * this.scene.$canvas.height / 2 + 'px');
     });
 
     return {

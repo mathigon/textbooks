@@ -23,11 +23,11 @@ export function polyParts($step: Step) {
   const $p = $step.$('x-polyhedron') as Polyhedron;
   $p.addMesh(() => {
     const vert = $p.getComponentPosn('vertex', [0, 1]);
-    $p.addLabel('Vertex', vert, 0x666666, [15, 15]);
+    $p.addLabel('Vertex', vert, 0x666666, '15px');
     $p.addPoint(vert);
 
     const edge = $p.getComponentPosn('edge', [0, 1]);
-    $p.addLabel('Edge', edge, 0x666666, [5, 5]);
+    $p.addLabel('Edge', edge, 0x666666, '5px');
 
     const face = $p.getComponentPosn('face', [0, 3]);
     $p.addLabel('Face', face);
@@ -58,11 +58,11 @@ export function cuboidParts($step: Step) {
 
   $p.addMesh(() => {
     const vert = $p.getComponentPosn('vertex', [0, 1]);
-    $p.addLabel('Vertex', vert, 0x666666, [15, 15]);
+    $p.addLabel('Vertex', vert, 0x666666, '15px');
     $p.addPoint(vert);
 
     const edge = $p.getComponentPosn('edge', [0, 2]);
-    $p.addLabel('Edge', edge, 0x666666, [5, 5]);
+    $p.addLabel('Edge', edge, 0x666666, '5px');
 
     const face = $p.getComponentPosn('face', [0, 1]);
     $p.addLabel('Face', face);

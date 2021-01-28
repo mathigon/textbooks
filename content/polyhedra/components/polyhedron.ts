@@ -105,7 +105,7 @@ export class Polyhedron extends Solid {
     return posn;
   }
 
-  addComponentLabel(text: string, partKind: Part, [meshIndex, partIndex]: [number, number], color = 0x666666, margin = '') {
+  addComponentLabel(text: string, partKind: Part, [meshIndex, partIndex]: [number, number], color = 0x666666, margin?: string) {
     const posn = this.getComponentPosn(partKind, [meshIndex, partIndex]);
     this.addLabel(text, posn, color, margin);
     /*
