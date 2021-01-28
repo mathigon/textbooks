@@ -1734,10 +1734,12 @@ export function polyVerts($step: Step) {
 
     for (const point of $geopad.points) {
       p[point.name] = false;
-      point.$el.on('pointermove', (e: MouseEvent) => {
-
-        // When pointermove has been fired AND e.buttons == 1 (left mouse button is down), this means we are dragging
-        if (e.buttons == 1) {
+      let initPosition: Point | undefined;
+      point.$el.on('pointerdown', () => {
+        initPosition = point.value as Point;
+      });
+      point.$el.on('pointerup', () => {
+        if (initPosition != undefined && !initPosition.equals(point.value as Point)) {
           pointsMoved[index][point.name] = true;
           if (pointsMoved.every(atLeastTwoMoved) && !doneMoving) {
             doneMoving = true;
