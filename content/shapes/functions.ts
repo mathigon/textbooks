@@ -110,7 +110,7 @@ export function performance2($step: Step) {
   $geopad.switchTool('move');
   let moving = false;
   let nearest: {point: Point, index: number};
-  $geopad.on('mousemove', b => {
+  $geopad.on('pointermove', b => {
     const m = new Point(b.offsetX, b.offsetY);
     if (!moving) {
       nearest = initRope.getNearest(m);
@@ -121,8 +121,8 @@ export function performance2($step: Step) {
       ropePath.redraw(initRope.poly);
     }
   });
-  $geopad.on('mousedown', () => moving = true);
-  $geopad.on('mouseup', () => moving = false);
+  $geopad.on('pointerdown', () => moving = true);
+  $geopad.on('pointerup', () => moving = false);
 }
 
 type CircularPoint = {
@@ -371,19 +371,19 @@ class FillSquare {
 }
 
 function setupGeopadDraggableFillSquare(obj: FillSquare, $geopad: Geopad, onEnd?: (last: Point) => void) {
-  let mouseOffset = new Point(0, 0);
+  let pointerOffset = new Point(0, 0);
   let dragging = false;
   slide($geopad, {
     $box: $geopad.$svg,
     start: pos => {
       if (obj.contains(pos)) {
         dragging = true;
-        mouseOffset = obj.pos.subtract(pos);
+        pointerOffset = obj.pos.subtract(pos);
       }
     },
     move: (current, _start, _last) => {
       if (dragging) {
-        const newLoc = current.add(mouseOffset);
+        const newLoc = current.add(pointerOffset);
         obj.moveTo(newLoc);
       }
     },
@@ -665,7 +665,7 @@ class RenderedPoly {
       }
       this.path.$el.addClass(colorClass);
       if (options.draggable != undefined && options.draggable === true) {
-        let mouseOffset = new Point(0, 0);
+        let pointerOffset = new Point(0, 0);
         let dragging = false;
         const snapThreshold = 25;
         slide($geopad, {
@@ -673,12 +673,12 @@ class RenderedPoly {
           start: pos => {
             if (this._poly.contains(pos)) {
               dragging = true;
-              mouseOffset = this._poly.centroid.subtract(pos);
+              pointerOffset = this._poly.centroid.subtract(pos);
             }
           },
           move: (current, _start, _last) => {
             if (dragging) {
-              const newLoc = current.add(mouseOffset);
+              const newLoc = current.add(pointerOffset);
               const next = this._poly.moveTo(newLoc);
               const snapDeltas = this.snapfriendsFilterMap(snapFriend => {
                 const deltas = snapFriend.poly.points.reduce((deltas, friendPoint) => {
@@ -1044,8 +1044,8 @@ export function worldTradeCenter($step: Step) {
       );
     }
   };
-  $tri1.$el.on('mouseup', checkDone);
-  $tri2.$el.on('mouseup', checkDone);
+  $tri1.$el.on('pointerup', checkDone);
+  $tri2.$el.on('pointerup', checkDone);
 }
 
 export function congruentTriangles($step: Step) {
@@ -1115,8 +1115,8 @@ export function congruentTriangles($step: Step) {
       $pairs.push([$tri, $copy]);
     }
     for (const [$a, $b] of $pairs) {
-      $a.$el.on('mouseup', checkDone);
-      $b.$el.on('mouseup', checkDone);
+      $a.$el.on('pointerup', checkDone);
+      $b.$el.on('pointerup', checkDone);
     }
   });
 }
@@ -1173,12 +1173,12 @@ function setupBaseHeight(
   for (const [index, edge] of initPoly.edges.entries()) {
     const edgePath = $geopad.drawPath(edge);
     edgePath.$el.addClass('edge');
-    edgePath.$el.on('mouseenter', () => {
+    edgePath.$el.on('pointerenter', () => {
       if (selectedEdge != index) {
         edgePath.$el.addClass('edge-hover');
       }
     });
-    edgePath.$el.on('mouseleave', () => {
+    edgePath.$el.on('pointerleave', () => {
       if (selectedEdge != index) {
         edgePath.$el.removeClass('edge-hover');
       }
@@ -1222,10 +1222,10 @@ function setupBaseHeight(
         $geopad.on('begin:path', ({path, _}: {path: GeoPath, _: any}) => {
           p = path;
           cb = _ => handlePathing(path, edgePath, heightPath, height, () => nearby = true, () => nearby = false);
-          path.$parent.on('mousemove', cb);
+          path.$parent.on('pointermove', cb);
         });
         $geopad.on('add:path', _ => {
-          $geopad.off('mousemove', cb);
+          $geopad.off('pointermove', cb);
           if (nearby) {
             options?.onComplete?.();
             const p1 = (p.value as Segment).p1;
@@ -1278,8 +1278,8 @@ export function area3($step: Step) {
       setupBaseHeight(para, $geopad, options);
     }
   };
-  $tri1.$el.on('mouseup', checkDone);
-  $tri2.$el.on('mouseup', checkDone);
+  $tri1.$el.on('pointerup', checkDone);
+  $tri2.$el.on('pointerup', checkDone);
 }
 
 export function triangleBases($step: Step) {
@@ -1403,7 +1403,7 @@ export async function voronoi1($step: VoronoiStep) {
     showVor($step);
   });
 
-  $geopad.$svg.on('mousemove', e => {
+  $geopad.$svg.on('pointermove', e => {
     $step.model.cells = $step.model.cells.map(cell => {
       const over = cell.poly.contains(new Point(e.offsetX, e.offsetY));
       return {...cell, over};
@@ -1530,12 +1530,12 @@ export async function voronoi2($step: VoronoiStep) {
     const edgePath = $geopad.drawPath(edge);
     edgePath.$el.addClass('edge');
     // [TODO]: Replace with stylesheet-based css?
-    edgePath.$el.on('mouseenter', () => {
+    edgePath.$el.on('pointerenter', () => {
       if (selectedEdge != index) {
         edgePath.$el.addClass('edge-hover');
       }
     });
-    edgePath.$el.on('mouseleave', () => {
+    edgePath.$el.on('pointerleave', () => {
       if (selectedEdge != index) {
         edgePath.$el.removeClass('edge-hover');
       }
@@ -1567,10 +1567,10 @@ export async function voronoi2($step: VoronoiStep) {
         $geopad.on('begin:path', ({path, _}: {path: GeoPath, _: any}) => {
           p = path;
           cb = _ => handlePathing(path, edgePath, heightPath, height, () => $step.model.nearby = true, () => $step.model.nearby = false);
-          path.$parent.on('mousemove', cb);
+          path.$parent.on('pointermove', cb);
         });
         $geopad.on('add:path', _ => {
-          $geopad.off('mousemove', cb);
+          $geopad.off('pointermove', cb);
           if ($step.model.nearby) {
             $step.score('height-drawn');
             $step.addHint('correct');
@@ -1734,9 +1734,9 @@ export function polyVerts($step: Step) {
 
     for (const point of $geopad.points) {
       p[point.name] = false;
-      point.$el.on('mousemove', (e: MouseEvent) => {
+      point.$el.on('pointermove', (e: MouseEvent) => {
 
-        // When mousemove has been fired AND e.buttons == 1 (left mouse button is down), this means we are dragging
+        // When pointermove has been fired AND e.buttons == 1 (left mouse button is down), this means we are dragging
         if (e.buttons == 1) {
           pointsMoved[index][point.name] = true;
           if (pointsMoved.every(atLeastTwoMoved) && !doneMoving) {
@@ -3073,7 +3073,7 @@ export function slicesArrangement($step: Step) {
   });
   let hovering: null | {s: Slice[], g: string} = null;
   let selected = false;
-  $geopad.on('mousemove', b => {
+  $geopad.on('pointermove', b => {
     if ($step.model.arranged && !selected) {
       const distances: {d: number, group: string}[] = [];
       for (const slice of $step.model.lSlices.groupA as Slice[]) {
