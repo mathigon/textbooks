@@ -1969,35 +1969,34 @@ Nets of the polyhedra can give you a lot of information about the faces and the 
 Sort the properties below:
 
     // INTERACTIVE-3.12
-    // TODO: Automatically color cards?
 
 ::: x-binary-swipe(a-title="Nets of prisms" b-title="Nets of pyramids")
 
-::: div.card.c-teal(solution="a")
+::: div.card(solution="a")
 
 They may have rectangles as the lateral faces
 
 :::
 
-::: div.card.c-green(solution="b")
+::: div.card(solution="b")
 
 They have all triangles as the lateral faces
 
 :::
 
-::: div.card.c-orange(solution="a")
+::: div.card(solution="a")
 
 They may have a pair of congruent faces that are not rectangles or triangles
 
 :::
 
-::: div.card.c-blue(solution="b")
+::: div.card(solution="b")
 
 They have a single face that may not be be a triangle
 
 :::
 
-::: div.card.c-yellow(solution="a")
+::: div.card(solution="a")
 
 They have rectangles as the lateral faces
 

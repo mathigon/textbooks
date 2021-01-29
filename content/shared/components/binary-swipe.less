@@ -3,6 +3,8 @@
 // (c) Mathigon
 // =============================================================================
 
+@background-colors: @teal, @green, @orange, @blue, @yellow, @purple, @lime, @red;
+@color-count: length(@background-colors);
 
 x-binary-swipe {
   display: grid;
@@ -27,40 +29,42 @@ x-binary-swipe {
     left: 0;
     &.active { cursor: grab; }
     &.dragging { z-index: 20; }
+
+    .card {
+      border-radius: 8px;
+      color: white;
+      height: 260px;
+      width: 220px;
+      padding: 16px;
+      box-sizing: border-box;
+      text-align: center;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+      transition: box-shadow .2s, transform .2s;
+  
+      &.c-teal { background-color: @teal; }
+      &.c-green { background-color: @green; }
+      &.c-orange { background-color: @orange; }
+      &.c-blue { background-color: @blue; }
+      &.c-yellow { background-color: @yellow; }
+      &.c-purple { background-color: @purple; }
+      &.c-lime { background-color: @lime; }
+      &.c-red { background-color: @red; }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 33%;
+        display: block;
+        height: 100%;
+        background: transparent;
+        transition: background 1s;
+        mix-blend-mode: overlay;
+      }
+    }
+
   }
 
-  .card {
-    border-radius: 8px;
-    color: white;
-    height: 260px;
-    width: 220px;
-    padding: 16px;
-    box-sizing: border-box;
-    text-align: center;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
-    transition: box-shadow .2s, transform .2s;
-
-    &.c-red { background: @red; }
-    &.c-orange { background: @orange; }
-    &.c-yellow { background: @yellow; }
-    &.c-lime { background: @lime; }
-    &.c-green { background: @green; }
-    &.c-teal { background: @teal; }
-    &.c-blue { background: @blue; }
-    &.c-purple { background: @purple; }
-	}
-
-  .card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 33%;
-    display: block;
-    height: 100%;
-    background: transparent;
-    transition: background 1s;
-    mix-blend-mode: overlay;
-  }
   .card-wrap.committed-left .card::after { left: 0; background: linear-gradient(to left, fade(white, 0%), fade(white, 75%)); }
   .card-wrap.committed-right .card::after { right: 0; background: linear-gradient(to right, fade(white, 0%), fade(white, 75%)); }
 
