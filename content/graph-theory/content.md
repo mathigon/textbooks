@@ -433,7 +433,7 @@ means that in the above example there are ${m} × ${f} = ${m×f} dates._
 Here is another puzzle that is related to graph theory.
 
 In a small village there are three houses and three utility plants that produce water, electricity
-and gas. We have to connect each of the courses to each of the utility plants, but due to the layout
+and gas. We have to connect each of the houses to each of the utility plants, but due to the layout
 of the village, the different pipes and cables are not allowed to cross.
 
 ::: column(width=300)
