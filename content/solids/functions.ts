@@ -292,6 +292,16 @@ export function cubeNetDraw($step: Step) {
   $p.tools.pen.brush = 'straight';
 }
 
+export function netCalculation($step: Step) {
+  const $net = $step.$('x-net') as Net;
+  const $slider = $step.$('x-slider') as Slider;
+  $net.addCuboidNet(1, 1, 1);
+  $slider.on('move', n => {
+    const progress = n / 1000;
+    $net.fold(progress);
+  });
+}
+
 export function soccerNet($step: Step) {
   const $n = $step.$('x-net') as Net;
   const $slider = $step.$('x-slider') as Slider;

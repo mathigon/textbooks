@@ -1134,6 +1134,7 @@ _{button.btn.continue}Continue_
 {.todo} INTERACTIVE-2.10: Net construction
 
 ---
+> id: net-calculation
 
 ### Using nets to calculate the surface area
 
@@ -1145,7 +1146,10 @@ Let’s find the surface area of this cuboid by using its net
 
 ::: column.fit
 
-{.todo} INTERACTIVE-2.11: solid with a slider (solid <-> net)
+    // INTERACTIVE-2.11: solid with a slider (solid <-> net)
+    figure
+      x-net(size=200 :p="progress")
+      x-slider(:bind="progress" steps=1000 speed=1)
 
 ::: column.grow
 
@@ -1153,9 +1157,9 @@ The net of the cuboid box shows three pairs of rectangles:
 
 4 cm by 2 cm,
 
-[[3]] cm by [[2]] cm, and
+[[3]] cm by `2` cm, and
 
-[[4]] cm by [[3]] cm.
+[[4]] cm by `3` cm.
 
 :::
 
@@ -1684,11 +1688,29 @@ There are lots of different kinds of pyramids, depending on the shape of their b
 
 **Just like prisms, Pyramids are named for the shape of their** _{span.comments(text="Maybe create an interactive piece here in which students have the click on the base as I described in the prism section? Not as crucial here, but a good connection at least.")}**base**_.
 
-    figure: x-img(src="images/ch3_79.png" width="600" height="237")
+    // INTERACTIVE-3.07
 
-    figure: x-img(src="images/ch3_71.png" width="327" height="393")
+::: column.fit
 
-    figure: x-img(src="images/ch3_57.png" width="600" height="417")
+    x-polyhedron(size=200 shape="TriangularPyramid")
+
+::: column.fit
+
+    x-polyhedron(size=200 shape="RectangularPyramid")
+
+::: column.fit
+
+    x-polyhedron(size=200 shape="PentagonalPyramid")
+
+::: column.fit
+
+    x-polyhedron(size=200 shape="HexagonalPyramid")
+
+::: column.fit
+
+    x-polyhedron(size=200 shape="HeptagonalPyramid")
+
+:::
 
 For example, if the _{span.comments(text="Interactive solid with a slider to open its net w/ color-coded parts")}base_ is a **square**, then it is called a “[[square|triangular]] **pyramid.**”
 
@@ -1944,13 +1966,44 @@ A triangular prism has [[2]] triangular bases and [[3]] triangular lateral faces
 
 Nets of the polyhedra can give you a lot of information about the faces and the other characteristics of the solid.  Properties of the nets can help us to compare and contrast the prisms and pyramids.
 
-Drag the properties to the part of the [Venn diagram](gloss:venn-diagram) which it is associated with. 
+Sort the properties below:
 
-If it matches both, place it in the intersection of the circles.
+    // INTERACTIVE-3.12
+    // TODO: Automatically color cards?
 
-    // COMMENT: Drag & Drop Activity:
+::: x-binary-swipe(a-title="Nets of prisms" b-title="Nets of pyramids")
 
-    figure: x-img(src="images/ch3_sorting.svg" width="600" height="432")
+::: div.card.c-teal(solution="a")
+
+They may have rectangles as the lateral faces
+
+:::
+
+::: div.card.c-green(solution="b")
+
+They have all triangles as the lateral faces
+
+:::
+
+::: div.card.c-orange(solution="a")
+
+They may have a pair of congruent faces that are not rectangles or triangles
+
+:::
+
+::: div.card.c-blue(solution="b")
+
+They have a single face that may not be be a triangle
+
+:::
+
+::: div.card.c-yellow(solution="a")
+
+They have rectangles as the lateral faces
+
+:::
+
+:::
 
 ---
 
