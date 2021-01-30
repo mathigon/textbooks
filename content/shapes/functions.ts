@@ -404,8 +404,8 @@ export function boatBuilding($step: Step) {
   const height = 120;
   const skew = 50;
   const corner1 = new Point(100, 100);
-  const pieces: RenderedPoly[] = [];
-  const middle = new RenderedPoly(
+  const pieces: RenderedGeopadPoly[] = [];
+  const middle = new RenderedGeopadPoly(
       (new Rectangle(corner1.shift(skew, 0), baseWidth, height)).polygon,
       $geopad
   );
@@ -456,7 +456,7 @@ export function boatBuilding($step: Step) {
       }
     }
   };
-  const left = new RenderedPoly(
+  const left = new RenderedGeopadPoly(
       [
         corner1,
         corner1.shift(skew, 0),
@@ -466,7 +466,7 @@ export function boatBuilding($step: Step) {
       options
   );
   pieces.push(left);
-  const right = new RenderedPoly(
+  const right = new RenderedGeopadPoly(
       [
         corner1.shift(baseWidth + skew, 0),
         corner1.shift(baseWidth + skew, height),
@@ -646,18 +646,27 @@ type RenderedOptions = {
     'lime'
 };
 
-class RenderedPoly {
-  private path: GeoPath
-  private _poly: HelperPoly
-  readonly snapFriends: RenderedPoly[] = [];
+class RenderedGeopadPoly {
+  // The entire shape, used for drawing to the geopad
+  private path: GeoPath;
+  // The polygon being drawn; geometry data is kept track of here for convenience
+  private _poly: HelperPoly;
+
+  // Other polygons being drawn to the geopad that we want'snap' this polygon to sanp to when close enough
+  readonly snapFriends: RenderedGeopadPoly[] = [];
   constructor(
       poly: Point[] | Polygon,
       private $geopad: Geopad,
       options?: RenderedOptions
   ) {
+    // Initialize _poly
     if (poly instanceof Array) this._poly = new HelperPoly(...poly);
-    else this._poly = new HelperPoly(...poly.points);
+    else this._poly = HelperPoly.fromPolygon(poly);
+
+    // Add polygon path to geopad
     this.path = $geopad.drawPath(this.poly);
+
+    // Handle options
     if (options != undefined) {
       let colorClass = 'rendered-poly';
       if (options.color != undefined) {
@@ -671,15 +680,15 @@ class RenderedPoly {
         slide($geopad, {
           $box: $geopad.$svg,
           start: pos => {
-            if (this._poly.contains(pos)) {
+            if (this.poly.contains(pos)) {
               dragging = true;
-              pointerOffset = this._poly.centroid.subtract(pos);
+              pointerOffset = this.poly.centroid.subtract(pos);
             }
           },
           move: (current, _start, _last) => {
             if (dragging) {
               const newLoc = current.add(pointerOffset);
-              const next = this._poly.moveTo(newLoc);
+              const next = this.poly.moveTo(newLoc);
               const snapDeltas = this.snapfriendsFilterMap(snapFriend => {
                 const deltas = snapFriend.poly.points.reduce((deltas, friendPoint) => {
                   return deltas.concat(
@@ -712,11 +721,11 @@ class RenderedPoly {
       }
     }
   }
-  addSnapFriend = (f: RenderedPoly) => {
+  addSnapFriend = (f: RenderedGeopadPoly) => {
     // eslint-disable-next-line no-invalid-this
     this.snapFriends.push(f);
   }
-  snapfriendsFilterMap<T>(pred: (f: RenderedPoly) => T | null) {
+  snapfriendsFilterMap<T>(pred: (f: RenderedGeopadPoly) => T | null) {
     return filterMap(this.snapFriends, pred);
   }
   get poly() {
@@ -730,21 +739,21 @@ class RenderedPoly {
     for (const c of this.path.components) c.delete();
   }
   translate(by: Point) {
-    this._poly = this._poly.translate(by);
+    this._poly = this.poly.translate(by);
     this.path.redraw(this.poly);
   }
   moveTo(loc: Point) {
-    this._poly = this._poly.moveTo(loc);
+    this._poly = this.poly.moveTo(loc);
     this.path.redraw(this.poly);
   }
-  cut(along: Line, options?: RenderedOptions): [RenderedPoly, RenderedPoly] | null {
+  cut(along: Line, options?: RenderedOptions): [RenderedGeopadPoly, RenderedGeopadPoly] | null {
     const result = this.poly.cut(along);
     if (result != null) {
       const [a, b] = result;
       this.erase();
       return [
-        new RenderedPoly(a.points, this.$geopad, options),
-        new RenderedPoly(b.points, this.$geopad, options)
+        new RenderedGeopadPoly(a.points, this.$geopad, options),
+        new RenderedGeopadPoly(b.points, this.$geopad, options)
       ];
     } else {
       return null;
@@ -770,18 +779,18 @@ export function dough($step: Step) {
   $geopad.switchTool('move');
   const areaSize = 150;
   const _cuttersArea =
-    new RenderedPoly(
+    new RenderedGeopadPoly(
         (new Rectangle(new Point(15, 15), areaSize, areaSize)).points,
         $geopad, {color: 'red'}
     );
   const shiftBy = new Point(200, 200);
   const dough =
-    new RenderedPoly(
+    new RenderedGeopadPoly(
         doughParalellogram.translate(shiftBy),
         $geopad,
         {color: 'blue'}
     );
-  const cutters: RenderedPoly[] = [];
+  const cutters: RenderedGeopadPoly[] = [];
   for (const index of list(4)) {
     const cutterSize = 30;
     const padding = (areaSize - (cutterSize * 2)) / 3;
@@ -792,7 +801,7 @@ export function dough($step: Step) {
     const cutterY = 15 + padding + (row * spacing);
     const poly = new Rectangle(new Point(cutterX, cutterY), cutterSize, cutterSize);
     const cutter =
-      new RenderedPoly(
+      new RenderedGeopadPoly(
           poly.points,
           $geopad,
           {
@@ -817,14 +826,14 @@ export function dough($step: Step) {
 export function dough2($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
   $geopad.switchTool('line');
-  const para =
-    new RenderedPoly(
+  const para = // Parallelogram to be 'cut' by user
+    new RenderedGeopadPoly(
         doughParalellogram.moveTo(new Point(300, 200)),
         $geopad
     );
-  let cutLine: GeoPath | undefined;
-  let cutStart: GeoPoint | undefined;
-  let cutting = false;
+  let cutLine: GeoPath | undefined; // The 'cut' to be drawn; a straight line
+  let cutStart: GeoPoint | undefined; // The starting location for the cut line
+  let cutting = false; // Whether the cut line is currently being drawn
   $geopad.on('begin:path', ({path, start}: {path: GeoPath, start: GeoPoint}) => {
     cutting = true;
     cutLine = path;
@@ -958,7 +967,7 @@ export function apartments($step: Step) {
   const skew = 50;
   const corner1 = new Point(100, 100);
   $step.$('button.show-parallelogram')?.on('click', () => {
-    const _para = new RenderedPoly(
+    const _para = new RenderedGeopadPoly(
         [
           corner1,
           corner1.shift(baseWidth, 0),
