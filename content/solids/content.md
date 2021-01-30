@@ -616,7 +616,7 @@ Some cuboids may have the same volume although they have different shapes.
 
     // TODO: INTERACTIVE-1.04: Voxel-painting
     figure
-      x-voxel-painter(width=600 height=400 targetVolume=24 playingFieldSize="15" color-sides)
+      x-voxel-painter(width=600 height=400 targetVolume=24 playingFieldSize="10" color-sides)
         x-icon-btn(icon="eraser")
 
 Use the unit cubes to create a cuboid so that the volume is 24 cubic units.
