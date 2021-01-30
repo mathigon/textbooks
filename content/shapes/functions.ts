@@ -859,8 +859,8 @@ export function dough2($step: Step) {
     move: p => {
       if (cutting) {
         const startPoint = cutStart!.value!;
-        // [TODO]?: use cutLine.setComponents
-        cutLine!.redraw(new Segment(startPoint, new Point(startPoint.x, p.y)));
+        cutLine?.components[0].setValue(startPoint);
+        cutLine?.components[1].setValue(new Point(startPoint.x, p.y));
       }
     }
   });
