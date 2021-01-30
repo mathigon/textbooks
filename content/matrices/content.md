@@ -1207,3 +1207,146 @@ Let's see why this is true geometrically.
 > sectionStatus: dev
 
 {.todo} COMING SOON
+
+
+----------------------------------------------------------------------------------------------------
+
+
+## 3D playground
+
+> id: three-dimensions
+
+#### Watch what we can do with a 3d matrix
+Watch what we can do with a 3d matrix.
+
+::: column(width=280)
+
+    x-solid(size=280)
+
+:::
+
+Try adjusting the vector.
+<table class="vector">
+<tr>x = ${x}{x|-2|-2,2,0.1}</tr>
+<tr>y = ${y}{y|-2|-2,2,0.1}</tr>
+<tr>z = ${z}{z|-2|-2,2,0.1}</tr>
+</table>
+
+Neat, huh?
+
+### Systems of Equations
+A linear equation can be represented as a geometrical object, depending on how many variables it has. A linear equation with two variables can be represented as a [[line|plane|hypercube]]. A linear equation with three variables can be represented as a [[plane|line|point]].
+
+
+    x-solid(size=300)
+
+
+Try adjusting the vector (only Z does anything).
+<table class="vector">
+<tr>x = ${xi}{xi|1|-2,2,0.1}</tr>
+<tr>y = ${yi}{yi|1|-2,2,0.1}</tr>
+<tr>z = ${zi}{zi|1|-2,2,0.1}</tr>
+</table>
+
+Above us is a system of three equations, each with three variables. The intersection of two of these planes gives us a [[line|plane|point]]. The intersection of all three of these planes gives us a [[point|line|plane]].
+
+
+---
+
+## Scroller playground
+> id: scroller
+
+Let's put a matrix on the right, and text on the left.
+
+::: column(width=300)
+
+    // figure: img(src="images/proto-2/matrix-1-frn-fea.png")
+    table
+      tr
+        td
+        td(target="feature pref-A-1"): b {.m-red}Outdoors
+        td(target="feature pref-A-2"): b {.m-red}Veggie
+      tr
+        td.name(target="pref-A-1 pref-A-2"): b {.m-green}Alice
+        td.cell(target="pref-A-1") 1
+        td.cell(target="pref-A-2") 4
+      tr
+        td.name: b {.m-green}Bob
+        td.cell 3
+        td.cell 0
+      tr
+        td.name: b {.m-green}Charlie
+        td.cell 0
+        td.cell 4
+      tr
+        td.name: b {.m-green}Dave
+        td.cell 3
+        td.cell 0
+
+    div x
+
+    // figure: img(src="images/proto-2/matrix-1-fea-res.png")
+    table
+      tr
+        td
+        td(target="feat-A-1 feat-A-2"): b {.m-blue}Gauss
+        td: b {.m-blue}Laplace
+        td: b {.m-blue}Pizza
+      tr
+        td(target="feature feat-A-1"): b {.m-red}Outdoor
+        td.cell(target="feat-A-1") 3
+        td.cell 1
+        td.cell 3
+      tr
+        td(target="feature feat-A-2"): b {.m-red}Veggie
+        td.cell(target="feat-A-2") 1
+        td.cell 4
+        td.cell 3
+
+    // figure: img(src="images/proto-2/matrix-1-frn-res-empty.png")
+    // figure: img(src="images/proto-2/mult-alice-gauss.png") (and above)
+    // figure: img(src="images/proto-2/mult-bob-laplace.png") (and above)
+    // figure: img(src="images/proto-2/matrix-1-frn-res-full.png") (change into)
+    table
+      tr
+        td
+        td(target="rest cell-A"): b {.m-blue}Gauss
+        td(target="rest cell-C"): b {.m-blue}Laplace
+        td(target="rest"): b {.m-blue}Pizza
+      tr
+        td.name(target="friend cell-A"): b {.m-green}Alice
+        td.cell(target="cell-A"): b {.reveal(when="blank-5")} 7
+        td.cell
+        td.cell
+      tr
+        td.name(target="friend"): b {.m-green}Bob
+        td.cell
+        td.cell
+        td.cell
+      tr
+        td.name(target="friend cell-C"): b {.m-green}Charlie
+        td.cell
+        td.cell(target="cell-C"): b {.reveal(when="blank-7")} 16
+        td.cell
+      tr
+        td.name(target="friend"): b {.m-green}Dave
+        td.cell
+        td.cell
+        td.cell
+
+::: column.grow(parent="right")
+
+The result will be a new table with the [{.green} friends](target:friend) as [[rows|columns]] and the [{.blue} restaurants](target:rest) as [[columns|rows]].
+
+{.reveal(when="blank-0 blank-1")} How should we fill out this table? The value of each cell should represent how much each person might like each restaurant. For example, the [{.orange} first cell](target:cell-A) will represent how much Alice might like [[Gauss Grill|Laplace Lounge]].
+
+{.reveal(when="blank-2")} Alice has a [{.orange} preference of 1](target:pref-A-1) for Outdoor Seating, and Gauss Grill has a [{.orange} value of 3](target:feat-A-1) for Outdoor Seating, so we multiply these to get [[3]].
+
+{.reveal(when="blank-3")} Alice has a [{.orange} preference of 4](target:pref-A-2) for Vegetarian Food, and Gauss Grill has a [{.orange}value of 1](target:feat-A-2) for Vegetarian Food, so we multiply these to get [[4]].
+
+{.reveal(when="blank-4")} We sum together all the products to get [[7]], which we can write in the [{.orange} first cell](target:cell-A).
+
+{.reveal(when="blank-5")}[Continue](btn:next)
+
+{.reveal(when="next-0")} [{.teal} This cell](target:cell-C) will represent how much [[Charlie|Bob]] might like [[Laplace Lounge|Pizzathagoras]].
+:::

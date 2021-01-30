@@ -10,6 +10,8 @@ import {Matrix} from '@mathigon/fermat';
 import {Angle, ORIGIN, Point} from '@mathigon/euclid';
 import {ElementView, ScreenEvent, svgPointerPosn} from '@mathigon/boost';
 import {Geopad, Step} from '../shared/types';
+import {Solid} from '../shared/components/solid';
+import * as u from './utils3d';
 
 
 export function rocket($step: Step) {
@@ -291,5 +293,130 @@ export function determinants($step:Step) {
   // determinant = 0
   buttons[4].on('click', () => {
     animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[1, 1], [-1, -1]], ANIMATE);
+  });
+}
+
+export function threeDimensions($step: Step) {
+  const $solids = $step.$$('x-solid') as Solid[];
+
+  const basic3d = $solids[0];
+  basic3d.addMesh((scene) => {
+    // $solids[1].addWireframe(new THREE.Line)
+
+    // DRAW PLANES
+    const PLANE_SIZE = 4;
+    const zPlaneMaterial = Solid.translucentMaterial(0xcd0e66, 0.3);
+    const zPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), zPlaneMaterial);
+    zPlane.rotateX(Math.PI / 2);
+    basic3d.addArrow([0, 0, 0], [0, 0, 1], 0xcd0e66);
+
+    const yPlaneMaterial = Solid.translucentMaterial(0x0f82f2, 0.3);
+    const yPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), yPlaneMaterial);
+    yPlane.rotateY(Math.PI / 2);
+    basic3d.addArrow([0, 0, 0], [0, 1, 0], 0x0f82f2);
+
+    const xPlaneMaterial = Solid.translucentMaterial(0x22ab24, 0.3);
+    const xPlane = new THREE.Mesh(new THREE.PlaneGeometry(PLANE_SIZE, PLANE_SIZE, 10, 10), xPlaneMaterial);
+    xPlane.rotateZ(Math.PI / 2);
+    basic3d.addArrow([0, 0, 0], [1, 0, 0], 0x22ab24);
+
+    const vectorArrow = basic3d.addArrow([0, 0, 0], [$step.model.x, $step.model.y, $step.model.z], 0x000000);
+
+    $step.model.watch((state: any) => {
+      // A-HA! This doesn't work, and there's even a TODO to go with it
+      // "TODO Support changing the height of the arrow."
+      vectorArrow.updateEnds!([0, 0, 0], [state.x, state.y, state.z]);
+      scene.draw();
+    });
+
+    return [xPlane, yPlane, zPlane];
+  });
+
+  /**
+   * Add intersection lines to a solid.
+   * TODO: should use a new function in Fermat.js to calculate intersection lines.
+   *
+   * @param solid
+   */
+  function addIntersectionLinesToSolid(solid: Solid) {
+
+    // intersection b/t Yellow and Cyan planes
+    // x + y + z = 1
+    // y = 1
+    solid.addLine([0, 1, 0], [-1, 1, 1], 0x00ff00);
+
+    // intersection b/t Magenta and Cyan planes
+    // z = 1, y = 1
+    solid.addLine([2, 1, 1], [-1, 1, 1], 0x0000ff);
+
+    // intersection b/t magenta and yellow planes
+    // x + y + z = 1
+    // z = 1
+    solid.addLine([0, 0, 1], [-1, 1, 1], 0xff0000);
+  }
+
+  const soq = $solids[1];
+  soq.addMesh((scene) => {
+
+    u.addUnitVectorsToSolid(soq);
+
+    // Plane for 1*x + 1*y + 1*z = 1
+    const planeYellow = u.planeFromNormal(
+        new THREE.Vector3(1, 1, 1),
+        new THREE.Vector3(1, 0, 0),
+        0xffff00
+    );
+    soq.object.add(planeYellow);
+
+    // Plane for 0*x + 1*y + 0*z = 1
+    // a.k.a. y=1
+    const planeCyan = u.planeFromNormal(
+        new THREE.Vector3(0, 1, 0),
+        new THREE.Vector3(0, 1, 0),
+        0x00ffff
+    );
+    soq.object.add(planeCyan);
+
+    // Plane for 0*x + 0*y + 1*z = 1
+    // a.k.a. z=1
+    const planeMagenta: THREE.Mesh = u.planeFromNormal(
+        new THREE.Vector3(0, 0, 1),
+        new THREE.Vector3(0, 0, 1),
+        0xff00ff
+    );
+    soq.object.add(planeMagenta);
+
+    addIntersectionLinesToSolid(soq);
+
+    // TODO: try this method
+    /* const px: THREE.Mesh = u.planeFromCoplanarPoints(
+        new Vector3(1, 0, 0),
+        new Vector3(0, 1, 0),
+        new Vector3(0, 0, 1),
+        0xff00ff
+    );
+    soq.object.add(px); */
+
+    $step.model.watch((state: any) => {
+
+      // this moves the plane at z=1 to z=zi
+      const newPlane = u.planeFromNormal(
+          new THREE.Vector3(0, 0, state.zi),
+          new THREE.Vector3(0, 0, state.zi),
+          0xff0ff
+      );
+      planeMagenta.geometry.dispose();
+      planeMagenta.geometry = newPlane.geometry;
+      scene.draw();
+
+      // not quite right...
+      /* const plane2 = u.planeFromNormal(
+          new THREE.Vector3(state.xi, state.yi, state.zi),
+          new THREE.Vector3(state.xi, state.yi, state.zi),
+          0xffff00
+      );
+      planeCyan.geometry.dispose();
+      planeCyan.geometry = plane2.geometry; */
+    });
   });
 }
