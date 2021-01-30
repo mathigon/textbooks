@@ -689,7 +689,7 @@ class RenderedGeopadPoly {
             if (dragging) {
               const newLoc = current.add(pointerOffset);
               const next = this.poly.moveTo(newLoc);
-              const snapDeltas = this.snapfriendsFilterMap(snapFriend => {
+              const snapDeltas = filterMap(this.snapFriends, snapFriend => {
                 const deltas = snapFriend.poly.points.reduce((deltas, friendPoint) => {
                   return deltas.concat(
                       filterMap(next.points, objNextPoint => {
@@ -724,9 +724,6 @@ class RenderedGeopadPoly {
   addSnapFriend = (f: RenderedGeopadPoly) => {
     // eslint-disable-next-line no-invalid-this
     this.snapFriends.push(f);
-  }
-  snapfriendsFilterMap<T>(pred: (f: RenderedGeopadPoly) => T | null) {
-    return filterMap(this.snapFriends, pred);
   }
   get poly() {
     return this._poly;
