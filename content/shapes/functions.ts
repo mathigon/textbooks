@@ -649,6 +649,9 @@ type RenderedOptions = {
 class RenderedGeopadPoly {
   // The entire shape, used for drawing to the geopad
   private path: GeoPath;
+  // Collection of invisible paths added to the geopad; one per edge of the input polygon,
+  // needed for geopad point snapping to behave as expected
+  private edges: GeoPath[] = [];
   // The polygon being drawn; geometry data is kept track of here for convenience
   private _poly: HelperPoly;
 
@@ -662,6 +665,11 @@ class RenderedGeopadPoly {
     // Initialize _poly
     if (poly instanceof Array) this._poly = new HelperPoly(...poly);
     else this._poly = HelperPoly.fromPolygon(poly);
+
+    // Add edge paths to geopad
+    for (const edge of this.poly.edges) {
+      this.edges.push($geopad.drawPath(edge, {classes: 'geopoly-helper-edge'})); // CSS class to set opacity to 0
+    }
 
     // Add polygon path to geopad
     this.path = $geopad.drawPath(this.poly);
@@ -734,14 +742,24 @@ class RenderedGeopadPoly {
   erase() {
     this.path.delete();
     for (const c of this.path.components) c.delete();
+    for (const edge of this.edges) {
+      edge.delete();
+      for (const c of edge.components) c.delete();
+    }
   }
   translate(by: Point) {
     this._poly = this.poly.translate(by);
     this.path.redraw(this.poly);
+    for (const [index, edge] of this.edges.entries()) {
+      edge.redraw(this.poly.edges[index]);
+    }
   }
   moveTo(loc: Point) {
     this._poly = this.poly.moveTo(loc);
     this.path.redraw(this.poly);
+    for (const [index, edge] of this.edges.entries()) {
+      edge.redraw(this.poly.edges[index]);
+    }
   }
   cut(along: Line, options?: RenderedOptions): [RenderedGeopadPoly, RenderedGeopadPoly] | null {
     const result = this.poly.cut(along);
