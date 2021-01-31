@@ -1,6 +1,6 @@
 
 import {Angle, Point, Polygon} from '@mathigon/euclid';
-import {Hinge} from './components/net';
+import {Hinge} from '../components/net';
 
 const dihed1 = 180 - 70.528779;
 export const pyramid1 = {

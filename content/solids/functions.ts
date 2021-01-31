@@ -18,8 +18,8 @@ import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../shared/constants';
 import {Solid} from '../shared/components/solid';
 import {list} from '@mathigon/core';
 import {Point} from '@mathigon/euclid';
-import {layers, templeParts} from './voxel-data';
-import {pyramid1, triangularPrism, truncatedIcosahedron} from './net-data';
+import {layers, templeParts} from './data/voxel-data';
+import {pyramid1, triangularPrism, truncatedIcosahedron} from './data/net-data';
 
 export function polyParts($step: Step) {
   const $p = $step.$('x-polyhedron') as Polyhedron;

@@ -1,5 +1,5 @@
 
-import {BLUE, GREEN, GREY, LIME, RED, YELLOW} from '../shared/constants';
+import {BLUE, GREEN, GREY, LIME, RED, YELLOW} from '../../shared/constants';
 
 export type VoxelData = {
   locs: Array<[number, number, number]>,
