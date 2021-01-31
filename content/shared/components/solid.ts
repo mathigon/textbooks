@@ -18,7 +18,7 @@ const POINT_RADIUS = 0.08;
 // -----------------------------------------------------------------------------
 // Utilities
 
-type Vector = [number, number, number];
+export type Vector = [number, number, number];
 
 // Custom methods on the THREE.Object3D class
 interface Object3D extends THREE.Object3D {
@@ -167,7 +167,6 @@ export class Solid extends CustomElementView {
     if (margin) $label.css('margin', margin);
 
     let posn1 = new THREE.Vector3(...posn);
-
     this.scene.$canvas.insertAfter($label);
 
     this.scene.onDraw(() => {
@@ -184,14 +183,16 @@ export class Solid extends CustomElementView {
     };
   }
 
-  addArrow(from: Vector, to: Vector, color = STROKE_COLOR) {
+  addLine(from: Vector, to: Vector, color = STROKE_COLOR, arrows = false) {
+    // TODO Rounded ends, argument to specify line width.
     const material = new THREE.MeshBasicMaterial({color});
     const obj = new THREE.Object3D() as Object3D;
 
     const height = new THREE.Vector3(...from).distanceTo(new THREE.Vector3(...to));
-    const line = new THREE.CylinderGeometry(0.02, 0.02, height - 0.3, 8, 1, true);
+    const line = new THREE.CylinderGeometry(0.02, 0.02, height - (arrows ? 0.3 : 0), 8, 1, arrows);
     obj.add(new THREE.Mesh(line, material));
 
+    if (arrows) {
     const start = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
     start.translate(0, height / 2 - 0.1, 0);
     obj.add(new THREE.Mesh(start, material));
@@ -200,6 +201,7 @@ export class Solid extends CustomElementView {
     end.rotateX(Math.PI);
     end.translate(0, -height / 2 + 0.1, 0);
     obj.add(new THREE.Mesh(end, material));
+    }
 
     obj.updateEnds = function(f: Vector, t: Vector) {
       // TODO Support changing the height of the arrow.
@@ -213,6 +215,10 @@ export class Solid extends CustomElementView {
     obj.updateEnds(from, to);
     this.object.add(obj);
     return obj;
+  }
+
+  addArrow(from: Vector, to: Vector, color = STROKE_COLOR) {
+    this.addLine(from, to, color, true);
   }
 
   addCircle(radius: number, color = STROKE_COLOR, segments = 64) {

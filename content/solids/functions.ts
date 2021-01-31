@@ -15,24 +15,33 @@ import '../shared/components/solid';
 import '../shared/components/binary-swipe';
 import '../polyhedra/components/polyhedron';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../shared/constants';
-import {Solid} from '../shared/components/solid';
+import {Solid, Vector} from '../shared/components/solid';
 import {list} from '@mathigon/core';
 import {Point} from '@mathigon/euclid';
 import {layers, templeParts} from './data/voxel-data';
 import {pyramid1, triangularPrism, truncatedIcosahedron} from './data/net-data';
 
 export function polyParts($step: Step) {
+  // TODO Update .addPoint/Line/Label to accept THREE Vector3s, to avoid all these .toArray() functions.
+  // TODO Update .addPoint/Line/Label to accept string hex colours, to avoid hard-coded colours.
+  // TODO Hide Labels when  the item is "behind" the solid.
+
   const $p = $step.$('x-polyhedron') as Polyhedron;
   $p.addMesh(() => {
-    const vert = $p.getComponentPosn('vertex', [0, 1]);
-    $p.addLabel('Vertex', vert, 0x666666, '15px');
-    $p.addPoint(vert);
+    const vertices = [0, 1, 2].map(i => $p.getVertexCoords(i));
 
-    const edge = $p.getComponentPosn('edge', [0, 1]);
-    $p.addLabel('Edge', edge, 0x666666, '5px');
+    $p.addLabel('Vertex', vertices[2].toArray() as Vector, 0x0f82f2, '5px');
+    $p.addPoint(vertices[2].toArray() as Vector, 0x0f82f2);
 
-    const face = $p.getComponentPosn('face', [0, 3]);
-    $p.addLabel('Face', face);
+    $p.addLine(vertices[0].toArray() as Vector, vertices[2].toArray() as Vector, 0xcd0e66);
+    $p.addLabel('Edge', vertices[0].lerp(vertices[2], 0.5).toArray() as Vector, 0xcd0e66, '5px');
+
+    // TODO The entire Icosahedron should be light gray, except for one labelled face.
+    // const faceGeo = new THREE.Geometry();
+    // faceGeo.vertices = vertices;
+    // faceGeo.faces.push(new THREE.Face3(0, 1, 2));
+    // $p.addSolid(faceGeo, 0x22ab24, 5, true);
+    $p.addLabel('Face', vertices[1].lerp(vertices[2], 0.5).toArray() as Vector, 0x22ab24, '5px');
   });
 }
 
@@ -59,15 +68,15 @@ export function cuboidParts($step: Step) {
   const $p = $step.$('x-polyhedron') as Polyhedron;
 
   $p.addMesh(() => {
-    const vert = $p.getComponentPosn('vertex', [0, 1]);
-    $p.addLabel('Vertex', vert, 0x666666, '15px');
-    $p.addPoint(vert);
+    const vertices = [0, 1, 2, 3].map(i => $p.getVertexCoords(i));
 
-    const edge = $p.getComponentPosn('edge', [0, 2]);
-    $p.addLabel('Edge', edge, 0x666666, '5px');
+    $p.addLabel('Vertex', vertices[2].toArray() as Vector, 0x0f82f2, '5px');
+    $p.addPoint(vertices[2].toArray() as Vector, 0x0f82f2);
 
-    const face = $p.getComponentPosn('face', [0, 1]);
-    $p.addLabel('Face', face);
+    $p.addLine(vertices[0].toArray() as Vector, vertices[2].toArray() as Vector, 0xcd0e66);
+    $p.addLabel('Edge', vertices[0].lerp(vertices[2], 0.5).toArray() as Vector, 0xcd0e66, '5px');
+
+    $p.addLabel('Face', vertices[0].lerp(vertices[3], 0.5).toArray() as Vector, 0x22ab24, '5px');
   });
 }
 
