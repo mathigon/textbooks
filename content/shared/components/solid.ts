@@ -93,9 +93,8 @@ export class Solid extends CustomElementView {
     for (const i of items) this.object.add(i);
 
     if (!this.hasAttr('static')) {
-      const rt = parseFloat(this.attr('rotate'));
-      const speed = isNaN(rt) ? 1 : rt;
-      this.handleRotation(this.hasAttr('rotate'), speed);
+      const speed = +this.attr('rotate');
+      this.setupRotation(this.hasAttr('rotate'), isNaN(speed) ? 1 : speed);
     }
 
     this.scene.draw();
@@ -106,12 +105,12 @@ export class Solid extends CustomElementView {
     this.scene.draw();
   }
 
-  private handleRotation(animate = true, speed = 1) {
+  private setupRotation(animate = true, speed = 1) {
     // TODO Damping after mouse movement
     // TODO Better mouse-to-point mapping
 
     // Only Chrome is fast enough to support auto-rotation.
-    const autoRotate = animate && Browser.isChrome && !Browser.isMobile;
+    const autoRotate = animate && speed && Browser.isChrome && !Browser.isMobile;
     this.css('cursor', 'grab');
 
     let dragging = false;
@@ -136,21 +135,19 @@ export class Solid extends CustomElementView {
     // The 1.1 creates rotations that are slightly faster than the mouse/finger.
     const s = Math.PI / 2 / this.scene.$canvas.width * 1.1;
 
-    // eslint-disable-next-line @typescript-eslint/no-this-alias
-    const self = this;
     slide(this.scene.$canvas, {
-      start() {
+      start: () => {
         dragging = true;
         $html.addClass('grabbing');
       },
-      move(posn, start, last) {
+      move: (posn, start, last) => {
         const d = posn.subtract(last).scale(s);
         const q = new THREE.Quaternion().setFromEuler(new THREE.Euler(d.y, d.x));
-        self.object.quaternion.multiplyQuaternions(q, self.object.quaternion);
-        self.trigger('rotate', {quaternion: self.object.quaternion});
+        this.object.quaternion.multiplyQuaternions(q, this.object.quaternion);
+        this.trigger('rotate', {quaternion: this.object.quaternion});
         if (!autoRotate) frame();
       },
-      end() {
+      end: () => {
         dragging = false;
         $html.removeClass('grabbing');
       }
@@ -193,14 +190,14 @@ export class Solid extends CustomElementView {
     obj.add(new THREE.Mesh(line, material));
 
     if (arrows) {
-    const start = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
-    start.translate(0, height / 2 - 0.1, 0);
-    obj.add(new THREE.Mesh(start, material));
+      const start = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
+      start.translate(0, height / 2 - 0.1, 0);
+      obj.add(new THREE.Mesh(start, material));
 
-    const end = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
-    end.rotateX(Math.PI);
-    end.translate(0, -height / 2 + 0.1, 0);
-    obj.add(new THREE.Mesh(end, material));
+      const end = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
+      end.rotateX(Math.PI);
+      end.translate(0, -height / 2 + 0.1, 0);
+      obj.add(new THREE.Mesh(end, material));
     }
 
     obj.updateEnds = function(f: Vector, t: Vector) {

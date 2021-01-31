@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {Polypad, Slider, Step} from '../shared/types';
+import {PenTool, Polypad, Slider, Step} from '../shared/types';
 import {VoxelPainter} from './components/voxel-painter';
 import {Net} from './components/net';
 import {Polyhedron} from '../polyhedra/components/polyhedron';
@@ -276,7 +276,7 @@ function voxCube(size: number) {
 export function cubeDraw($step: Step) {
   const $p = $step.$('x-polypad') as Polypad;
   $p.setActiveTool('pen');
-  $p.tools.pen.brush = 'straight';
+  ($p.tools.pen as PenTool).brush = 'straight';
 }
 
 export function net1($step: Step) {
@@ -298,7 +298,7 @@ export function net1($step: Step) {
 export function cubeNetDraw($step: Step) {
   const $p = $step.$('x-polypad') as Polypad;
   $p.setActiveTool('pen');
-  $p.tools.pen.brush = 'straight';
+  ($p.tools.pen as PenTool).brush = 'straight';
 }
 
 export function soccerNet($step: Step) {

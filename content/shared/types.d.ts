@@ -1580,8 +1580,8 @@ export class Polypad extends CustomElementView {
   gridPoints?: Point[];
   initial: any;
   intersections: Set<Intersection>;
-  tools: Record<ToolType, Tool>;
-  activeTool: Tool;
+  tools: Record<ToolType, Tool$>;
+  activeTool: Tool$;
   canDelete: boolean;
   canCopy: boolean;
   canRotate: boolean;
