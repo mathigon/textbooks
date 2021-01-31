@@ -18,62 +18,13 @@ const POINT_RADIUS = 0.08;
 // -----------------------------------------------------------------------------
 // Utilities
 
-type Vector = [number, number, number];
+export type Vector = [number, number, number];
 
 // Custom methods on the THREE.Object3D class
 interface Object3D extends THREE.Object3D {
   setClipPlanes?: (planes: THREE.Plane[]) => void;
   updateGeometry?: (gep: THREE.Geometry) => void;
   updateEnds?: (f: Vector, t: Vector) => void;
-}
-
-function rotate($solid: Solid, animate = true, speed = 1) {
-  // TODO Damping after mouse movement
-  // TODO Better mouse-to-point mapping
-
-  // Only Chrome is fast enough to support auto-rotation.
-  const autoRotate = animate && Browser.isChrome && !Browser.isMobile;
-  $solid.css('cursor', 'grab');
-
-  let dragging = false;
-  let visible = false;
-
-  function frame() {
-    if (visible && autoRotate) requestAnimationFrame(frame);
-    $solid.scene.draw();
-    if (!dragging) $solid.object.rotation.y += speed * 0.012;
-  }
-
-  if (autoRotate) {
-    $solid.scene.$canvas.on('enterViewport', () => {
-      visible = true;
-      frame();
-    });
-    $solid.scene.$canvas.on('exitViewport', () => visible = false);
-  } else {
-    setTimeout(frame);
-  }
-
-  // The 1.1 creates rotations that are slightly faster than the mouse/finger.
-  const s = Math.PI / 2 / $solid.scene.$canvas.width * 1.1;
-
-  slide($solid.scene.$canvas, {
-    start() {
-      dragging = true;
-      $html.addClass('grabbing');
-    },
-    move(posn, start, last) {
-      const d = posn.subtract(last).scale(s);
-      const q = new THREE.Quaternion().setFromEuler(new THREE.Euler(d.y, d.x));
-      $solid.object.quaternion.multiplyQuaternions(q, $solid.object.quaternion);
-      $solid.trigger('rotate', {quaternion: $solid.object.quaternion});
-      if (!autoRotate) frame();
-    },
-    end() {
-      dragging = false;
-      $html.removeClass('grabbing');
-    }
-  });
 }
 
 function createEdges(geometry: THREE.Geometry, material: THREE.Material, maxAngle?: number) {
@@ -142,8 +93,8 @@ export class Solid extends CustomElementView {
     for (const i of items) this.object.add(i);
 
     if (!this.hasAttr('static')) {
-      const speed = +this.attr('rotate') || 1;
-      rotate(this, this.hasAttr('rotate'), speed);
+      const speed = +this.attr('rotate');
+      this.setupRotation(this.hasAttr('rotate'), isNaN(speed) ? 1 : speed);
     }
 
     this.scene.draw();
@@ -154,11 +105,60 @@ export class Solid extends CustomElementView {
     this.scene.draw();
   }
 
+  private setupRotation(animate = true, speed = 1) {
+    // TODO Damping after mouse movement
+    // TODO Better mouse-to-point mapping
+
+    // Only Chrome is fast enough to support auto-rotation.
+    const autoRotate = animate && speed && Browser.isChrome && !Browser.isMobile;
+    this.css('cursor', 'grab');
+
+    let dragging = false;
+    let visible = false;
+
+    const frame = () => {
+      if (visible && autoRotate) requestAnimationFrame(frame);
+      this.scene.draw();
+      if (!dragging) this.object.rotation.y += speed * 0.012;
+    };
+
+    if (autoRotate) {
+      this.scene.$canvas.on('enterViewport', () => {
+        visible = true;
+        frame();
+      });
+      this.scene.$canvas.on('exitViewport', () => visible = false);
+    } else {
+      setTimeout(frame);
+    }
+
+    // The 1.1 creates rotations that are slightly faster than the mouse/finger.
+    const s = Math.PI / 2 / this.scene.$canvas.width * 1.1;
+
+    slide(this.scene.$canvas, {
+      start: () => {
+        dragging = true;
+        $html.addClass('grabbing');
+      },
+      move: (posn, start, last) => {
+        const d = posn.subtract(last).scale(s);
+        const q = new THREE.Quaternion().setFromEuler(new THREE.Euler(d.y, d.x));
+        this.object.quaternion.multiplyQuaternions(q, this.object.quaternion);
+        this.trigger('rotate', {quaternion: this.object.quaternion});
+        if (!autoRotate) frame();
+      },
+      end: () => {
+        dragging = false;
+        $html.removeClass('grabbing');
+      }
+    });
+  }
+
 
   // ---------------------------------------------------------------------------
   // Element Creation Utilities
 
-  addLabel(text: string, posn: Vector, color = STROKE_COLOR, margin = '') {
+  addLabel(text: string, posn: Vector, color = STROKE_COLOR, margin?: string) {
     const $label = $N('div', {text, class: 'label3d'});
     $label.css('color', '#' + color.toString(16).padStart(6, '0'));
     if (margin) $label.css('margin', margin);
@@ -180,22 +180,25 @@ export class Solid extends CustomElementView {
     };
   }
 
-  addArrow(from: Vector, to: Vector, color = STROKE_COLOR) {
+  addLine(from: Vector, to: Vector, color = STROKE_COLOR, arrows = false) {
+    // TODO Rounded ends, argument to specify line width.
     const material = new THREE.MeshBasicMaterial({color});
     const obj = new THREE.Object3D() as Object3D;
 
     const height = new THREE.Vector3(...from).distanceTo(new THREE.Vector3(...to));
-    const line = new THREE.CylinderGeometry(0.02, 0.02, height - 0.3, 8, 1, true);
+    const line = new THREE.CylinderGeometry(0.02, 0.02, height - (arrows ? 0.3 : 0), 8, 1, arrows);
     obj.add(new THREE.Mesh(line, material));
 
-    const start = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
-    start.translate(0, height / 2 - 0.1, 0);
-    obj.add(new THREE.Mesh(start, material));
+    if (arrows) {
+      const start = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
+      start.translate(0, height / 2 - 0.1, 0);
+      obj.add(new THREE.Mesh(start, material));
 
-    const end = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
-    end.rotateX(Math.PI);
-    end.translate(0, -height / 2 + 0.1, 0);
-    obj.add(new THREE.Mesh(end, material));
+      const end = new THREE.ConeGeometry(0.1, 0.15, 16, 1);
+      end.rotateX(Math.PI);
+      end.translate(0, -height / 2 + 0.1, 0);
+      obj.add(new THREE.Mesh(end, material));
+    }
 
     obj.updateEnds = function(f: Vector, t: Vector) {
       // TODO Support changing the height of the arrow.
@@ -209,6 +212,10 @@ export class Solid extends CustomElementView {
     obj.updateEnds(from, to);
     this.object.add(obj);
     return obj;
+  }
+
+  addArrow(from: Vector, to: Vector, color = STROKE_COLOR) {
+    this.addLine(from, to, color, true);
   }
 
   addCircle(radius: number, color = STROKE_COLOR, segments = 64) {
