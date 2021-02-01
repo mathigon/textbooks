@@ -215,7 +215,7 @@ export class Solid extends CustomElementView {
   }
 
   addArrow(from: Vector, to: Vector, color = STROKE_COLOR) {
-    this.addLine(from, to, color, true);
+    return this.addLine(from, to, color, true);
   }
 
   addCircle(radius: number, color = STROKE_COLOR, segments = 64) {
