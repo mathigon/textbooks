@@ -35,7 +35,7 @@ export class Polyhedron extends Solid {
     if (!data) return console.error('Unknown polyhedron:', shape);
 
     const scale = scales[shape] || 1.65;
-    this.setAttr('rotate', '1');
+    if (!this.hasAttr('rotate')) this.setAttr('rotate', '1');
 
     this.addMesh(() => {
       const polyhedron = new THREE.Object3D();
@@ -73,5 +73,11 @@ export class Polyhedron extends Solid {
 
       return [polyhedron];
     });
+  }
+
+  getVertexCoords(index: number) {
+    const obj = this.object.children[0];
+    const mesh = obj.children.find(obj3D => obj3D.type == 'Mesh') as THREE.Mesh;
+    return (mesh.geometry as THREE.Geometry).vertices[index];
   }
 }

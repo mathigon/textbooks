@@ -1,0 +1,1809 @@
+# ==============================================================================
+# MATHIGON GLOSSARY
+# ==============================================================================
+
+absolute-value:absolute-value:
+  title: Mutlak değer
+  text: |
+    Bir sayının __mutlak değeri__, sayı satırındaki 0 ile arasındaki mesafedir. Negatif sayıları
+    pozitif yapar, ancak pozitif sayıları değiştirmez. `x` 'nin mutlak değeri `|x|` olarak
+    yazılmıştır. Örneğin, `|-5| = 5` ve `|3| = 3`.
+
+acute-angle:
+  title: Dar açı
+  text: 'Bir __dar açı__, 90 ° ''den küçük bir açıdır.'
+
+acute-triangle:
+  title: Dar üçgen
+  text: 'Bir __akut üçgeninde__, üç iç açı da _akut_ (90 ° ''den az).'
+  link: /course/triangles/properties#classification
+
+adic:
+  title: N-adic Sayılar
+  text: |
+    ___N_ -adik__ sayıları, bazı _n_ tamsayıları için, olağan aritmetikten farklı bir "yakınlık"
+    tanımına sahip özel bir sayı sistemidir. İki _n_ -adik sayı, farkları _n_ yüksek gücüyle
+    bölünebiliyorsa _yakın_ olur.
+
+adjacent-angles:
+  title: Bitişik açılar
+  text: |
+    Ortak bir kenarı ve tepe noktasını paylaşırlar ancak örtüşmezlerse iki açı __bitişiktir__._
+    bitişik _kelimesi basitçe "komşu" anlamına gelir.
+
+aleph-zero:
+  title: Aleph Zero
+  text: |
+    İbranice א harfi kullanılarak yazılan Aleph Zero, sayılabilir derecede sonsuz bir kümenin (örn.
+    Doğal sayılar) temelidir.
+
+algebraic-numbers:
+  title: Cebirsel Sayılar
+  text: |
+    __Cebirsel sayılar__, tamsayı katsayıları olan bir polinom denkleminin kökleri olarak
+    gösterilebilen gerçek sayıların alt kümesidir. Tüm rasyonel sayılar (`2/3` gibi) ve sörfler
+    (`root(3,5)` gibi) cebirseldir ve bu nedenle sörflerden (`(2 + sqrt(3))/(1 - sqrt(5))` gibi)
+    oluşturulabilecek sayılardır.
+
+    Gerçek olan ancak_ cebirsel olmayan _sayılarına _aşkın sayılar_ denir.
+
+algorithm:
+  title: Algoritma
+  text: |
+    __algoritması__, belirli bir sorunu çözmek için kullanılabilecek bir dizi kural veya talimattır.
+    Genellikle bilgisayarlar tarafından kullanılırlar ve matematikte her yerde görünürler: _uzun
+    bölümden_ ila _Gauss eliminasyonu_.
+
+alternate-angles:
+  title: Alternatif açılar
+  text: |
+    __Alternatif açılar__, _traversal_ çizgisi ile kesişen iki _paralel çizgi_ tarafından
+    oluşturulur ve her zaman uyumludur. Aşağıdaki şemada, 1, 2, 3 ve 4 etiketli açı çiftlerinin her
+    biri alternatiftir. Her çiftteki iki açı, farklı bir paralel çizgi üzerinde ve traversalin karşı
+    taraflarında uzanır.
+
+    Açı çiftleri 1 ve 2'ye __alternatif dış açılar__ denir, çünkü bunlar paralel çizgilerin
+    dışındadır ve açı çiftleri 3 ve 4 __alternatif iç açılar__ olarak adlandırılır.
+
+amino-acid:
+  title: Amino asit
+  text: |
+    __Amino asitler__, __proteinleri__ oluşturan küçük organik bileşiklerdir. Bunlar tüm canlı
+    organizmaların temel yapı taşlarından bazılarıdır.
+
+    Vücudumuzda amino asitler yiyecekleri parçalamak, vücut dokusunu onarmak, enerji depolamak ve
+    diğer birçok işlev için kullanılır.
+
+angle:
+  title: Açı
+  text: |
+    Bir açı, ortak bir uç noktayı paylaşan iki ışın tarafından oluşturulur. Her ışına açının bir
+    tarafı denir. bir açının boyutu genellikle _derece_ veya _radyan {{} olarak ölçülür.
+
+angle-bisector:
+  title: Açılı açıortay
+  text: |
+    Bir __açılı açıortay__, bir açıyı yarıya, iki uyumlu, daha küçük açıya ayıran bir çizgi veya
+    ışındır.
+  image: angle-bisector.svg
+
+anti-dot:
+  title: Anti-Dot
+  text: |
+    Nokta makinesindeki hücreler, "delikler" veya "negatif noktalar" olarak düşünebileceğiniz
+    __anti-nokta__ içerebilir. Değerleri –1'dir. Değerini değiştirmeden aynı hücreye her zaman bir
+    nokta ve bir anti-nokta ekleyebilirsiniz.
+
+apothem:
+  title: apothem
+  text: |
+    Düzenli bir çokgenin __uygulaması__, kenarlarından birinin orta noktasından merkezine olan
+    mesafedir.
+
+arabic-numerals:
+  title: Arap rakamları
+  text: |
+    __Arapça rakam sistemi__, herhangi bir sayı yazmak için ondalık basamak değeri sistemiyle
+    birlikte on farklı basamak (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) kullanır.
+
+    İlk olarak Hindistan'da geliştirildi, daha sonra İtalyan matematikçi Leonardo Fibonacci
+    tarafından Avrupa'ya getirilmeden önce Arap matematikçiler tarafından uyarlandı.
+
+arccos:
+  title: Ters Kosinüs
+  text: |
+    __ters kosinüs__ işlevi, `arccos(x)` veya `cos^(-1)(x)` olarak yazılmış trigonometrik bir
+    işlevdir. `cos(x)` 'in tersidir.
+
+archimedean-solid:
+  title: Arşimet katı
+  text: |
+    Bir __Arşimet katı__, her yönden aynı görünen farklı normal çokgen türlerinden oluşan bir
+    çokyüzlülüktür. 13 farklı Arşimet katı vardır.
+  link: /course/polyhedra/platonic#archimedean
+
+arithmetic-mean:
+  title: Aritmetik ortalama
+  text: |
+    __ortalaması__, bir sayı kümesinin _ortalaması_. Hesaplayabilir, ancak kümedeki tüm sayıları
+    toplayabilir ve toplamı öğe sayısına bölebilirsiniz.
+
+arithmetic-sequence:
+  title: Aritmetik dizi
+  text: |
+    Bir __aritmetik dizi__ (bazen __aritmetik ilerleme__ olarak da adlandırılır), ardışık terimler
+    arasındaki _d_ farkının her zaman sabit olduğu bir sayı dizisidir.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+arithmetic series:
+  title: Aritmetik Serisi
+  text: 'Bir __aritmetik serisi__, aritmetik bir dizideki terimlerin toplamıdır.'
+
+associative:
+  title: Birleşim
+  text: |
+    `a•(b•c) = (a•b)•c` ise bir işlem ilişkilendirilebilir. Örneğin, sayıların toplanması (+) ve
+    çarpımı (×) ilişkilidir.
+
+atom:
+  title: atom
+  text: |
+    __Atomlar__ tüm sıradan maddeleri oluşturan partiküllerdir: katılar, sıvılar, gazlar ve plazma.
+    Atomlar, _proton_ ve _nötrondan_ oluşan ve negatif kabuklarla çevrili, pozitif yüklü bir
+    _çekirdek_ (veya _çekirdeği_) içerir. şarjlı _elektron_. Bir atomun çapı yaklaşık bir
+    milimetrenin on milyonda biridir.
+
+axiom:
+  title: aksiyom
+  text: |
+    Bazen __postulate__ olarak adlandırılan bir __aksiyomu__, “açık bir şekilde” kabul edilen ve
+    kanıt olmadan kabul edilen matematiksel bir ifadedir. O kadar basit olmalı ki, açıkça ve
+    tartışmasız doğru.
+
+    Aksiyomlar matematiğin temelini oluşturur ve diğer daha karmaşık sonuçları kanıtlamak için
+    kullanılabilir.
+
+axis-of-symmetry:
+  title: Simetri ekseni
+  text: 'Bir şeklin yansıma simetrisi varsa, __simetri ekseni__, onu iki eşit yarıya bölen çizgidir.'
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+base-10:
+  title: Temel 10
+  text: |
+    __ondalık sistem__ (veya __base 10__), dünyada en sık kullanılan numaralandırma sistemidir. Bir
+    sayıdaki her basamak 0 ile 9 arasında on farklı değerden birine sahip olabilir.
+
+bipartite-graph:
+  title: İki Taraflı Grafik
+  text: |
+    (Tam) bir __iki taraflı grafik__ iki köşe kümesinden oluşur. Her köşe, karşı kümedeki tüm
+    köşelere bağlanır, ancak kendi kümesindeki köşelerin hiçbiri yoktur.
+  link: /course/graph-theory/handshakes#handshakes-4
+
+blackjack:
+  title: Blackjack
+  text: |
+    __Blackjack__, 21'e yaklaşmak için birden fazla kartın değerini topladığınız ancak yukarıdakine
+    kadar eklemediğiniz bir kart oyunudur.
+
+cavalieri:
+  title: Cavalieri İlkesi
+  text: |
+    __Cavalieri İlkesi__, iki katı her seviyede aynı yüksekliğe ve aynı kesit alanına sahipse, her
+    ikisinin de aynı hacme sahip olduğunu belirtir.
+
+    Bu gerçeği prizmalar ve silindirlerin hacminin enine kesitlerinin boylarıyla çarptığı alan
+    olduğunu elde etmek için kullanabiliriz.
+
+calculus:
+  title: hesap
+  text: |
+    __Matematik__, limitler, türevler, integraller ve kuvvet serileri ile ilgilenen matematiğin
+    dalıdır. Sık karşılaşılan sorunlar bir eğrinin eğimini bulmak, ekstremi bulmak, bir fonksiyonun
+    değişim oranını bulmak ve bir eğri altındaki alanı bulmaktır.
+
+center-of-rotation:
+  title: Dönüş Merkezi
+  text: '__dönme merkezi__, etrafında bir şeklin döndürüldüğü noktadır.'
+  link: /course/transformations/rigid#rotations
+
+centroid:
+  title: Geometrik Merkez
+  text: |
+    Bir üçgenin __sentroidi__, üç medyanının kesiştiği noktadır. Aynı zamanda düzgün yoğunluk
+    üçgeninin “kütle merkezi” dir.
+  link: /course/triangles/properties#center-of-mass
+
+chaos:
+  title: Kaos
+  text: her şey
+
+circle:
+  title: Daire
+  text: |
+    Bir __dairesi__, belirli bir noktadan (_merkez_) sabit bir mesafede (_yarıçapı_) iki boyuttaki
+    tüm noktaların kümesidir.
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+circle-area:
+  title: Bir Çemberin Alanı
+  text: '_r_ yarıçaplı bir dairenin __alanı__, `A = pi r^2` folmülü tarafından verilir.'
+
+circle-circumference:
+  title: Bir Çemberin Çevresi
+  text: |
+    Bir dairenin __çevresi__, dış kenarı etrafındaki mesafedir. _r_ yarıçapına sahip bir dairenin
+    çevresi `C = 2 pi r` vardır.
+  link: /course/circles/introduction#radius
+
+circle-diameter:
+  title: Çap (daire)
+  text: 'Bir dairenin __çapı__, çevresindeki iki zıt nokta arasındaki ve merkezinden geçen mesafedir.'
+  link: /course/circles/introduction#radius
+
+circle-radius:
+  title: yarıçap
+  text: |
+    Bir dairenin __yarıçapı__, merkezi ile çevresindeki herhangi bir nokta arasındaki mesafedir
+    (veya bir çizgi segmentidir).
+  link: /course/circles/introduction#radius
+
+circle-sector:
+  title: Çember Sektörü
+  text: |
+    Bir dairenin __sektörü__, iki yarıçap ve bir __yay__ ile sınırlanmış iç kısmının bir parçasıdır.
+    Alanı, iç açı ile ark uzunluğuyla orantılıdır. Bunun anlamı şudur ki
+
+    {.text-center} `(A_"Sector")/(A_"Circle") = "Arc"/"Circumference" = θ/(2π)`
+  link: /course/circles/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
+circle-segment:
+  title: Daire Segmenti
+  text: 'Bir dairenin __segmenti__, iç kısmının bir akor ve karşılık gelen arkla sınırlı bir parçasıdır.'
+
+circumcircle:
+  title: Bir üçgenin çember
+  text: 'Bir üçgenin __çember çevrimi__, üç köşesinden de geçen dairedir.'
+  image: circumcircle.svg
+  link: /course/triangles/properties#circumcircle-1
+
+coefficient:
+  title: katsayı
+  text: |
+    __Katsayılar__, matematiksel bir ifadedeki veya denklemdeki değişkenlerin önündeki sayılardır.
+    Örneğin, `4x + 5y^2 - 3z` ifadesinde `x` katsayısı 4, `y^2` katsayısı 5 ve `z` katsayısı –3'tür.
+
+collinear:
+  title: Eşit noktalar
+  text: 'Üç ya da daha fazla nokta, aynı hatta yatarlarsa __eşdoğrusal__ olur.'
+
+compass:
+  title: Pusula
+  text: |
+    Pusula, daireler veya yaylar oluşturmak için kullanılan bir çizim aracıdır. İki koldan oluşur -
+    bir uçtaki iğne merkeze yerleştirilirken, diğer uçtaki kalem eğriyi izler.
+
+complementary-angles:
+  title: Tamamlayıcı açılar
+  text: 90 ° 'ye kadar eklerse iki açı __tamamlayıcı__ olur (dik açı).
+
+complete-graph:
+  title: Grafiği Tamamla
+  text: |
+    __tam grafiklerde__, her tepe noktası diğer tüm tepe noktalarına bağlanır. _n_ köşeleri olan tam
+    bir grafiğin `(n×(n-1))/2` kenarı vardır.
+  link: /course/graph-theory/handshakes#handshakes-3
+
+complex-numbers:
+  title: Karışık sayılar
+  text: |
+    __karmaşık sayıları__, gerçek ve hayali bir sayının toplamı veya farkı olan sayılardır.
+    Genellikle `a + bi` olarak yazılırlar, burada _a_ gerçek kısım ve _b_ hayali kısımdır.
+
+    Karmaşık sayılar, iki boyutlu bir düzlemde gösterilebilir; burada _x_ -aksisi gerçek sayılar ve
+    _y_ -aksisi hayali sayılardır.
+
+    Tüm karmaşık sayılar kümesi genellikle `CC` sembolü ile gösterilir.
+
+composite-number:
+  title: Bileşik sayı
+  text: |
+    __bileşik numarası__, asal olmayan bir tam sayı. Bu, 1 ve kendisinden başka faktörlere sahip
+    olduğu anlamına gelir.
+
+concave:
+  title: İçbükey çokgen
+  text: |
+    Bir __içbükey__ çokgenin en az bir iç açısı 180 ° 'den fazla. Köşegenlerden en az biri çokgenin_
+    dışında _yatıyor. İçbükey bir çokgeni tanımlamanın yaygın bir yolu, çokgenin “oyulmuş” tarafını
+    aramaktır. _İçbükey_, _dışbükey_ çokgenlerinin tersidir.
+  link: /course/polyhedra/polygons#concave
+
+cone:
+  title: koni
+  text: |
+    Bir __konisi__, kavisli bir taraf tarafından tek bir noktaya (_tepe noktası_ adı verilir)
+    birleştirilmiş bir _tabanı_ olan üç boyutlu bir katıdır. Bir koniyi “dairesel piramit” olarak da
+    düşünebilirsiniz.
+
+    Bir __sağ koni__, tepe noktası doğrudan tabanının merkezinin üzerinde olan bir konidir.
+  link: /course/circles/spheres-cones-cylinders#cone
+  image: cone.svg
+
+cone-volume:
+  title: Koni Hacmi
+  text: |
+    Bir koninin hacmi denklem tarafından verilir
+
+    {.text-center} `V = 1/3 π r^2 h`,
+
+    burada _r_ dairesel tabanın yarıçapıdır ve _h_ koninin yüksekliğidir (tabandan tepe noktasına
+    dikey mesafe).
+
+congruent:
+  title: ahenk
+  text: |
+    Geometride, boyut, şekil ve ölçü bakımından aynıysa iki şekil __uyumlu__ şeklindedir. Bu, onları
+    tam olarak üst üste sığacak şekilde hareket ettirebilir, çevirebilir veya döndürebiliriz.
+  link: /course/euclidean-geometry/definitions#congruence
+
+congruent-angles:
+  title: Eşleşmeli Açılar
+  text: Aynı açıya sahip olmaları durumunda iki açı __uyumlu__ olur.
+
+conic-section:
+  title: Konik kesit
+  text: |
+    Bir __koni bölümü__, bir koninin yüzeyinin düz bir düzlemle kesişimi olarak oluşturulan bir
+    eğridir. Birçok özelliği paylaşan dört farklı konik bölüm türü vardır:
+
+    * Daire
+
+    * Elips
+
+    * Parabol
+
+    * Hiperbol
+  link: /course/circles/conic-sections
+
+convex:
+  title: Dışbükey Poligon
+  text: |
+    Bir __dışbükey__ çokgeni 180 ° 'den daha büyük iç açılar içermez. Tüm köşegenler çokgenin içinde
+    yer alır. Bu, _içbükey_ çokgenlerin tersidir.
+  link: /course/polyhedra/polygons#concave
+
+coordinate-system:
+  title: Koordinat sistemi
+  text: |
+    Bir __kordinat sistemi__, iki dikey eksen içeren iki boyutlu bir düzlemdir. Düzlemdeki her
+    nokta, iki eksenden uzaklığını belirten iki sayı (koordinat) kullanılarak tanımlanabilir.
+
+coordinate-system-origin:
+  title: Koordinat sistemi
+  text: |
+    Bir koordinat sisteminin __başlangıç noktası__, koordinatlara sahip noktadır (0, 0). Genellikle
+    iki eksenin kesiştiği noktadır.
+
+corresponding-angles:
+  title: Karşılık gelen açılar
+  text: |
+    __Karşılık gelen açılar__, enine göre aynı konumda ancak farklı çizgiler üzerinde olan iki
+    açıdır. Her zaman uyumludurlar.
+  image: corresponding-angles.svg
+
+cos:
+  title: Kosinüs
+  text: |
+    __Kosinüs__, `cos(θ)` olarak yazılmış trigonometrik bir fonksiyondur. Dik açılı bir üçgende,
+    bitişik tarafın ve hipotenüsün oranıdır.
+  link: /course/triangles/trigonometry#trig-functions
+
+cpoct:
+  title: CPOCT
+  text: |
+    CPOCT, uyumlu üçgenlerin__ karşılık gelen bölümlerini ifade eder. Bu, iki üçgen uyumluysa,
+    karşılık gelen tüm bileşenlerinin (açılar, yanlar, orta segmentler,…) de birbirine uyumlu olması
+    gerektiği anlamına gelir.
+  link: /course/triangles/congruence#cpoct
+
+cross-section:
+  title: Enine kesit
+  text: '__enine kesiti__, üç boyutlu bir katının bir düzlemle kesişimidir.'
+
+cryptography:
+  title: Kriptografi
+  text: |
+    __Kriptografi__, gizli mesajların şifrelenmesini ve deşifre edilmesini inceleyen matematik
+    alanıdır.
+
+cube:
+  title: Küp
+  text: |
+    Bir __küp__ (bazen __Hexahedron__ olarak adlandırılır), her yüzün kare olduğu normal bir
+    çokyüzlüdür. Beş _Platonik katıktan_ biridir ve 6 yüzü, 8 köşesi ve 12 kenarı vardır.
+  link: /course/polyhedra/platonic#platonic-overview
+
+cube-volume:
+  title: Küp Hacmi
+  text: Yan uzunluğu _a_ olan bir küpün hacmi `V = a^3`.
+
+cylinder:
+  title: Silindir
+  text: |
+    Bir __silindiri__, kavisli bir yüzeyle birleştirilen iki uyumlu, paralel, dairesel kenardan
+    (_tabanlar_) oluşan üç boyutlu bir katıdır. Bir silindiri “dairesel prizma” olarak da
+    düşünebilirsiniz.
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+
+cylinder-volume:
+  title: Silindir Hacmi
+  text: |
+    Bir silindirin hacmi denklem tarafından verilir
+
+    {.text-center} `V = π r^2 h`,
+
+    burada _r_ dairesel tabanın yarıçapıdır ve _h_ silindirin yüksekliğidir (iki baz arasındaki
+    dikey mesafe).
+
+degrees:
+  title: Dereceler
+  text: |
+    __Dereceler__ ° ile gösterilen açıları ölçmek için kullanılan bir birimdir. Tam bir devrim 360
+    °, dik açı 90 ° vb.
+
+denominator:
+  title: Payda
+  text: '__paydası__ bir kesirdeki en alttaki sayıdır. Örneğin, `4/7` ''de, 7 sayısı paydadır.'
+
+dilation:
+  title: genişleme
+  text: |
+    __genişlemesi__, geometrik bir şekli daha büyük veya daha küçük yaparak yeniden boyutlandıran
+    bir dönüşümdür.
+  image: dilation.svg
+  link: /course/transformations/dilations
+
+directed-graph:
+  title: Yönlendirilmiş grafik
+  text: |
+    __yönlendirilmiş bir grafikte__, her kenarın bir "oku", yani bir başlangıç tepe noktası ve bir
+    bitiş tepe noktası vardır.
+  link: /course/graph-theory/introduction#intro-1
+
+discriminant:
+  title: Diskriminant
+  text: |
+    İkinci dereceden bir denklemin __ayırıcısı__, ikinci dereceden formülde kare kökün altındaki
+    ifadedir: `b^2 − 4ac`.
+
+    İkinci dereceden denklemin çözüm sayısını belirlemek için kullanılabilir. Diskriminant 0'dan
+    büyükse, iki çözüm vardır. 0'a eşitse, sadece bir çözüm var. 0'dan küçükse, (gerçek) çözüm
+    yoktur.
+
+dna:
+  title: GUT
+  text: |
+    __DNA__ (Deoksiribonükleik Asit), tüm canlı organizmaların genetik planını içeren bir
+    moleküldür. Çoğu DNA, bir _çift sarmal_ oluşturan iki diziden oluşur. Genetik bilgi, DNA'yı
+    oluşturan dört nükleik asit (A, G, C ve T) sırasıyla kodlanır. _DNA sekanslaması_, biyoloji,
+    tıp, genetik ve biyoteknolojide temel bir teknik olan bu bilgiyi çıkarma sürecidir.
+
+dodecahedron:
+  title: oniki yüzlü şekil
+  text: |
+    __Dodecahedron__ bir Platonik katıdır ve normal beşgenler olan 12 yüzden oluşur. 20 köşesi ve 30
+    kenarı vardır.
+  link: /course/polyhedra/platonic#platonic-overview
+
+dot-annihilation:
+  title: Yok etme
+  text: |
+    Aynı hücrede hem bir nokta hem de bir anti-nokta varsa, bunlar iptal edilir veya__ birbirini yok
+    eder__. `–1 + 1 = 0` düşünün.
+
+dot-machine:
+  title: Nokta Makinesi
+  text: |
+    Bir __nokta makinesi__, nokta içeren birden çok hücreden oluşur. Bu noktaları belirli kurallara
+    göre değiştirebilirsiniz.
+
+    Örneğin, bir `1←3` makinede, bir hücredeki 3 nokta sonraki hücrede 1 noktaya _sol_ 'e
+    dönüştürülebilir. Benzer şekilde, 1 nokta bir sonraki hücrede _sağ_ 'ya 3 noktaya
+    dönüştürülebilir. Buna “patlama” denir.
+
+ellipse:
+  title: Elips
+  text: |
+    Bir __elips__, iki odak noktasını çevreleyen eğri bir yoldur. Elipsin çevresindeki herhangi bir
+    nokta, iki odak ile aynı _mesafelerin toplamına_ sahiptir.
+
+    Odaklar çok yakınsa, elips neredeyse bir daireye benziyor. Daha da uzaklaştıkça, elips daha
+    uzar.
+
+    Üç nokta, _konik bölümün_ bir türüdür: bir koninin düzlemle kesişimi.
+  image: ellipse.svg
+  link: /course/circles/conic-sections#ellipses
+
+equation:
+  title: Denklem
+  text: |
+    __denklemi__, iki veya daha fazla ifadenin __eşittir__ `=` işaretine bağlanmasıyla oluşturulan
+    matematiksel bir ifadedir. Tüm bu ifadelerin aynı değere sahip olduğunu gösterir.
+
+equilateral-triangle:
+  title: Eşkenar üçgen
+  text: '__eşkenar üçgen__, üç tarafın da aynı uzunlukta olduğu bir üçgendir.'
+
+euclidean-geometry:
+  title: Öklid Geometrisi
+  text: |
+    __Öklid geometrisi__, matematikçi _Öklid_ tarafından öngörülen bir geometri türüdür ve noktalar,
+    çizgiler, çokgenler, daireler ve üç boyutlu katıların incelenmesini içerir. İzin verilen tüm
+    işlemleri ve yapıları tanımlayan temel geometri kanunları olan sadece beş _aksiyoma (5)
+    bağlıdır.
+  link: /course/euclidean-geometry/euclids-axioms#euclid
+
+factor:
+  title: faktör
+  text: '_a_ sayısı, _b_ ''ı bölebiliyorsanız _b_ sayısının __faktör__ (veya __bölen__)'' dir _a_ kaldı.'
+  link: /course/divisibility/factors-and-multiples
+
+factorial:
+  title: Çarpınım
+  text: |
+    Pozitif bir tamsayının __faktöriyeli__, kendisi dahil ve kendisi dahil tüm tamsayıların
+    çarpımıdır. Ünlem noktasını kullanarak yazıyoruz, örneğin
+
+    {.text-center} `5! = 1×2×3×4×5`.
+
+    Tanım olarak, `0! = 1.`
+
+factorisation:
+  title: Faktoring Primi
+  text: 'Bir sayının __asal çarpanı__, asal sayıların bir ürünü olarak yazmanın bir yoludur.'
+  link: /course/divisibility/primes
+
+fermat-last:
+  title: Fermat'ın Son Teoremi
+  text: |
+    __Fermat’ın Son Teoremi__, `x^n + y^n = z^n` denkleminin `n>2` için tamsayı çözümü olmadığını
+    belirtir. `n=2` olursa, birçok tamsayı çözümü olan _Pisagor teoremi_ elde edersek, _n_ = 3, 4,
+    5,… için hiçbiri yoktur.
+
+    1637'de matematikçi Pierre de Fermat bir kitapta not aldı ve bir kanıtı olduğunu iddia etti,
+    ancak marjına sığmayacak kadar büyüktü. 350 yıldan fazla bir süredir, diğer matematikçiler bu
+    kanıtı bulmaya çalıştılar ve Fermat'ın Son Teoremi, “en zor matematik problemi” olarak _Guinness
+    Rekorlar Kitabı'nda_ bile vardı.
+
+    1994 yılında, uzun yıllar çalıştıktan sonra, Andrew Wiles sonunda bunu kanıtlamayı başardı. Daha
+    sonra matematikteki en yüksek onurlardan biri olan Abel Ödülü'nü aldı.
+
+fibonacci-numbers:
+  title: Fibonacci Sayıları
+  text: |
+    __Fibonacci sayıları__ dizisi 1, 1 ile başlar. Aşağıdaki her terim, önceki iki terimin
+    toplamıdır, yani özyinelemeli formül `x_n = x_(n-1) + x_(n-2)` 'dir.
+  link: /course/sequences/fibonacci#fibonacci
+
+figurate-numbers:
+  title: Firgurate Numaraları
+  text: |
+    __Figüratif rakamlar__, geometrik şekiller kullanılarak temsil edilebilecek rakamlardır. Örnek
+    olarak kare, üçgen ve dört yüzlü sayılar verilebilir.
+  link: /course/sequences/figurate#figurate
+
+formula:
+  title: formül
+  text: |
+    __formülü__, iki veya daha fazla değişken arasındaki ilişkiyi tanımlayan bir kural veya
+    denklemdir. Bir örnek `A = πr^2`.
+
+fractal:
+  title: Fraktal
+  text: |
+    __fraktal__, _fraksiyonel boyutu_ olan geometrik bir şekildir. Birçok ünlü fraktal _kendine
+    benzer_, yani kendilerinden daha küçük kopyalardan oluşuyorlar. Fraktallar her büyütme
+    seviyesinde desen içerirler ve bir prosedürü tekrarlayarak veya bir denklemi sonsuz kez
+    tekrarlayarak oluşturulabilirler.
+  link: /course/fractals/introduction
+
+fta:
+  title: Ariteminin Temel Teoremi
+  text: |
+    __Ariteminin Temel Teoremi__ (FTA), her tamsayının benzersiz bir asal çarpanlarına sahip
+    olduğunu söyler.
+
+function:
+  title: fonksiyon
+  text: |
+    __işlevi__, bir girdiyi (_x_) tam olarak bir çıktıya (_y_) dönüştüren matematiksel bir
+    ilişkidir. Genellikle `f(x)` formunun matematiksel denklemleri olarak ifade edilirler.
+
+function-graph:
+  title: Fonksiyon Grafikleri
+  text: |
+    `f(x)` formunun matematiksel işlevlerini bir koordinat sisteminde çizebiliriz. Sonuç, işlevin
+    __grafiği__ olarak adlandırılır.
+
+gcf:
+  title: En Büyük Ortak Faktör
+  text: '_a_ ve _b_ numaralı iki sayının __en büyük ortak faktörü__ (gcf), hem _a_ hem de _b_.'
+  link: /course/divisibility/greatest-common-factors
+
+geometric-sequence:
+  title: Geometrik Dizi
+  text: |
+    Bir __geometrik dizisi__ (bazen __geometrik ilerleme__ olarak adlandırılır), ardışık terimler
+    arasındaki _r_ oranının her zaman sabit olduğu bir sayı dizisidir.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+geometric-series:
+  title: Geometrik seriler
+  text: |
+    Bir __geometrik serisi__, ardışık terimlerin sabit bir oranı _r_ olduğu geometrik bir dizideki
+    terimlerin sonsuzluk toplamıdır. Örneğin,
+
+    {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
+
+    sabit oranı `1/2` olan geometrik bir seridir.
+
+glide-reflection:
+  title: Kayma Yansımaları
+  text: |
+    __kayma yansıması__ özel bir tür dönüşümdür. Yansıma ekseniyle aynı yönde bir _yansıma_ ile bir
+    _çevirinin_ birleşimidir.
+  link: /course/transformations/symmetry-groups#footsteps
+
+golden-ratio:
+  title: Altın Oran
+  text: |
+    __altın oranı__, `φ = 1.61803398875…` değerine sahip spesifik bir irrasyonel sayıdır. Art arda
+    iki Fibonacci sayısının bölünmesiyle tahmin edilebilir.
+
+    Altın oran genellikle sanat ve mimaride estetik olarak hoş görülür ve birçok bitkinin
+    spirallerinde görülür.
+  link: /course/sequences/fibonacci#golden-ratio-1
+
+graph:
+  title: grafik
+  text: '__grafiği__, kenarlarla birbirine bağlanmış köşelerin bir koleksiyonudur.'
+  link: /course/graph-theory/introduction
+
+graph-cycle:
+  title: Döngü
+  text: '__Döngüler__, tek bir köşe döngüsünden oluşan grafiklerdir.'
+  link: /course/graph-theory/introduction#intro-4
+
+graph-degree:
+  title: derece
+  text: 'Bir tepe noktasının __derecesi__, bu tepe noktasında buluşan kenar sayısıdır.'
+  link: /course/graph-theory/introduction#intro-3
+
+graph-edge:
+  title: kenar
+  text: '__Kenarlar__, bir grafikteki köşeleri (noktalar) bağlayan çizgilerdir.'
+  link: /course/graph-theory/introduction
+
+graph-order:
+  title: Sipariş
+  text: 'Bir grafiğin __sırası__, içindeki köşe sayısıdır.'
+  link: /course/graph-theory/introduction#intro-3
+
+graph-vertex:
+  title: tepe
+  text: '__tepe noktası__, grafiğin bir parçası olan bir nokta veya düğümdür.'
+  link: /course/graph-theory/introduction
+
+gravity:
+  title: Yerçekimi
+  text: |
+    __Yerçekimi__ doğanın dört temel kuvvetinden biridir ve evrendeki herhangi iki kütleyi birbirine
+    doğru çeker. Isaac Newton, `m_1` ve `m_2` iki kütlesi arasındaki kuvvetin
+
+    {.text-center} `F = (G m_1 m_2) / r^2`,
+
+    burada _G_ yerçekimi sabiti ve _r_ kütleler arasındaki mesafedir.
+
+group:
+  title: grup
+  text: |
+    Grup, üç farklı kurala uyan “şeylerin” (sayılar veya simetriler gibi) bir koleksiyonudur:
+
+    * Grupta bulunan başka bir tane almak için iki şey ekleyebilir / birleştirebilirsiniz. * İşler
+    _çağrışımlı_, yani `a+(b+c) + (a+b)+c`. * Bir _kimlik_ vardır ve her “şeyin” eklendiği zaman
+    kimliği veren bir _ters_ vardır.
+  link: /course/transformations/symmetry-groups#groups-1
+
+hailstone-sequence:
+  title: Hailstone Dizisi
+  text: |
+    __Hailstone dizileri__, herhangi bir tamsayıyı başlangıç noktası olarak seçip ardından aşağıdaki
+    kuralları izleyerek oluşturulabilir:
+
+    * `x_n` eşitse, `x_(n+1) = x_n / 2`.
+
+    * `x_n` tuhafsa, `x_(n+1) = 3 * x_n + 1`
+  link: /course/sequences/special#hailstone
+
+heptagon:
+  title: yedigen
+  text: 'Bir __yedigen__, yedi tarafı olan bir çokgendir.'
+
+hexagon:
+  title: Altıgen
+  text: 'Bir __altıgen__, altı tarafı olan bir çokgendir.'
+
+hyperbola:
+  title: Hiperbol
+  text: |
+    Bir __hiperbol__, `y = 1/x` fonksiyonunun grafiğinin şeklidir. Her ikisi de _asimptot_ 'e
+    yaklaşan iki ayrık bölümden oluşur. Aynı zamanda bir _koni bölümüdür_.
+  image: hyperbola.svg
+
+hypotenuse:
+  title: Hipotenüs
+  text: 'Dik açılı bir üçgenin __hipotenüsü__, dik açının karşısında yer alan en uzun kenarıdır.'
+  image: right-triangle.svg
+
+icosahedron:
+  title: ikosahedron
+  text: |
+    __Icosahedron__, bir Platonik katıdır ve hepsi eşkenar üçgen olan 20 yüzden oluşur. 12 köşesi ve
+    30 kenarı vardır.
+  link: /course/polyhedra/platonic#platonic-overview
+
+imaginary:
+  title: Hayali Sayılar
+  text: |
+    __Hayali sayılar__, negatif sayıların karekökleri alınarak oluşturulur. İsimlerine rağmen,
+    matematik, fen ve mühendislik alanlarında büyük önem taşıyorlar.
+
+    __sanal birimi__ `i = sqrt(−1)` olarak yazılmıştır ve diğer hayali sayılar katları olarak
+    yazılabilir. Örneğin, `sqrt(-5) = 5i`.
+
+infinity:
+  title: Sonsuzluk
+  text: |
+    __Sonsuzluk__, sınırı veya sonu olmayan bir miktardır. Matematikte, `∞` sembolü ile temsil
+    edilmektedir.
+
+information:
+  title: Bilgi Kuramı
+  text: |
+    __Bilgi teorisi__, veri ve bilginin nicelleştirilmesi, depolanması ve iletişimidir. Mantık,
+    kriptografi ve bilgisayar bilimlerinde kullanılır.
+
+integer:
+  title: tamsayılar
+  text: |
+    __tamsayıları__, sıfır dahil pozitif ve negatif tam sayılardır:…, –3, –2, –1, 0, 1, 2, 3,….
+    Genellikle `ZZ` sembolü kullanılarak gösterilir.
+
+internal-angle:
+  title: İç açılar
+  text: 'Bir çokgenin __iç açıları__, her tepe noktasında iç açıdır.'
+  image: internal-angle.svg
+
+irrational-numbers:
+  title: İrrasyonel sayılar
+  text: |
+    __Mantıksız sayılar__, tamsayı kesirleri (_rasyonel sayılar_) olarak ifade edilemeyen
+    sayılardır. Örneğin, 0.333333… = `1/3` _rasyonel_, ancak `π`, `sqrt(2)` ve _e_ hepsi
+    _irrasyonel_. İrrasyonel bir sayının ondalık biçimi durmaz veya tekrarlanmaz.
+
+irregular-polygon:
+  title: Düzensiz Çokgen
+  text: |
+    Bir __düzensiz poligon__, _normal olmayan_ olan bir poligondur. Bu, kenarların veya açıların
+    hepsinin aynı boyutta olmadığı anlamına gelir.
+
+isosceles-triangle:
+  title: İkizkenar üçgen
+  text: '__ikizkenar üçgen__ ''de, iki tarafın uzunluğu aynıdır.'
+
+iss:
+  title: Uluslararası Uzay istasyonu
+  text: |
+    __Uluslararası Uzay İstasyonu__ (ISS) 1998 yılında başlatıldı ve Dünya'nın yaklaşık 400 km
+    yükseklikte yörüngesinde dönüyor. Düşük Dünya yörüngesindeki en büyük insan yapımı vücuttur ve
+    lansmandan bu yana sürekli olarak yerleşmiştir. Dünya'dan çıplak gözle görülebilir.
+
+julia-set:
+  title: Julia Set
+  text: |
+    `f` gibi bir `f` işlevi verildiğinde, karşılık gelen __Julia kümesi__ `§K(f)`, `f` tekrar tekrar
+    uygulanarak oluşturulan dizinin ayrışmadığı karmaşık düzlemdeki tüm noktaların bir alt
+    kümesidir. Çoğu durumda, Julia kümesi bir _fraktal_ 'dır ve _Mandelbrot kümesi_ ile yakından
+    ilişkilidir.
+  link: /course/fractals/mandelbrot#julia
+  image: julia-set.png
+
+kite:
+  title: Uçurtma
+  text: 'Bir __uçurtma__, iki bitişik kenar çiftinin aynı uzunluğa sahip olduğu bir dörtlüdür.'
+  link: /course/polyhedra/quadrilaterals#kites
+
+koch-snowflake:
+  title: Koch Kar Tanesi
+  text: |
+    __Koch Kar Tanesi__ kendine benzer bir fraktal. Her iki tarafına tekrarlayan küçük eşkenar
+    üçgenler olan eşkenar üçgenden oluşur.
+  link: /course/fractals/introduction#koch
+  image: koch-snowflake.svg
+
+laws-of-nature:
+  title: Doğa Kanunları
+  text: |
+    __doğa kanunları__, evrende gözlemlediğimiz her şeyi açıklamaya çalışan fiziksel kurallara
+    (genellikle matematiksel denklemler olarak ifade edilir) toplu olarak verilen addır.
+
+lcm:
+  title: En küçük ortak katları
+  text: '_a_ ve _b_ arasındaki iki sayının __En Düşük Ortak Katsayısı__ (lcm), hem _a_ hem de _b_.'
+  link: /course/divisibility/least-common-multiples
+
+line:
+  title: Hat
+  text: |
+    __satırı__, her iki yönde sonsuza dek uzanan sonsuz sayıda nokta kümesidir. Çizgiler her zaman
+    düzdür ve _genişliğe_ sahip değildir.
+  link: /course/euclidean-geometry/definitions#lines
+
+line-segment:
+  title: Çizgi segmenti
+  text: |
+    Bir __çizgi segmenti__, bir çizginin sonsuza kadar uzanmadan iki nokta arasında kalan kısmıdır.
+    _A_ noktasından _B_ noktasına `bar(AB)` olarak çizgi segmentlerini etiketleyebiliriz.
+  link: /course/euclidean-geometry/definitions#segments
+
+line-slope:
+  title: Çizginin Eğimi
+  text: |
+    Bir çizginin __eğimi__ “dikliğini” ölçer ve genellikle _m_ harfi ile gösterilir. Hat boyunca _x_
+    'deki birim değişikliği için _y_' deki değişikliktir.
+
+linear-equation:
+  title: Doğrusal Denklem
+  text: |
+    __doğrusal denklemi__, `ax + b = 0` biçimindedir; burada _x_ bir değişkendir ve _a_ ve _b_
+    sayıdır. Bir koordinat sisteminde grafiklendiğinde, `ax+b` değerleri düz bir çizgi oluşturur.
+
+linear-function:
+  title: Doğrusal fonksiyon
+  text: |
+    Bir __doğrusal işlevi__, grafiği düz bir çizgi olan bir işlevdir. `f(x) = mx + c` olarak
+    tanımlanabilir, burada _m_ çizginin eğimi ve _c_, _y_ -axis kesişimidir.
+
+mandelbrot-set:
+  title: Mandelbrot Seti
+  text: |
+    __Mandelbrot__ kümesi, yinelemeli `§z_n = z_(n-1)^2 + c` dizisinin (`§z_0 = 0` ile) ayrılmadığı
+    `CC` karmaşık sayılar kümesidir. Bir _fraktal_.
+  link: /course/fractals/mandelbrot
+  image: mandelbrot-set.png
+
+matrix:
+  title: Matris
+  text: '__matrisi__, satırlar ve sütunlar halinde düzenlenmiş dikdörtgen bir sayı dizisidir.'
+
+median:
+  title: medyan
+  text: |
+    Bir sayı kümesinin __medyanı__, sayıların yarısının daha büyük ve sayıların yarısının daha küçük
+    olduğu değerdir. İki “orta sayı” varsa, bu sayıların ortalamasıdır.
+
+midpoint:
+  title: orta nokta
+  text: |
+    Bir çizgi parçasının __orta noktası__, çizgi parçasındaki parçayı ortadaki parçayı iki uyumlu
+    parçaya ayıran noktadır. __orta nokta formülü__, `(x_1, y_1)` ve `(x_2,y_2)` uç noktaları için
+    orta noktanın `((x_1 + x_2)/2, (y_1 + y_2)/2)` olduğunu söylüyor.
+
+millennium-prize:
+  title: Milenyum Ödül Sorunları
+  text: |
+    Yedi __Milenyum Ödül Problemi__ Matematikteki en zor açık problemlerden bazılarıdır. 2000
+    yılında _Kil Matematik Enstitüsü_ tarafından listelendi ve her biri 1 milyon dolar ödül aldı:
+
+    * P vs NP
+
+    * Hodge Konjonktürü
+
+    * Poincaré Konjeksiyonu
+
+    * Riemann Hipotezi
+
+    * Yang-Mills Varlığı ve Kütle Boşluğu
+
+    * Navier-Stokes Varlığı ve Pürüzsüzlüğü
+
+    * Huş ve Swinnerton-Dyer Konjonktürü
+
+    Şimdiye kadar, sorunlardan sadece biri olan _Poincaré Konjonktürü_ çözüldü. Ancak çözen
+    matematikçi Grigori Perelman ödülü reddetti.
+
+mode:
+  title: kip
+  text: |
+    Bir sayı grubunun __modu__ en sık ortaya çıkan sayıdır. Örneğin, [3, 4, 4, 4, 5, 5, 6] modu
+    5'tir.
+
+molecule:
+  title: molekül
+  text: |
+    Bir __molekülü__, kimyasal bağlarla bir arada tutulan iki veya daha fazla atomdan oluşur.
+    __İyonlar__ 'un aksine elektrik yükü yoktur.
+
+    Moleküllere örnek olarak, iki bağlı Oksijen atomundan oluşan `O_2` ve iki Hidrojen atomundan ve
+    bir Oksijen atomundan oluşan `H_2 O` gösterilebilir.
+
+morse-code:
+  title: Mors kodu
+  text: |
+    __Mors kodu__, kısa ve uzun sinyaller (nokta ve tire denir) kullanarak harfleri ve sayıları
+    temsil etmenin bir yoludur. Adı _Samuel Morse_ 'ten sonradır ve başlangıçta uzun mesafelerde
+    telgraf kullanarak iletişim kurmak için kullanılmıştır.
+
+    Örneğin, “L” harfi kısa ve uzun sinyallerin _{x-morse(char="L")}_ dizisi kullanılarak temsil
+    edilir.
+
+multiple:
+  title: çoklu
+  text: '_a_, _b_, _a_ bir faktörse, _b_ sayısının __katı__ ''üdür.'
+  link: /course/divisibility/factors-and-multiples
+
+natural-numbers:
+  title: Doğal sayılar
+  text: |
+    __doğal sayılar__, 1: 1, 2, 3, 4,… 'den başlayan pozitif tam sayılardır. Genellikle `NN` sembolü
+    kullanılarak gösterilir.
+
+net:
+  title: Çokyüzlü Ağlar
+  text: 'Bir çokyüzlünün __net__, çokgen yüzlerini düz bir yüzeye “açtığınızda” elde ettiğiniz şeydir.'
+
+neutron:
+  title: Nötron
+  text: |
+    Bir __nötron__, bir atomun çekirdeğini oluşturan parçacıklardan biridir. Yükü yoktur ve protonla
+    yaklaşık olarak aynı kütleye sahiptir.
+
+np:
+  title: NP Zor Sorunları
+  text: |
+    _Hesaplamalı karmaşıklık teorisi_, “zor” problemlerin bir bilgisayar tarafından nasıl
+    çözüleceğini belirlemekle ilgilidir. __NP zor__ (deterministik olmayan polinom zaman zor) en zor
+    problemlerin sınıfıdır.
+
+numerator:
+  title: pay
+  text: '__payı__ bir kesirdeki en üstteki sayıdır. Örneğin, `4/7` ''de 4 sayısı paydır.'
+
+obtuse-angle:
+  title: Geniş açı
+  text: 'Bir __geniş açı__, 90 ° ''den büyük, ancak 180 °'' den küçük bir açıdır.'
+
+obtuse-triangle:
+  title: Geniş açılı üçgen
+  text: Bir __geniş üçgende__ bir iç açı 90 ° 'den daha büyüktür.
+  link: /course/triangles/properties#classification
+
+octagon:
+  title: Sekizgen
+  text: 'Bir __sekizgen__, sekiz tarafı olan bir çokgendir.'
+
+octahedron:
+  title: sekizyüzlü
+  text: |
+    __Oktahedron__ bir Platonik katıdır ve eşkenar üçgen olan 8 yüzden oluşur. 6 köşesi ve 12 kenarı
+    vardır.
+  link: /course/polyhedra/platonic#platonic-overview
+
+order-of-symmetry:
+  title: Simetri Sırası
+  text: |
+    Bir şeklin dönme simetrisi varsa, __simetri sırası__, şeklin aynı göründüğü yönelim sayısıdır.
+    (Ya da başlangıca geri dönmeden önce şekli kaç kez döndürebileceğinizdir.)
+  link: /course/transformations/symmetry#rotational-symmetry
+
+origin:
+  title: Menşei
+  text: |
+    Bir koordinat sisteminin __orijini__, _x_ ekseninin ve _y_ ekseninin kesiştiği nokta (0, 0)
+    'dır.
+
+origin-number-line:
+  title: Bir Sayı Satırının Kökeni
+  text: 'Bir sayı satırının __başlangıç noktası__, 0 noktasıdır.'
+
+palindrome:
+  title: palindrom
+  text: |
+    __palindromu__ önden arkaya aynı şekilde arkadan öne doğru okuyan bir kelime veya sayıdır.
+    Örneğin, 25752 ve “ANNA” nın her ikisi de palindromlardır.
+  link: /course/transformations/symmetry#palindromes
+
+parabola:
+  title: Uydu anteni
+  text: |
+    __parabol__, `y = x^2` gibi ikinci dereceden bir fonksiyonun grafiğinin şeklidir. Simetrik, U
+    şeklindedir ve yukarı veya aşağı doğru işaret edebilir. Aynı zamanda bir _koni bölümüdür_.
+  image: parabola.svg
+
+parabola-conic:
+  title: Uydu anteni
+  text: |
+    Bir __parabol__, bir düzlemdeki __directrix__ adı verilen sabit bir çizgiden aynı mesafeye ve
+    __odak {olarak adlandırılan sabit bir noktaya sahip tüm noktaların kümesidir. 5}.
+
+parabola-focus:
+  title: Bir Parabolün Odağı
+  text: |
+    Bir parabolün __odağı__ iç kısmında sabit bir noktadır. Parabolik bir ayna için, tüm paralel,
+    gelen ışık ışınları yansıtıldıktan sonra odakta kesişir.
+
+parabola-vertex:
+  title: Bir Parabolün Köşesi
+  text: |
+    Bir parabolün __tepe noktası__, yön değiştirdiği noktadır. Karşılık gelen kuadratik fonksiyonun
+    maksimum veya minimumudur ve parabolün simetri ekseninde yatar.
+
+parallel:
+  title: Paralel çizgiler
+  text: |
+    Kesişmedikleri takdirde iki veya daha fazla çizgi __paralel__. Aynı eğime sahiptirler ve
+    aralarındaki mesafe her zaman sabittir.
+  image: parallel.svg
+  link: /course/euclidean-geometry/definitions#parallel
+
+parallelogram:
+  title: Paralelkenar
+  text: 'Bir __paralelkenar__, her iki karşı taraf çiftinin paralel olduğu bir dörtgendir.'
+  link: /course/polyhedra/quadrilaterals#parallelograms
+
+pascals-triangle:
+  title: Pascal’ın Üçgeni
+  text: |
+    __Pascal’ın üçgeni__, her hücrenin doğrudan yukarıdaki iki hücrenin toplamı olduğu bir sayı
+    piramidi. Tüm binom katsayılarının yanı sıra diğer birçok sayı dizisini ve desenini içerir.
+  link: /course/sequences/pascals-triangle#pascal-triangle
+
+penrose:
+  title: Penrose döşeme
+  text: |
+    Bir __Penrose döşemesi__, _periyodik olmayan bir_, _kendine benzer_ mozaiktir. Sadece birkaç
+    farklı şekilden oluşur, ancak asla kendini tekrarlamaz.
+  link: /course/polyhedra/tessellations#penrose
+
+pentagon:
+  title: Pentagon
+  text: Bir __beşgeni__ beş tarafı olan bir çokgendir.
+
+percent:
+  title: Yüzde
+  text: 'Yüzde ____, paydası 100 olan bir orandır. Örneğin, ortalama% 80 {{} olarak yazıyoruz.'
+
+perfect-numbers:
+  title: Mükemmel Sayılar
+  text: |
+    __mükemmel sayısı__, bölenlerinin toplamına (kendisi hariç) eşit olan bir sayıdır. Örneğin, `28
+    = 1 + 2 + 4 + 7 + 14` mükemmel bir sayıdır.
+  link: /course/sequences/special#perfect-1
+
+perpendicular:
+  title: Dikey çizgiler
+  text: 'İki çizgi, __dik__ (bazen _normal_ veya _dikey_ olarak adlandırılır), dik açıyla kesişiyorsa.'
+  image: perpendicular.svg
+  link: /course/euclidean-geometry/definitions#perpendicular
+
+perpendicular-bisector:
+  title: Dikey açıortay
+  text: Bir çizgi parçasının __dik açıortayı__ orta noktasından geçer ve bunu 90 ° açıyla keser.
+  image: perpendicular-bisector.svg
+
+pi:
+  title: pi sayısı
+  text: |
+    __{_ Yunanca harf olarak yazılan __Pi__, çevrenin oranı ve bir dairenin çapıdır. Bu aşkın bir
+    sayıdır ve değeri yaklaşık 3.14159265…
+  link: /course/circles/introduction#pi-definition
+
+platonic-solid:
+  title: Platonik katı
+  text: |
+    Bir __Platonik katı__, her yüzün aynı sayıda kenara sahip düzenli bir çokgen olduğu ve aynı
+    sayıda yüzün her tepe noktasında buluştuğu bir çokyüzlülüktür. Sadece beş farklı Platonik katı
+    vardır: Tetrahedron, Küp, Oktahedron, Dodecahedron ve Icosahedron.
+  link: /course/polyhedra/platonic
+
+point:
+  title: Nokta
+  text: |
+    __noktası__, uzayda belirli bir konumdur. Noktalar bir konumu tanımlar, ancak boyutları veya
+    şekli yoktur.
+  link: /course/euclidean-geometry/definitions#points
+
+polygon:
+  title: Çokgen
+  text: |
+    Bir __çokgen__, düz çizgi parçalarından oluşan geometrik şekildir. Çokgenler kavisli kenarlar
+    veya delikler içeremez. Örneğin, bir kare çokgendir ancak daire değildir.
+  image: polygon.svg
+  link: /course/polyhedra/polygons#polygons
+
+polygon-diagonal:
+  title: Diyagonal
+  text: |
+    Bir çokgenin __diyagonal__'si, yan yana olmayan iki köşeyi birbirine bağlayan bir çizgi
+    segmentidir.
+
+polygon-edge:
+  title: Bir Çokgenin Kenarı
+  text: |
+    Bir çokgenin __kenarları__ veya __kenarları__, anahattını oluşturan çizgi parçalarıdır. Örneğin,
+    bir üçgenin üç tarafı vardır.
+
+polygon-vertex:
+  title: Bir çokgenin tepe noktası
+  text: Bir çokgenin __köşeleri__ bitişik kenarlarının buluştuğu noktalardır (“köşeleri”).
+
+polyhedron:
+  title: çok yüzlü cisim
+  text: |
+    Bir __polihedron__ (çoğul _polihedra_), kavisli yüzeyleri veya kenarları olmayan üç boyutlu bir
+    katıdır. Bir çokyüzlünün tüm yüzleri çokgenlerdir. Örneğin, bir küp ve bir piramit çok yönlüdür,
+    ancak bir küre değildir.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-dual:
+  title: Bir çokyüzlünün çifti
+  text: HER ŞEY
+  link: /course/polyhedra/platonic#platonic-dual
+
+polyhedron-edge:
+  title: Bir çokyüzlünün kenarı
+  text: 'Bir çokyüzlünün __kenarları__, yüzlerinden ikisinin bağlandığı çizgi parçalarıdır.'
+  link: /course/polyhedra/polyhedra
+
+polyhedron-face:
+  title: Bir çokyüzlünün yüzü
+  text: 'Bir çokyüzlünün __yüzleri__, yüzeyini oluşturan çokgenlerdir.'
+  link: /course/polyhedra/polyhedra
+
+polyhedron-vertex:
+  title: Bir çokyüzlünün tepe noktası
+  text: Bir çokyüzlünün "köşelerine" __köşeleri__ denir.
+  link: /course/polyhedra/polyhedra
+
+polynomial:
+  title: Polinom
+  text: |
+    Bir __polinomu__, tamsayı güçlere yükseltilen sabitler ve değişkenlerin katlarından oluşan
+    cebirsel bir ifadedir. Örneğin, `5x^3 - 2y^2 + x + 4` bir polinomdur. Tek değişkenli bir
+    polinomun en genel biçimi `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0` 'dir, burada
+    `a_n`, `a_(n-1)`,…, `a_0` hepsi belirli sabitlerdir.
+
+polynomial-degree:
+  title: derece
+  text: |
+    Bir terimin veya polinomun __derecesi__, içindeki herhangi bir değişkenin en yüksek gücüdür.
+    Örneğin, `5x^3 + 2y^2 - 4z` derecesi 3'tür.
+
+powers:
+  title: Üs
+  text: |
+    __Üstel__ (veya __güçler__), bir sayının (_temel_) belirli bir sayıda (_üssü_). Bu genellikle
+    bir üst simge `a^x` olarak yazılır; burada _a_ temel ve _x_ üstür. Örneğin, `4^3=4×4×4`.
+
+prime:
+  title: Asal sayı
+  text: |
+    __asal sayısı__, 1 ve kendisi dışında hiçbir faktörü olmayan pozitif bir tamsayıdır. İlk asal
+    sayılar 2, 3, 5, 7, 11, 13,…
+  link: /course/divisibility/primes
+
+prime-factor:
+  title: Ana Faktör
+  text: Bir sayının __asal faktörü__ basitçe asal olan bir faktördür.
+  link: /course/divisibility/primes
+
+prime-factorisation:
+  title: Faktoring Primi
+  text: |
+    Bir sayının __asal çarpanı__, asal sayıların çarpımı olarak ifade etmenin bir yoludur. Örneğin,
+    12'nin asal çarpanı `2 × 2 × 3`.
+
+prism:
+  title: Prizma
+  text: |
+    Bir __prizma__, karşılık gelen köşeleri paralel segmentlerle birleştirilen çokgenler (_bazlar_
+    olarak adlandırılır) olan iki uyumlu yüze sahip üç boyutlu bir katıdır. Bir prizmanın kalan
+    yüzlerinin tümü dikdörtgen veya paralelkenardır.
+  image: prism.svg
+
+probability:
+  title: olasılık
+  text: |
+    __olasılığı__, 0 ile 1 arasında, belirli bir olayın gerçekleşme olasılığını gösteren sayıdır.
+    Bir olayın olasılığı _A_ `P(A)` olarak yazılmıştır.
+
+probability-tree:
+  title: Olasılık Ağacı
+  text: |
+    Bir __olasılık ağacı__, birden fazla ardışık olayın birleşik olasılığını temsil eden bir ağaç
+    diyagramıdır.
+
+proof:
+  title: Kanıt
+  text: '__kanıtı__, şüphesiz, belirli bir ifadenin doğru olduğunu gösteren mantıklı bir argüman.'
+
+protein:
+  title: Protein
+  text: |
+    Bir __Protein__, canlı organizmalar içinde birçok farklı işlevi yerine getirebilen büyük bir
+    _makromoleküldür_: sindirimden hücreler arasında iletişime veya DNA replikasyonuna. Proteinler,
+    bir veya daha fazla _amino asit kalıntısı_ zincirinden oluşur.
+
+proton:
+  title: Proton
+  text: |
+    Bir __proton__, bir atomun çekirdeğini oluşturan parçacıklardan biridir. +1 ücreti vardır. Bir
+    atomdaki proton sayısına “atom numarası” denir ve ne tür bir element olduğunu belirler.
+
+pyramid:
+  title: Piramit
+  text: |
+    Bir __piramidi__, taban olarak bir çokgene ve dışarıda, bir tepe noktasına doğru daralan üçgen
+    yüzlere sahip bir çokyüzlülüktür.
+
+    __sağ düzenli piramitte__, taban _düzenli çokgendir_ ve tepe noktası doğrudan tabanın merkezinin
+    üzerindedir.
+  image: pyramid.svg
+
+protractor:
+  title: İletki
+  text: 'İletki, bir açıyı derece olarak ölçmek için kullanılan bir araçtır.'
+
+pythagoras-theorem:
+  title: Pisagor teoremi
+  text: |
+    __Pisagor Teoremi__ her dik açılı üçgendeki `a^2 + b^2 = c^2`, burada _c_ hipotenüsün uzunluğu
+    ve _a_ ve _b_ diğer iki tarafın uzunluklarıdır.
+  link: /course/triangles/pythagoras
+
+pythagorean-triple:
+  title: Pisagor üçlü
+  text: |
+    Bir __Pisagor üçlü__, Pisagor Teoremini `a^2 + b^2 = c^2` karşılayan üç tam sayı _a_, _b_ ve _c_
+    kümesidir.
+  link: /course/triangles/pythagoras#pythagorean-triples
+
+quadratic:
+  title: ikinci dereceden
+  text: 'Bir __kuadratik__, derece 2 polinomudur. Örneğin, `x^2 - 2x + 3` bir kuadratiktir.'
+
+quadratic-equation:
+  title: İkinci dereceden denklem
+  text: |
+    __ikinci dereceden denklem__, tek bir derece 2 değişkeni içeren bir denklemdir. Genellikle
+    `ax^2 + bx + c = 0` olarak yazılır, burada _x_ bir değişken, _a_, _b_ ve _c_ rakamlardır ve
+    `a != 0`.
+
+quadratic-formula:
+  title: İkinci dereceden formül
+  text: |
+    __ikinci dereceden denklem formülü__, ikinci dereceden bir denklemin köklerini belirlemenin bir
+    yoludur. `ax^2 + bx + c = 0` denkleminin kökleri var
+
+    {.text-center} `x = (-b +- sqrt(b^2 - 4ac))/(2a)`.
+
+quadratic-function:
+  title: İkinci dereceden fonksiyon
+  text: |
+    __ikinci dereceden işlev__, `f(x) = ax^2+bx+c` formunun bir işlevidir; burada _a_, _b_ ve _c_
+    sayıdır ve `a != 0`. Karesel bir fonksiyonun grafiği, __parabol__ adı verilen U şeklinde bir
+    eğridir.
+
+quadratic-function-vertex-form:
+  title: Karesel Bir Fonksiyonun Köşe Formu
+  text: |
+    İkinci dereceden bir fonksiyonun __tepe formu__ veya __standart formu__ `f(x) = a(x − h)^2 + k`
+    'tür. `(h, k)` noktası, karşılık gelen parabolün __tepe noktası__ 'dır.
+
+quadrilateral:
+  title: Dörtgen
+  text: 'Bir __dörtgen__, dört tarafı olan bir çokgendir.'
+  link: /course/polyhedra/quadrilaterals
+
+quantum:
+  title: Kuantum mekaniği
+  text: '__Kuantum mekaniği__, temel parçacıkların garip davranışını açıklayan bir Fizik dalıdır.'
+
+radians:
+  title: Radyandan
+  text: |
+    __Radyanlar__, açıların boyutunu ölçen bir birimdir. Tam bir devrim (360 °) `2π` radyan - bir
+    birim çemberin çevresinin uzunluğu.
+  link: /course/circles/radians#radians
+
+radioactive:
+  title: Radyoaktif bozunma
+  text: |
+    __Radyoaktif bozunma__, kararsız atomların parçalandığı ve enerjiyi serbest bıraktığı fiziksel
+    bir süreçtir.
+
+rational-numbers:
+  title: Rasyonel sayılar
+  text: |
+    __Rasyonel sayılar__, iki tamsayının bir kısmı `p/q` olarak ifade edilebilen rakamlardır.
+    Ondalık genişlemeleri sonunda durur ya da tekrar eder. Örnekler arasında `1/2`, `-5/7`, 12.71 ve
+    9 bulunur. Rasyonel sayılar genellikle `QQ` sembolü kullanılarak gösterilir.
+
+ray:
+  title: ışın
+  text: |
+    Bir __ışını__, bir çizginin bir noktada başlayan ve bir yönde sonsuz bir şekilde uzanan
+    kısmıdır. `A` 'den başlayan ışınları `vec(AB)` olarak etiketleyebiliriz.
+  link: /course/euclidean-geometry/definitions#rays
+
+real-numbers:
+  title: Gerçek sayılar
+  text: |
+    __gerçek sayılar__, pozitif ve negatif sayılar, rasyonel sayılar (kesirler), karekökler, küp
+    kökleri, ondalık sayılar, _π_, _dahil olmak üzere sayı satırında görünen tüm sayılardır. e_ ve
+    daha fazlası. Genellikle `RR` sembolü kullanılarak gösterilir.
+
+rectangle:
+  title: Dikdörtgen
+  text: 'Bir __dikdörtgeni__, dört açının da 90 ° olduğu bir dörtgendir.'
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+reflection:
+  title: yansıma
+  text: '__yansıması__, bir şekli bir çizgi boyunca "çeviren" veya "yansıtan" bir dönüşümdür.'
+  link: /course/transformations/rigid#reflections
+
+reflectional-symmetry:
+  title: Yansıtıcı Simetri
+  text: Bir şeklin yansıtıldıktan sonra aynı görünmesi halinde yansıma simetrisine sahiptir.
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+regular-polygon:
+  title: Düzenli çokgen
+  text: |
+    __normal çokgen__, tüm kenarların aynı uzunlukta ve tüm iç açıların aynı boyuta sahip olduğu bir
+    çokgendir.
+  image: regular-polygon.svg
+  link: /course/polyhedra/polygons#regular-polygons
+
+rhombus:
+  title: Eşkenar dörtgen
+  text: |
+    Bir __eşkenar dörtgen__ (çoğul _eşkenar dörtgen_ veya _eşkenar dörtgen_), tüm tarafların aynı
+    uzunlukta olduğu bir dörtgendir.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+right-angle:
+  title: Dik açı
+  text: '__dik açı__, 90 ° boyutunda bir açıdır.'
+
+right-triangle:
+  title: Dik açılı üçgen
+  text: '__dik açılı bir üçgen__ ''de, bir iç açı tam olarak 90 °'' dir.'
+  image: right-triangle.svg
+  link: /course/triangles/properties#classification
+
+rigid-transformation:
+  title: Katı dönüşüm
+  text: |
+    Bir __katı dönüşüm__ (veya __izometrisi__), geometrik bir şeklin boyutunu veya şeklini
+    değiştirmeyen bir dönüşümdür.
+  link: /course/transformations/rigid
+
+roman-numerals:
+  title: Roma rakamları
+  text: |
+    __Romen rakam sistemi__ eski Roma'da geliştirilmiş ve 14. yüzyıla kadar Avrupa'da
+    kullanılmaktadır. Yedi farklı harfi birleştirerek herhangi bir tam sayı yazmanıza izin verir:
+
+    * I = 1
+
+    * V = 5
+
+    * X = 10
+
+    * L = 50
+
+    * C = 100
+
+    * D = 500
+
+    * M = 1000
+
+rotation:
+  title: rotasyon
+  text: '__döndürme__, bir şekli sabit bir nokta etrafında belirli bir açıyla "döndüren" bir dönüşümdür.'
+  link: /course/transformations/rigid#rotations
+
+rotational-symmetry:
+  title: Dönme Simetrisi
+  text: |
+    Şeklin döndürüldükten sonra aynı göründüğü takdirde (360 ° 'den daha az) dönme simetrisine
+    sahiptir.
+  image: rotational-symmetry.svg
+  link: /course/transformations/symmetry#rotational-symmetry
+
+roulette:
+  title: Rulet
+  text: |
+    __Rulet__, dönen bir topun nereye ineceği üzerine bahse girdiğiniz bir casino oyunudur. 36 sayı
+    ve bir veya iki 0 içerir.
+
+scale-factor:
+  title: Ölçek faktörü
+  text: |
+    İki benzer geometrik figürün __ölçek faktörü__, karşılık gelen iki uzunluğun oranıdır.
+
+    1'den küçük bir ölçek faktörü şeklin küçüldüğünü ve 1'den büyük bir ölçek faktörü şeklin
+    büyütüldüğünü gösterir.
+  link: /course/transformations/dilations#dilations-1
+
+scalene-triangle:
+  title: Eşkenar olmayan üçgen
+  text: 'Bir __skalen üçgeni__ içinde, üç tarafın da farklı uzunlukları vardır.'
+
+scientific-notation:
+  title: Bilimsel gösterim
+  text: |
+    __Bilimsel gösterim__ çok büyük veya küçük sayılar yazmak için standartlaştırılmış bir
+    yöntemdir. `a × 10^n` biçimindedir, burada _n_ bir tamsayıdır ve `1 ≤ a < 10`.
+
+    Örneğin, 4600 sayısı `4.6 × 10^3` olarak yazılabilir.
+
+set:
+  title: Setler
+  text: |
+    __kümesi__, bir şeyler veya nesneler (öğeler denir) topluluğudur. Her öğe bir kümede yalnızca
+    bir tane görünebilir. {} S kullanarak kümeler yazıyoruz, örneğin, 2, 3 ve 4 sayılarını içeren
+    bir küme {2, 3, 4} olarak yazılacaktı.
+
+sequence:
+  title: Sıra
+  text: |
+    __dizisi__, genellikle belirli bir deseni veya işlevi izleyen sıralı bir sayı listesidir (veya
+    geometrik nesneler gibi diğer öğelerdir). Diziler hem sonlu hem de sonsuz olabilir.
+  link: /course/sequences/introduction#simple-patterns
+
+sequence-convergence:
+  title: yakınsama
+  text: '__dizisi, zaman içinde terimleri belirli bir __sınırına__ yaklaştıkça__ yakınsalar.'
+
+sequence-divergence:
+  title: uyuşmazlık
+  text: |
+    __dizisi, zaman içinde terimleri sonsuzluğa (veya negatif sonsuzluğa) doğru büyürse__ dizisini
+    ayırır.
+
+sequence-explicit:
+  title: Açık Formül
+  text: |
+    Bir sekans için __açık formül__, _n_ 'ın bir fonksiyonu olarak _n_. Terim `x_n` değerini ifade
+    eder.
+  link: /course/sequences/introduction#explicit
+
+sequence-recursive:
+  title: Özyineleme Formülü
+  text: |
+    Bir sekans için __özyinelemeli formül__, önceki terimlerin bir fonksiyonu olarak `x_n`
+    terimlerinin değerini ifade eder.
+  link: /course/sequences/introduction#recursive-1
+
+sequence-term:
+  title: Bir Dizinin Koşulları
+  text: 'Bir dizinin __terimleri__, tümü tek tek sayıları veya öğeleridir.'
+  link: /course/sequences/introduction#simple-patterns
+
+sierpinski-triangle:
+  title: Sierpinski Üçgeni
+  text: |
+    __Sierpinski Üçgeni__ kendine benzer bir fraktal. Bir eşkenar üçgenden oluşur ve daha küçük
+    eşkenar üçgenler, kalan alanından tekrar tekrar çıkarılır.
+  link: /course/fractals/sierpinski
+  image: sierpinski-triangle.svg
+
+sieve-eratosthenes:
+  title: Eratosthenes Elekleri
+  text: |
+    __Eratosthenes Eleği__,_ asal olmayan _sayıları tekrar tekrar ortadan kaldırarak asal sayıları
+    bulmak için bir prosedürdür.
+  link: /course/divisibility/primes#eratosthenes
+
+similar:
+  title: Benzer
+  text: |
+    İki geometrik şekil, aynı şekle ancak farklı bir boyuta sahiplerse __benzer__ şeklindedir. Bir
+    şekli diğerine uyacak şekilde hareket ettirebilir, döndürebilir, yansıtabilir ve yeniden
+    boyutlandırabiliriz. Karşılık gelen açıları eşittir ve karşılık gelen yanları aynı orandadır.
+
+sin:
+  title: onun
+  text: |
+    __Sinüs__, `sin(θ)` olarak yazılmış trigonometrik bir fonksiyondur. Dik açılı bir üçgende, karşı
+    taraf ve hipotenüs oranıdır.
+  link: /course/triangles/trigonometry#trig-functions
+
+sphere:
+  title: küre
+  text: |
+    Bir __küresi__, belirli bir _merkezinden_ aynı mesafeye sahip olan tüm noktalardan oluşan üç
+    boyutlu bir katıdır. Bu mesafeye kürenin _yarıçapı_ denir.
+  link: /course/circles/spheres-cones-cylinders#sphere
+
+sphere-radius:
+  title: Kürenin Yarıçapı
+  text: |
+    Bir kürenin __yarıçapı__, merkezi ile yüzeyinde herhangi bir nokta arasındaki mesafedir (veya
+    bir çizgi segmentidir).
+
+square:
+  title: Meydan
+  text: |
+    __kare__ normal bir dörtgendir: tüm kenarlar aynı uzunlukta ve tüm açılar aynı boyuta (90 °)
+    sahiptir.
+  link: /course/polyhedra/quadrilaterals
+
+square-area:
+  title: Meydan Alanı
+  text: _s_ kenar uzunluğuna sahip bir karenin __alanı__ `A = s^2`.
+
+square-matrix:
+  title: Kare matris
+  text: 'Bir __kare matrisi__, aynı sayıda satır ve sütuna sahip bir matristir.'
+
+square-numbers:
+  title: Kare Sayılar
+  text: |
+    __kare sayısı__, başka bir tamsayının karesi olarak ifade edilebilen bir sayıdır. İlk kare
+    sayıları 1, 4, 9, 16, 25,…
+  link: /course/sequences/introduction#squares
+
+subdivision:
+  title: alt bölümler
+  text: Bir grafiğin __alt bölümünü__ oluşturmak için kenarları boyunca ek köşeler eklersiniz.
+
+subgraph:
+  title: subgraph
+  text: |
+    Grafik, daha büyük grafik kenarlarının ve köşelerinin bir alt kümesiyle oluşturulmuşsa, başka
+    bir grafiğin __alt grafiğidir__.
+  link: /course/graph-theory/introduction#intro-2
+
+supplementary-angles:
+  title: Ek açılar
+  text: 180 ° 'ye kadar eklerse iki açı __tamamlayıcı__ olur (bir yarım daire).
+
+symmetry:
+  title: Simetri
+  text: |
+    Bir şekil veya şekil, bir şekilde dönüştürüldükten sonra aynı görünüyorsa (örn. Yansıma veya
+    döndürme) __simetrisine__ sahiptir.
+  link: /course/transformations/symmetry#symmetry
+
+symmetry-group:
+  title: Simetri Grubu
+  text: 'Geometrik bir nesnenin __simetri grubu__, tüm _simetrileri_ (yanı sıra _kimliği_) topluluğudur.'
+  link: /course/transformations/symmetry-groups#groups-1
+
+tan:
+  title: Teğet
+  text: |
+    __Teğet__, `tan(θ)` olarak yazılmış trigonometrik bir fonksiyondur. _sinüs_ ve _kosinüs_ oranı
+    olarak tanımlanır:
+
+    {.text-center} `tan(θ) = sin(θ) / cos(θ)`.
+
+    Dik açılı bir üçgende `tan(θ)`, bir açının `θ` karşı tarafının ve bitişik tarafının oranıdır.
+  link: /course/triangles/trigonometry#trig-functions
+
+tangent:
+  title: Teğet çizgisi
+  text: |
+    __teğet çizgisi__, bir eğriye veya daireye kesişmeden tek bir noktada dokunan bir çizgidir. Bu
+    noktaya bazen __teğet noktası__ denir.
+
+term:
+  title: Dönem (Cebir)
+  text: |
+    terimleri, bir cebirsel ifadenin veya denklemin + veya - işaretleriyle ayrılmış
+     bölümleridir. Ürünler veya kesirler veya bir veya daha fazla sayı, değişken veya fonksiyon
+     olabilir.
+
+     Örneğin, `2x^2 - 3ab + 4` ifadesinde üç terim `2x^2`, `3ab` ve 4'tür.
+
+tessellation:
+  title: mozaik döşeme
+  text: |
+    Bir __mozaikleme__, boşluklar veya çakışmalar olmayan bir yüzeyi kaplayan geometrik bir
+    desendir.
+  link: /course/polyhedra/tessellations
+
+tetrahedral-numbers:
+  title: Dört Yüzlü Sayılar
+  text: |
+    Bir __dört yüzlü sayı__, birden çok kürenin bir _dört yüzlü_ içine yığınlanmasıyla oluşturulan
+    bir sayıdır. İlk dört yüzlü sayılar 1, 4, 10, 20, 35,…
+  link: /course/sequences/figurate#tetrahedral
+
+tetrahedron:
+  title: dört yüzlü şekil
+  text: |
+    __Tetrahedron__ bir Platonik katıdır ve eşkenar üçgen olan dört yüzden oluşur. Dört köşesi ve
+    altı kenarı vardır.
+  link: /course/polyhedra/platonic#platonic-overview
+
+theorem:
+  title: teorem
+  text: |
+    Bir __teoremi__ matematikte özellikle önemli bir sonuç veya gözlemdir. Aksiyomları, kural
+    mantığını ve zaten doğru olduğu bilinen önceki teoremleri kullanarak her zaman doğru olduğu
+    kanıtlanmıştır.
+
+transformation:
+  title: dönüşüm
+  text: |
+    __dönüşümü__ bir geometrik şekli diğerine dönüştürür. _yansımaları_ veya _genişlemeleri_ gibi
+    birçok farklı dönüşüm türü vardır.
+  link: /course/transformations/rigid#transformations
+
+transformation-image:
+  title: Bir Dönüşümün Görüntüsü
+  text: |
+    Geometrik bir şekli dönüştürdükten sonra sonuca __görüntüsü__ denir. Genellikle etiketinin
+    sonuna bir ’ekleyerek gösterilir.
+  link: /course/transformations/rigid#transformations
+
+translation:
+  title: Tercüme
+  text: |
+    __çevirisi__, bir şekli, açısını veya şeklini değiştirmeden belirli bir yönde hareket ettiren
+    bir dönüşümdür.
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+
+translational-symmetry:
+  title: Öteleme Simetrisi
+  text: |
+    Tekrarlanan bir desende (duvar kağıdı gibi), belirli bir mesafe ile çevrildikten sonra aynı
+    görünüyorsa __öteleme simetrisi__ vardır.
+  link: /course/transformations/symmetry-groups#symmetry-groups-1
+
+transversal:
+  title: Geçiş
+  text: 'Enine, diğer iki çizgiyle kesişen bir çizgidir.'
+
+trapezium:
+  title: yamuk
+  text: |
+    Bir __yamuk__ (bazen __yamuk__ olarak da adlandırılır), iki karşıt tarafın paralel olduğu bir
+    dörtgendir. Bunlara trapezyumun _bazları_, diğer iki tarafa da _bacaklar_ denir.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-2
+
+triangle:
+  title: Üçgen
+  text: '__üçgeni__, üç düz kenarı ve üç iç açısı olan geometrik bir şekildir.'
+
+triangle-aa:
+  title: Üçgenler için AA durumu
+  text: |
+    Açılarından ikisi aynı boyuta sahipse iki üçgen __benzer__ olur. Buna üçgenler için __AA
+    benzerlik koşulu__ denir.
+
+triangle-altitude:
+  title: Üçgenlerin rakımları
+  text: |
+    Bir üçgenin __rakımı__ (veya __yüksekliği__), kenarlardan birine dik, ters tepe noktasından
+    geçen bir çizgidir. Her üçgenin üç rakımı vardır.
+  image: triangle-altitude.svg
+  link: /course/triangles/properties#altitudes
+
+triangle-legs:
+  title: Bir üçgenin bacaklar
+  text: |
+    Dik açılı bir üçgenin iki __ayağı__ iki kısa kenardır (_hipotenüs_ değil). Doğru açının
+    yanındalar.
+
+triangle-inequality:
+  title: Üçgen eşitsizliği
+  text: |
+    __üçgen eşitsizliği__, bir üçgenin herhangi bir iki tarafının uzunluklarının toplamının üçüncü
+    tarafın uzunluğundan daha büyük olduğunu belirtir. Bu aynı zamanda, herhangi iki nokta
+    arasındaki en kısa mesafenin düz bir çizgi olduğu anlamına gelir (çünkü üçüncü bir noktadan
+    geçmek her zaman daha uzundur).
+
+triangle-median:
+  title: Üçgen Medyaları
+  text: |
+    Bir üçgenin __medyanı__, her bir tepe noktasını karşı tarafların orta noktasına bağlayan çizgi
+    parçalarıdır. Bir üçgenin üç medyanı __centroid__ adı verilen tek bir noktada kesişir.
+  link: /course/triangles/properties#medians
+
+triangle-midsegment:
+  title: Midsegment
+  text: |
+    Bir üçgenin __orta bölümleri__, üçgenin farklı taraflarının orta noktalarını birleştiren
+    çizgilerdir.
+  image: triangle-midsegment.svg
+  link: /course/triangles/midsegments
+
+triangle-numbers:
+  title: Üçgen Sayılar
+  text: |
+    __üçgen sayısı__, eşkenar nokta üçgen olarak gösterilebilen bir tam sayıdır. _n_. Üçgen
+    numarasının formülü `(n*(n+1))/ 2` ve ilk üçgen sayısı 1, 3, 6, 10, 15,… 'dir.
+  image: triangle-numbers.svg
+  link: /course/sequences/figurate#triangle-numbers
+
+triangle-sss:
+  title: Üçgenler için SSS koşulu
+  text: |
+    Üç tarafı aynı uzunlukta ise iki üçgen __uyumlu__ olur. Buna üçgenler için __SSS uyum koşulu__
+    denir.
+  link: /course/triangles/congruence#congruence-1
+
+trigonometry:
+  title: Trigonometri
+  text: |
+    __Trigonometri__, üçgenlerin kenarları ve açıları arasındaki ilişkileri inceleyen bir matematik
+    dalıdır. Öncelikle __sinüs__, __kosinüs__, __tanjant__ trigonometrik fonksiyonları ve bunların
+    karşılıklıları ile ilgilidir.
+  link: /course/triangles/trigonometry
+
+truncated-icosahedron:
+  title: Kesik İkosahedron
+  text: '__Kesik İkosahedron__, 12 düzenli beşgen ve 20 düzenli altıgen içeren bir _Arşimet katıdır.'
+  link: /course/polyhedra/platonic#archimedean
+
+twin-primes:
+  title: İkiz Asal
+  text: |
+    __İkiz asal__, tam olarak iki ayrı olan 17 ve 19 veya 101 ve 103 gibi asal sayı çiftidir. Sonsuz
+    sayıda çift ikiz prim olup olmadığı bilinmemektedir.
+  link: /course/divisibility/distribution-of-primes#twin-primes
+
+unit-circle:
+  title: Birim çember
+  text: 'Bir __birim çemberi__, yarıçapı 1 olan bir çemberdir.'
+
+variable:
+  title: Değişken
+  text: |
+    __değişkeni__, bilinmeyen veya değeri değiştirebilecek bir miktardır. Bir cebirsel ifadede,
+    genellikle _x_ gibi bir harfle temsil edilir.
+
+venn-diagram:
+  title: Venn şeması
+  text: Bir __Venn diyagramı__ çakışan birden fazla özelliği veya olayı görselleştirir.
+  image: venn.svg
+
+vertical-angles:
+  title: Dikey açılar
+  text: |
+    __Dikey açılar__, kesişen çizgiler tarafından oluşturulan zıt açı çiftleridir. Dikey açılar
+    daima _uyumlu_ olur.
+
+whole-numbers:
+  title: Tüm sayılar
+  text: '__tam sayıları__ sıfır dahil sayma sayılarıdır: 0, 1, 2, 3, 4,…'
+
+zero-product:
+  title: Sıfır Ürün Özelliği
+  text: |
+    __sıfır ürün özelliği__, iki miktardaki ürün sıfırsa, bu miktarlardan en az birinin de sıfır
+    olması gerektiğini belirtir. Örneğin, `a × (a - 1) = 0` ise `a = 0` veya `a - 1 = 0`.

@@ -32,7 +32,7 @@ const SVG_HEIGHT = 2 * OUTER_BUFFER + HEIGHT_LONG;
 
 const BAR_START_INDICES: number[] = [];
 
-@register('x-barcode', {attributes: ['value', 'targets']})
+@register('x-barcode')
 export class Barcode extends CustomElementView {
   private $svg!: SVGParentView;
 
@@ -51,11 +51,11 @@ export class Barcode extends CustomElementView {
     this.draw(value);
     this.writeNumbers(value);
 
-    this.on('attr:value', (e) => {
-      this.computeParityDigit(e.newAttr);
-      this.draw(e.newAttr);
+    this.onAttr('value', d => {
+      this.computeParityDigit(d);
+      this.draw(d);
       this.writeNumbers(e.newAttr);
-    }); // I suspect this looks for changes in the "value" attribute.
+    });
   }
 
   // FIXME: when new barcode generated, hover/target stops working

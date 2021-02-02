@@ -1,0 +1,1725 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+abel:
+  born: 1802
+  died: 1829
+  name: Abel
+  overflow: true
+  bio: |
+    __Niels Henrik Abel__ (1802. - 1829.) Bio je važan norveški matematičar. Iako je umro u dobi od
+    26 godina, dao je revolucionarni doprinos širokom rasponu tema.
+
+    U dobi od 16 godina Abel je dokazao binomnu teoremu. Tri godine kasnije dokazao je da je
+    nemoguće riješiti kvintičke jednadžbe - samostalnim izumom teorije grupa. Ovo je bio otvoreni
+    problem više od 350 godina! Također je radio na eliptičkim funkcijama i otkrio _Abelijeve_
+    funkcije.
+
+    Abel je svoj život proveo u siromaštvu: imao je šest braće i sestre, otac mu je umro kad je imao
+    18 godina, nije mogao naći posao na sveučilištu, a mnogi su matematičari u početku odbacili
+    njegov posao. Danas je po njemu nazvana jedna od najviših nagrada u matematici, _Abelova
+    nagrada_.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+al-haytham:
+  born: 965
+  died: 1050
+  name: Al-Haytham
+  bio: |
+    __Hasan Ibn al-Haytham__ (أبو علي ، الحسن بن الحسن بن الهيثم, oko 965. - 1050.) živio je u Kairu
+    tijekom islamskog zlatnog doba, a studirao je matematiku, fiziku, astronomiju, filozofiju i
+    medicinu. Bio je zagovornik _znanstvene metode_: uvjerenja da se svaka znanstvena hipoteza mora
+    provjeriti eksperimentima ili matematičkom logikom - stoljećima prije europskih znanstvenika
+    tijekom renesanse.
+
+    Al-Haytham je posebno zanimala optika i vizualna percepcija. Također je dobio formulu za zbroj
+    četvrtih sila (`1^4 + 2^4 + 3^4 + … +
+
+    n^4`), a proučio je vezu između algebre i geometrije.
+
+al-karaji:
+  born: 953
+  died: 1029
+  name: Al-Karaji
+  bio: |
+    __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, oko 953. - 1029.) bio je perzijski
+    matematičar i inženjer. Bio je prva osoba koja je koristila _dokaz indukcijom_, što mu je
+    omogućilo da dokaže binomnu teoremu.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+al-khwarizmi:
+  born: 780
+  died: 850
+  name: Al-Khwarizmi
+  overflow: true
+  bio: |
+    Perzijski matematičar __Muhammad Al-Khwarizmi__ (محمد بن موسى الخوارزمي, 780 - 850) živio je u
+    zlatno doba muslimanskog režima Abasida u Bagdadu. Radio je u "Kući mudrosti", koja je
+    sadržavala prvu veliku zbirku akademskih knjiga od uništenja Aleksandrijske knjižnice.
+
+    Al-Khwarizmi nazvan je "ocem algebre" - u stvari, riječ _algebra_ dolazi od arapskog naslova
+    njegove najvažnije knjige: "Sveobuhvatna knjiga o proračunu dovršenjem i uravnoteženjem". U
+    njemu je pokazao kako riješiti linearne i kvadratne jednadžbe, a stoljećima je to bio glavni
+    udžbenik matematike na europskim sveučilištima.
+
+    Al-Khwarizmi se također bavio astronomijom i geografijom, a riječ "algoritam" nazvana je po
+    njemu.
+
+apollonius:
+  name: Apollonius
+  born: -262
+  died: -190
+  bio: |
+    __Apolonij iz Perge__ (oko 200. godine prije Krista) bio je grčki matematičar i astronom
+    najpoznatiji po svom radu na četiri _konične sekcije_.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+appel:
+  name: Appel
+  bio: |
+    __Kenneth Appel__ (1932. - 2013.) bio je američki matematičar, poznat po dokazu teoreme o četiri
+    boje s Wolfgangom Hakenom.
+
+    Kao priznanje, on i Haken dobili su Fulkerson nagradu Američkog matematičkog društva.
+
+    Appel je studirao na Queens Collegeu u New Yorku i na Sveučilištu u Michiganu. Predavao je na
+    Sveučilištu Illinois i na Sveučilištu New Hampshire.
+
+archimedes:
+  name: Archimedes
+  born: -287
+  died: -212
+  bio: |
+    __Arhimed__ (oko 287. - 212. pr. Kr.) Bio je drevni grčki znanstvenik i inženjer i jedan od
+    najvećih matematičara svih vremena. Otkrio je mnoge pojmove kalkulusa i radio u geometriji,
+    analizi i mehanici.
+
+    Dok se kupao, Arhimed je otkrio način da utvrdi volumen nepravilnih predmeta koristeći količinu
+    vode koju su istisnuli prilikom potapanja. Bio je toliko uzbuđen ovim otkrićem da je istrčao na
+    ulicu, još uvijek skinuta, vičući _"Eureka!"_ (grčki za _"Našao sam ga!"_).
+
+    Kao inženjer, izgradio je genijalne obrambene strojeve tijekom opsade svog rodnog grada Sirakuze
+    na Siciliji. Nakon dvije godine, Rimljani su napokon uspjeli ući, a Arhimed je ubijen.
+    Posljednje su mu bile riječi _"Ne uznemiravaj moje krugove"_ - koje je tada proučavao.
+  links:
+    - title: Archimedean Solids
+      url: /course/polyhedra/platonic#archimedean
+
+aristotle:
+  born: -384
+  died: -322
+  name: Aristotle
+  bio: |
+    __Aristotel__ (Ἀριστοτέλης, oko 384. - 322. pr.n.e.) bio je filozof u drevnoj Grčkoj. Zajedno sa
+    svojim učiteljem _Platonom_, smatra se "ocem zapadne filozofije". Bio je i privatni učitelj
+    Aleksandra Velikog.
+
+    Aristotel je pisao o znanosti, matematici, filozofiji, poeziji, glazbi, politici, retoriki,
+    lingvistici i mnogim drugim predmetima. Njegov je rad bio vrlo utjecajan tijekom srednjeg vijeka
+    i renesanse, a o njegovim se pogledima na etiku i druga filozofska pitanja i danas raspravlja.
+
+    Aristotel je također prva poznata osoba koja je formalno proučavala _logiku_, uključujući
+    njezine primjene u znanosti i matematici.
+
+aryabhata:
+  born: 476
+  died: 550
+  name: Aryabhata
+  overflow: true
+  bio: |
+    __Aryabhata__ (आर्यभट) bio je jedan od prvih matematičara i astronoma u zlatno doba indijske
+    matematike. Definirao je trigonometrijske funkcije, riješio istodobne kvadratne jednadžbe,
+    pronašao aproksimacije za _π_ i shvatio da je _π_ iracionalan.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Quadratic Equations
+      url: /course/quadratics/introduction
+
+babbage:
+  born: 1791
+  died: 1871
+  name: Babbage
+  small: true
+  bio: |
+    __Charles Babbage__ (1791. - 1871.) bio je britanski matematičar, filozof i inženjer. Često ga
+    nazivaju „ocem računala“, izumio je prvo mehaničko računalo (_Mehanik razlike_) i poboljšanu
+    verziju programabilnosti (_Analitički motor_).
+
+    Teoretski, ovi strojevi mogu automatski obavljati određene proračune pohranjene na karticama ili
+    vrpci. Međutim, zbog visokih troškova proizvodnje, one nikada nisu u potpunosti dovršene tijekom
+    Babbageova životnog vijeka. 1991. godine u Znanstvenom muzeju u Londonu izgrađena je
+    funkcionalna replika.
+
+bernoulli-1:
+  born: 1654
+  died: 1705
+  name: Bernoulli
+  bio: |
+    __Jacob Bernoulli__ (1655. - 1705.) bio je švicarski matematičar i jedan od mnogih važnih
+    znanstvenika u obitelji Bernoulli. U stvari, imao je duboko akademsko rivalstvo s nekoliko svoje
+    braće i sinova.
+
+    Jacob je postigao značajan napredak u računici koju su izmislili Newton i Leibnitz, stvorio
+    polje _izračuna varijacija_, otkrio temeljnu konstantu _e_, razvio tehnike za rješavanje
+    diferencijalnih jednadžbi i puno toga više.
+
+    Objavio je prvo značajno djelo o vjerojatnosti, uključujući permutacije, kombinacije i zakon
+    velikog broja, dokazao je binomnu teoremu i izvukao mnoga svojstva Bernoullijevih brojeva.
+
+bernoulli-2:
+  born: 1700
+  died: 1782
+  name: Bernoulli
+  bio: |
+    __Daniel Bernoulli__ (1700. - 1782.) bio je švicarski matematičar i fizičar. Bio je jedan od
+    mnogih poznatih znanstvenika iz obitelji Bernoulli - uključujući oca Johanna, ujaka Jacoba i
+    brata Nicholasa.
+
+    Daniel Bernoulli pokazao je da kako se brzina neke tekućine povećava, njezin se pritisak
+    smanjuje. Sada se zove _Bernoullijev princip_, ovo je mehanizam koji koriste krila aviona i
+    motori za izgaranje. Također je napravio važna otkrića u vjerojatnosti i statistici, i prvi put
+    susreo _Besselove funkcije_.
+
+    U dobi od 34 godine bio je zabranjen iz očeve kuće jer ga je tukao na dodjeli pariške Akademije,
+    za koju su obojica prijavili prijavu.
+
+bhaskara:
+  born: 1114
+  died: 1185
+  name: Bhaskara
+  bio: |
+    __Bhaskara II__ (1114. - 1185.) bio je indijski matematičar i astronom. Otkrio je neke osnovne
+    pojmove proračuna, više od 500 godina prije Leibnitza i Newtona. Bhaskara je također utvrdila da
+    podjela po nuli daje beskonačnost i riješila je različite kvadratne, kubične, kvarčne i
+    Diofantinske jednadžbe.
+
+blackwell:
+  born: 1919
+  died: 2010
+  name: Blackwell
+  small: true
+  bio: |
+    __David Blackwell__ (1919. - 2010.) bio je američki statističar i matematičar. Bavio se teorijom
+    igara, teorijom vjerojatnosti, teorijom informacija i dinamičkim programiranjem, a napisao je i
+    jedan od prvih udžbenika o Bayesovoj statistici. _Teorem Rao-Blackwell_ pokazuje kako poboljšati
+    procjenitelje određenih količina u statistici.
+
+    Blackwell je prvi afroamerikanac izabran za pridruživanje američkoj _Nacionalnoj akademiji
+    znanosti_, a bio je i jedan od prvih koji je doktorirao iz matematike.
+
+bolyai:
+  born: 1802
+  died: 1860
+  name: Bolyai
+  small: true
+  bio: |
+    __János Bolyai__ (1802. - 1860.) Bio je mađarski matematičar i jedan od osnivača ne-euklidske
+    geometrije - geometrije u kojoj se nije održao peti aksiom Euclida oko paralelnih linija. Ovo je
+    bio značajan pomak u matematici. Nažalost za Bolyaia, matematičari Gauss i Lobachevsky
+    istovremeno su otkrili slične rezultate i dobili većinu zasluga.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+boole:
+  born: 1815
+  died: 1864
+  name: Boole
+  bio: |
+    __George Boole__ (1815. - 1864.) bio je engleski matematičar. Kao dijete učio je latinski, grčki
+    i matematiku, nadajući se da će izbjeći svoj život niže klase. Stvorio je _Booleova algebra_,
+    koja koristi operatore poput AND, OR i NOT (umjesto dodavanja ili množenja) i može se koristiti
+    pri radu s skupovima. To je bio temelj formalne matematičke logike i ima mnogo primjena u
+    računalnoj znanosti.
+
+brahmagupta:
+  born: 598
+  died: 668
+  name: Brahmagupta
+  overflow: true
+  bio: |
+    Indijski matematičar __Brahmagupta__ (oko 598. - 668. CE) izumio je pravila za sabiranje,
+    oduzimanje i množenje s nula i negativnim brojevima. Također je bio astronom i napravio mnoga
+    druga otkrića u matematici. Nažalost, njegovi spisi nisu sadržavali nikakve dokaze, tako da ne
+    znamo kako je izvukao svoje rezultate.
+
+cantor:
+  born: 1845
+  died: 1918
+  name: Cantor
+  bio: |
+    Njemački matematičar __Georg Cantor__ (1845. - 1918.) bio je izumitelj teorije skupova i pionir
+    u našem razumijevanju beskonačnosti. Većinu svog života Cantorjeva otkrića žestoko su se
+    suprotstavljali njegovim kolegama. To je možda pridonijelo njegovoj depresiji i živčanim
+    slomima, a proveo je mnogo desetljeća u mentalnoj ustanovi.
+
+    Cantor je dokazao da postoje _različite veličine_ beskonačnosti. Na primjer, realni brojevi su
+    _nezbrojivi_, što znači da se ne mogu uporediti s prirodnim brojevima.
+
+    Tek pred kraj života, Cantor je počeo dobivati priznanje koje zaslužuje. David Hilbert je slavno
+    izjavio da "nitko nas neće izbaciti iz raja koji je stvorio Kantor".
+  links:
+    - title: Infinity
+      url: /world/Infinity
+    - title: Set Theory
+      url: /world/Axioms_and_Proof
+
+cardano:
+  born: 1501
+  died: 1576
+  name: Cardano
+  bio: |
+    Talijan __Gerolamo Cardano__ (1501. - 1576.) bio je jedan od najutjecajnijih matematičara i
+    znanstvenika renesanse. Istražio je hipercikloide, objavio je Tartaglijino i Ferrarijevo
+    rješenje za kubne i kvarcne jednadžbe, bio je prvi Europljanin koji je sustavno koristio
+    negativne brojeve, pa čak i priznao postojanje imaginarnih brojeva (zasnovanih na `sqrt(-1)`).
+
+    Cardano je također rano napredovao u teoriji vjerojatnosti i uveo binomne koeficijente i binomne
+    teoreme u Europu. Izumio je mnoge mehaničke uređaje, uključujući kombinirane brave, žiroskope s
+    tri stupnja slobode i pogonske osovine (ili kardanske osovine) koje se i danas koriste u
+    vozilima.
+  links:
+    - title: Imaginary Numbers
+      url: /world/Real_Irrational_Imaginary
+
+carroll:
+  born: 1832
+  died: 1898
+  name: Carroll
+  bio: |
+    __Charles Lutwidge Dodgson__ (1832. - 1898.) najbolje je poznat pod imenom pera __Lewis
+    Carroll__, kao autor _Alice's Adventures in Wonderland_ i njegovog nastavka _Kroz staklo_.
+
+    Međutim, Carroll je također bio sjajan matematičar. Uvijek je pokušavao ugraditi zagonetke i
+    logiku u priče svoje djece, čineći ih ugodnijim i nezaboravnijim.
+
+cauchy:
+  born: 1789
+  died: 1857
+  name: Cauchy
+  small: true
+  bio: |
+    __Augustin-Louis Cauchy__ (1789. - 1857.) bio je francuski matematičar i fizičar. Doprinosio je
+    širokom rasponu područja u matematici, a deseci teorema su nazvani po njemu.
+
+    Cauchy je formalizirao račun i analizu, preoblikovanjem i dokazivanjem rezultata gdje su
+    prethodni matematičari bili mnogo neoprezniji i neprecizniji. Osnovao je polje _složene
+    analize_, proučavao permutacijske grupe i radio na optici, dinamici fluida i teoriji
+    elastičnosti.
+
+cavalieri:
+  name: Cavalieri
+  born: 1598
+  died: 1647
+  bio: |
+    __Bonaventura Cavalieri__ (1598. - 1647.) bio je talijanski matematičar i redovnik. Razvio je
+    prekursor za infinitezimalno računanje, a pamti ga i po Cavalierijevom principu da pronalazi
+    volumen krutih čestica u geometriji.
+
+    Cavalieri je također radio u optici i mehanici, uveo logaritme u Italiju i razmijenio mnoga
+    pisma s Galileom Galileijem.
+  links:
+    - title: Cavalieri’s Principle
+      url: /course/circles/spheres-cones-cylinders#cavalieri
+
+cayley:
+  born: 1821
+  died: 1895
+  name: Cayley
+  bio: |
+    __Arthur Cayley__ (1821. - 1895.) bio je britanski matematičar i pravnik. Bio je jedan od
+    pionira _teorije grupa_, prvi je predložio modernu definiciju "grupe" i generalizirao ih kako bi
+    obuhvatio još mnogo primjena u matematici. Cayley je također razvio matričnu algebru i radio na
+    geometriji veće dimenzije.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+collatz:
+  name: Collatz
+  bio: |
+    __Lothar Collatz__ (1910. - 1990.) bio je njemački matematičar koji je radio na diferencijalnim
+    jednadžbama i problemima optimizacije. _Collatzova pretpostavka_ ili `3x+1` problem je nazvan po
+    njemu - i još uvijek nije riješen.
+
+conway:
+  name: Conway
+  born: 1937
+  died: 2020
+  bio: |
+    __John Horton Conway__ (1937. - 2020.) bio je britanski matematičar koji je radio na Sveučilištu
+    Cambridge i Princeton. Bio je stipendist Kraljevskog društva i prvi dobitnik nagrade Pólya.
+
+    Istraživao je matematiku u podlozi svakodnevnih predmeta poput čvorova i igara, a pridonio je
+    teoriji grupa, teoriji brojeva i mnogim drugim područjima matematike. Conway je poznat po tome
+    što je izumio „Conwayevu igru života“, _ćelijskog automata_ sa fascinantnim svojstvima.
+  links:
+    - title: Look-and-say Sequence
+      url: /course/sequences/special#look-and-say
+
+copernicus:
+  born: 1473
+  died: 1543
+  name: Copernicus
+  bio: |
+    __Nicolaus Kopernik__ (1473. - 1543.) bio je poljski matematičar, astronom i pravnik. Tijekom
+    njegovog života, većina ljudi je vjerovala u _Geocentrični_ model svemira, s tim da je Zemlja u
+    središtu, a sve ostalo se vrti oko nje.
+
+    Kopernik je stvorio novi model, gdje je sunce u središtu, a Zemlja se kreće oko njega u krugu.
+    Također je predvidio da se Zemlja okreće oko svoje osi jednom dnevno. U strahu da će to
+    uznemiriti katoličku crkvu, model je objavio tek pred njegovu smrt - pokrenuvši ono što se danas
+    naziva _Kopernikova revolucija_.
+
+    Kopernik je također radio kao diplomat i liječnik, a dao je važan doprinos ekonomiji.
+  links:
+    - title: Planetary Orbits
+      url: /course/circles/conic-sections#orbits
+
+de-moivre:
+  born: 1667
+  died: 1754
+  name: De Moivre
+  bio: |
+    __Abraham de Moivre__ (1667. - 1754.) bio je francuski matematičar koji je radio na
+    vjerojatnosti i analitičkoj geometriji. Najviše ga pamti po _de Moivre-ovoj formuli_, koja
+    povezuje trigonometriju i složene brojeve.
+
+    De Moivre je otkrio formulu normalne distribucije u vjerojatnosti i prvo pretpostavio _teoremu
+    središnje granice_. Također je pronašao ne-rekurzivnu formulu za Fibonaccijeve brojeve,
+    povezujući ih sa zlatnim omjerom `φ`.
+  links:
+    - title: Probability
+      url: /course/probability/predicting-the-future
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+dedekind:
+  born: 1831
+  died: 1916
+  name: Dedekind
+  small: true
+  bio: |
+    __Richard Dedekind__ (1831. - 1916.) bio je njemački matematičar i jedan od Gaussovih učenika.
+    Razvio je mnoge koncepte u teoriji skupova i izumio _Dedekind seče_ kao formalnu definiciju
+    realnih brojeva. Također je dao prve definicije _brojeva polja_ i _prstenova_, dva važna
+    konstrukta u apstraktnoj algebri.
+
+democritus:
+  born: -460
+  died: -370
+  name: Democritus
+  bio: |
+    Grčki matematičar __Demokrit__ (oko 460. - 370. godine prije Krista), možda je prva osoba koja
+    je nagađala da je sva materija sačinjena od sićušnih _atoma_ i smatra se "ocem moderne znanosti
+    ”. Također je napravio mnoga otkrića u geometriji, uključujući formulu za volumen prizmi i
+    stožaca.
+  links:
+    - title: Volume of a Cone
+      url: /course/circles/spheres-cones-cylinders#cone-volume
+
+desargues:
+  born: 1591
+  died: 1661
+  name: Desargues
+  bio: |
+    __Girard Desargues__ (1591. - 1661.) bio je francuski matematičar, inženjer i arhitekt.
+    Projektirao je brojne zgrade u Parizu i Lyonu, pomogao u izgradnji brane i izumio mehanizam za
+    podizanje vode koristeći epikloide.
+
+    U matematici Desargues se smatra ocem _projektivne geometrije_. Ovo je posebna vrsta geometrije
+    u kojoj se paralelne linije susreću u „točki u beskonačnosti“, veličina oblika nije bitna (samo
+    njihovi proporcije), a sva su četiri stožastog presjeka (krug, elipsa, parabola i hiperbola) u
+    osnovi isti.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+descartes:
+  born: 1596
+  died: 1650
+  name: Descartes
+  bio: |
+    __René Descartes__ (1596. - 1650.) bio je francuski matematičar i filozof te jedna od ključnih
+    figura u Znanstvenoj revoluciji. Odbio je prihvatiti autoritet prethodnih filozofa, a jedan od
+    njegovih najpoznatijih citata je „Mislim, dakle jesam“.
+
+    Descartes je otac _analitičke geometrije_ koji nam omogućava opisati geometrijske oblike pomoću
+    algebre. To je bio jedan od preduvjeta, koji je Newtonu i Leibnitzu omogućio izum izračuna
+    _nekoliko desetljeća kasnije.
+
+    Zaslužan je za prvu uporabu nadkripti za moći ili eksponente, a po njemu je nazvan
+    _kartezijanski koordinatni sustav_.
+
+diophantus:
+  born: 200
+  died: 284
+  name: Diophantus
+  overflow: true
+  bio: |
+    __Diofant__ bio je helenistički matematičar koji je živio u Aleksandriji. Većina njegovih djela
+    govori o rješavanju polinomnih jednadžbi s nekoliko nepoznanica. One se danas nazivaju
+    _Diofantinska jednadžba_ i danas su važno područje istraživanja.
+
+    Dok je čitao jednu od Diofantovih knjiga, mnogo stoljeća kasnije, _Pierre de Fermat_ predložio
+    je da jedna od tih jednadžbi nema rješenja. To je postalo poznato kao "Fermatova posljednja
+    teorema", a riješen je tek 1994. godine.
+
+dirac:
+  name: Dirac
+  bio: |
+    __Paul Dirac__ (1898. - 1972.) bio je engleski teorijski fizičar, koji je dijelio Nobelovu
+    nagradu iz 1933. godine s Erwinom Schrödingerom. Dirac je bio jedan od pionira kvantne mehanike,
+    formulirao je čuvenu _Diracovu jednadžbu_ i prvo predvidio postojanje antimaterije.
+
+    Predavao je na Sveučilištu Cambridge, prije nego što se preselio u Ameriku. Dirac je bio čuven i
+    sramežljiv i, prema Einsteinu, _"balansirajući na vrtoglavom putu između genija i ludila"_.
+
+einstein:
+  name: Einstein
+  born: 1879
+  died: 1955
+  small: true
+  bio: |
+    __Albert Einstein__ (1879. - 1955.) bio je njemački fizičar i jedan od najutjecajnijih
+    znanstvenika u povijesti. Dobio je Nobelovu nagradu za fiziku, a časopis TIME nazvao ga je
+    _osobom 20. stoljeća_.
+
+    Einstein je pokrenuo najznačajniju transformaciju u našem pogledu na svemir još od Newtona.
+    Shvatio je da klasična _newtonska_ fizika više nije dovoljna za objašnjenje određenih fizičkih
+    fenomena.
+
+    U dobi od 26 godina, tijekom svoje "čudesne godine", objavio je četiri nova istraživanja u
+    kojima je objasnio fotoelektrični efekt i Brownijevo kretanje, uveo posebnu relativnost i
+    izvukao formulu `E = m c^2` u kojoj stoji da je energija (_E_) i masa (_m_) su jednaki.
+
+eratosthenes:
+  name: Eratosthenes
+  born: -276
+  died: -195
+  bio: |
+    __Eratosten iz Cirene__ (oko 276. - 195. godine prije Krista) bio je grčki matematičar, geograf,
+    astronom, povjesničar i pjesnik. Veliki dio života proveo je u Egiptu, kao voditelj
+    Aleksandrijske knjižnice. Između mnogih drugih dostignuća, Eratosten je izračunao opseg Zemlje,
+    izmjerio nagib Zemljine osi rotacije, procijenio udaljenost do sunca i stvorio neke od prvih
+    karata svijeta. Izumio je i "sito Eratostena", učinkovit način izračunavanja _osnovnih brojeva_.
+  links:
+    - title: Radius of the Earth
+      url: /course/circles/tangets-chords-arcs#eratosthenes
+    - title: Sieve of Eratosthenes
+      url: /course/divisibility/primes#eratosthenes
+
+erdos:
+  born: 1913
+  died: 1996
+  name: Erdős
+  bio: |
+    __Paul Erdős__ (1913. - 1996.) bio je jedan od najproduktivnijih matematičara u povijesti. Rođen
+    u Mađarskoj, riješio je bezbroj problema iz teorije grafova, teorije brojeva, kombinatorike,
+    analize, vjerojatnosti i drugih dijelova matematike.
+
+    Tijekom svog života, Erdő je objavio oko 1500 radova i surađivao s više od 500 drugih
+    matematičara. U stvari, veći dio života proveo je živeći iz kovčega, putujući na seminare i
+    posjećujući kolege!
+
+escher:
+  name: Escher
+  born: 1898
+  died: 1972
+  bio: |
+    __Maurits Cornelis Escher__ (1898. - 1972.) bio je nizozemski umjetnik koji je kreirao skice,
+    reznice i litografije matematički nadahnutih predmeta i oblika: uključujući poliedre,
+    tesselacije i nemoguće oblike. Grafički je istraživao pojmove poput simetrije, beskonačnosti,
+    perspektive i ne-euklidske geometrije.
+  small: true
+  links:
+    - title: Tessellations in Art
+      url: /course/polyhedra/tessellations#escher
+
+euclid:
+  name: Euclid
+  born: -330
+  died: -270
+  bio: |
+    __Euklid iz Aleksandrije__ (oko 300. godine prije Krista) bio je grčki matematičar i često ga
+    nazivaju _ocem geometrije_. Objavio je knjigu _Elementi_ koja je prvi uvela euklidsku geometriju
+    i koja je sadržala mnogo važnih dokaza u teoriji geometrije i broja. Bio je to glavni udžbenik
+    matematike sve do 19. stoljeća. U Aleksandriji je učio matematiku, ali o njegovom životu se zna
+    vrlo malo.
+  links:
+    - title: Euclid’s Axioms
+      url: /course/euclidean-geometry/euclids-axioms
+    - title: Infinitely many Primes
+      url: /course/divisibility/primes#primes3
+
+euler:
+  name: Euler
+  born: 1707
+  died: 1783
+  bio: |
+    __Leonhard Euler__ (1707. - 1783.) bio je jedan od najvećih matematičara u povijesti. Njegov rad
+    obuhvaća sva područja matematike, a napisao je 80 svezaka istraživanja.
+
+    Euler je rođen u Švicarskoj i studirao je u Bazelu, ali je veći dio života živio u Berlinu,
+    Pruskoj i Sankt Peterburgu u Rusiji.
+
+    Euler je izumio velik dio moderne matematičke terminologije i notacije te je učinio važna
+    otkrića u računici, analizi, teoriji grafova, fizici, astronomiji i mnogim drugim temama.
+  links:
+    - title: Königsberg Bridges Problem
+      url: /course/graph-theory/bridges
+    - title: Euler’s Formula
+      url: /course/graph-theory/planar-graphs
+    - title: Polyhedrons
+      url: /course/polyhedra/polyhedra
+
+fatou:
+  name: Fatou
+  bio: |
+    __Pierre Joseph Louis Fatou__ (1878. - 1929.) bio je francuski matematičar i astronom. Otkrio je
+    _set Julia_, a njegov obrnuto, skup Fatou, dobio je ime po njemu. Dao je važan doprinos analizi
+    i nebeskoj mehanici.
+
+fermat:
+  name: Fermat
+  born: 1607
+  died: 1665
+  bio: |
+    __Pierre de Fermat__ (1607. - 1665.) bio je francuski matematičar i pravnik. Bio je rani pionir
+    kalkulusa, te je radio u teoriji brojeva, vjerojatnosti, geometriji i optici.
+
+    Godine 1637. napisao je kratku bilješku na margini jednog od svojih udžbenika, tvrdeći da
+    jednadžba `a^n + b^n = c^n` nema cjelobrojna rješenja za `n > 2` i da ima "čudesan dokaz, koji
+    je ta granica preuska da sadrži ”. To je postalo poznato kao _Fermatova posljednja teorema_ i
+    jedan od najpoznatijih neriješenih problema u matematici - sve dok nije konačno dokazano 1994.
+    godine.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+
+fibonacci:
+  name: Fibonacci
+  born: 1175
+  died: 1250
+  bio: |
+    __Leonardo Pisano__, poznatiji kao __Fibonaccije__ (1175. - 1250.), bio je talijanski
+    matematičar. Najpoznatiji je po nizu brojeva nazvanim po njemu: 1, 1, 2, 3, 5, 8, 13,…
+
+    Fibonaccije je također odgovorna za popularizaciju arapskih brojeva (0, 1, 2, 3, 4, ...) u
+    Europi, koji su još u 12. stoljeću prije Krista koristili rimske brojeve (I, V, X, D, ...).
+    Objasnio je decimalni sustav u knjizi zvanoj "Liber Abaci", praktičnom udžbeniku za trgovce.
+  links:
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+fourier:
+  born: 1768
+  died: 1830
+  name: Fourier
+  bio: |
+    __Joseph Fourier__ (1768. - 1830.) bio je francuski matematičar, Napoleonov prijatelj i
+    savjetnik. Osim matematičkih istraživanja, zaslužan je i za otkriće efekta staklenika.
+
+    Dok je putovao u Egipat, Fourier je bio posebno fasciniran _vrućinom_. Proučavao je prijenos
+    topline i vibracije i otkrio da se svaka periodična funkcija može zapisati kao beskonačni zbroj
+    trigonometrijskih funkcija: _Fourierov niz_.
+
+fuller:
+  name: Fuller
+  bio: |
+    __Richard Buckminster "Bucky" Fuller__ (1895. - 1983.) bio je američki arhitekt, dizajner i
+    izumitelj. Poznat je po izgradnji _geodetske kupole_ - velike, sferne građevine. Slične
+    karbonske molekule, _fullereni_, kasnije su nazvane po njemu.
+
+galileo:
+  born: 1564
+  died: 1642
+  name: Galileo
+  bio: |
+    __Galileo Galilei__ (1564. - 1642.) bio je talijanski astronom, fizičar i inženjer. Upotrijebio
+    je jedan od prvih teleskopa za promatranje noćnog neba, gdje je otkrio četiri najveća mjeseca
+    Jupitera, faze Venere, sunčeve pjege i još mnogo toga.
+
+    Galileo, ponekad nazvan i "ocem moderne znanosti", također je proučavao kretanje objekata u
+    slobodnom padu, kinematiku, znanost o materijalima i izumio termoskop (rani termometar).
+
+    Bio je glasni zagovornik _Heliocentrizma_, ideje da je Sunce u središtu našeg Sunčevog sustava.
+    To ga je na kraju dovelo do toga da mu sudi Katolička inkvizicija: Galileo je bio prisiljen na
+    odricanje i ostatak života proveo je u kućnom pritvoru.
+
+galois:
+  born: 1811
+  died: 1832
+  name: Galois
+  overflow: true
+  bio: |
+    Francuski matematičar __Évariste Galois__ (1811. - 1832.) imao je kratak i tragičan život, ali
+    je izumio dva posve nova polja matematike: _Teorija grupa_ i _Galoisova teorija_ ,
+
+    Još u tinejdžerskoj dobi Galois je dokazao kako ne postoji opće rješenje za polinomne jednadžbe
+    stupnja pet ili više - istovremeno s Nielsom Abelom.
+
+    Nažalost, i drugi matematičari koji su dijelili ta otkrića s opetovano zamijenjenima ili su
+    jednostavno vraćali njegovo djelo, a on nije uspio školske i sveučilišne ispite, koncentrirajući
+    se na mnogo složeniji posao.
+
+    U dobi od 21 godine Galois je upucan u dvoboju (neki kažu da je tučnjava nad ženom), a kasnije
+    je umro od svojih rana. Tijekom noći prije smrti sažimao je matematička otkrića u pismu
+    prijatelju. Bilo bi potrebno drugim matematičarima mnogo godina da u potpunosti shvate pravi
+    utjecaj njegovog rada.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+gauss:
+  name: Gauss
+  born: 1777
+  died: 1855
+  bio: |
+    __Carl Friedrich Gauss__ (1777. - 1855.) bio je vjerojatno najveći matematičar u povijesti.
+    Napravio je revolucionarna otkrića u gotovo svim poljima matematike, od algebre i teorije
+    brojeva do statistike, izračuna, geometrije, geologije i astronomije.
+
+    Prema legendi, ispravio je pogrešku u očevom računovodstvu u dobi od 3 godine i pronašao način
+    da brzo sabere sve cjelobrojne brojeve od 1 do 100 u dobi od 8 godina. Prve važne spoznaje
+    napravio je još kao tinejdžer , a kasnije je učio i mnoge druge poznate matematičare kao
+    profesore.
+  links:
+    - title: Prime Number Theorem
+      url: /course/divisibility/distribution-of-primes#riemann
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+    - title: Sums of Triangle Numbers
+      url: /course/sequences/figurate#triangle-sums
+
+germain:
+  born: 1776
+  died: 1831
+  name: Germain
+  small: true
+  bio: |
+    __Marie-Sophie Germain__ (1776. - 1831.) odlučila je da želi postati matematičarkom u dobi od 13
+    godina, nakon što je pročitala o Arhimedu. Nažalost, kao žena, bila je suočena sa značajnom
+    opozicijom. Roditelji su je pokušali spriječiti da studira kad je bila mala, a ona nikada nije
+    dobila post na sveučilištu.
+
+    Germain je bila pionir u razumijevanju matematike elastičnih površina za što je osvojila glavnu
+    nagradu Pariške akademije znanosti. Također je postigla značajan napredak u rješavanju Fermatove
+    posljednje teoreme i redovito se dopisivala s Carlom Friedrichom Gaussom.
+
+godel:
+  born: 1906
+  died: 1978
+  name: Gödel
+  small: true
+  bio: |
+    __Kurt Gödel__ (1906. - 1978.) bio je austrijski matematičar koji se kasnije uselio u Ameriku i
+    smatra se jednim od najvećih logičara u povijesti.
+
+    U dobi od 25 godina, neposredno nakon što je završio doktorat u Beču, objavio je svoje dvije
+    _teoreme nepotpunosti_. Oni navode da bilo koji (dosljedan i dovoljno moćan) matematički sustav
+    sadrži određene tvrdnje koje su istinite, ali se ne mogu dokazati. Drugim riječima, matematika
+    sadrži određene probleme koje je nemoguće riješiti.
+
+    Taj je rezultat duboko utjecao na razvoj i filozofiju matematike. Gödel je također pronašao
+    primjer ovih "nemogućih teorema": hipoteza _kontinuuma_.
+  links:
+    - title: Unprovable Theorems
+      url: /world/Axioms_and_Proof
+    - title: Continuum Hypothesis
+      url: /world/Infinity
+
+goldbach:
+  name: Goldbach
+  born: 1690
+  died: 1764
+  bio: |
+    __Christian Goldbach__ (1690. - 1764.) bio je pruski matematičar i suvremenik Eulera, Leibniza i
+    Bernoullija. Bio je učitelj ruskog cara Petra II., A ostao je upamćen po „Goldbachovoj
+    konceptu“.
+  links:
+    - title: Goldbach Conjecture
+      url: /course/divisibility/distribution-of-primes#goldbach1
+
+grothendieck:
+  born: 1928
+  died: 2014
+  name: Grothendieck
+  small: true
+  bio: |
+    Francuski matematičar __Alexander Grothendieck__ (1928. - 2014.) bio je jedna od ključnih figura
+    u razvoju _algebarske geometrije_. Proširio je područje primjene na mnoge nove probleme iz
+    matematike, uključujući, na kraju, i Fermatovu posljednju teoremu. Godine 1966. nagrađen je
+    Feldsovom medaljom.
+
+guthrie:
+  name: Guthrie
+  bio: |
+    __Francis Guthrie__ (1831. - 1899.) bio je južnoafrički botaničar i matematičar koji je prvi put
+    naveo problem Četiri boje 1852. Bio je učenik Augustusa De Morgana, jednog od najvećih
+    britanskih matematičara. Osim što je bio profesor i učitelj matematike, Guthrie je radila kao
+    pravnica i istraživala solarnu energiju i zrakoplovstvo.
+
+haken:
+  name: Haken
+  bio: |
+    __Wolfgang Haken__ (rođen 1928.), njemački je matematičar, poznat po svom dokazu _Teorem četiri
+    boje_ s Kennethom Appelom. Kao priznanje, on i Appell dobili su Fulkerson nagradu Američkog
+    matematičkog društva. 1990. Haken postaje članom Centra za napredni studij na Sveučilištu u
+    Illinoisu, gdje je sada profesor emeritus.
+
+halley:
+  name: Halley
+  bio: |
+    __Edmond Halley__ (1656. - 1742.) bio je engleski matematičar i fizičar, a drugi _astronom
+    Royal_. Izračunao je orbitu Halleyevog kometa, koji je dobio ime po njemu.
+
+hamilton:
+  born: 1805
+  died: 1865
+  name: Hamilton
+  small: true
+  bio: |
+    __William Rowan Hamilton__ (1805. - 1865.) bio je irski matematičar i rodni rod. Izumio je
+    _kvarterione_, prvi primjer 'nekomutativne algebre', koja ima važne primjene u matematici,
+    fizici i računalnoj znanosti.
+
+    Ideju je prvi put došao dok je šetao Kraljevskim kanalom u Dublinu, a temeljnu formulu uklesao
+    je u kameni most koji je prošao: `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
+
+    Hamilton je također dao značajan doprinos fizici, uključujući optiku i Newtonovu mehaniku.
+
+hardy:
+  born: 1877
+  died: 1947
+  name: Hardy
+  small: true
+  bio: |
+    __g.h. Hardy__ (1877. - 1947.) bio je vodeći engleski čisti matematičar. Zajedno s _Johnom
+    Littlewoodom_, napravio je važna otkrića u analizi i teoriji brojeva, uključujući raspodjelu
+    pravih brojeva.
+
+    Hardy je 1913. godine primio pismo od _Srinivasa Ramanujana_, nepoznatog, samoukog pisca iz
+    Indije. Hardy je odmah prepoznao svog genija i dogovorio Ramanujana da otputuje u Cambridge,
+    gdje je radio. Zajedno su napravili važna otkrića i napisali brojne radove.
+
+    Hardy je uvijek odstupio od primijenjene matematike i to izrazio u svom osobnom prikazu
+    matematičkog razmišljanja, knjizi iz 1940. godine _Ispričavanje matematičara_.
+
+hilbert:
+  name: Hilbert
+  born: 1862
+  died: 1943
+  bio: |
+    __David Hilbert__ (1862. - 1943.) bio je jedan od najutjecajnijih matematičara 20. stoljeća.
+    Radio je na gotovo svim područjima matematike, a posebno ga je zanimalo stvaranje formalnog,
+    logičnog temelja za matematiku.
+
+    Hilbert je radio u Göttingenu (Njemačka), gdje je učio brojne studente koji su kasnije postali
+    poznati matematičari. Tijekom Međunarodnog kongresa matematičara 1900. predstavio je popis 23
+    neriješena problema. Oni su postavili smjer za buduća istraživanja - a četiri su i danas
+    neriješena!
+  links:
+    - title: Hilbert’s Hotel
+      url: /world/Infinity
+
+hypatia:
+  born: 360
+  died: 415
+  name: Hypatia
+  overflow: true
+  bio: |
+    __Hipatija__ (oko 360. do 415. godine) su ugledni astronomi i matematičari u drevnoj
+    Aleksandriji. Bila je i prva matematičarka čiji se život i rad prilično dobro bilježe. Uređivala
+    je ili pisala komentare na mnoge znanstvene knjige svoga vremena i konstruirala astrolabe i
+    hidrometere.
+
+    Bila je poznata tijekom života kao velika učiteljica, a savjetovala je Orestesa, rimskog
+    aleksandrijskog prefekta. Orestesova svađa s Ćirilom, aleksandrijskim biskupom, dovela je do
+    toga da je Hipatiju ubila rulja kršćana.
+
+jacobi:
+  born: 1809
+  died: 1851
+  name: Jacobi
+  small: true
+  bio: |
+    __Carl Jacobi__ (1804. - 1851.) bio je njemački matematičar. Radio je na analizi,
+    diferencijalnim jednadžbama i teoriji brojeva i bio je jedan od pionira u proučavanju
+    _eliptičkih funkcija_.
+
+jefferson:
+  name: Jefferson
+  bio: |
+    __Thomas Jefferson__ (1743. - 1826.), bio je jedan od osnivača Sjedinjenih Država, njihov treći
+    predsjednik i glavni autor Deklaracije o neovisnosti.
+
+    Pored bavljenja politikom, studirao je matematiku, vrtlarstvo, mehaniku i radio kao arhitekt.
+    Nakon umirovljenja s javne dužnosti, Jefferson je osnovao Sveučilište u Virginiji.
+
+jiushao:
+  born: 1202
+  died: 1261
+  name: Qin Jiushao
+  overflow: true
+  bio: |
+    __Qin Jiushao__ (秦九韶, oko 1202. - 1261.) bio je kineski matematičar, izumitelj i političar. U
+    svojoj knjizi _Shùshū Jiǔzhāng_ objavio je mnoga matematička otkrića, uključujući važnu _kinesku
+    teoremu o ostatku_, i pisao o izviđanju, meteorologiji i vojsci.
+
+    Qin je prvi razvio metodu za numeričko rješavanje polinomnih jednadžbi, koja je danas poznata
+    kao _Hornerova metoda_. Pronašao je formulu za područje trokuta na temelju duljine njegove tri
+    strane, izračunao je zbroj aritmetičkih nizova i uveo simbol za nulu u kinesku matematiku.
+
+    Qin je također izumio _bazene Tianchi_, koji su korišteni za mjerenje kiše i prikupljanje
+    meteoroloških podataka važnih za poljoprivredu.
+
+johnson:
+  born: 1918
+  died: 2020
+  name: Johnson
+  bio: |
+    __Katherine Johnson__ (1918. - 2020.) bila je afroamerička matematičarka. Dok je radio u NASA-i,
+    Johnson je izračunao orbite koje su snimili američki astronauti - uključujući Alana Sheparda,
+    prvog Amerikanca u svemiru, programa slijetanja Apollo Moon, pa čak i svemirsku letjelicu.
+
+    Njena izvanredna sposobnost izračunavanja orbitalnih putanja, pokretanje prozora i put vraćanja
+    u nuždi bila je nadaleko poznata. Čak i nakon dolaska računala, astronaut John Glenn tražio je
+    da osobno ponovno provjeri elektroničke rezultate.
+
+    Johnson je 2015. dobio predsjedničku medalju za slobodu.
+
+julia:
+  name: Julia
+  bio: |
+    __Gaston Maurice Julia__ (1893. - 1978.) bio je francuski matematičar koji je zajedno otkrio
+    _Julia set_, fraktal koji je kasnije popularizirao Benoit Mandelbrot.
+
+karinthy:
+  name: Karinthy
+  bio: |
+    __Frigyes Karinthy__ (1887. - 1938.) bila je mađarska autorica, pjesnikinja i novinarka.
+    Najpoznatiji je po kratkoj priči "Lanci" iz 1929. godine, koja je prvi uvela koncept _šest
+    stupnjeva razdvojenosti_.
+
+kepler:
+  name: Kepler
+  born: 1571
+  died: 1630
+  bio: |
+    __Johannes Kepler__ (1571. - 1630.) bio je njemački astronom i matematičar. Bio je _carski
+    matematičar_ u Pragu, a najpoznatiji je po svoja tri _zakona kretanja planeta_. Kepler je
+    također radio u optici, te je izumio poboljšani teleskop za svoja promatranja.
+  links:
+    - title: Elliptical Orbits
+      url: /course/circles/conic-sections#kepler
+
+khayyam:
+  name: Khayyam
+  born: 1048
+  died: 1131
+  bio: |
+    __Omar Khayyam__ (عمر خیّام, 1048 - 1131) bio je perzijski matematičar, astronom i pjesnik.
+    Uspio je klasificirati i riješiti sve kubne jednadžbe i pronašao je nove načine za razumijevanje
+    Euklidove _paralelne aksiome_. Khayyam je također dizajnirao _Jalali kalendar_, precizan solarni
+    kalendar koji se još uvijek koristi u nekim zemljama.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+koch:
+  name: von Koch
+  bio: |
+    __Niels Fabian Helge von Koch__ (1870. - 1924.) bio je švedski matematičar. Prvo je opisao
+    _Kochovu pahuljicu_, fraktal koji je po njemu nazvan, te dokazao odnose između Riemannove
+    hipoteze i raspodjele pravih brojeva.
+
+lagrange:
+  born: 1736
+  died: 1813
+  name: Lagrange
+  bio: |
+    __Joseph-Louis Lagrange__ (1736. - 1813.) bio je talijanski matematičar koji je naslijedio
+    Leonarda Eulera na mjestu direktora Akademije znanosti u Berlinu.
+
+    Radio je na analizi i računu varijacija, izumio nove metode za rješavanje diferencijalnih
+    jednadžbi, dokazao teoreme u teoriji brojeva i postavio temelje teorije grupa.
+
+    Lagrange je također pisao o klasičnoj i nebeskoj mehanici i pomogao uspostaviti metrički sustav
+    u Europi.
+
+lambert:
+  born: 1728
+  died: 1777
+  name: Lambert
+  bio: |
+    __Johann Lambert__ (1728. - 1777.) bio je švicarski matematičar, fizičar, astronom i filozof.
+    Bio je prvi koji je dokazao da je _π_ iracionalan broj, te je uveo hiperboličke trigonometrijske
+    funkcije. Lambert je također radio na geometriji i kartografiji, kreirao je projekcije karata i
+    nagovijestio otkrivanje ne-euklidskih prostora.
+
+laplace:
+  born: 1749
+  died: 1827
+  name: Laplace
+  small: true
+  bio: |
+    __Pierre-Simon Laplace__ (1749. - 1827.) bio je francuski matematičar i znanstvenik. Njega
+    ponekad nazivaju i "Newton of France", zbog širokog interesovanja i ogromnog utjecaja njegovog
+    rada.
+
+    U knjizi s pet svezaka, Laplace je preveo probleme nebeske mehanike iz _geometrije_ u _izračun_.
+    Ovo je otvorilo širok spektar novih strategija za razumijevanje našeg svemira. Predložio je da
+    se solarni sustav razvija iz okretnog diska prašine.
+
+    Laplace je također ušao u polje vjerojatnosti i pokazao nam kako vjerojatnost može pomoći da
+    razumijemo podatke iz fizičkog svijeta.
+
+leibniz:
+  name: Leibniz
+  born: 1646
+  died: 1716
+  bio: |
+    __Gottfried Wilhelm Leibniz__ (1646. - 1716.) bio je njemački matematičar i filozof. Među mnogim
+    drugim dostignućima, bio je jedan od izumitelja proračuna, i stvorio je neke od prvih mehaničkih
+    kalkulatora.
+
+    Leibniz je vjerovao da je naš svemir „najbolji mogući svemir“ koji je Bog mogao stvoriti,
+    dopuštajući nam da imamo slobodnu volju. Bio je veliki zagovornik _racionalizma_, a također je
+    dao doprinose za fiziku, medicinu, lingvistiku, pravo, povijest i mnoge druge predmete.
+
+leonardo:
+  born: 1452
+  died: 1519
+  name: Da Vinci
+  bio: |
+    __Leonardo da Vinci__ (1452. - 1519.) bio je talijanski umjetnik i polimat. Njegova
+    interesovanja kretala su se od slikarstva, kiparstva i arhitekture do inženjerstva, matematike,
+    anatomije, astronomije, botanike i kartografije. Često ga vide kao glavni primjer "Univerzalnog
+    genija" i bio je jedan od najtalentiranijih pojedinaca koje je ikada živio.
+
+    Leonardo je rođen u Vincima, školovao se u Firenci, a radio je u Milanu, Rimu, Bologni i
+    Veneciji. Samo 15 njegovih slika je preživjelo, ali među njima su i neka od najpoznatijih i
+    najviše reproduciranih djela na svijetu, uključujući _Mona Lisa_ i _Posljednja večera_.
+
+    Njegove bilježnice sadrže ogroman broj crteža, izuma i znanstvenih dijagrama - uključujući prve
+    leteće strojeve i helikoptere, hidrauličke pumpe, mostove i još mnogo toga.
+
+lie:
+  born: 1842
+  died: 1899
+  name: Lie
+  small: true
+  bio: |
+    Norveški matematičar __Marius Sophus Lie__ (1842. - 1899.) postigao je značajan napredak u
+    proučavanju _grupa neprekidne transformacije_ - koje se sada zovu _grupe Lie_. Također je radio
+    na diferencijalnim jednadžbama i ne-euklidskoj geometriji.
+
+lobachevsky:
+  born: 1792
+  died: 1856
+  name: Lobachevsky
+  small: true
+  bio: |
+    __Nikolaj Lobačevski__ (Nikoláj Lobačevskij) bio je ruski matematičar i jedan od osnivača
+    ne-euklidske geometrije. Uspio je pokazati da možete izgraditi konzistentnu vrstu geometrije u
+    kojoj se ne drži Euklidov peti aksiom (oko paralelnih linija).
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+lorenz:
+  name: Lorenz
+  born: 1917
+  died: 2008
+  bio: |
+    __Edward Lorenz__ (1917. - 2008.) bio je američki matematičar i meteorolog. Pionirao je _teoriju
+    haosa_, otkrio je _čudne atraktore_ i skovao izraz "efekt leptira".
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+
+lovelace:
+  born: 1815
+  died: 1852
+  name: Lovelace
+  overflow: true
+  bio: |
+    __Ada Lovelace__ (1815. - 1852.) bila je engleska književnica i matematičarka. Zajedno s
+    Charlesom Babbageom radila je na _Analytical Engine_ ranom, mehaničkom računalu. Napisala je i
+    prvi algoritam koji je pokrenut na takvom stroju (za izračun Bernoullijevih brojeva), što ga
+    čini prvim računalnim programerom u povijesti.
+
+    Ada je svoj pristup opisala kao "poetsku znanost" i provela je puno vremena razmišljajući o
+    utjecaju tehnologije na društvo.
+
+madhava:
+  born: 1340
+  died: 1425
+  name: Madhava
+  bio: |
+    __Madhava iz Sangamagramma__ (oko 1340. - 1425.) bila je matematičar i astronom iz južne Indije.
+    Sve njegovo originalno djelo je izgubljeno, ali imao je veliki utjecaj na razvoj matematike.
+
+    Madhava je najprije upotrijebio beskonačni niz za približavanje trigonometrijskih funkcija, što
+    je bio značajan korak prema razvoju računice mnogo stoljeća kasnije. Također je proučavao
+    geometriju i algebru, te je pronašao točnu formulu za _π_ (također koristeći beskonačne serije).
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Pi
+      url: /course/circles/introduction
+
+mandelbrot:
+  born: 1924
+  died: 2010
+  name: Mandelbrot
+  bio: |
+    Matematičar __Benoit Mandelbrot__ rođen je u Poljskoj, odrastao je u Francuskoj i na kraju se
+    preselio u Sjedinjene Države. Bio je jedan od pionira _fraktalne geometrije_, a posebno ga je
+    zanimalo kako "grubost" i "kaos" izgledaju u stvarnom svijetu (npr. Oblaci ili obale).
+
+    Za vrijeme rada u IBM-u koristio je rana računala za izradu grafičkih prikaza fraktala, a 1980.
+    otkrio je poznati _Mandelbrot set_.
+  links:
+    - title: Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
+
+menger:
+  name: Menger
+  bio: |
+    __Karl Menger__ (1902. - 1985.) bio je austrijsko-američki matematičar. Istražio je algebru,
+    geometriju, dimenzije, teoriju igara i društvene znanosti, ali najbolje je pamti po _Menger
+    spužvi_, čuvenoj trodimenzionalnoj _fraktalnoj_.
+
+mersenne:
+  born: 1588
+  died: 1648
+  name: Mersenne
+  bio: |
+    __Marin Mersenne__ (1588. - 1648.) bio je francuski matematičar i svećenik. Zbog čestih razmjena
+    njegovih kontakata u znanstvenom svijetu tijekom 17. stoljeća, nazvan je "poštanskom kutkom
+    Europe".
+
+    Danas ga uglavnom pamtimo po _Mersenne primesu_, primarnim brojevima koji se mogu napisati kao
+    `2^n - 1`. Većina najvećih poznatih primama su ovog tipa. Također je studirao akustiku i
+    harmoniku vibrirajuće strune, a pisao je i o teologiji i filozofiji.
+  links:
+    - title: Large Primes
+      url: /course/divisibility/distribution-of-primes#prime-test-1
+
+milgram:
+  name: Milgram
+  bio: |
+    __Stanley Milgram__ (1933. - 1984.) bio je poznati socijalni psiholog. Najpoznatiji je po
+    eksperimentima na _poslušnost_, testiranju koliko su odrasli spremni da slijede naredbe, čak i
+    kada povređuju druge, i po _eksperimentu malog svijeta_, koji testira stupanj povezanosti
+    društva.
+
+mirzakhani:
+  born: 1977
+  died: 2017
+  name: Mirzakhani
+  overflow: true;
+  bio: |
+    __Maryam Mirzakhani__ (مریم میرزاخانی, 1977 - 2017) bila je iranska matematičarka i profesorica
+    na Sveučilištu Standford. Ona je jedina žena koja je dobila _Medalju za polja_, najviše
+    priznanje iz matematike.
+
+    Maryam je radila na raskrižju dinamičkih sustava i geometrije. Proučavala je predmete poput
+    _hiperboličkih površina_ i _složenih mnogostrukih_, ali također je pridonijela mnogim drugim
+    područjima matematike.
+
+    Maryam je tijekom rješavanja problema crtala crteže i dijagrame na velikim listovima papira kako
+    bi vidjela temeljne obrasce i ljepotu. Kćerka je čak opisala Maryamin rad kao "slikanje". U 40.
+    godini života Maryam je umrla od raka dojke.
+
+monge:
+  born: 1746
+  died: 1818
+  name: Monge
+  bio: |
+    __Gaspard Monge__ (1746. - 1818.) bio je francuski matematičar. Smatra se ocem _diferencijalne
+    geometrije_, nakon što je uveo koncept _linija zakrivljenosti_ na površinama u trodimenzionalnom
+    prostoru (npr. Na sferi). Monge je također izumio _ortografsku projekciju_ i _deskriptivnu
+    geometriju_, koja omogućuje prikaz trodimenzionalnih objekata pomoću dvodimenzionalnih crteža.
+
+    Tijekom Francuske revolucije, Monge je bio ministar marine. Pomogao je u reformi francuskog
+    obrazovnog sustava i utemeljio Politehniku École.
+  small: true
+  links:
+    - title: Map Projections
+      url: /world/Dimensions_and_Distortions
+
+monsky:
+  name: Monsky
+  bio: |
+    __Paul Monsky__ (rođen 1936.) američki je matematičar i profesor na Sveučilištu Brandeis.
+    Dokazao je da se kvadrat ne može podijeliti u neparni broj trokuta jednakih površina - to je
+    poznato pod nazivom Monsky-ova teorema.
+
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791. - 1872.) bio je američki izumitelj i slikar. Odrastao je u blizini
+    Bostona i studirao na sveučilištu Yale, prije nego što je započeo karijeru kao umjetnik.
+
+    Na povratku s putovanja u Europu na studij umjetnosti, Morse je slušao kako putnici pričaju o
+    novim električnim uređajima. To ga je nadahnulo da radi na značajnom poboljšanju električnog
+    telegrafa, koristeći samo jednu žicu, i da razvije _Morseov kod_ sa svojim pomoćnikom Alfredom
+    Vailom.
+
+    Nakon nekih početnih poteškoća u primanju sredstava, Morseov se telegraf brzo proširio po
+    Sjedinjenim Državama i svijetu.
+
+    Morse se također dva puta kandidirao za gradonačelnika New Yorka, ali njegova podrška ropstvu i
+    imigraciji značila je da je oba puta poražen.
+
+napier:
+  born: 1550
+  died: 1617
+  name: Napier
+  bio: |
+    __John Napier__ (1550. - 1617.) bio je škotski matematičar, fizičar i astronom. Izumio je
+    logaritme, popularizirao upotrebu decimalne točke i stvorio "Napijerove kosti", uređaj za ručno
+    računanje koji je pomogao u množenju i dijeljenju.
+
+nash:
+  born: 1928
+  died: 2015
+  name: Nash
+  bio: |
+    __John Forbes Nash__ (1928. - 2015.) bio je američki matematičar koji je radio na teoriji igara,
+    diferencijalnoj geometriji i djelomičnim diferencijalnim jednadžbama. Pokazao je kako matematika
+    može objasniti odluku u složenim sustavima stvarnog života - uključujući ekonomiju i vojsku.
+
+    Nashu je u 30-ima dijagnosticirana paranoidna šizofrenija, ali uspio se oporaviti i vratiti se
+    svom akademskom radu. Jedina je osoba koja je dobila i Nobelovu nagradu za ekonomiju i _Abelovu
+    nagradu_, jednu od najviših nagrada u matematici.
+  links:
+    - title: Game Theory
+      url: /world/Game_Theory
+
+neumann:
+  born: 1903
+  died: 1957
+  name: von Neumann
+  small: true
+  bio: |
+    __John von Neumann__ (1903. - 1957.) bio je mađarsko-američki matematičar, fizičar i
+    informatičar. Dao je važan doprinos čistoj matematici, bio je pionir kvantne mehanike i razvio
+    je koncepte poput teorije igara, staničnih automata, strojeva koji se automatski umnožavaju i
+    linearnog programiranja.
+
+    Tijekom Drugog svjetskog rata, von Neumann bio je ključni član _Manhattanskog projekta_, radeći
+    na razvoju vodikove bombe. Kasnije se savjetovao s Komisijom za atomsku energiju i američkim
+    zračnim snagama.
+
+newton:
+  name: Newton
+  born: 1642
+  died: 1726
+  bio: |
+    __Sir Isaac Newton__ (1642. - 1726.) bio je engleski fizičar, matematičar i astronom i jedan od
+    najutjecajnijih znanstvenika svih vremena. Bio je profesor na Sveučilištu Cambridge i
+    predsjednik Kraljevskog društva u Londonu.
+
+    U svojoj knjizi _Principia Mathematica_, Newton je formulirao zakone kretanja i gravitacije,
+    koji su postavili temelje klasičnoj fizici i dominirali u našem pogledu na svemir u naredna tri
+    stoljeća.
+
+    Između ostalog, Newton je bio jedan od izumitelja proračuna, izgradio je prvi reflektirajući
+    teleskop, izračunao brzinu zvuka, proučavao gibanje fluida i razvio teoriju boja na temelju toga
+    kako se prizme dijele sunčevom svjetlošću u spektar boje duge. ,
+  links:
+    - title: Gravity
+      url: /course/circles/conic-sections#newton
+    - title: Digits of Pi
+      url: /course/circles/introduction#pi-record
+
+nicomachus:
+  name: Nicomachus
+  born: 60
+  died: 120
+  overflow: true
+  bio: |
+    __Nicomachus iz Gerasa__ (oko 60 - 120) bio je drevni grčki matematičar koji je također mnogo
+    vremena provodio razmišljajući o mističnim svojstvima brojeva. Njegova knjiga _Uvod u
+    aritmetiku_ sadrži prvo spominjanje savršenih brojeva.
+  links:
+    - title: Perfect Numbers
+      url: /course/sequences/special#perfect
+
+nightingale:
+  born: 1820
+  died: 1910
+  name: Nightingale
+  small: true
+  bio: |
+    __Florence Nightingale__ (1820. - 1910.) bila je engleska medicinska sestra i statističarka.
+    Tijekom krimskog rata njegovala je ranjene britanske vojnike, a kasnije je osnovala prvu školu
+    za obuku medicinskih sestara. Kao "Dama sa lampom" otkrila je kulturnu ikonu, a nove medicinske
+    sestre u SAD-u još uvijek preuzimaju _Nightingale obećanje_.
+
+    Jedan od njenih najvažnijih doprinosa medicini bila je upotreba statistika za ocjenu tretmana.
+    Stvorila je brojne infografike i bila je jedna od prvih koja je koristila grafičke pita.
+    Nightingale je također radio na poboljšanju saniteta i olakšavanja gladi u Indiji, pomagao je u
+    ukidanju zakona o prostituciji i promicao novu karijeru za žene.
+
+noether:
+  name: Noether
+  born: 1882
+  died: 1935
+  bio: |
+    __Amalie Emmy Noether__ (1882. - 1935.) bila je njemačka matematičarka koja je napravila važna
+    otkrića u apstraktnoj algebri i teorijskoj fizici, uključujući vezu između zakona simetrije i
+    zakona očuvanja. Često je opisuju kao najutjecajniju matematičarku.
+  small: true
+  links:
+    - title: Symmetry in Physics
+      url: /course/transformations/physics
+
+oresme:
+  born: 1323
+  died: 1382
+  name: Oresme
+  bio: |
+    __Nicole Oresme__ (oko 1323. - 1382.) bila je važna francuska matematičarka, filozofka i biskup,
+    živjela u kasnom srednjem vijeku. Izumio je geometriju koordinata, mnogo prije Descartesa, prvi
+    koji je koristio frakcijske eksponente i radio na beskonačnim serijama. Pisao je o ekonomiji,
+    fizici, astronomiji i teologiji i bio savjetnik francuskog kralja Karla V.
+
+pacioli:
+  born: 1446
+  died: 1517
+  name: Pacioli
+  bio: |
+    __Luca Pacioli__ bio je utjecajni talijanski fratar i matematičar, koji je izumio standardne
+    simbole za plus i minus (+ i -). Bio je jedan od prvih računovođa u Europi, gdje je uveo
+    knjiženje dvostrukih knjiga. Pacioli je surađivao s Leonardom da Vincijem, a pisao je i o
+    aritmetici i geometriji.
+
+pascal:
+  name: Pascal
+  born: 1623
+  died: 1662
+  bio: |
+    __Blaise Pascal__ (1623. - 1662.) bio je francuski matematičar, fizičar i filozof. Izumio je
+    neke od prvih mehaničkih kalkulatora, kao i rad na projektivnoj geometriji, vjerojatnosti i
+    fizici vakuuma.
+
+    Najpoznatije je da je Pascal zapamćen po tome što je nazvao _Pascalov trokut_, beskonačni trokut
+    brojeva s nekim zadivljujućim svojstvima.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+peano:
+  born: 1858
+  died: 1932
+  name: Peano
+  small: true
+  bio: |
+    Talijanski matematičar __Giuseppe Peano__ (1858. - 1932.) objavio je više od 200 knjiga i radova
+    o logici i matematici. Formulirao je _aksiome peanoa_, koji su postali osnova za rigoroznu
+    algebru i analizu, razvio je oznaku za logiku i teoriju skupova, konstruirao je kontinuirane
+    krivulje koje ispunjavaju prostor (_Peano krivulje_) i radio na metodi dokazivanja indukcijom.
+
+    Peano je također razvio novi, međunarodni jezik, _Latino sine flexione_, što je bila
+    pojednostavljena verzija latinskog.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+pearson:
+  name: Pearson
+  bio: |
+    __Karl Pearson__ (1857. - 1936.) bio je engleski matematičar i statističar. Radio je biometriju,
+    meteorologiju i eugeniku, među mnogim drugim temama, i osnovao prvi svjetski odjel za statistiku
+    na University College London.
+
+penrose:
+  name: Penrose
+  born: 1931
+  bio: |
+    __Sir Roger Penrose__ (rođen 1931.) je britanski matematičar i fizičar koji je poznat po svom
+    revolucionarnom radu u općoj relativnosti i kosmologiji - često surađujući s drugim poznatim
+    znanstvenicima poput Stephena Hawkinga i Michaela Atiyaha. Otkrio je i _Penrose Penings_:
+    slične, neperiodične teshele.
+  links:
+    - title: Penrose Tilings
+      url: /course/polyhedra/tessellations#penrose
+
+perelman:
+  born: 1966
+  name: Perelman
+  bio: |
+    2003. godine, ruski matematičar __Grigori Perelman__ (Grigořij Perelʹmaronn, rođen 1966.)
+    dokazao je _Poincaréjevu konstrukciju_, koja je do tada bila jedan od najpoznatijih neriješenih
+    problema u matematici.
+
+    Složen dokaz potvrđen je do 2006. godine, ali Perelman je odbio dvije velike nagrade koje su
+    pripale njemu: nagradu od glina za tisućljeće dolara i nagradu _Fields Medal_ što je najveće
+    priznanje u matematici. U stvari je rekao: _"Ne zanima me novac ili slava; Ne želim biti
+    izložena kao životinja u zoološkom vrtu. "_
+
+    Perelman je također dao doprinos riečanskoj geometriji i geometrijskoj topologiji, a Poincaréova
+    koncepcija i dalje je jedini od riješenih sedam problema milenijske nagrade.
+
+pingala:
+  name: Pingala
+  born: -330
+  died: -270
+  bio: |
+    __Pingala__ (poljski) bio je drevni indijski pjesnik i matematičar koji je živio oko 300. godine
+    prije Krista, ali o njegovom životu se zna vrlo malo. Napisao je Chandaḥśāstra, gdje je
+    matematički analizirao sanskrtsku poeziju. Sadržao je i prva poznata objašnjenja binarnih
+    brojeva, Fibonaccijevih brojeva i Pascalovog trokuta.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+planck:
+  name: Plank
+  bio: |
+    __Max Plank__ (1858. - 1947.) bio je njemački fizičar i jedan od originalnih programera kvantne
+    mehanike - za što je 1918. dobio Nobelovu nagradu.
+
+plato:
+  name: Plato
+  born: -425
+  died: -347
+  bio: |
+    __Platon__ (oko 425. - 347. pr.n.e.) bio je filozof u drevnoj Grčkoj, i - zajedno sa svojim
+    učiteljem Sokratom i njegovim učenikom Aristotelom - postavio je sam temelj zapadne filozofije i
+    znanosti.
+
+    Platon je osnovao Atinsku akademiju, prvu visokoškolsku ustanovu u zapadnom svijetu. Njegova
+    mnoga djela o filozofiji i teologiji, znanosti i matematici, politici i pravdi čine ga jednim od
+    najutjecajnijih mislilaca svih vremena.
+  links:
+    - title: Platonic Solids
+      url: /course/polyhedra/platonic
+
+poincare:
+  born: 1854
+  died: 1912
+  name: Poincaré
+  bio: |
+    Francuski matematičar __Henri Poincaré__ (1854. - 1912.) često je opisan kao _posljednji
+    univerzalista_, što znači da je radio u svim oblastima matematike poznatim za vrijeme svog
+    života.
+
+    Poincaré je jedan od osnivača polja _Topologija_, a smislio je _Poincaréovu pretpostavku_. Ovo
+    je bio jedan od poznatih neriješenih problema u matematici, sve dok ga nije dokazao 2003.
+    Grigori Perelman
+
+    Pronašao je i djelomično rješenje za "problem tri tijela" i otkrio je da gibanje tri zvijezde
+    ili planeta u svemiru može biti potpuno nepredvidivo. Time su postavljeni temelji moderne
+    _teorije haosa_.
+
+    Poincaré je prvi predložio _gravitacijski valovi_, a njegov rad o Lorentzovim transformacijama
+    bio je osnova na kojoj je Albert Einstein izgradio svoju teoriju posebne relativnosti.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+    - title: Topology
+      url: /world/Dimensions_and_Distortions
+
+ptolemy:
+  born: 90
+  died: 168
+  name: Ptolemy
+  bio: |
+    __Klaudij Ptolomej__ (otprilike 100. - 170. g.) Bio je grčko-rimski matematičar, astronom,
+    geograf i astrolog. Najbolje ga pamti po _Ptolemaicima_ ili _Geocentričnom_ modelu našeg svemira
+    - da je Zemlja u središtu, a svi planeti i Sunce se vrte oko toga.
+
+    Iako znamo da je ovaj model netočan, Ptolomejev znanstveni utjecaj neosporan je. Razvio je
+    trigonometrijske tablice s mnogim praktičnim primjenama, koje su tijekom mnogih stoljeća bile
+    najpreciznije. Izradio je i detaljne karte Zemlje, pisao o teoriji glazbe i optikama.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Orbits
+      url: /course/circles/introduction
+
+pythagoras:
+  name: Pythagoras
+  born: -570
+  died: -495
+  bio: |
+    __Pitagora iz Samosa__ (oko 570. - 495. godine prije Krista) bio je grčki filozof i matematičar.
+    Najpoznatiji je po dokazivanju _Pitagorine teoreme_, ali napravio je mnoga druga matematička i
+    znanstvena otkrića.
+
+    Pitagora je matematički pokušao objasniti glazbu i otkrio je da dva tona zvuče "lijepo" zajedno
+    (suglasnički) ako je omjer njihovih frekvencija jednostavan ulomak.
+
+    Osnovao je i školu u Italiji u kojoj su on i njegovi učenici obožavali matematiku gotovo poput
+    religije, slijedeći niz bizarnih pravila - ali školu su na kraju izgorjeli njihovi protivnici.
+  links:
+    - title: Pythagoras’ Theorem
+      url: /course/triangles/pythagoras
+
+ramanujan:
+  born: 1887
+  died: 1920
+  name: Ramanujan
+  overflow: true
+  bio: |
+    __Srinivasa Ramanujan__ (1887. - 1920.) odrastao je u Indiji, gdje je stekao vrlo malo formalnog
+    obrazovanja iz matematike. Ipak, uspio je razviti nove ideje u potpunoj izolaciji, radeći kao
+    činovnik u maloj radnji.
+
+    Nakon nekoliko neuspjelih pokušaja kontaktiranja drugih matematičara, napisao je pismo slavnom
+    G.H. Izdržljiv. Hardy je odmah prepoznao Ramanujanovog genija i dogovorio ga da otputuje u
+    Cambridge u Englesku. Zajedno su napravili brojna otkrića u teoriji brojeva, analizi i
+    beskonačnim serijama.
+
+    Nažalost, Ramanujan se ubrzo razbolio i bio je prisiljen vratiti se u Indiju, gdje je umro u
+    dobi od 32 godine. Tokom svog kratkog života, Ramanujan je dokazao preko 3000 teorema i
+    jednadžbi na široku paletu tema. Njegov je rad stvorio potpuno nova područja matematike, a
+    njegove su bilježnice proučavali i drugi matematičari mnogo desetljeća nakon njegove smrti.
+
+regiomontanus:
+  born: 1436
+  died: 1476
+  name: Regiomontanus
+  overflow: true
+  bio: |
+    __Johann Müller Regiomontanus__ (1436. - 1476.) bio je njemački matematičar i astronom. U oba je
+    područja postigao veliki napredak, uključujući izradu detaljnih astronomskih tablica i
+    objavljivanje više udžbenika.
+
+richardson:
+  name: Richardson
+  bio: |
+    __Lewis Fry Richardson__ (1881. - 1953.) bio je britanski matematičar i fizičar. Uvodio je
+    moderne matematičke tehnike prognoziranja vremena, izumio akustičke strojeve za otkrivanje
+    ledenih brijega i razvio metode za rješavanje sustava linearnih jednadžbi.
+
+    Također je pokušao izračunati vjerojatnost da će dvije zemlje objaviti rat jedna drugoj, s
+    obzirom na duljinu njihove zajedničke granice. Međutim, nije mogao pronaći točna mjerenja za
+    duljinu granica zemalja. To ga je navelo da shvati da granice i obale imaju mnoga svojstva
+    _fraktala_.
+
+riemann:
+  name: Riemann
+  born: 1826
+  died: 1866
+  overflow: true
+  bio: |
+    __Bernhard Riemann__ (1826. - 1866.) bio je njemački matematičar koji je radio na poljima
+    analize i teorije brojeva. Osmislio je prvu rigoroznu definiciju integracije, proučio
+    diferencijalnu geometriju koja je postavila temelj za opću relativnost i napravio revolucionarna
+    otkrića u vezi s raspodjelom pravih brojeva.
+  links:
+    - title: Riemann Hypothesis
+      url: /course/divisibility/distribution-of-primes#riemann
+
+russell:
+  born: 1872
+  died: 1970
+  name: Russell
+  small: true
+  bio: |
+    __Bertrand Russell__ (1872. - 1970.) bio je britanski filozof, matematičar i autor. Smatra se da
+    je jedan od najvažnijih logičara 20. stoljeća.
+
+    Russell je napisao "Principia Mathematica", gdje je pokušao stvoriti formalni temelj za
+    matematiku koristeći logiku. Njegov je rad imao značajan utjecaj ne samo na matematiku i
+    filozofiju, već i na lingvistiku, umjetnu inteligenciju i metafiziku.
+
+    Russell je bio strastveni pacifist i antiratni aktivist. Godine 1950. dobio je Nobelovu nagradu
+    za književnost, za djelo "u kojem pobija humanitarne ideale i slobodu misli".
+
+shannon:
+  name: Shannon
+  born: 1898
+  died: 1972
+  bio: |
+    __Claude Shannon__ (1898. - 1972.) bio je američki matematičar i inženjer elektrotehnike,
+    upamćen kao "otac teorije informacija". Bavio se kriptografijom, uključujući probijanje koda za
+    nacionalnu obranu tijekom Drugog svjetskog rata, ali zanimali su i žongliranje, biciklizam i
+    šah. U svoje slobodno vrijeme izgradio je strojeve koji su mogli žonglirati ili rješavati
+    Rubikovu kocku.
+  small: true
+  links:
+    - title: Computers for Gambling
+      url: /course/statistics/casino#dealer
+
+shijie:
+  born: 1249
+  died: 1314
+  name: Zhu Shijie
+  bio: |
+    __Zhu Shijie__ (朱世杰, 1249. - 1314.) bio je jedan od najvećih kineskih matematičara. U knjizi
+    _Jade Ogledalo četiri nepoznanice_ pokazao je kako riješiti 288 različitih problema koristeći
+    sustave polinomnih jednadžbi i četiri varijable (nazvane _Nebo_, _Zemlja_, _Čovjek_ i
+    _Materija_).
+
+    Zhu je široko koristio Pascalov trokut. Također je izumio pravila za rješavanje sustava
+    linearnih jednadžbi - predišući naše moderne metode matrice kroz mnoga stoljeća.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+sierpinski:
+  name: Sierpiński
+  bio: |
+    __Wacław Franciszek Sierpiński__ (1882. - 1969.) bio je poljski matematičar. Ostvario je važna
+    otkrića u teoriji skupa, teoriji brojeva, analizi i topologijama, objavio preko 700 radova i 50
+    knjiga. Također je izumio mnoge popularne _fraktale_, uključujući _Sierpinski trokut_,
+    _Sierpinski tepih_ i _Sierpinski krivulju_.
+
+    _Sierpinski brojevi_ su neparni prirodni brojevi _k_ takvi da je `k * 2^n +1` složen za sve
+    prirodne brojeve _n_. _Sierpinski problem_ pokušava pronaći najmanje Sierpinskih brojeva.
+    Najmanji poznati takav broj je 78.557 - ali još uvijek nije poznato postoje li manji.
+
+sikdar:
+  name: Sikdar
+  bio: |
+    __Radhanath Sikdar__ (1813. - 1870.) bio je indijski matematičar. Bio je prvi koji je izmjerio
+    visinu Mount Everest-a i pokazao da je to najviša planina na Zemlji.
+
+singmaster:
+  name: Singmaster
+  bio: |
+    __David Singmaster__ (rođen 1939.) američki je matematičar koji je posebno poznat po svojim
+    matematičkim zagonetkama i mozgalicama. Prvi je izmislio matematičke algoritme za analizu i
+    rješavanje _Rubikove kocke_.
+
+stevin:
+  born: 1548
+  died: 1620
+  name: Stevin
+  bio: |
+    __Simon Stevin__ (1548. - 1620.) bio je flamanski matematičar i inženjer. Bio je jedan od prvih
+    ljudi koji su upotrebljavali i pisali o decimalnim ulozima, a dao je i mnoge druge priloge
+    znanosti i inženjerstvu.
+
+tartaglia:
+  born: 1499
+  died: 1557
+  name: Tartaglia
+  bio: |
+    __Niccolò Fontana Tartaglia__ (1499. - 1557.) bio je talijanski matematičar, inženjer i
+    knjigovođa. Objavio je prve talijanske prijevode Arhimeda i Euklida, pronašao formulu za
+    rješavanje bilo koje kubne jednadžbe (uključujući prvu stvarnu primjenu složenih brojeva) i
+    upotrijebio je matematiku za istraživanje kretanja projektila iz topa.
+
+thales:
+  name: Thales
+  born: -624
+  died: -546
+  bio: |
+    __Miletus Tales__ (oko 624. - 546. godine prije Krista) bio je grčki matematičar i filozof.
+
+    Thales je često prepoznat kao prvi znanstvenik u zapadnoj civilizaciji: umjesto da je koristio
+    religiju ili mitologiju, pokušao je objasniti prirodne pojave pomoću znanstvenog pristupa.
+    Također je prvi pojedinac u povijesti koji je dobio matematičko otkriće po njemu: Thalesov
+    teorem.
+  links:
+    - title: Thales’ Theorem
+      url: /course/euclidean-geometry/introduction
+
+thorp:
+  name: Thorp
+  bio: |
+    __Edward Thorp__ (rođen 1932.) američki je menadžer hedge fondova i igrač blackjacka, poznat po
+    izumljanju _brojanja kartica_ i po izradi prvog _nosivog računala_ koji će pobijediti kockarnice
+    u Rulet. Radio je na MIT-u, profesor matematike i pionir modernih primjena teorije
+    vjerojatnosti.
+
+turing:
+  born: 1912
+  died: 1954
+  name: Turing
+  bio: |
+    __Alan Turing__ (1912. - 1954.) bio je engleski matematičar i često ga zovu "otac računarskih
+    znanosti".
+
+    Tijekom Drugog svjetskog rata, Turing je igrao kritičnu ulogu u kršenju Enigma koda koji je
+    koristila njemačka vojska, u sklopu „vladinog kodeksa i škola za cypher“ u Bletchley Parku. Ovo
+    je pomoglo saveznicima da pobijede u ratu i možda je spasilo milijune života.
+
+    Također je izumio _Turingov stroj_, matematički model računala opće namjene i _Turingov test_,
+    koji se može koristiti za prosudbu sposobnosti umjetne inteligencije.
+
+    Turing je bio gay, što je za vrijeme života još uvijek bio zločin, a značilo je da njegova
+    temeljna dostignuća nikada nisu u potpunosti priznata. Ubojstvo je počinio u dobi od 41 godine.
+
+ulam:
+  name: Ulam
+  bio: |
+    __Stanisław Ulam__ (1909. - 1984.) bio je poljsko-američki matematičar. Igrao je važnu ulogu u
+    američkom _Manhattan projektu_ koji je razvio prvo nuklearno oružje. Također je radio na
+    raketnom pogonu koristeći nuklearne impulse i razvio _Monte Carlo metodu_ - važan koncept u
+    statistici.
+
+venn:
+  name: Venn
+  bio: |
+    __John Venn__ (1834. - 1923.) bio je engleski matematičar i filozof koji je uveo _Vennov
+    dijagram_ korišten u teoriji skupa i vjerojatnosti. Predavao je na Sveučilištu Cambridge i bio
+    stipendist Kraljevskog društva u Londonu.
+
+viete:
+  born: 1540
+  died: 1603
+  name: Viète
+  bio: |
+    __François Viète__ (1540. - 1603.) bio je francuski matematičar, pravnik i savjetnik francuskih
+    kraljeva Henrika III. I IV. Značajno je napredovao u Algebri i prvi uveo upotrebu slova za
+    predstavljanje varijabli.
+
+    Viète je otkrio vezu između korijena i koeficijenata polinoma, nazvanog _Vièteova formula_.
+    Također je napisao knjige o geometriji i trigonometriji, uključujući izračunavanje _π_ na 10
+    decimalnih mjesta koristeći poligon s 393216 strana.
+
+wallis:
+  born: 1616
+  died: 1703
+  name: Wallis
+  bio: |
+    Engleski matematičar __John Wallis__ (1616. - 1703.) doprinio je razvoju računa, izumio brojčanu
+    liniju i simbol ∞ za beskonačnost i služio kao glavni kriptograf za Parlament i kraljevski dvor.
+
+wiles:
+  born: 1953
+  name: Wiles
+  bio: |
+    Britanski matematičar Sir __Andrew Wiles__ (rođen 1953.) najpoznatiji je po dokazivanju
+    Fermatove posljednje teoreme, koji je do tada bio jedan od najpoznatijih neriješenih problema u
+    matematici.
+
+    Pierre de Fermat je 1637. godine na margini udžbenika napisao da ima divan dokaz da jednadžba
+    `a^n + b^n = c^n` nema cjelobrojna rješenja za `n > 2`. Nažalost, nitko nije uspio pronaći dokaz
+    - sve do Wilesa, nekih 400 godina kasnije.
+
+    Wiles je bio fasciniran problemom od desete godine, a proveo je sedam godina radeći na njemu u
+    samoći. Najavio je svoje rješenje 1993. godine, iako je mali jaz u njegovoj tvrdnji trebao
+    popraviti još dvije godine.
+
+    Bio je prestar za primanje _Feldsove medalje_, najvišeg priznanja iz matematike, koje ima dobnu
+    granicu od 40. Umjesto toga, Wiles je za svoj rad dobio posebnu srebrnu plaketu.
+
+wolfram:
+  name: Wolfram
+  bio: |
+    __Stephen Wolfram__ (rođen 1959.) je britansko-američki računalni znanstvenik, fizičar i
+    poslovni čovjek. Osnivač je i izvršni direktor _Wolfram Research_, gdje je razvio računalni
+    sustav _Mathematica_, _Wolfram | Alpha_ odgovorni mehanizam i programski jezik Wolfram.

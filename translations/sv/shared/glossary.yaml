@@ -1,0 +1,1853 @@
+# ==============================================================================
+# MATHIGON GLOSSARY
+# ==============================================================================
+
+absolute-value:absolute-value:
+  title: Absolutvärde
+  text: |
+    __absolutvärdet__ för ett nummer är dess avstånd från 0 på siffrelinjen. Det gör negativa
+    siffror positiva men lämnar positiva siffror oförändrade. Det absoluta värdet på `x` skrivs som
+    `|x|`. Till exempel `|-5| = 5` och `|3| = 3`.
+
+acute-angle:
+  title: Spetsig vinkel
+  text: En __akut vinkel__ är en vinkel i storlek mindre än 90 °.
+
+acute-triangle:
+  title: Akut triangel
+  text: I en __akut triangel__ är alla tre inre vinklar _akuta_ (mindre än 90 °).
+  link: /course/triangles/properties#classification
+
+adic:
+  title: N-adiska nummer
+  text: |
+    __*N*-adiska__ siffror, för vissa heltal _n_, är ett speciellt nummersystem, med en definition
+    av "närhet" som skiljer sig från den vanliga aritmetiken. Två _n_ -adiska nummer är _nära_ om
+    deras skillnad kan delas med en hög effekt på _n_.
+
+adjacent-angles:
+  title: Intilliggande vinklar
+  text: |
+    Två vinklar är __intill__ om de delar en gemensam sida och toppunkt men inte överlappar
+    varandra. Ordet _angränsande_ betyder helt enkelt 'grannar'.
+
+aleph-zero:
+  title: Aleph Zero
+  text: |
+    Aleph Zero, skriven med den hebreiska bokstaven A, är kardinaliteten i en oändligt uppsättning
+    (till exempel de naturliga siffrorna).
+
+algebraic-numbers:
+  title: Algebraiska siffror
+  text: |
+    __Algebraiska siffror__ är delmängden av de verkliga siffrorna, som kan representeras som rötter
+    till en polynomekvation med heltalskoefficienter. Alla rationella siffror (som `2/3`) och surds
+    (som `root(3,5)`) är algebraiska, och det är också siffror som kan byggas från surds (som `(2 +
+    sqrt(3))/(1 - sqrt(5))`).
+
+    De siffror som är verkliga men _inte_ algebraiska kallas _transcendentala nummer_.
+
+algorithm:
+  title: Algoritm
+  text: |
+    En __algoritm__ är en uppsättning regler eller instruktioner som kan användas för att lösa ett
+    specifikt problem. De används ofta av datorer och visas överallt i matematik: från _långdelning_
+    till _Gaussisk eliminering_.
+
+alternate-angles:
+  title: Växlande vinklar
+  text: |
+    __Alternativa vinklar__ bildas av två _parallella linjer_ som korsas av en _korsning_ linje, och
+    de är alltid kongruenta. I diagrammet nedan är vart och ett av par av vinklar märkta 1, 2, 3 och
+    4 alternerande. De två vinklarna i varje par ligger på en annan parallell linje och motsatta
+    sidor av traversalen.
+
+    Vinkelparna 1 och 2 kallas __alternerande yttervinklar__, eftersom de ligger utanför de
+    parallella linjerna, och vinkelparna 3 och 4 kallas __alternerande invändiga vinklar__.
+
+amino-acid:
+  title: Aminosyra
+  text: |
+    __Aminosyror__ är små organiska föreningar som utgör __proteiner__. De är några av de viktigaste
+    byggstenarna för alla levande organismer.
+
+    I vår kropp används aminosyror för att bryta ner mat, reparera kroppsvävnad, lagra energi och
+    för många andra funktioner.
+
+angle:
+  title: Vinkel
+  text: |
+    En vinkel bildas av två strålar som delar en gemensam slutpunkt. Varje stråle kallas en sida av
+    vinkeln. storleken på en vinkel mäts vanligtvis i _grader_ eller _radianer_.
+
+angle-bisector:
+  title: Vinkelbisector
+  text: |
+    En __vinkelbisector__ är en linje eller stråle som delar upp en vinkel i hälften, i två
+    sammanhängande, mindre vinklar.
+  image: angle-bisector.svg
+
+anti-dot:
+  title: Anti-Dot
+  text: |
+    Cellerna i en punktmaskin kan innehålla __antipunkter__, som du kan tänka dig som "hål" eller
+    "negativa prickar". De har ett värde på –1. Du kan alltid lägga till en punkt och en antipunkt i
+    samma cell utan att ändra dess värde.
+
+apothem:
+  title: Apothem
+  text: |
+    __apotemet__ för en vanlig polygon är avståndet från mittpunkten på en av dess sidor till dess
+    centrum.
+
+arabic-numerals:
+  title: Arabiska siffror
+  text: |
+    __Arabiska siffersystemet__ använder tio olika siffror (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+    tillsammans med ett decimalvärdesystem för att skriva valfritt nummer.
+
+    Den utvecklades först i Indien, sedan anpassad av arabiska matematiker, innan den fördes till
+    Europa av den italienska matematikern Leonardo Fibonacci.
+
+arccos:
+  title: Inverse Cosine
+  text: |
+    Funktionen __invers kosinus__ är en trigonometrisk funktion skriven som `arccos(x)` eller
+    `cos^(-1)(x)`. Det är det omvända av `cos(x)`.
+
+archimedean-solid:
+  title: Archimedean solid
+  text: |
+    Ett __ärkimediskt fast ämne__ är en polyeder som består av olika typer av vanliga polygoner, som
+    ser lika ut från alla håll. Det finns 13 olika arkimediska fasta ämnen.
+  link: /course/polyhedra/platonic#archimedean
+
+arithmetic-mean:
+  title: Aritmetiskt medelvärde
+  text: |
+    __medelvärdet__ är _medelvärdet_ för en uppsättning siffror. Du kan beräkna det men lägga till
+    alla siffror i uppsättningen och dela det totala med antalet objekt.
+
+arithmetic-sequence:
+  title: Aritmetisk sekvens
+  text: |
+    En __aritmetisk sekvens__ (ibland kallad __aritmetisk progression__) är en sekvens med siffror
+    där skillnaden _d_ mellan på varandra följande termer alltid är konstant.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+arithmetic series:
+  title: Aritmetisk serie
+  text: En __aritmetisk serie__ är summan av termerna i en aritmetisk sekvens.
+
+associative:
+  title: associativitet
+  text: |
+    En operation • är associerande om `a•(b•c) = (a•b)•c`. Till exempel är tillägg (+) och
+    multiplikation (×) av nummer associerande.
+
+atom:
+  title: Atom
+  text: |
+    __Atomer__ är de partiklar som utgör allt vanligt ämne: fasta ämnen, vätskor, gaser och plasma.
+    Atomer består av en positivt laddad _kärna_ (eller _kärnan_), som består av _protoner_ och
+    _neutroner_, och omgiven av skal av negativt -laddade _elektroner_. En atoms diameter är ungefär
+    en tiomilliondels millimeter.
+
+axiom:
+  title: Axiom
+  text: |
+    En __axiom__, ibland kallad __postulat__, är ett matematiskt uttalande som betraktas som
+    ”självklart” och accepterat utan bevis. Det borde vara så enkelt att det är uppenbart och utan
+    tvekan sant.
+
+    Axiomer utgör grunden för matematiken och kan användas för att bevisa andra, mer komplexa
+    resultat.
+
+axis-of-symmetry:
+  title: Axis of Symmetry
+  text: |
+    Om en form har reflektionssymmetri är __symmetriaxeln__ linjen som delar upp den i två lika
+    halvor.
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+base-10:
+  title: Bas 10
+  text: |
+    __decimalsystemet__ (eller __bas 10__) är det numreringssystem som oftast används över hela
+    världen. Varje siffra i ett nummer kan ha ett av tio olika värden, från 0 till 9.
+
+bipartite-graph:
+  title: Bipartitgrafik
+  text: |
+    Ett (komplett) __bipartitdiagram__ består av två uppsättningar av vertikaler. Varje topp är
+    ansluten till alla vertikalerna i motsatt uppsättning, men ingen av topparna i sin egen
+    uppsättning.
+  link: /course/graph-theory/handshakes#handshakes-4
+
+blackjack:
+  title: Blackjack
+  text: |
+    __Blackjack__ är ett kortspel där du lägger till värdet på flera kort för att komma så nära 21 -
+    men inte ovan.
+
+cavalieri:
+  title: Cavalieris princip
+  text: |
+    __Cavalieris princip__ säger att om två fasta partiklar har samma höjd och samma tvärsnittsarea
+    på varje nivå, så har de båda samma volym.
+
+    Vi kan använda detta faktum för att härleda att volymen av prismor och cylindrar är deras
+    tvärsnitt multiplicerat med deras höjd.
+
+calculus:
+  title: Calculus
+  text: |
+    __Calculus__ är den gren av matematik som hanterar gränser, derivat, integraler och kraftserier.
+    Vanliga problem inkluderar att hitta en kurvs sluttning, hitta extrema, hitta hastigheten på en
+    funktionsförändring och hitta området under en kurva.
+
+center-of-rotation:
+  title: Center of Rotation
+  text: __rotationscentrum__ är den punkt runt vilken en form roteras.
+  link: /course/transformations/rigid#rotations
+
+centroid:
+  title: tyngd
+  text: |
+    __centroid__ av en triangel är den punkt där dess tre medianer korsar varandra. Det är också
+    "massmitten" för triangeln med enhetlig densitet.
+  link: /course/triangles/properties#center-of-mass
+
+chaos:
+  title: Kaos
+  text: allt
+
+circle:
+  title: Cirkel
+  text: |
+    En __cirkel__ är uppsättningen för alla punkter i två dimensioner, på ett fast avstånd
+    (_radien_) från en given punkt (_mitt_).
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+circle-area:
+  title: Område av en cirkel
+  text: Områdeti en cirkel med radie _r_ ges av folmula `A = pi r^2`.
+
+circle-circumference:
+  title: Cirkelns omkrets
+  text: |
+    Cirkelens __omkrets__ är avståndet runt dess ytterkant. En cirkel med radie _r_ har omkrets `C =
+    2 pi r`.
+  link: /course/circles/introduction#radius
+
+circle-diameter:
+  title: Diameter (cirkel)
+  text: |
+    Cirkelens __diameter__ är avståndet mellan två motsatta punkter på dess omkrets och passerar
+    genom dess centrum.
+  link: /course/circles/introduction#radius
+
+circle-radius:
+  title: Radie
+  text: |
+    Radien __för en cirkel är avståndet (eller ett linjesegment) mellan dess centrum och vilken
+    punkt som helst på dess omkrets.
+  link: /course/circles/introduction#radius
+
+circle-sector:
+  title: Cirkel sektor
+  text: |
+    En __sektor__ av en cirkel är en del av dess inre, avgränsad av två radier och en __båge__. Dess
+    yta är proportionell mot den inre vinkeln, liksom längden på bågen. Detta innebär att
+
+    {.text-center} `(A_"Sector")/(A_"Circle") = "Arc"/"Circumference" = θ/(2π)`
+  link: /course/circles/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
+circle-segment:
+  title: Cirkelsegment
+  text: |
+    Ett __segment__ av en cirkel är en del av dess inre, avgränsat av ett ackord och motsvarande
+    båge.
+
+circumcircle:
+  title: Cirkelcirkel av en triangel
+  text: __circumcircle__ i en triangel är cirkeln som går igenom alla tre av dess toppar.
+  image: circumcircle.svg
+  link: /course/triangles/properties#circumcircle-1
+
+coefficient:
+  title: Koefficient
+  text: |
+    __Koefficienter__ är siffrorna framför variablerna i ett matematiskt uttryck eller ekvation.
+    Till exempel i uttrycket `4x + 5y^2 - 3z` är koefficienten för `x` 4, koefficienten för `y^2` är
+    5 och koefficienten för `z` är –3.
+
+collinear:
+  title: Kollinära punkter
+  text: Tre eller fler poäng är __kollinära__ om de ligger på samma linje.
+
+compass:
+  title: Kompass
+  text: |
+    En kompass är ett ritverktyg som används för att skapa cirklar eller bågar. Den består av två
+    armar - nålen i den ena änden placeras i mitten, medan penna i den andra änden spårar ut kurvan.
+
+complementary-angles:
+  title: Kompletterande vinklar
+  text: Två vinklar är __kompletterande__ om de lägger till 90 ° (en rätt vinkel).
+
+complete-graph:
+  title: Komplett graf
+  text: |
+    I __kompletta diagram__ är varje toppunkt ansluten till varje annan toppunkt. En komplett graf
+    med _n_ hörn har `(n×(n-1))/2` kanter.
+  link: /course/graph-theory/handshakes#handshakes-3
+
+complex-numbers:
+  title: Komplexa tal
+  text: |
+    De __komplexa siffrorna__ är alla siffror som är summan eller skillnaden för ett reellt och ett
+    imaginärt tal. De är ofta skrivna som `a + bi`, där _a_ är den verkliga delen och _b_ är den
+    imaginära delen.
+
+    Komplexa nummer kan representeras på ett tvådimensionellt plan, där _x_ -axen är de verkliga
+    siffrorna, och _y_ -axen är de imaginära siffrorna.
+
+    Uppsättningen med alla komplexa nummer betecknas ofta med symbolen `CC`.
+
+composite-number:
+  title: Sammansatt tal
+  text: |
+    Ett __sammansatt nummer__ är ett heltal som inte är primt. Detta betyder att den har andra
+    faktorer än 1 och sig själv.
+
+concave:
+  title: Konka polygon
+  text: |
+    En __konkav__ polygon har minst en inre vinkel större än 180 °. Åtminstone en av diagonalerna
+    ligger _utanför_ polygonen. Ett vanligt sätt att identifiera en konkav polygon är att leta efter
+    en “inhultad” sida av polygonen. _Konkave_ är motsatsen till _konvexa_ polygoner.
+  link: /course/polyhedra/polygons#concave
+
+cone:
+  title: Kon
+  text: |
+    En __kon__ är en tredimensionell fast substans som har en cirkulär _bas_ förenad med en enda
+    punkt (kallas _toppunktet_) av en krökt sida. Du kan också tänka på en kon som en "cirkulär
+    pyramid".
+
+    En __höger kon__ är en kon med dess topp direkt ovanför mitten av sin bas.
+  link: /course/circles/spheres-cones-cylinders#cone
+  image: cone.svg
+
+cone-volume:
+  title: Volym av en kon
+  text: |
+    Konens volym anges av ekvationen
+
+    {.text-center} `V = 1/3 π r^2 h`,
+
+    där _r_ är radien för den cirkulära basen, och _h_ är konens höjd (det vinkelräta avståndet från
+    basen till topppunkten).
+
+congruent:
+  title: Kongruens
+  text: |
+    I geometri är två figurer __kongruenta__ om de är identiska i storlek, form och mått. Det
+    betyder att vi kan flytta, vända eller rotera dem så att de passar exakt ovanpå varandra.
+  link: /course/euclidean-geometry/definitions#congruence
+
+congruent-angles:
+  title: Congruent Angles
+  text: Två vinklar är __kongruenta__ om de har samma storlek.
+
+conic-section:
+  title: Koniska avsnitt
+  text: |
+    En __konisk sektion__ är en kurva som skapas som skärningspunkten mellan ytan på en kon med ett
+    plant plan. Det finns fyra olika typer av koniska sektioner som delar många egenskaper:
+
+    * Cirkel
+
+    * Ellips
+
+    * Parabola
+
+    * Hyperbola
+  link: /course/circles/conic-sections
+
+convex:
+  title: Konvex polygon
+  text: |
+    En __konvex__ polygon innehåller inga inre vinklar större än 180 °. Alla diagonaler ligger inuti
+    polygonen. Detta är motsatsen till _konkava_ polygoner.
+  link: /course/polyhedra/polygons#concave
+
+coordinate-system:
+  title: Koordinatsystem
+  text: |
+    Ett __kordinatsystem__ är ett tvådimensionellt plan som innehåller två vinkelräta axlar. Varje
+    punkt på planet kan definieras med två siffror (koordinater), som anger dess avstånd från de två
+    axlarna.
+
+coordinate-system-origin:
+  title: Koordinatsystem
+  text: |
+    __ursprung__ för ett koordinatsystem är punkten med koordinater (0, 0). Det är vanligtvis den
+    punkt där de två axlarna korsar.
+
+corresponding-angles:
+  title: Motsvarande vinklar
+  text: |
+    __Motsvarande vinklar__ är två vinklar som är i samma position med avseende på det tvärgående,
+    men på olika linjer. De är alltid kongruenta.
+  image: corresponding-angles.svg
+
+cos:
+  title: Cosinus
+  text: |
+    __Cosine__ är en trigonometrisk funktion skriven som `cos(θ)`. I en rätvinklad triangel är det
+    förhållandet mellan den intilliggande sidan och hypotenusen.
+  link: /course/triangles/trigonometry#trig-functions
+
+cpoct:
+  title: CPOCT
+  text: |
+    CPOCT står för __motsvarande delar av kongruenta trianglar__. Det betyder att om två trianglar
+    är kongruenta, måste alla deras motsvarande komponenter (vinklar, sidor, midsegment, ...) också
+    vara kongruenta med varandra.
+  link: /course/triangles/congruence#cpoct
+
+cross-section:
+  title: Tvärsnitt
+  text: Ett __tvärsnitt__ är skärningspunkten mellan en tredimensionell fast substans med ett plan.
+
+cryptography:
+  title: kryptografi
+  text: |
+    __Kryptografi__ är matematikområdet som studerar kryptering och dechiffrering av hemliga
+    meddelanden.
+
+cube:
+  title: Kub
+  text: |
+    En __kub__ (ibland kallad __Hexahedron__) är en vanlig polyhedron där varje ansikte är en
+    kvadrat. Det är en av de fem _platoniska fasta partiklarna_, och har 6 ytor, 8 vertikaler och 12
+    kanter.
+  link: /course/polyhedra/platonic#platonic-overview
+
+cube-volume:
+  title: Volym av en kub
+  text: En kub med sidolängd _a_ har volym `V = a^3`.
+
+cylinder:
+  title: Cylinder
+  text: |
+    En __cylinder__ är ett tredimensionellt fast material bestående av två kongruenta, parallella,
+    cirkulära sidor (_baserna_), förenade med en krökt yta. Du kan också tänka på en cylinder som
+    ett "cirkulärt prisma".
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+
+cylinder-volume:
+  title: Volym av en cylinder
+  text: |
+    Volymen för en cylinder anges av ekvationen
+
+    {.text-center} `V = π r^2 h`,
+
+    där _r_ är radien för den cirkulära basen, och _h_ är höjden på cylindern (vinkelrätt avståndet
+    mellan de två baserna).
+
+degrees:
+  title: Degrees
+  text: |
+    __Grad__ är en enhet för att mäta vinklar, betecknade med symbolen °. En komplett revolution är
+    360 °, en rätt vinkel 90 ° och så vidare.
+
+denominator:
+  title: Nämnare
+  text: 'Nämnaren __är det lägsta talet i en bråk. Till exempel, i `4/7` är numret 7 nämnaren.'
+
+dilation:
+  title: Utvidgning
+  text: |
+    En __dilatation__ är en transformation som ändrar storleken på en geometrisk form genom att göra
+    den större eller mindre.
+  image: dilation.svg
+  link: /course/transformations/dilations
+
+directed-graph:
+  title: Riktad graf
+  text: 'I en __riktad graf__ har varje kant en "pil", dvs ett startvinkel och ett slutvinkel.'
+  link: /course/graph-theory/introduction#intro-1
+
+discriminant:
+  title: diskriminantanalys
+  text: |
+    __diskriminerande__ för en kvadratisk ekvation är uttrycket under kvadratroten i den kvadratiska
+    formeln: `b^2 − 4ac`.
+
+    Det kan användas för att bestämma antalet lösningar i kvadratisk ekvation. Om diskriminanten är
+    större än 0 finns det två lösningar. Om det är lika med 0 finns det bara en lösning. Om det är
+    mindre än 0 finns det inga (verkliga) lösningar.
+
+dna:
+  title: GIKT
+  text: |
+    __DNA__ (Deoxyribonucleic Acid) är en molekyl som innehåller den genetiska planen för alla
+    levande organismer. De flesta DNA: er består av två strängar som bildar en _dubbel spiral_.
+    Genetisk information kodas i storleksordningen av fyra nukleinsyror (A, G, C och T) som utgör
+    DNA. _DNA-sekvensering_ är processen för att extrahera denna information - en viktig teknik inom
+    biologi, medicin, genetik och bioteknik.
+
+dodecahedron:
+  title: Dodecahedron
+  text: |
+    __Dodecahedron__ är ett platoniskt fast ämne och består av 12 ansikten som är vanliga
+    pentagoner. Den har 20 vertikaler och 30 kanter.
+  link: /course/polyhedra/platonic#platonic-overview
+
+dot-annihilation:
+  title: Förintelse
+  text: |
+    Om du har både en punkt och en antipunkt i samma cell, avbryter de, eller __förintar varandra.
+    Tänk på `–1 + 1 = 0`.
+
+dot-machine:
+  title: Dot Machine
+  text: |
+    En __punktmaskin__ består av flera celler som innehåller punkter. Du kan manipulera dessa
+    punkter enligt specifika regler.
+
+    Till exempel i en `1←3` -maskin kan 3 punkter i en cell omvandlas till en prick i nästa cell
+    till _vänster_. På samma sätt kan en prick konverteras till 3 punkter i nästa cell till _höger_.
+    Detta kallas en "explosion".
+
+ellipse:
+  title: Ellips
+  text: |
+    En __ellips__ är en böjd väg som omger två kontaktpunkter. Varje punkt på ellipsens omkrets har
+    samma _summa av avstånd_ till de två fokuserna.
+
+    Om fokuserna är mycket nära, ser ellipsen nästan ut som en cirkel. När de rör sig längre isär
+    blir ellipsen mer långsträckt.
+
+    Ellipser är en typ av _konisk sektion_: en korsning av en kon med ett plan.
+  image: ellipse.svg
+  link: /course/circles/conic-sections#ellipses
+
+equation:
+  title: Ekvation
+  text: |
+    En __ekvation__ är en matematisk sats som skapas genom att ansluta två eller flera uttryck med
+    __likhetstecknet__ `=`. Det indikerar att alla dessa uttryck har samma värde.
+
+equilateral-triangle:
+  title: Liksidig triangel
+  text: En __liksidig triangel__ är en triangel där alla tre sidorna har samma längd.
+
+euclidean-geometry:
+  title: Euklidisk geometri
+  text: |
+    __Euklidisk geometri__ är den typ av geometri som matematikern _Euklid_ föreställer och
+    inkluderar studiet av punkter, linjer, polygoner, cirklar samt tredimensionella fasta ämnen. Det
+    beror på bara fem _axiom_, de grundläggande lagarna för geometri, som beskriver alla tillåtna
+    operationer och konstruktioner.
+  link: /course/euclidean-geometry/euclids-axioms#euclid
+
+factor:
+  title: Faktor
+  text: |
+    Ett tal _a_ är en __faktor__ (eller __divisor__) för ett nummer _b_, om du kan dela _b_ av _a_
+    utan resten.
+  link: /course/divisibility/factors-and-multiples
+
+factorial:
+  title: Fakultet
+  text: |
+    __factorial__ för ett positivt heltal är produkten av alla heltal till och med sig själv. Vi
+    skriver det med exempelvis utropstecken
+
+    {.text-center} `5! = 1×2×3×4×5`.
+
+    Per definition `0! = 1.`
+
+factorisation:
+  title: Factoring Premium
+  text: __primfaktorisering__ för ett nummer är ett sätt att skriva det som en produkt av primtal.
+  link: /course/divisibility/primes
+
+fermat-last:
+  title: Fermats sista sats
+  text: |
+    __Fermats sista sats__ anger att ekvationen `x^n + y^n = z^n` inte har några heltalslösningar
+    för `n>2`. Om `n=2` får vi _Pythagoras 'teorem_ som har många heltalslösningar, men för _n_ = 3,
+    4, 5, ... finns det inga.
+
+    1637 gjorde matematikern Pierre de Fermat en anteckning i en lärobok och hävdade att han hade
+    ett bevis, men att det var för stort för att passa in i marginalen. I över 350 år försökte andra
+    matematiker att hitta detta bevis, och Fermats sista sats stod till och med i _Guinness Book of
+    World Records_ som det "svåraste matematiska problemet".
+
+    1994, efter många års arbete, lyckades Andrew Wiles äntligen bevisa det. Han fick senare
+    Abelpriset, en av de högsta utmärkelserna i matematik.
+
+fibonacci-numbers:
+  title: Fibonacci-nummer
+  text: |
+    Sekvensen med __Fibonacci-siffror__ börjar med 1, 1. Varje följande term är summan av de två
+    föregående termerna, vilket innebär att den rekursiva formeln är `x_n = x_(n-1) + x_(n-2)`.
+  link: /course/sequences/fibonacci#fibonacci
+
+figurate-numbers:
+  title: Firgurate-nummer
+  text: |
+    __Figurnummer__ är siffror som kan representeras med geometriska former. Exempel inkluderar
+    kvadrat-, triangel- och tetraedrala tal.
+  link: /course/sequences/figurate#figurate
+
+formula:
+  title: Formel
+  text: |
+    En __formel__ är en regel eller ekvation som beskriver förhållandet mellan två eller flera
+    variabler. Ett exempel är `A = πr^2`.
+
+fractal:
+  title: Fraktal
+  text: |
+    En __fraktal__ är en geometrisk form som har en _fraktionell dimension_. Många kända fraktaler
+    är _självliknande_, vilket innebär att de består av mindre kopior av sig själva. Fraktaler
+    innehåller mönster på varje förstoringsnivå, och de kan skapas genom att upprepa en procedur
+    eller iterera en ekvation oändligt många gånger.
+  link: /course/fractals/introduction
+
+fta:
+  title: Grundläggande teorem om Arithemtic
+  text: |
+    I __Fundamental Theorem of Arithemtic__ (FTA) sägs att varje heltal har en unik
+    primärfaktorisering.
+
+function:
+  title: Fungera
+  text: |
+    En __-funktion__ är en matematisk relation som konverterar en ingång (_x_) till exakt en utgång
+    (_y_). De uttrycks ofta som matematiska ekvationer med formen `f(x)`.
+
+function-graph:
+  title: Grafer över funktioner
+  text: |
+    Vi kan plotta matematiska funktioner i formen `f(x)` i ett koordinatsystem. Resultatet kallas
+    funktionen __graf__.
+
+gcf:
+  title: Största gemensamma faktorn
+  text: |
+    Den __största gemensamma faktorn__ (gcf) med två siffror _a_ och _b_ är det största heltalet som
+    är en faktor för både _a_ och _b_.
+  link: /course/divisibility/greatest-common-factors
+
+geometric-sequence:
+  title: Geometrisk sekvens
+  text: |
+    En __geometrisk sekvens__ (ibland kallad __geometrisk progression__) är en sekvens med siffror
+    där förhållandet _r_ mellan på varandra följande termer alltid är konstant.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+geometric-series:
+  title: Geometriska serier
+  text: |
+    En __geometrisk serie__ är oändlighetssumman för termerna i en geometrisk sekvens, där på
+    varandra följande termer har ett konstant förhållande _r_. Till exempel,
+
+    {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
+
+    är en geometrisk serie med konstant förhållande `1/2`.
+
+glide-reflection:
+  title: Glid reflektioner
+  text: |
+    En __glidreflektion__ är en speciell typ av transformation. Det är en kombination av en
+    _reflektion_ och en _översättning_ i samma riktning som reflektionsaxeln.
+  link: /course/transformations/symmetry-groups#footsteps
+
+golden-ratio:
+  title: Gyllene snittet
+  text: |
+    Det __gyllene förhållandet__ är ett specifikt irrationellt tal med värdet `φ = 1.61803398875…`.
+    Det kan approximeras genom att dela två Fibonacci-nummer i följd.
+
+    Det gyllene förhållandet ses ofta som särskilt estetiskt tilltalande inom konst och arkitektur,
+    och det förekommer i spiralerna från många växter.
+  link: /course/sequences/fibonacci#golden-ratio-1
+
+graph:
+  title: Graf
+  text: En __graf__ är en samling av hörn som är anslutna med kanter.
+  link: /course/graph-theory/introduction
+
+graph-cycle:
+  title: Cykel
+  text: __Cykler__ är diagram som består av en enda vertikalslinga.
+  link: /course/graph-theory/introduction#intro-4
+
+graph-degree:
+  title: Grad
+  text: __graden__ för ett toppunkt är antalet kanter som möts vid det toppunktet.
+  link: /course/graph-theory/introduction#intro-3
+
+graph-edge:
+  title: Kant
+  text: __Kanter__ är linjerna som kopplar samman hörn (punkter) i en graf.
+  link: /course/graph-theory/introduction
+
+graph-order:
+  title: Beställa
+  text: __ordningen__ på ett diagram är antalet vertikaler i den.
+  link: /course/graph-theory/introduction#intro-3
+
+graph-vertex:
+  title: Vertex
+  text: En __toppunkt__ är en punkt eller nod som ingår i en graf.
+  link: /course/graph-theory/introduction
+
+gravity:
+  title: Allvar
+  text: |
+    __Gravity__ är en av de fyra grundläggande krafterna i naturen, och den drar alla två massor i
+    universum mot denna andra. Isaac Newton upptäckte att styrkan mellan två massor `m_1` och `m_2`
+    är
+
+    {.text-center} `F = (G m_1 m_2) / r^2`,
+
+    där _G_ är gravitationskonstanten och _r_ är avståndet mellan massorna.
+
+group:
+  title: Grupp
+  text: |
+    En grupp är en samling "saker" (som siffror eller symmetrier) som följer tre olika regler:
+
+    * Du kan lägga till / kombinera två saker för att få en annan som också finns i gruppen.
+
+    * Sakerna är _associerande_, vilket betyder att `a+(b+c) + (a+b)+c`.
+
+    * Det finns en _identitet_, och varje "sak" har en _omvänd_ som, när den läggs till, ger
+    identiteten.
+  link: /course/transformations/symmetry-groups#groups-1
+
+hailstone-sequence:
+  title: Hailstone Sequence
+  text: |
+    __Hailstone-sekvenser__ kan genereras genom att välja valfritt heltal som utgångspunkt och sedan
+    följa dessa regler:
+
+    * Om `x_n` är jämnt, `x_(n+1) = x_n / 2`.
+
+    * Om `x_n` är udda, `x_(n+1) = 3 * x_n + 1`
+  link: /course/sequences/special#hailstone
+
+heptagon:
+  title: Heptagon
+  text: En __heptagon__ är en polygon med sju sidor.
+
+hexagon:
+  title: Sexhörning
+  text: En __hexagon__ är en polygon med sex sidor.
+
+hyperbola:
+  title: Hyperbel
+  text: |
+    En __hyperbola__ är formen på grafen för funktionen `y = 1/x`. Det består av två osammanhängande
+    delar, som båda närmar sig _asymptoter_. Det är också en _konisk sektion_.
+  image: hyperbola.svg
+
+hypotenuse:
+  title: Hypotenusa
+  text: |
+    __hypotenusen__ för en rätvinklad triangel är dess längsta sida, som ligger mittemot rätt
+    vinkel.
+  image: right-triangle.svg
+
+icosahedron:
+  title: icosahedron
+  text: |
+    __Icosahedron__ är en platonisk solid och består av 20 ansikten som alla är liksidiga trianglar.
+    Den har 12 vertikaler och 30 kanter.
+  link: /course/polyhedra/platonic#platonic-overview
+
+imaginary:
+  title: Fantastiska siffror
+  text: |
+    __Fantastiska siffror__ genereras genom att ta kvadratiska rötter med negativa tal. Trots deras
+    namn är de av stor betydelse inom matematik, naturvetenskap och teknik.
+
+    __imaginära enheten__ är skriven som `i = sqrt(−1)`, och andra imaginära nummer kan skrivas som
+    dess multiplar. Till exempel `sqrt(-5) = 5i`.
+
+infinity:
+  title: Oändlighet
+  text: |
+    __Infinity__ är en kvantitet utan gräns eller slut. I matematik representeras den av symbolen
+    `∞`.
+
+information:
+  title: Informationsteori
+  text: |
+    __Informationsteori__ är studien av kvantifiering, lagring och kommunikation av data och
+    information. Det används inom logik, kryptografi och datavetenskap.
+
+integer:
+  title: heltal
+  text: |
+    __heltal__ är positiva och negativa heltal inklusive noll: ..., –3, –2, –1, 0, 1, 2, 3,…. De
+    betecknas ofta med symbolen `ZZ`.
+
+internal-angle:
+  title: Inre vinklar
+  text: 'De __inre vinklarna__ för en polygon är vinklarna på insidan, vid varje toppunkt.'
+  image: internal-angle.svg
+
+irrational-numbers:
+  title: Irrationella siffror
+  text: |
+    __Irrationella siffror__ är siffror som inte kan uttryckas som bråk av heltal (_rationella
+    siffror_). Till exempel är 0.333333 ... = `1/3` _rationell_ men `π`, `sqrt(2)` och _e_ är alla
+    _irrationella_. Decimalformen för ett irrationellt nummer stoppar eller upprepar inte.
+
+irregular-polygon:
+  title: Oregelbunden polygon
+  text: |
+    En __oregelbunden polygon__ är en som är _inte vanlig_. Det betyder att antingen sidorna eller
+    vinklarna inte alla har samma storlek.
+
+isosceles-triangle:
+  title: Likbent triangel
+  text: I en __likställt triangel__ har två sidor samma längd.
+
+iss:
+  title: Internationell rymdstation
+  text: |
+    __International Space Station__ (ISS) lanserades 1998 och kretsar runt jorden i en höjd av cirka
+    400 km. Det är den största människokroppen i låg jordbana och har varit bebodd kontinuerligt
+    sedan lanseringen. Det kan ses med blotta ögat från jorden.
+
+julia-set:
+  title: Julia Set
+  text: |
+    Med en funktion `f`, liksom `§f(x) = x^2`, är motsvarande __Julia-set__ `§K(f)` en delmängd av
+    alla punkter i det komplexa planet, där sekvensen som bildas genom att upprepade gånger
+    applicera `f` inte avviker. I många fall är Julia-uppsättningen en _fraktal_ och den är nära
+    besläktad med _Mandelbrot-uppsättningen_.
+  link: /course/fractals/mandelbrot#julia
+  image: julia-set.png
+
+kite:
+  title: Drake
+  text: En __drake__ är en fyrkant i vilken två par intilliggande sidor har samma längd.
+  link: /course/polyhedra/quadrilaterals#kites
+
+koch-snowflake:
+  title: Koch snöflinga
+  text: |
+    __Koch Snowflake__ är en självliknande fraktal. Den består av en ekvivalent triangel, med mindre
+    liksidiga trianglar rekursivt tillagda till var och en av dess sidor.
+  link: /course/fractals/introduction#koch
+  image: koch-snowflake.svg
+
+laws-of-nature:
+  title: Naturlagar
+  text: |
+    __naturlagarna__ är namnet som ges gemensamt till de fysiska reglerna (vanligtvis uttryckta som
+    matematiska ekvationer) som försöker förklara allt vi observerar i universum.
+
+lcm:
+  title: Lägsta vanliga multipel
+  text: |
+    __Lägsta vanliga multipel__ (lcm) med två siffror _a_ och _b_ är det minsta heltalet som är en
+    multipel av både _a_ och _b_.
+  link: /course/divisibility/least-common-multiples
+
+line:
+  title: Linje
+  text: |
+    En __rad__ är en uppsättning av oändligt många punkter som sträcker sig för evigt i båda
+    riktningarna. Linjerna är alltid raka och har ingen _bredd_.
+  link: /course/euclidean-geometry/definitions#lines
+
+line-segment:
+  title: Linjesegmentet
+  text: |
+    Ett __radsegment__ är den del av en linje som ligger mellan två punkter, utan att sträcka sig
+    till oändlighet. Vi kan märka linjesegment från punkt _A_ till punkt _B_ som `bar(AB)`.
+  link: /course/euclidean-geometry/definitions#segments
+
+line-slope:
+  title: Linjens lutning
+  text: |
+    Linjen __lutning__ mäter dess "branthet" och är vanligtvis betecknad med bokstaven _m_. Det är
+    förändringen i _y_ för en enhetsförändring i _x_ längs linjen.
+
+linear-equation:
+  title: Linjär ekvation
+  text: |
+    En __linjär ekvation__ har formen `ax + b = 0`, där _x_ är en variabel, och _a_ och _b_ är
+    siffror. När de visas i ett koordinatsystem bildar värdena på `ax+b` en rak linje.
+
+linear-function:
+  title: Linjär funktion
+  text: |
+    En __linjär funktion__ är en funktion vars graf är en rak linje. Det kan definieras som `f(x) =
+    mx + c`, där _m_ är lutningen på linjen, och _c_ är dess _y_ -ax-skärning.
+
+mandelbrot-set:
+  title: Mandelbrot Set
+  text: |
+    __Mandelbrot-uppsättningen__ är uppsättningen komplexa siffror `CC` för vilken rekursiv sekvens
+    `§z_n = z_(n-1)^2 + c` (med `§z_0 = 0`) inte avviker. Det är en _fraktal_.
+  link: /course/fractals/mandelbrot
+  image: mandelbrot-set.png
+
+matrix:
+  title: Matris
+  text: En __matris__ är en rektangulär matris med siffror arrangerade i rader och kolumner.
+
+median:
+  title: Median
+  text: |
+    __median__ för en uppsättning siffror är värdet för vilket hälften av siffrorna är större och
+    hälften av siffrorna är mindre. Om det finns två "mellansiffror" är det genomsnittet för dessa
+    nummer.
+
+midpoint:
+  title: Midpoint
+  text: |
+    __mittpunkt__ för ett linjesegment är punkten på linjesegmentet som delar upp segmentet i
+    mitten, i två sammanhängande delar. Mittpunktsformeln__ säger att för slutpunkter `(x_1, y_1)`
+    och `(x_2,y_2)` är mittpunkten `((x_1 + x_2)/2, (y_1 + y_2)/2)`.
+
+millennium-prize:
+  title: Millenniumprisproblem
+  text: |
+    De sju __tusenprisproblemen__ är några av de svåraste öppna problemen i matematik. De listades
+    år 2000 av _Clay Mathematics Institute_, och var och en har en belöning på 1 miljoner dollar:
+
+    * P vs NP
+
+    * Hodge Conjecture
+
+    * Poincaré-antagandet
+
+    * Riemann-hypotesen
+
+    * Yang-Mills Existence and Mass Gap
+
+    * Navier-Stokes existens och jämnhet
+
+    * The Birch and Swinnerton-Dyer Conjecture
+
+    Hittills har bara ett av problemen, _Poincaré Conjecture_, lösts. Men matematikern som löst det,
+    Grigori Perelman, avslog utmärkelsen.
+
+mode:
+  title: Läge
+  text: |
+    Lägetför en uppsättning nummer är det nummer som förekommer oftast. Till exempel är läget för
+    [3, 4, 4, 4, 5, 5, 6] 5.
+
+molecule:
+  title: Molekyl
+  text: |
+    En __molekyl__ består av två eller flera atomer som hålls samman av kemiska bindningar. Den har
+    ingen elektrisk laddning, till skillnad från __joner__.
+
+    Exempel på molekyler inkluderar `O_2`, som består av två kopplade syreatomer, och `H_2 O`, som
+    består av två väteatomer och en syreatom.
+
+morse-code:
+  title: Morse kod
+  text: |
+    __Morskod__ är ett sätt att representera bokstäver och siffror med korta och långa signaler
+    (kallas prickar och streck). Den är uppkallad efter _Samuel Morse_ och användes ursprungligen
+    för att kommunicera över långa avstånd med hjälp av telegrafer.
+
+    Till exempel skulle bokstaven "L" representeras med hjälp av sekvensen _{x-morse(char="L")}_ för
+    korta och långa signaler.
+
+multiple:
+  title: Flera olika
+  text: 'Ett tal _a_ är en __multipel__ av ett tal _b_, om _b_ är en faktor på _a_.'
+  link: /course/divisibility/factors-and-multiples
+
+natural-numbers:
+  title: Naturliga nummer
+  text: |
+    De __naturliga siffrorna__ är de positiva heltal som börjar på 1: 1, 2, 3, 4, ... De betecknas
+    ofta med symbolen `NN`.
+
+net:
+  title: Nät av polyhedra
+  text: __nät__ för en polyhedron är vad du får när du "veckar ut" dess polygonala ytor på en plan yta.
+
+neutron:
+  title: Neutron
+  text: |
+    En __neutron__ är en av partiklarna som utgör kärnan i en atom. Den har ingen laddning och har
+    ungefär samma massa som en proton.
+
+np:
+  title: NP-hårda problem
+  text: |
+    _Beräkningskomplexitetsteori_ handlar om att bestämma hur "svåra" problem ska lösas av en dator.
+    __NP hård__ (icke-deterministisk polynomtid hård) är klassen för de svåraste problemen.
+
+numerator:
+  title: Täljare
+  text: 'Siffranär det översta numret i en bråk. Till exempel, i `4/7` är siffran 4 täljaren.'
+
+obtuse-angle:
+  title: Trubbig vinkel
+  text: En __stötvinkel__ är en vinkel i storlek större än 90 ° men mindre än 180 °.
+
+obtuse-triangle:
+  title: Stöt triangel
+  text: I en __stöt triangel__ är en inre vinkel större än 90 °.
+  link: /course/triangles/properties#classification
+
+octagon:
+  title: Oktogon
+  text: En __åttkant__ är en polygon med åtta sidor.
+
+octahedron:
+  title: Oktaeder
+  text: |
+    __Octahedron__ är ett platoniskt fast ämne och består av åtta ansikten som är liksidiga
+    trianglar. Den har 6 vertikaler och 12 kanter.
+  link: /course/polyhedra/platonic#platonic-overview
+
+order-of-symmetry:
+  title: Order av symmetri
+  text: |
+    Om en form har rotationssymmetri, är __symmetriordningen__ antalet orienteringar där formen ser
+    densamma ut. (Eller det är antalet gånger du kan rotera formen innan vi kommer tillbaka till
+    början.)
+  link: /course/transformations/symmetry#rotational-symmetry
+
+origin:
+  title: Ursprung
+  text: |
+    __ursprung__ för ett koordinatsystem är punkten (0, 0), där _x_ -axen och _y_ -axen korsar
+    varandra.
+
+origin-number-line:
+  title: Ursprunget till en nummelinje
+  text: __ursprung__ för en sifferrad är punkten 0.
+
+palindrome:
+  title: Palindrom
+  text: |
+    En __palindrome__ är ett ord eller ett nummer som läser samma från bakifrån till framsidan som
+    från främre till baksida. Till exempel är 25752 och "ANNA" båda palindromer.
+  link: /course/transformations/symmetry#palindromes
+
+parabola:
+  title: Parabolantenn
+  text: |
+    En __parabola__ är formen på diagrammet för en kvadratisk funktion som `y = x^2`. Den är
+    symmetrisk, U-formad och kan peka antingen uppåt eller nedåt. Det är också ett _koniskt
+    avsnitt_.
+  image: parabola.svg
+
+parabola-conic:
+  title: Parabolantenn
+  text: |
+    En __parabola__ är uppsättningen för alla punkter i ett plan, som har samma avstånd från en fast
+    linje, kallad __directrix__, och en fast punkt, kallad __fokus__.
+
+parabola-focus:
+  title: Fokus för en parabola
+  text: |
+    Fokus__ på en parabola är en fast punkt i dess inre. För en parabolspegel spårar alla
+    parallella, inkommande ljusstrålar i fokus efter reflektion.
+
+parabola-vertex:
+  title: Hörn av en parabola
+  text: |
+    __toppunktet__ av en parabola är den punkt där den ändrar riktning. Det är antingen det maximala
+    eller det minsta av motsvarande kvadratisk funktion, och den ligger på parabolens symmetriaxel.
+
+parallel:
+  title: Parallella linjer
+  text: |
+    Två eller flera rader är __parallella__ om de aldrig korsar varandra. De har samma lutning och
+    avståndet mellan dem är alltid konstant.
+  image: parallel.svg
+  link: /course/euclidean-geometry/definitions#parallel
+
+parallelogram:
+  title: Parallellogram
+  text: En __parallellogram__ är en fyrkant i vilken båda par av motsatta sidor är parallella.
+  link: /course/polyhedra/quadrilaterals#parallelograms
+
+pascals-triangle:
+  title: Pascal's Triangle
+  text: |
+    __Pascal triangel__ är en sifferpyramid där varje cell är summan av de två cellerna direkt
+    ovanför. Den innehåller alla binomialkoefficienter, såväl som många andra nummersekvenser och
+    mönster.
+  link: /course/sequences/pascals-triangle#pascal-triangle
+
+penrose:
+  title: Penrose sida vid sida
+  text: |
+    En __penrosbeläggning__ är en _icke-periodisk_, _självliknande_ tessellation. Den består bara av
+    några olika former, men upprepar sig aldrig.
+  link: /course/polyhedra/tessellations#penrose
+
+pentagon:
+  title: Pentagon
+  text: En __femkant__ är en polygon med fem sidor.
+
+percent:
+  title: Procent
+  text: |
+    En __procent__ är ett förhållande vars nämnare är 100. Vi skriver till exempel 80% för att
+    betyda `80/100 = 0.8`.
+
+perfect-numbers:
+  title: Perfekta siffror
+  text: |
+    Ett __perfekt tal__ är ett tal som är lika med summan av dess delare (exklusive sig själv). Till
+    exempel är `28 = 1 + 2 + 4 + 7 + 14` ett perfekt nummer.
+  link: /course/sequences/special#perfect-1
+
+perpendicular:
+  title: Vinkelräta linjer
+  text: |
+    Två rader är __vinkelräta__ (ibland kallad _normal_ eller _ortogonal_) om de skär varandra i
+    rätt vinkel.
+  image: perpendicular.svg
+  link: /course/euclidean-geometry/definitions#perpendicular
+
+perpendicular-bisector:
+  title: Vinkelrät bisektris
+  text: |
+    __vinkelrätt bisektor__ i ett linjesegment passerar genom dess mittpunkt och skär den i en
+    vinkel på 90 °.
+  image: perpendicular-bisector.svg
+
+pi:
+  title: Pi
+  text: |
+    __Pi__, ofta skrivet som den grekiska bokstaven _π_, är förhållandet mellan omkretsen och
+    diametern på en cirkel. Det är ett transcendentalt tal, och dess värde är ungefär 3.14159265 ...
+  link: /course/circles/introduction#pi-definition
+
+platonic-solid:
+  title: Platoniskt solid
+  text: |
+    En __platonisk solid__ är en polyhedron där varje ansikte är en vanlig polygon med samma antal
+    kanter, och där samma antal ansikten möts vid varje toppunkt. Det finns bara fem olika
+    platoniska fasta ämnen: Tetrahedron, Cube, Octahedron, Dodecahedron och Icosahedron.
+  link: /course/polyhedra/platonic
+
+point:
+  title: Punkt
+  text: |
+    En __punkt__ är en specifik plats i rymden. Poäng beskriver en position, men har ingen storlek
+    eller form själva.
+  link: /course/euclidean-geometry/definitions#points
+
+polygon:
+  title: Polygon
+  text: |
+    En __polygon__ är geometrisk form som består av raka linjesegment. Polygoner kan inte innehålla
+    några böjda sidor eller hål. Till exempel är en fyrkant en polygon men en cirkel är det inte.
+  image: polygon.svg
+  link: /course/polyhedra/polygons#polygons
+
+polygon-diagonal:
+  title: Diagonal
+  text: |
+    En __diagonal__ av en polygon är ett linjesegment som förbinder två hörn som inte är bredvid
+    varandra.
+
+polygon-edge:
+  title: Edge of a Polygon
+  text: |
+    __sidorna__ eller __kanterna__ av en polygon är linjesegmenten som utgör dess kontur. Till
+    exempel har en triangel tre sidor.
+
+polygon-vertex:
+  title: Hörn av en polygon
+  text: __vertikaler__ för en polygon är de punkter där dess intilliggande sidor möts (dess "hörn").
+
+polyhedron:
+  title: polyhedron
+  text: |
+    En __polyhedron__ (plural är _polyhedra_) är ett tredimensionellt fast ämne utan böjda ytor
+    eller kanter. Alla ansikten på en polyhedron är polygoner. Till exempel är en kub och en pyramid
+    polyhedra, men en sfär är det inte.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-dual:
+  title: Dubbel av en polyhedron
+  text: ALLT
+  link: /course/polyhedra/platonic#platonic-dual
+
+polyhedron-edge:
+  title: Kanten av en polyhedron
+  text: __kanterna__ på en polyhedron är linjesegmenten där två av dess ytor är anslutna.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-face:
+  title: Ansikte på en polyhedron
+  text: __ytorna__ på en polyhedron är polygoner som utgör dess yta.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-vertex:
+  title: Hörn av en polyhedron
+  text: En "polyhedons" hörn kallas dess __hörn__.
+  link: /course/polyhedra/polyhedra
+
+polynomial:
+  title: Polynom
+  text: |
+    Ett __polynom__ är ett algebraiskt uttryck som består av konstanter och multiplar av variabler
+    höjt till heltalskraft. Till exempel är `5x^3 - 2y^2 + x + 4` ett polynom. Den vanligaste formen
+    av ett polynom med bara en variabel är `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0`,
+    där `a_n`, `a_(n-1)`, ..., `a_0` alla är specifika konstanter.
+
+polynomial-degree:
+  title: Grad
+  text: |
+    __graden__ för en term eller polynom är den högsta kraften hos alla variabler i den. Exempelvis
+    är graden `5x^3 + 2y^2 - 4z` 3.
+
+powers:
+  title: exponentiering
+  text: |
+    __Exponentiering__ (eller __krafter__) är den matematiska operationen där ett tal (_bas_)
+    multipliceras med sig själv ett specificerat antal gånger (_exponenten_). Detta skrivs
+    vanligtvis som ett superskript `a^x`, där _a_ är basen och _x_ är exponenten. Till exempel
+    `4^3=4×4×4`.
+
+prime:
+  title: Primtal
+  text: |
+    Ett __primtal__ är ett positivt heltal som inte har andra faktorer än 1 och sig själv. De första
+    primtalen är 2, 3, 5, 7, 11, 13, ...
+  link: /course/divisibility/primes
+
+prime-factor:
+  title: Prime Factor
+  text: En __primfaktor__ av ett tal är helt enkelt en faktor som är prim.
+  link: /course/divisibility/primes
+
+prime-factorisation:
+  title: Factoring Premium
+  text: |
+    __primfaktorisering__ av ett nummer är ett sätt att uttrycka det som produkten av primtal.
+    Exempelvis är huvudfaktoriseringen av 12 `2 × 2 × 3`.
+
+prism:
+  title: Prisma
+  text: |
+    Ett __prisma__ är ett tredimensionellt fast ämne som har två kongruenta ytor som är polygoner
+    (kallas _baserna_), vars motsvarande vertikaler förenas av parallella segment. De återstående
+    ansiktena på ett prisma är alla rektanglar eller parallellogram.
+  image: prism.svg
+
+probability:
+  title: Sannolikhet
+  text: |
+    En __sannolikhet__ är tal mellan 0 och 1 som indikerar sannolikheten för att en viss händelse
+    inträffar. Sannolikheten för en händelse _A_ är skriven som `P(A)`.
+
+probability-tree:
+  title: Trolighetsträd
+  text: |
+    Ett __sannolikhetsträd__ är ett träddiagram som representerar den kombinerade sannolikheten för
+    flera sekventiella händelser.
+
+proof:
+  title: Bevis
+  text: |
+    Ett __bevis__ är ett logiskt argument som visar över alla tvivel att ett visst uttalande är
+    sant.
+
+protein:
+  title: Protein
+  text: |
+    Ett __Protein__ är en stor _makromolekyl_ som kan utföra många olika funktioner inom levande
+    organismer: från matsmältning till kommunikation mellan celler eller replikerande DNA. Proteiner
+    består av en eller flera kedjor av _aminosyrarester_.
+
+proton:
+  title: Proton
+  text: |
+    En __proton__ är en av partiklarna som utgör kärnan i en atom. Den har en avgift på +1. Antalet
+    protoner i en atom kallas dess "atomantal", och det bestämmer vilken typ av element det är.
+
+pyramid:
+  title: Pyramid
+  text: |
+    En __pyramid__ är en polyhedron som har en polygon som bas och triangulära ytor runt utsidan,
+    som avsmalnar till ett toppunkt.
+
+    I en __höger vanlig pyramid__ är basen en _vanlig polygon_ och toppunkten är direkt ovanför
+    basens centrum.
+  image: pyramid.svg
+
+protractor:
+  title: Protractor
+  text: En gradskiva är ett verktyg som används för att mäta en vinkel i grader.
+
+pythagoras-theorem:
+  title: Pythagoras 'teorem
+  text: |
+    __Pythagoras 'sats__ säger att i varje rätvinklad triangel, `a^2 + b^2 = c^2`, där _c_ är
+    längden på hypotenusen och _a_ och _b_ är längderna på de andra två sidorna.
+  link: /course/triangles/pythagoras
+
+pythagorean-triple:
+  title: Pythagorean trippel
+  text: |
+    En __Pythagorean trippel__ är en uppsättning av tre hela siffror _a_, _b_ och _c_ som
+    tillfredsställer Pythagoras 'sats `a^2 + b^2 = c^2`.
+  link: /course/triangles/pythagoras#pythagorean-triples
+
+quadratic:
+  title: Kvadratisk
+  text: En __kvadratisk__ är ett polynom av grad 2. Till exempel är `x^2 - 2x + 3` en kvadratisk.
+
+quadratic-equation:
+  title: Kvadratisk ekvation
+  text: |
+    En __kvadratisk ekvation__ är en ekvation som innehåller en enda variabel av grad 2. Den är ofta
+    skriven som `ax^2 + bx + c = 0`, där _x_ är en variabel, _a_, _b_ och _c_ är siffror och `a !=
+    0`.
+
+quadratic-formula:
+  title: Kvadratiska formel
+  text: |
+    __kvadratisk formel__ är ett sätt att bestämma till rötterna till en kvadratisk ekvation.
+    Ekvationen `ax^2 + bx + c = 0` har rötter
+
+    {.text-center} `x = (-b +- sqrt(b^2 - 4ac))/(2a)`.
+
+quadratic-function:
+  title: Kvadratisk funktion
+  text: |
+    En __kvadratisk funktion__ är en funktion av formen `f(x) = ax^2+bx+c`, där _a_, _b_ och _c_ är
+    siffror och `a != 0` }. Grafen för en kvadratisk funktion är en U-formad kurva som kallas en
+    __parabola__.
+
+quadratic-function-vertex-form:
+  title: Hörnform av en kvadratisk funktion
+  text: |
+    __toppformen__ eller __standardformulär__ för en kvadratisk funktion är `f(x) = a(x − h)^2 + k`.
+    Punkten `(h, k)` är __toppunktet__ för motsvarande parabola.
+
+quadrilateral:
+  title: Fyrsidig
+  text: En __fyrkantig__ är en polygon med fyra sidor.
+  link: /course/polyhedra/quadrilaterals
+
+quantum:
+  title: Kvantmekanik
+  text: __Kvantmekanik__ är en gren av fysik som förklarar de konstiga partiklarnas konstiga beteende.
+
+radians:
+  title: radianer
+  text: |
+    __Radianer__ är en enhet för att mäta storleken på vinklar. En komplett revolution (360 °) är
+    `2π` radianer - längden på en enhetscirkelns omkrets.
+  link: /course/circles/radians#radians
+
+radioactive:
+  title: Radioaktivt avfall
+  text: |
+    __Radioaktivt förfall__ är en fysisk process genom vilken instabila atomer bryts isär och
+    släpper energi.
+
+rational-numbers:
+  title: Rationella nummer
+  text: |
+    __Rationella siffror__ är siffror som kan uttryckas som en bråk `p/q` av två heltal. Deras
+    decimalutvidgning stoppar eller upprepas så småningom. Exempel inkluderar `1/2`, `-5/7`, 12.71
+    och 9. Rationella siffror betecknas ofta med symbolen `QQ`.
+
+ray:
+  title: Stråle
+  text: |
+    En __stråle__ är den del av en linje som börjar vid en punkt och sträcker sig oändligt i en
+    riktning. Vi kan märka strålar som börjar vid `A` som `vec(AB)`.
+  link: /course/euclidean-geometry/definitions#rays
+
+real-numbers:
+  title: Riktiga nummer
+  text: |
+    De __verkliga siffrorna__ är alla siffror som visas på sifferraden, inklusive positiva och
+    negativa siffror, rationella siffror (bråk), kvadratrötter, kubrotar, decimaler, _π_, _e_, och
+    många fler. De benämns ofta med symbolen `RR`.
+
+rectangle:
+  title: Rektangel
+  text: En __rektangel__ är en fyrkant i vilken alla fyra vinklar är 90 °.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+reflection:
+  title: Reflexion
+  text: En __reflektion__ är en transformation som "vänder" eller "speglar" en form över en linje.
+  link: /course/transformations/rigid#reflections
+
+reflectional-symmetry:
+  title: Reflektionssymmetri
+  text: En form har reflektionssymmetri om den ser densamma ut efter reflektion.
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+regular-polygon:
+  title: Regelbunden polygon
+  text: |
+    En __vanlig polygon__ är en polygon där alla sidor har samma längd och alla invändiga vinklar
+    har samma storlek.
+  image: regular-polygon.svg
+  link: /course/polyhedra/polygons#regular-polygons
+
+rhombus:
+  title: Romb
+  text: En __romb__ (plural är _romb_ eller _romb_) är en fyrkant där alla sidor har samma längd.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+right-angle:
+  title: Rätt vinkel
+  text: En __rätvinkel__ är en vinkel i storlek 90 °.
+
+right-triangle:
+  title: Rätvinklad triangel
+  text: I en __rätvinklad triangel__ är en inre vinkel exakt 90 °.
+  image: right-triangle.svg
+  link: /course/triangles/properties#classification
+
+rigid-transformation:
+  title: Styv transformering
+  text: |
+    En __styv transformation__ (eller __isometri__) är en transformation som inte ändrar storleken
+    eller formen på en geometrisk figur.
+  link: /course/transformations/rigid
+
+roman-numerals:
+  title: Romerska siffror
+  text: |
+    Det __romerska talsystemet__ utvecklades i antika Rom och användes i Europa fram till
+    1300-talet. Det tillät dig att skriva valfritt heltal genom att kombinera sju olika bokstäver:
+
+    * I = 1
+
+    * V = 5
+
+    * X = 10
+
+    * L = 50
+
+    * C = 100
+
+    * D = 500
+
+    * M = 1000
+
+rotation:
+  title: Rotation
+  text: En __rotation__ är en transformation som "vänder" en form med en viss vinkel runt en fast punkt.
+  link: /course/transformations/rigid#rotations
+
+rotational-symmetry:
+  title: Rotationssymmetri
+  text: |
+    En form har rotationssymmetri om den ser densamma ut efter att ha roterats (med mindre än 360
+    °).
+  image: rotational-symmetry.svg
+  link: /course/transformations/symmetry#rotational-symmetry
+
+roulette:
+  title: Roulett
+  text: |
+    __Roulette__ är ett kasinospel där du satsar på var en spinnboll kommer att landa. Den
+    innehåller 36 nummer samt en eller två 0s.
+
+scale-factor:
+  title: Skalfaktor
+  text: |
+    Skalafaktorn__ för två liknande geometriska figurer är förhållandet mellan två motsvarande
+    längder.
+
+    En skalfaktor mindre än 1 indikerar att formen krymps och en skalfaktor större än 1 indikerar
+    att formen är förstorad.
+  link: /course/transformations/dilations#dilations-1
+
+scalene-triangle:
+  title: Scalen triangel
+  text: I en __vågen triangel__ har alla tre sidor olika längder.
+
+scientific-notation:
+  title: Vetenskaplig notation
+  text: |
+    __Scientific notation__ är en standardiserad metod för att skriva mycket stora eller små
+    siffror. Det är av formen `a × 10^n`, där _n_ är ett heltal och `1 ≤ a < 10`.
+
+    Till exempel kan numret 4600 skrivas som `4.6 × 10^3`.
+
+set:
+  title: Ställer
+  text: |
+    En __uppsättning__ är en samling saker eller objekt (kallas element). Varje element kan bara
+    visas ett i en uppsättning. Vi skriver uppsättningar med hjälp av {} s, till exempel skulle en
+    uppsättning som innehåller siffrorna 2, 3 och 4 skrivas som {2, 3, 4}.
+
+sequence:
+  title: Sekvens
+  text: |
+    En __sekvens__ är en ordnad lista med siffror (eller andra element som geometriska objekt), som
+    ofta följer ett specifikt mönster eller funktion. Sekvenser kan vara både begränsade och
+    oändliga.
+  link: /course/sequences/introduction#simple-patterns
+
+sequence-convergence:
+  title: Konvergens
+  text: En sekvens __konvergerar__ om termer med tiden närmar sig och närmare en specifik __gräns__.
+
+sequence-divergence:
+  title: Divergens
+  text: |
+    En sekvens __avviker__ om med tiden dess termer blir större och större, mot oändligheten (eller
+    negativ oändlighet).
+
+sequence-explicit:
+  title: Explicit Formula
+  text: |
+    En __uttrycklig formel__ för en sekvens uttrycker värdet på _n_: e termen `x_n` som en funktion
+    av _n_.
+  link: /course/sequences/introduction#explicit
+
+sequence-recursive:
+  title: Rekursionsformel
+  text: |
+    En __rekursiv formel__ för en sekvens uttrycker värdet på varje term `x_n` som en funktion av
+    dess tidigare termer.
+  link: /course/sequences/introduction#recursive-1
+
+sequence-term:
+  title: Villkor för en sekvens
+  text: __termerna__ i en sekvens är alla dess individuella nummer eller element.
+  link: /course/sequences/introduction#simple-patterns
+
+sierpinski-triangle:
+  title: Sierpinski Triangle
+  text: |
+    __Sierpinski Triangle__ är en självliknande fraktal. Den består av en liksidig triangel, med
+    mindre liksidiga trianglar rekursivt avlägsnade från dess kvarvarande område.
+  link: /course/fractals/sierpinski
+  image: sierpinski-triangle.svg
+
+sieve-eratosthenes:
+  title: Sikt av Eratosthenes
+  text: |
+    __Sieve of Eratosthenes__ är en procedur för att hitta primtal genom att upprepade gånger
+    eliminera siffror som är _inte_ prim.
+  link: /course/divisibility/primes#eratosthenes
+
+similar:
+  title: Liknande
+  text: |
+    Två geometriska former är __liknande__ om de har samma form men en annan storlek. Vi kan flytta,
+    rotera, reflektera och ändra storlek på en form för att matcha den andra. Deras motsvarande
+    vinklar är lika och deras motsvarande sidor är i samma förhållande.
+
+sin:
+  title: dess
+  text: |
+    __Sinus__ är en trigonometrisk funktion skriven som `sin(θ)`. I en rätvinklad triangel är det
+    förhållandet mellan motsatt sida och hypotenus.
+  link: /course/triangles/trigonometry#trig-functions
+
+sphere:
+  title: Sfär
+  text: |
+    En __sfär__ är en tredimensionell fast substans som består av alla punkter som har samma avstånd
+    från ett givet _centrum_. Detta avstånd kallas sfären _radien_.
+  link: /course/circles/spheres-cones-cylinders#sphere
+
+sphere-radius:
+  title: En sfärs radie
+  text: |
+    En sfärs __radie__ är avståndet (eller ett linjesegment) mellan dess centrum och vilken punkt
+    som helst på dess yta.
+
+square:
+  title: Fyrkant
+  text: |
+    En __kvadrat__ är en vanlig fyrkantig: alla sidor har samma längd och alla vinklar har samma
+    storlek (90 °).
+  link: /course/polyhedra/quadrilaterals
+
+square-area:
+  title: Area of a Square
+  text: Områdetpå en kvadrat med sidolängd _s_ är `A = s^2`.
+
+square-matrix:
+  title: Fyrkantig matris
+  text: En __kvadratmatris__ är en matris som har samma antal rader och kolumner.
+
+square-numbers:
+  title: Fyrkantiga nummer
+  text: |
+    Ett __kvadratnummer__ är ett tal som kan uttryckas som kvadratet för ett annat heltal. De första
+    kvadratnumren är 1, 4, 9, 16, 25, ...
+  link: /course/sequences/introduction#squares
+
+subdivision:
+  title: underavdelningar
+  text: |
+    För att skapa en __underavdelning__ av en graf lägger du till ytterligare vertikaler längs
+    kanterna.
+
+subgraph:
+  title: subgraph
+  text: |
+    En graf är en __subgraf__ av en annan graf, om den bildas av en delmängd av de större graferna
+    och kanterna.
+  link: /course/graph-theory/introduction#intro-2
+
+supplementary-angles:
+  title: Kompletterande vinklar
+  text: Två vinklar är __kompletterande__ om de lägger upp till 180 ° (en halvcirkel).
+
+symmetry:
+  title: Symmetri
+  text: |
+    En figur eller form har __symmetri__, om den ser densamma ut efter att ha transformerats på
+    något sätt (t.ex. reflektion eller rotation).
+  link: /course/transformations/symmetry#symmetry
+
+symmetry-group:
+  title: Symmetry Group
+  text: |
+    Symmetergruppen__ för ett geometriskt objekt är samlingen av alla dess _symmetrier_ (liksom
+    _identiteten_).
+  link: /course/transformations/symmetry-groups#groups-1
+
+tan:
+  title: Tangent
+  text: |
+    __Tangent__ är en trigonometrisk funktion skriven som `tan(θ)`. Det definieras som förhållandet
+    mellan _sinus_ och _kosinus_:
+
+    {.text-center} `tan(θ) = sin(θ) / cos(θ)`.
+
+    I en rätvinklad triangel är `tan(θ)` förhållandet mellan den motsatta sidan och den
+    intilliggande sidan av en vinkel `θ`.
+  link: /course/triangles/trigonometry#trig-functions
+
+tangent:
+  title: Tangent Line
+  text: |
+    En __tangentlinje__ är en linje som vidrör en kurva eller cirkel vid en enda punkt utan att
+    korsa den. Denna punkt kallas ibland __punkten för tangens__.
+
+term:
+  title: Term (Algebra)
+  text: |
+    __termerna__ är de delar av ett algebraiskt uttryck eller ekvation som är separerade med + eller
+    - tecken. Det kan vara produkter eller fraktioner eller ett eller flera nummer, variabler eller
+    funktioner.
+
+    I uttrycket `2x^2 - 3ab + 4` är till exempel de tre termerna `2x^2`, `3ab` och 4.
+
+tessellation:
+  title: Tessellation
+  text: |
+    En __tessellation__ är ett geometriskt mönster som täcker en yta utan mellanrum eller
+    överlappningar.
+  link: /course/polyhedra/tessellations
+
+tetrahedral-numbers:
+  title: Tetraedriska nummer
+  text: |
+    Ett __tetrahedral nummer__ är ett nummer som skapas genom att stapla flera sfärer i en
+    _tetrahedron_. De första tetraedriska siffrorna är 1, 4, 10, 20, 35, ...
+  link: /course/sequences/figurate#tetrahedral
+
+tetrahedron:
+  title: Tetrahedron
+  text: |
+    __Tetrahedron__ är ett platoniskt fast ämne och består av fyra ytor som är liksidiga trianglar.
+    Den har fyra vertikaler och sex kanter.
+  link: /course/polyhedra/platonic#platonic-overview
+
+theorem:
+  title: Sats
+  text: |
+    Ett __teorem__ är ett särskilt viktigt resultat eller observation i matematik. Det har visat sig
+    alltid vara sant med hjälp av axiomer, reglerna logik och tidigare satser som redan var kända
+    för att vara sanna.
+
+transformation:
+  title: Omvandling
+  text: |
+    En __transformation__ omvandlar en geometrisk form till en annan. Det finns många olika typer av
+    transformationer, som _reflektioner_ eller _dilatationer_.
+  link: /course/transformations/rigid#transformations
+
+transformation-image:
+  title: Bild av en transformation
+  text: |
+    Efter omvandling av en geometrisk form kallas resultatet __bild__. Det benämns ofta genom att
+    lägga till en 'i slutet av dess etikett.
+  link: /course/transformations/rigid#transformations
+
+translation:
+  title: Översättning
+  text: |
+    En __översättning__ är en transformation som rör en figur i en specifik riktning utan att ändra
+    dess vinkel eller form.
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+
+translational-symmetry:
+  title: Translational Symmetry
+  text: |
+    Ett upprepat mönster (som en tapet) har __translationell symmetri__ om det ser samma ut efter
+    att ha översatts med ett visst avstånd.
+  link: /course/transformations/symmetry-groups#symmetry-groups-1
+
+transversal:
+  title: Traversal
+  text: En tvärgående är en linje som korsar två andra linjer.
+
+trapezium:
+  title: Trapets
+  text: |
+    En __trapezium__ (ibland kallad __trapezoid__) är en fyrkant i vilken två motsatta sidor är
+    parallella. Dessa kallas _baserna_ på trapeset, och de andra två sidorna kallas _ben_.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-2
+
+triangle:
+  title: Triangel
+  text: En __triangel__ är en geometrisk form som har tre raka sidor och tre inre vinklar.
+
+triangle-aa:
+  title: AA-tillstånd för trianglar
+  text: |
+    Två trianglar är __liknande__ om två av deras vinklar har samma storlek. Detta kallas
+    __AA-likhetsvillkoret__ för trianglar.
+
+triangle-altitude:
+  title: Trianglarnas höjder
+  text: |
+    En __höjd__ (eller __höjd__) av en triangel är en linje vinkelrätt mot en av sidorna som går
+    igenom motsatt topp. Varje triangel har tre höjder.
+  image: triangle-altitude.svg
+  link: /course/triangles/properties#altitudes
+
+triangle-legs:
+  title: Ben av en triangel
+  text: |
+    De två __benen__ i en rätvinklad triangel är de två kortare sidorna (inte _hypotenusen_). De är
+    bredvid rätt vinkel.
+
+triangle-inequality:
+  title: Triangel ojämlikhet
+  text: |
+    __ojämlikhet i triangeln__ säger att summan av längderna på två sidor i en triangel är större än
+    längden på den tredje sidan. Detta betyder också att det kortaste avståndet mellan två punkter
+    är en rak linje (eftersom det alltid är längre att gå via en tredje punkt).
+
+triangle-median:
+  title: Medianer av en triangel
+  text: |
+    Medianerna __i en triangel är linjesegmenten som förbinder varje toppunkt till mittpunkten på
+    motsatta sidor. De tre medianerna i en triangel korsar varandra i en enda punkt som kallas
+    __centroid__.
+  link: /course/triangles/properties#medians
+
+triangle-midsegment:
+  title: Midsegment
+  text: |
+    __mellansegment__ i en triangel är linjerna som förbinder mittpunkterna på olika sidor av
+    triangeln.
+  image: triangle-midsegment.svg
+  link: /course/triangles/midsegments
+
+triangle-numbers:
+  title: Triangelnummer
+  text: |
+    En __triangelnummer__ är ett heltal som kan representeras som en liksidig triangel med prickar.
+    Formeln för _n_ triangelns nummer är `(n*(n+1))/ 2`, och de första triangelns siffrorna är 1, 3,
+    6, 10, 15, ...
+  image: triangle-numbers.svg
+  link: /course/sequences/figurate#triangle-numbers
+
+triangle-sss:
+  title: SSS-tillstånd för trianglar
+  text: |
+    Två trianglar är __kongruenta__ om deras tre sidor har samma längd. Detta kallas
+    __SSS-kongruensvillkor__ för trianglar.
+  link: /course/triangles/congruence#congruence-1
+
+trigonometry:
+  title: Trigonometri
+  text: |
+    __Trigonometry__ är en gren av matematik som studerar förhållandena mellan sidor och vinklar på
+    trianglar. Det handlar främst om de trigonometriska funktionerna __sinus__, __kosinus__,
+    __tangenten__ och deras återkopplingar.
+  link: /course/triangles/trigonometry
+
+truncated-icosahedron:
+  title: Trunkerad Icosahedron
+  text: |
+    __Trunkerade Icosahedron__ är en _Archimedean solid_ bestående av 12 vanliga pentagoner och 20
+    vanliga sexhörningar.
+  link: /course/polyhedra/platonic#archimedean
+
+twin-primes:
+  title: Twin Primes
+  text: |
+    __Två primes__ är par av primtal som 17 och 19 eller 101 och 103, som är exakt två varandra. Det
+    är okänt om det finns oändligt många par tvillingprimor.
+  link: /course/divisibility/distribution-of-primes#twin-primes
+
+unit-circle:
+  title: Enhetscirkel
+  text: En __enhetscirkel__ är en cirkel med radie 1.
+
+variable:
+  title: Variabel
+  text: |
+    En __-variabel__ är en kvantitet som är okänd eller som kan ändra värde. I ett algebraiskt
+    uttryck representeras det vanligtvis av en bokstav som _x_.
+
+venn-diagram:
+  title: Venn diagram
+  text: Ett __Venn-diagram__ visualiserar flera egenskaper eller händelser som överlappar varandra.
+  image: venn.svg
+
+vertical-angles:
+  title: Vertikala vinklar
+  text: |
+    __Vertikala vinklar__ är par av motsatta vinklar som skapas genom korsande linjer. Vertikala
+    vinklar är alltid _kongruenta_.
+
+whole-numbers:
+  title: Heltal
+  text: '__heltal__ är räknatalen, inklusive noll: 0, 1, 2, 3, 4, ...'
+
+zero-product:
+  title: Noll produktegenskap
+  text: |
+    Egenskapen __nollprodukt__ anger att om produkten med två kvantiteter är noll måste åtminstone
+    en av dessa mängder också vara noll. Om till exempel `a × (a - 1) = 0` är antingen `a = 0` eller
+    `a - 1 = 0`.

@@ -1,0 +1,1751 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+abel:
+  born: 1802
+  died: 1829
+  name: Abel
+  overflow: true
+  bio: |
+    __Niels Henrik Abel__ (1802 - 1829) là một nhà toán học quan trọng của Na Uy. Mặc dù ông qua đời
+    ở tuổi 26, ông đã có những đóng góp đột phá cho một loạt các chủ đề.
+
+    Ở tuổi 16, Abel đã chứng minh định lý nhị thức. Ba năm sau, ông đã chứng minh rằng không thể
+    giải các phương trình tinh túy - bằng cách phát minh độc lập lý thuyết nhóm. Đây là một vấn đề
+    mở trong hơn 350 năm! Ông cũng đã làm việc về các hàm elip và phát hiện ra các hàm _Abelian_.
+
+    Abel trải qua cuộc sống nghèo khổ: anh có sáu anh chị em, cha anh mất khi anh 18 tuổi, anh không
+    thể tìm được việc làm tại một trường đại học, và nhiều nhà toán học ban đầu đã bỏ việc. Ngày
+    nay, một trong những giải thưởng cao nhất trong toán học, _Abel Prize_ được đặt theo tên ông.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+al-haytham:
+  born: 965
+  died: 1050
+  name: Al-Haytham
+  bio: |
+    __Hasan Ibn al-Haytham__ (أبو علي ن Ông là người đề xuất phương pháp khoa học __: niềm tin rằng
+    bất kỳ giả thuyết khoa học nào cũng phải được xác minh bằng các thí nghiệm hoặc logic toán học -
+    hàng thế kỷ trước các nhà khoa học châu Âu trong thời Phục hưng.
+
+    Al-Haytham đặc biệt quan tâm đến quang học và nhận thức thị giác. Ông cũng rút ra một công thức
+    tính tổng các lũy thừa thứ tư (`1^4 + 2^4 + 3^4 + … +
+
+    n^4`) và ông đã nghiên cứu mối liên hệ giữa đại số và hình học.
+
+al-karaji:
+  born: 953
+  died: 1029
+  name: Al-Karaji
+  bio: |
+    __Muhammad Al-Karaji__ (Tiếng Anh là một kỹ sư toán học và kỹ sư người Ba Tư. Ông là người đầu
+    tiên sử dụng _bằng chứng cảm ứng_, cho phép ông chứng minh định lý nhị thức.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+al-khwarizmi:
+  born: 780
+  died: 850
+  name: Al-Khwarizmi
+  overflow: true
+  bio: |
+    Nhà toán học Ba Tư __Muhammad Al-Khwarizmi__ (ممد بن موسى الخوارزمي, 780 - 850) sống trong thời
+    kỳ hoàng kim của chế độ Abbasid Hồi giáo ở Baghdad. Ông làm việc tại Nhà của Trí tuệ thông minh,
+    nơi chứa bộ sưu tập sách học thuật lớn đầu tiên kể từ khi Thư viện Alexandria bị phá hủy.
+
+    Al-Khwarizmi đã được gọi là Cha của đại số giáo dục - thực tế, từ _đại số_ xuất phát từ tựa đề
+    tiếng Ả Rập của cuốn sách quan trọng nhất của ông: Cuốn sách Compendious về tính toán bằng cách
+    hoàn thành và cân bằng. Trong đó, ông chỉ ra cách giải các phương trình tuyến tính và bậc hai,
+    và trong nhiều thế kỷ, nó là sách giáo khoa toán học chính tại các trường đại học châu Âu.
+
+    Al-Khwarizmi cũng làm việc trong ngành thiên văn học và địa lý, và từ thuật toán thuật thuật tên
+    lửa được đặt theo tên ông.
+
+apollonius:
+  name: Apollonius
+  born: -262
+  died: -190
+  bio: |
+    __Apollonius của Perga__ (khoảng 200 BCE) là một nhà toán học và nhà thiên văn học người Hy Lạp
+    nổi tiếng với công trình nghiên cứu về bốn phần hình nón __.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+appel:
+  name: Appel
+  bio: |
+    __Kenneth Appel__ (1932 - 2013) là một nhà toán học người Mỹ, được biết đến với bằng chứng về
+    Định lý Bốn màu với Wolfgang Haken.
+
+    Để công nhận, ông và Haken đã nhận được giải thưởng Fulkerson của Hiệp hội toán học Hoa Kỳ.
+
+    Appel học tại trường cao đẳng Queens, New York và Đại học Michigan. Ông giảng dạy tại Đại học
+    Illinois và Đại học New Hampshire.
+
+archimedes:
+  name: Archimedes
+  born: -287
+  died: -212
+  bio: |
+    __Archimedes__ (khoảng 287 - 212 BCE) là một nhà khoa học và kỹ sư Hy Lạp cổ đại, và là một
+    trong những nhà toán học vĩ đại nhất mọi thời đại. Ông đã khám phá ra nhiều khái niệm về tính
+    toán và làm việc trong hình học, phân tích và cơ học.
+
+    Trong khi tắm, Archimedes đã phát hiện ra một cách để xác định khối lượng của các vật thể không
+    đều bằng cách sử dụng lượng nước mà chúng bị dịch chuyển khi ngập nước. Anh ta rất phấn khích vì
+    phát hiện này đến nỗi anh ta chạy ra ngoài đường, vẫn cởi quần áo, hét lên _Đổi Eureka! Lần_
+    (tiếng Hy Lạp cho _Tôi đã tìm thấy nó!
+
+    Là một kỹ sư, ông đã chế tạo ra những cỗ máy phòng thủ khéo léo trong cuộc bao vây thành phố quê
+    nhà Syracuse ở Sicily. Sau hai năm, người La Mã cuối cùng đã tìm cách vào được, và Archimedes đã
+    bị giết. Những lời cuối cùng của anh ấy là _, Đừng làm phiền các vòng kết nối của tôi._ - lúc đó
+    anh ấy đang học.
+  links:
+    - title: Archimedean Solids
+      url: /course/polyhedra/platonic#archimedean
+
+aristotle:
+  born: -384
+  died: -322
+  name: Aristotle
+  bio: |
+    __Aristotle__ (ἈρἈρστ, c. 384 - 322 BCE) là một triết gia ở Hy Lạp cổ đại. Cùng với giáo viên
+    của mình _Plato_, ông được coi là Cha đẻ của Triết học phương Tây. Ông cũng là gia sư riêng của
+    Alexander Đại đế.
+
+    Aristotle đã viết về khoa học, toán học, triết học, thơ ca, âm nhạc, chính trị, hùng biện, ngôn
+    ngữ học, và nhiều môn học khác. Công việc của ông có ảnh hưởng lớn trong thời Trung cổ và đến
+    thời Phục hưng, và quan điểm của ông về đạo đức và các câu hỏi triết học khác vẫn đang được thảo
+    luận ngày hôm nay.
+
+    Aristotle cũng là người đầu tiên được biết đến chính thức nghiên cứu _logic_, bao gồm các ứng
+    dụng của nó trong khoa học và toán học.
+
+aryabhata:
+  born: 476
+  died: 550
+  name: Aryabhata
+  overflow: true
+  bio: |
+    __Aryabhata__ (आर यभट) là một trong những nhà toán học và thiên văn học đầu tiên trong thời kỳ
+    hoàng kim của toán học Ấn Độ. Ông đã xác định các hàm lượng giác, giải các phương trình bậc hai
+    đồng thời, tìm các xấp xỉ cho _π_ và nhận ra rằng _π_ là không hợp lý.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Quadratic Equations
+      url: /course/quadratics/introduction
+
+babbage:
+  born: 1791
+  died: 1871
+  name: Babbage
+  small: true
+  bio: |
+    __Charles Babbage__ (1791 - 1871) là nhà toán học, triết gia và kỹ sư người Anh. Ông thường được
+    gọi là cha đẻ của máy tính, đã phát minh ra máy tính cơ học đầu tiên (_Engine khác biệt_) và một
+    phiên bản cải tiến, có thể lập trình (_Engine phân tích_).
+
+    Về lý thuyết, các máy này có thể tự động thực hiện các tính toán nhất định được lưu trên thẻ
+    hoặc băng. Tuy nhiên, do chi phí sản xuất cao, chúng không bao giờ được hoàn thành đầy đủ trong
+    suốt cuộc đời Babbage. Năm 1991, một bản sao chức năng đã được xây dựng tại Bảo tàng Khoa học ở
+    London.
+
+bernoulli-1:
+  born: 1654
+  died: 1705
+  name: Bernoulli
+  bio: |
+    __Jacob Bernoulli__ (1655 - 1705) là một nhà toán học người Thụy Sĩ và là một trong nhiều nhà
+    khoa học quan trọng trong gia đình Bernoulli. Trong thực tế, ông đã có một cuộc cạnh tranh học
+    tập sâu sắc với một số anh em và con trai của mình.
+
+    Jacob đã có những tiến bộ đáng kể cho phép tính được phát minh bởi Newton và Leibnitz, đã tạo ra
+    trường tính toán _của các biến thể_, đã phát hiện ra hằng số cơ bản _e_, đã phát triển các kỹ
+    thuật để giải phương trình vi phân và nhiều hơn.
+
+    Ông đã công bố công trình đáng kể đầu tiên về xác suất, bao gồm hoán vị, kết hợp và định luật về
+    số lượng lớn, ông đã chứng minh định lý nhị thức và rút ra nhiều tính chất của số Bernoulli.
+
+bernoulli-2:
+  born: 1700
+  died: 1782
+  name: Bernoulli
+  bio: |
+    __Daniel Bernoulli__ (1700 - 1782) là nhà toán học và vật lý người Thụy Sĩ. Ông là một trong
+    nhiều nhà khoa học nổi tiếng của gia đình Bernoulli - bao gồm cha Johann, chú Jacob và anh trai
+    Nicholas.
+
+    Daniel Bernoulli đã chỉ ra rằng khi tốc độ của chất lỏng tăng lên, áp suất của nó giảm xuống.
+    Bây giờ được gọi là _Nguyên tắc Bernoulli |_, đây là cơ chế được sử dụng bởi cánh máy bay và
+    động cơ đốt. Ông cũng đã có những khám phá quan trọng về xác suất và thống kê, và lần đầu tiên
+    bắt gặp _Hàm Bessel_.
+
+    Ở tuổi 34, anh ta bị cấm khỏi nhà cha cha vì đã đánh đập anh ta tại một giải thưởng của Học viện
+    Paris, mà cả hai đã nộp một mục.
+
+bhaskara:
+  born: 1114
+  died: 1185
+  name: Bhaskara
+  bio: |
+    __Bhaskara II__ (1114 - 1185) là nhà toán học và thiên văn học người Ấn Độ. Ông đã khám phá ra
+    một số khái niệm cơ bản của phép tính, hơn 500 năm trước Leibnitz và Newton. Bhaskara cũng thiết
+    lập phép chia đó bằng 0 mang lại vô hạn và giải các phương trình bậc hai, bậc ba, bậc bốn và
+    Diophantine khác nhau.
+
+blackwell:
+  born: 1919
+  died: 2010
+  name: Blackwell
+  small: true
+  bio: |
+    __David Blackwell__ (1919 - 2010) là một nhà thống kê và toán học người Mỹ. Ông làm việc về lý
+    thuyết trò chơi, lý thuyết xác suất, lý thuyết thông tin và lập trình động, và đã viết một trong
+    những cuốn sách giáo khoa đầu tiên về thống kê Bayes. Định lý _Rao-Blackwell_ cho thấy cách cải
+    thiện các công cụ ước tính của một số lượng nhất định trong thống kê.
+
+    Blackwell là người Mỹ gốc Phi đầu tiên được bầu vào Học viện Khoa học Quốc gia Hoa Kỳ _, và ông
+    là một trong những người đầu tiên nhận bằng Tiến sĩ toán học.
+
+bolyai:
+  born: 1802
+  died: 1860
+  name: Bolyai
+  small: true
+  bio: |
+    __János Bolyai__ (1802 - 1860) là một nhà toán học người Hungary và là một trong những người
+    sáng lập hình học phi Euclide - một hình học trong đó tiên đề thứ năm của Euclid về các đường
+    song song không giữ được. Đây là một bước đột phá đáng kể trong toán học. Thật không may cho
+    Bolyai, các nhà toán học Gauss và Lobachevsky đã phát hiện ra kết quả tương tự cùng một lúc và
+    nhận được phần lớn tín dụng.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+boole:
+  born: 1815
+  died: 1864
+  name: Boole
+  bio: |
+    __George Boole__ (1815 - 1864) là một nhà toán học người Anh. Khi còn nhỏ, anh tự học tiếng
+    Latin, tiếng Hy Lạp và toán học, hy vọng thoát khỏi cuộc sống tầng lớp thấp hơn. Ông đã tạo _đại
+    số Boolean_, sử dụng các toán tử như AND, OR và NOT (thay vì cộng hoặc nhân) và có thể được sử
+    dụng khi làm việc với các tập hợp. Đây là nền tảng cho logic toán học chính thức và có nhiều ứng
+    dụng trong khoa học máy tính.
+
+brahmagupta:
+  born: 598
+  died: 668
+  name: Brahmagupta
+  overflow: true
+  bio: |
+    Nhà toán học Ấn Độ __Brahmagupta__ (c. 598 - 668 CE) đã phát minh ra các quy tắc cộng, trừ và
+    nhân với số 0 và số âm. Ông cũng là một nhà thiên văn học và thực hiện nhiều khám phá khác trong
+    toán học. Thật không may, các bài viết của anh ấy không chứa bất kỳ bằng chứng nào, vì vậy chúng
+    tôi không thể biết được kết quả của anh ấy như thế nào.
+
+cantor:
+  born: 1845
+  died: 1918
+  name: Cantor
+  bio: |
+    Nhà toán học người Đức __Georg Cantor__ (1845 - 1918) là người phát minh ra lý thuyết tập hợp,
+    và là người tiên phong trong sự hiểu biết của chúng ta về sự vô hạn. Trong phần lớn cuộc đời của
+    mình, những khám phá của Cantor đã bị các đồng nghiệp phản đối quyết liệt. Điều này có thể đã
+    góp phần vào trầm cảm và suy nhược thần kinh của anh ấy, và anh ấy đã dành nhiều thập kỷ trong
+    một viện tâm thần.
+
+    Cantor đã chứng minh rằng có _kích thước khác nhau_ vô cùng. Ví dụ, tập hợp các số thực là
+    _không đếm được_ - có nghĩa là không thể ghép nối với tập hợp các số tự nhiên.
+
+    Chỉ đến cuối đời, Cantor mới bắt đầu nhận được sự công nhận mà anh xứng đáng. David Hilbert nổi
+    tiếng tuyên bố rằng không ai sẽ trục xuất chúng ta khỏi thiên đường mà Cantor đã tạo ra.
+  links:
+    - title: Infinity
+      url: /world/Infinity
+    - title: Set Theory
+      url: /world/Axioms_and_Proof
+
+cardano:
+  born: 1501
+  died: 1576
+  name: Cardano
+  bio: |
+    Người Ý __Gerolamo Cardano__ (1501 - 1576) là một trong những nhà toán học và nhà khoa học có
+    ảnh hưởng nhất thời Phục hưng. Ông đã điều tra các hypercycloids, công bố giải pháp Tartaglia và
+    Ferrari Ferrari cho các phương trình bậc ba và bậc bốn, là người châu Âu đầu tiên sử dụng một
+    cách có hệ thống các số âm và thậm chí thừa nhận sự tồn tại của các số ảo (dựa trên `sqrt(-1)`).
+
+    Cardano cũng đã đạt được một số tiến bộ sớm trong lý thuyết xác suất và giới thiệu các hệ số nhị
+    thức và định lý nhị thức cho châu Âu. Ông đã phát minh ra nhiều thiết bị cơ khí, bao gồm khóa
+    kết hợp, con quay hồi chuyển với ba bậc tự do và trục lái (hoặc trục Cardan) vẫn được sử dụng
+    trong các phương tiện ngày nay.
+  links:
+    - title: Imaginary Numbers
+      url: /world/Real_Irrational_Imaginary
+
+carroll:
+  born: 1832
+  died: 1898
+  name: Carroll
+  bio: |
+    __Charles Lutwidge Dodgson__ (1832 - 1898) được biết đến nhiều nhất dưới bút danh __Lewis
+    Carroll__, với tư cách là tác giả của _Cuộc phiêu lưu của Alice ở xứ sở thần tiên_ và phần tiếp
+    theo của nó _Thông qua kính nhìn_.
+
+    Tuy nhiên, Carroll cũng là một nhà toán học lỗi lạc. Anh luôn cố gắng kết hợp các câu đố và
+    logic vào những câu chuyện về con cái của mình, khiến chúng trở nên thú vị và đáng nhớ hơn.
+
+cauchy:
+  born: 1789
+  died: 1857
+  name: Cauchy
+  small: true
+  bio: |
+    __Augustin-Louis Cauchy__ (1789 - 1857) là nhà toán học và vật lý học người Pháp. Ông đã đóng
+    góp cho một loạt các lĩnh vực trong toán học, và hàng tá định lý được đặt theo tên ông.
+
+    Cauchy chính thức tính toán và phân tích, bằng cách cải tổ và chứng minh kết quả trong đó các
+    nhà toán học trước đây bất cẩn và thiếu chính xác hơn nhiều. Ông thành lập lĩnh vực _phân tích
+    phức tạp_, nghiên cứu các nhóm hoán vị và nghiên cứu về quang học, động lực học chất lỏng và lý
+    thuyết đàn hồi.
+
+cavalieri:
+  name: Cavalieri
+  born: 1598
+  died: 1647
+  bio: |
+    __Bonaventura Cavalieri__ (1598 - 1647) là một nhà toán học và nhà sư người Ý. Ông đã phát triển
+    một tiền thân cho phép tính vô hạn, và được nhớ theo nguyên tắc Cavalieri Lượng để tìm khối
+    lượng chất rắn trong hình học.
+
+    Cavalieri cũng làm việc trong ngành quang học và cơ học, giới thiệu logarit cho Ý và trao đổi
+    nhiều thư với Galileo Galilei.
+  links:
+    - title: Cavalieri’s Principle
+      url: /course/circles/spheres-cones-cylinders#cavalieri
+
+cayley:
+  born: 1821
+  died: 1895
+  name: Cayley
+  bio: |
+    __Arthur Cayley__ (1821 - 1895) là một nhà toán học và luật sư người Anh. Ông là một trong những
+    người tiên phong của lý thuyết nhóm __, lần đầu tiên đề xuất định nghĩa hiện đại về một nhóm
+    nhóm Cameron, và khái quát chúng để bao gồm nhiều ứng dụng hơn trong toán học. Cayley cũng đã
+    phát triển đại số ma trận và làm việc trên hình học chiều cao hơn.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+collatz:
+  name: Collatz
+  bio: |
+    __Lothar Collatz__ (1910 - 1990) là một nhà toán học người Đức làm việc về các phương trình vi
+    phân và các bài toán tối ưu hóa. Vấn đề _Collatz phỏng đoán_ hoặc `3x+1` được đặt theo tên ông -
+    và vẫn chưa được giải quyết.
+
+conway:
+  name: Conway
+  born: 1937
+  died: 2020
+  bio: |
+    __John Horton Conway__ (1937 - 2020) là một nhà toán học người Anh làm việc tại Đại học
+    Cambridge và Princeton. Ông là thành viên của Hiệp hội Hoàng gia, và là người đầu tiên nhận Giải
+    thưởng Pólya.
+
+    Ông khám phá toán học cơ bản của các đối tượng hàng ngày như nút thắt và trò chơi, và ông đã
+    đóng góp cho lý thuyết nhóm, lý thuyết số và nhiều lĩnh vực khác của toán học. Conway được biết
+    đến với việc phát minh ra trò chơi Life Conway, trò chơi Life Life, một máy tự động di động _với
+    các đặc tính hấp dẫn.
+  links:
+    - title: Look-and-say Sequence
+      url: /course/sequences/special#look-and-say
+
+copernicus:
+  born: 1473
+  died: 1543
+  name: Copernicus
+  bio: |
+    __Nicolaus Copernicus__ (1473 - 1543) là nhà toán học, nhà thiên văn học và luật sư người Ba
+    Lan. Trong suốt cuộc đời của mình, hầu hết mọi người đều tin vào mô hình _Gerialric_ của vũ trụ,
+    với Trái đất ở trung tâm và mọi thứ khác xoay quanh nó.
+
+    Copernicus đã tạo ra một mô hình mới, trong đó mặt trời nằm ở trung tâm và Trái đất di chuyển
+    xung quanh nó trên một vòng tròn. Ông cũng dự đoán Trái đất quay quanh trục của nó mỗi ngày một
+    lần. Sợ rằng điều đó sẽ làm đảo lộn nhà thờ Công giáo, ông chỉ xuất bản mô hình ngay trước khi
+    chết - kích hoạt cái mà ngày nay gọi là Cuộc cách mạng Copernican __.
+
+    Copernicus cũng làm việc như một nhà ngoại giao và bác sĩ, và có những đóng góp quan trọng cho
+    kinh tế.
+  links:
+    - title: Planetary Orbits
+      url: /course/circles/conic-sections#orbits
+
+de-moivre:
+  born: 1667
+  died: 1754
+  name: De Moivre
+  bio: |
+    __Abraham de Moivre__ (1667 - 1754) là một nhà toán học người Pháp làm việc trong lĩnh vực hình
+    học xác suất và phân tích. Ông được nhớ đến nhiều nhất với _de Moivre Hay công thức_, liên kết
+    lượng giác và số phức.
+
+    De Moivre đã khám phá ra công thức phân phối chuẩn trong xác suất và lần đầu tiên phỏng đoán
+    định lý giới hạn trung tâm __. Ông cũng tìm thấy một công thức không đệ quy cho các số
+    Fibonacci, liên kết chúng với tỷ lệ vàng `φ`.
+  links:
+    - title: Probability
+      url: /course/probability/predicting-the-future
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+dedekind:
+  born: 1831
+  died: 1916
+  name: Dedekind
+  small: true
+  bio: |
+    __Richard Dedekind__ (1831 - 1916) là một nhà toán học người Đức và là một trong những sinh viên
+    của Gauss. Ông đã phát triển nhiều khái niệm trong lý thuyết tập hợp và phát minh ra _Dedekind
+    cắt_ như định nghĩa chính thức của các số thực. Ông cũng đưa ra các định nghĩa đầu tiên về _số
+    trường_ và _nhẫn_, hai cấu trúc quan trọng trong đại số trừu tượng.
+
+democritus:
+  born: -460
+  died: -370
+  name: Democritus
+  bio: |
+    Nhà toán học Hy Lạp __Democritus__ (khoảng 460 - 370 BCE), có thể là người đầu tiên suy đoán
+    rằng tất cả vật chất được tạo thành từ các nguyên tử _nhỏ bé_ và được coi là cha đẻ của khoa học
+    hiện đại. Mùi. Ông cũng thực hiện nhiều khám phá về hình học, bao gồm công thức tính thể tích
+    của lăng kính và hình nón.
+  links:
+    - title: Volume of a Cone
+      url: /course/circles/spheres-cones-cylinders#cone-volume
+
+desargues:
+  born: 1591
+  died: 1661
+  name: Desargues
+  bio: |
+    __Girard Desargues__ (1591 - 1661) là một nhà toán học, kỹ sư và kiến trúc sư người Pháp. Ông đã
+    thiết kế nhiều tòa nhà ở Paris và Lyon, giúp xây dựng một con đập và phát minh ra một cơ chế
+    nuôi nước bằng cách sử dụng epicycloids.
+
+    Trong toán học, Desargues được coi là cha đẻ của _hình học chiếu_. Đây là một loại hình học đặc
+    biệt trong đó các đường thẳng song song gặp nhau tại điểm tại điểm vô cực, kích thước của các
+    hình dạng không quan trọng (chỉ tỷ lệ của chúng) và tất cả bốn phần hình nón (hình tròn, hình
+    elip, parabola và hyperbola) về cơ bản là tương tự.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+descartes:
+  born: 1596
+  died: 1650
+  name: Descartes
+  bio: |
+    __René Descartes__ (1596 - 1650) là một nhà toán học và triết học người Pháp, và là một trong
+    những nhân vật quan trọng trong Cách mạng khoa học. Anh ta từ chối chấp nhận thẩm quyền của các
+    triết gia trước đây, và một trong những câu nói nổi tiếng nhất của anh ta là tôi nghĩ, vì vậy
+    tôi là người.
+
+    Descartes là cha đẻ của _hình học phân tích_, cho phép chúng ta mô tả các hình dạng hình học
+    bằng cách sử dụng đại số. Đây là một trong những điều kiện tiên quyết, cho phép Newton và
+    Leibnitz phát minh ra _phép tính_ một vài thập kỷ sau đó.
+
+    Anh ta được ghi nhận với lần đầu tiên sử dụng các siêu ký tự cho các quyền hạn hoặc số mũ và hệ
+    tọa độ _cartesian_ được đặt theo tên anh ta.
+
+diophantus:
+  born: 200
+  died: 284
+  name: Diophantus
+  overflow: true
+  bio: |
+    __Diophantus__ là một nhà toán học Hy Lạp sống ở Alexandria. Hầu hết các tác phẩm của ông là về
+    việc giải các phương trình đa thức với một số ẩn số. Hiện tại chúng được gọi là _phương trình
+    Diophantine_ và vẫn là một lĩnh vực nghiên cứu quan trọng ngày nay.
+
+    Đó là trong khi đọc một trong những cuốn sách Diophantus, trong nhiều thế kỷ sau, _Pierre de
+    Fermat_ đã đề xuất một trong những phương trình này không có giải pháp. Điều này được biết đến
+    với tên gọi Định lý cuối cùng của Fermat, và chỉ được giải quyết vào năm 1994.
+
+dirac:
+  name: Dirac
+  bio: |
+    __Paul Dirac__ (1898 - 1972) là một nhà vật lý lý thuyết người Anh, người đã chia sẻ giải thưởng
+    Nobel năm 1933 với Erwin Schrödinger. Dirac là một trong những người tiên phong của Cơ học lượng
+    tử, đã xây dựng nên phương trình Dirac _nổi tiếng_ và lần đầu tiên dự đoán sự tồn tại của phản
+    vật chất.
+
+    Ông dạy tại Đại học Cambridge, trước khi chuyển sang Mỹ. Dirac nổi tiếng là nhút nhát và, theo
+    Einstein, _, Cân bằng trên con đường chóng mặt giữa thiên tài và sự điên rồ._.
+
+einstein:
+  name: Einstein
+  born: 1879
+  died: 1955
+  small: true
+  bio: |
+    __Albert Einstein__ (1879 - 1955) là nhà vật lý người Đức và là một trong những nhà khoa học có
+    ảnh hưởng nhất trong lịch sử. Ông đã nhận được giải thưởng Nobel về vật lý và tạp chí TIME gọi
+    ông là người _của thế kỷ 20_.
+
+    Einstein đã kích hoạt sự chuyển đổi đáng kể nhất trong quan điểm của chúng ta về vũ trụ kể từ
+    Newton. Ông nhận ra rằng vật lý cổ điển, _Newtonian_ không còn đủ để giải thích một số hiện
+    tượng vật lý nhất định.
+
+    Ở tuổi 26, trong năm thần kỳ của mình, ông đã xuất bản bốn bài báo khoa học đột phá giải thích
+    hiệu ứng quang điện và chuyển động Brown, đưa ra thuyết tương đối đặc biệt và đưa ra công thức
+    `E = m c^2`, trong đó nêu rõ năng lượng (_E_) và khối lượng (_m_) là tương đương.
+
+eratosthenes:
+  name: Eratosthenes
+  born: -276
+  died: -195
+  bio: |
+    __Eratosthenes của Cyrene__ (c. 276 - 195 BCE) là nhà toán học, nhà địa lý học, nhà thiên văn
+    học, nhà sử học và nhà thơ người Hy Lạp. Ông dành phần lớn cuộc đời của mình ở Ai Cập, với tư
+    cách là người đứng đầu thư viện Alexandria. Trong số nhiều thành tựu khác, Eratosthenes đã tính
+    chu vi của Trái đất, đo độ nghiêng của trục quay Trái đất, ước tính khoảng cách với mặt trời và
+    tạo ra một số bản đồ đầu tiên của thế giới. Ông cũng đã phát minh ra Sàng của Eratosthenes, một
+    cách hiệu quả để tính _số nguyên tố_.
+  links:
+    - title: Radius of the Earth
+      url: /course/circles/tangets-chords-arcs#eratosthenes
+    - title: Sieve of Eratosthenes
+      url: /course/divisibility/primes#eratosthenes
+
+erdos:
+  born: 1913
+  died: 1996
+  name: Erdős
+  bio: |
+    __Paul Erdős__ (1913 - 1996) là một trong những nhà toán học năng suất nhất trong lịch sử. Sinh
+    ra ở Hungary, ông đã giải quyết vô số vấn đề về lý thuyết đồ thị, lý thuyết số, tổ hợp, phân
+    tích, xác suất và các phần khác của toán học.
+
+    Trong cuộc đời của mình, Erdős đã xuất bản khoảng 1.500 bài báo và hợp tác với hơn 500 nhà toán
+    học khác. Trên thực tế, anh đã dành phần lớn cuộc đời của mình để sống trong một chiếc vali, đi
+    đến các hội thảo và thăm các đồng nghiệp!
+
+escher:
+  name: Escher
+  born: 1898
+  died: 1972
+  bio: |
+    __Maurits Cornelis Escher__ (1898 - 1972) là một nghệ sĩ người Hà Lan, người đã tạo ra các bản
+    phác thảo, khắc gỗ và in thạch bản của các vật thể và hình dạng lấy cảm hứng toán học: bao gồm
+    các khối đa diện, hình chữ nhật và hình dạng không thể. Ông đã khám phá đồ họa các khái niệm như
+    đối xứng, vô cực, phối cảnh và hình học phi euclide.
+  small: true
+  links:
+    - title: Tessellations in Art
+      url: /course/polyhedra/tessellations#escher
+
+euclid:
+  name: Euclid
+  born: -330
+  died: -270
+  bio: |
+    __Euclid của Alexandria__ (khoảng 300 BCE) là một nhà toán học Hy Lạp và thường được gọi là cha
+    đẻ của hình học __. Ông đã xuất bản một cuốn sách _Các yếu tố_ lần đầu tiên giới thiệu hình học
+    Euclide và chứa nhiều bằng chứng quan trọng trong hình học và lý thuyết số. Đó là sách giáo khoa
+    toán học chính cho đến thế kỷ 19. Ông dạy toán ở Alexandria, nhưng rất ít người biết về cuộc đời
+    ông.
+  links:
+    - title: Euclid’s Axioms
+      url: /course/euclidean-geometry/euclids-axioms
+    - title: Infinitely many Primes
+      url: /course/divisibility/primes#primes3
+
+euler:
+  name: Euler
+  born: 1707
+  died: 1783
+  bio: |
+    __Leonhard Euler__ (1707 - 1783) là một trong những nhà toán học vĩ đại nhất trong lịch sử. Công
+    việc của ông trải dài trên tất cả các lĩnh vực toán học, và ông đã viết 80 tập nghiên cứu.
+
+    Euler sinh ra ở Thụy Sĩ và học tại Basel, nhưng sống phần lớn cuộc đời ở Berlin, Phổ và St.
+    Petersburg, Nga.
+
+    Euler đã phát minh ra nhiều thuật ngữ và ký hiệu toán học hiện đại, và thực hiện những khám phá
+    quan trọng trong tính toán, phân tích, lý thuyết đồ thị, vật lý, thiên văn học, và nhiều chủ đề
+    khác.
+  links:
+    - title: Königsberg Bridges Problem
+      url: /course/graph-theory/bridges
+    - title: Euler’s Formula
+      url: /course/graph-theory/planar-graphs
+    - title: Polyhedrons
+      url: /course/polyhedra/polyhedra
+
+fatou:
+  name: Fatou
+  bio: |
+    __Pierre Joseph Louis Fatou__ (1878 - 1929) là nhà toán học và thiên văn học người Pháp. Anh ta
+    đồng phát hiện ra _Julia set_, và nghịch đảo của nó, bộ Fatou, được đặt theo tên anh ta. Ông
+    cũng có những đóng góp quan trọng cho phân tích và cơ học thiên thể.
+
+fermat:
+  name: Fermat
+  born: 1607
+  died: 1665
+  bio: |
+    __Pierre de Fermat__ (1607 - 1665) là một nhà toán học và luật sư người Pháp. Ông là người tiên
+    phong đầu tiên của tính toán, cũng như làm việc trong lý thuyết số, xác suất, hình học và quang
+    học.
+
+    Năm 1637, ông đã viết một ghi chú ngắn bên lề một trong những cuốn sách giáo khoa của mình,
+    tuyên bố rằng phương trình `a^n + b^n = c^n` không có giải pháp số nguyên cho `n > 2`, và ông có
+    một bằng chứng kỳ diệu, mà lề này quá hẹp để chứa Mùi. Điều này được gọi là _Định lý cuối cùng
+    của Fermat_ và là một trong những vấn đề chưa được giải quyết nổi tiếng nhất trong toán học -
+    cho đến khi nó được chứng minh vào năm 1994.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+
+fibonacci:
+  name: Fibonacci
+  born: 1175
+  died: 1250
+  bio: |
+    __Leonardo Pisano__, thường được gọi là __Fibonacci__ (1175 - 1250) là một nhà toán học người Ý.
+    Ông được biết đến nhiều nhất với dãy số được đặt theo tên ông: 1, 1, 2, 3, 5, 8, 13, Lôi
+
+    Fibonacci cũng chịu trách nhiệm phổ biến các chữ số Ả Rập (0, 1, 2, 3, 4, Tấn) ở Châu Âu, nơi
+    vẫn sử dụng các chữ số La Mã (I, V, X, D, Hiểu) trong thế kỷ 12 CE. Ông giải thích hệ thống thập
+    phân trong một cuốn sách có tên là Liber Liber Abaci, một cuốn sách giáo khoa thực tế dành cho
+    thương nhân.
+  links:
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+fourier:
+  born: 1768
+  died: 1830
+  name: Fourier
+  bio: |
+    __Joseph Fourier__ (1768 - 1830) là một nhà toán học người Pháp, đồng thời là một người bạn và
+    cố vấn của Napoleon. Ngoài nghiên cứu toán học của mình, ông cũng được ghi nhận với việc phát
+    hiện ra hiệu ứng nhà kính.
+
+    Khi du lịch tới Ai Cập, Fourier trở nên đặc biệt mê mẩn với _nhiệt_. Ông đã nghiên cứu sự truyền
+    nhiệt và rung động, và phát hiện ra rằng bất kỳ hàm tuần hoàn nào cũng có thể được viết dưới
+    dạng tổng vô hạn của các hàm lượng giác: một chuỗi Fourier __.
+
+fuller:
+  name: Fuller
+  bio: |
+    __Richard Buckminster Hồi Bucky Hồi Fuller__ (1895 - 1983) là một kiến trúc sư, nhà thiết kế và
+    nhà phát minh người Mỹ. Ông nổi tiếng với việc xây dựng _vòm trắc địa_ - các cấu trúc hình cầu
+    lớn. Các phân tử Carbon trông tương tự, _fullerenes_, sau đó được đặt theo tên ông.
+
+galileo:
+  born: 1564
+  died: 1642
+  name: Galileo
+  bio: |
+    __Galileo Galilei__ (1564 - 1642) là nhà thiên văn học, vật lý học và kỹ sư người Ý. Ông đã sử
+    dụng một trong những kính viễn vọng đầu tiên để quan sát bầu trời đêm, nơi ông phát hiện ra bốn
+    mặt trăng lớn nhất của Sao Mộc, các pha của Sao Kim, vết đen mặt trời, và nhiều hơn nữa.
+
+    Galileo, đôi khi được gọi là cha đẻ của khoa học hiện đại, cũng đã nghiên cứu chuyển động của
+    các vật thể rơi tự do, động học, khoa học vật liệu và phát minh ra máy đo nhiệt độ (một nhiệt kế
+    ban đầu).
+
+    Ông là một người ủng hộ giọng hát của _Heliocentrism_, ý tưởng rằng Mặt trời là trung tâm của hệ
+    mặt trời của chúng ta. Điều này cuối cùng đã dẫn đến việc anh ta bị xét xử bởi Toà án dị giáo
+    Công giáo: Galileo bị buộc phải ẩn dật và dành phần còn lại của cuộc đời dưới sự quản thúc tại
+    gia.
+
+galois:
+  born: 1811
+  died: 1832
+  name: Galois
+  overflow: true
+  bio: |
+    Nhà toán học người Pháp __Évariste Galois__ (1811 - 1832) có một cuộc đời ngắn ngủi và bi thảm,
+    nhưng ông đã phát minh ra hai lĩnh vực toán học hoàn toàn mới: _Lý thuyết nhóm_ và _Lý thuyết
+    Galois_ .
+
+    Khi còn ở tuổi thiếu niên, Galois đã chứng minh rằng không có giải pháp chung nào cho phương
+    trình đa thức bậc năm trở lên - đồng thời với Niels Abel.
+
+    Thật không may, các nhà toán học khác, những người mà ông đã chia sẻ những khám phá này liên tục
+    bị thất lạc hoặc đơn giản là đã trả lại công việc của mình, và ông đã trượt kỳ thi ở trường và
+    đại học trong khi tập trung vào công việc phức tạp hơn nhiều.
+
+    Ở tuổi 21, Galois bị bắn trong một cuộc đấu tay đôi (một số người cho rằng mối thù với một người
+    phụ nữ), và sau đó chết vì vết thương của anh ta. Trong đêm trước khi chết, ông đã tóm tắt những
+    khám phá toán học của mình trong một lá thư gửi cho một người bạn. Phải mất nhiều năm các nhà
+    toán học khác mới nhận ra đầy đủ tác động thực sự của công việc của mình.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+gauss:
+  name: Gauss
+  born: 1777
+  died: 1855
+  bio: |
+    __Carl Friedrich Gauss__ (1777 - 1855) được cho là nhà toán học vĩ đại nhất trong lịch sử. Ông
+    đã có những khám phá đột phá trong mọi lĩnh vực toán học, từ đại số và lý thuyết số đến thống
+    kê, tính toán, hình học, địa chất và thiên văn học.
+
+    Theo truyền thuyết, ông đã sửa một lỗi trong kế toán của cha mình khi mới 3 tuổi và tìm ra cách
+    nhanh chóng bổ sung tất cả các số nguyên từ 1 đến 100 ở tuổi 8. Ông đã có những khám phá quan
+    trọng đầu tiên khi còn là một thiếu niên và sau đó dạy kèm cho nhiều nhà toán học nổi tiếng khác
+    là Giáo sư.
+  links:
+    - title: Prime Number Theorem
+      url: /course/divisibility/distribution-of-primes#riemann
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+    - title: Sums of Triangle Numbers
+      url: /course/sequences/figurate#triangle-sums
+
+germain:
+  born: 1776
+  died: 1831
+  name: Germain
+  small: true
+  bio: |
+    __Marie-Sophie Germain__ (1776 - 1831) quyết định rằng cô muốn trở thành một nhà toán học ở tuổi
+    13, sau khi đọc về Archimedes. Thật không may, là một phụ nữ, cô đã phải đối mặt với sự phản đối
+    đáng kể. Cha mẹ cô đã cố gắng ngăn cô học tập khi cô còn nhỏ, và cô chưa bao giờ nhận được một
+    bài đăng tại một trường đại học.
+
+    Germain là người tiên phong trong việc tìm hiểu toán học về các bề mặt đàn hồi, nhờ đó cô đã
+    giành được giải thưởng lớn từ Viện hàn lâm Khoa học Paris. Cô cũng đã đạt được tiến bộ đáng kể
+    trong việc giải quyết Định lý cuối cùng của Fermat, và thường xuyên trao đổi với Carl Friedrich
+    Gauss.
+
+godel:
+  born: 1906
+  died: 1978
+  name: Gödel
+  small: true
+  bio: |
+    __Kurt Gödel__ (1906 - 1978) là một nhà toán học người Áo sau đó di cư sang Mỹ và được coi là
+    một trong những nhà logic học vĩ đại nhất trong lịch sử.
+
+    Ở tuổi 25, ngay sau khi học xong tiến sĩ tại Vienna, ông đã công bố hai định lý không hoàn chỉnh
+    _của mình_. Những trạng thái này cho thấy bất kỳ hệ thống toán học (nhất quán và đủ mạnh) nào
+    cũng chứa các tuyên bố nhất định là đúng nhưng không thể được chứng minh. Nói cách khác, toán
+    học chứa một số vấn đề nhất định không thể giải quyết.
+
+    Kết quả này có tác động sâu sắc đến sự phát triển và triết lý của toán học. Gôdel cũng đã tìm
+    thấy một ví dụ về những định lý bất khả thi này, đó là: giả thuyết liên tục __.
+  links:
+    - title: Unprovable Theorems
+      url: /world/Axioms_and_Proof
+    - title: Continuum Hypothesis
+      url: /world/Infinity
+
+goldbach:
+  name: Goldbach
+  born: 1690
+  died: 1764
+  bio: |
+    __Christian Goldbach__ (1690 - 1764) là một nhà toán học người Phổ và đương đại của Euler,
+    Leibniz và Bernoulli. Ông là gia sư của Sa hoàng Peter II người Nga, và được nhớ đến với bản
+    Gold Gold Conjecture của ông.
+  links:
+    - title: Goldbach Conjecture
+      url: /course/divisibility/distribution-of-primes#goldbach1
+
+grothendieck:
+  born: 1928
+  died: 2014
+  name: Grothendieck
+  small: true
+  bio: |
+    Nhà toán học người Pháp __Alexander Grothendieck__ (1928 - 2014) là một trong những nhân vật
+    quan trọng trong sự phát triển của _hình học đại số_. Ông đã mở rộng phạm vi của lĩnh vực này để
+    áp dụng cho nhiều vấn đề mới trong toán học, bao gồm, cuối cùng, định lý cuối cùng của Fermat.
+    Năm 1966, ông được trao huy chương Cánh đồng.
+
+guthrie:
+  name: Guthrie
+  bio: |
+    __Francis Guthrie__ (1831 - 1899) là nhà thực vật học và toán học người Nam Phi, người đầu tiên
+    đã phát biểu vấn đề Bốn màu vào năm 1852. Ông là học sinh của Augustus De Morgan, một trong
+    những nhà toán học vĩ đại nhất của Anh. Ngoài việc là một giáo sư toán học và giáo viên, Guthrie
+    còn làm luật sư và nghiên cứu về năng lượng mặt trời và hàng không.
+
+haken:
+  name: Haken
+  bio: |
+    __Wolfgang Haken__ (sinh năm 1928) là một nhà toán học người Đức, được biết đến với bằng chứng
+    _Định lý bốn màu_ với Kenneth Appel. Để công nhận, ông và Appell đã nhận được giải thưởng
+    Fulkerson của Hiệp hội toán học Hoa Kỳ. Năm 1990, Haken trở thành thành viên của Trung tâm
+    nghiên cứu nâng cao tại Đại học Illinois, nơi ông hiện là Giáo sư danh dự.
+
+halley:
+  name: Halley
+  bio: |
+    __Edmond Halley__ (1656 - 1742) là nhà toán học và vật lý học người Anh, và là nhà thiên văn học
+    thứ hai _Royal_. Anh ta tính toán quỹ đạo của Halley Ấm Comet, được đặt theo tên anh ta.
+
+hamilton:
+  born: 1805
+  died: 1865
+  name: Hamilton
+  small: true
+  bio: |
+    __William Rowan Hamilton__ (1805 - 1865) là một nhà toán học và thần đồng người Ireland. Ông đã
+    phát minh ra _quancyions_, ví dụ đầu tiên của một đại số không giao hoán, có ứng dụng quan trọng
+    trong toán học, vật lý và khoa học máy tính.
+
+    Đầu tiên anh nảy ra ý tưởng khi đi dọc theo Kênh đào Hoàng gia ở Dublin và khắc công thức cơ bản
+    vào cây cầu đá mà anh đi qua: `"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`.
+
+    Hamilton cũng có những đóng góp đáng kể cho vật lý, bao gồm quang học và cơ học Newton.
+
+hardy:
+  born: 1877
+  died: 1947
+  name: Hardy
+  small: true
+  bio: |
+    __G.H. Hardy__ (1877 - 1947) là một nhà toán học thuần túy hàng đầu nước Anh. Cùng với _John
+    Littlewood_, ông đã có những khám phá quan trọng trong phân tích và lý thuyết số, bao gồm cả
+    việc phân phối các số nguyên tố.
+
+    Năm 1913, Hardy nhận được một lá thư từ _Srinivasa Ramanujan_, một thư ký tự học, vô danh từ Ấn
+    Độ. Hardy ngay lập tức nhận ra thiên tài của mình, và sắp xếp cho Ramanujan tới Cambridge nơi
+    anh đang làm việc. Cùng nhau, họ đã thực hiện những khám phá quan trọng và xác thực nhiều bài
+    báo.
+
+    Hardy luôn không thích toán học ứng dụng và thể hiện điều này trong tài khoản cá nhân về tư duy
+    toán học, cuốn sách năm 1940 _Một lời xin lỗi của nhà toán học_.
+
+hilbert:
+  name: Hilbert
+  born: 1862
+  died: 1943
+  bio: |
+    __David Hilbert__ (1862 - 1943) là một trong những nhà toán học có ảnh hưởng nhất trong thế kỷ
+    20. Ông đã làm việc trên hầu hết các lĩnh vực toán học, và đặc biệt quan tâm đến việc xây dựng
+    một nền tảng logic, chính thức cho toán học.
+
+    Hilbert làm việc tại Göttingen (Đức), nơi ông dạy kèm cho nhiều sinh viên sau này trở thành nhà
+    toán học nổi tiếng. Trong Đại hội các nhà toán học quốc tế năm 1900, ông đã trình bày một danh
+    sách 23 vấn đề chưa được giải quyết. Những điều này đặt ra khóa học cho nghiên cứu trong tương
+    lai - và bốn trong số chúng vẫn chưa được giải quyết cho đến ngày hôm nay!
+  links:
+    - title: Hilbert’s Hotel
+      url: /world/Infinity
+
+hypatia:
+  born: 360
+  died: 415
+  name: Hypatia
+  overflow: true
+  bio: |
+    __Hypatia__ (khoảng 360 - 415 CE) là một nhà thiên văn học và nhà toán học nổi tiếng ở
+    Alexandria cổ đại. Cô cũng là nhà toán học nữ đầu tiên có cuộc sống và công việc được ghi chép
+    hợp lý. Cô đã chỉnh sửa hoặc viết bình luận về nhiều cuốn sách khoa học của thời đại của mình,
+    và xây dựng các cái đo độ cao và tỷ trọng kế.
+
+    Cô ấy nổi tiếng trong suốt cuộc đời là một giáo viên tuyệt vời, và cô ấy đã khuyên Orestes, quận
+    La Mã của Alexandria. Orestes, mối thù với Cyril, giám mục của Alexandria, dẫn đến Hypatia bị
+    sát hại bởi một đám đông các Kitô hữu.
+
+jacobi:
+  born: 1809
+  died: 1851
+  name: Jacobi
+  small: true
+  bio: |
+    __Carl Jacobi__ (1804 - 1851) là một nhà toán học người Đức. Ông đã nghiên cứu về phân tích,
+    phương trình vi phân và lý thuyết số và là một trong những người tiên phong trong nghiên cứu về
+    _hàm elip_.
+
+jefferson:
+  name: Jefferson
+  bio: |
+    __Thomas Jefferson__ (1743 - 1826), là một trong những người sáng lập của Hoa Kỳ, tổng thống thứ
+    ba của họ, và là tác giả chính của Tuyên ngôn Độc lập.
+
+    Ngoài công việc về chính trị, ông còn học toán, làm vườn, cơ khí và làm kiến trúc sư. Sau khi
+    nghỉ hưu từ văn phòng công cộng, Jefferson thành lập Đại học Virginia.
+
+jiushao:
+  born: 1202
+  died: 1261
+  name: Qin Jiushao
+  overflow: true
+  bio: |
+    __Qin Jiushao__ (, c. 1202 - 1261) là một nhà toán học, nhà phát minh và chính trị gia người
+    Trung Quốc. Trong cuốn sách _Shùshū Jiǔzhāng_, ông đã xuất bản nhiều khám phá toán học, bao gồm
+    định lý _còn lại quan trọng của Trung Quốc_, và viết về khảo sát, khí tượng học và quân đội.
+
+    Trước tiên, Qin đã phát triển một phương pháp để giải các phương trình đa thức số, hiện được gọi
+    là phương pháp _Horner._. Ông đã tìm ra một công thức cho diện tích của một hình tam giác dựa
+    trên độ dài ba cạnh của nó, tính tổng của chuỗi số học và đưa ra một biểu tượng cho Truyện 0
+    không vào toán học Trung Quốc.
+
+    Tần cũng đã phát minh ra _lưu vực Tianchi_, được sử dụng để đo lượng mưa và thu thập dữ liệu khí
+    tượng quan trọng cho canh tác.
+
+johnson:
+  born: 1918
+  died: 2020
+  name: Johnson
+  bio: |
+    __Kinda Johnson__ (1918 - 2020) là một nhà toán học người Mỹ gốc Phi. Khi làm việc tại NASA,
+    Johnson đã tính toán quỹ đạo của các phi hành gia người Mỹ - bao gồm Alan Shepard, người Mỹ đầu
+    tiên trong vũ trụ, chương trình hạ cánh trên Mặt trăng Apollo và thậm chí là Tàu con thoi.
+
+    Khả năng phi thường của cô để tính toán quỹ đạo quỹ đạo, cửa sổ khởi động và đường trở về khẩn
+    cấp đã được biết đến rộng rãi. Ngay cả sau khi máy tính xuất hiện, phi hành gia John Glenn vẫn
+    yêu cầu cô tự kiểm tra lại kết quả điện tử.
+
+    Năm 2015, Johnson nhận được Huân chương Tự do của Tổng thống.
+
+julia:
+  name: Julia
+  bio: |
+    __Gaston Maurice Julia__ (1893 - 1978) là một nhà toán học người Pháp, người đã đồng phát hiện
+    ra _Julia set_, một mảnh nhỏ sau đó được Benoit Mandelbrot phổ biến.
+
+karinthy:
+  name: Karinthy
+  bio: |
+    __Frigyes Karinthy__ (1887 - 1938) là một tác giả, nhà thơ và nhà báo người Hungary. Ông được
+    biết đến nhiều nhất với truyện ngắn 1929, Chains Chains, lần đầu tiên đưa ra khái niệm _sáu độ
+    phân cách_.
+
+kepler:
+  name: Kepler
+  born: 1571
+  died: 1630
+  bio: |
+    __Johannes Kepler__ (1571 - 1630) là nhà thiên văn học và toán học người Đức. Ông là nhà toán
+    học đế quốc _ở Prague và ông nổi tiếng với ba định luật về chuyển động hành tinh __. Kepler cũng
+    làm việc trong ngành quang học, và đã phát minh ra một kính thiên văn cải tiến để quan sát.
+  links:
+    - title: Elliptical Orbits
+      url: /course/circles/conic-sections#kepler
+
+khayyam:
+  name: Khayyam
+  born: 1048
+  died: 1131
+  bio: |
+    __Omar Khayyam__ (عمر یّام, 1048 - 1131) là một nhà toán học, nhà thiên văn học và nhà thơ người
+    Ba Tư. Ông quản lý để phân loại và giải quyết tất cả các phương trình bậc ba, và tìm ra những
+    cách mới để hiểu tiên đề Euclid _song song_. Khayyam cũng thiết kế lịch _Jalali_, lịch mặt trời
+    chính xác vẫn được sử dụng ở một số quốc gia.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+koch:
+  name: von Koch
+  bio: |
+    __Niels Fabian Helge von Koch__ (1870 - 1924) là một nhà toán học người Thụy Điển. Đầu tiên, ông
+    mô tả _Bông tuyết Koch_, một mảnh nhỏ được đặt theo tên ông và đã chứng minh mối quan hệ giữa
+    giả thuyết Riemann và phân phối số nguyên tố.
+
+lagrange:
+  born: 1736
+  died: 1813
+  name: Lagrange
+  bio: |
+    __Joseph-Louis Lagrange__ (1736 - 1813) là một nhà toán học người Ý đã kế vị Leonard Euler làm
+    giám đốc của Viện hàn lâm Khoa học tại Berlin.
+
+    Ông đã làm việc về phân tích và tính toán các biến thể, phát minh ra các phương pháp mới để giải
+    phương trình vi phân, chứng minh các định lý trong lý thuyết số và đặt nền móng cho lý thuyết
+    nhóm.
+
+    Lagrange cũng đã viết về cơ học cổ điển và thiên thể, và đã giúp thiết lập hệ thống số liệu ở
+    châu Âu.
+
+lambert:
+  born: 1728
+  died: 1777
+  name: Lambert
+  bio: |
+    __Johann Lambert__ (1728 - 1777) là nhà toán học, vật lý học, nhà thiên văn học và nhà triết học
+    người Thụy Sĩ. Ông là người đầu tiên chứng minh rằng _π_ là một số vô tỷ và ông đã giới thiệu
+    các hàm lượng giác hyperbol. Lambert cũng làm việc về hình học và bản đồ học, tạo ra các phép
+    chiếu bản đồ và báo trước việc phát hiện ra các không gian phi Euclide.
+
+laplace:
+  born: 1749
+  died: 1827
+  name: Laplace
+  small: true
+  bio: |
+    __Pierre-Simon Laplace__ (1749 - 1827) là nhà toán học và nhà khoa học người Pháp. Anh ta đôi
+    khi được gọi là Newton Newton của Pháp, vì sở thích rộng lớn và tác động to lớn của công việc.
+
+    Trong một cuốn sách gồm năm tập, Laplace đã dịch các vấn đề trong cơ học thiên thể từ _hình học_
+    sang _phép tính_. Điều này đã mở ra một loạt các chiến lược mới để hiểu vũ trụ của chúng ta. Ông
+    đề xuất rằng hệ mặt trời phát triển từ một đĩa bụi quay.
+
+    Laplace cũng đi tiên phong trong lĩnh vực xác suất và cho thấy xác suất có thể giúp chúng ta
+    hiểu dữ liệu từ thế giới vật lý như thế nào.
+
+leibniz:
+  name: Leibniz
+  born: 1646
+  died: 1716
+  bio: |
+    __Gottfried Wilhelm Leibniz__ (1646 - 1716) là một nhà toán học và triết học người Đức. Trong số
+    nhiều thành tựu khác, ông là một trong những người phát minh ra máy tính và tạo ra một số máy
+    tính cơ học đầu tiên.
+
+    Leibniz tin rằng vũ trụ của chúng ta là vũ trụ tốt nhất có thể, mà Chúa có thể tạo ra, đồng thời
+    cho phép chúng ta có một ý chí tự do. Ông là một người ủng hộ lớn cho _chủ nghĩa duy lý_, và
+    cũng có những đóng góp cho vật lý, y học, ngôn ngữ học, luật, lịch sử và nhiều môn học khác.
+
+leonardo:
+  born: 1452
+  died: 1519
+  name: Da Vinci
+  bio: |
+    __Leonardo da Vinci__ (1452 - 1519) là một nghệ sĩ người Ý và polymath. Sở thích của ông trải
+    dài từ hội họa, điêu khắc và kiến trúc đến kỹ thuật, toán học, giải phẫu, thiên văn học, thực
+    vật học và bản đồ học. Anh ta thường được xem là ví dụ điển hình của một thiên tài phổ quát và
+    là một trong những cá nhân tài năng đa dạng nhất từng sống.
+
+    Leonardo sinh ra ở Vinci, giáo dục ở Florence và làm việc tại Milan, Rome, Bologna và Venice.
+    Chỉ có 15 bức tranh của ông sống sót, nhưng trong số đó có một số tác phẩm được biết đến nhiều
+    nhất và được sao chép nhiều nhất trên thế giới, bao gồm _Mona Lisa_ và _Bữa ăn tối cuối cùng_.
+
+    Sổ ghi chép của ông chứa một số lượng lớn các bản vẽ, phát minh và sơ đồ khoa học - bao gồm các
+    máy bay và máy bay trực thăng đầu tiên, máy bơm thủy lực, cầu, và nhiều hơn nữa.
+
+lie:
+  born: 1842
+  died: 1899
+  name: Lie
+  small: true
+  bio: |
+    Nhà toán học người Na Uy __Marius Sophus Lie__ (1842 - 1899) đã có những tiến bộ đáng kể trong
+    nghiên cứu _nhóm biến đổi liên tục_ - hiện được gọi là _nhóm Lie_. Ông cũng làm việc trên các
+    phương trình vi phân và hình học phi Euclide.
+
+lobachevsky:
+  born: 1792
+  died: 1856
+  name: Lobachevsky
+  small: true
+  bio: |
+    __Nikolai lobachevsky__ (tiếng Pháp) là một nhà toán học người Nga và là một trong những người
+    sáng lập ra hình học phi Euclide. Ông quản lý để chỉ ra rằng bạn có thể xây dựng một loại hình
+    học nhất quán trong đó tiên đề thứ năm của Euclid (về các đường song song) không giữ được.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+lorenz:
+  name: Lorenz
+  born: 1917
+  died: 2008
+  bio: |
+    __Edward Lorenz__ (1917 - 2008) là nhà toán học và khí tượng học người Mỹ. Ông đã đi tiên phong
+    trong lý thuyết hỗn loạn __, phát hiện ra _những người thu hút kỳ lạ_ và đặt ra thuật ngữ bướm
+    hiệu ứng bướm.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+
+lovelace:
+  born: 1815
+  died: 1852
+  name: Lovelace
+  overflow: true
+  bio: |
+    __Ada Lovelace__ (1815 - 1852) là một nhà văn và nhà toán học người Anh. Cùng với Charles
+    Babbage, cô đã làm việc trên _Engine phân tích_ một máy tính cơ học đầu tiên. Cô cũng đã viết
+    thuật toán đầu tiên để chạy trên một máy như vậy (để tính số Bernoulli), biến cô thành lập trình
+    viên máy tính đầu tiên trong lịch sử.
+
+    Ada mô tả cách tiếp cận của cô là khoa học thơ mộng của người Hồi giáo, và dành nhiều thời gian
+    suy nghĩ về tác động của công nghệ đối với xã hội.
+
+madhava:
+  born: 1340
+  died: 1425
+  name: Madhava
+  bio: |
+    __Madhava của Sangamagramma__ (khoảng 1340 - 1425) là một nhà toán học và nhà thiên văn học từ
+    miền nam Ấn Độ. Tất cả các công việc ban đầu của ông đã bị mất, nhưng ông có tác động lớn đến sự
+    phát triển của toán học.
+
+    Madhava lần đầu tiên sử dụng chuỗi vô hạn để tính gần đúng các hàm lượng giác, đây là một bước
+    quan trọng đối với sự phát triển của phép tính trong nhiều thế kỷ sau đó. Ông cũng nghiên cứu
+    hình học và đại số, và tìm ra một công thức chính xác cho _π_ (cũng sử dụng chuỗi vô hạn).
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Pi
+      url: /course/circles/introduction
+
+mandelbrot:
+  born: 1924
+  died: 2010
+  name: Mandelbrot
+  bio: |
+    Nhà toán học __Benoit Mandelbrot__ sinh ra ở Ba Lan, lớn lên ở Pháp và cuối cùng chuyển đến Hoa
+    Kỳ. Ông là một trong những người tiên phong của _hình học fractal_, và đặc biệt quan tâm đến
+    cách thức sự thô bạo của Hồi giáo và vụ hỗn loạn xuất hiện trong thế giới thực (ví dụ: mây hoặc
+    bờ biển).
+
+    Khi làm việc tại IBM, ông đã sử dụng các máy tính đầu tiên để tạo ra các biểu diễn đồ họa của
+    fractals và vào năm 1980, ông đã phát hiện ra bộ Mandelbrot _nổi tiếng_.
+  links:
+    - title: Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
+
+menger:
+  name: Menger
+  bio: |
+    __Karl Menger__ (1902 - 1985) là một nhà toán học người Mỹ gốc Áo. Ông đã nghiên cứu đại số,
+    hình học, kích thước, lý thuyết trò chơi và khoa học xã hội, nhưng ông được nhớ đến nhiều nhất
+    với miếng bọt biển _Menger_, một fractal ba chiều _nổi tiếng_.
+
+mersenne:
+  born: 1588
+  died: 1648
+  name: Mersenne
+  bio: |
+    __Marin Mersenne__ (1588 - 1648) là một nhà toán học và linh mục người Pháp. Vì thường xuyên
+    trao đổi với các liên hệ của mình trong thế giới khoa học trong thế kỷ 17, anh ta đã được gọi là
+    hộp thư của Châu Âu.
+
+    Ngày nay, chúng ta chủ yếu nhớ anh ấy cho _số nguyên tố Mersenne_, các số nguyên tố có thể được
+    viết là `2^n - 1`. Hầu hết các số nguyên tố lớn nhất được biết là thuộc loại này. Ông cũng
+    nghiên cứu âm học và hòa âm của một chuỗi rung động, và viết về thần học và triết học.
+  links:
+    - title: Large Primes
+      url: /course/divisibility/distribution-of-primes#prime-test-1
+
+milgram:
+  name: Milgram
+  bio: |
+    __Stanley Milgram__ (1933 - 1984) là một nhà tâm lý học xã hội nổi tiếng. Anh ta nổi tiếng với
+    các thí nghiệm về _vâng lời_, kiểm tra xem người lớn sẵn sàng tuân theo mệnh lệnh như thế nào,
+    ngay cả khi làm tổn thương người khác và cho _thí nghiệm thế giới nhỏ_, kiểm tra mức độ kết nối
+    của xã hội.
+
+mirzakhani:
+  born: 1977
+  died: 2017
+  name: Mirzakhani
+  overflow: true;
+  bio: |
+    __Maryam Mirzakhani__ (مریم میرزاخانی, 1977 - 2017) là một nhà toán học và giáo sư người Iran
+    tại Đại học Standford. Cô là người phụ nữ duy nhất nhận được _Huy chương Cánh đồng_, giải thưởng
+    cao nhất trong toán học.
+
+    Maryam làm việc tại giao điểm của các hệ thống động lực và hình học. Cô đã nghiên cứu các đối
+    tượng như _bề mặt hyperbolic_ và _đa tạp phức tạp_, nhưng cũng đóng góp cho nhiều lĩnh vực khác
+    của toán học.
+
+    Khi giải quyết vấn đề, Maryam sẽ vẽ hình tượng trưng và sơ đồ trên các tờ giấy lớn, để xem các
+    mẫu và vẻ đẹp cơ bản. Con gái bà thậm chí còn mô tả Maryam xông hơi làm việc như tranh vẽ. Ở
+    tuổi 40, Maryam chết vì ung thư vú.
+
+monge:
+  born: 1746
+  died: 1818
+  name: Monge
+  bio: |
+    __Gaspard Monge__ (1746 - 1818) là một nhà toán học người Pháp. Ông được coi là cha đẻ của _hình
+    học vi phân_, đã đưa ra khái niệm _đường cong_ trên các bề mặt trong không gian ba chiều (ví dụ:
+    trên một hình cầu). Monge cũng đã phát minh ra _phép chiếu chính tả_ và _hình học mô tả_, cho
+    phép biểu diễn các đối tượng ba chiều bằng các bản vẽ hai chiều.
+
+    Trong cuộc Cách mạng Pháp, Monge từng là Bộ trưởng Bộ Hàng hải. Ông đã giúp cải cách hệ thống
+    giáo dục của Pháp và tìm ra École Polytechnique.
+  small: true
+  links:
+    - title: Map Projections
+      url: /world/Dimensions_and_Distortions
+
+monsky:
+  name: Monsky
+  bio: |
+    __Paul Monsky__ (sinh năm 1936) là một nhà toán học và giáo sư người Mỹ tại Đại học Brandeis.
+    Ông đã chứng minh rằng một hình vuông không thể được chia thành một số lẻ các hình tam giác có
+    diện tích bằng nhau - điều này được gọi là định lý của nhà thờ Đức Bà.
+
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) là một nhà phát minh và họa sĩ người Mỹ. Anh lớn lên gần Boston
+    và học tại trường đại học Yale, trước khi bắt đầu sự nghiệp với tư cách là một nghệ sĩ.
+
+    Trong hành trình trở về từ chuyến đi đến Châu Âu để nghiên cứu nghệ thuật, Morse tình cờ nghe
+    thấy hành khách nói về các thiết bị điện mới. Điều này đã truyền cảm hứng cho anh ta để cải
+    thiện đáng kể cho điện báo điện, chỉ sử dụng một dây duy nhất và để phát triển _mã Morse_ với
+    trợ lý Alfred Vail.
+
+    Sau một số khó khăn ban đầu trong việc nhận tài trợ, điện báo Morse Hồi đã nhanh chóng lan rộng
+    khắp nước Mỹ và thế giới.
+
+    Morse cũng đã chạy hai lần cho thị trưởng thành phố New York, nhưng sự ủng hộ của ông đối với
+    chế độ nô lệ và chống nhập cư có nghĩa là ông đã bị đánh bại cả hai lần.
+
+napier:
+  born: 1550
+  died: 1617
+  name: Napier
+  bio: |
+    __John Napier__ (1550 - 1617) là nhà toán học, vật lý học và nhà thiên văn học người Scotland.
+    Ông đã phát minh ra logarit, phổ biến việc sử dụng dấu thập phân và tạo ra Nap Napier lề xương,
+    một thiết bị tính toán thủ công giúp nhân và chia.
+
+nash:
+  born: 1928
+  died: 2015
+  name: Nash
+  bio: |
+    __John Forbes Nash__ (1928 - 2015) là một nhà toán học người Mỹ, người đã nghiên cứu về lý
+    thuyết trò chơi, hình học vi phân và phương trình vi phân từng phần. Ông đã chỉ ra làm thế nào
+    toán học có thể giải thích việc ra quyết định trong các hệ thống thực tế, phức tạp - bao gồm
+    kinh tế và quân sự.
+
+    Ở tuổi 30, Nash được chẩn đoán mắc chứng tâm thần phân liệt hoang tưởng, nhưng anh đã tìm cách
+    phục hồi và trở lại với công việc học tập của mình. Ông là người duy nhất nhận được cả giải
+    thưởng Nobel về kinh tế và giải thưởng Abel __, một trong những giải thưởng cao nhất trong toán
+    học.
+  links:
+    - title: Game Theory
+      url: /world/Game_Theory
+
+neumann:
+  born: 1903
+  died: 1957
+  name: von Neumann
+  small: true
+  bio: |
+    __John von Neumann__ (1903 - 1957) là nhà toán học, vật lý học và nhà khoa học máy tính người Mỹ
+    gốc Hungary. Ông đã có những đóng góp quan trọng cho toán học thuần túy, là người tiên phong của
+    cơ học lượng tử và phát triển các khái niệm như lý thuyết trò chơi, máy tự động di động, máy tự
+    sao chép và lập trình tuyến tính.
+
+    Trong Thế chiến II, von Neumann là thành viên chủ chốt của _Dự án Manhattan_, làm việc trong
+    việc phát triển bom hydro. Sau đó, ông đã tham khảo ý kiến của Ủy ban Năng lượng nguyên tử và
+    Không quân Hoa Kỳ.
+
+newton:
+  name: Newton
+  born: 1642
+  died: 1726
+  bio: |
+    __Sir Isaac Newton__ (1642 - 1726) là nhà vật lý, nhà toán học và nhà thiên văn học người Anh,
+    và là một trong những nhà khoa học có ảnh hưởng nhất mọi thời đại. Ông là giáo sư tại Đại học
+    Cambridge và là chủ tịch của Hiệp hội Hoàng gia ở London.
+
+    Trong cuốn sách _Princia Mathematica_, Newton đã xây dựng các định luật về chuyển động và trọng
+    lực, đặt nền móng cho vật lý cổ điển và chi phối quan điểm của chúng ta về vũ trụ trong ba thế
+    kỷ tiếp theo.
+
+    Trong số nhiều thứ khác, Newton là một trong những người phát minh ra phép tính, chế tạo kính
+    viễn vọng phản xạ đầu tiên, tính tốc độ âm thanh, nghiên cứu chuyển động của chất lỏng và phát
+    triển một lý thuyết về màu sắc dựa trên cách lăng kính phân tách ánh sáng mặt trời thành quang
+    phổ màu cầu vồng .
+  links:
+    - title: Gravity
+      url: /course/circles/conic-sections#newton
+    - title: Digits of Pi
+      url: /course/circles/introduction#pi-record
+
+nicomachus:
+  name: Nicomachus
+  born: 60
+  died: 120
+  overflow: true
+  bio: |
+    __Nicomachus của Gerasa__ (khoảng 60 - 120) là một nhà toán học Hy Lạp cổ đại, người cũng dành
+    nhiều thời gian để suy nghĩ về các tính chất huyền bí của các con số. Cuốn sách của ông _Giới
+    thiệu về Số học_ chứa đề cập đầu tiên về các số hoàn hảo.
+  links:
+    - title: Perfect Numbers
+      url: /course/sequences/special#perfect
+
+nightingale:
+  born: 1820
+  died: 1910
+  name: Nightingale
+  small: true
+  bio: |
+    __Florence Nightingale__ (1820 - 1910) là một y tá và nhà thống kê người Anh. Trong Chiến tranh
+    Crimea, cô đã điều dưỡng những người lính Anh bị thương, và sau đó thành lập trường đào tạo đầu
+    tiên cho các y tá. Với tư cách là người phụ nữ với chiếc đèn, cô ấy có một biểu tượng văn hóa và
+    các y tá mới ở Mỹ vẫn thực hiện cam kết _Nightingale_.
+
+    Một trong những đóng góp quan trọng nhất của cô đối với y học là việc sử dụng số liệu thống kê
+    để đánh giá phương pháp điều trị. Cô đã tạo ra nhiều infographics và là một trong những người
+    đầu tiên sử dụng biểu đồ hình tròn. Nightingale cũng làm việc để cải thiện vệ sinh và cứu đói ở
+    Ấn Độ, giúp bãi bỏ luật mại dâm và thúc đẩy sự nghiệp mới cho phụ nữ.
+
+noether:
+  name: Noether
+  born: 1882
+  died: 1935
+  bio: |
+    __Amalie Emmy Noether__ (1882 - 1935) là nhà toán học người Đức, người đã có những khám phá quan
+    trọng về đại số trừu tượng và vật lý lý thuyết, bao gồm cả mối liên hệ giữa luật đối xứng và
+    luật bảo tồn. Cô thường được mô tả là nhà toán học nữ có ảnh hưởng nhất.
+  small: true
+  links:
+    - title: Symmetry in Physics
+      url: /course/transformations/physics
+
+oresme:
+  born: 1323
+  died: 1382
+  name: Oresme
+  bio: |
+    __Nicole Oresme__ (c. 1323 - 1382) là một nhà toán học, triết gia và giám mục quan trọng người
+    Pháp, sống ở cuối thời Trung cổ. Ông đã phát minh ra hình học tọa độ, rất lâu trước Descartes,
+    là người đầu tiên sử dụng số mũ phân số và làm việc trên chuỗi vô hạn. Ông đã viết về kinh tế,
+    vật lý, thiên văn học và thần học, và là cố vấn cho vua Charles V của Pháp.
+
+pacioli:
+  born: 1446
+  died: 1517
+  name: Pacioli
+  bio: |
+    __Luca Pacioli__ là một nhà toán học và nhà toán học người Ý có ảnh hưởng, người đã phát minh ra
+    các ký hiệu chuẩn cho phép cộng và trừ (+ và -). Ông là một trong những kế toán viên đầu tiên ở
+    châu Âu, nơi ông giới thiệu việc giữ sổ sách kép. Pacioli hợp tác với Leonardo da Vinci, và cũng
+    viết về số học và hình học.
+
+pascal:
+  name: Pascal
+  born: 1623
+  died: 1662
+  bio: |
+    __Blaise Pascal__ (1623 - 1662) là nhà toán học, vật lý học và triết gia người Pháp. Ông đã phát
+    minh ra một số máy tính cơ học đầu tiên, cũng như làm việc trên hình học phóng xạ, xác suất và
+    vật lý của chân không.
+
+    Nổi tiếng nhất, Pascal được nhớ đến khi đặt tên _Pascal Tam giác_, một tam giác số vô hạn với
+    một số thuộc tính tuyệt vời.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+peano:
+  born: 1858
+  died: 1932
+  name: Peano
+  small: true
+  bio: |
+    Nhà toán học người Ý __Giuseppe Peano__ (1858 - 1932) đã xuất bản hơn 200 cuốn sách và bài báo
+    về logic và toán học. Ông đã xây dựng _tiên đề Peano_, trở thành cơ sở cho đại số và phân tích
+    nghiêm ngặt, đã phát triển ký hiệu cho logic và tập hợp lý thuyết, xây dựng các đường cong lấp
+    đầy không gian (_Peano cong_), và làm việc trên phương pháp chứng minh bằng cảm ứng.
+
+    Peano cũng đã phát triển một ngôn ngữ quốc tế mới, _Latino sine flexione_, đây là phiên bản đơn
+    giản của tiếng Latin.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+pearson:
+  name: Pearson
+  bio: |
+    __Karl Pearson__ (1857 - 1936) là một nhà toán học và thống kê người Anh. Ông làm việc về sinh
+    trắc học, khí tượng học và ưu sinh học, trong số nhiều chủ đề khác, và thành lập khoa thống kê
+    đại học đầu tiên của thế giới, tại Đại học College London.
+
+penrose:
+  name: Penrose
+  born: 1931
+  bio: |
+    __Sir Roger Penrose__ (sinh năm 1931) là một nhà toán học và vật lý người Anh nổi tiếng với công
+    trình đột phá về thuyết tương đối rộng và vũ trụ học - thường hợp tác với các nhà khoa học nổi
+    tiếng khác như Stephen Hawking và Michael Atiyah. Ông cũng phát hiện ra _Penrose Tilings_: những
+    điều tương tự, không định kỳ.
+  links:
+    - title: Penrose Tilings
+      url: /course/polyhedra/tessellations#penrose
+
+perelman:
+  born: 1966
+  name: Perelman
+  bio: |
+    Vào năm 2003, nhà toán học người Nga __Grigori Perelman__ (ррргг рр р ер
+
+    Bằng chứng phức tạp đã được xác minh vào năm 2006, nhưng Perelman đã từ chối hai giải thưởng lớn
+    đi kèm: Giải thưởng thiên niên kỷ trị giá 1 triệu đô la và Huy chương __ là giải thưởng cao nhất
+    trong toán học. Trên thực tế, ông nói: _Đổi tôi không quan tâm đến tiền hay danh vọng; Tôi không
+    muốn được trưng bày như một con thú trong vườn thú.
+
+    Perelman cũng có những đóng góp cho cấu trúc hình học và cấu trúc hình học Riemannian, và Giả
+    thuyết Poincaré vẫn là một trong bảy vấn đề Giải thưởng Thiên niên kỷ được giải quyết.
+
+pingala:
+  name: Pingala
+  born: -330
+  died: -270
+  bio: |
+    __Pingala__ (पिङ) là một nhà thơ và nhà toán học Ấn Độ cổ đại sống khoảng 300 BCE, nhưng rất ít
+    thông tin về cuộc sống của anh ta. Ông đã viết Chandaḥśāstra, nơi ông đã phân tích thơ tiếng
+    Phạn một cách toán học. Nó cũng chứa các giải thích được biết đến đầu tiên về số nhị phân, số
+    Fibonacci và tam giác Pascal.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+planck:
+  name: Plank
+  bio: |
+    __Max Plank__ (1858 - 1947) là nhà vật lý người Đức và là một trong những nhà phát triển ban đầu
+    của Cơ học lượng tử - mà ông đã nhận được giải thưởng Nobel năm 1918.
+
+plato:
+  name: Plato
+  born: -425
+  died: -347
+  bio: |
+    __Plato__ (khoảng 425 - 347 BCE) là một triết gia ở Hy Lạp cổ đại, và - cùng với giáo viên
+    Socrates và học trò của ông Aristotle - đã đặt nền tảng của triết học và khoa học phương Tây.
+
+    Plato thành lập Học viện Athens, tổ chức học tập cao hơn đầu tiên trong thế giới phương Tây.
+    Nhiều tác phẩm của ông về triết học và thần học, khoa học và toán học, chính trị và công lý,
+    khiến ông trở thành một trong những nhà tư tưởng có ảnh hưởng nhất mọi thời đại.
+  links:
+    - title: Platonic Solids
+      url: /course/polyhedra/platonic
+
+poincare:
+  born: 1854
+  died: 1912
+  name: Poincaré
+  bio: |
+    Nhà toán học người Pháp __Henri Poincaré__ (1854 - 1912) thường được mô tả là _nhà phổ quát cuối
+    cùng_, nghĩa là ông đã làm việc trong mọi lĩnh vực toán học được biết trong suốt cuộc đời mình.
+
+    Poincaré là một trong những người sáng lập ra lĩnh vực _Topology_, và ông đã đưa ra phỏng đoán
+    _Poincaré_. Đây là một trong những vấn đề chưa được giải quyết nổi tiếng trong toán học, cho đến
+    khi nó được chứng minh vào năm 2003 bởi Grigori Perelman
+
+    Ông cũng tìm thấy một giải pháp một phần cho vấn đề cơ thể của người Ba, và phát hiện ra rằng
+    chuyển động của ba ngôi sao hoặc hành tinh trong không gian có thể hoàn toàn không thể đoán
+    trước. Điều này đặt nền tảng cho lý thuyết hỗn loạn _hiện đại_.
+
+    Poincaré là người đầu tiên đề xuất _sóng hấp dẫn_, và công trình của ông về các phép biến đổi
+    Lorentz là cơ sở để Albert Einstein xây dựng lý thuyết tương đối đặc biệt của mình.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+    - title: Topology
+      url: /world/Dimensions_and_Distortions
+
+ptolemy:
+  born: 90
+  died: 168
+  name: Ptolemy
+  bio: |
+    __Claudius Ptolemy__ (khoảng 100 - 170 CE) là nhà toán học, nhà thiên văn học, nhà địa lý học và
+    nhà chiêm tinh học Greco-Roman. Ông được nhớ đến nhiều nhất với mô hình _Ptolemaic_ hoặc
+    _Gerialric_ của vũ trụ chúng ta - rằng Trái đất nằm ở trung tâm và tất cả các hành tinh và mặt
+    trời đều xoay quanh điều này.
+
+    Mặc dù ngày nay chúng ta biết mô hình này không chính xác, nhưng tác động khoa học của Ptolemy
+    Hồi là không thể chối cãi. Ông đã phát triển các bảng lượng giác với nhiều ứng dụng thực tế, vẫn
+    chính xác nhất trong nhiều thế kỷ. Ông cũng tạo ra các bản đồ chi tiết về Trái đất, và viết về
+    lý thuyết âm nhạc và quang học.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Orbits
+      url: /course/circles/introduction
+
+pythagoras:
+  name: Pythagoras
+  born: -570
+  died: -495
+  bio: |
+    __Pythagoras of Samos__ (c. 570 - 495 BCE) là một nhà triết học và toán học Hy Lạp. Ông nổi
+    tiếng với việc chứng minh _Định lý Pythagoras_, nhưng đã thực hiện nhiều khám phá toán học và
+    khoa học khác.
+
+    Pythagoras đã cố gắng giải thích âm nhạc theo cách toán học, và phát hiện ra rằng hai âm thanh
+    có âm điệu hay của âm thanh hay với nhau (phụ âm) nếu tỷ lệ tần số của chúng là một phần đơn
+    giản.
+
+    Ông cũng thành lập một trường học ở Ý, nơi ông và các học sinh của mình tôn sùng toán học gần
+    giống như một tôn giáo, trong khi tuân theo một số quy tắc kỳ quái - nhưng cuối cùng ngôi trường
+    đã bị đốt cháy bởi những kẻ thù của họ.
+  links:
+    - title: Pythagoras’ Theorem
+      url: /course/triangles/pythagoras
+
+ramanujan:
+  born: 1887
+  died: 1920
+  name: Ramanujan
+  overflow: true
+  bio: |
+    __Srinivasa Ramanujan__ (1887 - 1920) lớn lên ở Ấn Độ, nơi ông nhận được rất ít sự giáo dục
+    chính thức về toán học. Tuy nhiên, anh quản lý để phát triển những ý tưởng mới trong sự cô lập
+    hoàn toàn, trong khi làm nhân viên bán hàng trong một cửa hàng nhỏ.
+
+    Sau một vài lần thất bại trong việc liên lạc với các nhà toán học khác, ông đã viết một lá thư
+    cho G.H. Hardy. Hardy ngay lập tức nhận ra thiên tài của Ramanujan và sắp xếp cho anh ta tới
+    Cambridge ở Anh. Cùng nhau, họ đã thực hiện nhiều khám phá về lý thuyết số, phân tích và chuỗi
+    vô hạn.
+
+    Thật không may, Ramanujan sớm ngã bệnh và buộc phải trở về Ấn Độ, nơi ông qua đời ở tuổi 32.
+    Trong cuộc đời ngắn ngủi của mình, Ramanujan đã chứng minh hơn 3000 định lý và phương trình,
+    trên một loạt các chủ đề. Công trình của ông đã tạo ra những lĩnh vực toán học hoàn toàn mới, và
+    những cuốn sổ của ông đã được các nhà toán học khác nghiên cứu trong nhiều thập kỷ sau khi ông
+    qua đời.
+
+regiomontanus:
+  born: 1436
+  died: 1476
+  name: Regiomontanus
+  overflow: true
+  bio: |
+    __Johann Müller Regiomontanus__ (1436 - 1476) là nhà toán học và thiên văn học người Đức. Ông đã
+    đạt được những tiến bộ lớn trong cả hai lĩnh vực, bao gồm tạo các bảng thiên văn chi tiết và
+    xuất bản nhiều sách giáo khoa.
+
+richardson:
+  name: Richardson
+  bio: |
+    __Lewis Fry Richardson__ (1881 - 1953) là nhà toán học và vật lý học người Anh. Ông tiên phong
+    trong các kỹ thuật toán học hiện đại về dự báo thời tiết, phát minh ra máy âm thanh để phát hiện
+    các tảng băng trôi và phát triển các phương pháp để giải các hệ phương trình tuyến tính.
+
+    Ông cũng cố gắng tính xác suất hai quốc gia tuyên chiến với nhau, với chiều dài đường biên giới
+    chung của họ. Tuy nhiên, anh ta không thể tìm thấy các phép đo chính xác cho chiều dài của các
+    quốc gia biên giới. Điều này khiến anh nhận ra rằng biên giới và đường bờ biển có nhiều đặc tính
+    của _fractals_.
+
+riemann:
+  name: Riemann
+  born: 1826
+  died: 1866
+  overflow: true
+  bio: |
+    __Bernhard Riemann__ (1826 - 1866) là một nhà toán học người Đức làm việc trong các lĩnh vực
+    phân tích và lý thuyết số. Ông đã đưa ra định nghĩa nghiêm ngặt đầu tiên về tích hợp, nghiên cứu
+    hình học vi phân đặt nền tảng cho thuyết tương đối rộng và thực hiện những khám phá đột phá về
+    phân phối số nguyên tố.
+  links:
+    - title: Riemann Hypothesis
+      url: /course/divisibility/distribution-of-primes#riemann
+
+russell:
+  born: 1872
+  died: 1970
+  name: Russell
+  small: true
+  bio: |
+    __Bertrand Russell__ (1872 - 1970) là một triết gia, nhà toán học và tác giả người Anh. Ông được
+    coi là một trong những nhà logic học quan trọng nhất của thế kỷ 20.
+
+    Russell đã đồng sáng tác cuốn sách Nguyên lý Toán học, nơi ông đã cố gắng tạo ra một nền tảng
+    chính thức cho toán học bằng logic. Công trình của ông đã có một tác động đáng kể không chỉ đối
+    với toán học và triết học, mà còn đối với ngôn ngữ học, trí tuệ nhân tạo và siêu hình học.
+
+    Russell là một người theo chủ nghĩa hòa bình và hoạt động chống chiến tranh. Năm 1950, ông nhận
+    được giải thưởng Nobel về văn học, với tác phẩm của mình, trong đó ông vô địch những lý tưởng
+    nhân đạo và tự do tư tưởng.
+
+shannon:
+  name: Shannon
+  born: 1898
+  died: 1972
+  bio: |
+    __Claude Shannon__ (1898 - 1972) là một nhà toán học và kỹ sư điện người Mỹ, được nhớ đến như là
+    cha đẻ của lý thuyết thông tin. Ông đã làm việc về mật mã, bao gồm cả tiền mã hóa để bảo vệ quốc
+    gia trong Thế chiến II, nhưng ông cũng quan tâm đến việc tung hứng, uniciking và cờ vua. Trong
+    thời gian rảnh rỗi, anh chế tạo những cỗ máy có thể tung hứng hoặc giải câu đố Rubik Hay Cube.
+  small: true
+  links:
+    - title: Computers for Gambling
+      url: /course/statistics/casino#dealer
+
+shijie:
+  born: 1249
+  died: 1314
+  name: Zhu Shijie
+  bio: |
+    __Zhu Shijie__ (, 1249 - 1314) là một trong những nhà toán học vĩ đại nhất của Trung Quốc. Trong
+    cuốn sách _Jade Mirror of the Four Unknowns_, ông đã chỉ ra cách giải quyết 288 vấn đề khác nhau
+    bằng cách sử dụng các hệ phương trình đa thức và bốn biến (được gọi là _Heaven_, _Earth_, _Người
+    đàn ông_ và _Vật chất_).
+
+    Zhu đã sử dụng rộng rãi tam giác Pascal. Ông cũng đã phát minh ra các quy tắc để giải các hệ
+    phương trình tuyến tính - trước các phương pháp ma trận hiện đại của chúng ta trong nhiều thế
+    kỷ.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+sierpinski:
+  name: Sierpiński
+  bio: |
+    __Wacław Franciszek Sierpiński__ (1882 - 1969) là một nhà toán học người Ba Lan. Ông đã có những
+    khám phá quan trọng trong lý thuyết tập hợp, lý thuyết số, phân tích và cấu trúc liên kết, xuất
+    bản hơn 700 bài báo và 50 cuốn sách. Ông cũng đã phát minh ra nhiều fractals _phổ biến_, bao gồm
+    cả tam giác _Sierpinki_, thảm Sierpinki __ và đường cong Sierpinki __.
+
+    _Số Sierpinki_ là số tự nhiên lẻ _k_ sao cho `k * 2^n +1` là tổng hợp cho tất cả các số tự nhiên
+    _n_. Vấn đề _Sierpinki_ đang cố gắng tìm các số Sierpinki nhỏ nhất. Con số nhỏ nhất được biết
+    đến là 78.557 - nhưng vẫn chưa biết liệu có những cái nhỏ hơn không.
+
+sikdar:
+  name: Sikdar
+  bio: |
+    __Radhanath Sikdar__ (1813 - 1870) là một nhà toán học Ấn Độ. Ông là người đầu tiên đo chiều cao
+    của đỉnh Everest và cho thấy đây là ngọn núi cao nhất trên Trái đất.
+
+singmaster:
+  name: Singmaster
+  bio: |
+    __David Singmaster__ (sinh năm 1939) là một nhà toán học người Mỹ, người đặc biệt nổi tiếng với
+    các câu đố toán học và trêu ghẹo não. Ông là người đầu tiên đưa ra các thuật toán toán học để
+    phân tích và giải {Rubi} Cube_.
+
+stevin:
+  born: 1548
+  died: 1620
+  name: Stevin
+  bio: |
+    __Simon Stevin__ (1548 - 1620) là nhà toán học và kỹ sư người Flemish. Ông là một trong những
+    người đầu tiên sử dụng và viết về phân số thập phân, và có nhiều đóng góp khác cho khoa học và
+    kỹ thuật.
+
+tartaglia:
+  born: 1499
+  died: 1557
+  name: Tartaglia
+  bio: |
+    __Niccolò Fontana Tartaglia__ (1499 - 1557) là một nhà toán học, kỹ sư và kế toán người Ý. Ông
+    đã xuất bản các bản dịch tiếng Ý đầu tiên của Archimedes và Euclid, tìm ra một công thức để giải
+    bất kỳ phương trình bậc ba nào (bao gồm cả ứng dụng thực tế đầu tiên của số phức) và sử dụng
+    toán học để điều tra chuyển động của đạn súng thần công.
+
+thales:
+  name: Thales
+  born: -624
+  died: -546
+  bio: |
+    __Thales of Miletus__ (khoảng 624 - 546 BCE) là một nhà toán học và triết học Hy Lạp.
+
+    Thales thường được công nhận là nhà khoa học đầu tiên trong nền văn minh phương Tây: thay vì sử
+    dụng tôn giáo hay thần thoại, ông đã cố gắng giải thích các hiện tượng tự nhiên bằng cách sử
+    dụng một phương pháp khoa học. Ông cũng là cá nhân đầu tiên trong lịch sử có một khám phá toán
+    học được đặt theo tên ông: Định lý Thales.
+  links:
+    - title: Thales’ Theorem
+      url: /course/euclidean-geometry/introduction
+
+thorp:
+  name: Thorp
+  bio: |
+    __Edward Thorp} Roulette. Ông làm việc tại MIT, là giáo sư toán học và là người tiên phong ứng
+    dụng lý thuyết xác suất hiện đại.
+
+turing:
+  born: 1912
+  died: 1954
+  name: Turing
+  bio: |
+    __Alan Turing__ (1912 - 1954) là một nhà toán học người Anh và thường được gọi là cha đẻ của
+    khoa học máy tính.
+
+    Trong Chiến tranh thế giới thứ hai, Turing đã đóng một vai trò quan trọng trong việc phá vỡ mã
+    Enigma được sử dụng bởi quân đội Đức, như một phần của Bộ luật Chính phủ và Trường Cypher tại
+    Công viên Bletchley. Điều này đã giúp quân Đồng minh chiến thắng trong cuộc chiến, và có thể đã
+    cứu sống hàng triệu người.
+
+    Ông cũng đã phát minh ra _Turing machine_, một mô hình toán học của máy tính đa năng và _Turing
+    test_, có thể được sử dụng để đánh giá khả năng của trí tuệ nhân tạo.
+
+    Turing là người đồng tính, đó vẫn là một tội ác trong suốt cuộc đời anh, và có nghĩa là những
+    thành tựu đột phá của anh không bao giờ được công nhận hoàn toàn. Anh tự tử ở tuổi 41.
+
+ulam:
+  name: Ulam
+  bio: |
+    __Stanisław Ulam__ (1909 - 1984) là nhà toán học người Mỹ gốc Ba Lan. Ông đóng một vai trò quan
+    trọng trong Dự án Manhattan _của Mỹ_ đã phát triển vũ khí hạt nhân đầu tiên. Ông cũng làm việc
+    về lực đẩy tên lửa bằng các xung hạt nhân và phát triển phương pháp _Monte Carlo_ - một khái
+    niệm quan trọng trong thống kê.
+
+venn:
+  name: Venn
+  bio: |
+    __John Venn__ (1834 - 1923) là một nhà toán học và triết gia người Anh, người đã giới thiệu sơ
+    đồ _Venn_ được sử dụng trong lý thuyết tập hợp và xác suất. Ông giảng dạy tại Đại học Cambridge
+    và là thành viên của Hiệp hội Hoàng gia ở London.
+
+viete:
+  born: 1540
+  died: 1603
+  name: Viète
+  bio: |
+    __François Viète__ (1540 - 1603) là một nhà toán học, luật sư và cố vấn người Pháp cho Kings
+    Henry III và IV của Pháp. Ông đã có những tiến bộ đáng kể trong Đại số, và lần đầu tiên giới
+    thiệu việc sử dụng các chữ cái để biểu diễn các biến.
+
+    Viète đã phát hiện ra mối liên hệ giữa các gốc và hệ số của một đa thức, được gọi là _Viète & #
+    39; s công thức_. Ông cũng đã viết sách về hình học và lượng giác, bao gồm tính toán _π_ đến 10
+    vị trí thập phân bằng cách sử dụng một đa giác với 393216 cạnh.
+
+wallis:
+  born: 1616
+  died: 1703
+  name: Wallis
+  bio: |
+    Nhà toán học người Anh __John Wallis__ (1616 - 1703) đã đóng góp cho sự phát triển của phép
+    tính, phát minh ra dòng số và ký hiệu ∞ cho vô cực, và từng là nhà mật mã trưởng cho Quốc hội và
+    triều đình.
+
+wiles:
+  born: 1953
+  name: Wiles
+  bio: |
+    Nhà toán học người Anh Sir __Andrew Wiles__ (sinh năm 1953) nổi tiếng với việc chứng minh Định
+    lý cuối cùng của Fermat, mà cho đến lúc đó, là một trong những vấn đề nổi tiếng nhất chưa được
+    giải quyết trong toán học.
+
+    Năm 1637, Pierre de Fermat, đã viết trong lề của một cuốn sách giáo khoa rằng ông có một bằng
+    chứng tuyệt vời rằng phương trình `a^n + b^n = c^n` không có nghiệm nguyên cho `n > 2`. Thật
+    không may, không ai có thể tìm thấy một bằng chứng - cho đến khi Wiles, khoảng 400 năm sau.
+
+    Wiles đã bị cuốn hút bởi vấn đề này từ năm 10 tuổi và đã trải qua bảy năm làm việc trong sự cô
+    độc. Ông đã công bố giải pháp của mình vào năm 1993, mặc dù một lỗ hổng nhỏ trong lập luận của
+    ông phải mất thêm hai năm để sửa chữa.
+
+    Ông đã quá già để nhận được huy chương __, giải thưởng cao nhất trong toán học, có giới hạn tuổi
+    là 40. Thay vào đó, Wiles đã được trao một huy chương bạc đặc biệt cho công việc của mình.
+
+wolfram:
+  name: Wolfram
+  bio: |
+    __Stephen Wolfram__ (sinh năm 1959) là nhà khoa học máy tính, nhà vật lý và doanh nhân người Mỹ
+    gốc Anh. Ông là người sáng lập và Giám đốc điều hành của _Wolfram Research_, nơi ông đã phát
+    triển hệ thống máy tính _Mathicala_, công cụ trả lời _Wolfram | Alpha_ và ngôn ngữ lập trình
+    Wolfram.

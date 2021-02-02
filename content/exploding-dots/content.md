@@ -68,7 +68,7 @@ Our number notation is incredibly powerful, and has allowed us to make amazing
 discoveries in mathematics, science and engineering. In Europe, mathematicians
 first used the [Roman numeral system](gloss:roman-numerals) (numbers like I, V,
 X, …) before the [Arabic numbers](gloss:arabic-numerals) were introduced
-in the 15th century.
+in the 12th century.
 
 {.r} There is one important property of numbers that we usually take for
 granted: all numbers are __unique__. In other words, there are no two different

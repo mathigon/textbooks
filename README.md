@@ -28,7 +28,8 @@ development. Simply follow our [setup instructions](docs/setup.md).
 
 ## Contributing
 
-[![Build Status](https://travis-ci.org/mathigon/textbooks.svg?branch=master)](https://travis-ci.org/mathigon/textbooks)
+![CI Tests](https://github.com/mathigon/textbooks/workflows/CI%20Tests/badge.svg)
+![Code Quality](https://github.com/mathigon/textbooks/workflows/Code%20Quality/badge.svg)
 ![GitHub repo size](https://img.shields.io/github/repo-size/mathigon/textbooks)
 ![GitHub issues](https://img.shields.io/github/issues-raw/mathigon/textbooks)
 
@@ -42,7 +43,7 @@ principles, style recommendations, and descriptions of interactive elements.
 If you want to help us translate Mathigon into more languages, take a look at our [localisation
 documentation](docs/translations.md).
 
-Before submitting a pull request, you will need to sign the [Mathigon Individual Contributor
+Before submitting a pull request, you have to sign our [Individual Contributor
 License Agreement](https://gist.github.com/plegner/5ad5b7be2948a4ad073c50b15ac01d39).
 
 If you want to work for Mathigon, visit our [careers page](https://mathigon.org/careers), and
@@ -52,4 +53,4 @@ If you want to work for Mathigon, visit our [careers page](https://mathigon.org/
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/MathigonOrg?style=social)](https://twitter.com/intent/follow?screen_name=MathigonOrg)
 
-© Mathigon 2016–2020, All rights reserved
+© Mathigon 2016–2021, All rights reserved

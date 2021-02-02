@@ -1,0 +1,1867 @@
+# ==============================================================================
+# MATHIGON GLOSSARY
+# ==============================================================================
+
+absolute-value:absolute-value:
+  title: Valor absoluto
+  text: |
+    O __valor absoluto__ de um número é a distância de 0 na linha numérica. Torna números negativos
+    positivos, mas mantém os números positivos inalterados. O valor absoluto de `x` é escrito como
+    `|x|`. Por exemplo, `|-5| = 5` e `|3| = 3`.
+
+acute-angle:
+  title: Ângulo agudo
+  text: Um ângulo agudo __é um ângulo de tamanho menor que 90 °.
+
+acute-triangle:
+  title: Triângulo agudo
+  text: 'Em um triângulo agudo ____, todos os três ângulos interiores são _agudos_ (inferiores a 90 °).'
+  link: /course/triangles/properties#classification
+
+adic:
+  title: Números adic
+  text: |
+    Os números __*N*-adic__, para alguns números inteiros _n_, são um sistema numérico especial, com
+    uma definição de “proximidade” diferente da aritmética usual. Dois números adic _n_ estão
+    _próximos_ se a diferença for divisível por uma alta potência de _n_.
+
+adjacent-angles:
+  title: Ângulos adjacentes
+  text: |
+    Dois ângulos são __adjacentes__ se eles compartilham um lado e um vértice comuns, mas não se
+    sobrepõem. A palavra _adjacente_ significa simplesmente "vizinho".
+
+aleph-zero:
+  title: Aleph Zero
+  text: |
+    Aleph Zero, escrito usando a letra hebraica א, é a cardinalidade de um conjunto contável
+    infinito (por exemplo, os números naturais).
+
+algebraic-numbers:
+  title: Números Algébricos
+  text: |
+    __Os números algébricos__ são o subconjunto dos números reais, que podem ser representados como
+    raízes de uma equação polinomial com coeficientes inteiros. Todos os números racionais (como
+    `2/3`) e surds (como `root(3,5)`) são algébricos, assim como números que podem ser criados a
+    partir de surds (como `(2 + sqrt(3))/(1 - sqrt(5))`).
+
+    Esses números que são reais, mas _não_ algébricos são chamados _números transcendentais_.
+
+algorithm:
+  title: Algoritmo
+  text: |
+    Um algoritmoé um conjunto de regras ou instruções que podem ser usadas para resolver um problema
+    específico. Eles são comumente usados por computadores e aparecem em toda parte na matemática:
+    de _divisão longa_ a _eliminação gaussiana_.
+
+alternate-angles:
+  title: Ângulos alternativos
+  text: |
+    __Ângulos alternativos__ são formados por duas _linhas paralelas_ que são cruzadas por uma linha
+    _transversal_ e sempre são congruentes. No diagrama abaixo, cada um dos pares de ângulos
+    marcados 1, 2, 3 e 4 são alternados. Os dois ângulos de cada par estão em uma linha paralela
+    diferente e em lados opostos da travessia.
+
+    Os pares de ângulos 1 e 2 são chamados __ângulos externos alternativos__, porque estão fora das
+    linhas paralelas, e os pares de ângulos 3 e 4 são chamados __ângulos internos alternativos__.
+
+amino-acid:
+  title: Aminoácido
+  text: |
+    __Aminoácidos__ são pequenos compostos orgânicos que compõem __proteínas__. Eles são alguns dos
+    principais componentes de todos os organismos vivos.
+
+    No nosso corpo, os aminoácidos são usados para decompor os alimentos, reparar tecidos corporais,
+    armazenar energia e para muitas outras funções.
+
+angle:
+  title: Ângulo
+  text: |
+    Um ângulo é formado por dois raios que compartilham um ponto final comum. Cada raio é chamado de
+    lado do ângulo. o tamanho de um ângulo é geralmente medido em _graus_ ou _radianos_.
+
+angle-bisector:
+  title: Bissetriz de ângulo
+  text: |
+    Uma bissetriz de ânguloé uma linha ou raio que divide um ângulo ao meio, em dois ângulos
+    congruentes e menores.
+  image: angle-bisector.svg
+
+anti-dot:
+  title: Anti-Dot
+  text: |
+    As células em uma máquina de pontos podem conter __anti-pontos__, que você pode considerar
+    "buracos" ou "pontos negativos". Eles têm um valor de -1. Você sempre pode adicionar um ponto e
+    um anti-ponto à mesma célula, sem alterar seu valor.
+
+apothem:
+  title: Apótema
+  text: O __apótema__ de um polígono regular é a distância do ponto médio de um de seus lados ao centro.
+
+arabic-numerals:
+  title: Algarismos arábicos
+  text: |
+    O __sistema de numeração arábica__ usa dez dígitos diferentes (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+    junto com um sistema de valor decimal, para escrever qualquer número.
+
+    Foi desenvolvido pela primeira vez na Índia, depois adaptado por matemáticos árabes, antes de
+    ser trazido para a Europa pelo matemático italiano Leonardo Fibonacci.
+
+arccos:
+  title: Cosseno inverso
+  text: |
+    A função __cosseno inverso__ é uma função trigonométrica escrita como `arccos(x)` ou
+    `cos^(-1)(x)`. É o inverso de `cos(x)`.
+
+archimedean-solid:
+  title: Sólido arquimediano
+  text: |
+    Um sólido arquimediano __é um poliedro formado por diferentes tipos de polígonos regulares, com
+    a mesma aparência em todas as direções. Existem 13 sólidos arquimedianos diferentes.
+  link: /course/polyhedra/platonic#archimedean
+
+arithmetic-mean:
+  title: Média aritmética
+  text: |
+    A __média__ é a _média_ de um conjunto de números. Você pode calculá-lo, mas adicionando todos
+    os números do conjunto e dividindo o total pelo número de itens.
+
+arithmetic-sequence:
+  title: Sequência aritmética
+  text: |
+    Uma sequência aritmética(às vezes chamada de __progressão aritmética__) é uma sequência de
+    números em que a diferença _d_ entre termos consecutivos é sempre constante.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+arithmetic series:
+  title: Série Aritmética
+  text: Uma série aritméticaé a soma dos termos em uma sequência aritmética.
+
+associative:
+  title: Associatividade
+  text: |
+    Uma operação é associativa se `a•(b•c) = (a•b)•c`. Por exemplo, adição (+) e multiplicação (×)
+    de números são associativas.
+
+atom:
+  title: Átomo
+  text: |
+    __Átomos__ são as partículas que compõem toda a matéria comum: sólidos, líquidos, gases e
+    plasma. Os átomos consistem em um _núcleo_ (ou _núcleo_) carregado positivamente, constituído
+    por _prótons_ e _nêutrons_ e cercado por conchas de partículas negativas. _elétrons carregados_.
+    O diâmetro de um átomo é aproximadamente um milionésimo de milímetro.
+
+axiom:
+  title: Axioma
+  text: |
+    Um axioma ____, às vezes chamado de __postulado__, é uma afirmação matemática que é considerada
+    "auto-evidente" e aceita sem provas. Deve ser tão simples que é óbvia e inquestionavelmente
+    verdadeira.
+
+    Os axiomas formam a base da matemática e podem ser usados para provar outros resultados mais
+    complexos.
+
+axis-of-symmetry:
+  title: Eixo de simetria
+  text: |
+    Se uma forma tem simetria reflexiva, o eixo de simetria__ é a linha que a divide em duas metades
+    iguais.
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+base-10:
+  title: Base 10
+  text: |
+    O sistema __decimal__ (ou __base 10__) é o sistema de numeração mais usado em todo o mundo. Cada
+    dígito em um número pode ter um dos dez valores diferentes, de 0 a 9.
+
+bipartite-graph:
+  title: Gráfico bipartido
+  text: |
+    Um gráfico bipartido____ (completo) consiste em dois conjuntos de vértices. Todo vértice está
+    conectado a todos os vértices no conjunto oposto, mas nenhum dos vértices em seu próprio
+    conjunto.
+  link: /course/graph-theory/handshakes#handshakes-4
+
+blackjack:
+  title: Blackjack
+  text: |
+    __Blackjack__ é um jogo de cartas no qual você soma o valor de várias cartas para chegar perto
+    de 21 - mas não acima.
+
+cavalieri:
+  title: Princípio de Cavalieri
+  text: |
+    __O Princípio de Cavalieri__ afirma que, se dois sólidos têm a mesma altura e a mesma área de
+    seção transversal em todos os níveis, então ambos têm o mesmo volume.
+
+    Podemos usar esse fato para derivar que o volume de prismas e cilindros é a área da seção
+    transversal multiplicada pela altura.
+
+calculus:
+  title: Cálculo
+  text: |
+    __O cálculo__ é o ramo da matemática que lida com limites, derivadas, integrais e séries de
+    potências. Problemas comuns incluem encontrar a inclinação de uma curva, encontrar extremos,
+    encontrar a taxa de alteração de uma função e localizar a área sob uma curva.
+
+center-of-rotation:
+  title: Centro de rotação
+  text: O __centro de rotação__ é o ponto em torno do qual uma forma está sendo girada.
+  link: /course/transformations/rigid#rotations
+
+centroid:
+  title: Centroid
+  text: |
+    O __centróide__ de um triângulo é o ponto onde suas três medianas se cruzam. É também o "centro
+    de massa" do triângulo de densidade uniforme.
+  link: /course/triangles/properties#center-of-mass
+
+chaos:
+  title: Caos
+  text: tudo
+
+circle:
+  title: Círculo
+  text: |
+    Um círculoé o conjunto de todos os pontos em duas dimensões, a uma distância fixa (o raio __) de
+    um determinado ponto (o _centro_).
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+circle-area:
+  title: Área de um círculo
+  text: A áreade um círculo com raio _r_ é dada pela folmula `A = pi r^2`.
+
+circle-circumference:
+  title: Circunferência de um círculo
+  text: |
+    A circunferênciade um círculo é a distância em torno de sua borda externa. Um círculo com raio
+    _r_ tem circunferência `C = 2 pi r`.
+  link: /course/circles/introduction#radius
+
+circle-diameter:
+  title: Diâmetro (círculo)
+  text: |
+    O __diâmetro__ de um círculo é a distância entre dois pontos opostos em sua circunferência e
+    passando pelo centro.
+  link: /course/circles/introduction#radius
+
+circle-radius:
+  title: Raio
+  text: |
+    O raiode um círculo é a distância (ou um segmento de linha) entre seu centro e qualquer ponto em
+    sua circunferência.
+  link: /course/circles/introduction#radius
+
+circle-sector:
+  title: Setor do Círculo
+  text: |
+    Um __setor__ de um círculo é uma parte de seu interior, delimitada por dois raios e um __arco__.
+    Sua área é proporcional ao ângulo interno, bem como ao comprimento do arco. Isso significa que
+
+    {.text-center} `(A_"Sector")/(A_"Circle") = "Arc"/"Circumference" = θ/(2π)`
+  link: /course/circles/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
+circle-segment:
+  title: Segmento de círculo
+  text: |
+    Um __segmento__ de um círculo é uma parte do seu interior, delimitada por um acorde e pelo arco
+    correspondente.
+
+circumcircle:
+  title: Circuncisão de um triângulo
+  text: O __circumcircle__ de um triângulo é o círculo que passa pelos três vértices.
+  image: circumcircle.svg
+  link: /course/triangles/properties#circumcircle-1
+
+coefficient:
+  title: Coeficiente
+  text: |
+    __Coeficientes__ são os números na frente das variáveis em uma expressão ou equação matemática.
+    Por exemplo, na expressão `4x + 5y^2 - 3z`, o coeficiente de `x` é 4, o coeficiente de `y^2` é 5
+    e o coeficiente de `z` é –3.
+
+collinear:
+  title: Pontos colineares
+  text: Três ou mais pontos são __colineares__ se estiverem na mesma linha.
+
+compass:
+  title: Bússola
+  text: |
+    Uma bússola é uma ferramenta de desenho usada para criar círculos ou arcos. Consiste em dois
+    braços - a agulha em uma ponta é colocada no centro, enquanto o lápis na outra ponta traça a
+    curva.
+
+complementary-angles:
+  title: Ângulos complementares
+  text: Dois ângulos são __complementares__ se somam 90 ° (ângulo reto).
+
+complete-graph:
+  title: Gráfico completo
+  text: |
+    Nos __gráficos completos__, todos os vértices estão conectados a todos os outros vértices. Um
+    gráfico completo com _n_ vértices possui `(n×(n-1))/2` arestas.
+  link: /course/graph-theory/handshakes#handshakes-3
+
+complex-numbers:
+  title: Números complexos
+  text: |
+    Os __números complexos__ são todos os números que são a soma ou a diferença de um número real e
+    um número imaginário. Eles geralmente são escritos como `a + bi`, onde _a_ é a parte real e _b_
+    é a parte imaginária.
+
+    Números complexos podem ser representados em um plano bidimensional, onde o eixo _x_ são os
+    números reais e o eixo _e_ são os números imaginários.
+
+    O conjunto de todos os números complexos é frequentemente indicado usando o símbolo `CC`.
+
+composite-number:
+  title: Número composto
+  text: |
+    Um número compostoé um número inteiro que não é primo. Isso significa que ele possui outros
+    fatores além de 1 e ele próprio.
+
+concave:
+  title: Polígono côncavo
+  text: |
+    Um polígono __côncavo__ possui pelo menos um ângulo interno maior que 180 °. Pelo menos uma das
+    diagonais está _fora de_. Uma maneira comum de identificar um polígono côncavo é procurar um
+    lado "cavado" do polígono. _Côncavo_ é o oposto de _polígonos convexos_.
+  link: /course/polyhedra/polygons#concave
+
+cone:
+  title: Cone
+  text: |
+    Um coneé um sólido tridimensional que possui uma base circular __ unida a um único ponto
+    (chamado de _vértice_) por um lado curvado. Você também pode pensar em um cone como uma
+    "pirâmide circular".
+
+    Um __cone direito__ é um cone com seu vértice diretamente acima do centro de sua base.
+  link: /course/circles/spheres-cones-cylinders#cone
+  image: cone.svg
+
+cone-volume:
+  title: Volume de um cone
+  text: |
+    O volume de um cone é dado pela equação
+
+    {.text-center} `V = 1/3 π r^2 h`,
+
+    onde _r_ é o raio da base circular e _h_ é a altura do cone (a distância perpendicular da base
+    ao vértice).
+
+congruent:
+  title: Congruência
+  text: |
+    Na geometria, duas figuras são __congruentes__ se forem idênticas em tamanho, forma e medida.
+    Isso significa que podemos movê-los, girá-los ou girá-los para encaixá-los exatamente um em cima
+    do outro.
+  link: /course/euclidean-geometry/definitions#congruence
+
+congruent-angles:
+  title: Ângulos congruentes
+  text: Dois ângulos são __congruentes__ se tiverem o mesmo tamanho.
+
+conic-section:
+  title: Seção Cônica
+  text: |
+    Uma seção cônica __é uma curva criada como a interseção da superfície de um cone com um plano
+    plano. Existem quatro tipos diferentes de seções cônicas, que compartilham muitas propriedades:
+
+    * Círculo
+
+    * Elipse
+
+    * Parábola
+
+    * Hipérbole
+  link: /course/circles/conic-sections
+
+convex:
+  title: Polígono convexo
+  text: |
+    Um polígono __convexo__ não contém ângulos internos maiores que 180 °. Todas as diagonais estão
+    dentro do polígono. É o oposto de _polígonos côncavos_.
+  link: /course/polyhedra/polygons#concave
+
+coordinate-system:
+  title: Sistema de coordenadas
+  text: |
+    Um sistema cordinado __é um plano bidimensional que contém dois eixos perpendiculares. Cada
+    ponto no plano pode ser definido usando dois números (coordenadas), que especificam sua
+    distância dos dois eixos.
+
+coordinate-system-origin:
+  title: Sistema de coordenadas
+  text: |
+    A origemde um sistema de coordenadas é o ponto com coordenadas (0, 0). Geralmente é o ponto em
+    que os dois eixos se cruzam.
+
+corresponding-angles:
+  title: Ângulos correspondentes
+  text: |
+    __Ângulos correspondentes__ são dois ângulos que estão na mesma posição em relação à
+    transversal, mas em linhas diferentes. Eles são sempre congruentes.
+  image: corresponding-angles.svg
+
+cos:
+  title: Cosine
+  text: |
+    __O cosseno__ é uma função trigonométrica escrita como `cos(θ)`. Em um triângulo retângulo, é a
+    proporção do lado adjacente e da hipotenusa.
+  link: /course/triangles/trigonometry#trig-functions
+
+cpoct:
+  title: CPOCT
+  text: |
+    CPOCT significa __partes correspondentes de triângulos congruentes__. Isso significa que, se
+    dois triângulos são congruentes, todos os seus componentes correspondentes (ângulos, lados,
+    segmentos intermediários ...) também devem ser congruentes entre si.
+  link: /course/triangles/congruence#cpoct
+
+cross-section:
+  title: Corte transversal
+  text: Uma seção transversal __é a interseção de um sólido tridimensional com um plano.
+
+cryptography:
+  title: Criptografia
+  text: |
+    __Criptografia__ é a área da matemática que estuda a codificação e decifração de mensagens
+    secretas.
+
+cube:
+  title: Cubo
+  text: |
+    Um cubo(às vezes chamado de __hexaedro__) é um poliedro regular em que cada face é um quadrado.
+    É um dos cinco _sólidos platônicos_ e possui 6 faces, 8 vértices e 12 arestas.
+  link: /course/polyhedra/platonic#platonic-overview
+
+cube-volume:
+  title: Volume de um cubo
+  text: Um cubo com comprimento lateral _a_ tem volume `V = a^3`.
+
+cylinder:
+  title: Cilindro
+  text: |
+    Um cilindroé um sólido tridimensional que consiste em dois lados circulares congruentes,
+    paralelos e circulares (as bases __), unidos por uma superfície curva. Você também pode pensar
+    em um cilindro como um "prisma circular".
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+
+cylinder-volume:
+  title: Volume de um cilindro
+  text: |
+    O volume de um cilindro é dado pela equação
+
+    {.text-center} `V = π r^2 h`,
+
+    onde _r_ é o raio da base circular e _h_ é a altura do cilindro (a distância perpendicular entre
+    as duas bases).
+
+degrees:
+  title: Graus
+  text: |
+    __Graus__ são uma unidade para medir ângulos, indicada pelo símbolo °. Uma revolução completa é
+    360 °, um ângulo reto é 90 ° e assim por diante.
+
+denominator:
+  title: Denominador
+  text: |
+    O denominadoré o número inferior em uma fração. Por exemplo, em `4/7`, o número 7 é o
+    denominador.
+
+dilation:
+  title: Dilatação
+  text: |
+    Uma dilataçãoé uma transformação que redimensiona uma forma geométrica, tornando-a maior ou
+    menor.
+  image: dilation.svg
+  link: /course/transformations/dilations
+
+directed-graph:
+  title: Gráfico Dirigido
+  text: |
+    Em um gráfico direcionado ____, toda aresta possui uma “seta”, ou seja, um vértice inicial e um
+    vértice final.
+  link: /course/graph-theory/introduction#intro-1
+
+discriminant:
+  title: Discriminante
+  text: |
+    O __discriminante__ de uma equação quadrática é a expressão sob a raiz quadrada na fórmula
+    quadrática: `b^2 − 4ac`.
+
+    Pode ser usado para determinar o número de soluções da equação quadrática. Se o discriminante
+    for maior que 0, existem duas soluções. Se for igual a 0, existe apenas uma solução. Se for
+    menor que 0, não há soluções (reais).
+
+dna:
+  title: GOTA
+  text: |
+    __DNA__ (ácido desoxirribonucleico) é uma molécula que contém a matriz genética de todos os
+    organismos vivos. A maioria dos DNAs consiste em duas cadeias formando uma _hélice dupla_. A
+    informação genética é codificada na ordem dos quatro ácidos nucleicos (A, G, C e T) que compõem
+    o DNA. _Sequenciamento de DNA_ é o processo de extrair essas informações - uma técnica essencial
+    em biologia, medicina, genética e biotecnologia.
+
+dodecahedron:
+  title: Dodecaedro
+  text: |
+    O __dodecaedro__ é um sólido platônico e consiste em 12 faces que são pentágonos regulares.
+    Possui 20 vértices e 30 arestas.
+  link: /course/polyhedra/platonic#platonic-overview
+
+dot-annihilation:
+  title: Aniquilação
+  text: |
+    Se você tem um ponto e um anti-ponto na mesma célula, eles cancelam ou __aniquilam__ um ao
+    outro. Pense em `–1 + 1 = 0`.
+
+dot-machine:
+  title: Dot Machine
+  text: |
+    Uma __máquina de pontos__ consiste em várias células contendo pontos. Você pode manipular esses
+    pontos de acordo com regras específicas.
+
+    Por exemplo, em uma máquina `1←3`, 3 pontos em uma célula podem ser convertidos em 1 ponto na
+    célula seguinte para o _esquerdo_. Da mesma forma, 1 ponto pode ser convertido em 3 pontos na
+    próxima célula à _direita_. Isso é chamado de "explosão".
+
+ellipse:
+  title: Elipse
+  text: |
+    Uma elipseé um caminho curvo que envolve dois pontos focais. Qualquer ponto na circunferência da
+    elipse tem a mesma _soma das distâncias_ dos dois focos.
+
+    Se os focos estão muito próximos, a elipse parece quase um círculo. À medida que se afastam, a
+    elipse se torna mais alongada.
+
+    As elipses são um tipo de _seção cônica_: uma interseção de um cone com um plano.
+  image: ellipse.svg
+  link: /course/circles/conic-sections#ellipses
+
+equation:
+  title: Equação
+  text: |
+    Uma equaçãoé uma instrução matemática criada pela conexão de duas ou mais expressões com o sinal
+    de igual`=`. Indica que todas essas expressões têm o mesmo valor.
+
+equilateral-triangle:
+  title: Triângulo Equilátero
+  text: Um __triângulo equilátero__ é um triângulo no qual todos os três lados têm o mesmo comprimento.
+
+euclidean-geometry:
+  title: Geometria Euclidiana
+  text: |
+    __Geometria euclidiana__ é o tipo de geometria prevista pelo matemático _Euclid_ e inclui o
+    estudo de pontos, linhas, polígonos, círculos e sólidos tridimensionais. Depende de apenas cinco
+    _axiomas_, as leis básicas da geometria, que descrevem todas as operações e construções
+    permitidas.
+  link: /course/euclidean-geometry/euclids-axioms#euclid
+
+factor:
+  title: Fator
+  text: |
+    Um número _a_ é um fator(ou __divisor__) de um número _b_, se você puder dividir _b_ por _a_ sem
+    resto.
+  link: /course/divisibility/factors-and-multiples
+
+factorial:
+  title: Fatorial
+  text: |
+    O __fatorial__ de um número inteiro positivo é o produto de todos os números inteiros, inclusive
+    o próprio. Nós escrevemos usando o ponto de exclamação, por exemplo
+
+    {.text-center} `5! = 1×2×3×4×5`.
+
+    Por definição, `0! = 1.`
+
+factorisation:
+  title: Factoring Premium
+  text: |
+    A __fatoração primária__ de um número é uma maneira de escrevê-lo como um produto de números
+    primos.
+  link: /course/divisibility/primes
+
+fermat-last:
+  title: Último Teorema de Fermat
+  text: |
+    __O último teorema de Fermat__ afirma que a equação `x^n + y^n = z^n` não tem soluções inteiras
+    para `n>2`. Se `n=2`, obtemos o teorema de _Pitágoras_, que tem muitas soluções inteiras, mas
+    para _n_ = 3, 4, 5, ... não há.
+
+    Em 1637, o matemático Pierre de Fermat fez uma anotação em um livro, alegando que tinha uma
+    prova, mas era grande demais para caber na margem. Por mais de 350 anos, outros matemáticos
+    tentaram encontrar essa prova, e o Último Teorema de Fermat esteve no _Livro Guinness dos
+    Recordes Mundiais_ como o "problema matemático mais difícil".
+
+    Em 1994, após muitos anos de trabalho, Andrew Wiles finalmente conseguiu provar isso. Mais
+    tarde, ele recebeu o Prêmio Abel, uma das maiores honras da matemática.
+
+fibonacci-numbers:
+  title: Números de Fibonacci
+  text: |
+    A sequência de __números de Fibonacci__ começa com 1, 1. Cada termo seguinte é a soma dos dois
+    termos anteriores, o que significa que a fórmula recursiva é `x_n = x_(n-1) + x_(n-2)`.
+  link: /course/sequences/fibonacci#fibonacci
+
+figurate-numbers:
+  title: Firgurate Numbers
+  text: |
+    __Números figurados__ são números que podem ser representados usando formas geométricas.
+    Exemplos incluem números quadrados, triangulares e tetraédricos.
+  link: /course/sequences/figurate#figurate
+
+formula:
+  title: Fórmula
+  text: |
+    Uma fórmulaé uma regra ou equação que descreve o relacionamento entre duas ou mais variáveis. Um
+    exemplo é `A = πr^2`.
+
+fractal:
+  title: Fractal
+  text: |
+    Um __fractal__ é uma forma geométrica que possui uma _dimensão fracionária_. Muitos fractais
+    famosos são _auto-similares_, o que significa que eles consistem em cópias menores de si mesmos.
+    Os fractais contêm padrões em todos os níveis de ampliação e podem ser criados repetindo um
+    procedimento ou repetindo uma equação infinitamente várias vezes.
+  link: /course/fractals/introduction
+
+fta:
+  title: Teorema Fundamental da Aritmética
+  text: |
+    O __Teorema Fundamental da Aritmética__ (FTA) diz que todo número inteiro tem uma fatoração
+    primária exclusiva.
+
+function:
+  title: Função
+  text: |
+    Uma funçãoé uma relação matemática que converte uma entrada (_x_) em exatamente uma saída (_e_).
+    Eles são frequentemente expressos como equações matemáticas da forma `f(x)`.
+
+function-graph:
+  title: Gráficos de funções
+  text: |
+    Podemos plotar funções matemáticas do formulário `f(x)` em um sistema de coordenadas. O
+    resultado é chamado de __gráfico__ da função.
+
+gcf:
+  title: Maior fator comum
+  text: |
+    O __maior fator comum__ (gcf) de dois números _a_ e _b_ é o maior número inteiro que é um fator
+    de _a_ e _b_.
+  link: /course/divisibility/greatest-common-factors
+
+geometric-sequence:
+  title: Sequência geométrica
+  text: |
+    Uma sequência geométrica(às vezes chamada de __progressão geométrica__) é uma sequência de
+    números em que a razão _r_ entre termos consecutivos é sempre constante.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+geometric-series:
+  title: Séries geométricas
+  text: |
+    Uma __série geométrica__ é a soma infinita dos termos em uma sequência geométrica, na qual
+    termos consecutivos têm uma razão constante _r_. Por exemplo,
+
+    {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
+
+    é uma série geométrica com proporção constante `1/2`.
+
+glide-reflection:
+  title: Reflexões Glide
+  text: |
+    Um reflexo de deslizamento __é um tipo especial de transformação. É uma combinação de uma
+    reflexão __ e uma tradução __ na mesma direção que o eixo de reflexão.
+  link: /course/transformations/symmetry-groups#footsteps
+
+golden-ratio:
+  title: Proporção áurea
+  text: |
+    A __proporção áurea__ é um número irracional específico com valor `φ = 1.61803398875…`. Pode ser
+    aproximado dividindo dois números consecutivos de Fibonacci.
+
+    A proporção áurea é frequentemente vista como particularmente esteticamente agradável na arte e
+    na arquitetura, e aparece nas espirais de muitas plantas.
+  link: /course/sequences/fibonacci#golden-ratio-1
+
+graph:
+  title: Gráfico
+  text: Um gráficoé uma coleção de vértices conectados por arestas.
+  link: /course/graph-theory/introduction
+
+graph-cycle:
+  title: Ciclo
+  text: __Ciclos__ são gráficos que consistem em um único loop de vértices.
+  link: /course/graph-theory/introduction#intro-4
+
+graph-degree:
+  title: Grau
+  text: O __grau__ de um vértice é o número de arestas que se encontram nesse vértice.
+  link: /course/graph-theory/introduction#intro-3
+
+graph-edge:
+  title: Beira
+  text: __Arestas__ são as linhas que conectam os vértices (pontos) em um gráfico.
+  link: /course/graph-theory/introduction
+
+graph-order:
+  title: Ordem
+  text: A __ordem__ de um gráfico é o número de vértices nele.
+  link: /course/graph-theory/introduction#intro-3
+
+graph-vertex:
+  title: Vértice
+  text: Um __vértice__ é um ponto ou nó que faz parte de um gráfico.
+  link: /course/graph-theory/introduction
+
+gravity:
+  title: Gravidade
+  text: |
+    __Gravidade__ é uma das quatro forças fundamentais da natureza e puxa quaisquer duas massas do
+    universo em direção a essa outra. Isaac Newton descobriu que a força entre duas massas `m_1` e
+    `m_2` é
+
+    {.text-center} `F = (G m_1 m_2) / r^2`,
+
+    onde _G_ é a constante gravitacional e _r_ é a distância entre as massas.
+
+group:
+  title: Grupo
+  text: |
+    Um grupo é uma coleção de "coisas" (como números ou simetrias) que seguem três regras
+    diferentes:
+
+    * Você pode adicionar / combinar duas coisas, para obter outra que também esteja no grupo.
+
+    * As coisas são _associativas_, o que significa que `a+(b+c) + (a+b)+c`.
+
+    * Existe uma identidade __, e cada “coisa” possui uma _inversa_ que, quando adicionada, fornece
+    a identidade.
+  link: /course/transformations/symmetry-groups#groups-1
+
+hailstone-sequence:
+  title: Sequência de Granizo
+  text: |
+    __Sequências Hailstone__ podem ser geradas escolhendo qualquer número inteiro como ponto de
+    partida e seguindo estas regras:
+
+    * Se `x_n` for par, `x_(n+1) = x_n / 2`.
+
+    * Se `x_n` for ímpar, `x_(n+1) = 3 * x_n + 1`
+  link: /course/sequences/special#hailstone
+
+heptagon:
+  title: Heptágono
+  text: Um heptágono __é um polígono com sete lados.
+
+hexagon:
+  title: Hexágono
+  text: Um hexágonoé um polígono com seis lados.
+
+hyperbola:
+  title: Hipérbole
+  text: |
+    Uma hipérboleé a forma do gráfico da função `y = 1/x`. Consiste em duas partes disjuntas, ambas
+    abordando _assíntotas_. É também uma _seção cônica_.
+  image: hyperbola.svg
+
+hypotenuse:
+  title: Hipotenusa
+  text: 'A hipotenusa __de um triângulo retângulo é o lado mais longo, que fica oposto ao ângulo reto.'
+  image: right-triangle.svg
+
+icosahedron:
+  title: Icosaedro
+  text: |
+    O __Icosahedron__ é um sólido platônico e consiste em 20 faces que são todos triângulos
+    equilaterais. Possui 12 vértices e 30 arestas.
+  link: /course/polyhedra/platonic#platonic-overview
+
+imaginary:
+  title: Números imaginários
+  text: |
+    __Os números imaginários__ são gerados tomando raízes quadradas de números negativos. Apesar do
+    nome, eles são de grande importância em matemática, ciências e engenharia.
+
+    A __unidade imaginária__ é escrita como `i = sqrt(−1)`, e outros números imaginários podem ser
+    escritos como seus múltiplos. Por exemplo, `sqrt(-5) = 5i`.
+
+infinity:
+  title: Infinidade
+  text: '__Infinito__ é uma quantidade sem limite ou fim. Em matemática, é representado pelo símbolo `∞`.'
+
+information:
+  title: Teoria da Informação
+  text: |
+    __Teoria da informação__ é o estudo da quantificação, armazenamento e comunicação de dados e
+    informações. É usado em lógica, criptografia e ciência da computação.
+
+integer:
+  title: Inteiros
+  text: |
+    Os __números inteiros__ são os números inteiros positivos e negativos, incluindo zero:…, –3, –2,
+    –1, 0, 1, 2, 3,…. Eles geralmente são indicados usando o símbolo `ZZ`.
+
+internal-angle:
+  title: Ângulos internos
+  text: 'Os __ângulos internos__ de um polígono são os ângulos internos, em todos os vértices.'
+  image: internal-angle.svg
+
+irrational-numbers:
+  title: Números irracionais
+  text: |
+    __Números irracionais__ são números que não podem ser expressos como frações de números inteiros
+    (_números racionais_). Por exemplo, 0,333333… = `1/3` é _racional_, mas `π`, `sqrt(2)` e _e_ são
+    todos _irracionais_. A forma decimal de um número irracional não para ou se repete.
+
+irregular-polygon:
+  title: Polígono irregular
+  text: |
+    Um __polígono irregular__ é aquele que _não é regular_. Isso significa que os lados ou os
+    ângulos não têm o mesmo tamanho.
+
+isosceles-triangle:
+  title: Triângulo isósceles
+  text: 'Em um triângulo isósceles ____, dois lados têm o mesmo comprimento.'
+
+iss:
+  title: Estação Espacial Internacional
+  text: |
+    A __Estação Espacial Internacional__ (ISS) foi lançada em 1998 e orbita a Terra a uma altitude
+    de aproximadamente 400 km. É o maior corpo produzido pelo homem na órbita baixa da Terra e tem
+    sido habitado continuamente desde o lançamento. Pode ser visto a olho nu da Terra.
+
+julia-set:
+  title: Julia Set
+  text: |
+    Dada uma função `f`, como `§f(x) = x^2`, o conjunto __Julia__ `§K(f)` correspondente é um
+    subconjunto de todos os pontos no plano complexo, onde a sequência formada pela aplicação
+    repetida de `f` não diverge. Em muitos casos, o conjunto de Julia é um _fractal_ e está
+    intimamente relacionado ao _conjunto de Mandelbrot_.
+  link: /course/fractals/mandelbrot#julia
+  image: julia-set.png
+
+kite:
+  title: Pipa
+  text: Uma pipaé um quadrilátero em que dois pares de lados adjacentes têm o mesmo comprimento.
+  link: /course/polyhedra/quadrilaterals#kites
+
+koch-snowflake:
+  title: Floco de neve de Koch
+  text: |
+    O __Koch Snowflake__ é um fractal auto-semelhante. Consiste em um triângulo eqilateral, com
+    triângulos equilaterais menores recursivamente adicionados a cada um dos seus lados.
+  link: /course/fractals/introduction#koch
+  image: koch-snowflake.svg
+
+laws-of-nature:
+  title: Leis da natureza
+  text: |
+    As __leis da natureza__ são o nome dado coletivamente às regras físicas (geralmente expressas
+    como equações matemáticas) que tentam explicar tudo o que observamos no universo.
+
+lcm:
+  title: Menor múltiplo comum
+  text: |
+    O __Múltiplo Comum Mais Baixo__ (lcm) de dois números _a_ e _b_ é o menor número inteiro
+    múltiplo de _a_ e _b_.
+  link: /course/divisibility/least-common-multiples
+
+line:
+  title: Linha
+  text: |
+    Uma linhaé um conjunto de infinitos pontos que se estendem para sempre nas duas direções. As
+    linhas são sempre retas e não têm _largura_.
+  link: /course/euclidean-geometry/definitions#lines
+
+line-segment:
+  title: Segmento de linha
+  text: |
+    Um __segmento de linha__ é a parte de uma linha que fica entre dois pontos, sem se estender até
+    o infinito. Podemos rotular segmentos de linha do ponto _A_ ao ponto _B_ como `bar(AB)`.
+  link: /course/euclidean-geometry/definitions#segments
+
+line-slope:
+  title: Inclinação de uma linha
+  text: |
+    O __declive__ de uma linha mede sua “inclinação” e geralmente é indicado pela letra _m_. É a
+    alteração em _e_ para uma alteração de unidade em _x_ ao longo da linha.
+
+linear-equation:
+  title: Equação linear
+  text: |
+    Uma equação __linear__ tem a forma `ax + b = 0`, onde _x_ é uma variável e _a_ e _b_ são
+    números. Quando representados graficamente em um sistema de coordenadas, os valores de `ax+b`
+    formam uma linha reta.
+
+linear-function:
+  title: Função linear
+  text: |
+    Uma função linearé uma função cujo gráfico é uma linha reta. Pode ser definido como `f(x) = mx +
+    c`, onde _m_ é a inclinação da linha e _c_ é sua interceptação de eixo _e_.
+
+mandelbrot-set:
+  title: Conjunto de Mandelbrot
+  text: |
+    O __conjunto de Mandelbrot__ é o conjunto de números complexos `CC` para os quais a sequência
+    recursiva `§z_n = z_(n-1)^2 + c` (com `§z_0 = 0`) não diverge. É um _fractal_.
+  link: /course/fractals/mandelbrot
+  image: mandelbrot-set.png
+
+matrix:
+  title: Matriz
+  text: Uma matrizé uma matriz retangular de números organizados em linhas e colunas.
+
+median:
+  title: Mediana
+  text: |
+    A __mediana__ de um conjunto de números é o valor pelo qual metade dos números é maior e metade
+    dos números é menor. Se houver dois "números do meio", é a média desses números.
+
+midpoint:
+  title: Ponto médio
+  text: |
+    O __ponto médio__ de um segmento de linha é o ponto no segmento de linha que divide o segmento
+    no meio, em duas partes congruentes. A __fórmula do ponto médio__ diz que, para os pontos de
+    extremidade `(x_1, y_1)` e `(x_2,y_2)`, o ponto médio é `((x_1 + x_2)/2, (y_1 + y_2)/2)`.
+
+millennium-prize:
+  title: Problemas com o Prêmio do Milênio
+  text: |
+    Os sete __Problemas do Prêmio Millennium__ são alguns dos problemas abertos mais difíceis em
+    Matemática. Eles foram listados em 2000 pelo _Clay Mathematics Institute_, e cada um recebe uma
+    recompensa de US $ 1 milhão:
+
+    * P vs NP
+
+    * A conjectura de Hodge
+
+    * A conjectura de Poincaré
+
+    * A hipótese de Riemann
+
+    Existência de Yang-Mills e gap de massa
+
+    Existência e suavidade de Navier-Stokes
+
+    * A conjectura de Birch e Swinnerton-Dyer
+
+    Até o momento, apenas um dos problemas, a _Conjectura de Poincaré_, foi resolvido. No entanto, o
+    matemático que resolveu, Grigori Perelman, recusou o prêmio.
+
+mode:
+  title: Modo
+  text: |
+    O modode um conjunto de números é o número que ocorre com mais frequência. Por exemplo, o modo
+    de [3, 4, 4, 4, 5, 5, 6] é 5.
+
+molecule:
+  title: Molécula
+  text: |
+    Uma molécula __consiste em dois ou mais átomos que são mantidos juntos por ligações químicas.
+    Não possui carga elétrica, diferentemente de __Íons__.
+
+    Exemplos de moléculas incluem `O_2`, que consiste em dois átomos de oxigênio conectados e `H_2
+    O`, que consiste em dois átomos de hidrogênio e um átomo de oxigênio.
+
+morse-code:
+  title: Código Morse
+  text: |
+    __Código Morse__ é uma maneira de representar letras e números usando sinais curtos e longos
+    (chamados pontos e traços). É nomeado após _Samuel Morse_ e foi inicialmente usado para se
+    comunicar por longas distâncias usando telégrafos.
+
+    Por exemplo, a letra "L" seria representada usando a sequência _{x-morse(char="L")}_ de sinais
+    curtos e longos.
+
+multiple:
+  title: Múltiplo
+  text: 'Um número _a_ é um __múltiplo__ de um número _b_, se _b_ for um fator de _a_.'
+  link: /course/divisibility/factors-and-multiples
+
+natural-numbers:
+  title: Números naturais
+  text: |
+    Os __números naturais__ são os números inteiros positivos iniciando em 1: 1, 2, 3, 4, ... Eles
+    geralmente são indicados usando o símbolo `NN`.
+
+net:
+  title: Redes de Poliedros
+  text: |
+    A __rede__ de um poliedro é o que você obtém quando "desdobra" suas faces poligonais em uma
+    superfície plana.
+
+neutron:
+  title: Nêutron
+  text: |
+    Um nêutron __é uma das partículas que compõem o núcleo de um átomo. Não tem carga e possui
+    aproximadamente a mesma massa que um próton.
+
+np:
+  title: NP Hard Problems
+  text: |
+    _A teoria da complexidade computacional_ trata da determinação de quão "difíceis" problemas
+    devem ser resolvidos por um computador. __NP rígido__ (tempo polinomial não determinístico) é a
+    classe dos problemas mais difíceis.
+
+numerator:
+  title: Numerador
+  text: |
+    O numeradoré o número superior em uma fração. Por exemplo, em `4/7`, o número 4 é o numerador.
+
+obtuse-angle:
+  title: Ângulo obtuso
+  text: 'Um __ângulo obtuso__ é um ângulo de tamanho maior que 90 °, mas menor que 180 °.'
+
+obtuse-triangle:
+  title: Triângulo obtuso
+  text: 'Em um triângulo obtuso ____, um ângulo interior é maior que 90 °.'
+  link: /course/triangles/properties#classification
+
+octagon:
+  title: Octógono
+  text: Um octógono __é um polígono com oito lados.
+
+octahedron:
+  title: Octaedro
+  text: |
+    O __octaedro__ é um sólido platônico e consiste em 8 faces que são triângulos equilaterais.
+    Possui 6 vértices e 12 arestas.
+  link: /course/polyhedra/platonic#platonic-overview
+
+order-of-symmetry:
+  title: Ordem de Simetria
+  text: |
+    Se uma forma tiver simetria rotacional, a __ordem de simetria__ é o número de orientações nas
+    quais a forma tem a mesma aparência. (Ou é o número de vezes que você pode girar a forma antes
+    de voltarmos ao início.)
+  link: /course/transformations/symmetry#rotational-symmetry
+
+origin:
+  title: Origem
+  text: |
+    A origemde um sistema de coordenadas é o ponto (0, 0), onde o eixo _x_ e o eixo _e_ se cruzam.
+
+origin-number-line:
+  title: Origem de uma linha numérica
+  text: A origemde uma linha numérica é o ponto 0.
+
+palindrome:
+  title: Palíndromo
+  text: |
+    Um palíndromoé uma palavra ou número que lê o mesmo de trás para frente e da frente para trás.
+    Por exemplo, 25752 e "ANNA" são ambos palíndromos.
+  link: /course/transformations/symmetry#palindromes
+
+parabola:
+  title: Antena parabólica
+  text: |
+    Uma parábolaé a forma do gráfico de uma função quadrática como `y = x^2`. É simétrico, em forma
+    de U e pode apontar para cima ou para baixo. É também uma _seção cônica_.
+  image: parabola.svg
+
+parabola-conic:
+  title: Antena parabólica
+  text: |
+    Uma __parábola__ é o conjunto de todos os pontos em um plano, que têm a mesma distância de uma
+    linha fixa, denominada __diretriz__, e um ponto fixo, chamado __foco__.
+
+parabola-focus:
+  title: Foco de uma parábola
+  text: |
+    O __foco__ de uma parábola é um ponto fixo em seu interior. Para um espelho parabólico, todos os
+    raios de luz paralelos entrantes se cruzam no foco após serem refletidos.
+
+parabola-vertex:
+  title: Vértice de uma parábola
+  text: |
+    O __vértice__ de uma parábola é o ponto em que muda de direção. É o máximo ou o mínimo da função
+    quadrática correspondente e está no eixo de simetria da parábola.
+
+parallel:
+  title: Linhas paralelas
+  text: |
+    Duas ou mais linhas são __paralelas__ se nunca se cruzarem. Eles têm a mesma inclinação e a
+    distância entre eles é sempre constante.
+  image: parallel.svg
+  link: /course/euclidean-geometry/definitions#parallel
+
+parallelogram:
+  title: Paralelogramo
+  text: Um paralelogramo __é um quadrilátero em que ambos os pares de lados opostos são paralelos.
+  link: /course/polyhedra/quadrilaterals#parallelograms
+
+pascals-triangle:
+  title: Triângulo de Pascal
+  text: |
+    __O triângulo de Pascal__ é uma pirâmide numérica em que cada célula é a soma das duas células
+    diretamente acima. Ele contém todos os coeficientes binomiais, bem como muitas outras seqüências
+    e padrões numéricos.
+  link: /course/sequences/pascals-triangle#pascal-triangle
+
+penrose:
+  title: Telha de Penrose
+  text: |
+    Um mosaico de __Penrose__ é um mosaico _não periódico_, __ auto-similar. Consiste apenas em
+    algumas formas diferentes, mas nunca se repete.
+  link: /course/polyhedra/tessellations#penrose
+
+pentagon:
+  title: Pentágono
+  text: Um pentágono __é um polígono com cinco lados.
+
+percent:
+  title: Por cento
+  text: |
+    Um __por cento__ é uma razão cujo denominador é 100. Por exemplo, escrevemos 80% para significar
+    `80/100 = 0.8`.
+
+perfect-numbers:
+  title: Números perfeitos
+  text: |
+    Um __número perfeito__ é um número igual à soma de seus divisores (excluindo a si próprio). Por
+    exemplo, `28 = 1 + 2 + 4 + 7 + 14` é um número perfeito.
+  link: /course/sequences/special#perfect-1
+
+perpendicular:
+  title: Linhas perpendiculares
+  text: |
+    Duas linhas são __perpendiculares__ (às vezes chamadas _normais_ ou _ortogonais_) se elas se
+    cruzam em ângulo reto.
+  image: perpendicular.svg
+  link: /course/euclidean-geometry/definitions#perpendicular
+
+perpendicular-bisector:
+  title: Bissetor perpendicular
+  text: |
+    A __bissetriz perpendicular__ de um segmento de linha passa por seu ponto médio e a intercepta
+    em um ângulo de 90 °.
+  image: perpendicular-bisector.svg
+
+pi:
+  title: Pi
+  text: |
+    __Pi__, geralmente escrita como a letra grega _π_, é a razão entre a circunferência e o diâmetro
+    de um círculo. É um número transcendental e seu valor é de aproximadamente 3,14159265…
+  link: /course/circles/introduction#pi-definition
+
+platonic-solid:
+  title: Sólido platônico
+  text: |
+    Um sólido __platônico__ é um poliedro em que cada face é um polígono regular com o mesmo número
+    de arestas e onde o mesmo número de faces se encontra em todos os vértices. Existem apenas cinco
+    sólidos platônicos diferentes: o tetraedro, o cubo, o octaedro, o dodecaedro e o icosaedro.
+  link: /course/polyhedra/platonic
+
+point:
+  title: Ponto
+  text: |
+    Um __ponto__ é um local específico no espaço. Os pontos descrevem uma posição, mas não têm
+    tamanho ou forma.
+  link: /course/euclidean-geometry/definitions#points
+
+polygon:
+  title: Polígono
+  text: |
+    Um polígonoé uma forma geométrica composta por segmentos de linha reta. Os polígonos não podem
+    conter lados curvos ou furos. Por exemplo, um quadrado é um polígono, mas um círculo não.
+  image: polygon.svg
+  link: /course/polyhedra/polygons#polygons
+
+polygon-diagonal:
+  title: Diagonal
+  text: |
+    Uma __diagonal__ de um polígono é um segmento de linha que conecta dois vértices que não estão
+    próximos um do outro.
+
+polygon-edge:
+  title: Borda de um polígono
+  text: |
+    Os __lados__ ou __arestas__ de um polígono são os segmentos de linha que formam seu contorno.
+    Por exemplo, um triângulo tem três lados.
+
+polygon-vertex:
+  title: Vértice de um polígono
+  text: |
+    Os __vértices__ de um polígono são os pontos em que seus lados adjacentes se encontram (seus
+    “cantos”).
+
+polyhedron:
+  title: Poliedro
+  text: |
+    Um __poliedro__ (o plural é _poliedro_) é um sólido tridimensional sem superfícies curvas ou
+    arestas. Todas as faces de um poliedro são polígonos. Por exemplo, um cubo e uma pirâmide são
+    poliedros, mas uma esfera não.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-dual:
+  title: Dual de um poliedro
+  text: TUDO
+  link: /course/polyhedra/platonic#platonic-dual
+
+polyhedron-edge:
+  title: Borda de um poliedro
+  text: |
+    As __arestas__ de um poliedro são os segmentos de linha onde duas de suas faces estão
+    conectadas.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-face:
+  title: Cara de um poliedro
+  text: As __faces__ de um poliedro são os polígonos que compõem sua superfície.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-vertex:
+  title: Vértice de um poliedro
+  text: Os "cantos" de um poliedro são chamados de __vértices__.
+  link: /course/polyhedra/polyhedra
+
+polynomial:
+  title: Polinomial
+  text: |
+    Um polinômioé uma expressão algébrica que consiste em constantes e múltiplos de variáveis
+    aumentadas para potências inteiras. Por exemplo, `5x^3 - 2y^2 + x + 4` é um polinômio. A forma
+    mais geral de um polinômio com apenas uma variável é `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 +
+    a_1 x + a_0`, onde `a_n`, `a_(n-1)`,…, `a_0` são todas constantes específicas.
+
+polynomial-degree:
+  title: Grau
+  text: |
+    O __grau__ de um termo ou polinômio é o poder mais alto de qualquer variável nele. Por exemplo,
+    o grau de `5x^3 + 2y^2 - 4z` é 3.
+
+powers:
+  title: Exponenciação
+  text: |
+    __Exponenciação__ (ou __potências__) é a operação matemática em que um número (a _base_) é
+    multiplicado por si só um número especificado de vezes (o _expoente_). Isso geralmente é escrito
+    como sobrescrito `a^x`, onde _a_ é a base e _x_ é o expoente. Por exemplo, `4^3=4×4×4`.
+
+prime:
+  title: Número primo
+  text: |
+    Um __número primo__ é um número inteiro positivo que não possui outros fatores além de 1 e ele
+    próprio. Os primeiros números primos são 2, 3, 5, 7, 11, 13,…
+  link: /course/divisibility/primes
+
+prime-factor:
+  title: Fator primordial
+  text: Um __fator primo__ de um número é simplesmente um fator primo.
+  link: /course/divisibility/primes
+
+prime-factorisation:
+  title: Factoring Premium
+  text: |
+    A __fatoração primária__ de um número é uma maneira de expressá-la como o produto de números
+    primos. Por exemplo, a fatoração primária de 12 é `2 × 2 × 3`.
+
+prism:
+  title: Prisma
+  text: |
+    Um __prisma__ é um sólido tridimensional que possui duas faces congruentes que são polígonos
+    (chamadas de _bases_), cujos vértices correspondentes são unidos por segmentos paralelos. As
+    faces restantes de um prisma são todos retângulos ou paralelogramos.
+  image: prism.svg
+
+probability:
+  title: Probabilidade
+  text: |
+    Uma probabilidadeé um número entre 0 e 1 que indica a probabilidade da ocorrência de determinado
+    evento. A probabilidade de um evento _A_ é escrita como `P(A)`.
+
+probability-tree:
+  title: Árvore de Probabilidades
+  text: |
+    Uma árvore de probabilidadeé um diagrama em árvore que representa a probabilidade combinada de
+    vários eventos seqüenciais.
+
+proof:
+  title: Prova
+  text: |
+    Uma provaé um argumento lógico que mostra além de qualquer dúvida que uma determinada afirmação
+    é verdadeira.
+
+protein:
+  title: Proteína
+  text: |
+    Uma proteínaé uma macromolécula _grande_ que pode desempenhar muitas funções diferentes nos
+    organismos vivos: da digestão à comunicação entre células ou ao DNA replicante. As proteínas
+    consistem em uma ou mais cadeias de _resíduos de aminoácidos_.
+
+proton:
+  title: Proton
+  text: |
+    Um próton __é uma das partículas que compõem o núcleo de um átomo. Tem uma taxa de +1. O número
+    de prótons em um átomo é chamado de "número atômico" e determina que tipo de elemento é.
+
+pyramid:
+  title: Pirâmide
+  text: |
+    Uma pirâmideé um poliedro que tem um polígono como base e faces triangulares ao redor do lado de
+    fora, que afunilam em um vértice.
+
+    Em uma pirâmide regular __direita__, a base é um polígono regular __ e o vértice está
+    diretamente acima do centro da base.
+  image: pyramid.svg
+
+protractor:
+  title: Transferidor
+  text: Um transferidor é uma ferramenta usada para medir um ângulo em graus.
+
+pythagoras-theorem:
+  title: Teorema de Pitágoras
+  text: |
+    __O Teorema de Pitágoras__ afirma que em todo triângulo retângulo, `a^2 + b^2 = c^2`, onde _c_ é
+    o comprimento da hipotenusa e _a_ e _b_ são os comprimentos dos outros dois lados.
+  link: /course/triangles/pythagoras
+
+pythagorean-triple:
+  title: Triplo pitagórico
+  text: |
+    Um __triplo pitagórico__ é um conjunto de três números inteiros _a_, _b_ e _c_ que satisfazem o
+    Teorema de Pitágoras `a^2 + b^2 = c^2`.
+  link: /course/triangles/pythagoras#pythagorean-triples
+
+quadratic:
+  title: Quadrático
+  text: 'Um __quadrático__ é um polinômio de grau 2. Por exemplo, `x^2 - 2x + 3` é um quadrático.'
+
+quadratic-equation:
+  title: Equação quadrática
+  text: |
+    Uma __equação quadrática__ é uma equação que contém uma única variável de grau 2. É
+    frequentemente escrita como `ax^2 + bx + c = 0`, onde _x_ é uma variável, _a_, _b_ e _c_ são
+    números e `a != 0`.
+
+quadratic-formula:
+  title: Fórmula quadrática
+  text: |
+    A __fórmula quadrática__ é uma maneira de determinar as raízes de uma equação quadrática. A
+    equação `ax^2 + bx + c = 0` tem raízes
+
+    {.text-center} `x = (-b +- sqrt(b^2 - 4ac))/(2a)`.
+
+quadratic-function:
+  title: Função quadrática
+  text: |
+    Uma __função quadrática__ é uma função do formato `f(x) = ax^2+bx+c`, onde _a_, _b_ e _c_ são
+    números e `a != 0` O gráfico de uma função quadrática é uma curva em forma de U chamada
+    __parábola__.
+
+quadratic-function-vertex-form:
+  title: Forma de vértice de uma função quadrática
+  text: |
+    O __formulário de vértice__ ou __o formulário padrão__ de uma função quadrática é `f(x) = a(x −
+    h)^2 + k`. O ponto `(h, k)` é o __vértice__ da parábola correspondente.
+
+quadrilateral:
+  title: Quadrilátero
+  text: Um __quadrilátero__ é um polígono com quatro lados.
+  link: /course/polyhedra/quadrilaterals
+
+quantum:
+  title: Mecânica quântica
+  text: |
+    __A mecânica quântica__ é um ramo da física que explica o comportamento estranho das partículas
+    fundamentais.
+
+radians:
+  title: Radianos
+  text: |
+    __Radianos__ são uma unidade para medir o tamanho dos ângulos. Uma rotação completa (360 °) é de
+    `2π` radianos - o comprimento da circunferência de um círculo unitário.
+  link: /course/circles/radians#radians
+
+radioactive:
+  title: Decaimento radioativo
+  text: |
+    __Decaimento radioativo__ é um processo físico pelo qual átomos instáveis se separam e liberam
+    energia.
+
+rational-numbers:
+  title: Números racionais
+  text: |
+    __Números racionais__ são números que podem ser expressos como uma fração `p/q` de dois números
+    inteiros. Sua expansão decimal para ou se repete eventualmente. Os exemplos incluem `1/2`,
+    `-5/7`, 12,71 e 9. Os números racionais são frequentemente denotados usando o símbolo `QQ`.
+
+ray:
+  title: Raio
+  text: |
+    Um raioé a parte de uma linha que começa em um ponto e se estende infinitamente em uma direção.
+    Podemos rotular raios começando em `A` como `vec(AB)`.
+  link: /course/euclidean-geometry/definitions#rays
+
+real-numbers:
+  title: Numeros reais
+  text: |
+    Os __números reais__ são todos os números que aparecem na linha numérica, incluindo números
+    positivos e negativos, números racionais (frações), raízes quadradas, raízes de cubos, decimais,
+    _π_, _e_ e muito mais. Eles geralmente são indicados usando o símbolo `RR`.
+
+rectangle:
+  title: Retângulo
+  text: Um retânguloé um quadrilátero em que todos os quatro ângulos são 90 °.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+reflection:
+  title: Reflexão
+  text: Um reflexoé uma transformação que “inverte” ou “espelha” uma forma através de uma linha.
+  link: /course/transformations/rigid#reflections
+
+reflectional-symmetry:
+  title: Simetria reflexiva
+  text: Uma forma tem simetria reflexiva se parecer igual após ser refletida.
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+regular-polygon:
+  title: Polígono regular
+  text: |
+    Um __polígono regular__ é um polígono no qual todos os lados têm o mesmo comprimento e todos os
+    ângulos internos têm o mesmo tamanho.
+  image: regular-polygon.svg
+  link: /course/polyhedra/polygons#regular-polygons
+
+rhombus:
+  title: Rhombus
+  text: |
+    Um __losango__ (o plural é _losangos_ ou _rhombi_) é um quadrilátero em que todos os lados têm o
+    mesmo comprimento.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+right-angle:
+  title: Ângulo certo
+  text: Um __ângulo reto__ é um ângulo de tamanho 90 °.
+
+right-triangle:
+  title: Triângulo em ângulo reto
+  text: 'Em um triângulo retângulo ____, um ângulo interno é exatamente 90 °.'
+  image: right-triangle.svg
+  link: /course/triangles/properties#classification
+
+rigid-transformation:
+  title: Transformação rígida
+  text: |
+    Uma __transformação rígida__ (ou __isometria__) é uma transformação que não altera o tamanho ou
+    a forma de uma figura geométrica.
+  link: /course/transformations/rigid
+
+roman-numerals:
+  title: Números romanos
+  text: |
+    O sistema numérico romano__ foi desenvolvido na Roma antiga e usado na Europa até o século XIV.
+    Permite escrever qualquer número inteiro combinando sete letras diferentes:
+
+    * I = 1
+
+    * V = 5
+
+    * X = 10
+
+    * L = 50
+
+    * C = 100
+
+    * D = 500
+
+    * M = 1000
+
+rotation:
+  title: Rotação
+  text: |
+    Uma rotaçãoé uma transformação que “transforma” uma forma em um determinado ângulo em torno de
+    um ponto fixo.
+  link: /course/transformations/rigid#rotations
+
+rotational-symmetry:
+  title: Simetria rotacional
+  text: |
+    Uma forma tem simetria de rotação se tiver a mesma aparência depois de ser girada (menos de 360
+    °).
+  image: rotational-symmetry.svg
+  link: /course/transformations/symmetry#rotational-symmetry
+
+roulette:
+  title: Roleta
+  text: |
+    __Roleta__ é um jogo de cassino no qual você aposta onde uma bola giratória vai pousar. Ele
+    contém 36 números e um ou dois 0s.
+
+scale-factor:
+  title: Fator de escala
+  text: |
+    O __fator de escala__ de duas figuras geométricas semelhantes é a razão de quaisquer dois
+    comprimentos correspondentes.
+
+    Um fator de escala menor que 1 indica que a forma está reduzida e um fator de escala maior que 1
+    indica que a forma está ampliada.
+  link: /course/transformations/dilations#dilations-1
+
+scalene-triangle:
+  title: Triângulo escaleno
+  text: 'Em um triângulo escaleno ____, todos os três lados têm comprimentos diferentes.'
+
+scientific-notation:
+  title: Notação científica
+  text: |
+    __A notação científica__ é um método padronizado para escrever números muito grandes ou
+    pequenos. É do formato `a × 10^n`, onde _n_ é um número inteiro e `1 ≤ a < 10`.
+
+    Por exemplo, o número 4600 pode ser escrito como `4.6 × 10^3`.
+
+set:
+  title: Conjuntos
+  text: |
+    Um conjunto ____ é uma coleção de coisas ou objetos (chamados elementos). Cada elemento pode
+    aparecer apenas um em um conjunto. Escrevemos conjuntos usando {} s, por exemplo, um conjunto
+    contendo os números 2, 3 e 4 seria escrito como {2, 3, 4}.
+
+sequence:
+  title: Seqüência
+  text: |
+    Uma sequênciaé uma lista ordenada de números (ou outros elementos, como objetos geométricos),
+    que geralmente seguem um padrão ou função específica. Sequências podem ser finitas e infinitas.
+  link: /course/sequences/introduction#simple-patterns
+
+sequence-convergence:
+  title: Convergência
+  text: |
+    Uma sequência __converge__ se, com o tempo, seus termos se aproximam cada vez mais de um limite
+    __específico__.
+
+sequence-divergence:
+  title: Divergência
+  text: |
+    Uma sequência __diverge__ se, com o tempo, seus termos aumentarem cada vez mais, em direção ao
+    infinito (ou infinito negativo).
+
+sequence-explicit:
+  title: Fórmula explícita
+  text: |
+    Uma __fórmula explícita__ para uma sequência expressa o valor do _n_ th termo `x_n` como uma
+    função de _n_.
+  link: /course/sequences/introduction#explicit
+
+sequence-recursive:
+  title: Fórmula de recursão
+  text: |
+    Uma __fórmula recursiva__ para uma sequência expressa o valor de cada termo `x_n` em função de
+    seus termos anteriores.
+  link: /course/sequences/introduction#recursive-1
+
+sequence-term:
+  title: Termos de uma sequência
+  text: Os __termos__ de uma sequência são todos os seus números ou elementos individuais.
+  link: /course/sequences/introduction#simple-patterns
+
+sierpinski-triangle:
+  title: Triângulo de Sierpinski
+  text: |
+    O __Triângulo de Sierpinski__ é um fractal auto-semelhante. Consiste em um triângulo equilátero,
+    com triângulos equiláteros menores removidos recursivamente de sua área restante.
+  link: /course/fractals/sierpinski
+  image: sierpinski-triangle.svg
+
+sieve-eratosthenes:
+  title: Peneira de Eratóstenes
+  text: |
+    O __Peneira de Eratóstenes__ é um procedimento para encontrar números primos, eliminando
+    repetidamente números que _não_ são primos.
+  link: /course/divisibility/primes#eratosthenes
+
+similar:
+  title: Semelhante
+  text: |
+    Duas formas geométricas são __semelhantes__ se tiverem a mesma forma, mas um tamanho diferente.
+    Podemos mover, girar, refletir e redimensionar uma forma para combinar com a outra. Seus ângulos
+    correspondentes são iguais e seus lados correspondentes estão na mesma proporção.
+
+sin:
+  title: Está
+  text: |
+    __Seno__ é uma função trigonométrica escrita como `sin(θ)`. Em um triângulo retângulo, é a razão
+    do lado oposto e da hipotenusa.
+  link: /course/triangles/trigonometry#trig-functions
+
+sphere:
+  title: Esfera
+  text: |
+    Uma __esfera__ é um sólido tridimensional que consiste em todos os pontos que têm a mesma
+    distância de um determinado _centro_. Essa distância é chamada de raio _da esfera.
+  link: /course/circles/spheres-cones-cylinders#sphere
+
+sphere-radius:
+  title: Raio de uma esfera
+  text: |
+    O raiode uma esfera é a distância (ou um segmento de linha) entre seu centro e qualquer ponto em
+    sua superfície.
+
+square:
+  title: Quadrado
+  text: |
+    Um __quadrado__ é um quadrilátero regular: todos os lados têm o mesmo comprimento e todos os
+    ângulos têm o mesmo tamanho (90 °).
+  link: /course/polyhedra/quadrilaterals
+
+square-area:
+  title: Área de um quadrado
+  text: A __área__ de um quadrado com comprimento lateral _s_ é `A = s^2`.
+
+square-matrix:
+  title: Matriz quadrada
+  text: Uma matriz quadradaé uma matriz que possui o mesmo número de linhas e colunas.
+
+square-numbers:
+  title: Números quadrados
+  text: |
+    Um número __quadrado__ é um número que pode ser expresso como o quadrado de outro número
+    inteiro. Os primeiros números quadrados são 1, 4, 9, 16, 25,…
+  link: /course/sequences/introduction#squares
+
+subdivision:
+  title: Subdivisões
+  text: |
+    Para criar uma __subdivisão__ de um gráfico, adicione vértices adicionais ao longo de suas
+    bordas.
+
+subgraph:
+  title: Subgráfico
+  text: |
+    Um gráfico é um __subgrafo__ de outro gráfico, se for formado por um subconjunto das arestas e
+    vértices maiores do gráfico.
+  link: /course/graph-theory/introduction#intro-2
+
+supplementary-angles:
+  title: Ângulos suplementares
+  text: Dois ângulos são __suplementares__ se somarem 180 ° (um semicírculo).
+
+symmetry:
+  title: Simetria
+  text: |
+    Uma figura ou forma possui __simetria__, se parecer igual após ser transformada de alguma forma
+    (por exemplo, reflexão ou rotação).
+  link: /course/transformations/symmetry#symmetry
+
+symmetry-group:
+  title: Grupo de Simetria
+  text: |
+    O __grupo de simetria__ de um objeto geométrico é a coleção de todas as suas _simetrias_ (assim
+    como a _identidade_).
+  link: /course/transformations/symmetry-groups#groups-1
+
+tan:
+  title: Tangente
+  text: |
+    __Tangente__ é uma função trigonométrica escrita como `tan(θ)`. É definida como a razão de
+    _seno_ e _cosseno_:
+
+    {.text-center} `tan(θ) = sin(θ) / cos(θ)`.
+
+    Em um triângulo retângulo, `tan(θ)` é a razão entre o lado oposto e o lado adjacente de um
+    ângulo `θ`.
+  link: /course/triangles/trigonometry#trig-functions
+
+tangent:
+  title: Linha tangente
+  text: |
+    Uma linha tangenteé uma linha que toca uma curva ou círculo em um único ponto, sem
+    interceptá-la. Este ponto às vezes é chamado de __ponto de tangência__.
+
+term:
+  title: Termo (Álgebra)
+  text: |
+    Os __termos__ são as partes de uma expressão ou equação algébrica que são separadas pelos sinais
+    + ou -. Eles podem ser produtos ou frações ou um ou mais números, variáveis ou funções.
+
+    Por exemplo, na expressão `2x^2 - 3ab + 4`, os três termos são `2x^2`, `3ab` e 4.
+
+tessellation:
+  title: Mosaico
+  text: Um mosaicoé um padrão geométrico que cobre uma superfície sem espaços ou sobreposições.
+  link: /course/polyhedra/tessellations
+
+tetrahedral-numbers:
+  title: Números Tetraédricos
+  text: |
+    Um número __tetraédrico__ é um número criado empilhando várias esferas em um _tetraedro_. Os
+    primeiros números tetraédricos são 1, 4, 10, 20, 35,…
+  link: /course/sequences/figurate#tetrahedral
+
+tetrahedron:
+  title: Tetraedro
+  text: |
+    O __tetraedro__ é um sólido platônico e consiste em quatro faces que são triângulos
+    equilaterais. Possui quatro vértices e seis arestas.
+  link: /course/polyhedra/platonic#platonic-overview
+
+theorem:
+  title: Teorema
+  text: |
+    Um teoremaé um resultado ou observação particularmente importante em matemática. Foi provado ser
+    sempre verdadeiro, usando axiomas, a lógica das regras e teoremas anteriores que já eram
+    verdadeiros.
+
+transformation:
+  title: Transformação
+  text: |
+    Uma transformaçãoconverte uma forma geométrica em outra. Existem muitos tipos diferentes de
+    transformações, como _reflexões_ ou _dilatações_.
+  link: /course/transformations/rigid#transformations
+
+transformation-image:
+  title: Imagem de uma transformação
+  text: |
+    Depois de transformar uma forma geométrica, o resultado é chamado de __imagem__. Geralmente, é
+    indicado adicionando um 'ao final de seu rótulo.
+  link: /course/transformations/rigid#transformations
+
+translation:
+  title: Tradução
+  text: |
+    Uma traduçãoé uma transformação que move uma figura em uma direção específica, sem alterar seu
+    ângulo ou forma.
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+
+translational-symmetry:
+  title: Simetria Translacional
+  text: |
+    Um padrão repetido (como um papel de parede) tem __simetria da tradução__ se parecer igual após
+    ser traduzido por uma distância específica.
+  link: /course/transformations/symmetry-groups#symmetry-groups-1
+
+transversal:
+  title: Travessia
+  text: Uma transversal é uma linha que cruza duas outras linhas.
+
+trapezium:
+  title: Trapézio
+  text: |
+    Um __trapézio__ (às vezes chamado __trapézio__) é um quadrilátero em que dois lados opostos são
+    paralelos. Estes são chamados de _bases_ do trapézio, e os outros dois lados são chamados de
+    _pernas_.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-2
+
+triangle:
+  title: Triângulo
+  text: Um triânguloé uma forma geométrica que possui três lados retos e três ângulos internos.
+
+triangle-aa:
+  title: Condição AA para triângulos
+  text: |
+    Dois triângulos são __semelhantes__ se dois de seus ângulos tiverem o mesmo tamanho. Isso é
+    chamado de __condição de similaridade AA__ para triângulos.
+
+triangle-altitude:
+  title: Altitudes de triângulos
+  text: |
+    Uma __altitude__ (ou __altura__) de um triângulo é uma linha perpendicular a um dos lados, que
+    passa pelo vértice oposto. Todo triângulo tem três altitudes.
+  image: triangle-altitude.svg
+  link: /course/triangles/properties#altitudes
+
+triangle-legs:
+  title: Pernas de um triângulo
+  text: |
+    As duas __pernas__ de um triângulo retângulo são os dois lados mais curtos (não a _hipotenusa_).
+    Eles estão próximos ao ângulo reto.
+
+triangle-inequality:
+  title: Desigualdade do triângulo
+  text: |
+    A desigualdade __do triângulo__ afirma que a soma dos comprimentos dos dois lados de um
+    triângulo é maior que o comprimento do terceiro lado. Isso também significa que a menor
+    distância entre dois pontos é uma linha reta (porque passar por um terceiro ponto é sempre
+    maior).
+
+triangle-median:
+  title: Medianas de um triângulo
+  text: |
+    As __medianas__ de um triângulo são os segmentos de linha que conectam cada vértice ao ponto
+    médio dos lados opostos. As três medianas de um triângulo se cruzam em um único ponto chamado
+    __centróide__.
+  link: /course/triangles/properties#medians
+
+triangle-midsegment:
+  title: Meio segmento
+  text: |
+    Os __segmentos intermediários__ de um triângulo são as linhas que conectam os pontos médios dos
+    diferentes lados do triângulo.
+  image: triangle-midsegment.svg
+  link: /course/triangles/midsegments
+
+triangle-numbers:
+  title: Números de triângulo
+  text: |
+    Um número do triânguloé um número inteiro que pode ser representado como um triângulo equilátero
+    de pontos. A fórmula para o número do triângulo _n_ é `(n*(n+1))/ 2` e os primeiros números do
+    triângulo são 1, 3, 6, 10, 15,…
+  image: triangle-numbers.svg
+  link: /course/sequences/figurate#triangle-numbers
+
+triangle-sss:
+  title: Condição SSS para triângulos
+  text: |
+    Dois triângulos são __congruentes__ se seus três lados tiverem o mesmo comprimento. Isso é
+    chamado de __condição de congruência SSS__ para triângulos.
+  link: /course/triangles/congruence#congruence-1
+
+trigonometry:
+  title: Trigonometria
+  text: |
+    __Trigonometria__ é um ramo da matemática que estuda as relações entre os lados e os ângulos dos
+    triângulos. Ele se preocupa principalmente com as funções trigonométricas __seno__, __cosseno__,
+    __tangente__ e seus recíprocos.
+  link: /course/triangles/trigonometry
+
+truncated-icosahedron:
+  title: Icosaedro truncado
+  text: |
+    O __Icosaedro Truncado__ é um sólido arquimediano __ que consiste em 12 pentágonos regulares e
+    20 hexágonos regulares.
+  link: /course/polyhedra/platonic#archimedean
+
+twin-primes:
+  title: Twin Primes
+  text: |
+    __Primos gêmeos__ são pares de números primos como 17 e 19 ou 101 e 103, que são exatamente dois
+    separados. Não se sabe se existem infinitamente muitos pares de primos gêmeos.
+  link: /course/divisibility/distribution-of-primes#twin-primes
+
+unit-circle:
+  title: Círculo unitário
+  text: Um círculo de unidadeé um círculo com raio 1.
+
+variable:
+  title: Variável
+  text: |
+    Uma variávelé uma quantidade desconhecida ou que pode alterar o valor. Em uma expressão
+    algébrica, geralmente é representada por uma letra como _x_.
+
+venn-diagram:
+  title: Diagrama de Venn
+  text: Um diagrama de Vennvisualiza várias propriedades ou eventos que se sobrepõem.
+  image: venn.svg
+
+vertical-angles:
+  title: Ângulos verticais
+  text: |
+    __Ângulos verticais__ são pares de ângulos opostos criados por linhas que se cruzam. Ângulos
+    verticais são sempre _congruentes_.
+
+whole-numbers:
+  title: Números inteiros
+  text: 'Os __números inteiros__ são os números contados, incluindo zero: 0, 1, 2, 3, 4,…'
+
+zero-product:
+  title: Propriedade zero do produto
+  text: |
+    A propriedade __zero produto__ afirma que, se o produto de duas quantidades for zero, pelo menos
+    uma dessas quantidades também deverá ser zero. Por exemplo, se `a × (a - 1) = 0`, então `a = 0`
+    ou `a - 1 = 0`.

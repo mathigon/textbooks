@@ -1,0 +1,36 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: "¡Bienvenido a Mathigon! Soy Archie, tu tutor personal. :graduation-cap:"
+account: Puede [crear una cuenta gratuita](->#login-btn) para guardar su progreso.
+tutorial1: Nuestro contenido se divide en pequeños pasos. Tienes que completar las actividades para revelar lo que sigue.
+tutorial2: Guardaremos todo su progreso, para que pueda regresar más tarde y continuar justo donde lo dejó.
+
+correct:
+  - "Bien hecho :smiling-face:"
+  - "¡Buen trabajo! :relieved-face:"
+  - "Increíble :grinning-face:"
+  - "Brillante :thumbs-up:"
+  - "¡Excelente! :ok-hand:"
+  - "Bueno :smiling-face-with-sunglasses:"
+  - "¡Agradable! :victory-hand:"
+  - "¡Camino a seguir! :smiling-face-with-smiling-eyes:"
+  - "¡Impresionante! :trophy:"
+  - "Excepcional :grinning-face:"
+
+incorrect:
+  - "Eso no es del todo bien :frowning-face:"
+  - "¿Estás seguro de eso? :thinking-face:"
+  - "Eso no se ve bien. :hushed-face:"
+  - "¡Inténtalo de nuevo! :confused-face:"
+
+welcomeMorning: ¡Buenos días!
+welcomeAfternoon: ¡Buenas tardes!
+welcomeEvening: ¡Buena noches!
+
+welcomeMorningNamed: ¡Buenos días, $name!
+welcomeAfternoonNamed: ¡Buenas tardes, $name!
+welcomeEveningNamed: ¡Buena noches, $name!
+
+serverError: "Lo siento, no puedo ayudar en este momento. Comprueba tu conexión a Internet o vuelve a intentarlo más tarde. :confused-face:"

@@ -6,13 +6,15 @@
 
 import {$N, CustomElementView, ElementView, hover, register, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Point} from '@mathigon/euclid';
+import template from './relation.pug';
+
 
 type Match = {
   name: string
   matched: boolean
 }
 
-@register('x-relation', {templateId: '#relation'})
+@register('x-relation', {template})
 export class Relation extends CustomElementView {
   private $inputs!: ElementView[];
   private $outputs!: ElementView[];

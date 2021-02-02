@@ -1,0 +1,1773 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+abel:
+  born: 1802
+  died: 1829
+  name: Abel
+  overflow: true
+  bio: |
+    Niels Henrik Abel__ (1802 - 1829) a fost un mare matematician norvegian. În ciuda faptului că a
+    murit la 26 de ani, el a avut contribuții inovatoare într-un număr mare de subiecte.
+
+    La 16 ani, Abel a demonstrat Binomul lui Newton. Trei ani mai târziu, a demonstrat că
+    demonstrarea ecuațiilor cvintice - prin inventarea independentă a teoriei grupurilor. Aceasta a
+    fost o problemă deschisă timp de peste 350 de ani! De asemenea, el a lucrat cu  funcțiile
+    eliptice și a descoperit funcțiile _abeliene_.
+
+    Abel și-a petrecut viața în sărăcie: a avut șase frați, tatăl său a murit la 18 ani, nu a putut
+    să-și găsească un loc de muncă în mediul universitar și mulți matematicieni i-au respins inițial
+    lucrările. Astăzi, premiul _Abel_, unul dintre cele mai mari premii din matematică,  este numit
+    după el.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+al-haytham:
+  born: 965
+  died: 1050
+  name: Al-Haytham
+  bio: |
+    __Hasan Ibn al-Haytham__ (أبو علي ، الحسن بن الحسن بن الهيثم, c. 965 - 1050) a trăit în Cairo în
+    Epoca de Aur a islamului și a studiat matematica, fizica, astronomia, filozofia și medicina. El
+    a fost un susținător al _metodei științifice_: convingerea că orice ipoteză științifică trebuie
+    verificată folosind experimente sau logică matematică - cu secole înaintea de oamenilor de
+    știință europeni din timpul Renașterii.
+
+    Al-Haytham a fost interesat în mod special de optică și percepția vizuală. De asemenea, el a
+    derivat o formulă pentru suma puterilor lui patru (`1^4 + 2^4 + 3^4 + … + n^4`) și a studiat
+    legătura dintre algebră și geometrie.
+
+al-karaji:
+  born: 953
+  died: 1029
+  name: Al-Karaji
+  bio: |
+    __Muhammad Al-Karaji__ (ابو بکر محمد بن الحسن الکرجی, c. 953 - 1029) a fost un matematician și
+    inginer persan. El a fost prima persoană care a folosit _demonstrația prin inducție matematică_,
+    ceea ce i-a permis să demonstreze binomul lui Newton.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+al-khwarizmi:
+  born: 780
+  died: 850
+  name: Al-Khwarizmi
+  overflow: true
+  bio: |
+    Matematicianul persan __Muhammad Al-Khwarizmi__ (محمد بن موسى الخوارزمي, 780 - 850) a trăit în
+    epoca de aur a regimului abasid musulman la Bagdad. A lucrat la „Casa Înțelepciunii”, care
+    conținea prima colecție mare de cărți academice de la distrugerea Bibliotecii din Alexandria.
+
+    Al-Khwarizmi a fost numit „Părintele algebrei” - de fapt, cuvântul _algebra_ provine din titlul
+    arab al celei mai importante cărți a sa: „Cartea compendioasă despre calcul prin completare și
+    echilibrare”. În ea, el a arătat cum să rezolve ecuațiile liniare și patratice și, timp de multe
+    secole, a fost principalul manual de matematică din universitățile europene.
+
+    Al-Khwarizmi a lucrat și în astronomie și geografie, iar cuvântul „algoritm” este numit după el.
+
+apollonius:
+  name: Apollonius
+  born: -262
+  died: -190
+  bio: |
+    __Apollonius din Perga__ (c. 200 î.Hr.) a fost un matematician și astronom grec cunoscut pentru
+    lucrările sale asupra celor patru _secțiuni conice_.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+appel:
+  name: Appel
+  bio: |
+    __Kenneth Appel__ (1932 - 2013) a fost un matematician american, cunoscut pentru dovada sa de
+    teorema celor patru culori cu Wolfgang Haken.
+
+    În semn de recunoaștere, el și Haken au primit premiul Fulkerson al Societății Americane de
+    Matematică.
+
+    Appel a studiat la Queens College, New York și la Universitatea din Michigan. A predat la
+    Universitatea din Illinois și la Universitatea din New Hampshire.
+
+archimedes:
+  name: Arhimede
+  born: -287
+  died: -212
+  bio: |
+    __Arhimede__ (c. 287 – c. 212 î.Hr.) a fost un om de știință și inginer din Grecia Antică,
+    precum și cel mai mare matematician din toate timpurile. El a descoperit multe concepte de
+    calcul și a lucrat în geometrie, analiză și mecanică.
+
+    Arhimede a descoperit în timp ce făcea baie o metodă de a calcula voumul obiectelor de formă
+    neregulată folosind cantitatea de apă dislocată la scufundare. El a fost atât de entuziasmat de
+    descoperirea lui încât a ieșit în fugă pe stradă, dezbrăcat, strigând _“Eureka!”_ (_“Am
+    descoperit!”_ în limba greacă).
+
+    Ca iniginer, el a construit mașinării ingenioase de apărare în timpul asediului orașului
+    Siracuza din Sicilia în care locuia. După doi ani romanii au reușit până la urmă să intre și
+    Arhimede a fost omorât. Ultimele sale cuvinte au fost _“Nu îmi deranjați cercurile”_ – pe care
+    le studia în acel moment.
+  links:
+    - title: Archimedean Solids
+      url: /course/polyhedra/platonic#archimedean
+
+aristotle:
+  born: -384
+  died: -322
+  name: Aristotle
+  bio: |
+    __Aristotel__ (Ἀριστοτέλης, c. 384 - 322 î.e.n.) a fost un filozof în Grecia Antică. Împreună cu
+    profesorul său _Platon_, este considerat „părintele filozofiei occidentale”. El a fost și
+    tutorul privat al lui Alexandru cel Mare.
+
+    Aristotel a scris despre știință, matematică, filozofie, poezie, muzică, politică, retorică,
+    lingvistică și multe alte subiecte. Opera sa a fost extrem de influentă în Evul Mediu și în
+    Renaștere, iar părerile sale despre etică și alte întrebări filozofice sunt încă discutate
+    astăzi.
+
+    Aristotel este, de asemenea, prima persoană cunoscută care a studiat formal _logica_, inclusiv
+    aplicațiile sale în știință și matematică.
+
+aryabhata:
+  born: 476
+  died: 550
+  name: Aryabhata
+  overflow: true
+  bio: |
+    __Aryabhata__ (आर्यभट) a fost unul dintre primii matematicieni și astronomi din epoca de aur a
+    matematicii indiene. El a definit funcțiile trigonometrice, a rezolvat ecuațiile cvadratice
+    simultane, a găsit aproximări pentru _π_ și și-a dat seama că _π_ este irațional.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Quadratic Equations
+      url: /course/quadratics/introduction
+
+babbage:
+  born: 1791
+  died: 1871
+  name: Babbage
+  small: true
+  bio: |
+    __Charles Babbage__ (1791 - 1871) a fost un matematician, filozof și inginer britanic. El este
+    adesea numit „părintele computerului”, după ce a inventat primul computer mecanic (motorul de
+    diferență __) și o versiune îmbunătățită, programabilă (_Analitic_).
+
+    În teorie, aceste mașini ar putea efectua în mod automat anumite calcule stocate pe carduri sau
+    pe bandă. Cu toate acestea, din cauza costurilor mari de producție, nu au fost niciodată
+    completate pe parcursul vieții lui Babbage. În 1991, o replică funcțională a fost construită la
+    Muzeul Științei din Londra.
+
+bernoulli-1:
+  born: 1654
+  died: 1705
+  name: Bernoulli
+  bio: |
+    __Jacob Bernoulli__ (1655 - 1705) a fost un matematician elvețian și unul dintre numeroșii
+    oameni de știință importanți din familia Bernoulli. De fapt, el a avut o rivalitate academică
+    profundă cu câțiva dintre frații și fiii săi.
+
+    Jacob a făcut progrese semnificative la calculul inventat de Newton și Leibnitz, a creat câmpul
+    de _calcul al variațiilor_, a descoperit constanta fundamentală _e_, a dezvoltat tehnici pentru
+    rezolvarea ecuațiilor diferențiale și multe Mai Mult.
+
+    A publicat prima lucrare substanțială despre probabilitate, inclusiv permutări, combinații și
+    legea numerelor mari, a dovedit teorema binomială și a derivat multe dintre proprietățile
+    numerelor Bernoulli.
+
+bernoulli-2:
+  born: 1700
+  died: 1782
+  name: Bernoulli
+  bio: |
+    __Daniel Bernoulli__ (1700 - 1782) a fost un matematician și fizician elvețian. A fost unul
+    dintre numeroșii oameni de știință faimoși din familia Bernoulli - inclusiv tatăl său Johann,
+    unchiul său Iacob și fratele său Nicolae.
+
+    Daniel Bernoulli a arătat că pe măsură ce viteza unui fluid crește, presiunea lui scade. Numit
+    acum _Principiul lui Bernoulli_, acesta este mecanismul folosit de aripile avionului și
+    motoarele cu combustie. El a făcut, de asemenea, descoperiri importante în probabilitate și
+    statistici și a întâlnit pentru prima dată _funcții Bessel_.
+
+    La 34 de ani, i s-a interzis casa de la tatăl său pentru că l-a bătut la un premiu de la
+    Academia de la Paris, pentru care amândoi au depus o intrare.
+
+bhaskara:
+  born: 1114
+  died: 1185
+  name: Bhaskara
+  bio: |
+    __Bhaskara II__ (1114 - 1185) a fost un matematician și astronom astronom. El a descoperit
+    câteva dintre conceptele de bază ale calculului, cu mai mult de 500 de ani înainte de Leibnitz
+    și Newton. Bhaskara a stabilit, de asemenea, că diviziunea pe zero dă infinit și a rezolvat
+    diverse ecuații pătratice, cubice, cuartice și diofantine.
+
+blackwell:
+  born: 1919
+  died: 2010
+  name: Blackwell
+  small: true
+  bio: |
+    __David Blackwell__ (1919 - 2010) a fost un statisticist și matematician american. A lucrat la
+    teoria jocurilor, teoria probabilităților, teoria informației și programarea dinamică și a scris
+    unul dintre primele manuale despre statisticile bayesiene. Teorema _Rao-Blackwell_ arată cum să
+    îmbunătățească estimatorii anumitor cantități în statistici.
+
+    Blackwell a fost primul ales afro-american care a aderat la Academia Națională de Științe din
+    America 5, iar el a fost unul dintre primii doctoriști în matematică.
+
+bolyai:
+  born: 1802
+  died: 1860
+  name: Bolyai
+  small: true
+  bio: |
+    __János Bolyai__ (1802 - 1860) a fost un matematician maghiar și unul dintre fondatorii
+    geometriei non-euclidiene - o geometrie în care a cincea axiomă a lui Euclid despre liniile
+    paralele nu este deținută. Aceasta a fost o descoperire semnificativă în domeniul matematicii.
+    Din păcate, pentru Bolyai, matematicienii Gauss și Lobachevsky au descoperit în același timp
+    rezultate similare și au primit cea mai mare parte a creditului.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+boole:
+  born: 1815
+  died: 1864
+  name: Boole
+  bio: |
+    __George Boole__ (1815 - 1864) a fost un matematician englez. În copilărie, s-a învățat pe sine
+    latină, greacă și matematică, în speranța de a scăpa de viața clasei sale inferioare. El a creat
+    _algebra booleană_, care folosește operatori precum AND, OR și NU (mai degrabă decât adăugarea
+    sau înmulțirea) și poate fi utilizat atunci când lucrați cu seturi. Acesta a fost fundamentul
+    logicii matematice formale și are multe aplicații în informatică.
+
+brahmagupta:
+  born: 598
+  died: 668
+  name: Brahmagupta
+  overflow: true
+  bio: |
+    Matematicianul indian __Brahmagupta__ (c. 598 - 668 CE) a inventat regulile pentru adunare,
+    scădere și înmulțire cu numere zero și negative. A fost și astronom și a făcut multe alte
+    descoperiri în matematică. Din păcate, scrierile sale nu conțineau dovezi, așa că nu știm cum a
+    derivat rezultatele sale.
+
+cantor:
+  born: 1845
+  died: 1918
+  name: Cantor
+  bio: |
+    Matematicianul german __Georg Cantor__ (1845 - 1918) a fost inventatorul teoriei de seturi și un
+    pionier în înțelegerea infinitului nostru. În cea mai mare parte a vieții sale, descoperirile
+    lui Cantor au fost opuse cu fermitate de colegii săi. Este posibil să fi contribuit la depresia
+    și la apariția nervilor și a petrecut multe decenii într-o instituție mentală.
+
+    Cantor a dovedit că există _dimensiuni diferite_ de infinit. Setul de numere reale, de exemplu,
+    este _nenumărat_ - ceea ce înseamnă că nu poate fi asociat cu setul de numere naturale.
+
+    Abia spre sfârșitul vieții sale, Cantor a început să primească recunoașterea pe care o merita.
+    David Hilbert a declarat cu adevărat că „Nimeni nu ne va expulza din paradisul creat de Cantor”.
+  links:
+    - title: Infinity
+      url: /world/Infinity
+    - title: Set Theory
+      url: /world/Axioms_and_Proof
+
+cardano:
+  born: 1501
+  died: 1576
+  name: Cardano
+  bio: |
+    Italianul __Gerolamo Cardano__ (1501 - 1576) a fost unul dintre cei mai influenți matematicieni
+    și oameni de știință ai Renașterii. El a investigat hipercicloidele, a publicat soluția lui
+    Tartaglia și Ferrari pentru ecuațiile cubice și cvartice, a fost primul european care a utilizat
+    sistematic numere negative și chiar a recunoscut existența numerelor imaginare (bazate pe
+    `sqrt(-1)`).
+
+    Cardano a făcut, de asemenea, unele progrese timpurii în teoria probabilității și a introdus în
+    Europa coeficienții binomiali și teorema binomială. El a inventat multe dispozitive mecanice,
+    inclusiv încuietori combinate, giroscopuri cu trei grade de libertate și arbori de acționare
+    (sau arbori Cardan), care sunt încă folosiți în vehicule astăzi.
+  links:
+    - title: Imaginary Numbers
+      url: /world/Real_Irrational_Imaginary
+
+carroll:
+  born: 1832
+  died: 1898
+  name: Carroll
+  bio: |
+    __Charles Lutwidge Dodgson__ (1832 - 1898) este cel mai bine cunoscut sub numele său de stilou
+    __Lewis Carroll__, ca autor al _Aventurile lui Alice în Țara Minunilor_ și continuarea sa _Prin
+    ochelari_.
+
+    Cu toate acestea, Carroll a fost și un matematician genial. El a încercat întotdeauna să
+    încorporeze puzzle-uri și logică în poveștile copiilor săi, făcându-le mai plăcute și
+    memorabile.
+
+cauchy:
+  born: 1789
+  died: 1857
+  name: Cauchy
+  small: true
+  bio: |
+    __Augustin-Louis Cauchy__ (1789 - 1857) a fost un matematician și fizician francez. El a
+    contribuit la o gamă largă de domenii în matematică, iar zeci de teoreme sunt numite după el.
+
+    Cauchy a formalizat calculul și analiza, reformulând și dovedind rezultate în care
+    matematicienii precedenți erau mult mai nepăsători și imprecisi. El a fondat domeniul analizei
+    complexe __, a studiat grupuri de permutare și a lucrat la optică, dinamica fluidelor și teoria
+    elasticității.
+
+cavalieri:
+  name: Cavalieri
+  born: 1598
+  died: 1647
+  bio: |
+    __Bonaventura Cavalieri__ (1598 – 1647) a fost un matematician și călugăr italian.  El a
+    dezvoltat precursorul calculului infinitezimal și a rămas cunoscut pentru  principiul lui
+    Cavalieri cu ajutorul căruia se calculează volumul corpurilor geometrice.
+
+    Cavalieri a lucrat și în optică și mecanică, a introdus logaritmii în Italia și  a corespondat
+    în scris cu Galileo Galilei.
+  links:
+    - title: Principiul lui Cavalieri
+      url: /course/circles/spheres-cones-cylinders#cavalieri
+
+cayley:
+  born: 1821
+  died: 1895
+  name: Cayley
+  bio: |
+    __Arthur Cayley__ (1821 - 1895) a fost un matematician și avocat britanic. El a fost unul dintre
+    pionierii _teoriei grupurilor_, a propus mai întâi definiția modernă a unui „grup” și ia
+    generalizat pentru a cuprinde multe alte aplicații în matematică. Cayley a dezvoltat, de
+    asemenea, algebra matricială și a lucrat la geometrie de dimensiuni superioare.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+collatz:
+  name: Collatz
+  bio: |
+    __Lothar Collatz__ (1910 - 1990) a fost un matematician german care lucra la ecuații
+    diferențiale și probleme de optimizare. Problema _Conjectură Collatz_ sau `3x+1` este numită
+    după el - și încă nerezolvată.
+
+conway:
+  name: Conway
+  born: 1937
+  died: 2020
+  bio: |
+    __John Horton Conway__ (1937 - 2020) a fost un matematician britanic care a lucrat la Cambridge
+    și la Universitatea Princeton. El a fost un coleg al Royal Society și primul beneficiar al
+    Premiului Pólya.
+
+    A explorat matematica care stă la baza obiectelor de zi cu zi, precum noduri și jocuri, și a
+    contribuit la teoria grupurilor, la teoria numerelor și la multe alte domenii ale matematicii.
+    Conway este cunoscut pentru faptul că a inventat „Game of Life” al lui Conway, un _automat
+    celular_ cu proprietăți fascinante.
+  links:
+    - title: Look-and-say Sequence
+      url: /course/sequences/special#look-and-say
+
+copernicus:
+  born: 1473
+  died: 1543
+  name: Copernicus
+  bio: |
+    __Nicolaus Copernicus__ (1473 - 1543) a fost un matematician, astronom și avocat polonez. În
+    timpul vieții sale, cei mai mulți oameni au crezut în modelul _Geocentric_ al universului, cu
+    Pământul în centru și în orice alt lucru rotind în jurul său.
+
+    Copernic a creat un nou model, unde soarele este în centru, iar Pământul se mișcă în jurul lui
+    pe un cerc. De asemenea, el a prezis că Pământul se rotește în jurul axei sale o dată în fiecare
+    zi. Temându-se că ar deranja biserica catolică, el a publicat modelul chiar înainte de moartea
+    sa - declanșând ceea ce se numește acum _Revoluția Copernicană_.
+
+    Copernic a lucrat și ca diplomat și medic și a adus contribuții importante la economie.
+  links:
+    - title: Planetary Orbits
+      url: /course/circles/conic-sections#orbits
+
+de-moivre:
+  born: 1667
+  died: 1754
+  name: De Moivre
+  bio: |
+    __Abraham de Moivre__ (1667 - 1754) a fost un matematician francez care a lucrat în
+    probabilitate și geometrie analitică. Este cel mai mult amintit de formula_ de Moivre, care
+    leagă trigonometria și numere complexe.
+
+    De Moivre a descoperit formula pentru distribuția normală în probabilitate și a conceput mai
+    întâi _teorema limită centrală_. El a găsit, de asemenea, o formulă nerecursivă pentru numerele
+    Fibonacci, care le leagă raportul de aur `φ`.
+  links:
+    - title: Probability
+      url: /course/probability/predicting-the-future
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+dedekind:
+  born: 1831
+  died: 1916
+  name: Dedekind
+  small: true
+  bio: |
+    __Richard Dedekind__ (1831 - 1916) a fost un matematician german și unul dintre studenții Gauss.
+    El a dezvoltat multe concepte în teoria seturilor și a inventat _Dedekind tăieturi_ ca definiție
+    formală a numerelor reale. De asemenea, el a dat primele definiții ale _câmpuri numerice_ și
+    _inele_, două constructe importante în algebră abstractă.
+
+democritus:
+  born: -460
+  died: -370
+  name: Democritus
+  bio: |
+    Matematicianul grec __Democritus__ (c. 460 - 370 î.e.n.), poate fi prima persoană care a
+    speculat că toată materia era formată din minusculi _atomi_ și este considerat „părintele
+    științei moderne. “. El a făcut, de asemenea, multe descoperiri în geometrie, inclusiv formula
+    pentru volumul prismelor și conurilor.
+  links:
+    - title: Volume of a Cone
+      url: /course/circles/spheres-cones-cylinders#cone-volume
+
+desargues:
+  born: 1591
+  died: 1661
+  name: Desargues
+  bio: |
+    __Girard Desargues__ (1591 - 1661) a fost un matematician, inginer și arhitect francez. El a
+    proiectat numeroase clădiri la Paris și Lyon, a ajutat la construirea unui baraj și a inventat
+    un mecanism pentru creșterea apei folosind epicicloide.
+
+    În matematică, Desargues este considerat părintele _geometriei proiective_. Acesta este un fel
+    de geometrie specială în care liniile paralele se întâlnesc la „punctul la infinit”, mărimea
+    formelor nu contează (doar proporțiile lor) și toate cele patru secțiuni conice (cerc, elipsă,
+    parabolă și hiperbolă) sunt în esență la fel.
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+descartes:
+  born: 1596
+  died: 1650
+  name: Descartes
+  bio: |
+    __René Descartes__ (1596 - 1650) a fost un matematician și filozof francez, și una dintre
+    figurile cheie ale Revoluției științifice. El a refuzat să accepte autoritatea filozofilor
+    precedenți, iar una dintre cele mai cunoscute citate ale sale este „Cred că, așadar, sunt”.
+
+    Descartes este părintele _geometriei analitice_, ceea ce ne permite să descriem forme geometrice
+    folosind algebră. Aceasta a fost una dintre premisele, care le-a permis lui Newton și Leibnitz
+    să inventeze _calcul_ câteva decenii mai târziu.
+
+    Lui i se creditează prima utilizare a suprascriptelor pentru puteri sau exponenți, iar _sistemul
+    de coordonate carteziene_ este numit după el.
+
+diophantus:
+  born: 200
+  died: 284
+  name: Diophantus
+  overflow: true
+  bio: |
+    __Diophantus__ a fost un matematician elenistic care a trăit în Alexandria. Majoritatea
+    lucrărilor sale vizează rezolvarea ecuațiilor polinomiale cu mai multe necunoscute. Acestea sunt
+    numite acum _Ecuația diofantină_ și rămân o zonă importantă de cercetare astăzi.
+
+    În timp ce citeam una dintre cărțile lui Diophantus, multe secole mai târziu, Pierre de Fermat_
+    propunea una dintre aceste ecuații nu avea nicio soluție. Aceasta a devenit cunoscută sub numele
+    de „Ultima teoremă a lui Fermat” și a fost rezolvată abia în 1994.
+
+dirac:
+  name: Dirac
+  bio: |
+    __Paul Dirac__ (1898 - 1972) a fost un fizician teoretic englez, care a împărțit Premiul Nobel
+    din 1933 cu Erwin Schrödinger. Dirac a fost unul dintre pionierii mecanicii cuantice, a formulat
+    celebra _ecuație Dirac_ și a prezis pentru prima dată existența antimateriei.
+
+    A predat la Universitatea Cambridge, înainte de a se muta în America. Dirac era faimos timid și,
+    potrivit lui Einstein, _„echilibrează pe calea amețitoare dintre geniu și nebunie”_.
+
+einstein:
+  name: Einstein
+  born: 1879
+  died: 1955
+  small: true
+  bio: |
+    __Albert Einstein__ (1879 - 1955) a fost un fizician german și unul dintre cei mai influenți
+    oameni de știință din istorie. El a primit premiul Nobel pentru fizică și revista TIME, care l-a
+    numit persoana _din secolul XX_.
+
+    Einstein a declanșat cea mai semnificativă transformare în viziunea noastră despre univers încă
+    de la Newton. Și-a dat seama că fizica clasică _newtoniană_ nu mai era suficientă pentru a
+    explica anumite fenomene fizice.
+
+    La vârsta de 26 de ani, în timpul „anului miracol”, a publicat patru lucrări științifice
+    inovatoare care explicau efectul fotoelectric și mișcarea browniană, au introdus relativitate
+    specială și au derivat formula `E = m c^2`, care afirmă că energia (_E_) și masa (_m_) sunt
+    echivalente.
+
+eratosthenes:
+  name: Eratostene
+  born: -276
+  died: -195
+  bio: |
+    __Eratostene din Cyrene__ (c. 276 î.Hr. – 195 î.Hr.) a fost un matematician, geograf, astronom,
+    istoric și poet grec. El și-a petrecut o mare parte din viața sa în Egipt ca șef al bibliotecii
+    din Alexandria.
+
+    Printre multele sale realizări, Eratostene a calculat circumferința Pământului, a măsurat
+    înclinarea axei de rotație a Pământului, a estimat distanța până la Soare și a creat primele
+    hărți ale lumii.
+
+    De asemenea, el a inventat “Ciurul lui Eratostene”, o metodă eficientă de calculare a _numerelor
+    prime_.
+  links:
+    - title: Radius of the Earth
+      url: /course/circles/tangets-chords-arcs#eratosthenes
+    - title: Sieve of Eratosthenes
+      url: /course/divisibility/primes#eratosthenes
+
+erdos:
+  born: 1913
+  died: 1996
+  name: Erdős
+  bio: |
+    __Paul Erdős__ (1913 – 1996) a fost unul dintre cei mai prolifici matematicieni din istorie.
+    Născut în Ungaria, el a rezolvat nenumărate probleme din teoria grafurilor, teoria numerelor,
+    combinatorică, analiză matematică, probabilități și alte ramurile ale matematicii.
+
+    De-a lungul vieții sale, Erdős a publicat aproximativ 1,500 de lucrări și a colaborat  cu peste
+    500 de alți mathematicieni. De fapt, el și-a petrecut o mare parte din viață călătorind doar cu
+    o valiză la seminarii și în vizită la colegii săi!
+
+escher:
+  name: Escher
+  born: 1898
+  died: 1972
+  bio: |
+    __Maurits Cornelis Escher__ (1898 – 1972) a fost un artist olandez care a creat schițe,
+    xilogravuri, și litografii pentru obiecte și forme de inspirație matematică: inclusiv poliedre,
+    mozaicări și forme imposibile. El a explorat grafic concepte precum simetria, infinitatea,
+    perspectiva și geometria euclidiană.
+  small: true
+  links:
+    - title: Tessellations in Art
+      url: /course/polyhedra/tessellations#escher
+
+euclid:
+  name: Euclid
+  born: -330
+  died: -270
+  bio: |
+    __Euclid din Alexandria__ (în jurul 300 î.Hr.) a fost un matematician grec adesea numit
+    _părintele geometriei_. El a publicat o carte cu titlul _Elemente_ care a introdus pentru prima
+    dată geometria euclidiană și care conținea mult demonstrații importante din geometrie și teoria
+    numerelor. Această carte a fost manual principal de matematică până in secolul al 19lea. El a
+    predat matematica în Alexandria, dar altfel se cunosc foarte puține detalii despre viața sa.
+  links:
+    - title: Euclid’s Axioms
+      url: /course/euclidean-geometry/axioms
+    - title: Infinitely many Primes
+      url: /course/divisibility/primes#primes3
+
+euler:
+  name: Euler
+  born: 1707
+  died: 1783
+  bio: |
+    __Leonhard Euler__ (1707 – 1783) a fost unul dintre cei mai mari matematicieni din istorie.
+    Munca sa acoperă toate ramurile matematicii și el a scris 80 de volume de cercetare.
+
+    Euler s-a născut în Elveția și a studiat la Basel, dar a trăit marea parte a vieții sale în
+    Berlin, Prusia și în St. Petersburg, Rusia.
+
+    Euler a inventat o mare parte din terminologia și notațiile matematicii moderne și a făcut
+    descoperiri importante în analiză, teoria grafurilor, fizică, astronomie și în multe alte
+    subiecte.
+  links:
+    - title: Königsberg Bridges Problem
+      url: /course/graph-theory/bridges
+    - title: Euler’s Formula
+      url: /course/graph-theory/planar-graphs
+    - title: Polyhedrons
+
+fatou:
+  name: Fatou
+  bio: |
+    __Pierre Joseph Louis Fatou__ (1878 - 1929) a fost un matematician și astronom francez. El a
+    descoperit setul _Julia_, iar inversul său, setul Fatou, poartă numele acestuia. El a adus
+    contribuții importante și la analize și mecanici cerești.
+
+fermat:
+  name: Fermat
+  born: 1607
+  died: 1665
+  bio: |
+    __Pierre de Fermat__ (1607 - 1665) a fost un matematician și avocat francez. A fost un pionier
+    timpuriu al calculului, precum și a lucrat în teoria numerelor, probabilitate, geometrie și
+    optică.
+
+    În 1637, a scris o notă scurtă în marja unuia dintre manualele sale, susținând că ecuația `a^n +
+    b^n = c^n` nu are soluții întregi pentru `n > 2` și că are o „dovadă minunată, pe care această
+    marjă este prea restrânsă pentru a o conține “. Aceasta a devenit cunoscută drept _Ultima
+    teoremă a lui Fermat_ și una dintre cele mai faimoase probleme nesoluționate în matematică -
+    până când a fost dovedită definitiv în 1994.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+
+fibonacci:
+  name: Fibonacci
+  born: 1175
+  died: 1250
+  bio: |
+    __Leonardo Pisano__, cunoscut drept __Fibonacci__ (1175 - 1250) a fost un matematician italian.
+    Este cel mai cunoscut pentru secvența de numere numită după el: 1, 1, 2, 3, 5, 8, 13, ...
+
+    Fibonacci este, de asemenea, responsabil pentru popularizarea cifrelor arabe (0, 1, 2, 3, 4,
+    ...) în Europa, care încă folosea cifre romane (I, V, X, D, ...) în secolul al XII-lea. El a
+    explicat sistemul zecimal într-o carte numită „Liber Abaci”, un manual manual pentru
+    comercianți.
+  links:
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+fourier:
+  born: 1768
+  died: 1830
+  name: Fourier
+  bio: |
+    __Joseph Fourier__ (1768 - 1830) a fost un matematician francez și un prieten și consilier al
+    lui Napoleon. În plus față de cercetările sale matematice, i se mai atribuie descoperirea
+    efectului de seră.
+
+    În timpul călătoriei în Egipt, Fourier a devenit deosebit de fascinat de _căldură_. El a studiat
+    transferul de căldură și vibrațiile și a descoperit că orice funcție periodică poate fi scrisă
+    ca o sumă infinită de funcții trigonometrice: o serie _Fourier_.
+
+fuller:
+  name: Fuller
+  bio: |
+    __Richard Buckminster „Bucky” Fuller__ (1895 - 1983) a fost un arhitect, designer și inventator
+    american. Este faimos pentru construirea _cupolei geodezice_ - o structură sferică mare.
+    Moleculele de carbon cu aspect similar, _fulerenele_, au fost numite mai târziu după el.
+
+galileo:
+  born: 1564
+  died: 1642
+  name: Galileo
+  bio: |
+    __Galileo Galilei__ (1564 - 1642) a fost un astronom, fizician și inginer italian. A folosit
+    unul dintre primele telescoape pentru a face observații despre cerul nopții, unde a descoperit
+    cele mai mari patru luni ale lui Jupiter, fazele lui Venus, petele solare și multe altele.
+
+    Galileo, numit uneori „părintele științei moderne”, a studiat și mișcarea obiectelor în cădere
+    liberă, cinematică, știința materialelor și a inventat termoscopul (un termometru timpuriu).
+
+    El a fost un promotor vocal al _Heliocentrism_, ideea că Soarele era în centrul sistemului
+    nostru solar. Acest lucru la determinat în cele din urmă să fie judecat de Inchiziția Catolică:
+    Galileo a fost forțat să recidiveze și și-a petrecut restul vieții în arest la domiciliu.
+
+galois:
+  born: 1811
+  died: 1832
+  name: Galois
+  overflow: true
+  bio: |
+    Matematicianul francez __Évariste Galois__ (1811 - 1832) a avut o viață scurtă și tragică,
+    totuși a inventat două domenii cu totul noi ale matematicii: _teoria grupelor_ și _teoria lui
+    Galois_ .
+
+    În timp ce era încă în adolescență, Galois a dovedit că nu există o soluție generală pentru
+    ecuațiile polinomiale de gradul cinci sau superior - simultan cu Niels Abel.
+
+    Din păcate, alți matematicieni cărora le-a împărtășit aceste descoperiri cu repetate poziții
+    greșite sau pur și simplu i-au înapoiat munca, iar el nu a reușit examenele școlare și
+    universitare, concentrându-se în același timp pe o muncă mult mai complexă.
+
+    La 21 de ani, Galois a fost împușcat într-un duel (unii spun că o feudă asupra unei femei), iar
+    ulterior a murit din cauza rănilor sale. În noaptea dinaintea morții sale, el a rezumat
+    descoperirile sale matematice într-o scrisoare către un prieten. Ar fi nevoie de alți
+    matematicieni mulți ani pentru a realiza pe deplin impactul adevărat al lucrării sale.
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+gauss:
+  name: Gauss
+  born: 1777
+  died: 1855
+  bio: |
+    __Carl Friedrich Gauss__ (1777 – 1855) a fost probabil cel mai mare matematician din istorie. El
+    a făcut descoperiri inovatoare în aproape toate domeniile matematicii, de la algebră și teoria
+    numerelor până la statistici, analiză matematică, geometrie, geologie și astronomie.
+
+    Conform legendei, el a corectat o greșeală din calculele de contabilitate ale tatălui său  la
+    vâsta de 3 ani și a descoperit o metodă de a aduna rapid toate numerele întregi  de la 1 la 100
+    la vârsta de 8 ani. Primele sale descoperiri importante au fost făcute  pe când era adolescent,
+    iar mai târziu a îndrumat ca profesor mulți matematicieni faimoși.
+  links:
+    - title: Prime Number Theorem
+      url: /course/divisibility/distribution-of-primes#riemann
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+    - title: Sums of Triangle Numbers
+      url: /course/sequences/figurate#triangle-sums
+
+germain:
+  born: 1776
+  died: 1831
+  name: Germain
+  small: true
+  bio: |
+    __Marie-Sophie Germain__ (1776 - 1831) a decis că vrea să fie matematiciană la 13 ani, după ce a
+    citit despre Arhimede. Din păcate, ca femeie, s-a confruntat cu o opoziție semnificativă.
+    Părinții ei au încercat să o împiedice să studieze când era mică și nu a primit niciodată un
+    post la o universitate.
+
+    Germain a fost un pionier în înțelegerea matematicii suprafețelor elastice, pentru care a
+    câștigat marele premiu de la Academia de Științe din Paris. De asemenea, a făcut progrese
+    considerabile în rezolvarea Ultimei teoreme a lui Fermat și a corespuns în mod regulat cu Carl
+    Friedrich Gauss.
+
+godel:
+  born: 1906
+  died: 1978
+  name: Gödel
+  small: true
+  bio: |
+    __Kurt Gödel__ (1906 - 1978) a fost un matematician austriac care a imigrat ulterior în America
+    și este considerat unul dintre cei mai mari logici din istorie.
+
+    La 25 de ani, imediat după terminarea doctoratului la Viena, și-a publicat cele două _teoreme de
+    incompletitudine_. Acestea afirmă că orice sistem matematic (consistent și suficient de
+    puternic) conține anumite afirmații care sunt adevărate, dar nu pot fi dovedite. Cu alte
+    cuvinte, matematica conține anumite probleme imposibil de rezolvat.
+
+    Acest rezultat a avut un impact profund asupra dezvoltării și filozofiei matematicii. Gödel a
+    găsit, de asemenea, un exemplu al acestor „teoreme imposibile”: _ipoteza continuă_.
+  links:
+    - title: Unprovable Theorems
+      url: /world/Axioms_and_Proof
+    - title: Continuum Hypothesis
+      url: /world/Infinity
+
+goldbach:
+  name: Goldbach
+  born: 1690
+  died: 1764
+  bio: |
+    __Christian Goldbach__ (1690 – 1764) a fost un matematician prusac contemporan cu Euler, Leibniz
+    și Bernoulli. El a fost educatorul țarului rus Pentru al II-lea și este a rămas cunoscut pentru
+    conjectura sa - “Conjectura Goldbach“.
+  links:
+    - title: Goldbach Conjecture
+      url: /course/divisibility/distribution-of-primes#goldbach1
+
+grothendieck:
+  born: 1928
+  died: 2014
+  name: Grothendieck
+  small: true
+  bio: |
+    Matematicianul francez __Alexander Grothendieck__ (1928 - 2014) a fost una dintre figurile cheie
+    ale dezvoltării _geometrie algebraică_. El a extins domeniul de aplicare pentru a se aplica la
+    multe probleme noi în matematică, inclusiv, în cele din urmă, ultima teoremă a lui Fermat. În
+    1966, a primit medalia Fields.
+
+guthrie:
+  name: Guthrie
+  bio: |
+    __Francis Guthrie__ (1831 - 1899) a fost un botanist și matematician sud-african, care a
+    declarat pentru prima dată problema celor patru culori în 1852. El a fost un student al lui
+    Augustus De Morgan, unul dintre cei mai mari matematicieni britanici. Pe lângă faptul că este
+    profesor și profesor de matematică, Guthrie a lucrat ca avocat și a făcut cercetări în energie
+    solară și aeronautică.
+
+haken:
+  name: Haken
+  bio: |
+    __Wolfgang Haken__ (n. 1928) este un matematician german, cunoscut pentru dovada lui _Teorema de
+    patru culori_ cu Kenneth Appel. În semn de recunoaștere, el și Appell au primit Premiul
+    Fulkerson al Societății Americane de Matematică. În 1990, Haken a devenit membru al Centrului de
+    Studii Avansate de la Universitatea din Illinois, unde acum este profesor emerit.
+
+halley:
+  name: Halley
+  bio: |
+    __Edmond Halley__ (1656 - 1742) a fost un matematician și fizician englez, iar al doilea
+    _Astronomer Royal_. El a calculat orbita Cometei lui Halley, care poartă numele acestuia.
+
+hamilton:
+  born: 1805
+  died: 1865
+  name: Hamilton
+  small: true
+  bio: |
+    __William Rowan Hamilton__ (1805 - 1865) a fost un matematician irlandez și minune pentru copii.
+    El a inventat _cuaternions_, primul exemplu de „algebră non-comutativă”, care are aplicații
+    importante în matematică, fizică și informatică.
+
+    El a venit mai întâi cu ideea în timp ce se plimba pe Canalul Regal din Dublin și a sculat
+    formula fundamentală într-un pod de piatră pe care l-a trecut: `"i"^2 = "j"^2 = "k"^2 = "ijk" =
+    -1`.
+
+    De asemenea, Hamilton a adus contribuții semnificative la fizică, inclusiv optica și mecanica
+    newtoniană.
+
+hardy:
+  born: 1877
+  died: 1947
+  name: Hardy
+  small: true
+  bio: |
+    __G.H. Hardy__ (1877 - 1947) a fost un important matematician englez pur. Împreună cu _John
+    Littlewood_, a făcut descoperiri importante în analiza și teoria numerelor, inclusiv distribuția
+    numerelor prime.
+
+    În 1913, Hardy a primit o scrisoare de la _Srinivasa Ramanujan_, un funcționar necunoscut,
+    autodidact din India. Hardy și-a recunoscut imediat geniul și a aranjat ca Ramanujan să
+    călătorească la Cambridge unde lucra. Împreună, au făcut descoperiri importante și au scris
+    numeroase lucrări.
+
+    Hardy a nemulțumit întotdeauna matematica aplicată și a exprimat acest lucru în relatarea sa
+    personală despre gândirea matematică, cartea din 1940 _Apology of Mathematician_.
+
+hilbert:
+  name: Hilbert
+  born: 1862
+  died: 1943
+  bio: |
+    __David Hilbert__ (1862 – 1943) a fost unul dintre cei mai influenți matematicieni ai secolului
+    20. El a lucrat în aproape fiecre arie a matematicii fiind interesat,  în mod special, de
+    construirea unei fundații formale și logice pentru matematică.
+
+    Hilbert a profesat in Göttingen (Germany), unde a îndrumat numeroși studenți care mai târziu  au
+    devenit matematicieni faimoși. Pe parcurul Congresului Internațional de Matematică din 1900,  el
+    a prezenta o listă de 23 de probleme nerezolvate. Acestea au stabilit terenul  pentru
+    cercetarile viitoare - și patru dintre ele sunt și azi nerezolvate!
+  links:
+    - title: Hilbert’s Hotel
+      url: /world/Infinity
+
+hypatia:
+  born: 360
+  died: 415
+  name: Hypatia
+  overflow: true
+  bio: |
+    __Hypatia__ (c. 360 - 415 CE) a fost un astronom și matematician proeminent în Alexandria
+    antică. De asemenea, a fost prima femeie matematiciană a cărei viață și lucrare sunt rezonabil
+    de bine înregistrate. Ea a editat sau a scris comentarii despre multe dintre cărțile științifice
+    ale vremii sale și a construit astrolaburi și hidrometre.
+
+    A fost renumită în timpul vieții sale ca mare învățător și l-a sfătuit pe Orestes, prefectul
+    roman al Alexandriei. Feuda lui Orestes cu Chiril, episcopul Alexandriei, a determinat ca
+    Hypatia să fie ucisă de o mulțime de creștini.
+
+jacobi:
+  born: 1809
+  died: 1851
+  name: Jacobi
+  small: true
+  bio: |
+    __Carl Jacobi__ (1804 - 1851) a fost un matematician german. A lucrat la analiză, ecuații
+    diferențiale și teoria numerelor și a fost unul dintre pionierii în studiul _funcții eliptice_.
+
+jefferson:
+  name: Jefferson
+  bio: |
+    __Thomas Jefferson__ (1743 – 1826) a fost unul dintre părinții fondatori ai Statelor Unite, al
+    treilea președinte al Statelor Unite și principalul autor al Declarației de Independență.
+
+    Pe lânga contribuțiile sale în politică, el a studiat matematica, horticultura, mecanica și a
+    lucrat ca arhitect. După ce s-a retras din funcția publică, Jefferson a înființat Universitatea
+    din Virginia.
+
+jiushao:
+  born: 1202
+  died: 1261
+  name: Qin Jiushao
+  overflow: true
+  bio: |
+    __Qin Jiushao__ (秦九韶, c. 1202 - 1261) a fost un matematician, inventator și om politic chinez.
+    În cartea sa _Shùshū Jiǔzhāng_, a publicat numeroase descoperiri matematice, inclusiv cea
+    importantă teoremă de resturi chineze_, și a scris despre sondaje, meteorologie și armată.
+
+    Qin a dezvoltat pentru prima dată o metodă pentru rezolvarea numerică a ecuațiilor polinomiale,
+    care este cunoscută acum ca _Metoda lui Horner_. El a găsit o formulă pentru aria unui triunghi
+    bazată pe lungimea celor trei laturi ale sale, a calculat suma seriei aritmetice și a introdus
+    un simbol pentru „zero” în matematica chineză.
+
+    De asemenea, Qin a inventat _bazinele Tianchi_, care au fost folosite pentru a măsura
+    precipitațiile și a aduna date meteorologice importante pentru agricultură.
+
+johnson:
+  born: 1918
+  died: 2020
+  name: Johnson
+  bio: |
+    __Katherine Johnson__ (1918 - 2020) a fost o matematiciană afro-americană. În timp ce lucra la
+    NASA, Johnson a calculat orbitele preluate de astronauții americani - inclusiv Alan Shepard,
+    primul american în spațiu, programul de aterizare Apollo Moon și chiar naveta spațială.
+
+    Capacitatea ei extraordinară de a calcula traiectoriile orbitale, de a lansa ferestrele și căile
+    de întoarcere de urgență a fost cunoscută pe scară largă. Chiar și după sosirea calculatoarelor,
+    astronautul John Glenn i-a cerut să verifice personal rezultatele electronice.
+
+    În 2015, Johnson a primit Medalia Prezidențială a Libertății.
+
+julia:
+  name: Julia
+  bio: |
+    __Gaston Maurice Julia__ (1893 - 1978) a fost un matematician francez care a descoperit setul
+    _Julia_, un fractal care a fost popularizat ulterior de Benoit Mandelbrot.
+
+karinthy:
+  name: Karinthy
+  bio: |
+    __Frigyes Karinthy__ (1887 - 1938) a fost un autor, poet și jurnalist maghiar. Este cel mai
+    cunoscut pentru povestea scurtă „Lanțuri” din 1929, care a introdus pentru prima dată conceptul
+    de _șase grade de separare_.
+
+kepler:
+  name: Kepler
+  born: 1571
+  died: 1630
+  bio: |
+    __Johannes Kepler__ (1571 – 1630) a fost un astronom și matematician german. El a fost
+    _matematicianul imperial_ în Praga și este cel mai cunoscut pentru cele trei _legi ale mișcării
+    planetelor_. Kepler a lucrat și în optică și a inventat un telescop îmbunătățit pentru
+    observațiile sale.
+  links:
+    - title: Elliptical Orbits
+      url: /course/circles/conic-sections#kepler
+
+khayyam:
+  name: Khayyam
+  born: 1048
+  died: 1131
+  bio: |
+    __Omar Khayyam__ (عمر خیّام, 1048 - 1131) a fost un matematician, astronom și poet persan. A
+    reușit să clasifice și să rezolve toate ecuațiile cubice și a găsit noi modalități de a înțelege
+    _axioma paralelă a lui Euclid_. Khayyam a proiectat, de asemenea, _Jalali calendar_, un calendar
+    solar precis care este încă utilizat în unele țări.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+koch:
+  name: von Koch
+  bio: |
+    Niels Fabian Helge von Koch__ (1870 - 1924) a fost un matematician suedez. El a descris pentru
+    prima dată _Koch fulg de zăpadă_, un fractal care poartă numele acestuia și a dovedit relații
+    între ipoteza Riemann și distribuția numerelor prime.
+
+lagrange:
+  born: 1736
+  died: 1813
+  name: Lagrange
+  bio: |
+    __Joseph-Louis Lagrange__ (1736 - 1813) a fost un matematician italian care l-a succedat pe
+    Leonard Euler ca director al Academiei de Științe din Berlin.
+
+    A lucrat la analiză și la calculul variațiilor, a inventat noi metode pentru rezolvarea
+    ecuațiilor diferențiale, a dovedit teoreme în teoria numerelor și a pus bazele teoriei
+    grupurilor.
+
+    Lagrange a scris și despre mecanica clasică și celestă și a ajutat la stabilirea sistemului
+    metric în Europa.
+
+lambert:
+  born: 1728
+  died: 1777
+  name: Lambert
+  bio: |
+    __Johann Lambert__ (1728 - 1777) a fost un matematician, fizician, astronom și filozof elvețian.
+    El a fost primul care a demonstrat că _π_ este un număr irațional și a introdus funcții
+    trigonometrice hiperbolice. De asemenea, Lambert a lucrat la geometrie și cartografie, a creat
+    proiecții de hartă și a prevăzut descoperirea spațiilor non-euclidiene.
+
+laplace:
+  born: 1749
+  died: 1827
+  name: Laplace
+  small: true
+  bio: |
+    __Pierre-Simon Laplace__ (1749 - 1827) a fost un matematician și om de știință francez. Este
+    numit uneori „Newton of France”, datorită gamei sale largi de interese și a impactului enorm al
+    muncii sale.
+
+    Într-o carte cu cinci volume, Laplace a tradus probleme în mecanica cerească de la _geometrie_
+    la _calcul_. Aceasta a deschis o gamă largă de strategii noi pentru înțelegerea universului
+    nostru. El a propus ca sistemul solar să se dezvolte dintr-un disc rotativ de praf.
+
+    De asemenea, Laplace a fost pionier în domeniul probabilității și a arătat cum probabilitatea ne
+    poate ajuta să înțelegem datele din lumea fizică.
+
+leibniz:
+  name: Leibniz
+  born: 1646
+  died: 1716
+  bio: |
+    __Gottfried Wilhelm Leibniz__ (1646 – 1716) a fost un matematician și filosof german. Printre
+    multele sale reușite, el a fost unul din inventatorii analizei matematice  și a creat unele din
+    primele calculatoare mecanice.
+
+    Leibniz credea că universul nostru este “cel mai bun univers posibil” pe care Dumnezeu ar fi
+    putut să-l creeze și în care să ne permită sa avem liberul arbitru. El a fost un adept important
+    al _raționalismului_, și a adus contribuții în fizică, medicină, lingvistică, drept, istorie și
+    multe alte domenii.
+
+leonardo:
+  born: 1452
+  died: 1519
+  name: Da Vinci
+  bio: |
+    __Leonardo da Vinci__ (1452 - 1519) a fost un artist și polimat italian. Interesele sale variau
+    de la pictură, sculptură și arhitectură, până la inginerie, matematică, anatomie, astronomie,
+    botanică și cartografie. El este adesea văzut ca principalul exemplu de „Geniu Universal” și a
+    fost unul dintre cei mai diversificați indivizi talentați care au trăit vreodată.
+
+    Leonardo s-a născut la Vinci, a educat la Florența și a lucrat la Milano, Roma, Bologna și
+    Veneția. Doar 15 dintre picturile sale au supraviețuit, dar printre ele sunt unele dintre cele
+    mai cunoscute și reproduse opere din lume, inclusiv _Mona Lisa_ și _Ultima cină_.
+
+    Caietele sale conțin un număr mare de desene, invenții și diagrame științifice - inclusiv
+    primele mașini zburătoare și elicoptere, pompe hidraulice, poduri și multe altele.
+
+lie:
+  born: 1842
+  died: 1899
+  name: Lie
+  small: true
+  bio: |
+    Matematicianul norvegian __Marius Sophus Lie__ (1842 - 1899) a înregistrat progrese
+    semnificative în studiul _grupuri de transformare continuă_ - acum numite _grupări Lie_. A
+    lucrat, de asemenea, la ecuații diferențiale și geometrie non-euclidiene.
+
+lobachevsky:
+  born: 1792
+  died: 1856
+  name: Lobachevsky
+  small: true
+  bio: |
+    __Nikolai Lobachevsky__ (Никола́й Лобаче́вский) a fost un matematician rus și unul dintre
+    fondatorii geometriei non-euclidiene. El a reușit să arate că puteți construi un tip constant de
+    geometrie în care cel de-al cincilea axiom al lui Euclid (despre liniile paralele) nu este
+    deținut.
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+lorenz:
+  name: Lorenz
+  born: 1917
+  died: 2008
+  bio: |
+    __Edward Lorenz__ (1917 - 2008) a fost un matematician și meteorolog american. El a fost pionier
+    în _teoria haosului_, a descoperit _atracții ciudate_ și a inventat termenul „efect fluture”.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+
+lovelace:
+  born: 1815
+  died: 1852
+  name: Lovelace
+  overflow: true
+  bio: |
+    __Ada Lovelace__ (1815 - 1852) a fost un scriitor și matematician englez. Împreună cu Charles
+    Babbage, a lucrat la _Motor Analitic_ un computer mecanic timpuriu. De asemenea, a scris primul
+    algoritm care a rulat pe o astfel de mașină (pentru a calcula numerele Bernoulli), devenind
+    astfel primul programator de calculator din istorie.
+
+    Ada a descris demersul său drept „știința poetică” și a petrecut mult timp gândindu-se la
+    impactul tehnologiei asupra societății.
+
+madhava:
+  born: 1340
+  died: 1425
+  name: Madhava
+  bio: |
+    __Madhava din Sangamagramma__ (c. 1340 - 1425) a fost un matematician și astronom din sudul
+    Indiei. Toată lucrarea sa originală a fost pierdută, dar a avut un impact mare asupra
+    dezvoltării matematicii.
+
+    Madhava a folosit pentru prima dată serii infinite pentru a aproxima funcțiile trigonometrice,
+    ceea ce a fost un pas semnificativ spre dezvoltarea calculului multe secole mai târziu. De
+    asemenea, el a studiat geometria și algebra și a găsit o formulă exactă pentru _π_ (folosind și
+    serii infinite).
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Pi
+      url: /course/circles/introduction
+
+mandelbrot:
+  born: 1924
+  died: 2010
+  name: Mandelbrot
+  bio: |
+    Matematicianul __Benoit Mandelbrot__ s-a născut în Polonia, a crescut în Franța și, în cele din
+    urmă, s-a mutat în Statele Unite. El a fost unul dintre pionierii _geometriei fractale_ și s-a
+    interesat în special de modul în care „rugozitatea” și „haosul” apar în lumea reală (de ex. Nori
+    sau linii de coastă).
+
+    În timp ce lucra la IBM, a folosit calculatoare timpurii pentru a crea reprezentări grafice ale
+    fractalilor, iar în 1980 a descoperit celebrul _set Mandelbrot_.
+  links:
+    - title: Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
+
+menger:
+  name: Menger
+  bio: |
+    __Karl Menger__ (1902 - 1985) a fost un matematician austro-american. A cercetat algebra,
+    geometria, dimensiunile, teoria jocurilor și științele sociale, dar este cel mai bine amintit
+    pentru _burete Menger_, un celebru fractal tridimensional __.
+
+mersenne:
+  born: 1588
+  died: 1648
+  name: Mersenne
+  bio: |
+    __Marin Mersenne__ (1588 - 1648) a fost un matematician și preot francez. Din cauza schimburilor
+    frecvente cu contactele sale în lumea științifică din secolul al XVII-lea, el a fost numit
+    „poșta europeană”.
+
+    Astăzi ne amintim mai ales de el pentru _primele Mersenne_, numere prime care pot fi scrise ca
+    `2^n - 1`. Majoritatea primelor mai mari cunoscute sunt de acest tip. De asemenea, a studiat
+    acustica și armonicile unui șir vibrant și a scris despre teologie și filozofie.
+  links:
+    - title: Large Primes
+      url: /course/divisibility/distribution-of-primes#prime-test-1
+
+milgram:
+  name: Milgram
+  bio: |
+    __Stanley Milgram__ (1933 - 1984) a fost un psiholog social celebru. El este cel mai cunoscut
+    pentru experimentele pe _ascultare_, testând cât de dispuși sunt adulții să urmeze ordinele,
+    chiar și când rănesc pe alții, și pentru _experiment pentru lumea mică_, care testează gradul de
+    conectare a societățile.
+
+mirzakhani:
+  born: 1977
+  died: 2017
+  name: Mirzakhani
+  overflow: true;
+  bio: |
+    __Maryam Mirzakhani__ (مریم میرزاخانی, 1977 - 2017) a fost matematician i profesor iranian la
+    Universitatea Standford. Este singura femeie care a primit _Medalii Fields_, cel mai mare premiu
+    în matematică.
+
+    Maryam a lucrat la intersecția sistemelor dinamice și a geometriei. Ea a studiat obiecte precum
+    _suprafețe hiperbolice_ și _colectoare complexe_, dar a contribuit și la multe alte domenii ale
+    matematicii.
+
+    La rezolvarea problemelor, Maryam ar desena doodle și diagrame pe foi mari de hârtie, pentru a
+    vedea modelele și frumusețea de bază. Fiica sa a descris chiar opera lui Maryam drept „pictură”.
+    La 40 de ani, Maryam a murit de cancer la sân.
+
+monge:
+  born: 1746
+  died: 1818
+  name: Monge
+  bio: |
+    __Gaspard Monge__ (1746 - 1818) a fost un matematician francez. El este considerat părintele
+    _geometriei diferențiale_, după ce a introdus conceptul de _linii de curbură_ pe suprafețe în
+    spațiul tridimensional (de exemplu, pe o sferă). De asemenea, Monge a inventat _proiecție
+    ortografică_ și _geometrie descriptivă_, care permite reprezentarea obiectelor tridimensionale
+    folosind desene bidimensionale.
+
+    În timpul Revoluției Franceze, Monge a fost ministru al Marinei. El a ajutat la reforma
+    sistemului de învățământ francez și a găsit École Polytechnique.
+  small: true
+  links:
+    - title: Map Projections
+      url: /world/Dimensions_and_Distortions
+
+monsky:
+  name: Monsky
+  bio: |
+    __Paul Monsky__ (n. 1936) este matematician și profesor american la Universitatea Brandeis. El a
+    dovedit că un pătrat nu poate fi împărțit într-un număr impar de triunghiuri cu zone egale -
+    aceasta este cunoscută sub numele de „teorema lui Monsky”.
+
+morse:
+  name: Morse
+  bio: |
+    __Samuel Morse__ (1791 - 1872) a fost un inventator și pictor american. A crescut lângă Boston
+    și a studiat la universitatea Yale, înainte de a începe o carieră ca artist.
+
+    La călătoria de întoarcere dintr-o călătorie în Europa pentru a studia arta, Morse a auzit
+    pasagerii vorbind despre noi dispozitive electrice. Acest lucru l-a inspirat să lucreze la o
+    îmbunătățire semnificativă a telegrafului electric, folosind doar un singur fir și să dezvolte
+    _cod Morse_ cu asistentul său Alfred Vail.
+
+    După câteva dificultăți inițiale în primirea finanțării, telegraful Morse s-a răspândit rapid în
+    toate Statele Unite și în lume.
+
+    Morse a candidat de asemenea de două ori pentru primarul orașului New York, dar sprijinul său
+    pentru sclavie și împotriva imigrației a însemnat că a fost învins de ambele ori.
+
+napier:
+  born: 1550
+  died: 1617
+  name: Napier
+  bio: |
+    __John Napier__ (1550 - 1617) a fost un matematician, fizician și astronom. El a inventat
+    logaritmele, a popularizat utilizarea punctelor zecimale și a creat „oasele lui Napier”, un
+    dispozitiv de calcul manual care a ajutat la înmulțire și divizare.
+
+nash:
+  born: 1928
+  died: 2015
+  name: Nash
+  bio: |
+    __John Forbes Nash__ (1928 - 2015) a fost un matematician american care a lucrat la teoria
+    jocurilor, geometrie diferențială și ecuații diferențiale parțiale. El a arătat cum matematica
+    poate explica luarea deciziilor în sisteme complexe, din viața reală - inclusiv în economie și
+    militar.
+
+    În 30 de ani, Nash a fost diagnosticat cu schizofrenie paranoică, dar a reușit să se refacă și
+    să se întoarcă la activitatea sa academică. El este singura persoană care a primit atât Premiul
+    Nobel pentru economie, cât și _Premiul Abel_, unul dintre cele mai înalte premii de matematică.
+  links:
+    - title: Game Theory
+      url: /world/Game_Theory
+
+neumann:
+  born: 1903
+  died: 1957
+  name: von Neumann
+  small: true
+  bio: |
+    __John von Neumann__ (1903 - 1957) a fost un matematician, fizician și informatician
+    maghiar-american. El a adus contribuții importante la matematica pură, a fost un pionier al
+    mecanicii cuantice și a dezvoltat concepte precum teoria jocurilor, automate celulare, mașini de
+    auto-replicare și programare liniară.
+
+    În timpul celui de-al Doilea Război Mondial, von Neumann a fost un membru-cheie al _Proiect
+    Manhattan_, care a lucrat la dezvoltarea bombei cu hidrogen. Ulterior a consultat pentru Comisia
+    de Energie Atomică și Forțele Aeriene ale SUA.
+
+newton:
+  name: Newton
+  born: 1642
+  died: 1726
+  bio: |
+    __Sir Isaac Newton__ (1642 – 1726) a fost un fizician, matematician și astronom englez. El a
+    fost unul dintre cei mai influenți oameni de știință din toate timpurile. A fost profesor la
+    Universitatea Cambridge și președinte al Societații Regale din Londra.
+
+    Newton a formulat în cartea sa _Principia Mathematica_ legile mișcării și gravitației, legi care
+    au pus bazele fizicii clasice și au dominat viziunea noastra asupra universului timp de trei
+    secole.
+
+    Printre multe altele, Newton a fost unul din inventatorii analizei matematice, a construit
+    primul telescop reflector, a calculat viteza sunetului, a studiat mișcarea fluidelor și a
+    dezvoltat o teorie a culorilor pe baza modului în care o prismă descompune lumina solară în
+    spectrul ei, conținând culorile curcubeului.
+  links:
+    - title: Gravity
+      url: /course/circles/conic-sections#newton
+    - title: Digits of Pi
+      url: /course/circles/introduction#pi-record
+
+nicomachus:
+  name: Nicomachus
+  born: 60
+  died: 120
+  overflow: true
+  bio: |
+    __Nicomacul lui Gerasa__ (c. 60 - 120) a fost un matematician grec vechi care a petrecut, de
+    asemenea, mult timp gândindu-se la proprietățile mistice ale numerelor. Cartea sa _Introducere
+    în aritmetică_ conține prima mențiune a numerelor perfecte.
+  links:
+    - title: Perfect Numbers
+      url: /course/sequences/special#perfect
+
+nightingale:
+  born: 1820
+  died: 1910
+  name: Nightingale
+  small: true
+  bio: |
+    __Florence Nightingale__ (1820 - 1910) a fost o asistentă și statistician englez. În timpul
+    războiului Crimeei, a alăptat soldați britanici răniți, iar mai târziu a fondat prima școală de
+    pregătire pentru asistente. Ca „Doamna cu lampa”, ea a bătut o icoană culturală, iar noile
+    asistente din SUA iau în continuare _gaj de nevoi_.
+
+    Una dintre cele mai importante contribuții ale sale la medicament a fost utilizarea
+    statisticilor pentru evaluarea tratamentelor. Ea a creat numeroase infografii și a fost una
+    dintre primele care a folosit grafice. Nightingale a lucrat, de asemenea, la îmbunătățirea
+    igienizării și alinării foamei în India, a ajutat la abolirea legilor prostituției și a promovat
+    noi cariere pentru femei.
+
+noether:
+  name: Noether
+  born: 1882
+  died: 1935
+  bio: |
+    __Amalie Emmy Noether__ (1882 – 1935) a fost o matematiciană germană care a realizat descoperiri
+    importante în algebra abstractă și în fizica teoretică, inclusiv legătura dintre simetrie și
+    legile conservării. Ea este adesea descrisă drept una din cele mai influente matematiciene.
+  small: true
+  links:
+    - title: Symmetry in Physics
+      url: /course/transformations/physics
+
+oresme:
+  born: 1323
+  died: 1382
+  name: Oresme
+  bio: |
+    __Nicole Oresme__ (c. 1323 - 1382) a fost un important matematician, filozof și episcop francez,
+    care trăia în Evul Mediu târziu. El a inventat geometria coordonatelor, cu mult înainte de
+    Descartes, a fost primul care a folosit exponenți fracționali și a lucrat la serii infinite. A
+    scris despre economie, fizică, astronomie și teologie și a fost consilier al regelui Charles V
+    al Franței.
+
+pacioli:
+  born: 1446
+  died: 1517
+  name: Pacioli
+  bio: |
+    __Luca Pacioli__ a fost un influent frate și matematician italian, care a inventat simbolurile
+    standard pentru plus și minus (+ și -). A fost unul dintre primii contabili din Europa, unde a
+    introdus contabilitatea de evidență cu două intrări. Pacioli a colaborat cu Leonardo da Vinci și
+    a scris și despre aritmetică și geometrie.
+
+pascal:
+  name: Pascal
+  born: 1623
+  died: 1662
+  bio: |
+    __Blaise Pascal__ (1623 - 1662) a fost un matematician, fizician și filozof francez. El a
+    inventat unele dintre primele calculatoare mecanice, precum și lucrul la geometria proiectivă,
+    probabilitatea și fizica vidului.
+
+    Cel mai faimos, Pascal este amintit că a numit _triunghiul lui Pascal_, un triunghi infinit de
+    numere cu unele proprietăți uimitoare.
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+peano:
+  born: 1858
+  died: 1932
+  name: Peano
+  small: true
+  bio: |
+    Matematicianul italian __Giuseppe Peano__ (1858 - 1932) a publicat peste 200 de cărți și lucrări
+    despre logică și matematică. El a formulat _axiomele Peano_, care a devenit baza unei algebre și
+    analize riguroase, a dezvoltat notația pentru logică și teoria seturilor, a construit curbe
+    continue de umplere a spațiului (_curbe Peano_) și lucrat la metoda probei prin inducție.
+
+    Peano a dezvoltat și o nouă limbă internațională, _Latino sine flexione_, care a fost o versiune
+    simplificată a latinei.
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+pearson:
+  name: Pearson
+  bio: |
+    __Karl Pearson__ (1857 - 1936) a fost un matematician și statisticist englez. A lucrat la
+    biometrie, meteorologie și eugenie, printre multe alte subiecte, și a fondat primul departament
+    de statistică universitar din lume, la University College London.
+
+penrose:
+  name: Penrose
+  born: 1931
+  bio: |
+    __Sir Roger Penrose__ (n. 1931) este un matematician și fizician britanic cunoscut pentru
+    lucrările sale inovatoare în relativitatea generală și cosmologie - colaborând adesea cu alți
+    oameni de știință faimoși precum Stephen Hawking și Michael Atiyah. De asemenea, el a descoperit
+    _Placările Penrose_: mozaicări autosimilare neperiodice.
+  links:
+    - title: Penrose Tilings
+      url: /course/polyhedra/tessellations#penrose
+
+perelman:
+  born: 1966
+  name: Perelman
+  bio: |
+    În 2003, matematicianul rus __Grigori Perelman__ (Григо́рий Перельма́нborn, născut în 1966) a
+    dovedit _Conjectura Poincaré_, care până atunci a fost una dintre cele mai cunoscute probleme
+    nesoluționate în matematică.
+
+    Dovada complexă a fost verificată până în 2006, dar Perelman a refuzat două premii mari care au
+    venit cu aceasta: premiul Mileniului Clay pentru un milion de dolari și _Fields Medal_, care
+    este cea mai mare recunoaștere în matematică. De fapt, el a spus: _„Nu mă interesează banii sau
+    faima; Nu vreau să fie afișat ca un animal dintr-o grădină zoologică. ”_
+
+    Perelman a contribuit, de asemenea, la geometria riemanniană și topologia geometrică, iar
+    Conjectura Poincaré este încă singura dintre cele șapte probleme ale Premiului Mileniului
+    rezolvate.
+
+pingala:
+  name: Pingala
+  born: -330
+  died: -270
+  bio: |
+    __Pingala__ (पिङ्गल) a fost un poet și matematician antic indian care a trăit în jurul anului
+    300 î.e.n., dar se știe foarte puțin despre viața sa. A scris Chandaḥśāstra, unde a analizat
+    matematic poezia sanscrită. De asemenea, conținea primele explicații cunoscute despre numere
+    binare, numere Fibonacci și triunghiul lui Pascal.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+planck:
+  name: Plank
+  bio: |
+    __Max Plank__ (1858 - 1947) a fost un fizician german și unul dintre dezvoltatorii originali ai
+    mecanicii cuantice - pentru care a primit premiul Nobel în 1918.
+
+plato:
+  name: Plato
+  born: -425
+  died: -347
+  bio: |
+    __Platon__ (c. 425 - 347 î.e.n.) a fost un filozof în Grecia antică și - împreună cu profesorul
+    său Socrate și elevul său Aristotel - au pus bazele filosofiei și științei occidentale.
+
+    Platon a fondat Academia din Atena, prima instituție de învățare superioară din lumea
+    occidentală. Numeroasele sale scrieri despre filozofie și teologie, știință și matematică,
+    politică și dreptate, îl fac unul dintre cei mai influenți gânditori din toate timpurile.
+  links:
+    - title: Platonic Solids
+      url: /course/polyhedra/platonic
+
+poincare:
+  born: 1854
+  died: 1912
+  name: Poincaré
+  bio: |
+    Matematicianul francez __Henri Poincaré__ (1854 - 1912) este adesea descris ca _ultimul
+    universalist_, ceea ce înseamnă că a lucrat în toate domeniile matematicii cunoscute în timpul
+    vieții sale.
+
+    Poincaré este unul dintre fondatorii domeniului _Topologie_ și a venit cu _conjectura Poincaré_.
+    Aceasta a fost una dintre celebrele probleme nesoluționate în matematică, până când a fost
+    dovedită în 2003 de Grigori Perelman
+
+    De asemenea, el a găsit o soluție parțială pentru „problema corpului trei” și a descoperit că
+    mișcarea a trei stele sau planetele în spațiu poate fi complet imprevizibilă. Aceasta a pus
+    bazele modernității _teoria haosului_.
+
+    Poincaré a fost primul care a propus _unde gravitaționale_, iar lucrarea sa asupra
+    transformărilor Lorentz a fost baza pe care Albert Einstein și-a construit teoria relativității
+    speciale.
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+    - title: Topology
+      url: /world/Dimensions_and_Distortions
+
+ptolemy:
+  born: 90
+  died: 168
+  name: Ptolemy
+  bio: |
+    __Claudius Ptolemeu__ (c. 100 - 170 CE) a fost un matematician greco-roman, astronom, geograf și
+    astrolog. El este cel mai bine amintit pentru modelul _ptolemaic_ sau _Geocentric_ al
+    universului nostru - că Pământul este în centru și toate planetele și soarele se învârt în jurul
+    acestui lucru.
+
+    Deși știm că astăzi acest model este incorect, impactul științific al lui Ptolemeu este
+    incontestabil. El a dezvoltat tabele trigonometrice cu multe aplicații practice, care au rămas
+    cele mai precise timp de mai multe secole. De asemenea, a creat hărți detaliate ale Pământului
+    și a scris despre teoria muzicii și optica.
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Orbits
+      url: /course/circles/introduction
+
+pythagoras:
+  name: Pitagora
+  born: -570
+  died: -495
+  bio: |
+    __Pitagora din Samos__ (c. 570 – 495 î.Hr) a fost un filosof și matematician grec. El este
+    foarte cunoscut pentru demonstrarea _teoremei lui Pitagora_, dar a realizat multe alte
+    descoperiri matematice și științifice.
+
+    Pitagora a încercat să explice muzica într-un mod matematic și a descoperit că două tonuri sună
+    “frumos” împreună (consonante) dacă raportul frecvențelor lor  este o fracție simplă.
+
+    De asemenea, el a fondat o școală în Italia în care impreună cu studenții sai au venerat
+    matematica aproape asemenei unei religii, în timp ce urmau o serie de reguli bizare - până la
+    urmă școala a fost arsă de adversarii lor.
+  links:
+    - title: Pythagoras’ Theorem
+      url: /course/triangles/pythagoras
+
+ramanujan:
+  born: 1887
+  died: 1920
+  name: Ramanujan
+  overflow: true
+  bio: |
+    __Srinivasa Ramanujan__ (1887 - 1920) a crescut în India, unde a primit foarte puțină educație
+    formală în matematică. Cu toate acestea, a reușit să dezvolte idei noi într-o izolare completă,
+    în timp ce lucra ca funcționar într-un mic magazin.
+
+    După câteva încercări eșuate de a contacta alți matematicieni, el a scris o scrisoare faimosului
+    G.H. Hardy. Hardy a recunoscut imediat geniul lui Ramanujan și a aranjat ca el să călătorească
+    la Cambridge, în Anglia. Împreună, au făcut numeroase descoperiri în teoria numelor, analize și
+    serii infinite.
+
+    Din păcate, Ramanujan s-a îmbolnăvit curând și a fost forțat să se întoarcă în India, unde a
+    murit la vârsta de 32 de ani. În scurta sa viață, Ramanujan a dovedit peste 3000 de teoreme și
+    ecuații, pe o gamă largă de subiecte. Lucrarea sa a creat zone cu totul noi de matematică, iar
+    caietele sale au fost studiate de alți matematicieni timp de multe decenii după moartea sa.
+
+regiomontanus:
+  born: 1436
+  died: 1476
+  name: Regiomontanus
+  overflow: true
+  bio: |
+    __Johann Müller Regiomontanus__ (1436 - 1476) a fost un matematician și astronom german. El a
+    făcut progrese mari în ambele domenii, inclusiv crearea de tabele astronomice detaliate și
+    publicarea mai multor manuale.
+
+richardson:
+  name: Richardson
+  bio: |
+    __Lewis Fry Richardson__ (1881 - 1953) a fost un matematician și fizician britanic. El a fost
+    pionier în tehnicile matematice moderne de prognoză meteo, a inventat mașini acustice pentru a
+    detecta aisbergurile și a dezvoltat metode pentru rezolvarea sistemelor de ecuații liniare.
+
+    De asemenea, a încercat să calculeze probabilitatea ca două țări să se războiască una pe
+    cealaltă, având în vedere lungimea frontierei lor comune. Cu toate acestea, nu a putut găsi
+    măsurători exacte pentru lungimea granițelor țărilor. Acest lucru l-a determinat să realizeze că
+    granițele și coastele au multe proprietăți de _fractali_.
+
+riemann:
+  name: Riemann
+  born: 1826
+  died: 1866
+  overflow: true
+  bio: |
+    __Bernhard Riemann__ (1826 – 1866) a fost un matematician german ce a lucratwas în domeniul
+    analizei matematice și al teoriei numerelor. El a formulat prima definiție riguroasă a operației
+    de integrare matematică, a studiat geometria diferențială ce a pus bazele relativității generale
+    și a făcut descoperiri inovatoare cu privire la distribuția numerelor prime.
+  links:
+    - title: Riemann Hypothesis
+      url: /course/divisibility/distribution-of-primes#riemann
+
+russell:
+  born: 1872
+  died: 1970
+  name: Russell
+  small: true
+  bio: |
+    __Bertrand Russell__ (1872 - 1970) a fost un filozof, matematician și autor britanic. Este
+    considerat pe larg ca unul dintre cei mai importanți logici ai secolului XX.
+
+    Russell co-a scris „Principia Mathematica”, unde a încercat să creeze o bază formală pentru
+    matematică folosind logica. Lucrarea sa a avut un impact semnificativ nu doar asupra matematicii
+    și filozofiei, ci și asupra lingvisticii, inteligenței artificiale și metafizicii.
+
+    Russell a fost un pasionat pacifist și activist anti-război. În 1950, el a primit Premiul Nobel
+    pentru literatură, pentru munca sa „în care susține idealurile umanitare și libertatea de
+    gândire”.
+
+shannon:
+  name: Shannon
+  born: 1898
+  died: 1972
+  bio: |
+    __Claude Shannon__ (1898 - 1972) a fost un matematician și inginer electric electric american,
+    amintit drept „părintele teoriei informației”. A lucrat la criptografie, inclusiv la crearea de
+    coduri pentru apărarea națională în timpul celui de-al doilea război mondial, dar a fost
+    interesat și de jonglerii, uniciclism și șah. În timpul liber, el a construit mașini care ar
+    putea jongla sau rezolva puzzle-ul lui Cub Rubik.
+  small: true
+  links:
+    - title: Computers for Gambling
+      url: /course/statistics/casino#dealer
+
+shijie:
+  born: 1249
+  died: 1314
+  name: Zhu Shijie
+  bio: |
+    __Zhu Shijie__ (朱世杰, 1249 - 1314) a fost unul dintre cei mai mari matematicieni chinezi. În
+    cartea _Oglinda de jad a celor patru necunoscute_, el a arătat cum să rezolve 288 de probleme
+    diferite folosind sisteme de ecuații polinomiale și patru variabile (numite _Cer_, _Pământ_,
+    _Om_ și _Materie_).
+
+    Zhu a folosit pe scară largă triunghiul lui Pascal. El a inventat, de asemenea, reguli pentru
+    rezolvarea sistemelor de ecuații liniare - care predate metodele noastre matrice moderne de mai
+    multe secole.
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+sierpinski:
+  name: Sierpiński
+  bio: |
+    __Wacław Franciszek Sierpiński__ (1882 - 1969) a fost un matematician polonez. A făcut
+    descoperiri importante în teoria seturilor, teoria numerelor, analiza și topologiile, publicând
+    peste 700 de lucrări și 50 de cărți. De asemenea, el a inventat numeroase _fractale populare_,
+    inclusiv _triunghiul Sierpinski_, _covorul Sierpinski_ și _curba Sierpinski_.
+
+    _Numerele Sierpinski_ sunt numere naturale ciudate _k_ astfel încât `k * 2^n +1` este compus
+    pentru toate numerele naturale _n_. Problema _Sierpinski_ încearcă să găsească cele mai mici
+    numere Sierpinski. Cel mai mic număr cunoscut este 78.557 - dar nu se știe încă dacă există
+    altele mai mici.
+
+sikdar:
+  name: Sikdar
+  bio: |
+    __Radhanath Sikdar__ (1813 – 1870) a fost un matematician indian. El a fost primul care a
+    măsurat înălțimea muntelui Everest și care a arătat că este cel mai înalt munte de pe Pământ.
+
+singmaster:
+  name: Singmaster
+  bio: |
+    __David Singmaster__ (născut în 1939) este un matematician american care este cunoscut în
+    special pentru puzzle-urile sale matematice și teaserele creierului. El a fost primul care a
+    venit cu algoritmi matematici pentru analiza și rezolvarea _Rubik's Cube_.
+
+stevin:
+  born: 1548
+  died: 1620
+  name: Stevin
+  bio: |
+    __Simon Stevin__ (1548 - 1620) a fost matematician și inginer flamand. A fost unul dintre primii
+    oameni care a folosit și a scris despre fracții zecimale și a adus multe alte contribuții la
+    știință și inginerie.
+
+tartaglia:
+  born: 1499
+  died: 1557
+  name: Tartaglia
+  bio: |
+    __Niccolò Fontana Tartaglia__ (1499 - 1557) a fost un matematician, inginer și contabil italian.
+    A publicat primele traduceri în limba italiană ale lui Arhimede și Euclid, a găsit o formulă
+    pentru rezolvarea oricărei ecuații cubice (inclusiv prima aplicație reală a numerelor complexe)
+    și a folosit matematica pentru a investiga mișcarea proiectilelor a bulelor de tun.
+
+thales:
+  name: Thales
+  born: -624
+  died: -546
+  bio: |
+    __Thales din Milet__ (c. 624 – 546 î.Hr.) a fost un matematician și filosof grec.
+
+    El este considerat de multe ori drept unul dintre primii oameni de știință din civilizația
+    occidentală: el a încercat să explice fenomenele naturale folosind o abordare științifică în loc
+    de a folosi religia sau mitologia. De aemenea, el este unul dintre primii oameni din istorie a
+    cărui descoperire matematică îi poartă numele: teorema lui Thales.
+  links:
+    - title: Thales’ Theorem
+      url: /course/euclidean-geometry/introduction
+
+thorp:
+  name: Thorp
+  bio: |
+    __Edward Thorp__ (n. 1932) este un manager american și un jucător de blackjack, cunoscut pentru
+    faptul că a inventat _numărare de carduri_ și pentru construirea primului _computer portabil_
+    care a bătut cazinourile la Ruletă. A lucrat la MIT, este profesor de matematică și a fost
+    pionier în aplicațiile moderne ale teoriei probabilității.
+
+turing:
+  born: 1912
+  died: 1954
+  name: Turing
+  bio: |
+    __Alan Turing__ (1912 - 1954) a fost un matematician englez și este adesea numit „părintele
+    informaticii”.
+
+    În timpul celui de-al doilea război mondial, Turing a jucat un rol esențial în încălcarea
+    codului Enigma folosit de armata germană, ca parte a „Codului guvernamental și a școlii Cypher”
+    din parcul Bletchley. Acest lucru i-a ajutat pe aliați să câștige războiul și este posibil să fi
+    salvat milioane de vieți.
+
+    De asemenea, el a inventat _mașina de Turing_, un model matematic al unui computer cu scop
+    general și _testul de Turing_, care poate fi folosit pentru a judeca capacitatea inteligenței
+    artificiale.
+
+    Turing a fost homosexual, ceea ce a fost încă o crimă în timpul vieții sale și a însemnat că
+    realizările sale de ultimă generație nu au fost niciodată recunoscute pe deplin. S-a sinucis la
+    41 de ani.
+
+ulam:
+  name: Ulam
+  bio: |
+    __Stanisław Ulam__ (1909 – 1984) a fost un matematician polonezo-american. El a avut un rol
+    important în _proiectul american Manhattan_ de dezvoltare a primelor arme nucleare. De asemenea,
+    el a lucrat și la propulsia rachetelor cu impulsuri nucleare și a dezvoltat metoda _Monte Carlo_
+    – un concept important din statistică.
+
+venn:
+  name: Venn
+  bio: |
+    __John Venn__ (1834 - 1923) a fost un matematician și filozof englez care a introdus diagrama
+    _Venn_ folosită în teoria și probabilitatea seturilor. A predat la Universitatea Cambridge și a
+    fost Fellow al Royal Society din Londra.
+
+viete:
+  born: 1540
+  died: 1603
+  name: Viète
+  bio: |
+    __François Viète__ (1540 - 1603) a fost un matematician francez, avocat și consilier al regilor
+    Henric al III-lea și al IV-lea al Franței. El a făcut progrese semnificative în Algebra și a
+    introdus pentru prima dată utilizarea literelor pentru a reprezenta variabilele.
+
+    Viète a descoperit legătura dintre rădăcinile și coeficienții unui polinom, numit _Viète & # 39;
+    s formula_. De asemenea, el a scris cărți despre geometrie și trigonometrie, inclusiv calcularea
+    _π_ la 10 zecimale folosind un poligon cu 393216 laturi.
+
+wallis:
+  born: 1616
+  died: 1703
+  name: Wallis
+  bio: |
+    Matematicianul englez __John Wallis__ (1616 - 1703) a contribuit la dezvoltarea calculului, a
+    inventat linia numerică și simbolul ∞ pentru infinit și a servit ca criptograf principal pentru
+    Parlament și pentru curtea regală.
+
+wiles:
+  born: 1953
+  name: Wiles
+  bio: |
+    Matematicianul britanic Sir __Andrew Wiles__ (născut în 1953) este cel mai cunoscut pentru că a
+    demonstrat ultima teoremă a lui Fermat, care până atunci a fost una dintre cele mai faimoase
+    probleme nesoluționate în matematică.
+
+    În 1637, Pierre de Fermat, a scris în marja unui manual că a avut o dovadă minunată că ecuația
+    `a^n + b^n = c^n` nu are soluții întregi pentru `n > 2`. Din păcate, nimeni nu a putut găsi o
+    dovadă - până la Wiles, vreo 400 de ani mai târziu.
+
+    Wiles era fascinat de problemă încă de la vârsta de 10 ani și a petrecut șapte ani lucrând la ea
+    în singurătate. El și-a anunțat soluția în 1993, deși o mică lacună în argumentul său a durat
+    încă doi ani pentru a remedia.
+
+    Era prea bătrân pentru a primi _Fields_, cel mai mare premiu în matematică, care are o limită de
+    vârstă de 40 de ani. În schimb, Wiles a primit o placă specială de argint pentru munca sa.
+
+wolfram:
+  name: Wolfram
+  bio: |
+    __Stephen Wolfram__ (n. 1959) este un informatician, fizician și om de afaceri
+    britanic-american. Este fondatorul și CEO al _Wolfram Research_, unde a dezvoltat sistemul de
+    calcul _Mathematica_, motorul de răspuns _Wolfram | Alpha_ și limbajul de programare Wolfram.

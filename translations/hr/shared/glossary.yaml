@@ -1,0 +1,1806 @@
+# ==============================================================================
+# MATHIGON GLOSSARY
+# ==============================================================================
+
+absolute-value:absolute-value:
+  title: Apsolutna vrijednost
+  text: |
+    Apsolutna vrijednost ____ broja je njegova udaljenost od broja 0 u brojaču. Negativne brojeve
+    čini pozitivnim, ali pozitivne brojeve ostavlja nepromijenjene. Apsolutna vrijednost `x`
+    zapisuje se kao `|x|`. Na primjer, `|-5| = 5` i `|3| = 3`.
+
+acute-angle:
+  title: Oštar kut
+  text: __akutni kut__ je kut veličine manji od 90 °.
+
+acute-triangle:
+  title: Akutni trokut
+  text: 'U __akutnom trokutu__, sva tri unutarnja kuta su _akutna_ (manja od 90 °).'
+  link: /course/triangles/properties#classification
+
+adic:
+  title: N-adički brojevi
+  text: |
+    __*N*-adni__ brojevi, za neki cijeli broj _n_, poseban su brojevni sustav, s definicijom
+    "bliskosti" koja se razlikuje od uobičajene aritmetike. Dva _n_ -adski brojevi su _blizu_ ako je
+    njihova razlika djeljiva s velikom snagom od _n_.
+
+adjacent-angles:
+  title: Susjedni kutovi
+  text: |
+    Dva kuta su __susjedna__ ako imaju zajedničku stranu i vrh, ali se ne preklapaju. Riječ _u
+    susjedstvu_ jednostavno znači "susjedna".
+
+aleph-zero:
+  title: Aleph Zero
+  text: |
+    Aleph Zero, napisan hebrejskim slovom א, je kardinalnost brojčano beskonačnog skupa (npr.
+    Prirodnih brojeva).
+
+algebraic-numbers:
+  title: Algebrični brojevi
+  text: |
+    __Algebrski brojevi__ su podskup stvarnih brojeva koji se mogu predstaviti kao korijeni
+    polinomne jednadžbe s cjelobrojnim koeficijentima. Svi racionalni brojevi (poput `2/3`) i surds
+    (poput `root(3,5)`) su algebrični, kao i brojevi koji se mogu graditi od surds (poput `(2 +
+    sqrt(3))/(1 - sqrt(5))`).
+
+    Oni brojevi koji su stvarni, ali _nisu_ algebrični, nazivaju se _transcendentalnim brojevima_.
+
+algorithm:
+  title: Algoritam
+  text: |
+    Algoritamskup je pravila ili uputa koja se mogu koristiti za rješavanje određenog problema.
+    Računala ih obično koriste i pojavljuju se svugdje u matematici: od _duge podjele_ do _Gaussove
+    eliminacije_.
+
+alternate-angles:
+  title: Alternativni kutovi
+  text: |
+    __Alternativni kutovi__ formirani su od dvije _paralelne linije_ koje su presijecane _presjekom_
+    i uvijek su jednake. Na donjem dijagramu, svaki od parova kutova označenih s 1, 2, 3 i 4 su
+    naizmjenični. Dva kuta u svakom paru leže na različitoj paralelnoj liniji i suprotnim stranama
+    križanja.
+
+    Kutni parovi 1 i 2 nazivaju se __alternativni vanjski kutovi__, jer leže izvan paralelnih
+    linija, a parovi kutova 3 i 4 nazivaju se __alternativni unutarnji kutovi__.
+
+amino-acid:
+  title: Amino kiselina
+  text: |
+    __Aminokiseline__ su sitni organski spojevi koji čine __proteine__. Oni su jedan od ključnih
+    sastavnih dijelova svih živih organizama.
+
+    U našem se tijelu aminokiseline koriste za razgradnju hrane, popravljanje tjelesnog tkiva,
+    skladištenje energije i za mnoge druge funkcije.
+
+angle:
+  title: Kut
+  text: |
+    Kut formiraju dvije zrake koje imaju zajedničku krajnju točku. Svaka se zraka naziva strana
+    kuta. veličina kuta obično se mjeri u _stupnjeva_ ili _radijanima_.
+
+angle-bisector:
+  title: Kutni bisektor
+  text: 'Bisektor __kut__ je linija ili zraka koja dijeli kut na pola, u dva jednaka, manja kuta.'
+  image: angle-bisector.svg
+
+anti-dot:
+  title: Anti-Dot
+  text: |
+    Stanice u uređaju s točkama mogu sadržavati __anti-točkice__, koje možete zamisliti kao "rupe"
+    ili "negativne točke". Vrijednost im je –1. U istoj ćeliji uvijek možete dodati točku i
+    anti-točku, bez promjene vrijednosti.
+
+apothem:
+  title: Apothem
+  text: |
+    __apotem {__ pravilnog poligona je udaljenost od sredine jedne od njegovih strana do njegovog
+    središta.
+
+arabic-numerals:
+  title: Arapski brojevi
+  text: |
+    __Arapski brojčani sustav__ koristi deset različitih znamenki (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+    zajedno s decimalnim sustavom vrijednosti-vrijednosti za pisanje bilo kojeg broja.
+
+    Prvo je razvijen u Indiji, a zatim su ga prilagodili arapski matematičari, a prije toga donio ga
+    je u Europu talijanski matematičar Leonardo Fibachic.
+
+arccos:
+  title: Inverzni kosinus
+  text: |
+    __inverzni kosinus__ funkcija je trigonometrijska funkcija napisana kao `arccos(x)` ili
+    `cos^(-1)(x)`. To je obrnuto `cos(x)`.
+
+archimedean-solid:
+  title: Arhimedovska krutina
+  text: |
+    __Arhimedovo kruto tijelo__ je višejednik sastavljen od različitih vrsta pravilnih poligona,
+    koji izgledaju iz svih smjerova isto. Postoji 13 različitih Arhimedovih krutina.
+  link: /course/polyhedra/platonic#archimedean
+
+arithmetic-mean:
+  title: Aritmetička srednja vrijednost
+  text: |
+    Srednja vrijednostje _prosjek_ skupa brojeva. Možete izračunati, ali zbrajajući sve brojeve u
+    skupu i podijeliti ukupan s brojem predmeta.
+
+arithmetic-sequence:
+  title: Aritmetička sekvenca
+  text: |
+    __aritmetička sekvenca__ (ponekad zvana __aritmetička progresija__) je niz brojeva u kojima je
+    razlika _d_ između uzastopnih izraza uvijek konstantna.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+arithmetic series:
+  title: Aritmetička serija
+  text: Aritmetički nizzbroj pojmova u aritmetičkom nizu.
+
+associative:
+  title: Asocijativnost
+  text: |
+    Operacija • je asocijativna ako je `a•(b•c) = (a•b)•c`. Na primjer, zbrajanje (+) i množenje (×)
+    brojeva su asocijativno.
+
+atom:
+  title: Atom
+  text: |
+    __Atomi__ su čestice koje čine svu uobičajenu materiju: krute tvari, tekućine, plinovi i plazma.
+    Atomi se sastoje od pozitivno nabijene jezgre __ (ili _jezgra_), sastavljene od _protona_ i
+    _neutrona_, a okruženi su negativnim školjkama. -punjeni _elektrona_. Promjer atoma je približno
+    deset milijuna milimetara.
+
+axiom:
+  title: Aksiom
+  text: |
+    __Aksiom__, koji se ponekad naziva __postulat__, matematička je izjava koja se smatra
+    „samorazumljivom” i prihvaćena bez dokaza. To bi trebalo biti tako jednostavno da je očito i
+    neupitno istina.
+
+    Aksiomi su temelj matematike i mogu se koristiti za dokazivanje drugih, složenijih rezultata.
+
+axis-of-symmetry:
+  title: Os simetrije
+  text: |
+    Ako oblik ima reflektirajuću simetriju, __os simetrije__ je linija koja ga dijeli na dvije
+    jednake polovice.
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+base-10:
+  title: Baza 10
+  text: |
+    __decimalni sustav__ (ili __baza 10__) je sistem brojanja koji se najčešće koristi u cijelom
+    svijetu. Svaka znamenka u broju može imati jednu od deset različitih vrijednosti, od 0 do 9.
+
+bipartite-graph:
+  title: Bipartitni graf
+  text: |
+    (Kompletni) __dvostrani graf__ sastoji se od dva skupa vrhova. Svaka vrhova povezana je sa svim
+    vrhovima u suprotnom skupu, ali nijedna od vrhova u svom skupu.
+  link: /course/graph-theory/handshakes#handshakes-4
+
+blackjack:
+  title: Mješina
+  text: |
+    __Blackjack__ je kartaška igra u kojoj zbrajate vrijednost više karata da biste se približili na
+    21 - ali ne i iznad.
+
+cavalieri:
+  title: Cavalierijevo načelo
+  text: |
+    __Cavalierijevo načelo__ kaže da ako dvije čvrste tvari imaju istu visinu i površinu poprečnog
+    presjeka na svakoj razini, tada obje imaju isti volumen.
+
+    Pomoću ove činjenice možemo izvući da je volumen prizmi i cilindara područje njihovog presjeka
+    pomnoženo s njihovom visinom.
+
+calculus:
+  title: Račun
+  text: |
+    __Izračun__ je grana matematike koja se bavi ograničenjima, derivatima, integralama i nizima
+    moći. Uobičajeni problemi uključuju pronalaženje nagiba krivulje, pronalazak ekstremiteta,
+    pronalaženje stope promjene funkcije i pronalaženje područja ispod krivulje.
+
+center-of-rotation:
+  title: Središte rotacije
+  text: __središte rotacije__ je točka oko koje se okreće oblik.
+  link: /course/transformations/rigid#rotations
+
+centroid:
+  title: centroid
+  text: |
+    __centroid__ trokuta je točka gdje se njegova tri medija presijecaju. To je i "središte mase"
+    trokuta jednolike gustoće.
+  link: /course/triangles/properties#center-of-mass
+
+chaos:
+  title: haos
+  text: sve
+
+circle:
+  title: Krug
+  text: |
+    Krugje skup svih točaka u dvije dimenzije, na određenoj udaljenosti (polumjer _) od određene
+    točke (središte __).
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+circle-area:
+  title: Područje kruga
+  text: Područjekruga s polumjerom _r_ dano je folom `A = pi r^2`.
+
+circle-circumference:
+  title: Kružnica kruga
+  text: |
+    __kružnica__ kružnice je udaljenost oko njenog vanjskog ruba. Krug s polumjerom _r_ ima opseg `C
+    = 2 pi r`.
+  link: /course/circles/introduction#radius
+
+circle-diameter:
+  title: Promjer (krug)
+  text: |
+    Promjerkružnice je udaljenost između dviju suprotnih točaka na njegovom obodu i prolaska kroz
+    njegovo središte.
+  link: /course/circles/introduction#radius
+
+circle-radius:
+  title: Radius
+  text: |
+    Poljekružnice je udaljenost (ili segment linije) između njegovog središta i bilo koje točke na
+    njegovom krugu.
+  link: /course/circles/introduction#radius
+
+circle-sector:
+  title: Sektor krugova
+  text: |
+    __sektor__ kružnice dio je njegove unutrašnjosti, omeđen s dva polumjera i __lukom__. Njegovo je
+    područje proporcionalno unutarnjem kutu, kao i duljini luka. Ovo znači to
+
+    {.text-center} `(A_"Sector")/(A_"Circle") = "Arc"/"Circumference" = θ/(2π)`
+  link: /course/circles/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
+circle-segment:
+  title: Krug segment
+  text: '__segment__ kružnice dio je njegove unutrašnjosti, omeđen akordom i pripadajućim lukom.'
+
+circumcircle:
+  title: Kružnica trokuta
+  text: __circumcircle__ trokuta je kružnica koja prolazi kroz sve tri njegove vrhove.
+  image: circumcircle.svg
+  link: /course/triangles/properties#circumcircle-1
+
+coefficient:
+  title: Koeficijent
+  text: |
+    __Koeficijenti__ su brojevi ispred varijabli u matematičkom izrazu ili jednadžbi. Na primjer, u
+    izrazu `4x + 5y^2 - 3z`, koeficijent `x` je 4, koeficijent `y^2` je 5, a koeficijent `z` je –3.
+
+collinear:
+  title: Kolinearne točke
+  text: Tri ili više točaka su __kolinearni__ ako leže na istoj liniji.
+
+compass:
+  title: Kompas
+  text: |
+    Kompas je alat za crtanje koji se koristi za stvaranje krugova ili lukova. Sastoji se od dvije
+    ruke - igla na jednom kraju je smještena u sredinu, dok olovka na drugom kraju pronalazi
+    krivulju.
+
+complementary-angles:
+  title: Komplementarni kutovi
+  text: Dva kuta su __komplementarna__ ako dodaju i do 90 ° (pravi kut).
+
+complete-graph:
+  title: Kompletan grafikon
+  text: |
+    U __kompletnim grafovima__ svaka je vršina povezana s svakom drugom kralježnicom. Kompletni graf
+    s _n_ vrhovima ima `(n×(n-1))/2` rubova.
+  link: /course/graph-theory/handshakes#handshakes-3
+
+complex-numbers:
+  title: Složeni brojevi
+  text: |
+    __Složeni brojevi__ su svi brojevi koji su zbroj ili razlika stvarnog i imaginarnog broja. Često
+    se pišu kao `a + bi`, gdje je _a_ stvarni dio, a _b_ imaginarni dio.
+
+    Složeni brojevi mogu se predstaviti na dvodimenzionalnoj ravnini, gdje su osi _x_ stvarni
+    brojevi, a _y_ -osi su imaginarni brojevi.
+
+    Skup svih složenih brojeva često se označava simbolom `CC`.
+
+composite-number:
+  title: Kompozitni broj
+  text: |
+    Sastavni brojje cijeli broj koji nije primarni. To znači da ima i druge faktore osim sebe i
+    sebe.
+
+concave:
+  title: Konkavni poligon
+  text: |
+    Konkavan__ poligon ima najmanje jedan unutarnji kut veći od 180 °. Barem jedna dijagonala leži
+    _izvan_ poligona. Čest način identificiranja konkavnog poligona je traženje „ukočene“ strane
+    poligona. _Konkavna_ suprotna je od _konveksnih_ poligona.
+  link: /course/polyhedra/polygons#concave
+
+cone:
+  title: Konus
+  text: |
+    Konustrodimenzionalna je čvrsta tvar koja ima zaobljenu stranu kružnu _bazu_ spojenu u
+    jedinstvenu točku (zvanu _vrha_). Konus možete zamisliti i kao "kružnu piramidu".
+
+    __desni konus__ je konus sa vrhom neposredno iznad središta svoje baze.
+  link: /course/circles/spheres-cones-cylinders#cone
+  image: cone.svg
+
+cone-volume:
+  title: Volumen konusa
+  text: |
+    Volumen konusa dat je jednadžbom
+
+    {.text-center} `V = 1/3 π r^2 h`,
+
+    gdje je _r_ polumjer kružne baze, a _h_ visina konusa (okomiti razmak od osnove do vrha).
+
+congruent:
+  title: Kongruencija
+  text: |
+    U geometriji su dvije figure __jednake__ ako su jednake veličine, oblika i mjere. To znači da
+    bismo ih mogli pomicati, okretati ili zakretati kako bi se točno međusobno uklopili.
+  link: /course/euclidean-geometry/definitions#congruence
+
+congruent-angles:
+  title: Kongruentni kutovi
+  text: Dva kuta su __u skladu__ ako imaju istu veličinu.
+
+conic-section:
+  title: Konusni presjek
+  text: |
+    Konski presjekkrivulja je koja nastaje kao sjecište površine stošca s ravnom ravninom. Postoje
+    četiri različite vrste stožastog presjeka koji imaju mnoga svojstva:
+
+    * Krug
+
+    * Elipsa
+
+    * Parabola
+
+    * Hiperbola
+  link: /course/circles/conic-sections
+
+convex:
+  title: Konveksni poligon
+  text: |
+    Konveksni __mnogokut ne sadrži unutarnje kutove veće od 180 °. Sve dijagonale leže unutar
+    poligona. Ovo je suprotno _konkavnim_ mnogokutima.
+  link: /course/polyhedra/polygons#concave
+
+coordinate-system:
+  title: Koordinatni sustav
+  text: |
+    Kordinatni sustavje dvodimenzionalna ravnina koja sadrži dvije okomite osi. Svaka točka na
+    ravnini može se definirati pomoću dva broja (koordinate) koji određuju njezinu udaljenost od
+    dvije osi.
+
+coordinate-system-origin:
+  title: Koordinatni sustav
+  text: |
+    __ishod__ koordinatnog sustava je točka s koordinatama (0, 0). Obično je točka u kojoj se dvije
+    osi križaju.
+
+corresponding-angles:
+  title: Odgovarajući kutovi
+  text: |
+    __Odgovarajući kutovi__ su dva kuta koja se nalaze u istom položaju u odnosu na poprečni, ali u
+    različitim linijama. Oni su uvijek u skladu.
+  image: corresponding-angles.svg
+
+cos:
+  title: Kosinus
+  text: |
+    __Kozin__ je trigonometrijska funkcija napisana kao `cos(θ)`. U pravougaonom trokutu to je omjer
+    susjedne strane i hipotenuze.
+  link: /course/triangles/trigonometry#trig-functions
+
+cpoct:
+  title: CPOCT
+  text: |
+    CPOCT označava __odgovarajuće dijelove složenih trokuta__. To znači da ako su dva trokuta
+    jednaka, tada sve njihove odgovarajuće komponente (kutovi, stranice, srednji segmenti ...)
+    moraju biti jednake jedna drugoj.
+  link: /course/triangles/congruence#cpoct
+
+cross-section:
+  title: Presjek
+  text: Presjekje sjecište trodimenzionalne čvrste ravnine.
+
+cryptography:
+  title: Kriptografija
+  text: __Kriptografija__ je područje matematike koja proučava šifriranje i dešifriranje tajnih poruka.
+
+cube:
+  title: Kocka
+  text: |
+    Kocka(koja se ponekad naziva __šesterokut__) je pravilan višejednik u kojem je svako lice
+    kvadrat. To je jedno od pet _platonskih krutih čestica_ i ima 6 lica, 8 vrhova i 12 rubova.
+  link: /course/polyhedra/platonic#platonic-overview
+
+cube-volume:
+  title: Količina kocke
+  text: Kocka bočne duljine _a_ ima volumen `V = a^3`.
+
+cylinder:
+  title: Cilindar
+  text: |
+    __cilindar__ je trodimenzionalna kruta tvar koja se sastoji od dvije kongruentne, paralelne,
+    kružne strane (_baze_), spojene sa zakrivljenom površinom. Cilindar možete zamisliti i kao
+    "kružnu prizmu".
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+
+cylinder-volume:
+  title: Volumen cilindra
+  text: |
+    Volumen cilindra dan je jednadžbom
+
+    {.text-center} `V = π r^2 h`,
+
+    gdje je _r_ polumjer kružne baze, a _h_ visina cilindra (okomita udaljenost između dviju baza).
+
+degrees:
+  title: stupnjevi
+  text: |
+    __Stupnjevi__ su jedinica za mjerenje uglova, označena simbolom °. Jedan potpuni okret je 360 °,
+    pravi kut je 90 ° i tako dalje.
+
+denominator:
+  title: Nazivnik
+  text: 'Imennikje donji broj u ulomku. Na primjer, u `4/7`, nazivnik je broj 7.'
+
+dilation:
+  title: dilatacija
+  text: |
+    __dilatacija__ je transformacija koja mijenja veličinu geometrijskog oblika, čineći je većom ili
+    manjom.
+  image: dilation.svg
+  link: /course/transformations/dilations
+
+directed-graph:
+  title: Usmjereni graf
+  text: 'U __usmjerenom grafu__ svaki rub ima "strelicu", tj. Početnu i krajnju.'
+  link: /course/graph-theory/introduction#intro-1
+
+discriminant:
+  title: Diskriminirajući
+  text: |
+    __diskriminirajući__ kvadratne jednadžbe je izraz ispod kvadratnog korijena u kvadratnoj
+    formuli: `b^2 − 4ac`.
+
+    Može se koristiti za određivanje broja rješenja kvadratne jednadžbe. Ako je diskriminant veći od
+    0, postoje dva rješenja. Ako je jednak 0, postoji samo jedno rješenje. Ako je manji od 0, nema
+    (pravih) rješenja.
+
+dna:
+  title: GIHT
+  text: |
+    __DNK__ (deoksiribonukleinska kiselina) je molekula koja sadrži genetski plan svih živih
+    organizama. Većina DNK sastoji se od dvije niti koje tvore _dvostruku spiralu_. Genetske
+    informacije su kodirane redoslijedom četiri nukleinske kiseline (A, G, C i T) koje čine DNA.
+    _Sekvenciranje DNK_ proces je izvlačenja tih podataka - bitne tehnike u biologiji, medicini,
+    genetici i biotehnologiji.
+
+dodecahedron:
+  title: dodekahedron
+  text: |
+    __Dodekaedar__ je platonska krutina i sastoji se od 12 lica koji su pravilni pentagoni. Ima 20
+    vrhova i 30 rubova.
+  link: /course/polyhedra/platonic#platonic-overview
+
+dot-annihilation:
+  title: Uništenje
+  text: |
+    Ako u istoj ćeliji imate i točku i anti-točku, oni se poništavaju ili se __uništavaju__ jedni
+    druge. Razmislite `–1 + 1 = 0`.
+
+dot-machine:
+  title: Stroj s točkama
+  text: |
+    __Točka stroj__ sastoji se od više ćelija koje sadrže točkice. Ovim točkama možete manipulirati
+    prema posebnim pravilima.
+
+    Na primjer, u stroju `1←3` 3 točke u jednoj ćeliji mogu se pretvoriti u 1 točku u sljedećoj
+    ćeliji u lijevu _lijevu_. Slično tome, 1 točka može se pretvoriti u 3 točke u sljedećoj ćeliji u
+    _desno_. To se zove "eksplozija".
+
+ellipse:
+  title: Elipsa
+  text: |
+    __elipsa__ je zakrivljena staza koja okružuje dvije žarišta. Bilo koja točka na obodu elipse ima
+    isti _zbroj udaljenosti_ do dva žarišta.
+
+    Ako su žarišta vrlo blizu, elipsa izgleda gotovo kao krug. Kako se odmiču dalje, elipsa postaje
+    izduženija.
+
+    Elipse su jedna vrsta _stožastog presjeka_: sjecište konusa s ravninom.
+  image: ellipse.svg
+  link: /course/circles/conic-sections#ellipses
+
+equation:
+  title: Jednadžba
+  text: |
+    Jednadžbaje matematička izjava stvorena povezivanjem dvaju ili više izraza sa znakom __jednake__
+    `=`. Pokazuje da svi ti izrazi imaju istu vrijednost.
+
+equilateral-triangle:
+  title: Jednakostraničan trokut
+  text: __jednakostranični trokut__ je trokut u kojem sve tri strane imaju jednaku duljinu.
+
+euclidean-geometry:
+  title: Euklidska geometrija
+  text: |
+    __Euklidska geometrija__ je vrsta geometrije koju je matematičar zamislio _Euklid_, a uključuje
+    proučavanje točaka, linija, poligona, krugova kao i trodimenzionalne čvrste tvari. Ovisi o samo
+    pet _aksiom_, osnovnim zakonima geometrije, koji opisuju sve dozvoljene operacije i
+    konstrukcije.
+  link: /course/euclidean-geometry/euclids-axioms#euclid
+
+factor:
+  title: Faktor
+  text: |
+    Broj _a_ je faktor(ili __razdjelnik__) broja _b_, ako možete podijeliti _b_ do _a_ bez ostatka.
+  link: /course/divisibility/factors-and-multiples
+
+factorial:
+  title: Faktorijel
+  text: |
+    __faktor__ pozitivnog cijelog broja je proizvod svih cjelobrojnih brojeva, uključujući i sebe.
+    Na primjer, pišemo ga uskličnikom
+
+    {.text-center} `5! = 1×2×3×4×5`.
+
+    Po definiciji, `0! = 1.`
+
+factorisation:
+  title: Faktoring Premium
+  text: |
+    __Primarna faktorizacija {broja} broja je način na koji ga zapisujemo kao proizvod pravih
+    brojeva.
+  link: /course/divisibility/primes
+
+fermat-last:
+  title: Fermatova posljednja teorema
+  text: |
+    __Fermatova posljednja teorema__ kaže da jednadžba `x^n + y^n = z^n` nema cjelobrojna rješenja
+    za `n>2`. Ako je `n=2`, dobit ćemo _Pitagorin teorem_ koji ima mnoštvo cjelobrojnih rješenja,
+    ali za _n_ = 3, 4, 5, ... nema ih.
+
+    Godine 1637. matematičar Pierre de Fermat zapisao je bilješku u udžbenik, tvrdeći da ima dokaz,
+    ali da je prevelik da bi mogao stati na marginu. Za više od 350 godina drugi su matematičari
+    pokušavali pronaći taj dokaz, a Fermatova posljednja teorema je čak bila u _Guinnessovoj knjizi
+    svjetskih rekorda_ kao "najteži matematički problem".
+
+    Andrew Wiles je 1994. godine, nakon višegodišnjeg rada, napokon uspio to dokazati. Kasnije je
+    dobio Abelovu nagradu, jedno od najviših priznanja u matematici.
+
+fibonacci-numbers:
+  title: Fibonaccijevi brojevi
+  text: |
+    Slijed __Fibonacijevih brojeva__ počinje s 1, 1. Svaki sljedeći izraz zbroj je dva prethodna
+    izraza, što znači da je rekurzivna formula `x_n = x_(n-1) + x_(n-2)`.
+  link: /course/sequences/fibonacci#fibonacci
+
+figurate-numbers:
+  title: Dosadašnji brojevi
+  text: |
+    __Figurati brojevi__ su brojevi koji se mogu predstaviti geometrijskim oblicima. Primjeri
+    uključuju brojeve kvadrata, trokuta i tetraedra.
+  link: /course/sequences/figurate#figurate
+
+formula:
+  title: Formula
+  text: |
+    Formulaje pravilo ili jednadžba koja opisuje odnos između dvije ili više varijabli. Primjer je
+    `A = πr^2`.
+
+fractal:
+  title: Fraktalna
+  text: |
+    Fraktalje geometrijski oblik koji ima _frakcijsku dimenziju_. Mnogi poznati fraktali su
+    _slični_, što znači da se sastoje od manjih kopija sebe. Fraktali sadrže uzorke na svakoj razini
+    uvećanja, a mogu se stvoriti ponavljanjem postupka ili ponavljanjem jednadžbe beskonačno mnogo
+    puta.
+  link: /course/fractals/introduction
+
+fta:
+  title: Temeljna teorija Aritemije
+  text: |
+    __Temeljni teorem aritmetike__ (FTA) kaže da svaki cijeli broj ima jedinstvenu primarnu
+    faktorizaciju.
+
+function:
+  title: Funkcija
+  text: |
+    Funkcijaje matematički odnos koji pretvara ulaz (_x_) u točno jedan izlaz (_y_). Često se
+    izražavaju kao matematičke jednadžbe oblika `f(x)`.
+
+function-graph:
+  title: Grafikoni funkcija
+  text: |
+    Matematičke funkcije oblika `f(x)` možemo postaviti u koordinatnom sustavu. Rezultat se naziva
+    __graf__ funkcije.
+
+gcf:
+  title: Najveći zajednički faktor
+  text: |
+    __najveći zajednički faktor__ (gcf) dva broja _a_ i _b_ je najveći cijeli broj koji je faktor
+    _a_ i { 8 {b} 9}.
+  link: /course/divisibility/greatest-common-factors
+
+geometric-sequence:
+  title: Geometrijska sekvenca
+  text: |
+    __geometrijski niz__ (ponekad zvan __geometrijska progresija__) je niz brojeva u kojem je omjer
+    _r_ između uzastopnih izraza uvijek konstantan.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+geometric-series:
+  title: Geometrijski niz
+  text: |
+    __geometrijski niz__ je zbroj beskonačnosti pojmova u geometrijskom nizu, pri čemu uzastopni
+    izrazi imaju konstantan omjer _r_. Na primjer,
+
+    {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
+
+    je geometrijski niz s konstantnim omjerom `1/2`.
+
+glide-reflection:
+  title: Refleksije klizanja
+  text: |
+    __klizni odraz__ je posebna vrsta transformacije. To je kombinacija _refleksije_ i _prijevoda_ u
+    istom smjeru kao i os refleksije.
+  link: /course/transformations/symmetry-groups#footsteps
+
+golden-ratio:
+  title: Zlatni omjer
+  text: |
+    __zlatni omjer__ je specifičan iracionalan broj s vrijednošću `φ = 1.61803398875…`. Približno se
+    to može dijeliti dva uzastopna Fibonaccijeva broja.
+
+    Zlatni omjer često se vidi kao posebno estetski ugodan u umjetnosti i arhitekturi, a pojavljuje
+    se u spirali mnogih biljaka.
+  link: /course/sequences/fibonacci#golden-ratio-1
+
+graph:
+  title: Grafikon
+  text: Grafikonje zbirka vrhova povezanih rubovima.
+  link: /course/graph-theory/introduction
+
+graph-cycle:
+  title: Ciklus
+  text: __Ciklusi__ su grafikoni koji se sastoje od jedne petlje vrhova.
+  link: /course/graph-theory/introduction#intro-4
+
+graph-degree:
+  title: Stupanj
+  text: __stupanj__ vrhova je broj rubova koji se susreću na toj vršci.
+  link: /course/graph-theory/introduction#intro-3
+
+graph-edge:
+  title: Rub
+  text: __Ivice__ su linije koje povezuju vrhove (točke) u grafikonu.
+  link: /course/graph-theory/introduction
+
+graph-order:
+  title: Narudžba
+  text: __red__ grafikona je broj vrhova u njemu.
+  link: /course/graph-theory/introduction#intro-3
+
+graph-vertex:
+  title: tjeme
+  text: Verzijaje točka ili čvor koji je dio grafikona.
+  link: /course/graph-theory/introduction
+
+gravity:
+  title: Gravitacija
+  text: |
+    __Gravitacija__ jedna je od četiri temeljne sile prirode i povlači bilo koje dvije mase u
+    svemiru prema ovoj drugoj. Isaac Newton otkrio je da je sila između dvije mase `m_1` i `m_2`
+
+    {.text-center} `F = (G m_1 m_2) / r^2`
+
+    gdje je _G_ gravitaciona konstanta, a _r_ udaljenost između masa.
+
+group:
+  title: Skupina
+  text: |
+    Grupa je zbirka "stvari" (poput brojeva ili simetrije) koje slijede tri različita pravila:
+
+    * Možete dodati / kombinirati dvije stvari da biste dobili još jednu koja je također u grupi.
+    * Stvari su _asocijativne_, što znači da je `a+(b+c) + (a+b)+c`.
+    * Postoji _identitet_, a svaka "stvar" ima _obrnuto_ što, kada se doda, daje identitet.
+  link: /course/transformations/symmetry-groups#groups-1
+
+hailstone-sequence:
+  title: Sljedić tuče
+  text: |
+    __Hailstone sekvence__ mogu se generirati odabirom bilo kojeg cijelog broja kao početne točke, a
+    zatim slijedeći ova pravila:
+
+    * Ako je `x_n` jednak, `x_(n+1) = x_n / 2`.
+
+    * Ako je `x_n` neparno, `x_(n+1) = 3 * x_n + 1`
+  link: /course/sequences/special#hailstone
+
+heptagon:
+  title: Sedmerokut
+  text: __šesterokut__ je poligon sa sedam strana.
+
+hexagon:
+  title: Šesterokut
+  text: Šesterokutje poligon sa šest strana.
+
+hyperbola:
+  title: Hiperbola
+  text: |
+    A __hiperbola__ oblik je grafa funkcije `y = 1/x`. Sastoji se od dva odvojena dijela, oba
+    pristupaju _asimptoti_. To je također _stožastog presjeka_.
+  image: hyperbola.svg
+
+hypotenuse:
+  title: hipotenuza
+  text: __hipotenuza__ pravokutnog trokuta je njegova najduža strana koja leži nasuprot pravom kutu.
+  image: right-triangle.svg
+
+icosahedron:
+  title: ikozaedra
+  text: |
+    __Ikozaedar__ je platonska krutina i sastoji se od 20 lica koja su sve jednakostranični trokut.
+    Ima 12 vrhova i 30 rubova.
+  link: /course/polyhedra/platonic#platonic-overview
+
+imaginary:
+  title: Imaginarni brojevi
+  text: |
+    __Zamišljeni brojevi__ nastaju uzimajući kvadratne korijene negativnih brojeva. Unatoč imenu,
+    oni su od velike važnosti u matematici, znanosti i inženjerstvu.
+
+    __imaginarna jedinica__ zapisuje se kao `i = sqrt(−1)`, a ostali imaginarni brojevi mogu se
+    zapisati kao njihovi množitelji. Na primjer, `sqrt(-5) = 5i`.
+
+infinity:
+  title: beskraj
+  text: |
+    __Beskonačnost__ je količina bez ograničenja ili kraja. U matematici je predstavljen simbolom
+    `∞`.
+
+information:
+  title: Informacijska teorija
+  text: |
+    __Teorija informacija__ je studija kvantifikacije, pohranjivanja i komunikacije podataka i
+    informacija. Koristi se u logici, kriptografiji i računalnoj znanosti.
+
+integer:
+  title: cijeli brojevi
+  text: |
+    Cijeli brojevisu pozitivni i negativni cijeli brojevi, uključujući nulu:…, –3, –2, –1, 0, 1, 2,
+    3,…. Često se označavaju simbolom `ZZ`.
+
+internal-angle:
+  title: Unutarnji kutovi
+  text: '__unutarnji kutovi__ poligona su kutovi na unutarnjoj strani, u svim vrhovima.'
+  image: internal-angle.svg
+
+irrational-numbers:
+  title: Iracionalni brojevi
+  text: |
+    __Iracionalni brojevi__ su brojevi koji se ne mogu izraziti kao dijelovi cjelobrojnih brojeva
+    (_racionalni brojevi_). Na primjer, 0,333333 ... = `1/3` je _racionalno_, ali `π`, `sqrt(2)` i
+    _e_ su svi _iracionalni_. Decimalni oblik iracionalnog broja ne zaustavlja se i ne ponavlja.
+
+irregular-polygon:
+  title: Nepravilan poligon
+  text: |
+    __nepravilan mnogokut__ je onaj koji _nije pravilan_. To znači da strane ili kutovi nemaju sve
+    iste veličine.
+
+isosceles-triangle:
+  title: Jednakokračan trokut
+  text: 'U __jednakokračnom trokutu__, dvije strane imaju istu duljinu.'
+
+iss:
+  title: Internacionalna Svemirska postaja
+  text: |
+    Međunarodna svemirska stanica __lansirana je 1998. godine i kreće oko Zemlje na nadmorskoj
+    visini od oko 400 km. To je najveće tijelo koje je stvorio čovjek u niskoj zemaljskoj orbiti, a
+    naseljeno je kontinuirano od lansiranja. To se može vidjeti golim okom sa Zemlje.
+
+julia-set:
+  title: Julia Set
+  text: |
+    S obzirom na funkciju `f`, poput `§f(x) = x^2`, odgovarajući skup __Julia__ `§K(f)` je podskup
+    svih točaka u složenoj ravnini, pri čemu se niz koji nastaje opetovanom primjenom `f` ne
+    razilazi. U mnogim slučajevima, Julijin set je _fraktal_, a usko je povezan s _setom
+    Mandelbrota_.
+  link: /course/fractals/mandelbrot#julia
+  image: julia-set.png
+
+kite:
+  title: Zmaj
+  text: Kotaje četverokut u kojem dva para susjednih strana imaju jednaku duljinu.
+  link: /course/polyhedra/quadrilaterals#kites
+
+koch-snowflake:
+  title: Koch Pahuljica
+  text: |
+    __Koch Pahuljica__ je sličan fraktal. Sastoji se od jednokutnog trokuta, s manjim
+    jednakostraničnim trokutima koji se rekurzivno dodaju na svaku od njegovih strana.
+  link: /course/fractals/introduction#koch
+  image: koch-snowflake.svg
+
+laws-of-nature:
+  title: Zakoni prirode
+  text: |
+    __zakoni prirode__ naziv su koji su kolektivno dodijeljeni fizičkim pravilima (obično izraženima
+    kao matematičke jednadžbe) koja pokušavaju objasniti sve što opažamo u svemiru.
+
+lcm:
+  title: Najniži zajednički višestruki
+  text: |
+    __Najmanji zajednički množinski__ (lcm) dva broja _a_ i _b_ je najmanji cijeli broj koji je
+    višestruki broj _a_ i { 8 {b} 9}.
+  link: /course/divisibility/least-common-multiples
+
+line:
+  title: Crta
+  text: |
+    Linijaskup je beskonačno mnogo točaka koje se zauvijek protežu u oba smjera. Linije su uvijek
+    ravne i nemaju _širinu_.
+  link: /course/euclidean-geometry/definitions#lines
+
+line-segment:
+  title: Linijski segment
+  text: |
+    __segment linije__ dio je crte koja leži između dviju točaka, a ne proteže se do beskonačnosti.
+    Segmente linija možemo označiti od točke _A_ do točke _B_ kao `bar(AB)`.
+  link: /course/euclidean-geometry/definitions#segments
+
+line-slope:
+  title: Nagib pruge
+  text: |
+    Nagiblinije mjeri njegovu "strmu", a obično se označava slovom _m_. To je promjena u _y_ za
+    promjenu jedinice u _x_ duž linije.
+
+linear-equation:
+  title: Linearna jednadžba
+  text: |
+    __linearna jednadžba__ ima oblik `ax + b = 0`, gdje je _x_ varijabla, a _a_ i _b_ su brojevi.
+    Kad se uvuku u koordinatni sustav, vrijednosti `ax+b` tvore ravnu liniju.
+
+linear-function:
+  title: Linearna funkcija
+  text: |
+    Linearna funkcijaje funkcija čiji je graf ravna linija. Može se definirati kao `f(x) = mx + c`,
+    gdje je _m_ nagib linije, a _c_ je njegov _y_ -osni presjek.
+
+mandelbrot-set:
+  title: Mandelbrot set
+  text: |
+    __Mandelbrotov skup__ je skup složenih brojeva `CC` za koji rekurzivni niz `§z_n = z_(n-1)^2 +
+    c` (sa `§z_0 = 0`) ne odstupa. To je _fraktal_.
+  link: /course/fractals/mandelbrot
+  image: mandelbrot-set.png
+
+matrix:
+  title: Matriks
+  text: Matricaje pravokutni niz brojeva raspoređenih u redove i stupce.
+
+median:
+  title: srednja
+  text: |
+    Medijalskupa brojeva je vrijednost za koju su pola brojeva veće, a polovica manja. Ako postoje
+    dva "srednja broja", to je prosjek tih brojeva.
+
+midpoint:
+  title: središnja točka
+  text: |
+    Središnja točkasegmenta linije je točka na segmentu linija koja dijeli segment u sredini, na dva
+    kongruentna dijela. Formula __srednje točke__ kaže da je za krajnje točke `(x_1, y_1)` i
+    `(x_2,y_2)` srednja točka `((x_1 + x_2)/2, (y_1 + y_2)/2)`.
+
+millennium-prize:
+  title: Problemi s tisućljećnom nagradom
+  text: |
+    Sedam __Milenijskih nagradnih problema__ neki su od najtežih otvorenih problema matematike. Na
+    popisu ih je 2000. godine _Institut za matematičku masu_, a svaki od njih imao je nagradu od
+    milion dolara:
+
+    * P vs NP
+
+    * Hodgeova konstrukcija
+
+    * Poincaréova konstrukcija
+
+    * Riemannova hipoteza
+
+    * Yang-Mills postojanje i masovni jaz
+
+    * Navier-Stokes postojanje i glatkoća
+
+    * Konstrukcija Birch i Swinnerton-Dyer
+
+    Do sada je riješen samo jedan od problema, _Poincaréova konstrukcija_. Međutim matematičar koji
+    ga je riješio, Grigori Perelman, odbio je nagradu.
+
+mode:
+  title: Način
+  text: |
+    Načinskupa brojeva je broj koji se najčešće događa. Na primjer, način rada [3, 4, 4, 4, 5, 5, 6]
+    je 5.
+
+molecule:
+  title: Molekula
+  text: |
+    Molekulasastoji se od dva ili više atoma koji su kemijski vezani zajedno. Nema električni naboj,
+    za razliku od __Iona__.
+
+    Primjeri molekula uključuju `O_2` koji se sastoji od dva povezana atoma kisika i `H_2 O` koji se
+    sastoji od dva vodikova atoma i jednog atoma kisika.
+
+morse-code:
+  title: Morzeov kod
+  text: |
+    __Morseov kôd__ je način predstavljanja slova i brojeva pomoću kratkih i dugih signala (zvanih
+    točkice i crtice). Ime je dobio po _Samuel Morse_ i u početku se koristio za komunikaciju na
+    velike udaljenosti pomoću telegrafa.
+
+    Na primjer, slovo "L" predstavljeno je korištenjem slijeda _{x-morse(char="L")}_ kratkih i dugih
+    signala.
+
+multiple:
+  title: višekratnik
+  text: 'Broj _a_ je __više__ broja _b_, ako je _b_ faktor _a_.'
+  link: /course/divisibility/factors-and-multiples
+
+natural-numbers:
+  title: Prirodni brojevi
+  text: |
+    Prirodni brojevisu pozitivni cijeli brojevi koji počinju s 1: 1, 2, 3, 4, ... Oni se često
+    označavaju simbolom `NN`.
+
+net:
+  title: Mreže poliedra
+  text: |
+    __mreža__ poliedra je ono što dobivate kada "razvučete" njegova poligonalna lica na ravnu
+    površinu.
+
+neutron:
+  title: Neutron
+  text: |
+    __neutron__ jedna je od čestica koje čine jezgro atoma. Nema naboja i ima približno istu masu
+    kao i protoni.
+
+np:
+  title: NP Teški problemi
+  text: |
+    _Teorija složenosti računa_ određuje kako "teške" probleme treba riješiti računalo. __NP hard__
+    (nedeterministički polinomno-vremenski tvrdi) klasa je najtežih problema.
+
+numerator:
+  title: brojač
+  text: 'Brojačgornji je broj u ulomku. Na primjer, u `4/7` je broj 4 brojnik.'
+
+obtuse-angle:
+  title: Tup kut
+  text: '__kutani kut__ je kut veličine veće od 90 °, ali manje od 180 °.'
+
+obtuse-triangle:
+  title: Tupi trokut
+  text: U __suvišnom trokutu__ jedan je unutarnji kut veći od 90 °.
+  link: /course/triangles/properties#classification
+
+octagon:
+  title: Osmerokut
+  text: __osmerokut__ je poligon sa osam strana.
+
+octahedron:
+  title: oktaedar
+  text: |
+    __Oktahedron__ je platonska krutina i sastoji se od 8 lica koja su jednakostranični trokut. Ima
+    6 vrhova i 12 rubova.
+  link: /course/polyhedra/platonic#platonic-overview
+
+order-of-symmetry:
+  title: Red simetrije
+  text: |
+    Ako oblik ima rotacijsku simetriju, __redoslijed simetrije__ je broj orijentacija u kojima oblik
+    izgleda isto. (Ili, koliko puta možete zakretati oblik, prije nego što se vratimo na početak.)
+  link: /course/transformations/symmetry#rotational-symmetry
+
+origin:
+  title: Podrijetlo
+  text: 'Izvorkoordinatnog sustava je točka (0, 0), gdje se osi _x_ -os i _y_ -osječu.'
+
+origin-number-line:
+  title: Podrijetlo brojčane linije
+  text: __ishodište__ brojčanog retka je točka 0.
+
+palindrome:
+  title: palindrom
+  text: |
+    __palindrom__ je riječ ili broj koji glasi isto s leđa naprijed, kao i s prednje natrag. Na
+    primjer, 25752 i "ANNA" su oba palindroma.
+  link: /course/transformations/symmetry#palindromes
+
+parabola:
+  title: Satelitska antena
+  text: |
+    A __parabola__ je oblik grafa kvadratne funkcije poput `y = x^2`. Simetrična je, u obliku slova
+    U i može biti usmjerena prema gore ili prema dolje. To je također _stožastog presjeka_.
+  image: parabola.svg
+
+parabola-conic:
+  title: Satelitska antena
+  text: |
+    Parabolaje skup svih točaka u ravnini, koje imaju istu udaljenost od fiksne linije, zvane
+    __direktrix__, i fiksne točke, nazvane __fokus__.
+
+parabola-focus:
+  title: Fokus parabole
+  text: |
+    Fokusparabole je fiksna točka u njenoj unutrašnjosti. Za parabolično ogledalo sve paralelne
+    dolazne zrake svjetlosti sijeku se u fokusu nakon što se odražavaju.
+
+parabola-vertex:
+  title: Vrhunac parabole
+  text: |
+    Verzijaparabole je točka u kojoj mijenja smjer. Ona je ili maksimum ili minimum odgovarajuće
+    kvadratne funkcije, a leži na osi simetrije parabole.
+
+parallel:
+  title: Paralelne linije
+  text: |
+    Dvije ili više linija su __paralelne__ ako se nikad ne presijecaju. Imaju isti nagib i razmak
+    između njih je uvijek konstantan.
+  image: parallel.svg
+  link: /course/euclidean-geometry/definitions#parallel
+
+parallelogram:
+  title: Paralelogram
+  text: __paralelogram__ je četverokut u kojem su oba para suprotnih strana paralelna.
+  link: /course/polyhedra/quadrilaterals#parallelograms
+
+pascals-triangle:
+  title: Pascalov trokut
+  text: |
+    __Pascalov trokut__ je piramida broja u kojoj je svaka ćelija zbroj dviju ćelija izravno iznad.
+    Sadrži sve binomne koeficijente, kao i mnoge druge nizove brojeva i obrazaca.
+  link: /course/sequences/pascals-triangle#pascal-triangle
+
+penrose:
+  title: Obloga od penroze
+  text: |
+    A __Obloga od penine__ je _neperiodična_, _samo slična_ tespiralizacija. Sastoji se samo od
+    nekoliko različitih oblika, ali nikada se ne ponavlja.
+  link: /course/polyhedra/tessellations#penrose
+
+pentagon:
+  title: Peterokut
+  text: __Pentagon__ je poligon s pet strana.
+
+percent:
+  title: posto
+  text: 'A __postotak__ je omjer čiji je nazivnik 100. Na primjer, pišemo 80% da znači `80/100 = 0.8`.'
+
+perfect-numbers:
+  title: Savršeni brojevi
+  text: |
+    A __savršen broj__ je broj koji je jednak zbroju njegovih djelitelja (isključujući sebe). Na
+    primjer, `28 = 1 + 2 + 4 + 7 + 14` je savršen broj.
+  link: /course/sequences/special#perfect-1
+
+perpendicular:
+  title: Okomite linije
+  text: |
+    Dvije linije su __okomite__ (ponekad se nazivaju _normalne_ ili _pravokutne_) ako se presijecaju
+    pod pravim kutom.
+  image: perpendicular.svg
+  link: /course/euclidean-geometry/definitions#perpendicular
+
+perpendicular-bisector:
+  title: Okomiti bisektor
+  text: |
+    __okomiti bisektor__ segmenta linije prolazi kroz njegovu sredinu i presijeca je pod kutom od 90
+    °.
+  image: perpendicular-bisector.svg
+
+pi:
+  title: pobožan
+  text: |
+    __Pi__, često napisan kao grčko slovo _π_, omjer je opsega i promjera kruga. To je
+    transcendentalni broj, a njegova vrijednost otprilike je 3,14159265…
+  link: /course/circles/introduction#pi-definition
+
+platonic-solid:
+  title: Platonska krutina
+  text: |
+    A __Platonska krutina__ je višejednik gdje je svako lice pravilan mnogokut s istim brojem rubova
+    i gdje se isti broj lica susreće u svakoj vrhovi. Postoji samo pet različitih platonskih krutih
+    čestica: tetraedar, kocka, oktahedron, dodekahedron i ikosahedron.
+  link: /course/polyhedra/platonic
+
+point:
+  title: Točka
+  text: 'Točkaje određeno mjesto u prostoru. Bodovi opisuju položaj, ali nemaju veličinu ili oblik.'
+  link: /course/euclidean-geometry/definitions#points
+
+polygon:
+  title: Poligon
+  text: |
+    __mnogokut__ je geometrijski oblik koji se sastoji od pravih linija. Poligon ne može sadržavati
+    zakrivljene strane ili rupe. Na primjer, kvadrat je mnogokut, ali krug nije.
+  image: polygon.svg
+  link: /course/polyhedra/polygons#polygons
+
+polygon-diagonal:
+  title: dijagonala
+  text: |
+    Dijagonalapoligona je linijski segment koji povezuje dvije vrhove koji nisu jedan pored drugog.
+
+polygon-edge:
+  title: Rub poligona
+  text: |
+    __strane__ ili __rubovi__ poligona su segmenti linija koji tvore njegov obris. Na primjer,
+    trokut ima tri strane.
+
+polygon-vertex:
+  title: Vrh poligona
+  text: |
+    Vertiklipoligona su točke na kojima se susreću njegovi susjedni bočni dijelovi (njegovi
+    "uglovi").
+
+polyhedron:
+  title: Poliedar
+  text: |
+    __poliedar__ (množina je _poliedra_) trodimenzionalna je kruta tvorevina bez zakrivljenih
+    površina ili rubova. Sva lica poliedra su poligoni. Na primjer, kocka i piramida su poliedri,
+    ali sfera nije.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-dual:
+  title: Dvojica poliedra
+  text: SVE
+  link: /course/polyhedra/platonic#platonic-dual
+
+polyhedron-edge:
+  title: Rub poliedra
+  text: __rubovi__ poliedra su linijski segmenti u kojima su povezana dva lica.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-face:
+  title: Lice poliedra
+  text: __lica__ poliedra su poligoni koji čine njegovu površinu.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-vertex:
+  title: Vrhovi poliedra
+  text: '"Uglovi" poliedra nazivaju se njegovi __vrhovi__.'
+  link: /course/polyhedra/polyhedra
+
+polynomial:
+  title: Polinom
+  text: |
+    __polinom__ je algebrični izraz koji se sastoji od konstanti i više varijabli podignutih na
+    cjelobrojne moći. Na primjer, `5x^3 - 2y^2 + x + 4` je polinom. Najčešći oblik polinoma sa samo
+    jednom varijablom je `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x + a_0`, gdje su `a_n`,
+    `a_(n-1)`, ..., `a_0` sve specifične konstante.
+
+polynomial-degree:
+  title: Stupanj
+  text: |
+    __stupanj__ termina ili polinoma najveća je snaga svih varijabli u njemu. Na primjer, stupanj
+    `5x^3 + 2y^2 - 4z` je 3.
+
+powers:
+  title: eksponenciranje
+  text: |
+    __Izlaganje__ (ili __moći__) je matematička operacija u kojoj se broj (baza __) množi sam po
+    sebi određeni broj puta (_eksponent { 7.}). Obično se piše superskriptom `a^x`, gdje je _a_
+    osnova, a _x_ eksponent. Na primjer, `4^3=4×4×4`.
+
+prime:
+  title: Glavni broj
+  text: |
+    __Jednostavni broj__ je pozitivni cijeli broj koji nema faktore osim 1 i sebe. Prvi glavni
+    brojevi su 2, 3, 5, 7, 11, 13,…
+  link: /course/divisibility/primes
+
+prime-factor:
+  title: Glavni faktor
+  text: __glavni faktor__ broja jednostavno je čimbenik koji je glavni.
+  link: /course/divisibility/primes
+
+prime-factorisation:
+  title: Faktoring Premium
+  text: |
+    __Primarna faktorizacija {broja} broja je način da se izrazi kao proizvod pravih brojeva. Na
+    primjer, glavna faktorizacija 12 je `2 × 2 × 3`.
+
+prism:
+  title: Prizma
+  text: |
+    __prizma__ je trodimenzionalna krutina koja ima dva kongruentna lica koja su poligoni (zvani
+    _baze_), a čiji su odgovarajući vrhovi spojeni paralelnim segmentima. Preostala lica prizme su
+    svi pravokutnici ili paralelogrami.
+  image: prism.svg
+
+probability:
+  title: Vjerojatnost
+  text: |
+    __vjerojatnost__ je broj između 0 i 1 koji ukazuje na vjerojatnost nastanka određenog događaja.
+    Vjerojatnost događaja _A_ zapisuje se kao `P(A)`.
+
+probability-tree:
+  title: Stablo vjerojatnosti
+  text: |
+    __Stablo vjerojatnosti__ je dijagram stabla koji predstavlja kombiniranu vjerojatnost više
+    sekvencijalnih događaja.
+
+proof:
+  title: Dokaz
+  text: Dokazlogičan je argument koji pokazuje van svake sumnje da je određena tvrdnja istinita.
+
+protein:
+  title: Protein
+  text: |
+    A __Protein__ je velika _makromolekula_ koja može obavljati različite funkcije unutar živih
+    organizama: od probave do komunikacije između stanica ili umnožavanja DNK. Proteini se sastoje
+    od jednog ili više lanaca od _ostataka aminokiselina_.
+
+proton:
+  title: Proton
+  text: |
+    __proton__ jedna je od čestica koje čine jezgro atoma. Naplaćuje +1. Broj protona u atomu naziva
+    se njegovim "atomskim brojem", i on određuje o kojem se elementu radi.
+
+pyramid:
+  title: Piramida
+  text: |
+    Piramidaje višejednik koji ima poligon kao bazu i trokutasta lica oko vanjske strane, koja se
+    sužava na vrh.
+
+    U __desnoj pravilnoj piramidi__, baza je _pravilan mnogokut_, a vrh je neposredno iznad središta
+    baze.
+  image: pyramid.svg
+
+protractor:
+  title: Kutomjer
+  text: Klizač je alat koji se koristi za mjerenje kuta u stupnjevima.
+
+pythagoras-theorem:
+  title: Pitagorin teorem
+  text: |
+    __Pitagorov teorem__ navodi da je u svakom trokutu pod pravim kutom `a^2 + b^2 = c^2`, gdje je
+    _c_ duljina hipotenuze i _a_ i _b_ su duljine druge dvije strane.
+  link: /course/triangles/pythagoras
+
+pythagorean-triple:
+  title: Pitagorejska trostruka
+  text: |
+    A __pitagorejska trostruka__ skup je tri cjelovita broja _a_, _b_ i _c_ koji udovoljavaju
+    pitagorejinoj teoremi `a^2 + b^2 = c^2`.
+  link: /course/triangles/pythagoras#pythagorean-triples
+
+quadratic:
+  title: četvrtast
+  text: '__kvadratna__ je polinom stupnja 2. Na primjer, `x^2 - 2x + 3` je kvadrat.'
+
+quadratic-equation:
+  title: Kvadratna jednadžba
+  text: |
+    __Kvadratna jednadžba__ je jednadžba koja sadrži jednu varijablu stupnja 2. Često se piše kao
+    `ax^2 + bx + c = 0`, gdje je _x_ varijabla, _a_, _b_ i _c_ su brojevi, a `a != 0`.
+
+quadratic-formula:
+  title: Kvadratna formula
+  text: |
+    __Kvadratna formula__ način je za određivanje korijena kvadratne jednadžbe. Jednadžba `ax^2 + bx
+    + c = 0` ima korijene
+
+    {.text-center} `x = (-b +- sqrt(b^2 - 4ac))/(2a)`.
+
+quadratic-function:
+  title: Kvadratna funkcija
+  text: |
+    Kvadratna funkcijafunkcija je oblika `f(x) = ax^2+bx+c`, gdje su _a_, _b_, a _c_ su brojevi, a
+    `a != 0`. Graf kvadratne funkcije je krivulja u obliku slova U koja se naziva __parabola__.
+
+quadratic-function-vertex-form:
+  title: Vrhunski oblik kvadratne funkcije
+  text: |
+    __Vršni oblik__ ili __standardni oblik__ kvadratne funkcije je `f(x) = a(x − h)^2 + k`. Točka
+    `(h, k)` je __vršna vrijednost__ odgovarajuće parabole.
+
+quadrilateral:
+  title: četverostran
+  text: __četverostrani__ je mnogokut s četiri strane.
+  link: /course/polyhedra/quadrilaterals
+
+quantum:
+  title: Kvantna mehanika
+  text: __Kvantna mehanika__ je grana fizike koja objašnjava čudno ponašanje osnovnih čestica.
+
+radians:
+  title: radians
+  text: |
+    __Radijani__ jedinica su za mjerenje veličine kutova. Jedna potpuna rotacija (360 °) je `2π`
+    radijana - duljina opsega jedinice kruga.
+  link: /course/circles/radians#radians
+
+radioactive:
+  title: Radioaktivno propadanje
+  text: |
+    __Radioaktivno raspadanje__ fizički je proces kojim se nestabilni atomi raspadaju i oslobađaju
+    energiju.
+
+rational-numbers:
+  title: Racionalni brojevi
+  text: |
+    __Racionalni brojevi__ su brojevi koji se mogu izraziti dijelom `p/q` od dva cijeli broja.
+    Njihova decimalna ekspanzija ili se zaustavlja ili ponavlja na kraju. Primjeri uključuju `1/2`,
+    `-5/7`, 12.71 i 9. Racionalni brojevi često se označavaju simbolom `QQ`.
+
+ray:
+  title: Zraka
+  text: |
+    __zraka__ dio je crte koja počinje u točki i proteže se beskonačno u jednom smjeru. Zrake možemo
+    označiti počevši od `A` kao `vec(AB)`.
+  link: /course/euclidean-geometry/definitions#rays
+
+real-numbers:
+  title: Pravi brojevi
+  text: |
+    Realni brojevisu svi brojevi koji se pojavljuju u brojevnoj liniji, uključujući pozitivne i
+    negativne brojeve, racionalne brojeve (frakcije), kvadratne korijene, korijene kocke, decimalne
+    brojeve, _π_, _e_, i još mnogo toga. Oni se često označavaju simbolom `RR`.
+
+rectangle:
+  title: pravokutnik
+  text: Pravokutnikje četverokut u kojem su sva četiri kuta 90 °.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+reflection:
+  title: Odraz
+  text: __odraz__ je transformacija koja "prelazi" ili "zrcali" oblik preko crte.
+  link: /course/transformations/rigid#reflections
+
+reflectional-symmetry:
+  title: Refleksna simetrija
+  text: Oblik ima reflektirajuću simetriju ako nakon refleksije izgleda isti.
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+regular-polygon:
+  title: Regularni poligon
+  text: |
+    __pravilan mnogokut__ je poligon u kojem su sve strane iste dužine, a svi unutarnji kutovi imaju
+    istu veličinu.
+  image: regular-polygon.svg
+  link: /course/polyhedra/polygons#regular-polygons
+
+rhombus:
+  title: Romb
+  text: A __romb__ (množina je _romba_ ili _romb_) je četverokut u kojem su sve strane iste dužine.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+right-angle:
+  title: Pravi kut
+  text: Pravi kutje kut veličine 90 °.
+
+right-triangle:
+  title: Pravokutni trokut
+  text: 'U __pravokutnom trokutu__, jedan unutarnji kut iznosi točno 90 °.'
+  image: right-triangle.svg
+  link: /course/triangles/properties#classification
+
+rigid-transformation:
+  title: Kruta transformacija
+  text: |
+    __kruta transformacija__ (ili __izometrija__) je transformacija koja ne mijenja veličinu ili
+    oblik geometrijske figure.
+  link: /course/transformations/rigid
+
+roman-numerals:
+  title: Rimski brojevi
+  text: |
+    __Rimski brojčani sustav__ razvijen je u starom Rimu i u Europi se koristio do 14. stoljeća.
+    Omogućilo vam je pisanje bilo kojeg cijelog broja kombiniranjem sedam različitih slova:
+
+    * I = 1
+
+    * V = 5
+
+    * X = 10
+
+    * L = 50
+
+    * C = 100
+
+    * D = 500
+
+    * M = 1000
+
+rotation:
+  title: rotacija
+  text: Rotacijaje transformacija koja "okreće" oblik pod određenim kutem oko fiksne točke.
+  link: /course/transformations/rigid#rotations
+
+rotational-symmetry:
+  title: Rotaciona simetrija
+  text: Oblik ima rotacijsku simetriju ako nakon rotacije izgleda isti (za manje od 360 °).
+  image: rotational-symmetry.svg
+  link: /course/transformations/symmetry#rotational-symmetry
+
+roulette:
+  title: Rulet
+  text: |
+    __Roulette__ je casino igra u kojoj se možete kladiti na mjesto gdje će se slijetati kuglica.
+    Sadrži 36 brojeva kao i jedan ili dva 0.
+
+scale-factor:
+  title: Faktor skale
+  text: |
+    __faktor skale__ dvije slične geometrijske figure predstavlja omjer svake dvije odgovarajuće
+    duljine.
+
+    Faktor skale manji od 1 označava da je oblik smanjio, a faktor skaliranja veći od 1 označava da
+    je oblik povećan.
+  link: /course/transformations/dilations#dilations-1
+
+scalene-triangle:
+  title: Scalene Trokut
+  text: 'U __skaliranom trokutu__, sve tri strane imaju različite duljine.'
+
+scientific-notation:
+  title: Znanstveni zapis
+  text: |
+    __Znanstveni zapis__ je standardizirana metoda za pisanje vrlo velikog ili malog broja. Ona je
+    oblika `a × 10^n`, gdje je _n_ cijeli broj i `1 ≤ a < 10`.
+
+    Na primjer, broj 4600 mogao bi se zapisati kao `4.6 × 10^3`.
+
+set:
+  title: setovi
+  text: |
+    Skup ____ je skup stvari ili predmeta (koji se nazivaju elementi). Svaki se element može
+    pojaviti samo jedan u setu. Skupove pišemo koristeći {} s, na primjer, skup koji sadrži brojeve
+    2, 3 i 4 napisao bi se kao {2, 3, 4}.
+
+sequence:
+  title: slijed
+  text: |
+    Nizje redoslijed popisa brojeva (ili drugih elemenata poput geometrijskih objekata) koji često
+    slijede određeni obrazac ili funkciju. Sekvence mogu biti i konačne i beskonačne.
+  link: /course/sequences/introduction#simple-patterns
+
+sequence-convergence:
+  title: Konvergencija
+  text: Niz __konvergira se__ ako se vremenom njegovi izrazi približavaju određenoj __granici__.
+
+sequence-divergence:
+  title: divergencija
+  text: |
+    Niz __razlikuje se__ ako s vremenom njegovi izrazi postaju sve veći i veći, prema beskonačnosti
+    (ili negativnoj beskonačnosti).
+
+sequence-explicit:
+  title: Izričita formula
+  text: __izričita formula__ za niz izražava vrijednost _n_ trećeg izraza `x_n` kao funkciju _n_.
+  link: /course/sequences/introduction#explicit
+
+sequence-recursive:
+  title: Formula rekurzije
+  text: |
+    __rekurzivna formula__ za niz izražava vrijednost svakog pojma `x_n` kao funkciju njegovih
+    prethodnih izraza.
+  link: /course/sequences/introduction#recursive-1
+
+sequence-term:
+  title: Uvjeti sekvence
+  text: __uvjeti__ niza su svi njegovi pojedinačni brojevi ili elementi.
+  link: /course/sequences/introduction#simple-patterns
+
+sierpinski-triangle:
+  title: Sierpinski trokut
+  text: |
+    __Sierpinski trokut__ je sličan fraktal. Sastoji se od jednakostraničnog trokuta, s manjim
+    jednakostraničnim trokutima rekurzivno uklonjenim iz svog preostalog područja.
+  link: /course/fractals/sierpinski
+  image: sierpinski-triangle.svg
+
+sieve-eratosthenes:
+  title: Sita Eratostena
+  text: |
+    __Sito Eratostena__ postupak je pronalaska pravih brojeva, višekratnim eliminacijom brojeva koji
+    nisu_ glavni.
+  link: /course/divisibility/primes#eratosthenes
+
+similar:
+  title: Sličan
+  text: |
+    Dva geometrijska oblika su __slična__ ako imaju isti oblik, ali različite veličine. Jedan oblik
+    možemo pomicati, okretati, odražavati i mijenjati kako bismo ga uskladili s drugim. Njihovi
+    odgovarajući kutovi su jednaki i njihove odgovarajuće strane su u istom omjeru.
+
+sin:
+  title: svoj
+  text: |
+    __Sine__ je trigonometrijska funkcija napisana kao `sin(θ)`. U pravougaonom trokutu to je omjer
+    suprotne strane i hipotenuze.
+  link: /course/triangles/trigonometry#trig-functions
+
+sphere:
+  title: Sfera
+  text: |
+    Sferatrodimenzionalna je čvrsta tvar koja se sastoji od svih točaka koje imaju istu udaljenost
+    od zadanog _središta_. Ta se udaljenost naziva polumjer __.
+  link: /course/circles/spheres-cones-cylinders#sphere
+
+sphere-radius:
+  title: Polumjer sfere
+  text: |
+    Poljesfere je udaljenost (ili segment linije) između njezinog središta i bilo koje točke na
+    njegovoj površini.
+
+square:
+  title: Kvadrat
+  text: |
+    Kvadratje pravilan četverokut: sve strane imaju jednaku duljinu, a svi kutovi iste veličine (90
+    °).
+  link: /course/polyhedra/quadrilaterals
+
+square-area:
+  title: Područje trga
+  text: Površina __kvadrata s bočnom dužinom _s_ je `A = s^2`.
+
+square-matrix:
+  title: Kvadratna matrica
+  text: __Kvadratna matrica__ je matrica koja ima isti broj redaka i stupaca.
+
+square-numbers:
+  title: Kvadratni brojevi
+  text: |
+    Kvadratni brojje broj koji se može izraziti kao kvadrat drugog cijelog broja. Prvi kvadratni
+    brojevi su 1, 4, 9, 16, 25,…
+  link: /course/sequences/introduction#squares
+
+subdivision:
+  title: podjele
+  text: 'Da biste stvorili __potpodjelu__ grafikona, dodajete dodatne vrhove duž njegovih rubova.'
+
+subgraph:
+  title: subgraph
+  text: 'Graf je __podgraf__ drugog grafikona, ako je formiran podskupom većih rubova i vrhova grafova.'
+  link: /course/graph-theory/introduction#intro-2
+
+supplementary-angles:
+  title: Dodatni kutovi
+  text: Dva kuta su __dopunska__ ako dodaju 180 ° (polukrug).
+
+symmetry:
+  title: Simetrija
+  text: |
+    Lik ili oblik ima __simetriju__, ako izgleda isto nakon što je na neki način transformiran (npr.
+    Odraz ili rotacija).
+  link: /course/transformations/symmetry#symmetry
+
+symmetry-group:
+  title: Skupina simetrije
+  text: |
+    __Skupina simetrije__ geometrijskog objekta zbirka je svih njegovih _simetrija_ (kao i
+    _identitet_).
+  link: /course/transformations/symmetry-groups#groups-1
+
+tan:
+  title: Tangens
+  text: |
+    __Tangenta__ je trigonometrijska funkcija napisana kao `tan(θ)`. Definiran je kao odnos _sinusa_
+    i _kosinusa_:
+
+    {.text-center} `tan(θ) = sin(θ) / cos(θ)`.
+
+    U pravougaonom trokutu `tan(θ)` je odnos suprotne strane i susjedne strane kuta `θ`.
+  link: /course/triangles/trigonometry#trig-functions
+
+tangent:
+  title: Tangenta
+  text: |
+    __tangencijalna linija__ je linija koja dodiruje krivulju ili krug u jednoj točki, bez
+    presijecanja. Ova se točka ponekad naziva i __točka tangencije__.
+
+term:
+  title: Izraz (Algebra)
+  text: |
+    __izrazi__ dijelovi su algebarskog izraza ili jednadžbe odvojeni znakovima + ili -. To mogu biti
+    proizvodi ili frakcije ili jedan ili više brojeva, varijabli ili funkcija.
+
+    Na primjer, u izrazu `2x^2 - 3ab + 4` tri su izraza `2x^2`, `3ab` i 4.
+
+tessellation:
+  title: mozaik
+  text: __tessellation__ je geometrijski uzorak koji pokriva površinu bez praznina ili preklapanja.
+  link: /course/polyhedra/tessellations
+
+tetrahedral-numbers:
+  title: Tetraedarski brojevi
+  text: |
+    __tetraedarski broj__ je broj koji se stvara slaganjem više sfera u _tetraedar_. Prvi
+    tetraedarski brojevi su 1, 4, 10, 20, 35,…
+  link: /course/sequences/figurate#tetrahedral
+
+tetrahedron:
+  title: Tetraedar
+  text: |
+    __Tetrahedron__ je platonska krutina i sastoji se od četiri lica koja su jednakostranični
+    trokut. Ima četiri vrha i šest rubova.
+  link: /course/polyhedra/platonic#platonic-overview
+
+theorem:
+  title: Teorema
+  text: |
+    Teoremaje posebno važan rezultat ili opažanje iz matematike. Dokazano je da je uvijek istinita,
+    koristeći aksiome, logiku pravila i prethodne teoreme za koje se već znalo da su istinite.
+
+transformation:
+  title: Transformacija
+  text: |
+    Transformacijapretvara jedan geometrijski oblik u drugi. Postoji mnogo različitih vrsta
+    transformacija, poput _refleksije_ ili _dilatacija_.
+  link: /course/transformations/rigid#transformations
+
+transformation-image:
+  title: Slika transformacije
+  text: |
+    Nakon transformiranja geometrijskog oblika, rezultat se naziva njegova slika ____. Često se
+    označava dodavanjem a “na kraju njegove oznake.
+  link: /course/transformations/rigid#transformations
+
+translation:
+  title: Prijevod
+  text: |
+    Prijevodje transformacija koja pomiče lik u određenom smjeru, bez promjene njegovog kuta ili
+    oblika.
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+
+translational-symmetry:
+  title: Translacijska simetrija
+  text: |
+    Ponovljeni uzorak (poput tapete) ima __translacijsku simetriju__ ako izgleda isto nakon što je
+    preveden s određene udaljenosti.
+  link: /course/transformations/symmetry-groups#symmetry-groups-1
+
+transversal:
+  title: obuhvaćanje
+  text: Poprečna je linija koja presijeca dvije druge linije.
+
+trapezium:
+  title: trapezoid
+  text: |
+    A __trapezij__ (ponekad zvan __trapez__) je četverostranik u kojem su dvije suprotne strane
+    paralelne. Nazivaju se _postolja_ trapezija, a ostale dvije strane se nazivaju _noge_.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-2
+
+triangle:
+  title: Trokut
+  text: A __trokut__ je geometrijski oblik koji ima tri ravne stranice i tri unutarnja kuta.
+
+triangle-aa:
+  title: AA uvjet za trokut
+  text: |
+    Dva trokuta su __slična__ ako dva njihova kuta imaju istu veličinu. To se naziva __uvjet
+    sličnosti AA__ za trokut.
+
+triangle-altitude:
+  title: Nadmorske visine trokuta
+  text: |
+    __nadmorska visina__ (ili __visina__) trokuta je linija okomita na jednu od strana koja prolazi
+    kroz suprotni vrh. Svaki trokut ima tri visine.
+  image: triangle-altitude.svg
+  link: /course/triangles/properties#altitudes
+
+triangle-legs:
+  title: Noge trokuta
+  text: |
+    Dvije __noge__ pravokutnog trokuta dvije su kraće strane (a ne _hipotenuza_). Oni su pored
+    pravog kuta.
+
+triangle-inequality:
+  title: Nejednakost trokuta
+  text: |
+    __Nejednakost trokuta__ kaže da je zbroj duljina bilo koje dvije strane trokuta veći od duljine
+    treće strane. To također znači da je najkraća udaljenost između dviju točaka ravno pravcu (jer
+    je prolazak kroz treću točku uvijek duži).
+
+triangle-median:
+  title: Posrednici trokuta
+  text: |
+    __Medijani__ trokuta su segmenti linija koji povezuju svaku točku s sredinom točke suprotnih
+    strana. Tri medija trokuta presijecaju se u jednoj točki nazvanoj __centroid__.
+  link: /course/triangles/properties#medians
+
+triangle-midsegment:
+  title: Midsegment
+  text: __srednji segmenti__ trokuta su linije koje povezuju središta različitih strana trokuta.
+  image: triangle-midsegment.svg
+  link: /course/triangles/midsegments
+
+triangle-numbers:
+  title: Trokutni brojevi
+  text: |
+    __Broj trokuta__ je cijeli broj koji se može predstaviti kao jednakostranični trokut od točkica.
+    Formula za _n_ broj trokuta je `(n*(n+1))/ 2`, a prvi brojevi trokuta su 1, 3, 6, 10, 15,…
+  image: triangle-numbers.svg
+  link: /course/sequences/figurate#triangle-numbers
+
+triangle-sss:
+  title: SSS uvjet za trokut
+  text: |
+    Dva trokuta su __sukladna__ ako su njihove tri strane iste dužine. To se naziva __SSS
+    kongruencija uvjet__ za trokut.
+  link: /course/triangles/congruence#congruence-1
+
+trigonometry:
+  title: Trigonometrija
+  text: |
+    __Trigonometrija__ je grana matematike koja proučava odnose između strana i uglova trokuta.
+    Prvenstveno se bavi trigonometrijskim funkcijama __sine__, __kosinusom__, __tangenta__ i
+    njihovim uzajamnim reakcijama.
+  link: /course/triangles/trigonometry
+
+truncated-icosahedron:
+  title: Trnoviti ikozaedar
+  text: |
+    __Skraćeni ikozaedar__ je _arhimedska krutina_ koja se sastoji od 12 pravilnih šesterokutova i
+    20 pravilnih šesterokutova.
+  link: /course/polyhedra/platonic#archimedean
+
+twin-primes:
+  title: Blizanci
+  text: |
+    __Twin primes__ su parovi pravih brojeva poput 17 i 19 ili 101 i 103, koji su točno dva. Nije
+    poznato postoji li beskonačno mnogo parova blizanaca.
+  link: /course/divisibility/distribution-of-primes#twin-primes
+
+unit-circle:
+  title: Jedinstveni krug
+  text: __Jedinstveni krug__ je krug s polumjerom 1.
+
+variable:
+  title: varijabla
+  text: |
+    Promjenaje količina koja je nepoznata ili može promijeniti vrijednost. U algebarskom izrazu
+    obično je predstavljeno slovom poput _x_.
+
+venn-diagram:
+  title: vennov dijagram
+  text: __Vennov dijagram__ vizualno prikazuje više svojstava ili događaja koji se preklapaju.
+  image: venn.svg
+
+vertical-angles:
+  title: Okomiti kutovi
+  text: |
+    __Okomiti kutovi__ su parovi suprotnih kutova stvorenih presijecanjem linija. Okomiti kutovi su
+    uvijek _kongruentni_.
+
+whole-numbers:
+  title: Cijeli brojevi
+  text: 'Cijeli brojevisu brojevi koji uključuju nula: 0, 1, 2, 3, 4,…'
+
+zero-product:
+  title: Nulta svojstvo proizvoda
+  text: |
+    __nulti svojstvo proizvoda__ kaže da, ako je proizvod dvije količine jednak nuli, barem jedna od
+    tih količina također mora biti jednaka nuli. Na primjer, ako je `a × (a - 1) = 0` onda ili `a =
+    0` ili `a - 1 = 0`.

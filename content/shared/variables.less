@@ -142,3 +142,9 @@
     border-@{c}: @size transparent solid;
   }
 }
+
+.theme(@prop, @light, @dark) {
+    @{prop}: @light;
+  html[theme="dark"] & { @{prop}: @dark; }
+  @media (prefers-color-scheme: dark) { html[theme="auto"] & { @{prop}: @dark; }}
+}

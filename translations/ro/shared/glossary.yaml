@@ -1,0 +1,1867 @@
+# ==============================================================================
+# MATHIGON GLOSSARY
+# ==============================================================================
+
+absolute-value:absolute-value:
+  title: Valoare absolută
+  text: |
+    Valoarea __absolută__ a unui număr este distanța sa de la 0 pe linia numerică. Face numere
+    negative pozitive, dar lasă numerele pozitive neschimbate. Valoarea absolută a `x` este scrisă
+    ca `|x|`. De exemplu, `|-5| = 5` și `|3| = 3`.
+
+acute-angle:
+  title: Unghi ascuțit
+  text: Un __unghi ascuțit__ este un unghi de mărime mai mică de 90°.
+
+acute-triangle:
+  title: Triunghi ascuțit
+  text: |
+    Un__triunghi ascuțit__ este un triunghi în care toate cele trei unghiuri sunt _ascuțite_ (mai
+    mici ca 90°).
+  link: /course/triangles/properties#classification
+
+adic:
+  title: Numere N-adice
+  text: |
+    Numerele ___N_ -adic__, pentru un număr întreg _n_, sunt un sistem numeric special, cu o
+    definiție a „apropierii” care este diferită de aritmetica obișnuită. Două numere _n_ -adic sunt
+    _închise_ dacă diferența lor este divizibilă cu o putere mare de _n_.
+
+adjacent-angles:
+  title: Unghiuri adiacente
+  text: |
+    Două unghiuri sunt __adiacente__ dacă au vârful și o latură în comun dar nu se suprapun.
+    Cuvăntul _adiacent_ înseamnă pur și simplu “în vecinătate”.
+
+aleph-zero:
+  title: Aleph Zero
+  text: |
+    Aleph Zero, scris folosindu-se litera ebraică א‎, este cardinalitatea unei mulțimi infinite
+    numarabile (de exemplu, numerele naturale).
+
+algebraic-numbers:
+  title: Numere algebrice
+  text: |
+    __Numerele algebrice__ reprezintă o submulțime a mulțimii numerelor reale care pot fi rădăcini
+    ale unei ecuații polinomiale cu coeficienți întregi. Toate numerele raționale (precum `2/3`) și
+    radicalii (precum `root(3,5)`) sunt numere algebrice, precum și numerele ce pot fi construite
+    din radicali (precum `(2 + sqrt(3))/(1 - sqrt(5))`.
+
+    Numerele care sunt reale, dar _nu_ și algebrice se numesc _numere transcendentale_.
+
+algorithm:
+  title: Algoritm
+  text: |
+    Un __algoritm__ este un set de reguli sau instrucțiuni ce pot fi folosite pentru a rezolva o
+    problemă specifică.  Algoritmii sunt utilizați în mod obișnuit de calculatoare și apar peste tot
+    în matematică: de la _împărțire_ până la _eliminarea Gaussiană_.
+
+alternate-angles:
+  title: Unghiuri alterne
+  text: |
+    __Unghiurile alterne__ sunt unghiurile formate de două _drepte paralele_ ce sunt taiate de o
+    linie de _traversare_. Ele sunt mereu congruente. În diagrama de mai jos, fiecare pereche de
+    unghiuri notate 1, 2, 3 and 4 sunt unghiuri alterne. Cele două unghiuri din fiecare pereche se
+    află pe o linie paralelă diferită și de-o parte si de alta a linie de traversare.
+
+    Perechile de unghiuri 1 și 2 se numesc __unghiuri alterne externe__, deoarece se află pe partea
+    de dinafară a dreptelor parelele, iar perechile de unghiuri 3 și 4 se numesc __unghiuri alterne
+    interioare__.
+
+amino-acid:
+  title: Amino acid
+  text: |
+    __Aminoacizii__ sunt compuși organici minusculi care alcătuiesc __proteine__. Ele sunt câteva
+    dintre elementele cheie ale tuturor organismelor vii.
+
+    În corpul nostru, aminoacizii sunt folosiți pentru a descompune alimentele, pentru a repara
+    țesuturile corpului, pentru a păstra energia și pentru multe alte funcții.
+
+angle:
+  title: Unghi
+  text: |
+    Un unghi este format de două semidrepte ce au o extremitate comună. Fiecare semidreaptă se
+    numește latura unghiului. Un unghi se măsoară de obicei în _grade_ sau _radiani_.
+
+angle-bisector:
+  title: Bisectoarea unui unghi
+  text: |
+    __Bisectoarea unui unghi__  este o dreaptă sau semidreaptă care împarte un unghi pe jumătate, în
+    două unghiuri mai mici, congruente.
+  image: angle-bisector.svg
+
+anti-dot:
+  title: Anti-Dot
+  text: |
+    Celulele dintr-o mașină punct pot conține __anti-puncte__, pe care le puteți considera ca
+    „găuri” sau „puncte negative”. Au o valoare de –1. Puteți adăuga întotdeauna un punct și un
+    anti-punct la aceeași celulă, fără a-i schimba valoarea.
+
+apothem:
+  title: Apotemă
+  text: __Apotema__ unui poligon regulat este distanța de la mijlocul unei laturi până la centrul său.
+
+arabic-numerals:
+  title: Numere arabe
+  text: |
+    __Sistemul cifrelor arabe__ folosește 10 cifre diferite (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) împreună
+    cu un sistem de valori zecimale pentru a scrie orice număr.
+
+    Acest sistem a fost dezvoltat pentru prima oară în India, iar apoi a fost adaptat de
+    matematicienii arabi înainte de a fi introdus In Europa de către matematicianul italian Leonardo
+    Fibonacci.
+
+arccos:
+  title: Arccosinus
+  text: |
+    Funcția arccosinus este o funcție trigonometrică notată cu `arccos(x)` sau `cos^(-1)(x)`. Este
+    funcția inversă a funcției `cos(x)`.
+
+archimedean-solid:
+  title: Solidd arhimedian
+  text: |
+    Un __solid arhimedian__ este un poliedru construit din diferite tipuri de poligoane regulate și
+    care arată la fel din orice direcție. Există 13 tipuri diferite de solide arhimediene.
+  link: /course/polyhedra/platonic#archimedean
+
+arithmetic-mean:
+  title: Media aritmetică
+  text: |
+    __Media aritmetică este valoarea medie a unui set de numere. Se poate calcula adunând toate
+    numerele din set și împărțind totalul la numărul de elemente.
+
+arithmetic-sequence:
+  title: Progresia aritmetică
+  text: |
+    O __progresie aritmetică__  este un șir de numere ai cărui termeni consecutivi diferă
+    întotdeauna printr-o diferență constantă _d_.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+arithmetic series:
+  title: Serie aritmetică
+  text: O __serie aritmetică__ este suma termenilor unei progresii aritmetice.
+
+associative:
+  title: Asociativitate
+  text: |
+    O operație • este asociativă dacă `a•(b•c) = (a•b)•c`. De exemplu, adunarea (+) și înmulțirea
+    (×) numerelor sunt operații asociative.
+
+atom:
+  title: Atom
+  text: |
+    __Atomii__ sunt particulele care alcătuiesc toată materia obișnuită: solide, lichide, gaze  și
+    plasmă. Atomii este format dintr-un _nucleu_ încărcat pozitiv, alcătuit din _protoni_ și
+    _neutroni_,  și înconjurat de un înveliș de _electroni_ încărcați negativ. Diametrul unui atom
+    este de aproximativ o zecime de nanometru.
+
+axiom:
+  title: Axiomă
+  text: |
+    O __axiomă__, numită uneori și __postulat__, este un enunț matematic considerat evident și care
+    nu mai trebuie dovedit. Ar trebui să fie atât de simplă, încât este adevărată în mod evident și
+    incontestabil.
+
+    Axiomele formeaza fundația  matematicii și pot fi folosite pentru a demonstra alte rezultate mai
+    complexe.
+
+axis-of-symmetry:
+  title: Axa de simetrie
+  text: |
+    Dacă o formă are simetrie reflexivă, __axa de simetrie__ este dreapta care o împarte în două
+    jumătăți egale.
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+base-10:
+  title: Baza 10
+  text: |
+    __Sistemul zecimal__ (sau __baza 10__) este sistemul de numerație cel mai utilizat din lume.
+    Fiecare cifră a unui număr poate avea una din cele zece valori diferite, de la 0 la 9.
+
+bipartite-graph:
+  title: Grafic bipartit
+  text: |
+    Un (complet) __grafic bipartit__ este format din două seturi de vârfuri. Fiecare vertex este
+    conectat la toate vârfurile din setul opus, dar niciunul dintre vârfurile din setul propriu.
+  link: /course/graph-theory/handshakes#handshakes-4
+
+blackjack:
+  title: Blackjack
+  text: |
+    __Blackjack__ este un joc de cărți în care adăugați valoarea mai multor cărți pentru a vă
+    apropia de 21 - dar nu mai sus.
+
+cavalieri:
+  title: Principiul lui Cavalieri
+  text: |
+    __Principiul lui Cavalieri__ afirmă că două solide care au înălțimea și aria secțiunii
+    transversale la fiecare nivel identice, atunci ele au același volum.
+
+    Putem folosi aceste date pentru a deduce că volumul prismei și al cilindrului este aria
+    secțiunii transversale înmulțită cu înălțimea.
+
+calculus:
+  title: Analiza matematică
+  text: |
+    __Analiza matematică__ este ramura matematicii ce se ocupă cu limite, derivate, integrale și
+    serii de puteri. Printre problemele comune abordate se numără calcularea pantei unei curbe,
+    calcularea punctelor de extrem, calcularea punctului de inflexiune și calcularea ariei de sub o
+    curbă.
+
+center-of-rotation:
+  title: Centru de Rotație
+  text: __Centrul de rotație__ este punctul în jurul căruia o formă este rotită. rotated.
+  link: /course/transformations/rigid#rotations
+
+centroid:
+  title: Centru de greutate
+  text: |
+    __Centrul de greutate__ al unui triunghi este punctul de intersecție al celor trei mediane. De
+    asemenea, el este și “centrul de masă” al triunghiului cu densitate uniformă.
+  link: /course/triangles/properties#center-of-mass
+
+chaos:
+  title: Haos
+  text: Tot
+
+circle:
+  title: Cerc
+  text: |
+    Un __cerc__ este mulțimea tuturor punctelor din plan aflate la o distanță fixă (_rază_) față de
+    un punct dat (_centru_).
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+circle-area:
+  title: Aria unui cerc
+  text: __Aria__ unui cerc cu raza _r_ este dată de formula `A = pi r^2`.
+
+circle-circumference:
+  title: Circumferința unui cerc
+  text: |
+    __Circumferința__ unui cerc este distanța în jurul acestuia. Un cerc cu rază _r_ are
+    circumferința `C = 2 pi r`.
+  link: /course/circles/introduction#radius
+
+circle-diameter:
+  title: Diametru (cerc)
+  text: |
+    __Diametrul__ unui cerc este distanța dintre două puncte opuse aflate pe circumferința sa, unde
+    distanța trece prin centrul cercului.
+  link: /course/circles/introduction#radius
+
+circle-radius:
+  title: Rază
+  text: |
+    __Raza__ unui cerc este distanța (sau segmentul de dreaptă) dintre centru și orice punct aflat
+    pe circumferința sa.
+  link: /course/circles/introduction#radius
+
+circle-sector:
+  title: Sector circular
+  text: |
+    Un __sector circular__ este o porțiune din interiorul unui cerc mărginită de două raze și un
+    __arc de cerc__. Aria sa este proporțională cu unghiul intern, precum și cu lungimea arcului.
+    Așadar
+
+    {.text-center} `(A_"Sector circular")/(A_"Cerc") = "Arc"/"Circumferință" = θ/(2π)`
+  link: /course/circles/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
+circle-segment:
+  title: Segment de cerc
+  text: |
+    Un __segment__ al unui cerc este o parte a interiorului său, delimitat de o coardă și arcul
+    corespunzător.
+
+circumcircle:
+  title: Cercul circumscris al unui triunghi
+  text: |
+    __Cercul circumscris__ al unui triunghi este cercul ce trece prin toate cele trei vârfuri ale
+    triunghiului.
+  image: circumcircle.svg
+  link: /course/triangles/properties#circumcircle-1
+
+coefficient:
+  title: Coeficient
+  text: |
+    __Coeficienții__ sunt numerele din fața variabilelor într-o expresie sau ecuație matematică. De
+    exemplu, în expresia `4x + 5y^2 - 3z`, coeficientul de `x` este 4, coeficientul de `y^2` este 5
+    și coeficientul de `z` este –3.
+
+collinear:
+  title: Puncte colineare
+  text: Trei sau mai multe puncte sunt __colinear__ dacă se află pe aceeași linie.
+
+compass:
+  title: Compas
+  text: |
+    Un compas este un instrument de desen folosit pentru a crea cercuri sau arce de cerc. El este
+    format din două brațe - acul de la un capăt este poziționat în centru, în timp de creionul de la
+    celalalt capăt este folosit pentru a trasa linia curbă.
+
+complementary-angles:
+  title: Unghiuri complementare
+  text: Două unghiuri sunt __complementare__ dacă se adaugă până la 90 ° (un unghi drept).
+
+complete-graph:
+  title: Grafic complet
+  text: |
+    În __grafice complete__, fiecare vertex este conectat la fiecare alt vertex. Un grafic complet
+    cu _n_ vârfuri are `(n×(n-1))/2` muchii.
+  link: /course/graph-theory/handshakes#handshakes-3
+
+complex-numbers:
+  title: Numere complexe
+  text: |
+    __numere complexe__ sunt toate numerele care reprezintă suma sau diferența unui număr real și a
+    unui imaginar. Ele sunt adesea scrise ca `a + bi`, unde _a_ este partea reală și _b_ este partea
+    imaginară.
+
+    Numerele complexe pot fi reprezentate pe un plan bidimensional, unde _x_ -axis sunt numerele
+    reale, iar _y_ -axis sunt numerele imaginare.
+
+    Setul tuturor numerelor complexe este adesea notat folosind simbolul `CC`.
+
+composite-number:
+  title: Numar compus
+  text: |
+    Un __număr compus__ este un număr întreg care nu este prim. Aceasta înseamnă că are alți factori
+    decât 1 și în sine.
+
+concave:
+  title: Poligon concav
+  text: |
+    Un poligon __concav__ are cel puțin un unghi intern cu măsura mai mare ca 180°. Cel puțin una
+    din diagonale se află _în exteriorul_ poligonului. O metodă comună de identificare a unui
+    poligon concav este de a căuta o latură “săpată în interior”. Poligoanele _concave_ sunt opusul
+    poligoanelor _convexe_.
+  link: /course/polyhedra/polygons#concave
+
+cone:
+  title: Con circular
+  text: |
+    Un __con circular__ este un corp geometric tridimensional care are o _bază_ circulară unită
+    într-un singur punct (numit vertex) de o laterală curbată. Te poți gândi la un con ca la o
+    “piramidă circulară”.
+
+    Un __con drept__ este un con care are vârful exact deasupra centrului bazei sale.
+  link: /course/circles/spheres-cones-cylinders#cone
+  image: cone.svg
+
+cone-volume:
+  title: Volumul unui Con
+  text: |
+    Volumul unui con este dat de ecuația
+
+    {.text-center} `V = 1/3 π r^2 h`,
+
+    unde _r_ este raza bazei circulare și _h_ este înălțimea conului (lungimea perpendicularei de la
+    bază la vertex).
+
+congruent:
+  title: Congruența
+  text: |
+    În geometrie, două figuri geometrice sunt __congruente__ dacă sunt identice ca dimensiune, formă
+    și mărime. Asta înseamnă că le putem muta, răsturna sau roti astfel încât să se potrivească
+    exact una peste alta.
+  link: /course/euclidean-geometry/definitions#congruence
+
+congruent-angles:
+  title: Unghiuri congruente
+  text: Două unghiuri sunt __congruente__ dacă au aceeași măsură.
+
+conic-section:
+  title: Secțiune conică
+  text: |
+    O __secțiune conică__ este o curbă ce rezultă în urma intersecției suprafeței unui con cu o
+    suprafață plană. Există patru tipuri diferite de secțiuni conice care au multe proprietăți
+    comune: * Cercul * Elipsa * Parabola * Hiperbola
+  link: /course/circles/conic-sections
+
+convex:
+  title: Poligonul convex
+  text: |
+    Un poligon __convex__ nu conține unghiuri interne mai mari de 180 °. Toate diagonalele se află
+    în interiorul poligonului. Acesta este opusul poligonului _concav_.
+  link: /course/polyhedra/polygons#concave
+
+coordinate-system:
+  title: Sistem de coordonate
+  text: |
+    Un sistem coordonateste un plan bidimensional care conține două axe perpendiculare. Fiecare
+    punct al planului poate fi definit folosind două numere (coordonate), care specifică distanța sa
+    față de cele două axe.
+
+coordinate-system-origin:
+  title: Sistem de coordonate
+  text: |
+    Origineaa unui sistem de coordonate este punctul cu coordonate (0, 0). De obicei este punctul în
+    care se traversează cele două axe.
+
+corresponding-angles:
+  title: Unghiuri corespunzătoare
+  text: |
+    __Unghiurile corespunzătoare__ sunt două unghiuri care sunt în aceeași poziție în raport cu
+    transversal, dar pe linii diferite. Sunt întotdeauna congruenți.
+  image: corresponding-angles.svg
+
+cos:
+  title: Cosinus
+  text: |
+    __Cosinus__ este o funcție trigonometrică ce se notează `cos(θ)`. Ea este definită într-un
+    triunghi dreptunghic ca fiind raportul dintre cateta alăturată și ipotenuză.
+  link: /course/triangles/trigonometry#trig-functions
+
+cpoct:
+  title: CPOCT
+  text: |
+    CPOCT stands for __corresponding parts of congruent triangles__. It means that if two triangles
+    are congruent, then all of their corresponding components (angles, sides, midsegments, …) must
+    also be congruent to each other.
+  link: /course/triangles/congruence#cpoct
+
+cross-section:
+  title: Secțiune transversală
+  text: O secțiune __transversală__ este intersecția unui solid tridimensional cu un plan.
+
+cryptography:
+  title: Criptografie
+  text: |
+    __Criptografia__ este ramura matematicii care studiază cifrarea și descifrarea mesajelor
+    secrete.
+
+cube:
+  title: cub
+  text: |
+    Un __cub__ (numit uneori și __hexaedru__) este un poliedru regulat în care fiecare față este un
+    pătrat. Este unul dintre cele cinci _solide platonice_ și are 6 fețe, 8 vârfuri și 12 muchii.
+  link: /course/polyhedra/platonic#platonic-overview
+
+cube-volume:
+  title: Volumul unui cub
+  text: Un cub cu latura de lungime _a_ are volumul `V = a^3`.
+
+cylinder:
+  title: Cilindru
+  text: |
+    Un __cilindru__ este un corp geometric format din două părți circulare congruente și paralele
+    (_bazele_) unite printr-o suprafață curbă. Te poți gândi la un cilindru ca la o "prismă
+    circulară".
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+
+cylinder-volume:
+  title: Volumul unui cilindru
+  text: |
+    Volumul unui cilindru este dat de ecuația
+
+    {.text-center} `V = π r^2 h`,
+
+    undee _r_ este raza bazei, și _h_ este înălțimea cilindrului (lungimea perpendicularei dintre
+    cele două baze).
+
+degrees:
+  title: Grade
+  text: |
+    __Gradele__  sunt o unitate de măsură a unghiurilor, notată cu simbolul °. O mișcare de
+    revoluție completă este de 360°, un unghi drept are 90° și asa mai departe.
+
+denominator:
+  title: Numitor
+  text: |
+    Numitoruleste numărul de jos dintr-o fracțiune. De exemplu, în `4/7`, numărul 7 este numitorul.
+
+dilation:
+  title: Scalare
+  text: |
+    __Scalarea__ este o transformare geometrică prin care o formă geometrică se redimensionează prin
+    mărire sau micșorare.
+  image: dilation.svg
+  link: /course/transformations/dilations
+
+directed-graph:
+  title: Graficul direcționat
+  text: |
+    Într-un __grafic direcționat__, fiecare muchie are o „săgeată”, adică un vertex de început și un
+    vertex final.
+  link: /course/graph-theory/introduction#intro-1
+
+discriminant:
+  title: discriminantă
+  text: |
+    __discriminant__ al unei ecuații cvadratice este expresia sub rădăcina pătrată din formula
+    cvadratică: `b^2 − 4ac`.
+
+    Poate fi utilizat pentru a determina numărul de soluții ale ecuației cvadratice. Dacă
+    discriminantul este mai mare de 0, există două soluții. Dacă este egal cu 0, există o singură
+    soluție. Dacă este mai mică de 0, nu există soluții (reale).
+
+dna:
+  title: ADN
+  text: |
+    __ADN__-ul (acidul dezoxiribonucleic) este o moleculă care conține codul genetic al fiecărui
+    organism viu. Majoritatea ADN-urilor constau din două lanțuri organice ce formează un _dublu
+    helix_. Informația genetică este codificată în ordinea a patru acizi nucleici (A, G, C și T).
+    _Secvențierea ADN-ului_ este metoda de extragere a acestei informații - o procedura esențială în
+    biologie, medicină, genetică și biotehnologie.
+
+dodecahedron:
+  title: Dodecaedru
+  text: |
+    __Dodecaedrul__ este un poliedru cu douăsprezece fețe care sunt pentagoane regulate. El are 20
+    de vârfuri și 30 de muchii.
+  link: /course/polyhedra/platonic#platonic-overview
+
+dot-annihilation:
+  title: Anihilare
+  text: |
+    Dacă aveți atât un punct cât și un anti-punct în aceeași celulă, acestea se anulează sau __se
+    anihilează__ reciproc. Gândiți-vă la `–1 + 1 = 0`.
+
+dot-machine:
+  title: Mașină de punct
+  text: |
+    O __dot machine__ este formată din mai multe celule care conțin puncte. Puteți manipula aceste
+    puncte conform regulilor specifice.
+
+    De exemplu, într-o mașină `1←3`, 3 puncte dintr-o celulă pot fi transformate în 1 punct în
+    celula următoare în _stânga_. În mod similar, 1 punct poate fi convertit în 3 puncte în celula
+    următoare în _dreapta_. Aceasta se numește „explozie”.
+
+ellipse:
+  title: Elipsa
+  text: |
+    O __elipsă__ este o traiectorie curbă ce înconjoară două focare. Pentru orice punct de pe
+    circumferință _suma distanțelor_ la cele două focare este constantă.
+
+    Dacă focarele sunt prea apropiate, elipsa arată aproape ca un cerc. Pe măsură ce se
+    îndepărtează, elipsa devine mai alungită.
+
+    Elipsele reprezintă un tip de _secțiune conică_: intersecția unui con cu un plan.
+  image: ellipse.svg
+  link: /course/circles/conic-sections#ellipses
+
+equation:
+  title: Ecuaţie
+  text: |
+    O ecuațieeste o afirmație matematică creată prin conectarea a două sau mai multe expresii cu
+    semnul __egal cu__ `=`. Acesta indică faptul că toate aceste expresii au aceeași valoare.
+
+equilateral-triangle:
+  title: Triunghi echilateral
+  text: Un __triunghi echilateral__ este un triunghi care are toate laturile egale.
+
+euclidean-geometry:
+  title: Geometria euclidiană
+  text: |
+    __Geometria euclidiană__ este tipul de geometrie concepută de matematicianul _Euclid_. Ea
+    studiază punctele, dreptele, poligoanele, cercurile, precum și formele geometrice
+    tridimensionale. Depinde de doar cinci _axiome_, legile de bază ale geometriei, ce descriu toate
+    operațiunile și construcțiile permise.
+  link: /course/euclidean-geometry/euclids-axioms#euclid
+
+factor:
+  title: Factor
+  text: |
+    Un număr _a_ este un factor(sau __divizor__) al unui număr _b_, dacă puteți împărți _b_ până la
+    _a_ fără rest.
+  link: /course/divisibility/factors-and-multiples
+
+factorial:
+  title: factorial
+  text: |
+    __factorial__ al unui număr întreg pozitiv este produsul tuturor numerelor întregi până la și
+    inclusiv în sine. O scriem folosind punctul de exclamare, de exemplu
+
+    {.text-center} `5! = 1×2×3×4×5`.
+
+    Prin definiție, `0! = 1.`
+
+factorisation:
+  title: Descompunerea în factori primi
+  text: |
+    __Descompunerea în factori primi__ a unui număr este un mod de a-l scrie ca produs de numere
+    prime.
+  link: /course/divisibility/primes
+
+fermat-last:
+  title: Ultima teoremă a lui Fermat
+  text: |
+    __Ultima teoremă a lui Fermat__ afirmă că ecuația `x^n + y^n = z^n` nu are soluții întregi
+    pentru `n>2`. Dacă `n=2`, obținem _Teorema lui Pitagora_ care are multe soluții întregi, dar
+    pentru _n_ = 3, 4, 5, ... nu există.
+
+    În 1637, matematicianul Pierre de Fermat a făcut o notă într-un manual, susținând că are o
+    dovadă, dar că era prea mare pentru a se încadra în marjă. Timp de peste 350 de ani, alți
+    matematicieni au încercat să găsească această dovadă, iar ultima teoremă a lui Fermat a fost
+    chiar în _Guinness Book of World Records_ drept „cea mai dificilă problemă matematică”.
+
+    În 1994, după mulți ani de muncă, Andrew Wiles a reușit în sfârșit să dovedească asta. Ulterior
+    a primit premiul Abel, unul dintre cele mai înalte onoruri în matematică.
+
+fibonacci-numbers:
+  title: Numere Fibonacci
+  text: |
+    Secvența numerelor __Fibonacci__ începe cu 1, 1. Fiecare termen următor este suma celor doi
+    termeni precedenți, ceea ce înseamnă că formula recursivă este `x_n = x_(n-1) + x_(n-2)`.
+  link: /course/sequences/fibonacci#fibonacci
+
+figurate-numbers:
+  title: Numere Firgurate
+  text: |
+    __Numere precise__ sunt numere care pot fi reprezentate folosind forme geometrice. Exemple
+    includ numere pătrate, triunghi și tetraedru.
+  link: /course/sequences/figurate#figurate
+
+formula:
+  title: Formulă
+  text: |
+    O formulăeste o regulă sau o ecuație care descrie relația dintre două sau mai multe variabile.
+    Un exemplu este `A = πr^2`.
+
+fractal:
+  title: fractal
+  text: |
+    O __fractală__ este o formă geometrică care are o _dimensiune fracțională_. Multe fractale
+    celebre sunt _auto-similare_, ceea ce înseamnă că constau în copii mai mici ale lor. Fractalele
+    conțin modele la toate nivelurile de mărire și pot fi create prin repetarea unei proceduri sau
+    iterarea unei ecuații la infinit de mai multe ori.
+  link: /course/fractals/introduction
+
+fta:
+  title: Teorema Fundamentală a Aritmeticii
+  text: |
+    __Teorema Fundamentală a Aritmeticii__ (TFA) spune că orice număr întregi are o descompunere în
+    factori primi unică.
+
+function:
+  title: Funcție
+  text: |
+    O __funcție__ este o relație matematică ce convertește o intrare (_x_) într-o singură ieșire
+    (_y_). Este adesea exprimată ca ecuație matematică de forma `f(x)`.
+
+function-graph:
+  title: Grafice de Functii
+  text: |
+    Funcțiile matematice de forma `f(x)` pot fi reprezentate grafic într-un sistem de coordonate.
+    Rezultatul se numește __graficul_ funcției.
+
+gcf:
+  title: Cel mai mare factor comun
+  text: |
+    __cel mai mare factor comun__ (mcd) din două numere _a_ și _b_ este cel mai mare număr întreg
+    care este un factor atât de _a_ cât și de _b_.
+  link: /course/divisibility/greatest-common-factors
+
+geometric-sequence:
+  title: Secvență geometrică
+  text: |
+    O __secvență geometrică__ (uneori numită __progresie geometrică__) este o secvență de numere în
+    care raportul _r_ între termeni consecutivi este întotdeauna constant.
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+geometric-series:
+  title: Serie geometrică
+  text: |
+    O __serie geometrică__ este suma infinită a termenilor într-o secvență geometrică, unde termenii
+    consecutivi au un raport constant _r_. De exemplu,
+
+    {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
+
+    este o serie geometrică cu raport constant `1/2`.
+
+glide-reflection:
+  title: Reflexii cu alunecare
+  text: |
+    O __reflexie cu alunecare__ este un tip special de transformare geometrică. Este o combinație
+    între o _reflexie_ și o _translație_ efectuate în aceeași direcție precum axa de reflexie.
+  link: /course/transformations/symmetry-groups#footsteps
+
+golden-ratio:
+  title: Ratia de aur
+  text: |
+    __raportul de aur__ este un număr irațional specific cu valoare `φ = 1.61803398875…`. Poate fi
+    aproximat prin împărțirea a două numere consecutive Fibonacci.
+
+    Raportul auriu este adesea văzut ca deosebit de plăcut estetic în artă și arhitectură și apare
+    în spiralele multor plante.
+  link: /course/sequences/fibonacci#golden-ratio-1
+
+graph:
+  title: Grafic
+  text: Un __grafic__ este o colecție de vârfuri conectate prin margini.
+  link: /course/graph-theory/introduction
+
+graph-cycle:
+  title: Ciclu
+  text: __Cicluri__ sunt grafice care constau dintr-o singură buclă de vârfuri.
+  link: /course/graph-theory/introduction#intro-4
+
+graph-degree:
+  title: grad
+  text: __gradul__ al unui vertex este numărul de muchii care se întâlnesc la acel vertex.
+  link: /course/graph-theory/introduction#intro-3
+
+graph-edge:
+  title: Margine
+  text: __Edge__ sunt liniile care conectează vârfurile (punctele) dintr-un grafic.
+  link: /course/graph-theory/introduction
+
+graph-order:
+  title: Ordin
+  text: Ordineaa unui grafic este numărul de vârfuri din el.
+  link: /course/graph-theory/introduction#intro-3
+
+graph-vertex:
+  title: zenit
+  text: Un __vertex__ este un punct sau un nod care face parte dintr-un grafic.
+  link: /course/graph-theory/introduction
+
+gravity:
+  title: Gravitația
+  text: |
+    __Gravitația__ este una din cele patru forțe fundamentale ale naturii. Este forța care atrage
+    oricare două mase din univers una către cealaltă. Isaac Newton a descoperit că forța de atracție
+    dintre două mase `m_1` și `m_2` este
+
+    {.text-center} `F = (G m_1 m_2) / r^2`,
+
+    unde _G_ este constanta gravitațională și _r_ este distanța dintre mase.
+
+group:
+  title: Grup
+  text: |
+    Un grup este o colecție de “obiecte” (precum numere sau simetrii) ce îndeplinesc trei reguli
+    distincte:
+
+    1. Două obiecte se pot aduna/combina pentru a obține un altul care se află tot în grup. 2.
+    Obiectele sunt _asociative_, adică `a+(b+c) + (a+b)+c`. 3. Există un _element neutru_ și fiecare
+    “obiect” are un _element simetric_ care
+       atunci când se adună împreună, se obține elementul neutru.
+  link: /course/transformations/symmetry-groups#groups-1
+
+hailstone-sequence:
+  title: Secvență de grindină
+  text: |
+    __Secvențe de grindină__ pot fi generate prin alegerea oricărui număr întreg ca punct de
+    plecare, după care urmează aceste reguli:
+
+    * Dacă `x_n` este egal, `x_(n+1) = x_n / 2`.
+
+    * Dacă `x_n` este ciudat, `x_(n+1) = 3 * x_n + 1`
+  link: /course/sequences/special#hailstone
+
+heptagon:
+  title: Heptagon
+  text: Un __heptagon__ este un poligon cu șapte laturi.
+
+hexagon:
+  title: Hexagon
+  text: Un hexagon este un poligon cu șase laturi.
+
+hyperbola:
+  title: Hiperbola
+  text: |
+    O __hiperbolă__ este forma graficului funcției `y = 1/x`. Ea este formată din două părți
+    disjuncte, both of which approach _asymptotes_. It is also a _conic section_.
+  image: hyperbola.svg
+
+hypotenuse:
+  title: Ipotenuză
+  text: |
+    __ipotenuză__ a unui triunghi unghi drept este cea mai lungă latură, care se află opus unghiului
+    drept.
+  image: right-triangle.svg
+
+icosahedron:
+  title: icosahedron
+  text: |
+    Icozaedruleste un solid platonic și este format din 20 de fețe care sunt toate triunghiuri
+    echilaterale. Are 12 vârfuri și 30 de muchii.
+  link: /course/polyhedra/platonic#platonic-overview
+
+imaginary:
+  title: Numere imaginare
+  text: |
+    __Numerele imaginare__ sunt generate prin preluarea rădăcinilor pătrate ale numerelor negative.
+    În ciuda numelui, acestea sunt de o importanță deosebită în matematică, știință și inginerie.
+
+    __unitatea imaginară__ este scrisă ca `i = sqrt(−1)`, iar alte numere imaginare pot fi scrise ca
+    multiplii săi. De exemplu, `sqrt(-5) = 5i`.
+
+infinity:
+  title: Infinit
+  text: |
+    __Infinity__ este o cantitate fără limită sau sfârșit. În matematică, este reprezentat de
+    simbolul `∞`.
+
+information:
+  title: Teoria informației
+  text: |
+    __Teoria informației__ este studiul cuantificării, stocării și comunicării datelor și
+    informațiilor. Este folosit în logică, criptografie și informatică.
+
+integer:
+  title: Întregi
+  text: |
+    Numerele întregi __sunt numerele întregi pozitive și negative, inclusiv zero:…, –3, –2, –1, 0,
+    1, 2, 3,…. Acestea sunt adesea notate folosind simbolul `ZZ`.
+
+internal-angle:
+  title: Unghiuri interne
+  text: __Unghiurile interne__ ale unui poligon sunt unghiurile din interior aflate la fiecare vârf.
+  image: internal-angle.svg
+
+irrational-numbers:
+  title: Nume iraționale
+  text: |
+    __Numerele iraționale__ sunt numere care nu se pot exprima ca raportul a două numere
+    întregi(_numere raționale_). De exemplu, 0.333333… = `1/3` este _rațional_, dar `π`, `sqrt(2)`
+    și _e_ sunt _iraționale_. Partea zecimală a unui număr irațional nu are capăt si nici nu se
+    repetă.
+
+irregular-polygon:
+  title: Poligon neregulat
+  text: |
+    Un __poligon neregulat__ este unul care _nu este regulat_. Aceasta înseamnă că fie laturile, cât
+    și unghiurile nu au toate aceeași dimensiune.
+
+isosceles-triangle:
+  title: Triunghi isoscel
+  text: Un triunghi care are două laturi cu lungimi egale se numește triunghi isoscel.
+
+iss:
+  title: Stația Spațială Internațională
+  text: |
+    __Stația Spațială Internațională__ (SSI) a fost lansată în 1998 și orbitează Pământul la o
+    altitudine de aproximativ 400 km. Este cel mai mare obiect construit de om ce se află pe orbita
+    mică a Pământului și a fost locuită continuu de la lansare. Se poate vedea cu ochiul liber de pe
+    Pământ.
+
+julia-set:
+  title: Julia Set
+  text: |
+    Având în vedere o funcție `f`, cum ar fi `§f(x) = x^2`, setul __Julia corespunzător__ `§K(f)`
+    este un subset al tuturor punctelor din planul complex, în care secvența formată prin aplicarea
+    repetată `f` nu diverge. În multe cazuri, setul Julia este un fractal __ și este strâns legat de
+    _setul Mandelbrot_.
+  link: /course/fractals/mandelbrot#julia
+  image: julia-set.png
+
+kite:
+  title: Zmeu
+  text: Un __zmeu__ este un patrulater în care două perechi de laturi adiacente au aceeași lungime.
+  link: /course/polyhedra/quadrilaterals#kites
+
+koch-snowflake:
+  title: Fulg de zăpadă Koch
+  text: |
+    __Flocul de zăpadă Koch__ este un fractal auto-similar. Se compune dintr-un triunghi eqilateral,
+    cu triunghiuri echilaterale mai mici adăugate recursiv la fiecare dintre laturile sale.
+  link: /course/fractals/introduction#koch
+  image: koch-snowflake.svg
+
+laws-of-nature:
+  title: Legile Naturii
+  text: |
+    __Legile Naturii__ reprezintă numele dat la comun regulilor fizice (exprimate de obicei ca
+    ecuații matematice) care încearcă să explice tot ce observăm în univers.
+
+lcm:
+  title: Cel mai scăzut comun multiplu
+  text: |
+    __Cel mai scăzut multiplu comun__ (mcm) din două numere _a_ și _b_ este cel mai mic număr întreg
+    care este multiplu atât de _a_ cât și de _b_.
+  link: /course/divisibility/least-common-multiples
+
+line:
+  title: Dreaptă
+  text: |
+    O __dreaptă__ este un set infinit de puncte ce se prelungește la nesfârșit în ambele direcții.
+    Dreptele sunt întotdeauna drepte și nu au _lățime_.
+  link: /course/euclidean-geometry/definitions#lines
+
+line-segment:
+  title: Segment de dreaptă
+  text: |
+    Un __segment de dreaptă__ este o bucata a unei drepte ce se află între două puncte, fără a se
+    prelungi la nesfârșit. Segmentele de dreaptă de la punctul _A_ la punctul _B_ se notează
+    `bar(AB)`.
+  link: /course/euclidean-geometry/definitions#segments
+
+line-slope:
+  title: Panta unei linii
+  text: |
+    __panta__ a unei linii își măsoară „abruptul” și este de obicei notată cu litera _m_. Este
+    modificarea în _y_ pentru o modificare a unității în _x_ de-a lungul liniei.
+
+linear-equation:
+  title: Ecuație liniară
+  text: |
+    O __ecuație liniară__ este de forma `ax + b = 0`, unde _x_ este o variabilă, iar _a_ și _b_ sunt
+    numere. Când sunt grafiate într-un sistem de coordonate, valorile lui `ax+b` formează o linie
+    dreaptă.
+
+linear-function:
+  title: Funcție liniară
+  text: |
+    O __funcție liniară__ este o funcție al cărei grafic este o linie dreaptă. Poate fi definit ca
+    `f(x) = mx + c`, unde _m_ este panta liniei și _c_ este interceptarea sa _y_ -axis.
+
+mandelbrot-set:
+  title: Set Mandelbrot
+  text: |
+    __Setul Mandelbrot__ este setul de numere complexe `CC` pentru care secvența recursivă `§z_n =
+    z_(n-1)^2 + c` (cu `§z_0 = 0`) nu diverge. Este un fractal __.
+  link: /course/fractals/mandelbrot
+  image: mandelbrot-set.png
+
+matrix:
+  title: Matrice
+  text: O __matrice__ este un tablou dreptunghiular de numere aranjate în rânduri și coloane.
+
+median:
+  title: Median
+  text: |
+    __mediană__ a unui set de numere este valoarea pentru care jumătate din numere sunt mai mari și
+    jumătate din numere mai mici. Dacă există două „numere medii”, aceasta este media acestor
+    numere.
+
+midpoint:
+  title: Punct de mijloc
+  text: |
+    __punctul mediu__ al unui segment de linie este punctul de pe segmentul de linie care împarte
+    segmentul în mijloc, în două părți congruente. __formula punctului mediu__ spune că pentru
+    punctele finale `(x_1, y_1)` și `(x_2,y_2)`, punctul mediu este `((x_1 + x_2)/2, (y_1 +
+    y_2)/2)`.
+
+millennium-prize:
+  title: Problemele pentru Premiul Mileniului
+  text: |
+    Cele șapte __Probleme pentru Premiul Mileniului__ sunt unele dintre cele mai dificile probleme
+    nerezolvate din matematică. Acestea au fost listate în anul 2000 de către _Institutul de
+    Matematică Clay_ și pentru fiecare există o recompensă de $1.000.000:
+
+    * P vs NP * Conjectura lui Hodge * Conjectura lui Poincaré * Ipoteza Riemann * Teoria Yang-Mills
+    * Problema de existență și netezime Navier-Stokes * Conjectura Birch și Swinnertod-Dyer
+
+    Până în acest moment, singura problemă rezolvată este _conjectura Poincaré_. Cu toate acestea,
+    Grigori Perelman, matematicianul care a rezolvat-o, a refuzat premiul.
+
+mode:
+  title: mod
+  text: |
+    Modulal unui set de numere este numărul care apare cel mai des. De exemplu, modul de [3, 4, 4,
+    4, 5, 5, 6] este 5.
+
+molecule:
+  title: Moleculă
+  text: |
+    O __moleculă__ este formată din doi sau mai mulți atomi ce sunt legați prin legături chimice.
+    Spre deosebire de __ioni_, molecula nu are sarcină electrică.
+
+    Exemplele de molecule includ `O_2`, ce este formată din doi atomi de oxigen legați și `H_2 O`,
+    ce este formată din doi atomi de hidrogen și unul de oxigen.
+
+morse-code:
+  title: Codul Morse
+  text: |
+    __Codul Morse__ este o modalitate de a reprezenta litere și numere folosind semnale scurte și
+    lungi (numite puncte și liniuțe). Se numește după _Samuel Morse_ și a fost inițial folosit
+    pentru a comunica pe distanțe lungi folosind telegrafele.
+
+    De exemplu, litera „L” va fi reprezentată folosind secvența _{x-morse(char="L")}_ de semnale
+    scurte și lungi.
+
+multiple:
+  title: Multiplu
+  text: 'Un număr _a_ este un __multiplu__ al unui număr _b_, dacă _b_ este un factor de _a_.'
+  link: /course/divisibility/factors-and-multiples
+
+natural-numbers:
+  title: Numere naturale
+  text: |
+    Numerele __naturale__ sunt numere întregi pozitive începând de la 1: 1, 2, 3, 4, ... Ele sunt
+    adesea notate folosind simbolul `NN`.
+
+net:
+  title: Pânzele unui poliedru
+  text: |
+    __Pânza__ unui poliedru este ceea ce se obține atunci când se "desfășoară" pe o suprafață plană
+    fețele poligonale.
+
+neutron:
+  title: neutron
+  text: |
+    Un __neutron__ este una dintre particulele care formează miezul unui atom. Nu are nicio
+    încărcare și are aproximativ aceeași masă ca un proton.
+
+np:
+  title: NP Probleme grele
+  text: |
+    _Teoria complexității computaționale_ se referă la determinarea problemelor „dificile” care
+    trebuie rezolvate de către un computer. __NP greu__ (polinomul nedeterminativ timp-dur) este
+    clasa celor mai dificile probleme.
+
+numerator:
+  title: Numărător
+  text: |
+    Număruleste numărul superior dintr-o fracțiune. De exemplu, în `4/7`, numărul 4 este
+    numărătorul.
+
+obtuse-angle:
+  title: Unghi obtuz
+  text: 'Un __unghi obtuz__ este un unghi care are măsura mai mare ca 90°, dar mai mică decât 180°.'
+
+obtuse-triangle:
+  title: Triunghi obtuzunghic
+  text: Un __triunghi obtuzunghic__ este un triunghi care are un unghi intern cu măsura mai mare de 90°.
+  link: /course/triangles/properties#classification
+
+octagon:
+  title: Octogon
+  text: Un __octagon__ este un poligon cu opt laturi.
+
+octahedron:
+  title: Octaedru
+  text: |
+    __Octaedrul__ este un solid platonic și este alcătuit din 8 fețe care sunt triunghiuri
+    echilaterale. Are 6 vârfuri și 12 muchii.
+  link: /course/polyhedra/platonic#platonic-overview
+
+order-of-symmetry:
+  title: Gradul de Simetrie
+  text: |
+    Dacă o formă are simetrie rotațională, __gradul de simetrie__ este numărul de orientări în care
+    forma arată la fel. (Sau, este numărul de rotații posibile înainte de a ajunge înapoi la locul
+    de start.)
+  link: /course/transformations/symmetry#rotational-symmetry
+
+origin:
+  title: Origine
+  text: |
+    Origineaa unui sistem de coordonate este punctul (0, 0), unde intersectează _x_ -axis și _y_
+    -axis.
+
+origin-number-line:
+  title: Originea unei linii numerice
+  text: __originea__ a unei linii numerice este punctul 0.
+
+palindrome:
+  title: Palindrom
+  text: |
+    Un __palindrom__ este un cuvânt sau un număr care se citește de la coadă la cap la fel ca de la
+    cap la coadă. De exemplu, 25752 și “ANNA” sunt amândouă palindromuri.
+  link: /course/transformations/symmetry#palindromes
+
+parabola:
+  title: Parabola
+  text: |
+    O __parabolă__ este forma graficului unei funcții de gradul al doilea `y = x^2`. Este simetrică,
+    în formă de U și poate fi îndreptată fie în sus, fie în jos. De asemenea, este și o _secțiune
+    conică_.
+  image: parabola.svg
+
+parabola-conic:
+  title: Antenă de satelit
+  text: |
+    O __parabola__ este ansamblul tuturor punctelor dintr-un plan, care au aceeași distanță față de
+    o linie fixă, numită directivași un punct fix, numit focalizarea ____.
+
+parabola-focus:
+  title: Focus al unei parabole
+  text: |
+    __focalizarea__ a unei parabole este un punct fix în interiorul său. Pentru o oglindă
+    parabolică, toate razele de lumină de intrare paralele se intersectează în focar după ce sunt
+    reflectate.
+
+parabola-vertex:
+  title: Vertexul unei parabole
+  text: |
+    Vârfulal unei parabole este punctul în care își schimbă direcția. Este fie maximul, fie minimul
+    funcției patratice corespunzătoare și se află pe axa de simetrie a parabolei.
+
+parallel:
+  title: Drepte paralele
+  text: |
+    Două sau mai multe drepte sunt __paralele__ dacă nu se intersectează niciodată. Ele au aceeași
+    pantă, iar distanța dintre ele este întotdeauna constantă.
+  image: parallel.svg
+  link: /course/euclidean-geometry/definitions#parallel
+
+parallelogram:
+  title: Paralelogram
+  text: Un __paralelogram__ este un patrulater în care ambele perechi de laturi opuse sunt paralele.
+  link: /course/polyhedra/quadrilaterals#parallelograms
+
+pascals-triangle:
+  title: Triunghiul lui Pascal
+  text: |
+    __Triunghiul lui Pascal__ este o piramidă numerică în care fiecare celulă este suma celor două
+    celule direct deasupra. Conține toți coeficienții binomiali, precum și multe alte secvențe de
+    numere și tipare.
+  link: /course/sequences/pascals-triangle#pascal-triangle
+
+penrose:
+  title: Placi de pene
+  text: |
+    A __Tiling Penrose__ este o _neperiodă_, _teselare similară cu sine_. Constă doar din câteva
+    forme diferite, dar nu se repetă niciodată.
+  link: /course/polyhedra/tessellations#penrose
+
+pentagon:
+  title: Pentagon
+  text: Un __pentagon__ este un poligon cu cinci laturi.
+
+percent:
+  title: La sută
+  text: |
+    Un __la sută__ este un raport al cărui numitor este 100. De exemplu, scriem 80% pentru a însemna
+    `80/100 = 0.8`.
+
+perfect-numbers:
+  title: Numere perfecte
+  text: |
+    Un __număr perfect__ este un număr care este egal cu suma divizorilor săi (exclusiv el însuși).
+    De exemplu, `28 = 1 + 2 + 4 + 7 + 14` este un număr perfect.
+  link: /course/sequences/special#perfect-1
+
+perpendicular:
+  title: Drepte perpendiculare
+  text: |
+    Două drepte sunt __perpendiculare__ (uneori numite _ortogonale_) dacă intersectia lor formează
+    un unghi drept.
+  image: perpendicular.svg
+  link: /course/euclidean-geometry/definitions#perpendicular
+
+perpendicular-bisector:
+  title: Mediatoare
+  text: __Mediatoarea__ unui segment de dreaptă este perpendiculara care trece prin mijlocul său.
+  image: perpendicular-bisector.svg
+
+pi:
+  title: Pi
+  text: |
+    __Pi__, notat adesea cu litera greacă _π_, este raportul dintre circumferința și diametrul unui
+    cerc. Este un număr transcendental, iar valoarea sa aproximativă este 3.14159265…
+  link: /course/circles/introduction#pi-definition
+
+platonic-solid:
+  title: Corp platonic
+  text: |
+    Un __corp platonic__ este un poliedru în care fiecare față este un poligon regulat ce are
+    același număr de muchii și în care în fiecare vârf se întâlnesc același număr de fețe. Există
+    doar cinci corpuri platonice diferite: tetraedru, cub, octaedru, dodecaedru și icosaedru.
+  link: /course/polyhedra/platonic
+
+point:
+  title: Punct
+  text: |
+    Un __punct__ este o locație anume în spațiu. Punctele descriu o poziție, dar nu au dimensiune
+    sau formă.
+  link: /course/euclidean-geometry/definitions#points
+
+polygon:
+  title: Poligon
+  text: |
+    Un __poligon__ este o formă geometrică alcătuită din segmente de linie drepte. Poligoanele nu
+    pot conține laturi curbe sau goluri. De exemplu, un pătrat este un poligon, dar un cerc nu.
+  image: polygon.svg
+  link: /course/polyhedra/polygons#polygons
+
+polygon-diagonal:
+  title: Diagonală
+  text: |
+    __Diagonala__ unui poligon este un segment de dreaptă care unește două vârfuri care nu sunt
+    alăturate.
+
+polygon-edge:
+  title: Latura unui poligon
+  text: |
+    __Laturile__ unui poligon sunt segmentele de dreaptă care îi formează conturul. De exemplu, un
+    triunghi are trei laturi.
+
+polygon-vertex:
+  title: Vârful unui poligon
+  text: |
+    __Vârfurile__ unui poligon sunt punctele de intersecție ale laturilor adiacente (“colțurile”
+    sale).
+
+polyhedron:
+  title: Poliedru
+  text: |
+    Un __poliedru__ (pluralul este _poliedru_) este un solid tridimensional fără suprafețe sau
+    margini curbate. Toate fețele unui poliedru sunt poligoane. De exemplu, un cub și o piramidă
+    sunt poliedre, dar o sferă nu este.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-dual:
+  title: Dual dintr-un poliedru
+  text: TOT
+  link: /course/polyhedra/platonic#platonic-dual
+
+polyhedron-edge:
+  title: Marginea unui poliedru
+  text: |
+    __marginile__ ale unui poliedru sunt segmentele de linie la care sunt conectate două dintre
+    fețele sale.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-face:
+  title: Fața unui poliedru
+  text: __fețe__ ale unui poliedru sunt poligonii care alcătuiesc suprafața sa.
+  link: /course/polyhedra/polyhedra
+
+polyhedron-vertex:
+  title: Vertexul unui poliedru
+  text: „Colțurile” unui poliedru sunt numite vârfurile sale 0 0.
+  link: /course/polyhedra/polyhedra
+
+polynomial:
+  title: polinom
+  text: |
+    Un polinomeste o expresie algebrică care constă din constante și multipli de variabile ridicate
+    la puteri întregi. De exemplu, `5x^3 - 2y^2 + x + 4` este un polinom. Cea mai generală formă a
+    unui polinom cu o singură variabilă este `a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x +
+    a_0`, unde `a_n`, `a_(n-1)`, ..., `a_0` sunt toate constante specifice.
+
+polynomial-degree:
+  title: grad
+  text: |
+    __gradul__ al unui termen sau polinom este puterea cea mai mare a oricărei variabile din acesta.
+    De exemplu, gradul `5x^3 + 2y^2 - 4z` este 3.
+
+powers:
+  title: exponentiation
+  text: |
+    __Exponențiere__ (sau __puteri__) este operația matematică în care un număr (baza __) este
+    înmulțit de la sine un număr specificat de ori (exponentul __). Aceasta este scrisă de obicei
+    sub forma unui superscript `a^x`, unde _a_ este baza și _x_ este exponentul. De exemplu,
+    `4^3=4×4×4`.
+
+prime:
+  title: Număr prim
+  text: |
+    Un __număr prim__ este un număr întreg pozitiv care nu are alți factori decât 1 și el însuși.
+    Primele numere prime sunt 2, 3, 5, 7, 11, 13, ...
+  link: /course/divisibility/primes
+
+prime-factor:
+  title: Factor prim
+  text: Un __factor prim__ al unui număr este pur și simplu un factor prim.
+  link: /course/divisibility/primes
+
+prime-factorisation:
+  title: Premium Factoring
+  text: |
+    __factorizare primă__ a unui număr este o modalitate de a-l exprima ca produs al numerelor
+    prime. De exemplu, factorizarea primă a 12 este `2 × 2 × 3`.
+
+prism:
+  title: Prisma
+  text: |
+    O__prismă__ este un corp geometric tridimensional care are două fețe congruente în formă de
+    poligon (numite _baze_) ale căror vârfuri sunt unite de segmente. Toate celelalte fețe ale unei
+    prisme sunt dreptunghiuri sau paralelograme.
+  image: prism.svg
+
+probability:
+  title: Probabilitate
+  text: |
+    O __probabilitate__ este un număr între 0 și 1 care indică șansa apariției unui anumit
+    eveniment. Probabilitatea unui eveniment _A_ se notează cu `P(A)`.
+
+probability-tree:
+  title: Arborele Probabilității
+  text: |
+    O arbore de probabilitateeste o diagramă arbore reprezentând probabilitatea combinată a mai
+    multor evenimente secvențiale.
+
+proof:
+  title: Demonstrație
+  text: |
+    O __demonstrație__ este un raționament care arată fără nicio urmă de îndoială că o anume
+    afirmație este adevărată.
+
+protein:
+  title: Proteină
+  text: |
+    O __proteină__ este o _macromoleculă_  mare ce poate efectua multe funcții diferite în
+    interiorul organismelor vii: de la digestie pâna la comunicarea intercelulară sau replicarea
+    ADN-ului. Proteinele sunt formate din unul sau mai multe lanțuri de aminoacizi.
+
+proton:
+  title: Proton
+  text: |
+    Un protoneste una dintre particulele care alcătuiesc miezul unui atom. Are o taxă de +1. Numărul
+    protonilor dintr-un atom se numește „numărul atomic” și determină ce fel de element este.
+
+pyramid:
+  title: Piramidă
+  text: |
+    O _piramidă_ este un poliedru care are ca bază un poligon și fețe triunghiulare care se
+    întâlnesc într-un vârf.
+
+    O __piramidă dreaptă regulată__ are ca bază un _poligon regulat_ și vârful se află exact
+    deasupra centrului bazei.
+  image: pyramid.svg
+
+protractor:
+  title: Raportor
+  text: Un protector este un instrument folosit pentru a măsura un unghi în grade.
+
+pythagoras-theorem:
+  title: Teorema lui Pitagora
+  text: |
+    __Teorema lui Pitagora__ spune că în orice triunghi dreptunghic, `a^2 + b^2 = c^2`, unde _c_
+    este lungimea ipotenuzei și _a_ și _b_ sunt lungimile celorlalte două laturi.
+  link: /course/triangles/pythagoras
+
+pythagorean-triple:
+  title: Triplet pitagoreic
+  text: |
+    Un __triplet pitagoreic__ este un set de trei numere naturale _a_, _b_ și _c_ ce satisfac
+    teorema lui Pitagora `a^2 + b^2 = c^2`.
+  link: /course/triangles/pythagoras#pythagorean-triples
+
+quadratic:
+  title: patratice
+  text: 'Un __quadratic__ este un polinom de gradul 2. De exemplu, `x^2 - 2x + 3` este un patrat.'
+
+quadratic-equation:
+  title: Ecuația Quadratică
+  text: |
+    O __ecuație cvadratică__ este o ecuație care conține o singură variabilă de gradul 2. Este
+    adesea scrisă ca `ax^2 + bx + c = 0`, unde _x_ este o variabilă, _a_, _b_ și _c_ sunt numere și
+    `a != 0`.
+
+quadratic-formula:
+  title: Formula pătratică
+  text: |
+    Formula __cvadratică__ este o modalitate de a determina rădăcinile unei ecuații patratice.
+    Ecuația `ax^2 + bx + c = 0` are rădăcini
+
+    {.text-center} `x = (-b +- sqrt(b^2 - 4ac))/(2a)`.
+
+quadratic-function:
+  title: Funcția Quadratică
+  text: |
+    O funcție __cvadratică__ este o funcție a formularului `f(x) = ax^2+bx+c`, unde _a_, _b_ și _c_
+    sunt numere și `a != 0`. Graficul unei funcții cvadratice este o curbă în formă de U numită
+    parabola ____.
+
+quadratic-function-vertex-form:
+  title: Forma vertexului unei funcții pătratice
+  text: |
+    Forma __de vertex__ sau __forma standard__ a unei funcții cvadratice este `f(x) = a(x − h)^2 +
+    k`. Punctul `(h, k)` este vertexulal parabolei corespunzătoare.
+
+quadrilateral:
+  title: Patrulater
+  text: Un __patrulater__ este un poligon cu patru laturi.
+  link: /course/polyhedra/quadrilaterals
+
+quantum:
+  title: Mecanica cuantică
+  text: |
+    __Mecanica cuantică__ este o ramură a Fizicii care explică comportamentul ciudat al particulelor
+    fundamentale.
+
+radians:
+  title: Radian
+  text: |
+    __Radianul__ este o unitate de măsură pentru măsura unghiurilor. O rotație completă(360°) este
+    `2π` radiani – lungimea circumferinței unui cerc unitate.
+  link: /course/circles/radians#radians
+
+radioactive:
+  title: Degradare radioactivă
+  text: |
+    __Cariunea radioactivă__ este un proces fizic prin care atomii instabili se despart și
+    eliberează energie.
+
+rational-numbers:
+  title: Numere rationale
+  text: |
+    __Numerele raționale__ sunt numere care pot fi exprimate ca o fracție `p/q` din două întregi.
+    Expansiunea lor zecimală se oprește sau se repetă în cele din urmă. Exemple includ `1/2`,
+    `-5/7`, 12.71 și 9. Numerele raționale sunt adesea notate folosind simbolul `QQ`.
+
+ray:
+  title: Semidreaptă
+  text: |
+    O __semidreaptă__ este o porțiune dintr-o dreaptă care începe dintr-un punct și se prelungește
+    la infinit într-o singură direcție. Semidreapta care începe din `A` se notează `vec(AB)`.
+  link: /course/euclidean-geometry/definitions#rays
+
+real-numbers:
+  title: Numere reale
+  text: |
+    __numere reale__ sunt toate numerele care apar pe linia numerică, inclusiv numere pozitive și
+    negative, numere raționale (fracții), rădăcini pătrate, rădăcini cub, decimale, _π_, _e_ și
+    multe altele. Acestea sunt adesea notate folosind simbolul `RR`.
+
+rectangle:
+  title: Dreptunghi
+  text: Un __dreptunghi__ este un patrulater în cate toate cele patru unghiuri au măsura de 90°.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+reflection:
+  title: Reflexia
+  text: O __reflexie__ este o transformare care “întoarce” sau “oglindește” o formă față de o dreaptă.
+  link: /course/transformations/rigid#reflections
+
+reflectional-symmetry:
+  title: Simetrie reflexivă
+  text: O formă are simetrie reflexivă dacă pare aceeași după ce a fost reflectată.
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+regular-polygon:
+  title: Poligon regulat
+  text: |
+    Un __poligon regulat__ este un poligon în care toate laturile au aceeași lungime și toate
+    unghiurile interne au aceeași măsură.
+  image: regular-polygon.svg
+  link: /course/polyhedra/polygons#regular-polygons
+
+rhombus:
+  title: Romb
+  text: |
+    Un __romb__ (pluralul este _romburi_) este patrulaterul care are toate laturile de aceeași
+    lungime.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+right-angle:
+  title: Unghi drept
+  text: Un __unghi drept__ este un unghi cu măsura de 90°.
+
+right-triangle:
+  title: Triunghi dreptunghic
+  text: Un __triunghi dreptunghic__ este un triunghi ce are un unghi intern cu măsura de 90 °.'
+  image: right-triangle.svg
+  link: /course/triangles/properties#classification
+
+rigid-transformation:
+  title: Transformare Rigidă
+  text: |
+    O __transformare rigidă__ (sau __izometrie__) este o transformare geometrică ce nu schimbă
+    dimensiunea sau forma unei figuri geometrice.
+  link: /course/transformations/rigid
+
+roman-numerals:
+  title: Numere romane
+  text: |
+    Sistemul numeric roman__ a fost dezvoltat în Roma antică și folosit în Europa până în secolul al
+    XIV-lea. V-a permis să scrieți orice număr întreg combinând șapte litere diferite:
+
+    * I = 1
+
+    * V = 5
+
+    * X = 10
+
+    * L = 50
+
+    * C = 100
+
+    * D = 500
+
+    * M = 1000
+
+rotation:
+  title: Rotație
+  text: |
+    O __rotație__ este o transformare geometrică care “învârte” o formă cu un anumit unghi în jurul
+    unui punct fix.
+  link: /course/transformations/rigid#rotations
+
+rotational-symmetry:
+  title: Simetrie Rotațională
+  text: O formă are simetrie rotațională dacă arată la fel dupa ce a fost rotit (cu mai puțin de 360°).
+  image: rotational-symmetry.svg
+  link: /course/transformations/symmetry#rotational-symmetry
+
+roulette:
+  title: Ruletă
+  text: |
+    __Ruleta__ este un joc de cazinou în care pariați pe unde va debarca o minge învârtită. Conține
+    36 de numere, precum și unul sau două 0-uri.
+
+scale-factor:
+  title: Factor de Scalare
+  text: |
+    __Factorul de scalare__ a două figuri geometrice asemenea este raportul oricăror două lungimi
+    corespondente.
+
+    Un factor de scalare mai mic decât 1 arată că forma este micșorată, iar un factor de scalare mai
+    mare ca 1 arată că forma este mărită.
+  link: /course/transformations/dilations#dilations-1
+
+scalene-triangle:
+  title: Triunghi scalen
+  text: 'Într-un __triunghi scalen__, toate cele trei laturi au lungimi diferite.'
+
+scientific-notation:
+  title: Notatie stiintifica
+  text: |
+    __Notarea științifică__ este o metodă standardizată pentru scrierea numerelor foarte mari sau
+    mici. Este de forma `a × 10^n`, unde _n_ este un număr întreg și `1 ≤ a < 10`.
+
+    De exemplu, numărul 4600 poate fi scris ca `4.6 × 10^3`.
+
+set:
+  title: seturi
+  text: |
+    Un __set__ este o colecție de lucruri sau obiecte (numite elemente). Fiecare element poate
+    apărea doar unul dintr-un set. Scriem seturi folosind {} s, de exemplu, un set care conține
+    numerele 2, 3 și 4 ar fi scris ca {2, 3, 4}.
+
+sequence:
+  title: Secvenţă
+  text: |
+    O secvențăeste o listă ordonată de numere (sau alte elemente precum obiecte geometrice), care
+    urmează adesea un anumit tipar sau funcție. Secvențele pot fi atât finite, cât și infinite.
+  link: /course/sequences/introduction#simple-patterns
+
+sequence-convergence:
+  title: Convergenţă
+  text: |
+    O secvență __converg__ dacă, în timp, termenii acesteia se apropie și se apropie de o anumită
+    __limită__.
+
+sequence-divergence:
+  title: Divergenţă
+  text: |
+    O secvență __diverge__ dacă, în timp, termenii ei devin din ce în ce mai mari, spre infinit (sau
+    infinit negativ).
+
+sequence-explicit:
+  title: Formula explicită
+  text: |
+    O __formulă explicită__ pentru o secvență exprimă valoarea termenului _n_ al treilea `x_n` în
+    funcție de _n_.
+  link: /course/sequences/introduction#explicit
+
+sequence-recursive:
+  title: Recursie Formula
+  text: |
+    O __formulă recursivă__ pentru o secvență exprimă valoarea fiecărui termen `x_n` în funcție de
+    termenii precedenți.
+  link: /course/sequences/introduction#recursive-1
+
+sequence-term:
+  title: Termeni de secvență
+  text: Termenii __dintr-o secvență sunt toate numerele sau elementele sale individuale.
+  link: /course/sequences/introduction#simple-patterns
+
+sierpinski-triangle:
+  title: Triunghiul Sierpinski
+  text: |
+    __Triunghiul Sierpinski__ este un fractal auto-similar. Este format dintr-un triunghi
+    echilateral, cu triunghiuri echilaterale mai mici, îndepărtate recursiv din zona rămasă.
+  link: /course/fractals/sierpinski
+  image: sierpinski-triangle.svg
+
+sieve-eratosthenes:
+  title: Sita de Eratostene
+  text: |
+    __Sieve of Eratosthenes__ este o procedură pentru găsirea numerelor prime, prin eliminarea
+    repetată a numerelor care sunt _nu_ prime.
+  link: /course/divisibility/primes#eratosthenes
+
+similar:
+  title: Asemenea
+  text: |
+    Două forme geometrice sunt __asemenea__ dacă au aceeași formă, dar dimensiuni diferite. Putem
+    muta, roti, reflecta și redimensiona o formă astfel încăt sa se potrivească cu o alta. up with
+    the other one. Unghiurile lor corespondente și laturile corespondente au aceeași proporție.
+
+sin:
+  title: Sinus
+  text: |
+    __Sinus__ este o funcție trigonometrică notată ca `sin(θ)`. Ea este definită într-un triunghi
+    dreptunghic ca fiind raportul dintre cateta opusă și ipotenuză.
+  link: /course/triangles/trigonometry#trig-functions
+
+sphere:
+  title: Sfera
+  text: |
+    O __sferă__ este un corp geometric tridimensional format din toate punctele aflate la aceeași
+    distanță față de un _centru_ dat. Această distanță se numește _raza_ sferei.
+  link: /course/circles/spheres-cones-cylinders#sphere
+
+sphere-radius:
+  title: Raza unei sfere
+  text: |
+    Razaa unei sfere este distanța (sau un segment de linie) între centrul ei și orice punct de pe
+    suprafața sa.
+
+square:
+  title: Pătrat
+  text: |
+    Un __pătrat__ este un patrulater regulat: toate laturile au aceeași lungime și toate unghiurile
+    au aceeași măsură (90°).
+  link: /course/polyhedra/quadrilaterals
+
+square-area:
+  title: Zona unui pătrat
+  text: Zonaa unui pătrat cu lungimea laterală _s_ este `A = s^2`.
+
+square-matrix:
+  title: Matricea pătrată
+  text: O __matrice pătrată__ este o matrice care are același număr de rânduri și coloane.
+
+square-numbers:
+  title: Numere pătrate
+  text: |
+    Un __număr pătrat__ este un număr care poate fi exprimat ca pătrat al unui alt număr întreg.
+    Primele numere pătrate sunt 1, 4, 9, 16, 25, ...
+  link: /course/sequences/introduction#squares
+
+subdivision:
+  title: subdiviziunile
+  text: |
+    Pentru a crea o __subdiviziune__ a unui grafic, adăugați vârfuri suplimentare de-a lungul
+    marginilor sale.
+
+subgraph:
+  title: subgrafic
+  text: |
+    Un grafic este o __subgrafă__ a unui alt grafic, dacă este format dintr-un subset al marginilor
+    și vertexurilor graficelor mai mari.
+  link: /course/graph-theory/introduction#intro-2
+
+supplementary-angles:
+  title: Unghiuri suplementare
+  text: Două unghiuri se numesc __suplementare__ dacă suma lor este 180° (un semicerc).
+
+symmetry:
+  title: Simetrie
+  text: |
+    O figură sau o formă are __simetrie__ dacă arată la fel în urma unei transformări geometrice (de
+    exemplu: reflexie sau rotație).
+  link: /course/transformations/symmetry#symmetry
+
+symmetry-group:
+  title: Grup de Simetrie
+  text: |
+    __Grupul de simetrie__ al unui obiect geometric este colecția tuturor _simetriilor_ sale
+    (inclusiv _elementul neutru_).
+  link: /course/transformations/symmetry-groups#groups-1
+
+tan:
+  title: Tangentă
+  text: |
+    __Tangentul__ este o funcție trigonometrică scrisă ca `tan(θ)`. Este definit ca raportul dintre
+    _sinus_ și _cosinus_:
+
+    {.text-center} `tan(θ) = sin(θ) / cos(θ)`.
+
+    Într-un triunghi unghi drept, `tan(θ)` este raportul dintre partea opusă și partea adiacentă a
+    unui unghi `θ`.
+  link: /course/triangles/trigonometry#trig-functions
+
+tangent:
+  title: Linie tangentă
+  text: |
+    O __linie tangentă__ este o linie care atinge o curbă sau un cerc într-un singur punct, fără a o
+    intersecta. Acest punct se numește uneori punctul de tangență ____.
+
+term:
+  title: Termen (Algebra)
+  text: |
+    Termeniisunt părțile unei expresii sau ecuații algebrice care sunt separate prin semne + sau -.
+    Ele pot fi produse sau fracții sau unul sau mai multe numere, variabile sau funcții.
+
+    De exemplu, în expresia `2x^2 - 3ab + 4`, cei trei termeni sunt `2x^2`, `3ab` și 4.
+
+tessellation:
+  title: Mozaicare
+  text: |
+    O __mozaicare__ este unșablon geometric care acoperă o suprafață astfel încât să nu existe
+    goluri sau suprapuneri.
+  link: /course/polyhedra/tessellations
+
+tetrahedral-numbers:
+  title: Numere tetraedrice
+  text: |
+    Un __număr tetraedric__ este un număr care este creat prin stivuirea mai multor sfere într-un
+    _tetraedru_. Primele numere tetraedrice sunt 1, 4, 10, 20, 35, ...
+  link: /course/sequences/figurate#tetrahedral
+
+tetrahedron:
+  title: Tetraedru
+  text: |
+    Un __tetaedru__ este un corp platonc alcătuit din patru fețe care sunt triunghiuri echilaterale.
+    El are patru vârfuri și șase muchii.
+  link: /course/polyhedra/platonic#platonic-overview
+
+theorem:
+  title: Teoremă
+  text: |
+    O __teoremă__ este un rezultat sau o observație deosebit de importanta din matematică. S-a
+    dovedit a fi întotdeauna adevărată, folosind axiome, elemente de logică și teoreme anterioare
+    care erau deja cunoscute a fi adevărate.
+
+transformation:
+  title: Transformare geometrică
+  text: |
+    O __transformare geometrică__ convertește o formă geometrică într-o alta. Există multe tipuri
+    diferite de transformări geometrice, precum _reflexiile_ sau _omotetiile_.
+  link: /course/transformations/rigid#transformations
+
+transformation-image:
+  title: Imaginea unei transformări geometrice
+  text: |
+    Rezultatul unei transformări geometrice se numește __imagine__. Aceasta se noteaza adesea
+    adăugând un ’ la capătul etichetei sale.
+  link: /course/transformations/rigid#transformations
+
+translation:
+  title: Translație
+  text: |
+    O __translație__este o transformare geometrică prin care o figură geometrică se mișcă într-o
+    direcție anume fără a i se modifica orientarea sau forma.
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+
+translational-symmetry:
+  title: Simetrie Translativă
+  text: |
+    Un șablon repetitiv (ca un tapet) are __simetrie translativă__ dacă arată la fel dupa ce a fost
+    translat cu o anume lungime.
+  link: /course/transformations/symmetry-groups#symmetry-groups-1
+
+transversal:
+  title: traversal
+  text: O transversală este o linie care intersectează alte două linii.
+
+trapezium:
+  title: trapezoidală
+  text: |
+    Un trapez 0 __(numit uneori __trapezoid__) este un patrulater în care două laturi opuse sunt
+    paralele. Acestea se numesc bazele __ ale trapezului, iar celelalte două părți se numesc
+    _picioare_.
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-2
+
+triangle:
+  title: Triunghi
+  text: Un __triunghi__ este o formă geometrică care are trei laturi drepte și trei unghiuri interne.
+
+triangle-aa:
+  title: Criteriul UU de asemănare a triunghiurilor
+  text: |
+    Două triunghiuri sunt __asemenea__ dacă două din unghiurile lor au aceeași măsură. Numim asta
+    __criteriul de asemănare UU__.
+
+triangle-altitude:
+  title: Înalțimea unui triunghi
+  text: |
+    __înălțimea__ unui triunghi este dreapta perpendiculară pe una din laturile sale, care trece
+    prin vârful opus. Orice triunghi are trei înălțimi.
+  image: triangle-altitude.svg
+  link: /course/triangles/properties#altitudes
+
+triangle-legs:
+  title: Picioare ale unui triunghi
+  text: |
+    Cele două __picioare__ ale unui triunghi unghi drept sunt cele două laturi mai scurte (nu
+    _ipotenuză_). Sunt lângă unghiul drept.
+
+triangle-inequality:
+  title: Inegalitatea triunghiului
+  text: |
+    Inegalitatea __triunghiului__ afirmă că suma lungimilor oricărei două laturi ale unui triunghi
+    este mai mare decât lungimea celei de-a treia laturi. Aceasta înseamnă, de asemenea, că cea mai
+    scurtă distanță între două puncte este o linie dreaptă (deoarece trecerea printr-un al treilea
+    punct este întotdeauna mai lungă).
+
+triangle-median:
+  title: Medianele unui triunghi
+  text: |
+    __Medianele__ unui triunghi sunt segmentele de dreaptă care unesc fiecare vârf cu mijlocul
+    laturii opuse. Cele trei mediane ale unui triunghi se intersectează într-un punct unit numit
+    __centru de greutate__.
+  link: /course/triangles/properties#medians
+
+triangle-midsegment:
+  title: Linie mijlocie
+  text: __Liniile mijlocii__ ale unui triunghi sunt segmentele care unesc mijloacele a două laturi.
+  image: triangle-midsegment.svg
+  link: /course/triangles/midsegments
+
+triangle-numbers:
+  title: Numere triunghi
+  text: |
+    Un __număr de triunghi__ este un număr întreg care poate fi reprezentat ca un triunghi
+    echilateral de puncte. Formula pentru _n_ numărul triunghiului este `(n*(n+1))/ 2`, iar primele
+    numere de triunghi sunt 1, 3, 6, 10, 15, ...
+  image: triangle-numbers.svg
+  link: /course/sequences/figurate#triangle-numbers
+
+triangle-sss:
+  title: Criteriul de congruență LLL
+  text: |
+    Două triunghiuri sunt __congruente__ dacă laturile lor au aceeași lungime. Numim aceasta
+    __Ctrieriul de congruență LLL_ pentru triunghiuri.
+  link: /course/triangles/congruence#congruence-1
+
+trigonometry:
+  title: Trigonometrie
+  text: |
+    __Trigonometria__ este o ramură a matematicii care studiază relațiile dintre laturile și
+    unghiurile unui triunghi. Se preocupă în primul rând cu funcțiile trigonometrice __sinus__,
+    __cosinus__, __tangentă__ și inversele lor.
+  link: /course/triangles/trigonometry
+
+truncated-icosahedron:
+  title: Icosaedru trunchiat
+  text: |
+    __Icosaedrul trunchiat__ este un _solid arhimedian_ alcătuit din 12 pentagoane regulate și 20 de
+    hexagoane regulate.
+  link: /course/polyhedra/platonic#archimedean
+
+twin-primes:
+  title: Numere Prime Gemene
+  text: |
+    __Numerele Prime Gemene__ sunt perechi de numere prime precum 17 și 19 sau 101 și 103, care se
+    află la o distanță de două unități. Nu se știe dacă există o infinitate de perechi de numere
+    prime gemene.
+  link: /course/divisibility/distribution-of-primes#twin-primes
+
+unit-circle:
+  title: Cerc unitate
+  text: Un __cerc unitate__ este un cerc de rază 1.
+
+variable:
+  title: Variabil
+  text: |
+    O __variabilă__ este o cantitate necunoscută sau poate modifica valoarea. Într-o expresie
+    algebrică, este de obicei reprezentată printr-o literă ca _x_.
+
+venn-diagram:
+  title: Diagramă Venn
+  text: |
+    O __diagramă Venn__ prezintă în mod vizual mai multe proprietăți sau evenimente care se
+    suprapun.
+  image: venn.svg
+
+vertical-angles:
+  title: Unghiuri verticale
+  text: |
+    __Unghiurile verticale__ sunt perechi de unghiuri opuse create prin intersectarea liniilor.
+    Unghiurile verticale sunt întotdeauna _congruente_.
+
+whole-numbers:
+  title: Numere întregi
+  text: 'Numerele întregi__ sunt numerele de numărare, inclusiv zero: 0, 1, 2, 3, 4, ...'
+
+zero-product:
+  title: Proprietate produs zero
+  text: |
+    Proprietatea __zero produs__ afirmă că, dacă produsul din două cantități este zero, cel puțin
+    una dintre aceste cantități trebuie să fie, de asemenea, zero. De exemplu, dacă `a × (a - 1) =
+    0`, fie `a = 0` fie `a - 1 = 0`.

@@ -1,0 +1,14 @@
+firstGraphSolved: "All [graph diagrams](->#graph0) in this course are interactive – try moving the vertices around."
+crossWater: Attention, vous n'êtes pas autorisé à entrer dans l'eau.
+bridgeCrossedBefore: Vous avez déjà traversé ce pont auparavant. Essayez de trouver un itinéraire différent.
+tryDifferentMapA: Maybe there is no solution for this city … try one of the other maps!
+tryDifferentMapB: Maybe this map also has no solution. Let’s move on!
+tryDifferentStartPoint: The starting location might be important. See what happens if you start on a different island.
+mapKeepTrying: Keep trying! Maybe start at a different location.
+housesToEachOther: You only need to connect the houses to the factories, but not the houses to each other.
+factoriesToEachOther: You only need to connect the factories to the houses, but not the factories to each other.
+linesCross: "Careful: the lines are not allowed to cross."
+edgeDrawnBefore: Watch out, you’ve already drawn this edge once.
+utilitiesImpossible: "I think this puzzle might also be impossible… Sorry I tricked you :winking-face:"
+mapError: You can’t use this colour here because it is already in one of the neighbouring areas.
+mapFewer: Well done! But can you colour this map with fewer colours?

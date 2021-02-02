@@ -1,0 +1,39 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: "Willkommen bei Mathigon! Ich bin Archie, dein persönlicher Tutor. :graduation-cap:"
+account: Du kannst [ein kostenloses Konto erstellen](->#login-btn), um deine Fortschritte zu speichern.
+tutorial1: Unser Inhalt ist in kleine Abschnitte unterteilt. Du musst die Aufgaben lösen, um zu zu sehen wie es weiter geht.
+tutorial2: Wir speichern alle deine Fortschritte, so dass du später wiederkommen und genau dort weitermachen kannst, wo du aufgehört hast.
+
+correct:
+  - "Gut gemacht!  :smiling-face:"
+  - "Tolle Arbeit! :relieved-face:"
+  - "Fantastisch! :grinning-face:"
+  - "Brilliant! :thumbs-up:"
+  - "Ausgezeichnet! :ok-hand:"
+  - "Echt cool. :smiling-face-with-sunglasses:"
+  - "Ich bin begeistert! :victory-hand:"
+  - "Weiter so! :smiling-face-with-smiling-eyes:"
+  - "Sehr schön! :smiling-face:"
+  - "Beeindruckend! :trophy:"
+  - "Hervorragend! :grinning-face:"
+  - "Super! :star:"
+  - "Wunderbar! :smiling-face:"
+
+incorrect:
+  - "Das ist noch nicht ganz richtig. :frowning-face:"
+  - "Bist du dir da sicher? :thinking-face:"
+  - "Das sieht nicht richtig aus. :hushed-face:"
+  - "Versuch es noch einmal! :confused-face:"
+
+welcomeMorning: Guten Morgen!
+welcomeAfternoon: Guten Tag!
+welcomeEvening: Guten Abend!
+
+welcomeMorningNamed: Guten Morgen, $name!
+welcomeAfternoonNamed: Guten Tag, $name!
+welcomeEveningNamed: Guten Abend, $name!
+
+serverError: "Tut mir leid, ich kann dir im Moment leider nicht helfen. Überprüfe deine Internetverbindung oder versuche es später noch einmal. :confused-face:"

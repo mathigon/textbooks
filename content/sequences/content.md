@@ -5,32 +5,18 @@
 > section: introduction
 > id: intro
 
-Many professions that use mathematics are interested in one specific aspect –
-_finding patterns_, and being able to predict the future. Here are a few
-examples: 
+Many professions that use mathematics are interested in one specific aspect – _finding patterns_,
+and being able to predict the future. Here are two examples: 
 
 ::: column(width=160 parent="padded-thin")
-
-    x-img(src="images/crime.jpg" width=160 height=160 alt="Police Officers")
-
-::: column(width=400)
-
-In the last decade, __police departments__ around the world have started to rely
-more on mathematics. Special algorithms can use the data of past crimes to
-predict when and where crimes might occur in the future. For example, the
-_PredPol_ system (short for “predictive policing”), helped decrease the crime
-rate in parts of Los Angeles by 12%!
-
-::: column(width=160)
 
     x-img(src="images/volcanoes.jpg" width=160 height=160 alt="Volcano")
 
 ::: column(width=400)
 
-It turns out that __earthquakes__ follow similar patterns to crimes. Just like
-one crime might trigger retaliations, an earthquake might trigger aftershocks.
-In mathematics, this is called a “self-exciting process”, and there are
-equations that help predict when the next one might happen.
+Geologists around the world want to predict __earthquakes__ and __volcano eruptions__. They can try
+to find patterns in historical data of from seismographs, of the atmosphere, or even animal
+behaviour. One earthquake, for example, might trigger aftershocks later.
 
 ::: column(width=160)
 
@@ -38,15 +24,14 @@ equations that help predict when the next one might happen.
 
 ::: column(width=400)
 
-Bankers also look at historical data of stock prices, interest rates and currency
-exchange rates to estimate how __financial markets__ might change in the
-future. Being able to predict if the value of a stock will go up or down can be
-extremely lucrative!
+Bankers also look at historical data of stock prices, interest rates and currency  exchange rates
+to estimate how __financial markets__ might change in the  future. Being able to predict if the
+value of a stock will go up or down can be extremely lucrative!
 
 :::
 
-Professional mathematicians use highly complex algorithms to find and analyse
-all these patterns, but we are going to start with something a bit more basic.
+Professional mathematicians use highly complex algorithms to find and analyse all these patterns,
+but for now, let’s start with something much simpler.
 
 ---
 > id: simple-patterns
@@ -671,7 +656,7 @@ Here is a short clip from the movie _Pay it Forward_, where 12-year-old Trevor
 explains his idea for making the world a better place:
 
     figure
-      x-video(src="https://storage.googleapis.com/mathigon-videos/pay-it-forward.mp4" poster="images/pay-it-forward-poster.jpg" width=640 height=360 controls audio)
+      x-video(src="https://static.mathigon.org/videos/pay-it-forward.mp4" poster="images/pay-it-forward-poster.jpg" width=640 height=360 controls audio)
       .caption Extract from “Pay It Forward” (2000), © Warner Bros. Entertainment
 
 ---

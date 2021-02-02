@@ -1,0 +1,14 @@
+cylinder-volume-hint1: Tu dois trouver l'aire de la base, puis la multiplier par _h_. 
+cylinder-volume-hint2: La base est un cercle de rayon _r_, donc son aire est `π r^2`.
+
+cone-volume-hint1: Tu dois trouver l'aire de la base, puis la multiplier par `1/3 h`. 
+cone-volume-hint2: La base est un cercle de rayon _r_, donc son aire est `π r^2`.
+
+cone-surface-1: Tu dois remplacer toutes les valeurs ci-dessus par celles correctes. 
+cone-surface-2: Utilise la valeur de _s_ que nous avons trouvé. 
+
+circle-cross-sec: Utilise l'équation de l'aire d'un cercle, et remplace par la valeur correcte pour `x^2`.
+sphere-volume: Souviens toi que le cylindre et le cone ci-dessus ont tous les deux un rayon _r_ et une hauteur _h_. 
+
+use-cylinder-volume: Essaie d'utiliser la formule de volume d'un cylindre.
+use-cylinder-surface: Essaie d'utiliser la formule de la surface d'un cylindre.

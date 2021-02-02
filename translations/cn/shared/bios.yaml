@@ -1,0 +1,1259 @@
+# ==============================================================================
+# MATHIGON BIOGRAPHIES
+# ==============================================================================
+
+abel:
+  born: 1802
+  died: 1829
+  name: Abel
+  overflow: true
+  bio: |
+    __尼尔斯·亨里克·阿贝尔（Niels Henrik Abel）__（1802-1829）是挪威重要的数学家。即使他去世了，享年26岁，他还是为许多主题做出了开创性的贡献。
+    16岁时，Abel证明了二项式定理。三年后，他证明了通过独立发明群论来解决五次方程是不可能的。 350多年来，这一直是一个悬而未决的问题！他还研究椭圆函数，并发现了_Abelian_函数。
+    亚伯一生都在贫穷中度过：他有六个兄弟姐妹，父亲在18岁时去世，他无法在大学找到工作，许多数学家最初解雇了他的工作。如今，_阿贝尔奖_是数学上最高的奖项之一。
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+al-haytham:
+  born: 965
+  died: 1050
+  name: Al-Haytham
+  bio: |
+    __哈桑·伊本·海瑟姆（Hasan Ibn al-Haytham）__（约965年–
+    1050年）住在开罗，在伊斯兰黄金时代居住，并研究过数学，物理学，天文学，哲学和医学。他是_科学方法_的拥护者：一种信念，即任何科学假设都必须使用实验或数学逻辑来进行验证，这是在文艺复兴时期的欧洲科学家之前的数百年。
+
+    Al-Haytham对光学和视觉感知特别感兴趣。他还导出了四次幂（`1^4 + 2^4 + 3^4 + … +
+
+    n^4`）的公式，并且研究了代数与几何之间的联系。
+
+al-karaji:
+  born: 953
+  died: 1029
+  name: Al-Karaji
+  bio: '__穆罕默德·卡拉吉（{Muhammad Al-Karaji）__（波斯语，数学家和工程师）（大约953 – 1029年）。他是第一个使用归纳证明_证明_的人，这使他可以证明二项式定理。'
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+al-khwarizmi:
+  born: 780
+  died: 850
+  name: Al-Khwarizmi
+  overflow: true
+  bio: |
+    波斯数学家__穆罕默德·阿赫瓦兹米__（生于780 – 850年）住在巴格达的穆斯林阿巴斯德政权的黄金时代。他曾在“智慧之家”工作，该图书馆收录了自亚历山大图书馆被毁以来的第一批大量学术著作。
+
+    Al-Khwarizmi被称为“代数之父”
+    –实际上，_代数_一词来自他最重要的书的阿拉伯文标题：“关于完成和平衡计算的简明书”。在其中，他展示了如何求解线性和二次方程式，并且在许多世纪以来，它一直是欧洲大学的主要数学教科书。
+
+    Al-Khwarizmi还曾在天文学和地理领域工作，“ algorithm”一词以他的名字命名。
+
+apollonius:
+  name: 阿波罗尼奥斯
+  born: -262
+  died: -190
+  bio: __阿波罗尼奥斯__(约公元前200年) 是古希腊佩尔格的数学家和天文学家，他以对四种_圆锥曲线_的研究而闻名。
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+appel:
+  name: Appel
+  bio: |
+    __肯尼思·阿佩尔（1）（1932 – 2013）是一位美国数学家，以与沃尔夫冈·哈肯（Wolfgang Haken）对四色定理的证明而闻名。 为了表彰他和哈肯获得了美国数学学会富尔克森奖。
+    阿佩尔曾就读于纽约皇后学院和密歇根大学。他曾在伊利诺伊大学和新罕布什尔大学任教。
+
+archimedes:
+  name: Archimedes
+  born: -287
+  died: -212
+  bio: |
+    __阿基米德人__（公元前287年至212年）是古希腊科学家和工程师，并且是有史以来最伟大的数学家之一。他发现了微积分的许多概念，并从事几何，分析和力学的研究。
+
+    在洗澡时，阿基米德发现了一种方法，可以根据不规则物体浸没后的水量来确定它们的体积。他对这一发现感到非常兴奋，以至于他在街上跑了出来，仍然不穿衣服，大喊_“尤里卡！”_（希腊语为_“我找到了！”_）。
+
+    作为工程师，他在家乡西西里岛锡拉库扎（Syracuse）的包围期间制造了精巧的防御机器。两年后，罗马人终于设法进入，阿基米德被杀。他的遗言是_“请勿打扰我的圈子”_ –当时他正在学习。
+  links:
+    - title: Archimedean Solids
+      url: /course/polyhedra/platonic#archimedean
+
+aristotle:
+  born: -384
+  died: -322
+  name: Aristotle
+  bio: |
+    __亚里斯多德__（约公元前384 – 322年）是古希腊的哲学家。他和他的老师_柏拉图_一起被认为是“西方哲学之父”。他还是亚历山大大帝的私人家庭教师。
+
+    亚里斯多德（Aristotle）撰写了有关科学，数学，哲学，诗歌，音乐，政治，修辞学，语言学和许多其他主题的文章。他的作品在中世纪乃至文艺复兴时期都具有很大的影响力，他对伦理学和其他哲学问题的看法如今仍在讨论中。
+
+    亚里士多德还是第一个正式学习_逻辑_，包括其在科学和数学中的应用的知名人士。
+
+aryabhata:
+  born: 476
+  died: 550
+  name: Aryabhata
+  overflow: true
+  bio: __Aryabhata__（आर्यभट）是印度数学黄金时代的第一批数学家和天文学家之一。他定义了三角函数，求解了二次方程，找到了_π_的近似值，并意识到_π_是不合理的。
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Quadratic Equations
+      url: /course/quadratics/introduction
+
+babbage:
+  born: 1791
+  died: 1871
+  name: Babbage
+  small: true
+  bio: |
+    __查尔斯·巴贝奇__（1791-1871）是英国数学家，哲学家和工程师。他经常被称为“计算机之父”，发明了第一台机械计算机（_差分引擎_）和改进的可编程版本（_分析引擎_）。
+    从理论上讲，这些机器可以自动执行存储在卡或磁带上的某些计算。但是，由于高昂的生产成本，它们在巴贝奇一生中从未完全完成。 1991年，一个功能性的复制品在伦敦的科学博物馆建成。
+
+bernoulli-1:
+  born: 1654
+  died: 1705
+  name: Bernoulli
+  bio: |
+    __雅各布·伯努利__（1655年至1705年）是瑞士数学家，也是伯努利家族众多重要科学家之一。实际上，他与他的几个兄弟和儿子有着深厚的学术竞争。
+    雅各布在牛顿（Newton）和莱布尼茨（Leibnitz）发明的微积分上取得了重大进展，创建了_变异微积分_领域，发现了基本常数_e_，开发了求解微分方程的技术，更多。
+    他发表了关于概率的第一本实质性著作，包括排列，组合和大数定律，他证明了二项式定理，并推导了伯努利数的许多性质。
+
+bernoulli-2:
+  born: 1700
+  died: 1782
+  name: Bernoulli
+  bio: |
+    __丹尼尔·伯努利__（1700年-1782年）是瑞士的数学家和物理学家。他是伯努利家族众多著名科学家之一-包括他的父亲约翰，他的叔叔雅各布和他的兄弟尼古拉斯。
+
+    丹尼尔·伯努利（Daniel
+    Bernoulli）指出，随着流体速度的增加，其压力会降低。现在称为_伯努利原理_，这是飞机机翼和内燃机使用的机制。他还在概率和统计方面取得了重要发现，并首先遇到了_贝塞尔函数_。
+
+    在34岁时，他因在巴黎学院获得的奖项殴打他而被禁止出父亲的住所，两人都为此提交了参赛作品。
+
+bhaskara:
+  born: 1114
+  died: 1185
+  name: Bhaskara
+  bio: |
+    __巴斯卡拉二世__（1114年至1185年）是印度数学家和天文学家。在莱布尼茨和牛顿问世500年前，他发现了微积分的一些基本概念。
+    Bhaskara还建立了被零除的无穷大，并求解了各种二次方程，三次方程，四次方程和丢番图方程。
+
+blackwell:
+  born: 1919
+  died: 2010
+  name: Blackwell
+  small: true
+  bio: |
+    __David Blackwell__（1919年-2010年）是美国统计学家和数学家。他从事博弈论，概率论，信息论和动态编程的研究，并撰写了第一本有关贝叶斯统计的教科书。
+    _Rao-Blackwell定理_显示了如何改进统计量中某些量的估计量。
+
+    布莱克韦尔是第一个当选美国_国家科学院_的非裔美国人，他是最早获得数学博士学位的人之一。
+
+bolyai:
+  born: 1802
+  died: 1860
+  name: Bolyai
+  small: true
+  bio: |
+    __JánosBolyai__（1802 –
+    1860年）是匈牙利数学家，也是非欧几里得几何学的奠基人之一–欧几里得关于平行线的第五个公理不成立。这是数学上的重大突破。不幸的是，对Bolyai而言，数学家高斯和洛巴切夫斯基同时发现了相似的结果，并获得了大部分荣誉。
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+boole:
+  born: 1815
+  died: 1864
+  name: Boole
+  bio: |
+    __乔治·布尔__（1815年-1864年）是一位英国数学家。小时候，他自学拉丁语，希腊语和数学，希望逃脱下层阶级的生活。他创建了_布尔代数_，该布尔代数使用AND，OR和NOT之类的运算符（而不是加法或乘法），并且可以在处理集合时使用。这是形式数学逻辑的基础，在计算机科学中有许多应用。
+
+brahmagupta:
+  born: 598
+  died: 668
+  name: Brahmagupta
+  overflow: true
+  bio: |
+    印度数学家__Brahmagupta__（约公元598年-668年）发明了零，负数加法，减法和乘法的规则。他还是一位天文学家，并且在数学上取得了许多其他发现。不幸的是，他的著作没有任何证据，因此我们不知道他是如何得出结果的。
+
+cantor:
+  born: 1845
+  died: 1918
+  name: Cantor
+  bio: |
+    德国数学家__Georg
+    Cantor__（1845年-1918年）是集合论的发明者，也是我们对无穷大的理解的先驱。康托尔一生的大部分时间都遭到他的同事们的强烈反对。这可能导致了他的沮丧和神经衰弱，他在精神病院度过了数十年。
+
+    康托尔证明存在_个不同大小的_无穷大。例如，实数集是_不可数_ –表示它不能与自然数集配对。
+
+    直到生命的尽头，康托尔才开始获得应有的认可。戴维·希尔伯特（David Hilbert）著名地宣称：“没有人可以将我们从康托尔创造的天堂中驱逐出去”。
+  links:
+    - title: Infinity
+      url: /world/Infinity
+    - title: Set Theory
+      url: /world/Axioms_and_Proof
+
+cardano:
+  born: 1501
+  died: 1576
+  name: Cardano
+  bio: |
+    意大利__卡尔达诺人__（Gerolamo
+    Cardano）（1501-1576）是文艺复兴时期最有影响力的数学家和科学家之一。他研究了超摆线，发布了塔塔格里亚（Tartaglia）和法拉利（Ferrari）关于三次方程和四次方程的解，是第一个系统地使用负数的欧洲人，甚至承认虚数的存在（基于`sqrt(-1)`）。
+
+    卡尔达诺在概率论上也取得了一些早期进展，并将二项式系数和二项式定理引入了欧洲。他发明了许多机械设备，包括密码锁，具有三个自由度的陀螺仪以及目前仍在车辆中使用的驱动轴（或万向轴）。
+  links:
+    - title: Imaginary Numbers
+      url: /world/Real_Irrational_Imaginary
+
+carroll:
+  born: 1832
+  died: 1898
+  name: Carroll
+  bio: |
+    __Charles Lutwidge Dodgson__（1832 – 1898年）以他的笔名__Lewis Carroll__最为人所知，他是_Alice's Adventures in
+    Wonderland_及其续集_的作者透过窥镜_。
+
+    但是，卡洛尔还是一位出色的数学家。他一直试图将拼图和逻辑融入孩子的故事中，使它们更有趣，更令人难忘。
+
+cauchy:
+  born: 1789
+  died: 1857
+  name: Cauchy
+  small: true
+  bio: |
+    __Augustin-Louis Cauchy__（1789年-1857年）是法国数学家和物理学家。他为数学的广泛领域做出了贡献，数十个定理以他的名字命名。
+    柯西通过重新公式化并证明结果，从而使以前的数学家更加粗心和不精确，从而使演算和分析形式化。他创立了_复杂分析_领域，研究了置换群，并从事光学，流体动力学和弹性理论的研究。
+
+cavalieri:
+  name: 卡瓦列里
+  born: 1598
+  died: 1647
+  bio: |
+    __博纳文图拉•卡瓦列里__(1598 – 1647)是一位意大利的数学家和修道士。他是积分学的先驱者之一，并以解决几何中体积求法的卡瓦列里原理而称著于世。
+    卡瓦列里还专注于光学和运动的研究，把逻辑学引入意大利，并与伽利略•伽利雷有多封书信往来。
+  links:
+    - title: Cavalieri’s Principle
+      url: /course/circles/spheres-cones-cylinders#cavalieri
+
+cayley:
+  born: 1821
+  died: 1895
+  name: Cayley
+  bio: |
+    __亚瑟·凯利（Arthur Cayley）__（1821-1895）是英国的数学家和律师。他是_小组理论_的先驱者之一，首先提出了“小组”的现代定义，然后将其概括化以包含更多的数学应用。
+    Cayley还开发了矩阵代数，并研究了高维几何。
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+collatz:
+  name: Collatz
+  bio: __Lothar Collatz__（1910年至1990年）是一位德国数学家，致力于微分方程和优化问题。 _Collatz猜想_或`3x+1`问题是以他的名字命名的-至今仍未解决。
+
+conway:
+  name: Conway
+  born: 1937
+  died: 2020
+  bio: |
+    __约翰·霍顿·康威__（1937年-2020年）是英国数学家，曾在剑桥大学和普林斯顿大学任教。他是皇家学会的会员，也是波利亚奖的第一位获得者。
+    他探索了诸如打结和游戏之类的日常对象的基础数学，并为小组理论，数论和许多其他数学领域做出了贡献。康威（Conway）以发明“康威的生活游戏”而著称，这是一种_具有吸引力的细胞自动机_。
+  links:
+    - title: Look-and-say Sequence
+      url: /course/sequences/special#look-and-say
+
+copernicus:
+  born: 1473
+  died: 1543
+  name: Copernicus
+  bio: |
+    __哥白尼（Nicolaus
+    Copernicus）__（1473-1543）是波兰数学家，天文学家和律师。在他的一生中，大多数人都相信宇宙的_地心_模型，其中地球处于中心，其他所有事物都围绕着地球旋转。
+
+    哥白尼创建了一个新模型，其中太阳位于中心，地球围绕它绕一圈运动。他还预测地球每天绕轴自转一次。由于担心这会破坏天主教堂，他只在去世前发布了该模型，从而引发了_哥白尼革命_。
+
+    哥白尼还担任外交官和医师，为经济学做出了重要贡献。
+  links:
+    - title: Planetary Orbits
+      url: /course/circles/conic-sections#orbits
+
+de-moivre:
+  born: 1667
+  died: 1754
+  name: De Moivre
+  bio: |
+    __亚伯拉罕·德·莫夫（Abraham de Moivre）__（1667年至1754年）是法国数学家，从事概率论和解析几何学的研究。他最怀念_de
+    Moivre的公式_，该公式将三角函数和复数联系起来。
+
+    De Moivre发现了概率正态分布的公式，首先推测了_中心极限定理_。他还发现了斐波那契数的非递归公式，将其与黄金比率`φ`关联。
+  links:
+    - title: Probability
+      url: /course/probability/predicting-the-future
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+dedekind:
+  born: 1831
+  died: 1916
+  name: Dedekind
+  small: true
+  bio: |
+    __Richard Dedekind__（1831 – 1916年）是德国数学家，也是高斯的学生之一。他提出了集合论中的许多概念，并发明了_Dedekind
+    cuts_作为实数的形式定义。他还给出了_数字字段_和_环_的第一个定义，这是抽象代数中的两个重要构造。
+
+democritus:
+  born: -460
+  died: -370
+  name: Democritus
+  bio: 希腊数学家__模仿者__（约公元前460-370年）可能是第一个推测所有物质都是由微小的_原子_组成的人，被认为是“现代科学之父” ”。他在几何学上也有许多发现，包括棱镜和圆锥体的体积公式。
+  links:
+    - title: Volume of a Cone
+      url: /course/circles/spheres-cones-cylinders#cone-volume
+
+desargues:
+  born: 1591
+  died: 1661
+  name: Desargues
+  bio: |
+    __吉拉德·德萨格斯（Girard
+    Desargues）__（1591-1661）是法国数学家，工程师和建筑师。他在巴黎和里昂设计了许多建筑物，帮助修建了大坝，并发明了利用表摆线数提高水位的机制。
+
+    在数学中，Desargues被视为_射影几何_之父。这是一种特殊的几何形状，其中平行线在“无穷大点”处相遇，形状的大小无关紧要（仅是它们的比例），并且所有四个圆锥截面（圆形，椭圆形，抛物线形和双曲线形）基本上都是相同。
+  links:
+    - title: Conic Sections
+      url: /course/circles/conic-sections
+
+descartes:
+  born: 1596
+  died: 1650
+  name: Descartes
+  bio: |
+    __笛卡尔__（1596 – 1650）是法国数学家和哲学家，也是《科学革命》的关键人物之一。他拒绝接受以前的哲学家的权威，他最著名的名言之一是“我认为，因此我就是”。
+    笛卡尔（Descartes）是_分析几何学_的父亲，这使我们能够使用代数描述几何形状。这是先决条件之一，它使牛顿和莱布尼茨在几十年后发明了_微积分_。
+    他被认为最先使用上标来表示幂或指数，并且_笛卡尔坐标系_以他的名字命名。
+
+diophantus:
+  born: 200
+  died: 284
+  name: Diophantus
+  overflow: true
+  bio: |
+    __Diophantus__是居住在亚历山大的希腊化数学家。他的大部分作品都是关于求解具有多个未知数的多项式方程。这些现在称为_Diophantine方程_，并且仍然是当今重要的研究领域。
+    许多世纪以后，在阅读Diophantus的一本书时，_Pierre de Fermat_提出了这些方程式之一没有解。这被称为“费马的最后定理”，直到1994年才解决。
+
+dirac:
+  name: Dirac
+  bio: |
+    __保罗·狄拉克（Paul
+    Dirac）__（1898年-1972年）是英国理论物理学家，他与欧文·薛定er（ErwinSchrödinger）共同获得1933年诺贝尔奖。狄拉克（Dirac）是量子力学的先驱之一，他制定了著名的_狄拉克方程（3），并首先预测了反物质的存在。
+
+    在移居美国之前，他曾在剑桥大学任教。爱因斯坦认为狄拉克很害羞，_“在天才与疯狂之间令人眩目的道路上保持平衡”_。
+
+einstein:
+  name: Einstein
+  born: 1879
+  died: 1955
+  small: true
+  bio: |
+    __爱因斯坦__（1879年至1955年）是德国物理学家，也是历史上最有影响力的科学家之一。他获得了诺贝尔物理学奖，《时代》杂志称他为_20世纪的人_。
+    爱因斯坦引发了自牛顿以来我们对宇宙的最重大转变。他意识到经典的_牛顿_物理学已经不足以解释某些物理现象。
+    在他“奇迹年”的26岁那年，他发表了四篇开创性的科学论文，这些论文解释了光电效应和布朗运动，引入了相对论，并推导了公式`E = m c^2`，其中指出了能量（_E_）和质量（_m_）是等效的。
+
+eratosthenes:
+  name: Eratosthenes
+  born: -276
+  died: -195
+  bio: |
+    __埃拉托色尼__（公元前275一前193）生于希腊在非洲北部的殖民地昔兰尼（在今利比亚）的一位数学家、地理学家、天文学家、历史学家和诗人。
+    在他的众多成就中，他计算出了地球的周长，测量了地轴的倾斜角，估计了太阳的距离，并绘制了地球的首张地图。 他还发明了“埃拉托色尼筛法”，一种高效计算_质数_的方法。
+  links:
+    - title: 地球半径
+      url: /course/circles/tangets-chords-arcs#eratosthenes
+    - title: 埃拉托色尼筛选法
+      url: /course/divisibility/primes#eratosthenes
+
+erdos:
+  born: 1913
+  died: 1996
+  name: Erdős
+  bio: |
+    __PaulErdős__（1913年至1996年）是历史上生产力最高的数学家之一。生于匈牙利，他解决了图论，数论，组合论，分析，概率论和其他数学领域的无数问题。
+    在他的一生中，Erdős发表了约1,500篇论文，并与500多名其他数学家合作。实际上，他一生中的大部分时间都是靠手提箱旅行，参加研讨会和拜访同事！
+
+escher:
+  name: Escher
+  born: 1898
+  died: 1972
+  bio: |
+    __Maurits Cornelis
+    Escher__（1898年-1972年）是一位荷兰艺术家，他创作了素描，木刻和石版画，以数学方式启发了物体和形状：包括多面体，镶嵌和不可能的形状。他以图形方式探索了对称，无限，透视和非欧几里得几何等概念。
+  small: true
+  links:
+    - title: Tessellations in Art
+      url: /course/polyhedra/tessellations#escher
+
+euclid:
+  name: Euclid
+  born: -330
+  died: -270
+  bio: |
+    __亚历山大的欧几里德__ (约公元前 300 ) 是一个希腊数学家而且通常被称为 _几何之父_。他出版了一本书《几何原本》, 其中首先介绍了欧几里得几何学，包含
+    了几何学和数论中的许多重要证明。直到19世纪，它一直是主要的数学教科书。他在 亚历山大教数学，但我们对他生活的其它事迹知之甚少。
+  links:
+    - title: 欧几里得公理
+      url: /course/euclidean-geometry/euclids-axioms
+    - title: 无穷多素数
+      url: /course/divisibility/primes#primes3
+
+euler:
+  name: Euler
+  born: 1707
+  died: 1783
+  bio: |
+    __莱昂纳多·欧拉__ (1707 – 1783) 是有史以来最伟大的数学家之一。他的工作涉及 数学的各个领域，而且他写了80多卷研究论文。
+    欧拉出生在瑞士，但是在巴塞尔做学习研究，但他的大部分生活在柏林，普鲁士， 圣彼得堡，俄罗斯。 欧拉发明了许多现代数学术语和符号，并在微积分、分析、图论、物理学、天文学和
+    许多其他课题中做出了重要的发现。
+  links:
+    - title: Königsberg Bridges Problem
+      url: /course/graph-theory/bridges
+    - title: Euler’s Formula
+      url: /course/graph-theory/planar-graphs
+    - title: Polyhedrons
+      url: /course/polyhedra/polyhedra
+
+fatou:
+  name: Fatou
+  bio: __皮埃尔·约瑟夫·路易斯·法托__（1878年至1929年）是法国数学家和天文学家。他共同发现了_Julia集_，其反面法塔集以他的名字命名。他还为分析和天体力学做出了重要贡献。
+
+fermat:
+  name: Fermat
+  born: 1607
+  died: 1665
+  bio: |
+    __Pierre de Fermat__（1607年-1665年）是法国数学家和律师。他是微积分的早期先驱，并且从事数论，概率，几何和光学方面的研究。
+
+    1637年，他在其中一本教科书的空白处写了一条简短的便条，声称等式`a^n + b^n = c^n`没有对`n > 2`的整数解，并且他有一个“奇妙的证明，该空白太窄而无法包含”
+    ”。这被称为_费马的最后定理_，也是数学上最著名的未解决问题之一-直到1994年最终得到证明。
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+
+fibonacci:
+  name: Fibonacci
+  born: 1175
+  died: 1250
+  bio: |
+    __莱昂纳多·皮萨诺__，通常称为__斐波那契__（1175 – 1250）是意大利数学家。他以其名字命名的数字序列而闻名：1、1、2、3、5、8、13…
+
+    斐波那契还负责在欧洲普及阿拉伯数字（0、1、2、3、4…），而在欧洲，该数字在公元12世纪仍沿用罗马数字（I，V，X，D，...）。他在一本名为《 Liber
+    Abaci》的书中解释了十进制系统，这是一本针对商人的实用教科书。
+  links:
+    - title: Fibonacci Numbers
+      url: /course/sequences/fibonacci
+
+fourier:
+  born: 1768
+  died: 1830
+  name: Fourier
+  bio: |
+    __约瑟夫·傅里叶__（1768 – 1830）是法国数学家，也是拿破仑的朋友和顾问。除了数学研究之外，他还因发现温室效应而受到赞誉。
+    前往埃及时，傅里叶对_热_尤其着迷。他研究了热传递和振动，发现任何周期函数都可以写成三角函数的无穷和：_傅立叶级数_。
+
+fuller:
+  name: Fuller
+  bio: |
+    __Richard Buckminster“ Bucky”
+    Fuller__（1895年-1983年）是美国建筑师，设计师和发明家。他以建造_大地穹顶_（大型球形结构）而闻名。外观相似的碳分子_富勒烯_后来以他的名字命名。
+
+galileo:
+  born: 1564
+  died: 1642
+  name: Galileo
+  bio: |
+    __伽利略（Galileo
+    Galilei）__（1564-1642）是一位意大利天文学家，物理学家和工程师。他使用最早的望远镜之一观察夜空，在那里发现了木星的四个最大卫星，金星的相位，黑子等等。
+
+    伽利略有时也被称为“现代科学之父”，他还研究了自由落体，运动学，材料科学中物体的运动，并发明了温度计（一种早期的温度计）。
+
+    他是_Heliocentrism_的拥护者，即太阳是我们太阳系的中心。这最终导致他被天主教宗教裁判所审判：伽利略被迫退缩，并在软禁中度过了余生。
+
+galois:
+  born: 1811
+  died: 1832
+  name: Galois
+  overflow: true
+  bio: |
+    法国数学家__ÉvaristeGalois__（1811-1832年）的生活短暂而悲惨，但他发明了两个全新的数学领域：_群论_和_Galois理论_ 。
+
+    Galois还在十几岁的时候就证明了与Niels Abel并没有通用的五阶或更高阶多项式方程的解。
+
+    不幸的是，与他分享这些发现的其他数学家屡次错位或只是归还了他的工作，他在专注于更复杂的工作时未能通过学校和大学考试。
+
+    在21岁的时候，加洛瓦（Galois）在决斗中遭到枪击（有人说是对一个女人的仇恨），后来因伤身亡。在他去世的前一天晚上，他在给朋友的一封信中总结了他的数学发现。其他数学家需要很多年才能充分认识到他的工作的真正影响。
+  links:
+    - title: Group Theory
+      url: /course/transformations/symmetry-groups
+
+gauss:
+  name: Gauss
+  born: 1777
+  died: 1855
+  bio: |
+    __卡尔·弗里德里希·高斯__ (1777 – 1855) 可以说是有史以来最伟大的数学家。他 在几乎所有数学领域都有突破性的发现，从代数和数论到统计学、微积分、几何学、 地质学和天文学。
+
+    据传说，他在3岁时纠正了父亲会计上的一个错误; 并在8岁时并找到了一种方法， 可以轻松地将1到100之间的所有整数相加; 他十几岁时就有了第一次重要的 发现;
+    后来又以教授的身份辅导了许多著名的数学家。
+  links:
+    - title: 素数定理
+      url: /course/divisibility/distribution-of-primes#riemann
+    - title: 非欧几里得几何
+      url: /world/Dimensions_and_Distortions
+    - title: Sums of Triangle Numbers
+      url: /course/sequences/figurate#triangle-sums
+
+germain:
+  born: 1776
+  died: 1831
+  name: Germain
+  small: true
+  bio: |
+    __玛丽·索菲·杰曼（Marie-Sophie Germain）（1776年–
+    1831年）在阅读了关于阿基米德的文章后，决定要成为13岁的数学家。不幸的是，作为一个女人，她面临着强烈的反对。她的父母试图阻止她年轻时学习，而且她从未在大学获得过职位。
+
+    格曼（Germain）是理解弹性表面数学的先驱，为此她获得了巴黎科学院的大奖。她在解决费马最后定理方面也取得了长足的进步，并定期与卡尔·弗里德里希·高斯（Carl Friedrich
+    Gauss）通讯。
+
+godel:
+  born: 1906
+  died: 1978
+  name: Gödel
+  small: true
+  bio: |
+    __库尔特·哥德尔__（1906 – 1978）是奥地利数学家，后来移民到美国，被认为是历史上最伟大的逻辑学家之一。
+    25岁那年，在维也纳完成博士学位后，他发表了他的两个_不完全性定理_。这些说明任何（一致且足够强大的）数学系统都包含某些正确的陈述，但无法证明。换句话说，数学包含某些无法解决的问题。
+    这一结果对数学的发展和哲学产生了深远的影响。哥德尔还发现了这些“不可能定理”的一个例子：_连续性假设_。
+  links:
+    - title: Unprovable Theorems
+      url: /world/Axioms_and_Proof
+    - title: Continuum Hypothesis
+      url: /world/Infinity
+
+goldbach:
+  name: Goldbach
+  born: 1690
+  died: 1764
+  bio: __克里斯蒂安·戈德巴赫__（1690年至1764年）是普鲁士的数学家，是欧拉，莱布尼兹和伯努利的当代作品。他曾是俄罗斯沙皇彼得二世的家教，并因其“哥德巴赫猜想”而闻名。
+  links:
+    - title: Goldbach Conjecture
+      url: /course/divisibility/distribution-of-primes#goldbach1
+
+grothendieck:
+  born: 1928
+  died: 2014
+  name: Grothendieck
+  small: true
+  bio: |
+    法国数学家__亚历山大·格洛腾迪克（1928 – 2014）是_代数几何_发展过程中的关键人物之一。他扩大了该领域的范围，以适用于数学中的许多新问题，包括最终的费马特最后定理。
+    1966年，他被授予菲尔兹奖章。
+
+guthrie:
+  name: Guthrie
+  bio: |
+    __弗朗西斯·古思里（Francis Guthrie）__（1831 –
+    1899）是南非的植物学家和数学家，于1852年首次提出“四色问题”。他是英国最伟大的数学家之一奥古斯都·德·摩根的学生。除了担任数学教授和老师外，Guthrie还担任律师，并从事太阳能和航空航天方面的研究。
+
+haken:
+  name: Haken
+  bio: |
+    __沃尔夫冈·哈肯（Wolfgang Haken）__（生于1928年）是德国数学家，以肯尼思·阿佩尔（Kenneth
+    Appel）的证明_四色定理_而闻名。为了表彰他和Appell获得了美国数学学会富尔克森奖。在1990年，哈肯（Haken）成为伊利诺伊大学（University of
+    Illinois）高级研究中心的成员，他现在是那里的名誉教授。
+
+halley:
+  name: Halley
+  bio: __爱德蒙·哈雷__（1656年至1742年）是英国数学家和物理学家，第二位是_皇家天文学家_。他计算了以他的名字命名的哈雷彗星的轨道。
+
+hamilton:
+  born: 1805
+  died: 1865
+  name: Hamilton
+  small: true
+  bio: |
+    __威廉·罗恩·汉密尔顿__（1805-1865年）是爱尔兰的数学家和儿童神童。他发明了_四元数_，这是“非交换代数”的第一个例子，在数学，物理学和计算机科学中都有重要的应用。
+    他在沿着都柏林的皇家运河漫步时首先想到了这个主意，然后将基本配方刻在他通过的石桥上：`"i"^2 = "j"^2 = "k"^2 = "ijk" = -1`。
+    汉密尔顿还为包括光学和牛顿力学在内的物理学做出了重要贡献。
+
+hardy:
+  born: 1877
+  died: 1947
+  name: Hardy
+  small: true
+  bio: |
+    __G.H。 Hardy__（1877 – 1947）是一位领先的英国纯数学家。他与_约翰·利特伍德（John Littlewood）_一起在分析和数论方面取得了重要发现，包括素数的分布。
+
+    1913年，哈迪收到了_Srinivasa
+    Ramanujan_的来信，该信是印度一位不知名的自学成才的业务员。哈代立即认出了他的天才，并安排拉马努扬去他工作的剑桥。他们在一起取得了重要发现，并撰写了许多论文。
+
+    哈代（Hardy）总是鄙视应用数学，并在他对数学思维的个人描述中表达了这一观点，这本书是1940年出版的_数学家的道歉_。
+
+hilbert:
+  name: 希尔伯特
+  born: 1862
+  died: 1943
+  bio: |
+    __大卫•希尔伯特__（1862 – 1943）是二十世纪最有影响力的数学家之一。他几乎致力于数学的所有领域，对建立大一统的数学理论特别感兴趣。
+
+    希尔伯特在哥廷根（德国）工作，在那里他培养了大量后来成为著名数学家的学生。在1900年的国际数学家大会期间，他列出了23个待解决的问题清单。这个给
+    未来的数学研究奠定了方向——至今仍有四个问题有待解决！
+  links:
+    - title: Hilbert’s Hotel
+      url: /world/Infinity
+
+hypatia:
+  born: 360
+  died: 415
+  name: Hypatia
+  overflow: true
+  bio: |
+    __Hypatia__（约公元360 –
+    415年）是古代亚历山大市的一位著名天文学家和数学家。她还是第一位记录和记录良好生活和工作的女数学家。她编辑或撰写了当时的许多科学书籍的评论，并建造了星盘和比重计。
+
+    她一生中以出色的老师而闻名，并曾为罗马亚历山大大帝奥雷斯蒂斯提供建议。奥雷斯特斯与亚历山大主教西里尔（Cyril）发生争执，导致希帕蒂亚（Hypatia）被一群暴徒杀害。
+
+jacobi:
+  born: 1809
+  died: 1851
+  name: Jacobi
+  small: true
+  bio: __卡尔·雅各比__（1804 – 1851年）是德国数学家。他从事分析，微分方程和数论方面的工作，并且是_椭圆函数_研究的先驱之一。
+
+jefferson:
+  name: Jefferson
+  bio: |
+    __托马斯·杰斐逊（Thomas Jefferson）__（1743 – 1826年）是美国的开国元勋之一，他们的第三任总统，也是《独立宣言》的主要作者。
+    除从事政治工作外，他还学习数学，园艺，力学，并担任建筑师。从公职退休后，杰斐逊创立了弗吉尼亚大学。
+
+jiushao:
+  born: 1202
+  died: 1261
+  name: Qin Jiushao
+  overflow: true
+  bio: |
+    __秦九韶__（秦九韶，约1202-1261年）是中国数学家，发明家和政治家。在他的书_ShujishūJiǔzhāng_中，他发表了许多数学发现，包括重要的_中国余数定理_，并撰写了有关测量，气象和军事的文章。
+
+    秦首先开发了一种用于数值求解多项式方程的方法，现在称为_霍纳方法_。他根据三角形的三个边的长度找到了一个三角形面积的公式，计算了算术级数的总和，并将“零”的符号引入了中国数学。
+
+    秦还发明了_天池盆地_，用于测量降雨量和收集对农业重要的气象数据。
+
+johnson:
+  born: 1918
+  died: 2020
+  name: Johnson
+  bio: |
+    __凯瑟琳·约翰逊__（1918年至2020年）是一名非洲裔美国数学家。约翰逊在NASA工作期间，计算出了美国宇航员（包括首位进入太空的美国人艾伦·谢泼德），阿波罗登月计划甚至航天飞机所走的轨道。
+
+    她具有计算轨道轨迹，发射窗口和紧急返回路径的非凡能力。即使在计算机到来之后，宇航员约翰·格伦（John Glenn）还是要求她亲自重新检查电子结果。
+
+    2015年，约翰逊获得了总统自由勋章。
+
+julia:
+  name: Julia
+  bio: __Gaston Maurice Julia__（1893年– 1978年）是法国数学家，他与人共同发现了_Julia集_，这是一个分形，后来被Benoit Mandelbrot推广。
+
+karinthy:
+  name: Karinthy
+  bio: __Frigyes Karinthy__（1887年-1938年）是匈牙利作家，诗人和新闻工作者。他以1929年的短篇小说“ Chains”而闻名，该短篇小说首次引入了_六个分离度_的概念。
+
+kepler:
+  name: 开普勒
+  born: 1571
+  died: 1630
+  bio: |
+    __约翰尼斯•开普勒__ (1571 – 1630)
+    是一位德国的天文学家和数学家。他是布拉格的_皇家数学家_，以他的_行星运动三大定律_而闻名。开普勒还致力于光学的研究，并发明了一种望远镜来提升他的观测结果。
+  links:
+    - title: Elliptical Orbits
+      url: /course/circles/conic-sections#kepler
+
+khayyam:
+  name: Khayyam
+  born: 1048
+  died: 1131
+  bio: |
+    __奥马尔·哈亚姆（Omar Khayyam）__（عمرخیعام，1048 –
+    1131）是波斯数学家，天文学家和诗人。他设法对所有三次方程进行分类和求解，并找到了新的方法来理解Euclid的_平行公理_。
+    Khayyam还设计了_Jalali日历_，这是一种精确的阳历，某些国家仍在使用。
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+koch:
+  name: von Koch
+  bio: __尼尔斯·法比安·Helge von Koch__（1870年-1924年）是瑞典数学家。他首先描述了以他命名的分形_科赫雪花_，并证明了黎曼假设与素数分布之间的关系。
+
+lagrange:
+  born: 1736
+  died: 1813
+  name: Lagrange
+  bio: |
+    __约瑟夫·路易·拉格朗日__（1736 – 1813）是一位意大利数学家，其后任伦纳德·欧拉（Leonard Euler）担任柏林科学院院长。
+    他从事分析和变异计算，发明了求解微分方程的新方法，证明了数论中的定理，并为群论奠定了基础。 拉格朗日还撰写了有关古典和天体力学的文章，并帮助建立了欧洲的公制系统。
+
+lambert:
+  born: 1728
+  died: 1777
+  name: Lambert
+  bio: |
+    __约翰·兰伯特__（1728年至1777年）是瑞士数学家，物理学家，天文学家和哲学家。他是第一个证明_π_是无理数的人，并且他引入了双曲三角函数。兰伯特还从事几何学和制图学的工作，创建地图投影，并预示了非欧几里得空间的发现。
+
+laplace:
+  born: 1749
+  died: 1827
+  name: Laplace
+  small: true
+  bio: |
+    __Pierre-Simon Laplace__（1749年– 1827年）是法国数学家和科学家。由于他的兴趣广泛，并且他的工作产生了巨大影响，他有时被称为“法国牛顿”。
+    在五卷书中，拉普拉斯将天体力学中的问题从_几何_转换为_微积分_。这为理解我们的宇宙开辟了各种各样的新策略。他提出太阳系是从旋转的尘埃盘发展而来的。
+    拉普拉斯（Laplace）还在概率论领域开创了先河，并展示了概率论如何帮助我们理解物理世界的数据。
+
+leibniz:
+  name: 莱布尼茨
+  born: 1646
+  died: 1716
+  bio: |
+    __戈特弗里德•威廉•莱布尼茨__(1646 – 1716) 是一位德国的数学家和哲学家。在他的众多成就中，他不仅是微积分的发明者之一，还最早创造了一些机械计算器。
+    莱布尼茨认为我们的宇宙是上帝创造的“最好的一个”，允许我们有自由意志。他是一位伟大的理性主义倡导者，还对物理、医学、语言学、法律、历史和其它学科有中大的贡献。
+
+leonardo:
+  born: 1452
+  died: 1519
+  name: Da Vinci
+  bio: |
+    __达芬奇（Leonardo da Vinci）__（1452 –
+    1519）是一位意大利艺术家和多面手。他的兴趣范围从绘画，雕刻和建筑到工程，数学，解剖学，天文学，植物学和制图学。他经常被视为“全球天才”的典范，并且是有史以来生活最多样化的人才之一。
+
+    莱昂纳多（Leonardo）出生于芬奇（Vinci），在佛罗伦萨接受教育，曾在米兰，罗马，博洛尼亚和威尼斯工作。他的画中只有15幅幸存，但其中有些是世界上最著名和复制最多的作品，包括_Mona
+    Lisa_和_The Last Supper_。
+
+    他的笔记本包含大量图纸，发明和科学图表-包括第一批飞行器和直升机，液压泵，桥梁等等。
+
+lie:
+  born: 1842
+  died: 1899
+  name: Lie
+  small: true
+  bio: 挪威数学家__Marius Sophus Lie__（1842-1899年）在_连续变换组_（现在称为_李氏组_）的研究中取得了重大进展。他还研究了微分方程和非欧几里得几何。
+
+lobachevsky:
+  born: 1792
+  died: 1856
+  name: Lobachevsky
+  small: true
+  bio: |
+    __Nikolai Lobachevsky__（Никола́й
+    Лобаче́вский）是一位俄罗斯数学家，并且是非欧几里得几何学的创始人之一。他设法表明，您可以建立一致的几何类型，而欧几里得的第五个公理（大约平行线）不存在。
+  links:
+    - title: Non-Euclidean Geometry
+      url: /world/Dimensions_and_Distortions
+
+lorenz:
+  name: Lorenz
+  born: 1917
+  died: 2008
+  bio: __爱德华·洛伦兹（Edward Lorenz）__（1917年-2008年）是美国数学家和气象学家。他开创了_混沌理论_，发现了_奇怪的吸引子_，并创造了“蝴蝶效应”一词。
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+
+lovelace:
+  born: 1815
+  died: 1852
+  name: Lovelace
+  overflow: true
+  bio: |
+    __艾达·洛夫莱斯（Ada Lovelace）__（1815年至1852年）是英国作家和数学家。她与查尔斯·巴贝奇（Charles Babbage）一起在_Analytical
+    Engine_（早期的机械计算机）上工作。她还编写了第一个在这种机器上运行的算法（用于计算伯努利数），从而使她成为历史上第一位计算机程序员。
+
+    艾达（Ada）将她的方法描述为“思想科学”，并花了很多时间思考技术对社会的影响。
+
+madhava:
+  born: 1340
+  died: 1425
+  name: Madhava
+  bio: |
+    __Sangamagramma的玛达瓦__（约1340年至1425年）是印度南部的数学家和天文学家。他所有的原始作品都已丢失，但对数学的发展产生了重大影响。
+    Madhava首先使用无穷级数来逼近三角函数，这是许多世纪后迈向微积分发展的重要一步。他还研究了几何和代数，并找到了_π_的精确公式（也使用无穷级数）。
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Pi
+      url: /course/circles/introduction
+
+mandelbrot:
+  born: 1924
+  died: 2010
+  name: Mandelbrot
+  bio: |
+    数学家__Benoit
+    Mandelbrot__出生于波兰，在法国长大，并最终移居美国。他是_分形几何学_的开拓者之一，尤其对“粗糙度”和“混乱”在现实世界（例如云层或海岸线）中的出现方式特别感兴趣。
+
+    在IBM工作期间，他使用早期的计算机创建了分形的图形表示形式，并在1980年发现了著名的_Mandelbrot集_。
+  links:
+    - title: Fractals
+      url: /course/fractals/introduction
+    - title: Mandelbrot Set
+      url: /course/fractals/mandelbrot
+
+menger:
+  name: Menger
+  bio: __卡尔·门格__（1902年-1985年）是奥美数学家。他研究了代数，几何，维，博弈论和社会科学，但他最著名的是_Menger海绵_，这是著名的三维_分形_。
+
+mersenne:
+  born: 1588
+  died: 1648
+  name: Mersenne
+  bio: |
+    __马林·梅森（Marin Mersenne）__（1588年至1648年）是法国数学家和牧师。由于他在17世纪与科学界的往来频繁交流，他被称为“欧洲邮筒”。
+    今天，我们大多数人都记得他是_梅森素数_的素数，素数可以写为`2^n - 1`。大多数最大的已知质数都是这种类型的。他还研究了振动弦的声学和和声，并撰写了有关神学和哲学的文章。
+  links:
+    - title: Large Primes
+      url: /course/divisibility/distribution-of-primes#prime-test-1
+
+milgram:
+  name: Milgram
+  bio: |
+    __斯坦利·米尔格拉姆（1）（1933 –
+    1984）是著名的社会心理学家。他以_服从_的实验，测试成年人愿意如何服从命令（即使在伤害他人时）而闻名，以及_小世界实验_着名，该实验测试了成年人的服从程度社会。
+
+mirzakhani:
+  born: 1977
+  died: 2017
+  name: Mirzakhani
+  overflow: true;
+  bio: |
+    __玛丽亚·米尔扎卡尼（Maryam Mirzakhani）__（1977年-2017年）是伊朗的数学家兼斯坦福大学的教授。她是唯一获得_Fields Medal_（数学最高奖项）的女性。
+    Maryam在动力系统和几何学的交叉点工作。她研究了_双曲曲面_和_复流形_之类的对象，但也为其他许多数学领域做出了贡献。
+    解决问题时，Maryam会在大纸上绘制涂鸦和图表，以查看基本的图案和美观。她的女儿甚至将Maryam的作品描述为“绘画”。 Maryam享年40岁，死于乳腺癌。
+
+monge:
+  born: 1746
+  died: 1818
+  name: Monge
+  bio: |
+    __Gaspard Monge__（1746 – 1818年）是法国数学家。他被认为是_微分几何_之父，他在三维空间的表面（例如球体）上引入了_曲率线_的概念。
+    Monge还发明了_正投影_和_描述几何_，该几何允许使用二维图形来表示三维对象。
+
+    法国大革命期间，蒙格（Monge）担任海军陆战部长。他帮助改革了法国的教育体系，并创立了ÉcolePolytechnique。
+  small: true
+  links:
+    - title: Map Projections
+      url: /world/Dimensions_and_Distortions
+
+monsky:
+  name: Monsky
+  bio: __Paul Monsky__（生于1936年）是美国数学家兼布兰代斯大学教授。他证明了一个正方形不能分为奇数个相等面积的三角形–这就是“蒙斯基定理”。
+
+morse:
+  name: Morse
+  bio: |
+    __塞缪尔·摩尔斯（1）（1791-1872）是美国发明家和画家。他在波士顿附近长大，就读于耶鲁大学，之后开始了艺术家生涯。
+
+    莫尔斯（Morse）从欧洲旅行回国学习艺术的旅途中，听到了谈论新电气设备的乘客的消息。这激发了他仅用一根电线就对电报进行了重大改进，并与助手阿尔弗雷德·韦尔（Alfred
+    Vail）一起开发了_摩尔斯电码_。
+
+    在获得资金的最初困难之后，莫尔斯的电报迅速传遍了美国和世界各地。
+
+    莫尔斯还竞选纽约市市长两次，但他对奴隶制和反对移民的支持意味着他两次都被击败。
+
+napier:
+  born: 1550
+  died: 1617
+  name: Napier
+  bio: |
+    __约翰·纳皮尔（John Napier）__（1550 –
+    1617年）是苏格兰的数学家，物理学家和天文学家。他发明了对数，普及了小数点的使用，并创建了“纳皮尔的骨头”，这是一种手动计算设备，有助于乘法和除法。
+
+nash:
+  born: 1928
+  died: 2015
+  name: Nash
+  bio: |
+    __约翰·福布斯·纳什__（1928年-2015年）是美国数学家，致力于博弈论，微分几何和偏微分方程。他展示了数学如何解释复杂的现实生活系统（包括经济学和军事领域）中的决策。
+    纳什在30多岁时被诊断出患有偏执型精神分裂症，但他设法康复并重返学术工作。他是唯一获得诺贝尔经济学奖和_阿贝尔奖_（数学最高奖项之一）的人。
+  links:
+    - title: Game Theory
+      url: /world/Game_Theory
+
+neumann:
+  born: 1903
+  died: 1957
+  name: von Neumann
+  small: true
+  bio: |
+    __约翰·冯·诺伊曼（John von
+    Neumann）__（1903年-1957年）是匈牙利裔美国数学家，物理学家和计算机科学家。他为纯数学做出了重要贡献，是量子力学的先驱，并开发了诸如博弈论，元胞自动机，自我复制机和线性编程等概念。
+
+    在第二次世界大战期间，冯·诺依曼（von Neumann）是_曼哈顿计划_的重要成员，致力于氢弹的研发。后来他为原子能委员会和美国空军提供咨询。
+
+newton:
+  name: 牛顿
+  born: 1642
+  died: 1726
+  bio: |
+    __艾萨克•牛顿公爵__(1642 – 1726)是一位英国的物理学家、数学家、天文学家，还是有史以来最有影响力的科学家之一。他不仅是剑桥大学的教授，还是皇家学会会长。
+    在他的《自然哲学的数学原理》一书中，对万有引力和三大运动定律进行了公式化描述，这些描述奠定了此后三个世纪里物理世界的科学观点。
+    在其它方面，牛顿还是微积分的发明者之一，建造了第一个反射望远镜，计算出了音速，研究流体运动，并基于对三棱镜将白光发散成可见光谱的观察发展出了颜色理论。
+  links:
+    - title: Gravity
+      url: /course/circles/conic-sections#newton
+    - title: Digits of Pi
+      url: /course/circles/introduction#pi-record
+
+nicomachus:
+  name: Nicomachus
+  born: 60
+  died: 120
+  overflow: true
+  bio: __格拉萨（Niasaach）的尼科马修斯（Nicomachus）__（约60至120岁）是一位古希腊数学家，他也花了很多时间思考数字的神秘特性。他的书_算术概论_首次提到了完美数。
+  links:
+    - title: Perfect Numbers
+      url: /course/sequences/special#perfect
+
+nightingale:
+  born: 1820
+  died: 1910
+  name: Nightingale
+  small: true
+  bio: |
+    __佛罗伦萨·南丁格尔__（1820 –
+    1910年）是英国护士和统计学家。在克里米亚战争中，她为受伤的英国士兵提供护理，后来又成立了第一所护士培训学校。作为“有灯的女人”，她吹嘘一个文化偶像，而美国的新护士仍然坚持_夜莺承诺_。
+
+    她对医学的最重要贡献之一是利用统计学评估治疗方法。她创建了许多图表，并且是最早使用饼图的人之一。夜莺还致力于改善印度的卫生条件和饥饿感，废除了卖淫法，并促进了妇女的新职业。
+
+noether:
+  name: Noether
+  born: 1882
+  died: 1935
+  bio: __Amalie Emmy Noether__（1882-1935年）是德国数学家，他在抽象代数和理论物理学中取得了重要发现，包括对称性和守恒律之间的联系。她通常被认为是最有影响力的女数学家。
+  small: true
+  links:
+    - title: Symmetry in Physics
+      url: /course/transformations/physics
+
+oresme:
+  born: 1323
+  died: 1382
+  name: Oresme
+  bio: |
+    __妮可·奥里斯梅（Nicole Oresme）__（约1323 –
+    1382年）是一位重要的法国数学家，哲学家和主教，生活在中世纪晚期。他早在笛卡尔（笛卡尔）之前就发明了坐标几何，他是第一个使用分数指数的人，并且致力于无穷级数。他撰写了有关经济学，物理学，天文学和神学的文章，并且是法国国王查理五世的顾问。
+
+pacioli:
+  born: 1446
+  died: 1517
+  name: Pacioli
+  bio: |
+    __卢卡·帕乔利（Luca Pacioli）__是一位很有影响力的意大利男修道士和数学家，他发明了加号和减号（+和–）的标准符号。他是欧洲最早的会计师之一，在那里他引入了两次入账簿记。
+    Pacioli与Leonardo da Vinci合作，还撰写了有关算术和几何的文章。
+
+pascal:
+  name: Pascal
+  born: 1623
+  died: 1662
+  bio: |
+    __布莱斯·帕斯卡__（1623 – 1662）是法国数学家，物理学家和哲学家。他发明了一些最早的机械计算器，并从事射影几何，概率和真空物理学的研究。
+    最著名的是，帕斯卡因命名_帕斯卡的三角形_而闻名，这是一个无数的三角形，具有一些令人惊奇的特性。
+  links:
+    - title: Probability
+      url: /course/probability/introduction
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+peano:
+  born: 1858
+  died: 1932
+  name: Peano
+  small: true
+  bio: |
+    意大利数学家__Giuseppe
+    Peano__（1858年至1932年）出版了200多本有关逻辑和数学的书籍和论文。他制定了_Peano公理_，成为严格的代数和分析的基础，发展了逻辑和集合论的表示法，构造了连续的，空间填充的曲线（_Peano曲线_），并致力于归纳证明的方法。
+
+    Peano还开发了一种新的国际语言_Latino sine flexione_，它是拉丁语的简化版本。
+  links:
+    - title: Proof by Induction
+      url: /world/Axioms_and_Proof
+
+pearson:
+  name: Pearson
+  bio: __卡尔·皮尔逊__（1857年-1936年）是英国数学家和统计学家。他从事生物识别，气象学和优生学等众多领域的研究，并在伦敦大学学院创立了世界上第一个大学统计系。
+
+penrose:
+  name: Penrose
+  born: 1931
+  bio: |
+    __罗杰·彭罗斯爵士__（生于1931年）是一位英国数学家和物理学家，以其在广义相对论和宇宙学方面的开创性工作而著称-经常与其他著名科学家，例如史蒂芬·霍金和迈克尔·阿提亚合作。他还发现了_Penrose平铺_：自相似，非周期性的镶嵌。
+  links:
+    - title: Penrose Tilings
+      url: /course/polyhedra/tessellations#penrose
+
+perelman:
+  born: 1966
+  name: Perelman
+  bio: |
+    2003年，俄国数学家__Grigori Perelman__（出生于1966年，Григо́рий
+    Перельма́нborn）证明了_PoincaréConjecture_，这是迄今为止数学上最著名的未解决问题之一。
+
+    复杂的证明在2006年得到了验证，但是Perelman拒绝了随之而来的两项大奖：100万美元的Clay
+    Millennium奖和_Fields奖牌_，这是数学界最高的认可。实际上，他说：_“我对金钱或名声不感兴趣；我不想像动物园里的动物一样被展示。”_
+
+    佩雷尔曼（Perelman）还为黎曼几何和几何拓扑做出了贡献，庞加莱猜想仍然是已解决的七个千年奖问题中的唯一问题之一。
+
+pingala:
+  name: Pingala
+  born: -330
+  died: -270
+  bio: |
+    __Pingala__（पिङ्गल）是一位古老的印度诗人和数学家，居住于公元前300年左右，但对其生平知之甚少。他写了《Chandaḥśāstra》，在那里他用数学方法分析了梵语诗歌。它也包含对二进制数，斐波那契数和Pascal三角形的第一个已知解释。
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+planck:
+  name: Plank
+  bio: __马克斯·普朗克__（1858年-1947年）是德国物理学家，也是量子力学的最初开发者之一，为此他于1918年获得诺贝尔奖。
+
+plato:
+  name: Plato
+  born: -425
+  died: -347
+  bio: |
+    __柏拉图__（约前425年-347年）是古希腊的哲学家，并且与他的老师苏格拉底和他的学生亚里士多德一起奠定了西方哲学和科学的基础。
+    柏拉图创立了雅典学院，这是西方世界上第一所高等教育机构。他在哲学和神学，科学和数学，政治和正义方面的许多著作使他成为有史以来最有影响力的思想家之一。
+  links:
+    - title: Platonic Solids
+      url: /course/polyhedra/platonic
+
+poincare:
+  born: 1854
+  died: 1912
+  name: Poincaré
+  bio: |
+    法国数学家__亨利庞加莱__（1854年至1912年）经常被形容为_最后一位普世主义者_，这意味着他一生都从事过数学领域的工作。
+    庞加莱是_拓扑_领域的创始人之一，他提出了_庞加莱猜想_。这是数学上尚未解决的著名问题之一，直到2003年由Grigori Perelman证明。
+    他还找到了“三体问题”的部分解决方案，并发现太空中的三颗恒星或行星的运动可能是完全不可预测的。这为现代_混沌理论_奠定了基础。
+    庞加莱是第一个提出_引力波_的人，他关于洛伦兹变换的工作是爱因斯坦建立狭义相对论的基础。
+  links:
+    - title: Chaos Theory
+      url: /course/chaos/introduction
+    - title: Topology
+      url: /world/Dimensions_and_Distortions
+
+ptolemy:
+  born: 90
+  died: 168
+  name: Ptolemy
+  bio: |
+    __托勒密（Claudius
+    Ptolemy）__（约公元100年至170年）是希腊罗马数学家，天文学家，地理学家和占星家。最好记住他的是我们宇宙的_托勒密_或_地心_模型-地球位于中心，所有行星和太阳围绕它旋转。
+
+    尽管我们今天知道这种模型是错误的，但托勒密的科学影响是无可争议的。他开发了具有许多实际应用的三角表，这在许多世纪以来一直是最精确的。他还制作了详细的地球地图，并撰写了有关音乐理论和光学的文章。
+  links:
+    - title: Trigonometry
+      url: /course/triangles/trigonometry
+    - title: Orbits
+      url: /course/circles/introduction
+
+pythagoras:
+  name: Pythagoras
+  born: -570
+  died: -495
+  bio: |
+    __萨摩斯岛毕达哥拉斯__（约公元前570年至495年）是希腊哲学家和数学家。他以证明_毕达哥拉斯定理_而闻名，但他在数学和科学上也有许多发现。
+    毕达哥拉斯试图用一种数学的方式来解释音乐，并且发现如果两个音调的频率之比是一个简单的分数，它们就会听起来很“和谐”（辅音）。
+    他还在意大利建立了一所学校，在那儿，他和他的学生几乎遵循宗教信仰来崇拜数学，但遵循了许多怪异的规则-但学校最终被他们的对手烧毁了。
+  links:
+    - title: Pythagoras’ Theorem
+      url: /course/triangles/pythagoras
+
+ramanujan:
+  born: 1887
+  died: 1920
+  name: Ramanujan
+  overflow: true
+  bio: |
+    __Srinivasa Ramanujan__（1887年-1920年）在印度长大，在那里他几乎没有接受过正规的数学教育。然而，当他在一家小商店做店员时，他设法完全孤立地提出了新的想法。
+
+    在与其他数学家联系失败几次后，他写了一封信给著名的G.H.哈迪哈代立即认出了拉马努扬的天才，并安排他去英格兰的剑桥旅行。他们在一起，在数论，分析和无限级数方面取得了许多发现。
+
+    不幸的是，拉曼努让很快病倒，被迫返回印度，享年32岁。在他短暂的一生中，拉曼努让证明了3000多个定理和方程，涉及广泛的话题。他的工作开创了数学的全新领域，他的笔记本在去世数十年后还受到其他数学家的研究。
+
+regiomontanus:
+  born: 1436
+  died: 1476
+  name: Regiomontanus
+  overflow: true
+  bio: |
+    __约翰·穆勒·雷吉蒙塔努斯（JohannMüllerRegiomontanus）（1436 –
+    1476）是德国数学家和天文学家。他在这两个领域都取得了长足的进步，包括创建详细的天文表和出版多本教科书。
+
+richardson:
+  name: Richardson
+  bio: |
+    __刘易斯·弗莱·理查森__（1881-1953年）是英国数学家和物理学家。他开创了现代天气预报的数学技术，发明了检测冰山的声学机器，并开发了求解线性方程组的方法。
+    考虑到两国共享边界的长短，他还试图计算两国宣战的可能性。但是，他无法找到准确的国家边界长度尺寸。这使他意识到边界和海岸线具有_分形_的许多属性。
+
+riemann:
+  name: Riemann
+  born: 1826
+  died: 1866
+  overflow: true
+  bio: |
+    __伯恩哈德·黎曼__ (1826 – 1866) 是一位从事分析和数论领域的德国数学家。 他提出了第一个严格的积分定义，研究了为广义相对论奠定了基础的微分几何，并
+    对素数的分布作出了开创性的发现。
+  links:
+    - title: Riemann Hypothesis
+      url: /course/divisibility/distribution-of-primes#riemann
+
+russell:
+  born: 1872
+  died: 1970
+  name: Russell
+  small: true
+  bio: |
+    __伯特兰·罗素__（1872年-1970年）是英国哲学家，数学家和作家。他被广泛认为是20世纪最重要的逻辑学家之一。
+
+    罗素（Russell）与他人合着了《数学原理》（Principia
+    Mathematica），在那里他尝试使用逻辑为数学建立正式的基础。他的工作不仅对数学和哲学产生了重大影响，而且对语言学，人工智能和形而上学也产生了重大影响。
+
+    罗素是一位热情的和平主义者和反战活动家。 1950年，他因“在其中倡导人道主义理想和思想自由”而获得诺贝尔文学奖。
+
+shannon:
+  name: Shannon
+  born: 1898
+  died: 1972
+  bio: |
+    __克劳德·香农__（1898年-1972年）是美国数学家和电气工程师，被誉为“信息论之父”。他从事密码学工作，包括在第二次世界大战期间为国防破解密码，但他也对杂耍，独轮车和国际象棋感兴趣。在业余时间，他制造了可以玩弄或解决魔方魔方难题的机器。
+  small: true
+  links:
+    - title: Computers for Gambling
+      url: /course/statistics/casino#dealer
+
+shijie:
+  born: 1249
+  died: 1314
+  name: Zhu Shijie
+  bio: |
+    __朱世杰（1249 – 1314）的朱世杰（1）是中国最伟大的数学家之一。在_《四个未知的玉镜》_一书中，他展示了如何使用多项式方程组和四个变量（称为_天堂_，_地球_，
+    _人_和_事项_）。
+
+    朱充分利用帕斯卡的三角形。他还发明了求解线性方程组的规则-早于我们的现代矩阵方法已有多个世纪了。
+  links:
+    - title: Pascal’s Triangle
+      url: /course/sequences/pascals-triangle
+
+sierpinski:
+  name: Sierpiński
+  bio: |
+    __瓦茨拉夫·弗朗西斯克·西尔宾斯基__（1882 –
+    1969）是波兰数学家。他在集合论，数论，分析和拓扑学方面取得了重要发现，发表了700多篇论文和50本书。他还发明了许多流行的_分形_，包括_Sierpinski三角形_，_Sierpinski地毯_和_Sierpinski曲线_。
+
+    _Sierpinski数_是奇数自然数_k_，因此`k * 2^n +1`是所有自然数_n_的合成。
+    _Sierpinski问题_试图找到最小的Sierpinski数。已知的最小数字是78557 –但是仍然未知是否有较小的数字。
+
+sikdar:
+  name: Sikdar
+  bio: __Radhanath Sikdar__（1813年-1870年）是印度数学家。他是第一个测量珠穆朗玛峰高度的人，并表明它是地球上最高的山峰。
+
+singmaster:
+  name: Singmaster
+  bio: __David Singmaster__（生于1939年）是一位美国数学家，以数学难题和脑筋急转弯而闻名。他是第一个提出用于分析和求解_Rubik's Cube_的数学算法的人。
+
+stevin:
+  born: 1548
+  died: 1620
+  name: Stevin
+  bio: __西蒙·史蒂文（Simon Stevin）__（1548 – 1620）是佛兰德的数学家和工程师。他是最早使用和写小数的人之一，并为科学和工程学做出了许多其他贡献。
+
+tartaglia:
+  born: 1499
+  died: 1557
+  name: Tartaglia
+  bio: |
+    __尼古拉·丰塔纳·塔塔格里亚（1ic – 1499 –
+    1557）是一位意大利数学家，工程师和簿记员。他出版了第一部意大利语的阿基米德和欧几里得翻译，找到了求解任何立方方程的公式（包括复数的第一个实际应用），并使用数学方法研究了炮弹的弹丸运动。
+
+thales:
+  name: Thales
+  born: -624
+  died: -546
+  bio: |
+    __米勒图斯（Thales of Miletus）__（约公元前624年-546年）是希腊数学家和哲学家。
+    泰雷兹通常被认为是西方文明的第一位科学家：他没有使用宗教或神话，而是尝试使用科学方法来解释自然现象。他也是历史上第一个以他的名字命名的数学发现的人：泰勒斯定理。
+  links:
+    - title: Thales’ Theorem
+      url: /course/euclidean-geometry/introduction
+
+thorp:
+  name: Thorp
+  bio: |
+    __爱德华·索普（Edward
+    Thorp）__（生于1932年）是美国对冲基金经理和二十一点玩家，以发明_卡计数_和制造第一台_可穿戴计算机_以击败赌场而闻名。轮盘赌。他曾在麻省理工学院（MIT）工作，是一位数学教授，并且开创了概率论的现代应用。
+
+turing:
+  born: 1912
+  died: 1954
+  name: Turing
+  bio: |
+    __艾伦·图灵__（1912年至1954年）是一位英国数学家，通常被称为“计算机科学之父”。
+
+    在第二次世界大战期间，作为布莱奇利公园（Bletchley
+    Park）的“政府法规和密码学校”的一部分，图灵在打破德国军方使用的Enigma法规方面发挥了关键作用。这帮助盟军赢得了战争，并可能挽救了数百万人的生命。
+
+    他还发明了通用计算机的数学模型_Turing machine_和_Turing test_，它们可用于判断人工智能的能力。
+
+    图灵是同性恋，在他的一生中仍然是犯罪，这意味着他的开创性成就从未得到充分认可。他在41岁时自杀。
+  links:
+    - title: Codes and Cryptography
+      url: /course/codes
+
+ulam:
+  name: Ulam
+  bio: '__斯坦利·乌拉姆__ (1909 – 1984) 是一位美籍波兰裔数学家. 在美国开发首 枚原子弹的_曼哈顿工程_中，他发挥了重要作用, 而且他发展了_蒙特卡罗方法_和 统计学中的重要概念。'
+
+venn:
+  name: Venn
+  bio: __约翰·芬（John Venn）__（1834 – 1923）是一位英国数学家和哲学家，他介绍了用于集合论和概率的_维恩图_。他曾在剑桥大学任教，是伦敦皇家学会的会员。
+
+viete:
+  born: 1540
+  died: 1603
+  name: Viète
+  bio: |
+    __FrançoisViète__（1540 – 1603年）是法国数学家，律师兼法国国王亨利三世和四世的顾问。他在代数方面取得了长足的进步，并首先介绍了使用字母表示变量的方法。
+    维耶特发现了多项式的根与系数之间的联系，该多项式称为_维耶特公式_。他还撰写了有关几何和三角学的书籍，包括使用具有393216边的多边形将_π_计算到小数点后10位。
+
+wallis:
+  born: 1616
+  died: 1703
+  name: Wallis
+  bio: 英国数学家__John Wallis__（1616年至1703年）为微积分的发展做出了贡献，发明了数字线和无穷大符号∞，并担任议会和皇家法院的首席密码学家。
+
+wiles:
+  born: 1953
+  name: Wiles
+  bio: |
+    英国数学家__安德鲁·威尔斯__爵士（生于1953年）以证明费马最后定理而闻名，该定理在那之前是数学中最著名的未解决问题之一。
+
+    1637年，皮埃尔·德·费马（Pierre de Fermat）在教科书的空白处写道，他有一个极好的证明，证明等式`a^n + b^n = c^n`对`n >
+    2`没有整数解。不幸的是，直到400年后的威尔斯，才找到一个证明。
+
+    自10岁起，威尔斯就对这个问题着迷，并花了七年的时间独自解决这个问题。他在1993年宣布了自己的解决方案，尽管争论中的一小段差距需要花费两年的时间才能解决。
+
+    他太老了，无法获得数学最高奖项_Fields奖章（5），该奖章的年龄限制为40岁。相反，Wiles因其工作而被授予了特别的银牌。
+
+wolfram:
+  name: Wolfram
+  bio: |
+    __斯蒂芬·沃尔夫拉姆（Stephen Wolfram）__（生于1959年）是英美计算机科学家，物理学家和商人。他是_Wolfram
+    Research_的创始人兼首席执行官，在那里他开发了_Mathematica_计算系统，_Wolfram | Alpha_回答引擎和Wolfram编程语言。

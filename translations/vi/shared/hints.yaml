@@ -1,0 +1,52 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: 'Chào mừng đến với Mathigon! Tôi là Archm Archie, gia sư cá nhân của bạn. :graduation-cap:'
+
+account: 'Bạn có thể [tạo tài khoản miễn phí](->#login-btn) để lưu tiến trình của mình.'
+
+tutorial1: |
+  Nội dung của chúng tôi được chia thành các bước nhỏ. Bạn phải hoàn thành các hoạt động để tiết lộ
+  những gì tiếp theo.
+
+tutorial2: |
+  Chúng tôi sẽ lưu tất cả tiến trình của bạn, để bạn có thể quay lại sau và tiếp tục ngay tại nơi
+  bạn rời đi.
+
+correct:
+  - 'Làm tốt lắm :smiling-face:'
+  - 'Công việc tuyệt vời! :relieved-face:'
+  - 'Tuyệt vời :grinning-face:'
+  - 'Rực rỡ :thumbs-up:'
+  - 'Thông minh! :ok-hand:'
+  - 'Tuyệt vời :smiling-face-with-sunglasses:'
+  - 'Đẹp! :victory-hand:'
+  - 'Con đường để đi! :smiling-face-with-smiling-eyes:'
+  - 'Ngọt ngào :smiling-face:'
+  - 'Ấn tượng! :trophy:'
+  - 'Nổi bật :grinning-face:'
+  - 'Tuyệt vời! :star:'
+  - 'Tuyệt vời! :smiling-face:'
+
+incorrect:
+  - 'Điều đó không hoàn toàn đúng :frowning-face:'
+  - 'Bạn có chắc chắn về điều đó không? :thinking-face:'
+  - 'Điều đó không đúng. :hushed-face:'
+  - 'Thử lại! :confused-face:'
+
+welcomeMorning: Buổi sáng tốt lành!
+
+welcomeAfternoon: Chào buổi trưa!
+
+welcomeEvening: Chào buổi tối!
+
+welcomeMorningNamed: 'Chào buổi sáng, $name!'
+
+welcomeAfternoonNamed: 'Chào buổi chiều, $name!'
+
+welcomeEveningNamed: 'Chào buổi tối, $name!'
+
+serverError: |
+  Xin lỗi, tôi có thể giúp đỡ vào lúc này. Kiểm tra kết nối internet của bạn hoặc thử lại sau.
+  :confused-face:

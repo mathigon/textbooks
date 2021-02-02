@@ -14,6 +14,7 @@ import {$N, CustomElementView, ElementView, observe, register, slide, SVGParentV
 import {mod} from '@mathigon/fermat';
 import {Point} from '@mathigon/euclid';
 import {UPPER_CASE} from './utilities';
+import template from './enigma.pug';
 
 
 const LETTER_COUNT = UPPER_CASE.length;
@@ -200,7 +201,7 @@ export class Machine {
 // -----------------------------------------------------------------------------
 // Component
 
-@register('x-enigma')
+@register('x-enigma', {template})
 export class Enigma extends CustomElementView {
   private machine = new Machine();
 

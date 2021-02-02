@@ -1,0 +1,1309 @@
+# ==============================================================================
+# MATHIGON GLOSSARY
+# ==============================================================================
+
+absolute-value:absolute-value:
+  title: 绝对值
+  text: 数字的__绝对值__是其在数字线上距0的距离。它使负数为正，但使正数保持不变。 `x`的绝对值写为`|x|`。例如，`|-5| = 5`和`|3| = 3`。
+
+acute-angle:
+  title: 锐角
+  text: __锐角__是尺寸小于90°的角。
+
+acute-triangle:
+  title: 急性三角
+  text: 在__急性三角形__中，所有三个内角均为_急性_（小于90°）。
+  link: /course/triangles/properties#classification
+
+adic:
+  title: N-adic数字
+  text: 对于某些整数_n_，___N_ -adic__个数字是一种特殊的数字系统，其“接近性”的定义与常规算术不同。如果两个_n_ -adic数字可以被_n_的高次幂整除，则将它们_闭合_。
+
+adjacent-angles:
+  title: 相邻角度
+  text: 如果两个角度共享一个共同的边和顶点但不重叠，则两个角度为__相邻__。 _相邻_一词仅表示“邻居”。
+
+aleph-zero:
+  title: 阿莱夫·零
+  text: 用希伯来字母א编写的Aleph Zero是可数无限集（例如自然数）的基数。
+
+algebraic-numbers:
+  title: 代数数
+  text: |
+    __代数__是实数的子集，可以表示为具有整数系数的多项式方程的根。所有有理数（例如`2/3`）和毛边（例如`root(3,5)`）都是代数的，因此可以根据毛边（例如`(2 +
+    sqrt(3))/(1 - sqrt(5))`）构建的数字也是代数的。
+
+    那些实数但_不是_的代数称为_先验数_。
+
+algorithm:
+  title: 算法
+  text: __算法__是可用于解决特定问题的一组规则或指令。它们通常由计算机使用，并且在数学中无处不在：从_长除法_到_Gaussian消除_。
+
+alternate-angles:
+  title: 交替角度
+  text: |
+    __交替角__由两条_平行线_形成，两条平行线由_遍历_线交叉，并且它们始终是一致的。在下图中，标记为1、2、3和4的每个角度对都是交替的。每对中的两个角度位于不同的平行线上，且遍历的方向相反。
+
+    角度对1和2被称为__替代外角__，因为它们位于平行线之外，而角度对3和4被称为__替代内角__。
+
+amino-acid:
+  title: 氨基酸
+  text: |
+    __氨基酸__是构成__蛋白质__的微小有机化合物。它们是所有活生物体的一些重要组成部分。 氨基酸在我们的体内被用来分解食物，修复人体组织，储存能量以及执行许多其他功能。
+
+angle:
+  title: 角度
+  text: 角由共享共同端点的两条光线形成。每条射线称为角的一侧。角度的大小通常以_度_或_弧度_来度量。
+
+angle-bisector:
+  title: 角平分线
+  text: __角平分线__是将一个角度分成两个相等的较小角度的线或射线。
+  image: angle-bisector.svg
+
+anti-dot:
+  title: 反点
+  text: 点机器中的单元格可以包含__个反点__，您可以将其视为“空洞”或“负点”。它们的值为–1。您始终可以在同一单元格中添加一个点和一个反点，而无需更改其值。
+
+apothem:
+  title: 阿波特姆
+  text: 规则多边形的__斜线__是从其一侧中点到中心的距离。
+
+arabic-numerals:
+  title: 阿拉伯数字
+  text: |
+    __阿拉伯数字系统__使用十个不同的数字（0、1、2、3、4、5、6、7、8、9）和一 个十进制的位值系统来写任何数字。 它最初是在印度发展起来的，后来被阿拉伯数学家改编，再后来被意大利数学家
+    莱昂纳多·菲波纳契带到欧洲。
+
+arccos:
+  title: 反余弦
+  text: __反余弦__函数是一个三角函数，写为`arccos(x)`或`cos^(-1)(x)`。它是`cos(x)`的逆。
+
+archimedean-solid:
+  title: 阿基米德固体
+  text: __Archimedean实体__是由不同种类的规则多边形组成的多面体，在各个方向上看起来都是相同的。有13种不同的阿基米德固体。
+  link: /course/polyhedra/platonic#archimedean
+
+arithmetic-mean:
+  title: 算术平均值
+  text: __平均值__是一组数字的_平均值_。您可以计算出来，但是将集合中的所有数字相加，然后将总数除以项目数。
+
+arithmetic-sequence:
+  title: 算术序列
+  text: __算术序列__（有时称为__算术级数__）是一个数字序列，其中连续项之间的差 总是常数 _d_。
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+arithmetic series:
+  title: 算术系列
+  text: __算术级数__是算术序列中各项的总和。
+
+associative:
+  title: 关联性
+  text: 如果`a•(b•c) = (a•b)•c`，则操作•是关联的。例如，数字的加法（+）和乘法（×）是关联的。
+
+atom:
+  title: 原子
+  text: |
+    __原子__是构成所有普通物质的粒子：固体，液体，气体和等离子体。原子由带正电的_核_（或_核_）组成，由_质子_和_中子_组成，并被带负电的壳包围带电的_电子_。原子的直径约为毫米的十分之一。
+
+axiom:
+  title: 公理
+  text: |
+    __公理__，有时也称为__假定__，是一种数学陈述，被认为是“不言而喻”的，未经证明即被接受。它应该如此简单，以至于毫无疑问是正确的。 公理构成了数学的基础，可用于证明其他更复杂的结果。
+
+axis-of-symmetry:
+  title: 对称轴
+  text: 如果形状具有反射对称性，则__对称轴__是将形状分成两等分的线。
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+base-10:
+  title: 10进制
+  text: __十进位制__（__10进制__）是全世界最普遍使用的记数体系。一个数字中的每个数位有一个从0到9中10个不同的数值的一个。
+
+bipartite-graph:
+  title: 二部图
+  text: 一个（完整的）__二部图__由两组顶点组成。每个顶点都连接到相反集中的所有顶点，但没有连接到其自己集中的所有顶点。
+  link: /course/graph-theory/handshakes#handshakes-4
+
+blackjack:
+  title: 二十一点
+  text: __二十一点__是一种纸牌游戏，您可以将多张纸牌的价值加起来接近21，但不能超过21。
+
+cavalieri:
+  title: 卡瓦列里原理
+  text: |
+    __卡瓦列里原理__（祖暅原理也称祖氏原理）指出，如果两个几何体的高相等且两个同一水平截面的面积相等，那么它们的体积也相等。 根据这个原理我们可以得出棱柱和圆柱的体积为截面面积与高的乘积。
+
+calculus:
+  title: 微积分
+  text: __微积分__是处理极限、导数、积分和幂级数的一个数学分支。常见的问题包括求曲线的斜率、求极值、求一个函数的变化率和曲边图形的面积等。
+
+center-of-rotation:
+  title: 旋转中心
+  text: __旋转中心__是旋转形状所围绕的点。
+  link: /course/transformations/rigid#rotations
+
+centroid:
+  title: 质心
+  text: 三角形的__形心__是三个中线相交的点。它也是均匀密度三角形的“质心”。
+  link: /course/triangles/properties#center-of-mass
+
+chaos:
+  title: 混沌
+  text: 一切
+
+circle:
+  title: 圆
+  text: __圆__ 是到定点（__圆心__）的距离等于定长（__半径__）的点的集合。
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+circle-area:
+  title: 圆的面积
+  text: 半径为_r_的圆的__面积__由薄膜`A = pi r^2`给出。
+
+circle-circumference:
+  title: Circumference of a Circle
+  text: 圆的 __周长__ 是环绕圆一周的长度。给定半径为 __r__ 的圆的周长 `C = 2 pi r`。
+  link: /course/circles/introduction#radius
+
+circle-diameter:
+  title: 直径 (圆)
+  text: 圆的__直径__是通过圆心且两个端点都在圆上的线段。
+  link: /course/circles/introduction#radius
+
+circle-radius:
+  title: 半径
+  text: 圆的 __半径__ 是圆心到圆上一点的距离（或线段）。
+  link: /course/circles/introduction#radius
+
+circle-sector:
+  title: 扇形
+  text: |
+    __扇形__是圆的一部分，由两条半径与一条__弧__围成的图形。它的面积与圆心角的大小成比例，弧长也是这样。也就是说 {.text-center} `(A_"扇形")/(A_"圆") =
+    "弧长"/"周长" = θ/(2π)`。
+  link: /course/circles/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
+circle-segment:
+  title: 圆弧段
+  text: 圆的__段__是其内部的一部分，由弦和相应的圆弧界定。
+
+circumcircle:
+  title: 三角形的外接圆
+  text: 三角形的__外接圆__是经过其所有三个顶点的圆。
+  image: circumcircle.svg
+  link: /course/triangles/properties#circumcircle-1
+
+coefficient:
+  title: 系数
+  text: __系数__是数学表达式或方程式中变量前面的数字。例如，在表达式`4x + 5y^2 - 3z`中，`x`的系数为4，`y^2`的系数为5，而`z`的系数为–3。
+
+collinear:
+  title: 共线点
+  text: 如果三个或更多点位于同一条线上，则它们__共线__。
+
+compass:
+  title: 圆规
+  text: 圆规是用来绘制圆或弧的一种工具。它有两只脚，把指针的一端固定在中间，笔芯的一端绕着旋转一周画出轨迹。
+
+complementary-angles:
+  title: 互补角
+  text: 如果两个角度的总和为90°（直角），则它们是__互补__。
+
+complete-graph:
+  title: 完整图
+  text: 在__完整图__中，每个顶点都与其他每个顶点相连。具有_n_个顶点的完整图具有`(n×(n-1))/2`个边。
+  link: /course/graph-theory/handshakes#handshakes-3
+
+complex-numbers:
+  title: 复数
+  text: |
+    __复数__是所有实数和虚数的和或差。它们通常写为`a + bi`，其中_a_是实部，_b_是虚部。 复数可以表示在二维平面上，其中_x_轴是实数，_y_轴是虚数。
+    通常使用符号`CC`表示所有复数的集合。
+
+composite-number:
+  title: 综合编号
+  text: __复合数__是一个不是素数的整数。这意味着它具有除1及其本身以外的因子。
+
+concave:
+  title: 凹面多边形
+  text: __凹面__多边形具有至少一个大于180°的内角。对角线中至少有一个位于多边形的__之外。识别凹面多边形的常见方法是寻找多边形的“凹入”面。 _凹面_与_凸面_多边形相反。
+  link: /course/polyhedra/polygons#concave
+
+cone:
+  title: 圆锥
+  text: __圆锥__由一个圆形_底面_与一个点（称为_顶点_）被一个弯曲的侧面围成的立体图形。你可以把圆锥想象成一个“圆形金字塔”。
+
+cone-volume:
+  title: 圆锥的体积
+  text: |
+    圆锥的体积公式为： {.text-center} `V = 1/3 π r^2 h`， 其中_r_为底面圆的半径，而_h_为圆锥的高（顶点到底面的垂直距离）。
+
+congruent:
+  title: 一致
+  text: 在几何图形中，如果两个图形的大小，形状和尺寸相同，则它们是__一致__。这意味着我们可以移动，翻转或旋转它们以使其彼此完全契合。
+  link: /course/euclidean-geometry/axioms#congruence
+
+congruent-angles:
+  title: 同角
+  text: 如果两个角度的大小相同，则两个角度为__一致__。
+
+conic-section:
+  title: 圆锥曲线
+  text: |
+    __圆锥曲线__是一种由一个平面与圆锥表面相交形成的曲线。包含四种不同形式的圆锥曲线，并有许多性质： * 圆 * 椭圆 * 抛物线 * 双曲线
+  link: /course/circles/conic-sections
+
+convex:
+  title: 凸多边形
+  text: __凸__多边形不包含大于180°的内角。所有对角线都位于多边形内。这与_凹面_多边形相反。
+  link: /course/polyhedra/polygons#concave
+
+coordinate-system:
+  title: 坐标系
+  text: __坐标系__是包含两个垂直轴的二维平面。可以使用两个数字（坐标）定义平面上的每个点，这些数字指定了它与两个轴的距离。
+
+coordinate-system-origin:
+  title: 坐标系
+  text: 坐标系的__起点__是坐标为（0，0）的点。通常是两个轴相交的点。
+
+corresponding-angles:
+  title: 对应角度
+  text: __对应角度__是相对于横向线在相同位置但在不同线上的两个角度。他们总是一致的。
+  image: corresponding-angles.svg
+
+cos:
+  title: 余弦
+  text: __余弦__是一个三角函数之一，记做`cos(θ)`。在一个直角三角形中，它表示一个角的邻边与斜边的比值。
+  link: /course/triangles/trigonometry#trig-functions
+
+cpoct:
+  title: 中国人民警察
+  text: CPOCT代表__等价三角形__的对应部分。这意味着，如果两个三角形是全等的，那么它们所有的相应分量（角度，边，中段等）也必须全等。
+  link: /course/triangles/congruence#cpoct
+
+cross-section:
+  title: 横截面
+  text: __横截面__是三维实体与平面的交点。
+
+cryptography:
+  title: 密码学
+  text: __密码学__是研究秘密消息的加密和解密的数学领域。
+
+cube:
+  title: 立方体
+  text: __立方体__（有时称为__六面体__）是一个规则的多面体，其中每个面都是一个正方形。它是五个_柏拉图实体_之一，它具有6个面，8个顶点和12个边。
+  link: /course/polyhedra/platonic#platonic-overview
+
+cube-volume:
+  title: 立方体积
+  text: 边长为_a_的立方体的体积为`V = a^3`。
+
+cylinder:
+  title: Cylinder
+  text: __圆柱__是由两个大小相等、相互平行的圆形（_底面_）以及连接两个底面的一个曲面围成的几何体。你也可以把它当做一个“圆形的棱柱”。
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+
+cylinder-volume:
+  title: 圆柱的体积
+  text: |
+    圆柱体积的公式为： {.text-center} `V = π r^2 h`， 其中_r_为底面圆的半径，而_h_为圆柱的高（两个地面之间的垂直距离）。
+
+degrees:
+  title: 度数
+  text: __度数__是测量角的一个单位，用符号°来表示。一个周角为360°，一个直角为90°，以此类推。
+
+denominator:
+  title: 分母
+  text: __分母__是小数的底数。例如，在`4/7`中，数字7是分母。
+
+dilation:
+  title: 缩放
+  text: __缩放__指的是讲一个图形通过放大或缩小改变大小的图形变换。
+  image: dilation.svg
+  link: /course/transformations/dilations
+
+directed-graph:
+  title: 有向图
+  text: 在__有向图__中，每个边都有一个“箭头”，即开始顶点和结束顶点。
+  link: /course/graph-theory/introduction#intro-1
+
+discriminant:
+  title: 判别式
+  text: |
+    二次方程的__判别式__是二次方程`b^2 − 4ac`的平方根下的表达式。
+    它可以用来确定二次方程的解数。如果判别式大于0，则有两个解。如果等于0，则只有一个解。如果小于0，则没有（实际）解决方案。
+
+dna:
+  title: 痛风
+  text: |
+    __DNA__（脱氧核糖核酸）是一个包含所有活生物体遗传蓝图的分子。大多数DNA由形成_双螺旋_的两条链组成。遗传信息按照构成DNA的四个核酸（A，G，C和T）的顺序编码。
+    _DNA测序_是提取这些信息的过程，这是生物学，医学，遗传学和生物技术领域的一项必不可少的技术。
+
+dodecahedron:
+  title: 正十二面体
+  text: __正十二面体__是由12个正五边形组成的柏拉图式固体。它有20个顶点和30条边。
+  link: /course/polyhedra/platonic#platonic-overview
+
+dot-annihilation:
+  title: 歼灭
+  text: 如果您在同一个单元格中同时有一个点和一个反点，它们将互相抵消，或互相抵消（0）__。考虑`–1 + 1 = 0`。
+
+dot-machine:
+  title: 点机
+  text: |
+    __点机__由包含点的多个单元组成。您可以根据特定规则操作这些点。
+    例如，在`1←3`机器中，一个单元格中的3个点可以转换为_左_的下一个单元格中的1个点。类似地，可以在_右_的下一个单元格中将1个点转换为3个点。这称为“爆炸”。
+
+ellipse:
+  title: 椭圆
+  text: |
+    __椭圆__是一条曲线，包围着两个焦点。椭圆上的任意一点到椭圆两焦点的_距离之和_为定值。 如果两个焦点的距离很近，它会看起来像一个圆。当焦点的距离越来越远，则椭圆越来越扁。
+    圆锥是一种_圆锥曲线_：平面与圆锥相交形成的图形。
+  image: ellipse.svg
+  link: /course/circles/conic-sections#ellipses
+
+equation:
+  title: 方程
+  text: __等式__是通过将两个或更多个表达式与__等号__ `=`连接而创建的数学表达式。它表明所有这些表达式都具有相同的值。
+
+equilateral-triangle:
+  title: 等边三角形
+  text: __等边三角形__是一个三角形，其中所有三个边的长度相同。
+
+euclidean-geometry:
+  title: 欧几里得几何
+  text: __欧几里得几何__是数学家_欧几里德_所设想的一种几何，包括对点，线，多边形，圆以及三维实体的研究。它仅取决于五个_公理_（几何的基本定律），它们描述了所有允许的操作和构造。
+  link: /course/euclidean-geometry/euclids-axioms#euclid
+
+factor:
+  title: 因子
+  text: 一个数是 _a_ 是另一个数 _b_ 的 __因子 __(或 __除数 __)，如果你能用 _a_ 整除 _b_ 同时没有余数。
+  link: /course/divisibility/factors-and-multiples
+
+factorial:
+  title: 阶乘
+  text: |
+    正整数的__阶乘__是所有整数（包括其自身）的乘积。例如，我们使用感叹号编写它 {.text-center} `5! = 1×2×3×4×5`。 根据定义，`0! = 1.`
+
+factorisation:
+  title: 保理费
+  text: 数字的__质数分解__是将其写为质数乘积的一种方式。
+  link: /course/divisibility/primes
+
+fermat-last:
+  title: 费马的最后定理
+  text: |
+    __费马的最后定理__指出方程`x^n + y^n = z^n`没有`n>2`的整数解。如果为`n=2`，我们将得到_毕达哥拉斯定理_，该定理具有许多整数解，但是对于_n_ =
+    3、4、5……则没有。
+
+    1637年，数学家皮埃尔·德·费马（Pierre de
+    Fermat）在教科书中做了一个记录，声称他有一个证明，但是它太大了以至于无法容纳。在超过350年的时间里，其他数学家试图找到这一证明，费马的《最后定理》甚至在_吉尼斯世界纪录_中被列为“最困难的数学问题”。
+
+    经过多年的努力，1994年，安德鲁·威尔斯终于设法证明了这一点。后来他获得了阿贝尔奖，这是数学上的最高荣誉之一。
+
+fibonacci-numbers:
+  title: 斐波那契数
+  text: __斐波那契数列__以1，1开始。后面的每一项都是前两项的总和，这意味着递 归公式是 `x_n = x_(n-1) + x_(n-2)`。
+  link: /course/sequences/fibonacci#fibonacci
+
+figurate-numbers:
+  title: 形数
+  text: __形数__是可以用几何图形表示的数字。示例包括正方形、三角形和四面体数。
+  link: /course/sequences/figurate#figurate
+
+formula:
+  title: 公式
+  text: __公式__是描述两个或多个变量之间关系的规则或方程。例如`a=πr^2`。
+
+fractal:
+  title: 分形
+  text: '__分形__是一种_自相似_的几何形状，例如, 一个物体在不同的放大率下看起来 形状相同。分形通过无限频繁地重复一个过程或方程而产生。'
+  link: /course/fractals
+
+fta:
+  title: 算术基本定理
+  text: __算术基本定理__ (FTA)表示每个整数都有唯一的质因式分解。
+
+function:
+  title: 功能
+  text: __函数__是一种数学关系，可将输入`x`转换为正好一个输出`f(x)`。
+
+function-graph:
+  title: 函数图
+  text: 我们可以在坐标系中绘制`f(x)`形式的数学函数。结果称为函数的__图__。
+
+gcf:
+  title: 最大公因数
+  text: '两个数字_a_和_b_的__最大公因数__（gcf）是同时作为_a_和{的因数的最大整数8} b_。'
+  link: /course/divisibility/greatest-common-factors
+
+geometric-sequence:
+  title: 几何序列
+  text: __几何序列__(有时称为__几何级数__)是一个数字序列，其中连续项之间的比率 总是常数_r_。
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+geometric-series:
+  title: 几何系列
+  text: |
+    __几何级数__是几何序列中各项的无穷大，其中连续项的比率为_r_。例如， {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
+    是具有恒定比率`1/2`的几何级数。
+
+glide-reflection:
+  title: 滑行反射
+  text: __滑动反射__是一种特殊的变换。它是在与反射轴相同的方向上_反射_和_平移_的组合。
+  link: /course/transformations/symmetry-groups#footsteps
+
+golden-ratio:
+  title: 黄金分割率
+  text: |
+    __黄金比率__是一个特殊的无理数，其值为`φ=1.6180339875…`。它可以用两个连续 的斐波那契数来近似。 在艺术和建筑中，黄金比例通常被视为特别具有美感，它也出现在许多植物的螺旋
+    状结构中。
+
+graph:
+  title: 图形
+  text: __图__是由边连接的顶点的集合。
+  link: /course/graph-theory/introduction
+
+graph-cycle:
+  title: 周期
+  text: __循环__是由单个顶点循环组成的图。
+  link: /course/graph-theory/introduction#intro-4
+
+graph-degree:
+  title: 学位
+  text: 顶点的__度__是在该顶点相遇的边数。
+  link: /course/graph-theory/introduction#intro-3
+
+graph-edge:
+  title: 边缘
+  text: __边__是连接图中顶点（点）的线。
+  link: /course/graph-theory/introduction
+
+graph-order:
+  title: 订购
+  text: 图的__顺序__是其中的顶点数量。
+  link: /course/graph-theory/introduction#intro-3
+
+graph-vertex:
+  title: 顶点
+  text: __顶点__是图的一部分的点或节点。
+  link: /course/graph-theory/introduction
+
+gravity:
+  title: 万有引力
+  text: |
+    __万有引力__是自然界中的四种基本力之一，促使宇宙中的两个物体相互靠近。艾萨克•牛顿发现两个质量为`m_1`和`m_2`的物体之间的引力为 {.text-center} `F = (G
+    m_1 m_2) / r^2`， _G_是万有引力常数而_r_则是两个物体之间的距离。
+
+group:
+  title: 组
+  text: |
+    群组是遵循三种不同规则的“事物”（例如数字或对称性）的集合：
+
+    *您可以添加/合并其中的两件事，以获取也包含在组中的另一件事。 *事物是_关联的_，表示`a+(b+c) + (a+b)+c`。
+    *有一个_身份_，每个“事物”都有一个_逆_，当添加时，它给出了身份。
+  link: /course/transformations/symmetry-groups#groups-1
+
+hailstone-sequence:
+  title: 冰雹序列
+  text: |
+    __冰雹序列__ 可以通过选取任意整数作为起始点，然后遵循以下规则生成： * 如果 `x_n` 是偶数, 则 `x_(n+1) = x_n / 2`. * 如果 `x_n` 是奇数, 则
+    `x_(n+1) = 3 * x_n + 1`
+  link: /course/sequences/special#hailstone
+
+heptagon:
+  title: 七边形
+  text: __七边形__是具有七个边的多边形。
+
+hexagon:
+  title: 六边形
+  text: __六角形__是具有六个边的多边形。
+
+hyperbola:
+  title: 双曲线
+  text: __双曲线__是一个像`y = 1/x`这样的的函数的图象。它由两个不相交的部分组成，两个分支都往_渐近线_靠拢。它也是一种_圆锥曲线_。
+  image: hyperbola.svg
+
+hypotenuse:
+  title: 斜边
+  text: 直角三角形的__斜边__是最长的边，与直角相反。
+  image: right-triangle.svg
+
+icosahedron:
+  title: 二十面体
+  text: __二十面体__是柏拉图实体，由20个均等边三角形的面组成。它具有12个顶点和30个边。
+  link: /course/polyhedra/platonic#platonic-overview
+
+imaginary:
+  title: 虚数
+  text: |
+    __虚数__是通过取负数的平方根生成的。尽管有它们的名字，它们在数学，科学和工程学中还是非常重要的。 __虚数单位__写为`i =
+    sqrt(−1)`，其他虚数可以写为其倍数。例如，`sqrt(-5) = 5i`。
+
+infinity:
+  title: 无限
+  text: __无穷大__是没有限制或结束的数量。在数学中，它用符号`∞`表示。
+
+information:
+  title: 信息论
+  text: __信息理论__是对数据和信息的量化，存储和通信的研究。它用于逻辑，密码学和计算机科学。
+
+integer:
+  title: 整数
+  text: __整数__是正整数和负整数，包括零：…、-3、-2、-1、0、1、2、3、…
+
+internal-angle:
+  title: 内角
+  text: 多边形的__内角__是每个顶点内部的角度。
+  image: internal-angle.svg
+
+irrational-numbers:
+  title: 无理数
+  text: |
+    __无理数__只不能表示成两个整数的比值的数（_有理数_）。例如0.333333… = `1/3` ，是_有理数_，像`π`, `sqrt(2)`
+    和_e_都是_无理数_。无理数的小数数位是无限且不循环的。
+
+irregular-polygon:
+  title: 不规则多边形
+  text: __不规则多边形__是_不规则_的多边形。这意味着侧面或角度都没有相同的大小。
+
+isosceles-triangle:
+  title: 等腰三角形
+  text: 在__等腰三角形__中，两个边的长度相同。
+
+iss:
+  title: 国际空间站
+  text: __国际空间站__（ISS）发射于1998年，运行在距离地球约400千米的高度轨道上。它是最大的近地轨道人造物体且自发射以来不断有人居住。在地球上肉眼可见。
+
+julia-set:
+  title: 朱莉娅·塞特（Julia Set）
+  text: |
+    给定功能`f`，例如`§f(x) = x^2`，相应的__Julia集__
+    `§K(f)`是复平面中所有点的子集，其中重复应用`f`形成的序列不会发散。在许多情况下，Julia集是_分形_，它与_Mandelbrot集_密切相关。
+  link: /course/fractals/mandelbrot#julia
+  image: julia-set.png
+
+kite:
+  title: 风筝
+  text: 风筝____是四边形，其中两对相邻边的长度相同。
+  link: /course/polyhedra/quadrilaterals#kites
+
+koch-snowflake:
+  title: 科赫雪花
+  text: __科赫雪花__是一个自相似的分形。它由一个等边三角形组成，并在每个边上递归添加了较小的等边三角形。
+  link: /course/fractals/introduction#koch
+  image: koch-snowflake.svg
+
+laws-of-nature:
+  title: 自然法则
+  text: __自然法则__是统称为物理规则（通常表示为数学方程式）的名称，这些物理规则试图解释我们在宇宙中观察到的一切。
+
+lcm:
+  title: 最低公倍数
+  text: 两个数字_a_和_b_的__最低公倍数__（lcm）是最小整数，它是_a_和_b_。
+  link: /course/divisibility/least-common-multiples
+
+line:
+  title: 线
+  text: __线__是无限多个点的集合，这些点在两个方向上一直延伸。线始终是直线，没有_宽度_。
+  link: /course/euclidean-geometry/axioms#lines
+
+line-segment:
+  title: 线段
+  text: __线段__是线的两个点之间的一部分，没有延伸到无穷大。我们可以将从点_A_到点_B_的线段标记为`bar(AB)`。
+  link: /course/euclidean-geometry/axioms#segments
+
+line-slope:
+  title: 直线斜率
+  text: 线的__斜率__衡量其“陡度”，通常用字母_m_表示。沿线的_x_单位变化是_y_的变化。
+
+linear-equation:
+  title: 线性方程
+  text: __线性方程__的格式为`ax + b = 0`，其中_x_是变量，_a_和_b_是数字。在坐标系中绘制图形时，`ax+b`的值形成一条直线。
+
+linear-function:
+  title: 线性函数
+  text: __线性函数__是其图为直线的函数。可以定义为`f(x) = mx + c`，其中_m_是直线的斜率，而_c_是其_y_轴截距。
+
+mandelbrot-set:
+  title: 曼德布罗特集
+  text: __Mandelbrot集__是复数`CC`的集合，递归序列`§z_n = z_(n-1)^2 + c`（带有`§z_0 = 0`）不会错开。它是_分形_。
+  link: /course/fractals/mandelbrot
+  image: mandelbrot-set.png
+
+matrix:
+  title: 矩阵
+  text: __矩阵__是数字的矩形阵列，排列成行和列。
+
+median:
+  title: 中位数
+  text: 一组数字的__中位数__是一半数字较大而一半数字较小的值。如果有两个“中间数字”，则为这些数字的平均值。
+
+midpoint:
+  title: 中点
+  text: |
+    线段的__中点__是线段上的将中间的线段分为两部分的点。 __中点公式__表示，对于端点`(x_1, y_1)`和`(x_2,y_2)`，中点为`((x_1 + x_2)/2, (y_1 +
+    y_2)/2)`。
+
+millennium-prize:
+  title: 千年奖问题
+  text: |
+    七个__千年奖问题__是数学中最困难的公开问题。它们在2000年被_粘土数学研究所_列出，每人各获得100万美元的奖励： * P与NP *霍奇猜想 *庞加莱猜想 *黎曼假设
+    *杨米尔斯的存在与差距 * Navier-Stokes的存在和平滑度 *桦木和Swinnerton-Dyer猜想
+    到目前为止，_庞加莱猜想_只是其中一个问题得以解决。但是解决该问题的数学家Grigori Perelman拒绝了该奖项。
+
+mode:
+  title: 模式
+  text: '一组数字的__模式__是最常出现的数字。例如，[3，4，4，4，5，5，6]的模式是5。'
+
+molecule:
+  title: 分子
+  text: |
+    __分子__由两个或多个通过化学键结合在一起的原子组成。它不带电荷，与__离子__不同。 分子的例子包括由两个连接的氧原子组成的`O_2`和由两个氢原子和一个氧原子组成的`H_2 O`。
+
+morse-code:
+  title: 摩尔斯电码
+  text: |
+    __摩尔斯码__是一种使用短信号和长信号（称为点和破折号）表示字母和数字的方法。它以_塞缪尔·莫尔斯_的名字命名，最初用于通过电报机进行长距离通信。 例如，字母“
+    L”将使用短信号和长信号的序列_{x-morse(char="L")}_表示。
+
+multiple:
+  title: 多
+  text: 如果_b_是_a_的因数，则数字_a_是数字_b_的__倍__。
+  link: /course/divisibility/factors-and-multiples
+
+natural-numbers:
+  title: 自然数
+  text: __自然数__是从1、1、2、3、4开始的正整数。。。它们通常用符号`NN`表示。
+
+net:
+  title: 多面体的展开图
+  text: 多面体的__展开图__就是你把一个多面体“展开”后得到的一个水平的平面图形。
+
+neutron:
+  title: 中子
+  text: __中子__是组成原子核的粒子之一。它没有电荷，并且质量与质子大致相同。
+
+np:
+  title: NP难题
+  text: _计算复杂性理论_是关于确定计算机如何解决“难题”问题。 __NP困难__（非确定性多项式时间困难）是最困难的问题。
+
+numerator:
+  title: 分子
+  text: __分子__是分数中的最高数字。例如，在`4/7`中，数字4是分子。
+
+obtuse-angle:
+  title: 钝角
+  text: __钝角__是大小大于90°但小于180°的角度。
+
+obtuse-triangle:
+  title: 钝角三角形
+  text: 在__钝角三角形__中，一个内角大于90°。
+  link: /course/triangles/properties#classification
+
+octagon:
+  title: 八边形
+  text: __八边形__是具有八个边的多边形。
+
+octahedron:
+  title: 八面体
+  text: __八面体__是柏拉图实体，由8个等边三角形的面组成。它具有6个顶点和12个边。
+  link: /course/polyhedra/platonic#platonic-overview
+
+order-of-symmetry:
+  title: 对称顺序
+  text: 如果形状具有旋转对称性，则__对称性顺序__是形状看起来相同的方向数。 （或者，这是您可以重新旋转形状之前可以旋转形状的次数。）
+  link: /course/transformations/symmetry#rotational-symmetry
+
+origin:
+  title: 起源
+  text: 坐标系的__起点__是_x_轴和_y_轴相交的点（0，0）。
+
+origin-number-line:
+  title: 数字线的原点
+  text: 数字行的__起点__是点0。
+
+palindrome:
+  title: 回文
+  text: __回文__是一个单词或数字，从前到后的含义与从前到后的含义相同。例如，25752和“ ANNA”都是回文。
+  link: /course/transformations/symmetry#palindromes
+
+parabola:
+  title: 抛物线
+  text: __抛物线__是一个像y = x^2`这样的二次函数的图象。它的图象是对称的U形，其开口可以向上或者向下。它也是一种_圆锥曲线_。
+  image: parabola.svg
+
+parabola-conic:
+  title: 卫星天线
+  text: __抛物线__是平面中所有点的集合，它们与固定线（称为__directrix__）和固定点（称为__focus__。
+
+parabola-focus:
+  title: 抛物线的焦点
+  text: 抛物线的__焦点__是其内部的固定点。对于抛物面镜，所有平行的入射光线在反射后会在焦点处相交。
+
+parabola-vertex:
+  title: 抛物线的顶点
+  text: 抛物线的__顶点__是它改变方向的点。它是相应二次函数的最大值或最小值，并且位于抛物线的对称轴上。
+
+parallel:
+  title: 平行线
+  text: 如果两行或多行从不相交，则它们__平行__。它们具有相同的斜率，并且它们之间的距离始终是恒定的。
+  image: parallel.svg
+  link: /course/euclidean-geometry/axioms#parallel
+
+parallelogram:
+  title: 平行四边形
+  text: __平行四边形__是四边形，其中两对相对的边平行。
+  link: /course/polyhedra/quadrilaterals#parallelograms
+
+pascals-triangle:
+  title: 帕斯卡三角
+  text: __帕斯卡三角形__是一个数字金字塔，其中每个单元格里的数都是正上方两个单 元格里的数的和。它包含所有的二项式系数，以及许多其他的数字序列和模式。
+  link: /course/sequences/pascals-triangle#pascal-triangle
+
+penrose:
+  title: 彭罗斯瓷砖
+  text: __彭罗斯（Penrose）拼贴__是_非周期性_，_自相似_细分。它仅由几种不同的形状组成，但从未重复。
+  link: /course/polyhedra/tessellations#penrose
+
+pentagon:
+  title: 五角大楼
+  text: __五边形__是具有五个边的多边形。
+
+percent:
+  title: 百分
+  text: __％__是分母为100的比率。例如，我们写80％表示`80/100 = 0.8`。
+
+perfect-numbers:
+  title: 完美数
+  text: __完美数__是一个等于其自己的除数之和的数(不包括它本身)。例如， `28=1+2+4+7+14` 是一个完美数字。
+  link: /course/sequences/special#perfect-1
+
+perpendicular:
+  title: 垂直线
+  text: 如果两条线成直角相交，则它们是__垂直__（有时称为_法线_或_正交_）。
+  image: perpendicular.svg
+  link: /course/euclidean-geometry/axioms#perpendicular
+
+perpendicular-bisector:
+  title: 垂直平分线
+  text: 线段的__垂直平分线__经过其中点，并以90°角相交。
+  image: perpendicular-bisector.svg
+
+pi:
+  title: 圆周率
+  text: __圆周率__常用希腊字母 _π_表示，是圆的周长与直径的比值。它是一个无限不循环小数，约等于3.14159265…
+  link: /course/circles/introduction#pi-definition
+
+platonic-solid:
+  title: 柏拉图固体
+  text: __Plateonic实体__是多面体，其中每个面都是具有相同边数的规则多边形，并且在每个顶点处有相同数目的面会合。仅有五种不同的柏拉图固体：四面体，立方体，八面体，十二面体和二十面体。
+  link: /course/polyhedra/platonic
+
+point:
+  title: 点
+  text: __点__是空间中的特定位置。点描述位置，但自身没有大小或形状。
+  link: /course/euclidean-geometry/axioms#points
+
+polygon:
+  title: 多边形
+  text: __多边形__是由直线段组成的几何形状。多边形不能包含任何弯曲的侧面或孔。例如，正方形是多边形，但圆形不是。
+  image: polygon.svg
+  link: /course/polyhedra/polygons#polygons
+
+polygon-diagonal:
+  title: 对角线
+  text: 多边形的__对角线__是连接两个彼此不相邻的顶点的线段。
+
+polygon-edge:
+  title: 多边形的边缘
+  text: 多边形的__边__或__边__是形成其轮廓的线段。例如，三角形具有三个边。
+
+polygon-vertex:
+  title: 多边形的顶点
+  text: 多边形的__顶点__是其相邻边相交的点（其“角”）。
+
+polyhedron:
+  title: 多面体
+  text: __多面体__（复数为_多面体_）是没有曲面或边缘的三维实体。多面体的所有面都是多边形。例如，立方体和金字塔是多面体，但球体不是。
+  link: /course/polyhedra/polyhedra
+
+polyhedron-dual:
+  title: 多面体的对偶
+  text: 一切
+  link: /course/polyhedra/platonic#platonic-dual
+
+polyhedron-edge:
+  title: 多面体的边缘
+  text: 多面体的__边__是连接两个面的线段。
+  link: /course/polyhedra/polyhedra
+
+polyhedron-face:
+  title: 多面体的脸
+  text: 多面体的__面__是组成其表面的多边形。
+  link: /course/polyhedra/polyhedra
+
+polyhedron-vertex:
+  title: 多面体的顶点
+  text: 多面体的“角”称为其__顶点__。
+  link: /course/polyhedra/polyhedra
+
+polynomial:
+  title: 多项式
+  text: |
+    __多项式__是一个代数表达式，由常数和变量的整数倍构成。例如，`5x^3 - 2y^2 + x + 4`是多项式。仅具有一个变量的多项式的最一般形式是`a_n x^n + a_(n–1)
+    x^(n–1) + … + a_2 x^2 + a_1 x + a_0`，其中`a_n`，`a_(n-1)`，…，`a_0`都是特定的常数。
+
+polynomial-degree:
+  title: 学位
+  text: 项或多项式的__度__是其中任何变量的最高幂。例如，`5x^3 + 2y^2 - 4z`的次数为3。
+
+powers:
+  title: 幂
+  text: __幂__（或__乘方__）是一种数学运算，其中一个数字（_基_）乘以本身指定 的次数（_指数_）。这通常写为上标`a^x`，其中_a_是基数，_x_是指数。例如， `4^3=4×4×4`。
+
+prime:
+  title: 素数
+  text: __素数__是一个整数，而且除了 1 和它自身之外没有其它整数因子。
+  link: /course/divisibility/primes
+
+prime-factor:
+  title: 主要方面
+  text: 数字的__质数因子__只是一个质数因子。
+  link: /course/divisibility/primes
+
+prime-factorisation:
+  title: 保理费
+  text: 数字的__质数分解__是将其表示为质数乘积的一种方式。例如，素数分解12为`2 × 2 × 3`。
+
+prism:
+  title: 棱柱
+  text: __棱柱__是一个三维立体图形。它有两个面是全等的多边形（叫做_底_），对应顶点由平行的线段相连。圆柱的其它面均为矩形或平行四边形。
+  image: prism.svg
+
+probability:
+  title: 可能性
+  text: __概率__是介于0和1之间的数字，表示发生特定事件的可能性。事件_A_的概率记为`P(A)`。
+
+probability-tree:
+  title: 概率树
+  text: __概率树__是表示多个连续事件的组合概率的树图。
+
+proof:
+  title: 证明
+  text: __证明__ 是一种逻辑论证，它毫无疑问地表明某一陈述是正确的。
+
+protein:
+  title: 蛋白
+  text: __蛋白质__是大型_大分子_，可以在生物体内执行许多不同的功能：从消化到细胞之间的通讯或复制DNA。蛋白质由_个氨基酸残基_的一条或多条链组成。
+
+proton:
+  title: 质子
+  text: __质子__是组成原子核的粒子之一。它的电荷为+1。原子中的质子数称为其“原子数”，它决定了它是什么元素。
+
+pyramid:
+  title: 棱锥
+  text: |
+    __棱锥__是一个由底面与众多三角形侧面组成的几何体，往上逐渐缩小成一个顶点。一个正棱锥的底是一个正多边形且顶点在底的中心正上方。
+    在一个__正棱锥__中，底是_正多边形_且顶点在底面中心的正上方。
+  image: pyramid.svg
+
+protractor:
+  title: 量角器
+  text: 量角器是一种用于测量角度的工具。
+
+pythagoras-theorem:
+  title: 勾股定理
+  text: __勾股定理（毕达哥拉斯定理）__指出，任何一个直角三角形的三边均满足`a^2 + b^2 = c^2`。其中_c_为斜边的长度，_a_和_b_为直角边的长度。
+  link: /course/triangles/pythagoras
+
+pythagorean-triple:
+  title: 毕达哥拉斯三重
+  text: __毕达哥拉斯三元组__是满足毕达哥拉斯定理`a^2 + b^2 = c^2`的三个整数_a_，_b_和_c_的集合。
+  link: /course/triangles/pythagoras#pythagorean-triples
+
+quadratic:
+  title: 二次方的
+  text: __二次__是次数为2的多项式。例如，`x^2 - 2x + 3`是二次多项式。
+
+quadratic-equation:
+  title: 二次方程
+  text: __二次方程__是包含一个2度变量的方程。它通常写为`ax^2 + bx + c = 0`，其中_x_是变量_a_， _b_和_c_是数字，而`a != 0`是数字。
+
+quadratic-formula:
+  title: 二次公式
+  text: |
+    __二次方程式__是确定二次方程式根的一种方法。等式`ax^2 + bx + c = 0`有根 {.text-center} `x = (-b +- sqrt(b^2 -
+    4ac))/(2a)`。
+
+quadratic-function:
+  title: 二次函数
+  text: __二次函数__是形式为`f(x) = ax^2+bx+c`的函数，其中_a_，_b_和_c_是数字，而`a != 0`。二次函数的图形是称为__抛物线__的U形曲线。
+
+quadratic-function-vertex-form:
+  title: 二次函数的顶点形式
+  text: '二次函数的__顶点形式__或__标准形式__是`f(x) = a(x − h)^2 + k`。点`(h, k)`是相应抛物线的__顶点__。'
+
+quadrilateral:
+  title: 四边形
+  text: __四边形__是具有四个边的多边形。
+  link: /course/polyhedra/quadrilaterals
+
+quantum:
+  title: 量子力学
+  text: __量子力学__是物理学的一个分支，它解释了基本粒子的奇怪行为。
+
+radians:
+  title: 弧度
+  text: __弧度__是测量角度大小的一个单位。一个周角（360°）等于`2π`弧度——也就是半径为1的圆的周长。
+  link: /course/circles/radians#radians
+
+radioactive:
+  title: 放射性衰变
+  text: __放射性衰变__是一个物理过程，不稳定的原子通过该过程分裂并释放能量。
+
+rational-numbers:
+  title: 有理数
+  text: __有理数__是可以表示为两个整数的分数(或比率)的数。示例包括`1/2`、 `-5/7`、`12.7` 和 `9`。
+
+ray:
+  title: 射线
+  text: __射线__是直线的一部分，该直线从点开始并在一个方向上无限延伸。我们可以将始于`A`的光线标记为`vec(AB)`。
+  link: /course/euclidean-geometry/axioms#rays
+
+real-numbers:
+  title: 实数
+  text: __实数__是出现在数字行上的所有数字，包括正数和负数，有理数（分数），平方根，立方根，小数，_π_，_e_等。它们通常使用符号`RR`表示。
+
+rectangle:
+  title: 长方形
+  text: __矩形__是一个四边形，其中所有四个角度均为90°。
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+reflection:
+  title: 反射
+  text: __反射__是一种在直线上“翻转”或“镜像”形状的变换。
+  link: /course/transformations/rigid#reflections
+
+reflectional-symmetry:
+  title: 反射对称
+  text: 如果形状在反射后看起来相同，则具有反射对称性。
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+regular-polygon:
+  title: 正多边形
+  text: __常规多边形__是这样一种多边形，其中所有边的长度相同，并且所有内角的尺寸相同。
+  image: regular-polygon.svg
+  link: /course/polyhedra/polygons#regular-polygons
+
+rhombus:
+  title: 菱形
+  text: __菱形__（复数为_菱形_或_菱形_）是四边形，其中所有边的长度相同。
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+right-angle:
+  title: 直角
+  text: __直角__是大小为90°的角度。
+
+right-triangle:
+  title: 直角三角形
+  text: 在__直角三角形__中，一个内角正好是90°。
+  image: right-triangle.svg
+  link: /course/triangles/properties#classification
+
+rigid-transformation:
+  title: 刚性转换
+  text: __刚性变换__（或__等距__）是不会改变几何图形的大小或形状的变换。
+  link: /course/transformations/rigid
+
+roman-numerals:
+  title: 罗马数字
+  text: |
+    __罗马数字系统__是在古罗马发展起来的，直到14世纪才在欧洲使用。它允许您通 过组合七个不同的字母来编写任何整数： * I = 1 * V = 5 * X = 10 * L = 50 * C
+    = 100 * D = 500 * M = 1000
+
+rotation:
+  title: 回转
+  text: __旋转__是一种将固定点周围的形状“旋转”一定角度的变换。
+  link: /course/transformations/rigid#rotations
+
+rotational-symmetry:
+  title: 旋转对称
+  text: 如果形状在旋转后（小于360°）看起来相同，则具有旋转对称性。
+  image: rotational-symmetry.svg
+  link: /course/transformations/symmetry#rotational-symmetry
+
+roulette:
+  title: 轮盘
+  text: __轮盘赌__是一种赌场游戏，您在其中押注旋转球将要降落的位置。它包含36个数字以及一个或两个0。
+
+scale-factor:
+  title: 比例因子
+  text: |
+    两个相似几何图形的__比例因子__是任意两个相应长度的比率。 比例因子小于1表示形状已缩小，比例因子大于1表示形状已放大。
+  link: /course/transformations/dilations#dilations-1
+
+scalene-triangle:
+  title: 不等边三角形
+  text: 在__斜角三角形__中，所有三个边的长度都不同。
+
+scientific-notation:
+  title: 科学计数法
+  text: |
+    __科学记号__是用于写非常大或很小数字的标准化方法。它的格式为`a × 10^n`，其中_n_是整数，`1 ≤ a < 10`。 例如，数字4600可以写为`4.6 × 10^3`。
+
+set:
+  title: 套装
+  text: '__集__是事物或对象（称为元素）的集合。每个元素只能出现在一个集合中。我们使用{}来写集合，例如，包含数字2、3和4的集合将写为{2, 3, 4}。'
+
+sequence:
+  title: 序列
+  text: '__序列__ 是数字(或其它元素，比如几何对象)的有序列表, 通常遵循特定的模 式或函数。序列可以是有限的也可以是无限的。'
+  link: /course/sequences/introduction#simple-patterns
+
+sequence-convergence:
+  title: 收敛
+  text: '一个序列, 如果随着它的一项项推进，它的序列项值越来越接近一个特定的 __极限__, 那么该序列 __收敛__。'
+
+sequence-divergence:
+  title: 发散
+  text: 如果序列__的项随着时间的流逝变得越来越大，则趋向无穷大（或负无穷大），则序列__将发散。
+
+sequence-explicit:
+  title: 显式公式
+  text: 一个序列的__显式公式__将其第 *n*th 项 `x_n` 表示为 _n_ 的函数。
+  link: /course/sequences/introduction#explicit
+
+sequence-recursive:
+  title: 递归公式
+  text: 序列的__递归公式__将序列每项的值`x_n`表示为其前面项的函数。
+  link: /course/sequences/introduction#recursive-1
+
+sequence-term:
+  title: 序列项
+  text: 序列__项__是数列里一个个单独的元素。
+  link: /course/sequences/introduction#simple-patterns
+
+sierpinski-triangle:
+  title: 谢尔宾斯基三角
+  text: __Sierpinski三角__是一个自相似的分形。它由一个等边三角形组成，较小的等边三角形递归地从其剩余区域中删除。
+  link: /course/fractals/sierpinski
+  image: sierpinski-triangle.svg
+
+sieve-eratosthenes:
+  title: 埃拉托色尼筛选法
+  text: __埃拉托色尼筛选法__是一个通过连续消除_非_素数来寻找素数的过程。
+  link: /course/divisibility/primes#eratosthenes
+
+similar:
+  title: 相似
+  text: 如果两个几何图形的形状相同但大小不同，那么我们称之为__相似__。我们可以通过移动、旋转、对称和缩放来使其中一个图形与另一个图形重叠。它们的对应角相等，且对应边成比例
+
+sin:
+  title: 正弦
+  text: __正弦__是三角函数之一，记做`sin(θ)`。在一个直角三角形中，它表示一个角的对边与斜边的比值。
+  link: /course/triangles/trigonometry#trig-functions
+
+sphere:
+  title: 球体
+  text: __球体__是由到_定点_的距离等于定长的点组成的一个立体图形。这个距离叫做球的_半径_。
+  link: /course/circles/spheres-cones-cylinders#sphere
+
+sphere-radius:
+  title: 球体半径
+  text: 球的__半径__是其中心与表面上任何点之间的距离（或线段）。
+
+square:
+  title: 广场
+  text: __正方形__是规则的四边形：所有边的长度相同，并且所有角度的大小均相同（90°）。
+  link: /course/polyhedra/quadrilaterals
+
+square-area:
+  title: 广场面积
+  text: 边长为_s_的正方形的__面积__为`A = s^2`。
+
+square-matrix:
+  title: 方阵
+  text: __方矩阵__是具有相同行数和列数的矩阵。
+
+square-numbers:
+  title: 平方数
+  text: __平方数__是一个可以用另一个整数的平方来表示的数字。首批平方数是1，4， 9，16，25，…
+  link: /course/sequences/introduction#squares
+
+subdivision:
+  title: 细分
+  text: 要创建图的__细分__，请沿其边缘添加其他顶点。
+
+subgraph:
+  title: 子图
+  text: 一个图是另一个图的__子图__，如果它是由较大图的边和顶点的子集形成的。
+  link: /course/graph-theory/introduction#intro-2
+
+supplementary-angles:
+  title: 补充角度
+  text: 如果两个角度加起来为180°（半圆），则两个角度为__补充角__。
+
+symmetry:
+  title: 对称
+  text: 如果图形或形状以某种方式（例如反射或旋转）变形后看起来相同，则它们具有__对称性__。
+  link: /course/transformations/symmetry#symmetry
+
+symmetry-group:
+  title: 对称群
+  text: 几何对象的__对称组__是其所有_对称_（以及_身份_）的集合。
+  link: /course/transformations/symmetry-groups#groups-1
+
+tan:
+  title: 切线
+  text: |
+    __切线__是一个三角函数，写为`tan(θ)`。定义为_正弦_和_余弦_的比率： {.text-center} `tan(θ) = sin(θ) / cos(θ)`。
+    在直角三角形中，`tan(θ)`是角度`θ`的相对边和相邻边之比。
+  link: /course/triangles/trigonometry#trig-functions
+
+tangent:
+  title: 切线
+  text: __切线__是在单个点上接触曲线或圆且不相交的线。该点有时称为__相切点__。
+
+term:
+  title: 术语（代数）
+  text: |
+    __项__是代数表达式或方程式的由+或–符号分隔的部分。它们可以是乘积或分数，也可以是一个或多个数字，变量或函数。 例如，在表达式`2x^2 - 3ab +
+    4`中，三个术语是`2x^2`，`3ab`和4。
+
+tessellation:
+  title: 镶嵌
+  text: __细分__是一种覆盖表面且无间隙或重叠的几何图案。
+  link: /course/polyhedra/tessellations
+
+tetrahedral-numbers:
+  title: 四面体数
+  text: __四面体数__是将多个球体堆叠成一个_四面体_所要的数。首批四面体数 是1，4，10，20，35，…
+  link: /course/sequences/figurate#tetrahedral
+
+tetrahedron:
+  title: 四面体
+  text: __四面体__是由四个等边三角形组成的柏拉图体。它有四个顶点和六条边。
+  link: /course/polyhedra/platonic#platonic-overview
+
+theorem:
+  title: 定理
+  text: __定理__是数学中特别重要的结果或观察结果。使用公理，规则逻辑和先前已知的正确定理，事实证明它总是正确的。
+
+transformation:
+  title: 转型
+  text: __变换__将一种几何形状转换为另一种几何形状。有许多不同类型的转换，例如_反射_或_膨胀_。
+  link: /course/transformations/rigid#transformations
+
+transformation-image:
+  title: 转型的形象
+  text: 转换几何形状后，结果称为其__图像__。通常在其标签的末尾添加一个“”来表示。
+  link: /course/transformations/rigid#transformations
+
+translation:
+  title: 平移
+  text: __平移__指的是将一个图形在不改变形状大小的情况下沿着一个方向移动一定的长度的图形变换。
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+
+translational-symmetry:
+  title: 平移对称
+  text: 如果重复的图案（例如墙纸）在经过特定距离的平移后看起来相同，则具有__平移对称性__。
+  link: /course/transformations/symmetry-groups#symmetry-groups-1
+
+transversal:
+  title: 遍历
+  text: 横向线是与其他两条线相交的线。
+
+trapezium:
+  title: 梯形
+  text: __梯形__（有时称为__梯形__）是四边形，其中两个相对的边是平行的。这些被称为梯形的_底_，另外两个侧面被称为_腿_。
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-2
+
+triangle:
+  title: 三角形
+  text: __三角形__是具有三个直边和三个内角的几何形状。
+
+triangle-aa:
+  title: 三角形的AA条件
+  text: 如果两个三角形的两个角度大小相同，则它们__相似__。这称为三角形的__AA相似性条件__。
+
+triangle-altitude:
+  title: 三角形的高度
+  text: 三角形的__高度__（或__高度__）是一条垂直于边之一的线，它穿过相反的顶点。每个三角形都有三个高度。
+  image: triangle-altitude.svg
+  link: /course/triangles/properties#altitudes
+
+triangle-legs:
+  title: 三角形的腿
+  text: 直角三角形的两个__支脚__是两个较短的边（不是_斜边_）。它们紧邻直角。
+
+triangle-inequality:
+  title: 三角不等式
+  text: __三角形不等式__指出三角形的任意两个边的长度之和大于第三个边的长度。这也意味着两个任意点之间的最短距离是一条直线（因为经过第三个点总是比较长）。
+
+triangle-median:
+  title: 三角形的中位数
+  text: 三角形的__中位数__是将每个顶点连接到相对边的中点的线段。三角形的三个中位数在称为__质心__的单个点中相交。
+  link: /course/triangles/properties#medians
+
+triangle-midsegment:
+  title: 中段
+  text: 三角形的__中段__是连接三角形不同边的中点的线。
+  image: triangle-midsegment.svg
+  link: /course/triangles/midsegments
+
+triangle-numbers:
+  title: 三角形数
+  text: __三角形数__是一个整数，可以表示为用点组成等边三角形的数。第 *n*th个 三角形数的公式是`(n*(n+1))/2`，首批的三角形数是1，3，6，10，15，……
+  image: triangle-numbers.svg
+  link: /course/sequences/figurate#triangle-numbers
+
+triangle-sss:
+  title: 三角形的SSS条件
+  text: 如果两个三角形的三个边的长度相同，则它们是__一致__。对于三角形，这称为__SSS同余条件__。
+  link: /course/triangles/congruence#congruence-1
+
+trigonometry:
+  title: 三角学
+  text: __三角学__是研究三角形边与角之间的关系一个数学分支。主要研究三角函数__正弦__、__余弦__、__正切__以及它们的倒数。
+  link: /course/triangles/trigonometry
+
+truncated-icosahedron:
+  title: 二十面体截断
+  text: __截断二十面体__是_阿基米德实体_，由12个规则五边形和20个规则六边形组成。
+  link: /course/polyhedra/platonic#archimedean
+
+twin-primes:
+  title: 孪生素数
+  text: '__孪生素数__ 是像17和19一样的成对素数, 它们正好相隔两个数。仍然不知道 是否有无穷多对双素数。'
+  link: /course/divisibility/distribution-of-primes#twin-primes
+
+unit-circle:
+  title: 单位圆
+  text: __单位圆__是半径为1的圆。
+
+variable:
+  title: 变量
+  text: __变量__是未知量或可能更改值的量。在代数表达式中，通常用诸如_x_之类的字母表示。
+
+venn-diagram:
+  title: 维恩图
+  text: __维恩图__可视化了重叠的多个属性或事件。
+  image: venn.svg
+
+vertical-angles:
+  title: 垂直角度
+  text: __垂直角__是由相交线创建的成对的相反角度。垂直角度始终为_一致_。
+
+whole-numbers:
+  title: 整数
+  text: __整数__是计数数字，包括零：0、1、2、3、4，...
+
+zero-product:
+  title: 零产品属性
+  text: __零乘积属性__指出，如果两个量的乘积为零，则这些量中的至少一个也必须为零。例如，如果为`a × (a - 1) = 0`，则为`a = 0`或`a - 1 = 0`。

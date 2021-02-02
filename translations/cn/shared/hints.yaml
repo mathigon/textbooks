@@ -1,0 +1,38 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+
+welcome: "歡迎來到Mathigon！ 我是Archie，你的私人導師。 :graduation-cap:"
+account: 您可以創建一個免費帳戶來保存進度。
+tutorial1: 我們的內容分為小步驟。 您必須完成活動以揭示下一步。
+tutorial2: 我們將保存您的所有進度，以便您可以稍後返回並繼續前往您離開的地方。
+
+correct:
+  - "做得好 :smiling-face:"
+  - "非常棒! :relieved-face:"
+  - "干得漂亮 :grinning-face:"
+  - "杰出呀 :thumbs-up:"
+  - "卓尔不凡呀! :ok-hand:"
+  - "酷 :smiling-face-with-sunglasses:"
+  - "漂亮! :victory-hand:"
+  - "就这么做! :smiling-face-with-smiling-eyes:"
+  - "真香~ :smiling-face:"
+  - "映像深刻啊! :trophy:"
+  - "优秀 :grinning-face:"
+  - "卓越! :star:"
+  - "精彩! :smiling-face:"
+
+incorrect:
+  - "那不太对 :frowning-face:"
+  - "你确定吗? :thinking-face:"
+  - "看起来不太对劲. :hushed-face:"
+  - "再试一次! :confused-face:"
+
+welcomeMorning: 早上好！
+welcomeAfternoon: 下午好！
+welcomeEvening: 晚上好！
+
+welcomeMorningNamed: 早上好，$name！
+welcomeAfternoonNamed: 下午好，Mathigon！
+welcomeEveningNamed: 晚上好，Mathigon！

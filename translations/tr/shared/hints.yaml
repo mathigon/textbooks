@@ -1,0 +1,29 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: "Mathigon'a Hoşgeldiniz! Ben Archie, kişisel öğretmeniniz. :graduation-cap:"
+account: İlerlemenizi kaydetmek için ücretsiz bir hesap oluşturabilirsiniz.
+tutorial1: İçeriğimiz küçük adımlara ayrılmıştır. Sırada ne olduğunu görmek için etkinlikleri tamamlamanız gerekir.
+tutorial2: Tüm ilerlemenizi kurtaracağız, böylece daha sonra geri dönebilir ve kaldığınız yerden devam edebilirsiniz.
+
+correct:
+  - "Aferin :smiling-face:"
+  - "Harika iş! :relieved-face:"
+  - "Müthiş :grinning-face:"
+  - "Parlak :thumbs-up:"
+  - "Mükemmel! :ok-hand:"
+
+incorrect:
+  - "Bu pek doğru değil :frowning-face:"
+  - "Bundan emin misin? :thinking-face:"
+  - "Bu doğru görünmüyor. :hushed-face:"
+  - "Tekrar deneyin! :confused-face:"
+
+welcomeMorning: Günaydın!
+welcomeAfternoon: Tünaydın!
+welcomeEvening: İyi akşamlar!
+
+welcomeMorningNamed: Günaydın $name!
+welcomeAfternoonNamed: Tünaydın, $name!
+welcomeEveningNamed: İyi akşamlar $name!

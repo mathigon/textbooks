@@ -1,0 +1,52 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: 'Välkommen till Mathigon! Jag är Archie, din personliga handledare. :graduation-cap:'
+
+account: 'Du kan [skapa ett gratis konto](->#login-btn) för att spara dina framsteg.'
+
+tutorial1: |
+  Vårt innehåll är uppdelat i små steg. Du måste slutföra aktiviteterna för att avslöja vad som är
+  nästa.
+
+tutorial2: |
+  Vi sparar alla dina framsteg, så att du kan komma tillbaka senare och fortsätta precis där du
+  slutade.
+
+correct:
+  - 'Bra gjort :smiling-face:'
+  - 'Bra jobbat! :relieved-face:'
+  - 'Fantastiskt :grinning-face:'
+  - 'Lysande :thumbs-up:'
+  - 'Excellent! :ok-hand:'
+  - 'Cool :smiling-face-with-sunglasses:'
+  - 'Trevlig! :victory-hand:'
+  - 'Bra jobbat! :smiling-face-with-smiling-eyes:'
+  - 'Sweet :smiling-face:'
+  - 'Imponerande! :trophy:'
+  - 'Utestående :grinning-face:'
+  - 'Utmärkt! :star:'
+  - 'Underbar! :smiling-face:'
+
+incorrect:
+  - 'Det är inte riktigt :frowning-face:'
+  - 'Är du säker på det? :thinking-face:'
+  - 'Det ser inte bra ut. :hushed-face:'
+  - 'Försök igen! :confused-face:'
+
+welcomeMorning: God morgon!
+
+welcomeAfternoon: God eftermiddag!
+
+welcomeEvening: God kväll!
+
+welcomeMorningNamed: 'God morgon, $name!'
+
+welcomeAfternoonNamed: 'God eftermiddag, $name!'
+
+welcomeEveningNamed: 'God kväll, $name!'
+
+serverError: |
+  Tyvärr kan jag inte hjälpa just nu. Kontrollera din internetanslutning eller försök igen senare.
+  :confused-face:

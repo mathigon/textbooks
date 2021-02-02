@@ -1,0 +1,46 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: 'Mathigonへようこそ！私はあなたの個人家庭教師、アーチーです。 :graduation-cap:'
+
+account: '[無料のアカウントを作成](->#login-btn)して、進捗状況を保存できます。'
+
+tutorial1: 私たちのコンテンツは小さなステップに分かれています。あなたは次のことを明らかにするために活動を完了する必要があります。
+
+tutorial2: 進行状況はすべて保存されるので、後で戻って、中断したところから続行できます。
+
+correct:
+  - 'よくできました:smiling-face:'
+  - 'すごい仕事！ :relieved-face:'
+  - '素晴らしい:grinning-face:'
+  - '素晴らしい:thumbs-up:'
+  - '優秀な！ :ok-hand:'
+  - 'クール:smiling-face-with-sunglasses:'
+  - 'いいね！ :victory-hand:'
+  - '行くぞ！ :smiling-face-with-smiling-eyes:'
+  - '甘い:smiling-face:'
+  - '印象的！ :trophy:'
+  - '優れた:grinning-face:'
+  - '見事！ :star:'
+  - '素晴らしい！ :smiling-face:'
+
+incorrect:
+  - '不正解です:frowning-face:'
+  - 'よろしいですか？ :thinking-face:'
+  - 'それは正しくありません。 :hushed-face:'
+  - '再試行！ :confused-face:'
+
+welcomeMorning: おはようございます！
+
+welcomeAfternoon: こんにちは！
+
+welcomeEvening: こんばんは！
+
+welcomeMorningNamed: おはようございます、$name！
+
+welcomeAfternoonNamed: こんにちは、$name さん！
+
+welcomeEveningNamed: こんばんは、$name！
+
+serverError: '申し訳ありませんが、現時点ではお手伝いできません。インターネット接続を確認するか、しばらくしてからもう一度お試しください。 :confused-face:'

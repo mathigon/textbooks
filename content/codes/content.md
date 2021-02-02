@@ -1523,13 +1523,11 @@ Interactive Element: A text box where students can write an encrypted message an
 
 Here is a virtual Engima machine:
 
-    figure
-      include ./components/enigma
+    figure: x-enigma
 
 And here are the rotor cross-sections:
 
-    figure
-      include ./components/enigma-rotors
+    figure: x-enigma-rotors
 
 The letter shown inside each rotor indicates the rotation, and the connecting orange lines
 show the link between the notch on one rotor and the rotation position

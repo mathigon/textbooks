@@ -1,0 +1,1421 @@
+# ==============================================================================
+# MATHIGON GLOSSARY
+# ==============================================================================
+
+absolute-value:absolute-value:
+  title: 絶対値
+  text: |
+    数値の__絶対値__は、数直線上の0からの距離です。負の数は正になりますが、正の数は変更されません。 `x`の絶対値は`|x|`として記述されます。たとえば、`|-5| = 5`や`|3| =
+    3`などです。
+
+acute-angle:
+  title: 鋭角
+  text: __鋭角__とは、90°未満のサイズの角度です。
+
+acute-triangle:
+  title: 鋭角三角形
+  text: __鋭角三角形__では、3つの内角はすべて_鋭角_です（90°未満）。
+  link: /course/triangles/properties#classification
+
+adic:
+  title: N進数
+  text: 一部の整数_n_の___N_ -adic__数は、通常の算術とは異なる「近さ」の定義を持つ特別な数体系です。 2つの_n_進数は、それらの差が_n_の高指数で割り切れる場合、_近い_です。
+
+adjacent-angles:
+  title: 隣接する角度
+  text: 2つの角度が共通の辺と頂点を共有しているが、重なっていない場合、__隣接__しています。 _隣接する_という言葉は単に「隣人」を意味します。
+
+aleph-zero:
+  title: アレフゼロ
+  text: ヘブライ語の文字אを使用して書かれたアレフゼロは、数え切れないほどの無限集合の基数です（たとえば、自然数）。
+
+algebraic-numbers:
+  title: 代数的数
+  text: |
+    __代数的数__は実数のサブセットであり、整数係数をもつ多項式の根として表すことができます。すべての有理数（`2/3`など）と（`root(3,5)`などの）剰余は代数的であり、（4などの）剰余から構築できる数値も代数的です。
+
+    実数ではあるが代数的ではない_これらの数は、_超越数_と呼ばれます。
+
+algorithm:
+  title: アルゴリズム
+  text: |
+    __アルゴリズム__は、特定の問題を解決するために使用できる一連のルールまたは指示です。それらはコンピューターで一般的に使用され、数学のどこにでも現れます：_長い除算_から_ガウスの消去法_まで。
+
+alternate-angles:
+  title: 交互の角度
+  text: |
+    __代替角度__は、_横断_線と交差する2つの_平行線_によって形成され、常に合同です。下の図では、1、2、3、4のラベルが付いた角度のペアのそれぞれが交互になっています。各ペアの2つの角度は、異なる平行線上にあり、トラバーサルの反対側にあります。
+
+    角度ペア1と2は平行線の外側にあるため、__代替外角__と呼ばれ、角度ペア3と4は__代替内角__と呼ばれます。
+
+amino-acid:
+  title: アミノ酸
+  text: |
+    __アミノ酸__は、__タンパク質__を構成する小さな有機化合物です。それらはすべての生物の主要な構成要素の一部です。
+    私たちの体では、アミノ酸は食物の分解、体組織の修復、エネルギーの貯蔵、その他多くの機能に使用されます。
+
+angle:
+  title: 角度
+  text: 角度は、共通の端点を共有する2つの光線によって形成されます。各光線は、角度の側面と呼ばれます。角度のサイズは通常、_度_または_ラジアン_で測定されます。
+
+angle-bisector:
+  title: 角の二等分線
+  text: __角度の2等分線__は、角度を2つに分割して、2つの一致する小さな角度に分割する線または光線です。
+  image: angle-bisector.svg
+
+anti-dot:
+  title: アンチドット
+  text: |
+    ドットマシンのセルには、__アンチドット__を含めることができます。これは、「穴」または「負のドット」と考えることができます。値は–1です。値を変更せずに、ドットとアンチドットを同じセルにいつでも追加できます。
+
+apothem:
+  title: アポセム
+  text: 正多角形の__アポテム__は、いずれかの辺の中点から中心までの距離です。
+
+arabic-numerals:
+  title: アラビア数字
+  text: |
+    __アラビア数字システム__は、10桁の数字（0、1、2、3、4、5、6、7、8、9）と小数位の値のシステムを使用して、任意の数値を記述します。
+
+    それは最初にインドで開発され、その後アラビアの数学者によって適応された後、イタリアの数学者レオナルド・フィボナッチによってヨーロッパに持ち込まれました。
+
+arccos:
+  title: 逆余弦
+  text: __逆余弦__関数は、`arccos(x)`または`cos^(-1)(x)`として記述された三角関数です。これは`cos(x)`の逆です。
+
+archimedean-solid:
+  title: アルキメデスの固体
+  text: __アルキメデスの立体__は、さまざまな種類の正多角形で構成された多面体で、どの方向から見ても同じです。 13種類のアルキメデスの立体があります。
+  link: /course/polyhedra/platonic#archimedean
+
+arithmetic-mean:
+  title: 算術平均
+  text: __平均値__は、一連の数値の_平均_です。あなたはそれを計算することができますが、セットのすべての数を合計し、アイテムの数で合計を割ります。
+
+arithmetic-sequence:
+  title: 算術シーケンス
+  text: __算術列__（__算術プログレッション__と呼ばれることもあります）は、連続する項の間の差_d_が常に一定である数列です。
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+arithmetic series:
+  title: 等差級数
+  text: __算術級数__は、算術シーケンスの項の合計です。
+
+associative:
+  title: 関連性
+  text: •`a•(b•c) = (a•b)•c`の場合、操作は関連付けられます。たとえば、数値の加算（+）と乗算（×）は関連付けられます。
+
+atom:
+  title: 原子
+  text: |
+    __原子__は、固体、液体、気体、プラズマなど、すべての通常の物質を構成する粒子です。原子は、正に帯電した_コア_（または_原子核_）で構成され、_陽子_と_中性子_で構成され、負の殻で囲まれています-荷電_電子_。原子の直径は、ミリメートルの約1000万分の1です。
+
+axiom:
+  title: 公理
+  text: |
+    __公理__は、__仮説__と呼ばれることもありますが、「自明」と見なされ、証明なしで受け入れられる数学的なステートメントです。それは非常に単純であるべきで、明らかにそして疑いもなく真実です。
+
+    公理は数学の基礎を形成し、他のより複雑な結果を証明するために使用できます。
+
+axis-of-symmetry:
+  title: 対称軸
+  text: 形状に反射対称がある場合、__対称軸__はそれを2つの等しい半分に分割する線です。
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+base-10:
+  title: ベース10
+  text: __10進数システム__（または__10進数__）は、世界中で最も一般的に使用される番号付けシステムです。数値のすべての数字は、0から9までの10の異なる値のいずれかを持つことができます。
+
+bipartite-graph:
+  title: 二部グラフ
+  text: （完全な）__2部グラフ__は、2つの頂点セットで構成されます。すべての頂点は反対のセットのすべての頂点に接続されていますが、それ自体のセットの頂点は接続されていません。
+  link: /course/graph-theory/handshakes#handshakes-4
+
+blackjack:
+  title: ブラックジャック
+  text: __ブラックジャック__は、複数のカードの価値を合計して21に近づくカードゲームですが、それ以上ではありません。
+
+cavalieri:
+  title: カバリエリの原理
+  text: |
+    __Cavalieriの原理__は、2つのソリッドの高さと断面積がすべてのレベルで同じである場合、両方のソリッドは同じ体積であると述べています。
+
+    この事実を使用して、プリズムと円柱の体積が、断面積に高さを掛けたものであることを導き出すことができます。
+
+calculus:
+  title: 微積分
+  text: __微積分__は、制限、導関数、積分、べき級数を扱う数学の分岐です。一般的な問題には、曲線の傾きの検出、極値の検出、関数の変化率の検出、曲線の下の領域の検出などがあります。
+
+center-of-rotation:
+  title: 回転の中心
+  text: __回転の中心__は、シェイプが回転するポイントです。
+  link: /course/transformations/rigid#rotations
+
+centroid:
+  title: 重心
+  text: 三角形の__重心__は、3つの中央値が交差する点です。また、密度が均一な三角形の「重心」でもあります。
+  link: /course/triangles/properties#center-of-mass
+
+chaos:
+  title: 混沌
+  text: すべて
+
+circle:
+  title: サークル
+  text: __円__は、特定のポイント（_中心_）から固定距離（_半径_）にある2次元のすべてのポイントのセットです。
+  image: circle.svg
+  link: /course/circles/introduction#radius
+
+circle-area:
+  title: 円の面積
+  text: 半径が_r_の円の__面積__は、式`A = pi r^2`によって与えられます。
+
+circle-circumference:
+  title: 円周
+  text: 円の__円周__は、その外縁の周囲の距離です。半径_r_の円の円周は`C = 2 pi r`です。
+  link: /course/circles/introduction#radius
+
+circle-diameter:
+  title: 直径（円）
+  text: 円の__直径__は、円周上の2つの対角点の間の距離であり、中心を通過します。
+  link: /course/circles/introduction#radius
+
+circle-radius:
+  title: 半径
+  text: 円の__半径__は、中心と円周上の任意の点との間の距離（または線分）です。
+  link: /course/circles/introduction#radius
+
+circle-sector:
+  title: サークルセクター
+  text: |
+    円の__セクター__は、2つの半径と__円弧__で囲まれた、その内部の一部です。その面積は、弧の長さと円弧の内角に比例します。この意味は
+
+    {.text-center} `(A_"Sector")/(A_"Circle") = "Arc"/"Circumference" = θ/(2π)`
+  link: /course/circles/tangets-chords-arcs#sectors
+  image: circle-sector.svg
+
+circle-segment:
+  title: 円セグメント
+  text: 円の__セグメント__は、弦と対応する円弧で囲まれた、その内部の一部です。
+
+circumcircle:
+  title: 三角形の外接円
+  text: 三角形の__外接円__は、3つの頂点すべてを通る円です。
+  image: circumcircle.svg
+  link: /course/triangles/properties#circumcircle-1
+
+coefficient:
+  title: 係数
+  text: __係数__は、数式または方程式の変数の前にある数値です。たとえば、式`4x + 5y^2 - 3z`では、`x`の係数は4、`y^2`の係数は5、`z`の係数は–3です。
+
+collinear:
+  title: 同一線上の点
+  text: 3つ以上のポイントが同じ線上にある場合、それらは__同一直線上__にあります。
+
+compass:
+  title: 方位磁針
+  text: コンパスは、円または円弧を作成するために使用される描画ツールです。それは2本の腕で構成されます。一方の端の針は中央に配置され、もう一方の端の鉛筆はカーブを描きます。
+
+complementary-angles:
+  title: 相補的な角度
+  text: 2つの角度の合計が90度（直角）の場合、2つの角度は__相補的__です。
+
+complete-graph:
+  title: 完全なグラフ
+  text: __完全なグラフ__では、すべての頂点が他のすべての頂点に接続されています。 _n_個の頂点を持つ完全なグラフには、`(n×(n-1))/2`エッジがあります。
+  link: /course/graph-theory/handshakes#handshakes-3
+
+complex-numbers:
+  title: 複素数
+  text: |
+    __複素数__は、実数と虚数の合計または差であるすべての数です。それらはしばしば`a + bi`として記述されます。ここで、_a_は実数部であり、_b_は虚数部です。
+
+    複素数は2次元平面で表すことができ、_x_軸は実数、_y_軸は虚数です。
+
+    すべての複素数のセットは、多くの場合、記号`CC`を使用して表されます。
+
+composite-number:
+  title: 合成数
+  text: __合成数__は素数ではない整数です。これは、1とそれ以外の要素があることを意味します。
+
+concave:
+  title: 凹型ポリゴン
+  text: |
+    __凹面__のポリゴンには、180°より大きい内角が少なくとも1つあります。少なくとも1つの対角線がポリゴンの_外側_にあります。凹型ポリゴンを識別する一般的な方法は、ポリゴンの「陥没」側を探すことです。
+    _凹面_は、_凸面_ポリゴンの反対です。
+  link: /course/polyhedra/polygons#concave
+
+cone:
+  title: コーン
+  text: |
+    __円錐__とは、1つの点（_頂点_と呼ばれます）に湾曲した側面で接続された円形の_base_を持つ3次元のソリッドです。円錐は「円形ピラミッド」と考えることもできます。
+
+    __右円錐__は、頂点が底面の中心の真上にある円錐です。
+  link: /course/circles/spheres-cones-cylinders#cone
+  image: cone.svg
+
+cone-volume:
+  title: コーンのボリューム
+  text: |
+    円錐の体積は次の方程式で与えられます
+
+    {.text-center} `V = 1/3 π r^2 h`、
+
+    ここで、_r_は円形の底面の半径、_h_は円錐の高さ（底面から頂点までの垂直距離）です。
+
+congruent:
+  title: 合同
+  text: ジオメトリでは、2つの図がサイズ、形状、測定値が同じであれば、__合同__です。つまり、それらを移動、反転、または回転させて、互いの上にぴったり合わせることができます。
+  link: /course/euclidean-geometry/definitions#congruence
+
+congruent-angles:
+  title: 合同角度
+  text: 2つの角度が同じサイズであれば、__合同__です。
+
+conic-section:
+  title: 円錐曲線
+  text: |
+    __円錐断面__は、円錐の表面と平面の交差として作成される曲線です。円錐セクションには4つの異なるタイプがあり、多くの特性を共有します。
+
+    * サークル
+    *楕円
+    *放物線
+    *双曲線
+  link: /course/circles/conic-sections
+
+convex:
+  title: 凸多角形
+  text: __凸面__のポリゴンには、180°を超える内角は含まれていません。すべての対角線がポリゴンの内側にあります。これは、_凹面_ポリゴンの反対です。
+  link: /course/polyhedra/polygons#concave
+
+coordinate-system:
+  title: 座標系
+  text: __座標系__は、2つの垂直軸を含む2次元平面です。平面上のすべての点は、2つの軸からの距離を指定する2つの数値（座標）を使用して定義できます。
+
+coordinate-system-origin:
+  title: 座標系
+  text: 座標系の__原点__は、座標（0、0）のポイントです。これは通常、2つの軸が交差する点です。
+
+corresponding-angles:
+  title: 対応する角度
+  text: __対応する角度__とは、横方向に関して同じ位置にあるが、線が異なる2つの角度です。それらは常に合同です。
+  image: corresponding-angles.svg
+
+cos:
+  title: 余弦
+  text: __コサイン__は、`cos(θ)`として記述された三角関数です。直角三角形では、隣接する辺と斜辺の比率です。
+  link: /course/triangles/trigonometry#trig-functions
+
+cpoct:
+  title: CPOCT
+  text: |
+    CPOCTは、__合同な三角形の対応する部分__を意味します。つまり、2つの三角形が合同である場合、それらに対応するすべてのコンポーネント（角度、辺、中央セグメントなど）も互いに合同である必要があります。
+  link: /course/triangles/congruence#cpoct
+
+cross-section:
+  title: 断面
+  text: __断面__は、3次元ソリッドと平面の交点です。
+
+cryptography:
+  title: 暗号化
+  text: __暗号化__は、秘密のメッセージの暗号化と解読を研究する数学の領域です。
+
+cube:
+  title: キューブ
+  text: __立方体__（__六面体__と呼ばれることもあります）は、すべての面が正方形である通常の多面体です。 5つの_プラトンソリッド_の1つであり、6つの面、8つの頂点、12のエッジがあります。
+  link: /course/polyhedra/platonic#platonic-overview
+
+cube-volume:
+  title: 立方体の体積
+  text: 辺の長さが_a_の立方体の体積は`V = a^3`です。
+
+cylinder:
+  title: シリンダー
+  text: __円柱__は、2つの合同で平行な円形の側面（_底_）で構成される3次元の固体であり、曲面で結合されています。円柱は「円柱」と考えることもできます。
+  link: /course/circles/spheres-cones-cylinders#cylinder-prism
+  image: cylinder.svg
+
+cylinder-volume:
+  title: 円柱の体積
+  text: |
+    円柱の体積は次の式で与えられます
+
+    {.text-center} `V = π r^2 h`、
+
+    ここで、_r_は円形の底面の半径、_h_は円柱の高さ（2つの底面間の垂直距離）です。
+
+degrees:
+  title: 度
+  text: __度__は角度を測定する単位で、記号°で示されます。完全な1回転は360°、直角は90°と続きます。
+
+denominator:
+  title: 分母
+  text: __分母__は分数の一番下の数です。たとえば、`4/7`では、7が分母です。
+
+dilation:
+  title: 膨張
+  text: __膨張__とは、幾何学的形状を大きくしたり小さくしたりすることにより、幾何学的形状をサイズ変更する変換です。
+  image: dilation.svg
+  link: /course/transformations/dilations
+
+directed-graph:
+  title: 有向グラフ
+  text: __有向グラフ__では、すべてのエッジに「矢印」、つまり開始頂点と終了頂点があります。
+  link: /course/graph-theory/introduction#intro-1
+
+discriminant:
+  title: 判別
+  text: |
+    二次方程式の__判別式__は、二次式`b^2 − 4ac`の平方根の下の式です。
+
+    二次方程式の解の数を決定するために使用できます。判別式が0より大きい場合、2つの解決策があります。 0に等しい場合、解決策は1つだけです。 0未満の場合、（実際の）ソリューションはありません。
+
+dna:
+  title: 痛風
+  text: |
+    __DNA__（デオキシリボ核酸）は、すべての生物の遺伝的青写真を含む分子です。ほとんどのDNAは、_二重らせん_を形成する2つの鎖で構成されています。遺伝情報は、DNAを構成する4つの核酸（A、G、C、T）の順にエンコードされています。
+    _DNAシーケンス_は、この情報を抽出するプロセスです。これは、生物学、医学、遺伝学、およびバイオテクノロジーに不可欠な技術です。
+
+dodecahedron:
+  title: 正十二面体
+  text: __12面体__はプラトンの立体であり、正五角形の12面で構成されています。 20個の頂点と30個のエッジがあります。
+  link: /course/polyhedra/platonic#platonic-overview
+
+dot-annihilation:
+  title: 消滅
+  text: 同じセルにドットとアンチドットの両方がある場合、それらは相殺されるか、お互いを__消滅__させます。 `–1 + 1 = 0`について考えてください。
+
+dot-machine:
+  title: ドットマシン
+  text: |
+    __ドットマシン__は、ドットを含む複数のセルで構成されています。特定のルールに従ってこれらのドットを操作できます。
+
+    たとえば、`1←3`マシンでは、1つのセルの3つのドットを、_左_の次のセルの1つのドットに変換できます。同様に、_右_の次のセルで1ドットを3ドットに変換できます。これは「爆発」と呼ばれます。
+
+ellipse:
+  title: 楕円
+  text: |
+    __楕円__は、2つの焦点を囲む曲線状のパスです。楕円の円周上のどの点も、2つの焦点までの_距離の合計_は同じです。
+
+    焦点が非常に近い場合、楕円はほぼ円のように見えます。それらがさらに離れるにつれて、楕円はより長くなります。
+
+    楕円は、_円錐断面_の一種です。円錐と平面の交点です。
+  image: ellipse.svg
+  link: /course/circles/conic-sections#ellipses
+
+equation:
+  title: 方程式
+  text: __式__は、2つ以上の式を__等号__ `=`で接続することによって作成される数学的なステートメントです。これらの式はすべて同じ値であることを示しています。
+
+equilateral-triangle:
+  title: 正三角形
+  text: __正三角形__は、3つの辺すべてが同じ長さの三角形です。
+
+euclidean-geometry:
+  title: ユークリッド幾何学
+  text: |
+    __ユークリッドジオメトリ__は、数学者_ユークリッド_によって想定される種類のジオメトリであり、ポイント、ライン、ポリゴン、円、および3次元ソリッドの研究が含まれます。これは、許可されているすべての操作と構造を記述する、ジオメトリの基本的な法則である5つの_axiom_に依存しています。
+  link: /course/euclidean-geometry/euclids-axioms#euclid
+
+factor:
+  title: 因子
+  text: 数値_a_は、_b_を除算できる場合、数値_b_の__因数__（または__除数__）です残りのない_a_まで。
+  link: /course/divisibility/factors-and-multiples
+
+factorial:
+  title: 階乗
+  text: |
+    正の整数の__factorial__は、それ自体を含むすべての整数の積です。例えば感嘆符を使ってそれを書きます
+
+    {.text-center} `5! = 1×2×3×4×5`。
+
+    定義により、`0! = 1.`
+
+factorisation:
+  title: ファクタリングプレミアム
+  text: 数値の__素因数分解__は、それを素数の積として書く方法です。
+  link: /course/divisibility/primes
+
+fermat-last:
+  title: フェルマーの最後の定理
+  text: |
+    __Fermatの最終定理__は、方程式`x^n + y^n = z^n`には`n>2`の整数解がないと述べています。
+    `n=2`の場合、多くの整数解を持つ_ピタゴラスの定理_が得られますが、_n_ = 3、4、5、…の場合はありません。
+
+    1637年に、数学者ピエール・ド・フェルマーは教科書に彼が証明を持っていると主張したが、余白には大きすぎると書いた。
+    350年以上の間、他の数学者がこの証明を見つけようとしました。フェルマーの最後の定理は、「最も困難な数学的問題」として_ギネス世界記録_にさえありました。
+
+    1994年、長年の作業の後、Andrew Wilesはついにそれを証明することができました。彼は後に、数学で最高の栄誉の1つであるアーベル賞を受賞しました。
+
+fibonacci-numbers:
+  title: フィボナッチ数
+  text: __フィボナッチ数列__は1、1から始まります。後続のすべての項は、前の2つの項の合計です。つまり、再帰的な式は`x_n = x_(n-1) + x_(n-2)`です。
+  link: /course/sequences/fibonacci#fibonacci
+
+figurate-numbers:
+  title: 確定番号
+  text: __図表番号__は、幾何学的形状を使用して表すことができる番号です。例には、正方形、三角形、四面体の数が含まれます。
+  link: /course/sequences/figurate#figurate
+
+formula:
+  title: 式
+  text: __数式__は、2つ以上の変数間の関係を記述するルールまたは方程式です。例は`A = πr^2`です。
+
+fractal:
+  title: フラクタル
+  text: |
+    __フラクタル__は、_小数次元_を持つ幾何学的形状です。多くの有名なフラクタルは_自己相似_です。つまり、それらは自分自身の小さなコピーで構成されています。フラクタルには、すべての拡大レベルのパターンが含まれており、手順を繰り返したり、方程式を無限に繰り返したりすることで作成できます。
+  link: /course/fractals/introduction
+
+fta:
+  title: Arithemticの基本定理
+  text: __Arithemticの基本定理__（FTA）は、すべての整数には一意の素因数分解があると述べています。
+
+function:
+  title: 関数
+  text: __関数__は、入力（_x_）を正確に1つの出力（_y_）に変換する数学的関係です。それらは、多くの場合、形式`f(x)`の数式として表されます。
+
+function-graph:
+  title: 関数のグラフ
+  text: '`f(x)`形式の数学関数を座標系にプロットできます。結果は関数の__グラフ__と呼ばれます。'
+
+gcf:
+  title: 最大の共通因子
+  text: '2つの数値_a_と_b_の__最大公約数__（gcf）は、_a_と{の両方の因数である最大の整数です8} b_。'
+  link: /course/divisibility/greatest-common-factors
+
+geometric-sequence:
+  title: 幾何学的シーケンス
+  text: __ジオメトリックシーケンス__（__ジオメトリックプログレッション__と呼ばれることもあります）は、連続する項の間の比率_r_が常に一定である数列です。
+  link: /course/sequences/arithmetic-geometric#arithmetic-geometric-1
+
+geometric-series:
+  title: 幾何学的シリーズ
+  text: |
+    __ジオメトリックシリーズ__は、ジオメトリックシーケンスの項の無限大の合計です。連続する項は一定の比率_r_を持ちます。例えば、
+
+    {.text-center} `1 + 1/2 + 1/4 + 1/8 + …`
+
+    一定の比率`1/2`の幾何シリーズです。
+
+glide-reflection:
+  title: グライド反射
+  text: __グライドリフレクション__は特別な種類の変換です。これは、反射軸と同じ方向の_反射_と_平行移動_の組み合わせです。
+  link: /course/transformations/symmetry-groups#footsteps
+
+golden-ratio:
+  title: 黄金比
+  text: |
+    __黄金比__は、値`φ = 1.61803398875…`を持つ特定の無理数です。これは、2つの連続するフィボナッチ数を除算することで概算できます。
+
+    黄金比は、芸術と建築において特に美的に楽しいとしばしば見られ、多くの植物の螺旋に現れます。
+  link: /course/sequences/fibonacci#golden-ratio-1
+
+graph:
+  title: グラフ
+  text: __グラフ__は、エッジで接続された頂点のコレクションです。
+  link: /course/graph-theory/introduction
+
+graph-cycle:
+  title: サイクル
+  text: __サイクル__は、頂点の単一のループで構成されるグラフです。
+  link: /course/graph-theory/introduction#intro-4
+
+graph-degree:
+  title: 程度
+  text: 頂点の__次数__は、その頂点で交わるエッジの数です。
+  link: /course/graph-theory/introduction#intro-3
+
+graph-edge:
+  title: 縁
+  text: __エッジ__は、グラフの頂点（ポイント）を結ぶ線です。
+  link: /course/graph-theory/introduction
+
+graph-order:
+  title: 注文
+  text: グラフの__順序__は、グラフ内の頂点の数です。
+  link: /course/graph-theory/introduction#intro-3
+
+graph-vertex:
+  title: バーテックス
+  text: __頂点__は、グラフの一部であるポイントまたはノードです。
+  link: /course/graph-theory/introduction
+
+gravity:
+  title: 重力
+  text: |
+    __重力__は自然の4つの基本的な力の1つであり、宇宙の2つの質量を互いに引き寄せます。アイザックニュートンは、2つの質量`m_1`と`m_2`の間の力が
+
+    {.text-center} `F = (G m_1 m_2) / r^2`、
+
+    ここで、_G_は重力定数、_r_は質量間の距離です。
+
+group:
+  title: グループ
+  text: |
+    グループは、3つの異なるルールに従う「もの」（数値や対称性など）のコレクションです。
+
+    * 2つのものを追加/組み合わせて、グループ内にある別のものを取得できます。
+    *物事は_関連性があります_。つまり、`a+(b+c) + (a+b)+c`です。
+    * _アイデンティティ_があり、すべての「もの」には_インバース_があり、追加するとアイデンティティが与えられます。
+  link: /course/transformations/symmetry-groups#groups-1
+
+hailstone-sequence:
+  title: ひょうのシーケンス
+  text: |
+    __ヘイルストーンシーケンス__は、任意の整数を開始点として選択し、次のルールに従って生成できます。
+
+    * `x_n`が偶数の場合、`x_(n+1) = x_n / 2`。
+    * `x_n`が奇数の場合、`x_(n+1) = 3 * x_n + 1`
+  link: /course/sequences/special#hailstone
+
+heptagon:
+  title: 七角形
+  text: __七角形__は、7つの辺を持つポリゴンです。
+
+hexagon:
+  title: 六角形
+  text: __六角形__は、6つの辺を持つ多角形です。
+
+hyperbola:
+  title: 双曲線
+  text: __双曲線__は、関数`y = 1/x`のグラフの形状です。これは2つの互いに素な部分で構成されており、どちらも_漸近線_に近づきます。また、_円錐セクション_です。
+  image: hyperbola.svg
+
+hypotenuse:
+  title: 斜辺
+  text: 直角三角形の__斜辺__は、直角の反対側にある最も長い辺です。
+  image: right-triangle.svg
+
+icosahedron:
+  title: 正二十面体
+  text: __20面体__はプラトンの立体であり、すべて正三角形である20個の面で構成されています。 12個の頂点と30個のエッジがあります。
+  link: /course/polyhedra/platonic#platonic-overview
+
+imaginary:
+  title: 虚数
+  text: |
+    __虚数__は、負の数の平方根をとることによって生成されます。それらの名前にもかかわらず、それらは数学、科学および工学で非常に重要です。
+
+    __虚数単位__は`i = sqrt(−1)`として記述され、他の虚数はその倍数として記述できます。たとえば、`sqrt(-5) = 5i`。
+
+infinity:
+  title: 無限大
+  text: __無限大__は、無限または終わりのない数量です。数学では、記号`∞`で表されます。
+
+information:
+  title: 情報理論
+  text: __情報理論__は、データと情報の定量化、保存、通信に関する研究です。ロジック、暗号、コンピューターサイエンスで使用されます。
+
+integer:
+  title: 整数
+  text: __整数__は、ゼロ、…、–3、–2、–1、0、1、2、3、…を含む正と負の整数です。多くの場合、記号`ZZ`を使用して示されます。
+
+internal-angle:
+  title: 内角
+  text: ポリゴンの__内角__は、すべての頂点での内側の角度です。
+  image: internal-angle.svg
+
+irrational-numbers:
+  title: 無理数
+  text: |
+    __無理数__は、整数の分数として表現できない数です（_有理数_）。たとえば、0.333333…=
+    `1/3`は_合理的_ですが、`π`、`sqrt(2)`および_e_はすべて_非合理的_です。無理数の10進形式は停止または繰り返しません。
+
+irregular-polygon:
+  title: 不規則なポリゴン
+  text: __不規則なポリゴン__は、_正則ではない_ポリゴンです。つまり、側面または角度のすべてが同じサイズではありません。
+
+isosceles-triangle:
+  title: 二等辺三角形
+  text: __二等辺三角形__では、2つの辺の長さが同じです。
+
+iss:
+  title: 国際宇宙ステーション
+  text: |
+    __国際宇宙ステーション__（ISS）は1998年に打ち上げられ、高度約400
+    kmで地球を周回しています。低地球軌道で最大の人体で、打ち上げ以来ずっと人が住んでいます。地球から肉眼で見ることができます。
+
+julia-set:
+  title: ジュリアセット
+  text: |
+    `§f(x) = x^2`のような関数`f`が与えられた場合、対応する__Juliaセット__
+    `§K(f)`は、複素平面のすべての点のサブセットであり、`f`を繰り返し適用することによって形成されるシーケンスは発散しません。多くの場合、ジュリア集合は_フラクタル_であり、_マンデルブロー集合_と密接に関連しています。
+  link: /course/fractals/mandelbrot#julia
+  image: julia-set.png
+
+kite:
+  title: カイト
+  text: __カイト__は四辺形で、2組の隣接する辺の長さが同じです。
+  link: /course/polyhedra/quadrilaterals#kites
+
+koch-snowflake:
+  title: コッホスノーフレーク
+  text: __Koch Snowflake__は自己相似フラクタルです。これは、等辺三角形で構成されており、各辺に小さな正三角形が再帰的に追加されています。
+  link: /course/fractals/introduction#koch
+  image: koch-snowflake.svg
+
+laws-of-nature:
+  title: 自然の法則
+  text: __自然の法則__は、宇宙で観測されるすべてのものを説明しようとする物理的規則（通常は数式として表現される）にまとめて付けられた名前です。
+
+lcm:
+  title: 最小公倍数
+  text: '2つの数値_a_と_b_の__最小公倍数__（lcm）は、_a_と{の両方の倍数である最小の整数です8} b_。'
+  link: /course/divisibility/least-common-multiples
+
+line:
+  title: ライン
+  text: __ライン__は、両方向に永遠に伸びる無限に多くのポイントのセットです。線は常に直線であり、_幅_はありません。
+  link: /course/euclidean-geometry/definitions#lines
+
+line-segment:
+  title: 線分
+  text: |
+    __ラインセグメント__は、2つのポイントの間にあるラインの一部で、無限に延びていません。ポイント_A_からポイント_B_までのラインセグメントに`bar(AB)`のラベルを付けることができます。
+  link: /course/euclidean-geometry/definitions#segments
+
+line-slope:
+  title: 線の傾き
+  text: ラインの__勾配__はその「急勾配」を測定し、通常は文字_m_で示されます。これは、線に沿った_x_の単位変更に対する_y_の変更です。
+
+linear-equation:
+  title: 線形方程式
+  text: __線形方程式__は`ax + b = 0`の形式で、_x_は変数、_a_と_b_は数値です。座標系でグラフ化すると、`ax+b`の値は直線になります。
+
+linear-function:
+  title: 線形関数
+  text: __線形関数__は、グラフが直線である関数です。これは`f(x) = mx + c`として定義できます。ここで、_m_はラインの傾き、_c_はその_y_軸の切片です。
+
+mandelbrot-set:
+  title: マンデルブロセット
+  text: __マンデルブロー集合__は、再帰シーケンス`§z_n = z_(n-1)^2 + c`（`§z_0 = 0`を含む）が発散しない複素数の集合`CC`です。これは_フラクタル_です。
+  link: /course/fractals/mandelbrot
+  image: mandelbrot-set.png
+
+matrix:
+  title: マトリックス
+  text: __行列__は、行と列に配置された数値の長方形配列です。
+
+median:
+  title: 中央値
+  text: 一連の数値の__中央値__は、数値の半分が大きく、半分の数値が小さい値です。 「中間数」が2つある場合、それはこれらの数の平均です。
+
+midpoint:
+  title: 中点
+  text: |
+    線分の__中間点__は、線分を途中で2つに分割する線分上の点です。 __中点式__は、エンドポイント`(x_1, y_1)`および`(x_2,y_2)`の場合、中点は`((x_1 +
+    x_2)/2, (y_1 + y_2)/2)`であることを示しています。
+
+millennium-prize:
+  title: ミレニアム賞の問題
+  text: |
+    7つの__ミレニアム賞問題__は、数学で最も難しい未解決問題の一部です。それらは2000年に_Clay Mathematics
+    Institute_によってリストされ、それぞれ100万ドルの報酬を持っています：
+
+    * P対NP
+
+    *ホッジ予想
+
+    *ポアンカレ予想
+
+    *リーマン仮説
+
+    *ヤンミルズの存在とマスギャップ
+
+    * Navier-Stokesの存在と滑らかさ
+
+    *バーチアンドスウィンナートンダイアー予想
+
+    これまでのところ、問題の1つである_ポアンカレ予想_のみが解決されました。しかし、それを解決した数学者、グリゴリペレルマンは賞を拒否しました。
+
+mode:
+  title: モード
+  text: '一連の数値の__モード__は、最も頻繁に発生する数値です。たとえば、[3、4、4、4、5、5、6]のモードは5です。'
+
+molecule:
+  title: 分子
+  text: |
+    __分子__は、化学結合によって結合された2つ以上の原子で構成されます。 __イオン__とは異なり、電荷はありません。
+
+    分子の例には、2つの接続された酸素原子で構成される`O_2`、2つの水素原子と1つの酸素原子で構成される`H_2 O`が含まれます。
+
+morse-code:
+  title: モールス信号
+  text: |
+    __モールス符号__は、短い信号と長い信号（ドットとダッシュと呼ばれる）を使用して文字と数字を表す方法です。これは_Samuel
+    Morse_にちなんで名付けられ、当初は電信を使用して長距離通信するために使用されました。
+
+    たとえば、文字「L」は、短い信号と長い信号のシーケンス_{x-morse(char="L")}_を使用して表されます。
+
+multiple:
+  title: 複数
+  text: _b_が_a_の因数である場合、数値_a_は数値_b_の__倍数__です。
+  link: /course/divisibility/factors-and-multiples
+
+natural-numbers:
+  title: 自然数
+  text: __自然数__は、1、1、2、3、4、…から始まる正の整数です。多くの場合、記号`NN`を使用して表されます。
+
+net:
+  title: 多面体の網
+  text: 多面体の__ネット__は、多角形の面を平面に「展開」したときに得られるものです。
+
+neutron:
+  title: 中性子
+  text: __中性子__は、原子のコアを構成する粒子の1つです。電荷はなく、陽子とほぼ同じ質量です。
+
+np:
+  title: NPハード問題
+  text: _計算の複雑さの理論_とは、「難しい」問題をコンピュータでどのように解決するかを決定することです。 __NPハード__（非決定論的多項式時間ハード）は、最も難しい問題のクラスです。
+
+numerator:
+  title: 分子
+  text: __numerator__は、分数の先頭の数字です。たとえば、`4/7`では、数値4が分子です。
+
+obtuse-angle:
+  title: 鈍角
+  text: __鈍角__とは、90°より大きく180°より小さいサイズの角度です。
+
+obtuse-triangle:
+  title: 鈍角三角形
+  text: __鈍角三角形__では、1つの内角が90°を超えています。
+  link: /course/triangles/properties#classification
+
+octagon:
+  title: 八角形
+  text: __八角形__は、8辺のポリゴンです。
+
+octahedron:
+  title: 八面体
+  text: __八面体__はプラトンの立体であり、正三角形である8つの面で構成されています。 6つの頂点と12のエッジがあります。
+  link: /course/polyhedra/platonic#platonic-overview
+
+order-of-symmetry:
+  title: 対称の次数
+  text: 形状に回転対称がある場合、__対称の次数__は、形状が同じに見える方向の数です。 （または、最初に戻る前に、図形を回転できる回数です。）
+  link: /course/transformations/symmetry#rotational-symmetry
+
+origin:
+  title: 原点
+  text: 座標系の__原点__は、_x_軸と_y_軸が交差する点（0、0）です。
+
+origin-number-line:
+  title: 数直線の起源
+  text: 数直線の__原点__はポイント0です。
+
+palindrome:
+  title: 回文
+  text: __パリンドローム__は、前から後ろと同じように後ろから前へと読む単語または数字です。たとえば、25752と「ANNA」はどちらも回文です。
+  link: /course/transformations/symmetry#palindromes
+
+parabola:
+  title: 衛星放送受信アンテナ
+  text: __放物線__は、`y = x^2`のような2次関数のグラフの形状です。対称でU字型で、上向きまたは下向きのいずれかを指すことができます。また、_円錐セクション_です。
+  image: parabola.svg
+
+parabola-conic:
+  title: 衛星放送受信アンテナ
+  text: '__放物線__は、平面内のすべてのポイントのセットであり、__directrix__と呼ばれる固定線からの距離と、__focus {と呼ばれる固定点からの距離が同じです。 5}。'
+
+parabola-focus:
+  title: 放物線の焦点
+  text: 放物線の__焦点__は、その内部の固定点です。放物面鏡の場合、すべての平行な入射光線は、反射された後、焦点で交差します。
+
+parabola-vertex:
+  title: 放物線の頂点
+  text: 放物線の__頂点__は、方向を変える点です。これは、対応する2次関数の最大値または最小値のいずれかであり、放物線の対称軸上にあります。
+
+parallel:
+  title: 平行線
+  text: 2本以上の線が交差しない場合、それらは__平行__です。それらは同じ勾配を持ち、それらの間の距離は常に一定です。
+  image: parallel.svg
+  link: /course/euclidean-geometry/definitions#parallel
+
+parallelogram:
+  title: 平行四辺形
+  text: __平行四辺形__は、反対側の両方のペアが平行である四辺形です。
+  link: /course/polyhedra/quadrilaterals#parallelograms
+
+pascals-triangle:
+  title: パスカルの三角形
+  text: __パスカルの三角形__は、すべてのセルが真上の2つのセルの合計である数ピラミッドです。すべての二項係数だけでなく、他の多くの数列やパターンが含まれています。
+  link: /course/sequences/pascals-triangle#pascal-triangle
+
+penrose:
+  title: ペンローズタイリング
+  text: __ペンローズタイリング__は、_非周期的_、_自己相似_なテッセレーションです。いくつかの異なる形状のみで構成されていますが、繰り返されることはありません。
+  link: /course/polyhedra/tessellations#penrose
+
+pentagon:
+  title: 五角形
+  text: __五角形__は5辺のポリゴンです。
+
+percent:
+  title: パーセント
+  text: __パーセント__は、分母が100である比率です。たとえば、80％は`80/100 = 0.8`を意味するように記述します。
+
+perfect-numbers:
+  title: 完璧な数
+  text: __完全数__とは、その除数の合計に等しい数です（それ自体を除く）。たとえば、`28 = 1 + 2 + 4 + 7 + 14`は完全な数です。
+  link: /course/sequences/special#perfect-1
+
+perpendicular:
+  title: 垂直線
+  text: 2本の線が直角に交差している場合、それらは__perpendicular__（_normal_または_orthogonal_と呼ばれることもあります）です。
+  image: perpendicular.svg
+  link: /course/euclidean-geometry/definitions#perpendicular
+
+perpendicular-bisector:
+  title: 垂直二等分線
+  text: 線分の__垂直2等分線__は、その中点を通過し、90度の角度で交差します。
+  image: perpendicular-bisector.svg
+
+pi:
+  title: パイ
+  text: __Pi__は、ギリシャ文字の_π_でよく書かれ、円周と円の直径の比率です。それは超越数であり、その値は約3.14159265です…
+  link: /course/circles/introduction#pi-definition
+
+platonic-solid:
+  title: プラトンの固体
+  text: |
+    __プラトンソリッド__は、すべての面が同じ数のエッジを持つ正多角形であり、同じ数の面がすべての頂点で交わる多面体です。プラトンの立体は5つしかありません。4面体、立方体、8面体、12面体、20面体です。
+  link: /course/polyhedra/platonic
+
+point:
+  title: ポイント
+  text: __ポイント__は、空間内の特定の場所です。ポイントは位置を表しますが、サイズや形状自体はありません。
+  link: /course/euclidean-geometry/definitions#points
+
+polygon:
+  title: ポリゴン
+  text: __ポリゴン__は、直線セグメントで構成される幾何学的形状です。ポリゴンには、湾曲した側面や穴を含めることはできません。たとえば、正方形は多角形ですが、円はそうではありません。
+  image: polygon.svg
+  link: /course/polyhedra/polygons#polygons
+
+polygon-diagonal:
+  title: 対角線
+  text: ポリゴンの__対角線__は、互いに隣接していない2つの頂点を結ぶ線分です。
+
+polygon-edge:
+  title: ポリゴンのエッジ
+  text: ポリゴンの__サイド__または__エッジ__は、そのアウトラインを形成するラインセグメントです。たとえば、三角形には3つの辺があります。
+
+polygon-vertex:
+  title: ポリゴンの頂点
+  text: ポリゴンの__頂点__は、隣接する辺が交わる点（その「コーナー」）です。
+
+polyhedron:
+  title: 多面体
+  text: __多面体__（複数形は_多面体_）は、曲面やエッジのない3次元の立体です。多面体のすべての面はポリゴンです。たとえば、立方体とピラミッドは多面体ですが、球体はそうではありません。
+  link: /course/polyhedra/polyhedra
+
+polyhedron-dual:
+  title: 多面体の双対
+  text: すべて
+  link: /course/polyhedra/platonic#platonic-dual
+
+polyhedron-edge:
+  title: 多面体のエッジ
+  text: 多面体の__エッジ__は、2つの面が接続されているラインセグメントです。
+  link: /course/polyhedra/polyhedra
+
+polyhedron-face:
+  title: 多面体の顔
+  text: 多面体の__面__は、その表面を構成するポリゴンです。
+  link: /course/polyhedra/polyhedra
+
+polyhedron-vertex:
+  title: 多面体の頂点
+  text: 多面体の「コーナー」はその__頂点__と呼ばれます。
+  link: /course/polyhedra/polyhedra
+
+polynomial:
+  title: 多項式
+  text: |
+    __多項式__は、定数と、整数のべき乗された変数の倍数で構成される代数式です。たとえば、`5x^3 - 2y^2 + x +
+    4`は多項式です。変数が1つだけの多項式の最も一般的な形式は`a_n x^n + a_(n–1) x^(n–1) + … + a_2 x^2 + a_1 x +
+    a_0`で、`a_n`、`a_(n-1)`、…、`a_0`はすべて特定の定数です。
+
+polynomial-degree:
+  title: 程度
+  text: 項または多項式の__次数__は、その中の変数の最大のべき乗です。たとえば、`5x^3 + 2y^2 - 4z`の次数は3です。
+
+powers:
+  title: べき乗
+  text: |
+    __指数__（または__累乗__）は、数値（_底_）が指定された回数（_指数_）。これは通常、上付き文字`a^x`として記述されます。ここで、_a_は底、_x_は指数です。たとえば、`4^3=4×4×4`。
+
+prime:
+  title: 素数
+  text: __素数__は正の整数で、1とそれ以外の要素はありません。最初の素数は2、3、5、7、11、13、…です。
+  link: /course/divisibility/primes
+
+prime-factor:
+  title: プライムファクター
+  text: 数値の__素因数__は、素数である単純な因数です。
+  link: /course/divisibility/primes
+
+prime-factorisation:
+  title: ファクタリングプレミアム
+  text: 数値の__素因数分解__は、それを素数の積として表現する方法です。たとえば、12の素因数分解は`2 × 2 × 3`です。
+
+prism:
+  title: プリズム
+  text: |
+    __プリズム__は、対応する頂点が平行なセグメントで結合されたポリゴン（_ベース_と呼ばれる）である2つの合同な面を持つ3次元の立体です。プリズムの残りの面は、すべて長方形または平行四辺形です。
+  image: prism.svg
+
+probability:
+  title: 確率
+  text: __確率__は、特定のイベントが発生する可能性を示す0〜1の数値です。イベントの確率_A_は`P(A)`と表記されます。
+
+probability-tree:
+  title: 確率ツリー
+  text: __確率ツリー__は、複数の連続するイベントの確率の合計を表すツリー図です。
+
+proof:
+  title: 証明
+  text: __証明__は、特定のステートメントが真実であることを疑いもなく示す論理的な議論です。
+
+protein:
+  title: タンパク質
+  text: __タンパク質__は大きな_高分子_であり、消化から細胞間の伝達やDNAの複製まで、生体内でさまざまな機能を実行できます。タンパク質は、_アミノ酸残基_の1つ以上の鎖で構成されます。
+
+proton:
+  title: プロトン
+  text: __陽子__は、原子のコアを構成する粒子の1つです。 +1の料金です。原子内の陽子の数は「原子番号」と呼ばれ、原子の種類を決定します。
+
+pyramid:
+  title: ピラミッド
+  text: |
+    __ピラミッド__は、ポリゴンをベースとし、外側に三角形の面を持ち、頂点に向かって先細りになる多面体です。
+
+    __正則ピラミッド__では、ベースは_正多角形_であり、頂点はベースの中心の真上にあります。
+  image: pyramid.svg
+
+protractor:
+  title: 分度器
+  text: 分度器は、角度を度数で測定するために使用されるツールです。
+
+pythagoras-theorem:
+  title: ピタゴラスの定理
+  text: __ピタゴラスの定理__は、すべての直角三角形`a^2 + b^2 = c^2`で、_c_は斜辺の長さ、_a_および_b_は、他の2つの辺の長さです。
+  link: /course/triangles/pythagoras
+
+pythagorean-triple:
+  title: ピタゴラストリプル
+  text: __ピタゴラスのトリプル__は、ピタゴラスの定理`a^2 + b^2 = c^2`を満たす3つの整数_a_、_b_、および_c_のセットです。
+  link: /course/triangles/pythagoras#pythagorean-triples
+
+quadratic:
+  title: 二次
+  text: __2次__は2次の多項式です。たとえば、`x^2 - 2x + 3`は2次です。
+
+quadratic-equation:
+  title: 二次方程式
+  text: |
+    __二次方程式__は、次数2の単一の変数を含む方程式です。これは、多くの場合`ax^2 + bx + c = 0`と記述されます。ここで、_x_は変数、_a_、 _b_と_c_は数値で、`a
+    != 0`です。
+
+quadratic-formula:
+  title: 二次式
+  text: |
+    __二次式__は、二次方程式の根を決定する方法です。方程式`ax^2 + bx + c = 0`には根があります
+
+    {.text-center} `x = (-b +- sqrt(b^2 - 4ac))/(2a)`。
+
+quadratic-function:
+  title: 二次関数
+  text: |
+    __2次関数__は`f(x) = ax^2+bx+c`形式の関数です。ここで、_a_、_b_、および_c_は数値、`a != 0`。
+    2次関数のグラフは、__放物線__と呼ばれるU字型の曲線です。
+
+quadratic-function-vertex-form:
+  title: 二次関数の頂点形式
+  text: '二次関数の__頂点形式__または__標準形式__は`f(x) = a(x − h)^2 + k`です。点`(h, k)`は、対応する放物線の__頂点__です。'
+
+quadrilateral:
+  title: 四辺形
+  text: __四角形__は、4つの辺を持つポリゴンです。
+  link: /course/polyhedra/quadrilaterals
+
+quantum:
+  title: 量子力学
+  text: __量子力学__は、基本粒子の奇妙な動作を説明する物理学の一分野です。
+
+radians:
+  title: ラジアン
+  text: __ラジアン__は、角度のサイズを測定する単位です。 1つの完全な回転（360°）は`2π`ラジアン（単位円の円周の長さ）です。
+  link: /course/circles/radians#radians
+
+radioactive:
+  title: 放射性崩壊
+  text: __放射性崩壊__は、不安定な原子が分解してエネルギーを放出する物理プロセスです。
+
+rational-numbers:
+  title: 有理数
+  text: |
+    __有理数__は、2つの整数の分数`p/q`として表現できる数です。それらの小数展開は、最終的に停止するか繰り返されます。例には、`1/2`、`-5/7`、12.71、および9が含まれます。有理数は、多くの場合、記号`QQ`を使用して表されます。
+
+ray:
+  title: レイ
+  text: __光線__は、点から始まり、一方向に無限に伸びる線の一部です。 `A`から始まる光線に`vec(AB)`のラベルを付けることができます。
+  link: /course/euclidean-geometry/definitions#rays
+
+real-numbers:
+  title: 実数
+  text: __実数__は、正と負の数、有理数（分数）、平方根、立方根、小数、_π_、_を含む、数直線に表示されるすべての数です。 e_、その他多数。多くの場合、記号`RR`を使用して示されます。
+
+rectangle:
+  title: 矩形
+  text: __長方形__は、4つの角度すべてが90°である四角形です。
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+reflection:
+  title: 反射
+  text: __リフレクション__は、線を横切って形状を「反転」または「鏡像化」する変換です。
+  link: /course/transformations/rigid#reflections
+
+reflectional-symmetry:
+  title: 反射対称
+  text: 形状は、反射後に同じように見える場合、対称性があります。
+  image: reflectional-symmetry.svg
+  link: /course/transformations/symmetry#reflectional-symmetry
+
+regular-polygon:
+  title: 正多角形
+  text: __正多角形__とは、すべての辺が同じ長さで、すべての内角が同じサイズのポリゴンです。
+  image: regular-polygon.svg
+  link: /course/polyhedra/polygons#regular-polygons
+
+rhombus:
+  title: ひし形
+  text: __ひし形__（複数形は_rhombuses_または_rhombi_です）は、すべての辺が同じ長さの四角形です。
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-1
+
+right-angle:
+  title: 直角
+  text: __直角__は、サイズが90°の角度です。
+
+right-triangle:
+  title: 直角三角形
+  text: __直角三角形__では、1つの内角はちょうど90度です。
+  image: right-triangle.svg
+  link: /course/triangles/properties#classification
+
+rigid-transformation:
+  title: 剛体変換
+  text: __剛体変換__（または__isometry__）は、幾何学的図形のサイズまたは形状を変更しない変換です。
+  link: /course/transformations/rigid
+
+roman-numerals:
+  title: ローマ数字
+  text: |
+    __ローマ数字システム__は古代ローマで開発され、14世紀までヨーロッパで使用されていました。それはあなたが7つの異なる文字を組み合わせることによって任意の整数を書くことを可能にしました：
+
+    * I = 1
+    * V = 5
+    * X = 10
+    * L = 50
+    * C = 100
+    * D = 500
+    * M = 1000
+
+rotation:
+  title: 回転
+  text: __回転__は、固定点を中心に特定の角度だけ形状を「回転」させる変換です。
+  link: /course/transformations/rigid#rotations
+
+rotational-symmetry:
+  title: 回転対称
+  text: 回転後（360°未満）に同じように見える場合、形状は回転対称です。
+  image: rotational-symmetry.svg
+  link: /course/transformations/symmetry#rotational-symmetry
+
+roulette:
+  title: ルーレット
+  text: __ルーレット__は、回転するボールが着地する場所に賭けるカジノゲームです。 36個の数字と1つまたは2つの0が含まれています。
+
+scale-factor:
+  title: 倍率
+  text: |
+    2つの類似した幾何学的図形の__スケールファクター__は、2つの対応する長さの比率です。
+
+    1より小さい倍率は形状が縮小されていることを示し、1より大きい倍率は形状が拡大されていることを示します。
+  link: /course/transformations/dilations#dilations-1
+
+scalene-triangle:
+  title: スカレントライアングル
+  text: __斜角三角形__では、3つの辺すべての長さが異なります。
+
+scientific-notation:
+  title: 科学表記
+  text: |
+    __科学表記__は、非常に大きいまたは小さい数値を書き込むための標準化された方法です。これは`a × 10^n`の形式で、_n_は整数で、`1 ≤ a < 10`です。
+
+    たとえば、番号4600は`4.6 × 10^3`と書くことができます。
+
+set:
+  title: セット
+  text: |
+    __セット__は、ものまたはオブジェクト（要素と呼ばれる）のコレクションです。すべての要素は、セット内で1つしか表示できません。
+    {}を使用してセットを記述します。たとえば、2、3、4の数字を含むセットは{2, 3, 4}として記述されます。
+
+sequence:
+  title: シーケンス
+  text: __シーケンス__は、番号（または幾何オブジェクトなどの他の要素）の順序付きリストであり、多くの場合、特定のパターンまたは関数に従います。シーケンスは有限でも無限でもかまいません。
+  link: /course/sequences/introduction#simple-patterns
+
+sequence-convergence:
+  title: 収束
+  text: シーケンスは、時間が経つにつれてその用語が特定の__制限__に近づくと__収束__します。
+
+sequence-divergence:
+  title: 発散
+  text: 時間の経過に伴ってその用語がますます大きくなり、無限大（または負の無限大）になると、シーケンスは__発散__します。
+
+sequence-explicit:
+  title: 明示的な式
+  text: シーケンスの__明示的な式__は、_n_番目の項`x_n`の値を_n_の関数として表します。
+  link: /course/sequences/introduction#explicit
+
+sequence-recursive:
+  title: 再帰式
+  text: シーケンスの__再帰式__は、前の項の関数としてすべての項`x_n`の値を表します。
+  link: /course/sequences/introduction#recursive-1
+
+sequence-term:
+  title: シーケンスの条件
+  text: シーケンスの__terms__はすべて、個々の数または要素です。
+  link: /course/sequences/introduction#simple-patterns
+
+sierpinski-triangle:
+  title: シェルピンスキートライアングル
+  text: __シェルピンスキートライアングル__は自己相似フラクタルです。正三角形で構成され、残りの領域から小さな正三角形が再帰的に削除されます。
+  link: /course/fractals/sierpinski
+  image: sierpinski-triangle.svg
+
+sieve-eratosthenes:
+  title: エラトステネスのふるい
+  text: __エラトステネスのふるい__は、素数でない_数_を繰り返し除去することにより、素数を見つけるための手順です。
+  link: /course/divisibility/primes#eratosthenes
+
+similar:
+  title: 似ている
+  text: |
+    2つの幾何学的形状は、形状は同じでサイズが異なる場合に__類似__します。
+    1つの形状を移動、回転、反射、サイズ変更して、他の形状に合わせることができます。それらの対応する角度は等しく、対応する側面は同じ比率です。
+
+sin:
+  title: その
+  text: __Sine__は、`sin(θ)`として記述された三角関数です。直角三角形では、反対側と斜辺の比率です。
+  link: /course/triangles/trigonometry#trig-functions
+
+sphere:
+  title: 球
+  text: __球__は、特定の_中心_から同じ距離にあるすべてのポイントで構成される3次元の立体です。この距離は、球の_半径_と呼ばれます。
+  link: /course/circles/spheres-cones-cylinders#sphere
+
+sphere-radius:
+  title: 球の半径
+  text: 球の__半径__は、その中心と表面上の任意の点との間の距離（または線分）です。
+
+square:
+  title: 平方
+  text: __正方形__は通常の四角形です。すべての辺の長さが同じで、すべての角度のサイズが同じ（90°）です。
+  link: /course/polyhedra/quadrilaterals
+
+square-area:
+  title: 正方形の面積
+  text: 辺の長さが_s_の正方形の__面積__は`A = s^2`です。
+
+square-matrix:
+  title: 正方行列
+  text: __正方行列__は、行と列の数が同じ行列です。
+
+square-numbers:
+  title: 平方数
+  text: __平方数__は、別の整数の2乗として表すことができる数です。最初の平方数は1、4、9、16、25、…です。
+  link: /course/sequences/introduction#squares
+
+subdivision:
+  title: 区画
+  text: グラフの__サブディビジョン__を作成するには、そのエッジに沿って頂点を追加します。
+
+subgraph:
+  title: サブグラフ
+  text: グラフは、別のグラフの__サブグラフ__です（大きなグラフのエッジと頂点のサブセットによって形成されている場合）。
+  link: /course/graph-theory/introduction#intro-2
+
+supplementary-angles:
+  title: 補助角度
+  text: 2つの角度の合計が180°（半円）の場合、2つの角度は__補足的__です。
+
+symmetry:
+  title: 対称
+  text: 図または形状は、何らかの方法で変換された後（反射や回転など）に同じに見える場合、__対称性__を持ちます。
+  link: /course/transformations/symmetry#symmetry
+
+symmetry-group:
+  title: 対称グループ
+  text: ジオメトリオブジェクトの__対称グループ__は、そのすべての_対称_（および_アイデンティティ_）のコレクションです。
+  link: /course/transformations/symmetry-groups#groups-1
+
+tan:
+  title: 正接
+  text: |
+    __Tangent__は、`tan(θ)`として記述された三角関数です。これは、_sine_と_cosine_の比率として定義されます。
+
+    {.text-center} `tan(θ) = sin(θ) / cos(θ)`。
+
+    直角三角形では、`tan(θ)`は角度`θ`の反対側と隣接する側の比率です。
+  link: /course/triangles/trigonometry#trig-functions
+
+tangent:
+  title: 接線
+  text: __接線__は、1点で曲線または円に交差せずに接触する線です。このポイントは、__接点のポイント__と呼ばれることもあります。
+
+term:
+  title: 用語（代数）
+  text: |
+    __項__は、+または–記号で区切られた代数式または方程式の部分です。それらは、積または分数、または1つ以上の数値、変数、または関数です。
+
+    たとえば、式`2x^2 - 3ab + 4`では、3つの用語は`2x^2`、`3ab`、4です。
+
+tessellation:
+  title: テッセレーション
+  text: __テッセレーション__は、ギャップやオーバーラップなしにサーフェスをカバーする幾何学模様です。
+  link: /course/polyhedra/tessellations
+
+tetrahedral-numbers:
+  title: 四面体数
+  text: __四面体数__は、複数の球体を_四面体_に積み重ねることによって作成される数です。最初の四面体数は1、4、10、20、35、…です。
+  link: /course/sequences/figurate#tetrahedral
+
+tetrahedron:
+  title: 四面体
+  text: __四面体__はプラトンの立体であり、正三角形である4つの面で構成されています。 4つの頂点と6つのエッジがあります。
+  link: /course/polyhedra/platonic#platonic-overview
+
+theorem:
+  title: 定理
+  text: __定理__は、数学において特に重要な結果または所見です。公理、ルールロジック、およびすでに真であることがわかっている以前の定理を使用して、常に真であることが証明されています。
+
+transformation:
+  title: 変換
+  text: __変換__は、1つの幾何学的形状を別の形状に変換します。 _反射_や_拡張_など、さまざまな種類の変換があります。
+  link: /course/transformations/rigid#transformations
+
+transformation-image:
+  title: 変革のイメージ
+  text: 幾何学的形状を変換した後の結果は、その__イメージ__と呼ばれます。多くの場合、ラベルの末尾に ’を追加して示されます。
+  link: /course/transformations/rigid#transformations
+
+translation:
+  title: 翻訳
+  text: __平行移動__は、角度や形状を変更せずに図を特定の方向に移動する変換です。
+  image: translation.svg
+  link: /course/transformations/rigid#translations
+
+translational-symmetry:
+  title: 並進対称
+  text: 繰り返しパターン（壁紙など）は、特定の距離だけ平行移動した後も同じように見える場合、__平行移動対称性__を持ちます。
+  link: /course/transformations/symmetry-groups#symmetry-groups-1
+
+transversal:
+  title: トラバーサル
+  text: 横線は、他の2本の線と交差する線です。
+
+trapezium:
+  title: 台形
+  text: __台形__（__台形__と呼ばれることもあります）は、2つの反対側が平行な四辺形です。これらは台形の_ベース_と呼ばれ、他の2つの側面は_脚_と呼ばれます。
+  link: /course/polyhedra/quadrilaterals#quadrilaterals-2
+
+triangle:
+  title: 三角形
+  text: __三角形__は、3つの直線の辺と3つの内角を持つ幾何学的形状です。
+
+triangle-aa:
+  title: 三角形のAA条件
+  text: 2つの三角形が同じサイズである場合、2つの三角形は__類似しています__。これは、三角形の__AA類似条件__と呼ばれます。
+
+triangle-altitude:
+  title: 三角形の高度
+  text: 三角形の__高度__（または__高さ__）は、反対側の頂点を通る、いずれかの辺に垂直な線です。すべての三角形には3つの高度があります。
+  image: triangle-altitude.svg
+  link: /course/triangles/properties#altitudes
+
+triangle-legs:
+  title: 三角形の脚
+  text: 直角三角形の2つの__脚__は、2つの短い辺です（_斜辺_ではありません）。それらは直角の隣にあります。
+
+triangle-inequality:
+  title: 三角形の不等式
+  text: |
+    __三角形の不等式__は、三角形の2つの辺の長さの合計が3番目の辺の長さより大きいことを示しています。これは、任意の2つのポイント間の最短距離が直線であることも意味します（3番目のポイントを経由する方が常に長いため）。
+
+triangle-median:
+  title: 三角形の中央値
+  text: 三角形の__中央値__は、各頂点を反対側の中点に接続する線分です。三角形の3つの中央値は、__重心__と呼ばれる単一の点で交差します。
+  link: /course/triangles/properties#medians
+
+triangle-midsegment:
+  title: ミッドセグメント
+  text: 三角形の__中央セグメント__は、三角形の異なる辺の中点を結ぶ線です。
+  image: triangle-midsegment.svg
+  link: /course/triangles/midsegments
+
+triangle-numbers:
+  title: 三角形の数
+  text: __三角形の数__は、ドットの正三角形として表すことができる整数です。 _n_番目の三角形の数値は`(n*(n+1))/ 2`で、最初の三角形の数値は1、3、6、10、15、…です。
+  image: triangle-numbers.svg
+  link: /course/sequences/figurate#triangle-numbers
+
+triangle-sss:
+  title: 三角形のSSS条件
+  text: 3つの辺の長さが同じである場合、2つの三角形は__合同__です。これは、三角形の__SSS合同条件__と呼ばれます。
+  link: /course/triangles/congruence#congruence-1
+
+trigonometry:
+  title: 三角法
+  text: __三角法__は、三角形の辺と角度の関係を研究する数学の一分野です。これは主に、三角関数__sine__、__cosine__、__tangent__およびそれらの逆数に関係しています。
+  link: /course/triangles/trigonometry
+
+truncated-icosahedron:
+  title: 切頂二十面体
+  text: __Truncated Icosahedron__は、12個の正五角形と20個の正六角形で構成される_アルキメデスの立体_です。
+  link: /course/polyhedra/platonic#archimedean
+
+twin-primes:
+  title: ツインプライム
+  text: __ツイン素数__は、17と19または101と103のような素数のペアであり、正確に2つ離れています。双子素数のペアが無限にあるかどうかは不明です。
+  link: /course/divisibility/distribution-of-primes#twin-primes
+
+unit-circle:
+  title: ユニットサークル
+  text: __単位円__は半径1の円です。
+
+variable:
+  title: 変数
+  text: __変数__は、不明であるか、値が変わる可能性のある数量です。代数式では通常、_x_のような文字で表されます。
+
+venn-diagram:
+  title: ベン図
+  text: __ベン図__は、重複する複数のプロパティまたはイベントを視覚化します。
+  image: venn.svg
+
+vertical-angles:
+  title: 頂角
+  text: __垂直角度__は、交差する線によって作成される対角のペアです。頂角は常に_合同_です。
+
+whole-numbers:
+  title: 整数
+  text: __整数__は、0を含むカウント数です：0、1、2、3、4、…
+
+zero-product:
+  title: ゼロの製品特性
+  text: |
+    __zero product property__は、2つの数量の積がゼロの場合、これらの数量の少なくとも1つもゼロでなければならないことを示しています。たとえば、`a × (a - 1) =
+    0`の場合、`a = 0`または`a - 1 = 0`のいずれかです。

@@ -1,0 +1,52 @@
+# ==============================================================================
+# MATHIGON HINTS
+# ==============================================================================
+
+welcome: 'Mathigon में आपका स्वागत है! मैं आर्ची हूं, आपका निजी ट्यूटर। :graduation-cap:'
+
+account: 'अपनी प्रगति को बचाने के लिए आप [एक निःशुल्क खाता बना सकते हैं](->#login-btn)।'
+
+tutorial1: |
+  हमारी सामग्री छोटे चरणों में विभाजित है। आगे क्या है, यह बताने के लिए आपको गतिविधियाँ पूरी करनी
+  होंगी।
+
+tutorial2: |
+  हम आपकी सारी प्रगति को बचा लेंगे, इसलिए आप बाद में वापस आ सकते हैं और वहीं छोड़ सकते हैं जहां आपने
+  छोड़ा था।
+
+correct:
+  - 'अच्छा किया :smiling-face:'
+  - 'अच्छा कार्य! :relieved-face:'
+  - 'बहुत बढ़िया :grinning-face:'
+  - 'शानदार :thumbs-up:'
+  - 'अति उत्कृष्ट! :ok-hand:'
+  - 'कूल :smiling-face-with-sunglasses:'
+  - 'अच्छा! :victory-hand:'
+  - 'जाने के लिए रास्ता! :smiling-face-with-smiling-eyes:'
+  - 'मीठा :smiling-face:'
+  - 'प्रभावशाली! :trophy:'
+  - 'बकाया :grinning-face:'
+  - 'उत्तम! :star:'
+  - 'आश्चर्यजनक! :smiling-face:'
+
+incorrect:
+  - 'यह ठीक नहीं है :frowning-face:'
+  - 'क्या अापको उस बारे में पूर्ण विशवास है? :thinking-face:'
+  - 'यह सही नहीं लगेगा। :hushed-face:'
+  - 'पुनः प्रयास करें! :confused-face:'
+
+welcomeMorning: शुभ प्रभात!
+
+welcomeAfternoon: नमस्कार!
+
+welcomeEvening: सुसंध्या!
+
+welcomeMorningNamed: 'सुप्रभात, $name!'
+
+welcomeAfternoonNamed: 'शुभ दोपहर, $name!'
+
+welcomeEveningNamed: 'शुभ संध्या, $name!'
+
+serverError: |
+  क्षमा करें, मैं इस समय मदद नहीं कर सकता। अपना इंटरनेट कनेक्शन जांचें या बाद में पुन: प्रयास करें।
+  :confused-face:

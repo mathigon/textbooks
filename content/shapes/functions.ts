@@ -250,7 +250,7 @@ function setupDraggableRectangles($polypad: Polypad, options: DraggableRectangle
     const initLoc = options.initLocations != null ? options.initLocations[index] : new Point(0, 0);
     const r = new Rectangle(new Point(0, 0), options.dimensions.x, options.dimensions.y);
     const tile = $polypad.newTile('polygon', getTangramPolystr(r.points));
-    tile.setPosition(initLoc);
+    tile.setTransform(initLoc);
   });
 }
 
@@ -803,8 +803,7 @@ export function simpleTangram($step: Step) {
 
   for (const [i, t] of tiles.entries()) {
     const tile = $polypad.newTile('tangram', `${i}`);
-    tile.setPosition(new Point(tangramScale(t[0], baseOffset), tangramScale(t[1], baseOffset)));
-    tile.setRotation(t[2]);
+    tile.setTransform(new Point(tangramScale(t[0], baseOffset), tangramScale(t[1], baseOffset)), t[2]);
   }
 
   let completed = false;
@@ -933,7 +932,7 @@ export function currysParadox1($step: Step) {
       tile.$el.addClass('red-tri');
     }
     tile.setColour(paradoxData.polyColours[index]);
-    tile.setPosition(paradoxData.polyOrigins[index]);
+    tile.setTransform(paradoxData.polyOrigins[index]);
   });
 
   let done = false;
@@ -998,7 +997,7 @@ export function currysParadox2($step: Step) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
-    tile.setPosition(paradoxData.polyOrigins[index]);
+    tile.setTransform(paradoxData.polyOrigins[index]);
   });
 }
 
@@ -1011,10 +1010,10 @@ export function currysParadox3($step: Step) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
-    tile.setPosition(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(2)));
+    tile.setTransform(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(2)));
   });
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
-  outlineTile.setPosition(new Point(tangramScale(1), tangramScale(7)));
+  outlineTile.setTransform(new Point(tangramScale(1), tangramScale(7)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
   $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
 
@@ -1045,7 +1044,7 @@ export function currysParadox4($step: Step) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
-    tile.setPosition(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(2)));
+    tile.setTransform(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(2)));
     tile.$el.addClass('paradox-poly');
   });
 }
@@ -1060,10 +1059,10 @@ export function currysParadox5($step: Step) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
-    tile.setPosition(paradoxData.nextRelative[index].shift(tangramScale(1), tangramScale(2)));
+    tile.setTransform(paradoxData.nextRelative[index].shift(tangramScale(1), tangramScale(2)));
   });
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
-  outlineTile.setPosition(new Point(tangramScale(1), tangramScale(7)));
+  outlineTile.setTransform(new Point(tangramScale(1), tangramScale(7)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
   $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
 
@@ -1095,14 +1094,14 @@ export function currysParadox6($step: Step) {
 
     const tile1 = $polypad.newTile('polygon', polyStr);
     tile1.setColour(paradoxData.polyColours[index]);
-    tile1.setPosition(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(1)));
+    tile1.setTransform(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(1)));
 
     const tile2 = $polypad.newTile('polygon', polyStr);
     tile2.setColour(paradoxData.polyColours[index]);
-    tile2.setPosition(paradoxData.nextRelative[index].shift(tangramScale(1), tangramScale(7)));
+    tile2.setTransform(paradoxData.nextRelative[index].shift(tangramScale(1), tangramScale(7)));
   });
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
-  outlineTile.setPosition(new Point(tangramScale(1), tangramScale(18)));
+  outlineTile.setTransform(new Point(tangramScale(1), tangramScale(18)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
   $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
 }

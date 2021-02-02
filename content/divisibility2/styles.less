@@ -19,37 +19,79 @@ x-factris { position: relative; width: fit-content; margin: 58px auto 4px; }
 x-factor-rect {
   display: block;
   margin: 0 auto;
+  color: @blue;
 
-  rect, .handle { stroke: white; fill: @blue; transition: color .2s; }
+  svg { margin: 0 auto; }
+  rect, .handle { stroke: white; transition: color .2s; }
+  text { font-size: 16px; font-weight: 600; fill: currentColor;  }
   .handle { fill: @grey; cursor: grab; }
-
-  &.green rect { fill: @green; }
-  &.yellow rect { fill: @yellow; }
-  &.purple rect { fill: @purple; }
+  rect { fill: currentColor }
+  rect.correct { stroke: currentColor; stroke-width: 8px; opacity: 0.3; stroke-linejoin: round; }
   rect.wrong { fill: @red; }
 }
 
-x-image-sequence { display: block; }
-
-.factor-game {
-  align-items: center;
+x-factor-circles {
+  circle { transition: transform .2s, fill .2s, opacity .2s; }
+  text { font-size: 32px; font-weight: 600; fill: @text-light; }
 }
 
-.factor-game-text {
-  text-align: center;
-  width: 200px;
-  .column { margin: -70px 0; display: inline-block; width: 117px; }
-  .btn { width: 100px;}
+.factors-quiz {
+  height: 240px;
+
+  .slide { margin-top: 110px; height: auto; font-size: 1.2em; text-align: center; }
+  .circled { margin: 0 .4em; }
+
+  .factor-value {
+    display: inline-block;
+    position: relative;
+    width: 6em;
+    height: 2em;
+    margin: 0 .5em -.6em;
+  }
+
+  .factor-bubble {
+    width: 6em;
+    position: absolute;
+    transition: transform .2s;
+    transition-delay: .1s;
+    &:first-child { transform: translateY(-120%); }
+    &:last-child { transform: translateY(120%); }
+    .btn { width: 80px; }
+    .btn-red, .btn-green { pointer-events: none; z-index: 10; box-shadow: none; }
+  }
 }
 
-.factor-game-number {
-  width: 140px !important; height: 140px;
-  line-height: 140px;
-  text-align: center;
-  background: @red;
-  border-radius: 100%;
-  color: white;
-  font-size: 36px;
+.factor-table {
+  column-count: 4;
+  margin: 1.5em 24px;
+  div { margin-bottom: 6px; }
+  @media screen and (max-width: 1110px) { column-count: 3; }
+  @media screen and (max-width: 950px) { column-count: 2; }
+
+  .bulb {
+    background: @blue;
+    display: inline-block;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 18px;
+    text-align: center;
+    line-height: 32px;
+    z-index: 1;
+    position: relative;
+    border: 1px solid white;
+  }
+
+  .factors, .total {
+    background: @light-grey;
+    display: inline-block;
+    margin-left: -10px;
+    color: white;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0 8px 0 16px;
+  }
+  .total { border-radius: 0 4px 4px 0; margin-left: 1px; padding: 0 8px; }
 }
 
 
@@ -61,6 +103,8 @@ x-image-sequence { display: block; }
 
 // -----------------------------------------------------------------------------
 // Prime Numbers
+
+x-image-sequence { display: block; }
 
 .calculator {
   max-width: 400px;
