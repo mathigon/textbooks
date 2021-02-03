@@ -251,7 +251,7 @@ type DraggableRectanglesOptions = {
 function setupDraggableRectangles($polypad: Polypad, options: DraggableRectanglesOptions) {
   // [TODO]: Make 'infinite' rectangles if count == 0
   for (const index of list(options.count)) {
-    const initLoc = options.initLocations != null ? options.initLocations[index] : new Point(0, 0);
+    const initLoc = options.initLocations != undefined ? options.initLocations[index] : new Point(0, 0);
     const r = new Rectangle(new Point(0, 0), options.dimensions.x, options.dimensions.y);
     const tile = $polypad.newTile('polygon', getTangramPolystr(r.points));
     tile.setTransform(initLoc);
@@ -389,7 +389,7 @@ function setupGeopadDraggableFillSquare(obj: FillSquare, $geopad: Geopad, onEnd?
     },
     end: (last, _start) => {
       if (dragging) {
-        if (onEnd != null) onEnd(last);
+        if (onEnd != undefined) onEnd(last);
         dragging = false;
       }
     }
@@ -410,7 +410,7 @@ export function boatBuilding($step: Step) {
       $geopad
   );
   pieces.push(middle);
-  let finishedRect: HelperPoly | null = null;
+  let finishedRect: HelperPoly | undefined = undefined;
   const options = {
     draggable: true,
     snap: true,
@@ -447,7 +447,7 @@ export function boatBuilding($step: Step) {
           ...m.poly.points,
           ...r.poly.points
         ]);
-        if (finishedRect != null) {
+        if (finishedRect != undefined) {
           for (const piece of pieces) piece.erase();
           $geopad.drawPath(finishedRect);
           $step.addHint('correct');
@@ -565,7 +565,7 @@ function touches(pairs: [Polygon, Polygon][], _size: number): number[] {
         }
       }
     }
-    return overlap == 0 ? null : overlap;
+    return overlap == 0 ? undefined : overlap;
   });
 }
 
@@ -601,7 +601,7 @@ class HelperPoly extends Polygon {
   moveTo(loc: Point) {
     return this.translate(loc.subtract(this.centroid));
   }
-  cut(along: Line): [HelperPoly, HelperPoly] | null {
+  cut(along: Line): [HelperPoly, HelperPoly] | undefined {
     const [interA, interB] = intersections(along, this) as [Point, Point];
     const extendAmount = this.radius + 200;
     const baseA = moveOnLine(interA, -extendAmount, along);
@@ -622,7 +622,7 @@ class HelperPoly extends Polygon {
     );
     const polyA = this.intersect(boxA);
     const polyB = this.intersect(boxB);
-    return (polyA == undefined || polyB == undefined) ? null :
+    return (polyA == undefined || polyB == undefined) ? undefined :
       [new HelperPoly(...polyA.points), new HelperPoly(...polyB.points)];
   }
   containsPoly(other: Polygon) {
@@ -703,13 +703,13 @@ class RenderedGeopadPoly {
                       filterMap(next.points, objNextPoint => {
                         const dist = Point.distance(objNextPoint, friendPoint);
                         if (dist <= snapThreshold) return objNextPoint.subtract(friendPoint);
-                        else return null;
+                        else return undefined;
                       })
                   );
                 }, [] as Point[]);
                 if (deltas.length > 0) {
                   return deltas[0];
-                } else return null;
+                } else return undefined;
               });
               if (options?.snap === true && snapDeltas.length > 0) {
                 const destination = next.centroid.subtract(snapDeltas[0]);
@@ -721,7 +721,7 @@ class RenderedGeopadPoly {
           },
           end: (last, _start) => {
             if (dragging) {
-              if (options?.onEnd != null) options.onEnd(last);
+              if (options?.onEnd != undefined) options.onEnd(last);
               dragging = false;
             }
           }
@@ -761,9 +761,9 @@ class RenderedGeopadPoly {
       edge.redraw(this.poly.edges[index]);
     }
   }
-  cut(along: Line, options?: RenderedOptions): [RenderedGeopadPoly, RenderedGeopadPoly] | null {
+  cut(along: Line, options?: RenderedOptions): [RenderedGeopadPoly, RenderedGeopadPoly] | undefined {
     const result = this.poly.cut(along);
-    if (result != null) {
+    if (result != undefined) {
       const [a, b] = result;
       this.erase();
       return [
@@ -771,7 +771,7 @@ class RenderedGeopadPoly {
         new RenderedGeopadPoly(b.points, this.$geopad, options)
       ];
     } else {
-      return null;
+      return undefined;
     }
   }
 }
@@ -886,7 +886,7 @@ export function dough2($step: Step) {
         const aPoints = a.poly.points.filter(notContactPoint);
         const bPoints = b.poly.points.filter(notContactPoint);
         const r = toRect([...aPoints, ...bPoints]);
-        if (r != null) {
+        if (r != undefined) {
           a.erase();
           b.erase();
           $step.score('dough-arranged');
@@ -906,7 +906,7 @@ export function dough2($step: Step) {
         }
       }
     }});
-    if (cutPolys != null) {
+    if (cutPolys != undefined) {
       const [cutA, cutB] = cutPolys;
       cutA.addSnapFriend(cutB);
       cutB.addSnapFriend(cutA);
@@ -915,7 +915,7 @@ export function dough2($step: Step) {
   });
 }
 
-function toRect(points: Point[]): HelperPoly | null {
+function toRect(points: Point[]): HelperPoly | undefined {
   const hull = convexHull(points);
   const clampedPoints =
       hull.points.map(
@@ -928,7 +928,7 @@ function toRect(points: Point[]): HelperPoly | null {
   const corners = angles.filter(angle => (angle.deg / 90) % 2 == 1);
   if (corners.length == 4) {
     return new HelperPoly(...corners.map(c => c.b));
-  } else return null;
+  } else return undefined;
 }
 
 function toParallelogram(a: Point[], b: Point[]) {
@@ -941,7 +941,7 @@ function toParallelogram(a: Point[], b: Point[]) {
   const contacts = aEdges.filter(aEdge =>
     bEdges.find(bEdge => bEdge.equals(aEdge)) != undefined
   );
-  if (contacts.length != 1) return null;
+  if (contacts.length != 1) return undefined;
   return convexHull([...a, ...b]);
 }
 
@@ -949,9 +949,9 @@ function moveOnLine(p: Point, amount: number, l: Line) {
   return (new Segment(p, p.shift(amount, 0))).rotate(l.angle, p).p2;
 }
 
-function filterMap<CT, RT>(arr: CT[], pred: (elem: CT) => RT | null): RT[] {
+function filterMap<CT, RT>(arr: CT[], pred: (elem: CT) => RT | undefined): RT[] {
   const elems = arr.map(elem => pred(elem));
-  return elems.filter(elem => elem != null).map(elem => elem as RT);
+  return elems.filter(elem => elem != undefined).map(elem => elem as RT);
 }
 
 export function identifyParallelograms($step: Step) {
@@ -1285,7 +1285,7 @@ export function area3($step: Step) {
   $tri2.setColour('orange');
   const checkDone = () => {
     const para = toParallelogram(($tri1.path as Polygon).points, ($tri2.path as Polygon).points);
-    if (para != null) {
+    if (para != undefined) {
       $step.addHint('correct');
       $step.score('arranged');
       $polypad._el.remove();
@@ -2479,7 +2479,7 @@ export function radiiDiameters($step: Step) {
   $geopad.drawPoint(circle.c, {interactive: false});
   $geopad.drawPath(circle, {interactive: true});
   $geopad.switchTool('line');
-  let $diameterTarget: GeoPoint | null = null;
+  let $diameterTarget: GeoPoint | undefined = undefined;
   let radii = 0;
   let diameters = 0;
   $geopad.on('begin:path', ({start}: {path: Path, start: GeoPoint}) => {
@@ -2615,11 +2615,11 @@ export function circularHighways($step: Step) {
 
   const $romeReset = $step.$('.rome button.reset');
 
-  let romeCircle: null | Circle = null;
+  let romeCircle: undefined | Circle = undefined;
 
-  let $romeDiameterTarget: GeoPoint | null = null;
+  let $romeDiameterTarget: GeoPoint | undefined = undefined;
   $geopadRome.on('begin:path', ({start}: {path: Path, start: GeoPoint}) => {
-    if (romeCircle != null) {
+    if (romeCircle != undefined) {
       const startPos = start.value!;
       if (nearlyEquals(startPos.subtract(romeCircle.c).length, romeCircle.r)) {
         const diamTarget = startPos.rotate(Math.PI, romeCircle.c);
@@ -2630,7 +2630,7 @@ export function circularHighways($step: Step) {
 
   $geopadRome.on('add:path', ({path}: {path: GeoPath}) => {
 
-    if (romeCircle == null) {
+    if (romeCircle == undefined) {
       $step.score('rome-circle');
       romeCircle = path.value as Circle;
       $geopadRome.drawPath(romeCircle);
@@ -2655,7 +2655,7 @@ export function circularHighways($step: Step) {
 
   $romeReset?.on('click', () => {
     geopadReset($geopadRome);
-    romeCircle = null;
+    romeCircle = undefined;
   });
 
   const $geopadMoscow = $step.$('.moscow x-geopad') as Geopad;
@@ -2663,11 +2663,11 @@ export function circularHighways($step: Step) {
 
   const $moscowReset = $step.$('.moscow button.reset');
 
-  let moscowCircle: null | Circle = null;
+  let moscowCircle: undefined | Circle = undefined;
 
   $geopadMoscow.on('add:path', ({path}: {path: GeoPath}) => {
 
-    if (moscowCircle == null) {
+    if (moscowCircle == undefined) {
       $step.score('moscow-circle');
       moscowCircle = path.value as Circle;
       $geopadMoscow.drawPath(moscowCircle);
@@ -2691,7 +2691,7 @@ export function circularHighways($step: Step) {
 
   $moscowReset?.on('click', () => {
     geopadReset($geopadMoscow);
-    moscowCircle = null;
+    moscowCircle = undefined;
   });
 
   const $geopadLondon = $step.$('.london x-geopad') as Geopad;
@@ -2699,10 +2699,10 @@ export function circularHighways($step: Step) {
 
   const $londonReset = $step.$('.london button.reset');
 
-  let londonCircle: null | Circle = null;
+  let londonCircle: undefined | Circle = undefined;
 
   $geopadLondon.on('add:path', ({path}: {path: GeoPath}) => {
-    if (londonCircle == null) {
+    if (londonCircle == undefined) {
       $step.score('london-circle');
       londonCircle = path.value as Circle;
       $geopadLondon.drawPath(londonCircle);
@@ -2720,7 +2720,7 @@ export function circularHighways($step: Step) {
 
   $londonReset?.on('click', () => {
     geopadReset($geopadLondon);
-    londonCircle = null;
+    londonCircle = undefined;
   });
 }
 
@@ -2750,7 +2750,7 @@ export function slicing1($step: Step) {
   });
   const $largeSlices = $geopad.$svg.$$('.large-slice').map(e => e as SVGView);
   $step.model.largeCuts = [...Array(4).keys()].map(() => {
-    return {path: null, segment: null};
+    return {path: undefined, segment: undefined};
   });
 
   const mediumGuides: Guide[] = [...Array(4).keys()].map(index => {
@@ -2762,10 +2762,10 @@ export function slicing1($step: Step) {
   });
   const $mediumSlices = $geopad.$svg.$$('.medium-slice').map(e => e as SVGView);
   $step.model.largeCuts = [...Array(4).keys()].map(() => {
-    return {path: null, segment: null};
+    return {path: undefined, segment: undefined};
   });
   $step.model.mediumCuts = [...Array(4).keys()].map(() => {
-    return {path: null, segment: null};
+    return {path: undefined, segment: undefined};
   });
 
   const collectNodes =
@@ -2776,10 +2776,10 @@ export function slicing1($step: Step) {
       mediumGuides.reduce(collectNodes, [])
   );
 
-  let startNode: null | GuideNode = null;
-  let endNode: null | Point = null;
-  let currentGuide: null | Guide = null;
-  let $cutInProgress: null | SVGView = null;
+  let startNode: undefined | GuideNode = undefined;
+  let endNode: undefined | Point = undefined;
+  let currentGuide: undefined | Guide = undefined;
+  let $cutInProgress: undefined | SVGView = undefined;
   slide($geopad, {
     $box: $geopad.$svg,
     start: pos => {
@@ -2800,62 +2800,62 @@ export function slicing1($step: Step) {
       $cutInProgress!.remove();
       const cutFinal = new Segment(startNode!.node, endNode!);
       if (largeGuides.includes(currentGuide!)) {
-        if ($step.model.largeCuts.every((cut: {path: GeoPath | null, segment: Segment | null}) => !cut.segment?.equals(cutFinal))) {
+        if ($step.model.largeCuts.every((cut: {path: GeoPath | undefined, segment: Segment | undefined}) => !cut.segment?.equals(cutFinal))) {
           largeGuides[currentGuide!.index].path.delete();
           const nextIndex = (currentGuide!.index + 1) % largeGuides.length;
           const prevIndex = (currentGuide!.index + (largeGuides.length - 1)) % largeGuides.length;
-          if ($step.model.largeCuts[nextIndex].segment != null) {
+          if ($step.model.largeCuts[nextIndex].segment != undefined) {
             $step.model.largeCuts[nextIndex].path?.delete(0);
             const index1 = currentGuide!.index;
             const index2 = index1 + 4;
             separateSlices(index1, index2, $largeSlices, largeCenter, 25);
           }
-          if ($step.model.largeCuts[prevIndex].segment != null) {
+          if ($step.model.largeCuts[prevIndex].segment != undefined) {
             $step.model.largeCuts[prevIndex].path?.delete(0);
             const index1 = (currentGuide!.index + 7) % 8;
             const index2 = (index1 + 4) % 8;
             separateSlices(index1, index2, $largeSlices, largeCenter, 25);
           }
-          if ($step.model.largeCuts[nextIndex].segment == null && $step.model.largeCuts[prevIndex].segment == null) {
+          if ($step.model.largeCuts[nextIndex].segment == undefined && $step.model.largeCuts[prevIndex].segment == undefined) {
             const path = $geopad.drawPath(cutFinal, {animated: 400, classes: 'pizza-outline'});
             $step.model.largeCuts[currentGuide!.index] = {path, segment: cutFinal};
           } else {
-            $step.model.largeCuts[currentGuide!.index] = {path: null, segment: cutFinal};
+            $step.model.largeCuts[currentGuide!.index] = {path: undefined, segment: cutFinal};
           }
         }
       } else {
-        if ($step.model.mediumCuts.every((cut: {path: GeoPath | null, segment: Segment | null}) => !cut.segment?.equals(cutFinal))) {
+        if ($step.model.mediumCuts.every((cut: {path: GeoPath | undefined, segment: Segment | undefined}) => !cut.segment?.equals(cutFinal))) {
           mediumGuides[currentGuide!.index].path.delete();
           const nextIndex = (currentGuide!.index + 1) % mediumGuides.length;
           const prevIndex = (currentGuide!.index + (mediumGuides.length - 1)) % mediumGuides.length;
-          if ($step.model.mediumCuts[nextIndex].segment != null) {
+          if ($step.model.mediumCuts[nextIndex].segment != undefined) {
             $step.model.mediumCuts[nextIndex].path?.delete(0);
             const index1 = currentGuide!.index;
             const index2 = index1 + 4;
             separateSlices(index1, index2, $mediumSlices, mediumCenter, 15);
           }
-          if ($step.model.mediumCuts[prevIndex].segment != null) {
+          if ($step.model.mediumCuts[prevIndex].segment != undefined) {
             $step.model.mediumCuts[prevIndex].path?.delete(0);
             const index1 = (currentGuide!.index + 7) % 8;
             const index2 = (index1 + 4) % 8;
             separateSlices(index1, index2, $mediumSlices, mediumCenter, 15);
           }
-          if ($step.model.mediumCuts[nextIndex].segment == null && $step.model.mediumCuts[prevIndex].segment == null) {
+          if ($step.model.mediumCuts[nextIndex].segment == undefined && $step.model.mediumCuts[prevIndex].segment == undefined) {
             const path = $geopad.drawPath(cutFinal, {animated: 400, classes: 'pizza-outline'});
             $step.model.mediumCuts[currentGuide!.index] = {path, segment: cutFinal};
           } else {
-            $step.model.mediumCuts[currentGuide!.index] = {path: null, segment: cutFinal};
+            $step.model.mediumCuts[currentGuide!.index] = {path: undefined, segment: cutFinal};
           }
         }
       }
-      startNode = endNode = currentGuide = $cutInProgress = null;
-      if ($step.model.largeCuts.every((cut: {segment: Segment | null}) => cut.segment != null)) {
+      startNode = endNode = currentGuide = $cutInProgress = undefined;
+      if ($step.model.largeCuts.every((cut: {segment: Segment | undefined}) => cut.segment != undefined)) {
         if (!$step.scores.has('large-slices')) {
           $step.score('large-slices');
           if ($step.scores.has('medium-slices')) $step.addHint('correct');
         }
       }
-      if ($step.model.mediumCuts.every((cut: {segment: Segment | null}) => cut.segment != null)) {
+      if ($step.model.mediumCuts.every((cut: {segment: Segment | undefined}) => cut.segment != undefined)) {
         if (!$step.scores.has('medium-slices')) {
           $step.score('medium-slices');
           if ($step.scores.has('large-slices')) $step.addHint('correct');
@@ -2952,11 +2952,11 @@ export function slicing2($step: Step) {
   const $radius = $N('path', {}, $svg) as SVGView;
   $radius.css({stroke: 'black', 'stroke-width': '1px'});
   $radius.draw(radius);
-  let startNode: null | Point = null;
-  let endNode: null | Point = null;
-  let currentGuide: null | Guide = null;
-  let cutInProgress: null | Segment = null;
-  let $cutInProgress: null | SVGView = null;
+  let startNode: undefined | Point = undefined;
+  let endNode: undefined | Point = undefined;
+  let currentGuide: undefined | Guide = undefined;
+  let cutInProgress: undefined | Segment = undefined;
+  let $cutInProgress: undefined | SVGView = undefined;
   const cuts: Segment[] = [];
   const $cuts: SVGView[] = [];
   const guideNodes = guides.map(guide => guide.segment.p1);
@@ -2971,7 +2971,7 @@ export function slicing2($step: Step) {
       $cutInProgress = $N('path', {}, $svg) as SVGView;
     },
     move: (current, _start, _last) => {
-      if (currentGuide == null) {
+      if (currentGuide == undefined) {
         endNode = nearestSimple(current, guideNodes);
         currentGuide = guides.find(g => (g.segment.p1.equals(endNode!) || g.segment.p2.equals(endNode!)))!;
       }
@@ -2991,7 +2991,7 @@ export function slicing2($step: Step) {
       $cut.css({stroke: 'black', 'stroke-width': '1px'});
       $cut.draw(cutFinal);
       $cuts.push($cut);
-      startNode = endNode = currentGuide = cutInProgress = $cutInProgress = null;
+      startNode = endNode = currentGuide = cutInProgress = $cutInProgress = undefined;
       if (cuts.length == 2) {
         $step.score('sliced');
         const sideA = new Segment(center.shift(0, -75), topRight);
@@ -3097,7 +3097,7 @@ export function slicesArrangement($step: Step) {
       state.lSlices = initLineup(sliceCount, center.shift(0, (1.5 * radius) + 35), radius, {aColor, bColor}, $geopad);
     }
   });
-  let hovering: null | {s: Slice[], g: string} = null;
+  let hovering: undefined | {s: Slice[], g: string} = undefined;
   let selected = false;
   $geopad.on('pointermove', b => {
     if ($step.model.arranged && !selected) {
@@ -3125,7 +3125,7 @@ export function slicesArrangement($step: Step) {
         for (const slice of hovering.s) slice.setArcColor('aqua');
         for (const slice of pOther.concat(lOther)) slice.setArcColor('black');
       } else {
-        hovering = null;
+        hovering = undefined;
         aColor = bColor = 'black';
         for (const slice of $step.model.pSlices.all as Slice[]) slice.setArcColor('black');
         for (const slice of $step.model.lSlices.all as Slice[]) slice.setArcColor('black');
@@ -3133,7 +3133,7 @@ export function slicesArrangement($step: Step) {
     }
   });
   $geopad.on('click', () => {
-    if (hovering != null) {
+    if (hovering != undefined) {
       for (const slice of hovering.s) slice.setArcColor('lime');
       aColor = hovering.g === 'a' ? 'lime' : 'black';
       bColor = hovering.g === 'b' ? 'lime' : 'black';
@@ -3216,11 +3216,11 @@ function initLineup(slices: number, center: Point, radius: number, colors: {aCol
 class Slice {
 
   private sides: {
-    path: GeoPath | null,
+    path: GeoPath | undefined,
     poly: Polyline
   }
   private arc: {
-    path: GeoPath | null,
+    path: GeoPath | undefined,
     poly: Arc
   }
   private _bounds: Polygon
@@ -3228,10 +3228,10 @@ class Slice {
   private _tip: Point
   private _pivot: Point
   private _angle: number
-  private transAnim: AnimationResponse | null
-  private rotAnim: AnimationResponse | null
-  private rotTarget: number | null;
-  private transTarget: Point | null;
+  private transAnim: AnimationResponse | undefined
+  private rotAnim: AnimationResponse | undefined
+  private rotTarget: number | undefined;
+  private transTarget: Point | undefined;
   private firstDraw = true;
 
   constructor(private selfDraw: boolean, private $geopad: Geopad, radius: number, arcAngle: number, circleCenter: Point, initAngle?: number) {
@@ -3252,10 +3252,10 @@ class Slice {
     };
     this._bounds = new Polygon(...sliceSides.points);
     this._pivot = (new Segment((new Segment(pointA, pointB)).midpoint, circleCenter)).midpoint.rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
-    this.transAnim = null;
-    this.rotAnim = null;
-    this.rotTarget = null;
-    this.transTarget = null;
+    this.transAnim = undefined;
+    this.rotAnim = undefined;
+    this.rotTarget = undefined;
+    this.transTarget = undefined;
     if (this.selfDraw) this.draw();
   }
 
@@ -3284,8 +3284,8 @@ class Slice {
         this.moveTo(newLoc);
       }, duration);
       this.transAnim.promise.then(() => {
-        this.transTarget = null;
-        this.transAnim = null;
+        this.transTarget = undefined;
+        this.transAnim = undefined;
       });
     } else {
       this.arc = {
@@ -3305,8 +3305,8 @@ class Slice {
 
   moveTo(loc: Point, duration?: number) {
     const trans = loc.subtract(this.pivot);
-    if (this.transAnim != null) {
-      if (this.transTarget == null || !loc.equals(this.transTarget)) {
+    if (this.transAnim != undefined) {
+      if (this.transTarget == undefined || !loc.equals(this.transTarget)) {
         this.transTarget = loc;
         this.moveBy(trans, duration);
       }
@@ -3330,8 +3330,8 @@ class Slice {
         this.rotateTo(newAngle, {around: options?.around});
       }, options.duration);
       this.rotAnim.promise.then(() => {
-        this.rotTarget = null;
-        this.rotAnim = null;
+        this.rotTarget = undefined;
+        this.rotAnim = undefined;
       });
     } else {
       this._angle = this.angle + amount;
@@ -3353,7 +3353,7 @@ class Slice {
 
   rotateTo(angle: number, options?: {duration?: number, around?: Point}) {
     const diff = equivAngle(shortAngle(angle - this.angle));
-    if (this.rotAnim != null) {
+    if (this.rotAnim != undefined) {
       if (this.rotTarget != angle) {
         this.rotTarget = angle;
         this.rotateBy(diff, options);
@@ -3373,7 +3373,7 @@ class Slice {
   }
 
   draw() {
-    if (this.arc.path == null) {
+    if (this.arc.path == undefined) {
       this.firstDraw = false;
       this.arc.path = this.$geopad.drawPath(this.arc.poly, {animated: 0});
       this.sides.path = this.$geopad.drawPath(this.sides.poly, {animated: 0});
