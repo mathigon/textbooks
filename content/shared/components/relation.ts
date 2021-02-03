@@ -14,15 +14,23 @@ type Match = {
   matched: boolean
 }
 
+type Connection = {
+  input: number
+  output: number
+  line: SVGView
+}
+
 @register('x-relation', {template})
 export class Relation extends CustomElementView {
   private $inputs!: ElementView[];
   private $outputs!: ElementView[];
+  private $lines!: SVGView[];
 
   private lastWidth = 0;
   private inputTargets: Point[] = [];
   private outputTargets: Point[] = [];
   private matches: Match[] = [];
+  private connections: Connection[] = [];
 
   ready() {
     const $svg = this.$('svg.connections') as SVGParentView;
@@ -59,19 +67,41 @@ export class Relation extends CustomElementView {
             const $target = this.$outputs[activeTarget];
             $target.removeClass('active');
 
-            if ($target.attr('name') == this.matches[i].name) {
+            const extantConnection = this.connections.find(connection => connection.input == i && connection.output == activeTarget);
 
-              this.trigger('correct', comment);
-              this.matches[i].matched = true;
+            if (extantConnection) {
+              this.connections.splice(this.connections.indexOf(extantConnection), 1);
+              extantConnection.line.remove();
+              $currentLine!.remove();
+
+              if ($target.attr('name') == this.matches[i].name) {
+                this.matches[i].matched = false;
+              }
 
               if (this.matches.every(m => m.matched == true)) {
                 this.trigger('complete');
               }
-
-            } else {
-              this.trigger('incorrect');
             }
+            else {
+              this.connections.push({
+                input: i,
+                output: activeTarget,
+                line: $currentLine!,
+              })
 
+              if ($target.attr('name') == this.matches[i].name) {
+
+                this.trigger('correct', comment);
+                this.matches[i].matched = true;
+
+                if (this.matches.every(m => m.matched == true)) {
+                  this.trigger('complete');
+                }
+
+              } else {
+                this.trigger('incorrect');
+              }
+            }
           } else {
             $currentLine!.exit('draw', 300, 0, true);
           }
