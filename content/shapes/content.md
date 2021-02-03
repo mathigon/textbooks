@@ -15,8 +15,7 @@ Imagine you are a street performer and you need to lay out a red rope to mark-of
 1. You rope off 200 __or more__ cobblestones.
 2. You use 20 meters of rope or less.
 3. The space is fully enclosed (the ends of the rope touch each other).
-4. The rope does not cross over itself.\ 
-
+4. The rope does not cross over itself.
 \ 
 
     // [TODO]: INTERACTIVE-01: Performance area 1 (pages 1-2)
@@ -159,7 +158,7 @@ Area is the amount of space inside an object., To determine the area of a shape,
 
 Square meters are squares with side lenghts of [[1]] [[meter | centimeter | kilometer]], and square centimeters are [[squares | circles | triangles]] with side lenghts of [[1]] [[centimeter | meter | kilometer]]. So, a square kilometer is a square with side lengths of [[1]] [[kilometer | meter | centimeter]]. 
 
-When we talk about a certain number of square meters, say 7 of them, we can write it as “7 square meters” or “7 m2”. In fact, the “m2’ is read as “meters squared.” Any power of “2” is often read as “squared.” For example,  we can read92 as “9 squared” because we would need to multiply 9 x 9 when finding the [[area | perimeter]] of a square with side length 9. 
+When we talk about a certain number of square meters, say 7 of them, we can write it as “7 square meters” or “7 `"m"^2`”. In fact, the “`"m"^2`" is read as “meters squared.” Any power of “2” is often read as “squared.” For example,  we can read `9^2` as “9 squared” because we would need to multiply 9 x 9 when finding the [[area | perimeter]] of a square with side length 9. 
 
 ---
 
@@ -173,13 +172,13 @@ Now, sort the units of measure for area. Each unit of measure is represented in 
 
 > id: half-meters
 
-Below is a square meter and a bin of squares that are ½ meter on each side. See how many ½ square meters you need to fill in the square meter:
+Below is a square meter and a bin of squares that are `1/2` meter on each side. See how many `1/2` square meters you need to fill in the square meter:
 
     // [TODO]: INTERACTIVE-07: Square meter filling (pages 11-12)
     figure: x-geopad(width=600 height=400)
       svg
 
-It takes [[4]] ½ square centimeters to fill in 1 square meter. So, the area of a square with a ½ meter on each side is [[¼]] of the area of 1 square meter.
+It takes [[4]] `1/2` square centimeters to fill in 1 square meter. So, the area of a square with a `1/2` meter on each side is [[1/4]] of the area of 1 square meter.
 
 ---
 
@@ -445,7 +444,7 @@ Great! It should make sense then that these shapes are called [[parallelograms |
 ---
 
 > id: identify-parallelograms
-> goals: selected
+> goals: selected-0 selected-2 selected-4 selected-6 selected-8 selected-18
 
     // INTERACTIVE-07: Parallelogram selection (page 16)
     figure: .parallelogram-selection
