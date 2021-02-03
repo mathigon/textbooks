@@ -16,7 +16,6 @@ import {VoronoiStep} from './components/voronoi';
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
 import {ORANGE, TEAL} from '../shared/constants';
-import {list} from '@mathigon/core';
 
 // SECTION 1: Introduction
 
@@ -497,13 +496,13 @@ export function glassArea($step: Step) {
   $polypad.$svg.setAttr('viewBox', '0 0 600 400');
   $polypad.canDelete = $polypad.canCopy = false;
   const tiles: Tile[] = [];
-  for (const index of list(12)) {
+  tabulate(index => {
     const t = $polypad.newTile('tangram', '2');
     const xOffset = squareSize * (index % 4);
     const yOffset = squareSize * Math.floor(index / 4);
     t.setTransform(startCorner.shift(xOffset, yOffset), 45);
     tiles.push(t);
-  }
+  }, 12);
   // top left: 0, bottom right: 2
   let figure = 2;
   $step.$('button.btn.submit-shape')?.on('click', () => {
@@ -798,7 +797,7 @@ export function dough($step: Step) {
         {color: 'blue'}
     );
   const cutters: RenderedGeopadPoly[] = [];
-  for (const index of list(4)) {
+  tabulate(index => {
     const cutterSize = 30;
     const padding = (areaSize - (cutterSize * 2)) / 3;
     const spacing = cutterSize + padding;
@@ -827,7 +826,7 @@ export function dough($step: Step) {
           }
       );
     cutters.push(cutter);
-  }
+  }, 4);
 }
 
 export function dough2($step: Step) {
@@ -3152,7 +3151,7 @@ function initPizza(slices: number, center: Point, radius: number, colors: {aColo
   const all: Slice[] = [];
   const groupA: Slice[] = [];
   const groupB: Slice[] = [];
-  for (const index of list(slices)) {
+  tabulate(index => {
     const slice = new Slice(true, $geopad, radius, arcAngle, center, initAngle + (index * arcAngle));
     if (index < halfCount) {
       slice.setArcColor(colors.aColor);
@@ -3162,7 +3161,7 @@ function initPizza(slices: number, center: Point, radius: number, colors: {aColo
       groupB.push(slice);
     }
     all.push(slice);
-  }
+  }, slices);
   return {all, groupA, groupB};
 }
 
@@ -3172,7 +3171,7 @@ function initLineup(slices: number, center: Point, radius: number, colors: {aCol
   const all: Slice[] = [];
   const groupA: Slice[] = [];
   const groupB: Slice[] = [];
-  for (const index of list(slices)) {
+  tabulate(index => {
     const flip = index > halfCount - 1;
     const slice = new Slice(false, $geopad, radius, arcAngle, center);
     const halfWidth = slice.width / 2;
@@ -3192,7 +3191,7 @@ function initLineup(slices: number, center: Point, radius: number, colors: {aCol
     }
     all.push(slice);
     slice.draw();
-  }
+  }, slices);
   return {all, groupA, groupB};
 }
 
