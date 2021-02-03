@@ -12,11 +12,14 @@ Around the world, street performers delight audiences with their up-close and en
 
 Imagine you are a street performer and you need to lay out a red rope to mark-off your stage. Pick up the red rope below and create a stage on the cobblestones so that:
 
+::: span
+
 1. You rope off 200 __or more__ cobblestones.
 2. You use 20 meters of rope or less.
 3. The space is fully enclosed (the ends of the rope touch each other).
 4. The rope does not cross over itself.
-\ 
+
+:::
 
     // [TODO]: INTERACTIVE-01: Performance area 1 (pages 1-2)
     figure: x-geopad(width=600 height=400)
