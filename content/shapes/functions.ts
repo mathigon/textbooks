@@ -508,7 +508,7 @@ export function glassArea($step: Step) {
   $step.$('button.btn.submit-shape')?.on('click', () => {
     const tileTouches =
       touches(
-          pairs(tiles.map(tile => tile.path as Polygon)),
+          pairs(tiles.map(tile => tile.transformed as Polygon)),
           squareSize
       );
     const tilesPerimeters = tiles.length * 4;
