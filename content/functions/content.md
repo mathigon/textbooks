@@ -261,7 +261,7 @@ Ri Se-gwang of the People’s Republic of Korea is about to vault. He won the go
 
 There are several things going on here. Move the video back and forth to see how the graph lines up with the motion.
 
-First, we need to understand is what the axes represent. The x-axis in this graph is the horizontal distance Ri travels throughout his vault. It is measured in centimeters. The y-axis is the vertical distance in centimeters Ri travels. This gives us information about Ri’s position much like chess pieces on a board.
+First we need to understand what the axes represent. The x-axis in this graph is the horizontal distance Ri travels throughout his vault. It is measured in centimeters. The y-axis is the vertical distance in centimeters Ri travels. This gives us information about Ri’s position much like chess pieces on a board.
 
 The graph does not include any information about time. For example, we cannot tell _when_ Ri landed on the pit. Some of the graphs of later events will include time along the horizontal axis.
 
