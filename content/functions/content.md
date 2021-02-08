@@ -133,7 +133,7 @@ We have been using mapping diagrams, coordinate pairs, and tables to represent r
 
 Let’s plot the relation {(0,0), (1,4), (-5,3), (-2,-1), (4, -3)} on the coordinate plane. Two points are already on the graph.
 
-TODO Interactive here
+    x-geopad(width=400 height=300 x-axis="-6,6,1" y-axis="-5,5,1" axes grid padding=8): svg
         circle(x="point(0, 0)")
         circle(x="point(1, 4)")
         circle(x="point(-5, 3)")
