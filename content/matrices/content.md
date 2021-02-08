@@ -1695,10 +1695,14 @@ Here is the formula for calculating a 3x3 matrix. There is a way to calculate in
 ----------------------------------------------------------------------------------------------------
 
 
-## Cramer’s Rule and Gaussian Elimination
+## Gaussian Elimination
 
 > section: systems
 > sectionStatus: dev
+
+Solve this matrix:
+
+    x-gauss-solver(matrix="[[2, 3, 4, 5], [6, 7, 8, 9], [10, 11, 12, 13]]")
 
 > id: gauss-intro-piazzi
 

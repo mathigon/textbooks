@@ -11,6 +11,7 @@ import {Angle, ORIGIN, Point} from '@mathigon/euclid';
 import {ElementView, ScreenEvent, svgPointerPosn} from '@mathigon/boost';
 import {Geopad, Step} from '../shared/types';
 
+import './components/gauss-solver';
 import './components/gaussian';
 import {Gaussian} from './components/gaussian';
 
