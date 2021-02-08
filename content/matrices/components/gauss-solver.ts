@@ -9,7 +9,9 @@ import {Expression} from '@mathigon/hilbert';
 
 import template from './gauss-solver.pug';
 
-type Model = {input: number[][], output: number[][], op: string, inRow1: number, inRow2: number, factor: number};
+type Model = {
+  input: number[][], output: number[][], op: string,
+  inRow1: number, inRow2: number, outRow1: number, outRow2: number, factor: number};
 
 @register('x-gauss-solver', {template})
 export class GaussSolver extends CustomElementView {
@@ -23,7 +25,7 @@ export class GaussSolver extends CustomElementView {
         .evaluate({'[': (...args: number[]) => [...args] as any}) as unknown as number[][];
     console.log(input);
 
-    this.bindModel(observe({input, output: input, inRow1: 0, inRow2: 1, factor: 1}));
+    this.bindModel(observe({input, output: input, inRow1: 0, inRow2: 1, outRow1: 0, outRow2: 1, factor: 1}));
     this.size = input.length;
 
     // Set up the input and output matrices
@@ -35,15 +37,28 @@ export class GaussSolver extends CustomElementView {
     );
     this.$inputCells = tabulate2D(() => $N('div', {text: 0}, $matrices[1]), this.size + 1, this.size);
 
-    const $circles = this.$$('.connections circle');
-    const rows = ['inRow1', 'inRow2'] as ('inRow1'|'inRow2')[];
+    const $circles = this.$$('.connections-left circle');
+    const inRows = ['inRow1', 'inRow2'] as ('inRow1'|'inRow2')[];
 
-    for (const [i, key] of rows.entries()) {
+    for (const [i, key] of inRows.entries()) {
       slide($circles[i], {
         move: (p: Point) => {
           // Check that his row is not equal to the other input
           const row = clamp(Math.round((p.y - 20) / 40), 0, this.size - 1);
-          if (this.model.op === 'multiply' || this.model[rows[i === 0 ? 1 : 0]] !== row) this.model[key] = row;
+          if (this.model.op === 'multiply' || this.model[inRows[i === 0 ? 1 : 0]] !== row) this.model[key] = row;
+        }
+      });
+    }
+
+    const $arrows = this.$$('.connections-right polygon');
+    const outRows = ['outRow1', 'outRow2'] as ('outRow1'|'outRow2')[];
+
+    for (const [i, key] of outRows.entries()) {
+      slide($arrows[i], {
+        move: (p: Point) => {
+          // Check that this row not equal to the other output
+          const row = clamp(Math.round((p.y - 20) / 40), 0, this.size - 1);
+          this.model[key] = row;
         }
       });
     }
