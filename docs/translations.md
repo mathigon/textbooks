@@ -2,7 +2,7 @@
 
 All of Mathigon's content is stored in this GitHub repository. The text, including translations, are written in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), a special way of annotating HTML. We use a slightly different [custom syntax](markdown.md), and you can have a look at one of our existing courses like [Circles and Pi](https://raw.githubusercontent.com/mathigon/textbooks/master/content/circles-and-pi/content.md).
 
-Translations are powered by [GitLocalize](https://gitlocalize.com/repo/5707). In order to help us translate content, you have to create a GitHub account and then [contact us](mailto:contact@mathigon.org) to be added to the list of editors. [This blog post](https://blog.gitlocalize.com/posts/introducing-gitlocalize.html) explains how you can use the GitLocalize platform to add new languages, translate new courses, or fix bugs in existing translations.
+Translations are powered by [GitLocalize](https://gitlocalize.com/repo/5711). In order to help us translate content, you have to create a GitHub account and then [contact us](mailto:contact@mathigon.org) to be added to the list of editors. [This blog post](https://blog.gitlocalize.com/posts/introducing-gitlocalize.html) explains how you can use the GitLocalize platform to add new languages, translate new courses, or fix bugs in existing translations.
 
 ## Automated Translations
 
