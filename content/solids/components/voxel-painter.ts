@@ -7,17 +7,29 @@
 /// <reference types="THREE"/>
 import {Obj} from '@mathigon/core';
 import {animate, canvasPointerPosition, CustomElementView, register, slide} from '@mathigon/boost';
-import {Point} from '@mathigon/euclid';
+import {Angle, Point} from '@mathigon/euclid';
 
 import {create3D, Graphics3D, loadTHREE} from '../../shared/components/webgl';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../../shared/constants';
-import {clamp} from '@mathigon/fermat';
+import {clamp, nearlyEquals} from '@mathigon/fermat';
 
 const TAU = Math.PI * 2;
 
 function snapToNearestValidCubeCenterPosition(p: THREE.Vector3) {
   p.floor().addScalar(0.5);
 }
+
+type FaceName =
+  'front' | 'back' | 'right' | 'left' |'top' | 'bottom' | 'none';
+type Side = [FaceName, [number, number, number]];
+
+/*
+  Events:
+  'snap'(Side)
+  'volume-target-met'(voxelPositions: [number, number, number][])
+  'area-target-met'(voxelPositions: [number, number, number][])
+  'both-targets-met'(voxelPositions: [number, number, number][])
+*/
 
 @register('x-voxel-painter')
 export class VoxelPainter extends CustomElementView {
@@ -48,6 +60,9 @@ export class VoxelPainter extends CustomElementView {
 
   private explodeOnGrab!: boolean;
   private rotateOnly!: boolean;
+
+  private targetVolume?: number;
+  private targetSurface?: number;
 
   private pointToExplodeFrom!: THREE.Vector3;
   private initialPositions!: THREE.Vector3[];
@@ -118,6 +133,9 @@ export class VoxelPainter extends CustomElementView {
     this.v1 = new THREE.Vector3();
     this.explodeOnGrab = this.hasAttr('explodeOnGrab');
     this.rotateOnly = this.hasAttr('rotateOnly') || this.explodeOnGrab;
+
+    this.targetVolume = +this.attr('targetVolume');
+    this.targetSurface = +this.attr('targetSurface');
 
     const defaultGridDimension = 20;
     let gridDimension = (+this.attr('playingFieldSize')) || defaultGridDimension;
@@ -385,6 +403,19 @@ export class VoxelPainter extends CustomElementView {
                       this.objectsOnWhichVoxelsCanBePlaced,
                       this.scene!
                   ).position.copy(potentialNewPosition);
+                  if (
+                    this.getVolume() == this.targetVolume &&
+                    this.getSurfaceArea() == this.targetSurface
+                  ) {
+                    this.trigger('both-targets-met', this.voxelPositions);
+                  } else {
+                    if (this.getVolume() == this.targetVolume) {
+                      this.trigger('volume-target-met', this.voxelPositions);
+                    }
+                    if (this.getSurfaceArea() == this.targetSurface) {
+                      this.trigger('area-target-met', this.voxelPositions);
+                    }
+                  }
                 }
               }
             }
@@ -421,6 +452,26 @@ export class VoxelPainter extends CustomElementView {
 
                 this.updateApplet();
               }
+
+            }).promise.catch(() => undefined).then(() => {
+              const [y, x, z] = camera.rotation.toArray().slice(0, 3).map(a => Angle.fromRadians(a).deg);
+              let faceName: FaceName = 'none';
+              if (nearlyEquals(y, 0) && nearlyEquals(z, 0)) {
+                if (nearlyEquals(x, 90)) faceName = 'front'; // TODO: Use top bottom left right front back
+                else if (nearlyEquals(x, 180)) faceName = 'right';
+                else if (nearlyEquals(x, 270)) faceName = 'back';
+                else if (nearlyEquals(x, 360) || nearlyEquals(x, 0)) faceName = 'left';
+              } else if (
+                nearlyEquals(x, 0) ||
+                nearlyEquals(x, 90) ||
+                nearlyEquals(x, 180) ||
+                nearlyEquals(x, 270) ||
+                nearlyEquals(x, 360)
+              ) {
+                if (nearlyEquals(y, 270)) faceName = 'top';
+                else if (nearlyEquals(y, 90)) faceName = 'bottom';
+              }
+              this.trigger('snap', [faceName, [y, x, z]] as Side);
             });
           }
 
@@ -440,6 +491,13 @@ export class VoxelPainter extends CustomElementView {
     }
 
     this.updateApplet();
+  }
+
+  get voxelPositions(): [number, number, number][] {
+    return this.voxels.map(voxel => {
+      const pos = voxel.position;
+      return [pos.x, pos.y, pos.z];
+    });
   }
 
   private setFromVoxelIntersection(target: THREE.Vector3, intersection: THREE.Intersection) {

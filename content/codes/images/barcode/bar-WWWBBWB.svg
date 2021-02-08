@@ -1,0 +1,11 @@
+<svg height="120" viewBox="0 0 840 120" width="840" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none">
+    <path d="m0 0h120v120h-120z" fill="white"/>
+    <path d="m120 0h120v120h-120z" fill="white"/>
+    <path d="m240 0h120v120h-120z" fill="white"/>
+    <path d="m360 0h120v120h-120z" fill="black"/>
+    <path d="m480 0h120v120h-120z" fill="black"/>
+    <path d="m600 0h120v120h-120z" fill="white"/>
+    <path d="m720 0h120v120h-120z" fill="black"/>
+  </g>
+</svg>

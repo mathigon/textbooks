@@ -10,7 +10,7 @@ import {Angle, ORIGIN, Point, Polygon, Rectangle} from '@mathigon/euclid';
 import {round} from '@mathigon/fermat';
 import {Solid} from '../../shared/components/solid';
 
-type Hinge = [number, number, number];
+export type Hinge = [number, number, number];
 
 type HingeBone = {
   bone: THREE.Bone,
@@ -28,7 +28,7 @@ export class Net extends Solid {
     this.one('loaded', () => this.loaded = true);
   }
 
-  private add(faces: Polygon[], hinges: Hinge[]) {
+  private add(faces: Polygon[], hinges: Hinge[], scale?: number) {
     const netPoints = mergePolys(faces).points;
 
     const geoInit = new THREE.Geometry();
@@ -106,6 +106,7 @@ export class Net extends Solid {
 
     skeleton.bones[0].rotateX(Math.PI / 2);
     skeleton.bones[0].position.set(0, 0, 0);
+    if (scale != undefined) skeleton.bones[0].scale.set(scale, scale, scale);
 
     return [mesh];
   }
@@ -114,9 +115,9 @@ export class Net extends Solid {
     * Note: the item at `faces[0]` is used to determine the 'root' of the skeleton
     * and thus the net.
     */
-  addNet(faces: Polygon[], hinges: Hinge[]) {
+  addNet(faces: Polygon[], hinges: Hinge[], scale?: number) {
     this.addMesh(() =>
-      this.add(faces, hinges)
+      this.add(faces, hinges, scale)
     );
   }
 
@@ -244,7 +245,7 @@ function boneHingesForFace(
   * Assumes that `a` and `b` are adjacent
   */
 function getCommonEdge(a: Polygon, b: Polygon) {
-  return a.edges.find(aEdge => b.edges.some(bEdge => aEdge.equals(bEdge)));
+  return a.edges.find(aEdge => b.edges.some(bEdge => aEdge.equals(bEdge, 0.0001)));
 }
 
 function getBoneIndexFromPoint(point: Point, hingeBones: HingeBone[]) {

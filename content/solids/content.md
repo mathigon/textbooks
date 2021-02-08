@@ -71,47 +71,98 @@ Just like we’ve classified flat geometric shapes into a few categories like po
 __A polyhedron is a three-dimensional geometric solid with flat sides. The plural of polyhedron is “polyhedra”.__
 The word polyhedron comes from the Classical Greek as poly (many) + hedron (base, face)
 
-    // [TODO] INTERACTIVE: 3d solids examples
-    figure
-      // x-solid(size=300)
-      x-polyhedron(size=300 shape="Icosahedron")
+::: column.fit
+
+    x-polyhedron(size=200 shape="Cube")
+
+::: column.fit
+
+    x-polyhedron(size=200 shape="Octahedron")
+
+::: column.fit
+
+    x-polyhedron(size=200 shape="Dodecahedron")
+
+::: column.fit
+
+    x-polyhedron(size=200 shape="Tetrahedron")
+
+::: column.fit
+
+    x-polyhedron(size=200 shape="PentagonalPrism")
+
+::: column.fit
+
+    x-polyhedron(size=200 shape="StellatedDodecahedron")
+
+:::
 
 ---
+
+> id: poly-parts
 
 Polyhedra have many different shapes and sizes like polygons.
 They can be as simple as a cube or a pyramid, or as complex as a star polyhedron with lots of sides. 
 
     // Page 3
 
-    // [DISCUSS] INTERACTIVE: Polyhedra parts
+    // INTERACTIVE-1.01: Polyhedra parts
 
     // An interactive zoom-in tool to show the parts of the polyhedra with the definitions
 
-::: column.fit
-
-    figure: x-img(src="images/ch1_39.png" width="380" height="200")
-
-::: column.fit
-
-    figure: x-img(src="images/ch1_49.png" width="228" height="200")
-
-:::
+    figure: x-polyhedron(size=400 shape="Icosahedron" rotate=0)
 
     // Glossary links
 
-FACE:  The polygons that make up its surface of the polyhedron.
+FACE: The polygons that make up its surface of the polyhedron.
 EDGE: The line segments where two of its faces are connected.
 VERTEX: The “corners” of a polyhedron are called its vertices.
 
 ---
 
+> id: poly-ident
+
 Which of these solids are polyhedra?
 
-{.todo} INTERACTIVE: Polyhedra identification (3D)
+::: x-binary-swipe(a-title="Polyhedra" b-title="Not Polyhedra")
 
-There are also some 3D solids like cylinders and cones that contain curved surfaces, they are called non-polyhedra.
+::: div.card.c-teal(solution="a")
 
-{.todo} INTERACTIVE: non-polyhedra examples
+    figure: x-polyhedron(size=150 shape="OpenBox")
+
+:::
+
+::: div.card.c-green(solution="a")
+
+    figure: x-polyhedron(size=150 shape="AngularCylinder")
+
+:::
+
+::: div.card.c-orange(solution="b")
+
+    figure: x-solid.cone(size=150)
+
+:::
+
+::: div.card.c-blue(solution="b")
+
+    figure: x-solid.cylinder(size=150)
+
+:::
+
+::: div.card.c-yellow(solution="a")
+
+    figure: x-polyhedron(size=150 shape="Stair")
+
+:::
+
+::: div.card.c-teal(solution="b")
+
+    figure: x-solid.sphere(size=150)
+
+:::
+
+:::
 
 ---
 
@@ -119,9 +170,9 @@ Even though we live in a 3D world, grasping 3D shapes and their properties may b
 
     // Page 4
 
-::: column(width=200)
+::: column(width=300)
 
-{.todo} EMBED: Flatland trailer
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/8675372?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
     // http://www.flatlandthemovie.com/index.html
 
@@ -157,7 +208,7 @@ Try this puzzle now.
 
 Can you create 4 congruent triangles by using 6 toothpicks without bending or cutting them?
 
-    // TODO (LATER): INTERACTIVE: Toothpicks puzzle
+    // TODO (LATER): INTERACTIVE-1.02: Toothpicks puzzle
 
     figure: x-img(src="images/ch1_toothpicks.png" width="434" height="262")
 
@@ -247,6 +298,8 @@ A __cuboid__ is a box-shaped, where all six sides are rectangles. For example, p
 
 Cuboids are some of the most common polyhedra we use every day.
 
+    // TODO: INTERACTIVE-1.03: Cuboid with labeled parts
+
 ::: column.fit
 
     figure: x-img(src="images/ch1_10.jpg" width="200" height="156")
@@ -254,8 +307,9 @@ Cuboids are some of the most common polyhedra we use every day.
 :::
 
 ---
+> id: cuboid-parts
 
-{.todo} 3D; no pointing lines; hover for parts
+    figure: x-polyhedron(size=400 shape="Cube" rotate=0)
 
 Basically, a cuboid is a polyhedron with six rectangular faces. The opposite faces of cuboids are identical and parallel to each other.  Cuboids have  [[12]] edges, [[8]] vertices.
 
@@ -343,6 +397,26 @@ According to a legend, there was a devastating plague in Greece in 430BC. The De
 
 :::
 
+::: column.grow
+
+{.todo} IMAGE
+
+Here is a line of __length 1__.
+
+::: column.grow
+
+{.todo} IMAGE
+
+A square where all sides have length 1 has __area 1__.
+
+::: column.grow
+
+{.todo} IMAGE
+
+A cube where all edges have length 1 has __volume 1__.
+
+:::
+
 We can find the volume of more complex shapes by determining how many cubes of volume 1 it contains. 
 
 The Apollo’s altar was a cubical temple with dimensions of five meters as its length, width, and height.
@@ -379,6 +453,7 @@ The first layer is a 5 x 5 square made up from [[25]] cubes.
 
     figure
       x-voxel-painter(width=300 height=300 shape="" playingFieldSize="5" rotateOnly hideGrid)
+    // TODO: Use slider
 
 There will be [[5]] layers of 25 cubes.
 There must be `5 x 25 = input(125)` cubes to fill the entire altar.
@@ -461,8 +536,6 @@ Multiplying three edge lengths allows us to determine the volume of cube efficie
 
     figure: x-img(src="images/ch1_29.png" width="92" height="87")
 
-    // TODO INTERACTIVE: cube
-
 :::
 
 A cube with an edge length of 3 centimeters has a volume of [[27]] cubic centimeters, which we can write as 27 cm3.
@@ -534,15 +607,21 @@ Volume= [[1]] x [[3]] x [[10]] = [[30]]
 
 :::
 
+---
+
+> id: painting-1
+> goals: vol
+
 Some cuboids may have the same volume although they have different shapes.
 
-::: column
-
-{.todo} INTERACTIVE: Shape-making
-
-::: column
+    // TODO: INTERACTIVE-1.04: Voxel-painting
+    figure
+      x-voxel-painter(width=600 height=400 targetVolume=24 playingFieldSize="15" color-sides)
+        x-icon-btn(icon="eraser")
 
 Use the unit cubes to create a cuboid so that the volume is 24 cubic units.
+
+---
 
 It is [[ not possible | possible]] to create a cube by using 24 unit cubes since 24 is not a perfect cube number.
 
@@ -550,11 +629,46 @@ How many different cuboids can you create by using 24 cubes?
 
 [[Text Box]]
 
-:::
+---
 
 By finding the missing dimensions of the different cuboids with a volume of 24 cubic units, we can observe how the base area and the height change when we have a certain amount of cubes to create the volume.
 
-{.todo} Table
+    table
+      thead
+        tr
+          th Cuboids
+          th(colspan="4") Dimensions
+      tbody
+        tr
+          td
+          td Length
+          td Width
+          td Height
+          td Volume
+        tr
+          td A
+          td 6
+          td: x-blank-input(goal="blank-0" solution=2 placeholder="???")
+          td 2
+          td 24
+        tr
+          td B
+          td: x-blank-input(goal="blank-1" solution=3 placeholder="???")
+          td 1
+          td 8
+          td 24
+        tr
+          td C
+          td 4
+          td 3
+          td: x-blank-input(goal="blank-2" solution=2 placeholder="???")
+          td 24
+        tr
+          td D
+          td: x-blank-input(goal="blank-3" solution=1 placeholder="???")
+          td 2
+          td 12
+          td 24
 
     // Page 14
 
@@ -642,24 +756,29 @@ Here, we have calculated the __surface area__ of the car model to find the total
 
 __The surface area of a 3D solid is the number of square units that cover all the faces of the polyhedron, without any gaps or overlaps.__
 
+---
+> id: sides-rotation
+> goals: red purple blue orange green yellow
+
 ::: column.grow
 
 Here is a rectangular prism built up of [[12]] cubes.
 
 It has [[6]] faces, but we only see three of them in the sketch.
 
+Rotate the shape to look at all of its faces.
+
 ::: column.fit
+
+    // TODO: INTERACTIVE-2.01
 
     figure
       x-voxel-painter(width=300 height=300 shape="0.5,-0.5,-0.0,0.5,-0.5,-1.0,-0.5,-0.5,-0.0,0.5,-0.5,1.0,-0.5,-0.5,-1.0,-0.5,-0.5,1.0,0.5,0.5,-0.0,-0.5,0.5,-0.0,0.5,0.5,1.0,-0.5,0.5,1.0,0.5,0.5,-1.0,-0.5,0.5,-1.0" playingFieldSize="3" color-sides rotateOnly hideGrid)
+      .eraser()
 
 :::
 
----
-
-Rotate the shape to look at all of its faces.
-
-{.todo} INTERACTIVE: Faces area display
+    figure: x-polypad(rotate="no")
 
 ---
 
@@ -673,14 +792,15 @@ The units used to measure the surface area are square meter (`"m"^2`), square ce
 Surface area and [volume](gloss:volume) are different attributes of 3D figures.  The key difference between them is that the [[surface area | volume]] is a 2D measurement and the [[volume | surface area]] is a 3D measurement of a solid.
 
 ---
+> id: voxel-surface
+> goals: area
 
 You may build different solids by using the same number of cubes.
 
-::: column.fit
-
-{.todo} INTERACTIVE: voxel painting
-
-::: column.grow
+    // TODO: INTERACTIVE-2.02: voxel painting
+    figure
+      x-voxel-painter(width=600 height=400 targetSurface=26 targetVolume=6 playingFieldSize="10" color-sides)
+        x-icon-btn(icon="eraser")
 
 Use 6 cubes to create a solid with the greatest possible surface area.
 
@@ -754,6 +874,7 @@ The ear of the African elephant is on average 180 cm by 110 cm.  Both ears add a
 Alternatively, if you were living in the Antarctic you would want a small surface area to volume ratio. This would reduce heat loss and conserve it in the body. That’s why polar versions of animals are usually [[bigger | smaller]] with respect to the other species in the same family.
 
 ---
+> id: cube-table
 
     // https://www.deviantart.com/bigfancat/art/The-bears-size-fancat-766492662
     figure: x-img(width=760 height=358 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2344a679-4e4d-4a4c-86e1-d5c45b2f06cf/dcocliu-eb3044fa-3a87-43e4-8c3a-de95a11fdb0f.jpg/v1/fill/w_1024,h_482,q_75,strp/the_bears_size__fancat__by_bigfancat_dcocliu-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD00ODIiLCJwYXRoIjoiXC9mXC8yMzQ0YTY3OS00ZTRkLTRhNGMtODZlMS1kNWM0NWIyZjA2Y2ZcL2Rjb2NsaXUtZWIzMDQ0ZmEtM2E4Ny00M2U0LThjM2EtZGU5NWExMWZkYjBmLmpwZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.V_Q04x86SQC81P2wJ0lKXKN3EP_NXKhmeYV71ayTVgU")
@@ -762,7 +883,56 @@ The relationship between the volume and the surface area as a shape's dimensions
 
 Animals can be thought of as simple cubes:
 
-{.todo} INTERACTIVE: Cube surface areas and volumes
+    table
+      thead
+        tr
+          th Side Length of a Cube
+          th The Surface Area of the Cube
+          th The Volume of the Cube
+          th Surface Area to Volume Ratio (SA:V)
+      tbody
+        tr
+          td
+            p 1x1x1
+            x-voxel-painter.c1(width=100 height=100 playingFieldSize="2" rotateOnly hideGrid)
+          td: x-blank-input(goal="blank-0" solution=6 placeholder="???")
+          td 1
+          td 6:1
+        tr
+          td
+            p 2x2x2
+            x-voxel-painter.c2(width=100 height=100 playingFieldSize="3" rotateOnly hideGrid)
+          td: x-blank-input(goal="blank-1" solution=24 placeholder="???")
+          td: x-blank-input(goal="blank-2" solution=8 placeholder="???")
+          td 3:1
+        tr
+          td
+            p 3x3x3
+            x-voxel-painter.c3(width=100 height=100 playingFieldSize="4" rotateOnly hideGrid)
+          td: x-blank-input(goal="blank-3" solution=54 placeholder="???")
+          td 27
+          td 2:1
+        tr
+          td
+            p 6x6x6
+            x-voxel-painter.c6(width=100 height=100 playingFieldSize="7" rotateOnly hideGrid)
+          td 216
+          td: x-blank-input(goal="blank-4" solution=216 placeholder="???")
+          td 1:1
+        tr
+          td
+            p 10x10x10
+            x-voxel-painter.c10(width=100 height=100 playingFieldSize="11" rotateOnly hideGrid)
+          td 600
+          td 1000
+          td: x-blank-input(goal="blank-5" solution="3:5" placeholder="???")
+        tr
+          td
+            p 20x20x20
+            x-voxel-painter.c20(width=100 height=100 playingFieldSize="21" rotateOnly hideGrid)
+          td 2400
+          td 8000
+          td: x-blank-input(goal="blank-6" solution="3:10" placeholder="???")
 
     // page 5
 
@@ -781,9 +951,28 @@ faster.
 
 Let’s drag the examples of quantities related to volume and surface area to complete the diagram:
 
-{.todo} INTERACTIVE: Use Tinder-drag component
+    // INTERACTIVE-2.04
+
+::: x-binary-swipe(a-title="Volume" b-title="Surface Area")
+      
+{div.card.c-red(solution="a")} How much water a container can hold?
+
+{div.card.c-teal(solution="b")} How much fabric is needed to cover the surface of the solid?
+
+{div.card.c-green(solution="a")} Measured in cubic units, like `"in"^3` or `"m"^3`.
+
+{div.card.c-orange(solution="a")} What is the capacity of the box?
+
+{div.card.c-blue(solution="a")} How much material it took to build a solid object?
+
+{div.card.c-yellow(solution="b")} How much paint is needed to paint the faces of a shape?
+
+{div.card.c-purple(solution="b")} Measured in square units, like `"in"^2` or `"m"^2`.
+
+:::
 
 ---
+> id: cube-draw
 
 ### Nets
 
@@ -813,7 +1002,8 @@ Artists and mathematicians like [Leonardo Da Vinci](bio:leonardo) devoted much e
 
 Since we don't all have Da Vinci's artistic skills, we can use grid paper to help us draw polyhedra. Let’s start by drawing a __cube__ on the dotted grid.
 
-{.todo} INTERACTIVE: Cube drawing
+    // INTERACTIVE-2.05
+    figure: x-polypad(grid="square-dots")
 
 ---
 
@@ -825,11 +1015,23 @@ When the solids get complicated, drawing them on a 2D paper gets harder too. But
 
 We can use the [nets](gloss:net) of the solids which are composed of polygons that form the faces of a polyhedron.
 
-{.todo} INTERACTIVE: 3D Solids with a slider to open and close the net. (Maybe Da Vinci’s examples’ nets can be included)
+    // INTERACTIVE-2.06: 3D Solids with a slider to open and close the net. (Maybe Da Vinci’s examples’ nets can be included)
 
-    figure
-      x-net(size=300 :p="progress")
-      x-slider(:bind="progress" steps=1000 speed=1)
+::: column.fit.s1
+
+    x-net(size=100 :p="progress")
+
+::: column.fit.s2
+
+    x-net(size=100 :p="progress")
+
+::: column.fit.s3
+
+    x-net(size=100 :p="progress")
+
+:::
+
+    x-slider(:bind="progress" steps=1000 speed=1)
 
 ---
 
@@ -838,14 +1040,12 @@ __They are the 2D coats that cover up the entire surface of 3D solids.__
 For instance, the net of a cube consists of [[6]] squares. With the correct arrangement of the squares, they can fold up a cube.
 
 ---
+> id: cube-net-draw
 
 Let’s try to draw the __net__ of a cube:
 
-::: column(width=300)
-
-{.todo} INTERACTIVE: Cube net drawing
-
-::: column.grow
+    // INTERACTIVE-2.07
+    figure: x-polypad(grid="square-dots")
 
 There are many different ways to arrange six squares to fold up as a cube.
 
@@ -859,7 +1059,7 @@ Let’s have a look at which one of the below can be folded to a cube.
 
 ---
 
-{.todo} Net animations
+{.todo} INTERACTIVE-2.08: Net animations
 
     // COMMENT: After each animation
 
@@ -891,7 +1091,7 @@ Let’s try to build our own fair die by inserting the faces correctly.
 
 Opposite faces of a fair die always add up to 7.
 
-{.todo} INTERACTIVE: Die faces nets matching
+{.todo} INTERACTIVE-2.09: Die faces nets matching
 
 ---
 
@@ -899,7 +1099,7 @@ Now that we can identify opposite faces of a die using nets, let's try another p
 
 ::: column.fit
 
-{.todo} INTERACTIVE: Face colors
+{.todo} DISCUSS: INTERACTIVE?: Face colors
 
 ::: column.grow
 
@@ -931,7 +1131,7 @@ _{button.btn.continue}Continue_
 
     // COMMENT: Instead can we have an applet here that has regular triangle, pentagon, hexagon square  to let them create their nets with the help of number slider  - than we can open / close them to see their solids - in this way  we may have some questioning like the min number of faces for a polyhedron
 
-{.todo} INTERACTIVE: Net construction
+{.todo} INTERACTIVE-2.10: Net construction
 
 ---
 
@@ -945,7 +1145,7 @@ Let’s find the surface area of this cuboid by using its net
 
 ::: column.fit
 
-{.todo} INTERACTIVE: solid with a slider (solid <-> net)
+{.todo} INTERACTIVE-2.11: solid with a slider (solid <-> net)
 
 ::: column.grow
 
@@ -977,7 +1177,7 @@ Use the slider to open the cuboid to its net. Then drag the side length measures
 
     // COMMENT: For now just include labels
 
-{.todo} INTERACTIVE: solid <-> net
+{.todo} INTERACTIVE-2.12: solid <-> net
 
 ---
 
@@ -1005,7 +1205,7 @@ Let’s have a look at the cuboids here:
 
 Use the sliders to open the nets of the cuboids.
 
-{.todo} INTERACTIVE: solid <-> net
+{.todo} INTERACTIVE-2.13: solid <-> net
 
 Drag the area calculations on the corresponding regions.
 
@@ -1022,12 +1222,16 @@ Drag the area calculations on the corresponding regions.
 :::
 
 ---
+> id: soccer-net
 
 Since nets are composed of plane figures that form the faces of a 3D Solid, we can always use them to calculate the surface area of even more complex solids.
 
 ::: column.fit
 
-{.todo} Embed: https://www.geogebra.org/m/bXhjS2KJ
+    // INTERACTIVE-2.14
+    figure
+      x-net(size=300 :p="progress")
+      x-slider(:bind="progress" steps=1000 speed=1)
 
 ::: column.grow
 
@@ -1047,6 +1251,7 @@ In the next chapter, we are going to look at the nets, surface area, and volume 
 
 > section: prism-pyramid
 > sectionStatus: dev
+> id: honeycomb-intro
 
 ::: column.fit
 
@@ -1062,7 +1267,8 @@ Bees collect nectar and pollen from flowers to make honey for their colony.  Hon
 
 ::: column.fit
 
-    figure: x-img(src="images/ch3_hex_prism.svg" width="218" height="205")
+    // INTERACTIVE-3.01
+    figure: x-polyhedron(shape="HexagonalPrism" size=250 rotate=0)
 
 ::: column.grow
 
@@ -1102,11 +1308,21 @@ There are all kinds of prisms like triangular prisms, rectangular prisms, pentag
 
 ---
 
-    figure: x-img(src="images/ch3_62.png" width="600" height="257")
+    // INTERACTIVE-3.02
 
-    // COMMENT: 3D Solids
+::: column.fit
 
-    // COMMENT: (Cuboids)
+    figure: x-polyhedron(size=200 shape="TriangularPrism")
+
+::: column.fit
+
+    figure: x-polyhedron(size=200 shape="PentagonalPrism")
+
+::: column.fit
+
+    figure: x-polyhedron(size=200 shape="Cube")
+
+:::
 
 Honeycomb cells are always horizontally aligned. They share walls with the neighbor cell to decrease the amount of wax used to build each cell.
 
@@ -1130,6 +1346,7 @@ The [net](gloss:net) of the hexagonal prism can provide a better view of all the
 
 ::: column.fit
 
+    // TODO: INTERACTIVE-3.03
     figure: x-img(src="images/ch3_21.png" width="200" height="165")
 
 :::
@@ -1143,7 +1360,7 @@ A hexagonal prism has  [[12]] _{span.comments(text="(gloss:vertex)I you provided
 **Why do bees choose hexagonal prisms over the other prisms?**
 
     // COMMENT: An Interactive where the students can tile different prisms  to see which ones can tile
-
+    // INTERACTIVE-3.04
     figure: x-img(src="images/ch3_50.png" width="600" height="482")
 
 _{span.comments(text="students can choose a prism and try to tile - triangular prisms give a check mark, pentagonal give a cross and so on...")}_

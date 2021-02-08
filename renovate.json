@@ -4,34 +4,28 @@
   "packageRules": [{
     "packagePatterns": ["eslint"],
     "groupName": "lint",
-    "automerge": true,
-    "automergeType": "branch"
+    "automerge": true
   }, {
     "packagePatterns": ["^@mathigon"],
     "groupName": "mathigon",
     "schedule": ["at any time"],
-    "automerge": true,
-    "automergeType": "branch"
+    "automerge": true
   }, {
     "packagePatterns": ["ts-node", "^typescript"],
     "groupName": "typescript",
-    "automerge": true,
-    "automergeType": "branch"
+    "automerge": true
   }, {
     "packagePatterns": ["^@types/"],
     "groupName": "types",
-    "automerge": true,
-    "automergeType": "branch"
+    "automerge": true
   }, {
     "packagePatterns": ["^rollup", "^@rollup"],
     "groupName": "rollup",
-    "automerge": true,
-    "automergeType": "branch"
+    "automerge": true
   }, {
     "updateTypes": ["patch", "pin", "digest"],
     "groupName": "versions",
-    "automerge": true,
-    "automergeType": "branch"
+    "automerge": true
   }],
   "ignoreDeps": ["marked", "three", "autoprefixer", "gulp-postcss", "postcss-rtl"]
 }
