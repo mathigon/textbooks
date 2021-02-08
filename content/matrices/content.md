@@ -1708,6 +1708,8 @@ The year is 1801. Giuseppe Piazzi is an Italian astronomer who has catalogued th
 
 On January 2nd, 1801, Piazzi observed a celestial body[1] whose location did not match his previous observation. Had Piazzi committed an error in measurement, or had this body moved through the night sky? He repeated the observation over the next two days and surely enough it had moved across the sky. The next day Piazzi could not make another measurement because this unknown entity had moved behind the sun.
 
+{.todo} IMAGE_NEEDED of Piazzi? Telescope? Planets?
+
 The mathematics of the time were not sufficient to calculate the orbit of this body using only three points. Fortunately, Friedrich Gauss[2] learned of this predicament and took on the challenge. He invented a new method to predict the orbit of this celestial body and predicted its location in December of 1801. Surely enough, it was found exactly where he predicted it would be! The body was found to be a dwarf planet with an orbit between Mars and Jupiter. It was named Ceres, after a Roman goddess of agriculture.
 
 ---
