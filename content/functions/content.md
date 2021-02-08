@@ -131,6 +131,11 @@ We have been using mapping diagrams, coordinate pairs, and tables to represent r
 Let’s plot the relation {(0,0), (1,4), (-5,3), (-2,-1), (4, -3)} on the coordinate plane. Two points are already on the graph.
 
 TODO Interactive here
+        circle(x="point(0, 0)")
+        circle(x="point(1, 4)")
+        circle(x="point(-5, 3)")
+        circle(x="point(-2, -1)")
+        circle(x="point(4, -3)")
 
 TODO Tutor prompts here
 
