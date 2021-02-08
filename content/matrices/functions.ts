@@ -11,6 +11,8 @@ import {Angle, ORIGIN, Point} from '@mathigon/euclid';
 import {ElementView, ScreenEvent, svgPointerPosn} from '@mathigon/boost';
 import {Geopad, Step} from '../shared/types';
 
+import './components/gauss-solver';
+
 
 export function rocket($step: Step) {
   const $geo = $step.$('x-geopad') as Geopad;

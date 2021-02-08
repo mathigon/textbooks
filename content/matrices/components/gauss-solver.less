@@ -1,0 +1,50 @@
+// =============================================================================
+// Gauss Matrix Solver Component
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../shared/variables";
+
+
+x-gauss-solver {
+  display: flex;
+  justify-content: center;
+
+  .matrix {
+    display: grid;
+    grid-auto-rows: 36px;
+    grid-gap: 4px;
+    margin-top: 12px;
+    > div { text-align: center; line-height: 36px; }
+  }
+
+  .operation { flex-grow: 1; position: relative; margin: 0 40px; max-width: 280px; }
+  .operation x-select { display: flex; margin-bottom: 1px; }
+  .op {
+    background: @medium-grey;
+    color: white;
+    margin-right: 1px;
+    flex: 40px 1 1;
+    opacity: 0.6;
+    text-align: center;
+    cursor: pointer;
+    &.active { opacity: 1; }
+    &:first-child { border-top-left-radius: 6px; }
+    &:last-child { border-top-right-radius: 6px; margin-right: 0; }
+  }
+
+  .operation-body {
+    background: mix(@medium-grey, white);
+    padding: 24px 0;
+    border-radius: 0 0 6px 6px;
+    p { text-align: center; margin: 0; }
+    input { background: white; width: 40px; }
+  }
+
+  .connections {
+    position: absolute; left: -55px; top: 10px;
+    circle { cursor: grab; }
+    path { stroke-width: 3px; fill: none; stroke-linecap: round; }
+  }
+}
