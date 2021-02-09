@@ -2090,9 +2090,6 @@ export function currysParadox6($step: Step) {
 export function wheels($step: Step) {
   const $svg = $step.$('svg') as SVGParentView;
 
-  const outlineColor = 'red';
-  const outlineWidth = '3px';
-
   const $reset = $step.$('button.reset');
 
   type Wheel = {
