@@ -2495,7 +2495,7 @@ export function diameterCircumference($step: Step) {
 
   $step.model['progress'] = new Segment(lineStart.shift(0, 7.5), lineStart.shift(0, 7.5));
   const progress = $geopad.drawPath('progress');
-  progress.$el.css({stroke: 'none'});
+  progress.$el.addClass('diameter-progress');
 
   let pending: string | undefined;
 
@@ -2505,7 +2505,7 @@ export function diameterCircumference($step: Step) {
       drawn[c] = false;
       $step.model[c] = new Polyline();
       $step.model['progress'] = new Segment(lineStart.shift(0, 7.5), lineStart.shift(0, 7.5));
-      progress.$el.css({stroke: 'none'});
+      progress.$el.removeClass(c);
     }
     pending = undefined;
   });
@@ -2517,7 +2517,7 @@ export function diameterCircumference($step: Step) {
       $step.model[pending] = new Polyline(p);
       // [TODO]: Add some documentation about this approach (auto-listening to model property)
       $geopad.drawPath(pending, {classes: pending});
-      progress.$el.css({stroke: pending});
+      progress.$el.addClass(pending);
     },
     move: (p: Point) => {
       if (!pending) return;
