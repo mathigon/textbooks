@@ -1781,18 +1781,6 @@ Now let’s follow some steps to solve this system of equations:
 :::
 
 
-Here is a Gaussian component
-
-::: x-gaussian(dimension="2x2")
-
-{div(slot="matrix")} `§[[1 1] [(2/3) (-1/2)]]` • `§[[x] [y]]` = `§[[1800] [500]]`
-
-* Here is step one
-* Here is step two
-* Here is step three
-
-:::
-
 Great! The problem we just solved was likely solved by maths students in an ancient civilization! Let’s see what else we can do with this.
 
 ---
@@ -1900,43 +1888,6 @@ Let's simplify this problem by picking just 6 landmarks and some angles between 
 ::: .box.f-green
 
 {.todo} PROBLEM_SOLVE details needed of problem
-
-:::
-
-
----
-
-
-{.todo} COMING SOON
-> id: gaussian-solve
-
-Here is a Gaussian component
-
-::: x-gaussian(dimension="2x2")
-
-{div(slot="matrix")} `§[[(-1) 1] [(-2) 1]]` • `§[[x] [y]]` = `§[[4] [2]]`
-
-* Here is step one
-* Here is step two
-* Here is step three
-
-:::
-
----
-> id: gaussian-solve2
-
-::: x-gaussian(dimension="3x3")
-
-{div(slot="matrix")} `§[[168 20 20] [168 28 12] [168 42 18]]` • `§[[x] [y] [z]]` = `§[[1400] [1336] [1824]]`
-
-:::
-
----
-> id: gaussian-solve3
-
-::: x-gaussian(dimension="5x7")
-
-{div(slot="matrix")} `§[[1 0 0 0 -1 -1 1] [-1 1 0 0 0 0 0] [0 -1 1 0 0 0 -1] [0 0 -1 1 0 1 0] [0 0 0 -1 1 0 0]]` • `§[[e1] [e2] [e3] [e4] [e5] [e6] [e7]]` = `§[[0] [0] [0] [0] [0]]`
 
 :::
 
