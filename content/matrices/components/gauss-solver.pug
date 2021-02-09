@@ -15,6 +15,12 @@
     .op(value="add") Add
     .op(value="swap") Swap
   .operation-body: p
-    | ×
-    input(:bind="factor")
+    svg(width=16 height=16)
+      circle(cx=8 cy=8 r=8 fill="red")
+    | +
+    input(:bind="factorString")
+    svg(width=16 height=16)
+      circle(cx=8 cy=8 r=8 fill="blue")
+    .bottom
+      button.apply Apply
 .matrix
