@@ -1,7 +1,7 @@
-svg.highlighter.input(:width="(size+1)*40+4" :height="size*40+4")
-    rect.red(x="0" :y="(20+40*inRow1)" :width="(size+1)*40" height="36" rx="18" ry="18")
-    rect.blue(x="0" :y="(20+40*inRow2)" :width="(size+1)*40" height="36" rx="18" ry="18" :show="op !== 'multiply'")
-svg.highlighter.output(:width="(size+1)*40+4" :height="size*40+4")
+svg.highlighter.input(:width="(size+2)*40+4" :height="size*40+4+12")
+    rect.red(:x="40*(3-size)" :y="(20+40*inRow1)" :width="(size+1)*40" height="36" rx="18" ry="18")
+    rect.blue(:x="40*(3-size)" :y="(20+40*inRow2)" :width="(size+1)*40" height="36" rx="18" ry="18" :show="op !== 'multiply'")
+svg.highlighter.output(:width="(size+2)*40+4" :height="size*40+4+12")
     rect.red(x="0" :y="(20+40*outRow1)" :width="(size+1)*40" height="36" rx="18" ry="18")
     rect.blue(x="0" :y="(20+40*outRow2)" :width="(size+1)*40" height="36" rx="18" ry="18" :show="op === 'swap'")
 .matrix
