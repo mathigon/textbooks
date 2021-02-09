@@ -14,7 +14,18 @@ import {Geopad, Step} from '../shared/types';
 import './components/gauss-solver';
 import './components/gaussian';
 import {Gaussian} from './components/gaussian';
+import {GaussSolver} from './components/gauss-solver';
 
+
+export function gaussSolverBabylon($step: Step) {
+  const $solver = $step.$('x-gauss-solver') as GaussSolver;
+  $solver.bindStep($step);
+}
+
+export function gaussSolverChina($step: Step) {
+  const $solver = $step.$('x-gauss-solver') as GaussSolver;
+  $solver.bindStep($step);
+}
 
 export function map($step: Step) {
   console.log('map');

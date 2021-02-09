@@ -5,6 +5,7 @@ import {tabulate2D} from '@mathigon/core';
 import {Point} from '@mathigon/euclid';
 import {clamp} from '@mathigon/fermat';
 import {Expression} from '@mathigon/hilbert';
+import {Step} from '../../shared/types';
 
 
 import template from './gauss-solver.pug';
@@ -20,6 +21,7 @@ export class GaussSolver extends CustomElementView {
   size!: number; // Number of Matrix rows
   $inputCells!: ElementView[][]; // Array of all cells in the left matrix.
   $outputCells!: ElementView[][]; // Array of all cells in the right matrix.
+  $step!: Step;
 
   ready() {
     const input = Expression.parse(this.attr('matrix'))
@@ -120,6 +122,11 @@ export class GaussSolver extends CustomElementView {
           val.text = this.$outputCells[i][j].text;
         }
       }
+
+      if (this.checkForSolvedIdentity()) {
+        console.log('Success!');
+        this.$step.tools.confetti();
+      }
     });
 
     // watch for factor change
@@ -137,5 +144,34 @@ export class GaussSolver extends CustomElementView {
         this.model.factor = 1;
       }
     });
+  }
+
+  checkForSolvedIdentity(): boolean {
+    console.log('Checking for solved identity');
+    const numRows = this.$inputCells.length;
+
+    for (let i = 0; i < numRows; i++) {
+      const values = this.$inputCells[i];
+      // i is also the expectedOneIndex
+
+      // check all values
+      for (let j = 0; j < numRows; j++) {
+        // console.log(`Checking row=${i}; col=${j}; value=${values[j]}`);
+        if (j === i) {
+          if (values[j].text != '1') {
+            // diagonal should be 1
+            return false;
+          }
+        } else if (values[j].text != '0') {
+          // non-diag should be 0
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  bindStep($step: Step) {
+    this.$step = $step;
   }
 }

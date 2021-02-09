@@ -1700,15 +1700,21 @@ Here is the formula for calculating a 3x3 matrix. There is a way to calculate in
 > section: systems
 > sectionStatus: dev
 
+> id: gauss-solver-babylon
+
 Solve this matrix from Ancient Babylon:
 
     x-gauss-solver(matrix="[[1, 1, 1800],[4, -3, 3000]]")
 
+---
+
+> id: gauss-solver-china
 
 Solve this matrix from Ancient China:
 
     x-gauss-solver(matrix="[[1, 2, 3, 26], [2, 3, 1, 34], [3, 2, 1, 39]]")
 
+---
 
 > id: gauss-intro-piazzi
 
