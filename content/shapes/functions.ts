@@ -3200,18 +3200,18 @@ class Slice {
   private sides: {
     path: GeoPath | undefined,
     poly: Polyline
-  }
+  };
   private arc: {
     path: GeoPath | undefined,
     poly: Arc
-  }
-  private _bounds: Polygon
+  };
+  private _bounds: Polygon;
   readonly width: number;
-  private _tip: Point
-  private _pivot: Point
-  private _angle: number
-  private transAnim: AnimationResponse | undefined
-  private rotAnim: AnimationResponse | undefined
+  private _tip: Point;
+  private _pivot: Point;
+  private _angle: number;
+  private transAnim: AnimationResponse | undefined;
+  private rotAnim: AnimationResponse | undefined;
   private rotTarget: number | undefined;
   private transTarget: Point | undefined;
   private firstDraw = true;
