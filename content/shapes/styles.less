@@ -280,6 +280,8 @@ x-geopad .paths path.voronoi {
   }
 }
 
+@resizeable-stroke-width: 3px;
+
 .tire-circumference {
   width: 600px;
   margin: auto;
@@ -290,6 +292,12 @@ x-geopad .paths path.voronoi {
     top: 0;
     width: 600px;
     height: 300px;
+    
+    path.shape-display {
+      fill: none;
+      stroke: @lime;
+      stroke-width: @resizeable-stroke-width;
+    }
   }
 
   img {
@@ -302,12 +310,27 @@ x-geopad .paths path.voronoi {
 
 // ResizeableSquare
 
-.nesw-corner:hover {
-  cursor: nesw-resize;
-}
+svg path {
+  &.resize-edge {
+    stroke: black;
+    stroke-width: @resizeable-stroke-width;
+    
+    &.resize-on-target {
+      stroke: @lime;
+    }
+  }
+  
+  &.resize-box, &.resize-corner {
+    fill: rgba(0, 0, 0, 0);
+  }
+  
+  &.nesw-corner:hover {
+    cursor: nesw-resize;
+  }
 
-.nwse-corner:hover {
-  cursor: nwse-resize;
+  &.nwse-corner:hover {
+    cursor: nwse-resize;
+  }
 }
 
 .map {

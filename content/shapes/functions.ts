@@ -2201,7 +2201,7 @@ export function encasementEstimation($step: Step) {
   const box = new ResizeableSquare($svg, 100, new Point(15, 15), strokeWidth, targetBounds, onComplete);
 
   const $shapeDisp = $N('path', {}, $svg) as SVGView;
-  $shapeDisp.css({fill: 'none', stroke: 'lime', 'stroke-width': `${strokeWidth}px`});
+  $shapeDisp.addClass('shape-display');
   const $slider = $step.$('x-slider') as Slider;
   $slider.on('move', n => {
     box.hide();
@@ -2253,13 +2253,13 @@ class ResizeableSquare {
 
     for (const edge of this.edges) {
       const $el = $N('path', {}, $svg) as SVGView;
-      $el.css({'stroke-width': `${strokeWidth}px`, stroke: 'black'});
+      $el.addClass('resize-edge');
       $el.draw(edge);
       this.$edges.push($el);
     }
 
     this.$box = $N('path', {}, $svg) as SVGView;
-    this.$box.css({fill: 'rgba(0, 0, 0, 0)'});
+    this.$box.addClass('resize-box');
     this.$box.draw(this.poly);
 
     this.grabDelta = new Point(0, 0);
@@ -2272,7 +2272,7 @@ class ResizeableSquare {
 
       const cornerRect = new Rectangle(pos, cornerSize, cornerSize);
       const $corner = $N('path', {}, $svg) as SVGView;
-      $corner.css({fill: 'rgba(0, 0, 0, 0)'});
+      $corner.addClass('resize-corner');
 
       let dir = '';
       if (index % 2 == 0) {
@@ -2396,39 +2396,17 @@ class ResizeableSquare {
     let complete = true;
     const closeness = 2;
     for (const [index, edge] of this.edges.entries()) {
-      switch (index) {
-        case 0: // top
-          if (nearlyEquals(edge.p1.y, this.targetBounds.points[0].y, closeness)) {
-            this.$edges[0].css({stroke: 'lime'});
-          } else {
-            this.$edges[0].css({stroke: 'black'});
-            complete = false;
-          }
-          break;
-        case 1: // right
-          if (nearlyEquals(edge.p1.x, this.targetBounds.points[1].x, closeness)) {
-            this.$edges[1].css({stroke: 'lime'});
-          } else {
-            this.$edges[1].css({stroke: 'black'});
-            complete = false;
-          }
-          break;
-        case 2: // bottom
-          if (nearlyEquals(edge.p1.y, this.targetBounds.points[2].y, closeness)) {
-            this.$edges[2].css({stroke: 'lime'});
-          } else {
-            this.$edges[2].css({stroke: 'black'});
-            complete = false;
-          }
-          break;
-        case 3: // left
-          if (nearlyEquals(edge.p1.x, this.targetBounds.points[3].x, closeness)) {
-            this.$edges[3].css({stroke: 'lime'});
-          } else {
-            this.$edges[3].css({stroke: 'black'});
-            complete = false;
-          }
-          break;
+      const iMod = index % 2;
+
+      const edgeVal = iMod == 0 ? edge.p1.y : edge.p1.x;
+      const boundVal =
+        iMod == 0 ? this.targetBounds.points[index].y : this.targetBounds.points[index].x;
+
+      if (nearlyEquals(edgeVal, boundVal, closeness)) {
+        this.$edges[index].addClass('resize-on-target');
+      } else {
+        this.$edges[index].removeClass('resize-on-target');
+        complete = false;
       }
     }
     this.isComplete = complete;
