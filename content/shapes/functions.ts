@@ -667,11 +667,11 @@ class RenderedGeopadPoly {
 
     // Handle options
     if (options != undefined) {
-      let colorClass = 'rendered-poly';
       if (options.color != undefined) {
-        colorClass += '-' + options.color;
+        this.path.$el.addClass('fill ' + options.color);
+      } else {
+        this.path.$el.addClass('transparent-draggable');
       }
-      this.path.$el.addClass(colorClass);
       if (options.draggable != undefined && options.draggable === true) {
         let pointerOffset = new Point(0, 0);
         let dragging = false;
@@ -2119,10 +2119,10 @@ export function wheels($step: Step) {
     const startBottom = startTopLeft.shift(radius, radius * 2);
 
     const $distLine = $N('path', {}, $svg) as SVGView;
-    $distLine.addClass('distline red');
+    $distLine.addClass('distline');
 
     const $outline = $N('path', {}, $svg) as SVGView;
-    $outline.addClass('wheel-outline red');
+    $outline.addClass('wheel-outline');
     const initOutline = new Circle(startBottom.shift(0, -radius), radius);
     $outline.draw(initOutline);
 
@@ -2139,7 +2139,7 @@ export function wheels($step: Step) {
   });
 
   for (const wheel of $step.model['wheels'] as Wheel[]) {
-    wheel.$el.addClass('wheel-body');
+    wheel.$el.addClass('transparent-draggable');
     let initDistance = 0;
     slide(wheel.$el, {
       start: () => {
@@ -2259,7 +2259,7 @@ class ResizeableSquare {
     }
 
     this.$box = $N('path', {}, $svg) as SVGView;
-    this.$box.addClass('resize-box');
+    this.$box.addClass('transparent-draggable');
     this.$box.draw(this.poly);
 
     this.grabDelta = new Point(0, 0);
@@ -2272,7 +2272,7 @@ class ResizeableSquare {
 
       const cornerRect = new Rectangle(pos, cornerSize, cornerSize);
       const $corner = $N('path', {}, $svg) as SVGView;
-      $corner.addClass('resize-corner');
+      $corner.addClass('transparent-draggable');
 
       let dir = '';
       if (index % 2 == 0) {

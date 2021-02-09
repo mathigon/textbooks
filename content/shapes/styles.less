@@ -22,6 +22,10 @@ figure svg {
   margin-right: auto;
 }
 
+svg path, circle {
+  &.transparent-draggable { fill: transparent; }
+}
+
 // Section 1: Introduction
 
 #performance-1 {
@@ -83,37 +87,6 @@ x-geopad .paths path.fill-square {
 
 #identify-parallelograms {
   svg path.parallelogram-selected {
-    fill: @lime;
-  }
-}
-
-// RenderedPoly
-x-geopad .paths path.rendered-poly {
-
-  fill: rgba(0, 0, 0, 0); // default
-
-  &-red {
-    fill: @red;
-  }
-  &-green {
-    fill: @green;
-  }
-  &-blue {
-    fill: @blue;
-  }
-  &-yellow {
-    fill: @yellow;
-  }
-  &-orange {
-    fill: @orange;
-  }
-  &-purple {
-    fill: @purple;
-  }
-  &-teal {
-    fill: @teal;
-  }
-  &-lime {
     fill: @lime;
   }
 }
@@ -275,10 +248,6 @@ x-geopad .paths path.voronoi {
       fill: none;
     }
   }
-
-  circle.wheel-body {
-    fill: rgba(0, 0, 0, 0);
-  }
 }
 
 @resizeable-stroke-width: 3px;
@@ -319,10 +288,6 @@ svg path {
     &.resize-on-target {
       stroke: @lime;
     }
-  }
-  
-  &.resize-box, &.resize-corner {
-    fill: rgba(0, 0, 0, 0);
   }
   
   &.nesw-corner:hover {
