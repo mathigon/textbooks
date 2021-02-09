@@ -299,6 +299,21 @@ figure svg {
 
 // Section 5: Circles and Circumferences
 
+.wheel-distances svg {
+  path {
+    &.distline, &.wheel-outline {
+      stroke: @red;
+      stroke-width: 3px;
+    }
+    &.wheel-outline {
+      fill: none;
+    }
+  }
+  circle.wheel-body {
+    fill: rgba(0, 0, 0, 0);
+  }
+}
+
 .map {
   width: 400px;
   height: 400px;

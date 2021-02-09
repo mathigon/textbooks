@@ -2122,10 +2122,10 @@ export function wheels($step: Step) {
     const startBottom = startTopLeft.shift(radius, radius * 2);
 
     const $distLine = $N('path', {}, $svg) as SVGView;
-    $distLine.css({stroke: outlineColor, 'stroke-width': outlineWidth});
+    $distLine.addClass('distline red');
 
     const $outline = $N('path', {}, $svg) as SVGView;
-    $outline.css({stroke: outlineColor, 'stroke-width': outlineWidth, fill: 'none'});
+    $outline.addClass('wheel-outline red');
     const initOutline = new Circle(startBottom.shift(0, -radius), radius);
     $outline.draw(initOutline);
 
@@ -2142,7 +2142,7 @@ export function wheels($step: Step) {
   });
 
   for (const wheel of $step.model['wheels'] as Wheel[]) {
-    wheel.$el.css({fill: 'rgba(0, 0, 0, 0'});
+    wheel.$el.addClass('wheel-body');
     let initDistance = 0;
     slide(wheel.$el, {
       start: () => {
