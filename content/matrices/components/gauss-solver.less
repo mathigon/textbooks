@@ -5,6 +5,15 @@ x-gauss-solver {
   display: flex;
   justify-content: center;
 
+  .highlighter {
+    position: absolute;
+    &.input { left: 90px; top: 40px; }
+    &.output { left: 566px; top: 40px; }
+
+    rect.red { fill: @red; opacity: 0.5;}
+    rect.blue { fill: @blue; opacity: 0.5;}
+  }
+
   .matrix {
     display: grid;
     grid-auto-rows: 36px;

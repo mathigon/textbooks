@@ -11,7 +11,7 @@ import {Step} from '../../shared/types';
 import template from './gauss-solver.pug';
 
 type Model = {
-  input: number[][], output: number[][], op: string,
+  input: number[][], output: number[][], op: string, size: number,
   inRow1: number, inRow2: number, outRow1: number, outRow2: number,
   factorString: string, factor: number};
 
@@ -28,8 +28,8 @@ export class GaussSolver extends CustomElementView {
     const input = Expression.parse(this.attr('matrix'))
         .evaluate({'[': (...args: number[]) => [...args] as any}) as unknown as number[][];
 
-    this.bindModel(observe({input, output: input, inRow1: 0, inRow2: 1, outRow1: 0, outRow2: 1, factor: 1, factorString: '1'}));
     this.size = input.length;
+    this.bindModel(observe({input, output: input, size: this.size, inRow1: 0, inRow2: 1, outRow1: 0, outRow2: 1, factor: 1, factorString: '1'}));
 
     // Set up the input and output matrices
     const $matrices = this.$$('.matrix');
