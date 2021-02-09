@@ -669,7 +669,7 @@ class RenderedGeopadPoly {
     if (options != undefined) {
       let colorClass = 'rendered-poly';
       if (options.color != undefined) {
-        colorClass += options.color;
+        colorClass += '-' + options.color;
       }
       this.path.$el.addClass(colorClass);
       if (options.draggable != undefined && options.draggable === true) {
