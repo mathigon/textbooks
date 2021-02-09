@@ -126,6 +126,8 @@ These input and output sets have special names. The complete set of all possible
 TODO Interactive here
 
 ---
+> id: coordinate-plots
+> goals: p0 p1 p2
 
 ### Coordinate Systems
 
@@ -133,12 +135,11 @@ We have been using mapping diagrams, coordinate pairs, and tables to represent r
 
 Let’s plot the relation {(0,0), (1,4), (-5,3), (-2,-1), (4, -3)} on the coordinate plane. Two points are already on the graph.
 
-    x-geopad(width=400 height=300 x-axis="-6,6,1" y-axis="-5,5,1" axes grid padding=8): svg
-        circle(x="point(0, 0)")
-        circle(x="point(1, 4)")
-        circle(x="point(-5, 3)")
-        circle(x="point(-2, -1)")
-        circle(x="point(4, -3)")
+    x-geopad(width=400 height=300 x-axis="-6,6,1" y-axis="-5,5,1" axes grid padding=8 snap): svg
+      circle(x="point(0, 0)" label="X")
+      circle.move(x="point(1, 4)" name="anchor")
+
+---
 
 TODO Tutor prompts here
 
