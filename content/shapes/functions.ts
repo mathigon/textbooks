@@ -3198,11 +3198,11 @@ function initLineup(slices: number, center: Point, radius: number, colors: {aCol
 class Slice {
 
   private sides: {
-    path: GeoPath | undefined,
+    path?: GeoPath,
     poly: Polyline
   };
   private arc: {
-    path: GeoPath | undefined,
+    path?: GeoPath,
     poly: Arc
   };
   private _bounds: Polygon;
@@ -3210,10 +3210,10 @@ class Slice {
   private _tip: Point;
   private _pivot: Point;
   private _angle: number;
-  private transAnim: AnimationResponse | undefined;
-  private rotAnim: AnimationResponse | undefined;
-  private rotTarget: number | undefined;
-  private transTarget: Point | undefined;
+  private transAnim?: AnimationResponse;
+  private rotAnim?: AnimationResponse;
+  private rotTarget?: number;
+  private transTarget?: Point;
   private firstDraw = true;
 
   constructor(private selfDraw: boolean, private $geopad: Geopad, radius: number, arcAngle: number, circleCenter: Point, initAngle?: number) {
@@ -3234,10 +3234,6 @@ class Slice {
     };
     this._bounds = new Polygon(...sliceSides.points);
     this._pivot = (new Segment((new Segment(pointA, pointB)).midpoint, circleCenter)).midpoint.rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
-    this.transAnim = undefined;
-    this.rotAnim = undefined;
-    this.rotTarget = undefined;
-    this.transTarget = undefined;
     if (this.selfDraw) this.draw();
   }
 
