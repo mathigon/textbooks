@@ -138,8 +138,6 @@ Let’s plot the relation {(0,0), (1,4), (-5,3), (-2,-1), (4, -3)} on the coordi
 
 ---
 
-TODO Tutor prompts here
-
 Let’s look at the graphs of the relations we have been working with so far. Notice how the mapping diagram relates to the graph. The axes in the coordinate plane below take names other than x and y, the variables we’ve seen before. This graph, for instance, includes a name- and a house-axis.
 
 TODO Interactive here
