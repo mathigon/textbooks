@@ -1709,9 +1709,6 @@ Solve this matrix from Ancient China:
 
     x-gauss-solver(matrix="[[1, 2, 3, 26], [2, 3, 1, 34], [3, 2, 1, 39]]")
 
-Solve this matrix:
-
-    x-gauss-solver(matrix="[[2, 3, 4, 5], [6, 7, 8, 9], [10, 11, 12, 13]]")
 
 > id: gauss-intro-piazzi
 

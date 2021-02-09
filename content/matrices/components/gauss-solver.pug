@@ -14,13 +14,21 @@
     .op(value="multiply") Multiply
     .op(value="add") Add
     .op(value="swap") Swap
-  .operation-body: p
-    svg(width=16 height=16)
-      circle(cx=8 cy=8 r=8 fill="red")
-    | +
-    input(:bind="factorString")
-    svg(width=16 height=16)
-      circle(cx=8 cy=8 r=8 fill="blue")
+  .operation-body
+    p(:show="op ==='add'")
+      svg(width=16 height=16)
+        circle(cx=8 cy=8 r=8 fill="red" :show="op === 'add'")
+      | +
+      input(:bind="factorString")
+      svg(width=16 height=16)
+        circle(cx=8 cy=8 r=8 fill="blue" :show="op === 'add'")
+    p(:show="op ==='multiply'")
+      | x
+      input(:bind="factorString")
+    .text
+      .description(:show="op ==='multiply'") Multiply a row by a non-zero factor
+      .description(:show="op ==='add'") Add a multiple of one row to another
+      .description(:show="op ==='swap'") Swap two rows
     .bottom
       button.apply Apply
 .matrix
