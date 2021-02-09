@@ -22,6 +22,7 @@ export class GaussSolver extends CustomElementView {
   $inputCells!: ElementView[][]; // Array of all cells in the left matrix.
   $outputCells!: ElementView[][]; // Array of all cells in the right matrix.
   $step!: Step;
+  inputStack!: string[][][];
 
   ready() {
     const input = Expression.parse(this.attr('matrix'))
@@ -39,15 +40,18 @@ export class GaussSolver extends CustomElementView {
     );
     this.$outputCells = tabulate2D(() => $N('div', {text: 0}, $matrices[1]), this.size, this.size + 1);
 
+    this.inputStack = [this.$inputCells.map(row => row.map(val => val.text))];
+
     const $circles = this.$$('.connections-left circle');
     const inRows = ['inRow1', 'inRow2'] as ('inRow1'|'inRow2')[];
 
     for (const [i, key] of inRows.entries()) {
       slide($circles[i], {
         move: (p: Point) => {
-          // Check that his row is not equal to the other input
+          // Check that this row is not equal to the other input
+          // ^ I removed this feature because it makes it difficult w/ 2x2 matrix to choose which one you want to multiply
           const row = clamp(Math.round((p.y - 20) / 40), 0, this.size - 1);
-          if (this.model.op === 'multiply' || this.model[inRows[i === 0 ? 1 : 0]] !== row) this.model[key] = row;
+          /* if (this.model.op === 'multiply' || this.model[inRows[i === 0 ? 1 : 0]] !== row)*/ this.model[key] = row;
         }
       });
     }
@@ -122,10 +126,25 @@ export class GaussSolver extends CustomElementView {
           val.text = this.$outputCells[i][j].text;
         }
       }
+      this.inputStack.push(this.$outputCells.map(row => row.map(val => val.text)));
+      console.log(this.inputStack);
 
       if (this.checkForSolvedIdentity()) {
         console.log('Success!');
         this.$step.tools.confetti();
+      }
+    });
+
+    const $undoBtn = this.$('.undo');
+    $undoBtn?.on('click', () => {
+      if (this.inputStack.length === 1) return;
+      this.inputStack.pop();
+
+      const newTop = this.inputStack[this.inputStack.length - 1];
+      for (const [i, row] of this.$inputCells.entries()) {
+        for (const [j, val] of row.entries()) {
+          val.text = newTop[i][j];
+        }
       }
     });
 
