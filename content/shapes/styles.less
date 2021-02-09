@@ -10,6 +10,18 @@
 
 x-geopad svg .paths path.geopoly-helper-edge { visibility: hidden; }
 
+button.reset {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: block;
+}
+
+figure svg {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // Section 1: Introduction
 
 #performance-1 {
@@ -250,6 +262,23 @@ x-geopad .paths path.voronoi {
   }
 }
 
+// Section 5: Circles and Circumferences
+
+.wheel-distances svg {
+  path {
+    &.distline, &.wheel-outline {
+      stroke: @red;
+      stroke-width: 3px;
+    }
+    &.wheel-outline {
+      fill: none;
+    }
+  }
+  circle.wheel-body {
+    fill: rgba(0, 0, 0, 0);
+  }
+}
+
 #encasement-estimation {
   figure .tire-circumference {
     width: 600px;
@@ -283,35 +312,6 @@ x-geopad .paths path.voronoi {
 
 .nwse-corner:hover {
   cursor: nwse-resize;
-}
-
-button.reset {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  display: block;
-}
-
-figure svg {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-// Section 5: Circles and Circumferences
-
-.wheel-distances svg {
-  path {
-    &.distline, &.wheel-outline {
-      stroke: @red;
-      stroke-width: 3px;
-    }
-    &.wheel-outline {
-      fill: none;
-    }
-  }
-  circle.wheel-body {
-    fill: rgba(0, 0, 0, 0);
-  }
 }
 
 .map {
