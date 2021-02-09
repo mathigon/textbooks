@@ -2181,6 +2181,7 @@ export function wheels($step: Step) {
     for (const wheel of $step.model['wheels'] as Wheel[]) {
       wheel.distance = 0;
       wheel.$el.setTransform(undefined, undefined);
+      wheel.$wheel.setTransform(undefined, undefined);
       wheel.$outline.draw(wheel.initOutline);
       wheel.$distLine.draw(new Segment(wheel.startBottom, wheel.startBottom));
     }
