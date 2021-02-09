@@ -274,33 +274,29 @@ x-geopad .paths path.voronoi {
       fill: none;
     }
   }
+
   circle.wheel-body {
     fill: rgba(0, 0, 0, 0);
   }
 }
 
-#encasement-estimation {
-  figure .tire-circumference {
+.tire-circumference {
+  width: 600px;
+  margin: auto;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 0;
     width: 600px;
-    margin: auto;
-    position: relative;
-  
-    svg {
-      position: absolute;
-      top: 0;
-      width: 600px;
-    }
-  
-    img {
-      width: 300px;
-      height: 250px;
-      margin-left: 150px;
-      margin-top: 25px;
-    }
-  
-    svg {
-      height: 300px;
-    }
+    height: 300px;
+  }
+
+  img {
+    width: 300px;
+    height: 250px;
+    margin-left: 150px;
+    margin-top: 25px;
   }
 }
 
