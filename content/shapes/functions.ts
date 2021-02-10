@@ -622,6 +622,7 @@ class HelperPoly extends Polygon {
   }
 }
 
+// TODO: Narrow this down to actual options, consider subdividing by element type if necessary
 type MathigonColor =
   'red' |
   'green' |
@@ -1465,6 +1466,7 @@ export async function voronoi1($step: VoronoiStep) {
     if ($step.model.vorOpacity != 0) {
       for (const [index, cell] of cells.entries()) {
         const opacity = cell.over ? $step.model.vorOpacity / 2 : $step.model.vorOpacity / 3;
+        // TODO: get styles out of here
         $canvas.draw(
             cell.poly,
             {
@@ -1496,6 +1498,7 @@ export async function voronoi1($step: VoronoiStep) {
         const strokeWidth = index == shortest.ind ? 2 : 1;
         const opacity = index == shortest.ind ? 1 : dlOpacity;
         if (opacity != 0) {
+          // TODO: get styles out of here
           $canvas.draw(edge, {stroke, strokeWidth, opacity});
         }
       }
