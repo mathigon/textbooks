@@ -1338,8 +1338,8 @@ export function triangleBases($step: Step) {
 
 export function triangleSelection($step: Step) {
   const $svg = $step.$('svg') as SVGParentView;
-  const $pairs = [...Array(3).keys()].map(i => {
-    const ind = i + 1;
+  const $pairs = list(3).map(index => {
+    const ind = index + 1;
     return [
       $svg.$(`#original${ind}`) as SVGView,
       $svg.$(`#partner${ind}`) as SVGView
@@ -2904,11 +2904,11 @@ export function slicing2($step: Step) {
   const bottomRight = new Point(175, 175);
   const bottomLeft = new Point(25, 175);
   type Guide = {$el: SVGView, segment: Segment};
-  const guides: Guide[] = [...Array(2).keys()].map(i => {
+  const guides: Guide[] = list(2).map(index => {
     const $el = $N('path', {}, $svg) as SVGView;
     $el.addClass('slice-guide-2');
     const baseSegment = (new Segment(center.shift(0, -75), center));
-    const rotateBy = (Math.PI / 2) * i;
+    const rotateBy = (Math.PI / 2) * index;
     const segment = baseSegment.rotate(rotateBy, center);
     $el.draw((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2)).rotate(rotateBy, center));
     return {$el, segment};
@@ -2917,11 +2917,11 @@ export function slicing2($step: Step) {
   const $radius = $N('path', {}, $svg) as SVGView;
   $radius.addClass('slice-radius');
   $radius.draw(radius);
-  let startNode: undefined | Point = undefined;
-  let endNode: undefined | Point = undefined;
-  let currentGuide: undefined | Guide = undefined;
-  let cutInProgress: undefined | Segment = undefined;
-  let $cutInProgress: undefined | SVGView = undefined;
+  let startNode: undefined | Point;
+  let endNode: undefined | Point;
+  let currentGuide: undefined | Guide;
+  let cutInProgress: undefined | Segment;
+  let $cutInProgress: undefined | SVGView;
   const cuts: Segment[] = [];
   const $cuts: SVGView[] = [];
   const guideNodes = guides.map(guide => guide.segment.p1);
