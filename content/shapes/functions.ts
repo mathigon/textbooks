@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {tabulate, tabulate2D} from '@mathigon/core';
+import {list, repeat, tabulate, tabulate2D} from '@mathigon/core';
 import {clamp, nearlyEquals} from '@mathigon/fermat';
 import {$N, animate, AnimationResponse, CanvasView, ElementView, EventCallback, loadScript, observe, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Angle, Arc, Circle, intersections, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
@@ -2698,36 +2698,33 @@ export function slicing1($step: Step) {
 
   /** Center of the large pizza */
   const largeCenter = new Point(200, 200);
-  /** Center of the medium pizza */
+  /** Center of the first (leftmost) medium pizza */
   const mediumCenter = new Point(550, 200);
 
-  const largeGuides: Guide[] = [...Array(4).keys()].map(index => {
+  const cutsCount = 4;
+  const cutIndices = list(cutsCount);
+
+  const largeGuides: Guide[] = cutIndices.map(index => {
     const baseSegment = (new Segment(largeCenter.shift(0, -175), largeCenter.shift(0, 175)));
-    const rotateBy = (Math.PI / 4) * index;
+    const rotateBy = (Math.PI / cutsCount) * index;
     const segment = baseSegment.rotate(rotateBy, largeCenter);
     const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, largeCenter));
     path.$el.css({stroke: 'black', 'stroke-width': '4px', 'stroke-dasharray': '10', 'stroke-linecap': 'unset'});
     return {path, segment, index};
   });
   const $largeSlices = $geopad.$svg.$$('.large-slice') as SVGView[];
-  $step.model.largeCuts = [...Array(4).keys()].map(() =>
-    ({path: undefined, segment: undefined})
-  );
+  $step.model.largeCuts = repeat({}, cutsCount);
 
-  const mediumGuides: Guide[] = [...Array(4).keys()].map(index => {
+  const mediumGuides: Guide[] = cutIndices.map(index => {
     const baseSegment = (new Segment(mediumCenter.shift(0, -125), mediumCenter.shift(0, 125)));
-    const rotateBy = (Math.PI / 4) * index;
+    const rotateBy = (Math.PI / cutsCount) * index;
     const segment = baseSegment.rotate(rotateBy, mediumCenter);
     const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, mediumCenter), {classes: 'slice-guide'});
     return {path, segment, index};
   });
   const $mediumSlices = $geopad.$svg.$$('.medium-slice') as SVGView[];
-  $step.model.largeCuts = [...Array(4).keys()].map(() => {
-    return {path: undefined, segment: undefined};
-  });
-  $step.model.mediumCuts = [...Array(4).keys()].map(() => {
-    return {path: undefined, segment: undefined};
-  });
+  $step.model.largeCuts = repeat({}, cutsCount);
+  $step.model.mediumCuts = repeat({}, cutsCount);
 
   const collectNodes =
     (prevNodes: GuideNode[], guide: Guide) =>
@@ -2768,13 +2765,13 @@ export function slicing1($step: Step) {
           if ($step.model.largeCuts[nextIndex].segment != undefined) {
             $step.model.largeCuts[nextIndex].path?.delete(0);
             const index1 = currentGuide!.index;
-            const index2 = index1 + 4;
+            const index2 = index1 + cutsCount;
             separateSlices(index1, index2, $largeSlices, largeCenter, 25);
           }
           if ($step.model.largeCuts[prevIndex].segment != undefined) {
             $step.model.largeCuts[prevIndex].path?.delete(0);
             const index1 = (currentGuide!.index + 7) % 8;
-            const index2 = (index1 + 4) % 8;
+            const index2 = (index1 + cutsCount) % 8;
             separateSlices(index1, index2, $largeSlices, largeCenter, 25);
           }
           if ($step.model.largeCuts[nextIndex].segment == undefined && $step.model.largeCuts[prevIndex].segment == undefined) {
@@ -2792,13 +2789,13 @@ export function slicing1($step: Step) {
           if ($step.model.mediumCuts[nextIndex].segment != undefined) {
             $step.model.mediumCuts[nextIndex].path?.delete(0);
             const index1 = currentGuide!.index;
-            const index2 = index1 + 4;
+            const index2 = index1 + cutsCount;
             separateSlices(index1, index2, $mediumSlices, mediumCenter, 15);
           }
           if ($step.model.mediumCuts[prevIndex].segment != undefined) {
             $step.model.mediumCuts[prevIndex].path?.delete(0);
             const index1 = (currentGuide!.index + 7) % 8;
-            const index2 = (index1 + 4) % 8;
+            const index2 = (index1 + cutsCount) % 8;
             separateSlices(index1, index2, $mediumSlices, mediumCenter, 15);
           }
           if ($step.model.mediumCuts[nextIndex].segment == undefined && $step.model.mediumCuts[prevIndex].segment == undefined) {
