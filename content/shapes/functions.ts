@@ -2708,8 +2708,7 @@ export function slicing1($step: Step) {
     const baseSegment = (new Segment(largeCenter.shift(0, -175), largeCenter.shift(0, 175)));
     const rotateBy = (Math.PI / cutsCount) * index;
     const segment = baseSegment.rotate(rotateBy, largeCenter);
-    const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, largeCenter));
-    path.$el.css({stroke: 'black', 'stroke-width': '4px', 'stroke-dasharray': '10', 'stroke-linecap': 'unset'});
+    const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, largeCenter), {classes: 'slice-guide'});
     return {path, segment, index};
   });
   const $largeSlices = $geopad.$svg.$$('.large-slice') as SVGView[];
