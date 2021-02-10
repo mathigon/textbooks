@@ -2695,7 +2695,10 @@ type GuideNode = {node: Point, guide: Guide};
 
 export function slicing1($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
+
+  /** Center of the large pizza */
   const largeCenter = new Point(200, 200);
+  /** Center of the medium pizza */
   const mediumCenter = new Point(550, 200);
 
   const largeGuides: Guide[] = [...Array(4).keys()].map(index => {
@@ -2706,10 +2709,10 @@ export function slicing1($step: Step) {
     path.$el.css({stroke: 'black', 'stroke-width': '4px', 'stroke-dasharray': '10', 'stroke-linecap': 'unset'});
     return {path, segment, index};
   });
-  const $largeSlices = $geopad.$svg.$$('.large-slice').map(e => e as SVGView);
-  $step.model.largeCuts = [...Array(4).keys()].map(() => {
-    return {path: undefined, segment: undefined};
-  });
+  const $largeSlices = $geopad.$svg.$$('.large-slice') as SVGView[];
+  $step.model.largeCuts = [...Array(4).keys()].map(() =>
+    ({path: undefined, segment: undefined})
+  );
 
   const mediumGuides: Guide[] = [...Array(4).keys()].map(index => {
     const baseSegment = (new Segment(mediumCenter.shift(0, -125), mediumCenter.shift(0, 125)));
@@ -2718,7 +2721,7 @@ export function slicing1($step: Step) {
     const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, mediumCenter), {classes: 'slice-guide'});
     return {path, segment, index};
   });
-  const $mediumSlices = $geopad.$svg.$$('.medium-slice').map(e => e as SVGView);
+  const $mediumSlices = $geopad.$svg.$$('.medium-slice') as SVGView[];
   $step.model.largeCuts = [...Array(4).keys()].map(() => {
     return {path: undefined, segment: undefined};
   });
@@ -2734,10 +2737,10 @@ export function slicing1($step: Step) {
       mediumGuides.reduce(collectNodes, [])
   );
 
-  let startNode: undefined | GuideNode = undefined;
-  let endNode: undefined | Point = undefined;
-  let currentGuide: undefined | Guide = undefined;
-  let $cutInProgress: undefined | SVGView = undefined;
+  let startNode: undefined | GuideNode;
+  let endNode: undefined | Point;
+  let currentGuide: undefined | Guide;
+  let $cutInProgress: undefined | SVGView;
   slide($geopad, {
     $box: $geopad.$svg,
     start: pos => {
