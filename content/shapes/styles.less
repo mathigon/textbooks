@@ -103,11 +103,11 @@ x-geopad .paths path.fill-square {
 // for setupBaseHeight in functions.ts
 x-geopad.base-height .paths path {
   &.edge {
-    color: #000;
+    color: @grey;
     stroke-width: 4px;
   }
   &.edge-hover {
-    color: #fff;
+    color: white;
   }
   &.selected-edge {
     color: @red;
@@ -154,7 +154,7 @@ x-geopad .paths path.voronoi {
   each(@voronoi-colors, {
     &-@{index} { 
       fill: @value;
-      stroke: black;
+      stroke: @grey;
       stroke-width: 2px;
     }
   });
@@ -163,10 +163,10 @@ x-geopad .paths path.voronoi {
 #voronoi-2 x-geopad svg .paths path {
   &.edge {
     stroke-width: 4px;
-    color: #000;
+    color: @grey;
   }
   &.edge-hover {
-    color: #fff;
+    color: white;
   }
   &.selected-edge {
     color: @red;
@@ -199,7 +199,7 @@ x-geopad .paths path.voronoi {
 
 #currys-paradox-1 {
   svg.solution-outline {
-    stroke: black;
+    stroke: @grey;
     stroke-width: 1px;
     fill: none;
   }
@@ -282,7 +282,7 @@ x-geopad .paths path.voronoi {
 // ResizeableSquare
 svg path {
   &.resize-edge {
-    stroke: black;
+    stroke: @grey;
     stroke-width: @resizeable-stroke-width;
     
     &.resize-on-target {
@@ -321,8 +321,8 @@ x-geopad svg path[class="diameter-progress"] {
 // Section 6: Area of Circles
 
 // For 'slicing-1' step
-x-geopad {
-  path.large-slice, path.medium-slice {
+x-geopad svg path {
+  &.large-slice, &.medium-slice {
     transition-property: transform, opacity;
     transition-duration: 1.5s;
 
@@ -331,25 +331,23 @@ x-geopad {
     }
   }
 
-  path.slice-guide {
-    stroke: black;
-    stroke-width: 4px;
+  &[class="slice-guide"], &[class="slice-outline"] {
+    stroke: @grey;
+  }
+  &.slice-guide {
     stroke-dasharray: 10;
     stroke-linecap: unset;
   }
 
-  path.pizza-outline {
+  &.pizza-outline {
     stroke: white;
-    stroke-width: 4px;
   }
 
-  path.slice-outline {
-    stroke: black;
-    stroke-width: 4px;
-  }
-
-  path.slice-dimension {
+  &.slice-dimension {
     stroke: @lime;
+  }
+
+  &.slice-guide, &.pizza-outline, &.slice-outline, &.slice-dimension {
     stroke-width: 4px;
   }
 }
@@ -358,12 +356,12 @@ x-geopad {
 // For 'slicing-2' step
 svg path {
   &.slice-guide-2 {
-    stroke: black;
+    stroke: @grey;
     stroke-width: 1px;
     stroke-dasharray: 3;
   }
   &.slice-radius {
-    stroke: black;
+    stroke: @grey;
     stroke-width: 1px;
   }
   &.slicing-progress {
