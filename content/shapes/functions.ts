@@ -622,19 +622,33 @@ class HelperPoly extends Polygon {
   }
 }
 
+type MathigonColor =
+  'red' |
+  'green' |
+  'blue' |
+  'yellow' |
+  'orange' |
+  'purple' |
+  'teal' |
+  'lime' |
+  'dark-grey' |
+  'grey' |
+  'medium-grey' |
+  'light-grey' |
+  'text-dark' |
+  'text-normal' |
+  'text-medium' |
+  'text-light' |
+  'border-light' |
+  'grey-background' |
+  'dark-mode' |
+  'dark-mode-background';
+
 type RenderedOptions = {
   draggable?: boolean,
   snap?: boolean,
   onEnd?: (last: Point) => void,
-  color?:
-    'red' |
-    'green' |
-    'blue' |
-    'yellow' |
-    'orange' |
-    'purple' |
-    'teal' |
-    'lime'
+  color?: MathigonColor
 };
 
 class RenderedGeopadPoly {
@@ -2997,9 +3011,9 @@ export function slicesArrangement($step: Step) {
   const center = new Point(315, radius + 25);
   const sliceZone = new Rectangle(new Point(5, 400), 620, radius + 20);
   const $sliceZone = $N('path', {}, $geopad.$paths) as SVGView;
-  $sliceZone.css({fill: 'brown'});
+  $sliceZone.addClass('fill red');
   $sliceZone.draw(sliceZone);
-  const slices = initPizza(8, center, radius, {aColor: 'black', bColor: 'black'}, $geopad);
+  const slices = initPizza(8, center, radius, {aColor: 'dark-grey', bColor: 'dark-grey'}, $geopad);
   $geopad.switchTool('move');
   let currentSlice: Slice | undefined;
   let placedCount = 0;
@@ -3036,7 +3050,7 @@ export function slicesArrangement($step: Step) {
           if (placedCount == 8) {
             setTimeout(() => {
               $step.model.lSlices = slices;
-              $step.model.pSlices = initPizza(8, center, radius, {aColor: 'black', bColor: 'black'}, $geopad);
+              $step.model.pSlices = initPizza(8, center, radius, {aColor: 'dark-grey', bColor: 'dark-grey'}, $geopad);
               $step.model.arranged = true;
               $step.score('arranged');
               $step.addHint('correct');
@@ -3050,8 +3064,8 @@ export function slicesArrangement($step: Step) {
     }
   });
   // [TODO]: refactor this to use reactive $step.model.watch drawing approach
-  let aColor = 'black';
-  let bColor = 'black';
+  let aColor: MathigonColor = 'dark-grey';
+  let bColor: MathigonColor = 'dark-grey';
   $step.model.watch((state: any) => {
     const sliceCount = state.n1;
     if (state.arranged) {
@@ -3080,27 +3094,27 @@ export function slicesArrangement($step: Step) {
         const pOther: Slice[] = shortest.group === 'b' ? $step.model.pSlices.groupA : $step.model.pSlices.groupB;
         const lGroup: Slice[] = shortest.group === 'a' ? $step.model.lSlices.groupA : $step.model.lSlices.groupB;
         const lOther: Slice[] = shortest.group === 'b' ? $step.model.lSlices.groupA : $step.model.lSlices.groupB;
-        aColor = shortest.group === 'a' ? 'aqua' : 'black';
-        bColor = shortest.group === 'b' ? 'aqua' : 'black';
+        aColor = shortest.group === 'a' ? 'teal' : 'dark-grey';
+        bColor = shortest.group === 'b' ? 'teal' : 'dark-grey';
         hovering = {
           s: pGroup.concat(lGroup),
           g: shortest.group
         };
-        for (const slice of hovering.s) slice.setArcColor('aqua');
-        for (const slice of pOther.concat(lOther)) slice.setArcColor('black');
+        for (const slice of hovering.s) slice.setArcColor('teal');
+        for (const slice of pOther.concat(lOther)) slice.setArcColor('dark-grey');
       } else {
         hovering = undefined;
-        aColor = bColor = 'black';
-        for (const slice of $step.model.pSlices.all as Slice[]) slice.setArcColor('black');
-        for (const slice of $step.model.lSlices.all as Slice[]) slice.setArcColor('black');
+        aColor = bColor = 'dark-grey';
+        for (const slice of $step.model.pSlices.all as Slice[]) slice.setArcColor('dark-grey');
+        for (const slice of $step.model.lSlices.all as Slice[]) slice.setArcColor('dark-grey');
       }
     }
   });
   $geopad.on('click', () => {
     if (hovering != undefined) {
       for (const slice of hovering.s) slice.setArcColor('lime');
-      aColor = hovering.g === 'a' ? 'lime' : 'black';
-      bColor = hovering.g === 'b' ? 'lime' : 'black';
+      aColor = hovering.g === 'a' ? 'lime' : 'dark-grey';
+      bColor = hovering.g === 'b' ? 'lime' : 'dark-grey';
       selected = true;
     }
   });
@@ -3126,7 +3140,7 @@ function equivAngle(angle: number): number {
   }
 }
 
-function initPizza(slices: number, center: Point, radius: number, colors: {aColor: string, bColor: string}, $geopad: Geopad) {
+function initPizza(slices: number, center: Point, radius: number, colors: {aColor: MathigonColor, bColor: MathigonColor}, $geopad: Geopad) {
   const halfCount = Math.ceil(slices / 2);
   const arcAngle = (2 * Math.PI) / slices;
   const initAngle = arcAngle / 2;
@@ -3147,7 +3161,7 @@ function initPizza(slices: number, center: Point, radius: number, colors: {aColo
   return {all, groupA, groupB};
 }
 
-function initLineup(slices: number, center: Point, radius: number, colors: {aColor: string, bColor: string}, $geopad: Geopad) {
+function initLineup(slices: number, center: Point, radius: number, colors: {aColor: MathigonColor, bColor: MathigonColor}, $geopad: Geopad) {
   const halfCount = Math.ceil(slices / 2);
   const arcAngle = (2 * Math.PI) / slices;
   const all: Slice[] = [];
@@ -3324,8 +3338,8 @@ class Slice {
     }
   }
 
-  setArcColor(name: string) {
-    this.arc.path?.$el.css({stroke: name});
+  setArcColor(name: MathigonColor) {
+    this.arc.path?.$el.addClass(name);
   }
 
   distanceToArc(from: Point) {
