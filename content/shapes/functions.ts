@@ -1609,13 +1609,8 @@ function handlePathing(path: GeoPath, base: GeoPath, heightPath: GeoPath, height
   const correctAngle = (base.value as Segment).perpendicular(pathSegment.p1).angle % Math.PI;
   const pathAngle = pathSegment.angle % Math.PI;
   const perpendicular = pathAngle > correctAngle - angleRange && pathAngle < correctAngle + angleRange;
-  if (perpendicular) {
-    path.$el.addClass('angle-perpendicular');
-    path.$el.removeClass('angle-other');
-  } else {
-    path.$el.addClass('angle-other');
-    path.$el.removeClass('angle-perpendicular');
-  }
+  path.$el.setClass('angle-perpendicular', perpendicular);
+  path.$el.setClass('angle-other', !perpendicular);
 
   const heightRange = 10;
   const atHeight = pathSegment.length > height - heightRange && pathSegment.length < height + heightRange;
