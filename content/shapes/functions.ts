@@ -3005,7 +3005,7 @@ export function slicesArrangement($step: Step) {
   const $sliceZone = $N('path', {}, $geopad.$paths) as SVGView;
   $sliceZone.addClass('fill red');
   $sliceZone.draw(sliceZone);
-  const slices = initPizza(8, center, radius, {aColor: 'dark', bColor: 'dark'}, $geopad);
+  const slices = initPizza(8, center, radius, $geopad);
   $geopad.switchTool('move');
   let currentSlice: Slice | undefined;
   let placedCount = 0;
@@ -3042,7 +3042,7 @@ export function slicesArrangement($step: Step) {
           if (placedCount == 8) {
             setTimeout(() => {
               $step.model.lSlices = slices;
-              $step.model.pSlices = initPizza(8, center, radius, {aColor: 'dark', bColor: 'dark'}, $geopad);
+              $step.model.pSlices = initPizza(8, center, radius, $geopad);
               $step.model.arranged = true;
               $step.score('arranged');
               $step.addHint('correct');
@@ -3063,7 +3063,7 @@ export function slicesArrangement($step: Step) {
     if (state.arranged) {
       for (const slice of state.pSlices.all as Slice[]) slice.remove();
       for (const slice of state.lSlices.all as Slice[]) slice.remove();
-      state.pSlices = initPizza(sliceCount, center, radius, {aColor, bColor}, $geopad);
+      state.pSlices = initPizza(sliceCount, center, radius, $geopad);
       state.lSlices = initLineup(sliceCount, center.shift(0, (1.5 * radius) + 35), radius, {aColor, bColor}, $geopad);
     }
   });
@@ -3132,7 +3132,7 @@ function equivAngle(angle: number): number {
   }
 }
 
-function initPizza(slices: number, center: Point, radius: number, colors: {aColor: GeopadPathColor, bColor: GeopadPathColor}, $geopad: Geopad) {
+function initPizza(slices: number, center: Point, radius: number, $geopad: Geopad) {
   const halfCount = Math.ceil(slices / 2);
   const arcAngle = (2 * Math.PI) / slices;
   const initAngle = arcAngle / 2;
@@ -3142,10 +3142,8 @@ function initPizza(slices: number, center: Point, radius: number, colors: {aColo
   tabulate(index => {
     const slice = new Slice(true, $geopad, radius, arcAngle, center, initAngle + (index * arcAngle));
     if (index < halfCount) {
-      slice.setArcColor(colors.aColor);
       groupA.push(slice);
     } else {
-      slice.setArcColor(colors.bColor);
       groupB.push(slice);
     }
     all.push(slice);
