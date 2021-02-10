@@ -2708,7 +2708,11 @@ export function slicing1($step: Step) {
     const baseSegment = (new Segment(largeCenter.shift(0, -175), largeCenter.shift(0, 175)));
     const rotateBy = (Math.PI / cutsCount) * index;
     const segment = baseSegment.rotate(rotateBy, largeCenter);
-    const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, largeCenter), {classes: 'slice-guide'});
+    const path =
+      $geopad.drawPath(
+          (new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, largeCenter),
+          {classes: 'slice-guide'}
+      );
     return {path, segment, index};
   });
   const $largeSlices = $geopad.$svg.$$('.large-slice') as SVGView[];
@@ -2718,7 +2722,11 @@ export function slicing1($step: Step) {
     const baseSegment = (new Segment(mediumCenter.shift(0, -125), mediumCenter.shift(0, 125)));
     const rotateBy = (Math.PI / cutsCount) * index;
     const segment = baseSegment.rotate(rotateBy, mediumCenter);
-    const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, mediumCenter), {classes: 'slice-guide'});
+    const path =
+      $geopad.drawPath(
+          (new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, mediumCenter),
+          {classes: 'slice-guide'}
+      );
     return {path, segment, index};
   });
   const $mediumSlices = $geopad.$svg.$$('.medium-slice') as SVGView[];
