@@ -137,12 +137,11 @@ Let’s plot the relation {(0,0), (1,4), (-5,3), (-2,-1), (4, -3)} on the coordi
       circle.green(x="point(1, 4)")
 
 ---
-
 > id: vertical-line-test
 
 Let’s look at the graphs of the relations we have been working with so far. Notice how the mapping diagram relates to the graph. The axes in the coordinate plane below take names other than x and y, the variables we’ve seen before. This graph, for instance, includes a name- and a house-axis.
 
-TODO Interactive here
+    x-geopad(width=500 height=350 x-axis="-1,6,1" y-axis="0,4,1" axes grid padding=25): svg
 
 Using coordinate systems, it is also very easy to check whether a relation is many-to-many, or one-to-many. The many-to-one and many-to-many graphs have [[at least one | no]] points that share an x-value. The one-to-one and one-to-many graphs have [[no | at least one]] points that share an x-value.
 

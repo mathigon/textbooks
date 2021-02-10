@@ -60,3 +60,41 @@ export function coordinatePlots($step: Step) {
     $geopad.switchTool('move');
   });
 }
+
+export function verticalLineTest($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  const $svg = $geopad.$('svg')!;
+  const $labels = $geopad.$$('svg .labels text')!;
+
+  // HACK: To get string axis labels I am simply replacing the contents of the axis label text elements.
+  // TODO: Make names interactively update to reflect mappings assigned in earlier interactive
+
+  const $xLabels = $labels.slice(0, 6);
+  const $yLabels = $labels.slice(6, 11);
+
+  const nameMappings: Record<string, string> = {
+    '-1': '',
+    '0': '',
+    '1': 'Lynch',
+    '2': 'Switch',
+    '3': 'Derwent',
+    '4': 'Zabini',
+    '5': 'Clearwater'
+  }
+
+  const houseMappings: Record<string, string> = {
+    '0': '',
+    '1': 'Lionpaw',
+    '2': 'Eaglewing',
+    '3': 'Badgerclaw',
+    '4': 'Serpentfang'
+  }
+
+  $xLabels.forEach(label => {
+    label.text = nameMappings[label.text.toString()];
+  });
+
+  $yLabels.forEach(label => {
+    label.text = houseMappings[label.text.toString()];
+  });
+}
