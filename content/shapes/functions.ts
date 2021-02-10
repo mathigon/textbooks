@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {list, repeat, tabulate, tabulate2D} from '@mathigon/core';
+import {repeat, tabulate, tabulate2D} from '@mathigon/core';
 import {clamp, nearlyEquals} from '@mathigon/fermat';
 import {$N, animate, AnimationResponse, CanvasView, ElementView, EventCallback, loadScript, observe, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Angle, Arc, Circle, intersections, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
@@ -1342,13 +1342,13 @@ export function triangleBases($step: Step) {
 
 export function triangleSelection($step: Step) {
   const $svg = $step.$('svg') as SVGParentView;
-  const $pairs = list(3).map(index => {
+  const $pairs = tabulate(index => {
     const ind = index + 1;
     return [
       $svg.$(`#original${ind}`) as SVGView,
       $svg.$(`#partner${ind}`) as SVGView
     ];
-  });
+  }, 3);
   let clicks = 0;
   for (const [$a, $b] of $pairs) {
     $a.on('click', () => {
@@ -1459,7 +1459,7 @@ export async function voronoi1($step: VoronoiStep) {
             cell.poly,
             {
               fill: voronoiColours[index % 9],
-              stroke: 'black',
+              stroke: GREY,
               strokeWidth: 2,
               opacity
             }
@@ -2706,9 +2706,8 @@ export function slicing1($step: Step) {
   const mediumCenter = new Point(550, 200);
 
   const cutsCount = 4;
-  const cutIndices = list(cutsCount);
 
-  const largeGuides: Guide[] = cutIndices.map(index => {
+  const largeGuides: Guide[] = tabulate(index => {
     const baseSegment = (new Segment(largeCenter.shift(0, -175), largeCenter.shift(0, 175)));
     const rotateBy = (Math.PI / cutsCount) * index;
     const segment = baseSegment.rotate(rotateBy, largeCenter);
@@ -2718,11 +2717,11 @@ export function slicing1($step: Step) {
           {classes: 'slice-guide'}
       );
     return {path, segment, index};
-  });
+  }, cutsCount);
   const $largeSlices = $geopad.$svg.$$('.large-slice') as SVGView[];
   $step.model.largeCuts = repeat({}, cutsCount);
 
-  const mediumGuides: Guide[] = cutIndices.map(index => {
+  const mediumGuides: Guide[] = tabulate(index => {
     const baseSegment = (new Segment(mediumCenter.shift(0, -125), mediumCenter.shift(0, 125)));
     const rotateBy = (Math.PI / cutsCount) * index;
     const segment = baseSegment.rotate(rotateBy, mediumCenter);
@@ -2732,7 +2731,7 @@ export function slicing1($step: Step) {
           {classes: 'slice-guide'}
       );
     return {path, segment, index};
-  });
+  }, cutsCount);
   const $mediumSlices = $geopad.$svg.$$('.medium-slice') as SVGView[];
   $step.model.largeCuts = repeat({}, cutsCount);
   $step.model.mediumCuts = repeat({}, cutsCount);
@@ -2908,7 +2907,7 @@ export function slicing2($step: Step) {
   const bottomRight = new Point(175, 175);
   const bottomLeft = new Point(25, 175);
   type Guide = {$el: SVGView, segment: Segment};
-  const guides: Guide[] = list(2).map(index => {
+  const guides: Guide[] = tabulate(index => {
     const $el = $N('path', {}, $svg) as SVGView;
     $el.addClass('slice-guide-2');
     const baseSegment = (new Segment(center.shift(0, -75), center));
@@ -2916,7 +2915,7 @@ export function slicing2($step: Step) {
     const segment = baseSegment.rotate(rotateBy, center);
     $el.draw((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2)).rotate(rotateBy, center));
     return {$el, segment};
-  });
+  }, 2);
   const radius = new Segment(new Point(25, 100), center);
   const $radius = $N('path', {}, $svg) as SVGView;
   $radius.addClass('slice-radius');
