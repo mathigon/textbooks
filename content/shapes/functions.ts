@@ -15,7 +15,7 @@ import {VoronoiStep} from './components/voronoi';
 
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
-import {ORANGE, TEAL} from '../shared/constants';
+import {GREY, ORANGE, TEAL} from '../shared/constants';
 
 // SECTION 1: Introduction
 
@@ -1455,7 +1455,6 @@ export async function voronoi1($step: VoronoiStep) {
     if ($step.model.vorOpacity != 0) {
       for (const [index, cell] of cells.entries()) {
         const opacity = cell.over ? $step.model.vorOpacity / 2 : $step.model.vorOpacity / 3;
-        // TODO: get styles out of here
         $canvas.draw(
             cell.poly,
             {
@@ -1483,11 +1482,10 @@ export async function voronoi1($step: VoronoiStep) {
       }
 
       for (const [index, edge] of edges.entries()) {
-        const stroke = index == shortest.ind ? 'red' : 'black';
+        const stroke = index == shortest.ind ? 'red' : GREY;
         const strokeWidth = index == shortest.ind ? 2 : 1;
         const opacity = index == shortest.ind ? 1 : dlOpacity;
         if (opacity != 0) {
-          // TODO: get styles out of here
           $canvas.draw(edge, {stroke, strokeWidth, opacity});
         }
       }
