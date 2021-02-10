@@ -2848,7 +2848,7 @@ export function slicing1($step: Step) {
     $geopad.drawPath(largeBase, {classes: 'slice-dimension'}).setLabel('16.8 cm');
     $geopad.drawPath(largeHeight, {classes: 'slice-dimension'}).setLabel('20.3 cm');
     for (const [index, $slice] of $largeSlices.entries()) {
-      if (index != 7) $slice.css({opacity: 0.5});
+      if (index != 7) $slice.addClass('background-slice');
     }
 
     const mediumSlicePoints =
@@ -2868,7 +2868,7 @@ export function slicing1($step: Step) {
     $geopad.drawPath(mediumBase, {classes: 'slice-dimension'}).setLabel('12.2 cm');
     $geopad.drawPath(mediumHeight, {classes: 'slice-dimension'}).setLabel('14.8 cm');
     for (const [index, $slice] of $mediumSlices.entries()) {
-      if (index != 7) $slice.css({opacity: 0.5});
+      if (index != 7) $slice.addClass('background-slice');
     }
   });
 
@@ -2906,7 +2906,7 @@ export function slicing2($step: Step) {
   type Guide = {$el: SVGView, segment: Segment};
   const guides: Guide[] = [...Array(2).keys()].map(i => {
     const $el = $N('path', {}, $svg) as SVGView;
-    $el.css({stroke: 'black', 'stroke-width': '1px', 'stroke-dasharray': '3'});
+    $el.addClass('slice-guide-2');
     const baseSegment = (new Segment(center.shift(0, -75), center));
     const rotateBy = (Math.PI / 2) * i;
     const segment = baseSegment.rotate(rotateBy, center);
@@ -2915,7 +2915,7 @@ export function slicing2($step: Step) {
   });
   const radius = new Segment(new Point(25, 100), center);
   const $radius = $N('path', {}, $svg) as SVGView;
-  $radius.css({stroke: 'black', 'stroke-width': '1px'});
+  $radius.addClass('slice-radius');
   $radius.draw(radius);
   let startNode: undefined | Point = undefined;
   let endNode: undefined | Point = undefined;
@@ -2940,20 +2940,20 @@ export function slicing2($step: Step) {
         endNode = nearestSimple(current, guideNodes);
         currentGuide = guides.find(g => (g.segment.p1.equals(endNode!) || g.segment.p2.equals(endNode!)))!;
       }
-      $cutInProgress!.css({stroke: 'cyan', 'stroke-width': '1px'});
+      $cutInProgress?.addClass('slicing-progress');
       const projected = currentGuide.segment.project(current);
       const endsX = [startNode!.x, endNode!.x].sort((a, b) => a - b);
       const endsY = [startNode!.y, endNode!.y].sort((a, b) => a - b);
       const cutProgress = new Point(clamp(projected.x, endsX[0], endsX[1]), clamp(projected.y, endsY[0], endsY[1]));
       cutInProgress = new Segment(startNode!, cutProgress);
-      $cutInProgress!.draw(cutInProgress);
+      $cutInProgress?.draw(cutInProgress);
     },
     end: () => {
       $cutInProgress!.remove();
       const cutFinal = new Segment(cutInProgress!.p1, endNode!);
       if (cuts.every(cut => !cut.equals(cutFinal))) cuts.push(cutFinal);
       const $cut = $N('path', {}, $svg) as SVGView;
-      $cut.css({stroke: 'black', 'stroke-width': '1px'});
+      $cut.addClass('slice-radius');
       $cut.draw(cutFinal);
       $cuts.push($cut);
       startNode = endNode = currentGuide = cutInProgress = $cutInProgress = undefined;
@@ -2961,12 +2961,11 @@ export function slicing2($step: Step) {
         $step.score('sliced');
         const sideA = new Segment(center.shift(0, -75), topRight);
         const $sideA = $N('path', {}, $svg) as SVGView;
-        const css = {stroke: 'black', 'stroke-width': '1px'};
-        $sideA.css(css);
+        $sideA.addClass('slice-radius');
         $sideA.draw(sideA);
         const sideB = new Segment(center.shift(75, 0), topRight);
         const $sideB = $N('path', {}, $svg) as SVGView;
-        $sideB.css(css);
+        $sideB.addClass('slice-radius');
         $sideB.draw(sideB);
         for (const guide of guides) guide.$el.remove();
         $radius.remove();
@@ -2986,7 +2985,7 @@ export function slicing2($step: Step) {
         new Segment(center, center.shift(-75, 0))
       ]) {
       const $e = $N('path', {}, $svg) as SVGView;
-      $e.css({stroke: 'black', 'stroke-width': '1px'});
+      $e.addClass('slice-radius');
       $e.draw(segment);
     }
   });

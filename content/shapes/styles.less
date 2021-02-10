@@ -320,10 +320,15 @@ x-geopad svg path[class="diameter-progress"] {
 
 // Section 6: Area of Circles
 
+// For 'slicing-1' step
 x-geopad {
   path.large-slice, path.medium-slice {
     transition-property: transform, opacity;
     transition-duration: 1.5s;
+
+    &.background-slice {
+      opacity: 0.5;
+    }
   }
 
   path.slice-guide {
@@ -344,8 +349,26 @@ x-geopad {
   }
 
   path.slice-dimension {
-    stroke: lime;
+    stroke: @lime;
     stroke-width: 4px;
+  }
+}
+
+
+// For 'slicing-2' step
+x-geopad svg path {
+  &.slice-guide-2 {
+    stroke: black;
+    stroke-width: 1px;
+    stroke-dasharray: 3;
+  }
+  &.slice-radius {
+    stroke: black;
+    stroke-width: 1px;
+  }
+  &.slicing-progress {
+    stroke: @teal;
+    stroke-width: 1px;
   }
 }
 
