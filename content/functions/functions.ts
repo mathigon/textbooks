@@ -59,6 +59,5 @@ export function coordinatePlots($step: Step) {
 
   $step.onScore('p0 p1 p2', () => {
     $geopad.switchTool('move');
-    // TODO Maybe delete any stray incorrect points?
   });
 }
