@@ -29,7 +29,7 @@ export class GaussSolver extends CustomElementView {
         .evaluate({'[': (...args: number[]) => [...args] as any}) as unknown as number[][];
 
     this.size = input.length;
-    this.bindModel(observe({input, output: input.map(row => [...row]), size: this.size, inRow1: 0, inRow2: 1, outRow1: 0, outRow2: 1, factor: 1, factorString: '1'}));
+    this.bindModel(observe({input, output: this.copyMatrix(input), size: this.size, inRow1: 0, inRow2: 1, outRow1: 0, outRow2: 1, factor: 1, factorString: '1'}));
 
     // Set up the input and output matrices
     const $matrices = this.$$('.matrix');
@@ -40,7 +40,7 @@ export class GaussSolver extends CustomElementView {
     );
     this.$outputCells = tabulate2D(() => $N('div', {text: 0}, $matrices[1]), this.size, this.size + 1);
 
-    this.inputStack = [input.map(row => [...row])]; // pushes copy of input onto stack
+    this.inputStack = [this.copyMatrix(input)]; // pushes copy of input onto stack
 
     const $circles = this.$$('.connections-left circle');
     const inRows = ['inRow1', 'inRow2'] as ('inRow1'|'inRow2')[];
@@ -93,13 +93,18 @@ export class GaussSolver extends CustomElementView {
       // swapping input and output
       for (const [i, row] of this.$inputCells.entries()) {
         for (const [j, val] of row.entries()) {
+          // move output to input, and update
           this.model.input[i][j] = this.model.output[i][j];
           val.text = '' + this.model.input[i][j];
+
+          // apply operation to get output values, and update
           this.handleOperation(this.model, i, j);
           this.$outputCells[i][j].text = '' + this.model.output[i][j];
         }
       }
-      this.inputStack.push(input.map(row => [...row]));
+      this.inputStack.push(this.copyMatrix(this.model.input));
+      console.log(`PUSH: inputStack has ${this.inputStack.length} elements`);
+      console.log(this.inputStack);
 
       if (this.checkForSolvedIdentity()) {
         this.$step.addHint('correct');
@@ -110,11 +115,17 @@ export class GaussSolver extends CustomElementView {
     $undoBtn?.on('click', () => {
       if (this.inputStack.length === 1) return;
       this.inputStack.pop();
+      console.log(`POP: inputStack has ${this.inputStack.length} elements`);
+      console.log(this.inputStack);
 
-      const newTop = this.inputStack[this.inputStack.length - 1];
+      this.model.input = this.copyMatrix(this.inputStack[this.inputStack.length - 1]);
       for (const [i, row] of this.$inputCells.entries()) {
         for (const [j, val] of row.entries()) {
-          val.text = '' + newTop[i][j];
+          val.text = '' + this.model.input[i][j];
+
+          // apply operation to get output values, and update
+          this.handleOperation(this.model, i, j);
+          this.$outputCells[i][j].text = '' + this.model.output[i][j];
         }
       }
     });
@@ -134,6 +145,10 @@ export class GaussSolver extends CustomElementView {
         this.model.factor = 1;
       }
     });
+  }
+
+  private copyMatrix(matrix: number[][]) {
+    return matrix.map(row => [...row]);
   }
 
   private handleOperation(state: Model, i: number, j: number) {
