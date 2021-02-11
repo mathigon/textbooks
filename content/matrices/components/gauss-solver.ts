@@ -66,16 +66,16 @@ export class GaussSolver extends CustomElementView {
     // Watch for change and update display of output cells
     this.model.watch((state) => {
 
-      console.log(`State: {
-          op: ${state.op},
-          factor: ${state.factor}, factorString: ${state.factorString},
-          inRow1: ${state.inRow1}, inRow2: ${state.inRow2},
-          outRow1: ${state.outRow1}, outRow2: ${state.outRow2}
-        }`);
-      console.log(`Input:`);
-      console.log(state.input);
-      console.log(`Output:`);
-      console.log(state.output);
+      // console.log(`State: {
+      //     op: ${state.op},
+      //     factor: ${state.factor}, factorString: ${state.factorString},
+      //     inRow1: ${state.inRow1}, inRow2: ${state.inRow2},
+      //     outRow1: ${state.outRow1}, outRow2: ${state.outRow2}
+      //   }`);
+      // // console.log(`Input:`);
+      // console.log(state.input);
+      // console.log(`Output:`);
+      // console.log(state.output);
       for (const [i, row] of this.$outputCells.entries()) {
         for (const [j, _val] of row.entries()) {
 
@@ -103,8 +103,8 @@ export class GaussSolver extends CustomElementView {
         }
       }
       this.inputStack.push(this.copyMatrix(this.model.input));
-      console.log(`PUSH: inputStack has ${this.inputStack.length} elements`);
-      console.log(this.inputStack);
+      // console.log(`PUSH: inputStack has ${this.inputStack.length} elements`);
+      // console.log(this.inputStack);
 
       if (this.checkForSolvedIdentity()) {
         this.$step.addHint('correct');
@@ -115,8 +115,8 @@ export class GaussSolver extends CustomElementView {
     $undoBtn?.on('click', () => {
       if (this.inputStack.length === 1) return;
       this.inputStack.pop();
-      console.log(`POP: inputStack has ${this.inputStack.length} elements`);
-      console.log(this.inputStack);
+      // console.log(`POP: inputStack has ${this.inputStack.length} elements`);
+      // console.log(this.inputStack);
 
       this.model.input = this.copyMatrix(this.inputStack[this.inputStack.length - 1]);
       for (const [i, row] of this.$inputCells.entries()) {
@@ -200,7 +200,7 @@ export class GaussSolver extends CustomElementView {
   }
 
   checkForSolvedIdentity(): boolean {
-    console.log('Checking for solved identity');
+    // console.log('Checking for solved identity');
     const numRows = this.$inputCells.length;
 
     for (let i = 0; i < numRows; i++) {
