@@ -22,14 +22,14 @@ export class GaussSolver extends CustomElementView {
   $inputCells!: ElementView[][]; // Array of all cells in the left matrix.
   $outputCells!: ElementView[][]; // Array of all cells in the right matrix.
   $step!: Step;
-  inputStack!: string[][][];
+  inputStack!: number[][][];
 
   ready() {
     const input = Expression.parse(this.attr('matrix'))
         .evaluate({'[': (...args: number[]) => [...args] as any}) as unknown as number[][];
 
     this.size = input.length;
-    this.bindModel(observe({input, output: input, size: this.size, inRow1: 0, inRow2: 1, outRow1: 0, outRow2: 1, factor: 1, factorString: '1'}));
+    this.bindModel(observe({input, output: input.map(row => [...row]), size: this.size, inRow1: 0, inRow2: 1, outRow1: 0, outRow2: 1, factor: 1, factorString: '1'}));
 
     // Set up the input and output matrices
     const $matrices = this.$$('.matrix');
@@ -40,10 +40,11 @@ export class GaussSolver extends CustomElementView {
     );
     this.$outputCells = tabulate2D(() => $N('div', {text: 0}, $matrices[1]), this.size, this.size + 1);
 
-    this.inputStack = [this.$inputCells.map(row => row.map(val => val.text))];
+    this.inputStack = [input.map(row => [...row])]; // pushes copy of input onto stack
 
     const $circles = this.$$('.connections-left circle');
     const inRows = ['inRow1', 'inRow2'] as ('inRow1'|'inRow2')[];
+    const outRows = ['outRow1', 'outRow2'] as ('outRow1'|'outRow2')[];
 
     for (const [i, key] of inRows.entries()) {
       slide($circles[i], {
@@ -51,20 +52,13 @@ export class GaussSolver extends CustomElementView {
           // Check that this row is not equal to the other input
           // ^ I removed this feature because it makes it difficult w/ 2x2 matrix to choose which one you want to multiply
           const row = clamp(Math.round((p.y - 20) / 40), 0, this.size - 1);
-          /* if (this.model.op === 'multiply' || this.model[inRows[i === 0 ? 1 : 0]] !== row)*/ this.model[key] = row;
-        }
-      });
-    }
-
-    const $arrows = this.$$('.connections-right polygon');
-    const outRows = ['outRow1', 'outRow2'] as ('outRow1'|'outRow2')[];
-
-    for (const [i, key] of outRows.entries()) {
-      slide($arrows[i], {
-        move: (p: Point) => {
-          // Check that this row not equal to the other output
-          const row = clamp(Math.round((p.y - 20) / 40), 0, this.size - 1);
+          /* if (this.model.op === 'multiply' || this.model[inRows[i === 0 ? 1 : 0]] !== row)*/
           this.model[key] = row;
+          if (this.model.op === 'swap') {
+            this.model[outRows[i === 0 ? 1 : 0]] = row; // swap crosses 0 and 1
+          } else {
+            this.model[outRows[i]] = row; // also update outRow
+          }
         }
       });
     }
@@ -78,41 +72,17 @@ export class GaussSolver extends CustomElementView {
           inRow1: ${state.inRow1}, inRow2: ${state.inRow2},
           outRow1: ${state.outRow1}, outRow2: ${state.outRow2}
         }`);
+      console.log(`Input:`);
+      console.log(state.input);
+      console.log(`Output:`);
+      console.log(state.output);
       for (const [i, row] of this.$outputCells.entries()) {
-        for (const [j, val] of row.entries()) {
+        for (const [j, _val] of row.entries()) {
 
-          switch (state.op) {
-            case 'multiply':
-              // "Multiply a row by a non-zero factor"
-              if (state.factor && i === state.outRow1) {
-                const m = Expression.parse(this.$inputCells[state.inRow1][j].text).evaluate();
-                val.text = '' + (state.factor * m);
-              } else {
-                val.text = this.$inputCells[i][j].text;
-              }
-              break;
-            case 'add':
-              // "Add a multiple of one row to another"
-              val.text = this.$inputCells[i][j].text;
-              if (state.factor && i === state.outRow1) {
-                const c1 = Expression.parse(this.$inputCells[state.inRow1][j].text).evaluate();
-                const c2 = Expression.parse(this.$inputCells[state.inRow2][j].text).evaluate();
-                val.text = '' + (c1 + state.factor * c2);
-              } else {
-                val.text = this.$inputCells[i][j].text;
-              }
-              break;
-            case 'swap':
-              // "Swap two rows"
-              if (i === state.outRow1) {
-                val.text = this.$inputCells[state.inRow1][j].text;
-              } else if (i === state.outRow2) {
-                val.text = this.$inputCells[state.inRow2][j].text;
-              } else {
-                val.text = this.$inputCells[i][j].text;
-              }
-              break;
-          }
+          this.handleOperation(state, i, j);
+
+          // FIXME: @philipp is there an alternative to this? With binding?
+          _val.text = '' + this.model.output[i][j];
         }
       }
     });
@@ -123,15 +93,16 @@ export class GaussSolver extends CustomElementView {
       // swapping input and output
       for (const [i, row] of this.$inputCells.entries()) {
         for (const [j, val] of row.entries()) {
-          val.text = this.$outputCells[i][j].text;
+          this.model.input[i][j] = this.model.output[i][j];
+          val.text = '' + this.model.input[i][j];
+          this.handleOperation(this.model, i, j);
+          this.$outputCells[i][j].text = '' + this.model.output[i][j];
         }
       }
-      this.inputStack.push(this.$outputCells.map(row => row.map(val => val.text)));
-      console.log(this.inputStack);
+      this.inputStack.push(input.map(row => [...row]));
 
       if (this.checkForSolvedIdentity()) {
-        console.log('Success!');
-        this.$step.tools.confetti();
+        this.$step.addHint('correct');
       }
     });
 
@@ -143,7 +114,7 @@ export class GaussSolver extends CustomElementView {
       const newTop = this.inputStack[this.inputStack.length - 1];
       for (const [i, row] of this.$inputCells.entries()) {
         for (const [j, val] of row.entries()) {
-          val.text = newTop[i][j];
+          val.text = '' + newTop[i][j];
         }
       }
     });
@@ -163,6 +134,54 @@ export class GaussSolver extends CustomElementView {
         this.model.factor = 1;
       }
     });
+  }
+
+  private handleOperation(state: Model, i: number, j: number) {
+    switch (state.op) {
+      case 'multiply':
+        this.handleMultiply(state, i, j);
+        break;
+      case 'add':
+        this.handleAdd(state, i, j);
+        break;
+      case 'swap':
+        this.handleSwap(state, i, j);
+        break;
+    }
+  }
+
+  private handleMultiply(state: Model, i: number, j: number) {
+    if (state.factor && i === state.inRow1) {
+      const m = this.model.input[state.inRow1][j];
+      this.model.output[i][j] = state.factor * m;
+    } else {
+      this.model.output[i][j] = this.model.input[i][j];
+    }
+    this.model.outRow1 = this.model.inRow1;
+  }
+
+  private handleAdd(state: Model, i: number, j: number) {
+    this.model.output[i][j] = this.model.input[i][j];
+    if (state.factor && i === state.outRow1) {
+      const c1 = this.model.input[state.inRow1][j];
+      const c2 = this.model.input[state.inRow2][j];
+      const write = c1 + state.factor * c2;
+      this.model.output[i][j] = write;
+
+    } else {
+      this.model.output[i][j] = this.model.input[i][j];
+    }
+    this.model.outRow1 = this.model.inRow1;
+  }
+
+  private handleSwap(state: Model, i: number, j: number) {
+    if (i === state.outRow1) {
+      this.model.output[i][j] = this.model.input[state.inRow2][j];
+    } else if (i === state.outRow2) {
+      this.model.output[i][j] = this.model.input[state.inRow1][j];
+    } else {
+      this.model.output[i][j] = this.model.input[i][j];
+    }
   }
 
   checkForSolvedIdentity(): boolean {
