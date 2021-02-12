@@ -46,7 +46,10 @@ export class GaussSolver extends CustomElementView {
     const inRows = ['inRow1', 'inRow2'] as ('inRow1'|'inRow2')[];
     const outRows = ['outRow1', 'outRow2'] as ('outRow1'|'outRow2')[];
 
-    for (const [i, key] of inRows.entries()) {
+    /**
+     * When a circle is moved, update the values of "inRow1" and "inRow2"
+     */
+    for (const [i, key] of inRows.entries()) { // inRow1
       slide($circles[i], {
         move: (p: Point) => {
           // Check that this row is not equal to the other input
@@ -54,83 +57,27 @@ export class GaussSolver extends CustomElementView {
           const row = clamp(Math.round((p.y - 20) / 40), 0, this.size - 1);
           /* if (this.model.op === 'multiply' || this.model[inRows[i === 0 ? 1 : 0]] !== row)*/
           this.model[key] = row;
-          if (this.model.op === 'swap') {
-            this.model[outRows[i === 0 ? 1 : 0]] = row; // swap crosses 0 and 1
-          } else {
-            this.model[outRows[i]] = row; // also update outRow
-          }
         }
       });
     }
 
-    // Watch for change and update display of output cells
+    /**
+     * Watch for change and update display of output cells
+     */
     this.model.watch((state) => {
-
-      // console.log(`State: {
-      //     op: ${state.op},
-      //     factor: ${state.factor}, factorString: ${state.factorString},
-      //     inRow1: ${state.inRow1}, inRow2: ${state.inRow2},
-      //     outRow1: ${state.outRow1}, outRow2: ${state.outRow2}
-      //   }`);
-      // // console.log(`Input:`);
-      // console.log(state.input);
-      // console.log(`Output:`);
-      // console.log(state.output);
       for (const [i, row] of this.$outputCells.entries()) {
         for (const [j, _val] of row.entries()) {
-
           this.handleOperation(state, i, j);
-
           // FIXME: @philipp is there an alternative to this? With binding?
           _val.text = '' + this.model.output[i][j];
         }
       }
     });
 
-    // Button to Apply Row Operation
-    const $applyBtn = this.$('.apply');
-    $applyBtn?.on('click', () => {
-      // swapping input and output
-      for (const [i, row] of this.$inputCells.entries()) {
-        for (const [j, val] of row.entries()) {
-          // move output to input, and update
-          this.model.input[i][j] = this.model.output[i][j];
-          val.text = '' + this.model.input[i][j];
-
-          // apply operation to get output values, and update
-          this.handleOperation(this.model, i, j);
-          this.$outputCells[i][j].text = '' + this.model.output[i][j];
-        }
-      }
-      this.inputStack.push(this.copyMatrix(this.model.input));
-      // console.log(`PUSH: inputStack has ${this.inputStack.length} elements`);
-      // console.log(this.inputStack);
-
-      if (this.checkForSolvedIdentity()) {
-        this.$step.addHint('correct');
-      }
-    });
-
-    const $undoBtn = this.$('.undo');
-    $undoBtn?.on('click', () => {
-      if (this.inputStack.length === 1) return;
-      this.inputStack.pop();
-      // console.log(`POP: inputStack has ${this.inputStack.length} elements`);
-      // console.log(this.inputStack);
-
-      this.model.input = this.copyMatrix(this.inputStack[this.inputStack.length - 1]);
-      for (const [i, row] of this.$inputCells.entries()) {
-        for (const [j, val] of row.entries()) {
-          val.text = '' + this.model.input[i][j];
-
-          // apply operation to get output values, and update
-          this.handleOperation(this.model, i, j);
-          this.$outputCells[i][j].text = '' + this.model.output[i][j];
-        }
-      }
-    });
-
-    // watch for factor change
+    /**
+     * Watch for FACTOR change
+     * (can coexist with other watch function)
+     */
     this.model.watch((state) => {
       let _parseable = true;
       let expr;
@@ -145,6 +92,12 @@ export class GaussSolver extends CustomElementView {
         this.model.factor = 1;
       }
     });
+
+    // APPLY + UNDO buttons
+    const $applyBtn = this.$('.apply');
+    $applyBtn?.on('click', this.actionApply.bind(this));
+    const $undoBtn = this.$('.undo');
+    $undoBtn?.on('click', this.actionUndo.bind(this));
   }
 
   private copyMatrix(matrix: number[][]) {
@@ -190,15 +143,56 @@ export class GaussSolver extends CustomElementView {
   }
 
   private handleSwap(state: Model, i: number, j: number) {
-    if (i === state.outRow1) {
-      this.model.output[i][j] = this.model.input[state.inRow2][j];
-    } else if (i === state.outRow2) {
-      this.model.output[i][j] = this.model.input[state.inRow1][j];
-    } else {
-      this.model.output[i][j] = this.model.input[i][j];
+    // FIXME: swap 2 (on update model)
+  }
+
+  /**
+   * Apply the Action button
+   */
+  private actionApply() {
+    // swapping input and output
+    for (const [i, row] of this.$inputCells.entries()) {
+      for (const [j, val] of row.entries()) {
+        // move output to input, and update
+        this.model.input[i][j] = this.model.output[i][j];
+        val.text = '' + this.model.input[i][j];
+
+        // apply operation to get output values, and update
+        this.handleOperation(this.model, i, j);
+        this.$outputCells[i][j].text = '' + this.model.output[i][j];
+      }
+    }
+    this.inputStack.push(this.copyMatrix(this.model.input));
+
+    if (this.checkForSolvedIdentity()) {
+      this.$step.addHint('correct');
     }
   }
 
+  /**
+   * Apply the Undo button
+   */
+  private actionUndo() {
+    if (this.inputStack.length === 1) return;
+    this.inputStack.pop();
+    // console.log(`POP: inputStack has ${this.inputStack.length} elements`);
+    // console.log(this.inputStack);
+
+    this.model.input = this.copyMatrix(this.inputStack[this.inputStack.length - 1]);
+    for (const [i, row] of this.$inputCells.entries()) {
+      for (const [j, val] of row.entries()) {
+        val.text = '' + this.model.input[i][j];
+
+        // apply operation to get output values, and update
+        this.handleOperation(this.model, i, j);
+        this.$outputCells[i][j].text = '' + this.model.output[i][j];
+      }
+    }
+  }
+
+  /**
+   * Check if the cells in the input matrix equal the identity.
+   */
   checkForSolvedIdentity(): boolean {
     // console.log('Checking for solved identity');
     const numRows = this.$inputCells.length;
