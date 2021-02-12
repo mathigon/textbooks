@@ -52,11 +52,12 @@ export class GaussSolver extends CustomElementView {
     for (const [i, key] of inRows.entries()) { // inRow1
       slide($circles[i], {
         move: (p: Point) => {
-          // Check that this row is not equal to the other input
-          // ^ I removed this feature because it makes it difficult w/ 2x2 matrix to choose which one you want to multiply
           const row = clamp(Math.round((p.y - 20) / 40), 0, this.size - 1);
+          // Check that this row is not equal to the other input
+          // (I removed this feature because it makes it difficult w/ 2x2 matrix to choose which one you want to multiply)
           /* if (this.model.op === 'multiply' || this.model[inRows[i === 0 ? 1 : 0]] !== row)*/
           this.model[key] = row;
+          console.log(`Slide: ${i}, key=${key}, row=${row}`);
         }
       });
     }
@@ -65,6 +66,9 @@ export class GaussSolver extends CustomElementView {
      * Watch for change and update display of output cells
      */
     this.model.watch((state) => {
+      console.log('update state');
+      // FIXME: @philipp -- without this below log statement, the model won't update when inRow2 is changed during add/swap (blue arrow)
+      console.log(`inRow2=${this.model.inRow2}`);
       for (const [i, row] of this.$outputCells.entries()) {
         for (const [j, _val] of row.entries()) {
           this.handleOperation(state, i, j);
@@ -113,6 +117,8 @@ export class GaussSolver extends CustomElementView {
         this.handleAdd(state, i, j);
         break;
       case 'swap':
+        this.model.outRow1 = state.inRow2;
+        this.model.outRow2 = state.inRow1;
         this.handleSwap(state, i, j);
         break;
     }
@@ -144,6 +150,12 @@ export class GaussSolver extends CustomElementView {
 
   private handleSwap(state: Model, i: number, j: number) {
     // FIXME: swap 2 (on update model)
+    this.model.output[i][j] = this.model.input[i][j];
+    if (i === state.inRow1) {
+      this.model.output[i][j] = this.model.input[state.inRow2][j];
+    } else if (i === state.inRow2) {
+      this.model.output[i][j] = this.model.input[state.inRow1][j];
+    }
   }
 
   /**
@@ -175,8 +187,6 @@ export class GaussSolver extends CustomElementView {
   private actionUndo() {
     if (this.inputStack.length === 1) return;
     this.inputStack.pop();
-    // console.log(`POP: inputStack has ${this.inputStack.length} elements`);
-    // console.log(this.inputStack);
 
     this.model.input = this.copyMatrix(this.inputStack[this.inputStack.length - 1]);
     for (const [i, row] of this.$inputCells.entries()) {
@@ -194,7 +204,6 @@ export class GaussSolver extends CustomElementView {
    * Check if the cells in the input matrix equal the identity.
    */
   checkForSolvedIdentity(): boolean {
-    // console.log('Checking for solved identity');
     const numRows = this.$inputCells.length;
 
     for (let i = 0; i < numRows; i++) {
@@ -203,7 +212,6 @@ export class GaussSolver extends CustomElementView {
 
       // check all values
       for (let j = 0; j < numRows; j++) {
-        // console.log(`Checking row=${i}; col=${j}; value=${values[j]}`);
         if (j === i) {
           if (values[j].text != '1') {
             // diagonal should be 1
