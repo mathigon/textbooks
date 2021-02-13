@@ -128,7 +128,7 @@ export function verticalLineTest($step: Step) {
       const coord = $geopad.toPlotCoords(position);
 
       const $label = $N('text', {transform: `translate(${position.x+10}, ${position.y+10})`}, $labels);
-      $label.text = `(${Math.round(coord.x*10)/10}, ${Math.round(coord.x*10)/10})`;
+      $label.text = `(${Math.round(coord.x*10)/10}, ${Math.round(coord.y*10)/10})`;
       $label.hide();
 
       relationValues.push({
