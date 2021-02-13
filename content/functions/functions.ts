@@ -169,7 +169,12 @@ export function verticalLineTest($step: Step) {
         $verticalLine.setAttr('transform', `translate(${snapPoint.x}, 0)`);
         $verticalLineLabel.text = `x=${Math.round(snapCoord.x*10)/10}`;
       },
-      exit: () => $verticalLine.hide()
+      exit: () => {
+        $verticalLine.hide()
+
+        for (const value of relationValues)
+          value.$label.hide();
+      }
     })
   }
 }
