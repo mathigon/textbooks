@@ -5,7 +5,7 @@
 
 
 import '../shared/components/relation';
-import {Point, SimplePoint} from '@mathigon/euclid';
+import {Point} from '@mathigon/euclid';
 import {Geopad, GeoPoint, Step} from '../shared/types';
 import { $N, animate, ease, ElementView, pointerOver, SVGParentView } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
