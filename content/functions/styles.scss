@@ -18,3 +18,12 @@
 .burst.correct { stroke: @green; }
 .burst.incorrect { stroke: @red; }
 .burst circle { stroke: none; }
+
+.verticalLine line {
+  stroke: @blue;
+  stroke-width: 4px;
+}
+
+.verticalLine text {
+  color: @black;
+}
