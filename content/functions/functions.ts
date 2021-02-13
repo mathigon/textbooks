@@ -7,8 +7,9 @@
 import '../shared/components/relation';
 import {Point, SimplePoint} from '@mathigon/euclid';
 import {Geopad, GeoPoint, Step} from '../shared/types';
-import { $N, animate, ease, SVGParentView } from '@mathigon/boost';
+import { $N, animate, ease, ElementView, pointerOver, SVGParentView } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
+import { last } from '@mathigon/core';
 
 
 export function fnSketch($step: Step) {
@@ -62,9 +63,8 @@ export function coordinatePlots($step: Step) {
 }
 
 export function verticalLineTest($step: Step) {
-  const $geopad = $step.$('x-geopad') as Geopad;
-  const $svg = $geopad.$('svg')!;
-  const $labels = $geopad.$$('svg .labels text')!;
+  // Name/House Chart
+  const $labels = $step.$$('x-geopad svg .labels text')!;
 
   // HACK: To get string axis labels I am simply replacing the contents of the axis label text elements.
   // TODO: Make names interactively update to reflect mappings assigned in earlier interactive
@@ -97,4 +97,79 @@ export function verticalLineTest($step: Step) {
   $yLabels.forEach(label => {
     label.text = houseMappings[label.text.toString()];
   });
+
+  // Vertical Line Test Interactives
+  const $plots = $step.$$('.verticalLineTest');
+
+  for (const $plot of $plots) {
+    const $geopad = $plot as Geopad;
+    const $svg = $plot.$('svg') as SVGParentView;
+
+    const $paths = $plot.$('svg .paths')!;
+    const $verticalLine = $N('g', {class: 'verticalLine', transform: 'translate(50, 0)'}, $paths);
+    const $verticalLineSegment = $N('line', {x1: 0, x2: 0, y1: 0, y2: $plot.height}, $verticalLine);
+    const $verticalLineLabel = $N('text', {x: 10, y: 15}, $verticalLine);
+
+    const $points = $plot.$$('circle');
+    // This odd selection is necessary because there are two SVG groups classed as "labels"
+    const $labels = last($plot.$$('.labels'));
+
+    type RelationValue = {
+      coord: Point,
+      position: Point,
+      $el: ElementView,
+      $label: ElementView,
+    }
+
+    const relationValues: RelationValue[] = [];
+
+    for (const $point of $points) {
+      const position = $point.topLeftPosition.subtract($geopad.topLeftPosition);
+      const coord = $geopad.toPlotCoords(position);
+
+      const $label = $N('text', {transform: `translate(${position.x+10}, ${position.y+10})`}, $labels);
+      $label.text = `(${Math.round(coord.x*10)/10}, ${Math.round(coord.x*10)/10})`;
+      $label.hide();
+
+      relationValues.push({
+        coord,
+        position,
+        $el: $point,
+        $label,
+      });
+    }
+
+    $verticalLine.hide();
+
+    pointerOver($plot, {
+      enter: () => $verticalLine.show(),
+      move: (point) => {
+        // Transform viewport-space point to geopad coordinate
+        const pointerCoord = $geopad.toPlotCoords(point.subtract($geopad.topLeftPosition));
+
+        // Sort relation values by proximity to pointer X, then grab all points with that X
+        relationValues.sort((a, b) => Math.abs(a.coord.x-pointerCoord.x)-Math.abs(b.coord.x-pointerCoord.x));
+        const closestPoints = relationValues.filter((value) => value.coord.x == relationValues[0].coord.x);
+
+        // Hide all labels
+        for (const value of relationValues)
+          value.$label.hide();
+
+        let snapCoord = pointerCoord;
+        if (Math.abs(closestPoints[0].coord.x-pointerCoord.x) < 0.5) {
+          snapCoord = closestPoints[0].coord;
+
+          // Show labels for snapped points
+          for (const value of closestPoints)
+            value.$label.show();
+        }
+
+        const snapPoint = $geopad.toViewportCoords(snapCoord);
+
+        $verticalLine.setAttr('transform', `translate(${snapPoint.x}, 0)`);
+        $verticalLineLabel.text = `x=${Math.round(snapCoord.x*10)/10}`;
+      },
+      exit: () => $verticalLine.hide()
+    })
+  }
 }

@@ -147,7 +147,13 @@ Using coordinate systems, it is also very easy to check whether a relation is ma
 
 Go through the coordinate system from left to right, and check if there are any two points connected by a vertical line. This means that they share the same x-value, so the relation is not many-to-one. This is called the vertical line test. The graphs that share an x-value seem like they could have a vertical line that connects [[two or more | none]] of their points.
 
-TODO Interactive here
+    x-geopad.verticalLineTest(width=500 height=500 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding=8): svg
+      circle(x="point(-6, 9)")
+      circle(x="point(-3, 9)")
+      circle(x="point(-1, -3)")
+      circle(x="point(5, -8)")
+      circle(x="point(9, 1)")
+      circle(x="point(10, 1)")
 
 ---
 
