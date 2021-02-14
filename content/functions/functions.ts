@@ -179,6 +179,6 @@ export function verticalLineTest($step: Step) {
         for (const value of relationValues)
           value.$label.hide();
       }
-    })
+    });
   }
 }
