@@ -116,7 +116,6 @@ export function verticalLineTest($step: Step) {
 
     type RelationValue = {
       coord: Point,
-      position: Point,
       $el: ElementView,
       $label: ElementView,
     }
@@ -133,7 +132,6 @@ export function verticalLineTest($step: Step) {
 
       relationValues.push({
         coord,
-        position,
         $el: $point,
         $label,
       });
