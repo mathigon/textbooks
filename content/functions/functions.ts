@@ -122,6 +122,7 @@ export function verticalLineTest($step: Step) {
 
     const relationValues: RelationValue[] = [];
 
+    // Store all points on our plot as RelationValue objects so we can easily work with them in pointer event callbacks
     for (const $point of $points) {
       const position = $point.topLeftPosition.subtract($geopad.topLeftPosition);
       const coord = $geopad.toPlotCoords(position);
@@ -153,6 +154,7 @@ export function verticalLineTest($step: Step) {
         for (const value of relationValues)
           value.$label.hide();
 
+        // Are we close enough to snap to the closest point(s)?
         let snapCoord = pointerCoord;
         if (Math.abs(closestPoints[0].coord.x-pointerCoord.x) < 0.5) {
           snapCoord = closestPoints[0].coord;
@@ -162,14 +164,17 @@ export function verticalLineTest($step: Step) {
             value.$label.show();
         }
 
+        // Transform coordinate back to pixel space
         const snapPoint = $geopad.toViewportCoords(snapCoord);
 
+        // Set position of our line and the text of our x-value label
         $verticalLine.setAttr('transform', `translate(${snapPoint.x}, 0)`);
         $verticalLineLabel.text = `x=${Math.round(snapCoord.x*10)/10}`;
       },
       exit: () => {
         $verticalLine.hide()
 
+        // Hide all labels, in case any are showing when pointer exits the SVG
         for (const value of relationValues)
           value.$label.hide();
       }
