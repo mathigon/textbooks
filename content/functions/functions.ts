@@ -111,7 +111,6 @@ export function verticalLineTest($step: Step) {
     const $verticalLineSegment = $N('line', {x1: 0, x2: 0, y1: 0, y2: $plot.height}, $verticalLine);
     const $verticalLineLabel = $N('text', {x: 10, y: 15}, $verticalLine);
 
-    const $points = $plot.$$('circle');
     // This odd selection is necessary because there are two SVG groups classed as "labels"
     const $labels = last($plot.$$('.labels'));
 
@@ -121,9 +120,9 @@ export function verticalLineTest($step: Step) {
       $label: ElementView,
     }
 
-    const relationValues: RelationValue[] = $points.map($point => {
-      const position = $point.topLeftPosition.subtract($geopad.topLeftPosition);
-      const coord = $geopad.toPlotCoords(position);
+    const relationValues: RelationValue[] = Array.from($geopad.points).map(point => {
+      const coord = point.value!;
+      const position = $geopad.toViewportCoords(coord);
 
       const $label = $N('text', {transform: `translate(${position.x+10}, ${position.y+10})`}, $labels);
       $label.text = `(${Math.round(coord.x*10)/10}, ${Math.round(coord.y*10)/10})`;
@@ -131,7 +130,7 @@ export function verticalLineTest($step: Step) {
 
       return {
         coord,
-        $el: $point,
+        $el: point.$el,
         $label,
       }
     });
