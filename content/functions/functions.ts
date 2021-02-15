@@ -169,7 +169,7 @@ export function verticalLineTest($step: Step) {
 
         // Set position of our line and the text of our x-value label
         $verticalLine.setAttr('transform', `translate(${snapPoint.x}, 0)`);
-        $verticalLineLabel.text = `x=${Math.round(snapCoord.x*10)/10}`;
+        $verticalLineLabel.text = `x = ${Math.round(snapCoord.x*10)/10}`;
       },
       exit: () => {
         $verticalLine.hide()
