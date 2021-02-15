@@ -213,7 +213,59 @@ In math, relations that are one-to-one or many-to-one are particularly important
 
 Let’s return to the Hoctagon relations. Using the definition of function, select the relations that are functions.
 
-TODO Interactive here
+**Students to Houses** is [[many-to-one | one-to-many | many-to-many | one-to-one]], which makes it [[a function | not a function]]:
+
+    x-relation
+      .item(slot="domain" name="a") **Current User**
+      .item(slot="domain" name="b") Phineas Lynch
+      .item(slot="domain" name="c") Sturgis Switch
+      .item(slot="domain" name="d") Dilys Derwent
+      .item(slot="domain" name="e") Demelza Zabini
+      .item(slot="domain" name="f") Bogod Clearwater
+      .item(slot="range") Lionpaw
+      .item(slot="range") Eaglewing
+      .item(slot="range") Badgerclaw
+      .item(slot="range") Serpentfang
+
+**Students to Classes** is [[many-to-many | many-to-one | one-to-many | one-to-one]], which makes it [[not a function | a function]]:
+
+    x-relation
+      .item(slot="domain" name="a") **Current User**
+      .item(slot="domain" name="b") Phineas Lynch
+      .item(slot="domain" name="c") Sturgis Switch
+      .item(slot="domain" name="d") Dilys Derwent
+      .item(slot="domain" name="e") Demelza Zabini
+      .item(slot="domain" name="f") Bogod Clearwater
+      .item(slot="range") Potions
+      .item(slot="range") Transfiguration
+      .item(slot="range") Magical Creatures
+      .item(slot="range") Broomstick Flying
+      .item(slot="range") Charms
+
+
+**Wands to Students** is [[one-to-one | many-to-one | many-to-many | one-to-many]], which makes it [[a function | not a function]]:
+
+    x-relation
+      .item(slot="domain")
+        img(src="images/wand-1.png" width=200 height=30)
+        span.caption Birch, phoenix feather, 5 3/4
+      .item(slot="domain")
+        img(src="images/wand-2.png" width=200 height=30)
+        span.caption Oak,dragon heartstring, 6 9/16
+      .item(slot="domain")
+        img(src="images/wand-3.png" width=200 height=30)
+        span.caption Oak, unicorn hair, 6 5/8
+      .item(slot="domain")
+        img(src="images/wand-4.png" width=200 height=30)
+        span.caption Yew, kneazle whicker, 4 9/16
+      .item(slot="domain")
+        img(src="images/wand-5.png" width=200 height=30)
+        span.caption Yew, unicorn hair, 5 7/8
+      .item(slot="range" name="a") **Current User**
+      .item(slot="range" name="b") Phineas Lynch
+      .item(slot="range" name="c") Sturgis Switch
+      .item(slot="range" name="d") Dilys Derwent
+      .item(slot="range" name="e") Demelza Zabini
 
 ---
 
