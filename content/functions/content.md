@@ -213,6 +213,7 @@ This relation [[fails | passes]] the vertical line test:
 In math, relations that are one-to-one or many-to-one are particularly important, and we will see many more examples in later chapters. That’s why they have a special name: Functions. A [__function__](gloss:function) is a rule that assigns each input to  [[exactly one | at least one]] output.
 
 ---
+> id: select-functions
 
 Let’s return to the Hoctagon relations from the very beginning of this chapter. Which of them are functions?
 
