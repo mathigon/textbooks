@@ -149,7 +149,7 @@ Go through the coordinate system from left to right, and check if there are any 
 
 ::: column(width=350)
 
-    x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding="24 8 8 8"): svg
+    x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding=8): svg
       circle(x="point(-6, 9)")
       circle(x="point(-3, 9)")
       circle(x="point(-1, -3)")
@@ -161,7 +161,7 @@ This relation is [[many-to-one | one-to-one | one-to-many | many-to-many]]
 
 ::: column(width=350)
 
-    x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding="24 8 8 8"): svg
+    x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding=8): svg
       circle(x="point(-9, -3)")
       circle(x="point(0, -4)")
       circle(x="point(6, -6)")
@@ -175,7 +175,7 @@ This relation is [[many-to-one | one-to-one | one-to-many | many-to-many]]
 
 ::: column(width=350)
 
-    x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding="24 8 8 8"): svg
+    x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding=8): svg
       circle(x="point(-6, 5)")
       circle(x="point(-6, -7)")
       circle(x="point(0, -8)")
@@ -191,7 +191,7 @@ This relation is [[many-to-one | one-to-one | one-to-many | many-to-many]]
 
 ::: column(width=350)
 
-    x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding="24 8 8 8"): svg
+    x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding=8): svg
       circle(x="point(-10, 0)")
       circle(x="point(-6, -3)")
       circle(x="point(-6, -7)")
