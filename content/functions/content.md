@@ -214,7 +214,7 @@ In math, relations that are one-to-one or many-to-one are particularly important
 
 ---
 
-Let’s return to the Hoctagon relations. Using the definition of function, select the relations that are functions.
+Let’s return to the Hoctagon relations from the very beginning of this chapter. Which of them are functions?
 
 **Students to Houses** is [[many-to-one | one-to-many | many-to-many | one-to-one]], which makes it [[a function | not a function]]:
 
