@@ -106,6 +106,8 @@ export function verticalLineTest($step: Step) {
     const $geopad = $plot as Geopad;
     const $svg = $geopad.$svg;
 
+    $svg.css('overflow', 'visible');
+
     const $paths = $plot.$('svg .paths')!;
     const $verticalLine = $N('g', {class: 'verticalLine', transform: 'translate(50, 0)'}, $paths);
     const $verticalLineSegment = $N('line', {x1: 0, x2: 0, y1: 0, y2: $plot.height}, $verticalLine);
