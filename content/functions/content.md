@@ -148,7 +148,7 @@ Let’s look at the graphs of the relations we have been working with so far. No
 
 Using coordinate systems, it is also very easy to check whether a relation is many-to-many, or one-to-many. The many-to-one and many-to-many graphs have [[at least one | no]] points that share an x-value. The one-to-one and one-to-many graphs have [[no | at least one]] points that share an x-value.
 
-Go through the coordinate system from left to right, and check if there are any two points connected by a vertical line. This means that they share the same x-value, so the relation is not many-to-one. This is called the vertical line test. The graphs that share an x-value seem like they could have a vertical line that connects [[two or more | none]] of their points.
+Go through the coordinate system from left to right, and check if there are any two points connected by a vertical line. This means that they share the same x-value, so the relation is not many-to-one or many-to-many. This is called the vertical line test. The graphs that share an x-value seem like they could have a vertical line that connects [[two or more | none]] of their points.
 
 ::: column(width=350)
 
