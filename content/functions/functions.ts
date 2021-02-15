@@ -103,7 +103,7 @@ export function verticalLineTest($step: Step) {
 
   for (const $plot of $plots) {
     const $geopad = $plot as Geopad;
-    const $svg = $plot.$('svg') as SVGParentView;
+    const $svg = $geopad.$svg;
 
     const $paths = $plot.$('svg .paths')!;
     const $verticalLine = $N('g', {class: 'verticalLine', transform: 'translate(50, 0)'}, $paths);
@@ -140,11 +140,12 @@ export function verticalLineTest($step: Step) {
 
     $verticalLine.hide();
 
-    pointerOver($plot, {
+    pointerOver($svg, {
       enter: () => $verticalLine.show(),
       move: (point) => {
+        console.log(point)
         // Transform viewport-space point to geopad coordinate
-        const pointerCoord = $geopad.toPlotCoords(point.subtract($geopad.topLeftPosition));
+        const pointerCoord = $geopad.toPlotCoords(point);
 
         // Sort relation values by proximity to pointer X, then grab all points with that X
         relationValues.sort((a, b) => Math.abs(a.coord.x-pointerCoord.x)-Math.abs(b.coord.x-pointerCoord.x));
