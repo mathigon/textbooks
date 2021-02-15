@@ -120,10 +120,7 @@ export function verticalLineTest($step: Step) {
       $label: ElementView,
     }
 
-    const relationValues: RelationValue[] = [];
-
-    // Store all points on our plot as RelationValue objects so we can easily work with them in pointer event callbacks
-    for (const $point of $points) {
+    const relationValues: RelationValue[] = $points.map($point => {
       const position = $point.topLeftPosition.subtract($geopad.topLeftPosition);
       const coord = $geopad.toPlotCoords(position);
 
@@ -131,12 +128,12 @@ export function verticalLineTest($step: Step) {
       $label.text = `(${Math.round(coord.x*10)/10}, ${Math.round(coord.y*10)/10})`;
       $label.hide();
 
-      relationValues.push({
+      return {
         coord,
         $el: $point,
         $label,
-      });
-    }
+      }
+    });
 
     $verticalLine.hide();
 
