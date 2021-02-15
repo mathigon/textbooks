@@ -152,6 +152,8 @@ Go through the coordinate system from left to right, and check if there are any 
 
 ::: column(width=350)
 
+This relation [[passes | fails]] the vertical line test:
+
     x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding=8): svg
       circle(x="point(-6, 9)")
       circle(x="point(-3, 9)")
@@ -160,9 +162,23 @@ Go through the coordinate system from left to right, and check if there are any 
       circle(x="point(9, 1)")
       circle(x="point(10, 1)")
 
-This relation is [[many-to-one | one-to-one | one-to-many | many-to-many]]
+::: column(width=350)
+
+This relation [[fails | passes]] the vertical line test:
+
+    x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding=8): svg
+      circle(x="point(-10, 0)")
+      circle(x="point(-6, -3)")
+      circle(x="point(-6, -7)")
+      circle(x="point(-3, -9)")
+      circle(x="point(-3, -10)")
+      circle(x="point(2, -9)")
+
+:::
 
 ::: column(width=350)
+
+This relation [[passes | fails]] the vertical line test:
 
     x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding=8): svg
       circle(x="point(-9, -3)")
@@ -172,11 +188,9 @@ This relation is [[many-to-one | one-to-one | one-to-many | many-to-many]]
       circle(x="point(8, 1)")
       circle(x="point(10, 1)")
 
-This relation is [[many-to-one | one-to-one | one-to-many | many-to-many]]
-
-:::
-
 ::: column(width=350)
+
+This relation [[fails | passes]] the vertical line test:
 
     x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding=8): svg
       circle(x="point(-6, 5)")
@@ -189,20 +203,6 @@ This relation is [[many-to-one | one-to-one | one-to-many | many-to-many]]
       circle(x="point(9, -4)")
       circle(x="point(10, -4)")
       circle(x="point(10, -9)")
-
-This relation is [[many-to-one | one-to-one | one-to-many | many-to-many]]
-
-::: column(width=350)
-
-    x-geopad.verticalLineTest(width=350 height=350 x-axis="-10,10,1" y-axis="-10,10,1" axes grid padding=8): svg
-      circle(x="point(-10, 0)")
-      circle(x="point(-6, -3)")
-      circle(x="point(-6, -7)")
-      circle(x="point(-3, -9)")
-      circle(x="point(-3, -10)")
-      circle(x="point(2, -9)")
-
-This relation is [[many-to-one | one-to-one | one-to-many | many-to-many]]
 
 :::
 
