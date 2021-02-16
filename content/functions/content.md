@@ -269,12 +269,14 @@ Let’s return to the Hoctagon relations from the very beginning of this chapter
       .item(slot="range" name="e") Demelza Zabini
 
 ---
+> id: function-machines
 
 We can think of functions as machines. Let’s look at the sorting hat machine to see how it works.
 
 TODO Interactive here
 
 ---
+> id: function-notation
 
 Every function needs to have a name. Function notation tells us the name of the function, the input value, and the rule that gives us the output value.
 
