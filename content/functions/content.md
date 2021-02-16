@@ -269,6 +269,7 @@ Let’s return to the Hoctagon relations from the very beginning of this chapter
       .item(slot="range" name="e") Demelza Zabini
 
 ---
+id: function-machines
 
 Think of a function as a machine that accepts an object, changes it, and gives it back. Here is a function machine that puts hats on things:
 
@@ -282,6 +283,7 @@ Think of a function as a machine that accepts an object, changes it, and gives i
         .div 🎩
 
 ---
+id: function-notation
 
 Every function needs to have a name. Function notation tells us the name of the function, the input value, and the rule that gives us the output value.
 
