@@ -271,9 +271,16 @@ Let’s return to the Hoctagon relations from the very beginning of this chapter
 ---
 > id: function-machines
 
-We can think of functions as machines. Let’s look at the sorting hat machine to see how it works.
+Think of a function as a machine that accepts an object, changes it, and gives it back. Here is a function machine that puts hats on things:
 
-TODO Interactive here
+    x-function-machine
+      .item(slot="input" name="monkey" output="hat-monkey") 🙊
+      .item(slot="input" name="fox" output="hat-fox") 🦊
+      .item(slot="operation") 🎩
+      .item(slot="output" name="hat-monkey") 🙊
+        .div 🎩
+      .item(slot="output" name="hat-fox") 🦊
+        .div 🎩
 
 ---
 > id: function-notation
