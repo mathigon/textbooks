@@ -275,7 +275,7 @@ Let’s return to the Hoctagon relations from the very beginning of this chapter
 Think of a function as a machine that accepts an object, changes it, and gives it back. Here is a function machine that puts hats on things [[this is | a test]]:
 
     x-function-machine(width=400 height=200): svg
-      g.input(name="monkey" output="hat-monkey")
+      g.input(name="monkey" output="hat-monkey" id="monkey")
         text 🙊
       g.input(name="fox" output="hat-fox")
         text 🦊
@@ -292,6 +292,7 @@ Think of a function as a machine that accepts an object, changes it, and gives i
       g.output(name="hat-smile")
         text 😃
         text(y=-5) 🎩
+    x-gesture(target="#monkey" slide="300, 0")
 
 ---
 > id: function-notation
