@@ -108,7 +108,7 @@ Since it is a square and each side length is 1 [[meter | centimeter | kilometer]
     // [TODO]: DIAGRAM-01: Turf square (page 6)
 :::
 
-Recall your estimate of the [[area | perimeter ]] of the field is ____ [[square meters | meters | square centimeters]]. We’ll find out later in this chapter how close your estimate is!
+Recall your estimate of the [[area | perimeter ]] of the field is TODO [[square meters | meters | square centimeters]]. We’ll find out later in this chapter how close your estimate is!
 
 ---
 
@@ -127,7 +127,7 @@ Drag each strip of white onto the field to model painting a while line around th
 
 Make an estimate of how many cans of paint we’ll need to paint a line around the outside of the field. Just look at the picture of the field and make a quick guess. Enter the guess here: [TODO]
 
-Each can of paint can make a line 1 meter long. Recallyour estimate of the [[perimeter | area ]] of the field is ___ [[meters | square meters | centimeters]]. Again, we’ll find out later how close your estimate is.
+Each can of paint can make a line 1 meter long. Recall your estimate of the [[perimeter | area ]] of the field is TODO [[meters | square meters | centimeters]]. Again, we’ll find out later how close your estimate is.
 
 ---
 
@@ -139,7 +139,7 @@ Now, let’s move on to thinking more deeply about the area of rectangles. Below
     figure: x-geopad(width=600 height=400)
       svg
 
-This rectangle has [[3]] rows, and every row has [[5]] squares, so we used 3 x 5 = [[15]] squares in total. 
+This rectangle has [[3]] rows, and every row has [[5]] squares, so we used `3 x 5 = input(15)` squares in total. 
 
 Each square is one square centimeter, so the [[area | perimeter]] of this rectangle is [[15]] [[square centimeters | centimeters | square meters]]. 
 
@@ -161,7 +161,7 @@ Area is the amount of space inside an object., To determine the area of a shape,
 
 Square meters are squares with side lenghts of [[1]] [[meter | centimeter | kilometer]], and square centimeters are [[squares | circles | triangles]] with side lenghts of [[1]] [[centimeter | meter | kilometer]]. So, a square kilometer is a square with side lengths of [[1]] [[kilometer | meter | centimeter]]. 
 
-When we talk about a certain number of square meters, say 7 of them, we can write it as “7 square meters” or “7 `"m"^2`”. In fact, the “`"m"^2`" is read as “meters squared.” Any power of “2” is often read as “squared.” For example,  we can read `9^2` as “9 squared” because we would need to multiply 9 x 9 when finding the [[area | perimeter]] of a square with side length 9. 
+When we talk about a certain number of square meters, say 7 of them, we can write it as “7 square meters” or “7 `"m"^2`”. In fact, the “`"m"^2`" is read as “meters squared.” Any power of “2” is often read as “squared.” For example,  we can read `9^2` as “9 squared” because we would need to multiply `9 x 9` when finding the [[area | perimeter]] of a square with side length 9. 
 
 ---
 
@@ -181,7 +181,7 @@ Below is a square meter and a bin of squares that are `1/2` meter on each side. 
     figure: x-geopad(width=600 height=400)
       svg
 
-It takes [[4]] `1/2` square centimeters to fill in 1 square meter. So, the area of a square with a `1/2` meter on each side is [[1/4]] of the area of 1 square meter.
+It takes [[`4 1/2`|`4 1/4`|`4 3/4`]] square centimeters to fill in 1 square meter. So, the area of a square with a `1/2` meter on each side is _{x-equation(solution="1/4" keys="frac" numeric)}_ of the area of 1 square meter.
 
 ---
 
@@ -189,27 +189,27 @@ Let’s apply our understanding of area to another example. Begin exploring the 
 
     // [TODO]: INTERACTIVE-08: Rectangle filling (pages 12-13)
 
-Let’s see if we can determine the area of the blue rectangle. The base is [[3.5]] centimeters long and the height is [[2.5]] centimeters long. The area of the rectangle is [[8 ¾]] [[square centimeters | centimeters | square meters]].
+Let’s see if we can determine the area of the blue rectangle. The base is _{x-equation(solution="3.5" numeric)}_ centimeters long and the height is _{x-equation(solution="2.5" numeric)}_ centimeters long. The area of the rectangle is [[`8 3/4`|`8 1/2`|`8 1/4`]] [[square centimeters | centimeters | square meters]].
 
 ---
 
-The area of the rectangle is 8 ¾ square centimeters.
+The area of the rectangle is `8 3/4` square centimeters.
 
     // [TODO]: ANIMATION-01: Rectangle area (page 14)
 
 ---
 
-Our first area example has 3 rows of  5 square centimeters each for a total of [[15]] [[square centimeters | centimeters]]. 3 x 5 = [[15]].
+Our first area example has 3 rows of 5 square centimeters each for a total of [[15]] [[square centimeters | centimeters]]. `3 x 5 = input(15)`.
 
-This example has [[2 ½]] rows of 3 ½ square centimeters. So, to find the area we could do [[ 2 ½ x 3 ½ ]] which does indeed equal [[8 3/4]]. 
+This example has [[`2 1/2` | `2 1/4` | `2 3/4`]] rows of `3 1/2` square centimeters. So, to find the area we could do `2 blank(1/2, 1/4, 3/4) x 3 blank(1/2, 1/4, 3/4)` which does indeed equal [[`8 3/4`|`8 1/2`|`8 1/4`]].
 
-If you forget how to calculate 2 ½ x 3 ½, you can review the chapter on Multiplying and Dividing Fractions. 2 ½ x 3 ½ means 2 ½ groups of 3 ½.
+If you forget how to calculate `2 1/2 x 3 1/2`, you can review the chapter on Multiplying and Dividing Fractions. `2 1/2 x 3 1/2` means `2 1/2` groups of `3 1/2`.
 
 ---
 
     // [TODO]: ANIMATION-02: Areas (pages 15-16)
 
-This arrangement looks familiar! 2 ½ x 3 ½ = [[8 ¾]].
+This arrangement looks familiar! `2 1/2 x 3 1/2` = [[`8 3/4`|`8 1/2`|`8 1/4`]].
 
 ---
 
@@ -217,7 +217,7 @@ So, by counting the number of rows and number of columns, and [[multiplying | ad
 
 Area of Rectangle = number of units along the base [[ x | + | -]] number of units along the [[height | diagonal]]. We can abbreviate this formula as:
 
-Area of Rectangle = base  [[ x | + | -]] [[height | base | diagonal]].
+Area of Rectangle = base [[ x | + | -]] [[height | base | diagonal]].
 
 ---
 
@@ -233,7 +233,7 @@ The perimeter of the rectangle is [[12]] [[centimeters | square meters | square 
 
 ---
 
-Let’s end this chapter by coming back to our work with the football field. You guessed the area of the field to be  ____ [[square meters | meters]]. Below is the image of the field as well as a picture of your estimation:
+Let’s end this chapter by coming back to our work with the football field. You guessed the area of the field to be TODO [[square meters | meters]]. Below is the image of the field as well as a picture of your estimation:
 
     // [TODO]: DIAGRAM-02: Field rectangle comparison (page 17)
 
@@ -245,11 +245,11 @@ Now, let’s find the actual area of the football field.
 
     // [TODO]: DIAGRAM-03: Field dimensions (page 18)
 
-The length of the base is [[110]] [[meters | square meters]] and the length of the height is [[75]] [[meters | square meters]]. This means, we would need [[75]] rows of [[110]] pieces of square meter grass to cover the field. To calculate the area, we need to multiply [[110 x 75]]. This gives us an area of [[8250]] [[square meters | meters]]. Your estimate was ____ square meters away.
+The length of the base is [[110]] [[meters | square meters]] and the length of the height is [[75]] [[meters | square meters]]. This means, we would need [[75]] rows of [[110]] pieces of square meter grass to cover the field. To calculate the area, we need to multiply `75 x blank(110)`. This gives us an area of [[8250]] [[square meters | meters]]. Your estimate was TODO square meters away.
 
 ---
 
-Let’s revisit your perimeter guess. You guessed the perimeter of the field to be ____ [[ meters | square meters]]. Below is a picture of the field as well as a field with your estimated perimeter.
+Let’s revisit your perimeter guess. You guessed the perimeter of the field to be TODO [[ meters | square meters]]. Below is a picture of the field as well as a field with your estimated perimeter.
 
     // [TODO] (DISCUSS): Talk to Philipp about the end of this chapter (I'm not sure what to include)
 
