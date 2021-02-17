@@ -792,7 +792,7 @@ In our example, using a Voronoi diagram can help schools make estimates of how m
     figure: x-geopad(width=600 height=400)
       svg
 
-Some of these regions are shapes we’ve learned about in previous chapters. [This shape](->.triangle-cell) is a triangle and we can find the area by doing [[1/2]] x base x height.
+Some of these regions are shapes we’ve learned about in previous chapters. [This shape](->.triangle-cell) is a triangle and we can find the area by doing `input(1/2) x base x height`.
 
 {.reveal(when="blank-0")} Click on the side of the triangle you want to use as the base.
 
@@ -865,12 +865,12 @@ Just by looking at this region, it seems that [[more | less]] students will atte
 ::: .reveal(when="blank-0")
 
 | The total area is equal to the area of the rectangle plus the area of [[2]] triangles. | Total Area = Area of Rect + Area of Triangle 1 + Area of Triangle 2 |
-| Area of a rectangle = b x h and Area of a triangle = [[½]] x b x h | Total Area = b x h + ½ x b x h + ½ x b x h |
-| Click on the base and height of the rectangle | Total area = # x # + ½ x b x h + ½ x b x h |
-| Click on the base you want to use for triangle #1 and then draw in the corresponding height. | Total area = # x # + ½ x # x # + ½ x b x h |
-| Click on the base you want to use for triangle #2 and then draw in the corresponding height. | Total area = # x # + ½ x # x # + ½ x # x #Calculate the area of each shape |
-| Calculate the area of each shape | Total area = [[#]] + [[#]] + [[#]] |
-| Calculate the total area | Total area = [[#]] sq km |
+| Area of a rectangle = b x h and Area of a triangle = [[`1/2`|`1/4`|`3/4`]] x b x h | Total Area = `b x h + 1/2 x b x h + 1/2 x b x h` |
+| Click on the base and height of the rectangle | Total area = `TODO x TODO + 1/2 x b x h + 1/2 x b x h` |
+| Click on the base you want to use for triangle #1 and then draw in the corresponding height. | Total area = `TODO x TODO + 1/2 x TODO x TODO + 1/2 x b x h` |
+| Click on the base you want to use for triangle #2 and then draw in the corresponding height. | Total area = `TODO x TODO + 1/2 x TODO x TODO + 1/2 x TODO x TODO` Calculate the area of each shape |
+| Calculate the area of each shape | Total area = TODO [[#]] + [[#]] + [[#]] |
+| Calculate the total area | Total area = TODO [[#]] sq km |
 
 :::
 
@@ -968,8 +968,7 @@ Most traffic signs are polygons - some regular and some irregular:
 ---
 > id: animals
 
-Polygons show up in all sorts of natural objects - honeycomb and starfish - to name a few. The
-10-sided starfish is a [[decagon | nonagon | octagon]]:
+Polygons show up in all sorts of natural objects - honeycomb and starfish - to name a few. The 10-sided starfish is a [[decagon | nonagon | octagon]]:
 
 ::: column(width=300)
 
@@ -1108,8 +1107,8 @@ Most footballs are made of synthetic leather. Manufacturers make so many footbal
 
 | A football is made up of [[12]] pentagons and [[20]] hexagons | Total Area = 12 pentagons + 20 hexagons |
 | Let’s split the pentagon into [[5]] congruent triangles and the hexagon into [[6]] congruent triangles..  Note - at this point, the triangles will appear on the pentagon and hexagon | Total Area = 12 x (Area of 5 triangles) + 20 x (Area of 6 triangles) |
-| The area formula for a triangle is [[½]] x base x height. | Total area = 12 x (5 x ½ x b x h) + 20 x (6 x ½ x b x h) |
-| In the pentagon, click on the side you want to use as the base and then draw in the height. | Total area = 12 x  (5 x ½ x 4.56 x 3.138) + 20 x (6 x ½ x b x h) |
+| The area formula for a triangle is [[`1/2`|`1/4`|`3/4`]] x base x height. | Total area = `12 x (5 x 1/2 x b x h) + 20 x (6 x 1/2 x b x h)` |
+| In the pentagon, click on the side you want to use as the base and then draw in the height. | Total area = `12 x (5 x 1/2 x 4.56 x 3.138) + 20 x (6 x 1/2 x b x h)` |
 | Calculate the area of one pentagon and one hexagon | Total area = 12 x [[35.7732]] + 20 x [[54.0223]] |
 | Calculate the area of the 12 pentagons and the 20 hexagons | Total area = [[429.28]] + [[1080.45]] |
 | Calculate the total area | Total area = [[1509.73]] square cm |
@@ -1205,7 +1204,7 @@ Well, it turns out that neither of the shapes we made using the 4 pieces are in 
 ---
 > id: currys-paradox-4
 
-While the blue and red seem to line up so the ends connect with a straight line, they do not.  Using the formula ½ x b x h to find the area of this [shape](->.paradox-poly) made by the 4 pieces is incorrect because the shape [[is not | is]] a triangle. The area of this shape is 32 square units. Using ½ x b x h, we got 32.5 square units. The extra ½ unit came from the amount of space in between the green line and the actual line connecting the endpoints of the red and blue triangle.
+While the blue and red seem to line up so the ends connect with a straight line, they do not.  Using the formula ½ x b x h to find the area of this [shape](->.paradox-poly) made by the 4 pieces is incorrect because the shape [[is not | is]] a triangle. The area of this shape is 32 square units. Using `1/2 x b x h`, we got 32.5 square units. The extra `1/2` unit came from the amount of space in between the green line and the actual line connecting the endpoints of the red and blue triangle.
 
     figure: x-polypad(rotate="no")
 
@@ -1223,11 +1222,11 @@ In the 2nd arrangement, the shapes also seem to make a triangle with the same to
 
 Adding the extra square unit into this arrangement of the 4 pieces causes the triangles to bulge outside of the green line. So, this arrangement is not a triangle either! The total area of the pieces is remaining constant at 32!
 
-So, we’ve made sense of this paradox. The area of the green triangle is 32.5 square units and the area of the 4 pieces is 32 square units. The pieces do NOT fit perfectly inside the triangle. When we tried just using the 4 pieces, we still had ½ of a square unit to fill in within the triangle. At first, we just didn’t notice the ½ of the square unit missing.
+So, we’ve made sense of this paradox. The area of the green triangle is 32.5 square units and the area of the 4 pieces is 32 square units. The pieces do NOT fit perfectly inside the triangle. When we tried just using the 4 pieces, we still had `1/2` of a square unit to fill in within the triangle. At first, we just didn’t notice the `1/2` of the square unit missing.
 
     figure: x-polypad(rotate="no")
 
-In the second arrangement, we added in an additional square unit to make the 4 pieces fit inside the green triangle. Again, it seemed to fit, but it actually was ½ square unit too big. Our eyes just couldn’t perceive the extra ½ square unit. 
+In the second arrangement, we added in an additional square unit to make the 4 pieces fit inside the green triangle. Again, it seemed to fit, but it actually was `1/2` square unit too big. Our eyes just couldn’t perceive the extra `1/2` square unit. 
 
 Phew! Our fundamental idea that the area of shapes remains the same regardless of the arrangement of the shapes remains true. We’ll use this idea to explore circles in the next few chapters.
 
