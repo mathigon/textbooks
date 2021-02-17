@@ -577,7 +577,7 @@ A rectangular structure forms the base of the tower. Then, 8 triangles make up t
 
     // [TODO]: IMAGES
 
-As part of any building design process, architects need to calculate how much of each material will be needed for construction - steel, concrete, glass, etc. Each side of the base structure is a rectangle that measures 61 meters wide and 56 meters tall. So, the amount of glass needed for one side of the base is [[3,416 ]] square meters.
+As part of any building design process, architects need to calculate how much of each material will be needed for construction - steel, concrete, glass, etc. Each side of the base structure is a rectangle that measures 61 meters wide and 56 meters tall. So, the amount of glass needed for one side of the base is [[3416]] square meters.
 
     // [TODO]: IMAGE
 
@@ -594,7 +594,7 @@ Let’s calculate the amount of glass needed to make one of the triangles. In th
 
 ---
 
-We’ve used two identical triangles to create a parallelogram. The area of the triangle is [[half | double]] of the area of the parallelogram and can be found by doing base x height. We just need to make sure the height forms a [[right | acute | obtuse]] angle with the base. The area of the parallelogram is [[21,960]] square meters. So, the area of the triangle is [[10,980]] square meters.
+We’ve used two identical triangles to create a parallelogram. The area of the triangle is [[half | double]] of the area of the parallelogram and can be found by doing base x height. We just need to make sure the height forms a [[right | acute | obtuse]] angle with the base. The area of the parallelogram is [[21960]] square meters. So, the area of the triangle is [[10980]] square meters.
 
 ---
 
@@ -634,7 +634,7 @@ _{span.reveal(when='side-selected')}Draw in the height that matches up with the 
 
 ---
 
-The area of the parallelogram is [[    ]] square cm. The parallelogram is made up of two congruent triangles, so the area of the triangle is [[   ]] square cm.
+The area of the parallelogram is TODO square cm. The parallelogram is made up of two congruent triangles, so the area of the triangle is TODO square cm.
 
 ---
 
@@ -678,7 +678,7 @@ Just as any side of a parallelogram can be used as the base, any side of a trian
 
 ---
 
-We see that when using the formula Area of a Triangle = ½ x b x h , we can use ANY side as the base as long as we choose the height that makes a [[right | acute | obtuse]] angle with the chosen base. Sometimes, as we saw in the last example, the base we select will create a height that is OUTSIDE the triangle.
+We see that when using the formula Area of a Triangle = `1/2 x b x h` , we can use ANY side as the base as long as we choose the height that makes a [[right | acute | obtuse]] angle with the chosen base. Sometimes, as we saw in the last example, the base we select will create a height that is OUTSIDE the triangle.
 
 ---
 
@@ -700,7 +700,7 @@ The height of the climber off the ground is the same as the [[height | base ]] o
 
 > id: triangle-selection
 
-Knowing that the formula for the area of a triangle is ½ x b x h is nice, but we need to make sure we can correctly identify the correct height for each base. All the triangles below have possible base-height pairs highlighted in green. Click on triangles that have base-height pairs that could correctly be used to find the area of the given triangle.
+Knowing that the formula for the area of a triangle is `1/2 x b x h` is nice, but we need to make sure we can correctly identify the correct height for each base. All the triangles below have possible base-height pairs highlighted in green. Click on triangles that have base-height pairs that could correctly be used to find the area of the given triangle.
 
     // [TODO]: INTERACTIVE-05 (pages 9-11)
     figure: .tri-select
@@ -722,7 +722,7 @@ The area of the first triangles is [[  ]] square cm and the area of the second t
 
 Now, think about the perimeter of each triangle above. When finding the perimeter of each of these triangles, the height [[ is | is not | is sometimes]] part of the perimeter. Click on any line in the triangle to find it’s length.
 
-The perimeter of the first triangles is [[  ]] [[cm | square cm]] and the area of the second triangle is [[   ]] cm.
+The perimeter of the first triangles is TODO [[cm | square cm]] and the area of the second triangle is TODO cm.
 
 ---
 
