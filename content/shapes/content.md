@@ -1277,7 +1277,7 @@ The Indianapolis Motor Speedway in Indiana in the United States is one of the mo
 
 :::
 
-The Indianapolis 500 is the most famous race at the track. In this race, cars must drive 500 miles. This race began in 1911 and it is the world's oldest car race still taking place today. Teams supporting the drivers must change the times many times during a race. The rubber on the tires wears out quickly because of the heat that is generated when driving at high speeds. The tires need to be changed after about 52,000 revolutions. While this may seem like a lot, the average tire on a car can last upwards of [[31,000,000 | 310,000, 3,100,000]] revolutions.
+The Indianapolis 500 is the most famous race at the track. In this race, cars must drive 500 miles. This race began in 1911 and it is the world's oldest car race still taking place today. Teams supporting the drivers must change the times many times during a race. The rubber on the tires wears out quickly because of the heat that is generated when driving at high speeds. The tires need to be changed after about 52,000 revolutions. While this may seem like a lot, the average tire on a car can last upwards of [[31,000,000 | 310,000 | 3,100,000]] revolutions.
 
 Drivers make pit stops during the race to have the tires changed and refuel.
 
@@ -1383,7 +1383,7 @@ While it’s not typical to think of the “diameter” of a square, it could be
 
     // ANIMATION-02: Diameter of a square
 
-It takes [[4]] “diameters” of a square to wrap around a square and therefore create the perimeter of the square. Upon entering in the 4: In a square, the distance around is 4 times as long as the distance across. Let’s think about this same question with circles. How many diameters of a circle do you think are needed to wrap around the circle? [[--]].
+It takes [[4]] “diameters” of a square to wrap around a square and therefore create the perimeter of the square. Upon entering in the 4: In a square, the distance around is 4 times as long as the distance across. Let’s think about this same question with circles. How many diameters of a circle do you think are needed to wrap around the circle? TODO.
 
 ---
 
@@ -1409,7 +1409,7 @@ Let’s find out!
 
 This is a great time to step away from your device and try this at home. Find any circular object. It could be something in your kitchen like a glass or a plate or a can of vegetables. Or it could be something in your room like a round clock, or a marker, or a bottle of something. Anything circular will work! Use a piece of string and mark of the length of the diameter. Then use a ruler to place a mark on the string that is 3 diameters long. Wrap the string around the circle and see how close the length of three diameters gets to making it all the way around the circle!
 
-You predicted it would take [[--]] diameters to wrap around the circle. It seems to take a little more than [[3]] diameters to fit around a circle. But what is this “little bit more than?” Can we determine how much of a diameter this is? Is it 1/10 of a diameter? 1/5th of a diameter? 1/4th of the diameter? Before answering this question, let’s work with this idea.
+You predicted it would take TODO diameters to wrap around the circle. It seems to take a little more than [[3]] diameters to fit around a circle. But what is this “little bit more than?” Can we determine how much of a diameter this is? Is it `1/10` of a diameter? `1/5`th of a diameter? `1/4`th of the diameter? Before answering this question, let’s work with this idea.
 
 ::: column.grow(width=350)
 
@@ -1484,7 +1484,7 @@ We’ve now established the idea that the circumference of a circle can be found
 
 Now we can accurately calculate the amount of fencing needed to enclose a circle with a diameter of 60 meters. Recall that 180 meters was [[not enough | too much]] fencing. If the diameter is 60, we find the circumference by multiplying 60 by [[3.14]]. The actual circumference is [[188.4]]. If you can only buy fencing whole-meter sections, you should buy [[189]] meters of fencing. Only using 180 meters of fencing as we originally estimated would have left almost a 10 meter opening!
 
-Some of the earliest civilizations have pondered the question of how many diameters are needed to equal the circumference of a circle. A Babylonian clay tablet dated between 1900 BC to 1600 BC described the number of diameters needed to be 3 ⅛, or 3.125. This is only [[0.15]] away from the 3.14 we established above. The Rhind Mathematical Papyrus from around 1650 shows the Greeks used 3.16 as the number of diameters needed. This is only [[0.02]] from 3.14.
+Some of the earliest civilizations have pondered the question of how many diameters are needed to equal the circumference of a circle. A Babylonian clay tablet dated between 1900 BC to 1600 BC described the number of diameters needed to be `3 1/8`, or 3.125. This is only [[0.15]] away from the 3.14 we established above. The Rhind Mathematical Papyrus from around 1650 shows the Greeks used 3.16 as the number of diameters needed. This is only [[0.02]] from 3.14.
 
 ::: column(width=600)
 
@@ -1498,7 +1498,7 @@ It turns out that 3.14 is not the exact number of diameters needed to equal the 
 
 Through the work of these and other mathematicians around the world, the number became more and more precise. When describing this number, mathematicians would say things like “the quantity which, when the diameter is multiplied by it, yields the circumference,” or other wordy descriptions.
 
-In 1706, William Jones, a Welsh mathematician, simplified things by using a letter of the Greek alphabet to stand for this number. The greek work “perimetros” roughly translates to “around” so Jones used the first letter of the word “perimetros.” The Greek alphabet uses different symbols than the English alphabet. In Greek, “perimetros” is written περίμετρος. The first letter of this word is π and pronounced “Pi” in English. Swiss mathematician Leonard Euler popularized the π symbol when he began using it in 1737. It’s just a coincidence that the English pronunciation of the Greek letter π also happens to be the name of a circular dessert!
+In 1706, William Jones, a Welsh mathematician, simplified things by using a letter of the Greek alphabet to stand for this number. The greek work “perimetros” roughly translates to “around” so Jones used the first letter of the word “perimetros.” The Greek alphabet uses different symbols than the English alphabet. In Greek, “perimetros” is written περίμετρος. The first letter of this word is `pi` and pronounced “Pi” in English. Swiss mathematician Leonard Euler popularized the `pi` symbol when he began using it in 1737. It’s just a coincidence that the English pronunciation of the Greek letter `pi` also happens to be the name of a circular dessert!
 
 ::: column(width=480)
 
@@ -1506,13 +1506,13 @@ In 1706, William Jones, a Welsh mathematician, simplified things by using a lett
 
 :::
 
-So what is the exact value of π? Is it 3.14? 3.141? It turns out that mathematicians have discovered patterns and rules that can determine each next digit of π. Today, mathematicians have programs on supercomputers to determine digits of π. Mathematicians currently know over 30 trillion digits after the decimal point! The first 5 digits of π after the decimal are 3.14159. You’ll learn more about the decimal expansion of π in future mathigon chapters. The most commonly used fractional approximation of π is 22/7 or 3 1/7 since this equals 3.142857.
+So what is the exact value of `pi`? Is it 3.14? 3.141? It turns out that mathematicians have discovered patterns and rules that can determine each next digit of `pi`. Today, mathematicians have programs on supercomputers to determine digits of `pi`. Mathematicians currently know over 30 trillion digits after the decimal point! The first 5 digits of `pi` after the decimal are 3.14159. You’ll learn more about the decimal expansion of `pi` in future mathigon chapters. The most commonly used fractional approximation of `pi` is `22/7` or `3 1/7` since this equals 3.142857.
 
-Let’s not let the ever-expanding decimal expansion of π detract from the simplicity here. The number π represents how many diameters of a circle are needed to equal the circumference.
+Let’s not let the ever-expanding decimal expansion of `pi` detract from the simplicity here. The number `pi` represents how many diameters of a circle are needed to equal the circumference.
 
 In the rest of this chapter, we’ll use the approximation of 3.14.
 
-We had written the formulas as C = 3.14 x D and C = 3.14 x 2 x [[R | D]]. Now that we know the Greek letter π is used to represent the exact number of diameters needed to equal the circumference, we can replace 3.14 with π in these formulas. C = π x [[ D | R ]] or C = π x [[2] x R. The formulas are often written without the multiplication symbols as follows: C = πD and C = 2πR. Let’s update our toolkit with these versions of the formulas.
+We had written the formulas as C = 3.14 x D and C = 3.14 x 2 x [[R | D]]. Now that we know the Greek letter `pi` is used to represent the exact number of diameters needed to equal the circumference, we can replace 3.14 with `pi` in these formulas. `C = pi x blank(D, R)` or `C = pi x input(2) x R`. The formulas are often written without the multiplication symbols as follows: `C = pi D` and `C = 2 pi R`. Let’s update our toolkit with these versions of the formulas.
 
 ---
 
@@ -1572,19 +1572,19 @@ Draw in a circle that covers the highway shown. _{span.reveal(when="london-circl
 
 :::
 
-An average road bike tire has a diameter of 68 cm. Recall that the distance a tire travels in one revolution is the same as the [[circumference | diameter]] of the tire. In one revolution of the tires of an average road bike, the bike travels [[214]] cm. The loop around Moscow is 15.1 km. This equals 1,510,000 cm. If you were to ride your bike around this loop, your wheels would make about [[7,056]] revolutions!
+An average road bike tire has a diameter of 68 cm. Recall that the distance a tire travels in one revolution is the same as the [[circumference | diameter]] of the tire. In one revolution of the tires of an average road bike, the bike travels [[214]] cm. The loop around Moscow is 15.1 km. This equals 1,510,000 cm. If you were to ride your bike around this loop, your wheels would make about [[7056]] revolutions!
 
     // DIAGRAM: Track
 
 We are now ready to answer the question from the start of the chapter! Recall that the tires need to be changed after about 52,000 revolutions and that we want to know how many laps around the track equals 52,000 tire revolutions.
 
-The diameter of the tire is [[27]] inches so the circumference is [[85]] inches. 52,000 revolutions gives a distance traveled of [[4,420,000]] inches. This equals about 70 miles.
+The diameter of the tire is [[27]] inches so the circumference is [[85]] inches. 52,000 revolutions gives a distance traveled of [[4420000]] inches. This equals about 70 miles.
 
-Now, calculate the distance around 1 lap. The 4 straight sections have a total distance of [[7,920]] feet. Combining the 4 turns of the track creates [[1 | ½ | 2]] circles.
+Now, calculate the distance around 1 lap. The 4 straight sections have a total distance of [[7,920]] feet. Combining the 4 turns of the track creates [[`1` | `1/2` | `2`]] circles.
 
     // ANIMATION-03: Lap distance
 
-The radius of the circle is [[840.8]] feet, so the distance around the circle is [[5,280]] feet. Therefore, the total distance of 1 lap is [[13,200]] feet. This equals 2.5 miles.
+The radius of the circle is [[840.8]] feet, so the distance around the circle is [[5280]] feet. Therefore, the total distance of 1 lap is [[13200]] feet. This equals 2.5 miles.
 
 Each set of tires last 70 miles and the distance around one lap is 2.5 miles, so the tires should be changed after [[28]] laps. 
 
