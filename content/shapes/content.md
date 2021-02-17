@@ -68,6 +68,8 @@ Now, let’s work on the difference between perimeter and area of a shape. Let�
 :::
 ::: column.grow
 4. If we need to determine how much coastline there is of an island, we would need to find the [[perimeter | area]] of the island.
+::: column(width=200)
+    x-img(width=200 height=127.667 src="https://st2.depositphotos.com/2247853/12009/i/950/depositphotos_120091998-stock-photo-north-cape-of-kauai.jpg")
 :::
 ::: column.grow
 5. If we need to know how much material is needed to replace the floor of a gym, we would need to find the [[area | perimeter]] of the gym.
@@ -268,10 +270,12 @@ The Dockland Office Building in Hamburg, Germany has a “silhouette that gives 
 Most office buildings however, like the United Nations Headquarters in New York City, have a rectangular facade.
 
     // [TODO] DIAGRAM-01 building (page 2)
+    figure: x-img(width=499 height=571 src='/resources/shapes/images/un_building_diagram.jpg')
 
 Let’s assume the side we see in this picture is only made of glass. The amount of glass used on this side is [[13398]] [[square meters | meters]].
 
     // [TODO] DIAGRAM-02 building (page 3)
+    figure: x-img(width=500 height=203 src='/resources/shapes/images/slant_building_diagram.jpg')
 
 Likewise, let’s also assume the side we see in the Dockland Office Building is also only made of glass. Predict how much glass is used on this side of the building: TODO [[square meters | meters]].
 
@@ -466,6 +470,7 @@ has opposite sides [[parallel | perpendicular ]] and therefore is a [[parallelog
 We are close to establishing a formula for finding the formula of any parallelogram. Our last step is to explore the heights of real-world situations involving parallelograms. Look at the picture again of the Dockland Office Building in Hamburg, Germany.
 
     // [TODO] DIAGRAM-06: Building measurements
+    figure: x-img(width=500 height=200 src='/resources/shapes/images/slant_building_diagram_2.jpg')
 
 Imagine there is a rule in the Hamburg harbor that all buildings must be less than 40 meters tall. The height of this building is [[28.4]] [[meters | square meters]]. Even though the side of the building is [[70]] [[meters | square meters]], that length [[is not | is]] how tall the building is. So, this building [[does | does not]] meet the pretend rule that buildings must be below 40 meters.
 
@@ -571,11 +576,15 @@ Use the information provided to find the area of the house. TODO [[square meters
 
 The One World Trade Center skyscraper in New York City is one of the tallest buildings in the world. The building was opened in 2014 after 8 years of construction. The building is also known as the Freedom Tower and is built on the site of the former Twin Towers that were destroyed in a terrorist attack on September 11th, 2001.
 
-    // [TODO]: IMAGE
+    figure: x-img(width=600 height=150 src='https://st2.depositphotos.com/1007963/8706/i/950/depositphotos_87060020-stock-photo-panoramic-view-of-the-lower.jpg')
 
 A rectangular structure forms the base of the tower. Then, 8 triangles make up the design of the remaining exterior of the tower.
 
-    // [TODO]: IMAGES
+::: column.fit
+    x-img(width=300 height=400 src='https://st2.depositphotos.com/1007963/8430/i/950/depositphotos_84303892-stock-photo-one-world-trade-center-in.jpg')
+::: column.fit
+    x-img(width=357 height=688 src='/resources/shapes/images/owtc_diagram.jpg')
+:::
 
 As part of any building design process, architects need to calculate how much of each material will be needed for construction - steel, concrete, glass, etc. Each side of the base structure is a rectangle that measures 61 meters wide and 56 meters tall. So, the amount of glass needed for one side of the base is [[3416]] square meters.
 
@@ -1311,6 +1320,7 @@ Let’s try to determine the number of laps the cars can go before a pit stop is
 The distance the vehicle travels in one revolution of the tire is the same as the distance [[around | across]] the tire. In general, distance around a shape is the [[perimeter | area]] of the shape. However, the perimeter of a circle has a unique name - the circumference.
 
     // DIAGRAM: Tire and track
+    figure: x-img(width=500 height=228 src='/resources/shapes/images/track_diagram.jpg')
 
 To determine how far the car goes in one revolution of the tire, we need to know the [[circumference | area ] of each tire. We also need to know the length of each lap. The straight-aways are simple enough. However, each of the four turns come together to form a [[full | half]] circle, so we’ll also need a way to calculate the distance around that full circle.
 
@@ -1618,6 +1628,7 @@ We could have answered this question without doing any calculations! The height 
 > sectionStatus: dev
 
     // DIAGRAM: Pizzas w/diameters (page 1)
+    figure: x-img(width=500 height=166 src='/resources/shapes/images/pizza_sizes_diagram.jpg')
 
 At a local pizza place, Tetromino’s Pizza, 1 large pizza costs the same as 2 medium pizzas. Which option do you think you should buy if you want as much pizza as possible? [[1 large | 2 medium]]. To decide which is the better purchase, we need to know the [[area | circumference]] of each circular pizza.
 
