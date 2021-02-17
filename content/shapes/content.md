@@ -1631,11 +1631,11 @@ As we’ve done in previous chapters, let’s use what we know about polygons to
     figure: x-geopad(width=1000 height=400)
       include svg/pizza.svg
 
-{.reveal(when="large-slices medium-slices")} Recall  that the area of a [triangle](/course/shapes/parallelograms-triangles) can be found by using the formula ½ x base x height, as long as the base forms a [[right | acute | obtuse]] angle with the base.
+{.reveal(when="large-slices medium-slices")} Recall  that the area of a [triangle](/course/shapes/parallelograms-triangles) can be found by using the formula `1/2 x "base" x "height"`, as long as the base forms a [[right | acute | obtuse]] angle with the base.
 
 ---
 
-The larger triangle has [[170.52]] square cm of pizza and the smaller triangle has [[90.28]] square cm of pizza. In total, 1 large pizza has about [[1,364]] square cm of pizza and the 2 medium pizzas have about [[1,444]] square cm of pizza. So, it seems the 2 medium pizzas give more pizza.
+The larger triangle has [[170.52]] square cm of pizza and the smaller triangle has [[90.28]] square cm of pizza. In total, 1 large pizza has about [[1364]] square cm of pizza and the 2 medium pizzas have about [[1444]] square cm of pizza. So, it seems the 2 medium pizzas give more pizza.
 
 ---
 
@@ -1653,11 +1653,11 @@ In the [Circumference](/course/shapes/circles) chapter, we thought about the dis
 
 Cut out a square piece of this pizza that is a square with side lengths “R.”
 
-{.reveal(when="sliced")} The area of one of those pieces is [[R x R]]. Recall that this can also be written as `R^2`.
+{.reveal(when="sliced")} The area of one of those pieces is [[`R x R` | `R + R` | `2 x R`]]. Recall that this can also be written as `R^2`.
 
 {.reveal(when="blank-0")} If each person receives one of the `R^2`-sized pieces, this pizza can serve [[4]] people.
 
-{.reveal(when="blank-1")} Therefore the area of this square is [[4R^2]]. Each side length of the square is [[2R]], we can also find the area of the square by doing [[2R x 2R]]. This also equals $4R^2$. Either way, we see that it takes 4 “R by R” squares to fill in a square when R represents the radius of the square. Let’s see if we can use this idea to discover a way to find the area of a circle.
+{.reveal(when="blank-1")} Therefore the area of this square is _{x-equation(solution="4R^2" keys="sup" short-var)}_. Each side length of the square is _{x-equation(solution="2R" short-var)}_, we can also find the area of the square by doing _{x-equation(solution="2R x 2R" keys="×" short-var)}_. This also equals `4R^2`. Either way, we see that it takes 4 “R by R” squares to fill in a square when R represents the radius of the square. Let’s see if we can use this idea to discover a way to find the area of a circle.
 
 ---
 
@@ -1667,11 +1667,11 @@ Below is a circular pizza with the radius labeled.
 
 Draw in a square with side length “R.”
 
-How many of these “R by R” squares do you think you can make from this pizza if rearranging the pizza is allowed [[--]].
+How many of these “R by R” squares do you think you can make from this pizza if rearranging the pizza is allowed TODO.
 
 4 `R^2`’s is [[bigger | smaller]] than the area of the pizza. Click on one piece to remove it from the picture.
 
-Let’s see how the extra part of the `R^2` compares to the ¼ of the pizza left.
+Let’s see how the extra part of the `R^2` compares to the `1/4` of the pizza left.
 
 `3R^2` is just not quite enough to cover up the whole pizza. We need a little bit [[more than | less than]] `3R^2` to cover the pizza. Do you recall another number we’ve learned about in thinking about circles that is a little more than 3? Do you think this could be the same number? Let’s keep exploring this idea and find out!
 
@@ -1715,10 +1715,10 @@ Move the slider back and forth to see the base and height of the parallelogram i
 | Student Question and Answer | Formula for Area of Parallelogram |
 | | base x height |
 | The height of the parallelogram is the same as the [[radius \| diameter \| circumference]] of the circle. | base x radius |
-| The base of the parallelogram is the same as half of the [[circumference \| radius \| diameter]] of the circle. | ½ of Circumference x Radius |
-| Let’s abbreviate circumference with a C and radius with an [[R \| D]] | ½ x C x R |
+| The base of the parallelogram is the same as half of the [[circumference \| radius \| diameter]] of the circle. | `1/2` of Circumference x Radius |
+| Let’s abbreviate circumference with a C and radius with an [[R \| D]] | `1/2 x C x R` |
 
-The area of the parallelogram is the same as the area of the circle, so we can find the area of a circle by doing ½ x C x R!
+The area of the parallelogram is the same as the area of the circle, so we can find the area of a circle by doing `1/2 x C x R`!
 
 ---
 
@@ -1750,7 +1750,7 @@ This pizza becomes a little more difficult to arrange on the baking sheet but it
 
 Move the slider to see the rings being arranged on the baking sheet. If we increase the number of rings up to ${n2}{n2|4|4,15,1}, the shape starts to look more and more like a [[triangle | parallelogram | circle]].
 
-We used all the pizza and the rings aren’t overlapping, so the area of the triangle is [[equal to | different than]] the area of the circle. The formula for the area of a triangle is [[½]] x base x height when the height makes a right angle with the base. _{span.reveal} Click on the side of the triangle you want to use as the base._ _{span.reveal} Draw in the height that corresponds with this base._
+We used all the pizza and the rings aren’t overlapping, so the area of the triangle is [[equal to | different than]] the area of the circle. The formula for the area of a triangle is _{x-equation(solution="1/2" keys="frac")}_ `x "base" x "height"` when the height makes a right angle with the base. _{span.reveal} Click on the side of the triangle you want to use as the base._ _{span.reveal} Draw in the height that corresponds with this base._
 
 Move the slider back and forth to see the base and height of the triangle in the circle.
 
@@ -1759,38 +1759,38 @@ Move the slider back and forth to see the base and height of the triangle in the
     // INTERACTIVE-07: QA formula sequence (page 11)
 
 | Student Question and Answer | Formula for Area of Triangle |
-| | ½ x base x height |
-| The height of the triangle is the same as the [[radius \| diameter \| circumference]] of the circle. | ½ x base x radius |
-| The base of the triangle is the same the [[circumference \| radius \| diameter]] of the circle. | ½ of Circumference x Radius |
-| Let’s abbreviate circumference with a C and radius with an [[R \| D]] | ½ x C x R |
+| | `1/2 x "base" x "height"` |
+| The height of the triangle is the same as the [[radius \| diameter \| circumference]] of the circle. | `1/2 x "base" x "radius"` |
+| The base of the triangle is the same the [[circumference \| radius \| diameter]] of the circle. | `1/2` of Circumference x Radius |
+| Let’s abbreviate circumference with a C and radius with an [[R \| D]] | `1/2 x C x R` |
 
-So, whether we cut the pizza in the triangular slices or rings, we end up with a formula for the area of the circle as ½ x C x R.
+So, whether we cut the pizza in the triangular slices or rings, we end up with a formula for the area of the circle as `1/2 x C x R`.
 
     // HANDS-ON ICON
 
-Can you think of another way to rearrange parts of a circle into other shapes we know how to find the area of? This could be a good time to step away from your device and try this on your own. Perhaps you’ll come up with a new way to rearrange a circle to show that the area formula is ½ x C x R. 
+Can you think of another way to rearrange parts of a circle into other shapes we know how to find the area of? This could be a good time to step away from your device and try this on your own. Perhaps you’ll come up with a new way to rearrange a circle to show that the area formula is `1/2 x C x R`.
 
-One way to find the area of a circle would be to multiply the length of the radius by the length of the circumference and then multiply it by [[1/2]]. However, to determine the length of the circumference, we would have to use another formula. So, while ½ x C x R is a correct approach to finding the area of a circle, mathematicians prefer to have formulas that are as simple as possible. Let’s work with the formula ½ x C x R and see if we can simplify it.
+One way to find the area of a circle would be to multiply the length of the radius by the length of the circumference and then multiply it by  _{x-equation(solution="1/2" keys="frac")}_. However, to determine the length of the circumference, we would have to use another formula. So, while `1/2 x C x R` is a correct approach to finding the area of a circle, mathematicians prefer to have formulas that are as simple as possible. Let’s work with the formula `1/2 x C x R` and see if we can simplify it.
 
     // INTERACTIVE-08: QA formula sequence (pages 12-13)
 
 | Student Question and Answer | Formula |
-| | ½ x C x R |
-| The formula for [circumference](/course/shapes/circles) of a circle is [[𝜋D]] | ½ x 𝜋 x D x R |
-| When multiplying, changing the order of the items being multiplying [[does \| does not]] give the same answer. | ½ x D x 𝜋 x R |
-| Half of the diameter is equal to the [[radius \| circumference]]. | R x 𝜋 x R |
-| When multiplying, changing the order of the items being multiplying [[does \| does not]] give the same answer. | 𝜋 x R x R |
+| | `1/2 x C x R` |
+| The formula for [circumference](/course/shapes/circles) of a circle is _{x-equation(solution="πD" keys="π" short-var)}_ | `1/2 x pi x D x R` |
+| When multiplying, changing the order of the items being multiplying [[does \| does not]] give the same answer. | `1/2 x D x pi x R` |
+| Half of the diameter is equal to the [[radius \| circumference]]. | `R x pi x R` |
+| When multiplying, changing the order of the items being multiplying [[does \| does not]] give the same answer. | `pi x R x R` |
 | Multiplying something by itself is the same as raising it an exponent of [[2]]. | `pi R^2` |
 
 The formula for the area of a circle is `pi R^2`. Let’s not lose sight of how exciting this is! Remember that earlier in the chapter, we were trying to determine how many `R^2` are needed to cover a circle:
 
     // DIAGRAM: Round pizza with square area segments (page 13)
 
-We saw that `4R^2` was [[too big | too small]] and that `3R^2` was a little [[too small | too big]]. We have now proved the exact number of `R^2` we need - 𝜋 “`R^2`” are needed to fill in the circle. Recall from the Circumference chapter, that we often approximate 𝜋 with 3.14. 
+We saw that `4R^2` was [[too big | too small]] and that `3R^2` was a little [[too small | too big]]. We have now proved the exact number of `R^2` we need - `pi` “`R^2`” are needed to fill in the circle. Recall from the Circumference chapter, that we often approximate `pi` with 3.14. 
 
-𝜋 is a powerful number! not only does it tell us how many [[diameters | radii]] are needed to go around the circumference, it also tells us how many `R^2` are needed to completely fill in a circle. 
+`pi` is a powerful number! not only does it tell us how many [[diameters | radii]] are needed to go around the circumference, it also tells us how many `R^2` are needed to completely fill in a circle. 
 
-When using the formula `pi R^2`, remember to first multiply the radius by itself and then multiply that product by 𝜋. Let’s add this formula to our toolkit. 
+When using the formula `pi R^2`, remember to first multiply the radius by itself and then multiply that product by `pi`. Let’s add this formula to our toolkit. 
 
 We are now ready to answer our original question. Which option has more pizza?
 
@@ -1801,7 +1801,7 @@ We are now ready to answer our original question. Which option has more pizza?
 | Student Question and Answer | Area of 1 Large Pizza | Area of 2 Medium Pizzas |
 | Type in the formula we’ll use | `pi R^2` | `2 pi R^2` |
 | The radius of the large pizza is [[22]] and the radius of the medium pizza is [[16]] cm | `pi(22)^2` | `2pi(16)^2` |
-| Let’s use [[3.14]] as an approximate for 𝜋 | `3.14 x (22)^2` | 2 x 3.14 x (16)^2 |
+| Let’s use [[3.14]] as an approximate for `pi` | `3.14 x (22)^2` | 2 x 3.14 x (16)^2 |
 | Now, square the radius. | 3.14 x [[484]] | 2 x 3.14 x [[256]] |
 | Finally, finish the multiplication | [[1519.76]] | [[1607.68]] |
 
@@ -1829,7 +1829,7 @@ If we are just interested in finding the area of the pizza without the crust, th
 | Student Question and Answer | Area of 1 Large Pizza without crust | Area of 2 Medium Pizzas without crust |
 | Type in the formula we’ll use | `pi R^2` | `2 pi R^2` |
 | The radius of the large pizza is [[18]] and the radius of the medium pizza is [[12]] cm | `pi (18)^2` | `2 pi (12)^2` |
-| Let’s use [[3.14]] as an approximate for 𝜋 | `3.14 x (18)^2` | `2 x 3.14 x (12)^2` |
+| Let’s use [[3.14]] as an approximate for `pi` | `3.14 x (18)^2` | `2 x 3.14 x (12)^2` |
 | Now, square the radius. | 3.14 x [[324]] | 2 x 3.14 x [[144]] |
 | Finally, finish the multiplication | [[1017.36]] | [[904.32]] |
 
@@ -1854,7 +1854,7 @@ To find the area of each pizza not covered by pepperoni, we can find the area of
 | The formula for the area of a square is base x [[height \| diagonal]] | (b x h) - (1 circle) | (b x h) - (4 circles) | (b x h) - (9 circles) |
 | The formula for the area of a circle is [[`pi R^2` \| `pi D` \| `2 pi R`]] | `(b x h) - pi R^2` | `(b x h) - 4 pi R^2` | `(b x h) - 9 pi R^2` |
 | The base and height of the square are [[30]] cm. | `(30 x 30) - pi R^2` | `(30 x 30) - 4 pi R^2` | `(30 x 30) - 9 pi R^2` |
-| The radius of the pepperoni in Pizza A is [[15]] cm and let’s use [[3.14]] for 𝜋. | `(30 x 30) - (3.14)(15)^2` | `(30 x 30) - 4(3.14)(7.5)^2` | `(30 x 30) - 9(3.14)(5)^2` |
+| The radius of the pepperoni in Pizza A is [[15]] cm and let’s use [[3.14]] for `pi`. | `(30 x 30) - (3.14)(15)^2` | `(30 x 30) - 4(3.14)(7.5)^2` | `(30 x 30) - 9(3.14)(5)^2` |
 | Calculate the area of the square and the pepperonis. | [[900]] - [[706.5]] | [[900]] - [[706.5]] | [[900]] - [[706.5]] |
 | Enter the final answer! | [[193.5]] sq cm | [[193.5]] sq cm | [[193.5]] sq cm |
 
