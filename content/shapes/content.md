@@ -1668,7 +1668,7 @@ Cut out a square piece of this pizza that is a square with side lengths “R.”
 
 {.reveal(when="blank-0")} If each person receives one of the `R^2`-sized pieces, this pizza can serve [[4]] people.
 
-{.reveal(when="blank-1")} Therefore the area of this square is _{x-equation(solution="4R^2" keys="sup" short-var)}_. Each side length of the square is _{x-equation(solution="2R" short-var)}_, we can also find the area of the square by doing _{x-equation(solution="2R x 2R" keys="×" short-var)}_. This also equals `4R^2`. Either way, we see that it takes 4 “R by R” squares to fill in a square when R represents the radius of the square. Let’s see if we can use this idea to discover a way to find the area of a circle.
+{.reveal(when="blank-1")} Therefore the area of this square is _{x-equation(solution="4R^2" keys="sup" short-var)}_. Each side length of the square is _{x-equation(solution="2R" short-var)}_, we can also find the area of the square by doing _{x-equation(solution="2R × 2R" keys="×" short-var)}_. This also equals `4R^2`. Either way, we see that it takes 4 “R by R” squares to fill in a square when R represents the radius of the square. Let’s see if we can use this idea to discover a way to find the area of a circle.
 
 ---
 
