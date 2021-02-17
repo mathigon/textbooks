@@ -11,7 +11,7 @@ import {Point, SimplePoint} from '@mathigon/euclid';
 import { $N, animate, ease, ElementView, pointerOver, SVGParentView } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
 import { last } from '@mathigon/core';
-
+import '../shared/components/function-machine';
 
 export function fnSketch($step: Step) {
   $step.$('.btn.clear')!.on('click', () => {

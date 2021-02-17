@@ -6,6 +6,8 @@
 
 @import "../../node_modules/@mathigon/studio/frontend/styles/variables";
 @import "../shared/components/relation/relation";
+@import "../shared/variables";
+@import "../shared/components/function-machine";
 
 
 .btn.clear {
@@ -25,5 +27,5 @@
 }
 
 .verticalLine text {
-  color: @black;
+  color: @blue;
 }
