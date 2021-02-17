@@ -269,11 +269,11 @@ Most office buildings however, like the United Nations Headquarters in New York 
 
     // [TODO] DIAGRAM-01 building (page 2)
 
-Let’s assume the side we see in this picture is only made of glass. The amount of glass used on this side is [[13,398]] [[square meters | meters]].
+Let’s assume the side we see in this picture is only made of glass. The amount of glass used on this side is [[13398]] [[square meters | meters]].
 
     // [TODO] DIAGRAM-02 building (page 3)
 
-Likewise, let’s also assume the side we see in the Dockland Office Building is also only made of glass. Predict how much glass is used on this side of the building: ______  [[square meters | meters]].
+Likewise, let’s also assume the side we see in the Dockland Office Building is also only made of glass. Predict how much glass is used on this side of the building: TODO [[square meters | meters]].
 
 What best describes how you made your estimate?
 A)	I multiplied 70 and 132.
@@ -298,13 +298,13 @@ To check our estimate, imagine the Dockland Office Building was actually three s
 
 Super!
 
-Now that we see the building as a rectangle, the amount of glass on this side of the building is [[28.4 x 132]] [[square meters | meters]]. 
+Now that we see the building as a rectangle, the amount of glass on this side of the building is `28.4 x input(132)` [[square meters | meters]]. 
 
 Some students found an estimate of the amount of glass by multiplying the measurements in the original picture:
 
     // [TODO] DIAGRAM-03 building (page 5)
 
-So, these students did [[70 x 132]] which equals 9,240 [[square meters]]. This estimate is over [[5,000 | 1,000 | 500]] [[square meters | meters]] away from the actual answer! This is about 2.5 times more than the actual area! So, multiplying these measurements [[does not | does]] come close to the area of this shape. In this chapter, we’ll work towards developing a formula to find the area of this kind of shape.
+So, these students did `input(70) x 132` which equals 9,240 [[square meters]]. This estimate is over [[5,000 | 1,000 | 500]] [[square meters | meters]] away from the actual answer! This is about 2.5 times more than the actual area! So, multiplying these measurements [[does not | does]] come close to the area of this shape. In this chapter, we’ll work towards developing a formula to find the area of this kind of shape.
 
 ---
 
@@ -394,7 +394,7 @@ _{span.reveal(when='blank-0 blank-1 blank-2')}To determine the area of the dough
 
 Great! Click play on the animation to see the triangle move back and forth.
 
-The area of the rectangle we made is [[15]] [[square units | units]], and the area of the rectangle is [[the same | different]] than the area of the original cookie dough. So, the area of the original dough is [[15]] [[square units | units]]. Your original guess was ___ square units. Nice! Only ___ square units away!
+The area of the rectangle we made is [[15]] [[square units | units]], and the area of the rectangle is [[the same | different]] than the area of the original cookie dough. So, the area of the original dough is [[15]] [[square units | units]]. Your original guess was TODO square units. Nice! Only TODO square units away!
 
 :::
 
@@ -491,7 +491,7 @@ Good thought. Let’s check it.
 
 Super! In both of these example, we see that the height of a parallelogram [[is | is not]] the same as the length of the side of the parallelogram. Rather, the height of a parallelogram is the length of the line that makes a [[right | acute | obtuse]] angle with the base.
 
-We are now ready to think about a general approach for finding the area of any parallelogram. Our approach has been to move around parts of the parallelogram to make it into a [[rectangle | triangle | circle]] and then use the formula [[ base x height | base + base + height + height ]] to find the area.
+We are now ready to think about a general approach for finding the area of any parallelogram. Our approach has been to move around parts of the parallelogram to make it into a [[rectangle | triangle | circle]] and then use the formula [[`"base" x "height"` | `"base" + "base" + "height" + "height"`]] to find the area.
 
 Sometimes, it can be easy to visualize rearranging the parallelogram into a rectangle and finding the base and height.
 
@@ -511,7 +511,7 @@ Super! So, let’s see if we can rearrange this parallelogram into a [[rectangle
 
     // [TODO] ANIMATION-04: Parallelogram rearrange (page 20)
 
-So, when we take the same parallelogram from the first example, but think of the shorter side as the base, we see the base has a length of [[4 cm]], the height is [[7.5 cm]] and the area is still [[30]] [[square cm | cm]]. 
+So, when we take the same parallelogram from the first example, but think of the shorter side as the base, we see the base has a length of [[4]] cm, the height is [[7.5]] cm and the area is still [[30]] [[square cm | cm]].
 
 So, to find the area of any parallelogram, we have to first identify what side we want to think of as the [[base | diagonal | center point]]. Then, we need to identify the line that makes a [[right | acute | obtuse ]] angle with the base. We call this the [[height | diagonal]] of the parallelogram. Finally, to find the area of the parallelogram, we take the lengths of the base and the height and [[multiply | add | divide]] them together. So, a simplified formula for the area of a parallelogram is [[base | radius ]] [[ x | + | -]] [[height | diameter]].
 
@@ -560,7 +560,7 @@ Finally, here is one picture of the blueprints of the house:
     figure: x-img(width=600 height=742 src='/resources/shapes/images/floorplan.png')
 
 
-Use the information provided to find the area of the house. [[ --- ]] [[square meters | meters]].
+Use the information provided to find the area of the house. TODO [[square meters | meters]].
 
 ---
 
