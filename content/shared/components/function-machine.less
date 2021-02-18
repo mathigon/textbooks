@@ -4,10 +4,12 @@
 // =============================================================================
 
 x-function-machine {
-    margin: 1.5em auto;
     user-select: none;
-
     font-size: 24px;
+
+    svg {
+        margin-bottom: 18px;
+    }
   
     .input, .output, .operation {
       &.active { background: mix(@grey-background, @border-light); }
@@ -26,6 +28,10 @@ x-function-machine {
           stroke: @border-light;
           stroke-dasharray: 4px, 4px;
         }
+    }
+
+    .operation text {
+        fill: #FFF;
     }
 
     .operation rect {
