@@ -288,13 +288,13 @@ Think of a function as a machine that accepts an object, changes it, and gives i
         text 🎩
       g.output(name="hat-monkey")
         text 🙊
-        text(y=-5) 🎩
+        text(y=-6) 🎩
       g.output(name="hat-fox")
         text 🦊
-        text(y=-5) 🎩
+        text(y=-6) 🎩
       g.output(name="hat-smile")
         text 😃
-        text(y=-5) 🎩
+        text(y=-6) 🎩
     x-gesture(target="#monkey" slide="300, 0")
 
 ---
