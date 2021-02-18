@@ -9,7 +9,7 @@ import {Point} from '@mathigon/euclid';
 import {Geopad, GeoPoint, Step} from '../shared/types';
 import { $N, animate, ease, ElementView, pointerOver, SVGParentView } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
-import { last } from '@mathigon/core';
+import { last, stringDistance } from '@mathigon/core';
 import '../shared/components/function-machine';
 import { FunctionMachine } from '../shared/components/function-machine';
 
@@ -188,6 +188,28 @@ export function functionMachines($step: Step) {
 }
 
 export function numberFunctions($step: Step) {
-  const hatMachine = $step.$('#plus-one-machine') as FunctionMachine;
-  hatMachine.bindStep($step);
+  const $hatMachine = $step.$('#plus-one-machine') as FunctionMachine;
+  $hatMachine.bindStep($step);
+}
+
+export function numericalCoordinateFunctions($step: Step) {
+  const $xSquaredMachine = $step.$('#x-squared-machine')! as FunctionMachine;
+  const $xSquaredPlot = $step.$('#x-squared-plot')! as Geopad;
+
+  $xSquaredPlot.locked = true;
+  
+  $xSquaredMachine.bindStep($step);
+  $xSquaredMachine.bindCallback((inputString: string, outputString: string) => {
+    const input = parseInt(inputString);
+    const output = parseInt(outputString);
+    
+    const $svg = $xSquaredPlot.$svg;
+    const $point = $xSquaredPlot.drawPoint(new Point(input, output));
+
+    const burstElement = $N('g', {class: 'burst'}, $xSquaredPlot.$svg);
+    const burst = new Burst(burstElement as SVGParentView, 10);
+    burst.play(1000, [$point.$el.center.x, $point.$el.center.y], [5, 25]).then(() => {
+      burstElement.remove();
+    })
+  });
 }
