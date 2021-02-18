@@ -309,7 +309,7 @@ TODO: Emoji latex
 f(x) = _{x}^{🎩}
 ```
 
-If x=🙊, we know that f(x)=![A monkey with a hat on](./images/hat-monkey.png). Similarly, if f(x)=![A fox with a hat on](./images/hat-monkey.png), we know x=[[🦊|🙊|😃|🎩]].
+If x=🙊, we know that f(x)=![A monkey with a hat on](images/hat-monkey.png). Similarly, if f(x)=![A fox with a hat on](images/hat-monkey.png), we know x=[[🦊|🙊|😃|🎩]].
 
 | Function Name | | Input Value |   | Output Value |
 | :-----------: | |:---------: | :---:| :-------: |
