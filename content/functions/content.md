@@ -272,7 +272,7 @@ Let’s return to the Hoctagon relations from the very beginning of this chapter
 > id: function-machines
 > goals: monkey fox smile
 
-Think of a function as a machine that accepts an object, changes it, and gives it back. Here is a function machine that puts hats on things [[this is | a test]]:
+Think of a function as a machine that accepts an object, changes it, and gives it back. Here is a function machine that puts hats on things:
 
     x-function-machine(width=400 height=200 id="hat-machine"): svg
       g.input(name="monkey" output="hat-monkey" id="monkey" hint="Woah, Hat Monkey!")
