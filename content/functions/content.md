@@ -367,6 +367,27 @@ Here's a function machine that adds +1 to a given number:
         text 9
 
 So for this function, we know that f(3)=[[4]]
+
+---
+
+Let's try another simple function:
+
+| _f(x)_ | _=_ | _x•x_ |
+| :-----------: | :---------: | :-------: |
+| f(2) | = | [[4]] |
+| f(3) | = | [[9]] |
+| f(-1) | = | [[1]] |
+
+---
+
+Now this one, which is a little more complicated:
+
+| _f(x)_ | _=_ | _50-3x_ |
+| :-----------: | :---------: | :-------: |
+| f(1) | = | [[47]] |
+| f(-2) | = | [[56]] |
+| f(4) | = | [[38]] |
+
 Just like before, we can visualise functions in a coordinate system. The value along the horizontal x-axis represents the input, and the value along the vertical y-axis represents the output.
 
 TODO Interactive here
