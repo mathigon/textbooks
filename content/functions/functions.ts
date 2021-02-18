@@ -11,6 +11,7 @@ import { $N, animate, ease, ElementView, pointerOver, SVGParentView } from '@mat
 import { Burst } from '../shared/components/burst';
 import { last } from '@mathigon/core';
 import '../shared/components/function-machine';
+import { FunctionMachine } from '../shared/components/function-machine';
 
 export function fnSketch($step: Step) {
   $step.$('.btn.clear')!.on('click', () => {
@@ -179,4 +180,9 @@ export function verticalLineTest($step: Step) {
       }
     });
   }
+}
+
+export function functionMachines($step: Step) {
+  const hatMachine = $step.$('#hat-machine') as FunctionMachine;
+  hatMachine.bindStep($step);
 }
