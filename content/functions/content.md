@@ -316,11 +316,21 @@ Let’s use this pattern to describe the sorting hat function, which we'll name 
 
 sort(Student Name) = House Name
 
-From the function notation above, we know that putting the sorting hat on a first year shows what house the first year is sorted into. This pattern is important to remember. The notation and expressions opposite the function name can sometimes distract us from remembering how to read function notation.
+At the beginning of the chapter, you set up this relation for the Sorting Hat:
 
-sortinghat({current user name}= [[{current user house} | not {current user house}1 | not {current user house}2  |not {current user house}3 ]]
+TODO: Load state from earlier interactive
 
-sortinghat(Sturgis Switch) = [[{Sturgis Switch’s house} | not {Sturgis Switch’s house}1  | not {Sturgis Switch’s house}2 | not {Sturgis Switch’s house}3]]
+    x-relation
+      .item(slot="domain" name="a") **Current User**
+      .item(slot="domain" name="b") Phineas Lynch
+      .item(slot="domain" name="c") Sturgis Switch
+      .item(slot="domain" name="d") Dilys Derwent
+      .item(slot="domain" name="e") Demelza Zabini
+      .item(slot="domain" name="f") Bogod Clearwater
+      .item(slot="range") Lionpaw
+      .item(slot="range") Eaglewing
+      .item(slot="range") Badgerclaw
+      .item(slot="range") Serpentfang
 
 Now let’s try some examples with algebraic expressions.
 Let x=2 and f(x)=50-3x, find f(2). [[44]]
