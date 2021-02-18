@@ -6,6 +6,7 @@
 
 import {$N, CustomElementView, ElementView, register, SVGParentView, SVGView, Draggable, animate, ease} from '@mathigon/boost';
 import {lerp, clamp} from '@mathigon/fermat';
+import { Step } from '../types';
 import template from './function-machine.pug';
 
 type Mapping = {
@@ -29,6 +30,7 @@ export class FunctionMachine extends CustomElementView {
   private $outputInstances!: SVGView[];
   private mappings!: Mapping[];
   private $svg!: SVGParentView;
+  private $step: Step;
 
   private svgWidth: number = 0;
   private svgHeight: number = 0;
@@ -100,6 +102,9 @@ export class FunctionMachine extends CustomElementView {
           const $output = mapping.$output.copy(true, false);
           this.$operation.insertBefore($output);
           $output.show()
+
+          this.$step.score($input.attr('name'));
+          this.$step.addHint($input.attr('hint') || 'correct');
   
           await animate((p) => {
             const q = ease('bounce-out', p)
@@ -137,5 +142,10 @@ export class FunctionMachine extends CustomElementView {
     }
 
     this.$operation.setAttr('transform', `translate(${this.rightColumnX}, ${this.topY})`);
+  }
+
+  // Seems like there should be a better way to do this, but it will work for now
+  bindStep($step: Step) {
+    this.$step = $step;
   }
 }
