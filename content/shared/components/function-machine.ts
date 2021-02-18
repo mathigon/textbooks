@@ -71,7 +71,7 @@ export class FunctionMachine extends CustomElementView {
         ry: 4
       }));
 
-      $el.$('text')!.setAttr('y', 10);
+      $el.$('text')!.setAttr('y', 9);
     }
     
     for (const [i, $input] of this.$inputs.entries()) {
