@@ -343,6 +343,30 @@ sort(Sturgis Switch) = [[{Sturgis Switch’s house} | not {Sturgis Switch’s ho
 
 sort(Demelza Zabini) = [[{Demela Zabini's house} | not {Demela Zabini's house}1  | not {Demela Zabini's house}2 | not {Demela Zabini's house}3]]
 
+### Functions with Numbers
+> id: number-functions
+
+A function maps a set of inputs to a set of outputs. That could be Emojis to Emojis With Hats, or Student Names to House Names… but naturally, in math our functions typically map Numbers to other Numbers.
+
+Here's a function machine that adds +1 to a given number:
+
+    x-function-machine(width=400 height=200 id="plus-one-machine"): svg
+      g.input(name="two" output="three" hint="2+1=3")
+        text 2
+      g.input(name="five" output="six" hint="5+1=6")
+        text 5
+      g.input(name="eight" output="nine" hint="8+1=9")
+        text 8
+      g.operation
+        text +1
+      g.output(name="three")
+        text 3
+      g.output(name="six")
+        text 6
+      g.output(name="nine")
+        text 9
+
+So for this function, we know that f(3)=[[4]]
 Just like before, we can visualise functions in a coordinate system. The value along the horizontal x-axis represents the input, and the value along the vertical y-axis represents the output.
 
 TODO Interactive here
