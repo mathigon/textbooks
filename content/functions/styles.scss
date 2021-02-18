@@ -16,7 +16,7 @@
   right: 6px;
 }
 
-.burst { fill: none; }
+.burst { fill: none; stroke: @dark-grey; }
 .burst.correct { stroke: @green; }
 .burst.incorrect { stroke: @red; }
 .burst circle { stroke: none; }

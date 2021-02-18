@@ -31,6 +31,7 @@ export class FunctionMachine extends CustomElementView {
   private mappings!: Mapping[];
   private $svg!: SVGParentView;
   private $step: Step;
+  private callbacks: Function[] = [];
 
   private svgWidth: number = 0;
   private svgHeight: number = 0;
@@ -107,6 +108,10 @@ export class FunctionMachine extends CustomElementView {
             this.$step.score($input.attr('name'));
             this.$step.addHint($input.attr('hint') || 'correct');
           }
+
+          for (const cb of this.callbacks) {
+            cb($input.attr('value'), $output.attr('value'));
+          }
   
           await animate((p) => {
             const q = ease('bounce-out', p)
@@ -148,5 +153,9 @@ export class FunctionMachine extends CustomElementView {
   // Seems like there should be a better way to do this, but it will work for now
   bindStep($step: Step) {
     this.$step = $step;
+  }
+
+  bindCallback(cb: Function) {
+    this.callbacks.push(cb)
   }
 }

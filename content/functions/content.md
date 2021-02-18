@@ -358,7 +358,7 @@ Here's a function machine that adds +1 to a given number:
       g.input(name="eight" output="nine" hint="8+1=9")
         text 8
       g.operation
-        text +1
+        text x+1
       g.output(name="three")
         text 3
       g.output(name="six")
@@ -370,13 +370,47 @@ So for this function, we know that f(3)=[[4]]
 
 ---
 
-Let's try another simple function:
+Let's try another simple function, f(x)=x•x:
 
 | _f(x)_ | _=_ | _x•x_ |
 | :-----------: | :---------: | :-------: |
 | f(2) | = | [[4]] |
 | f(3) | = | [[9]] |
 | f(-1) | = | [[1]] |
+
+---
+> id: numerical-coordinate-functions
+> goals: negative-two negative-one zero one two
+
+Just like before, we can plot functions on a coordinate system. The horizontal x-axis represents the input, and the vertical y-axis represents the output. Let's plot _f(x)=x•x_
+
+::: column(width=300)
+
+    x-function-machine(id="x-squared-machine" width=300 height=350): svg
+      g.input(name="negative-two" value=-2 output="four" hint="-2•-2=4")
+        text -2
+      g.input(name="negative-one" value=-1 output="one" hint="-1•-1=1")
+        text -1
+      g.input(name="zero" value=0 output="zero" hint="0•0=0")
+        text 0
+      g.input(name="one" value=1 output="one" hint="1•1=1")
+        text 1
+      g.input(name="two" value=2 output="four" hint="2•2=4")
+        text 2
+      g.operation
+        text x•x
+      g.output(name="four" value=4)
+        text 4
+      g.output(name="one" value=1)
+        text 1
+      g.output(name="zero" value=0)
+        text 0
+
+::: column(width=200)
+
+    x-geopad(id="x-squared-plot" width=200 height=350 x-axis="-3,3,1" y-axis="-5,5,1" axes grid padding=8 snap): svg
+
+:::
 
 ---
 
@@ -387,10 +421,6 @@ Now this one, which is a little more complicated:
 | f(1) | = | [[47]] |
 | f(-2) | = | [[56]] |
 | f(4) | = | [[38]] |
-
-Just like before, we can visualise functions in a coordinate system. The value along the horizontal x-axis represents the input, and the value along the vertical y-axis represents the output.
-
-TODO Interactive here
 
 A domain and range may include more elements than those listed. We have to think about what would make a complete list of all inputs or outputs. For each of these examples, drag the numbers into the groups “possible input” or “impossible input”.
 
