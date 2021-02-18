@@ -313,11 +313,11 @@ If x=🙊, we know that f(x)=![A monkey with a hat on](./images/hat-monkey.png).
 
 | Function Name | | Input Value |   | Output Value |
 | :-----------: | |:---------: | :---:| :-------: |
-|      _f_      | |      _(x)_ | = | value or expression|
+|      _f_      | |      _(x)_ | = | _rule_ |
 
-Let’s use this pattern to describe the sorting hat function.
+Let’s use this pattern to describe the sorting hat function, which we'll name "sort". *sort* takes a *Student Name* as input and outputs a *House Name*:
 
-sortinghat(first year name) = house name
+sort(Student Name) = House Name
 
 From the function notation above, we know that putting the sorting hat on a first year shows what house the first year is sorted into. This pattern is important to remember. The notation and expressions opposite the function name can sometimes distract us from remembering how to read function notation.
 
