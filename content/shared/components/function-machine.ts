@@ -101,7 +101,7 @@ export class FunctionMachine extends CustomElementView {
 
           const $output = mapping.$output.copy(true, false);
           this.$operation.insertBefore($output);
-          $output.show()
+          $output.show();
 
           this.$step.score($input.attr('name'));
           this.$step.addHint($input.attr('hint') || 'correct');
@@ -109,8 +109,7 @@ export class FunctionMachine extends CustomElementView {
           await animate((p) => {
             const q = ease('bounce-out', p)
             $output.setAttr('transform', `translate(${this.rightColumnX}, ${lerp(this.topY, this.bottomY, q)})`)
-          }, 500)
-
+          }, 500);
         }
       });
     }
