@@ -297,15 +297,18 @@ Think of a function as a machine that accepts an object, changes it, and gives i
 ---
 > id: function-notation
 
-Every function needs to have a name. Function notation tells us the name of the function, the input value, and the rule that gives us the output value.
+In math we have a simple way to write functions. This notation tells us the name, the input value, and the rule that provides the output value for a function.
 
-Let’s say a function, we’ll call f, put top hats on inputs.
+Let's use our top hat function as an example. If we call the function "f", and the input "x", we could write the function like this:
 
-IMAGE
+TODO: Emoji latex
+```latex
+f(x) = _{x}^{🎩}
+```
 
-If we are given, f(🙊), we know the output is INSERT IMAGE. Similarly, if we know f(x)= INSERT IMAGE , we know the x is 🦊.
+If x=🙊, we know that f(x)=![A monkey with a hat on](./images/hat-monkey.png). Similarly, if f(x)=![A fox with a hat on](./images/hat-monkey.png), we know x=[[🦊|🙊|😃|🎩]].
 
-| Function Name | | Input Value | = | Output Value |
+| Function Name | | Input Value |   | Output Value |
 | :-----------: | |:---------: | :---:| :-------: |
 |      _f_      | |      _(x)_ | = | value or expression|
 
