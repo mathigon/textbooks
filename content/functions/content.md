@@ -332,14 +332,13 @@ TODO: Load state from earlier interactive
       .item(slot="range") Badgerclaw
       .item(slot="range") Serpentfang
 
-Now let’s try some examples with algebraic expressions.
-Let x=2 and f(x)=50-3x, find f(2). [[44]]
+According to your relation, what House Name does _sort_ return for each of these students?
 
-TODO optional text for incorrect answers
+sort({current user name})= [[{current user house} | not {current user house}1 | not {current user house}2  |not {current user house}3 ]]
 
-Here are a few more function machines. Can you work out what the rule is in each case?
+sort(Sturgis Switch) = [[{Sturgis Switch’s house} | not {Sturgis Switch’s house}1  | not {Sturgis Switch’s house}2 | not {Sturgis Switch’s house}3]]
 
-TODO Interactive here
+sort(Demelza Zabini) = [[{Demela Zabini's house} | not {Demela Zabini's house}1  | not {Demela Zabini's house}2 | not {Demela Zabini's house}3]]
 
 Just like before, we can visualise functions in a coordinate system. The value along the horizontal x-axis represents the input, and the value along the vertical y-axis represents the output.
 
