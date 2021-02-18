@@ -103,8 +103,10 @@ export class FunctionMachine extends CustomElementView {
           this.$operation.insertBefore($output);
           $output.show();
 
-          this.$step.score($input.attr('name'));
-          this.$step.addHint($input.attr('hint') || 'correct');
+          if (this.$step) {
+            this.$step.score($input.attr('name'));
+            this.$step.addHint($input.attr('hint') || 'correct');
+          }
   
           await animate((p) => {
             const q = ease('bounce-out', p)
