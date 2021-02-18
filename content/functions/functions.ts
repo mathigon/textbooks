@@ -187,3 +187,8 @@ export function functionMachines($step: Step) {
   const hatMachine = $step.$('#hat-machine') as FunctionMachine;
   hatMachine.bindStep($step);
 }
+
+export function numberFunctions($step: Step) {
+  const hatMachine = $step.$('#plus-one-machine') as FunctionMachine;
+  hatMachine.bindStep($step);
+}
