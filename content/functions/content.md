@@ -413,7 +413,7 @@ Just like before, we can plot functions on a coordinate system. The horizontal x
 :::
 
 ---
-> id: find-domain-range
+> id: pick-domain
 
 ### Finding Domain and Range
 
@@ -430,8 +430,22 @@ Let's find the domain and range for this function. Remember, the domain is **all
     x-gesture(target="#item1")
 
 ---
+> id: input-domain
 
-You may have noticed, all the numbers work as inputs for `f(x)=x^2`. Which are possible outputs?
+You may have noticed, any point on the number line works as input for `f(x)=x^2`. We could write the domain like this (remember that ∞ means infinity):
+
+`x` [[ > | < | = | ≤ | ≥ ]] `-∞`
+
+`x` [[ < | > | = | ≤ | ≥ ]] `∞`
+
+Here's another, even simpler way to write the same thing:
+
+`-∞` [[ < | > | = | ≤ | ≥ ]] `x` [[ < | > | = | ≤ | ≥ ]] `∞`
+
+---
+> id: pick-range
+
+Now let's look at the range. Which are possible outputs for `f(x)=x^2`?
 
     x-picker.numberPicker
       .item(data-error="invalid-range-negative") -2
@@ -442,13 +456,11 @@ You may have noticed, all the numbers work as inputs for `f(x)=x^2`. Which are p
       .item 0
 
 ---
+> id: input-range
 
-For `f(x)=x^2` every number is a possible input, but _not_ every number is a possible output. So it would be fair to say that…
+For `f(x)=x^2` every number is a possible input, but _not_ every number is a possible output. Specifically, the output can never be less than [[zero | one | negative one]]. So we could write the range like this:
 
-| Domain | | Range |
-| -∞ < x < ∞ | | [[0]] <= f(x) < ∞ |
-
-
+[[0]] ≤ `f(x)` [[ < | > | = | ≤ | ≥ ]] `∞`
 
 ::: column(width=300)
 
@@ -718,11 +730,11 @@ Notice the [[maximum | minimum]] is where the Ren’s path changes from increasi
 
 Let’s think about the input and output values for d(x). Recall [__domain__](gloss:domain) is the set of all possible input values for d(x). One method for finding the domain is starting with the set of Real numbers and narrowing the set down to a reasonable range for the given situation.
 
-Ren’s horizontal distance starts at the diving platform and ends where she resurfaces in the pool. We know the diving platform is at x=[[0]] meters. She resurfaces at x= [[2.989]] meters. Therefore, we can write the domain as [[0<=x<=2.989 | 0<=x<=10.941 | 0<x<2.989]]. {.fixme} SHOW AFTER PREVIOIUS BLANKS FILLED  Note that the endpoints, 0 and 2.989, are included in the domain using <= and >=.
+Ren’s horizontal distance starts at the diving platform and ends where she resurfaces in the pool. We know the diving platform is at x=[[0]] meters. She resurfaces at x= [[2.989]] meters. Therefore, we can write the domain as [[0≤x≤2.989 | 0≤x≤10.941 | 0<x<2.989]]. {.fixme} SHOW AFTER PREVIOIUS BLANKS FILLED  Note that the endpoints, 0 and 2.989, are included in the domain using ≤ and >=.
 
 Recall [__range__](gloss:range) is the set of all heights Ren travels. Notice that Ren goes below the surface of the water. In fact, we can use the function’s [[minimum | maximum | horizontal intercept | vertical intercept]] to determine the lower bound on the range.  The minimum d(x) is [[-1.623]] meters.
 
-Similarly, the maximum d(x) gives us the upper bound on the range. Therefore, the range is [[-2]] <= d(x) <= [[10.941]].
+Similarly, the maximum d(x) gives us the upper bound on the range. Therefore, the range is [[-2]] ≤ d(x) ≤ [[10.941]].
 
 ---
 
@@ -846,12 +858,12 @@ In this system of functions, we can see who is ahead at any given time during th
 | Students label with the given contextual statement cards. | | This information appears after the functions notation card is correctly placed. | | Extra information. Not cards. |
 | :---: | | :---: | | :---: |
 | Boufaarirane is ahead of Rogers. | | f(t) > u(t) | | 90.63=<t<96.382 |
-| Rogers is ahead of Boufaarirane. | | f(t) < u(t) | | 96.382<t<=120.2 |
-| Tracey is ahead of Rogers. | | u(t) < g(t) | | 90.63<=t<109.998 |
+| Rogers is ahead of Boufaarirane. | | f(t) < u(t) | | 96.382<t≤120.2 |
+| Tracey is ahead of Rogers. | | u(t) < g(t) | | 90.63≤t<109.998 |
 | Tracey is ahead of Boufaarirane. | | g(t) > f(t) | |   |
-| Rogers is ahead of Tracey. | | g(t) < u(t) | | 109.998<t<=120.2 |
+| Rogers is ahead of Tracey. | | g(t) < u(t) | | 109.998<t≤120.2 |
 
-When we talk about one function being greater than another, we are using the [[output | input]] values to identify a range of [[input | values]]. For example, we see Tracey is ahead of Boufaarirane for this entire stretch of the race. This is expressed as [[g(t) > f(t) | g(t) < f(t)]]. We can think of this as “the range of time when Tracey has run a farther distance than Boufaarirane”. That range is [[90.63+-0.2]] <= t <= [[121]]. We can do a similar analysis for each pair of functions.
+When we talk about one function being greater than another, we are using the [[output | input]] values to identify a range of [[input | values]]. For example, we see Tracey is ahead of Boufaarirane for this entire stretch of the race. This is expressed as [[g(t) > f(t) | g(t) < f(t)]]. We can think of this as “the range of time when Tracey has run a farther distance than Boufaarirane”. That range is [[90.63+-0.2]] ≤ t ≤ [[121]]. We can do a similar analysis for each pair of functions.
 
 Looking at the three functions on the coordinate plane, we can see that the relationship between u(t) and g(t) changes from g(t)>u(t) to u(t)>g(t) when [[Rogers passes Tracey | Tracey passes Rogers | Rogers passes Boufaarirane | Boufaarirane passes Rogers]]. This means that the upper bound on g(t)>u(t) is where g(t) [[= | < | >]] u(t), which is t=[[110+-0.2]] seconds. This t-value, 110 seconds, is also the lower bound on u(t)>g(t).
 
@@ -931,7 +943,7 @@ One of the most common ways to write piecewise functions is by using cases.
     // NOTES
     // It would be great to target or color code the different components of the function. Input ranges point to x-axis, rules point to graph.
 
-`d(t)= {(1/20t,0<=t<10),(1/6 t-7/6,10<=t<=40):}`
+`d(t)= {(1/20t,0≤t<10),(1/6 t-7/6,10≤t≤40):}`
 
 Each line in this function is a case. It includes the function rule and the input values where the rule is used. We read this function as “The function d has a value of (1/20)t when t is at least 0 and up to 10. Function d is (⅙)t-(7/6) when t is at least 10 and no more than 40.”
 
@@ -967,10 +979,10 @@ We need to pay close attention to the endpoints of each section of the domain. T
     // NOTES
     // Multiple selector with one correct answer
 
-[option 1](s(d)={(1.3, 0<=d<=100),(1.2, 100<d<=200),(1.4, 200<d<=300),(1.5, 300<d<=400):})
-[option 2](s(d)={(1.3, 0<=d<=100),(1.2, 100<=d<=200),(1.4, 200<=d<300),(1.5, 300<d<=400):})
+[option 1](s(d)={(1.3, 0≤d≤100),(1.2, 100<d≤200),(1.4, 200<d≤300),(1.5, 300<d≤400):})
+[option 2](s(d)={(1.3, 0≤d≤100),(1.2, 100≤d≤200),(1.4, 200≤d<300),(1.5, 300<d≤400):})
 
-Notice the graph shows “<” as an open circle - the same would be true for endpoint containing “>”. The closed circles inculcate “<=” and “>=”.
+Notice the graph shows “<” as an open circle - the same would be true for endpoint containing “>”. The closed circles inculcate “≤” and “>=”.
 
 ---
 
@@ -987,7 +999,7 @@ One of the most common multisport competitions is a triathlon where athletes swi
     // EDITORIAL USE ONLY
     // Fun, quick [video](https://tokyo2020.org/en/sports/triathlon/) of triathlon. Nod to 2020 Olympics, especially if they don't happen. Includes map of courses.
 
-`l(t)={(75x, 0<=t<=20),(50000, 20<t<=21),(-615.385t+63000, 21<t<=86),(10000, 86<t<=87),(-277.778t+34166.7, 87<t<=123):}`
+`l(t)={(75x, 0≤t≤20),(50000, 20<t≤21),(-615.385t+63000, 21<t≤86),(10000, 86<t≤87),(-277.778t+34166.7, 87<t≤123):}`
 
     // EDITORIAL USE ONLY
 
@@ -1024,9 +1036,9 @@ Recall that a function’s key features give us insights into what’s going on 
 | Place contextual statement cards on graph | | Target key feature appears when card is placed |  |Function notation appears when card is placed |
 | :---: | | :---: | | :---: |
 | Law crosses the finish line. | | maximum | | l(123)=51500 |
-| Law is cycling toward the transition point. | | increasing | | 21 < t <= 86 |
-| Law is transitioning from swimming to cycling. | | constant | | 20 < t <= 21 |
-| Law is transitioning from cycling to running. | | constant | | 86 < t <= 87 |
+| Law is cycling toward the transition point. | | increasing | | 21 < t ≤ 86 |
+| Law is transitioning from swimming to cycling. | | constant | | 20 < t ≤ 21 |
+| Law is transitioning from cycling to running. | | constant | | 86 < t ≤ 87 |
 
 ---
 
@@ -1038,7 +1050,7 @@ Now you get to race Law. One of the exciting things about triathlons is that you
     // Slider in __bold__ . Like slider graphs in https://mathigon.org/course/sequences/arithmetic-geometric. Or drag endpoints along the transition lines to change slopes.
     // Adjusts to match given input _italics_.
 
-s(t) = {(60t, 0<=t<=25),(1500, 25<t<=26.5),(_695.652_t-_16934.8_, __26.5+-0.75__<=t<__84+-0.75__),(41500, _84_<t<=_85.5_), (_298.50_t+_15977.6_, _85.5_<t<=__123+-5__):}
+s(t) = {(60t, 0≤t≤25),(1500, 25<t≤26.5),(_695.652_t-_16934.8_, __26.5+-0.75__≤t<__84+-0.75__),(41500, _84_<t≤_85.5_), (_298.50_t+_15977.6_, _85.5_<t≤__123+-5__):}
 
     // NOTES for 60t line: Actually adjusting these points in the background.
     // NOTES for 695.652 line: (__26.5+-.75__, 1500) and (__84+-.75__, 41500)
