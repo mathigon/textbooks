@@ -412,13 +412,8 @@ Just like before, we can plot functions on a coordinate system. The horizontal x
 ---
 > id: find-domain-range
 
-Now this one, which is a little more complicated:
+### Finding Domain and Range
 
-| _f(x)_ | _=_ | _50-3x_ |
-| :-----------: | :---------: | :-------: |
-| f(1) | = | [[47]] |
-| f(-2) | = | [[56]] |
-| f(4) | = | [[38]] |
 
 A domain and range may include more elements than those listed. We have to think about what would make a complete list of all inputs or outputs. For each of these examples, drag the numbers into the groups “possible input” or “impossible input”.
 
