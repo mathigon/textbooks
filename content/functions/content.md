@@ -414,8 +414,8 @@ Just like before, we can plot functions on a coordinate system. The horizontal x
 
 ### Finding Domain and Range
 
+Let's find the domain and range for this function. Remember, the domain is **all possible inputs** and the range is **all possible outputs**. Which of these are possible inputs for `f(x)=x^2`?
 
-A domain and range may include more elements than those listed. We have to think about what would make a complete list of all inputs or outputs. For each of these examples, drag the numbers into the groups “possible input” or “impossible input”.
 
 TODO Interactive here
 
