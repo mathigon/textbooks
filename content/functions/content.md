@@ -405,9 +405,19 @@ Just like before, we can plot functions on a coordinate system. The horizontal x
 
 ::: column(width=200)
 
-    x-geopad(id="x-squared-plot" width=200 height=350 x-axis="-3,3,1" y-axis="-5,5,1" axes grid padding=8 snap): svg
+    x-geopad(id="x-squared-plot" width=200 height=350 x-axis="-3,3,1" y-axis="-5,5,1" axes grid padding=8): svg
 
 :::
+
+---
+> id: numerical-plot
+> goals: plotPoints
+
+With just a few input values, we can see `f(x)=x^2` tracing out a shape. Let's plot even more points here to get a better look at our function:
+
+    x-geopad(id="x-squared-plotter" width=400 height=400 x-axis="-4,4,1" y-axis="-1,8,1" axes grid padding="24 8 8 8" count=10): svg
+
+    x-gesture(target="#x-squared-plotter")
 
 ---
 > id: pick-domain
@@ -458,24 +468,6 @@ Now let's look at the range. Which are possible outputs for `f(x)=x^2`?
 For `f(x)=x^2` every number is a possible input, but _not_ every number is a possible output. Specifically, the output can never be less than [[zero | one | negative one]]. So we could write the range like this:
 
 [[0]] ≤ `f(x)` [[ < | > | = | ≤ | ≥ ]] `∞`
-
-::: column(width=300)
-
-TODO coordinate plane
-
-::: column.grow
-
-The graph only appears in the [[1st]] quadrant. We can see that all output values must be [[positive | negative | zero]].
-
-::: column(width=300)
-
-TODO coordinate plane
-
-::: column.grow
-
-The lowest y-value on the graph is about [[1250+-50 depending on scale]]. Let’s think about how we would figure out the highest y-value. If every student at the school bought a ticket, we would multiply [[student enrollment]] by $25 to calculate the highest possible y-value.
-
-:::
 
 
 --------------------------------------------------------------------------------
