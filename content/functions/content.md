@@ -442,7 +442,7 @@ Let's find the domain and range for this function. Remember, the domain is **all
 ---
 > id: input-domain
 
-You may have noticed, any point on the number line works as input for `f(x)=x^2`. We could write the domain like this (remember that ∞ means infinity):
+All those numbers are valid because _any_ point on the number line works as input for `f(x)=x^2`. We could write the domain like this (remember that ∞ means infinity):
 
 `x` [[ > | < | = | ≤ | ≥ ]] `-∞`
 
