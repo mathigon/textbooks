@@ -8,7 +8,7 @@ import {Step} from '@mathigon/studio';
 import '../shared/components/relation/relation';
 import {Geopad, GeoPoint} from '../shared/types';
 import {Point, SimplePoint} from '@mathigon/euclid';
-import { $N, animate, ease, ElementView, pointerOver, SVGParentView } from '@mathigon/boost';
+import { $N, animate, ease, ElementView, pointerOver, SVGParentView, svgPointerPosn } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
 import { last, stringDistance } from '@mathigon/core';
 import '../shared/components/function-machine';
@@ -211,6 +211,60 @@ export function numericalCoordinateFunctions($step: Step) {
     const burst = new Burst(burstElement as SVGParentView, 10);
     burst.play(1000, [$point.$el.center.x, $point.$el.center.y], [5, 25]).then(() => {
       burstElement.remove();
-    })
+    });
   });
+}
+
+function clickPlotter($step: Step, $geopad: Geopad, plotFunction: Function) {
+  const $svg = $geopad.$svg;
+  const $axes = $svg.$('.axes')!;
+
+  const requiredCount = parseInt($geopad.attr('count') || '0');
+  let pointCount = 0;
+
+  $geopad.locked = true;
+  const lineTop = $axes.positionTop-$svg.positionTop;
+
+  const $paths = $svg.$('.paths')!;
+  const $verticalLine = $N('g', {class: 'verticalLine', transform: `translate(50, ${lineTop})`}, $paths);
+  const $verticalLineSegment = $N('line', {x1: 0, x2: 0, y1: 0, y2: $axes.height}, $verticalLine);
+  const $verticalLineLabel = $N('text', {x: 0, y: -8, 'text-anchor': 'middle'}, $verticalLine);
+  $verticalLine.hide();
+
+  $geopad.on('click', event => {
+    const clickPoint = $geopad.toPlotCoords(svgPointerPosn(event, $svg));
+    const point = new Point(clickPoint.x, plotFunction(clickPoint.x));
+    const $point = $geopad.drawPoint(point);
+
+    const burstElement = $N('g', {class: 'burst'}, $geopad.$svg);
+    const burst = new Burst(burstElement as SVGParentView, 10);
+    burst.play(1000, [$point.$el.center.x, $point.$el.center.y], [5, 25]).then(() => {
+      burstElement.remove();
+    });
+
+    pointCount++;
+    if (requiredCount > 0) {
+
+      if (pointCount == requiredCount)
+        $step.score('plotPoints');
+      else if (pointCount < requiredCount)
+        $step.addHint('plot-points-more');  
+    }
+  });
+
+  pointerOver($svg, {
+    enter: () => $verticalLine.show(),
+    move: (point) => {
+      const pointerCoord = $geopad.toPlotCoords(point);
+
+      $verticalLine.setAttr('transform', `translate(${point.x}, ${lineTop})`);
+      $verticalLineLabel.text = `x = ${Math.round(pointerCoord.x*10)/10}`;
+    },
+    exit: () => $verticalLine.hide()
+  });
+}
+
+export function numericalPlot($step: Step) {
+  const $geopad = $step.$('x-geopad')! as Geopad;
+  clickPlotter($step, $geopad, (x: number) => x*x);
 }
