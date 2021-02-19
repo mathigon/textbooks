@@ -113,6 +113,7 @@ export function verticalLineTest($step: Step) {
     const $verticalLine = $N('g', {class: 'verticalLine', transform: 'translate(50, 0)'}, $paths);
     const $verticalLineSegment = $N('line', {x1: 0, x2: 0, y1: 0, y2: $plot.height}, $verticalLine);
     const $verticalLineLabel = $N('text', {x: 0, y: -2, 'text-anchor': 'middle'}, $verticalLine);
+    $verticalLine.hide();
 
     // This odd selection is necessary because there are two SVG groups classed as "labels"
     const $labels = last($plot.$$('.labels'));
@@ -138,12 +139,9 @@ export function verticalLineTest($step: Step) {
       }
     });
 
-    $verticalLine.hide();
-
     pointerOver($svg, {
       enter: () => $verticalLine.show(),
       move: (point) => {
-        console.log(point)
         // Transform viewport-space point to geopad coordinate
         const pointerCoord = $geopad.toPlotCoords(point);
 
