@@ -413,6 +413,7 @@ Just like before, we can plot functions on a coordinate system. The horizontal x
 :::
 
 ---
+> id: find-domain-range
 
 Now this one, which is a little more complicated:
 
