@@ -265,3 +265,8 @@ export function numericalPlot($step: Step) {
   const $geopad = $step.$('x-geopad')! as Geopad;
   clickPlotter($step, $geopad, (x: number) => x*x);
 }
+
+export function findDomainRange1($step: Step) {
+  const $geopad = $step.$('x-geopad')! as Geopad;
+  clickPlotter($step, $geopad, (x: number) => -x*x+3);
+}

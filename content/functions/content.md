@@ -441,13 +441,15 @@ Let's find the domain and range for this function. Remember, the domain is **all
 
 All those numbers are valid because _any_ point on the number line works as input for `f(x)=x^2`. We could write the domain like this (remember that ∞ means infinity):
 
+**Domain:**
+
 `x` [[ > | < | = | ≤ | ≥ ]] `-∞`
 
 `x` [[ < | > | = | ≤ | ≥ ]] `∞`
 
-Here's another, even simpler way to write the same thing:
+Here's a slightly simpler way to write the same thing:
 
-`-∞` [[ < | > | = | ≤ | ≥ ]] `x` [[ < | > | = | ≤ | ≥ ]] `∞`
+**Domain:** `-∞` [[ < | > | = | ≤ | ≥ ]] `x` [[ < | > | = | ≤ | ≥ ]] `∞`
 
 ---
 > id: pick-range
@@ -467,8 +469,21 @@ Now let's look at the range. Which are possible outputs for `f(x)=x^2`?
 
 For `f(x)=x^2` every number is a possible input, but _not_ every number is a possible output. Specifically, the output can never be less than [[zero | one | negative one]]. So we could write the range like this:
 
-[[0]] ≤ `f(x)` [[ < | > | = | ≤ | ≥ ]] `∞`
+**Range:** [[0]] ≤ `f(x)` [[ < | > | = | ≤ | ≥ ]] `∞`
 
+---
+> id: find-domain-range-1
+
+Let's try some other functions, starting with `f(x)=-x^2+3`. Use the function plotter to help you find the domain and range:
+
+    x-geopad(id="domain-range-1-plot" width=400 height=400 x-axis="-4,4,1" y-axis="-5,4,1" axes grid padding="24 8 8 8"): svg
+
+    x-gesture(target="#domain-range-1-plot")
+
+
+**Domain:** `-∞` < `x` < `∞`
+
+**Range**: `-∞` < `f(x)` [[ < | > | = | ≤ | ≥ ]] [[3]]
 
 --------------------------------------------------------------------------------
 
