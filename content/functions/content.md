@@ -441,9 +441,14 @@ You may have noticed, all the numbers work as inputs for `f(x)=x^2`. Which are p
       .item(data-error="invalid-range-negative") -1.2
       .item 0
 
-TODO Interactive here
+---
 
-Look at the graphs of the functions. Determine what outputs make sense and why.
+For `f(x)=x^2` every number is a possible input, but _not_ every number is a possible output. So it would be fair to say that…
+
+| Domain | | Range |
+| -∞ < x < ∞ | | [[0]] <= f(x) < ∞ |
+
+
 
 ::: column(width=300)
 
