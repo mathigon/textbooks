@@ -416,6 +416,27 @@ Just like before, we can plot functions on a coordinate system. The horizontal x
 
 Let's find the domain and range for this function. Remember, the domain is **all possible inputs** and the range is **all possible outputs**. Which of these are possible inputs for `f(x)=x^2`?
 
+    x-picker.numberPicker
+      .item#item1 -2
+      .item 4
+      .item 8.5
+      .item(data-error="invalid-domain-emoji") 🦊
+      .item -1.2
+      .item 0
+
+    x-gesture(target="#item1")
+
+---
+
+You may have noticed, all the numbers work as inputs for `f(x)=x^2`. Which are possible outputs?
+
+    x-picker.numberPicker
+      .item(data-error="invalid-range-negative") -2
+      .item 4
+      .item 8.5
+      .item(data-error="invalid-range-emoji") 🦊
+      .item(data-error="invalid-range-negative") -1.2
+      .item 0
 
 TODO Interactive here
 
