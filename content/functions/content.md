@@ -367,7 +367,7 @@ So for this function, we know that f(3)=[[4]]
 
 ---
 
-Let's try another simple function, f(x)=x•x:
+Let's try another simple function, `f(x)=x^2`:
 
 | _f(x)_ | _=_ | _x•x_ |
 | :-----------: | :---------: | :-------: |
@@ -379,7 +379,7 @@ Let's try another simple function, f(x)=x•x:
 > id: numerical-coordinate-functions
 > goals: negative-two negative-one zero one two
 
-Just like before, we can plot functions on a coordinate system. The horizontal x-axis represents the input, and the vertical y-axis represents the output. Let's plot _f(x)=x•x_:
+Just like before, we can plot functions on a coordinate system. The horizontal x-axis represents the input, and the vertical y-axis represents the output. Let's plot `f(x)=x^2`:
 
 ::: column(width=300)
 
