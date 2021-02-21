@@ -52,4 +52,4 @@ If you want to work for Mathigon, visit our [careers page](https://mathigon.org/
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/MathigonOrg?style=social)](https://twitter.com/intent/follow?screen_name=MathigonOrg)
 
-© Mathigon 2016–2020, All rights reserved
+© Mathigon 2016–2021, All rights reserved
