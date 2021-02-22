@@ -505,7 +505,8 @@ export function glassArea($step: Step) {
   }, 12);
   // top left: 0, bottom right: 2
   let figure = 2;
-  $step.$('button.btn.submit-shape')?.on('click', () => {
+  const $submitShape = $step.$('button.btn.submit-shape') as ElementView;
+  $submitShape.on('click', () => {
     const tileTouches =
       touches(
           pairs(tiles.map(tile => tile.transformed as Polygon)),
@@ -516,6 +517,7 @@ export function glassArea($step: Step) {
     $step.score(`figure-${figure}`);
     const perimeter = tileTouches.reduce((runningPerimeter, overlap) => runningPerimeter - (overlap * 2), tilesPerimeters);
     $step.$(`table td.perimeter${figure}`)!.append(new Text(perimeter.toString()));
+    if (figure == 3) $submitShape.setAttr('disabled', true);
     figure++;
   });
 }
