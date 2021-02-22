@@ -1404,7 +1404,7 @@ results that work for all triangles
 __Sine Rule__  
 In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
-{.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
+{.text-center} `(sin(A))/a = (sin(B))/b = (sin(C))/c`
 :::
 
     // {.todo} Use Law of Sines when given:
