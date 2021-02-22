@@ -393,15 +393,11 @@ export function identifyParallelograms($step: Step) {
   const $svg = $step.$('svg') as SVGParentView;
   for (const [i, $path] of $svg.$$('path').entries()) {
     if ($path.hasClass('parallelogram')) {
-      if ($step.scores.has('selected-' + i)) {
-        $path.one('click', () => {
-          $path.addClass('correct');
-          $step.addHint('correct');
-          $step.score('selected-' + i);
-        });
-      } else {
+      $path.one('click', () => {
         $path.addClass('correct');
-      }
+        $step.addHint('correct');
+        $step.score('selected-' + i);
+      });
     } else {
       $path.one('click', () => {
         $path.addClass('incorrect');

@@ -85,9 +85,12 @@ x-geopad .paths path.fill-square {
   }
 }
 
-#identify-parallelograms {
-  svg path.parallelogram-selected {
+.parallelogram-selection svg path {
+  &.parallelogram.correct {
     fill: @lime;
+  }
+  &.incorrect {
+    fill: @red;
   }
 }
 
