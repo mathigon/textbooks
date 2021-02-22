@@ -171,6 +171,8 @@ Sort the units of measure below into those that measure length and those that me
 
     // [TODO]: INTERACTIVE-06: Measurement units (pages 10-11)
 
+{.todo} Coming Soon!
+
 Now, sort the units of measure for area. Each unit of measure is represented in three different ways. Drag each of the labels into the correct square.
 
 ---
@@ -179,7 +181,7 @@ Now, sort the units of measure for area. Each unit of measure is represented in 
 
 Below is a square meter and a bin of squares that are `1/2` meter on each side. See how many `1/2` square meters you need to fill in the square meter:
 
-    // [TODO]: INTERACTIVE-07: Square meter filling (pages 11-12)
+    // INTERACTIVE-07: Square meter filling (pages 11-12)
     figure: x-geopad(width=600 height=400)
       svg
 
@@ -190,6 +192,8 @@ It takes [[`4 1/2`|`4 1/4`|`4 3/4`]] square centimeters to fill in 1 square mete
 Let’s apply our understanding of area to another example. Begin exploring the area of the rectangle below by dragging in any 3 of the area shapes on the left into the blue rectangle.
 
     // [TODO]: INTERACTIVE-08: Rectangle filling (pages 12-13)
+
+{.todo} Coming Soon!
 
 Let’s see if we can determine the area of the blue rectangle. The base is _{x-equation(solution="3.5" numeric)}_ centimeters long and the height is _{x-equation(solution="2.5" numeric)}_ centimeters long. The area of the rectangle is [[`8 3/4`|`8 1/2`|`8 1/4`]] [[square centimeters | centimeters | square meters]].
 
@@ -211,6 +215,8 @@ If you forget how to calculate `2 1/2 x 3 1/2`, you can review the chapter on Mu
 
     // [TODO]: ANIMATION-02: Areas (pages 15-16)
 
+{.todo} Coming Soon!
+
 This arrangement looks familiar! `2 1/2 x 3 1/2` = [[`8 3/4`|`8 1/2`|`8 1/4`]].
 
 ---
@@ -225,9 +231,13 @@ Area of Rectangle = base [[ x | + | -]] [[height | base | diagonal]].
 
     // [TODO]: DIAGRAM-01: Rectangle area (page 16)
 
+{.todo} Coming Soon!
+
 Let’s think about the perimeter of this same rectangle. Below are some calculations using the side lengths of the rectangle above. Sort the calculations into those that will give you the correct perimeter and those that will not.
 
     // [TODO]: INTERACTIVE-09: Area calculation sorting (page 17)
+
+{.todo} Coming Soon!
 
 ---
 
@@ -239,6 +249,8 @@ Let’s end this chapter by coming back to our work with the football field. You
 
     // [TODO]: DIAGRAM-02: Field rectangle comparison (page 17)
 
+{.todo} Coming Soon!
+
 It seems that your estimate of the area was [[too big | too small].
 
 ---
@@ -247,6 +259,8 @@ Now, let’s find the actual area of the football field.
 
     // [TODO]: DIAGRAM-03: Field dimensions (page 18)
 
+{.todo} Coming Soon!
+
 The length of the base is [[110]] [[meters | square meters]] and the length of the height is [[75]] [[meters | square meters]]. This means, we would need [[75]] rows of [[110]] pieces of square meter grass to cover the field. To calculate the area, we need to multiply `75 x blank(110)`. This gives us an area of [[8250]] [[square meters | meters]]. Your estimate was TODO square meters away.
 
 ---
@@ -254,6 +268,8 @@ The length of the base is [[110]] [[meters | square meters]] and the length of t
 Let’s revisit your perimeter guess. You guessed the perimeter of the field to be TODO [[ meters | square meters]]. Below is a picture of the field as well as a field with your estimated perimeter.
 
     // [TODO] (DISCUSS): Talk to Philipp about the end of this chapter (I'm not sure what to include)
+
+{.todo} Coming Soon!
 
 ---
 
@@ -307,6 +323,8 @@ Now that we see the building as a rectangle, the amount of glass on this side of
 Some students found an estimate of the amount of glass by multiplying the measurements in the original picture:
 
     // [TODO] DIAGRAM-03 building (page 5)
+
+{.todo} Coming Soon!
 
 So, these students did `input(70) x 132` which equals 9,240 [[square meters]]. This estimate is over [[5,000 | 1,000 | 500]] [[square meters | meters]] away from the actual answer! This is about 2.5 times more than the actual area! So, multiplying these measurements [[does not | does]] come close to the area of this shape. In this chapter, we’ll work towards developing a formula to find the area of this kind of shape.
 
