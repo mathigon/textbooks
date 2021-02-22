@@ -161,7 +161,7 @@ A kilometer is about [[distance of about two laps around a track | length of a g
 
 Area is the amount of space inside an object., To determine the area of a shape, we’ve been filling up the space inside an object with squares. We could use other shapes as well. You can study that idea in a chapter on tessellations.
 
-Square meters are squares with side lenghts of [[1]] [[meter | centimeter | kilometer]], and square centimeters are [[squares | circles | triangles]] with side lenghts of [[1]] [[centimeter | meter | kilometer]]. So, a square kilometer is a square with side lengths of [[1]] [[kilometer | meter | centimeter]]. 
+Square meters are squares with side lengths of [[1]] [[meter | centimeter | kilometer]], and square centimeters are [[squares | circles | triangles]] with side lengths of [[1]] [[centimeter | meter | kilometer]]. So, a square kilometer is a square with side lengths of [[1]] [[kilometer | meter | centimeter]]. 
 
 When we talk about a certain number of square meters, say 7 of them, we can write it as “7 square meters” or “7 `"m"^2`”. In fact, the “`"m"^2`" is read as “meters squared.” Any power of “2” is often read as “squared.” For example,  we can read `9^2` as “9 squared” because we would need to multiply `9 x 9` when finding the [[area | perimeter]] of a square with side length 9. 
 
