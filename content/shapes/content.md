@@ -379,6 +379,7 @@ Look at the data in the table. Notice that all the arrangements have the same [[
 Let’s look at how some other students approached this task. Watch each one and decide if the new arrangement has maintained the same amount of glass as the original design:
 
     // [TODO] ANIMATION-01: Glass area animations (page 7)
+{.todo} Coming Soon!
 
 Great work! We’ve established one of the most fundamental ideas of area and perimeter of two-dimensional shapes - When moving around parts of a shape, as long as no parts [[overlap | touch]] and all parts of the shape are [[used | not used]], the total [[area | perimeter]] stays the same even as the perimeter [[likely changes | also stays the same]]. 
 
@@ -416,6 +417,8 @@ _{span.reveal(when='blank-0 blank-1 blank-2')}To determine the area of the dough
 
 Great! Click play on the animation to see the triangle move back and forth.
 
+{.todo} Coming Soon!
+
 The area of the rectangle we made is [[15]] [[square units | units]], and the area of the rectangle is [[the same | different]] than the area of the original cookie dough. So, the area of the original dough is [[15]] [[square units | units]]. Your original guess was TODO square units. Nice! Only TODO square units away!
 
 :::
@@ -425,6 +428,7 @@ The area of the rectangle we made is [[15]] [[square units | units]], and the ar
 Great. Let’s keep thinking about this idea. Below is another piece of cookie dough. Rotate the dough so it can fit on the baking sheet.
 
     // [TODO]? (DISCUSS: possibly redundant) INTERACTIVE-05: Dough cutting 3 (pages 12)
+{.todo} Coming Soon!
 
 Nice! Now, use the knife to cut off one piece of dough. Move that piece around so the dough makes a rectangle.
 
@@ -437,6 +441,7 @@ We [[did not | did]] overlap any of the pieces and we [[did | did not]] use all 
 Super work! Let’s do this again. You have the same starting amount of dough, but a different sized baking sheet. Rotate the dough so it can fit on the baking sheet.
 
     // [TODO]? (DISCUSS: possibly redundant) INTERACTIVE-06: Dough cutting 4 (pages 13)
+{.todo} Coming Soon!
 
 Nice! Now, use the knife to cut off one piece of dough. Move that piece around so the dough makes a rectangle.
 
@@ -449,6 +454,7 @@ Notice how we started with the same shaped cookie dough and cut it up two differ
 Before we move on, let’s discuss the perimeter of these three shapes.
 
     // [TODO] ANIMATION-02: (page 14)
+{.todo} Coming Soon!
 
 Remember, when we moved parts of the dough around, the area [[stayed the same | changed]]. Let’s see what happened to the perimeter:
 
@@ -461,6 +467,7 @@ So, when we moved around parts of the dough, the area [[stayed the same | change
 Great work! Let’s now think about all the shapes we’ve been working with so far:
 
     // [TODO] DIAGRAM-04: Parallelograms
+{.todo} Coming Soon!
 
 You likely notice that all these shapes have [[4]] sides and the opposite sides are [[parallel | perpendicular]].
 
@@ -482,6 +489,7 @@ Great!
 As you see, some shapes that meet the requirements to be a parallelogram also have other names. For example, this shape:
 
     // [todo] DIAGRAM-05: Rectangle (page 16)
+{.todo} Coming Soon!
 
 has opposite sides [[parallel | perpendicular ]] and therefore is a [[parallelogram | triangle | sphere]], but we more often refer to it as a [[rectangle | trapezoid | pentagon]]. Another shape that is a parallelogram but we often call a different name is a [[square | hexagon | circle]]. You can learn more about the different names and relationships of all sorts of quadrilaterals in a different Mathigon chapter.
 
@@ -519,20 +527,24 @@ We are now ready to think about a general approach for finding the area of any p
 Sometimes, it can be easy to visualize rearranging the parallelogram into a rectangle and finding the base and height.
 
     // [TODO] ANIMATION-03: Parallelogram -> triangle (page 20)
+{.todo} Coming Soon!
 
 So, to find area of this parallelogram, multiply the base of [[10]] by the height of [[3]] to get an area of [[30]] [[square cm | cm]].
 
 However, when we visualize the other side of the same parallelogram as the base, rearranging into a rectangle becomes a little more difficult. Cutting it in either of the two places shown here won’t easily give us a rectangle.
 
     // [TODO] DIAGRAM-07: Parallelogram cuts 1 (page 20)
+{.todo} Coming Soon!
 
 However, if this were a building, think about the height of the building. Draw in a line to represent the height.
 
     // [TODO] DIAGRAM-07: Parallelogram cuts 2 (page 20)
+{.todo} Coming Soon!
 
 Super! So, let’s see if we can rearrange this parallelogram into a [[rectangle | triangle | circle ]] with that height.
 
     // [TODO] ANIMATION-04: Parallelogram rearrange (page 20)
+{.todo} Coming Soon!
 
 So, when we take the same parallelogram from the first example, but think of the shorter side as the base, we see the base has a length of [[4]] cm, the height is [[7.5]] cm and the area is still [[30]] [[square cm | cm]].
 
@@ -541,6 +553,7 @@ So, to find the area of any parallelogram, we have to first identify what side w
 Now that we’ve derived a formula for the area of a parallelogram, let’s do a few examples of identifying pairs of bases and heights in a few parallelograms.
 
     // [TODO]? (DISCUSS: possibly redundant, see source doc comment) INTERACTIVE-09: (page 21)
+{.todo} Coming Soon!
 
 Click on one side of the parallelogram shown. 
 
@@ -710,12 +723,14 @@ We see that when using the formula Area of a Triangle = `1/2 x b x h` , we can u
 ---
 
     // [TODO]: Animation-01 (page 8)
+{.todo} Coming Soon!
 
 ---
 
 Visualizing the height outside of a triangle can sometimes be difficult. Let’s look at an actual triangle to help.
 
     // [TODO]: Animation-02 (pages 8-9)
+{.todo} Coming Soon!
 
 ---
 
@@ -742,8 +757,9 @@ _{span.reveal(when='clicks')}Now, for each incorrect base-height pair, move the 
 Now that we’ve developed a deep understanding of finding the area of triangles, find the areas of the two triangles below. Select the line you want to use as the base and then draw in the correct height.
 
     // [TODO]? (DISCUSS may be redundant): INTERACTIVE-06 (page 11)
+{.todo} Coming Soon!
 
-The area of the first triangles is [[  ]] square cm and the area of the second triangle is [[   ]] square cm.
+The area of the first triangles is [[0]] square cm and the area of the second triangle is [[0]] square cm.
 
 ---
 
@@ -754,6 +770,7 @@ The perimeter of the first triangles is TODO [[cm | square cm]] and the area of 
 ---
 
     // [TODO]: ANIMATION-03 (page 12)
+{.todo} Coming Soon!
 
 ---
 
@@ -764,6 +781,7 @@ Each triangle has a base of [[4]] and a height of [[5]], so the area of each tri
 Make 3 more triangles that have the exact same base and also have a height of 5.
 
     // [TODO]? (DISCUSS to clarify UX): INTERACTIVE-07 (page 12)
+{.todo} Coming Soon!
 
 Create one more triangle with the same base and same area, but with the smallest perimeter possible.
 
@@ -776,6 +794,7 @@ Notice that the triangle with the smallest area has a base of 4 and two other si
 So far, we’ve been using two congruent triangles to create a parallelogram that is double the area of one of the triangles. However, there are other options as well.
 
     // [TODO]: ANIMATION-04 (page 13-15)
+{.todo} Coming Soon!
 
 In the first two approaches, the original triangle and the copy was used to make a parallelogram. So the area of the parallelogram is [[twice | equal to]] the area of the triangle. In the last approach, the triangle was cut into pieces and the pieces were used to make a parallelogram, so the area of the parallelogram is [[equal to | twice]] the area of the triangle. Notice in the third example, the height of the parallelogram is [[half | equal to]] of the height of the original triangle.
 
@@ -784,6 +803,7 @@ In the first two approaches, the original triangle and the copy was used to make
 We use rectangles, parallelograms and triangles to estimate the area of different countries.
 
     // [TODO] (DISCUSS to clarify UX): INTERACTIVE-08 (pages 15-17)
+{.todo} Coming Soon!
 
 ---
 
@@ -1112,6 +1132,7 @@ Below are 7 polygons. Move and rotate the polygons to completely fill in the squ
 The set of these 7 polygons is called a tangram. The tangram is an ancient Chinese puzzle invented over 1,000 years ago during the Song Dynasty. In Chinese, the puzzle is called 七巧板. Pronounced “Chi-Chiao Pan,” this translates to “the seven intriguing pieces.” The goal of the puzzle is to use all 7 pieces to form any number of images. Below are just some of the shapes you can try to make at the [Tangram](https://mathigon.org/tangram) activity on Mathigon!
 
     // [TODO]: Image
+{.todo} Coming Soon!
 
 In 1815, Shan Chiao published “New Figures of the Tangram” which contained 374 tangram puzzles!
 
@@ -1180,6 +1201,7 @@ Below is a polygon from a different Voronoi diagram. Each grid represents 1 squa
     // [TODO]: Polygon image
 
     // [TODO]: Polygon area methods exercise
+{.todo} Coming Soon!
 
 No matter which approach we take, the area of the pentagon is 27.5 square units!
 
@@ -1290,7 +1312,7 @@ In the previous chapters, we’ve been exploring and learning about shapes with 
 
 As you likely know, a circle is the line connecting all points that are the same distance away from a center point.
 
-    // ANIMATION-01: Construct circle
+    // TODO ANIMATION-01: Construct circle
 
 The Indianapolis Motor Speedway in Indiana in the United States is one of the most well-known race tracks in the world.
 
@@ -1367,7 +1389,7 @@ As we increase the number of sides of the polygon, our estimate gets closer and 
 
 The RADIUS of a circle is a line from the center of the circle to a point on the circle. The DIAMETER of a circle is a line connecting two points on the circle that passes through the center point.
 
-    // DIAGRAM: Radius and diameter
+    // TODO DIAGRAM: Radius and diameter
 
 ---
 
@@ -1621,12 +1643,14 @@ The race is called the Indy 500 because cars must drive 500 miles. Each lap is 2
 Let’s end this chapter with one final question. What do you think is longer - the height of the can of tennis balls or the distance around the can? [[the height of the can | the distance around the can]].
 
     // DIAGRAM: Tennis ball can comparison
+{.todo} Coming Soon!
 
 A tennis ball has a diameter of 6.7 cm and the can holds 3 of them with no extra room at the top or the bottom. Therefore, the height of the can is [[20.1]] cm.
 
 The distance around the can is the same as the [[circumference | diameter | radius]] of the cap of the can.
 
     // DIAGRAM: Tennis ball lid overlay
+{.todo} Coming Soon!
 
 The circumference of the cap is 3.14 x [[D | R]]. The distance around the can is [[21]] cm. The longer distance is the [[distance around the can | height of the can]].
 
@@ -1692,7 +1716,8 @@ Cut out a square piece of this pizza that is a square with side lengths “R.”
 
 Below is a circular pizza with the radius labeled.
 
-    // INTERACTIVE-03: Square slice of round pizza (pages 4-6)
+    // TODO INTERACTIVE-03: Square slice of round pizza (pages 4-6)
+{.todo} Coming Soon!
 
 Draw in a square with side length “R.”
 
@@ -1707,6 +1732,7 @@ Let’s see how the extra part of the `R^2` compares to the `1/4` of the pizza l
 Before answering this question, let’s come back to our initial pizza question using the idea of `3R^2`
 
     // DIAGRAM: Pizzas w/diameters (page 7)
+{.todo} Coming Soon!
 
 The large pizza has a diameter of 44 cm, so the radius is [[22]] cm. The area of one `R^2` with this radius is [[484]] square cm, so `3R^2` for the large pizza is [[1452]] square cm. The radius of the medium pizza is [[16]] cm so `3R^2` for 1 one of the medium pizzas is [[768]] square cm. The area of two of these medium pizzas is [[1536]] square cm.
 
@@ -1814,8 +1840,9 @@ One way to find the area of a circle would be to multiply the length of the radi
 The formula for the area of a circle is `pi R^2`. Let’s not lose sight of how exciting this is! Remember that earlier in the chapter, we were trying to determine how many `R^2` are needed to cover a circle:
 
     // DIAGRAM: Round pizza with square area segments (page 13)
+{.todo} Coming Soon!
 
-We saw that `4R^2` was [[too big | too small]] and that `3R^2` was a little [[too small | too big]]. We have now proved the exact number of `R^2` we need - `pi` “`R^2`” are needed to fill in the circle. Recall from the Circumference chapter, that we often approximate `pi` with 3.14. 
+We saw that `4R^2` was [[too big | too small]] and that `3R^2` was a little [[too small | too big]]. We have now proved the exact number of `R^2` we need - `pi` “`R^2`” are needed to fill in the circle. Recall from the Circumference chapter, that we often approximate `pi` with 3.14.
 
 `pi` is a powerful number! not only does it tell us how many [[diameters | radii]] are needed to go around the circumference, it also tells us how many `R^2` are needed to completely fill in a circle. 
 
@@ -1824,6 +1851,7 @@ When using the formula `pi R^2`, remember to first multiply the radius by itself
 We are now ready to answer our original question. Which option has more pizza?
 
     // DIAGRAM: Pizzas w/diameters (page 14)
+{.todo} Coming Soon!
 
     // INTERACTIVE-08: QA formula sequence (page 14)
 
@@ -1850,6 +1878,7 @@ Some people don’t eat the crust on the pizza. If we compare the 1 large pizza 
 The crust on these pizzas is 4 cm thick.
 
     // DIAGRAM: Pizzas w/diameters and crust thickness (page 15)
+{.todo} Coming Soon!
 
 If we are just interested in finding the area of the pizza without the crust, the diameter of the large pizza-only circle is [[36]] cm and the diameter of the medium pizza only-circle is [[24]] cm.
 
@@ -1872,7 +1901,8 @@ If you eat the crust, the better purchase is [[2 medium pizzas | 1 large pizza]]
 
 Below are three different square pizzas with different sized pepperonis on each pizza.
 
-    // INTERACTIVE-10: Pepperoni coverage (page 17)
+    // TODO INTERACTIVE-10: Pepperoni coverage (page 17)
+{.todo} Coming Soon!
 
 Let’s find the amount of each pizza not covered by pepperoni. First, rearrange the pizzas into the order that you think goes from least to greatest in terms of amount of pizza NOT covered by pepperoni.
 
