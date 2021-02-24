@@ -120,14 +120,14 @@ export type UserData = {
 export interface StepComponent {
   setup: ($step: Step, goal: string, initialData?: UserData) => void;
 }
-export class Step extends CustomElementView {
+export class Step<T = any> extends CustomElementView {
   private $course?;
   private $components;
   private $reveals;
   private $nextBtn;
   private userData?;
   narration?: Narration;
-  model: Observable;
+  model: Observable<T>;
   isShown: boolean;
   isCompleted: boolean;
   goals: string[];
