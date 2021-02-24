@@ -2093,6 +2093,7 @@ export function slicesArrangement($step: Step) {
       aColor = hovering.g === 'a' ? 'lime' : 'dark';
       bColor = hovering.g === 'b' ? 'lime' : 'dark';
       selected = true;
+      $step.score('selected');
     }
   });
 }

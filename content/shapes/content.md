@@ -839,15 +839,15 @@ In our example, using a Voronoi diagram can help schools make estimates of how m
     figure: x-geopad(width=600 height=400)
       svg
 
-Some of these regions are shapes we’ve learned about in previous chapters. [This shape](->.triangle-cell) is a triangle and we can find the area by doing `input(1/2) x base x height`.
+Some of these regions are shapes we’ve learned about in previous chapters. [This shape](->.triangle-cell) is a triangle and we can find the area by doing _{x-equation(solution="1/2" keys="frac")}_ `x base x height`.
 
-{.reveal(when="blank-0")} Click on the side of the triangle you want to use as the base.
+{.reveal(when="eqn-0")} Click on the side of the triangle you want to use as the base.
 
 {.reveal(when="side-selected")} Now draw in the height that corresponds with the base you selected.
 
 {.reveal(when="height-drawn")} The area of this triangle is [TODO] [[0]] [[square km | km]].
 
-{.text-center.reveal(when="blank-1 blank-2")} `(1500 "\ people") / (1 "\ square km") = (input(0) "\ people") / ([TODO] "\ square km")`
+{.text-center.reveal(when="blank-0 blank-1")} `(1500 "\ people") / (1 "\ square km") = (input(0) "\ people") / ([TODO] "\ square km")`
 
 ---
 > id: voronoi-3
@@ -1710,7 +1710,7 @@ Cut out a square piece of this pizza that is a square with side lengths “R.”
 
 {.reveal(when="blank-0")} If each person receives one of the `R^2`-sized pieces, this pizza can serve [[4]] people.
 
-{.reveal(when="blank-1")} Therefore the area of this square is _{x-equation(solution="4R^2" keys="sup" short-var)}_. Each side length of the square is _{x-equation(solution="2R" short-var)}_, we can also find the area of the square by doing _{x-equation(solution="2R × 2R" keys="×" short-var)}_. This also equals `4R^2`. Either way, we see that it takes 4 “R by R” squares to fill in a square when R represents the radius of the square. Let’s see if we can use this idea to discover a way to find the area of a circle.
+{.reveal(when="blank-1")} Therefore the area of this square is _{x-equation(solution="4r^2" keys="sup" short-var)}_. Each side length of the square is _{x-equation(solution="2r" short-var)}_, we can also find the area of the square by doing _{x-equation(solution="2r × 2r" keys="×" short-var)}_. This also equals `4R^2`. Either way, we see that it takes 4 “R by R” squares to fill in a square when R represents the radius of the square. Let’s see if we can use this idea to discover a way to find the area of a circle.
 
 ---
 
@@ -1747,19 +1747,19 @@ Delivered pizzas can sometimes sit around for too long and get cold. People ofte
     // https://www.shutterstock.com/image-photo/tasty-pizza-box-isolated-on-white-116973259
     figure: x-img(src="https://image.shutterstock.com/z/stock-photo-tasty-pizza-in-box-isolated-on-white-116973259.jpg" width=300 height=220)
 
-Unfortunately, most pizzas are too big to fit in standard ovens. Rearrange the 8 slices onto this baking sheet that can fit in the oven.
-
 ---
 
 > id: slices-arrangement
+
+Unfortunately, most pizzas are too big to fit in standard ovens. Rearrange the 8 slices onto this baking sheet that can fit in the oven.
 
     // INTERACTIVE-04: Pizza slices arrangement (pages 8-9)
     figure: x-geopad(width=630 height=700)
       include svg/pizza_2.svg
 
-8 slices is pretty common in pizzas, but it could be cut into any number of equal slices. If we increase the number of slices to ${n1}{n1|8|8,30,1} , the shape begins to look more and more like a [[parallelogram | triangle | square]].
+{.reveal(when="arranged")} 8 slices is pretty common in pizzas, but it could be cut into any number of equal slices. If we increase the number of slices to ${n1}{n1|8|8,30,2}, the shape begins to look more and more like a [[parallelogram | triangle | square]].
 
-We used all the pizza and the slices aren’t overlapping, so the area of the parallelogram is [[equal to | different than]] the area of the circle. The formula for the area of a parallelogram is base x height when the height makes a [[right | acute | obtuse]] angle with the base._{span.reveal} Click on the side of the parallelogram you want to use as the base._ _{span.reveal} Draw in the height that corresponds with this base._
+{.reveal(when="blank-0")} We used all the pizza and the slices aren’t overlapping, so the area of the parallelogram is [[equal to | different than]] the area of the circle. The formula for the area of a parallelogram is base x height when the height makes a [[right | acute | obtuse]] angle with the base. _{span.reveal(when="blank-1 blank-2")} Click on the side of the parallelogram you want to use as the base._ _{span.reveal(when="blank-1 blank-2 selected")} Draw in the height that corresponds with this base._
 
 ---
 
