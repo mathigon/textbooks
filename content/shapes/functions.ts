@@ -11,8 +11,8 @@ import {Arc, Circle, intersections, Line, Point, Polygon, Polyline, Rectangle, S
 
 import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
-import {VoronoiStep} from './components/voronoi';
 import {fillSquares, filterMap, GeopadPathColor, geopadReset, getTangramPolystr, getX, getY, Guide, handlePathing, HelperPoly, initLineup, initPizza, length, makeParallelogram, nearest, nearestSimple, polypadPrep, RenderedGeopadPoly, ResizeableSquare, ring, RopePoly, separateSlices, setupBaseHeight, setupDraggableRectangles, setupRope, Slice, tangramComplete, tangramScale, toParallelogram, toRect, touches} from './components/util';
+import {VoronoiModel} from './components/voronoi';
 
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
@@ -707,7 +707,7 @@ const cafeLocationPoints = [
 
 const voronoiColours = ['3c91e6', 'ff6b6b', 'ffe45e', '4ecdc4', '81366f', 'c93818', 'e2c312', '6bab90', 'e4533a'].map(c => '#' + c);
 
-export async function voronoi1($step: VoronoiStep) {
+export async function voronoi1($step: Step<VoronoiModel>) {
 
   await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
 
@@ -812,7 +812,7 @@ export async function voronoi1($step: VoronoiStep) {
   });
 }
 
-async function handleAnim(index: number, $step: VoronoiStep) {
+async function handleAnim(index: number, $step: Step<VoronoiModel>) {
   window.setTimeout((_: any) => {
     const _anim = animate((progress, _) => {
       const dlOpacity = 1 - progress;
@@ -823,14 +823,14 @@ async function handleAnim(index: number, $step: VoronoiStep) {
   }, 1000);
 }
 
-async function showVor($step: VoronoiStep) {
+async function showVor($step: Step<VoronoiModel>) {
   const anim = animate((progress, _) => {
     $step.model.vorOpacity = progress;
   }, 2000);
   anim.promise.then(_ => $step.score('voronoi-diagram'));
 }
 
-export async function voronoi2($step: VoronoiStep) {
+export async function voronoi2($step: Step<VoronoiModel>) {
 
   await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
 
@@ -922,7 +922,7 @@ export async function voronoi2($step: VoronoiStep) {
   $geopad.showLabels = true;
 }
 
-export async function voronoi3($step: VoronoiStep) {
+export async function voronoi3($step: Step<VoronoiModel>) {
 
   const $geopad = $step.$('x-geopad') as Geopad;
 
