@@ -1,6 +1,6 @@
 import {$N, animate, AnimationResponse, EventCallback, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {tabulate} from '@mathigon/core';
-import {Angle, Arc, intersections, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
+import {Angle, Arc, GeoElement, GeoShape, intersections, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
 import {nearlyEquals} from '@mathigon/fermat';
 import {Geopad, GeoPath, Polypad, Step, Tile} from '../../shared/types';
 
@@ -1026,34 +1026,65 @@ export function nearest(to: Point, of: {node: Point, guide: Guide}[]) {
   }).sort((a, b) => a.distance - b.distance)[0].point;
 }
 
-export function initPizza(slices: number, center: Point, radius: number, $geopad: Geopad) {
+
+export type SideData =
+{
+  edge: 'arc';
+  /** ID signifying a 'group' of the arrangement */
+  groupID: 'a' | 'b';
+}
+| {
+  edge: 'edgeA' | 'edgeB';
+  /** Helps us refer to the slice whose edge is being hovered near */
+  sliceIndex: number
+};
+
+/** A collection of 'slices' that are arranged into a circular pizza */
+export type PizzaSlices = {
+  /** Slices from half 'A' of the pizza/circle */
+  groupA: Slice[];
+  /** Slices from half 'B' of the pizza/circle */
+  groupB: Slice[];
+  /** All slices from the pizza */
+  allSlices: Slice[];
+};
+export function initPizza(slices: number, center: Point, radius: number, $geopad: Geopad): PizzaSlices {
   const halfCount = Math.ceil(slices / 2);
   const arcAngle = (2 * Math.PI) / slices;
   const initAngle = arcAngle / 2;
-  const all: Slice[] = [];
+  const allSlices: Slice[] = [];
   const groupA: Slice[] = [];
   const groupB: Slice[] = [];
   tabulate(index => {
-    const slice = new Slice(true, $geopad, radius, arcAngle, center, initAngle + (index * arcAngle));
+    const slice = new Slice(true, $geopad, radius, arcAngle, center, index, initAngle + (index * arcAngle));
     if (index < halfCount) {
       groupA.push(slice);
     } else {
       groupB.push(slice);
     }
-    all.push(slice);
+    allSlices.push(slice);
   }, slices);
-  return {all, groupA, groupB};
+  return {allSlices, groupA, groupB};
 }
 
-export function initLineup(slices: number, center: Point, radius: number, colors: {aColor: GeopadPathColor, bColor: GeopadPathColor}, $geopad: Geopad) {
+/** A collection of 'slices' that are arranged in a parallelogram-esque shape */
+export type LineupSlices = {
+  /** Slices from row 'A' of the lineup */
+  groupA: Slice[];
+  /** Slices from row 'B' of the lineup */
+  groupB: Slice[];
+  /** All slices from the lineup */
+  allSlices: Slice[];
+};
+export function initLineup(slices: number, center: Point, radius: number, $geopad: Geopad): LineupSlices {
   const halfCount = Math.ceil(slices / 2);
   const arcAngle = (2 * Math.PI) / slices;
-  const all: Slice[] = [];
+  const allSlices: Slice[] = [];
   const groupA: Slice[] = [];
   const groupB: Slice[] = [];
   tabulate(index => {
     const flip = index > halfCount - 1;
-    const slice = new Slice(false, $geopad, radius, arcAngle, center);
+    const slice = new Slice(false, $geopad, radius, arcAngle, center, index);
     const halfWidth = slice.width / 2;
     const targetBase = center.shift((-620 / 2) + halfWidth, 0);
     const target =
@@ -1062,27 +1093,55 @@ export function initLineup(slices: number, center: Point, radius: number, colors
         targetBase.shift(index * slice.width, 0);
     slice.moveTo(target);
     slice.rotateTo(flip ? Math.PI : 0);
-    if (!flip) {
-      slice.setArcColor(colors.aColor);
-      groupA.push(slice);
-    } else {
-      slice.setArcColor(colors.bColor);
+    if (flip) {
       groupB.push(slice);
+    } else {
+      groupA.push(slice);
     }
-    all.push(slice);
+    allSlices.push(slice);
     slice.draw();
   }, slices);
-  return {all, groupA, groupB};
+  return {allSlices, groupA, groupB};
+}
+
+export function slicesHighlight(arrangement: PizzaSlices, highlights?: SideData[]) {
+
+  for (const slice of arrangement.allSlices) {
+    slice.setArcColor('dark');
+    slice.setEdgeAColor('dark');
+    slice.setEdgeBColor('dark');
+  }
+
+  if (highlights != undefined) {
+    for (const highlight of highlights) {
+      if (highlight.edge == 'arc') {
+        if (highlight.groupID == 'a') for (const slice of arrangement.groupA) slice.setArcColor('teal');
+        else if (highlight.groupID == 'b') for (const slice of arrangement.groupB) slice.setArcColor('teal');
+      } else if (highlight.edge == 'edgeA') {
+        arrangement.allSlices[highlight.sliceIndex].setEdgeAColor('teal');
+      } else {
+        arrangement.allSlices[highlight.sliceIndex].setEdgeBColor('teal');
+      }
+    }
+  }
+
 }
 
 export class Slice {
 
-  private sides: {
+  private edgeA: {
     path?: GeoPath,
-    poly: Polyline
+    color?: GeopadPathColor,
+    poly: Segment
+  };
+  private edgeB: {
+    path?: GeoPath,
+    color?: GeopadPathColor,
+    poly: Segment
   };
   private arc: {
     path?: GeoPath,
+    color?: GeopadPathColor,
     poly: Arc
   };
   private _bounds: Polygon;
@@ -1096,24 +1155,33 @@ export class Slice {
   private transTarget?: Point;
   private firstDraw = true;
 
-  constructor(private selfDraw: boolean, private $geopad: Geopad, radius: number, arcAngle: number, circleCenter: Point, initAngle?: number) {
+  constructor(private selfDraw: boolean, private $geopad: Geopad, radius: number, arcAngle: number, circleCenter: Point, private _index: number, initAngle?: number) {
     this._angle = initAngle ?? 0;
     this._tip = circleCenter;
     const pointA = circleCenter.shift(0, -radius);
     const pointB = pointA.rotate(arcAngle, circleCenter);
     this.width = Point.distance(pointA, pointB);
-    const sliceArc = (new Arc(circleCenter, pointA, arcAngle)).rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
-    const sliceSides = (new Polyline(pointA, circleCenter, pointB)).rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
-    this.sides = {
-      path: $geopad.drawPath(sliceSides, {classes: 'slice-outline'}),
-      poly: sliceSides
-    };
+    const pathRotation = <T extends GeoElement>(path: T) => path.rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter) as T;
+    const sliceArc = pathRotation(new Arc(circleCenter, pointA, arcAngle)) as Arc;
     this.arc = {
       path: $geopad.drawPath(sliceArc, {classes: 'slice-outline'}),
       poly: sliceArc
     };
-    this._bounds = new Polygon(...sliceSides.points);
-    this._pivot = (new Segment((new Segment(pointA, pointB)).midpoint, circleCenter)).midpoint.rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
+    this.setArcColor('dark');
+    const edgeA = pathRotation(new Segment(pointA, circleCenter));
+    this.edgeA = {
+      path: $geopad.drawPath(edgeA, {classes: 'slice-outline'}),
+      poly: edgeA
+    };
+    this.setEdgeAColor('dark');
+    const edgeB = pathRotation(new Segment(circleCenter, pointB));
+    this.edgeB = {
+      path: $geopad.drawPath(edgeB, {classes: 'slice-outline'}),
+      poly: edgeB
+    };
+    this.setEdgeBColor('dark');
+    this._bounds = new Polygon(edgeA.p1, edgeA.p2, edgeB.p2, sliceArc.at(0.25), sliceArc.at(0.5), sliceArc.at(0.75));
+    this._pivot = pathRotation((new Segment((new Segment(pointA, pointB)).midpoint, circleCenter)).midpoint);
     if (this.selfDraw) this.draw();
   }
 
@@ -1133,6 +1201,10 @@ export class Slice {
     return this._angle;
   }
 
+  get index() {
+    return this._index;
+  }
+
   moveBy(by: Point, duration?: number) {
     if (duration) {
       this.transAnim?.cancel();
@@ -1150,9 +1222,15 @@ export class Slice {
         ...this.arc,
         poly: this.arc.poly.translate(by)
       };
-      this.sides = {
-        ...this.sides,
-        poly: this.sides.poly.translate(by)
+      const polyA = this.edgeA.poly.translate(by);
+      this.edgeA = {
+        ...this.edgeA,
+        poly: new Segment(polyA.p1, polyA.p2)
+      };
+      const polyB = this.edgeB.poly.translate(by);
+      this.edgeB = {
+        ...this.edgeB,
+        poly: new Segment(polyB.p1, polyB.p2)
       };
       this._bounds = this.bounds.translate(by);
       this._tip = this.tip.translate(by);
@@ -1198,9 +1276,13 @@ export class Slice {
         ...this.arc,
         poly: this.arc.poly.rotate(amount, c)
       };
-      this.sides = {
-        ...this.sides,
-        poly: this.sides.poly.rotate(amount, c)
+      this.edgeA = {
+        ...this.edgeA,
+        poly: this.edgeA.poly.rotate(amount, c)
+      };
+      this.edgeB = {
+        ...this.edgeB,
+        poly: this.edgeB.poly.rotate(amount, c)
       };
       this._bounds = this.bounds.rotate(amount, c);
       this._tip = this.tip.rotate(amount, c);
@@ -1223,27 +1305,56 @@ export class Slice {
   }
 
   setArcColor(name: GeopadPathColor) {
+    if (this.arc.color != undefined) this.arc.path?.$el.removeClass(this.arc.color);
+    this.arc.color = name;
     this.arc.path?.$el.addClass(name);
   }
 
+  setEdgeAColor(name: GeopadPathColor) {
+    if (this.edgeA.color != undefined) this.edgeA.path?.$el.removeClass(this.edgeA.color);
+    this.edgeA.color = name;
+    this.edgeA.path?.$el.addClass(name);
+  }
+
+  setEdgeBColor(name: GeopadPathColor) {
+    if (this.edgeB.color != undefined) this.edgeB.path?.$el.removeClass(this.edgeB.color);
+    this.edgeB.color = name;
+    this.edgeB.path?.$el.addClass(name);
+  }
+
+  private distanceToElem(from: Point, to: GeoShape) {
+    return Point.distance(from, to.project(from));
+  }
+
   distanceToArc(from: Point) {
-    return Point.distance(from, this.arc.poly.project(from));
+    return this.distanceToElem(from, this.arc.poly);
+  }
+
+  distanceToEdgeA(from: Point) {
+    return this.distanceToElem(from, this.edgeA.poly);
+  }
+
+  distanceToEdgeB(from: Point) {
+    return this.distanceToElem(from, this.edgeB.poly);
   }
 
   draw() {
     if (this.arc.path == undefined) {
       this.firstDraw = false;
       this.arc.path = this.$geopad.drawPath(this.arc.poly, {animated: 0});
-      this.sides.path = this.$geopad.drawPath(this.sides.poly, {animated: 0});
+      this.edgeA.path = this.$geopad.drawPath(this.edgeA.poly, {animated: 0});
+      this.edgeB.path = this.$geopad.drawPath(this.edgeB.poly, {animated: 0});
     } else {
       this.arc.path.redraw(this.arc.poly);
-      this.sides.path!.redraw(this.sides.poly);
+      this.edgeA.path!.redraw(this.edgeA.poly);
+      this.edgeB.path!.redraw(this.edgeB.poly);
     }
   }
 
   remove() {
     this.arc.path?.delete(0);
-    this.sides.path?.delete(0);
+    this.edgeA.path?.delete(0);
+    this.edgeB.path?.delete(0);
   }
 
 }

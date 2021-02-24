@@ -1750,6 +1750,9 @@ Delivered pizzas can sometimes sit around for too long and get cold. People ofte
 ---
 
 > id: slices-arrangement
+> goals: height-selected
+
+    // TODO: Figure out why the next step isn't triggering on 'height-selected' being scored
 
 Unfortunately, most pizzas are too big to fit in standard ovens. Rearrange the 8 slices onto this baking sheet that can fit in the oven.
 
@@ -1757,9 +1760,9 @@ Unfortunately, most pizzas are too big to fit in standard ovens. Rearrange the 8
     figure: x-geopad(width=630 height=700)
       include svg/pizza_2.svg
 
-{.reveal(when="arranged")} 8 slices is pretty common in pizzas, but it could be cut into any number of equal slices. If we increase the number of slices to ${n1}{n1|8|8,30,2}, the shape begins to look more and more like a [[parallelogram | triangle | square]].
+{.reveal(when="arranged")} 8 slices is pretty common in pizzas, but it could be cut into any number of equal slices. If we increase the number of slices to ${n1}{n1|8|8,16,1}, the shape begins to look more and more like a [[parallelogram | triangle | square]].
 
-{.reveal(when="blank-0")} We used all the pizza and the slices aren’t overlapping, so the area of the parallelogram is [[equal to | different than]] the area of the circle. The formula for the area of a parallelogram is base x height when the height makes a [[right | acute | obtuse]] angle with the base. _{span.reveal(when="blank-1 blank-2")} Click on the side of the parallelogram you want to use as the base._ _{span.reveal(when="blank-1 blank-2 selected")} Draw in the height that corresponds with this base._
+{.reveal(when="blank-0")} We used all the pizza and the slices aren’t overlapping, so the area of the parallelogram is [[equal to | different than]] the area of the circle. The formula for the area of a parallelogram is base x height when the height makes a [[right | acute | obtuse]] angle with the base. _{span.reveal(when="blank-1 blank-2")} Click on the side of the parallelogram you want to use as the base._ _{span.reveal(when="blank-1 blank-2 base-selected")} Select the height that corresponds with this base._
 
 ---
 

@@ -11,8 +11,8 @@ import {Arc, Circle, intersections, Line, Point, Polygon, Polyline, Rectangle, S
 
 import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
-import {fillSquares, filterMap, GeopadPathColor, geopadReset, getTangramPolystr, getX, getY, Guide, handlePathing, HelperPoly, initLineup, initPizza, length, makeParallelogram, nearest, nearestSimple, polypadPrep, RenderedGeopadPoly, ResizeableSquare, ring, RopePoly, separateSlices, setupBaseHeight, setupDraggableRectangles, setupRope, Slice, tangramComplete, tangramScale, toParallelogram, toRect, touches} from './components/util';
 import {VoronoiModel} from './components/voronoi';
+import {fillSquares, filterMap, geopadReset, getTangramPolystr, getX, getY, Guide, handlePathing, HelperPoly, HighlightParam, initLineup, initPizza, length, LineupSlices, makeParallelogram, nearest, nearestSimple, polypadPrep, RenderedGeopadPoly, ResizeableSquare, ring, RopePoly, separateSlices, setupBaseHeight, setupDraggableRectangles, setupRope, SideData, Slice, slicesHighlight, tangramComplete, tangramScale, toParallelogram, toRect, touches} from './components/util';
 
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
@@ -1982,7 +1982,18 @@ export function slicing2($step: Step) {
   });
 }
 
-export function slicesArrangement($step: Step) {
+type ArrangementModel = {
+  hovering?: SideData;
+  baseSelected?: SideData;
+  heightSelected?: SideData;
+  highlightData: SideData[];
+  /** Value currently selected via the slider, signifying the number of slices the pizza/lineup should have */
+  n1: number;
+};
+export async function slicesArrangement($step: Step<ArrangementModel>) {
+
+  let arranged = false;
+
   const $geopad = $step.$('x-geopad') as Geopad;
   const radius = 175;
   const center = new Point(315, radius + 25);
@@ -1990,29 +2001,32 @@ export function slicesArrangement($step: Step) {
   const $sliceZone = $N('path', {}, $geopad.$paths) as SVGView;
   $sliceZone.addClass('fill red');
   $sliceZone.draw(sliceZone);
-  const slices = initPizza(8, center, radius, $geopad);
+  const initSlices = initPizza(8, center, radius, $geopad);
+  /** The slices that form the original pizza shape */
+  let pizzaSlices = initSlices;
+  /** The slices that have been arranged into a parallelogram-esque 'lineup' */
   $geopad.switchTool('move');
   let currentSlice: Slice | undefined;
   let placedCount = 0;
-  // let startDelta: Point;
   let startDelta = new Point(0, 0);
   let startLocation = new Point(0, 0);
   let startAngle = 0;
-  slide($geopad, {
+
+  slide($geopad, { // Coordinate slice drag-drop portion of interactive
     $box: $geopad.$svg,
     start: posn => {
-      currentSlice = slices.all.find(slice => slice.bounds.contains(posn));
+      currentSlice = initSlices.allSlices.find(slice => slice.bounds.contains(posn));
       startLocation = currentSlice!.pivot;
       startAngle = currentSlice!.angle;
       startDelta = startLocation.subtract(posn);
     },
     move: (current, _start, _last) => {
-      if (currentSlice && !$step.scores.has('arranged')) {
+      if (currentSlice && !arranged) {
         currentSlice.moveTo(current.add(startDelta));
       }
     },
     end: (last, _start) => {
-      if (!$step.scores.has('arranged')) {
+      if (!arranged) {
         if (sliceZone.contains(last) && currentSlice) {
           const flip = placedCount > 3;
           const halfWidth = currentSlice.width / 2;
@@ -2026,10 +2040,8 @@ export function slicesArrangement($step: Step) {
           placedCount++;
           if (placedCount == 8) {
             setTimeout(() => {
-              $step.model.lSlices = slices;
-              $step.model.pSlices = initPizza(8, center, radius, $geopad);
-              $step.model.arranged = true;
               $step.score('arranged');
+              arranged = true;
               $step.addHint('correct');
             }, 500);
           }
@@ -2040,62 +2052,114 @@ export function slicesArrangement($step: Step) {
       }
     }
   });
-  // [TODO]: refactor this to use reactive $step.model.watch drawing approach
-  let aColor: GeopadPathColor = 'dark';
-  let bColor: GeopadPathColor = 'dark';
-  $step.model.watch((state: any) => {
+
+  await $step.onScore('arranged');
+
+  let lineupSlices: LineupSlices | undefined;
+  const resetSlices = (count: number) => {
+    for (const slice of pizzaSlices.allSlices) slice.remove();
+    if (lineupSlices != undefined) for (const slice of lineupSlices.allSlices) slice.remove();
+    pizzaSlices = initPizza(count, center, radius, $geopad);
+    lineupSlices = initLineup(count, center.shift(0, (1.5 * radius) + 35), radius, $geopad);
+    slicesHighlight(pizzaSlices, $step.model.highlightData);
+    slicesHighlight(lineupSlices, $step.model.highlightData);
+  };
+  resetSlices(8);
+
+  $step.model.watch(state => { // Re-init slices when slice count changes
     const sliceCount = state.n1;
-    if (state.arranged) {
-      for (const slice of state.pSlices.all as Slice[]) slice.remove();
-      for (const slice of state.lSlices.all as Slice[]) slice.remove();
-      state.pSlices = initPizza(sliceCount, center, radius, $geopad);
-      state.lSlices = initLineup(sliceCount, center.shift(0, (1.5 * radius) + 35), radius, {aColor, bColor}, $geopad);
-    }
+    resetSlices(sliceCount);
   });
-  let hovering: undefined | {s: Slice[], g: string} = undefined;
-  let selected = false;
-  $geopad.on('pointermove', b => {
-    if ($step.model.arranged && !selected) {
-      const distances: {d: number, group: string}[] = [];
-      for (const slice of $step.model.lSlices.groupA as Slice[]) {
-        const d = slice.distanceToArc(new Point(b.offsetX, b.offsetY));
-        distances.push({d, group: 'a'});
-      }
-      for (const slice of $step.model.lSlices.groupB as Slice[]) {
-        const d = slice.distanceToArc(new Point(b.offsetX, b.offsetY));
-        distances.push({d, group: 'b'});
-      }
-      const shortest = distances.sort((a, b) => a.d - b.d)[0];
-      if (shortest.d <= 10) {
-        const pGroup: Slice[] = shortest.group === 'a' ? $step.model.pSlices.groupA : $step.model.pSlices.groupB;
-        const pOther: Slice[] = shortest.group === 'b' ? $step.model.pSlices.groupA : $step.model.pSlices.groupB;
-        const lGroup: Slice[] = shortest.group === 'a' ? $step.model.lSlices.groupA : $step.model.lSlices.groupB;
-        const lOther: Slice[] = shortest.group === 'b' ? $step.model.lSlices.groupA : $step.model.lSlices.groupB;
-        aColor = shortest.group === 'a' ? 'teal' : 'dark';
-        bColor = shortest.group === 'b' ? 'teal' : 'dark';
-        hovering = {
-          s: pGroup.concat(lGroup),
-          g: shortest.group
-        };
-        for (const slice of hovering.s) slice.setArcColor('teal');
-        for (const slice of pOther.concat(lOther)) slice.setArcColor('dark');
-      } else {
-        hovering = undefined;
-        aColor = bColor = 'dark';
-        for (const slice of $step.model.pSlices.all as Slice[]) slice.setArcColor('dark');
-        for (const slice of $step.model.lSlices.all as Slice[]) slice.setArcColor('dark');
-      }
-    }
+
+  await Promise.all([$step.onScore('blank-1'), $step.onScore('blank-2')]);
+
+  $step.model.watch(state => { // Coordinate value of highlightData
+    const hovering = state.hovering;
+    const baseSelected = state.baseSelected;
+    const heightSelected = state.heightSelected;
+
+    const hlParams: HighlightParam[] = [];
+
+    if (baseSelected != undefined) {
+      hlParams.push(baseSelected);
+      if (heightSelected != undefined) hlParams.push(heightSelected);
+      else if (hovering != undefined) hlParams.push(hovering);
+    } else if (hovering != undefined) hlParams.push(hovering);
+
+    $step.model.highlightData = hlParams;
   });
+
+  $step.model.watch(state => { // Re-highlight when highlight data changes
+    const hd = state.highlightData;
+    slicesHighlight(lineupSlices!, hd);
+    slicesHighlight(pizzaSlices, hd);
+  });
+
+  $geopad.on('pointermove', b => { // Report 'hover' status
+
+    const distances: {distance: number, side: SideData}[] = [];
+    const pointerLoc = new Point(b.offsetX, b.offsetY);
+
+    for (const slice of lineupSlices!.groupA) {
+      const arcDistance = slice.distanceToArc(pointerLoc);
+      distances.push({distance: arcDistance, side: {edge: 'arc', groupID: 'a'}});
+      const edgeADistance = slice.distanceToEdgeA(pointerLoc);
+      distances.push({distance: edgeADistance, side: {edge: 'edgeA', sliceIndex: slice.index}});
+      const edgeBDistance = slice.distanceToEdgeA(pointerLoc);
+      distances.push({distance: edgeBDistance, side: {edge: 'edgeB', sliceIndex: slice.index}});
+    }
+    for (const slice of lineupSlices!.groupB) {
+      const arcDistance = slice.distanceToArc(pointerLoc);
+      distances.push({distance: arcDistance, side: {edge: 'arc', groupID: 'b'}});
+      const edgeADistance = slice.distanceToEdgeA(pointerLoc);
+      distances.push({distance: edgeADistance, side: {edge: 'edgeA', sliceIndex: slice.index}});
+      const edgeBDistance = slice.distanceToEdgeA(pointerLoc);
+      distances.push({distance: edgeBDistance, side: {edge: 'edgeB', sliceIndex: slice.index}});
+    }
+
+    const shortest = distances.sort((a, b) => a.distance - b.distance)[0];
+
+    if (shortest.distance <= 10) {
+      $step.model.hovering = shortest.side;
+    } else {
+      $step.model.hovering = undefined;
+    }
+
+  });
+
+  const baseSelection = () => {
+    if ($step.model.hovering != undefined) {
+      $step.model.baseSelected = $step.model.hovering;
+      $step.score('base-selected');
+      $step.addHint('correct');
+    } else {
+      $step.addHint('incorrect');
+    }
+  };
+
+  $geopad.on('click', baseSelection);
+
+  await $step.onScore('base-selected');
+
+  $geopad.off('click', baseSelection);
+
   $geopad.on('click', () => {
-    if (hovering != undefined) {
-      for (const slice of hovering.s) slice.setArcColor('lime');
-      aColor = hovering.g === 'a' ? 'lime' : 'dark';
-      bColor = hovering.g === 'b' ? 'lime' : 'dark';
-      selected = true;
-      $step.score('selected');
+    if (
+      $step.model.hovering != undefined &&
+      $step.model.hovering.edge != $step.model.baseSelected!.edge &&
+      (
+        ($step.model.hovering.edge == 'arc' && $step.model.baseSelected!.edge != 'arc') ||
+        ($step.model.hovering.edge != 'arc' && $step.model.baseSelected!.edge == 'arc')
+      )
+    ) {
+      $step.model.heightSelected = $step.model.hovering;
+      $step.score('height-selected');
+      $step.addHint('correct');
+    } else {
+      $step.addHint('incorrect');
     }
   });
+
 }
 
 export function pizzaRings($step: Step) {
