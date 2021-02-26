@@ -1145,7 +1145,7 @@ In 1815, Shan Chiao published “New Figures of the Tangram” which contained 3
 
 Now that we have a firm understanding of polygons, let’s revisit thinking about the area of polygons. The football below is made up of 12 black [[pentagons | hexagons | octagons]] and 20 white [[hexagons | pentagons | octagons]]. The mathematical name for this is 3D shape is a truncated icosahedron. A football is slightly more rounded than a true truncated icosahedron since the pentagons and hexagons bulge out due to the air pressure inside.
 
-    // [TODO]: Image
+    figure: x-img(src="images/soccer_ball_temp.jpg" width=161 height=164)
 
 Most footballs are made of synthetic leather. Manufacturers make so many footballs that they pay great attention to the amount of synthetic leather they need to produce each football. Let’s find the amount of synthetic leather needed to make one professional football.
 
