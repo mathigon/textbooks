@@ -1757,7 +1757,7 @@ Delivered pizzas can sometimes sit around for too long and get cold. People ofte
 Unfortunately, most pizzas are too big to fit in standard ovens. Rearrange the 8 slices onto this baking sheet that can fit in the oven.
 
     // INTERACTIVE-04: Pizza slices arrangement (pages 8-9)
-    figure: x-geopad(width=630 height=700)
+    figure: x-geopad(width=640 height=700)
       include svg/pizza_2.svg
 
 {.reveal(when="arranged")} 8 slices is pretty common in pizzas, but it could be cut into any number of equal slices. If we increase the number of slices to ${n1}{n1|8|8,16,1}, the shape begins to look more and more like a [[parallelogram | triangle | square]].

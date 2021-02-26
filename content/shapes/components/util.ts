@@ -1029,12 +1029,13 @@ export function nearest(to: Point, of: {node: Point, guide: Guide}[]) {
 
 export type SideData =
 {
-  edge: 'arc';
+  kind: 'arc';
   /** ID signifying a 'group' of the arrangement */
   groupID: 'a' | 'b';
 }
 | {
-  edge: 'edgeA' | 'edgeB';
+  kind: 'edge';
+  which: 'j' | 'k';
   /** Helps us refer to the slice whose edge is being hovered near */
   sliceIndex: number
 };
@@ -1087,10 +1088,7 @@ export function initLineup(slices: number, center: Point, radius: number, $geopa
     const slice = new Slice(false, $geopad, radius, arcAngle, center, index);
     const halfWidth = slice.width / 2;
     const targetBase = center.shift((-620 / 2) + halfWidth, 0);
-    const target =
-      flip ?
-        targetBase.shift(((index - halfCount) * slice.width) + halfWidth, 0) :
-        targetBase.shift(index * slice.width, 0);
+    const target = targetBase.shift(...getLineupShift(flip, index, halfCount, slice.width, halfWidth));
     slice.moveTo(target);
     slice.rotateTo(flip ? Math.PI : 0);
     if (flip) {
@@ -1104,23 +1102,40 @@ export function initLineup(slices: number, center: Point, radius: number, $geopa
   return {allSlices, groupA, groupB};
 }
 
+export function getLineupShift(
+    flip: boolean,
+    index: number,
+    halfCount: number,
+    sliceWidth: number,
+    halfWidth: number
+) {
+  const outlineWidth = 4;
+  const outlineOffset = outlineWidth;
+  const xOffsetPre = flip ?
+    ((index - halfCount) * (sliceWidth + outlineOffset)) + halfWidth + (outlineWidth / 2) :
+    index * (sliceWidth + outlineOffset);
+  const xOffset = xOffsetPre + 6;
+  const yOffsetPre = flip ? outlineWidth : 0;
+  const yOffset = yOffsetPre + 2;
+  return [xOffset, yOffset] as [number, number];
+}
+
 export function slicesHighlight(arrangement: PizzaSlices, highlights?: SideData[]) {
 
   for (const slice of arrangement.allSlices) {
     slice.setArcColor('dark');
-    slice.setEdgeAColor('dark');
-    slice.setEdgeBColor('dark');
+    slice.setEdgeJColor('dark');
+    slice.setEdgeKColor('dark');
   }
 
   if (highlights != undefined) {
     for (const highlight of highlights) {
-      if (highlight.edge == 'arc') {
+      if (highlight.kind == 'arc') {
         if (highlight.groupID == 'a') for (const slice of arrangement.groupA) slice.setArcColor('teal');
         else if (highlight.groupID == 'b') for (const slice of arrangement.groupB) slice.setArcColor('teal');
-      } else if (highlight.edge == 'edgeA') {
-        arrangement.allSlices[highlight.sliceIndex].setEdgeAColor('teal');
-      } else {
-        arrangement.allSlices[highlight.sliceIndex].setEdgeBColor('teal');
+      } else if (highlight.kind == 'edge') {
+        if (highlight.which == 'j') arrangement.allSlices[highlight.sliceIndex].setEdgeJColor('teal');
+        else arrangement.allSlices[highlight.sliceIndex].setEdgeKColor('teal');
       }
     }
   }
@@ -1129,12 +1144,12 @@ export function slicesHighlight(arrangement: PizzaSlices, highlights?: SideData[
 
 export class Slice {
 
-  private edgeA: {
+  private edgeJ: {
     path?: GeoPath,
     color?: GeopadPathColor,
     poly: Segment
   };
-  private edgeB: {
+  private edgeK: {
     path?: GeoPath,
     color?: GeopadPathColor,
     poly: Segment
@@ -1168,19 +1183,19 @@ export class Slice {
       poly: sliceArc
     };
     this.setArcColor('dark');
-    const edgeA = pathRotation(new Segment(pointA, circleCenter));
-    this.edgeA = {
-      path: $geopad.drawPath(edgeA, {classes: 'slice-outline'}),
-      poly: edgeA
+    const edgeJ = pathRotation(new Segment(pointA, circleCenter));
+    this.edgeJ = {
+      path: $geopad.drawPath(edgeJ, {classes: 'slice-outline'}),
+      poly: edgeJ
     };
-    this.setEdgeAColor('dark');
-    const edgeB = pathRotation(new Segment(circleCenter, pointB));
-    this.edgeB = {
-      path: $geopad.drawPath(edgeB, {classes: 'slice-outline'}),
-      poly: edgeB
+    this.setEdgeJColor('dark');
+    const edgeK = pathRotation(new Segment(circleCenter, pointB));
+    this.edgeK = {
+      path: $geopad.drawPath(edgeK, {classes: 'slice-outline'}),
+      poly: edgeK
     };
-    this.setEdgeBColor('dark');
-    this._bounds = new Polygon(edgeA.p1, edgeA.p2, edgeB.p2, sliceArc.at(0.25), sliceArc.at(0.5), sliceArc.at(0.75));
+    this.setEdgeKColor('dark');
+    this._bounds = new Polygon(edgeJ.p1, edgeJ.p2, edgeK.p2, sliceArc.at(0.25), sliceArc.at(0.5), sliceArc.at(0.75));
     this._pivot = pathRotation((new Segment((new Segment(pointA, pointB)).midpoint, circleCenter)).midpoint);
     if (this.selfDraw) this.draw();
   }
@@ -1222,14 +1237,14 @@ export class Slice {
         ...this.arc,
         poly: this.arc.poly.translate(by)
       };
-      const polyA = this.edgeA.poly.translate(by);
-      this.edgeA = {
-        ...this.edgeA,
+      const polyA = this.edgeJ.poly.translate(by);
+      this.edgeJ = {
+        ...this.edgeJ,
         poly: new Segment(polyA.p1, polyA.p2)
       };
-      const polyB = this.edgeB.poly.translate(by);
-      this.edgeB = {
-        ...this.edgeB,
+      const polyB = this.edgeK.poly.translate(by);
+      this.edgeK = {
+        ...this.edgeK,
         poly: new Segment(polyB.p1, polyB.p2)
       };
       this._bounds = this.bounds.translate(by);
@@ -1276,13 +1291,13 @@ export class Slice {
         ...this.arc,
         poly: this.arc.poly.rotate(amount, c)
       };
-      this.edgeA = {
-        ...this.edgeA,
-        poly: this.edgeA.poly.rotate(amount, c)
+      this.edgeJ = {
+        ...this.edgeJ,
+        poly: this.edgeJ.poly.rotate(amount, c)
       };
-      this.edgeB = {
-        ...this.edgeB,
-        poly: this.edgeB.poly.rotate(amount, c)
+      this.edgeK = {
+        ...this.edgeK,
+        poly: this.edgeK.poly.rotate(amount, c)
       };
       this._bounds = this.bounds.rotate(amount, c);
       this._tip = this.tip.rotate(amount, c);
@@ -1310,16 +1325,16 @@ export class Slice {
     this.arc.path?.$el.addClass(name);
   }
 
-  setEdgeAColor(name: GeopadPathColor) {
-    if (this.edgeA.color != undefined) this.edgeA.path?.$el.removeClass(this.edgeA.color);
-    this.edgeA.color = name;
-    this.edgeA.path?.$el.addClass(name);
+  setEdgeJColor(name: GeopadPathColor) {
+    if (this.edgeJ.color != undefined) this.edgeJ.path?.$el.removeClass(this.edgeJ.color);
+    this.edgeJ.color = name;
+    this.edgeJ.path?.$el.addClass(name);
   }
 
-  setEdgeBColor(name: GeopadPathColor) {
-    if (this.edgeB.color != undefined) this.edgeB.path?.$el.removeClass(this.edgeB.color);
-    this.edgeB.color = name;
-    this.edgeB.path?.$el.addClass(name);
+  setEdgeKColor(name: GeopadPathColor) {
+    if (this.edgeK.color != undefined) this.edgeK.path?.$el.removeClass(this.edgeK.color);
+    this.edgeK.color = name;
+    this.edgeK.path?.$el.addClass(name);
   }
 
   private distanceToElem(from: Point, to: GeoShape) {
@@ -1330,31 +1345,31 @@ export class Slice {
     return this.distanceToElem(from, this.arc.poly);
   }
 
-  distanceToEdgeA(from: Point) {
-    return this.distanceToElem(from, this.edgeA.poly);
+  distanceToEdgeJ(from: Point) {
+    return this.distanceToElem(from, this.edgeJ.poly);
   }
 
-  distanceToEdgeB(from: Point) {
-    return this.distanceToElem(from, this.edgeB.poly);
+  distanceToEdgeK(from: Point) {
+    return this.distanceToElem(from, this.edgeK.poly);
   }
 
   draw() {
     if (this.arc.path == undefined) {
       this.firstDraw = false;
       this.arc.path = this.$geopad.drawPath(this.arc.poly, {animated: 0});
-      this.edgeA.path = this.$geopad.drawPath(this.edgeA.poly, {animated: 0});
-      this.edgeB.path = this.$geopad.drawPath(this.edgeB.poly, {animated: 0});
+      this.edgeJ.path = this.$geopad.drawPath(this.edgeJ.poly, {animated: 0});
+      this.edgeK.path = this.$geopad.drawPath(this.edgeK.poly, {animated: 0});
     } else {
       this.arc.path.redraw(this.arc.poly);
-      this.edgeA.path!.redraw(this.edgeA.poly);
-      this.edgeB.path!.redraw(this.edgeB.poly);
+      this.edgeJ.path!.redraw(this.edgeJ.poly);
+      this.edgeK.path!.redraw(this.edgeK.poly);
     }
   }
 
   remove() {
     this.arc.path?.delete(0);
-    this.edgeA.path?.delete(0);
-    this.edgeB.path?.delete(0);
+    this.edgeJ.path?.delete(0);
+    this.edgeK.path?.delete(0);
   }
 
 }

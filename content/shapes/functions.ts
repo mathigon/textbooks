@@ -6,13 +6,13 @@
 
 import {repeat, tabulate, tabulate2D} from '@mathigon/core';
 import {clamp, nearlyEquals, subsets} from '@mathigon/fermat';
-import {$N, animate, CanvasView, ElementView, EventCallback, loadScript, observe, slide, SVGParentView, SVGView} from '@mathigon/boost';
+import {$N, animate, CanvasView, ElementView, EventCallback, loadScript, Observable, observe, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Arc, Circle, intersections, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
 
 import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
 import {VoronoiModel} from './components/voronoi';
-import {fillSquares, filterMap, geopadReset, getTangramPolystr, getX, getY, Guide, handlePathing, HelperPoly, HighlightParam, initLineup, initPizza, length, LineupSlices, makeParallelogram, nearest, nearestSimple, polypadPrep, RenderedGeopadPoly, ResizeableSquare, ring, RopePoly, separateSlices, setupBaseHeight, setupDraggableRectangles, setupRope, SideData, Slice, slicesHighlight, tangramComplete, tangramScale, toParallelogram, toRect, touches} from './components/util';
+import {fillSquares, filterMap, geopadReset, getLineupShift, getTangramPolystr, getX, getY, Guide, handlePathing, HelperPoly, initLineup, initPizza, length, LineupSlices, makeParallelogram, nearest, nearestSimple, polypadPrep, RenderedGeopadPoly, ResizeableSquare, ring, RopePoly, separateSlices, setupBaseHeight, setupDraggableRectangles, setupRope, SideData, Slice, slicesHighlight, tangramComplete, tangramScale, toParallelogram, toRect, touches} from './components/util';
 
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
@@ -1983,21 +1983,26 @@ export function slicing2($step: Step) {
 }
 
 type ArrangementModel = {
-  hovering?: SideData;
-  baseSelected?: SideData;
-  heightSelected?: SideData;
-  highlightData: SideData[];
   /** Value currently selected via the slider, signifying the number of slices the pizza/lineup should have */
   n1: number;
 };
 export async function slicesArrangement($step: Step<ArrangementModel>) {
+
+  type SidesValues = {
+    hovering?: SideData,
+    baseSelected?: SideData,
+    heightSelected?: SideData
+  };
+  const sidesValues: Observable<SidesValues> = observe({});
+
+  const highlightData: Observable<SideData[]> = observe([]);
 
   let arranged = false;
 
   const $geopad = $step.$('x-geopad') as Geopad;
   const radius = 175;
   const center = new Point(315, radius + 25);
-  const sliceZone = new Rectangle(new Point(5, 400), 620, radius + 20);
+  const sliceZone = new Rectangle(new Point(5, 400), 630, radius + 28);
   const $sliceZone = $N('path', {}, $geopad.$paths) as SVGView;
   $sliceZone.addClass('fill red');
   $sliceZone.draw(sliceZone);
@@ -2031,10 +2036,7 @@ export async function slicesArrangement($step: Step<ArrangementModel>) {
           const flip = placedCount > 3;
           const halfWidth = currentSlice.width / 2;
           const targetBase = center.shift((-620 / 2) + halfWidth, (1.5 * radius) + 35);
-          const target =
-            flip ?
-              targetBase.shift(((placedCount - 4) * currentSlice.width) + halfWidth, 0) :
-              targetBase.shift(placedCount * currentSlice.width, 0);
+          const target = targetBase.shift(...getLineupShift(flip, placedCount, 4, currentSlice.width, halfWidth));
           currentSlice.moveTo(target, 500);
           currentSlice.rotateTo(flip ? Math.PI : 0, {duration: 500});
           placedCount++;
@@ -2061,8 +2063,8 @@ export async function slicesArrangement($step: Step<ArrangementModel>) {
     if (lineupSlices != undefined) for (const slice of lineupSlices.allSlices) slice.remove();
     pizzaSlices = initPizza(count, center, radius, $geopad);
     lineupSlices = initLineup(count, center.shift(0, (1.5 * radius) + 35), radius, $geopad);
-    slicesHighlight(pizzaSlices, $step.model.highlightData);
-    slicesHighlight(lineupSlices, $step.model.highlightData);
+    slicesHighlight(pizzaSlices, highlightData);
+    slicesHighlight(lineupSlices, highlightData);
   };
   resetSlices(8);
 
@@ -2073,12 +2075,12 @@ export async function slicesArrangement($step: Step<ArrangementModel>) {
 
   await Promise.all([$step.onScore('blank-1'), $step.onScore('blank-2')]);
 
-  $step.model.watch(state => { // Coordinate value of highlightData
-    const hovering = state.hovering;
-    const baseSelected = state.baseSelected;
-    const heightSelected = state.heightSelected;
+  sidesValues.watch(values => { // Coordinate value of highlightData
+    const hovering = values.hovering;
+    const baseSelected = values.baseSelected;
+    const heightSelected = values.heightSelected;
 
-    const hlParams: HighlightParam[] = [];
+    const hlParams: SideData[] = [];
 
     if (baseSelected != undefined) {
       hlParams.push(baseSelected);
@@ -2086,13 +2088,12 @@ export async function slicesArrangement($step: Step<ArrangementModel>) {
       else if (hovering != undefined) hlParams.push(hovering);
     } else if (hovering != undefined) hlParams.push(hovering);
 
-    $step.model.highlightData = hlParams;
+    highlightData.assign(hlParams);
   });
 
-  $step.model.watch(state => { // Re-highlight when highlight data changes
-    const hd = state.highlightData;
-    slicesHighlight(lineupSlices!, hd);
-    slicesHighlight(pizzaSlices, hd);
+  highlightData.watch(highlightDataUpdated => { // Re-highlight when highlight data changes
+    slicesHighlight(lineupSlices!, highlightDataUpdated);
+    slicesHighlight(pizzaSlices, highlightDataUpdated);
   });
 
   $geopad.on('pointermove', b => { // Report 'hover' status
@@ -2102,34 +2103,34 @@ export async function slicesArrangement($step: Step<ArrangementModel>) {
 
     for (const slice of lineupSlices!.groupA) {
       const arcDistance = slice.distanceToArc(pointerLoc);
-      distances.push({distance: arcDistance, side: {edge: 'arc', groupID: 'a'}});
-      const edgeADistance = slice.distanceToEdgeA(pointerLoc);
-      distances.push({distance: edgeADistance, side: {edge: 'edgeA', sliceIndex: slice.index}});
-      const edgeBDistance = slice.distanceToEdgeA(pointerLoc);
-      distances.push({distance: edgeBDistance, side: {edge: 'edgeB', sliceIndex: slice.index}});
+      distances.push({distance: arcDistance, side: {kind: 'arc', groupID: 'a'}});
+      const edgeJDistance = slice.distanceToEdgeJ(pointerLoc);
+      distances.push({distance: edgeJDistance, side: {kind: 'edge', which: 'j', sliceIndex: slice.index}});
+      const edgeKDistance = slice.distanceToEdgeJ(pointerLoc);
+      distances.push({distance: edgeKDistance, side: {kind: 'edge', which: 'k', sliceIndex: slice.index}});
     }
     for (const slice of lineupSlices!.groupB) {
       const arcDistance = slice.distanceToArc(pointerLoc);
-      distances.push({distance: arcDistance, side: {edge: 'arc', groupID: 'b'}});
-      const edgeADistance = slice.distanceToEdgeA(pointerLoc);
-      distances.push({distance: edgeADistance, side: {edge: 'edgeA', sliceIndex: slice.index}});
-      const edgeBDistance = slice.distanceToEdgeA(pointerLoc);
-      distances.push({distance: edgeBDistance, side: {edge: 'edgeB', sliceIndex: slice.index}});
+      distances.push({distance: arcDistance, side: {kind: 'arc', groupID: 'b'}});
+      const edgeJDistance = slice.distanceToEdgeK(pointerLoc);
+      distances.push({distance: edgeJDistance, side: {kind: 'edge', which: 'j', sliceIndex: slice.index}});
+      const edgeKDistance = slice.distanceToEdgeK(pointerLoc);
+      distances.push({distance: edgeKDistance, side: {kind: 'edge', which: 'k', sliceIndex: slice.index}});
     }
 
     const shortest = distances.sort((a, b) => a.distance - b.distance)[0];
 
     if (shortest.distance <= 10) {
-      $step.model.hovering = shortest.side;
+      sidesValues.hovering = shortest.side;
     } else {
-      $step.model.hovering = undefined;
+      sidesValues.hovering = undefined;
     }
 
   });
 
   const baseSelection = () => {
-    if ($step.model.hovering != undefined) {
-      $step.model.baseSelected = $step.model.hovering;
+    if (sidesValues.hovering != undefined) {
+      sidesValues.baseSelected = sidesValues.hovering;
       $step.score('base-selected');
       $step.addHint('correct');
     } else {
@@ -2145,14 +2146,14 @@ export async function slicesArrangement($step: Step<ArrangementModel>) {
 
   $geopad.on('click', () => {
     if (
-      $step.model.hovering != undefined &&
-      $step.model.hovering.edge != $step.model.baseSelected!.edge &&
+      sidesValues.hovering != undefined &&
+      sidesValues.hovering.kind != sidesValues.baseSelected!.kind &&
       (
-        ($step.model.hovering.edge == 'arc' && $step.model.baseSelected!.edge != 'arc') ||
-        ($step.model.hovering.edge != 'arc' && $step.model.baseSelected!.edge == 'arc')
+        (sidesValues.hovering.kind == 'arc' && sidesValues.baseSelected!.kind != 'arc') ||
+        (sidesValues.hovering.kind != 'arc' && sidesValues.baseSelected!.kind == 'arc')
       )
     ) {
-      $step.model.heightSelected = $step.model.hovering;
+      sidesValues.heightSelected = sidesValues.hovering;
       $step.score('height-selected');
       $step.addHint('correct');
     } else {
