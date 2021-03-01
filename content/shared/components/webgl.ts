@@ -24,7 +24,8 @@ function getRenderer(width: number, height: number) {
 
   const renderer = new THREE.WebGLRenderer({antialias: true});
   renderer.localClippingEnabled = true;
-  renderer.setClearColor(Browser.isDarkMode() ? 0x22212e : 0xffffff, 1);
+  renderer.setClearColor(Browser.theme.isDark ? 0x22212e : 0xffffff, 1);
+  Browser.onThemeChange(t => renderer.setClearColor(t.isDark ? 0x22212e : 0xffffff, 1));
   renderer.setSize(width, height);
   return renderers[id] = renderer;
 }
