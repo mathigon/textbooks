@@ -14,7 +14,7 @@
     "lint": "eslint . --ext .ts"
   },
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "dependencies": {
     "@mathigon/boost": "0.6.9",
