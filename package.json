@@ -19,7 +19,7 @@
   "dependencies": {
     "@mathigon/boost": "0.6.11",
     "@mathigon/core": "0.6.4",
-    "@mathigon/dev-server": "0.6.6",
+    "@mathigon/dev-server": "0.6.7",
     "@mathigon/fermat": "0.6.4",
     "@mathigon/euclid": "0.6.9",
     "@mathigon/hilbert": "0.6.2",
