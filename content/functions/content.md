@@ -495,6 +495,7 @@ Let's try some other functions, starting with `f(x)=-x^2+3`. Use the function pl
 
 > section: graphing
 > sectionStatus: dev
+> id: vault-graph
 
     // NOTE
     // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
@@ -514,15 +515,16 @@ Ri Se-gwang of the People’s Republic of Korea is about to vault. He won the go
 
 :::
 
-    // NOTES
-    // [citation](https://en.wikipedia.org/wiki/Gymnastics_at_the_2016_Summer_Olympics_%E2%80%93_Men%27s_vault)
-    // Student presses play on a [video](https://www.youtube.com/watch?v=85v0Un19A94) (0:00-0:18) of Ri’s vault. Simultaneously, a distance-time graph populates in a card to the right of the animation.
+    x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
+    // source: https://www.youtube.com/watch?v=85v0Un19A94
 
-[vault mock-up](https://www.desmos.com/calculator/td3fynck7q)
+    x-coordinate-system.vault-graph#x-y-graph(width=640 height=180 x-axis="0,29.5,1" y-axis="0,10,1" axis-names="X,Y")
+
+    // functions: https://www.desmos.com/calculator/td3fynck7q
 
 There are several things going on here. Move the video back and forth to see how the graph lines up with the motion.
 
-First we need to understand what the axes represent. The x-axis in this graph is the horizontal distance Ri travels throughout his vault (measured in centimeters). The y-axis is the vertical distance Ri travels (also in centimeters). Together these axes tell us Ri’s position, like the row and column of a chess piece on a board.
+First we need to understand what the axes represent. The x-axis in this graph is the horizontal distance Ri travels throughout his vault (measured in meters). The y-axis is the vertical distance Ri travels (also in meters). Together these axes tell us Ri’s position, like the row and column of a chess piece on a board.
 
 The graph does not include any information about time. For example, we cannot tell _when_ Ri landed on the pit. Some of the graphs of later events will include time along the horizontal axis.
 
