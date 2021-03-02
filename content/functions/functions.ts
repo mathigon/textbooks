@@ -6,7 +6,7 @@
 
 import '../shared/components/relation';
 import {Point} from '@mathigon/euclid';
-import {Geopad, GeoPoint, Step} from '../shared/types';
+import {CoordinateSystem, Geopad, GeoPoint, Step, Video} from '../shared/types';
 import { $N, animate, ease, ElementView, pointerOver, SVGParentView, svgPointerPosn } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
 import { last, stringDistance } from '@mathigon/core';
@@ -269,4 +269,46 @@ export function numericalPlot($step: Step) {
 export function findDomainRange1($step: Step) {
   const $geopad = $step.$('x-geopad')! as Geopad;
   clickPlotter($step, $geopad, (x: number) => -x*x+3);
+}
+
+// Graphing and Interpreting Functions
+
+export function vaultGraph($step: Step) {
+  const $video = $step.$('x-video')! as Video;
+  const $videoEl = $video.$('video')!._el;
+  const $xyGraph = $step.$('#x-y-graph')! as CoordinateSystem;
+  const $xySVG = $xyGraph.$svg;
+  const $xyOverlay = $xySVG.$('.overlay');
+  const $xyAthlete = $N('circle', {r: 4}, $xyOverlay);
+
+  const athleteStartPoint = $xyGraph.toViewportCoords(new Point(0, 0));
+  $xyAthlete.setAttr('transform', `translate(${athleteStartPoint.x}, ${athleteStartPoint.y})`);
+
+  function yByX(x: number) {
+    return (1/(1+Math.pow((8*(x-25.13)), 2)))+(8-Math.pow(((x-27)*1.5), 2))/(1+Math.pow(((x-27)/1.88), 128));
+  }
+
+  function xByTime(t: number) {
+    // Pause before running begins
+    const pause = 1.6;
+    // Total duration of clip
+    const duration = 9.1;
+
+    if (t < pause) return 0;
+    
+    return (1-Math.pow((1+(Math.cos((t-pause)*Math.PI/(duration-pause))))/2, 2))*29.5;
+  }
+
+  // Plot our XY position function
+  $xyGraph.setFunctions(yByX);
+
+  $video.on('timeupdate', () => {
+    const t: number = $videoEl.currentTime;
+
+    const x = xByTime(t);
+    const y = yByX(x);
+    const athletePoint = $xyGraph.toViewportCoords(new Point(x, y));
+
+    $xyAthlete.setAttr('transform', `translate(${athletePoint.x}, ${athletePoint.y})`);
+  });
 }
