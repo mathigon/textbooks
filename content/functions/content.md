@@ -528,7 +528,30 @@ On this graph, we see the vault is at ([[3565+-5]], [[135+-5]])), which means Ri
 
 > id: graph-match
 
-Let’s build some intuition for what graphs of different events look like. Match the graph to the event. Be sure to pay close attention to what the axes represent.
+Let’s build some intuition for what graphs of different events look like. Match the graph to the event.
+
+    x-relation
+      .item(slot="domain" name="vault")
+        x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=320 height=180 controls credit="©NBC")
+      .item(slot="domain" name="triple-jump")
+        x-video(src="/resources/functions/images/olympic_triple_jump.mp4" poster="images/olympic_triple_jump_poster.png" width=320 height=180 controls credit="©ESPN")
+      .item(slot="domain" name="dive")
+        x-video(src="/resources/functions/images/olympic_dive.mp4" poster="images/olympic_dive_poster.png" width=320 height=180 controls credit="©Fina")
+      .item(slot="domain" name="ski")
+        x-video(src="/resources/functions/images/olympic_ski.mp4" poster="images/olympic_ski_poster.png" width=320 height=180 controls credit="©Olympic")
+      .item(slot="domain" name="hurdles")
+        x-video(src="/resources/functions/images/olympic_hurdles.mp4" poster="images/olympic_hurdles_poster.png" width=320 height=180 controls credit="©Olympic")
+      .item(slot="range" name="vault-graph")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="6/(1+((x-24)/1)^4)")
+      .item(slot="range" name="triple-jump-graph")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="2/(1+((x-16)*1.5)^4)+2.5/(1+((x-20)*1.5)^4)+3/(1+((x-25)/1.5)^4)")
+      .item(slot="range" name="dive-graph")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="12-((x-1)*1)^2")
+      .item(slot="range" name="ski-graph")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="15+sin(x/2)-x/2")
+      .item(slot="range" name="hurdles-graph")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="1/(1+((x-3)*1.5)^4)+1/(1+((x-6)*1.5)^4)+1/(1+((x-9)*1.5)^4)+1/(1+((x-12)*1.5)^4)+1/(1+((x-15)*1.5)^4)+1/(1+((x-18)*1.5)^4)+1/(1+((x-21)*1.5)^4)+1/(1+((x-24)*1.5)^4)+1/(1+((x-27)*1.5)^4)")
+
 
     // NOTE
     // Organized as a table in the Google Doc, so I (Dani) put it in a table here. The idea is to make it cards.
