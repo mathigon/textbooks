@@ -549,21 +549,6 @@ Let’s build some intuition for what graphs of different events look like. Matc
       .item(slot="range" name="hurdles-graph")
         x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="1/(1+((x-3)*1.5)^4)+1/(1+((x-6)*1.5)^4)+1/(1+((x-9)*1.5)^4)+1/(1+((x-12)*1.5)^4)+1/(1+((x-15)*1.5)^4)+1/(1+((x-18)*1.5)^4)+1/(1+((x-21)*1.5)^4)+1/(1+((x-24)*1.5)^4)+1/(1+((x-27)*1.5)^4)")
 
-
-    // NOTE
-    // Organized as a table in the Google Doc, so I (Dani) put it in a table here. The idea is to make it cards.
-    // Match graphs to sports of time functions
-
-    // I'm having a tough time getting the shape to work with the scale. It might be easier to get the shape then layer the axes over - make this a static image. [sketch](https://drive.google.com/file/d/1uh9_0Abfs0lYIa8q6uZxUYFoRnHeLKtr/view?usp=sharing) disegard notes dotted graph
-
-| Triple Jump | 50 M Freestyle | 100 M Hurdles | Vault | Diving | Skiing |
-| ----------- | -------------- | ------------- | ----- | ------ | ------ |
-| [Graph](https://www.desmos.com/calculator/qxfugm6xpi) | [Graph](https://www.desmos.com/calculator/z07xkap2bl) | [Graph](https://www.desmos.com/calculator/fwgpfln0ne) | [Graph](https://www.desmos.com/calculator/td3fynck7q) | [Graph](https://www.desmos.com/calculator/es8ugnvxeq) | [Graph](https://www.desmos.com/calculator/x58olmjtkl) |
-| ![Photo](https://thumb.spokesman.com/LzzALA-yzk6jmSOYmVPZ6rdEsbU=/1170x0/media.spokesman.com/photos/2008/08/18/triplejumppic18_08-18-2008_ILE22PC.jpg) | ![Photo](https://c7.alamy.com/comp/2A8DJYK/genova-italy-08-nov-2019-cesar-cielo-filho-brazil-during-trofeo-nicola-sapio-swimming-credit-lpsdanilo-vigoalamy-live-news-2A8DJYK.jpg) | ![Photo](https://media.gettyimages.com/photos/derval-orourke-of-ireland-sally-pearson-of-australia-and-brigitte-of-picture-id123295200?s=2048x2048) | ![Photo](https://www.gettyimages.dk/detail/news-photo/derval-orourke-of-ireland-sally-pearson-of-australia-and-news-photo/123295200) | ![Photo](https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2016/08/19/Production/Daily/Style/Images/2016-08-18T192657Z_01_OLYGK111_RTRIDSP_3_OLYMPICS-RIO-DIVING-W-10MPLATFORM.jpg?uuid=BvCIjGYKEeaLJ7uLo5SXog) | ![Photo](https://st.depositphotos.com/2579941/2911/i/950/depositphotos_29111391-stock-photo-fra-alpine-skiing-val-disere.jpg) |
-| [Video](https://www.youtube.com/watch?v=wVqYjmK-T3w) | [Video](https://www.youtube.com/watch?v=qZvdhv9uhi0) | [Video](https://www.youtube.com/watch?v=AFNqbhJ3kmw) | [Video](https://www.youtube.com/watch?v=85v0Un19A94) | [Video](https://www.youtube.com/watch?v=wTX13JZFHd4) | [Video](https://www.youtube.com/watch?v=kU0a-kvvKW4) |
-| [Françoise Mbango Etone](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Cameroon holds the Olympic record in women’s triple jump with a length of 15.39 meters. | [César Cielo](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Brazil holds the Olympic record for the men’s 50 meter with a time of 21.47 seconds. | [Sally Pearson](https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics) of Australia holds the Olympic record in the women’s 100 meter hurdles with a time of 12.35 seconds. | [Ri Se-gwang](https://en.wikipedia.org/wiki/Gymnastics_at_the_2016_Summer_Olympics_%E2%80%93_Men%27s_vault) of the People’s Republic of Korea won the gold medal for the vault in the 2016 Summer Olympic Games. | [Ren Qian](https://en.wikipedia.org/wiki/Diving_at_the_2016_Summer_Olympics_–_Women%27s_10_metre_platform) of China won the gold medal for diving in the 2016 Summer Olympic Games. |
-| Start: 985m | Finish: 805m | Vertical drop: 180m | Gates: 66 | Finish time: 48.33 |
-
 As you can see there are several different perspectives for graphing motion. One perspective is distance as a function of time. Select the events represented with this perspective.
 
     // NOTES
