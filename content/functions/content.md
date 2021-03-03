@@ -541,6 +541,8 @@ Let’s build some intuition for what graphs of different events look like. Matc
         x-video(src="/resources/functions/images/olympic_ski.mp4" poster="images/olympic_ski_poster.png" width=320 height=180 controls credit="©Olympic")
       .item(slot="domain" name="hurdles")
         x-video(src="/resources/functions/images/olympic_hurdles.mp4" poster="images/olympic_hurdles_poster.png" width=320 height=180 controls credit="©Olympic")
+      .item(slot="domain" name="swim")
+        x-video(src="/resources/functions/images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=320 height=180 controls credit="©Olympic")
       .item(slot="range" name="vault-graph")
         x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="6/(1+((x-24)/1)^4)")
       .item(slot="range" name="triple-jump-graph")
@@ -551,6 +553,8 @@ Let’s build some intuition for what graphs of different events look like. Matc
         x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="15+sin(x/2)-x/2")
       .item(slot="range" name="hurdles-graph")
         x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="1/(1+((x-3)*1.5)^4)+1/(1+((x-6)*1.5)^4)+1/(1+((x-9)*1.5)^4)+1/(1+((x-12)*1.5)^4)+1/(1+((x-15)*1.5)^4)+1/(1+((x-18)*1.5)^4)+1/(1+((x-21)*1.5)^4)+1/(1+((x-24)*1.5)^4)+1/(1+((x-27)*1.5)^4)")
+      .item(slot="range" name="swim-graph")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="1")
 
 As you can see there are several different perspectives for graphing motion. One perspective is distance as a function of time. Select the events represented with this perspective.
 
