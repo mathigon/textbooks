@@ -4,47 +4,49 @@
 // =============================================================================
 
 
-import {clamp, nearlyEquals} from '@mathigon/fermat';
-import {$N, animate, AnimationResponse, CanvasView, ElementView, EventCallback, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
-import {Arc, Circle, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
+import {repeat, tabulate, tabulate2D} from '@mathigon/core';
+import {clamp, nearlyEquals, subsets} from '@mathigon/fermat';
+import {$N, animate, CanvasView, ElementView, EventCallback, loadScript, Observable, observe, slide, SVGParentView, SVGView} from '@mathigon/boost';
+import {Arc, Circle, intersections, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
 
 import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
 import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
-import {VoronoiStep} from './components/voronoi';
+import {VoronoiModel} from './components/voronoi';
+import {fillSquares, filterMap, geopadReset, getLineupShift, getTangramPolystr, getX, getY, Guide, handlePathing, HelperPoly, initLineup, initPizza, length, LineupSlices, makeParallelogram, nearest, nearestSimple, polypadPrep, RenderedGeopadPoly, ResizeableSquare, ring, RopePoly, separateSlices, setupBaseHeight, setupDraggableRectangles, setupRope, SideData, Slice, slicesHighlight, tangramComplete, tangramScale, toParallelogram, toRect, touches} from './components/util';
 
 import '../shared/components/binary-swipe';  // import component
 import '../shared/components/relation';
+import {GREY, ORANGE, TEAL} from '../shared/constants';
 
-type ShapesModel = {
-  firstArea?: {
-    ropeUsed?: number
-    cobblestones?: number
-    points?: Point[]
+// SECTION 1: Introduction
+
+const courseModel = observe({
+  firstArea: {
+    ropeUsed: 0,
+    cobblestones: 0,
+    points: [] as Point[]
   }
-}
+});
 
 export function performance1($step: Step) {
-  const courseModel = getCourseModel($step);
   const $geopad = $step.$('x-geopad') as Geopad;
   $geopad.switchTool('move');
   const scale = (600 / 30) * 4; // Pixels per meter
   const blockSize = (1 / 4) * scale;
   const blocks: {poly: Rectangle, path: GeoPath}[] = [];
-  [...Array(30).keys()].forEach(column =>
-    [...Array(20).keys()].forEach(row => {
-      const block = new Rectangle(
-          new Point(column * blockSize, row * blockSize),
-          blockSize,
-          blockSize
-      );
-      const path = $geopad.drawPath(block);
-      path.$el.css({'stroke-width': 2});
-      blocks.push({poly: block, path});
-    })
-  );
+  tabulate2D((column, row) => {
+    const block = new Rectangle(
+        new Point(column * blockSize, row * blockSize),
+        blockSize,
+        blockSize
+    );
+    const path = $geopad.drawPath(block);
+    path.$el.addClass('performance-unit');
+    blocks.push({poly: block, path});
+  }, 30, 20);
   setupRope('performance-1', 20 * scale, $geopad, $step, (line: Polyline, reset: VoidFunction) => {
     const areaBlocks = blocks.filter(block => block.poly.points.every(point => line.contains(point)));
-    areaBlocks.forEach(block => block.path.$el.css({fill: 'lime'}));
+    for (const block of areaBlocks) block.path.$el.addClass('performance-unit-selected');
     if (areaBlocks.length >= 200) {
       courseModel.firstArea = {
         ropeUsed: length(line) / scale,
@@ -58,46 +60,7 @@ export function performance1($step: Step) {
   });
 }
 
-function getCourseModel($step: Step) {
-  return $step.getParentModel().$course.model as ShapesModel;
-}
-
-function setupRope(id: string, maxLength: number, $geopad: Geopad, $step: Step, onComplete: (final: Polyline, reset: VoidFunction) => void) {
-  let reset = false;
-  let rope: GeoPath;
-  let ropeLine: Polyline;
-  slide($geopad, {
-    $box: $geopad.$svg,
-    start: (p: Point) => {
-      ropeLine = new Polyline(p);
-      rope = $geopad.drawPath(ropeLine);
-      rope.$el.css({stroke: 'red'});
-    },
-    move: (p: Point) => {
-      if (!reset) {
-        ropeLine = new Polyline(...ropeLine.points, p);
-        if (length(ropeLine) > maxLength) {
-          $step.addHint('incorrect');
-          ropeLine = new Polyline();
-          reset = true;
-        }
-        rope.redraw(ropeLine);
-      }
-    },
-    end: () => {
-      if (!reset) {
-        onComplete(ropeLine, () => {
-          ropeLine = new Polyline();
-          rope.redraw(ropeLine);
-          $step.addHint('incorrect');
-        });
-      } else reset = false;
-    }
-  });
-}
-
 export function performance2($step: Step) {
-  const courseModel = getCourseModel($step);
   const $geopad = $step.$('x-geopad') as Geopad;
   const initRope = new RopePoly(...courseModel.firstArea!.points!);
   const ropePath = $geopad.drawPath(initRope.poly);
@@ -105,7 +68,7 @@ export function performance2($step: Step) {
   $geopad.switchTool('move');
   let moving = false;
   let nearest: {point: Point, index: number};
-  $geopad.on('mousemove', b => {
+  $geopad.on('pointermove', b => {
     const m = new Point(b.offsetX, b.offsetY);
     if (!moving) {
       nearest = initRope.getNearest(m);
@@ -116,110 +79,8 @@ export function performance2($step: Step) {
       ropePath.redraw(initRope.poly);
     }
   });
-  $geopad.on('mousedown', () => moving = true);
-  $geopad.on('mouseup', () => moving = false);
-}
-
-type CircularPoint = {
-  left: CircularPoint,
-  right: CircularPoint,
-  self: Point
-}
-
-type CircularPointUnsafe = {
-  left?: CircularPointUnsafe,
-  right?: CircularPointUnsafe,
-  self: Point
-}
-
-/* eslint-disable no-invalid-this */
-class RopePoints {
-  points: CircularPoint[] = [];
-  addPoint = (p: Point) => {
-    let temp: CircularPointUnsafe = {
-      self: p
-    };
-    const l = this.points.pop();
-    if (l != undefined) this.points.push(l);
-    const r = this.points.shift();
-    if (r != undefined) this.points.unshift(r);
-    temp = {
-      ...temp,
-      left: l ?? temp,
-      right: r ?? temp
-    };
-    const final = temp as CircularPoint;
-    if (this.points.length > 0) {
-      this.points[0].left = final;
-      this.points[this.points.length - 1].right = final;
-    }
-    this.points.push(final);
-  }
-  movePoint = (index: number, to: Point) => {
-    const rightCap = Math.ceil(this.points.length / 2);
-    const leftCap = Math.floor(this.points.length / 2);
-    let rCount = 0;
-    let lCount = rCount;
-    let rDist = Point.distance(this.points[index].self, this.points[index].right.self);
-    let lDist = Point.distance(this.points[index].self, this.points[index].left.self);
-    this.points[index].self = to;
-    let currentR = this.points[index];
-    let currentL = currentR;
-    while (rCount < rightCap) {
-      currentR = currentR.right;
-      rCount++;
-      const nextDist = Point.distance(currentR.self, currentR.right.self);
-      currentR.self = constrainDistance(currentR.self, currentR.left.self, rDist);
-      rDist = nextDist;
-    }
-    while (lCount < leftCap) {
-      currentL = currentL.left;
-      lCount++;
-      const nextDist = Point.distance(currentL.self, currentL.left.self);
-      currentL.self = constrainDistance(currentL.self, currentL.right.self, lDist);
-      lDist = nextDist;
-    }
-  }
-}
-/* eslint-enable no-invalid-this */
-
-class RopePoly {
-  private cPoints: RopePoints
-  private _poly: Polygon
-  constructor(...points: Point[]) {
-    this._poly = new Polygon(...points);
-    this.cPoints = new RopePoints();
-    points.forEach(this.cPoints.addPoint);
-    console.log(this.cPoints);
-  }
-  getNearest(to: Point) {
-    let nearest = {
-      point: this.points[0],
-      index: 0
-    };
-    this.points.forEach((point, index) => {
-      const d1 = Point.distance(point, to);
-      const d2 = Point.distance(nearest.point, to);
-      if (d1 < d2) {
-        nearest = {point, index};
-      }
-    });
-    return nearest;
-  }
-  movePoint(index: number, to: Point) {
-    this.cPoints.movePoint(index, to);
-    this._poly = new Polygon(...this.cPoints.points.map(cp => cp.self));
-  }
-  get points() {
-    return this.poly.points;
-  }
-  get poly() {
-    return this._poly;
-  }
-}
-
-function constrainDistance(point: Point, anchor: Point, distance: number) {
-  return point.subtract(anchor).unitVector.scale(distance).add(anchor);
+  $geopad.on('pointerdown', () => moving = true);
+  $geopad.on('pointerup', () => moving = false);
 }
 
 const fieldLength = 110;
@@ -228,7 +89,7 @@ const imageWidth = 525;
 const tileSize = imageWidth / (fieldLength * scale);
 
 export function grassPlacement($step: Step) {
-  const $polypad = $step.$('.grass-placement > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, 600, 350, false);
   const options = {
     count: 2,
@@ -236,22 +97,6 @@ export function grassPlacement($step: Step) {
     initLocations: [new Point(10, 50), new Point(40, 50)]
   };
   setupDraggableRectangles($polypad, options);
-}
-
-type DraggableRectanglesOptions = {
-  count: number,
-  dimensions: Point,
-  initLocations?: Point[]
-}
-
-function setupDraggableRectangles($polypad: Polypad, options: DraggableRectanglesOptions) {
-  // [TODO]: Make 'infinite' rectangles if count == 0
-  [...Array(options.count)].forEach((_, index) => {
-    const initLoc = options.initLocations != null ? options.initLocations[index] : new Point(0, 0);
-    const r = new Rectangle(new Point(0, 0), options.dimensions.x, options.dimensions.y);
-    const tile = $polypad.newTile('polygon', getTangramPolystr(r.points));
-    tile.setTransform(initLoc);
-  });
 }
 
 export function stripPlacement($step: Step) {
@@ -279,110 +124,565 @@ export function halfMeters($step: Step) {
   fillSquares($step, dropAreaDimensions.x / 2, dropAreaDimensions, '1 meter', '1 meter', true, () => $step.addHint('correct'));
 }
 
-function fillSquares($step: Step, squareSize: number, dropAreaSize: Point, dropAreaWidthLabel: string, dropAreaHeightLabel: string, showBeforeComplete: boolean, onComplete: VoidFunction) {
+// SECTION 2: Parallelograms
+
+export function boatBuilding($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
-  const dropAreaPoly = setupDropArea($geopad, dropAreaSize, dropAreaWidthLabel, dropAreaHeightLabel, showBeforeComplete);
-  setupSquares($geopad, squareSize, dropAreaPoly, onComplete);
-}
-
-function setupDropArea($geopad: Geopad, dimensions: Point, widthLabel: string, heightLabel: string, showBeforeComplete: boolean) {
-  const leftLoc = $geopad.boundsRect.w - dimensions.x - 30;
-  const topLoc = 30;
-  const topLeft = new Point(leftLoc, topLoc);
-  const dropArea = new Rectangle(topLeft, dimensions.x, dimensions.y);
-  const bottomLeft = topLeft.shift(0, dimensions.y);
-  const bottomRight = bottomLeft.shift(dimensions.x, 0);
-  const topRight = bottomRight.shift(0, -dimensions.y);
-  $geopad.drawPath(dropArea);
-  const widthPath = $geopad.drawPath(new Segment(bottomLeft, bottomRight));
-  if (showBeforeComplete) widthPath.setLabel(widthLabel);
-  const heightPath = $geopad.drawPath(new Segment(bottomRight, topRight));
-  if (showBeforeComplete) heightPath.setLabel(heightLabel);
-  return dropArea;
-}
-
-function setupSquares($geopad: Geopad, size: number, dropAreaPoly: Rectangle, onComplete: VoidFunction) {
-  const squareTemplate = new Rectangle(new Point(20, 20), size, size);
-  let currentSquare = new FillSquare(squareTemplate, $geopad);
-  let dropSpot = 0;
-  const onEnd = (last: Point) => {
-    if (dropAreaPoly.contains(last)) {
-      currentSquare.moveTo(getSpotCoords(dropSpot, size, dropAreaPoly));
-      currentSquare = new FillSquare(squareTemplate, $geopad);
-      if (isLastSquare(dropSpot, size, dropAreaPoly)) {
-        onComplete();
-      } else {
-        dropSpot++;
-        setupGeopadDraggable(currentSquare, $geopad, onEnd);
+  const baseWidth = 300;
+  const height = 120;
+  const skew = 50;
+  const corner1 = new Point(100, 100);
+  const pieces: RenderedGeopadPoly[] = [];
+  const middle = new RenderedGeopadPoly(
+      (new Rectangle(corner1.shift(skew, 0), baseWidth, height)).polygon,
+      $geopad
+  );
+  pieces.push(middle);
+  let finishedRect: HelperPoly | undefined = undefined;
+  const options = {
+    draggable: true,
+    snap: true,
+    onEnd: () => {
+      const [m, l, r] = pieces;
+      const contactEdgesA =
+            filterMap(
+                l.poly.edges,
+                edge1 => {
+                  const a = m.poly.edges.find(
+                      edge2 => edge2.equals(edge1)
+                  );
+                  const b = r.poly.edges.find(
+                      edge2 => edge2.equals(edge1)
+                  );
+                  return a != undefined ? a : b;
+                }
+            );
+      const contactEdgesB = filterMap(
+          r.poly.edges,
+          edge1 => {
+            const a = m.poly.edges.find(
+                edge2 => edge2.equals(edge1)
+            );
+            const b = l.poly.edges.find(
+                edge2 => edge2.equals(edge1)
+            );
+            return a != undefined ? a : b;
+          }
+      );
+      if (contactEdgesA.length > 0 && contactEdgesB.length > 0) {
+        finishedRect = toRect([
+          ...l.poly.points,
+          ...m.poly.points,
+          ...r.poly.points
+        ]);
+        if (finishedRect != undefined) {
+          for (const piece of pieces) piece.erase();
+          $geopad.drawPath(finishedRect);
+          $step.addHint('correct');
+          $step.score('arranged');
+        }
       }
     }
   };
-  setupGeopadDraggable(currentSquare, $geopad, onEnd);
-  return;
+  const left = new RenderedGeopadPoly(
+      [
+        corner1,
+        corner1.shift(skew, 0),
+        corner1.shift(skew, height)
+      ],
+      $geopad,
+      options
+  );
+  pieces.push(left);
+  const right = new RenderedGeopadPoly(
+      [
+        corner1.shift(baseWidth + skew, 0),
+        corner1.shift(baseWidth + skew, height),
+        corner1.shift(baseWidth + (skew * 2), height)
+      ],
+      $geopad,
+      options
+  );
+  pieces.push(right);
+  // [TODO] handle this via constructor option rather than external function
+  for (const [index, geoPoly] of pieces.entries()) {
+    geoPoly.addSnapFriend(pieces[(index + 1) % 3]);
+    geoPoly.addSnapFriend(pieces[(index + 2) % 3]);
+  }
+  $geopad.switchTool('move');
+  $step.onScore('arranged', () => {
+    const rect = finishedRect!;
+    const [a, b, _c, d] = rect.sortedPoints;
+    const lineDist = 15;
+    const side = (new Segment(a, b)).shift(-lineDist, 0);
+    const bottom = (new Segment(b, d)).shift(0, lineDist);
+    const $side = $geopad.drawPath(side);
+    $side.setLabel('28.4 meters');
+    const $bottom = $geopad.drawPath(bottom);
+    $bottom.setLabel('132 meters');
+  });
 }
 
-function getSpotCoords(dropSpot: number, squareSize: number, dropAreaPoly: Rectangle) {
-  const squaresPerRow = dropAreaPoly.w / squareSize;
-  const currentColumn = dropSpot % squaresPerRow;
-  const currentRow = Math.floor(dropSpot / squaresPerRow);
-  return new Point(dropAreaPoly.p.x + currentColumn * squareSize, dropAreaPoly.p.y + currentRow * squareSize);
+export function glassArea($step: Step) {
+  const $polypad = $step.$('x-polypad') as Polypad;
+  const measureTile = $polypad.newTile('tangram', '2') as Tile;
+  const points = (measureTile.path as Polygon).points;
+  const squareSize = Point.distance(points[0], points[1]);
+  measureTile.delete();
+  const startCorner = new Point(squareSize, squareSize);
+  $polypad.$svg.setAttr('viewBox', '0 0 600 400');
+  $polypad.canDelete = $polypad.canCopy = false;
+  const tiles: Tile[] = [];
+  tabulate(index => {
+    const t = $polypad.newTile('tangram', '2');
+    const xOffset = squareSize * (index % 4);
+    const yOffset = squareSize * Math.floor(index / 4);
+    t.setTransform(startCorner.shift(xOffset, yOffset), 45);
+    tiles.push(t);
+  }, 12);
+  // top left: 0, bottom right: 2
+  let figure = 2;
+  const $submitShape = $step.$('button.btn.submit-shape') as ElementView;
+  $submitShape.on('click', () => {
+    const tileTouches =
+      touches(
+          subsets(tiles.map(tile => tile.transformed as Polygon), 2) as [Polygon, Polygon][],
+          squareSize
+      );
+    const tilesPerimeters = tiles.length * 4;
+    // [TODO]?: Check whether all tiles are touching
+    $step.score(`figure-${figure}`);
+    const perimeter = tileTouches.reduce((runningPerimeter, overlap) => runningPerimeter - (overlap * 2), tilesPerimeters);
+    $step.$(`table td.perimeter${figure}`)!.append(new Text(perimeter.toString()));
+    if (figure == 3) $submitShape.setAttr('disabled', true);
+    figure++;
+  });
 }
 
-function isLastSquare(dropSpot: number, squareSize: number, dropAreaPoly: Rectangle) {
-  const rows = dropAreaPoly.h / squareSize;
-  const columns = dropAreaPoly.w / squareSize;
-  const totalSpots = rows * columns;
-  return dropSpot === totalSpots - 1;
+const doughBaseWidth = 300;
+const doughHeight = 180;
+const doughParalellogram = makeParallelogram(doughBaseWidth, doughHeight, 75);
+
+export function dough($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  $geopad.switchTool('move');
+  const areaSize = 150;
+  const _cuttersArea =
+    new RenderedGeopadPoly(
+        (new Rectangle(new Point(15, 15), areaSize, areaSize)).points,
+        $geopad, {color: 'red'}
+    );
+  const shiftBy = new Point(200, 200);
+  const dough =
+    new RenderedGeopadPoly(
+        doughParalellogram.translate(shiftBy),
+        $geopad,
+        {color: 'blue'}
+    );
+  const cutters: RenderedGeopadPoly[] = [];
+  tabulate(index => {
+    const cutterSize = 30;
+    const padding = (areaSize - (cutterSize * 2)) / 3;
+    const spacing = cutterSize + padding;
+    const column = index % 2;
+    const row = Math.floor(index / 2);
+    const cutterX = 15 + padding + (column * spacing);
+    const cutterY = 15 + padding + (row * spacing);
+    const poly = new Rectangle(new Point(cutterX, cutterY), cutterSize, cutterSize);
+    const cutter =
+      new RenderedGeopadPoly(
+          poly.points,
+          $geopad,
+          {
+            draggable: true,
+            onEnd: _arg => {
+              if (dough.poly.containsPoly(cutter.poly)) {
+                $step.addHint('correct');
+                if (
+                  cutters.every(c => dough.poly.containsPoly(c.poly)) &&
+                  intersections(...cutters.map(c => c.poly)).length == 0
+                ) {
+                  $step.score('cutters-placed');
+                }
+              } else $step.addHint('incorrect');
+            }
+          }
+      );
+    cutters.push(cutter);
+  }, 4);
 }
 
-class FillSquare {
-  private rect: Rectangle
-  private path: GeoPath
-  constructor(template: Rectangle, $geopad: Geopad) {
-    this.rect = template;
-    this.path = $geopad.drawPath(this.rect);
-    this.path.$el.css({fill: 'red'});
-  }
-  moveBy(by: Point) {
-    this.rect = this.rect.translate(by);
-    this.path.redraw(this.rect);
-  }
-  moveTo(loc: Point) {
-    this.moveBy(loc.subtract(this.rect.p));
-  }
-  contains(point: Point) {
-    return this.rect.contains(point);
-  }
-  get pos() {
-    return this.rect.p;
-  }
-}
-
-function setupGeopadDraggable(obj: FillSquare, $geopad: Geopad, onEnd?: (last: Point) => void) {
-  let mouseOffset = new Point(0, 0);
-  let dragging = false;
+export function dough2($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  $geopad.switchTool('line');
+  const para = // Parallelogram to be 'cut' by user
+    new RenderedGeopadPoly(
+        doughParalellogram.moveTo(new Point(300, 200)),
+        $geopad
+    );
+  let cutLine: GeoPath | undefined; // The 'cut' to be drawn; a straight line
+  let cutStart: GeoPoint | undefined; // The starting location for the cut line
+  let cutting = false; // Whether the cut line is currently being drawn
+  $geopad.on('begin:path', ({path, start}: {path: GeoPath, start: GeoPoint}) => {
+    cutting = true;
+    cutLine = path;
+    cutStart = start;
+  });
   slide($geopad, {
     $box: $geopad.$svg,
-    start: pos => {
-      if (obj.contains(pos)) {
-        dragging = true;
-        mouseOffset = obj.pos.subtract(pos);
-      }
-    },
-    move: (current, _start, _last) => {
-      if (dragging) {
-        const newLoc = current.add(mouseOffset);
-        obj.moveTo(newLoc);
-      }
-    },
-    end: (last, _start) => {
-      if (dragging) {
-        if (onEnd != null) onEnd(last);
-        dragging = false;
+    move: p => {
+      if (cutting) {
+        const startPoint = cutStart!.value!;
+        cutLine?.components[0].setValue(startPoint);
+        cutLine?.components[1].setValue(new Point(startPoint.x, p.y));
       }
     }
   });
+  $geopad.on('add:path', () => {
+    cutting = false;
+    const seg = cutLine!.value as Line;
+    const cut = new Line(seg.p1, new Point(seg.p1.x, seg.p2.y));
+    cutLine?.delete();
+    if (cutLine != undefined) for (const c of cutLine.components) c.delete();
+    para.erase();
+    const cutPolys = para.cut(cut, {draggable: true, snap: true, onEnd: _arg => {
+      const [a, b] = cutPolys!;
+      const [contactEdge, ..._rest] =
+        filterMap(
+            a.poly.edges,
+            edge => b.poly.edges.find(e => e.equals(edge))
+        );
+      if (contactEdge != undefined) {
+        const notContactPoint =
+          (point: Point) =>
+            !point.equals(contactEdge.p1) &&
+            !point.equals(contactEdge.p2);
+        const aPoints = a.poly.points.filter(notContactPoint);
+        const bPoints = b.poly.points.filter(notContactPoint);
+        const r = toRect([...aPoints, ...bPoints]);
+        if (r != undefined) {
+          a.erase();
+          b.erase();
+          $step.score('dough-arranged');
+          // eslint-disable-next-line @typescript-eslint/no-empty-function
+          fillSquares(
+              $step,
+              doughBaseWidth / 5,
+              new Point(doughBaseWidth, doughHeight),
+              '',
+              '',
+              true,
+              () => {
+                $step.addHint('correct');
+                $step.score('area-filled');
+              }
+          );
+        }
+      }
+    }});
+    if (cutPolys != undefined) {
+      const [cutA, cutB] = cutPolys;
+      cutA.addSnapFriend(cutB);
+      cutB.addSnapFriend(cutA);
+      $geopad.switchTool('move');
+    }
+  });
 }
+
+export function identifyParallelograms($step: Step) {
+  const $svg = $step.$('svg') as SVGParentView;
+  for (const [i, $path] of $svg.$$('path').entries()) {
+    if ($path.hasClass('parallelogram')) {
+      $path.one('click', () => {
+        $path.addClass('correct');
+        $step.addHint('correct');
+        $step.score('selected-' + i);
+      });
+    } else {
+      $path.one('click', () => {
+        $path.addClass('incorrect');
+        $step.addHint('incorrect');
+      });
+    }
+  }
+}
+
+export function apartments($step: Step) {
+  const $geopad = $step.$('x-geopad') as Geopad;
+  $geopad.switchTool('move');
+  const baseWidth = 300;
+  const height = 120;
+  const skew = 50;
+  const corner1 = new Point(100, 100);
+  $step.$('button.show-parallelogram')?.on('click', () => {
+    const _para = new RenderedGeopadPoly(
+        [
+          corner1,
+          corner1.shift(baseWidth, 0),
+          corner1.shift(baseWidth + skew, height),
+          corner1.shift(skew, height)
+        ],
+        $geopad
+    );
+    $geopad.switchTool('line');
+    // [TODO]: come back to this later; there's some kind of
+    // snapping-related bug with geopad here
+    /*
+    let cutLine: GeoPath | undefined;
+    let cutStart: GeoPoint | undefined;
+    let cutting = false;
+    $geopad.on('begin:path', ({path, start}: {path: GeoPath, start: GeoPoint}) => {
+      cutting = true;
+      cutLine = path;
+      cutStart = start;
+    });
+    slide($geopad, {
+      $box: $geopad.$svg,
+      move: p => {
+        console.log('mouse: ', p);
+        if (cutting) {
+          const startPoint = cutStart!.value!;
+          // [TODO]: use cutLine.setComponents
+          const partialPoint = new Point(startPoint.x, p.y);
+          console.log('start point: ', startPoint);
+          console.log('partial point: ', partialPoint);
+          cutLine!.redraw(new Segment(startPoint, partialPoint));
+        }
+      }
+    });
+    $geopad.on('add:path', () => {
+      cutting = false;
+      const seg = cutLine!.value as Line;
+      const cut = new Line(seg.p1, new Point(seg.p1.x, seg.p2.y));
+      if (cut.length == height) $step.addHint('correct');
+    });
+    */
+  });
+}
+
+// SECTION 3: Triangles
+
+export function worldTradeCenter($step: Step) {
+  const $polypad = $step.$('x-polypad') as Polypad;
+  polypadPrep($polypad, 600, 400, false);
+  const width = 40;
+  const height = 175;
+  const tri =
+    new Polygon(
+        new Point(0, 0),
+        new Point(width, 0),
+        new Point(width / 2, height)
+    );
+  const $tri1 = $polypad.newTile('polygon', getTangramPolystr(tri.points)) as Tile;
+  $tri1.setTransform(new Point(400, 250), 180);
+  $tri1.setColour('lightskyblue');
+  const $tri2 = $polypad.newTile('polygon', getTangramPolystr(tri.points)) as Tile;
+  $tri2.setTransform(new Point(400, 250), 180);
+  $tri2.setColour('lightskyblue');
+  const checkDone = () => {
+    const xdiff = Math.abs($tri1.posn.x - $tri2.posn.x);
+    const ydiff = Math.abs($tri1.posn.y - $tri2.posn.y);
+    const rotDiff = Math.abs($tri1.rot - $tri2.rot);
+    const done =
+      xdiff === 60 &&
+      ydiff === height &&
+      rotDiff % 180 === 0;
+    if (done) {
+      $step.addHint('correct');
+      $step.score('arranged');
+      const $height = $N('path', {}, $polypad.$svg) as SVGView;
+      $height.addClass('height');
+      const baseX = ($tri1.path as Polygon).centroid.x;
+      $height.draw(
+          new Segment(
+              new Point(baseX, $tri1.posn.y),
+              new Point(baseX, $tri2.posn.y)
+          )
+      );
+    }
+  };
+  $tri1.$el.on('pointerup', checkDone);
+  $tri2.$el.on('pointerup', checkDone);
+}
+
+export function congruentTriangles($step: Step) {
+  type Coord = [number, number];
+  type Tri = [Coord, Coord, Coord]
+  const coords: [Tri, Tri, Tri, Tri, Tri, Tri] = [
+    [
+      [0, 69.2], [0, 0], [218.5, 69.2]
+    ],
+    [
+      [0, 162], [59.5, 0], [89.3, 162]
+    ],
+    [
+      [0, 89.9], [0, 0], [162.1, 89.9]
+    ],
+    [
+      [0, 109.4], [41, 0], [111.2, 109.4]
+    ],
+    [
+      [0, 22.1], [58.7, 0], [143.7, 22.1]
+    ],
+    [
+      [0, 33.4], [81, 0], [140.8, 33.4]
+    ]
+  ];
+  const shifts: Coord[] = [
+    [10, 10],
+    [300, 10],
+    [450, 20],
+    [10, 200],
+    [260, 350],
+    [400, 315]
+  ];
+  const rots = [0, 40, 60, 0, 160, 195];
+  const $polypad = $step.$('x-polypad') as Polypad;
+  polypadPrep($polypad, 600, 400, false);
+  const $tris =
+    coords
+        .map(triCoords => triCoords.map(([x, y]) => new Point(x, y)))
+        .map((triPoints, index) => {
+          const $tile = $polypad.newTile('polygon', getTangramPolystr(triPoints)) as Tile;
+          const [x, y] = shifts[index];
+          $tile.setTransform(new Point(x, y), rots[index]);
+          $tile.setColour(TEAL);
+          return $tile;
+        });
+  const $pairs: [Tile, Tile][] = [];
+  const checkDone = () => {
+    const allTouching = $pairs.every(([$a, $b]) => {
+      const over = $a.posn.equals($b.posn) && $a.rot == $b.rot;
+      if (over) return false;
+      return ($a.path as Polygon).edges.some(
+          aEdge => ($b.path as Polygon).edges.some(
+              bEdge => aEdge.equals(bEdge)
+          )
+      );
+    });
+    if (allTouching) {
+      $step.score('arranged');
+      $step.addHint('correct');
+    }
+  };
+  $step.$('button.copies')?.one('click', () => {
+    for (const $tri of $tris) {
+      const $copy = $tri.copy() as Tile;
+      $copy.setColour(ORANGE);
+      $pairs.push([$tri, $copy]);
+    }
+    for (const [$a, $b] of $pairs) {
+      $a.$el.on('pointerup', checkDone);
+      $b.$el.on('pointerup', checkDone);
+    }
+  });
+}
+
+export function area3($step: Step) {
+  const $container = $step.$('.area')!;
+  const $polypad = $container.$('x-polypad') as Polypad;
+  const $geopad = $container.$('x-geopad') as Geopad;
+  $geopad.addClass('init');
+  const width = 300;
+  const height = 175;
+  const triTemplate = new Polygon(new Point(0, 0), new Point(width / 2, height), new Point(width, 0));
+  const $tri1 = $polypad.newTile('polygon', getTangramPolystr(triTemplate.points)) as Tile;
+  $tri1.setTransform(new Point(300, 100), 35);
+  $tri1.setColour('navy');
+  const $tri2 = $polypad.newTile('polygon', getTangramPolystr(triTemplate.points)) as Tile;
+  $tri2.setTransform(new Point(300, 100), 35);
+  $tri2.setColour('orange');
+  const checkDone = () => {
+    const para = toParallelogram($tri1.path as Polygon, $tri2.path as Polygon);
+    if (para != undefined) {
+      $step.addHint('correct');
+      $step.score('arranged');
+      $polypad._el.remove();
+      $geopad.addClass('vis');
+      $geopad.switchTool('move');
+      const options = {
+        onSideSelected: () => $step.score('side-selected'),
+        onComplete: () => {
+          $step.addHint('correct');
+          $step.score('complete');
+        },
+        onIncorrect: () => $step.addHint('incorrect')
+      };
+      setupBaseHeight(para, $geopad, options);
+    }
+  };
+  $tri1.$el.on('pointerup', checkDone);
+  $tri2.$el.on('pointerup', checkDone);
+}
+
+export function triangleBases($step: Step) {
+  const basePoints = [
+    new Point(237.1, 103.3),
+    new Point(296, 34.1),
+    new Point(527.7, 103.3)
+  ];
+  const [pointA, pointB, pointC] = basePoints;
+  const original = new Polygon(...basePoints);
+  const partnerA = new Polygon(pointB, new Point(586.6, 34.1), pointC);
+  const partnerB = new Polygon(pointA, pointC, new Point(468.8, 172.5));
+  const partnerC = new Polygon(new Point(5.5, 34.1), pointA, pointB);
+  const [$geopadA, $geopadB, $geopadC] = $step.$$('x-geopad') as Geopad[];
+  const onIncorrect = () => $step.addHint('incorrect');
+  const [optionsA, optionsB, optionsC] = [
+    {
+      onIncorrect,
+      onComplete: () => $step.score('a-done'),
+      partner: {
+        poly: partnerA,
+        baseIndex: 2
+      }
+    },
+    {
+      onIncorrect,
+      onComplete: () => $step.score('b-done'),
+      partner: {
+        poly: partnerB,
+        baseIndex: 0
+      }
+    },
+    {
+      onIncorrect,
+      onComplete: () => $step.score('c-done'),
+      partner: {
+        poly: partnerC,
+        baseIndex: 1
+      }
+    }
+  ];
+  setupBaseHeight(original, $geopadA, optionsA);
+  setupBaseHeight(original, $geopadB, optionsB);
+  setupBaseHeight(original, $geopadC, optionsC);
+}
+
+export function triangleSelection($step: Step) {
+  const $svg = $step.$('svg') as SVGParentView;
+  const $pairs = tabulate(index => {
+    const ind = index + 1;
+    return [
+      $svg.$(`#original${ind}`) as SVGView,
+      $svg.$(`#partner${ind}`) as SVGView
+    ];
+  }, 3);
+  let clicks = 0;
+  for (const [$a, $b] of $pairs) {
+    $a.on('click', () => {
+      if (!$a.hasAttr('clicked')) {
+        $step.addHint('correct');
+        $a.setAttr('clicked', true);
+        $b.addClass('vis');
+        clicks++;
+        if (clicks == 3) $step.score('clicks');
+      }
+    });
+  }
+}
+
+// SECTION 4: Polygons
 
 declare const d3: any;
 
@@ -407,7 +707,7 @@ const cafeLocationPoints = [
 
 const voronoiColours = ['3c91e6', 'ff6b6b', 'ffe45e', '4ecdc4', '81366f', 'c93818', 'e2c312', '6bab90', 'e4533a'].map(c => '#' + c);
 
-export async function voronoi1($step: VoronoiStep) {
+export async function voronoi1($step: Step<VoronoiModel>) {
 
   await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
 
@@ -420,9 +720,9 @@ export async function voronoi1($step: VoronoiStep) {
   $step.model.vorOpacity = 0;
   $step.model.cells = [];
 
-  cafeLocationPoints.forEach(locationPoint => {
+  for (const locationPoint of cafeLocationPoints) {
     $geopad.drawPoint(locationPoint, {classes: 'red', interactive: false});
-  });
+  }
 
   $step.model.cells = getVoronoiPolys(bounds).map(poly => {
     return {poly, over: false};
@@ -432,7 +732,7 @@ export async function voronoi1($step: VoronoiStep) {
     showVor($step);
   });
 
-  $geopad.$svg.on('mousemove', e => {
+  $geopad.$svg.on('pointermove', e => {
     $step.model.cells = $step.model.cells.map(cell => {
       const over = cell.poly.contains(new Point(e.offsetX, e.offsetY));
       return {...cell, over};
@@ -472,47 +772,47 @@ export async function voronoi1($step: VoronoiStep) {
 
     const cells = $step.model.cells;
     if ($step.model.vorOpacity != 0) {
-      cells.forEach((cell, i) => {
+      for (const [index, cell] of cells.entries()) {
         const opacity = cell.over ? $step.model.vorOpacity / 2 : $step.model.vorOpacity / 3;
         $canvas.draw(
             cell.poly,
             {
-              fill: voronoiColours[i % 9],
-              stroke: 'black',
+              fill: voronoiColours[index % 9],
+              stroke: GREY,
               strokeWidth: 2,
               opacity
             }
         );
-      });
+      }
     }
 
-    dynPoints.forEach(({gPoint, dlOpacity}) => {
+    for (const {gPoint, dlOpacity} of dynPoints) {
 
       const edges: Segment[] = [];
 
       let shortest = {len: Number.POSITIVE_INFINITY, ind: 0};
 
-      cafeLocationPoints.forEach((locationPoint, i) => {
+      for (const [index, locationPoint] of cafeLocationPoints.entries()) {
         const newEdge = new Segment(locationPoint, gPoint.value!);
         if (newEdge.length < shortest.len) {
-          shortest = {len: newEdge.length, ind: i};
+          shortest = {len: newEdge.length, ind: index};
         }
         edges.push(newEdge);
-      });
+      }
 
-      edges.forEach((edge, i) => {
-        const stroke = i == shortest.ind ? 'red' : 'black';
-        const strokeWidth = i == shortest.ind ? 2 : 1;
-        const opacity = i == shortest.ind ? 1 : dlOpacity;
+      for (const [index, edge] of edges.entries()) {
+        const stroke = index == shortest.ind ? 'red' : GREY;
+        const strokeWidth = index == shortest.ind ? 2 : 1;
+        const opacity = index == shortest.ind ? 1 : dlOpacity;
         if (opacity != 0) {
           $canvas.draw(edge, {stroke, strokeWidth, opacity});
         }
-      });
-    });
+      }
+    }
   });
 }
 
-async function handleAnim(index: number, $step: VoronoiStep) {
+async function handleAnim(index: number, $step: Step<VoronoiModel>) {
   window.setTimeout((_: any) => {
     const _anim = animate((progress, _) => {
       const dlOpacity = 1 - progress;
@@ -523,14 +823,14 @@ async function handleAnim(index: number, $step: VoronoiStep) {
   }, 1000);
 }
 
-async function showVor($step: VoronoiStep) {
+async function showVor($step: Step<VoronoiModel>) {
   const anim = animate((progress, _) => {
     $step.model.vorOpacity = progress;
   }, 2000);
   anim.promise.then(_ => $step.score('voronoi-diagram'));
 }
 
-export async function voronoi2($step: VoronoiStep) {
+export async function voronoi2($step: Step<VoronoiModel>) {
 
   await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
 
@@ -541,39 +841,39 @@ export async function voronoi2($step: VoronoiStep) {
     return {poly, over: false};
   });
 
-  cells.forEach((cell, i) => {
+  for (const [index, cell] of cells.entries()) {
     let options = {};
-    if (i == 12) {
+    if (index == 12) {
       options = {class: 'triangle-cell'};
     }
     const $cell = $N('path', options, $geopad.$paths) as SVGView;
-    $cell.css({fill: voronoiColours[i % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.addClass(`voronoi-${(index % 9) + 1}`);
     $cell.draw(cell.poly);
-  });
+  }
 
 
   let selectedEdge = -1;
   let edgeChosen = false;
   const tri = cells[12].poly;
-  tri.edges.slice(0, 3).forEach((edge, i) => {
+  for (const [index, edge] of tri.edges.slice(0, 3).entries()) {
     const edgePath = $geopad.drawPath(edge);
-    edgePath.$el.css({'stroke-width': '4px', color: '#000000'});
+    edgePath.$el.addClass('edge');
     // [TODO]: Replace with stylesheet-based css?
-    edgePath.$el.on('mouseenter', () => {
-      if (selectedEdge != i) {
-        edgePath.$el.css({color: '#ffffff'});
+    edgePath.$el.on('pointerenter', () => {
+      if (selectedEdge != index) {
+        edgePath.$el.addClass('edge-hover');
       }
     });
-    edgePath.$el.on('mouseleave', () => {
-      if (selectedEdge != i) {
-        edgePath.$el.css({color: '#000000'});
+    edgePath.$el.on('pointerleave', () => {
+      if (selectedEdge != index) {
+        edgePath.$el.removeClass('edge-hover');
       }
     });
     edgePath.$el.on('click', () => {
       if (!edgeChosen) {
         edgeChosen = true;
-        edgePath.$el.css({color: '#ff0000'});
-        selectedEdge = i;
+        edgePath.$el.addClass('selected-edge');
+        selectedEdge = index;
         edgePath.setLabel(edge.length.toFixed(2).toString());
         $step.score('side-selected');
 
@@ -587,7 +887,7 @@ export async function voronoi2($step: VoronoiStep) {
         const heightSegment = new Segment(heightLine.project(edge.p1), heightLine.project(edge.p2));
         const heightPath = $geopad.drawPath(heightSegment);
         heightPath.$el.hide();
-        heightPath.$el.css({color: '#000000', 'stroke-dasharray': '6'});
+        heightPath.$el.addClass('height');
 
         $step.model.nearby = false;
         $geopad.switchTool('line');
@@ -596,10 +896,10 @@ export async function voronoi2($step: VoronoiStep) {
         $geopad.on('begin:path', ({path, _}: {path: GeoPath, _: any}) => {
           p = path;
           cb = _ => handlePathing(path, edgePath, heightPath, height, () => $step.model.nearby = true, () => $step.model.nearby = false);
-          path.$parent.on('mousemove', cb);
+          path.$parent.on('pointermove', cb);
         });
         $geopad.on('add:path', _ => {
-          $geopad.off('mousemove', cb);
+          $geopad.off('pointermove', cb);
           if ($step.model.nearby) {
             $step.score('height-drawn');
             $step.addHint('correct');
@@ -609,7 +909,7 @@ export async function voronoi2($step: VoronoiStep) {
             p.components[1].setValue(p2);
             p.setLabel(height.toFixed(2).toString());
           } else {
-            p.components.forEach(c => c.delete());
+            for (const c of p.components) c.delete();
             p.delete();
             heightPath.$el.hide();
             $step.addHint('incorrect');
@@ -617,39 +917,12 @@ export async function voronoi2($step: VoronoiStep) {
         });
       }
     });
-  });
+  }
 
   $geopad.showLabels = true;
 }
 
-function handlePathing(path: GeoPath, base: GeoPath, heightPath: GeoPath, height: number, whenClose: VoidFunction, whenFar: VoidFunction) {
-  const pathSegment = path.value as Segment;
-  const angleRange = Math.PI / 180;
-  const correctAngle = (base.value as Segment).perpendicular(pathSegment.p1).angle % Math.PI;
-  const pathAngle = pathSegment.angle % Math.PI;
-  const perpendicular = pathAngle > correctAngle - angleRange && pathAngle < correctAngle + angleRange;
-  if (perpendicular) {
-    path.$el.css({color: 'red'});
-  } else {
-    path.$el.css({color: 'blue'});
-  }
-
-  const heightRange = 10;
-  const atHeight = pathSegment.length > height - heightRange && pathSegment.length < height + heightRange;
-  if (atHeight) {
-    heightPath.$el.show();
-  } else {
-    heightPath.$el.hide();
-  }
-
-  if (perpendicular && atHeight) {
-    whenClose();
-  } else {
-    whenFar();
-  }
-}
-
-export async function voronoi3($step: VoronoiStep) {
+export async function voronoi3($step: Step<VoronoiModel>) {
 
   const $geopad = $step.$('x-geopad') as Geopad;
 
@@ -658,19 +931,19 @@ export async function voronoi3($step: VoronoiStep) {
     return {poly, over: false};
   });
 
-  cells.forEach((cell, i) => {
+  for (const [index, cell] of cells.entries()) {
     let options = {};
-    if (i == 6) {
+    if (index == 6) {
       options = {class: 'four-sided'};
-    } else if (i == 3) {
+    } else if (index == 3) {
       options = {class: 'five-sided'};
-    } else if (i == 5) {
+    } else if (index == 5) {
       options = {class: 'six-sided'};
     }
     const $cell = $N('path', options, $geopad.$paths) as SVGView;
-    $cell.css({fill: voronoiColours[i % 9], stroke: 'black', 'stroke-width': '2px'});
+    $cell.addClass(`voronoi-${(index % 9) + 1}`);
     $cell.draw(cell.poly);
-  });
+  }
 }
 
 function getVoronoiPolys(bounds: number[]) {
@@ -685,14 +958,6 @@ function getVoronoiPolys(bounds: number[]) {
     });
     return new Polygon(...cellPoints);
   });
-}
-
-function getX(p: Point) {
-  return p.x;
-}
-
-function getY(p: Point) {
-  return p.y;
 }
 
 export function sortPolygons($step: Step) {
@@ -713,22 +978,20 @@ export async function populations($step: Step) {
   const $geopad = $step.$('x-geopad.voronoi-1') as Geopad;
 
   const cells = getVoronoiPolys([0, 0, 600, 400]).map((poly, i) => {
-    return {poly, color: voronoiColours[i % 9]};
+    return {poly, color: (i % 9) + 1};
   });
   const pentagon = cells[8];
   cells[8] = cells.pop()!;
   cells.push(pentagon);
-  cells.forEach((cell, i) => {
+  for (const [index, cell] of cells.entries()) {
     let options = {};
-    let css: Record<string, any> = {fill: cell.color, stroke: 'black', 'stroke-width': '2px'};
-    if (i == cells.length - 1) {
+    if (index == cells.length - 1) {
       options = {class: 'population-pentagon'};
-      css = {fill: cell.color, stroke: 'white', 'stroke-width': '3px'};
     }
     const $cell = $N('path', options, $geopad.$paths) as SVGView;
-    $cell.css(css);
+    $cell.addClass(`voronoi-${cell.color}`);
     $cell.draw(cell.poly);
-  });
+  }
 }
 
 export function polygonNames($step: Step) {
@@ -757,27 +1020,29 @@ export function polyVerts($step: Step) {
 
   let doneMoving = false;
 
-  $geopads.forEach(($geopad, i) => {
+  for (const [index, $geopad] of $geopads.entries()) {
 
     const p: {[key: string]: boolean} = {};
 
-    $geopad.points.forEach(point => {
+    for (const point of $geopad.points) {
       p[point.name] = false;
-      point.$el.on('mousemove', (e: MouseEvent) => {
-
-        // When mousemove has been fired AND e.buttons == 1 (left mouse button is down), this means we are dragging
-        if (e.buttons == 1) {
-          pointsMoved[i][point.name] = true;
+      let initPosition: Point | undefined;
+      point.$el.on('pointerdown', () => {
+        initPosition = point.value as Point;
+      });
+      point.$el.on('pointerup', () => {
+        if (initPosition != undefined && !initPosition.equals(point.value as Point)) {
+          pointsMoved[index][point.name] = true;
           if (pointsMoved.every(atLeastTwoMoved) && !doneMoving) {
             doneMoving = true;
             $step.score('verts-moved');
           }
         }
       });
-    });
+    }
 
     pointsMoved.push(p);
-  });
+  }
 }
 
 export function simpleTangram($step: Step) {
@@ -815,53 +1080,6 @@ export function simpleTangram($step: Step) {
       completed = true;
     }
   });
-}
-
-function tangramComplete(tiles: Set<Tile>, baseOffset: number) {
-
-  const correctStates =
-    [[2, 4, 270], [4, 2, 0], [6, 4, 0], [3, 7, 0], [7, 2, 270], [4, 5, 0], [6, 6, 90]]
-        .map(triple =>
-          [tangramScale(triple[0], baseOffset), tangramScale(triple[1], baseOffset), triple[2]]);
-
-  // Ensure that rotation values are within the 0-360 range for comparison purposes
-  const currentStates = [...tiles].map(tile => {
-    let rot = 0;
-    if (tile.rot > 0) {
-      rot = tile.rot % 360;
-    } else if (tile.rot < 0) {
-      const tempRot = tile.rot % -360;
-      const diffRot = 360 + tempRot;
-      rot = diffRot % 360;
-    }
-    return [tile.posn.x, tile.posn.y, rot];
-  });
-
-  // Set up helper for checking whether each shape is within +/- 15 px of its 'correct' position
-  const ranges = correctStates.map(state =>
-    [[state[0] - 15, state[0] + 15], [state[1] - 15, state[1] + 15]]
-  );
-
-  let closeEnough = true;
-
-  currentStates.forEach((state, i) => {
-    if (
-      state[0] < ranges[i][0][0] ||
-      state[0] > ranges[i][0][1] ||
-      state[1] < ranges[i][1][0] ||
-      state[1] > ranges[i][1][1] ||
-      state[2] != correctStates[i][2]
-    ) {
-      closeEnough = false;
-    }
-  });
-
-  return closeEnough;
-
-}
-
-function tangramScale(val: number, shift = 0) {
-  return shift + val * 25;
 }
 
 const paradoxData = {
@@ -913,19 +1131,19 @@ export function currysParadox1($step: Step) {
   const viewWidth = 425;
   const viewHeight = 450;
 
-  const $polypad = $step.$('.triangle-tangram > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, viewWidth, viewHeight, true);
 
   const $bg = $step.$('svg.solution-outline')! as SVGParentView;
   $bg.setAttr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
 
-  paradoxData.polys.forEach((polyVals, i) => {
+  for (const [index, polyVals] of paradoxData.polys.entries()) {
     const $bgPath = $N('path', {}, $bg) as SVGView;
-    const poly = (new Polygon(...polyVals)).translate(finalPositions[i]);
+    const poly = (new Polygon(...polyVals)).translate(finalPositions[index]);
     $bgPath.draw(poly);
-  });
+  }
 
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     if (index == 0) {
@@ -933,7 +1151,7 @@ export function currysParadox1($step: Step) {
     }
     tile.setColour(paradoxData.polyColours[index]);
     tile.setTransform(paradoxData.polyOrigins[index]);
-  });
+  }
 
   let done = false;
   $polypad.on('move-selection', () => {
@@ -978,46 +1196,36 @@ export function currysParadox1($step: Step) {
   });
 }
 
-function polypadPrep($polypad: Polypad, viewWidth: number, viewHeight: number, grid: boolean) {
-  $polypad.$svg.setAttr('viewBox', `0 0 ${viewWidth} ${viewHeight}`);
-  $polypad.canDelete = $polypad.canCopy = false;
-  if (grid) $polypad.setGrid('square-grid');
-}
-
-function getTangramPolystr(polyGridPositions: Point[]) {
-  return polyGridPositions.map(p => p.x + ' ' + p.y).join(',');
-}
-
 export function currysParadox2($step: Step) {
 
-  const $polypad = $step.$('.tangram-polys > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, 425, 225, true);
 
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
     tile.setTransform(paradoxData.polyOrigins[index]);
-  });
+  }
 }
 
 export function currysParadox3($step: Step) {
 
-  const $polypad = $step.$('.zoom-1 > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
     tile.setTransform(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(2)));
-  });
+  }
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
   outlineTile.setTransform(new Point(tangramScale(1), tangramScale(7)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
-  $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+  $outline.addClass('curry-outline');
 
-  const $zoomSlider = $step.$('x-slider.zoom-s-1') as Slider;
+  const $zoomSlider = $step.$('x-slider') as Slider;
   let zoomed1 = false;
   $zoomSlider.on('move', n => {
 
@@ -1029,44 +1237,44 @@ export function currysParadox3($step: Step) {
     const scale = 1 - (n / 1100);
     const factor = tangramScale(scale);
     $polypad.$svg.setAttr('viewBox', `${9 * (tangramScale(1) - factor)} ${4 * (tangramScale(1) - factor)} ${paradoxData.baseWidth * factor} ${paradoxData.baseHeight * factor}`);
-    [...$polypad.tiles.values()].forEach(tile => {
+    for (const tile of $polypad.tiles) {
       tile.$el.$('g path.polygon-tile')?.css({'stroke-width': `${scale}px`});
-    });
+    }
     $outline.css({'stroke-width': `${scale * 4}px`});
   });
 }
 
 export function currysParadox4($step: Step) {
-  const $polypad = $step.$('.triangle-ref > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
     tile.setTransform(paradoxData.finalRel[index].shift(tangramScale(1), tangramScale(2)));
     tile.$el.addClass('paradox-poly');
-  });
+  }
 }
 
 export function currysParadox5($step: Step) {
 
-  const $polypad = $step.$('.zoom-2 > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, paradoxData.viewWidth, paradoxData.viewHeight, true);
 
   // TODO Cleanup duplicate code!
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
     const tile = $polypad.newTile('polygon', polyStr);
     tile.setColour(paradoxData.polyColours[index]);
     tile.setTransform(paradoxData.nextRelative[index].shift(tangramScale(1), tangramScale(2)));
-  });
+  }
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
   outlineTile.setTransform(new Point(tangramScale(1), tangramScale(7)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
-  $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+  $outline.addClass('curry-outline');
 
-  const $zoomSlider = $step.$('x-slider.zoom-s-2') as Slider;
+  const $zoomSlider = $step.$('x-slider') as Slider;
   let zoomed2 = false;
   $zoomSlider.on('move', n => {
 
@@ -1078,18 +1286,18 @@ export function currysParadox5($step: Step) {
     const scale = 1 - (n / 1100);
     const factor = tangramScale(scale);
     $polypad.$svg.setAttr('viewBox', `${6 * (tangramScale(1) - factor)} ${5 * (tangramScale(1) - factor)} ${paradoxData.baseWidth * factor} ${paradoxData.baseHeight * factor}`);
-    [...$polypad.tiles.values()].forEach(tile => {
+    for (const tile of $polypad.tiles) {
       tile.$el.$('g path.polygon-tile')?.css({'stroke-width': `${scale}px`});
-    });
+    }
     $outline.css({'stroke-width': `${scale * 4}px`});
   });
 }
 
 export function currysParadox6($step: Step) {
-  const $polypad = $step.$('.paradox-comparison > x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as Polypad;
   polypadPrep($polypad, 425, 475, true);
 
-  paradoxData.polys.forEach((poly, index) => {
+  for (const [index, poly] of paradoxData.polys.entries()) {
     const polyStr = getTangramPolystr(poly);
 
     const tile1 = $polypad.newTile('polygon', polyStr);
@@ -1099,18 +1307,17 @@ export function currysParadox6($step: Step) {
     const tile2 = $polypad.newTile('polygon', polyStr);
     tile2.setColour(paradoxData.polyColours[index]);
     tile2.setTransform(paradoxData.nextRelative[index].shift(tangramScale(1), tangramScale(7)));
-  });
+  }
   const outlineTile = $polypad.newTile('polygon', paradoxData.outlineStr);
   outlineTile.setTransform(new Point(tangramScale(1), tangramScale(18)));
   const $outline = outlineTile.$el.$('g path.polygon-tile')!;
-  $outline.css({stroke: 'rgb(17, 255, 0)', 'stroke-width': '4px', fill: 'none'});
+  $outline.addClass('curry-outline');
 }
+
+// SECTION 5: circles
 
 export function wheels($step: Step) {
   const $svg = $step.$('svg') as SVGParentView;
-
-  const outlineColor = 'red';
-  const outlineWidth = '3px';
 
   const $reset = $step.$('button.reset');
 
@@ -1141,10 +1348,10 @@ export function wheels($step: Step) {
     const startBottom = startTopLeft.shift(radius, radius * 2);
 
     const $distLine = $N('path', {}, $svg) as SVGView;
-    $distLine.css({stroke: outlineColor, 'stroke-width': outlineWidth});
+    $distLine.addClass('distline');
 
     const $outline = $N('path', {}, $svg) as SVGView;
-    $outline.css({stroke: outlineColor, 'stroke-width': outlineWidth, fill: 'none'});
+    $outline.addClass('wheel-outline');
     const initOutline = new Circle(startBottom.shift(0, -radius), radius);
     $outline.draw(initOutline);
 
@@ -1160,8 +1367,8 @@ export function wheels($step: Step) {
     };
   });
 
-  $step.model['wheels'].forEach((wheel: Wheel) => {
-    wheel.$el.css({fill: 'rgba(0, 0, 0, 0'});
+  for (const wheel of $step.model['wheels'] as Wheel[]) {
+    wheel.$el.addClass('transparent-draggable');
     let initDistance = 0;
     slide(wheel.$el, {
       start: () => {
@@ -1194,15 +1401,16 @@ export function wheels($step: Step) {
       }
     });
 
-  });
+  }
 
   $reset?.on('click', () => {
-    $step.model['wheels'].forEach((wheel: Wheel) => {
+    for (const wheel of $step.model['wheels'] as Wheel[]) {
       wheel.distance = 0;
       wheel.$el.setTransform(undefined, undefined);
+      wheel.$wheel.setTransform(undefined, undefined);
       wheel.$outline.draw(wheel.initOutline);
       wheel.$distLine.draw(new Segment(wheel.startBottom, wheel.startBottom));
-    });
+    }
   });
 }
 
@@ -1222,7 +1430,7 @@ export function encasementEstimation($step: Step) {
   const box = new ResizeableSquare($svg, 100, new Point(15, 15), strokeWidth, targetBounds, onComplete);
 
   const $shapeDisp = $N('path', {}, $svg) as SVGView;
-  $shapeDisp.css({fill: 'none', stroke: 'lime', 'stroke-width': `${strokeWidth}px`});
+  $shapeDisp.addClass('shape-display');
   const $slider = $step.$('x-slider') as Slider;
   $slider.on('move', n => {
     box.hide();
@@ -1250,237 +1458,13 @@ export function encasementEstimation($step: Step) {
   });
 }
 
-class ResizeableSquare {
-  private $edges: SVGView[] = [];
-  private $box: SVGView;
-  private poly: Polygon;
-  private corners: {rect: Rectangle, $el: SVGView}[] = [];
-  private grabDelta: Point;
-  private topLeft: Point;
-  private isComplete: boolean;
-
-  constructor(
-    private $svg: SVGParentView,
-    initSize: number,
-    initPos: Point,
-    strokeWidth: number,
-    private targetBounds: Rectangle,
-    private onComplete: (center: Point, apothem: number) => void
-  ) {
-
-    this.isComplete = false;
-
-    this.poly = new Rectangle(initPos, initSize, initSize).polygon;
-
-    this.edges.forEach(edge => {
-      const $el = $N('path', {}, $svg) as SVGView;
-      $el.css({'stroke-width': `${strokeWidth}px`, stroke: 'black'});
-      $el.draw(edge);
-      this.$edges.push($el);
-    });
-
-    this.$box = $N('path', {}, $svg) as SVGView;
-    this.$box.css({fill: 'rgba(0, 0, 0, 0)'});
-    this.$box.draw(this.poly);
-
-    this.grabDelta = new Point(0, 0);
-    this.topLeft = new Point(0, 0);
-
-    const cornerSize = 10;
-    this.poly.points.forEach((point, index) => {
-
-      const pos = point.shift(-cornerSize / 2, -cornerSize / 2);
-
-      const cornerRect = new Rectangle(pos, cornerSize, cornerSize);
-      const $corner = $N('path', {}, $svg) as SVGView;
-      $corner.css({fill: 'rgba(0, 0, 0, 0)'});
-
-      let dir = '';
-      if (index % 2 == 0) {
-        $corner.addClass('nwse-corner');
-        dir = 'nwse';
-      } else {
-        $corner.addClass('nesw-corner');
-        dir = 'nesw';
-      }
-
-      this.corners.push({rect: cornerRect, $el: $corner});
-      $corner.draw(cornerRect);
-
-      slide($corner, {
-        move: (posn: Point, _start, last: Point) => {
-
-          const delta = posn.subtract(last);
-          this.corners[index].rect = this.corners[index].rect.translate(delta);
-          $corner.draw(this.corners[index].rect);
-
-          let scaleLine = new Line(this.poly.points[index], this.poly.points[index].translate(new Point(10, 0)));
-
-          if (dir == 'nwse') {
-            scaleLine = scaleLine.rotate(Math.PI / 4, this.poly.points[index]);
-          } else if (dir == 'nesw') {
-            scaleLine = scaleLine.rotate(-Math.PI / 4, this.poly.points[index]);
-          }
-
-          const scalePoint = scaleLine.project(this.corners[index].rect.p);
-          const pointDelta = scalePoint.subtract(this.poly.points[index]);
-
-          const aIndex = (index + 3) % 4;
-          const bIndex = (index + 1) % 4;
-          let aNext = this.poly.points[aIndex];
-          let bNext = this.poly.points[bIndex];
-
-          this.poly.points[index] = this.poly.points[index].translate(pointDelta);
-
-          switch (index) {
-            case 0: // a is below, b is to the right
-            case 2: // a is above, b is to the left
-              aNext = new Point(this.poly.points[index].x, aNext.y);
-              bNext = new Point(bNext.x, this.poly.points[index].y);
-              break;
-            case 1: // a is to the left, b is below
-            case 3: // a is to the right, b is above
-              aNext = new Point(aNext.x, this.poly.points[index].y);
-              bNext = new Point(this.poly.points[index].x, bNext.y);
-              break;
-          }
-
-          this.poly.points[aIndex] = aNext;
-          this.poly.points[bIndex] = bNext;
-          this.$box.draw(this.poly);
-
-          const edges = this.edges;
-          this.$edges.forEach(($edge, index) => $edge.draw(edges[index]));
-
-          this.handleBounds();
-
-        },
-        end: () => {
-
-          this.poly.points.forEach((_, index2) => {
-            const cornerRect =
-              this.corners[index2].rect
-                  .translate(
-                      this.poly.points[index2].subtract(this.corners[index2].rect.p)
-                  )
-                  .shift(-cornerSize / 2, -cornerSize / 2);
-            this.corners[index2].rect = cornerRect;
-            this.corners[index2].$el.draw(cornerRect);
-          });
-
-          if (this.isComplete) {
-            this.onComplete(this.center, this.apothem);
-          }
-
-        }
-      });
-    });
-
-    slide(this.$box, {
-      start: (posn: Point) => {
-        this.topLeft = new Point(this.$box.bounds.left - this.$svg.bounds.left, this.$box.bounds.top - this.$svg.bounds.top);
-        this.grabDelta = posn.subtract(this.topLeft);
-      },
-      move: (posn: Point, _start, last: Point) => {
-        const newPos = posn.subtract(this.topLeft).subtract(this.grabDelta);
-
-        this.$box.translate(newPos.x, newPos.y);
-        this.$edges.forEach($edge => $edge.translate(newPos.x, newPos.y));
-
-        this.poly = this.poly.translate(posn.subtract(last));
-
-        this.handleBounds();
-      },
-      end: (last: Point, start: Point) => {
-        this.$box.setTransform(new Point(0, 0));
-        this.$box.draw(this.poly);
-
-        const edges = this.edges;
-        this.$edges.forEach(($edge, index) => {
-          $edge.setTransform(new Point(0, 0));
-          $edge.draw(edges[index]);
-        });
-
-        this.poly.points.forEach((_point, index) => {
-          this.corners[index].rect = this.corners[index].rect.translate(last.subtract(start));
-          this.corners[index].$el.draw(this.corners[index].rect);
-        });
-
-        if (this.isComplete) {
-          this.onComplete(this.center, this.apothem);
-        }
-      }
-    });
-  }
-
-  handleBounds() {
-    let complete = true;
-    const closeness = 2;
-    this.edges.forEach((edge, index) => {
-      switch (index) {
-        case 0: // top
-          if (nearlyEquals(edge.p1.y, this.targetBounds.points[0].y, closeness)) {
-            this.$edges[0].css({stroke: 'lime'});
-          } else {
-            this.$edges[0].css({stroke: 'black'});
-            complete = false;
-          }
-          break;
-        case 1: // right
-          if (nearlyEquals(edge.p1.x, this.targetBounds.points[1].x, closeness)) {
-            this.$edges[1].css({stroke: 'lime'});
-          } else {
-            this.$edges[1].css({stroke: 'black'});
-            complete = false;
-          }
-          break;
-        case 2: // bottom
-          if (nearlyEquals(edge.p1.y, this.targetBounds.points[2].y, closeness)) {
-            this.$edges[2].css({stroke: 'lime'});
-          } else {
-            this.$edges[2].css({stroke: 'black'});
-            complete = false;
-          }
-          break;
-        case 3: // left
-          if (nearlyEquals(edge.p1.x, this.targetBounds.points[3].x, closeness)) {
-            this.$edges[3].css({stroke: 'lime'});
-          } else {
-            this.$edges[3].css({stroke: 'black'});
-            complete = false;
-          }
-          break;
-      }
-    });
-    this.isComplete = complete;
-  }
-
-  get edges() {
-    return this.poly.points.map((point, index) => new Segment(point, this.poly.points[(index + 1) % 4]));
-  }
-
-  get apothem() {
-    return this.poly.edges[0].length / 2;
-  }
-
-  get center() {
-    return (new Line(this.poly.points[0], this.poly.points[2])).midpoint;
-  }
-
-  hide() {
-    this.$box.remove();
-    this.$edges.forEach($edge => $edge.remove());
-  }
-
-}
-
 export function radiiDiameters($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
   const circle = new Circle(new Point(200, 200), 180);
   $geopad.drawPoint(circle.c, {interactive: false});
   $geopad.drawPath(circle, {interactive: true});
   $geopad.switchTool('line');
-  let $diameterTarget: GeoPoint | null = null;
+  let $diameterTarget: GeoPoint | undefined = undefined;
   let radii = 0;
   let diameters = 0;
   $geopad.on('begin:path', ({start}: {path: Path, start: GeoPoint}) => {
@@ -1509,7 +1493,7 @@ export function radiiDiameters($step: Step) {
       if (nearlyEquals(d1, 0) || nearlyEquals(d2, 0)) {
         $geopad.drawPoint(circle.c, {interactive: false});
       }
-      path.components.forEach(c => c.delete());
+      for (const c of path.components) c.delete();
       $diameterTarget!.delete();
     }
     if (diameters > 2 && radii > 2) {
@@ -1525,7 +1509,7 @@ export function diameterCircumference($step: Step) {
 
   let colours = ['red', 'blue', 'green'];
   const drawn: { [x: string]: boolean; } = {};
-  colours.forEach(c => drawn[c] = false);
+  for (const c of colours) drawn[c] = false;
 
   const circle = new Circle(new Point(200, 200), 160);
   $geopad.drawPath(circle);
@@ -1538,18 +1522,18 @@ export function diameterCircumference($step: Step) {
 
   $step.model['progress'] = new Segment(lineStart.shift(0, 7.5), lineStart.shift(0, 7.5));
   const progress = $geopad.drawPath('progress');
-  progress.$el.css({stroke: 'none'});
+  progress.$el.addClass('diameter-progress');
 
   let pending: string | undefined;
 
   $reset?.on('click', () => {
     colours = ['red', 'blue', 'green'];
-    colours.forEach(c => {
+    for (const c of colours) {
       drawn[c] = false;
       $step.model[c] = new Polyline();
       $step.model['progress'] = new Segment(lineStart.shift(0, 7.5), lineStart.shift(0, 7.5));
-      progress.$el.css({stroke: 'none'});
-    });
+      progress.$el.removeClass(c);
+    }
     pending = undefined;
   });
 
@@ -1560,7 +1544,7 @@ export function diameterCircumference($step: Step) {
       $step.model[pending] = new Polyline(p);
       // [TODO]: Add some documentation about this approach (auto-listening to model property)
       $geopad.drawPath(pending, {classes: pending});
-      progress.$el.css({stroke: pending});
+      progress.$el.addClass(pending);
     },
     move: (p: Point) => {
       if (!pending) return;
@@ -1584,12 +1568,6 @@ export function diameterCircumference($step: Step) {
       }
     }
   });
-}
-
-function length(pl: Polyline) {
-  return pl.edges.reduce((totalLength, edge) => {
-    return totalLength + edge.length;
-  }, 0);
 }
 
 export function findingPi($step: Step) {
@@ -1616,11 +1594,11 @@ export function circularHighways($step: Step) {
 
   const $romeReset = $step.$('.rome button.reset');
 
-  let romeCircle: null | Circle = null;
+  let romeCircle: undefined | Circle = undefined;
 
-  let $romeDiameterTarget: GeoPoint | null = null;
+  let $romeDiameterTarget: GeoPoint | undefined = undefined;
   $geopadRome.on('begin:path', ({start}: {path: Path, start: GeoPoint}) => {
-    if (romeCircle != null) {
+    if (romeCircle != undefined) {
       const startPos = start.value!;
       if (nearlyEquals(startPos.subtract(romeCircle.c).length, romeCircle.r)) {
         const diamTarget = startPos.rotate(Math.PI, romeCircle.c);
@@ -1631,7 +1609,7 @@ export function circularHighways($step: Step) {
 
   $geopadRome.on('add:path', ({path}: {path: GeoPath}) => {
 
-    if (romeCircle == null) {
+    if (romeCircle == undefined) {
       $step.score('rome-circle');
       romeCircle = path.value as Circle;
       $geopadRome.drawPath(romeCircle);
@@ -1648,7 +1626,7 @@ export function circularHighways($step: Step) {
       } else {
         $step.addHint('incorrect');
         path.delete();
-        path.components.forEach(c => c.delete());
+        for (const c of path.components) c.delete();
         $romeDiameterTarget!.delete();
       }
     }
@@ -1656,7 +1634,7 @@ export function circularHighways($step: Step) {
 
   $romeReset?.on('click', () => {
     geopadReset($geopadRome);
-    romeCircle = null;
+    romeCircle = undefined;
   });
 
   const $geopadMoscow = $step.$('.moscow x-geopad') as Geopad;
@@ -1664,11 +1642,11 @@ export function circularHighways($step: Step) {
 
   const $moscowReset = $step.$('.moscow button.reset');
 
-  let moscowCircle: null | Circle = null;
+  let moscowCircle: undefined | Circle = undefined;
 
   $geopadMoscow.on('add:path', ({path}: {path: GeoPath}) => {
 
-    if (moscowCircle == null) {
+    if (moscowCircle == undefined) {
       $step.score('moscow-circle');
       moscowCircle = path.value as Circle;
       $geopadMoscow.drawPath(moscowCircle);
@@ -1685,14 +1663,14 @@ export function circularHighways($step: Step) {
       } else {
         $step.addHint('incorrect');
         path.delete();
-        path.components.forEach(c => c.delete());
+        for (const c of path.components) c.delete();
       }
     }
   });
 
   $moscowReset?.on('click', () => {
     geopadReset($geopadMoscow);
-    moscowCircle = null;
+    moscowCircle = undefined;
   });
 
   const $geopadLondon = $step.$('.london x-geopad') as Geopad;
@@ -1700,10 +1678,10 @@ export function circularHighways($step: Step) {
 
   const $londonReset = $step.$('.london button.reset');
 
-  let londonCircle: null | Circle = null;
+  let londonCircle: undefined | Circle = undefined;
 
   $geopadLondon.on('add:path', ({path}: {path: GeoPath}) => {
-    if (londonCircle == null) {
+    if (londonCircle == undefined) {
       $step.score('london-circle');
       londonCircle = path.value as Circle;
       $geopadLondon.drawPath(londonCircle);
@@ -1721,51 +1699,52 @@ export function circularHighways($step: Step) {
 
   $londonReset?.on('click', () => {
     geopadReset($geopadLondon);
-    londonCircle = null;
+    londonCircle = undefined;
   });
 }
 
-function geopadReset($pad: Geopad) {
-  $pad.paths.forEach(path => path.delete());
-  $pad.points.forEach(point => point.delete());
-  $pad.switchTool('circle');
-}
+// SECTION 6: Area of Circles
 
-type Guide = {path: GeoPath, segment: Segment, index: number};
 type GuideNode = {node: Point, guide: Guide};
 
 export function slicing1($step: Step) {
   const $geopad = $step.$('x-geopad') as Geopad;
+
+  /** Center of the large pizza */
   const largeCenter = new Point(200, 200);
+  /** Center of the first (leftmost) medium pizza */
   const mediumCenter = new Point(550, 200);
 
-  const largeGuides: Guide[] = [...Array(4).keys()].map(index => {
-    const baseSegment = (new Segment(largeCenter.shift(0, -175), largeCenter.shift(0, 175)));
-    const rotateBy = (Math.PI / 4) * index;
-    const segment = baseSegment.rotate(rotateBy, largeCenter);
-    const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, largeCenter));
-    path.$el.css({stroke: 'black', 'stroke-width': '4px', 'stroke-dasharray': '10', 'stroke-linecap': 'unset'});
-    return {path, segment, index};
-  });
-  const $largeSlices = $geopad.$svg.$$('.large-slice').map(e => e as SVGView);
-  $step.model.largeCuts = [...Array(4).keys()].map(() => {
-    return {path: null, segment: null};
-  });
+  const cutsCount = 4;
 
-  const mediumGuides: Guide[] = [...Array(4).keys()].map(index => {
-    const baseSegment = (new Segment(mediumCenter.shift(0, -125), mediumCenter.shift(0, 125)));
-    const rotateBy = (Math.PI / 4) * index;
-    const segment = baseSegment.rotate(rotateBy, mediumCenter);
-    const path = $geopad.drawPath((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, mediumCenter), {classes: 'slice-guide'});
+  const largeGuides: Guide[] = tabulate(index => {
+    const baseSegment = (new Segment(largeCenter.shift(0, -175), largeCenter.shift(0, 175)));
+    const rotateBy = (Math.PI / cutsCount) * index;
+    const segment = baseSegment.rotate(rotateBy, largeCenter);
+    const path =
+      $geopad.drawPath(
+          (new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, largeCenter),
+          {classes: 'slice-guide'}
+      );
     return {path, segment, index};
-  });
-  const $mediumSlices = $geopad.$svg.$$('.medium-slice').map(e => e as SVGView);
-  $step.model.largeCuts = [...Array(4).keys()].map(() => {
-    return {path: null, segment: null};
-  });
-  $step.model.mediumCuts = [...Array(4).keys()].map(() => {
-    return {path: null, segment: null};
-  });
+  }, cutsCount);
+  const $largeSlices = $geopad.$svg.$$('.large-slice') as SVGView[];
+  $step.model.largeCuts = repeat({}, cutsCount);
+
+  const mediumGuides: Guide[] = tabulate(index => {
+    const baseSegment = (new Segment(mediumCenter.shift(0, -125), mediumCenter.shift(0, 125)));
+    const rotateBy = (Math.PI / cutsCount) * index;
+    const segment = baseSegment.rotate(rotateBy, mediumCenter);
+    const path =
+      $geopad.drawPath(
+          (new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2.shift(0, 10))).rotate(rotateBy, mediumCenter),
+          {classes: 'slice-guide'}
+      );
+    return {path, segment, index};
+  }, cutsCount);
+  const $mediumSlices = $geopad.$svg.$$('.medium-slice') as SVGView[];
+  $step.model.largeCuts = repeat({}, cutsCount);
+  $step.model.mediumCuts = repeat({}, cutsCount);
 
   const collectNodes =
     (prevNodes: GuideNode[], guide: Guide) =>
@@ -1775,10 +1754,10 @@ export function slicing1($step: Step) {
       mediumGuides.reduce(collectNodes, [])
   );
 
-  let startNode: null | GuideNode = null;
-  let endNode: null | Point = null;
-  let currentGuide: null | Guide = null;
-  let $cutInProgress: null | SVGView = null;
+  let startNode: undefined | GuideNode;
+  let endNode: undefined | Point;
+  let currentGuide: undefined | Guide;
+  let $cutInProgress: undefined | SVGView;
   slide($geopad, {
     $box: $geopad.$svg,
     start: pos => {
@@ -1799,62 +1778,62 @@ export function slicing1($step: Step) {
       $cutInProgress!.remove();
       const cutFinal = new Segment(startNode!.node, endNode!);
       if (largeGuides.includes(currentGuide!)) {
-        if ($step.model.largeCuts.every((cut: {path: GeoPath | null, segment: Segment | null}) => !cut.segment?.equals(cutFinal))) {
+        if ($step.model.largeCuts.every((cut: {path: GeoPath | undefined, segment: Segment | undefined}) => !cut.segment?.equals(cutFinal))) {
           largeGuides[currentGuide!.index].path.delete();
           const nextIndex = (currentGuide!.index + 1) % largeGuides.length;
           const prevIndex = (currentGuide!.index + (largeGuides.length - 1)) % largeGuides.length;
-          if ($step.model.largeCuts[nextIndex].segment != null) {
+          if ($step.model.largeCuts[nextIndex].segment != undefined) {
             $step.model.largeCuts[nextIndex].path?.delete(0);
             const index1 = currentGuide!.index;
-            const index2 = index1 + 4;
+            const index2 = index1 + cutsCount;
             separateSlices(index1, index2, $largeSlices, largeCenter, 25);
           }
-          if ($step.model.largeCuts[prevIndex].segment != null) {
+          if ($step.model.largeCuts[prevIndex].segment != undefined) {
             $step.model.largeCuts[prevIndex].path?.delete(0);
             const index1 = (currentGuide!.index + 7) % 8;
-            const index2 = (index1 + 4) % 8;
+            const index2 = (index1 + cutsCount) % 8;
             separateSlices(index1, index2, $largeSlices, largeCenter, 25);
           }
-          if ($step.model.largeCuts[nextIndex].segment == null && $step.model.largeCuts[prevIndex].segment == null) {
+          if ($step.model.largeCuts[nextIndex].segment == undefined && $step.model.largeCuts[prevIndex].segment == undefined) {
             const path = $geopad.drawPath(cutFinal, {animated: 400, classes: 'pizza-outline'});
             $step.model.largeCuts[currentGuide!.index] = {path, segment: cutFinal};
           } else {
-            $step.model.largeCuts[currentGuide!.index] = {path: null, segment: cutFinal};
+            $step.model.largeCuts[currentGuide!.index] = {path: undefined, segment: cutFinal};
           }
         }
       } else {
-        if ($step.model.mediumCuts.every((cut: {path: GeoPath | null, segment: Segment | null}) => !cut.segment?.equals(cutFinal))) {
+        if ($step.model.mediumCuts.every((cut: {path: GeoPath | undefined, segment: Segment | undefined}) => !cut.segment?.equals(cutFinal))) {
           mediumGuides[currentGuide!.index].path.delete();
           const nextIndex = (currentGuide!.index + 1) % mediumGuides.length;
           const prevIndex = (currentGuide!.index + (mediumGuides.length - 1)) % mediumGuides.length;
-          if ($step.model.mediumCuts[nextIndex].segment != null) {
+          if ($step.model.mediumCuts[nextIndex].segment != undefined) {
             $step.model.mediumCuts[nextIndex].path?.delete(0);
             const index1 = currentGuide!.index;
-            const index2 = index1 + 4;
+            const index2 = index1 + cutsCount;
             separateSlices(index1, index2, $mediumSlices, mediumCenter, 15);
           }
-          if ($step.model.mediumCuts[prevIndex].segment != null) {
+          if ($step.model.mediumCuts[prevIndex].segment != undefined) {
             $step.model.mediumCuts[prevIndex].path?.delete(0);
             const index1 = (currentGuide!.index + 7) % 8;
-            const index2 = (index1 + 4) % 8;
+            const index2 = (index1 + cutsCount) % 8;
             separateSlices(index1, index2, $mediumSlices, mediumCenter, 15);
           }
-          if ($step.model.mediumCuts[nextIndex].segment == null && $step.model.mediumCuts[prevIndex].segment == null) {
+          if ($step.model.mediumCuts[nextIndex].segment == undefined && $step.model.mediumCuts[prevIndex].segment == undefined) {
             const path = $geopad.drawPath(cutFinal, {animated: 400, classes: 'pizza-outline'});
             $step.model.mediumCuts[currentGuide!.index] = {path, segment: cutFinal};
           } else {
-            $step.model.mediumCuts[currentGuide!.index] = {path: null, segment: cutFinal};
+            $step.model.mediumCuts[currentGuide!.index] = {path: undefined, segment: cutFinal};
           }
         }
       }
-      startNode = endNode = currentGuide = $cutInProgress = null;
-      if ($step.model.largeCuts.every((cut: {segment: Segment | null}) => cut.segment != null)) {
+      startNode = endNode = currentGuide = $cutInProgress = undefined;
+      if ($step.model.largeCuts.every((cut: {segment: Segment | undefined}) => cut.segment != undefined)) {
         if (!$step.scores.has('large-slices')) {
           $step.score('large-slices');
           if ($step.scores.has('medium-slices')) $step.addHint('correct');
         }
       }
-      if ($step.model.mediumCuts.every((cut: {segment: Segment | null}) => cut.segment != null)) {
+      if ($step.model.mediumCuts.every((cut: {segment: Segment | undefined}) => cut.segment != undefined)) {
         if (!$step.scores.has('medium-slices')) {
           $step.score('medium-slices');
           if ($step.scores.has('large-slices')) $step.addHint('correct');
@@ -1881,9 +1860,9 @@ export function slicing1($step: Step) {
     $geopad.drawPath(largeOutline, {classes: 'slice-outline'});
     $geopad.drawPath(largeBase, {classes: 'slice-dimension'}).setLabel('16.8 cm');
     $geopad.drawPath(largeHeight, {classes: 'slice-dimension'}).setLabel('20.3 cm');
-    $largeSlices.forEach(($slice, index) => {
-      if (index != 7) $slice.css({opacity: 0.5});
-    });
+    for (const [index, $slice] of $largeSlices.entries()) {
+      if (index != 7) $slice.addClass('background-slice');
+    }
 
     const mediumSlicePoints =
       [mediumCenter, mediumGuides[0].segment.p1, mediumGuides[3].segment.p2]
@@ -1901,33 +1880,11 @@ export function slicing1($step: Step) {
     $geopad.drawPath(mediumOutline, {classes: 'slice-outline'});
     $geopad.drawPath(mediumBase, {classes: 'slice-dimension'}).setLabel('12.2 cm');
     $geopad.drawPath(mediumHeight, {classes: 'slice-dimension'}).setLabel('14.8 cm');
-    $mediumSlices.forEach(($slice, index) => {
-      if (index != 7) $slice.css({opacity: 0.5});
-    });
+    for (const [index, $slice] of $mediumSlices.entries()) {
+      if (index != 7) $slice.addClass('background-slice');
+    }
   });
 
-}
-
-function separateSlices(index1: number, index2: number, $slices: SVGView[], center: Point, slideDistance: number) {
-  const rotateFactor = Math.PI / 4;
-  const rotate1 = (rotateFactor * index1) + (Math.PI / 8);
-  const rotate2 = (rotateFactor * index2) + (Math.PI / 8);
-  const trans1 = center.shift(0, -slideDistance).rotate(rotate1, center).subtract(center);
-  const trans2 = center.shift(0, -slideDistance).rotate(rotate2, center).subtract(center);
-  $slices[index1].setTransform(trans1);
-  $slices[index2].setTransform(trans2);
-}
-
-function nearest(to: Point, of: {node: Point, guide: Guide}[]) {
-  return of.map(point => {
-    return {distance: Point.distance(point.node, to), point};
-  }).sort((a, b) => a.distance - b.distance)[0].point;
-}
-
-function nearestSimple(to: Point, of: Point[]) {
-  return of.map(point => {
-    return {distance: Point.distance(point, to), point};
-  }).sort((a, b) => a.distance - b.distance)[0].point;
 }
 
 export function slicing2($step: Step) {
@@ -1938,24 +1895,24 @@ export function slicing2($step: Step) {
   const bottomRight = new Point(175, 175);
   const bottomLeft = new Point(25, 175);
   type Guide = {$el: SVGView, segment: Segment};
-  const guides: Guide[] = [...Array(2).keys()].map(i => {
+  const guides: Guide[] = tabulate(index => {
     const $el = $N('path', {}, $svg) as SVGView;
-    $el.css({stroke: 'black', 'stroke-width': '1px', 'stroke-dasharray': '3'});
+    $el.addClass('slice-guide-2');
     const baseSegment = (new Segment(center.shift(0, -75), center));
-    const rotateBy = (Math.PI / 2) * i;
+    const rotateBy = (Math.PI / 2) * index;
     const segment = baseSegment.rotate(rotateBy, center);
     $el.draw((new Segment(baseSegment.p1.shift(0, -10), baseSegment.p2)).rotate(rotateBy, center));
     return {$el, segment};
-  });
+  }, 2);
   const radius = new Segment(new Point(25, 100), center);
   const $radius = $N('path', {}, $svg) as SVGView;
-  $radius.css({stroke: 'black', 'stroke-width': '1px'});
+  $radius.addClass('slice-radius');
   $radius.draw(radius);
-  let startNode: null | Point = null;
-  let endNode: null | Point = null;
-  let currentGuide: null | Guide = null;
-  let cutInProgress: null | Segment = null;
-  let $cutInProgress: null | SVGView = null;
+  let startNode: undefined | Point;
+  let endNode: undefined | Point;
+  let currentGuide: undefined | Guide;
+  let cutInProgress: undefined | Segment;
+  let $cutInProgress: undefined | SVGView;
   const cuts: Segment[] = [];
   const $cuts: SVGView[] = [];
   const guideNodes = guides.map(guide => guide.segment.p1);
@@ -1970,109 +1927,123 @@ export function slicing2($step: Step) {
       $cutInProgress = $N('path', {}, $svg) as SVGView;
     },
     move: (current, _start, _last) => {
-      if (currentGuide == null) {
+      if (currentGuide == undefined) {
         endNode = nearestSimple(current, guideNodes);
         currentGuide = guides.find(g => (g.segment.p1.equals(endNode!) || g.segment.p2.equals(endNode!)))!;
       }
-      $cutInProgress!.css({stroke: 'cyan', 'stroke-width': '1px'});
+      $cutInProgress?.addClass('slicing-progress');
       const projected = currentGuide.segment.project(current);
       const endsX = [startNode!.x, endNode!.x].sort((a, b) => a - b);
       const endsY = [startNode!.y, endNode!.y].sort((a, b) => a - b);
       const cutProgress = new Point(clamp(projected.x, endsX[0], endsX[1]), clamp(projected.y, endsY[0], endsY[1]));
       cutInProgress = new Segment(startNode!, cutProgress);
-      $cutInProgress!.draw(cutInProgress);
+      $cutInProgress?.draw(cutInProgress);
     },
     end: () => {
       $cutInProgress!.remove();
       const cutFinal = new Segment(cutInProgress!.p1, endNode!);
       if (cuts.every(cut => !cut.equals(cutFinal))) cuts.push(cutFinal);
       const $cut = $N('path', {}, $svg) as SVGView;
-      $cut.css({stroke: 'black', 'stroke-width': '1px'});
+      $cut.addClass('slice-radius');
       $cut.draw(cutFinal);
       $cuts.push($cut);
-      startNode = endNode = currentGuide = cutInProgress = $cutInProgress = null;
+      startNode = endNode = currentGuide = cutInProgress = $cutInProgress = undefined;
       if (cuts.length == 2) {
         $step.score('sliced');
         const sideA = new Segment(center.shift(0, -75), topRight);
         const $sideA = $N('path', {}, $svg) as SVGView;
-        const css = {stroke: 'black', 'stroke-width': '1px'};
-        $sideA.css(css);
+        $sideA.addClass('slice-radius');
         $sideA.draw(sideA);
         const sideB = new Segment(center.shift(75, 0), topRight);
         const $sideB = $N('path', {}, $svg) as SVGView;
-        $sideB.css(css);
+        $sideB.addClass('slice-radius');
         $sideB.draw(sideB);
-        guides.forEach(guide => guide.$el.remove());
+        for (const guide of guides) guide.$el.remove();
         $radius.remove();
       }
     }
   });
   $step.onScore('blank-1', () => {
-    [
-      new Segment(topLeft, center.shift(0, -75)),
-      new Segment(topLeft, center.shift(-75, 0)),
-      new Segment(bottomRight, center.shift(0, 75)),
-      new Segment(bottomRight, center.shift(75, 0)),
-      new Segment(center, center.shift(0, 75)),
-      new Segment(bottomLeft, center.shift(-75, 0)),
-      new Segment(bottomLeft, center.shift(0, 75)),
-      new Segment(center, center.shift(-75, 0))
-    ].forEach(segment => {
+    for (const segment of
+      [
+        new Segment(topLeft, center.shift(0, -75)),
+        new Segment(topLeft, center.shift(-75, 0)),
+        new Segment(bottomRight, center.shift(0, 75)),
+        new Segment(bottomRight, center.shift(75, 0)),
+        new Segment(center, center.shift(0, 75)),
+        new Segment(bottomLeft, center.shift(-75, 0)),
+        new Segment(bottomLeft, center.shift(0, 75)),
+        new Segment(center, center.shift(-75, 0))
+      ]) {
       const $e = $N('path', {}, $svg) as SVGView;
-      $e.css({stroke: 'black', 'stroke-width': '1px'});
+      $e.addClass('slice-radius');
       $e.draw(segment);
-    });
+    }
   });
 }
 
-export function slicesArrangement($step: Step) {
+type ArrangementModel = {
+  /** Value currently selected via the slider, signifying the number of slices the pizza/lineup should have */
+  n1: number;
+};
+export async function slicesArrangement($step: Step<ArrangementModel>) {
+
+  type SidesValues = {
+    hovering?: SideData,
+    baseSelected?: SideData,
+    heightSelected?: SideData
+  };
+  const sidesValues: Observable<SidesValues> = observe({});
+
+  const highlightData: Observable<SideData[]> = observe([]);
+
+  let arranged = false;
+
   const $geopad = $step.$('x-geopad') as Geopad;
   const radius = 175;
   const center = new Point(315, radius + 25);
-  const sliceZone = new Rectangle(new Point(5, 400), 620, radius + 20);
+  const sliceZone = new Rectangle(new Point(5, 400), 630, radius + 28);
   const $sliceZone = $N('path', {}, $geopad.$paths) as SVGView;
-  $sliceZone.css({fill: 'brown'});
+  $sliceZone.addClass('fill red');
   $sliceZone.draw(sliceZone);
-  const slices = initPizza(8, center, radius, {aColor: 'black', bColor: 'black'}, $geopad);
+  const initSlices = initPizza(8, center, radius, $geopad);
+  /** The slices that form the original pizza shape */
+  let pizzaSlices = initSlices;
+  /** The slices that have been arranged into a parallelogram-esque 'lineup' */
   $geopad.switchTool('move');
   let currentSlice: Slice | undefined;
   let placedCount = 0;
-  // let startDelta: Point;
   let startDelta = new Point(0, 0);
   let startLocation = new Point(0, 0);
   let startAngle = 0;
-  slide($geopad, {
+
+  slide($geopad, { // Coordinate slice drag-drop portion of interactive
     $box: $geopad.$svg,
     start: posn => {
-      currentSlice = slices.all.find(slice => slice.bounds.contains(posn));
+      currentSlice = initSlices.allSlices.find(slice => slice.bounds.contains(posn));
       startLocation = currentSlice!.pivot;
       startAngle = currentSlice!.angle;
       startDelta = startLocation.subtract(posn);
     },
     move: (current, _start, _last) => {
-      if (currentSlice && !$step.scores.has('arranged')) {
+      if (currentSlice && !arranged) {
         currentSlice.moveTo(current.add(startDelta));
       }
     },
     end: (last, _start) => {
-      if (!$step.scores.has('arranged')) {
+      if (!arranged) {
         if (sliceZone.contains(last) && currentSlice) {
           const flip = placedCount > 3;
           const halfWidth = currentSlice.width / 2;
           const targetBase = center.shift((-620 / 2) + halfWidth, (1.5 * radius) + 35);
-          const target =
-            flip ?
-              targetBase.shift(((placedCount - 4) * currentSlice.width) + halfWidth, 0) :
-              targetBase.shift(placedCount * currentSlice.width, 0);
+          const target = targetBase.shift(...getLineupShift(flip, placedCount, 4, currentSlice.width, halfWidth));
           currentSlice.moveTo(target, 500);
           currentSlice.rotateTo(flip ? Math.PI : 0, {duration: 500});
           placedCount++;
           if (placedCount == 8) {
             setTimeout(() => {
-              $step.model.lSlices = slices;
-              $step.model.pSlices = initPizza(8, center, radius, {aColor: 'black', bColor: 'black'}, $geopad);
-              $step.model.arranged = true;
               $step.score('arranged');
+              arranged = true;
               $step.addHint('correct');
             }, 500);
           }
@@ -2083,314 +2054,117 @@ export function slicesArrangement($step: Step) {
       }
     }
   });
-  // [TODO]: refactor this to use reactive $step.model.watch drawing approach
-  let aColor = 'black';
-  let bColor = 'black';
-  $step.model.watch((state: any) => {
+
+  await $step.onScore('arranged');
+
+  let lineupSlices: LineupSlices | undefined;
+  const resetSlices = (count: number) => {
+    for (const slice of pizzaSlices.allSlices) slice.remove();
+    if (lineupSlices != undefined) for (const slice of lineupSlices.allSlices) slice.remove();
+    pizzaSlices = initPizza(count, center, radius, $geopad);
+    lineupSlices = initLineup(count, center.shift(0, (1.5 * radius) + 35), radius, $geopad);
+    slicesHighlight(pizzaSlices, highlightData);
+    slicesHighlight(lineupSlices, highlightData);
+  };
+  resetSlices(8);
+
+  $step.model.watch(state => { // Re-init slices when slice count changes
     const sliceCount = state.n1;
-    if (state.arranged) {
-      state.pSlices.all.forEach((slice: Slice) => slice.remove());
-      state.lSlices.all.forEach((slice: Slice) => slice.remove());
-      state.pSlices = initPizza(sliceCount, center, radius, {aColor, bColor}, $geopad);
-      state.lSlices = initLineup(sliceCount, center.shift(0, (1.5 * radius) + 35), radius, {aColor, bColor}, $geopad);
-    }
+    resetSlices(sliceCount);
   });
-  let hovering: null | {s: Slice[], g: string} = null;
-  let selected = false;
-  $geopad.on('mousemove', b => {
-    if ($step.model.arranged && !selected) {
-      const distances: {d: number, group: string}[] = [];
-      $step.model.lSlices.groupA.forEach((slice: Slice) => {
-        const d = slice.distanceToArc(new Point(b.offsetX, b.offsetY));
-        distances.push({d, group: 'a'});
-      });
-      $step.model.lSlices.groupB.forEach((slice: Slice) => {
-        const d = slice.distanceToArc(new Point(b.offsetX, b.offsetY));
-        distances.push({d, group: 'b'});
-      });
-      const shortest = distances.sort((a, b) => a.d - b.d)[0];
-      if (shortest.d <= 10) {
-        const pGroup: Slice[] = shortest.group === 'a' ? $step.model.pSlices.groupA : $step.model.pSlices.groupB;
-        const pOther: Slice[] = shortest.group === 'b' ? $step.model.pSlices.groupA : $step.model.pSlices.groupB;
-        const lGroup: Slice[] = shortest.group === 'a' ? $step.model.lSlices.groupA : $step.model.lSlices.groupB;
-        const lOther: Slice[] = shortest.group === 'b' ? $step.model.lSlices.groupA : $step.model.lSlices.groupB;
-        aColor = shortest.group === 'a' ? 'aqua' : 'black';
-        bColor = shortest.group === 'b' ? 'aqua' : 'black';
-        hovering = {
-          s: pGroup.concat(lGroup),
-          g: shortest.group
-        };
-        hovering.s.forEach(slice => slice.setArcColor('aqua'));
-        pOther.concat(lOther).forEach(slice => slice.setArcColor('black'));
-      } else {
-        hovering = null;
-        aColor = bColor = 'black';
-        $step.model.pSlices.all.forEach((slice: Slice) => slice.setArcColor('black'));
-        $step.model.lSlices.all.forEach((slice: Slice) => slice.setArcColor('black'));
-      }
-    }
+
+  await Promise.all([$step.onScore('blank-1'), $step.onScore('blank-2')]);
+
+  sidesValues.watch(values => { // Coordinate value of highlightData
+    const hovering = values.hovering;
+    const baseSelected = values.baseSelected;
+    const heightSelected = values.heightSelected;
+
+    const hlParams: SideData[] = [];
+
+    if (baseSelected != undefined) {
+      hlParams.push(baseSelected);
+      if (heightSelected != undefined) hlParams.push(heightSelected);
+      else if (hovering != undefined) hlParams.push(hovering);
+    } else if (hovering != undefined) hlParams.push(hovering);
+
+    highlightData.assign(hlParams);
   });
+
+  highlightData.watch(highlightDataUpdated => { // Re-highlight when highlight data changes
+    slicesHighlight(lineupSlices!, highlightDataUpdated);
+    slicesHighlight(pizzaSlices, highlightDataUpdated);
+  });
+
+  $geopad.on('pointermove', b => { // Report 'hover' status
+
+    const distances: {distance: number, side: SideData}[] = [];
+    const pointerLoc = new Point(b.offsetX, b.offsetY);
+
+    for (const slice of lineupSlices!.groupA) {
+      const arcDistance = slice.distanceToArc(pointerLoc);
+      distances.push({distance: arcDistance, side: {kind: 'arc', groupID: 'a'}});
+      const edgeJDistance = slice.distanceToEdgeJ(pointerLoc);
+      distances.push({distance: edgeJDistance, side: {kind: 'edge', which: 'j', sliceIndex: slice.index}});
+      const edgeKDistance = slice.distanceToEdgeJ(pointerLoc);
+      distances.push({distance: edgeKDistance, side: {kind: 'edge', which: 'k', sliceIndex: slice.index}});
+    }
+    for (const slice of lineupSlices!.groupB) {
+      const arcDistance = slice.distanceToArc(pointerLoc);
+      distances.push({distance: arcDistance, side: {kind: 'arc', groupID: 'b'}});
+      const edgeJDistance = slice.distanceToEdgeK(pointerLoc);
+      distances.push({distance: edgeJDistance, side: {kind: 'edge', which: 'j', sliceIndex: slice.index}});
+      const edgeKDistance = slice.distanceToEdgeK(pointerLoc);
+      distances.push({distance: edgeKDistance, side: {kind: 'edge', which: 'k', sliceIndex: slice.index}});
+    }
+
+    const shortest = distances.sort((a, b) => a.distance - b.distance)[0];
+
+    if (shortest.distance <= 10) {
+      sidesValues.hovering = shortest.side;
+    } else {
+      sidesValues.hovering = undefined;
+    }
+
+  });
+
+  const baseSelection = () => {
+    if (sidesValues.hovering != undefined) {
+      sidesValues.baseSelected = sidesValues.hovering;
+      $step.score('base-selected');
+      $step.addHint('correct');
+    } else {
+      $step.addHint('incorrect');
+    }
+  };
+
+  $geopad.on('click', baseSelection);
+
+  await $step.onScore('base-selected');
+
+  $geopad.off('click', baseSelection);
+
   $geopad.on('click', () => {
-    if (hovering != null) {
-      hovering.s.forEach(slice => slice.setArcColor('lime'));
-      aColor = hovering.g === 'a' ? 'lime' : 'black';
-      bColor = hovering.g === 'b' ? 'lime' : 'black';
-      selected = true;
+    if (
+      sidesValues.hovering != undefined &&
+      sidesValues.hovering.kind != sidesValues.baseSelected!.kind &&
+      (
+        (sidesValues.hovering.kind == 'arc' && sidesValues.baseSelected!.kind != 'arc') ||
+        (sidesValues.hovering.kind != 'arc' && sidesValues.baseSelected!.kind == 'arc')
+      )
+    ) {
+      sidesValues.heightSelected = sidesValues.hovering;
+      $step.score('height-selected');
+      $step.addHint('correct');
+    } else {
+      $step.addHint('incorrect');
     }
   });
-}
-
-function shortAngle(angle: number): number {
-  if (angle > Math.PI * 2) {
-    return shortAngle(angle - (2 * Math.PI));
-  } else if (angle < -(Math.PI * 2)) {
-    return shortAngle(angle + (2 * Math.PI));
-  } else {
-    return angle;
-  }
-}
-
-function equivAngle(angle: number): number {
-  if (angle > Math.PI) {
-    return -((2 * Math.PI) - angle);
-  } else if (angle < -Math.PI) {
-    return (2 * Math.PI) + angle;
-  } {
-    return angle;
-  }
-}
-
-function initPizza(slices: number, center: Point, radius: number, colors: {aColor: string, bColor: string}, $geopad: Geopad) {
-  const halfCount = Math.ceil(slices / 2);
-  const arcAngle = (2 * Math.PI) / slices;
-  const initAngle = arcAngle / 2;
-  const all: Slice[] = [];
-  const groupA: Slice[] = [];
-  const groupB: Slice[] = [];
-  [...Array(slices).keys()].forEach(index => {
-    const slice = new Slice(true, $geopad, radius, arcAngle, center, initAngle + (index * arcAngle));
-    if (index < halfCount) {
-      slice.setArcColor(colors.aColor);
-      groupA.push(slice);
-    } else {
-      slice.setArcColor(colors.bColor);
-      groupB.push(slice);
-    }
-    all.push(slice);
-  });
-  return {all, groupA, groupB};
-}
-
-function initLineup(slices: number, center: Point, radius: number, colors: {aColor: string, bColor: string}, $geopad: Geopad) {
-  const halfCount = Math.ceil(slices / 2);
-  const arcAngle = (2 * Math.PI) / slices;
-  const all: Slice[] = [];
-  const groupA: Slice[] = [];
-  const groupB: Slice[] = [];
-  [...Array(slices).keys()].forEach(index => {
-    const flip = index > halfCount - 1;
-    const slice = new Slice(false, $geopad, radius, arcAngle, center);
-    const halfWidth = slice.width / 2;
-    const targetBase = center.shift((-620 / 2) + halfWidth, 0);
-    const target =
-      flip ?
-        targetBase.shift(((index - halfCount) * slice.width) + halfWidth, 0) :
-        targetBase.shift(index * slice.width, 0);
-    slice.moveTo(target);
-    slice.rotateTo(flip ? Math.PI : 0);
-    if (!flip) {
-      slice.setArcColor(colors.aColor);
-      groupA.push(slice);
-    } else {
-      slice.setArcColor(colors.bColor);
-      groupB.push(slice);
-    }
-    all.push(slice);
-    slice.draw();
-  });
-  return {all, groupA, groupB};
-}
-
-class Slice {
-
-  private sides: {
-    path: GeoPath | null,
-    poly: Polyline
-  }
-  private arc: {
-    path: GeoPath | null,
-    poly: Arc
-  }
-  private _bounds: Polygon
-  readonly width: number;
-  private _tip: Point
-  private _pivot: Point
-  private _angle: number
-  private transAnim: AnimationResponse | null
-  private rotAnim: AnimationResponse | null
-  private rotTarget: number | null;
-  private transTarget: Point | null;
-  private firstDraw = true;
-
-  constructor(private selfDraw: boolean, private $geopad: Geopad, radius: number, arcAngle: number, circleCenter: Point, initAngle?: number) {
-    this._angle = initAngle ?? 0;
-    this._tip = circleCenter;
-    const pointA = circleCenter.shift(0, -radius);
-    const pointB = pointA.rotate(arcAngle, circleCenter);
-    this.width = Point.distance(pointA, pointB);
-    const sliceArc = (new Arc(circleCenter, pointA, arcAngle)).rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
-    const sliceSides = (new Polyline(pointA, circleCenter, pointB)).rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
-    this.sides = {
-      path: $geopad.drawPath(sliceSides, {classes: 'slice-outline'}),
-      poly: sliceSides
-    };
-    this.arc = {
-      path: $geopad.drawPath(sliceArc, {classes: 'slice-outline'}),
-      poly: sliceArc
-    };
-    this._bounds = new Polygon(...sliceSides.points);
-    this._pivot = (new Segment((new Segment(pointA, pointB)).midpoint, circleCenter)).midpoint.rotate(-(arcAngle / 2), circleCenter).rotate(this.angle, circleCenter);
-    this.transAnim = null;
-    this.rotAnim = null;
-    this.rotTarget = null;
-    this.transTarget = null;
-    if (this.selfDraw) this.draw();
-  }
-
-  get bounds() {
-    return this._bounds;
-  }
-
-  get tip() {
-    return this._tip;
-  }
-
-  get pivot() {
-    return this._pivot;
-  }
-
-  get angle() {
-    return this._angle;
-  }
-
-  moveBy(by: Point, duration?: number) {
-    if (duration) {
-      this.transAnim?.cancel();
-      const startLoc = this.pivot;
-      this.transAnim = animate((p, _d, _c) => {
-        const newLoc = startLoc.shift(by.x * p, by.y * p);
-        this.moveTo(newLoc);
-      }, duration);
-      this.transAnim.promise.then(() => {
-        this.transTarget = null;
-        this.transAnim = null;
-      });
-    } else {
-      this.arc = {
-        ...this.arc,
-        poly: this.arc.poly.translate(by)
-      };
-      this.sides = {
-        ...this.sides,
-        poly: this.sides.poly.translate(by)
-      };
-      this._bounds = this.bounds.translate(by);
-      this._tip = this.tip.translate(by);
-      this._pivot = this.pivot.translate(by);
-      if (this.selfDraw) this.draw();
-    }
-  }
-
-  moveTo(loc: Point, duration?: number) {
-    const trans = loc.subtract(this.pivot);
-    if (this.transAnim != null) {
-      if (this.transTarget == null || !loc.equals(this.transTarget)) {
-        this.transTarget = loc;
-        this.moveBy(trans, duration);
-      }
-    } else {
-      this.transTarget = loc;
-      this.moveBy(trans, duration);
-    }
-  }
-
-  tipMoveTo(loc: Point) {
-    const trans = loc.subtract(this.tip);
-    this.moveBy(trans);
-  }
-
-  rotateBy(amount: number, options?: {duration?: number, around?: Point}) {
-    if (options?.duration) {
-      this.rotAnim?.cancel();
-      const startAngle = this.angle;
-      this.rotAnim = animate((p, _d, _c) => {
-        const newAngle = (amount * p) + startAngle;
-        this.rotateTo(newAngle, {around: options?.around});
-      }, options.duration);
-      this.rotAnim.promise.then(() => {
-        this.rotTarget = null;
-        this.rotAnim = null;
-      });
-    } else {
-      this._angle = this.angle + amount;
-      const c = options?.around ?? this.pivot;
-      this.arc = {
-        ...this.arc,
-        poly: this.arc.poly.rotate(amount, c)
-      };
-      this.sides = {
-        ...this.sides,
-        poly: this.sides.poly.rotate(amount, c)
-      };
-      this._bounds = this.bounds.rotate(amount, c);
-      this._tip = this.tip.rotate(amount, c);
-      this._pivot = this.pivot.rotate(amount, c);
-      if (this.selfDraw) this.draw();
-    }
-  }
-
-  rotateTo(angle: number, options?: {duration?: number, around?: Point}) {
-    const diff = equivAngle(shortAngle(angle - this.angle));
-    if (this.rotAnim != null) {
-      if (this.rotTarget != angle) {
-        this.rotTarget = angle;
-        this.rotateBy(diff, options);
-      }
-    } else {
-      this.rotTarget = angle;
-      this.rotateBy(diff, options);
-    }
-  }
-
-  setArcColor(name: string) {
-    this.arc.path?.$el.css({stroke: name});
-  }
-
-  distanceToArc(from: Point) {
-    return Point.distance(from, this.arc.poly.project(from));
-  }
-
-  draw() {
-    if (this.arc.path == null) {
-      this.firstDraw = false;
-      this.arc.path = this.$geopad.drawPath(this.arc.poly, {animated: 0});
-      this.sides.path = this.$geopad.drawPath(this.sides.poly, {animated: 0});
-    } else {
-      this.arc.path.redraw(this.arc.poly);
-      this.sides.path!.redraw(this.sides.poly);
-    }
-  }
-
-  remove() {
-    this.arc.path?.delete(0);
-    this.sides.path?.delete(0);
-  }
 
 }
 
 export function pizzaRings($step: Step) {
   const $svg = $step.$('.circle-area')!;
-  console.log($svg);
   const $slider = $step.$('x-slider') as Slider;
   const $circle = $N('g', {class: 'circle'}, $svg);
   const triangle = $N('g', {class: 'circle'}, $svg);
@@ -2433,19 +2207,4 @@ export function pizzaRings($step: Step) {
   });
 
   $slider.on('move', (x) => drawRings(triangle, x / $slider.steps));
-}
-
-function ring(cx: number, cy: number, r1: number, r2: number, fromAngle: number, toAngle: number) {
-  if (fromAngle > toAngle) [fromAngle, toAngle] = [toAngle, fromAngle];
-  fromAngle -= Math.PI / 2;
-  toAngle -= Math.PI / 2;
-
-  const A = Point.fromPolar(toAngle);
-  const B = Point.fromPolar(fromAngle);
-  const flag = (toAngle - fromAngle <= Math.PI) ? 0 : 1;
-
-  return `M ${A.x * r1 + cx} ${A.y * r1 + cy}` +
-         `A ${r1} ${r1} 0 ${flag} 0 ${B.x * r1 + cx} ${B.y * r1 + cy}` +
-         `L ${B.x * r2 + cx} ${B.y * r2 + cy}` +
-         `A ${r2} ${r2} 0 ${flag} 1 ${A.x * r2 + cx} ${A.y * r2 + cy} Z`;
 }

@@ -20,7 +20,13 @@ function cardOffset(posn: Point, start: Point): [Point, number] {
   return [change.scale(1, 0.5), angle];
 }
 
-
+/**
+ * 'tinder'-style left-right swipe component.
+ *
+ * @fires BinarySwipe#correct
+ * @fires BinarySwipe#incorrect
+ * @fires BinarySwipe#complete
+ */
 @register('x-binary-swipe', {template})
 export class BinarySwipe extends CustomElementView {
 
@@ -72,12 +78,23 @@ export class BinarySwipe extends CustomElementView {
         const tooClose = Math.abs(dx) < MIN_MOVE;
 
         if (tooClose || !isCorrect) {
+          /**
+           * Fires on incorrect answer
+           * @event BinarySwipe#incorrect
+           * @type {object}
+           * @property {string} hint - ID referring to associated hint text
+           */
           if (!tooClose) this.trigger('incorrect', {hint: $activeCard._data.hint});
           $activeCard.removeClass('dragging committed-left committed-right');
           $activeCard.animate({transform: 'none'}, 300);
           return;
         }
 
+        /**
+         * Fires on correct answer
+         * @event BinarySwipe#correct
+         * @type {string} The comment ID associated with this card
+         */
         this.trigger('correct', $activeCard._data.comment);
         const $target = (solution === 'a') ? $aStacks : $bStack;
 
@@ -94,6 +111,10 @@ export class BinarySwipe extends CustomElementView {
         if ($activeCard) {
           $activeCard.addClass('active');
         } else {
+          /**
+         * Fires once all cards have been correctly sorted
+         * @event BinarySwipe#complete
+         */
           this.trigger('complete');
         }
         // TODO Show banner once you are done with all cards?

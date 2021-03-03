@@ -5,13 +5,7 @@
 
 
 import {Point, Polygon, Segment} from '@mathigon/euclid';
-import {Observable} from '@mathigon/boost';
-import {Step, GeoPoint} from '../../shared/types';
-
-
-declare class VoronoiStep extends Step {
-  model: Observable<VoronoiModel>;
-}
+import {GeoPoint} from '../../shared/types';
 
 interface VoronoiModel {
   dynPoints: {gPoint: GeoPoint, dlOpacity: number}[],
