@@ -6,6 +6,7 @@
 
 import {$N, CustomElementView, ElementView, hover, register, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Point} from '@mathigon/euclid';
+import { Step } from '../types';
 import template from './relation.pug';
 
 
@@ -25,7 +26,9 @@ export class Relation extends CustomElementView {
   private $inputs!: ElementView[];
   private $outputs!: ElementView[];
   private $lines!: SVGView[];
-
+  private $step?: Step;
+  
+  private requireMatch: boolean = false;
   private lastWidth = 0;
   private inputTargets: Point[] = [];
   private outputTargets: Point[] = [];
@@ -36,6 +39,8 @@ export class Relation extends CustomElementView {
     const $svg = this.$('svg.connections') as SVGParentView;
     this.$inputs = this.$$('.domain .item');
     this.$outputs = this.$$('.range .item');
+
+    this.requireMatch = this.attr('requireMatch') == 'true';
 
     if (this.attr('randomize') == 'true') {
       function selectRandomElement(elements: ElementView[]) {
@@ -92,27 +97,42 @@ export class Relation extends CustomElementView {
               }
 
               if (this.matches.every(m => m.matched == true)) {
-                this.trigger('complete');
+                if (this.$step)
+                  this.$step.complete();
               }
             }
             else {
-              this.connections.push({
+              const connection = {
                 input: i,
                 output: activeTarget,
                 line: $currentLine!,
-              })
+              }
 
               if ($target.attr('name') == this.matches[i].name) {
+                if (this.$step) {
+                  this.$step.addHint('correct');
+                }
 
-                this.trigger('correct', comment);
                 this.matches[i].matched = true;
 
                 if (this.matches.every(m => m.matched == true)) {
-                  this.trigger('complete');
+                  if (this.$step)
+                    this.$step.complete();
                 }
 
-              } else {
-                this.trigger('incorrect');
+                this.connections.push(connection);
+              }
+              else if (this.requireMatch) {
+                if (this.$step)
+                  this.$step.addHint('incorrect');
+
+                $currentLine!.exit('draw', 300, 0, true);
+              }
+              else {
+                if (this.$step)
+                  this.$step.addHint('incorrect');
+                
+                this.connections.push(connection);
               }
             }
           } else {
@@ -161,5 +181,10 @@ export class Relation extends CustomElementView {
     });
 
     // TODO Update existing connections
+  }
+
+  bindStep($step: Step) {
+    console.log("Binding step to relation");
+    this.$step = $step;
   }
 }
