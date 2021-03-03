@@ -184,7 +184,6 @@ export class Relation extends CustomElementView {
   }
 
   bindStep($step: Step) {
-    console.log("Binding step to relation");
     this.$step = $step;
   }
 }
