@@ -530,7 +530,7 @@ On this graph, we see the vault is at ([[3565+-5]], [[135+-5]])), which means Ri
 
 Let’s build some intuition for what graphs of different events look like. Match the graph to the event.
 
-    x-relation
+    x-relation(randomize="true")
       .item(slot="domain" name="vault")
         x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=320 height=180 controls credit="©NBC")
       .item(slot="domain" name="triple-jump")
