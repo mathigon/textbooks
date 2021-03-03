@@ -530,18 +530,18 @@ On this graph, we see the vault is at ([[3565+-5]], [[135+-5]])), which means Ri
 
 Let’s build some intuition for what graphs of different events look like. Match the graph to the event.
 
-    x-relation(randomize="true" requireMatch="true")
-      .item(slot="domain" name="vault" match="vault-graph")
+    x-relation#graph-match-relation(randomize="true" requireMatch="true")
+      .item(slot="domain" name="vault" match="vault-graph") Vault
         x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=320 height=180 controls credit="©NBC")
-      .item(slot="domain" name="triple-jump" match="triple-jump-graph")
+      .item(slot="domain" name="triple-jump" match="triple-jump-graph") Triple Jump
         x-video(src="/resources/functions/images/olympic_triple_jump.mp4" poster="images/olympic_triple_jump_poster.png" width=320 height=180 controls credit="©ESPN")
-      .item(slot="domain" name="dive" match="dive-graph")
+      .item(slot="domain" name="dive" match="dive-graph") Dive
         x-video(src="/resources/functions/images/olympic_dive.mp4" poster="images/olympic_dive_poster.png" width=320 height=180 controls credit="©Fina")
-      .item(slot="domain" name="ski" match="ski-graph")
+      .item(slot="domain" name="ski" match="ski-graph") Slalom Skiing
         x-video(src="/resources/functions/images/olympic_ski.mp4" poster="images/olympic_ski_poster.png" width=320 height=180 controls credit="©Olympic")
-      .item(slot="domain" name="hurdles" match="hurdles-graph")
+      .item(slot="domain" name="hurdles" match="hurdles-graph") Hurdles
         x-video(src="/resources/functions/images/olympic_hurdles.mp4" poster="images/olympic_hurdles_poster.png" width=320 height=180 controls credit="©Olympic")
-      .item(slot="domain" name="swim" match="swim-graph")
+      .item(slot="domain" name="swim" match="swim-graph") Freestyle Swim
         x-video(src="/resources/functions/images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=320 height=180 controls credit="©Olympic")
       .item(slot="range" name="vault-graph")
         x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="6/(1+((x-24)/1)^4)")
