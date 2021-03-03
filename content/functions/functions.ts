@@ -6,6 +6,7 @@
 
 import { Step, Video } from '@mathigon/studio';
 import '../shared/components/relation/relation';
+import { Relation } from '../shared/components/relation/relation';
 import { Point, SimplePoint } from '@mathigon/euclid';
 import { CoordinateSystem, Geopad, GeoPoint } from '../shared/types';
 import { $N, animate, ease, ElementView, pointerOver, SVGParentView, svgPointerPosn } from '@mathigon/boost';
@@ -312,4 +313,8 @@ export function vaultGraph($step: Step) {
 
     $xyAthlete.setAttr('transform', `translate(${athletePoint.x}, ${athletePoint.y})`);
   });
+}
+
+export function graphMatch($step: Step) {
+  ($step.$('x-relation')! as Relation).bindStep($step);
 }
