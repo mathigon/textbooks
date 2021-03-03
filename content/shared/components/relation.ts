@@ -37,6 +37,19 @@ export class Relation extends CustomElementView {
     this.$inputs = this.$$('.domain .item');
     this.$outputs = this.$$('.range .item');
 
+    if (this.attr('randomize') == 'true') {
+      function selectRandomElement(elements: ElementView[]) {
+        return elements[Math.floor(Math.random()*elements.length)];
+      }
+
+      for (const $input of this.$inputs) {
+        $input.insertAfter(selectRandomElement(this.$inputs));
+      }
+      for (const $output of this.$outputs) {
+        $output.insertAfter(selectRandomElement(this.$outputs));
+      }
+    }
+
     this.resize();
 
     let $currentLine: SVGView|undefined = undefined;
