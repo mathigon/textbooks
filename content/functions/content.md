@@ -497,12 +497,6 @@ Let's try some other functions, starting with `f(x)=-x^2+3`. Use the function pl
 > sectionStatus: dev
 > id: vault-graph
 
-    // NOTE
-    // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
-
-    // EDITORIAL USE ONLY
-    // [mock-up title image](https://drive.google.com/file/d/1P7d1Tfb7NwYLR5FM-e0zMbj5JKYgpJMJ/view?usp=sharing)
-
 The Olympics is full of incredible athletic feats. It’s also full of interesting data. Graphs help us visualize that data. During our time together today, we will watch Olympic competitions and analyse their graphs for interesting information. Let’s head over to the gymnastics arena!
 
 ::: column(width=240)
