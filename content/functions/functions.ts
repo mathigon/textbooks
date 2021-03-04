@@ -5,15 +5,22 @@
 
 
 import { Step, Video } from '@mathigon/studio';
-import '../shared/components/relation/relation';
-import { Relation } from '../shared/components/relation/relation';
 import { Point, SimplePoint } from '@mathigon/euclid';
 import { CoordinateSystem, Geopad, GeoPoint } from '../shared/types';
 import { $N, animate, ease, ElementView, pointerOver, SVGParentView, svgPointerPosn } from '@mathigon/boost';
-import { Burst } from '../shared/components/burst';
 import { last, stringDistance } from '@mathigon/core';
+
+import '../shared/components/burst';
+import { Burst } from '../shared/components/burst';
+
 import '../shared/components/function-machine';
 import { FunctionMachine } from '../shared/components/function-machine';
+
+import '../shared/components/relation/relation';
+import { Relation } from '../shared/components/relation/relation';
+
+import '../shared/components/video-graph';
+import { VideoGraph } from '../shared/components/video-graph';
 
 export function fnSketch($step: Step) {
   $step.$('.btn.clear')!.on('click', () => {
@@ -276,17 +283,7 @@ export function findDomainRange1($step: Step) {
 // Graphing and Interpreting Functions
 
 export function vaultGraph($step: Step) {
-  const $video = $step.$('x-video')! as Video;
-  const $videoEl = $video.$('video')!._el;
-  const $xyGraph = $step.$('#x-y-graph')! as CoordinateSystem;
-  const $xySVG = $xyGraph.$svg;
-  const $xyOverlay = $xySVG.$('.overlay');
-
-  const faceSize = 32;
-  const $xyAthlete = $N('image', {href: '/resources/functions/images/ri_face.png', width: faceSize, height: faceSize}, $xyOverlay);
-
-  const athleteStartPoint = $xyGraph.toViewportCoords(new Point(0, 0));
-  $xyAthlete.setAttr('transform', `translate(${athleteStartPoint.x-faceSize/2}, ${athleteStartPoint.y-faceSize/2})`);
+  const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
   function yByX(x: number) {
     return (1/(1+Math.pow((8*(x-25.13)), 2)))+(8-Math.pow(((x-27)*1.5), 2))/(1+Math.pow(((x-27)/1.88), 128));
@@ -303,24 +300,32 @@ export function vaultGraph($step: Step) {
     return (1-Math.pow((1+(Math.cos((t-pause)*Math.PI/(duration-pause))))/2, 2))*29.5;
   }
 
-  function yByTime(t: number) {
-    return yByX(xByTime(t));
-  }
-
-  // Plot our XY position function
-  $xyGraph.setFunctions(yByX);
-
-  $video.on('timeupdate', () => {
-    const t: number = $videoEl.currentTime;
-
-    const x = xByTime(t);
-    const y = yByX(x);
-    const athletePoint = $xyGraph.toViewportCoords(new Point(x, y));
-
-    $xyAthlete.setAttr('transform', `translate(${athletePoint.x-faceSize/2}, ${athletePoint.y-faceSize/2})`);
-  });
+  $videoGraph.setFunctions(xByTime, yByX);
+  $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
 }
 
 export function graphMatch($step: Step) {
   ($step.$('x-relation')! as Relation).bindStep($step);
+}
+
+export function timeGraph($step: Step) {
+  const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
+
+  function yByX(x: number) {
+    return (1/(1+Math.pow((8*(x-25.13)), 2)))+(8-Math.pow(((x-27)*1.5), 2))/(1+Math.pow(((x-27)/1.88), 128));
+  }
+
+  function xByTime(t: number) {
+    // Pause before running begins
+    const pause = 1.6;
+    // Total duration of clip
+    const duration = 9.1;
+
+    if (t < pause) return 0;
+    
+    return (1-Math.pow((1+(Math.cos((t-pause)*Math.PI/(duration-pause))))/2, 2))*29.5;
+  }
+
+  $videoGraph.setFunctions((t: number) => t, (t: number) => yByX(xByTime(t)));
+  $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
 }
