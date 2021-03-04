@@ -582,24 +582,13 @@ But again, we can learn new things about Ri's vault. In the first few seconds, w
 
 ---
 
-The graph does not include any information about time. For example, we cannot tell _when_ Ri landed on the pit. Some of the graphs of later events will include time along the horizontal axis.
+> id: swim-graph
 
-On this graph, we see the vault is at ([[3565+-5]], [[135+-5]])), which means Ri ran about 3.5 meters in his approach. The starting point on the runway is at the [__origin__](gloss:coordinate-system-origin). Ri lands at (3910, 30), which means the pit is about [[30]] centimeters tall.
+Let's head over to the pool. We are just in time for the men’s 50 meter freestyle finals! Keep a close eye on César Cielo Filho of Brazil:
 
-
-As you can see there are several different perspectives for graphing motion. One perspective is distance as a function of time. Select the events represented with this perspective.
-
-    // NOTES
-    // Multiple Select
-
-We see the other two events are [[height | distance]] as a function of [[distance | height]].  We will look at two of these functions in more detail. Let’s head over to the pool.
-
----
-
-We are just in time for the men’s 50 meter freestyle finals. Keep a close eye on César Cielo Filho of Brazil. The graph of his swim will appear as the video plays.
-
-    // NOTES
-    // Student presses play on a [video](https://www.youtube.com/watch?v=qZvdhv9uhi0) (0:12-1:21) of Cielo’s record setting swim. Simultaneously, a distance-time graph populates in a card to the right of the animation.
+    x-video-graph
+        x-video(src="/resources/functions/images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=640 height=360 controls credit="©NBC")
+        x-coordinate-system(width=640 height=180 x-axis="0,26,5" y-axis="0,51,10" axis-names="Time,Distance")
 
 ::: column.grow
 
