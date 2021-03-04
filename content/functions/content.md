@@ -567,6 +567,20 @@ This looks similar to our first graph. This makes sense, because the number of m
 
 ---
 
+> id: time-distance-graph
+
+Our last graph plotted height by time. We can also plot distance by time. Note that time is still on the X axis, but distance is now on the Y axis:
+
+    x-video-graph
+        x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
+        x-coordinate-system(width=640 height=180 x-axis="0,9.1,1" y-axis="0,29.5,5" axis-names="Time,Distance")
+
+This graph looks different than the other two, because it tells us nothing about [[Height|Distance|Time]].
+
+But again, we can learn new things about Ri's vault. In the first few seconds, we can see him [[gaining|losing]] speed. He reaches his top speed after about [[4]] seconds. As he enters the vault, we see him [[losing|gaining]] speed.
+
+---
+
 The graph does not include any information about time. For example, we cannot tell _when_ Ri landed on the pit. Some of the graphs of later events will include time along the horizontal axis.
 
 On this graph, we see the vault is at ([[3565+-5]], [[135+-5]])), which means Ri ran about 3.5 meters in his approach. The starting point on the runway is at the [__origin__](gloss:coordinate-system-origin). Ri lands at (3910, 30), which means the pit is about [[30]] centimeters tall.
