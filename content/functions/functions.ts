@@ -282,23 +282,24 @@ export function findDomainRange1($step: Step) {
 
 // Graphing and Interpreting Functions
 
+// Ri Se-Gwang's vault functions
+function yByX(x: number) {
+  return (1/(1+Math.pow((8*(x-25.13)), 2)))+(8-Math.pow(((x-27)*1.5), 2))/(1+Math.pow(((x-27)/1.88), 128));
+}
+
+function xByTime(t: number) {
+  // Pause before running begins
+  const pause = 1.6;
+  // Total duration of clip
+  const duration = 9.1;
+
+  if (t < pause) return 0;
+  
+  return (1-Math.pow((1+(Math.cos((t-pause)*Math.PI/(duration-pause))))/2, 2))*29.5;
+}
+
 export function vaultGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
-
-  function yByX(x: number) {
-    return (1/(1+Math.pow((8*(x-25.13)), 2)))+(8-Math.pow(((x-27)*1.5), 2))/(1+Math.pow(((x-27)/1.88), 128));
-  }
-
-  function xByTime(t: number) {
-    // Pause before running begins
-    const pause = 1.6;
-    // Total duration of clip
-    const duration = 9.1;
-
-    if (t < pause) return 0;
-    
-    return (1-Math.pow((1+(Math.cos((t-pause)*Math.PI/(duration-pause))))/2, 2))*29.5;
-  }
 
   $videoGraph.setFunctions(xByTime, yByX);
   $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
@@ -311,21 +312,13 @@ export function graphMatch($step: Step) {
 export function timeHeightGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  function yByX(x: number) {
-    return (1/(1+Math.pow((8*(x-25.13)), 2)))+(8-Math.pow(((x-27)*1.5), 2))/(1+Math.pow(((x-27)/1.88), 128));
-  }
-
-  function xByTime(t: number) {
-    // Pause before running begins
-    const pause = 1.6;
-    // Total duration of clip
-    const duration = 9.1;
-
-    if (t < pause) return 0;
-    
-    return (1-Math.pow((1+(Math.cos((t-pause)*Math.PI/(duration-pause))))/2, 2))*29.5;
-  }
-
   $videoGraph.setFunctions((t: number) => t, (t: number) => yByX(xByTime(t)));
+  $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
+}
+
+export function timeDistanceGraph($step: Step) {
+  const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
+
+  $videoGraph.setFunctions((t: number) => t, (t: number) => xByTime(t));
   $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
 }
