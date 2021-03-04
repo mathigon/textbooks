@@ -280,10 +280,12 @@ export function vaultGraph($step: Step) {
   const $xyGraph = $step.$('#x-y-graph')! as CoordinateSystem;
   const $xySVG = $xyGraph.$svg;
   const $xyOverlay = $xySVG.$('.overlay');
-  const $xyAthlete = $N('circle', {r: 4}, $xyOverlay);
+
+  const faceSize = 32;
+  const $xyAthlete = $N('image', {href: '/resources/functions/images/ri_face.png', width: faceSize, height: faceSize}, $xyOverlay);
 
   const athleteStartPoint = $xyGraph.toViewportCoords(new Point(0, 0));
-  $xyAthlete.setAttr('transform', `translate(${athleteStartPoint.x}, ${athleteStartPoint.y})`);
+  $xyAthlete.setAttr('transform', `translate(${athleteStartPoint.x-faceSize/2}, ${athleteStartPoint.y-faceSize/2})`);
 
   function yByX(x: number) {
     return (1/(1+Math.pow((8*(x-25.13)), 2)))+(8-Math.pow(((x-27)*1.5), 2))/(1+Math.pow(((x-27)/1.88), 128));
@@ -300,6 +302,10 @@ export function vaultGraph($step: Step) {
     return (1-Math.pow((1+(Math.cos((t-pause)*Math.PI/(duration-pause))))/2, 2))*29.5;
   }
 
+  function yByTime(t: number) {
+    return yByX(xByTime(t));
+  }
+
   // Plot our XY position function
   $xyGraph.setFunctions(yByX);
 
@@ -310,7 +316,7 @@ export function vaultGraph($step: Step) {
     const y = yByX(x);
     const athletePoint = $xyGraph.toViewportCoords(new Point(x, y));
 
-    $xyAthlete.setAttr('transform', `translate(${athletePoint.x}, ${athletePoint.y})`);
+    $xyAthlete.setAttr('transform', `translate(${athletePoint.x-faceSize/2}, ${athletePoint.y-faceSize/2})`);
   });
 }
 
