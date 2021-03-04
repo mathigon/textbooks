@@ -511,7 +511,7 @@ Ri Se-gwang of the People’s Republic of Korea is about to vault. He won the go
 
     x-video-graph
         x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
-        x-coordinate-system(width=640 height=180 x-axis="0,29.5,1" y-axis="0,10,1" axis-names="X,Y")
+        x-coordinate-system(width=640 height=180 x-axis="0,29.1,1" y-axis="0,10,1" axis-names="Distance,Height")
 
     // functions: https://www.desmos.com/calculator/td3fynck7q
 
@@ -539,17 +539,17 @@ Let’s build some intuition for what graphs of different events look like. Matc
       .item(slot="domain" name="swim" match="swim-graph") Freestyle Swim
         x-video(src="/resources/functions/images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=320 height=180 controls credit="©Olympic")
       .item(slot="range" name="vault-graph")
-        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="6/(1+((x-24)/1)^4)")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="Distance,Height" grid="no" labels="no" crosshairs="no" fn="6/(1+((x-24)/1)^4)")
       .item(slot="range" name="triple-jump-graph")
-        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="2/(1+((x-16)*1.5)^4)+2.5/(1+((x-20)*1.5)^4)+3/(1+((x-25)/1.5)^4)")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="Distance,Height" grid="no" labels="no" crosshairs="no" fn="2/(1+((x-16)*1.5)^4)+2.5/(1+((x-20)*1.5)^4)+3/(1+((x-25)/1.5)^4)")
       .item(slot="range" name="dive-graph")
-        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="12-((x-1)*1)^2")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="Distance,Height" grid="no" labels="no" crosshairs="no" fn="12-((x-1)*1)^2")
       .item(slot="range" name="ski-graph")
-        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="15+sin(x/2)-x/2")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="Distance,Height" grid="no" labels="no" crosshairs="no" fn="15+sin(x/2)-x/2")
       .item(slot="range" name="hurdles-graph")
-        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="1/(1+((x-3)*1.5)^4)+1/(1+((x-6)*1.5)^4)+1/(1+((x-9)*1.5)^4)+1/(1+((x-12)*1.5)^4)+1/(1+((x-15)*1.5)^4)+1/(1+((x-18)*1.5)^4)+1/(1+((x-21)*1.5)^4)+1/(1+((x-24)*1.5)^4)+1/(1+((x-27)*1.5)^4)")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="Distance,Height" grid="no" labels="no" crosshairs="no" fn="1/(1+((x-3)*1.5)^4)+1/(1+((x-6)*1.5)^4)+1/(1+((x-9)*1.5)^4)+1/(1+((x-12)*1.5)^4)+1/(1+((x-15)*1.5)^4)+1/(1+((x-18)*1.5)^4)+1/(1+((x-21)*1.5)^4)+1/(1+((x-24)*1.5)^4)+1/(1+((x-27)*1.5)^4)")
       .item(slot="range" name="swim-graph")
-        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="X,Y" grid="no" labels="no" crosshairs="no" fn="1")
+        x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="Distance,Height" grid="no" labels="no" crosshairs="no" fn="1")
 
 ---
 
@@ -561,7 +561,7 @@ What if we plot _time_ on the X axis, instead of Ri's horizontal position?
 
     x-video-graph
         x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
-        x-coordinate-system(width=640 height=180 x-axis="0,9.1,1" y-axis="0,10,1" axis-names="T,Y")
+        x-coordinate-system(width=640 height=180 x-axis="0,9.1,1" y-axis="0,10,1" axis-names="Time,Height")
 
 ---
 
