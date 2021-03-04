@@ -511,6 +511,7 @@ Ri Se-gwang of the People’s Republic of Korea is about to vault. He won the go
         x-coordinate-system(width=640 height=180 x-axis="0,29.1,1" y-axis="0,10,1" axis-names="Distance,Height")
 
     // functions: https://www.desmos.com/calculator/td3fynck7q
+    // TODO: Realistic height/distance values. 30m is arbitrary, and there's no way he hits 8 meters.
 
 There are several things going on here. Move the video back and forth to see how the graph lines up with the motion.
 
