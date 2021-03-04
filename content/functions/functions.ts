@@ -303,7 +303,7 @@ export function graphMatch($step: Step) {
   ($step.$('x-relation')! as Relation).bindStep($step);
 }
 
-export function timeGraph($step: Step) {
+export function timeHeightGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
   function yByX(x: number) {

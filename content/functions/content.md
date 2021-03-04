@@ -553,15 +553,17 @@ Let’s build some intuition for what graphs of different events look like. Matc
 
 ---
 
-> id: time-graph
+> id: time-height-graph
 
-These graphs tell us everything about the athlete's position, but they tell us nothing about **time**. For example, during Ri Se-Gwang's vault we cannot tell _when_ he lands on the mat. We only see his horizontal and vertical positions.
+These graphs tell us everything about the athlete's position, but they say nothing about **time**. For example, during Ri Se-Gwang's vault we cannot tell _when_ he lands on the mat. We only see his horizontal and vertical positions.
 
-What if we plot _time_ on the X axis, instead of Ri's horizontal position?
+On our first graph, the X axis represented distance (measured in meters). What if it represented time (measured in seconds)?
 
     x-video-graph
         x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
         x-coordinate-system(width=640 height=180 x-axis="0,9.1,1" y-axis="0,10,1" axis-names="Time,Height")
+
+This looks similar to our first graph. This makes sense, because the number of meters that Ri runs is closely related to the number of seconds that pass. However, now we can measure new things about Ri's vault; he begins running about 1.5 seconds after the video begins. He hits the table at about [[5.9]] seconds, peaks at [[6.4]] seconds, and lands at [[7.3]] seconds.
 
 ---
 
