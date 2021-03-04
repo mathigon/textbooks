@@ -520,7 +520,7 @@ First we need to understand what the axes represent. The x-axis in this graph is
 
 > id: graph-match
 
-Let’s build some intuition for what graphs of different events look like. Match the graph to the event.
+Let’s build some intuition for what graphs of different events look like. Match each event to a graph.
 
     x-relation#graph-match-relation(randomize="true" requireMatch="true")
       .item(slot="domain" name="vault" match="vault-graph") Vault
