@@ -506,20 +506,15 @@ Ri Se-gwang of the People’s Republic of Korea is about to vault. He won the go
 
 :::
 
-    x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
-    // source: https://www.youtube.com/watch?v=85v0Un19A94
-
-    x-coordinate-system.vault-graph#x-y-graph(width=640 height=180 x-axis="0,29.5,1" y-axis="0,10,1" axis-names="X,Y")
+    x-video-graph
+        x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
+        x-coordinate-system(width=640 height=180 x-axis="0,29.5,1" y-axis="0,10,1" axis-names="X,Y")
 
     // functions: https://www.desmos.com/calculator/td3fynck7q
 
 There are several things going on here. Move the video back and forth to see how the graph lines up with the motion.
 
-First we need to understand what the axes represent. The x-axis in this graph is the horizontal distance Ri travels throughout his vault (measured in meters). The y-axis is the vertical distance Ri travels (also in meters). Together these axes tell us Ri’s position, like the row and column of a chess piece on a board.
-
-The graph does not include any information about time. For example, we cannot tell _when_ Ri landed on the pit. Some of the graphs of later events will include time along the horizontal axis.
-
-On this graph, we see the vault is at ([[3565+-5]], [[135+-5]])), which means Ri ran about 3.5 meters in his approach. The starting point on the runway is at the [__origin__](gloss:coordinate-system-origin). Ri lands at (3910, 30), which means the pit is about [[30]] centimeters tall.
+First we need to understand what the axes represent. The x-axis in this graph is the horizontal distance Ri travels throughout his vault (measured in meters). The y-axis is the vertical distance Ri travels (also in meters). Together these axes tell us every point along Ri's path.
 
 ---
 
