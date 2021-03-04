@@ -283,11 +283,11 @@ export function findDomainRange1($step: Step) {
 // Graphing and Interpreting Functions
 
 // Ri Se-Gwang's vault functions
-function yByX(x: number) {
+function vaultHeightDistance(x: number) {
   return (1/(1+Math.pow((8*(x-25.13)), 2)))+(8-Math.pow(((x-27)*1.5), 2))/(1+Math.pow(((x-27)/1.88), 128));
 }
 
-function xByTime(t: number) {
+function vaultDistanceTime(t: number) {
   // Pause before running begins
   const pause = 1.6;
   // Total duration of clip
@@ -301,7 +301,7 @@ function xByTime(t: number) {
 export function vaultGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.setFunctions(xByTime, yByX);
+  $videoGraph.setFunctions(vaultDistanceTime, vaultHeightDistance);
   $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
 }
 
@@ -312,13 +312,20 @@ export function graphMatch($step: Step) {
 export function timeHeightGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.setFunctions((t: number) => t, (t: number) => yByX(xByTime(t)));
+  $videoGraph.setFunctions((t: number) => t, (t: number) => vaultHeightDistance(vaultDistanceTime(t)));
   $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
 }
 
 export function timeDistanceGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.setFunctions((t: number) => t, (t: number) => xByTime(t));
+  $videoGraph.setFunctions((t: number) => t, (t: number) => vaultDistanceTime(t));
+  $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
+}
+
+export function swimGraph($step: Step) {
+  const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
+
+  $videoGraph.setFunctions((t: number) => t, (t: number) => 50/21.5*t);
   $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
 }
