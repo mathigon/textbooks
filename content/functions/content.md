@@ -515,7 +515,7 @@ Ri Se-gwang of the People’s Republic of Korea is about to vault. He won the go
 
 There are several things going on here. Move the video back and forth to see how the graph lines up with the motion.
 
-First we need to understand what the axes represent. The  The x-axis in this graph is the horizontal distance Ri travels throughout his vault (measured in meters). The y-axis is the vertical height Ri reaches (also in meters). Together these axes tell us every point along Ri's path.
+First we need to understand what the axes represent. The X axis in this graph is the horizontal **Distance** Ri travels throughout his vault (measured in meters). The Y axis is the vertical **Height** Ri reaches (also in meters). Together these axes tell us every point along Ri's path.
 
     // TODO: Implement +/- ranges for these
 Using this graph, we can see that Ri begins his vault at 25 meters, peaks at ([[27]], [[8]]), and lands at [[29]] meters.
@@ -556,9 +556,9 @@ Let’s build some intuition for what graphs of different events look like. Matc
 
 > id: time-height-graph
 
-These graphs tell us everything about the athlete's position, but they say nothing about **time**. For example, during Ri Se-Gwang's vault we cannot tell _when_ he lands on the mat. We only see his horizontal and vertical positions.
+These graphs tell us everything about the athlete's position, but they say nothing about **Time**. For example, during Ri Se-Gwang's vault we cannot tell _when_ he lands on the mat. We only see Height and Distance.
 
-On our first graph, the X axis represented distance (measured in meters). What if it represented time (measured in seconds)?
+On our first graph, the X axis represented Distance (measured in meters). What if it represented Time (measured in seconds)?
 
     x-video-graph
         x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
@@ -570,7 +570,7 @@ This looks similar to our first graph. This makes sense, because the number of m
 
 > id: time-distance-graph
 
-Our last graph plotted height by time. We can also plot distance by time. Note that time is still on the X axis, but distance is now on the Y axis:
+Our last graph plotted Height by Time. We can also plot Distance by Time. Note that Time is still on the X axis, but Distance is now on the Y axis:
 
     x-video-graph
         x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
