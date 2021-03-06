@@ -199,7 +199,7 @@ mit griechischen Buchstaben [`α`, `β` and `γ`](target:angle) (“alpha”, �
 “gamma”)
 bezeichnet.
  
-Die [Seite, die _gegenüber_ dem Eckpunkt _A ]_(target:X) liegt, ist mit _a_, und der
+Die [Seite, die _gegenüber_ dem Eckpunkt _A_](target:X) liegt, ist mit _a_, und der
 [Winkel, der direkt bei _A_](target:Y) anliegt, mit `α` bezeichnet. Auf dieselbe Art und Weise
 verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 ::: column(width=220)
