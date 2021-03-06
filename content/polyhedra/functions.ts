@@ -9,7 +9,7 @@ import {Color, total} from '@mathigon/core';
 import {clamp, lerp, toWord} from '@mathigon/fermat';
 import {Angle, intersections, isLineLike, Point, Polygon, Rectangle, Segment} from '@mathigon/euclid';
 import {Browser, slide} from '@mathigon/boost';
-import {Geopad, GeoPath, Path, Polypad, Slider, Step} from '../shared/types';
+import {Geopad, GeoPath, Path, PolygonTile, Polypad, Slider, Step} from '../shared/types';
 import {Solid} from '../shared/components/solid';
 import {Graphics3D} from '../shared/components/webgl';
 import {Anibutton} from './components/anibutton';
@@ -208,16 +208,17 @@ export function tessellationDrawing($step: Step) {
   $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
 
   $polypad.on('move-selection rotate-selection add-tile', () => {
-    const tiles = Array.from($polypad.tiles) as any;
-    for (const t of tiles) t.$body.removeClass('overlap');
+    const tiles = Array.from($polypad.tiles) as PolygonTile[];
+    for (const t of tiles) t.$el.removeClass('overlap');
+    for (const t of tiles) t.transformed = t.path.rotate(t.rot * Math.PI / 180).translate(t.posn);
 
     const n = tiles.length;
     for (let i = 0; i < n; ++i) {
       for (let j = i + 1; j < n; ++j) {
         if (Point.distance(tiles[i].posn, tiles[j].posn) > 150) continue;
-        if (!Polygon.collision(tiles[i].outline, tiles[j].outline)) continue;
-        tiles[i].$body.addClass('overlap');
-        tiles[j].$body.addClass('overlap');
+        if (!Polygon.collision(tiles[i].transformed as Polygon, tiles[j].transformed as Polygon)) continue;
+        tiles[i].$el.addClass('overlap');
+        tiles[j].$el.addClass('overlap');
       }
     }
   });

@@ -18,8 +18,8 @@ const yaml = require('js-yaml');
 const {encode, decode} = require('./parsing');
 const {Translate} = require('@google-cloud/translate').v2;
 
-const ROOT = path.join(__dirname, '../content');
-const SHARED = ROOT + '/shared'
+const INPUT = path.join(__dirname, '../content');
+const OUTPUT = path.join(__dirname, '../translations');
 const Google = new Translate({keyFilename: path.join(__dirname, KEY)});
 
 
@@ -38,11 +38,11 @@ async function translate(string, lang) {
 // -----------------------------------------------------------------------------
 
 async function shared(type, lang, fields) {
-  const enFile = fs.readFileSync(SHARED + `/${type}.yaml`, 'utf8');
+  const enFile = fs.readFileSync(INPUT + `shared/${type}.yaml`, 'utf8');
   const en = yaml.safeLoad(enFile);
   const intro = enFile.split('\n').slice(0, 5).join('\n');
 
-  const file = SHARED + `/translations/${type}_${lang}.yaml`;
+  const file = OUTPUT + `${lang}/shared/${type}.yaml`;
   const source = (fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '')
       .replace(/: \|/g, ': >');  // Fix newline characters
 
@@ -77,18 +77,18 @@ async function shared(type, lang, fields) {
 
 async function run() {
   for (const c of COURSES) {
-    const source = fs.readFileSync(`${ROOT}/${c}/content.md`, 'utf8');
+    const source = fs.readFileSync(`${INPUT}/${c}/content.md`, 'utf8');
     const [items, store] = encode(source);
 
     for (const l of LANGUAGES) {
-      if (fs.existsSync(`${ROOT}/${c}/translations/content_${l}.md`)) continue;
+      if (fs.existsSync(`${OUTPUT}/${l}/${c}/content.md`)) continue;
       console.log(`>> Generating ${l} translations for ${c}...`);
 
       let translated = '';
       for (const i of items) translated += (await loadFromGoogle(i, l));
 
       const output = decode(translated, store);
-      fs.writeFileSync(`${ROOT}/${c}/translations/content_${l}.md`, output);
+      fs.writeFileSync(`${OUTPUT}/${l}/${c}/content.md`, output);
     }
   }
 

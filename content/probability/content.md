@@ -474,8 +474,8 @@ simply by listing all different possibilities:
 
     figure: img(src="images/monty.png" width=694 height=468)
 
-Out of the 9 possibilities [[6]] need you to switch doors, to win. This gives a
-chance of `6/9 = 2/3` like before.
+Out of the 9 possibilities, there are [[6]] where you need you to switch doors, in order to win.
+This gives a  chance of `6/9 = 2/3` like before.
 
 
 ---

@@ -54,7 +54,7 @@ export function drawPie(number: number, center: Point, radius: number) {
 }
 
 
-@register('x-prime-disk', {attributes: ['n']})
+@register('x-prime-disk')
 export class PrimeDisk extends CustomElementView {
 
   ready() {

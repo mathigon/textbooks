@@ -516,15 +516,15 @@ export function sunflowerGrowing($step: Step) {
       const r = Math.sqrt((x - i) / count);
       const cx = r * 70 * Math.cos(t);
       const cy = r * 70 * Math.sin(t);
-      $petals[i].setTransform(new Point(cx, cy), t, 1.5 + r);
+      $petals[i].css('transform', `translate(${cx}px, ${cy}px) rotate(${t}rad) scale(${1.5 + r})`);  // setTransform() breaks in Safari
     }
 
     for (let i = x + 1; i < count; ++i) {
       const t = 3.883222 * i;
-      $petals[i].setTransform(undefined, t, 0.05);
+      $petals[i].css('transform', `rotate(${t}rad) scale(${0.05})`);
     }
 
-    $bulb.setTransform(undefined, 0, 1 + 69 * Math.sqrt(x / count));
+    $bulb.css('transform', `scale(${1 + 69 * Math.sqrt(x / count)})`);
   }
 
   $slider.on('move', move);

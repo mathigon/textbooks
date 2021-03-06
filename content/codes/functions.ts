@@ -20,6 +20,7 @@ import './components/enigma';
 import './components/enigma-rotors';
 import './components/morse';
 import './components/hamming';
+import {Barcode} from './components/barcode';
 
 
 // -----------------------------------------------------------------------------
@@ -663,35 +664,110 @@ export function resolution($step: Step) {
 }
 
 export function satellite($step: Step) {
-  // SATELLITE: complete this
-  /* const $bitstream = $step.$('#bitstream') as SVGView;
-  const $trajectory = $bitstream?.$('line') as SVGView;
-  const $bits = $bitstream?.$$('text');
+  const $trajectory = $step?.$('.bitstream') as SVGView;
+
+  const $svg = $step.$('svg');
+
+  const $bitstream = $N('g', {class: 'text'}, $svg);
+
+  const NUM_BITS = 12;
+  const FONT_SIZE = 30;
+  // based on [start, end] points of satellite transmitter, receiver
+  const START = $trajectory.getPointAt(1);
+  const END = $trajectory.getPointAt(0);
+  const ANGLE = Math.atan2(END.y - START.y, END.x - START.x);
+
+  // Initialize bitstream
+  const dataStream: ElementView[] = [];
+  for (let i = 0; i < NUM_BITS; i++) {
+    const $g = $N('g', {}, $bitstream);
+    $N('text', {text: Math.floor(Math.random() * 2), 'font-size': FONT_SIZE, fill: '#FAFFFB'}, $g);
+    const $errorFlash = $N('rect', {fill: '#CC0E66', x: -2, y: -26, width: 20, height: 30, rx: 6, ry: 6, 'fill-opacity': 0.5}, $g);
+    $errorFlash.hide();
+    dataStream.push($g);
+    dataStream[i].hide();
+  }
+
+  let time = 0;
+  const SPEED = 0.0010;
+  const ERROR_CHANCE = 0.2;
+  const FLASH_TIME = 150;
+
+  let isMoving = false;
+
+  let numErrors = 0;
+
+  function moveRecurse() {
+    time += SPEED;
+    dataStream.forEach((p, i) => {
+      const progress = i / dataStream.length + time;
+
+      // Check for when bit reaches the end (1s digit goes from N to N+1)
+      if (Math.floor(progress) > Math.floor(progress - SPEED)) {
+        p.$('text')!.textStr = Math.floor(Math.random() * 2);
+        p.$('rect')!.hide();
+      }
+
+      // Check when bit crosses the center (tenths digit goes from 4 to 5)
+      if (Math.floor((progress * 10) % 10) === 5 && Math.floor((progress - SPEED) * 10 % 10) === 4) {
+
+        if (Math.random() < ERROR_CHANCE) {
+
+          // let user advance after 2 errors
+          numErrors++;
+          if (numErrors == 2) {
+            $step.score('transmit');
+          }
+          // console.log(`ERROR in bit ${i}`);
+          const prevVal = p.$('text')!.text;
+
+          // flashing effecT
+          p.$('rect')!.enter('fade', FLASH_TIME, 0);
+          setTimeout(() => p.$('text')!.textStr = prevVal === '1' ? 0 : 1, FLASH_TIME);
+          p.$('rect')!.exit('fade', FLASH_TIME, FLASH_TIME);
+        }
+      }
+      const xy = $trajectory.getPointAt((progress * 1000) % 1000 / 1000); // decimal
+      // set transform dependent on the bits
+      p.setTransform(new Point(xy.x, xy.y), ANGLE);
+    });
+
+    if (isMoving) {
+      setTimeout(() => {
+        moveRecurse();
+      }, 10);
+    }
+  }
 
   // SATELLITE: WAIT for new svg from designer
   function moveBits() {
-    // There should be a timeout
-    $bits?.forEach((e, i) => {
-      // get point along trajectory
-      const xy = $trajectory.getPointAt(0);
-      // set transform dependent on the bits
-      e.setTransform(new Point(xy.x, xy.y));
-    });
-  } */
 
-  /* function stopBits() {
-    // SATELLITE: stop the bits
-  } */
+    isMoving = true;
+    moveRecurse();
+    // There should be a timeout
+    dataStream?.forEach(p => {
+      p.show();
+    });
+  }
+
+  function stopBits() {
+    isMoving = false;
+    dataStream.forEach(p => {
+      p.hide();
+    });
+  }
 
   const $satellites = $step.$('.satellites')!;
 
   // from Telegraph code. Should replace w/ code to enable 1s and 0s.
   slide($satellites, {
     down: () => {
-      $satellites.addClass('pressed');
+      moveBits();
+      // $satellites.addClass('pressed');
     },
     up: () => {
-      $satellites.removeClass('pressed');
+      stopBits();
+      // $satellites.removeClass('pressed');
     }
   });
 }
@@ -880,5 +956,35 @@ export function hammingDecode($step: Step) {
     if (x >= 0 && x < slideBack.length) {
       slideBack[x]();
     }
+  });
+}
+
+export function barcodeDrawing($step: Step) {
+
+  const transforms = [
+    'scale(4) translate(50%, 0)',
+    `scale(4) translate(${50 - 50 * 1 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 2 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 3 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 4 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 5 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 6 / 7}%, 0)`,
+    'scale(4) translate(0%, 0)',
+    `scale(4) translate(${50 - 50 * 8 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 9 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 10 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 11 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 12 / 7}%, 0)`,
+    `scale(4) translate(${50 - 50 * 13 / 7}%, 0)`,
+    'scale(4) translate(-50%, 0)'
+  ];
+  const $svg = $step.$('svg');
+  $step.$$('.zoom').forEach((button, i) => {
+    button.on('click', () => $svg?.css('transform', transforms[i]));
+  });
+
+  const $barcode = $step.$('x-barcode') as Barcode;
+  $step.$('.generate')?.on('click', () => {
+    $barcode.generateNewCode();
   });
 }

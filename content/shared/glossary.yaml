@@ -624,6 +624,19 @@ ellipse:
   image: ellipse.svg
   link: /course/circles/conic-sections#ellipses
 
+error-detecting-code:
+  title: Error-Detecting Code
+  text: |
+    An __error-detecting code__ is a way to encode a message so that the receiver
+    can detect whether an error has occurred during transmission.
+
+error-correcting-code:
+  title: Error-Correcting Code
+  text: |
+    An __error-correcting-code__ is a way to encode a message so that the receiver
+    can detect whether an error has occurred during transmission, and also can correct
+    that error.
+
 equation:
   title: Equation
   text: An __equation__ is a mathematical statement created by connecting two or
@@ -829,7 +842,7 @@ group:
 
     1. You can add/combine two of the things, to get another one that is also
        in the group.
-    2. The things are _associative_, which means that `a+(b+c) + (a+b)+c`.
+    2. The things are _associative_, which means that `a+(b+c) = (a+b)+c`.
     3. There is an _identity_, and every “thing” has an _inverse_ which, when
        added, gives the identity.
   link: /course/transformations/symmetry-groups#groups-1

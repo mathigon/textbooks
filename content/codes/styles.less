@@ -378,15 +378,26 @@ select {
 // Error Detection
 
 x-barcode {
-  display: block;
-  width: 400px;
-  height: 200px;
-  margin: 1em auto;
-  rect { fill: @grey; transition: opacity .2s }
 
-  .focus & rect { opacity: 0.4; }
+  margin: 1em auto;
+  top: 44px;
+  position: sticky;
+
+  svg { background-color: @yellow; }
+
+  rect.black { fill: @dark-grey; transition: opacity .2s }
+  rect.white { fill: #ffffff; transition: opacity .2s }
+
+  .focus & rect { opacity: 0.2; }
   .focus & .focus rect { opacity: 1; }
+
+  .focus & text { opacity: 0.2 }
+  .focus &  text.focus { opacity: 1; }
 }
+
+x-barcode { overflow: hidden; }
+x-barcode svg { margin: 0 auto 32px; transition: transform .4s linear; }
+
 
 @keyframes fadeOut {
   0% {
