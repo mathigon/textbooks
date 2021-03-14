@@ -321,6 +321,6 @@ export function timeDistanceGraph($step: Step) {
 export function swimGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.setFunctions((t: number) => t, (t: number) => 50/21.5*t);
+  $videoGraph.setFunctions((t: number) => t, (t: number) => t > 21.5 ? 50 : 50/21.5*t);
   $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
 }
