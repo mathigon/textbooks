@@ -602,7 +602,7 @@ César Cielo of Brazil holds the Olympic record for the men’s 50 meter with a 
 
 What an emotional race for Cielo! He broke the world and olympic records with this swim. The graph shows Cielo’s record-breaking swim. The shape is one we have seen before in [graphing linear functions](/linear-functions/graphing-functions). Recall this graph represents all the ordered pairs matching inputs to outputs. We can use information from the graph to write the function describing Cielo’s swim. Let’s call the function f(t).
 
-Remember the general form for a [__linear function__](gloss:linear-function) like this is y=mx+c, where m is the slope and c is the y-intercept. We replace y with f(t), and we replace x with t.
+Remember the general form for a [__linear function__](gloss:linear-function) like this is y=mx+c, where m is the slope and c is the y-intercept. We replace y with f(t), and we replace x with t:
 
 {.text-center} `y=mx+c`  
 ⇓<br>
@@ -610,9 +610,15 @@ Remember the general form for a [__linear function__](gloss:linear-function) lik
 
 This means we have two remaining unknown variables: [[m]] and [[c]].
 
+---
+
+> id: measure-slope-1
+
+    x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
+
     // TODO: Fix targeting of swim-x-axis and swim-y-axis
 
-Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance from the starting block to the opposite end of the pool measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) goes up to [[50]] meters, which represent the [[distance | time | number of laps]] of the race.
+Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance from the starting block to the opposite end of the pool, measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) goes up to [[50]] meters, which represent the [[distance | time | number of laps]] of the race.
 
 {.text-center} `y=mx+c`  
 ⇓<br>
@@ -620,11 +626,17 @@ Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | di
 
 Now the only variable we are missing is m (slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
-Remember that slope is "Rise over Run". In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]]. In this race, Cielo travels 50 meters in 21.47 seconds. Which means our slope is [[50]] divided by [[21.47]]. So m is roughly equal to [[2.329]]
+Remember that [__slope__](gloss:line-slope) is "Rise over Run", or "Vertical Change divided by Horizontal Change". In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]]. In this race, Cielo travels 50 meters in 21.47 seconds. Which means our slope is [[50]] divided by [[21.47]]. So m is roughly equal to [[2.329]]
 
     // TODO: Make above prompt accept a fuzzy value for m
 
-Another way to measure the slope is to ask "how many meters does he swim in one second?". Check the graph yourself, and you will see that at a time of 1 second Cielo has traveled [[2.329]] meters.
+---
+
+> id: measure-slope-2
+
+    x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
+
+Another way to measure the slope is to ask "how many meters does he swim in one second?". Check the [graph]() yourself, and you will see that at a time of 1 second Cielo has traveled [[2.329]] meters.
 
 The slope is the same at every point on this graph, because Cielo’s speed [[stayed constant | increased | decreased]] for this race. This is a key feature of linear functions.
 
@@ -632,12 +644,6 @@ Recall that the [__slope__](gloss:line-slope) is the vertical change divided by 
 y=mx+c
 
 f(t)=[[2.35]]t+0
-
-::: column(width=240)
-
-[Cielo race mock-up](https://www.desmos.com/calculator/o3de2a7odh)
-
-:::
 
 Let’s say we want to know how long it took Cielo to swim the first 10 meters. Ten meters into the race, This means we are looking at [f(t)=10](target:1_cieloGraph). The phrase “how long” indicates we are solving for t.
 
