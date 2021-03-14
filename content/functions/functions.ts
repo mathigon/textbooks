@@ -326,7 +326,7 @@ export function timeDistanceGraph($step: Step) {
 export function swimGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.setFunctions((t: number) => t > 21.5 ? 21.5 : t, (t: number) => t > 21.5 ? 50 : 50/21.5*t);
+  $videoGraph.setFunctions((t: number) => t > 21.47 ? 21.47 : t, (t: number) => t > 21.47 ? 50 : 50/21.47*t);
   $videoGraph.setAvatar('/resources/functions/images/cielo_face.png');
 
   const lines = $videoGraph.$$('x-coordinate-system svg .axes line');
