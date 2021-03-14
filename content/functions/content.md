@@ -621,7 +621,7 @@ This means we have two remaining unknown variables: [[m]] and [[c]].
 
     // TODO: Fix targeting of swim-x-axis and swim-y-axis
 
-Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance from the starting block to the opposite end of the pool, measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) goes up to [[50]] meters, which represent the [[distance | time | number of laps]] of the race.
+Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance travelled by Cielo, measured in [[meters]]. We see that the graph [__intercepts__](gloss:intercept) the y-axis at [[0]] meters. Since c is equal to the y-intercept, we can say:
 
 <<<<<<< HEAD
 {.text-center} `y=mx+c`
@@ -632,15 +632,17 @@ Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | di
 `f(t)=mt+`[[0]]
 >>>>>>> y=mx+b quiz
 
-Now the only variable we are missing is m (slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
+---
 
-Remember that [__slope__](gloss:line-slope) is "Rise over Run", or "Vertical Change divided by Horizontal Change". In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]]. In this race, Cielo travels 50 meters in 21.47 seconds. Which means our slope is [[50]] divided by [[21.47]]. So m is roughly equal to [[2.329]]
+> id: measure-slope-2
+
+Now the only variable we are missing is m (slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
     // TODO: Make above prompt accept a fuzzy value for m
 
 ---
 
-> id: measure-slope-2
+> id: measure-slope-3
 
     x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
 
