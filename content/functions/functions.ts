@@ -323,4 +323,8 @@ export function swimGraph($step: Step) {
 
   $videoGraph.setFunctions((t: number) => t > 21.5 ? 21.5 : t, (t: number) => t > 21.5 ? 50 : 50/21.5*t);
   $videoGraph.setAvatar('/resources/functions/images/cielo_face.png');
+
+  const lines = $videoGraph.$$('x-coordinate-system svg .axes line');
+  lines.pop().setAttr('id', 'swim-y-axis');
+  lines.pop().setAttr('id', 'swim-x-axis');
 }
