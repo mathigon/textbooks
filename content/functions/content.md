@@ -501,7 +501,7 @@ The Olympics is full of incredible athletic feats. It’s also full of interesti
 
 ::: column(width=240)
 
-![Ri](https://media.gettyimages.com/photos/derval-orourke-of-ireland-sally-pearson-of-australia-and-brigitte-of-picture-id123295200)
+![Ri](/resources/functions/images/ri_portrait.jpg)
 
 ::: column.grow
 
@@ -599,10 +599,9 @@ César Cielo of Brazil holds the Olympic record for the men’s 50 meter with a 
 
 ::: column(width=240)
 
-![César Cielo](https://c7.alamy.com/comp/2A8DJYK/genova-italy-08-nov-2019-cesar-cielo-filho-brazil-during-trofeo-nicola-sapio-swimming-credit-lpsdanilo-vigoalamy-live-news-2A8DJYK.jpg)
+![César Cielo](/resources/functions/images/cielo_portrait.jpg)
 
 :::
-::: column.grow
 
 What an emotional race for Cielo! He broke the world and olympic records with this swim. The graph shows Cielo’s record-breaking swim. The shape is one we have seen before in [graphing linear functions](/linear-functions/graphing-functions). Recall this graph represents all the ordered pairs matching inputs to outputs. We can use information from the graph to write the function describing Cielo’s swim. Let’s call the function f(t).
 
