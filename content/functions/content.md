@@ -610,7 +610,7 @@ Remember the general form for [__linear function__](gloss:linear-function) like 
 
 This means we need to find two variables from the graph: [[m]] and [[c]].
 
-// TODO: Fix targeting of swim-x-axis and swim-y-axis
+    // TODO: Fix targeting of swim-x-axis and swim-y-axis
 
 Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance from the starting block to the opposite end of the pool measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) goes up to [[50]] meters, which represent the [[distance | time | number of laps]] of the race.
 
