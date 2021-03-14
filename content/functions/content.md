@@ -591,7 +591,7 @@ Let's head over to the pool. We are just in time for the men’s 50 meter freest
 
     x-video-graph
         x-video(src="/resources/functions/images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=640 height=360 controls credit="©NBC")
-        x-coordinate-system(width=640 height=180 x-axis="0,26,5" y-axis="0,51,10" axis-names="Time,Distance")
+        x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance")
 
 ::: column.grow
 
