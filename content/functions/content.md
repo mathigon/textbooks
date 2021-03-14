@@ -620,13 +620,15 @@ Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | di
 {.text-center} `y=mx+c`
 `=> f(t)=mt+[[0]]`
 
-We are only missing slope. In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
+Now the only variable we are missing is m (slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
-    // NOTES
-    // This might work better as an animation to keep the stairs equal distances. We won't have to worry about reducing ratios.
-    // Students can click two points on the graph. These coordinates appear in a x-y table. Dashed lines with the horizontal and vertical measurements appear one unit at a time as though counting the slope. Students can choose between one and five points to see a pattern (slope).
+Remember that slope is "Rise over Run". In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]]. In this race, Cielo travels 50 meters in 21.47 seconds. Which means our slope is [[50]] divided by [[21.47]]. So m is roughly equal to [[2.329]]
 
-As we move from left to right along the line, the vertical distances measure [[-2.35]] meters. The horizontal distances measure [[1]] second. Cielo’s speed [[stayed constant | increased | decreased]] for this race, which is a key feature of linear functions.
+    // TODO: Make above prompt accept a fuzzy value for m
+
+Another way to measure the slope is to ask "how many meters does he swim in one second?". Check the graph yourself, and you will see that at a time of 1 second Cielo has traveled [[2.329]] meters.
+
+The slope is the same at every point on this graph, because Cielo’s speed [[stayed constant | increased | decreased]] for this race. This is a key feature of linear functions.
 
 Recall that the [__slope__](gloss:line-slope) is the vertical change divided by the horizontal change (rise over run). The slope of f(t) is [[2.35]] meters per second.
 y=mx+c
