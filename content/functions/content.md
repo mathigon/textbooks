@@ -610,7 +610,7 @@ Remember the general form for [__linear function__](gloss:linear-function) like 
 
 This means we need to find two variables from the graph: [[m]] and [[c]].
 
-Notice the [horizontal-axis](target:1_xAxis), in this graph shows [[time]] in seconds. The [vertical-axis](target:1_yAxis) is the distance from the starting block to the opposite end of the pool measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) is [[00]] meters, which represent the [[distance | time | number of laps]] of the race.
+Notice the [horizontal-axis](target:1_xAxis) in this graph shows [[time]] in seconds. The [vertical-axis](target:1_yAxis) is the distance from the starting block to the opposite end of the pool measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) is [[00]] meters, which represent the [[distance | time | number of laps]] of the race.
 
 {.text-center} `y=mx+c`  
 `=> f(t)=mt+[[0]]`
