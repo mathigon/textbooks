@@ -521,7 +521,7 @@ There are several things going on here. Move the video back and forth to see how
 First we need to understand what the axes represent. The X axis in this graph is the horizontal **Distance** Ri travels throughout his vault (measured in meters). The Y axis is the vertical **Height** Ri reaches (also in meters). Together these axes tell us every point along Ri's path.
 
     // TODO: Implement +/- ranges for these
-Using this graph, we can see that Ri begins his vault at 25 meters, peaks at ([[27]], [[8]]), and lands at [[29]] meters.
+Using this graph, we can see that Ri begins his vault at 25 meters, peaks at ([[27±0.5]], [[8±0.5]]), and lands at [[29±0.5]] meters.
 
 ---
 
