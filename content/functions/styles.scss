@@ -39,3 +39,20 @@
 #graph-match-relation x-coordinate-system {
   margin: 20px 0;
 }
+
+line.slope-measurement {
+  stroke: @blue;
+  stroke-width: 6;
+  stroke-dasharray: 6 8;
+}
+
+text.slope-measurement {
+  font-size: 18px;
+  text-anchor: center;
+}
+
+circle.slope-measurement {
+  fill: none;
+  stroke: @green;
+  stroke-width: 4;
+}

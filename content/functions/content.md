@@ -631,9 +631,11 @@ Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | di
 
 > id: measure-slope-2
 
-Now the only variable we are missing is m (slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
+Now the only variable we are missing is m, or [__slope__](gloss:line-slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
-Remember that [__slope__](gloss:line-slope) is "Rise over Run", or "Vertical Change divided by Horizontal Change". In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]].
+Remember that slope is "Rise over Run", or "Vertical Change (rise) divided by Horizontal Change (run)". In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]].
+
+    x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
 
 In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] divided by [[21.47]], or (roughly) [[2.329±0.1]]. Now we can fill in m:
 
@@ -647,7 +649,7 @@ In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] d
 
     x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
 
-Another way to measure the slope is to ask "how many meters does he swim in one second?". Check the [graph]() yourself, and you will see that at a time of 1 second Cielo has traveled [[2.329]] meters.
+Another way to measure the slope is to ask "how many meters does he swim in one second?". Check the [graph]() yourself, and you will see that after 1 second Cielo traveled [[2.329±0.1]] meters.
 
 The slope is the same at every point on this graph, because Cielo’s speed [[stayed constant | increased | decreased]] for this race. This is a key feature of linear functions.
 
