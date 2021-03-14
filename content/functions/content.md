@@ -606,16 +606,18 @@ What an emotional race for Cielo! He broke the world and olympic records with th
 Remember the general form for a [__linear function__](gloss:linear-function) like this is y=mx+c, where m is the slope and c is the y-intercept. We replace y with f(t), and we replace x with t.
 
 {.text-center} `y=mx+c`  
-`=> f(t)=m`[[t]]`+c`
+⇓<br>
+`f(t)=m`[[t]]`+c`
 
-This means we need to find two variables from the graph: [[m]] and [[c]].
+This means we have two remaining unknown variables: [[m]] and [[c]].
 
     // TODO: Fix targeting of swim-x-axis and swim-y-axis
 
 Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance from the starting block to the opposite end of the pool measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) goes up to [[50]] meters, which represent the [[distance | time | number of laps]] of the race.
 
 {.text-center} `y=mx+c`  
-`=> f(t)=mt+[[0]]`
+⇓<br>
+`f(t)=mt+`[[0]]
 
 Now the only variable we are missing is m (slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
