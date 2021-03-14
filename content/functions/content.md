@@ -620,7 +620,7 @@ This means we have two remaining unknown variables: [[m]] and [[c]].
 
 Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance travelled by Cielo, measured in [[meters]]. We see that the graph [__intercepts__](gloss:intercept) the y-axis at [[0]] meters. Since c is equal to the y-intercept, we can say:
 
-{.text-center} `y=mx+c`  
+{.text-center} `f(t)=mt+c`  
 ⇓<br>
 `f(t)=mt+`[[0]]
 
@@ -630,7 +630,13 @@ Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | di
 
 Now the only variable we are missing is m (slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
-Remember that [__slope__](gloss:line-slope) is "Rise over Run", or "Vertical Change divided by Horizontal Change". In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]]. In this race, Cielo travels 50 meters in 21.47 seconds. Which means our slope is [[50]] divided by [[21.47]]. So m is roughly equal to [[2.329±0.1]]
+Remember that [__slope__](gloss:line-slope) is "Rise over Run", or "Vertical Change divided by Horizontal Change". In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]].
+
+In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] divided by [[21.47]], or (roughly) [[2.329±0.1]]. Now we can fill in m:
+
+{.text-center} `f(t)=mt+0`  
+⇓<br>
+`f(t)=`[[2.329±0.1]]`t+0`
 
 ---
 
@@ -647,7 +653,7 @@ y=mx+c
 
 f(t)=[[2.35]]t+0
 
-Let’s say we want to know how long it took Cielo to swim the first 10 meters. Ten meters into the race, This means we are looking at [f(t)=10](target:1_cieloGraph). The phrase “how long” indicates we are solving for t.
+Let’s say we want to know how long it took Cielo to swim the first 10 meters. Ten meters into the race, This means we are looking at f(t)=[[10]]. The phrase “how long” indicates we are solving for t.
 
     // NOTE
     // Algebra Flow
