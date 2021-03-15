@@ -618,7 +618,7 @@ This means we have two remaining unknown variables: [[m]] and [[c]].
 
     // TODO: Fix targeting of swim-x-axis and swim-y-axis
 
-Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance travelled by Cielo, measured in [[meters]]. We see that the graph [__intercepts__](gloss:intercept) the y-axis at [[0]] meters. Since c is equal to the y-intercept, we can say:
+Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance travelled by Cielo, measured in [[meters]]. We see that the graph [__intercepts__](gloss:intercept) the y-axis at [[0]] meters. Now we can fill in c, our y-intercept variable:
 
 {.text-center} `f(t)=mt+c`  
 ⇓<br>
@@ -628,7 +628,7 @@ Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | di
 
 > id: measure-slope-2
 
-Now the only variable we are missing is m, or [__slope__](gloss:line-slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
+Now the only variable we are missing is m, our [__slope__](gloss:line-slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
 Remember that slope is "Rise over Run", meaning Vertical Change (rise) divided by Horizontal Change (run). In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]].
 
@@ -638,7 +638,7 @@ In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] d
 
 {.text-center} `f(t)=mt+0`  
 ⇓<br>
-`f(t)=`[[2.329±0.1]]`t+0`
+`f(t)=`[[2.33±0.01]]`t+0`
 
 ---
 
