@@ -588,7 +588,7 @@ Let's head over to the pool. We are just in time for the men’s 50 meter freest
 
     x-video-graph(style="display: flex; align-items: center;")
         x-video(src="/resources/functions/images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=640 height=360 controls credit="©NBC")
-        x-coordinate-system(width=172 height=400 x-axis="0,21.5,10" y-axis="0,51,10" axis-names="Time,Distance" style="margin-left: 20px;")
+        x-coordinate-system(width=180 height=400 x-axis="0,21.5,10" y-axis="0,51,10" axis-names="Time,Distance" style="margin-left: 20px;")
 
 ::: column(width=240)
 
@@ -616,7 +616,7 @@ This means we have two remaining unknown variables: [[m]] and [[c]].
 
 ::: column(width=180)
 
-    x-coordinate-system(width=150 height=350 x-axis="0,21.5,10" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
+    x-coordinate-system(width=170 height=350 x-axis="0,21.5,10" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
 
     // TODO: Fix targeting of swim-x-axis and swim-y-axis
 
@@ -650,7 +650,7 @@ In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] d
 
 ::: column(width=180)
 
-    x-coordinate-system(width=150 height=350 x-axis="0,21.5,10" y-axis="0,51,10" fn="x*50/21.47")
+    x-coordinate-system(width=170 height=350 x-axis="0,21.5,10" y-axis="0,51,10" fn="x*50/21.47")
 
     // TODO: Is there a way to reverse column order? I want this to display right of text on wide screens, but above text on narrow.
 
@@ -662,7 +662,7 @@ In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] d
 
 ::: column(width=180)
 
-    x-coordinate-system#slope-graph-3(width=150 height=350 x-axis="0,21.5,10" y-axis="0,51,10" fn="x*50/21.47" showRiseRun="no")
+    x-coordinate-system#slope-graph-3(width=170 height=350 x-axis="0,21.5,10" y-axis="0,51,10" fn="x*50/21.47" showRiseRun="no")
 
 ::: column.grow
 
