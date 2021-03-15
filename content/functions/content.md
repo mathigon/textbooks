@@ -602,7 +602,7 @@ César Cielo of Brazil holds the Olympic record for the men’s 50 meter with a 
 
 What an emotional race for Cielo! He broke the world and olympic records with this swim. The graph shows Cielo’s record-breaking swim. The shape is one we have seen before in [graphing linear functions](/linear-functions/graphing-functions). Recall this graph represents all the ordered pairs matching inputs to outputs. We can use information from the graph to write the function describing Cielo’s swim. Let’s call the function f(t).
 
-Remember the general form for a [__linear function__](gloss:linear-function) like this is y=mx+c, where m is the slope and c is the y-intercept. We replace y with f(t), and we replace x with t:
+Remember the general form for a [__linear function__](gloss:linear-function) like this is y=mx+c, where m is the slope and c is the y-intercept. Our function f(t) has the same form, but instead of x we use t:
 
 {.text-center} `y=mx+c`  
 ⇓<br>
@@ -634,7 +634,7 @@ Remember that slope is "Rise over Run", meaning Vertical Change (rise) divided b
 
     x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
 
-In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] divided by [[21.47]], or (roughly) [[2.329±0.1]]. Now we can fill in m:
+In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] divided by 21.47, or (roughly) 2.33. Now we can fill in our slope variable, m:
 
 {.text-center} `f(t)=mt+0`  
 ⇓<br>
