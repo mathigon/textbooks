@@ -340,7 +340,7 @@ function evaluateSwimGraph(t: number) {
   return t*50/21.47;
 }
 
-function drawSlopeMeasurements($graph: CoordinateSystem, x0: number, x1: number) {
+function drawSlopeMeasurements($graph: CoordinateSystem, x0: number, x1: number, showRiseRun: boolean = true) {
   const $svg = $graph.$svg as SVGParentView;
   const $overlay = $svg.$('.overlay')!;
   const $labels = $svg.$('.labels')!;
@@ -363,7 +363,7 @@ function drawSlopeMeasurements($graph: CoordinateSystem, x0: number, x1: number)
   const runLine = $N('line', {class: 'slope-measurement', id: 'run-line', x1: position0.x, x2: position2.x, y1: position0.y, y2: position2.y}, $overlay);
   const riseLine = $N('line', {class: 'slope-measurement', id: 'rise-line', x1: position1.x, x2: position2.x, y1: position1.y, y2: position2.y}, $overlay);
 
-  if ($graph.attr('showRiseRun') !== 'no') {
+  if (showRiseRun) {
     const runText = $N('text', {class: 'slope-measurement', x: (position0.x+position2.x)/2, y: (position0.y+position2.y)/2-8, 'text-anchor': 'middle', 'alignment-baseline': 'bottom'}, $labels);
     runText.text = 'Run: '+Math.round((point1.x-point0.x)*10)/10;
 
@@ -381,7 +381,7 @@ export function measureSlope2($step: Step) {
 export function measureSlope3($step: Step) {
   const $graph = $step.$('x-coordinate-system')! as CoordinateSystem;
 
-  drawSlopeMeasurements($graph, 0, 1);
+  drawSlopeMeasurements($graph, 0, 1, false);
 }
 
 export function swimSystem($step: Step) {
