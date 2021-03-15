@@ -10,10 +10,12 @@ import {Step} from '../../shared/types';
 
 import template from './gauss-solver.pug';
 
+// TODO: function (px) to calculate "20+40*inRow1", and add output to the model
 type Model = {
   input: number[][], output: number[][], op: string, size: number,
   inRow1: number, inRow2: number, outRow1: number, outRow2: number,
-  factorString: string, factor: number};
+  factorString: string, factor: number
+};
 
 @register('x-gauss-solver', {template})
 export class GaussSolver extends CustomElementView {
@@ -23,22 +25,27 @@ export class GaussSolver extends CustomElementView {
   $outputCells!: ElementView[][]; // Array of all cells in the right matrix.
   $step!: Step;
   inputStack!: number[][][];
+  $matrices!: ElementView[];
 
   ready() {
+    // TODO: instead of decimals, display fractions (now? or later?)
+    // TODO: use "parseInput" instead of Expression.parse
+    // TODO: use "collision detection" to prevent same row from being highlighted
     const input = Expression.parse(this.attr('matrix'))
         .evaluate({'[': (...args: number[]) => [...args] as any}) as unknown as number[][];
 
+    // size is num rows
     this.size = input.length;
     this.bindModel(observe({input, output: this.copyMatrix(input), size: this.size, inRow1: 0, inRow2: 1, outRow1: 0, outRow2: 1, factor: 1, factorString: '1'}));
 
     // Set up the input and output matrices
-    const $matrices = this.$$('.matrix');
-    for (const $m of $matrices) $m.css('grid-template-columns', `repeat(${this.size + 1}, 36px)`);
+    this.$matrices = this.$$('.matrix') as ElementView[];
+    for (const $m of this.$matrices) $m.css('grid-template-columns', `repeat(${this.size + 1}, 36px)`);
 
     this.$inputCells = tabulate2D((i, j) =>
-      $N('div', {text: input[i][j]}, $matrices[0]), this.size, this.size + 1
+      $N('div', {text: input[i][j]}, this.$matrices[0]), this.size, this.size + 1
     );
-    this.$outputCells = tabulate2D(() => $N('div', {text: 0}, $matrices[1]), this.size, this.size + 1);
+    this.$outputCells = tabulate2D(() => $N('div', {text: 0}, this.$matrices[1]), this.size, this.size + 1);
 
     this.inputStack = [this.copyMatrix(input)]; // pushes copy of input onto stack
 
@@ -56,6 +63,7 @@ export class GaussSolver extends CustomElementView {
           // Check that this row is not equal to the other input
           // (I removed this feature because it makes it difficult w/ 2x2 matrix to choose which one you want to multiply)
           /* if (this.model.op === 'multiply' || this.model[inRows[i === 0 ? 1 : 0]] !== row)*/
+          // TODO: here is where row collision detection would be
           this.model[key] = row;
           console.log(`Slide: ${i}, key=${key}, row=${row}`);
         }
@@ -68,7 +76,6 @@ export class GaussSolver extends CustomElementView {
     this.model.watch((state) => {
       console.log('update state');
       // FIXME: @philipp -- without this below log statement, the model won't update when inRow2 is changed during add/swap (blue arrow)
-      console.log(`inRow2=${this.model.inRow2}`);
       for (const [i, row] of this.$outputCells.entries()) {
         for (const [j, _val] of row.entries()) {
           this.handleOperation(state, i, j);
@@ -87,7 +94,7 @@ export class GaussSolver extends CustomElementView {
       let expr;
       let value;
       try {
-        // FIXME: @philipp this might throw an error, Not sure how else to handle it.
+        // TODO: this is where the parseInput should go
         expr = Expression.parse(state.factorString);
         value = expr.evaluate() as number;
         this.model.factor = value;
@@ -109,6 +116,9 @@ export class GaussSolver extends CustomElementView {
   }
 
   private handleOperation(state: Model, i: number, j: number) {
+    // state.inRow2 is accessed here because "multiply" is switched on the first call,
+    // and the model only registers what is needed on the first call
+    const _inRow2 = state.inRow2;
     switch (state.op) {
       case 'multiply':
         this.handleMultiply(state, i, j);
@@ -117,7 +127,7 @@ export class GaussSolver extends CustomElementView {
         this.handleAdd(state, i, j);
         break;
       case 'swap':
-        this.model.outRow1 = state.inRow2;
+        this.model.outRow1 = _inRow2;
         this.model.outRow2 = state.inRow1;
         this.handleSwap(state, i, j);
         break;
@@ -174,6 +184,13 @@ export class GaussSolver extends CustomElementView {
         this.$outputCells[i][j].text = '' + this.model.output[i][j];
       }
     }
+
+    // TODO: here is where the animation goes
+    // TODO: fade out all elements except for the output matrix
+    // TODO: also do this with other boxes
+    // TODO: slide the output matrix to the left, to replace input matrix
+    // TODO: Input box reverts to default (Multiply by 1)
+    this.$matrices[0].exit('fade');
     this.inputStack.push(this.copyMatrix(this.model.input));
 
     if (this.checkForSolvedIdentity()) {
@@ -181,6 +198,7 @@ export class GaussSolver extends CustomElementView {
     }
   }
 
+  // TODO: replace this with a "Reset" Button
   /**
    * Apply the Undo button
    */
