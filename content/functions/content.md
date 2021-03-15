@@ -719,9 +719,23 @@ Now let's take a look at the top four finishers during this race:
 
 :::
 
+{.text-center#time-variable-text} `t=0`
+    
+    x-slider#swim-slider(steps=100)
+
+    x-gesture(target="#swim-slider .bar .knob" slide="100,0")
+
 All the lines cross the y-axis at [[0]] meters because this is where the race begins. At first glance, we notice the graphs seem almost on top of each other. This must indicate that the swimmers’ speeds are similar.
 
-Say we want to figure out how many seconds Cielo is ahead of Leveaux after 10 meters. We already know Cielo swam this distance in 4.25 seconds. We don’t know the function rule for l(t), Leveaux’s swim, but we do have the graph. Find the time, t, where l(t) = [[10]].
+::: column(width=220)
+
+    x-coordinate-system#leveaux-graph(width=200 height=260 x-axis="0,25,10" y-axis="0,51,10" axis-names="Time,Distance" fn="2.19x")
+
+::: column.grow
+
+Say we want to figure out how many seconds Cielo is ahead of Leveaux after 10 meters. We already know Cielo swam this distance in 4.33 seconds. We don’t know the function rule for l(t), Leveaux’s swim, but we do have the graph. Find the time, t, where l(t) = [[10]].
+
+:::
 
     // NOTES
     // Student clicks on l(t) to make it the active function. Student clicks on 10 on the y-axis. Dotted line from y-axis to l(t) appears. Dotted line from l(t) at 10 meters to corresponding t-value appears.
