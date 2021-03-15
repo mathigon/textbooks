@@ -681,18 +681,16 @@ The slope is the same at every point on this graph, because Cielo’s speed [[st
 
 > id: calculate-swim-time
 
+Now we have a complete linear function: `f(t)=2.33t+0`
 
-Let’s say we want to know how long it took Cielo to swim the first 10 meters. Ten meters into the race, This means we are looking at f(t)=[[10]]. The phrase “how long” indicates we are solving for t.
+What can we do with this? Well, let’s say we want to know how long it took Cielo to swim the first 10 meters. `f(t)` is the [[distance | time | speed]] Cielo swims, so at 10 meters `f(t)=`[[10]]. We need to solve for t, the number of seconds it takes to reach that point:
 
-    // NOTE
-    // Algebra Flow
+{.text-center} `f(t)=2.33t+0`  
+[[10]]`=2.33t`  
+`10/(2.33)=`[[t]]  
+[[4.33±0.01]]`=t`
 
-{.text-center} `f(t)=2.35t`  
-`10=2.35t`  
-`(10)/(2.35)=t`  
-`4.25=t`
-
-Cielo swims the first 10 meters in just over [[4.1+-0.1]] seconds.
+There you have it; Cielo swims the first 10 meters in about [[4.33±0.01]] seconds.
 
 ---
 
