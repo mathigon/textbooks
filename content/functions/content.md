@@ -711,9 +711,9 @@ Now let's take a look at the top four finishers during this race:
 | Alain Bernard | | {.green} b(t) |
 | Ashley Callus | | {.purple} c(t) |
 
-::: column(width=160)
+::: column(width=220)
 
-    x-coordinate-system#multi-swimmer-graph(width=140 height=260 x-axis="0,25,10" y-axis="0,51,10" axis-names="Time,Distance")
+    x-coordinate-system#multi-swimmer-graph(width=200 height=260 x-axis="0,25,10" y-axis="0,51,10" axis-names="Time,Distance")
 
 :::
 
