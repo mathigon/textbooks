@@ -9,7 +9,7 @@ import { Relation } from '../shared/components/relation';
 import '../shared/components/video-graph';
 import { VideoGraph } from '../shared/components/relation';
 import {Point} from '@mathigon/euclid';
-import {CoordinateSystem, Geopad, GeoPoint, Step, Video} from '../shared/types';
+import {CoordinateSystem, Geopad, GeoPoint, Slider, Step, Video} from '../shared/types';
 import { $N, animate, ease, ElementView, pointerOver, SVGParentView, svgPointerPosn } from '@mathigon/boost';
 import { Burst } from '../shared/components/burst';
 import { last, stringDistance } from '@mathigon/core';
@@ -388,4 +388,14 @@ export function swimSystem($step: Step) {
     (t: number) => 2.15*t,
     (t: number) => 2.06*t,
   );
+
+  console.log($step.data);
+
+  const $slider = $step.$('x-slider')! as Slider;
+  const $timeText = $step.$('#time-variable-text .sentence .math mn')!;
+
+  $slider.on('move', (n: number) => {
+    const s = 25*n/100;
+    $timeText.text = (Math.round(s*100)/100).toString();
+  })
 }
