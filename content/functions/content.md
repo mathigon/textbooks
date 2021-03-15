@@ -529,6 +529,8 @@ Using this graph, we can see that Ri begins his vault at 25 meters, peaks at ([[
 
 Let’s build some intuition for what graphs of different events look like. Match each event to a graph.
 
+    // TODO: Make completing this a required goal for this section
+
     x-relation#graph-match-relation(randomize="true" requireMatch="true")
       .item(slot="domain" name="vault" match="vault-graph") Vault
         x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=320 height=180 controls credit="©NBC")

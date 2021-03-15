@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import { Step, Video } from '@mathigon/studio';
+import { Step, Video, Slider } from '@mathigon/studio';
 import { Point, SimplePoint } from '@mathigon/euclid';
 import { CoordinateSystem, Geopad, GeoPoint } from '../shared/types';
 import { $N, animate, ease, ElementView, pointerOver, SVGParentView, svgPointerPosn } from '@mathigon/boost';
@@ -393,4 +393,14 @@ export function swimSystem($step: Step) {
     (t: number) => 2.15*t,
     (t: number) => 2.06*t,
   );
+
+  console.log($step.data);
+
+  const $slider = $step.$('x-slider')! as Slider;
+  const $timeText = $step.$('#time-variable-text .sentence .math mn')!;
+
+  $slider.on('move', (n: number) => {
+    const s = 25*n/100;
+    $timeText.text = (Math.round(s*100)/100).toString();
+  })
 }
