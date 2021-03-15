@@ -603,7 +603,7 @@ César Cielo of Brazil holds the Olympic record for the men’s 50 meter with a 
 
 :::
 
-What an emotional race for Cielo! He broke the world and olympic records with this swim. The graph shows Cielo’s record-breaking swim. The shape is one we have seen before in [graphing linear functions](/linear-functions/graphing-functions). Recall this graph represents all the ordered pairs matching inputs to outputs. We can use information from the graph to write the function describing Cielo’s swim. Let’s call the function f(t).
+What an emotional race for Cielo! He broke the world and olympic records with this swim. The graph shows Cielo’s record-breaking swim. The shape is one we have seen before in [graphing linear functions](/linear-functions/graphing-functions). Remember that every point on this graph represents an ordered pair: one input, and one output. We can use information from the graph to write the function describing Cielo’s swim. Let’s call the function f(t).
 
 Remember the general form for a [__linear function__](gloss:linear-function) like this is y=mx+c, where m is the slope and c is the y-intercept. Our function f(t) has the same form, but we replace x with t:
 
