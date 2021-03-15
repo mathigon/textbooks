@@ -677,6 +677,9 @@ The slope is the same at every point on this graph, because Cielo’s speed [[st
 
 :::
 
+---
+
+> id: calculate-swim-time
 
 
 Let’s say we want to know how long it took Cielo to swim the first 10 meters. Ten meters into the race, This means we are looking at f(t)=[[10]]. The phrase “how long” indicates we are solving for t.
