@@ -636,9 +636,9 @@ We see that the graph [__intercepts__](gloss:intercept) the y-axis at [[0]] mete
 
 > id: measure-slope-2
 
-::: column.grow
-
 Now the only variable we are missing is m, our [__slope__](gloss:line-slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to measure this?
+
+::: column.grow
 
 Remember that slope is "Rise over Run", meaning Vertical Change (rise) divided by Horizontal Change (run). In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]].
 
