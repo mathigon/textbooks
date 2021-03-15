@@ -690,6 +690,8 @@ What can we do with this? Well, let’s say we want to know how long it took Cie
 `10/(2.33)=`[[t]]  
 [[4.3±0.01]]`=t`
 
+    // TODO: Ask if we should assume students have access to a calculator
+
 There you have it; Cielo swims the first 10 meters in about [[4.3±0.01]] seconds.
 
 ---
