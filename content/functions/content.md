@@ -633,7 +633,7 @@ Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | di
 
 Now the only variable we are missing is m, or [__slope__](gloss:line-slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
 
-Remember that slope is "Rise over Run", or "Vertical Change (rise) divided by Horizontal Change (run)". In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]].
+Remember that slope is "Rise over Run", meaning Vertical Change (rise) divided by Horizontal Change (run). In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]].
 
     x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
 
