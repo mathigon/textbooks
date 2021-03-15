@@ -383,3 +383,14 @@ export function measureSlope3($step: Step) {
 
   drawSlopeMeasurements($graph, 0, 1);
 }
+
+export function swimSystem($step: Step) {
+  const $graph = $step.$('x-coordinate-system')! as CoordinateSystem;
+
+  $graph.setFunctions(
+    (t: number) => 2.33*t,
+    (t: number) => 2.19*t,
+    (t: number) => 2.15*t,
+    (t: number) => 2.06*t,
+  );
+}

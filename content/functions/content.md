@@ -682,7 +682,7 @@ The slope is the same at every point on this graph, because Cielo’s speed [[st
 
 ---
 
-> id: calculate-swim-time
+> id: swim-algebra
 
 Now we have a complete linear function: `f(t)=2.33t+0`
 
@@ -697,22 +697,26 @@ There you have it; Cielo swims the first 10 meters in about [[4.33±0.01]] secon
 
 ---
 
-Take a look at the top four finishers during this race:
+> id: swim-system
+
+Now let's take a look at the top four finishers during this race:
+
+::: column.grow
 
     // NOTES
     // Lines are labeled with the swimmer’s name and the function name. Moving the cursor along the active line show crosshairs extending to the axes. Students can also select a line, then select a value along one of the axes to lock the crosshairs to that value.
-| Swimmer | | Function Name | | Color |
-| :------ | | :------------ | | :---- |
-| Cesar Cielo Filho | | f(t) | | green |
-| Amaury Leveaux | | l(t) | | purple |
-| Alain Bernard | | b(t) | | blue |
-| Ashley Callus | | c(t) | | red |
+| Swimmer | | Function Name |
+| :------ | | :------------ |
+| Cesar Cielo Filho | | {.red} f(t) |
+| Amaury Leveaux | | {.blue} l(t) |
+| Alain Bernard | | {.green} b(t) |
+| Ashley Callus | | {.purple} c(t) |
 
-::: column(width=240)
+::: column(width=160)
 
-[50 free mock-up](https://www.desmos.com/calculator/ahx1i7lkau)
+    x-coordinate-system#multi-swimmer-graph(width=140 height=260 x-axis="0,25,10" y-axis="0,51,10" axis-names="Time,Distance")
 
-::: column.grow
+:::
 
 All the lines cross the y-axis at [[0]] meters because this is the distance of the race. At first glance, we notice the graphs seem almost on top of each other. This must indicate that the swimmers’ speeds are similar.
 

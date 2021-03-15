@@ -55,3 +55,26 @@ circle.slope-measurement {
   stroke: none;
   fill: @green;
 }
+
+#multi-swimmer-graph svg .plot {
+  g:nth-child(1) {
+    path {
+      stroke: @red;
+    }
+  }
+  g:nth-child(2) {
+    path {
+      stroke: @blue;
+    }
+  }
+  g:nth-child(3) {
+    path {
+      stroke: @green;
+    }
+  }
+  g:nth-child(4) {
+    path {
+      stroke: @purple;
+    }
+  }
+}
