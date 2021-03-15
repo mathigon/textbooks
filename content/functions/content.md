@@ -718,7 +718,7 @@ Now let's take a look at the top four finishers during this race:
 
 :::
 
-All the lines cross the y-axis at [[0]] meters because this is the distance of the race. At first glance, we notice the graphs seem almost on top of each other. This must indicate that the swimmers’ speeds are similar.
+All the lines cross the y-axis at [[0]] meters because this is where the race begins. At first glance, we notice the graphs seem almost on top of each other. This must indicate that the swimmers’ speeds are similar.
 
 Say we want to figure out how many seconds Cielo is ahead of Leveaux after 10 meters. We already know Cielo swam this distance in 4.25 seconds. We don’t know the function rule for l(t), Leveaux’s swim, but we do have the graph. Find the time, t, where l(t) = [[10]].
 
