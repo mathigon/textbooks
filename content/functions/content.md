@@ -691,9 +691,9 @@ What can we do with this? Well, let’s say we want to know how long it took Cie
 {.text-center} `f(t)=2.33t+0`  
 [[10]]`=2.33t`  
 `10/(2.33)=`[[t]]  
-[[4.33±0.01]]`=t`
+[[4.3±0.01]]`=t`
 
-There you have it; Cielo swims the first 10 meters in about [[4.33±0.01]] seconds.
+There you have it; Cielo swims the first 10 meters in about [[4.3±0.01]] seconds.
 
 ---
 
