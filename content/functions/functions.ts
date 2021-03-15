@@ -351,18 +351,20 @@ function drawSlopeMeasurements($graph: CoordinateSystem, x0: number, x1: number)
   const position1 = $graph.toViewportCoords(point1);
   const position2 = $graph.toViewportCoords(point2);
 
-  const runLine = $overlay.$('#run-line') || $N('line', {class: 'slope-measurement', id: 'run-line', x1: position0.x, x2: position2.x, y1: position0.y, y2: position2.y}, $overlay);
-  const riseLine = $overlay.$('#rise-line') || $N('line', {class: 'slope-measurement', id: 'rise-line', x1: position1.x, x2: position2.x, y1: position1.y, y2: position2.y}, $overlay);
-
   const circle0 = $N('circle', {class: 'slope-measurement', id: 'circle-0', cx: position0.x, cy: position0.y, r: 4}, $overlay);
   const circle1 = $N('circle', {class: 'slope-measurement', id: 'circle-1', cx: position1.x, cy: position1.y, r: 4}, $overlay);
   const circle2 = $N('circle', {class: 'slope-measurement', id: 'circle-2', cx: position2.x, cy: position2.y, r: 4}, $overlay);
 
-  const runText = $overlay.$('#run-text') || $N('text', {class: 'slope-measurement', x: (position0.x+position2.x)/2, y: (position0.y+position2.y)/2+8, 'text-anchor': 'middle', 'alignment-baseline': 'hanging'}, $labels);
-  runText.text = 'Run: '+Math.round((point1.x-point0.x)*10)/10;
+  const runLine = $N('line', {class: 'slope-measurement', id: 'run-line', x1: position0.x, x2: position2.x, y1: position0.y, y2: position2.y}, $overlay);
+  const riseLine = $N('line', {class: 'slope-measurement', id: 'rise-line', x1: position1.x, x2: position2.x, y1: position1.y, y2: position2.y}, $overlay);
 
-  const riseText = $overlay.$('#run-text') || $N('text', {class: 'slope-measurement', x: (position1.x+position2.x)/2+8, y: (position1.y+position2.y)/2, 'text-anchor': 'start', 'alignment-baseline': 'middle'}, $labels);
-  riseText.text = 'Rise: '+Math.round((point1.y-point0.y)*10)/10;
+  if ($graph.attr('showRiseRun') !== 'no') {
+    const runText = $overlay.$('#run-text') || $N('text', {class: 'slope-measurement', x: (position0.x+position2.x)/2, y: (position0.y+position2.y)/2-8, 'text-anchor': 'middle', 'alignment-baseline': 'bottom'}, $labels);
+    runText.text = 'Run: '+Math.round((point1.x-point0.x)*10)/10;
+
+    const riseText = $overlay.$('#run-text') || $N('text', {class: 'slope-measurement', x: (position1.x+position2.x)/2+8, y: (position1.y+position2.y)/2, 'text-anchor': 'start', 'alignment-baseline': 'middle'}, $labels);
+    riseText.text = 'Rise: '+Math.round((point1.y-point0.y)*10)/10;
+  }
 }
 
 export function measureSlope2($step: Step) {

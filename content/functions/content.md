@@ -586,21 +586,21 @@ But again, we can learn new things about Ri's vault. In the first few seconds, w
 
 Let's head over to the pool. We are just in time for the men’s 50 meter freestyle finals! Keep a close eye on César Cielo Filho of Brazil:
 
-    x-video-graph
+    x-video-graph(style="display: flex; align-items: center;")
         x-video(src="/resources/functions/images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=640 height=360 controls credit="©NBC")
-        x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance")
-
-::: column.grow
-
-César Cielo of Brazil holds the Olympic record for the men’s 50 meter with a time of 21.47 seconds.
+        x-coordinate-system(width=172 height=400 x-axis="0,21.5,10" y-axis="0,51,10" axis-names="Time,Distance" style="margin-left: 20px;")
 
 ::: column(width=240)
 
 ![César Cielo](/resources/functions/images/cielo_portrait.jpg)
 
+::: column.grow
+
+What an emotional race for Cielo! He broke the world and olympic records with a time of 21.47 seconds. The graph shows Cielo’s record-breaking swim. The shape is one we have seen before in [graphing linear functions](/linear-functions/graphing-functions). Remember that every point on this graph represents an ordered pair: one input, and one output.
+
 :::
 
-What an emotional race for Cielo! He broke the world and olympic records with this swim. The graph shows Cielo’s record-breaking swim. The shape is one we have seen before in [graphing linear functions](/linear-functions/graphing-functions). Remember that every point on this graph represents an ordered pair: one input, and one output. We can use information from the graph to write the function describing Cielo’s swim. Let’s call the function f(t).
+We can use information from the graph to write the function describing Cielo’s swim. Let’s call the function f(t).
 
 Remember the general form for a [__linear function__](gloss:linear-function) like this is y=mx+c, where m is the slope and c is the y-intercept. Our function f(t) has the same form, but we replace x with t:
 
@@ -614,25 +614,33 @@ This means we have two remaining unknown variables: [[m]] and [[c]].
 
 > id: measure-slope-1
 
-    x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
+::: column(width=180)
+
+    x-coordinate-system(width=150 height=350 x-axis="0,21.5,10" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
 
     // TODO: Fix targeting of swim-x-axis and swim-y-axis
 
-Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance travelled by Cielo, measured in [[meters]]. We see that the graph [__intercepts__](gloss:intercept) the y-axis at [[0]] meters. Now we can fill in c, our y-intercept variable:
+::: column.grow
+
+Notice the [horizontal-axis](target:swim-x-axis) in this graph shows [[time | distance | speed]] in seconds. The [vertical-axis](target:swim-y-axis) is the distance travelled by Cielo, measured in [[meters]].
+
+We see that the graph [__intercepts__](gloss:intercept) the y-axis at [[0]] meters. Now we can fill in c, our y-intercept variable:
 
 {.text-center} `f(t)=mt+c`  
 ⇓<br>
 `f(t)=mt+`[[0]]
 
+:::
+
 ---
 
 > id: measure-slope-2
 
-Now the only variable we are missing is m, our [__slope__](gloss:line-slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
+::: column.grow
+
+Now the only variable we are missing is m, our [__slope__](gloss:line-slope). In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to measure this?
 
 Remember that slope is "Rise over Run", meaning Vertical Change (rise) divided by Horizontal Change (run). In this case, that means [[distance | time | speed]] divided by [[time | distance | speed]].
-
-    x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
 
 In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] divided by 21.47, or (roughly) 2.33. Now we can fill in our slope variable, m:
 
@@ -640,15 +648,34 @@ In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] d
 ⇓<br>
 `f(t)=`[[2.33±0.01]]`t+0`
 
+::: column(width=180)
+
+    x-coordinate-system(width=150 height=350 x-axis="0,21.5,10" y-axis="0,51,10" fn="x*50/21.47")
+
+    // TODO: Is there a way to reverse column order? I want this to display right of text on wide screens, but above text on narrow.
+
+:::
+
 ---
 
 > id: measure-slope-3
 
-    x-coordinate-system(width=640 height=180 x-axis="0,21.5,5" y-axis="0,51,10" axis-names="Time,Distance" fn="x*50/21.47")
+::: column(width=180)
 
-Another way to measure the slope is to ask "how many meters does he swim in one second?". Check the [graph]() yourself, and you will see that after 1 second Cielo traveled [[2.329±0.1]] meters.
+    x-coordinate-system#slope-graph-3(width=150 height=350 x-axis="0,21.5,10" y-axis="0,51,10" fn="x*50/21.47" showRiseRun="no")
+
+::: column.grow
+
+    // TODO: Can I `align-items: center;` this column group?
+
+Another way to measure the slope is to ask "how many meters does Cielo swim in one second?"
+
+    // TODO: Fix targeting!
+Check the [{.red} graph](target:#slope-graph-3) yourself; in a single second, the graph "rises" [[2.33±0.03]] meters and "runs" [[1]] second. This gives us a slope of [[2.33±0.03]]
 
 The slope is the same at every point on this graph, because Cielo’s speed [[stayed constant | increased | decreased]] for this race. This is a key feature of linear functions.
+
+:::
 
 Recall that the [__slope__](gloss:line-slope) is the vertical change divided by the horizontal change (rise over run). The slope of f(t) is [[2.35]] meters per second.
 y=mx+c
