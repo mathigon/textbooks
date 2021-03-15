@@ -359,10 +359,10 @@ function drawSlopeMeasurements($graph: CoordinateSystem, x0: number, x1: number)
   const riseLine = $N('line', {class: 'slope-measurement', id: 'rise-line', x1: position1.x, x2: position2.x, y1: position1.y, y2: position2.y}, $overlay);
 
   if ($graph.attr('showRiseRun') !== 'no') {
-    const runText = $overlay.$('#run-text') || $N('text', {class: 'slope-measurement', x: (position0.x+position2.x)/2, y: (position0.y+position2.y)/2-8, 'text-anchor': 'middle', 'alignment-baseline': 'bottom'}, $labels);
+    const runText = $N('text', {class: 'slope-measurement', x: (position0.x+position2.x)/2, y: (position0.y+position2.y)/2-8, 'text-anchor': 'middle', 'alignment-baseline': 'bottom'}, $labels);
     runText.text = 'Run: '+Math.round((point1.x-point0.x)*10)/10;
 
-    const riseText = $overlay.$('#run-text') || $N('text', {class: 'slope-measurement', x: (position1.x+position2.x)/2+8, y: (position1.y+position2.y)/2, 'text-anchor': 'start', 'alignment-baseline': 'middle'}, $labels);
+    const riseText = $N('text', {class: 'slope-measurement', x: (position1.x+position2.x)/2+8, y: (position1.y+position2.y)/2, 'text-anchor': 'start', 'alignment-baseline': 'middle'}, $labels);
     riseText.text = 'Rise: '+Math.round((point1.y-point0.y)*10)/10;
   }
 }
