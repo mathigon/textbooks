@@ -662,7 +662,7 @@ In this race, Cielo travels 50 meters in 21.47 seconds. So our slope is [[50]] d
 
 ::: column(width=180)
 
-    x-coordinate-system#slope-graph-3(width=170 height=350 x-axis="0,21.5,10" y-axis="0,51,10" fn="x*50/21.47" showRiseRun="no")
+    x-coordinate-system#slope-graph-3(width=170 height=350 x-axis="0,21.5,10" y-axis="0,51,10" fn="x*50/21.47")
 
 ::: column.grow
 
