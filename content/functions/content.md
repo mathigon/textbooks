@@ -677,10 +677,7 @@ The slope is the same at every point on this graph, because Cielo’s speed [[st
 
 :::
 
-Recall that the [__slope__](gloss:line-slope) is the vertical change divided by the horizontal change (rise over run). The slope of f(t) is [[2.35]] meters per second.
-y=mx+c
 
-f(t)=[[2.35]]t+0
 
 Let’s say we want to know how long it took Cielo to swim the first 10 meters. Ten meters into the race, This means we are looking at f(t)=[[10]]. The phrase “how long” indicates we are solving for t.
 
