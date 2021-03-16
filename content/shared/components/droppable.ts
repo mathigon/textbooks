@@ -1,7 +1,6 @@
 import {$html, Browser, ElementView, slide, SVGParentView} from '@mathigon/boost';
 import {applyDefaults, EventTarget} from '@mathigon/core';
 import {Bounds, Point} from '@mathigon/euclid';
-import {isBetween} from '@mathigon/fermat';
 
 interface DraggableOptions {
   moveX?: boolean;  // Whether it is draggable along the x-axis.
@@ -49,7 +48,7 @@ export class DropDraggable extends EventTarget {
         if (this.disabled) return;
         this.setPosition(startPosn!.x + posn.x - start.x,
                          startPosn!.y + posn.y - start.y);
-        this.trigger('drag', [this.position, posn]);
+        this.trigger('drag', [this.position, posn]); // pass obj instead of tuple
       },
       end: (last, start) => {
         if (this.disabled) return;
@@ -118,12 +117,7 @@ export class DropDraggable extends EventTarget {
 
 interface DroppableOptions extends DraggableOptions {
   resetOnMiss?: boolean;
-  targets?: ElementView[];
-}
-
-function contains(bounds: DOMRect, posn: Point) {
-  return isBetween(posn.x, bounds.left, bounds.left + bounds.width) &&
-         isBetween(posn.y, bounds.top, bounds.top + bounds.height);
+  $targets?: ElementView[];
 }
 
 type HoverData =
@@ -166,9 +160,9 @@ export class Droppable extends DropDraggable {
       let overTarget = false;
       const prevTarget = this.over.tag == 'NonTarget' ? undefined : this.over.$el;
 
-      if (this.options.targets != undefined) {
-        for (const $target of this.options.targets) {
-          if (contains($target.bounds, pointerPos)) {
+      if (this.options.$targets != undefined) {
+        for (const $target of this.options.$targets) {
+          if ($target.boundsRect.contains(pointerPos)) {
             overTarget = true;
             if (prevTarget != $target) {
               /**
@@ -200,9 +194,9 @@ export class Droppable extends DropDraggable {
 
       let droppedOn: ElementView | undefined;
 
-      if (this.options.targets != undefined) {
-        for (const $target of this.options.targets) {
-          if (contains($target.bounds, this.pointerPos)) {
+      if (this.options.$targets != undefined) {
+        for (const $target of this.options.$targets) {
+          if ($target.boundsRect.contains(this.pointerPos)) {
             /**
              * Fires when the user releases the pointer while over a 'target' element
              *

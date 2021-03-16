@@ -1086,16 +1086,26 @@ The row of squares in Shape D can be folded into a ring, and the other two squar
 One of the most common cubes we come across every day are dice.
 
 ---
+> id: die-faces
 
 Let’s try to build our own fair die by inserting the faces correctly.
 
 Opposite faces of a fair die always add up to 7.
 
-{.todo} INTERACTIVE-2.09: Die faces nets matching
+    // INTERACTIVE-2.09: Die faces nets matching
+    figure: div.die-faces
+      svg(viewBox="0 0 400 300")
+      div.faces
+        div.face
+        div.face
+        div.face
+        div.face
+        div.face
+        div.face
 
 ---
 
-Now that we can identify opposite faces of a die using nets, let's try another puzzle:
+Now that we can identify opposite faces of a die using nets, let's try another puzzle: 
 
 ::: column.fit
 

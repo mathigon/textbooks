@@ -17,9 +17,11 @@ import '../polyhedra/components/polyhedron';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../shared/constants';
 import {Solid, Vector} from '../shared/components/solid';
 import {list} from '@mathigon/core';
-import {Point} from '@mathigon/euclid';
+import {Point, Rectangle} from '@mathigon/euclid';
 import {layers, templeParts} from './data/voxel-data';
 import {pyramid1, triangularPrism, truncatedIcosahedron} from './data/net-data';
+import {$N, ElementView, SVGParentView, SVGView} from '@mathigon/boost';
+import {Droppable} from '../shared/components/droppable';
 
 export function polyParts($step: Step) {
   // TODO Update .addPoint/Line/Label to accept THREE Vector3s, to avoid all these .toArray() functions.
@@ -299,6 +301,98 @@ export function cubeNetDraw($step: Step) {
   const $p = $step.$('x-polypad') as Polypad;
   $p.setActiveTool('pen');
   ($p.tools.pen as PenTool).brush = 'straight';
+}
+
+const DOTS = [
+  [],  // 0
+  [[0, 0]],  // 1
+  [[-0.9, -0.9], [0.9, 0.9]],  // 2
+  [[-1, -1], [0, 0], [1, 1]],  // 3
+  [[-0.9, -0.9], [0.9, -0.9], [0.9, 0.9], [-0.9, 0.9]],  // 4
+  [[-1, -1], [1, -1], [1, 1], [-1, 1], [0, 0]],  // 5
+  [[-0.9, -1.1], [-0.9, 0], [-0.9, 1.1], [0.9, -1.1], [0.9, 0], [0.9, 1.1]]  // 6
+];
+
+function makeFaceContents(i: number): [SVGView, SVGView[]] {
+  const size = 100;
+  const $rect = $N('rect', {width: `${size}%`, height: `${size}%`, fill: 'white'}) as SVGView;
+  const halfSize = size / 2;
+  const margin = 0.25;
+  const marginSize = size * margin;
+  const scale = (size - (marginSize * 2)) / size;
+  const $dots = DOTS[i].map(p => {
+    const x = (p[0] * halfSize) + halfSize;
+    const y = (p[1] * halfSize) + halfSize;
+    return $N(
+        'circle',
+        {
+          cx: `${(x * scale) + marginSize}%`,
+          cy: `${(y * scale) + marginSize}%`,
+          r: `${size / 9}%`,
+          fill: 'black'
+        }
+    ) as SVGView;
+  });
+  return [$rect, $dots];
+}
+
+function makeFaceSVG(i: number) {
+  const $contents = makeFaceContents(i);
+  const $dieSVG = $N('svg', {viewbox: '0 0 100 100'}) as SVGParentView;
+  $dieSVG.append($contents[0]);
+  for (const $dot of $contents[1]) $dieSVG.append($dot);
+  return $dieSVG;
+}
+
+export function dieFaces($step: Step) {
+  const netPositions = [
+    {pos: [0, 0], opposite: 5},
+    {pos: [0, 1], opposite: 3},
+    {pos: [1, 1], opposite: 4},
+    {pos: [2, 1], opposite: 1},
+    {pos: [3, 1], opposite: 2},
+    {pos: [1, 2], opposite: 0}
+  ];
+  const sideSize = 100;
+  const $svg = $step.$('svg') as SVGParentView;
+  const $rootGroup = $N('g', {}, $svg) as SVGView;
+  const $targets = netPositions.map(netPosition => {
+    const [x, y] = netPosition.pos;
+    const $sideGroup = $N('g', {}, $rootGroup) as SVGView;
+    const shape = new Rectangle(new Point(0, 0), sideSize, sideSize);
+    const $target = $N('path', {}, $sideGroup) as SVGView;
+    $target.draw(shape);
+    $target.addClass('target');
+    $sideGroup.setAttr('transform', `translate(${x * sideSize} ${y * sideSize})`);
+    return $target;
+  });
+  $rootGroup.setAttr('transform', 'scale(0.8)');
+  const $facesArea = $step.$('div.die-faces')!;
+  const $faces = $facesArea.$$('div.face');
+  for (const [index, $face] of $faces.entries()) {
+    const $die = makeFaceSVG(index + 1);
+    $face.append($die);
+  }
+  const faces = $faces.map($face => new Droppable($face, $facesArea, {$targets, useTransform: true}));
+  for (const [_index, face] of faces.entries()) {
+    face.on('enter-target', ($target: ElementView) => {
+      if (!$target.hasClass('placed')) $target.addClass('over');
+    });
+    face.on('exit-target', ($target: ElementView) => {
+      $target.removeClass('over');
+    });
+    const $f = face.$el.$('svg')!.copy(true, false);
+    $f.setAttr('width', sideSize);
+    $f.setAttr('height', sideSize);
+    face.on('dropped-target', ($target: ElementView) => {
+      if (!$target.hasClass('placed')) {
+        $target.removeClass('over');
+        $target.addClass('placed');
+        $target.parent?.prepend($f);
+        face.$el.remove();
+      }
+    });
+  }
 }
 
 export function soccerNet($step: Step) {
