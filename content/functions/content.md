@@ -729,7 +729,7 @@ All the lines cross the y-axis at [[0]] meters because this is where the race be
 
 We calculated above that Cielo swam 10 meters in 4.3 seconds. But what if we want to know how many seconds behind Leveaux was at that point? We know the equation for `f(t)`, but not `l(t)`. However, we have the graph. Using the slider [__slider__](target:swim-slider), we can learn that `l(t)=10` when `t=`[[4.55]]. That means at 10 meters Leveaux was [[.22±0.03]] seconds behind Cielo.
 
-Leveaux and Bernard trained together, and it shows. They stay neck-in-neck the whole race. They finish only [[0.4+-.01]] seconds apart.
+Leveaux and Bernard trained together, and it shows. They stay neck-in-neck the whole race. They finish only [[0.4±.05]] seconds apart.
 
 What about the 20 meter mark? How long does it take for each swimmer to reach that point?
 
