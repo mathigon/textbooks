@@ -430,3 +430,10 @@ export function swimSystem($step: Step) {
     }
   })
 }
+
+export function diveGraph($step: Step) {
+  const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
+
+  $videoGraph.setFunctions((t: number) => t, (t: number) => Math.pow(t/3, 3)-Math.pow(t/2, 2));
+  $videoGraph.setAvatar('/resources/functions/images/ren_face.png');
+}
