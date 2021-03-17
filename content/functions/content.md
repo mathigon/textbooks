@@ -759,7 +759,7 @@ Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games
 
 ::: column(width=240)
 
-[Ren image mock-up](https://img.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2016/08/19/Production/Daily/Style/Images/2016-08-18T192657Z_01_OLYGK111_RTRIDSP_3_OLYMPICS-RIO-DIVING-W-10MPLATFORM.jpg?uuid=BvCIjGYKEeaLJ7uLo5SXog)
+![Ren image mock-up](/resources/functions/images/ren_portrait.jpg)
 
 ::: column(width=240)
 
