@@ -387,20 +387,39 @@ export function measureSlope3($step: Step) {
 export function swimSystem($step: Step) {
   const $graph = $step.$('x-coordinate-system')! as CoordinateSystem;
 
-  $graph.setFunctions(
-    (t: number) => 2.33*t,
-    (t: number) => 2.19*t,
-    (t: number) => 2.15*t,
-    (t: number) => 2.06*t,
-  );
+  const swimmers = [{
+      name: 'cielo',
+      speed: 2.33,
+      $distance: $step.$('#cielo-distance .math mn'),
+    },{
+      name: 'leveaux',
+      speed: 2.19,
+      $distance: $step.$('#leveaux-distance .math mn'),
+    },{
+      name: 'bernard',
+      speed: 2.15,
+      $distance: $step.$('#bernard-distance .math mn'),
+    },{
+      name: 'callus',
+      speed: 2.06,
+      $distance: $step.$('#callus-distance .math mn'),
+    }
+  ]
 
-  console.log($step.data);
+  $graph.setFunctions.apply($graph, swimmers.map((swimmer) => {
+    return (t: number) => swimmer.speed*t;
+  }));
 
   const $slider = $step.$('x-slider')! as Slider;
   const $timeText = $step.$('#time-variable-text .sentence .math mn')!;
 
   $slider.on('move', (n: number) => {
-    const s = 25*n/100;
+    const s = 25*n/500;
     $timeText.text = (Math.round(s*100)/100).toString();
+
+    for (const swimmer of swimmers) {
+      const d = Math.round(s*swimmer.speed*10)/10;
+      swimmer.$distance!.text = Math.min(50, d).toString();
+    }
   })
 }
