@@ -711,10 +711,10 @@ Now let's take a look at the top four finishers during this race:
     // Lines are labeled with the swimmer’s name and the function name. Moving the cursor along the active line show crosshairs extending to the axes. Students can also select a line, then select a value along one of the axes to lock the crosshairs to that value.
 | Swimmer | | Function Name |
 | :------ | | :------------ |
-| Cesar Cielo Filho | | {.red} `f(t)=0` |
-| Amaury Leveaux | | {.blue} `l(t)=0` |
-| Alain Bernard | | {.green} `b(t)=0` |
-| Ashley Callus | | {.purple} `c(t)=0` |
+| Cesar Cielo Filho | | {.red#filho-distance} `f(t)=0` |
+| Amaury Leveaux | | {.blue#leveaux-distance} `l(t)=0` |
+| Alain Bernard | | {.green#bernard-distance} `b(t)=0` |
+| Ashley Callus | | {.purple#callus-distance} `c(t)=0` |
 
 ::: column(width=220)
 
