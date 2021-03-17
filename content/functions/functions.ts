@@ -382,6 +382,9 @@ export function measureSlope3($step: Step) {
 export function swimSystem($step: Step) {
   const $graph = $step.$('x-coordinate-system')! as CoordinateSystem;
 
+  const origin = $graph.toViewportCoords(new Point(0, 0));
+  const timeLine = $N('line', {id: 'time-line', x1: origin.x, x2: origin.x, y1: origin.y-220, y2: origin.y}, $graph.$svg.$('.overlay'));
+
   const swimmers = [{
       name: 'cielo',
       speed: 2.33,
@@ -411,6 +414,10 @@ export function swimSystem($step: Step) {
   $slider.on('move', (n: number) => {
     const s = 25*n/500;
     $timeText.text = (Math.round(s*100)/100).toString();
+
+    const p = $graph.toViewportCoords(new Point(s, 0));
+    timeLine.setAttr('x1', p.x);
+    timeLine.setAttr('x2', p.x);
 
     for (const swimmer of swimmers) {
       const d = Math.round(s*swimmer.speed*10)/10;
