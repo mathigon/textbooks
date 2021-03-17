@@ -715,7 +715,7 @@ Now let's take a look at the top four finishers during this race:
 
 ::: column(width=220)
 
-    x-coordinate-system#multi-swimmer-graph(width=200 height=260 x-axis="0,25,10" y-axis="0,51,10" axis-names="Time,Distance")
+    x-coordinate-system#multi-swimmer-graph(width=200 height=260 x-axis="0,25,10" y-axis="0,51,10" axis-names="Time,Distance" crosshairs="no")
 
 :::
 
@@ -727,34 +727,16 @@ Now let's take a look at the top four finishers during this race:
 
 All the lines cross the y-axis at [[0]] meters because this is where the race begins. At first glance, we notice the graphs seem almost on top of each other. This must indicate that the swimmers’ speeds are similar.
 
-::: column(width=220)
-
-    x-coordinate-system#leveaux-graph(width=200 height=260 x-axis="0,25,10" y-axis="0,51,10" axis-names="Time,Distance" fn="2.19x")
-
-::: column.grow
-
-We calculated above that Cielo swam 10 meters in 4.3 seconds. But what if we want to know how long it took Leveaux to reach the same point? How much faster was Cielo than Leveaux? We know the equation for `f(t)` (Cielo) but not `l(t)` (Leveaux). However, we do have the graph. Using the [__slider__](target:swim-slider), we can find out that `l(t)=10` at `t=`[[1]]
-
-:::
-
-    // NOTES
-    // Student clicks on l(t) to make it the active function. Student clicks on 10 on the y-axis. Dotted line from y-axis to l(t) appears. Dotted line from l(t) at 10 meters to corresponding t-value appears.
-
-Leveaux swims the first 10 meters in [[4.56+-.02]] seconds. That means Cielo was only [[0.46+-0.12]] seconds ahead of Leaveaux!
+We calculated above that Cielo swam 10 meters in 4.3 seconds. But what if we want to know how many seconds behind Leveaux was at that point? We know the equation for `f(t)`, but not `l(t)`. However, we have the graph. Using the slider [__slider__](target:swim-slider), we can learn that `l(t)=10` when `t=`[[4.55]]. That means at 10 meters Leveaux was [[.22±0.03]] seconds behind Cielo.
 
 Leveaux and Bernard trained together, and it shows. They stay neck-in-neck the whole race. They finish only [[0.4+-.01]] seconds apart.
 
-Use the graph to find where everyone is at the 20 second mark.
-f(20)=[[47+-0.1]]
-l(20)=[[43+-0.1]]
-b(20)=[[43.8+-0.1]]
-c(20)=[[41.2+-0.1]]
+What about the 20 meter mark? How long does it take for each swimmer to reach that point?
 
-Callus is 6 meters behind [[Cielo | Leveaux | Bernard]] at the 20 second mark.
+| {.red} `f(8.6)= `[[20]] | {.blue} `l`([[9.15]])`=20`|
+| {.green} `b`([[9.3]])`=20` | {.purple} `c`([[9.7]])`=20` |
 
-:::
-
-Let’s head over to the diving pool for the women’s 10 meter platform competition.
+These are just a few things we can learn about the race by graphing each swimmer's performance. Now let’s head over to the diving pool for the women’s 10 meter platform competition.
 
 ---
 
