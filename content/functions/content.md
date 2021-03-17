@@ -740,12 +740,17 @@ These are just a few things we can learn about the race by graphing each swimmer
 
 ---
 
-::: column.grow
+> id: dive-graph
+
 
 Meanwhile, on the other side of the Aquatics center, a diving competition is in progress.
 Ren Qian is among the youngest Olympic medalists. She is diving now - let’s [watch](https://www.youtube.com/watch?v=wTX13JZFHd4)
      
-    // NOTES (0:00-0:12)!
+    x-video-graph(style="display: flex; align-items: center;")
+        x-video(src="/resources/functions/images/olympic_dive.mp4" poster="images/olympic_dive_poster.png" width=640 height=360 controls credit="©Fina")
+        x-coordinate-system(width=180 height=400 x-axis="0,5.5,1" y-axis="0,12.5,4" axis-names="Time,Height" style="margin-left: 20px;")
+
+::: column.grow
 
 Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games.
 
@@ -815,7 +820,7 @@ Notice the [[maximum | minimum]] is where the Ren’s path changes from increasi
 
 ---
 
-Let’s think about the input and output values for d(x). Recall [__domain__](gloss:domain) is the set of all possible input values for d(x). One method for finding the domain is starting with the set of Real numbers and narrowing the set down to a reasonable range for the given situation.
+Let’s think about the input and output values for d(x). Recall [__domain__](gloss:domain) is the set of all possible input values for d(x). One method for finding the domain is starting with the set of [Real numbers](gloss:real-numbers) and narrowing the set down to a reasonable range for the given situation.
 
 Ren’s horizontal distance starts at the diving platform and ends where she resurfaces in the pool. We know the diving platform is at x=[[0]] meters. She resurfaces at x= [[2.989]] meters. Therefore, we can write the domain as [[0≤x≤2.989 | 0≤x≤10.941 | 0<x<2.989]]. {.fixme} SHOW AFTER PREVIOIUS BLANKS FILLED  Note that the endpoints, 0 and 2.989, are included in the domain using ≤ and >=.
 
