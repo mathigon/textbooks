@@ -708,7 +708,7 @@ Now let's take a look at the top four finishers during this race:
     // Lines are labeled with the swimmer’s name and the function name. Moving the cursor along the active line show crosshairs extending to the axes. Students can also select a line, then select a value along one of the axes to lock the crosshairs to that value.
 | Swimmer | | Function Name |
 | :------ | | :------------ |
-| Cesar Cielo Filho | | {.red#filho-distance} `f(t)=0` |
+| Cesar Cielo Filho | | {.red#cielo-distance} `f(t)=0` |
 | Amaury Leveaux | | {.blue#leveaux-distance} `l(t)=0` |
 | Alain Bernard | | {.green#bernard-distance} `b(t)=0` |
 | Ashley Callus | | {.purple#callus-distance} `c(t)=0` |
@@ -721,7 +721,7 @@ Now let's take a look at the top four finishers during this race:
 
 {.text-center#time-variable-text} `t=0`
     
-    x-slider#swim-slider(steps=100)
+    x-slider#swim-slider(steps=500)
 
     x-gesture(target="#swim-slider .bar .knob" slide="100,0")
 
@@ -733,7 +733,7 @@ All the lines cross the y-axis at [[0]] meters because this is where the race be
 
 ::: column.grow
 
-Say we want to figure out how many seconds Cielo is ahead of Leveaux after 10 meters. We already know Cielo swam this distance in 4.33 seconds. We don’t know the function rule for l(t), Leveaux’s swim, but we do have the graph. Find the time, t, where l(t) = [[10]].
+We calculated above that Cielo swam 10 meters in 4.3 seconds. But what if we want to know how long it took Leveaux to reach the same point? How much faster was Cielo than Leveaux? We know the equation for `f(t)` (Cielo) but not `l(t)` (Leveaux). However, we do have the graph. Using the [__slider__](target:swim-slider), we can find out that `l(t)=10` at `t=`[[1]]
 
 :::
 
