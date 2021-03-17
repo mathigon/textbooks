@@ -387,7 +387,7 @@ export function fillSquares(
 }
 
 function setupDropArea($geopad: Geopad, dimensions: Point, widthLabel: string, heightLabel: string, showBeforeComplete: boolean) {
-  const leftLoc = $geopad.boundsRect.w - dimensions.x - 30;
+  const leftLoc = $geopad.viewportRect.w - dimensions.x - 30;
   const topLoc = 30;
   const topLeft = new Point(leftLoc, topLoc);
   const dropArea = new Rectangle(topLeft, dimensions.x, dimensions.y);

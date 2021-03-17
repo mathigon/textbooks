@@ -635,7 +635,7 @@ export class Geopad extends CoordinatePlane {
   private $gesture?;
   model: Observable<typeof DEFAULT_GEO_MODEL & Obj<any>>;
   $tools: Select;
-  boundsRect: Rectangle;
+  viewportRect: Rectangle;
   toolOverride?: Tool;
   ready(): void;
   switchTool(name: ToolName): void;
