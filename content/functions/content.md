@@ -748,7 +748,7 @@ Ren Qian is among the youngest Olympic medalists. She is diving now - let’s [w
      
     x-video-graph(style="display: flex; align-items: center;")
         x-video(src="/resources/functions/images/olympic_dive.mp4" poster="images/olympic_dive_poster.png" width=640 height=360 controls credit="©Fina")
-        x-coordinate-system(width=180 height=400 x-axis="0,5.5,1" y-axis="0,12.5,4" axis-names="Time,Height" style="margin-left: 20px;")
+        x-coordinate-system(width=180 height=400 x-axis="0,4.3,1" y-axis="-8,12.5,4" axis-names="Time,Height" style="margin-left: 20px;")
 
 ::: column.grow
 
