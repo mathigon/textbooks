@@ -433,7 +433,7 @@ export function swimSystem($step: Step) {
 
 export function diveGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
-
-  $videoGraph.setFunctions((t: number) => t, (t: number) => Math.pow(t/3, 3)-Math.pow(t/2, 2));
+  
+  $videoGraph.setFunctions((t: number) => t, (t: number) => 2.3*Math.pow(t, 3)-10*Math.pow(t, 2)+5.8*t+10);
   $videoGraph.setAvatar('/resources/functions/images/ren_face.png');
 }
