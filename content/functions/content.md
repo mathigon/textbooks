@@ -761,74 +761,51 @@ Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games
 
 ![Ren image mock-up](/resources/functions/images/ren_portrait.jpg)
 
-::: column(width=240)
+:::
 
-    // NOTES
-    // make sticky
-[dive mock-up](https://www.desmos.com/calculator/es8ugnvxeq)
-
-::: column.grow
-
-Let’s call the function representing Ren’s dive d(x). The input values, x, are horizontal distances from the platform. The output values, d(x), are Ren’s [[height]] throughout the dive. Immediately, we notice the shape of this graph is different from the swimming graphs above. This graph has [[2]] turning points compared to a linear function's [[0]] turning points.
+Let’s call the function representing Ren’s dive d(t). The input values, t, are seconds from the start of her dive. The output values, d(t), are Ren’s [[height]] above the water. Immediately, we notice the shape of this graph is different from the swimming graphs above. This graph has [[2]] turning points compared to a linear function's [[0]] turning points.
 
 Graphs with this shape are called cubic functions. We can get important information from the graph even without knowing the function equation. Match the given statements to the graph.
 
-:::
+    x-coordinate-system#ren-cards-graph(width=500 height=300 x-axis="0,4.3,1" y-axis="-8.5,12.5,4" axis-names="Time,Height" crosshairs="no")
 
-    x-coordinate-system#ren-cards-graph(width=500 height=300 x-axis="0,4.3,1" y-axis="-8,12.5,4" axis-names="Time,Height" crosshairs="no")
+Recall that for any function, the y-intercept is where t=[[0]]. In function notation, this looks like d([[0]])=10.
 
-| Place contextual statement cards on graph | | Target key feature appears when card is placed |  |Function notation appears when card is placed |
-| :---: | | :---: | | :---: |
-| Ren’s takes her place on the platform. | | Vertical intercept | |    |
-| Ren reaches the highest point of her dive. | | maximum | |    |
-| Ren completes 3.5 somersaults. | | decreasing | | 0.335<x<2.556 |
-| Ren’s entry is nearly flawless. | | Horizontal intercept | | d(2.056)=0 |
-| Ren turns around under water. | | minimum | | d(2.556)=-1.623 |
-| Ren surfaces after a nearly flawless dive. | | Horizontal intercept | | d(2.989)=0|
-
-    // NOTES
-    // If I read this correctly, the explanation of the various features of the graph would come up and then students would drag the corresponding ones into place? Is that correct? If so, I wonder how it would go if the order is flipped - students choose any item from the table above and then when they drag it into the correct spot, some narrative comes up explaining the math of that point. I'm only suggesting this because as I read the table without any of the text below, I found myself moving all the "cards" into the correct spot on the graph and enjoyed that. Maybe the scaffolding is needed and important tot the math here. Just sharing my 1st experience of reading the table.
-Recall the y-intercept is where x=[[0]]. In function notation, this looks like d([[0]])=10. The pattern of d(0)=y-intercept is true for any function.
-    // That's an interesting thought. +philipp@mathigon.org can text oder be dependent on how the student uses the interactive? In this case, what order they choose to place the cards on the graph?
-
-Similarly, the x-intercepts are were [[d(x) | x]]=0. This graph has [[2]] x-intercepts. They represent the surface of the water in the pool.
+Similarly, the x-intercepts are where [[d(t) | t]]=0. This graph has [[2]] x-intercepts. They represent the surface of the water.
 
 ---
 
-When we talk about the maximum, we are really talking about the highest [[d(x) | x]] value. Ren’s tallest height is [[10.9+-0.1]] meters. She reaches her maximum height when she is [[0.3+-0.1]] meters from the board. In function notation, this looks like [[d(0.3)=10.9 | d(10.9=0.3]].
+When we talk about the maximum, we are really talking about the highest [[d(t) | t]] value. Ren’s greatest height is [[10.8±0.3]] meters, which she reaches after [[0.3±0.2]] seconds. In function notation, this looks like d([[0.3±0.2]])=[[10.8±0.3]].
 
-The minimum is Ren’s lowest height. In this graph her lowest point is underwater. Because the x-axis represents the surface of the water, the minimum d(x) is [[negative | positive | zero]]. She turns around at [[-1.6 +-0.1]] meters underwater and [[2.6 +-0.1]] meters from the diving platform.
+The minimum is Ren’s lowest height. In this graph her lowest point is underwater. Because the x-axis represents the surface of the water, the minimum d(t) is [[negative | positive | zero]]. She turns around [[3.2±0.3]] seconds after diving.
 
 ---
 
-    // NOTES
-    // +philipp@mathigon.org I pulled the intervals of increase from the cards. Do we want to pull it from the discussion, too? It gives a few more opportunities to use intevals.
+> id: dive-intervals
 
-Intuitively, we understand that the graph is increasing when Ren’s body is moving [[up | down]]. The notation for increasing is different from tuning points and intercepts. Since the graph increases for more than one point, we represent the section of the graph using an [__interval__](gloss:interval). The interval communicates the [[x | d(x)]] values corresponding to Ren’s increasing height. Note that there are many different ways to write intervals, we use inequalities in this chapter.
-
-Ren moves up during the intervals:
+Intuitively, we understand that the graph is increasing when Ren’s body is moving [[up | down]]. The notation for increasing is different from turning points and intercepts. Since the graph increases for more than one point, we represent the section of the graph using an [__interval__](gloss:interval). The interval specifies the [[t | d(t)]] values corresponding to Ren’s increasing height. Note that there are many different ways to write intervals; in this chapter, we will write them as [__inequalities__](gloss:inequality). We'll break this graph into three intervals:
 
     // NOTES
     // Multiple selector (shuffle order)
 
-0<x<0.335		0.335<x<2.556		2.556<x<2.989
+| **During the interval…** | **d(t) is…** |
+| `0.3<t<3.3` | [[Decreasing\|Increasing]] |
+| `3.3<t<4.3` | [[Increasing\|Decreasing]] |
+| `0<t<0.3` | [[Increasing\|Decreasing]] |
 
-The unchecked interval is where the graph is [[decreasing]]. Ren is moving down from d(0.335)= [[10.941+-0.1]] meters to d(2.556)=[[-1.623+-0.1]] meters.
-
-Notice the [[maximum | minimum]] is where the Ren’s path changes from increasing to decreasing heights.  The minimum is where Ren’s path changes from decreasing to increasing.
-
-    // NOTES
-    // Not sure where to put the comment, so putting it here. I like how in the 1st example, students see the graph being made as the video is playing. Maybe at the end of this section, something similar could happen? They have the graph labeled with the cards correctly. Then, the graph goes away and the cards stay in place. Then, they hit play on the video and see the graph made in real time as they watch the dive?
+Notice the [[maximum | minimum]] is where Ren’s path changes from increasing to decreasing heights. The [[minimum | maximum]] is where Ren’s path changes from decreasing to increasing.
 
 ---
 
-Let’s think about the input and output values for d(x). Recall [__domain__](gloss:domain) is the set of all possible input values for d(x). One method for finding the domain is starting with the set of [Real numbers](gloss:real-numbers) and narrowing the set down to a reasonable range for the given situation.
+> id: dive-domain-range
 
-Ren’s horizontal distance starts at the diving platform and ends where she resurfaces in the pool. We know the diving platform is at x=[[0]] meters. She resurfaces at x= [[2.989]] meters. Therefore, we can write the domain as [[0≤x≤2.989 | 0≤x≤10.941 | 0<x<2.989]]. {.fixme} SHOW AFTER PREVIOIUS BLANKS FILLED  Note that the endpoints, 0 and 2.989, are included in the domain using ≤ and >=.
+Let’s think about the input and output values for d(t). Recall [__domain__](gloss:domain) is the set of all possible input values for d(t). One method for finding the domain is starting with the set of [Real numbers](gloss:real-numbers) and narrowing down to match the situation.
 
-Recall [__range__](gloss:range) is the set of all heights Ren travels. Notice that Ren goes below the surface of the water. In fact, we can use the function’s [[minimum | maximum | horizontal intercept | vertical intercept]] to determine the lower bound on the range.  The minimum d(x) is [[-1.623]] meters.
+Ren’s dive begins at 0 seconds. She resurfaces at about t=[[4.2±0.2]] seconds. Therefore, we can write the domain as [[0]]≤x≤[[4.2±0.2]]. Note that we're using `≤`, which unlike `<` [[includes | excludes]] the minimum and maximum values.
 
-Similarly, the maximum d(x) gives us the upper bound on the range. Therefore, the range is [[-2]] ≤ d(x) ≤ [[10.941]].
+Recall [__range__](gloss:range) is the set of all heights Ren travels. We can use the function’s [[minimum | maximum | horizontal intercept | vertical intercept]] to determine the lower bound on the range.  On this graph, that's about [[-7.6±0.5]] meters.
+
+Similarly, the maximum d(x) gives us the upper bound on the range. Therefore, the range is [[-7.6±0.5]] ≤ d(x) ≤ [[10.8±]].
 
 ---
 
