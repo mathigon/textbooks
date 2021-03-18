@@ -7,7 +7,7 @@
 import { Step, Video, Slider } from '@mathigon/studio';
 import { Point, SimplePoint } from '@mathigon/euclid';
 import { CoordinateSystem, Geopad, GeoPoint } from '../shared/types';
-import { $N, animate, ease, ElementView, pointerOver, SVGParentView, svgPointerPosn } from '@mathigon/boost';
+import { $N, animate, Draggable, ease, ElementView, hover, KEY_CODES, pointerOver, SVGView, SVGParentView, svgPointerPosn } from '@mathigon/boost';
 import { last, stringDistance } from '@mathigon/core';
 
 import '../shared/components/burst';
@@ -21,6 +21,8 @@ import { Relation } from '../shared/components/relation/relation';
 
 import '../shared/components/video-graph';
 import { VideoGraph } from '../shared/components/video-graph';
+import { lerp } from '@mathigon/fermat';
+import { shuffle } from '@mathigon/fermat/src/random';
 
 export function fnSketch($step: Step) {
   $step.$('.btn.clear')!.on('click', () => {
@@ -431,9 +433,164 @@ export function swimSystem($step: Step) {
   })
 }
 
+function renDive(t: number) {
+  return 1.4*Math.pow(t, 3)-7.6*Math.pow(t, 2)+4.5*t+10;
+}
+
 export function diveGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
   
-  $videoGraph.setFunctions((t: number) => t, (t: number) => 1.4*Math.pow(t, 3)-7.6*Math.pow(t, 2)+4.5*t+10);
+  $videoGraph.setFunctions((t: number) => t, renDive);
   $videoGraph.setAvatar('/resources/functions/images/ren_face.png');
+
+  {
+    const cards = shuffle([{
+      text: 'Ren stands on the platform',
+      image: 'dive_card_1.png',
+      point: new Point(0, 10),
+      hint: 'This is the y-intercept.',
+    },{
+      text: 'Ren reaches her peak',
+      image: 'dive_card_2.png',
+      point: new Point(0.34, 10.7),
+      hint: 'This is the maximal turning point.',
+    },{
+      text: 'Ren somersaults midair',
+      image: 'dive_card_3.png',
+      point: new Point(1.3, 6.082),
+      hint: 'This is the descent segment.',
+    },{
+      text: 'Ren hits the water',
+      image: 'dive_card_4.png',
+      point: new Point(1.98, 0),
+      hint: 'This is the first x-intercept.',
+    },{
+      text: 'Ren turns underwater',
+      image: 'dive_card_5.png',
+      point: new Point(3.3, -7.6),
+      hint: 'This is the minimal turning point.',
+    },{
+      text: 'Ren reaches the surface',
+      image: 'dive_card_6.png',
+      point: new Point(4.3, 0),
+      hint: 'This is the second x-intercept.',
+    }]);
+
+    const $graph = $step.$('#ren-cards-graph') as CoordinateSystem;
+    const $overlay = $graph.$svg.$('.overlay');
+
+    const width = parseInt($graph.attr('width'));
+
+    const instructionText = $N('text', {class: 'dive-card-instruction', 'alignment-baseline': 'middle', 'text-anchor': 'middle', transform: `translate(${width/2}, ${320})`}, $overlay);
+    const descriptionText = $N('text', {class: 'dive-card-descrition', 'alignment-baseline': 'middle', 'text-anchor': 'middle', transform: `translate(${width/2}, ${320})`}, $overlay);
+
+    instructionText.text = 'Drag each card onto its corresponding point';
+
+    $graph.$svg.setAttr('height', 400);
+
+    $graph.setFunctions(renDive);
+
+    const $dotGroup = $N('g', {id: '#dive-dots'}, $overlay);
+    const $cardGroup = $N('g', {id: '#dive-cards'}, $overlay);
+
+    let $hoverDot: ElementView | null = null;
+    let $dragCard: ElementView | null = null;
+
+    const $cards = cards.map((card, i) => {
+      const origin = new Point(width*(i+1/2)/cards.length, -50)
+
+      const $outline = $N('circle', {cx: origin.x, cy: origin.y, r: 30, class: 'dive-card-outline'}, $cardGroup);
+
+      const $g = $N('g', {transform: `translate(${origin.x}, ${origin.y})`}, $cardGroup) as SVGView;
+      
+      const $content = $N('g', {class: 'dive-card-content'}, $g);
+      const $image = $N('image', {href: '/resources/functions/images/'+card.image, x: -30, y: -30, width: 60, height: 60}, $content);
+      const $circle = $N('circle', {cx: 0, cy: 0, r: 30, class: 'dive-card-circle'}, $content);
+
+      const dotPosition = $graph.toViewportCoords(card.point);
+      const $dot = $N('circle', {class: 'dive-dot', transform: `translate(${dotPosition.x}, ${dotPosition.y})`, r: 15}, $dotGroup);
+
+      hover($g, {
+        enter: () => {
+          if (!$dragCard) {
+            descriptionText.text = card.text;
+            descriptionText.css('opacity', 1);
+            instructionText.css('opacity', 0);
+          }
+        },
+        exit: () => {
+          if (!$dragCard) {
+            descriptionText.css('opacity', 0);
+            instructionText.css('opacity', 1);
+          }
+        },
+      });
+
+      hover($dot, {
+        enter: () => {
+          $hoverDot = $dot;
+
+          if ($dragCard)
+            $dragCard.$('.dive-card-content')!.setAttr('transform', `scale(${1/2})`);
+        },
+        exit: () => {
+          $hoverDot = null;
+
+          if ($dragCard)
+            $dragCard.$('.dive-card-content')!.setAttr('transform', `scale(1)`);
+        },
+      })
+
+      const drag = new Draggable($g, $graph.$svg, {useTransform: true, margin: -60});
+      
+      drag.setPosition(origin.x, origin.y);
+
+      drag.on('start', () => {
+        $dragCard = $g;
+
+        $g.css('pointer-events', 'none');
+      })
+      drag.on('drag', (p) => {
+        
+      })
+      drag.on('end', () => {
+        $dragCard = null;
+
+        const dropPosition = drag.position;
+        let restPosition: Point;
+
+        
+        if ($hoverDot == $dot) {
+          $step.addHint('correct');
+          $step.addHint(card.hint);
+          $step.score('card'+i);
+
+          restPosition = dotPosition;
+
+          descriptionText.css('opacity', 0);
+          instructionText.css('opacity', 1);
+        }
+        else if ($hoverDot) {
+          $step.addHint('incorrect');
+
+          restPosition = origin;
+
+          $content.setAttr('transform', 'scale(1)');
+          $g.css('pointer-events', 'all');
+        }
+        else {
+          restPosition = origin;
+
+          $g.css('pointer-events', 'all');
+        }
+
+        animate((p) => {
+          const q = ease('sine', p);
+          drag.setPosition(lerp(dropPosition.x, restPosition.x, q), lerp(dropPosition.y, restPosition.y, q))
+        }, 500)
+      })
+
+      return $g;
+    });
+  }
 }

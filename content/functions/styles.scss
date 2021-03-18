@@ -88,3 +88,48 @@ line#time-line {
   stroke-width: 2px;
   stroke-dasharray: 4;
 }
+
+#ren-cards-graph svg {
+  overflow: visible;
+}
+
+#dive-cards>g {
+  cursor: pointer;
+}
+
+.dive-card-circle {
+  fill: none;
+  stroke: @blue;
+  stroke-width: 2px;
+}
+
+.dive-dot {
+  stroke-width: 2px;
+  stroke: @green;
+  fill: @light-grey;
+}
+
+.dive-card-content {
+  transition: 0.2s;
+}
+
+.dive-card-instruction {
+  fill: @medium-grey;
+  font-style: italic;
+  transition: 0.2s;
+}
+
+.dive-card-description {
+  transition: 0.2s;
+}
+
+.dive-card-outline {
+  fill: none;
+  stroke: @light-grey;
+  stroke-width: 2px;
+  stroke-dasharray: 4;
+}
+
+#ren-cards-graph .labels {
+  pointer-events: none;
+}
