@@ -741,7 +741,7 @@ These are just a few things we can learn about the race by graphing each swimmer
 ---
 
 > id: dive-graph
-
+> goals: card1 card2 card3 card4 card5 card6
 
 Meanwhile, on the other side of the Aquatics center, a diving competition is in progress.
 Ren Qian is among the youngest Olympic medalists. She is diving now - let’s [watch](https://www.youtube.com/watch?v=wTX13JZFHd4)
@@ -766,14 +766,13 @@ Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games
 
 ::: column.grow
 
-Let’s call the function representing Ren’s dive d(x). The input values, x, are horizontal distances from the platform. The output values, d(x), are Ren’s [[height]] throughout the dive. Immediately, we notice the shape of this graph is different from the swimming graphs above. This graph has [[2]] turning points compared to the linear functions [[0]] turning points.
+Let’s call the function representing Ren’s dive d(x). The input values, x, are horizontal distances from the platform. The output values, d(x), are Ren’s [[height]] throughout the dive. Immediately, we notice the shape of this graph is different from the swimming graphs above. This graph has [[2]] turning points compared to a linear function's [[0]] turning points.
 
 Graphs with this shape are called cubic functions. We can get important information from the graph even without knowing the function equation. Match the given statements to the graph.
 
 :::
 
-    // NOTES
-    // Students cards for all of the items below, and then drag them onto the corresponding point along the graph. Let’s show all the contextual statements, but talk about one key feature at a time.
+    x-coordinate-system#ren-cards-graph(width=500 height=300 x-axis="0,4.3,1" y-axis="-8,12.5,4" axis-names="Time,Height" crosshairs="no")
 
 | Place contextual statement cards on graph | | Target key feature appears when card is placed |  |Function notation appears when card is placed |
 | :---: | | :---: | | :---: |
