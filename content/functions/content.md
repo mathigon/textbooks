@@ -836,7 +836,7 @@ ___
 The women’s pole vault is just about to start. You will be drawing the graph for this event.
 
     // NOTES
-    // Allow scrubbing in video. Superimpose timer on the frames to make graphing easier. [1:00 - 1:15](https://www.youtube.com/watch?v=PPaUgaBor2I)
+    // Allow scrubbing in video. Superimpose timer on the frames to make graphing easier. [1:00 - 1:15](````````````````https://www.youtube.com/watch?v=PPaUgaBor2I````````````````)
 
 We like to start graphing using a table. Fill in the table below. Note the landing pad, called the pit, is 0.81 meters tall.
 
@@ -863,9 +863,15 @@ This graph is interesting because between [[0]] and about  [[5.7+-0.2]] seconds,
 
 ---
 
+> id: running-graph
+
 ### Systems of Functions/ Simultaneous Functions
 
 Let’s head over to the track for the women’s 800 meter final. Looks like we arrive in time to catch the last 200 meters of the race. [3:22-4:00](https://www.youtube.com/watch?v=h83yS9gPkA8)
+
+    x-video-graph#running-video-graph
+        x-video(src="/resources/functions/images/olympic_running.mp4" poster="images/olympic_running_poster.png" width=640 height=360 controls credit="©RA")
+        x-coordinate-system(width=640 height=320 x-axis="90,130,10" y-axis="600,800,50" axis-names="Time,Distance" crosshairs="no")
 
     // NOTES
     // Information for the interactive:
