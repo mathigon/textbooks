@@ -901,7 +901,7 @@ The graphs intersect when one runner passes another. When the runners have about
 
 ---
 
-Rogers passes Boufaarirane at about [[96.5+-.25]] seconds when they are both about [[630]] meters into the race. In function notation, this looks like f([[96.5+-.25]])=u([[96.5+-.25]])=[[630]].
+Rogers passes Boufaarirane at about [[97±3]] seconds when they are both about [[630±10]] meters into the race. In function notation, this looks like f([[97±3]])=u([[96.5+-.25]])=[[630]].
 
 About [[13.5+-.25]] seconds later, [[Rogers | Boufaarirane | Tracey]] overtakes [[Tracey | Rogers | Boufaarirane]]. They have about [[73+-1]] meters to the finish line.
 
