@@ -589,3 +589,11 @@ export function diveGraph($step: Step) {
     });
   }
 }
+
+export function runningGraph($step: Step) {
+  const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
+
+  $videoGraph.addPlot((t: number) => Math.min(t+88, 121), (t: number) => 6.58545*t+3.16101, '/resources/functions/images/ri_face.png');
+  $videoGraph.addPlot((t: number) => Math.min(t+88, 127), (t: number) => 5.71105*t+80.4071, '/resources/functions/images/ri_face.png', 'green');
+  $videoGraph.addPlot((t: number) => Math.min(t+88, 120.5), (t: number) => 7.10179*t-53.6354, '/resources/functions/images/ri_face.png', 'blue');
+}
