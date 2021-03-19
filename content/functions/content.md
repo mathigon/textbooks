@@ -879,28 +879,16 @@ Let’s head over to the track for the women’s 800 meter final. Looks like we 
                 div
                     img(src="/resources/functions/images/tracey_face.png")
                     p.red Adelle Tracey
+                    div g(t)
                 div
                     img(src="/resources/functions/images/boufaarirane_face.png")
                     p.green Laila Boufaarirane
+                    div f(t)
                 div
                     img(src="/resources/functions/images/rogers_face.png")
                     p.blue Raevyn Rogers
-            x-coordinate-system(width=400 height=320 x-axis="80,130,10" y-axis="550,800,50" axis-names="Time,Distance" crosshairs="no")
-
-    // NOTES
-    // Information for the interactive:
-
-| __Athlete__ | | Adelle Tracey | | Laila Boufaarirane | | Raevyn Rogers |
-| :---------: | | :-----------: | | :----------------: | | :------------:|
-| __Country__ | | GBR | | FRA | | USA |
-| __@ 90.63 s__ | | 600 | | 598 | | 590 |
-| __@ 800 m__ | | 121 | | 126 | | 120.2 |
-| __color__ | | black | | green | | orange |
-| __function__ | | g(t)=6.58545x+3.16101 | | f(t)=5.71105x+80.4071 | | u(t)=7.10179x-53.6354 |
-
-    // NOTES
-    // Students see the graph populate in time with the video.
-    // We'll need to think about where we want to place this in the coordinate plane. Floating axes are nice as seen here. We could also change it such that 90.63s is t=0, though I think that would be a higher barrier to understand than not seeing the origin on the coordinate plane.
+                    div u(t)
+            x-coordinate-system(width=400 height=320 x-axis="80,130,10" y-axis="550,800,50" axis-names="Time,Distance")
 
 [800 M mock-up](https://www.desmos.com/calculator/msryjohuz9)
 
