@@ -303,8 +303,7 @@ function vaultDistanceTime(t: number) {
 export function vaultGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.setFunctions(vaultDistanceTime, vaultHeightDistance);
-  $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
+  $videoGraph.addPlot(vaultDistanceTime, vaultHeightDistance, '/resources/functions/images/ri_face.png');
 }
 
 export function graphMatch($step: Step) {
@@ -314,22 +313,19 @@ export function graphMatch($step: Step) {
 export function timeHeightGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.setFunctions((t: number) => t, (t: number) => vaultHeightDistance(vaultDistanceTime(t)));
-  $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
+  $videoGraph.addPlot((t: number) => t, (t: number) => vaultHeightDistance(vaultDistanceTime(t)), '/resources/functions/images/ri_face.png');
 }
 
 export function timeDistanceGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.setFunctions((t: number) => t, (t: number) => vaultDistanceTime(t));
-  $videoGraph.setAvatar('/resources/functions/images/ri_face.png');
+  $videoGraph.addPlot((t: number) => t, (t: number) => vaultDistanceTime(t), '/resources/functions/images/ri_face.png');
 }
 
 export function swimGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.setFunctions((t: number) => t > 21.47 ? 21.47 : t, (t: number) => t > 21.47 ? 50 : 50/21.47*t);
-  $videoGraph.setAvatar('/resources/functions/images/cielo_face.png');
+  $videoGraph.addPlot((t: number) => t > 21.47 ? 21.47 : t, (t: number) => t > 21.47 ? 50 : 50/21.47*t, '/resources/functions/images/cielo_face.png');
 }
 
 export function measureSlope1($step: Step) {
@@ -440,8 +436,7 @@ function renDive(t: number) {
 export function diveGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
   
-  $videoGraph.setFunctions((t: number) => t, renDive);
-  $videoGraph.setAvatar('/resources/functions/images/ren_face.png');
+  $videoGraph.addPlot((t: number) => t, renDive, '/resources/functions/images/ren_face.png');
 
   {
     const cards = shuffle([{
