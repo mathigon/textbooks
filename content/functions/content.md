@@ -591,7 +591,7 @@ But again, we can learn new things about Ri's vault. In the first few seconds, w
 
 Let's head over to the pool. We are just in time for the men’s 50 meter freestyle finals! Keep a close eye on César Cielo Filho of Brazil:
 
-    x-video-graph(style="display: flex; align-items: center;")
+    x-video-graph.horizontal
         x-video(src="/resources/functions/images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=640 height=360 controls credit="©NBC")
         x-coordinate-system(width=180 height=400 x-axis="0,21.5,10" y-axis="0,51,10" axis-names="Time,Distance" style="margin-left: 20px;")
 
@@ -749,7 +749,7 @@ These are just a few things we can learn about the race by graphing each swimmer
 Meanwhile, on the other side of the Aquatics center, a diving competition is in progress.
 Ren Qian is among the youngest Olympic medalists. She is diving now - let’s [watch](https://www.youtube.com/watch?v=wTX13JZFHd4)
      
-    x-video-graph(style="display: flex; align-items: center;")
+    x-video-graph.horizontal
         x-video(src="/resources/functions/images/olympic_dive.mp4" poster="images/olympic_dive_poster.png" width=640 height=360 controls credit="©Fina")
         x-coordinate-system(width=180 height=400 x-axis="0,4.3,1" y-axis="-8,12.5,4" axis-names="Time,Height" style="margin-left: 20px;")
 

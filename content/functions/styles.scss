@@ -169,3 +169,8 @@ line#time-line {
 .runner-name-key>div>p:nth-child(2) {
   margin: 0 10px;
 }
+
+x-video-graph.horizontal {
+  display: flex;
+  align-items: center;
+}
