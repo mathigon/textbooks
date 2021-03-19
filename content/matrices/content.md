@@ -1183,20 +1183,939 @@ Let's see why this is true geometrically.
 
 > section: inverses
 > sectionStatus: dev
+> id: intro-inverses
 
-{.todo} COMING SOON
+### Intro: Inverse as the reverse of a transformation
+
+Every 2x2 matrix can be thought of as a linear transformation. What does it mean to "undo" a linear transformation? 
+
+{.fixme} Have a more interesting example here, why undoing a transformation is useful?
+
+**Examples/Interactive:** Each of these transformations has a respective transformation that will reverse it and send each point back to their original location.
+
+    .inverses1
+      .inverse-row
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+          .buttons
+            .button.transform ROTATE
+            .button.reverse UNDO
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+          .buttons
+            .button.transform SCALE
+            .button.reverse UNDO
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+          .buttons
+            .button.transform REFLECT
+            .button.reverse UNDO
+
+
+Matrix transformations are just like the simple mathematical operators addition and multiplication, in that they can be undone by multiplying by the [inverse matrix](gloss:inverse-matrix). Note that this is __not the same__ as dividing by the matrix, `1/A`. Division for matrices is not a defined operation.
+
+- When we multiply a number `x` by `3`, we can undo that operation by multiplying by [[1/3]].
+- When we add `7` to a number `x`, we can undo that operation by adding [[-7]].
+- When we apply a transformation `A` to a vector `v`, we can undo that operation by multiplying by the [[inverse|obverse|converse|reciprocal]] of `A`.
+
+The **inverse matrix** of matrix `A` is the matrix that undoes the transformation of `A`. This means When the inverse is applied, all of the points will go back to their original position. We use __`A^(-1)`__ to denote the inverse of matrix **A.**
+
+---
+> id: calculate-inverse
+
+### Example: calcuating **an inverse matrix**
+
+How is the inverse of a matrix calculated? Let's compare matrix multiplication to our basic operations again.
+
+- Multiplying **x** by 3 and 1/3 is the same as multiplying it by [[1]] (which does not change **x**).
+- Given **x**, adding 7 and then subtracting 7 is the same as adding by [[0]] (which does not change **x**)**.**
+- Given a vector **v**, multiplying by the matrix **A** and the inverse of that matrix **`A^(-1)`** will be the same as multiplying by [[the identity matrix|a matrix of all ones|a matrix of all zeros|one]], which does not change **v.**
+
+{.text-center.big-equation} `A^(-1)•A=I`
+
+Another way to write this is:
+
+{.text-center.big-equation} `A^(-1)•A•v = v = I•v`
+
+{.text-center.big-equation} `A^(-1)•A = I`
+
+
+#### Example
+
+As an example, let's look at a shear in the x-direction and calculate its inverse transformation.
+
+{.text-center} `§[[e f] [g h]]`•`§[[1 1] [0 1]]`=`§[[1 0] [0 1]]`
+
+- [ ]  **x-geopad:matrix([1 1, 0 1])**
+
+x-algebra
+
+{.text-center} `A^(-1)`• `§[[1 1] [0 1]]` = I
+
+{.caption} the inverse times the shear matrix is the identity matrix
+
+
+{.text-center} `§[[e f] [g h]]`•`§[[1 1] [0 1]]`=`§[[1 0] [0 1]]`
+
+{.caption} give our inverse variable names**
+
+
+{.text-center} `§[[e e+f] [g g+h]]` = `§[[1 0] [0 1]]`
+
+{.caption} expand into a system of equations
+
+::: tab
+#### Solve for e and f
+
+We know that `e = 1` and `e + f = 0`
+
+Sub `e = 1` into `e+f = 0` and get f = [[-1]]
+
+::: tab
+#### Solve for g and h
+
+We know that `g = 0` and `g + h = 1`
+
+Sub `g = 0` into `g + h = 1` and get h = [[1]]
+
+:::
+
+**Answer**
+
+`A^(-1)` = [1 -1, 0 1]
+
+<table>
+  <tr><td>[[1]]</td><td>[[-1]]</td></tr>
+  <tr><td>[[0]]</td><td>[[1]]</td></tr>
+</table>
+
+---
+
+{.fixme} confirm that we get Identity Matrix when we multiply
+[1 -1, 0 1]x[1 1, 0 1] = [1 0, 0 1]
+
+Notice that this inverse matrix is simply a shear matrix in the opposite direction – which is what you would expect!
+
+    .inverse-row
+        .mat
+          x-geopad(width=150 x-axis="-3,3,1" y-axis="-3,3,1" grid padding=5): svg
+          .buttons
+            .button.transform A
+            .button.reverse INVERSE
+
+---
+> id: inverse-formula
+
+### The general formula for an inverse matrix
+
+
+::: .box.f-green
+
+#### Deriving the Formula for the Inverse
+
+Let's derive this formula:
+
+**We want to solve for this**
+
+{.text-center} `§[[a b] [c d]]` • `§[[w x] [y z]]` = `§[[1 0] [0 1]]`
+
+**Write out the meaning**
+
+::: column.grow
+{.text-center} __eq1__ `aw + by = 1`
+
+{.text-center} __eq3__ `cw + dy = 0`
+::: column.grow
+{.text-center} __eq2__ `ax + bz = 0`
+
+{.text-center} __eq4__ `cx + dz = 1`
+:::
+
+
+**Solve for y**
+
+{.text-center} Multiply-subtract `c`•__eq1__ - `a`•__eq3__
+
+{.text-center} `caw + cby = c`
+
+{.text-center} `caw + ady = 0`
+
+{.text-center} `0 + (cb - ad)y = c`
+
+{.text-center} `y = c/(cb-ad)`
+
+**Solve for w**
+
+{.text-center} Substitute `y` into __eq3__
+
+{.text-center} `cw + dc/(cb-ad) = 0`
+
+{.text-center} `w = -d/(cb-ad)`
+
+**Solve for x**
+
+{.text-center} Multiply-add `d`•__eq2__ - `b`•__eq4__
+
+{.text-center} `d`•__eq2__ --> `dax + dbz = 0`
+
+{.text-center} `b`•__eq4__ --> `bcx + bdz = b`
+
+{.text-center} `(da - bc)x + 0 = -b`
+
+{.text-center} `x = -b/(ad - bc)`
+
+**Solve for z**
+
+{.text-center} Substitute `x` into __eq2__
+
+{.text-center} `a(-b/(ad-bc)) + bz = 0`
+
+{.text-center} `-a/(ad-bc) + z = 0`
+
+{.text-center} `z = a/(ad-bc)`
+
+**Put them all together**
+
+{.text-center} `§[[(d/(ad-bc)) (-b/(ad-bc))] [(-c/(ad-bc)) (a/(ad-bc))]]`
+
+**Extract the common factor**
+
+{.text-center} `1/(ad-bc)` • `§[[d (-b)] [(-c) a]]`
+
+{.caption} The equation for the inverse of a two-by-two matrix.
+
+What is the value in the [{.pill.red}denominator](target:denominator)? This is the [[determinant]].
+
+Notice that if the determinant is zero then we cannot divide by zero. These are a specific type of matrix we will talk about later.
+
+{.text-center} `A^(-1)` = `1/det(A)` `§[[d (-b)] [(-c) a]]`
+
+Inverse equation with determinant
+
+:::
+
+---
+> id: rotation-inverse
+
+### Example: Inverse of a Rotation Matrix
+
+In chapter 1 we derived the matrix representing a rotation through the angle `θ`. The inverse of this matrix will be the rotation through the angle [[-θ|180-θ]].
+
+---
+
+::: .box.f-blue
+
+#### Inverse of Rotation matrix
+
+Let's verify that the inverse of the rotation matrix by θº is the same as the rotation matrix by -θ.
+
+**Here is the rotation matrix through θ**
+
+{.text-center} A = `§[[cosθ (-sinθ)] [sinθ cosθ]]`
+
+**To find the inverse, first calculate the determinant**
+
+{.fixme} Formula editor here, with options cosθ, sinθ, and exponent
+
+{.text-center} det(A) = `cos(θ)^2 + sin(θ)^2`
+
+**Remembering the trigonometric identities...**
+
+{.text-center}  det(A) = [[1]]
+
+**The term `1/det(A)` is 1**
+
+
+**By the formula for the Inverse matrix:**
+
+{.text-center} `A^(-1)` = `§[[cosθ sinθ] [(-sinθ) cosθ]]`
+
+**Now let's confirm this matrix is a rotation through -θ**
+
+**Think about a unit circle to see why these are true**
+
+::: column.grow
+
+{.text-center} `cos(θ) = cos(-θ)`
+
+::: column.grow
+
+{.text-center} `sin(θ) = -sin(-θ)`
+
+:::
+
+{.fixme} multi-choice or equation editor
+
+**Now substitute these values into our inverse matrix**
+
+{.text-center} `A^(-1)` =  `§[[(cos(-θ)) (-sin(-θ))] [(sin(-θ)) (cos(-θ))]]`
+
+**This is the same as the rotation matrix for -θ.**
+
+**We have proved it!**
+
+:::
+
+---
+
+{.fixme} Add some examples where students have to calculate inverses to solve problems.
+
+- **Possibilities**
+    - Ray Tracing?
+    - Linear Regression?
+    - Calculating the probability that you were in a previous step in a Markov Chain
+    - Linear programming, optimization?
+
+---
+> id: inverse-intersection
+
+### **Inverse matrices for solving line intersection**
+
+There is another way we can look at matrices. Observe the following graph of two lines with the following equations. What if we want to find the intersection of these two lines?
+
+    x-geopad(width=300 x-axis="-8,8,1" y-axis="-8,8,1" grid axes): svg
+      path.blue(x="line(point(0,4),point(2,6))" target="l1")
+      path.green(x="line(point(0,2),point(2,6))" target="l2")
+
+[{.pill.blue}y = x + 4](target:l1) and [{.pill.green}y = 2x + 2](target:l2)
+
+We can already observe that the lines intersect at point (2, 6). But there's also a way to solve this with matrices. How? We can rewrite these two lines as a **system of equations**, and then treat is as a matrix multiplication problem.
+
+::: .box.f-yellow
+
+#### Intersection
+
+**Write the two equations**
+
+::: column.grow
+{.text-center} [{.pill.blue}`y = x + 4`](target:l1)
+::: column.grow
+{.text-center} [{.pill.green}`y = 2x + 2`](target:l2)
+:::
+
+**For both equations, isolate the variables on one side.**
+
+::: column.grow
+{.text-center} [{.pill.blue}`-x + y = 4`](target:l1)
+::: column.grow
+{.text-center} [{.pill.green}`-2x + y = 2`](target:l2)
+:::
+
+**Line up the variables and write the coefficients**
+
+{.text-center} [{.pill.blue}`-1*x + 1*y = 4`](target:l1)
+
+{.text-center} [{.pill.green}`-2*x + 1*y = 2`](target:l2)
+
+**Rewrite it as a matrix multiplication**
+
+{.text-center} `§[[(-1) 1] [(-2) 1]]` • `§[[x] [y]]` = `§[[4] [2]]`
+
+
+**We can solve for [x, y] by finding the inverse and multiplying by [4, 2]**
+
+**Write the formula for the inverse**
+
+{.text-center} `1/det(A)` • `§[[1 (-1)] [2 (-1)]]`
+
+**Find the determinant**
+
+{.text-center} `det(A)` = `a * d - b * c` = `-1 - (-2)` = `1`
+
+{.text-center} `det(A) = 1`
+
+**This is our inverse matrix**
+
+{.text-center} `A^(-1)` = `§[[1 (-1)] [2 (-1)]]`
+
+**Now perform matrix multiplication with the inverse and [4 2]**
+
+{.text-center} `§[[1 (-1)] [2 (-1)]]` • `§[[4] [2]]` = `§[[x] [y]]`
+
+**Simplify**
+::: column.grow
+{.text-center} `x = [ 4 - 2 ] = 2`
+::: column.grow
+{.text-center} `y = [ 8 - 2 ] = 6`
+:::
+
+*** indeed, the intersection point is...**
+(2, 6)
+
+:::
+
+Lesson: this was a long way to solve a problem we already knew the answer to, but it shows that we can use matrices for more than just transformations! This type of matrix calculation is very useful for higher order problems. There are better ways to solve multi-dimensional matrix problems, as we will see next chapter. 
+
+{.fixme} Again, I think we should have 1-2 examples where students can find the intersection of two lines.
+
+
+--- 
+> id: singular-matrices
+
+### Singular matrices
+
+The formula for the inverse of a matrix contains a determinant in the denominator. This will give us a problem when the determinant of a matrix is [[zero]]. The inverse [[cannot be calculated]]! 
+
+Matrices with determinant zero are called **singular matrices**, meaning they do not have an inverse.
+
+This is just like the number 0 which has no inverse: You can multiply by 0, but you cannot divide by 0.
+
+Recall last chapter how the determinant of a matrix represents what happens when we apply that matrix's transformation to a set of points. If the determinant is zero, then the resulting area of the transformed space will be [[zero]]. 
+
+    figure: img(src="images/proto-4/Untitled%203.png")
+
+zero determinant
+
+{.fixme} I would maybe explain this with 1:1 or many:1 functions. A matrix transform is a 1:1 function. For every input, there is one, unique output. That makes it easy to invert it. For singular matrices, lots of points get mapped to the same output, so there is no way to tell where you came from.
+
+Does it make sense that a matrix with a transformation that collapses space onto zero area will not have an inverse? If the area is zero, no matter what point is put into the transformation, the resulting point will [[lie along the same line]].
+
+This transformation has squeezed space onto a single line. 
+
+There are no ways to "undo" this transformation. All of the points now lie on the same line. 
+
+- [ ]  Many-to-one, cannot go back to being a one-to-one.
+
+📈Geopad — like 3b1b with arrows pointing from straight line onto plane
+
+Here is a collection of points that have been multiplied by a **singular matrix**. Try multiplying them to get a line back out.
+
+📈Interactive where student can adjust a matrix that multiplies by a singular matrix, but the resulting transform will always be a line.
+
+---
+> id: least-squares
+
+The "Method of Least Squares" is a way to estimate a trend for data.
+
+::: .box.f-yellow
+#### Method of Least Squares
+
+{.fixme} Different points (these are copied from a LinAlg textbook)
+
+We have a set of points. Can we find a best fit line?
+
+::: column.grow
+
+    - points = [[1,1], [2,2], [3,4], [4,4], [5,6]]
+    table.data
+      tr: td var1
+        td var2
+      for p in points
+        tr
+          td= p[0]
+          td= p[1]
+
+::: column(width=300)
+
+    - points = [[1,1], [2,2], [3,4], [4,4], [5,6]]
+    x-geopad(width=300 x-axis="-1, 8, 1" y-axis="-1, 8, 1" grid axes): svg
+      for p,i in points
+        circle.blue(name=`p${i}` x=`point(${p[0]}, ${p[1]})`)
+        path.red(x=`segment(point(${p[0]},${p[1]}), point(${p[0]},${1*p[0]+0}))` target="error")
+      path.blue(x="line(point(0,0),point(1,1))" target="guess1")
+
+:::
+
+We want to see how a best-fit line would work.
+
+{.text-center} `y = mx + b`
+
+We want to find some function `f(x)` that fits this line best. A possible best fit line is [{.pill.blue}y = x](target:guess1).
+
+How can we minimize the total [{.pill.red}error](target:error)?
+
+{.fixme} is it possible to automate this, i.e. put it in PUG?
+
+::: column.grow
+**Write X like this**
+
+`X` = `§[[1 1] [1 2] [1 3] [1 4] [1 5]]`
+::: column.grow
+**Write Y like this**
+
+`Y` = `§[[1] [2] [4] [4] [6]]`
+:::
+
+{.text-center} `Y = XA + E`
+
+**The formula to minimize the error**
+
+{.text-center} `A = (X^(T)*X)^(-1)*X^T*Y`
+
+**New Notation**
+
+`X^T` is the [transpose](gloss:transpose-matrix) of the matrix `X`. This is a very simple operation, it just means you switch the rows and the columns.
+
+```markdown
+X = [...]5x2
+X^T = [...]2x5
+
+X^(T)•X = [....]2x2
+(X^(T)•X)^-1 = 1/det[...]2x2
+
+**now multiply it by Y**
+NY = [...]2x1
+
+**and write the equation**
+f(x): y = mx + b
+
+// here is where we draw the line
+```
+WOW!
+this is truly magic. To learn more about how this works, check the course on statistical methods and machine learning
+
+:::
+
+---
+> id: three-by-three
+
+#### Larger Matrices
+
+::: column(width=300)
+
+Here is the formula for calculating a 3x3 matrix. There is a way to calculate inverses of larger matrices, which we will observe next chapter.
+
+::: column.grow
+
+
+`§[[a b c] [d e f] [g h i]]^(-1)` = `1/det(A)` • `§[[(ei-fh) (ch-bi) (bf-ce)] [(fg-di) (ai-cg) (cd-af)] [(dh-eg) (bg-ah) (ae-bd)]]`
+
+:::
+
+
+---
+> id: inverse-conclusion
+
+### Conclusion/Cliff-Hanger
+
+
+"Throughout history mathematicians have done many ways to solve inverses... for example (statistics and orbit of planets). But our current methods are not enough to solve these, we need something better!"
 
 
 ----------------------------------------------------------------------------------------------------
 
 
-## Cramer’s Rule and Gaussian Elimination
+## Gaussian Elimination
 
 > section: systems
 > sectionStatus: dev
 
-{.todo} COMING SOON
+> id: gauss-solver-babylon
 
+Solve this matrix from Ancient Babylon:
+
+    x-gauss-solver(matrix="[[1, 1, 1800],[4, -3, 3000]]")
+
+---
+
+> id: gauss-solver-china
+
+Solve this matrix from Ancient China:
+
+    x-gauss-solver(matrix="[[1, 2, 3, 26], [2, 3, 1, 34], [3, 2, 1, 39]]")
+
+---
+
+> id: gauss-intro-piazzi
+
+### Intro
+
+The year is 1801. Giuseppe Piazzi is an Italian astronomer who has catalogued the precise position of over 7,000 stars. He published the Catalog of Stars, observed from the Palermo observatory.
+
+On January 2nd, 1801, Piazzi observed a celestial body[1] whose location did not match his previous observation. Had Piazzi committed an error in measurement, or had this body moved through the night sky? He repeated the observation over the next two days and surely enough it had moved across the sky. The next day Piazzi could not make another measurement because this unknown entity had moved behind the sun.
+
+{.todo} IMAGE_NEEDED of Piazzi? Telescope? Planets?
+
+The mathematics of the time were not sufficient to calculate the orbit of this body using only three points. Fortunately, Friedrich Gauss[2] learned of this predicament and took on the challenge. He invented a new method to predict the orbit of this celestial body and predicted its location in December of 1801. Surely enough, it was found exactly where he predicted it would be! The body was found to be a dwarf planet with an orbit between Mars and Jupiter. It was named Ceres, after a Roman goddess of agriculture.
+
+---
+
+> id: ceres-orbit
+
+### Orbit of Ceres
+
+To calculate Ceres’ orbit around the sun, Gauss needed to do some complex math with triangles. The three Es here represent the locations of the Earth as it moves around the sun, the lines labeled L represent the line of sight that Gauss measured, and the positions P1, P2, P3 are the calculated positions of Ceres relative to the sun.
+
+{.todo} IMAGE_NEEDED of diagrams
+
+The goal was to replace the three positions of Ceres with parameters that represented the orbit around the sun.[3] When searching for these positions of Ceres, Gauss encountered a mathematical problem with a very long history, that dates back to almost 4,000 years ago!
+
+
+---
+
+> id: babylon-intro
+
+### Ancient Babylonians: 2x2
+
+The problem of how to calculate the orbit of Ceres can ultimately be considered a system of equations. What if you have multiple unknown variables, and multiple equations that represent the relationships between those unknowns? This was not a new problem - in fact, it dates back to at least the ancient Babylonians in 1800 BCE.
+
+The Babylonians[4][5] used Cuneiform tablets to teach algebra. Their culture and society was very dependent on agriculture. Here is a problem that was found inscribed on a tablet. It was translated by historians/linguists.
+
+{.todo} IMAGE_NEEDED of Cuneiform
+
+---
+
+> id: babylon-setup
+
+::: .box.f-green
+
+I have two fields that total 1800 sar (square meters). Yields for each field are ⅔ kur of grain per sar and ½ kur of grain per sar. The first field gave 500 more kur than the second. What are the areas of each field?[4][5]
+
+:::
+
+The units are unfamiliar, but we just need to know what kind of unit they represent (area, volume/mass) and we can repeat the techniques with whatever units we choose.
+
+Now let’s follow some steps to solve this system of equations:
+
+
+---
+
+> id: babylon-problem
+
+### Babylon Problem
+
+::: .box.f-red
+
+{.todo} PROBLEM_SOLVE details needed of problem
+
+:::
+
+
+Great! The problem we just solved was likely solved by maths students in an ancient civilization! Let’s see what else we can do with this.
+
+---
+
+> id: chinese-intro
+
+### Ancient Chinese: 3x3
+
+Interestingly, the ancient Chinese also used a similar method to calculate agricultural yields (a lot more people were farmers back then!). This example was found in Jiuzhang Suanshu, or Nine Chapters of the Mathematical Art.
+
+Instead of measuring grain, this problem measures rice, from rice paddies. The area of the volume is measured in dou, and the yield is a sheaves, which is a bundle of rice stalks.
+
+{.todo} IMAGE_NEEDED of rice paddies
+
+
+---
+
+> id: chinese-problem
+
+Here is the problem:
+
+::: .box.f-green
+
+There are three grades of rice paddies, top-grade, medium-grade, and low-grade. The combined yield of the first paddy is 39 dou of grain for 3 sheaves from top-grade paddies, 2 from medium-grade, and 1 from low-grade; and similarly for two more collections of sheaves. The other two rice paddies have the yields shown in the table.
+
+**What is the expected yield from one sheave from a top-grade field, a medium-grade field, and a low-grade field?**
+
+:::
+
+
+Here is a Gaussian component:
+
+::: .box.f-red
+
+{.todo} PROBLEM_SOLVE details needed of problem
+
+:::
+
+What we just did with the help of computers, Ancient Chinese Mathematicians actually used a table with counting rods (similar to an abacus). Before they had computers, they found a way to do this!
+
+---
+
+> id: rules-gaussian
+
+### Rules of Gaussian Elimination
+
+Great job! We just worked through two problems that were likely solved by maths students in ancient civilizations!  These kinds of problems have troubled mathematicians for ages. Despite being used long ago, the method we used in those two problems is what we now call [Gaussian Elimination](gloss:gaussian-elimination).
+
+Gaussian Elimination is used to solve a system of equations. It is a procedure in which a system of equations can be written as a matrix problem, and then simplified to find solutions for variables.
+
+::: .box.f-yellow
+
+**Process**
+
+- Write the system of equations as an augmented matrix form.
+- Follow the steps until the identity matrix is reached
+  - Get zeros in the bottom-left diagonal of the matrix. (This is called upper Triangle matrix)
+    - Replace each row with a linear combination of that row, and the row above it. Choose a linear combination so that the leading coefficient is zero. ((NOTE: this does NOT add new information or change the meaning of the equations. It is like performing the same operation on multiple sides of an equation)).
+    - Divide to make the leading coefficient 1.
+  - Perform “back-substitution” to get zeros in the top-right diagonal of the matrix. This will leave you with the identity matrix.
+
+:::
+
+
+---
+
+> id: solving-ceres
+
+### Ceres
+
+Solving Ceres
+
+
+---
+
+> id: cartography-intro
+
+### Cartography
+
+Gauss also used this approach to solve other problems people were struggling with. Here's another example. At the turn of the 19th century there was a large trend of national governments wanting accurate geographical maps of their country, for purposes of military safety, navigation, and urban planning. The land was mapped by picking landmarks throughout the country. At each location, a “surveyor” would establish a line of sight from their location to two other landmarks. They then measured angles between the lines of sight. 
+
+{.todo} IMAGE_NEEDED of landmarks & measuring
+
+These landmarks were spread across very large distances, so measuring the angle off by even a degree could send the point off by many miles. Thus, it was essential to get the measurements as close as possible. Also, many points were inaccessible due to being on mountains. 
+
+
+Here's a map
+
+    figure: include svg/map-with-dots.svg
+
+Here you can see all the measurements made by surveyors working for the Dutch government in 1826. Here is a map of Holland, with many landmarks picked out. The yellow lines are the lines of sight between landmarks.  
+
+The problem we will do below is only a slight approximation to what Gauss actually did, which was to use a method called Least Squares, which is out of scope for this chapter. Least Squares is not for solving but for minimizing total error over many variables. Gauss used this method of least squares to minimize the error over all of the measurements. Imagine how complex it would be to minimize the error over a map with dozens of locations and hundreds of angles. Gauss’s methods of elimination were essential to devising accurate maps.
+
+
+
+---
+
+> id: cartography-problem
+
+### Cartography Problem
+
+Let's simplify this problem by picking just 6 landmarks and some angles between them.
+
+::: .box.f-green
+
+{.todo} PROBLEM_SOLVE details needed of problem
+
+:::
+
+---
+> id: two-equations
+
+::: column.grow
+
+**write the two equations**
+```markdown
+EQ1: y = x + 4
+EQ2: y = 2x + 2
+```
+EQ1: [{.pill.blue}y = x + 4](target:l1)
+EQ2: [{.pill.green}y = 2x + 2](target:l2)
+
+**now put variables on the same side**
+```markdown
+EQ1:  -x + y = 4
+EQ2: -2x + y = 2
+```
+EQ1: [{.pill.blue}-x + y = 4](target:l1)
+EQ2: [{.pill.green}-2x + y = 2](target:l2)
+
+**now write in augmented matrix form**
+```markdown
+R1   | -1  1 : 4 |
+R2   | -2  1 : 2 |
+```
+
+::: column(width=200)
+
+**original system of equations**
+
+    x-geopad(width=300 x-axis="-8,8,1" y-axis="-8,8,1" grid axes): svg
+      path.blue(x="line(point(0,4),point(2,6))" target="l1")
+      path.green(x="line(point(0,2),point(2,6))" target="l2")
+
+{.caption} y = x + 4; y = 2x + 2;
+
+:::
+
+[Continue](btn:next)
+
+---
+
+::: column.grow
+
+**now start row-reduction**
+
+**first goal: 0s in bottom left**
+```markdown
+R1           | -1  1   : 4 |
+1/2*R2 -> R2 | -1  1/2 : 1 |
+
+R1           | -1    1  :  4 |
+R2-R1 -> R2  |  0  -1/2 : -3 |
+
+```
+
+**simplify (make coefficient a 1)**
+```markdown
+R1           | -1    1  :  4 |
+-2*R2 -> R2  |  0    1  :  6 |
+```
+
+::: column(width=200)
+
+**after R2 - R1 → R2**
+
+    x-geopad(width=300 x-axis="-8,8,1" y-axis="-8,8,1" grid axes): svg
+      path.blue.dashed(x="line(point(0,4),point(2,6))" target="l1")
+      path.blue(x="line(point(0,6),point(2,6))" target="l1p")
+      path.green(x="line(point(0,2),point(2,6))" target="l2")
+
+{.caption} y = x + 4;  y = 6;
+
+{.fixme} animate this as row is substituted!
+
+:::
+
+[Continue](btn:next)
+
+---
+
+::: column.grow
+
+**now perform back-substitution**
+```markdown
+R1-R2 -> R1 | -1    0  : -2 |
+R2          |  0    1  :  6 |
+```
+
+**and simplify**
+```markdown
+-1*R1 -> R1 |  1  0  :  2 |
+R2          |  0  1  :  6 |
+```
+
+::: column(width=200)
+
+**after back-substitution**
+
+**R1 - R2 → R1**
+
+    x-geopad(width=300 x-axis="-8,8,1" y-axis="-8,8,1" grid axes): svg
+      path.blue(x="line(point(0,6),point(2,6))" target="l1p")
+      path.green.dashed(x="line(point(0,2),point(2,6))" target="l2")
+      path.green(x="line(point(2,2),point(2,6))" target="l2p")
+
+{.caption} x = 2; y = 6;
+
+{.fixme} animate this as row is substituted!
+
+:::
+
+[Continue](btn:next)
+
+---
+
+::: column.grow
+
+**we have our solution!**
+```markdown
+x = 2
+y = 6
+```
+[{.pill.green}x = 2](target:l2p)
+[{.pill.blue}y = 6](target:l1p)
+
+::: column(width=200)
+
+    x-geopad(width=300 x-axis="-8,8,1" y-axis="-8,8,1" grid axes): svg
+      path.blue(x="line(point(0,6),point(2,6))" target="l1p")
+      path.green(x="line(point(2,2),point(2,6))" target="l2p")
+
+{.caption} x = 2; y = 6;
+
+:::
+
+---
+
+> id: network-analysis
+
+::: .box.f-blue
+#### 🚦 Traffic Network Analysis
+
+[Networks](linkto:networks) are everywhere. We find networks in economic models, electric circuits, and traffic patterns.
+
+::: column.grow
+
+**Write a system of equations representing this network.**
+
+```markdown
+e1 + e7 - e5 - e6 = 0
+-e1 + e2 = 0
+e3 - e2 - e7 = 0
+-e3 + e4 + e6 = 0
+-e4 + e5 = 0
+```
+
+**Now write it as an augmented matrix**
+```markdown
+|  1   0   0   0  -1  -1   1 : 0 |
+| -1   1   0   0   0   0   0 : 0 |
+|  0  -1   1   0   0   0  -1 : 0 |
+|  0   0  -1   1   0   1   0 : 0 |
+|  0   0   0  -1   1   0   0 : 0 |
+```
+
+::: column(width=300)
+    // prototype here:
+    // https://editor.p5js.org/kevindeland/sketches/ud4f-fl-b
+    img(src="images/proto-5/network-label.gif")
+:::
+
+:::
+
+---
+> id: electric-bill
+
+::: .box.f-blue
+#### 🔌 Electric Bill
+
+A restaurant owner wants to measure the power consumption of her most commonly used appliances.
+
+The three main uses of power are:
+
+🥶 Freezer
+🍕 Oven
+🧼 Dishwasher
+
+She wants to calculate how much it costs to run each appliance for an hour.
+
+She has three weekly electric bills and also knows how often she was using each appliance for that week.
+
+**Hours + Bills per Week**
+
+| Week | Freezer | Oven | Dishwasher | Bill |
+|---|---|---|---|---|
+| Week 1 | 168 | 20 | 20 | $1400 |
+| Week 2 | 168 | 28 | 12 | $1336 |
+| Week 3 | 168 | 42 | 18 | $1824 |
+
+
+    // use values: f=5, o=20, d=8
+    - x = [5, 20, 8]
+    - A = [[168, 20, 20], [168, 20, 12], [168, 42, 18]]
+    - w1 = A[0][0]*x[0] + A[0][1]*x[1] + A[0][2]*x[2]
+    - w2 = A[1][0]*x[0] + A[1][1]*x[1] + A[1][2]*x[2]
+    - w3 = A[2][0]*x[0] + A[2][1]*x[1] + A[2][2]*x[2]
+    // ul Answers:
+      // li= w1
+      // li= w2
+      // li= w3
+
+**Rewrite this as a matrix**
+
+{.text-center} `Cost` = `A` * `hourly`
+
+{.text-center} `§[[1400] [1336] [1824]]` = `§[[168 20 20] [168 28 12] [168 42 18]]` • `§[[f] [o] [d]]`
+
+**Now perform Gaussian Elimination to find the cost-per-hour of each appliance**
+
+:::
+
+
+---
 
 ----------------------------------------------------------------------------------------------------
 

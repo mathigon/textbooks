@@ -11,6 +11,43 @@ import {Angle, ORIGIN, Point} from '@mathigon/euclid';
 import {ElementView, ScreenEvent, svgPointerPosn} from '@mathigon/boost';
 import {Geopad, Step} from '../shared/types';
 
+import './components/gauss-solver';
+import {GaussSolver} from './components/gauss-solver';
+
+
+export function gaussSolverBabylon($step: Step) {
+  const $solver = $step.$('x-gauss-solver') as GaussSolver;
+  $solver.bindStep($step);
+}
+
+export function gaussSolverChina($step: Step) {
+  const $solver = $step.$('x-gauss-solver') as GaussSolver;
+  $solver.bindStep($step);
+}
+
+export function map($step: Step) {
+  console.log('map');
+  const $map = $step.$('#map-with-dots');
+  const $netherlands = $step.$('#netherlands');
+  // const $linesKeep = $step.$('#lines-keep');
+  const $linesHide = $step.$('#lines-hide');
+  const $mapHide = $step.$('#points-map-hide');
+  // const $mapShow = $step.$('#points-map-show');
+
+  console.log($map);
+  setTimeout(() => {
+    $netherlands?.exit('fade');
+  }, 2000);
+
+  setTimeout(() => {
+    $linesHide?.exit('fade');
+    $mapHide?.exit('fade');
+  }, 3000);
+
+  setTimeout(() => {
+    $map?.css('transform', 'scale(2) translate(-50%,0)');
+  }, 6000);
+}
 
 export function rocket($step: Step) {
   const $geo = $step.$('x-geopad') as Geopad;
@@ -163,6 +200,24 @@ function animateTransformationOnGeo(geo: Geopad, iv: string, jv:string, m: numbe
   geo.animatePoint(jv, new Point(m[1][0], m[1][1]), time);
 }
 
+/**
+   * Currently only used to draw Identity Matrix, but worth keeping.
+   *
+   * @param geo Geopad to draw on.
+   * @param matrix transformation to draw.
+   * @param name name of matrix (gets mapped to i${name} and j${name})
+   */
+function drawUnitVectorsToGeo(geo: Geopad, matrix: number[][], name: string) {
+  geo.drawPoint('point(0,0)',
+      {name: 'origin', interactive: false, classes: 'hidden'});
+  geo.drawPoint(`point(${matrix[0][0]},${matrix[0][1]})`,
+      {name: `i${name}`, interactive: false, classes: 'hidden'});
+  geo.drawPoint(`point(${matrix[1][0]},${matrix[1][1]})`,
+      {name: `j${name}`, interactive: false, classes: 'hidden'});
+  geo.drawPath(`segment(origin,i${name})`, {classes: 'red'});
+  geo.drawPath(`segment(origin,j${name})`, {classes: 'green'});
+}
+
 export function transformsCalculator($step: Step) {
   const $cubes = $step.$$('.cube') as ElementView[]; // they're squares, actually
 
@@ -177,24 +232,6 @@ export function transformsCalculator($step: Step) {
   let b: number[][] | undefined = undefined;
   let c: number[][] | undefined = undefined;
   const I = Matrix.identity(2);
-
-  /**
-   * Currently only used to draw Identity Matrix, but worth keeping.
-   *
-   * @param geo Geopad to draw on.
-   * @param matrix transformation to draw.
-   * @param name name of matrix (gets mapped to i${name} and j${name})
-   */
-  function drawUnitVectorsToGeo(geo: Geopad, matrix: number[][], name: string) {
-    geo.drawPoint('point(0,0)',
-        {name: 'origin', interactive: false, classes: 'hidden'});
-    geo.drawPoint(`point(${matrix[0][0]},${matrix[0][1]})`,
-        {name: `i${name}`, interactive: false, classes: 'hidden'});
-    geo.drawPoint(`point(${matrix[1][0]},${matrix[1][1]})`,
-        {name: `j${name}`, interactive: false, classes: 'hidden'});
-    geo.drawPath(`segment(origin,i${name})`, {classes: 'red'});
-    geo.drawPath(`segment(origin,j${name})`, {classes: 'green'});
-  }
 
   const WAIT = 200;
   const ANIMATE = 500;
@@ -293,3 +330,83 @@ export function determinants($step:Step) {
     animateTransformationOnGeo($geopad, 'ipoint', 'jpoint', [[1, 1], [-1, -1]], ANIMATE);
   });
 }
+
+export function introInverses($step:Step) {
+  // TODO: complete
+  const $geopads = $step.$('.inverse-row')?.$$('x-geopad') as Geopad[];
+
+  const I = Matrix.identity(2);
+
+  const names = ['rotate', 'scale', 'reflect'];
+  names.forEach((name, i) => {
+    drawUnitVectorsToGeo($geopads[i], I, name);
+  });
+
+  const $transforms = $step.$('.inverse-row')?.$$('.transform') as ElementView[];
+  const matrices = [
+    [[0, -1], [1, 0]],
+    [[2, 0], [0, 2]],
+    [[-1, 0], [0, 1]]
+  ];
+
+  // it just goes back to normal so we don't need these
+  /* const inverses = [
+    [[0.5, 0], [0, 0.5]],
+    [[0.5, 0], [0, 0.5]],
+    [[0.5, 0], [0, 0.5]]
+  ]; */
+  const $reverses = $step.$('.inverse-row')?.$$('.reverse') as ElementView[];
+
+  $transforms.forEach((t, i) => {
+    t.on('click', () => {
+      animateTransformationOnGeo($geopads[i],
+          `i${names[i]}`, `j${names[i]}`, matrices[i], 300);
+    });
+    // $reverses[i].disable()
+  });
+
+  $reverses.forEach((t, i) => {
+    t.on('click', () => {
+      animateTransformationOnGeo($geopads[i],
+          `i${names[i]}`, `j${names[i]}`, I, 300);
+    });
+    // $transforms[i].disable()
+  });
+}
+
+export function calculateInverse($step: Step) {
+  const $geopad = $step.$('.inverse-row')?.$('x-geopad') as Geopad;
+
+  const I = Matrix.identity(2);
+
+  drawUnitVectorsToGeo($geopad, I, 'shear');
+
+  const $transform = $step.$('.inverse-row')?.$('.transform') as ElementView;
+  const matrix = [
+    [[1, 0], [1, 1]]
+  ];
+
+  // it just goes back to normal so we don't need these
+  /* const inverses = [
+    [[0.5, 0], [0, 0.5]],
+    [[0.5, 0], [0, 0.5]],
+    [[0.5, 0], [0, 0.5]]
+  ]; */
+  const $reverse = $step.$('.inverse-row')?.$('.reverse') as ElementView;
+
+  $transform.on('click', () => {
+    animateTransformationOnGeo($geopad,
+        `ishear`, `jshear`, matrix[0], 300);
+  });
+
+  $reverse.on('click', () => {
+    animateTransformationOnGeo($geopad,
+        `ishear`, `jshear`, I, 300);
+  });
+  // $transforms[i].disable()
+}
+
+export function rotationInverse(_$step: Step) {
+  // TODO: put an x-matrix-solver here
+}
+

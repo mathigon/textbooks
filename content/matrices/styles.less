@@ -4,6 +4,7 @@
 // =============================================================================
 
 @import "../shared/variables";
+@import "./components/gauss-solver";
 
 .cubes {
     .clearfix();
@@ -31,6 +32,19 @@ x-geopad .points circle.shot {
     .hidden {
         display: none;
     }
+}
+
+// Inverses
+.inverse-row {
+    .mat {
+      display: block;
+      float: left;
+      margin: 10px;
+    }
+}
+
+.big-equation {
+  font-size: large;
 }
 
 .addition .add {
