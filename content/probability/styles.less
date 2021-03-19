@@ -58,6 +58,16 @@ article.gameshow .page-background {
 // -----------------------------------------------------------------------------
 // Conditional Probability
 
+.conditional {
+  .people rect { transition: transform .9s; }
+  .red { fill: @red; }
+  .grey { fill: @grey; }
+  .blue { fill: @blue; }
+  .green { fill: @green; }
+  .purple { fill: @purple; }
+  .focus & rect:not(.focus) { opacity: 0.2; }
+}
+
 x-buckets.independent {
   .input { width: 220px; }
   .bucket { width: 300px; }
@@ -129,7 +139,7 @@ x-buckets.independent {
     height: 100%;
     position: absolute;
     transform-origin: 0 50%;
-    transition: transform 1s, box-shadow .3s;
+    transition: transform 0.5s, box-shadow .3s;
     background: url('/resources/probability/images/door.png');
     background-size: contain;
 

@@ -6,10 +6,12 @@
 
 import {flatten, list, Obj, repeat, tabulate2D} from '@mathigon/core';
 import {Random} from '@mathigon/fermat';
-import {$, $N, ElementView} from '@mathigon/boost';
+import {$, $N, ElementView, register, slide} from '@mathigon/boost';
 import {Step} from '../shared/types';
 import '../shared/components/buckets';
 
+import './components/conditional-grid';
+import {Conditional} from './components/conditional-grid';
 
 // -----------------------------------------------------------------------------
 // Utilities
@@ -19,6 +21,14 @@ function table(data: any[][]) {
   const rows = data.map(tr => '<tr>' + tr.map(td => `<td>${td}</td>`)
       .join('') + '</tr>').join('');
   return `<table>${rows}</table>`;
+}
+
+
+// Buckets
+
+export function buckets($step: Step) {
+  const $buckets = $step.$('x-buckets')!;
+  $buckets.on('correct', () => $step.score('buckets'));
 }
 
 
@@ -88,7 +98,72 @@ export function diceSimulation($step: Step) {
   });
 }
 
+
 // -----------------------------------------------------------------------------
+// Conditional Probability
+
+
+export function p0($step: Step) {
+  const $conditionalGrid = $step.$('x-conditional-grid') as Conditional;
+
+  const $buttons = $conditionalGrid.buttons;
+  for (let i = 0; i < 4; ++i) {
+    $buttons[i].on('click', ()=>{
+      let numClicked = 0;
+      $buttons.forEach((b) => {
+        if (b.clickedAtSomePoint) {
+          ++numClicked;
+        }
+      });
+      if (numClicked >= 3) {
+        $step.score('press-all-buttons');
+      }
+    });
+  }
+}
+
+export function p1($step: Step) {
+  const $conditionalGrid = $step.$('x-conditional-grid') as Conditional;
+
+  const $buttons = $conditionalGrid.buttons;
+  for (let i = 0; i < 4; ++i) {
+    $buttons[i].on('click', () => {
+      let numClicked = 0;
+      $buttons.forEach((b) => {
+        if (b.clickedAtSomePoint) {
+          ++numClicked;
+        }
+      });
+      if (numClicked >= 3) {
+        $step.score('press-all-buttons');
+      }
+    });
+  }
+}
+
+export function p2($step: Step) {
+  const $conditionalGrid = $step.$('x-conditional-grid') as Conditional;
+
+  const $buttons = $conditionalGrid.buttons;
+  for (let i = 4; i < 8; ++i) {
+    $buttons[i].on('click', () => {
+      let numClicked = 0;
+      $buttons.forEach((b) => {
+        if (b.clickedAtSomePoint) {
+          ++numClicked;
+        }
+      });
+      if (numClicked >= 3) {
+        $step.score('press-second-column-buttons');
+        // THIS ISN'T AFFECTING
+      }
+    });
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Monty Hall
 
 class OneTimeButton {
 
