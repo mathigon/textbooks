@@ -871,7 +871,18 @@ Let’s head over to the track for the women’s 800 meter final. Looks like we 
 
     x-video-graph#running-video-graph
         x-video(src="/resources/functions/images/olympic_running.mp4" poster="images/olympic_running_poster.png" width=640 height=360 controls credit="©RA")
-        x-coordinate-system(width=640 height=320 x-axis="90,130,10" y-axis="600,800,50" axis-names="Time,Distance" crosshairs="no")
+        div
+            div.runner-name-key
+                div
+                    img(src="/resources/functions/images/tracey_face.png")
+                    p.red Adelle Tracey
+                div
+                    img(src="/resources/functions/images/boufaarirane_face.png")
+                    p.green Laila Boufaarirane
+                div
+                    img(src="/resources/functions/images/rogers_face.png")
+                    p.blue Raevyn Rogers
+            x-coordinate-system(width=400 height=320 x-axis="80,130,10" y-axis="550,800,50" axis-names="Time,Distance" crosshairs="no")
 
     // NOTES
     // Information for the interactive:
