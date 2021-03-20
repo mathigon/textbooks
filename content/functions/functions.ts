@@ -7,7 +7,7 @@
 import '../shared/components/relation';
 import { Relation } from '../shared/components/relation';
 import '../shared/components/video-graph';
-import { VideoGraph } from '../shared/components/relation';
+import { VideoGraph } from '../shared/components/video-graph';
 import {Point} from '@mathigon/euclid';
 import {CoordinateSystem, Geopad, GeoPoint, Slider, Step, Video} from '../shared/types';
 import { $N, animate, Draggable, ease, ElementView, hover, KEY_CODES, pointerOver, SVGParentView, svgPointerPosn } from '@mathigon/boost';
@@ -15,7 +15,6 @@ import { Burst } from '../shared/components/burst';
 import { last, stringDistance } from '@mathigon/core';
 import '../shared/components/function-machine';
 import { FunctionMachine } from '../shared/components/function-machine';
-import { VideoGraph } from '../shared/components/video-graph';
 import { lerp } from '@mathigon/fermat';
 import { shuffle } from '@mathigon/fermat/src/random';
 
