@@ -9,6 +9,8 @@ import { Point, SimplePoint } from '@mathigon/euclid';
 import { CoordinateSystem, Geopad, GeoPoint } from '../shared/types';
 import { $N, animate, Draggable, ease, ElementView, hover, KEY_CODES, pointerOver, SVGView, SVGParentView, svgPointerPosn } from '@mathigon/boost';
 import { last, stringDistance } from '@mathigon/core';
+import { lerp } from '@mathigon/fermat';
+import { shuffle } from '@mathigon/fermat/src/random';
 
 import '../shared/components/burst';
 import { Burst } from '../shared/components/burst';
@@ -21,8 +23,6 @@ import { Relation } from '../shared/components/relation/relation';
 
 import '../shared/components/video-graph';
 import { VideoGraph } from '../shared/components/video-graph';
-import { lerp } from '@mathigon/fermat';
-import { shuffle } from '@mathigon/fermat/src/random';
 
 export function fnSketch($step: Step) {
   $step.$('.btn.clear')!.on('click', () => {
