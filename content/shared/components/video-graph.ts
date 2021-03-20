@@ -4,9 +4,8 @@
 // =============================================================================
 
 
-import {$N, CustomElementView, ElementView, register, SVGParentView, SVGView, Draggable, animate, ease} from '@mathigon/boost';
+import {$N, CustomElementView, register, SVGView} from '@mathigon/boost';
 import { Point } from '@mathigon/euclid';
-import {lerp, clamp} from '@mathigon/fermat';
 import { CoordinateSystem, Step, Video } from '../types';
 
 const avatarSize = 32;
