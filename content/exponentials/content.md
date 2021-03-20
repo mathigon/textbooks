@@ -4,6 +4,9 @@
 
 > section: carbon-dating
 > id: egypt
+> color: "#EF551E"
+> level: Intermediate
+> next: probability
 
 ::: column.grow
 
@@ -43,24 +46,24 @@ proportion of carbon atoms contain additional neutrons. These different
 
     x-atom(protons=6 neutrons=6 size=150)
 
-{.text-center} __Carbon-12__  
-6 protons, 6 neutrons  
+{.text-center} __Carbon-12__
+6 protons, 6 neutrons
 98.8%
 
 ::: column(width=170)
 
     x-atom(protons=6 neutrons=7 size=150)
 
-{.text-center} __Carbon-13__  
-6 protons, 7 neutrons  
+{.text-center} __Carbon-13__
+6 protons, 7 neutrons
 1.1%
 
 ::: column(width=170)
 
     x-atom(protons=6 neutrons=8 size=150)
 
-{.text-center} __Carbon-14__  
-6 protons, 8 neutrons  
+{.text-center} __Carbon-14__
+6 protons, 8 neutrons
 0.1%
 
 :::
@@ -82,7 +85,7 @@ which means that you also contain around `8 × 10^23` carbon-14 atoms. That’s 
 million-million-million-million atoms!
 
     // Carbon is an essential part of our body, because it can form long,
-    // complex molecules. 
+    // complex molecules.
 
 ---
 > id: radioactive-1
@@ -104,7 +107,7 @@ million-million-million-million atoms!
       .operator(hidden style="left: 240px") +
     x-gesture(target=".decay-box x-atom")
 
-{.caption} 
+{.caption}
 
 ::: column.grow
 
@@ -311,7 +314,7 @@ or how the concentration of carbon-14 in our atmosphere has changed over time.
 In the previous section, we looked at the __exponential decay__ of radioactive
 materials, and how it can help scientists determine the age of fossils and
 mummies using carbon dating. But there are also some things that behave in
-exactly the opposite way: they _grow_ exponentially. 
+exactly the opposite way: they _grow_ exponentially.
 
 {.todo} TODO
 
@@ -333,7 +336,7 @@ value changes by a __fixed value__{.blue} during equal time intervals.
 diagram {.todo}
 
 Here are a few examples of processes in nature or everyday life. Try to decide
-which ones are exponential or linear. (Note that some models are increasing, 
+which ones are exponential or linear. (Note that some models are increasing,
 and others are decreasing.)
 
 {.todo} cell division

@@ -5,8 +5,10 @@
 > section: introduction
 > sectionStatus: dev
 > id: performance-1
+> color: "#0F82F2"
+> level: Foundations
 
-Around the world, street performers delight audiences with their up-close and engaging shows. As shown here in Covent Gardens in London, performers often lay out rope to keep audience members outside of their performing space. 
+Around the world, street performers delight audiences with their up-close and engaging shows. As shown here in Covent Gardens in London, performers often lay out rope to keep audience members outside of their performing space.
 
     figure: x-img(src="https://st3.depositphotos.com/1817276/19080/i/1600/depositphotos_190806246-stock-photo-london-circa-january-2018-knife.jpg" width=600 height=438)
 
@@ -29,9 +31,9 @@ Now, let’s focus on the shape we made out of the rope and imagine it as a shap
 
 ::: .reveal(when="rope-drawn")
 
-Your shape used ${firstArea.ropeUsed.toFixed(2)} meters of rope. So, ${firstArea.ropeUsed.toFixed(2)} meters is the [[perimeter | area | volume ]] of the shape. 
+Your shape used ${firstArea.ropeUsed.toFixed(2)} meters of rope. So, ${firstArea.ropeUsed.toFixed(2)} meters is the [[perimeter | area | volume ]] of the shape.
 
-Your shape roped off ${firstArea.cobblestones} cobblestones. So, ${firstArea.cobblestones} cobblestones is the  [[area | perimeter | volume ]] of the shape. 
+Your shape roped off ${firstArea.cobblestones} cobblestones. So, ${firstArea.cobblestones} cobblestones is the  [[area | perimeter | volume ]] of the shape.
 
 The shape used ${firstArea.ropeUsed.toFixed(2)} meters of rope. Below, create three different performing spaces with the same length of rope.
 
@@ -141,29 +143,29 @@ Now, let’s move on to thinking more deeply about the area of rectangles. Below
     figure: x-geopad(width=600 height=400)
       svg
 
-This rectangle has [[3]] rows, and every row has [[5]] squares, so we used `3 x 5 = input(15)` squares in total. 
+This rectangle has [[3]] rows, and every row has [[5]] squares, so we used `3 x 5 = input(15)` squares in total.
 
-Each square is one square centimeter, so the [[area | perimeter]] of this rectangle is [[15]] [[square centimeters | centimeters | square meters]]. 
+Each square is one square centimeter, so the [[area | perimeter]] of this rectangle is [[15]] [[square centimeters | centimeters | square meters]].
 
 Again, the length of the side of each square is [[1]] centimeter. So we know, the length of the base of the rectangle is [[5]] centimeters and the length of the height of the rectangle is [[3]] centimeters. The perimeter of the rectangle is [[16]] [[centimeters | square centimeters]].
 
 ---
 
-Before we continue on with area and perimeter, let’s discuss some commonly used units for perimeter and area. In this chapter, we’ll use centimeters, meters and kilometers. 
+Before we continue on with area and perimeter, let’s discuss some commonly used units for perimeter and area. In this chapter, we’ll use centimeters, meters and kilometers.
 
-A centimeter is about the [[width of a staple | length of a guitar | distance of about two laps around a track]]. 
+A centimeter is about the [[width of a staple | length of a guitar | distance of about two laps around a track]].
 
-A meter is about the [[length of a guitar | width of a staple | distance of about two laps around a track]]. 
+A meter is about the [[length of a guitar | width of a staple | distance of about two laps around a track]].
 
-A kilometer is about [[distance of about two laps around a track | length of a guitar | width of a staple]]. 
+A kilometer is about [[distance of about two laps around a track | length of a guitar | width of a staple]].
 
 ---
 
 Area is the amount of space inside an object., To determine the area of a shape, we’ve been filling up the space inside an object with squares. We could use other shapes as well. You can study that idea in a chapter on tessellations.
 
-Square meters are squares with side lengths of [[1]] [[meter | centimeter | kilometer]], and square centimeters are [[squares | circles | triangles]] with side lengths of [[1]] [[centimeter | meter | kilometer]]. So, a square kilometer is a square with side lengths of [[1]] [[kilometer | meter | centimeter]]. 
+Square meters are squares with side lengths of [[1]] [[meter | centimeter | kilometer]], and square centimeters are [[squares | circles | triangles]] with side lengths of [[1]] [[centimeter | meter | kilometer]]. So, a square kilometer is a square with side lengths of [[1]] [[kilometer | meter | centimeter]].
 
-When we talk about a certain number of square meters, say 7 of them, we can write it as “7 square meters” or “7 `"m"^2`”. In fact, the “`"m"^2`" is read as “meters squared.” Any power of “2” is often read as “squared.” For example,  we can read `9^2` as “9 squared” because we would need to multiply `9 x 9` when finding the [[area | perimeter]] of a square with side length 9. 
+When we talk about a certain number of square meters, say 7 of them, we can write it as “7 square meters” or “7 `"m"^2`”. In fact, the “`"m"^2`" is read as “meters squared.” Any power of “2” is often read as “squared.” For example,  we can read `9^2` as “9 squared” because we would need to multiply `9 x 9` when finding the [[area | perimeter]] of a square with side length 9.
 
 ---
 
@@ -221,7 +223,7 @@ This arrangement looks familiar! `2 1/2 x 3 1/2` = [[`8 3/4`|`8 1/2`|`8 1/4`]].
 
 ---
 
-So, by counting the number of rows and number of columns, and [[multiplying | adding | subtracting | dividing]] those numbers, we have found the formula for the area of any [[rectangle | circle | triangle]]. 
+So, by counting the number of rows and number of columns, and [[multiplying | adding | subtracting | dividing]] those numbers, we have found the formula for the area of any [[rectangle | circle | triangle]].
 
 Area of Rectangle = number of units along the base [[ x | + | -]] number of units along the [[height | diagonal]]. We can abbreviate this formula as:
 
@@ -298,7 +300,7 @@ Likewise, let’s also assume the side we see in the Dockland Office Building is
 What best describes how you made your estimate?
 A)	I multiplied 70 and 132.
 B)	I tried to compare the size of the UN building to this building and used the answer from the UN building to make an estimate.
-C)	I had no idea, so I just typed in a number. 
+C)	I had no idea, so I just typed in a number.
 D)	I did something else not listed here.
 
 Here is how other students answered this question.
@@ -318,7 +320,7 @@ To check our estimate, imagine the Dockland Office Building was actually three s
 
 Super!
 
-Now that we see the building as a rectangle, the amount of glass on this side of the building is `28.4 x input(132)` [[square meters | meters]]. 
+Now that we see the building as a rectangle, the amount of glass on this side of the building is `28.4 x input(132)` [[square meters | meters]].
 
 Some students found an estimate of the amount of glass by multiplying the measurements in the original picture:
 
@@ -337,7 +339,7 @@ Below is an architect’s initial idea for part of a building. Each square repre
     // INTERACTIVE-02 Glass area (page 6)
     figure: x-polypad
 
-The total amount of glass needed is the [[area | perimeter]] of the shape and is measured in [[square meters | meters]]. The amount of steel needed to surround the glass is the [[perimeter | area]] of the shape and is measured in [[meters | square meters]]. 
+The total amount of glass needed is the [[area | perimeter]] of the shape and is measured in [[square meters | meters]]. The amount of steel needed to surround the glass is the [[perimeter | area]] of the shape and is measured in [[meters | square meters]].
 
 _{span.reveal(when='blank-0 blank-1 blank-2 blank-3')}The area is [[12]] [[square meters | meters | square centimeters]] and the perimeter is [[14]] [[meters | square meters | centimeters]]._
 
@@ -381,9 +383,9 @@ Let’s look at how some other students approached this task. Watch each one and
     // [TODO] ANIMATION-01: Glass area animations (page 7)
 {.todo} Coming Soon!
 
-Great work! We’ve established one of the most fundamental ideas of area and perimeter of two-dimensional shapes - When moving around parts of a shape, as long as no parts [[overlap | touch]] and all parts of the shape are [[used | not used]], the total [[area | perimeter]] stays the same even as the perimeter [[likely changes | also stays the same]]. 
+Great work! We’ve established one of the most fundamental ideas of area and perimeter of two-dimensional shapes - When moving around parts of a shape, as long as no parts [[overlap | touch]] and all parts of the shape are [[used | not used]], the total [[area | perimeter]] stays the same even as the perimeter [[likely changes | also stays the same]].
 
-In fact, this is such an important idea, it is going to stay with us for the rest of this chapter. 
+In fact, this is such an important idea, it is going to stay with us for the rest of this chapter.
 
 When moving around parts of a shape, as long as no parts overlap and all parts of the shape are used, the total area stays the same even as the perimeter likely changes.
 
@@ -434,9 +436,9 @@ Nice! Now, use the knife to cut off one piece of dough. Move that piece around s
 
 ---
 
-The area of the new rectangle is [[70]] [[square cm | cm ]]. 
+The area of the new rectangle is [[70]] [[square cm | cm ]].
 
-We [[did not | did]] overlap any of the pieces and we [[did | did not]] use all the area, so the area of the rectangle is [[the same | not the same]] as the area of the original dough. So, the area of the dough is also [[70]] [[square cm | cm ]]. 
+We [[did not | did]] overlap any of the pieces and we [[did | did not]] use all the area, so the area of the rectangle is [[the same | not the same]] as the area of the original dough. So, the area of the dough is also [[70]] [[square cm | cm ]].
 
 Super work! Let’s do this again. You have the same starting amount of dough, but a different sized baking sheet. Rotate the dough so it can fit on the baking sheet.
 
@@ -445,7 +447,7 @@ Super work! Let’s do this again. You have the same starting amount of dough, b
 
 Nice! Now, use the knife to cut off one piece of dough. Move that piece around so the dough makes a rectangle.
 
-The area of the new rectangle is [[70]] [[square cm | cm ]]. 
+The area of the new rectangle is [[70]] [[square cm | cm ]].
 
 We [[did not | did]] overlap any of the pieces and we [[did | did not]] use all the area, so the area of the rectangle is [[the same | not the same]] as the area of the original dough. So, we see once again that the area of the original dough is [[70]] [[square cm | cm ]].
 
@@ -458,7 +460,7 @@ Before we move on, let’s discuss the perimeter of these three shapes.
 
 Remember, when we moved parts of the dough around, the area [[stayed the same | changed]]. Let’s see what happened to the perimeter:
 
-The perimeter of the original cookie dough shape is [[48]] [[cm | sq. cm]]. 
+The perimeter of the original cookie dough shape is [[48]] [[cm | sq. cm]].
 The perimeter of the first dough rectangle is [[38]] [[cm | sq. cm]].
 The perimeter of the second dough rectangle is [[34]] [[cm | sq. cm]].
 
@@ -555,19 +557,19 @@ Now that we’ve derived a formula for the area of a parallelogram, let’s do a
     // [TODO]? (DISCUSS: possibly redundant, see source doc comment) INTERACTIVE-09: (page 21)
 {.todo} Coming Soon!
 
-Click on one side of the parallelogram shown. 
+Click on one side of the parallelogram shown.
 
-Good choice! Now, click on the green line that represents the height of the parallelogram. 
+Good choice! Now, click on the green line that represents the height of the parallelogram.
 
-Yes! Watch as the parallelogram rearranges into a rectangle and then back into the original parallelogram. 
+Yes! Watch as the parallelogram rearranges into a rectangle and then back into the original parallelogram.
 
-Super! Now, click the other side of the parallelogram. 
+Super! Now, click the other side of the parallelogram.
 
-Now, click on the green line that represents the height of the parallelogram. 
+Now, click on the green line that represents the height of the parallelogram.
 
-Yes! Watch as the parallelogram rearranges into a rectangle and then back into the original parallelogram. 
+Yes! Watch as the parallelogram rearranges into a rectangle and then back into the original parallelogram.
 
-To conclude our work with parallelograms, let’s look at two final examples of parallelograms in architecture. 
+To conclude our work with parallelograms, let’s look at two final examples of parallelograms in architecture.
 
 In 2006, Architects from the firm Tham & Videgard designed a house for an island in the archipelago outside of Stockholm, Sweden. In describing their plans, Tham and Videgard write “The geometry of the plan is generated by the specifics of the site. The house sits on a flat surface between two rocky outcrops” As you can see in the design picture below, the architects had to fit the house in on a flat piece of land between sloping rocky ledges. So, a parallelogram is the best shape to maximize the living space in the house!
 
@@ -829,7 +831,7 @@ School districts need an accurate estimate of the number of students that may at
 
 ---
 
-The first person to think about these things was probably [Rene Descartes](bio:descartes) 400 years ago - he was a famous philosopher too!  But they’re named after a Russian mathematician, [Gregory Feodosevich Voronoy](bio:voronoy). Physician John Snow used a version of a Voronoi diagram in 1854 during a [cholera epidemic](https://plus.maths.org/content/uncovering-cause-cholera) In London to locate an infected water pump on Broad Street in London 
+The first person to think about these things was probably [Rene Descartes](bio:descartes) 400 years ago - he was a famous philosopher too!  But they’re named after a Russian mathematician, [Gregory Feodosevich Voronoy](bio:voronoy). Physician John Snow used a version of a Voronoi diagram in 1854 during a [cholera epidemic](https://plus.maths.org/content/uncovering-cause-cholera) In London to locate an infected water pump on Broad Street in London
 
 In our example, using a Voronoi diagram can help schools make estimates of how many students will attend. In London, about 1500 people live in each square kilometer. To use this statistic, we first need to first know the [[area | perimeter]] of each region in the diagram.
 
@@ -866,10 +868,10 @@ The other regions are more complicated. Some have [4 sides](->.four-sided). Some
 
 All of these regions in the Voronoi diagram are examples of polygons. A polygon is a closed, two-dimensional shape with straight sides that do not cross each other. A polygon does not have any holes in the shape. Click on a card below and drag it to the “Polygon” or “Non Polygon” side.
 
-    include ../shared/components/binary-swipe
+    include ../shared/components/binary-swipe/binary-swipe
 
 ::: x-binary-swipe(a-title="Polygons" b-title="Not Polygons")
-      
+
 {div.card.c-red(solution="a" comment="polygon-regular")} Card #1 - Regular Polygon
 
 {div.card.c-teal(solution="b" comment="not-polygon-curved")} Card #2 - NOT a Polygon
@@ -931,7 +933,7 @@ Just by looking at this region, it seems that [[more | less]] students will atte
 
 We give different names to polygons based on how many sides they have. You may remember some of the names. Drag the names on top of the correct shapes.
 
-    include ../shared/components/relation
+    include ../shared/components/relation/relation
     x-relation
       .item(slot="domain" match="5") Pentagon
       .item(slot="domain" match="6") Hexagon
@@ -976,7 +978,7 @@ The Giant’s Causeway in Northern Ireland is made up of over 40,000 polygonal b
 
 ::: column(width=300)
 
-    object(type="image/svg+xml" data="/resources/shapes/images/giants-causeway-shape.svg" width=300 height=219).column-photo
+    object(type="image/svg+xml" data="/content/shapes/images/giants-causeway-shape.svg" width=300 height=219).column-photo
 
 :::
 
@@ -1062,7 +1064,7 @@ Lastly, many flags use polygons. Drag the name of each country to the correct fl
       .item(slot="domain" match="south-africa" comment=true)
         object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg")
       .item(slot="domain" match="finland" comment=true)
-        object(type="image/svg+xml" data="/resources/shapes/images/finland.svg")
+        object(type="image/svg+xml" data="/content/shapes/images/finland.svg")
       .item(slot="domain" match="nepal" comment=true)
         object(type="image/svg+xml" data="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg")
       .item(slot="range" name="canada") Canada
@@ -1234,7 +1236,7 @@ Throughout our work on area, we have often used the idea that as parts of a shap
 
 This situation is called Curry’s Paradox. A paradox is a statement or situation that contradicts itself. This paradox, created by American mathematician [Haskell Curry](bio:curry), is that the area of the 4 pieces first seemed to equal 32.5 square units and then they seem to equal 31.5 square units!
 
-Let’s take the shape apart and find the area of each piece to help us see what’s happening here. 
+Let’s take the shape apart and find the area of each piece to help us see what’s happening here.
 
     figure: x-polypad(rotate="no")
 
@@ -1275,7 +1277,7 @@ So, we’ve made sense of this paradox. The area of the green triangle is 32.5 s
 
     figure: x-polypad(rotate="no")
 
-In the second arrangement, we added in an additional square unit to make the 4 pieces fit inside the green triangle. Again, it seemed to fit, but it actually was `1/2` square unit too big. Our eyes just couldn’t perceive the extra `1/2` square unit. 
+In the second arrangement, we added in an additional square unit to make the 4 pieces fit inside the green triangle. Again, it seemed to fit, but it actually was `1/2` square unit too big. Our eyes just couldn’t perceive the extra `1/2` square unit.
 
 Phew! Our fundamental idea that the area of shapes remains the same regardless of the arrangement of the shapes remains true. We’ll use this idea to explore circles in the next few chapters.
 
@@ -1396,7 +1398,7 @@ The RADIUS of a circle is a line from the center of the circle to a point on the
 > id: radii-diameters
 > goals: radii-diameters-drawn
 
-Draw 3 radii (this is the plural for radius!) and 3 diameters on the circle below: 
+Draw 3 radii (this is the plural for radius!) and 3 diameters on the circle below:
 
     figure: x-geopad(width=400 height=400)
       svg
@@ -1448,9 +1450,9 @@ Let’s find out!
         svg
       button.btn.reset Reset
 
-1. Draw a circle. 
-2. Drag the diameter outside of the circle and wrap it around the circumference. 
-3. Keep doing this until you cover as much of the circumference as possible using full diameters. 
+1. Draw a circle.
+2. Drag the diameter outside of the circle and wrap it around the circumference.
+3. Keep doing this until you cover as much of the circumference as possible using full diameters.
 4. Repeat this process with two different sized circles.
 
 ---
@@ -1506,11 +1508,11 @@ Let’s see if we can determine how much more of the 4th diameter is needed to f
         td.circumference 0
         td.diameter 0
         td.reveal(when="blank-1")
-          x-blank-input(solution="3.14")
+          x-blank(solution="3.14")
 
 :::
 
-Let’s think about how many diameters are needed to make the circumference. Determining how many times one number is needed to make another is represented by [[division | multiplication | subtraction]]. 
+Let’s think about how many diameters are needed to make the circumference. Determining how many times one number is needed to make another is represented by [[division | multiplication | subtraction]].
 
 Dividing the length of the circumference by the length of the diameter will determine how many diameters are needed to equal the circumference. Do that division and enter the value in the table.
 
@@ -1636,7 +1638,7 @@ Now, calculate the distance around 1 lap. The 4 straight sections have a total d
 
 The radius of the circle is [[840.8]] feet, so the distance around the circle is [[5280]] feet. Therefore, the total distance of 1 lap is [[13200]] feet. This equals 2.5 miles.
 
-Each set of tires last 70 miles and the distance around one lap is 2.5 miles, so the tires should be changed after [[28]] laps. 
+Each set of tires last 70 miles and the distance around one lap is 2.5 miles, so the tires should be changed after [[28]] laps.
 
 The race is called the Indy 500 because cars must drive 500 miles. Each lap is 2.5 miles, so the race is [[200]] laps long. That means there are about [[7]] tire changes over the course of the race. That’s a lot of tires!
 
@@ -1847,9 +1849,9 @@ The formula for the area of a circle is `pi R^2`. Let’s not lose sight of how 
 
 We saw that `4R^2` was [[too big | too small]] and that `3R^2` was a little [[too small | too big]]. We have now proved the exact number of `R^2` we need - `pi` “`R^2`” are needed to fill in the circle. Recall from the Circumference chapter, that we often approximate `pi` with 3.14.
 
-`pi` is a powerful number! not only does it tell us how many [[diameters | radii]] are needed to go around the circumference, it also tells us how many `R^2` are needed to completely fill in a circle. 
+`pi` is a powerful number! not only does it tell us how many [[diameters | radii]] are needed to go around the circumference, it also tells us how many `R^2` are needed to completely fill in a circle.
 
-When using the formula `pi R^2`, remember to first multiply the radius by itself and then multiply that product by `pi`. Let’s add this formula to our toolkit. 
+When using the formula `pi R^2`, remember to first multiply the radius by itself and then multiply that product by `pi`. Let’s add this formula to our toolkit.
 
 We are now ready to answer our original question. Which option has more pizza?
 

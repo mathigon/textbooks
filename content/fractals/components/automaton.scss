@@ -1,0 +1,42 @@
+// =============================================================================
+// Cellular Automaton Component
+// (c) Mathigon
+// =============================================================================
+
+
+x-automaton {
+  display: block;
+
+  .cellular-rules {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cellular-rules > svg {
+    margin: 5px;
+    cursor: pointer;
+    transition: transform .2s;
+    &:hover { transform: scale(1.2); }
+  }
+
+  .cellular-grid {
+    margin: 0 auto;
+    cursor: crosshair;
+  }
+
+  .cellular-rules, .cellular-grid {
+    rect { stroke: mix($light-grey, $grey-background); fill: white; }
+    rect.fill { fill: $grey; stroke: mix($grey, $medium-grey); }
+    rect.red { stroke: $red; stroke-width: 2px; stroke-linejoin: round; }
+  }
+
+  .highlight {
+    fill: none;
+    stroke: $yellow;
+    stroke-width: 5px;
+    opacity: 0.85;
+    display: none;
+  }
+  svg.focus .highlight { display: block; }
+}

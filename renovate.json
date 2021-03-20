@@ -27,5 +27,5 @@
     "groupName": "versions",
     "automerge": true
   }],
-  "ignoreDeps": ["marked", "three", "autoprefixer", "gulp-postcss", "postcss-rtl"]
+  "ignoreDeps": ["marked", "@types/three", "autoprefixer", "gulp-postcss", "postcss-rtl"]
 }

@@ -4,6 +4,10 @@
 
 > section: polygons
 > id: polygons
+> description: Geometric shapes are everywhere around us. In this course you will learn about angels, polygons, tessellations, polyhedra and nets.
+> color: "#4757D3"
+> level: Intermediate
+> next: circles
 
 A [__polygon__](gloss:polygon) is a closed, flat shape that has only straight
 sides. Polygons can have any number of sides and angles, but the sides cannot be
@@ -122,7 +126,7 @@ a hexagon into [[4]] triangles, so its internal angle sum is `4 × 180° =` [[72
 A polygon with ${x}{x|7|3,15,1} sides will have an internal angle sum of
 180° × ${x-2} = ${(x-2)*180}°. More generally, a polygon with _n_ sides can be
 split into [[n – 2|n – 1|n]] triangles. Therefore,
- 
+
 {.text-center.reveal(when="blank-0")} Sum of internal angles in an _n_-gon
 `= (n - 2) × 180°`.
 
@@ -271,7 +275,7 @@ size of the [{.red} internal angles](target:int-angle) of the polygon:
 {.reveal(when="blank-3")} To find the apothem, we can use the definition of
 the [[tangent|sine|cosine]] function:
 
-{.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
+{.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") =
 pill("opposite", "yellow", "apothem") / pill("adjacent", "green", "half-base") =
 blank("apothem", "s", "s/2") / blank("s/2", "s", "apothem")`
 
@@ -546,7 +550,7 @@ they are _always_ true, we need to _prove_ them:
       path.fill.yellow.transparent(x="polygon(a,b,o?c:d)" target="triangles")
       path.fill.green.transparent(x="polygon(o?a:b,c,d)" target="triangles")
       path(x="polygon(a,b,c,d)")
-      
+
       path.green.transparent(x="segment(a,b)" target="sides")
       path.green.transparent(x="segment(c,d)" target="sides")
       path.yellow.transparent(x="segment(b,c)" target="sides")
@@ -603,13 +607,13 @@ quadrilateral has to be a parallelogram.
       path.fill.red(x="angle(b1,c1,a1).sup" target="anglesR")
       path.fill.blue(x="angle(a1,d1,b1).sup" target="anglesB")
       path.fill.blue(x="angle(d1,b1,c1).sup" target="anglesB")
-      
+
       path(x="polygon(a1,b1,c1,d1)")
       path(x="segment(a1,c1)")
       path(x="segment(b1,d1)")
       path.green(x="segment(a1,d1)" target="side1")
       path.green(x="segment(b1,c1)" target="side1")
-      
+
       path.yellow.tick.transparent(x="segment(a1,m1)" target="AM")
       path.yellow.tick.transparent(x="segment(b1,m1)" target="BM")
       path.yellow.tick.transparent(x="segment(c1,m1)" target="CM")
@@ -858,18 +862,18 @@ with parallel sides [{.blue} _a_](target:base-2) and [{.blue} _c_](target:base-1
       circle.transparent(name="b3" x="point(5,1)")
       circle.transparent(name="c3" x="point(13,5)")
       circle.transparent(name="d3" x="point(5,9)")
-      
+
       path.fill.blue.light(x="polygon(a3,b3,c3,d3)")
       path.green(x="segment(a3,c3)" label="d1" target="diag3 d31")
       path.yellow(x="segment(b3,d3)" label="d2" target="diag3 d32")
       path(x="polygon(point(1,1),point(13,1),point(13,9),point(1,9))" target="rect4")
       path.blue(x="polygon(a3,b3,c3,d3)")
-      
+
       path.fill.red.transparent(x="polygon(a3,b3,point(5,5))" target="inside")
       path.fill.blue.transparent(x="polygon(b3,c3,point(5,5))" target="inside")
       path.fill.green.transparent(x="polygon(c3,d3,point(5,5))" target="inside")
       path.fill.yellow.transparent(x="polygon(d3,a3,point(5,5))" target="inside")
-      
+
       path.fill.red.transparent(x="polygon(a3,b3,point(1,1))" target="outside")
       path.fill.blue.transparent(x="polygon(b3,c3,point(13,1))" target="outside")
       path.fill.green.transparent(x="polygon(c3,d3,point(13,9))" target="outside")
@@ -900,14 +904,14 @@ triangles](target:inside) that make up the kite are the same as the
       circle.move(name="b4" cx=150 cy=50)
       circle.move(name="d4" cx=150 cy=190 project="circle(a4,distance(a4,b4))")
       circle(name="c4" x="d4.add(b4).subtract(a4)")
-      
+
       path.fill.blue.light(x="polygon(a4,b4,c4,d4)")
 
       path.thin(x="line(c4,d4)")
       circle(name="q4" x="line(c4,d4).project(a4)")
       path.thin(x="angle(a4,q4,d4).sup" size=15)
       path.red(x="segment(q4,a4)" label="height" target="height")
-      
+
       path.green(x="segment(a4,c4)" label="d1" target="d41")
       path.yellow(x="segment(b4,d4)" label="d2" target="d42")
       path.blue(x="polygon(a4,b4,c4,d4)")
@@ -936,16 +940,16 @@ pick whichever equation is more convenient._
     //- ### Cyclic quadrilaterals
 
     //- ### Isosceles Trapeziums
-    //- 
+    //-
     //- An isosceles trapezoid is a trapezoid where the non-parallel sides are
     //- congruent. The third trapezoid above is an example of an isosceles
     //- trapezoid. Think of it as an isosceles triangle with the top cut off.
     //- Isosceles trapezoids also have parts that are labeled much like an
     //- isosceles triangle. Both parallel sides are called bases.
-    //- 
+    //-
     //- In an isosceles triangle, the two base angles are congruent. This
     //- property holds true for isosceles trapezoids.
-    //- 
+    //-
     //- The converse is also true: If a trapezoid has congruent base angles,
     //- then it is an isosceles trapezoid.
     //-
@@ -1036,7 +1040,7 @@ technology – from ancient Rome to the present. Here are a few examples:
 :::
 
     // TODO Carbon Nanotube
-    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
+    // application: https://en.wikipedia.org/wiki/Carbon_nanotube
     // https://en.wikipedia.org/wiki/File:Types_of_Carbon_Nanotubes.png
     // https://commons.wikimedia.org/wiki/File:FlyingThroughNanotube.png
 
@@ -1054,7 +1058,7 @@ patterns!
       .menu
         for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
           .add(data-shape=s)
-      .btn-row: x-icon-btn(icon="download" title="Download image")
+      .btn-row: button.icon-btn(title="Download image"): x-icon(name="download")
       svg.overlay: g.tiles.active
     x-gesture(target=".tessellation .menu" slide="-300, 140")
     .other-students.reveal(when="shapes0")
@@ -1169,7 +1173,7 @@ We can also try making tessellations out of [irregular polygons](gloss:irregular
 ::: column.grow
 It turns out that you can tessellate not just equilateral triangles, but _any
 triangle_! Try moving the [vertices](target:vertex) in this diagram.
- 
+
 The sum of the internal angles in a triangle is [[180]]°. If we use each angle
 [[twice|once|three times]] at every vertex in the tessellation, we get 360°:
 
@@ -1232,7 +1236,7 @@ The sum of the internal angles in a triangle is [[180]]°. If we use each angle
             path.green.fill(x=`y.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
 
 
-::: column.grow    
+::: column.grow
 More surprisingly, _any quadrilateral_ also tessellates! Their internal angle
 sum is [[360]]°, so if we use each angle [[once|twice|three times]] at every
 vertex in the tessellation, we we get 360°.
@@ -1323,8 +1327,8 @@ except the 15 that had already been found. Can you make a tessellation using all
           .add(data-shape="-74.9 36.4,40 36.4,75.1 12.1,4.8 -36.4,-75.1 -6.3")
           .add(data-shape="-37.5 24.9,-12.4 -68,37.4 -68,37.5 -18.3,-12.4 68")
         .btn-row
-          x-icon-btn(icon="flip" title="Flip selection")
-          x-icon-btn(icon="download" title="Download image")
+          button.icon-btn(title="Flip selection"): x-icon(name="flip")
+          button.icon-btn(title="Download image"): x-icon(name="download")
         svg.overlay: g.tiles.active
       .caption Shapes provided by the Math Happens Foundation
 
@@ -1436,7 +1440,7 @@ has 60 triangular faces. It turns out, however, that _all_ polyhedra have one
 important property in common:
 
 ::: .theorem
-__Euler’s Polyhedron Formula__  
+__Euler’s Polyhedron Formula__
 In every polyhedron, the number of faces (_F_) plus the number of vertices (_V_)
 is two more than the number of edges (_E_). In other words,
 
@@ -1712,8 +1716,8 @@ __Tetrahedron__
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
-_{span.dual}[[4]] Faces_  
-_{span.dual}[[4]] Vertices_  
+_{span.dual}[[4]] Faces_
+_{span.dual}[[4]] Vertices_
 _{span.dual}[[6]] Edges_
 
 ::: column.grow.text-center(width=120)
@@ -1721,8 +1725,8 @@ __Cube__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
-_{span.dual(target="dual1")}[[6]] Faces_  
-_{span.dual(target="dual1")}[[8]] Vertices_  
+_{span.dual(target="dual1")}[[6]] Faces_
+_{span.dual(target="dual1")}[[8]] Vertices_
 _{span.dual}[[12]] Edges_
 
 ::: column.grow.text-center(width=120)
@@ -1730,8 +1734,8 @@ __Octahedron__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
-_{span.dual(target="dual1")}[[8]] Faces_  
-_{span.dual(target="dual1")}[[6]] Vertices_  
+_{span.dual(target="dual1")}[[8]] Faces_
+_{span.dual(target="dual1")}[[6]] Vertices_
 _{span.dual}[[12]] Edges_
 
 ::: column.grow.text-center(width=120)
@@ -1739,8 +1743,8 @@ __Dodecahedron__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
-_{span.dual(target="dual2")}[[12]] Faces_  
-_{span.dual(target="dual2")}20 Vertices_  
+_{span.dual(target="dual2")}[[12]] Faces_
+_{span.dual(target="dual2")}20 Vertices_
 _{span.dual}30 Edges_
 
 ::: column.grow.text-center(width=120)
@@ -1748,8 +1752,8 @@ __Icosahedron__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
-_{span.dual(target="dual2")}[[20]] Faces_  
-_{span.dual(target="dual2")}12 Vertices_  
+_{span.dual(target="dual2")}[[20]] Faces_
+_{span.dual(target="dual2")}12 Vertices_
 _{span.dual}30 Edges_
 :::
 
@@ -1809,68 +1813,68 @@ of Syracuse](bio:archimedes), and there are 13 of them:
 
 ::: column(width=170 parent="padded-thin")
     x-polyhedron(size=170 shape="TruncatedTetrahedron")
-    
-{.caption} __Truncated Tetrahedron__  
+
+{.caption} __Truncated Tetrahedron__
 8 faces, 12 vertices, 18 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Cuboctahedron")
 
-{.caption} __Cuboctahedron__  
+{.caption} __Cuboctahedron__
 14 faces, 12 vertices, 24 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCube")
 
-{.caption} __Truncated Cube__  
+{.caption} __Truncated Cube__
 14 faces, 24 vertices, 36 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedOctahedron")
 
-{.caption} __Truncated Octahedron__  
+{.caption} __Truncated Octahedron__
 14 faces, 24 vertices, 36 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicuboctahedron")
 
-{.caption} __Rhombicuboctahedron__  
+{.caption} __Rhombicuboctahedron__
 26 faces, 24 vertices, 48 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __Truncated Cuboctahedron__  
+{.caption} __Truncated Cuboctahedron__
 26 faces, 48 vertices, 72 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubCube")
 
-{.caption} __Snub Cube__  
+{.caption} __Snub Cube__
 38 faces, 24 vertices, 60 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Icosidodecahedron")
 
-{.caption} __Icosidodecahedron__  
+{.caption} __Icosidodecahedron__
 32 faces, 30 vertices, 60 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedDodecahedron")
 
-{.caption} __Truncated Dodecahedron__  
+{.caption} __Truncated Dodecahedron__
 32 faces, 60 vertices, 90 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosahedron")
 
-{.caption} __Truncated Icosahedron__  
+{.caption} __Truncated Icosahedron__
 32 faces, 60 vertices, 90 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicosidodecahedron")
 
-{.caption} __Rhombicosidodecahedron__  
+{.caption} __Rhombicosidodecahedron__
 62 faces, 60 vertices, 120 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosidodecahedron")
 
-{.caption} __Truncated Icosidodecahedron__  
+{.caption} __Truncated Icosidodecahedron__
 62 faces, 120 vertices, 180 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubDodecahedron")
 
-{.caption} __Snub Dodecahedron__  
+{.caption} __Snub Dodecahedron__
 92 faces, 60 vertices, 150 edges
 :::
 
@@ -1891,7 +1895,7 @@ in nature – and we can copy these properties in science and engineering.
 
     x-img(lightbox width=180 height=180 src="images/radiolaria.jpg")
     p.caption Radiolaria skeleton
-    
+
 ::: column(width=180)
 
     x-img(lightbox width=180 height=180 src="images/virus.jpg")
@@ -1909,12 +1913,12 @@ elements but is almost shaped like a sphere.
 
     x-img(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
     p.caption Buckyball molecule
-      
+
 ::: column(width=180)
 
     x-img(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
     p.caption Montreal Biosphere
-      
+
 ::: column.grow
 Many __molecules__ are shaped like regular polyhedra. The most famous example is
 `C_60` which consists of 60 carbon atoms arranged in the shape of a [Truncated
@@ -1929,12 +1933,12 @@ Fuller](bio:fuller), famous for constructing similar-looking buildings.
 
     x-img(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
     p.caption Fluorite octahedron
-      
+
 ::: column(width=180)
 
     x-img(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
     p.caption Pyrite cube
-      
+
 ::: column.grow
 Most __crystals__ have their atoms arranged in a regular grid consisting of
 [tetrahedra](gloss:tetrahedron), [cubes](gloss:cube) or [octahedra](gloss:octahedron).
@@ -1961,7 +1965,7 @@ support large roofs and heavy bridges.
 
     x-img(lightbox width="180", height="180", src="images/football.jpg")
     p.caption Football
-    
+
 ::: column(width=180)
 
     x-img(lightbox width="180", height="180", src="images/dice.jpg")

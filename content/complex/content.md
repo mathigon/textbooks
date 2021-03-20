@@ -5,6 +5,8 @@
 > section: introduction
 > sectionStatus: dev
 > id: timeline
+> color: "#6D3BBF"
+> level: Advanced
 
 Despite how “obvious” they might appear today, many discoveries in mathematics took centuries
 before they became widely accepted. This is particularly visible when we talk about one of the most
@@ -97,7 +99,7 @@ Picking up where we left off, we can solve the equation for y.
 If y=5+sqrt(-15)
 x+5+sqrt(-15)=10
 x=5-sqrt(-15)
-We can then solve for x, using either logic or by substituting one of the values of y into Equation 1. 
+We can then solve for x, using either logic or by substituting one of the values of y into Equation 1.
 By a similar logic, if y=5-sqrt(-15), x=5+sqrt(-15)
 This means that either way our two numbers are 5+sqrt(-15) and 5-sqrt(-15).
  (5+sqrt(-15))(5-sqrt(-15))
@@ -118,7 +120,7 @@ When we simplify, we get 40, which proves that our answer does work, if we let s
 
 {.fixme} If this solution seems confusing, you are, once again, in good company. Cardano himself said that using -15  in this way was “as refined as it was useless.” Yet Cardano and his contemporaries could not shake -15 and other numbers like it; they kept appearing in the equations they were trying to solve. Another Italian mathematician, Rafael Bombelli, used the square roots of negative numbers to solve several important and previously unsolvable cubic and quartic equations. Every time these strange new numbers were used in the solutions of real problems, they gained a bit more plausibility.
 
-{.fixme} Nevertheless, most mathematicians of the time still viewed them as meaningless, incomprehensible, or impossible. The philosopher – mathematician Rene Descartes found them so far-fetched he called them imaginary numbers, and labeled all other numbers real. Though many future mathematicians would object to this labeling, the terms ended up sticking and we still use them today. 
+{.fixme} Nevertheless, most mathematicians of the time still viewed them as meaningless, incomprehensible, or impossible. The philosopher – mathematician Rene Descartes found them so far-fetched he called them imaginary numbers, and labeled all other numbers real. Though many future mathematicians would object to this labeling, the terms ended up sticking and we still use them today.
 
 {.fixme} Among imaginary numbers, there is one that is special: -1.  It plays the role that 1 plays in the real number system: every imaginary number has -1as a [[factor | multiple]].  To simplify the math surrounding imaginary numbers, Leonhard Euler gave -1 a special name: i, the imaginary unit. In almost every respect, i behaves like a real number, with one (important) exception: when i is multiplied by itself, it yields [[-1]]. This is the defining property of i.
 
@@ -143,13 +145,13 @@ Simplify 28 by finding the highest perfect square that goes into 28.
 
 ---
 
-{.fixme} Though the existence of imaginary numbers certainly seemed a bit more possible after the work of Cardano and Bombelli, it would be another 200 or so years before imaginary numbers would become fully accepted by scientists and mathematicians around the world. It is worth asking how and why this happened. How did these numbers, which throughout history and even into the late 1700s were regarded as impossible, false, and absurd, eventually come to be seen as imaginable, believable, and even convincing? 
+{.fixme} Though the existence of imaginary numbers certainly seemed a bit more possible after the work of Cardano and Bombelli, it would be another 200 or so years before imaginary numbers would become fully accepted by scientists and mathematicians around the world. It is worth asking how and why this happened. How did these numbers, which throughout history and even into the late 1700s were regarded as impossible, false, and absurd, eventually come to be seen as imaginable, believable, and even convincing?
 
 {.fixme} To help answer this question, it is useful to consider exactly what was so impossible about these types of numbers. By the 18th century, we no longer associated numbers strictly with counting, measurement, or geometry, but instead we viewed them as points along a continuous line with negatives to the left of zero and positives to the right. Even irrational numbers like  had their place in line, although admittedly their exact position could be a bit hard to pinpoint. But imaginary numbers were nowhere to be found. They weren’t negative, nor were they positive, and they definitely weren’t zero. If they didn’t exist anywhere along the line, then where did they exist?
 
 ---
 
-{.fixme} The answer came from three separate sources at around the same time: a Norwegian surveyor named Caspar Wessel, a Parisian bookkeeper named Jean-Robert Argand, and one of the greatest mathematicians of all time, Carl Friedrich Gauss. To see the logic behind their interpretation of complex numbers, it is helpful to take a closer look at the operation of multiplication, understood geometrically. 
+{.fixme} The answer came from three separate sources at around the same time: a Norwegian surveyor named Caspar Wessel, a Parisian bookkeeper named Jean-Robert Argand, and one of the greatest mathematicians of all time, Carl Friedrich Gauss. To see the logic behind their interpretation of complex numbers, it is helpful to take a closer look at the operation of multiplication, understood geometrically.
 
 {.fixme} One way of representing multiplication is as a transformation of vectors (arrows) along the number line. Consider the following examples:
 
@@ -205,13 +207,13 @@ When clicked: This works! If we rotate the number 1 twice, by 90° we arrive at 
 {.fixme} This is an amazing discovery! It means that instead of existing along the number line, imaginary numbers like i exist perpendicular to it. For any real number, you can turn it into an imaginary number by multiplying it by i, the imaginary unit. Visually, this will rotate it [{90°]]  onto what we now know as the imaginary number line. Similarly, for any imaginary number, you can multiply it by i again, and it will rotate [[90°]] again, and return to a place along the real number line.
 
 
-{.fixme} When we combine the real and imaginary number lines, we end up with a complex plane. In addition to locating purely real and purely imaginary numbers, we can locate combinations of real and imaginary numbers, which we call complex numbers, at different points in the plane. You can write any complex number in the form a+bi, where a is referred to as the real part and bi is referred to as the imaginary part. Sometimes, the real part is written as Re(z ), and the imaginary part as Im (z), where z=a+bi. For example, the complex number -2+3i could be written as Re(z)=[[-2]] and Im(z)=3.  For each number given below, place it in its proper position on the complex plane. 
+{.fixme} When we combine the real and imaginary number lines, we end up with a complex plane. In addition to locating purely real and purely imaginary numbers, we can locate combinations of real and imaginary numbers, which we call complex numbers, at different points in the plane. You can write any complex number in the form a+bi, where a is referred to as the real part and bi is referred to as the imaginary part. Sometimes, the real part is written as Re(z ), and the imaginary part as Im (z), where z=a+bi. For example, the complex number -2+3i could be written as Re(z)=[[-2]] and Im(z)=3.  For each number given below, place it in its proper position on the complex plane.
 
     // Interactive here:
     // Students should be given complex numbers and have to plot them at points on the plane.
     // Should include (irrational, purely real, purely imaginary, and complex). Should be at least 1 in each quadrant.
 
-{.fixme} As you saw with some of these examples, you can write even purely real numbers (like sqrt(5)) or purely imaginary numbers (like -3i) as complex numbers. In this sense, the complex numbers contain all possible real numbers, imaginary numbers, and combinations thereof. 
+{.fixme} As you saw with some of these examples, you can write even purely real numbers (like sqrt(5)) or purely imaginary numbers (like -3i) as complex numbers. In this sense, the complex numbers contain all possible real numbers, imaginary numbers, and combinations thereof.
 
 ---
 
@@ -224,7 +226,7 @@ Electrical engineers use complex numbers when working with alternating currents,
 // https://en.wikipedia.org/wiki/Electrical_engineering#/media/File:Silego_clock_generator.JPG
 
 {.fixme} Signal processing
-Complex numbers are often used in technologies that analyze, edit and even produce sounds, images, and other information. 
+Complex numbers are often used in technologies that analyze, edit and even produce sounds, images, and other information.
 // https://entertainment.howstuffworks.com/sound-editing4.htm
 
 {.fixme} Civil and mechanical engineering
@@ -293,7 +295,7 @@ would add or subtract vectors. We can think of adding or subtracting complex num
 
 {.fixme} In seeing how we can add and subtract complex numbers, we can already see one of the reasons why complex numbers are useful: like vectors, they can be used to represent 2-dimensional quantities like movement, velocity, and force. But, it remains to ask, then: why not just use vectors if both can be used in similar ways? What makes complex numbers uniquely useful for mathematicians, scientists, and engineers, as they seek to understand, analyze, design and create?
 
-{.fixme} The answer lies in the third basic operation: multiplication. It’s not possible to multiply two vectors – we’ve seen operations like the dot and cross products, but these weren’t really “multiplication”. However, we said that complex numbers should behave just like the real numbers we already know, which means we must be able to multiply them.  
+{.fixme} The answer lies in the third basic operation: multiplication. It’s not possible to multiply two vectors – we’ve seen operations like the dot and cross products, but these weren’t really “multiplication”. However, we said that complex numbers should behave just like the real numbers we already know, which means we must be able to multiply them.
 
 ---
 
@@ -312,7 +314,7 @@ would add or subtract vectors. We can think of adding or subtracting complex num
 ---
 > id: multiplication
 
-{.fixme} This makes sense algebraically, but what does it mean geometrically? Let’s start by imagining a simple object formed in the complex plane. Take a square, for example, with vertices at the following four points: 1+i, 2+i, 1+2i, and 2+2i.  What would happen if we multiplied all of these points by another complex number, like 1-i? We have already multiplied (1+2i)(1-i). Let’s  now take the other points on the square and multiply them by 1-i: 
+{.fixme} This makes sense algebraically, but what does it mean geometrically? Let’s start by imagining a simple object formed in the complex plane. Take a square, for example, with vertices at the following four points: 1+i, 2+i, 1+2i, and 2+2i.  What would happen if we multiplied all of these points by another complex number, like 1-i? We have already multiplied (1+2i)(1-i). Let’s  now take the other points on the square and multiply them by 1-i:
 
 ::: column.grow
 
@@ -356,7 +358,7 @@ would add or subtract vectors. We can think of adding or subtracting complex num
 
 {.fixme} We have seen that complex multiplication causes rotations and dilations, but you may be wondering: Why did multiplying each number by 1- i rotate the square by exactly 45or expand it by a factor of 2? To understand exactly why those particular transformations occurred, we need to look more closely at the number 1-i itself, and to understand it a bit differently.
 
-{.fixme} So far we have been representing complex numbers as points or vectors in the complex plane. We have noted that the real part of each complex number corresponds to the horizontal component of the vector that represents it, and the imaginary component corresponds to the vertical component. Though this is one way to describe complex numbers, it is not the only way. 
+{.fixme} So far we have been representing complex numbers as points or vectors in the complex plane. We have noted that the real part of each complex number corresponds to the horizontal component of the vector that represents it, and the imaginary component corresponds to the vertical component. Though this is one way to describe complex numbers, it is not the only way.
 
 {.fixme} We can also describe them in terms of the angle that they make with the positive x-axis, and their distance from the origin. We often label this angle , and refer to it as the argument of a complex number. We call a complex number’s distance from the origin r, and refer to it as the number’s modulus. Sometimes the modulus is also written as z, – it’s the 2-dimensional version of  absolute value, the distance of numbers from the origin. To see this visually, consider the diagram below, which shows how any point in the complex plane can be represented in terms of  and r.
 
@@ -401,9 +403,9 @@ Directions: Drag the point at 1 to the coordinate for one of the complex numbers
 
 ---
 
-{.fixme} Each of these visuals highlights different aspects of complex multiplication. From the first, we see that we can find the argument of the product by simply [[adding | subtracting | multiplying | dividing]] the arguments of the two factors. Similarly, we can find the modulus (r) of the product by [[ multiplying | adding | subtracting | dividing ]] the moduli of those two factors. 
+{.fixme} Each of these visuals highlights different aspects of complex multiplication. From the first, we see that we can find the argument of the product by simply [[adding | subtracting | multiplying | dividing]] the arguments of the two factors. Similarly, we can find the modulus (r) of the product by [[ multiplying | adding | subtracting | dividing ]] the moduli of those two factors.
 
-{.fixme} From the second and especially the third visuals, we can see that multiplying by a complex number does not just transform the other number that is being multiplied; it transforms the entire plane. Each complex number describes a unique set of rotations and dilations that happen to any point in the plane when it is multiplied by that particular complex number. 
+{.fixme} From the second and especially the third visuals, we can see that multiplying by a complex number does not just transform the other number that is being multiplied; it transforms the entire plane. Each complex number describes a unique set of rotations and dilations that happen to any point in the plane when it is multiplied by that particular complex number.
 
 ---
 
@@ -411,13 +413,13 @@ Directions: Drag the point at 1 to the coordinate for one of the complex numbers
 
 {.fixme} Now that we have a fuller understanding of complex multiplication, let’s finally consider what it might mean to divide two complex numbers. Take, for example, the following quotient:
 
-{.fixme} 1-2i3+4i=? 
+{.fixme} 1-2i3+4i=?
 
-{.fixme} At first glance, this seems much more complicated than multiplication. In multiplication, we just use the distributive property as we would with variables or whole numbers. How can we use what we know about division to find a way to perform it on complex numbers? 
+{.fixme} At first glance, this seems much more complicated than multiplication. In multiplication, we just use the distributive property as we would with variables or whole numbers. How can we use what we know about division to find a way to perform it on complex numbers?
 
 {.fixme} We know that division is the “inverse” of multiplication, so it seems reasonable that in order to divide two complex numbers we [[subtract]] their arguments, rather than adding them, and [[divide]] their modulii, rather than multiplying them. This turns out to be true, but the process of converting between Cartesian and Polar forms can be cumbersome. Especially if the complex number is already in Cartesian form, there is a much simpler method.
 
-{.fixme} You may have noticed in some of the examples above that sometimes multiplying two complex numbers gives a purely real number. As it turns out, there is a way to turn any complex number into a purely real number using multiplication. It relies on a concept called the complex conjugate. We use the notation z* to represent the complex conjugate of a number z. For any complex number z=a+bi, its complex conjugate, z*=a - bi. For example the complex conjugate of 3+4i is [[3-4i]], and the complex conjugate of -2-2i is [[-2+2i]]. 
+{.fixme} You may have noticed in some of the examples above that sometimes multiplying two complex numbers gives a purely real number. As it turns out, there is a way to turn any complex number into a purely real number using multiplication. It relies on a concept called the complex conjugate. We use the notation z* to represent the complex conjugate of a number z. For any complex number z=a+bi, its complex conjugate, z*=a - bi. For example the complex conjugate of 3+4i is [[3-4i]], and the complex conjugate of -2-2i is [[-2+2i]].
 
 {.fixme} To understand why the complex conjugate is useful here, let’s first think about it geometrically. In the diagram below, drag the two complex numbers, so that they are conjugates of each other. Try to find the conjugates of numbers in each different quadrant, and think about what you notice about each pair of conjugates and their product.
 
@@ -432,7 +434,7 @@ Directions: Drag the point at 1 to the coordinate for one of the complex numbers
 {.fixme} Because dividing by real numbers is much simpler to understand than dividing by complex numbers, one strategy we can use is to take the expression1-2i3+4i, and turn it into an equivalent expression where the denominator is a purely real number. This is where the complex conjugate comes in: if we multiply the denominator by its complex conjugate, we should get a purely real number. In order to keep the expressions equivalent, we must multiply both the numerator and denominator by the conjugate of the denominator. For our problem it would look like this:
 
 {.fixme} algebra flow
-Math 
+Math
 Commentary
 1-2i3+4i3-4i3-4i
 This method is equivalent to multiplying our original fraction by [[1]].
@@ -465,7 +467,7 @@ i
 
 ---
 
-{.fixme} So there you have it! Just as with real numbers, we can add, subtract, multiply and divide any pair of complex numbers. We can do this, for the most part, by following the same rules we use to operate on real numbers: the distributive, associative, and commutative properties. What’s more; we found a way to understand complex number operations geometrically; by thinking of them as vectors in the complex plane. In some senses, we found that complex numbers are even better than vectors. In particular, when we write complex numbers in polar form, it gives us a simple and elegant way to understand 2-D rotation and dilation. 
+{.fixme} So there you have it! Just as with real numbers, we can add, subtract, multiply and divide any pair of complex numbers. We can do this, for the most part, by following the same rules we use to operate on real numbers: the distributive, associative, and commutative properties. What’s more; we found a way to understand complex number operations geometrically; by thinking of them as vectors in the complex plane. In some senses, we found that complex numbers are even better than vectors. In particular, when we write complex numbers in polar form, it gives us a simple and elegant way to understand 2-D rotation and dilation.
 
 {.fixme} This property of complex numbers; that they can naturally describe expansion, contraction, and especially rotation is at the heart of their usefulness and their beauty. As we saw in the course on trigonometry, there is a deep connection between circular, rotational motion and wave behavior. Oftentimes when scientists and engineers deal with waves - whether radio waves received by your cell phone, quantum mechanical waves that describe the behavior of subatomic particles, or physical waves like the shock waves after an earthquake - complex numbers are the most simple and insightful way to describe these waves. In the coming chapters, we will further explore how complex numbers can be used to describe rotation and wave behavior, and how they enable us to find solutions to many important scientific and mathematical questions, both ancient and modern.
 
@@ -511,13 +513,13 @@ number into the _exponent_ – for example, what is `2^(2 + 3i)`?
 
 {.fixme} It turns out that we can extend our idea of exponents even further to include imaginary and complex exponents, but it requires thinking about exponents very differently than we are used to. To start, instead of using a base of 2,5, or even 10, we will use the natural base, e. In studying exponential functions, we learned that the function e^x can be defined in two ways:
 
-::: column.frame.f-red.text-center(width=300 parent="padded-thin")
+::: column.frame.red.text-center(width=300 parent="padded-thin")
 
 The sum of an __infinite series__:
 
 {.text-center} `e^x = 1 + x + x^2/(2!) + x^3/(3!) + x^4/(4!) + …`
 
-::: column.frame.f-blue.text-center(width=300)
+::: column.frame.blue.text-center(width=300)
 
 The __limit__ of this expression, as _m_ approaches infinity:
 
@@ -528,7 +530,7 @@ The __limit__ of this expression, as _m_ approaches infinity:
 ---
 > id: euler-approx
 
-{.fixme} If we take the second definition of e^x, we can consider what happens if, instead of substituting a real value for x, we substitute an imaginary number. For simplicity, we’ll start by making x=i. To visualize what is happening, we can take a vector with a horizontal (real) component of 1, and a vertical (imaginary) component of i/m, and we see what happens when we multiply that vector by itself m times. Use the slider below to see what happens as the value of m gets larger and larger. 
+{.fixme} If we take the second definition of e^x, we can consider what happens if, instead of substituting a real value for x, we substitute an imaginary number. For simplicity, we’ll start by making x=i. To visualize what is happening, we can take a vector with a horizontal (real) component of 1, and a vertical (imaginary) component of i/m, and we see what happens when we multiply that vector by itself m times. Use the slider below to see what happens as the value of m gets larger and larger.
 
 {.fixme} Visual of the expression (1+x/m)^m with vectors representing a real part (1) and and imaginary part (dependent on x and m) that shows the product of this expression using vectors and triangles (similar to how we presented complex multiplication in the arithmetic chapter).
 
@@ -546,7 +548,7 @@ The __limit__ of this expression, as _m_ approaches infinity:
           path.blue(x=`segment(p${i-1},p${i})`)
         circle.red(x=`complexPower(p0,m)` name=`pm`)
         path.red(x=`segment(point(0,0),pm)`)
-            
+
       x-slider(:bind="x" steps=5 continuous)
       x-slider(:bind="m" steps=29)
 
@@ -564,7 +566,7 @@ The __limit__ of this expression, as _m_ approaches infinity:
 
 `e^(i*pi)+1=0`
 
-{.fixme} Known as Euler’s identity, this is one of the most famous statements in all of mathematics. According to Tobias Dantzig, some of Euler’s contemporaries regarded this identity as having a “mystic significance,” much like the Pythagoreans viewed Pythagoras’ theorem. In surveys of mathematicians and physicists, this identity comes up again and again as the most beautiful equation in all of mathematics. Studies have shown that when mathematicians look at this formula, it activates the same parts of the brain that are activated when you listen to a moving piece of music or take in a beautiful painting. 
+{.fixme} Known as Euler’s identity, this is one of the most famous statements in all of mathematics. According to Tobias Dantzig, some of Euler’s contemporaries regarded this identity as having a “mystic significance,” much like the Pythagoreans viewed Pythagoras’ theorem. In surveys of mathematicians and physicists, this identity comes up again and again as the most beautiful equation in all of mathematics. Studies have shown that when mathematicians look at this formula, it activates the same parts of the brain that are activated when you listen to a moving piece of music or take in a beautiful painting.
 
 {.fixme} It may seem odd to find such great significance in a piece of mathematics. Euler’s identity is seen not only as interesting, but as beautiful, elegant, and profound. If this seems odd, consider how many unexpected and deep connections are at play in Euler’s identity. It connects nothingness (0), unity (1), the imaginary (i), and the infinite ( and e). It connects five of the most significant constants in the history of mathematics; all of which have long, fascinating histories, and all of which have, in some way, revolutionized the way humans understand and work with numbers.
 
@@ -587,17 +589,17 @@ form__](gloss:complex-cartesian) `a + b i` and the [__polar form__](gloss:comple
 `r cos(θ) + r i sin(θ)` from the previous chapter. Euler's Formula can help us to convert the polar
 form into the new __exponential form__:
 
-::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
+::: column.frame.blue.text-center(width=212 parent="padded-thin")
 
-__Cartesian Form__  
+__Cartesian Form__
 `§z = a + b i`
 
-::: column.frame.f-green.text-center(width=212)
+::: column.frame.green.text-center(width=212)
 
 __Polar Form__
 `§z = r cos(θ) + r i sin(θ)`
 
-::: column.frame.f-yellow.text-center(width=212)
+::: column.frame.yellow.text-center(width=212)
 
 __Exponential Form__
 `§z = re^(i θ)`
@@ -625,7 +627,7 @@ We can factor out an i and simplify our expression by adding both arguments.
 
 ---
 
-::: .box.f-blue
+::: .box.blue
 #### Exercises
 
 {.fixme} Practice problems
@@ -673,7 +675,7 @@ and closer to the true value of the function.
 
 {.fixme} Math
 Commentary
-ei=1+i+(i)22!+(i)33!+(i)44!+(i)55!+(i)66!+... 
+ei=1+i+(i)22!+(i)33!+(i)44!+(i)55!+(i)66!+...
 
 {.fixme} ei=1+i-()22!-i()33!+()44!+i()55!-()66!+...
 We can use our understanding of powers of i to simplify this expression.
@@ -682,7 +684,7 @@ Group all of the imaginary terms and all of the real terms.
 ei=(1-()22!+()44!-()66+....) +i(()-()33!+()55!+...)
 Factor i out of all of the imaginary terms.
 ei=cos()+i*sin()
-Notice that these new series are the power series for cos()and sin (), respectively! 
+Notice that these new series are the power series for cos()and sin (), respectively!
 
 {.fixme} We can therefore derive Euler’s formula directly from the power series for e^(x), sin (x), and cos (x)!
 
@@ -719,7 +721,7 @@ it orbits a star located at the origin.
 
 `a(t)=d/dt(i*e^(i*t))=-(e^i*t)`
 
-{.fixme} This means that the acceleration vector will also have the same magnitude as the velocity and position vectors, but it will point in the [[opposite | same | different ]] direction as the original position vector. At any point in time, these vectors will stay in the same relationship: the acceleration vector pointing inward, the position vector pointing outward, and the velocity vector perpendicular to both. 
+{.fixme} This means that the acceleration vector will also have the same magnitude as the velocity and position vectors, but it will point in the [[opposite | same | different ]] direction as the original position vector. At any point in time, these vectors will stay in the same relationship: the acceleration vector pointing inward, the position vector pointing outward, and the velocity vector perpendicular to both.
 
 {.fixme} Students of physics will recognize these conditions as the conditions for circular motion. If you haven’t taken physics, imagine a yo-yo spinning in a circle or a tetherball spinning on a pole. What keeps the yo-yo or tetherball in a circular path is a centripetal force that pulls the object towards the center of the circle: this is why the acceleration vector always points inward. Let’s press play on the diagram above and see how the particle actually moves.
 
@@ -795,7 +797,7 @@ reconstruct these structures from the data we receive.
 electricity networks that power our homes and our cities. Structural engineers use both Euler’s
 formula to analyze the vibrations of tall buildings, bridges, and roads, to keep us safe when we
 fly on a plane or when an earthquake strikes. And Euler’s formula was even used to solve the
-__Schrodinger equations__, which form the backbone of quantum physics. 
+__Schrodinger equations__, which form the backbone of quantum physics.
 
 {.fixme} It is impossible to list all the different ways in which complex numbers have affected our lives,
 and all the scientific, technological and mathematical breakthroughs they have enabled.
@@ -815,7 +817,7 @@ and all the scientific, technological and mathematical breakthroughs they have e
   in conjugate pairs.
 * Calculate complex solutions to quadratic equations by completing the square.
 * Compare and contrast quadratic equations with real and with non-real complex
-  solutions. 
+  solutions.
 * Justify that a quadratic equation will have either real or non-real solutions
   using graphical reasoning.
 * Solve any quadratic equation with real coefficients.

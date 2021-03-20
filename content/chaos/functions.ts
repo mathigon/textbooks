@@ -8,12 +8,15 @@ import {Obj} from '@mathigon/core';
 import {isBetween} from '@mathigon/fermat';
 import {Point} from '@mathigon/euclid';
 import {$N, animate, AnimationResponse, AudioPlayer, CanvasView, SVGView} from '@mathigon/boost';
+import {Step} from '@mathigon/studio';
 
-import {Geopad, PlayToggle, Step} from '../shared/types';
+import {Geopad} from '../shared/types';
+import {PlayToggle} from '../shared/components/play-btn/play-btn';
 import {Simulation} from './components/simulation';
 import {DoublePendulum} from './components/double-pendulum';
 import {WaterCanvas} from './components/water-ripples';
 
+import '../shared/components/play-btn/play-btn';
 import './components/pool-table';
 import './components/water-ripples';
 
@@ -158,7 +161,7 @@ class Ball {
   }
 }
 
-const collision = new AudioPlayer('/resources/chaos/images/ball.mp3');
+const collision = new AudioPlayer('/content/chaos/images/ball.mp3');
 
 function playCollision() {
   collision.play();

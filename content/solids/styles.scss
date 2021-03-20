@@ -1,0 +1,29 @@
+// =============================================================================
+// 3D Solids
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+@import "../shared/components/webgl/solid";
+@import "../shared/components/binary-swipe/binary-swipe";
+@import "../polyhedra/components/polyhedron";
+
+x-polyhedron { display: block; margin: 0 auto; }
+
+x-voxel-painter {
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+
+  .eraser { position: absolute; width: 40px; height: 40px; background: red; }
+  .icon-btn { position: absolute; bottom: 6px; right: 6px; }
+}
+
+#cube-draw, #cube-net-draw {
+  x-polypad svg {
+    height: 400px;
+  }
+}

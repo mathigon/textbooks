@@ -1,0 +1,31 @@
+siteName: Mathigon
+description: A interactive textbook
+domain: mathigon.org
+
+privacyURL: /policies
+banner: (c) Mathigon
+locales: [en]
+
+search:
+  enabled: false
+
+footer:
+  rows:
+    - links:
+        - title: GitHub
+          url: https://github.com/mathigon/textbooks
+        - title: Live Website
+          url: https://mathigon.org/courses
+  copyright: © Mathigon, 2021
+
+social:
+  facebook: {}
+  twitter: {}
+
+courses:
+  showLocked: true
+  revealAll: false
+  audio: false
+
+tutor:
+  enabled: true

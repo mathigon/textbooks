@@ -4,22 +4,25 @@
 // =============================================================================
 
 
-import {PenTool, Polypad, Slider, Step} from '../shared/types';
+import {list} from '@mathigon/core';
+import {Point} from '@mathigon/euclid';
+import {Slider, Step} from '@mathigon/studio';
+
+import {PenTool, Polypad} from '../shared/types';
 import {VoxelPainter} from './components/voxel-painter';
 import {Net} from './components/net';
 import {Polyhedron} from '../polyhedra/components/polyhedron';
+import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../shared/constants';
+import {Solid, Vector} from '../shared/components/webgl/solid';
+import {layers, templeParts} from './data/voxel-data';
+import {pyramid1, triangularPrism, truncatedIcosahedron} from './data/net-data';
 
 import './components/voxel-painter';
 import './components/net';
-import '../shared/components/solid';
-import '../shared/components/binary-swipe';
+import '../shared/components/webgl/solid';
+import '../shared/components/binary-swipe/binary-swipe';
 import '../polyhedra/components/polyhedron';
-import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../shared/constants';
-import {Solid, Vector} from '../shared/components/solid';
-import {list} from '@mathigon/core';
-import {Point} from '@mathigon/euclid';
-import {layers, templeParts} from './data/voxel-data';
-import {pyramid1, triangularPrism, truncatedIcosahedron} from './data/net-data';
+
 
 export function polyParts($step: Step) {
   // TODO Update .addPoint/Line/Label to accept THREE Vector3s, to avoid all these .toArray() functions.
@@ -320,7 +323,7 @@ export function honeycombIntro($step: Step) {
 
 export async function voxelBuilderQuestion($step: Step) {
   const $voxel = $step.$('x-voxel-painter') as VoxelPainter;
-  const $button = $voxel.$('x-icon-btn')!;
+  const $button = $voxel.$('.icon-btn')!;
 
   const $targetVolume = parseInt($button.attr('volume'));
   const $targetSurface = parseInt($button.attr('surfaceArea'));

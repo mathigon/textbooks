@@ -4,20 +4,24 @@
 // =============================================================================
 
 
-/// <reference types="THREE"/>
 import {Color, isOneOf, list, Obj, tabulate, wait} from '@mathigon/core';
 import {clamp, numberFormat, Random, round, roundTo, toWord} from '@mathigon/fermat';
 import {Angle, Point, Polygon, Rectangle, Sector} from '@mathigon/euclid';
 import {$N, animate, CanvasView, Draggable, ElementView, hover, InputView, slide, SVGParentView, SVGView} from '@mathigon/boost';
+import {Gesture, Select, Slider, Step} from '@mathigon/studio';
+
 import {Burst} from '../shared/components/burst';
-import {ConicSection} from '../shared/components/conic-section';
+import {ConicSection} from '../shared/components/webgl/conic-section';
 import {rotateDisk} from '../shared/components/disk';
-import {Solid} from '../shared/components/solid';
+import {Solid} from '../shared/components/webgl/solid';
 import {loadD3} from './components/d3-geo';
-import {EquationSystem, Geopad, Gesture, PlayBtn, Select, Slider, Step} from '../shared/types';
+import {PlayBtn} from '../shared/components/play-btn/play-btn';
+import {EquationSystem, Geopad} from '../shared/types';
 import {PiScroll} from './components/pi-scroll';
 
-import '../shared/components/conic-section';
+import '../shared/components/play-btn/play-btn';
+import '../shared/components/webgl/conic-section';
+import '../shared/components/scale-box/scale-box';
 import './components/pi-scroll';
 import './components/ellipse';
 
@@ -214,10 +218,10 @@ export function piDigits($step: Step) {
   const $input = $step.$('.pi-controls input') as InputView;
   const $warning = $step.$('.pi-warning')!;
 
-  fetch('/resources/circles/images/pi-100k.txt')
+  fetch('/content/circles/images/pi-100k.txt')
       .then(response => response.text())
       .then(data => $scroller.setUp(data + '…'))
-      .then(() => fetch('/resources/circles/images/pi-1m.txt'))
+      .then(() => fetch('/content/circles/images/pi-1m.txt'))
       .then(response => response.text())
       .then(data => $scroller.setUp(data + '…'));
 
@@ -538,9 +542,9 @@ function makeEarth($solid: Solid) {
       });
     }
 
-    loadTexture('map', '/resources/circles/images/textures/map.jpg');
-    loadTexture('bumpMap', '/resources/circles/images/textures/bump.jpg');
-    loadTexture('specularMap', '/resources/circles/images/textures/spec.jpg');
+    loadTexture('map', '/content/circles/images/textures/map.jpg');
+    loadTexture('bumpMap', '/content/circles/images/textures/bump.jpg');
+    loadTexture('specularMap', '/content/circles/images/textures/spec.jpg');
 
     const geometry = new THREE.SphereGeometry(2, 64, 64);
     return [new THREE.Mesh(geometry, material)];
@@ -769,7 +773,7 @@ export function cylinderSurface($step: Step) {
 }
 
 export function cylinderRealLife($step: Step) {
-  const $blanks = $step.$$('x-blank-input');
+  const $blanks = $step.$$('x-blank');
   $blanks[0].one('incorrect', () => $step.addHint('use-cylinder-volume'));
   $blanks[1].one('incorrect', () => $step.addHint('use-cylinder-surface'));
 }
@@ -970,11 +974,10 @@ export function sphereVolume($step: Step) {
     $solids[0].addOutlined(new THREE.CircleGeometry(r, s)).rotateX(-Math.PI / 2)
         .translateZ(-r / 2);
 
-    const cross = $solids[0].addOutlined(new THREE.CircleGeometry(r, s),
-        0xcd0e66, 5, 0.4, 0xcd0e66).rotateX(-Math.PI / 2).translateZ(-r / 2);
+    const cross = $solids[0].addOutlined(new THREE.CircleGeometry(r, s), 0xcd0e66, 5, 0.4, 0xcd0e66);
+    cross.rotateX(-Math.PI / 2).translateZ(-r / 2);
     $slider.on('move', (n) => {
-      cross.updateGeometry!(new THREE.CircleGeometry(
-          Math.max(0.001, Math.sqrt(1 - (n / 100) ** 2) * r), s));
+      cross.updateGeometry!(new THREE.CircleGeometry(Math.max(0.001, Math.sqrt(1 - (n / 100) ** 2) * r), s));
       cross.position.set(0, r * n / 100 - r / 2, 0);
       scene.draw();
     });
@@ -989,12 +992,11 @@ export function sphereVolume($step: Step) {
         new THREE.ConeGeometry(r, r, s, s, true), 0xaaaaaa, 45);
     inside.rotateX(Math.PI);
 
-    const cross = $solids[1].addOutlined(new THREE.RingGeometry(0.001, r, s, 1),
-        0xcd0e66, 5, 0.4, 0xcd0e66).rotateX(-Math.PI / 2).translateZ(-r / 2);
+    const cross = $solids[1].addOutlined(new THREE.RingGeometry(0.001, r, s, 1), 0xcd0e66, 5, 0.4, 0xcd0e66);
+    cross.rotateX(-Math.PI / 2).translateZ(-r / 2);
     $slider.on('move', (n) => {
       cross.position.set(0, r * n / 100 - r / 2, 0);
-      cross.updateGeometry!(
-          new THREE.RingGeometry(Math.max(0.001, n / 100 * r), r, s, 1));
+      cross.updateGeometry!(new THREE.RingGeometry(Math.max(0.001, n / 100 * r), r, s, 1));
       scene.draw();
     });
   });

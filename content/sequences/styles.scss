@@ -1,0 +1,441 @@
+// =============================================================================
+// Sequences
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+
+figure .row x-img { margin: 8px; }
+
+
+// -----------------------------------------------------------------------------
+// Introduction
+
+.n {
+  display: inline-block;
+  width: 44px;
+  text-align: center;
+  color: white;
+  height: 26px;
+  line-height: 26px;
+  position: relative;
+  margin: 16px 2px;
+  font-style: normal;
+  white-space: nowrap;
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 13px solid;
+  }
+
+  &:before { top: -13px; }
+  &:after { transform: rotate(180deg); bottom: -13px; }
+
+  .s-grey & { background: $grey; }
+  .s-grey &:before, .s-grey &:after { border-bottom-color: $grey; }
+
+  .s-orange & { background: $orange; }
+  .s-orange &:before, .s-orange &:after { border-bottom-color: $orange; }
+
+  .s-purple & { background: $purple; }
+  .s-purple &:before, .s-purple &:after { border-bottom-color: $purple; }
+
+  .s-teal & { background: $teal; }
+  .s-teal &:before, .s-teal &:after { border-bottom-color: $teal; }
+
+  .s-lime & { background: $lime; }
+  .s-lime &:before, .s-lime &:after { border-bottom-color: $lime; }
+
+  .s-red & { background: $red; }
+  .s-red &:before, .s-red &:after { border-bottom-color: $red; }
+
+  .s-blue & { background: $blue; }
+  .s-blue &:before, .s-blue &:after { border-bottom-color: $blue; }
+
+  .s-green & { background: $green; }
+  .s-green &:before, .s-green &:after { border-bottom-color: $green; }
+
+  .s-yellow & { background: $yellow; }
+  .s-yellow &:before, .s-yellow &:after { border-bottom-color: $yellow; }
+
+  .s-vertical & { width: auto; padding: 3px 8px; margin: 5px 8px; }
+  .s-vertical &:before, .s-vertical &:after { border-width: 0 16px 8px 16px; transform-origin: top left; }
+  .s-vertical &:before { top: 32px; left: -8px; transform: rotate(-90deg); }
+  .s-vertical &:after { top: 0; right: -77px; transform: rotate(90deg); }
+
+  .s-large & { width: 50px; height: 30px; margin: 18px 3px; line-height: 30px; }
+  .s-large &:before, .s-large &:after { border-width: 0 25px 15px 25px; }
+  .s-large &:before { top: -15px; }
+  .s-large &:after { bottom: -15px; }
+
+  .s-small & { width: 36px; height: 22px; margin: 12px 1px; line-height: 22px; }
+  .s-small &:before, .s-small &:after { border-width: 0 18px 11px 18px; }
+  .s-small &:before { top: -11px; }
+  .s-small &:after { bottom: -11px; }
+
+  .with-arrows & { margin-top: 32px; }
+  .s-large.with-arrows & { margin-top: 40px; }
+
+  x-blank { display: block; margin: 1px 3px; max-width: 120px; }
+  x-blank .target { display: block; margin: 0; height: 24px; box-shadow: 0 0 0 1px rgba(white, 75%); }
+  x-blank input { min-width: 0; display: block; width: 100%; height: 24px; }
+  x-blank.done, x-blank.done .target { display: inline; line-height: inherit; box-shadow: none; color: mix($blue, white); }
+  .s-large & x-blank-input { margin: 3px; }
+  .s-yellow &, .s-green &, .s-lime & { x-blank.done .target { color: $blue; } }
+
+  .var { color: white; }
+
+  .arrow {
+    background: inline-svg('<path fill="#{$text-light}" d="M41,41,33,30.86l0,4.49A32.45,32.45,0,0,0,21,33,33.71,33.71,0,0,0,1.77,39.2l1.14,1.65A31.65,31.65,0,0,1,21,35a30.53,30.53,0,0,1,11.06,2.09l-3.85,2.25Z"/>', 32, 32, ' viewBox="0 0 42 42"');
+    position: absolute;
+    font-size: 14px;
+    color: $text-light;
+    top: -40px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    left: -23px;
+  }
+}
+
+.pattern {
+  display: block;
+  font-size: 80%;
+  color: $text-medium;
+}
+
+.squares rect { transform-origin: center; transform-box: fill-box; }
+
+
+// -----------------------------------------------------------------------------
+// Arithmetic and Geometric Series
+
+.tennis-ball {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1px solid white;
+  background: url(/content/sequences/images/tennis.svg);
+  position: absolute;
+  margin: -15px;
+  pointer-events: none;
+}
+
+.text-wrap {
+  display: block;
+  float: right;
+  shape-margin: 24px;
+  margin: 0 0 24px 24px;
+  @media (max-width: 560px) { float: none !important; margin: 0 auto 1em; }
+}
+
+.row.padded.ag-select {
+  align-items: baseline;
+  margin: 2em 0 0;
+  > * { margin: 0; text-align: left; margin-bottom: 12px; }
+  > *:nth-child(2n) { margin-bottom: 2em; }
+}
+
+.row .ag-chart {
+  h3 { text-align: center; margin-bottom: .4em; }
+  p { margin: 0; }
+  .var { color: inherit;font-size: 16px; }
+  x-coordinate-system { margin: 0.5em 0 0 0; }
+  hr { margin: .5em 0; }
+
+  &.s-green x-var, &.s-green .bubble-box { background: $green; }
+  &.s-green .bubble-arrow { border-top-color: $green; }
+}
+
+.ag-equation { max-width: 220px;  margin: 0 auto .5em; }
+
+.money-grid td {
+  width: 100px;
+  padding: 2px 10px;
+}
+
+
+// -----------------------------------------------------------------------------
+// Famous Series
+
+.triangle-sum {
+  x-step &.padded { margin: 2em 0; }
+  &.padded > * { margin: 0; text-align: center; }
+
+  .red circle, circle.red { fill: $yellow; }
+  .blue circle, circle.blue { fill: $blue; }
+  .green circle, circle.green { fill: $green; }
+}
+
+x-tetrahedron { display: block; }
+x-tetrahedron canvas { width: 100%; height: auto; }
+
+.eratosthenes {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+
+  div {
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    background: $grey;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity .4s, background .3s, transform .2s;
+    transition-delay: .2s, 0s, 0s;
+
+    &.l-red { background: $red; }
+    &.l-blue { background: $blue; }
+    &.l-green { background: $green; }
+    &.l-yellow { background: $yellow; }
+    &.deleted { opacity: 0.12; }
+    &:active { transform: scale(0.9); }
+  }
+
+  + x-gesture { fill: rgba(black, 80%); stroke: rgba(white, 80%); }
+}
+
+x-coordinate-system + .caption { margin-top: -1em; }
+
+.perfect-table {
+  line-height: 1.4;
+  td { padding: 3px 12px; }
+  tr:nth-child(2n) td { background: #f4f4f4; }
+  .c { @include circled(30px); background: $red; color: white; }
+  .c.small { @include circled(22px); font-size: 15px; background: $orange; margin: 2px; }
+}
+
+.perfect-list { max-width: 660px; margin: 0 auto 1em; }
+
+.hailstone-slider {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  span:first-child { display: inline-block; background: $red; line-height: 28px; height: 28px;
+    border-radius: 14px 0 0 14px; color: rgba(white, 80%); padding: 0 8px 0 12px; }
+  x-var { border-radius: 0 14px 14px 0; }
+}
+
+
+// -----------------------------------------------------------------------------
+// Fibonacci Numbers
+
+.rabbits {
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  transition: padding-bottom .8s;
+  padding-bottom: 10%;
+
+  .rabbits-wrap { position: absolute; width: 100%; padding-bottom: 60%; }
+
+  svg { position: absolute; width: 100%; height: 100%; }
+  line { stroke: $light-grey; stroke-width: 2px; }
+  path { @include theme(stroke, $dark-grey, white); stroke-width: 2px; fill: none; }
+  polygon { @include theme(fill, $dark-grey, white); }
+
+  img.rabbit { position: absolute; width: 10%; height: auto; }
+  .n { position: absolute; right: 0; margin: 0; z-index: 1; margin-top: 13px; }
+}
+
+.golden-spiral .stage { overflow: hidden; }
+.golden-spiral svg { margin: 0 auto 32px; transition: transform .4s linear; }
+
+.spirals {
+  padding-bottom: 100%;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 1em;
+
+  .clockwise, .anticlockwise {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-size: cover;
+    transition: opacity .5s;
+    opacity: 0;
+    &.active { opacity: 1; }
+  }
+}
+
+.golden-rect svg { margin: 0 auto 8px; }
+.golden-rect x-blank.done .target { line-height: inherit; }
+
+.golden-art { position: relative; cursor: pointer; }
+.golden-art > img { position: absolute; top: 0; opacity: 0; transition: opacity .2s; }
+.golden-art:hover > img { opacity: 0.5; }
+.golden-art.active > img { opacity: 1; }
+
+.petals circle { fill: darken($green, 25%); transition: transform .3s; }
+
+.petals path {
+  transition: transform .3s;
+  transform-origin: 0 center;
+  fill: $green;
+  stroke: darken($green, 10%);
+  // vector-effect: non-scaling-stroke;
+}
+
+.sunflower-spiral {
+  padding: 10px 0 60px;
+  background: url(/content/sequences/images/sunflower-bg.jpg) center no-repeat;
+  background-size: 760px 560px;
+  .value { height: 34px; text-align: center; font-size: 20px; color: rgba(black, 80%); font-weight: 600; }
+  svg { margin: 0 auto; fill: mix($yellow, white); }
+  x-slider { margin: 12px auto 40px; }
+  x-slider .bar { background: fade($grey, 60%); }
+
+  @media screen and (max-width: 440px) { background-size: 170vw 125vw; }
+}
+
+
+// -----------------------------------------------------------------------------
+// Pascal's Triangle
+
+.pascal-grid {
+  margin: 1.5em auto;
+  position: relative;
+  user-select: none;
+  @include theme(color, inherit, $text-dark);
+
+  .r {
+    display: flex;
+    justify-content: center;
+  }
+
+  .c {
+    width: 40px;
+    font-size: 16px;
+    background-color: #ddd;
+    margin: 1px;
+    text-align: center;
+    position: relative;
+    line-height: 24px;
+    border-radius: 3px;
+    transition: color .4s, background .4s, box-shadow .4s, opacity .4s;
+    box-shadow: inset 0 -2px rgba(0,0,0,0.2);
+    padding-bottom: 2px;
+  }
+
+  .c:after {
+    content: "+";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: -8px;
+    top: 5px;
+    z-index: 1;
+    background: $grey;
+    color: white;
+    line-height: 14px;
+    text-align: center;
+    border-radius: 7px;
+    transform: scale(0);
+    transition: transform .2s;
+  }
+
+  .c.plus:after { transform: none; }
+
+  &.sums .c:last-child { transform: scale(0); transition: transform .2s; }
+  &.sums .c:last-child.visible { transform: none; }
+  &.sums .c:last-child:after { content: "="; }
+
+  x-blank { display: block; }
+  x-blank .target { display: block; margin: 0 0 -2px 0; height: 26px; border-radius: 3px; }
+  x-blank input { min-width: 0; display: block; width: 100%; height: 24px; }
+  x-blank.done, x-blank.done label { display: inline; line-height: inherit; }
+
+  &.small .c {
+    width: 28px;
+    font-size: 10px;
+    line-height: 16px;
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
+    padding-bottom: 1px;
+    margin: 1px;
+    .small { font-size: 8px; line-height: 8px; }
+  }
+
+  .c.light { opacity: 0.5; }
+
+  .c.yellow, .c.orange, .c.red, .c.purple, .c.blue, .c.teal, .c.green, .c.lime {
+    color: white;
+    box-shadow: inset 0 -2px rgba(0,0,0,0.4);
+  }
+
+  .c.yellow { background-color: $yellow; }
+  .c.orange { background-color: $orange; }
+  .c.red { background-color: $red; }
+  .c.purple { background-color: $purple; }
+  .c.blue { background-color: $blue; }
+  .c.teal { background-color: $teal; }
+  .c.green { background-color: $green; }
+  .c.lime { background-color: $lime; }
+}
+
+#pascal-select .c:not(.red) { cursor: pointer; }
+
+.pascal-buttons {
+  position: absolute;
+  top: 10px;
+  .btn { display: block; width: 120px; margin-bottom: 8px; font-size: 18px; }
+}
+
+.pascal-tabs {
+  margin-top: 0;
+  .titles { margin: 0 auto; }
+
+  h3 {
+    border-radius: 6px !important;
+    padding: 0;
+    width: 40px;
+    height: 44px;
+    margin: 8px 4px;
+    position: relative;
+    background: currentColor !important;  // Override dark mode colours
+    opacity: 0.5;
+    min-width: 0;
+    &:hover { background: currentColor; opacity: 0.7; }
+    &.active { background: currentColor; opacity: 1; }
+    .check { margin: 0; background-color: transparent; background-size: contain; }
+  }
+
+  h3:after {
+    content: "";
+    border-bottom: 6px currentColor solid;
+    border-left: 15px transparent solid;
+    border-right: 15px transparent solid;
+    position: absolute;
+    left: 5px;
+    top: -6px;
+  }
+
+  .yellow { color: $yellow; }
+  .orange { color: $orange; }
+  .red { color: $red; }
+  .purple { color: $purple; }
+  .blue { color: $blue; }
+  .teal { color: $teal; }
+  .green { color: $green; }
+
+  .body { padding: 0; transition: background .6s; text-align: center; }
+  .body.s-yellow { background: fade($yellow, 20%); }
+  .body.s-orange { background: fade($orange, 20%); }
+  .body.s-red { background: fade($red, 20%); }
+  .body.s-purple { background: fade($purple, 20%); }
+  .body.s-blue { background: fade($blue, 20%); }
+  .body.s-teal { background: fade($teal, 20%); }
+  .body.s-green { background: fade($green, 20%); }
+}

@@ -1,0 +1,60 @@
+// =============================================================================
+// Exponentials and Logarithms
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+
+
+sup { font-weight: 600; }
+
+x-atom { display: block; margin: 0 auto; }
+x-atom canvas { width: 100%; height: auto; }
+
+.col-grid {
+  td { padding: .4em .6em; }
+  tr:first-child td { padding: 0 .6em .4em; border: 0; }
+}
+
+.col {
+  background: $yellow;
+  height: 120px;
+  width: 50px;
+  margin: 0 auto;
+  transform-origin: center bottom;
+  transition: opacity .2s, transform 1s;
+  box-shadow: 0 0 12px 1px fade($yellow, 60%);
+  border-radius: 2px;
+
+  &.c1, &.c2, &.c3, &.c4 { opacity: 0; transform: scaleY(0); }
+  &.on { opacity: 1; transform: none; }
+
+  &.c1 { height: 60px; margin-top: 60px; }
+  &.c2 { height: 30px; margin-top: 90px; }
+  &.c3 { height: 15px; margin-top: 105px; }
+  &.c4 { height: 7.5px; margin-top: 112.5px; }
+}
+
+.text-wrap {
+  display: block;
+  float: right;
+  shape-margin: 24px;
+  margin: 0 0 24px 24px;
+  shape-outside: circle();
+  @media (max-width: 560px) { float: none !important; margin: 0 auto 1em; }
+}
+
+.decay-box {
+  position: relative;
+  height: 112px;
+  x-atom { position: absolute; top: 0; }
+  x-atom:first-child { @include bouncy; }
+  .label { position: absolute; top: 72px;  width: 72px; text-align: center; font-size: 11px; line-height: 1.2; }
+  .operator { position: absolute; top: 16px; font-size: 20px; color: $text-dark; }
+}
+
+x-algebra-flow {
+  x-blank input { min-width: 74px; transition: min-width .2s; }
+  x-blank.invalid input { min-width: 54px; }
+}

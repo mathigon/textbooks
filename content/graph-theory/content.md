@@ -4,6 +4,10 @@
 
 > id: intro-0
 > section: introduction
+> description: Discover the mathematical principles that connect our world – from shaking hands to travel and navigation, colouring maps and social networks.
+> color: "#A7208A"
+> level: Intermediate
+> next: probability
 
 Every day we are surrounded by countless connections and networks: roads and rail tracks, phone
 lines, the internet, electronic circuits and even molecular bonds. There are even _social networks_
@@ -494,7 +498,7 @@ theorem_.
 > id: planarity
 > goals: planarity
 
-::: .box.f-blue
+::: .box.blue
 
 #### Planarity
 
@@ -522,27 +526,27 @@ called __faces__.
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Vertices  
-[[5]] Faces  
-[[10]] Edges  
+{.text-center} [[6]] Vertices
+[[5]] Faces
+[[10]] Edges
 _{span.euler-sum} 11 Vertices + Faces_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] Vertices  
-[[7]] Faces  
-[[14]] Edges  
+{.text-center} [[8]] Vertices
+[[7]] Faces
+[[14]] Edges
 _{span.euler-sum} 15 Vertices + Faces_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] Vertices  
-[[13]] Faces  
-[[24]] Edges  
+{.text-center} [[12]] Vertices
+[[13]] Faces
+[[24]] Edges
 _{span.euler-sum} 25 Vertices + Faces_
 
 :::
@@ -653,27 +657,27 @@ _{.b.green}V_ = _{.b.red}E_ + [[2]].
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
-{.caption} __Icosahedron__  
-__{.blue}20__ Faces  
-__{.green}12__ Vertices  
+{.caption} __Icosahedron__
+__{.blue}20__ Faces
+__{.green}12__ Vertices
 __{.red}30__ Edges
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Rhombicosidodecahedron__  
-__{.blue}62__ Faces  
-__{.green}60__ Vertices  
+{.caption} __Rhombicosidodecahedron__
+__{.blue}62__ Faces
+__{.green}60__ Vertices
 __{.red}120__ Edges
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
-{.caption} __Truncated Icosahedron__  
-__{.blue}32__ Faces (12 black, 20 white)  
-__{.green}60__ Vertices  
+{.caption} __Truncated Icosahedron__
+__{.blue}32__ Faces (12 black, 20 white)
+__{.green}60__ Vertices
 __{.red}90__ Edges
 
 :::

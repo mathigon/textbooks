@@ -8,7 +8,7 @@ import {Color, wait} from '@mathigon/core';
 import {numberFormat, Random} from '@mathigon/fermat';
 import {Point, Rectangle} from '@mathigon/euclid';
 import {$N, Observable} from '@mathigon/boost';
-import {Slideshow, Step} from '../shared/types';
+import {Slideshow, Step} from '@mathigon/studio';
 import {DotMachine} from './components/dot-machine';
 
 import './components/dot-machine';
@@ -27,7 +27,7 @@ export function race($step: Step) {
 
     if (!hasShownGesture && !$step.scores.has('blank-0')) {
       setTimeout(() => {
-        $N('x-gesture', {target: 'x-blank-input', start: true}, $step);
+        $N('x-gesture', {target: 'x-blank', start: true}, $step);
       }, 1000);
       hasShownGesture = true;
     }

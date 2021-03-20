@@ -7,7 +7,11 @@
 import {Obj} from '@mathigon/core';
 import {isLineLike, Point, Segment} from '@mathigon/euclid';
 import {$N, slide, SVGView} from '@mathigon/boost';
-import {Geopad, GeoPoint, Path, PlayBtn, Step, Video} from '../shared/types';
+import {Step, Video} from '@mathigon/studio';
+import {Geopad, GeoPoint, Path} from '../shared/types';
+import {PlayBtn} from '../shared/components/play-btn/play-btn';
+
+import '../shared/components/play-btn/play-btn';
 
 
 export function thales($step: Step) {

@@ -4,6 +4,11 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
+
 
 When looking around nature, you might have noticed intricate plants like
 these:
@@ -271,7 +276,7 @@ edge of the snowflake look exactly the same as [{.blue} larger sections](target:
 ::: column.grow
 
 When we scale one edge segment of the Koch Snowflake by a factor of 3, its
-length [[quadruples|triples|doubles]]. 
+length [[quadruples|triples|doubles]].
 
 {.reveal(when="blank-0")} Using the same relationship between dimensions and
 scale factors as above, we get the equation [[`3^d=4`|`2^d=4`|`2^d=3`|`4^d=3`]].
@@ -408,7 +413,7 @@ itself, which are 3 times smaller.
 
 {.reveal(when="blank-1")} Now we can try to calculate the dimension _d_ of the
 Menger sponge just like we did for the Koch snowflake above. In this case we get
-`3^d = 20`, or `§d = log_3(20) ≈ 2.727`. 
+`3^d = 20`, or `§d = log_3(20) ≈ 2.727`.
 
 :::
 
@@ -908,16 +913,16 @@ terms on a number line. You can change the value of `pill(x_0,"yellow","x0")`:
 Notice how the resulting sequence can behave very differently, depending on the
 starting value `x_0`:
 
-::: column.frame.f-blue.text-center(width=212 parent="padded-thin")
+::: column.frame.blue.text-center(width=212 parent="padded-thin")
 
 If `x_0 > 1`, the sequence [[diverges|converges]]:
 _{span.reveal(when="blank-0")}it just keeps growing, up to infinity._
 
-::: column.frame.f-blue.text-center(width=212)
+::: column.frame.blue.text-center(width=212)
 
 If `x_0` is between –1 and 1, the sequence [[converges|diverges]].
 
-::: column.frame.f-blue.text-center(width=212)
+::: column.frame.blue.text-center(width=212)
 
 If `x_0 < -1`, the sequence [[diverges|converges]].
 

@@ -1,0 +1,4 @@
+{
+  "extends": "../node_modules/@mathigon/studio/frontend/tsconfig.json",
+  "exclude": ["../node_modules"]
+}

@@ -1,0 +1,41 @@
+// =============================================================================
+// Play Button Component Styles
+// (c) Mathigon
+// =============================================================================
+
+
+x-play-btn {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  .play-btn-box {
+    margin: -24px;
+    border-radius: 6px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    background: rgba(black, 80%);
+    opacity: 0.9;
+    transition: transform .2s, opacity .2s, background .2s;
+    padding: 2px;
+    .icon { fill: white; }
+  }
+
+  x-video & .play-btn-box {
+    border: 1px solid rgba(white, 80%);
+    margin: -25px;
+    pointer-events: none
+  }
+
+  .play-btn-box:hover, .play-btn-box:focus, x-video:hover & .play-btn-box {
+    transform: scale(1.2);
+    background: rgba(black, 90%);
+    opacity: 1;
+  }
+
+  x-video.playing & .play-btn-box { transform: scale(0.2); opacity: 0; }
+}
+
+x-play-toggle { display: block; }

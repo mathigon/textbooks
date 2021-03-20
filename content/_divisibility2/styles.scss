@@ -1,0 +1,163 @@
+// =============================================================================
+// Divisibility and Primes
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+@import "../shared/components/gameplay/gameplay";
+@import "./components/number-grid";
+@import "./components/prime-disk";
+@import "./components/prime-picker";
+
+
+// -----------------------------------------------------------------------------
+// Factors and Multiples
+
+x-factris { position: relative; width: fit-content; margin: 58px auto 4px; }
+
+x-factor-rect {
+  display: block;
+  margin: 0 auto;
+  color: $blue;
+
+  svg { margin: 0 auto; }
+  rect, .handle { stroke: white; transition: color .2s; }
+  text { font-size: 16px; font-weight: 600; fill: currentColor;  }
+  .handle { fill: $grey; cursor: grab; }
+  rect { fill: currentColor }
+  rect.correct { stroke: currentColor; stroke-width: 8px; opacity: 0.3; stroke-linejoin: round; }
+  rect.wrong { fill: $red; }
+}
+
+x-factor-circles {
+  circle { transition: transform .2s, fill .2s, opacity .2s; }
+  text { font-size: 32px; font-weight: 600; fill: $text-light; }
+}
+
+.factors-quiz {
+  height: 240px;
+
+  .slide { margin-top: 110px; height: auto; font-size: 1.2em; text-align: center; }
+  .circled { margin: 0 .4em; }
+
+  .factor-value {
+    display: inline-block;
+    position: relative;
+    width: 6em;
+    height: 2em;
+    margin: 0 .5em -.6em;
+  }
+
+  .factor-bubble {
+    width: 6em;
+    position: absolute;
+    transition: transform .2s;
+    transition-delay: .1s;
+    &:first-child { transform: translateY(-120%); }
+    &:last-child { transform: translateY(120%); }
+    .btn { width: 80px; }
+    .btn-red, .btn-green { pointer-events: none; z-index: 10; box-shadow: none; }
+  }
+}
+
+.factor-table {
+  column-count: 4;
+  margin: 1.5em 24px;
+  div { margin-bottom: 6px; }
+  @media screen and (max-width: 1110px) { column-count: 3; }
+  @media screen and (max-width: 950px) { column-count: 2; }
+
+  .bulb {
+    background: $blue;
+    display: inline-block;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 18px;
+    text-align: center;
+    line-height: 32px;
+    z-index: 1;
+    position: relative;
+    border: 1px solid white;
+  }
+
+  .factors, .total {
+    background: $light-grey;
+    display: inline-block;
+    margin-left: -10px;
+    color: white;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0 8px 0 16px;
+  }
+  .total { border-radius: 0 4px 4px 0; margin-left: 1px; padding: 0 8px; }
+}
+
+
+// -----------------------------------------------------------------------------
+// Divisibility Rules
+
+// TODO
+
+
+// -----------------------------------------------------------------------------
+// Prime Numbers
+
+x-image-sequence { display: block; }
+
+.calculator {
+  max-width: 400px;
+  background: $grey;
+  border-radius: 8px;
+  margin: 2em auto;
+  padding: 20px;
+  text-align: center;
+
+  h3 { margin: 0 0 1em; color: white; }
+
+  p { margin: 0; color: rgba(white, 60%); font-size: .9em; }
+  .result { font-size: 1.2em; color: white; margin: 0; height: 30px; line-height: 1.2; }
+
+  input {
+    display: block;
+    margin: 10px auto;
+    background: $light-grey;
+    text-align: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: black;
+  }
+
+  .loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('/images/loading-white.gif');
+    background-size: 20px 20px;
+  }
+}
+
+
+// -----------------------------------------------------------------------------
+// Prime Factorisation
+
+// TODO
+
+
+// -----------------------------------------------------------------------------
+// Greatest Common Factors
+
+// TODO
+
+
+// -----------------------------------------------------------------------------
+// Lowest Common Multiples
+
+// TODO
+
+
+// -----------------------------------------------------------------------------
+// Distribution of Primes
+
+// TODO

@@ -1,0 +1,44 @@
+// =============================================================================
+// Code Box Component
+// (c) Mathigon
+// =============================================================================
+
+
+x-code-box {
+  display: flex;
+  margin: 1.5em 0;
+  flex-wrap: wrap;
+
+  .input, .output {
+    width: 180px;
+    flex-grow: 1;
+    background: $grey-background;
+    border: 1px solid rgba(black, 10%);
+    color: black;
+    line-height: 1.4em;
+    padding: 10px 16px;
+    transition: background .2s, border .2s, box-shadow .2s;
+  }
+
+  .input { margin-right: -1px; border-radius: 6px 0 0 6px; }
+  .output { border-radius: 0 6px 6px 0; }
+
+  @media screen and (max-width: 474px) {
+    .input { margin: 0 0 -1px; border-radius: 6px 6px 0 0; }
+    .output { border-radius: 0 0 6px 6px; }
+  }
+
+  [contenteditable] {
+    appearance: none;
+    height: auto;
+    cursor: text;
+    z-index: 1;
+    &:hover, &:focus { z-index: 2; border-color: $blue; background-color: #eee; }
+    &:focus { outline: none; box-shadow: 0 0 0 3px rgba($blue, 50%); }
+  }
+
+  .letter:hover, .letter.hover {
+    cursor: crosshair;
+    background: rgba($blue, 50%); padding: 0 3px; margin: 0 -3px; border-radius: 4px;
+  }
+}

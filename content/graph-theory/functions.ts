@@ -8,13 +8,15 @@ import {Color, isOneOf, last, list, Obj, repeat2D, tabulate, tabulate2D} from '@
 import {factorial, lerp, numberFormat, Random, subsets, toOrdinal} from '@mathigon/fermat';
 import {intersections, Point, Segment, SimplePoint} from '@mathigon/euclid';
 import {$, $$, $N, animate, Draggable, SVGParentView, svgPointerPosn, SVGView} from '@mathigon/boost';
-import {Slideshow, Step} from '../shared/types';
+import {Slideshow, Step} from '@mathigon/studio';
 
 import {Edge, edgeToSegment, Graph} from './components/graph';
 import {Sketch} from './components/sketch';
 import {borders} from './components/four-colour-maps';
 import {travellingSalesman} from './components/geometry';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, TEAL, YELLOW} from '../shared/constants';
+
+import '../shared/components/solved/solved';
 
 
 const person = 'M9,6C5.6,5.2,2.4,4.9,4,2c4.7-8.9,1-14-4-14c-5.1,0-8.7,5.3-4,14c1.6,2.9-1.7,3.2-5,4c-3.5,0.8-3,2.7-3,6h24C12,8.7,12.5,6.8,9,6z';

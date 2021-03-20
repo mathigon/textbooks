@@ -26,7 +26,7 @@ export class JuliaCanvas {
     const yMax = roundTo(plotBounds.yMax, resolution);
     this.range = [0, xMax, yMax, yMin];
 
-    this.worker = new Worker('/resources/fractals/worker.js');
+    this.worker = new Worker('/content/fractals/worker.js');
     this.worker.onmessage = (e: MessageEvent) => this.onCompleted(e.data);
     this.worker.onerror = (e: ErrorEvent) => console.error('[WebWorker]', e);
   }

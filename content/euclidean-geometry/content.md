@@ -5,6 +5,10 @@
 > id: thales
 > goals: p1 p2 p3 move
 > section: introduction
+> description: Geometry is one of the oldest parts of mathematics – and one of the most useful. Its logical, systematic approach has been copied in many other areas.
+> color: "#0F82F2"
+> level: Intermediate
+> next: transformations
 
 ::: column.grow
 Mathematics has been studied for thousands of years – to predict the seasons,
@@ -12,7 +16,7 @@ calculate taxes, or estimate the size of farming land.
 
 Mathematicians in ancient Greece, around 500 BC, were amazed by mathematical
 patterns, and wanted to explore and explain them. For the first time, they began
-to study mathematics just “for fun”, without a specific application in mind. 
+to study mathematics just “for fun”, without a specific application in mind.
 ::: column(width=300)
 
     x-img(src="images/tablet.jpg" width=300 height=210)
@@ -83,7 +87,7 @@ perfectly regular pyramids.
 
     x-img(src="images/sextant.jpg" width=200 height=200)
 
-{.caption} Sailors use sextants to determine their location while at sea, using 
+{.caption} Sailors use sextants to determine their location while at sea, using
 angles formed by the sun or stars.
 ::: column(width=200)
 
@@ -398,7 +402,7 @@ the _father of geometry_, published the five axioms of geometry:
       circle.move(name="b" cx=190 cy=30 target="1_point")
       path.red(x="segment(a,b)" target="1_line")
 
-{.text-center }__First Axiom__  
+{.text-center }__First Axiom__
 You can join any [two points](target:1_point) using exactly one straight
 [{.red} line segment](target:1_line).
 
@@ -411,7 +415,7 @@ You can join any [two points](target:1_point) using exactly one straight
       path(x="segment(c,d)" target="2_segment")
       path.blue.transparent(x="segment(c,d)" target="2_line")
 
-{.text-center }__Second Axiom__  
+{.text-center }__Second Axiom__
 You can extend any [line segment](target:2_segment) to an
 [{.blue} infinitely long line](target:2_line).
 
@@ -423,7 +427,7 @@ You can extend any [line segment](target:2_segment) to an
       path(x="segment(e,f)" label="r" target="3_radius")
       path.green(x="circle(e,distance(e,f))" target="3_circle")
 
-{.text-center }__Third Axiom__  
+{.text-center }__Third Axiom__
 Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you can draw a
 [{.green} circle](target:3_circle) with centre _P_ and radius _r_.
 
@@ -444,7 +448,7 @@ Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you 
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
-{.text-center }__Fourth Axiom__  
+{.text-center }__Fourth Axiom__
 Any two [{.orange} right angles](target:4_angle) are congruent.
 
 ::: column(width=220)
@@ -454,7 +458,7 @@ Any two [{.orange} right angles](target:4_angle) are congruent.
       path(name="line5" x="line(point(50,80),point(130,140))" target="5_line" label="L")
       path.yellow(x="line5.parallel(g)" target="5_parallel")
 
-{.text-center }__Fifth Axiom__  
+{.text-center }__Fifth Axiom__
 Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_, there is exactly
 [{.yellow} one line](target:5_parallel) through _P_ that is [parallel](gloss:parallel) to _L_.
 :::
@@ -640,8 +644,8 @@ is indeed an equilateral triangle._
     // A midpoint is a point on a line segment that divides it into two congruent
     // segments. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
     // `bar(AC)`.
-    // 
-    // A line, segment, or ray that passes through a midpoint of another segment 
+    //
+    // A line, segment, or ray that passes through a midpoint of another segment
     // at a right angle is called a __perpendicular bisector__. `bar(DE)` is the
     // perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) ⊥ bar(DE)`.
 
@@ -653,17 +657,17 @@ is indeed an equilateral triangle._
 {.todo} COMING SOON – Constructing Angle Bisectors
 
     // When two rays have the same endpoint, an angle is created.
-    // 
+    //
     // Here, `vec(BA)` and `vec(BC)` meet to form an angle. An angle is labeled with an
     // “∠” symbol in front of the three letters used to label it. This angle can be
     // labeled `/_ABC` or `/_CBA`. Always put the vertex (the common endpoint of the
     // two rays) in the middle of the three points. It doesn’t matter which side point
     // is written first.
-    // 
+    //
     // An __angle bisector__ is a ray that divides an angle into two congruent angles,
     // each having a measure exactly half of the original angle. Every angle has
     // exactly one angle bisector.
-    // 
+    //
     // Angle Bisector Theorem: If a point is on the bisector of an angle, then the
     // point is equidistant from the sides of the angle.
     // In other words, if BD←→ bisects ∠ABC,BE−→−⊥ED, and BF−→−⊥DF, then ED=DF.
@@ -688,7 +692,7 @@ temple that was _exactly twice_ the volume of the existing one.
 ::: column(width=300)
 
     x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
-    
+
 {.caption} A reconstruction of a temple in Delphi
 :::
 
@@ -711,7 +715,7 @@ without success:
 
     figure: img(src="images/impossible-1.svg" width=200 height=180)
 
-{.text-center} __{.m-red} Trisecting the angle__  
+{.text-center} __{.m-red} Trisecting the angle__
 We already know how to bisect angles. However it is impossible to similarly
 split an angle into _three_ equal parts.
 
@@ -719,7 +723,7 @@ split an angle into _three_ equal parts.
 
     figure: img(src="images/impossible-2.svg" width=200 height=180)
 
-{.text-center} __{.m-blue} Doubling the cube__  
+{.text-center} __{.m-blue} Doubling the cube__
 Given the edge of a cube, it is impossible to construct the edge of another cube
 that has exactly twice the volume.
 
@@ -727,7 +731,7 @@ that has exactly twice the volume.
 
     figure: img(src="images/impossible-3.svg" width=200 height=180)
 
-{.text-center} __{.m-green} Squaring the circle__  
+{.text-center} __{.m-green} Squaring the circle__
 Given a circle, it is impossible to construct a square that has exactly the same
 area.
 :::
@@ -760,7 +764,7 @@ Theorem #1: If two lines are parallel and a third line is perpendicular to one o
 
 Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
 
-Distance Between Parallel Lines 
+Distance Between Parallel Lines
 The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
 
 ---
@@ -905,7 +909,7 @@ perpendicular to _L_ passing through _P_.
 
     x-video(src="images/origami/axiom-5.mp4" width=220 height=220)
 
-{.text-center} Given two points _P_ and _Q_ and a line _L_, we can make a fold 
+{.text-center} Given two points _P_ and _Q_ and a line _L_, we can make a fold
 that passes through _P_ and places _Q_ onto _L_.
 ::: column(width=220)
 
@@ -1008,18 +1012,18 @@ Hiroshima University in Japan.
     // ---
     // > id: origami-applications-2
     // > goals: video
-    // 
+    //
     // ::: column(width=300)
-    // 
+    //
     // x-video(src="https://static.mathigon.org/videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
-    // 
+    //
     // ::: column.grow
     // #### Stadium Roofs
-    // 
+    //
     // Bridges are difficult to construct because they have to span large distances
     // without intermediate support. This also is the case for the roofs of sports
     // stadiums, which have to cover a large area without being supported by pillars.
-    // 
+    //
     // The roof of the new Falcons Stadium in Atlanta consists of eight enormous
     // modules that can twist to open or close.
     // :::

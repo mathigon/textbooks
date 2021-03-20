@@ -4,34 +4,9 @@
 
 > section: factors-and-multiples
 > id: divisibility1
-
-    mixin grid(n, fn)
-      .number-grid
-        - var i = 1
-        while i <= n
-          .number-cell= i
-            if fn
-              - var badge = fn(i)
-              if badge
-                .number-badge= badge
-          - i += 1
-
-    mixin divisor-table(divisors, pairs)
-      - var len = divisors.length
-      - var last = divisors[len-1]
-      table.divisor-table
-        tr
-          td.td-border-right(width="24")= last
-          for i in divisors
-            td.divisor-number(width="24" data-display="visibility")= i + (i == last ? '' : ',')
-        for i in pairs
-          tr
-            td
-            if i
-              td(colspan=i)
-            td(colspan=len - 2 * i): .divisor-pair(style="height: " + (len/2 - i) + "00%" data-display="visibility")
-            if i
-              td(colspan=i)
+> description: Prime numbers represent both the most basic properties and the most complex unsolved problems. Here you can learn about the building blocks of mathematics.
+> color: "#1AA845"
+> level: Foundations
 
 By now you should be comfortable with addition, subtraction and multiplication
 of integers. Division is slightly different, because you can’t always divide any
@@ -61,7 +36,7 @@ of __{.green}7__, and we can write __{.green}7__|__{.orange}21__.
 
 In this short game you have to determine which numbers are factors or multiples:
 
-::: .box.f-blue.no-padding
+::: .box.blue.no-padding
 #### Factors and Multiples Quiz
 
     x-gameplay.factors-quiz
@@ -92,6 +67,7 @@ always appear in [[pairs|triples|halves]].
 In the case of 60 we have 60 = 1 × 60 = 2 × 30 = 3 × 20 = 4 × 15 = 5 × 12 =
 6 × 10. Or, in a different notation,
 
+    include mixins
     +divisor-table([1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60], [5, 4, 3, 2, 1, 0])
 
 To find all factors of a number we simply start at both ends of this list,
@@ -100,6 +76,7 @@ until we meet in the middle.
 ---
 > id: factors2
 
+    include mixins
     x-slideshow
       .stage(slot="stage")
         +divisor-table([1, 2, 3, 6, 7, 14, 21, 42], [3, 2, 1, 0])
@@ -133,6 +110,7 @@ Every number is divisible by 1. To determine if a number is divisible by 2, we
 simply have to check if it’s even: any number that ends in 0, 2, 4, 6, or 8 is
 divisible by 2.
 
+    include mixins
     +grid(30)
 
 ---
@@ -141,6 +119,7 @@ divisible by 2.
 To see if a number is divisible by 5, we similarly just have to check that its
 last digit is 0 or 5:
 
+    include mixins
     +grid(30)
 
 ---
@@ -234,6 +213,7 @@ is [[14]].
 ---
 > id: divisibility3b
 
+    include mixins
     +grid(40, function(n) { if (!(n % 3)) { var s = '' + n; return +s[0] + (+s[1] || 0); } })
 
 Here we’ve highlighted all numbers which are multiples of three. You can see
@@ -293,6 +273,7 @@ multiple of 3, and we know that [{.no-margins}everything else](->.digit-sum-else
 We’ve still skipped number 6 – but we’ve already done all the hard work.
 Remember that 6 = 2 × 3.
 
+    include mixins
     +grid(40)
     p.btn-row.text-center.no-voice(style="margin-bottom:1em")
       button.btn.btn-small(data-display="visibility") Show multiple of 2
@@ -387,6 +368,7 @@ as the numbers get bigger. Instead, the Greek mathematician [Eratosthenes of
 Cyrene](bio:eratosthenes) came up with a simple algorithm to find all prime
 numbers up to 100: the __Sieve of Eratosthenes__.
 
+    include mixins
     x-slideshow
       .stage(slot="stage")
         +grid(100)
@@ -845,7 +827,7 @@ Therefore the lcm of __{.m-blue}12__, __{.m-green}30__ and __{.m-yellow}45__ is
 ---
 > id: race6
 
-Prime numbers are a special case: the lcm of two different primes is simply 
+Prime numbers are a special case: the lcm of two different primes is simply
 their [[product|sum|difference]], because they don’t have any common prime
 factors which would get “canceled”.
 

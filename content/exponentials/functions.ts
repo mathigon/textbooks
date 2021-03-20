@@ -9,7 +9,8 @@ import {list} from '@mathigon/core';
 import {numberFormat} from '@mathigon/fermat';
 import {Point} from '@mathigon/euclid';
 import {$} from '@mathigon/boost';
-import {AlgebraFlow, CoordinateSystem, Step} from '../shared/types';
+import {Step} from '@mathigon/studio';
+import {AlgebraFlow, CoordinateSystem} from '../shared/types';
 
 
 export function radioactive1($step: Step) {

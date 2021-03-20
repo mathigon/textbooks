@@ -4,6 +4,8 @@
 
 > section: graphs
 > sectionStatus: dev
+> color: "#F15E19"
+> level: Foundations
 
 TODO
 
@@ -17,7 +19,7 @@ TODO
 > goals: make-point slide-point
 
 ::: .theorem
-__Common Core Standard 8.EE.6__  
+__Common Core Standard 8.EE.6__
 Use similar triangles to explain why the slope _m_ is the same between any two
 distinct points on a non-vertical line in the coordinate plane; derive the
 equation `y=mx` for a line through the origin and the equation `y=mx+b` for a

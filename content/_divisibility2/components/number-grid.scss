@@ -1,0 +1,41 @@
+// =============================================================================
+// Number Grid Component Styles
+// (c) Mathigon
+// =============================================================================
+
+
+@mixin grid($size, $gap, $font){
+  grid-template-columns: repeat(10, $size);
+  column-gap: $gap;
+  row-gap: $gap;
+  font-size: $font;
+  width: 10 * ($size  + $gap) - $gap;
+  > * { width: $size; height: $size; line-height: $size; }
+}
+
+x-number-grid {
+  display: grid;
+  text-align: center;
+  margin: 0 auto;
+  user-select: none;
+  @include grid(40px, 8px, 20px);
+
+  &.medium { @include grid(32px, 4px, 18px); }
+  @media (max-width: 560px) { @include grid(32px, 4px, 18px); }
+  &.small { @include grid(28px, 3px, 16px); }
+  @media (max-width: 410px) { @include grid(28px, 3px, 16px); }
+
+  > * {
+    background: $light-grey;
+    color: $text-dark;
+    border-radius: 24px;
+    transition: background .2s, color .2s;
+  }
+  &.interactive > * { cursor: pointer; }
+
+  .red { background: $red; color: white; }
+  .blue { background: $blue; color: white; }
+  .green { background: $green; color: white; }
+  .yellow { background: $yellow; color: white; }
+  .purple { background: $purple; color: white; }
+}

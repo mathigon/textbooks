@@ -4,10 +4,14 @@
 
 > section: introduction
 > id: intro
+> trailer: tBJUNvCBkLo
+> color: "#5A49C9"
+> level: Intermediate
+> next: graph-theory
 
 ::: column.grow
 
-For as long as humans have existed, we have looked to the sky and tried to explain life on Earth
+For as long as humans have existed, we have looked to the sky and tried to explain life on Earth
 using the motion of stars, planets and the moon.
 
 Ancient Greek astronomers were the first to discover that all celestial objects
@@ -53,7 +57,7 @@ circles that you need to know:
 * {.reveal(when="compass" delay="4000")} The [{.blue.b}diameter](target:d)
   is the distance between two opposite points on a circle. It goes through its
   center, and its length is [[twice|half|the same as]] the radius.
-* {.reveal(when="blank-0")} The [{.green.b}circumference](target:c) 
+* {.reveal(when="blank-0")} The [{.green.b}circumference](target:c)
   (or perimeter) is the distance around a circle.
 
 :::
@@ -240,7 +244,7 @@ move the slider to “uncurl” the rings.
 {.reveal(when="slider")} If we increase the number of rings to ${n2}{n2|4|2,12,1},
 this shape starts to look more and more like a [[triangle|rectangle|trapezium]].
 
-{.reveal(when="blank-0")} The height of the triangle is equal to the 
+{.reveal(when="blank-0")} The height of the triangle is equal to the
 [[radius|diameter|circumference]] of the circle.
 _{span.reveal(when="blank-1")} The base of the triangle is equal to [[the
 circumference|twice the diameter]] of the circle._
@@ -347,7 +351,7 @@ If Pi is normal, it means that you can think of _any_ string of digits, and it
 will appear somewhere in its digits. Here you can search the first one
 million digits of Pi – do they contain your birthday?
 
-::: .box.f-red.pi-box
+::: .box.red.pi-box
 #### One Million Digits of Pi
 
     .pi-controls
@@ -570,12 +574,12 @@ kilometers, or Celsius and Fahrenheit:
 
 ::: column(width=180 parent="padded-thin")
 
-{.text-center} _{span.rotate.left}`=>`_  
+{.text-center} _{span.rotate.left}`=>`_
 __{.m-red} 1°__ _{span.space}=_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
 
 ::: column(width=180)
 
-{.text-center} _{span.rotate.right}`=>`_  
+{.text-center} _{span.rotate.right}`=>`_
 __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
 
 :::
@@ -730,23 +734,23 @@ need to solve more complex problems:
 
     x-geopad.sticky(width=300 height=300): svg
       circle(x="point(150,150)" name="x")
-      
+
       path.teal.fill.reveal(x="sector(x,d1,pi/2.5)" target="sector" when="next-3" label="Sector" label-class="white")
       path.purple.fill.reveal(x="arc(x,b1,pi/2.5)" target="segment" when="next-4" label="Segment")
-      
+
       path.black(x="circle(x,100)" name="c")
-      
+
       circle.red(x="c.at(0.5)" name="a1" target="secant")
       circle.red(x="c.at(0.7)" name="a2" target="secant")
       path.red.thick(x="line(a1,a2)" label="Secant" target="secant")
-      
+
       circle.green.reveal(x="c.at(0.8)" name="b1" target="chord" when="next-0" animation="pop")
       circle.green.reveal(x="c.at(0)" name="b2" target="chord" when="next-0" animation="pop")
       path.green.thick.reveal(x="segment(b1,b2)" label="Chord" target="chord" when="next-0" animation="draw")
-      
+
       circle.blue.reveal(x="c.at(0.1)" name="c1" target="tangent" when="next-1" animation="pop")
       path.blue.thick.reveal(x="c.tangentAt(0.1)" label="Tangent" target="tangent" when="next-1" animation="draw")
-      
+
       circle.yellow.reveal(x="c.at(0.2)" name="d1" target="arc" when="next-2" animation="pop")
       circle.yellow.reveal(x="c.at(0.4)" name="d2" target="arc" when="next-2" animation="pop")
       path.yellow.thick.reveal(x="arc(x,d1,pi/2.5)" label="Arc" target="arc" when="next-2" animation="draw")
@@ -790,21 +794,21 @@ definitions for now – you can always use the
     // https://www.mathopenref.com/consttangent.html
 
     // __[CC] Construct a tangent line from a point outside a given circle to the circle.__
-    // 
+    //
     // Point of Tangency: The point where a tangent line touches the circle.
-    // 
+    //
     // The tangent line and the radius drawn to the point of tangency have a unique
     // relationship. Let’s investigate it here.
-    // 
+    //
     // _Tangent to a Circle Theorem_: A line is tangent to a circle if and only if the
     // line is perpendicular to the radius drawn to the point of tangency.
-    // 
+    //
     // To prove this theorem, the easiest way to do so is indirectly (proof by
     // contradiction). Also, notice that this theorem uses the words “if and only if,”
     // making it a biconditional statement. Therefore, the converse of this theorem is
     // also true. Now let’s look at two tangent segments, drawn from the same external
     // point. If we were to measure these two segments, we would find that they are equal.
-    // 
+    //
     // _Two Tangents Theorem_: If two tangent segments are drawn from the same external
     // point, then the segments are equal.
     //
@@ -822,10 +826,10 @@ definitions for now – you can always use the
     // A chord is a line segment whose endpoints are on a circle. A diameter is the
     // longest chord in a circle. There are several theorems that explore the
     // properties of chords.
-    // 
+    //
     // Chord Theorem #1: In the same circle or congruent circles, minor arcs are
     // congruent if and only if their corresponding chords are congruent.
-    // 
+    //
     // Notice the “if and only if” in the middle of the theorem. This means that Chord
     // Theorem #1 is a biconditional statement. Taking this theorem one step further,
     // any time two central angles are congruent, the chords and arcs from the
@@ -833,30 +837,30 @@ definitions for now – you can always use the
     // these pictures, BE≅CD and BEˆ≅CDˆ. In the second picture, we have △BAE≅△CAD
     // because the central angles are congruent and BA≅AC≅AD≅AE because they are all
     // radii (SAS). By CPCTC, BE≅CD.
-    // 
+    //
     // Investigation: Perpendicular Bisector of a Chord
-    // 1. Draw a circle. Label the center A. 
+    // 1. Draw a circle. Label the center A.
     // 2. Draw a chord in ⨀A. Label it BC.
-    // 3. Find the midpoint of BC by using a ruler. Label it D. 
-    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC? 
-    // 
+    // 3. Find the midpoint of BC by using a ruler. Label it D.
+    // 4. Connect A and D to form a diameter. How does AD relate to the chord, BC?
+    //
     // Chord Theorem #2: The perpendicular bisector of a chord is also a diameter.
     // In the picture to the left, AD⊥BC and BD≅DC. From this theorem, we also notice
     // that AD also bisects the corresponding arc at E, so BEˆ≅ECˆ.
-    // 
+    //
     // Chord Theorem #3: If a diameter is perpendicular to a chord, then the diameter
     // bisects the chord and its corresponding arc.
-    // 
+    //
     // Investigation: Properties of Congruent Chords
     // 1. Draw a circle with a radius of 2 inches and two chords that are both 3
-    //    inches. Label as in the picture to the right. This diagram is drawn to scale. 
+    //    inches. Label as in the picture to the right. This diagram is drawn to scale.
     // 2. From the center, draw the perpendicular segment to AB and CD.
     // 3. Erase the arc marks and lines beyond the points of intersection, leaving FE
-    //    and E. Find the measure of these segments. What do you notice? 
-    // 
+    //    and E. Find the measure of these segments. What do you notice?
+    //
     // Chord Theorem #4: In the same circle or congruent circles, two chords are
     // congruent if and only if they are equidistant from the center.
-    // 
+    //
     // Recall that two lines are equidistant from the same point if and only if the
     // shortest distance from the point to the line is congruent. The shortest distance
     // from any point to a line is the perpendicular line between them. In this
@@ -898,7 +902,7 @@ knowledge about arcs and sectors of a circle.
       path(x="circle(c,100)" name="circ")
       circle.move(cx=240 cy=140 name="a" project="circ" label="A")
       circle.move(cx=85 cy=60 name="b" project="circ" label="B")
-      
+
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sector" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Arc" target="arc")
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
@@ -952,11 +956,11 @@ We can express this relationship in an equation:
       path(x="circle(c,100)" name="circ")
       circle.move(cx=240 cy=140 name="a" project="circ")
       circle.move(cx=85 cy=60 name="b" project="circ")
-      
+
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sector" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Arc" target="arc")
       path.fill.blue(x="angle(b,c,a)" target="angle")
-      
+
       path.fill.orange.transparent(x="circ" target="area")
       path.thick.purple.transparent(x="circ" target="circ")
       path.teal.fill.transparent(x="circle(c,32)" target="fangle")
@@ -1103,22 +1107,22 @@ radius of Earth is
         defs: radialGradient#grad1(cx=200 cy=200 r=200 gradientUnits="userSpaceOnUse")
           stop(offset=0 stop-color="#63a3ff")
           stop(offset=1 stop-color="#0f82f2")
-      
+
         circle(x="point(150,250)" name="c" hidden)
         circle(x="point(150,120)" name="a" hidden)
         circle.move.pulsate(cx=80 cy=140 name="b" project="arc(c,point(64,155),1.47)")
         circle(x="c.add(b.subtract(c).scale(1.465))" name="d" hidden)
-    
+
         path.shadow(x="triangle(c,d,point(d.x,c.y))")
         path.earth(d="M153,120,152,150h-4l-.95-30a130,130,0,1,0,5.9,0Z" fill="url(#grad1)")
         path.earth-cover.fill(x="circle(c,130)")
-        
+
         path.red.thick.reveal(when="next-0" animation="draw" x="arc(c,b,angle(b,c,a).rad).minor" target="arc")
         path.fill.teal.reveal(when="next-0" x="angle(c,d,point(d.x,c.y)).sup" target="angle1")
         path.fill.purple.reveal(when="next-0" x="angle(b,c,a).sup" name="ang" target="angle2")
         path.thin.white.reveal(when="next-0" animation="draw" x="segment(c,b)")
         path.blue.transparent(x="circle(c,130)" target="circ")
-        
+
         image.obelisk.var(xlink:href="images/obelisk.svg" height=60 width=8 style="transform: translate(${b.x-4}px, ${b.y-60}px) rotate(-${angle(b,c,a).rad}rad)")
 
 :::
@@ -1333,13 +1337,13 @@ some 3D solids that are based on circles:
     x-solid(size=220)
 
 {.text-center} A [__cylinder__](gloss:cylinder) consists of two congruent,
-parallel circles joined by a curved surface. 
+parallel circles joined by a curved surface.
 
 ::: column(width=220)
 
     x-solid(size=220)
 
-{.text-center} A [__cone__](gloss:cone) has a circular base that is joined to 
+{.text-center} A [__cone__](gloss:cone) has a circular base that is joined to
 a single point (called the vertex).
 
 ::: column(width=220)
@@ -1810,7 +1814,7 @@ shapes at a specific height above the base:
       circle(x="point(10,10)" name="a2" hidden)
       circle(x="point(210,10)" name="b2" hidden)
       path(x="polygon(a2,b2,point(210,110),point(10,110))")
-      
+
       circle(x="point(110,110)" name="c2")
       circle(x="c2.shift(0,-100*h)" name="h2")
       circle(x="h2.shift(-100*h,0)" name="x2")
@@ -2003,18 +2007,18 @@ faces increases, the polyhedron starts to look more and more like a sphere.
     // If we connect the small polygons to the center of the sphere, we get
     // lots of small pyramids pointing inwards. The diagram shows one of these pyramids
     // in red. The height of each pyramid is the [[radius|diameter]] of the sphere.
-    
+
     // Here is a
     // volume = lots of cones = 1/3 * radius * lots of bases = 1/3 * radius * surface area
-    
+
     // And therefore,
-    // surface area = 3 * volume / radius = 
-    
+    // surface area = 3 * volume / radius =
+
     // In other words, the surface area of a sphere with radius _r_ is `S = 4 π r^2`.
 
     // ---
     // > id: earth-surface
-    // 
+    //
     // surface of earth
 
 
@@ -2220,7 +2224,7 @@ up as they get closer to the sun, and slow down as they move further away.
 A few decades later, [Isaac Newton](bio:newton) was able to prove Kepler’s
 observations, using his newly developed laws of [__gravity__](gloss:gravity).
 Newton realised that there is a force between any two masses in the universe –
-similar to the attraction between two magnets. 
+similar to the attraction between two magnets.
 
 Gravity is what makes everything fall to the ground and gravity is also what
 makes the planets move around the sun. It is only the great speed at which

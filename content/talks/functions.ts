@@ -7,7 +7,8 @@
 import {nearlyEquals} from '@mathigon/fermat';
 import {Circle, intersections, Point, Polygon} from '@mathigon/euclid';
 import {$html, $N, slide, SVGParentView, SVGView} from '@mathigon/boost';
-import {Step} from '../shared/types';
+import {Step} from '@mathigon/studio';
+import '../shared/components/solved/solved';
 
 
 // MoMath Workshop
