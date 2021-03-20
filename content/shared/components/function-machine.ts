@@ -4,10 +4,9 @@
 // =============================================================================
 
 
-import {$N, CustomElementView, ElementView, register, SVGParentView, SVGView, Draggable, animate, ease} from '@mathigon/boost';
+import {$N, CustomElementView, register, SVGParentView, SVGView, Draggable, animate, ease} from '@mathigon/boost';
 import {lerp, clamp} from '@mathigon/fermat';
 import { Step } from '../types';
-import template from './function-machine.pug';
 
 type Mapping = {
   inputY: number,
