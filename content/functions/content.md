@@ -907,19 +907,47 @@ About [[13.5±1]] seconds later, Rogers overtakes [[Tracey | Rogers | Boufaarira
 
 ---
 
-The slopes of each function tell us each runner’s [[speed | distance | cadence]]. Rogers is running at about [[7.1+-0.2]] meters per second.
+> id: running-slope-rogers
 
-    // NOTES
-    // We looked at counting slope above. This is a review of calculating slope. They need to pull the values off of the graph.
-    // Algebra Flow
+The slope of each function tells us that runner’s [[speed | distance | time]]. Let's focus on Rogers:
+
+    x-coordinate-system#rogers-slope-graph(width=400 height=200 x-axis="80,130,10" y-axis="550,800,50" axis-names="Time,Distance" fn="7.10179x-53.6354")
+
+Remember that slope (m) is change in y over change in x. Written out, it looks like this:
 
 {.text-center} `m=(y_2 - y_1)/(x_2 - x_1)`  
-`m= (y_2 - 590)/(x_2 - 90.63)`  
-`m= (800-590)/(120.2-90.63)`  
-`m= (210)/(29.57)`  
-`m=7.1`
 
-Rogers' speed is [[0.6+-0.2]] meters per second faster than Boufaarirane and [[1.4+-0.2]] meters per second faster than Tracey.
+Let's calculate our change in x first. We'll use the period from `t=90` to `t=100`. This is a period of [[10]] seconds, which means:
+
+{.text-center} `x_2-x_1=`[[10]]
+
+---
+
+Now we need to calculate `y_2-y_1`. We know that `y_1=u(90)`, and `y_2=`u([[100]]).
+
+Using the graph above, we can see that `u(100)=`[[656.5]] and `u(90)=`[[585.5]]. So now we can calculate:
+
+{.text-center} `y_2-y_1=u(100)-u(90)=`[[71]]
+
+---
+
+Now we have everything we need to finish our equation:
+
+{.text-center} `m=(y_2 - y_1)/(x_2 - x_1)=`[[7.1]] 
+
+---
+
+> id: running-slope-boufaarirane
+
+Let's follow the same process for Boufaarirane—but this time, you're on your own!
+
+    x-coordinate-system#boufaarirane-slope-graph(width=400 height=200 x-axis="80,130,10" y-axis="550,800,50" axis-names="Time,Distance" fn="5.709x+80.55")
+
+It's simple, just fill in the formula:
+
+{.text-center} `m=(y_2 - y_1)/(x_2 - x_1)=`[[5.71±0.2]]
+
+This means Rogers could overtake Boufaarirane in the last 200 meters of the race because she was running [[1.4±0.2]] meters per second faster.
 
 ---
 
