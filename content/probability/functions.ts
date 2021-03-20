@@ -9,6 +9,7 @@ import {lerp, Random} from '@mathigon/fermat';
 import {$, $N, animate, ElementView} from '@mathigon/boost';
 import {Step} from '../shared/types';
 import '../shared/components/buckets';
+import { power } from '@mathigon/fermat/src/regression';
 
 
 // -----------------------------------------------------------------------------
@@ -21,7 +22,7 @@ function table(data: any[][]) {
   return `<table>${rows}</table>`;
 }
 
-/** Converts a 2-dimensional data array into an HTML <table> string with a given width and ID. */
+/** Converts a 2-dimensional data array into an HTML <table> string with a given width, height, and ID. */
 function tableID(data: any[][], id: String, width: number) {
   const rows = data.map(tr => '<tr>' + tr.map(td => `<td>${td}</td>`)
       .join('') + '</tr>').join('');
@@ -277,10 +278,11 @@ export function galtonBoard($step: Step) {
     dropped = 0;
   });
 
-  $step.model.ballTable = () => {
+  $step.model.ballTable = (rows: number, p: number) => {
     const row: String[] = [];
-    for (let i = 0; i < rowCnt + 1; ++i) {
-      row.push(`<div class="pBox"><div class="ballCount" id="col${i}"></div></div>`)
+    for (let i = 0; i < rows + 1; ++i) {
+      let val = 100.0 * pascal[rows][i] * Math.pow(p, i) * Math.pow(1 - p, rows - i);
+      row.push(`<div class="pBox"><div class="ballCount" id="col${i}"></div><div class="ballProb" style="bottom: ${val}%"></div></div>`)
     }
     return tableID([row], "ballTable", (rowCnt + 1) * 40);
   };
