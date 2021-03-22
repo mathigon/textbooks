@@ -1105,7 +1105,7 @@ Opposite faces of a fair die always add up to 7.
 
 ---
 
-Now that we can identify opposite faces of a die using nets, let's try another puzzle: 
+Now that we can identify opposite faces of a die using nets, let's try another puzzle:
 
 ::: column.fit
 
