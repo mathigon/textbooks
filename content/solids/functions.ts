@@ -353,16 +353,18 @@ export function dieFaces($step: Step) {
     {pos: [3, 1], opposite: 2},
     {pos: [1, 2], opposite: 0}
   ];
+  const facesPlaced: {[k: number]: number} = {};
   const sideSize = 100;
   const $svg = $step.$('svg') as SVGParentView;
   const $rootGroup = $N('g', {}, $svg) as SVGView;
-  const $targets = netPositions.map(netPosition => {
+  const $targets = netPositions.map((netPosition, index) => {
     const [x, y] = netPosition.pos;
     const $sideGroup = $N('g', {}, $rootGroup) as SVGView;
     const shape = new Rectangle(new Point(0, 0), sideSize, sideSize);
     const $target = $N('path', {}, $sideGroup) as SVGView;
     $target.draw(shape);
     $target.addClass('target');
+    $target.setAttr('side-index', index);
     $sideGroup.setAttr('transform', `translate(${x * sideSize} ${y * sideSize})`);
     return $target;
   });
@@ -374,9 +376,9 @@ export function dieFaces($step: Step) {
     $face.append($die);
   }
   const faces = $faces.map($face => new Draggable($face, $facesArea, {$targets, useTransform: true, resetOnMiss: true}));
-  for (const [_index, face] of faces.entries()) {
+  for (const [index, face] of faces.entries()) {
     face.on('enter-target', ($target: ElementView) => {
-      if (!$target.hasClass('placed')) $target.addClass('over');
+      $target.addClass('over');
     });
     face.on('exit-target', ($target: ElementView) => {
       $target.removeClass('over');
@@ -385,14 +387,38 @@ export function dieFaces($step: Step) {
     $f.setAttr('width', sideSize);
     $f.setAttr('height', sideSize);
     face.on('dropped-target', ($target: ElementView) => {
-      if (!$target.hasClass('placed')) {
-        $target.removeClass('over');
+      $target.removeClass('over');
+      const faceValue = index + 1;
+      const targetIndex = parseInt($target.attr('side-index'));
+      const oppositeIndex = netPositions[targetIndex].opposite;
+      if (
+        (
+          facesPlaced[oppositeIndex] == undefined &&
+          !placementsHave(facesPlaced, 7 - faceValue)
+        ) ||
+        facesPlaced[oppositeIndex] + faceValue == 7
+      ) {
         $target.addClass('placed');
         $target.parent?.prepend($f);
+        facesPlaced[targetIndex] = faceValue;
         face.$el.remove();
-      } else face.resetPosition();
+        $step.addHint('correct');
+        for (const f of faces) {
+          f.removeTarget($target);
+        }
+      } else {
+        $step.addHint('incorrect');
+        face.resetPosition();
+      }
     });
   }
+}
+
+function placementsHave(p: Record<number, number>, v: number) {
+  for (const k in p) {
+    if (p[k] == v) return true;
+  }
+  return false;
 }
 
 export function soccerNet($step: Step) {
