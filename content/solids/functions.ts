@@ -21,7 +21,7 @@ import {Point, Rectangle} from '@mathigon/euclid';
 import {layers, templeParts} from './data/voxel-data';
 import {pyramid1, triangularPrism, truncatedIcosahedron} from './data/net-data';
 import {$N, ElementView, SVGParentView, SVGView} from '@mathigon/boost';
-import {Droppable} from '../shared/components/droppable';
+import {Draggable} from '../shared/components/droppable';
 
 export function polyParts($step: Step) {
   // TODO Update .addPoint/Line/Label to accept THREE Vector3s, to avoid all these .toArray() functions.
@@ -373,7 +373,7 @@ export function dieFaces($step: Step) {
     const $die = makeFaceSVG(index + 1);
     $face.append($die);
   }
-  const faces = $faces.map($face => new Droppable($face, $facesArea, {$targets, useTransform: true}));
+  const faces = $faces.map($face => new Draggable($face, $facesArea, {$targets, useTransform: true, resetOnMiss: true}));
   for (const [_index, face] of faces.entries()) {
     face.on('enter-target', ($target: ElementView) => {
       if (!$target.hasClass('placed')) $target.addClass('over');
@@ -390,7 +390,7 @@ export function dieFaces($step: Step) {
         $target.addClass('placed');
         $target.parent?.prepend($f);
         face.$el.remove();
-      }
+      } else face.resetPosition();
     });
   }
 }
