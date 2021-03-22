@@ -705,8 +705,8 @@ of any other palindromes?
 If we ignore spaces and punctuation, the short sentences below also have
 reflectional symmetry. Can you come up with your own?
 
-{.text-center} Never odd or even.
-A [[nut]] for a jar of tuna.
+{.text-center} Never odd or even.<br>
+A [[nut]] for a jar of tuna.<br>
 Yo, banana [[boy]]!
 
 {.reveal(when="blank-0 blank-1")} But Palindromes are not just fun, they
@@ -909,13 +909,13 @@ patterns. Can you complete these observations?
 ---
 > id: group-axioms
 
-You might have realised already that adding __{.orange}symmetries__ is actually
-very similar to adding __{.green}integers__:
+You might have realised already that adding __{.m-orange}symmetries__ is actually
+very similar to adding __{.m-green}integers__:
 
     ol.proof
 
       li.r
-        | Adding two #[strong.orange symmetries]/#[strong.green integers] always gives another #[strong.orange symmetry]/#[strong.green integer]:
+        | Adding two #[strong.m-orange symmetries]/#[strong.m-green integers] always gives another #[strong.m-orange symmetry]/#[strong.m-green integer]:
         .text-center.axiom
           img.cube(src="images/cube-2.svg" width=32 height=32)
           mo +
@@ -931,7 +931,7 @@ very similar to adding __{.green}integers__:
         .next-step Continue
 
       li.r.reveal(when="next-0")
-        span.md Adding #[strong.orange symmetries]/#[strong.green integers] is [associative](gloss:associative):
+        span.md Adding #[strong.m-orange symmetries]/#[strong.m-green integers] is [associative](gloss:associative):
         .text-center.axiom
           mfenced
             img.cube(src="images/cube-1.svg" width=32 height=32)
@@ -957,7 +957,7 @@ very similar to adding __{.green}integers__:
         .next-step Continue
 
       li.r.reveal(when="next-1")
-        | Every #[strong.orange symmetry]/#[strong.green integer] has an #[strong inverse], another #[strong.orange symmetry]/#[strong.green integer] which, when added, gives the identity:
+        | Every #[strong.m-orange symmetry]/#[strong.m-green integer] has an #[strong inverse], another #[strong.m-orange symmetry]/#[strong.m-green integer] which, when added, gives the identity:
         .text-center.axiom
           img.cube(src="images/cube-1.svg" width=32 height=32)
           mo +
@@ -976,9 +976,9 @@ very similar to adding __{.green}integers__:
 > id: groups-1
 
 In mathematics, any collection that has these properties is called a
-[__group__](gloss:group). Some groups (like the __{.orange}symmetries__ of a
+[__group__](gloss:group). Some groups (like the __{.m-orange}symmetries__ of a
 square) only have a finite number of elements. Others (like the
-__{.green}integers__) are infinite.
+__{.m-green}integers__) are infinite.
 
 In this example, we started with the eight symmetries of the square. In fact,
 every geometric shape has its own __symmetry group__. They all have different

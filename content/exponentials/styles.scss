@@ -24,7 +24,7 @@ x-atom canvas { width: 100%; height: auto; }
   margin: 0 auto;
   transform-origin: center bottom;
   transition: opacity .2s, transform 1s;
-  box-shadow: 0 0 12px 1px fade($yellow, 60%);
+  box-shadow: 0 0 12px 1px rgba($yellow, 60%);
   border-radius: 2px;
 
   &.c1, &.c2, &.c3, &.c4 { opacity: 0; transform: scaleY(0); }

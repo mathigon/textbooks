@@ -16,7 +16,7 @@ x-solved {
   box-sizing: border-box;
   box-shadow: 0 5px 20px rgba(black, 20%);
 
-  .sketch { margin: 0 auto; fill: white; display: block; opacity: 0.8; }
+  x-icon.sketch { margin: 0 auto; fill: white; display: block; opacity: 0.8; }
 
   .message {
     text-align: center;
@@ -33,7 +33,7 @@ x-solved {
     transition: transform .2s;
     cursor: pointer;
     z-index: 10;
-    .icon { fill: rgba(white, 40%); display: block; transition: fill .2s; }
+    x-icon { fill: rgba(white, 40%); display: block; transition: fill .2s; }
     &:hover { transform: scale(1.4); }
     &:hover .icon { fill: white;  }
   }

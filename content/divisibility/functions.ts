@@ -9,6 +9,8 @@ import {isPrime, lcm, numberFormat, Random} from '@mathigon/fermat';
 import {delay, isOneOf, list, sortBy, total} from '@mathigon/core';
 import {Slideshow, Step} from '@mathigon/studio';
 import {Gameplay} from '../shared/components/gameplay/gameplay';
+import '../shared/components/gameplay/gameplay';
+import '../shared/components/solved/solved';
 
 
 // -----------------------------------------------------------------------------

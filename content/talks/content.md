@@ -240,7 +240,7 @@ bounded (it doesn't diverge).
             span.vdots …
             strong.var.m-blue(:show="converges" data-display="inline") Bounded!
             strong.var(:show="!converges" data-display="inline") Diverges!
-    x-slideshow(hidden)
+    x-slideshow(hidden): .legend-box: div
 
 ---
 > id: mandel-paint

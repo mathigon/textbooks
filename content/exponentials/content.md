@@ -46,24 +46,24 @@ proportion of carbon atoms contain additional neutrons. These different
 
     x-atom(protons=6 neutrons=6 size=150)
 
-{.text-center} __Carbon-12__
-6 protons, 6 neutrons
+{.text-center} __Carbon-12__<br>
+6 protons, 6 neutrons<br>
 98.8%
 
 ::: column(width=170)
 
     x-atom(protons=6 neutrons=7 size=150)
 
-{.text-center} __Carbon-13__
-6 protons, 7 neutrons
+{.text-center} __Carbon-13__<br>
+6 protons, 7 neutrons<br>
 1.1%
 
 ::: column(width=170)
 
     x-atom(protons=6 neutrons=8 size=150)
 
-{.text-center} __Carbon-14__
-6 protons, 8 neutrons
+{.text-center} __Carbon-14__<br>
+6 protons, 8 neutrons<br>
 0.1%
 
 :::

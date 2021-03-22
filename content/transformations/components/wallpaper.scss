@@ -33,7 +33,7 @@ x-wallpaper {
     position: absolute;
     bottom: -1px;
     right: -1px;
-    background: fade($grey-background, 90%);
+    background: rgba($grey-background, 90%);
     border-top-left-radius: 12px;
     padding: 4px 0;
   }

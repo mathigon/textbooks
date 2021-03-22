@@ -72,7 +72,7 @@ x-menger-sponge canvas { width: 100%; height: auto; }
     line-height: 20px;
     border-radius: 3px;
     transition: color .4s, background .4s;
-    box-shadow: inset 0 -1px fade(black, 30%);
+    box-shadow: inset 0 -1px rgba(black, 30%);
     padding-bottom: 1px;
     &.red { color: white; background: $red; cursor: default; }
   }

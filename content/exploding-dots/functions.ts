@@ -27,7 +27,7 @@ export function race($step: Step) {
 
     if (!hasShownGesture && !$step.scores.has('blank-0')) {
       setTimeout(() => {
-        $N('x-gesture', {target: 'x-blank', start: true}, $step);
+        $N('x-gesture', {target: 'x-blank-mc', start: true}, $step);
       }, 1000);
       hasShownGesture = true;
     }

@@ -74,7 +74,7 @@
   }
 
   .triple circle.move { fill: $green; }
-  .triple .thick { stroke: $green; fill: fade($green, 20%); }
+  .triple .thick { stroke: $green; fill: rgba($green, 20%); }
   .triple .label { background: $green; }
 }
 

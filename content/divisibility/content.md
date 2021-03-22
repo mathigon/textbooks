@@ -22,14 +22,14 @@ express the answer as a decimal number (5.66…).
         include svg/divisibility-2.svg
         p.caption 10 is not divisible by 4
 
-If you can divide a number __{.red}A__ by a number __{.blue}B__, without
-remainder, we say that __{.blue}B__ is a __factor__ (or __divisor__) of
-__{.red}A__, and that __{.red}A__ is a __multiple__ of __{.blue}B__. We often
-write __{.blue}B__|__{.red}A__, where the vertical bar simply means _“divides”_.
+If you can divide a number __{.m-red}A__ by a number __{.m-blue}B__, without
+remainder, we say that __{.m-blue}B__ is a __factor__ (or __divisor__) of
+__{.m-red}A__, and that __{.m-red}A__ is a __multiple__ of __{.m-blue}B__. We often
+write __{.m-blue}B__|__{.m-red}A__, where the vertical bar simply means _“divides”_.
 
-For example, __{.green}7__ × 3 = __{.orange}21__, so __{.green}7__ is a
-[[factor|multiple]] of __{.orange}21__. Similarly, __{.orange}21__ is a [[multiple|factor]]
-of __{.green}7__, and we can write __{.green}7__|__{.orange}21__.
+For example, __{.m-green}7__ × 3 = __{.m-orange}21__, so __{.m-green}7__ is a
+[[factor|multiple]] of __{.m-orange}21__. Similarly, __{.m-orange}21__ is a [[multiple|factor]]
+of __{.m-green}7__, and we can write __{.m-green}7__|__{.m-orange}21__.
 
 ---
 > id: divisibility-game
@@ -709,7 +709,7 @@ the prime factors of __{.m-yellow}a__ (plus some more):
       tr
         td.text-right: .number-ball.yellow 12
         td: .divides
-        td.text-left: .number-ball.blue 60
+        td(style="text-align: left"): .number-ball.blue 60
       tr
         td
           .number-ball.l-yellow 2

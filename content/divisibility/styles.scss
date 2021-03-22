@@ -6,6 +6,7 @@
 
 @import "../../node_modules/@mathigon/studio/frontend/styles/variables";
 @import "../shared/components/gameplay/gameplay";
+@import "../shared/components/solved/solved";
 
 
 .td-border-right { border-right: 1px solid $grey; }
@@ -129,14 +130,14 @@
   &.green { background: $green; }
   &.yellow { background: $yellow; }
 
-  &.l-blue { background: fade($blue, 40%); }
-  &.l-green { background: fade($green, 40%); }
-  &.l-yellow { background: fade($yellow, 40%); }
-  &.l-blue-green { background: linear-gradient(to bottom right, fade($blue, 40%) 50%, fade($green, 40%) 50%); }
+  &.l-blue { background: rgba($blue, 40%); }
+  &.l-green { background: rgba($green, 40%); }
+  &.l-yellow { background: rgba($yellow, 40%); }
+  &.l-blue-green { background: linear-gradient(to bottom right, rgba($blue, 40%) 50%, rgba($green, 40%) 50%); }
 
   &.small { padding: 0; width: 24px; line-height: 24px; font-size: 1em; margin: -6px 1px; }
 
-  &.blue.cross { position: relative; background: fade($blue, 30%); }
+  &.blue.cross { position: relative; background: rgba($blue, 30%); }
   &.cross:after {
     content: "";
     width: 150%;

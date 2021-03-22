@@ -7,7 +7,6 @@
 @import "../../node_modules/@mathigon/studio/frontend/styles/variables";
 @import "../shared/components/webgl/solid";
 @import "../shared/components/scale-box/scale-box";
-@import "../shared/components/play-btn/play-btn";
 @import "./components/pi-scroll";
 
 
@@ -36,7 +35,7 @@
 #max-area x-select.segmented > * { width: 80px; font-size: 16px; }
 
 #max-area  {
-  path { fill: fade($blue, 10%); stroke: $green; stroke-width: 8px; stroke-linejoin: round; }
+  path { fill: rgba($blue, 10%); stroke: $green; stroke-width: 8px; stroke-linejoin: round; }
   .var { color: $blue; }
 }
 
@@ -254,7 +253,7 @@ x-pi-scroll {
 
 x-geopad.geo-sketch {
   .labels text { stroke: none !important; }
-  ellipse { stroke: #96969e; stroke-width: 2px; fill: fade($yellow, 30%); transition: opacity .2s; }
+  ellipse { stroke: #96969e; stroke-width: 2px; fill: rgba($yellow, 30%); transition: opacity .2s; }
   .light.green, .light.teal { opacity: 0.3; }
   .light.focus { opacity: 0.6; }
   .focus & ellipse { opacity: 0.3; }
@@ -274,7 +273,7 @@ x-geopad.geo-sketch {
   .outline { fill: mix($blue, $grey-background); }
   .grid { fill: none; stroke: rgba(white, 30%); stroke-width: .5px; }
   .land { fill: mix($green, $grey-background); stroke: mix($green, black, 70%); stroke-width: .6px; }
-  .map-select { stroke: $red; stroke-width: 2px; fill: fade($red, 40%); }
+  .map-select { stroke: $red; stroke-width: 2px; fill: rgba($red, 40%); }
 }
 
 

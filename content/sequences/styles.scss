@@ -295,7 +295,7 @@ x-coordinate-system + .caption { margin-top: -1em; }
   .value { height: 34px; text-align: center; font-size: 20px; color: rgba(black, 80%); font-weight: 600; }
   svg { margin: 0 auto; fill: mix($yellow, white); }
   x-slider { margin: 12px auto 40px; }
-  x-slider .bar { background: fade($grey, 60%); }
+  x-slider .bar { background: rgba($grey, 60%); }
 
   @media screen and (max-width: 440px) { background-size: 170vw 125vw; }
 }
@@ -431,11 +431,11 @@ x-coordinate-system + .caption { margin-top: -1em; }
   .green { color: $green; }
 
   .body { padding: 0; transition: background .6s; text-align: center; }
-  .body.s-yellow { background: fade($yellow, 20%); }
-  .body.s-orange { background: fade($orange, 20%); }
-  .body.s-red { background: fade($red, 20%); }
-  .body.s-purple { background: fade($purple, 20%); }
-  .body.s-blue { background: fade($blue, 20%); }
-  .body.s-teal { background: fade($teal, 20%); }
-  .body.s-green { background: fade($green, 20%); }
+  .body.s-yellow { background: rgba($yellow, 20%); }
+  .body.s-orange { background: rgba($orange, 20%); }
+  .body.s-red { background: rgba($red, 20%); }
+  .body.s-purple { background: rgba($purple, 20%); }
+  .body.s-blue { background: rgba($blue, 20%); }
+  .body.s-teal { background: rgba($teal, 20%); }
+  .body.s-green { background: rgba($green, 20%); }
 }

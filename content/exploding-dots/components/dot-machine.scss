@@ -29,14 +29,14 @@ x-dot-machine {
     margin: -8px;
     box-sizing: border-box;
 
-    // background-image: radial-gradient(circle, transparent, fade(black, 20%));
+    // background-image: radial-gradient(circle, transparent, rgba(black, 20%));
     // background-position: -2px -2px;
 
     &.dark { background-color: mix($blue, $green); }
     &.light { background-color: mix($blue, $red); }
 
-    &.glowing { background-color: $yellow; box-shadow: 0 0 0 4px fade($yellow, 30%); }
-    &.warning { background-color: $red; box-shadow: 0 0 0 4px fade($red, 30%); }
+    &.glowing { background-color: $yellow; box-shadow: 0 0 0 4px rgba($yellow, 30%); }
+    &.warning { background-color: $red; box-shadow: 0 0 0 4px rgba($red, 30%); }
 
     &.anti { background-color: $background; border: 2px solid $blue; }
     &.anti.warning { border-color: $red; }

@@ -1440,7 +1440,7 @@ has 60 triangular faces. It turns out, however, that _all_ polyhedra have one
 important property in common:
 
 ::: .theorem
-__Euler’s Polyhedron Formula__
+__Euler’s Polyhedron Formula__<br>
 In every polyhedron, the number of faces (_F_) plus the number of vertices (_V_)
 is two more than the number of edges (_E_). In other words,
 
@@ -1716,8 +1716,8 @@ __Tetrahedron__
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
-_{span.dual}[[4]] Faces_
-_{span.dual}[[4]] Vertices_
+_{span.dual}[[4]] Faces_<br>
+_{span.dual}[[4]] Vertices_<br>
 _{span.dual}[[6]] Edges_
 
 ::: column.grow.text-center(width=120)
@@ -1725,8 +1725,8 @@ __Cube__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
-_{span.dual(target="dual1")}[[6]] Faces_
-_{span.dual(target="dual1")}[[8]] Vertices_
+_{span.dual(target="dual1")}[[6]] Faces_<br>
+_{span.dual(target="dual1")}[[8]] Vertices_<br>
 _{span.dual}[[12]] Edges_
 
 ::: column.grow.text-center(width=120)
@@ -1734,8 +1734,8 @@ __Octahedron__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
-_{span.dual(target="dual1")}[[8]] Faces_
-_{span.dual(target="dual1")}[[6]] Vertices_
+_{span.dual(target="dual1")}[[8]] Faces_<br>
+_{span.dual(target="dual1")}[[6]] Vertices_<br>
 _{span.dual}[[12]] Edges_
 
 ::: column.grow.text-center(width=120)
@@ -1743,8 +1743,8 @@ __Dodecahedron__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
-_{span.dual(target="dual2")}[[12]] Faces_
-_{span.dual(target="dual2")}20 Vertices_
+_{span.dual(target="dual2")}[[12]] Faces_<br>
+_{span.dual(target="dual2")}20 Vertices_<br>
 _{span.dual}30 Edges_
 
 ::: column.grow.text-center(width=120)
@@ -1752,8 +1752,8 @@ __Icosahedron__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
-_{span.dual(target="dual2")}[[20]] Faces_
-_{span.dual(target="dual2")}12 Vertices_
+_{span.dual(target="dual2")}[[20]] Faces_<br>
+_{span.dual(target="dual2")}12 Vertices_<br>
 _{span.dual}30 Edges_
 :::
 
@@ -1814,67 +1814,67 @@ of Syracuse](bio:archimedes), and there are 13 of them:
 ::: column(width=170 parent="padded-thin")
     x-polyhedron(size=170 shape="TruncatedTetrahedron")
 
-{.caption} __Truncated Tetrahedron__
+{.caption} __Truncated Tetrahedron__<br>
 8 faces, 12 vertices, 18 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Cuboctahedron")
 
-{.caption} __Cuboctahedron__
+{.caption} __Cuboctahedron__<br>
 14 faces, 12 vertices, 24 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCube")
 
-{.caption} __Truncated Cube__
+{.caption} __Truncated Cube__<br>
 14 faces, 24 vertices, 36 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedOctahedron")
 
-{.caption} __Truncated Octahedron__
+{.caption} __Truncated Octahedron__<br>
 14 faces, 24 vertices, 36 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicuboctahedron")
 
-{.caption} __Rhombicuboctahedron__
+{.caption} __Rhombicuboctahedron__<br>
 26 faces, 24 vertices, 48 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __Truncated Cuboctahedron__
+{.caption} __Truncated Cuboctahedron__<br>
 26 faces, 48 vertices, 72 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubCube")
 
-{.caption} __Snub Cube__
+{.caption} __Snub Cube__<br>
 38 faces, 24 vertices, 60 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Icosidodecahedron")
 
-{.caption} __Icosidodecahedron__
+{.caption} __Icosidodecahedron__<br>
 32 faces, 30 vertices, 60 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedDodecahedron")
 
-{.caption} __Truncated Dodecahedron__
+{.caption} __Truncated Dodecahedron__<br>
 32 faces, 60 vertices, 90 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosahedron")
 
-{.caption} __Truncated Icosahedron__
+{.caption} __Truncated Icosahedron__<br>
 32 faces, 60 vertices, 90 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicosidodecahedron")
 
-{.caption} __Rhombicosidodecahedron__
+{.caption} __Rhombicosidodecahedron__<br>
 62 faces, 60 vertices, 120 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosidodecahedron")
 
-{.caption} __Truncated Icosidodecahedron__
+{.caption} __Truncated Icosidodecahedron__<br>
 62 faces, 120 vertices, 180 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubDodecahedron")
 
-{.caption} __Snub Dodecahedron__
+{.caption} __Snub Dodecahedron__<br>
 92 faces, 60 vertices, 150 edges
 :::
 

@@ -87,7 +87,7 @@ shorter rods, if their combined length is less than the length of the larger rod
 Let’s rewrite this observation in mathematical terms:
 
 ::: .theorem
-__The Triangle Inequality__
+__The Triangle Inequality__<br>
 The sum of the lengths of any two sides of a triangle must be greater than the
 length of the third.
 :::

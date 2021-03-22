@@ -8,18 +8,16 @@ import {Color, isOneOf, list, Obj, tabulate, wait} from '@mathigon/core';
 import {clamp, numberFormat, Random, round, roundTo, toWord} from '@mathigon/fermat';
 import {Angle, Point, Polygon, Rectangle, Sector} from '@mathigon/euclid';
 import {$N, animate, CanvasView, Draggable, ElementView, hover, InputView, slide, SVGParentView, SVGView} from '@mathigon/boost';
-import {Gesture, Select, Slider, Step} from '@mathigon/studio';
+import {Gesture, PlayBtn, Select, Slider, Step} from '@mathigon/studio';
 
 import {Burst} from '../shared/components/burst';
 import {ConicSection} from '../shared/components/webgl/conic-section';
 import {rotateDisk} from '../shared/components/disk';
 import {Solid} from '../shared/components/webgl/solid';
 import {loadD3} from './components/d3-geo';
-import {PlayBtn} from '../shared/components/play-btn/play-btn';
 import {EquationSystem, Geopad} from '../shared/types';
 import {PiScroll} from './components/pi-scroll';
 
-import '../shared/components/play-btn/play-btn';
 import '../shared/components/webgl/conic-section';
 import '../shared/components/scale-box/scale-box';
 import './components/pi-scroll';

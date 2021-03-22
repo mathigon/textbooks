@@ -167,7 +167,7 @@ We can classify triangles by the size of their angles:
       path.fill.red(x="angle(a1,b1,c1)")
       path(x="polygon(a1,b1,c1)")
 
-{.caption} A __right-angled triangle__
+{.caption} A __right-angled triangle__<br>
 has one [right angle](gloss:right-angle).
 ::: column(width=220)
 
@@ -178,7 +178,7 @@ has one [right angle](gloss:right-angle).
       path.fill.blue(x="angle(c2,b2,a2)")
       path(x="polygon(a2,b2,c2)")
 
-{.caption} An __obtuse triangle__
+{.caption} An __obtuse triangle__<br>
 has one [obtuse angle](gloss:obtuse-angle).
 ::: column(width=220)
 
@@ -191,7 +191,7 @@ has one [obtuse angle](gloss:obtuse-angle).
       path.fill.green(x="angle(c3,a3,b3)")
       path(x="polygon(a3,b3,c3)")
 
-{.caption} An __acute triangle__
+{.caption} An __acute triangle__<br>
 has [[three]] [acute angles](gloss:acute-angle).
 :::
 
@@ -545,7 +545,7 @@ scale factor of `1/2`._
 the midsegments of triangles:
 
 ::: .theorem.reveal(when="blank-1")
-__Midsegment Theorem__
+__Midsegment Theorem__<br>
 A midsegment of a triangle is parallel to its opposite side, and exactly half
 the length of that side.
 :::
@@ -810,7 +810,7 @@ mathematician [Pythagoras of Samos](bio:pythagoras).
 
 ::: .theorem
 ::: column.grow
-__Pythagoras’ Theorem__
+__Pythagoras’ Theorem__<br>
 In any right-angled triangle, the square of the length of the
 [__hypotenuse__](target:hypot) (the side that lies opposite the right angle) is
 equal to the sum of the squares of the other two sides. In other words,
@@ -1133,7 +1133,7 @@ lines, we get a [{.yellow}right-angled triangle](target:triangle).
 This method works for _any_ two points:
 
 ::: .theorem
-__The Distance Formula__
+__The Distance Formula__<br>
 If you are given two points with coordinates  (`x_1`,`y_1`) and (`x_2`,`y_2`),
 the distance between them is
 
@@ -1405,7 +1405,7 @@ results that work for all triangles
 
 ::: column.grow
 ::: .theorem
-__Sine Rule__
+__Sine Rule__<br>
 In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
 {.text-center} `(sin(A))/a = (sin(B))/b = (sin(C))/c`
@@ -1417,7 +1417,7 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
 ::: column.grow
 ::: .theorem
-__Cosine Rule__
+__Cosine Rule__<br>
 In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
 {.text-center} `c^2 = a^2 + b^2 - 2a b cos(C)`

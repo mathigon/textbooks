@@ -225,14 +225,14 @@ x-code-box .morse > span {
   .s-yellow & { background: $yellow; }
   .s-teal & { background: $teal; }
 
-  &.lb { background: fade($blue, 40%); }
-  &.lg { background: fade($green, 40%); }
-  &.ly { background: fade($yellow, 40%); }
-  &.lbg { background: linear-gradient(to bottom right, fade($blue, 40%) 50%, fade($green, 40%) 50%); }
+  &.lb { background: rgba($blue, 40%); }
+  &.lg { background: rgba($green, 40%); }
+  &.ly { background: rgba($yellow, 40%); }
+  &.lbg { background: linear-gradient(to bottom right, rgba($blue, 40%) 50%, rgba($green, 40%) 50%); }
 
   &.small { padding: 0; width: 24px; line-height: 24px; font-size: 1em; margin: -6px 1px; }
 
-  &.blue.cross { position: relative; background: fade($blue, 30%); }
+  &.blue.cross { position: relative; background: rgba($blue, 30%); }
   &.cross:after {
     content: "";
     width: 150%;
@@ -304,15 +304,15 @@ x-code-box .morse > span {
   &.green { color: white; background: $green; }
   &.yellow { color: white; background: $yellow; }
   &.purple {color: white; background: $purple}
-  &.l-purple-yellow { background: linear-gradient(to bottom right, fade($purple, 40%) 50%, fade($yellow, 40%) 50%); }
+  &.l-purple-yellow { background: linear-gradient(to bottom right, rgba($purple, 40%) 50%, rgba($yellow, 40%) 50%); }
   &.purple-yellow { color: white;
     background: linear-gradient(to bottom left,
-      fade($yellow, 40%) 10%,
-      fade($purple, 40%) 90%); } // i  have no idea how this works lol. oh well
+      rgba($yellow, 40%) 10%,
+      rgba($purple, 40%) 90%); } // i  have no idea how this works lol. oh well
   &.green-yellow { color: white;
     background: linear-gradient(to bottom left,
-      fade($yellow, 40%) 10%,
-      fade($green, 40%) 90%); } // i  have no idea how this works lol. oh well
+      rgba($yellow, 40%) 10%,
+      rgba($green, 40%) 90%); } // i  have no idea how this works lol. oh well
 
   #divisibility6 &.blue.yellow { background: linear-gradient(to bottom right, $blue 50%, $yellow 50%); }
   #divisibility6 &.blue.yellow.green { box-shadow: inset 0 0 0 30px $green; }

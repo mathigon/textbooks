@@ -574,12 +574,12 @@ kilometers, or Celsius and Fahrenheit:
 
 ::: column(width=180 parent="padded-thin")
 
-{.text-center} _{span.rotate.left}`=>`_
+{.text-center} _{span.rotate.left}`=>`_<br>
 __{.m-red} 1°__ _{span.space}=_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
 
 ::: column(width=180)
 
-{.text-center} _{span.rotate.right}`=>`_
+{.text-center} _{span.rotate.right}`=>`_<br>
 __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
 
 :::

@@ -7,13 +7,10 @@
 import {flatten, isPalindrome, words} from '@mathigon/core';
 import {Line, Point} from '@mathigon/euclid';
 import {$N, Draggable, ElementView, InputView} from '@mathigon/boost';
-import {Slider, Step} from '@mathigon/studio';
+import {PlayBtn, Slider, Step} from '@mathigon/studio';
 
 import {Geopad, GeoPoint} from '../shared/types';
-import {PlayBtn} from '../shared/components/play-btn/play-btn';
 import {Wallpaper} from './components/wallpaper';
-
-import '../shared/components/play-btn/play-btn';
 import './components/wallpaper';
 
 

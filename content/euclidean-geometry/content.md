@@ -402,7 +402,7 @@ the _father of geometry_, published the five axioms of geometry:
       circle.move(name="b" cx=190 cy=30 target="1_point")
       path.red(x="segment(a,b)" target="1_line")
 
-{.text-center }__First Axiom__
+{.text-center }__First Axiom__<br>
 You can join any [two points](target:1_point) using exactly one straight
 [{.red} line segment](target:1_line).
 
@@ -415,7 +415,7 @@ You can join any [two points](target:1_point) using exactly one straight
       path(x="segment(c,d)" target="2_segment")
       path.blue.transparent(x="segment(c,d)" target="2_line")
 
-{.text-center }__Second Axiom__
+{.text-center }__Second Axiom__<br>
 You can extend any [line segment](target:2_segment) to an
 [{.blue} infinitely long line](target:2_line).
 
@@ -427,7 +427,7 @@ You can extend any [line segment](target:2_segment) to an
       path(x="segment(e,f)" label="r" target="3_radius")
       path.green(x="circle(e,distance(e,f))" target="3_circle")
 
-{.text-center }__Third Axiom__
+{.text-center }__Third Axiom__<br>
 Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you can draw a
 [{.green} circle](target:3_circle) with centre _P_ and radius _r_.
 
@@ -448,7 +448,7 @@ Given a [point _P_](target:3_center) and a [distance _r_](target:3_radius), you 
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
-{.text-center }__Fourth Axiom__
+{.text-center }__Fourth Axiom__<br>
 Any two [{.orange} right angles](target:4_angle) are congruent.
 
 ::: column(width=220)
@@ -458,7 +458,7 @@ Any two [{.orange} right angles](target:4_angle) are congruent.
       path(name="line5" x="line(point(50,80),point(130,140))" target="5_line" label="L")
       path.yellow(x="line5.parallel(g)" target="5_parallel")
 
-{.text-center }__Fifth Axiom__
+{.text-center }__Fifth Axiom__<br>
 Given a [line _L_](target:5_line) and a [point _P_](target:5_point) not on _L_, there is exactly
 [{.yellow} one line](target:5_parallel) through _P_ that is [parallel](gloss:parallel) to _L_.
 :::
@@ -715,7 +715,7 @@ without success:
 
     figure: img(src="images/impossible-1.svg" width=200 height=180)
 
-{.text-center} __{.m-red} Trisecting the angle__
+{.text-center} __{.m-red} Trisecting the angle__<br>
 We already know how to bisect angles. However it is impossible to similarly
 split an angle into _three_ equal parts.
 
@@ -723,7 +723,7 @@ split an angle into _three_ equal parts.
 
     figure: img(src="images/impossible-2.svg" width=200 height=180)
 
-{.text-center} __{.m-blue} Doubling the cube__
+{.text-center} __{.m-blue} Doubling the cube__<br>
 Given the edge of a cube, it is impossible to construct the edge of another cube
 that has exactly twice the volume.
 
@@ -731,7 +731,7 @@ that has exactly twice the volume.
 
     figure: img(src="images/impossible-3.svg" width=200 height=180)
 
-{.text-center} __{.m-green} Squaring the circle__
+{.text-center} __{.m-green} Squaring the circle__<br>
 Given a circle, it is impossible to construct a square that has exactly the same
 area.
 :::

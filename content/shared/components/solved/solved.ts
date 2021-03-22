@@ -11,7 +11,7 @@ import template from './solved.pug';
 
 
 const colors = loop(['red', 'orange', 'lime', 'green', 'teal', 'blue', 'purple']);
-// const images = loop(['badge', 'homework', 'laurels', 'lightbulb', 'owl', 'scroll', 'trophy']);
+const images = loop(['badge', 'homework', 'laurels', 'lightbulb', 'owl', 'scroll', 'trophy']);
 
 
 @register('x-solved', {template})
@@ -21,7 +21,7 @@ export class Solved extends CustomElementView {
   private $text!: ElementView;
 
   ready() {
-    this.$svg = this.$('.sketch use')!;
+    this.$svg = this.$('x-icon.sketch')!;
     this.$text = this.$('.message')!;
     this.$('.close')!.on('click', () => this.exit());
   }
@@ -35,7 +35,7 @@ export class Solved extends CustomElementView {
 
     this.setAttr('class', 'gradient-' + colors());
     this.$text.text = hint.replace(/<.*?>/g, '');
-    // TODO this.$svg.setAttr('xlink:href', '/sketch.svg#' + images());
+    this.$svg.setAttr('name', images());
     replaceSvgImports();
 
     return enter(this, 'pop', 300, 600);

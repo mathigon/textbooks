@@ -41,7 +41,7 @@
   &.green { color: $green; margin: -10px 0 0 5px; }
 }
 
-.triangle { display: none; fill: fade($red, 20%); transition: fill .2s; }
+.triangle { display: none; fill: rgba($red, 20%); transition: fill .2s; }
 .line-x { display: none; stroke: $blue; stroke-width: 4px; stroke-linecap: round; }
 .line-y { display: none; stroke: $green; stroke-width: 4px; stroke-linecap: round; }
 
@@ -51,7 +51,7 @@ x-coordinate-system {
   .grid, .axes, .plot, .labels { transition: opacity .2s; }
   .focus & { .axes, .plot, .labels { opacity: 0.1; } }
   .focus & .grid { opacity: 0.01; }
-  .focus & .triangle { fill: fade($red, 5%); }
+  .focus & .triangle { fill: rgba($red, 5%); }
   .focus & .chart-point { background: mix($red, white, 30%); }
 
   .line-x, .line-y { transition: stroke .2s; }

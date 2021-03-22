@@ -591,17 +591,17 @@ form into the new __exponential form__:
 
 ::: column.frame.blue.text-center(width=212 parent="padded-thin")
 
-__Cartesian Form__
+__Cartesian Form__<br>
 `§z = a + b i`
 
 ::: column.frame.green.text-center(width=212)
 
-__Polar Form__
+__Polar Form__<br>
 `§z = r cos(θ) + r i sin(θ)`
 
 ::: column.frame.yellow.text-center(width=212)
 
-__Exponential Form__
+__Exponential Form__<br>
 `§z = re^(i θ)`
 
 :::
