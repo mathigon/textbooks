@@ -1,0 +1,44 @@
+
+x-card-graph svg {
+    overflow: visible;
+}
+  
+x-card-graph .card-circle {
+    fill: none;
+    stroke: @blue;
+    stroke-width: 2px;
+}
+
+x-card-graph .dot {
+    stroke-width: 2px;
+    stroke: @green;
+    fill: @light-grey;
+}
+
+x-card-graph .card-content {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+x-card-graph .card-instruction {
+    fill: @medium-grey;
+    font-style: italic;
+    transition: 0.2s;
+    font-size: 22px;
+}
+
+x-card-graph .card-description {
+    transition: 0.2s;
+    font-size: 22px;
+}
+
+x-card-graph .card-outline {
+    fill: none;
+    stroke: @light-grey;
+    stroke-width: 2px;
+    stroke-dasharray: 4;
+}
+
+x-card-graph svg .labels {
+  pointer-events: none;
+}

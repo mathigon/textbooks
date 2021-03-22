@@ -9,6 +9,7 @@
 @import "../shared/variables";
 @import "../shared/components/function-machine";
 @import "../shared/components/video-graph";
+@import "../shared/components/card-graph";
 
 
 .btn.clear {
@@ -90,57 +91,11 @@ line#time-line {
   stroke-dasharray: 4;
 }
 
-#ren-cards-graph svg {
-  overflow: visible;
-}
-
-#dive-cards>g {
-  cursor: pointer;
-}
-
-.dive-card-circle {
-  fill: none;
-  stroke: @blue;
-  stroke-width: 2px;
-}
-
-.dive-dot {
-  stroke-width: 2px;
-  stroke: @green;
-  fill: @light-grey;
-}
-
-.dive-card-content {
-  transition: 0.2s;
-}
-
-.dive-card-instruction {
-  fill: @medium-grey;
-  font-style: italic;
-  transition: 0.2s;
-}
-
-.dive-card-description {
-  transition: 0.2s;
-}
-
-.dive-card-outline {
-  fill: none;
-  stroke: @light-grey;
-  stroke-width: 2px;
-  stroke-dasharray: 4;
-}
-
-#ren-cards-graph .labels {
-  pointer-events: none;
-}
-
 #running-video-graph>div {
   display: flex;
   justify-content: space-evenly;
   margin: 20px 0 40px 0;
 }
-
 
 #running-video-graph x-coordinate-system {
   margin: 0;

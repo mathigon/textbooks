@@ -767,7 +767,8 @@ Let’s call the function representing Ren’s dive d(t). The input values, t, a
 
 Graphs with this shape are called cubic functions. We can get important information from the graph even without knowing the function equation. Match the given statements to the graph.
 
-    x-coordinate-system#ren-cards-graph(width=500 height=300 x-axis="0,4.3,1" y-axis="-8.5,12.5,4" axis-names="Time,Height" crosshairs="no")
+    x-card-graph
+        x-coordinate-system(width=500 height=300 x-axis="0,4.3,1" y-axis="-8.5,12.5,4" axis-names="Time,Height" crosshairs="no")
 
 Recall that for any function, the y-intercept is where t=[[0]]. In function notation, this looks like d([[0]])=10.
 
