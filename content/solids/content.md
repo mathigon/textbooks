@@ -1086,11 +1086,31 @@ The row of squares in Shape D can be folded into a ring, and the other two squar
 One of the most common cubes we come across every day are dice.
 
 ---
-> id: die-faces
+> id: die-faces-1
+> goals: faces-placed
 
 Let’s try to build our own fair die by inserting the faces correctly.
 
 Opposite faces of a fair die always add up to 7.
+
+    // INTERACTIVE-2.09: Die faces nets matching
+    figure: div.die-faces
+      svg(viewBox="0 0 400 300")
+      div.faces
+        div.face
+        div.face
+        div.face
+        div.face
+        div.face
+        div.face
+
+{.reveal(when="faces-placed")} Great!
+
+---
+> id: die-faces-2
+> goals: faces-placed
+
+Lets try one more:
 
     // INTERACTIVE-2.09: Die faces nets matching
     figure: div.die-faces
