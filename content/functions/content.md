@@ -950,7 +950,7 @@ It's simple, just fill in the formula:
 
 {.text-center} `m=(y_2 - y_1)/(x_2 - x_1)=`[[5.71±0.2]]
 
-This means Rogers could overtake Boufaarirane in the last 200 meters of the race because she was running [[1.4±0.2]] meters per second faster.
+So Rogers could overtake Boufaarirane in the last 200 meters of the race because she was running [[1.4±0.2]] meters per second faster.
 
 ---
 
@@ -967,7 +967,7 @@ In this system of functions, we can see who is ahead at any given time during th
 | Tracey is ahead of Boufaarirane. | | g(t) > f(t) | |   |
 | Rogers is ahead of Tracey. | | g(t) < u(t) | | 109.998<t≤120.2 |
 
-When we talk about one function being greater than another, we are using the [[output | input]] values to identify a range of [[input | values]]. For example, we see Tracey is ahead of Boufaarirane for this entire stretch of the race. This is expressed as [[g(t) > f(t) | g(t) < f(t)]]. We can think of this as “the range of time when Tracey has run a farther distance than Boufaarirane”. That range is [[90.63+-0.2]] ≤ t ≤ [[121]]. We can do a similar analysis for each pair of functions.
+When we talk about one function being greater than another, we are using the [[output | input]] values to identify a range of [[input | output]] values. For example, we see Tracey is ahead of Boufaarirane for this entire stretch of the race. This is expressed as [[g(t) > f(t) | g(t) < f(t)]]. We can think of this as “the range of time when Tracey has run a farther distance than Boufaarirane”. That range is [[90.63+-0.2]] ≤ t ≤ [[121]]. We can do a similar analysis for each pair of functions.
 
 Looking at the three functions on the coordinate plane, we can see that the relationship between u(t) and g(t) changes from g(t)>u(t) to u(t)>g(t) when [[Rogers passes Tracey | Tracey passes Rogers | Rogers passes Boufaarirane | Boufaarirane passes Rogers]]. This means that the upper bound on g(t)>u(t) is where g(t) [[= | < | >]] u(t), which is t=[[110+-0.2]] seconds. This t-value, 110 seconds, is also the lower bound on u(t)>g(t).
 
