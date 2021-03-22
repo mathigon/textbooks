@@ -30,7 +30,6 @@ x-voxel-painter {
 
 div.die-faces {
 
-  background-color: @lime;
   width: 620px;
   height: 600px;
   text-align: center;
@@ -47,15 +46,14 @@ div.die-faces {
       stroke-width: 2px;
 
       &.over {
-        fill: yellow;
+        fill: @lime;
       }
     }
   }
   div.faces {
-    background-color: @red;
     display: inline-flex;
     flex-wrap: wrap;
-    margin: 3px auto;
+    margin: auto;
     justify-content: center;
 
     div.face {
