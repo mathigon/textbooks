@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "server": "mgon-serve",
-    "assets": "mgon-build --assets --watch",
+    "assets": "mgon-build --assets --watch --locales en",
     "start": "npm-run-all --parallel assets server",
     "translate": "mgon-build --translate --key google-service-account.json",
     "lint": "eslint content --ext .ts",

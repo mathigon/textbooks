@@ -1,31 +1,26 @@
 {
   "extends": ["config:base"],
-  "schedule": ["before 5am on the first day of the month"],
+  "schedule": ["on the first day of the month"],
   "packageRules": [{
-    "packagePatterns": ["eslint"],
-    "groupName": "lint",
-    "automerge": true
-  }, {
     "packagePatterns": ["^@mathigon"],
-    "groupName": "mathigon",
+    "groupName": "Mathigon",
     "schedule": ["at any time"],
     "automerge": true
   }, {
-    "packagePatterns": ["ts-node", "^typescript"],
-    "groupName": "typescript",
+    "packagePatterns": ["typescript", "tslib", "ts-node"],
+    "groupName": "TypeScript",
     "automerge": true
   }, {
-    "packagePatterns": ["^@types/"],
-    "groupName": "types",
+    "packagePatterns": ["^@typescript-eslint", "^eslint", "tape"],
+    "groupName": "Tests",
     "automerge": true
   }, {
-    "packagePatterns": ["^rollup", "^@rollup"],
-    "groupName": "rollup",
+    "packagePatterns": ["^@types"],
+    "groupName": "Types",
     "automerge": true
   }, {
     "updateTypes": ["patch", "pin", "digest"],
-    "groupName": "versions",
+    "groupName": "Versioning",
     "automerge": true
-  }],
-  "ignoreDeps": ["marked", "@types/three", "autoprefixer", "gulp-postcss", "postcss-rtl"]
+  }]
 }
