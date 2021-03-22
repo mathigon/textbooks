@@ -46,7 +46,7 @@ export class CardGraph extends CustomElementView {
         this.$graph.$svg.setAttr('viewBox', `0 0 ${this.graphWidth} ${this.graphHeight-50}`);
 
         this.$instructionText = $N('text', {class: 'card-instruction', 'alignment-baseline': 'middle', 'text-anchor': 'middle', transform: `translate(${this.graphWidth/2}, ${this.graphHeight+10})`}, this.$overlay);
-        this.$descriptionText = $N('text', {class: 'card-descrition', 'alignment-baseline': 'middle', 'text-anchor': 'middle', transform: `translate(${this.graphWidth/2}, ${this.graphHeight+10})`}, this.$overlay);
+        this.$descriptionText = $N('text', {class: 'card-description', 'alignment-baseline': 'middle', 'text-anchor': 'middle', transform: `translate(${this.graphWidth/2}, ${this.graphHeight+10})`}, this.$overlay);
 
         this.$instructionText.text = 'Drag each card onto its corresponding point';
     }
