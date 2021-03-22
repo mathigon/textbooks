@@ -24,7 +24,7 @@ export class VideoGraph extends CustomElementView {
         this.$graph = this.$('x-coordinate-system')! as CoordinateSystem;
     }
 
-    addPlot(xFunction: (t: number) => number, yFunction: (t: number) => number, avatarPath: string, color: string) {
+    addPlot(xFunction: (t: number) => number, yFunction: (t: number) => number, avatarPath: string, color: string = 'red') {
         this.functions.push(yFunction);
         this.$graph.setFunctions.apply(this.$graph, this.functions);
 
