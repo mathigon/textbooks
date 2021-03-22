@@ -1,6 +1,6 @@
-import {$html, Browser, ElementView, slide, SVGParentView} from '@mathigon/boost';
+import {$html, animate, Browser, ElementView, slide, SVGParentView} from '@mathigon/boost';
 import {applyDefaults, EventTarget} from '@mathigon/core';
-import {Bounds, Point} from '@mathigon/euclid';
+import {Point} from '@mathigon/euclid';
 
 type HoverData =
   {tag: 'Target', $el: ElementView} |
@@ -37,6 +37,7 @@ export class Draggable extends EventTarget {
   protected areaBounds = {topLeft: new Point(0, 0), bottomRight: new Point(0, 0)};
   protected over: HoverData;
   protected startPos = new Point(0, 0);
+  protected $targets: ElementView[] | undefined;
   position = new Point(0, 0);
   disabled = false;
   width = 0;
@@ -49,6 +50,7 @@ export class Draggable extends EventTarget {
     this.over = {tag: 'NonTarget'};
 
     this.options = applyDefaults(options, {moveX: true, moveY: true});
+    this.$targets = this.options.$targets;
     this.setDimensions($parent);
 
     slide($el, {
@@ -60,16 +62,14 @@ export class Draggable extends EventTarget {
       },
       move: (posn, start) => {
         if (this.disabled) return;
-        this.setPosition(
-            this.startPos.x + posn.x - start.x,
-            this.startPos.y + posn.y - start.y
-        );
-        this.trigger('drag', {elemPos: this.position, pointerPos: posn}); // pass obj instead of tuple
+        this.setPosition(this.startPos.x + posn.x - start.x,
+            this.startPos.y + posn.y - start.y);
+        this.trigger('drag', {elemPos: this.position, pointerPos: posn});
 
         let overTarget = false;
         const prevTarget = this.over.tag == 'NonTarget' ? undefined : this.over.$el;
-        if (this.options.$targets != undefined) {
-          for (const $target of this.options.$targets) {
+        if (this.$targets != undefined) {
+          for (const $target of this.$targets) {
             if ($target.boundsRect.contains(posn)) {
               overTarget = true;
               if (prevTarget != $target) {
@@ -104,8 +104,8 @@ export class Draggable extends EventTarget {
 
         let droppedOn: ElementView | undefined;
 
-        if (this.options.$targets != undefined) {
-          for (const $target of this.options.$targets) {
+        if (this.$targets != undefined) {
+          for (const $target of this.$targets) {
             if ($target.boundsRect.contains(last)) {
               /**
                * Fires when the user releases the pointer while over a 'target' element
@@ -160,10 +160,10 @@ export class Draggable extends EventTarget {
 
   /** Sets the position of the element. */
   setPosition(x: number, y: number) {
-    const m = this.options.margin || 0;
+    // const m = this.options.margin || 0;
 
     let p = new Point(this.options.moveX ? x : 0, this.options.moveY ? y : 0)
-        .clamp(
+        /* .clamp(
             new Bounds(
                 this.areaBounds.topLeft.x,
                 this.areaBounds.bottomRight.x,
@@ -171,7 +171,7 @@ export class Draggable extends EventTarget {
                 this.areaBounds.bottomRight.y
             ),
             m
-        )
+        )*/
         .round(this.options.snap || 1);
 
     if (this.options.round) p = this.options.round(p);
@@ -190,6 +190,14 @@ export class Draggable extends EventTarget {
   }
 
   resetPosition() {
-    this.setPosition(this.startPos.x, this.startPos.y);
+    // TODO: Disable pointer events during animation
+    animate((p: number) => {
+      const currentPos = Point.interpolate(this.position, this.startPos, p);
+      this.setPosition(currentPos.x, currentPos.y);
+    }, 800);
+  }
+
+  removeTarget($target: ElementView) {
+    this.$targets = this.$targets?.filter($t => $t != $target);
   }
 }
