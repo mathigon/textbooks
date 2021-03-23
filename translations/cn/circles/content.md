@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: tBJUNvCBkLo
+> color: "#5A49C9"
+> level: Intermediate
+> next: graph-theory
 
 ::: column.grow
 
@@ -45,7 +49,7 @@
   指圆心与圆弧上点的距离。
 * {.reveal(when="compass" delay="4000")} [{.step-target.pill.b.blue}直径](target:d)
   表示圆上两个相对的点的距离。它通过圆心，长度为半径的[[一半|两倍|相等长度]]。
-* {.reveal(when="blank-0")} [{.step-target.pill.b.green}周长](target:c) 
+* {.reveal(when="blank-0")} [{.step-target.pill.b.green}周长](target:c)
  （边缘长度）指环绕圆一周的长度。
 
 :::
@@ -386,7 +390,7 @@ _{span.reveal(when="blank-2")} 所以三角形的面积近似于_
 
     x-img(src="images/babylon.jpg" width=260 height=250 credit="Yale University")
 
-{.caption} 一块计算`sqrt(2)`的古巴比伦碑文 
+{.caption} 一块计算`sqrt(2)`的古巴比伦碑文
 
 :::
 
@@ -467,12 +471,12 @@ _{x-equation.small(solution="π/2" keys="+ × π frac" numeric)}_.
 
 ::: column(width=180 parent="padded-thin")
 
-{.text-center} _{span.rotate.left}`=>`_  
+{.text-center} _{span.rotate.left}`=>`_
 __{.m-red} 1°__ _{span.space}=_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
 
 ::: column(width=180)
 
-{.text-center} _{span.rotate.right}`=>`_  
+{.text-center} _{span.rotate.right}`=>`_
 __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
 
 :::
@@ -589,23 +593,23 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
     x-geopad.sticky(width=300 height=300): svg
       circle(x="point(150,150)" name="x")
-      
+
       path.teal.fill.reveal(x="sector(x,d1,pi/2.5)" target="sector" when="next-3" label="Sector" label-class="white")
       path.purple.fill.reveal(x="arc(x,b1,pi/2.5)" target="segment" when="next-4" label="Segment")
-      
+
       path.black(x="circle(x,100)" name="c")
-      
+
       circle.red(x="c.at(0.5)" name="a1" target="secant")
       circle.red(x="c.at(0.7)" name="a2" target="secant")
       path.red.thick(x="line(a1,a2)" label="Secant" target="secant")
-      
+
       circle.green.reveal(x="c.at(0.8)" name="b1" target="chord" when="next-0" animation="pop")
       circle.green.reveal(x="c.at(0)" name="b2" target="chord" when="next-0" animation="pop")
       path.green.thick.reveal(x="segment(b1,b2)" label="Chord" target="chord" when="next-0" animation="draw")
-      
+
       circle.blue.reveal(x="c.at(0.1)" name="c1" target="tangent" when="next-1" animation="pop")
       path.blue.thick.reveal(x="c.tangentAt(0.1)" label="Tangent" target="tangent" when="next-1" animation="draw")
-      
+
       circle.yellow.reveal(x="c.at(0.2)" name="d1" target="arc" when="next-2" animation="pop")
       circle.yellow.reveal(x="c.at(0.4)" name="d2" target="arc" when="next-2" animation="pop")
       path.yellow.thick.reveal(x="arc(x,d1,pi/2.5)" label="Arc" target="arc" when="next-2" animation="draw")
@@ -667,7 +671,7 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
       path(x="circle(c,100)" name="circ")
       circle.move(cx=240 cy=140 name="a" project="circ" label="A")
       circle.move(cx=85 cy=60 name="b" project="circ" label="B")
-      
+
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sector" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Arc" target="arc")
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
@@ -708,11 +712,11 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
       path(x="circle(c,100)" name="circ")
       circle.move(cx=240 cy=140 name="a" project="circ")
       circle.move(cx=85 cy=60 name="b" project="circ")
-      
+
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sector" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Arc" target="arc")
       path.fill.blue(x="angle(b,c,a)" target="angle")
-      
+
       path.fill.orange.transparent(x="circ" target="area")
       path.thick.purple.transparent(x="circ" target="circ")
       path.teal.fill.transparent(x="circle(c,32)" target="fangle")
@@ -825,22 +829,22 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
         defs: radialGradient#grad1(cx=200 cy=200 r=200 gradientUnits="userSpaceOnUse")
           stop(offset=0 stop-color="#63a3ff")
           stop(offset=1 stop-color="#0f82f2")
-      
+
         circle(x="point(150,250)" name="c" hidden)
         circle(x="point(150,120)" name="a" hidden)
         circle.move.pulsate(cx=80 cy=140 name="b" project="arc(c,point(64,155),1.47)")
         circle(x="c.add(b.subtract(c).scale(1.465))" name="d" hidden)
-    
+
         path.shadow(x="triangle(c,d,point(d.x,c.y))")
         path.earth(d="M153,120,152,150h-4l-.95-30a130,130,0,1,0,5.9,0Z" fill="url(#grad1)")
         path.earth-cover.fill(x="circle(c,130)")
-        
+
         path.red.thick.reveal(when="next-0" animation="draw" x="arc(c,b,angle(b,c,a).rad).minor" target="arc")
         path.fill.teal.reveal(when="next-0" x="angle(c,d,point(d.x,c.y)).sup" target="angle1")
         path.fill.purple.reveal(when="next-0" x="angle(b,c,a).sup" name="ang" target="angle2")
         path.thin.white.reveal(when="next-0" animation="draw" x="segment(c,b)")
         path.blue.transparent(x="circle(c,130)" target="circ")
-        
+
         image.obelisk.var(xlink:href="images/obelisk.svg" height=60 width=8 style="transform: translate(${b.x-4}px, ${b.y-60}px) rotate(-${angle(b,c,a).rad}rad)")
 
 :::
@@ -1414,7 +1418,7 @@ __{.m-green}扇形__ 的半径为圆锥底面圆上的点到顶点的距离。�
       circle(x="point(10,10)" name="a2" hidden)
       circle(x="point(210,10)" name="b2" hidden)
       path(x="polygon(a2,b2,point(210,110),point(10,110))")
-      
+
       circle(x="point(110,110)" name="c2")
       circle(x="c2.shift(0,-100*h)" name="h2")
       circle(x="h2.shift(-100*h,0)" name="x2")
@@ -1579,9 +1583,9 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 
 {.todo} 即将推出：球的表面积的证明
 
-    
-    
-    
+
+
+
 
 --------------------------------------------------------------------------------
 

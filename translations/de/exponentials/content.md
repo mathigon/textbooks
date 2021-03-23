@@ -4,6 +4,9 @@
 
 > section: carbon-dating
 > id: egypt
+> color: "#EF551E"
+> level: Intermediate
+> next: probability
 
 ::: column.grow
 
@@ -43,24 +46,24 @@ Teil der Kohlenstoffatome enthält zusätzliche Neutronen. Diese verschiedenen
 
     x-atom(protons=6 neutrons=6 size=150)
 
-{.text-center} __Kohlenstoff-12__  
-6 Protonen, 6 Neutronen  
+{.text-center} __Kohlenstoff-12__
+6 Protonen, 6 Neutronen
 98,8%
 
 ::: column(width=170)
 
     x-atom(protons=6 neutrons=7 size=150)
 
-{.text-center} __Kohlenstoff-13__  
-6 Protonen, 7 Neutronen  
+{.text-center} __Kohlenstoff-13__
+6 Protonen, 7 Neutronen
 1,1%
 
 ::: column(width=170)
 
     x-atom(protons=6 neutrons=8 size=150)
 
-{.text-center} __Kohlenstoff-14__  
-6 Protonen, 8 Neutronen  
+{.text-center} __Kohlenstoff-14__
+6 Protonen, 8 Neutronen
 0,1%
 
 :::
@@ -101,7 +104,7 @@ Millionen Millionen Atome!
       .operator(hidden style="left: 240px") +
     x-gesture(target=".decay-box x-atom")
 
-{.caption} 
+{.caption}
 
 ::: column.grow
 

@@ -4,6 +4,8 @@
 
 > section: factors-and-multiples
 > id: divisibility1
+> color: "#1AA845"
+> level: Foundations
 
     mixin grid(n, fn)
       .number-grid
@@ -83,6 +85,7 @@ Tabii ki, 60'a kadar olan tüm numaraları bölen olup olmadıklarını kontrol 
 
 60 sayısını incelerken 60 = 1 × 60 = 2 × 30 = 3 × 20 = 4 × 15 = 5 × 12 = 6 × 10 eşitliklerine sahibiz. Veya farklı bir gösterimde,
 
+    include mixins
     +divisor-table([1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60], [5, 4, 3, 2, 1, 0])
 
 To find all divisors of a number we simply start at both ends of this list,
@@ -93,6 +96,7 @@ Bir sayının tüm bölenlerini bulmak için bu listenin iki ucundan ortada bulu
 ---
 > id: factors2
 
+    include mixins
     x-slideshow
       .stage(slot="stage")
         +divisor-table([1, 2, 3, 6, 7, 14, 21, 42], [3, 2, 1, 0])
@@ -120,6 +124,7 @@ Bir sayının başka sayılar tarafından bölünebilir olup olmadığını kont
 
 Her sayı 1 ile bölünür. Bir sayının 2 ile bölünülürlüğünü belirlemek için, basitçe şunu kontrol edebiliriz. sayının birler basamağı 0, 2, 4, 6 veya 8 ise 2'ye bölünür.
 
+    include mixins
     +grid(30)
 
 ---
@@ -127,6 +132,7 @@ Her sayı 1 ile bölünür. Bir sayının 2 ile bölünülürlüğünü belirlem
 
 Bir sayının 5'e bölünebilir olup olmadığını görmek için benzer şekilde sadece birler basamağının 0 veya 5 olduğunu kontrol etmeliyiz:
 
+    include mixins
     +grid(30)
 
 ---
@@ -183,7 +189,7 @@ Maalesef 4, 10'a bölünmüyor, bu yüzden sadece birler basamağına bakamayız
 
 8 için bölünebilirlik kuralları biraz daha zorlaşıyor, çünkü 100 sayısı 8 ile bölünemez. Bunun yerine [[1000|800|108]]'e çıkmamız ve bir sayının son [[3]] basamağına bakmamız gerekiyor.
 
-Örneğin, __{.m-green}120__, 8'e bölünür o halde 
+Örneğin, __{.m-green}120__, 8'e bölünür o halde
 __{.m-red}271__**{.m-green}120** de 8'e bölünür.
 
 ---
@@ -198,6 +204,7 @@ Bunun yerine bir sayının __basamak değerlerinin toplamını__  kullanmamız g
 ---
 > id: divisibility3b
 
+    include mixins
     +grid(40, function(n) { if (!(n % 3)) { var s = '' + n; return +s[0] + (+s[1] || 0); } })
 
 Burada üçün katları olan tüm sayıları vurguladık. Rakam toplamlarının her zaman [[3'ün katı| 0 ya da 3|tek sayı]] olduğunu görebiliriz.
@@ -248,6 +255,7 @@ Bu sadece basamak değerleri toplamı olur! Eğer [{.no-margins}basamak değerle
 6 sayısını atladık - ancak bu zamana kadar çok sıkı bir çalışma yaptık.
 6 = 2 × 3 olduğunu anımsayalım.
 
+    include mixins
     +grid(40)
     p.btn-row.text-center(style="margin-bottom:1em")
       button.btn.btn-small(data-display="visibility") 2'nin katlarını göster
@@ -319,6 +327,7 @@ ATT'ni kullanımı matematikteki birçok problemin çözümünü çok daha kolay
 
 Bir sayının asal olup olmadığını belirlemek oldukça zor oldu: sayının her zaman _tüm_ asal çarpanları bulmak zorundayız, bu da sayı büyüdükçe daha da zorlaşıyor. Bunun yerine, Yunan matematikçi [Eratosthenes of Cyrene](bio:eratosthenes) 100'e kadar olan tüm asal sayıları bulmak için basit bir algoritma geliştirdi: __Eratosthenes'in Kalburu__.
 
+    include mixins
     x-slideshow
       .stage(slot="stage")
         +grid(100)
@@ -328,7 +337,7 @@ Bir sayının asal olup olmadığını belirlemek oldukça zor oldu: sayının h
       .legend(slot="legend") Listemizdeki bir sonraki sayı #[strong.m-blue 3]'tür – yine bir asal sayı. 3'ün katı olan hiçbir sayı asal olamaz çünkü 3 hepsinin bir çarpanıdır. Böylece 3'ün katı olanların tamamının üzerini çizebiliriz.
       .legend(slot="legend") Bir sonraki sayı 4, ki zaten üzerini çizmiştik, o halde #[strong.m-green 5]'e ilerleyelim: 5 asal bir sayıdır ve 5'in katlarının üzerini çizelim.
       .legend.md(slot="legend") Bir sonraki asal sayı [[7]] olmalı, 6'nin üzeri çizildiği için. Bir kez daha, bütün katlarının üzerini çizdik.
-      .legend.md(slot="legend") Bir sonraki asal sayı [[11]] olmalı. Dikkat edelim, nasıl olduysa onun katları [[nın üzerini çizdik|3'ün katları]]. Aynı işlemler geriye kalan bütün sayılar için geçerli. Böylece kalan tüm sayılar asal olmalı. 
+      .legend.md(slot="legend") Bir sonraki asal sayı [[11]] olmalı. Dikkat edelim, nasıl olduysa onun katları [[nın üzerini çizdik|3'ün katları]]. Aynı işlemler geriye kalan bütün sayılar için geçerli. Böylece kalan tüm sayılar asal olmalı.
 
 Şimdi, toplamda 100'den küçük [[25]] asal sayı olduğunu söyleyebiliriz.
 
@@ -456,7 +465,7 @@ Bütün tam sayıları 1'i ortaya yazacak şekilde dikdörtgen bir ızgaraya spi
 ---
 > id: ulam1
 
-Şu ana kadar Ulam Spirali çok heyecan verici görünmüyor. Eğer biraz uzaklaşırsak ilginç modeller ortaya çıkıyor. 160.000'e kadar olan asallar: 
+Şu ana kadar Ulam Spirali çok heyecan verici görünmüyor. Eğer biraz uzaklaşırsak ilginç modeller ortaya çıkıyor. 160.000'e kadar olan asallar:
 
     figure: img(src="images/ulam.png" width=399 height=399)
 
@@ -493,7 +502,7 @@ Goldbach, gözlemini ünlü matematikçi [Leonhard Euler](bio:euler)'e ilgili ya
 
 Bilgisayarlar Goldbach Sanısı'nın 4 × 10<sup>18</sup>'e kadar olan tüm çift sayılar için kontrol etti fakat matematikçiler hala _her_ çift sayı için geçerli olan bir kanıt bulamadı. Bu ikisi çok farklı çünkü sonsuz sayıda tam sayı vardır ve hepsini kontrol edemeyiz.
 
-Goldbach Sanısı'nın sadeliği, onu matematikteki çözülemeyen problemlerden en ünlülerinden biri haline getirdi. 
+Goldbach Sanısı'nın sadeliği, onu matematikteki çözülemeyen problemlerden en ünlülerinden biri haline getirdi.
 
 ---
 > id: twin-primes
@@ -577,7 +586,7 @@ Yüzlerce matematikçi Riemann'ın hipotezini kanıtlamaya çalıştı fakat hi�
 > goals: race
 > section: lcm
 
-İki koşucu dairesel bir yarış pistinde antreman yapıyor. 
+İki koşucu dairesel bir yarış pistinde antreman yapıyor.
 __{.m-blue}İlk koşucu__
 bir turu __{.m-blue}60__ saniyede yapıyor. __{.m-green}İkinci koşucu__ ise sadece __{.m-green}40__ saniyede yapıyor. Eğer ikisi de aynı anda başlarsa ne zaman tekrar aynı noktada olacaklar?
 

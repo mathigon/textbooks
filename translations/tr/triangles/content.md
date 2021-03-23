@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#3566DE"
+> level: Intermediate
+> next: polyhedra
 
 ::: column.grow
 Kâşifler dünyanın büyük bir kısmını 19. yüzyılın başlarında keşfetmişlerdi. Uzak ülkeler arasında ticaret ve taşımacılık giderek artıyordu ve bu, dünyanın _güncel haritasına_ olan ihtiyacı doğuruyordu.
@@ -157,7 +160,7 @@ Açıların büyüklüklerine göre üçgenleri sınıflandırabiliriz:
 
 ::: column.grow
 Kolay lık olsun diye üçgenleri genelde benzer şekillerde işaretleriz. Köşeler ilk üç büyük harf [_A_, _B_ ve _C_](target:vertex), kenarlar ilk üç küçük harf [_a_, _b_ ve _c_](target:side) ve açılar Yunan harfleri [`α`, `β` ve `γ`](target:angle) (“alpha”, “beta” ve “gamma”) ile işaretlenirler.
- 
+
 [_A_ köşesinin _karşısındaki_ kenar](target:X) _a_, [_A_ köşesindeki açı](target:Y) `α` ile işaretlenir. Aynı işaretlendirme _B_/_b_/`β` ve _C_/_c_/`γ` için de geçerlidir.
 ::: column(width=220)
 
@@ -178,7 +181,7 @@ Kolay lık olsun diye üçgenleri genelde benzer şekillerde işaretleriz. Köş
 > id: medians
 > goals: s0 s1 s2 move
 
-### Medyanlar 
+### Medyanlar
 
 ::: column(width=300)
 
@@ -187,16 +190,16 @@ Kolay lık olsun diye üçgenleri genelde benzer şekillerde işaretleriz. Köş
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
       path(x="triangle(a,b,c)")
-      
+
       circle.green(name="ab" x="line(a,b).midpoint")
       circle.blue(name="ac" x="line(a,c).midpoint")
       circle.red(name="bc" x="line(b,c).midpoint" target="ratio")
-      
+
       circle.yellow.reveal(name="d" x="triangle(a,b,c).centroid" when="blank-0" animation="pop" target="ratio")
-      
+
       path.red.transparent(x="segment(a,d)" label="2" target="ratio")
       path.red.transparent(x="segment(d,bc)" label="1" target="ratio")
-      
+
 
 ::: column.grow
 Kenarlarının orta noktaları işaretlenmiş bir üçgen görüyorsunuz.
@@ -332,7 +335,7 @@ _{button.next-step} Devam_
 
       path.fill.yellow.reveal(x="polygon(b,d,c)" when="next-1" target="gap")
       path.fill.yellow.transparent(x="polygon(b,f,c)" target="gap")
-      
+
       path.dark(x="polygon(a,b,c)")
       path.red.reveal(x="polygon(a,b,f,e)" when="next-0" animation="draw")
       path.blue.reveal(x="segment(c,d)" label="yükseklik" when="next-0" delay="1000" target="height")
@@ -357,7 +360,7 @@ Bir üçgenin alanını hesaplamak için herhangi bir kenarını __taban__ olara
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
-      
+
       path(x="triangle(a,b,c)")
       path.altitude.red(hidden x="line(a,b).perpendicular(c)")
       path.altitude.blue(hidden x="line(a,c).perpendicular(b)")
@@ -394,7 +397,7 @@ ve [açı ortaylar](gloss:angle-bisector) konusunda olduğu gibi bu üç uzunlu�
       circle.red(name="q" x="line(a,c).midpoint")
       circle.red(name="r" x="line(b,c).midpoint")
       path(x="triangle(a,b,c)")
-      
+
       path.transparent.fill.red(x="polygon(a,p,q)" target="triangles")
       path.transparent.fill.blue(x="polygon(b,p,r)" target="triangles")
       path.transparent.fill.yellow(x="polygon(c,q,r)" target="triangles")
@@ -406,7 +409,7 @@ Bir [__orta segment__](gloss:triangle-midsegment) üçgenin iki kenarının orta
 
 Gördüğünüz gibi bu orta segmentler üçgeni [dört küçük üçgen](target:triangles)e ayırıyor.
 
-{.reveal(when="s0 s1 s2")} Bu küçük üçgenler -ortadaki ters dursa bile- [[denktir.|üst üste binmiştir.|farklı boyutlardadır.]] _{span.reveal(when="blank-0")} Aynı zamanda hepsi [büyük üçgen](target:large)e_ _{span.reveal(when="blank-1")} `1/2`’lik oranla [[benzerdir.|denktir.]]_ 
+{.reveal(when="s0 s1 s2")} Bu küçük üçgenler -ortadaki ters dursa bile- [[denktir.|üst üste binmiştir.|farklı boyutlardadır.]] _{span.reveal(when="blank-0")} Aynı zamanda hepsi [büyük üçgen](target:large)e_ _{span.reveal(when="blank-1")} `1/2`’lik oranla [[benzerdir.|denktir.]]_
 
 {.reveal(when="blank-1")} Buradan üçgen orta segmentleri hakkında bir gerçek ortaya çıkarabiliriz:
 
@@ -447,7 +450,7 @@ similarity and proportionality.
 {.reveal(when="draw-c2")} Üçgenin üçüncü köşesi, bu iki çemberin [[kesişimidir|merkezidir|yarıçapıdır]]. _{span.reveal(when="blank-0")}
 Şimdi onları bir üçgen oluşturmaları için birleştirebiliriz._
 
-{.reveal(when="blank-0" delay="3000")} Çemberler aslında 
+{.reveal(when="blank-0" delay="3000")} Çemberler aslında
 [[iki kez|üç kez|sonsuz sayıda]] kesişir: _{span.reveal(when="blank-1")} biri [üstte](target:top), diğeri [altta](target:bottom). Bu kesişimlerden herhangi birini seçebiliriz ve böylece birbirine [[eş|eşit kenarlı|dik]] iki üçgen elde ederiz._
 
 :::
@@ -481,7 +484,7 @@ Artık üçgenlerin şu iki kuralı sağladığını biliyoruz: “AA” iki ü�
           path.red(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption Tüm kenarlar eştir.
-        
+
       div(style="width: 150px")
         .text-center: strong KAK
         x-geopad(width=150 height=120): svg
@@ -493,7 +496,7 @@ Artık üçgenlerin şu iki kuralı sağladığını biliyoruz: “AA” iki ü�
           path(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption İki kenar ve bu kenarların  #[strong arasındaki] açı eştir.
-        
+
       div(style="width: 150px")
         .text-center: strong AKA
         x-geopad(width=150 height=120): svg
@@ -506,7 +509,7 @@ Artık üçgenlerin şu iki kuralı sağladığını biliyoruz: “AA” iki ü�
           path(x="segment(a,c)")
           path(x="segment(b,c)")
         p.caption İki açı ve bu kenarlara #[strong bitişik] olan kenar eştir.
-        
+
       div(style="width: 150px")
         .text-center: strong AAK
         x-geopad(width=150 height=120): svg
@@ -626,9 +629,9 @@ Geometride önemli bir noktaya ulaştık – matematikteki en ünlü [teoremlerd
 
 ::: .theorem
 ::: column.grow
-__Pisagor Teoremi__  
+__Pisagor Teoremi__
 Dik açılı bir üçgende, [__hipotenüsün__](target:hypot) (dik açının karşısındaki kenar) uzunluğunun karesi diğer iki kenarın uzunluklarının kareleri toplamına eşittir. Diğer bir deyişle,
- 
+
 {.text-center} _{span.circled.green}`a^2`_ + _{span.circled.blue}`b^2`_ =
 _{span.circled.yellow}`c^2`_
 
@@ -640,11 +643,11 @@ a*{sup}2* + b*{sup}2* = c*{sup}2* eşitliğini sağlarsa, bu üçgen [[dik açı
       circle.move(name="a" cx=82 cy=160 target="hypot")
       circle.move(name="b" cx=218 cy=160 target="hypot")
       circle.move(name="c" cx=120 cy=100 project="arc(line(a,b).midpoint,a,pi).contract(0.2)")
-      
+
       path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-class="white")
       path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-class="white")
       path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-class="white")
-      
+
       path.dark(x="segment(b,c)" label="a")
       path.dark(x="segment(a,c)" label="b")
       path.dark(x="segment(a,b)" label="c" target="hypot")
@@ -667,7 +670,7 @@ Burada __{.m-red}6m__ uzunluğunda duvara yaslanmış bir merdiven görüyorsunu
 
 Merdiven, duvar ve yerin bir dik üçgen oluşturduğunu fark edelim. Pisagor Teoremi’ni kullanarak şunu elde ederiz:
 
-    
+
     table.eqn-system
       tr
         <td><mrow class="b m-green"><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow class="b m-blue"><msup><mn>1</mn><mn>2</mn></msup></mrow></td>
@@ -776,7 +779,7 @@ _{span.qed}_
 
 ::: column(width=240)
 
-    x-geopad(width=240): svg        
+    x-geopad(width=240): svg
       circle.move(name="e1" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
       circle(name="f1" hidden x="b.add(e1.subtract(a).flip)")
       circle(name="g1" hidden x="c.subtract(e1.subtract(a))")
@@ -801,7 +804,7 @@ _{span.qed}_
 #### Benzer Üçgenler _{span.check(when="next-0 next-1 next-2 blank-5")}_
 
 ::: column.grow
-{.r} Burada başka bir dik üçgen görüyorsunuz. Eğer birinin yüksekliğini çizersek, iki farklı daha küçük dik üçgene ayrılır. Bu aynı zamanda hipotenüsü  _c_ de, [{.step-target.i.pill.blue}x](target:x) ve 
+{.r} Burada başka bir dik üçgen görüyorsunuz. Eğer birinin yüksekliğini çizersek, iki farklı daha küçük dik üçgene ayrılır. Bu aynı zamanda hipotenüsü  _c_ de, [{.step-target.i.pill.blue}x](target:x) ve
 [{.step-target.i.pill.green}y](target:y) olarak adlandıracağımız [iki küçük parçaya](target:hypotenuse) böler.
 _{span.next-step} Devam_
 
@@ -931,7 +934,7 @@ Bu iki doğruyu çizersek, [dik açılı bir üçgen](target:triangle) elde eder
 Bu yöntem _herhangi_ iki nokta için işe yarar:
 
 ::: .theorem
-__Uzaklık Formülü__  
+__Uzaklık Formülü__
 Eğer  (`x_1`,`y_1`) ve (`x_2`,`y_2`) şeklinde iki nokta verilirse,aralarındaki uzaklık şöyle hesaplanır:
 
 {.text-center} `d^2=(x_2−x_1)^2+(y_2−y_1)^2`
@@ -1154,7 +1157,7 @@ Bu üç Trigonometrik fonksiyon, dik açılı üçgenlerin kenarlarının oranla
 
 ::: column.grow
 ::: .theorem
-__Sinüs Kuralı__  
+__Sinüs Kuralı__
 Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
@@ -1163,11 +1166,11 @@ Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 
 ::: column.grow
 ::: .theorem
-__Kosinüs Kuralı__  
+__Kosinüs Kuralı__
 Kenarları _a_, _b_ ve _c_ olan ve açıları_A_, _B_ ve _C_ olan bir üçgende,
 
-{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`  
-`b^2 = c^2 + a^2 - 2ca cos(B)`  
+{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`
+`b^2 = c^2 + a^2 - 2ca cos(B)`
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 

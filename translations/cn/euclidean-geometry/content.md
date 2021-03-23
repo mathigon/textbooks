@@ -5,6 +5,9 @@
 > id: thales
 > goals: p1 p2 p3 move
 > section: introduction
+> color: "#0F82F2"
+> level: Intermediate
+> next: transformations
 
 ::: column.grow
 数学已经被研究了数千年 -- 用于预测季节、计算税收或者估计农耕面积。
@@ -183,7 +186,7 @@ _{button.next-step} 继续_
       circle.move(name="a" cx=50 cy=60)
       path(x="segment(a,a.add(point(1,1).unitVector.scale(40)))" target="radius")
       path.red(x="circle(a,40)")
-    
+
       circle.move(name="b" cx=170 cy=90)
       path(x="segment(b,b.shift(60,0))" target="radius")
       path.blue(x="circle(b,60)")
@@ -333,7 +336,7 @@ _{button.next-step} 继续_
       circle.move(name="b" cx=190 cy=30 target="1_point")
       path.red(x="segment(a,b)" target="1_line")
 
-{.text-center }__第一公理__  
+{.text-center }__第一公理__
 可以用一条直[{.pill.red} 线段](target:1_line)连接任意[{.pill} 两个点](target:1_point)
 
 ::: column(width=220)
@@ -345,7 +348,7 @@ _{button.next-step} 继续_
       path(x="segment(c,d)" target="2_segment")
       path.blue.transparent(x="segment(c,d)" target="2_line")
 
-{.text-center }__第二公理__  
+{.text-center }__第二公理__
 可以把任意一条[{.pill} 线段](target:2_segment)扩展成一条[{.pill.blue} 无限长的线](target:2_line)
 
 ::: column(width=220)
@@ -356,8 +359,8 @@ _{button.next-step} 继续_
       path(x="segment(e,f)" label="r" target="3_radius")
       path.green(x="circle(e,distance(e,f))" target="3_circle")
 
-{.text-center }__第三公理__  
-线定一个[{.pill} 点 _P_](target:3_center)和一个[{.pill} 距离 _r_](target:3_radius)，可以 _P_ 为圆心，_r_ 为半径画一个[{.pill.green} 圆](target:3_circle) 
+{.text-center }__第三公理__
+线定一个[{.pill} 点 _P_](target:3_center)和一个[{.pill} 距离 _r_](target:3_radius)，可以 _P_ 为圆心，_r_ 为半径画一个[{.pill.green} 圆](target:3_circle)
 
 ::: column(width=220)
 
@@ -368,7 +371,7 @@ _{button.next-step} 继续_
       path.fill.orange(x="angle(xb,x,xa)" target="4_angle")
       path.dark(x="segment(x,xa)")
       path.dark(x="segment(x,xb)")
-    
+
       circle.move(name="y" cx=190 cy=60)
       circle(hidden name="ya" x="y.translate(point(110,80).subtract(y).rotate(pi/4).unitVector.scale(50))")
       circle(hidden name="yb" x="y.translate(point(110,80).subtract(y).rotate(-pi/4).unitVector.scale(50))")
@@ -376,7 +379,7 @@ _{button.next-step} 继续_
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
-{.text-center }__第四公理__  
+{.text-center }__第四公理__
 任意两个[{.pill.orange} 直角](target:4_angle)是全等的
 
 ::: column(width=220)
@@ -386,7 +389,7 @@ _{button.next-step} 继续_
       path(name="line5" x="line(point(50,80),point(130,140))" target="5_line" label="L")
       path.yellow(x="line5.parallel(g)" target="5_parallel")
 
-{.text-center }__第五公理__  
+{.text-center }__第五公理__
 给定一条[{.pill} 直线 _L_](target:5_line)和一个直线 _L_ 外的 [{.pill} 点 _P_](target:5_point)，刚好有[{.pill.yellow} 一条线](target:5_parallel)通过 _P_ ，并且这条线 [平行于](gloss:parallel) _L_。
 :::
 
@@ -522,8 +525,8 @@ _{button.next-step} 继续_
     // A midpoint is a point on a line segment that divides it into two congruent
     // segments. If A,B, and C are collinear, and AB=BC, then B is the midpoint of
     // `bar(AC)`.
-    // 
-    // A line, segment, or ray that passes through a midpoint of another segment 
+    //
+    // A line, segment, or ray that passes through a midpoint of another segment
     // at a right angle is called a __perpendicular bisector__. `bar(DE)` is the
     // perpendicular bisector of `bar(AC)`, so `bar(AB) ~= bar(BC)` and `bar(AC) ⊥ bar(DE)`.
 
@@ -535,17 +538,17 @@ _{button.next-step} 继续_
 {.todo} 即将推出 – 构造角平分线
 
     // When two rays have the same endpoint, an angle is created.
-    // 
+    //
     // Here, `vec(BA)` and `vec(BC)` meet to form an angle. An angle is labeled with an
     // “∠” symbol in front of the three letters used to label it. This angle can be
     // labeled `/_ABC` or `/_CBA`. Always put the vertex (the common endpoint of the
     // two rays) in the middle of the three points. It doesn’t matter which side point
     // is written first.
-    // 
+    //
     // An __angle bisector__ is a ray that divides an angle into two congruent angles,
     // each having a measure exactly half of the original angle. Every angle has
     // exactly one angle bisector.
-    // 
+    //
     // Angle Bisector Theorem: If a point is on the bisector of an angle, then the
     // point is equidistant from the sides of the angle.
     // In other words, if BD←→ bisects ∠ABC,BE−→−⊥ED, and BF−→−⊥DF, then ED=DF.
@@ -580,21 +583,21 @@ _{button.next-step} 继续_
 
     figure: img(src="images/impossible-1.svg" width=200 height=180)
 
-{.text-center} __{.m-red} 三等分角__  
+{.text-center} __{.m-red} 三等分角__
 我们已知知道如何平分一个角，但是如果要将一个角 _三_ 均等分却是不可能的
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-2.svg" width=200 height=180)
 
-{.text-center} __{.m-blue} 将立方体体积加倍__  
+{.text-center} __{.m-blue} 将立方体体积加倍__
 给定一个立方体的边长，不可能构造出另一个立方体的边长，使得该立方体的体积刚好是原立方体的两倍
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-3.svg" width=200 height=180)
 
-{.text-center} __{.m-green} 化圆为方__  
+{.text-center} __{.m-green} 化圆为方__
 给定一个圆，不可能构造出一个正方形，它的面积刚好等于圆的面积
 :::
 
@@ -624,7 +627,7 @@ Theorem #1: If two lines are parallel and a third line is perpendicular to one o
 
 Theorem #2: If two lines are perpendicular to the same line, they are parallel to each other.
 
-Distance Between Parallel Lines 
+Distance Between Parallel Lines
 The shortest distance between two parallel lines is the length of the perpendicular segment between them. It doesn’t matter which perpendicular line you choose, as long as the two points are on the lines. Recall that there are infinitely many perpendicular lines between two parallel lines.
 
 ---
@@ -828,18 +831,18 @@ _折纸_ _{span.no-voice}(折り紙)_ 一词源于日语 _oru_ (折叠) and _kam
     // ---
     // > id: origami-applications-2
     // > goals: video
-    // 
+    //
     // ::: column(width=300)
-    // 
+    //
     // x-video(src="https://static.mathigon.org/videos/stadium.mp4" poster="images/stadium.jpg" width=300 height=225 credit="© Mercedes Benz Stadium")
-    // 
+    //
     // ::: column.grow
     // #### Stadium Roofs
-    // 
+    //
     // Bridges are difficult to construct because they have to span large distances
     // without intermediate support. This also is the case for the roofs of sports
     // stadiums, which have to cover a large area without being supported by pillars.
-    // 
+    //
     // The roof of the new Falcons Stadium in Atlanta consists of eight enormous
     // modules that can twist to open or close.
     // :::

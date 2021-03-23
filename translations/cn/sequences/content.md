@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: u2vwpDVj5rU
+> color: "#F97E08"
+> level: Intermediate
+> next: fractals
 
 许多使用数学的专业人士都对数学的一个特定方面感兴趣 – __查找模式__，并且专业
 人士能够用它预测未来。以下是几个例子：
@@ -944,24 +948,24 @@ TODO
             polygon(points="129 386 121 366 129 371 137 366 129 386")
             polygon(points="399 386 391 366 399 371 407 366 399 386")
             polygon(points="579 386 571 366 579 371 587 366 579 386")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
@@ -970,7 +974,7 @@ TODO
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
-    
+
           .n(style="top: 0%") 1
           .n(style="top: 15%") 1
           .n(style="top: 32%") 2
@@ -994,7 +998,7 @@ TODO
 ---
 > id: rabbits-2
 
-某个月内兔子的数量是[[前之两个月的数量和|是之前一个月数量的两倍]]。 
+某个月内兔子的数量是[[前之两个月的数量和|是之前一个月数量的两倍]]。
 _{span.reveal(when="blank-0")}换句话说，你必须将序列中*前两*项相加，才能得到
 下一项。序列以都为1的两项开始，[递归公式](gloss:sequence-recursive)是_
 
@@ -1091,7 +1095,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.segmented   
+    x-select.segmented
       div(data-value="male") 雄性
       div(data-value="female") 雌性
     .bees
@@ -1424,7 +1428,7 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 在我们的[整除和素数](/course/divisibility/primes)课程中，你可以学到更多的
 关于素数的这些和其他性质的知识。它们是数学中最重要和最神秘的概念之一！
 
-    figure: img(src="images/primes.svg" width=480 height=156) 
+    figure: img(src="images/primes.svg" width=480 height=156)
 
 ---
 > id: perfect
@@ -1891,7 +1895,7 @@ __谢尔宾斯基三角形__。像这样的形状，由一个简单的模式组�
 
 {.todo} 即将上线，敬请期待
 
-    
+
 
 --------------------------------------------------------------------------------
 

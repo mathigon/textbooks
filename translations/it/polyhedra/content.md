@@ -4,8 +4,11 @@
 
 > section: polygons
 > id: polygons
+> color: "#4757D3"
+> level: Intermediate
+> next: circles
 
-Un [__poligono__](gloss:polygon) è una figura piana chiusa i cui lati sono dei segmenti. Un poligono può avere un numero arbitrario di lati e angoli, ma i lati non possono essere curvi. Quale delle seguenti figure è un poligono? 
+Un [__poligono__](gloss:polygon) è una figura piana chiusa i cui lati sono dei segmenti. Un poligono può avere un numero arbitrario di lati e angoli, ma i lati non possono essere curvi. Quale delle seguenti figure è un poligono?
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -116,7 +119,7 @@ Possiamo suddividere un pentagono in [[3]] triangoli, quindi la somma dei suoi a
 > id: internal-angle-sum
 
 Per un poligono con ${x}{x|7|3,15,1} lati la somma degli angoli interni sarà:
-180° × ${x-2} = ${(x-2)*180}°. Più in generale, un poligono con _n_ lati può essere suddiviso in  [[n – 2|n – 1|n]] triangoli. Dunque: 
+180° × ${x-2} = ${(x-2)*180}°. Più in generale, un poligono con _n_ lati può essere suddiviso in  [[n – 2|n – 1|n]] triangoli. Dunque:
 
 {.text-center.reveal(when="blank-0")} Somma degli angoli interni in un poligono di _n_ lati
 `= (n - 2) × 180°`.
@@ -203,7 +206,7 @@ possiamo così calcolare l'ampiezza di un singolo angolo interno:
 {.text-center.reveal(when="blank-0")} angolo = <mfrac><mrow>[[somma degli angoli interni|numero di angoli]]</mrow><mrow>[[numero di angoli|somma degli angoli interni]]</mrow></mfrac>
 _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x`._
 
-{.reveal(when="blank-1 blank-2" delay=1000)} Se `n=3` troviamo l'ampiezza 
+{.reveal(when="blank-1 blank-2" delay=1000)} Se `n=3` troviamo l'ampiezza
 dell'angolo interno di un triangolo equilatero – sappiamo già che dev'essere
 [[60]]°. _{span.reveal(when="blank-3")} In un poligono regolare con ${x}{x|6|3,12,1}
 lati, ogni angolo interno misura: 180° – <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
@@ -253,7 +256,7 @@ l'area. _{span.reveal(when="blank-2")} Nei poligoni regolari, questa altezza
 si chiama [{.step-target.pill.yellow}apotema](target:apothem)._
 
 {.reveal(when="blank-1 blank-2" delay=1000)} Nota che l'apotema e la metà della base di ogni triangolo isoscele sono i cateti di [un triangolo
-rettangolo](target:right-triangle) 
+rettangolo](target:right-triangle)
 Possiamo quindi utilizzare la trigonometria!
 
 {.reveal(when="blank-1 blank-2" delay=2000)} gli [{.step-target.pill.blue}angoli alla base](target:base-angle)
@@ -266,7 +269,7 @@ un [angolo interno](target:int-angle) del poligono:
 {.reveal(when="blank-3")} Per trovare l'apotema, possiamo usare la definizione di
 [[tangente|seno|coseno]]:
 
-{.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
+{.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") =
 pill("cateto opposto", "yellow", "apothem") / pill("cateto adiacente", "green", "half-base") =
 blank("apotema", "s", "s/2") / blank("s/2", "s", "apotema")`
 
@@ -282,7 +285,7 @@ var("round(tan(pi/2-pi/n)/2,2)")"m"`
 "yellow", "apothem") = var("round(tan(pi/2-pi/n)/4,2)") "m"^2`
 
 {.reveal(when="blank-5 blank-6" delay=4000)} Il poligono è formato da ${n}
-triangoli isosceli, che hanno tutti la stessa area. Perciò, l'area 
+triangoli isosceli, che hanno tutti la stessa area. Perciò, l'area
 totale del poligono sarà:
 
 {.text-center.reveal(when="blank-5 blank-6" delay=4000)} `A = var("n") ×
@@ -452,7 +455,7 @@ osserva cosa accade a quello interno. Si direbbe che non è solo un quadrilatero
 
 {.reveal(when="blank-1")} Ma perché?Come mai il risultato
 per _ogni_ quadrilatero è sempre un parallelogramma? Per capire meglio,
-dobbiamo disegnare una delle [diagonali](gloss:polygon-diagonal) del quadrilatero 
+dobbiamo disegnare una delle [diagonali](gloss:polygon-diagonal) del quadrilatero
 originale.
 
 {.reveal(when="diagonal")} La diagonale divide il quadrilatero in [due
@@ -538,7 +541,7 @@ siano _sempre_ vere, dobbiamo  _dimostrarle_ :
       path.fill.yellow.transparent(x="polygon(a,b,o?c:d)" target="triangles")
       path.fill.green.transparent(x="polygon(o?a:b,c,d)" target="triangles")
       path(x="polygon(a,b,c,d)")
-      
+
       path.green.transparent(x="segment(a,b)" target="sides")
       path.green.transparent(x="segment(c,d)" target="sides")
       path.yellow.transparent(x="segment(b,c)" target="sides")
@@ -560,10 +563,10 @@ quindi devono essere [[congruenti|adiacenti|supplementari]].
 
 {.reveal(when="blank-0")} Ora, osservando i [due triangoli](target:triangles)
 creati dalle diagonali, notiamo che essi hanno due angoli congruenti,
-e [un lato congruente](target:diagonal). Secondo il criterio di congruenza [[ALA|AAS|AA]] 
+e [un lato congruente](target:diagonal). Secondo il criterio di congruenza [[ALA|AAS|AA]]
 i due triangoli devono essere congruenti.
 
-{.reveal(when="blank-1")} Ciò significa che anche le altre grandezze corrispondenti nei due triangoli 
+{.reveal(when="blank-1")} Ciò significa che anche le altre grandezze corrispondenti nei due triangoli
 devono essere uguali: in particolare, entrambe le [coppie di lati
 opposti](target:sides) sono congruenti, e entrambe le [coppie di angoli opposti](target:angles) sono congruenti. _{span.qed}_
 :::
@@ -591,13 +594,13 @@ quadrilatero dev'essere un parallelogramma.
       path.fill.red(x="angle(b1,c1,a1).sup" target="anglesR")
       path.fill.blue(x="angle(a1,d1,b1).sup" target="anglesB")
       path.fill.blue(x="angle(d1,b1,c1).sup" target="anglesB")
-      
+
       path(x="polygon(a1,b1,c1,d1)")
       path(x="segment(a1,c1)")
       path(x="segment(b1,d1)")
       path.green(x="segment(a1,d1)" target="side1")
       path.green(x="segment(b1,c1)" target="side1")
-      
+
       path.yellow.tick.transparent(x="segment(a1,m1)" target="AM")
       path.yellow.tick.transparent(x="segment(b1,m1)" target="BM")
       path.yellow.tick.transparent(x="segment(c1,m1)" target="CM")
@@ -733,7 +736,7 @@ otteniamo [altri due triangoli più piccoli](target:triangle2). Anche questi dev
 congruenti, per via del criterio [LAL](gloss:triangle-sss) : hanno gli stessi [due lati e l'angolo da essi incluso](target:sas).
 _{button.next-step} Continua_
 
-{.reveal(when="next-3")} Questo significa che l'[angolo α](target:alpha) dev'essere 
+{.reveal(when="next-3")} Questo significa che l'[angolo α](target:alpha) dev'essere
 uguale a [angle β](target:beta). Siccome sono adiacenti, [angoli supplementari](gloss:supplementary-angles) sia α che β devono misurare [[90]]°.
 
 {.reveal(when="blank-3")} In altre parole, le diagonali di un aquilone sono sempre
@@ -775,7 +778,7 @@ _{span.reveal(when="blank-1")} Perciò l'area di un parallelogramma è_
 
 {.text-center.reveal(when="blank-1")} Area = __{.i.m-green}base__ × __{.i.m-yellow}altezza__
 
-{.reveal(when="blank-1" delay=1000)} _Fai attenzione quando misuri l'altezza di un 
+{.reveal(when="blank-1" delay=1000)} _Fai attenzione quando misuri l'altezza di un
 parallelogramma: normalmente non è uguale alla lunghezza di uno dei lati._
 :::
 
@@ -812,7 +815,7 @@ di questo rettangolo è la [[distanza tra i |media dei|lunghezza dei]] [lati par
 
 {.reveal.r(when="blank-2")} La [{.step-target.pill.yellow} base](target:t-width)
 del rettangolo è la distanza tra i [[punti medi|vertici]] dei due
-lati obliqui del trapezio. 
+lati obliqui del trapezio.
 
 _{span.reveal(when="blank-3")}._
 _{button.next-step.reveal(when="blank-3")} Continua_
@@ -839,18 +842,18 @@ e altezza [_h_](target:t-height):
       circle.transparent(name="b3" x="point(5,1)")
       circle.transparent(name="c3" x="point(13,5)")
       circle.transparent(name="d3" x="point(5,9)")
-      
+
       path.fill.blue.light(x="polygon(a3,b3,c3,d3)")
       path.green(x="segment(a3,c3)" label="d1" target="diag3 d31")
       path.yellow(x="segment(b3,d3)" label="d2" target="diag3 d32")
       path(x="polygon(point(1,1),point(13,1),point(13,9),point(1,9))" target="rect4")
       path.blue(x="polygon(a3,b3,c3,d3)")
-      
+
       path.fill.red.transparent(x="polygon(a3,b3,point(5,5))" target="inside")
       path.fill.blue.transparent(x="polygon(b3,c3,point(5,5))" target="inside")
       path.fill.green.transparent(x="polygon(c3,d3,point(5,5))" target="inside")
       path.fill.yellow.transparent(x="polygon(d3,a3,point(5,5))" target="inside")
-      
+
       path.fill.red.transparent(x="polygon(a3,b3,point(1,1))" target="outside")
       path.fill.blue.transparent(x="polygon(b3,c3,point(13,1))" target="outside")
       path.fill.green.transparent(x="polygon(c3,d3,point(13,9))" target="outside")
@@ -883,14 +886,14 @@ triangoli](target:inside) che compongono l'aquilone sono uguali ai
       circle.move(name="b4" cx=150 cy=50)
       circle.move(name="d4" cx=150 cy=190 project="circle(a4,distance(a4,b4))")
       circle(name="c4" x="d4.add(b4).subtract(a4)")
-      
+
       path.fill.blue.light(x="polygon(a4,b4,c4,d4)")
 
       path.thin(x="line(c4,d4)")
       circle(name="q4" x="line(c4,d4).project(a4)")
       path.thin(x="angle(a4,q4,d4).sup" size=15)
       path.red(x="segment(q4,a4)" label="height" target="height")
-      
+
       path.green(x="segment(a4,c4)" label="d1" target="d41")
       path.yellow(x="segment(b4,d4)" label="d2" target="d42")
       path.blue(x="polygon(a4,b4,c4,d4)")
@@ -902,7 +905,7 @@ ricorderai, ogni rombo è un [[parallelogramma|rettangolo|quadrato]] – e
 anche un [[aquilone|esagono|poligono concavo]].
 
 {.reveal(when="blank-6 blank-7")} Di conseguenza, per trovare l'area di un rombo,
-possiamo usare l'equazione per l'area di un parallelogramma, o quella per 
+possiamo usare l'equazione per l'area di un parallelogramma, o quella per
 l'area di un aquilone:
 
 {.text-center.reveal(when="blank-6 blank-7")} _Area_ =
@@ -920,7 +923,7 @@ quindi scegliere la formula più efficace._
 
 ---
 
-## Tassellazioni 
+## Tassellazioni
 
 > section: tessellations
 > id: tessellations
@@ -934,7 +937,7 @@ senza spazi o sovrapposizioni. Queste strutture sono chiamate
 
     x-img(lightbox src="images/tessellations/honeycomb.jpg", width=200 height=200)
 
-{.caption} Alveare [[esagonale|triangolare|quadratico]] 
+{.caption} Alveare [[esagonale|triangolare|quadratico]]
 ::: column(width=200)
 
     x-img(lightbox src="images/tessellations/snake.jpg", width=200 height=200)
@@ -1038,7 +1041,7 @@ Avrai notato che con alcuni [poligoni regolari](gloss:regular-polygon) (ad esemp
 > id: tessellation-regular-1
 
 Questo ha a che vedere con l'ampiezza dei loro [angoli interni](gloss:internal-angle),
-che abbiamo imparato a calcolare prima. In ogni [vertice](gloss:polygon-vertex) della 
+che abbiamo imparato a calcolare prima. In ogni [vertice](gloss:polygon-vertex) della
 tassellazione, gli angoli interni di più poligoni sono accostati. La
 somma di tutti questi angoli dev'essere [[360]]°, altrimenti avremo un buco o una sovrapposizione.
 
@@ -1128,7 +1131,7 @@ Possiamo anche provare a creare delle tassellazioni con [poligoni irregolari](gl
 ::: column.grow
 Scopriamo così che non funzionano solo le tassellazioni con i triangoli equilateri, bensì con _ogni
 triangol_! Prova a spostare [vertici](target:vertex) in questo diagramma.
- 
+
 La somma degli angoli interni di un tiangolo è [[180]]°. Se usiamo ogni angolo
 [[due volte|una volta|tre volte]] in ogni vertice della tassellazione, otteniamo 360°:
 
@@ -1190,9 +1193,9 @@ La somma degli angoli interni di un tiangolo è [[180]]°. Se usiamo ogni angolo
             path.blue.fill(x=`x.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
             path.green.fill(x=`y.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
 
-::: column.grow    
+::: column.grow
 Sorprendentemente, _ogni quadrilatero_ può tassellare il piano! La somma dei suoi angoli interni
-è [[360]]°, quindi se usiamo ogni angolo [[una volta|due volte|tre volte]] in ogni 
+è [[360]]°, quindi se usiamo ogni angolo [[una volta|due volte|tre volte]] in ogni
 vertice della tassellazione, otteniamo 360°.
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
@@ -1259,7 +1262,7 @@ sa se ce ne sono altre, o se queste 15 sono le uniche…
 
 ### Tassellazioni nell'arte
 
-Le tassellazioni sono servite da strumento e ispirazione per molti artisti, architetti e 
+Le tassellazioni sono servite da strumento e ispirazione per molti artisti, architetti e
 designers – in particolare all'artista olandese [M. C. Escher](bio:escher). Il lavoro di
 Escher contiene creature curiose e mutanti, schemi e paesaggi:
 
@@ -1303,7 +1306,7 @@ uguali ovunque.
 Negli anni'70, il matematico e fisico britannico [Roger Penrose](bio:penrose)
 scoprì le tassellazioni _non-periodiche_  – che si estendono sì all'infinito in ogni
 direzione, ma non appaiono _mai_ esattamente uguali. Qeste tassellazioni si chiamano __tassellature
-di Penrose__, e servono solo un pochi tipi di poligoni diversi per 
+di Penrose__, e servono solo un pochi tipi di poligoni diversi per
 crearne una:
 
     figure
@@ -1353,7 +1356,7 @@ piramidi con poche facce, fino ad oggetti complessi come la stella illustrata so
 ha 60 facce triangolari. Tuttavia, _tutti_ i poliedri hanno un'importante proprietà in comune:
 
 ::: .theorem
-__La formula di Eulero per i poliedri__  
+__La formula di Eulero per i poliedri__
 In ogni poliedro, il numero di facce (_F_) addizionato al numero di vertici (_V_)
 supera di due il numero di spigoli (_S_). In altre parole,
 
@@ -1381,7 +1384,7 @@ scoprirai come dimostrarla matematicamente.
 > sectionStatus: dev
 
 Il nostro mondo è tridimensionale – ma spesso è molto più semplice disegnare
-e visualizzare oggetti piatti, bidimensionali. Ci sono diversi modi di 
+e visualizzare oggetti piatti, bidimensionali. Ci sono diversi modi di
 visualizzare un poliedro tridimensionale in due dimensioni.
 
 Quale di questi sviluppi forma un cubo?
@@ -1612,8 +1615,8 @@ __tetraedro__
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
-_{span.dual}[[4]] Faces_  
-_{span.dual}[[4]] Vertices_  
+_{span.dual}[[4]] Faces_
+_{span.dual}[[4]] Vertices_
 _{span.dual}[[6]] Edges_
 
 ::: column.grow.text-center(width=120)
@@ -1621,8 +1624,8 @@ __cubo__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
-_{span.dual(target="dual1")}[[6]] facce_  
-_{span.dual(target="dual1")}[[8]] vertici_  
+_{span.dual(target="dual1")}[[6]] facce_
+_{span.dual(target="dual1")}[[8]] vertici_
 _{span.dual}[[12]] Edges_
 
 ::: column.grow.text-center(width=120)
@@ -1630,8 +1633,8 @@ __ottaedro__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
-_{span.dual(target="dual1")}[[8]] facce_  
-_{span.dual(target="dual1")}[[6]] vertici_  
+_{span.dual(target="dual1")}[[8]] facce_
+_{span.dual(target="dual1")}[[6]] vertici_
 _{span.dual}[[12]] spigoli_
 
 ::: column.grow.text-center(width=120)
@@ -1639,8 +1642,8 @@ __dodecaedro__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
-_{span.dual(target="dual2")}[[12]] facce_  
-_{span.dual(target="dual2")}20 vertici_  
+_{span.dual(target="dual2")}[[12]] facce_
+_{span.dual(target="dual2")}20 vertici_
 _{span.dual}30 spigoli_
 
 ::: column.grow.text-center(width=120)
@@ -1648,8 +1651,8 @@ __icosaedro__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
-_{span.dual(target="dual2")}[[20]] facce_  
-_{span.dual(target="dual2")}12 vertici_  
+_{span.dual(target="dual2")}[[20]] facce_
+_{span.dual(target="dual2")}12 vertici_
 _{span.dual}30 spigoli_
 :::
 
@@ -1707,68 +1710,68 @@ di Siracusa](bio:archimedes), e ne esistono 13:
 
 ::: column(width=170 parent="padded-thin")
     x-polyhedron(size=170 shape="TruncatedTetrahedron")
-    
-{.caption} __Tetraedro troncato__  
+
+{.caption} __Tetraedro troncato__
 8 facce, 12 vertici, 18 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="Cuboctahedron")
 
-{.caption} __Cubottaedro__  
+{.caption} __Cubottaedro__
 14 facce, 12 vertici, 24 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCube")
 
-{.caption} __Cubo troncato__  
+{.caption} __Cubo troncato__
 14 facce, 24 vertici, 36 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedOctahedron")
 
-{.caption} __Ottaedro troncato__  
+{.caption} __Ottaedro troncato__
 14 facce, 24 vertici, 36 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicuboctahedron")
 
-{.caption} __Rombicubottaedro__  
+{.caption} __Rombicubottaedro__
 26 facce, 24 vertici, 48 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __Cubottaedro troncato__  
+{.caption} __Cubottaedro troncato__
 26 facce, 48 vertici, 72 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubCube")
 
-{.caption} __Cubo camuso__  
+{.caption} __Cubo camuso__
 38 facce, 24 vertici, 60 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="Icosidodecahedron")
 
-{.caption} __Icosidodecaedro__  
+{.caption} __Icosidodecaedro__
 32 facce, 30 vertici, 60 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedDodecahedron")
 
-{.caption} __Dodecaedro troncato__  
+{.caption} __Dodecaedro troncato__
 32 facce, 60 vertici, 90 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosahedron")
 
-{.caption} __Icosaedro troncato__  
+{.caption} __Icosaedro troncato__
 32 facce, 60 vertici, 90 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicosidodecahedron")
 
-{.caption} __Rhombicosidodecaedro__  
+{.caption} __Rhombicosidodecaedro__
 62 facce, 60 vertici, 120 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosidodecahedron")
 
-{.caption} __Icosidodecaedro troncato__  
+{.caption} __Icosidodecaedro troncato__
 62 facce, 120 vertici, 180 spigoli
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubDodecahedron")
 
-{.caption} __Dodecaedro camuso__  
+{.caption} __Dodecaedro camuso__
 92 facce, 60 vertici, 150 spigoli
 :::
 
@@ -1785,7 +1788,7 @@ in natura – e possiamo sfruttare queste proprieta nella scienza e nell'ingenie
 
     x-img(lightbox width=180 height=180 src="images/radiolaria.jpg")
     p.caption Scheledro di radiolario
-    
+
 ::: column(width=180)
 
     x-img(lightbox width=180 height=180 src="images/virus.jpg")
@@ -1803,12 +1806,12 @@ ma ha quasi la forma di una sfera.
 
     x-img(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
     p.caption Molecola di  buckminsterfullerene
-      
+
 ::: column(width=180)
 
     x-img(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
-    p.caption Biosfera di Montreal 
-      
+    p.caption Biosfera di Montreal
+
 ::: column.grow
 Molte __molecole__ hanno la forma di poliedri regolari. L'esempi più famoso è il
 `C_60` che consiste in 60 atomi di carbonio disposti a forma di [icosaedro troncato](gloss:truncated-icosahedron).
@@ -1822,12 +1825,12 @@ Fuller](bio:fuller), famoso per la costruzione di edifici con quella forma.
 
     x-img(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
     p.caption Ottaedro di fluorite
-      
+
 ::: column(width=180)
 
     x-img(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
     p.caption Cubo di pirite
-      
+
 ::: column.grow
 La maggior parte dei __cristalli__ hanno i loro atomi disposti in una griglia regolare composta da
 [tetraedri](gloss:tetrahedron), [cubi](gloss:cube) o [ottaedri](gloss:octahedron).
@@ -1854,7 +1857,7 @@ sostenere ampi tetti e pesanti ponti.
 
     x-img(lightbox width="180", height="180", src="images/football.jpg")
     p.caption Pallone da calcio
-    
+
 ::: column(width=180)
 
     x-img(lightbox width="180", height="180", src="images/dice.jpg")

@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#2274E8"
+> level: Intermediate
+> next: triangles
 > translated: auto
 
 Multe concepte geometrice, precum [dreptele](gloss:line) și [punctele](gloss:point),
@@ -24,7 +27,7 @@ au fost “inventate” de matematicieni. Pe de altă parte, simetria există pe
 
 :::
 
-De-a lungul timpului, am imitat simetria naturii în artă, arhitectură, tehnologie și design. 
+De-a lungul timpului, am imitat simetria naturii în artă, arhitectură, tehnologie și design.
 Formele și modelele simetrice par să arate pur și simplu _mai frumos_ decât cele nesimetrice.
 
 ::: column(width=200)
@@ -41,7 +44,7 @@ Formele și modelele simetrice par să arate pur și simplu _mai frumos_ decât 
 
 :::
 
-Dar simetria este mult mai importantă decât pentru faptul că _arată frumos_. 
+Dar simetria este mult mai importantă decât pentru faptul că _arată frumos_.
 Ea stă la baza universului nostru și poate chiar explica cele mai fundamentale legi ale fizicii.
 
 _{button.next-step} Continuă_
@@ -51,7 +54,7 @@ _{button.next-step} Continuă_
 > goals: t1 t2 t3
 
 În timp ce simetria este un concept foarte intuitiv, descrierea sa matematică este mult
-mai dificilă decât ți-ai putea imagina. Mai întâi trebuie să învățăm despre 
+mai dificilă decât ți-ai putea imagina. Mai întâi trebuie să învățăm despre
 [_transformări_](gloss:transformation), metode de a converti o formă geometrică
 în alta. Iată câteva exemple:
 
@@ -88,8 +91,8 @@ au această proprietate se numesc __transformări rigide__.
 > translated: auto
 
 O [__transformare rigidă__](gloss:rigid-transformation) este un tip special de transformare
-ce nu schimbă dimensiunea și forma figurii inițiale. Imaginează-ți că figura este făcută dintr-un 
-material solid precum lemnul sau metalul: o putem muta, întoarce sau răsturna, dar nu o putem 
+ce nu schimbă dimensiunea și forma figurii inițiale. Imaginează-ți că figura este făcută dintr-un
+material solid precum lemnul sau metalul: o putem muta, întoarce sau răsturna, dar nu o putem
 întinde sau deforma altfel.
 
 Care dintre aceste transformări sunt rigide?
@@ -106,7 +109,7 @@ Care dintre aceste transformări sunt rigide?
 > goals: t1 t2 t3
 
 În cazul transformărilor rigide imaginea este mereu
-[[congruentă cu|asemenea cu|opusă]] forma inițială. Există trei tipuri diferite 
+[[congruentă cu|asemenea cu|opusă]] forma inițială. Există trei tipuri diferite
 de transformări rigide:
 
 ::: column.grow.r(width=200)
@@ -137,7 +140,7 @@ de transformări rigide:
 ---
 > id: rigid-2
 
-Putem combina mai multe tipuri de transformări pentru a crea transformări mai 
+Putem combina mai multe tipuri de transformări pentru a crea transformări mai
 complexe – de exemplu, o translație urmată de o rotație.
 
 Dar mai întâi hai să aruncăm o privire mai în detaliu asupra fiecărui tip de transformare.
@@ -151,7 +154,7 @@ O [__translație__](gloss:translation) este o transformare care deplasează fiec
 al unei figuri la aceeași distanță și în aceeași direcție.
 
 În sistemul de coordonate carteziene, putem defini o translație prin distanța cu care
-este deplasată de-a lungul axei _x_ și a axei _y_. De exemplu, o transformare de (3,5) 
+este deplasată de-a lungul axei _x_ și a axei _y_. De exemplu, o transformare de (3,5)
 deplasează o formă cu 3 de-a lungul axei _x_ și cu 5 de-a lungul axei _y_.
 
 ::: column(width=220)
@@ -230,7 +233,7 @@ Acum este rândul tău – translează următoarele forme după cum a fost arăt
 
 ### Reflexii
 
-O [__reflexie__](gloss:reflection) este o transformare care “răstoarnă” sau 
+O [__reflexie__](gloss:reflection) este o transformare care “răstoarnă” sau
 “oglindește” o formă față de o linie. Această linie se numește __axă de reflexie__.
 
 Desenează axa de reflexie pentru fiecare din următoarele exemple:
@@ -341,13 +344,13 @@ construcția ei necesită un pic mai mult de lucru:
 reflectăm fiecare [vârf](gloss:polygon-vertex) în parte și apoi să le unim din nou.
 _{button.next-step} Continuă_
 
-{.r.reveal(when="next-0")} Hai să alegem unul dintre vârfuri și să desenăm dreapta 
+{.r.reveal(when="next-0")} Hai să alegem unul dintre vârfuri și să desenăm dreapta
 care trece prin acest vârf și este perpendiculară pe axa de reflexie.
 _{button.next-step} Continuă_
 
 {.r.reveal(when="next-1")} Acum putem măsura [distanța](target:d1) de la vârf
-până la axa de reflexie și să trasăm punctul care se află la 
-[aceeași distanță](target:d2) pe partea cealaltă. 
+până la axa de reflexie și să trasăm punctul care se află la
+[aceeași distanță](target:d2) pe partea cealaltă.
 _{span.lgrey}(Putem folosi o riglă sau un [compas](target:circ) pentru a face asta.)_
 _{button.next-step} Continuă_
 
@@ -366,7 +369,7 @@ corectă și am obținut reflexia!
 ### Rotații
 
 O [__rotație__](gloss:rotation) este o transformare geometrica ce “învârte” o formă cu un
-anume unghi în jurul unui punct fix. Acest punct se numește 
+anume unghi în jurul unui punct fix. Acest punct se numește
 [__centru de rotație__](gloss:center-of-rotation). Rotațiile pot fi în sensul acelor de ceasornic
 sau în sens invers acelor de ceasornic.
 
@@ -435,7 +438,7 @@ sau în sens invers acelor de ceasornic.
       path.reveal.thin.light(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
       path.reveal.thin.light(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
       path.reveal.thin.light(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
-      
+
       path.transparent(x="segment(rot,a1)" target="compass protractor")
       path.transparent(x="circle(rot,distance(rot,a))" target="compass")
 
@@ -455,22 +458,22 @@ măsura unui [unghi de ${ang*10}°](target:angle) în jurul centrului de rotați
 Hai să desenăm o a [doua dreaptă](target:l2) în acel unghi.
 _{button.next-step} Continuă_
 
-{.r.reveal(when="next-2")} Folosind un [compas](target:compass) sau o riglă, putem găsi 
-pe această dreaptă un [punct](target:a1) care se află la aceeași distanță față de centrul de 
+{.r.reveal(when="next-2")} Folosind un [compas](target:compass) sau o riglă, putem găsi
+pe această dreaptă un [punct](target:a1) care se află la aceeași distanță față de centrul de
 rotație ca punctul inițial.
 _{button.next-step} Continuă_
 
 {.r.reveal(when="next-3")} Acum trebuie să repetăm acești pași pentru toate celelalte vârfuri ale formei noastre.
 _{button.next-step} Continuă_
 
-{.reveal(when="next-4")} Și în sfârșit, la fel ca mai înainte, putem uni vârfurile individuale pentru 
+{.reveal(when="next-4")} Și în sfârșit, la fel ca mai înainte, putem uni vârfurile individuale pentru
 a obține imaginea rotită a formei noastre inițiale.
 :::
 
 ---
 > id: composition-1
 
-Transformările sunt un concept important în multe din ramurile matematicii, nu 
+Transformările sunt un concept important în multe din ramurile matematicii, nu
 doar în geometrie. De exemplu, putem transforma o [_funcție_](gloss:function) prin
 deplasarea sau rotirea [graficului](gloss:function-graph) lor. De asemenea, putem
 utiliza transformările pentru a determina dacă două forme sunt [congruente](gloss:congruent).
@@ -496,10 +499,10 @@ TODO
 
 [__Simetria__](gloss:symmetry) există peste tot în jurul nostru și este un concept
 intuitiv: părți diferite ale unui obiect arată _identic_ dintr-un anumit punct de vedere.
-Dar, folosind transformări geometrice, putem formula o definiție matematică mult mai 
+Dar, folosind transformări geometrice, putem formula o definiție matematică mult mai
 precisă pentru ce înseamnă _cu adevărat_ simetria:
 
-{.definition} Un obiect este _simetric_ dacă arată la fel, chiar și după aplicarea unei 
+{.definition} Un obiect este _simetric_ dacă arată la fel, chiar și după aplicarea unei
 anumite transformări geometrice.
 
 ::: column.grow
@@ -641,7 +644,7 @@ Iată câteva forme în plus. Completează-le astfel încât să aibă simetrie 
 Formele, literele și imaginile au simetrie reflexivă, precum și numerele,
 cuvintele și propozițiile!
 
-De exemplu, “25352” și “ANNA” se citesc la fel de la coadă la cap. Un astfel de număr sau 
+De exemplu, “25352” și “ANNA” se citesc la fel de la coadă la cap. Un astfel de număr sau
 cuvânt se numește [__palindrom__](gloss:palindrome). Poți da alte exemple de palindromuri?
 
     form.palindromes.text-center.form-field
@@ -658,13 +661,13 @@ cuvânt se numește [__palindrom__](gloss:palindrome). Poți da alte exemple de 
 Dacă ignorăm spațiile și punctuația, propozițiile scurte de mai jos au și ele
 simetrie reflexivă. Poți găsi un alt exemplu ?
 
-{.text-center} Niciodată par sau impar.  
+{.text-center} Niciodată par sau impar.
 [[Ene]] purta patru pene.
 Ai ramas acasa, [[Maria]]!
 
-{.reveal(when="blank-0 blank-1")} Palindromurile nu sunt doar distractive, ele au, 
+{.reveal(when="blank-0 blank-1")} Palindromurile nu sunt doar distractive, ele au,
 de fapt, o importanță practică. În urmă cu câțiva ani, oamenii de știință au descoperit
-că porțiuni din [ADN](gloss:dna)-ul nostru sunt palindromice. Asta întărește rezistența 
+că porțiuni din [ADN](gloss:dna)-ul nostru sunt palindromice. Asta întărește rezistența
 la mutații sau defecte - pentru că există o copie suplimentară pentru fiecare porțiune.
 
 ---
@@ -677,8 +680,8 @@ O formă are [__simetrie rotațională__](gloss:rotational-symmetry) dacă arat�
 ce a fost rotită (cu mai puțin de 360°). [Centrul de rotație](gloss:center-of-rotation)
 este de obicei mijlocul formei.
 
-[__Ordinul de simetrie__](gloss:order-of-symmetry) este numărul de orientări diferite 
-în care forma arată la fel. Ne putem gândi la el ca la _numărul de rotații ale unei forme_ 
+[__Ordinul de simetrie__](gloss:order-of-symmetry) este numărul de orientări diferite
+în care forma arată la fel. Ne putem gândi la el ca la _numărul de rotații ale unei forme_
 necesare pentru a ajunge din nou la poziția de start.
 De exemplu, acest fulg de zăpadă are ordinul [[6]].
 
@@ -758,7 +761,7 @@ Acum completează aceste forme astfel încât să aibă simetrie rotațională:
 > section: symmetry-groups
 > translated: auto
 
-Unele forme au mai mult de o axă de simetrie - hai să aruncăm o privire 
+Unele forme au mai mult de o axă de simetrie - hai să aruncăm o privire
 la [pătrat](gloss:square) ca exemplu simplu.
 
 ::: column(width=400 parent="padded-thin")
@@ -856,26 +859,26 @@ Poate că ai observat deja că adunarea __{.orange}simetriilor__ este de fapt
 foarte asemănătoare cu adunarea __{.green}numerelor întregi__:
 
     ol.proof
-      
+
       li.r
         | Adunând două #[strong.orange simetrii]/#[strong.green numere întregi] se va obține mereu #[strong.orange o altă simetrie]/#[strong.green un alt număr întreg]:
-        .text-center.axiom 
+        .text-center.axiom
           img.cube(src="images/cube-2.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-6.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-4.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 12
           mo +
           mn 7
           mo =
           mn 19
         .next-step Continuă
-      
+
       li.r.reveal(when="next-0")
         span.md Adunarea #[strong.orange simetriilor]/#[strong.green numerelor întregi] este [asociativă](gloss:associative):
-        .text-center.axiom 
+        .text-center.axiom
           mfenced
             img.cube(src="images/cube-1.svg" width=32 height=32)
             mo +
@@ -898,16 +901,16 @@ foarte asemănătoare cu adunarea __{.green}numerelor întregi__:
           mo +
           mfenced #[mn 2]#[mo +]#[mn 5]
         .next-step Continue
-      
+
       li.r.reveal(when="next-1")
         | Orice #[strong.orange simetrie]/#[strong.green număr întreg] are o/un #[strong invers(ă)], #[strong.orange o altă simetrie]/#[strong.green un alt număr intreg] care, atunci când e adunat, rezultă identitatea:
-        .text-center.axiom 
+        .text-center.axiom
           img.cube(src="images/cube-1.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-3.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-0.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 4
           mo +
           mn –4
@@ -918,15 +921,15 @@ foarte asemănătoare cu adunarea __{.green}numerelor întregi__:
 ---
 > id: groups-1
 
-În matematică, orice colecție ce are aceste proprietăți se numește [__grup__](gloss:group). 
-Unele grupuri (precum __{.orange}simetriile__ unui pătrat) au doar un număr finit de 
+În matematică, orice colecție ce are aceste proprietăți se numește [__grup__](gloss:group).
+Unele grupuri (precum __{.orange}simetriile__ unui pătrat) au doar un număr finit de
 elemente. Altele (precum __{.green}numerele întregi__) sunt infinite.
 
 În acest exemplu, am început cu cele opt simetrii ale pătratului. De fapt,
 orice formă geometrică are propriul ei __grup de simetrie__. Toate au diferite elemente
 care satisfac mereu cele trei reguli menționate mai sus.
 
-Grupurile sunt prezente peste tot în matematică. Elementele pot fi numere sau simetrii, 
+Grupurile sunt prezente peste tot în matematică. Elementele pot fi numere sau simetrii,
 dar și polinoame, permutații, matrice, funcții … _orice_ îndeplinește cele trei reguli.
 Ideea principală a _teoriei grupurilor_ este că nu ne interesează elementele individuale,
 ci _cum interacționează ele unele cu altele_.
@@ -952,16 +955,16 @@ Adenovirusului (dreapta) sunt determinate de simetriile lor.
 
 > id: wallpaper-groups
 
-În [capitolele anterioare](/course/transformations/symmetry) am văzut două tipuri 
+În [capitolele anterioare](/course/transformations/symmetry) am văzut două tipuri
 diferite de simetrie ce corespund cu două transformări diferite: rotații si reflexii.
-Dar există și o simetrie pentru al treilea tip de transformare rigidă: 
+Dar există și o simetrie pentru al treilea tip de transformare rigidă:
 [[translație|rotire|răsturnare]].
 
 ---
 > id: wallpaper-groups-1
 > goals: play-0 play-1
 
-[__Simetria translativă__](gloss:translational-symmetry) nu se aplică obiectelor izolate 
+[__Simetria translativă__](gloss:translational-symmetry) nu se aplică obiectelor izolate
 precum flori sau fluturi, dar se aplică tiparelor regulate care se extind în ordice direcție:
 
 ::: column.grow
@@ -985,7 +988,7 @@ precum flori sau fluturi, dar se aplică tiparelor regulate care se extind în o
 ---
 > id: footsteps
 
-Adițional simetriei reflexive, rotaționale și translative există chiar și un al 
+Adițional simetriei reflexive, rotaționale și translative există chiar și un al
 patrulea tip: [__reflexie cu alunecare__](gloss:glide-reflection). Aceasta este
 o combinație între o reflexie și o translație în aceeași direcție cu axa de reflexie.
 
@@ -1002,7 +1005,7 @@ Un șablon poate avea mai mult de un tip de simetrie. La fel ca la pătrate,
 putem afla [grupul de simetrie](gloss:symmetry-group) al unui șablon, ce conține
 toate simetriile sale diferite.
 
-Aceste grupuri nu ne spun cum arată _șablonul_ (ex: culorile și formele sale), 
+Aceste grupuri nu ne spun cum arată _șablonul_ (ex: culorile și formele sale),
 ci doar cum se _repetă_. Multe modele diferite pot avea același grup de simetrie -
 atâta timp cât sunt aranjate și se repetă în același fel.
 
@@ -1020,15 +1023,15 @@ Dar simetriile nu au legătură cu culorile sau formele superficiale.
       img(src="images/wallpaper-3.svg" width=150 height=150 style="margin: 0 10px")
       img(src="images/wallpaper-4.svg" width=150 height=150 style="margin: 0 10px")
 
-{.caption} Și aceste două șabloane au aceleași simetrii – chiar dacă arată mult mai 
+{.caption} Și aceste două șabloane au aceleași simetrii – chiar dacă arată mult mai
 asemănator cu modelele corespunzătoare din stânga, decât una cu alta.
 :::
 
 ---
 > id: wallpaper-groups-3
 
-Se pare că, deși există o infinitate de șabloane posibile, toate au unul din cele 
-17 grupuri de simetrie diferite. Acestea se numesc __grupuri de tapet__. 
+Se pare că, deși există o infinitate de șabloane posibile, toate au unul din cele
+17 grupuri de simetrie diferite. Acestea se numesc __grupuri de tapet__.
 
 Orice grup de tapet este definit de o combinație de translații, rotații, reflexii și
 reflexii cu alunecare. Poți vedea [centrele de rotație](gloss:center-of-rotation) și
@@ -1070,7 +1073,7 @@ reflexii cu alunecare. Poți vedea [centrele de rotație](gloss:center-of-rotati
         p.caption <strong>Tip P31M</strong><br>Rotații of order 3, reflexii, reflexii cu alunecare, translații
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Tip P4G</strong><br>Rotații (ord 2 + 4), reflexii, reflexii cu alunecare, translații 
+        p.caption <strong>Tip P4G</strong><br>Rotații (ord 2 + 4), reflexii, reflexii cu alunecare, translații
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
         p.caption <strong>Tip CMM</strong><br>Reflexii perpendiculare, rotații de ordin 2, translații
@@ -1111,18 +1114,18 @@ din cele 17 grupuri de tapet:
 > id: crystallographic-groups
 
 ::: column.grow
-Grupurile de tapet se referă doar la șabloane plate, bidimensionale. Putem face ceva similar 
-pentru șabloanele tridimensionale: acestea se numesc grupuri cristalografice și există 219 
+Grupurile de tapet se referă doar la șabloane plate, bidimensionale. Putem face ceva similar
+pentru șabloanele tridimensionale: acestea se numesc grupuri cristalografice și există 219
 astfel de grupuri.
 
 Pe lângă translații, reflexii, rotații și reflexii cu alunecare, aceste grupuri conțin
-simetrii __plane de alunecare__ și __axe elicoidale__ (te poți gândi la 
+simetrii __plane de alunecare__ și __axe elicoidale__ (te poți gândi la
 mișcarea de deșurubare a unui capac).
 ::: column(width=300)
 
     img(src="images/crystal.jpg" width=300 height=240)
 
-{.caption} Nitrura cubică de bor are molecule aranjate într-o grilă de cristal, 
+{.caption} Nitrura cubică de bor are molecule aranjate într-o grilă de cristal,
 ce are un grup de simetrie tridimensional.
 :::
 
@@ -1146,12 +1149,12 @@ preferința ta este “simetrică” sub transformarea care schimbă merele și 
 se aplică și în cazul [legilor naturii](gloss:laws-of-nature).
 
 ::: column.grow
-De exemplu, experiența ne spune că legile fizicii sunt aceleași pretutindeni în univers. 
-Nu contează dacă un experiment se realiză în Londra, New York sau pe Marte - 
+De exemplu, experiența ne spune că legile fizicii sunt aceleași pretutindeni în univers.
+Nu contează dacă un experiment se realiză în Londra, New York sau pe Marte -
 legile fizicii ar trebui să fie întotdeauna aceleași. Într-un fel ele au
 [[simetrie translativă|simetrie reflexivă]].
 
-{.reveal(when="blank-0")} În mod similar, nu contează daca realizăm un experiment îndreptați 
+{.reveal(when="blank-0")} În mod similar, nu contează daca realizăm un experiment îndreptați
 spre Nord, Sud, Est sau Vest: legile naturii au [[simetrie rotațională|simetrie reflexivă cu alunecare]]
 
 {.reveal(when="blank-1")} Și, în sfârșit, nu contează dacă realizăm un
@@ -1169,9 +1172,9 @@ Aceste “simetrii” ar putea părea inițial să nu aibă niciun sens, dar, de
 pot spune multe despre universul nostru. Emmy Noether a reușit să demonstreze
 că orice simetrie corespunde unei anumite cantități fizice care este _conservată_.
 
-De exemplu, simetria temporală presupune că __energia__ se conservă în universul nostru: 
-energia se poate converti dintr-un tip în altul (ex: lumină, căldură sau electricitate), 
-dar niciodată energiau nu se poate crea sau distruge. Cantitatea totală de energie din 
+De exemplu, simetria temporală presupune că __energia__ se conservă în universul nostru:
+energia se poate converti dintr-un tip în altul (ex: lumină, căldură sau electricitate),
+dar niciodată energiau nu se poate crea sau distruge. Cantitatea totală de energie din
 univers va rămâne mereu constantă.
 
     figure
@@ -1184,12 +1187,12 @@ univers va rămâne mereu constantă.
     p.caption Calea urmată de fragmentele de particule după o coliziune
 
 ::: column.grow
-Se pare că, doar cunoscând simetria, fizicienii pot deriva cele mai multe din legile 
+Se pare că, doar cunoscând simetria, fizicienii pot deriva cele mai multe din legile
 ale naturii care ne guvernează universul - fără a fi nevoie să facă vreodată vreun
 experiment sau vreo observație.
 
 Simetria poate chiar prezice existența particulelor elementare. Un exemplu este
-binecunoscutul __Boson Higgs__: a fost prezis în anii 1960 de fizicienii teoreticieni, 
+binecunoscutul __Boson Higgs__: a fost prezis în anii 1960 de fizicienii teoreticieni,
 dar nu a fost observat în lumea reală până în anul 2012.
 :::
 
@@ -1237,7 +1240,7 @@ imaginea este [[mai mare|mai mică]] decât originalul.
       path.light.thin(x="segment(C,s<1?a:a1)")
       path.light.thin(x="segment(C,s<1?b:b1)")
       path.light.thin(x="segment(C,s<1?c:c1)")
-    
+
 {.text-center.scale-target} Factor de scalare: ${s}{s|2|0,3,0.1}
 :::
 

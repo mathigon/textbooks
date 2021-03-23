@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
 > translated: auto
 
 När du tittar runt naturen kanske du har märkt intrikata växter som dessa:

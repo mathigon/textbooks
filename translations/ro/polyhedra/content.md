@@ -4,9 +4,12 @@
 
 > section: polygons
 > id: polygons
+> color: "#4757D3"
+> level: Intermediate
+> next: circles
 
 Un [__poligon__](gloss:polygon) este o formă plană închisă care are doar laturi
-drepte. Poligoanele pot avea orice număr de laturi și unghiuri, dar laturile 
+drepte. Poligoanele pot avea orice număr de laturi și unghiuri, dar laturile
 nu pot fi curbe. Care din formele de mai jos sunt poligoane?
 
     x-picker
@@ -102,7 +105,7 @@ _{span.circled.purple}${540-a2[0]-a2[1]-a2[2]-a2[3]}°_ &nbsp;=&nbsp; _{x-anibut
 
 Se pare că un patrulater are suma unghiurilor interne este mereu [[360]]°
 – exact [[de două ori|de trei ori|jumătate din]] suma unghiurilor unui triunghi.
-_{span.reveal(when="blank-0 blank-1")} Nu este o coincidență: fiecare patrulater 
+_{span.reveal(when="blank-0 blank-1")} Nu este o coincidență: fiecare patrulater
 poate fi împărțit în două triunghiuri._
 
     .row.padded-thin
@@ -122,8 +125,8 @@ un hexagon în [[4]] triunghiuri, deci suma unghiurilor interne este`4 × 180° 
 Un poligon cu ${x}{x|7|3,15,1} laturi va avea suma unghiurilor interne egală cu
 180° × ${x-2} = ${(x-2)*180}°. Mai general, un poligon cu _n_ laturi poate fi
 împărțit în [[n – 2|n – 1|n]] triunghiuri. Prin urmare,
- 
-{.text-center.reveal(when="blank-0")} Îmtr-un n-gon suma unghiurilor interne este 
+
+{.text-center.reveal(when="blank-0")} Îmtr-un n-gon suma unghiurilor interne este
 `= (n - 2) × 180°`.
 
     x-gesture(target="#internal-angle-sum x-var" slide="100,0")
@@ -181,7 +184,7 @@ Care dintre aceste poligoane sunt concave?
 ### Poligoane regulate
 
 Spunem că un poligon este [__regulat__](gloss:regular-polygon) dacă toate laturile
-sale au aceeași lungime și toate unghiurile au aceeași măsură. Care dintre 
+sale au aceeași lungime și toate unghiurile au aceeași măsură. Care dintre
 aceste forme sunt poligoane regulate?
 
     x-picker
@@ -209,7 +212,7 @@ deci putem calcula măsura unui singur unghi intern:
 _{span.reveal(when="blank-1 blank-2")} = `(180° × (x-2))/x = 180° - (360°)/x`._
 
 {.reveal(when="blank-1 blank-2" delay=1000)} Dacă `n=3` obținem măsura unghiurilor interne
-ale unui triunghi echilateral – știm deja că are valoarea [[60]]°. 
+ale unui triunghi echilateral – știm deja că are valoarea [[60]]°.
 _{span.reveal(when="blank-3")} Într-un poligon regulat cu ${x}{x|6|3,12,1} laturi,
 fiecare unghi intern este de 180° – <mfrac class="inline"><mrow>360°</mrow><mrow>${x}</mrow></mfrac> =
 ${round(180-360/x)}°._
@@ -249,15 +252,15 @@ Aici se poate vedea un [poligon regulat](gloss:regular-polygon) cu ${n}{n|5|4,12
 laturi. Fiecare latură are lungimea de [{.step-target.pill.green}1m](target:base). Hai
 să incercăm sa-i calculăm aria!
 
-Mai întâi, putem împărți poligonul în ${n} triunghiuri 
+Mai întâi, putem împărți poligonul în ${n} triunghiuri
 [[isoscele|echilaterale|dreptunghice]] congruente.
 
 {.reveal(when="blank-0")} Știm deja [[baza|înălțimea|aria]] acestor triunghiuri,
-dar avem nevoie și de [[înălțime|laturile congruente|mediane]] pentru a le putea 
-calcula aria. _{span.reveal(when="blank-2")} În cazul poligoanelor regulate, 
+dar avem nevoie și de [[înălțime|laturile congruente|mediane]] pentru a le putea
+calcula aria. _{span.reveal(when="blank-2")} În cazul poligoanelor regulate,
 această înălțime este numită și [{.step-target.pill.yellow}apotemă](target:apothem)._
 
-{.reveal(when="blank-1 blank-2" delay=1000)} Să observăm că există un 
+{.reveal(when="blank-1 blank-2" delay=1000)} Să observăm că există un
 [triunghi dreptunghic](target:right-triangle) format de apotemă și jumătate din baza|înălțimea|aria
 triunghiului isoscel. Aceasta înseamnă că putem folosi elemente de trigonometrie!
 
@@ -271,7 +274,7 @@ măsura [unghiului intern](target:int-angle) al poligonului:
 {.reveal(when="blank-3")} Pentru a determina apotema, putem folosi definiția
 [[tangentei|sinusului|cosinusului]]:
 
-{.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
+{.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") =
 pill("olatura opusă", "yellow", "apothem") / pill("latura alăturată", "green", "half-base") =
 blank("apotema", "s", "s/2") / blank("s/2", "s", "apotema")`
 
@@ -287,7 +290,7 @@ var("round(tan(pi/2-pi/n)/2,2)")"m"`
 "yellow", "apothem") = var("round(tan(pi/2-pi/n)/4,2)") "m"^2`
 
 {.reveal(when="blank-5 blank-6" delay=4000)} Poligonul constă din ${n} astfel de
-triunghiuri isoscele, care au toate aceeași arie. Prin urmare, aria totală 
+triunghiuri isoscele, care au toate aceeași arie. Prin urmare, aria totală
 a poligonului este
 
 {.text-center.reveal(when="blank-5 blank-6" delay=4000)} `A = var("n") ×
@@ -332,8 +335,8 @@ Toate laturile sale au aceeași lungime și toate unghiurile sale sunt egale.
 ---
 > id: quadrilaterals-1
 
-Pentru patrulatere un pic “mai puțin regulate” avem două opțiuni. Dacă vrem 
-ca doar _unghiurile_ să fie egale, obținem un [__dreptunghi__](gloss:rectangle). 
+Pentru patrulatere un pic “mai puțin regulate” avem două opțiuni. Dacă vrem
+ca doar _unghiurile_ să fie egale, obținem un [__dreptunghi__](gloss:rectangle).
 Dacă vrem ca _laturile_ să fie egale, obținem un [__romb__](gloss:rhombus).
 
 ::: column.quadrilateral
@@ -389,7 +392,7 @@ tot au anumite proprietăți importante:
       path.blue(x="segment(a,c)" mark="arrow2")
       path.blue(x="segment(b,d)" mark="arrow2")
 
-{.caption} Dacă ambele perechi de laturi _opuse_ sunt [paralele](gloss:parallel), 
+{.caption} Dacă ambele perechi de laturi _opuse_ sunt [paralele](gloss:parallel),
 obținem un __paralelogram__.
 ::: column.quadrilateral
 
@@ -449,19 +452,19 @@ vom folosi în general doar tipul cel mai specific.
 Acum alege patru puncte, oriunde în caseta gri din stânga.
 _{span.reveal(when="points")} Le putem uni pe toate pentru a forma un patrulater._
 
-{.reveal(when="points" delay=1000)} Hai să aflăm mijlocul fiecărei din cele patru 
+{.reveal(when="points" delay=1000)} Hai să aflăm mijlocul fiecărei din cele patru
 laturi. Dacă vom conecta mijloacele, obținem [[un alt patrulater|un triunghi|un dreptunghi]].
 
 {.reveal(when="blank-0")} Încearcă să miști vârfurile patrulaterului exterior și
 observă ce se întâmplă cu patrulaterul mai mic. Pare ca nu este pur și simplu un patrulater
 _oarecare_, ci este mereu un [[paralelogram|trapez|dreptunghi]]!
 
-{.reveal(when="blank-1")} Dar de ce se întâmplă așa? De ce rezultatul _oricărui_ 
+{.reveal(when="blank-1")} Dar de ce se întâmplă așa? De ce rezultatul _oricărui_
 patrulater devine mereu un paralelogram? Pentru a explica aceasta, avem nevoie
 să desenăm una din [diagonalele](gloss:polygon-diagonal) patrulaterului inițial.
 
-{.reveal(when="diagonal")} Diagonalele împart patrulaterul în [două triunghiuri](target:triangle). 
-Și acum se poate vedea că [două din laturile](target:midsegment) patrulaterului 
+{.reveal(when="diagonal")} Diagonalele împart patrulaterul în [două triunghiuri](target:triangle).
+Și acum se poate vedea că [două din laturile](target:midsegment) patrulaterului
 interior sunt de fapt [[liniile mijlocii|medianele|mediatoarele]] acestor triunghiuri.
 
 {.reveal(when="blank-2")} În [cursul anterior](/course/triangles/properties)
@@ -469,8 +472,8 @@ am arătat că într-un triunghi [liniile mijlocii](gloss:triangle-midsegment) s
 mereu paralele cu baza. În acest caz, înseamnă că [ambele laturi](target:parallel)
 sunt paralele cu diagonala – așadar ele sunt și [[paralele una cu alta|de aceeași lungime|perpendiculare una pe alta]].
 
-{.reveal(when="blank-3" delay=2000)} Putem proceda la fel și cu 
-[a doua diagonală](target:other) a patrulaterului, pentru a arăta că ambele perechi de  
+{.reveal(when="blank-3" delay=2000)} Putem proceda la fel și cu
+[a doua diagonală](target:other) a patrulaterului, pentru a arăta că ambele perechi de
 laturi opuse sunt paralele. Și asta e tot de ce avem nevoie pentru a demonstra
 că patrulaterul interior este un [paralelogram](gloss:parallelogram). _{span.qed}_
 :::
@@ -541,7 +544,7 @@ că ele sunt _mereu_ adevărate, avem nevoie să le _demonstrăm_:
       path.fill.yellow.transparent(x="polygon(a,b,o?c:d)" target="triangles")
       path.fill.green.transparent(x="polygon(o?a:b,c,d)" target="triangles")
       path(x="polygon(a,b,c,d)")
-      
+
       path.green.transparent(x="segment(a,b)" target="sides")
       path.green.transparent(x="segment(c,d)" target="sides")
       path.yellow.transparent(x="segment(b,c)" target="sides")
@@ -552,7 +555,7 @@ că ele sunt _mereu_ adevărate, avem nevoie să le _demonstrăm_:
       path.fill.yellow.transparent(x="angle(d,a,b).sup" target="angles")
 
 ::: column.grow
-{.task} Hai să incercăm să demonstrăm că într-un paralelogram laturile și unghiurile 
+{.task} Hai să incercăm să demonstrăm că într-un paralelogram laturile și unghiurile
 opuse sunt mereu congruente.
 
 Începem prin a desena una din diagonalele paralelogramului.
@@ -562,17 +565,17 @@ Cele două [unghiuri roșii](target:red-angle) și cele două [unghiuri albastre
 sunt [unghiuri alterne](gloss:alternate-angles), deci sunt [[congruente|adiacente|suplementare]].
 
 {.reveal(when="blank-0")} Dacă ne uităm la cele [două triunghiuri](target:triangles)
-create de diagonală, vom observa că ele au două unghiuri congruente și 
+create de diagonală, vom observa că ele au două unghiuri congruente și
 [o latură congruentă](target:diagonal). Conform criteriului de congruență [[ULU|UUL|UU]],
 cele două triunghiuri sunt congruente.
 
-{.reveal(when="blank-1")} Aceasta înseamnă că și celelalte elemente corespondente ale 
-triunghiurilor vor fi congruente: în mod deosebit, ambele [perechi de laturi opuse](target:sides) 
+{.reveal(when="blank-1")} Aceasta înseamnă că și celelalte elemente corespondente ale
+triunghiurilor vor fi congruente: în mod deosebit, ambele [perechi de laturi opuse](target:sides)
 sunt congruente și ambele [perechi de unghiuri opuse](target:angles) sunt congruente. _{span.qed}_
 :::
 
-{.reveal(when="blank-1")} Și reciproca este adevărată: dacă ambele perechi de 
-laturi (sau unghiuri) opuse ale unui patrulater sunt congruente, atunci 
+{.reveal(when="blank-1")} Și reciproca este adevărată: dacă ambele perechi de
+laturi (sau unghiuri) opuse ale unui patrulater sunt congruente, atunci
 patrulaterul este un paralelogram.
 
 ::: tab
@@ -594,13 +597,13 @@ patrulaterul este un paralelogram.
       path.fill.red(x="angle(b1,c1,a1).sup" target="anglesR")
       path.fill.blue(x="angle(a1,d1,b1).sup" target="anglesB")
       path.fill.blue(x="angle(d1,b1,c1).sup" target="anglesB")
-      
+
       path(x="polygon(a1,b1,c1,d1)")
       path(x="segment(a1,c1)")
       path(x="segment(b1,d1)")
       path.green(x="segment(a1,d1)" target="side1")
       path.green(x="segment(b1,c1)" target="side1")
-      
+
       path.yellow.tick.transparent(x="segment(a1,m1)" target="AM")
       path.yellow.tick.transparent(x="segment(b1,m1)" target="BM")
       path.yellow.tick.transparent(x="segment(c1,m1)" target="CM")
@@ -614,10 +617,10 @@ Să ne gândim la cele două triunghiuri galbene generate de diagonale:
 
 * Tocmai am demonstrat că cele [două laturi verzi](target:side1) sunt congruente,
   pentru că ele sunt laturile opuse ale unui paralelogram.
-* Cele [două unghiuri roșii](target:anglesR) și cele [două unghiuri albastre](target:anglesB) 	
+* Cele [două unghiuri roșii](target:anglesR) și cele [două unghiuri albastre](target:anglesB)
   sunt congruente, pentru că sunt [[unghiuri alterne|unghiuri opuse|unghiuri drepte]].
 
-{.reveal(when="blank-2")} Conform criteriului de congruență [[ULU|LLL|UUL]], ambele 
+{.reveal(when="blank-2")} Conform criteriului de congruență [[ULU|LLL|UUL]], ambele
 triunghiuri galbene sunt, de asemenea, congruente.
 
 {.reveal(when="blank-3")} Având în vedere că părțile corespondente ale triunghiurilor
@@ -627,7 +630,7 @@ alte cuvinte, cele două diagonale se intersectează la mijloc. _{span.qed}_
 :::
 
 {.reveal(when="blank-3")} La fel ca mai înainte, și reciproca este adevărată: dacă
-cele două diagonale ale unui patrulater se împart în două părți egale  una pe alta, 
+cele două diagonale ale unui patrulater se împart în două părți egale  una pe alta,
 atunci patrulaterul este un paralelogram.
 :::
 
@@ -721,8 +724,8 @@ _{span.reveal(when="blank-0")} [Axa de simetrie](gloss:axis-of-symmetry) este
 [[una din diagonale|una din laturi|o linie mijlocie]]._
 
 {.reveal.r(when="blank-1")} Diagonala împarte patrulaterul zmeu în [două triunghiuri
-congruente](target:triangle1). Conform criteriul de congruență [SSS](gloss:triangle-sss) 
-știm că sunt congruente: ambele triunghiuri au [trei laturi congruente](target:sss) 
+congruente](target:triangle1). Conform criteriul de congruență [SSS](gloss:triangle-sss)
+știm că sunt congruente: ambele triunghiuri au [trei laturi congruente](target:sss)
 (roșu, verde și albastru).
 _{button.next-step} Continuă_
 
@@ -754,7 +757,7 @@ alăturate, atunci α și β vor avea [[90]]°.
 
 ### Aria patrulaterelor
 
-Pentru a calcula aria unui triunghi în cursul precedent, am folosit trucul de 
+Pentru a calcula aria unui triunghi în cursul precedent, am folosit trucul de
 a-l transforma într-un [[dreptunghi|pătrat|pentagon]]. Putem face asta și pentru
 unele patrulatere:
 
@@ -782,7 +785,7 @@ _{span.reveal(when="blank-1")}Așadar, aria paralelogramului este_
 
 {.text-center.reveal(when="blank-1")} Aria = __{.i.m-green}baza__ × __{.i.m-yellow}înălțimea__
 
-{.reveal(when="blank-1" delay=1000)} _Ai grijă când măsori înălțimea unui paralelogram: 
+{.reveal(when="blank-1" delay=1000)} _Ai grijă când măsori înălțimea unui paralelogram:
 de obicei, nu este identică cu una din cele două laturi._
 :::
 
@@ -813,25 +816,25 @@ Aceste laturi paralele se numesc __bazele__ trapezului.
 ::: column.grow
 La fel ca mai înainte, încearcă sa desenezi un dreptunghi care să aibă aceeași arie
 ca acest trapez.
-_{span.reveal(when="draw-2")} Poți observa cum [triunghiul lipsă și triunghiul adăugat](target:triangles-3) 
+_{span.reveal(when="draw-2")} Poți observa cum [triunghiul lipsă și triunghiul adăugat](target:triangles-3)
 din partea stângă și din cea dreaptă se anulează?_
 
 {.reveal(when="draw-2" delay=2000)} [{.step-target.pill.green} Înălțimea](target:t-height)
-acestui dreptunghi este [[distanța dintre|media|lungimea]] 
+acestui dreptunghi este [[distanța dintre|media|lungimea]]
 [laturile paralele](target:bases) ale trapezului.
 
 {.reveal.r(when="blank-2")} [{.step-target.pill.yellow} Lungimea](target:t-width)
 dreptunghiului este distanța dintre [[punctele de mijloc ale|extremitățile]] celor două
-laturi neparalele. _{span.reveal(when="blank-3")} Aceasta se numește __linia mijlocie__ 
+laturi neparalele. _{span.reveal(when="blank-3")} Aceasta se numește __linia mijlocie__
 a trapezului._
 _{button.next-step.reveal(when="blank-3")} Continuă_
 
-{.reveal(when="next-0")} Ca și în cazul [triunghiurilor](gloss:triangle-midsegment), 
+{.reveal(when="next-0")} Ca și în cazul [triunghiurilor](gloss:triangle-midsegment),
 linia mijlocie a unui trapez este [[paralelă cu|perpendiculară pe|de aceeași lungime ca]]
 cele două baze ale sale. Lungimea liniei mijlocii este media lungimilor bazelor:
 `(a+c)/2`.
 
-{.reveal(when="blank-4")} Combinând toate acestea, obținem ecuația ariei unui trapez cu 
+{.reveal(when="blank-4")} Combinând toate acestea, obținem ecuația ariei unui trapez cu
 laturile paralele [_a_](target:base-2) și [_c_](target:base-1) și înălțimea [_h_](target:t-height):
 
 {.text-center.reveal(when="blank-4")} `A = h xx ((a+c) / 2)`
@@ -847,18 +850,18 @@ laturile paralele [_a_](target:base-2) și [_c_](target:base-1) și înălțimea
       circle.transparent(name="b3" x="point(5,1)")
       circle.transparent(name="c3" x="point(13,5)")
       circle.transparent(name="d3" x="point(5,9)")
-      
+
       path.fill.blue.light(x="polygon(a3,b3,c3,d3)")
       path.green(x="segment(a3,c3)" label="d1" target="diag3 d31")
       path.yellow(x="segment(b3,d3)" label="d2" target="diag3 d32")
       path(x="polygon(point(1,1),point(13,1),point(13,9),point(1,9))" target="rect4")
       path.blue(x="polygon(a3,b3,c3,d3)")
-      
+
       path.fill.red.transparent(x="polygon(a3,b3,point(5,5))" target="inside")
       path.fill.blue.transparent(x="polygon(b3,c3,point(5,5))" target="inside")
       path.fill.green.transparent(x="polygon(c3,d3,point(5,5))" target="inside")
       path.fill.yellow.transparent(x="polygon(d3,a3,point(5,5))" target="inside")
-      
+
       path.fill.red.transparent(x="polygon(a3,b3,point(1,1))" target="outside")
       path.fill.blue.transparent(x="polygon(b3,c3,point(13,1))" target="outside")
       path.fill.green.transparent(x="polygon(c3,d3,point(13,9))" target="outside")
@@ -868,8 +871,8 @@ laturile paralele [_a_](target:base-2) și [_c_](target:base-1) și înălțimea
 În acest patrulater zmeu, cele [două diagonale](target:diag3) constituie lungimea și înățimea
 unui mare [dreptunghi](target:rect4) care înconjoară zmeul.
 
-Aria acestui dreptunghi este [[de două ori|la fel ca|de trei ori]] aria 
-patrulaterului zmeu. 
+Aria acestui dreptunghi este [[de două ori|la fel ca|de trei ori]] aria
+patrulaterului zmeu.
 _{span.reveal(when="blank-5")} Poți observa cum cele [patru triunghiuri](target:inside)
 care constituie patrulaterul zmeu sunt identice cu cele [patru goluri](target:outside)
 din afara lui?_
@@ -893,14 +896,14 @@ din afara lui?_
       circle.move(name="b4" cx=150 cy=50)
       circle.move(name="d4" cx=150 cy=190 project="circle(a4,distance(a4,b4))")
       circle(name="c4" x="d4.add(b4).subtract(a4)")
-      
+
       path.fill.blue.light(x="polygon(a4,b4,c4,d4)")
 
       path.thin(x="line(c4,d4)")
       circle(name="q4" x="line(c4,d4).project(a4)")
       path.thin(x="angle(a4,q4,d4).sup" size=15)
       path.red(x="segment(q4,a4)" label="height" target="height")
-      
+
       path.green(x="segment(a4,c4)" label="d1" target="d41")
       path.yellow(x="segment(b4,d4)" label="d2" target="d42")
       path.blue(x="polygon(a4,b4,c4,d4)")
@@ -912,7 +915,7 @@ Un [romb](gloss:rhombus) este un patrulater cu patru laturi congruente. Poate c�
 totodată și un [[patrulater zmeu|hexagon|poligon ooncav]].
 
 {.reveal(when="blank-6 blank-7")} Așadar, pentru a afla aria unui romb,
-putem folosi fie ecuația pentru aria unui paralelogram, fie ecuația pentru 
+putem folosi fie ecuația pentru aria unui paralelogram, fie ecuația pentru
 aria unui patrulater zmeu:
 
 {.text-center.reveal(when="blank-6 blank-7")} _Aria_ =
@@ -1015,9 +1018,9 @@ tehnologie – din Roma Antică până în prezent. Iată câteva exemple:
 > goals: shapes0 shapes1
 
 Aici îți poți crea propriile mozaicări folosind poligoane regulate. Trage forme noi de pe
-bara alăturată pe pânza de lucru. Ce forme se mozaichează bine ? Există forme care 
+bara alăturată pe pânza de lucru. Ce forme se mozaichează bine ? Există forme care
 nu se mozaichează deloc ? Încearcă să creezi modele interesante!
- 
+
     figure: .tessellation
       x-polypad
       .menu
@@ -1040,7 +1043,7 @@ nu se mozaichează deloc ? Încearcă să creezi modele interesante!
 
 ### Mozaicări din poligoane regulate
 
-Poate ai observat că unele [poligoane regulate](gloss:regular-polygon) (precum 
+Poate ai observat că unele [poligoane regulate](gloss:regular-polygon) (precum
 [[pătrate|pentagoane]]) se mozaichează foarte ușor, în timp ce altele (precum
 [[pentagoane|triunghiuri|hexagoane]]) nu par să se mozaicheze deloc.
 
@@ -1136,9 +1139,9 @@ Putem încerca să realizăm mozaicări și din [poligoane neregulate](gloss:irr
             path.yellow.fill(x=`y.translate(c.subtract(a).scale(${x}).add(b.subtract(a).scale(${y})))`)
 
 ::: column.grow
-Se pare că putem mozaica nu doar triunghiuri echilaterale, ci _orice triunghi_! 
+Se pare că putem mozaica nu doar triunghiuri echilaterale, ci _orice triunghi_!
 Încearcă să muți [vârfurile](target:vertex) din această diagramă.
- 
+
 Într-un triunghi suma unghiurilor interne este [[180]]°. Dacă folosim fiecare unghi
 [[de două ori|o dată|de trei ori]] la fiecare vârf în mozaicare, obținem 360°:
 
@@ -1200,9 +1203,9 @@ Se pare că putem mozaica nu doar triunghiuri echilaterale, ci _orice triunghi_!
             path.blue.fill(x=`x.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
             path.green.fill(x=`y.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
 
-::: column.grow    
-Și mai surprinzător, și _orice patrulater_ se poate mozaica! Suma unghiurilor interne 
-este de [[360]]°, așadar dacă folosim fiecare unghi [[o dată|de două ori|de trei ori]] 
+::: column.grow
+Și mai surprinzător, și _orice patrulater_ se poate mozaica! Suma unghiurilor interne
+este de [[360]]°, așadar dacă folosim fiecare unghi [[o dată|de două ori|de trei ori]]
 la fiecare vârf în mozaicare, vom obține 360°.
 
     x-geopad.reveal(width=200 height=160 when="blank-0 blank-1"): svg
@@ -1244,7 +1247,7 @@ la fiecare vârf în mozaicare, vom obține 360°.
 ---
 > id: tessellation-pentagons
 
-Pentagoanele sunt un pic mai complicate. Am văzut deja că pentagoanele _regulate_ 
+Pentagoanele sunt un pic mai complicate. Am văzut deja că pentagoanele _regulate_
 [[nu se mozaichează|se mozaichează]], dar cum rămâne cu cele neregulate?
 
 ---
@@ -1270,8 +1273,8 @@ Până acum, matematicienii au găsit doar 15 tipuri diferite de mozaicări cu p
 
 ### Mozaicări în Artă
 
-Mozaicările sunt și un instrument, și inspirație pentru mulți artiști, arhitecți și 
-designeri – cel mai faimos este artistul olandez [M. C. Escher](bio:escher). Lucrările 
+Mozaicările sunt și un instrument, și inspirație pentru mulți artiști, arhitecți și
+designeri – cel mai faimos este artistul olandez [M. C. Escher](bio:escher). Lucrările
 lui Escher conțin creaturi ciudate și mutante, șabloane și peisaje:
 
     .row
@@ -1360,11 +1363,11 @@ colțurile în care se întâlnesc muchiile se numesc [__vârfuri__](gloss:polyh
 
 Poliedrele sunt de diferite forme și mărimi – de la cuburi simple sau piramide
 cu doar câteva fețe până la obiecte complexe precum steaua de deasupra care are
-60 de fețe triunghiulare. Cu toate acestea, se pare că, _toate_ poliedrele 
+60 de fețe triunghiulare. Cu toate acestea, se pare că, _toate_ poliedrele
 au în comun o proprietate importantă:
 
 ::: .theorem
-__Formula lui Euler pentru Poliedre__  
+__Formula lui Euler pentru Poliedre__
 În orice poliedru, numărul fețelor (_F_) plus numărul vârfurilor (_V_)
 este cu doi mai mare decât numărul muchiilor (_E_). Altfel scris,
 
@@ -1376,8 +1379,8 @@ De exemplu, dacă un poliedru are 12 fețe și 18 vârfuri, știm că are [[28]]
 ---
 > id: euler-1
 
-Această ecuație a fost descoperită de faimosul matematician elvețian 
-[Leonard Euler](bio:euler). Este adevărată pentru orice poliedru, cât timp 
+Această ecuație a fost descoperită de faimosul matematician elvețian
+[Leonard Euler](bio:euler). Este adevărată pentru orice poliedru, cât timp
 acesta nu conține niciun gol.
 
 Dacă încerci diferite poliedre, precum cele de deasupra, vei descoperi că
@@ -1402,9 +1405,9 @@ Desenare plase
 
 Descrie secțiunea transversală formată de intersecția planului cu solidul.
 
-O secțiune transversală este intersecția unui plan cu un solid. 
+O secțiune transversală este intersecția unui plan cu un solid.
 Un alt mod de a reprezenta o figură tridimensională într-un plan bidimensional
-este de a folosi o plasă. O plasă este o reprezentare plană desfășurată a 
+este de a folosi o plasă. O plasă este o reprezentare plană desfășurată a
 lateralelor unei figuri tridimensionale.
 
 rotește un cub pentru a crea o sectțiune transversală hexagonală
@@ -1435,11 +1438,11 @@ TODO
 > id: platonic
 
 La începutul acestui curs am definit [poligoanele regulate](gloss:regular-polygon)
-ca fiind poligoane  deosebit de “simetrice”, în care toate laturile și unghiurile 
-sunt la fel. 
+ca fiind poligoane  deosebit de “simetrice”, în care toate laturile și unghiurile
+sunt la fel.
 Putem face ceva asemănător și in cazul poliedrelor.
 
-Într-un _poligon regulat_ toate [fețele](gloss:polyhedron-face) sunt 
+Într-un _poligon regulat_ toate [fețele](gloss:polyhedron-face) sunt
 același tip de poligon regulat și în fiecare [vârf](gloss:polyhedron-vertex)
 se întâlnesc același număr de fețe. Poliedrele care au aceste două proprietăți
 se numesc [__corpuri platonice__](gloss:platonic-solid), numite după
@@ -1462,9 +1465,9 @@ triunghiuri echilaterale:
     img(src="images/platonic/tetrahedron.svg" width=200 height=120)
 
 ::: column.grow
-Dacă vom crea un poliedru în care în fiecare vârf se întâlnesc trei 
+Dacă vom crea un poliedru în care în fiecare vârf se întâlnesc trei
 [triunghiuri echilaterale](gloss:equilateral-triangle), vom obține forma
-din stânga. Aceasta se numește __tetraedru__ și are [[4]] fețe. 
+din stânga. Aceasta se numește __tetraedru__ și are [[4]] fețe.
 _{.reveal(when="blank-0")}(“Tetra” înseamnă “patru” în limba greacă)._
 :::
 
@@ -1498,7 +1501,7 @@ _{.reveal(when="blank-0")}(“Octa” înseamnă “opt” în limba greacă. A�
     img(src="images/platonic/icosahedron.svg" width=200 height=120)
 
 ::: column.grow
-Dacă în fiecare vârf se întâlnesc [[cinci]] triunghiuri, obținem un __icosaedru__. 
+Dacă în fiecare vârf se întâlnesc [[cinci]] triunghiuri, obținem un __icosaedru__.
 El are [[20]] fețe. _{.reveal(when="blank-1")}(“Icosa” înseamnă “douăzeci” în limba greacă.)_
 :::
 
@@ -1525,8 +1528,8 @@ _{span.reveal(when="blank-1")}în locul unui poliedru tridimensional._
     img(src="images/platonic/triangles-7.svg" width=200 height=120)
 
 ::: column.grow
-Nici șapte sau mai multe triunghiuri care se întâlnesc în fiecare vârf 
-nu determină poliedre noi: nu există suficient spațiu în jurul unui vârf 
+Nici șapte sau mai multe triunghiuri care se întâlnesc în fiecare vârf
+nu determină poliedre noi: nu există suficient spațiu în jurul unui vârf
 pentru atât de multe triunghiuri.
 :::
 
@@ -1546,7 +1549,7 @@ Să trecem mai departe la urmatorul poligon regulat: pătratele.
 
 ::: column.grow
 Dacă în fiecare vârf se întâlnesc [[trei]] pătrate, obținem un __cub__. Asemenea unui zar,
-el are [[6]] fețe. _{span.reveal(when="blank-1")}Cubul mai este numit uneori și *Hexaedru*, 
+el are [[6]] fețe. _{span.reveal(when="blank-1")}Cubul mai este numit uneori și *Hexaedru*,
 de la cuvântul grec “hexa" care înseamnă “șase”._
 :::
 
@@ -1591,7 +1594,7 @@ are [[12]] fețe. _{.reveal(when="blank-1")} (“Dodeca” înseamnă “doispre
     img(src="images/platonic/pentagons.svg" width=200 height=120)
 
 ::: column.grow
-Ca mai înainte, patru sau mai multe pentagoane [[nu determină|determină] poliedre noi 
+Ca mai înainte, patru sau mai multe pentagoane [[nu determină|determină] poliedre noi
 pentru că nu există suficient spațiu.
 :::
 
@@ -1607,7 +1610,7 @@ Următoarele poligoane sunt hexagoanele:
 
 ::: column.grow
 Dacă în fiecare vârf se întâlnesc trei hexagoane, obținem [[o mozaicare|un poliedru|un hexaedru]].
-_{span.reveal(when="blank-0")} Având în vedere că nu există spațiu pentru mai mult de trei, 
+_{span.reveal(when="blank-0")} Având în vedere că nu există spațiu pentru mai mult de trei,
 se pare că nu există corpuri platonice alcătuite din hexagoane._
 :::
 
@@ -1627,8 +1630,8 @@ __Tetraedru__
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
-_{span.dual}[[4]] Fețe_  
-_{span.dual}[[4]] Vârfuri_  
+_{span.dual}[[4]] Fețe_
+_{span.dual}[[4]] Vârfuri_
 _{span.dual}[[6]] Muchii_
 
 ::: column.grow.text-center(width=120)
@@ -1636,8 +1639,8 @@ __Cub__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
-_{span.dual(target="dual1")}[[6]] Fețe_  
-_{span.dual(target="dual1")}[[8]] Vârfuri_  
+_{span.dual(target="dual1")}[[6]] Fețe_
+_{span.dual(target="dual1")}[[8]] Vârfuri_
 _{span.dual}[[12]] Muchii_
 
 ::: column.grow.text-center(width=120)
@@ -1645,8 +1648,8 @@ __Octaedru__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
-_{span.dual(target="dual1")}[[8]] Fețe_  
-_{span.dual(target="dual1")}[[6]] Vârfuri_  
+_{span.dual(target="dual1")}[[8]] Fețe_
+_{span.dual(target="dual1")}[[6]] Vârfuri_
 _{span.dual}[[12]] Muchii_
 
 ::: column.grow.text-center(width=120)
@@ -1654,8 +1657,8 @@ __Dodecaedru__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
-_{span.dual(target="dual2")}[[12]] Fețe_  
-_{span.dual(target="dual2")}20 Vârfuri_  
+_{span.dual(target="dual2")}[[12]] Fețe_
+_{span.dual(target="dual2")}20 Vârfuri_
 _{span.dual}30 Muchii_
 
 ::: column.grow.text-center(width=120)
@@ -1663,15 +1666,15 @@ __Icosaedru__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
-_{span.dual(target="dual2")}[[20]] Fețe_  
-_{span.dual(target="dual2")}12 Vârfuri_  
+_{span.dual(target="dual2")}[[20]] Fețe_
+_{span.dual(target="dual2")}12 Vârfuri_
 _{span.dual}30 Muchii_
 :::
 
 {.reveal(when="blank-3 blank-4 blank-6 blank-7 blank-9 blank-10")} De observat
-cum numărul de fețe si vârfuri [[se schimbă|rămâne la fel]] la 
-[cub și octaedru](target:dual1), precum și la [dodecaedru și icosaedru](target:dual2), 
-în timp ce numărul muchiilor [[rămâne mereu la fel|e diferit]]. Aceste perechi 
+cum numărul de fețe si vârfuri [[se schimbă|rămâne la fel]] la
+[cub și octaedru](target:dual1), precum și la [dodecaedru și icosaedru](target:dual2),
+în timp ce numărul muchiilor [[rămâne mereu la fel|e diferit]]. Aceste perechi
 de corpuri Platonice se numesc [__corpuri duale__](gloss:polyhedron-dual).
 
 ---
@@ -1698,10 +1701,10 @@ Tetraedrul este dual cu el însuși. Având în vedere că are același număr d
 ---
 > id: platonic-elements
 
-[Platon](bio:plato) credea că toată materia din Univers este alcătuită din patru 
+[Platon](bio:plato) credea că toată materia din Univers este alcătuită din patru
 elemente: Aer, Pământ, Apă și Foc. El credea că fiecărui element îi corespunde
 un corp platonic, în timp ce al cincilea ar reprezenta universul ca un întreg.
-Astăzi știm că există peste 100 de elemente diferite ce sunt alcătuite din 
+Astăzi știm că există peste 100 de elemente diferite ce sunt alcătuite din
 atomi sferici, nu din poliedre.
 
     figure
@@ -1718,73 +1721,73 @@ Corpurile platonice sunt poliedre importante în mod deosebit, dar există nenum
 
 De exemplu, [__corpurile lui Arhimede__](gloss:archimedean-solid) tot trebuie să fie
 alcătuite din [poligoane regulate](gloss:regular-polygon), dar se pot folosi mai multe
-tipuri diferite. Numele lor e dat după un alt matematician grec, 
+tipuri diferite. Numele lor e dat după un alt matematician grec,
 [Arhimede din Siracuza](bio:archimedes), și există 13 astfel de corpuri geometrice:
 
 ::: column(width=170 parent="padded-thin")
     x-polyhedron(size=170 shape="TruncatedTetrahedron")
-    
-{.caption} __Tetraedru trunchiat__  
+
+{.caption} __Tetraedru trunchiat__
 8 faces, 12 vertices, 18 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Cuboctahedron")
 
-{.caption} __Cuboctaedru__  
+{.caption} __Cuboctaedru__
 14 faces, 12 vertices, 24 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCube")
 
-{.caption} __Cub trunchiat__  
+{.caption} __Cub trunchiat__
 14 faces, 24 vertices, 36 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedOctahedron")
 
-{.caption} __Octaedru trunchiat__  
+{.caption} __Octaedru trunchiat__
 14 faces, 24 vertices, 36 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicuboctahedron")
 
-{.caption} __Rombocuboctaedru__  
+{.caption} __Rombocuboctaedru__
 26 faces, 24 vertices, 48 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __Cuboctaedru trunchiat__  
+{.caption} __Cuboctaedru trunchiat__
 26 faces, 48 vertices, 72 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubCube")
 
-{.caption} __Cubus simus__  
+{.caption} __Cubus simus__
 38 faces, 24 vertices, 60 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Icosidodecahedron")
 
-{.caption} __Icosidodecaedru__  
+{.caption} __Icosidodecaedru__
 32 faces, 30 vertices, 60 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedDodecahedron")
 
-{.caption} __Dodecaedru trunchiat__  
+{.caption} __Dodecaedru trunchiat__
 32 faces, 60 vertices, 90 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosahedron")
 
-{.caption} __Icosaedru trunchiat__  
+{.caption} __Icosaedru trunchiat__
 32 faces, 60 vertices, 90 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicosidodecahedron")
 
-{.caption} __Rhombicosidodecaedru__  
+{.caption} __Rhombicosidodecaedru__
 62 faces, 60 vertices, 120 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosidodecahedron")
 
-{.caption} __Icosidodecaedru trunchiat__  
+{.caption} __Icosidodecaedru trunchiat__
 62 faces, 120 vertices, 180 edges
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubDodecahedron")
 
-{.caption} __Dodecahedron simum__  
+{.caption} __Dodecahedron simum__
 92 faces, 60 vertices, 150 edges
 :::
 
@@ -1794,14 +1797,14 @@ tipuri diferite. Numele lor e dat după un alt matematician grec,
 ### Aplicații
 
 Platon s-a înșelat crezând că toate elementele sunt alcătuite din corpuri platonice.
-Dar poliedrele regulate au multe proprietăți speciale care le fac să apară altundeva 
+Dar poliedrele regulate au multe proprietăți speciale care le fac să apară altundeva
 în natură - și putem copia aceste proprietăți în știință și inginerie.
 
 ::: column(width=180)
 
     x-img(lightbox width=180 height=180 src="images/radiolaria.jpg")
     p.caption Schelet de radiolar
-    
+
 ::: column(width=180)
 
     x-img(lightbox width=180 height=180 src="images/virus.jpg")
@@ -1819,15 +1822,15 @@ câteva elemente regulate, dar arată aproape ca o sferă.
 
     x-img(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
     p.caption Molecula Buckyball
-      
+
 ::: column(width=180)
 
     x-img(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
     p.caption Montreal Biosphere
-      
+
 ::: column.grow
-Multe __molecule__ au formă de poliedre regulate. Cel mai faimos exemplu este 
-`C_60` care constă din 60 de atomi de carbon aranjați sub forma unui 
+Multe __molecule__ au formă de poliedre regulate. Cel mai faimos exemplu este
+`C_60` care constă din 60 de atomi de carbon aranjați sub forma unui
 [Icosaedru trunchiat](gloss:truncated-icosahedron).
 
 A fost descoperit în anul 1985 când oamenii de știință cercetau praful interstelar. I-au dat
@@ -1839,12 +1842,12 @@ Fuller](bio:fuller), famous for constructing similar-looking buildings.
 
     x-img(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
     p.caption Octaedru de fluorită
-      
+
 ::: column(width=180)
 
     x-img(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
     p.caption Cub de pirită
-      
+
 ::: column.grow
 Majoritatea __cristalelor__ au atomii aranjați într-o grilă regulată alcătuită
 din [tetraedre](gloss:tetrahedron), [cuburi](gloss:cube) și [octaedre](gloss:octahedron).
@@ -1871,7 +1874,7 @@ acoperișuri mari și poduri masive.
 
     x-img(lightbox width="180", height="180", src="images/football.jpg")
     p.caption Football
-    
+
 ::: column(width=180)
 
     x-img(lightbox width="180", height="180", src="images/dice.jpg")

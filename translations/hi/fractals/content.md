@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
 > translated: auto
 
 जब प्रकृति के चारों ओर देखते हैं, तो आपने इन जैसे जटिल पौधों पर ध्यान दिया होगा:

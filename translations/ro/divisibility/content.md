@@ -4,38 +4,12 @@
 
 > section: factors-and-multiples
 > id: divisibility1
-
-    mixin grid(n, fn)
-      .number-grid
-        - var i = 1
-        while i <= n
-          .number-cell= i
-            if fn
-              - var badge = fn(i)
-              if badge
-                .number-badge= badge
-          - i += 1
-
-    mixin divisor-table(divisors, pairs)
-      - var len = divisors.length
-      - var last = divisors[len-1]
-      table.divisor-table
-        tr
-          td.td-border-right(width="24")= last
-          for i in divisors
-            td.divisor-number(width="24" data-display="visibility")= i + (i == last ? '' : ',')
-        for i in pairs
-          tr
-            td
-            if i
-              td(colspan=i)
-            td(colspan=len - 2 * i): .divisor-pair(style="height: " + (len/2 - i) + "00%" data-display="visibility")
-            if i
-              td(colspan=i)
+> color: "#1AA845"
+> level: Foundations
 
 Acum sunteți deja familiari cu adunarea, scăderea și înmulțirea numerelor întregi. 
-Împărțirea este ușor diferită, pentru că nu putem împărți întotdeauna un număr întreg 
-la oricare altul. De exemplu, 17 împărțit la 3 nu este un număr întreg - este 
+Împărțirea este ușor diferită, pentru că nu putem împărți întotdeauna un număr întreg
+la oricare altul. De exemplu, 17 împărțit la 3 nu este un număr întreg - este
 undeva între 5 și 6. Fie dăm un rezultat cu rest (2), fie dăm răspunsul sub
 forma unui număr zecimal (5.66…).
 
@@ -49,7 +23,7 @@ forma unui număr zecimal (5.66…).
 
 Dacă putem împărți un număr __{.red}A__ la un număr __{.blue}B__, fără
 rest, spunem ca __{.blue}B__ este un __factor__ (sau __divizor__) al lui
-__{.red}A__, iar __{.red}A__ este un __multiplu__ al lui __{.blue}B__. 
+__{.red}A__, iar __{.red}A__ este un __multiplu__ al lui __{.blue}B__.
 Se notează __{.blue}B__|__{.red}A__, unde bara verticală înseamnă _“divide pe”_.
 
 De exemplu, __{.green}7__ × 3 = __{.orange}21__, așadar __{.green}7__ este un
@@ -59,7 +33,7 @@ de __{.green}7__ și putem scrie __{.green}7__|__{.orange}21__.
 ---
 > id: divisibility-game
 
-În acest scurt joc trebuie să determini cât de repede posibil care numere sunt divizori și care multipli. 
+În acest scurt joc trebuie să determini cât de repede posibil care numere sunt divizori și care multipli.
 Apasă [butonul play](->#divisibility-game_.toggle) pentru a începe.
 
 ::: .box.f-blue.no-padding
@@ -81,11 +55,11 @@ Apasă [butonul play](->#divisibility-game_.toggle) pentru a începe.
 ---
 > id: factors
 
-Adesea este util să găsim _toți_ divizorii unui număr. De exemplu, 
+Adesea este util să găsim _toți_ divizorii unui număr. De exemplu,
 divizorii lui 60 sunt 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 și 60.
 
-Bineînțeles că nu dorim să verificăm toate numerele până la 60 pentru  
-a afla dacă sunt divizori. În schimb, există o tehnică simplă care se bazează 
+Bineînțeles că nu dorim să verificăm toate numerele până la 60 pentru
+a afla dacă sunt divizori. În schimb, există o tehnică simplă care se bazează
 pe faptul că divizorii apar mereu în [[perechi|triplete|jumătăți]].
 
 ---
@@ -94,6 +68,7 @@ pe faptul că divizorii apar mereu în [[perechi|triplete|jumătăți]].
 În cazul lui 60 avem 60 = 1 × 60 = 2 × 30 = 3 × 20 = 4 × 15 = 5 × 12 =
 6 × 10. Sau, folosind o notație diferită,
 
+    include mixins
     +divisor-table([1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60], [5, 4, 3, 2, 1, 0])
 
 Pentru a afla toți divizorii unui număr începem de la ambele capete ale acestei liste
@@ -102,6 +77,7 @@ până ajungem la mijloc.
 ---
 > id: factors2
 
+    include mixins
     x-slideshow
       .stage(slot="stage")
         +divisor-table([1, 2, 3, 6, 7, 14, 21, 42], [3, 2, 1, 0])
@@ -121,8 +97,8 @@ Singurul caz special al acestei metode apare la numerele pătrate perfecte: în 
 > id: divisibility2
 > section: rules
 
-Există câteva criterii diferite care pot ușura surprinzător de mult verificarea dacă 
-un număr este divizibil cu altul. În acest capitol vom arunca o privire asupra 
+Există câteva criterii diferite care pot ușura surprinzător de mult verificarea dacă
+un număr este divizibil cu altul. În acest capitol vom arunca o privire asupra
 câtorva dintre acestea...
 
 ### Criteriul de divizibilitate cu 2 și 5
@@ -131,6 +107,7 @@ Orice număr este divizibil cu 1. Pentru a determina dacă un număr este divizi
 trebuie doar să verificăm dacă este un număr par: orice număr care se termină în
 0, 2, 4, 6, sau 8 este divizibil cu 2.
 
+    include mixins
     +grid(30)
 
 ---
@@ -139,14 +116,15 @@ trebuie doar să verificăm dacă este un număr par: orice număr care se termi
 Pentru a afla dacă un număr este divizibil cu 5 trebuie să verificăm, în mod similar,
 că ultima sa cifră este 0 sau 5:
 
+    include mixins
     +grid(30)
 
 ---
 > id: divisibility5a
 
 Aceste criterii de divizibilitate cu 2 și 5 sunt atât de simple mulțumită sistemului nostru de numerație.
-Baza sistemului nostru de numerație este 10, ceea ce înseamnă că fiecare poziție a unui număr indică 
-o valoare de 10 ori mai mare decât urmatoarea poziție din dreapta. De exemplu, 
+Baza sistemului nostru de numerație este 10, ceea ce înseamnă că fiecare poziție a unui număr indică
+o valoare de 10 ori mai mare decât urmatoarea poziție din dreapta. De exemplu,
 daca luăm numărul 6382,
 
     table.base-10.base-10-fixed
@@ -197,7 +175,7 @@ Cel mai simplu criteriu este criteriul de divizibilitate cu 10: avem nevoie să 
 Din păcate, 4 nu divide pe 10, așa că nu putem să ne uităm doar la ultima cifră –
 dar 4 _divide pe_ 100, așa că trebuie doar să modificăm ușor regula de deasupra.
 Acum scriem __{.m-red}ab__**{.m-green}cd** = __{.m-red}ab × 100__ +
-__{.m-green}cd__. Știm că 4 va divide mereu pe __{.m-red}ab × 100__, așa că trebuie 
+__{.m-green}cd__. Știm că 4 va divide mereu pe __{.m-red}ab × 100__, așa că trebuie
 să ne uităm la ultimele [[două]] cifre pentru a verifica dacă un număr este divizibil cu 4.
 
 De exemplu, __{.m-green}24__ este divizibil cu 4, deci __{.m-red}2735__**{.m-green}24**
@@ -207,11 +185,11 @@ __{.m-red}1947__**{.m-green}18** [[nu este nici el|este și el]] divizibil cu 4.
 ---
 > id: divisibility4a
 
-Criteriul de divizibilitate cu 8 devine și mai dificil, pentru că 100 nu este 
+Criteriul de divizibilitate cu 8 devine și mai dificil, pentru că 100 nu este
 divizibil cu 8. În schimb, trebuie să urcăm până la [[1000|800|108]] și să ne uităm la
 ultimele [[trei]] cifre ale unui număr.
 
-De exemplu, __{.m-green}120__ este divizibil cu 8, deci 
+De exemplu, __{.m-green}120__ este divizibil cu 8, deci
 __{.m-red}271__**{.m-green}120** este, de asemenea, divizibil cu 8.
 
 ---
@@ -220,10 +198,10 @@ __{.m-red}271__**{.m-green}120** este, de asemenea, divizibil cu 8.
 ### Criteriul de divizibilitate cu 3 și 9
 
 Criteriul de divizibilitate cu 3 este destul de dificil. 3 nu divide pe 10 și nici pe
-100, 1000 sau oricare altă putere a lui 10. Nu ne va ajuta să ne uităm doar la ultimele 
+100, 1000 sau oricare altă putere a lui 10. Nu ne va ajuta să ne uităm doar la ultimele
 câteva cifre ale unui număr.
- 
-În schimb, trebuie să folosim __suma cifrelor__ unui număr, care este pur și simplu 
+
+În schimb, trebuie să folosim __suma cifrelor__ unui număr, care este pur și simplu
 suma tuturor cifrelor sale individuale. De exemplu, suma cifrelor lui ${13×n+123}{n|3|0,20,1}
 este ${digitSumString(123+13×n)} = ${digitSum(123+13×n)} și suma cifrelor lui 3524
 este [[14]].
@@ -231,6 +209,7 @@ este [[14]].
 ---
 > id: divisibility3b
 
+    include mixins
     +grid(40, function(n) { if (!(n % 3)) { var s = '' + n; return +s[0] + (+s[1] || 0); } })
 
 Aici am subliniat toate numerele care sunt multiplu de trei. Se poate observa
@@ -251,14 +230,14 @@ Hai să ne uităm în continuare la multiplii lui 9:
           .number-badge= (x == 11 ? 18 : 9)
 
 Așadar, pentru toate numerele divizibile cu 9, suma cifrelor
-[[este|nu este]] divizibilă cu 9. _{span.reveal(when="blank-0")}De exemplu, 
+[[este|nu este]] divizibilă cu 9. _{span.reveal(when="blank-0")}De exemplu,
 suma cifrelor lui 4752 este [[18]], deci 4752 [[este|nu este]] divizibilă cu 9._
 
 ---
 > id: divisibility9a
 
 Bineînțeles că aceste reguli interesante pentru numerele divizibile cu 3 sau 9
-trebuie să aibă o explicație - și la fel ca mai înainte are de-a face cu 
+trebuie să aibă o explicație - și la fel ca mai înainte are de-a face cu
 sistemul nostru de numerație în baza 10. După cum am văzut, scrierea numărului
 __{.m-red}6__**{.m-blue}3**__{.m-green}8__**{.m-yellow}4**
 
@@ -292,6 +271,7 @@ rezultatul va fi și el un multiplu de 3.
 Până acum am omis numărul 6, dar deja am trecut greul.
 Să ne amintim că 6 = 2 × 3.
 
+    include mixins
     +grid(40)
     p.btn-row.text-center(style="margin-bottom:1em")
       button.btn.btn-small(data-display="visibility") Arată multiplul lui 2
@@ -321,7 +301,7 @@ Să observăm că 1 _nu_ este număr prim, așa că primele numere prime sunt
 > id: primes1
 
 Orice număr ce nu este prim poate fi scris sub forma unui produs de numere prime:
-pur și simplu continuăm să-l împărțim de mai multe ori până când toți factorii 
+pur și simplu continuăm să-l împărțim de mai multe ori până când toți factorii
 sunt primi. De exemplu,
 
     table.table-tiny
@@ -354,17 +334,17 @@ sunt primi. De exemplu,
         td ×
         td: .number-ball.yellow 7
 
-2, 3 și 7 sunt numere prime și nu se mai pot împărți. Produsul 2 × 2 × 3 × 7 
-se numește __descompunerea în factori primi__ a lui 84, iar 2, 3 și 7 
+2, 3 și 7 sunt numere prime și nu se mai pot împărți. Produsul 2 × 2 × 3 × 7
+se numește __descompunerea în factori primi__ a lui 84, iar 2, 3 și 7
 sunt __factorii primi__. De observat că unele numere prime, precum 2 în acest caz,
 poate apărea de mai multe ori într-o descompunere în factori primi.
 
 Orice număr întreg se poate descompune în factori primi și nu există două numere întregi
 care să aibă aceeași descompunere în factori primi. Mai mult de atât, orice număr întreg
-poate fi exprimat în mod unic ca produs de numere prime. Aceasta se numește 
+poate fi exprimat în mod unic ca produs de numere prime. Aceasta se numește
 __Teorema Fundamentală a Aritmeticii__ (TFA).
 
-Folosirea TFA poate simplifica multe probleme de matematică: descompunem numerele în 
+Folosirea TFA poate simplifica multe probleme de matematică: descompunem numerele în
 factori primi, rezolvăm problema pentru numerele prime individuale, care
 adesea poate fi mult mai ușoară, iar apoi combinăm aceste rezultate pentru a rezolva
 problema inițială.
@@ -375,11 +355,12 @@ problema inițială.
 ### Ciurul lui Eratostene
 
 S-a dovedit că poate fi destul de dificil de determinat dacă un număr este prim: trebuie
-să găsim mereu _toți_ factori săi primi, ceea ce devine din ce în ce mai dificil 
-pe măsură ce numerele cresc. În schimb, matematicianul grec 
-[Eratostene din Cyrene](bio:eratosthenes) a găsit un algoritm simplu de aflare 
+să găsim mereu _toți_ factori săi primi, ceea ce devine din ce în ce mai dificil
+pe măsură ce numerele cresc. În schimb, matematicianul grec
+[Eratostene din Cyrene](bio:eratosthenes) a găsit un algoritm simplu de aflare
 a tuturor numerelor prime până la 100: the __Ciurul lui Eratostene__.
 
+    include mixins
     x-slideshow
       .stage(slot="stage")
         +grid(100)
@@ -400,7 +381,7 @@ Acum putem număra că sunt în total [[25]] de numere prime mai mici ca 100.
 
 ::: column.grow
 Bineînțeles că putem folosi Ciurul lui Eratostene pentru a calcula numere prime mai mari.
-Sunt 21 de numere prime între 100 și 200, 16 numere prime între 200 și 300, 
+Sunt 21 de numere prime între 100 și 200, 16 numere prime între 200 și 300,
 17 numere prime între 400 și 500 and doar 11 numere prime între 10.000 și 10.100.
 
 Numerele prime par să se dispereze din ce în ce mai mult, dar se termină vreodată șirul lor?
@@ -432,7 +413,7 @@ că există o infinitate de numere prime, folosind următorul raționament:
 
 Explicația lui Euclid este unul din primele exemple din istorie al unei
 __demonstrații__ matematice formale – un agument logic prin care se dovedește
-că trebuie să fie adevărat. Acest exemplu se numește adesea 
+că trebuie să fie adevărat. Acest exemplu se numește adesea
 __demonstrație prin reducere la absurd__: pornim de la o presupunere, deducem ceva
 imposibil și astfel știm că propria noastră presupunere trebuie să fie incorectă.
 
@@ -446,7 +427,7 @@ imposibil și astfel știm că propria noastră presupunere trebuie să fie inco
 
 Cea mai simpla metodă de a verifica dacă un număr este prim este să încerci sa-l
 împarți la toate numerele întregi mai mici decât el. Calculatoarele pot face asta
-foarte rapid și eficient. Pentru numere _foarte mari_, cu sute de cifre, există 
+foarte rapid și eficient. Pentru numere _foarte mari_, cu sute de cifre, există
 algoritmi mai eficienți. Unii dintre aceștia folosesc chiar și probabilități pentru
 a determina dacă un număr este _aproape sigur prim_.
 
@@ -466,7 +447,7 @@ Oamenii au încercat de-a lungul timpului să găsească numere prime din ce în
 În anul 1460, cel mai mare număr prim cunoscut era 131.071. În 1772, [Leonard Euler](bio:euler)
 a arătat că și 2.147.483.647 este prim.
 
-O dată cu sosirea calculatoarelor în secolul 20, calcularea numerelor prime mari 
+O dată cu sosirea calculatoarelor în secolul 20, calcularea numerelor prime mari
 a devenit mult mai ușoară. Cel mai mare număr prim cunoscut la ora actuală a fost descoperit
 în decembrie 2018 și are 24.862.048 cifre. Am avea nevoie de 8000 de foi de hârtie pentru a-l tipări!
 
@@ -474,7 +455,7 @@ a devenit mult mai ușoară. Cel mai mare număr prim cunoscut la ora actuală a
 
     img(src="images/network.jpg" width=300 height=200)
 
-{.caption} GIMPS (_Great Internet Mersenne Prime Search_) este un proiect colaborativ în care volunarii 
+{.caption} GIMPS (_Great Internet Mersenne Prime Search_) este un proiect colaborativ în care volunarii
 pot găsi numere prime folosind software gratuit.
 
 :::
@@ -483,7 +464,7 @@ pot găsi numere prime folosind software gratuit.
 > id: prime-generator
 > goals: calculator
 
-Calculul acestor numere prime mari ar putea părea a fi doar o pierdere de timp, dar mai târziu vei învăța 
+Calculul acestor numere prime mari ar putea părea a fi doar o pierdere de timp, dar mai târziu vei învăța
 în acest curs despre variatele aplicatii din viața reală în care calculatoarele au nevoie să folosească
 numere prime mari.
 
@@ -500,7 +481,7 @@ Aici poți genera propriile tale numere prime cu un număr dat de cifre:
 
 ### Spirala Ulam
 
-Matematicianul polonez [Stanisław Ulam](bio:ulam) a descoperit o metodă  grozavă 
+Matematicianul polonez [Stanisław Ulam](bio:ulam) a descoperit o metodă  grozavă
 de a arăta ddistribuția numerelor prime mari în timp ce mâzgălea pe când se afla la
 o ședință _“lungă și foarte plictisitoare”_ din anul 1963.
 
@@ -520,7 +501,7 @@ o ședință _“lungă și foarte plictisitoare”_ din anul 1963.
       for x in [43, 44, 45, 46, 47, 48, 49]
         .number-cell(data-display="visibility")= x
 
-Notăm toate numerele întregi într-o grilă dreptunghiulară, începând cu 1 în mijloc 
+Notăm toate numerele întregi într-o grilă dreptunghiulară, începând cu 1 în mijloc
 și apoi mergând în spirală spre exterior. Apoi subliniem toate numerele prime.
 
 ---
@@ -533,10 +514,10 @@ apar modele interesante. Iată numerele prime până la 160.000:
 
 ::: column.grow
 În loc să apară în mod aleator, așa cum ne-am putea aștepta, pare că anumite
-diagonale conțin mai multe numere prime ca altele. Se crează astfel un model 
+diagonale conțin mai multe numere prime ca altele. Se crează astfel un model
 "în carouri" interesant.
 
-_{.lgrey}Se dovedește că toate aceste diagonale corespund anumitor ecuații de gradul 
+_{.lgrey}Se dovedește că toate aceste diagonale corespund anumitor ecuații de gradul
 al doilea care par să genereze numere prime mai des decât media. Cu toate acestea
 nu se știe de ce se întâmplă așa._
 
@@ -553,9 +534,9 @@ nu se știe de ce se întâmplă așa._
 
 ### Conjectura lui Goldbach
 
-În anul 1742, matematicianul german [Christian Goldbach](bio:goldbach) a făcut 
+În anul 1742, matematicianul german [Christian Goldbach](bio:goldbach) a făcut
 o descoperire interesantă: el a observat că toate numerele întregi pare (cu excepția lui 2)
-pot fi scrise ca sumă a două numere prime. De exemplu, 8 = 5 + 3 and 24 = 13 + 11. 
+pot fi scrise ca sumă a două numere prime. De exemplu, 8 = 5 + 3 and 24 = 13 + 11.
 Acest lucru este destul de surprinzător, deoarece numerele prime sunt determinate folosind
 înmulțirea și divizorii - și nu ar trebui să aibă prea mult de-a face cu adunarea.
 
@@ -566,7 +547,7 @@ Acest lucru este destul de surprinzător, deoarece numerele prime sunt determina
       .result.var(:html="result")
 
 Goldbach a scris despre constatarea sa într-o scrisoare adresată faimosului matematician
-[Leonhard Euler](bio:euler), dar niciunul din cei doi nu a putut să o demonstreze. 
+[Leonhard Euler](bio:euler), dar niciunul din cei doi nu a putut să o demonstreze.
 A devenit cunoscută drept __Conjectura lui Goldbach__.
 
 Calculatoarele au verificat că această Conjectură a lui Goldbach funcționează pentru
@@ -584,7 +565,7 @@ probleme nerezolvate din matematică.
 ### Numere Prime Gemene
 
 Am văzut deja că numerele prime se distanțeaza tot mai mult pe măsură ce devin mai mari.
-Dar ele par să apară mereu complet aleator și ocazional găsim două numere prime 
+Dar ele par să apară mereu complet aleator și ocazional găsim două numere prime
 alăturate, la doar un număr distanță: acestea se numesc __Numere Prime Gemene__.
 
     p.text-center
@@ -618,7 +599,7 @@ alăturate, la doar un număr distanță: acestea se numesc __Numere Prime Gemen
 
 Cea mai mare pereche cunoscută de numere prime are 58.711 cifre! Dar există oare
 o infinitate de numere prime gemene, așa cum există o infinitate de numere prime?
-Nu se știe – _Conjectura Numerelor Prime Gemene_ este o altă problemă nerezolvată 
+Nu se știe – _Conjectura Numerelor Prime Gemene_ este o altă problemă nerezolvată
 cu privire la numerele prime.
 
 ---
@@ -630,7 +611,7 @@ cu privire la numerele prime.
 
 Matematicienii au explorat timp de multe secole modelul și distribuția
 numerelor prime. Acestea par să apară complet aleator - uneori există spații
-mari între numerele prime consecutive, iar alteori găsim 
+mari între numerele prime consecutive, iar alteori găsim
 [numere prime gemene](gloss:twin-primes) unul lângă altul.
 
 Pe când avea doar 15 ani, matematicianul german [Carl Friedrich Gauss](bio:gauss)
@@ -649,7 +630,7 @@ a pus rezultatele într-un grafic:
         use(xlink:href="/icons.svg#search")
 
 De-a lungul axei X se pot vedea toate numerele întregi. La fiecare număr prim
-_{span.m-blue}Funcția de Numărare a Numerelor Prime_ (marcată cu __{.m-blue}albastru__) crește cu 1. 
+_{span.m-blue}Funcția de Numărare a Numerelor Prime_ (marcată cu __{.m-blue}albastru__) crește cu 1.
 Pe măsură ce [micșorăm](->#riemann_.zoom-icon), linia albastră devine foarte uniformă.
 Gauss a observat că graficul acestei funcții este foarte similar cu cel al funcției
 _{span.m-red}`x/(log(x))`_ (marcat cu __{.m-red}roșu__). El a prezis că cele două
@@ -664,8 +645,8 @@ actual de numere prime și aproximarea lui Gauss. În 1859, matematicianul
 [Bernhard Riemann](bio:riemann) a descoperit o aproximare mult mai bună, dar nu a putut dovedit
 că aceasta se aplică _mereu_. Ideea sa a devenit cunoscută sub numele de __Ipoteza Riemann__.
 
-Sute de matematicieni au incercat să demonstreze ipoteza lui Riemann, dar toate încercările 
-au fost fără succes. Este adesea considerată una din cele mai dificile și importante probleme 
+Sute de matematicieni au incercat să demonstreze ipoteza lui Riemann, dar toate încercările
+au fost fără succes. Este adesea considerată una din cele mai dificile și importante probleme
 nerezolvate din matematică. În anul 2000, Institutul de Matematică Clay a numit-o
 una din cele șapte [__Probleme de Premiul Mileniului__](gloss:millennium-prize)
 și a promit să acorde $1.000.000 oricărui matematician care o rezolvă.
@@ -681,7 +662,7 @@ una din cele șapte [__Probleme de Premiul Mileniului__](gloss:millennium-prize)
 Doi alergători se antrenează pe o pistă de alergare de formă circulară.
 __{.m-blue}Primul alergător__ face un tur în __{.m-blue}60__ de secunde.
 __{.m-green}Al doilea alergător__ face un tur în doar __{.m-green}40__ de secunde.
-Dacă ambii pornesc în același timp de la linia de start, când se vor întâlni 
+Dacă ambii pornesc în același timp de la linia de start, când se vor întâlni
 din nou la start?
 
     figure: include svg/race.svg
@@ -694,7 +675,7 @@ viteză - este despre multipli și divizibilitate.
 
 Primul alergător trece linia de start după 60s, 120s, 180s, 240s, ș.a.m.d.
 Aceștia sunt pur și simplu [[multiplii|factorii]] lui __{.m-blue}60__. Al doilea
-alergător trece linia de start după 40s, 80s, 120s, 160s, ș.a.m.d. Primul moment când 
+alergător trece linia de start după 40s, 80s, 120s, 160s, ș.a.m.d. Primul moment când
 ambii alergători se află din nou la linia de start este după [[120]] seconds.
 
 {.reveal(when="blank-0 blank-1")} Rezultatul găsit este cel mai mic număr care este și
@@ -780,8 +761,8 @@ _{span.number-ball.l-blue-green}2_ × _{span.number-ball.l-blue}2_ ×
 _{span.number-ball.l-green}3_ × _{span.number-ball.l-blue-green}5_
 
 Rezultă că __{.m-red}X__ = 120, exact cum s-a văzut mai sus. De observat că dacă un factor prim
-apare de mai multe ori, precum 2 mai sus, avem nevoie să pastrăm numărul maxim de apariții 
-într-unul din cele două numere (de 3 ori în __{.m-green}40__ este mai mult decât de 2 ori 
+apare de mai multe ori, precum 2 mai sus, avem nevoie să pastrăm numărul maxim de apariții
+într-unul din cele două numere (de 3 ori în __{.m-green}40__ este mai mult decât de 2 ori
 în __{.m-blue}60__).
 
 ---
@@ -830,7 +811,7 @@ Așadar cmmmc pentru __{.m-blue}12__, __{.m-green}30__ și __{.m-yellow}45__ est
 > id: race6
 
 Numerele prime sunt un caz special: cmmmc pentru două numere prime diferite este pur și simplu
-[[produsul|suma|diferența]] lor, pentru că ele nu au niciun factor prim comun care 
+[[produsul|suma|diferența]] lor, pentru că ele nu au niciun factor prim comun care
 s-ar putea “tăia”.
 
 ---
@@ -841,7 +822,7 @@ s-ar putea “tăia”.
 
 ::: column.grow
 America de Nord găzduiește diferite familii de cicade. Acestea au o caracteristică interesantă
-- apar la suprafață pentru a se înmulți doar o dată la câțiva ani în timpul verii - 
+- apar la suprafață pentru a se înmulți doar o dată la câțiva ani în timpul verii -
 restul timpului și-l petrec în subteran.
 
 De exemplu, cicadele din Florida și Mississippi apar o dată la 13 ani. Cicadele din
@@ -854,7 +835,7 @@ de 12, 14, 15 sau 16 ani.
 :::
 
 Și 1, și 17 sunt numere prime și există o explicație pertinentă pentru asta. Imaginează-ți
-că în pădure există predatori care omoară cicadele. Acești predatori apar și ei 
+că în pădure există predatori care omoară cicadele. Acești predatori apar și ei
 la intervale regulate, să zicem la fiecare 6 ani.
 
 Acum imaginează-ți ca o generație de cicade apare o dată la fiecare ${n}{n|13|4,20,1} de ani
@@ -869,12 +850,12 @@ ${lcm(n,6)} ani, care este [[cmmmc|produsul|media]] lui 6 și ${n}.
 > id: cicadas1
 
 Acest număr pare să fie mult mai mare dacă durata ciclului de viață al cicadei este
-un număr prim precum 13 și 17. Este așa pentru că numerele prime nu au factori comuni cu 
-6, astfel că la calcularea cmmmc nu tăiem niciun factor duplicat. 
+un număr prim precum 13 și 17. Este așa pentru că numerele prime nu au factori comuni cu
+6, astfel că la calcularea cmmmc nu tăiem niciun factor duplicat.
 
 Bineînțeles că cicadele nu au nicio idee ce sunt numerele prime, dar de-a lungul a milioane
-de ani evoluția a stabilit că numerele prime sunt cea mai sigură opțiune pentru durata 
-ciclului de viață. Animalul prădător pare să fi dispărut de-a lungul timpului, dar 
+de ani evoluția a stabilit că numerele prime sunt cea mai sigură opțiune pentru durata
+ciclului de viață. Animalul prădător pare să fi dispărut de-a lungul timpului, dar
 ciclurile de viață cu numere prime au ramas.
 
 ---
@@ -884,7 +865,7 @@ ciclurile de viață cu numere prime au ramas.
 > id: gcd
 > section: gcf
 
-Un arhitect proiectează podeaua unei curți mari cu dimensiunea 18m pe 30m. El vrea ca 
+Un arhitect proiectează podeaua unei curți mari cu dimensiunea 18m pe 30m. El vrea ca
 aceasta să fie acoperită cu dale pătratice fără să existe goluri sau suprapuneri
 de-a lungul marginilor. Care este dimensiunea maximă a pătratelor pe care le poate folosi?
 
@@ -904,7 +885,7 @@ __Cel Mai Mare Divizor Comun__ sau __cmmdc__ al lui 18 și 30.
 > id: gcd2
 
 Putem folosi din nou [descompunerea în factori primi](gloss:factorisation) pentru a calcula
-cmmdc al oricăror două numere. Să ne reamintim că orice divizor al unui număr trebuie să aibă 
+cmmdc al oricăror două numere. Să ne reamintim că orice divizor al unui număr trebuie să aibă
 o parte din divizorii primi ai acelui număr.
 
     table.table-tiny
@@ -967,7 +948,7 @@ făceau schimb de ordine secrete în timpul războiului până la poșta electro
 transferurile bancare pe internet.
 Oamenii au încercat întotdeauna să găsească metode de criptare mai bune și mai sigure,
 dar, după o vreme, toate erau sparte cu ajutorul algoritmilor și mai avansați.
-În timpul celui de-al Doilea Război mondial, armata germană a folosit Enigma: 
+În timpul celui de-al Doilea Război mondial, armata germană a folosit Enigma:
 o mașină complexă formată dintr-o tastatură, discuri rotative și un tablou de prize.
 Această mașină criptografia mesajele folosind una din cele 158 de milioane de milioane de milioane
 de posibilități (acesta e un 158 urmat de 18 zerouri!). Se credea că acest cod nu putea
@@ -984,7 +965,7 @@ unul din primele calculatoare care au reușit să-l descifreze.
 În ziua de azi, calculatoarele sunt mult mai performante și sunt capabile să
 încerce milioane de posibilități în fiecare secundă. Pentru a dezvolta algoritmi
 de criptare mai buni, trebuie să găsim o operație matematică dificilă chiar
-și pentru calculatoarele puternice. Calculatoarele sunt incredibil de rapide 
+și pentru calculatoarele puternice. Calculatoarele sunt incredibil de rapide
 la adunăre, scădere, înmulțire și împărțire. Cu toate acestea, ele sunt foarte
 lente la descompunerea numerelor întregi în numere prime…
 
@@ -995,10 +976,10 @@ lente la descompunerea numerelor întregi în numere prime…
 
 Acest algoritm criptografic numit se numește __Criptografie RSA__, numit după cei trei inventatori
 ai săi, Ron Rivest, Adi Shamir și Leonard Adleman care l-au făcut public în anul 1977.
-Se pare că Serviciului Britanic Secret știa o metodă foarte similară încă din anul 1973, 
+Se pare că Serviciului Britanic Secret știa o metodă foarte similară încă din anul 1973,
 dar algoritmul a rămas clasificat până mult mai târziu.
 
 Astăzi, numerele prime sunt utilizate de calculatoarele din toată lumea pentru a face
-schimb de date. În timp ce navighezi pe internet sau trimiți mesaje de chat, telefonul 
-sau laptopul tău vor genera în liniște numere prime mari și vor face schimburi 
+schimb de date. În timp ce navighezi pe internet sau trimiți mesaje de chat, telefonul
+sau laptopul tău vor genera în liniște numere prime mari și vor face schimburi
 de chei publice cu alte calculatoare.

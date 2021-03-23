@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: tBJUNvCBkLo
+> color: "#5A49C9"
+> level: Intermediate
+> next: graph-theory
 > translated: auto
 
 ::: column.grow
@@ -461,12 +465,12 @@ Todo ângulo em graus tem um tamanho equivalente em radianos. A conversão entre
 
 ::: column(width=180 parent="padded-thin")
 
-{.text-center} _{span.rotate.left} `=>`_  
+{.text-center} _{span.rotate.left} `=>`_
 __{.m-red} 1 °__ _{span.space} =_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
 
 ::: column(width=180)
 
-{.text-center} _{span.rotate.right} `=>`_   
+{.text-center} _{span.rotate.right} `=>`_
 __{.m-green} 1 rad__ _{span.space} =_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
 
 :::
@@ -530,7 +534,7 @@ Para a maioria dos problemas simples de geometria, os graus e os radianos são c
 
 A maioria das calculadoras possui um botão especial](->.button.mode)](->.button.mode) para alternar entre graus e radianos. Funções trigonométricas como [__sin__](gloss:sin), [__cos__](gloss:cos) e __tan__ recebem ângulos como entrada e suas funções inversas __arcsin__, __arccos__ e __arctan__ retornam ângulos como saída. A configuração atual da calculadora determina quais unidades são usadas para esses ângulos. Tente usar esta calculadora para calcular que
 
-{.text-center} sin (30 °) = [[0,5]] _{span.eqn-gap}_ cos (1 °) = [[0,999]]  
+{.text-center} sin (30 °) = [[0,5]] _{span.eqn-gap}_ cos (1 °) = [[0,999]]
 sin (30 rad) = [[-0,988]] _{span.eqn-gap}_ cos (1 rad) = [[0,54]]
 
 ::: column(width=300)
@@ -579,23 +583,23 @@ Nas seções anteriores, você aprendeu os nomes dados a várias partes diferent
 
     x-geopad.sticky(width=300 height=300): svg
       circle(x="point(150,150)" name="x")
-    
+
       path.teal.fill.reveal(x="sector(x,d1,pi/2.5)" target="sector" when="next-3" label="Sector" label-class="white")
       path.purple.fill.reveal(x="arc(x,b1,pi/2.5)" target="segment" when="next-4" label="Segment")
-    
+
       path.black(x="circle(x,100)" name="c")
-    
+
       circle.red(x="c.at(0.5)" name="a1" target="secant")
       circle.red(x="c.at(0.7)" name="a2" target="secant")
       path.red.thick(x="line(a1,a2)" label="Secant" target="secant")
-    
+
       circle.green.reveal(x="c.at(0.8)" name="b1" target="chord" when="next-0" animation="pop")
       circle.green.reveal(x="c.at(0)" name="b2" target="chord" when="next-0" animation="pop")
       path.green.thick.reveal(x="segment(b1,b2)" label="Chord" target="chord" when="next-0" animation="draw")
-    
+
       circle.blue.reveal(x="c.at(0.1)" name="c1" target="tangent" when="next-1" animation="pop")
       path.blue.thick.reveal(x="c.tangentAt(0.1)" label="Tangent" target="tangent" when="next-1" animation="draw")
-    
+
       circle.yellow.reveal(x="c.at(0.2)" name="d1" target="arc" when="next-2" animation="pop")
       circle.yellow.reveal(x="c.at(0.4)" name="d2" target="arc" when="next-2" animation="pop")
       path.yellow.thick.reveal(x="arc(x,d1,pi/2.5)" label="Arc" target="arc" when="next-2" animation="draw")
@@ -658,7 +662,7 @@ Infelizmente, ninguém sabia exatamente o tamanho da Terra - até cerca de 200 a
       path(x="circle(c,100)" name="circ")
       circle.move(cx=240 cy=140 name="a" project="circ" label="A")
       circle.move(cx=85 cy=60 name="b" project="circ" label="B")
-    
+
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Sector" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Arc" target="arc")
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
@@ -701,11 +705,11 @@ Podemos expressar essa relação em uma equação:
       path(x="circle(c,100)" name="circ")
       circle.move(cx=240 cy=140 name="a" project="circ")
       circle.move(cx=85 cy=60 name="b" project="circ")
-    
+
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Sector" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Arc" target="arc")
       path.fill.blue(x="angle(b,c,a)" target="angle")
-    
+
       path.fill.orange.transparent(x="circ" target="area")
       path.thick.purple.transparent(x="circ" target="circ")
       path.teal.fill.transparent(x="circle(c,32)" target="fangle")
@@ -825,22 +829,22 @@ Finalmente, sabemos que a circunferência de um círculo é `C = 2 pi r`, então
         defs: radialGradient#grad1(cx=200 cy=200 r=200 gradientUnits="userSpaceOnUse")
           stop(offset=0 stop-color="#63a3ff")
           stop(offset=1 stop-color="#0f82f2")
-    
+
         circle(x="point(150,250)" name="c" hidden)
         circle(x="point(150,120)" name="a" hidden)
         circle.move.pulsate(cx=80 cy=140 name="b" project="arc(c,point(64,155),1.47)")
         circle(x="c.add(b.subtract(c).scale(1.465))" name="d" hidden)
-    
+
         path.shadow(x="triangle(c,d,point(d.x,c.y))")
         path.earth(d="M153,120,152,150h-4l-.95-30a130,130,0,1,0,5.9,0Z" fill="url(#grad1)")
         path.earth-cover.fill(x="circle(c,130)")
-    
+
         path.red.thick.reveal(when="next-0" animation="draw" x="arc(c,b,angle(b,c,a).rad).minor" target="arc")
         path.fill.teal.reveal(when="next-0" x="angle(c,d,point(d.x,c.y)).sup" target="angle1")
         path.fill.purple.reveal(when="next-0" x="angle(b,c,a).sup" name="ang" target="angle2")
         path.thin.white.reveal(when="next-0" animation="draw" x="segment(c,b)")
         path.blue.transparent(x="circle(c,130)" target="circ")
-    
+
         image.obelisk.var(xlink:href="images/obelisk.svg" height=60 width=8 style="transform: translate(${b.x-4}px, ${b.y-60}px) rotate(-${angle(b,c,a).rad}rad)")
 
 :::
@@ -1218,15 +1222,15 @@ O comprimento do arco _{span.pill.step-target.red(data-to="arc")}_ do setor é o
       circle(x="point(140,250)" name="c2" hidden)
       circle(x="point(235,141.5)" name="a" hidden)
       circle(x="point(45,141.5)" name="b" hidden)
-    
+
       path.yellow.fill.light(x="circle(c2, 40)" target="base")
       path.yellow(x="circle(c2, 40)" target="base")
       path.yellow(x="segment(c2,point(180, 250))" label="r" target="base")
       path.red.thick.reveal(when="blank-0" animation="draw" duration=1500 x="circle(c2, 40)")
-    
+
       path.teal.fill.light(x="circle(c1, 100)" name="circ" target="circle")
       path.green.fill.light(x="sector(c1, a, 2.5)" target="sector circle")
-    
+
       path.green(x="segment(c1, a)" label="s")
       path.green(x="segment(c1, b)" label="s")
       path.red.thick(x="arc(c1, a, 2.5)" target="arc")
@@ -1275,12 +1279,12 @@ Ao mover o controle deslizante acima, você pode ver a seção transversal de am
 ::: column(width=240)
 
     x-solid(size=240 style="margin: -24px 0 10px")
-    
+
     x-geopad.r.no-background(width=220 height=120): svg
       circle(x="point(110,110)" name="c1")
       circle(x="c1.shift(0,-100*h)" name="h1")
       circle(x="h1.shift(-100 * sqrt(1-h*h),0)" name="a1")
-    
+
       path.yellow.fill.light(x="triangle(c1,a1,h1)" target="tri")
       path(x="arc(c1,point(10,c1.x),pi)")
       path(x="segment(point(10,c1.x),point(210,c1.x))")
@@ -1292,16 +1296,16 @@ Ao mover o controle deslizante acima, você pode ver a seção transversal de am
 ::: column(width=240)
 
     x-solid(size=240 style="margin: -24px 0 10px")
-    
+
     x-geopad.r.no-background(width=220 height=120): svg
       circle(x="point(10,10)" name="a2" hidden)
       circle(x="point(210,10)" name="b2" hidden)
       path(x="polygon(a2,b2,point(210,110),point(10,110))")
-    
+
       circle(x="point(110,110)" name="c2")
       circle(x="c2.shift(0,-100*h)" name="h2")
       circle(x="h2.shift(-100*h,0)" name="x2")
-    
+
       path.thin(x="segment(a2,c2)")
       path.thin(x="segment(b2,c2)")
       path.blue.thin(x="segment(h1,c1)" label="h" target="h")
