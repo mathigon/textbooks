@@ -4,7 +4,7 @@ domain: mathigon.org
 
 privacyURL: /policies
 banner: (c) Mathigon
-locales: [en, ar, az, ca, cn, de, es, fr, hi, hr, it, ja, pt, ro, ru, sv, tr, uk, vi]
+locales: [en, ar, cn, de, es, fr, hi, hr, it, ja, pt, ro, ru, sv, tr, vi]
 
 search:
   enabled: false
