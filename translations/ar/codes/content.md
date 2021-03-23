@@ -5,6 +5,9 @@
 > section: introduction
 > id: intro
 > goals: play
+> color: "#93299B"
+> level: Intermediate
+> next: game-theory
 
 ::: column.grow
 

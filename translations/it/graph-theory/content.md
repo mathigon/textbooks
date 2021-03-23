@@ -4,6 +4,9 @@
 
 > id: intro-0
 > section: introduction
+> color: "#A7208A"
+> level: Intermediate
+> next: probability
 
 Ogni giorno siamo circondati da innumerevoli connessioni e reti: strade e binari, linee telefoniche, Internet, circuiti elettronici e persino legami molecolari. Esistono anche _social network_ per mantenere i contatti tra amici e famiglie. Riesci a pensare ad altri esempi?
 
@@ -260,12 +263,12 @@ Confrontando questi numeri per i grafi che sono possibili e quelli che non sono 
 
     x-slideshow
       .stage(slot="stage"): include svg/konigsberg-proof.svg
-      .legend(slot="legend") Qui puoi vedere un singolo vertice ingrandito 
+      .legend(slot="legend") Qui puoi vedere un singolo vertice ingrandito
       .legend(slot="legend") Se disegnamo il grafo, abbiamo due spigoli che si incontrano nel vertice.
       .legend(slot="legend") Se il vertice è un incrocio invece che un angolo, abbiamo quattro spigoli.
       .legend(slot="legend") In altri casi, possiamo avere sei spigoli.
       .legend(slot="legend") Nota che, in ogni caso, c'è sempre un numero pari di spigoli che si incontrano al vertice.
-      .legend(slot="legend") Le uniche eccezioni sono i vertici all'inizio e alla fine del percorso – questi possono avere un numero dispari di spigoli. Se il punto iniziale e finale sono gli stessi, allora tutti i vertici sono pari. 
+      .legend(slot="legend") Le uniche eccezioni sono i vertici all'inizio e alla fine del percorso – questi possono avere un numero dispari di spigoli. Se il punto iniziale e finale sono gli stessi, allora tutti i vertici sono pari.
 
 ---
 
@@ -454,7 +457,7 @@ Quando si confrontano questi numeri, noterai che il numero di spigoli è sempre 
           circle.node(cx=150 cy=100 r=7 style="display: none")
           circle.node(cx=270 cy=170 r=7 style="display: none")
           circle.node(cx=390 cy=100 r=7 style="display: none")
-    
+
         div(style="position: absolute; top: 20px; right: 0; font-size: 1.2em;")
           table.grid.table-small
             tr
@@ -466,7 +469,7 @@ Quando si confrontano questi numeri, noterai che il numero di spigoli è sempre 
               td.xv 1
               td.xe 0
           p #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
-    
+
       .legend(slot="legend") Il grafico più semplice è costituito da un singolo vertice. Possiamo facilmente verificare che l'equazione di Eulero funziona.
       .legend(slot="legend") Aggiungiamo un nuovo vertice al nostro grafico. Dobbiamo anche aggiungere uno spigolo e l'equazione di Eulero funziona ancora.
       .legend(slot="legend") Se vogliamo aggiungere un terzo vertice al grafico, abbiamo due possibilità. Potremmo creare un piccolo triangolo: questo aggiunge un vertice, una faccia e due spigoli, quindi l'equazione di Eulero funziona ancora.
@@ -476,7 +479,7 @@ Quando si confrontano questi numeri, noterai che il numero di spigoli è sempre 
 ---
 > id: euler-3
 
-Qualsiasi grafo (finito) può essere costruito iniziando da un vertice e aggiungendo più vertici, uno alla volta. Abbiamo dimostrato che, in qualunque modo aggiungiamo nuovi vertici, l'equazione di Eulero è valida. Pertanto è valida per tutti i grafi. Il processo che abbiamo usato si chiama __induzione matematica__. È una tecnica molto utile per dimostrare i risultati in tantissimi casi, semplicemente partendo dal caso più semplice e dimostrando che il risultato vale in ogni fase della costruzione di casi più complessi.     
+Qualsiasi grafo (finito) può essere costruito iniziando da un vertice e aggiungendo più vertici, uno alla volta. Abbiamo dimostrato che, in qualunque modo aggiungiamo nuovi vertici, l'equazione di Eulero è valida. Pertanto è valida per tutti i grafi. Il processo che abbiamo usato si chiama __induzione matematica__. È una tecnica molto utile per dimostrare i risultati in tantissimi casi, semplicemente partendo dal caso più semplice e dimostrando che il risultato vale in ogni fase della costruzione di casi più complessi.
 
     .svg-block: include svg/dominoes.svg
 
@@ -506,27 +509,27 @@ Ciò significa che si può usare la formula di Eulero non solo per i grafi plana
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
-{.caption} __Icosaedro__  
-__{.blue} 20__ Facce  
-__{.green} 12__ Vertici  
+{.caption} __Icosaedro__
+__{.blue} 20__ Facce
+__{.green} 12__ Vertici
 __{.red} 30__ Bordi
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Rhombicosidodecahedron__  
-__{.blue} 62__ Facce  
-__{.green} 60__ Vertici  
+{.caption} __Rhombicosidodecahedron__
+__{.blue} 62__ Facce
+__{.green} 60__ Vertici
 __{.red} 120__ Bordi
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
-{.caption} __Icosaedro troncato__  
-__{.blue} 32__ Facce (12 neri, 20 bianchi)  
-__{.green} 60__ Vertici  
+{.caption} __Icosaedro troncato__
+__{.blue} 32__ Facce (12 neri, 20 bianchi)
+__{.green} 60__ Vertici
 __{.red} 90__ Bordi
 
 :::
@@ -539,7 +542,7 @@ __{.red} 90__ Bordi
 
 ::: column.grow
 
-Abbiamo già usato la teoria dei grafi con alcune mappe. Rimpicciolendo una mappa, si nota che le singole strade e i ponti non sono più visibile, mentre vediamo il contorno di interi Paesi. 
+Abbiamo già usato la teoria dei grafi con alcune mappe. Rimpicciolendo una mappa, si nota che le singole strade e i ponti non sono più visibile, mentre vediamo il contorno di interi Paesi.
 
 Quando si colora una mappa - o qualsiasi altro disegno costituito da regioni distinte - i Paesi adiacenti sono colorati con colori diversi. Potremmo anche voler usare il minor numero possibile di colori. Alcune semplici "mappe", come una scacchiera, richiedono solo due colori (bianco e nero), ma la maggior parte delle mappe complesse ha bisogno di più colori.
 
@@ -564,7 +567,7 @@ Quando si colora la mappa degli Stati Uniti, 50 colori sono ovviamente sufficien
       span.four-colour-icon
       span.four-colour-icon
       span.four-colour-icon
-    
+
     x-tabbox.four-colours.full-width
       .tab
         h3 Stati Uniti #[span.check(when="map-0")]

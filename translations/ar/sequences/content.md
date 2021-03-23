@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: u2vwpDVj5rU
+> color: "#F97E08"
+> level: Intermediate
+> next: fractals
 
 يهتم العديد من المهن التي تستخدم الرياضيات بجانب معين - _إيجاد الأنماط_ ، والقدرة على التنبؤ بالمستقبل. وفيما يلي بعض الأمثلة على ذلك:
 
@@ -80,7 +84,7 @@ _{span.pattern.reveal(when="blank-6 blank-7")} نمط: أضرب الرقم ال�
             mi x
             mn= i
         | ,&nbsp;
-      
+
 
 يُطلق على الرقم الصغير بعد _x_ اسم __منخفض__ ، ويشير إلى موضع المصطلح في التسلسل. هذا يعني أنه يمكننا تمثيل الحد _n_ في التسلسل بـ [[`x_n`|`x_i`|`x_2`]].
 
@@ -924,24 +928,24 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
             polygon(points="129 386 121 366 129 371 137 366 129 386")
             polygon(points="399 386 391 366 399 371 407 366 399 386")
             polygon(points="579 386 571 366 579 371 587 366 579 386")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
@@ -950,14 +954,14 @@ _{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
-    
+
           .n(style="top: 0%") 1
           .n(style="top: 15%") 1
           .n(style="top: 32%") 2
           .n(style="top: 49%") 3
           .n(style="top: 66%") 5
           .n(style="top: 84%") 8
-    
+
       .legend(slot="legend") قي الشهر الأول، تكونالأرانب صغيرة جدا و لا يمكنها فعل الكثير - لكنها تنمو بسرعة كبيرة.
       .legend(slot="legend") بعد شهر واحد، تنمو الأرانب و يمكن أن تبدأ في التزاوج ...
       .legend(slot="legend") ... وبعد شهر آخر، سوف يلدون أول زوج من أولادهم. لديك الأن زوجان من الأرانب.
@@ -1061,7 +1065,7 @@ _{.n}[[144]]_, …
 
 ::: column(width=320)
 
-    x-select.segmented   
+    x-select.segmented
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1198,7 +1202,7 @@ _{.n}[[144]]_, …
       while i < 40
         path(d="M166,158A20,20,0,0,1,150,150a20,20,0,0,1,32,0A20,20,0,0,1,166,158Z")
         - i += 1
-    
+
     x-slider(steps=39 speed=0.5)
 
 :::
@@ -1367,7 +1371,7 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
-    - total = function(a) { return a.reduce((a, c) => a + c, 0); }    
+    - total = function(a) { return a.reduce((a, c) => a + c, 0); }
     table.grid.perfect-table(dir="ltr")
       tr
         td: strong Number
@@ -1390,7 +1394,7 @@ _{.n}[[13]]_, _{.n}[[17]]_, _{.n}[[19]]_, …
 دعنا نقارن هذه الأرقام بمجموع عواملها:
 
 ::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
- 
+
  بالنسبة لمعظم الأرقام ، يكون مجموع عوامله
 [[أقل من|أكثر من|يساوي]] نفسها. تسمى هذه الأرقام __أرقام ناقصة__.
 
@@ -1581,7 +1585,7 @@ _{span.pattern.reveal(when="blank-12 blank-13")} نمط: أرقام مربعة �
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid(style="width: 560px")
       - var i = 0;
       while i < 13
@@ -1638,7 +1642,7 @@ _{button.next-step} متابعة_
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid.sums(style="width: 760px")
       - var i = 0;
       while i < 17
@@ -1726,7 +1730,7 @@ _{button.next-step} متابعة_
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid#pascal-select(style="width: 340px")
       - var i = 0;
       while i < 8
@@ -1748,7 +1752,7 @@ _{button.next-step} متابعة_
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid.small(style="width: 760px")
       - var i = 0;
       while i < 25

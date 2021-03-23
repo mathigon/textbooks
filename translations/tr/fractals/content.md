@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
 
 Doğada çevremize bakarken, aşağıdaki gibi karmaşık bitkileri fark etmiş olabilirsiniz:
 
@@ -703,7 +707,7 @@ Sierpinski üçgeninin birçok çeşidi olduğu gibi, benzer özelliklere ya da 
 
 :::
 
-Bu, matematikte daha önce gördüğünüz başka bir konsepte benzer: [rekursif seriler](gloss:sequence-recursive), belirli bir sayıyla başlarsınız ve daha sonra, bir sonraki sayıya ulaşmak için, aynı formülü tekrar tekrar uygularsınız. 
+Bu, matematikte daha önce gördüğünüz başka bir konsepte benzer: [rekursif seriler](gloss:sequence-recursive), belirli bir sayıyla başlarsınız ve daha sonra, bir sonraki sayıya ulaşmak için, aynı formülü tekrar tekrar uygularsınız.
 
 Örnek olarak `§x_n = x_(n-1)^2` formülünü ele alalım ve terimlerini sayı doğrusu üzerinde gösterelim. `pill(x_0,"yellow","x0")` değerini değiştirebilirsiniz:
 

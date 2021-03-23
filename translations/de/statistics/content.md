@@ -1,24 +1,14 @@
 # Statistik und Daten
 
-    mixin barchart(data)
-      - var max = 100/Math.max.apply(none, data.map(function(d) { return d[1] }))
-      .barchart(style="width: " + data.length*50 + "px")
-        for d in data
-          .bar-wrap
-            div(class="bar "+d[2], style="height: " + d[1]*max + "%")
-        .axis
-        for d in data
-          .label= d[0]
-
-    - var reds = [32, 19, 21, 25, 34, 27, 36, 30, 23, 5, 16, 1, 14, 9, 18, 7, 12, 3]
-    - var colour = function(x) { return reds.indexOf(x) >= 0 ? 'r' : 'b'; }
-
 ## Casino-Mathematik
 
 > id: roulette
 > sectionBackground: dark casino
 > goals: rotate
 > section: casino
+> color: "#BA1778"
+> level: Intermediate
+> next: graph-theory
 
     .roulette-wheel
       .layer-2.wheel
@@ -47,6 +37,7 @@ Gewinn hängt von der Wahrscheinlichkeit jedes dieser Ergebnisse ab.
 Hier ist einer der vielen hundert Zeitungsauszüge, die Pearson gesammelt
 und analysiert hat. Auf den ersten Blick sieht es ziemlich zufällig aus:
 
+    include mixins
     .newspaper
       p Roulette-Ergebnisse vom 19. August 1823, Tabelle 5:
       div
@@ -58,6 +49,7 @@ grüne 0 ignorieren (was bedeutet, dass das Casino gewinnt), würden wir erwarte
 schwarzen Zahlen [[ungefähr|genau]] gleich groß ist. Lass uns überprüfen,
 ob das bei den oben genannten Ergebnissen tatsächlich der Fall ist.
 
+    include mixins
     +barchart([['Rot', 37, 'r'], ['Schwarz', 35, 'b']])
 
 ---
@@ -72,6 +64,7 @@ völlig zufällig wären, jedes der vier möglichen Paare von zwei aufeinander
 folgenden Farben auch gleich wahrscheinlich sein müsste. Auch in unserem Beispiel können
 wir wieder die Anzahl dieser Ereignisse zählen:
 
+    include mixins
     +barchart([['RR', 14, 'r'], ['RB', 24, 'rb'], ['BR', 24, 'rb'], ['BB', 9, 'b']])
 
 ---
@@ -91,6 +84,7 @@ Noch schlimmer wird es, wenn wir uns Dreiergruppen von Ergebnissen ansehen. Jede
 Farbentripel sollte gleich wahrscheinlich sein, aber das ist
 hier eindeutig nicht der Fall:
 
+    include mixins
     +barchart([['RRR', 3, 'r'], ['RRB', 10, 'rrb'], ['BRR', 10, 'rrb'], ['RBR', 15, 'rrb'], ['BRB', 14, 'bbr'], ['RBB', 8, 'bbr'], ['BBR', 8, 'bbr'], ['BBB', 2, 'b']])
 
 Es scheint, dass in diesem speziellen Casino die Farben viel öfter wechseln,

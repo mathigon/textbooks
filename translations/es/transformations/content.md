@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#2274E8"
+> level: Intermediate
+> next: triangles
 
 Muchos conceptos geométricos como [líneas](gloss:line) o [polígonos](gloss:polygon) fueron "inventados" por los matemáticos. La simetría, por otro lado, está en todas partes a nuestro alrededor. Casi todas las plantas, animales e incluso nosotros los humanos somos simétricos.
 
@@ -640,8 +643,8 @@ Por ejemplo, "25352" y "ANNA" ambos leen lo mismo de atrás hacia adelante. Los 
 
 Si ignoramos los espacios y la puntuación, las oraciones cortas a continuación también tienen simetría de reflexión. ¿Se te ocurre el tuyo?
 
-{.text-center} Nunca par o impar.  
-Una [[nuez]] para una jarra de atún.  
+{.text-center} Nunca par o impar.
+Una [[nuez]] para una jarra de atún.
 Yo, [[chico]] banana!
 
 {.reveal(when="blank-0 blank-1")} Pero los Palindromes no son solo divertidos, sino que tienen una importancia práctica. Hace unos años, los científicos descubrieron que partes de nuestro [ADN](gloss:dna) son palindrómicas. Esto los hace más resistentes a las mutaciones o daños, porque hay una segunda copia de respaldo de cada pieza.
@@ -989,71 +992,71 @@ Resulta que, si bien hay infinitos patrones posibles, todos tienen uno de solo 1
     x-gallery(slide-width="320")
       div
         img(src="images/wallpapers/p1.svg" width=360, height=240)
-        p.caption <strong>Group 1 – P1</strong>  
+        p.caption <strong>Group 1 – P1</strong>
 Only translations
       div
         img(src="images/wallpapers/p2.svg" width=360, height=240)
-        p.caption <strong>Group 2 – P2</strong>  
+        p.caption <strong>Group 2 – P2</strong>
 Rotations of order 2, translations
       div
         img(src="images/wallpapers/p3.svg" width=360, height=240)
-        p.caption <strong>Group 3 – P3</strong>  
+        p.caption <strong>Group 3 – P3</strong>
 Rotations of order 3 (120°), translations
       div
         img(src="images/wallpapers/p4.svg" width=360, height=240)
-        p.caption <strong>Group 4 – P4</strong>  
+        p.caption <strong>Group 4 – P4</strong>
 Four rotations of order 2 (180°), translations
       div
         img(src="images/wallpapers/p6.svg" width=360, height=240)
-        p.caption <strong>Group 5 – P6</strong>  
+        p.caption <strong>Group 5 – P6</strong>
 Rotations of order 2, 3 and 6 (60°), translations
       div
         img(src="images/wallpapers/pm.svg" width=360, height=240)
-        p.caption <strong>Group 6 – PM</strong>  
+        p.caption <strong>Group 6 – PM</strong>
 Parallel axes of reflection, translations
       div
         img(src="images/wallpapers/pmm.svg" width=360, height=240)
-        p.caption <strong>Group 7 – PMM</strong>  
+        p.caption <strong>Group 7 – PMM</strong>
 Perpendicular reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/p4m.svg" width=360, height=240)
-        p.caption <strong>Group 8 – P4M</strong>  
+        p.caption <strong>Group 8 – P4M</strong>
 Rotations (ord 2 + 4), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p6m.svg" width=360, height=240)
-        p.caption <strong>Group 9 – P6M</strong>  
+        p.caption <strong>Group 9 – P6M</strong>
 Rotations (ord 2 + 6), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p3m1.svg" width=360, height=240)
-        p.caption <strong>Group 10 – P3M1</strong>  
+        p.caption <strong>Group 10 – P3M1</strong>
 Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p31m.svg" width=360, height=240)
-        p.caption <strong>Group 11 – P31M</strong>  
+        p.caption <strong>Group 11 – P31M</strong>
 Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Group 12 – P4G</strong>  
+        p.caption <strong>Group 12 – P4G</strong>
 Rotations (ord 2 + 4), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
-        p.caption <strong>Group 13 – CMM</strong>  
+        p.caption <strong>Group 13 – CMM</strong>
 Perpendicular reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/pmg.svg" width=360, height=240)
-        p.caption <strong>Group 14 – PMG</strong>  
+        p.caption <strong>Group 14 – PMG</strong>
 Reflections, glide reflections, rotations of order 2, translations
       div
         img(src="images/wallpapers/pg.svg" width=360, height=240)
-        p.caption <strong>Group 15 – PG</strong>  
+        p.caption <strong>Group 15 – PG</strong>
 Parallel glide reflections, translations
       div
         img(src="images/wallpapers/cm.svg" width=360, height=240)
-        p.caption <strong>Group 16 – CM</strong>  
+        p.caption <strong>Group 16 – CM</strong>
 Reflections, glide reflections, translations
       div
         img(src="images/wallpapers/pgg.svg" width=360, height=240)
-        p.caption <strong>Group 17 – PGG</strong>  
+        p.caption <strong>Group 17 – PGG</strong>
 Perpendicular glide reflections, rotations of order 2, translations
 
 ---

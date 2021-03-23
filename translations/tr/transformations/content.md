@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#2274E8"
+> level: Intermediate
+> next: triangles
 
 Birçok geometrik kavram, [doğrular](gloss:line) ve [noktalar](gloss:point) gibi, matematikçiler tarafından “icat edilmiştir.” Simetri, diğer yandan, çevremizde her yerdedir. Hemen hemen her çiçek, hayvan ve hatta insanlar simetriktir.
 
@@ -393,7 +396,7 @@ Aşağıdaki şekilleri kırmızı renkteki döndürme merkezi etrafında dönd�
       path.reveal.thin.light(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
       path.reveal.thin.light(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
       path.reveal.thin.light(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
-      
+
       path.transparent(x="segment(rot,a1)" target="compass protractor")
       path.transparent(x="circle(rot,distance(rot,a))" target="compass")
 
@@ -596,7 +599,7 @@ Alfabedeki çoğu şekil yansıma simetrisine sahiptir. Yansıma simetrisi olan 
 Eğer boşlukları ve noktalamayı görmezden gelirsek, bu harfler de yansıma simetrisine sahiptir. Kendi örneğinizi bulabilir misiniz?
 
 {.text-center} İlaç iç Ali!
-Pay ederek iki [[kerede]] yap.  
+Pay ederek iki [[kerede]] yap.
 [[Rıza]], Haluk okula hazır!
 
 {.reveal(when="blank-0 blank-1")} Fakat Palindromlar sadece eğlence için değildir, aslında pratik bir öneme sahiplerdir. Birkaç yıl önce, bilim insanları [DNA’nın](gloss:dna) bölümlerinin palindromik olduğunu keşfettiler. Bu, mutasyonlara ve hasarlara karşı daha dayanıklı olmasını sağlar – çünkü her parçanın ikinci bir yedek kopyası vardır.
@@ -774,26 +777,26 @@ Simetri hesap makinesiyle biraz zaman harcayın ve her bir yönlendirmeyi bulmay
 Daha önce __{.orange}simetrileri__ toplamanın aslında  __{.green}tam sayıları__ toplamaya benzediğini fark etmiş olabilirsiniz:
 
     ol.proof
-      
+
       li.r
         | #[strong.orange simetrileri]/#[strong.green tam sayıları] toplamak daima başka bir #[strong.orange simetri]/#[strong.green tam sayı] verir:
-        .text-center.axiom 
+        .text-center.axiom
           img.cube(src="images/cube-2.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-6.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-4.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 12
           mo +
           mn 7
           mo =
           mn 19
         .next-step Devam
-      
+
       li.r.reveal(when="next-0")
         span.md #[strong.orange simetrileri]/#[strong.green tam sayıları] toplama işlemi [birleşme](gloss:associative) özelliğine sahiptir:
-        .text-center.axiom 
+        .text-center.axiom
           mfenced
             img.cube(src="images/cube-1.svg" width=32 height=32)
             mo +
@@ -816,16 +819,16 @@ Daha önce __{.orange}simetrileri__ toplamanın aslında  __{.green}tam sayılar
           mo +
           mfenced #[mn 2]#[mo +]#[mn 5]
         .next-step Devam
-      
+
       li.r.reveal(when="next-1")
         | Her #[strong.orange simetrinin]/#[strong.green tam sayının] , #[strong.orange simetri]/#[strong.green tam sayı] olan bir  #[strong tersi] vardır ve  toplandıklarında etkisiz elemanı verir:
-        .text-center.axiom 
+        .text-center.axiom
           img.cube(src="images/cube-1.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-3.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-0.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 4
           mo +
           mn –4
@@ -974,7 +977,7 @@ Her duvarkağıdı grubu öteleme, döndürme, yansıtma ve kaydırarak yansıtm
         p.caption <strong>PG tipi</strong><br>Paralel kaydırıp yansıtmalar, ötelemeler
       div
         img(src="images/wallpapers/cm.svg" width=360, height=240)
-        p.caption <strong>CM tipi</strong><br>Yansımalar, kaydırıp yansıtmalar, ötelemeler 
+        p.caption <strong>CM tipi</strong><br>Yansımalar, kaydırıp yansıtmalar, ötelemeler
       div
         img(src="images/wallpapers/pgg.svg" width=360, height=240)
         p.caption <strong>PGG tipi</strong><br>Dik kaydırıp yansıtmalar, 2 dereceli döndürmeler, ötelemeler
@@ -1061,7 +1064,7 @@ Simetri temel parçacıkların varlıklarını bile önceden kestirebiliyor. Bun
 
 ---
 
-## Genişleme 
+## Genişleme
 
 > id: dilations
 > section: dilations
@@ -1094,7 +1097,7 @@ Eğer [genleşme katsayısı](gloss:scale-factor) 0 ile 1 arasındaysa, sonuç, 
       path.light.thin(x="segment(C,s<1?a:a1)")
       path.light.thin(x="segment(C,s<1?b:b1)")
       path.light.thin(x="segment(C,s<1?c:c1)")
-    
+
 {.text-center.scale-target} Genleşme katsayısı: ${s}{s|2|0,3,0.1}
 :::
 

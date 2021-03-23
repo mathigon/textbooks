@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#A7208A"
+> level: Intermediate
+> next: probability
 > translated: auto
 
 ::: column.grow
@@ -428,27 +431,27 @@ Tous les graphes plans divisent le plan sur lequel ils sont dessinés en un cert
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] sommets  
-[[5]] faces  
-[[10]] arêtes  
+{.text-center} [[6]] sommets
+[[5]] faces
+[[10]] arêtes
 _{span.euler-sum} 11 sommets + faces_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] sommets  
-[[7]] faces  
-[[14]] arêtes  
+{.text-center} [[8]] sommets
+[[7]] faces
+[[14]] arêtes
 _{span.euler-sum} 15 sommets + faces_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] sommets  
-[[13]] faces  
-[[24]] arêtes  
+{.text-center} [[12]] sommets
+[[13]] faces
+[[24]] arêtes
 _{span.euler-sum} 25 sommets + faces_
 
 :::
@@ -476,7 +479,7 @@ Malheureusement, il existe une infinité de graphiques et nous ne pouvons pas v�
           circle.node(cx=150 cy=100 r=7 style="display: none")
           circle.node(cx=270 cy=170 r=7 style="display: none")
           circle.node(cx=390 cy=100 r=7 style="display: none")
-    
+
         div(style="position: absolute; top: 20px; right: 0; font-size: 1.2em;")
           table.grid.table-small
             tr
@@ -488,7 +491,7 @@ Malheureusement, il existe une infinité de graphiques et nous ne pouvons pas v�
               td.xv 1
               td.xe 0
           p #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
-    
+
       .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler&rsquo;s equation works.
       .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler&rsquo;s equation still works.
       .legend(slot="legend") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler’s equation still works.
@@ -535,27 +538,27 @@ En d'autres termes, si vous comptez le nombre de __{.red} arêtes__, __{.blue} f
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
-{.caption} __Icosahedron__  
-__{.blue} 20__ Faces  
-__{.green} 12__ Sommets  
+{.caption} __Icosahedron__
+__{.blue} 20__ Faces
+__{.green} 12__ Sommets
 __{.red} 30__ Bords
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Rhombicosidodecahedron__  
-__{.blue} 62__ Faces  
-__{.green} 60__ Vertices  
+{.caption} __Rhombicosidodecahedron__
+__{.blue} 62__ Faces
+__{.green} 60__ Vertices
 __{.red} 120__ Bords
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
-{.caption} __Icosaèdre tronqué__  
-__{.blue} 32__ faces (12 noires, 20 blanches)  
-__{.green} 60__ sommets  
+{.caption} __Icosaèdre tronqué__
+__{.blue} 32__ faces (12 noires, 20 blanches)
+__{.green} 60__ sommets
 __{.red} 90__ bords
 
 :::
@@ -593,7 +596,7 @@ Lorsque vous colorez la carte des États américains, 50 couleurs suffisent évi
     .four-colour-icons
       for i in [1, 2, 3, 4, 5, 6, 7]
         .four-colour-icon(tabindex=0)
-    
+
     x-tabbox.four-colours.full-width
       .tab
         h3 États Unis #[span.check(when="map-0")]

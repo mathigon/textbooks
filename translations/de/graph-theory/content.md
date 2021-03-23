@@ -4,6 +4,9 @@
 
 > id: intro-0
 > section: introduction
+> color: "#A7208A"
+> level: Intermediate
+> next: probability
 
 Wir haben es in unserem täglichen Umfeld mit unzähligen Netzwerken und Verbindungen zu tun: Straßen
 und Eisenbahnschienen, Telefonleitungen, das Internet, elektronische Schaltkreise und sogar
@@ -508,27 +511,27 @@ in mehrere Bereiche, genannt __Flächen__.
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Ecken (Knoten)  
-[[5]] Flächen  
-[[10]] Kanten  
+{.text-center} [[6]] Ecken (Knoten)
+[[5]] Flächen
+[[10]] Kanten
 _{span.euler-sum} 11 Ecken + Flächen_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] Ecken (Knoten)  
-[[7]] Flächen  
-[[14]] Kanten  
+{.text-center} [[8]] Ecken (Knoten)
+[[7]] Flächen
+[[14]] Kanten
 _{span.euler-sum} 15 Ecken + Flächen_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] Ecken (Knoten)  
-[[13]] Flächen  
-[[24]] Kanten  
+{.text-center} [[12]] Ecken (Knoten)
+[[13]] Flächen
+[[24]] Kanten
 _{span.euler-sum} 25 Ecken + Flächen_
 
 :::
@@ -562,7 +565,7 @@ jeden Graphen funktioniert...
           circle.node(cx=150 cy=100 r=7 style="display: none")
           circle.node(cx=270 cy=170 r=7 style="display: none")
           circle.node(cx=390 cy=100 r=7 style="display: none")
-    
+
         .euler-table
           table.grid.table-small
             tr
@@ -574,7 +577,7 @@ jeden Graphen funktioniert...
               td.xv 1
               td.xe 0
           p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
-    
+
       .legend(slot="legend") Der einfachste Graph besteht aus einer einzigen Ecke (Knoten). Wir können leicht überprüfen, dass die Euler-Formel funktioniert.
       .legend(slot="legend") Wir wollen eine neue Ecke zu unserem Graphen hinzufügen. Außerdem müssen wir noch eine Kante hinzufügen, und die Euler-Formel funktioniert immer noch.
       .legend(slot="legend") Wenn wir eine dritte Ecke zum Graphen hinzufügen wollen, haben wir zwei Möglichkeiten. Wir könnten ein kleines Dreieck erstellen: dies fügt eine Ecke, eine Fläche und zwei Kanten hinzu, so dass die Euler-Formel immer noch funktioniert.
@@ -632,27 +635,27 @@ dass _{.b.blue}F_ + _{.b.green}E_ = _{.b.red}K_ + [[2]] ist, bekannt als __Euler
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
-{.caption} __Ikosaeder__  
-__{.blue} 20__ Flächen  
-__{.green} 12__ Ecken  
+{.caption} __Ikosaeder__
+__{.blue} 20__ Flächen
+__{.green} 12__ Ecken
 __{.red} 30__ Kanten
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Rhombicosidodekaeder__  
-__{.blue} 62__ Flächen  
-__{.green} 60__ Ecken  
+{.caption} __Rhombicosidodekaeder__
+__{.blue} 62__ Flächen
+__{.green} 60__ Ecken
 __{.red} 120__ Kanten
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
-{.caption} __Abgestumpftes Icosahedron__  
-__{.blue} 32__ Flächen (12 schwarz, 20 weiß)  
-__{.green} 60__ Ecken  
+{.caption} __Abgestumpftes Icosahedron__
+__{.blue} 32__ Flächen (12 schwarz, 20 weiß)
+__{.green} 60__ Ecken
 __{.red} 90__ Kanten
 
 :::
@@ -694,7 +697,7 @@ mit so wenig Farben wie möglich einzufärben:
     .four-colour-icons
       for i in [1, 2, 3, 4, 5, 6, 7]
         .four-colour-icon(tabindex=0)
-    
+
     x-tabbox.four-colours.full-width
       .tab
         h3 Vereinigte Staaten #[span.check(when="map-0")]
@@ -1030,7 +1033,7 @@ die jeweils mit einem Preis von \$1 Mio. dotiert sind.
 
 ## Terminplanungs-Probleme
 
-{.todo} Kommt bald 
+{.todo} Kommt bald
 
 ---
 > id: applications

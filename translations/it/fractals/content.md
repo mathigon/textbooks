@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
 
 Guardando la natura intorno a te, potresti aver notato delle piante intricate come queste:
 
@@ -657,7 +661,7 @@ In alcuni casi, questo può portare alla comparsa di motivi che sembrano proprio
 
 > id: tetrahedra
 
-### Tetraedri di Sierpinski 
+### Tetraedri di Sierpinski
 
 Esistono molte varianti del triangolo di Sierpinski e altri frattali con proprietà e processi di creazione simili. Alcuni sembrano bidimensionali, come il _Tappeto di Sierpinski_ che hai visto sopra. Altri sembrano tridimensionali, come questi esempi:
 
@@ -665,7 +669,7 @@ Esistono molte varianti del triangolo di Sierpinski e altri frattali con proprie
 
     x-sierpinski-tetrahedra(size=320 steps=5 style="display: block; margin-top: -20px")
 
-{.caption} Tetraedro di Sierpinski 
+{.caption} Tetraedro di Sierpinski
 
 ::: column(width=320)
 
@@ -677,7 +681,7 @@ Esistono molte varianti del triangolo di Sierpinski e altri frattali con proprie
 
 ---
 
-## Insieme di Mandelbrot 
+## Insieme di Mandelbrot
 
 > section: mandelbrot
 > id: iteration

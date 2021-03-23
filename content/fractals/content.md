@@ -9,7 +9,6 @@
 > level: Advanced
 > next: chaos
 
-
 When looking around nature, you might have noticed intricate plants like
 these:
 

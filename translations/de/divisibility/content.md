@@ -4,6 +4,8 @@
 
 > section: factors-and-multiples
 > id: divisibility1
+> color: "#1AA845"
+> level: Foundations
 
     mixin grid(n, fn)
       .number-grid
@@ -94,6 +96,7 @@ immer [[paarweise|zu dritt|als Hälften]] auftreten.
 Im Falle von 60 haben wir 60 = 1 × 60 = 2 × 30 = 3 × 20 = 4 × 15 = 5 × 12 =
 6 × 10. Oder, in einer anderen Schreibweise,
 
+    include mixins
     +divisor-table([1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60], [5, 4, 3, 2, 1, 0])
 
 Um alle Teiler einer Zahl zu finden, beginnen wir einfach an beiden Enden dieser Liste,
@@ -102,6 +105,7 @@ bis wir in der Mitte angelangt sind.
 ---
 > id: factors2
 
+    include mixins
     x-slideshow
       .stage(slot="stage")
         +divisor-table([1, 2, 3, 6, 7, 14, 21, 42], [3, 2, 1, 0])
@@ -132,6 +136,7 @@ Jede Zahl ist durch 1 teilbar. Um festzustellen, ob eine Zahl durch 2 teilbar is
 einfach prüfen, ob sie gerade ist: Jede Zahl, die auf 0, 2, 4, 6 oder 8 endet, ist durch 2
 teilbar.
 
+    include mixins
     +grid(30)
 
 ---
@@ -140,6 +145,7 @@ teilbar.
 Um zu sehen, ob eine Zahl durch 5 teilbar ist, müssen wir ebenfalls nur überprüfen, ob ihre
 letzte Ziffer 0 oder 5 ist:
 
+    include mixins
     +grid(30)
 
 ---
@@ -233,6 +239,7 @@ ist [[14]].
 ---
 > id: divisibility3b
 
+    include mixins
     +grid(40, function(n) { if (!(n % 3)) { var s = '' + n; return +s[0] + (+s[1] || 0); } })
 
 Hier haben wir alle Zahlen hervorgehoben, die ein Vielfaches von drei sind. Wie du siehst
@@ -292,6 +299,7 @@ Vielfaches von 3 ist, dann muss das Ergebnis auch ein Vielfaches von 3 sein.
 Wir haben jetzt die Nummer 6 übersprungen - aber wir haben bereits die eigentliche Arbeit geleistet.
 Wie du weißt ist 6 = 2 × 3.
 
+    include mixins
     +grid(40)
     p.btn-row.text-center(style="margin-bottom:1em")
       button.btn.btn-small(data-display="visibility") Vielfache von 2
@@ -380,6 +388,7 @@ mit zunehmender Größe der Zahlen immer schwieriger wird. Stattdessen entwickel
 Kyrene](bio:eratosthenes) einen einfachen Algorithmus, um alle
 Primzahlen bis 100 zu finden: das __Sieb des Eratosthenes__.
 
+    include mixins
     x-slideshow
       .stage(slot="stage")
         +grid(100)
@@ -769,7 +778,7 @@ zuerst die [Primfaktorzerlegung](gloss:factorisation) von beiden finden:
 Angenommen, __{.m-red}X__ ist das kgV von __{.m-green}40__ und __{.m-blue}60__.
 __{.m-green}40__ teilt dann __{.m-red}X__, also müssen _{span.number-ball.small.l-blue}2_,
 _{span.number-ball.small.l-blue}2_, _{span.number-ball.small.l-blue}2_ und
-_{span.number-ball.small.l-blue}5_ Primfaktoren von __{.m-red}X__ sein. Außerdem teilt 
+_{span.number-ball.small.l-blue}5_ Primfaktoren von __{.m-red}X__ sein. Außerdem teilt
 __{.m-blue}60__ __{.m-red}X__, weshalb __{span.number-ball.small.l-green}2__,
 _{span.number-ball.small.l-green}2_, _{span.number-ball.small.l-green}3_ und
 _{span.number-ball.small.l-green}5_ Primfaktoren von __{.m-red}X__ sein müssen.
@@ -828,13 +837,13 @@ zB von __{.m-blue}12__, __{.m-green}30__ und __{.m-yellow}45__:
         td: | ×
         td: .number-ball.l-yellow 5
 
-Jetzt ist das kgV von __{.m-blue}12__, __{.m-green}30__ und __{.m-yellow}45__ gleich 
+Jetzt ist das kgV von __{.m-blue}12__, __{.m-green}30__ und __{.m-yellow}45__ gleich
 2 × [[2]] × 3 × 3 × [[5]] = 180.
 
 ---
 > id: race6
 
-Ein Sonderfall sind Primzahlen: Das kgV von zwei verschiedenen Primzahlen ist einfach 
+Ein Sonderfall sind Primzahlen: Das kgV von zwei verschiedenen Primzahlen ist einfach
 [[ihr Produkt|ihre Summe|ihre Differenz]], da sie keine gemeinsamen
 Primfaktoren haben, die “gestrichen” werden würden.
 
@@ -901,7 +910,7 @@ an den Seiten. Welche Abmessungen haben diese Quadrate?
 
 Wie zuvor geht es bei dieser Frage nicht um Geometrie, sondern um
 die Teilbarkeit. Die Länge der Seiten der Fliesen muss sowohl 18 als auch 30 teilen,
-und die größtmögliche Zahl die das erfüllt ist [[6]]. Man spricht vom 
+und die größtmögliche Zahl die das erfüllt ist [[6]]. Man spricht vom
 __größten gemeinsamen Teiler__ oder __ggT__ von 18 und 30.
 
 ---

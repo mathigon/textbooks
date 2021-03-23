@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: u2vwpDVj5rU
+> color: "#F97E08"
+> level: Intermediate
+> next: fractals
 
 Molte professioni che usano la matematica sono interessate ad un aspetto specifico: _trovare schemi (pattern)_ per poter predire il futuro. Ecco alcuni esempi:
 
@@ -734,7 +738,7 @@ Non è un caso che ci siano sempre 10 birilli quando si gioca a bowling o 15 pal
 
 Sfortunatamente, la formula ricorsiva non è molto utile se vogliamo trovare il numero del triangolo 100 o 5000, perchè dobbiamo prima calcolare tutti i numeri precedenti. Tuttavia, come abbiamo fatto con le progressioni aritmetiche e geometriche, possiamo provare a trovare una formula esplicita per i numeri triangolari.
 
-{.todo} DISPONIBILE A BREVE: Prova animata 
+{.todo} DISPONIBILE A BREVE: Prova animata
 
 ---
 > id: triangle-sums
@@ -955,24 +959,24 @@ Immagina di aver ricevuto un paio di coniglietti, un maschio e una femmina. Sono
             polygon(points="129 386 121 366 129 371 137 366 129 386")
             polygon(points="399 386 391 366 399 371 407 366 399 386")
             polygon(points="579 386 571 366 579 371 587 366 579 386")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
@@ -981,14 +985,14 @@ Immagina di aver ricevuto un paio di coniglietti, un maschio e una femmina. Sono
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
-    
+
           .n(style="top: 0%") 1
           .n(style="top: 15%") 1
           .n(style="top: 32%") 2
           .n(style="top: 49%") 3
           .n(style="top: 66%") 5
           .n(style="top: 84%") 8
-    
+
       .legend(slot="legend") Nel primo mese, i conigli sono molto piccoli e non possono fare molto, ma crescono molto rapidamente.
       .legend(slot="legend") Dopo un mese, i conigli sono cresciuti e possono iniziare ad accoppiarsi ...
       .legend(slot="legend") ... e dopo un altro mese, daranno alla luce il loro primo paio di figli. Ora hai due coppie di conigli.
@@ -1097,7 +1101,7 @@ Certo, questa non è solo una coincidenza. C'è un motivo importante per cui all
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.spiral-tabs
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1239,7 +1243,7 @@ Sposta il cursore a destra per visualizzare come cresce una pianta. Notate come 
       while i < 40
         path(d="M166,158A20,20,0,0,1,150,150a20,20,0,0,1,32,0A20,20,0,0,1,166,158Z")
         - i += 1
-    
+
     x-slider(steps=39 speed=0.5)
 
 :::
@@ -1422,7 +1426,7 @@ Per determinare se un numero è [primo](gloss:prime), dobbiamo trovare tutti i s
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
     - total = function(a) { return a.reduce((a, c) => a + c, 0); }
-    
+
     table.grid.perfect-table
       tr
         td: strong Number
@@ -1647,7 +1651,7 @@ Di seguito puoi vedere una piramide numerica creata usando un modello semplice: 
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid(style="width: 560px")
       - var i = 0;
       while i < 13
@@ -1707,7 +1711,7 @@ Scoprirai che molte delle innumerevoli sequenze matematiche, che hai visto nelle
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid.sums(style="width: 760px")
       - var i = 0;
       while i < 17
@@ -1798,7 +1802,7 @@ Alcuni schemi del triangolo di Pascal non sono così facili da rilevare. Il diag
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid#pascal-select(style="width: 340px")
       - var i = 0;
       while i < 8
@@ -1821,7 +1825,7 @@ La colorazione manuale di ogni cella richiede molto tempo, ma qui puoi vedere co
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid.small(style="width: 760px")
       - var i = 0;
       while i < 25
