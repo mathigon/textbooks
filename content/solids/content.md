@@ -4,6 +4,8 @@
 
 > section: introduction
 > sectionStatus: dev
+> color: "#4E53D0"
+> level: Foundations
 
     // General observations:- I find the mix of historical storylines and interactives captivating.- Consider adding a few more 'check for understanding' kinds of questions to break up text and transition from one section/sub-section to another.- Spatial reasoning can take a lot of work for some students to pick up. consider adding tutor prompts that are unique to the topic your discussing.- Think about standardizing how you want to write 2D and 3D +philipp@mathigon.org would be a big help here.- The transitions and storyline references dwindle toward the end of the chapter. I'm excited to see this one in action!
 
@@ -102,7 +104,7 @@ The word polyhedron comes from the Classical Greek as poly (many) + hedron (base
 > id: poly-parts
 
 Polyhedra have many different shapes and sizes like polygons.
-They can be as simple as a cube or a pyramid, or as complex as a star polyhedron with lots of sides. 
+They can be as simple as a cube or a pyramid, or as complex as a star polyhedron with lots of sides.
 
     // Page 3
 
@@ -252,9 +254,9 @@ A cube is a 3d shape that has 6 faces all of which are [[squares]].
 
 ::: column.grow
 
-For instance, The Rubik's Cube is a classic toy invented in 1974 by Hungarian architecture and design professor Erno Rubik.  Each of the faces of a Rubik’s cube contains 9 colored squares. 
+For instance, The Rubik's Cube is a classic toy invented in 1974 by Hungarian architecture and design professor Erno Rubik.  Each of the faces of a Rubik’s cube contains 9 colored squares.
 
-Although one of the smaller cubes (the central one) is not exposed, if we count carefully, we see that the Rubik’s cube is made up of [[27]] smaller rotatable cubes arranged in a 3x3x3 grid. 
+Although one of the smaller cubes (the central one) is not exposed, if we count carefully, we see that the Rubik’s cube is made up of [[27]] smaller rotatable cubes arranged in a 3x3x3 grid.
 
 :::
 
@@ -347,7 +349,7 @@ A cereal box is a cuboid with six [[rectangular]] faces.
 
     figure: x-img(src="images/ch1_48.png" width="600" height="257")
 
-When you try to send boxes from one place to another via delivery services, the company asks you the dimensions of your package in the form of  “l x w x h” to calculate the size and weight of the box to determine the shipping rate. 
+When you try to send boxes from one place to another via delivery services, the company asks you the dimensions of your package in the form of  “l x w x h” to calculate the size and weight of the box to determine the shipping rate.
 
 Try identifying the dimensions of the cuboids in the form of  “l x w x h”:
 
@@ -359,7 +361,7 @@ Try identifying the dimensions of the cuboids in the form of  “l x w x h”:
 [[3]]x[[2]]x[[8]]
 
 ::: column(width=150)
-    
+
     figure
       x-voxel-painter(width=150 height=200 shape="-0.0,-2.0,0.0,0.0,-1.0,0.0,0.0,1.0,0.0,-0.0,0.0,0.0,0.0,2.0,0.0" playingFieldSize="5" color="rgb(32,188,252)" rotateOnly hideGrid)
 
@@ -417,7 +419,7 @@ A cube where all edges have length 1 has __volume 1__.
 
 :::
 
-We can find the volume of more complex shapes by determining how many cubes of volume 1 it contains. 
+We can find the volume of more complex shapes by determining how many cubes of volume 1 it contains.
 
 The Apollo’s altar was a cubical temple with dimensions of five meters as its length, width, and height.
 
@@ -440,7 +442,7 @@ Let’s look at Apollo’s altar. If the edge length of the original altar was 5
 
 ::: column.grow
 
-We continue to fill the altar by adding more cubes. 
+We continue to fill the altar by adding more cubes.
 The first layer is a 5 x 5 square made up from [[25]] cubes.
 
 :::
@@ -463,7 +465,7 @@ There must be `5 x 25 = input(125)` cubes to fill the entire altar.
 __It means the original cubic altar has a volume of 125 cubic units.__
 
 The Delians did not follow the instructions carefully. They [[doubled each side]] of the altar.
-Let’s see what happened when they doubled the sides. 
+Let’s see what happened when they doubled the sides.
 
 ::: column.fit
 
@@ -474,7 +476,7 @@ Let’s see what happened when they doubled the sides.
 
 When we double the sides of the cıube as the Delians have done with the incorrect altar, there will be [[100]] cubes and [[10]] layers. Therefore, the second altar they built had a volume of [[1000]] cubic units.
 
-Doubling the dimensions of a three-dimensional figure will increase its volume by a factor of [[8]]. 
+Doubling the dimensions of a three-dimensional figure will increase its volume by a factor of [[8]].
 
 The Delians did not double the altar - they made it 8 times bigger.
 
@@ -505,8 +507,8 @@ To find the volume of the cube, the number of cubes in the first layer is multip
 
 ::: column.grow
 
-Recall the original altar. We counted [[25]] cubes in each layer. Alternatively, we could have calculated the [[ area | length | diagonal]] of the base. 
-The number of layers we added constitutes the [[height]] of the altar. 
+Recall the original altar. We counted [[25]] cubes in each layer. Alternatively, we could have calculated the [[ area | length | diagonal]] of the base.
+The number of layers we added constitutes the [[height]] of the altar.
 
 We calculated the volume of the cubic altar by multiplying [[Base Area]] and [[height]].
 
@@ -526,8 +528,8 @@ In other words, the volume of a cube is the product of its length, [[width]], an
 
 ::: column.grow
 
-A cube has the same value as its length, width, and height. 
-The volume of a cube with a side length of “a” units is 
+A cube has the same value as its length, width, and height.
+The volume of a cube with a side length of “a” units is
 `V = a • a • a = blank(x, "a3", "3a", "3 + a")`
 
 Multiplying three edge lengths allows us to determine the volume of cube efficiently.
@@ -617,7 +619,7 @@ Some cuboids may have the same volume although they have different shapes.
     // TODO: INTERACTIVE-1.04: Voxel-painting
     figure
       x-voxel-painter(width=600 height=400 targetVolume=24 playingFieldSize="15" color-sides)
-        x-icon-btn(icon="eraser")
+        button.icon-btn: x-icon(name="eraser")
 
 Use the unit cubes to create a cuboid so that the volume is 24 cubic units.
 
@@ -648,12 +650,12 @@ By finding the missing dimensions of the different cuboids with a volume of 24 c
         tr
           td A
           td 6
-          td: x-blank-input(goal="blank-0" solution=2 placeholder="???")
+          td: x-blank(goal="blank-0" solution=2 placeholder="???")
           td 2
           td 24
         tr
           td B
-          td: x-blank-input(goal="blank-1" solution=3 placeholder="???")
+          td: x-blank(goal="blank-1" solution=3 placeholder="???")
           td 1
           td 8
           td 24
@@ -661,11 +663,11 @@ By finding the missing dimensions of the different cuboids with a volume of 24 c
           td C
           td 4
           td 3
-          td: x-blank-input(goal="blank-2" solution=2 placeholder="???")
+          td: x-blank(goal="blank-2" solution=2 placeholder="???")
           td 24
         tr
           td D
-          td: x-blank-input(goal="blank-3" solution=1 placeholder="???")
+          td: x-blank(goal="blank-3" solution=1 placeholder="???")
           td 2
           td 12
           td 24
@@ -745,7 +747,7 @@ This means the surface area of the actual car is approximately 28 __square__ [[m
 
 {.todo} DISCUSS: use equation editor instead?
 
-If each sticky note is `0.006 m^2`, then 
+If each sticky note is `0.006 m^2`, then
 we will need to have `input(28)/input(0.006)=4467` sticky notes to cover the car!
 
 ---
@@ -800,7 +802,7 @@ You may build different solids by using the same number of cubes.
     // TODO: INTERACTIVE-2.02: voxel painting
     figure
       x-voxel-painter(width=600 height=400 targetSurface=26 targetVolume=6 playingFieldSize="10" color-sides)
-        x-icon-btn(icon="eraser")
+        button.icon-btn: x-icon(name="eraser")
 
 Use 6 cubes to create a solid with the greatest possible surface area.
 
@@ -822,7 +824,7 @@ Both of the solids you have created have a volume of [[6]] cubic units but have 
 
 ---
 
-In nature, having a large or small surface area with respect to the volume determines the vital characteristics of living things. 
+In nature, having a large or small surface area with respect to the volume determines the vital characteristics of living things.
 
 The relation between the surface area and the volume of an object is so important that it affects where an animal can live when a cell has to divide, or the size of the wings of an airbus plane.
 
@@ -831,7 +833,7 @@ For instance, do you know why elephants have giant ears?
     // https://depositphotos.com/11745121/stock-photo-elephant-isolated-on-white.html
     figure: x-img(width=600 height=400 src="https://static9.depositphotos.com/1007373/1174/i/950/depositphotos_11745121-stock-photo-elephant-isolated-on-white.jpg")
 
-African elephants are the largest land animals on Earth. They can be identified by their larger ears with respect to other elephant species. They grow up to 4 meters and weigh 6 tones on average.  
+African elephants are the largest land animals on Earth. They can be identified by their larger ears with respect to other elephant species. They grow up to 4 meters and weigh 6 tones on average.
 
 Elephants and all animals generate heat internally in proportion to their volume. Larger animals produce more heat with respect to small ones like mice.
 
@@ -895,21 +897,21 @@ Animals can be thought of as simple cubes:
           td
             p 1x1x1
             x-voxel-painter.c1(width=100 height=100 playingFieldSize="2" rotateOnly hideGrid)
-          td: x-blank-input(goal="blank-0" solution=6 placeholder="???")
+          td: x-blank(goal="blank-0" solution=6 placeholder="???")
           td 1
           td 6:1
         tr
           td
             p 2x2x2
             x-voxel-painter.c2(width=100 height=100 playingFieldSize="3" rotateOnly hideGrid)
-          td: x-blank-input(goal="blank-1" solution=24 placeholder="???")
-          td: x-blank-input(goal="blank-2" solution=8 placeholder="???")
+          td: x-blank(goal="blank-1" solution=24 placeholder="???")
+          td: x-blank(goal="blank-2" solution=8 placeholder="???")
           td 3:1
         tr
           td
             p 3x3x3
             x-voxel-painter.c3(width=100 height=100 playingFieldSize="4" rotateOnly hideGrid)
-          td: x-blank-input(goal="blank-3" solution=54 placeholder="???")
+          td: x-blank(goal="blank-3" solution=54 placeholder="???")
           td 27
           td 2:1
         tr
@@ -917,7 +919,7 @@ Animals can be thought of as simple cubes:
             p 6x6x6
             x-voxel-painter.c6(width=100 height=100 playingFieldSize="7" rotateOnly hideGrid)
           td 216
-          td: x-blank-input(goal="blank-4" solution=216 placeholder="???")
+          td: x-blank(goal="blank-4" solution=216 placeholder="???")
           td 1:1
         tr
           td
@@ -925,14 +927,14 @@ Animals can be thought of as simple cubes:
             x-voxel-painter.c10(width=100 height=100 playingFieldSize="11" rotateOnly hideGrid)
           td 600
           td 1000
-          td: x-blank-input(goal="blank-5" solution="3:5" placeholder="???")
+          td: x-blank(goal="blank-5" solution="3:5" placeholder="???")
         tr
           td
             p 20x20x20
             x-voxel-painter.c20(width=100 height=100 playingFieldSize="21" rotateOnly hideGrid)
           td 2400
           td 8000
-          td: x-blank-input(goal="blank-6" solution="3:10" placeholder="???")
+          td: x-blank(goal="blank-6" solution="3:10" placeholder="???")
 
     // page 5
 
@@ -954,7 +956,7 @@ Let’s drag the examples of quantities related to volume and surface area to co
     // INTERACTIVE-2.04
 
 ::: x-binary-swipe(a-title="Volume" b-title="Surface Area")
-      
+
 {div.card.c-red(solution="a")} How much water a container can hold?
 
 {div.card.c-teal(solution="b")} How much fabric is needed to cover the surface of the solid?
@@ -1065,19 +1067,19 @@ Let’s have a look at which one of the below can be folded to a cube.
 
     // page 9
 
-    // COMMENT: After A: 
+    // COMMENT: After A:
 
 The row of squares in Shape A can be folded into a ring and then the nearest square to the ring will close off a face, but the other square will have to overlap an existing face.
 
-    // COMMENT: After B: 
+    // COMMENT: After B:
 
 The row of squares in Shape B can be folded into a ring, and the other two squares can close off the other two faces. You can visualize those two faces as the bases of the cube.
 
-    // COMMENT: After C: 
+    // COMMENT: After C:
 
 When you fold the row of squares in Shape C into a ring, the fifth square will overlap the first one.
 
-    // COMMENT: After D: 
+    // COMMENT: After D:
 
 The row of squares in Shape D can be folded into a ring, and the other two squares can close off the other two faces. You can visualize those two faces as the bases of the cube.
 
@@ -1103,7 +1105,7 @@ Now that we can identify opposite faces of a die using nets, let's try another p
 
 ::: column.grow
 
-Each face of a cube is painted with a different color. 
+Each face of a cube is painted with a different color.
 
 Here are the different views of this painted die.
 
@@ -1259,7 +1261,7 @@ In the next chapter, we are going to look at the nets, surface area, and volume 
 
 ::: column.grow
 
-The amazing structure of the honey bee cells has attracted the attention of humans for centuries. 
+The amazing structure of the honey bee cells has attracted the attention of humans for centuries.
 
 Bees collect nectar and pollen from flowers to make honey for their colony.  Honey provides bees the energy they need to survive and reproduce, as well as to build their homes.
 
@@ -1353,7 +1355,7 @@ The [net](gloss:net) of the hexagonal prism can provide a better view of all the
 
 ---
 
-A hexagonal prism has  [[12]] _{span.comments(text="(gloss:vertex)I you provided a glossary definition draft in a previous chapter. If so, no need to rewrite it there.")}**[vertices](pill:blue)**_ and [[18]] _{span.comments(text="(gloss:polyhedron-edge)")}**[edges](pill:green)**_ 
+A hexagonal prism has  [[12]] _{span.comments(text="(gloss:vertex)I you provided a glossary definition draft in a previous chapter. If so, no need to rewrite it there.")}**[vertices](pill:blue)**_ and [[18]] _{span.comments(text="(gloss:polyhedron-edge)")}**[edges](pill:green)**_
 
 ---
 
@@ -1387,7 +1389,7 @@ Can we use the same formula for all prisms?
 
 ::: column.grow
 
-The reason that the volume of a cuboid is calculated as _{span.comments(text="pill to the sliced cuboid")}**`base area xx height`**_ is that; the cuboids are formed by repeated layers of the same size base. 
+The reason that the volume of a cuboid is calculated as _{span.comments(text="pill to the sliced cuboid")}**`base area xx height`**_ is that; the cuboids are formed by repeated layers of the same size base.
 
 Let’s look at these prisms to see if they are all made up of the multiple layers of the same polygon that they have as a base.
 
@@ -1401,7 +1403,7 @@ Let’s look at these prisms to see if they are all made up of the multiple laye
 
     // COMMENT: Second scene: After each selection, prisms can be sliced parallel to their bases to show they are made up of congruent polygons
 
-Rotate the prisms to select their bases. 
+Rotate the prisms to select their bases.
 
     // COMMENT: For the triangular prism:
 
@@ -1458,7 +1460,7 @@ Since the base of the prism an equilateral triangle, _{span.comments(text="pill 
 
 ::: column.grow
 
-Since the base of the prism a square, _{span.comments(text="pill to yellow area")}[Base Area](pill:blue)_ can be found by squaring the side length 
+Since the base of the prism a square, _{span.comments(text="pill to yellow area")}[Base Area](pill:blue)_ can be found by squaring the side length
 
 `"A"_"Base" = 4 xx 4 = 16 "mm"^2`
 
@@ -1494,7 +1496,7 @@ _{span.comments(text="pill to yellow area")}Base Area_ is the six equilateral tr
 :::
 :::
 
-Compared to the other prisms that leave no gaps or overlaps (such as triangular and square), the hexagon prism creates a comb with the maximum volume. 
+Compared to the other prisms that leave no gaps or overlaps (such as triangular and square), the hexagon prism creates a comb with the maximum volume.
 
 Remember, bees also need to use the least amount of wax possible to construct these combs. Since they can only produce 1 oz of wax by using 8 oz of honey, the wax is very precious for them too. They cannot spend more wax than necessary.
 
@@ -1602,9 +1604,9 @@ _{span.comments(text="A quick animation can be shown as the 2-3 horizontally lay
 
 ::: column.grow
 
-To create the same volume for storage, bees need to use more wax as the surface area of the triangular or square prisms. That’s why (Neglecting the _{span.comments(text="The closed ends of the honeycomb cells are also an example of geometric efficiency, the ends consists of three intersecting planes to provide the perfect alignment. The shape of the cells is such that two opposing honeycomb layers nest into each other, with each face of the closed ends being shared by opposing cells. | en.wikipedia.org/wiki/Honeycomb | @philipp I have been wondering if having another repository of interesting facts would be worth building. This could live there and appear like glossary and biography entries do. I have a few ideas from my chapters, too.")}closed ends_ of the combs), honeycombs are in the shape of hexagonal prisms. 
+To create the same volume for storage, bees need to use more wax as the surface area of the triangular or square prisms. That’s why (Neglecting the _{span.comments(text="The closed ends of the honeycomb cells are also an example of geometric efficiency, the ends consists of three intersecting planes to provide the perfect alignment. The shape of the cells is such that two opposing honeycomb layers nest into each other, with each face of the closed ends being shared by opposing cells. | en.wikipedia.org/wiki/Honeycomb | @philipp I have been wondering if having another repository of interesting facts would be worth building. This could live there and appear like glossary and biography entries do. I have a few ideas from my chapters, too.")}closed ends_ of the combs), honeycombs are in the shape of hexagonal prisms.
 
-The closed ends of the honeycomb cells are a bit more complicated. 
+The closed ends of the honeycomb cells are a bit more complicated.
 
 They are composed of three flat planes to ensure the back-to-back ends of cells fit against each other and still the overall shape of the honeycomb cell minimizes surface area for a given volume.
 
@@ -1666,7 +1668,7 @@ Pyramids are a particular type of architecture developed since ancient times and
 
 Egyptians knew vertical walls got less stable as they got taller, that’s why they first tried stacked bricks at an incline. They realized that a pyramid gets you the most stability for the least material.
 
-Thanks to the stability of the triangular structure The Great Pyramid of Giza remained the tallest building of the world for 4000 years until the Eiffel Tower was built in 1889. The Great Pyramid is the oldest monument on the list of the Seven Wonders of the Ancient World, built almost 4600 years ago.  
+Thanks to the stability of the triangular structure The Great Pyramid of Giza remained the tallest building of the world for 4000 years until the Eiffel Tower was built in 1889. The Great Pyramid is the oldest monument on the list of the Seven Wonders of the Ancient World, built almost 4600 years ago.
 
 Can you imagine the number of stones needed to build these giant ancient wonders?
 
@@ -1674,7 +1676,7 @@ Can you imagine the number of stones needed to build these giant ancient wonders
 
     figure: x-img(src="images/ch3_47.png" width="600" height="243")
 
-The Great Pyramid of Giza along with the Pyramid of Menkaure and the Pyramid of Khafre 
+The Great Pyramid of Giza along with the Pyramid of Menkaure and the Pyramid of Khafre
 
 Like prisms, pyramids are polyhedra too. But unlike prisms, **pyramids** only have [[one|two|three]] polygonal **base**. All of the other faces of the pyramid meet at a single [[vertex|face|edge]] called _{span.comments(text="(gloss:apex)new entry - needs definition | Apex is the top vertex of the pyramids that lateral faces meet.")}**apex**_.
 
@@ -1754,15 +1756,15 @@ Now we are able to calculate the number of stones needed to build the Great Pyra
 
 ::: column.grow
 
-The height of the Great Pyramid of Giza is 146.7 m. 
+The height of the Great Pyramid of Giza is 146.7 m.
 
-Be sure you do not confuse the **slant height** of a pyramid with its **solid height.** 
+Be sure you do not confuse the **slant height** of a pyramid with its **solid height.**
 
 _{span.comments(text="(gloss:slant-height)new term - needs definition. The definition here is good start. | Slant height is a measure along a triangular face. It is the height of the lateral face.")}**Slant height**_ is a measure along a triangular face. It is the height of the lateral face.
 
 :::
 
-_{span.comments(text="(gloss:solid-height)new term - needs definition. The definition here is good start. | Solid height is an internal measure from the apex to the center of the base.")}**Solid height**_ is an internal measure from the apex to the **center **of the base. 
+_{span.comments(text="(gloss:solid-height)new term - needs definition. The definition here is good start. | Solid height is an internal measure from the apex to the center of the base.")}**Solid height**_ is an internal measure from the apex to the **center **of the base.
 
 To be able to calculate the volume of a pyramid, you need to know the [[solid height|slant height]].
 
@@ -1776,7 +1778,7 @@ To be able to calculate the volume of a pyramid, you need to know the [[solid he
 
 The base of the Great Pyramid is a square with each side measuring 230 m and covering an area of [[52900]] `"m"^2`.
 
-How much is that? Imagine a football field. Nearly 10 football fields could fit within the base of the Great Pyramid. 
+How much is that? Imagine a football field. Nearly 10 football fields could fit within the base of the Great Pyramid.
 
 Recall that the volume of the pyramid is [[one-third|half]] of the product of base area and height.
 
@@ -1834,9 +1836,9 @@ While it still stays as a mystery how Egyptians build the pyramids, _{span.comme
 
 ---
 
-Surface Area calculations in prisms and pyramids have longer steps than finding their volume. 
+Surface Area calculations in prisms and pyramids have longer steps than finding their volume.
 
-In surface area calculations, **nets** allow us to see all the faces of the solid at once. While calculating surface area, base or lateral area, instead of working on a picture of the solid, drawing nets helps us to visualize the hidden faces. 
+In surface area calculations, **nets** allow us to see all the faces of the solid at once. While calculating surface area, base or lateral area, instead of working on a picture of the solid, drawing nets helps us to visualize the hidden faces.
 
 _{span.comments(text="Maybe as a fun-fact, this info can be added too (without further explanation)?.")}Do you know that?_
 
@@ -1862,7 +1864,7 @@ Apparently, when it comes to stacking stones and fruits or piling cannonballs on
 
 ### Nets of Prisms and Pyramids
 
-**Remember**, nets are composed of [[polygons|cuboids|squares]] that form the faces of a polyhedron. 
+**Remember**, nets are composed of [[polygons|cuboids|squares]] that form the faces of a polyhedron.
 
 ---
 
@@ -1878,7 +1880,7 @@ Apparently, when it comes to stacking stones and fruits or piling cannonballs on
 
     // COMMENT: Matching Game
 
-Here you have the nets of different prisms or pyramids. 
+Here you have the nets of different prisms or pyramids.
 
 Match each net with the solid it belongs to.
 
@@ -1944,7 +1946,7 @@ A triangular prism has [[2]] triangular bases and [[3]] triangular lateral faces
 
 Nets of the polyhedra can give you a lot of information about the faces and the other characteristics of the solid.  Properties of the nets can help us to compare and contrast the prisms and pyramids.
 
-Drag the properties to the part of the [Venn diagram](gloss:venn-diagram) which it is associated with. 
+Drag the properties to the part of the [Venn diagram](gloss:venn-diagram) which it is associated with.
 
 If it matches both, place it in the intersection of the circles.
 
@@ -1982,7 +1984,7 @@ We may not build a pyramid or the tallest building of the world yet, but we can 
 
 Like Egyptians do, before we start building one, we need to calculate the amount of material we are going to use for the outer surface of our model.
 
-A house-shaped prism is created by attaching a [[triangular prism triangular pyramid | square pyramid]] on top of a [[rectangular prism|pentagonal prism]]. 
+A house-shaped prism is created by attaching a [[triangular prism triangular pyramid | square pyramid]] on top of a [[rectangular prism|pentagonal prism]].
 
 ---
 
@@ -2012,7 +2014,7 @@ So each base area is [[9]] `"m"^2`
 
 Now we can find the **lateral area** of the model;
 
-Is there a way to simplify the calculations?  
+Is there a way to simplify the calculations?
 
 Imagine unfolding the prism into a net. Use the slider to see the **net** of the house-shaped prism.
 
@@ -2030,9 +2032,9 @@ Sometimes we can simplify the process by combining the lateral faces and finding
 
 We can use one large rectangle instead of separate smaller ones.
 
-We can treat the prism-like house as having three parts: two identical bases, and one long rectangle that has been taped along the edges of the bases. 
+We can treat the prism-like house as having three parts: two identical bases, and one long rectangle that has been taped along the edges of the bases.
 
-The rectangle has the [[same|different]] height as the prism, and its width is the [[perimeter of the base|width of the base]]. 
+The rectangle has the [[same|different]] height as the prism, and its width is the [[perimeter of the base|width of the base]].
 
 ---
 
@@ -2048,7 +2050,7 @@ So the area of the big rectangle that covers all the lateral face of the prism i
 
     // COMMENT: Scene 3
 
-Now, all we are going to do is to add two [[base areas|base perimeters]] to the [[lateral area|lateral perimeter]]. 
+Now, all we are going to do is to add two [[base areas|base perimeters]] to the [[lateral area|lateral perimeter]].
 
 ---
 
@@ -2113,7 +2115,7 @@ _{span.comments(text="Gravity is the force that attracts a body toward the cente
 
 :::
 
-The shape of the rockets designed to minimize the air resistance called drag. Smooth, **round surfaces** produce less friction so cause [[less|more]] drag. 
+The shape of the rockets designed to minimize the air resistance called drag. Smooth, **round surfaces** produce less friction so cause [[less|more]] drag.
 
 ---
 
@@ -2163,7 +2165,7 @@ The cylindrical part of the rockets accommodates the rocket's essential componen
 
 ---
 
-In fact all the pressure vessels like fuel tankers are round, since round shapes provide maximum strength from internal pressure. A cylindrical shape adds less weight of the rocket’s walls. Cylinders also don’t have any “weak points” like the edges of the [[prisms|polygons]]. 
+In fact all the pressure vessels like fuel tankers are round, since round shapes provide maximum strength from internal pressure. A cylindrical shape adds less weight of the rocket’s walls. Cylinders also don’t have any “weak points” like the edges of the [[prisms|polygons]].
 
 ---
 
@@ -2187,7 +2189,7 @@ The conical shape can be in different forms according to the purpose of the rock
 
 ::: column.grow
 
-A cone has [[only one|two]] circular **base** that is joined to a single point called the **vertex** or **apex**. 
+A cone has [[only one|two]] circular **base** that is joined to a single point called the **vertex** or **apex**.
 
 Nose cones of the rockets usually carry payloads like satellite, cargo or passengers. If it is the external fuel tank, it carries the liquid oxygen tank.
 
@@ -2197,7 +2199,7 @@ Nose cones of the rockets usually carry payloads like satellite, cargo or passen
 
 Nose cones are also designed for all the aircrafts like planes and zeppelins as well as the underwater and in high-speed land vehicles.
 
-While the shape of the rockets are mostly similar, they can be in different sizes according to the type of the mission. 
+While the shape of the rockets are mostly similar, they can be in different sizes according to the type of the mission.
 
 **What is the height of a rocket with an orbital mission carrying 23 tons payload?**
 
@@ -2211,7 +2213,7 @@ While the shape of the rockets are mostly similar, they can be in different size
 
 Type of the mission affects the amount of fuel that the rocket has to carry. The significant portion of the rockets’ volume is held by fuel tanks, therefore the size of the rocket mostly depends on the fuel tanks.
 
-For an orbital mission, fuel tanks must have the capacity to hold approximately 550 thousands liters of liquid oxygen and 1.5 million liters of hydrogen. 
+For an orbital mission, fuel tanks must have the capacity to hold approximately 550 thousands liters of liquid oxygen and 1.5 million liters of hydrogen.
 
 :::
 
@@ -2262,7 +2264,7 @@ The volume of a cylinder is,
 
 ::: column.grow
 
-The cylindrical hydrogen tank has a diameter of approximately 8 meters. It needs to hold 1.5 million liters of hydrogen. 
+The cylindrical hydrogen tank has a diameter of approximately 8 meters. It needs to hold 1.5 million liters of hydrogen.
 
 Remember `1 "\ dm"^3 = 1 "\ liters"`
 
@@ -2272,7 +2274,7 @@ So the volume of the hydrogen tank has to be around [[1500]] `m^3`.
 
 ---
 
-`1500 = input(pi) * input(4)^2 * "Height"_"Liquid Hydrogen Tank"` which is around 30 meters. 
+`1500 = input(pi) * input(4)^2 * "Height"_"Liquid Hydrogen Tank"` which is around 30 meters.
 
 ---
 
@@ -2282,7 +2284,7 @@ Remember that cones are the [[pyramid|prism]] - like solids with the circular ba
 
 ---
 
-Even though a cone is technically not a pyramid, they share many properties. 
+Even though a cone is technically not a pyramid, they share many properties.
 
 To calculate the volume of a cone, can we still use the same formula with the pyramids?
 
@@ -2318,11 +2320,11 @@ Nose cone has the same radius with the cylinder and has to hold 550 thousand lit
 
 ---
 
-{.text-center} which is around 30 meters. 
+{.text-center} which is around 30 meters.
 
 The real shape of the cone is larger than the one that we have calculated here and has a height of almost 17 meters. So the total height of the External Tank is around 50 meters.
 
-When full with the fuel, External tank alone weighs 760 thousands kilograms. Rocket companies try to increase the efficiency of the rockets by decreasing the overall weight and increasing the payload capacity. 
+When full with the fuel, External tank alone weighs 760 thousands kilograms. Rocket companies try to increase the efficiency of the rockets by decreasing the overall weight and increasing the payload capacity.
 
 In time, many attempts were made to reduce the huge amount of weight of the tanks.  Standard weight tanks are evolved to super lightweight tanks by examining every little detail of the rockets carefully.
 
@@ -2444,7 +2446,7 @@ Recall that the area of a triangle is one [[half|third|quarter]] of the product 
 
 ---
 
-Then, the total area of the cone is 
+Then, the total area of the cone is
 
 {.text-center} `"A"_"cone" =` _{x-equation.small(solution="π r^2 + π r s" keys="π sup +" short-var)}_
 
@@ -2476,7 +2478,7 @@ Approximate weight of a gallon of exterior paint is almost 3 kilograms. Therefor
 
 ---
 
-So far, we have learnt the surface area and the volume calculations of the cylinders and the cones as well as the unique properties of these solids that make them right choices for the rocket design as well as the other drag reducing land and underwater vehicles.. 
+So far, we have learnt the surface area and the volume calculations of the cylinders and the cones as well as the unique properties of these solids that make them right choices for the rocket design as well as the other drag reducing land and underwater vehicles..
 
 If we consider our initial question again, we may have a look at another property of the cylinder.
 
@@ -2521,7 +2523,7 @@ It also turns out that [[cylindrical|spherical|conical]] shapes hold the largest
 
 ---
 
-Earlier, we have seen that cylinders have the best properties as a container whereas the cones are usually used as roofs, shelters, baskets, etc.. 
+Earlier, we have seen that cylinders have the best properties as a container whereas the cones are usually used as roofs, shelters, baskets, etc..
 
 Throughout history, conic huts and roofs are built and used by different civilizations all over the world in different places and times. There is even a whole town in Italy, famous for its unique conic shaped _trulli_ roofs.
 
@@ -2587,9 +2589,9 @@ Mountains and volcanoes maintain the interesting conical shape of these rock for
 
 The Highest Mountain of our world, Everest,  is growing taller up to 5 centimeters each year. **Can it grow infinitely and become as high as the** _{span.comments(text="Olympus Mons is a very large shield volcano on the planet Mars. It is almost 3 times Mount Everest's height above sea level. It is the tallest volcano in the solar system.")}**Olympus Mons**_ **of Mars? Is there a limit for the maximum possible height of a mountain on Earth?**
 
-There is an interesting fact about the height of the mountains. 
+There is an interesting fact about the height of the mountains.
 
-By approximating the shape of the mountains to [[cones|spheres|cylinders]], we can approximately find out the maximum height of a mountain. 
+By approximating the shape of the mountains to [[cones|spheres|cylinders]], we can approximately find out the maximum height of a mountain.
 
 ---
 
@@ -2600,12 +2602,12 @@ By approximating the shape of the mountains to [[cones|spheres|cylinders]], we c
     // 1A, 2A, 3A ... are the answers of the questions that we are not going to show - but if the applet is approved, we can re-organize them as tutor prompts. | when Mars is selected the left hand side scale turns to ve 0 - 30 000  by increasing 1000 meters at a time | slides are here : https://drive.google.com/drive/folders/1MFMORovFBlcMZFQjUiLFuETQk\_6HAFeB?usp=sharing"
 
     // 1. **Weight to Base Area ratio** of a mountain cannot exceed the compressive strength of the rock beneath the mountain. Otherwise the rock beneath the mountain starts to compress. The mountain simply would crumble under their own weight.
-    // 2. Mass is the amount of matter in an object. Weight is the gravitational pull on a mass. Mass can be found by the product of the density and the volume of the object. When combined; The total **weight** of a mountain on Earth is 
+    // 2. Mass is the amount of matter in an object. Weight is the gravitational pull on a mass. Mass can be found by the product of the density and the volume of the object. When combined; The total **weight** of a mountain on Earth is
     // 3. The volume of the cone- shaped mountain is _{x-equation.small(solution="(1 / 3) π r^2 h" keys="frac sup")}_. But since mountains are usually a combination of three or more hills, we will ignore the coefficient `1/3` in the volume calculation.
-    // 4. When we cancel the Base areas and re–organize the equation; 
+    // 4. When we cancel the Base areas and re–organize the equation;
     // 5.If you select Mars, we will use the same equation with the [[gravity]] of Mars. We can see that on Mars, the max height of a mountain can be around [[27]] km
 
-    // After 4) 
+    // After 4)
 
 When we solve the inequality here, we will see that a mountain on Earth can be maximum around [[10]] km tall before collapsing under its own weight!
 
@@ -2617,15 +2619,15 @@ If 8800 meters-tall-Everest continues to grow around 5 cm a year, almost [[24000
 
 ---
 
-But do not worry! We still have another mountain which is in fact much higher than Mt Everest. 
+But do not worry! We still have another mountain which is in fact much higher than Mt Everest.
 
 Just it is on Mars.
 
-The highest volcano in the solar system is Olympus Mons on Mars with a height of over 21 km and a radius of 312 km. 
+The highest volcano in the solar system is Olympus Mons on Mars with a height of over 21 km and a radius of 312 km.
 
     // With 5)
 
-You can change the constants from Earth to Mars to calculate the maximum height of a mountain on Mars. 
+You can change the constants from Earth to Mars to calculate the maximum height of a mountain on Mars.
 
 With a rough approximation since the gravity of Mars is almost `1/3` of the gravity on Earth. We can conclude that a mountain on Mars can be [[3]] times taller than a mountain on earth.
 
@@ -2672,7 +2674,7 @@ The total volume of the grain silo is _{x-equation.small(solution="480 π" keys=
 
 ::: column.grow
 
-Earth is a big blue planet covered mostly with oceans. It is the fifth-largest planet in our solar system and for now, the only one known to have liquid water on its surface. 
+Earth is a big blue planet covered mostly with oceans. It is the fifth-largest planet in our solar system and for now, the only one known to have liquid water on its surface.
 
 With this vital water supply, our home planet is the only place to host an estimated **8.7 million species** in the known universe.
 
@@ -2699,7 +2701,7 @@ If we think of the same definition in 3D, then it becomes a _{span.comments(text
 
 :::
 
-_{span.comments(text="depositphotos.com/vector-images/thermosphere.html?qview=226395398")}The_ word "sphere" is from Greek meaning "globe". 
+_{span.comments(text="depositphotos.com/vector-images/thermosphere.html?qview=226395398")}The_ word "sphere" is from Greek meaning "globe".
 
 ::: column.fit
 
@@ -2707,7 +2709,7 @@ _{span.comments(text="depositphotos.com/vector-images/thermosphere.html?qview=22
 
 ::: column.grow
 
-There are many terms related to our world involving the word “sphere”. 
+There are many terms related to our world involving the word “sphere”.
 
 For instance, the blanket of gases that surrounds Earth is called the atmo**sphere**. The atmosphere is sliced up into the different zones as the tropo**sphere**, strato**sphere**, meso**sphere**, and thermo**sphere**.
 
@@ -2725,7 +2727,7 @@ The Earth has northern and southern hemi**spheres**. Hemisphere means [[half|a t
 
 If you divide the Earth into the hemispheres the resulting flat surface is called **the Great Circle.**
 
-There [[are infinitely many|is only one|are only two]] great circles in a sphere. All the meridians and the equator are the great circles of the Earth. 
+There [[are infinitely many|is only one|are only two]] great circles in a sphere. All the meridians and the equator are the great circles of the Earth.
 
 Great circles are used in planning routes for aircraft as the air currents and weather conditions.
 
@@ -2770,7 +2772,7 @@ If it is not possible to draw the nets of the spheres how do we have the 2D maps
     // https://www.youtube.com/watch?time_continue=74\&v=b1xXTi1nFCo\&feature=emb_logo
     // A gif / video or slideshow?
 
-If a _{span.comments(text="A globe is a spherical model of Earth. Globes serve purposes similar to maps, but unlike maps, do not distort the surface.")}globe_ were flattened out into a map the result would be wrinkled and torn. The size, shape, and relative location of continents would change.  Since drawing an accurate net of a sphere is impossible, we reflect the spherical surface of Earth to a flat piece of paper by using different **projections.** 
+If a _{span.comments(text="A globe is a spherical model of Earth. Globes serve purposes similar to maps, but unlike maps, do not distort the surface.")}globe_ were flattened out into a map the result would be wrinkled and torn. The size, shape, and relative location of continents would change.  Since drawing an accurate net of a sphere is impossible, we reflect the spherical surface of Earth to a flat piece of paper by using different **projections.**
 
     // the gif / video / Slideshow:
 
@@ -2786,7 +2788,7 @@ If a _{span.comments(text="A globe is a spherical model of Earth. Globes serve p
 
     // Mercator Projection
 
-Unfortunately, there is no truly correct way of representing the earth as a flat image. All the 2D maps are distorted in some manner!  
+Unfortunately, there is no truly correct way of representing the earth as a flat image. All the 2D maps are distorted in some manner!
 
 None of these flat figures can fold up to a sphere.
 
@@ -2802,7 +2804,7 @@ There are different ways to come up with the **surface area** and **volume** for
 
 Think about a **hemisphere** with a radius **r** fitting inside the smallest possible rectangular prism.
 
-In this case, the dimensions of the rectangular prism in terms of “r” must be 
+In this case, the dimensions of the rectangular prism in terms of “r” must be
 
     // DISCUSS: Leave these as blanks? use equation editor? Multiple choice?
 
@@ -2816,7 +2818,7 @@ So the volume of the prism is _{x-equation.small(solution="4 r^3" keys="sup" sho
 
 ---
 
-The volume of the hemisphere is definitely much **_less_** than that. 
+The volume of the hemisphere is definitely much **_less_** than that.
 
 ::: column.fit
 
@@ -2860,9 +2862,9 @@ _{x-equation.small(solution="(2/3) π r^3" keys="sup frac π" short-var)}_ `< "V
 
 _{span.comments(text="I am not planning to give the actual proof since it can be advanced. - also the intermediate level unit already has some explanation. Instead, I will use the story and the water demo if it is ok?")}In fact,_ here we are following the footsteps of the great Mathematician of ancient times, _{span.comments(text="Bio: link to entry")}**Archimedes.**_  Although he is very famous for the “Eureka” story, he has countless other inventions and contributions to mathematics, science, and engineering.
 
-He studied circles, cylinders, and spheres until he died and made approximations for the number pi and he discovered the volume and the area of the sphere by using the shapes he already knew about like cylinders and cones. 
+He studied circles, cylinders, and spheres until he died and made approximations for the number pi and he discovered the volume and the area of the sphere by using the shapes he already knew about like cylinders and cones.
 
-According to a legend, even his last words were “Don’t disturb my circles”. 
+According to a legend, even his last words were “Don’t disturb my circles”.
 
 ::: column.fit
 
@@ -2880,9 +2882,9 @@ Archimedes proved that there is exactly the **_same ratio_** between their volum
 
 :::
 
-To find this ratio, let’s use the water experiment we have used before when comparing the pyramids and prisms. 
+To find this ratio, let’s use the water experiment we have used before when comparing the pyramids and prisms.
 
-We need to have a cylinder and cone with the same heights as the diameter of their bases **(h = 2r)** and a sphere with exactly the same diameter. 
+We need to have a cylinder and cone with the same heights as the diameter of their bases **(h = 2r)** and a sphere with exactly the same diameter.
 
     figure: x-img(src="images/ch5_35.svg" width="600" height="196")
 
@@ -2924,7 +2926,7 @@ Now Let's (add a sphere to the hourglass and) pour the remaining water the spher
 
 ::: column.grow
 
-The Sphere is full and the cylinder is completely emptied now! 
+The Sphere is full and the cylinder is completely emptied now!
 
 You can rotate the hourglass to repeat the experiment.
 
@@ -2954,7 +2956,7 @@ Surface Area of the Cylinder with `"h" = "2"` is: `2 pi r^2 + 2 pi r *` _{x-equa
 
 ---
 
-If we use the same ratio of `input(2) / input(3)` to find the surface area of the sphere; 
+If we use the same ratio of `input(2) / input(3)` to find the surface area of the sphere;
 
 ---
 
@@ -3064,11 +3066,11 @@ Now we have also seen that the [[spheres|cubes]] **_enclose the maximum volume f
 
 ---
 
-If spheres have so many properties then why not use them in architecture too?  
+If spheres have so many properties then why not use them in architecture too?
 
 Throughout this unit, we have witnessed how architecture gets its inspiration from the beauty of solid geometry. Just think about the symmetry and the beauty of the spaces created by spheres.
 
-The only problem with creating spherical surfaces is the manufacturing of curved panels of glass or other materials. In the 1940s, the mathematician _{span.comments(text="Link to Bio")}Buckminster Fuller_ improved the concept of approximating curved surfaces by using flat triangular panels called **geodesic domes** and **surfaces**. 
+The only problem with creating spherical surfaces is the manufacturing of curved panels of glass or other materials. In the 1940s, the mathematician _{span.comments(text="Link to Bio")}Buckminster Fuller_ improved the concept of approximating curved surfaces by using flat triangular panels called **geodesic domes** and **surfaces**.
 
     figure: x-img(src="images/ch5_18.png" width="600" height="389")
 
@@ -3080,11 +3082,11 @@ Walt Disney Epcot “Spaceship Earth”
 
 It took more than two years to build Disney’s world-famous spherical attraction.  Its name “Spaceship Earth” is also popularized by Buckminster Fuller.
 
-Spaceship Earth is a complete sphere, supported by three pairs of legs with 50 meters of diameter. The volume of the sphere is `input(4)/input(3) *` _{x-equation.small(solution="π" keys="π")}_ `* input(253)`: almost 62,000 cubic meters.  
+Spaceship Earth is a complete sphere, supported by three pairs of legs with 50 meters of diameter. The volume of the sphere is `input(4)/input(3) *` _{x-equation.small(solution="π" keys="π")}_ `* input(253)`: almost 62,000 cubic meters.
 
 ---
 
-11,520 isosceles triangles are planned to be used to create a perfect geodesic sphere of this size. 
+11,520 isosceles triangles are planned to be used to create a perfect geodesic sphere of this size.
 
 Like Epcot’s Spaceship Earth, there are many other modern examples of spherical buildings all around the woırld.
 
@@ -3100,7 +3102,7 @@ Besides its perfectly round beauty, the properties of the sphere make it a perfe
 
 Amazon Spheres (Seattle, Washington)
 
-Remember, spheres enclose the most volume for a given surface area of any geometric solid. 
+Remember, spheres enclose the most volume for a given surface area of any geometric solid.
 
 So, it requires fewer building materials than more conventional buildings based on shapes such as rectangular prisms.
 
@@ -3108,7 +3110,7 @@ So, it requires fewer building materials than more conventional buildings based 
 
 La Géode (Paris, France)
 
- It also means less heat is lost or gained through the exterior, and the structure receives less force from strong winds that could potentially damage it. 
+ It also means less heat is lost or gained through the exterior, and the structure receives less force from strong winds that could potentially damage it.
 
     figure: x-img(src="images/ch5_8.png" width="600" height="338")
 

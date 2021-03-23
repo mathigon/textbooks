@@ -4,6 +4,10 @@
 
 > id: intro-0
 > section: introduction
+> description: Discover the mathematical principles that connect our world – from shaking hands to travel and navigation, colouring maps and social networks.
+> color: "#A7208A"
+> level: Intermediate
+> next: probability
 
 Every day we are surrounded by countless connections and networks: roads and rail tracks, phone
 lines, the internet, electronic circuits and even molecular bonds. There are even _social networks_
@@ -494,7 +498,7 @@ theorem_.
 > id: planarity
 > goals: planarity
 
-::: .box.f-blue
+::: .box.blue
 
 #### Planarity
 
@@ -522,27 +526,27 @@ called __faces__.
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Vertices  
-[[5]] Faces  
-[[10]] Edges  
+{.text-center} [[6]] Vertices<br>
+[[5]] Faces<br>
+[[10]] Edges<br>
 _{span.euler-sum} 11 Vertices + Faces_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] Vertices  
-[[7]] Faces  
-[[14]] Edges  
+{.text-center} [[8]] Vertices<br>
+[[7]] Faces<br>
+[[14]] Edges<br>
 _{span.euler-sum} 15 Vertices + Faces_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] Vertices  
-[[13]] Faces  
-[[24]] Edges  
+{.text-center} [[12]] Vertices<br>
+[[13]] Faces<br>
+[[24]] Edges<br>
 _{span.euler-sum} 25 Vertices + Faces_
 
 :::
@@ -552,7 +556,7 @@ _{span.euler-sum} 25 Vertices + Faces_
 
 When comparing these numbers, you will notice that the number of edges is always
 [[one less|bigger|the same]] than the number of faces plus the number of
-vertices. In other words, _{.b.blue}F_ + _{.b.green}V_ = _{.b.red}E_ + 1. This
+vertices. In other words, _{.b.m-blue}F_ + _{.b.m-green}V_ = _{.b.m-red}E_ + 1. This
 result is called __Euler’s equation__ and is named after the same
 [mathematician](bio:euler) who solved the Königsberg Bridges problem.
 
@@ -579,14 +583,14 @@ see if Euler’s equation works. Instead, we can try to find a simple
       .euler-table
         table.grid.table-small
           tr
-            td: strong.blue.i F
-            td: strong.green.i V
-            td: strong.red.i E
+            td: strong.m-blue.i F
+            td: strong.m-green.i V
+            td: strong.m-red.i E
           tr
             td.xf 0
             td.xv 1
             td.xe 0
-        p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
+        p.no-voice #[strong.m-blue.xf 0] + #[strong.m-green.xv 1] &nbsp;=&nbsp; #[strong.m-red.xe 0] + 1
 
 The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
 
@@ -645,36 +649,36 @@ also for all polyhedra – with one small difference. When transforming the
 polyhedra into graphs, one of the faces disappears: the topmost face of the
 polyhedra becomes the “outside”; of the graphs.
 
-In other words, if you count the number of __{.red}edges__, __{.blue}faces__ and
-__{.green}vertices__ of _any_ polyhedron, you will find that _{.b.blue}F_ +
-_{.b.green}V_ = _{.b.red}E_ + [[2]].
+In other words, if you count the number of __{.m-red}edges__, __{.m-blue}faces__ and
+__{.m-green}vertices__ of _any_ polyhedron, you will find that _{.b.m-blue}F_ +
+_{.b.m-green}V_ = _{.b.m-red}E_ + [[2]].
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
-{.caption} __Icosahedron__  
-__{.blue}20__ Faces  
-__{.green}12__ Vertices  
-__{.red}30__ Edges
+{.caption} __Icosahedron__<br>
+__{.m-blue}20__ Faces<br>
+__{.m-green}12__ Vertices<br>
+__{.m-red}30__ Edges
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Rhombicosidodecahedron__  
-__{.blue}62__ Faces  
-__{.green}60__ Vertices  
-__{.red}120__ Edges
+{.caption} __Rhombicosidodecahedron__<br>
+__{.m-blue}62__ Faces<br>
+__{.m-green}60__ Vertices<br>
+__{.m-red}120__ Edges
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
-{.caption} __Truncated Icosahedron__  
-__{.blue}32__ Faces (12 black, 20 white)  
-__{.green}60__ Vertices  
-__{.red}90__ Edges
+{.caption} __Truncated Icosahedron__<br>
+__{.m-blue}32__ Faces (12 black, 20 white)<br>
+__{.m-green}60__ Vertices<br>
+__{.m-red}90__ Edges
 
 :::
 

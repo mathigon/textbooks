@@ -4,6 +4,8 @@
 
 > section: introduction
 > sectionStatus: dev
+> color: "#4757D3"
+> level: Advanced
 
 {.todo} COMING SOON
 

@@ -1,0 +1,13 @@
+// =============================================================================
+// Prime Disk Component Styles
+// (c) Mathigon
+// =============================================================================
+
+
+x-prime-disk {
+  display: inline-block;
+  svg { display: block; }
+  path { stroke: white; }
+  text { text-anchor: middle; font-size: 26px; font-weight: 600;
+    fill: $medium-grey; letter-spacing: -0.02em; }
+}

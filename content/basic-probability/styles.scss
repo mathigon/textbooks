@@ -1,0 +1,20 @@
+// =============================================================================
+// Introduction to Probability
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+@import "../shared/components/buckets/buckets";
+
+
+x-coin-flip { display: block; }
+
+x-buckets.likelihoods {
+  .input { width: 160px; }
+  .bucket { width: 180px; }
+  .bucket:nth-child(1) { background: mix($orange, $grey-background, 85%); }
+  .bucket:nth-child(2) { background: mix($purple, $grey-background, 85%); }
+  .bucket:nth-child(3) { background: mix($blue, $grey-background, 85%); }
+  .bucket:nth-child(4) { background: mix($teal, $grey-background, 85%); }
+}

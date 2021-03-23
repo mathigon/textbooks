@@ -7,8 +7,8 @@
 import {flatten, list, Obj, repeat, tabulate2D} from '@mathigon/core';
 import {Random} from '@mathigon/fermat';
 import {$, $N, ElementView} from '@mathigon/boost';
-import {Step} from '../shared/types';
-import '../shared/components/buckets';
+import {confetti, Step} from '@mathigon/studio';
+import '../shared/components/buckets/buckets';
 
 
 // -----------------------------------------------------------------------------
@@ -171,7 +171,7 @@ export function montyHall($step: Step) {
     $doors.forEach($d => $d.addClass('open'));
 
     if (selected === car) {
-      $step.tools.confetti();
+      confetti();
       $step.addHint('correct');
     }
 

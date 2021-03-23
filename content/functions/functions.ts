@@ -4,8 +4,8 @@
 // =============================================================================
 
 
-import '../shared/components/relation';
-import {Step} from '../shared/types';
+import {Step} from '@mathigon/studio';
+import '../shared/components/relation/relation';
 
 
 export function fnSketch($step: Step) {

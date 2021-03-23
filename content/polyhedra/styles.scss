@@ -1,0 +1,68 @@
+// =============================================================================
+// Polygons and Polyhedra
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+@import "../shared/components/webgl/solid";
+@import "./components/anibutton";
+
+.quadrilateral {
+  width: 210px !important;
+  margin: 12px !important;
+  position: relative;
+  padding: 14px;
+  background: $grey-background;
+  border-radius: 6px;
+  overflow: hidden;
+  x-geopad, x-geopad svg { overflow: visible; }
+}
+
+.task {
+  color: $blue;
+  border-bottom: 2px solid $blue;
+  padding-bottom: .5em;
+  margin-bottom: .7em;
+  font-weight: 600;
+}
+
+#escher { overflow: hidden; }
+.metamorph img { max-width: none; cursor: ew-resize; }
+
+.tessellation {
+  position: relative;
+  display: flex;
+  border-radius: 4px 0 0 4px;
+  background: $grey-background;
+
+  x-polypad { height: 450px; flex-grow: 1; }
+  svg.overlay { @include fillParent(); pointer-events: none; z-index: 6; }
+  .menu { background: $grey; border-radius: 0 4px 4px 0; padding: 2px 0; }
+  .add { width: 48px; height: 48px; padding: 0 2px; cursor: grab; }
+  .overlap .polygon-tile { fill: #ff5354 !important; }
+  .btn-row { position: absolute; bottom: 12px; left: 12px }
+
+  #pentagons & .menu { width: 104px; display: flex; flex-wrap: wrap; }
+}
+
+.plato {
+  margin: 0 -12px 1.5em !important;
+  p:first-child, x-polyhedron { margin-bottom: .5em; }
+}
+
+#platonic-overview .dual { transition: opacity .3s; }
+#platonic-overview.focus .dual:not(.focus) { opacity: 0.1; }
+
+.qed {
+  display: block;
+  float: right;
+  width: 8px;
+  height: 8px;
+  border: 1px solid currentColor;
+  margin-top: 8px;
+}
+
+x-geopad[grid] .points circle.move { display: none; }
+
+x-polyhedron-slice { display: block; }

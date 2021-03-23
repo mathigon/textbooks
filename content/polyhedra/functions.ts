@@ -4,18 +4,19 @@
 // =============================================================================
 
 
-/// <reference types="THREE"/>
 import {Color, total} from '@mathigon/core';
 import {clamp, lerp, toWord} from '@mathigon/fermat';
 import {Angle, intersections, isLineLike, Point, Polygon, Rectangle, Segment} from '@mathigon/euclid';
 import {Browser, slide} from '@mathigon/boost';
-import {Geopad, GeoPath, Path, PolygonTile, Polypad, Slider, Step} from '../shared/types';
-import {Solid} from '../shared/components/solid';
-import {Graphics3D} from '../shared/components/webgl';
+import {Slider, Step} from '@mathigon/studio';
+
+import {Geopad, GeoPath, Path, PolygonTile, Polypad} from '../shared/types';
+import {Solid} from '../shared/components/webgl/solid';
+import {Graphics3D} from '../shared/components/webgl/webgl';
 import {Anibutton} from './components/anibutton';
 import {PolyhedronData, PolyhedronDataItem} from './components/polyhedron-data';
 
-import '../shared/components/solid';
+import '../shared/components/webgl/solid';
 import './components/polyhedron';
 import './components/folding';
 import './components/anibutton';
@@ -204,7 +205,7 @@ export function tessellationDrawing($step: Step) {
     $a.$('svg')!.setAttr('viewBox', '0 0 80 80');
   }
 
-  const $download = $step.$('.tessellation x-icon-btn')!;
+  const $download = $step.$('.tessellation .icon-btn')!;
   $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
 
   $polypad.on('move-selection rotate-selection add-tile', () => {
@@ -242,7 +243,7 @@ export function pentagons($step: Step) {
     $a.$('svg')!.setAttr('viewBox', '0 0 80 80');
   }
 
-  const [$flip, $download] = $step.$$('.tessellation x-icon-btn');
+  const [$flip, $download] = $step.$$('.tessellation .icon-btn');
   $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
   $flip.on('click', () => $polypad.selection.action('polygon', 'flip'));
 

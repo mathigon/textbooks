@@ -1,0 +1,54 @@
+// =============================================================================
+// Quadratic Equations
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+@import "./components/projectile";
+
+x-picker x-coordinate-system { margin: 0; }
+x-coordinate-system .region { position: absolute; pointer-events: none; }
+
+.text-wrap {
+  display: block;
+  float: right;
+  shape-margin: 24px;
+  margin: 0 0 24px 24px;
+  shape-outside: circle();
+  @media (max-width: 560px) { float: none !important; margin: 0 auto 1em; }
+}
+
+#intro-table table { white-space: nowrap; }
+
+.q-grid {
+  td {
+    padding: .2em 1em;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    background: mix($blue, $grey-background, 20%);
+    color: rgba(black, 60%);
+  }
+  tr:first-child td, td:first-child {
+    background: mix($blue, $grey-background, 40%);
+    color: rgba(black, 70%);
+    font-weight: 700;
+  }
+  td:last-child { border-right: none; }
+  tr:last-child td { border-bottom: none; }
+
+  tr:first-child td:first-child { border-top-left-radius: 6px; }
+  tr:first-child td:last-child { border-top-right-radius: 6px; }
+  tr:last-child td:first-child { border-bottom-left-radius: 6px; }
+  tr:last-child td:last-child { border-bottom-right-radius: 6px; }
+}
+
+// -----------------------------------------------------------------------------
+// Projectiles
+
+article.projectiles {
+  .page-background {
+    background: linear-gradient(to bottom, #7ddedd, #48b6de);
+  }
+  x-step { color: rgba(black, 75%); }
+}

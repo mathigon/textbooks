@@ -4,10 +4,9 @@
 // =============================================================================
 
 
-/// <reference types="THREE"/>
 import {register} from '@mathigon/boost';
 import {Obj} from '@mathigon/core';
-import {Solid} from '../../shared/components/solid';
+import {Solid} from '../../shared/components/webgl/solid';
 import {PolyhedronData} from './polyhedron-data';
 
 

@@ -27,7 +27,7 @@ The following can be used to create and save:
 
     figure
       x-voxel-painter(width=600 height=400 color-sides playingFieldSize="20" )
-        x-icon-btn(icon="eraser")
+        button.icon-btn: x-icon(name="eraser")
 
 The volume of the cuboid below is 3 x 4 x 7 = [[72]].
 
@@ -68,7 +68,7 @@ Try to make a shape with a surface area of 10 and a volume of 2
 
     figure
       x-voxel-painter(width=600 height=400 color-sides,playingFieldSize="4")
-        x-icon-btn(icon="eraser")
-        x-icon-btn(surfaceArea=10,volume=2,icon="check-white")
+        button.icon-btn: x-icon(name="eraser")
+        button.icon-btn(surfaceArea=10 volume=2): x-icon(name="check")
 
 ---

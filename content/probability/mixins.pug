@@ -1,0 +1,19 @@
+mixin dice(n)
+  svg(width=20, height=20)
+    if n === 1 || n === 3 || n === 5
+      circle(r=2, cx=10, cy=10)
+    if n === 2 || n === 3 || n === 4 || n === 5
+      circle(r=2, cx=5, cy=5)
+    if n === 4 || n === 5
+      circle(r=2, cx=5, cy=15)
+    if n === 4 || n === 5
+      circle(r=2, cx=15, cy=5)
+    if n === 2 || n === 3 || n === 4 || n === 5
+      circle(r=2, cx=15, cy=15)
+    if n === 6
+      circle(r=2, cx=5, cy=4)
+      circle(r=2, cx=5, cy=10)
+      circle(r=2, cx=5, cy=16)
+      circle(r=2, cx=15, cy=4)
+      circle(r=2, cx=15, cy=10)
+      circle(r=2, cx=15, cy=16)

@@ -1,0 +1,12 @@
+mixin barchart(data)
+  - var max = 100/Math.max.apply(none, data.map(function(d) { return d[1] }))
+  .barchart(style="width: " + data.length * 50 + "px")
+    for d in data
+      .bar-wrap
+        div(class="bar " + d[2], style="height: " + d[1] * max + "%")
+    .axis
+    for d in data
+      .label= d[0]
+
+- var reds = [32, 19, 21, 25, 34, 27, 36, 30, 23, 5, 16, 1, 14, 9, 18, 7, 12, 3]
+- var colour = function(x) { return reds.indexOf(x) >= 0 ? 'r' : 'b'; }

@@ -7,7 +7,7 @@
 import {CustomElementView, register, slide} from '@mathigon/boost';
 import {clamp} from '@mathigon/fermat';
 import {Point} from '@mathigon/euclid';
-import {create3D} from '../../shared/components/webgl';
+import {create3D} from '../../shared/components/webgl/webgl';
 
 
 function getGeometry(name: string) {
@@ -55,7 +55,7 @@ export class PolyhedronSlice extends CustomElementView {
 
     // Listen to the 'opacity' attribute and update the graphics.
     this.onAttr('opacity', (opacity, initial) => {
-      polyhedron.material.opacity = 0.4 + (+opacity) / 25;
+      (polyhedron.material as THREE.Material).opacity = 0.4 + (+opacity) / 25;
       if (!initial) scene.draw();
     });
 

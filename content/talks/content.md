@@ -5,6 +5,7 @@
 > id: bridges
 > title: The Bridges of Königsberg
 > section: momath
+> color: "#A7208A"
 
 Can you draw a path that crosses every bridge once, but _not more than once_, without entering the
 water? You can start and end on any area of land.
@@ -50,7 +51,7 @@ intersecting?
 > id: planarity
 > title: Planarity Game
 
-::: .box.f-blue
+::: .box.blue
 
 #### Planarity
 
@@ -165,7 +166,7 @@ What happens when three plants orbit around each other in space?
         path.thin(x="segment(b, b.translate(vb))" arrows="end")
         path.thin(x="segment(c, c.translate(vc))" arrows="end")
       x-play-toggle
-      x-icon-btn.restore(icon="restart")
+      button.icon-btn.restore: x-icon(name="restart")
 
 ---
 > id: bridges-v2
@@ -239,7 +240,7 @@ bounded (it doesn't diverge).
             span.vdots …
             strong.var.m-blue(:show="converges" data-display="inline") Bounded!
             strong.var(:show="!converges" data-display="inline") Diverges!
-    x-slideshow(hidden)
+    x-slideshow(hidden): .legend-box: div
 
 ---
 > id: mandel-paint
@@ -250,7 +251,7 @@ For Julia sets, we chose a fixed value for `pill(c,"red","c")`, and then changed
 `pill(x_0 = 0,"yellow","x0")`, and instead change the value of `pill(c,"red","c")`:
 
     figure: x-geopad.no-background(width=720 height=480 x-axis="-2.1,1.1,1" y-axis="-1.1,1.1,1" axes grid padding=8 projections="no" label-suffix=",i" axis-names="Real, Imaginary")
-      img(src="/resources/fractals/images/mandelbrot.png" data-bounds="1,0.5,-1,-1.5")
+      img(src="/content/fractals/images/mandelbrot.png" data-bounds="1,0.5,-1,-1.5")
       canvas(width=1440 height=960 style="opacity: 1")
       svg
         circle.move.red.pulsate(name="c" cx=0 cy=0 target="c")
@@ -281,7 +282,7 @@ scale. Here you can zoom into a part of the Mandelbrot set called the __Seahorse
     .mandel-frame
       - i = 1;
       while i <= 27
-        img(src="/resources/fractals/images/mandel/mandel-" + i + ".jpg" width=760 height=500)
+        img(src="/content/fractals/images/mandel/mandel-" + i + ".jpg" width=760 height=500)
         - i += 1;
       .scale.var Scale: ${pow(scale)}
     x-slider(steps=27 continuous speed=0.1 :bind="scale")

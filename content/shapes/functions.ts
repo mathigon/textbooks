@@ -8,17 +8,22 @@ import {repeat, tabulate, tabulate2D} from '@mathigon/core';
 import {clamp, nearlyEquals, subsets} from '@mathigon/fermat';
 import {$N, animate, CanvasView, ElementView, EventCallback, loadScript, Observable, observe, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Arc, Circle, intersections, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
+import {Slider, Step} from '@mathigon/studio';
 
-import {Geopad, GeoPath, GeoPoint, Path, Polypad, Slider, Step, Tile} from '../shared/types';
-import {BinarySwipe} from '../shared/components/binary-swipe'; // import types
+import {Geopad, GeoPath, GeoPoint, Path, Polypad, Tile} from '../shared/types';
+import {BinarySwipe} from '../shared/components/binary-swipe/binary-swipe'; // import types
 import {VoronoiModel} from './components/voronoi';
 import {fillSquares, filterMap, geopadReset, getLineupShift, getTangramPolystr, getX, getY, Guide, handlePathing, HelperPoly, initLineup, initPizza, length, LineupSlices, makeParallelogram, nearest, nearestSimple, polypadPrep, RenderedGeopadPoly, ResizeableSquare, ring, RopePoly, separateSlices, setupBaseHeight, setupDraggableRectangles, setupRope, SideData, Slice, slicesHighlight, tangramComplete, tangramScale, toParallelogram, toRect, touches} from './components/util';
 
-import '../shared/components/binary-swipe';  // import component
-import '../shared/components/relation';
+import '../shared/components/binary-swipe/binary-swipe';  // import component
+import '../shared/components/relation/relation';
 import {GREY, ORANGE, TEAL} from '../shared/constants';
 
 // SECTION 1: Introduction
+
+interface Step1<T> extends Step {
+  model: Observable<T>;
+}
 
 const courseModel = observe({
   firstArea: {
@@ -707,9 +712,9 @@ const cafeLocationPoints = [
 
 const voronoiColours = ['3c91e6', 'ff6b6b', 'ffe45e', '4ecdc4', '81366f', 'c93818', 'e2c312', '6bab90', 'e4533a'].map(c => '#' + c);
 
-export async function voronoi1($step: Step<VoronoiModel>) {
+export async function voronoi1($step: Step1<VoronoiModel>) {
 
-  await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
+  await loadScript('/content/shared/vendor/d3-delaunay.min.js');
 
   const $geopad = $step.$('x-geopad') as Geopad;
   const $canvas = $geopad.$('canvas') as CanvasView;
@@ -812,7 +817,7 @@ export async function voronoi1($step: Step<VoronoiModel>) {
   });
 }
 
-async function handleAnim(index: number, $step: Step<VoronoiModel>) {
+async function handleAnim(index: number, $step: Step1<VoronoiModel>) {
   window.setTimeout((_: any) => {
     const _anim = animate((progress, _) => {
       const dlOpacity = 1 - progress;
@@ -823,16 +828,16 @@ async function handleAnim(index: number, $step: Step<VoronoiModel>) {
   }, 1000);
 }
 
-async function showVor($step: Step<VoronoiModel>) {
+async function showVor($step: Step1<VoronoiModel>) {
   const anim = animate((progress, _) => {
     $step.model.vorOpacity = progress;
   }, 2000);
   anim.promise.then(_ => $step.score('voronoi-diagram'));
 }
 
-export async function voronoi2($step: Step<VoronoiModel>) {
+export async function voronoi2($step: Step1<VoronoiModel>) {
 
-  await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
+  await loadScript('/content/shared/vendor/d3-delaunay.min.js');
 
   const $geopad = $step.$('x-geopad') as Geopad;
 
@@ -922,7 +927,7 @@ export async function voronoi2($step: Step<VoronoiModel>) {
   $geopad.showLabels = true;
 }
 
-export async function voronoi3($step: Step<VoronoiModel>) {
+export async function voronoi3($step: Step1<VoronoiModel>) {
 
   const $geopad = $step.$('x-geopad') as Geopad;
 
@@ -973,7 +978,7 @@ export function sortPolygons($step: Step) {
 
 export async function populations($step: Step) {
 
-  await loadScript('/resources/shared/vendor/d3-delaunay.min.js');
+  await loadScript('/content/shared/vendor/d3-delaunay.min.js');
 
   const $geopad = $step.$('x-geopad.voronoi-1') as Geopad;
 
@@ -1986,7 +1991,7 @@ type ArrangementModel = {
   /** Value currently selected via the slider, signifying the number of slices the pizza/lineup should have */
   n1: number;
 };
-export async function slicesArrangement($step: Step<ArrangementModel>) {
+export async function slicesArrangement($step: Step1<ArrangementModel>) {
 
   type SidesValues = {
     hovering?: SideData,

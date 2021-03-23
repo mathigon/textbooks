@@ -4,10 +4,9 @@
 // =============================================================================
 
 
-/// <reference types="THREE"/>
 import {$N, CustomElementView, register} from '@mathigon/boost';
 import {Obj} from '@mathigon/core';
-import {create3D} from '../../shared/components/webgl';
+import {create3D} from '../../shared/components/webgl/webgl';
 import {FoldingData, FoldingDataItem} from './folding-data';
 
 

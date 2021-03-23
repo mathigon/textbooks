@@ -6,6 +6,8 @@
 > sectionStatus: dev
 > id: rocket
 > goals: projectile
+> color: "#5A49C9"
+> level: Advanced
 
 ::: column.grow
 
@@ -235,7 +237,7 @@ We can use the formulas we calculated for rotations of __A__ and __B__ to find t
 
 When we divide the lengths of A and B from the respective coordinates in A' and B', we can get the formulas for the rotations of the unit vectors.
 
-{.fixme} What kind of notation should we use? Unit Vectors? Points? 
+{.fixme} What kind of notation should we use? Unit Vectors? Points?
 
 `(1, 0)` becomes `(sinθ, -cosθ)` and `(0, 1)` becomes `(cosθ, sinθ)`.
 
@@ -320,13 +322,13 @@ This is a [matrix multiplication](gloss:matrix-multiplication), wherein we multi
     table.vector
       tr: td
           div(target="x") cosθ * x
-          div.op + 
+          div.op +
           div(target="y") -sinθ * y
       tr: td
           div(target="x") sinθ * x
-          div.op + 
+          div.op +
           div(target="y") cosθ * y
-      
+
 :::
 
 {.fixme} Activity where student can drag slider to adjust θ and the matrix values are updated (up to two decimal points).
@@ -342,7 +344,7 @@ This is a [matrix multiplication](gloss:matrix-multiplication), wherein we multi
 
 #### Identity Matrix
 
-What if for our matrix, we wrote this instead? 
+What if for our matrix, we wrote this instead?
 
 {.text-center} `§[[1 0] [0 1]]`
 
@@ -363,21 +365,7 @@ For any vector, the result of the transforation will be the same. This is called
 [Continue](btn:next)
 
 ---
-
 > id: basic-transformations
-
-    // values hard-coded for now, should take variable w&h (or just use Geopad?)
-    mixin grid220
-      g.grid
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
-        each i in [10,30,50,70,90,110,130,150,170,190,210]
-          - var width = i == 110 ? 4 : 2
-          - stroke = i == 110 ? "#e6e6e6" : "#e6e6e6"
-          line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
-
 
 We have already seen how we can multiply a vector by a 2x2 matrix to rotate that vector about the origin, and we have seen how the identity matrix leaves the vector unchanged. What other transformations exist?
 
@@ -391,6 +379,7 @@ What if we adjust the top-left and bottom-right numbers of our transformation ma
 <tr><td>0</td><td>${yscale}{yscale|1.0|-2.0,2.0,0.1}</td></tr>
 </table>
 
+    include mixins
     svg(width=220 height=220)
       +grid220
       g.var.scale(:html="polygonTransform(xscale, 0, 0, yscale)")
@@ -403,7 +392,7 @@ Changing the [bottom-right](target:md) value scales y' along the y-axis.
 
 {.fixme} formatting and input.
 
-{.fixme} Add some code that lets us snap to x-big, x-shrink, x-reverse, y-big, y-shrink, y-reverse, etc. 
+{.fixme} Add some code that lets us snap to x-big, x-shrink, x-reverse, y-big, y-shrink, y-reverse, etc.
 
 
 ::: tab
@@ -418,6 +407,7 @@ Adjust the matrix to see how it changes in the coordinates.
 <tr><td>0</td><td>${yreflect}{yreflect|1.0|-1,1,2}</td></tr>
 </table>
 
+    include mixins
     svg(width=220 height=220)
       +grid220
       g.var.scale(:html="polygonTransform(xreflect, 0, 0, yreflect)")
@@ -440,6 +430,7 @@ Adjust the matrices to see how they change the transformations.
 
 {.caption} A shear in the x direction.
 
+    include mixins
     svg(width=220 height=220)
       +grid220
       g.var.shear(:html="polygonTransform(1, xshear, 0, 1)")
@@ -457,6 +448,7 @@ Adjust the matrices to see how they change the transformations.
 
 {.caption} A shear in the y direction.
 
+    include mixins
     svg(width=220 height=220)
       +grid220
       g.var.shear(:html="polygonTransform(1, 0, yshear, 1)")
@@ -535,7 +527,7 @@ Try adjusting the values in the matrix and see what kind of transformations you 
         // each p,i in BOAT_GRAY
           // circle.gray(name=`bgy${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
           // path.gray(x=`segment(bgy${i}, bgy${(i+1)%BOAT_GRAY.length})`)
-          
+
         // each p,i in BOAT_RED
           // circle.red(name=`brd${i}` x=`point(${p[0]}*ipoint.x+${p[1]}*jpoint.x,${p[0]}*ipoint.y+${p[1]}*jpoint.y)`)
           // path.red(x=`segment(brd${i}, brd${(i+1)%BOAT_RED.length})`)
@@ -572,7 +564,7 @@ Choose one of these buttons to snap to different transformations.
 
 {.todo} How does this relate to video games?
 
-Video games can manipulate and millions of shapes per second with use of a __Graphical Processing Unit__ (GPU). GPUs are specially designed to perform many matrix multiplications at once. 
+Video games can manipulate and millions of shapes per second with use of a __Graphical Processing Unit__ (GPU). GPUs are specially designed to perform many matrix multiplications at once.
 
 [Continue](btn:next)
 
@@ -616,6 +608,7 @@ This is the identity matrix for three dimensions
 
 Let's mess around with the Mathigon Logo!
 
+    include mixins
     svg(width=220 height=220)
       +grid220
       g.var.mathigon.red(:html="polygonTransform(m1a, m1b, m1c, m1d, 'red')")
@@ -784,29 +777,23 @@ However, this process is slightly different from what we did above. The company 
 
 ### Multiplying Linear Transformations
 
-    mixin ij(i, j, label)
-      .cube(i=i j=j)
-        - var iSeg = "segment(point(0,0),point(" +i[0] + "," + i[1] + "))"
-        - var jSeg = "segment(point(0,0),point(" +j[0] + "," + j[1] + "))"
-        x-geopad(width=100 x-axis="-2,2,1" y-axis="-2,2,1" grid padding=5): svg
-          path.red(x=iSeg label="i")
-          path.green(x=jSeg label="j")
-        .caption= label
-
 We have now learned two different ways to think about matrix multiplication. In the first chapter we learned that multiplying a 2x2 matrix by a 2x1 vector, can be thought of as a linear transformation. And we just learned to the detailed rules for how to multiply matrices of any size, like a preference matrix. Let's go back to thinking about matrices as linear transformations.
 
 Recall the 2x2 matrix representing the rotation of 90º about the origin. Let's call it `R_"90"`.
 
+    include mixins
     img(src="images/proto-2/rotate-90-m.png" width=100)
     +ij([0,1], [-1,0], "Rotate 90º")
 
 What if we multiply this matrix by the 2x2 matrix for rotation of 180º, `R_"180"`?
 
+    include mixins
     img(src="images/proto-2/rotate-180-m.png")
     +ij([-1,0], [0,-1], "Rotate 180º")
 
 The resulting matrix is this:
 
+    include mixins
     img(src="images/proto-2/rotate-270-m.png")
     +ij([0,-1], [1,0], "Rotate 270º")
 
@@ -836,6 +823,7 @@ What about other types of transformations?
 {.fixme} Perhaps let them draw points (like a spaceship), and then the points are transformed by each transformation?
 {.fixme} Should be displayed horizontally, with their matrices across the bottom.
 
+    include mixins
     .calculator
       .display
         .mat
@@ -1031,6 +1019,7 @@ If we think of the matrices as transformations, we can imagine scenarios wherein
 
 If we perform a 90º Rotation, and then a reflection across the x-axis, the final transformation will look like this:
 
+    include mixins
     .cubes
       +ij([0,1], [-1,0], "Rotate 90º")
       .cube.op x
@@ -1040,6 +1029,7 @@ If we perform a 90º Rotation, and then a reflection across the x-axis, the fina
 
 However, if we reverse the order of the transformations, the final transformation will look like this.
 
+    include mixins
     .cubes
       +ij([-1,0], [0,1], "Reflect x=0")
       .cube.op x
@@ -1125,7 +1115,7 @@ The formula for the determinant of a 2x2 matrix is:
 
 ```ad - bc```
 
-matrix: 
+matrix:
 
 [a](target:a), [b](target:b)
 

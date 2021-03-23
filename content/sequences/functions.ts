@@ -9,9 +9,10 @@ import {isPrime, numberFormat, round} from '@mathigon/fermat';
 import {Point} from '@mathigon/euclid';
 import {$N, ElementView, hover, SVGView} from '@mathigon/boost';
 import {ExprElement, Expression} from '@mathigon/hilbert';
-import {CoordinateSystem, EquationSystem, Gesture, Slider, Slideshow, Step, Tabbox} from '../shared/types';
-import {polygonPoints, trianglePoints} from './components/polygons';
+import {confetti, Gesture, Slider, Slideshow, Step, Tabbox} from '@mathigon/studio';
 
+import {CoordinateSystem, EquationSystem} from '../shared/types';
+import {polygonPoints, trianglePoints} from './components/polygons';
 import './components/tetrahedron';
 
 
@@ -379,7 +380,7 @@ export function quiz($step: Step) {
   const goals = list(14).map(x => 'blank-' + x).join(' ');
   $step.onScore(goals, () => {
     // Don't show confetti during page load.
-    if ($step.isPageLoaded) $step.tools.confetti();
+    if ($step.isPageLoaded) confetti();
   });
 }
 

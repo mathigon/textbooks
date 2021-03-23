@@ -7,8 +7,8 @@
 import {InputView} from '@mathigon/boost';
 import {cache, last, total} from '@mathigon/core';
 import {clamp, Random, roundTo} from '@mathigon/fermat';
+import {Step} from '@mathigon/studio';
 import {rotateDisk} from '../shared/components/disk';
-import {Step} from '../shared/types';
 
 
 export function roulette($step: Step) {

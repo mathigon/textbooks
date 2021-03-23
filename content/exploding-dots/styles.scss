@@ -1,0 +1,75 @@
+// =============================================================================
+// Exploding Dots
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+@import "./components/dot-machine";
+
+.race {
+  position: relative;
+  padding-bottom: 40px;
+  line { stroke-linecap: round; stroke: $yellow; stroke-width: 2; }
+  text { font-size: 14px; text-anchor: middle; }
+  img { position: absolute; top: 0; width: 10.5%; height: auto; transition: left .5s; }
+  g { display: none }
+}
+
+.btn-row.done { pointer-events: none; }
+.btn-row.done button:not(.selected) { opacity: 0.2; }
+
+blockquote p {
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  color: $text-dark;
+}
+
+.convergence {
+  margin: 1.5em auto;
+  text-align: right;
+  max-width: 270px;
+}
+
+.ivar {
+  @include circled(1.4em);
+  background: $green;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+  margin: 0 .2em;
+  .s-yellow & { background: $yellow; }
+}
+
+svg.square {
+  polygon { stroke: white; stroke-width: 2px; }
+}
+
+x-img img { width: 100%; }
+
+#zero-list ul { display: flex; flex-wrap: wrap; justify-content: center; }
+
+#zero-list li {
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin: 12px;
+  list-style: none;
+  color: rgba(black, 80%);
+  max-width: 300px;
+  &:nth-child(1) { background: mix($red, white, 10%); }
+  &:nth-child(2) { background: mix($blue, white, 10%); }
+  &:nth-child(3) { background: mix($green, white, 10%); }
+  &:nth-child(4) { background: mix($yellow, white, 10%); }
+}
+
+#flaw-2 table, #flaw-3 table {
+  thead { display: none; }
+  td { padding: 0.15em .25em; }
+}
+
+#flaw-3 table {
+  tr:nth-child(2), tr:nth-child(6), tr:nth-child(7) {
+    border-bottom: 1px solid $grey;
+  }
+}

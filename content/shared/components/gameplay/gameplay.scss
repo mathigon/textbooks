@@ -1,0 +1,37 @@
+// =============================================================================
+// Gameplay Component Styles
+// (c) Mathigon
+// =============================================================================
+
+
+x-gameplay {
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  .slide { @include fillParent; }
+  .slide.done { pointer-events: none; }
+  .slide-template { display: none; }
+
+  .dots {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transition: transform .2s;
+    z-index: 10;
+  }
+
+  .dot {
+    float: left;
+    width: 8px;
+    height: 8px;
+    border: 1px solid $blue;
+    border-radius: 100%;
+    margin: 4px;
+    transition: background .3s, color .3s;
+    &.green { background: $green; border-color: $green; }
+    &.red { background: $red; border-color: $red; }
+  }
+
+  x-solved { margin-top: 12px; }
+}

@@ -6,7 +6,7 @@
 
 import {Complex} from '@mathigon/fermat';
 import {Point} from '@mathigon/euclid';
-import {Step} from '../shared/types';
+import {Step} from '@mathigon/studio';
 
 
 // -----------------------------------------------------------------------------

@@ -1,0 +1,20 @@
+// values hard-coded for now, should take variable w&h (or just use Geopad?)
+mixin grid220
+  g.grid
+    each i in [10,30,50,70,90,110,130,150,170,190,210]
+      - var width = i === 110 ? 4 : 2
+      - stroke = i === 110 ? "#e6e6e6" : "#e6e6e6"
+      line(x1=i x2=i y1=0 y2=210 stroke=stroke stroke-width=width)
+    each i in [10,30,50,70,90,110,130,150,170,190,210]
+      - var width = i === 110 ? 4 : 2
+      - stroke = i === 110 ? "#e6e6e6" : "#e6e6e6"
+      line(x1=0 x2=220 y1=i y2=i stroke=stroke stroke-width=width)
+
+mixin ij(i, j, label)
+  .cube(i=i j=j)
+    - var iSeg = "segment(point(0,0),point(" +i[0] + "," + i[1] + "))"
+    - var jSeg = "segment(point(0,0),point(" +j[0] + "," + j[1] + "))"
+    x-geopad(width=100 x-axis="-2,2,1" y-axis="-2,2,1" grid padding=5): svg
+      path.red(x=iSeg label="i")
+      path.green(x=jSeg label="j")
+    .caption= label
