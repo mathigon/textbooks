@@ -452,7 +452,7 @@ All those numbers are valid because _any_ point on the number line works as inpu
 
 Here's a slightly simpler way to write the same thing:
 
-**Domain:** `-∞` [[ < | > | = | ≤ | ≥ ]] `x` [[ < | > | = | ≤ | ≥ ]] `∞`
+**Domain:** `-∞` [[ < | > | = | ≤ | ≥ ]] `x` [[ ≤ | > | = | < | ≥ ]] `∞`
 
 ---
 > id: pick-range
