@@ -21,8 +21,10 @@ type Card = {
     description?: string,
     imagePath?: string,
     label?: string,
-    hint: string,
+    hint?: string,
     point: Point,
+    domain?: number[],
+    invertDomainLines?: boolean,
 }
 
 @register('x-card-graph')
@@ -45,8 +47,8 @@ export class CardGraph extends CustomElementView {
         this.$graph.$svg.setAttr('height', this.graphHeight+100);
         this.$graph.$svg.setAttr('viewBox', `0 0 ${this.graphWidth} ${this.graphHeight-50}`);
 
-        this.$instructionText = $N('text', {class: 'card-instruction', 'alignment-baseline': 'middle', 'text-anchor': 'middle', transform: `translate(${this.graphWidth/2}, ${this.graphHeight+10})`}, this.$overlay);
-        this.$descriptionText = $N('text', {class: 'card-description', 'alignment-baseline': 'middle', 'text-anchor': 'middle', transform: `translate(${this.graphWidth/2}, ${this.graphHeight+10})`}, this.$overlay);
+        this.$instructionText = $N('text', {class: 'card-instruction', 'alignment-baseline': 'middle', 'text-anchor': 'middle', transform: `translate(${this.graphWidth/2}, ${this.graphHeight+20})`}, this.$overlay);
+        this.$descriptionText = $N('text', {class: 'card-description', 'alignment-baseline': 'middle', 'text-anchor': 'middle', transform: `translate(${this.graphWidth/2}, ${this.graphHeight+20})`}, this.$overlay);
 
         this.$instructionText.text = 'Drag each card onto its corresponding point';
     }
@@ -65,8 +67,9 @@ export class CardGraph extends CustomElementView {
     setCards(cards: Card[]) {
       cards = shuffle(cards);
       
-      const $dotGroup = $N('g', {id: '.dots'}, this.$overlay);
-      const $cardGroup = $N('g', {id: '.cards'}, this.$overlay);
+      const $rangeGroup = $N('g', {class: 'ranges'}, this.$overlay);
+      const $dotGroup = $N('g', {class: 'dots'}, this.$overlay);
+      const $cardGroup = $N('g', {class: 'cards'}, this.$overlay);
 
       let $hoverDot: ElementView|null = null;
       let $dragCard: ElementView|null = null;
@@ -79,12 +82,40 @@ export class CardGraph extends CustomElementView {
         const $g = $N('g', {transform: `translate(${origin.x}, ${origin.y})`}, $cardGroup) as SVGView;
         
         const $content = $N('g', {class: 'card-content'}, $g);
-        const $image = $N('image', {href: '/resources/functions/images/'+card.imagePath, x: -30, y: -30, width: 60, height: 60}, $content);
+
+        if (card.imagePath)
+          $N('image', {href: '/resources/functions/images/'+card.imagePath, x: -30, y: -30, width: 60, height: 60}, $content);
+        else {
+          $N('circle', {r:30, class: 'card-fill'}, $content);
+          $N('text', {'alignment-baseline': 'middle', 'text-anchor': 'middle'}, $content).text = card.label!;
+        }
+
         const $circle = $N('circle', {cx: 0, cy: 0, r: 30, class: 'card-circle'}, $content);
   
-        const dotPosition = this.$graph.toViewportCoords(card.point);
+        const dotPosition = this.$graph.toViewportCoords(card.domain ? new Point((card.domain[0]+card.domain[1])/2, card.point.y) : card.point);
         const $dot = $N('circle', {class: 'dot', transform: `translate(${dotPosition.x}, ${dotPosition.y})`, r: 15}, $dotGroup);
-  
+        
+        const $rangeLines = $N('g', {class: 'range-lines'}, $rangeGroup);
+
+        if (card.domain) {
+          const rangeStartPoint = new Point(card.domain[0]!, card.point.y);
+          const rangeEndPoint = new Point(card.domain[1]!, card.point.y);
+
+          const rangeStartPosition = this.$graph.toViewportCoords(rangeStartPoint);
+          const rangeEndPosition = this.$graph.toViewportCoords(rangeEndPoint);
+
+          const axisHeight = this.$graph.$yAxis!.height;
+          const yOffset = (this.graphHeight-axisHeight)/2;
+
+          const rangeSpan = $N('line', {x1: rangeStartPosition.x, x2: rangeEndPosition.x, y1: rangeStartPosition.y, y2: rangeEndPosition.y}, $rangeLines);
+          
+          const rangeStartLine = $N('line', {class: 'range-line', x1: rangeStartPosition.x, x2: rangeStartPosition.x, y1: yOffset, y2: axisHeight+yOffset}, $rangeLines);
+          const rangeEndLine = $N('line', {class: 'range-line', x1: rangeEndPosition.x, x2: rangeEndPosition.x, y1: yOffset, y2: axisHeight+yOffset}, $rangeLines);
+
+          const rangeStartTick = $N('line', {class: 'range-tick', x1: rangeStartPosition.x, x2: rangeStartPosition.x, y1: rangeStartPosition.y-10, y2: rangeStartPosition.y+10}, $rangeLines);
+          const rangeEndTick = $N('line', {class: 'range-tick', x1: rangeEndPosition.x, x2: rangeEndPosition.x, y1: rangeStartPosition.y-10, y2: rangeStartPosition.y+10}, $rangeLines);
+        }
+
         hover($g, {
           enter: () => {
             if (!$dragCard && card.description) {
@@ -104,13 +135,19 @@ export class CardGraph extends CustomElementView {
         hover($dot, {
           enter: () => {
             $hoverDot = $dot;
+
+            $rangeGroup.addClass('hover');
+            $rangeLines.addClass('hover');
   
             if ($dragCard)
               $dragCard.$('.card-content')!.setAttr('transform', `scale(${1/2})`);
           },
           exit: () => {
             $hoverDot = null;
-  
+
+            $rangeGroup.removeClass('hover');
+            $rangeLines.removeClass('hover');
+
             if ($dragCard)
               $dragCard.$('.card-content')!.setAttr('transform', `scale(1)`);
           },
@@ -133,12 +170,14 @@ export class CardGraph extends CustomElementView {
   
           const dropPosition = drag.position;
           let restPosition: Point;
-  
           
           if ($hoverDot == $dot) {
             if (this.$step) {
               this.$step.addHint('correct');
-              this.$step.addHint(card.hint);
+
+              if (card.hint)
+                this.$step.addHint(card.hint);
+                
               this.$step.score('card'+i);
             }
   

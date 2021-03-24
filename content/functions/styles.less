@@ -106,23 +106,28 @@ line#time-line {
 
 .runner-name-key {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
+  margin-right: 20px;
+
+  >:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  >div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    :not(:last-child) {
+      margin-right: 10px;
+    }
+  }
 }
 
 .runner-name-key img {
   width: 48px;
   height: 48px;
-}
-
-.runner-name-key>div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.runner-name-key>div>p:nth-child(2) {
-  margin: 0 10px;
 }
 
 #rogers-slope-graph {
@@ -150,5 +155,30 @@ line#time-line {
     text {
       fill: @green;
     }
+  }
+}
+
+#runner-card-graph {
+  >div {
+    margin-top: 2em;
+
+    display: flex;
+    justify-content: center;
+
+    >div {
+      display: flex;
+
+      >:last-child {
+        margin-left: 10px;
+      }
+    }
+
+    >div:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  x-coordinate-system {
+    margin: 5px auto 2em auto;
   }
 }
