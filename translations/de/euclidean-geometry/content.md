@@ -5,6 +5,9 @@
 > id: thales
 > goals: p1 p2 p3 move
 > section: introduction
+> color: "#0F82F2"
+> level: Intermediate
+> next: transformations
 
 ::: column.grow
 Mit Mathematik beschäftigt man sich seit Jahrtausenden - um die Jahreszeiten vorherzusagen, Steuern zu
@@ -12,7 +15,7 @@ berechnen oder die Größe der landwirtschaftlichen Nutzfläche zu schätzen.
 
 Mathematiker im antiken Griechenland, um 500 v. Chr., waren von mathematischen
 Mustern begeistert und wollten sie erforschen und erklären. Zum ersten Mal begannen
-sie, Mathematik nur „zum Spaß“ zu studieren, ohne eine bestimmte Anwendung im Sinn zu haben. 
+sie, Mathematik nur „zum Spaß“ zu studieren, ohne eine bestimmte Anwendung im Sinn zu haben.
 ::: column(width=300)
 
     x-img(src="images/tablet.jpg" width=300 height=210)
@@ -160,7 +163,7 @@ _{button.next-step} Weiter_
       path.yellow(x="line(P,Q)")
 
 ::: column.grow
-Eine [__Gerade__](gloss:line) ist eine Ansammlung von unendlich vielen Punkten, die sich 
+Eine [__Gerade__](gloss:line) ist eine Ansammlung von unendlich vielen Punkten, die sich
 in beide Richtungen unbegrenzt erstreckt. Geraden sind immer gerade und nehmen, genau wie Punkte, keinen
 Platz ein - sie haben keine _Breite_.
 
@@ -259,7 +262,7 @@ den anderen legen. In der Geometrie sagen wir, dass die beiden Figuren
 Das Symbol für Kongruenz ist `≅`. Wir würden also sagen, dass `A ≅ B`.
 :::
 
-Hier sind verschiedene geometrische Objekte: verbinde alle Formen, die 
+Hier sind verschiedene geometrische Objekte: verbinde alle Formen, die
 kongruent zueinander sind. Bedenke, dass möglicherweise _mehr als zwei_ Formen miteinander
 bzw. einige auch mit _keiner_ kongruent sind:
 
@@ -391,7 +394,7 @@ bezeichnet wird, veröffentlichte die fünf Axiome der Geometrie:
       circle.move(name="b" cx=190 cy=30 target="1_point")
       path.red(x="segment(a,b)" target="1_line")
 
-{.text-center }__Erstes Axiom__  
+{.text-center }__Erstes Axiom__
 Man kann [zwei beliebige Punkte](target:1_point) mit genau einer geraden
 [Strecke](target:1_line) verbinden.
 
@@ -403,7 +406,7 @@ Man kann [zwei beliebige Punkte](target:1_point) mit genau einer geraden
       path.red(x="line(c,d)")
       path(x="segment(c,d)" target="2_segment")
 
-{.text-center }__Zweites Axiom__  
+{.text-center }__Zweites Axiom__
 Man kann jede beliebige [Strecke](target:2_segment) unendlich weit<br>
 zu einer Geraden verlängern.
 
@@ -415,7 +418,7 @@ zu einer Geraden verlängern.
       path(x="segment(e,f)" label="r" target="3_radius")
       path.red(x="circle(e,distance(e,f))" target="3_circle")
 
-{.text-center }__Drittes Axiom__  
+{.text-center }__Drittes Axiom__
 Mit einem gegebenen [Punkt _P_](target:3_center) und einem [Abstand _r_](target:3_radius) kann
 man einen [Kreis](target:3_circle) mit dem Mittelpunkt _P_ und dem Radius _r_ zeichnen.
 
@@ -436,7 +439,7 @@ man einen [Kreis](target:3_circle) mit dem Mittelpunkt _P_ und dem Radius _r_ ze
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
-{.text-center }__Viertes Axiom__  
+{.text-center }__Viertes Axiom__
 Zwei beliebige rechte Winkel sind kongruent.
 
 ::: column(width=220)
@@ -446,7 +449,7 @@ Zwei beliebige rechte Winkel sind kongruent.
       path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
       path.red(x="line5.parallel(g)" target="5_parallel")
 
-{.text-center }__Fünftes Axiom__  
+{.text-center }__Fünftes Axiom__
 Zu einer gegebenen [Geraden _g_](target:5_line) und einem [Punkt _P_](target:5_point) nicht auf _g_,
 gibt es genau [eine Gerade](target:5_parallel) durch _P_, die
 [parallel](gloss:parallel) zu _g_ ist.
@@ -656,7 +659,7 @@ Tempel bauen würden, mit _genau dem doppelten_ Volumen des vorhandenen.
 ::: column(width=300)
 
     x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
-    
+
 {.caption} Eine Rekonstruktion eines Tempels in Delphi
 :::
 
@@ -679,7 +682,7 @@ ohne Erfolg:
 
     figure: img(src="images/impossible-1.svg" width=200 height=180)
 
-{.text-center} __{.m-red} Dreiteilung des Winkels__  
+{.text-center} __{.m-red} Dreiteilung des Winkels__
 Wir wissen bereits, wie man Winkel halbiert. Es ist jedoch nicht möglich, einen Winkel auf ähnliche Weise
 in _drei_ gleiche Teile zu teilen.
 
@@ -687,7 +690,7 @@ in _drei_ gleiche Teile zu teilen.
 
     figure: img(src="images/impossible-2.svg" width=200 height=180)
 
-{.text-center} __{.m-blue} Würfelverdoppelung__  
+{.text-center} __{.m-blue} Würfelverdoppelung__
 Bei gegebener Würfelkantenlänge ist es unmöglich, die Kantenlänge eines anderen Würfels
 zu konstruieren, der genau das doppelte Volumen hat.
 
@@ -695,7 +698,7 @@ zu konstruieren, der genau das doppelte Volumen hat.
 
     figure: img(src="images/impossible-3.svg" width=200 height=180)
 
-{.text-center} __{.m-green} Quadratur des Kreises__  
+{.text-center} __{.m-green} Quadratur des Kreises__
 Zu einem Kreis ist es unmöglich, ein Quadrat zu konstruieren, das genau die gleiche
 Fläche hat.
 :::

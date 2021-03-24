@@ -7,7 +7,8 @@
 import {clamp, roundTo} from '@mathigon/fermat';
 import {Point} from '@mathigon/euclid';
 import {$N, Draggable, svgPointerPosn, SVGView} from '@mathigon/boost';
-import {CoordinateSystem, Step} from '../shared/types';
+import {Step} from '@mathigon/studio';
+import {CoordinateSystem} from '../shared/types';
 
 
 export function slope($step: Step) {

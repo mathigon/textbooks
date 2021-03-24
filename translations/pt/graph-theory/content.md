@@ -2,8 +2,11 @@
 
 ## Introdução
 
-> id: intro
+> id: intro-0
 > section: introduction
+> color: "#A7208A"
+> level: Intermediate
+> next: probability
 
 ::: column.grow
 
@@ -62,7 +65,7 @@ Podemos esboçar o layout de grafos simples usando círculos e linhas. A posiç�
 
 :::
 
-Para simplificar, neste curso consideraremos apenas grafos não direcionados, conectados, e sem múltiplas arestas e loops. 
+Para simplificar, neste curso consideraremos apenas grafos não direcionados, conectados, e sem múltiplas arestas e loops.
 
 ---
 > id: intro-2
@@ -259,7 +262,7 @@ A descoberta de Euler pode não parecer particularmente útil na vida real, mas 
 Você e seus amigos foram convidados para uma festa de aniversário maravilhosa. Incluindo você e o anfitrião, há ${hnd}{hnd|5|3,15,1} pessoas presentes. À noite, quando os convidados se preparam para sair, todo mundo aperta a mão de todo mundo. Quantos apertos de mão foram dados no total? Podemos representar os apertos de mão usando um grafo: toda pessoa é [[um vértice|uma aresta]], e todo aperto de mão é [[uma aresta|um vértice]]. Agora, é fácil contar o número de arestas no grafo. Com ${hnd} pessoas, existem ${hnd*(hnd-1)/2} apertos de mão.
 
 ::: column.s-hide(width=240)
-    
+
     img.shifted(src="images/party.jpg" width=240 height152)
     svg.graph(style='width: 240px; height: 240px;')
 
@@ -269,7 +272,7 @@ Você e seus amigos foram convidados para uma festa de aniversário maravilhosa.
 > id: handshakes-2
 
 Em vez de contar todas as arestas em grafos grandes, também podemos tentar encontrar uma fórmula simples que nos informe o resultado para _qualquer_ número de convidados. Cada uma das ${n}{n|5|2,8,1} pessoas na festa aperta a mão de outras ${n-1}. Com isso, há ${n} × ${n-1} = ${n×(n-1)} apertos de mão no total. Para _n_ pessoas, o número de apertos de mão seria [[`n×(n-1)`|`n×(n+1)`|`n^2`]].
-    
+
     p.var(:html="handshakeTable(n)")
     x-gesture(target="#handshakes-2 x-var" slide="100,0")
 
@@ -391,25 +394,25 @@ Todos os gráficos planares dividem o plano em que são desenhados em várias á
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Vértices  
-[[5]] Faces  
-[[10]] Arestas  
+{.text-center} [[6]] Vértices
+[[5]] Faces
+[[10]] Arestas
 _{span.euler-sum} 11 Vértices + Faces_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] Vértices  
-[[7]] Faces  
-[[14]] Arestas  
+{.text-center} [[8]] Vértices
+[[7]] Faces
+[[14]] Arestas
 _{span.euler-sum} 15 Vértices + Faces_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] Vértices  
+{.text-center} [[12]] Vértices
 [[13]] Faces
 [[24]] Arestas
 _{span.euler-sum} 25 Vértices + Faces_
@@ -437,7 +440,7 @@ Infelizmente, existem infinitos grafos e não podemos verificar todos um a um pa
           circle.node(cx=150 cy=100 r=7 style="display: none")
           circle.node(cx=270 cy=170 r=7 style="display: none")
           circle.node(cx=390 cy=100 r=7 style="display: none")
-    
+
         div(style="position: absolute; top: 20px; right: 0; font-size: 1.2em;")
           table.grid.table-small
             tr
@@ -489,27 +492,27 @@ Isso significa que nós pode usar a fórmula de Euler não apenas para grafos pl
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
-{.caption} __Icosaedro__  
-__{.blue}20__ Faces  
-__{.green}12__ Vértices  
+{.caption} __Icosaedro__
+__{.blue}20__ Faces
+__{.green}12__ Vértices
 __{.red}30__ Arestas
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Rombicosidodecaedro__  
-__{.blue}62__ Faces  
-__{.green}60__ Vértices  
+{.caption} __Rombicosidodecaedro__
+__{.blue}62__ Faces
+__{.green}60__ Vértices
 __{.red}120__ Arestas
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
-{.caption} __Icosaedro truncado__  
-__{.blue}32__ Faces (12 pretas, 20 brancas)  
-__{.green}60__ Vértices  
+{.caption} __Icosaedro truncado__
+__{.blue}32__ Faces (12 pretas, 20 brancas)
+__{.green}60__ Vértices
 __{.red}90__ Arestas
 
 :::
@@ -540,7 +543,7 @@ Ao colorir o mapa dos estados dos EUA, 50 cores são obviamente suficientes, mas
     .four-colour-icons
       for i in [1, 2, 3, 4, 5, 6, 7]
         .four-colour-icon(tabindex=0)
-    
+
     x-tabbox.four-colours.full-width
       .tab
         h3 United States #[span.check(when="map-0")]

@@ -57,3 +57,5 @@ onmessage = (e: MessageEvent) => {
     postMessage(computeMandelbrot(options));
   }
 };
+
+export {};

@@ -7,12 +7,13 @@
 import {delay, wait} from '@mathigon/core';
 import {Point} from '@mathigon/euclid';
 import {$N, ElementView, InputView, loadScript, slide, SVGView} from '@mathigon/boost';
-import {Select, Slider, Slideshow, Step} from '../shared/types';
+import {Select, Slider, Slideshow, Step} from '@mathigon/studio';
 
 import {beep, Beep} from './components/beep';
 import {CodeBox} from './components/code-box';
 import {MORSE_CODE} from './components/utilities';
 import {HammingCode} from './components/hamming';
+import {Barcode} from './components/barcode';
 
 import './components/code-box';
 import './components/barcode';
@@ -20,7 +21,6 @@ import './components/enigma';
 import './components/enigma-rotors';
 import './components/morse';
 import './components/hamming';
-import {Barcode} from './components/barcode';
 
 
 // -----------------------------------------------------------------------------
@@ -99,7 +99,7 @@ export function morseApplications($step: Step) {
 }
 
 export function radio($step: Step) {
-  const audio = new Audio('/resources/codes/images/better-days-audio.mp3');
+  const audio = new Audio('/content/codes/images/better-days-audio.mp3');
   audio.preload = 'true';
   const $btn = $step.$('.radio-play')!;
 

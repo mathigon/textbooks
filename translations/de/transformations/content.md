@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#2274E8"
+> level: Intermediate
+> next: triangles
 
 Viele geometrische Grundvorstellungen, wie [Geraden](gloss:line) oder [Punkte](gloss:point),
 wurden von Mathematikern "erfunden". Symmetrie hingegen ist überall
@@ -423,19 +426,19 @@ Versuche, die untenstehenden Figuren um das rote Drehzentrum zu drehen:
       path.reveal.thin.light(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
       path.reveal.thin.light(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
       path.reveal.thin.light(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
-      
+
       path.transparent(x="segment(rot,a1)" target="compass protractor")
       path.transparent(x="circle(rot,distance(rot,a))" target="compass")
 
 ::: column.grow
-Es ist schwieriger, Drehungen zu zeichnen, die nicht genau 90° oder 180° betragen. 
+Es ist schwieriger, Drehungen zu zeichnen, die nicht genau 90° oder 180° betragen.
 Versuchen wir, diese Figur um ${10*ang}{ang|6|-18,18,1}° um das [
 Drehzentrum](target:rot) zu drehen.
 
 {.r} Wie bei den Spiegelungen müssen wir jeden Punkt einer Figur einzeln drehen.
 _{button.next-step} Weiter_
 
-{.r.reveal(when="next-0")} Wir beginnen damit, einen der Eckpunkte auszuwählen und eine Linie zum 
+{.r.reveal(when="next-0")} Wir beginnen damit, einen der Eckpunkte auszuwählen und eine Linie zum
 Drehpunkt zu zeichnen.
 _{button.next-step} Weiter_
 
@@ -444,7 +447,7 @@ wir einen [Winkel von ${ang*10}°](target:angle) um das Drehzentrum messen.
 Zeichnen wir eine [zweite Linie](target:l2) in diesem Winkel dazu.
 _{button.next-step} Weiter_
 
-{.r.reveal(when="next-2")} Mit einem [Zirkel](target:compass) oder Lineal können wir auf dieser Linie einen [Punkt](target:a1) 
+{.r.reveal(when="next-2")} Mit einem [Zirkel](target:compass) oder Lineal können wir auf dieser Linie einen [Punkt](target:a1)
 markieren, der den gleichen Abstand vom
 Drehzentrum hat wie der ursprüngliche Punkt.
 _{button.next-step} Weiter_
@@ -678,11 +681,11 @@ Fallen dir noch andere Beispiele für Palindrome ein?
 ---
 > id: palindromes-1
 
-Wenn wir Leerzeichen und Interpunktion ignorieren, sind auch die kurzen Sätze unten 
+Wenn wir Leerzeichen und Interpunktion ignorieren, sind auch die kurzen Sätze unten
 spiegelsymmetrisch. Fallen dir eigene Beispiele ein?
 
-{.text-center} Ein Esel lese nie.  
-Sei mein, [[nie]] fies - sei fein, nie mies.  
+{.text-center} Ein Esel lese nie.
+Sei mein, [[nie]] fies - sei fein, nie mies.
 Trug Tim eine so helle Hose nie [[mit]] Gurt?
 
 {.reveal(when="blank-0 blank-1")} Aber Palindrome machen nicht nur Spaß, sie haben
@@ -884,26 +887,26 @@ Du hast vielleicht schon bemerkt, dass das Addieren __{.orange}von Symmetrien__ 
 dem Addieren __{.green}von ganzen Zahlen__ sehr ähnlich ist:
 
     ol.proof
-      
+
       li.r
         | Die Addition von zwei #[strong.orange Symmetrien]/#[strong.green ganzen Zahlen] ergibt immer eine andere #[strong.orange Symmetrie]/#[strong.green ganze Zahl]:
-        .text-center.axiom 
+        .text-center.axiom
           img.cube(src="images/cube-2.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-6.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-4.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 12
           mo +
           mn 7
           mo =
           mn 19
         .next-step Weiter
-      
+
       li.r.reveal(when="next-0")
         span.md Die Addition von zwei #[strong.orange Symmetrien]/#[strong.green ganzen Zahlen] ist [assoziativ](gloss:associative):
-        .text-center.axiom 
+        .text-center.axiom
           mfenced
             img.cube(src="images/cube-1.svg" width=32 height=32)
             mo +
@@ -926,16 +929,16 @@ dem Addieren __{.green}von ganzen Zahlen__ sehr ähnlich ist:
           mo +
           mfenced #[mn 2]#[mo +]#[mn 5]
         .next-step Weiter
-      
+
       li.r.reveal(when="next-1")
         | Jede #[strong.orange Symmetrie]/#[strong.green ganze Zahl] hat eine #[strong inverse], eine andere #[strong.orange Symmetrie]/#[strong.green ganze Zahl] die, wenn man sie dazu addiert, die Identität ergibt:
-        .text-center.axiom 
+        .text-center.axiom
           img.cube(src="images/cube-1.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-3.svg" width=32 height=32)
           mo(value="= ) =") =
           img.cube(src="images/cube-0.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 4
           mo +
           mn -4
@@ -1019,7 +1022,7 @@ einzelnen Objekten wie Blumen oder Schmetterlingen, sondern bei regelmäßigen M
 
 Neben der Spiegelungs-, Rotations- und Verschiebungssymmetrie gibt es sogar
 eine vierte Art: [__Gleitspiegelungen__](gloss:glide-reflection). Dabei handelt es sich um
-eine Kombination aus einer 
+eine Kombination aus einer
 Spiegelung und einer Verschiebung in die Richtung der Spiegelachse.
 
     figure
@@ -1271,7 +1274,7 @@ Bild [[größer|kleiner]] als das Original.
       path.light.thin(x="segment(C,s<1?a:a1)")
       path.light.thin(x="segment(C,s<1?b:b1)")
       path.light.thin(x="segment(C,s<1?c:c1)")
-    
+
 {.text-center.scale-target} Skalierungsfaktor: ${s}{s|2|0,3,0.1}
 :::
 

@@ -1,0 +1,40 @@
+// =============================================================================
+// Solved Styles
+// (c) Mathigon
+// =============================================================================
+
+
+x-solved {
+  display: none;
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  margin: 20px 0 0 -100px;
+  z-index: 200;
+  border-radius: 12px;
+  padding: 5px 15px 15px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 20px rgba(black, 20%);
+
+  x-icon.sketch { margin: 0 auto; fill: white; display: block; opacity: 0.8; }
+
+  .message {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .close {
+    position: absolute;
+    right: 0; top: 0;
+    padding: 8px;
+    transition: transform .2s;
+    cursor: pointer;
+    z-index: 10;
+    x-icon { fill: rgba(white, 40%); display: block; transition: fill .2s; }
+    &:hover { transform: scale(1.4); }
+    &:hover .icon { fill: white;  }
+  }
+}

@@ -3,8 +3,9 @@
 ## The Prisoners’ Dilemma
 
 > section: prisoners
-> sectionPreview: /world/Game_Theory#prisoners-dilemma
-> sectionStatus: dev
+> url: /world/Game_Theory#prisoners-dilemma
+> color: "#8032AD"
+> level: Intermediate
 
 In life, we often have to make decisions about what to do - and sometimes, the consequences of those decisions affect other people around us. For example, if you decide to take the last two biscuits from the plate instead of one, it’ll mean there aren’t any left for others. But if you leave both biscuits there and go back for one later, other people may have taken them and you’ll miss out!
 
@@ -97,7 +98,7 @@ Agree to testify
 
 [For words ‘if they both remain silent’ in the paragraph above (and the one below), and ‘if one of the prisoners agrees to testify’ and ‘if both prisoners agree to testify’ in the paragraph above, when students hover over this part, we can highlight the corresponding row + column in the matrix]
 
-This places our two prisoners in an interesting situation. The best thing for both of them would be if they both remain silent - then the total amount of prison time served will only be [2] years. 
+This places our two prisoners in an interesting situation. The best thing for both of them would be if they both remain silent - then the total amount of prison time served will only be [2] years.
 
 Now let’s imagine that we are Prisoner 2. If we somehow know that Prisoner 1 will remain silent, we would get the best outcome if we [[agree to testify | stay silent]] (0 years, rather than 1 year). If we know that Prisoner 1 will agree to testify, we would get a better outcome if we [[also testify | stay silent]]. In order words, whatever Prisoner 1 does, Prisoner 2 can get the best outcome for themselves if they testify.
 
@@ -109,7 +110,7 @@ Similar paradoxes can be found in many areas of real life, although they rarely 
 
 ---
 
-One of the four outcomes in the Prisoner’s Paradox has the property that neither player can gain anything by changing their strategy. This is the one in which Prisoner 1 [[agrees to testify | remains silent]] and Player 2 [[agrees to testify | remains silent]]. 
+One of the four outcomes in the Prisoner’s Paradox has the property that neither player can gain anything by changing their strategy. This is the one in which Prisoner 1 [[agrees to testify | remains silent]] and Player 2 [[agrees to testify | remains silent]].
 
 We call this type of situation a Nash Equilibrium - named after the mathematician John Forbes Nash Jr, who was one of the early pioneers of study in game theory. Nash showed that such an equilibrium state exists in all finite games - but it’s not always the best outcome for all players (as seen in our example).
 
@@ -219,8 +220,7 @@ However, if the players can work out each other’s preferred strategies, this w
 ## The Winning Move
 
 > section: nim
-> sectionPreview: /world/Game_Theory
-> sectionStatus: dev
+> url: /world/Game_Theory
 
 In all the games we’ve seen so far, there was an element of _uncertainty_: you didn't know what the
 other player might do (like in the [prisoners’ dilemma](gloss!:prisoners-dilemma)), or you didn't

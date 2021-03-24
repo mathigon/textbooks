@@ -4,9 +4,8 @@
 // =============================================================================
 
 
-/// <reference types="THREE"/>
 import {animate, register} from '@mathigon/boost';
-import {Solid} from '../../shared/components/solid';
+import {Solid} from '../../shared/components/webgl/solid';
 
 
 @register('x-coin-flip')

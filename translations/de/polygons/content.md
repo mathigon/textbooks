@@ -4,6 +4,8 @@
 
 > section: angles
 > sectionStatus: dev
+> color: "#2E6AE1"
+> level: Foundations
 
 TODO
 
@@ -85,7 +87,7 @@ _{button.next-step} Weiter_
 Wir wollen diese Beobachtung nun mathematisch formulieren:
 
 ::: .theorem
-__Die Dreiecksungleichung__  
+__Die Dreiecksungleichung__
 Die Summe der Längen von zwei beliebigen Seiten eines Dreiecks muss größer sein als die
 Länge der dritten.
 :::

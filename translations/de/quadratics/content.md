@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#F6700F"
+> level: Intermediate
+> next: graph-theory
 
     img.text-wrap(src="images/skater-1.jpg" style="shape-outside: url(images/skater-1-mask.png)" width=300 height=393)
 
@@ -38,7 +41,7 @@ Nachfrage am sinnvollsten?
       .item(style="width: 220px")
         x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="Preis,Nachfrage" crosshairs="no" labels="no" fn="8 - 0.6x")
       .item(data-error="wrong-chart-2" style="width: 220px")
-        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="Preis,Nachfrage" crosshairs="no" labels="no" fn="2.5 * sqrt(x)") 
+        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="Preis,Nachfrage" crosshairs="no" labels="no" fn="2.5 * sqrt(x)")
 
 ---
 > id: demand-1
@@ -114,7 +117,7 @@ weil wir dann ja einfach nur teure Skateboards verschenken. Wenn die Preise stei
 Gewinne. Wenn die Skateboards jedoch [zu teuer](->.r2) werden, wollen die
 Leute sie nicht mehr kaufen, und unser Gewinn sinkt wieder.
 
-Wir können unseren Gewinn maximieren, indem wir die Skateboards zu Preisen von etwa 
+Wir können unseren Gewinn maximieren, indem wir die Skateboards zu Preisen von etwa
 [[108 ± 10]] € anbieten.
 
 ---

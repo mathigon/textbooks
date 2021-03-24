@@ -5,6 +5,9 @@
 > section: relations
 > sectionStatus: dev
 > id: sorting-hat
+> color: "#FD8C00"
+> level: Intermediate
+> next: sequences
 
 ::: column.grow
 
@@ -310,14 +313,14 @@ What an emotional race for Cielo! He broke the world and olympic records with th
 
 Remember the general form for [__linear function__](gloss:linear-function) like this is y=mx+c, where m is the slope and c is the y-intercept. We replace y with the name of the function, and we replace x with the input variable for this function.
 
-{.text-center} `y=mx+c`  
+{.text-center} `y=mx+c`
 `=> f(t)=m[[t]]+c`
 
 This means we need to find [[slope {.fixme} also accept "m"]] and [[y-intercept {.fixme} also accept "c"]] from the graph.
 
 Notice the [horizontal-axis](target:1_xAxis), in this graph shows [[time]] in seconds. The [vertical-axis](target:1_yAxis) is the distance from the starting block to the opposite end of the pool measured in [[meters]]. We see that the y-axis [__intercept__](gloss:intercept) is [[00]] meters, which represent the [[distance | time | number of laps]] of the race.
 
-{.text-center} `y=mx+c`  
+{.text-center} `y=mx+c`
 `=> f(t)=mt+[[0]]`
 
 We are only missing slope. In this function, slope represents Cielo’s [[speed | distance | kick rate]]. How could we use the graph to see how fast he swims?
@@ -344,9 +347,9 @@ Let’s say we want to know how long it took Cielo to swim the first 10 meters. 
     // NOTE
     // Algebra Flow
 
-{.text-center} `f(t)=2.35t`  
-`10=2.35t`  
-`(10)/(2.35)=t`  
+{.text-center} `f(t)=2.35t`
+`10=2.35t`
+`(10)/(2.35)=t`
 `4.25=t`
 
 Cielo swims the first 10 meters in just over [[4.1+-0.1]] seconds.
@@ -399,7 +402,7 @@ Let’s head over to the diving pool for the women’s 10 meter platform competi
 
 Meanwhile, on the other side of the Aquatics center, a diving competition is in progress.
 Ren Qian is among the youngest Olympic medalists. She is diving now - let’s [watch](https://www.youtube.com/watch?v=wTX13JZFHd4)
-     
+
     // NOTES (0:00-0:12)!
 
 Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games.
@@ -411,7 +414,7 @@ Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games
 ::: column(width=240)
 
     // NOTES
-    // make sticky  
+    // make sticky
 [dive mock-up](https://www.desmos.com/calculator/es8ugnvxeq)
 
 ::: column.grow
@@ -582,10 +585,10 @@ The slopes of each function tell us each runner’s [[speed | distance | cadence
     // We looked at counting slope above. This is a review of calculating slope. They need to pull the values off of the graph.
     // Algebra Flow
 
-{.text-center} `m=(y_2 - y_1)/(x_2 - x_1)`  
-`m= (y_2 - 590)/(x_2 - 90.63)`  
-`m= (800-590)/(120.2-90.63)`  
-`m= (210)/(29.57)`  
+{.text-center} `m=(y_2 - y_1)/(x_2 - x_1)`
+`m= (y_2 - 590)/(x_2 - 90.63)`
+`m= (800-590)/(120.2-90.63)`
+`m= (210)/(29.57)`
 `m=7.1`
 
 Roger’s speed is [[0.6+-0.2]] meters per second faster than Boufaarirane and [[1.4+-0.2]] meters per second faster than Tracey.
@@ -879,7 +882,7 @@ MathiPong pays homage to this titan in gaming history. The objective is to direc
     // onboard the game. User uses arrow keys to move platform. Platform is wider than the point shown.
     // User plays several rounds.
 
-![](/resources/functions/images/4/Screenshot_2020-06-29_at_13.53.44.png)
+![](/content/functions/images/4/Screenshot_2020-06-29_at_13.53.44.png)
 
 Now that you've played a few rounds and have the idea of how the game works, let's think about a strategy for hitting the target. Let's take a look at the game on a coordinate plane.
 
@@ -944,9 +947,9 @@ So far, when we have been graphing functions, we have been either plotting point
 
 ::: column(width=240)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.18.28.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.18.28.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_14.47.44.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_14.47.44.png)
 
 ::: column.grow
 
@@ -962,9 +965,9 @@ Then let's reflect it over the x-axis.
 
 ::: column(width=240)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_14.50.39.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_14.50.39.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_14.53.38.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_14.53.38.png)
 
 ::: column.grow
 
@@ -1032,31 +1035,31 @@ Let's return to this idea of reflecting a graph over the x-axis. This is actuall
 
 ::: column (width=240)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.27.58.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.27.58.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.30.12.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.30.12.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.29.35.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.29.35.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.28.36.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.28.36.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.31.06.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.31.06.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.29.58.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.29.58.png)
 
 ::: column(width=240)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.29.23.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.29.23.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.28.13.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.28.13.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.30.22.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.30.22.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.29.47.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.29.47.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.28.55.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.28.55.png)
 
-![](/resources/functions/images/4/Screenshot_2020-07-10_at_15.31.30.png)
+![](/content/functions/images/4/Screenshot_2020-07-10_at_15.31.30.png)
 
 :::
 
@@ -1144,7 +1147,7 @@ Take a look at the end of season tournament brackets.
 
 ::: column(width=240)
 
-![](/resources/functions/images/5/Screenshot_2020-07-01_at_16.50.26.png)
+![](/content/functions/images/5/Screenshot_2020-07-01_at_16.50.26.png)
 
 Example brackets. Fill in with teams matched to colours.
 
@@ -1272,11 +1275,11 @@ This distance is the same as the vertical distance you measured! Make the same m
     // NOTES
     // Interactive states
 
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_14.58.09.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_14.58.09.png)
 
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_14.58.39.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_14.58.39.png)
 
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_14.59.00.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_14.59.00.png)
 
 
 Notice that the intersection points of each of these measurements fall on their own line.
@@ -1284,11 +1287,11 @@ Notice that the intersection points of each of these measurements fall on their 
     // NOTES
     // Interactive states
 
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_14.59.38.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_14.59.38.png)
 
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.00.10.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_15.00.10.png)
 
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_14.11.11.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_14.11.11.png)
 
 The equation of this [line](target:2_souvenirGraph) is y= [[1]]m+[[0]]
 
@@ -1306,9 +1309,9 @@ In fact, all inverse functions are symmetric over the line y=x. The tools we use
 
     // NOTES
     // Interactive states - not shown: vertical line test
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.29.04.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_15.29.04.png)
 
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.33.18.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_15.33.18.png)
 
 ::: column.grow
 
@@ -1324,7 +1327,7 @@ The parabola passes the vertical line test, so it is a function. We just observe
     // NOTES
     // New parabola can snap to inverse when user gets close.
 
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.37.42.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_15.37.42.png)
 
 ::: column.grow
 
@@ -1340,7 +1343,7 @@ Fill in the table with the coordinate points for each key feature in the origina
     // NOTES
     // **Note** students should check several points to verify.
 
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.43.10.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_15.43.10.png)
 
 :::
 
@@ -1350,7 +1353,7 @@ Fill in the table with the coordinate points for each key feature in the origina
 
 ::: column(width=240)
 
-![](/resources/functions/images/5/Screenshot_2020-06-30_at_15.47.25.png)
+![](/content/functions/images/5/Screenshot_2020-06-30_at_15.47.25.png)
 
 
 ::: column.grow
@@ -1377,7 +1380,7 @@ When we change the [domain](gloss:domain) of the original parabola, we can make 
 
 ::: column(width=240)
 
-![](/resources/functions/images/5/Screenshot_2020-07-01_at_21.27.34.png)
+![](/content/functions/images/5/Screenshot_2020-07-01_at_21.27.34.png)
 
 [https://stock.adobe.com/images/beachside-hammock/328924634?prev_url=detail](https://stock.adobe.com/images/beachside-hammock/328924634?prev_url=detail)
 
@@ -1531,7 +1534,7 @@ solve for y as usual
 
 ::: column(width=240)
 
-{.text-center} $-2(x-4)={3}y$  
+{.text-center} $-2(x-4)={3}y$
 $\frac{-2x+8}{3}=y$
 
 ::: column(width=240)
@@ -1577,7 +1580,7 @@ Math can help us understand the scale and impact of disease outbreaks. Today we 
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_09.52.32.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_09.52.32.png)
 
 ::: column.grow
 
@@ -1590,7 +1593,7 @@ This word cumulative means current total over all time. That means this number o
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_09.52.45.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_09.52.45.png)
 
 ::: column.grow
 
@@ -1598,7 +1601,7 @@ For example, we can place points on the graph to the right on January 26 and Jun
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_09.53.21.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_09.53.21.png)
 
 ::: column.grow
 
@@ -1606,7 +1609,7 @@ This line estimates the confirmed cases have been increasing at a rate of over [
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_10.00.25.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_10.00.25.png)
 
 ::: column.grow
 
@@ -1616,7 +1619,7 @@ Let's see if there is a way to make the average rate of change better estimate t
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_10.11.24.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_10.11.24.png)
 
 ::: column.grow
 
@@ -1634,7 +1637,7 @@ Average rate of change can also give a way to compare change among different cou
 
 {.fixme} Students can use crosshairs to read data from the graphs. They can also draw lines between interesting point (as noted in the text) to visualize rate of change.
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_10.43.53.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_10.43.53.png)
 
 ::: column.grow
 
@@ -1642,7 +1645,7 @@ We can see that Italy had a higher cumulative case count until March [[27]]. Thi
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_10.52.43.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_10.52.43.png)
 
 :::
 
@@ -1654,7 +1657,7 @@ It makes sense that the country with the highest case count would be seeing a hi
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_10.49.26.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_10.49.26.png)
 
 :::
 
@@ -1668,7 +1671,7 @@ While it may seem opposite of our expectations, this odd relationship between av
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_11.01.15.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_11.01.15.png)
 
 :::
 
@@ -1680,7 +1683,7 @@ As we have seen, average rates of change can be helpful for understanding statis
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-02_at_13.03.48.png)
+![](/content/functions/images/6/Screenshot_2020-07-02_at_13.03.48.png)
 
 ::: column.grow
 
@@ -1698,7 +1701,7 @@ The laws of gasses and pressures are such that the air we breathe, even with scu
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_13.28.42.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_13.28.42.png)
 
 {.fixme} Lots of great options in Adobe Stock with search: SS Thistlegorm.
 
@@ -1714,7 +1717,7 @@ The diver's maximum depth was about [[30+-.25]] meters about [[40+-2]] minutes i
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_13.30.23.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_13.30.23.png)
 
 {.fixme} The above is a mock-up of a more realistic profile. Combine this with the noise elements of the image below.
 
@@ -1758,11 +1761,11 @@ We can use average rates of change to smooth out this graph just like we did in 
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_13.52.19.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_13.52.19.png)
 
 {.fixme} The above is a mock-up of a more realistic profile. Combine this with the noise elements of the image below.
 
-![](/resources/functions/images/6/Screenshot_2020-07-02_at_14.41.47.png)
+![](/content/functions/images/6/Screenshot_2020-07-02_at_14.41.47.png)
 
 ::: column.grow
 
@@ -1770,15 +1773,15 @@ We see that the diver's position function more or less increases from (45, -30) 
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_13.56.16.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_13.56.16.png)
 
 {.fixme} The above is a mock-up of a more realistic profile. Combine this with the noise elements of the image below.
 
-![](/resources/functions/images/6/Screenshot_2020-07-02_at_14.46.02.png)
+![](/content/functions/images/6/Screenshot_2020-07-02_at_14.46.02.png)
 
 ::: column.grow
 
-Notice, though, that the rate of increase is not constant. This diver seems to have taken breaks along the way.  
+Notice, though, that the rate of increase is not constant. This diver seems to have taken breaks along the way.
 
 This begs the question - did the diver ever exceed the recommended ascent rate?
 
@@ -1790,11 +1793,11 @@ Use the slider to see how changing the number of averages affects the relative a
 
 {.fixme} Approximate states for slider. Design similar for the "depth vs. time" data. Images are mock-ups based on old data.
 
-![](/resources/functions/images/6/Screenshot_2020-07-02_at_14.47.24.png)
+![](/content/functions/images/6/Screenshot_2020-07-02_at_14.47.24.png)
 
-![](/resources/functions/images/6/Screenshot_2020-07-02_at_14.48.09.png)
+![](/content/functions/images/6/Screenshot_2020-07-02_at_14.48.09.png)
 
-![](/resources/functions/images/6/Screenshot_2020-07-02_at_14.48.36.png)
+![](/content/functions/images/6/Screenshot_2020-07-02_at_14.48.36.png)
 
 The more lines representing average rates of change there are, the secant lines gets [[closer to | farther from]] the graph. Select the other true statements.
 
@@ -1816,7 +1819,7 @@ Slope of the secant line changes.
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-02_at_15.06.21.png)
+![](/content/functions/images/6/Screenshot_2020-07-02_at_15.06.21.png)
 
 {.fisxme} Just highlighted some noise. We can decide how detailed we want to be here.
 
@@ -1826,7 +1829,7 @@ Data based in GPS reading like this often have a lot of "noise", or points that 
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-02_at_15.16.57.png)
+![](/content/functions/images/6/Screenshot_2020-07-02_at_15.16.57.png)
 
 {.fixme} Eyeballing this. Mock-up level accuracy.
 
@@ -1834,11 +1837,11 @@ Data based in GPS reading like this often have a lot of "noise", or points that 
 
 Lines of best fit like this reduce, or eliminate, the noise from GPS. From here, we can determine whether the diver exceeded the safe ascent speed.
 
-To do this, we are going to look at *many* average rates of change.  
+To do this, we are going to look at *many* average rates of change.
 
 ::: column(width=240)
 
-![](/resources/functions/images/6/Screenshot_2020-07-02_at_15.22.50.png)
+![](/content/functions/images/6/Screenshot_2020-07-02_at_15.22.50.png)
 
 ::: column.grow
 
@@ -1858,9 +1861,9 @@ We can plot the slopes of the tangent lines on a new graph. Notice the x-axis is
 
 {.fixme} This seems like it will work best with either *more* sliders, this time moving time along like scrubbing, or as an animation with actual scrubbing. Images are state mock-ups.
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_14.16.53.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_14.16.53.png)
 
-![](/resources/functions/images/6/Screenshot_2020-07-09_at_14.17.08.png)
+![](/content/functions/images/6/Screenshot_2020-07-09_at_14.17.08.png)
 
 The position and speed graphs look very different but are generated from the same data. The position graph is most useful for knowing exactly how deep the diver is during any moment during the dive. The speed graph is most useful for knowing how well the diver regulated their decompression. The maximum y-value on the speed graph is about [[8+-.2]] meters per min, so the diver did take good care of their decompression.
 
@@ -1914,11 +1917,11 @@ Space shuttle flights like the Discovery's are split into four phases: ascent, e
 
 {.fixme} Students use the same tangent tool as above to make the speed graph. Images below are state mock-ups.
 
-![](/resources/functions/images/6/Screenshot_2020-07-08_at_15.09.45.png)
+![](/content/functions/images/6/Screenshot_2020-07-08_at_15.09.45.png)
 
 The x-axis would be easier to read if gridlines were at the minute (e.g. 60, 120, etc).
 
-![](/resources/functions/images/6/Screenshot_2020-07-08_at_14.53.25.png)
+![](/content/functions/images/6/Screenshot_2020-07-08_at_14.53.25.png)
 
 The Discovery does reach the required speed at about [[470+-10]] seconds.  It only takes about [[25+-5]] seconds to break the sound barrier at 343 meters per second. That's an incredible change in speed. The space shuttle goes from 0 to over 343 meters per second in about half a minute. That kind of [acceleration](gloss:acceleration) will flatten an astronaut to their seat.
 
@@ -1928,13 +1931,13 @@ We typically think of acceleration in terms of fast cars. Think "This Ferrari go
 
 {.fixme} Students use the same tangent tool as above to make the acceleration graph. The images are state mock-ups.
 
-![](/resources/functions/images/6/Screenshot_2020-07-08_at_15.09.45.png)
+![](/content/functions/images/6/Screenshot_2020-07-08_at_15.09.45.png)
 
 {.fixme} The x-axis would be easier to read if gridlines were at the minute (e.g. 60, 120, etc).
 
-![](/resources/functions/images/6/Screenshot_2020-07-08_at_14.53.25.png)
+![](/content/functions/images/6/Screenshot_2020-07-08_at_14.53.25.png)
 
-![](/resources/functions/images/6/Screenshot_2020-07-08_at_15.16.08.png)
+![](/content/functions/images/6/Screenshot_2020-07-08_at_15.16.08.png)
 
 The maximum acceleration during this ascent phase is about [[28+-1]] meters per second, just at the safety limit. Remember that it only take the Discovery about 30 seconds to break the speed of sound. The acceleration at 30 seconds is [[17+-2]] meters per `second^2`, not even close to the maximum acceleration the crew and shuttle experience later in the ascent phase.
 
@@ -1972,26 +1975,26 @@ From virus spread to diving decompression to space flights, the relationship bet
 
 {.fixme} shuffle the cards below. Students match.
 
-![](/resources/functions/images/6/chart.png)
+![](/content/functions/images/6/chart.png)
 
-![](/resources/functions/images/6/chart_(3).png)
+![](/content/functions/images/6/chart_(3).png)
 
-![](/resources/functions/images/6/chart_(5).png)
+![](/content/functions/images/6/chart_(5).png)
 
-![](/resources/functions/images/6/chart_(7).png)
+![](/content/functions/images/6/chart_(7).png)
 
-![](/resources/functions/images/6/chart_(9).png)
+![](/content/functions/images/6/chart_(9).png)
 
-![](/resources/functions/images/6/chart_(11).png)
+![](/content/functions/images/6/chart_(11).png)
 
-![](/resources/functions/images/6/chart_(1).png)
+![](/content/functions/images/6/chart_(1).png)
 
-![](/resources/functions/images/6/chart_(2).png)
+![](/content/functions/images/6/chart_(2).png)
 
-![](/resources/functions/images/6/chart_(4).png)
+![](/content/functions/images/6/chart_(4).png)
 
-![](/resources/functions/images/6/chart_(6).png)
+![](/content/functions/images/6/chart_(6).png)
 
-![](/resources/functions/images/6/chart_(8).png)
+![](/content/functions/images/6/chart_(8).png)
 
-![](/resources/functions/images/6/chart_(10).png)
+![](/content/functions/images/6/chart_(10).png)

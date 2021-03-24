@@ -10,28 +10,12 @@
     // https://en.wikipedia.org/wiki/Edward_O._Thorp
     // http://edwardothorp.com/id26.html
 
-    mixin dice(n)
-      svg(width=20, height=20)
-        if n==1 || n==3 || n==5
-          circle(r=2, cx=10, cy=10)
-        if n==2 || n==3 || n==4 || n==5
-          circle(r=2, cx=5, cy=5)
-        if n==4 || n == 5
-          circle(r=2, cx=5, cy=15)
-        if n==4 || n == 5
-          circle(r=2, cx=15, cy=5)
-        if n==2 || n==3 || n==4 || n == 5
-          circle(r=2, cx=15, cy=15)
-        if n == 6
-          circle(r=2, cx=5, cy=4)
-          circle(r=2, cx=5, cy=10)
-          circle(r=2, cx=5, cy=16)
-          circle(r=2, cx=15, cy=4)
-          circle(r=2, cx=15, cy=10)
-          circle(r=2, cx=15, cy=16)
-
 > id: intro
 > section: introduction
+> description: Cards, dice, roulette and game shows – probability is one of the most fun areas of mathematics, full of surprises and real life applications.
+> color: "#CD0E66"
+> level: Intermediate
+> next: statistics
 
 Probabilities and likelihoods are everywhere around us, from weather forecasting
 to games, insurance or election polls. However, in the history of mathematics,
@@ -224,6 +208,7 @@ equally likely. If we roll two dice at once and add up their scores we can get
 results from [[2]] up to [[12]]. However, in this case they are not all equally
 likely.
 
+    include mixins
     p.md Some results can only happen one way (to get #[span.dice.outline 12] you have to roll #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]]) while others can happen in multiple different ways (to get #[span.dice.outline 5] you could roll #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] or #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]]).
 
 ---
@@ -231,6 +216,7 @@ likely.
 
 This table shows all possible outcomes:
 
+    include mixins
     table.dice-table
       tr
         td #[.dice.outline 2]
@@ -325,7 +311,7 @@ and more often.
 In this animation you can roll many “virtual” dice at once and see how the
 results compare to the predicted probabilities:
 
-::: .box.f-red
+::: .box.red
 
 #### Rolling Dice
 
@@ -418,7 +404,7 @@ other two doors. Select one to make your choice!
 select a different door…
 
     p.text-center.monty-reveal: button.btn.sure I’m sure!
-  
+
 {.monty-reveal} A great choice, but let me make life a little easier for you.
 I’ll open one of the other doors with a goat, so that there are only two doors
 left for you to pick from. Do you want to stick with your choice, or do you want

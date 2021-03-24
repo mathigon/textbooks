@@ -1,0 +1,25 @@
+// =============================================================================
+// Pi Scroll Component
+// (c) Mathigon
+// =============================================================================
+
+
+x-pi-scroll {
+  display: block;
+  overflow: scroll;
+  font-family: Courier, monospace;
+  -webkit-overflow-scrolling: touch;
+
+  .pi-wrap { position: relative; }
+  .pi-row { position: absolute; top: 0; }
+
+  .pi-highlight {
+    border: 3px solid $red;
+    border-radius: 10px;
+    margin-left: -3px;
+    display: none;
+    position: absolute;
+    height: 24px;
+    box-shadow: 0 0 20px $red;
+  }
+}

@@ -1,0 +1,24 @@
+// =============================================================================
+// Chaos Game Component
+// (c) Mathigon
+// =============================================================================
+
+
+.chaos-game {
+  margin: 1.5rem 0;
+  @media screen and (max-width: $browser-small) { margin: 1.5em -24px; }
+
+  x-select.tabs { position: relative; z-index: 1; }
+  x-geopad { border-radius: 4px 4px 0 0; }
+
+  .chaos-rules {
+    background: $light-grey;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    border-radius: 0 0 4px 4px;
+    .form-field, .button-field { padding: 8px; }
+    .form-field { flex-grow: 1; }
+    .btn { display: block;height: 49px; line-height: 49px; }
+  }
+}

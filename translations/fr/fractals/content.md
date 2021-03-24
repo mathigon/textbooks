@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
 > translated: auto
 
 En regardant autour de la nature, vous avez peut-être remarqué des plantes complexes comme celles-ci:

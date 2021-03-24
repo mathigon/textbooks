@@ -8,8 +8,9 @@ import {Color, delay, list, Obj, repeat, wait} from '@mathigon/core';
 import {Complex, isBetween, nearlyEquals, numberFormat} from '@mathigon/fermat';
 import {Circle, Point, Polygon, Polyline} from '@mathigon/euclid';
 import {$html, $N, CanvasView, SVGView} from '@mathigon/boost';
+import {Select, Slider, Slideshow, Step} from '@mathigon/studio';
 
-import {Geopad, GeoPoint, Select, Slider, Slideshow, Step} from '../shared/types';
+import {Geopad, GeoPoint} from '../shared/types';
 import {BLUE} from '../shared/constants';
 
 import {CellularAutomaton} from './components/automata';

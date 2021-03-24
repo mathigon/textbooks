@@ -4,6 +4,8 @@
 
 > section: infinity
 > id: race
+> description: A mathematical story developed for Global Math Week – learn about place value, infinity and p-adic numbers.
+> color: "#6D3BBF"
 
 In ancient Greece, Achilles was one of the greatest heroes and (almost)
 invulnerable. On one day, he was challenged to race … by a tortoise!
@@ -146,11 +148,11 @@ As humans, we can only ever write a finite number of 9s, say ${n}{n|1|1,15,1}:
         polygon(points="655 77 659.88 65.06 655 67.89 650.12 65.06 655 77")
     x-gesture(target="x-var" slide="100,0")
 
-{.convergence.no-voice} **{.m-yellow}0.9** is less than 1.  
-_{span.reveal(when="n2")} **{.m-green}0.99** is less than 1._  
-_{span.reveal(when="n3")} **{.m-blue}0.999** is less than 1._  
-_{span.reveal(when="n4")} **{.m-red}0.9999** is less than 1._  
-_{span.hidden} **${nines(n)}** is less than 1._
+{.convergence.no-voice} __{.m-yellow}0.9__ is less than 1.<br>
+_{span.reveal(when="n2")} __{.m-green}0.99__ is less than 1._<br>
+_{span.reveal(when="n3")} __{.m-blue}0.999__ is less than 1._<br>
+_{span.reveal(when="n4")} __{.m-red}0.9999__ is less than 1._<br>
+_{span.hidden} __${nines(n)}__ is less than 1._
 
 ---
 
@@ -304,7 +306,7 @@ there – and that is a perfectly valid view.
 This begs the question: is there an _unusual_ system of arithmetic for which
 …999999 is a meaningful number?
 
-::: .box.f-blue
+::: .box.blue
 #### Challenge
 
 Let’s make matters worse! Consider the number with infinitely many 9s both to
@@ -439,7 +441,7 @@ know that _{span.nowrap}…6666667_ = `1/3`.*
 
 ---
 
-::: .box.f-blue
+::: .box.blue
 #### Challenge
 
 Can you work out which ten-adic number behaves like `2/3`?

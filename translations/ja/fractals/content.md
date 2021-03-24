@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
 > translated: auto
 
 自然を見回すと、次のような複雑な植物に気づいたかもしれません。

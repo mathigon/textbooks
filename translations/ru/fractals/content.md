@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
 
 В природе вы могли встречать сложные растения, например как эти:
 

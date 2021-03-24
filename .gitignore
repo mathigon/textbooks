@@ -25,15 +25,16 @@ nbproject
 .idea
 .vscode
 
-# Folders to ignore
-node_modules
-ts_build
-build
-_*.yaml
-utilities/.tmp
+# Node and TypeScript Files
+node_modules/
+*.tsbuildinfo
+.npm
+.eslintcache
 
-# Translations
-*_ger.*
-*.7z
-*.WinMerge
-Icon
+# Build and Test Outputs
+public
+screenshots
+_*.yaml
+
+# Private Keys
+google-service-account.json

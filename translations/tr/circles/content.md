@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: tBJUNvCBkLo
+> color: "#5A49C9"
+> level: Intermediate
+> next: graph-theory
 
 ::: column.grow
 
@@ -45,7 +49,7 @@ Antik Yunanlı astronomlar, gök cisimlerinin __yörünge__ dediğimiz düzenli 
  çemberin merkezi ile üzerindeki noktaların arasındaki mesafedir.
 * {.reveal(when="compass" delay="4000")} [{.step-target.pill.b.blue}Çap](target:d)
   çemberin iki zıt noktası arasındaki mesafedir. Çemberin merkezinden geçer ve uzunluğu yarıçapın [[iki katıdır|yarısıdır|aynısıdır]].
-* {.reveal(when="blank-0")} [{.step-target.pill.b.green}Çevre](target:c) 
+* {.reveal(when="blank-0")} [{.step-target.pill.b.green}Çevre](target:c)
  çemberin etrafındaki uzunluktur.
 
 :::
@@ -175,9 +179,9 @@ Burada bir çemberin ${n1} dilime bölündüğünü görebilirsiniz. Dilimleri h
 {.reveal(when="slider")} Dilim sayısını  ${n1}{n1|6|6,30,2}’a çıkarırsak,
 bu şekil gittikçe daha çok bir  [[dikdörtgene|çembere|kareye]] benzeyecek.
 
-{.reveal(when="blank-0")} Dikdörtgenin yüksekliği çemberin 
+{.reveal(when="blank-0")} Dikdörtgenin yüksekliği çemberin
 [[yarıçapına|çevre uzunluğuna|çapına]] eşit.
-_{span.reveal(when="blank-1")} Dikdörtgenin uzunluğu çemberin 
+_{span.reveal(when="blank-1")} Dikdörtgenin uzunluğu çemberin
 [[çevre uzunluğunun yarısına|çevre uzunluğuna|yarıçapının iki katına]] eşit._
 _{span.reveal(when="blank-2")} (Dilimlerin yarısının aşağı, yarısının yukarı baktığına dikkat edin.)_
 
@@ -206,7 +210,7 @@ Burada çemberin ${n} halkalara bölünmüş halini görebilirsiniz. Daha önce 
 {.reveal(when="slider")} Halka sayısını ${n2}{n2|4|2,12,1}’e değiştirirsek,
 bu şekil gittikçe daha çok bir  [[üçgene|dikdörtgene|yamuğa]] benzeyecek.
 
-{.reveal(when="blank-0")} Üçgenin yüksekliği çemberin 
+{.reveal(when="blank-0")} Üçgenin yüksekliği çemberin
 [[yarıçapına|çapına|çevre uzunluğuna]] eşit.
 _{span.reveal(when="blank-1")} Üçgenin taban uzunluğu çemberin [[çevre uzunluğuna|çapının iki katına]] eşit._
 _{span.reveal(when="blank-2")} O halde üçgenin toplam alanı yaklaşık olarak_
@@ -328,7 +332,7 @@ Pi’yi anlaması kolay ve bilimde ve matematikte muazzam bir öneme sahip. Bunu
 ---
 > id: pi-day
 
-Her yıl kutlanan bir _Pi günü_ bile var. Tarihi `pi ≈ 3.14` olduğu için 14 Mart ya da `pi ≈ 22/7` olduğu için 22 Temmuz olarak geçiyor. 
+Her yıl kutlanan bir _Pi günü_ bile var. Tarihi `pi ≈ 3.14` olduğu için 14 Mart ya da `pi ≈ 22/7` olduğu için 22 Temmuz olarak geçiyor.
 
     figure: x-img(src="images/pies.jpg" width=500 height=150 credit="Evan Shelhamer, Matman from Lublin")
 
@@ -340,7 +344,7 @@ Her yıl kutlanan bir _Pi günü_ bile var. Tarihi `pi ≈ 3.14` olduğu için 1
 > id: degrees
 
 Şimdiye kadar geometride açıları hep [dereceler](gloss:degrees) ile ölçtük. Bir
-__{.m-red}tam çember__ dönmek [[360]]°, __{.m-green}yarım çember__ 
+__{.m-red}tam çember__ dönmek [[360]]°, __{.m-green}yarım çember__
 [[180]]°,  __{.m-yellow}çeyrek çember__  [[90]]° gibi.
 
 ::: column(width=160)
@@ -410,7 +414,7 @@ Astronomlar yılın belli bir zamanı gözlenebilen takım yıldızların her g�
       .fg
     x-gesture(target=".constellations" offset="0,-120", slide="-160,0")
 
-	
+
 ---
 > id: constellations-1
 > goals: video
@@ -476,12 +480,12 @@ Derece cinsinden her açının karşılık geldiği bir radyan ölçüsü vardı
 
 ::: column(width=180 parent="padded-thin")
 
-{.text-center} _{span.rotate.left}`=>`_  
+{.text-center} _{span.rotate.left}`=>`_
 __{.m-red} 1°__ _{span.space}=_ [[`pi/180`|`180pi`|`360/pi`]] __{.m-green} rad__
 
 ::: column(width=180)
 
-{.text-center} _{span.rotate.right}`=>`_  
+{.text-center} _{span.rotate.right}`=>`_
 __{.m-green} 1 rad__ _{span.space}=_ [[`180/pi`|`180-pi`|`2pi-360`]] __{.m-red} °__
 
 :::
@@ -507,7 +511,7 @@ Ranyanı birim çemberinin çevresinin üzerinde “kat edilen mesafe” olarak 
 Örneğin [Uluslararası Uzay İstasyonu](gloss:iss) her 1.5\ saatte Dünyanın çevresinde bir tur atar. Bu da  __dönme hızı__  saatte [[`(2 pi)/1.5`|
 `1.5/(2 pi)`|`1.5 * pi`]] radyan demek.
 
-{.reveal(when="blank-0")} Bir [birim çemberde](gloss:unit-circle) dönme hızı _gerçek_ hız ile aynıdır, çünkü çevre uzunluğu radyan cinsinden bir tam dönmeye karşılık gelir(ikisi de `2pi`) . 
+{.reveal(when="blank-0")} Bir [birim çemberde](gloss:unit-circle) dönme hızı _gerçek_ hız ile aynıdır, çünkü çevre uzunluğu radyan cinsinden bir tam dönmeye karşılık gelir(ikisi de `2pi`) .
 
 {.reveal(when="blank-0" delay=1000)} Uluslararası Uzay İstasyonunun yörüngesinin yarıçapı  6800\ km,
 yani  _gerçek_ hızı [[`(2 pi)/1.5 xx 6800`|
@@ -556,7 +560,7 @@ _{span.reveal(when="blank-0")}(ya da saniyede `80/(2pi) = 13` kez döner)._
 Bu hesap makinesini kullanarak şunu hesaplamayı deneyin:
 
 {.text-center} sin(30°) = [[0.5]] _{span.eqn-gap}_ cos(1°) = [[0.999]]<br>
-sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]] 
+sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 
 ::: column(width=300)
 
@@ -586,7 +590,7 @@ sin(30 rad) = [[-0.988]] _{span.eqn-gap}_ cos(1 rad) = [[0.54]]
 ---
 > id: small-angle
 
-Radyan kullanmanın  [__sinüs fonksiyonu__](gloss:sin) ile çalışırken özellikle ilginç bir avantajı vardır. Eğer `θ` çok küçük bir açıysa( 20° ya da 0.3 radyandan küçükse), o zaman `sin(θ) ≈ θ` olur. Örneğin 
+Radyan kullanmanın  [__sinüs fonksiyonu__](gloss:sin) ile çalışırken özellikle ilginç bir avantajı vardır. Eğer `θ` çok küçük bir açıysa( 20° ya da 0.3 radyandan küçükse), o zaman `sin(θ) ≈ θ` olur. Örneğin
 
 {.text-center} sin(${x}{x|0.1|0,0.5,0.05}) `≈` ${sin(x)}…
 
@@ -605,23 +609,23 @@ Geçtiğimiz bölümlerde merkez, çap, yarıçap ve çevre gibi çemberin çeş
 
     x-geopad.sticky(width=300 height=300): svg
       circle(x="point(150,150)" name="x")
-      
+
       path.teal.fill.reveal(x="sector(x,d1,pi/2.5)" target="sector" when="next-3" label="Sector" label-class="white")
       path.purple.fill.reveal(x="arc(x,b1,pi/2.5)" target="segment" when="next-4" label="Segment")
-      
+
       path.black(x="circle(x,100)" name="c")
-      
+
       circle.red(x="c.at(0.5)" name="a1" target="secant")
       circle.red(x="c.at(0.7)" name="a2" target="secant")
       path.red.thick(x="line(a1,a2)" label="Kesen" target="secant")
-      
+
       circle.green.reveal(x="c.at(0.8)" name="b1" target="chord" when="next-0" animation="pop")
       circle.green.reveal(x="c.at(0)" name="b2" target="chord" when="next-0" animation="pop")
       path.green.thick.reveal(x="segment(b1,b2)" label="Kiriş" target="chord" when="next-0" animation="draw")
-      
+
       circle.blue.reveal(x="c.at(0.1)" name="c1" target="tangent" when="next-1" animation="pop")
       path.blue.thick.reveal(x="c.tangentAt(0.1)" label="Teğet" target="tangent" when="next-1" animation="draw")
-      
+
       circle.yellow.reveal(x="c.at(0.2)" name="d1" target="arc" when="next-2" animation="pop")
       circle.yellow.reveal(x="c.at(0.4)" name="d2" target="arc" when="next-2" animation="pop")
       path.yellow.thick.reveal(x="arc(x,d1,pi/2.5)" label="Yay" target="arc" when="next-2" animation="draw")
@@ -663,7 +667,7 @@ Bu bölümde bütün bu elemanlar arasındaki ilişkilere bakacağız ve her bir
 
 ::: column.grow
 
-Antik Yunanlı pek çok bilim insanı Dünyanın küre şeklinde olduğunda hemfikirlerdi. Ufukta kaybolan gemilerden gökyüzünde çembersel hareket eden yıldızlara ortada bir sürü kanıt vardı. 
+Antik Yunanlı pek çok bilim insanı Dünyanın küre şeklinde olduğunda hemfikirlerdi. Ufukta kaybolan gemilerden gökyüzünde çembersel hareket eden yıldızlara ortada bir sürü kanıt vardı.
 
 Ne yazık ki kimse Dünyanın _ne kadar büyük_ olduğunu bilmiyordu, taa ki M.Ö. 200 civarında matematikçi [Eratosthenes](bio:eratosthenes) basit geometri kullanarak Dünyanın yarıçapını ölçmek için dahice bir yol bulana kadar. Tek ihtiyacımız olan yaylar ve dilimler ile ilgili biraz daha bilgi.
 
@@ -683,7 +687,7 @@ Ne yazık ki kimse Dünyanın _ne kadar büyük_ olduğunu bilmiyordu, taa ki M.
       path(x="circle(c,100)" name="circ")
       circle.move(cx=240 cy=140 name="a" project="circ" label="A")
       circle.move(cx=85 cy=60 name="b" project="circ" label="B")
-      
+
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad).minor" label="Dilim" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad).minor" label="Yay" target="arc")
       path.purple.thick.transparent(x="arc(c,a,2*pi-angle(b,c,a).rad).major" target="major")
@@ -695,7 +699,7 @@ Ne yazık ki kimse Dünyanın _ne kadar büyük_ olduğunu bilmiyordu, taa ki M.
 [[iç bölgesinin|yarıçapının|çevresinin]] bir parçasıdır.
 
 ::: .reveal(when="blank-0 blank-1")
-_A_ ve _B_ noktaları arasındaki yay genelde ‘arc(AB)’ olarak yazılır. Aslında bu tanım biraz muğlak: _A_ ve _B_’yi bağlayan ancak çemberin öteki tarafından dolaşan [{.purple} ikinci bir yay](target:major) da var. 
+_A_ ve _B_ noktaları arasındaki yay genelde ‘arc(AB)’ olarak yazılır. Aslında bu tanım biraz muğlak: _A_ ve _B_’yi bağlayan ancak çemberin öteki tarafından dolaşan [{.purple} ikinci bir yay](target:major) da var.
 
 İki yaydan küçük olanına _küçük(minör) yay_ ve büyük olanına _büyük(majör) yay_ denir. Eğer _A_ ve _B_ noktaları tam zıt konumlardaysa iki yayın da uzunluğu aynıdır ve ikisi de [[yarıçember|çap|çevre]] oluşturur.
 :::
@@ -726,11 +730,11 @@ Bu ilişkiyi bir denklem ile ifade edebiliriz:
       path(x="circle(c,100)" name="circ")
       circle.move(cx=240 cy=140 name="a" project="circ")
       circle.move(cx=85 cy=60 name="b" project="circ")
-      
+
       path.yellow.fill(x="sector(c,b,angle(b,c,a).rad)" label="Dilim" target="sector" label-class="white")
       path.red.thick(x="arc(c,b,angle(b,c,a).rad)" label="Yay" target="arc")
       path.fill.blue(x="angle(b,c,a)" target="angle")
-      
+
       path.fill.orange.transparent(x="circ" target="area")
       path.thick.purple.transparent(x="circ" target="circ")
       path.teal.fill.transparent(x="circle(c,32)" target="fangle")
@@ -805,7 +809,7 @@ Adası_ nda olduğunu söyler.
 
 Matematikçi [Eratosthenes](bio:eratosthenes) _İskenderiye_ 'de, Asvan’ın yaklaşık 800\ km kuzeyinde yaşadı, İskenderiye Kütüphanesinin müdürüydü. İskenderiye şehir merkezinde piramit şeklinde tepesiyle uzun ve dar bir dikilitaş vardı.
 
-Eratosthenes yaz gündönümü öğle vaktinde dikilitaşın gölgesini fark etti, yani Güneş tam olarak tepesinde _değildi_. Bunun sebebinin Dünyanın eğriliği olduğunu düşündü, ve bu bilgi ile gezegenimizin çevresinin hesaplanabileceğini fark etti. 
+Eratosthenes yaz gündönümü öğle vaktinde dikilitaşın gölgesini fark etti, yani Güneş tam olarak tepesinde _değildi_. Bunun sebebinin Dünyanın eğriliği olduğunu düşündü, ve bu bilgi ile gezegenimizin çevresinin hesaplanabileceğini fark etti.
 
 ---
 > id: eratosthenes-1
@@ -827,7 +831,7 @@ Eratosthenes gölgenin [{.teal} açısını](target:angle1) 7.2° olarak ölçt�
 :::
 
 ::: .reveal(when="blank-1")
-Denklemi yeniden düzenlersek Dünyanın çevresinin 
+Denklemi yeniden düzenlersek Dünyanın çevresinin
 
 {.text-center} `pill("çevre","blue","circ") = "360°" / "7.2°" × pill("800 km","red","arc") = input(40000) "km"`
 
@@ -850,22 +854,22 @@ olur.
         defs: radialGradient#grad1(cx=200 cy=200 r=200 gradientUnits="userSpaceOnUse")
           stop(offset=0 stop-color="#63a3ff")
           stop(offset=1 stop-color="#0f82f2")
-      
+
         circle(x="point(150,250)" name="c" hidden)
         circle(x="point(150,120)" name="a" hidden)
         circle.move.pulsate(cx=80 cy=140 name="b" project="arc(c,point(64,155),1.47)")
         circle(x="c.add(b.subtract(c).scale(1.465))" name="d" hidden)
-    
+
         path.shadow(x="triangle(c,d,point(d.x,c.y))")
         path.earth(d="M153,120,152,150h-4l-.95-30a130,130,0,1,0,5.9,0Z" fill="url(#grad1)")
         path.earth-cover.fill(x="circle(c,130)")
-        
+
         path.red.thick.reveal(when="next-0" animation="draw" x="arc(c,b,angle(b,c,a).rad).minor" target="arc")
         path.fill.teal.reveal(when="next-0" x="angle(c,d,point(d.x,c.y)).sup" target="angle1")
         path.fill.purple.reveal(when="next-0" x="angle(b,c,a).sup" name="ang" target="angle2")
         path.thin.white.reveal(when="next-0" animation="draw" x="segment(c,b)")
         path.blue.transparent(x="circle(c,130)" target="circ")
-        
+
         image.obelisk.var(xlink:href="images/obelisk.svg" height=60 width=8 style="transform: translate(${b.x-4}px, ${b.y-60}px) rotate(-${angle(b,c,a).rad}rad)")
 
 :::
@@ -1061,7 +1065,7 @@ Geçtiğimiz bölümlerde düzlem üzerindeki çemberlerin özelliklerini incele
 
     x-solid(size=220 static)
 
-{.text-center}[__Küre__](gloss:sphere)nin yüzeyindeki her nokta merkezinden aynı mesafededir. 
+{.text-center}[__Küre__](gloss:sphere)nin yüzeyindeki her nokta merkezinden aynı mesafededir.
 
 :::
 
@@ -1112,7 +1116,7 @@ Bir silindire ${n}{n|5|3,20,1}-kenarlı bir [__prizma__](gloss:prism) ile yakla�
 ---
 > id: cylinder-volume
 
-Bir silindir teknik olarak bir prizma olmasa bile, pek çok ortak özelliğe sahipler. İki durumda da hacmi __{.m-red} taban__ ile __{.m-blue} yüksekliği__ çarparak bulabiliriz. Demek ki yarıçapı _{.b.m-red} r_ ve yüksekliği _{.b.m-blue} h_ olan bir silindirin hacmi 
+Bir silindir teknik olarak bir prizma olmasa bile, pek çok ortak özelliğe sahipler. İki durumda da hacmi __{.m-red} taban__ ile __{.m-blue} yüksekliği__ çarparak bulabiliriz. Demek ki yarıçapı _{.b.m-red} r_ ve yüksekliği _{.b.m-blue} h_ olan bir silindirin hacmi
 
 {.text-center} `V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_
 
@@ -1135,7 +1139,7 @@ Yukarıdaki örneklerde silindirin iki tabanı hep _birbirinin tam üzerindeydi_
 
     x-img(src="images/pisa.jpg" width=300 height=360 lightbox)
 
-{.caption} İtalya’daki _Pisa_ kulesi tam bir eğik silindir değil. 
+{.caption} İtalya’daki _Pisa_ kulesi tam bir eğik silindir değil.
 
 :::
 
@@ -1173,7 +1177,7 @@ Silindirin bir üstünde bir de altında iki tane [[daire|küre|kare]] var. Eği
   _{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
 * {.reveal(when="eqn-0")} Dikdörtgenin yüksekliği
   _{x-equation.small(solution="h" keys=" " short-var)}_
-  _{span.reveal(when="eqn-1")} ve genişliği dairelerin 
+  _{span.reveal(when="eqn-1")} ve genişliği dairelerin
  [[çevresi|çapı|teğeti]] ile aynı:_
   _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
 
@@ -1187,7 +1191,7 @@ Silindirin bir üstünde bir de altında iki tane [[daire|küre|kare]] var. Eği
 ---
 > id: cylinder-surface-1
 
-Yani yüksekliği _h_ ve yarıçapı _r_ olan bir silindirin toplam yüzey alanı 
+Yani yüksekliği _h_ ve yarıçapı _r_ olan bir silindirin toplam yüzey alanı
 
 {.text-center} `A =` _{x-equation(solution="2 π r^2 + 2 π r h" keys="+ − × ÷ π frac sup brackets" short-var)}_.
 
@@ -1396,7 +1400,7 @@ Son olarak __{.m-yellow}tabanın__ alanını ve __{.m-green}dilimin__ alanını 
 
 Küre üç boyutta verilen bir  __{.m-green}merkez noktası *C*__den aynı mesafedeki noktaların oluşturduğu şekildir. Bu mesafeye kürenin __{.m-red}yarıçapı *r*__ denir.
 
-Küreyi “üç boyutlu bir  [çember](gloss:circle)” olarak düşünebilirsiniz. Aynı çemberde olduğu gibi, kürenin de kirişleri, kesenleri ve bir __{.m-blue}çapı *d*__ vardır, bu çap yarıçapın [[iki katı|yarısı]] uzunluğundadır. 
+Küreyi “üç boyutlu bir  [çember](gloss:circle)” olarak düşünebilirsiniz. Aynı çemberde olduğu gibi, kürenin de kirişleri, kesenleri ve bir __{.m-blue}çapı *d*__ vardır, bu çap yarıçapın [[iki katı|yarısı]] uzunluğundadır.
 
 ::: column(width=240)
 
@@ -1444,7 +1448,7 @@ Aşağıdaki çubuğu kaydırdıkça bu iki şeklin tabandan belli bir yüksekli
       circle(x="point(10,10)" name="a2" hidden)
       circle(x="point(210,10)" name="b2" hidden)
       path(x="polygon(a2,b2,point(210,110),point(10,110))")
-      
+
       circle(x="point(110,110)" name="c2")
       circle(x="c2.shift(0,-100*h)" name="h2")
       circle(x="h2.shift(-100*h,0)" name="x2")
@@ -1519,7 +1523,7 @@ Bir küre [[iki]] yarımküreden oluşur,  _{span.reveal(when="blank-0")}yani bi
 
 ::: column.grow
 
-Dünya (yaklaşık olarak) yarıçapı 6,371\ km olan bir küredir. O yüzden hacmi 
+Dünya (yaklaşık olarak) yarıçapı 6,371\ km olan bir küredir. O yüzden hacmi
 
 | `V` | `=` | _{x-equation(solution="4/3 pi × 6371^3" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 |     | `=` | _{span.numbers}1_ `"km"^3` |
@@ -1576,7 +1580,7 @@ _{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
 
 #### Kürenin Yüzey Alanı
 
-Kürenin yüzey alanı için bir formül bulmak çok zor. Bunun bir sebebi kürenin yüzeyini koni ve silindirde yaptığımız gibi açıp “düzleştiremiyor” olmamız. 
+Kürenin yüzey alanı için bir formül bulmak çok zor. Bunun bir sebebi kürenin yüzeyini koni ve silindirde yaptığımız gibi açıp “düzleştiremiyor” olmamız.
 
 Bu özellikle harita yapanlar için bir problem. Dünyanın eğri, 3 boyutlu bir yüzeyi var, ancak basılan her harita düz ve iki boyutlu. Bu da coğrafyacıların hile yapması gerektiğini söylüyor: kimi alanları genişletip kimisini küçülterek.
 
@@ -1611,9 +1615,9 @@ Kürenin yüzey alanını bulmak için bir kez daha ona değişik şekillerle ya
 
 {.todo} COMING SOON: Sphere Surface Area Proof
 
-    
-    
-    
+
+
+
 
 --------------------------------------------------------------------------------
 
@@ -1686,7 +1690,7 @@ Konik kesitler ilk olarak antik Yunan matematikçisi [Perga’lı Apollonius](bi
 
 Bir elips neredeyse “uzatılmış çember”e benzer. Aslında elipsi _iki merkezli_ bir çember olarak düşünebilirsiniz, bu merkezlere __odak noktaları__ denir. Nasıl çemberin her noktası merkeze aynı uzaklıktaysa, elipsin her noktasının odak noktalarına _uzaklıkları toplamı_ aynıdır.
 
-İki noktaya sabitlenmiş uzun bir ipiniz varsa bu ipin uzandığı en uzak noktaları işaretleyerek mükemmel bir elips çizebilirsiniz: 
+İki noktaya sabitlenmiş uzun bir ipiniz varsa bu ipin uzandığı en uzak noktaları işaretleyerek mükemmel bir elips çizebilirsiniz:
 
 {.todo} Coming soon: Ellipses drawing interactive
 
@@ -1725,7 +1729,7 @@ Elipsi çizmenin daha bir sürü fiziksel yolu vardır:
 
 ::: column.grow
 
-Bu dersin en başında Yunan astronomların evrenin merkezinde Dünya’nın olduğuna ve Güneş’in, ayın ve gezegenlerin Dünya etrafında çembersel yörüngeler çizdiğine inandığını görmüştük. 
+Bu dersin en başında Yunan astronomların evrenin merkezinde Dünya’nın olduğuna ve Güneş’in, ayın ve gezegenlerin Dünya etrafında çembersel yörüngeler çizdiğine inandığını görmüştük.
 
 Ne yazık ki gökyüzünün astronomik gözlemleri bu inancı desteklemedi. Örneğin Güneş yılın kimi zamanları daha büyük, kimi zamanları daha küçük görünüyordu. Bir çemberde her noktanın merkeze olan uzaklığı [[aynı olmalı|artmalı|azalmalı]].
 
@@ -1771,7 +1775,7 @@ Bunu düzeltmek için astronomlar Güneş sistemi modellerine __Ekçemberler__ e
 
 Zaman içinde insanlar Dünya’nın Güneş çevresinde dönen(__Güneş merkezli evren modeli__) pek çok gezegenden biri olduğunu fark ettiler, ancak gezegenlerin aslında _eliptik yörüngeleri_ olduğunu ilk defa 1609’da astronom [Johannes Kepler](bio:kepler) buldu.
 
-Güneş bu elipslerin iki merkezinden birisinde yer alıyor. Gezegenler Güneş’e yaklaştıkça hızlanıp uzaklaştıkça yavaşlarlar. 
+Güneş bu elipslerin iki merkezinden birisinde yer alıyor. Gezegenler Güneş’e yaklaştıkça hızlanıp uzaklaştıkça yavaşlarlar.
 
 ::: column(width=320)
 

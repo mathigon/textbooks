@@ -2,41 +2,11 @@
 
 ## Giriş
 
-    mixin barchart(data)
-      - var max = 100/Math.max.apply(none, data.map(function(d) { return d[1] }))
-      .barchart(style="width: " + data.length*50 + "px")
-        for d in data
-          .bar-wrap
-            div(class="bar "+d[2], style="height: " + d[1]*max + "%")
-        .axis
-        for d in data
-          .label= d[0]
-
-    - var reds = [32, 19, 21, 25, 34, 27, 36, 30, 23, 5, 16, 1, 14, 9, 18, 7, 12, 3]
-    - var colour = function(x) { return reds.indexOf(x) >= 0 ? 'r' : 'b'; }
-
-    mixin dice(n)
-      svg(width=20, height=20)
-        if n==1 || n==3 || n==5
-          circle(r=2, cx=10, cy=10)
-        if n==2 || n==3 || n==4 || n==5
-          circle(r=2, cx=5, cy=5)
-        if n==4 || n == 5
-          circle(r=2, cx=5, cy=15)
-        if n==4 || n == 5
-          circle(r=2, cx=15, cy=5)
-        if n==2 || n==3 || n==4 || n == 5
-          circle(r=2, cx=15, cy=15)
-        if n == 6
-          circle(r=2, cx=5, cy=4)
-          circle(r=2, cx=5, cy=10)
-          circle(r=2, cx=5, cy=16)
-          circle(r=2, cx=15, cy=4)
-          circle(r=2, cx=15, cy=10)
-          circle(r=2, cx=15, cy=16)
-
 > id: intro
 > section: introduction
+> color: "#CD0E66"
+> level: Intermediate
+> next: statistics
 
 Olasılıklar ve yatkınlıklar, hava durumu tahmininden oyunlara, sigortadan seçimlere, her yerde karşımıza çıkar. Fakat matematik tarihinde olasılık oldukça yeni bir fikir. Geometri ve cebir antik Yunan matematikçiler tarafından 2500 yıl öncesinden beri çalışılmasına karşılık, olasılık konsepti yalnızca 17. ve 18. Yüzyılda ortaya çıkmıştır.
 
@@ -50,7 +20,7 @@ Tartıştıkları zor matematik teorilerinden biraz uzaklaşmak için basit bir 
 
 :::
 
-Bir gün ilk para atışından sonra Fermat’nın acilen gitmesi gerekmiş. Bu durumda hangisinin hesabı ödemesi gerektiğini ya da hesabı adil bölüşmenin bir yolu olup olmadığını düşünmüşler. Para _yazı_ gelmişmiş (Pascal için bir puan), o zaman belki de Fermat hesabın hepsini ödemeli diyebiliriz. Ancak küçük bir ihtimalle de olsa, eğer [[sıradaki iki atışta|sıradaki atışta]] _tura_ gelirse Fermat’nın hala kazanma şansı da varmış. 
+Bir gün ilk para atışından sonra Fermat’nın acilen gitmesi gerekmiş. Bu durumda hangisinin hesabı ödemesi gerektiğini ya da hesabı adil bölüşmenin bir yolu olup olmadığını düşünmüşler. Para _yazı_ gelmişmiş (Pascal için bir puan), o zaman belki de Fermat hesabın hepsini ödemeli diyebiliriz. Ancak küçük bir ihtimalle de olsa, eğer [[sıradaki iki atışta|sıradaki atışta]] _tura_ gelirse Fermat’nın hala kazanma şansı da varmış.
 
 ---
 > id: intro-1
@@ -84,7 +54,7 @@ Dört olası durumun da ortaya çıkma ihtimali eşittir, ve Pascal bunlardan [[
 ---
 > id: intro-2
 
-Pascal ve Fermat olasılığın ilk önemli eşitliğini keşfetmişlerdir: Eğer bir deneyin eşit ihtimalli pek çok sonucu varsa, o zaman 
+Pascal ve Fermat olasılığın ilk önemli eşitliğini keşfetmişlerdir: Eğer bir deneyin eşit ihtimalli pek çok sonucu varsa, o zaman
 
 {.text-center} Bir olayın olasılığı =
 `"Olayın oluşabilme sayısı"/"Olası tüm sonuçların sayısı"`.
@@ -179,6 +149,7 @@ Olasılıklar _tahmin etmek ve öngörmek_ için harika iken, _aslında_ ne olac
 
 > id: future
 
+    include mixins
     p.md Aynı anda iki zar atıp gelen sayıları toplarsak [[2]] ile [[12]] arasında bir sayı elde ederiz. Ancak bu aralıktaki her sayıyı elde etme ihtimalimiz eşit değildir. Bazı sonuçları tek bir şekilde elde edebiliriz(#[span.dice.outline 12] elde etmek için #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]] atmamız gerek), bazılarını ise bir çok şekilde elde edebiliriz (#[span.dice.outline 5] elde etmek için #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] ya da #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]] atabiliriz).
 
 ---
@@ -186,6 +157,7 @@ Olasılıklar _tahmin etmek ve öngörmek_ için harika iken, _aslında_ ne olac
 
 Bu çizelge olası bütün sonuçları gösteriyor:
 
+    include mixins
     table.dice-table
       tr
         td #[.dice.outline 2]
@@ -344,7 +316,7 @@ Yeryüzündeki en müthiş oyun programına hoş geldiniz! Hayatınızda elinize
 {.monty-reveal} Kararınızdan emin misiniz? Hala fikrinizi değiştirip başka bir kapı seçebilirsiniz...
 
     p.text-center.monty-reveal: button.btn.sure Eminim!
-  
+
 {.monty-reveal} Çok iyi bir seçim, ben de sizin için durumu biraz kolaylaştırayım. Arkasında keçi olan bir kapıyı sizin için açacağım, böylece kalan iki kapı arasından seçim yapabilirsiniz. Önceki tercihinizde ısrarcı mısınız, yoksa değiştirmek istiyor musunuz?
 
     p.text-center.monty-reveal
@@ -426,7 +398,7 @@ Bir bozuk para atalım: Yazı gelme ihtimali 0,5. Tam parayı atmadan önce para
 ---
 > id: quantum1
 
-Aslında şunu iddia edebiliriz: Yazı tura atmak hiç de rastgele değildir, _kaotiktir_. Yani etki eden fizik kanunları o kadar karmaşık ki, başlangıç koşullarındaki(hız, açı) en ufak bir değişiklik bile sonucu dramatik bir şekilde değiştirebilir. Para atmayı oyunlarda ve kumarda kullanmamızın sebebi rastgele olması değil, sonucunu tahmin etmesi inanılmaz derecede zor(pratikte imkansız) olduğu içindir. 
+Aslında şunu iddia edebiliriz: Yazı tura atmak hiç de rastgele değildir, _kaotiktir_. Yani etki eden fizik kanunları o kadar karmaşık ki, başlangıç koşullarındaki(hız, açı) en ufak bir değişiklik bile sonucu dramatik bir şekilde değiştirebilir. Para atmayı oyunlarda ve kumarda kullanmamızın sebebi rastgele olması değil, sonucunu tahmin etmesi inanılmaz derecede zor(pratikte imkansız) olduğu içindir.
 
 Aynı prensip, hayatta “rastgele” dediğimiz çoğu olay için geçerlidir, zar atma ve rulet çarkı dahil. Bunlar aslında _rastgele_ değil, sadece sonuçlarını isabetli olarak hesaplayabilmek için gerekli matematiksel araçlara sahip değiliz.
 

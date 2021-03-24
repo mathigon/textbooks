@@ -7,7 +7,7 @@
 import {flatten, Obj, tabulate2D} from '@mathigon/core';
 import {Line, Point} from '@mathigon/euclid';
 import {CanvasView, CustomElementView, register, slide} from '@mathigon/boost';
-import {Select} from '../../shared/types';
+import {Select} from '@mathigon/studio';
 import template from './wallpaper.pug';
 
 

@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#3566DE"
+> level: Intermediate
+> next: polyhedra
 
 ::: column.grow
 All'inizio del diciannovesimo secolo, gli esploratori avevano esplorato quasi tutto il mondo. Il commercio
@@ -176,7 +179,7 @@ Possiamo classificare i triangoli secondo l'ampiezza dei loro angoli:
       path.fill.red(x="angle(a1,b1,c1)")
       path(x="polygon(a1,b1,c1)")
 
-{.caption} Un __triangolo rettangolo__  
+{.caption} Un __triangolo rettangolo__
 ha un [angolo retto](gloss:right-angle).
 ::: column(width=220)
 
@@ -187,7 +190,7 @@ ha un [angolo retto](gloss:right-angle).
       path.fill.blue(x="angle(c2,b2,a2)")
       path(x="polygon(a2,b2,c2)")
 
-{.caption} Un __triangolo ottusangolo__  
+{.caption} Un __triangolo ottusangolo__
 ha un [angolo ottuso](gloss:obtuse-angle).
 ::: column(width=220)
 
@@ -200,7 +203,7 @@ ha un [angolo ottuso](gloss:obtuse-angle).
       path.fill.green(x="angle(c3,a3,b3)")
       path(x="polygon(a3,b3,c3)")
 
-{.caption} Un __triangolo acutangolo__  
+{.caption} Un __triangolo acutangolo__
 ha [[tre]] [angoli acuti](gloss:acute-angle).
 :::
 
@@ -213,8 +216,8 @@ indicati con le lettere maiuscole [_A_, _B_ e _C_](target:vertex), i lati vengon
 indicati con le lettere minuscole [_a_, _b_ and _c_](target:side), e gli angoli
 con le lettere greche [`α`, `β` e `γ`](target:angle) (“alpha”, “beta” e
 “gamma”).
- 
-Il [lato _opposto_ al vertice _A_](target:X) si indica con _a_, e 
+
+Il [lato _opposto_ al vertice _A_](target:X) si indica con _a_, e
 l'[angolo vicino ad _A_](target:Y) si indica con `α`. Lo stesso vale
 per _B_/_b_/`β` e per _C_/_c_/`γ`.
 ::: column(width=220)
@@ -236,7 +239,7 @@ per _B_/_b_/`β` e per _C_/_c_/`γ`.
 > id: medians
 > goals: s0 s1 s2 move
 
-### Le mediane 
+### Le mediane
 
 ::: column(width=300)
 
@@ -245,13 +248,13 @@ per _B_/_b_/`β` e per _C_/_c_/`γ`.
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
       path(x="triangle(a,b,c)")
-      
+
       circle.green(name="ab" x="line(a,b).midpoint")
       circle.blue(name="ac" x="line(a,c).midpoint")
       circle.red(name="bc" x="line(b,c).midpoint" target="ratio")
-      
+
       circle.yellow.reveal(name="d" x="triangle(a,b,c).centroid" when="blank-0" animation="pop" target="ratio")
-      
+
       path.red.transparent(x="segment(a,d)" label="2" target="ratio")
       path.red.transparent(x="segment(d,bc)" label="1" target="ratio")
 
@@ -433,7 +436,7 @@ l'area di un triangolo deve valere la metà:
 
       path.fill.yellow.reveal(x="polygon(b,d,c)" when="next-1" target="gap")
       path.fill.yellow.transparent(x="polygon(b,f,c)" target="gap")
-      
+
       path.dark(x="polygon(a,b,c)")
       path.red.reveal(x="polygon(a,b,f,e)" when="next-0" animation="draw")
       path.blue.reveal(x="segment(c,d)" label="altezza" when="next-0" delay="1000" target="height")
@@ -460,7 +463,7 @@ __base__, e poi trovare l'__altezza__ corrispondente, che è la linea
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
-      
+
       path(x="triangle(a,b,c)")
       path.altitude.red(hidden x="line(a,b).perpendicular(c)")
       path.altitude.blue(hidden x="line(a,c).perpendicular(b)")
@@ -472,13 +475,13 @@ Come per [mediane](gloss:triangle-median), [assi](gloss:perpendicular-bisector) 
 si intersecano in un solo punto che si chiama [__ortocentro__](target:center)
 del triangolo.
 
-Nei [triangoli acutangoli](gloss:acute-triangle), l'ortocentro 
+Nei [triangoli acutangoli](gloss:acute-triangle), l'ortocentro
 [[giace all'interno|giace all'esterno|è un vertice]] del triangolo.
 
-{.reveal(when="blank-0")} Nei [triangoli ottusangoli](gloss:obtuse-triangle), 
+{.reveal(when="blank-0")} Nei [triangoli ottusangoli](gloss:obtuse-triangle),
 l'ortocentro [[giace all'esterno|giace all'interno|è un vertice]] del triangolo.
 
-{.reveal(when="blank-1")} Nei [triangoli rettangoli](gloss:right-triangle), 
+{.reveal(when="blank-1")} Nei [triangoli rettangoli](gloss:right-triangle),
 l'ortocentro [[è un vertice|giace all'interno|giace all'esterno]] del triangolo. Due delle
 altezze sono di fatto lati del triangolo.
 :::
@@ -502,7 +505,7 @@ altezze sono di fatto lati del triangolo.
       circle.red(name="q" x="line(a,c).midpoint")
       circle.red(name="r" x="line(b,c).midpoint")
       path(x="triangle(a,b,c)")
-      
+
       path.transparent.fill.red(x="polygon(a,p,q)" target="triangles")
       path.transparent.fill.blue(x="polygon(b,p,r)" target="triangles")
       path.transparent.fill.yellow(x="polygon(c,q,r)" target="triangles")
@@ -519,14 +522,14 @@ in [quattro triangoli più piccoli](target:triangles).
 {.reveal(when="s0 s1 s2")} Risulta che tutti questi triangoli più piccoli sono
 [[congruenti|sovrapposti|di dimensioni diverse]] – anche quello a testa in giù al
 centro. _{span.reveal(when="blank-0")} Sono anche tutti [[simili|congruenti]]
-al [triangolo originale](target:large),_ _{span.reveal(when="blank-1")}con 
+al [triangolo originale](target:large),_ _{span.reveal(when="blank-1")}con
 un fattore di riduzione di `1/2`._
 
 {.reveal(when="blank-1")} Questo ci permette di dedurre alcuni fatti importanti a proposito
 dei segmenti che collegano i punti medi di un triangolo:
 
 ::: .theorem.reveal(when="blank-1")
-__Teorema dei segmenti che collegano i punti medi__  
+__Teorema dei segmenti che collegano i punti medi__
 Il segmento che collega i punti medi dei lati di un trangolo è parallelo al terzo lato, e misura esattamente la metà
 di esso.
 :::
@@ -563,13 +566,13 @@ dei tre vertici del triangolo – la sfida consiste nel trovare l'ultimo vertice
 vertici, _{span.reveal(when="draw-c1")} e un cerchio di raggio __5cm__ centrato
 nell'altro vertice._
 
-{.reveal(when="draw-c2")} Il terzo vertice del triangolo è 
+{.reveal(when="draw-c2")} Il terzo vertice del triangolo è
 [[l'intersezione|il centro|il raggio]] delle due circonferenze. _{span.reveal(when="blank-0")}
 Ora possiamo semplicemente collegarli per formare un triangolo._
 
 {.reveal(when="blank-0" delay="3000")} I cerchi in realtà si intersecano
 [[due|tre|infinite]] volte: _{span.reveal(when="blank-1")}una volta
-[in alto](target:top) e una volta [in basso](target:bottom). Possiamo scegliere 
+[in alto](target:top) e una volta [in basso](target:bottom). Possiamo scegliere
 entrambe queste intersezioni: i due triangoli risultanti sono
 [[congruenti|equilaterali|perpendicolari]]._
 :::
@@ -586,7 +589,7 @@ i triangoli che hanno tre lati lunghi ugual sono congruenti. Questo è il
  [__Criterio di congruenza LLL__](gloss:triangle-sss) per i triangoli
 (“Lato-Lato-Lato”).
 
-Conosciamo quindi per ora due criteri per i triangoli: “AA” implica che due triangoli sono 
+Conosciamo quindi per ora due criteri per i triangoli: “AA” implica che due triangoli sono
 [[simili|congruenti|transformazioni]] e “LLL” implica che due triangoli sono
 [[congruenti|simili|uguali]]. Ci sono alcui altri criteri di congruenza:
 
@@ -607,7 +610,7 @@ Due triangoli sono congruenti se uno di questi criteri è soddisfatto:
           path.red(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption Tutti i lati sono congruenti.
-        
+
       div(style="width: 150px")
         .text-center: strong LAL
         x-geopad(width=150 height=120): svg
@@ -619,7 +622,7 @@ Due triangoli sono congruenti se uno di questi criteri è soddisfatto:
           path(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption Due lati e l'angolo #[strong incluso] sono congruenti.
-        
+
       div(style="width: 150px")
         .text-center: strong ALA
         x-geopad(width=150 height=120): svg
@@ -632,7 +635,7 @@ Due triangoli sono congruenti se uno di questi criteri è soddisfatto:
           path(x="segment(a,c)")
           path(x="segment(b,c)")
         p.caption Due angoli e il lato #[strong incluso] sono congruenti.
-        
+
       div(style="width: 150px")
         .text-center: strong AAL
         x-geopad(width=150 height=120): svg
@@ -650,11 +653,11 @@ Due triangoli sono congruenti se uno di questi criteri è soddisfatto:
 ---
 > id: cpoct
 
-Puoi considerare questi criteri come "scorciatoie": per verificare se due triangoli sono 
+Puoi considerare questi criteri come "scorciatoie": per verificare se due triangoli sono
 congruenti, devi solo verificare una delle condizioni descritte sopra.
 
 Una volta che _sai_ che due triangoli sono congruenti, sai che _tutti_ i loro
-lati e angoli corrispondenti sono congruenti. 
+lati e angoli corrispondenti sono congruenti.
 
 È interessante notare che tutti i criteri consistono in [[tre]] diversi
 valori (lati oppure angoli)!
@@ -768,7 +771,7 @@ di 50°. LLA non è una condizione sufficiente per confermare che due triangoli 
 
 ---
 
-## Il teorema di Pitagora 
+## Il teorema di Pitagora
 
 > id: pythagoras
 > section: pythagoras
@@ -780,11 +783,11 @@ matematica: __Il teorema di Pitagora__. Prende il suo nome dal matematico greco
 
 ::: .theorem
 ::: column.grow
-__Il teorema di Pitagora__  
+__Il teorema di Pitagora__
 In ogni triangolo rettangolo, il quadrato della lunghezza
 dell'[__ipotenusa__](target:hypot) (il lato che è opposto all'angolo retto) è
 pari alla somma dei quadrati degli altri due lati. In altre parole,
- 
+
 {.text-center} _{span.circled.green}`a^2`_ + _{span.circled.blue}`b^2`_ =
 _{span.circled.yellow}`c^2`_
 
@@ -796,11 +799,11 @@ a*{sup}2* + b*{sup}2* = c*{sup}2*, allora il triangolo dev'essere [[rettangolo|a
       circle.move(name="a" cx=82 cy=160 target="hypot")
       circle.move(name="b" cx=218 cy=160 target="hypot")
       circle.move(name="c" cx=120 cy=100 project="arc(line(a,b).midpoint,a,pi).contract(0.2)")
-      
+
       path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-class="white")
       path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-class="white")
       path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-class="white")
-      
+
       path.dark(x="segment(b,c)" label="a")
       path.dark(x="segment(a,c)" label="b")
       path.dark(x="segment(a,b)" label="c" target="hypot")
@@ -826,7 +829,7 @@ sul muro?
 Nota che la scala, la parete e il pavimento formano
 un triangolo rettangolo. Usando il teorema di Pitagora otteniamo
 
-    
+
     table.eqn-system
       tr
         <td><mrow class="b m-green"><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow class="b m-blue"><msup><mn>1</mn><mn>2</mn></msup></mrow></td>
@@ -861,7 +864,7 @@ qui tre esempi nei quali vengono usate tre diverse strategie:
 ::: column.grow
 
 Dai un'occhiata alla figura a destra. Il lato del quadrato misura _a_ + _b_,
-e contiene [quattro triangoli rettangoli](target:triangle), e un 
+e contiene [quattro triangoli rettangoli](target:triangle), e un
 [quadrato più piccolo](target:square) di area [[<msup><mi>c</mi><mn>2</mn></msup>|_a_ – _b_|_a_ + _b_]].
 
 {.reveal(when="blank-0")} Ora ridisponiamo i triangoli nel quadrato. La
@@ -946,7 +949,7 @@ _{span.qed}_
 
 ::: column(width=240)
 
-    x-geopad(width=240): svg        
+    x-geopad(width=240): svg
       circle.move(name="e1" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
       circle(name="f1" hidden x="b.add(e1.subtract(a).flip)")
       circle(name="g1" hidden x="c.subtract(e1.subtract(a))")
@@ -1078,7 +1081,7 @@ i Pitagorici trovarono profondamente sconcertante e che cercarono (senza success
 
 ### Calcolo delle distanze
 
-Una delle applicazioni più importanti del teorema di Pitagora è il calcolo delle distanze. 
+Una delle applicazioni più importanti del teorema di Pitagora è il calcolo delle distanze.
 
 ::: column.grow
 {.r} A destra puoi vedere due punti in un sistema di coordinate. Potremmo
@@ -1121,7 +1124,7 @@ Se disegnamo queste due linee, otteniamo un [triangolo rettangolo](target:triang
 Questo metodo funziona per_ogni_ coppia di punti:
 
 ::: .theorem
-__La formula per la distanza__  
+__La formula per la distanza__
 Dati due punti con coordinate  (`x_1`,`y_1`) e (`x_2`,`y_2`),
 la distanza tra di essi è
 
@@ -1148,7 +1151,7 @@ in cui la lunghezza di *tutti e tre i lati* risulta essere un *numero intero*._
 Un esempio famoso è il triangolo 3-4-5 . Siccome `3^2 + 4^2 = 5^2`, ogni triangolo
 con lati di lunghezza 3, 4 e 5 è rettangolo.
 
-Gli antichi Egizi non conoscevano il teorema di Pitagora, ma conoscevano 
+Gli antichi Egizi non conoscevano il teorema di Pitagora, ma conoscevano
 il triangolo 3-4-5 . Per costruire le piramidi, usavano corde annodate con lunghezze 3, 4 e 5 per formare angoli perfettamente retti.
 ::: column(width=400)
 
@@ -1176,7 +1179,7 @@ un numero intero. Usando il sistema di coordinate sotto, sapresti trovare altre 
       .label.var(style="left:${26+25*a.x}px; top:${425-12.5*a.y}px") ${a.y}
       .label.var(style="left:${26+12.5*a.x}px; top:${425-12.5*a.y}px") ${round(a.length,2)}
 
-{.reveal(when="p0 p1 p2 p3 p4 p5")} Noti una regolarità nella distribuzione di questi punti? 
+{.reveal(when="p0 p1 p2 p3 p4 p5")} Noti una regolarità nella distribuzione di questi punti?
 
 ----
 
@@ -1186,7 +1189,7 @@ un numero intero. Usando il sistema di coordinate sotto, sapresti trovare altre 
 > section: isosceles-and-equilateral
 > sectionStatus: dev
 
-Oltre ai triangoli rettangoli, ci sono alcuni altri tipi di triangoli con 
+Oltre ai triangoli rettangoli, ci sono alcuni altri tipi di triangoli con
 proprietà interessanti. In questo capitolo ne vedremo alcuni.
 
 ### Triangoli isosceli
@@ -1342,7 +1345,7 @@ Le tre funzioni trigonometriche sono relazioni tra gli angoli e il rapportotra i
 ---
 > id: inverse-trig
 
-### Funzioni trigonometriche inverse 
+### Funzioni trigonometriche inverse
 
 {.todo} COMING SOON – Funzioni inverse
 
@@ -1359,7 +1362,7 @@ per qualsiasi triangolo.
 
 ::: column.grow
 ::: .theorem
-__Teorema del seno__  
+__Teorema del seno__
 In un triangolo con lati _a_, _b_ e _c_, e angoli _A_, _B_ e _C_,
 
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
@@ -1367,11 +1370,11 @@ In un triangolo con lati _a_, _b_ e _c_, e angoli _A_, _B_ e _C_,
 
 ::: column.grow
 ::: .theorem
-__Teorema del coseno__  
+__Teorema del coseno__
 In un triangolo con lati _a_, _b_ e _c_, e angoli _A_, _B_ e _C_,
 
-{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`  
-`b^2 = c^2 + a^2 - 2ca cos(B)`  
+{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`
+`b^2 = c^2 + a^2 - 2ca cos(B)`
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 

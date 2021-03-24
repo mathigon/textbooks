@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#2274E8"
+> level: Intermediate
+> next: triangles
 > translated: auto
 
 Molti concetti geometrici, come [linee](gloss:line) e [punti](gloss:point), sono stati "inventati" dai matematici. La simmetria, d'altra parte, è ovunque intorno a noi. Quasi tutte le piante, gli animali e persino noi umani sono simmetrici.
@@ -296,31 +299,31 @@ In tutti gli esempi sopra, la linea di riflessione era orizzontale, verticale o 
       circle.move.pulsate(name="l1" cx="180" cy="30" target="refl")
       circle.move.pulsate(name="l2" cx="120" cy="270" target="refl")
       path(name="refl" x="line(l1,l2)" target="refl")
-    
+
       circle.reveal(name="a" x="point(60,50)" when="next-0" animation="pop" target="circ")
       circle(name="b" x="point(120,100)" hidden)
       circle(name="c" x="point(110,170)" hidden)
       circle(name="d" x="point(65,200)" hidden)
       circle(name="e" x="point(30,120)" hidden)
-    
+
       circle.reveal(name="p" x="refl.project(a)" when="next-0" animation="pop" delay=1500)
       path.reveal.fill.light(x="angle(a,p,l1)" size=16 when="next-0" delay=1500)
-    
+
       circle.reveal(name="a1" x="a.reflect(refl)" when="next-1" animation="pop" target="circ")
       circle(name="b1" x="b.reflect(refl)" hidden)
       circle(name="c1" x="c.reflect(refl)" hidden)
       circle(name="d1" x="d.reflect(refl)" hidden)
       circle(name="e1" x="e.reflect(refl)" hidden)
-    
+
       path.fill.blue(x="polygon(a,b,c,d,e)")
       path.fill.reveal.blue1(x="polygon(a1,b1,c1,d1,e1)" when="next-3")
-    
+
       path.reveal(x="line(a,a1)" when="next-0" animation="draw" delay=1000)
       path.reveal.thin.light(x="segment(b,b1)" when="next-2" animation="draw" delay=400)
       path.reveal.thin.light(x="segment(c,c1)" when="next-2" animation="draw" delay=500)
       path.reveal.thin.light(x="segment(d,d1)" when="next-2" animation="draw" delay=600)
       path.reveal.thin.light(x="segment(e,e1)" when="next-2" animation="draw" delay=700)
-    
+
       circle.transparent(name="ax" x="refl.project(a)" target="circ")
       path.transparent(x="segment(a,ax)" target="d1 circ")
       path.transparent(x="segment(a1,ax)" target="d2 circ")
@@ -386,37 +389,37 @@ Prova a ruotare le forme sottostanti attorno al centro di rotazione rosso:
 
     x-geopad.sticky(width=300): svg
       circle.move.pulsate(name="rot" cx="150" cy="250" target="rot angle compass protractor")
-    
+
       circle.reveal(name="a" x="point(270,190)" when="next-0" animation="pop" target="compass")
       circle(name="b" x="point(280,110)" hidden)
       circle(name="c" x="point(210,80)" hidden)
       circle(name="d" x="point(190,170)" hidden)
       circle(name="e" x="point(220,200)" hidden)
-    
+
       circle.reveal(name="a1" x="a.rotate(-ang/18*pi,rot)" when="next-2" animation="pop" target="a1 compass")
       circle(name="b1" x="b.rotate(-ang/18*pi,rot)" hidden)
       circle(name="c1" x="c.rotate(-ang/18*pi,rot)" hidden)
       circle(name="d1" x="d.rotate(-ang/18*pi,rot)" hidden)
       circle(name="e1" x="e.rotate(-ang/18*pi,rot)" hidden)
-    
+
       path.fill.green(x="polygon(a,b,c,d,e)")
       path.fill.reveal.green1(x="polygon(a1,b1,c1,d1,e1)" when="next-4")
-    
+
       path.transparent.light.fill(x="arc(rot,a.rotate(pi,rot),pi)" target="protractor")
       path.reveal.light.fill(x="angle(a1,rot,a)" when="next-1" target="angle protractor")
-    
+
       path.reveal(x="segment(a,rot)" when="next-0" animation="draw" delay=500 target="angle compass protractor")
       path.reveal.thin.light(x="segment(rot,b)" when="next-3" animation="draw" delay=400)
       path.reveal.thin.light(x="segment(rot,c)" when="next-3" animation="draw" delay=500)
       path.reveal.thin.light(x="segment(rot,d)" when="next-3" animation="draw" delay=600)
       path.reveal.thin.light(x="segment(rot,e)" when="next-3" animation="draw" delay=700)
-    
+
       path.reveal(x="ray(rot,a1)" when="next-1" animation="draw" delay=500 target="angle l2")
       path.reveal.thin.light(x="segment(rot,b1)" when="next-3" animation="draw" delay=800)
       path.reveal.thin.light(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
       path.reveal.thin.light(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
       path.reveal.thin.light(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
-    
+
       path.transparent(x="segment(rot,a1)" target="compass protractor")
       path.transparent(x="circle(rot,distance(rot,a))" target="compass")
 
@@ -610,15 +613,15 @@ Ad esempio, "25352" e "ANNA" hanno entrambi letto lo stesso da dietro a davanti.
       input(type="text")
       span.check(when="p1")
       input(type="text")
-      span.check(when="p2") 
+      span.check(when="p2")
 
 ---
 > id: palindromes-1
 
 Se ignoriamo gli spazi e la punteggiatura, anche le brevi frasi sottostanti hanno una simmetria riflessiva. Puoi venire con il tuo?
 
-{.text-center} Mai pari o dispari.  
-Una [[noce]] per un barattolo di tonno.  
+{.text-center} Mai pari o dispari.
+Una [[noce]] per un barattolo di tonno.
 Yo, banana [[ragazzo]]!
 
 {.reveal(when="blank-0 blank-1")} Ma i Palindromi non sono solo divertenti, ma in realtà hanno un'importanza pratica. Alcuni anni fa, gli scienziati hanno scoperto che parti del nostro [DNA](gloss:dna) sono palindromiche. Ciò lo rende più resistente alle mutazioni o ai danni, poiché esiste una seconda copia di backup di ogni pezzo.
@@ -636,7 +639,7 @@ Una forma ha [__simmetria rotazionale__](gloss:rotational-symmetry) se sembra la
 
     include svg/snowflake.svg
 
-::: 
+:::
 
 ---
 > id: rotational-symmetry-1
@@ -661,7 +664,7 @@ Trova l'ordine e l'angolo di rotazione, per ognuna di queste forme:
 
 {.caption} Ordine [[8]], angolo [[45]] °
 
-::: 
+:::
 
 ---
 > id: rotational-symmetry-2
@@ -738,7 +741,7 @@ Hai già mostrato sopra che un quadrato ha [[4]] assi di riflessione.
 
 {.reveal(when="blank-1 blank-2 blank-3" delay=1000)} In totale, abbiamo trovato [[8]] diverse "simmetrie del quadrato".
 
-::: 
+:::
 
 ---
 > id: add-symmetries
@@ -765,7 +768,7 @@ Ora possiamo davvero iniziare a fare un po 'di aritmetica con queste simmetrie. 
       mo =
       span.sym-sum.pending(tabindex=0): img.cube.ani-sym(src="images/cube-4.svg" width=54 height=54)
 
-::: 
+:::
 
 ---
 > id: calculator
@@ -786,7 +789,7 @@ Ogni volta che aggiungi due simmetrie di un quadrato, tu prendine uno nuovo. Ecc
       .button(tabindex=0) + #[img.cube(src="images/cube-4.svg" width=40 height=40)]
       .button(tabindex=0) + #[img.cube(src="images/cube-5.svg" width=40 height=40)]
       .button(tabindex=0) + #[img.cube(src="images/cube-6.svg" width=40 height=40)]
-      .button(tabindex=0) + #[img.cube(src="images/cube-7.svg" width=40 height=40)] 
+      .button(tabindex=0) + #[img.cube(src="images/cube-7.svg" width=40 height=40)]
 
 ---
 > id: symmetry-arithmetic
@@ -796,7 +799,7 @@ Passa un po 'di tempo a giocare con il calcolatore di simmetria e prova a trovar
 * L'aggiunta di due rotazioni darà sempre a [[una rotazione|a reflection]] (o identità).
 * L'aggiunta di due riflessioni darà sempre a [[una rotazione|a reflection]] (o identità).
 * L'aggiunta delle stesse due simmetrie nell'ordine opposto [[a volte dà un risultato|always gives a different|always gives the same]] diverso.
-* L'aggiunta dell'identità [[non fa nulla|returns a reflection|returns the opposite]]. 
+* L'aggiunta dell'identità [[non fa nulla|returns a reflection|returns the opposite]].
 
 ---
 > id: group-axioms
@@ -806,23 +809,23 @@ Potresti aver già capito che l'aggiunta di __{.orange} simmetrie__ è in realt�
     ol.proof
       li.r
         | Adding two #[strong.orange symmetries]/#[strong.green integers] always gives another #[strong.orange symmetry]/#[strong.green integer]:
-        .text-center.axiom 
+        .text-center.axiom
           img.cube(src="images/cube-2.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-6.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-4.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 12
           mo +
           mn 7
           mo =
           mn 19
         .next-step Continue
-    
+
       li.r.reveal(when="next-0")
         span.md Adding #[strong.orange symmetries]/#[strong.green integers] is [associative](gloss:associative):
-        .text-center.axiom 
+        .text-center.axiom
           mfenced
             img.cube(src="images/cube-1.svg" width=32 height=32)
             mo +
@@ -845,22 +848,22 @@ Potresti aver già capito che l'aggiunta di __{.orange} simmetrie__ è in realt�
           mo +
           mfenced #[mn 2]#[mo +]#[mn 5]
         .next-step Continue
-    
+
       li.r.reveal(when="next-1")
         | Every #[strong.orange symmetry]/#[strong.green integer] has an #[strong inverse], another #[strong.orange symmetry]/#[strong.green integer] which, when added, gives the identity:
-        .text-center.axiom 
+        .text-center.axiom
           img.cube(src="images/cube-1.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-3.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-0.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 4
           mo +
           mn –4
           mo(value="=") =
           mn 0
-        .next-step Continue 
+        .next-step Continue
 
 ---
 > id: groups-1
@@ -885,7 +888,7 @@ Ad esempio, i gruppi di simmetria di molecole diverse possono aiutare gli scienz
 
 ### Gruppi di sfondi
 
-Nelle [sezioni precedenti](/course/transformations/symmetry) abbiamo visto due diversi tipi di simmetria corrispondenti a due diverse trasformazioni: rotazioni e riflessioni. Ma esiste anche una simmetria per il terzo tipo di trasformazione rigida: [[traduzioni|spins|flips]]. 
+Nelle [sezioni precedenti](/course/transformations/symmetry) abbiamo visto due diversi tipi di simmetria corrispondenti a due diverse trasformazioni: rotazioni e riflessioni. Ma esiste anche una simmetria per il terzo tipo di trasformazione rigida: [[traduzioni|spins|flips]].
 
 ---
 > id: wallpaper-groups-1
@@ -990,7 +993,7 @@ Si scopre che, mentre ci sono infiniti schemi possibili, tutti hanno uno dei sol
         p.caption <strong>Type P31M</strong><br>Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Type P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations 
+        p.caption <strong>Type P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
         p.caption <strong>Type CMM</strong><br>Perpendicular reflections, rotations of order 2, translations

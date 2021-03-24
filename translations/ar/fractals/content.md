@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
 
 عند النظر حول الطبيعة ، ربما لاحظت نباتات معقدة مثل هذه:
 

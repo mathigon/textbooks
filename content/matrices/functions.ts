@@ -4,12 +4,12 @@
 // =============================================================================
 
 
-/// <reference types="THREE"/>
 import {wait} from '@mathigon/core';
 import {Matrix} from '@mathigon/fermat';
 import {Angle, ORIGIN, Point} from '@mathigon/euclid';
 import {ElementView, ScreenEvent, svgPointerPosn} from '@mathigon/boost';
-import {Geopad, Step} from '../shared/types';
+import {Step} from '@mathigon/studio';
+import {Geopad} from '../shared/types';
 
 
 export function rocket($step: Step) {

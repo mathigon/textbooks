@@ -8,7 +8,7 @@ angles-repeat: Prima! Versuche nun, einige der Ecken des Vierecks zu verschieben
 not-a-diagonal: Das ist keine Diagonale des Vierecks.
 not-a-diagonal-1: Das ist keine Diagonale des Parallelogramms.
 
-not-concave-1: Dreiecke können nie konkav sein: Alle ihre Winkel sind kleiner als 180°.
+not-concave-1: "Dreiecke können nie konkav sein: Alle ihre Winkel sind kleiner als 180°."
 not-concave-2: Dieses Vieleck ist konvex - alle Winkel sind kleiner als 180°.
 not-concave-3: Dieses Vieleck ist konvex - alle Diagonalen liegen innerhalb des Vielecks, und alle Winkel sind kleiner als 180°.
 
@@ -19,5 +19,5 @@ not-regular-3: Das ist ein Kreis, kein Vieleck!
 parall-error-1: Das ist nicht wahr - die Winkel können beliebig groß sein, solange sie sich zu 360° addieren.
 parall-error-2: Das stimmt, wenn das Paralellogramm auch eine Raute ist, aber nicht für _jedes_ Parallelogramm.
 parall-error-3: Das ist korrekt, wenn das Parallelogramm zufällig ein Rechteck ist, aber nicht für _jedes_ Parallelogramm.
-parall-error-4: Nein: benachbarte Seiten in einem Parallelogramm müssen nicht die gleiche Länge haben.
+parall-error-4: "Nein: benachbarte Seiten in einem Parallelogramm müssen nicht die gleiche Länge haben."
 

@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: u2vwpDVj5rU
+> color: "#F97E08"
+> level: Intermediate
+> next: fractals
 > translated: auto
 
 Muitas profissões que usam matemática estão interessadas em um aspecto específico - _encontrar padrões_ e ser capaz de prever o futuro. Aqui estão alguns exemplos:
@@ -929,24 +933,24 @@ Imagine que você recebeu um par de coelhos bebê, um macho e uma fêmea. São c
             polygon(points="129 386 121 366 129 371 137 366 129 386")
             polygon(points="399 386 391 366 399 371 407 366 399 386")
             polygon(points="579 386 571 366 579 371 587 366 579 386")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
@@ -955,14 +959,14 @@ Imagine que você recebeu um par de coelhos bebê, um macho e uma fêmea. São c
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
-    
+
           .n(style="top: 0%") 1
           .n(style="top: 15%") 1
           .n(style="top: 32%") 2
           .n(style="top: 49%") 3
           .n(style="top: 66%") 5
           .n(style="top: 84%") 8
-    
+
       .legend(slot="legend") In the first month, the rabbits are very small and can’t do much – but they grow very quickly.
       .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
       .legend(slot="legend") … and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
@@ -1066,7 +1070,7 @@ Claro, isso não é apenas uma coincidência. Há uma razão importante pela qua
 
 ::: column(width=320)
 
-    x-select.segmented   
+    x-select.segmented
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1203,7 +1207,7 @@ Mova o controle deslizante à direita para visualizar como uma planta cresce. Ob
       while i < 40
         path(d="M166,158A20,20,0,0,1,150,150a20,20,0,0,1,32,0A20,20,0,0,1,166,158Z")
         - i += 1
-    
+
     x-slider(steps=39 speed=0.5)
 
 :::
@@ -1379,7 +1383,7 @@ Para determinar se um número é [primo](gloss:prime), precisamos encontrar todo
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
     - total = function(a) { return a.reduce((a, c) => a + c, 0); }
-    
+
     table.grid.perfect-table
       tr
         td: strong Number
@@ -1593,7 +1597,7 @@ Abaixo, você pode ver uma pirâmide numérica criada usando um padrão simples:
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid(style="width: 560px")
       - var i = 0;
       while i < 13
@@ -1650,7 +1654,7 @@ Nas seções anteriores, você viu inúmeras sequências matemáticas diferentes
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid.sums(style="width: 760px")
       - var i = 0;
       while i < 17
@@ -1738,7 +1742,7 @@ Alguns padrões no triângulo de Pascal não são tão fáceis de detectar. No d
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid#pascal-select(style="width: 340px")
       - var i = 0;
       while i < 8
@@ -1760,7 +1764,7 @@ A coloração manual de cada célula leva muito tempo, mas aqui você pode ver o
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid.small(style="width: 760px")
       - var i = 0;
       while i < 25

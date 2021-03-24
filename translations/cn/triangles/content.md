@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#3566DE"
+> level: Intermediate
+> next: polyhedra
 
 ::: column.grow
 到19世纪早期，探险家们就已经发现了这个世界的大部分地区，在遥远国家之间的贸易和运输也正在蓬勃发展，而这就需要地球的 _精确地图_ 。
@@ -29,7 +32,7 @@
 {.r.reveal(when="next-0")} 登山者一般使用 _高度计_ 来测量高度，这种装置主要是利用不同高度的气压差来计算，这就需要有人真正地爬到[每座山的山顶](->.mountain-top) —— 这是一项极其困难的任务，直到一个世纪后才真正实现。
 [Continue](btn:next)
 
-{.r.reveal(when="next-1")} 
+{.r.reveal(when="next-1")}
 你也可以尝试使用相似三角形来实现，就像我们在[前面课程](/course/transformations/similarity)中做的那样，但这种方法需要知从山脚到[山顶正下方](->.mountain-base)（山顶正下方的海平面点）的[距离](->.mountain-distance)，在测量树木或建筑的时候我们可以这样做，但对于高山来说，海平面点完全隐藏在数百米的岩石之下。
 [Continue](btn:next)
 
@@ -128,7 +131,7 @@
       path.fill.red(x="angle(a1,b1,c1)")
       path(x="polygon(a1,b1,c1)")
 
-{.caption}  __直角三角形__  
+{.caption}  __直角三角形__
 有一个 [直角](gloss:right-angle)
 ::: column(width=220)
 
@@ -139,7 +142,7 @@
       path.fill.blue(x="angle(c2,b2,a2)")
       path(x="polygon(a2,b2,c2)")
 
-{.caption}  __钝角三角形__  
+{.caption}  __钝角三角形__
 有一个 [钝角](gloss:obtuse-angle)
 ::: column(width=220)
 
@@ -152,7 +155,7 @@
       path.fill.green(x="angle(c3,a3,b3)")
       path(x="polygon(a3,b3,c3)")
 
-{.caption}  __锐角三角形__  
+{.caption}  __锐角三角形__
 有 [[三个]] [锐角](gloss:acute-angle)
 :::
 
@@ -185,7 +188,7 @@
 > id: medians
 > goals: s0 s1 s2 move
 
-### 中线 
+### 中线
 
 ::: column(width=300)
 
@@ -194,13 +197,13 @@
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
       path(x="triangle(a,b,c)")
-      
+
       circle.green(name="ab" x="line(a,b).midpoint")
       circle.blue(name="ac" x="line(a,c).midpoint")
       circle.red(name="bc" x="line(b,c).midpoint" target="ratio")
-      
+
       circle.yellow.reveal(name="d" x="triangle(a,b,c).centroid" when="blank-0" animation="pop" target="ratio")
-      
+
       path.red.transparent(x="segment(a,d)" label="2" target="ratio")
       path.red.transparent(x="segment(d,bc)" label="1" target="ratio")
 
@@ -230,7 +233,7 @@ _{span.reveal(when="blank-0")}这个点叫作
     // Any straight line that goes through the centroid divides the triangle into two
     // parts that have exactly the same area. Move the [blue point](target:move) in the
     // figure on the right. The red and green areas will always have the same area.
-    
+
     // x-geopad(width=220): svg
       circle.move(name="a" cx=70 cy=50)
       circle.move(name="b" cx=60 cy=160)
@@ -238,7 +241,7 @@ _{span.reveal(when="blank-0")}这个点叫作
       circle.yellow(x="triangle(a,b,c).centroid" name="d")
       circle.move.blue.pulsate(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
       circle(hidden name="q" x="p.rotate(pi,d)")
-    
+
       path.dark(x="triangle(a,b,c)" name="t")
       path.fill.green.light(x="t.intersect(polygon(p,q,p.rotate(pi/2,q),q.rotate(-pi/2,p)))")
       path.fill.red.light(x="t.intersect(polygon(p,q,p.rotate(-pi/2,q),q.rotate(pi/2,p)))")
@@ -257,11 +260,11 @@ _{span.reveal(when="blank-0")}这个点叫作
       circle.move(name="b" cx=50 cy=250 label="B" target="b-red")
       circle.move(name="c" cx=250 cy=200 label="C" target="b-blue")
       path(x="triangle(a,b,c)")
-    
+
       circle.reveal.red(x="line(a,b).midpoint" when="blank-0")
       circle.reveal.blue(x="line(a,c).midpoint" when="blank-0")
       circle.reveal.green(x="line(b,c).midpoint" when="blank-0")
-    
+
       circle.reveal.yellow(x="triangle(a,b,c).circumcircle.c" name="d" when="s0 s1 s2" target="center")
       path.yellow(hidden x="arc(d,c,1.99*pi)" name="circumcircle")
 
@@ -299,15 +302,15 @@ _{span.reveal(when="blank-0")}这个点叫作
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250 target="b-blue")
       circle.move(name="c" cx=250 cy=200 target="b-red")
-    
+
       path.fill.light.red(x="angle(c,a,b).sup" name="xa")
       path.fill.light.blue(x="angle(a,b,c).sup" name="xb")
       path.fill.light.green(x="angle(b,c,a).sup" name="xc")
-    
+
       path(x="segment(a,b)" label="a" target="b-blue b-red")
       path(x="segment(a,c)" label="b" target="b-red")
       path(x="segment(b,c)" label="c" target="b-blue")
-    
+
       circle.reveal.yellow(x="triangle(a,b,c).incircle.c" when="s0 s1 s2" target="center")
       path.yellow(hidden x="arc(triangle(a,b,c).incircle.c,triangle(a,b,c).incircle.at(0),1.999*pi)" name="incircle")
 
@@ -353,13 +356,13 @@ _{button.next-step} 继续_
       circle(hidden x="line(a,b).project(c)" name="d")
       circle(hidden x="a.add(c).subtract(d)" name="e")
       circle(hidden x="b.add(c).subtract(d)" name="f")
-    
+
       path.fill.green.reveal(x="polygon(a,d,c)" when="next-1" target="gap")
       path.fill.green.transparent(x="polygon(a,e,c)" target="gap")
-    
+
       path.fill.yellow.reveal(x="polygon(b,d,c)" when="next-1" target="gap")
       path.fill.yellow.transparent(x="polygon(b,f,c)" target="gap")
-      
+
       path.dark(x="polygon(a,b,c)")
       path.red.reveal(x="polygon(a,b,f,e)" when="next-0" animation="draw")
       path.blue.reveal(x="segment(c,d)" label="height" when="next-0" delay="1000" target="height")
@@ -387,7 +390,7 @@ __base__, and then find the corresponding __height__, which is the line that is
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
-      
+
       path(x="triangle(a,b,c)")
       path.altitude.red(hidden x="line(a,b).perpendicular(c)")
       path.altitude.blue(hidden x="line(a,c).perpendicular(b)")
@@ -431,7 +434,7 @@ altitudes are actually just sides of the triangle.
       circle.red(name="q" x="line(a,c).midpoint")
       circle.red(name="r" x="line(b,c).midpoint")
       path(x="triangle(a,b,c)")
-      
+
       path.transparent.fill.red(x="polygon(a,p,q)" target="triangles")
       path.transparent.fill.blue(x="polygon(b,p,r)" target="triangles")
       path.transparent.fill.yellow(x="polygon(c,q,r)" target="triangles")
@@ -456,7 +459,7 @@ scale factor of `1/2`._
 the midsegments of triangles:
 
 ::: .theorem.reveal(when="blank-1")
-__Midsegment Theorem__  
+__Midsegment Theorem__
 A midsegment of a triangle is parallel to its opposite side, and exactly half
 the length of that side.
 :::
@@ -522,7 +525,7 @@ similarity and proportionality.
           path.red(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption 所有边均相等
-        
+
       div(style="width: 150px")
         .text-center: strong SAS
         x-geopad(width=150 height=120): svg
@@ -534,7 +537,7 @@ similarity and proportionality.
           path(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption 两条边及它们的#[strong 夹角]相等
-        
+
       div(style="width: 150px")
         .text-center: strong ASA
         x-geopad(width=150 height=120): svg
@@ -547,7 +550,7 @@ similarity and proportionality.
           path(x="segment(a,c)")
           path(x="segment(b,c)")
         p.caption 两个角及它们的#[strong 夹边]相等
-        
+
       div(style="width: 150px")
         .text-center: strong AAS
         x-geopad(width=150 height=120): svg
@@ -677,7 +680,7 @@ angle of 50°. SSA is not enough to confirm two triangles are congruent.
 
 ---
 
-## 毕达哥拉斯定理 
+## 毕达哥拉斯定理
 
 > id: pythagoras
 > section: pythagoras
@@ -699,11 +702,11 @@ _反之亦然：如果三角形的三条边满足 `a^2 + b^2 = c^2`，它一定�
       circle.move(name="a" cx=82 cy=160 target="hypot")
       circle.move(name="b" cx=218 cy=160 target="hypot")
       circle.move(name="c" cx=120 cy=100 project="arc(line(a,b).midpoint,a,pi).contract(0.2)")
-      
+
       path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-class="white")
       path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-class="white")
       path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-class="white")
-      
+
       path.dark(x="segment(b,c)" label="a")
       path.dark(x="segment(a,c)" label="b")
       path.dark(x="segment(a,b)" label="c" target="hypot")
@@ -730,7 +733,7 @@ _反之亦然：如果三角形的三条边满足 `a^2 + b^2 = c^2`，它一定�
     //- | `green(h^2) + blue(1^2)` | `red(6^2)`          |
     //- |          `=> green(h^2)` | `= blank(35)`       |
     //- |            `=> green(h)` | `= sqrt(35) = 5.92` |
-    
+
     table.eqn-system
       tr
         <td><mrow class="b m-green"><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow class="b m-blue"><msup><mn>1</mn><mn>2</mn></msup></mrow></td>
@@ -779,30 +782,30 @@ _反之亦然：如果三角形的三条边满足 `a^2 + b^2 = c^2`，它一定�
         circle(hidden name="b" x="point(220,20)")
         circle(hidden name="c" x="point(220,220)")
         circle(hidden name="d" x="point(20,220)")
-    
+
         circle.move(name="e" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
         circle(name="f" hidden x="b.add(e.subtract(a).flip)")
         circle(name="g" hidden x="c.subtract(e.subtract(a))")
         circle(name="h" hidden x="d.subtract(e.subtract(a).flip)")
-    
+
         path.thin(x="segment(a,e)" label="a")
         path.thin(x="segment(e,b)" label="b")
         path.thin(x="segment(a,h)" label="b")
         path.thin(x="segment(h,d)" label="a")
         path.thin(x="segment(e,h)" label="c")
         path.thin(x="segment(e,f).shift(0,x*distance(h,a))" label="c")
-    
+
         path.square(x="polygon(a,b,c,d)")
         path.tri(x="polygon(a,e,h)" target="triangle")
         path.tri(x="polygon(c,g,f).shift(-x*distance(d,g),-x*distance(b,f))" target="triangle")
         path.tri(x="polygon(d,h,g).shift(x*distance(e,a),0)" target="triangle")
         path.tri(x="polygon(b,f,e).shift(0,x*distance(h,a))" target="triangle")
         path.square.transparent(x="polygon(e,f,g,h)" target="square")
-    
+
       .label(style="left: 120px; top: 120px;") c²
       .label.var(style="left: ${10 + e.x/2}px; top: ${230 - e.x/2}px;") a²
       .label.var(style="left: ${110 + e.x/2}px; top: ${130 - e.x/2}px;") b²
-    
+
     x-slider(steps=100)
 
 :::
@@ -825,7 +828,7 @@ _反之亦然：如果三角形的三条边满足 `a^2 + b^2 = c^2`，它一定�
     //- |         `(a+b)^2` | `= 4 xx 1/2ab + c^2` |
     //- | `a^2 + 2ab + b^2` | `= 2ab + c^2`        |
     //- |       `a^2 + b^2` | `= c^2`              |
-    
+
     table.eqn-system.reveal(when="blank-3 blank-4")
       tr
         <td><msup><mfenced><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></mfenced><mn>2</mn></msup></td>
@@ -842,19 +845,19 @@ _{span.qed}_
 
 ::: column(width=240)
 
-    x-geopad(width=240): svg        
+    x-geopad(width=240): svg
       circle.move(name="e1" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
       circle(name="f1" hidden x="b.add(e1.subtract(a).flip)")
       circle(name="g1" hidden x="c.subtract(e1.subtract(a))")
       circle(name="h1" hidden x="d.subtract(e1.subtract(a).flip)")
-    
+
       path.thin(x="segment(a,e1)" label="a")
       path.thin(x="segment(e1,b)" label="b")
       path.thin(x="segment(a,h1)" label="b")
       path.thin(x="segment(h1,d)" label="a")
       path.thin(x="segment(e1,h1)" label="c")
       path.thin(x="segment(e1,f1).shift(0,x*distance(h,a))" label="c")
-    
+
       path.square(x="polygon(e1,f1,g1,h1)" target="square")
       path.tri(x="polygon(a,e1,h1)" target="triangle")
       path.tri(x="polygon(c,g1,f1)" target="triangle")
@@ -888,7 +891,7 @@ _{span.next-step} 继续_
       path.red(x="segment(B1,C1)" label="a" target="a ac")
       path.dark(x="segment(X1,C1)")
       path.blue(x="segment(X1,B1)" label="x" target="x xa")
-    
+
       circle(name="A2" hidden cx=220 cy=100)
       circle(name="X2" hidden cx=170 cy=100)
       circle(name="C2" hidden cx=170 cy=20)
@@ -898,7 +901,7 @@ _{span.next-step} 继续_
       path.yellow(x="segment(A2,C2)" label="b" target="b bc")
       path.dark(x="segment(X2,C2)")
       path.green(x="segment(X2,A2)" label="y" target="y yb")
-    
+
       circle(name="A" hidden x="point(220,100)")
       circle(name="B" hidden x="point(40,100)")
       circle(name="C" hidden x="point(170,20)")
@@ -1000,7 +1003,7 @@ _{span.next-step} 继续_
 这个方法适用于计算 _任意_ 两点之间的距离：
 
 ::: .theorem
-__距离公式__  
+__距离公式__
 如果给定两个坐标点 (`x_1`,`y_1`) 和 (`x_2`,`y_2`)，它们之间的距离是
 
 {.text-center} `d^2=(x_2−x_1)^2+(y_2−y_1)^2`
@@ -1079,21 +1082,21 @@ Proof by constructing angle bisector and using SAS result.
     // {.todo} The angles between the base and the congruent sides are
     // called base angles. The angle made by the two legs of the isosceles triangle is
     // called the vertex angle.
-    // 
+    //
     // {.todo} Base Angles Theorem: The base angles of an isosceles triangle are congruent.
     // To prove the Base Angles Theorem, we will construct the angle bisector through
     // the vertex angle of an isosceles triangle.
-    // 
+    //
     // {.todo} Isosceles Triangle Theorem: The angle bisector of the vertex angle in an
     // isosceles triangle is also the perpendicular bisector to the base.
-    // 
+    //
     // {.todo} The converses of the Base Angles Theorem and the Isosceles Triangle Theorem are
     // both true. If two angles in a triangle are congruent, then
     // the opposite sides are also congruent. And if the perpendicular bisector of the base of
     // an isosceles triangle is also the angle bisector of the vertex angle.
-    // 
+    //
     // {.todo} In other words, if △ABC is isosceles, AD⊥CB and CD≅DB, then ∠CAD≅∠BAD.
-    // 
+    //
     // {.todo} Find the Height of an Isosceles Triangle
     // One way to use The Pythagorean Theorem is to identify the heights in isosceles
     // triangles so you can calculate the area.
@@ -1112,7 +1115,7 @@ equilateral triangle using straight-edge and compass.
     // we know that angles opposite congruent sides in a triangle are also congruent.
     // In an equilateral triangle, all of the sides are congruent, so all of the angles
     // must also be congruent.
-    // 
+    //
     // Since we know that the sum of all three angles is 180°, every individual angle
     // in an equilateral triangle must be [[60]]°.
 
@@ -1256,7 +1259,7 @@ triangles:
     // a right triangle. Normally, if you are given an angle and a side of a right
     // triangle, you can find the other two sides, using sine, cosine or tangent. With
     // the inverse trig ratios, you can find the angle measure, given two sides.
-    
+
     // On most scientific and graphing calculators, the buttons look like
     // [SIN−1],[COS−1], and [TAN−1]. Typically, you might have to hit a shift
     // button to access these functions.
@@ -1272,7 +1275,7 @@ triangles:
 
 ::: column.grow
 ::: .theorem
-__正弦定理__  
+__正弦定理__
 对于具有边 _a_， _b_ 和 _c_ 以及角_A_， _B_ 和 _C_ 的三角形来说，满足：
 
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
@@ -1284,18 +1287,18 @@ __正弦定理__
 
 ::: column.grow
 ::: .theorem
-__余弦定理__  
+__余弦定理__
 对于具有边 _a_， _b_ 和 _c_ 以及角_A_， _B_ 和 _C_ 的三角形来说，满足：
 
-{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`  
-`b^2 = c^2 + a^2 - 2ca cos(B)`  
+{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`
+`b^2 = c^2 + a^2 - 2ca cos(B)`
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
     // {.todo} Even though there are three formulas, they are all very similar. First, notice
     // that whatever angle is in the cosine, the opposite side is on the other side of
     // the equal sign.
-    // 
+    //
     // {.todo} Use Law of Cosines when given:
     // Two sides and the included angle.
     // All three sides.
@@ -1324,13 +1327,13 @@ __余弦定理__
         circle(name="b" x="point(185, 230)" target="points")
         circle(name="x" x="point(573, 7)" target="")
         circle(name="y" x="point(573, 230)" target="")
-    
+
         path.fill.red(x="angle(x,a,b)" label="23°" target="angles ang" size=60)
         path.fill.blue(x="angle(x,b,y)" label="29°" target="ang1" size=50)
         path.fill(name="angle-b" x="angle(b,x,a)" label="β" target="b angles" size=100)
         path.fill.green(name="angle-a" x="angle(a,b,x)" label="α" target="a angles" size=25)
         path(x="angle(b,y,x)")
-    
+
         path.yellow(x="segment(a,b)" target="base right" label="5km")
         path.yellow(x="segment(b,x)" target="")
         path.yellow(name="side-d" x="segment(a,x)" target="d right" label="d")
@@ -1370,7 +1373,7 @@ __余弦定理__
             mrow
               mo sin
               mn.pill.step-target(data-to="b") 6°
-    
+
       tr.reveal(when="blank-3 blank-4" delay=1000)
         td
         td
@@ -1398,7 +1401,7 @@ __余弦定理__
           mn.pill.step-target.red(data-to="ang") 23°
           mo ×
           mn.pill.step-target.yellow(data-to="d") 23
-    
+
       tr.reveal(when="blank-6 blank-7" delay=1000)
         td
         td

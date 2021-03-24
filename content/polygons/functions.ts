@@ -5,7 +5,8 @@
 
 
 import {Point} from '@mathigon/euclid';
-import {Geopad, Step} from '../shared/types';
+import {Step} from '@mathigon/studio';
+import {Geopad} from '../shared/types';
 
 
 function round(a: Point, b: Point) {

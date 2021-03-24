@@ -7,7 +7,8 @@
 import {delay, isOneOf} from '@mathigon/core';
 import {isInteger, round} from '@mathigon/fermat';
 import {Circle, intersections, isCircle, isLineLike, Point, Segment} from '@mathigon/euclid';
-import {Geopad, GeoPath, Path, Slider, Step} from '../shared/types';
+import {Slider, Step} from '@mathigon/studio';
+import {Geopad, GeoPath, Path} from '../shared/types';
 
 
 // -----------------------------------------------------------------------------

@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: u2vwpDVj5rU
+> color: "#F97E08"
+> level: Intermediate
+> next: fractals
 
 Muchas profesiones que usan las matemáticas están interesadas en un aspecto específico: _encontrar patrones_ y poder predecir el futuro. Aquí mostramos algunos ejemplos:
 
