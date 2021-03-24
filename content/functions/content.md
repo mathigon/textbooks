@@ -868,7 +868,7 @@ This graph is interesting because between [[0]] and about  [[5.7+-0.2]] seconds,
 
 ### Systems of Functions/ Simultaneous Functions
 
-Let’s head over to the track for the women’s 800 meter final. Looks like we arrive in time to catch the last 200 meters of the race. [3:22-4:00](https://www.youtube.com/watch?v=h83yS9gPkA8)
+Let’s head over to the track for the women’s 800 meter final. Looks like we arrive in time to catch the last 200 meters of the race:
 
     x-video-graph#running-video-graph
         x-video(src="/resources/functions/images/olympic_running.mp4" poster="images/olympic_running_poster.png" width=640 height=360 controls credit="©RA")
