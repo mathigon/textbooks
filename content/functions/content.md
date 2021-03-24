@@ -960,9 +960,6 @@ So Rogers could overtake Boufaarirane in the last 200 meters of the race because
 
 In this system of functions, we can see who is ahead at any given time during the race. For example, we write f(t) > u(t) when [[Boufaarirane is ahead of Rogers | Rogers is ahead of Boufaarirane]].
 
-    // NOTES
-    // Used both < and > to show both. Would it be better for students to see a "readable" pattern than matches the sentences, which would only use > ?
-
 
     x-card-graph#runner-card-graph
         div
