@@ -879,15 +879,15 @@ Let’s head over to the track for the women’s 800 meter final. Looks like we 
             div.runner-name-key
                 div
                     img(src="/resources/functions/images/tracey_face.png")
-                    p.red Adelle Tracey
+                    div.red Adelle Tracey
                     div g(t)
                 div
                     img(src="/resources/functions/images/boufaarirane_face.png")
-                    p.green Laila Boufaarirane
+                    div.green Laila Boufaarirane
                     div f(t)
                 div
                     img(src="/resources/functions/images/rogers_face.png")
-                    p.blue Raevyn Rogers
+                    div.blue Raevyn Rogers
                     div u(t)
             x-coordinate-system(width=400 height=320 x-axis="80,130,10" y-axis="550,800,50" axis-names="Time,Distance")
 
@@ -955,18 +955,29 @@ So Rogers could overtake Boufaarirane in the last 200 meters of the race because
 
 ---
 
+> id: running-cards
+> goals: card0 card1 card2 card3 card4
+
 In this system of functions, we can see who is ahead at any given time during the race. For example, we write f(t) > u(t) when [[Boufaarirane is ahead of Rogers | Rogers is ahead of Boufaarirane]].
 
     // NOTES
     // Used both < and > to show both. Would it be better for students to see a "readable" pattern than matches the sentences, which would only use > ?
 
-| Students label with the given contextual statement cards. | | This information appears after the functions notation card is correctly placed. | | Extra information. Not cards. |
-| :---: | | :---: | | :---: |
-| Boufaarirane is ahead of Rogers. | | f(t) > u(t) | | 90.63=<t<96.382 |
-| Rogers is ahead of Boufaarirane. | | f(t) < u(t) | | 96.382<t≤120.2 |
-| Tracey is ahead of Rogers. | | u(t) < g(t) | | 90.63≤t<109.998 |
-| Tracey is ahead of Boufaarirane. | | g(t) > f(t) | |   |
-| Rogers is ahead of Tracey. | | g(t) < u(t) | | 109.998<t≤120.2 |
+
+    x-card-graph#runner-card-graph
+        div
+            div
+                div.red Tracey
+                div g(t)
+            div
+                div.green Boufaarirane
+                div f(t)
+            div
+                div.blue Rogers
+                div u(t)
+        x-coordinate-system(width=600 height=400 x-axis="90,130,10" y-axis="600,800,50" axis-names="Time,Distance" crosshairs="no")
+
+---
 
 When we talk about one function being greater than another, we are using the [[output | input]] values to identify a range of [[input | output]] values. For example, we see Tracey is ahead of Boufaarirane for this entire stretch of the race. This is expressed as [[g(t) > f(t) | g(t) < f(t)]]. We can think of this as “the range of time when Tracey has run a farther distance than Boufaarirane”. That range is [[90.63+-0.2]] ≤ t ≤ [[121]]. We can do a similar analysis for each pair of functions.
 

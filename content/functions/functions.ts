@@ -491,3 +491,41 @@ export function runningGraph($step: Step) {
 
 export function runningSlopeRogers($step: Step) {
 }
+
+export function runningCards($step: Step) {
+  const cards = [{
+    description: 'Boufaarirane is ahead of Rogers.',
+    label: 'f(t) > u(t)',
+    point: new Point(93, 650),
+    domain: [90.5, 96.4],
+  },{
+    description: 'Rogers is ahead of Boufaarirane.',
+    label: 'f(t) < u(t)',
+    point: new Point(110, 750),
+    domain: [96.5, 126],
+  },{
+    description: 'Tracey is ahead of Rogers.',
+    label: 'u(t) < g(t)',
+    point: new Point(100, 700),
+    domain: [90.5, 110],
+  },{
+    description: 'Tracey is ahead of Boufaarirane.',
+    label: 'g(t) > f(t)',
+    point: new Point(88, 675),
+    domain: [90.5, 126],
+  },{
+    description: 'Rogers is ahead of Tracey.',
+    label: 'g(t) < u(t)',
+    point: new Point(115, 790),
+    domain: [110, 121],
+  }];
+
+  const $cardGraph = $step.$('x-card-graph') as CardGraph;
+  $cardGraph.bindStep($step);
+  $cardGraph.setPlots([
+    {function: (t: number) => 6.58545*t+3.16101, color: 'red'},
+    {function: (t: number) => 5.71105*t+80.4071, color: 'green'},
+    {function: (t: number) => 7.10179*t-53.6354, color: 'blue'},
+  ]);
+  $cardGraph.setCards(cards);
+}
