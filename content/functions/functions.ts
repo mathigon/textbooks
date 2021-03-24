@@ -453,11 +453,6 @@ export function diveGraph($step: Step) {
       point: new Point(0.34, 10.7),
       hint: 'This is the maximal turning point.',
     },{
-      description: 'Ren somersaults midair',
-      imagePath: 'dive_card_3.png',
-      point: new Point(1.3, 6.082),
-      hint: 'This is the descent segment.',
-    },{
       description: 'Ren hits the water',
       imagePath: 'dive_card_4.png',
       point: new Point(1.98, 0),
@@ -479,6 +474,30 @@ export function diveGraph($step: Step) {
     $cardGraph.setPlots([{function: renDive, color: 'red'}]);
     $cardGraph.setCards(cards);
   }
+}
+
+export function diveIntervals($step: Step) {
+  const cards = [{
+    description: 'f(t) is Increasing',
+    label: '0<t<0.3',
+    point: new Point(0, 8),
+    domain: [0, 0.33],
+  },{
+    description: 'f(t) is Decreasing',
+    label: '0.3<t<3.3',
+    point: new Point(0, -4),
+    domain: [0.33, 3.3],
+  },{
+    description: 'f(t) is Increasing',
+    label: '3.3<t<4.3',
+    point: new Point(0, 4),
+    domain: [3.3, 4.3],
+  }];
+
+  const $cardGraph = $step.$('x-card-graph') as CardGraph;
+  $cardGraph.bindStep($step);
+  $cardGraph.setPlots([{function: renDive, color: 'red'}]);
+  $cardGraph.setCards(cards);
 }
 
 export function runningGraph($step: Step) {
