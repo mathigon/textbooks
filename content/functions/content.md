@@ -801,23 +801,6 @@ Recall [__range__](gloss:range) is the set of all heights Ren travels. We can us
 
 Similarly, the maximum d(x) gives us the upper bound on the range. Therefore, the range is [[-7.6±0.5]] ≤ d(x) ≤ [[10.8±]].
 
----
-
-Let’s head to the beach for the gold medal men’s volleyball match between Brazil and Italy. The teams engage in a beautiful [volley](https://www.youtube.com/watch?v=k4ux0jau_ws) (5:56-6:01). As you watch the video, notice the shape of the graph. Is it what you expect?
-
-    // NOTES
-    // Students watch the video of the volley and the graph appears simultaneously.
-    // I'm thinking students can use estimates for y-values. The times should be pretty close to the video, but the heights should just be correct relative to each other (e.g. the second relative max is higher than the first and lower than the third). We can have the net height on the graph for reference.
-    // We make this graph, add discussion.
-
-[sketch](https://drive.google.com/file/d/1mrT-d6Xwunc6I6hC7y2U_38bWR1y-lF5/view?usp=sharing)
-
-The graph shows the volley as a function of [[time | distance | height]]. That means for at each moment, the ball has a position marked by [[(time, height) | (height, time)]]. For example, the ball is [[9+-.5 ]] feet high at 2 seconds. We can find information about _when_ certain things happen.
-
-For instance, the ball spends about [[3.5+-.5]] seconds above the net. Brazil scores a point after about [[4.75+-.5]] seconds. Italy places a beautiful set at about [[3]] seconds. The ball reaches its maximum height, about [[11+-1]] feet, off of the set.
-
-Notice that the graph does not show when the ball changes direction. This could happen if the graph were a function of [[distance | height | time]].  Such a graph would tell us _where_ certain things happen. We can’t tell by looking at this graph which side of the net the ball is on.
-
 ___
 
 ### Creating Graphs
