@@ -976,9 +976,9 @@ In this system of functions, we can see who is ahead at any given time during th
 
 ---
 
-When we talk about one function being greater than another, we are using the [[output | input]] values to identify a range of [[input | output]] values. For example, we see Tracey is ahead of Boufaarirane for this entire stretch of the race. This is expressed as [[g(t) > f(t) | g(t) < f(t)]]. We can think of this as “the range of time when Tracey has run a farther distance than Boufaarirane”. That range is [[90.63+-0.2]] ≤ t ≤ [[121]]. We can do a similar analysis for each pair of functions.
+When we talk about one function being greater than another, we are using the [[output | input]] values to identify a range of [[input | output]] values. For example, we see Tracey is ahead of Boufaarirane for this entire stretch of the race. This is expressed as [[g(t) > f(t) | g(t) < f(t)]]. We can think of this as “the range of time when Tracey has run a farther distance than Boufaarirane”. That range is [[90.5±1]] ≤ t ≤ [[121±1]]. We can do a similar analysis for each pair of functions.
 
-Looking at the three functions on the coordinate plane, we can see that the relationship between u(t) and g(t) changes from g(t)>u(t) to u(t)>g(t) when [[Rogers passes Tracey | Tracey passes Rogers | Rogers passes Boufaarirane | Boufaarirane passes Rogers]]. This means that the upper bound on g(t)>u(t) is where g(t) [[= | < | >]] u(t), which is t=[[110+-0.2]] seconds. This t-value, 110 seconds, is also the lower bound on u(t)>g(t).
+Looking at the three functions on the coordinate plane, we can see that the relationship between u(t) and g(t) changes from g(t)>u(t) to u(t)>g(t) when [[Rogers passes Tracey | Tracey passes Rogers | Rogers passes Boufaarirane | Boufaarirane passes Rogers]]. This means that the upper bound on g(t)>u(t) is where g(t) [[= | < | >]] u(t), which is t=[[110±2]] seconds. This t-value is also the lower bound on u(t)>g(t).
 
 ----
 
