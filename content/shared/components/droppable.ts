@@ -8,25 +8,35 @@ type HoverData =
 
 
 interface DraggableOptions {
-  moveX?: boolean;  // Whether it is draggable along the x-axis.
-  moveY?: boolean;  // Whether it is draggable along the y-axis.
-  snap?: number;  // Interval for snapping (in px)
-  useTransform?: boolean;  //  Whether to use CSS transforms rather than `left` and `right`.
-  margin?: number;  // Margin within the `$parent` element.
-  round?: ((p: Point) => Point);  // Custom rounding function.
-  width?: number;  //  Override `$parent` width.
-  height?: number;  // Override `$parent` height.
+  /** Whether it is draggable along the x-axis. */
+  moveX?: boolean;
+  /** Whether it is draggable along the y-axis. */
+  moveY?: boolean;
+  /** Interval for snapping (in px) */
+  snap?: number;
+  /** Whether to use CSS transforms rather than `left` and `right`. */
+  useTransform?: boolean;
+  /** Margin within the `$parent` element. */
+  margin?: number;
+  /** Custom rounding function. */
+  round?: ((p: Point) => Point);
+  /** Override `$parent` width. */
+  width?: number;
+  /** Override `$parent` height. */
+  height?: number;
+  /** Whether to reset position when dropped outside of a target */
   resetOnMiss?: boolean;
+  /** Elements that the Draggable instance can be dropped onto */
   $targets?: ElementView[];
 }
 
 /**
  * A draggable and droppable HTML element.
- * @emits {void} Draggable#start when the user starts dragging this element.
- * @emits {[Point, Point]} ($el position, pointer position) Draggable#drag while the user is dragging this element.
- * @emits {void} Draggable#click when the user clicks on the this element.
- * @emits {void} Draggable#end after the user stops dragging this element.
- * @emits {Point} Draggable#move When the position of this element changes.
+ * @emits Draggable#start - when the user starts dragging this element.
+ * @emits Draggable#drag {elemPos: Point, pointerPos: Point} positionData - while the user is dragging this element.
+ * @emits Draggable#click - when the user clicks on this element.
+ * @emits Draggable#end - after the user stops dragging this element.
+ * @emits Draggable#move {Point} position - When the position of this element changes.
  * @emits Draggable#enter-target {ElementView} $target - Fires when the pointer has entered the bounds of a 'target' element while dragging
  * @emits Draggable#exit-target {ElementView} $target - Fires when the pointer has exited the bounds of a 'target' element while dragging
  * @emits Draggable#dropped-target {ElementView} $target - Fires when the user releases the pointer while over a 'target' element
@@ -57,6 +67,11 @@ export class Draggable extends EventTarget {
       start: () => {
         if (this.disabled) return;
         this.startPos = this.position;
+        /**
+         * Fires when the user starts dragging this element.
+         *
+         * @event Draggable#start
+         */
         this.trigger('start');
         $html.addClass('grabbing');
       },
@@ -64,6 +79,12 @@ export class Draggable extends EventTarget {
         if (this.disabled) return;
         this.setPosition(this.startPos.x + posn.x - start.x,
             this.startPos.y + posn.y - start.y);
+        /**
+         * Fires while the user is dragging this element.
+         *
+         * @event Draggable#drag
+         * @type {elemPos: Point, pointerPos: Point} positionData - The positions of the Draggable and the pointer
+         */
         this.trigger('drag', {elemPos: this.position, pointerPos: posn});
 
         let overTarget = false;
@@ -99,7 +120,19 @@ export class Draggable extends EventTarget {
       },
       end: (last, start) => {
         if (this.disabled) return;
-        this.trigger(last.equals(start) ? 'click' : 'end');
+        /**
+         * Fires when the user clicks on this element.
+         *
+         * @event Draggable#click
+         */
+        if (last.equals(start)) this.trigger('click');
+        /**
+         * Fires after the user stops dragging this element.
+         *
+         * @event Draggable#end
+         */
+        else this.trigger('end');
+
         $html.removeClass('grabbing');
 
         let droppedOn: ElementView | undefined;
@@ -186,6 +219,12 @@ export class Draggable extends EventTarget {
       if (this.options.moveY) this.$el.css('top', p.y + 'px');
     }
 
+    /**
+     * Fires when the position of this element changes.
+     *
+     * @event Draggable#move
+     * @type {Point} position - The position of this element
+     */
     this.trigger('move', p);
   }
 
