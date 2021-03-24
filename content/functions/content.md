@@ -780,16 +780,12 @@ The minimum is Ren’s lowest height. In this graph her lowest point is underwat
 ---
 
 > id: dive-intervals
+> goals: card0 card1 card2
 
 Intuitively, we understand that the graph is increasing when Ren’s body is moving [[up | down]]. The notation for increasing is different from turning points and intercepts. Since the graph increases for more than one point, we represent the section of the graph using an [__interval__](gloss:interval). The interval specifies the [[t | d(t)]] values corresponding to Ren’s increasing height. Note that there are many different ways to write intervals; in this chapter, we will write them as [__inequalities__](gloss:inequality). We'll break this graph into three intervals:
 
-    // NOTES
-    // Multiple selector (shuffle order)
-
-| **During the interval…** | **d(t) is…** |
-| `0.3<t<3.3` | [[Decreasing\|Increasing]] |
-| `3.3<t<4.3` | [[Increasing\|Decreasing]] |
-| `0<t<0.3` | [[Increasing\|Decreasing]] |
+    x-card-graph
+        x-coordinate-system(width=500 height=300 x-axis="0,4.3,1" y-axis="-8.5,12.5,4" axis-names="Time,Height" crosshairs="no")
 
 Notice the [[maximum | minimum]] is where Ren’s path changes from increasing to decreasing heights. The [[minimum | maximum]] is where Ren’s path changes from decreasing to increasing.
 
