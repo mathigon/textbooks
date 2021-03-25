@@ -810,14 +810,6 @@ ___
 
 ### Creating Graphs
 
-    // NOTES
-    // From David re: diving graph. Capturing idea.
-    // Great graph. I really like how you included the part under the water. That's nice to show. I wonder if before showing the graph, students could draw the shape they think the graph would be? Maybe have an image of a diving board at the 10 meter mark and they use like a "scribble" or "line" tool to draw in the line they think the graph will be. Then, when they are done, the graph you have gets superimposed on their graph and their line fades away.
-    // Create videos similar to the ball bouncing activity here: https://curriculum.illustrativemathematics.org/HS/teachers/1/4/8/index.html
-    // Students place a point on the coordinate plane and label it with a key feature name. The might also be able to place approximate points on the internals of increase and decrease. Students click “graph”, or some such button, to see a line connect the points according to their labels. Once students see the graph, they can choose to edit or submit for checking.
-    // Alternate interactive ideas
-    // Give components of this similar to the piecing it together activity. [This is the same idea](https://www.google.com/url?q=https://curriculum.illustrativemathematics.org/HS/teachers/1/4/12/index.html&sa=D&ust=1595249230079000&usg=AFQjCNFlsjZxKJ9PGN9cluHSZm-OAFBaOA) used in the next chapter for building the tri graph.
-
 The women’s pole vault is just about to start. You will be drawing the graph for this event.
 
     // NOTES
