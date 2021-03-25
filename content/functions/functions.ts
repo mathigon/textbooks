@@ -474,7 +474,7 @@ export function diveIntervals($step: Step) {
     description: 'f(t) is Increasing',
     label: '0<t<0.3',
     point: new Point(0, 8),
-    domain: [0, 0.33],
+    domain: [0.01, 0.33],
   },{
     description: 'f(t) is Decreasing',
     label: '0.3<t<3.3',
