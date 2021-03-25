@@ -10,6 +10,8 @@ import '../shared/components/video-graph';
 import { VideoGraph } from '../shared/components/video-graph';
 import '../shared/components/card-graph';
 import { CardGraph } from '../shared/components/card-graph';
+import '../shared/components/draw-graph';
+import { DrawGraph } from '../shared/components/draw-graph';
 import {Point} from '@mathigon/euclid';
 import {CoordinateSystem, Geopad, GeoPoint, Slider, Step, Video} from '../shared/types';
 import { $N, animate, Draggable, ease, ElementView, hover, KEY_CODES, pointerOver, SVGParentView, svgPointerPosn } from '@mathigon/boost';
@@ -491,6 +493,12 @@ export function diveIntervals($step: Step) {
   $cardGraph.bindStep($step);
   $cardGraph.setPlots([{function: renDive, color: 'red'}]);
   $cardGraph.setCards(cards);
+}
+
+export function poleVault($step: Step) {
+  const $drawGraph = $step.$('x-draw-graph')! as DrawGraph;
+
+  $drawGraph.bindStep($step);
 }
 
 export function runningGraph($step: Step) {

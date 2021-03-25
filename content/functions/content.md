@@ -841,6 +841,9 @@ We like to start graphing using a table. Fill in the table below. Note the landi
 
 Plot these values on the coordinate plane.
 
+    x-draw-graph
+        x-coordinate-system(width=600 height=200 x-axis="0,45.5,5" y-axis="0,5.1,1" axis-names="Distance,Height" crosshairs="yes")
+
 [sketch](https://drive.google.com/file/d/1iywz65_-0ySs5Sd6rSxWF9RN_zun7pLc/view?usp=sharing)
 
 This graph is interesting because between [[0]] and about  [[5.7+-0.2]] seconds, the graph is constant. Stefanidi’s maximum height is [[4.85]] meters. The last point on the graph is at ([[8]], [[0.81]]) because she lands on the pit, not the ground.
