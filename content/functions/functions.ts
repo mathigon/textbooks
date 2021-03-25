@@ -6,17 +6,20 @@
 
 import { Step, Video, Slider } from '@mathigon/studio';
 import { Point, SimplePoint } from '@mathigon/euclid';
-import { CoordinateSystem, Geopad, GeoPoint } from '../shared/types';
 import { $N, animate, Draggable, ease, ElementView, hover, KEY_CODES, pointerOver, SVGView, SVGParentView, svgPointerPosn } from '@mathigon/boost';
 import { last, stringDistance } from '@mathigon/core';
 import { lerp } from '@mathigon/fermat';
 import { shuffle } from '@mathigon/fermat/src/random';
+import { CoordinateSystem, Geopad, GeoPoint } from '../shared/types';
 
 import '../shared/components/burst';
 import { Burst } from '../shared/components/burst';
 
 import '../shared/components/card-graph';
 import { CardGraph } from '../shared/components/card-graph';
+
+import '../shared/components/draw-graph';
+import { DrawGraph } from '../shared/components/draw-graph';
 
 import '../shared/components/function-machine';
 import { FunctionMachine } from '../shared/components/function-machine';
@@ -498,6 +501,12 @@ export function diveIntervals($step: Step) {
   $cardGraph.bindStep($step);
   $cardGraph.setPlots([{function: renDive, color: 'red'}]);
   $cardGraph.setCards(cards);
+}
+
+export function poleVault($step: Step) {
+  const $drawGraph = $step.$('x-draw-graph')! as DrawGraph;
+
+  $drawGraph.bindStep($step);
 }
 
 export function runningGraph($step: Step) {
