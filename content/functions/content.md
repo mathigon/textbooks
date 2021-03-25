@@ -808,38 +808,22 @@ ___
 
 ### Creating Graphs
 
-The women’s pole vault is just about to start. You will be drawing the graph for this event.
+The women’s pole vault is just about to start. Ekaterini Stefanidi takes her position:
 
-    // NOTES
-    // Allow scrubbing in video. Superimpose timer on the frames to make graphing easier. [1:00 - 1:15](````````````````https://www.youtube.com/watch?v=PPaUgaBor2I````````````````)
+    x-video#pole-vault-video(src="/resources/functions/images/olympic_pole_vault.mp4" poster="images/olympic_pole_vault_poster.png" width=640 height=360 controls credit="©Olympics")
 
-We like to start graphing using a table. Fill in the table below. Note the landing pad, called the pit, is 0.81 meters tall.
 
-    // NOTES
-    // Students fill in the missing values.
+You will be drawing the graph for this event. Here is everything you need to know:
 
-| Time (s) | | Height (m) |
-| :------: | | :--------: |
-| 0 | | 0 |
-| 1 | | 0 |
-| 4 | | [[0]] |
-| 5.5 | | [[0]] |
-| 6 | | [[1.5+-.2]] |
-| 6.5 | | [[3.2+-.2]] |
-| 7 | | [[4.85]] |
-| 7.5 | | [[3.2+-.2]] |
-| 8 | | [[0.81]] |
+- The runway is 40 meters long
+- The landing pad is 5x5x0.8 meters
+- Ekaterini's vault height is 4.85 meters
 
-    x-video(src="/resources/functions/images/olympic_pole_vault.mp4" poster="images/olympic_pole_vault_poster.png" width=640 height=360 controls credit="©Olympics")
-
-Plot these values on the coordinate plane.
+Click on the graph to place points!
 
     x-draw-graph
-        x-coordinate-system(width=600 height=200 x-axis="0,45.5,5" y-axis="0,5.1,1" axis-names="Distance,Height" crosshairs="yes")
-
-[sketch](https://drive.google.com/file/d/1iywz65_-0ySs5Sd6rSxWF9RN_zun7pLc/view?usp=sharing)
-
-This graph is interesting because between [[0]] and about  [[5.7+-0.2]] seconds, the graph is constant. Stefanidi’s maximum height is [[4.85]] meters. The last point on the graph is at ([[8]], [[0.81]]) because she lands on the pit, not the ground.
+        x-coordinate-system(width=600 height=200 x-axis="0,45.5,5" y-axis="0,5.1,1" axis-names="Distance,Height" crosshairs="no")
+        button.btn Submit
 
 ---
 
