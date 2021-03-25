@@ -40,7 +40,7 @@ interface DraggableOptions {
  * @emits Draggable#move {Point} position - When the position of this element changes.
  * @emits Draggable#enter-target {ElementView} $target - Fires when the pointer has entered the bounds of a 'target' element while dragging
  * @emits Draggable#exit-target {ElementView} $target - Fires when the pointer has exited the bounds of a 'target' element while dragging
- * @emits Draggable#dropped-target {ElementView} $target - Fires when the user releases the pointer while over a 'target' element
+ * @emits Draggable#dropped-target {$el: ElementView, index: number} target - Fires when the user releases the pointer while over a 'target' element
  * @emits Draggable#dropped-non-target - Fires when the user releases the pointer while not over a 'target' element
  */
 export class Draggable extends EventTarget {
@@ -48,7 +48,7 @@ export class Draggable extends EventTarget {
   protected areaBounds?: {topLeft: Point, bottomRight: Point};
   protected over: HoverData;
   protected startPos = new Point(0, 0);
-  protected $targets: ElementView[] | undefined;
+  protected targets: {$el: ElementView, index: number}[] | undefined;
   position = new Point(0, 0);
   disabled = false;
   width = 0;
@@ -60,7 +60,7 @@ export class Draggable extends EventTarget {
     this.over = {tag: 'NonTarget'};
 
     this.options = applyDefaults(options, {moveX: true, moveY: true});
-    this.$targets = this.options.$targets;
+    this.targets = this.options.$targets?.map(($targetEl, index) => ({$el: $targetEl, index}));
     if (options.$parent != undefined) this.setDimensions(options.$parent);
 
     slide($el, {
@@ -89,19 +89,19 @@ export class Draggable extends EventTarget {
 
         let overTarget = false;
         const prevTarget = this.over.tag == 'NonTarget' ? undefined : this.over.$el;
-        if (this.$targets != undefined) {
-          for (const $target of this.$targets) {
-            if ($target.boundsRect.contains(posn)) {
+        if (this.targets != undefined) {
+          for (const target of this.targets) {
+            if (target.$el.boundsRect.contains(posn)) {
               overTarget = true;
-              if (prevTarget != $target) {
+              if (prevTarget != target.$el) {
                 /**
                  * Fires when the pointer has entered the bounds of a 'target' element while dragging
                  *
                  * @event Draggable#enter-target
                  * @type {ElementView} $target - The element whose bounds the pointer has entered
                  */
-                this.trigger('enter-target', $target);
-                this.over = {tag: 'Target', $el: $target};
+                this.trigger('enter-target', target.$el);
+                this.over = {tag: 'Target', $el: target.$el};
               }
               break;
             }
@@ -137,17 +137,17 @@ export class Draggable extends EventTarget {
 
         let droppedOn: ElementView | undefined;
 
-        if (this.$targets != undefined) {
-          for (const $target of this.$targets) {
-            if ($target.boundsRect.contains(last)) {
+        if (this.targets != undefined) {
+          for (const target of this.targets) {
+            if (target.$el.boundsRect.contains(last)) {
               /**
                * Fires when the user releases the pointer while over a 'target' element
                *
                * @event Draggable#dropped-target
                * @type {ElementView} $target - The element the pointer was released over
                */
-              this.trigger('dropped-target', $target);
-              droppedOn = $target;
+              this.trigger('dropped-target', target);
+              droppedOn = target.$el;
               break;
             }
           }
@@ -241,6 +241,6 @@ export class Draggable extends EventTarget {
   }
 
   removeTarget($target: ElementView) {
-    this.$targets = this.$targets?.filter($t => $t != $target);
+    this.targets = this.targets?.filter(t => t.$el != $target);
   }
 }

@@ -1,7 +1,7 @@
 import {$N, ElementView, observe, SVGParentView, SVGView} from '@mathigon/boost';
 import {Point, Rectangle} from '@mathigon/euclid';
+import {Step} from '@mathigon/studio';
 import {Draggable} from '../../shared/components/droppable';
-import {Step} from '../../shared/types';
 
 const DOTS = [
   [],  // 0
@@ -93,10 +93,10 @@ export function setupDieFacesPlacement($step: Step, netPositions: NetPosition[])
     const $f = face.$el.$('svg')!.copy(true, false);
     $f.setAttr('width', sideSize);
     $f.setAttr('height', sideSize);
-    face.on('dropped-target', ($target: ElementView) => {
-      $target.removeClass('over');
+    face.on('dropped-target', (target: {$el: ElementView}) => {
+      target.$el.removeClass('over');
       const faceValue = index + 1;
-      const targetIndex = parseInt($target.attr('side-index'));
+      const targetIndex = parseInt(target.$el.attr('side-index'));
       const oppositeIndex = netPositions[targetIndex].opposite;
       if (
         (
@@ -105,14 +105,14 @@ export function setupDieFacesPlacement($step: Step, netPositions: NetPosition[])
         ) ||
         facesPlaced[oppositeIndex] + faceValue == 7
       ) {
-        $target.addClass('placed');
-        $target.parent?.prepend($f);
+        target.$el.addClass('placed');
+        target.$el.parent?.prepend($f);
         facesPlaced[targetIndex] = faceValue;
         placedCount.c++;
         face.$el.remove();
         $step.addHint('correct');
         for (const f of faces) {
-          f.removeTarget($target);
+          f.removeTarget(target.$el);
         }
       } else {
         $step.addHint('incorrect');
