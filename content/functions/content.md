@@ -838,6 +838,8 @@ We like to start graphing using a table. Fill in the table below. Note the landi
 | 7.5 | | [[3.2+-.2]] |
 | 8 | | [[0.81]] |
 
+    x-video(src="/resources/functions/images/olympic_pole_vault.mp4" poster="images/olympic_pole_vault_poster.png" width=640 height=360 controls credit="©Olympics")
+
 Plot these values on the coordinate plane.
 
 [sketch](https://drive.google.com/file/d/1iywz65_-0ySs5Sd6rSxWF9RN_zun7pLc/view?usp=sharing)
