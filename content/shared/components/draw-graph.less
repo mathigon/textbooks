@@ -1,6 +1,21 @@
 x-draw-graph {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .crosshair {
+        pointer-events: none;
+    }
+
+    x-coordinate-system {
+        margin: 20px auto 0 auto;
+    }
+
+    >button {
+        margin: 20px auto 2em auto;
+    }
+
+    .overlay>.plot {
         pointer-events: none;
     }
 }

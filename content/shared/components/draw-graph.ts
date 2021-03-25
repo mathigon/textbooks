@@ -23,6 +23,7 @@ type PlotPoint = {
 export class DrawGraph extends CustomElementView {
     private $graph!: CoordinateSystem;
     private $step?: Step;
+    private yFunction?: (x: number) => number;
 
     private points: PlotPoint[] = [];
 
@@ -82,7 +83,7 @@ export class DrawGraph extends CustomElementView {
                 const clickPosition = bindViewportPoint(p);
                 const clickPoint = this.$graph.toPlotCoords(clickPosition);
 
-                const $point = $N('circle', {transform: `translate(${clickPosition.x}, ${clickPosition.y})`, r: 4, class: 'plot-point'}, $plotPoints) as SVGView;
+                const $point = $N('circle', {transform: `translate(${clickPosition.x}, ${clickPosition.y})`, r: 6, class: 'plot-point'}, $plotPoints) as SVGView;
                 
                 const plotPoint = {
                     point: clickPoint,
@@ -143,7 +144,15 @@ export class DrawGraph extends CustomElementView {
       this.$step = $step;
     }
 
-    setFunction(yFunction: (t: number) => number) {
+    setFunction(yFunction: (x: number) => number) {
+        this.yFunction = yFunction;
         this.$graph.setFunctions(yFunction);
+
+        const $plots = this.$graph.$svg.$('.plot')!;
+        const $plot = $plots.children[0];
+        
+        const $dummyPlots = $N('g', {class: 'plot'}, this.$graph.$overlay);
+        $dummyPlots.append($plot);
+        $plot.addClass('blue');
     }
 }
