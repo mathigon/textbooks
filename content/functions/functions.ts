@@ -499,6 +499,7 @@ export function poleVault($step: Step) {
   const $drawGraph = $step.$('x-draw-graph')! as DrawGraph;
 
   $drawGraph.bindStep($step);
+  $drawGraph.setFunction((x: number) => 0.8-0.8/(1+Math.pow(Math.E, (x-38)*1))+4.05/(1+Math.pow((x-40)*0.7, 8)));
 }
 
 export function runningGraph($step: Step) {
