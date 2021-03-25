@@ -1,6 +1,6 @@
 import {$html, animate, Browser, ElementView, slide, SVGParentView} from '@mathigon/boost';
 import {applyDefaults, EventTarget} from '@mathigon/core';
-import {Point} from '@mathigon/euclid';
+import {Bounds, Point} from '@mathigon/euclid';
 
 type HoverData =
   {tag: 'Target', $el: ElementView} |
@@ -8,6 +8,7 @@ type HoverData =
 
 
 interface DraggableOptions {
+  $parent?: ElementView;
   /** Whether it is draggable along the x-axis. */
   moveX?: boolean;
   /** Whether it is draggable along the y-axis. */
@@ -44,7 +45,7 @@ interface DraggableOptions {
  */
 export class Draggable extends EventTarget {
   protected options: DraggableOptions;
-  protected areaBounds = {topLeft: new Point(0, 0), bottomRight: new Point(0, 0)};
+  protected areaBounds?: {topLeft: Point, bottomRight: Point};
   protected over: HoverData;
   protected startPos = new Point(0, 0);
   protected $targets: ElementView[] | undefined;
@@ -53,15 +54,14 @@ export class Draggable extends EventTarget {
   width = 0;
   height = 0;
 
-  constructor(readonly $el: ElementView, $parent: ElementView,
-      options: DraggableOptions = {}) {
+  constructor(readonly $el: ElementView, options: DraggableOptions = {}) {
     super();
 
     this.over = {tag: 'NonTarget'};
 
     this.options = applyDefaults(options, {moveX: true, moveY: true});
     this.$targets = this.options.$targets;
-    this.setDimensions($parent);
+    if (options.$parent != undefined) this.setDimensions(options.$parent);
 
     slide($el, {
       start: () => {
@@ -169,7 +169,7 @@ export class Draggable extends EventTarget {
     Browser.onResize(() => {
       const oldWidth = this.width;
       const oldHeight = this.height;
-      this.setDimensions($parent);
+      if (options.$parent != undefined) this.setDimensions(options.$parent);
       this.setPosition(this.position.x * this.width / oldWidth || 0,
           this.position.y * this.height / oldHeight || 0);
     });
@@ -193,19 +193,23 @@ export class Draggable extends EventTarget {
 
   /** Sets the position of the element. */
   setPosition(x: number, y: number) {
-    // const m = this.options.margin || 0;
+    const m = this.options.margin || 0;
 
-    let p = new Point(this.options.moveX ? x : 0, this.options.moveY ? y : 0)
-        /* .clamp(
-            new Bounds(
-                this.areaBounds.topLeft.x,
-                this.areaBounds.bottomRight.x,
-                this.areaBounds.topLeft.y,
-                this.areaBounds.bottomRight.y
-            ),
-            m
-        )*/
-        .round(this.options.snap || 1);
+    let p = new Point(this.options.moveX ? x : 0, this.options.moveY ? y : 0);
+
+    if (this.areaBounds != undefined) {
+      p = p.clamp(
+          new Bounds(
+              this.areaBounds.topLeft.x,
+              this.areaBounds.bottomRight.x,
+              this.areaBounds.topLeft.y,
+              this.areaBounds.bottomRight.y
+          ),
+          m
+      );
+    }
+
+    p = p.round(this.options.snap || 1);
 
     if (this.options.round) p = this.options.round(p);
 
