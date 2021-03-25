@@ -807,6 +807,7 @@ Similarly, the maximum d(x) gives us the upper bound on the range. Therefore, th
 ___
 
 > id: pole-vault
+> goals: submit
 
 ### Creating Graphs
 
