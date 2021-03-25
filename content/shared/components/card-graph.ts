@@ -4,13 +4,11 @@
 // =============================================================================
 
 
-import {$N, CustomElementView, ElementView, register, SVGParentView, SVGView, Draggable, animate, ease, hover} from '@mathigon/boost';
+import {$N, CustomElementView, ElementView, register, SVGView, Draggable, animate, ease, hover} from '@mathigon/boost';
 import { Point } from '@mathigon/euclid';
 import {lerp} from '@mathigon/fermat';
 import { shuffle } from '@mathigon/fermat/src/random';
 import { CoordinateSystem, Step } from '../types';
-
-const avatarSize = 32;
 
 type Plot = {
     color: string,
@@ -177,7 +175,7 @@ export class CardGraph extends CustomElementView {
 
               if (card.hint)
                 this.$step.addHint(card.hint);
-                
+
               this.$step.score('card'+i);
             }
   
