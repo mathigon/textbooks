@@ -16,13 +16,13 @@ import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../shared/constants';
 import {Solid, Vector} from '../shared/components/webgl/solid';
 import {layers, templeParts} from './data/voxel-data';
 import {pyramid1, triangularPrism, truncatedIcosahedron} from './data/net-data';
+import {NetPosition, setupDieFacesPlacement} from './components/util';
 
 import './components/voxel-painter';
 import './components/net';
 import '../shared/components/webgl/solid';
 import '../shared/components/binary-swipe/binary-swipe';
 import '../polyhedra/components/polyhedron';
-import {NetPosition, setupDieFacesPlacement} from './components/util';
 
 export function polyParts($step: Step) {
   // TODO Update .addPoint/Line/Label to accept THREE Vector3s, to avoid all these .toArray() functions.
