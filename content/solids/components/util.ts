@@ -84,11 +84,11 @@ export function setupDieFacesPlacement($step: Step, netPositions: NetPosition[])
   }
   const faces = $faces.map($face => new Draggable($face, {$targets, useTransform: true, resetOnMiss: true}));
   for (const [index, face] of faces.entries()) {
-    face.on('enter-target', ($target: ElementView) => {
-      $target.addClass('over');
+    face.on('enter-target', (target: {$el: ElementView}) => {
+      target.$el.addClass('over');
     });
-    face.on('exit-target', ($target: ElementView) => {
-      $target.removeClass('over');
+    face.on('exit-target', (target: {$el: ElementView}) => {
+      target.$el.removeClass('over');
     });
     const $f = face.$el.$('svg')!.copy(true, false);
     $f.setAttr('width', sideSize);
