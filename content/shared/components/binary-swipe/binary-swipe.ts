@@ -13,6 +13,11 @@ import template from './binary-swipe.pug';
 const RESISTANCE = 180000;
 const MIN_MOVE = 100;
 
+const colorClasses = [
+  'c-red', 'c-orange', 'c-yellow', 'c-lime',
+  'c-green', 'c-teal', 'c-blue', 'c-purple'
+];
+
 
 function cardOffset(posn: Point, start: Point): [Point, number] {
   const change = posn.subtract(start);
@@ -37,7 +42,10 @@ export class BinarySwipe extends CustomElementView {
     $aTitle.text = this.attr('a-title');
     $bTitle.text = this.attr('b-title');
 
-    const $cards = this.$$('.card').reverse().map($c => {
+    const $cards = this.$$('.card').reverse().map(($c, index) => {
+      if (colorClasses.every(color => !$c.hasClass(color))) {
+        $c.addClass(colorClasses[index % colorClasses.length]);
+      }
       const $wrap = $N('div', {class: 'card-wrap'}, $mainStack);
       $wrap.append($c);
       $wrap._data.solution = $c.attr('solution');

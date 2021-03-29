@@ -1943,16 +1943,28 @@ A cube has [[6]] square faces which are all _congruent_ to each other. A **Cube*
 A triangular prism has [[2]] triangular bases and [[3]] triangular lateral faces.
 
 ---
+> id: nets-properties
+> goals: all-swiped
 
 Nets of the polyhedra can give you a lot of information about the faces and the other characteristics of the solid.  Properties of the nets can help us to compare and contrast the prisms and pyramids.
 
-Drag the properties to the part of the [Venn diagram](gloss:venn-diagram) which it is associated with.
+Swipe each property to the kind of net which it is associated with.
 
-If it matches both, place it in the intersection of the circles.
+    // INTERACTIVE-3.12
 
-    // COMMENT: Drag & Drop Activity:
+::: x-binary-swipe(a-title="Nets of prisms" b-title="Nets of pyramids")
 
-    figure: x-img(src="images/ch3_sorting.svg" width="600" height="432")
+{div.card(solution="a")} They may have rectangles as the lateral faces
+
+{div.card(solution="b")} They have all triangles as the lateral faces
+
+{div.card(solution="b")} They have one polygon that may not be a triangle
+
+{div.card(solution="a")} They have a pair of polygons that may not be rectangles
+
+{div.card(solution="b")} Their number of lateral faces is the same as the number of sides of their base
+
+:::
 
 ---
 
