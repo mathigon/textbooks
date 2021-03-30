@@ -1358,14 +1358,17 @@ The [net](gloss:net) of the hexagonal prism can provide a better view of all the
 A hexagonal prism has  [[12]] _{span.comments(text="(gloss:vertex)I you provided a glossary definition draft in a previous chapter. If so, no need to rewrite it there.")}**[vertices](pill:blue)**_ and [[18]] _{span.comments(text="(gloss:polyhedron-edge)")}**[edges](pill:green)**_
 
 ---
+> id: prisms-tiling
 
 **Why do bees choose hexagonal prisms over the other prisms?**
 
     // COMMENT: An Interactive where the students can tile different prisms  to see which ones can tile
     // INTERACTIVE-3.04
-    figure: x-img(src="images/ch3_50.png" width="600" height="482")
+    x-polypad
 
 _{span.comments(text="students can choose a prism and try to tile - triangular prisms give a check mark, pentagonal give a cross and so on...")}_
+
+---
 
 Hexagonal prisms can be aligned next to each other without any gaps or overlaps but also so can [cuboids](pill:blue) and [triangular prisms](pill:blue).
 

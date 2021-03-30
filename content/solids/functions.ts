@@ -322,6 +322,25 @@ export function honeycombIntro($step: Step) {
   });
 }
 
+const triPrism1: [number, number][] = [
+  [0, 116], [100, 116.6], [50, 30], [180, 0], [230, 86.6]
+];
+
+const triPrism2: [number, number][] = [
+  [50, 116.6], [100, 30], [0, 30], [130, 0], [230, 0], [180, 86.6]
+];
+
+function coordTuplesToString(coords: [number, number][]) {
+  return coords.map(coord => coord.join(' ')).join(',');
+}
+
+export function prismsTiling($step: Step) {
+  const $polypad = $step.$('x-polypad') as Polypad;
+  console.log(coordTuplesToString(triPrism1));
+  $polypad.newTile('polygon', coordTuplesToString(triPrism1));
+  console.log($polypad);
+}
+
 export function netsProperties($step: Step) {
   const $swipe = $step.$('x-binary-swipe') as BinarySwipe;
   $swipe.on('complete', () => $step.score('all-swiped'));
