@@ -807,7 +807,7 @@ Similarly, the maximum d(x) gives us the upper bound on the range. Therefore, th
 ___
 
 > id: pole-vault
-> goals: submit
+> goals: submitCorrect
 
 ### Creating Graphs
 
@@ -826,7 +826,10 @@ Click on the graph to place points!
 
     x-draw-graph
         x-coordinate-system(width=600 height=200 x-axis="0,45.5,5" y-axis="0,5.1,1" axis-names="Distance,Height" crosshairs="no")
-        button.btn Submit
+        div.scoring-row
+            button.btn Submit
+            div.judge-text
+            div.scores
 
 ---
 
