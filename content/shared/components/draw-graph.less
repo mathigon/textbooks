@@ -15,7 +15,62 @@ x-draw-graph {
         margin: 20px auto 2em auto;
     }
 
-    .overlay>.plot {
+    .overlay {
+        .plot {
+            >.solution {
+                pointer-events: none;
+                transition: 1s;
+            }
+            >.solution[show=true] {
+                opacity: 1;
+            }
+            >.solution[show=false] {
+                opacity: 0;
+            }
+        }
+    }
+
+    .labels {
         pointer-events: none;
+    }
+
+    .scoring-row {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+
+        .judge-text {
+            margin-left: 20px;
+        }
+
+        .scores {
+            display: flex;
+
+            >div {
+                display: flex;
+                margin-left: 20px;
+                justify-content: center;
+                background-color: @light-grey;
+
+                min-width: 50px;
+                min-height: 50px;
+
+                div {
+                    align-self: center;
+                }
+            }
+        }
+
+        .scores[show=true] {
+            >div {
+                transform: rotateY(0);
+            }
+        }
+
+        .scores[show=false] {
+            >div {
+                transform: rotateY(90deg);
+            }
+        }
     }
 }
