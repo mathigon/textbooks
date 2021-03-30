@@ -948,20 +948,12 @@ Looking at the three functions on the coordinate plane, we can see that the rela
 
 ----
 
+> id: fn-sketch
+
 Finally, here is one more function that represents a sport. Can you think of what it is, and write a short story that explains the different features of the chart?
 
 TODO: draw chart
 << free-form text input >>
-
-
---------------------------------------------------------------------------------
-
-
-## Piecewise Functions
-
-> section: piecewise
-> sectionStatus: dev
-> id: fn-sketch
 
 Draw a Function:
 
@@ -971,6 +963,15 @@ Draw a Function:
 Type some text:
 
     x-free-text(placeholder="Your answer…")
+
+--------------------------------------------------------------------------------
+
+
+## Piecewise Functions
+
+> section: piecewise
+> sectionStatus: dev
+
 
     // NOTE
     // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
