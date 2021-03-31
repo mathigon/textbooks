@@ -14,18 +14,42 @@ x-draw-graph {
     >button {
         margin: 20px auto 2em auto;
     }
+    
+    .axes {
+        pointer-events: none;
+    }
+
+    .plot.solution {
+        pointer-events: none;
+        transition: 1s;
+    }
+    .plot.solution[show=true] {
+        opacity: 1;
+    }
+    .plot.solution[show=false] {
+        opacity: 0;
+    }
 
     .overlay {
-        .plot {
-            >.solution {
-                pointer-events: none;
-                transition: 1s;
+        .hints {
+            pointer-events: none;
+            
+            >* {
+                transition: 2s;
+                opacity: 0;
             }
-            >.solution[show=true] {
+            >*[show=true] {
                 opacity: 1;
             }
-            >.solution[show=false] {
-                opacity: 0;
+
+            .hint-line {
+                stroke-width: 2px;
+                stroke: @blue;
+                stroke-dasharray: 6 4;
+            }
+
+            .hint-circle {
+              fill: @blue;
             }
         }
     }

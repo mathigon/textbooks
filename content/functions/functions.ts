@@ -505,19 +505,45 @@ export function diveIntervals($step: Step) {
 
 export function poleVault($step: Step) {
   const $drawGraph = $step.$('x-draw-graph')! as DrawGraph;
+  const $graph = $drawGraph.$('x-coordinate-system')! as CoordinateSystem;
+
+  const pad1 = $graph.toViewportCoords(new Point(40, 0));
+  const pad2 = $graph.toViewportCoords(new Point(45, 0.8));
+  $N('rect', {id: 'hint-landing', x: pad1.x, y: pad2.y, width: pad2.x-pad1.x, height: pad1.y-pad2.y}, $drawGraph.$('.hints')!);
+  
+  const bar1 = $graph.toViewportCoords(new Point(40, 0));
+  const bar2 = $graph.toViewportCoords(new Point(40, 4.5));
+  $N('line', {id: 'hint-bar', x1: bar1.x, x2: bar2.x, y1: bar1.y, y2: bar2.y}, $drawGraph.$('.hints')!);
 
   $drawGraph.bindStep($step);
   $drawGraph.setSolutionFunction((x: number) => 0.8-0.8/(1+Math.pow(Math.E, (x-38)*1))+4.05/(1+Math.pow((x-40), 8)));
   $drawGraph.setHintPoints([{
-    x: 40,
-    hint: 'That peak doesn’t look quite right!'
+    x: 0.01,
+    hint: 'Ekaterina starts at y=0m',
+    drawCircle: true,
   },{
-    x: 37,
-    hint: 'Try adjusting the takeoff'
+    x: 39.5,
+    hint: 'The 4.85m crossbar ends the 40m runway',
+    relevanceThresholdDistance: 5,
+    id: 'hint-bar',
   },{
-    x: 41,
-    hint: 'Try adjusting the landing!'
-  }])
+    x: 38.2,
+    hint: 'Ekaterina shoots upward at about 38m',
+    drawCircle: true,
+  },{
+    x: 40.5,
+    hint: 'Ekaterina arches over the 4.85m crossbar',
+    drawCircle: true,
+  },{
+    x: 35,
+    hint: 'The pole strikes just past 35m',
+    drawLine: true,
+  },{
+    x: 41.5,
+    hint: 'The landing pad is 0.8m high',
+    id: 'hint-landing',
+    drawLine: true,
+  }]);
 }
 
 export function runningGraph($step: Step) {

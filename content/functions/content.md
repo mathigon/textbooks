@@ -818,11 +818,12 @@ The women’s pole vault is just about to start. Ekaterini Stefanidi takes her p
 
 You will be drawing the graph for this event. Here is everything you need to know:
 
-- The runway is 40 meters long
-- The landing pad is 5x5x0.8 meters
-- Ekaterini's vault height is 4.85 meters
+- The runway is 40m long
+- The pole is 4.45m long
+- The landing pad is 5x5x0.8m
+- The bar is 4.85m high
 
-Click on the graph to place points!
+Good luck!
 
     x-draw-graph
         x-coordinate-system(width=600 height=200 x-axis="0,45.5,5" y-axis="0,5.1,1" axis-names="Distance,Height" crosshairs="no")
