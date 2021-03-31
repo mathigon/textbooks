@@ -508,6 +508,16 @@ export function poleVault($step: Step) {
 
   $drawGraph.bindStep($step);
   $drawGraph.setSolutionFunction((x: number) => 0.8-0.8/(1+Math.pow(Math.E, (x-38)*1))+4.05/(1+Math.pow((x-40), 8)));
+  $drawGraph.setHintPoints([{
+    x: 40,
+    hint: 'That peak doesn’t look quite right!'
+  },{
+    x: 37,
+    hint: 'Try adjusting the takeoff'
+  },{
+    x: 41,
+    hint: 'Try adjusting the landing!'
+  }])
 }
 
 export function runningGraph($step: Step) {
