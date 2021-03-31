@@ -3,11 +3,10 @@
 // (c) Mathigon
 // =============================================================================
 
-import {$N, CustomElementView, ElementView, register, SVGParentView, SVGView, Draggable, animate, ease, hover, svgPointerPosn, slide} from '@mathigon/boost';
+import {$N, CustomElementView, ElementView, register, SVGView, slide} from '@mathigon/boost';
 import { last } from '@mathigon/core';
 import { Point } from '@mathigon/euclid';
 import {clamp, lerp} from '@mathigon/fermat';
-import { shuffle } from '@mathigon/fermat/src/random';
 import { CoordinateSystem, Step } from '../types';
 
 // TODO: Import d3 helpers for curvy paths
@@ -19,6 +18,12 @@ type PlotPoint = {
     $el: SVGView,
 }
 
+type HintPoint = {
+    x: number,
+    hint: string,
+    relevanceThresholdDistance?: number,
+}
+
 function unlerp(a: number, b: number, t: number) {
     return (t-a)/(b-a);
 }
@@ -28,6 +33,7 @@ export class DrawGraph extends CustomElementView {
     private $graph!: CoordinateSystem;
 
     private points: PlotPoint[] = [];
+    private hintPoints: HintPoint[] = [];
     private scored: boolean = false;
 
     private $step?: Step;
@@ -68,9 +74,7 @@ export class DrawGraph extends CustomElementView {
         
         // Set up submit button
         this.$submitButton = this.$('button')!;
-        this.$submitButton.on('click', () => {
-            this.submit();
-        });
+        this.$submitButton.on('click', this.submit.bind(this));
         this.refreshSubmitButton();
 
         // Set up graph
@@ -171,10 +175,14 @@ export class DrawGraph extends CustomElementView {
         });
     }
 
-    // Requires a solid "A" to pass by default
-    bindStep($step: Step, scoreThreshold=0.92) {
+    bindStep($step: Step, scoreThreshold=0.95) {
       this.$step = $step;
+      // Requires a solid "A" to pass by default
       this.scoreThreshold = scoreThreshold;
+    }
+
+    setHintPoints(hintPoints: HintPoint[]) {
+        this.hintPoints = hintPoints;
     }
 
     setSolutionFunction(solutionFunction: (x: number) => number) {
@@ -235,8 +243,8 @@ export class DrawGraph extends CustomElementView {
         return new Point(x, y);
     }
 
-    // Sample user graph in viewport space
-    sampleUserGraphViewport(x: number) {
+    // Sample user graph in plot space
+    sampleUserGraph(x: number) {
         if (this.points.length == 0)
             return 0;
 
@@ -245,8 +253,8 @@ export class DrawGraph extends CustomElementView {
         const lastPlotPoint = this.points[this.points.length-1];
 
         // Create virtual "leading and trailing" points at beginning and end of graph
-        let leadingPoint = this.bindViewportPoint(new Point(Number.NEGATIVE_INFINITY, firstPlotPoint.position.y));
-        let trailingPoint = this.bindViewportPoint(new Point(Number.POSITIVE_INFINITY, lastPlotPoint.position.y));
+        let leadingPoint = this.bindPlotPoint(new Point(Number.NEGATIVE_INFINITY, firstPlotPoint.point.y));
+        let trailingPoint = this.bindPlotPoint(new Point(Number.POSITIVE_INFINITY, lastPlotPoint.point.y));
 
         // Ensure leading/trailing points lie outside min/max possible input x values (prevents errors when plot points lie on viewport bounds)
         leadingPoint = new Point(leadingPoint.x-1, leadingPoint.y);
@@ -262,7 +270,7 @@ export class DrawGraph extends CustomElementView {
         for (let i = 0; i < this.points.length; i++) {
             // Shift to next point pair
             pointA = pointB;
-            pointB = this.points[i].position;
+            pointB = this.points[i].point;
 
             // If x is now less than point B, x is between A and B (so we can stop)
             if (x <= pointB.x) {
@@ -273,7 +281,7 @@ export class DrawGraph extends CustomElementView {
 
         // If above loop did not establish point pair, x must be between last point and trailing point
         if (!pointsFound) {
-            pointA = lastPlotPoint.position;
+            pointA = lastPlotPoint.point;
             pointB = trailingPoint;
         }
 
@@ -284,18 +292,6 @@ export class DrawGraph extends CustomElementView {
         return lerp(pointA!.y, pointB.y, p);
     }
 
-    // Sample solution graph in viewport space
-    sampleSolutionGraphViewport(x: number) {
-        // Sample X in plot coordinates
-        const inputX = this.$graph.toPlotCoords(new Point(x, 0)).x;
-
-        // Sampled Y in plot coordinates
-        const outputY = this.solutionFunction!(inputX)
-
-        // Return sampled Y in viewport coordinates
-        return this.$graph.toViewportCoords(new Point(inputX, outputY)).y;
-    }
-
     computeError() {
         const height = this.$graph.viewportBounds.yMax;
         const width = this.$graph.viewportBounds.xMax;
@@ -304,7 +300,19 @@ export class DrawGraph extends CustomElementView {
         // (basically we are integrating here)
         let errorArea = 0;
         for (let i = 0; i < width; i++) {
-            errorArea += Math.abs(this.sampleUserGraphViewport(i)-this.sampleSolutionGraphViewport(i));
+            const x = this.$graph.toPlotCoords(new Point(i, 0)).x;
+
+            const userY = this.sampleUserGraph(x);
+            const solutionY = this.solutionFunction(x);
+
+            const userPoint = new Point(x, userY);
+            const solutionPoint = new Point(x, solutionY);
+
+            const userPosition = this.$graph.toViewportCoords(userPoint);
+            const solutionPosition = this.$graph.toViewportCoords(solutionPoint);
+
+            const error = Math.abs(userPosition.y-solutionPosition.y);
+            errorArea += error;
         }
 
         // Total viewport area in pixels
@@ -314,25 +322,103 @@ export class DrawGraph extends CustomElementView {
         return errorArea/totalArea;
     }
 
+    // Estimates closest point on the user graph to a given point
+    computeClosestUserGraphPoint(point: Point) {
+        const width = this.$graph.viewportBounds.xMax;
+
+        let minimumDistance = Number.POSITIVE_INFINITY;
+        let userGraphPosition: Point = new Point();
+
+        for (let i = 0; i < width; i++) {
+            const x = this.$graph.toPlotCoords(new Point(i, 0)).x;
+
+            const y = this.sampleUserGraph(x);
+            const p = new Point(x, y);
+
+            const v = p.subtract(point);
+            const d = v.length;
+
+            if (d < minimumDistance) {
+                minimumDistance = d;
+                userGraphPosition = p;
+            }
+        }
+
+        return userGraphPosition;
+    }
+
+    selectRelevantHint() {
+        if (this.hintPoints.length == 0)
+            return null;
+
+        const hints = this.hintPoints.map((hintPoint) => {
+            const point = new Point(hintPoint.x, this.solutionFunction(hintPoint.x));
+            const userGraphPoint = this.computeClosestUserGraphPoint(point);
+
+            const position = this.$graph.toViewportCoords(point);
+            const userGraphPosition = this.$graph.toViewportCoords(userGraphPoint);
+
+            const vector = userGraphPoint.subtract(point);
+            const distance = vector.length;
+
+            const viewportVector = userGraphPosition.subtract(position);
+            const viewportDistance = viewportVector.length;
+            
+            return {
+                hint: hintPoint.hint,
+                relevanceThresholdDistance: hintPoint.relevanceThresholdDistance || 10,
+                point,
+                userGraphPoint,
+                position,
+                userGraphPosition,
+                vector,
+                distance,
+                viewportVector,
+                viewportDistance
+            }
+        });
+
+        // Sort hints in descending order of pixel distance from user graph
+        hints.sort((a, b) => b.viewportDistance - a.viewportDistance);
+
+        // Remove any hints that are below their "relevance threshold distance"
+        const relevantHints = hints.filter((hint) => hint.relevanceThresholdDistance < hint.viewportDistance);
+
+        console.log('Sorted relevant hints:', relevantHints);
+
+        if (relevantHints.length == 0)
+            return null;
+
+        return relevantHints[0].hint;
+    }
+
     submit() {
         this.scored = true;
 
-        this.$judgeText.text = 'Judges say:'
+        this.$judgeText.text = 'Judges say:';
 
         const error = this.computeError();
         const score = Math.pow(1-error, 4);
         console.log('Drawn Graph Score:', score);
 
-        this.$solutionPlot.setAttr('show', true);
 
         if (this.$step) {
             this.$step.score('submit');
 
+            const hint = this.selectRelevantHint();
+
             if (this.scoreThreshold < score) {
+                this.$solutionPlot.setAttr('show', true);
+
                 this.$step.addHint('correct');
                 this.$step.score('submitCorrect');
             }
+            else if (hint) {
+                this.$step.addHint(hint);
+            }
             else {
+                this.$solutionPlot.setAttr('show', true);
+
                 this.$step.addHint('incorrect');
             }
         }
