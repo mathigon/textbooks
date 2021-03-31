@@ -7,6 +7,7 @@ import {$N, CustomElementView, ElementView, register, SVGView, slide} from '@mat
 import { last } from '@mathigon/core';
 import { Point } from '@mathigon/euclid';
 import {clamp, lerp} from '@mathigon/fermat';
+import { shuffle } from '@mathigon/fermat/src/random';
 import { CoordinateSystem, Step } from '../types';
 
 // TODO: Import d3 helpers for curvy paths
@@ -21,7 +22,13 @@ type PlotPoint = {
 type HintPoint = {
     x: number,
     hint: string,
+    id?: string,
     relevanceThresholdDistance?: number,
+    $el?: ElementView,
+    $g?: ElementView,
+    drawCircle?: boolean,
+    drawLine?: boolean,
+    revealed?: boolean,
 }
 
 function unlerp(a: number, b: number, t: number) {
@@ -31,16 +38,19 @@ function unlerp(a: number, b: number, t: number) {
 @register('x-draw-graph')
 export class DrawGraph extends CustomElementView {
     private $graph!: CoordinateSystem;
+    private $hints!: ElementView;
+    private $solution!: ElementView;
+    private $plot!: ElementView;
 
     private points: PlotPoint[] = [];
     private hintPoints: HintPoint[] = [];
     private scored: boolean = false;
+    private firstHint: boolean = true;
 
     private $step?: Step;
     private scoreThreshold: number = 0;
 
     private solutionFunction!: (x: number) => number;
-    private $solutionPlot!: ElementView;
 
     private $submitButton!: ElementView;
 
@@ -82,6 +92,10 @@ export class DrawGraph extends CustomElementView {
         
         const $svg = this.$graph.$svg;
         const $overlay = $svg.$('.overlay');
+        this.$plot = this.$('.plot')!;
+        this.$solution = $N('g', {class: 'solution'});
+        this.$('.grid')!.insertAfter(this.$solution);
+        this.$hints = $N('g', {class: 'hints'}, $overlay);
         const $plotPath = $N('path', {class: 'plot-path'}, $overlay);
         const $plotPoints = $N('g', {class: 'plot-points'}, $overlay);
 
@@ -92,7 +106,7 @@ export class DrawGraph extends CustomElementView {
         const redrawPath = () => {
             this.points.sort((a, b) => a.point.x-b.point.x);
 
-            last(this.$graph.$svg.$('.plot')!.children)?.remove();
+            last(this.$plot.children)?.remove();
 
             this.$graph.drawLinePlot(this.points.map(p => p.point));
 
@@ -183,29 +197,42 @@ export class DrawGraph extends CustomElementView {
 
     setHintPoints(hintPoints: HintPoint[]) {
         this.hintPoints = hintPoints;
+        for (const hintPoint of hintPoints) {
+            hintPoint.$g = $N('g', {show: false}, this.$hints);
+
+            if (hintPoint.id)
+                hintPoint.$el = this.$('#'+hintPoint.id);
+
+            if (hintPoint.drawLine) {
+                const p1 = this.$graph.toViewportCoords(new Point(hintPoint.x, this.$graph.plotBounds.yMin));
+                const p2 = this.$graph.toViewportCoords(new Point(hintPoint.x, this.$graph.plotBounds.yMax));
+                $N('line', {class: 'hint-line', show: false, x1: p1.x, x2: p2.x, y1: p1.y, y2: p2.y}, hintPoint.$g);
+            }
+            if (hintPoint.drawCircle) {
+                const c = this.$graph.toViewportCoords(new Point(hintPoint.x, this.solutionFunction(hintPoint.x)));
+                $N('circle', {class: 'hint-circle', show: false, cx: c.x, cy: c.y, r: 6}, hintPoint.$g);
+            }
+        }
     }
 
     setSolutionFunction(solutionFunction: (x: number) => number) {
         this.solutionFunction = solutionFunction;
         this.$graph.setFunctions(solutionFunction);
 
-        const $plots = this.$graph.$svg.$('.plot')!;
-        const $plot = $plots.children[0];
+        const $plot = this.$plot.children[0];
         
-        const $dummyPlots = $N('g', {class: 'plot'}, this.$graph.$overlay);
-        $dummyPlots.append($plot);
+        this.$solution.append($plot);
         $plot.addClass('blue');
-        $plot.setAttr('show', false);
-        $plot.addClass('solution');
-        this.$solutionPlot = $plot;
+        this.$solution.setAttr('show', false);
+        this.$solution.addClass('plot');
     }
 
     hideSolution() {
-        this.$solutionPlot.setAttr('show', false);
+        this.$solution.setAttr('show', false);
     }
 
     showSolution() {
-        this.$solutionPlot.setAttr('show', true);
+        this.$solution.setAttr('show', true);
     }
 
     hideScoreCards() {
@@ -365,8 +392,8 @@ export class DrawGraph extends CustomElementView {
             const viewportDistance = viewportVector.length;
             
             return {
-                hint: hintPoint.hint,
-                relevanceThresholdDistance: hintPoint.relevanceThresholdDistance || 10,
+                hintPoint,
+                relevanceThresholdDistance: hintPoint.relevanceThresholdDistance || 8,
                 point,
                 userGraphPoint,
                 position,
@@ -381,15 +408,13 @@ export class DrawGraph extends CustomElementView {
         // Sort hints in descending order of pixel distance from user graph
         hints.sort((a, b) => b.viewportDistance - a.viewportDistance);
 
-        // Remove any hints that are below their "relevance threshold distance"
-        const relevantHints = hints.filter((hint) => hint.relevanceThresholdDistance < hint.viewportDistance);
-
-        console.log('Sorted relevant hints:', relevantHints);
+        // Remove any hints that are below their "relevance threshold distance" or already revealed
+        const relevantHints = hints.filter((hint) => !hint.hintPoint.revealed && hint.relevanceThresholdDistance < hint.viewportDistance);
 
         if (relevantHints.length == 0)
             return null;
 
-        return relevantHints[0].hint;
+        return relevantHints[0].hintPoint;
     }
 
     submit() {
@@ -399,27 +424,34 @@ export class DrawGraph extends CustomElementView {
 
         const error = this.computeError();
         const score = Math.pow(1-error, 4);
-        console.log('Drawn Graph Score:', score);
-
 
         if (this.$step) {
             this.$step.score('submit');
 
-            const hint = this.selectRelevantHint();
+            const hintPoint = this.selectRelevantHint();
 
             if (this.scoreThreshold < score) {
-                this.$solutionPlot.setAttr('show', true);
+                this.$solution.setAttr('show', true);
 
                 this.$step.addHint('correct');
                 this.$step.score('submitCorrect');
             }
-            else if (hint) {
-                this.$step.addHint(hint);
+            else if (hintPoint) {
+                this.$step.addHint(hintPoint.hint);
+
+                if (this.firstHint) {
+                    this.$step.addHint('Try again!');
+                    this.firstHint = false;
+                }
+
+                hintPoint.revealed = true;
+                hintPoint.$el?.setAttr('show', true);
+                hintPoint.$g?.setAttr('show', true);
             }
             else {
-                this.$solutionPlot.setAttr('show', true);
+                this.$solution.setAttr('show', true);
 
-                this.$step.addHint('incorrect');
+                this.$step.addHint('Close!');
             }
         }
 
