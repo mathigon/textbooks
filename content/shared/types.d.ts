@@ -1229,6 +1229,44 @@ export class GeoTool extends Tool$ {
   cancel(): void;
 }
 type ImageUploadCallback = (file: File, image: ImageTile) => void;
+type TileName =
+  'number-bar' |
+  'number-tile' |
+  'polygon' |
+  'pentomino' |
+  'tangram' |
+  'fraction-bar' |
+  'fraction-circle' |
+  'text' |
+  'algebra-tile' |
+  'grid' |
+  'custom-polygon' |
+  'image' |
+  'dice' |
+  'coin' |
+  'number-line' |
+  'penrose' |
+  'kolam' |
+  'prime-disk' |
+  'balance' |
+  'decimal-grid' |
+  'spinner' |
+  'custom-spinner' |
+  'token' |
+  'egg' |
+  'geo' |
+  'fractal' |
+  'ruler' |
+  'protractor' |
+  'compass' |
+  'dot-machine' |
+  'dot' |
+  'garden' |
+  'tantrix' |
+  'axes' |
+  'question-blank' |
+  'equation' |
+  'number-card';
 export class Polypad extends CustomElementView {
   tiles: Set<Tile>;
   strokes: Set<Stroke>;
@@ -1286,7 +1324,7 @@ export class Polypad extends CustomElementView {
   enableImageDrop(callback?: (file: File, image: ImageTile) => void, $btn?: ElementView): void;
   bindSettingsPanel<T>(tile: Tile, html: string, initial: T): Observable<T>;
   newImage(file: File, posn: Point, callback?: ImageUploadCallback): Promise<void>;
-  newTile(type: string, options: string): Tile;
+  newTile(type: TileName, options: string): Tile;
   setViewport(origin: Point, zoom?: number, zoomCenter?: Point): void;
   bindSource($el: ElementView, type: string, options: string, $overlay?: ElementView, colour?: string): void;
   setColour(c?: string): void;
