@@ -822,12 +822,14 @@ You will be drawing the graph for this event. Here is everything you need to kno
 
 Good luck!
 
-    x-draw-graph
+    x-draw-graph#pole-vault-graph
         x-coordinate-system(width=600 height=200 x-axis="0,45.5,5" y-axis="0,5.1,1" axis-names="Distance,Height" crosshairs="no")
         div.scoring-row
             button.btn Submit
             div.judge-text
             div.scores
+
+    x-gesture(target="#pole-vault-graph")
 
 ---
 
