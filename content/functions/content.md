@@ -1055,7 +1055,7 @@ The 400 meter medley relay in swimming includes four swimmers. Each athlete swim
 
 :::
 
-    x-coordinate-system.piecewise-step(width=500 height=200 x-axis="0,450,100" y-axis="1.0,1.8,0.2" axis-names="Distance (m),Speed (m/s)" crosshairs="no")
+    x-coordinate-system.piecewise-step(width=600 height=200 x-axis="0,450,100" y-axis="1.0,1.8,0.2" axis-names="Distance (m),Speed (m/s)" crosshairs="no")
 
 Recall that functions cannot have one input going to [[more than one | only one]] output value.  The [__vertical line test__](gloss:vertical-line-test) is a tool to test whether a relation is a function. Use the vertical line above to test this relation.
 
