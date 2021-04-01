@@ -1043,18 +1043,13 @@ Let’s continue to get our feet wet in the world of piecewise functions.
 
 ::: column.grow
 
-The 400 meter medley relay in swimming includes four swimmers. Each athlete swims 100 meters of the relay in one of the four strokes. These 100 meter segments are called legs. This relay includes [backstroke](target:1_relayGraph), [breaststroke](target:2_relayGraph), [butterfly](https://www.desmos.com/calculator/y3zz7gphmo), and [freestyle](https://www.desmos.com/calculator/y3zz7gphmo) in that order. The graph below shows s(d). Notice the vertical axis is [[distance | speed]] in meters. The horizontal axis represents [[speed | distance]] in meters per second. Is s(d) a [__function__](gloss:function)?
+The 400 meter medley relay in swimming includes four swimmers. Each athlete swims 100 meters of the relay in one of the four strokes. These 100 meter segments are called legs. This relay includes [backstroke](target:1_relayGraph), [breaststroke](target:2_relayGraph), [butterfly](target:3_relayGraph), and [freestyle](target:4_relayGraph) in that order. The graph below shows s(d). Notice the horizontal axis is [[distance | speed]] in meters. The vertical axis represents [[speed | distance]] in meters per second. Is s(d) a [__function__](gloss:function)?
 
 ::: column(width=240)
 
     // EDITORIAL USE ONLY
 
 ![](https://depositphotos.com/stock-photos/backstroke-start.html?filter=all&qview=115180204)
-
-    // NOTES
-    // Add vertical line test tool.
-    // [200 Medley Mock-up](https://www.desmos.com/calculator/y3zz7gphmo)
-    // Graph above is the object of the targets in relay paragraph.
 
 :::
 
