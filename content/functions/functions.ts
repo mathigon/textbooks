@@ -586,3 +586,16 @@ export function runningCards($step: Step) {
   ]);
   $cardGraph.setCards(cards);
 }
+
+export function piecewiseSelect($step: Step) {
+  ($step.$('#graph1')! as CoordinateSystem).drawLinePlot([new Point(0, 0), new Point(10, 0.5), new Point(40, 5.5)]);
+  ($step.$('#graph2')! as CoordinateSystem).drawLinePlot([new Point(0, 0), new Point(5, 2), new Point(40, 5.5)]);
+  ($step.$('#graph3')! as CoordinateSystem).drawLinePlot([new Point(0, 0), new Point(20, 2), new Point(40, 5.5)]);
+  ($step.$('#graph4')! as CoordinateSystem).drawLinePlot([new Point(0, 0), new Point(30, 0.5), new Point(40, 5.5)]);
+
+  const picker = $step.$('x-picker')!;
+  const children = shuffle(picker.children);
+  picker.removeChildren();
+  while (children.length)
+    picker.append(children.pop()!);
+}
