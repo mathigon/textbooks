@@ -973,7 +973,7 @@ Type some text:
 ## Piecewise Functions
 
 > section: piecewise
-> sectionStatus: dev
+> id: piecewise-intro
 
 
     // NOTE
@@ -997,6 +997,8 @@ The race ended up taking over 24 hours! The friends did the same race the next y
 
 ---
 
+> id: piecewise-select
+
 ::: column(width=240)
 
     // NOTES
@@ -1011,13 +1013,16 @@ We are training for the ÖtillÖ. We need to get used to the feeling of swimming
 
 :::
 
-    // NOTES
-    // Multiple selector with one choice
-    // [option 1](https://drive.google.com/file/d/1UhFc87ir21UUNnQWmJ0UhvrXn6bZu6Lo/view?usp=sharing)
-    // [option 2](https://drive.google.com/file/d/1T0q0btNyuiNaOVWk6NbM8dQydXthhwtv/view?usp=sharing)
-    // [option 3](https://drive.google.com/file/d/18DMyDqbjmOq7Wdou-yTuMvI0NTBfSg-T/view?usp=sharing)
-    // [option 4](https://drive.google.com/file/d/1zKhk2t_V00SSEsmyXWCvohxnOyzMk0Q6/view?usp=sharing)
-    // Option 2 is the object of the targets below.
+    x-picker.graphPicker
+      .item
+        x-coordinate-system#graph1(width=200 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+      .item(data-error="swimming-faster-running")
+        x-coordinate-system#graph2(width=200 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+      .item(data-error="wrong-distance")
+        x-coordinate-system#graph3(width=200 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+      .item(data-error="running-too-fast")
+        x-coordinate-system#graph4(width=200 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+
 
 This is an example of a [__piecewise function__](gloss:piecewise) where different rules apply to different sets of input values. We can see the [first section](target:1_piecewise) of the graph has a different slope than the [second section](target:2_piecewise).
 
