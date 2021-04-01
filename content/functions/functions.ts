@@ -607,3 +607,54 @@ export function piecewiseSelect($step: Step) {
   while (children.length)
     picker.append(children.pop()!);
 }
+
+export function piecewiseRelay($step: Step) {
+  const $graph = $step.$('x-coordinate-system') as CoordinateSystem;
+  const $plot = $N('g', {class: 'plot'}, $graph.$overlay)
+
+  {
+    const a = $graph.toViewportCoords(new Point(0, 1.3));
+    const b = $graph.toViewportCoords(new Point(100, 1.3));
+
+    $N('line', {class: 'red', x1: a.x, x2: b.x, y1: a.y, y2: b.y}, $plot);
+    $N('circle', {class: 'red closed', cx: a.x, cy: a.y, r: 4}, $plot);
+    $N('circle', {class: 'red closed', cx: b.x, cy: b.y, r: 4}, $plot);
+  }
+  {
+    const a = $graph.toViewportCoords(new Point(100, 1.2));
+    const b = $graph.toViewportCoords(new Point(200, 1.2));
+
+    $N('line', {class: 'orange', x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $plot);
+    $N('circle', {class: 'orange open', cx: a.x, cy: a.y, r: 4}, $plot);
+    $N('circle', {class: 'orange closed', cx: b.x, cy: b.y, r: 4}, $plot);
+  }
+  {
+    const a = $graph.toViewportCoords(new Point(200, 1.4));
+    const b = $graph.toViewportCoords(new Point(300, 1.4));
+
+    $N('line', {class: 'blue', x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $plot);
+    $N('circle', {class: 'blue open', cx: a.x, cy: a.y, r: 4}, $plot);
+    $N('circle', {class: 'blue closed', cx: b.x, cy: b.y, r: 4}, $plot);
+  }
+  {
+    const a = $graph.toViewportCoords(new Point(300, 1.5));
+    const b = $graph.toViewportCoords(new Point(400, 1.5));
+
+    $N('line', {class: 'green', x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $plot);
+    $N('circle', {class: 'green open', cx: a.x, cy: a.y, r: 4}, $plot);
+    $N('circle', {class: 'green closed', cx: b.x, cy: b.y, r: 4}, $plot);
+  }
+
+  const $verticalLine = $N('line', {class: 'vertical-line', x1: 0, x2: 0, y1: $graph.viewportBounds.yMin, y2: $graph.viewportBounds.yMax}, $graph.$overlay);
+  $verticalLine.hide();
+
+  pointerOver($graph.$svg, {
+    enter: () => $verticalLine.show(),
+    move: (p) => {
+      console.log(p);
+      $verticalLine.setAttr('x1', p.x);
+      $verticalLine.setAttr('x2', p.x);
+    },
+    exit: () => $verticalLine.hide(),
+  })
+}

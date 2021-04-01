@@ -1031,13 +1031,15 @@ One of the most common ways to write piecewise functions is by using cases.
     // NOTES
     // It would be great to target or color code the different components of the function. Input ranges point to x-axis, rules point to graph.
 
-`d(t)= {(1/20t,0≤t<10),(1/6 t-7/6,10≤t≤40):}`
+{.text-center}`d(t)= {(1/20t,0≤t<10),(1/6 t-7/6,10≤t≤40):}`
 
 Each line in this function is a case. It includes the function rule and the input values where the rule is used. We read this function as “The function d has a value of (1/20)t when t is at least 0 and up to 10. Function d is (⅙)t-(7/6) when t is at least 10 and no more than 40.”
 
 Let’s continue to get our feet wet in the world of piecewise functions.
 
 ---
+
+> id: piecewise-relay
 
 ::: column.grow
 
@@ -1056,9 +1058,9 @@ The 400 meter medley relay in swimming includes four swimmers. Each athlete swim
 
 :::
 
-Recall that functions cannot have one input going to [[more than one | only one]] output value.  The [__vertical line test__](gloss:vertical-line-test) is a tool to test whether a relation is a function. Use the vertical line above to test this relation.
+    x-coordinate-system.piecewise-step(width=400 height=400 x-axis="0,450,100" y-axis="1.0,1.8,0.2" axis-names="Distance (m),Speed (m/s)" crosshairs="no")
 
-:::
+Recall that functions cannot have one input going to [[more than one | only one]] output value.  The [__vertical line test__](gloss:vertical-line-test) is a tool to test whether a relation is a function. Use the vertical line above to test this relation.
 
 ---
 
