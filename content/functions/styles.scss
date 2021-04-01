@@ -219,17 +219,27 @@ x-coordinate-system.piecewise-step {
   .overlay>.plot {
     stroke-width: 2px;
 
+    text {
+      stroke-width: 0;
+      font-size: 16px;
+      text-anchor: middle;
+    }
+
     .red {
       stroke: @red;
+      fill: @red;
     }
     .orange {
       stroke: @orange;
+      fill: @orange;
     }
     .blue {
       stroke: @blue;
+      fill: @blue;
     }
     .green {
       stroke: @green;
+      fill: @green;
     }
 
     circle.open {
