@@ -204,3 +204,35 @@ x-picker.graphPicker {
     width: auto;
   }
 }
+
+x-coordinate-system.piecewise-step {
+  svg {
+    overflow: visible;
+  }
+
+  .overlay>line.vertical-line {
+    stroke-width: 2px;
+    stroke: black;
+  }
+
+  .overlay>.plot {
+    stroke-width: 2px;
+
+    .red {
+      stroke: @red;
+    }
+    .orange {
+      stroke: @orange;
+    }
+    .blue {
+      stroke: @blue;
+    }
+    .green {
+      stroke: @green;
+    }
+
+    circle.open {
+      fill: none;
+    }
+  }
+}
