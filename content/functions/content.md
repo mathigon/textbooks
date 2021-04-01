@@ -1042,7 +1042,7 @@ Let’s continue to get our feet wet in the world of piecewise functions.
 
     // TODO: Fix targeting of graph segments
 
-The 400 meter medley relay in swimming includes four swimmers. Each athlete swims 100 meters of the relay in one of the four strokes. These 100 meter segments are called legs. This relay includes [backstroke](target:1_relayGraph), [breaststroke](target:2_relayGraph), [butterfly](target:3_relayGraph), and [freestyle](target:4_relayGraph) in that order. The graph below shows s(d). Notice the horizontal axis is [[distance | speed]] in meters. The vertical axis represents [[speed | distance]] in meters per second. Is s(d) a [__function__](gloss:function)?
+The 400 meter medley relay in swimming includes four swimmers. Each athlete swims 100 meters of the relay in one of the four strokes. These 100 meter segments are called legs. This relay includes [backstroke](target:1_relayGraph), [breaststroke](target:2_relayGraph), [butterfly](target:3_relayGraph), and [freestyle](target:4_relayGraph). The graph below shows s(d). Notice the horizontal axis is [[distance | speed]] in meters. The vertical axis represents [[speed | distance]] in meters per second. Is s(d) a [__function__](gloss:function)?
 
 ::: column(width=240)
 
@@ -1060,7 +1060,7 @@ Recall that functions cannot have one input going to [[more than one | only one]
 
 > id: piecewise-endpoints
 
-Notice that each segment has two endpoints, but there are *two kinds* of endpoints: [__closed__](target:closed-endpoint) and [__open__](target:open-endpoint). A closed endpoint means the segment includes that point. An open endpoint means the segment includes _everything up to_ that point, but not the point itself. This represents the difference between < and ≤, and it's critical for ensuring that every input has only one output.
+Notice that each segment has two endpoints, but there are *two kinds* of endpoints: [__closed ●__](target:closed-endpoint) and [__open ◦__](target:open-endpoint). A closed endpoint means the segment includes that point. An open endpoint means the segment includes _everything up to_ that point, but not the point itself. This represents the difference between < and ≤, and it's critical for ensuring that every input has only one output.
 
 With this in mind, fill out the piecewise function for this graph:
 

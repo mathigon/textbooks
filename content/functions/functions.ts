@@ -608,37 +608,41 @@ export function piecewiseRelay($step: Step) {
     const a = $graph.toViewportCoords(new Point(0, 1.3));
     const b = $graph.toViewportCoords(new Point(100, 1.3));
 
-    const $g = $N('g', {id: '1_relayGraph'}, $plot);
-    $N('line', {class: 'red', x1: a.x, x2: b.x, y1: a.y, y2: b.y}, $g);
-    $N('circle', {class: 'red closed', cx: a.x, cy: a.y, r: 4}, $g);
-    $N('circle', {class: 'red closed', cx: b.x, cy: b.y, r: 4}, $g);
+    const $g = $N('g', {class: 'red', id: '1_relayGraph'}, $plot);
+    $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Backstroke';
+    $N('line', {x1: a.x, x2: b.x, y1: a.y, y2: b.y}, $g);
+    $N('circle', {class: 'closed', cx: a.x, cy: a.y, r: 4}, $g);
+    $N('circle', {class: 'closed', cx: b.x, cy: b.y, r: 4}, $g);
   }
   {
     const a = $graph.toViewportCoords(new Point(100, 1.2));
     const b = $graph.toViewportCoords(new Point(200, 1.2));
 
-    const $g = $N('g', {id: '2_relayGraph'}, $plot);
-    $N('line', {class: 'orange', x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $g);
-    $N('circle', {class: 'orange open', id: 'open-endpoint', cx: a.x, cy: a.y, r: 4}, $g);
-    $N('circle', {class: 'orange closed', id: 'closed-endpoint', cx: b.x, cy: b.y, r: 4}, $g);
+    const $g = $N('g', {class: 'orange', id: '2_relayGraph'}, $plot);
+    $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Breaststroke';
+    $N('line', {x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $g);
+    $N('circle', {class: 'open', id: 'open-endpoint', cx: a.x, cy: a.y, r: 4}, $g);
+    $N('circle', {class: 'closed', id: 'closed-endpoint', cx: b.x, cy: b.y, r: 4}, $g);
   }
   {
     const a = $graph.toViewportCoords(new Point(200, 1.4));
     const b = $graph.toViewportCoords(new Point(300, 1.4));
 
-    const $g = $N('g', {id: '3_relayGraph'}, $plot);
-    $N('line', {class: 'blue', x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $g);
-    $N('circle', {class: 'blue open', cx: a.x, cy: a.y, r: 4}, $g);
-    $N('circle', {class: 'blue closed', cx: b.x, cy: b.y, r: 4}, $g);
+    const $g = $N('g', {class: 'blue', id: '3_relayGraph'}, $plot);
+    $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Butterfly';
+    $N('line', {x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $g);
+    $N('circle', {class: 'open', cx: a.x, cy: a.y, r: 4}, $g);
+    $N('circle', {class: 'closed', cx: b.x, cy: b.y, r: 4}, $g);
   }
   {
     const a = $graph.toViewportCoords(new Point(300, 1.5));
     const b = $graph.toViewportCoords(new Point(400, 1.5));
 
-    const $g = $N('g', {id: '4_relayGraph'}, $plot);
-    $N('line', {class: 'green', x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $g);
-    $N('circle', {class: 'green open', cx: a.x, cy: a.y, r: 4}, $g);
-    $N('circle', {class: 'green closed', cx: b.x, cy: b.y, r: 4}, $g);
+    const $g = $N('g', {class: 'green', id: '4_relayGraph'}, $plot);
+    $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Freestyle';
+    $N('line', {x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $g);
+    $N('circle', {class: 'open', cx: a.x, cy: a.y, r: 4}, $g);
+    $N('circle', {class: 'closed', cx: b.x, cy: b.y, r: 4}, $g);
   }
 
   const $verticalLine = $N('line', {class: 'vertical-line', x1: 0, x2: 0, y1: $graph.viewportBounds.yMin, y2: $graph.viewportBounds.yMax}, $graph.$overlay);
