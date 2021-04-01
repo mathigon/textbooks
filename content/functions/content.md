@@ -1059,17 +1059,25 @@ Recall that functions cannot have one input going to [[more than one | only one]
 
 ---
 
-We need to pay close attention to the endpoints of each section of the domain. The endpoints ensure each element of the domain is matched to only one element of the range. With this in mind, select the function that matches the graph above.
+> id: piecewise-endpoints
 
-    // NOTES
-    // Multiple selector with one correct answer
+Notice that each segment has two endpoints, but there are *two kinds* of endpoints: [__closed__](target:closed-endpoint) and [__open__](target:open-endpoint). A closed endpoint means the segment includes that point. An open endpoint means the segment includes _everything up to_ that point, but not the point itself. This represents the difference between < and ≤, and it's critical for ensuring that every input has only one output.
 
-[option 1](s(d)={(1.3, 0≤d≤100),(1.2, 100<d≤200),(1.4, 200<d≤300),(1.5, 300<d≤400):})
-[option 2](s(d)={(1.3, 0≤d≤100),(1.2, 100≤d≤200),(1.4, 200≤d<300),(1.5, 300<d≤400):})
+With this in mind, fill out the piecewise function for this graph:
 
-Notice the graph shows “<” as an open circle - the same would be true for endpoint containing “>”. The closed circles inculcate “≤” and “>=”.
+::: column(style="display:flex;align-items:center;justify-content:flex-end;")
+
+`s(d)=`
+
+::: column.grow
+
+{(1.3, 0 ≤ d ≤ [[100]]),<br>(1.2, 200 [[ < | ≤ | > | ≥ ]] d ≤ 300),<br>([[1.4]], 300 < d ≤ 400),<br>(1.5, 400 < d [[ ≤ | < | > | ≥ ]] 500):}
+
+:::
 
 ---
+
+> id: step-function
 
 The function s(d) is a special kind of piecewise function called a [__step function__](gloss:step-function). One major difference between s(d) and d(t) above is all the slopes in s(d) are [[0]].
 
