@@ -608,7 +608,7 @@ export function piecewiseRelay($step: Step) {
     const a = $graph.toViewportCoords(new Point(0, 1.3));
     const b = $graph.toViewportCoords(new Point(100, 1.3));
 
-    const $g = $N('g', {class: 'red', id: '1_relayGraph'}, $plot);
+    const $g = $N('g', {class: 'red', id: 'backstroke'}, $plot);
     $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Backstroke';
     $N('line', {x1: a.x, x2: b.x, y1: a.y, y2: b.y}, $g);
     $N('circle', {class: 'closed', cx: a.x, cy: a.y, r: 4}, $g);
@@ -618,7 +618,7 @@ export function piecewiseRelay($step: Step) {
     const a = $graph.toViewportCoords(new Point(100, 1.2));
     const b = $graph.toViewportCoords(new Point(200, 1.2));
 
-    const $g = $N('g', {class: 'orange', id: '2_relayGraph'}, $plot);
+    const $g = $N('g', {class: 'orange', id: 'breaststroke'}, $plot);
     $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Breaststroke';
     $N('line', {x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $g);
     $N('circle', {class: 'open', id: 'open-endpoint', cx: a.x, cy: a.y, r: 4}, $g);
@@ -628,7 +628,7 @@ export function piecewiseRelay($step: Step) {
     const a = $graph.toViewportCoords(new Point(200, 1.4));
     const b = $graph.toViewportCoords(new Point(300, 1.4));
 
-    const $g = $N('g', {class: 'blue', id: '3_relayGraph'}, $plot);
+    const $g = $N('g', {class: 'blue', id: 'butterfly'}, $plot);
     $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Butterfly';
     $N('line', {x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $g);
     $N('circle', {class: 'open', cx: a.x, cy: a.y, r: 4}, $g);
@@ -638,7 +638,7 @@ export function piecewiseRelay($step: Step) {
     const a = $graph.toViewportCoords(new Point(300, 1.5));
     const b = $graph.toViewportCoords(new Point(400, 1.5));
 
-    const $g = $N('g', {class: 'green', id: '4_relayGraph'}, $plot);
+    const $g = $N('g', {class: 'green', id: 'freestyle'}, $plot);
     $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Freestyle';
     $N('line', {x1: a.x+4, x2: b.x, y1: a.y, y2: b.y}, $g);
     $N('circle', {class: 'open', cx: a.x, cy: a.y, r: 4}, $g);
