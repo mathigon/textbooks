@@ -1069,13 +1069,19 @@ Notice that each segment has two endpoints, but there are *two kinds* of endpoin
 
 With this in mind, fill out the piecewise function for this graph:
 
-::: column(style="display:flex;align-items:center;justify-content:flex-end;")
+::: column(style="display:flex;align-items:center;justify-content:flex-end;flex-basis:60px;margin-right:10px;")
 
 `s(d)=`
 
-::: column.grow
+::: column(style="width:240px;text-align:left;margin-left:0;")
 
-{(1.3, 0 ≤ d ≤ [[100]]),<br>(1.2, 200 [[ < | ≤ | > | ≥ ]] d ≤ 300),<br>([[1.4]], 300 < d ≤ 400),<br>(1.5, 400 < d [[ ≤ | < | > | ≥ ]] 500):}
+{div.red}{(1.3, 0 ≤ d ≤ [[100]]),
+
+{div.orange}(1.2, 200 [[ < | ≤ | > | ≥ ]] d ≤ 300),
+
+{div.blue}([[1.4]], 300 < d ≤ 400),
+
+{div.green}(1.5, 400 < d [[ ≤ | < | > | ≥ ]] 500):}
 
 :::
 
