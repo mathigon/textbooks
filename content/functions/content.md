@@ -1044,7 +1044,7 @@ One of the most common ways to write piecewise functions is by using cases:
 
 {.text-center}`d(t)={(1/20t,0≤t<10),(1/6t-7/6,10≤t≤40):}`
 
-Each line in this function is a case. It includes the function rule and the input values where the rule is used. We read this function as “The function d has a value of (1/20)t when t is at least 0 and up to 10. Function d is (⅙)t-(7/6) when t is at least 10 and no more than 40.”
+Each line in this function is a case. It includes the function rule and the input values where the rule is used. We read this function as “`d(t)` equals `1/20 t` in the interval `0≤t<10`, and `1/6 t` in the interval `10≤t≤40`".
 
 Let’s continue to get our feet wet in the world of piecewise functions.
 
