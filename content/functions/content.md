@@ -1023,8 +1023,13 @@ We are training for the ÖtillÖ. We need to get used to the feeling of swimming
       .item(data-error="running-too-fast")
         x-coordinate-system#graph4(width=200 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
 
+---
 
-This is an example of a [__piecewise function__](gloss:piecewise) where different rules apply to different sets of input values. We can see the [first section](target:1_piecewise) of the graph has a different slope than the [second section](target:2_piecewise).
+> id: piecewise-cases
+
+This is an example of a [__piecewise function__](gloss:piecewise) where different rules apply to different sets of input values. We can see the [{.red}first section](target:line1) of the graph has a different slope than the [{.blue}second section](target:line2).
+
+    x-coordinate-system.piecewise-cases(width=600 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
 
 One of the most common ways to write piecewise functions is by using cases.
 

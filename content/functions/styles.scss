@@ -206,6 +206,20 @@ x-picker.graphPicker {
   }
 }
 
+x-coordinate-system.piecewise-cases {
+  .plot {
+    line {
+      stroke-width: 3px;
+    }
+    #line1 {
+      stroke: @red;
+    }
+    #line2 {
+      stroke: @blue;
+    }
+  }
+}
+
 x-coordinate-system.piecewise-step {
   svg {
     overflow: visible;
