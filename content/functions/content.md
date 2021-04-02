@@ -1024,16 +1024,22 @@ We are training for the ÖtillÖ. We need to get used to the feeling of swimming
 
 > id: piecewise-cases
 
+::: column.grow#piecewise-description-column
+
 This is an example of a [__piecewise function__](gloss:piecewise) where different rules apply to different sets of input values. We can see the [{.red}first section](target:line1) of the graph has a different slope than the [{.blue}second section](target:line2).
 
-    x-coordinate-system.piecewise-cases(width=600 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+::: column.grow#piecewise-graph-column
 
-One of the most common ways to write piecewise functions is by using cases.
+    x-coordinate-system.piecewise-cases(width=500 height=300 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+
+:::
+
+One of the most common ways to write piecewise functions is by using cases:
 
     // NOTES
     // It would be great to target or color code the different components of the function. Input ranges point to x-axis, rules point to graph.
 
-{.text-center}`d(t)= {(1/20t,0≤t<10),(1/6 t-7/6,10≤t≤40):}`
+{.text-center}`d(t)={(1/20t,0≤t<10),(1/6t-7/6,10≤t≤40):}`
 
 Each line in this function is a case. It includes the function rule and the input values where the rule is used. We read this function as “The function d has a value of (1/20)t when t is at least 0 and up to 10. Function d is (⅙)t-(7/6) when t is at least 10 and no more than 40.”
 
