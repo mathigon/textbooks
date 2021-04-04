@@ -608,16 +608,18 @@ export function piecewiseIntro($step: Step) {
     picker.append(children.pop()!);
 }
 
-export function piecewiseCases($step: Step) {
+export function piecewiseDefinition($step: Step) {
   const $graph = $step.$('x-coordinate-system')! as CoordinateSystem;
   const $plot = $step.$('.plot')!;
   
   const a = $graph.toViewportCoords(new Point(0, 0));
-  const b = $graph.toViewportCoords(new Point(10, 0.5));
-  const c = $graph.toViewportCoords(new Point(40, 5.5));
+  const b = $graph.toViewportCoords(new Point(20, 0.5));
+  const c = $graph.toViewportCoords(new Point(40, 4));
+  const d = $graph.toViewportCoords(new Point(60, 5));
 
   const line1 = $N('line', {id: 'line1', target: 'line1', x1: a.x, x2: b.x, y1: a.y, y2: b.y}, $plot);
   const line2 = $N('line', {id: 'line2', target: 'line2', x1: b.x, x2: c.x, y1: b.y, y2: c.y}, $plot);
+  const line3 = $N('line', {id: 'line3', target: 'line3', x1: c.x, x2: d.x, y1: c.y, y2: d.y}, $plot);
 }
 
 export function piecewiseRelay($step: Step) {

@@ -1000,26 +1000,42 @@ Since [[biking | swimming | running]] is the fastest and [[swimming | biking | r
 
 ---
 
-> id: piecewise-cases
+> id: piecewise-definition
 
 ::: column.grow#piecewise-description-column
 
-This is an example of a [__piecewise function__](gloss:piecewise) where different rules apply to different sets of input values. We can see the [{.red}first section](target:line1) of the graph has a different slope than the [{.blue}second section](target:line2).
+This is called a [__piecewise function__](gloss:piecewise), where different rules apply within different ranges of input values. We can see that the [{.red}first](target:line1) segment has a different slope than the [{.blue}second](target:line2) segment, and occupies a different range of inputs.
+
+For example, the [{.green}third](target:line3) segment has a slope of `1/20`, begins at `t=`[[40]], and ends at `t=`[[60]].
 
 ::: column.grow#piecewise-graph-column
 
-    x-coordinate-system.piecewise-cases(width=500 height=300 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+    x-coordinate-system.piecewise-cases(width=300 height=300 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time,Distance" crosshairs="no")
 
 :::
 
+---
+
+> id: piecewise-cases
+
 One of the most common ways to write piecewise functions is by using "cases":
 
-    // NOTES
-    // It would be great to target or color code the different components of the function. Input ranges point to x-axis, rules point to graph.
 
-{.text-center}`d(t)={(1/20t,0≤t<10),(1/6t-7/6,10≤t≤40):}`
+::: column.piecewise-function-left(style="width:60px; margin:0;")
 
-This function includes two cases. Each case defines a function rule and a range of input values where the rule applies. We read this function as “`d(t)` equals `1/20 t` in the interval `0≤t<10`, and `1/6 t` in the interval `10≤t≤40`".
+`d(t)=`
+
+::: column(style="width:240px;")
+
+{div.red}(`(1/40 t, 0 ≤ t < 20)`,
+
+{div.blue}`(9/40 t, 20 ≤ t < 40)`,
+
+{div.green}`(1/20 t, 40 ≤ t ≤ 60)`:)
+
+:::
+
+Each case defines a function rule and a range of input values where the rule applies. So `t=44` falls into the [[third | second | first]] case, and `t=6` falls into the [[first | second | third]] case.
 
 Let’s continue to get our feet wet in the world of piecewise functions.
 
