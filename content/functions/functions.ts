@@ -669,3 +669,14 @@ export function piecewiseRelay($step: Step) {
     exit: () => $verticalLine.hide(),
   })
 }
+
+export function triathlonGraph($step: Step) {
+  const $drawGraph = $step.$('x-draw-graph')! as DrawGraph;
+  const $graph = $drawGraph.$('x-coordinate-system')! as CoordinateSystem;
+
+  const bikeStart = $graph.toViewportCoords(new Point(0, 1.5));
+  const runStart = $graph.toViewportCoords(new Point(125, 41.5));
+
+  $N('line', {class: 'transition-line', x1: bikeStart.x, x2: runStart.x, y1: bikeStart.y, y2: bikeStart.y}, $graph.$overlay);
+  $N('line', {class: 'transition-line', x1: bikeStart.x, x2: runStart.x, y1: runStart.y, y2: runStart.y}, $graph.$overlay);
+}

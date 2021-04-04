@@ -1034,14 +1034,14 @@ This is an example of a [__piecewise function__](gloss:piecewise) where differen
 
 :::
 
-One of the most common ways to write piecewise functions is by using cases:
+One of the most common ways to write piecewise functions is by using "cases":
 
     // NOTES
     // It would be great to target or color code the different components of the function. Input ranges point to x-axis, rules point to graph.
 
 {.text-center}`d(t)={(1/20t,0≤t<10),(1/6t-7/6,10≤t≤40):}`
 
-Each line in this function is a case. It includes the function rule and the input values where the rule is used. We read this function as “`d(t)` equals `1/20 t` in the interval `0≤t<10`, and `1/6 t` in the interval `10≤t≤40`".
+This function includes two cases. Each case defines a function rule and a range of input values where the rule applies. We read this function as “`d(t)` equals `1/20 t` in the interval `0≤t<10`, and `1/6 t` in the interval `10≤t≤40`".
 
 Let’s continue to get our feet wet in the world of piecewise functions.
 
@@ -1075,11 +1075,11 @@ Notice that each segment has two endpoints, but there are *two kinds* of endpoin
 
 With this in mind, fill out the piecewise function for this graph:
 
-::: column(style="display:flex;align-items:center;justify-content:flex-end;flex-basis:60px;margin-right:10px;")
+::: column.piecewise-function-left(style="width:60px; margin:0;")
 
 `s(d)=`
 
-::: column(style="width:240px;text-align:left;margin-left:0;")
+::: column(style="width:240px;text-align:left;")
 
 {div.red}{(1.3, 0 ≤ d ≤ [[100]]),
 
@@ -1103,12 +1103,36 @@ We’re ready to dive into graphing.
 
 ---
 
+> id: triathlon-graph
+
 One of the most common multisport competitions is a triathlon where athletes swim, bike, and run. The function l(t), Lisa Laws’s race, is given below. Use the given line segments to draw l(t) on the coordinate plane.
 
     // EDITORIAL USE ONLY
     // Fun, quick [video](https://tokyo2020.org/en/sports/triathlon/) of triathlon. Nod to 2020 Olympics, especially if they don't happen. Includes map of courses.
 
-`l(t)={(75x, 0≤t≤20),(50000, 20<t≤21),(-615.385t+63000, 21<t≤86),(10000, 86<t≤87),(-277.778t+34166.7, 87<t≤123):}`
+::: column.piecewise-function-left(style="margin:0; width:60px;")
+
+`l(t)=`
+
+::: column.piecewise-function-right
+    // TODO: Fix large open and close parenths
+
+{div}(`(0.075t, 0≤t≤20),`
+
+{div}`(0.615385t+63, 20<t≤86),`
+
+{div}`(0.277778t+34.1667, 86<t≤123)`:)
+
+:::
+
+    x-draw-graph#lisa-law-graph
+        x-coordinate-system(width=600 height=300 x-axis="0,125,10" y-axis="0,55,10" axis-names="Minutes,Kilometers" crosshairs="no")
+        div.scoring-row
+            button.btn Submit
+            div.judge-text
+            div.scores
+
+    x-gesture(target="#lisa-law-graph")
 
     // EDITORIAL USE ONLY
 
