@@ -200,6 +200,12 @@ line#time-line {
   }
 }
 
+.piecewise-function-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 x-picker.graphPicker {
   .item {
     width: auto;
@@ -272,5 +278,13 @@ x-coordinate-system.piecewise-step {
     circle.open {
       fill: none;
     }
+  }
+}
+
+x-draw-graph#lisa-law-graph {
+  line.transition-line {
+    stroke: @light-grey;
+    stroke-width: 2px;
+    stroke-dasharray: 6 4;
   }
 }
