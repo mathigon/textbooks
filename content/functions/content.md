@@ -969,59 +969,34 @@ Type some text:
 
 --------------------------------------------------------------------------------
 
-
 ## Piecewise Functions
 
 > section: piecewise
 > id: piecewise-intro
 
-
-    // NOTE
-    // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
-
-Multisport races test athletes endurance. Swimrun is a rather new multi sport competition that started in 2002 in Sweden. The story goes that the owner of the Utö Värdshus hotel, his friend, and two hotel staff challenged each other to a two-versus-two race from the Utö Värdshus hotel, across three islands, to Sandhamn. The losing team would pay for everyone’s post-race meals. How long do you think the race lasted?
-
-    // NOTES
-    // Anders Malm - owner of Utö Värdshus, Janne Lindberg - friend, Andersson brothers - staff at Utö Värdshus
-    // [citation](https://en.wikipedia.org/wiki/Swimrun)
-
-    // Map between these two locations. Include images from each place. I like David’s map zoom effect he has mentioned in a couple of chapters. While it wouldn’t necessarily add to the math directly, it would make the story more interesting and help student intuit distance.
-    // EDITOR USE ONLY
-    // [Utö Värdshus](https://www.utovardshus.se/wp-content/uploads/2019/03/Liggande_VH-fr%C3%A5n-Bastun_Copyright-Ut%C3%B6-V%C3%A4rdshus-1.jpg)
-
-    // [map view](https://www.google.com/maps/dir/Sandhamn,+Sweden/Ut%C3%B6+V%C3%A4rdshus,+Pr%C3%A4stbacken+22,+130+56+Ut%C3%B6,+Sweden/@59.1054899,18.3165704,10z/data=!4m14!4m13!1m5!1m1!1s0x46f5741069214bbf:0xbfee8fb6ece8997c!2m2!1d18.9108304!2d59.2878703!1m5!1m1!1s0x46f58b4425a902e9:0xb792bc38be8de224!2m2!1d18.329336!2d58.967417!3e4)
-
-![Sandham](https://upload.wikimedia.org/wikipedia/commons/c/c1/Sandhamn_February_2013_04.jpg)
-
-The race ended up taking over 24 hours! The friends did the same race the next year, and the idea for the ÖtillÖ (island to island) was born.
-
----
-
-> id: piecewise-select
-
-::: column(width=240)
-
-    // NOTES
-    // Something like this would be awesome. Transition from water to run. Setting. Dressed for water in Sweden.
-    // EDITORIAL ONLY
-
-![](https://live.staticflickr.com/65535/48213036251_c9ae4edc7b_b.jpg)
-
 ::: column.grow
 
-We are training for the ÖtillÖ. We need to get used to the feeling of swimming then immediately running. We decide to swim for 500 meters then run for 5 kilometers. Choose the graph that represents the athlete’s distance as a function of time, d(t).
+Only the most elite athletes make it to the Olympics. However, similar athletic events are enjoyed by people all around the world—and we can graph those too. One popular choice is the triathlon, where athletes complete an epic long-distance race in three parts, each a different sport.
+
+Triathlons can be any combination of three sports—some involve canoeing, ice skating, and at least one even features rappelling—but the most common arrangement is **swim**, **bike**, **run** (in that order).
+
+::: column(width=200)
+
+![Three images showing the parts of a typical triathlon: swimming, biking, and running.](/resources/functions/images/swim_bike_run.png)
 
 :::
 
+Since [[biking | swimming | running]] is the fastest and [[swimming | biking | running]] is the slowest, which of these graphs best represents such a race?
+
     x-picker.graphPicker
       .item
-        x-coordinate-system#graph1(width=200 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+        x-coordinate-system#graph1(width=200 height=200 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time,Distance" crosshairs="no")
       .item(data-error="swimming-faster-running")
-        x-coordinate-system#graph2(width=200 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+        x-coordinate-system#graph2(width=200 height=200 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time,Distance" crosshairs="no")
       .item(data-error="wrong-distance")
-        x-coordinate-system#graph3(width=200 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+        x-coordinate-system#graph3(width=200 height=200 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time,Distance" crosshairs="no")
       .item(data-error="running-too-fast")
-        x-coordinate-system#graph4(width=200 height=200 x-axis="0,45,10" y-axis="0,6,1" axis-names="Time,Distance" crosshairs="no")
+        x-coordinate-system#graph4(width=200 height=200 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time,Distance" crosshairs="no")
 
 ---
 
