@@ -1004,13 +1004,13 @@ Since [[biking | swimming | running]] is the fastest and [[swimming | biking | r
 
 ::: column.grow#piecewise-description-column
 
-This is called a [__piecewise function__](gloss:piecewise), where different rules apply within different ranges of input values. We can see that the [{.red}first](target:line1) segment has a different slope than the [{.blue}second](target:line2) segment, and occupies a different range of inputs.
+This is called a [__piecewise function__](gloss:piecewise), where different rules apply within different ranges of input values. Notice how the [{.red}first](target:line1) segment has a different slope than the [{.blue}second](target:line2) segment, and occupies a different range of inputs.
 
 For example, the [{.green}third](target:line3) segment has a slope of `1/20`, begins at `t=`[[40]], and ends at `t=`[[60]].
 
 ::: column.grow#piecewise-graph-column
 
-    x-coordinate-system.piecewise-cases(width=300 height=300 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time,Distance" crosshairs="no")
+    x-coordinate-system.piecewise-cases(width=300 height=300 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time (min),Distance (km)" crosshairs="no")
 
 :::
 
@@ -1029,59 +1029,98 @@ One of the most common ways to write piecewise functions is by using "cases":
 
 {div.red}(`(1/40 t, 0 ≤ t < 20)`,
 
-{div.blue}`(9/40 t, 20 ≤ t < 40)`,
+{div.blue}`(6/40 t, 20 ≤ t < 40)`,
 
-{div.green}`(1/20 t, 40 ≤ t ≤ 60)`:)
+{div.green}`(3/40 t, 40 ≤ t ≤ 60)`:)
 
 :::
 
 Each case defines a function rule and a range of input values where the rule applies. So `t=44` falls into the [[third | second | first]] case, and `t=6` falls into the [[first | second | third]] case.
 
-Let’s continue to get our feet wet in the world of piecewise functions.
-
----
-
-> id: piecewise-relay
-
-::: column.grow
-
-    // TODO: Fix targeting of graph segments
-
-The 400 meter medley relay in swimming includes four swimmers. Each athlete swims 100 meters of the relay in one of the four strokes. These 100 meter segments are called legs. This relay includes [backstroke](target:1_relayGraph), [breaststroke](target:2_relayGraph), [butterfly](target:3_relayGraph), and [freestyle](target:4_relayGraph). The graph below shows s(d). Notice the horizontal axis is [[distance | speed]] in meters. The vertical axis represents [[speed | distance]] in meters per second. Is s(d) a [__function__](gloss:function)?
-
-::: column(width=240)
-
-    // EDITORIAL USE ONLY
-
-![](https://depositphotos.com/stock-photos/backstroke-start.html?filter=all&qview=115180204)
-
-:::
-
-    x-coordinate-system.piecewise-step(width=600 height=200 x-axis="0,450,100" y-axis="1.0,1.8,0.2" axis-names="Distance (m),Speed (m/s)" crosshairs="no")
-
-Recall that functions cannot have one input going to [[more than one | only one]] output value.  The [__vertical line test__](gloss:vertical-line-test) is a tool to test whether a relation is a function. Use the vertical line above to test this relation.
-
 ---
 
 > id: piecewise-endpoints
 
-Notice that each segment has two endpoints, but there are *two kinds* of endpoints: [__closed ●__](target:closed-endpoint) and [__open ◦__](target:open-endpoint). A closed endpoint means the segment includes that point. An open endpoint means the segment includes _everything up to_ that point, but not the point itself. This represents the difference between < and ≤, and it's critical for ensuring that every input has only one output.
+Let's look at the speed of each segment, which we'll call `s(t)`. Recall that our speed is equal to the [[slope | y-axis | area]] of the previous graph:
+
+    x-coordinate-system.piecewise-step(width=600 height=200 x-axis="0,65,10" y-axis="0,0.25,0.1" axis-names="Time (min),Speed (km/min)" crosshairs="no")
+
+Notice that each segment has two endpoints, but there are *two kinds* of endpoints: [__closed ●__](target:closed-endpoint) and [__open ◦__](target:open-endpoint). A closed endpoint means the segment includes that point. An open endpoint means the segment includes everything _until_ that point, but not the point itself. This represents the difference between < and ≤, and it's critical for ensuring that every input has only one output.
+
+---
+
+Make the endpoints match the ranges. Remember that ● represents ≤, and ◦ represents <:
+
+> id: endpoints-1
+> goals: endpoint-puzzle
+
+    x-piecewise-endpoint-puzzle#endpoints-1
+        div
+            x-coordinate-system(width=600 height=200 x-axis="0,11,1" y-axis="0,6,1" axis-names="X,Y" crosshairs="no")
+            div.scoring-row
+                button.btn Submit
+                div.prompt-text
+    x-gesture(target="#endpoints-1 .endpoint")
+
+    // TODO: Make gesture successfully target dot
+
+---
+
+> id: endpoints-2
+> goals: endpoint-puzzle
+
+Now try this one!
+
+    x-piecewise-endpoint-puzzle#endpoints-2
+        div
+            x-coordinate-system(width=600 height=200 x-axis="0,11,1" y-axis="0,6,1" axis-names="X,Y" crosshairs="no")
+            div.scoring-row
+                button.btn Submit
+                div.prompt-text
+
+---
+
+How about this one?
+
+> id: endpoints-3
+> goals: endpoint-puzzle
+
+    x-piecewise-endpoint-puzzle#endpoints-3
+        div
+            x-coordinate-system(width=600 height=200 x-axis="0,11,1" y-axis="0,6,1" axis-names="X,Y" crosshairs="no")
+            div.scoring-row
+                button.btn Submit
+                div.prompt-text
+
+---
+
+Now make a function that covers the whole range of `1 ≤ x ≤ 10` (remember, a function must pass the [__Vertical Line Test__](gloss:vertical-line-test)—only one output per input!):
+
+> id: endpoints-4
+> goals: endpoint-puzzle
+
+    x-piecewise-endpoint-puzzle#endpoints-3
+        div
+            x-coordinate-system(width=600 height=200 x-axis="0,11,1" y-axis="0,6,1" axis-names="X,Y" crosshairs="no")
+            div.scoring-row
+                button.btn Submit
+                div.prompt-text
+
+---
 
 With this in mind, fill out the piecewise function for this graph:
 
 ::: column.piecewise-function-left(style="width:60px; margin:0;")
 
-`s(d)=`
+`s(t)=`
 
 ::: column(style="width:240px;text-align:left;")
 
-{div.red}{(1.3, 0 ≤ d ≤ [[100]]),
+{div.red}((`1/40`, 0 ≤ d < [[20]]),
 
-{div.orange}(1.2, 200 [[ < | ≤ | > | ≥ ]] d ≤ 300),
+{div.blue}(`6/40`, 20 [[ ≤ | < | > | ≥ ]] d < 40),
 
-{div.blue}([[1.4]], 300 < d ≤ 400),
-
-{div.green}(1.5, 400 < d [[ ≤ | < | > | ≥ ]] 500):}
+{div.green}(`3/40`, 40 ≤ d [[ ≤ | < | > | ≥ ]] 60):)
 
 :::
 
