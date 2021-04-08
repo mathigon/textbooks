@@ -15,17 +15,10 @@ import '../shared/components/buckets/buckets';
 // Utilities
 
 /** Converts a 2-dimensional data array into an HTML <table> string. */
-function table(data: any[][]) {
+function table(data: any[][], attributes = '') {
   const rows = data.map(tr => '<tr>' + tr.map(td => `<td>${td}</td>`)
       .join('') + '</tr>').join('');
-  return `<table>${rows}</table>`;
-}
-
-/** Converts a 2-dimensional data array into an HTML <table> string with a given width, height, and ID. */
-function tableID(data: any[][], id: String, width: number) {
-  const rows = data.map(tr => '<tr>' + tr.map(td => `<td>${td}</td>`)
-      .join('') + '</tr>').join('');
-  return `<table id=${id} width=${width}px>${rows}</table>`;
+  return `<table${attributes}>${rows}</table>`;
 }
 
 
@@ -222,21 +215,24 @@ export function radioactive($step: Step) {
   $step.$('.btn')!.one('click', decay);
 }
 
+
 // -----------------------------------------------------------------------------
-const pascal: Obj<number[]> = {
-  0: [1],
-  1: [1, 1],
-  2: [1, 2, 1],
-  3: [1, 3, 3, 1],
-  4: [1, 4, 6, 4, 1],
-  5: [1, 5, 10, 10, 5, 1],
-  6: [1, 6, 15, 20, 15, 6, 1],
-  7: [1, 7, 21, 35, 35, 21, 7, 1],
-  8: [1, 8, 28, 56, 70, 56, 28, 8, 1],
-  9: [1, 9, 36, 84, 126, 126, 84, 39, 9, 1],
-  10: [1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1],
-  11: [1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1]
-};
+// Probability Trees
+
+const pascal = [
+  [1],
+  [1, 1],
+  [1, 2, 1],
+  [1, 3, 3, 1],
+  [1, 4, 6, 4, 1],
+  [1, 5, 10, 10, 5, 1],
+  [1, 6, 15, 20, 15, 6, 1],
+  [1, 7, 21, 35, 35, 21, 7, 1],
+  [1, 8, 28, 56, 70, 56, 28, 8, 1],
+  [1, 9, 36, 84, 126, 126, 84, 39, 9, 1],
+  [1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1],
+  [1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1]
+];
 
 export function galtonBoard($step: Step) {
   const $svg = $step.$('.galton')!;
@@ -246,8 +242,8 @@ export function galtonBoard($step: Step) {
   let firstPos;
   const finalToInd: number[] = [];
   let cnt: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  let actualProb: number[] = [];
-  let dropped: number = 0;
+  const actualProb: number[] = [];
+  let dropped = 0;
 
   $step.model.watch(() => {
     $svg.removeChildren();
@@ -271,19 +267,19 @@ export function galtonBoard($step: Step) {
     cnt = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     actualProb.length = 0;
     for (let i = 0; i <= rowCnt + 1; i++) {
-      let val = Math.pow(p, i) * Math.pow(1 - p, rowCnt + 1 - i) * pascal[rowCnt + 1][i];
+      const val = Math.pow(p, i) * Math.pow(1 - p, rowCnt + 1 - i) * pascal[rowCnt + 1][i];
       actualProb.push(val);
     }
     dropped = 0;
   });
 
   $step.model.ballTable = (rows: number, p: number) => {
-    const row: String[] = [];
+    const row: string[] = [];
     for (let i = 0; i < rows + 1; ++i) {
-      let val = 100.0 * pascal[rows][i] * Math.pow(p, i) * Math.pow(1 - p, rows - i);
-      row.push(`<div class="pBox"><div class="ballCount" id="col${i}"></div><div class="ballProb" style="bottom: ${val}%"></div></div>`)
+      const val = 100 * pascal[rows][i] * Math.pow(p, i) * Math.pow(1 - p, rows - i);
+      row.push(`<div class="pBox"><div class="ballCount" id="col${i}"></div><div class="ballProb" style="bottom: ${val}%"></div></div>`);
     }
-    return tableID([row], "ballTable", (rowCnt + 1) * 40);
+    return table([row], ` id="ballTable" width="${(rowCnt + 1) * 40}px"`);
   };
 
   async function dropBall() {
@@ -312,9 +308,9 @@ export function galtonBoard($step: Step) {
       }
     }
     dropped++;
-    cnt[finalToInd[Number($ball.attr('cx'))]]++;
+    cnt[finalToInd[+$ball.attr('cx')]]++;
     for (let i = 0; i < rowCnt + 1; ++i) {
-      $('#col' + i)!.css('height', cnt[i] * 100.00000 / dropped + '%');
+      $('#col' + i)!.css('height', cnt[i] * 100 / dropped + '%');
     }
   }
 

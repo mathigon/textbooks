@@ -151,23 +151,26 @@ x-buckets.independent {
 
 #monty-hall .btn { margin: 0 16px; }
 
-// -----------------------------------------------------------------------------
-// Galton Board
 
+// -----------------------------------------------------------------------------
+// Probability Trees
+
+.galton .ball { fill: $red; }
 .ballCount {
   width: 120%;
   position: absolute;
   bottom: 0;
-  background: rgba(15, 130, 242, 0.4);
+  background: rgba(#0F82F2, 40%);
 }
 .ballTable table { table-layout: fixed; }
-.ballProb  { 
-  width: 120%; 
-  position: absolute; 
-  bottom: 0; 
-  background: @green; 
-  height: 3px; 
+.ballProb  {
+  width: 120%;
+  position: absolute;
+  bottom: 0;
+  background: $green;
+  height: 3px;
 }
+
 
 // -----------------------------------------------------------------------------
 // Randomness
@@ -175,12 +178,4 @@ x-buckets.independent {
 .radioactive circle {
   fill: $red;
   &.off { fill: $blue; transform: scale(0.7); }
-}
-
-
-// -----------------------------------------------------------------------------
-// Probability Trees
-
-.galton {
-  .ball { fill: @red; }
 }
