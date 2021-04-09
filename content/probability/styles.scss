@@ -153,6 +153,26 @@ x-buckets.independent {
 
 
 // -----------------------------------------------------------------------------
+// Probability Trees
+
+.galton .ball { fill: $red; }
+.ballCount {
+  width: 120%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(#0F82F2, 40%);
+}
+.ballTable table { table-layout: fixed; }
+.ballProb  {
+  width: 120%;
+  position: absolute;
+  bottom: 0;
+  background: $green;
+  height: 3px;
+}
+
+
+// -----------------------------------------------------------------------------
 // Randomness
 
 .radioactive circle {

@@ -5,8 +5,8 @@
 
 
 import {flatten, list, Obj, repeat, tabulate2D} from '@mathigon/core';
-import {Random} from '@mathigon/fermat';
-import {$, $N, ElementView} from '@mathigon/boost';
+import {lerp, Random} from '@mathigon/fermat';
+import {$, $N, animate, ElementView} from '@mathigon/boost';
 import {confetti, Step} from '@mathigon/studio';
 import '../shared/components/buckets/buckets';
 
@@ -15,10 +15,10 @@ import '../shared/components/buckets/buckets';
 // Utilities
 
 /** Converts a 2-dimensional data array into an HTML <table> string. */
-function table(data: any[][]) {
+function table(data: any[][], attributes = '') {
   const rows = data.map(tr => '<tr>' + tr.map(td => `<td>${td}</td>`)
       .join('') + '</tr>').join('');
-  return `<table>${rows}</table>`;
+  return `<table${attributes}>${rows}</table>`;
 }
 
 
@@ -214,3 +214,120 @@ export function radioactive($step: Step) {
 
   $step.$('.btn')!.one('click', decay);
 }
+
+
+// -----------------------------------------------------------------------------
+// Probability Trees
+
+const pascal = [
+  [1],
+  [1, 1],
+  [1, 2, 1],
+  [1, 3, 3, 1],
+  [1, 4, 6, 4, 1],
+  [1, 5, 10, 10, 5, 1],
+  [1, 6, 15, 20, 15, 6, 1],
+  [1, 7, 21, 35, 35, 21, 7, 1],
+  [1, 8, 28, 56, 70, 56, 28, 8, 1],
+  [1, 9, 36, 84, 126, 126, 84, 39, 9, 1],
+  [1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1],
+  [1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1]
+];
+
+export function galtonBoard($step: Step) {
+  const $svg = $step.$('.galton')!;
+  let rows: number[] = [];
+  let rowCnt: number;
+  let p: number;
+  let firstPos;
+  const finalToInd: number[] = [];
+  let cnt: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  const actualProb: number[] = [];
+  let dropped = 0;
+
+  $step.model.watch(() => {
+    $svg.removeChildren();
+    rowCnt = $step.model.rows;
+    p = $step.model.p;
+    rows = repeat(rowCnt + 1, 0);
+    rows[0] = 50 + 40 * -1 + 25;
+    for (let i = 0; i < rowCnt; i++) {  // rows
+      for (let j = 0; j <= i; j++) {  // columns
+        const cx = 200 + (j - i / 2) * 40;
+        const cy = 50 + 40 * i;
+        rows[i + 1] = cy + 25;
+        $N('circle', {cx, cy, r: 5}, $svg);
+      }
+    }
+
+    firstPos = 200 - 20 * rowCnt;
+    for (let i = 0; i <= rowCnt; i++) {
+      finalToInd[firstPos + i * 40] = i;
+    }
+    cnt = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    actualProb.length = 0;
+    for (let i = 0; i <= rowCnt + 1; i++) {
+      const val = Math.pow(p, i) * Math.pow(1 - p, rowCnt + 1 - i) * pascal[rowCnt + 1][i];
+      actualProb.push(val);
+    }
+    dropped = 0;
+  });
+
+  $step.model.ballTable = (rows: number, p: number) => {
+    const row: string[] = [];
+    for (let i = 0; i < rows + 1; ++i) {
+      const val = 100 * pascal[rows][i] * Math.pow(p, i) * Math.pow(1 - p, rows - i);
+      row.push(`<div class="pBox"><div class="ballCount" id="col${i}"></div><div class="ballProb" style="bottom: ${val}%"></div></div>`);
+    }
+    return table([row], ` id="ballTable" width="${(rowCnt + 1) * 40}px"`);
+  };
+
+  async function dropBall() {
+    $('#ballTable')!.css('width', (rowCnt + 1) * 40);
+    const $ball = $N('circle', {cx: 200, cy: 10, r: 10, class: 'ball'}, $svg);
+    await animate((p: number) => {
+      $ball.setAttr('cy', lerp(10, rows[0], p));
+    }, 200).promise;
+    let cur = 200;
+    const ht = 100; // adjust to taste, height of ball bounce
+    for (let i = 0; i < rowCnt; ++i) {
+      const nextDir = Math.random() < p;
+      await animate((p: number) => {
+        const height = ht * p * (p - 1 + 40 / ht) + rows[i]; // quadratic bounce of ball
+        $ball.setAttr('cy', height);
+        if (nextDir) {
+          $ball.setAttr('cx', lerp(cur, cur + 20, p));
+        } else {
+          $ball.setAttr('cx', lerp(cur, cur - 20, p));
+        }
+      }, 300).promise;
+      if (i < rowCnt - 1) {
+        nextDir ? cur += 20 : cur -= 20;
+      } else {
+        break;
+      }
+    }
+    dropped++;
+    cnt[finalToInd[+$ball.attr('cx')]]++;
+    for (let i = 0; i < rowCnt + 1; ++i) {
+      $('#col' + i)!.css('height', cnt[i] * 100 / dropped + '%');
+    }
+  }
+
+  $svg.on('click', () => {
+    dropBall();
+  });
+
+  const buttons = $step.$$('.btn');
+
+  buttons[0].on('click', dropBall);
+
+  buttons[1].on('click', () => {
+    for (let i = 0; i < 10; ++i) setTimeout(dropBall, 100 * i);
+  });
+
+  buttons[2].on('click', () => {
+    for (let i = 0; i < 100; ++i) setTimeout(dropBall, 100 * i);
+  });
+}
+
