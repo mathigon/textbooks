@@ -286,7 +286,17 @@ x-coordinate-system.piecewise-step {
   }
 }
 
-x-draw-graph#lisa-law-graph {
+x-step#piecewise-data {
+  .row.padded {
+    margin-bottom: 0;
+  }
+  
+  x-coordinate-system {
+    margin-top: 0;
+  }
+}
+
+x-draw-graph#draw-triathlon-graph {
   line.transition-line {
     stroke: @light-grey;
     stroke-width: 2px;
@@ -296,4 +306,14 @@ x-draw-graph#lisa-law-graph {
 
 x-picker x-coordinate-system {
   margin: 0;
+}
+
+x-step#triathlon-graph {
+  .row.padded {
+    margin-bottom: 0;
+  }
+
+  x-draw-graph {
+    margin-top: 0;
+  }
 }
