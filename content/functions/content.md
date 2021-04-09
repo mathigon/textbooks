@@ -822,12 +822,14 @@ You will be drawing the graph for this event. Here is everything you need to kno
 
 Good luck!
 
-    x-draw-graph
+    x-draw-graph#pole-vault-graph
         x-coordinate-system(width=600 height=200 x-axis="0,45.5,5" y-axis="0,5.1,1" axis-names="Distance,Height" crosshairs="no")
         div.scoring-row
             button.btn Submit
             div.judge-text
             div.scores
+
+    x-gesture(target="#pole-vault-graph")
 
 ---
 
@@ -964,222 +966,253 @@ Type some text:
 
 --------------------------------------------------------------------------------
 
-
 ## Piecewise Functions
 
 > section: piecewise
-> sectionStatus: dev
-
-
-    // NOTE
-    // Local server trouble - not able to visualize design decisions. Followed the conventions I could find in terms of notes, fixme tags, image/ graph mock-ups, and targets. Targets do not have objects set, but the syntax should indicate where the target is intended to go. Worked last to first. Some of these conventions change as I learned more from other code.
-
-Multisport races test athletes endurance. Swimrun is a rather new multi sport competition that started in 2002 in Sweden. The story goes that the owner of the Utö Värdshus hotel, his friend, and two hotel staff challenged each other to a two-versus-two race from the Utö Värdshus hotel, across three islands, to Sandhamn. The losing team would pay for everyone’s post-race meals. How long do you think the race lasted?
-
-    // NOTES
-    // Anders Malm - owner of Utö Värdshus, Janne Lindberg - friend, Andersson brothers - staff at Utö Värdshus
-    // [citation](https://en.wikipedia.org/wiki/Swimrun)
-
-    // Map between these two locations. Include images from each place. I like David’s map zoom effect he has mentioned in a couple of chapters. While it wouldn’t necessarily add to the math directly, it would make the story more interesting and help student intuit distance.
-    // EDITOR USE ONLY
-    // [Utö Värdshus](https://www.utovardshus.se/wp-content/uploads/2019/03/Liggande_VH-fr%C3%A5n-Bastun_Copyright-Ut%C3%B6-V%C3%A4rdshus-1.jpg)
-
-    // [map view](https://www.google.com/maps/dir/Sandhamn,+Sweden/Ut%C3%B6+V%C3%A4rdshus,+Pr%C3%A4stbacken+22,+130+56+Ut%C3%B6,+Sweden/@59.1054899,18.3165704,10z/data=!4m14!4m13!1m5!1m1!1s0x46f5741069214bbf:0xbfee8fb6ece8997c!2m2!1d18.9108304!2d59.2878703!1m5!1m1!1s0x46f58b4425a902e9:0xb792bc38be8de224!2m2!1d18.329336!2d58.967417!3e4)
-
-![Sandham](https://upload.wikimedia.org/wikipedia/commons/c/c1/Sandhamn_February_2013_04.jpg)
-
-The race ended up taking over 24 hours! The friends did the same race the next year, and the idea for the ÖtillÖ (island to island) was born.
-
----
-
-::: column(width=240)
-
-    // NOTES
-    // Something like this would be awesome. Transition from water to run. Setting. Dressed for water in Sweden.
-    // EDITORIAL ONLY
-
-![](https://live.staticflickr.com/65535/48213036251_c9ae4edc7b_b.jpg)
+> id: piecewise-intro
 
 ::: column.grow
 
-We are training for the ÖtillÖ. We need to get used to the feeling of swimming then immediately running. We decide to swim for 500 meters then run for 5 kilometers. Choose the graph that represents the athlete’s distance as a function of time, d(t).
+Only the most elite athletes make it to the Olympics. However, similar athletic events are enjoyed by people all around the world—and we can graph those too. One popular choice is the triathlon, where athletes complete an epic long-distance race broken into three distinct events.
+
+Triathlons can be any combination of three sports—some involve canoeing, ice skating, and at least one even features rappelling—but the most common arrangement is **swim**, **bike**, **run** (in that order).
+
+::: column(width=200)
+
+![Three images showing the parts of a typical triathlon: swimming, biking, and running.](/resources/functions/images/swim_bike_run.png)
 
 :::
 
-    // NOTES
-    // Multiple selector with one choice
-    // [option 1](https://drive.google.com/file/d/1UhFc87ir21UUNnQWmJ0UhvrXn6bZu6Lo/view?usp=sharing)
-    // [option 2](https://drive.google.com/file/d/1T0q0btNyuiNaOVWk6NbM8dQydXthhwtv/view?usp=sharing)
-    // [option 3](https://drive.google.com/file/d/18DMyDqbjmOq7Wdou-yTuMvI0NTBfSg-T/view?usp=sharing)
-    // [option 4](https://drive.google.com/file/d/1zKhk2t_V00SSEsmyXWCvohxnOyzMk0Q6/view?usp=sharing)
-    // Option 2 is the object of the targets below.
+Since [[biking | swimming | running]] is the fastest and [[swimming | biking | running]] is the slowest, which of these graphs best represents such a race?
 
-This is an example of a [__piecewise function__](gloss:piecewise) where different rules apply to different sets of input values. We can see the [first section](target:1_piecewise) of the graph has a different slope than the [second section](target:2_piecewise).
-
-One of the most common ways to write piecewise functions is by using cases.
-
-    // NOTES
-    // It would be great to target or color code the different components of the function. Input ranges point to x-axis, rules point to graph.
-
-`d(t)= {(1/20t,0≤t<10),(1/6 t-7/6,10≤t≤40):}`
-
-Each line in this function is a case. It includes the function rule and the input values where the rule is used. We read this function as “The function d has a value of (1/20)t when t is at least 0 and up to 10. Function d is (⅙)t-(7/6) when t is at least 10 and no more than 40.”
-
-Let’s continue to get our feet wet in the world of piecewise functions.
+    x-picker.graphPicker
+      .item
+        x-coordinate-system#graph1(width=200 height=200 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time,Distance" crosshairs="no")
+      .item(data-error="swimming-faster-running")
+        x-coordinate-system#graph2(width=200 height=200 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time,Distance" crosshairs="no")
+      .item(data-error="wrong-distance")
+        x-coordinate-system#graph3(width=200 height=200 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time,Distance" crosshairs="no")
+      .item(data-error="running-too-fast")
+        x-coordinate-system#graph4(width=200 height=200 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time,Distance" crosshairs="no")
 
 ---
 
-::: column.grow
+> id: piecewise-definition
 
-The 400 meter medley relay in swimming includes four swimmers. Each athlete swims 100 meters of the relay in one of the four strokes. These 100 meter segments are called legs. This relay includes [backstroke](target:1_relayGraph), [breaststroke](target:2_relayGraph), [butterfly](https://www.desmos.com/calculator/y3zz7gphmo), and [freestyle](https://www.desmos.com/calculator/y3zz7gphmo) in that order. The graph below shows s(d). Notice the vertical axis is [[distance | speed]] in meters. The horizontal axis represents [[speed | distance]] in meters per second. Is s(d) a [__function__](gloss:function)?
+::: column.grow#piecewise-description-column
 
-::: column(width=240)
+This is called a [__piecewise function__](gloss:piecewise), where different rules apply within different ranges of input values. Notice how the [{.red}first](target:line1) segment has a different slope than the [{.blue}second](target:line2) segment, and occupies a different range of inputs.
 
-    // EDITORIAL USE ONLY
+For example, the [{.green}third](target:line3) segment has a slope of `1/20`, begins at `t=`[[40]], and ends at `t=`[[60]].
 
-![](https://depositphotos.com/stock-photos/backstroke-start.html?filter=all&qview=115180204)
+::: column.grow#piecewise-graph-column
 
-    // NOTES
-    // Add vertical line test tool.
-    // [200 Medley Mock-up](https://www.desmos.com/calculator/y3zz7gphmo)
-    // Graph above is the object of the targets in relay paragraph.
-
-:::
-
-Recall that functions cannot have one input going to [[more than one | only one]] output value.  The [__vertical line test__](gloss:vertical-line-test) is a tool to test whether a relation is a function. Use the vertical line above to test this relation.
+    x-coordinate-system.piecewise-cases(width=300 height=300 x-axis="0,65,10" y-axis="0,5.5,1" axis-names="Time (min),Distance (km)" crosshairs="no")
 
 :::
 
 ---
 
-We need to pay close attention to the endpoints of each section of the domain. The endpoints ensure each element of the domain is matched to only one element of the range. With this in mind, select the function that matches the graph above.
+> id: piecewise-cases
 
-    // NOTES
-    // Multiple selector with one correct answer
+One of the most common ways to write piecewise functions is by using "cases":
 
-[option 1](s(d)={(1.3, 0≤d≤100),(1.2, 100<d≤200),(1.4, 200<d≤300),(1.5, 300<d≤400):})
-[option 2](s(d)={(1.3, 0≤d≤100),(1.2, 100≤d≤200),(1.4, 200≤d<300),(1.5, 300<d≤400):})
 
-Notice the graph shows “<” as an open circle - the same would be true for endpoint containing “>”. The closed circles inculcate “≤” and “>=”.
+::: column.piecewise-function-left(style="width:60px; margin:0;")
+
+`d(t)=`
+
+::: column(style="width:240px;")
+
+{div.red}(`(1/40 t, 0 ≤ t < 20)`,
+
+{div.blue}`(6/40 t, 20 ≤ t < 40)`,
+
+{div.green}`(3/40 t, 40 ≤ t ≤ 60)`:)
+
+:::
+
+Each case defines a function rule and a range of input values where the rule applies. So `t=44` falls into the [[third | second | first]] case, and `t=6` falls into the [[first | second | third]] case.
 
 ---
+
+> id: piecewise-endpoints
+
+Let's look at the speed of each segment, which we'll call `s(t)`. Recall that our speed is equal to the [[slope | y-axis | area]] of the previous graph:
+
+    x-coordinate-system.piecewise-step(width=600 height=200 x-axis="0,65,10" y-axis="0,0.25,0.1" axis-names="Time (min),Speed (km/min)" crosshairs="no")
+
+Notice that each segment has two endpoints, but there are *two kinds* of endpoints: [__closed ●__](target:closed-endpoint) and [__open ◦__](target:open-endpoint). A closed endpoint means the segment includes that point. An open endpoint means the segment includes everything _until_ that point, but not the point itself. This means a closed endpoint represents [[≤ | < | =]] and an open enpoint represents [[< | ≤ | =]].
+
+---
+
+> id: endpoints-1
+> goals: endpoint-puzzle
+
+Make the endpoints match the ranges. Remember that ● represents ≤, and ◦ represents <:
+
+    x-piecewise-endpoint-puzzle#endpoints-1
+        div
+            x-coordinate-system(width=600 height=200 x-axis="0,11,1" y-axis="0,6,1" axis-names="X,Y" crosshairs="no")
+            div.scoring-row
+                button.btn Submit
+                div.prompt-text
+    x-gesture(target="#endpoints-1 .endpoint")
+
+    // TODO: Make gesture successfully target dot
+
+---
+
+> id: endpoints-2
+> goals: endpoint-puzzle
+
+Now try this one!
+
+    x-piecewise-endpoint-puzzle#endpoints-2
+        div
+            x-coordinate-system(width=600 height=200 x-axis="0,11,1" y-axis="0,6,1" axis-names="X,Y" crosshairs="no")
+            div.scoring-row
+                button.btn Submit
+                div.prompt-text
+
+---
+
+> id: endpoints-3
+> goals: endpoint-puzzle
+
+How about this one?
+
+    x-piecewise-endpoint-puzzle#endpoints-3
+        div
+            x-coordinate-system(width=600 height=200 x-axis="0,11,1" y-axis="0,6,1" axis-names="X,Y" crosshairs="no")
+            div.scoring-row
+                button.btn Submit
+                div.prompt-text
+
+---
+
+> id: endpoints-4
+> goals: endpoint-puzzle
+
+Now make a function that covers the whole range of `1 ≤ x ≤ 10` (remember, a function must pass the [__Vertical Line Test__](gloss:vertical-line-test)—only one output per input!):
+
+    x-piecewise-endpoint-puzzle#endpoints-3
+        div
+            x-coordinate-system(width=600 height=200 x-axis="0,11,1" y-axis="0,6,1" axis-names="X,Y" crosshairs="no")
+            div.scoring-row
+                button.btn Submit
+                div.prompt-text
+
+---
+
+> id: piecewise-data
+
+Great! Now fill out the piecewise function for our original triathlon speed graph:
+
+::: column.piecewise-function-left(style="width:60px; margin:0;")
+
+`s(t)=`
+
+::: column(style="width:240px;text-align:left;")
+
+{div.red}((`1/40`, 0 ≤ d < [[20]]),
+
+{div.blue}(`6/40`, 20 [[ ≤ | < | > | ≥ ]] d < 40),
+
+{div.green}(`3/40`, 40 ≤ d [[ ≤ | < | > | ≥ ]] 60):)
+
+:::
+
+    x-coordinate-system.piecewise-step.piecewise-data(width=600 height=200 x-axis="0,65,10" y-axis="0,0.25,0.1" axis-names="Time (min),Speed (km/min)" crosshairs="no")
+
+---
+
+> id: step-function
 
 The function s(d) is a special kind of piecewise function called a [__step function__](gloss:step-function). One major difference between s(d) and d(t) above is all the slopes in s(d) are [[0]].
 
-The fastest leg of the relay is [[freestyle | butterfly | breaststroke | backstroke]] with a speed of [[1.5+-0.025]] meters per second. The slowest leg was [[breaststroke | freestyle | butterfly | backstroke]] completed in [[1.2+-0.025]] meters per second. Each leg of the race was [[100]] meters long.
-
-We’re ready to dive into graphing.
-
 ---
 
-One of the most common multisport competitions is a triathlon where athletes swim, bike, and run. The function l(t), Lisa Laws’s race, is given below. Use the given line segments to draw l(t) on the coordinate plane.
+> id: triathlon-graph
+> goals: submitCorrect
 
-    // EDITORIAL USE ONLY
-    // Fun, quick [video](https://tokyo2020.org/en/sports/triathlon/) of triathlon. Nod to 2020 Olympics, especially if they don't happen. Includes map of courses.
+The data from our first graph, `d(t)`, is a little unrealistic for the sake of explanation. Let's draw a graph to represent a real-world race. Here's everything you need to know about the function for our new race, `l(t)`:
 
-`l(t)={(75x, 0≤t≤20),(50000, 20<t≤21),(-615.385t+63000, 21<t≤86),(10000, 86<t≤87),(-277.778t+34166.7, 87<t≤123):}`
+- The swimming portion is 2km
+- The biking portion is 40km
+- The running portion is 10km
+- `l(t)` matches the following 3 cases—though we've hidden the rule for each case!
 
-    // EDITORIAL USE ONLY
+::: column.piecewise-function-left(style="margin:0; width:60px;")
 
-[triathlon transition](https://depositphotos.com/stock-photos/triathlon-competition-woman.html?filter=all&qview=111615040)
+`l(t)=`
 
-    // NOTES
-    // There is a paper-based activity in the [IM chapter](https://curriculum.illustrativemathematics.org/HS/teachers/1/4/12/index.html) on piecewise functions “Students are given the equations that define two piecewise functions, along with strips of paper, each containing a part of a graph and a portion of the horizontal axis (no scale is shown). Their job is to arrange the strips, apply a scale on each axis, and add open and closed circles to the graph to accurately represent the function values at each interval of input.” - IM After building the first function, students label with the given cards.
-    // Maybe shuffle order and orientation? Students can spin them as they would a paper cut out?
+::: column.piecewise-function-right
+    // TODO: Fix large open and close parenths
 
-[piece 1](https://www.desmos.com/calculator/pqdjlinaf1)
-[piece 2](https://www.desmos.com/calculator/yauvuvkbpx)
-[piece 3](https://www.desmos.com/calculator/t9ltbpdotk)
-[piece 4](https://www.desmos.com/calculator/zaa3wcoa05)
-[piece 5](https://www.desmos.com/calculator/hcghou4mr7)
-[solution](https://www.desmos.com/calculator/mkyxyep0jv)
+{div}(`(s(t), 0≤t≤25),`
 
-    // TUTOR PROMPTS
-    // What do you remember about slope?
-    // Positive slope increases from left to right.
-    // Negative slope decreases from left to right.
-    // What does a linear function with zero slope look like?
+{div}`(b(t), 25<t≤85),`
 
-Noticing that each slope is either constant or [[positive | negative]] helps us determine the orientation of each piece of the graph. Constant slope is a [[horizontal | vertical]] line. Positive slope moves [[up | down]] as we read from left to right.
-
-Slope can also help us determine the order of the pieces from left to right. For example, Law’s fastest leg of the race was [[cycling | swimming | running]]. The largest slope, [[615.4+-.1]] meters per minute, is the third case in the function. It runs between [[21]] and [[84]] minutes. We now know where on the x-axis to place the steepest piece of the graph.
-
----
-
-Recall that a function’s key features give us insights into what’s going on during the race. For example, the starting line is represented by the {.FIXME} (multiple select) [[y-intercept | x-intercept | maximum | minimum]]. We can write this point in function notation as l([[0]])=[[0]]. Place the remaining statements on the graph.
-
-    // NOTES
-    // Students label with the given cards.
-
-| Place contextual statement cards on graph | | Target key feature appears when card is placed |  |Function notation appears when card is placed |
-| :---: | | :---: | | :---: |
-| Law crosses the finish line. | | maximum | | l(123)=51500 |
-| Law is cycling toward the transition point. | | increasing | | 21 < t ≤ 86 |
-| Law is transitioning from swimming to cycling. | | constant | | 20 < t ≤ 21 |
-| Law is transitioning from cycling to running. | | constant | | 86 < t ≤ 87 |
-
----
-
-Now you get to race Law. One of the exciting things about triathlons is that you don’t need to be the fastest at each of the three sports, you just need to cross the finish line first. Here you can adjust your graph, s(t), to see how the race changes. Let’s say your most challenging leg of this race is swimming. As you can see, this segment cannot be adjusted. Can you beat Law with a swim leg that’s [[4]] minutes slower?
-
-::: column.grow
-
-    // NOTES
-    // Slider in __bold__ . Like slider graphs in https://mathigon.org/course/sequences/arithmetic-geometric. Or drag endpoints along the transition lines to change slopes.
-    // Adjusts to match given input _italics_.
-
-s(t) = {(60t, 0≤t≤25),(1500, 25<t≤26.5),(_695.652_t-_16934.8_, __26.5+-0.75__≤t<__84+-0.75__),(41500, _84_<t≤_85.5_), (_298.50_t+_15977.6_, _85.5_<t≤__123+-5__):}
-
-    // NOTES for 60t line: Actually adjusting these points in the background.
-    // NOTES for 695.652 line: (__26.5+-.75__, 1500) and (__84+-.75__, 41500)
-    // NOTES for 41500 line: (_84_, 41500) and (_85.5_, 41500), _84_ matches slider in last case, _85.5_ Adjusts to be lower bound + 1.5
-    // NOTES for 298.50 line: (_85.5_, 41500) and (__123+-5__, 51500), _85.5_ matches previous case
-
----
-
-Try adjusting the graph so that your swim __and__ run are slower than Law’s. You need to cycle at [[{.fixme} Is there a way to accept a range of slopes that are dependent on the slider values? ]] meters per minute in order to beat Law.
-
-::: column(width=240)
-
-    // NOTES
-    // Graph: l(t) is blue, s(t) is orange
-    // [mock-up triathlon graph](https://www.desmos.com/calculator/1wcntarqcv)
+{div}`(r(t), 85<t≤125)`:)
 
 :::
 
+    x-draw-graph#draw-triathlon-graph(score-threshold=0.98, snap=1)
+        x-coordinate-system(width=600 height=300 x-axis="0,125,10" y-axis="0,55,10" axis-names="Minutes,Kilometers" crosshairs="no")
+        div.scoring-row
+            button.btn Submit
+            div.judge-text
+            div.scores
+
+    x-gesture(target="#draw-triathlon-graph")
+
 ---
 
-::: column(width=240)
+> id: triathlon-slopes
 
-[sundae image](https://depositphotos.com/4537530/stock-photo-ice-cream.html)
+Now that we have the graph, let's calculate the slope of each segment. Recall that [__slope__](gloss:slope) is equal to Rise over Run. We'll start with the swimming segment:
 
-::: column.grow
+{.text-center}**Rise** is the distance swam: [[2]]km
 
-Let’s go get some ice cream to celebrate you win! Ice-agon gives two pricing schemes. You can pay by the gram or buy one of three sizes. What do you want to order?
+{.text-center}**Run** is the time swimming: [[25]]min
 
-:::
+{.text-center}**Slope** is equal to `Rise/Run`: [[0.08]]km/min
 
-    // NOTES
-    // Students interact with the graph. Small, medium, and large are in orange. Price per gram is in purple.
+---
 
-[graph mock-up](https://www.desmos.com/calculator/i0iatpatrn)
+Now do the same for the other two segments:
 
-As you can see, your choice will depend on a few different factors. Fill out the table below to have a clearer understanding of your options.
+| | **Swimming** | **Biking** | **Running** |
+| **Rise** | 2km | [[40]]km | [[10]]km |
+| **Run** | 25min | [[60]]min | [[40]]min |
+| **Slope** | 0.08km/min | [[0.66±0.01]]km/min | [[0.25]]km/min |
 
-| Weight | | Cost | | Cost |
-| :---: | | :---: | | :---: |
-| 50 | | [[ Not available ]] {.fixme} also accept NA, N/A, na, n/a, none, no | | 0.10 |
-| 75 | | [[2.75]] | | [[1.50+-0.1]] |
-| 125 | | [[2.75]] | | [[2.50+-0.1]] |
-| 150 | | [[Not available]] | | [[3+-0.1]] |
-| 175 | | [[4.25]] | | [[3.50+-0.1]] |
-| 225 | | [[4.25]] | | [[4.50+-0.1]] |
-| 275 | | [[Not available]] | | [[5.50+-0.1]] |
-| 325 | | [[5]] | | [[6.50+-0.1]] |
-| 335 | | [[Not available]] | | [[6.70+-0.1]] |
+---
 
-The most ice cream you can buy with $5  is about [[300+-30]] grams with the large size container. The best buy if you want 200 grams of ice cream is [[pay per gram | medium container]], which costs [[4]].
+> id: triathlon-adjustments
 
+Triathlons are exciting because you don't need to be the fastest at every sport; you only need to cross the finish line first. Say you finish the swim segment a whole 15 minutes slower than the graph above. What speed—or slope—do you need during the biking segment to finish at the same time?
+
+(hint: you'll need to finish the biking segment 15 minutes faster!)
+
+| | **Swimming** | **Biking** | **Running** |
+| **Rise** | 2km | 40km | 10km |
+| **Run** | 40min | [[45]]min | 40min |
+| **Slope** | 0.05km/min | [[0.88±0.01]]km/min | 0.25km/min |
+
+---
+
+That's pretty fast. Say you can only bike at 0.8km/min; now how fast do you need to run to catch up?
+
+| | **Swimming** | **Biking** | **Running** |
+| **Rise** | 2km | 40km | 10km |
+| **Run** | 40min | [[50]]min | [[45]]min |
+| **Slope** | 0.05km/min | 0.8km/min | [[0.22]]km/min |
+
+---
+
+What an exhausting day. Let's go relax with some video games in the next chapter.
 
 --------------------------------------------------------------------------------
 

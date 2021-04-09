@@ -10,6 +10,7 @@
 @import "../shared/components/video-graph";
 @import "../shared/components/card-graph";
 @import "../shared/components/draw-graph";
+@import "./components/piecewise-endpoint-puzzle";
 
 
 .btn.clear {
@@ -196,5 +197,122 @@ line#time-line {
 
   x-coordinate-system {
     margin: 5px auto 2em auto;
+  }
+}
+
+.piecewise-function-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+x-picker.graphPicker {
+  .item {
+    width: auto;
+  }
+}
+
+#piecewise-description-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 285px;
+}
+
+#piecewise-graph-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+x-coordinate-system.piecewise-cases {
+  .plot {
+    line {
+      stroke-width: 3px;
+    }
+    #line1 {
+      stroke: @red;
+    }
+    #line2 {
+      stroke: @blue;
+    }
+    #line3 {
+      stroke: @green;
+    }
+  }
+}
+
+x-coordinate-system.piecewise-step {
+  svg {
+    overflow: visible;
+  }
+
+  .overlay>line.vertical-line {
+    stroke-width: 2px;
+    stroke: black;
+  }
+
+  .overlay>.plot {
+    stroke-width: 2px;
+
+    text {
+      stroke-width: 0;
+      font-size: 16px;
+      text-anchor: middle;
+    }
+
+    .red {
+      stroke: @red;
+      fill: @red;
+    }
+    .orange {
+      stroke: @orange;
+      fill: @orange;
+    }
+    .blue {
+      stroke: @blue;
+      fill: @blue;
+    }
+    .green {
+      stroke: @green;
+      fill: @green;
+    }
+
+    circle.open {
+      fill: none;
+    }
+  }
+}
+
+x-step#piecewise-data {
+  .row.padded {
+    margin-bottom: 0;
+  }
+  
+  x-coordinate-system {
+    margin-top: 0;
+  }
+}
+
+x-draw-graph#draw-triathlon-graph {
+  line.transition-line {
+    stroke: @light-grey;
+    stroke-width: 2px;
+    stroke-dasharray: 6 4;
+  }
+}
+
+x-picker x-coordinate-system {
+  margin: 0;
+}
+
+x-step#triathlon-graph {
+  .row.padded {
+    margin-bottom: 0;
+  }
+
+  x-draw-graph {
+    margin-top: 0;
   }
 }

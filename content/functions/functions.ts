@@ -12,6 +12,8 @@ import '../shared/components/card-graph';
 import { CardGraph } from '../shared/components/card-graph';
 import '../shared/components/draw-graph';
 import { DrawGraph } from '../shared/components/draw-graph';
+import './components/piecewise-endpoint-puzzle';
+import { PiecewiseEndpointPuzzle } from './components/piecewise-endpoint-puzzle';
 import {Point} from '@mathigon/euclid';
 import {CoordinateSystem, Geopad, GeoPoint, Slider, Step, Video} from '../shared/types';
 import { $N, animate, Draggable, ease, ElementView, hover, KEY_CODES, pointerOver, SVGParentView, svgPointerPosn } from '@mathigon/boost';
@@ -585,4 +587,213 @@ export function runningCards($step: Step) {
     {function: (t: number) => 7.10179*t-53.6354, color: 'blue'},
   ]);
   $cardGraph.setCards(cards);
+}
+
+export function piecewiseIntro($step: Step) {
+  ($step.$('#graph1')! as CoordinateSystem).drawLinePlot([new Point(0, 0), new Point(20, 0.5), new Point(40, 3.5), new Point(60, 5)]);
+  ($step.$('#graph2')! as CoordinateSystem).drawLinePlot([new Point(0, 0), new Point(5, 2), new Point(40, 3), new Point(60, 5)]);
+  ($step.$('#graph3')! as CoordinateSystem).drawLinePlot([new Point(0, 0), new Point(10, 2), new Point(35, 4), new Point(60, 5)]);
+  ($step.$('#graph4')! as CoordinateSystem).drawLinePlot([new Point(0, 0), new Point(30, 0.5), new Point(50, 2), new Point(60, 5)]);
+  
+  const picker = $step.$('x-picker')!;
+  const children = shuffle(picker.children);
+  picker.removeChildren();
+  while (children.length)
+    picker.append(children.pop()!);
+}
+
+export function piecewiseDefinition($step: Step) {
+  const $graph = $step.$('x-coordinate-system')! as CoordinateSystem;
+  const $plot = $step.$('.plot')!;
+  
+  const a = $graph.toViewportCoords(new Point(0, 0));
+  const b = $graph.toViewportCoords(new Point(20, 0.5));
+  const c = $graph.toViewportCoords(new Point(40, 3.5));
+  const d = $graph.toViewportCoords(new Point(60, 5));
+
+  const line1 = $N('line', {id: 'line1', target: 'line1', x1: a.x, x2: b.x, y1: a.y, y2: b.y}, $plot);
+  const line2 = $N('line', {id: 'line2', target: 'line2', x1: b.x, x2: c.x, y1: b.y, y2: c.y}, $plot);
+  const line3 = $N('line', {id: 'line3', target: 'line3', x1: c.x, x2: d.x, y1: c.y, y2: d.y}, $plot);
+}
+
+export function piecewiseEndpoints($step: Step) {
+  const $graph = $step.$('x-coordinate-system') as CoordinateSystem;
+  const $plot = $N('g', {class: 'plot'}, $graph.$overlay)
+
+  {
+    const a = $graph.toViewportCoords(new Point(0, 1/40));
+    const b = $graph.toViewportCoords(new Point(20, 1/40));
+
+    const $g = $N('g', {class: 'red', id: 'swim'}, $plot);
+    $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Swim';
+    $N('line', {x1: a.x+4, x2: b.x-4, y1: a.y, y2: b.y}, $g);
+    $N('circle', {class: 'closed', target: 'closed', cx: a.x, cy: a.y, r: 4}, $g);
+    $N('circle', {class: 'open', target: 'open', cx: b.x, cy: b.y, r: 4}, $g);
+  }
+  {
+    const a = $graph.toViewportCoords(new Point(20, 6/40));
+    const b = $graph.toViewportCoords(new Point(40, 6/40));
+
+    const $g = $N('g', {class: 'blue', id: 'bike'}, $plot);
+    $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Bike';
+    $N('line', {x1: a.x+4, x2: b.x-4, y1: a.y, y2: b.y}, $g);
+    $N('circle', {class: 'closed', target: 'closed', cx: a.x, cy: a.y, r: 4}, $g);
+    $N('circle', {class: 'open', target: 'open', cx: b.x, cy: b.y, r: 4}, $g);
+  }
+  {
+    const a = $graph.toViewportCoords(new Point(40, 3/40));
+    const b = $graph.toViewportCoords(new Point(60, 3/40));
+
+    const $g = $N('g', {class: 'green', id: 'run'}, $plot);
+    $N('text', {x: (a.x+b.x)/2, y: a.y-10}, $g).text = 'Run';
+    $N('line', {x1: a.x+4, x2: b.x-4, y1: a.y, y2: b.y}, $g);
+    $N('circle', {class: 'closed', target: 'closed', cx: a.x, cy: a.y, r: 4}, $g);
+    $N('circle', {class: 'closed', target: 'closed', cx: b.x, cy: b.y, r: 4}, $g);
+  }
+
+  return;
+  // Disabling VLT for now
+
+  const $verticalLine = $N('line', {class: 'vertical-line', x1: 0, x2: 0, y1: $graph.viewportBounds.yMin, y2: $graph.viewportBounds.yMax}, $graph.$overlay);
+  $verticalLine.hide();
+
+  pointerOver($graph.$svg, {
+    enter: () => $verticalLine.show(),
+    move: (p) => {
+      $verticalLine.setAttr('x1', p.x);
+      $verticalLine.setAttr('x2', p.x);
+    },
+    exit: () => $verticalLine.hide(),
+  })
+}
+
+export function endpoints1($step: Step) {
+  const $puzzle = $step.$('x-piecewise-endpoint-puzzle')! as PiecewiseEndpointPuzzle;
+
+  $puzzle.bindStep($step);
+
+  $puzzle.setSegments([{
+    point0: new Point(1, 3),
+    point1: new Point(10, 3),
+    include0: true,
+    include1: false,
+  }]);
+}
+
+export function endpoints2($step: Step) {
+  const $puzzle = $step.$('x-piecewise-endpoint-puzzle')! as PiecewiseEndpointPuzzle;
+
+  $puzzle.bindStep($step);
+
+  $puzzle.setSegments([{
+    point0: new Point(1, 4),
+    point1: new Point(6, 4),
+    include0: false,
+    include1: true,
+  },{
+    point0: new Point(6, 2),
+    point1: new Point(10, 2),
+    include0: false,
+    include1: true,
+  }]);
+}
+
+export function endpoints3($step: Step) {
+  const $puzzle = $step.$('x-piecewise-endpoint-puzzle')! as PiecewiseEndpointPuzzle;
+
+  $puzzle.bindStep($step);
+
+  $puzzle.setSegments([{
+    point0: new Point(1, 2),
+    point1: new Point(3, 2),
+    include0: false,
+    include1: true,
+  },{
+    point0: new Point(3, 5),
+    point1: new Point(7, 5),
+    include0: false,
+    include1: false,
+  },{
+    point0: new Point(7, 3),
+    point1: new Point(10, 3),
+    include0: false,
+    include1: true,
+  }]);
+}
+
+export function endpoints4($step: Step) {
+  const $puzzle = $step.$('x-piecewise-endpoint-puzzle')! as PiecewiseEndpointPuzzle;
+
+  $puzzle.bindStep($step);
+
+  $puzzle.setSegments([{
+    point0: new Point(1, 3),
+    point1: new Point(3, 3),
+  },{
+    point0: new Point(3, 1),
+    point1: new Point(5, 1),
+  },{
+    point0: new Point(5, 5),
+    point1: new Point(8, 5),
+  },{
+    point0: new Point(8, 4),
+    point1: new Point(10, 4),
+  }]);
+}
+
+export function piecewiseData($step: Step) {
+  piecewiseEndpoints($step);
+}
+
+export function triathlonGraph($step: Step) {
+  const $drawGraph = $step.$('x-draw-graph')! as DrawGraph;
+  const $graph = $drawGraph.$('x-coordinate-system')! as CoordinateSystem;
+
+  const bikeStart = $graph.toViewportCoords(new Point(0, 2));
+  const runStart = $graph.toViewportCoords(new Point(125, 42));
+  const raceEnd = $graph.toViewportCoords(new Point(125, 52));
+
+  const $lines = $N('g', {});
+  $graph.$('.grid')!.insertAfter($lines);
+
+  $N('line', {class: 'transition-line', x1: bikeStart.x, x2: runStart.x, y1: bikeStart.y, y2: bikeStart.y}, $lines);
+  $N('line', {class: 'transition-line', x1: bikeStart.x, x2: runStart.x, y1: runStart.y, y2: runStart.y}, $lines);
+  $N('line', {class: 'transition-line', x1: bikeStart.x, x2: runStart.x, y1: raceEnd.y, y2: raceEnd.y}, $lines);
+
+  $drawGraph.bindStep($step);
+
+  $drawGraph.setSolutionFunction((x: number) => {
+    if (x < 25) {
+      return 2/25*x;
+    }
+    if (x < 85) {
+      const p = (x-25)/(85-25);
+      return lerp(2, 42, p);
+    }
+    if (x < 125) {
+      const p = (x-85)/(125-85);
+      return lerp(42, 52, p);
+    }
+    return 52;
+  });
+
+  $drawGraph.setHintPoints([{
+    x: 0.01,
+    hint: 'The race begins at (0, 0)',
+    relevanceThresholdDistance: 0,
+    drawCircle: true,
+  },{
+    x: 25,
+    hint: 'The transition to biking happens at t=25',
+    relevanceThresholdDistance: 0,
+    drawLine: true,
+  },{
+    x: 85,
+    hint: 'The transition to running happens at t=85',
+    drawLine: true,
+  },{
+    x: 125,
+    hint: 'The race ends at t=125',
+    drawLine: true,
+  }]);
 }
