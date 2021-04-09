@@ -976,7 +976,7 @@ Type some text:
 
 ::: column.grow
 
-Only the most elite athletes make it to the Olympics. However, similar athletic events are enjoyed by people all around the world—and we can graph those too. One popular choice is the triathlon, where athletes complete an epic long-distance race in three parts, each a different sport.
+Only the most elite athletes make it to the Olympics. However, similar athletic events are enjoyed by people all around the world—and we can graph those too. One popular choice is the triathlon, where athletes complete an epic long-distance race broken into three distinct events.
 
 Triathlons can be any combination of three sports—some involve canoeing, ice skating, and at least one even features rappelling—but the most common arrangement is **swim**, **bike**, **run** (in that order).
 
