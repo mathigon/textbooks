@@ -1045,7 +1045,7 @@ Let's look at the speed of each segment, which we'll call `s(t)`. Recall that ou
 
     x-coordinate-system.piecewise-step(width=600 height=200 x-axis="0,65,10" y-axis="0,0.25,0.1" axis-names="Time (min),Speed (km/min)" crosshairs="no")
 
-Notice that each segment has two endpoints, but there are *two kinds* of endpoints: [__closed ●__](target:closed-endpoint) and [__open ◦__](target:open-endpoint). A closed endpoint means the segment includes that point. An open endpoint means the segment includes everything _until_ that point, but not the point itself. This represents the difference between [[< | ≤ | =]] and [[≤ | < | =]], which is critical for ensuring that every input has only one output.
+Notice that each segment has two endpoints, but there are *two kinds* of endpoints: [__closed ●__](target:closed-endpoint) and [__open ◦__](target:open-endpoint). A closed endpoint means the segment includes that point. An open endpoint means the segment includes everything _until_ that point, but not the point itself. This means a closed endpoint represents [[≤ | < | =]] and an open enpoint represents [[< | ≤ | =]].
 
 ---
 
