@@ -62,6 +62,9 @@ export class DrawGraph extends CustomElementView {
 
     ready() {
         // Parse attributes
+        this.scoreThreshold = this.attr('score-threshold') ?
+            Number.parseFloat(this.attr('score-threshold')) : 0.95;
+
         let snapString = this.attr('snap');
         if (snapString) {
             // Surely there is an existing method for parsing these strings to points?
@@ -224,8 +227,6 @@ export class DrawGraph extends CustomElementView {
 
     bindStep($step: Step) {
       this.$step = $step;
-      // Requires a solid "A" to pass by default
-      this.scoreThreshold = scoreThreshold;
     }
 
     setHintPoints(hintPoints: HintPoint[]) {
