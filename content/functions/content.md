@@ -1212,37 +1212,7 @@ That's pretty fast. Say you can only bike at 0.8km/min; now how fast do you need
 
 ---
 
-::: column(width=240)
-
-[sundae image](https://depositphotos.com/4537530/stock-photo-ice-cream.html)
-
-::: column.grow
-
-Let’s go get some ice cream to celebrate you win! Ice-agon gives two pricing schemes. You can pay by the gram or buy one of three sizes. What do you want to order?
-
-:::
-
-    // NOTES
-    // Students interact with the graph. Small, medium, and large are in orange. Price per gram is in purple.
-
-[graph mock-up](https://www.desmos.com/calculator/i0iatpatrn)
-
-As you can see, your choice will depend on a few different factors. Fill out the table below to have a clearer understanding of your options.
-
-| Weight | | Cost | | Cost |
-| :---: | | :---: | | :---: |
-| 50 | | [[ Not available ]] {.fixme} also accept NA, N/A, na, n/a, none, no | | 0.10 |
-| 75 | | [[2.75]] | | [[1.50+-0.1]] |
-| 125 | | [[2.75]] | | [[2.50+-0.1]] |
-| 150 | | [[Not available]] | | [[3+-0.1]] |
-| 175 | | [[4.25]] | | [[3.50+-0.1]] |
-| 225 | | [[4.25]] | | [[4.50+-0.1]] |
-| 275 | | [[Not available]] | | [[5.50+-0.1]] |
-| 325 | | [[5]] | | [[6.50+-0.1]] |
-| 335 | | [[Not available]] | | [[6.70+-0.1]] |
-
-The most ice cream you can buy with $5  is about [[300+-30]] grams with the large size container. The best buy if you want 200 grams of ice cream is [[pay per gram | medium container]], which costs [[4]].
-
+What an exhausting day. Let's go relax with some video games in the next chapter.
 
 --------------------------------------------------------------------------------
 
