@@ -741,13 +741,59 @@ export function endpoints4($step: Step) {
   }]);
 }
 
+export function piecewiseData($step: Step) {
+  piecewiseEndpoints($step);
+}
+
 export function triathlonGraph($step: Step) {
   const $drawGraph = $step.$('x-draw-graph')! as DrawGraph;
   const $graph = $drawGraph.$('x-coordinate-system')! as CoordinateSystem;
 
-  const bikeStart = $graph.toViewportCoords(new Point(0, 1.5));
-  const runStart = $graph.toViewportCoords(new Point(125, 41.5));
+  const bikeStart = $graph.toViewportCoords(new Point(0, 2));
+  const runStart = $graph.toViewportCoords(new Point(125, 42));
+  const raceEnd = $graph.toViewportCoords(new Point(125, 52));
 
-  $N('line', {class: 'transition-line', x1: bikeStart.x, x2: runStart.x, y1: bikeStart.y, y2: bikeStart.y}, $graph.$overlay);
-  $N('line', {class: 'transition-line', x1: bikeStart.x, x2: runStart.x, y1: runStart.y, y2: runStart.y}, $graph.$overlay);
+  const $lines = $N('g', {});
+  $graph.$('.grid')!.insertAfter($lines);
+
+  $N('line', {class: 'transition-line', x1: bikeStart.x, x2: runStart.x, y1: bikeStart.y, y2: bikeStart.y}, $lines);
+  $N('line', {class: 'transition-line', x1: bikeStart.x, x2: runStart.x, y1: runStart.y, y2: runStart.y}, $lines);
+  $N('line', {class: 'transition-line', x1: bikeStart.x, x2: runStart.x, y1: raceEnd.y, y2: raceEnd.y}, $lines);
+
+  $drawGraph.bindStep($step);
+
+  $drawGraph.setSolutionFunction((x: number) => {
+    if (x < 25) {
+      return 2/25*x;
+    }
+    if (x < 85) {
+      const p = (x-25)/(85-25);
+      return lerp(2, 42, p);
+    }
+    if (x < 125) {
+      const p = (x-85)/(125-85);
+      return lerp(42, 52, p);
+    }
+    return 52;
+  });
+
+  $drawGraph.setHintPoints([{
+    x: 0.01,
+    hint: 'The race begins at (0, 0)',
+    relevanceThresholdDistance: 0,
+    drawCircle: true,
+  },{
+    x: 25,
+    hint: 'The transition to biking happens at t=25',
+    relevanceThresholdDistance: 0,
+    drawLine: true,
+  },{
+    x: 85,
+    hint: 'The transition to running happens at t=85',
+    drawLine: true,
+  },{
+    x: 125,
+    hint: 'The race ends at t=125',
+    drawLine: true,
+  }]);
 }
