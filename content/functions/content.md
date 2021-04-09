@@ -1144,7 +1144,7 @@ The data from our first graph, `d(t)`, is a little unrealistic for the sake of e
 - The swimming portion is 2km
 - The biking portion is 40km
 - The running portion is 10km
-- `l(t)` matches these 3 cases—though we've hidden the rule for each case:
+- `l(t)` matches the following 3 cases—though we've hidden the rule for each case!
 
 ::: column.piecewise-function-left(style="margin:0; width:60px;")
 
