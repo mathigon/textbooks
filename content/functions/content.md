@@ -1042,14 +1042,14 @@ Let's look at the speed of each segment, which we'll call `s(t)`. Recall that ou
 
     x-coordinate-system.piecewise-step(width=600 height=200 x-axis="0,65,10" y-axis="0,0.25,0.1" axis-names="Time (min),Speed (km/min)" crosshairs="no")
 
-Notice that each segment has two endpoints, but there are *two kinds* of endpoints: [__closed ●__](target:closed-endpoint) and [__open ◦__](target:open-endpoint). A closed endpoint means the segment includes that point. An open endpoint means the segment includes everything _until_ that point, but not the point itself. This represents the difference between < and ≤, and it's critical for ensuring that every input has only one output.
+Notice that each segment has two endpoints, but there are *two kinds* of endpoints: [__closed ●__](target:closed-endpoint) and [__open ◦__](target:open-endpoint). A closed endpoint means the segment includes that point. An open endpoint means the segment includes everything _until_ that point, but not the point itself. This represents the difference between [[< | ≤ | =]] and [[≤ | < | =]], which is critical for ensuring that every input has only one output.
 
 ---
 
-Make the endpoints match the ranges. Remember that ● represents ≤, and ◦ represents <:
-
 > id: endpoints-1
 > goals: endpoint-puzzle
+
+Make the endpoints match the ranges. Remember that ● represents ≤, and ◦ represents <:
 
     x-piecewise-endpoint-puzzle#endpoints-1
         div
@@ -1077,10 +1077,10 @@ Now try this one!
 
 ---
 
-How about this one?
-
 > id: endpoints-3
 > goals: endpoint-puzzle
+
+How about this one?
 
     x-piecewise-endpoint-puzzle#endpoints-3
         div
@@ -1090,12 +1090,12 @@ How about this one?
                 div.prompt-text
 
 ---
-
-Now make a function that covers the whole range of `1 ≤ x ≤ 10` (remember, a function must pass the [__Vertical Line Test__](gloss:vertical-line-test)—only one output per input!):
 
 > id: endpoints-4
 > goals: endpoint-puzzle
 
+Now make a function that covers the whole range of `1 ≤ x ≤ 10` (remember, a function must pass the [__Vertical Line Test__](gloss:vertical-line-test)—only one output per input!):
+
     x-piecewise-endpoint-puzzle#endpoints-3
         div
             x-coordinate-system(width=600 height=200 x-axis="0,11,1" y-axis="0,6,1" axis-names="X,Y" crosshairs="no")
@@ -1105,7 +1105,9 @@ Now make a function that covers the whole range of `1 ≤ x ≤ 10` (remember, a
 
 ---
 
-With this in mind, fill out the piecewise function for this graph:
+> id: piecewise-data
+
+Great! Now fill out the piecewise function for our original triathlon speed graph:
 
 ::: column.piecewise-function-left(style="width:60px; margin:0;")
 
@@ -1121,24 +1123,25 @@ With this in mind, fill out the piecewise function for this graph:
 
 :::
 
+    x-coordinate-system.piecewise-step.piecewise-data(width=600 height=200 x-axis="0,65,10" y-axis="0,0.25,0.1" axis-names="Time (min),Speed (km/min)" crosshairs="no")
+
 ---
 
 > id: step-function
 
 The function s(d) is a special kind of piecewise function called a [__step function__](gloss:step-function). One major difference between s(d) and d(t) above is all the slopes in s(d) are [[0]].
 
-The fastest leg of the relay is [[freestyle | butterfly | breaststroke | backstroke]] with a speed of [[1.5+-0.025]] meters per second. The slowest leg was [[breaststroke | freestyle | butterfly | backstroke]] completed in [[1.2+-0.025]] meters per second. Each leg of the race was [[100]] meters long.
-
-We’re ready to dive into graphing.
-
 ---
 
 > id: triathlon-graph
+> goals: submitCorrect
 
-One of the most common multisport competitions is a triathlon where athletes swim, bike, and run. The function l(t), Lisa Laws’s race, is given below. Use the given line segments to draw l(t) on the coordinate plane.
+The data from our first graph, `d(t)`, is a little unrealistic for the sake of explanation. Let's draw a graph to represent a real-world race. Here's everything you need to know about the function for our new race, `l(t)`:
 
-    // EDITORIAL USE ONLY
-    // Fun, quick [video](https://tokyo2020.org/en/sports/triathlon/) of triathlon. Nod to 2020 Olympics, especially if they don't happen. Includes map of courses.
+- The swimming portion is 2km
+- The biking portion is 40km
+- The running portion is 10km
+- `l(t)` matches these 3 cases—though we've hidden the rule for each case:
 
 ::: column.piecewise-function-left(style="margin:0; width:60px;")
 
@@ -1147,11 +1150,11 @@ One of the most common multisport competitions is a triathlon where athletes swi
 ::: column.piecewise-function-right
     // TODO: Fix large open and close parenths
 
-{div}(`(0.075t, 0≤t≤20),`
+{div}(`(s(t), 0≤t≤25),`
 
-{div}`(0.615385t+63, 20<t≤86),`
+{div}`(b(t), 25<t≤85),`
 
-{div}`(0.277778t+34.1667, 86<t≤123)`:)
+{div}`(r(t), 85<t≤125)`:)
 
 :::
 
