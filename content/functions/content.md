@@ -1161,39 +1161,14 @@ The data from our first graph, `d(t)`, is a little unrealistic for the sake of e
 
 :::
 
-    x-draw-graph#lisa-law-graph
+    x-draw-graph#draw-triathlon-graph(score-threshold=0.98, snap=1)
         x-coordinate-system(width=600 height=300 x-axis="0,125,10" y-axis="0,55,10" axis-names="Minutes,Kilometers" crosshairs="no")
         div.scoring-row
             button.btn Submit
             div.judge-text
             div.scores
 
-    x-gesture(target="#lisa-law-graph")
-
-    // EDITORIAL USE ONLY
-
-[triathlon transition](https://depositphotos.com/stock-photos/triathlon-competition-woman.html?filter=all&qview=111615040)
-
-    // NOTES
-    // There is a paper-based activity in the [IM chapter](https://curriculum.illustrativemathematics.org/HS/teachers/1/4/12/index.html) on piecewise functions “Students are given the equations that define two piecewise functions, along with strips of paper, each containing a part of a graph and a portion of the horizontal axis (no scale is shown). Their job is to arrange the strips, apply a scale on each axis, and add open and closed circles to the graph to accurately represent the function values at each interval of input.” - IM After building the first function, students label with the given cards.
-    // Maybe shuffle order and orientation? Students can spin them as they would a paper cut out?
-
-[piece 1](https://www.desmos.com/calculator/pqdjlinaf1)
-[piece 2](https://www.desmos.com/calculator/yauvuvkbpx)
-[piece 3](https://www.desmos.com/calculator/t9ltbpdotk)
-[piece 4](https://www.desmos.com/calculator/zaa3wcoa05)
-[piece 5](https://www.desmos.com/calculator/hcghou4mr7)
-[solution](https://www.desmos.com/calculator/mkyxyep0jv)
-
-    // TUTOR PROMPTS
-    // What do you remember about slope?
-    // Positive slope increases from left to right.
-    // Negative slope decreases from left to right.
-    // What does a linear function with zero slope look like?
-
-Noticing that each slope is either constant or [[positive | negative]] helps us determine the orientation of each piece of the graph. Constant slope is a [[horizontal | vertical]] line. Positive slope moves [[up | down]] as we read from left to right.
-
-Slope can also help us determine the order of the pieces from left to right. For example, Law’s fastest leg of the race was [[cycling | swimming | running]]. The largest slope, [[615.4+-.1]] meters per minute, is the third case in the function. It runs between [[21]] and [[84]] minutes. We now know where on the x-axis to place the steepest piece of the graph.
+    x-gesture(target="#draw-triathlon-graph")
 
 ---
 
