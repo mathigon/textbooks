@@ -49,6 +49,7 @@ export class DrawGraph extends CustomElementView {
 
     private $step?: Step;
     private scoreThreshold: number = 0;
+    private snap: Point = new Point(0, 0);
 
     private solutionFunction!: (x: number) => number;
 
@@ -60,6 +61,24 @@ export class DrawGraph extends CustomElementView {
     private $judgeText!: ElementView;
 
     ready() {
+        // Parse attributes
+        let snapString = this.attr('snap');
+        if (snapString) {
+            // Surely there is an existing method for parsing these strings to points?
+            snapString = snapString.replace('(', '');
+            snapString = snapString.replace(')', '');
+            const snapNumbers = snapString.split(',');
+            if (snapNumbers.length == 1) {
+                const snapNumber = Number.parseFloat(snapNumbers[0].trim());
+                this.snap = new Point(snapNumber, snapNumber);
+            }
+            else {
+                const x = Number.parseFloat(snapNumbers[0].trim());
+                const y = Number.parseFloat(snapNumbers[1].trim());
+                this.snap = new Point(x, y);
+            }
+        }
+
         // Set up judge text
         this.$judgeText = this.$('.judge-text')!;
         const refreshJudgeText = () => {
@@ -91,7 +110,7 @@ export class DrawGraph extends CustomElementView {
         this.$graph = this.$('x-coordinate-system') as CoordinateSystem;
         
         const $svg = this.$graph.$svg;
-        const $overlay = $svg.$('.overlay');
+        const $overlay = this.$graph.$overlay;
         this.$plot = this.$('.plot')!;
         this.$solution = $N('g', {class: 'solution'});
         this.$('.grid')!.insertAfter(this.$solution);
@@ -149,13 +168,20 @@ export class DrawGraph extends CustomElementView {
 
                 slide($point, {
                     down: () => { engagingPoint = true; },
-                    move: (p) => {
-                        p = this.bindViewportPoint(p);
-                        
-                        plotPoint.point = this.$graph.toPlotCoords(p);
-                        plotPoint.position = p;
+                    move: (position) => {
+                        position = this.bindViewportPoint(position);
+                        let point = this.$graph.toPlotCoords(position);
 
-                        $point.setAttr('transform', `translate(${p.x}, ${p.y})`);
+                        const x = this.snap.x <= 0 ? point.x : Math.round(point.x/this.snap.x)*this.snap.x;
+                        const y = this.snap.y <= 0 ? point.y : Math.round(point.y/this.snap.y)*this.snap.y;
+                        
+                        point = new Point(x, y);
+                        position = this.$graph.toViewportCoords(point);
+
+                        plotPoint.position = position;
+                        plotPoint.point = point;
+
+                        $point.setAttr('transform', `translate(${position.x}, ${position.y})`);
                         
                         graphModified();
                     },
@@ -171,14 +197,21 @@ export class DrawGraph extends CustomElementView {
 
                 graphModified();
             },
-            move: (p) => {
+            move: (position) => {
                 if (placingPoint) {
-                    p = this.bindViewportPoint(p);
+                    position = this.bindViewportPoint(position);
+                    let point = this.$graph.toPlotCoords(position);
 
-                    placingPoint.point = this.$graph.toPlotCoords(p);
-                    placingPoint.position = p;
+                    const x = this.snap.x <= 0 ? point.x : Math.round(point.x/this.snap.x)*this.snap.x;
+                    const y = this.snap.y <= 0 ? point.y : Math.round(point.y/this.snap.y)*this.snap.y;
+                    
+                    point = new Point(x, y);
+                    position = this.$graph.toViewportCoords(point);
 
-                    placingPoint.$el.setAttr('transform', `translate(${p.x}, ${p.y})`);
+                    placingPoint.point = point;
+                    placingPoint.position = position;
+
+                    placingPoint.$el.setAttr('transform', `translate(${position.x}, ${position.y})`);
 
                     redrawPath();
                 }
@@ -189,7 +222,7 @@ export class DrawGraph extends CustomElementView {
         });
     }
 
-    bindStep($step: Step, scoreThreshold=0.95) {
+    bindStep($step: Step) {
       this.$step = $step;
       // Requires a solid "A" to pass by default
       this.scoreThreshold = scoreThreshold;
