@@ -1169,17 +1169,24 @@ The data from our first graph, `d(t)`, is a little unrealistic for the sake of e
 
 ---
 
-Recall that a function’s key features give us insights into what’s going on during the race. For example, the starting line is represented by the {.FIXME} (multiple select) [[y-intercept | x-intercept | maximum | minimum]]. We can write this point in function notation as l([[0]])=[[0]]. Place the remaining statements on the graph.
+> id: triathlon-slopes
 
-    // NOTES
-    // Students label with the given cards.
+Now that we have the graph, let's calculate the slope of each segment. Recall that [__slope__](gloss:slope) is equal to Rise over Run. We'll start with the swimming segment:
 
-| Place contextual statement cards on graph | | Target key feature appears when card is placed |  |Function notation appears when card is placed |
-| :---: | | :---: | | :---: |
-| Law crosses the finish line. | | maximum | | l(123)=51500 |
-| Law is cycling toward the transition point. | | increasing | | 21 < t ≤ 86 |
-| Law is transitioning from swimming to cycling. | | constant | | 20 < t ≤ 21 |
-| Law is transitioning from cycling to running. | | constant | | 86 < t ≤ 87 |
+{.text-center}**Rise** is the distance swam: [[2]]km
+
+{.text-center}**Run** is the time swimming: [[25]]min
+
+{.text-center}**Slope** is equal to `Rise/Run`: [[0.08]]km/min
+
+---
+
+Now do the same for the other two segments:
+
+| | **Swimming** | **Biking** | **Running** |
+| **Rise** | 2km | [[40]]km | [[10]]km |
+| **Run** | 25min | [[60]]min | [[40]]min |
+| **Slope** | 0.08km/min | [[0.66±0.01]]km/min | [[0.25]]km/min |
 
 ---
 
