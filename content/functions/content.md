@@ -1190,32 +1190,25 @@ Now do the same for the other two segments:
 
 ---
 
-Now you get to race Law. One of the exciting things about triathlons is that you don’t need to be the fastest at each of the three sports, you just need to cross the finish line first. Here you can adjust your graph, s(t), to see how the race changes. Let’s say your most challenging leg of this race is swimming. As you can see, this segment cannot be adjusted. Can you beat Law with a swim leg that’s [[4]] minutes slower?
+> id: triathlon-adjustments
 
-::: column.grow
+Triathlons are exciting because you don't need to be the fastest at every sport; you only need to cross the finish line first. Say you finish the swim segment a whole 15 minutes slower than the graph above. What speed—or slope—do you need during the biking segment to finish at the same time?
 
-    // NOTES
-    // Slider in __bold__ . Like slider graphs in https://mathigon.org/course/sequences/arithmetic-geometric. Or drag endpoints along the transition lines to change slopes.
-    // Adjusts to match given input _italics_.
+(hint: you'll need to finish the biking segment 15 minutes faster!)
 
-s(t) = {(60t, 0≤t≤25),(1500, 25<t≤26.5),(_695.652_t-_16934.8_, __26.5+-0.75__≤t<__84+-0.75__),(41500, _84_<t≤_85.5_), (_298.50_t+_15977.6_, _85.5_<t≤__123+-5__):}
-
-    // NOTES for 60t line: Actually adjusting these points in the background.
-    // NOTES for 695.652 line: (__26.5+-.75__, 1500) and (__84+-.75__, 41500)
-    // NOTES for 41500 line: (_84_, 41500) and (_85.5_, 41500), _84_ matches slider in last case, _85.5_ Adjusts to be lower bound + 1.5
-    // NOTES for 298.50 line: (_85.5_, 41500) and (__123+-5__, 51500), _85.5_ matches previous case
+| | **Swimming** | **Biking** | **Running** |
+| **Rise** | 2km | 40km | 10km |
+| **Run** | 40min | [[45]]min | 40min |
+| **Slope** | 0.05km/min | [[0.88±0.01]]km/min | 0.25km/min |
 
 ---
 
-Try adjusting the graph so that your swim __and__ run are slower than Law’s. You need to cycle at [[{.fixme} Is there a way to accept a range of slopes that are dependent on the slider values? ]] meters per minute in order to beat Law.
+That's pretty fast. Say you can only bike at 0.8km/min; now how fast do you need to run to catch up?
 
-::: column(width=240)
-
-    // NOTES
-    // Graph: l(t) is blue, s(t) is orange
-    // [mock-up triathlon graph](https://www.desmos.com/calculator/1wcntarqcv)
-
-:::
+| | **Swimming** | **Biking** | **Running** |
+| **Rise** | 2km | 40km | 10km |
+| **Run** | 40min | [[50]]min | [[45]]min |
+| **Slope** | 0.05km/min | 0.8km/min | [[0.22]]km/min |
 
 ---
 
