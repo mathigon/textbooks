@@ -4,9 +4,9 @@
 // =============================================================================
 
 
-import {Browser, CustomElementView, ElementView, register, slide} from '@mathigon/boost';
-import {isBetween} from '@mathigon/fermat';
-import {Point} from '@mathigon/euclid';
+import {animate, Browser, CustomElementView, ElementView, register} from '@mathigon/boost';
+import {repeat} from '@mathigon/core';
+import {Draggable} from '@mathigon/studio';
 
 
 class FlowGrid {
@@ -75,20 +75,14 @@ class FlowGrid {
 
 // -----------------------------------------------------------------------------
 
-function contains(bounds: DOMRect, posn: Point) {
-  return isBetween(posn.x, bounds.left, bounds.left + bounds.width) &&
-         isBetween(posn.y, bounds.top, bounds.top + bounds.height);
-}
-
-
 @register('x-buckets')
 export class Buckets extends CustomElementView {
   // draggable answer elements
-  private $cards!: ElementView[];
+  private cards!: Draggable[];
   // current locations (bucket indices) of cards
   private position!: number[];
   // correct destinations (bucket indices) for answer elements
-  private solution!: number[];
+  private solutions!: number[];
 
   ready() {
     // Initial container element ('pool') for answer elements
@@ -101,54 +95,45 @@ export class Buckets extends CustomElementView {
     // Layout handlers for destination elements
     const bucketFlows = $buckets.map($b => new FlowGrid($b, 10, 150));
 
-    this.$cards = this.$$('.input');
-    this.solution = this.$cards.map($el => +$el.attr('bucket'));
-    this.position = this.$cards.map(() => -1);
+    const $cards = this.$$('.input') as ElementView[];
 
-    let bucketBounds: DOMRect[];
-    let targetBucket = -1;
+    this.solutions = $cards.map($el => +$el.attr('bucket'));
+    this.position = repeat(-1, $cards.length);
 
-    for (const [cardIndex, $card] of this.$cards.entries()) {
+    this.cards = $cards.map(($card, cardIndex) => {
       $card.removeAttr('bucket');
-      slide($card, {
-        start: () => {
-          $card.addClass('active');
-          bucketBounds = $buckets.map($b => $b.bounds);
-        },
-        move: (p: Point, start: Point) => {
-          $card.setTransform(p.subtract(start));
+      const card = new Draggable($card, {$targets: $buckets, useTransform: true, resetOnMiss: true, withinBounds: false});
 
-          const oldTargetBucket = targetBucket;
-          targetBucket = bucketBounds.findIndex(b => contains(b, p));
+      card.on('start', () => $card.addClass('active'));
+      card.on('enter-target', ({$target}: {$target: ElementView}) => $target.addClass('active'));
+      card.on('exit-target', ({$target}: {$target: ElementView}) => $target.removeClass('active'));
+      card.on('end', ({$target}: {$target?: ElementView}) => {
+        $card.removeClass('active');
 
-          if (targetBucket === oldTargetBucket) return;
-          if (oldTargetBucket >= 0) $buckets[oldTargetBucket].removeClass('active');
-          if (targetBucket >= 0 && this.position[cardIndex] !== targetBucket) $buckets[targetBucket].addClass('active');
-        },
-        end: async (p: Point, start: Point) => {
-          if (targetBucket >= 0) $buckets[targetBucket].removeClass('active');
+        if ($target) {
+          const relativeToBucket = card.$el.boundsRect.p.subtract($target.boundsRect.p);
+          $target.removeClass('active');
+          $target.append(card.$el);
+          card.setPosition(relativeToBucket.x, relativeToBucket.y);
 
-          if (targetBucket >= 0 && this.position[cardIndex] !== targetBucket) {
-            const da = $buckets[targetBucket].topLeftPosition;
-            const db = (this.position[cardIndex] >= 0 ? $buckets[this.position[cardIndex]] : $input).topLeftPosition;
+          animate((p) => {
+            const invP = 1 - p;
+            card.setPosition(relativeToBucket.x * invP, relativeToBucket.y * invP);
+          }, 200);
 
-            $buckets[targetBucket].append($card);
-            $card.setTransform(p.subtract(start).add(db).subtract(da));
+          const targetIndex = $buckets.indexOf($target);
 
-            if (this.position[cardIndex] < 0) inputFlow.reflow();
-            if (this.position[cardIndex] >= 0) bucketFlows[this.position[cardIndex]].reflow();
-            bucketFlows[targetBucket].reflow();
+          if (this.position[cardIndex] < 0) inputFlow.reflow();
+          else bucketFlows[this.position[cardIndex]].reflow();
+          bucketFlows[targetIndex].reflow();
 
-            this.position[cardIndex] = targetBucket;
-            targetBucket = -1;
-            this.check();
-          }
-
-          await $card.animate({transform: 'none'}, 200).promise;
-          $card.removeClass('active');
+          this.position[cardIndex] = targetIndex;
+          this.check();
         }
       });
-    }
+
+      return card;
+    });
 
     // TODO Implement this!
   }
@@ -162,8 +147,8 @@ export class Buckets extends CustomElementView {
     let errors = 0;
 
     for (const [i, p] of this.position.entries()) {
-      const correct = (p === this.solution[i]);
-      this.$cards[i].setClass('error', !correct);
+      const correct = (p === this.solutions[i]);
+      this.cards[i].$el.setClass('error', !correct);
       if (!correct) errors += 1;
     }
 
