@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {animate, Browser, CustomElementView, ElementView, register} from '@mathigon/boost';
+import {Browser, CustomElementView, ElementView, register} from '@mathigon/boost';
 import {repeat} from '@mathigon/core';
 import {Draggable} from '@mathigon/studio';
 
@@ -107,29 +107,31 @@ export class Buckets extends CustomElementView {
       card.on('start', () => $card.addClass('active'));
       card.on('enter-target', ({$target}: {$target: ElementView}) => $target.addClass('active'));
       card.on('exit-target', ({$target}: {$target: ElementView}) => $target.removeClass('active'));
-      card.on('end', ({$target}: {$target?: ElementView}) => {
+
+      card.on('end', async ({$target}: {$target?: ElementView}) => {
         $card.removeClass('active');
+        if ($target) $target.removeClass('active');
+        const currentIndex = this.position[cardIndex];
+        const targetIndex = $target ? $buckets.indexOf($target) : -1;
 
-        if ($target) {
-          const relativeToBucket = card.$el.boundsRect.p.subtract($target.boundsRect.p);
-          $target.removeClass('active');
-          $target.append(card.$el);
-          card.setPosition(relativeToBucket.x, relativeToBucket.y);
+        if (targetIndex >= 0 && targetIndex !== this.position[cardIndex]) {
+          const p1 = card.$el.topLeftPosition;
+          $target!.append($card);
 
-          animate((p) => {
-            const invP = 1 - p;
-            card.setPosition(relativeToBucket.x * invP, relativeToBucket.y * invP);
-          }, 200);
-
-          const targetIndex = $buckets.indexOf($target);
-
-          if (this.position[cardIndex] < 0) inputFlow.reflow();
-          else bucketFlows[this.position[cardIndex]].reflow();
+          // Reflow the current and new targets
+          (currentIndex < 0 ? inputFlow : bucketFlows[currentIndex]).reflow();
           bucketFlows[targetIndex].reflow();
+
+          const p2 = card.$el.topLeftPosition;
+          const relativeToBucket = card.position.add(p1).subtract(p2);
+          card.setPosition(relativeToBucket.x, relativeToBucket.y);
 
           this.position[cardIndex] = targetIndex;
           this.check();
         }
+
+        await card.resetPosition();
+        $card.removeClass('active');
       });
 
       return card;
