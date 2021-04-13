@@ -14,6 +14,7 @@ import {Net} from './components/net';
 import {Polyhedron} from '../polyhedra/components/polyhedron';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../shared/constants';
 import {Solid, Vector} from '../shared/components/webgl/solid';
+import {BinarySwipe} from '../shared/components/binary-swipe/binary-swipe';
 import {layers, templeParts} from './data/voxel-data';
 import {pyramid1, triangularPrism, truncatedIcosahedron} from './data/net-data';
 import {NetPosition, setupDieFacesPlacement} from './components/util';
@@ -343,6 +344,11 @@ export function honeycombIntro($step: Step) {
   $p.addMesh(() => {
     $p.addLabel('Hexagonal Base', [0, 0.56, 0]);
   });
+}
+
+export function netsProperties($step: Step) {
+  const $swipe = $step.$('x-binary-swipe') as BinarySwipe;
+  $swipe.on('complete', () => $step.score('all-swiped'));
 }
 
 export async function voxelBuilderQuestion($step: Step) {

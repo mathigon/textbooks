@@ -15,12 +15,13 @@
     "groupName": "Tests",
     "automerge": true
   }, {
-    "packagePatterns": ["^@types"],
+    "packagePatterns": ["^@types/"],
     "groupName": "Types",
     "automerge": true
   }, {
     "updateTypes": ["patch", "pin", "digest"],
     "groupName": "Versioning",
     "automerge": true
-  }]
+  }],
+  "ignoreDeps": ["@types/three"]
 }
