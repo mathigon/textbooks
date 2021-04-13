@@ -81,7 +81,7 @@ export function setupDieFacesPlacement($step: Step, netPositions: NetPosition[])
     const $die = makeFaceSVG(index + 1);
     $face.append($die);
   }
-  const faces = $faces.map($face => new Draggable($face, {$targets, useTransform: true, resetOnMiss: true}));
+  const faces = $faces.map($face => new Draggable($face, {$targets, useTransform: true, resetOnMiss: true, withinBounds: false}));
   for (const [index, face] of faces.entries()) {
     face.on('enter-target', (target: {$el: ElementView}) => {
       target.$el.addClass('over');
