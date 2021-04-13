@@ -1,7 +1,6 @@
 import {$N, ElementView, observe, SVGParentView, SVGView} from '@mathigon/boost';
 import {Point, Rectangle} from '@mathigon/euclid';
-import {Step} from '@mathigon/studio';
-import {Draggable} from '../../shared/components/droppable';
+import {Draggable, Step} from '@mathigon/studio';
 
 const DOTS = [
   [],  // 0
