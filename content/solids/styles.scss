@@ -27,3 +27,50 @@ x-voxel-painter {
     height: 400px;
   }
 }
+
+div.die-faces {
+
+  width: 620px;
+  height: 600px;
+  text-align: center;
+
+  svg {
+    width: 620px;
+    height: 465px;
+    background-color: white;
+
+    path.target {
+
+      fill: transparent;
+      stroke: black;
+      stroke-width: 2px;
+
+      &.over {
+        fill: $lime;
+      }
+    }
+  }
+  div.faces {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+
+    div.face {
+      width: 90px;
+      height: 90px;
+      max-width: 90px;
+      flex: 90px;
+      margin: 2px;
+      background-color: white;
+      border: 3px solid black;
+      background-size: contain;
+      display: inline-block;
+
+      svg {
+        width: 90px;
+        height: 90px; 
+      }
+    }
+  }
+}

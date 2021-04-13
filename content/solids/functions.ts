@@ -17,13 +17,13 @@ import {Solid, Vector} from '../shared/components/webgl/solid';
 import {BinarySwipe} from '../shared/components/binary-swipe/binary-swipe';
 import {layers, templeParts} from './data/voxel-data';
 import {pyramid1, triangularPrism, truncatedIcosahedron} from './data/net-data';
+import {NetPosition, setupDieFacesPlacement} from './components/util';
 
 import './components/voxel-painter';
 import './components/net';
 import '../shared/components/webgl/solid';
 import '../shared/components/binary-swipe/binary-swipe';
 import '../polyhedra/components/polyhedron';
-
 
 export function polyParts($step: Step) {
   // TODO Update .addPoint/Line/Label to accept THREE Vector3s, to avoid all these .toArray() functions.
@@ -303,6 +303,30 @@ export function cubeNetDraw($step: Step) {
   const $p = $step.$('x-polypad') as Polypad;
   $p.setActiveTool('pen');
   ($p.tools.pen as PenTool).brush = 'straight';
+}
+
+export function dieFaces1($step: Step) {
+  const netPositions: NetPosition[] = [
+    {pos: [0, 0], opposite: 5},
+    {pos: [0, 1], opposite: 3},
+    {pos: [1, 1], opposite: 4},
+    {pos: [2, 1], opposite: 1},
+    {pos: [3, 1], opposite: 2},
+    {pos: [1, 2], opposite: 0}
+  ];
+  setupDieFacesPlacement($step, netPositions);
+}
+
+export function dieFaces2($step: Step) {
+  const netPositions: NetPosition[] = [
+    {pos: [1, 0], opposite: 5},
+    {pos: [0, 1], opposite: 3},
+    {pos: [1, 1], opposite: 4},
+    {pos: [2, 1], opposite: 1},
+    {pos: [3, 1], opposite: 2},
+    {pos: [2, 2], opposite: 0}
+  ];
+  setupDieFacesPlacement($step, netPositions);
 }
 
 export function soccerNet($step: Step) {
