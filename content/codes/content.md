@@ -26,8 +26,8 @@ be hopeful: the army was approaching, and planning to rescue them shortly.
 
 :::
 
-Unfortunately, it seemed impossible to tell the prisoners that lp was coming, without also
-alerting their capturers – that is, until Colonel Jose Espejo came up with an ingenious idea. With
+Unfortunately, it seemed impossible to tell the prisoners that help was coming, without also
+alerting their captors – that is, until Colonel Jose Espejo came up with an ingenious idea. With
 his team, he wrote a new pop song, embedded a secret message in the chorus, and then played it
 thousands of times over the radio.
 
@@ -90,7 +90,8 @@ and used compass needles to point at different letters on a display.
 
 ::: column.grow
 
-One year later, the inventor [Samuel Morse](bio:morse), together with his assistant Alfred Vail, developed an even better version of the telegraph.
+One year later, the inventor [Samuel Morse](bio:morse), together with his assistant Alfred Vail,
+developed an even better version of the telegraph.
 
 Pressing a button at one end of the telegraph line closes an electronic circuit. This means that
 current is flowing, which triggers a buzzing sound at the other end of the telegraph line.
