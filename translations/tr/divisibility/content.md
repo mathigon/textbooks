@@ -7,34 +7,6 @@
 > color: "#1AA845"
 > level: Foundations
 
-    mixin grid(n, fn)
-      .number-grid
-        - var i = 1
-        while i <= n
-          .number-cell= i
-            if fn
-              - var badge = fn(i)
-              if badge
-                .number-badge= badge
-          - i += 1
-
-    mixin divisor-table(divisors, pairs)
-      - var len = divisors.length
-      - var last = divisors[len-1]
-      table.divisor-table
-        tr
-          td.td-border-right(width="24")= last
-          for i in divisors
-            td.divisor-number(width="24" data-display="visibility")= i + (i == last ? '' : ',')
-        for i in pairs
-          tr
-            td
-            if i
-              td(colspan=i)
-            td(colspan=len - 2 * i): .divisor-pair(style="height: " + (len/2 - i) + "00%" data-display="visibility")
-            if i
-              td(colspan=i)
-
 Şimdiye kadar tamsayılarda toplama, çıkarma ve çarpma işlemlerinde rahattınız. Bölme biraz daha farklıdır, çünkü herhangi bir tamsayıyı her zaman başka tamsayılar ile bölemezsiniz. Örneğin 17 bölü 3, bir tamsayı değildir - 5 ile 6 arasında bir yerdedir. Kalan olarak 2 verir veya cevabı ondalıklı sayı (5,66) olarak ifade ederiz.
 
     .row.padded
