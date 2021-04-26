@@ -24,23 +24,23 @@ x-piecewise-endpoint-puzzle {
 
         .endpoints {
             stroke-width: 3px;
-            stroke: @red;
+            stroke: $red;
             fill: transparent;
             
             .closed {
                 stroke: none;
-                fill: @red;
+                fill: $red;
             }
         }
         .segments {
             stroke-width: 3px;
-            stroke: @red;
+            stroke: $red;
             stroke-linecap: butt;
         }
         .strings {
             text-anchor: middle;
             font-size: 18px;
-            fill: @red;
+            fill: $red;
         }
     }
 

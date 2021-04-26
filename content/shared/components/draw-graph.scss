@@ -45,12 +45,12 @@ x-draw-graph {
 
             .hint-line {
                 stroke-width: 2px;
-                stroke: @blue;
+                stroke: $blue;
                 stroke-dasharray: 6 4;
             }
 
             .hint-circle {
-              fill: @blue;
+              fill: $blue;
             }
         }
         .plot-points {
@@ -80,7 +80,7 @@ x-draw-graph {
                 display: flex;
                 margin-left: 20px;
                 justify-content: center;
-                background-color: @light-grey;
+                background-color: $light-grey;
 
                 min-width: 50px;
                 min-height: 50px;

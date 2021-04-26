@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+@import "../../node_modules/$mathigon/studio/frontend/styles/variables";
 @import "../shared/components/relation/relation";
 @import "../shared/variables";
 @import "../shared/components/function-machine";
@@ -20,23 +20,23 @@
   right: 6px;
 }
 
-.burst { fill: none; stroke: @dark-grey; }
-.burst.correct { stroke: @green; }
-.burst.incorrect { stroke: @red; }
+.burst { fill: none; stroke: $dark-grey; }
+.burst.correct { stroke: $green; }
+.burst.incorrect { stroke: $red; }
 .burst circle { stroke: none; }
 
 .verticalLine line {
-  stroke: @blue;
+  stroke: $blue;
   stroke-width: 4px;
 }
 
 .verticalLine text {
-  color: @blue;
+  color: $blue;
 }
 
 .vault-graph .overlay circle {
   stroke-width: 3px;
-  stroke: @green;
+  stroke: $green;
   fill: none;
 }
 
@@ -45,7 +45,7 @@
 }
 
 line.slope-measurement {
-  stroke: @blue;
+  stroke: $blue;
   stroke-width: 3;
   stroke-dasharray: 2 3;
 }
@@ -57,28 +57,28 @@ text.slope-measurement {
 
 circle.slope-measurement {
   stroke: none;
-  fill: @green;
+  fill: $green;
 }
 
 #multi-swimmer-graph svg .plot {
   g:nth-child(1) {
     path {
-      stroke: @red;
+      stroke: $red;
     }
   }
   g:nth-child(2) {
     path {
-      stroke: @blue;
+      stroke: $blue;
     }
   }
   g:nth-child(3) {
     path {
-      stroke: @green;
+      stroke: $green;
     }
   }
   g:nth-child(4) {
     path {
-      stroke: @purple;
+      stroke: $purple;
     }
   }
 }
@@ -93,17 +93,17 @@ circle.slope-measurement {
 
 x-draw-graph {
   #hint-bar {
-    stroke: mix(@dark-grey, @medium-grey, 50%);
+    stroke: mix($dark-grey, $medium-grey, 50%);
     stroke-width: 6px;
   }
 
   #hint-landing {
-    fill: mix(@blue, @dark-grey, 50%);
+    fill: mix($blue, $dark-grey, 50%);
   }
 }
 
 line#time-line {
-  stroke: @medium-grey;
+  stroke: $medium-grey;
   stroke-width: 2px;
   stroke-dasharray: 4;
 }
@@ -150,28 +150,28 @@ line#time-line {
 
 #rogers-slope-graph {
   .plot path {
-    stroke: @blue;
+    stroke: $blue;
   }
   .crosshair {
     circle {
-      stroke: @blue;
+      stroke: $blue;
     }
     text {
-      fill: @blue;
+      fill: $blue;
     }
   }
 }
 
 #boufaarirane-slope-graph {
   .plot path {
-    stroke: @green;
+    stroke: $green;
   }
   .crosshair {
     circle {
-      stroke: @green;
+      stroke: $green;
     }
     text {
-      fill: @green;
+      fill: $green;
     }
   }
 }
@@ -233,13 +233,13 @@ x-coordinate-system.piecewise-cases {
       stroke-width: 3px;
     }
     #line1 {
-      stroke: @red;
+      stroke: $red;
     }
     #line2 {
-      stroke: @blue;
+      stroke: $blue;
     }
     #line3 {
-      stroke: @green;
+      stroke: $green;
     }
   }
 }
@@ -264,20 +264,20 @@ x-coordinate-system.piecewise-step {
     }
 
     .red {
-      stroke: @red;
-      fill: @red;
+      stroke: $red;
+      fill: $red;
     }
     .orange {
-      stroke: @orange;
-      fill: @orange;
+      stroke: $orange;
+      fill: $orange;
     }
     .blue {
-      stroke: @blue;
-      fill: @blue;
+      stroke: $blue;
+      fill: $blue;
     }
     .green {
-      stroke: @green;
-      fill: @green;
+      stroke: $green;
+      fill: $green;
     }
 
     circle.open {
@@ -298,7 +298,7 @@ x-step#piecewise-data {
 
 x-draw-graph#draw-triathlon-graph {
   line.transition-line {
-    stroke: @light-grey;
+    stroke: $light-grey;
     stroke-width: 2px;
     stroke-dasharray: 6 4;
   }

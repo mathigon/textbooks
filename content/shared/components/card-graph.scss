@@ -5,7 +5,7 @@ x-card-graph svg {
 
 x-card-graph .ranges {
     stroke-width: 2px;
-    stroke: @medium-grey;
+    stroke: $medium-grey;
     stroke-dasharray: 4;
 
     .range-tick,.range-line {
@@ -38,8 +38,8 @@ x-card-graph .ranges.hover {
 
 x-card-graph .dot {
     stroke-width: 2px;
-    stroke: @medium-grey;
-    fill: @light-grey;
+    stroke: $medium-grey;
+    fill: $light-grey;
 }
 
 x-card-graph .card-content {
@@ -48,12 +48,12 @@ x-card-graph .card-content {
 
     .card-circle {
         fill: none;
-        stroke: @medium-grey;
+        stroke: $medium-grey;
         stroke-width: 2px;
     }
 
     .card-fill {
-        fill: @grey-background;
+        fill: $grey-background;
         stroke: none;
     }
 
@@ -63,7 +63,7 @@ x-card-graph .card-content {
 }
 
 x-card-graph .card-instruction {
-    fill: @medium-grey;
+    fill: $medium-grey;
     font-style: italic;
     transition: 0.2s;
     font-size: 22px;
@@ -76,7 +76,7 @@ x-card-graph .card-description {
 
 x-card-graph .card-outline {
     fill: none;
-    stroke: @light-grey;
+    stroke: $light-grey;
     stroke-width: 2px;
     stroke-dasharray: 4;
 }
