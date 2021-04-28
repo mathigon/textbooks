@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-import {chunk} from '@mathigon/core';
+import {applyDefaults, chunk} from '@mathigon/core';
 import {$html, $N, Browser, CustomElementView, register, slide} from '@mathigon/boost';
 import {create3D, Graphics3D} from './webgl';
 
@@ -49,7 +49,7 @@ function createEdges(geometry: THREE.Geometry, material: THREE.Material, maxAngl
 
 @register('x-solid')
 export class Solid extends CustomElementView {
-  private isReady = false;
+  private _isReady = false;
   object!: THREE.Object3D;
   scene!: Graphics3D;
 
@@ -61,25 +61,28 @@ export class Solid extends CustomElementView {
     this.css({width: width + 'px', height: height + 'px'});
 
     this.scene = await create3D(this, 35, 2 * width, 2 * height);
-    this.scene.camera.position.set(0, 3, 6);
-    this.scene.camera.up = new THREE.Vector3(0, 1, 0);
-    this.scene.camera.lookAt(new THREE.Vector3(0, 0, 0));
+    Solid.applyCameraDefaults(this.scene.camera);
 
-    const light1 = new THREE.AmbientLight(0x555555);
-    this.scene.add(light1);
-
-    const light2 = new THREE.PointLight(0xffffff);
-    light2.position.set(3, 4.5, 6);
-    this.scene.add(light2);
+    for (const light of Solid.lights()) this.scene.add(light);
 
     this.object = new THREE.Object3D();
     this.scene.add(this.object);
 
+    if (!this.hasAttr('static')) {
+      const speed = +this.attr('rotate');
+      this.setupRotation(this.hasAttr('rotate'), isNaN(speed) ? 1 : speed);
+    }
+
     this.trigger('loaded');
-    this.isReady = true;
+    this._isReady = true;
   }
 
-  addMesh(fn: (scene: Graphics3D) => THREE.Object3D[]|void) {
+  get isReady() {
+    return this._isReady;
+  }
+
+  /** @deprecated */
+  addMesh(fn: (scene: Graphics3D) => THREE.Object3D[]|void) { // => whenReady; mark as deprecated; add comments warning about THREE
     if (this.isReady) {
       this.addMeshCallback(fn);
     } else {
@@ -87,20 +90,15 @@ export class Solid extends CustomElementView {
     }
   }
 
-  addMeshCallback(fn: (scene: Graphics3D) => THREE.Object3D[]|void) {
+  private addMeshCallback(fn: (scene: Graphics3D) => THREE.Object3D[]|void) {
     const items = fn(this.scene) || [];
     for (const i of items) this.object.add(i);
-
-    if (!this.hasAttr('static')) {
-      const speed = +this.attr('rotate');
-      this.setupRotation(this.hasAttr('rotate'), isNaN(speed) ? 1 : speed);
-    }
-
     this.scene.draw();
   }
 
   rotate(q: THREE.Quaternion) {
     this.object.quaternion.set(q.x, q.y, q.z, q.w);
+    // TODO: rotate clipping planes
     this.scene.draw();
   }
 
@@ -143,7 +141,8 @@ export class Solid extends CustomElementView {
         const d = posn.subtract(last).scale(s);
         const q = new THREE.Quaternion().setFromEuler(new THREE.Euler(d.y, d.x));
         this.object.quaternion.multiplyQuaternions(q, this.object.quaternion);
-        this.trigger('rotate', {quaternion: this.object.quaternion});
+
+        this.trigger('rotate', {quaternion: this.object.quaternion, deltaQuaternion: q});
         if (!autoRotate) frame();
       },
       end: () => {
@@ -157,6 +156,12 @@ export class Solid extends CustomElementView {
   // ---------------------------------------------------------------------------
   // Element Creation Utilities
 
+  private addObj(obj: THREE.Object3D) {
+    this.object.add(obj);
+    this.scene.draw();
+  }
+
+  /** WARNING: Do not use before 'loaded' event has been triggered for this instance */
   addLabel(text: string, posn: Vector, color = STROKE_COLOR, margin?: string) {
     const $label = $N('div', {text, class: 'label3d'});
     $label.css('color', '#' + color.toString(16).padStart(6, '0'));
@@ -179,7 +184,9 @@ export class Solid extends CustomElementView {
     };
   }
 
+  /** WARNING: Do not use before 'loaded' event has been triggered for this instance */
   addLine(from: Vector, to: Vector, color = STROKE_COLOR, arrows = false) {
+
     // TODO Rounded ends, argument to specify line width.
     const material = new THREE.MeshBasicMaterial({color});
     const obj = new THREE.Object3D() as Object3D;
@@ -209,7 +216,7 @@ export class Solid extends CustomElementView {
     };
 
     obj.updateEnds(from, to);
-    this.object.add(obj);
+    this.addObj(obj);
     return obj;
   }
 
@@ -217,6 +224,7 @@ export class Solid extends CustomElementView {
     return this.addLine(from, to, color, true);
   }
 
+  /** WARNING: Do not use before 'loaded' event has been triggered for this instance */
   addCircle(radius: number, color = STROKE_COLOR, segments = 64) {
     const path = new THREE.Curve<THREE.Vector3>();
     path.getPoint = function(t) {
@@ -228,35 +236,41 @@ export class Solid extends CustomElementView {
     const geometry = new THREE.TubeGeometry(path, segments, LINE_RADIUS, LINE_SEGMENTS);
 
     const mesh = new THREE.Mesh(geometry, material);
-    this.object.add(mesh);
+    this.addObj(mesh);
     return mesh;
   }
 
+  /** WARNING: Do not use before 'loaded' event has been triggered for this instance */
   addPoint(position: Vector, color = STROKE_COLOR) {
     const material = new THREE.MeshBasicMaterial({color});
     const geometry = new THREE.SphereGeometry(POINT_RADIUS, 16, 16);
 
     const mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(...position);
-    this.object.add(mesh);
+    this.addObj(mesh);
+    return mesh;
   }
 
-  addSolid(geo: THREE.Geometry, color: number, maxAngle = 5, flatShading = false) {
+  /** WARNING: Do not use before 'loaded' event has been triggered for this instance */
+  addSolid(geo: THREE.Geometry, color: number, options: {maxAngle?: number, flatShading?: boolean, clippingPlanes?: THREE.Plane[]} = {}) {
+    const {maxAngle, flatShading, clippingPlanes} = applyDefaults(options, {maxAngle: 5, flatShading: false, clippingPlanes: []});
     const edgeMaterial = new THREE.LineBasicMaterial({color: 0xffffff});
     const edges = new THREE.EdgesGeometry(geo, maxAngle);
 
     const obj = new THREE.Object3D();
     obj.add(new THREE.LineSegments(edges, edgeMaterial));
-    obj.add(new THREE.Mesh(geo, Solid.solidMaterial(color, flatShading)));
+    obj.add(new THREE.Mesh(geo, Solid.solidMaterial(color, flatShading, clippingPlanes)));
 
-    this.object.add(obj);
+    this.addObj(obj);
     return obj;
   }
 
   // TODO merge addOutlined() and addWireframe(), by looking at
   //      geometry.isConeGeometry etc.
 
-  // A translucent material with a solid border.
+  /**
+   * WARNING: Do not use before 'loaded' event has been triggered for this instance.
+   * Add geometry rendered with translucent material and a solid border. */
   addOutlined(geo: THREE.Geometry, color = 0xaaaaaa, maxAngle = 5, opacity = 0.1, strokeColor?: number) {
     const solidMaterial = Solid.translucentMaterial(color, opacity);
     const solid = new THREE.Mesh(geo, solidMaterial);
@@ -279,12 +293,14 @@ export class Solid extends CustomElementView {
       obj.add(edges);
     };
 
-    this.object.add(obj);
+    this.addObj(obj);
     return obj;
   }
 
-  // Like .addOutlined, but we also add outlines for curved edges (e.g. of
-  // a sphere or cylinder).
+  /**
+   * WARNING: Do not use before 'loaded' event has been triggered for this instance.
+   * Like .addOutlined, but we also add outlines for curved edges (e.g. of
+   * a sphere or cylinder). */
   addWireframe(geometry: THREE.Geometry, color = 0xaaaaaa, maxAngle = 5, opacity = 0.1) {
     const solid = this.addOutlined(geometry, color, maxAngle, opacity);
 
@@ -323,7 +339,7 @@ export class Solid extends CustomElementView {
       }
     };
 
-    this.object.add(obj);
+    this.addObj(obj);
     return obj;
   }
 
@@ -331,23 +347,45 @@ export class Solid extends CustomElementView {
   // ---------------------------------------------------------------------------
   // Materials
 
-  static solidMaterial(color: number, flatShading = false) {
-    return new THREE.MeshPhongMaterial({
+  private static commonMatOptions(color: number, opacity: number, clippingPlanes?: THREE.Plane[]) {
+    return {
       side: THREE.DoubleSide,
       transparent: true,
-      opacity: 0.9,
+      color,
+      opacity,
+      clippingPlanes
+    };
+  }
+
+  static solidMaterial(color: number, flatShading = false, clippingPlanes?: THREE.Plane[]) {
+    return new THREE.MeshPhongMaterial({
+      ...this.commonMatOptions(color, 0.9, clippingPlanes),
       specular: 0x222222,
       // depthWrite: false,
-      color, flatShading
+      flatShading
     });
   }
 
-  static translucentMaterial(color: number, opacity = 0.1) {
+  static translucentMaterial(color: number, opacity = 0.1, clippingPlanes?: THREE.Plane[]) {
     return new THREE.MeshLambertMaterial({
-      side: THREE.DoubleSide,
-      transparent: true,
-      depthWrite: false,
-      opacity, color
+      ...this.commonMatOptions(color, opacity, clippingPlanes),
+      depthWrite: false
     });
+  }
+
+  // ---------------------------------------------------------------------------
+  // Camera and lights
+
+  static applyCameraDefaults(camera: THREE.Camera) {
+    camera.position.set(0, 3, 6);
+    camera.up = new THREE.Vector3(0, 1, 0);
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
+  }
+
+  static lights(ambientColor = 0x555555, pointLightColor = 0xffffff) {
+    const light1 = new THREE.AmbientLight(ambientColor);
+    const light2 = new THREE.PointLight(pointLightColor);
+    light2.position.set(3, 4.5, 6);
+    return [light1, light2];
   }
 }

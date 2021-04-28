@@ -56,7 +56,7 @@ export function polyIdent($step: Step) {
 
   $cylinder.addMesh(() => {
     const geo = new THREE.CylinderGeometry(1.2, 1.2, 2.6, 32, 1);
-    $cylinder.addSolid(geo, 0xfd8c00, 20);
+    $cylinder.addSolid(geo, 0xfd8c00, {maxAngle: 20});
   });
   $sphere.addMesh(() =>{
     const geo = new THREE.SphereGeometry(1.3, 128, 128);
