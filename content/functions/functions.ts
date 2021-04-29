@@ -15,23 +15,23 @@ import { CoordinateSystem, Geopad, GeoPoint } from '../shared/types';
 import '../shared/components/burst';
 import { Burst } from '../shared/components/burst';
 
-import './components/card-graph';
-import { CardGraph } from './components/card-graph';
-
-import './components/draw-graph';
-import { DrawGraph } from './components/draw-graph';
-
-import './components/piecewise-endpoint-puzzle';
-import { PiecewiseEndpointPuzzle } from './components/piecewise-endpoint-puzzle';
-
-import '../shared/components/function-machine';
-import { FunctionMachine } from '../shared/components/function-machine';
-
 import '../shared/components/relation/relation';
 import { Relation } from '../shared/components/relation/relation';
 
-import '../shared/components/video-graph';
-import { VideoGraph } from '../shared/components/video-graph';
+import './components/card-graph/card-graph';
+import { CardGraph } from './components/card-graph/card-graph';
+
+import './components/draw-graph/draw-graph';
+import { DrawGraph } from './components/draw-graph/draw-graph';
+
+import './components/piecewise-endpoint-puzzle/piecewise-endpoint-puzzle';
+import { PiecewiseEndpointPuzzle } from './components/piecewise-endpoint-puzzle/piecewise-endpoint-puzzle';
+
+import './components/function-machine/function-machine';
+import { FunctionMachine } from './components/function-machine/function-machine';
+
+import './components/video-graph/video-graph';
+import { VideoGraph } from './components/video-graph/video-graph';
 
 export function fnSketch($step: Step) {
   $step.$('.btn.clear')!.on('click', () => {
