@@ -9,7 +9,7 @@ import { last } from '@mathigon/core';
 import { Point } from '@mathigon/euclid';
 import {clamp, lerp} from '@mathigon/fermat';
 import { shuffle } from '@mathigon/fermat/src/random';
-import { CoordinateSystem } from '../types';
+import { CoordinateSystem } from '../../../shared/types';
 
 // TODO: Import d3 helpers for curvy paths
 // import { path as d3path, line as d3line, curveMonotoneX } from 'd3';
