@@ -312,7 +312,7 @@ function vaultDistanceTime(t: number) {
 export function vaultGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.addPlot(vaultDistanceTime, vaultHeightDistance, '/resources/functions/images/ri_face.png');
+  $videoGraph.addPlot(vaultDistanceTime, vaultHeightDistance, '/content/functions/images/ri_face.png');
 }
 
 export function graphMatch($step: Step) {
@@ -322,19 +322,19 @@ export function graphMatch($step: Step) {
 export function timeHeightGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.addPlot((t: number) => t, (t: number) => vaultHeightDistance(vaultDistanceTime(t)), '/resources/functions/images/ri_face.png');
+  $videoGraph.addPlot((t: number) => t, (t: number) => vaultHeightDistance(vaultDistanceTime(t)), '/content/functions/images/ri_face.png');
 }
 
 export function timeDistanceGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.addPlot((t: number) => t, (t: number) => vaultDistanceTime(t), '/resources/functions/images/ri_face.png');
+  $videoGraph.addPlot((t: number) => t, (t: number) => vaultDistanceTime(t), '/content/functions/images/ri_face.png');
 }
 
 export function swimGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.addPlot((t: number) => t > 21.47 ? 21.47 : t, (t: number) => t > 21.47 ? 50 : 50/21.47*t, '/resources/functions/images/cielo_face.png');
+  $videoGraph.addPlot((t: number) => t > 21.47 ? 21.47 : t, (t: number) => t > 21.47 ? 50 : 50/21.47*t, '/content/functions/images/cielo_face.png');
 }
 
 export function measureSlope1($step: Step) {
@@ -444,8 +444,8 @@ function renDive(t: number) {
 
 export function diveGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
-  
-  $videoGraph.addPlot((t: number) => t, renDive, '/resources/functions/images/ren_face.png');
+
+  $videoGraph.addPlot((t: number) => t, renDive, '/content/functions/images/ren_face.png');
 
   {
     const cards = [{
@@ -552,9 +552,9 @@ export function poleVault($step: Step) {
 export function runningGraph($step: Step) {
   const $videoGraph = $step.$('x-video-graph')! as VideoGraph;
 
-  $videoGraph.addPlot((t: number) => Math.min(t+88, 121), (t: number) => 6.58545*t+3.16101, '/resources/functions/images/tracey_face.png');
-  $videoGraph.addPlot((t: number) => Math.min(t+88, 126), (t: number) => 5.71105*t+80.4071, '/resources/functions/images/boufaarirane_face.png', 'green');
-  $videoGraph.addPlot((t: number) => Math.min(t+88, 120.2), (t: number) => 7.10179*t-53.6354, '/resources/functions/images/rogers_face.png', 'blue');
+  $videoGraph.addPlot((t: number) => Math.min(t+88, 121), (t: number) => 6.58545*t+3.16101, '/content/functions/images/tracey_face.png');
+  $videoGraph.addPlot((t: number) => Math.min(t+88, 126), (t: number) => 5.71105*t+80.4071, '/content/functions/images/boufaarirane_face.png', 'green');
+  $videoGraph.addPlot((t: number) => Math.min(t+88, 120.2), (t: number) => 7.10179*t-53.6354, '/content/functions/images/rogers_face.png', 'blue');
 }
 
 export function runningSlopeRogers($step: Step) {

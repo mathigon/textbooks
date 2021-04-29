@@ -309,7 +309,7 @@ TODO: Emoji latex
 f(x) = _{x}^{🎩}
 ```
 
-If x=🙊, we know that f(x)=![A monkey with a hat on](images/hat-monkey.png). Similarly, if f(x)=![A fox with a hat on](images/hat-monkey.png), we know x=[[🦊|🙊|😃|🎩]].
+If x=🙊, we know that f(x)=![A monkey with a hat on](/content/functions/images/hat-monkey.png). Similarly, if f(x)=![A fox with a hat on](/content/functions/images/hat-monkey.png), we know x=[[🦊|🙊|😃|🎩]].
 
 | Function Name | | Input Value |   | Output Value |
 | :-----------: | |:---------: | :---:| :-------: |
@@ -501,7 +501,7 @@ The Olympics is full of incredible athletic feats. It’s also full of interesti
 
 ::: column(width=240)
 
-![Ri](/resources/functions/images/ri_portrait.jpg)
+![Ri](/content/functions/images/ri_portrait.jpg)
 
 ::: column.grow
 
@@ -510,7 +510,7 @@ Ri Se-gwang of the People’s Republic of Korea is about to vault. He won the go
 :::
 
     x-video-graph
-        x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
+        x-video(src="images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
         x-coordinate-system(width=640 height=180 x-axis="0,29.1,1" y-axis="0,10,1" axis-names="Distance,Height")
 
     // functions: https://www.desmos.com/calculator/td3fynck7q
@@ -533,17 +533,17 @@ Let’s build some intuition for what graphs of different events look like. Matc
 
     x-relation#graph-match-relation(randomize="true" requireMatch="true")
       .item(slot="domain" name="vault" match="vault-graph") Vault
-        x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=320 height=180 controls credit="©NBC")
+        x-video(src="images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=320 height=180 controls credit="©NBC")
       .item(slot="domain" name="triple-jump" match="triple-jump-graph") Triple Jump
-        x-video(src="/resources/functions/images/olympic_triple_jump.mp4" poster="images/olympic_triple_jump_poster.png" width=320 height=180 controls credit="©ESPN")
+        x-video(src="images/olympic_triple_jump.mp4" poster="images/olympic_triple_jump_poster.png" width=320 height=180 controls credit="©ESPN")
       .item(slot="domain" name="dive" match="dive-graph") Diving
-        x-video(src="/resources/functions/images/olympic_dive.mp4" poster="images/olympic_dive_poster.png" width=320 height=180 controls credit="©Fina")
+        x-video(src="images/olympic_dive.mp4" poster="images/olympic_dive_poster.png" width=320 height=180 controls credit="©Fina")
       .item(slot="domain" name="ski" match="ski-graph") Slalom Skiing
-        x-video(src="/resources/functions/images/olympic_ski.mp4" poster="images/olympic_ski_poster.png" width=320 height=180 controls credit="©Olympic")
+        x-video(src="images/olympic_ski.mp4" poster="images/olympic_ski_poster.png" width=320 height=180 controls credit="©Olympic")
       .item(slot="domain" name="hurdles" match="hurdles-graph") Hurdles
-        x-video(src="/resources/functions/images/olympic_hurdles.mp4" poster="images/olympic_hurdles_poster.png" width=320 height=180 controls credit="©Olympic")
+        x-video(src="images/olympic_hurdles.mp4" poster="images/olympic_hurdles_poster.png" width=320 height=180 controls credit="©Olympic")
       .item(slot="domain" name="swim" match="swim-graph") Swimming
-        x-video(src="/resources/functions/images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=320 height=180 controls credit="©Olympic")
+        x-video(src="images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=320 height=180 controls credit="©Olympic")
       .item(slot="range" name="vault-graph")
         x-coordinate-system(width=300 height=150 x-axis="0,30,1" y-axis="0,15,1" axis-names="Distance,Height" grid="no" labels="no" crosshairs="no" fn="6/(1+((x-24)/1)^4)")
       .item(slot="range" name="triple-jump-graph")
@@ -566,7 +566,7 @@ These graphs tell us everything about the athlete's position, but they say nothi
 On our first graph, the X axis represented Distance (measured in meters). What if it represented Time (measured in seconds)?
 
     x-video-graph
-        x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
+        x-video(src="images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
         x-coordinate-system(width=640 height=180 x-axis="0,9.1,1" y-axis="0,10,1" axis-names="Time,Height")
 
 This looks similar to our first graph. This makes sense, because the number of meters that Ri runs is closely related to the number of seconds that pass. However, now we can measure new things about Ri's vault; he begins running about 1.5 seconds after the video begins. He hits the table at about [[5.9]] seconds, peaks at [[6.4]] seconds, and lands at [[7.3]] seconds.
@@ -578,7 +578,7 @@ This looks similar to our first graph. This makes sense, because the number of m
 Our last graph plotted Height by Time. We can also plot Distance by Time. Note that Time is still on the X axis, but Distance is now on the Y axis:
 
     x-video-graph
-        x-video(src="/resources/functions/images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
+        x-video(src="images/olympic_vault.mp4" poster="images/olympic_vault_poster.png" width=640 height=360 controls credit="©NBC")
         x-coordinate-system(width=640 height=180 x-axis="0,9.1,1" y-axis="0,29.5,5" axis-names="Time,Distance")
 
 This graph looks different than the other two, because it tells us nothing about [[Height|Distance|Time]].
@@ -592,12 +592,12 @@ But again, we can learn new things about Ri's vault. In the first few seconds, w
 Let's head over to the pool. We are just in time for the men’s 50 meter freestyle finals! Keep a close eye on César Cielo Filho of Brazil:
 
     x-video-graph.horizontal
-        x-video(src="/resources/functions/images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=640 height=360 controls credit="©NBC")
+        x-video(src="images/olympic_swim.mp4" poster="images/olympic_swim_poster.png" width=640 height=360 controls credit="©NBC")
         x-coordinate-system(width=180 height=400 x-axis="0,21.5,10" y-axis="0,51,10" axis-names="Time,Distance" style="margin-left: 20px;")
 
 ::: column(width=240)
 
-![César Cielo](/resources/functions/images/cielo_portrait.jpg)
+![César Cielo](/content/functions/images/cielo_portrait.jpg)
 
 ::: column.grow
 
@@ -750,7 +750,7 @@ Meanwhile, on the other side of the Aquatics center, a diving competition is in 
 Ren Qian is among the youngest Olympic medalists. She is diving now - let’s [watch](https://www.youtube.com/watch?v=wTX13JZFHd4)
      
     x-video-graph.horizontal
-        x-video(src="/resources/functions/images/olympic_dive.mp4" poster="images/olympic_dive_poster.png" width=640 height=360 controls credit="©Fina")
+        x-video(src="images/olympic_dive.mp4" poster="images/olympic_dive_poster.png" width=640 height=360 controls credit="©Fina")
         x-coordinate-system(width=180 height=400 x-axis="0,4.3,1" y-axis="-8,12.5,4" axis-names="Time,Height" style="margin-left: 20px;")
 
 ::: column.grow
@@ -759,7 +759,7 @@ Ren Qian of China won the gold medal for diving in the 2016 Summer Olympic Games
 
 ::: column(width=240)
 
-![Ren image mock-up](/resources/functions/images/ren_portrait.jpg)
+![Ren image mock-up](/content/functions/images/ren_portrait.jpg)
 
 :::
 
@@ -813,7 +813,7 @@ ___
 
 The women’s pole vault is just about to start. Ekaterini Stefanidi takes her position:
 
-    x-video#pole-vault-video(src="/resources/functions/images/olympic_pole_vault.mp4" poster="images/olympic_pole_vault_poster.png" width=640 height=360 controls credit="©Olympics")
+    x-video#pole-vault-video(src="images/olympic_pole_vault.mp4" poster="images/olympic_pole_vault_poster.png" width=640 height=360 controls credit="©Olympics")
 
 
 You will be drawing the graph for this event. Here is everything you need to know:
@@ -843,19 +843,19 @@ Good luck!
 Let’s head over to the track for the women’s 800 meter final. Looks like we arrive in time to catch the last 200 meters of the race:
 
     x-video-graph#running-video-graph
-        x-video(src="/resources/functions/images/olympic_running.mp4" poster="images/olympic_running_poster.png" width=640 height=360 controls credit="©RA")
+        x-video(src="images/olympic_running.mp4" poster="images/olympic_running_poster.png" width=640 height=360 controls credit="©RA")
         div
             div.runner-name-key
                 div
-                    img(src="/resources/functions/images/tracey_face.png")
+                    img(src="images/tracey_face.png")
                     div.red Adelle Tracey
                     div g(t)
                 div
-                    img(src="/resources/functions/images/boufaarirane_face.png")
+                    img(src="images/boufaarirane_face.png")
                     div.green Laila Boufaarirane
                     div f(t)
                 div
-                    img(src="/resources/functions/images/rogers_face.png")
+                    img(src="images/rogers_face.png")
                     div.blue Raevyn Rogers
                     div u(t)
             x-coordinate-system(width=400 height=320 x-axis="80,130,10" y-axis="550,800,50" axis-names="Time,Distance")
@@ -982,7 +982,7 @@ Triathlons can be any combination of three sports—some involve canoeing, ice s
 
 ::: column(width=200)
 
-![Three images showing the parts of a typical triathlon: swimming, biking, and running.](/resources/functions/images/swim_bike_run.png)
+![Three images showing the parts of a typical triathlon: swimming, biking, and running.](/content/functions/images/swim_bike_run.png)
 
 :::
 
