@@ -3,10 +3,10 @@
 // (c) Mathigon
 // =============================================================================
 
-
+import { Step, Video } from '@mathigon/studio';
 import {$N, CustomElementView, register, SVGView} from '@mathigon/boost';
 import { Point } from '@mathigon/euclid';
-import { CoordinateSystem, Step, Video } from '../types';
+import { CoordinateSystem } from '../types';
 
 const avatarSize = 32;
 

@@ -3,10 +3,9 @@
 // (c) Mathigon
 // =============================================================================
 
-
-import {$N, CustomElementView, register, SVGParentView, SVGView, Draggable, animate, ease} from '@mathigon/boost';
-import {lerp, clamp} from '@mathigon/fermat';
-import { Step } from '../types';
+import { Step } from '@mathigon/studio';
+import { $N, CustomElementView, register, SVGParentView, SVGView, Draggable, animate, ease } from '@mathigon/boost';
+import { lerp, clamp } from '@mathigon/fermat';
 
 type Mapping = {
   inputY: number,

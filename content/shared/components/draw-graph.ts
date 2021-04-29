@@ -3,12 +3,13 @@
 // (c) Mathigon
 // =============================================================================
 
+import { Step } from '@mathigon/studio';
 import {$N, CustomElementView, ElementView, register, SVGView, slide} from '@mathigon/boost';
 import { last } from '@mathigon/core';
 import { Point } from '@mathigon/euclid';
 import {clamp, lerp} from '@mathigon/fermat';
 import { shuffle } from '@mathigon/fermat/src/random';
-import { CoordinateSystem, Step } from '../types';
+import { CoordinateSystem } from '../types';
 
 // TODO: Import d3 helpers for curvy paths
 // import { path as d3path, line as d3line, curveMonotoneX } from 'd3';

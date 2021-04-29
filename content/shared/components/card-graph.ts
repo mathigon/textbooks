@@ -3,12 +3,12 @@
 // (c) Mathigon
 // =============================================================================
 
-
+import { Step } from '@mathigon/studio';
 import {$N, CustomElementView, ElementView, register, SVGView, Draggable, animate, ease, hover} from '@mathigon/boost';
 import { Point } from '@mathigon/euclid';
 import {lerp} from '@mathigon/fermat';
 import { shuffle } from '@mathigon/fermat/src/random';
-import { CoordinateSystem, Step } from '../types';
+import { CoordinateSystem } from '../types';
 
 type Plot = {
     color: string,
