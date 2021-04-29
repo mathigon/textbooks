@@ -28,7 +28,7 @@ export class FunctionMachine extends CustomElementView {
   private $outputInstances!: SVGView[];
   private mappings!: Mapping[];
   private $svg!: SVGParentView;
-  private $step: Step;
+  private $step?: Step;
   private callbacks: Function[] = [];
 
   private svgWidth: number = 0;
