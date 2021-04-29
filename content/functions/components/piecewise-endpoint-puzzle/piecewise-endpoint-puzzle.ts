@@ -3,13 +3,12 @@
 // (c) Mathigon
 // =============================================================================
 
-import {$N, CustomElementView, ElementView, register, SVGView, slide, SVGParentView} from '@mathigon/boost';
-import { last, wait } from '@mathigon/core';
+import { Step } from '@mathigon/studio';
+import { $N, CustomElementView, ElementView, register, SVGView, SVGParentView } from '@mathigon/boost';
+import { wait } from '@mathigon/core';
 import { Point } from '@mathigon/euclid';
-import {clamp, lerp} from '@mathigon/fermat';
-import { shuffle } from '@mathigon/fermat/src/random';
-import { Burst } from '../../shared/components/burst';
-import { CoordinateSystem, Step } from '../../shared/types';
+import { Burst } from '../../../shared/components/burst';
+import { CoordinateSystem } from '../../../shared/types';
 
 type Segment = {
     point0: Point,
