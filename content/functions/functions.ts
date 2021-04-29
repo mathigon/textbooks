@@ -15,11 +15,11 @@ import { CoordinateSystem, Geopad, GeoPoint } from '../shared/types';
 import '../shared/components/burst';
 import { Burst } from '../shared/components/burst';
 
-import '../shared/components/card-graph';
-import { CardGraph } from '../shared/components/card-graph';
+import './components/card-graph';
+import { CardGraph } from './components/card-graph';
 
-import '../shared/components/draw-graph';
-import { DrawGraph } from '../shared/components/draw-graph';
+import './components/draw-graph';
+import { DrawGraph } from './components/draw-graph';
 
 import './components/piecewise-endpoint-puzzle';
 import { PiecewiseEndpointPuzzle } from './components/piecewise-endpoint-puzzle';

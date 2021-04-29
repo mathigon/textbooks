@@ -6,7 +6,7 @@
 import { Step, Video } from '@mathigon/studio';
 import {$N, CustomElementView, register, SVGView} from '@mathigon/boost';
 import { Point } from '@mathigon/euclid';
-import { CoordinateSystem } from '../types';
+import { CoordinateSystem } from '../../../shared/types';
 
 const avatarSize = 32;
 

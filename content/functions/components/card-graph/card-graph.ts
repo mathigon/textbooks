@@ -8,7 +8,7 @@ import {$N, CustomElementView, ElementView, register, SVGView, Draggable, animat
 import { Point } from '@mathigon/euclid';
 import {lerp} from '@mathigon/fermat';
 import { shuffle } from '@mathigon/fermat/src/random';
-import { CoordinateSystem } from '../types';
+import { CoordinateSystem } from '../../../shared/types';
 
 type Plot = {
     color: string,
