@@ -218,7 +218,7 @@ export class PiecewiseEndpointPuzzle extends CustomElementView {
                 label += segment.point1.x.toString();
                 segment.$text.text = label;
             }
-            else {
+            else if (segment.label) {
                 segment.$text.text = segment.label;
             }
         }
