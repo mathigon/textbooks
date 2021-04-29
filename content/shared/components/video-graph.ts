@@ -53,7 +53,7 @@ export class VideoGraph extends CustomElementView {
         }
 
         this.$video.on('timeupdate', () => {
-            const t: number = this.$videoEl.currentTime;
+            const t: number = (this.$videoEl as any).currentTime;
             setAvatarPosition(t);
         });
 
