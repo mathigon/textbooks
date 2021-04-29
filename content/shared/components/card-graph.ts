@@ -82,7 +82,7 @@ export class CardGraph extends CustomElementView {
         const $content = $N('g', {class: 'card-content'}, $g);
 
         if (card.imagePath)
-          $N('image', {href: '/resources/functions/images/'+card.imagePath, x: -30, y: -30, width: 60, height: 60}, $content);
+          $N('image', {href: card.imagePath, x: -30, y: -30, width: 60, height: 60}, $content);
         else {
           $N('circle', {r:30, class: 'card-fill'}, $content);
           $N('text', {'alignment-baseline': 'middle', 'text-anchor': 'middle'}, $content).text = card.label!;

@@ -450,27 +450,27 @@ export function diveGraph($step: Step) {
   {
     const cards = [{
       description: 'Ren stands on the platform',
-      imagePath: 'dive_card_1.png',
+      imagePath: '/content/functions/images/dive_card_1.png',
       point: new Point(0, 10),
       hint: 'This is the y-intercept.',
     },{
       description: 'Ren reaches her peak',
-      imagePath: 'dive_card_2.png',
+      imagePath: '/content/functions/images/dive_card_2.png',
       point: new Point(0.34, 10.7),
       hint: 'This is the maximal turning point.',
     },{
       description: 'Ren hits the water',
-      imagePath: 'dive_card_4.png',
+      imagePath: '/content/functions/images/dive_card_4.png',
       point: new Point(1.98, 0),
       hint: 'This is the first x-intercept.',
     },{
       description: 'Ren turns underwater',
-      imagePath: 'dive_card_5.png',
+      imagePath: '/content/functions/images/dive_card_5.png',
       point: new Point(3.3, -7.6),
       hint: 'This is the minimal turning point.',
     },{
       description: 'Ren reaches the surface',
-      imagePath: 'dive_card_6.png',
+      imagePath: '/content/functions/images/dive_card_6.png',
       point: new Point(4.3, 0),
       hint: 'This is the second x-intercept.',
     }];
