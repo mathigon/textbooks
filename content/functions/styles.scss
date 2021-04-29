@@ -12,6 +12,14 @@
 @import "./components/draw-graph/draw-graph";
 @import "./components/piecewise-endpoint-puzzle/piecewise-endpoint-puzzle";
 
+x-coordinate-system {
+  line,path.red { stroke: $red; }
+  line,path.green { stroke: $green; }
+  line,path.blue { stroke: $blue; }
+  line,path.yellow { stroke: $yellow; }
+  line,path.purple { stroke: $purple; }
+  line,path.orange { stroke: $orange; }
+}
 
 .btn.clear {
   position: absolute;
