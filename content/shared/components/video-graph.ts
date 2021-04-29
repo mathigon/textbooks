@@ -12,9 +12,9 @@ const avatarSize = 32;
 
 @register('x-video-graph')
 export class VideoGraph extends CustomElementView {
-    private $video: Video;
-    private $videoEl: Node;
-    private $graph: CoordinateSystem;
+    private $video!: Video;
+    private $videoEl!: Node;
+    private $graph!: CoordinateSystem;
     private functions: ((t:number)=>number)[] = [];
     private colors: string[] = [];
 
