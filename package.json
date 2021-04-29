@@ -23,7 +23,7 @@
     "@mathigon/core": "0.6.6",
     "@mathigon/euclid": "0.6.10",
     "@mathigon/fermat": "0.6.4",
-    "@mathigon/hilbert": "0.6.2",
+    "@mathigon/hilbert": "0.6.3",
     "@mathigon/studio": "0.1.7",
     "@types/d3": "6.3.0",
     "@types/three": "0.91.14",
