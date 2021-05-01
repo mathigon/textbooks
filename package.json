@@ -27,7 +27,7 @@
     "@mathigon/studio": "0.1.7",
     "@types/d3": "6.3.0",
     "@types/three": "0.91.14",
-    "@types/topojson": "3.2.2",
+    "@types/topojson": "3.2.3",
     "npm-run-all": "4.1.5",
     "ts-node": "9.1.1",
     "typescript": "4.2.4"
