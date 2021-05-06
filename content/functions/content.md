@@ -1239,6 +1239,9 @@ These days gamers can play internet-based variations of pong or visit an arcade 
 
 MathiPong pays homage to this titan in gaming history. The objective is to direct the ball to the target. Choose regular or challenge mode to get started.
 
+    x-pong
+        x-coordinate-system(width=600 height=300 x-axis="-10,10,1" y-axis="0,10,1" crosshairs="no")
+
 ::: column(width=240)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/3/32/Signed_Pong_Cabinet.jpg)

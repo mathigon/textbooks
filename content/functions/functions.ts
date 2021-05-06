@@ -33,6 +33,9 @@ import { FunctionMachine } from './components/function-machine/function-machine'
 import './components/video-graph/video-graph';
 import { VideoGraph } from './components/video-graph/video-graph';
 
+import './components/pong/pong';
+import { Pong } from './components/pong/pong';
+
 export function fnSketch($step: Step) {
   $step.$('.btn.clear')!.on('click', () => {
     ($step.$('x-coordinate-sketch') as any).clear();
@@ -805,4 +808,8 @@ export function triathlonGraph($step: Step) {
     hint: 'The race ends at t=125',
     drawLine: true,
   }]);
+}
+
+export function absoluteValue($step: Step) {
+  const $pong = $step.$('x-pong') as Pong;
 }
