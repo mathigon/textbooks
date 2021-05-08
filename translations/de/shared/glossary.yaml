@@ -2,13 +2,19 @@
 # MATHIGON GLOSSARY
 # ==============================================================================
 
-absolute-value:absolute-value:
+absolute-value:
   title: Absolutwert
   text: Der __Absolutwert__ einer Zahl ist der Abstand von 0 auf der Zahlenlinie. Er macht negative
     Zahlen positiv, lässt aber positive Zahlen unverändert. Der absolute Wert von `x` wird als `|x|`
     geschrieben. Zum Beispiel `|-5| = 5` und `|3| = 3`.
   # Der Absolutwert einer Zahl ist der Abstand zwischen der Zahl und dem Nullpunkt. Dies verbindet
   # den Begriff des _Absolutwerts_ mit dem Betrag einer komplexen Zahl und der Grösse eines Vektors.
+acceleration:
+  title: Beschleunigung
+  text: Beschleunigung ist die Änderung der Geschwindigkeit über die Zeit. In der Infinitesimalrechnung verstehen wir
+    Beschleunigung als die Ableitung der Geschwindigkeit. Im täglichen Leben denken wir typischerweise
+    von Beschleunigung in Form von Fahrzeugen. Zum Beispiel kann ein Auto mit Vollgas in 3 Sekunden von 0 auf 100 
+    Stundenkilometer beschleunigen.
 
 acute-angle:
   title: Spitzer Winkel
@@ -183,6 +189,11 @@ base-10:
     Das __Dezimalsystem__ (oder __Basis 10__) ist das weltweit am häufigsten verwendete
     Zahlensystem. Jede Ziffer einer Zahl kann einen von zehn verschiedenen Werten haben, von 0 bis
     9.
+binary-numbers:
+  title: Binärzahlen
+  text: __Binärzahlen__ sind eine Möglichkeit, Zahlen in einem auf der Zahl 2 basierenden Zahlensystem 
+    auszudrücken, typischerweise mit den Symbolen 0 und 1. Das wird häufig in der digitalen
+    Elektronik verwendet.
 
 bipartite-graph:
   title: Bipartiter Graph
@@ -286,6 +297,25 @@ circumcircle:
   image: circumcircle.svg
   link: /course/triangles/properties#circumcircle-1
 
+chaos:
+  title: Chaos
+  text: |
+    Die __Chaos-Theorie__ ist ein Zweig der Mathematik, der sich mit dynamischen Systemen beschäftigt, die
+    zufällig und unregelmäßig aussehen. Sie werden oft von deterministischen Gesetzen beherrscht
+    die sehr empfindlich auf Anfangsbedingungen reagieren.
+
+    Der _Schmetterlingseffekt_ beschreibt, wie winzige Änderungen im Zustand eines Systems
+    im Laufe der Zeit zu großen Veränderungen in einem späteren Zustand führen können.
+
+code:
+  title: Codes
+  text: |
+    Ein __Code__ ist ein System von Regeln, mit dem _Informationen_ (z. B. Buchstaben, Töne, Wörter oder Bilder) 
+    in eine andere Form umgewandelt werden. Einige Codes sind geheim und können nur von dem vorgesehenen Empfänger 
+    entschlüsselt werden. Andere Codes sind für ein bestimmtes Übertragungs- oder Speichermedium konzipiert 
+    (z. B. _Morse-Codes_ für Telegrafenleitungen oder _Binärcode_ für Computer). Unsere Sprache und unser Alphabet 
+    sind weitere Beispiele für Codes.
+
 coefficient:
   title: Koeffizient
   text: |
@@ -296,6 +326,10 @@ coefficient:
 collinear:
   title: Kollineare Punkte
   text: 'Drei oder mehr Punkte sind __kollinear__, wenn sie auf der gleichen Geraden liegen.'
+commutative:
+  title: Kommutativ
+  text: Eine Rechenoperation • ist __kommutativ__, wenn `a•b = b•a`. Zum Beispiel,
+    sowohl die Addition (+) als auch die Multiplikation (×) von Zahlen sindkommutativ.
 
 compass:
   title: Zirkel
@@ -481,9 +515,19 @@ degrees:
 
 denominator:
   title: Nenner
+  text: Der __Nenner__ ist die Zahl unter dem Bruchstrich. Zum Beispiel, in `4/7`, ist die 
+    Zahl 7 der Nenner.
+derivative:
+  title: Ableitung
+  text: Eine Ableitung ist die Funktion, die die Steigung einer Kurve beschreibt.
+  ## definition needs to be fleshed out
+
+dependent-events:
+  title: Dependent Events
   text: |
-    Der __Nenner__ ist die Zahl unter dem Bruchstrich. Zum Beispiel, in `4/7`, ist die Zahl 7 der
-    Nenner.
+    Zwei Ereignisse sind __abhängig__, wenn das Eintreten des einen Ereignisses 
+    die Wahrscheinlichkeit ändert, dass das andere Ereignis eintritt. Zum Beispiel 
+    könnten _A_ und _B_ abhängig sein, wenn `P(A|B) ≠ P(A)`.
 
 dilation:
   title: Streckung (Dilatation)
