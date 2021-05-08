@@ -4,6 +4,10 @@
 
 > id: intro
 > section: introduction
+> description: "Triangles are some of the most important shapes in geometry: they have countless interesting properties and appear everywhere in engineering and technology."
+> color: "#3566DE"
+> level: Intermediate
+> next: polyhedra
 
 ::: column.grow
 By the early 19th century, explorers had discovered most of the world. Trade and
@@ -163,7 +167,7 @@ We can classify triangles by the size of their angles:
       path.fill.red(x="angle(a1,b1,c1)")
       path(x="polygon(a1,b1,c1)")
 
-{.caption} A __right-angled triangle__  
+{.caption} A __right-angled triangle__<br>
 has one [right angle](gloss:right-angle).
 ::: column(width=220)
 
@@ -174,7 +178,7 @@ has one [right angle](gloss:right-angle).
       path.fill.blue(x="angle(c2,b2,a2)")
       path(x="polygon(a2,b2,c2)")
 
-{.caption} An __obtuse triangle__  
+{.caption} An __obtuse triangle__<br>
 has one [obtuse angle](gloss:obtuse-angle).
 ::: column(width=220)
 
@@ -187,7 +191,7 @@ has one [obtuse angle](gloss:obtuse-angle).
       path.fill.green(x="angle(c3,a3,b3)")
       path(x="polygon(a3,b3,c3)")
 
-{.caption} An __acute triangle__  
+{.caption} An __acute triangle__<br>
 has [[three]] [acute angles](gloss:acute-angle).
 :::
 
@@ -200,7 +204,7 @@ labelled with capital letters [_A_, _B_ and _C_](target:vertex), the sides are
 labelled with lowercase letters [_a_, _b_ and _c_](target:side), and the angles
 are labelled with Greek letters [`α`, `β` and `γ`](target:angle) (“alpha”, “beta” and
 “gamma”).
- 
+
 The [side that lies _opposite_ vertex _A_](target:X) is labeled _a_, and the
 [angle that lies right next to _A_](target:Y) is labelled `α`. The same pattern
 works for _B_/_b_/`β` and for _C_/_c_/`γ`.
@@ -223,7 +227,7 @@ works for _B_/_b_/`β` and for _C_/_c_/`γ`.
 > id: medians
 > goals: s0 s1 s2 move
 
-### Medians 
+### Medians
 
 ::: column(width=300)
 
@@ -232,13 +236,13 @@ works for _B_/_b_/`β` and for _C_/_c_/`γ`.
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
       path(x="triangle(a,b,c)")
-      
+
       circle.green(name="ab" x="line(a,b).midpoint")
       circle.blue(name="ac" x="line(a,c).midpoint")
       circle.red(name="bc" x="line(b,c).midpoint" target="ratio")
-      
+
       circle.yellow.reveal(name="d" x="triangle(a,b,c).centroid" when="blank-0" animation="pop" target="ratio")
-      
+
       path.red.transparent(x="segment(a,d)" label="2" target="ratio")
       path.red.transparent(x="segment(d,bc)" label="1" target="ratio")
 
@@ -444,7 +448,7 @@ the area of the triangle must be half that:
 
       path.fill.yellow.reveal(x="polygon(b,d,c)" when="next-1" target="gap")
       path.fill.yellow.transparent(x="polygon(b,f,c)" target="gap")
-      
+
       path.dark(x="polygon(a,b,c)")
       path.red.reveal(x="polygon(a,b,f,e)" when="next-0" animation="draw")
       path.blue.reveal(x="segment(c,d)" label="height" when="next-0" delay="1000" target="height")
@@ -472,7 +476,7 @@ __base__, and then find the corresponding __height__, which is the line that is
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
-      
+
       path(x="triangle(a,b,c)")
       path.altitude.red(hidden x="line(a,b).perpendicular(c)")
       path.altitude.blue(hidden x="line(a,c).perpendicular(b)")
@@ -516,7 +520,7 @@ altitudes are actually just sides of the triangle.
       circle.red(name="q" x="line(a,c).midpoint")
       circle.red(name="r" x="line(b,c).midpoint")
       path(x="triangle(a,b,c)")
-      
+
       path.transparent.fill.red(x="polygon(a,p,q)" target="triangles")
       path.transparent.fill.blue(x="polygon(b,p,r)" target="triangles")
       path.transparent.fill.yellow(x="polygon(c,q,r)" target="triangles")
@@ -541,7 +545,7 @@ scale factor of `1/2`._
 the midsegments of triangles:
 
 ::: .theorem.reveal(when="blank-1")
-__Midsegment Theorem__  
+__Midsegment Theorem__<br>
 A midsegment of a triangle is parallel to its opposite side, and exactly half
 the length of that side.
 :::
@@ -624,7 +628,7 @@ Two triangles are congruent if any one of the following conditions is met:
           path.red(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption All sides are congruent.
-        
+
       div(style="width: 150px")
         .text-center: strong SAS
         x-geopad(width=150 height=120): svg
@@ -636,7 +640,7 @@ Two triangles are congruent if any one of the following conditions is met:
           path(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption Two sides and the #[strong included] angle are congruent.
-        
+
       div(style="width: 150px")
         .text-center: strong ASA
         x-geopad(width=150 height=120): svg
@@ -649,7 +653,7 @@ Two triangles are congruent if any one of the following conditions is met:
           path(x="segment(a,c)")
           path(x="segment(b,c)")
         p.caption Two angles and the #[strong included] side are congruent.
-        
+
       div(style="width: 150px")
         .text-center: strong AAS
         x-geopad(width=150 height=120): svg
@@ -794,7 +798,7 @@ angle of 50°. SSA is not enough to confirm two triangles are congruent.
 
 ---
 
-## Pythagoras’ Theorem 
+## Pythagoras’ Theorem
 
 > id: pythagoras
 > section: pythagoras
@@ -806,11 +810,11 @@ mathematician [Pythagoras of Samos](bio:pythagoras).
 
 ::: .theorem
 ::: column.grow
-__Pythagoras’ Theorem__  
+__Pythagoras’ Theorem__<br>
 In any right-angled triangle, the square of the length of the
 [__hypotenuse__](target:hypot) (the side that lies opposite the right angle) is
 equal to the sum of the squares of the other two sides. In other words,
- 
+
 {.text-center} _{span.circled.green}`a^2`_ + _{span.circled.blue}`b^2`_ =
 _{span.circled.yellow}`c^2`_
 
@@ -822,11 +826,11 @@ _The converse is also true: if the three sides in a triangle satisfy
       circle.move(name="a" cx=82 cy=160 target="hypot")
       circle.move(name="b" cx=218 cy=160 target="hypot")
       circle.move(name="c" cx=120 cy=100 project="arc(line(a,b).midpoint,a,pi).contract(0.2)")
-      
+
       path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-class="white")
       path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-class="white")
       path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-class="white")
-      
+
       path.dark(x="segment(b,c)" label="a")
       path.dark(x="segment(a,c)" label="b")
       path.dark(x="segment(a,b)" label="c" target="hypot")
@@ -964,7 +968,7 @@ _{span.qed}_
 
 ::: column(width=240)
 
-    x-geopad(width=240): svg        
+    x-geopad(width=240): svg
       circle.move(name="e1" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
       circle(name="f1" hidden x="b.add(e1.subtract(a).flip)")
       circle(name="g1" hidden x="c.subtract(e1.subtract(a))")
@@ -1092,7 +1096,7 @@ Pythagoreans found deeply troubling and (unsuccessfully) tried to cover up!
 ### Calculating Distances
 
 One of the most important application of Pythagoras’ Theorem is for calculating
-distances. 
+distances.
 
 ::: column.grow
 {.r} On the right you can see two points in a coordinate system. We could
@@ -1129,7 +1133,7 @@ lines, we get a [{.yellow}right-angled triangle](target:triangle).
 This method works for _any_ two points:
 
 ::: .theorem
-__The Distance Formula__  
+__The Distance Formula__<br>
 If you are given two points with coordinates  (`x_1`,`y_1`) and (`x_2`,`y_2`),
 the distance between them is
 
@@ -1187,7 +1191,7 @@ Pythagorean triples?
       .label.var(style="left:${26+12.5*a.x}px; top:${425-12.5*a.y}px") ${round(a.length,2)}
 
 {.reveal(when="p0 p1 p2 p3 p4 p5")} Do you notice any pattern in the
-distribution of these points? 
+distribution of these points?
 
     // The mathematician Euclid found a clever method for generating new
     // Pythagorean triples. First, we need to pick any two integers _m_ and _n_:
@@ -1221,21 +1225,21 @@ Proof by constructing angle bisector and using SAS result.
     // {.todo} The angles between the base and the congruent sides are
     // called base angles. The angle made by the two legs of the isosceles triangle is
     // called the vertex angle.
-    // 
+    //
     // {.todo} Base Angles Theorem: The base angles of an isosceles triangle are congruent.
     // To prove the Base Angles Theorem, we will construct the angle bisector through
     // the vertex angle of an isosceles triangle.
-    // 
+    //
     // {.todo} Isosceles Triangle Theorem: The angle bisector of the vertex angle in an
     // isosceles triangle is also the perpendicular bisector to the base.
-    // 
+    //
     // {.todo} The converses of the Base Angles Theorem and the Isosceles Triangle Theorem are
     // both true. If two angles in a triangle are congruent, then
     // the opposite sides are also congruent. And if the perpendicular bisector of the base of
     // an isosceles triangle is also the angle bisector of the vertex angle.
-    // 
+    //
     // {.todo} In other words, if △ABC is isosceles, AD⊥CB and CD≅DB, then ∠CAD≅∠BAD.
-    // 
+    //
     // {.todo} Find the Height of an Isosceles Triangle
     // One way to use The Pythagorean Theorem is to identify the heights in isosceles
     // triangles so you can calculate the area.
@@ -1254,7 +1258,7 @@ equilateral triangle using straight-edge and compass.
     // we know that angles opposite congruent sides in a triangle are also congruent.
     // In an equilateral triangle, all of the sides are congruent, so all of the angles
     // must also be congruent.
-    // 
+    //
     // Since we know that the sum of all three angles is 180°, every individual angle
     // in an equilateral triangle must be [[60]]°.
 
@@ -1370,7 +1374,7 @@ a 3-letter abbreviation:
 ---
 > id: inverse-trig
 
-### Inverse Trignometric Functions 
+### Inverse Trignometric Functions
 
 {.todo} COMING SOON – Inverse functions
 
@@ -1401,7 +1405,7 @@ results that work for all triangles
 
 ::: column.grow
 ::: .theorem
-__Sine Rule__  
+__Sine Rule__<br>
 In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
 {.text-center} `(sin(A))/a = (sin(B))/b = (sin(C))/c`
@@ -1413,18 +1417,18 @@ In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
 ::: column.grow
 ::: .theorem
-__Cosine Rule__  
+__Cosine Rule__<br>
 In a triangle with sides _a_, _b_ and _c_, and angles _A_, _B_ and _C_,
 
-{.text-center} `c^2 = a^2 + b^2 - 2a b cos(C)`  
-`b^2 = c^2 + a^2 - 2c a cos(B)`  
+{.text-center} `c^2 = a^2 + b^2 - 2a b cos(C)`
+`b^2 = c^2 + a^2 - 2c a cos(B)`
 `a^2 = b^2 + c^2 - 2b c cos(A)`
 :::
 
     // {.todo} Even though there are three formulas, they are all very similar. First, notice
     // that whatever angle is in the cosine, the opposite side is on the other side of
     // the equal sign.
-    // 
+    //
     // {.todo} Use Law of Cosines when given:
     // Two sides and the included angle.
     // All three sides.

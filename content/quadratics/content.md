@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#F6700F"
+> level: Intermediate
+> next: graph-theory
 
     img.text-wrap(src="images/skater-1.jpg" style="shape-outside: url(images/skater-1-mask.png)" width=300 height=393)
 
@@ -38,7 +41,7 @@ demand?
       .item(style="width: 220px")
         x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="price,demand" crosshairs="no" labels="no" fn="8 - 0.6x")
       .item(data-error="wrong-chart-2" style="width: 220px")
-        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="price,demand" crosshairs="no" labels="no" fn="2.5 * sqrt(x)") 
+        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="price,demand" crosshairs="no" labels="no" fn="2.5 * sqrt(x)")
 
 ---
 > id: demand-1
@@ -163,7 +166,7 @@ _a_ and _b_ are some specific numbers.
 Now let’s think about a more complex class of equations which also contain
 `x^2`. A [__quadratic equation__](gloss:quadratic-equation) is an equation of
 the form
-  
+
 {.text-center} `ax^2 + bx + c = 0`,
 
 where _x_ is a variable and _a_, _b_, and _c_ are some specific numbers (called
@@ -213,7 +216,7 @@ First, we isolate `x^2` on one side of the equation:
 Now we take square roots of both sides, remembering to add a ±:
 
 {.text-center}
-`x = +- sqrt(25)`  
+`x = +- sqrt(25)`
 `x = +- 5`
 
 Sometimes we have to do a bit more work to isolate `x^2`:
@@ -262,7 +265,7 @@ e) x^2=−6.
 
 ---
 
-### Level 1: 
+### Level 1:
 
 EXAMPLE 17: Solve `(x+3)^2=100`.
 
@@ -277,7 +280,7 @@ yielding:
 
 ::: tab
 
-#### Example    
+#### Example
 
 __Solve `(y−4)^2=25`__
 
@@ -365,7 +368,7 @@ b) How many solutions does (x+7)^2=−2 have? What are they?
 
 ---
 
-### Level 2: 
+### Level 2:
 
 EXAMPLE 25: Solve `x^2 + 6x + 9 = 49`.
 
@@ -1043,7 +1046,7 @@ WATCH OUT! Explain why only one answer is valid for g).
 
 h) 3β–2β−−√=7
 i) 2u4+8u2−5=0
- 
+
 
 PRACTICE 55:
 
@@ -1140,9 +1143,9 @@ all the examples below it should be relatively straightforward.
 Try to find the missing number in these factorisation examples:
 
 {.text-center}
-x^2 + 3x + 2 = (x+1)(x+[[1]])  
-x^2 + 5x + 4 = (x+4)(x+[[1]])  
-x^2 - 8x + 15 = (x-3)(x-[[1]])  
+x^2 + 3x + 2 = (x+1)(x+[[1]])
+x^2 + 5x + 4 = (x+4)(x+[[1]])
+x^2 - 8x + 15 = (x-3)(x-[[1]])
 x^2 - 5x - 14 = (x+2)(x-[[1]])
 
 {.todo} Some quadratic equations look completely ordinary to start with,
@@ -1243,19 +1246,19 @@ The two solutions lie at symmetrical positions about the value `x=−b/(2a)`.
 We now saw multiple different ways to solve quadratic equations, all of which
 have advantages and disadvantages:
 
-* __Basic Algebra__  
+* __Basic Algebra__
   This is the easiest way, but it only works for quadratic equations that don't
   contain an _x_-term.
-  
-* __Factoring__  
+
+* __Factoring__
   Also quite simply, but it takes some guesswork and it doesn't always work.
-  
-* __Completing the Square__  
+
+* __Completing the Square__
   Very long and complicated. It is easy to make mistakes. In addition to finding
   the solutions of an equation, it also tells us the vertex of the corresponding
   parabola.
-  
-* __Quadratic Formula__  
+
+* __Quadratic Formula__
   Straightforward formula that always work, but it sometimes feels like "magic"
   and it is easy to forget why and how it works.
 
@@ -1859,7 +1862,7 @@ PRACTICE 84: Find a formula for the following quadratic:
 ### Old Content
 
 To better understand the relationship between quadratic equations and their
-corresponding graphs, we have to think about __transformations__. Any 
+corresponding graphs, we have to think about __transformations__. Any
 
 All parabolas can be thought of as some transformation of the standard parabola which has the equation $y=x^2$y=x2.
 
@@ -1867,10 +1870,10 @@ All parabolas can be thought of as some transformation of the standard parabola 
 If we compare $y=x^2$y=x2 (whose vertex is at $\left(0,0\right)$(0,0)) to $y=a\left(x-h\right)^2+k$y=a(x−h)2+k, then we can think of the second equation and its graph as a transformation of $y=x^2$y=x2:
 
 $h$h represents the number of units that $y=x^2$y=x2 is translated horizontally, and
-$k$k represents the number of units that $y=x^2$y=x2 is translated vertically.  
+$k$k represents the number of units that $y=x^2$y=x2 is translated vertically.
 Note that with the direction of the translation:
 
-if the equation is $y=\left(x+1\right)^2-3$y=(x+1)2−3, the horizontal translation is 1 unit to the left. 
+if the equation is $y=\left(x+1\right)^2-3$y=(x+1)2−3, the horizontal translation is 1 unit to the left.
 if the equation is $y=\left(x-1\right)^2-3$y=(x−1)2−3, the horizontal translation is 1 unit to the right.
 
 
@@ -1878,7 +1881,7 @@ These movements are called transformations.  Transform means change, and these t
 
 
 $y=a\left(x-h\right)^2+k$y=a(x−h)2+k
-Is called turning point form.  
+Is called turning point form.
 
 it tells us the turning point immediately, and knowing the turning point we can draw a pretty good sketch of any quadratic
 it explains to us a number of transformations that have occurred to the quadratic from the simple quadratic $y=x^2$y=x2.
@@ -1890,8 +1893,8 @@ This lesson focuses on the connection between the equations of quadratics and th
 
 The concavity of a parabola is determined by the $a$a value in the equation $y=ax^2$y=ax2.
 
-$y=-x^2$y=−x2 vs $y=x^2$y=x2 : The sign of the coefficient $a$a determines whether the parabola is concave up or concave down. 
- 
+$y=-x^2$y=−x2 vs $y=x^2$y=x2 : The sign of the coefficient $a$a determines whether the parabola is concave up or concave down.
+
 $y=a\left(x-h\right)^2+k$y=a(x−h)2+k
 
 $a$a determines concavity
@@ -1921,13 +1924,13 @@ Let's look at the quadratic $y=-2\left(x-3\right)^2-3$y=−2(x−3)2−3
 
 Shape - we can see that the quadratic will be concave down because $a=-2$ which is < $0$0
 
-Vertex - we can see that the quadratic will have turning point at $\left(3,-3\right)$(3,−3).  
+Vertex - we can see that the quadratic will have turning point at $\left(3,-3\right)$(3,−3).
 
 With just these two pieces of information we can roughly sketch the curve.
 
-But many parabolas are concave down and have a vertex at $\left(3,-3\right)$(3,−3). To be able to graph the parabola more accurately with the correct amount of steepness, we need another piece of information. We need another point on the graph. 
+But many parabolas are concave down and have a vertex at $\left(3,-3\right)$(3,−3). To be able to graph the parabola more accurately with the correct amount of steepness, we need another piece of information. We need another point on the graph.
 
-A common point to use would be the $y$y intercept.  
+A common point to use would be the $y$y intercept.
 
 Remember
 $x$ intercept occurs where the value of $y$y is $0$0
@@ -1937,7 +1940,7 @@ Now we can sketch the curve.
 
 Using vertex $\left(3,-3\right)$, the concave down shape and a $y$y intercept of $-21$ :
 
-As a hand drawn sketch, this shows all the information we need to sketch the quadratic.  
+As a hand drawn sketch, this shows all the information we need to sketch the quadratic.
 
 ---
 
@@ -2068,7 +2071,7 @@ The x-intercepts are x=1 and x=3.  □
 PRACTICE 86: Consider y=5x2−10x−15.
 
 a) Find its vertex
-b) Find its “line of symmetry.” 
+b) Find its “line of symmetry.”
 c) Rewrite the quadratic in “vertex form.”
 d) Sketch a graph of the quadratic
 e) Find where the quadratic crosses the -axis.
@@ -2299,7 +2302,7 @@ completely separate parts:
 * We can assume that there is no drag because of air resistance. This means that
   if we just look at the horizontal part of the motion (the "shadow" of the
   penguin), it seems to move at a constant speed.
-  
+
 * Vertically (up and down), the speed of the penguin changes. Initially it
   is positive (upwards), then it slows down and turns negative (downwards).
 
@@ -2332,7 +2335,7 @@ https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_15_feather_drop.html
 
 Of course, flying penguins are not the only things that move on a parabolic
 path. If we ignore other forces like friction, wind or air resistance, any
-that flies through the air and is affected by gravity 
+that flies through the air and is affected by gravity
 then all objects we throw into the air follow a parabolic path: including
 basketballs, jets of water, or even rockets.
 
@@ -2624,7 +2627,7 @@ https://demonstrations.wolfram.com/LiquidInARotatingCylinder/
 
 Maximum and minimum values of quadratics are used in the study of moving objects
 and in acceleration and volume problems.  Business models also include quadratic
-functions and are used to help forecast profit and loss.  
+functions and are used to help forecast profit and loss.
 
 Many equations in physics or economics contain multiplication, and these
 multiplications often lead to squares. That’s why it should come at no surprise

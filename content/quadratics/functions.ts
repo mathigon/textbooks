@@ -7,10 +7,11 @@
 import {list} from '@mathigon/core';
 import {nearlyEquals} from '@mathigon/fermat';
 import {Point} from '@mathigon/euclid';
-import {CoordinateSystem, EquationSystem, Step} from '../shared/types';
+import {Step} from '@mathigon/studio';
+import {CoordinateSystem, EquationSystem} from '../shared/types';
 
 import './components/projectile';
-import '../shared/components/conic-section';
+import '../shared/components/webgl/conic-section';
 
 
 // -----------------------------------------------------------------------------

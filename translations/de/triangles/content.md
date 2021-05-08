@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#3566DE"
+> level: Intermediate
+> next: polyhedra
 
 ::: column.grow
 Zu Beginn des 19. Jahrhunderts hatten die Forscher den größten Teil der Welt entdeckt. Handel und
@@ -161,7 +164,7 @@ Wir können Dreiecke nach der Größe ihrer Winkel einteilen:
       path.fill.red(x="angle(a1,b1,c1)")
       path(x="polygon(a1,b1,c1)")
 
-{.caption} Ein __rechtwinkliges Dreieck__  
+{.caption} Ein __rechtwinkliges Dreieck__
 hat einen [rechten Winkel](gloss:right-angle).
 ::: column(width=220)
 
@@ -172,7 +175,7 @@ hat einen [rechten Winkel](gloss:right-angle).
       path.fill.blue(x="angle(c2,b2,a2)")
       path(x="polygon(a2,b2,c2)")
 
-{.caption} Ein __stumpfwinkliges Dreieck__  
+{.caption} Ein __stumpfwinkliges Dreieck__
 hat einen [stumpfen Winkel](gloss:obtuse-angle).
 ::: column(width=220)
 
@@ -185,7 +188,7 @@ hat einen [stumpfen Winkel](gloss:obtuse-angle).
       path.fill.green(x="angle(c3,a3,b3)")
       path(x="polygon(a3,b3,c3)")
 
-{.caption} Ein __spitzwinkliges Dreieck__  
+{.caption} Ein __spitzwinkliges Dreieck__
 hat [[3]] [spitze Winkel](gloss:acute-angle).
 :::
 
@@ -198,8 +201,8 @@ mit Großbuchstaben [_A_, _B_ und _C_](target:vertex), die Seiten mit Kleinbuchs
 mit griechischen Buchstaben [`α`, `β` and `γ`](target:angle) (“alpha”, “beta” und
 “gamma”)
 bezeichnet.
- 
-Die [Seite, die _gegenüber_ dem Eckpunkt _A ]_(target:X) liegt, ist mit _a_, und der
+
+Die [Seite, die _gegenüber_ dem Eckpunkt _A_](target:X) liegt, ist mit _a_, und der
 [Winkel, der direkt bei _A_](target:Y) anliegt, mit `α` bezeichnet. Auf dieselbe Art und Weise
 verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 ::: column(width=220)
@@ -221,7 +224,7 @@ verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
 > id: medians
 > goals: s0 s1 s2 move
 
-### Seitenhalbierende (Schwerlinien) 
+### Seitenhalbierende (Schwerlinien)
 
 ::: column(width=300)
 
@@ -230,16 +233,16 @@ verfahren wir bei _B_/_b_/`β` und bei _C_/_c_/`γ`.
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
       path(x="triangle(a,b,c)")
-      
+
       circle.green(name="ab" x="line(a,b).midpoint")
       circle.blue(name="ac" x="line(a,c).midpoint")
       circle.red(name="bc" x="line(b,c).midpoint" target="ratio")
-      
+
       circle.yellow.reveal(name="d" x="triangle(a,b,c).centroid" when="blank-0" animation="pop" target="ratio")
-      
+
       path.red.transparent(x="segment(a,d)" label="2" target="ratio")
       path.red.transparent(x="segment(d,bc)" label="1" target="ratio")
-      
+
 
 ::: column.grow
 Hier siehst du ein Dreieck sowie die [Mittelpunkte](gloss:midpoint) seiner
@@ -318,7 +321,7 @@ drei Senkrechten, daher muss er den gleichen Abstand zu allen drei
 [[Eckpunkten|Seiten]] des Dreiecks haben.
 
 {.reveal(when="blank-2")} Das bedeutet, dass wir einen Kreis um ihn herum zeichnen können, der genau durch
-alle Eckpunkte geht. Dieser Kreis wird als 
+alle Eckpunkte geht. Dieser Kreis wird als
 [__Umkreis__](gloss:circumcircle) des Dreiecks bezeichnet, und sein Mittelpunkt wird als
 __Umkreismittelpunkt__ bezeichnet.
 :::
@@ -427,7 +430,7 @@ die Fläche des Dreiecks muss dann also halb so groß sein:
 
       path.fill.yellow.reveal(x="polygon(b,d,c)" when="next-1" target="gap")
       path.fill.yellow.transparent(x="polygon(b,f,c)" target="gap")
-      
+
       path.dark(x="polygon(a,b,c)")
       path.red.reveal(x="polygon(a,b,f,e)" when="next-0" animation="draw")
       path.blue.reveal(x="segment(c,d)" label="Höhe" when="next-0" delay="1000" target="height")
@@ -443,7 +446,7 @@ Um die Fläche eines Dreiecks zu berechnen, kannst du eine der drei Seiten als
 __Basis__ auswählen und dann die entsprechende __Höhe__ bestimmen, d.h. die Strecke, die
 [[senkrecht|parallel]] zur Basis und durch den gegenüberliegenden Eckpunkt verläuft.
 
-{.reveal(when="blank-0")} In Dreiecken spricht man von der 
+{.reveal(when="blank-0")} In Dreiecken spricht man von der
 [__Höhe__](gloss:triangle-altitude) _auf die Seite_. Jedes Dreieck hat [[3]] Höhen.
 
 ---
@@ -455,7 +458,7 @@ __Basis__ auswählen und dann die entsprechende __Höhe__ bestimmen, d.h. die St
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
-      
+
       path(x="triangle(a,b,c)")
       path.altitude.red(hidden x="line(a,b).perpendicular(c)")
       path.altitude.blue(hidden x="line(a,c).perpendicular(b)")
@@ -498,7 +501,7 @@ Höhen sind eigentlich nur Seiten des Dreiecks.
       circle.red(name="q" x="line(a,c).midpoint")
       circle.red(name="r" x="line(b,c).midpoint")
       path(x="triangle(a,b,c)")
-      
+
       path.transparent.fill.red(x="polygon(a,p,q)" target="triangles")
       path.transparent.fill.blue(x="polygon(b,p,r)" target="triangles")
       path.transparent.fill.yellow(x="polygon(c,q,r)" target="triangles")
@@ -523,7 +526,7 @@ Verkleinerungsfaktor von `1/2`._
  der Mittelparallelen von Dreiecken abzuleiten:
 
 ::: .theorem.reveal(when="blank-1")
-__Satz von der Mittelparallelen im Dreieck__  
+__Satz von der Mittelparallelen im Dreieck__
 Eine Mittelparallele eines Dreiecks ist parallel zu ihrer gegenüberliegenden Seite und genau halb
 so lang wie diese Seite.
 :::
@@ -564,7 +567,7 @@ den anderen._
 [[Schnittpunkt|Mittelpunkt|Radius]] der beiden Kreise. _{span.reveal(when="blank-0")}
 Jetzt können wir sie einfach zu einem Dreieck verbinden._
 
-{.reveal(when="blank-0" delay="3000")} Die Kreise schneiden sich eigentlich 
+{.reveal(when="blank-0" delay="3000")} Die Kreise schneiden sich eigentlich
 [[zweimal|dreimal|unendlich oft]]: _{span.reveal(when="blank-1")}einmal
 [oben](target:top) und einmal [unten](target:bottom). Wir können jeden dieser Schnittpunkte auswählen
 , und die beiden resultierenden Dreiecke sind
@@ -605,7 +608,7 @@ Zwei Dreiecke sind kongruent, wenn eine der folgenden Bedingungen erfüllt ist:
           path.red(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption Alle Seiten sind kongruent.
-        
+
       div(style="width: 150px")
         .text-center: strong SWS
         x-geopad(width=150 height=120): svg
@@ -617,7 +620,7 @@ Zwei Dreiecke sind kongruent, wenn eine der folgenden Bedingungen erfüllt ist:
           path(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption Zwei Seiten und der #[strong eingeschlossene] Winkel sind kongruent.
-        
+
       div(style="width: 150px")
         .text-center: strong WSW
         x-geopad(width=150 height=120): svg
@@ -630,7 +633,7 @@ Zwei Dreiecke sind kongruent, wenn eine der folgenden Bedingungen erfüllt ist:
           path(x="segment(a,c)")
           path(x="segment(b,c)")
         p.caption Zwei Winkel und die #[strong anliegende] Seite sind kongruent.
-        
+
       div(style="width: 150px")
         .text-center: strong WWS
         x-geopad(width=150 height=120): svg
@@ -775,7 +778,7 @@ Winkel von 50° haben. SSW ist also nicht ausreichend, um zu sicherzustellen, da
 
 ---
 
-## Der Satz des Pythagoras 
+## Der Satz des Pythagoras
 
 > id: pythagoras
 > section: pythagoras
@@ -787,11 +790,11 @@ Mathematiker [Pythagoras von Samos](bio:pythagoras) benannt.
 
 ::: .theorem
 ::: column.grow
-__Der Satz des Pythagoras__  
+__Der Satz des Pythagoras__
 In jedem rechtwinkligen Dreieck ist das Quadrat der Länge der
 [__Hypotenuse__](target:hypot) (die Seite, die dem rechten Winkel gegenüberliegt)
 gleich der Summe der Quadrate der anderen beiden Seiten. Mit anderen Worten,
- 
+
 {.text-center} _{span.circled.green}`a^2`_ + _{span.circled.blue}`b^2`_ =
 _{span.circled.yellow}`c^2`_
 
@@ -803,11 +806,11 @@ a*{sup}2* + b*{sup}2* = c*{sup}2* gilt, dann muss es [[rechtwinklig|spitzwinklig
       circle.move(name="a" cx=82 cy=160 target="hypot")
       circle.move(name="b" cx=218 cy=160 target="hypot")
       circle.move(name="c" cx=120 cy=100 project="arc(line(a,b).midpoint,a,pi).contract(0.2)")
-      
+
       path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-class="white")
       path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-class="white")
       path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-class="white")
-      
+
       path.dark(x="segment(b,c)" label="a")
       path.dark(x="segment(a,c)" label="b")
       path.dark(x="segment(a,b)" label="c" target="hypot")
@@ -833,7 +836,7 @@ Wand hinauf?
 Beachte, dass ein rechtwinkliges Dreieck gebildet wird, das aus der Leiter, der Wand und
 dem Boden besteht. Mit dem Satz des Pythagoras können wir das so schreiben:
 
-    
+
     table.eqn-system
       tr
         <td><mrow class="b m-green"><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow class="b m-blue"><msup><mn>1</mn><mn>2</mn></msup></mrow></td>
@@ -953,7 +956,7 @@ _{span.qed}_
 
 ::: column(width=240)
 
-    x-geopad(width=240): svg        
+    x-geopad(width=240): svg
       circle.move(name="e1" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
       circle(name="f1" hidden x="b.add(e1.subtract(a).flip)")
       circle(name="g1" hidden x="c.subtract(e1.subtract(a))")
@@ -981,7 +984,7 @@ _{span.qed}_
 {.r} Hier haben wir irgendein rechtwinkliges Dreieck. Wenn wir eine der
 Höhen einzeichnen, teilt sie das Dreieck in zwei kleinere Dreiecke auf,
 und sie teilt die Hypotenuse _c_ in [zwei kleinere Teile](target:hypotenuse)
-, die wir [{.step-target.i.pill.blue}x](target:x) und 
+, die wir [{.step-target.i.pill.blue}x](target:x) und
 [{.step-target.i.pill.green}y](target:y) nennen wollen.
 _{span.next-step} Weiter_
 
@@ -1081,7 +1084,7 @@ Pythagoräer zutiefst beunruhigend fanden und (erfolglos) zu vertuschen versucht
 ### Abstände berechnen
 
 Eine der wichtigsten Anwendungen des Satzes des Pythagoras ist die Berechnung
-von Abständen. 
+von Abständen.
 
 ::: column.grow
 {.r} Auf der rechten Seite siehst du zwei Punkte in einem Koordinatensystem. Wir könnten ihren Abstand mit einem Lineal
@@ -1124,7 +1127,7 @@ Wenn wir diese beiden Linien einzeichnen, erhalten wir ein [rechtwinkliges Dreie
 Diese Methode funktioniert für zwei _beliebige_ Punkte:
 
 ::: .theorem
-__Die Abstandsformel__  
+__Die Abstandsformel__
 Wenn du zwei Punkte mit den Koordinaten (`x_1`,`y_1`) und (`x_2`,`y_2`) gegeben hast,
 beträgt der Abstand zwischen ihnen
 
@@ -1182,7 +1185,7 @@ Pythagoräische Tripel finden?
       .label.var(style="left:${26+12.5*a.x}px; top:${425-12.5*a.y}px") ${round(a.length,2)}
 
 {.reveal(when="p0 p1 p2 p3 p4 p5")} Erkennst du ein Muster in der
-Verteilung dieser Punkte? 
+Verteilung dieser Punkte?
 
 ----
 
@@ -1354,7 +1357,7 @@ eine dreistellige Abkürzung:
 ---
 > id: inverse-trig
 
-### Trignometrische Umkehrfunktionen (inverse Funktionen) 
+### Trignometrische Umkehrfunktionen (inverse Funktionen)
 
 {.todo} KOMMT BALD - Umkehrfunktion
 
@@ -1371,7 +1374,7 @@ Ergebnisse, die für alle Dreiecke funktionieren
 
 ::: column.grow
 ::: .theorem
-__Sinussatz__  
+__Sinussatz__
 In einem Dreieck mit den Seiten _a_, _b_ und _c_, und den Winkeln _A_, _B_ und _C_,
 
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
@@ -1379,11 +1382,11 @@ In einem Dreieck mit den Seiten _a_, _b_ und _c_, und den Winkeln _A_, _B_ und _
 
 ::: column.grow
 ::: .theorem
-__Kosinussatz__  
+__Kosinussatz__
 In einem Dreieck mit den Seiten _a_, _b_ und _c_, und den Winkeln _A_, _B_ und _C_,
 
-{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`  
-`b^2 = c^2 + a^2 - 2ca cos(B)`  
+{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`
+`b^2 = c^2 + a^2 - 2ca cos(B)`
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 

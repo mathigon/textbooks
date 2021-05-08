@@ -6,6 +6,10 @@
 
 > section: introduction
 > id: intro
+> trailer: tBJUNvCBkLo
+> color: "#5A49C9"
+> level: Intermediate
+> next: graph-theory
 
 ::: column.grow
 

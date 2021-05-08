@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#3566DE"
+> level: Intermediate
+> next: polyhedra
 
 ::: column.grow
 
@@ -23,8 +26,8 @@
 
 {.r} Сегодня мы можем использовать спутники для измерения высоты гор с точностью до нескольких сантиметров - но их не было в те времена, когда Радханатх исследовал Индию. _{button.next-step} Продолжить_
 
-{.r.reveal(when="next-0")} Альпинисты используют __высотомеры__ для определения своей высоты. Эти устройства используют разницу давления воздуха на разных высотах. Однако это способ требовал чтобы кто-то действительно поднялся на [вершину](->.mountain-top) каждой горы - чрезвычайно трудный подвиг, который не был достигнут до столетия спустя. 
-_{button.next-step} Продолжить_ 
+{.r.reveal(when="next-0")} Альпинисты используют __высотомеры__ для определения своей высоты. Эти устройства используют разницу давления воздуха на разных высотах. Однако это способ требовал чтобы кто-то действительно поднялся на [вершину](->.mountain-top) каждой горы - чрезвычайно трудный подвиг, который не был достигнут до столетия спустя.
+_{button.next-step} Продолжить_
 
 {.r.reveal(when="next-1")} Вы также можете попробовать использовать подобные треугольники, как мы это делали в [предыдущем курсе](/course/transformations/similarity). Для применения этого метода потребуется узнать [расстояние](->.mountain-distance) до [основания горы](->.mountain-base): точки на уровне моря, которая находится непосредственно под вершиной. Мы можем сделать это для деревьев или высоких зданий, но для гор эта точка скрыта под сотнями метров горного массива. _{button.next-step} Продолжить_
 
@@ -48,7 +51,7 @@ _{button.next-step} Продолжить_
 
 > id: applications
 
-Треугольник - это особенная фигура, потому что это очень __жесткая__ конструкция. Треугольник это единственный многоугольник, который, если его изготовить из деревянных балок, соединенных подвижными шарнирами, будет полностью __жестким__ - в отличие, например, от прямоугольников, которые можно с легкостью трансформировать например в параллелограмм. 
+Треугольник - это особенная фигура, потому что это очень __жесткая__ конструкция. Треугольник это единственный многоугольник, который, если его изготовить из деревянных балок, соединенных подвижными шарнирами, будет полностью __жестким__ - в отличие, например, от прямоугольников, которые можно с легкостью трансформировать например в параллелограмм.
 
 {.todo} СКОРО - Анимация
 
@@ -138,7 +141,7 @@ _{button.next-step} Продолжить_
       path.fill.red(x="angle(a1,b1,c1)")
       path(x="polygon(a1,b1,c1)")
 
-{.caption} __Прямоугольный треугольник__  
+{.caption} __Прямоугольный треугольник__
 имеет один [прямой угол](gloss:right-angle).
 
 ::: column(width=220)
@@ -150,7 +153,7 @@ _{button.next-step} Продолжить_
       path.fill.blue(x="angle(c2,b2,a2)")
       path(x="polygon(a2,b2,c2)")
 
-{.caption} __Тупоугольный треугольник__  
+{.caption} __Тупоугольный треугольник__
 имеет один [тупой угол](gloss:obtuse-angle).
 
 ::: column(width=220)
@@ -164,7 +167,7 @@ _{button.next-step} Продолжить_
       path.fill.green(x="angle(c3,a3,b3)")
       path(x="polygon(a3,b3,c3)")
 
-{.caption} __Остроугольный треугольник__  
+{.caption} __Остроугольный треугольник__
 имеет [[три]] [острых угла](gloss:acute-angle).
 
 :::
@@ -206,13 +209,13 @@ _{button.next-step} Продолжить_
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
       path(x="triangle(a,b,c)")
-    
+
       circle.green(name="ab" x="line(a,b).midpoint")
       circle.blue(name="ac" x="line(a,c).midpoint")
       circle.red(name="bc" x="line(b,c).midpoint" target="ratio")
-    
+
       circle.yellow.reveal(name="d" x="triangle(a,b,c).centroid" when="blank-0" animation="pop" target="ratio")
-    
+
       path.red.transparent(x="segment(a,d)" label="2" target="ratio")
       path.red.transparent(x="segment(d,bc)" label="1" target="ratio")
 
@@ -250,11 +253,11 @@ _{button.next-step} Продолжить_
       circle.move(name="b" cx=50 cy=250 label="B" target="b-red")
       circle.move(name="c" cx=250 cy=200 label="C" target="b-blue")
       path(x="triangle(a,b,c)")
-    
+
       circle.reveal.red(x="line(a,b).midpoint" when="blank-0")
       circle.reveal.blue(x="line(a,c).midpoint" when="blank-0")
       circle.reveal.green(x="line(b,c).midpoint" when="blank-0")
-    
+
       circle.reveal.yellow(x="triangle(a,b,c).circumcircle.c" name="d" when="s0 s1 s2" target="center")
       path.yellow(hidden x="arc(d,c,1.99*pi)" name="circumcircle")
 
@@ -293,15 +296,15 @@ _{button.next-step} Продолжить_
       circle.move(name="a" cx=75 cy=75)
       circle.move(name="b" cx=50 cy=250 target="b-blue")
       circle.move(name="c" cx=250 cy=200 target="b-red")
-    
+
       path.fill.light.red(x="angle(c,a,b).sup" name="xa")
       path.fill.light.blue(x="angle(a,b,c).sup" name="xb")
       path.fill.light.green(x="angle(b,c,a).sup" name="xc")
-    
+
       path(x="segment(a,b)" label="a" target="b-blue b-red")
       path(x="segment(a,c)" label="b" target="b-red")
       path(x="segment(b,c)" label="c" target="b-blue")
-    
+
       circle.reveal.yellow(x="triangle(a,b,c).incircle.c" when="s0 s1 s2" target="center")
       path.yellow(hidden x="arc(triangle(a,b,c).incircle.c,triangle(a,b,c).incircle.at(0),1.999*pi)" name="incircle")
 
@@ -332,7 +335,7 @@ _{button.next-step} Продолжить_
 
 {.reveal(when="next-1")} Высота делит треугольник на две части - зеленую и оранжевую. Обратите внимание, что [достроенные треугольники](target:gap) имеют ту же площадь, что и зеленый и оранжевый треугольники. Это означает, что площадь прямоугольника [[в два раза больше|в три раза больше|равна]] площади треугольника.
 
-{.reveal(when="blank-0")} Мы можем легко определить площадь прямоугольника, тогда площадь треугольника должна быть вдвое меньше: 
+{.reveal(when="blank-0")} Мы можем легко определить площадь прямоугольника, тогда площадь треугольника должна быть вдвое меньше:
 
 {.text-center.reveal(when="blank-0")} `A = 1/2 ×` [{.pill.red} основание](target:base) `×` [{.pill.blue} высота](target:height)
 
@@ -345,13 +348,13 @@ _{button.next-step} Продолжить_
       circle(hidden x="line(a,b).project(c)" name="d")
       circle(hidden x="a.add(c).subtract(d)" name="e")
       circle(hidden x="b.add(c).subtract(d)" name="f")
-    
+
       path.fill.green.reveal(x="polygon(a,d,c)" when="next-1" target="gap")
       path.fill.green.transparent(x="polygon(a,e,c)" target="gap")
-    
+
       path.fill.yellow.reveal(x="polygon(b,d,c)" when="next-1" target="gap")
       path.fill.yellow.transparent(x="polygon(b,f,c)" target="gap")
-    
+
       path.dark(x="polygon(a,b,c)")
       path.red.reveal(x="polygon(a,b,f,e)" when="next-0" animation="draw")
       path.blue.reveal(x="segment(c,d)" label="height" when="next-0" delay="1000" target="height")
@@ -376,7 +379,7 @@ _{button.next-step} Продолжить_
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
-    
+
       path(x="triangle(a,b,c)")
       path.altitude.red(hidden x="line(a,b).perpendicular(c)")
       path.altitude.blue(hidden x="line(a,c).perpendicular(b)")
@@ -412,7 +415,7 @@ _{button.next-step} Продолжить_
       circle.red(name="q" x="line(a,c).midpoint")
       circle.red(name="r" x="line(b,c).midpoint")
       path(x="triangle(a,b,c)")
-    
+
       path.transparent.fill.red(x="polygon(a,p,q)" target="triangles")
       path.transparent.fill.blue(x="polygon(b,p,r)" target="triangles")
       path.transparent.fill.yellow(x="polygon(c,q,r)" target="triangles")
@@ -463,9 +466,9 @@ _{button.next-step} Продолжить_
 
 ### Признаки конгруэнтности
 
-Возможно ли построить __другой__ треугольник с теми же тремя сторонами? 
+Возможно ли построить __другой__ треугольник с теми же тремя сторонами?
 
-Мы уже видели два треугольника выше, но оба они были конгруэнтными. Фактически, любые два треугольника, которые имеют одинаковую длину трех сторон, являются конгруэнтными. Это называется [__Признак конгруэнтности SSS__](gloss:triangle-sss)  («Сторона-сторона-сторона» или «Side-Side-Side»). 
+Мы уже видели два треугольника выше, но оба они были конгруэнтными. Фактически, любые два треугольника, которые имеют одинаковую длину трех сторон, являются конгруэнтными. Это называется [__Признак конгруэнтности SSS__](gloss:triangle-sss)  («Сторона-сторона-сторона» или «Side-Side-Side»).
 
 Теперь у нас есть два разных признака: признак «AA» («Угол-Угол» или «Angle-Angle») означает, что два треугольника [[подобны|конгруэнтны|прямоугольные]], а признак «SSS» означает, что два треугольника [[конгруэнтны|подобны|прямоугольные]]. Есть еще несколько признаков конгруэнтности:
 
@@ -486,7 +489,7 @@ _{button.next-step} Продолжить_
           path.red(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption Три стороны равны.
-    
+
       div(style="width: 150px")
         .text-center: strong SAS
         x-geopad(width=150 height=120): svg
@@ -554,7 +557,7 @@ _{button.next-step} Продолжить_
 
 Как и прежде, мы начнем с построения одной из сторон треугольника.
 
-Затем используем транспортир, чтобы отмерить угол 40° от одной из двух вершин. Под этим углом мы проводим вторую сторону треугольника. Мы знаем, что эта сторона должна быть длиной 3 см, поэтому отмерим это расстояние линейкой, и отметим третью вершину треугольника. 
+Затем используем транспортир, чтобы отмерить угол 40° от одной из двух вершин. Под этим углом мы проводим вторую сторону треугольника. Мы знаем, что эта сторона должна быть длиной 3 см, поэтому отмерим это расстояние линейкой, и отметим третью вершину треугольника.
 
 Наконец, мы можем соединить последние две вершины, чтобы завершить треугольник.
 
@@ -574,9 +577,9 @@ _{button.next-step} Продолжить_
 
 {.task} Нарисуйте треугольник с углами 70° и 50° и стороной 5 см между ними.
 
-Начнем с построения первой стороны, используя линейку для построения отрезка длиной 5 см. 
+Начнем с построения первой стороны, используя линейку для построения отрезка длиной 5 см.
 
-После используем транспортир и отмерим угол 70° от одного из концов отрезка и угол 50 ° от другой конечной точки. (Какой из концов не имеет значения - треугольники будут конгруэнтны.) 
+После используем транспортир и отмерим угол 70° от одного из концов отрезка и угол 50 ° от другой конечной точки. (Какой из концов не имеет значения - треугольники будут конгруэнтны.)
 
 Пересечение построенных лучей дает третью вершину и завершает построение треугольника.
 
@@ -594,13 +597,13 @@ _{button.next-step} Продолжить_
 
 {.task} Нарисуйте треугольник с углами 40° и 50° и стороной длиной 5 см, которая не лежит между ними.
 
-Опять же, мы начнем с построения первой стороны треугольника длиной 5 см. 
+Опять же, мы начнем с построения первой стороны треугольника длиной 5 см.
 
-И снова мы будем использовать транспортир, чтобы отмерить угол 40° от одной из конечных точек, и построим вторую сторону треугольника. 
+И снова мы будем использовать транспортир, чтобы отмерить угол 40° от одной из конечных точек, и построим вторую сторону треугольника.
 
-Тем не менее, мы еще не знаем, где на этой стороне поставить точку - вершину треугольника. Давайте выберем любую точку на этой прямой, представим, что это третья вершина треугольника и отмерим от нее угол в 50°. 
+Тем не менее, мы еще не знаем, где на этой стороне поставить точку - вершину треугольника. Давайте выберем любую точку на этой прямой, представим, что это третья вершина треугольника и отмерим от нее угол в 50°.
 
-Как видите, это не работает: третья сторона еще не проходит через вершину A. Чтобы это исправить, нам просто нужно переместить ее: построим параллельную линию, проходящую через A. (Мы изучили как построить параллельные линии в [предыдущем курсе](/course/euclidean-geometry/geometric-construction).) 
+Как видите, это не работает: третья сторона еще не проходит через вершину A. Чтобы это исправить, нам просто нужно переместить ее: построим параллельную линию, проходящую через A. (Мы изучили как построить параллельные линии в [предыдущем курсе](/course/euclidean-geometry/geometric-construction).)
 
 Теперь два угла вверху - это соответственные углы, поэтому они должны быть одинаковыми и равны 50°. Мы можем стереть первую прямую, чтобы получить достроенный треугольник по признаку AAS.
 
@@ -622,9 +625,9 @@ _{button.next-step} Продолжить_
 
 Начнем с построения первой стороны треугольника длиной 5 см.
 
-Далее, отмерим угол 50° от одной из концов отрезка и построим вторую сторону треугольника. Тем не менее, мы еще не знаем, где поставить вершину на этой прямой. 
+Далее, отмерим угол 50° от одной из концов отрезка и построим вторую сторону треугольника. Тем не менее, мы еще не знаем, где поставить вершину на этой прямой.
 
-Третья сторона должна быть длиной 4 см. Используя транспортир, мы можем построить окружность радиусом 4 см с центром в другой конечной точке. Третья вершина треугольника получится в пересечении окружности и второй стороны. 
+Третья сторона должна быть длиной 4 см. Используя транспортир, мы можем построить окружность радиусом 4 см с центром в другой конечной точке. Третья вершина треугольника получится в пересечении окружности и второй стороны.
 
 Однако мы получаем две точки пересечения! Эти два треугольника явно не конгруэнтны. Это означает, что есть два различных треугольника со сторонами 4 см и 5 см и углом 50°. Условия SSA недостаточно, чтобы подтвердить, что два треугольника конгруэнтны.
 
@@ -643,10 +646,10 @@ _{button.next-step} Продолжить_
 ::: .theorem
 ::: column.grow
 
-__Теорема Пифагора__  
-В любом прямоугольном треугольнике квадрат длины [__гипотенузы__](target:hypot) (сторона, противоположная прямому углу) равен сумме квадратов двух других сторон. Другими словами, 
+__Теорема Пифагора__
+В любом прямоугольном треугольнике квадрат длины [__гипотенузы__](target:hypot) (сторона, противоположная прямому углу) равен сумме квадратов двух других сторон. Другими словами,
 
-{.text-center} _{span.circled.green} `a^2`_ + _{span.circled.blue} `b^2`_ = _{span.circled.yellow} `c^2`_ 
+{.text-center} _{span.circled.green} `a^2`_ + _{span.circled.blue} `b^2`_ = _{span.circled.yellow} `c^2`_
 
 __Обратное также верно: если три стороны в треугольнике удовлетворяют условию `a^2 + b^2 = c^2`, то этот треугольник [[прямоугольный|остроугольный|тупоугольный]].__
 
@@ -656,11 +659,11 @@ __Обратное также верно: если три стороны в тр
       circle.move(name="a" cx=82 cy=160 target="hypot")
       circle.move(name="b" cx=218 cy=160 target="hypot")
       circle.move(name="c" cx=120 cy=100 project="arc(line(a,b).midpoint,a,pi).contract(0.2)")
-    
+
       path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-class="white")
       path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-class="white")
       path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-class="white")
-    
+
       path.dark(x="segment(b,c)" label="a")
       path.dark(x="segment(a,c)" label="b")
       path.dark(x="segment(a,b)" label="c" target="hypot")
@@ -726,30 +729,30 @@ __Обратное также верно: если три стороны в тр
         circle(hidden name="b" x="point(220,20)")
         circle(hidden name="c" x="point(220,220)")
         circle(hidden name="d" x="point(20,220)")
-    
+
         circle.move(name="e" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
         circle(name="f" hidden x="b.add(e.subtract(a).flip)")
         circle(name="g" hidden x="c.subtract(e.subtract(a))")
         circle(name="h" hidden x="d.subtract(e.subtract(a).flip)")
-    
+
         path.thin(x="segment(a,e)" label="a")
         path.thin(x="segment(e,b)" label="b")
         path.thin(x="segment(a,h)" label="b")
         path.thin(x="segment(h,d)" label="a")
         path.thin(x="segment(e,h)" label="c")
         path.thin(x="segment(e,f).shift(0,x*distance(h,a))" label="c")
-    
+
         path.square(x="polygon(a,b,c,d)")
         path.tri(x="polygon(a,e,h)" target="triangle")
         path.tri(x="polygon(c,g,f).shift(-x*distance(d,g),-x*distance(b,f))" target="triangle")
         path.tri(x="polygon(d,h,g).shift(x*distance(e,a),0)" target="triangle")
         path.tri(x="polygon(b,f,e).shift(0,x*distance(h,a))" target="triangle")
         path.square.transparent(x="polygon(e,f,g,h)" target="square")
-    
+
       .label(style="left: 120px; top: 120px;") c²
       .label.var(style="left: ${10 + e.x/2}px; top: ${230 - e.x/2}px;") a²
       .label.var(style="left: ${110 + e.x/2}px; top: ${130 - e.x/2}px;") b²
-    
+
     x-slider(steps=100)
 
 :::
@@ -761,7 +764,7 @@ __Обратное также верно: если три стороны в тр
 
 Здесь мы имеем ту же фигуру, что и раньше, только в этот раз мы будем использовать другой способ доказательства теоремы.
 
-Длина стороны большого квадрата равна `a + b` и его площадь равна 
+Длина стороны большого квадрата равна `a + b` и его площадь равна
 [[(_a_ + _b_)<sup>2</sup>|_a_<sup>2</sup> + _b_<sup>2</sup>|_c_<sup>2</sup>]].
 
 {.reveal(when="blank-2")} Квадрат состоит из [четырех треугольников](target:triangle), каждый из которых имеет площадь [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]], и [один квадрат](target:square) с площадью [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
@@ -777,25 +780,25 @@ __Обратное также верно: если три стороны в тр
         <td><mo>=</mo><mrow><mn>2</mn><mi>a</mi><mi>b</mi></mrow><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup></td>
       tr
         <td><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></td> 
+        <td><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></td>
 
 {.reveal(when="blank-3 blank-4")} И, снова, мы получим теорему Пифагора. _{span.qed}_
 
 ::: column(width=240)
 
-    x-geopad(width=240): svg        
+    x-geopad(width=240): svg
       circle.move(name="e1" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
       circle(name="f1" hidden x="b.add(e1.subtract(a).flip)")
       circle(name="g1" hidden x="c.subtract(e1.subtract(a))")
       circle(name="h1" hidden x="d.subtract(e1.subtract(a).flip)")
-    
+
       path.thin(x="segment(a,e1)" label="a")
       path.thin(x="segment(e1,b)" label="b")
       path.thin(x="segment(a,h1)" label="b")
       path.thin(x="segment(h1,d)" label="a")
       path.thin(x="segment(e1,h1)" label="c")
       path.thin(x="segment(e1,f1).shift(0,x*distance(h,a))" label="c")
-    
+
       path.square(x="polygon(e1,f1,g1,h1)" target="square")
       path.tri(x="polygon(a,e1,h1)" target="triangle")
       path.tri(x="polygon(c,g1,f1)" target="triangle")
@@ -832,7 +835,7 @@ _{span.next-step} Прододжить_
       path.red(x="segment(B1,C1)" label="a" target="a ac")
       path.dark(x="segment(X1,C1)")
       path.blue(x="segment(X1,B1)" label="x" target="x xa")
-    
+
       circle(name="A2" hidden cx=220 cy=100)
       circle(name="X2" hidden cx=170 cy=100)
       circle(name="C2" hidden cx=170 cy=20)
@@ -842,7 +845,7 @@ _{span.next-step} Прододжить_
       path.yellow(x="segment(A2,C2)" label="b" target="b bc")
       path.dark(x="segment(X2,C2)")
       path.green(x="segment(X2,A2)" label="y" target="y yb")
-    
+
       circle(name="A" hidden x="point(220,100)")
       circle(name="B" hidden x="point(40,100)")
       circle(name="C" hidden x="point(170,20)")
@@ -944,7 +947,7 @@ _{span.next-step} Прододжить_
 
 ::: .theorem
 
-__Формула расстояния__  
+__Формула расстояния__
 Если вам даны две точки с координатами (`x_1`, `y_1`) и (`x_2`, `y_2`), расстояние между ними составляет
 
 {.text-center} `d^2=(x_2−x_1)^2+(y_2−y_1)^2`
@@ -958,7 +961,7 @@ __Формула расстояния__
 
 ### Пифагоровы Тройки
 
-Перемещая [вершины треугольника](->#tri-move) на предыдущем рисунке, вы, возможно, заметили, что в большинстве случаев длина гипотенузы _d_ в конечном итоге была [[иррациональным|целым|отрицательным]] числом. 
+Перемещая [вершины треугольника](->#tri-move) на предыдущем рисунке, вы, возможно, заметили, что в большинстве случаев длина гипотенузы _d_ в конечном итоге была [[иррациональным|целым|отрицательным]] числом.
 
 _{span.reveal(when="blank-0")} Однако есть несколько примеров прямоугольных треугольников, где длины всех трех сторон оказываются целыми числами._
 
@@ -1062,7 +1065,7 @@ TODO
       span.space
       mfrac
         mrow: mtext.m-blue.b Противолежащий катет
-        mrow: mtext.m-green.b Прилежащий катет 
+        mrow: mtext.m-green.b Прилежащий катет
 
 Давайте попробуем подвести итоги: мы выбрали определенное значение для __{.m-red} α__ и получили множество подобных прямоугольных треугольников. Все эти треугольники имеют одинаковые соотношения сторон. Поскольку __{.m-red} α__ была нашей единственной переменной, должна быть некоторая связь между __{.m-red} α__ и этими соотношениями. Эти отношения являются основными __тригонометрическими функциями__ - и их три:
 
@@ -1140,8 +1143,8 @@ TODO
 ::: column.grow
 ::: .theorem
 
-__Теорема синусов__  
-В треугольнике со сторонами _a_, _b_ и _c_ и углами _A_, _B_ и _C_, 
+__Теорема синусов__
+В треугольнике со сторонами _a_, _b_ и _c_ и углами _A_, _B_ и _C_,
 
 {.text-center} `(sin(A))/a = (sin(B))/b = (sin(C))/c`
 
@@ -1149,11 +1152,11 @@ __Теорема синусов__
 ::: column.grow
 ::: .theorem
 
-__Теорема косинусов__  
-В треугольнике со сторонами _a_, _b_ и _c_ и углами _A_, _B_ и _C_, 
+__Теорема косинусов__
+В треугольнике со сторонами _a_, _b_ и _c_ и углами _A_, _B_ и _C_,
 
-{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)` 
-`b^2 = c^2 + a^2 - 2ca cos(B)` 
+{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`
+`b^2 = c^2 + a^2 - 2ca cos(B)`
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 
 :::
@@ -1181,18 +1184,18 @@ __Теорема косинусов__
         circle(name="b" x="point(185, 230)" target="points")
         circle(name="x" x="point(573, 7)" target="")
         circle(name="y" x="point(573, 230)" target="")
-    
+
         path.fill.red(x="angle(x,a,b)" label="23°" target="angles ang" size=60)
         path.fill.blue(x="angle(x,b,y)" label="29°" target="ang1" size=50)
         path.fill(name="angle-b" x="angle(b,x,a)" label="β" target="b angles" size=100)
         path.fill.green(name="angle-a" x="angle(a,b,x)" label="α" target="a angles" size=25)
         path(x="angle(b,y,x)")
-    
+
         path.yellow(x="segment(a,b)" target="base right" label="5km")
         path.yellow(x="segment(b,x)" target="")
         path.yellow(name="side-d" x="segment(a,x)" target="d right" label="d")
         path.yellow(x="segment(b,y)" target="right")
-        path.yellow(x="segment(x,y)" target="right" label="высота") 
+        path.yellow(x="segment(x,y)" target="right" label="высота")
 
 Геодезисты в Индии измерили угол между горизонтом и вершиной горы с [двух разных позиций](target:points), [{.pill.yellow} на расстоянии 5 км](target:base). Результаты были [{.pill.red} 23°](target:ang) и [{.pill.blue} 29°](target:ang1).
 
@@ -1227,12 +1230,12 @@ __Теорема косинусов__
             mrow
               mo sin
               mn.pill.step-target(data-to="b") 6°
-    
+
       tr.reveal(when="blank-3 blank-4" delay=1000)
         td
         td
           mo =
-          mn.pill.yellow.step-target(data-to="d") 23.2 km 
+          mn.pill.yellow.step-target(data-to="d") 23.2 km
 
 {.reveal(when="blank-3 blank-4" delay=2000)} Есть один последний шаг: давайте посмотрим на [большой прямоугольный треугольник](target:right). Мы уже знаем длину гипотенузы, но что нам действительно нужно, это [[противолежащий катет|прилежащий катет]]. _{span.reveal(when="blank-5")} Мы можем найти его, используя определение синуса:_
 
@@ -1254,12 +1257,12 @@ __Теорема косинусов__
           mn.pill.step-target.red(data-to="ang") 23°
           mo ×
           mn.pill.step-target.yellow(data-to="d") 23
-    
+
       tr.reveal(when="blank-6 blank-7" delay=1000)
         td
         td
           mo =
-          mn.pill.step-target.yellow(data-to="height") 8.987 km 
+          mn.pill.step-target.yellow(data-to="height") 8.987 km
 
 {.reveal(when="blank-6 blank-7" delay=2000)} И это очень близко к реальной высоте Эвереста, самой высокой горы на Земле: 8,848m.
 

@@ -2,36 +2,11 @@
 
 ## 引言
 
-    // SOURCES
-    // http://onlineroulette.org.uk/stories/karl-pearson/
-    // http://www.eprisner.de/MAT109/FermatPascal.html
-    // http://mathforum.org/isaac/problems/prob1.html
-    // https://en.wikipedia.org/wiki/Penney%27s_game
-    // https://en.wikipedia.org/wiki/Edward_O._Thorp
-    // http://edwardothorp.com/id26.html
-    
-    mixin dice(n)
-      svg(width=20, height=20)
-        if n==1 || n==3 || n==5
-          circle(r=2, cx=10, cy=10)
-        if n==2 || n==3 || n==4 || n==5
-          circle(r=2, cx=5, cy=5)
-        if n==4 || n == 5
-          circle(r=2, cx=5, cy=15)
-        if n==4 || n == 5
-          circle(r=2, cx=15, cy=5)
-        if n==2 || n==3 || n==4 || n == 5
-          circle(r=2, cx=15, cy=15)
-        if n == 6
-          circle(r=2, cx=5, cy=4)
-          circle(r=2, cx=5, cy=10)
-          circle(r=2, cx=5, cy=16)
-          circle(r=2, cx=15, cy=4)
-          circle(r=2, cx=15, cy=10)
-          circle(r=2, cx=15, cy=16)
-
 > id: intro
 > section: introduction
+> color: "#CD0E66"
+> level: Intermediate
+> next: statistics
 
 概率与可能性无处不在，从天气预报到游戏，从保险到选举投票。然而，在数学史上，概率实际上是一个非常新的概念，虽然2500多年前古希腊数学家就开始研究数字和几何，但概率的概念即是在17、18世纪才出现的。
 
@@ -116,7 +91,7 @@ __概率__ 是介绍于 0 和 1 之间的一个数字，用来描述 __特定事
     x-sortable
       .item.md(data-index="3") 掷一个骰子 :game-die: ，刚好得到 6 点
       .item.md(data-index="5") 企鹅 :penguin: 住在北极
-      .item.md(data-index="1") 11月将要下雨 :cloud-with-rain: 
+      .item.md(data-index="1") 11月将要下雨 :cloud-with-rain:
       .item.md(data-index="0") 今天在中国将诞生一个婴儿 :baby-bottle:
       .item.md(data-index="4") 你买了一张彩票，中了头奖 :party-popper:.
       .item.md(data-index="2") 一个新生儿是女孩 :girl:.
@@ -184,6 +159,7 @@ can never tell what _actually_ will happen.
 
 如果掷一个骰子，结果是1到6之间的一个数字，所有的结果都是等可能的。如果我们一次掷两个骰子，把它们的结果加起来，我们可以得到从[[2]] 到 [[12]]的数字。然而，在这种情况下，它们并不是等可能的。
 
+    include mixins
     p.md 有些结果只能发生一次（得到 #[span.dice.outline 12] 你必须掷出#[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]] ），而有些结果可能发生多次（得到 #[span.dice.outline 5] 你可以掷出 #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] 或 #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]] ）。
 
 ---
@@ -191,6 +167,7 @@ can never tell what _actually_ will happen.
 
 下面的列表显示了所有可能的结果：
 
+    include mixins
     table.dice-table
       tr
         td #[.dice.outline 2]

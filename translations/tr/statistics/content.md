@@ -1,24 +1,14 @@
 # İstatistikler ve Veriler
 
-    mixin barchart(data)
-      - var max = 100/Math.max.apply(none, data.map(function(d) { return d[1] }))
-      .barchart(style="width: " + data.length*50 + "px")
-        for d in data
-          .bar-wrap
-            div(class="bar "+d[2], style="height: " + d[1]*max + "%")
-        .axis
-        for d in data
-          .label= d[0]
-
-    - var reds = [32, 19, 21, 25, 34, 27, 36, 30, 23, 5, 16, 1, 14, 9, 18, 7, 12, 3]
-    - var colour = function(x) { return reds.indexOf(x) >= 0 ? 'r' : 'b'; }
-
 ## Kumarhane Matematiği
 
 > id: roulette
 > sectionBackground: dark casino
 > goals: rotate
 > section: casino
+> color: "#BA1778"
+> level: Intermediate
+> next: graph-theory
 
     .roulette-wheel
       .layer-2.wheel
@@ -40,6 +30,7 @@ Rulet 1’den 36’ya kadar __{.red}kırmızı__ ve __{.black}siyah__ renkli say
 
 İşte Pearson’ın incelediklerinin yüzlercesinden biri. İlk bakışta oldukça rastgele görünüyor:
 
+    include mixins
     .newspaper
       p 19 Ağustos 1823 tarihli rulet sonuçları, 5. masa:
       div
@@ -48,6 +39,7 @@ Rulet 1’den 36’ya kadar __{.red}kırmızı__ ve __{.black}siyah__ renkli say
 
 Bir rulet çarkında aynı sayıda kırmızı ve siyah sayı bulunur. Eğer yeşil 0’ı (kumarhanenin kazandığı durum) gözardı edersek [[neredeyse aynı|tamamen eşit]] sayıda kırmızı ve siyah top gelmesini bekleriz. Bunu yukarıdaki sonuçları inceleyerek kontrol edelim:
 
+    include mixins
     +barchart([['Kırmızı', 37, 'r'], ['Siyah', 35, 'b']])
 
 ---
@@ -57,6 +49,7 @@ Bu kırmızı ve siyah sayılar arasındaki az bir farkla oldukça eşit dağıl
 
 Ancak Pearson burada durmadı. O, eğer bu sonuçlar tamamen rastgele dağılıyorsa o halde ikililerin olası dağılımlarının yaklaşık aynı olacağını farketti. Örneğimizde gerçekleşenleri sayalım:
 
+    include mixins
     +barchart([['KK', 14, 'r'], ['KS', 24, 'rb'], ['SK', 24, 'rb'], ['SS', 9, 'b']])
 
 ---
@@ -69,6 +62,7 @@ Bazı nedenlerde dolayı, aynı olasılıkta olsalar da __{.red}KK__ ve __{.blac
 
 Üçlülere baktığımızda iş daha da kötüleşiyor. 8 olası durum için gerçekleşme sayılarının yine yakın çıkmasını bekliyoruz ancak gerçekte durum böyle değil:
 
+    include mixins
     +barchart([['KKK', 3, 'r'], ['KKS', 10, 'rrb'], ['SKK', 10, 'rrb'], ['KSK', 15, 'rrb'], ['SKS', 14, 'bbr'], ['KSS', 8, 'bbr'], ['SSK', 8, 'bbr'], ['SSS', 2, 'b']])
 
 Görünüşe göre bu kumarhanede renkler beklenenden çok daha sık değişiyor. Aynı renkte üçlülerin gelmesi neredeyse imkansız (__{.red}KKK__ or __{.black}SSS__).

@@ -4,6 +4,7 @@
 
 > section: infinity
 > id: race
+> color: "#6D3BBF"
 
 Im antiken Griechenland war Achilles einer der größten Helden und (fast) unverwundbar.
 Eines Tages wurde er zu einem Rennen herausgefordert … von einer Schildkröte!
@@ -152,10 +153,10 @@ Als Menschen können wir immer nur eine endliche Anzahl von 9ern schreiben, wie 
         polygon(points="655 77 659.88 65.06 655 67.89 650.12 65.06 655 77")
     x-gesture(target="x-var" slide="100,0")
 
-{.convergence.no-voice} **{.m-yellow}0.9** ist weniger als 1.  
-_{span.reveal(when="n2")} **{.m-green}0.99** ist weniger als 1._  
-_{span.reveal(when="n3")} **{.m-blue}0.999** ist weniger als 1._  
-_{span.reveal(when="n4")} **{.m-red}0.9999** ist weniger als 1._  
+{.convergence.no-voice} **{.m-yellow}0.9** ist weniger als 1.
+_{span.reveal(when="n2")} **{.m-green}0.99** ist weniger als 1._
+_{span.reveal(when="n3")} **{.m-blue}0.999** ist weniger als 1._
+_{span.reveal(when="n4")} **{.m-red}0.9999** ist weniger als 1._
 _{span.hidden} **${nines(n)}** ist weniger als 1._
 
 ---

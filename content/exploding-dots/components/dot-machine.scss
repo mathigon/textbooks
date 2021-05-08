@@ -1,0 +1,58 @@
+// =============================================================================
+// Dot Machine Component
+// (c) Mathigon
+// =============================================================================
+
+
+$background: mix(mix($blue, $green), white, 25%);
+
+x-dot-machine {
+  display: block;
+  margin: 1.5em 0;
+
+  .dot-wrap { display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; }
+  .dot-cell { width: 100px; height: 100px; margin: 30px 2px 16px; background: $background; position: relative; border-radius: 4px; }
+
+  .dot-decimal, .dot-ellipses { font-size: 44px; text-align: center; padding: 0 12px; color: $dark-grey; line-height: 132px; }
+  .dot-decimal:before { content: "."; }
+  .dot-ellipses:before { content: "…"; }
+
+  .dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: $blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background .2s, box-shadow .2s;
+    margin: -8px;
+    box-sizing: border-box;
+
+    // background-image: radial-gradient(circle, transparent, rgba(black, 20%));
+    // background-position: -2px -2px;
+
+    &.dark { background-color: mix($blue, $green); }
+    &.light { background-color: mix($blue, $red); }
+
+    &.glowing { background-color: $yellow; box-shadow: 0 0 0 4px rgba($yellow, 30%); }
+    &.warning { background-color: $red; box-shadow: 0 0 0 4px rgba($red, 30%); }
+
+    &.anti { background-color: $background; border: 2px solid $blue; }
+    &.anti.warning { border-color: $red; }
+    &.anti.glowing { border-color: $yellow; }
+  }
+  &.tiny .dot { width: 12px; height: 12px; }
+
+  .cell-value, .cell-order {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .cell-value { font-size: 24px; color: $blue; top: -34px; }
+  .cell-order { font-size: 14px; color: $background; bottom: -20px; }
+}

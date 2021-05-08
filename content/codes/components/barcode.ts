@@ -54,7 +54,7 @@ export class Barcode extends CustomElementView {
     this.onAttr('value', d => {
       this.computeParityDigit(d);
       this.draw(d);
-      this.writeNumbers(e.newAttr);
+      this.writeNumbers(d);
     });
   }
 

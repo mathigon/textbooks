@@ -7,9 +7,10 @@
 import {flatten, isPalindrome, words} from '@mathigon/core';
 import {Line, Point} from '@mathigon/euclid';
 import {$N, Draggable, ElementView, InputView} from '@mathigon/boost';
-import {Geopad, GeoPoint, PlayBtn, Slider, Step} from '../shared/types';
-import {Wallpaper} from './components/wallpaper';
+import {PlayBtn, Slider, Step} from '@mathigon/studio';
 
+import {Geopad, GeoPoint} from '../shared/types';
+import {Wallpaper} from './components/wallpaper';
 import './components/wallpaper';
 
 
@@ -229,7 +230,7 @@ function add(a: number, b: number) {
 
 function makeSquare(i: number, x: number, $parent: ElementView, delay = 0) {
   const $el = $N('img', {
-    src: `/resources/transformations/images/cube-${i}.svg`,
+    src: `/content/transformations/images/cube-${i}.svg`,
     style: `left: ${8 + x * 70}px;`
   }, $parent);
   $el.enter('pop', 200, delay);

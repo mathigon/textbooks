@@ -5,13 +5,16 @@
 > id: thales
 > goals: p1 p2 p3 move
 > section: introduction
+> color: "#0F82F2"
+> level: Intermediate
+> next: transformations
 
 ::: column.grow
 Matematica a fost studiată timp de mii de ani - la prezicerea anotimpurile,
 calcularea taxelor sau pentru estimarea suprafaței unui teren agricol.
 
-Matematicienii din Grecia Antică, în jurul anului 500 BC, au fost uimiți de modelele 
-matematice dorindu-și astfel să le exploreze și să le explice. La început ei au studiat matematica 
+Matematicienii din Grecia Antică, în jurul anului 500 BC, au fost uimiți de modelele
+matematice dorindu-și astfel să le exploreze și să le explice. La început ei au studiat matematica
 doar de amuzament, fără a avea ca scop un rezultat anume.
 ::: column(width=300)
 
@@ -20,7 +23,7 @@ doar de amuzament, fără a avea ca scop un rezultat anume.
 {.caption} Tabletă babiloniană din lut, datată 1800 BC, ce conține calcule geometrice.
 :::
 
-Unul dintre acești matematicieni a fost [Thales din Milet](bio:thales), care a făcut 
+Unul dintre acești matematicieni a fost [Thales din Milet](bio:thales), care a făcut
 o descoperire surprinzătoare în timp ce se juca cu formele geometrice:
 
 ::: column(width=420)
@@ -34,7 +37,7 @@ _{span.reveal(when="p1 p2")} Hai să desenăm un semicerc în jurul acestor punc
 {.reveal(when="p1 p2")} Acum alege un al treilea punct care să se afle pe
 [circumferința](target:circumf) semicercului.
 
-{.reveal(when="p3")} Hai sa desenăm [triunghiul](target:triangle) format de cele 
+{.reveal(when="p3")} Hai sa desenăm [triunghiul](target:triangle) format de cele
 două capete ale semicercului și de punctul ales pe circumferință.
 
 {.reveal(when="p3" delay=1000)} Încearcă să modifici poziția unuia dintre cele trei puncte și
@@ -47,19 +50,19 @@ _{span.reveal(when="blank-0")} Asta înseamnă că triunghiul este [[dreptunghic
 > id: thales-1
 
 Acesta a fost un rezultat spectaculos pentru Thales. De ce _semicercurile_ și
-_triunghiurile dreptunghice_, două forme complete diferite, ar putea fi conectate în acest 
-mod fundamental. Legenda spune ca Thales a fost atât de uluit de descoperirea sa încât a sacrificat 
+_triunghiurile dreptunghice_, două forme complete diferite, ar putea fi conectate în acest
+mod fundamental. Legenda spune ca Thales a fost atât de uluit de descoperirea sa încât a sacrificat
 un bou în semn de mulțumire zeilor.
 
     figure
       x-img(src="images/temple.svg" width=400 height=170)
 
 Totuși, simpla _observare_ a unei astfel de relații nu a fost suficientă pentru Thales.
-El a vrut să înțeleagă _de ce_ este adevarată și să verifice că este _întotdeauna_ adevărată, 
-nu doar în cele câteva exemple încercate de el. 
+El a vrut să înțeleagă _de ce_ este adevarată și să verifice că este _întotdeauna_ adevărată,
+nu doar în cele câteva exemple încercate de el.
 
-O dovadă care explică logic, fără nicio îndoială, de ce ceva este adevărat se numește 
-[__demonstrație__](gloss:proof). În următoarele lecții vei învăța un set de tehnici geometrice care 
+O dovadă care explică logic, fără nicio îndoială, de ce ceva este adevărat se numește
+[__demonstrație__](gloss:proof). În următoarele lecții vei învăța un set de tehnici geometrice care
 ne vor permite într-un final să demonstrăm _teorema lui Thales_.
 
 ---
@@ -79,7 +82,7 @@ până la construcția zgârie-norilor sau lansarea sateliților în spațiu. Ia
 
     x-img(src="images/sextant.jpg" width=200 height=200)
 
-{.caption} Marinarii folosesc sextante pentru determinarea poziției geografice în timp ce se află pe mare 
+{.caption} Marinarii folosesc sextante pentru determinarea poziției geografice în timp ce se află pe mare
 folosind unghiuri formate de soare sau stele.
 
 ::: column(width=200)
@@ -91,25 +94,25 @@ folosind unghiuri formate de soare sau stele.
 
     x-img(src="images/plane.jpg" width=200 height=200)
 
-{.caption} Geometria poate ajuta la designul și testarea unor modele noi de avioane, 
+{.caption} Geometria poate ajuta la designul și testarea unor modele noi de avioane,
 făcându-le astfel mai sigure și mai eficiente.
 ::: column(width=200)
 
     x-img(src="images/cctv.jpg" lightbox width=200 height=200)
 
-{.caption} Geometria a fost esențială pentru proiectarea acestui zgârie-nori din Beijing – 
+{.caption} Geometria a fost esențială pentru proiectarea acestui zgârie-nori din Beijing –
 și pentru a se asigura că nu se va dărâma.
 
 ::: column(width=200)
 
     x-img(src="images/satellite.jpg" lightbox credit="NASA" width=200 height=200)
 
-{.caption} Geometria ne permite să prezicem poziția stelelor, planetelor și sateliților 
+{.caption} Geometria ne permite să prezicem poziția stelelor, planetelor și sateliților
 care orbitează Pământul.
 :::
 
-În acest curs, precum și în următoarele vei învăța despre o mulțime de unelte diferite și 
-tehnici geometrice descoperite de matematicieni de-a lungul multor secole. De asemenea, 
+În acest curs, precum și în următoarele vei învăța despre o mulțime de unelte diferite și
+tehnici geometrice descoperite de matematicieni de-a lungul multor secole. De asemenea,
 vom vedea cum pot fi folosite aceste tehnici pentru a rezolva probleme importante din lumea reala.
 
 ---
@@ -120,7 +123,7 @@ vom vedea cum pot fi folosite aceste tehnici pentru a rezolva probleme important
 > id: points
 
 Înainte de a formula orice demonstrație avem nevoie de o terminologie comună care să ne permită
-sa vorbim mai ușor despre obiectele geometrice. Acestea nu sunt neapărat interesante, dar ar trebui 
+sa vorbim mai ușor despre obiectele geometrice. Acestea nu sunt neapărat interesante, dar ar trebui
 ca  majoritatea să îți fie deja cunoscute:
 
 ::: column(width=240)
@@ -179,7 +182,7 @@ _{button.next-step} Continuă_
 
 ::: column.grow
 {.r} Un [__segment de dreaptă__](gloss:line-segment) este bucata dintre două puncte ale unei drepte,
-fără a se prelungi la infinit. Îl putem nota la fel ca pe dreaptă, dar fără săgeți 
+fără a se prelungi la infinit. Îl putem nota la fel ca pe dreaptă, dar fără săgeți
 pe bara de deasupra: `bar(AB)` or `bar(BA)`. Ordinea punctelor nu este importantă.
 _{button.next-step} Continuă_
 :::
@@ -202,7 +205,7 @@ O [__semidreaptă__](gloss:ray) este ceva între _dreaptă_ și _segment de drea
 se extinde la nesfârșit doar într-o singură parte. Te poți gândi la semidrepte ca la niște _raze de soare_:
 ele încep dintr-un punct (soarele) și se prelungesc la infinit.
 
-{.r} La notarea semidreptelor săgeata indică direcția în care se extinde la infinit, 
+{.r} La notarea semidreptelor săgeata indică direcția în care se extinde la infinit,
 de exemplu `vec(AB)`. De data aceasta ordinea punctelor _este_ importantă.
 _{button.next-step} Continuă_
 :::
@@ -222,7 +225,7 @@ _{button.next-step} Continuă_
       path.blue(x="circle(b,60)")
 
 ::: column.grow
-{.r} Un [__cerc__](gloss:circle) este mulțime punctelor aflate la aceeași 
+{.r} Un [__cerc__](gloss:circle) este mulțime punctelor aflate la aceeași
 [distanță](target:radius) față de un punct din centru. Această distanță se numește
 [__rază__](gloss:circle-radius).
 _{button.next-step} Continuă_
@@ -242,15 +245,15 @@ _{button.next-step} Continuă_
       path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-class="white")
 
 ::: column.grow
-Cele doua forme de la stânga arată identic. Au aceeași dimensiune și formă. 
-Putem [roti si translata] una din ele pentru a se potrivi exact pe cealaltă. În geometrie 
+Cele doua forme de la stânga arată identic. Au aceeași dimensiune și formă.
+Putem [roti si translata] una din ele pentru a se potrivi exact pe cealaltă. În geometrie
 spunem ca cele două forme sunt [__congruente__](gloss:congruent).
 
 Simbolul pentru congruență este `≅` și vom nota `A ≅ B`.
 :::
 
-Iată câteva obiecte geometrice – conectează toate perechile care sunt congruente unele cu altele. 
-Amintește-ți că _mai mult de două_ forme pot fi congruente, 
+Iată câteva obiecte geometrice – conectează toate perechile care sunt congruente unele cu altele.
+Amintește-ți că _mai mult de două_ forme pot fi congruente,
 iar unele forme s-ar putea să nu fie congruente cu _nici o_ altă formă:
 
     svg.congruence(width=760 height=320 viewBox="0 0 760 320")
@@ -326,8 +329,8 @@ Ele sunt orientate în aceeași direcție și distanța dintre ele este mereu
 {.reveal(when="blank-0")} Un bun exemplu de linii paralele din viața reală sunt
 _liniile de cale ferată_. Rețineți că mai mult de două linii pot fi paralele una cu alta!
 
-{.reveal(when="blank-0")} În diagrame paralele se notează adăugând una sau mai multe 
-săgeți mici. În acest exemplu __{.m-red}`a ∥ b ∥ c`__ și __{.m-yellow}`d ∥ e`__. 
+{.reveal(when="blank-0")} În diagrame paralele se notează adăugând una sau mai multe
+săgeți mici. În acest exemplu __{.m-red}`a ∥ b ∥ c`__ și __{.m-yellow}`d ∥ e`__.
 Simbolul `∥` înseamnă _“este paralelă cu”_.
 :::
 
@@ -342,7 +345,7 @@ Simbolul `∥` înseamnă _“este paralelă cu”_.
       path.green(x="line(point(50,100),point(70,0))" label="b")
 
 ::: column.grow
-Opusul _paralelor_ este reprezentat de două drepte concurente care formează un unghi 
+Opusul _paralelor_ este reprezentat de două drepte concurente care formează un unghi
 de 90° (unghi drept).
 Aceste drepte se numesc [__perpendiculare__](gloss:perpendicular).
 
@@ -357,11 +360,11 @@ Aceste drepte se numesc [__perpendiculare__](gloss:perpendicular).
 
 ::: column.grow
 Matematicianii greci și-au dat seama ca pentru a scrie demonstrații formale
-e nevoie de un _punct de pornire_: enunțuri simple și intuitive pe care toată lumea 
+e nevoie de un _punct de pornire_: enunțuri simple și intuitive pe care toată lumea
 le acceptă ca fiind adevărate.
 Acestea se numesc [__axiome__](gloss:axiom) (sau _postulate_).
 
-O parte de bază a matematicii o reprezintă combinarea diferitelor axiome pentru 
+O parte de bază a matematicii o reprezintă combinarea diferitelor axiome pentru
 a demonstra rezultate mai complexe folosind regulile logicii.
 
 Matematicianul grec [Euclid din Alexandria](bio:euclid), care este adesea numit
@@ -380,8 +383,8 @@ _părintele geometriei_, a enunțat cele cinci axiome ale geometriei:
       circle.move(name="b" cx=190 cy=30 target="1_point")
       path.red(x="segment(a,b)" target="1_line")
 
-{.text-center }__Prima Axiomă__  
-Oricare [două puncte](target:1_point) pot fi unite printr-un singur 
+{.text-center }__Prima Axiomă__
+Oricare [două puncte](target:1_point) pot fi unite printr-un singur
 [segment de dreaptă](target:1_line).
 
 ::: column(width=220)
@@ -392,7 +395,7 @@ Oricare [două puncte](target:1_point) pot fi unite printr-un singur
       path.red(x="line(c,d)")
       path(x="segment(c,d)" target="2_segment")
 
-{.text-center }__A Doua Axiomă__  
+{.text-center }__A Doua Axiomă__
 Orice [segment de dreaptă](target:2_segment) poate fi extins într-o dreaptă infinită<br>
 
 ::: column(width=220)
@@ -403,7 +406,7 @@ Orice [segment de dreaptă](target:2_segment) poate fi extins într-o dreaptă i
       path(x="segment(e,f)" label="r" target="3_radius")
       path.red(x="circle(e,distance(e,f))" target="3_circle")
 
-{.text-center }__A Treia Axiomă__  
+{.text-center }__A Treia Axiomă__
 Fiind date un [punct _P_](target:3_center) și o [distanța _r_](target:3_radius), se
 poate trasa [un cerc](target:3_circle) cu centrul în _P_ și raza _r_.
 
@@ -424,7 +427,7 @@ poate trasa [un cerc](target:3_circle) cu centrul în _P_ și raza _r_.
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
-{.text-center }__A Patra Axiomă__  
+{.text-center }__A Patra Axiomă__
 Oricare doua unghiuri drepte sunt congruente.
 
 ::: column(width=220)
@@ -434,7 +437,7 @@ Oricare doua unghiuri drepte sunt congruente.
       path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
       path.red(x="line5.parallel(g)" target="5_parallel")
 
-{.text-center }__A Cincea Axiomă__  
+{.text-center }__A Cincea Axiomă__
 Fiind dată o [dreaptă _L_](target:5_line) și [un punct _P_](target:5_point) în afara lui _L_,
 există [o singură dreaptă](target:5_parallel) care trece prin _P_ și este
 [paralelă](gloss:parallel) cu _L_.
@@ -448,11 +451,11 @@ există [o singură dreaptă](target:5_parallel) care trece prin _P_ și este
 ::: column.grow
 Fiecare din aceste axiome pare destul de evidentă și de la sine înțeleasă, dar împreună
 ele sunt baza geometriei si pot fi utilizate pentru a deduce aproape totul.
-Conform lui [Isaac Newton](bio:newton), _“gloria geometriei o reprezintă faptul că din atât de puține 
+Conform lui [Isaac Newton](bio:newton), _“gloria geometriei o reprezintă faptul că din atât de puține
 principii, se poate realiza atât de mult”_.
 
-Euclid a publicat primele cinci axiome într-o carte cu titlul _“Elemente”_. Aceasta 
-este primul exemplu din istorie a unei abordări sistematice a matematicii și a fost 
+Euclid a publicat primele cinci axiome într-o carte cu titlul _“Elemente”_. Aceasta
+este primul exemplu din istorie a unei abordări sistematice a matematicii și a fost
 folosită drept manual de matematică timp de mii de ani.
 
 ::: column(width=220)
@@ -481,17 +484,17 @@ Acesta este doar un singur exemplu în care ideile lui Euclid în matematică au
 > section: construction
 > id: measuring
 
-Poate ai observat că cele cinci axiome ale lui Euclid nu pomenesc nimic despre 
-_măsurarea_ distanțelor sau a unghiurilor. Până acum aceasta a fost o parte fundamentală a geometriei, 
+Poate ai observat că cele cinci axiome ale lui Euclid nu pomenesc nimic despre
+_măsurarea_ distanțelor sau a unghiurilor. Până acum aceasta a fost o parte fundamentală a geometriei,
 de exemplu, măsurarea suprafețelor și a volumelor.
 
 ::: column.grow
-Cu toate acestea, pe vremea lui Thales sau a lui Euclid, nu exista un cadru universal de unități 
-precum avem noi azi. Distanțele erau adesea măsurate folosind părți ale corpului, 
+Cu toate acestea, pe vremea lui Thales sau a lui Euclid, nu exista un cadru universal de unități
+precum avem noi azi. Distanțele erau adesea măsurate folosind părți ale corpului,
 de exemplu, lungimea degetului sau lungimea brațului. Acestea nu sunt foarte precise și variază de la o persoană la alta.
 
-Pentru a măsura distanțe mai lungi arhitecții sau topografii foloseau _sfori înnodate_: 
-bucăți lungi de sfoară care conțineau multe noduri situate la intervale egale. Dar nici acestea nu 
+Pentru a măsura distanțe mai lungi arhitecții sau topografii foloseau _sfori înnodate_:
+bucăți lungi de sfoară care conțineau multe noduri situate la intervale egale. Dar nici acestea nu
 erau perfect precise și diferite corzi aveau nodurile poziționate la distanțe ușor diferite.
 
     figure: x-img(src="images/knots.jpg" width=370 height=23 style="opacity: 0.8")
@@ -508,7 +511,7 @@ de legile fundamentale ale geometriei decăt de aplicațiile lor practice.
 Tocmai de aceea ei au venit cu o versiune mult mai idealizată a universului nostru:
 una în care punctele nu pot avea dimensiune și dreptele nu pot avea lățime.
 Bineînțeles că este [[imposibil|foarte dificil]] ca acestea să fie desenate pe hârtie.
-Punctele vizibile vor ocupa mereu un pic de spațiu și dreptele vor avea întotdeauna 
+Punctele vizibile vor ocupa mereu un pic de spațiu și dreptele vor avea întotdeauna
 o mică lățime. De aceea desenele noastre sunt întotdeauna doar ”aproximări”.
 
 ---
@@ -529,7 +532,7 @@ Se pare ca avem nevoie doar de două unelte simple pentru a putea schița acest 
         path.red(name="l1" x="segment(a,b)" hidden)
       x-play-btn
 
-{.text-center} Un __dreptar__ este ca o riglă fără marcaje. Îl poți folosi pentru a uni două puncte 
+{.text-center} Un __dreptar__ este ca o riglă fără marcaje. Îl poți folosi pentru a uni două puncte
 (ca în Axioma 1) sau pentru a prelungi un segment de dreaptă (ca în Axioma 2).
 
 ::: column.reveal(width=300 when="play-l1")
@@ -549,11 +552,11 @@ Se pare ca avem nevoie doar de două unelte simple pentru a putea schița acest 
 ---
 > id: construction
 
-Axiomele 4 și 5 se referă mai degrabă la compararea proprietăților formelor decât la trasarea lor. 
+Axiomele 4 și 5 se referă mai degrabă la compararea proprietăților formelor decât la trasarea lor.
 De aceea ele nu au nevoie de instrumente specifice.
 
 ::: column.grow
-Vă puteți imagina că matematicienii greci se gândeau la geometrie pe plajă și desenau diferite forme 
+Vă puteți imagina că matematicienii greci se gândeau la geometrie pe plajă și desenau diferite forme
 în nisip folosind scânduri lungi pe post de dreptar și bucăți de sfoară pe post de compas.
 
 Chiar daca aceste unelte par foarte primitive, poți desena cu ele un numar mare de forme.
@@ -577,7 +580,7 @@ omorât de către invadatorii romani. Ultimele sale cuvinte au fost “nu îmi d
     x-geopad.sticky(width=320 tools="move|line|circle" intersections projections="no"): svg
 
 ::: column.grow
-{.task} Desenează un [triunghi echilateral](gloss:equilateral-triangle) folosind doar 
+{.task} Desenează un [triunghi echilateral](gloss:equilateral-triangle) folosind doar
 dreptarul și compasul.
 
 Începe prin a desena un segment de dreaptă oriunde în chenarul din dreapta. Cu
@@ -585,7 +588,7 @@ dreptarul și compasul.
 selectată, trage de la început la sfârșit. Acest segment va fi una din laturile triunghiului.
 
 {.reveal(when="segment0")} Apoi desenează două cercuri care au ca centru unul din capetele segmentului
-și mergi până la celălalt capăt. Cu 
+și mergi până la celălalt capăt. Cu
 [unealta cerc](->#equilateral_.tool:nth-child(5)) selectată,
 trage de la un capăt până la celălalt.
 
@@ -596,7 +599,7 @@ pentru a desena cele două laturi care lipsesc și finalizează triunghiul.
 {.reveal(when="segment1 segment2")} Acum [aceste două laturi](target:a) și
 [aceste două laturi](target:b) sunt fiecare [[razele|diametrele|circumferințele]] aceluiași cerc,
 _{span.reveal(when="blank-0")} așa că trebuie sa aibă aceeași lungime.
-Cu alte cuvinte, toate cele trei laturi ale triunghiului sunt congruente și prin urmare este 
+Cu alte cuvinte, toate cele trei laturi ale triunghiului sunt congruente și prin urmare este
 într-adevăr un triunghi echilateral._
 :::
 
@@ -620,12 +623,12 @@ Cu alte cuvinte, toate cele trei laturi ale triunghiului sunt congruente și pri
 ### Construcții Imposibile
 
 În următorul capitol vom vedea și mai multe forme ce pot fi construite astfel. Totuși, există
-o limita in geometria euclidiană: unele construcții sunt pur și simplu imposibile folosind doar 
+o limita in geometria euclidiană: unele construcții sunt pur și simplu imposibile folosind doar
 dreptarul și compasul.
 
 ::: column.grow
 Conform legendei, orașul Delos din Grecia antică a fost atins cândva de o boală îngrozitoare.
-Oracolul din Delphi le-a spus locuitorilor că aceasta era o pedeapsă de la zei și că boala se 
+Oracolul din Delphi le-a spus locuitorilor că aceasta era o pedeapsă de la zei și că boala se
 va termina dacă vor construi un nou altar pentru templul lor care să aibă volumul _exact dublu_
 față de cel existent.
 
@@ -634,20 +637,20 @@ față de cel existent.
 ::: column(width=300)
 
     x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
-    
-{.caption} Reconstrucția unui templu din Delphi 
+
+{.caption} Reconstrucția unui templu din Delphi
 :::
 
-Rețineți că _dublarea volumului_ nu este același lucru cu _dublarea muchiei cubului_. 
-De fapt, dacă volumul [[tridimensional|bidimensional|unidimensional]] crește de 2 ori, 
+Rețineți că _dublarea volumului_ nu este același lucru cu _dublarea muchiei cubului_.
+De fapt, dacă volumul [[tridimensional|bidimensional|unidimensional]] crește de 2 ori,
 muchia [[unidimensională|tridimensională|bidimensională]]
 a cubului va crește de `root(2,3)`.
 
 ---
 > id: impossible-1
 
-Încă pare destul de simplu, dar dublarea cubului folosind doar dreptarul și compasul este de fapt 
-imposibilă în [geometria euclidiană](gloss:euclidean-geometry)! 
+Încă pare destul de simplu, dar dublarea cubului folosind doar dreptarul și compasul este de fapt
+imposibilă în [geometria euclidiană](gloss:euclidean-geometry)!
 Din păcate, pentru locuitorii din Delos asta însemna pierderea oricărei speranțe.
 Mai există alte două construcții care sunt imposibile.
 Matematicienii și-au dedicat o mare parte din timp pentru a găsi o soluție, dar fără a avea succes.
@@ -656,26 +659,26 @@ Matematicienii și-au dedicat o mare parte din timp pentru a găsi o soluție, d
 
     figure: img(src="images/impossible-1.svg" width=200 height=180)
 
-{.text-center} __{.m-red} Trisecțiunea unghiului__  
-Știm deja cum să împărțim unghiurile în două părți egale. Totuși este imposibil să împărțim 
+{.text-center} __{.m-red} Trisecțiunea unghiului__
+Știm deja cum să împărțim unghiurile în două părți egale. Totuși este imposibil să împărțim
 în mod similar un unghi în _trei_ părți egale.
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-2.svg" width=200 height=180)
 
-{.text-center} __{.m-blue} Dublarea cubului__  
+{.text-center} __{.m-blue} Dublarea cubului__
 Fiind dată muchia unui cub, este imposibil să construim muchia unui alt cub care să aibă volumul exact dublu.
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-3.svg" width=200 height=180)
 
-{.text-center} __{.m-green} Cuadratura cercului__  
-Fiind dat un cerc, este imposibil să construim un pătrat care să aibă exact aceeași arie. 
+{.text-center} __{.m-green} Cuadratura cercului__
+Fiind dat un cerc, este imposibil să construim un pătrat care să aibă exact aceeași arie.
 :::
 
-Rețineti că aceste probleme pot fi rezolvate foarte ușor cu ajutorul algebrei sau folosind rigla și raportorul. 
+Rețineti că aceste probleme pot fi rezolvate foarte ușor cu ajutorul algebrei sau folosind rigla și raportorul.
 Dar sunt imposibil de construit dacă trebuie să le construiești doar cu dreptarul și compasul.
 
 ---
@@ -713,7 +716,7 @@ Cea mai scurtă distanță dintre două drepte paralele este lungimea segmentulu
 > section: proofs
 > sectionStatus: dev
 
-TODO	
+TODO
 
 ---
 
@@ -728,7 +731,7 @@ Există o alta tehnică ce nu folosește niciun instrument: __Origami__.
 
 Cuvântul _Origami_ (折り紙) vine din limba japoneză _oru_ (a plia) și _kami_
 (hârtie). Scopul este de a confecționa obiecte din una sau mai multe foi de hârtie,
-fără niciun instrument adițional precum lipici sau foarfecă. Poți crea forme incredibil de frumoase 
+fără niciun instrument adițional precum lipici sau foarfecă. Poți crea forme incredibil de frumoase
 și de impresionante - toate aceste figuri au fost create folosind doar bucăți dreptunghiulare de hârtie.
 
 ::: column(width=186)
@@ -749,7 +752,7 @@ fără niciun instrument adițional precum lipici sau foarfecă. Poți crea form
 > id: crane
 > goals: video
 
-Să construiești forme precum aceasta poate lua mult timp și e important să fii extrem de precis. 
+Să construiești forme precum aceasta poate lua mult timp și e important să fii extrem de precis.
 Dar cu un pic de exercițiu, vei putea construi și tu!
 
 ::: column.sticky-video(width=360)
@@ -757,7 +760,7 @@ Dar cu un pic de exercițiu, vei putea construi și tu!
     x-video(src="https://static.mathigon.org/videos/crane.mp4" poster="images/crane.jpg" width=360 height=360 controls)
 
 ::: column.grow
-{.step.active(data-t=0)} Ai nevoie doar de o bucată pătrată de hârtie. Începe prin a îndoi foaia 
+{.step.active(data-t=0)} Ai nevoie doar de o bucată pătrată de hârtie. Începe prin a îndoi foaia
 de-a lungul celor două diagonale ale sale.
 
 {.step(data-t=16)} Apoi, îndoaie-o de-a lungul liniei de mijloc verticală și orizontală – dar
@@ -769,11 +772,11 @@ Se formează un pătrat mai mic care este deschis jos.
 {.step(data-t=51)} Îndoaie colțurile din stânga și din dreapta spre linia de mijloc.
 Apoi întoarce-l și repetă.
 
-{.step(data-t=83)} Acum îndoaie triunghiul de sus în jos, de-a lungul liniei orizontale 
-și apoi deschide pliurile din ultimii doi pași. 
+{.step(data-t=83)} Acum îndoaie triunghiul de sus în jos, de-a lungul liniei orizontale
+și apoi deschide pliurile din ultimii doi pași.
 
-{.step(data-t=99)} Aici e dificil: ia colțul de jos al hârtiei și îndoaie-l până sus 
-de-a lungul liniei orizontale pe care tocmai ai creat-o. Unele dintre îndoiurile realizate 
+{.step(data-t=99)} Aici e dificil: ia colțul de jos al hârtiei și îndoaie-l până sus
+de-a lungul liniei orizontale pe care tocmai ai creat-o. Unele dintre îndoiurile realizate
 anterior se vor inversa. Întoarce apoi și repetă.
 
 {.step(data-t=135)} Asigură-te că cele două “picioare” sunt orientate în jos. Apoi ia colțurile
@@ -801,16 +804,16 @@ Acest _cocor_ este unul din cele mai vechi și faimoase modele Origami. Avem mul
 
 ### Axiome Origami
 
-La fel ca la construcția cu dreptarul și compasul, există câteva axiome ale 
-câtorva _tipuri de îndoire_ care sunt posibile in origami. Acestea au fost 
+La fel ca la construcția cu dreptarul și compasul, există câteva axiome ale
+câtorva _tipuri de îndoire_ care sunt posibile in origami. Acestea au fost
 pentru prima data enunțate în anul 1992 de către matematicianul italiano-japonez Humiaki Huzita.
 
 ::: column(width=220 parent="padded-thin origami-axioms")
 
     x-video(src="images/origami/axiom-1.mp4" width=220 height=220)
 
-{.text-center} 
-Se poate face o îndoitură după o dreaptă care unește oricare două puncte. 	
+{.text-center}
+Se poate face o îndoitură după o dreaptă care unește oricare două puncte.
 ::: column(width=220)
 
     x-video(src="images/origami/axiom-2.mp4" width=220 height=220)
@@ -821,7 +824,7 @@ Se poate face o îndoitură după o dreaptă care unește oricare două puncte.
 
     x-video(src="images/origami/axiom-3.mp4" width=220 height=220)
 
-{.text-center} Se poate face o îndoitură ce suprapune oricare două drepte una peste alta. Dacă dreptele se intersectează, 
+{.text-center} Se poate face o îndoitură ce suprapune oricare două drepte una peste alta. Dacă dreptele se intersectează,
 se crează astfel [[bisectoarea|mediatoarea|punctul de mijloc]] unghiului format de cele două drepte.
 ::: column(width=220)
 
@@ -832,7 +835,7 @@ se crează astfel [[bisectoarea|mediatoarea|punctul de mijloc]] unghiului format
 
     x-video(src="images/origami/axiom-5.mp4" width=220 height=220)
 
-{.text-center} Fiind date două puncte _P_ și _Q_ și o linie _L_, putem face o îndoitură 
+{.text-center} Fiind date două puncte _P_ și _Q_ și o linie _L_, putem face o îndoitură
 ce trece prin P și-l suprapune pe Q pe _L_.
 ::: column(width=220)
 
@@ -844,7 +847,7 @@ putem face o îndoitură care să suprapună simultan punctul _P_ pe dreapta _K_
 
     x-video(src="images/origami/axiom-7.mp4" width=220 height=220)
 
-{.text-center} Fiind date un punct _P_ și două drepte _K_ și _L_, putem face 
+{.text-center} Fiind date un punct _P_ și două drepte _K_ și _L_, putem face
 o îndoitură care îl suprapune pe _P_ pe _L_ și este perpendiculară pe _K_.
 :::
 
@@ -879,7 +882,7 @@ Sateliții au nevoie de panouri solare mari pentru a genera energie. Din neferic
 care transportă sateliții în spațiu au un spațiu foarte limitat pentru marfă și orice
 greutate adițională consumă mult carburant.
 
-Tehnicile Origami permit panourilor solare să se “deschidă” atunci când ajung în spațiu. Anumite 
+Tehnicile Origami permit panourilor solare să se “deschidă” atunci când ajung în spațiu. Anumite
 îndoituri bine gândite sunt incredibil de compacte și necesită foarte puține motoare
 și alte componente mecanice.
 
@@ -915,7 +918,7 @@ Acestea sunt inițial pliate, dar se pot extinde în săngele pacientului pentru
 #### Poduri Pliabile
 
 Armata britanică și americană au folosit Origami pentru a dezvolta poduri pliabile și mobile.
-Acestea erau importante pentru traversarea rapidă a râurilor sau a șanțurilor antitanc și 
+Acestea erau importante pentru traversarea rapidă a râurilor sau a șanțurilor antitanc și
 puteau fi implementate mai rapid decât modelele anterioare.
 
 Ele puteau fi folosite și pentru ajutor în caz de dezastre pentru a permite accesul rapid vehiculelor de urgență
@@ -940,8 +943,8 @@ Animalele care trăiesc acolo sunt adesea animale cu corpul moale ceea ce le fac
 foarte greu de examinat.
 
 Aici se poate vedea o “capcană” de forma unui [dodecaedru](gloss:dodecahedron)
-ce se poate plia în jurul organismelor marine, permițându-le să fie studiate. 
-Aceasta este controlată de la distanță și are nevoie doar de un singur motor pentru a 
+ce se poate plia în jurul organismelor marine, permițându-le să fie studiate.
+Aceasta este controlată de la distanță și are nevoie doar de un singur motor pentru a
 conduce mișcarea complexă de pliere a celor cinci brațe ale sale.
 
 :::
@@ -949,8 +952,8 @@ conduce mișcarea complexă de pliere a celor cinci brațe ale sale.
 ---
 > id: origami-applications-5
 
-Există multe alte aplicații ale artei origami în viața de zi cu zi: case care se pot comprima 
-în loc sa se dărâme în timpul unui cutremur, desfășurarea airbagurilor în mașini, 
+Există multe alte aplicații ale artei origami în viața de zi cu zi: case care se pot comprima
+în loc sa se dărâme în timpul unui cutremur, desfășurarea airbagurilor în mașini,
 roboți auto-asamblați, împachetare mai eficientă și aeronave de greutate redusă.
 
 ---
@@ -959,10 +962,10 @@ roboți auto-asamblați, împachetare mai eficientă și aeronave de greutate re
 
 ### Origami în Natură
 
-Se pare că noi oamenii nu suntem singurii care folosim puterea origamiului: 
+Se pare că noi oamenii nu suntem singurii care folosim puterea origamiului:
 natura face același lucru de milioane de ani.
 
-Aici se poate vedea aripa unei __urechelnițe__ care se poate plia folosind un model ingenios. 
+Aici se poate vedea aripa unei __urechelnițe__ care se poate plia folosind un model ingenios.
 Atunci când este deschisă dimensiunea aripii crește de 10 ori – cel mai mare „raport de pliere” din regnul animal:
 
 ::: column(width=300)
@@ -981,12 +984,12 @@ Atunci când este deschisă dimensiunea aripii crește de 10 ori – cel mai mar
 Atunci când sunt extinse aripile mari se fixează într-o poziție stabilă care permite
 insectelor să zboare. Dar e suficientă o atingere foarte ușoara pentru ca aripile să se retragă.
 Atunci când sunt îndoite, ele sunt suficient de compacte pentru a le permite urechelnițelor să facă tuneluri subterane.
-Multe alte insecte, lilieci, frunze și flori folosesc modele de pliere similare 
+Multe alte insecte, lilieci, frunze și flori folosesc modele de pliere similare
 pentru ca suprafețe mari sa încapă în spații mici.
 
-Oamenii de știință studiază aceste plante și animale în speranța de a le imita abilitățile 
-în inginerie și tehnologie. Posibile aplicații ar putea include electronice pliabile în telefoane mobile, 
-panouri solare extensibile pentru sateliți sau poate chiar corturi ce se pot plia singure.  
+Oamenii de știință studiază aceste plante și animale în speranța de a le imita abilitățile
+în inginerie și tehnologie. Posibile aplicații ar putea include electronice pliabile în telefoane mobile,
+panouri solare extensibile pentru sateliți sau poate chiar corturi ce se pot plia singure.
 
 ---
 > id: origami-dna
@@ -1001,7 +1004,7 @@ panouri solare extensibile pentru sateliți sau poate chiar corturi ce se pot pl
 Origami apare chiar și în propriul tău corp: fiecare celulă umană conține aproximativ 2 metri
 de [ADN](gloss:dna), [molecula](gloss:molecule) care conține toată informația ta genetică.
 Dacă ai putea combina ADN-ul din toate celulele din corp, lungimea lor ar fi de peste 140 de ori distanța de la Pământ la Soare!
- 
+
 Pentru ca tot acest ADN să încapă în corpul tău fără a fi răsucit sau sfâșiat,
 fiecare fir este ondulat, pliat și fixat de molecule speciale.
 
@@ -1012,5 +1015,5 @@ fiecare fir este ondulat, pliat și fixat de molecule speciale.
 
 Un proces asemănător este folosit de alte molecule complexe ce apar în organismele vii.
 De exemplu, __plierea [proteinelor](gloss:protein)__ este una din cele mai complexe probleme din biologie.
-O mai bună înțelegere a acestui proces îi poate ajuta pe oamenii de știință 
-să dezvolte în viitor medicamente noi. 
+O mai bună înțelegere a acestui proces îi poate ajuta pe oamenii de știință
+să dezvolte în viitor medicamente noi.

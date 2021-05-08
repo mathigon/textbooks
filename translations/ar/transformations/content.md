@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#2274E8"
+> level: Intermediate
+> next: triangles
 
 تم اختراع العديد من المفاهيم الهندسية ، مثل [خطوط](gloss:line) و [نقاط](gloss:point) ، من قبل علماء الرياضيات. التماثل ، من ناحية أخرى ، في كل مكان حولنا. تقريبا جميع النباتات والحيوانات وحتى البشر متناظرة.
 
@@ -294,31 +297,31 @@ _{button.next-step} متابعة_
       circle.move.pulsate(name="l1" cx="180" cy="30" target="refl")
       circle.move.pulsate(name="l2" cx="120" cy="270" target="refl")
       path(name="refl" x="line(l1,l2)" target="refl")
-    
+
       circle.reveal(name="a" x="point(60,50)" when="next-0" animation="pop" target="circ")
       circle(name="b" x="point(120,100)" hidden)
       circle(name="c" x="point(110,170)" hidden)
       circle(name="d" x="point(65,200)" hidden)
       circle(name="e" x="point(30,120)" hidden)
-    
+
       circle.reveal(name="p" x="refl.project(a)" when="next-0" animation="pop" delay=1500)
       path.reveal.fill.light(x="angle(a,p,l1)" size=16 when="next-0" delay=1500)
-    
+
       circle.reveal(name="a1" x="a.reflect(refl)" when="next-1" animation="pop" target="circ")
       circle(name="b1" x="b.reflect(refl)" hidden)
       circle(name="c1" x="c.reflect(refl)" hidden)
       circle(name="d1" x="d.reflect(refl)" hidden)
       circle(name="e1" x="e.reflect(refl)" hidden)
-    
+
       path.fill.blue(x="polygon(a,b,c,d,e)")
       path.fill.reveal.blue1(x="polygon(a1,b1,c1,d1,e1)" when="next-3")
-    
+
       path.reveal(x="line(a,a1)" when="next-0" animation="draw" delay=1000)
       path.reveal.thin.light(x="segment(b,b1)" when="next-2" animation="draw" delay=400)
       path.reveal.thin.light(x="segment(c,c1)" when="next-2" animation="draw" delay=500)
       path.reveal.thin.light(x="segment(d,d1)" when="next-2" animation="draw" delay=600)
       path.reveal.thin.light(x="segment(e,e1)" when="next-2" animation="draw" delay=700)
-    
+
       circle.transparent(name="ax" x="refl.project(a)" target="circ")
       path.transparent(x="segment(a,ax)" target="d1 circ")
       path.transparent(x="segment(a1,ax)" target="d2 circ")
@@ -384,37 +387,37 @@ _{button.next-step} متابعة_
 
     x-geopad.sticky(width=300): svg
       circle.move.pulsate(name="rot" cx="150" cy="250" target="rot angle compass protractor")
-    
+
       circle.reveal(name="a" x="point(270,190)" when="next-0" animation="pop" target="compass")
       circle(name="b" x="point(280,110)" hidden)
       circle(name="c" x="point(210,80)" hidden)
       circle(name="d" x="point(190,170)" hidden)
       circle(name="e" x="point(220,200)" hidden)
-    
+
       circle.reveal(name="a1" x="a.rotate(-ang/18*pi,rot)" when="next-2" animation="pop" target="a1 compass")
       circle(name="b1" x="b.rotate(-ang/18*pi,rot)" hidden)
       circle(name="c1" x="c.rotate(-ang/18*pi,rot)" hidden)
       circle(name="d1" x="d.rotate(-ang/18*pi,rot)" hidden)
       circle(name="e1" x="e.rotate(-ang/18*pi,rot)" hidden)
-    
+
       path.fill.green(x="polygon(a,b,c,d,e)")
       path.fill.reveal.green1(x="polygon(a1,b1,c1,d1,e1)" when="next-4")
-    
+
       path.transparent.light.fill(x="arc(rot,a.rotate(pi,rot),pi)" target="protractor")
       path.reveal.light.fill(x="angle(a1,rot,a)" when="next-1" target="angle protractor")
-    
+
       path.reveal(x="segment(a,rot)" when="next-0" animation="draw" delay=500 target="angle compass protractor")
       path.reveal.thin.light(x="segment(rot,b)" when="next-3" animation="draw" delay=400)
       path.reveal.thin.light(x="segment(rot,c)" when="next-3" animation="draw" delay=500)
       path.reveal.thin.light(x="segment(rot,d)" when="next-3" animation="draw" delay=600)
       path.reveal.thin.light(x="segment(rot,e)" when="next-3" animation="draw" delay=700)
-    
+
       path.reveal(x="ray(rot,a1)" when="next-1" animation="draw" delay=500 target="angle l2")
       path.reveal.thin.light(x="segment(rot,b1)" when="next-3" animation="draw" delay=800)
       path.reveal.thin.light(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
       path.reveal.thin.light(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
       path.reveal.thin.light(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
-    
+
       path.transparent(x="segment(rot,a1)" target="compass protractor")
       path.transparent(x="circle(rot,distance(rot,a))" target="compass")
 
@@ -642,8 +645,8 @@ _{button.next-step} متابعة_
 
 إذا تجاهلنا المسافات وعلامات الترقيم ، فإن الجمل القصيرة أدناه أيضًا لها تماثل انعكاسي. هل يمكنك الخروج بنفسك؟
 
-{.text-center} Never odd or even.  
-A [[nut]] for a jar of tuna.  
+{.text-center} Never odd or even.
+A [[nut]] for a jar of tuna.
 Yo, banana [[boy]]!
 
 {.reveal(when="blank-0 blank-1")} لكن Palindromes ليست ممتعة فحسب ، بل لها في الواقع أهمية عملية. اكتشف العلماء قبل بضع سنوات أن أجزاء من [DNA](gloss:dna) لدينا متناظرة. وهذا يجعل ذلك أكثر مرونة للطفرات أو التلف - لأن هناك نسخة احتياطية ثانية لكل قطعة.
@@ -827,23 +830,23 @@ Yo, banana [[boy]]!
     ol.proof
       li.r
         | Adding two #[strong.orange symmetries]/#[strong.green integers] always gives another #[strong.orange symmetry]/#[strong.green integer]:
-        .text-center.axiom 
+        .text-center.axiom
           img.cube(src="images/cube-2.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-6.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-4.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 12
           mo +
           mn 7
           mo =
           mn 19
         .next-step Continue
-    
+
       li.r.reveal(when="next-0")
         span.md Adding #[strong.orange symmetries]/#[strong.green integers] is [associative](gloss:associative):
-        .text-center.axiom 
+        .text-center.axiom
           mfenced
             img.cube(src="images/cube-1.svg" width=32 height=32)
             mo +
@@ -866,16 +869,16 @@ Yo, banana [[boy]]!
           mo +
           mfenced #[mn 2]#[mo +]#[mn 5]
         .next-step Continue
-    
+
       li.r.reveal(when="next-1")
         | Every #[strong.orange symmetry]/#[strong.green integer] has an #[strong inverse], another #[strong.orange symmetry]/#[strong.green integer] which, when added, gives the identity:
-        .text-center.axiom 
+        .text-center.axiom
           img.cube(src="images/cube-1.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-3.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-0.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 4
           mo +
           mn –4
@@ -1010,7 +1013,7 @@ Yo, banana [[boy]]!
         p.caption <strong>Type P31M</strong><br>Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Type P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations 
+        p.caption <strong>Type P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
         p.caption <strong>Type CMM</strong><br>Perpendicular reflections, rotations of order 2, translations
@@ -1133,18 +1136,18 @@ Yo, banana [[boy]]!
 
     x-geopad(width=300 height=240): svg
       circle.move(name="C" cx=40 cy=35 target="center")
-    
+
       circle(hidden name="a" x="point(140,55)")
       circle(hidden name="b" x="point(160,115)")
       circle(hidden name="c" x="point(60,130)")
-    
+
       circle(hidden name="a1" x="a.subtract(C).scale(s).add(C)")
       circle(hidden name="b1" x="b.subtract(C).scale(s).add(C)")
       circle(hidden name="c1" x="c.subtract(C).scale(s).add(C)")
-    
+
       path.fill.green(x="polygon(a,b,c)" label="A" label-class="white")
       path.fill.blue(x="polygon(a1,b1,c1)" label="A’" label-class="white")
-    
+
       path.light.thin(x="segment(C,s<1?a:a1)")
       path.light.thin(x="segment(C,s<1?b:b1)")
       path.light.thin(x="segment(C,s<1?c:c1)")

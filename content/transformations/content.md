@@ -4,6 +4,10 @@
 
 > id: intro
 > section: introduction
+> description: Symmetry can be seen everywhere in nature – but it also underlies completely invisible laws of nature. Mathematics can explain why that is the case.
+> color: "#2274E8"
+> level: Intermediate
+> next: triangles
 
 Many geometric concepts like [lines](gloss:line) or [polygons](gloss:polygon)
 were “invented” by mathematicians. Symmetry, on the other hand, is everywhere
@@ -442,7 +446,7 @@ Try to rotate the shapes below around the red center of rotation:
       path.reveal.thin.light(x="segment(rot,c1)" when="next-3" animation="draw" delay=900 )
       path.reveal.thin.light(x="segment(rot,d1)" when="next-3" animation="draw" delay=1000)
       path.reveal.thin.light(x="segment(rot,e1)" when="next-3" animation="draw" delay=1100)
-      
+
       path.transparent(x="segment(rot,a1)" target="compass protractor")
       path.transparent(x="circle(rot,distance(rot,a))" target="compass")
 
@@ -455,7 +459,7 @@ rotation](target:rot).
 {.r} Like for reflections, we have to rotate every point in a shape individually.
 [Continue](btn:next)
 
-{.r.reveal(when="next-0")} We start by picking one of the vertices and drawing a line to the center of 
+{.r.reveal(when="next-0")} We start by picking one of the vertices and drawing a line to the center of
 rotation.
 [Continue](btn:next)
 
@@ -701,8 +705,8 @@ of any other palindromes?
 If we ignore spaces and punctuation, the short sentences below also have
 reflectional symmetry. Can you come up with your own?
 
-{.text-center} Never odd or even.  
-A [[nut]] for a jar of tuna.  
+{.text-center} Never odd or even.<br>
+A [[nut]] for a jar of tuna.<br>
 Yo, banana [[boy]]!
 
 {.reveal(when="blank-0 blank-1")} But Palindromes are not just fun, they
@@ -905,30 +909,30 @@ patterns. Can you complete these observations?
 ---
 > id: group-axioms
 
-You might have realised already that adding __{.orange}symmetries__ is actually
-very similar to adding __{.green}integers__:
+You might have realised already that adding __{.m-orange}symmetries__ is actually
+very similar to adding __{.m-green}integers__:
 
     ol.proof
-      
+
       li.r
-        | Adding two #[strong.orange symmetries]/#[strong.green integers] always gives another #[strong.orange symmetry]/#[strong.green integer]:
-        .text-center.axiom 
+        | Adding two #[strong.m-orange symmetries]/#[strong.m-green integers] always gives another #[strong.m-orange symmetry]/#[strong.m-green integer]:
+        .text-center.axiom
           img.cube(src="images/cube-2.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-6.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-4.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 12
           mo +
           mn 7
           mo =
           mn 19
         .next-step Continue
-      
+
       li.r.reveal(when="next-0")
-        span.md Adding #[strong.orange symmetries]/#[strong.green integers] is [associative](gloss:associative):
-        .text-center.axiom 
+        span.md Adding #[strong.m-orange symmetries]/#[strong.m-green integers] is [associative](gloss:associative):
+        .text-center.axiom
           mfenced
             img.cube(src="images/cube-1.svg" width=32 height=32)
             mo +
@@ -951,16 +955,16 @@ very similar to adding __{.green}integers__:
           mo +
           mfenced #[mn 2]#[mo +]#[mn 5]
         .next-step Continue
-      
+
       li.r.reveal(when="next-1")
-        | Every #[strong.orange symmetry]/#[strong.green integer] has an #[strong inverse], another #[strong.orange symmetry]/#[strong.green integer] which, when added, gives the identity:
-        .text-center.axiom 
+        | Every #[strong.m-orange symmetry]/#[strong.m-green integer] has an #[strong inverse], another #[strong.m-orange symmetry]/#[strong.m-green integer] which, when added, gives the identity:
+        .text-center.axiom
           img.cube(src="images/cube-1.svg" width=32 height=32)
           mo +
           img.cube(src="images/cube-3.svg" width=32 height=32)
           mo(value="=") =
           img.cube(src="images/cube-0.svg" width=32 height=32)
-        .text-center.axiom 
+        .text-center.axiom
           mn 4
           mo +
           mn –4
@@ -972,9 +976,9 @@ very similar to adding __{.green}integers__:
 > id: groups-1
 
 In mathematics, any collection that has these properties is called a
-[__group__](gloss:group). Some groups (like the __{.orange}symmetries__ of a
+[__group__](gloss:group). Some groups (like the __{.m-orange}symmetries__ of a
 square) only have a finite number of elements. Others (like the
-__{.green}integers__) are infinite.
+__{.m-green}integers__) are infinite.
 
 In this example, we started with the eight symmetries of the square. In fact,
 every geometric shape has its own __symmetry group__. They all have different
@@ -1130,7 +1134,7 @@ reflection](gloss:axis-of-symmetry) in these examples?
         p.caption <strong>Group 11 – P31M</strong><br>Rotations of order 3, reflections, glide reflections, translations
       div
         img(src="images/wallpapers/p4g.svg" width=360, height=240)
-        p.caption <strong>Group 12 – P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations 
+        p.caption <strong>Group 12 – P4G</strong><br>Rotations (ord 2 + 4), reflections, glide reflections, translations
       div
         img(src="images/wallpapers/cmm.svg" width=360, height=240)
         p.caption <strong>Group 13 – CMM</strong><br>Perpendicular reflections, rotations of order 2, translations
@@ -1294,23 +1298,23 @@ image is [[larger|smaller]] than the original.
       path.light.thin(x="segment(C,s<1?a:a1)")
       path.light.thin(x="segment(C,s<1?b:b1)")
       path.light.thin(x="segment(C,s<1?c:c1)")
-    
+
 {.text-center.scale-target} Scale factor: ${s}{s|2|0,3,0.1}
 :::
 
 {.todo} COMING SOON – More on Dilations
 
     // Here is how we can construct the dilation of a geometric shape:
-    // 
+    //
     // ::: column(width=300)
     // {.todo} COMING SOON – Animation
     // ::: column.grow
     // First we draw rays from the center of dilation to every point in the shape.
-    // 
+    //
     // Now let’s measure the distance of all these points from the center of dilation.
     // Then we can multiply the distance by the scale factor, and the measure the
     // image of the point along the same ray.
-    // 
+    //
     // All that’s left is to connect the transformed points in the image … all done!
     // :::
 
@@ -1367,7 +1371,7 @@ is that in similar polygons, all the matching pairs of angles are
 [congruent](gloss:congruent-angles). This means that
 
 {.text-center} [_{.m-red}∡ABC_ ≅ _{.m-red}∡A'B'C'_](target:a)_{.space}_
-[_{.m-blue}∡BCD_ ≅ _{.m-blue}∡B'C'D'_](target:b)  
+[_{.m-blue}∡BCD_ ≅ _{.m-blue}∡B'C'D'_](target:b)
 [_{.m-green}∡CDE_ ≅ _{.m-green}∡C'D'E'_](target:c)_{.space}_
 [_{.m-yellow}∡DEA_ ≅ _{.m-yellow}∡D'E'A'_](target:d)
 
@@ -1375,7 +1379,7 @@ The second important fact is that in similar polygons, all sides are scaled
 __proportionally__ by the scale factor of the corresponding dilation. If the
 scale factor is ${k}{k|1.5|0.5,2,0.1}, then
 
-{.text-center} `abs(AB) ×` ${k} `= abs(A'B')`_{.space}_`abs(BC) ×` ${k} `= abs(B'C')`  
+{.text-center} `abs(AB) ×` ${k} `= abs(A'B')`_{.space}_`abs(BC) ×` ${k} `= abs(B'C')`
 `abs(CD) ×` ${k} `= abs(C'D')`_{.space}_`abs(DE) ×` ${k} `= abs(D'E')`
 
 We can instead rearrange these equations and eliminate the scale factor

@@ -1,0 +1,394 @@
+// =============================================================================
+// Area and Shapes
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+@import "../shared/components/binary-swipe/binary-swipe";
+@import "../shared/components/relation/relation";
+
+x-geopad svg .paths path.geopoly-helper-edge { visibility: hidden; }
+
+button.reset {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: block;
+}
+
+figure svg {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+svg path, circle {
+  &.transparent-draggable { fill: transparent; }
+}
+
+// Section 1: Introduction
+
+#performance-1 {
+  x-geopad .paths {
+    path.rope {
+      stroke: $red;
+    }
+    path.performance-unit {
+      stroke-width: 2px;
+    }
+    path.performance-unit-selected {
+      fill: $green;
+    }
+  }
+}
+
+// step: grass-placement and strip-placement
+.rect-placement {
+
+  x-img {
+    position: absolute;
+  }
+
+  x-polypad .active .tile .outline {
+    stroke-width: 2px;
+  }
+
+}
+
+.grass-placement, .strip-placement {
+
+  width: 600px;
+  height: 350px;
+
+  x-img, div.field {
+    margin-left: 75px;
+  }
+
+  div.field {
+    width: 525px;
+    height: 350px;
+  }
+
+}
+
+// fill squares
+x-geopad .paths path.fill-square {
+  fill: $red;
+}
+
+// Section 2: Parallelograms
+
+#glass-area {
+  x-polypad {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+.parallelogram-selection svg path {
+  &.parallelogram.correct {
+    fill: $lime;
+  }
+  &.incorrect {
+    fill: $red;
+  }
+}
+
+// Section 3: Triangles
+
+#world-trade-center {
+  x-polypad svg path.height {
+    stroke: $lime;
+    stroke-width: 2px;
+  }
+}
+
+// for setupBaseHeight in functions.ts
+x-geopad.base-height .paths path {
+  &.edge {
+    color: $grey;
+    stroke-width: 4px;
+  }
+  &.edge-hover {
+    color: white;
+  }
+  &.selected-edge {
+    color: $red;
+  }
+  &.height {
+    stroke-dasharray: 6;
+  }
+}
+
+#area-3 {
+  x-geopad {
+    &.init {
+      opacity: 0;
+    }
+    &.vis {
+      opacity: 1;
+    }
+  }
+  x-polypad {
+    width: 600px;
+    height: 400px;
+  }
+}
+
+#triangle-selection svg path.vis {
+  opacity: 1 !important;
+}
+
+// handlePathing
+x-geopad svg .paths path {
+  &.angle-other {
+    color: $blue !important;
+  }
+  &.angle-perpendicular {
+    color: $red !important;
+  }
+}
+
+// Section 4: Polygons
+
+$voronoi-colors: #3c91e6, #ff6b6b, #ffe45e, #4ecdc4, #81366f, #c93818, #e2c312, #6bab90, #e4533a;
+
+x-geopad .paths path.voronoi {
+  /* each($voronoi-colors, {
+    &-#{index} {
+      fill: $value;
+      stroke: $grey;
+      stroke-width: 2px;
+    }
+  }); */
+}
+
+#voronoi-2 x-geopad svg .paths path {
+  &.edge {
+    stroke-width: 4px;
+    color: $grey;
+  }
+  &.edge-hover {
+    color: white;
+  }
+  &.selected-edge {
+    color: $red;
+  }
+  &.height {
+    stroke-dasharray: 6;
+  }
+}
+
+#populations x-geopad svg .paths path.population-pentagon {
+  stroke: white;
+  stroke-width: 3px;
+}
+
+#simple-tangram {
+
+  figure {
+
+    border-radius: 6px 6px 0 0;
+    background: $grey-background;
+
+    .simple-tangram-bg {
+      background: url('images/square.svg') center no-repeat;
+      background-size: contain;
+      opacity: 0.2;
+    }
+
+  }
+}
+
+#currys-paradox-1 {
+  svg.solution-outline {
+    stroke: $grey;
+    stroke-width: 1px;
+    fill: none;
+  }
+}
+
+#simple-tangram, #currys-paradox-1 {
+  .simple-tangram-bg, .solution-outline {
+    width: 100%;
+    position: absolute;
+  }
+  .simple-tangram-bg, .solution-outline, x-polypad { height: 450px; }
+}
+
+#currys-paradox-2 x-polypad { height: 225px; }
+
+#currys-paradox-3, #currys-paradox-4, #currys-paradox-5 {
+  x-polypad { height: 225px; }
+}
+
+#currys-paradox-3, #currys-paradox-5 {
+  x-slider {
+    button.play { display: none; }
+  }
+}
+
+#currys-paradox-6 x-polypad { height: 475px; }
+
+#currys-paradox-3, #currys-paradox-5, #currys-paradox-6 {
+  x-polypad svg g.tiles g.tile path.curry-outline {
+    stroke: $lime;
+    stroke-width: 4px;
+    fill: none;
+  }
+}
+
+// Section 5: Circles and Circumferences
+
+// For 'wheels' step
+.wheel-distances svg {
+  path {
+    &.distline, &.wheel-outline {
+      stroke: $red;
+      stroke-width: 3px;
+    }
+    &.wheel-outline {
+      fill: none;
+    }
+  }
+}
+
+$resizeable-stroke-width: 3px;
+
+// For 'encasement-estimation' step
+.tire-circumference {
+  width: 600px;
+  margin: auto;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 0;
+    width: 600px;
+    height: 300px;
+
+    path.shape-display {
+      fill: none;
+      stroke: $lime;
+      stroke-width: $resizeable-stroke-width;
+    }
+  }
+
+  img {
+    width: 300px;
+    height: 250px;
+    margin-left: 150px;
+    margin-top: 25px;
+  }
+}
+
+// ResizeableSquare
+svg path {
+  &.resize-edge {
+    stroke: $grey;
+    stroke-width: $resizeable-stroke-width;
+
+    &.resize-on-target {
+      stroke: $lime;
+    }
+  }
+
+  &.nesw-corner:hover {
+    cursor: nesw-resize;
+  }
+
+  &.nwse-corner:hover {
+    cursor: nwse-resize;
+  }
+}
+
+// For 'diameter-circumference' step
+x-geopad svg path[class="diameter-progress"] {
+  stroke: none;
+}
+
+.map {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  > svg {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+  }
+}
+
+// Section 6: Area of Circles
+
+// For 'slicing-1' step
+x-geopad svg path {
+  &.large-slice, &.medium-slice {
+    transition-property: transform, opacity;
+    transition-duration: 1.5s;
+
+    &.background-slice {
+      opacity: 0.5;
+    }
+  }
+
+  &[class="slice-guide"], &[class="slice-outline"] {
+    stroke: $grey;
+  }
+  &.slice-guide {
+    stroke-dasharray: 10;
+    stroke-linecap: unset;
+  }
+
+  &.pizza-outline {
+    stroke: white;
+  }
+
+  &.slice-dimension {
+    stroke: $lime;
+  }
+
+  &.slice-guide, &.pizza-outline, &.slice-outline, &.slice-dimension {
+    stroke-width: 4px;
+  }
+}
+
+
+// For 'slicing-2' step
+svg path {
+  &.slice-guide-2 {
+    stroke: $grey;
+    stroke-width: 1px;
+    stroke-dasharray: 3;
+  }
+  &.slice-radius {
+    stroke: $grey;
+    stroke-width: 1px;
+  }
+  &.slicing-progress {
+    stroke: $teal;
+    stroke-width: 1px;
+  }
+}
+
+.circle-area {
+  overflow: visible;
+  .circle path { stroke: white; stroke-width: 1.5px; }
+  .circle:first-child { opacity: 0.5; }
+
+  &.red .circle path {
+    fill: $red;
+    &:nth-child(2n) { fill: darken($red, 10%); }
+  }
+
+  &.blue .circle path {
+    fill: $blue;
+    &:nth-child(2n) { fill: darken($blue, 10%); }
+  }
+
+  .labels line, marker path { fill: none; stroke: $light-grey; stroke-linecap: round; }
+  .labels line { stroke-width: 2px; }
+  .labels text { fill: $light-grey; font-size: 16px; font-style: italic; }
+}

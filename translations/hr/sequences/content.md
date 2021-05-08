@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: u2vwpDVj5rU
+> color: "#F97E08"
+> level: Intermediate
+> next: fractals
 
 Mnoge profesije u kojima se koristi matematika usmjerene su na jedan određeni dio - _pronalaženje obrazaca_, te na mogućnost predviđanja budućnosti. Evo nekoliko primjera:
 
@@ -929,24 +933,24 @@ Zamislite da ste dobili par mladih zečeva, jednog mužjaka i jednu ženku. Oni 
             polygon(points="129 386 121 366 129 371 137 366 129 386")
             polygon(points="399 386 391 366 399 371 407 366 399 386")
             polygon(points="579 386 571 366 579 371 587 366 579 386")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
@@ -955,14 +959,14 @@ Zamislite da ste dobili par mladih zečeva, jednog mužjaka i jednu ženku. Oni 
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
-    
+
           .n(style="top: 0%") 1
           .n(style="top: 15%") 1
           .n(style="top: 32%") 2
           .n(style="top: 49%") 3
           .n(style="top: 66%") 5
           .n(style="top: 84%") 8
-    
+
       .legend(slot="legend") U prvom mjesecu, zečevi su jako mali i ništa se ne događa – ali oni jako brzo rastu.
       .legend(slot="legend") Nakon mjesec dana, zečevi su odrasli i mogu se početi razmnožavati…
       .legend(slot="legend") … i nakon još mjesec dana, dobit će svoj prvi par podmlatka. Sada imate dva para zečeva.
@@ -1066,7 +1070,7 @@ Naravno, to nije samo slučajnost. Postoji važan razlog zbog kojeg priroda voli
 
 ::: column(width=320)
 
-    x-select.spiral-tabs   
+    x-select.spiral-tabs
       div(data-value="male") Mužjaci
       div(data-value="female") Ženke
     .bees
@@ -1203,7 +1207,7 @@ Pomaknite klizač desno da biste vidjeli kako biljka raste. Uočite kako se svak
       while i < 40
         path(d="M166,158A20,20,0,0,1,150,150a20,20,0,0,1,32,0A20,20,0,0,1,166,158Z")
         - i += 1
-    
+
     x-slider(steps=39 speed=0.5)
 
 :::
@@ -1371,7 +1375,7 @@ Da bismo utvrdili je li broj [prost](gloss:prime), moramo pronaći sve njegove [
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
     - total = function(a) { return a.reduce((a, c) => a + c, 0); }
-    
+
     table.grid.perfect-table
       tr
         td: strong Number
@@ -1584,7 +1588,7 @@ U nastavku možete vidjeti piramidu brojeva koja je nastala pomoću jednostavnog
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid(style="width: 560px")
       - var i = 0;
       while i < 13
@@ -1641,7 +1645,7 @@ U prethodnim smo odjeljcima vidjeli mnogo različitih matematičkih nizova. Mnog
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid.sums(style="width: 760px")
       - var i = 0;
       while i < 17
@@ -1729,7 +1733,7 @@ Neki obrasci Pascalovog trokuta ne mogu se tako lako prepoznati. Na donjem dijag
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid#pascal-select(style="width: 340px")
       - var i = 0;
       while i < 8
@@ -1751,7 +1755,7 @@ Ručno bojanje svake ćelije traje dugo, ali ovdje možete vidjeti što se doga�
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid.small(style="width: 760px")
       - var i = 0;
       while i < 25

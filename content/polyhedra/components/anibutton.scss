@@ -1,0 +1,27 @@
+// =============================================================================
+// Anibutton Component
+// (c) Mathigon
+// =============================================================================
+
+
+x-anibutton {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  span { display: inline-block; }
+
+  svg {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -80px;
+    pointer-events: none;
+    fill: none;
+    stroke: currentColor;
+    display: block;
+    max-width: none;
+  }
+}

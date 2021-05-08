@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
 
 Wenn du dich in der Natur umschaust, hast du vielleicht komplizierte Pflanzen wie diese bemerkt:
 

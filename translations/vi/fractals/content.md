@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: ohygDnKg5mg
+> color: "#8032AD"
+> level: Advanced
+> next: chaos
 > translated: auto
 
 Khi nhìn xung quanh thiên nhiên, bạn có thể nhận thấy những loài thực vật phức tạp như thế này:

@@ -4,6 +4,9 @@
 
 > id: intro-0
 > section: introduction
+> color: "#A7208A"
+> level: Intermediate
+> next: probability
 > translated: auto
 
 Svakodnevno smo okruženi bezbroj veza i mreža: prometnice i željezničke pruge, telefonske linije, internet, elektronički sklopovi, pa čak i molekularne veze. Postoje čak _društvene mreže_ između prijatelja i obitelji. Možete li smisliti još neke primjere?
@@ -413,27 +416,27 @@ Svi ravni planeri dijele ravninu na koju su nacrtani, na brojna područja koja s
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Vrhovi  
-[[5]] Lica  
-[[10]] Rubovi  
+{.text-center} [[6]] Vrhovi
+[[5]] Lica
+[[10]] Rubovi
 _{span.euler-sum} 11 vrhova + lica_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] vrhovi  
-[[7]] Lica  
-[[14]] Rubovi  
+{.text-center} [[8]] vrhovi
+[[7]] Lica
+[[14]] Rubovi
 _{span.euler-sum} 15 vrhova + lica_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] vrhovi  
-[[13]] Lica  
-[[24]] Rubovi  
+{.text-center} [[12]] vrhovi
+[[13]] Lica
+[[24]] Rubovi
 _{span.euler-sum} 25 vrhova i lica_
 
 :::
@@ -457,7 +460,7 @@ Kada uspoređujete ove brojeve, primijetit ćete da je broj rubova uvijek [[jeda
           circle.node(cx=150 cy=100 r=7 style="display: none")
           circle.node(cx=270 cy=170 r=7 style="display: none")
           circle.node(cx=390 cy=100 r=7 style="display: none")
-    
+
         .euler-table
           table.grid.table-small
             tr
@@ -469,7 +472,7 @@ Kada uspoređujete ove brojeve, primijetit ćete da je broj rubova uvijek [[jeda
               td.xv 1
               td.xe 0
           p.no-voice #[strong.blue.xf 0] + #[strong.green.xv 1] &nbsp;=&nbsp; #[strong.red.xe 0] + 1
-    
+
       .legend(slot="legend") The simplest graph consists of a single vertex. We can easily check that Euler’s equation works.
       .legend(slot="legend") Let us add a new vertex to our graph. We also have to add an edge, and Euler’s equation still works.
       .legend(slot="legend") If we want to add a third vertex to the graph we have two possibilities. We could create a small triangle: this adds one vertex, one face and two edges, so Euler’s equation still works.
@@ -507,27 +510,27 @@ To znači da mogu koristiti Eulerovu formulu ne samo za ravnine grafova već i z
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
-{.caption} __Ikozaedar__  
-__{.blue} 20__ Lica  
-__{.green} 12__ Vrhovi  
+{.caption} __Ikozaedar__
+__{.blue} 20__ Lica
+__{.green} 12__ Vrhovi
 __{.red} 30__ Rubovi
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Rhombicosidodekahedron__  
-__{.blue} 62__ Lica  
-__{.green} 60__ Vrhovi  
+{.caption} __Rhombicosidodekahedron__
+__{.blue} 62__ Lica
+__{.green} 60__ Vrhovi
 __{.red} 120__ Rubovi
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
-{.caption} __Urezan ikosahedron__  
-__{.blue} 32__ Lica (12 crnih, 20 bijelih)  
-__{.green} 60__ Vrhovi  
+{.caption} __Urezan ikosahedron__
+__{.blue} 32__ Lica (12 crnih, 20 bijelih)
+__{.green} 60__ Vrhovi
 __{.red} 90__ Rubovi
 
 :::
@@ -559,7 +562,7 @@ Pri bojanju karte američkih država 50 boja je očigledno dovoljno, ali je potr
     .four-colour-icons
       for i in [1, 2, 3, 4, 5, 6, 7]
         .four-colour-icon(tabindex=0)
-    
+
     x-tabbox.four-colours.full-width
       .tab
         h3 United States #[span.check(when="map-0")]
