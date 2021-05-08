@@ -799,7 +799,7 @@ gleich der Summe der Quadrate der anderen beiden Seiten. Mit anderen Worten,
 _{span.circled.yellow}`c^2`_
 
 _Umgekehrt gilt auch: Wenn für die drei Seiten eines Dreiecks
-a*{sup}2* + b*{sup}2* = c*{sup}2* gilt, dann muss es [[rechtwinklig|spitzwinklig,|stumpfwinklig]] sein._
+`a^2 + b^2 = c^2` gilt, dann muss es [[rechtwinklig|spitzwinklig,|stumpfwinklig]] sein._
 ::: column(width=300)
 
     x-geopad(width=300): svg
@@ -836,17 +836,16 @@ Wand hinauf?
 Beachte, dass ein rechtwinkliges Dreieck gebildet wird, das aus der Leiter, der Wand und
 dem Boden besteht. Mit dem Satz des Pythagoras können wir das so schreiben:
 
-
     table.eqn-system
       tr
-        <td><mrow class="b m-green"><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow class="b m-blue"><msup><mn>1</mn><mn>2</mn></msup></mrow></td>
-        <td><mo>=</mo><mrow class="b m-red"><msup><mn>6</mn><mn>2</mn></msup></mrow></td>
+        td.md `class(h^2,"b m-green") + class(1^2,"b m-blue")`
+        td.md `= class(6^2,"b m-red")`
       tr
-        <td><mo>⇒</mo><mrow class="b m-green"><msup><mi>h</mi><mn>2</mn></msup></mrow></td>
-        <td><mo>=</mo><x-blank-input solution="35"></x-blank-input></td>
+        td.md `⇒ class(h^2,"b m-green")`
+        td.md `= input(35)`
       tr.reveal(when="blank-0")
-        <td><mo>⇒</mo><mrow class="b m-green"><mi>h</mi></mrow></td>
-        <td><mo>=</mo><msqrt><mn>35</mn></msqrt><mo>=</mo><mn>5.92m</mn></td>
+        td.md `⇒ class(h, "b m-green")`
+        td.md `= sqrt(35) = "5.92m"`
 
 :::
 
@@ -871,16 +870,16 @@ drei verschiedene Beispiele, die jeweils eine andere Strategie verwenden:
 
 ::: column.grow
 
-Schau dir die Abbildung rechts an. Das Quadrat hat die Seitenlänge _a_ + _b_,
+Schau dir die Abbildung rechts an. Das Quadrat hat die Seitenlänge `a + b`,
 und enthält [vier rechtwinklige Dreiecke](target:triangle), sowie ein
-[kleineres Quadrat](target:square) der Größe [[<msup><mi>c</mi><mn>2</mn></msup>|_a_ - _b_|_a_ + _b_]].
+[kleineres Quadrat](target:square) der Größe [[`c^2`|`a - b`|`a + b`]].
 
 {.reveal(when="blank-0")} Nun ordnen wir die Dreiecke im Quadrat neu an. Das
 Ergebnis enthält noch immer die vier rechtwinkligen Dreiecke sowie zwei Quadrate
-der Größe [[<msup><mi>a</mi><mn>2</mn></msup> and <msup><mi>b</mi><mn>2</mn></msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
+der Größe [[`a^2` und `b^2`|`c^2`|`(a + b)^2`]].
 
 {.reveal(when="blank-1")} Vergleicht man die Größe des roten Bereichs
-_{span.hover-target}vor_ und _{span.hover-target}nach_ der Umstellung, so
+[vor](action:set(0)) und [nach](action:set(100)) der Umstellung, so
 sieht man, dass
 
 {.text-center.reveal(when="blank-1")} `a^2 + b^2 = c^2`.
@@ -932,24 +931,18 @@ Hier haben wir die gleiche Skizze wie zuvor, aber diesmal verwenden wir _Algebra
 anstatt einer _Neuanordnung_, um den Satz des Pythagoras zu beweisen.
 
 Das große Quadrat hat eine Seitenlänge von `a + b` und eine Fläche
-[[(_a_ + _b_)<sup>2</sup>|_a_<sup>2</sup> + _b_<sup>2</sup>|_c_<sup>2</sup>]].
+[[`(a + b)^2`|`a^2 + b^2`|`c^2`]].
 
-{.reveal(when="blank-2")} Es besteht aus [vier Dreiecken](target:triangle), mit einer Fläche von
-jeweils [[<mfrac><mn>1</mn><mn>2</mn></mfrac>_ab_|(_a_ × _b_)<sup>2</sup>|<mfrac><mn>1</mn><mn>2</mn></mfrac>(_a_ + _b_)]],
-und [ein Quadrat](target:square) der Fläche [[_c_<sup>2</sup>|(_a_ + _b_)<sup>2</sup>|_a_ × _b_]].
+{.reveal(when="blank-2")} Es besteht aus [{.blue}vier Dreiecken](target:triangle), mit einer Fläche von
+jeweils [[`1/2 a b`|`(a + b)^2`|`1/2 (a + b)`]],
+und [ein Quadrat](target:square) der Fläche [[`c^2`|`(a + b)^2`|`a × b`]].
 
 {.reveal(when="blank-3 blank-4")} Wenn wir alle diese Informationen zusammenführen, bekommen wir folgende Gleichung:
 
-    table.eqn-system.reveal(when="blank-3 blank-4")
-      tr
-        <td><msup><mfenced><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></mfenced><mn>2</mn></msup></td>
-        <td><mo>=</mo><mn>4</mn><mo>×</mo><mfrac><mn>1</mn><mrow><mn>2</mn></mfrac><mi>a</mi><mi>b</mi></mrow><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup></td>
-      tr
-        <td><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mi>a</mi><mi>b</mi></mrow><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><mrow><mn>2</mn><mi>a</mi><mi>b</mi></mrow><mo>+</mo><msup><mi>c</mi><mn>2</mn></msup></td>
-      tr
-        <td><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></td>
+|          `(a+b)^2` | `= 4 × 1/2 a b + c^2` |
+| `a^2 + 2a b + b^2` | `= 2a b + c^2`        |
+|        `a^2 + b^2` | `= c^2`               |
+{.eqn-system.reveal(when="blank-3 blank-4")}
 
 {.reveal(when="blank-3 blank-4")} Und wieder erhalten wir den Satz des Pythagoras.
 _{span.qed}_
@@ -1038,14 +1031,9 @@ Es gilt der WWW-Satz, dh alle drei Dreiecke sind [[ähnlich|kongruent|rechtwinkl
 {.reveal(when="blank-5")} Jetzt können wir die Gleichungen verwenden, die wir bereits über
 ähnliche Vielecke kennen:
 
-    table.proof-table.reveal(when="blank-5")
-      tr
-        td
-          <p class="text-center"><mrow class="step-target pill blue" data-to="xa"><mfrac><mi>x</mi><mi>b</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill red" data-to="ac"><mfrac><mi>b</mi><mi>c</mi></mfra></mrow></p>
-          <p class="text-center"><mi class="step-target pill blue" data-to="x">x</mi><mo>=</mo><mfrac><msup><mi>b</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
-        td
-          <p class="text-center"><mrow class="step-target pill green" data-to="yb"><mfrac><mi>y</mi><mi>a</mi></mfra></mrow><mo>=</mo><mrow class="step-target pill yellow" data-to="bc"><mfrac><mi>a</mi><mi>c</mi></mfra></mrow></p>
-          <p class="text-center"><mi class="step-target pill green" data-to="y">y</mi><mo>=</mo><mfrac><msup><mi>a</mi><mn>2</mn></msup><mi>c</mi></mfra></p>
+    table.proof-table.reveal(when="blank-5"): tr
+      td.md `pill(x/a, "blue", "xa") = pill(a/c, "red", "ac")`<br>`pill(x, "blue", "x") = (a^2)/c`
+      td.md `pill(y/b, "green", "yb") = pill(b/c, "yellow", "bc")`<br>`pill(y, "green", "y") = (b^2)/c`
 
 {.r.reveal(when="blank-5")} _{span.next-step} Weiter_
 
@@ -1098,16 +1086,10 @@ Wenn wir diese beiden Linien einzeichnen, erhalten wir ein [rechtwinkliges Dreie
 
 {.reveal(when="next-0")} Mit Pythagoras,
 
-    table.eqn-system.reveal(when="next-0")
-      tr
-        <td><msup><mi>d</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><msup><mn class="step-target pill blue var" data-to="dx">${b.x-a.x}</mn><mn>2</mn></msup><mo>+</mo><msup><mn class="step-target pill red var" data-to="dy">${b.y-a.y}</mn><mn>2</mn></msup></td>
-      tr
-        <td><msup><mi>d</mi><mn>2</mn></msup></td>
-        <td><mo>=</mo><mn class="var">${(b.x-a.x)*(b.x-a.x) + (b.y-a.y)*(b.y-a.y)}</mn></td>
-      tr
-        <td><mi>d</mi></td>
-        <td><mo>=</mo><msqrt><mn class="var">${(b.x-a.x)**2+(a.y-b.y)**2}</mn></msqrt><mo>=</mo><mn class="var">${round(distance(a,b),4)}</mn></td>
+| `d^2` | `= pill(var("b.x-a.x"),"blue","dx")^2 + pill(var("b.y-a.y"),"red","dy")^2`   |
+| `d^2` | `= var("(b.x-a.x)**2 + (b.y-a.y)**2")`                                       |
+| `d`   | `= sqrt(var("(b.x-a.x)**2 + (b.y-a.y)**2")) = var("round(distance(a,b),4)")` |
+{.eqn-system.reveal(when="next-0")}
 
 ::: column(width=300)
 
