@@ -4,6 +4,8 @@
 
 > section: introduction
 > sectionStatus: dev
+> color: "#8D2CA1"
+> level: Foundations
 
 TODO
 

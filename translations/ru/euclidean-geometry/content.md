@@ -5,6 +5,9 @@
 > id: thales
 > goals: p1 p2 p3 move
 > section: introduction
+> color: "#0F82F2"
+> level: Intermediate
+> next: transformations
 
 ::: column.grow
 
@@ -115,7 +118,7 @@
 
 {.r} В Матигоне [большие закрашенные точки](target:move) обозначают интерактивные точки, которые вы можете перемещать, а [маленькие незакрашенные](target:no-move) обозначают фиксированные точки, которые вы не можете перемещать. _{button.next-step} Продолжить_
 
-::: 
+:::
 
 ---
 > id: lines
@@ -135,7 +138,7 @@
 
 {.r} Прямые обозначаются строчными буквами, такими как _a_ или _b_. Мы также можем ссылаться на них, используя две точки, лежащие на прямой, например <mover><mi> <span class="math">PQ</span> </mi><mo value="↔"> <span class="math">↔</span> </mo></mover> или <mover><mi> <span class="math">QP</span> </mi><mo value="↔"> <span class="math">↔</span> </mo></mover> , Порядок точек не имеет значения. _{button.next-step} Продолжить_
 
-::: 
+:::
 
 ---
 > id: segments
@@ -154,7 +157,7 @@
 
 {.r} [__Отрезок__](gloss:line-segment) является частью линии, заключенный между двумя точками. Мы можем обозначать их как прямые, но без стрелок над буквами: `bar(AB)` или `bar(BA)`. Порядок букв снова не имеет значения. _{button.next-step} Продолжить_
 
-::: 
+:::
 
 ---
 > id: rays
@@ -175,7 +178,7 @@
 
 {.r} В обозначении лучей стрелка показывает направление, в котором луч простирается до бесконечности, например `vec(AB)`. На этот раз порядок точек __имеет значение__. _{button.next-step} Продолжить_
 
-::: 
+:::
 
 ---
 > id: circles
@@ -186,7 +189,7 @@
       circle.move(name="a" cx=50 cy=60)
       path(x="segment(a,a.add(point(1,1).unitVector.scale(40)))" target="radius")
       path.red(x="circle(a,40)")
-    
+
       circle.move(name="b" cx=170 cy=90)
       path(x="segment(b,b.shift(60,0))" target="radius")
       path.blue(x="circle(b,60)")
@@ -195,7 +198,7 @@
 
 {.r} [__Окружность__](gloss:circle) - это набор точек, которые располагаются на одинаковом [расстоянии](target:radius) от точки в центре. Это расстояние называется [__радиусом__](gloss:circle-radius). _{button.next-step} Продолжить_
 
-::: 
+:::
 
 ---
 > id: congruence
@@ -291,7 +294,7 @@
 
 {.reveal(when="blank-0")} На диаграммах мы обозначаем параллельные линии, ставя между ними две вертикальные черты. В этом примере __{.m-red} `a ∥ b ∥ c`__ и __{.m-yellow} `d ∥ e`__. Символ `∥` просто означает, что прямая __«параллельна»__ другой прямой.
 
-::: 
+:::
 
 ---
 > id: perpendicular
@@ -309,7 +312,7 @@
 
 {.r} В этом примере мы бы написали _{.b.m-blue} a_ `⊥` _{.b.m-green} b_. Символ `⊥` означает, что прямые __«перпендикулярны»__.
 
-::: 
+:::
 
 ---
 > id: euclid
@@ -330,7 +333,7 @@
 
 {.caption} Евклид Александрийский
 
-::: 
+:::
 
 ::: column(width=220)
 
@@ -339,7 +342,7 @@
       circle.move(name="b" cx=190 cy=30 target="1_point")
       path.red(x="segment(a,b)" target="1_line")
 
-{.text-center } __Первая аксиома__  
+{.text-center } __Первая аксиома__
 Вы можете соединить любые [две точки](target:1_point), только одним [отрезком](target:1_line).
 
 ::: column(width=220)
@@ -350,7 +353,7 @@
       path.red(x="line(c,d)")
       path(x="segment(c,d)" target="2_segment")
 
-{.text-center } __Вторая аксиома__  
+{.text-center } __Вторая аксиома__
 Вы можете продлить любой [отрезок](target:2_segment) до <br> бесконечной прямой.
 
 ::: column(width=220)
@@ -361,7 +364,7 @@
       path(x="segment(e,f)" label="r" target="3_radius")
       path.red(x="circle(e,distance(e,f))" target="3_circle")
 
-{.text-center } __Третья аксиома__  
+{.text-center } __Третья аксиома__
 Имея произвольную [точку _P_](target:3_center) и расстояние [_r_](target:3_radius), вы можете нарисовать [окружность](target:3_circle) с центром _P_ и радиусом _r_.
 
 ::: column(width=220)
@@ -373,7 +376,7 @@
       path.fill.red(x="angle(xb,x,xa)")
       path.dark(x="segment(x,xa)")
       path.dark(x="segment(x,xb)")
-    
+
       circle.move(name="y" cx=190 cy=60)
       circle(hidden name="ya" x="y.translate(point(110,80).subtract(y).rotate(pi/4).unitVector.scale(50))")
       circle(hidden name="yb" x="y.translate(point(110,80).subtract(y).rotate(-pi/4).unitVector.scale(50))")
@@ -381,7 +384,7 @@
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
-{.text-center } __Четвертая аксиома__  
+{.text-center } __Четвертая аксиома__
 Любые два прямых угла равны между собой.
 
 ::: column(width=220)
@@ -391,7 +394,7 @@
       path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
       path.red(x="line5.parallel(g)" target="5_parallel")
 
-{.text-center } __Пятая аксиома__  
+{.text-center } __Пятая аксиома__
 Имея [прямую _L_](target:5_line) и [точку _P_](target:5_point) не принадлежащую _L_, можно построить ровно [одну прямую](target:5_parallel), проходящую через _P_ и [параллельную](gloss:parallel) прямой _L_.
 
 :::
@@ -481,7 +484,7 @@
 
 {.text-center} __Циркуль__ позволяет нарисовать круг заданного радиуса с центром в заданной точке (как в Аксиоме 3).
 
-::: 
+:::
 
 ---
 > id: construction
@@ -500,7 +503,7 @@
 
 {.caption} Греческий математик [Архимед](bio:archimedes) изучал геометрию, в тот момент, когда он был убит римскими захватчиками. Его последние слова были «не тронь моих чертежей».
 
-::: 
+:::
 
 ---
 > id: equilateral
@@ -520,7 +523,7 @@
 
 {.reveal(when="segment1 segment2")} Теперь [эти две стороны](target:a) и [эти две стороны](target:b) являются [[радиусами|диаметрами|периметром]] наших двух окружностей, _{span.reveal(when="blank-0")} поэтому они должны иметь одинаковую длину. Другими словами, все три стороны треугольника являются конгруэнтными - и поэтому мы действительно получили равносторонний треугольник._
 
-::: 
+:::
 
 ---
 > id: perp-bisector
@@ -568,21 +571,21 @@
 
     figure: img(src="images/impossible-1.svg" width=200 height=180)
 
-{.text-center} __{.m-red} Деление угла на три равные части__   
+{.text-center} __{.m-red} Деление угла на три равные части__
 Мы уже знаем, как делить углы. Однако невозможно аналогичным образом разделить угол на __три__ равные части.
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-2.svg" width=200 height=180)
 
-{.text-center} __{.m-blue} Удвоение куба__  
+{.text-center} __{.m-blue} Удвоение куба__
 Невозможно построить ребро куба, объем которого ровно в два раза больше первоначального.
 
 ::: column(width=220)
 
     figure: img(src="images/impossible-3.svg" width=200 height=180)
 
-{.text-center} __{.m-green} Преобразование круга в квадрат__  
+{.text-center} __{.m-green} Преобразование круга в квадрат__
 Невозможно построить квадрат, который имеет точно такую же площадь, как и заданный круг.
 
 :::
@@ -643,11 +646,11 @@ TODO
 
     x-img(src="images/origami/origami-6.jpg" lightbox credit="© Meenakshi Mukerji, Dennis Walker" width=186 height=200)
 
-::: 
+:::
 
 ---
 > id: crane
-> goals: video 
+> goals: video
 
 Создание таких фигур может занять много времени, и важно быть предельно точным. Но немного потренировавшись, вы можете сделать это сами!
 
@@ -803,7 +806,7 @@ TODO
 
 Они также могут быть использованы для оказания помощи при стихийных бедствиях, чтобы быстро предоставить аварийным транспортным средствам проезд после землетрясений или цунами. Это изображение является прототипом, разработанным в университете Хиросимы в Японии.
 
-::: 
+:::
 
 ---
 

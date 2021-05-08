@@ -2,28 +2,11 @@
 
 ## Einführung
 
-    mixin dice(n)
-      svg(width=20, height=20)
-        if n==1 || n==3 || n==5
-          circle(r=2, cx=10, cy=10)
-        if n==2 || n==3 || n==4 || n==5
-          circle(r=2, cx=5, cy=5)
-        if n==4 || n == 5
-          circle(r=2, cx=5, cy=15)
-        if n==4 || n == 5
-          circle(r=2, cx=15, cy=5)
-        if n==2 || n==3 || n==4 || n == 5
-          circle(r=2, cx=15, cy=15)
-        if n == 6
-          circle(r=2, cx=5, cy=4)
-          circle(r=2, cx=5, cy=10)
-          circle(r=2, cx=5, cy=16)
-          circle(r=2, cx=15, cy=4)
-          circle(r=2, cx=15, cy=10)
-          circle(r=2, cx=15, cy=16)
-
 > id: intro
 > section: introduction
+> color: "#CD0E66"
+> level: Intermediate
+> next: statistics
 
 Wahrscheinlichkeiten und Prognosen findet sich überall in unserem Alltag,
 von der Wettervorhersage bis hin zu Spielen, Versicherungen oder Wahlumfragen. In der Geschichte der Mathematik ist die
@@ -211,6 +194,7 @@ gleich wahrscheinlich. Wenn wir zwei Würfel auf einmal werfen und ihre Augenzah
 Ergebnisse im Bereich von [[2]] bis [[12]]. In diesem Fall sind sie jedoch nicht alle gleich
 wahrscheinlich.
 
+    include mixins
     p.md Manche Ergebnisse können nur auf eine Weise erzielt werden (um #[span.dice.outline 12] zu erhalten muss man #[span.dice #[+dice(6)]] + #[span.dice #[+dice(6)]] würfeln) während andere auf mehrere verschiedene Arten zustande kommen können (um #[span.dice.outline 5] zu erhalten muss man #[span.dice #[+dice(1)]] + #[span.dice #[+dice(4)]] oder #[span.dice #[+dice(2)]] + #[span.dice #[+dice(3)]] würfeln).
 
 ---
@@ -218,6 +202,7 @@ wahrscheinlich.
 
 Diese Tabelle zeigt alle möglichen Ergebnisse:
 
+    include mixins
     table.dice-table
       tr
         td #[.dice.outline 2]
@@ -423,7 +408,7 @@ beiden anderen Türen nur Ziegen. Wählen Sie jetzt eine aus, um Ihre Wahl zu tr
 eine andere Tür wählen..
 
     p.text-center.monty-reveal: button.btn.sure Ich bin mir sicher!
-  
+
 {.monty-reveal} Eine großartige Wahl, aber lassen Sie mich Ihnen das Leben ein wenig leichter machen.
 Ich öffne eine der anderen Türen mit einer Ziege, so dass Ihnen nur noch zwei Türen
 zur Auswahl stehen. Wollen Sie bei Ihrer Wahl bleiben, oder wollen

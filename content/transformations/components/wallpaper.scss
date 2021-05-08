@@ -1,0 +1,64 @@
+// =============================================================================
+// Wallpaper Component
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../../node_modules/@mathigon/studio/frontend/styles/variables";
+
+
+x-wallpaper {
+  display: block;
+  position: relative;
+
+  canvas {
+    width: 100%;
+    height: auto;
+    background: $grey-background;
+    border-radius: 6px;
+    @media screen and (max-width: $browser-small) { border-radius: 0; }
+  }
+
+  x-select.tabs { position: relative; z-index: 1; }
+  x-select.tabs .group {
+    width: 36px;
+    text-align: center;
+    padding: 0;
+    @media screen and (max-width: 740px) { width: 30px; }
+    @media screen and (max-width: 1020px) and (min-width: $browser-medium) { width: 30px; }
+  }
+
+  .colours {
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    background: rgba($grey-background, 90%);
+    border-top-left-radius: 12px;
+    padding: 4px 0;
+  }
+
+  .colour {
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    border-radius: 30px;
+    margin: 4px 8px;
+    opacity: 0.4;
+    border: 2px solid $grey;
+    box-sizing: border-box;
+    &.active { border-width: 4px; opacity: 1; }
+    @media screen and (max-width: 640px) { width: 24px; height: 24px; margin: 2px 4px; }
+  }
+
+  .colour:nth-child(1) { background: $red; }
+  .colour:nth-child(2) { background: $orange; }
+  .colour:nth-child(3) { background: $yellow; }
+  .colour:nth-child(4) { background: $lime; }
+  .colour:nth-child(5) { background: $green; }
+  .colour:nth-child(6) { background: $teal; }
+  .colour:nth-child(7) { background: $blue; }
+  .colour:nth-child(8) { background: $purple; }
+
+  .btn-row { position: absolute; bottom: 10px; left: 10px }
+}

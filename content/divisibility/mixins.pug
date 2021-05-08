@@ -1,0 +1,28 @@
+mixin grid(n, fn)
+  .number-grid
+    - var i = 1
+    while i <= n
+      .number-cell= i
+        if fn
+          - var badge = fn(i)
+          if badge
+            .number-badge= badge
+      - i += 1
+
+mixin divisor-table(divisors, pairs)
+  - var len = divisors.length
+  - var last = divisors[len-1]
+  table.divisor-table
+    tr
+      td.td-border-right(width="24")= last
+      for i in divisors
+        td.divisor-number(width="24" data-display="visibility")= i + (i === last ? '' : ',')
+    for i in pairs
+      tr
+        td
+        if i
+          td(colspan=i)
+        td(colspan=len - 2 * i): .divisor-pair(style="height: " +
+        (len / 2 - i) + "00%" data-display="visibility")
+        if i
+          td(colspan=i)

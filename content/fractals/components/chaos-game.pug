@@ -12,8 +12,8 @@
       circle.move.yellow(name="x2")
       circle.move.blue(name="x3")
       circle.move.purple(name="x4")
-    x-icon-btn.var(icon="restart" title="Clear canvas" @click="game.reset()")
-    x-icon-btn.var(icon="download" title="Download image" @click="download()" style="top: 54px")
+    button.icon-btn.var(title="Clear canvas" @click="game.reset()"): x-icon(name="restart")
+    button.icon-btn.var(title="Download image" style="top: 54px" @click="download()"): x-icon(name="download")
 
   .chaos-rules.var
     label.form-field(style="width: 120px")

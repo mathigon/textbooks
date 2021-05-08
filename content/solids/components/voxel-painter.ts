@@ -4,12 +4,11 @@
 // =============================================================================
 
 
-/// <reference types="THREE"/>
 import {Obj} from '@mathigon/core';
 import {animate, canvasPointerPosition, CustomElementView, register, slide} from '@mathigon/boost';
 import {Angle, Point} from '@mathigon/euclid';
 
-import {create3D, Graphics3D, loadTHREE} from '../../shared/components/webgl';
+import {create3D, Graphics3D, loadTHREE} from '../../shared/components/webgl/webgl';
 import {BLUE, GREEN, ORANGE, PURPLE, RED, YELLOW} from '../../shared/constants';
 import {clamp, nearlyEquals} from '@mathigon/fermat';
 
@@ -38,12 +37,12 @@ export class VoxelPainter extends CustomElementView {
     voxelMaterial: THREE.Material,
     outlineGeometry: THREE.Geometry,
     outlineMaterial: THREE.LineBasicMaterial,
-    voxels: THREE.Mesh<THREE.Geometry>[],
+    voxels: THREE.Mesh[],
     objectsOnWhichVoxelsCanBePlaced: THREE.Object3D[],
     scene: Graphics3D,
   ) => any;
 
-  private voxels: THREE.Mesh<THREE.Geometry>[] = [];
+  private voxels: THREE.Mesh[] = [];
   private voxelGeo!: THREE.BoxGeometry;
   private voxelMaterial!: THREE.MeshLambertMaterial;
   private sidesMaterial?: THREE.MeshLambertMaterial;
@@ -77,18 +76,18 @@ export class VoxelPainter extends CustomElementView {
   private playingFieldMin!: THREE.Vector3;
   private playingFieldMax!: THREE.Vector3;
 
-  private lastVoxelIntersectedByEraser?: THREE.Mesh<THREE.Geometry>;
+  private lastVoxelIntersectedByEraser?: THREE.Mesh;
 
   async ready() {
     await loadTHREE();
 
-    class Voxel extends THREE.Mesh<THREE.BoxGeometry> {
+    class Voxel extends THREE.Mesh {
       constructor(
           voxelGeo: THREE.BoxGeometry,
           voxelMaterial: THREE.Material,
           outlineGeometry: THREE.Geometry,
           outlineMaterial: THREE.LineBasicMaterial,
-          voxels: THREE.Mesh<THREE.Geometry>[],
+          voxels: THREE.Mesh[],
           objectsOnWhichVoxelsCanBePlaced: THREE.Object3D[],
           scene: Graphics3D,
       ) {
@@ -109,7 +108,7 @@ export class VoxelPainter extends CustomElementView {
         voxelMaterial: THREE.Material,
         outlineGeometry: THREE.Geometry,
         outlineMaterial: THREE.LineBasicMaterial,
-        voxels: THREE.Mesh<THREE.Geometry>[],
+        voxels: THREE.Mesh[],
         objectsOnWhichVoxelsCanBePlaced: THREE.Object3D[],
         scene: Graphics3D,
     ) => {
@@ -174,7 +173,7 @@ export class VoxelPainter extends CustomElementView {
 
     const directionalLight = new THREE.DirectionalLight(0xffffff);
     directionalLight.position.set(1, 0.75, 0.5).normalize();
-    camera.updateMatrixWorld();
+    camera.updateMatrixWorld(false);
     camera.worldToLocal(directionalLight.position);
     camera.add(directionalLight);
 
@@ -196,7 +195,7 @@ export class VoxelPainter extends CustomElementView {
         const c = new THREE.Color(faceColours[i]);
         this.voxelGeo.faces[i * 2].color = this.voxelGeo.faces[i * 2 + 1].color = c;
       }
-      this.sidesMaterial.vertexColors = true;
+      (this.sidesMaterial.vertexColors as any) = true;
       this.sidesMaterial.color.setRGB(1, 1, 1);
     }
 
@@ -284,8 +283,8 @@ export class VoxelPainter extends CustomElementView {
               }
             }
             if (!nothingInThisDirection) {
-              this.voxels[i].geometry.faces[k * 2 + 0].color.setRGB(0.4, 0.4, 0.4);
-              this.voxels[i].geometry.faces[k * 2 + 1].color.setRGB(0.4, 0.4, 0.4);
+              (this.voxels[i].geometry as THREE.Geometry).faces[k * 2 + 0].color.setRGB(0.4, 0.4, 0.4);
+              (this.voxels[i].geometry as THREE.Geometry).faces[k * 2 + 1].color.setRGB(0.4, 0.4, 0.4);
             }
           }
         }
@@ -357,7 +356,7 @@ export class VoxelPainter extends CustomElementView {
               this.v1.add(this.placingStart);
               for (let i = 0; i < 3; i++) {
                 this.placingHelpers[i].position.copy(this.v1);
-                this.placingHelpers[i].updateMatrixWorld();
+                this.placingHelpers[i].updateMatrixWorld(false);
               }
             }
           }
@@ -535,7 +534,7 @@ export class VoxelPainter extends CustomElementView {
         }
 
         const currentDistFromCamera = camera.position.length();
-        camera.updateMatrixWorld();
+        camera.updateMatrixWorld(false);
         this.v1.set(0, 0, -currentDistFromCamera);
         camera.localToWorld(this.v1);
         camera.position.sub(this.v1);
@@ -574,9 +573,9 @@ export class VoxelPainter extends CustomElementView {
       }
 
       if (this.mouseControlMode === 'erasing') {
-        let voxelIntersectedByEraser: THREE.Mesh<THREE.Geometry>|undefined = undefined;
+        let voxelIntersectedByEraser: THREE.Mesh|undefined = undefined;
         const intersections = this.pointerRaycaster.intersectObjects(this.voxels);
-        if (intersections.length > 0) voxelIntersectedByEraser = intersections[0].object as THREE.Mesh<THREE.Geometry>;
+        if (intersections.length > 0) voxelIntersectedByEraser = intersections[0].object as THREE.Mesh;
 
         if (this.lastVoxelIntersectedByEraser && this.voxels.indexOf(this.lastVoxelIntersectedByEraser) !== -1 && this.lastVoxelIntersectedByEraser !== voxelIntersectedByEraser) {
           this.scene.remove(this.lastVoxelIntersectedByEraser);
@@ -592,7 +591,7 @@ export class VoxelPainter extends CustomElementView {
 
   private respondToPointerMovement(p: Point) {
     if (this.scene != undefined) {
-      this.scene.camera.updateMatrixWorld();
+      this.scene.camera.updateMatrixWorld(false);
       const $canvas = this.scene.$canvas;
       this.asyncPointerNdc.set((p.x / $canvas.canvasWidth) * 2 - 1,
           -(p.y / $canvas.canvasHeight) * 2 + 1, 0);

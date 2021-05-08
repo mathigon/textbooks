@@ -1,0 +1,27 @@
+// =============================================================================
+// Prime Picker Component Styles
+// (c) Mathigon
+// =============================================================================
+
+
+x-prime-picker {
+  position: relative;
+  display: block;
+  height: 300px;
+  user-select: none;
+
+  .bubble {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background: $blue;
+    color: white;
+    position: absolute;
+    margin: -32px;
+    line-height: 64px;
+    text-align: center;
+    font-size: 32px;
+    &.green { background: $green; }
+    &.red { background: $red; }
+  }
+}

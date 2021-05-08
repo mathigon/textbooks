@@ -1,0 +1,76 @@
+// =============================================================================
+// 3D Solids
+// (c) Mathigon
+// =============================================================================
+
+
+@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+@import "../shared/components/webgl/solid";
+@import "../shared/components/binary-swipe/binary-swipe";
+@import "../polyhedra/components/polyhedron";
+
+x-polyhedron { display: block; margin: 0 auto; }
+
+x-voxel-painter {
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+
+  .eraser { position: absolute; width: 40px; height: 40px; background: red; }
+  .icon-btn { position: absolute; bottom: 6px; right: 6px; }
+}
+
+#cube-draw, #cube-net-draw {
+  x-polypad svg {
+    height: 400px;
+  }
+}
+
+div.die-faces {
+
+  width: 620px;
+  height: 600px;
+  text-align: center;
+
+  svg {
+    width: 620px;
+    height: 465px;
+    background-color: white;
+
+    path.target {
+
+      fill: transparent;
+      stroke: black;
+      stroke-width: 2px;
+
+      &.over {
+        fill: $lime;
+      }
+    }
+  }
+  div.faces {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+
+    div.face {
+      width: 90px;
+      height: 90px;
+      max-width: 90px;
+      flex: 90px;
+      margin: 2px;
+      background-color: white;
+      border: 3px solid black;
+      background-size: contain;
+      display: inline-block;
+
+      svg {
+        width: 90px;
+        height: 90px; 
+      }
+    }
+  }
+}

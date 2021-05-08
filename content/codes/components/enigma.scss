@@ -1,0 +1,128 @@
+// =============================================================================
+// Enigma Component
+// (c) Mathigon
+// =============================================================================
+
+
+x-enigma {
+  display: block;
+
+  .enigma {
+    background-color: #333;
+    border-radius: 8px;
+    text-align: center;
+    user-select: none;
+    padding: 20px;
+  }
+
+  .keyboard, .lightboard {
+    margin: 16px 0;
+
+    .key {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 17px;
+      background: grey;
+      margin: 10px;
+      color: #ddd;
+      &.glowing { background: yellow; color: #333; }
+    }
+  }
+  .keyboard .key { border: solid #aaa 2px; background: #555; }
+  .lightboard .key { border: solid #222 2px; background: #333; }
+
+  .plugboard svg { display:block; margin: 0 auto; overflow: visible; }
+
+  .plugboard .plug {
+    stroke: grey;
+    stroke-width: 3px;
+    fill: black;
+    &:hover { stroke: white; }
+    &.active { fill: red; }
+  }
+
+  .plugboard .cables { pointer-events: none; }
+  .plugboard .cables path {
+    stroke: rgba(red, 50%);
+    stroke-width: 5px;
+    stroke-linecap: round;
+    fill: none;
+  }
+
+  .rotor {
+    position:relative;
+    border: black solid 1pt;
+    padding:2pt;
+    height:40px;
+    width:20px;
+  }
+
+  .rotors {
+    border: black solid 1pt;
+    display:block;
+    padding: 0;
+    text-align:center;
+    line-height:33px;
+    margin: 5px auto 0 auto;
+    width:115px;
+    background-color: #333;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .rotorctl {
+    width: 100%;
+    background: #333;
+    color:#ddd;
+    font-size: 14pt;
+    cursor: default;
+  }
+
+  .rotorshow {
+    width: 100%;
+    // font-family: Tahoma;
+    color: #222222;
+    font-size: 18pt;
+    text-shadow: 0 1px #AAAAAA;
+    background: linear-gradient(0deg,
+      rgba(140,140,140,1) 0%,
+      rgba(216,216,216,1) 31%,
+      rgba(255,255,255,1) 50%,
+      rgba(212,212,212,1) 67%,
+      rgba(140,140,140,1) 100%);
+  }
+
+  .rotors span {
+    width: 37px;
+    display: inline-block;
+    border-right: black solid 1pt;
+  }
+}
+
+x-enigma-rotors {
+  display: block;
+  user-select: none;
+  svg { display: block; margin: 0 auto; }
+  text { text-anchor: middle; alignment-baseline: middle; }
+  .label { font-size: 14px; font-weight: 600; fill: $medium-grey; }
+
+  .keyboard {
+    circle { fill: $grey; cursor: pointer; transition: fill .2s; }
+    circle:hover { fill: $medium-grey; }
+    circle.in { fill: $blue; }
+    circle.out { fill: $yellow; }
+    text { fill: white; font-size: 12px; pointer-events: none; }
+  }
+
+  .connections { opacity: 0.2; }
+  .connections line, .connections path { fill: none; stroke: black; }
+
+  .overlay path {
+    fill: none;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}

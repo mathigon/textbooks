@@ -9,9 +9,10 @@ import {isPrime, numberFormat, round} from '@mathigon/fermat';
 import {Point} from '@mathigon/euclid';
 import {$N, ElementView, hover, SVGView} from '@mathigon/boost';
 import {ExprElement, Expression} from '@mathigon/hilbert';
-import {CoordinateSystem, EquationSystem, Gesture, Slider, Slideshow, Step, Tabbox} from '../shared/types';
-import {polygonPoints, trianglePoints} from './components/polygons';
+import {confetti, Gesture, Slider, Slideshow, Step, Tabbox} from '@mathigon/studio';
 
+import {CoordinateSystem, EquationSystem} from '../shared/types';
+import {polygonPoints, trianglePoints} from './components/polygons';
 import './components/tetrahedron';
 
 
@@ -379,7 +380,7 @@ export function quiz($step: Step) {
   const goals = list(14).map(x => 'blank-' + x).join(' ');
   $step.onScore(goals, () => {
     // Don't show confetti during page load.
-    if ($step.isPageLoaded) $step.tools.confetti();
+    if ($step.isPageLoaded) confetti();
   });
 }
 
@@ -516,15 +517,15 @@ export function sunflowerGrowing($step: Step) {
       const r = Math.sqrt((x - i) / count);
       const cx = r * 70 * Math.cos(t);
       const cy = r * 70 * Math.sin(t);
-      $petals[i].setTransform(new Point(cx, cy), t, 1.5 + r);
+      $petals[i].css('transform', `translate(${cx}px, ${cy}px) rotate(${t}rad) scale(${1.5 + r})`);  // setTransform() breaks in Safari
     }
 
     for (let i = x + 1; i < count; ++i) {
       const t = 3.883222 * i;
-      $petals[i].setTransform(undefined, t, 0.05);
+      $petals[i].css('transform', `rotate(${t}rad) scale(${0.05})`);
     }
 
-    $bulb.setTransform(undefined, 0, 1 + 69 * Math.sqrt(x / count));
+    $bulb.css('transform', `scale(${1 + 69 * Math.sqrt(x / count)})`);
   }
 
   $slider.on('move', move);

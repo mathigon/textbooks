@@ -842,7 +842,7 @@ group:
 
     1. You can add/combine two of the things, to get another one that is also
        in the group.
-    2. The things are _associative_, which means that `a+(b+c) + (a+b)+c`.
+    2. The things are _associative_, which means that `a+(b+c) = (a+b)+c`.
     3. There is an _identity_, and every “thing” has an _inverse_ which, when
        added, gives the identity.
   link: /course/transformations/symmetry-groups#groups-1

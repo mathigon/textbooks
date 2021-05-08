@@ -8,7 +8,7 @@ angles-repeat: Minunat! Acum încearcă să muți câteva din vârfurile patrula
 not-a-diagonal: Aceasta nu este o diagonală a patrulaterului.
 not-a-diagonal-1: Aceasta nu este o diagonală a paralelogramului.
 
-not-concave-1: Triunghiurile nu pot fi niciodată concave: oricare din unghiurile lor sunt mai mici de 180°.
+not-concave-1: "Triunghiurile nu pot fi niciodată concave: oricare din unghiurile lor sunt mai mici de 180°."
 not-concave-2: Acest poligon este convex - toate unghiurile sunt mai mici de 180°.
 not-concave-3: Acest poligon este convex – toate diagonalele se află în interior și toate unghiurile sunt mai mici de 180°.
 
@@ -19,7 +19,7 @@ not-regular-3: Acesta e un cerc, nu un poligon!
 parall-error-1: Nu este adevărat - unghiurile pot avea orice măsură, atâta timp cât suma lor este 360°.
 parall-error-2: Este adevărat dacă paralelogramul este totodată și romb, dar nu se aplică în cazul _oricărui_ paralelogram.
 parall-error-3: Este corect dacă paralelogramul este totodată și dreptunghi, dar nu se aplică în cazul _oricărui_ paralelogram.
-parall-error-4: Nu: intr-un paralelogram laturile alăturate nu trebuie să aibă aceeași lungime.
+parall-error-4: "Nu: intr-un paralelogram laturile alăturate nu trebuie să aibă aceeași lungime."
 
 move-polyhedra: "[Poliedrele tridimensiona;](->#poly1) sunt interactive. Încearcă să le rotești!"
 use-euler: Nu uita că poți folosi __formula lui Euler__ pentru a afla numărul de fețe, vârfuri sau muchii.

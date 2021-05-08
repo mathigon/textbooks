@@ -5,6 +5,8 @@
 > section: introduction
 > sectionStatus: dev
 > id: intro
+> color: "#CD0E66"
+> level: Foundations
 
 In previous courses, we have seen how we can use science and mathematics to try to predict the
 future. For example, we can predict when a car will arrive at its destination if it is driving at a
@@ -76,7 +78,7 @@ exactly what will happen. Try to move each of these events to the best possible 
 {.fixme} You might have noticed that some of the descriptions were a bit “imprecise”. For example,
 if you roll a die just once, it is unlikely that it lands on a 6 – but you certainly wouldn’t be
 surprised if it does. WInning the lottery is unlikely too - but obviously, more unlikely than
-rolling that 6! 
+rolling that 6!
 
 {.fixme} Unfortunately, our four word scale to describe the likelihood or chance of events occurring isn’t too useful.
 
@@ -90,7 +92,7 @@ rolling that 6!
 
 :::
 
-{.fixme} From this, you might deduce that the next throw has a `5/20=0.25` chance to also land in the center. We say that 0.25 is the probability of hitting the center. 
+{.fixme} From this, you might deduce that the next throw has a `5/20=0.25` chance to also land in the center. We say that 0.25 is the probability of hitting the center.
 
 {.fixme} For many centuries, mathematicians have struggled to deal with these uncertain situations – until the development of **probability** theory. In this course, we will explore what probability is, and give you some amazing new tools to be able to predict the future.
 
@@ -98,7 +100,7 @@ rolling that 6!
 
 {.fixme} If you move the sliders above, you might notice that the probability is always between [[0]] (if you never hit the center) and [[1]] (if you always hit the center).
 
-{.fixme} Probabilities always lie between 0 and 1. An event with a smaller probability (like 0.2) is always less likely than an event with a larger probability (like 0.8). If an outcome is impossible, we say it has probability 0. If it is certain, we say it has probability 1. If an event is equally likely to happen or not happen, its probability is exactly in the middle: [[0.5]]. 
+{.fixme} Probabilities always lie between 0 and 1. An event with a smaller probability (like 0.2) is always less likely than an event with a larger probability (like 0.8). If an outcome is impossible, we say it has probability 0. If it is certain, we say it has probability 1. If an event is equally likely to happen or not happen, its probability is exactly in the middle: [[0.5]].
 
 {.fixme} We can represent probabilities using a number line from 0 to 1. Try to drag the following words and events onto the line, to show their approximate probability:
 
@@ -106,19 +108,19 @@ rolling that 6!
 
 {.fixme} There are several different ways to represent probabilities, and we have already seen two of them. In the first example above, 5 out of 20 of the dart throws landed in the center.
 
-::: column.frame.f-blue.text-center(width=200 parent="padded-thin")
+::: column.frame.blue.text-center(width=200 parent="padded-thin")
 
 We can represent probabilities as a fraction, that shows how many outcomes were successful:
 
 `p = blank(5)/20`
 
-::: column.frame.f-green.text-center(width=200)
+::: column.frame.green.text-center(width=200)
 
 We can convert the fraction into a decimal number between 0 and:
 
 _p_ = [[0.25]]
 
-::: column.frame.f-yellow.text-center(width=200)
+::: column.frame.yellow.text-center(width=200)
 
 We can also convert it into a percentage between 0% to 100%:
 
@@ -128,13 +130,13 @@ _p_ = [[25]]%
 
 ---
 
-{.fixme} We already know how to convert between fractions, decimals, and percentages, and we can do exactly the same for probabilities. Percentage literally means “Out of 100” - so 30% is the same thing as 30 times out of 100, or `30/100`! 
+{.fixme} We already know how to convert between fractions, decimals, and percentages, and we can do exactly the same for probabilities. Percentage literally means “Out of 100” - so 30% is the same thing as 30 times out of 100, or `30/100`!
 
 {.fixme} Here are a few more predictions and events. Connect the ones that correspond to the same probability:
 
 ::: column(width=500)
 
-{.fixme} A friend invites you to play a simple game: you toss a coin a few times. When it lands heads, you have to pay him 1, and when it lands tails, he has to pay you 1. This seems fair enough - you have as much to gain as you have to lose. 
+{.fixme} A friend invites you to play a simple game: you toss a coin a few times. When it lands heads, you have to pay him 1, and when it lands tails, he has to pay you 1. This seems fair enough - you have as much to gain as you have to lose.
 
 {.fixme} We know that the probability of a coin landing heads is ½ = 0.5. However, once you start playing, something strange happens: the coin lands heads five times in a row!
 
@@ -179,7 +181,7 @@ You've done ${numberOfFlips} flips and seen ${numberOfHeads} heads.
 
 {.fixme} In the simulation above, when we used a fair coin (blue) - which has an equal probability of landing on heads and tails. As you can see, the graphs of the fair coins slowly approach 0.5 as you flip them more and more times. But the first [[15 ± 5]] tosses seem completely random, for both the fair and the biased coins.
 
-{.fixme} Maybe you performed 10 tosses, and 8 coins landed on heads - you might think that the coin is biased immediately! However, it’s too soon to make that conclusion - If you reset the simulation, and keep tossing the coin just 10 times, you’ll see that the graph formed can be very jagged, and each repetition is different from the previous. 
+{.fixme} Maybe you performed 10 tosses, and 8 coins landed on heads - you might think that the coin is biased immediately! However, it’s too soon to make that conclusion - If you reset the simulation, and keep tossing the coin just 10 times, you’ll see that the graph formed can be very jagged, and each repetition is different from the previous.
 
 {.fixme} However, If you keep tossing the coin for another 100, or 1000 tosses: you’ll see that the ratio of Heads will always approach 0.5, out actual probability.
 

@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#F6700F"
+> level: Intermediate
+> next: graph-theory
 > translated: auto
 
     img.text-wrap(src="images/skater-1.jpg" style="shape-outside: url(images/skater-1-mask.png)" width=300 height=393)
@@ -30,7 +33,7 @@ Care dintre aceste diagrame reprezintă cât mai real relația dintre preț și 
       .item(style="width: 220px")
         x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="price,demand" crosshairs="no" labels="no" fn="8 - 0.6x")
       .item(data-error="wrong-chart-2" style="width: 220px")
-        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="price,demand" crosshairs="no" labels="no" fn="2.5 * sqrt(x)") 
+        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="price,demand" crosshairs="no" labels="no" fn="2.5 * sqrt(x)")
 
 ---
 > id: demand-1

@@ -4,16 +4,19 @@
 
 > id: intro
 > section: introduction
+> color: "#3566DE"
+> level: Intermediate
+> next: polyhedra
 > translated: auto
 
 ::: column.grow
 Până la începutul secolului 19, exploratorii descoperiseră cea mai mare parte a lumii.
 Negoțul și transporturile erau în plină expansiune între țarile îndepărtate și astfel
-a apărut nevoia de a avea _hărți precise_ pentru întreaga planetă. 
+a apărut nevoia de a avea _hărți precise_ pentru întreaga planetă.
 
 Astăzi avem sateliți care pot face fotografii de la înălțime, dar în urmă cu 200 de ani
 construirea hărților era un proces dificil și consumator de timp. Această sarcină le revenea
-matematicienilor precum [Radhanath Sikdar](bio:sikdar), care lucra la _Marele Studiu 
+matematicienilor precum [Radhanath Sikdar](bio:sikdar), care lucra la _Marele Studiu
 Trigonometric_: un proiect cu durata de un secol care avea ca obiectiv măsurarea întregii
 suprafețe a Indiei, inclusiv a lanțului muntos Himalaya.
 
@@ -32,21 +35,21 @@ Așadar, cum putem măsura înălțimea unui munte?
 
     figure.mountain: include svg/mountain.svg
 
-{.r} În ziua de azi putem folosi sateliți pentru a măsura înălțimea munților cu o 
+{.r} În ziua de azi putem folosi sateliți pentru a măsura înălțimea munților cu o
 precizie de până la câțiva centimetri, dar aceștia nu existau pe vremea când
 Radhanath topografia India.
 _{button.next-step} Continuă_
 
 {.r.reveal(when="next-0")} Alpiniștii folosesc _altimetre_ pentru a determina
 altitudinea la care se află. Aceste instrumente utilizează diferența dintre valorile
-presiunii atmosferice la diferite înălțimi. Totuși, acest proces necesită ca cineva să urce în 
+presiunii atmosferice la diferite înălțimi. Totuși, acest proces necesită ca cineva să urce în
 [vârful muntelui](->.mountain-top) – o performanță extrem de dificilă ce nu a putut fi
 atinsă până în urmă cu un secol.
 _{button.next-step} Continuă_
 
 {.r.reveal(when="next-1")} De asemenea, am putea încerca să folosim triunghiuri asemenea,
 așa cum am făcut în [cursul anterior](/course/transformations/similarity).
-Această metodă necesită cunoașterea [distanței](->.mountain-distance) până la [baza 
+Această metodă necesită cunoașterea [distanței](->.mountain-distance) până la [baza
 muntelui](->.mountain-base): punctul de la nivelul mării care se află direct sub vârful său.
 Putem face asta pentru copaci sau clădiri înalte, dar pentru munți acest punct este
 ascuns sub sute de metri de roci.
@@ -63,7 +66,7 @@ _{button.next-step} Continuă_
 muntelui Everest în anul 1953.
 
 ::: column.grow
-Dar există tehnici geometrice mai avansate, tehnici pe care [Radhanath](bio:sikdar) le-a folosit 
+Dar există tehnici geometrice mai avansate, tehnici pe care [Radhanath](bio:sikdar) le-a folosit
 pentru a descoperi cel mai înalt munte de pe Pământ: acum se numește _Muntele Everest_.
 Măsurătoarea sa are o abatere de doar câțiva metri față de măsurătoarea actuală de 8848 metri.
 
@@ -78,7 +81,7 @@ _{button.next-step} Continuă_
 
 Triunghiurile sunt speciale pentru că ele sunt deosebit de _puternice_. Ele sunt
 singurul poligon care, atunci când sunt construite din grinzi de lemn și balamale,
-sunt complet _rigide_ - spre deosebire de dreptunghiuri, care pot fi împinse cu ușurință. 
+sunt complet _rigide_ - spre deosebire de dreptunghiuri, care pot fi împinse cu ușurință.
 
 {.todo} ÎN CURÂND – Animații
 
@@ -125,7 +128,7 @@ Ele sunt folosite în clădirile fizice…
 :::
 
 ::: column.grow
-…dar și în lumea virtuală. În grafica generată pe calculator(de exemplu pentru filme sau 
+…dar și în lumea virtuală. În grafica generată pe calculator(de exemplu pentru filme sau
 jocuri video), toate suprafețele sunt aproximate folosind o “rețea” de triunghiuri minuscule.
 Artiștii și inginerii software au nevoie să cunoască geometrie și trigonometrie pentru a putea
 mișca și transforma aceste triunghiuri în mod realist și pentru a le calcula culoarea și textura.
@@ -144,7 +147,7 @@ mișca și transforma aceste triunghiuri în mod realist și pentru a le calcula
 > translated: auto
 
 Hai să începem simplu: un triunghi este o formă închisă care are trei laturi (care
-sunt [segmente de dreaptă](gloss:line-segment)) și trei vârfuri ([punctele](gloss:point) 
+sunt [segmente de dreaptă](gloss:line-segment)) și trei vârfuri ([punctele](gloss:point)
 de intersecție ale laturilor). De asemenea, are și trei [unghiuri interne](gloss:internal-angle)
 a căror suma este întotdeauna [[180]]°.
 
@@ -162,7 +165,7 @@ Triunghiurile pot fi clasificate în funcție de măsura unghiurilor lor:
       path.fill.red(x="angle(a1,b1,c1)")
       path(x="polygon(a1,b1,c1)")
 
-{.caption} Un __triunghi dreptunghic__  
+{.caption} Un __triunghi dreptunghic__
 are un [unghi drept](gloss:right-angle).
 ::: column(width=220)
 
@@ -173,7 +176,7 @@ are un [unghi drept](gloss:right-angle).
       path.fill.blue(x="angle(c2,b2,a2)")
       path(x="polygon(a2,b2,c2)")
 
-{.caption} Un __triunghi obtuz__  
+{.caption} Un __triunghi obtuz__
 are un [unghi obtuz](gloss:obtuse-angle).
 ::: column(width=220)
 
@@ -186,7 +189,7 @@ are un [unghi obtuz](gloss:obtuse-angle).
       path.fill.green(x="angle(c3,a3,b3)")
       path(x="polygon(a3,b3,c3)")
 
-{.caption} Un __triunghi ascuțit__  
+{.caption} Un __triunghi ascuțit__
 are [[trei]] [unghiuri ascuțite](gloss:acute-angle).
 :::
 
@@ -198,9 +201,9 @@ Pentru ușurință, notăm triunghiurile întotdeauna în același mod. Vârfuri
 cu litere mari [_A_, _B_ și _C_](target:vertex), laturile se notează cu litere mici
 [_a_, _b_ și _c_](target:side) și unghiurile se notează cu litere grecești
 [`α`, `β` și `γ`](target:angle) (“alpha”, “beta” și “gamma”).
- 
+
 [Latura _opusă_ vârfului _A_](target:X) este notată cu _a_, iar
-[unghiul care se află chiar lângă _A_](target:Y) este notat cu `α`. Același șablon 
+[unghiul care se află chiar lângă _A_](target:Y) este notat cu `α`. Același șablon
 se aplică și pentru _B_/_b_/`β` și _C_/_c_/`γ`.
 ::: column(width=220)
 
@@ -230,29 +233,29 @@ se aplică și pentru _B_/_b_/`β` și _C_/_c_/`γ`.
       circle.move(name="b" cx=50 cy=250)
       circle.move(name="c" cx=250 cy=200)
       path(x="triangle(a,b,c)")
-      
+
       circle.green(name="ab" x="line(a,b).midpoint")
       circle.blue(name="ac" x="line(a,c).midpoint")
       circle.red(name="bc" x="line(b,c).midpoint" target="ratio")
-      
+
       circle.yellow.reveal(name="d" x="triangle(a,b,c).centroid" when="blank-0" animation="pop" target="ratio")
-      
+
       path.red.transparent(x="segment(a,d)" label="2" target="ratio")
       path.red.transparent(x="segment(d,bc)" label="1" target="ratio")
 
 ::: column.grow
-Aici se poate vedea un triunghi precum și mijlocul celor trei laturi ale sale. 
+Aici se poate vedea un triunghi precum și mijlocul celor trei laturi ale sale.
 
 O [__mediana__](gloss:triangle-median) a unui triunghi este un segment de dreaptă care unește
 un vârf cu mijlocul laturii opuse. Desenează cele trei mediane ale acestui triunghi.
  _{span.reveal(when="s0 s1 s2")}Ce se întâmplă pe măsură ce muți vârfurile triunghiului ?_
 
-{.reveal(when="move")} Se pare că medianele 
+{.reveal(when="move")} Se pare că medianele
 [[se intersectează într-un punct|au aceeași lungime|se împart reciproc la mijloc]] mereu.
 _{span.reveal(when="blank-0")}Acest punct se numește [__centru de greutate__](gloss:centroid)._
 
-{.reveal(when="blank-0")} Medianele se împart mereu reciproc în [raportul 2:1](target:ratio). 
-Pentru fiecare din cele trei mediane, distanța de la vârf până la centrul de greutate 
+{.reveal(when="blank-0")} Medianele se împart mereu reciproc în [raportul 2:1](target:ratio).
+Pentru fiecare din cele trei mediane, distanța de la vârf până la centrul de greutate
 este mereu [[de două ori|de trei ori|exact]] mai mare decât distanța de la centru de greutate
 până la mijlocul laturii.
 :::
@@ -260,7 +263,7 @@ până la mijlocul laturii.
 ---
 > id: center-of-mass
 
-Centrul de greutate este și “punctul de echilibru” al unui triunghi. Desenează un triunghi pe 
+Centrul de greutate este și “punctul de echilibru” al unui triunghi. Desenează un triunghi pe
 carton, decupează-l și găsește cele trei mediane. Dacă ai calculat precis,
 acum poți ține triunghiul în echilibru pe vârful unui creion sau îl poți
 agăța perfect drept de o bucată de sfoară care este prinsă de centrul de greutate.
@@ -296,15 +299,15 @@ Să ne amintim că [mediatoarea](gloss:perpendicular-bisector) unui segment
 este dreapta perpendiculară care trece prin [[mijlocul|capetele]] său.
 
 {.reveal(when="blank-0")}Desenează mediatoarele acestui triunghi.
-_{.lgrey} Pentru a desena mediatoarea unei laturi a triunghiului, apasă pe una 
+_{.lgrey} Pentru a desena mediatoarea unei laturi a triunghiului, apasă pe una
 din extremitățile sale și trage-o până la cealaltă extremitate._
 
-{.reveal(when="s0 s1 s2")} La fel ca mai înainte, cele trei mediatoare se 
+{.reveal(when="s0 s1 s2")} La fel ca mai înainte, cele trei mediatoare se
 intersectează într-un singur punct. Și, din nou, acest punct are o proprietate specială.
 
 {.reveal(when="s0 s1 s2")} Oricare punct al mediatoarei se află la aceeași distanță față
 de cele două extremități ale segmentelui pe care îl împarte. De exemplu, oricare punct
-aflat pe [mediatoarea albastră](target:b-blue) se află la aceeași distanță față de 
+aflat pe [mediatoarea albastră](target:b-blue) se află la aceeași distanță față de
 punctele _A_ și _C_, iar oricare punct de pe [mediatoarea roșie](target:b-red) se află
 la aceeași distanță față de [[A și B|A și C|B și C]].
 
@@ -313,7 +316,7 @@ cele trei mediatoare, așadar el se află la aceeași distanță față de toate
 trei [[vârfuri|laturi]] ale triunghiului.
 
 {.reveal(when="blank-2")} Aceasta înseamnă ca putem desena un cerc în jurul său care
-conține toate vârfurile. Acest cerc se numește [__cercul circumscris__](gloss:circumcircle) 
+conține toate vârfurile. Acest cerc se numește [__cercul circumscris__](gloss:circumcircle)
 al triunghiului, iar centrul său se numește __centrul cercului circumscris__.
 :::
 
@@ -321,8 +324,8 @@ al triunghiului, iar centrul său se numește __centrul cercului circumscris__.
 > id: circumcircle-1
 
 De fapt, aceasta înseamnă că pentru oricare trei puncte, putem folosi
-centrul cercului circumscris pentru a găsi un cerc care trece prin toate 
-punctele. (Doar dacă punctele sunt [[coliniare|paralele]], caz în care 
+centrul cercului circumscris pentru a găsi un cerc care trece prin toate
+punctele. (Doar dacă punctele sunt [[coliniare|paralele]], caz în care
 toate punctele se află situate pe o linie dreaptă.)
 
 ---
@@ -331,8 +334,8 @@ toate punctele se află situate pe o linie dreaptă.)
 
 ### Bisectoarea unui unghi și Cercul înscris într-un triunghi
 
-Probabil că deja te-ai obișnuit cu acest proces: alegem o anumită construcție, 
-o executăm de trei ori pentru toate laturile/unghiurile unui triunghi și apoi 
+Probabil că deja te-ai obișnuit cu acest proces: alegem o anumită construcție,
+o executăm de trei ori pentru toate laturile/unghiurile unui triunghi și apoi
 elaborăm ce este special la punctul lor de intersecție.
 
 ::: column(width=300)
@@ -361,22 +364,22 @@ care formează unghiul pe care vrei să-l împarți în două unghiuri de măsur
 
 {.r.reveal(when="s0 s1 s2")} Din nou, toate cele trei drepte se intersectează într-un singur punct.
 Probabil că te așteptai la asta, dar este important să observăm că nu există un motiv clar
-de ce se întâmplă așa – triunghiurile sunt pur și simplu 
+de ce se întâmplă așa – triunghiurile sunt pur și simplu
 niște forme foarte interesante!
 _{button.next-step} Continuă_
 
-{.reveal(when="next-0")} Punctele ce aparțin bisectoarei unui unghi se află la aceeași 
+{.reveal(when="next-0")} Punctele ce aparțin bisectoarei unui unghi se află la aceeași
 distanță față de cele două drepte care formează unghiul. De exemplu, orice punct de pe
 [bisectoarea albastră](target:b-blue) se află la aceeași distanță față de latura _a_ și latura _c_,
 și orice punct de pe [bisectoarea roșie](target:b-red) se află la aceeași distantă față
 de laturile [[a și b|a și c|b și c]].
 
 {.reveal(when="blank-0")} [Punctul de intersecție](target:center) se află pe toate cele
-trei bisectoare. De aceea, el se află la aceeași distanță față de toate cele trei 
+trei bisectoare. De aceea, el se află la aceeași distanță față de toate cele trei
 [[laturi|vârfuri]] ale triunghiului.
 
-{.reveal(when="blank-1")} Aceasta înseamnă că putem desena în jurul său un cerc care se află 
-în interiorul triunghiului și este tangent la cele trei laturi. Acest cerc se numește 
+{.reveal(when="blank-1")} Aceasta înseamnă că putem desena în jurul său un cerc care se află
+în interiorul triunghiului și este tangent la cele trei laturi. Acest cerc se numește
 __cerc înscris__ într-un triunghi, iar centrul său se numește __centrul cercului înscris__.
 :::
 
@@ -391,17 +394,17 @@ simplu se înmulțește lungimea cu înălțimea. Calcularea ariei unui triunghi
 este mai puțin evidentă. Să începem prin “capturarea” unui triunghi în interiorul unui dreptunghi.
 _{button.next-step} Continuă_
 
-{.reveal.r(when="next-0")} Lungimea dreptunghiului este lungimea [laturii de jos](target:base) 
-a triunghiului (care se numește __bază__). Înalțimea dreptunghiului este 
+{.reveal.r(when="next-0")} Lungimea dreptunghiului este lungimea [laturii de jos](target:base)
+a triunghiului (care se numește __bază__). Înalțimea dreptunghiului este
 [lungimea perpendicularei](target:height) de la bază până la vârful opus.
 _{button.next-step} Continuă_
 
 {.reveal(when="next-1")} Înălțimea împarte triunghiul în două părți. Observă cum
-[cele două goluri din dreptunghi](target:gap) sunt la fel de mari ca cele două 
-părți ale triunghiului. Asta înseamnă că dreptunghiul este 
+[cele două goluri din dreptunghi](target:gap) sunt la fel de mari ca cele două
+părți ale triunghiului. Asta înseamnă că dreptunghiul este
 [[de două ori mai|de trei ori mai|la fel de]] mare ca triunghiul.
 
-{.reveal(when="blank-0")} Putem calcula ușor aria dreptunghiului, așadar 
+{.reveal(when="blank-0")} Putem calcula ușor aria dreptunghiului, așadar
 aria triunghiului este jumătate din ea:
 
 {.text-center.reveal(when="blank-0")} `A = 1/2 ×` [{.step-target.pill.red} bază](target:base)
@@ -421,7 +424,7 @@ aria triunghiului este jumătate din ea:
 
       path.fill.yellow.reveal(x="polygon(b,d,c)" when="next-1" target="gap")
       path.fill.yellow.transparent(x="polygon(b,f,c)" target="gap")
-      
+
       path.dark(x="polygon(a,b,c)")
       path.red.reveal(x="polygon(a,b,f,e)" when="next-0" animation="draw")
       path.blue.reveal(x="segment(c,d)" label="înălțime" when="next-0" delay="1000" target="height")
@@ -448,7 +451,7 @@ __bază__ și apoi se poate calcula __înălțimea__ corespunzătoare, care este
       circle.move(name="a" cx=75 cy=75 label="A")
       circle.move(name="b" cx=50 cy=250 label="B")
       circle.move(name="c" cx=250 cy=200 label="C")
-      
+
       path(x="triangle(a,b,c)")
       path.altitude.red(hidden x="line(a,b).perpendicular(c)")
       path.altitude.blue(hidden x="line(a,c).perpendicular(b)")
@@ -457,7 +460,7 @@ __bază__ și apoi se poate calcula __înălțimea__ corespunzătoare, care este
 
 ::: column.grow
 Asemenea [medianelor](gloss:triangle-median), [mediatoarelor](gloss:perpendicular-bisector)
-și [bisectoarelor](gloss:angle-bisector), cele trei înalțimi ale unui triunghi se intersectează 
+și [bisectoarelor](gloss:angle-bisector), cele trei înalțimi ale unui triunghi se intersectează
 într-un singur punct. Acest punct se numește [__ortocentrul__](target:center) triunghiului.
 
 În [triunghiurile ascuțite](gloss:acute-triangle), ortocentrul
@@ -466,7 +469,7 @@ Asemenea [medianelor](gloss:triangle-median), [mediatoarelor](gloss:perpendicula
 {.reveal(when="blank-0")} În [triunghiurile obtuze](gloss:obtuse-triangle), ortocentrul
 [[se află înafara|se află înăuntrul|este un vârf al]] triunghiului.
 
-{.reveal(when="blank-1")} În [triunghiurile dreptunghice](gloss:right-triangle), 
+{.reveal(when="blank-1")} În [triunghiurile dreptunghice](gloss:right-triangle),
 ortocentrul [[este un vârf al|se află înăuntrul|se află înafara]] triunghiului. Două
 dintre înălțimile sale sunt de fapt chiar laturile triunghiului.
 :::
@@ -491,7 +494,7 @@ dintre înălțimile sale sunt de fapt chiar laturile triunghiului.
       circle.red(name="q" x="line(a,c).midpoint")
       circle.red(name="r" x="line(b,c).midpoint")
       path(x="triangle(a,b,c)")
-      
+
       path.transparent.fill.red(x="polygon(a,p,q)" target="triangles")
       path.transparent.fill.blue(x="polygon(b,p,r)" target="triangles")
       path.transparent.fill.yellow(x="polygon(c,q,r)" target="triangles")
@@ -499,7 +502,7 @@ dintre înălțimile sale sunt de fapt chiar laturile triunghiului.
       path.transparent.fill.red(x="polygon(a,b,c)" target="large")
 
 ::: column.grow
-O [__linie mijlocie__](gloss:triangle-midsegment) este un segment de dreaptă 
+O [__linie mijlocie__](gloss:triangle-midsegment) este un segment de dreaptă
 care unește mijloacele două laturi ale unui triunghi. Desenează cele trei
 linii mijlocii ale acestui triunghi.
 
@@ -507,16 +510,16 @@ linii mijlocii ale acestui triunghi.
 în [patru triunghiuri mai mici](target:triangles).
 
 {.reveal(when="s0 s1 s2")} Se dovedește că toate aceste triunghiuri mai mici
-[[sunt congruente|se suprapun|au dimensiuni diferite]] – chiar și cel cu vârful 
+[[sunt congruente|se suprapun|au dimensiuni diferite]] – chiar și cel cu vârful
 în jos din mijloc. _{span.reveal(when="blank-0")} Ele sunt totodată și [[asemenea|congruente]]
-cu [triunghiul inițial](target:large),_ _{span.reveal(when="blank-1")}cu un 
+cu [triunghiul inițial](target:large),_ _{span.reveal(when="blank-1")}cu un
 factor de scalare de `1/2`._
 
-{.reveal(when="blank-1")} Acest lucru ne permite să deducem o parte din 
+{.reveal(when="blank-1")} Acest lucru ne permite să deducem o parte din
 propritățile liniei mijlocii.
 
 ::: .theorem.reveal(when="blank-1")
-__Teorema Liniei Mijlocii__  
+__Teorema Liniei Mijlocii__
 Într-un triunghi, linia mijlocie este paralelă cu latura opusă și are
 lungimea jumătate din lungimea laturii opuse.
 :::
@@ -524,7 +527,7 @@ lungimea jumătate din lungimea laturii opuse.
 
 ---
 
-{.todo} ÎN CURÂND – Mai multe detalii despre linii mijlocii și 
+{.todo} ÎN CURÂND – Mai multe detalii despre linii mijlocii și
 cum se leagă de asemănare și proporționalitate.
 
 ---
@@ -551,7 +554,7 @@ __6cm__. _{span.reveal(when="draw-base")} Acum avem deja [două](target:base)
 din cele trei vârfuri ale triunghiului – provocarea este de a-l afla pe ultimul.
 *{button.next-step} Continuă*_
 
-{.reveal(when="next-0")} Apoi, desenează un cerc cu raza de __4cm__ în jurul unuia 
+{.reveal(when="next-0")} Apoi, desenează un cerc cu raza de __4cm__ în jurul unuia
 dintre vârfuri, _{span.reveal(when="draw-c1")} și un cerc cu raza de __5cm__ în
 jurul celuilalt._
 
@@ -573,7 +576,7 @@ sunt [[congruente|echilaterale|perpendiculare]]._
 
 Dar este posibil să construim un triunghi _diferit_ cu aceleași trei laturi?
 
-Am văzut deja două triunghiuri mai sus, dar ambele erau congruente. De fapt, 
+Am văzut deja două triunghiuri mai sus, dar ambele erau congruente. De fapt,
 oricare două triunghiuri ale căror laturi au aceeași lungime sunt congruente.
 Numim asta [__Criteriul de congruență LLL__](gloss:triangle-sss) a triunghiurilor
 (“Latură-Latură-Latură”).
@@ -599,7 +602,7 @@ Două triunghiuri sunt congruente dacă îndeplinesc oricare din următoarele cr
           path.red(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption Toate laturile sunt respectiv congruente.
-        
+
       div(style="width: 150px")
         .text-center: strong SAS
         x-geopad(width=150 height=120): svg
@@ -611,7 +614,7 @@ Două triunghiuri sunt congruente dacă îndeplinesc oricare din următoarele cr
           path(x="segment(a,c)")
           path.red(x="segment(b,c)")
         p.caption Două laturi și unghiul #[strong cuprins între ele] sunt respectiv congruente.
-        
+
       div(style="width: 150px")
         .text-center: strong ASA
         x-geopad(width=150 height=120): svg
@@ -624,7 +627,7 @@ Două triunghiuri sunt congruente dacă îndeplinesc oricare din următoarele cr
           path(x="segment(a,c)")
           path(x="segment(b,c)")
         p.caption Două unghiuri și latura #[cuprinsa între ele] sunt respectiv congruente.
-        
+
       div(style="width: 150px")
         .text-center: strong AAS
         x-geopad(width=150 height=120): svg
@@ -644,7 +647,7 @@ Două triunghiuri sunt congruente dacă îndeplinesc oricare din următoarele cr
 
 Ne putem gândi la aceste criterii ca la niște “scurtături”: pentru a verifica dacă două triunghiuri
 sunt congruente, trebuie doar să verificăm unul din criteriile de mai sus:
- 
+
 De îndată ce _știi_ că două triunghiuri sunt congruente, știi că _toate_ laturile și unghiurile
 lor corespondente sunt congruente.
 
@@ -657,7 +660,7 @@ Este interesant de observat faptul că toate criteriile constau din [[trei]] val
 ### Construcția triunghiurilor
 
 La începutul acestui capitol, am văzut cum se construiește un triunghi dacă se cunosc
-cele trei laturi. În mod similar, există metode de a construi un triunghi pentru 
+cele trei laturi. În mod similar, există metode de a construi un triunghi pentru
 fiecare din criteriile de congruență de mai sus.
 
 ::: tab
@@ -666,7 +669,7 @@ fiecare din criteriile de congruență de mai sus.
 ::: column(width=300)
 {.todo} ÎN CURÂND – Animație
 ::: column.grow
-{.task} Desenează un triunghi cu laturile de 5cm și 3cm și unghiul cuprins 
+{.task} Desenează un triunghi cu laturile de 5cm și 3cm și unghiul cuprins
 între ele de 40°.
 
 La fel ca mai înainte, începem prin a desena una dintre laturile triunghiului.
@@ -682,7 +685,7 @@ cu o riglă și apoi să marcăm al treilea vârf al triunghiului.
 La final, putem uni ultimele două vârfuri pentru a finaliza triunghiul.
 :::
 
-Bineînțeles că am fi putut desena mai întâi latura de 3cm sau am fi putut alege celălalt 
+Bineînțeles că am fi putut desena mai întâi latura de 3cm sau am fi putut alege celălalt
 vârf pentru a desena unghiul de 40° în jurul său. Cu toate acestea, triunghiurile obținute
 ar fi fost congruente cu acesta.
 
@@ -697,7 +700,7 @@ ar fi fost congruente cu acesta.
 Hai să începem prin a desena prima latură folosind o riglă pentru a măsura 5cm.
 
 Acum hai să folosim raportorul pentru a măsura un unghi de 70° în jurul unuia din capetele
-laturii și un unghi de 50° în jurul celuilalt capăt. 
+laturii și un unghi de 50° în jurul celuilalt capăt.
 (nu contează ordinea – triunghiurile obținute vor fi congruente.)
 
 Triunghiul se finalizează prin unirea urmelor unghiurilor cu extremitățile laturii.
@@ -714,15 +717,15 @@ Triunghiul se finalizează prin unirea urmelor unghiurilor cu extremitățile la
 Vom începe din nou prin a construi prima latură a triunghiului care are lungimea de 5cm.
 
 Si vom folosi din nou raportorul pentru a măsura un unghi de 40° în jurul unuia din capetele
-și vom desena a doua latură a triunghiului. Cu toate acestea, încă nu știm unde e capătul 
+și vom desena a doua latură a triunghiului. Cu toate acestea, încă nu știm unde e capătul
 acestei laturi.
 
 În schimb, hai să alegem orice punct din jurul acestei drepte, să presupunem ca este cel
 de-al treilea vârf al triunghiului și să măsurăm un unghi de 50°.
 
 După cum se poate vedea, nu prea funcționează: a treia latură încă nu se unește cu vârful A.
-Pentru a rezolva asta, trebuie doar să o modificăm: desenăm o dreaptă paralelă care trece 
-prin A. (Ai invățat deja cum se construiesc dreptele paralele într-un 
+Pentru a rezolva asta, trebuie doar să o modificăm: desenăm o dreaptă paralelă care trece
+prin A. (Ai invățat deja cum se construiesc dreptele paralele într-un
 [curs anterior](/course/euclidean-geometry/geometric-construction).)
 
 Cele două unghiuri de sus sunt unghiuri alterne, așa că ele sunt congruente și ambele au
@@ -744,7 +747,7 @@ Vei vedea în cele ce urmează de ce:
 Ca întotdeauna, hai să începem prin a desena prima latură a triunghiului care are
 lungimea de 5cm.
 
-Apoi, hai să măsurăm un unghi de 50° în jurul uneia dintre extremități și să desenăm a doua 
+Apoi, hai să măsurăm un unghi de 50° în jurul uneia dintre extremități și să desenăm a doua
 latură a triunghiului. Cu toate acestea, nu știm încă unde se va termina această latură.
 
 A treia latură trebuie să aibă lungimea de 4cm. Putem desena cu ajutorul unui raportor un cerc
@@ -754,7 +757,7 @@ Ultimul vârf al triunghiului este punctul de intersecție a cercului cu a două
 Cu toate acestea, în acest caz, sunt două intersecții!
 
 Aceste două triunghiuri sigur nu sunt congruente. Asta înseamnă că există două triunghiuri
-diferite cu laturile de 4cm și 5cm, precum și un unghi care nu este cuprins între ele de 50°. 
+diferite cu laturile de 4cm și 5cm, precum și un unghi care nu este cuprins între ele de 50°.
 LLU nu este suficient pentru a confirma că două triunghiuri sunt congruente.
 :::
 :::
@@ -767,18 +770,18 @@ LLU nu este suficient pentru a confirma că două triunghiuri sunt congruente.
 > section: pythagoras
 > translated: auto
 
-Am ajuns acum într-un punct important din geometrie – să putem formula și întelege una 
-dintre cele mai faimoase [teoreme](gloss:theorem) din întreaga matematică: 
-__Teorema lui Pitagora__. Această teoremă a fost numită după matematicianul din Grecia Antică 
+Am ajuns acum într-un punct important din geometrie – să putem formula și întelege una
+dintre cele mai faimoase [teoreme](gloss:theorem) din întreaga matematică:
+__Teorema lui Pitagora__. Această teoremă a fost numită după matematicianul din Grecia Antică
 [Pitagora din Samos](bio:pythagoras).
 
 ::: .theorem
 ::: column.grow
-__Teorema lui Pitagora__  
-Într-un triunghi dreptunghic, pătratul lungimii [__ipotenuzei__](target:hypot) 
+__Teorema lui Pitagora__
+Într-un triunghi dreptunghic, pătratul lungimii [__ipotenuzei__](target:hypot)
 (latura opusă unghiului drept) este egal cu suma pătratelor celorlalte două laturi.
 Altfel spus,
- 
+
 {.text-center} _{span.circled.green}`a^2`_ + _{span.circled.blue}`b^2`_ =
 _{span.circled.yellow}`c^2`_
 
@@ -790,11 +793,11 @@ a*{sup}2* + b*{sup}2* = c*{sup}2*, atunci triunghiul este [[dreptunghic|ascuțit
       circle.move(name="a" cx=82 cy=160 target="hypot")
       circle.move(name="b" cx=218 cy=160 target="hypot")
       circle.move(name="c" cx=120 cy=100 project="arc(line(a,b).midpoint,a,pi).contract(0.2)")
-      
+
       path.fill.green(x="polygon(b,c,b.rotate(-pi/2,c),c.rotate(pi/2,b))" label="a²" label-class="white")
       path.fill.blue(x="polygon(c,a,c.rotate(-pi/2,a),a.rotate(pi/2,c))" label="b²" label-class="white")
       path.fill.yellow(x="polygon(b,a,b.rotate(pi/2,a),a.rotate(-pi/2,b))" label="c²" label-class="white")
-      
+
       path.dark(x="segment(b,c)" label="a")
       path.dark(x="segment(a,c)" label="b")
       path.dark(x="segment(a,b)" label="c" target="hypot")
@@ -811,17 +814,17 @@ a*{sup}2* + b*{sup}2* = c*{sup}2*, atunci triunghiul este [[dreptunghic|ascuțit
     img(src="images/ladder.svg" width=220 height=300)
 
 ::: column.grow
-Unghiurile drepte pot fi întâlnite peste tot și tocmai de aceea teorema lui 
+Unghiurile drepte pot fi întâlnite peste tot și tocmai de aceea teorema lui
 Pitagora este atât de utilă.
 
 Aici se poate vedea o scară cu lungimea de __{.m-red}6m__ ce stă sprijinită de un perete.
-Partea de jos a scării se află la 1m depărtare față de perete. 
+Partea de jos a scării se află la 1m depărtare față de perete.
 Cât de departe se duce în sus pe perete?
 
 De observat că există un triunghi dreptunghic format de scară, perete și sol.
 Folosind teorema lui Pitagora, obținem
 
-    
+
     table.eqn-system
       tr
         <td><mrow class="b m-green"><msup><mi>h</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow class="b m-blue"><msup><mn>1</mn><mn>2</mn></msup></mrow></td>
@@ -835,7 +838,7 @@ Folosind teorema lui Pitagora, obținem
 
 :::
 
-{.reveal(when="blank-0")} Pentru orice triunghi dreptunghic căruia îi știm două dintre laturi, 
+{.reveal(when="blank-0")} Pentru orice triunghi dreptunghic căruia îi știm două dintre laturi,
 putem folosi teorema lui Pitagora pentru a afla cea de-a treia latură.
 
 ---
@@ -861,7 +864,7 @@ Privește figura din dreapta. Pătratul are lungimea laturii _a_ + _b_,
 [pătrat mai mic](target:square) cu aria [[<msup><mi>c</mi><mn>2</mn></msup>|_a_ – _b_|_a_ + _b_]].
 
 {.reveal(when="blank-0")} Acum hai să rearanjăm triunghiurile în pătrat. Rezultatul
-conține încă cele patru triunghiuri dreptunghice, precum și două pătrate de dimensiunea 
+conține încă cele patru triunghiuri dreptunghice, precum și două pătrate de dimensiunea
 [[<msup><mi>a</mi><mn>2</mn></msup> și <msup><mi>b</mi><mn>2</mn></msup>|<msup><mi>c</mi><mn>2</mn></msup>|<msup><mfenced><mi>a</mi><mo>+</mo><mi>b</mi></mfenced><mn>2</mn></msup>]].
 
 {.reveal(when="blank-1")} Comparând aria suprafeței roșii
@@ -942,7 +945,7 @@ _{span.qed}_
 
 ::: column(width=240)
 
-    x-geopad(width=240): svg        
+    x-geopad(width=240): svg
       circle.move(name="e1" cx=100 cy=20 project="segment(line(a,b).at(.1),line(a,b).at(.9))")
       circle(name="f1" hidden x="b.add(e1.subtract(a).flip)")
       circle(name="g1" hidden x="c.subtract(e1.subtract(a))")
@@ -969,12 +972,12 @@ _{span.qed}_
 ::: column.grow
 
 {.r} Iată un alt triunghi dreptunghic. Dacă trasăm una din înălțimi, triunghiul
-se împarte în două triunghiuri mai mici. De asemenea, și ipotenuza _c_ este 
+se împarte în două triunghiuri mai mici. De asemenea, și ipotenuza _c_ este
 împărțită în [două părți mai mici](target:hypotenuse) pe care le vom numi
 [{.step-target.i.pill.blue}x](target:x) și [{.step-target.i.pill.green}y](target:y).
 _{span.next-step} Continuă_
 
-{.r.reveal(when="next-0")} Hai să separăm cele două triunghiuri mai mici, astfel 
+{.r.reveal(when="next-0")} Hai să separăm cele două triunghiuri mai mici, astfel
 încât să fie mai clar cum sunt legate…
 _{span.next-step} Continuă_
 
@@ -1051,12 +1054,12 @@ despre poligoane asemenea:
 
 Nu se cunosc multe detalii despre viața lui Pitagora și nu a fost găsită nicio lucrare
 de-a sa. El a fondat un cult religios numit _Pitagorism_ care practica
-un soi de “venerare a numerelor”. Pitagoricienii credeau că toate numerele au 
+un soi de “venerare a numerelor”. Pitagoricienii credeau că toate numerele au
 propriile lor caracteristici și că urmează variate obiceiuri bizare.
 
 ::: column.grow
 
-Pitagoricienilor li se atribuie multe descoperiri matematice, inclusiv găsirea 
+Pitagoricienilor li se atribuie multe descoperiri matematice, inclusiv găsirea
 primului [număr irațional](gloss:irrational-numbers), `sqrt(2)`.
 Numerele iraționale nu pot fi exprimate ca fracții simple - concept care
 i-a tulburat profund pe pitagoricienii și pe care au încercat (fără succes)
@@ -1075,7 +1078,7 @@ să-l ascundă!
 
 ### Calcularea Distanțelor
 
-Una din cele mai importante aplicații ale teoremei lui Pitagora 
+Una din cele mai importante aplicații ale teoremei lui Pitagora
 este calcularea distanțelor.
 
 ::: column.grow
@@ -1118,7 +1121,7 @@ Dacă desenăm acele două linii, obținem un [triunghi dreptunghic](target:tria
 Această metodă funcționează pentru _oricare_ două puncte:
 
 ::: .theorem
-__Formula Distanței__  
+__Formula Distanței__
 Fie două puncte de coordonate  (`x_1`,`y_1`) și (`x_2`,`y_2`),
 atunci distanța dintre ele este
 
@@ -1185,7 +1188,7 @@ Poți găsi un alt triplet pitagoreic folosind sistemul de coordonate de mai jos
 > section: isosceles-and-equilateral
 > sectionStatus: dev
 
-Pe lângă triunghiurile dreptunghice, mai există câteva alte triunghiuri cu 
+Pe lângă triunghiurile dreptunghice, mai există câteva alte triunghiuri cu
 proprietăți speciale. În această secțiune vom analiza unele dintre ele.
 
 ### Triunghiuri Isoscele
@@ -1204,7 +1207,7 @@ Demonstrație prin construcția bisectoarelor și a criteriului LUL.
 ### Triunghiuri Echilaterale
 
 Spunem că un triunghi este [__echilateral__](todo:equilateral-triangle) dacă toate
-laturile sale au aceeași lungime. [Ai văzut deja](/course/euclidean-geometry/geometric-construction) 
+laturile sale au aceeași lungime. [Ai văzut deja](/course/euclidean-geometry/geometric-construction)
 cum se construiește un triunghi echilateral folosind dreptarul și compasul.
 
 {.todo} ÎN CURÂND – Măsura unghiurilor într-un triunghi echilateral
@@ -1220,11 +1223,11 @@ cum se construiește un triunghi echilateral folosind dreptarul și compasul.
 > translated: auto
 
 Până acum am văzut relații între __unghiurile__ triunghirilor (ex: suma unghiurilor
-unui triunghi este 180°) și relații între __laturile__ triunghiurilor 
-(ex: teorema lui Pitagora). Dar nu există nimic care __leagă__ măsurile unghiurilor 
+unui triunghi este 180°) și relații între __laturile__ triunghiurilor
+(ex: teorema lui Pitagora). Dar nu există nimic care __leagă__ măsurile unghiurilor
 de lungimile laturilor.
 
-De exemplu, dacă știu cele trei laturi ale unui triunghi, cum pot afla măsura 
+De exemplu, dacă știu cele trei laturi ale unui triunghi, cum pot afla măsura
 unghiurilor sale, fără a desena triunghiul și fără a le măsura cu un raportor?
 Aici intervine __trigonometria__!
 
@@ -1235,7 +1238,7 @@ Aici intervine __trigonometria__!
 
 ::: column.grow
 Să ne imaginăm că avem un triunghi dreptunghic pentru care cunoaștem măsura unuia
-din celelalte două unghiuri, __{.m-red}α__. Știm deja că cea mai mare latură 
+din celelalte două unghiuri, __{.m-red}α__. Știm deja că cea mai mare latură
 se numește [__{.m-yellow}ipotenuză__](target:hyp). Celelalte două se numesc
 [__{.m-green}laturi adiacente__](target:adj) (care se află lângă unghiul __{.m-red}α__) și
 [__{.m-blue}latura opusă__](target:opp) (care este opusă unghiului __{.m-red}α__).
@@ -1261,7 +1264,7 @@ conform [criteriului UU](gloss:triangle-aa) știm că toate sunt [[asemenea|cong
 ---
 > id: trig-functions
 
-Cum toate aceste triunghiuri sunt asemenea, laturile lor sunt proporționale. 
+Cum toate aceste triunghiuri sunt asemenea, laturile lor sunt proporționale.
 Următoarele raporturi sunt, în special, aceleași pentru toate aceste triunghiuri :
 
     p.text-center
@@ -1286,7 +1289,7 @@ Aceste relații se numesc __funcții trigonometrice__ – și sunt trei la numă
 
 ::: .theorem
 Cele trei funcții trigonometrice sunt relații între unghiuri și rapoartele
-laturilor unui triunghi dreptunghic. Fiecare dintre ele are un nume, precum 
+laturilor unui triunghi dreptunghic. Fiecare dintre ele are un nume, precum
 și o abreviere de 3 litere:
 
 ::: column.grow
@@ -1355,13 +1358,13 @@ laturilor unui triunghi dreptunghic. Fiecare dintre ele are un nume, precum
 > id: sine-cosine-rule
 > translated: auto
 
-Până acum, tot ce-am învățat despre trigonometrie se aplică doar în triunghiurile 
-dreptunghice. Dar majoritatea triunghiurilor nu sunt dreptunghice și există două 
+Până acum, tot ce-am învățat despre trigonometrie se aplică doar în triunghiurile
+dreptunghice. Dar majoritatea triunghiurilor nu sunt dreptunghice și există două
 rezultate importante care se aplică tuturor triunghiurilor.
 
 ::: column.grow
 ::: .theorem
-__Teorema Sinusurilor__  
+__Teorema Sinusurilor__
 Într-un triunghi cu laturile _a_, _b_ și _c_ și unghiurile _A_, _B_ și _C_,
 
 {.text-center} `(sin(a))/a = (sin(b))/b = (sin(c))/c`
@@ -1369,11 +1372,11 @@ __Teorema Sinusurilor__
 
 ::: column.grow
 ::: .theorem
-__Teorema Cosinusului__  
+__Teorema Cosinusului__
 Într-un triunghi cu laturile _a_, _b_ și _c_ și unghiurile _A_, _B_ și _C_,
 
-{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`  
-`b^2 = c^2 + a^2 - 2ca cos(B)`  
+{.text-center} `c^2 = a^2 + b^2 - 2ab cos(C)`
+`b^2 = c^2 + a^2 - 2ca cos(B)`
 `a^2 = b^2 + c^2 - 2bc cos(A)`
 :::
 
@@ -1390,7 +1393,7 @@ __Teorema Cosinusului__
 ### Marele Studiu Trigonometric
 
 Vă mai aduceți aminte de misiunea de a găsi cel mai înalt munte de pe Pământ din
-[introducere](/course/triangles/introduction)? Cu ajutorul trigonometriei putem, 
+[introducere](/course/triangles/introduction)? Cu ajutorul trigonometriei putem,
 în sfârșit, să rezolvăm această problemă!
 
 ::: .sticky-wrap
@@ -1415,19 +1418,19 @@ Vă mai aduceți aminte de misiunea de a găsi cel mai înalt munte de pe Pămâ
         path.yellow(x="segment(b,y)" target="right")
         path.yellow(x="segment(x,y)" target="right" label="height")
 
-Topografii din India au măsurat unghiul din vârful muntelui din 
+Topografii din India au măsurat unghiul din vârful muntelui din
 [două poziții diferite](target:points), aflate la distanță de _{span.pill.step-target.yellow(data-to="base")}5km unul față de altul_.
 Rezultatele obținute au fost _{span.pill.step-target.red(data-to="ang")}23°_ și
 _{span.pill.step-target.blue(data-to="ang1")}29°_.
 
-Pentru că _{span.pill.step-target.green(data-to="a")}unghiul α_ este 
+Pentru că _{span.pill.step-target.green(data-to="a")}unghiul α_ este
 [unghi suplementar](gloss:supplementary-angles), știm că măsura lui este [[151]]°.
 _{span.reveal(when="blank-0")}Știind suma unghiurilor interne ale unui triunhi putem calcula
 măsura *{span.pill.step-target(data-to="b")}unghiului β* care este de [[6]]°._
 
 {.reveal(when="blank-1")} Acum știm [toate cele trei unghiuri](target:angles) ale
-triunghiului, precum și _{span.pill.step-target.yellow(data-to="base")}una dintre 
-laturi_. Aceste informații sunt suficiente pentru a afla [[teorema sinusurilor|teorema cosinusului]] 
+triunghiului, precum și _{span.pill.step-target.yellow(data-to="base")}una dintre
+laturi_. Aceste informații sunt suficiente pentru a afla [[teorema sinusurilor|teorema cosinusului]]
 ca să calculăm distanța
 [_d_](target:d):
 
@@ -1466,7 +1469,7 @@ ca să calculăm distanța
           mn.pill.yellow.step-target(data-to="d") 23.2 km
 
 {.reveal(when="blank-3 blank-4" delay=2000)} Mai avem un ultim pas: să aruncăm
-o privire la [triunghiul dreptunghic cel mare](target:right). Știm deja lungimea 
+o privire la [triunghiul dreptunghic cel mare](target:right). Știm deja lungimea
 ipotenuzei, dar, de fapt, avem nevoie de latura [[opusă|adiacentă]].
 _{span.reveal(when="blank-5")}O putem afla folosind definiția lui
 *sin*:_

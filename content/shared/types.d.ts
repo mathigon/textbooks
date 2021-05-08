@@ -1,196 +1,9 @@
-import {Obj, EventTarget} from '@mathigon/core';
-import {Point, Angle, Arc, Circle, Line, TransformMatrix, Polygon, Rectangle, Bounds, Segment, Ray, Sector, Polyline, Triangle, intersections, SimplePoint, GeoElement, GeoShape} from '@mathigon/euclid';
-import {CustomElementView, ElementView, SVGView, Observable, AnimationResponse, SVGParentView} from '@mathigon/boost';
+import {EventTarget, Obj} from '@mathigon/core';
+import {Angle, Arc, Bounds, Circle, GeoElement, GeoShape, intersections, Line, Point, Polygon, Polyline, Ray, Rectangle, Sector, Segment, TransformMatrix, Triangle} from '@mathigon/euclid';
+import {AnimationResponse, CustomElementView, ElementView, Observable, SVGParentView, SVGView} from '@mathigon/boost';
 import {ExprElement} from '@mathigon/hilbert';
+import {Select, Step, StepComponent, UserData} from '@mathigon/studio';
 
-export class Modal extends CustomElementView {
-  private isOpen;
-  private $iframe?;
-  private $video?;
-  canClose: boolean;
-  ready(): void;
-  open(noAnimation?: boolean): void;
-  close(keepBg?: boolean, noEvent?: boolean): void;
-}
-export class Progress extends CustomElementView {
-  private r;
-  private r1;
-  private completed;
-  private $svg;
-  private $progress;
-  ready(): void;
-  setProgress(p: number, animation?: boolean): void;
-  complete(animation?: boolean): void;
-}
-export class Tabbox extends CustomElementView {
-  private $body;
-  private $titles;
-  private $tabs;
-  active: number;
-  ready(): void;
-  makeActive(i: number): void;
-}
-export function confetti(duration?: number, maxParticles?: number): void;
-export class Gesture extends CustomElementView {
-  private slide?;
-  private shift?;
-  private doAnimation;
-  private $end?;
-  private $target?;
-  from?: Point;
-  created(): void;
-  ready(): void;
-  setTarget($target: string|ElementView, slide?: Point, shift?: Point): void;
-  start(slide?: Point): void;
-  startSlide($from: ElementView, $to: ElementView): void;
-  stop(): void;
-  private runSlideAnimation;
-  private runClickAnimation;
-}
-export class Blank extends CustomElementView implements StepComponent {
-  private $target;
-  private $popup;
-  private solution;
-  done: boolean;
-  solvedBlank?: undefined;
-  ready(): void;
-  setup($step: Step, goal: string, userData?: UserData): void;
-  solve(restore?: boolean): void;
-}
-export class BlankInput extends CustomElementView implements StepComponent {
-  private $input;
-  private $target;
-  private solution;
-  private solutionNum;
-  private solutionDisplay;
-  private range;
-  private input;
-  private hint;
-  private attempts;
-  private placeholder;
-  done: boolean;
-  linkedBlanks?: BlankInput[];
-  solvedBlank?: BlankInput;
-  goal: string;
-  ready(): void;
-  setup($step: Step, goal: string, userData?: UserData): void;
-  get isCorrect(): boolean;
-  checkAnswer(input: string): boolean;
-  moveCursor(): void;
-  solve(restore?: boolean): void;
-  focus(): void;
-  blur(): void;
-}
-export interface HintOptions {
-  class?: string;
-  visible?: boolean;
-  store?: boolean;
-  force?: boolean;
-  variables?: Obj<any>;
-  timeout?: number;
-  toast?: boolean;
-}
-export class Tutor extends CustomElementView {
-  private $course?;
-  private $toasts;
-  private $chat;
-  private $chatBody;
-  private $query;
-  private recentMessages;
-  private isOpen;
-  private queuePromise;
-  hints: Obj<string|string[]>;
-  correct: () => string;
-  incorrect: () => string;
-  ready(): void;
-  open(): void;
-  close(): void;
-  queue(content: string, kind?: string, options?: HintOptions): void;
-  display(content: string, kind?: string, options?: HintOptions): void;
-  showHint(msg: string, options?: HintOptions): {
-      text: string;
-  };
-  askQuestion(query: string): void;
-  meanEasterEgg(): void;
-}
-export type UserData = {
-  scores?: string[];
-  data?: Record<string, any>;
-};
-export interface StepComponent {
-  setup: ($step: Step, goal: string, initialData?: UserData) => void;
-}
-export class Step extends CustomElementView {
-  private $course?;
-  private $components;
-  private $reveals;
-  private $nextBtn;
-  private userData?;
-  narration?: Narration;
-  model: Observable;
-  isShown: boolean;
-  isCompleted: boolean;
-  goals: string[];
-  scores: Set<string>;
-  $blanks: (Blank|BlankInput)[];
-  tools: {
-      confetti: typeof confetti;
-  };
-  ready(): void;
-  show(): void;
-  complete(): void;
-  get isReady(): boolean;
-  get isPageLoaded(): boolean;
-  score(goal: string, goNext?: boolean): void;
-  storeData(key: string, value: any): void;
-  onScore(goalList: string, callback?: () => void): Promise<void>;
-  addHint(text: string, options?: HintOptions): {
-      text: string;
-  };
-  delayedHint(callback: () => void, t?: number): void;
-  getHelp(): void;
-  /** @deprecated */
-  getText(id: string): string;
-  get nextStep(): Step|undefined;
-  groupBlanks(...indices: number[]): void;
-}
-type AudioCallback = (options: {
-  ended: boolean;
-}) => void;
-export class AudioSegment {
-  private readonly player;
-  private clipEndTime;
-  private clipCallback?;
-  constructor(url: string);
-  playClip(start: number, end: number, callback: AudioCallback): void;
-  private triggerCallback;
-  pause(): void;
-  get isPlaying(): boolean;
-}
-export class Narration {
-  private readonly audio;
-  private readonly paragraphs;
-  constructor(audio: AudioSegment, $step: Step);
-  play(): void;
-}
-export class Paragraph extends EventTarget {
-  private readonly $p;
-  private audio;
-  private playing;
-  private sentences;
-  private $button;
-  constructor($p: ElementView, audio: AudioSegment);
-  play(s?: Sentence): void;
-}
-export class Sentence extends EventTarget {
-  private readonly $el;
-  private readonly audio;
-  private readonly start;
-  private readonly end;
-  constructor($el: ElementView, audio: AudioSegment);
-  play(): void;
-  get $reveal(): ElementView;
-}
 type Callback = (p: number) => void;
 export class Ticker {
   private callbacks;
@@ -361,134 +174,7 @@ export class EquationSystem extends CustomElementView implements StepComponent {
   onSolveRow(expr: ExprElement): void;
   solve(): void;
 }
-export class FreeText extends CustomElementView implements StepComponent {
-  setup($step: Step, id: string, userData?: UserData): void;
-}
-export class Gallery extends CustomElementView {
-  ready(): void;
-}
 type SlideGenerator = (el: ElementView, success: () => void, error: () => void) => void;
-export class Gameplay extends CustomElementView implements StepComponent {
-  private $dots;
-  private $currentSlide?;
-  private slideTemplate;
-  private history;
-  private target;
-  private slideGenerator?;
-  completed: boolean;
-  ready(): void;
-  setup($step: Step): void;
-  setSlideGenerator(g: SlideGenerator): void;
-  private score;
-  private makeSlide;
-}
-export class Gloss extends CustomElementView {
-  private $target;
-  private $popup;
-  protected xid: string;
-  ready(): void;
-  show(): void;
-  hide(): void;
-  body(): any;
-}
-export class Bio extends Gloss {
-  body(): string|void;
-}
-export class ImageView extends CustomElementView {
-  ready(): void;
-}
-export class Picker extends CustomElementView implements StepComponent {
-  private correctCount;
-  private solvedCount;
-  private isSolved;
-  setup($step: Step, id: string, userData?: UserData): void;
-  checkSolved(): void;
-}
-export class PlayBtn extends CustomElementView {
-  private visible;
-  ready(): void;
-  play(): void;
-  reset(): void;
-}
-export class PlayToggle extends CustomElementView {
-  private playing;
-  private $icon;
-  ready(): void;
-  toggle(): void;
-  play(): void;
-  pause(): void;
-}
-export class ScaleBox extends CustomElementView {
-  ready(): void;
-}
-export class Slider extends CustomElementView implements StepComponent {
-  private speed;
-  private drag;
-  private animation?;
-  steps: number;
-  current: number;
-  ready(): void;
-  setup($step: Step, goal: string): void;
-  set(x: number): void;
-  play(): Promise<void>;
-  moveTo(x: number, duration?: number): Promise<void>;
-  protected bindVariable(model: Observable, name: string): void;
-}
-export class Slideshow extends CustomElementView implements StepComponent {
-  private $legend;
-  private $steps;
-  private $dots;
-  private $back;
-  private $next;
-  private blanks;
-  private reveals;
-  private length;
-  private current;
-  private autoAdvance?;
-  private locked;
-  ready(): void;
-  setup($step: Step, _id: string, userData?: UserData): void;
-  private go;
-  private setupSlide;
-  goNext(): void;
-  goBack(): void;
-}
-export class Solved extends CustomElementView {
-  private visible;
-  private $svg;
-  private $text;
-  ready(): void;
-  enter(): AnimationResponse;
-  exit(): AnimationResponse;
-}
-export class Sortable extends CustomElementView implements StepComponent {
-  private items;
-  ready(): void;
-  setup($step: Step, goal: string, userData?: UserData): void;
-  solve(): void;
-}
-export class Target extends CustomElementView {
-  ready(): void;
-}
-export class Variable extends CustomElementView implements StepComponent {
-  private min;
-  private max;
-  private step;
-  private valueChange;
-  private $progress;
-  value: number;
-  name: string;
-  ready(): void;
-  setup($step: Step, goal: string): void;
-  setValue(v: number): void;
-}
-export class Video extends CustomElementView {
-  private video;
-  ready(): void;
-  setTime(t: number): void;
-  play(): void;
-  pause(): void;
-}
 export type TapEvent = {
   posn: Point;
   event: PointerEvent;
@@ -521,13 +207,6 @@ export class EventManager {
   startEvent(e: PointerEvent): void;
   private getCallbacks;
   cancel(): void;
-}
-export class Select extends CustomElementView {
-  $active: ElementView;
-  $options: Obj<ElementView>;
-  ready(): void;
-  makeActive($el: ElementView): void;
-  protected bindVariable(model: Observable, name: string): void;
 }
 export type PathDefinition = string|Path|((p: Path) => boolean);
 export interface WaitForPathsOptions {
@@ -635,7 +314,7 @@ export class Geopad extends CoordinatePlane {
   private $gesture?;
   model: Observable<typeof DEFAULT_GEO_MODEL & Obj<any>>;
   $tools: Select;
-  boundsRect: Rectangle;
+  viewportRect: Rectangle;
   toolOverride?: Tool;
   ready(): void;
   switchTool(name: ToolName): void;
@@ -702,7 +381,7 @@ export class GeoPoint extends GeoShape$<Point> {
   distance(p: Point): number;
   lock(locked?: boolean): void;
   project(p: string|GeoShape$<Path>|undefined): void;
-  makeIntersection({ path1, path2, index }: Intersection): void;
+  makeIntersection({path1, path2, index}: Intersection): void;
   addHalo(): void;
   removeHalo(): Promise<void>;
   pulsate(): void;
@@ -831,15 +510,6 @@ export class IconBtn extends CustomElementView {
 }
 export class Parallax extends CustomElementView {
   ready(): void;
-}
-export class Popup extends CustomElementView {
-  private isOpen;
-  private animation;
-  private $bubble;
-  ready(): void;
-  toggle(): void;
-  open(): void;
-  close(): void;
 }
 export abstract class Tile {
   readonly $parent: Polypad;
@@ -985,7 +655,7 @@ export class PolygonTile extends Tile {
   static action(name: string, tiles: Set<PolygonTile>, center: Point): void;
 }
 export class CustomPolygonTile extends PolygonTile {
-  readonly type = "custom-polygon";
+  readonly type = 'custom-polygon';
   protected $handles: SVGView[];
   showSelectionOutline: boolean;
   constructor(options: string, $parent: Polypad);
@@ -999,36 +669,36 @@ export class CustomPolygonTile extends PolygonTile {
   static action(name: string, tiles: Set<CustomPolygonTile>): void;
 }
 export class Pentomino extends PolygonTile {
-  readonly type = "pentomino";
+  readonly type = 'pentomino';
   constructor(number: string, $parent: Polypad);
   static makeThumbnail(number: string, $path: SVGView): void;
 }
 export class Tangram extends PolygonTile {
-  readonly type = "tangram";
+  readonly type = 'tangram';
   readonly snapAngles: number[];
   constructor(number: string, $parent: Polypad);
   static makeThumbnail(number: string, $path: SVGView, $parent: Polypad, colour?: string): void;
   getSnapLines(): Segment[];
 }
 export class Penrose extends PolygonTile {
-  readonly type = "penrose";
+  readonly type = 'penrose';
   constructor(number: string, $parent: Polypad);
   static makeThumbnail(number: string, $el: ElementView, $parent: Polypad, colour?: string): void;
 }
 export class KolamTile extends PolygonTile {
-  readonly type = "kolam";
+  readonly type = 'kolam';
   constructor(number: string, $parent: Polypad);
   static makeThumbnail(number: string, $el: ElementView): void;
 }
 export class EggTangram extends PolygonTile {
-  readonly type = "egg";
+  readonly type = 'egg';
   readonly snapAngles: number[];
   constructor(number: string, $parent: Polypad);
   flip(center?: Point): void;
   static makeThumbnail(number: string, $path: SVGView): void;
 }
 export class FractalTile extends PolygonTile {
-  readonly type = "fractal";
+  readonly type = 'fractal';
   constructor(size: string, $parent: Polypad);
   static makeThumbnail(size: string, $el: ElementView): void;
 }
@@ -1075,7 +745,7 @@ export class Compass extends Utensil {
   getSnapLines(): never[];
 }
 export class NumberTile extends Tile {
-  readonly type = "number-tile";
+  readonly type = 'number-tile';
   path: Polygon;
   readonly count: number;
   private width;
@@ -1098,7 +768,7 @@ export class NumberBar extends PolygonTile {
   static makeThumbnail(width: string, $el: ElementView, $parent: Polypad): void;
 }
 export class NumberLine extends Tile {
-  readonly type = "number-line";
+  readonly type = 'number-line';
   private line;
   private linePoints;
   path: Rectangle;
@@ -1116,7 +786,7 @@ export class NumberLine extends Tile {
   static makeThumbnail(options: string, $el: ElementView): void;
 }
 export class PrimeDisk extends Tile {
-  readonly type = "prime-disk";
+  readonly type = 'prime-disk';
   readonly $label: SVGView;
   readonly $outline: SVGView;
   private readonly $segmentWrap;
@@ -1135,7 +805,7 @@ export class PrimeDisk extends Tile {
   static makeThumbnail(number: string, $el: ElementView): void;
 }
 export class DecimalGrid extends Tile {
-  readonly type = "decimal-grid";
+  readonly type = 'decimal-grid';
   path: Rectangle;
   width: number;
   height: number;
@@ -1150,7 +820,7 @@ export class DecimalGrid extends Tile {
   static makeThumbnail(options: string, $el: ElementView): void;
 }
 export class DotTile extends Tile {
-  readonly type = "dot";
+  readonly type = 'dot';
   protected $path: SVGView;
   protected $outline: SVGView;
   deleted: boolean;
@@ -1171,7 +841,7 @@ type Model = {
   boxes: number;
 };
 export class DotMachine extends Tile {
-  readonly type = "dot-machine";
+  readonly type = 'dot-machine';
   readonly model: Observable<Model>;
   canRotate: boolean;
   canDragToSelect: boolean;
@@ -1218,7 +888,7 @@ export class DotMachineCell {
   annihilate(): Promise<void>;
 }
 export class FractionBar extends Tile {
-  readonly type = "fraction-bar";
+  readonly type = 'fraction-bar';
   path: Rectangle;
   private count;
   private readonly denominator;
@@ -1235,7 +905,7 @@ export class FractionBar extends Tile {
   static action(name: string, tiles: Set<FractionBar>): void;
 }
 export class FractionCircle extends Tile {
-  readonly type = "fraction-circle";
+  readonly type = 'fraction-circle';
   readonly $label?: SVGView;
   protected $path: SVGView;
   protected $outline: SVGView;
@@ -1246,7 +916,7 @@ export class FractionCircle extends Tile {
   static makeThumbnail(fraction: string, $el: ElementView): void;
 }
 export class AlgebraTile extends PolygonTile {
-  readonly type = "algebra-tile";
+  readonly type = 'algebra-tile';
   protected $text: SVGView;
   private collision?;
   constructor(type: string, $parent: Polypad);
@@ -1259,7 +929,7 @@ export class AlgebraTile extends PolygonTile {
   static action(name: string, tiles: Set<AlgebraTile>): void;
 }
 export class Grid extends Tile {
-  readonly type = "grid";
+  readonly type = 'grid';
   private dimensions;
   private readonly $handles;
   private readonly $axes;
@@ -1277,7 +947,7 @@ export class Alert extends CustomElementView {
   close(): Promise<void>;
 }
 export class Balance extends Tile {
-  readonly type = "balance";
+  readonly type = 'balance';
   canRotate: boolean;
   private readonly $base;
   private readonly $left;
@@ -1304,7 +974,7 @@ export class Balance extends Tile {
   static action(name: string, tiles: Set<Balance>): Promise<void>;
 }
 export class AlgebraToken extends PolygonTile {
-  readonly type = "token";
+  readonly type = 'token';
   constructor(name: string, $parent: Polypad);
   static makeThumbnail(name: string, $el: ElementView): void;
 }
@@ -1484,7 +1154,7 @@ export class Selection {
   update(stopIfNoChanges?: boolean): void;
   positionTools(): void;
   moveStart(): void;
-  move({ posn, startPosn }: MoveEvent): void;
+  move({posn, startPosn}: MoveEvent): void;
   moveEnd(): void;
   rotateStart(): void;
   rotate(angle: number): void;
@@ -1520,14 +1190,14 @@ export class MoveTool$ extends Tool$ {
 }
 export class EraserTool extends Tool$ {
   private erased;
-  down({ posn }: TapEvent): void;
-  move({ posn, lastPosn }: MoveEvent): void;
+  down({posn}: TapEvent): void;
+  move({posn, lastPosn}: MoveEvent): void;
   shouldErase(posn: Point, shape: GeoElement, type: string): boolean;
   erase(posn: Point): void;
   end(): void;
 }
 export class TextTool extends Tool$ {
-  down({ posn }: TapEvent): void;
+  down({posn}: TapEvent): void;
 }
 export class PenTool extends Tool$ {
   private stroke?;
@@ -1536,8 +1206,8 @@ export class PenTool extends Tool$ {
   brush: PenBrushType;
   private getUtensil;
   private getPoint;
-  down({ posn }: TapEvent): void;
-  move({ posn }: MoveEvent): void;
+  down({posn}: TapEvent): void;
+  move({posn}: MoveEvent): void;
   end(): void;
 }
 export class GeoTool extends Tool$ {
@@ -1550,15 +1220,53 @@ export class GeoTool extends Tool$ {
   private snapPoint;
   private getOrMakePointTile;
   private drawPendingPoint;
-  down({ posn }: TapEvent): void;
+  down({posn}: TapEvent): void;
   start(): void;
-  move({ posn }: MoveEvent): void;
+  move({posn}: MoveEvent): void;
   end(): void;
   click(): void;
   hover(e: TapEvent): void;
   cancel(): void;
 }
 type ImageUploadCallback = (file: File, image: ImageTile) => void;
+type TileName =
+  'number-bar' |
+  'number-tile' |
+  'polygon' |
+  'pentomino' |
+  'tangram' |
+  'fraction-bar' |
+  'fraction-circle' |
+  'text' |
+  'algebra-tile' |
+  'grid' |
+  'custom-polygon' |
+  'image' |
+  'dice' |
+  'coin' |
+  'number-line' |
+  'penrose' |
+  'kolam' |
+  'prime-disk' |
+  'balance' |
+  'decimal-grid' |
+  'spinner' |
+  'custom-spinner' |
+  'token' |
+  'egg' |
+  'geo' |
+  'fractal' |
+  'ruler' |
+  'protractor' |
+  'compass' |
+  'dot-machine' |
+  'dot' |
+  'garden' |
+  'tantrix' |
+  'axes' |
+  'question-blank' |
+  'equation' |
+  'number-card';
 export class Polypad extends CustomElementView {
   tiles: Set<Tile>;
   strokes: Set<Stroke>;
@@ -1616,7 +1324,7 @@ export class Polypad extends CustomElementView {
   enableImageDrop(callback?: (file: File, image: ImageTile) => void, $btn?: ElementView): void;
   bindSettingsPanel<T>(tile: Tile, html: string, initial: T): Observable<T>;
   newImage(file: File, posn: Point, callback?: ImageUploadCallback): Promise<void>;
-  newTile(type: string, options: string): Tile;
+  newTile(type: TileName, options: string): Tile;
   setViewport(origin: Point, zoom?: number, zoomCenter?: Point): void;
   bindSource($el: ElementView, type: string, options: string, $overlay?: ElementView, colour?: string): void;
   setColour(c?: string): void;
@@ -1660,37 +1368,4 @@ export class Factris extends CustomElementView {
   keyPress(key: string, repeat?: boolean): void;
   showHighscore(): void;
   updateHighscore(): Promise<void>;
-}
-export class Theme extends CustomElementView {
-  ready(): void;
-}
-export class ShareRow extends CustomElementView {
-  ready(): void;
-  private copyUrl;
-}
-export class Math extends CustomElementView {
-  ready(): void;
-}
-export class Course extends CustomElementView {
-  user: any;
-  isCompleted: boolean;
-  isReady: boolean;
-  glossary: Obj<any>;
-  userData: any;
-  $activeStep?: Step;
-  $tutor: Tutor;
-  audio?: AudioSegment;
-  $steps: Step[];
-  private $footer;
-  private $skipStep;
-  private $progress;
-  private $stepsWrap;
-  created(): void;
-  ready(): void;
-  nextStep(): void;
-  goToStep($step: Step, animated?: boolean): void;
-  complete(animated?: boolean): void;
-  findStep(id: string): Step|undefined;
-  saveProgress(data: Obj<any>): void;
-  log(category: string, action: string, value?: string): void;
 }

@@ -5,6 +5,9 @@
 > section: introduction
 > id: intro
 > goals: play
+> color: "#93299B"
+> level: Intermediate
+> next: game-theory
 
 ::: column.grow
 
@@ -23,8 +26,8 @@ be hopeful: the army was approaching, and planning to rescue them shortly.
 
 :::
 
-Unfortunately, it seemed impossible to tell the prisoners that lp was coming, without also
-alerting their capturers – that is, until Colonel Jose Espejo came up with an ingenious idea. With
+Unfortunately, it seemed impossible to tell the prisoners that help was coming, without also
+alerting their captors – that is, until Colonel Jose Espejo came up with an ingenious idea. With
 his team, he wrote a new pop song, embedded a secret message in the chorus, and then played it
 thousands of times over the radio.
 
@@ -87,7 +90,8 @@ and used compass needles to point at different letters on a display.
 
 ::: column.grow
 
-One year later, the inventor [Samuel Morse](bio:morse), together with his assistant Alfred Vail, developed an even better version of the telegraph.
+One year later, the inventor [Samuel Morse](bio:morse), together with his assistant Alfred Vail,
+developed an even better version of the telegraph.
 
 Pressing a button at one end of the telegraph line closes an electronic circuit. This means that
 current is flowing, which triggers a buzzing sound at the other end of the telegraph line.
@@ -304,7 +308,7 @@ All flags have different colours or patterns, and represent a different letter:
           strong= l
 
 For example, if you see the flags _{img(src="images/maritime/i.svg" width=20 height=20)}_
-_{img(src="images/maritime/c.svg" width=20 height=20)}_ 
+_{img(src="images/maritime/c.svg" width=20 height=20)}_
 _{img(src="images/maritime/e.svg" width=20 height=20)}_ on a passing ship, you should
 [[watch out for icebergs|give them assistance|reduce speed]].
 
@@ -505,7 +509,7 @@ Recalling our lesson on [probability trees](link/to/course), with each finger th
         - var i = 0
         - xMin = 0
         - xMax = 100
-        while i < 1 
+        while i < 1
           - yHorizontal = 165+i*320
           line(x1=xMin y1=yHorizontal x2=xMax y2=yHorizontal target="yes")
           -i += 1
@@ -513,10 +517,10 @@ Recalling our lesson on [probability trees](link/to/course), with each finger th
         - var i = 0
         - xMin = 100
         - xMax = 200
-        while i < 2 
+        while i < 2
           - yHorizontal = 85+i*160
           - yToMid = i%2 == 0 ? 80 : -80
-          - cl = i==1 ? "yes" : "no" 
+          - cl = i==1 ? "yes" : "no"
           line(x1=xMin  y1=yHorizontal         x2=xMax   y2=yHorizontal target=cl)
           line(x1=xMin  y1=yHorizontal+yToMid  x2=xMin   y2=yHorizontal target=cl)
           text(x=(xMin+xMax)/2 y=yHorizontal-textb font-size=40 target=cl)= i%2
@@ -586,7 +590,7 @@ Yes, there are [[32]] different combinations we can make with five fingers.
     x-select.segmented
       div Decimal
       div Binary
-    table.finger-grid   
+    table.finger-grid
       for b0 in [0, 1]
         for b1 in [0, 1]
           tr
@@ -613,7 +617,7 @@ Change the [tabs](->.segmented) to toggle between the binary values and their de
 
 Now that we have learned a bit about how we can represent different values by strings of 0s and 1s, let's tie this back to transistors. Recall how in our morse code/flashlight examples we were constrained by our medium’s ability to be on or off. Computers store data in transistors, so they store data as a collection of ons and offs, or 1s and 0s. Just like we just did with our fingers (by putting them up or down). If a computer had fingers, they would probably count to 31 on one hand. Everything that’s stored on a computer, from text and images to video and sound is stored in transistors as sequences of 1s and 0s, or binary code.
 
-Another way we can imagine these transistors is with a series of lights. 
+Another way we can imagine these transistors is with a series of lights.
 
     table.led-binary
       tr
@@ -655,7 +659,7 @@ Let's examine the binary number _{.ns.g}11111_ (5 consecutive 1s). How much is e
 
 ---
 
-We can find the decimal value of this binary number _{.ns.g}11111_ by adding up the digit values. So its value is _not_ eleven thousand, one-hundred and eleven, but is 
+We can find the decimal value of this binary number _{.ns.g}11111_ by adding up the digit values. So its value is _not_ eleven thousand, one-hundred and eleven, but is
 
 {.text-center.s-red} _{.hex}16_ + _{.hex}8_ + _{.hex}4_ + _{.hex}2_ + _{.hex}1_ = _{.hex}[[31]]_
 
@@ -690,7 +694,7 @@ Imagine a conveyor belt that slides a large block of a gelatin-like material. Th
       .legend(slot="legend") We have a full block of length #[strong 25].
       .legend(slot="legend") We always start with the leftmost digit. In this case, 16 is the largest power of 2 that can fit into 25. So first we test the #[strong 16s] place.
       .legend(slot="legend") We can subtract 16, so we write a [1 in the 16s place](->.#digit16). We're left with #[strong 9].
-      .legend(slot="legend") Next we test the #[strong 8s] place. 
+      .legend(slot="legend") Next we test the #[strong 8s] place.
       .legend(slot="legend") We can subtract 8, so we write a #[strong 1] in the 8s place. We're left with #[strong 1].
       .legend(slot="legend") Next we test the #[strong 4s] place.
       .legend(slot="legend") We cannot subtract 4, so we write a #[strong 0] in the 4s place.
@@ -702,9 +706,9 @@ Imagine a conveyor belt that slides a large block of a gelatin-like material. Th
 
 {.fixme} I'm not sure exactly how to format this, Could just leave as is, or could do as a proof (see below).
 
-Here is that simple method put into steps. 
+Here is that simple method put into steps.
 When converting decimal number N into binary:
-1. Start with the highest power of 2^n, d, that you can subtract from N. 
+1. Start with the highest power of 2^n, d, that you can subtract from N.
 2. If you can subtract d from N, then write a 1 in that place and continue with N = N - d.
 3. If you cannot subtract d from N, then write a 0 in that place and continue with N = N.
 4. Divide d by 2 to get the next digits place.
@@ -768,7 +772,7 @@ In 2016, the messaging app __WhatsApp__ increased the maximum number of possible
 
 ::: column(width=400)
 
-The __I-Ching__ is an ancient Chinese divination text. It contains 64 different "Hexagrams", each of which is made up of six horizontal lines which can be either solid (Yang) or divided (Yin). 
+The __I-Ching__ is an ancient Chinese divination text. It contains 64 different "Hexagrams", each of which is made up of six horizontal lines which can be either solid (Yang) or divided (Yin).
 
 :::
 
@@ -795,7 +799,7 @@ __and those who don't.__
     // https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Night_Sky.png/1024px-Night_Sky.png
     // https://upload.wikimedia.org/wikipedia/commons/6/61/Satellite_Cylinder_%28PSF%29.png
 
-## Error Detection 
+## Error Detection
 
 > section: error-detection
 > sectionStatus: dev
@@ -1248,9 +1252,9 @@ In 49 BCE, Julius Caesar was leader of the Roman Empire, and his adopted heir Oc
 in a battle
 
 
-The year is 49BC and Julius Caesar, leader of the Roman Empire has sent a message to his adopted heir , who is engaged in a battle that is not going well and reinforcements are needed. In order to make sure the message arrives he has sent 3 copies with trusted agents of his army. Spies from the opposing army intercept two of the messages, but one copy makes it through to Octavian. 
+The year is 49BC and Julius Caesar, leader of the Roman Empire has sent a message to his adopted heir , who is engaged in a battle that is not going well and reinforcements are needed. In order to make sure the message arrives he has sent 3 copies with trusted agents of his army. Spies from the opposing army intercept two of the messages, but one copy makes it through to Octavian.
 
-Upon receiving the letter Octavian eagerly opens the message and reads: 
+Upon receiving the letter Octavian eagerly opens the message and reads:
 
 {.parchment} “Xlcjerjw, anrwoxalnvnwcb jan xw cqn fjh. Cx jaaren xw orocnnwcq Xlcxkna. Qxum yxbrcrxw
 dwcru cqnw. SL”
@@ -1283,14 +1287,14 @@ position until then. JC”
 
 ---
 
-{.fixme} Octavian breathes a sigh of relief knowing that help is coming, and also that the enemy agents who captured the other two messages won’t be able to read it without the secret key. 
+{.fixme} Octavian breathes a sigh of relief knowing that help is coming, and also that the enemy agents who captured the other two messages won’t be able to read it without the secret key.
 
 This method of encoding a secret message is called the __Caesar cipher__. We simply "shift" every
 letter in the alphabet by a certain amount
 
-{.fixme}  And because Octavian knew what method Caesar had used to hide the message (an algorithm), and Caesar had told him the key (what letter the A lined up with on his wheel) before they had left Rome, he was able to read Caesar’s hidden message with ease.   shifts the alphabet a certain number of places in order to write out the message. This shifting is the algorithm. The key is how many places it is shifted. 
+{.fixme}  And because Octavian knew what method Caesar had used to hide the message (an algorithm), and Caesar had told him the key (what letter the A lined up with on his wheel) before they had left Rome, he was able to read Caesar’s hidden message with ease.   shifts the alphabet a certain number of places in order to write out the message. This shifting is the algorithm. The key is how many places it is shifted.
 
-Take a look at this message: 
+Take a look at this message:
 
 “ymj hfpj nx ns ymj kwnilj. ny nx f hmthtqfyj hfpj bnym afsnqqf nhnsl fsi wfnsgtb xuwnspqjx.”
 
@@ -1299,9 +1303,9 @@ We know that each letter has been replaced with a new letter of the alphabet by 
 Interactive Elements: an input box where they should write the text
 “The cake is in the fridge. It is a chocolate cake with vanilla icing and rainbow sprinkles.”
 
-The shift, or key, for this message, is Input Box (5). 
+The shift, or key, for this message, is Input Box (5).
 
-We can use devices like this, or even just writing out the alphabet two times, to match up each letter and either encrypt (definition: turn plaintext into cryptotext) or decrypt (definition: turn cryptotext back into plaintext) the message. 
+We can use devices like this, or even just writing out the alphabet two times, to match up each letter and either encrypt (definition: turn plaintext into cryptotext) or decrypt (definition: turn cryptotext back into plaintext) the message.
 
 Caesar ciphers were quite popular, and secure, for a long time. Inventors even made devices to make the encryption and decryption of these messages easier.
 
@@ -1309,31 +1313,31 @@ Caesar ciphers were quite popular, and secure, for a long time. Inventors even m
 
 ### Cryptography
 
-{.fixme} Cryptography (definition: cryptography is two words crypto - hidden, secret; and graphein - to write) is the art of hiding a message using an algorithm (a way of writing the cipher) and a key (the secret to locking and unlocking it). Many people can know an algorithm but only a few people should know the key, and the less people that know it, the more secure the message is. 
+{.fixme} Cryptography (definition: cryptography is two words crypto - hidden, secret; and graphein - to write) is the art of hiding a message using an algorithm (a way of writing the cipher) and a key (the secret to locking and unlocking it). Many people can know an algorithm but only a few people should know the key, and the less people that know it, the more secure the message is.
 
-Cryptography really is the art of hiding or obscuring a message. Early methods used steganography (definition: steganos - covered and graphein - to write), which is the art of simply hiding a message. It can be done in many ways, like using ink that can only be seen under certain conditions (like heat or acid), or hiding a message under something else (like wax, or even hair - though this one takes a long time). 
+Cryptography really is the art of hiding or obscuring a message. Early methods used steganography (definition: steganos - covered and graphein - to write), which is the art of simply hiding a message. It can be done in many ways, like using ink that can only be seen under certain conditions (like heat or acid), or hiding a message under something else (like wax, or even hair - though this one takes a long time).
 
-This method physically hides the message but, if detected, the message can still be easily read. 
+This method physically hides the message but, if detected, the message can still be easily read.
 
-So ciphers, like the Caesar, were designed to hide messages from being read by anyone who didn’t have the key. Sometimes these encrypted messages could be combined with stenography to make them even more secure. 
+So ciphers, like the Caesar, were designed to hide messages from being read by anyone who didn’t have the key. Sometimes these encrypted messages could be combined with stenography to make them even more secure.
 
 ![](https://csegrecorder.com/columns/view/science-break-201303)
 
-In previous modules (Link to module on Morse Code) you learned how letters and words could be written in different ways and encoded to symbols or sounds (like in Morse code). But this way of writing doesn’t hide the message, it just changes it into a different format (through an algorithm, but without a key); like how letters on a keyboard are converted to ASCII, then binary, and then back again to display on your phone or monitor. But if you know how to convert between the two languages you can read the message easily. Cryptography hides the message so that you need both an algorithm AND a key to read the message. 
+In previous modules (Link to module on Morse Code) you learned how letters and words could be written in different ways and encoded to symbols or sounds (like in Morse code). But this way of writing doesn’t hide the message, it just changes it into a different format (through an algorithm, but without a key); like how letters on a keyboard are converted to ASCII, then binary, and then back again to display on your phone or monitor. But if you know how to convert between the two languages you can read the message easily. Cryptography hides the message so that you need both an algorithm AND a key to read the message.
 
 ---
 
 ### The Skytale
 
-One of these methods was called a scytale, and it involved wrapping either a plaintext message, or an encrypted message for even more security, around a stick or tube of a specific size. You could only read the message properly if you had a stick or tube of the exact same size. 
+One of these methods was called a scytale, and it involved wrapping either a plaintext message, or an encrypted message for even more security, around a stick or tube of a specific size. You could only read the message properly if you had a stick or tube of the exact same size.
 
-Interactive Elements: An animated picture of a paper with text being wrapped around a stick and being readable, then wrapping around a different sized stick and no longer having the text line up. 
+Interactive Elements: An animated picture of a paper with text being wrapped around a stick and being readable, then wrapping around a different sized stick and no longer having the text line up.
 
-Interactive Element: A text box where students can write a message and then an animation of the message being cut and then wrapped around tubes of different sizes. Only one of the tubes will be the right size to have the message line up properly and be read; all other messages will be gibberish. 
+Interactive Element: A text box where students can write a message and then an animation of the message being cut and then wrapped around tubes of different sizes. Only one of the tubes will be the right size to have the message line up properly and be read; all other messages will be gibberish.
 
-To make a message even more difficult they could encrypt it and then wrap it around a tube. Meaning the person intercepting it would have to first find a tube of the correct size to line up the message before they could even begin to decipher it. And because the message would appear to be gibberish to start with, it would make it nearly impossible to find a tube the correct size (or would require a LOT of guesswork). 
+To make a message even more difficult they could encrypt it and then wrap it around a tube. Meaning the person intercepting it would have to first find a tube of the correct size to line up the message before they could even begin to decipher it. And because the message would appear to be gibberish to start with, it would make it nearly impossible to find a tube the correct size (or would require a LOT of guesswork).
 
-Interactive Element: A text box students can write a message in, encrypt using the cipher wheel, and then an interactive ‘tube size selector’ that then wraps their message around the tube. This message could be sent to another user who then has to select the correct sized tube in order to read the message and decrypt it on their end (see the end of the Vigenere section for additional communication between users). There would also be an option to print out the encrypted message and instructions on how to choose a tube size from items found around the home to make a physical scytale and then share it with friends and family. 
+Interactive Element: A text box students can write a message in, encrypt using the cipher wheel, and then an interactive ‘tube size selector’ that then wraps their message around the tube. This message could be sent to another user who then has to select the correct sized tube in order to read the message and decrypt it on their end (see the end of the Vigenere section for additional communication between users). There would also be an option to print out the encrypted message and instructions on how to choose a tube size from items found around the home to make a physical scytale and then share it with friends and family.
 
 ![](https://www.britannica.com/topic/Morse-Code)
 
@@ -1345,26 +1349,26 @@ A Caesar, or substitution, cipher is one of the easiest ciphers to create, but i
 
     // 25: Please check but I believe this is correct; if it was mapped A --> A it would be readable so there are only 25 choices for the shift really
 
-Of course this is looking at a basic Caesar cipher, which shifted the letters, but it kept them in order. But what would happen if we shuffled the letters and put them in a different order? 
+Of course this is looking at a basic Caesar cipher, which shifted the letters, but it kept them in order. But what would happen if we shuffled the letters and put them in a different order?
 
 Let’s start with the letter A, we could map it with itself, so A → A, but that would be rare and wouldn’t make much sense, but it’s still an option. Or we could map A → B, or A → C, or A → D and so on. This would give us Input Box (26) different possible options for A. We would then choose the next letter, let’s say B, assuming it wasn’t mapped to A, and do that one next. Well we know it can’t be mapped to A, as A is already mapped to another letter, but it could map to itself so that gives us Input Box (25) different options for B. We then pick our next letter and map it to other letter giving us Input Box (24) different options and so on…
 
-Interactive Element: Two rows of the alphabet and students can join a line from one letter to another, mapping them (like the image below). There will also be a counter that goes from 26 down to 1 for each mapping, showing the remaining choices for letters. This can then generate a substitution alphabet that students can use to encrypt and send a message with. 
+Interactive Element: Two rows of the alphabet and students can join a line from one letter to another, mapping them (like the image below). There will also be a counter that goes from 26 down to 1 for each mapping, showing the remaining choices for letters. This can then generate a substitution alphabet that students can use to encrypt and send a message with.
 
-This would give us 26 * 25 * 24 * 23 * … * 5 * 4 * 3 * 2 * 1 = 4.03 x 10^26 (Pop-up: multiplying a sequential chain of numbers like this can also be written as 26! where the ! means factorial. You can learn more about factorials here https://mathigon.org/world/Combinatorics ) different choices. Far too many choices to try a brute force attack (definition: trying one possibility after the other until you find one that works. This can be done systematically or at random) on to decipher. So instead we turn to frequency analysis to help us crack this code. 
+This would give us 26 * 25 * 24 * 23 * … * 5 * 4 * 3 * 2 * 1 = 4.03 x 10^26 (Pop-up: multiplying a sequential chain of numbers like this can also be written as 26! where the ! means factorial. You can learn more about factorials here https://mathigon.org/world/Combinatorics ) different choices. Far too many choices to try a brute force attack (definition: trying one possibility after the other until you find one that works. This can be done systematically or at random) on to decipher. So instead we turn to frequency analysis to help us crack this code.
 
-To start with frequency analysis involves looking at how many times a specific letter (or letters) appear in a block of text and comparing it to the most commonly used letters in that language). For example, in English, the most commonly used letter is the letter E. The least common letters are Z, X, Q and J. 
+To start with frequency analysis involves looking at how many times a specific letter (or letters) appear in a block of text and comparing it to the most commonly used letters in that language). For example, in English, the most commonly used letter is the letter E. The least common letters are Z, X, Q and J.
 
-Here is what a general frequency analysis of the English language looks like: 
+Here is what a general frequency analysis of the English language looks like:
 
 Image: frequency analysis chart There is a good generator here:
 https://www.braingle.com/brainteasers/codes/frequencyanalysis.php#form
 
-So, for someone intercepting a secret message using a simple Caesar substitution cipher, all they would have to do is look for the letter that appears the most, assume it was an E, and then count how many letters it is from the letter E to determine the shift (or key). Let’s see how accurate it is. Using your mapping from above let’s encrypt a block of text and then run a frequency analysis on it to see how close it got. 
+So, for someone intercepting a secret message using a simple Caesar substitution cipher, all they would have to do is look for the letter that appears the most, assume it was an E, and then count how many letters it is from the letter E to determine the shift (or key). Let’s see how accurate it is. Using your mapping from above let’s encrypt a block of text and then run a frequency analysis on it to see how close it got.
 
-Interactive Element: A large block of text will be encoded using the the student’s mapping from above and then they could push a button that runs a frequency analysis on it and shows their mapping and the frequency analysis ‘guessing’. The block of text to be analyzed though should be pretty accurate to frequency analysis unsubstituted though to give the most accurate results. 
+Interactive Element: A large block of text will be encoded using the the student’s mapping from above and then they could push a button that runs a frequency analysis on it and shows their mapping and the frequency analysis ‘guessing’. The block of text to be analyzed though should be pretty accurate to frequency analysis unsubstituted though to give the most accurate results.
 
-Now it’s your turn to try: 
+Now it’s your turn to try:
 
 https://asecuritysite.com/challenges/scramb
 
@@ -1372,17 +1376,17 @@ https://asecuritysite.com/challenges/scramb
       .input XXX
       .output ???
 
-If you picked up on the fact that the code above was generated using a simple Caesar cipher with a shift of Input (14) you may have been able to guess the letters more quickly. However, you can also use it on a more complicated cipher where the letters are not sequential such as: 
+If you picked up on the fact that the code above was generated using a simple Caesar cipher with a shift of Input (14) you may have been able to guess the letters more quickly. However, you can also use it on a more complicated cipher where the letters are not sequential such as:
 
-Interactive Element: The same as above but with a different encrypted text: 
+Interactive Element: The same as above but with a different encrypted text:
 
 Note: the above text decrypts as:
 
-Side note or pop-up: it is important to keep in mind that we are keeping punctuation and spaces in place for our encryptions, in most cases these are removed to make decrypting the text even harder. 
+Side note or pop-up: it is important to keep in mind that we are keeping punctuation and spaces in place for our encryptions, in most cases these are removed to make decrypting the text even harder.
 
-There are also combinations of letters that are unique and appear more often together that can make our analysis work easier. In the English language this would be combinations like q and u, or the word “the” or the combination of letters like “th” “wh” and “ing”. All these patterns help to analyze text and determine what letters are being substituted. 
+There are also combinations of letters that are unique and appear more often together that can make our analysis work easier. In the English language this would be combinations like q and u, or the word “the” or the combination of letters like “th” “wh” and “ing”. All these patterns help to analyze text and determine what letters are being substituted.
 
-Interactive Element: An analysis of the above text that also shows the frequency of the common items (qu, the, th, wh, ing, an). Students could then click on a word or combination of letters in the text and see all the other instances highlighted and a counter of how many appear in the rest of the text. 
+Interactive Element: An analysis of the above text that also shows the frequency of the common items (qu, the, th, wh, ing, an). Students could then click on a word or combination of letters in the text and see all the other instances highlighted and a counter of how many appear in the rest of the text.
 
 ---
 
@@ -1408,75 +1412,75 @@ Length of security (hours, years), level of security
 
 ![](https://travelnoire.com/5-things-must-rome)
 
-It’s now 1562 and you now find yourself in Rome once again trying to crack a code. This time it is a communication from one of the Pope’s security guards that reads: 
+It’s now 1562 and you now find yourself in Rome once again trying to crack a code. This time it is a communication from one of the Pope’s security guards that reads:
 
 “EYDRICFILMRRBEGTYMESQNETVEMZKZXDHSFDLWLLKBRRRLXNRFAKFNEKTVCIUQEEDMYFUNPFOAZGOJLQDLFDGOTR”
 
-It is imperative that the message be decrypted as you have discovered that the guard who sent it is a traitor and is involved in a plot to kidnap and ransom the Pope. But without proof, no one will believe you. 
+It is imperative that the message be decrypted as you have discovered that the guard who sent it is a traitor and is involved in a plot to kidnap and ransom the Pope. But without proof, no one will believe you.
 
-You initially try to decode the message using a simple Caesar cipher and try all 25 combinations, but nothing comes from it. You then try frequency analysis on the text, but it still comes out as gibberish, there are no patterns to be found. So you seek out Blaise de Vigenère, a French diplomat living in Rome as you have a sneaking suspicion you are dealing with a Vigenère cipher. 
+You initially try to decode the message using a simple Caesar cipher and try all 25 combinations, but nothing comes from it. You then try frequency analysis on the text, but it still comes out as gibberish, there are no patterns to be found. So you seek out Blaise de Vigenère, a French diplomat living in Rome as you have a sneaking suspicion you are dealing with a Vigenère cipher.
 
 ![](http://www.musicologie.org/Biographies/v/vigenere_blaise_de.html)
 
-First credited to Giovan Battista Bellaso, an Italian cryptologist, the Vigenère cipher was named after Blaise de Vigenère, a French cryptographer and translator, who developed an autokey method of encryption about 20 years after Bellaso, based on his work. 
+First credited to Giovan Battista Bellaso, an Italian cryptologist, the Vigenère cipher was named after Blaise de Vigenère, a French cryptographer and translator, who developed an autokey method of encryption about 20 years after Bellaso, based on his work.
 
-A Vigenère cipher starts with the concept of a transposition cipher (definition: a transposition cipher is one where the letters remain the same but their position changes). An example of this is a rail fence cipher where every other letter has been moved to the end of the sentence. 
+A Vigenère cipher starts with the concept of a transposition cipher (definition: a transposition cipher is one where the letters remain the same but their position changes). An example of this is a rail fence cipher where every other letter has been moved to the end of the sentence.
 
 Interactive Element: An animation of first the reverse of this process and then the forward method described here. Take the sentence “Cryptography is a fascinating field of mathematics. It allows people to converse with one another and not allow others to read the message.”. Remove all punctuation and spaces, take every other letter and move it to a row below the original sentence, then remove the spaces from both new lines and put the second line at the end of the first line. It should look like this by the end: cytgahiaacntnfedfahmtcIalwpoltcneswtoenteadoalwtesoedhmsaerporpysfsiaigilomteaistlosepeoovreihnaohrnntloohrtrateesg
 
-Each line was called a rail, and the number of rails could be 2 or more. 
+Each line was called a rail, and the number of rails could be 2 or more.
 
-Interactive Element: Allow students to write out a sentence, select the number of rails, and then it will reorganize the sentence as above. 
+Interactive Element: Allow students to write out a sentence, select the number of rails, and then it will reorganize the sentence as above.
 
 Interactive Element: Show the students the sentence “Miiirieoheeoiriaaaaahgnsnneatvtxbotatahsltfneetnfcsnmtfcstoatcetktcaotsgtdht” allow students to try different numbers of rails to decipher the text (the correct input is 3 rails). Input box for the answer: “Mathigon is an interactive textbook that teaches a lot of interesting facts and math facts.”
 
-The Vigenère cipher takes this one step farther and uses a series of alphabets, each shifted by one more for each linke. 
+The Vigenère cipher takes this one step farther and uses a series of alphabets, each shifted by one more for each linke.
 
-Image: a picture of the alphabet written out 26 times, each line shifted by one, like this: https://en.wikipedia.org/wiki/Vigenère_cipher#/media/File:Vigenère_square_shading.svg 
+Image: a picture of the alphabet written out 26 times, each line shifted by one, like this: https://en.wikipedia.org/wiki/Vigenère_cipher#/media/File:Vigenère_square_shading.svg
 
 Then a keyword is picked:
 
-Interactive Element: Allow students to type in a 5 - 10 letter keyword of their choice. Show how this keyword would be used to encrypt a series of 15 A’s. This shows that each A is encrypted as a different letter until the keyword starts to repeat. This should be animated to show the path for encrypting each letter. It could be an automatic animation or students could click for each step. 
+Interactive Element: Allow students to type in a 5 - 10 letter keyword of their choice. Show how this keyword would be used to encrypt a series of 15 A’s. This shows that each A is encrypted as a different letter until the keyword starts to repeat. This should be animated to show the path for encrypting each letter. It could be an automatic animation or students could click for each step.
 
-So now that we have our keyword, and we can see how each letter is encrypted, we can use this to encrypt a sentence: 
+So now that we have our keyword, and we can see how each letter is encrypted, we can use this to encrypt a sentence:
 
-Interactive Element: Allow students to type in a sentence of their choosing and, using their keyword, and the same animation as above show their sentence being encrypted. This site shows this process: https://studio.code.org/s/vigenere/stage/1/puzzle/1 
+Interactive Element: Allow students to type in a sentence of their choosing and, using their keyword, and the same animation as above show their sentence being encrypted. This site shows this process: https://studio.code.org/s/vigenere/stage/1/puzzle/1
 
-By doing this the Vigenère cipher became an encryption method that was much more secure than a single Caesar cipher. It was essentially a series of Caesar ciphers strung together using a keyword, making it much stronger. 
+By doing this the Vigenère cipher became an encryption method that was much more secure than a single Caesar cipher. It was essentially a series of Caesar ciphers strung together using a keyword, making it much stronger.
 
-But don’t be fooled. Just because we are using a keyword to mix up the shifts it becomes much harder, but not impossible, to crack. For instance, since the person you are sending the message to needs to know the keyword, it could be intercepted and then the message could be easily read. Or someone could figure out what the keyword was based on what they knew about the person who sent the message (they could have used something easy to guess, like your favourite flower or a pet’s name). 
+But don’t be fooled. Just because we are using a keyword to mix up the shifts it becomes much harder, but not impossible, to crack. For instance, since the person you are sending the message to needs to know the keyword, it could be intercepted and then the message could be easily read. Or someone could figure out what the keyword was based on what they knew about the person who sent the message (they could have used something easy to guess, like your favourite flower or a pet’s name).
 
-In the case of your message from the Pope’s guard, this is exactly what happened. Using some investigative techniques you learned that the guard has a cat named Mr. Supreme Snuggles and tried that as the keyword.  
+In the case of your message from the Pope’s guard, this is exactly what happened. Using some investigative techniques you learned that the guard has a cat named Mr. Supreme Snuggles and tried that as the keyword.
 
-Interactive Element: Same as above but this time they copy in the sentence “EYDRICFILMRRBEGTYMESQNETVEMZKZXDHSFDLWLLKBRRRLXNRFAKFNEKTVCIUQEEDMYFUNPFOAZGOJLQDLFDGOTR” and the keyword mrsupremesnuggles. The message is shows should be “The Pope is planning on going from the Vatican to the Cathedral at nine oclock in the morning”. The students will have to put in their own spacing to fully read the message. 
+Interactive Element: Same as above but this time they copy in the sentence “EYDRICFILMRRBEGTYMESQNETVEMZKZXDHSFDLWLLKBRRRLXNRFAKFNEKTVCIUQEEDMYFUNPFOAZGOJLQDLFDGOTR” and the keyword mrsupremesnuggles. The message is shows should be “The Pope is planning on going from the Vatican to the Cathedral at nine oclock in the morning”. The students will have to put in their own spacing to fully read the message.
 
-Luckily you and Vigenère were able to figure out the keyword and saved the Pope. But what about if you didn’t have such information, or the sender had used a random phrase or group of letters. For many centuries the Vigenère cipher remained unbroken because people were unable to figure out how to find patterns that would help them decipher the text without knowing the keyword. And so it became the common method of sending messages for a very long time. 
+Luckily you and Vigenère were able to figure out the keyword and saved the Pope. But what about if you didn’t have such information, or the sender had used a random phrase or group of letters. For many centuries the Vigenère cipher remained unbroken because people were unable to figure out how to find patterns that would help them decipher the text without knowing the keyword. And so it became the common method of sending messages for a very long time.
 
 ---
 
-In the 1830’s and 1840’s a new mode of communication was being used, called the telegraph. It was able to send messages, using Morse code, over large distances using cable lines. These lines ran between two points but could be easily spliced into and their messages intercepted. So operators used the Vigenère cipher to protect their messages. 
+In the 1830’s and 1840’s a new mode of communication was being used, called the telegraph. It was able to send messages, using Morse code, over large distances using cable lines. These lines ran between two points but could be easily spliced into and their messages intercepted. So operators used the Vigenère cipher to protect their messages.
 
 ![](https://fineartamerica.com/featured/1-charles-babbage-1792-1871-granger.html)
 
-Charles Babbage (1791 - 1871) was an English polymath (definition: someone who knows a lot of different subjects and can use them to solve various complex problems) who became interested in finding a way to crack the Vigenère cipher. Building on the work of others who came before him Babbage was able to crack the cipher using the concept of frequency analysis and looking for repeating patterns in the messages in order to determine keyword lengths and eventually crack the code. 
+Charles Babbage (1791 - 1871) was an English polymath (definition: someone who knows a lot of different subjects and can use them to solve various complex problems) who became interested in finding a way to crack the Vigenère cipher. Building on the work of others who came before him Babbage was able to crack the cipher using the concept of frequency analysis and looking for repeating patterns in the messages in order to determine keyword lengths and eventually crack the code.
 
-In order to break the Vigenère cipher, Babbage started by looking for patterns to try and find the length of the key. He spent what must have been enormous amounts of time pouring over encrypted blocks of text and studying it for repeating sets of letters that occurred at regular intervals in the text. He did this because he knew that once he knew the key length he could use frequency analysis on each part of the cipher to crack the overall code. 
+In order to break the Vigenère cipher, Babbage started by looking for patterns to try and find the length of the key. He spent what must have been enormous amounts of time pouring over encrypted blocks of text and studying it for repeating sets of letters that occurred at regular intervals in the text. He did this because he knew that once he knew the key length he could use frequency analysis on each part of the cipher to crack the overall code.
 
-Interactive Element (a slide show) - 
-Text to include “Say you have an encrypted block of text and you know that the key has a length of 6. This means that you know that the first letter of the ciphertext and the seventh letter of the ciphertext are encrypted using the same substitution alphabet; as you are now repeating the key and have returned to the starting letter.” The animation shows how the 1st and 7th letters are encrypted using the same row of the Vignere cipher (this can be pulled from the previous animation showing how the Vignere cipher works). 
+Interactive Element (a slide show) -
+Text to include “Say you have an encrypted block of text and you know that the key has a length of 6. This means that you know that the first letter of the ciphertext and the seventh letter of the ciphertext are encrypted using the same substitution alphabet; as you are now repeating the key and have returned to the starting letter.” The animation shows how the 1st and 7th letters are encrypted using the same row of the Vignere cipher (this can be pulled from the previous animation showing how the Vignere cipher works).
 The next slide would be an animation showing the following text being split into its parts (every 7th letter, starting from the 8th, being grouped together). Text: “This means we can then rewrite the original text grouping all the 1st, 7th, 14th, 21st, etc letters together.”
 The next slide would be a frequency analysis chart being generated for each section of the text. Text: We can then perform a frequency analysis on each part of the text to determine each letter of the key
 Text: Finally we have a key and we can use it to decrypt the entire text (or put it back together from its parts)
 
 But what happens if you don’t know the length of the key, which in most cases you wouldn’t? Well, in cryptography, patterns are the downfall of a cipher and Babbage knew this. By looking for repetitions of patterns in the ciphertext he was able to break them down to determine the length of the key. He did this by looking for repeated sequences in the text, how long the repeated sequences were, and how many spaces were between the sequences.
 
-Let’s say we had a block of text we knew was encrypted with a Vigenère cipher and we found the following patterns in it that kept repeating at regular intervals: LSB, PMBJT, WJRFL, JCAT. We would then create a chart like the one below and fill in factors of each spacing. 
+Let’s say we had a block of text we knew was encrypted with a Vigenère cipher and we found the following patterns in it that kept repeating at regular intervals: LSB, PMBJT, WJRFL, JCAT. We would then create a chart like the one below and fill in factors of each spacing.
 
-Interactive Element: Students would check off the factor boxes for each pattern (putting in the X’s below). Note: the rest of the chart would be filled in for them. 
+Interactive Element: Students would check off the factor boxes for each pattern (putting in the X’s below). Note: the rest of the chart would be filled in for them.
 
-We can now see that the common factor between the spacings of repeated patterns is 7; meaning our key is 7 characters long. We now have a pattern to work with and a known key length. Now it just becomes a matter of breaking up the text and using frequency analysis, along with a lot of guesswork, to crack the code. 
+We can now see that the common factor between the spacings of repeated patterns is 7; meaning our key is 7 characters long. We now have a pattern to work with and a known key length. Now it just becomes a matter of breaking up the text and using frequency analysis, along with a lot of guesswork, to crack the code.
 
-Sadly, Babbage never published his work and the credit for cracking the Vigenère cipher eventually went to Fredrich Wilhelm Kasiski who broke the cipher independently of Babbage’s work and published it in 1863. 
+Sadly, Babbage never published his work and the credit for cracking the Vigenère cipher eventually went to Fredrich Wilhelm Kasiski who broke the cipher independently of Babbage’s work and published it in 1863.
 
 ---
 
@@ -1486,27 +1490,27 @@ Sadly, Babbage never published his work and the credit for cracking the Vigenèr
 
 We now find ourselves in 1894 and in the time of a wonderful new invention: the radio. This wondrous device has made communication much easier and faster as a wire between places is no longer needed; merely a transmitter and a receiver aimed at each other. However, they are also much less secure. To intercept a message you no longer have to splice into a telegraph wire, you just have to aim your own receiver at a transmitter to intercept all the messages you want (including encrypted ones).
 
-During WWI this caused an issue as there were no new unbreakable ciphers being created, they were just using variations on older ciphers (which already had methods to break them). In addition to methods to break these codes, due to the ease of using radio waves, more messages were being sent and intercepted so there was more text to work with (remember, more text = easier to find patterns = easier to decrypt). Another issue with radio waves is the ability to triangulate where the signal is coming from. 
+During WWI this caused an issue as there were no new unbreakable ciphers being created, they were just using variations on older ciphers (which already had methods to break them). In addition to methods to break these codes, due to the ease of using radio waves, more messages were being sent and intercepted so there was more text to work with (remember, more text = easier to find patterns = easier to decrypt). Another issue with radio waves is the ability to triangulate where the signal is coming from.
 
-Interactive Element: a picture of two receivers (like the two satellites in the image shown) that students can move around to point in different directions. When they are pointed at a certain (hidden) point they will beep - they beep slowly when pointed away from the hidden point and more quickly as they get closer and a sustained tone when pointed directly at the spot. Once both receivers are pointing at the same point it will appear. If sound is not an option then a dotted line can be used (getting darker as it gets closer to the point) when only one transceiver is point at the right spot and then a dot appears when they are both pointed at the same spot. 
+Interactive Element: a picture of two receivers (like the two satellites in the image shown) that students can move around to point in different directions. When they are pointed at a certain (hidden) point they will beep - they beep slowly when pointed away from the hidden point and more quickly as they get closer and a sustained tone when pointed directly at the spot. Once both receivers are pointing at the same point it will appear. If sound is not an option then a dotted line can be used (getting darker as it gets closer to the point) when only one transceiver is point at the right spot and then a dot appears when they are both pointed at the same spot.
 
 So not only could you intercept the messages and decode them you could also figure out where they were being sent from. This was especially handy if you were decrypting plans for an attack and now you knew not only what their plans were, but where they were hiding too!
 
-As we know the longer a key is, the harder it is to break. But with a bit of skill and time, even long keys can be broken. Also, keywords would have to be shared among radio operators so if one was lost or captured then all their messages could be read. 
+As we know the longer a key is, the harder it is to break. But with a bit of skill and time, even long keys can be broken. Also, keywords would have to be shared among radio operators so if one was lost or captured then all their messages could be read.
 
 ![](https://www.cryptomuseum.com/crypto/otp/index.htm)
 
-This led to the Invention of the one-time pad. This was a large book that contained strings of random letters. Each time a message was sent it was encoded using a page of the book. It was then decoded using the same page on the other end. Then both parties would throw out that page of the book, so that code would never be used again. 
+This led to the Invention of the one-time pad. This was a large book that contained strings of random letters. Each time a message was sent it was encoded using a page of the book. It was then decoded using the same page on the other end. Then both parties would throw out that page of the book, so that code would never be used again.
 
-This meant there was no repetition for code breakers to use. The random strings meant no easily guessable words, and no easily guessable phrases (Pop-up: sometimes codebreakers would get to know the operators and they would use words like their mother’s name or favourite ice cream flavour). This made one-time pads very secure. But they were also highly impractical as operators needed large code books distributed to them on a regular basis and, if one was captured, they would all become compromised and useless. 
+This meant there was no repetition for code breakers to use. The random strings meant no easily guessable words, and no easily guessable phrases (Pop-up: sometimes codebreakers would get to know the operators and they would use words like their mother’s name or favourite ice cream flavour). This made one-time pads very secure. But they were also highly impractical as operators needed large code books distributed to them on a regular basis and, if one was captured, they would all become compromised and useless.
 
-Important note: The weakest link in cryptography is often humans and the fact that they simplify things to make them easier to remember, but also easier to guess. The worst thing for a secure encryption is a repeating pattern.  
+Important note: The weakest link in cryptography is often humans and the fact that they simplify things to make them easier to remember, but also easier to guess. The worst thing for a secure encryption is a repeating pattern.
 
 ---
 
 Let’s use what we’ve learned so far to send some messages.
 
-Interactive Element: A text box where students can write an encrypted message and send it to another student. They can choose what type of cipher and if they want to combine different methods (scytale + Caesar, or scytale + Vignere, or rail fence). It’s a selector tool where they can encrypt a message and then send it to someone along with how much info they want to send along (they can tell them nothing, or just the algorithm, or the algorithm and the key). They can make it as hard or easy as they want to. On the other end the student receiving the message would have access to things like tubes, cipher wheels, and frequency analysis tools. 
+Interactive Element: A text box where students can write an encrypted message and send it to another student. They can choose what type of cipher and if they want to combine different methods (scytale + Caesar, or scytale + Vignere, or rail fence). It’s a selector tool where they can encrypt a message and then send it to someone along with how much info they want to send along (they can tell them nothing, or just the algorithm, or the algorithm and the key). They can make it as hard or easy as they want to. On the other end the student receiving the message would have access to things like tubes, cipher wheels, and frequency analysis tools.
 
 
 
@@ -1533,17 +1537,17 @@ The letter shown inside each rotor indicates the rotation, and the connecting or
 show the link between the notch on one rotor and the rotation position
 of the next rotor.
 
-We now find ourselves in 1938, one year away from World War II, a war that is going to involve many countries and last until 1945. It was also going to spawn a new and highly effective way to encrypt messages. The Enigma machine! 
+We now find ourselves in 1938, one year away from World War II, a war that is going to involve many countries and last until 1945. It was also going to spawn a new and highly effective way to encrypt messages. The Enigma machine!
 
 ![](http://www.cbsnews.com/news/rare-alan-turing-manuscript-enigma-machine-auction-bonhams/)
 
-In 1918 Arthur Scherbius and Richard Ritter formed the Scherbius and Ritter company. They made many things but one of the most famous of these is the Enigma machine. 
+In 1918 Arthur Scherbius and Richard Ritter formed the Scherbius and Ritter company. They made many things but one of the most famous of these is the Enigma machine.
 
-Originally made of 3 parts (a 4th was added later) and connected by wires the Enigma combined many different elements of cryptography into a single machine. 
+Originally made of 3 parts (a 4th was added later) and connected by wires the Enigma combined many different elements of cryptography into a single machine.
 
 The three parts are 1) a keyboard for entering in plain or cipher text, 2) a set of rotors for encrypting / decrypting the text, and 3) a light board for displaying the final text. Later on plugboards and a reflector were added. The machine itself looks like a typewriter. When you enter a letter by pressing a key the encoded letter lights up. Someone writes down these encoded letters and then uses this to send the message (usually through radio message) to the recipient. When the message is received on the other end the operator types in the letters and records the letters that light up, providing them with the unencoded message.
 
-Interactive Element: an exploded image of the Enigma machine where each part is highlighted / brought out when a student clicks on the part name. Kind of like these: 
+Interactive Element: an exploded image of the Enigma machine where each part is highlighted / brought out when a student clicks on the part name. Kind of like these:
 
 ![](https://hackaday.com/2017/08/22/the-enigma-enigma-how-the-enigma-machine-worked/)
 
@@ -1551,15 +1555,15 @@ Interactive Element: an exploded image of the Enigma machine where each part is 
 
 In its simplest form an Enigma machine is simply a mechanical Vigenère cipher with a 26 letter keyword. An operator types a letter, an electrical signal then gets sent through a wire to encrypt that letter to a new letter and then the new letter lights up on the board. This new letter is then written down, the rotor moves forward one place, and the next letter is typed and it’s encrypted version lights up. This continues until the rotor has gone around all 26 spots and then returns to its initial position.
 
-Interactive Element: this will be a slide show showing the following steps: 
-The first part is the first rotor of the machine, which operates similar to a basic Caesar cipher. The students type in a letter and it shows the encrypted letter lighting up - start with a shift of 3 - and then each time it moves forward by one letter. You can use the paper template (see comment) to get an idea of what the picture would look like but it should show the path from the letter typed to the encrypted letter with each letter the student types. Students should be encouraged to type the same letter multiple times and see how each time it is encoded differently. Text to be included: 
-With only one rotor this is no better than a simple cipher wheel and only gives 25 different starting points (26 if it maps to itself, which wouldn’t make much sense), which could easily be cracked. 
-A second wheel is added, it only turns once more than 26 letters have been typed so there must be a minimum requirement on the input box to type more than 26 letters - or have a bunch of letters already pre-programmed into the box. The same highlighting of the path should be shown. Text to be included: 
-So they added a second wheel, one that only turned once the first had gone all the way around (after 26 letters had been typed). By adding this second rotor there were now Input box (26 * 26 = 676) different combinations. This was better but a team of cryptographers, especially ones who had their own Enigma machines, would be able to determine the correct orientation in fairly short order. And so a third rotor was added. 
-A third rotor added, same idea as above showing the path being followed by the letters being encrypted. A large block of text should be included though to show the first, second and third rotors moving (as the third only moves once the second has rotated 26 times). Text to be included: 
+Interactive Element: this will be a slide show showing the following steps:
+The first part is the first rotor of the machine, which operates similar to a basic Caesar cipher. The students type in a letter and it shows the encrypted letter lighting up - start with a shift of 3 - and then each time it moves forward by one letter. You can use the paper template (see comment) to get an idea of what the picture would look like but it should show the path from the letter typed to the encrypted letter with each letter the student types. Students should be encouraged to type the same letter multiple times and see how each time it is encoded differently. Text to be included:
+With only one rotor this is no better than a simple cipher wheel and only gives 25 different starting points (26 if it maps to itself, which wouldn’t make much sense), which could easily be cracked.
+A second wheel is added, it only turns once more than 26 letters have been typed so there must be a minimum requirement on the input box to type more than 26 letters - or have a bunch of letters already pre-programmed into the box. The same highlighting of the path should be shown. Text to be included:
+So they added a second wheel, one that only turned once the first had gone all the way around (after 26 letters had been typed). By adding this second rotor there were now Input box (26 * 26 = 676) different combinations. This was better but a team of cryptographers, especially ones who had their own Enigma machines, would be able to determine the correct orientation in fairly short order. And so a third rotor was added.
+A third rotor added, same idea as above showing the path being followed by the letters being encrypted. A large block of text should be included though to show the first, second and third rotors moving (as the third only moves once the second has rotated 26 times). Text to be included:
 This gave Input box 26*26*26 = 17,576 possible combinations. And, while much better, a dedicated team with access to a machine, could still potentially crack this. And so eventually they added a plugboard that switched 6 letters with each other.
-Interactive Element: an image of a plug board that students can drag the cord from one letter to another to switch them before being fed into the Enigma machine. There should be 3 such cords. 
-The plugboard added a random element to the encryption and gave another 100,391,791,500 additional combinations. They also decided to make the rotors moveable (so they could be put in different configurations), giving another 6 options. 
+Interactive Element: an image of a plug board that students can drag the cord from one letter to another to switch them before being fed into the Enigma machine. There should be 3 such cords.
+The plugboard added a random element to the encryption and gave another 100,391,791,500 additional combinations. They also decided to make the rotors moveable (so they could be put in different configurations), giving another 6 options.
 Interactive Element: an animation showing each piece of the Enigma machine being put in with the number of combinations it adds and a running total of combinations. Text to be included:
 In total, a fully equipped Enigma machine had over 10 x 10^16 possible configurations making it impossible to crack through brute force attempts.
 
@@ -1567,30 +1571,30 @@ Because of the way the Enigma machine worked you couldn’t do frequency analysi
 
 ![](http://users.telenet.be/d.rijmenants/en/enigmatech.htm#reflector)
 
-One of the neatest elements of the Enigma machine was the inclusion of a reflector panel at the back of the machine. This panel would serve to link two encrypted letters together so that the machine could be used to both encrypt and decrypt text with the same rotor settings. On the rotors letters could be linked to new letters: for example P → H, H → C, C → B. But the reflector was responsible for linking the letters as pairs: so P → B and B → P. Once a rotor setting was set the reflector would make sure that the wiring for the forward and backwards processes were also linked together. 
+One of the neatest elements of the Enigma machine was the inclusion of a reflector panel at the back of the machine. This panel would serve to link two encrypted letters together so that the machine could be used to both encrypt and decrypt text with the same rotor settings. On the rotors letters could be linked to new letters: for example P → H, H → C, C → B. But the reflector was responsible for linking the letters as pairs: so P → B and B → P. Once a rotor setting was set the reflector would make sure that the wiring for the forward and backwards processes were also linked together.
 
-While this made it easy to use the same machine, with the same settings, to encrypt and decrypt messages, it also meant that a letter could never be linked to itself; and this made the job of code crackers much easier later on. 
+While this made it easy to use the same machine, with the same settings, to encrypt and decrypt messages, it also meant that a letter could never be linked to itself; and this made the job of code crackers much easier later on.
 
-Interactive Element: the second portion the paper simulator from above showing the reflector panel being added and the letter being encrypted being traced through the encryption, bouncing off the reflector and travelling back to light up the encrypted letter and then the reverse process as well. 
+Interactive Element: the second portion the paper simulator from above showing the reflector panel being added and the letter being encrypted being traced through the encryption, bouncing off the reflector and travelling back to light up the encrypted letter and then the reverse process as well.
 
-Now that we know how Enigma works, let’s try it out ourselves: 
+Now that we know how Enigma works, let’s try it out ourselves:
 
-Interactive Element: an emulator similar to this where students can press a keyboard, switch a plugboard, and see the new letter light up https://www.101computing.net/enigma-machine-emulator/ 
+Interactive Element: an emulator similar to this where students can press a keyboard, switch a plugboard, and see the new letter light up https://www.101computing.net/enigma-machine-emulator/
 
 ---
 
-Because of all these features, the German military believed that the Enigma code was impossible to crack – but they were wrong. Breaking Enigma included some of the most groundbreaking achievements during the second world war, involving some of the greatest mathematicians in history, the invention of computers, and a little bit (or a lot) of luck. 
+Because of all these features, the German military believed that the Enigma code was impossible to crack – but they were wrong. Breaking Enigma included some of the most groundbreaking achievements during the second world war, involving some of the greatest mathematicians in history, the invention of computers, and a little bit (or a lot) of luck.
 Breaking it also saved thousands of lives by ending the war a few years earlier.
 
-It all started in 1938 when rumblings had started that Germany was going to invade Poland and knowledge of a new, unbreakable, code machine to be used by them had started to spread. 
+It all started in 1938 when rumblings had started that Germany was going to invade Poland and knowledge of a new, unbreakable, code machine to be used by them had started to spread.
 
 ![](http://dailyinfographics.eu/world-war-ii-on-old-maps/)
 
 ![](https://www.polishgreatness.com/enigma.html)
 
-Desperate to help however he could, Mariam Rejewski, a Polish cryptographer, was one of the first people to attempt to break Enigma. Just prior to WWII Rejewski received the blueprint for making a military style Enigma machine from a disgruntled German named Hans-Thilo Schmidt. But having the machine (the algorithm) wasn’t enough, he needed the key. With over 10x10^16 possible keys it was a daunting task but Rejewski realized if he could somehow separate the plugboards from the rotors he could dramatically decrease the potential number of keys. In fact, if he could separate out the plugboards he would only have 6 * 26 * 26 * 26 =  Input box 105,456 potential settings to work with (note: there were an extra 6 settings in the Enigma Rejewksi was working with because in his version of the Enigma you could take the three rotors out and change their physical positions in the machine, giving another 6 configurations). 
+Desperate to help however he could, Mariam Rejewski, a Polish cryptographer, was one of the first people to attempt to break Enigma. Just prior to WWII Rejewski received the blueprint for making a military style Enigma machine from a disgruntled German named Hans-Thilo Schmidt. But having the machine (the algorithm) wasn’t enough, he needed the key. With over 10x10^16 possible keys it was a daunting task but Rejewski realized if he could somehow separate the plugboards from the rotors he could dramatically decrease the potential number of keys. In fact, if he could separate out the plugboards he would only have 6 * 26 * 26 * 26 =  Input box 105,456 potential settings to work with (note: there were an extra 6 settings in the Enigma Rejewksi was working with because in his version of the Enigma you could take the three rotors out and change their physical positions in the machine, giving another 6 configurations).
 
-Interactive Element: a table like this that students can fill out or physical/clickable/draggable rotors that students can move around and ‘plug into’ an Enigma machine and a counter that keeps track of the different combinations. 
+Interactive Element: a table like this that students can fill out or physical/clickable/draggable rotors that students can move around and ‘plug into’ an Enigma machine and a counter that keeps track of the different combinations.
 
 Possible Rotor Settings
 123
@@ -1600,99 +1604,99 @@ Possible Rotor Settings
 213
 231
 
-This was not a small number but, with enough effort, he realized he could do it, he just needed to get rid of those plugboards somehow. So set to work on the issue and soon he realized that, because the plugboards were fixed in their substitutions they had an effect on the messages themselves, but they didn’t have an effect on how those letters were linked to each other when encrypted. A “P” switched with a “B” would switch those letters in the final message but it wouldn’t change what “P” and “B” were encrypted as when they went through the Enigma rotors. 
+This was not a small number but, with enough effort, he realized he could do it, he just needed to get rid of those plugboards somehow. So set to work on the issue and soon he realized that, because the plugboards were fixed in their substitutions they had an effect on the messages themselves, but they didn’t have an effect on how those letters were linked to each other when encrypted. A “P” switched with a “B” would switch those letters in the final message but it wouldn’t change what “P” and “B” were encrypted as when they went through the Enigma rotors.
 
 Image: an plugboard showing P switched with B, J switched with T, and W with R
 
-Success! This served to simplify the problem greatly, but he was still stuck on how to break the rest of the encryption. 
+Success! This served to simplify the problem greatly, but he was still stuck on how to break the rest of the encryption.
 
-Rejewski’s biggest breakthrough came from the way messages were sent by the German’s. Realizing that repetition in encryption was bad, and could lead to messages being cracked, the German’s used a combination of day codes and message codes, and this became their downfall.  
+Rejewski’s biggest breakthrough came from the way messages were sent by the German’s. Realizing that repetition in encryption was bad, and could lead to messages being cracked, the German’s used a combination of day codes and message codes, and this became their downfall.
 
-Day codes were the rotor and plugboard settings to be used each day by operators. These would be sent in codebooks to the operators every few weeks. However, sending millions of messages using the same key would create a lot of repetition, so instead of coding each message with the same key, the operators would use the day codes to send a special message key for each message they sent. 
+Day codes were the rotor and plugboard settings to be used each day by operators. These would be sent in codebooks to the operators every few weeks. However, sending millions of messages using the same key would create a lot of repetition, so instead of coding each message with the same key, the operators would use the day codes to send a special message key for each message they sent.
 
-This three letter key (one for each rotor setting) would be encrypted at the start of the message using the day key, then the rotors would be set to the message key and the rest of the message would be written. 
+This three letter key (one for each rotor setting) would be encrypted at the start of the message using the day key, then the rotors would be set to the message key and the rest of the message would be written.
 
-Let’s assume an Enigma machine’s day key for the rotors was G B K, choose your own three letter message key, and send it through the machine, write it down somewhere safe and we’ll come back to it shortly. 
+Let’s assume an Enigma machine’s day key for the rotors was G B K, choose your own three letter message key, and send it through the machine, write it down somewhere safe and we’ll come back to it shortly.
 
 Interactive Element: using the tracing element from before students can set the rotors to be G B K and then enter a three letter code and see how it comes out. Need to make sure it is just the three rotors, not the plugboards.
 
-By having different day and message codes it worked well to keep the day code from being overused, however the Germans made one fatal flaw with this method. They insisted that, in order to ensure there were no issues with receiving the message code (due to operator error or poor reception when sending/receiving the message), the code was sent twice. So if the operator chose a message key of J A T then the operator would first set their rotors to the day key, and then start the message by writing J A T J A T. They would then reset the rotors to the settings J A T and type the rest of their message. 
+By having different day and message codes it worked well to keep the day code from being overused, however the Germans made one fatal flaw with this method. They insisted that, in order to ensure there were no issues with receiving the message code (due to operator error or poor reception when sending/receiving the message), the code was sent twice. So if the operator chose a message key of J A T then the operator would first set their rotors to the day key, and then start the message by writing J A T J A T. They would then reset the rotors to the settings J A T and type the rest of their message.
 
 Image/Animation: three rotors set to a code of GBK, then a message being encrypted and the rotors being reset to JAT and the rest of the message being written.
 
-Go back to your message key (the one you wrote down) and now encrypt it twice - noting that the six letter string you get out will have six different letters (even though it’s a repeating pattern). We are now going to use that repeating pattern to crack Enigma. 
+Go back to your message key (the one you wrote down) and now encrypt it twice - noting that the six letter string you get out will have six different letters (even though it’s a repeating pattern). We are now going to use that repeating pattern to crack Enigma.
 
-The repetition of the message key using the day key allowed Rejewksi to study links and patterns in the messages, because all of these initial message keys were sent using the same day key. 
+The repetition of the message key using the day key allowed Rejewksi to study links and patterns in the messages, because all of these initial message keys were sent using the same day key.
 
-He knew that the first 6 letters of any message were the message key and that the first and fourth, second and fifth, and third and sixth letters of these keys were the same letters. By intercepting multiple messages in a day he was able to build an alphabet matching the pairs of letters up and then was able to trace the number of links between letters. 
+He knew that the first 6 letters of any message were the message key and that the first and fourth, second and fifth, and third and sixth letters of these keys were the same letters. By intercepting multiple messages in a day he was able to build an alphabet matching the pairs of letters up and then was able to trace the number of links between letters.
 
-To keep it simple, and make sure that we have all 26 letters properly included and mapped, we’ll assume that the message keys are each letter of the alphabet repeated: AAA, BBB, CCC, etc. In reality, operators used many different combinations of three letters for their message keys (and some lazy operators even used AAA, BBB, CCC, which made it easier for code breakers like Rejewski when they did). 
+To keep it simple, and make sure that we have all 26 letters properly included and mapped, we’ll assume that the message keys are each letter of the alphabet repeated: AAA, BBB, CCC, etc. In reality, operators used many different combinations of three letters for their message keys (and some lazy operators even used AAA, BBB, CCC, which made it easier for code breakers like Rejewski when they did).
 
-Interactive Element: an illustration / animation showing the following - I think it should first be an animation showing the data and highlighting the chains and links. This could be done with the first and fourth letters and then the students could fill in the patterns for the second and fifth and third and sixth to ‘break the day code’. I’ve provided an explanation below of how it works but I would be happy to speak with the person creating it to explain in detail how it works. Or I could make a little video explaining it. 
+Interactive Element: an illustration / animation showing the following - I think it should first be an animation showing the data and highlighting the chains and links. This could be done with the first and fourth letters and then the students could fill in the patterns for the second and fifth and third and sixth to ‘break the day code’. I’ve provided an explanation below of how it works but I would be happy to speak with the person creating it to explain in detail how it works. Or I could make a little video explaining it.
 
-So this method seemed pretty effective for cracking most messages, however it wasn’t perfect. For instance, what would happen if two or more day keys had a similar chain and link pattern? Well, because of the way the Enigma was created, it would be almost impossible for two day codes to have the exact same chain and link profile. And even if they did, it would simply be a matter of testing the duplicated keys until a message that made sense was found. Or what if the letters chosen for the day key or message key were also the letters that had been swapped in the plugboards? In this case Rejewksi might have had to assume he had most of the key correct and then test out the various plugboard settings until he found a key that unlocked the rest of the message. 
+So this method seemed pretty effective for cracking most messages, however it wasn’t perfect. For instance, what would happen if two or more day keys had a similar chain and link pattern? Well, because of the way the Enigma was created, it would be almost impossible for two day codes to have the exact same chain and link profile. And even if they did, it would simply be a matter of testing the duplicated keys until a message that made sense was found. Or what if the letters chosen for the day key or message key were also the letters that had been swapped in the plugboards? In this case Rejewksi might have had to assume he had most of the key correct and then test out the various plugboard settings until he found a key that unlocked the rest of the message.
 
-While Rejewksi’s method had some flaws it was still a revolution and a breakthrough for cracking the Enigma and helped with future efforts. However, Rejewksi’s exact method was a short lived victory as soon after creating his codebooks 2 extra, interchangeable cylinders were added to the machine which gave an extra 60 arrangements of the rotors and increased the number of possible rotor configurations to 1,054,560. To add to this they also increased the number of plugboards from 6 to 10, giving 20 possible letter swaps for a total of 1.59x10^20 possible keys. Rejewkski would have needed 10 times more bombes to create a new code book and they were too expensive for the Polish intelligence. Enigma now, once again, seemed unbreakable. Add to this the fact that Germany was about to invade Poland and so Rejewski, and Polish intelligence, gave all his work (including the blueprints for making an Enigma machine, how to set up a bombe, and his methods) to the French and British intelligence. 
+While Rejewksi’s method had some flaws it was still a revolution and a breakthrough for cracking the Enigma and helped with future efforts. However, Rejewksi’s exact method was a short lived victory as soon after creating his codebooks 2 extra, interchangeable cylinders were added to the machine which gave an extra 60 arrangements of the rotors and increased the number of possible rotor configurations to 1,054,560. To add to this they also increased the number of plugboards from 6 to 10, giving 20 possible letter swaps for a total of 1.59x10^20 possible keys. Rejewkski would have needed 10 times more bombes to create a new code book and they were too expensive for the Polish intelligence. Enigma now, once again, seemed unbreakable. Add to this the fact that Germany was about to invade Poland and so Rejewski, and Polish intelligence, gave all his work (including the blueprints for making an Enigma machine, how to set up a bombe, and his methods) to the French and British intelligence.
 
 ---
 Bletchley Park
 
-From: https://en.wikipedia.org/wiki/Bletchley_Park 
+From: https://en.wikipedia.org/wiki/Bletchley_Park
 
-Soon after receiving the information from Rejewski, British Intelligence realized they needed people to help break Enigma. So they hired about 200 people from various backgrounds including chess masters, puzzle experts, linguists and mathematicians to work on the problem. This small group was sent to live and work in the English countryside in what would be called Bletchley Park. Over time the number of people grew to around 7000 men and women. Some of the people who worked there were recruited through crossword puzzle contests in the newspaper, some were recruited from universities and through connections who were already part of the project. The British military had more resources and were therefore able to build more bombes and crack the codes using the methods set up by Rejewski. Furthermore they were able to look for cribs (definition: words that stand out like repeated phrases, names of people, weather reports) to help with cracking the settings. Through their efforts the people of Bletchley Park were able to crack day keys within a few hours, allowing them to read daily messages about German movements and strategies much faster. 
+Soon after receiving the information from Rejewski, British Intelligence realized they needed people to help break Enigma. So they hired about 200 people from various backgrounds including chess masters, puzzle experts, linguists and mathematicians to work on the problem. This small group was sent to live and work in the English countryside in what would be called Bletchley Park. Over time the number of people grew to around 7000 men and women. Some of the people who worked there were recruited through crossword puzzle contests in the newspaper, some were recruited from universities and through connections who were already part of the project. The British military had more resources and were therefore able to build more bombes and crack the codes using the methods set up by Rejewski. Furthermore they were able to look for cribs (definition: words that stand out like repeated phrases, names of people, weather reports) to help with cracking the settings. Through their efforts the people of Bletchley Park were able to crack day keys within a few hours, allowing them to read daily messages about German movements and strategies much faster.
 
-From: http://cnet.com/uk/pictures/see-alan-turings-lost-notes-found-in-the-walls-of-bletchley-park-70-years-later/10 
+From: http://cnet.com/uk/pictures/see-alan-turings-lost-notes-found-in-the-walls-of-bletchley-park-70-years-later/10
 
-Pop up or box of information: some things that sped up the process - human error (operators choosing repeating message codes, or initials of people they knew), as they got to know operators they could start to guess what they called cillies. There was also a requirement by the Germans that the rotors not be set in the same position 2 days in a row, meaning when the code breakers knew the setting for one day they could eliminate various settings for the next day automatically. There were also rules about the plugboards not being able to swap adjacent letters (N couldn’t be swapped with M or O) so this reduced possibilities again. 
+Pop up or box of information: some things that sped up the process - human error (operators choosing repeating message codes, or initials of people they knew), as they got to know operators they could start to guess what they called cillies. There was also a requirement by the Germans that the rotors not be set in the same position 2 days in a row, meaning when the code breakers knew the setting for one day they could eliminate various settings for the next day automatically. There were also rules about the plugboards not being able to swap adjacent letters (N couldn’t be swapped with M or O) so this reduced possibilities again.
 
 Pop-up or Side Box: The Women of Bletchley Park
 
-From: http://www.cnn.com/2016/11/24/europe/uk-bletchley-park-college/index.html 
+From: http://www.cnn.com/2016/11/24/europe/uk-bletchley-park-college/index.html
 
-While most of the initial codebreakers at Bletchley Park were male, there were 3 or 4 exceptional women who started working there as well. Pamela Rose, Pat Davies, and Charlotte Webb were among the first codebreakers, mostly due to their high status families, which allowed them to go to university. However, as the war progressed more women were recruited to assist with the effort, some coming from crossword solving competition that were held across England. Joan Clarke (fiancee of Alan Turing) was one such codebreaker. Some of these women came from the Women’s Royal Naval Service and were called Wren’s, and by the end there were 1,676 of these Wren’s, along with many other incredible women, attending to the more than 200 bombes along with other decryption tasks. 
+While most of the initial codebreakers at Bletchley Park were male, there were 3 or 4 exceptional women who started working there as well. Pamela Rose, Pat Davies, and Charlotte Webb were among the first codebreakers, mostly due to their high status families, which allowed them to go to university. However, as the war progressed more women were recruited to assist with the effort, some coming from crossword solving competition that were held across England. Joan Clarke (fiancee of Alan Turing) was one such codebreaker. Some of these women came from the Women’s Royal Naval Service and were called Wren’s, and by the end there were 1,676 of these Wren’s, along with many other incredible women, attending to the more than 200 bombes along with other decryption tasks.
 
-It should be noted that, while the codebreakers at Bletchley Park were incredible, they were still only human and the work they were doing could only move at human pace. Even though they were assisted by a series of bombes, the work was tireless and time consuming and the codes they were cracking were only valid for one day at a time. So even if they managed to crack the day code before midnight, they’d have to start all over again the next morning. But they were making good progress and decrypting German messages that the German’s thought were unbreakable. This gave the Allied forces a HUGE advantage and saved many lives. But there was still room for improvement; enter Alan Turing. 
+It should be noted that, while the codebreakers at Bletchley Park were incredible, they were still only human and the work they were doing could only move at human pace. Even though they were assisted by a series of bombes, the work was tireless and time consuming and the codes they were cracking were only valid for one day at a time. So even if they managed to crack the day code before midnight, they’d have to start all over again the next morning. But they were making good progress and decrypting German messages that the German’s thought were unbreakable. This gave the Allied forces a HUGE advantage and saved many lives. But there was still room for improvement; enter Alan Turing.
 
-Born in 1912 Alan Turing is considered the father of modern computing and artificial intelligence. He was a mathematician who focused on the unknowable nature of math and the idea that there will always be truths in mathematics that we can never know. He is perhaps most famous for his work at Bletchley Park and breaking codes and wrote a number of books that have become the foundation for mathematical code breaking. 
+Born in 1912 Alan Turing is considered the father of modern computing and artificial intelligence. He was a mathematician who focused on the unknowable nature of math and the idea that there will always be truths in mathematics that we can never know. He is perhaps most famous for his work at Bletchley Park and breaking codes and wrote a number of books that have become the foundation for mathematical code breaking.
 
-Note: this is an image of an early counting machine from the 1800’s for comparison. 
+Note: this is an image of an early counting machine from the 1800’s for comparison.
 
 During his time at Bletchley Turing envisioned a machine that one could feed a paper with a question into one end and a paper with the answer would come out the other end. This was, in fact, an early version of the modern computer. More than a mechanical counting machine, which already existed, it could show when various portions of the Enigma machine lined up. To do this Turing set up a series of Enigma machines, similar to what Rejewski’s bombes were (and in fact Turing called it a Bombe out of respect). However, instead of running them mechanically Turing ran electrical wires through them. The intention was that when the rotors lined up in the correct configuration (using the chains and links discovered by Rejewkski) a light would light up showing that the circuit had been completed. This allowed Turing to automate the process, having the machines turn themselves until they hit on the correct combination, and lighting up the light.
 
-Interactive Element: an animation showing the flow of an electrical current going through the links of letters in a guessed plaintext to known ciphertext but getting stopped at the wrong configuration; then, when it hits the correct one, a light lights up. The previous tracing element along with the chain and links developed in the charts above could be used to show the G B K configuration lighting up. 
+Interactive Element: an animation showing the flow of an electrical current going through the links of letters in a guessed plaintext to known ciphertext but getting stopped at the wrong configuration; then, when it hits the correct one, a light lights up. The previous tracing element along with the chain and links developed in the charts above could be used to show the G B K configuration lighting up.
 
 Here is what it would look like (maybe an animation of a wrong combination where the electron starts at the first point and then gets blocked so the rotor moves forward one position and tries again and then eventually the electron makes it all the way through and lights up the bulb). Text: In these images, S, S+1, S+2, S+3, etc refer to the rotor settings where S is the initial (unknown) rotor setting, S+1 is where it clicks forward one place, S+2 is two forward rotations, etc. Where a setting doesn’t produce a link in the chain it is skipped. Of important note, this version is using a crib (or known word that the code breakers were able to guess - like in a weather report) and is not using the day codes as Turing believed (rightfully) that these would soon no longer be used. But the same process could work for other pieces of information found in the text.
 
-So this method seemed pretty effective for cracking most messages, however it wasn’t perfect. For instance, what would happen if two or more day keys had a similar chain and link pattern? Well, because of the way the Enigma was created, it would be almost impossible for two day codes to have the exact same chain and link profile. And even if they did, it would simply be a matter of testing the duplicated keys until a message that made sense was found. Or what if the letters chosen for the day key or message key were also the letters that had been swapped in the plugboards? In this case Rejewksi might have had to assume he had most of the key correct and then test out the various plugboard settings until he found a key that unlocked the rest of the message. 
+So this method seemed pretty effective for cracking most messages, however it wasn’t perfect. For instance, what would happen if two or more day keys had a similar chain and link pattern? Well, because of the way the Enigma was created, it would be almost impossible for two day codes to have the exact same chain and link profile. And even if they did, it would simply be a matter of testing the duplicated keys until a message that made sense was found. Or what if the letters chosen for the day key or message key were also the letters that had been swapped in the plugboards? In this case Rejewksi might have had to assume he had most of the key correct and then test out the various plugboard settings until he found a key that unlocked the rest of the message.
 
-While Rejewksi’s method had some flaws it was still a revolution and a breakthrough for cracking the Enigma and helped with future efforts. However, Rejewksi’s exact method was a short lived victory as soon after creating his codebooks 2 extra, interchangeable cylinders were added to the machine which gave an extra 60 arrangements of the rotors and increased the number of possible rotor configurations to 1,054,560. To add to this they also increased the number of plugboards from 6 to 10, giving 20 possible letter swaps for a total of 1.59x10^20 possible keys. Rejewkski would have needed 10 times more bombes to create a new code book and they were too expensive for the Polish intelligence. Enigma now, once again, seemed unbreakable. Add to this the fact that Germany was about to invade Poland and so Rejewski, and Polish intelligence, gave all his work (including the blueprints for making an Enigma machine, how to set up a bombe, and his methods) to the French and British intelligence. 
+While Rejewksi’s method had some flaws it was still a revolution and a breakthrough for cracking the Enigma and helped with future efforts. However, Rejewksi’s exact method was a short lived victory as soon after creating his codebooks 2 extra, interchangeable cylinders were added to the machine which gave an extra 60 arrangements of the rotors and increased the number of possible rotor configurations to 1,054,560. To add to this they also increased the number of plugboards from 6 to 10, giving 20 possible letter swaps for a total of 1.59x10^20 possible keys. Rejewkski would have needed 10 times more bombes to create a new code book and they were too expensive for the Polish intelligence. Enigma now, once again, seemed unbreakable. Add to this the fact that Germany was about to invade Poland and so Rejewski, and Polish intelligence, gave all his work (including the blueprints for making an Enigma machine, how to set up a bombe, and his methods) to the French and British intelligence.
 
 ---
 Bletchley Park
 
-From: https://en.wikipedia.org/wiki/Bletchley_Park 
+From: https://en.wikipedia.org/wiki/Bletchley_Park
 
-Soon after receiving the information from Rejewski, British Intelligence realized they needed people to help break Enigma. So they hired about 200 people from various backgrounds including chess masters, puzzle experts, linguists and mathematicians to work on the problem. This small group was sent to live and work in the English countryside in what would be called Bletchley Park. Over time the number of people grew to around 7000 men and women. Some of the people who worked there were recruited through crossword puzzle contests in the newspaper, some were recruited from universities and through connections who were already part of the project. The British military had more resources and were therefore able to build more bombes and crack the codes using the methods set up by Rejewski. Furthermore they were able to look for cribs (definition: words that stand out like repeated phrases, names of people, weather reports) to help with cracking the settings. Through their efforts the people of Bletchley Park were able to crack day keys within a few hours, allowing them to read daily messages about German movements and strategies much faster. 
+Soon after receiving the information from Rejewski, British Intelligence realized they needed people to help break Enigma. So they hired about 200 people from various backgrounds including chess masters, puzzle experts, linguists and mathematicians to work on the problem. This small group was sent to live and work in the English countryside in what would be called Bletchley Park. Over time the number of people grew to around 7000 men and women. Some of the people who worked there were recruited through crossword puzzle contests in the newspaper, some were recruited from universities and through connections who were already part of the project. The British military had more resources and were therefore able to build more bombes and crack the codes using the methods set up by Rejewski. Furthermore they were able to look for cribs (definition: words that stand out like repeated phrases, names of people, weather reports) to help with cracking the settings. Through their efforts the people of Bletchley Park were able to crack day keys within a few hours, allowing them to read daily messages about German movements and strategies much faster.
 
-From: http://cnet.com/uk/pictures/see-alan-turings-lost-notes-found-in-the-walls-of-bletchley-park-70-years-later/10 
+From: http://cnet.com/uk/pictures/see-alan-turings-lost-notes-found-in-the-walls-of-bletchley-park-70-years-later/10
 
-Pop up or box of information: some things that sped up the process - human error (operators choosing repeating message codes, or initials of people they knew), as they got to know operators they could start to guess what they called cillies. There was also a requirement by the Germans that the rotors not be set in the same position 2 days in a row, meaning when the code breakers knew the setting for one day they could eliminate various settings for the next day automatically. There were also rules about the plugboards not being able to swap adjacent letters (N couldn’t be swapped with M or O) so this reduced possibilities again. 
+Pop up or box of information: some things that sped up the process - human error (operators choosing repeating message codes, or initials of people they knew), as they got to know operators they could start to guess what they called cillies. There was also a requirement by the Germans that the rotors not be set in the same position 2 days in a row, meaning when the code breakers knew the setting for one day they could eliminate various settings for the next day automatically. There were also rules about the plugboards not being able to swap adjacent letters (N couldn’t be swapped with M or O) so this reduced possibilities again.
 
 Pop-up or Side Box: The Women of Bletchley Park
 
-From: http://www.cnn.com/2016/11/24/europe/uk-bletchley-park-college/index.html 
+From: http://www.cnn.com/2016/11/24/europe/uk-bletchley-park-college/index.html
 
-While most of the initial codebreakers at Bletchley Park were male, there were 3 or 4 exceptional women who started working there as well. Pamela Rose, Pat Davies, and Charlotte Webb were among the first codebreakers, mostly due to their high status families, which allowed them to go to university. However, as the war progressed more women were recruited to assist with the effort, some coming from crossword solving competition that were held across England. Joan Clarke (fiancee of Alan Turing) was one such codebreaker. Some of these women came from the Women’s Royal Naval Service and were called Wren’s, and by the end there were 1,676 of these Wren’s, along with many other incredible women, attending to the more than 200 bombes along with other decryption tasks. 
+While most of the initial codebreakers at Bletchley Park were male, there were 3 or 4 exceptional women who started working there as well. Pamela Rose, Pat Davies, and Charlotte Webb were among the first codebreakers, mostly due to their high status families, which allowed them to go to university. However, as the war progressed more women were recruited to assist with the effort, some coming from crossword solving competition that were held across England. Joan Clarke (fiancee of Alan Turing) was one such codebreaker. Some of these women came from the Women’s Royal Naval Service and were called Wren’s, and by the end there were 1,676 of these Wren’s, along with many other incredible women, attending to the more than 200 bombes along with other decryption tasks.
 
-It should be noted that, while the codebreakers at Bletchley Park were incredible, they were still only human and the work they were doing could only move at human pace. Even though they were assisted by a series of bombes, the work was tireless and time consuming and the codes they were cracking were only valid for one day at a time. So even if they managed to crack the day code before midnight, they’d have to start all over again the next morning. But they were making good progress and decrypting German messages that the German’s thought were unbreakable. This gave the Allied forces a HUGE advantage and saved many lives. But there was still room for improvement; enter Alan Turing. 
+It should be noted that, while the codebreakers at Bletchley Park were incredible, they were still only human and the work they were doing could only move at human pace. Even though they were assisted by a series of bombes, the work was tireless and time consuming and the codes they were cracking were only valid for one day at a time. So even if they managed to crack the day code before midnight, they’d have to start all over again the next morning. But they were making good progress and decrypting German messages that the German’s thought were unbreakable. This gave the Allied forces a HUGE advantage and saved many lives. But there was still room for improvement; enter Alan Turing.
 
-Born in 1912 Alan Turing is considered the father of modern computing and artificial intelligence. He was a mathematician who focused on the unknowable nature of math and the idea that there will always be truths in mathematics that we can never know. He is perhaps most famous for his work at Bletchley Park and breaking codes and wrote a number of books that have become the foundation for mathematical code breaking. 
+Born in 1912 Alan Turing is considered the father of modern computing and artificial intelligence. He was a mathematician who focused on the unknowable nature of math and the idea that there will always be truths in mathematics that we can never know. He is perhaps most famous for his work at Bletchley Park and breaking codes and wrote a number of books that have become the foundation for mathematical code breaking.
 
-Note: this is an image of an early counting machine from the 1800’s for comparison. 
+Note: this is an image of an early counting machine from the 1800’s for comparison.
 
 During his time at Bletchley Turing envisioned a machine that one could feed a paper with a question into one end and a paper with the answer would come out the other end. This was, in fact, an early version of the modern computer. More than a mechanical counting machine, which already existed, it could show when various portions of the Enigma machine lined up. To do this Turing set up a series of Enigma machines, similar to what Rejewski’s bombes were (and in fact Turing called it a Bombe out of respect). However, instead of running them mechanically Turing ran electrical wires through them. The intention was that when the rotors lined up in the correct configuration (using the chains and links discovered by Rejewkski) a light would light up showing that the circuit had been completed. This allowed Turing to automate the process, having the machines turn themselves until they hit on the correct combination, and lighting up the light.
 
-Interactive Element: an animation showing the flow of an electrical current going through the links of letters in a guessed plaintext to known ciphertext but getting stopped at the wrong configuration; then, when it hits the correct one, a light lights up. The previous tracing element along with the chain and links developed in the charts above could be used to show the G B K configuration lighting up. 
+Interactive Element: an animation showing the flow of an electrical current going through the links of letters in a guessed plaintext to known ciphertext but getting stopped at the wrong configuration; then, when it hits the correct one, a light lights up. The previous tracing element along with the chain and links developed in the charts above could be used to show the G B K configuration lighting up.
 
 Here is what it would look like (maybe an animation of a wrong combination where the electron starts at the first point and then gets blocked so the rotor moves forward one position and tries again and then eventually the electron makes it all the way through and lights up the bulb). Text: In these images, S, S+1, S+2, S+3, etc refer to the rotor settings where S is the initial (unknown) rotor setting, S+1 is where it clicks forward one place, S+2 is two forward rotations, etc. Where a setting doesn’t produce a link in the chain it is skipped. Of important note, this version is using a crib (or known word that the code breakers were able to guess - like in a weather report) and is not using the day codes as Turing believed (rightfully) that these would soon no longer be used. But the same process could work for other pieces of information found in the text.
 
@@ -1705,11 +1709,11 @@ Here is what it would look like (maybe an animation of a wrong combination where
 > section: rsa
 > sectionStatus: dev
 
-Any discussion of cryptography needs to make mention of the number of people that need to work together and build upon each other's work in order to both create and break ciphers; and one process is constantly driving the other. One person needs to make a message secret, and so they create a way to encrypt it. Then another person wants to read it so they find a way to break it. So then a new method needs to be created to encrypt messages again, and a new method to break it, and so on, and so on… And methods are always building upon themselves, in fact you can see how the simple Caesar cipher can be found in every other process discussed here, including the ‘uncrackable’ Enigma. 
+Any discussion of cryptography needs to make mention of the number of people that need to work together and build upon each other's work in order to both create and break ciphers; and one process is constantly driving the other. One person needs to make a message secret, and so they create a way to encrypt it. Then another person wants to read it so they find a way to break it. So then a new method needs to be created to encrypt messages again, and a new method to break it, and so on, and so on… And methods are always building upon themselves, in fact you can see how the simple Caesar cipher can be found in every other process discussed here, including the ‘uncrackable’ Enigma.
 
-We also need various methods of cryptography for different purposes. For example, while highly secure, one-time pads were awkward to use and not practical for day to day use and are now only used in a few situations. Enigma was highly secure but required large, bulky machines and operators, making them impractical in many situations. Yet, Caesar and Vigenère ciphers could be done with a piece of paper and knowledge of the shift or keyword, but could be easily broken. Different methods of cryptography therefore are used for different purposes and where they make the most sense. 
+We also need various methods of cryptography for different purposes. For example, while highly secure, one-time pads were awkward to use and not practical for day to day use and are now only used in a few situations. Enigma was highly secure but required large, bulky machines and operators, making them impractical in many situations. Yet, Caesar and Vigenère ciphers could be done with a piece of paper and knowledge of the shift or keyword, but could be easily broken. Different methods of cryptography therefore are used for different purposes and where they make the most sense.
 
-Also, because of the inherent secrecy of cryptography, many methods of decryption, including the people who work on it, remain hidden and secret for many years after their work is done. For example, those who worked at Bletchley Park, including Alan Turing, returned home to be seen by friends and family as not contributing to the war efforts; and they were forbidden to speak of their work. Even the accomplishments of Flowers and his Colossus machine weren’t revealed to the public until decades later. In the case of Turing, he passed away before ever receiving recognition for his contributions. 
+Also, because of the inherent secrecy of cryptography, many methods of decryption, including the people who work on it, remain hidden and secret for many years after their work is done. For example, those who worked at Bletchley Park, including Alan Turing, returned home to be seen by friends and family as not contributing to the war efforts; and they were forbidden to speak of their work. Even the accomplishments of Flowers and his Colossus machine weren’t revealed to the public until decades later. In the case of Turing, he passed away before ever receiving recognition for his contributions.
 
 It is believed that, even today, there are many government and private efforts to both protect and decrypt our data. But the people working on these efforts remain hidden and secret; just like the codes they are attempting to make and break!
 
@@ -1717,9 +1721,9 @@ It is believed that, even today, there are many government and private efforts t
 
 RSA
 
-You want to send a message to your friend, but your friend lives on the other side of the world. There are many ways you can send this message including: sending a letter through the mail, phoning them, or sending them an electronic message (like an email, text message, or message through social media or an app). If you want the message to not be read by others then you need to find some way to encrypt it. As we have seen in previous chapters cryptography requires two parts: an algorithm (a way to encrypt the information) and a key (a specific piece of information required to ‘crack the code’). In earlier times the key would often be written down and distributed to those exchanging messages. This could be done through code books, or by simply telling the other person the key directly. Cryptographers who intercepted these encrypted messages would look for ways to break them or, if they were lucky enough, would find these codebooks or intercept the keys in some way (a spy or someone who wasn’t careful keeping the key a secret - like writing it down) and then they would have access to all the hidden messages. 
+You want to send a message to your friend, but your friend lives on the other side of the world. There are many ways you can send this message including: sending a letter through the mail, phoning them, or sending them an electronic message (like an email, text message, or message through social media or an app). If you want the message to not be read by others then you need to find some way to encrypt it. As we have seen in previous chapters cryptography requires two parts: an algorithm (a way to encrypt the information) and a key (a specific piece of information required to ‘crack the code’). In earlier times the key would often be written down and distributed to those exchanging messages. This could be done through code books, or by simply telling the other person the key directly. Cryptographers who intercepted these encrypted messages would look for ways to break them or, if they were lucky enough, would find these codebooks or intercept the keys in some way (a spy or someone who wasn’t careful keeping the key a secret - like writing it down) and then they would have access to all the hidden messages.
 
-While the modern internet, and modern computers, have made communication across the world much faster and easier it has also presented new ways for information to be intercepted. Let’s say the message you want to send to your friend is supposed to be secret, but it gets intercepted along the way. If you were to use one of the methods of cryptography described earlier a modern computer could easily crack it by using the tricks and methods developed by people like Babbage, Rejewski and Turing; things like frequency analysis and investigating patterns within the encrypted code. It could also use a brute force attack with thousands of possibilities a second; much faster than cracking it by hand. 
+While the modern internet, and modern computers, have made communication across the world much faster and easier it has also presented new ways for information to be intercepted. Let’s say the message you want to send to your friend is supposed to be secret, but it gets intercepted along the way. If you were to use one of the methods of cryptography described earlier a modern computer could easily crack it by using the tricks and methods developed by people like Babbage, Rejewski and Turing; things like frequency analysis and investigating patterns within the encrypted code. It could also use a brute force attack with thousands of possibilities a second; much faster than cracking it by hand.
 
 So you need to share a key first, but how can you do this safely? Let’s say you’re sending an email to your friend, how could you send the key?
 
@@ -1735,90 +1739,90 @@ They have to remember the key exactly; you might be more tempted to pick a reall
 Tell it to them in person
 Requires you both to be in the same place; hey have to remember the key exactly; you might be more tempted to pick a really simple/easy to remember key for them; they could choose to write the key down on a piece of paper that could be found or lost, or they could write it as a file on their computer that could be seen if the computer and not the email was hacked
 Send it to them over another form of communication (text message, social media, an app)
-Message could be intercepted by the phone company or by the company that owns the social media or app; if their computer is compromised the hacker might be able to see the key regardless of the way it is sent. 
+Message could be intercepted by the phone company or by the company that owns the social media or app; if their computer is compromised the hacker might be able to see the key regardless of the way it is sent.
 
-As you can see there are many ways that the key could be intercepted. So why not create a method to send a key publicly where it doesn’t matter if someone else gets it? That’s what RSA is. 
+As you can see there are many ways that the key could be intercepted. So why not create a method to send a key publicly where it doesn’t matter if someone else gets it? That’s what RSA is.
 
 
-From: https://en.wikipedia.org/wiki/RSA_Security 
+From: https://en.wikipedia.org/wiki/RSA_Security
 
-RSA is named after the co-founders of RSA Security: Ron Rivest, Adi Shamir and Leonard Adelman, and they named the encryption method the same. It uses a series of public (Definition: not secret, can be intercepted, and read by a third party freely) and private (Definition: only known by the recipient and kept secure on their system) keys, along with modular arithmetic, to encrypt messages being sent electronically and ensure that, even if they are intercepted, they can’t be cracked. 
+RSA is named after the co-founders of RSA Security: Ron Rivest, Adi Shamir and Leonard Adelman, and they named the encryption method the same. It uses a series of public (Definition: not secret, can be intercepted, and read by a third party freely) and private (Definition: only known by the recipient and kept secure on their system) keys, along with modular arithmetic, to encrypt messages being sent electronically and ensure that, even if they are intercepted, they can’t be cracked.
 
 ---
 
-Prime Numbers 
+Prime Numbers
 
-To explain how RSA encryption works we have to start with prime numbers (link to Prime Numbers module in Mathigon) and factors. 
+To explain how RSA encryption works we have to start with prime numbers (link to Prime Numbers module in Mathigon) and factors.
 
 What are all the factors of 150? Input 1, 150, 2, 75, 3, 50, 5, 30, 6, 25, 15, 10
 
 Now how about 151? Input 1, 151
 
-151 is a prime number so there are only two factors. If you knew that 151 was a prime, getting the factors would be quite easy, but it becomes more work if you don’t know it’s a prime, as you have to test all the numbers in between 1 and 151 to see if 151 is evenly divisible by any of them. 
+151 is a prime number so there are only two factors. If you knew that 151 was a prime, getting the factors would be quite easy, but it becomes more work if you don’t know it’s a prime, as you have to test all the numbers in between 1 and 151 to see if 151 is evenly divisible by any of them.
 
-Now there are some tricks that can simplify this such as any even number is divisible by 2, a number ending in 5 or 0 is divisible by 5, but for larger numbers it can be quite tricky. Imagine finding all the factors of 125728394792, it would take a while, even with the help of a computer. 
+Now there are some tricks that can simplify this such as any even number is divisible by 2, a number ending in 5 or 0 is divisible by 5, but for larger numbers it can be quite tricky. Imagine finding all the factors of 125728394792, it would take a while, even with the help of a computer.
 
-Let’s go the other way now. What is 547 x 251? Input 137,297 
+Let’s go the other way now. What is 547 x 251? Input 137,297
 
-Pretty easy to figure out (especially if you have a calculator or computer on hand). But what if I asked you what two numbers multiply together to get 262,319? 
+Pretty easy to figure out (especially if you have a calculator or computer on hand). But what if I asked you what two numbers multiply together to get 262,319?
 
 Interactive Element: an input box with an “HELP” button that gives the answer 947 and 277
 
-947 and 277 are both prime numbers and so, when multiplied together, gives an answer that only has 4 possible factors, 1, 262319, 947 and 277. Now with the help of a computer you could determine this answer pretty quickly, it would be very difficult to figure it out by hand (but it could be done, especially if you knew it was the product of two prime numbers). 
+947 and 277 are both prime numbers and so, when multiplied together, gives an answer that only has 4 possible factors, 1, 262319, 947 and 277. Now with the help of a computer you could determine this answer pretty quickly, it would be very difficult to figure it out by hand (but it could be done, especially if you knew it was the product of two prime numbers).
 
-However, what if the prime number was longer, MUCH longer. In fact, in 2048-bit RSA encryption the number is 617 digits long.  A number this long, with only 4 factors, would take a classic, modern computer about 300 trillion years to crack. So this is what RSA makes use of. 
+However, what if the prime number was longer, MUCH longer. In fact, in 2048-bit RSA encryption the number is 617 digits long.  A number this long, with only 4 factors, would take a classic, modern computer about 300 trillion years to crack. So this is what RSA makes use of.
 
 ---
 
-So how does knowing the factors of a number help secure information? It has to do with private and public keys. A public key is something that can be shared freely between people and it doesn’t matter if someone else intercepts it. Without the private key, which is stored only by the sender or the recipient (not both - they each have their own) then intercepting the message and the public key is not enough to decrypt the message. But when you pair the public and private key together, the message unlocks and can be read only by the intended recipients. 
+So how does knowing the factors of a number help secure information? It has to do with private and public keys. A public key is something that can be shared freely between people and it doesn’t matter if someone else intercepts it. Without the private key, which is stored only by the sender or the recipient (not both - they each have their own) then intercepting the message and the public key is not enough to decrypt the message. But when you pair the public and private key together, the message unlocks and can be read only by the intended recipients.
 
 Generating the Keys
 
-In order to generate our keys we need to pick two prime numbers that are big enough and far enough apart that they will work. The smaller the numbers and the closer together they are the Input (selection box “easier” or “harder” choices, correct answer is “easier”) they are to guess. 
+In order to generate our keys we need to pick two prime numbers that are big enough and far enough apart that they will work. The smaller the numbers and the closer together they are the Input (selection box “easier” or “harder” choices, correct answer is “easier”) they are to guess.
 
 Interactive Element: this will be a multi-step process (it could be set up as a step by step slideshow with text and inputs)
 Step 1: Text: “first we choose two prime numbers Pop-up/side note: the actual numbers chosen for RSA are normally very large and a primality test (like the Rabin-Miller Primality Test) is used to ensure that they are actually prime numbers.” students will then choose two prime numbers (there needs to be instructions and a check that the primes are at least over 100 and they have to be primes). The two primes should be labelled “p” and “q”
 Step 2: Text: “next multiply your two primes together” students will then multiple the two numbers together to give “n”
-Step 3: Text: “now we need to find a number that will form an upper limit for our next step. This is done using Carmichael’s totient function: \lambda(n) = lcm(p-1, q-1), where lcm is the least or lowest common multiple (you can learn more about lcm here). However, because lcm requires finding prime factors and we are dealing with large numbers here’s a calculator to help you” Students will input their p-1 and q-1 numbers and then we will provide a calculator to determine the lcm for those numbers and show them their \lambda value (like this: https://www.calculatorsoup.com/calculators/math/lcm.php) 
+Step 3: Text: “now we need to find a number that will form an upper limit for our next step. This is done using Carmichael’s totient function: \lambda(n) = lcm(p-1, q-1), where lcm is the least or lowest common multiple (you can learn more about lcm here). However, because lcm requires finding prime factors and we are dealing with large numbers here’s a calculator to help you” Students will input their p-1 and q-1 numbers and then we will provide a calculator to determine the lcm for those numbers and show them their \lambda value (like this: https://www.calculatorsoup.com/calculators/math/lcm.php)
 Step 4: Text: “we now use this \lambda(n) value to find a value we can use to make up our public key called e” students will then be asked to pick a prime number (e) between 1 and \lambda(n). This could be an auto-generated list of prime numbers between 1 and their \lambda(n) and they click on what number they want to use.
-Step 5: Text: “we now have p, q, n, and e to work with, where our public key is a combination of e and n” These numbers should all be filled in, perhaps a labelled box with their various values. 
-Step 6: Text: “so now it’s time to encrypt. Let’s start with a very simple message, a number (we’ll talk about text later), and call it m.” students pick a number between 1 and 9 (inclusive) and it gets labelled as m. 
-Step 7: Text: “now we are going to use this equation to encrypt our message c = m^e mod n. Pop-up: this pop-up links to the below section on modular arithmetic” students will fill in the equation with the various parts to solve for c, this should be a calculator that shows the various steps (the m^e calculation and then finding out the mod n part). 
-Step 8: Text: “so we now have our plaintext (the student’s m value) as a ciphertext (the student’s c value) that gets sent to the receiver.” 
+Step 5: Text: “we now have p, q, n, and e to work with, where our public key is a combination of e and n” These numbers should all be filled in, perhaps a labelled box with their various values.
+Step 6: Text: “so now it’s time to encrypt. Let’s start with a very simple message, a number (we’ll talk about text later), and call it m.” students pick a number between 1 and 9 (inclusive) and it gets labelled as m.
+Step 7: Text: “now we are going to use this equation to encrypt our message c = m^e mod n. Pop-up: this pop-up links to the below section on modular arithmetic” students will fill in the equation with the various parts to solve for c, this should be a calculator that shows the various steps (the m^e calculation and then finding out the mod n part).
+Step 8: Text: “so we now have our plaintext (the student’s m value) as a ciphertext (the student’s c value) that gets sent to the receiver.”
 
-Pop-up on Modular Arithmetic (see above): 
-In order to understand this method of encryption we have to understand the concept of modular arithmetic. In its most basic form modular arithmetic is like reading a clock where the ‘n’ in mod n determines how many ‘hours’ there are. Every time the clock reaches back to where it starts we restart our numbering (like when we go from 12:59 to 1:00 on a regular clock, we don’t go to 13 because there are only 12 numbers on the face). 
+Pop-up on Modular Arithmetic (see above):
+In order to understand this method of encryption we have to understand the concept of modular arithmetic. In its most basic form modular arithmetic is like reading a clock where the ‘n’ in mod n determines how many ‘hours’ there are. Every time the clock reaches back to where it starts we restart our numbering (like when we go from 12:59 to 1:00 on a regular clock, we don’t go to 13 because there are only 12 numbers on the face).
 
-Each time we go around the clock we return to our starting number. So if we were going on a trip and we left at midnight and it was going to take 18 hours to get to our destination, what time would it be when we get there? Input: 6:00 (this should be a drop down with options to avoid am, pm, or 24 hour time). 
+Each time we go around the clock we return to our starting number. So if we were going on a trip and we left at midnight and it was going to take 18 hours to get to our destination, what time would it be when we get there? Input: 6:00 (this should be a drop down with options to avoid am, pm, or 24 hour time).
 
-So you see, we went around the clock 18 ‘hours’ but ended up at the number 6. This is the basis of modular arithmetic. It’s how many times the number we are looking for goes into the mod evenly, and the remainder becomes the value we are looking for. 
+So you see, we went around the clock 18 ‘hours’ but ended up at the number 6. This is the basis of modular arithmetic. It’s how many times the number we are looking for goes into the mod evenly, and the remainder becomes the value we are looking for.
 
 Let’s try an example: say we are looking at the number 13 in mod 5. Important note: unlike the clock above, we always start modular calculations with a 0 so the numbers go from 0 to n-1 (more on this in a minute). So to find 13 mod 5 we can simply count, starting at 0, 13 places, and then record where we end up Input 3.
 
 
-So how do we do this for bigger numbers (because who wants to count something like 447 mod 5) and why do we start at 0? This is because modular arithmetic is based on integer division and remainders. So to calculate 447 mod 5 we divide 447 by 5 and then we look at the remainder Input 2. The reason we start at 0: because a number like 550 mod 5 would have a remainder of Input 0 not of 5. 
+So how do we do this for bigger numbers (because who wants to count something like 447 mod 5) and why do we start at 0? This is because modular arithmetic is based on integer division and remainders. So to calculate 447 mod 5 we divide 447 by 5 and then we look at the remainder Input 2. The reason we start at 0: because a number like 550 mod 5 would have a remainder of Input 0 not of 5.
 
-How to calculate mods: the best way to do this is to practice long division and find the integer remainder of the number. 
+How to calculate mods: the best way to do this is to practice long division and find the integer remainder of the number.
 
-Interactive Element: have students calculate 134 mod 8. This should be set up as a long division question where they have to put an input at each step and they find the remainder to be 6. It should look something like this (where the blue boxes are input boxes and the text in them is the correct solution): 
+Interactive Element: have students calculate 134 mod 8. This should be set up as a long division question where they have to put an input at each step and they find the remainder to be 6. It should look something like this (where the blue boxes are input boxes and the text in them is the correct solution):
 
-So 134 mod 8 = Input 6 
+So 134 mod 8 = Input 6
 
-For very large numbers however, we often use a mod calculator. 
+For very large numbers however, we often use a mod calculator.
 
-So now we have an encrypted message that we can send to a receiver. But we need to make sure they can read it. This is where the private key comes in. 
+So now we have an encrypted message that we can send to a receiver. But we need to make sure they can read it. This is where the private key comes in.
 
-A private key must work with the public key so we use the same e and n values. Neither the e or n value is particularly useful on its own, and remember, the n value is actually the product of two prime numbers, which we saw before were very difficult (if not impossible) to guess for large, far apart numbers. 
+A private key must work with the public key so we use the same e and n values. Neither the e or n value is particularly useful on its own, and remember, the n value is actually the product of two prime numbers, which we saw before were very difficult (if not impossible) to guess for large, far apart numbers.
 
-So we send e and n out in the open and they are received by our intended recipient, and if someone else gets them in the middle it’s not going to be of much use. 
+So we send e and n out in the open and they are received by our intended recipient, and if someone else gets them in the middle it’s not going to be of much use.
 
-To create the private key (called d) we use this formula: 
+To create the private key (called d) we use this formula:
 
 d = 1/e mod \lambda(n)
 
-Now it’s important to note that 1/e is not 1 divided by e but is instead the modular inverse of e. To solve for this we are going to use a calculator as finding this by hand involves the Extended Euclidean Algorithm, which is beyond the scope of this lesson but more can be found here https://www.extendedeuclideanalgorithm.com/index.php 
+Now it’s important to note that 1/e is not 1 divided by e but is instead the modular inverse of e. To solve for this we are going to use a calculator as finding this by hand involves the Extended Euclidean Algorithm, which is beyond the scope of this lesson but more can be found here https://www.extendedeuclideanalgorithm.com/index.php
 
-So let’s take our e value Interactive Element: the e value from before and an inverse modular calculator like the one here (https://planetcalc.com/3311/) to give an answer. 
+So let’s take our e value Interactive Element: the e value from before and an inverse modular calculator like the one here (https://planetcalc.com/3311/) to give an answer.
 
 We then use that information and the value of n Interactive Element: the value of n from above
 
@@ -1826,7 +1830,7 @@ To calculate d Interactive Element: the value of d
 
 Voila! Our private key (d).
 
-Now we can use our value of (d), the product of two primes (n), and our public key (c), to decrypt the message (m) as: 
+Now we can use our value of (d), the product of two primes (n), and our public key (c), to decrypt the message (m) as:
 
 m = c^d mod n
 
@@ -1834,14 +1838,14 @@ Interactive Element: students will input their various values and the value of m
 
 ---
 
-In our example we encrypted a number, but what about text or other information? 
+In our example we encrypted a number, but what about text or other information?
 
-Well computers actually already convert input information into numbers and then into binary; and this is the information that gets encrypted and sent. 
+Well computers actually already convert input information into numbers and then into binary; and this is the information that gets encrypted and sent.
 
 
-From: https://stillthere.co/encryption 
+From: https://stillthere.co/encryption
 
-Interactive Element: using a chart like this: https://www.asciitable.com students would either type in a word and an animation would show it being converted to ASCII or they would type in a word and then click on elements in the table to convert their message to ASCII. They would then see their word appear as a series of numbers. 
+Interactive Element: using a chart like this: https://www.asciitable.com students would either type in a word and an animation would show it being converted to ASCII or they would type in a word and then click on elements in the table to convert their message to ASCII. They would then see their word appear as a series of numbers.
 
 As you can see your word (their word from above) has been re-written as (the ASCII text from above) and we know how to encrypt a series of numbers using RSA. The computer can then transform this into binary (Link to Mathigon section on Binary) and send the message through the internet; safe in the knowledge it is secure and unreadable by anyone without a corresponding key.
 
@@ -1849,22 +1853,22 @@ As you can see your word (their word from above) has been re-written as (the ASC
 
 From: (not sure where this image is from but it’s just to show an interceptor of the messages)
 
-The public and private key exchange used in RSA allows for users to keep parts of the key hidden and away from potential interceptors but to share a public aspect that is useless without the other part. This is what makes it possible to send encrypted, secret, message through insecure means without a worry that someone will be able to decrypt it. 
+The public and private key exchange used in RSA allows for users to keep parts of the key hidden and away from potential interceptors but to share a public aspect that is useless without the other part. This is what makes it possible to send encrypted, secret, message through insecure means without a worry that someone will be able to decrypt it.
 
-By using the power of prime numbers, and the near un-guessability of the factors of a product of two large primes, we are able to keep messages safe as they travel through the internet. 
+By using the power of prime numbers, and the near un-guessability of the factors of a product of two large primes, we are able to keep messages safe as they travel through the internet.
 
 ---
 
-Cracking RSA (P vs NP and Quantum Computers) 
+Cracking RSA (P vs NP and Quantum Computers)
 
-Whenever anyone comes up with a new way to secure and encrypt data following right behind them are the codebreakers, and RSA is no different. Currently there are two considerations for the long term usability of RSA encryption. 
+Whenever anyone comes up with a new way to secure and encrypt data following right behind them are the codebreakers, and RSA is no different. Currently there are two considerations for the long term usability of RSA encryption.
 
-The first is linked to something called the P vs NP problem, which is one of the 7 Millenium Prize Problems (valued at $1 million to whoever can solve it) Link: http://www.claymath.org/millennium-problems. The question essentially sets P as ‘easy to find’ and NP as ‘easy to check’. It then seeks to ask if we can easily/quickly check a solution then can it also be solved quickly. In RSA, we can quickly check if a given solution is correct (we just see if the value for m we get out is correct), so if we are able to quickly solve it as well, then it would be easily cracked by modern computers. 
+The first is linked to something called the P vs NP problem, which is one of the 7 Millenium Prize Problems (valued at $1 million to whoever can solve it) Link: http://www.claymath.org/millennium-problems. The question essentially sets P as ‘easy to find’ and NP as ‘easy to check’. It then seeks to ask if we can easily/quickly check a solution then can it also be solved quickly. In RSA, we can quickly check if a given solution is correct (we just see if the value for m we get out is correct), so if we are able to quickly solve it as well, then it would be easily cracked by modern computers.
 
-The second deals with the development of newer and faster computers. As mentioned previously, a ‘classic’ modern computer would take about 300 trillion years to crack a 2048 bit RSA encryption; but, it did crack a 768 bit RSA in about 2 years. Still a long time, but it does mean it’s doable. 
+The second deals with the development of newer and faster computers. As mentioned previously, a ‘classic’ modern computer would take about 300 trillion years to crack a 2048 bit RSA encryption; but, it did crack a 768 bit RSA in about 2 years. Still a long time, but it does mean it’s doable.
 
-From: https://www.technologyreview.com/s/612844/what-is-quantum-computing/ 
+From: https://www.technologyreview.com/s/612844/what-is-quantum-computing/
 
-Enter the quantum computer. A quantum computer works on the principles of superposition (Definition: we can add quantum states together and get a new quantum state) and entanglement (Definition: that two particles or groups are connected to each other in a way that you can’t change one without affecting the other). Quantum mechanics, and quantum computing, is a whole new way of looking at how we process information. In terms of RSA, unlike a modern ‘classic’ computer that would test every prime number until it found one that was a factor of n, a quantum computer could test all the primes nearly simultaneously and determine n in a matter of seconds (not years). 
+Enter the quantum computer. A quantum computer works on the principles of superposition (Definition: we can add quantum states together and get a new quantum state) and entanglement (Definition: that two particles or groups are connected to each other in a way that you can’t change one without affecting the other). Quantum mechanics, and quantum computing, is a whole new way of looking at how we process information. In terms of RSA, unlike a modern ‘classic’ computer that would test every prime number until it found one that was a factor of n, a quantum computer could test all the primes nearly simultaneously and determine n in a matter of seconds (not years).
 
-But, while many people are currently working on problems like P vs NP and quantum computers we are still a long way off. The most modern version of a quantum we have currently can only handle a 2-digit factor (remember, RSA 2048 uses 617 digits) so the solution is still a long way off. But, like any form of encryption, people will keep trying to break it. Luckily we can also use these new technologies to create newer, and more secure, methods of keeping our data safe as well! 
+But, while many people are currently working on problems like P vs NP and quantum computers we are still a long way off. The most modern version of a quantum we have currently can only handle a 2-digit factor (remember, RSA 2048 uses 617 digits) so the solution is still a long way off. But, like any form of encryption, people will keep trying to break it. Luckily we can also use these new technologies to create newer, and more secure, methods of keeping our data safe as well!

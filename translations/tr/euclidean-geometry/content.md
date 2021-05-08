@@ -5,6 +5,9 @@
 > id: thales
 > goals: p1 p2 p3 move
 > section: introduction
+> color: "#0F82F2"
+> level: Intermediate
+> next: transformations
 
 ::: column.grow
 Matematik binlerce yıldır mevsim değişikliklerini öngörmek, vergileri hesaplamak ya da tarım alanının büyüklüğünü ölçmek için kullanılıyor.
@@ -329,7 +332,7 @@ Geometrinin ilk beş aksiyomunu yayınlayan Yunan matematikçi [Öklid](bio:eucl
       circle.move(name="b" cx=190 cy=30 target="1_point")
       path.red(x="segment(a,b)" target="1_line")
 
-{.text-center }__Birinci Aksiyom__  
+{.text-center }__Birinci Aksiyom__
 Herhangi [iki noktayı](target:1_point) sadece bir [doğru parçasıyla](target:1_line) birleştirebilirsin.
 
 ::: column(width=220)
@@ -340,7 +343,7 @@ Herhangi [iki noktayı](target:1_point) sadece bir [doğru parçasıyla](target:
       path.red(x="line(c,d)")
       path(x="segment(c,d)" target="2_segment")
 
-{.text-center }__İkinci Aksiyom__  
+{.text-center }__İkinci Aksiyom__
 Herhangi bir [doğru parçasını](target:2_segment) bir doğruya genişletebilirsin.
 
 ::: column(width=220)
@@ -351,7 +354,7 @@ Herhangi bir [doğru parçasını](target:2_segment) bir doğruya genişletebili
       path(x="segment(e,f)" label="r" target="3_radius")
       path.red(x="circle(e,distance(e,f))" target="3_circle")
 
-{.text-center }__Üçüncü Aksiyom__  
+{.text-center }__Üçüncü Aksiyom__
 [_P_ noktası](target:3_center) ve [_r_ mesafesi](target:3_radius) verildiğinde, merkezi _P_ ve yarıçapı _r_ olan bir [çember](target:3_circle) çizebilirsin.
 
 ::: column(width=220)
@@ -371,7 +374,7 @@ Herhangi bir [doğru parçasını](target:2_segment) bir doğruya genişletebili
       path.dark(x="segment(y,ya)")
       path.dark(x="segment(y,yb)")
 
-{.text-center }__Dördüncü Aksiyom__  
+{.text-center }__Dördüncü Aksiyom__
 Herhangi iki dik açı birbirine denktir.
 
 ::: column(width=220)
@@ -381,7 +384,7 @@ Herhangi iki dik açı birbirine denktir.
       path(name="line5" x="line(point(40,80),point(120,140))" target="5_line" label="L")
       path.red(x="line5.parallel(g)" target="5_parallel")
 
-{.text-center }__Beşinci Aksiyom__  
+{.text-center }__Beşinci Aksiyom__
 Verilen bir [_L_ doğrusu](target:5_line) ve _L_ doğrusundan olmayan bir [_P_ noktası](target:5_point) ile _P_ noktasından geçen _L_ doğrusuna [paralel](gloss:parallel) sadece bir doğru çizebilirsin.
 :::
 
@@ -435,7 +438,7 @@ Uzun mesafeleri ölçebilmek için mimarlar  ya da araştırmacılar düğümlen
 
 Yunan matematikçiler bu yaklaşımlarla uğraşmak istemediler. Geometrinin pratik uygulamalarındansa altında yatan kurallara daha çok ilgi gösterdiler.
 
-Bu nedenle evrenimizin daha idealleştirilmiş versiyonuyla çıkageldiler; bir noktanın boyutu, bir çizgininse genişliği olamaz. Tabi ki bir kağıda boyutu ya da genişliği olmayan şeyleri çizmek [[çok zordur|imkansızdır]]. Görünür noktalar hep biraz yer kaplayacaktır ve çizgilerin her zaman genişliği olacaktır. İşte bu yüzden bizim çizimimiz her zaman bir “yaklaşımdır”. 
+Bu nedenle evrenimizin daha idealleştirilmiş versiyonuyla çıkageldiler; bir noktanın boyutu, bir çizgininse genişliği olamaz. Tabi ki bir kağıda boyutu ya da genişliği olmayan şeyleri çizmek [[çok zordur|imkansızdır]]. Görünür noktalar hep biraz yer kaplayacaktır ve çizgilerin her zaman genişliği olacaktır. İşte bu yüzden bizim çizimimiz her zaman bir “yaklaşımdır”.
 
 ---
 > id: tools
@@ -484,7 +487,7 @@ Bu aletler ne kadar ilkel görünseler de bunlarla çok fazla sayıda şekil çi
 
     x-img(src="images/archimedes.jpg" width=340 height=265)
 
-{.caption} [Arşimet](bio:archimedes) Romalı istilacılar tarafından öldürülmeden hemen önce geometri çalışıyordu. Son sözü “çemberlerimi bozmayın” olmuştur. 
+{.caption} [Arşimet](bio:archimedes) Romalı istilacılar tarafından öldürülmeden hemen önce geometri çalışıyordu. Son sözü “çemberlerimi bozmayın” olmuştur.
 :::
 
 ---
@@ -500,9 +503,9 @@ Bu aletler ne kadar ilkel görünseler de bunlarla çok fazla sayıda şekil çi
 
 Başlangıç için, sol üstteki kutucuklardan [çizgi kutucuğu](->#equilateral_.tool:nth-child(3)) ile çizgi çiziyoruz. Seçili çizgi kutucuğu ile basitçe bir noktadan diğerine sürüklüyoruz.  Bu parça eşkenar üçgenin bir kenarını oluşturacak.
 
-{.reveal(when="segment0")} Sırada çizgi üzerindeki bir noktayı merkez kabul edip diğer noktada biten iki çember çizmek var.  [Çember kutucuğu](->#equilateral_.tool:nth-child(5)) ile basitçe bir noktadan diğerine sürüklüyoruz. 
+{.reveal(when="segment0")} Sırada çizgi üzerindeki bir noktayı merkez kabul edip diğer noktada biten iki çember çizmek var.  [Çember kutucuğu](->#equilateral_.tool:nth-child(5)) ile basitçe bir noktadan diğerine sürüklüyoruz.
 
-{.reveal(when="circle1 circle2")} Şimdiden üçgenimizin iki köşesi oluştu ve üçüncüsü de iki çemberin kesiştiği nokta olacak. Yine çizgi kutucuğunu kullanarak üçgenin kayıp iki kenarını oluşturup üçgeni tamamlayabilirsiniz. 
+{.reveal(when="circle1 circle2")} Şimdiden üçgenimizin iki köşesi oluştu ve üçüncüsü de iki çemberin kesiştiği nokta olacak. Yine çizgi kutucuğunu kullanarak üçgenin kayıp iki kenarını oluşturup üçgeni tamamlayabilirsiniz.
 
 {.reveal(when="segment1 segment2")} Şimdi [bu iki kenar](target:a) ve [bu iki kenarlar](target:b) çemberin [[çapıdır.|çevresidir.|yarıçapıdır.]], _{span.reveal(when="blank-0")} o zaman aynı uzunlukta olmalılar. Başka bir deyişle üçgenin üç kenarı birbirlerine denktir. Bu yüzden bu üçgen aslında eşkenar üçgendir_.
 
@@ -521,24 +524,24 @@ Başlangıç için, sol üstteki kutucuklardan [çizgi kutucuğu](->#equilateral
 
 ### Açıortaylar
 
-{.todo} ÇOK YAKINDA – AÇIORTAYLARI OLUŞTURMA 
+{.todo} ÇOK YAKINDA – AÇIORTAYLARI OLUŞTURMA
 
 ---
 > id: impossible
 
 ### İmkansız Yapılar
 
-İlerleyen derslerde bu yöntemlerle inşa edilebilecek daha fazla şekil göreceğiz. Ancak Öklid geometrisinin bir sınırı vardır; bazı yapılar ınsadece pergel ve düz kenarla inşa edilmesi imkansızdır. 
+İlerleyen derslerde bu yöntemlerle inşa edilebilecek daha fazla şekil göreceğiz. Ancak Öklid geometrisinin bir sınırı vardır; bazı yapılar ınsadece pergel ve düz kenarla inşa edilmesi imkansızdır.
 
 ::: column.grow
-Efsaneye göre bir zamanlar bir Antik Yunan şehri olan Dilos, korkunç bir hastalık ile boğuşur. Delfi’deki kahin, bu hastalığın tanrıların bir cezası olduğunu ve eğer tapınaklarındaki mevcut olan sunağın hacminin iki katı kadar olan yeni bir sunak inşa ederlerse hastalığın biteceğini söyler. 
+Efsaneye göre bir zamanlar bir Antik Yunan şehri olan Dilos, korkunç bir hastalık ile boğuşur. Delfi’deki kahin, bu hastalığın tanrıların bir cezası olduğunu ve eğer tapınaklarındaki mevcut olan sunağın hacminin iki katı kadar olan yeni bir sunak inşa ederlerse hastalığın biteceğini söyler.
 
     figure: img(src="images/altar.svg" width=320 height=140)
 
 ::: column(width=300)
 
     x-img(src="images/delphi.jpg" credit="© De Agostini Editorial" width=300 height=239)
-    
+
 {.caption} Delfi’deki tapınağın bir modeli
 :::
 
@@ -571,7 +574,7 @@ Bir kübün kenarı verildiğinde, bu kenardan hacmi iki kat fazla olan başka b
 Bir çember verildiğinde, bu çemberden çember ile aynı alan sahip bir kare elde etmek imkansızdır.
 :::
 
-Şunu unutmamalıyız ki bu problemler cebir veya cetvel  ve iletki kullanılarak kolayca çözülebilirler. Ama  eğer sadece cetvel ve düz kenar kullanmanıza izin verildiyse imkansızdır. 
+Şunu unutmamalıyız ki bu problemler cebir veya cetvel  ve iletki kullanılarak kolayca çözülebilirler. Ama  eğer sadece cetvel ve düz kenar kullanmanıza izin verildiyse imkansızdır.
 
 ---
 
@@ -764,7 +767,7 @@ Origami teknikleri sayesinde güneş panelleri, uydu uzaya ulaştığı zaman ka
 
 Amerikan ve İngiliz orduları Origami kullanarak katlanabilir ve taşınabilir köprüler geliştirdiler. Bu köprüler hızlıca nehirleri geçmek ve hendekleri aşmak için önemliler, ayrıca önceki tasarımlara göre kurulumları çok daha hızlı.
 
-Deprem ve tsunami gibi felaket durumlarında da, acil müdahale araçlarına geçit vermek için kullanılabilirler. Bu fotoğraf, Japonya’daki Hiroshima üniversitesinde tasarlanan bir prototipe ait: 
+Deprem ve tsunami gibi felaket durumlarında da, acil müdahale araçlarına geçit vermek için kullanılabilirler. Bu fotoğraf, Japonya’daki Hiroshima üniversitesinde tasarlanan bir prototipe ait:
 
 :::
 
@@ -781,7 +784,7 @@ Deprem ve tsunami gibi felaket durumlarında da, acil müdahale araçlarına ge�
 
 #### Denizler altında Origami
 
-Okyanusların derinlikleri, yeryüzünde en az keşfedilmiş bölgelerdendir. Oralarda yaşayan hayvanlar genellikle esnek ve narindirler, bu yüzden incelenmeleri epey zordur. 
+Okyanusların derinlikleri, yeryüzünde en az keşfedilmiş bölgelerdendir. Oralarda yaşayan hayvanlar genellikle esnek ve narindirler, bu yüzden incelenmeleri epey zordur.
 
 Bu resimde, deniz canlılarının etrafını sarabilen [düzgün onikiyüzlü](gloss:dodecahedron) şeklinde bir “tuzak” görüyorsunuz. Onun sayesinde bu canlıları çalışabiliriz. Uzaktan kontrol edilebiliyor ve beş kolunun karmaşık bir şekilde katlanması, sadece tek bir motor ile kontrol edilebiliyor.
 

@@ -4,6 +4,9 @@
 
 > id: intro-0
 > section: introduction
+> color: "#A7208A"
+> level: Intermediate
+> next: probability
 
 Her gün sayısız bağ ve ağ ile çevriliyizdir: araba ve tren yolları, telefon hatları, internet, elektrik devreleri ve hatta moleküler bağlar. Ayrıca arkadaşlar ve aileler arasındaki _sosyal ağlar_ da var.
 
@@ -209,13 +212,13 @@ Bu haritalar üzerinde çizerek böyle bir yol bulmaya çalışabilirsiniz:
 ---
 > id: bridges-1
 
-Köningsberg için böyle bir yol bulmak imkansız gibi görünüyor, ancak başka şehirler için mümkün olabilir. Euler çizgeler kuramını kullanarak herhangi bir şehir için çalışan basit bir kural bulmayı başardı, böylece bir sürü deneme yapmaya gerek kalmıyordu. 
+Köningsberg için böyle bir yol bulmak imkansız gibi görünüyor, ancak başka şehirler için mümkün olabilir. Euler çizgeler kuramını kullanarak herhangi bir şehir için çalışan basit bir kural bulmayı başardı, böylece bir sürü deneme yapmaya gerek kalmıyordu.
 
 ::: column.grow
 
 Öncelikle şehir haritalarını noktaları ve çizgileri olan çizgelere çevirmemiz gerek. Bu çizgede her ada ya da kara parçası bir [[nokta|çizgi|alan]] ile ve her köprü bir [[nokta|çizgi|sokak]] ile gösterilecek.
 
-{.reveal(when="blank-0 blank-1")} Şimdi “bütün köprülerden sadece bir kez geçerek şehri dolaşma” sorusu “bir çizgeyi aynı çizginin üzerinden iki kez geçmeden tek hamlede çizebilir miyiz” sorusuna dönüştü. 
+{.reveal(when="blank-0 blank-1")} Şimdi “bütün köprülerden sadece bir kez geçerek şehri dolaşma” sorusu “bir çizgeyi aynı çizginin üzerinden iki kez geçmeden tek hamlede çizebilir miyiz” sorusuna dönüştü.
 ::: column(width=200)
 
     include svg/konigsberg.svg
@@ -330,7 +333,7 @@ Hatta, her el sıkışmasını [[iki|bir|üç]] defa saydık, _{span.reveal(when
 ---
 > id: handshakes-3
 
-Bu el sıkışma çizgeleri özeller, çünkü her nokta diğer her noktaya bağlı. Bu özelliğe sahip çizgelere _tam çizge_ denir. 4 noktası olan tam çizgeyi `K_4` olarak, 5 noktası olanı `K_5` olarak gösteririz. 
+Bu el sıkışma çizgeleri özeller, çünkü her nokta diğer her noktaya bağlı. Bu özelliğe sahip çizgelere _tam çizge_ denir. 4 noktası olan tam çizgeyi `K_4` olarak, 5 noktası olanı `K_5` olarak gösteririz.
 
 Yukarıda ‘n’ noktası olan tam çizgenin, yani `K_n`’nin `(n × (n-1))/2` tane çizgisi olduğunu gösterdik.
 
@@ -449,27 +452,27 @@ Bütün çizgeler çizildikleri düzlemi bölgelere ayırırlar, bu bölgelere _
 
     include svg/euler-2.svg
 
-{.text-center} [[6]] Köşe  
-[[5]] Yüz  
-[[10]] Çizgi  
+{.text-center} [[6]] Köşe
+[[5]] Yüz
+[[10]] Çizgi
 _{span.euler-sum} 11 Nokta + Yüz_
 
 ::: column(width=200)
 
     include svg/euler-1.svg
 
-{.text-center} [[8]] Köşe  
-[[7]] Yüz  
-[[14]] Çizgi  
+{.text-center} [[8]] Köşe
+[[7]] Yüz
+[[14]] Çizgi
 _{span.euler-sum} 15 Nokta + Yüz_
 
 ::: column(width=200)
 
     include svg/euler-3.svg
 
-{.text-center} [[12]] Köşe  
-[[13]] Yüz  
-[[24]] Çizgi  
+{.text-center} [[12]] Köşe
+[[13]] Yüz
+[[24]] Çizgi
 _{span.euler-sum} 25 Nokta + Yüz_
 
 :::
@@ -559,27 +562,27 @@ __{.green}nokta__ sayısını sayarsak _{.b.blue}Y_ + _{.b.green}N_ = _{.b.red}�
 
     x-video(width=200 height=200 src="images/icosahedron.mp4" hover loop)
 
-{.caption} __Onikiyüzlü__  
-__{.blue}20__ Yüz  
-__{.green}12__ Nokta  
+{.caption} __Onikiyüzlü__
+__{.blue}20__ Yüz
+__{.green}12__ Nokta
 __{.red}30__ Çizgi
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/rhombi.mp4" hover loop)
 
-{.caption} __Rombikosidodecahedron__  
-__{.blue}62__ Yüz  
-__{.green}60__ Nokta  
+{.caption} __Rombikosidodecahedron__
+__{.blue}62__ Yüz
+__{.green}60__ Nokta
 __{.red}120__ Çizgi
 
 ::: column(width=200)
 
     x-video(width=200 height=200 src="images/football.mp4" hover loop)
 
-{.caption} __Kırpılmış Onikiyüzlü__  
-__{.blue}32__ Yüz (12 siyah, 20 beyaz)  
-__{.green}60__ Nokta  
+{.caption} __Kırpılmış Onikiyüzlü__
+__{.blue}32__ Yüz (12 siyah, 20 beyaz)
+__{.green}60__ Nokta
 __{.red}90__ Çizgi
 
 :::
@@ -741,7 +744,7 @@ Tam bir çizgede Halimton döngüleri için çok fazla seçenek vardır. Aslınd
 ---
 > id: salesman-2
 
-10 şehirli bir çizgede her Hamilton döngüsü ${tsn1} şehire uğramak zorunda. O halde 
+10 şehirli bir çizgede her Hamilton döngüsü ${tsn1} şehire uğramak zorunda. O halde
 
 * İlk şehir için 10 seçenek var.
 * Gidilecek ilk şehri seçtikten sonra geriye ikinci şehir için 9 seçenek kalıyor.

@@ -4,6 +4,9 @@
 
 > section: polygons
 > id: polygons
+> color: "#4757D3"
+> level: Intermediate
+> next: circles
 
 Ein [__Vieleck__](gloss:polygon) oder Polygon ist eine geschlossene,
 ebene Figur, die nur gerade Seiten hat. Vielecke können beliebig viele Seiten und Winkel haben, aber die Seiten dürfen nicht
@@ -122,7 +125,7 @@ Wir können ein Fünfeck in [[3]] Dreiecke aufteilen, so dass seine Innenwinkels
 Ein Vieleck mit ${x}{x|7|3,15,1} Seiten hat also eine Innenwinkelsumme von
 180° × ${x-2} = ${(x-2)*180}°. Generell kann ein Vieleck mit _n_ Seiten in [[n - 2|n - 1|n]] Dreiecke
 unterteilt werden. Daher ist die
- 
+
 {.text-center.reveal(when="blank-0")} Summe der Innenwinkel in einem _n_-eck
 `= (n - 2) × 180°`.
 
@@ -270,7 +273,7 @@ groß wie der [Innenwinkel](target:int-angle) des Vielecks:
 {.reveal(when="blank-3")} Um das Apothema zu finden, können wir die Definition der
 [[Tangens|Sinus|Kosinus]]funktion verwenden:
 
-{.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") = 
+{.text-center.reveal(when="blank-4")} `tan pill(α, "blue", "alpha") =
 pill("Gegenkathete", "yellow", "apothem") / pill("Ankathete", "green", "half-base") =
 blank("Apothema", "s", "s/2") / blank("s/2", "s", "Apothema")`
 
@@ -545,7 +548,7 @@ sie _immer_ wahr sind, müssen wir sie _beweisen_:
       path.fill.yellow.transparent(x="polygon(a,b,o?c:d)" target="triangles")
       path.fill.green.transparent(x="polygon(o?a:b,c,d)" target="triangles")
       path(x="polygon(a,b,c,d)")
-      
+
       path.green.transparent(x="segment(a,b)" target="sides")
       path.green.transparent(x="segment(c,d)" target="sides")
       path.yellow.transparent(x="segment(b,c)" target="sides")
@@ -601,13 +604,13 @@ Viereck ein Parallelogramm sein.
       path.fill.red(x="angle(b1,c1,a1).sup" target="anglesR")
       path.fill.blue(x="angle(a1,d1,b1).sup" target="anglesB")
       path.fill.blue(x="angle(d1,b1,c1).sup" target="anglesB")
-      
+
       path(x="polygon(a1,b1,c1,d1)")
       path(x="segment(a1,c1)")
       path(x="segment(b1,d1)")
       path.green(x="segment(a1,d1)" target="side1")
       path.green(x="segment(b1,c1)" target="side1")
-      
+
       path.yellow.tick.transparent(x="segment(a1,m1)" target="AM")
       path.yellow.tick.transparent(x="segment(b1,m1)" target="BM")
       path.yellow.tick.transparent(x="segment(c1,m1)" target="CM")
@@ -856,18 +859,18 @@ und der Höhe [_h_](target:t-height):
       circle.transparent(name="b3" x="point(5,1)")
       circle.transparent(name="c3" x="point(13,5)")
       circle.transparent(name="d3" x="point(5,9)")
-      
+
       path.fill.blue.light(x="polygon(a3,b3,c3,d3)")
       path.green(x="segment(a3,c3)" label="d1" target="diag3 d31")
       path.yellow(x="segment(b3,d3)" label="d2" target="diag3 d32")
       path(x="polygon(point(1,1),point(13,1),point(13,9),point(1,9))" target="rect4")
       path.blue(x="polygon(a3,b3,c3,d3)")
-      
+
       path.fill.red.transparent(x="polygon(a3,b3,point(5,5))" target="inside")
       path.fill.blue.transparent(x="polygon(b3,c3,point(5,5))" target="inside")
       path.fill.green.transparent(x="polygon(c3,d3,point(5,5))" target="inside")
       path.fill.yellow.transparent(x="polygon(d3,a3,point(5,5))" target="inside")
-      
+
       path.fill.red.transparent(x="polygon(a3,b3,point(1,1))" target="outside")
       path.fill.blue.transparent(x="polygon(b3,c3,point(13,1))" target="outside")
       path.fill.green.transparent(x="polygon(c3,d3,point(13,9))" target="outside")
@@ -901,14 +904,14 @@ Dreiecke](target:inside), aus denen das Deltoid besteht, mit den
       circle.move(name="b4" cx=150 cy=50)
       circle.move(name="d4" cx=150 cy=190 project="circle(a4,distance(a4,b4))")
       circle(name="c4" x="d4.add(b4).subtract(a4)")
-      
+
       path.fill.blue.light(x="polygon(a4,b4,c4,d4)")
 
       path.thin(x="line(c4,d4)")
       circle(name="q4" x="line(c4,d4).project(a4)")
       path.thin(x="angle(a4,q4,d4).sup" size=15)
       path.red(x="segment(q4,a4)" label="height" target="height")
-      
+
       path.green(x="segment(a4,c4)" label="d1" target="d41")
       path.yellow(x="segment(b4,d4)" label="d2" target="d42")
       path.blue(x="polygon(a4,b4,c4,d4)")
@@ -1151,7 +1154,7 @@ herzustellen - vorausgesetzt, wir passen beim Drehen und Anordnen gut auf.
 ::: column.grow
 Es stellt sich heraus, dass man nicht nur gleichseitige Dreiecke, sondern _jedes
 beliebige Dreieck_ für eine Parkettierung verwenden kann! Versuche, die [Eckpunkte](target:vertex) in diesem Diagramm zu verschieben.
- 
+
 Die Summe der Innenwinkel in einem Dreieck beträgt [[180]]°. Wenn wir jeden Winkel
 [[zweimal|einmal|dreimal]] an jedem Eckpunkt der Parkettierung verwenden, erhalten wir 360°:
 
@@ -1214,7 +1217,7 @@ Die Summe der Innenwinkel in einem Dreieck beträgt [[180]]°. Wenn wir jeden Wi
             path.green.fill(x=`y.translate(c.subtract(a).scale(${x}).add(d.subtract(b).scale(${y})))`)
 
 
-::: column.grow    
+::: column.grow
 Noch überraschender ist, dass auch _alle Vierecke_ zu Parkettierungen zusammengefügt werden können! Ihre innere
 Winkelsumme beträgt [[360]]°, wenn wir also jeden Winkel [[einmal|zweimal|dreimal]] an jedem
 Eckpunkt der Parkettierung verwenden, erhalten wir 360°.
@@ -1284,7 +1287,7 @@ weiß, ob es noch andere gibt, oder ob diese 15 die einzigen sind…
 
 ### Parkettierungen in der Kunst
 
-Parkettierungen sind für viele Künstler, Architekten und 
+Parkettierungen sind für viele Künstler, Architekten und
 Designer ein Werkzeug und eine Inspiration - allen voran der niederländische Künstler [M. C. Escher](bio:escher). Eschers
 Werk enthält seltsame, mutierende Kreaturen, Muster und Landschaften:
 
@@ -1379,7 +1382,7 @@ hat. Es stellt sich jedoch heraus, dass _alle_ Polyeder eine
 wichtige Eigenschaft gemeinsam haben:
 
 ::: .theorem
-__Eulerscher Polyedersatz__  
+__Eulerscher Polyedersatz__
 In jedem Polyeder ist die Anzahl der Flächen ("_F_") plus die Anzahl der Ecken ("_E_")
 um zwei größer als die Anzahl der Kanten ("_K_"). Anders ausgedrückt,
 
@@ -1432,7 +1435,7 @@ Zu Beginn dieses Kurses haben wir [regelmäßige Vielecke](gloss:regular-polygon
  als besonders "symmetrische" Vielecke definiert, bei denen alle Seiten und Winkel gleich sind.
 Wir können etwas Ähnliches für Polyeder tun.
 
-In einem _regelmäßigen Polyeder_ sind alle [Flächen](gloss:polyhedron-face) 
+In einem _regelmäßigen Polyeder_ sind alle [Flächen](gloss:polyhedron-face)
 regelmäßige Vielecke von derselben Art und an jeder
 [Ecke](gloss:polyhedron-vertex) trifft die gleiche Anzahl von Flächen aufeinander. Polyeder mit diesen beiden Eigenschaften werden als [__platonische Körper__](gloss:platonic-solid)
  bezeichnet, benannt nach dem griechischen
@@ -1620,8 +1623,8 @@ __Tetraeder__
 
     x-polyhedron.dual(size=120 shape="Tetrahedron")
 
-_{span.dual}[[4]] Flächen_  
-_{span.dual}[[4]] Ecken_  
+_{span.dual}[[4]] Flächen_
+_{span.dual}[[4]] Ecken_
 _{span.dual}[[6]] Kanten_
 
 ::: column.grow.text-center(width=120)
@@ -1629,8 +1632,8 @@ __Würfel__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Cube")
 
-_{span.dual(target="dual1")}[[6]] Flächen_  
-_{span.dual(target="dual1")}[[8]] Ecken_  
+_{span.dual(target="dual1")}[[6]] Flächen_
+_{span.dual(target="dual1")}[[8]] Ecken_
 _{span.dual}[[12]] Kanten_
 
 ::: column.grow.text-center(width=120)
@@ -1638,8 +1641,8 @@ __Oktaeder__
 
     x-polyhedron.dual(target="dual1" size=120 shape="Octahedron")
 
-_{span.dual(target="dual1")}[[8]] Flächen_  
-_{span.dual(target="dual1")}[[6]] Ecken_  
+_{span.dual(target="dual1")}[[8]] Flächen_
+_{span.dual(target="dual1")}[[6]] Ecken_
 _{span.dual}[[12]] Kanten_
 
 ::: column.grow.text-center(width=120)
@@ -1647,8 +1650,8 @@ __Dodekaeder__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Dodecahedron")
 
-_{span.dual(target="dual2")}[[12]] Flächen_  
-_{span.dual(target="dual2")}20 Ecken_  
+_{span.dual(target="dual2")}[[12]] Flächen_
+_{span.dual(target="dual2")}20 Ecken_
 _{span.dual}30 Kanten_
 
 ::: column.grow.text-center(width=120)
@@ -1656,8 +1659,8 @@ __Ikosaeder__
 
     x-polyhedron.dual(target="dual2" size=120 shape="Icosahedron")
 
-_{span.dual(target="dual2")}[[20]] Flächen_  
-_{span.dual(target="dual2")}12 Ecken_  
+_{span.dual(target="dual2")}[[20]] Flächen_
+_{span.dual(target="dual2")}12 Ecken_
 _{span.dual}30 Kanten_
 :::
 
@@ -1717,68 +1720,68 @@ von Syrakus](bio:archimedes), benannt, und es gibt 13 von ihnen:
 
 ::: column(width=170 parent="padded-thin")
     x-polyhedron(size=170 shape="TruncatedTetrahedron")
-    
-{.caption} __Tetraederstumpf__  
+
+{.caption} __Tetraederstumpf__
 8 Flächen, 12 Ecken,  18 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Cuboctahedron")
 
-{.caption} __Kuboktaeder__  
+{.caption} __Kuboktaeder__
 14 Flächen, 12 Ecken, 24 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCube")
 
-{.caption} __Hexaederstumpf__  
+{.caption} __Hexaederstumpf__
 14 Flächen, 24 Ecken, 36 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedOctahedron")
 
-{.caption} __Oktaederstumpf__  
+{.caption} __Oktaederstumpf__
 14 Flächen, 24 Ecken, 36 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicuboctahedron")
 
-{.caption} __Rhombenkuboktaeder__  
+{.caption} __Rhombenkuboktaeder__
 26 Flächen, 24 Ecken, 48 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __Kuboktaederstumpf__  
+{.caption} __Kuboktaederstumpf__
 26 Flächen, 48 Ecken, 72 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubCube")
 
-{.caption} __Abgeschrägtes Hexaeder__  
+{.caption} __Abgeschrägtes Hexaeder__
 38 Flächen, 24 Ecken, 60 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Icosidodecahedron")
 
-{.caption} __Ikosidodekaeder__  
+{.caption} __Ikosidodekaeder__
 32 Flächen, 30 Ecken, 60 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedCuboctahedron")
 
-{.caption} __Dodekaederstumpf__  
+{.caption} __Dodekaederstumpf__
 32 Flächen, 60 Ecken, 90 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosahedron")
 
-{.caption} __Ikosaederstumpf__  
+{.caption} __Ikosaederstumpf__
 32 Flächen, 60 Ecken, 90 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="Rhombicosidodecahedron")
 
-{.caption} __Rhombenikosidodekaeder__  
+{.caption} __Rhombenikosidodekaeder__
 62 Flächen, 60 Ecken, 120 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="TruncatedIcosidodecahedron")
 
-{.caption} __Ikosidodekaederstumpf__  
+{.caption} __Ikosidodekaederstumpf__
 62 Flächen, 120 Ecken, 180 Kanten
 ::: column(width=170)
     x-polyhedron(size=170 shape="SnubDodecahedron")
 
-{.caption} __abgeschrägtes Dodekaeder__  
+{.caption} __abgeschrägtes Dodekaeder__
 92 Flächen, 60 Eckpunkte, 150 Kanten
 :::
 
@@ -1796,7 +1799,7 @@ Stelle in der Natur zum Vorschein kommen - und wir können diese Eigenschaften i
 
     x-img(lightbox width=180 height=180 src="images/radiolaria.jpg")
     p.caption Skelett eines Strahlentierchens
-    
+
 ::: column(width=180)
 
     x-img(lightbox width=180 height=180 src="images/virus.jpg")
@@ -1814,12 +1817,12 @@ Elementen besteht, aber fast wie eine Kugel geformt ist.
 
     x-img(lightbox, credit="NASA/JPL", width=180, height=180, src="images/buckyball.jpg")
     p.caption Fulleren-Moleküle
-      
+
 ::: column(width=180)
 
     x-img(lightbox, credit="Philipp Hienstorfer, via Wikipedia", width=180, height=180, src="images/biosphere.jpg")
     p.caption Biosphère Montreal
-      
+
 ::: column.grow
 Viele __Moleküle__ sind wie regelmäßige Polyeder geformt. Das bekannteste Beispiel ist
 `C_60`, das aus 60 Kohlenstoffatomen besteht, die in Form eines
@@ -1834,12 +1837,12 @@ Fuller](bio:fuller), der für den Bau ähnlich aussehender Gebäude bekannt ist.
 
     x-img(lightbox credit="Chris Gladis via Wikipedia" width=180 height=180 src="images/crystal.jpg")
     p.caption Fluorit-Oktaeder
-      
+
 ::: column(width=180)
 
     x-img(lightbox credit="Archaeodontosaurus, via Wikipedia" width=180 height=180 src="images/rock.jpg")
     p.caption Pyritwürfel
-      
+
 ::: column.grow
 Die meisten __Kristalle__ haben ihre Atome in einem regelmäßigen Gitter angeordnet, das aus
 [Tetraedern](gloss:tetrahedron), [Würfeln](gloss:cube) oder [Oktaedern](gloss:octahedron) besteht.
@@ -1866,7 +1869,7 @@ tragen können.
 
     x-img(lightbox width="180", height="180", src="images/football.jpg")
     p.caption Fußball
-    
+
 ::: column(width=180)
 
     x-img(lightbox width="180", height="180", src="images/dice.jpg")

@@ -1,24 +1,14 @@
 # Statistics and Data
 
-    mixin barchart(data)
-      - var max = 100/Math.max.apply(none, data.map(function(d) { return d[1] }))
-      .barchart(style="width: " + data.length*50 + "px")
-        for d in data
-          .bar-wrap
-            div(class="bar "+d[2], style="height: " + d[1]*max + "%")
-        .axis
-        for d in data
-          .label= d[0]
-
-    - var reds = [32, 19, 21, 25, 34, 27, 36, 30, 23, 5, 16, 1, 14, 9, 18, 7, 12, 3]
-    - var colour = function(x) { return reds.indexOf(x) >= 0 ? 'r' : 'b'; }
-
 ## Casino Mathematics
 
 > id: roulette
 > sectionBackground: dark casino
 > goals: rotate
 > section: casino
+> color: "#BA1778"
+> level: Intermediate
+> next: graph-theory
 
     .roulette-wheel
       .layer-2.wheel
@@ -47,6 +37,7 @@ winning depends on the likelihood of each of these outcomes.
 Here is one of the many hundreds of newspaper extracts which Pearson collected
 and analysed. At first sight, it looks pretty random:
 
+    include mixins
     .newspaper
       p Roulette results on 19 August 1823, Table 5:
       div
@@ -58,6 +49,7 @@ green 0 (which means the casino wins) we would expect the number of red and
 black numbers to be [[approximately the same|exactly equal]]. Let’s check that
 this is indeed the case for the set of results above.
 
+    include mixins
     +barchart([['Red', 37, 'r'], ['Black', 35, 'b']])
 
 ---
@@ -72,6 +64,7 @@ completely random, then each of the four possible pairs of two consecutive
 colours should also be equally likely. Again we can count the number of
 occurrences in our example:
 
+    include mixins
     +barchart([['RR', 14, 'r'], ['RB', 24, 'rb'], ['BR', 24, 'rb'], ['BB', 9, 'b']])
 
 ---
@@ -90,6 +83,7 @@ It gets even worse if we look at triples of results. Each of the 8 possible
 triples of colours should be equally likely, but that is clearly not the case
 here:
 
+    include mixins
     +barchart([['RRR', 3, 'r'], ['RRB', 10, 'rrb'], ['BRR', 10, 'rrb'], ['RBR', 15, 'rrb'], ['BRB', 14, 'bbr'], ['RBB', 8, 'bbr'], ['BBR', 8, 'bbr'], ['BBB', 2, 'b']])
 
 It seems that in this particular casino, the colours alternate much more often
@@ -240,15 +234,15 @@ submit an answer. Do not try to calculate the answer – just guess using your g
 ::: box
 ::: column.grow
 
-__Question 1__  
-How many jelly beans are in this jar? 
+__Question 1__
+How many jelly beans are in this jar?
 
     input.form-field()
     button.btn Start…
     .timer bar
 
 ::: column(width=280)
-    
+
     x-img(src="" width=280 height=320)
 
 :::
@@ -267,14 +261,14 @@ by the approximate [[number of layers|height of the jar|diameter of the jat]]:
 ::: box
 ::: column.grow
 
-How many M&Ms are in this jar? 
+How many M&Ms are in this jar?
 
     input.form-field()
     button.btn Start…
     .timer bar
 
 ::: column(width=280)
-    
+
     x-img(src="" width=280 height=320)
 
 :::
@@ -298,7 +292,7 @@ other users.
 
 ---
 
-Now 
+Now
 
 The answer might surprise you.
 
@@ -307,7 +301,7 @@ YOUR INITIAL GUESS: XXX
 A: AVERAGE OF ALL USER INITIAL GUESSES: XXX
 B: YOUR ROUGH CALCULATION: XXX
 
-Turns out the average (mean) of all user guesses is pretty accurate! 
+Turns out the average (mean) of all user guesses is pretty accurate!
 
 Even though an individual guess might be way off, when we take many guesses from many different people and average them together we get a REALLY GOOD guess.
 
@@ -353,7 +347,7 @@ Marietta: -3%
 Rockwell: -5%
 Thiokol: -12%
 
-Which company do you think created the part which caused the accident? XXX 
+Which company do you think created the part which caused the accident? XXX
 
 It turns out the market was right to guess Thiokol. Weeks later it was confirmed that the component made by Thiokol was the cause. They manufactured a rubber seal which froze on take off causing it to fail. Here is a short clip of physicist Richard Feynman who identified the problem long after the market predicted it.
 

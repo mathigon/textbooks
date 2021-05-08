@@ -4,6 +4,9 @@
 
 > id: intro
 > section: introduction
+> color: "#F6700F"
+> level: Intermediate
+> next: graph-theory
 
     img.text-wrap(src="images/skater-1.jpg" style="shape-outside: url(images/skater-1-mask.png)" width=300 height=393)
 
@@ -21,7 +24,7 @@ Diğer bir değişle, _n_  kaykay üretmenin __maliyet__i
 > id: demand
 
 Yeni kaykayı bekleyen birçok insan var; ama eğer fiyatı çok yüksek olursa, o zaman daha az sayıda insan alır. Bu durumu, kaykayın fiyatını _x_-ekseninde ve kaykayı belirtilen fiyata göre almak isteyen insan sayısını (__talep__) da _y_-ekseninde gösterdiğimiz bir grafikle anlatabiliriz.
- 
+
 Aşağıdaki grafiklerin hangisi fiyat ve talep arasındaki ilişkiyi en iyi şekilde gösterir?
 
     x-picker.wrap
@@ -30,7 +33,7 @@ Aşağıdaki grafiklerin hangisi fiyat ve talep arasındaki ilişkiyi en iyi şe
       .item(style="width: 220px")
         x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="fiyat,talep" crosshairs="no" labels="no" fn="8 - 0.6x")
       .item(data-error="wrong-chart-2" style="width: 220px")
-        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="fiyat,talep" crosshairs="no" labels="no" fn="2.5 * sqrt(x)") 
+        x-coordinate-system(width=220 height=180 x-axis="0,10,2" y-axis="0,10,2" axis-names="fiyat,talep" crosshairs="no" labels="no" fn="2.5 * sqrt(x)")
 
 ---
 > id: demand-1
@@ -47,7 +50,7 @@ Mesela, eğer bir kaykayın fiyatı 80$ olursa, talep de [[1600]] tane olacaktı
     //- img.text-wrap.s-hide(src="images/skater-3.jpg" style="shape-outside: url(images/skater-3-mask.png)" width=280 height=480)
 
 Şirketimizin  __ciro__su toplamda elde edilen geliri ifade eder. Ciroyu, sattığımız kaykay sayısı (_talep_) ile bir kaykayın fiyatını çarptığımızda elde ederiz:
- 
+
 {.text-center} [ciro](pill:green) = [talep](pill:teal) × [fiyat](pill:purple)
 
 Fakat bizim asıl ilgilendiğimiz şey __kâr__; kaykayları satarak elde ettiğimiz toplam gelirden maliyeti çıkardığımızda kalan miktar. Sadece kaykayın [fiyat](pill:purple)ını kullanarak
@@ -109,7 +112,7 @@ En fazla kârı, kaykayları yaklaşık olarak
     figure: x-img(src="images/skater-2.jpg" alt="Skateboarder" width=400 height=352)
 
 Gerçek hayatta şirketlerin kârları için belli bir denklem bulmaları oldukça zordur. Ayrıca, böyle bir denklem bulmak, bu örnekten çok daha karmaşık olabilir.
- 
+
 Yine de ikinci dereceden denklemler, doğanın her yerinde, mühendislik ve iktisadın her alanında karşımıza çıkar. Bu derste ikinci dereceden denklemleri çözmek ve ikinci dereceden fonksiyonların grafiklerini anlamak için farklı yöntemler öğreneceksiniz.
 
 

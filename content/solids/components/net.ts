@@ -4,11 +4,10 @@
 // =============================================================================
 
 
-/// <reference types="THREE"/>
 import {register} from '@mathigon/boost';
 import {Angle, ORIGIN, Point, Polygon, Rectangle} from '@mathigon/euclid';
 import {round} from '@mathigon/fermat';
-import {Solid} from '../../shared/components/solid';
+import {Solid} from '../../shared/components/webgl/solid';
 
 export type Hinge = [number, number, number];
 
@@ -75,7 +74,7 @@ export class Net extends Solid {
     const skinIndices: number[] = [];
     const skinWeights: number[] = [];
 
-    const position = geometry.attributes.position as THREE.BufferAttribute;
+    const position = (geometry.attributes as any).position as THREE.BufferAttribute;
     const vertex = new THREE.Vector3();
     for (let i = 0; i < position.count; i++) {
       vertex.fromBufferAttribute(position, i);

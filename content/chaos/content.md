@@ -5,6 +5,8 @@
 > section: introduction
 > id: pendulum
 > goals: play
+> color: "#009EA6"
+> level: Advanced
 
 At the beginning of the 18th century, physicists like [Isaac Newton](bio:newton)
 thought that the universe was a giant clockwork machine. If you had precise
@@ -59,7 +61,7 @@ pendulum to the first one – this is called a __double pendulum__.
 Once again, watch its motion, and try to predict what it will do next. You can
 even close your eyes for a few seconds … was your prediction correct?
 
-{.reveal(when="play1")} The double pendulum still follows Newton’s deterministic 
+{.reveal(when="play1")} The double pendulum still follows Newton’s deterministic
 laws of gravity, but the motion seems to [[be completely irregular|behave as if
 there were no gravity|always repeat itself]].
 
@@ -156,7 +158,7 @@ This is why weather prediction only works for a few days into the future. After
 that, slightly inaccurate weather data can lead to completely different
 forecasts.
 
-::: 
+:::
 
 ---
 > id: butterfly-2
@@ -271,7 +273,7 @@ numbers__, or to securely encrypt images.
 :::
 
 ---
-> id: applications-1 
+> id: applications-1
 
 Chaotic behaviour has also been found in electronic circuits, evolutionary
 biology as well as dripping water taps, and scientists around the world are
@@ -342,7 +344,7 @@ even in movies:
 
     x-video(src="https://static.mathigon.org/videos/jurassic-park.mp4" poster="images/jurassic-park.jpg" width=480 height=270 audio controls)
 
-{.caption} Extract from the movie _Jurassic Park_ (© Universal Pictures, 1993) 
+{.caption} Extract from the movie _Jurassic Park_ (© Universal Pictures, 1993)
 
 :::
 
@@ -432,7 +434,7 @@ Poincare etc.
         path.thin(x="segment(b, b.translate(vb))" arrows="end")
         path.thin(x="segment(c, c.translate(vc))" arrows="end")
       x-play-toggle
-      x-icon-btn.restore(icon="restart")
+      button.icon-btn.restore: x-icon(name="restart")
 
 {.fixme} There are two chaotic systems which affect us greatly. The first is the weather. Although weather equations are pretty well understood and are solved by computers every day, it is impossible to take into account all the factors influencing the weather (remember the butterfly). No set of data is perfect, nor are computers perfect at solving the equations. The effects of these small
  errors build up remarkably quickly. After about ten days it is essentially impossible to forecast weather with any degree of accuracy.

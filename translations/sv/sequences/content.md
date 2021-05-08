@@ -4,6 +4,10 @@
 
 > section: introduction
 > id: intro
+> trailer: u2vwpDVj5rU
+> color: "#F97E08"
+> level: Intermediate
+> next: fractals
 
 Många yrken som använder matematik är intresserade av en specifik aspekt - _hitta mönster_, samt att kunna förutsäga framtiden. Här är några exempel:
 
@@ -717,14 +721,14 @@ Tyvärr är den rekursiva formeln inte så bra om vi vill hitta det 100: e eller
 
 {.todo} COMING SOON: Animerat bevis för triangelnummerformeln
 
-    
+
       g
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
 
 ---
 > id: triangle-sums
@@ -934,24 +938,24 @@ Föreställ dig att du har fått ett par babykaniner, en hane och en kvinna. De 
             polygon(points="129 386 121 366 129 371 137 366 129 386")
             polygon(points="399 386 391 366 399 371 407 366 399 386")
             polygon(points="579 386 571 366 579 371 587 366 579 386")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="left: 2%; top: 0%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 13%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 30%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 61%; top: 34%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 47%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 37%; top: 51%; width: 7%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 47%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 64%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 25%; top: 68%; width: 7%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 35%; top: 64%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 64%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 85%; top: 68%; width: 7%")
-    
+
           img.rabbit(src="images/rabbits-1.svg" width=85 height=75 style="top: 81%")
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 13%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-4.svg" width=85 height=75 style="left: 23%; top: 81%")
@@ -960,14 +964,14 @@ Föreställ dig att du har fått ett par babykaniner, en hane och en kvinna. De 
           img.rabbit(src="images/rabbits-2.svg" width=85 height=75 style="left: 59%; top: 81%")
           img.rabbit(src="images/rabbits-3.svg" width=85 height=75 style="left: 73%; top: 85%; width: 7%")
           img.rabbit(src="images/rabbits-5.svg" width=85 height=75 style="left: 83%; top: 81%")
-    
+
           .n(style="top: 0%") 1
           .n(style="top: 15%") 1
           .n(style="top: 32%") 2
           .n(style="top: 49%") 3
           .n(style="top: 66%") 5
           .n(style="top: 84%") 8
-    
+
       .legend(slot="legend") In the first month, the rabbits are very small and can’t do much – but they grow very quickly.
       .legend(slot="legend") After one month, the rabbits are grown up and can start mating…
       .legend(slot="legend") … and after another month, they will give birth to their first pair of kids. You now have two pairs of rabbits.
@@ -1071,7 +1075,7 @@ Naturligtvis är detta inte bara en slump. Det finns ett viktigt skäl till att 
 
 ::: column(width=320)
 
-    x-select.segmented   
+    x-select.segmented
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1208,7 +1212,7 @@ Flytta reglaget till höger för att visualisera hur en växt växer. Lägg mär
       while i < 40
         path(d="M166,158A20,20,0,0,1,150,150a20,20,0,0,1,32,0A20,20,0,0,1,166,158Z")
         - i += 1
-    
+
     x-slider(steps=39 speed=0.5)
 
 :::
@@ -1368,7 +1372,7 @@ Primtal har inte heller en enkel geometrisk representation som [triangel](gloss:
 
 Du kan lära dig mer om dessa och andra egenskaper hos primtal i vår kurs om [Delbarhet och primes](/course/divisibility/primes). De är några av de viktigaste och mest mystiska begreppen i matematik!
 
-    figure: img(src="images/primes.svg" width=480 height=156) 
+    figure: img(src="images/primes.svg" width=480 height=156)
 
 ---
 > id: perfect
@@ -1380,7 +1384,7 @@ För att avgöra om ett tal är [prim](gloss:prime) måste vi hitta alla dess [f
     - list = function(n) { return Array.apply(null, {length: n}).map((x,i) => i+1); }
     - factors = function(n) { return list(n-1).filter(i => !(n % i)); }
     - total = function(a) { return a.reduce((a, c) => a + c, 0); }
-    
+
     table.grid.perfect-table
       tr
         td: strong Number
@@ -1598,7 +1602,7 @@ Nedan kan du se en talpyramid som skapas med ett enkelt mönster: den börjar me
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid(style="width: 560px")
       - var i = 0;
       while i < 13
@@ -1655,7 +1659,7 @@ I de föregående avsnitten såg du otaliga olika matematiska sekvenser. Det vis
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return fact(a) / fact(b) / fact(a - b); };
-    
+
     .overflow-wrap: .pascal-grid.sums(style="width: 760px")
       - var i = 0;
       while i < 17
@@ -1743,7 +1747,7 @@ Vissa mönster i Pascal triangel är inte lika lätt att upptäcka. I diagrammet
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid#pascal-select(style="width: 340px")
       - var i = 0;
       while i < 8
@@ -1765,7 +1769,7 @@ Att färga varje cell manuellt tar lång tid, men här kan du se vad som händer
 
     - var fact = function(x) { return !x ? 1 : (x * fact(x-1)); };
     - var bin = function(a, b) { return Math.round(fact(a) / fact(b) / fact(a - b)); };
-    
+
     .overflow-wrap: .pascal-grid.small(style="width: 760px")
       - var i = 0;
       while i < 25

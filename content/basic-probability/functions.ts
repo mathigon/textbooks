@@ -5,10 +5,11 @@
 
 
 import {wait} from '@mathigon/core';
-import {CoordinateSystem, Step} from '../shared/types';
+import {Step} from '@mathigon/studio';
+import {CoordinateSystem} from '../shared/types';
 import {CoinFlip} from './components/coin';
 
-import '../shared/components/buckets';
+import '../shared/components/buckets/buckets';
 import './components/coin';
 
 

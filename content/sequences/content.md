@@ -4,9 +4,14 @@
 
 > section: introduction
 > id: intro
+> description: Learn about some of the most fascinating patterns in mathematics, from triangle numbers to the Fibonacci sequence and Pascal’s triangle.
+> trailer: u2vwpDVj5rU
+> color: "#F97E08"
+> level: Intermediate
+> next: fractals
 
 Many professions that use mathematics are interested in one specific aspect – _finding patterns_,
-and being able to predict the future. Here are two examples: 
+and being able to predict the future. Here are two examples:
 
 ::: column(width=160 parent="padded-thin")
 
@@ -45,31 +50,31 @@ sequence are called [__terms__](gloss:sequence-term).
 Here are a few examples of sequences. Can you find their patterns and calculate
 the next two terms?
 
-{.text-center.s-orange.with-arrows.no-voice} _{.n}3_, _{.n}6*{span.arrow}+3*_,
-_{.n}9*{span.arrow(hidden)}+3*_, _{.n}12*{span.arrow(hidden)}+3*_,
-_{.n}15*{span.arrow(hidden)}+3*_, _{.n}[[18]]*{span.arrow(hidden)}+3*_
-_{.n}[[21]]*{span.arrow(hidden)}+3*_, …
+{.text-center.s-orange.with-arrows.no-voice} _{.n}3_, _{.n}6 *{span.arrow}+3*_,
+_{.n}9 *{span.arrow(hidden)}+3*_, _{.n}12 *{span.arrow(hidden)}+3*_,
+_{.n}15 *{span.arrow(hidden)}+3*_, _{.n}[[18]] *{span.arrow(hidden)}+3*_
+_{.n}[[21]] *{span.arrow(hidden)}+3*_, …
 _{span.pattern.reveal(when="blank-0 blank-1")}Pattern: “Add 3 to the previous
 number to get the next one.”_
 
-{.text-center.s-teal.with-arrows.no-voice} _{.n}4_, _{.n}10*{span.arrow(hidden)}+6*_,
-_{.n}16*{span.arrow(hidden)}+6*_, _{.n}22*{span.arrow(hidden)}+6*_,
-_{.n}28*{span.arrow(hidden)}+6*_, _{.n}[[34]]*{span.arrow(hidden)}+6*_,
-_{.n}[[40]]*{span.arrow(hidden)}+6*_, …
+{.text-center.s-teal.with-arrows.no-voice} _{.n}4_, _{.n}10 *{span.arrow(hidden)}+6*_,
+_{.n}16 *{span.arrow(hidden)}+6*_, _{.n}22 *{span.arrow(hidden)}+6*_,
+_{.n}28 *{span.arrow(hidden)}+6*_, _{.n}[[34]] *{span.arrow(hidden)}+6*_,
+_{.n}[[40]] *{span.arrow(hidden)}+6*_, …
 _{span.pattern.reveal(when="blank-2 blank-3")} Pattern: “Add 6 to the previous
 number to get the next one.”_
 
-{.text-center.s-purple.with-arrows.no-voice} _{.n}3_, _{.n}4*{span.arrow(hidden)}+1*_,
-_{.n}7*{span.arrow(hidden)}+3*_, _{.n}8*{span.arrow(hidden)}+1*_,
-_{.n}11*{span.arrow(hidden)}+3*_, _{.n}[[12]]*{span.arrow(hidden)}+1*_,
-_{.n}[[15]]*{span.arrow(hidden)}+3*_, …
+{.text-center.s-purple.with-arrows.no-voice} _{.n}3_, _{.n}4 *{span.arrow(hidden)}+1*_,
+_{.n}7 *{span.arrow(hidden)}+3*_, _{.n}8 *{span.arrow(hidden)}+1*_,
+_{.n}11 *{span.arrow(hidden)}+3*_, _{.n}[[12]] *{span.arrow(hidden)}+1*_,
+_{.n}[[15]] *{span.arrow(hidden)}+3*_, …
 _{span.pattern.reveal(when="blank-4 blank-5")} Pattern: “Alternatingly add 1 and
 add 3 to the previous number, to get the next one.”_
 
-{.text-center.s-lime.with-arrows.no-voice} _{.n}1_, _{.n}2*{span.arrow(hidden)}×2*_,
-_{.n}4*{span.arrow(hidden)}×2*_, _{.n}8*{span.arrow(hidden)}×2*_,
-_{.n}16*{span.arrow(hidden)}×2*_, _{.n}[[32]]*{span.arrow(hidden)}×2*_,
-_{.n}[[64]]*{span.arrow(hidden)}×2*_, …
+{.text-center.s-lime.with-arrows.no-voice} _{.n}1_, _{.n}2 *{span.arrow(hidden)}×2*_,
+_{.n}4 *{span.arrow(hidden)}×2*_, _{.n}8 *{span.arrow(hidden)}×2*_,
+_{.n}16 *{span.arrow(hidden)}×2*_, _{.n}[[32]] *{span.arrow(hidden)}×2*_,
+_{.n}[[64]] *{span.arrow(hidden)}×2*_, …
 _{span.pattern.reveal(when="blank-6 blank-7")} Pattern: “Multiply the previous
 number by 2, to get the next one.”_
 
@@ -138,11 +143,11 @@ that consists of geometric shapes – triangles of increasing size:
 At every step, we’re adding one more row to the previous triangle. The length of
 these new rows also increases by one every time. Can you see the pattern?
 
-{.text-center.s-orange.with-arrows.no-voice} _{.n}1_, _{.n}3*{span.arrow}+2*_,
-_{.n}6*{span.arrow}+3*_, _{.n}10*{span.arrow}+4*_,
-_{.n}15*{span.arrow}+5*_, _{.n}21*{span.arrow}+6*_
-_{.n}[[28]]*{span.arrow.reveal(when="blank-0")}+7*_,
-_{.n}[[36]]*{span.arrow.reveal(when="blank-1")}+8*_, …
+{.text-center.s-orange.with-arrows.no-voice} _{.n}1_, _{.n}3 *{span.arrow}+2*_,
+_{.n}6 *{span.arrow}+3*_, _{.n}10 *{span.arrow}+4*_,
+_{.n}15 *{span.arrow}+5*_, _{.n}21 *{span.arrow}+6*_
+_{.n}[[28]] *{span.arrow.reveal(when="blank-0")}+7*_,
+_{.n}[[36]] *{span.arrow.reveal(when="blank-1")}+8*_, …
 
 ---
 > id: recursive
@@ -329,9 +334,9 @@ Earth approximately every 76 years. He also predicted when the comet would be
 visible next:
 
 {.text-center.s-orange.s-large.with-arrows.no-voice} _{span.n}1530_,
-_{span.n}1606*{span.arrow}+76*_, _{.n}1682*{span.arrow}+76*_,
-_{.n}1758*{span.arrow}+76*_, _{.n}[[1834]]*{span.arrow}+76*_,
-_{.n}[[1910]]*{span.arrow}+76*_, _{.n}[[1986]]*{span.arrow}+76*_, …
+_{span.n}1606 *{span.arrow}+76*_, _{.n}1682 *{span.arrow}+76*_,
+_{.n}1758 *{span.arrow}+76*_, _{.n}[[1834]] *{span.arrow}+76*_,
+_{.n}[[1910]] *{span.arrow}+76*_, _{.n}[[1986]] *{span.arrow}+76*_, …
 
 ---
 > id: halley-2
@@ -370,12 +375,12 @@ In other words, the maximum height of every bounce is 80% of the previous one.
 This allowed them to predict the height of every following bounce:
 
 {.text-center.s-teal.s-large.with-arrows.no-voice} _{span.n}10_,
-_{span.n}8*{span.arrow}×0.8*_, _{.n}[[6.4]]*{span.arrow}×0.8*_,
-_{span.n}[[5.12]]*{span.arrow}×0.8*_,
-_{span.n.reveal}4.096*{span.arrow}×0.8*_*{span.reveal},*
-_{span.n.reveal}3.277*{span.arrow}×0.8*_*{span.reveal},*
-_{span.n.reveal}2.621*{span.arrow}×0.8*_*{span.reveal},*
-_{span.n.reveal}2.097*{span.arrow}×0.8*_*{span.reveal}, …*
+_{span.n}8 *{span.arrow}×0.8*_, _{.n}[[6.4]] *{span.arrow}×0.8*_,
+_{span.n}[[5.12]] *{span.arrow}×0.8*_,
+_{span.n.reveal}4.096 *{span.arrow}×0.8*_*{span.reveal},*
+_{span.n.reveal}3.277 *{span.arrow}×0.8*_*{span.reveal},*
+_{span.n.reveal}2.621 *{span.arrow}×0.8*_*{span.reveal},*
+_{span.n.reveal}2.097 *{span.arrow}×0.8*_*{span.reveal}, …*
 
 ---
 > id: arithmetic-geometric
@@ -524,19 +529,19 @@ sequences__ look very similar: if the difference is positive, they steadily
 {.reveal(when="blank-0 blank-1")} Geometric sequences, on the other hand, can
 behave completely differently based on the values of `a` and *r*:
 
-::: column.frame.f-blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
+::: column.frame.blue.text-center.reveal(when="blank-0 blank-1" animation="pop" width=220 parent="padded-thin")
 
 If [`r > 1`](action:set(2,2)), the terms will [[quickly get bigger|quickly decrease|get closer to
 zero]], _{span.reveal(when="blank-2")}up to infinity. Mathematicians say that the sequence
 [__diverges__](gloss:sequence-divergence)._
 
-::: column.frame.f-blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
+::: column.frame.blue.text-center.reveal(when="blank-2" animation="pop" delay=200 width=220)
 
 If [`–1 < r < 1`](action:set(10,0.6)), the terms will always [[get closer to 0|decrease to negative
 infinity|get smaller]]. _{span.reveal(when="blank-3")}We say that the sequence
 [__converges__](gloss:sequence-convergence)._
 
-::: column.frame.f-blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
+::: column.frame.blue.text-center.reveal(when="blank-3" animation="pop" delay=200 width=220)
 
 If [`r < -1`](action:set(3,-1.4)), the terms will alternate between positive and
 negative, while their [[absolute value|inverse|difference]] gets bigger.
@@ -671,9 +676,9 @@ Notice how the number of people at every step forms a [[geometric sequence|arith
 sequence|triangle number]], _{span.reveal(when="blank-0")}with common ratio [[3]]:_
 
 {.text-center.s-orange.with-arrows.no-voice.reveal(when="blank-1")} _{span.n}1_,
-_{span.n}3*{span.arrow}×3*_, _{span.n}9*{span.arrow}×3*_,
-_{span.n}[[27]]*{span.arrow}×3*_, _{span.n}[[81]]*{span.arrow}×3*_,
-_{span.n}[[243]]*{span.arrow}×3*_, …
+_{span.n}3 *{span.arrow}×3*_, _{span.n}9 *{span.arrow}×3*_,
+_{span.n}[[27]] *{span.arrow}×3*_, _{span.n}[[81]] *{span.arrow}×3*_,
+_{span.n}[[243]] *{span.arrow}×3*_, …
 
 ---
 > id: pay-it-forward-2
@@ -733,17 +738,17 @@ _{span.n}`3^3`_, _{span.n}`3^4`_, _{span.n}`3^5`_, …
     // follows an exponential model, because it changes by a constant ratio every
     // day (times 2). On day `x`, you’ll get `2^x` cents.
 
-    // | __day__ | __payment__  |
+    // | __day__ | __payment__  |
     // | ------- | ------------ |
-    // | 1       | $ 0.01       |
-    // | 2       | $ 0.02       |
-    // | 3       | $ 0.04       |
-    // | 4       | $ [[0.08]]   |
-    // | 5       | $ [[0.16]]   |
-    // | 6       | $ [[0.32]]   |
-    // | 7       | $ [[0.64]]   |
-    // | 8       | $ 1.28       |
-    // | 9       | $ 2.56       |
+    // | 1       | $ 0.01       |
+    // | 2       | $ 0.02       |
+    // | 3       | $ 0.04       |
+    // | 4       | $ [[0.08]]   |
+    // | 5       | $ [[0.16]]   |
+    // | 6       | $ [[0.32]]   |
+    // | 7       | $ [[0.64]]   |
+    // | 8       | $ 1.28       |
+    // | 9       | $ 2.56       |
     // | 10      | $ 5.12       |
     // | 11      | $ 10.24      |
     // | 12      | $ [[20.48]]  |
@@ -945,7 +950,7 @@ Gauss](bio:gauss) – at the age of 19!
 ---
 > id: triangle-investigate
 
-::: .box.f-blue
+::: .box.blue
 
 #### Problem Solving
 
@@ -968,13 +973,13 @@ numbers](gloss:triangle-numbers) to help you? What about the sum of the first
 Another sequence that is based on geometric shapes are the __square numbers__:
 
 {.text-center.s-purple.with-arrows.no-voice} _{.n}1_,
-_{.n}4*{span.arrow.reveal(when="blank-4")}+3*_,
-_{.n}9*{span.arrow.reveal(when="blank-4")}+5*_,
-_{.n}16*{span.arrow.reveal(when="blank-4")}+7*_,
-_{.n}[[25]]*{span.arrow.reveal(when="blank-4")}+9*_,
-_{.n}[[36]]*{span.arrow.reveal(when="blank-4")}+11*_,
-_{.n}[[49]]*{span.arrow.reveal(when="blank-4")}+13*_,
-_{.n}[[64]]*{span.arrow.reveal(when="blank-4")}+15*_, …
+_{.n}4 *{span.arrow.reveal(when="blank-4")}+3*_,
+_{.n}9 *{span.arrow.reveal(when="blank-4")}+5*_,
+_{.n}16 *{span.arrow.reveal(when="blank-4")}+7*_,
+_{.n}[[25]] *{span.arrow.reveal(when="blank-4")}+9*_,
+_{.n}[[36]] *{span.arrow.reveal(when="blank-4")}+11*_,
+_{.n}[[49]] *{span.arrow.reveal(when="blank-4")}+13*_,
+_{.n}[[64]] *{span.arrow.reveal(when="blank-4")}+15*_, …
 
 {.reveal(when="blank-0 blank-1 blank-2 blank-3")} You can calculate the numbers
 is this sequence by squaring every whole number (`1^2`, `2^2`, `3^2`, …), but it
@@ -1307,7 +1312,7 @@ nature likes the Fibonacci sequence, which you’ll learn more about later.
 
 ::: column(width=320)
 
-    x-select.segmented   
+    x-select.segmented
       div(data-value="male") Male
       div(data-value="female") Female
     .bees
@@ -1345,7 +1350,7 @@ numbers](gloss:square-numbers), and other sequences we’ve seen before, the
 Fibonacci sequence can be visualised using a geometric pattern:
 
 ::: x-slideshow.golden-spiral
-    
+
     .stage(slot="stage"): include svg/spiral.svg
 
 We start with two small squares of size 1.
@@ -1577,7 +1582,7 @@ _{span.n}${8×a+13×b}_, …
 There are many other puzzles, patterns and applications related to Fibonacci
 numbers. Here are a few examples, which you can try yourself:
 
-::: .box.f-blue
+::: .box.blue
 
 #### Problem solving
 
@@ -1732,17 +1737,17 @@ of a number (excluding the number itself):
 
 Let’s compare these numbers with their sum of factors:
 
-::: column.frame.f-blue.text-center(width=222 parent="padded-thin")
+::: column.frame.blue.text-center(width=222 parent="padded-thin")
 
 For most numbers, the sum of its factors is [[less than|greater than|equal to]]
 itself. These numbers are called __deficient numbers__.
 
-::: column.frame.f-green.text-center.reveal(when="blank-0" animation="pop" width=222)
+::: column.frame.green.text-center.reveal(when="blank-0" animation="pop" width=222)
 
 For a few numbers, the sum of its factors is greater than itself. These numbers
 are called __abundant numbers__.
 
-::: column.frame.f-yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
+::: column.frame.yellow.text-center.reveal(when="blank-0" animation="pop" delay=500 width=222)
 
 Only one number in the list above has a sum of factors that is _equal_ to itself:
 [[6]]. This is called a [__perfect number__](gloss:perfect-numbers).
@@ -1805,14 +1810,14 @@ a recursive formula like this:
 
 Let’s start with `x_1 = 5` and see what happens:
 
-{.text-center.s-orange.with-arrows.no-voice} _{.n}5_, _{.n}[[16]]*{span.arrow}×3 +1*_,
-_{.n}[[8]]*{span.arrow.reveal(when="blank-0")}÷2*_,
-_{.n}[[4]]*{span.arrow.reveal(when="blank-1")}÷2*_,
-_{.n}[[2]]*{span.arrow.reveal(when="blank-2")}÷2*_,
-_{.n}[[1]]*{span.arrow.reveal(when="blank-3")}÷2*_,
-_{.n}[[4]]*{span.arrow.reveal(when="blank-4")}×3 +1*_,
-_{.n}[[2]]*{span.arrow.reveal(when="blank-5")}÷2*_,
-_{.n}[[1]]*{span.arrow.reveal(when="blank-6")}÷2*_, …
+{.text-center.s-orange.with-arrows.no-voice} _{.n}5_, _{.n}[[16]] *{span.arrow}×3 +1*_,
+_{.n}[[8]] *{span.arrow.reveal(when="blank-0")}÷2*_,
+_{.n}[[4]] *{span.arrow.reveal(when="blank-1")}÷2*_,
+_{.n}[[2]] *{span.arrow.reveal(when="blank-2")}÷2*_,
+_{.n}[[1]] *{span.arrow.reveal(when="blank-3")}÷2*_,
+_{.n}[[4]] *{span.arrow.reveal(when="blank-4")}×3 +1*_,
+_{.n}[[2]] *{span.arrow.reveal(when="blank-5")}÷2*_,
+_{.n}[[1]] *{span.arrow.reveal(when="blank-6")}÷2*_, …
 
 ---
 > id: hailstone-1
@@ -1929,7 +1934,7 @@ to behave almost randomly.
 In this quiz you can combine all your knowledge about sequences. There is just
 one goal: find the pattern and calculate the next two terms!
 
-::: .box.f-blue
+::: .box.blue
 
 #### Find the next number
 
@@ -2216,52 +2221,6 @@ completely different methods, and then see how they are related.
 {.todo} COMING SOON
 
     // Galton Board, normal distribution
-
-
-
-    // -------------------------------------------------------------------------
-
-    // ## The In-and-out Puzzle
-    //
-    // > section: in-and-out
-    // > sectionStatus: dev
-    // > id: in-and-out-intro
-
-    // http://mathworld.wolfram.com/JosephusProblem.html
-
-    // Once there was an indecisive casting director. He would narrow down his
-    // choice for a role to twelve actors, and then be stuck. So, he made a habit
-    // of arranging the actors in a circle and going around in a circle, saying
-    // “Maybe you, not you, maybe you, not you, ...” and so on. After each “not
-    // you,” that person left the circle, so it would shrink until there was just
-    // a single person left, who would get the role.
-
-    // A clever actress decided she would get the role. There were 10 people in
-    // her circle. Where must she stand to be the last one in the circle?
-
-    // An actor auditioning for a different part was faced with 20 in his circle.
-    // Where should ! he stand?
-
-    // Find a pattern that tells you where to stand no matter how many people
-    // are in the circle. Why does it work?
-
-    // What if the director eliminates every mth person? Where should you stand
-    // in a circle of n?
-
-    // What about “in, in, out, out,” leaving two in and then kicking two out?
-
-    // With eight people, for example, you’ll lost the even numbers on round one,
-    // 3 and 7 on round two, and 5 on round three, making 1 the winner.
-
-    // Cross out the first person (person 2). At this point, there’s one fewer
-    // people in the circle, and we’re beginning at person three instead of
-    // person 1. So your answer for n people should be the same as for n-1,
-    // except the people are relabeled with a number 2 greater. In other words,
-    // if for the nth circle you stands in position p, for the n+1st circle you
-    // stand in position p +2. However, this number may be larger than n+1, so
-    // we have to reduce it mod n+1 if necessary. It’s possible to get a formula
-    // for this, and that’s a nice challenge for kids who are ready for it. But
-    // for most, just elucidating the pattern will be enough.
 
 
 
