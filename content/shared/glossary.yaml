@@ -518,7 +518,7 @@ denominator:
 
 derivative:
   title: Derivative
-  text: A derivative is the function that descriibes the slope of a curve.
+  text: A derivative is the function that describes the slope of a curve.
   ## definition needs to be fleshed out
 
 dependent-events:
