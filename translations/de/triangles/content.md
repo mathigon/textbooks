@@ -4,6 +4,7 @@
 
 > id: intro
 > section: introduction
+> description: "Dreiecke gehören zu den wichtigsten Formen in der Geometrie: Sie haben unzählige interessante Eigenschaften und tauchen überall in Technik und Ingenieurwesen auf."
 > color: "#3566DE"
 > level: Intermediate
 > next: polyhedra
@@ -277,6 +278,22 @@ waagrecht an einem Stück Schnur aufhängen, die an seinem Schwerpunkt befestigt
 
 Das funktioniert, weil das Gewicht des Dreiecks gleichmäßig um den
 Schwerpunkt verteilt ist. In der Physik wird dieser Punkt oft als __Massenschwerpunkt__ bezeichnet.
+    // Any straight line that goes through the centroid divides the triangle into two
+    // parts that have exactly the same area. Move the [blue point](target:move) in the
+    // figure on the right. The red and green areas will always have the same area.
+
+    // x-geopad(width=220): svg
+      circle.move(name="a" cx=70 cy=50)
+      circle.move(name="b" cx=60 cy=160)
+      circle.move(name="c" cx=180 cy=130)
+      circle.yellow(x="triangle(a,b,c).centroid" name="d")
+      circle.move.blue.pulsate(name="p" cx=50 cy=50 project="circle(point(110,110),100)" target="move")
+      circle(hidden name="q" x="p.rotate(pi,d)")
+
+      path.dark(x="triangle(a,b,c)" name="t")
+      path.fill.green.light(x="t.intersect(polygon(p,q,p.rotate(pi/2,q),q.rotate(-pi/2,p)))")
+      path.fill.red.light(x="t.intersect(polygon(p,q,p.rotate(-pi/2,q),q.rotate(pi/2,p)))")
+      path.blue(x="line(p,d)")
 
 ---
 > id: circumcircle
@@ -872,11 +889,11 @@ drei verschiedene Beispiele, die jeweils eine andere Strategie verwenden:
 
 Schau dir die Abbildung rechts an. Das Quadrat hat die Seitenlänge `a + b`,
 und enthält [vier rechtwinklige Dreiecke](target:triangle), sowie ein
-[kleineres Quadrat](target:square) der Größe [[`c^2`|`a - b`|`a + b`]].
+[kleineres Quadrat](target:square) mit der Fläche [[`c^2`|`a - b`|`a + b`]].
 
 {.reveal(when="blank-0")} Nun ordnen wir die Dreiecke im Quadrat neu an. Das
 Ergebnis enthält noch immer die vier rechtwinkligen Dreiecke sowie zwei Quadrate
-der Größe [[`a^2` und `b^2`|`c^2`|`(a + b)^2`]].
+mit der Fläche [[`a^2` und `b^2`|`c^2`|`(a + b)^2`]].
 
 {.reveal(when="blank-1")} Vergleicht man die Größe des roten Bereichs
 [vor](action:set(0)) und [nach](action:set(100)) der Umstellung, so
@@ -1035,7 +1052,7 @@ Es gilt der WWW-Satz, dh alle drei Dreiecke sind [[ähnlich|kongruent|rechtwinkl
       td.md `pill(x/a, "blue", "xa") = pill(a/c, "red", "ac")`<br>`pill(x, "blue", "x") = (a^2)/c`
       td.md `pill(y/b, "green", "yb") = pill(b/c, "yellow", "bc")`<br>`pill(y, "green", "y") = (b^2)/c`
 
-{.r.reveal(when="blank-5")} _{span.next-step} Weiter_
+{.r.reveal(when="blank-5")} [Weiter](btn:next)
 
 {.reveal(when="next-2")} Aber erinnere dich, dass _c_ = [{.step-target.i.pill.green}y](target:y) +
 [{.step-target.i.pill.blue}x](target:x). Wir setzen ein und erhalten
@@ -1259,18 +1276,11 @@ Da alle diese Dreiecke ähnlich sind, wissen wir, dass ihre Seiten
 proportional sind. Insbesondere sind die folgenden Verhältnisse für alle diese
 Dreiecke gleich:
 
-    p.text-center
-     mfrac
-        mrow: mtext.m-blue.b Gegenkathete
-        mrow: mtext.m-yellow.b Hypotenuse
-     span.space
-     mfrac
-        mrow: mtext.m-green.b Ankathete
-        mtext.m-yellow.b Hypotenuse
-     span.space
-     mfrac
-        mrow: mtext.m-blue.b Gegenkathete
-        mrow: mtext.m-green.b Ankathete
+{.text-center} `class("Gegenkathete","m-blue b") / class("Hypotenuse","m-yellow b")`
+_{span.space}_
+`class("Ankathete","m-green b") / class("Hypotenuse","m-yellow b")`
+_{span.space}_
+`class("Gegenkathete","m-blue b") / class("Ankathete","m-green b")`
 
 Fassen wir zusammenzufassen: Wir haben einen bestimmten Wert für __{.m-red}α__ gewählt
 und viele ähnliche, rechtwinklige Dreiecke erhalten. Die Seiten dieser Dreiecke stehen zueinander
@@ -1288,33 +1298,9 @@ eine dreistellige Abkürzung:
 ::: column.grow
 
     ul
-      li
-        strong Sinus:
-        .space
-        mtext sin
-        mfenced: mtext.m-red.b α
-        mo =
-        mfrac
-          mrow: mtext.m-blue.b Gegenkathete
-          mrow: mtext.m-yellow.b Hypotenuse
-      li
-        strong Cosinus:
-        .space
-        mtext cos
-        mfenced: mtext.m-red.b α
-        mo =
-        mfrac
-          mrow: mtext.m-green.b Ankathete
-          mrow: mtext.m-yellow.b Hypotenuse
-      li
-        strong Tangens:
-        .space
-        mtext tan
-        mfenced: mtext.m-red.b α
-        mo =
-        mfrac
-          mrow: mtext.m-blue.b Gegenkathete
-          mrow: mtext.m-green.b Ankathete
+      li.display.md __Sinus:__ `sin(class(α,"m-red b")) = class("Gegenkathete","m-blue b") / class("Hypotenuse","m-yellow b")`
+      li.display.md __Kosinus:__ `cos(class(α,"m-red b")) = class("Ankathete","m-green b") / class("Hypotenuse","m-yellow b")`
+      li.display.md __Tangens:__ `tan(class(α,"m-red b")) = class("Gegenkathete","m-blue b") / class("Ankathete","m-green b")`
 
 ::: column(width=240)
 
@@ -1427,37 +1413,14 @@ Seiten_. Das genügt, um mit dem [[Sinussatz|Kosinussatz]] den Abstand
 
     table.eqn-system
       tr.reveal(when="blank-2")
-        td
-          mfrac
-            mrow
-              mo sin
-              mn.pill.step-target.green(data-to="a") 151°
-            mrow.md [[d|5]]
-        td
-          mo =
-          mfrac
-            mrow
-              mo sin
-              mn.pill.step-target(data-to="b") 6°
-            mrow.md [[5|d]]
+        td.md `("sin" pill("151°","green","a")) / blank(d,5)`
+        td.md `= ("sin" pill("6°","","b")) / blank(5,d)`
       tr.reveal(when="blank-3 blank-4")
-        td: mi d
-        td
-          mo =
-          mo sin
-          mn.pill.step-target.green(data-to="a") 151°
-          mo ×
-          mfrac
-            mrow: mn.pill.step-target.yellow(data-to="base") 5
-            mrow
-              mo sin
-              mn.pill.step-target(data-to="b") 6°
-
+        td.md `d`
+        td.md `= "sin" pill("151°","green","a") × pill(5,"yellow","base") / ("sin" pill("6°","","b"))`
       tr.reveal(when="blank-3 blank-4" delay=1000)
         td
-        td
-          mo =
-          mn.pill.yellow.step-target(data-to="d") 23.2 km
+        td.md `= pill("23.2 km","yellow","d")`
 
 {.reveal(when="blank-3 blank-4" delay=2000)} Es gibt noch einen letzten Schritt: Wir wollen uns
 das [große, rechtwinklige Dreieck](target:right) ansehen. Wir kennen bereits die
@@ -1467,28 +1430,14 @@ Länge der Hypotenuse, aber was wir wirklich brauchen, ist die Länge der [[Gege
 
     table.eqn-system
       tr.reveal(when="blank-5" delay=1000)
-        td
-          mo sin
-          mn.pill.step-target.red(data-to="ang") 23°
-        td
-          mo =
-          mfrac
-            mrow.md [[height|23]]
-            mrow.md [[23|height]]
+        td.md `"sin" pill("23°","red","ang")`
+        td.md `= blank("height",23) / blank(23,"height")`
       tr.reveal(when="blank-6 blank-7")
-        td: mtext Höhe
-        td
-          mo =
-          mo sin
-          mn.pill.step-target.red(data-to="ang") 23°
-          mo ×
-          mn.pill.step-target.yellow(data-to="d") 23
-
+        td.md `"Höhe"`
+        td.md `= "sin" pill("23°","red","ang") × pill(23,"yellow","d")`
       tr.reveal(when="blank-6 blank-7" delay=1000)
         td
-        td
-          mo =
-          mn.pill.step-target.yellow(data-to="height") 8.987 km
+        td.md `= pill("8.987 km","yellow","height")`
 
 {.reveal(when="blank-6 blank-7" delay=2000)} Und dieser Wert ist sehr nahe an der
 tatsächlichen Höhe des Mount Everest, dem höchsten Berg der Welt: 8.848 m.
