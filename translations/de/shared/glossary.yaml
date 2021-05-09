@@ -13,7 +13,7 @@ acceleration:
   title: Beschleunigung
   text: Beschleunigung ist die Änderung der Geschwindigkeit über die Zeit. In der Infinitesimalrechnung verstehen wir
     Beschleunigung als die Ableitung der Geschwindigkeit. Im täglichen Leben denken wir typischerweise
-    von Beschleunigung in Form von Fahrzeugen. Zum Beispiel kann ein Auto mit Vollgas in 3 Sekunden von 0 auf 100 
+    von Beschleunigung in Form von Fahrzeugen. Zum Beispiel kann ein Auto mit Vollgas in 3 Sekunden von 0 auf 100
     Stundenkilometer beschleunigen.
 
 acute-angle:
@@ -191,7 +191,7 @@ base-10:
     9.
 binary-numbers:
   title: Binärzahlen
-  text: __Binärzahlen__ sind eine Möglichkeit, Zahlen in einem auf der Zahl 2 basierenden Zahlensystem 
+  text: __Binärzahlen__ sind eine Möglichkeit, Zahlen in einem auf der Zahl 2 basierenden Zahlensystem
     auszudrücken, typischerweise mit den Symbolen 0 und 1. Das wird häufig in der digitalen
     Elektronik verwendet.
 
@@ -236,10 +236,6 @@ centroid:
     (Seitenhalbierenden) schneiden. Er ist auch der Massenschwerpunkt eines Dreiecks, wenn dessen
     Dichte einheitlich ist.
   link: /course/triangles/properties#center-of-mass
-
-chaos:
-  title: Chaos
-  text: toDo
 
 circle:
   title: Kreis
@@ -310,10 +306,10 @@ chaos:
 code:
   title: Codes
   text: |
-    Ein __Code__ ist ein System von Regeln, mit dem _Informationen_ (z. B. Buchstaben, Töne, Wörter oder Bilder) 
-    in eine andere Form umgewandelt werden. Einige Codes sind geheim und können nur von dem vorgesehenen Empfänger 
-    entschlüsselt werden. Andere Codes sind für ein bestimmtes Übertragungs- oder Speichermedium konzipiert 
-    (z. B. _Morse-Codes_ für Telegrafenleitungen oder _Binärcode_ für Computer). Unsere Sprache und unser Alphabet 
+    Ein __Code__ ist ein System von Regeln, mit dem _Informationen_ (z. B. Buchstaben, Töne, Wörter oder Bilder)
+    in eine andere Form umgewandelt werden. Einige Codes sind geheim und können nur von dem vorgesehenen Empfänger
+    entschlüsselt werden. Andere Codes sind für ein bestimmtes Übertragungs- oder Speichermedium konzipiert
+    (z. B. _Morse-Codes_ für Telegrafenleitungen oder _Binärcode_ für Computer). Unsere Sprache und unser Alphabet
     sind weitere Beispiele für Codes.
 
 coefficient:
@@ -515,7 +511,7 @@ degrees:
 
 denominator:
   title: Nenner
-  text: Der __Nenner__ ist die Zahl unter dem Bruchstrich. Zum Beispiel, in `4/7`, ist die 
+  text: Der __Nenner__ ist die Zahl unter dem Bruchstrich. Zum Beispiel, in `4/7`, ist die
     Zahl 7 der Nenner.
 derivative:
   title: Ableitung
@@ -525,8 +521,8 @@ derivative:
 dependent-events:
   title: Dependent Events
   text: |
-    Zwei Ereignisse sind __abhängig__, wenn das Eintreten des einen Ereignisses 
-    die Wahrscheinlichkeit ändert, dass das andere Ereignis eintritt. Zum Beispiel 
+    Zwei Ereignisse sind __abhängig__, wenn das Eintreten des einen Ereignisses
+    die Wahrscheinlichkeit ändert, dass das andere Ereignis eintritt. Zum Beispiel
     könnten _A_ und _B_ abhängig sein, wenn `P(A|B) ≠ P(A)`.
 
 dilation:
