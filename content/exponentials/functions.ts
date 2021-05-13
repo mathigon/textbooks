@@ -83,7 +83,7 @@ export function carbonSolver($step: Step) {
     },
     4: (equation) => {
       equation.wrapTerms('log_($2)($1)', '0.667', '2');
-      equation.unwrapTerm('-t/6000');
+      equation.unwrapTerm('(-t)/6000');
     },
     5: (equation) => {
       equation.replaceTerm('log_2(0.667)', '-0.585');
@@ -112,7 +112,7 @@ export function carbonSolver($step: Step) {
       equation.replaceTerm('0.667', '800/1200');
     },
     4: (equation) => {
-      equation.wrapTerms('$2^$1', '-t/6000', '2');
+      equation.wrapTerms('$2^$1', '(-t)/6000', '2');
       equation.unwrapTerm('0.667');
       equation.deleteTerm('log');
     },
