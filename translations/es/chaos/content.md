@@ -4,7 +4,7 @@
 
 > sección: introducción id: péndulo objetivos: juego color: "# 009EA6" nivel: avanzado
 
-At the beginning of the 18th century, physicists like [Isaac Newton](bio:newton) thought that the universe was a giant clockwork machine. If you had precise information about every object right now, you could use the laws of physics to predict what would happen in the future.
+A principios del siglo XVIII, físicos como [Isaac Newton](bio:newton) pensaban que el universo era una gigantesca máquina de relojería. Si tuviera información precisa sobre cada objeto en este momento, podría usar las leyes de la física para predecir lo que sucedería en el futuro.
 
 ::: columna (ancho = 320)
 
@@ -20,9 +20,9 @@ x-geopad.sticky.simulation(width=320 height=320)
 
 ::: column.grow
 
-One great example is the pendulum. You’ve already seen how you can use differential equations to find an equation that calculates the position of the pendulum at any time in the future.
+Un gran ejemplo es el péndulo. Ya has visto cómo puedes usar ecuaciones diferenciales para encontrar una ecuación que calcule la posición del péndulo en cualquier momento en el futuro.
 
-We often say that the motion of the pendulum is **deterministic**: it precisely follows Newton’s laws of gravity, and there is no randomness or probability. Watch the pendulum swinging, and try to predict what it’ll do next!
+A menudo decimos que el movimiento del péndulo es **determinista** : sigue con precisión las leyes de la gravedad de Newton y no hay aleatoriedad ni probabilidad. ¡Observa cómo se balancea el péndulo y trata de predecir lo que hará a continuación!
 
 :::
 
