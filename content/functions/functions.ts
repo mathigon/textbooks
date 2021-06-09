@@ -30,7 +30,6 @@ import { PiecewiseEndpointPuzzle } from './components/piecewise-endpoint-puzzle/
 import './components/function-machine/function-machine';
 import { FunctionMachine } from './components/function-machine/function-machine';
 
-import './components/video-graph/video-graph';
 import { VideoGraph } from './components/video-graph/video-graph';
 
 import './components/pong/pong';
@@ -812,4 +811,5 @@ export function triathlonGraph($step: Step) {
 
 export function absoluteValue($step: Step) {
   const $pong = $step.$('x-pong') as Pong;
+  console.log('Booted pong section')
 }
