@@ -4,6 +4,7 @@
 // =============================================================================
 
 
+@use "sass:math";
 @import "../../node_modules/@mathigon/studio/frontend/styles/variables";
 @import "./components/enigma";
 @import "./components/code-box";
@@ -49,7 +50,7 @@
 
   .sat, .atm, .bits, svg { position: absolute; top: 0; left: 0; }
 
-  .bits { transform: scale(640/1024,420/666) }
+  .bits { transform: scale(math.div(640, 1024), math.div(420, 666)); }
 
   line { transition: opacity .2s; opacity: 0; stroke-width: 6px; stroke: $red;
     stroke-dasharray: 0 12px; fill: none; stroke-linecap: round;
