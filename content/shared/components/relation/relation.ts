@@ -6,7 +6,7 @@
 
 import {$N, CustomElementView, ElementView, hover, register, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Point} from '@mathigon/euclid';
-import { Step } from '../types';
+import {Step} from '../types';
 import template from './relation.pug';
 
 
@@ -27,8 +27,8 @@ export class Relation extends CustomElementView {
   private $outputs!: ElementView[];
   private $lines!: SVGView[];
   private $step?: Step;
-  
-  private requireMatch: boolean = false;
+
+  private requireMatch = false;
   private lastWidth = 0;
   private inputTargets: Point[] = [];
   private outputTargets: Point[] = [];
@@ -44,7 +44,7 @@ export class Relation extends CustomElementView {
 
     if (this.attr('randomize') == 'true') {
       function selectRandomElement(elements: ElementView[]) {
-        return elements[Math.floor(Math.random()*elements.length)];
+        return elements[Math.floor(Math.random() * elements.length)];
       }
 
       for (const $input of this.$inputs) {
@@ -97,16 +97,16 @@ export class Relation extends CustomElementView {
               }
 
               if (this.matches.every(m => m.matched == true)) {
-                if (this.$step)
+                if (this.$step) {
                   this.$step.complete();
+                }
               }
-            }
-            else {
+            } else {
               const connection = {
                 input: i,
                 output: activeTarget,
-                line: $currentLine!,
-              }
+                line: $currentLine!
+              };
 
               if ($target.attr('name') == this.matches[i].name) {
                 if (this.$step) {
@@ -116,22 +116,23 @@ export class Relation extends CustomElementView {
                 this.matches[i].matched = true;
 
                 if (this.matches.every(m => m.matched == true)) {
-                  if (this.$step)
+                  if (this.$step) {
                     this.$step.complete();
+                  }
                 }
 
                 this.connections.push(connection);
-              }
-              else if (this.requireMatch) {
-                if (this.$step)
+              } else if (this.requireMatch) {
+                if (this.$step) {
                   this.$step.addHint('incorrect');
+                }
 
                 $currentLine!.exit('draw', 300, 0, true);
-              }
-              else {
-                if (this.$step)
+              } else {
+                if (this.$step) {
                   this.$step.addHint('incorrect');
-                
+                }
+
                 this.connections.push(connection);
               }
             }

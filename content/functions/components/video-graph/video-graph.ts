@@ -3,10 +3,10 @@
 // (c) Mathigon
 // =============================================================================
 
-import { Step, Video } from '@mathigon/studio';
+import {Step, Video} from '@mathigon/studio';
 import {$N, CustomElementView, register, SVGView} from '@mathigon/boost';
-import { Point } from '@mathigon/euclid';
-import { CoordinateSystem } from '../../../shared/types';
+import {Point} from '@mathigon/euclid';
+import {CoordinateSystem} from '../../../shared/types';
 
 const avatarSize = 32;
 
@@ -19,44 +19,47 @@ export class VideoGraph extends CustomElementView {
     private colors: string[] = [];
 
     ready() {
-        this.$video = this.$('x-video')! as Video;
-        this.$videoEl = this.$video.$('video')?._el! as Node;
-        this.$graph = this.$('x-coordinate-system')! as CoordinateSystem;
+      this.$video = this.$('x-video')! as Video;
+      this.$videoEl = this.$video.$('video')?._el! as Node;
+      this.$graph = this.$('x-coordinate-system')! as CoordinateSystem;
     }
 
-    addPlot(xFunction: (t: number) => number, yFunction: (t: number) => number, avatarPath: string, color: string = 'red') {
-        this.functions.push(yFunction);
-        this.$graph.setFunctions.apply(this.$graph, this.functions);
+    addPlot(xFunction: (t: number) => number, yFunction: (t: number) => number, avatarPath: string, color = 'red') {
+      this.functions.push(yFunction);
+      this.$graph.setFunctions.apply(this.$graph, this.functions);
 
-        if (color)
-            this.colors.push(color);
-        else
-            this.colors.push('red');
+      if (color) {
+        this.colors.push(color);
+      } else {
+        this.colors.push('red');
+      }
 
-        for (let i = 0; i < this.colors.length; i++)
-            this.$graph.$('.plot')!.$$('g')[i].$('path')!.setAttr('class', this.colors[i]);
-        
-            
-        const $avatar = $N('g', {}, this.$graph.$svg.$('.overlay')!) as SVGView;
-            
-        if (avatarPath)
-            $N('image', {href: avatarPath, transform: `translate(${-avatarSize/2}, ${-avatarSize/2})`, width: avatarSize, height: avatarSize}, $avatar);
-        else
-            $N('circle', {r: 4}, $avatar);
+      for (let i = 0; i < this.colors.length; i++) {
+this.$graph.$('.plot')!.$$('g')[i].$('path')!.setAttr('class', this.colors[i]);
+      }
 
-        const setAvatarPosition = (t: number) => {
-            const x = xFunction(t);
-            const y = yFunction(x);
-            const athletePoint = this.$graph.toViewportCoords(new Point(x, y));
 
-            $avatar.setAttr('transform', `translate(${athletePoint.x}, ${athletePoint.y})`);
-        }
+      const $avatar = $N('g', {}, this.$graph.$svg.$('.overlay')!) as SVGView;
 
-        this.$video.on('timeupdate', () => {
-            const t: number = (this.$videoEl as any).currentTime;
-            setAvatarPosition(t);
-        });
+      if (avatarPath) {
+        $N('image', {href: avatarPath, transform: `translate(${-avatarSize / 2}, ${-avatarSize / 2})`, width: avatarSize, height: avatarSize}, $avatar);
+      } else {
+        $N('circle', {r: 4}, $avatar);
+      }
 
-        setAvatarPosition(0);
+      const setAvatarPosition = (t: number) => {
+        const x = xFunction(t);
+        const y = yFunction(x);
+        const athletePoint = this.$graph.toViewportCoords(new Point(x, y));
+
+        $avatar.setAttr('transform', `translate(${athletePoint.x}, ${athletePoint.y})`);
+      };
+
+      this.$video.on('timeupdate', () => {
+        const t: number = (this.$videoEl as any).currentTime;
+        setAvatarPosition(t);
+      });
+
+      setAvatarPosition(0);
     }
 }

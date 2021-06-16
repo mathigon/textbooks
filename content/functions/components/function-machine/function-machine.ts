@@ -3,9 +3,9 @@
 // (c) Mathigon
 // =============================================================================
 
-import { Step } from '@mathigon/studio';
-import { $N, CustomElementView, register, SVGParentView, SVGView, Draggable, animate, ease } from '@mathigon/boost';
-import { lerp, clamp } from '@mathigon/fermat';
+import {Step} from '@mathigon/studio';
+import {$N, animate, CustomElementView, Draggable, ease, register, SVGParentView, SVGView} from '@mathigon/boost';
+import {clamp, lerp} from '@mathigon/fermat';
 
 type Mapping = {
   inputY: number,
@@ -15,7 +15,7 @@ type Mapping = {
 }
 
 function unlerp(a: number, b: number, t: number) {
-  return (t-a)/(b-a);
+  return (t - a) / (b - a);
 }
 
 const itemHeight = 60;
@@ -31,14 +31,14 @@ export class FunctionMachine extends CustomElementView {
   private $step?: Step;
   private callbacks: Function[] = [];
 
-  private svgWidth: number = 0;
-  private svgHeight: number = 0;
+  private svgWidth = 0;
+  private svgHeight = 0;
 
-  private leftColumnX: number = 0;
-  private rightColumnX: number = 0;
+  private leftColumnX = 0;
+  private rightColumnX = 0;
 
-  private topY: number = 0;
-  private bottomY: number = 0;
+  private topY = 0;
+  private bottomY = 0;
 
   ready() {
     this.$svg = this.$('svg') as SVGParentView;
@@ -46,24 +46,24 @@ export class FunctionMachine extends CustomElementView {
     this.$operation = this.$('.operation') as SVGView;
     this.$outputs = this.$$('.output') as SVGView[];
 
-    let activeInput = -1;
+    const activeInput = -1;
 
     this.mappings = this.$inputs.map(($input, i) => {
       return {
         inputY: 0,
         $input,
         $output: this.$outputs.find($output => $output.attr('name') == $input.attr('output'))!,
-        consumed: false,
-      }
-    })
+        consumed: false
+      };
+    });
 
     this.resize();
 
     // I assume there is a better way to do this with templates?
     for (const $el of this.$$('g') as SVGView[]) {
       const rect = $el.children[0]!.insertBefore($N('rect', {
-        x: -itemHeight/2,
-        y: -itemHeight/2,
+        x: -itemHeight / 2,
+        y: -itemHeight / 2,
         width: itemHeight,
         height: itemHeight,
         rx: 4,
@@ -72,7 +72,7 @@ export class FunctionMachine extends CustomElementView {
 
       $el.$('text')!.setAttr('y', 9);
     }
-    
+
     for (const [i, $input] of this.$inputs.entries()) {
       const mapping = this.mappings.find((mapping) => mapping.$input == $input)!;
       const drag = new Draggable($input, this.$svg, {useTransform: true});
@@ -94,8 +94,7 @@ export class FunctionMachine extends CustomElementView {
             const y = lerp(posn.y, mapping.inputY, p);
             drag.setPosition(x, y);
           }, 500);
-        }
-        else {
+        } else {
           $input.hide();
 
           const $output = mapping.$output.copy(true, false);
@@ -110,10 +109,10 @@ export class FunctionMachine extends CustomElementView {
           for (const cb of this.callbacks) {
             cb($input.attr('value'), $output.attr('value'));
           }
-  
+
           await animate((p) => {
-            const q = ease('bounce-out', p)
-            $output.setAttr('transform', `translate(${this.rightColumnX}, ${lerp(this.topY, this.bottomY, q)})`)
+            const q = ease('bounce-out', p);
+            $output.setAttr('transform', `translate(${this.rightColumnX}, ${lerp(this.topY, this.bottomY, q)})`);
           }, 500);
         }
       });
@@ -132,16 +131,16 @@ export class FunctionMachine extends CustomElementView {
     this.$svg.setAttr('height', this.svgHeight);
 
     this.leftColumnX = 50;
-    this.rightColumnX = this.svgWidth-50;
+    this.rightColumnX = this.svgWidth - 50;
 
-    this.topY = (this.svgHeight/(this.$inputs.length))/2;
-    this.bottomY = this.svgHeight-this.topY;
+    this.topY = (this.svgHeight / (this.$inputs.length)) / 2;
+    this.bottomY = this.svgHeight - this.topY;
 
-    const inputSpacing = this.svgHeight/this.$inputs.length;
+    const inputSpacing = this.svgHeight / this.$inputs.length;
 
     for (const [i, $input] of this.$inputs.entries()) {
       const mapping = this.mappings.find(mapping => mapping.$input == $input)!;
-      mapping.inputY = inputSpacing*(i+0.5)
+      mapping.inputY = inputSpacing * (i + 0.5);
       $input.setAttr('transform', `translate(${this.leftColumnX}, ${mapping.inputY})`);
     }
 
@@ -154,6 +153,6 @@ export class FunctionMachine extends CustomElementView {
   }
 
   bindCallback(cb: Function) {
-    this.callbacks.push(cb)
+    this.callbacks.push(cb);
   }
 }
