@@ -8,7 +8,6 @@ import {$N, CustomElementView, ElementView, register, slide, SVGView} from '@mat
 import {last} from '@mathigon/core';
 import {Point} from '@mathigon/euclid';
 import {clamp, lerp} from '@mathigon/fermat';
-import {shuffle} from '@mathigon/fermat/src/random';
 import {CoordinateSystem} from '../../../shared/types';
 
 // TODO: Import d3 helpers for curvy paths
@@ -119,12 +118,8 @@ export class DrawGraph extends CustomElementView {
       this.$solution = $N('g', {class: 'solution'});
         this.$('.grid')!.insertAfter(this.$solution);
         this.$hints = $N('g', {class: 'hints'}, $overlay);
-        const $plotPath = $N('path', {class: 'plot-path'}, $overlay);
+        const _$plotPath = $N('path', {class: 'plot-path'}, $overlay);
         const $plotPoints = $N('g', {class: 'plot-points'}, $overlay);
-
-        const originPosition = this.$graph.toViewportCoords(new Point(0, 0));
-
-        const $dragPoint: SVGView | null = null;
 
         const redrawPath = () => {
           this.points.sort((a, b) => a.point.x - b.point.x);
@@ -224,7 +219,7 @@ export class DrawGraph extends CustomElementView {
               redrawPath();
             }
           },
-          up: (p) => {
+          up: () => {
             placingPoint = null;
           }
         });

@@ -370,12 +370,12 @@ function drawSlopeMeasurements($graph: CoordinateSystem, x0: number, x1: number,
   const position1 = $graph.toViewportCoords(point1);
   const position2 = $graph.toViewportCoords(point2);
 
-  const circle0 = $N('circle', {class: 'slope-measurement', id: 'circle-0', cx: position0.x, cy: position0.y, r: 4}, $overlay);
-  const circle1 = $N('circle', {class: 'slope-measurement', id: 'circle-1', cx: position1.x, cy: position1.y, r: 4}, $overlay);
-  const circle2 = $N('circle', {class: 'slope-measurement', id: 'circle-2', cx: position2.x, cy: position2.y, r: 4}, $overlay);
+  const _$circle0 = $N('circle', {class: 'slope-measurement', id: 'circle-0', cx: position0.x, cy: position0.y, r: 4}, $overlay);
+  const _$circle1 = $N('circle', {class: 'slope-measurement', id: 'circle-1', cx: position1.x, cy: position1.y, r: 4}, $overlay);
+  const _$circle2 = $N('circle', {class: 'slope-measurement', id: 'circle-2', cx: position2.x, cy: position2.y, r: 4}, $overlay);
 
-  const runLine = $N('line', {class: 'slope-measurement', id: 'run-line', x1: position0.x, x2: position2.x, y1: position0.y, y2: position2.y}, $overlay);
-  const riseLine = $N('line', {class: 'slope-measurement', id: 'rise-line', x1: position1.x, x2: position2.x, y1: position1.y, y2: position2.y}, $overlay);
+  const _$runLine = $N('line', {class: 'slope-measurement', id: 'run-line', x1: position0.x, x2: position2.x, y1: position0.y, y2: position2.y}, $overlay);
+  const _$riseLine = $N('line', {class: 'slope-measurement', id: 'rise-line', x1: position1.x, x2: position2.x, y1: position1.y, y2: position2.y}, $overlay);
 
   if (showRiseRun) {
     const runText = $N('text', {class: 'slope-measurement', x: (position0.x + position2.x) / 2, y: (position0.y + position2.y) / 2 - 8, 'text-anchor': 'middle', 'alignment-baseline': 'bottom'}, $labels);

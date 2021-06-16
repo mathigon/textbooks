@@ -56,7 +56,7 @@ export class CardGraph extends CustomElementView {
     }
 
     setPlots(plots: Plot[]) {
-      this.$graph.setFunctions.apply(this.$graph, plots.map((plot) => plot.function));
+      this.$graph.setFunctions(...plots.map((plot) => plot.function));
 
       for (let i = 0; i < plots.length; i++) {
 this.$graph.$('.plot')!.$$('g')[i].$('path')!.setAttr('class', plots[i].color);
@@ -73,10 +73,10 @@ this.$graph.$('.plot')!.$$('g')[i].$('path')!.setAttr('class', plots[i].color);
       let $hoverDot: ElementView|null = null;
       let $dragCard: ElementView|null = null;
 
-      const $cards = cards.map((card, i) => {
+      const _$cards = cards.map((card, i) => {
         const origin = new Point(this.graphWidth * (i + 1 / 2) / cards.length, -30);
 
-        const $outline = $N('circle', {cx: origin.x, cy: origin.y, r: 30, class: 'card-outline'}, $cardGroup);
+        const _$outline = $N('circle', {cx: origin.x, cy: origin.y, r: 30, class: 'card-outline'}, $cardGroup);
 
         const $g = $N('g', {transform: `translate(${origin.x}, ${origin.y})`}, $cardGroup) as SVGView;
 
@@ -89,7 +89,7 @@ this.$graph.$('.plot')!.$$('g')[i].$('path')!.setAttr('class', plots[i].color);
           $N('text', {'alignment-baseline': 'middle', 'text-anchor': 'middle'}, $content).text = card.label!;
         }
 
-        const $circle = $N('circle', {cx: 0, cy: 0, r: 30, class: 'card-circle'}, $content);
+        const _$circle = $N('circle', {cx: 0, cy: 0, r: 30, class: 'card-circle'}, $content);
 
         const dotPosition = this.$graph.toViewportCoords(card.domain ? new Point((card.domain[0] + card.domain[1]) / 2, card.point.y) : card.point);
         const $dot = $N('circle', {class: 'dot', transform: `translate(${dotPosition.x}, ${dotPosition.y})`, r: 15}, $dotGroup);
@@ -106,13 +106,13 @@ this.$graph.$('.plot')!.$$('g')[i].$('path')!.setAttr('class', plots[i].color);
           const axisHeight = this.$graph.$yAxis!.height;
           const yOffset = (this.graphHeight - axisHeight) / 2;
 
-          const rangeSpan = $N('line', {x1: rangeStartPosition.x, x2: rangeEndPosition.x, y1: rangeStartPosition.y, y2: rangeEndPosition.y}, $rangeLines);
+          const _$rangeSpan = $N('line', {x1: rangeStartPosition.x, x2: rangeEndPosition.x, y1: rangeStartPosition.y, y2: rangeEndPosition.y}, $rangeLines);
 
-          const rangeStartLine = $N('line', {class: 'range-line', x1: rangeStartPosition.x, x2: rangeStartPosition.x, y1: yOffset, y2: axisHeight + yOffset}, $rangeLines);
-          const rangeEndLine = $N('line', {class: 'range-line', x1: rangeEndPosition.x, x2: rangeEndPosition.x, y1: yOffset, y2: axisHeight + yOffset}, $rangeLines);
+          const _$rangeStartLine = $N('line', {class: 'range-line', x1: rangeStartPosition.x, x2: rangeStartPosition.x, y1: yOffset, y2: axisHeight + yOffset}, $rangeLines);
+          const _$rangeEndLine = $N('line', {class: 'range-line', x1: rangeEndPosition.x, x2: rangeEndPosition.x, y1: yOffset, y2: axisHeight + yOffset}, $rangeLines);
 
-          const rangeStartTick = $N('line', {class: 'range-tick', x1: rangeStartPosition.x, x2: rangeStartPosition.x, y1: rangeStartPosition.y - 10, y2: rangeStartPosition.y + 10}, $rangeLines);
-          const rangeEndTick = $N('line', {class: 'range-tick', x1: rangeEndPosition.x, x2: rangeEndPosition.x, y1: rangeStartPosition.y - 10, y2: rangeStartPosition.y + 10}, $rangeLines);
+          const _$rangeStartTick = $N('line', {class: 'range-tick', x1: rangeStartPosition.x, x2: rangeStartPosition.x, y1: rangeStartPosition.y - 10, y2: rangeStartPosition.y + 10}, $rangeLines);
+          const _$rangeEndTick = $N('line', {class: 'range-tick', x1: rangeEndPosition.x, x2: rangeEndPosition.x, y1: rangeStartPosition.y - 10, y2: rangeStartPosition.y + 10}, $rangeLines);
         }
 
         hover($g, {
@@ -163,9 +163,7 @@ $dragCard.$('.card-content')!.setAttr('transform', `scale(1)`);
 
           $g.css('pointer-events', 'none');
         });
-        drag.on('drag', (p) => {
 
-        });
         drag.on('end', () => {
           $dragCard = null;
 

@@ -59,7 +59,7 @@ export class Pong extends CustomElementView {
       const $paddle = $N('g', {class: 'paddle', transform: `translate(${paddleOriginPosition.x},${paddleOriginPosition.y})`}, $graph.$overlay);
       this.$paddle = $paddle;
 
-      const $paddleLine = $N('line', {x1: 0, x2: 0, y1: -paddlePixelRadius, y2: paddlePixelRadius}, $paddle);
+      const _$paddleLine = $N('line', {x1: 0, x2: 0, y1: -paddlePixelRadius, y2: paddlePixelRadius}, $paddle);
 
       const $ballArrow = $N('g', {class: 'arrow'}, $graph.$overlay);
       $N('line', {class: 'shaft', x1: 0, y1: 0, x2: 40, y2: 0}, $ballArrow);

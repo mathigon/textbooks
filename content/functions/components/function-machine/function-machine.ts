@@ -29,7 +29,7 @@ export class FunctionMachine extends CustomElementView {
   private mappings!: Mapping[];
   private $svg!: SVGParentView;
   private $step?: Step;
-  private callbacks: Function[] = [];
+  private callbacks: ((inputString: string, outputString: string) => void)[] = [];
 
   private svgWidth = 0;
   private svgHeight = 0;
@@ -46,9 +46,7 @@ export class FunctionMachine extends CustomElementView {
     this.$operation = this.$('.operation') as SVGView;
     this.$outputs = this.$$('.output') as SVGView[];
 
-    const activeInput = -1;
-
-    this.mappings = this.$inputs.map(($input, i) => {
+    this.mappings = this.$inputs.map(($input) => {
       return {
         inputY: 0,
         $input,
@@ -61,7 +59,7 @@ export class FunctionMachine extends CustomElementView {
 
     // I assume there is a better way to do this with templates?
     for (const $el of this.$$('g') as SVGView[]) {
-      const rect = $el.children[0]!.insertBefore($N('rect', {
+      $el.children[0]!.insertBefore($N('rect', {
         x: -itemHeight / 2,
         y: -itemHeight / 2,
         width: itemHeight,
@@ -73,7 +71,7 @@ export class FunctionMachine extends CustomElementView {
       $el.$('text')!.setAttr('y', 9);
     }
 
-    for (const [i, $input] of this.$inputs.entries()) {
+    for (const [_i, $input] of this.$inputs.entries()) {
       const mapping = this.mappings.find((mapping) => mapping.$input == $input)!;
       const drag = new Draggable($input, this.$svg, {useTransform: true});
 
@@ -152,7 +150,7 @@ export class FunctionMachine extends CustomElementView {
     this.$step = $step;
   }
 
-  bindCallback(cb: Function) {
+  bindCallback(cb: (inputString: string, outputString: string) => void) {
     this.callbacks.push(cb);
   }
 }
