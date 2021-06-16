@@ -4,7 +4,7 @@
 // =============================================================================
 
 import {Step} from '@mathigon/studio';
-import {$N, animate, CustomElementView, ElementView, register, slide, SVGView} from '@mathigon/boost';
+import {$N, animate, CustomElementView, ElementView, register, slide} from '@mathigon/boost';
 import {Point} from '@mathigon/euclid';
 import {CoordinateSystem} from '../../../shared/types';
 import {clamp, lerp} from '@mathigon/fermat';
@@ -75,18 +75,17 @@ export class Pong extends CustomElementView {
 
       this.reset();
 
-      // const wall = $N('line')
-
       slide($graph.$svg, {
-        down: () => {},
+        down: () => {
+          // Begin sliding
+        },
         move: (position) => {
           const y = clamp(position.y, paddleMinPosition.y + paddlePixelRadius, paddleMaxPosition.y - paddlePixelRadius);
           $paddle.setAttr('transform', `translate(${paddleOriginPosition.x},${y})`);
         },
         up: () => {
           this.launch();
-        },
-        click: () => {}
+        }
       });
     }
 
@@ -95,7 +94,6 @@ export class Pong extends CustomElementView {
 
       // Point where ball will strike the paddle-side wall
       const ballStrikePoint = new Point(this.paddleMaxPoint.x, lerp(this.paddleMinPoint.y, this.paddleMaxPoint.y, Math.random() * 0.8));
-      const ballStrikePosition = $graph.toViewportCoords(ballStrikePoint);
 
       // Point where ball will bounce on floor
       const ballBouncePoint = new Point(lerp($graph.plotBounds.xMin, $graph.plotBounds.xMax, Math.random() * 0.8 + 0.1), 0);
@@ -114,7 +112,6 @@ export class Pong extends CustomElementView {
       const minOriginVectorY = minOriginVectorX * path0Slope;
       const minOriginVector = new Point(minOriginVectorX, minOriginVectorY);
       const minOriginPoint = ballBouncePoint.add(minOriginVector);
-      const minOriginPosition = $graph.toViewportCoords(minOriginPoint);
 
       // Minimum possible ball origin point factoring in the ceiling
       const cappedOriginY = Math.min($graph.plotBounds.yMin, minOriginPoint.y);

@@ -4,10 +4,10 @@
 // =============================================================================
 
 
-import {Slider, Step, Video} from '@mathigon/studio';
-import {Point, SimplePoint} from '@mathigon/euclid';
-import {$N, animate, Draggable, ease, ElementView, hover, KEY_CODES, pointerOver, SVGParentView, svgPointerPosn, SVGView} from '@mathigon/boost';
-import {last, stringDistance} from '@mathigon/core';
+import {Slider, Step} from '@mathigon/studio';
+import {Point} from '@mathigon/euclid';
+import {$N, animate, ease, ElementView, pointerOver, SVGParentView, svgPointerPosn} from '@mathigon/boost';
+import {last} from '@mathigon/core';
 import {lerp} from '@mathigon/fermat';
 import {shuffle} from '@mathigon/fermat/src/random';
 import {CoordinateSystem, Geopad, GeoPoint} from '../shared/types';
@@ -132,7 +132,8 @@ export function verticalLineTest($step: Step) {
 
     const $paths = $plot.$('svg .paths')!;
     const $verticalLine = $N('g', {class: 'verticalLine', transform: 'translate(50, 0)'}, $paths);
-    const $verticalLineSegment = $N('line', {x1: 0, x2: 0, y1: 0, y2: $plot.height}, $verticalLine);
+    $N('line', {x1: 0, x2: 0, y1: 0, y2: $plot.height}, $verticalLine);
+
     const $verticalLineLabel = $N('text', {x: 0, y: -2, 'text-anchor': 'middle'}, $verticalLine);
     $verticalLine.hide();
 
@@ -226,7 +227,6 @@ export function numericalCoordinateFunctions($step: Step) {
     const input = parseInt(inputString);
     const output = parseInt(outputString);
 
-    const $svg = $xSquaredPlot.$svg;
     const $point = $xSquaredPlot.drawPoint(new Point(input, output));
 
     const burstElement = $N('g', {class: 'burst'}, $xSquaredPlot.$svg);
@@ -237,7 +237,7 @@ export function numericalCoordinateFunctions($step: Step) {
   });
 }
 
-function clickPlotter($step: Step, $geopad: Geopad, plotFunction: Function) {
+function clickPlotter($step: Step, $geopad: Geopad, plotFunction: (x: number) => number) {
   const $svg = $geopad.$svg;
   const $axes = $svg.$('.axes')!;
 
@@ -249,7 +249,8 @@ function clickPlotter($step: Step, $geopad: Geopad, plotFunction: Function) {
 
   const $paths = $svg.$('.paths')!;
   const $verticalLine = $N('g', {class: 'verticalLine', transform: `translate(50, ${lineTop})`}, $paths);
-  const $verticalLineSegment = $N('line', {x1: 0, x2: 0, y1: 0, y2: $axes.height}, $verticalLine);
+  $N('line', {x1: 0, x2: 0, y1: 0, y2: $axes.height}, $verticalLine);
+
   const $verticalLineLabel = $N('text', {x: 0, y: -8, 'text-anchor': 'middle'}, $verticalLine);
   $verticalLine.hide();
 
@@ -422,7 +423,7 @@ export function swimSystem($step: Step) {
   }
   ];
 
-  $graph.setFunctions.apply($graph, swimmers.map((swimmer) => {
+  $graph.setFunctions(...swimmers.map((swimmer) => {
     return (t: number) => swimmer.speed * t;
   }));
 
@@ -563,9 +564,6 @@ export function runningGraph($step: Step) {
   $videoGraph.addPlot((t: number) => Math.min(t + 88, 120.2), (t: number) => 7.10179 * t - 53.6354, '/content/functions/images/rogers_face.png', 'blue');
 }
 
-export function runningSlopeRogers($step: Step) {
-}
-
 export function runningCards($step: Step) {
   const cards = [{
     description: 'Boufaarirane is ahead of Rogers.',
@@ -627,9 +625,9 @@ export function piecewiseDefinition($step: Step) {
   const c = $graph.toViewportCoords(new Point(40, 3.5));
   const d = $graph.toViewportCoords(new Point(60, 5));
 
-  const line1 = $N('line', {id: 'line1', target: 'line1', x1: a.x, x2: b.x, y1: a.y, y2: b.y}, $plot);
-  const line2 = $N('line', {id: 'line2', target: 'line2', x1: b.x, x2: c.x, y1: b.y, y2: c.y}, $plot);
-  const line3 = $N('line', {id: 'line3', target: 'line3', x1: c.x, x2: d.x, y1: c.y, y2: d.y}, $plot);
+  const _$line1 = $N('line', {id: 'line1', target: 'line1', x1: a.x, x2: b.x, y1: a.y, y2: b.y}, $plot);
+  const _$line2 = $N('line', {id: 'line2', target: 'line2', x1: b.x, x2: c.x, y1: b.y, y2: c.y}, $plot);
+  const _$line3 = $N('line', {id: 'line3', target: 'line3', x1: c.x, x2: d.x, y1: c.y, y2: d.y}, $plot);
 }
 
 export function piecewiseEndpoints($step: Step) {
@@ -816,5 +814,5 @@ export function triathlonGraph($step: Step) {
 
 export function absoluteValue($step: Step) {
   const $pong = $step.$('x-pong') as Pong;
-  console.log('Booted pong section');
+  $pong.bindStep($step);
 }

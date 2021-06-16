@@ -4,9 +4,9 @@
 // =============================================================================
 
 
+import {Step} from '@mathigon/studio';
 import {$N, CustomElementView, ElementView, hover, register, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Point} from '@mathigon/euclid';
-import {Step} from '../types';
 import template from './relation.pug';
 
 
@@ -42,11 +42,11 @@ export class Relation extends CustomElementView {
 
     this.requireMatch = this.attr('requireMatch') == 'true';
 
-    if (this.attr('randomize') == 'true') {
-      function selectRandomElement(elements: ElementView[]) {
-        return elements[Math.floor(Math.random() * elements.length)];
-      }
+    function selectRandomElement(elements: ElementView[]) {
+      return elements[Math.floor(Math.random() * elements.length)];
+    }
 
+    if (this.attr('randomize') == 'true') {
       for (const $input of this.$inputs) {
         $input.insertAfter(selectRandomElement(this.$inputs));
       }

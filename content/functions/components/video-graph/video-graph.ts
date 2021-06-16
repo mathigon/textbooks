@@ -3,7 +3,7 @@
 // (c) Mathigon
 // =============================================================================
 
-import {Step, Video} from '@mathigon/studio';
+import {Video} from '@mathigon/studio';
 import {$N, CustomElementView, register, SVGView} from '@mathigon/boost';
 import {Point} from '@mathigon/euclid';
 import {CoordinateSystem} from '../../../shared/types';
@@ -20,13 +20,13 @@ export class VideoGraph extends CustomElementView {
 
     ready() {
       this.$video = this.$('x-video')! as Video;
-      this.$videoEl = this.$video.$('video')?._el! as Node;
+      this.$videoEl = this.$video.$('video')?._el as Node;
       this.$graph = this.$('x-coordinate-system')! as CoordinateSystem;
     }
 
     addPlot(xFunction: (t: number) => number, yFunction: (t: number) => number, avatarPath: string, color = 'red') {
       this.functions.push(yFunction);
-      this.$graph.setFunctions.apply(this.$graph, this.functions);
+      this.$graph.setFunctions(...this.functions);
 
       if (color) {
         this.colors.push(color);
