@@ -1160,7 +1160,7 @@ export function currysParadox1($step: Step) {
 
   let done = false;
   $polypad.on('move-selection', () => {
-    const allPositioned = [...$polypad.tiles.values()].every((tile, index) =>
+    const allPositioned = Array.from($polypad.tiles.values()).every((tile, index) =>
       tile.posn.equals(finalPositions[index])
     );
     if (allPositioned && !done) {
@@ -1174,7 +1174,7 @@ export function currysParadox1($step: Step) {
   const nextPoints = paradoxData.nextRelative.map(p => p.shift(tangramScale(2), tangramScale(12)));
 
   const $rearrangeSlider = $step.$('x-slider.rearrange-triangle') as Slider;
-  const tiles = [...$polypad.tiles];
+  const tiles = Array.from($polypad.tiles.values());
   const $tiles = tiles.map(t => t.$el);
   let rearranged = false;
   let slid = 0;
@@ -1242,7 +1242,7 @@ export function currysParadox3($step: Step) {
     const scale = 1 - (n / 1100);
     const factor = tangramScale(scale);
     $polypad.$svg.setAttr('viewBox', `${9 * (tangramScale(1) - factor)} ${4 * (tangramScale(1) - factor)} ${paradoxData.baseWidth * factor} ${paradoxData.baseHeight * factor}`);
-    for (const tile of $polypad.tiles) {
+    for (const tile of $polypad.tiles.values()) {
       tile.$el.$('g path.polygon-tile')?.css({'stroke-width': `${scale}px`});
     }
     $outline.css({'stroke-width': `${scale * 4}px`});
@@ -1291,7 +1291,7 @@ export function currysParadox5($step: Step) {
     const scale = 1 - (n / 1100);
     const factor = tangramScale(scale);
     $polypad.$svg.setAttr('viewBox', `${6 * (tangramScale(1) - factor)} ${5 * (tangramScale(1) - factor)} ${paradoxData.baseWidth * factor} ${paradoxData.baseHeight * factor}`);
-    for (const tile of $polypad.tiles) {
+    for (const tile of $polypad.tiles.values()) {
       tile.$el.$('g path.polygon-tile')?.css({'stroke-width': `${scale}px`});
     }
     $outline.css({'stroke-width': `${scale * 4}px`});

@@ -209,7 +209,7 @@ export function tessellationDrawing($step: Step) {
   $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
 
   $polypad.on('move-selection rotate-selection add-tile', () => {
-    const tiles = Array.from($polypad.tiles) as PolygonTile[];
+    const tiles = Array.from($polypad.tiles.values()) as PolygonTile[];
     for (const t of tiles) t.$el.removeClass('overlap');
     for (const t of tiles) t.transformed = t.path.rotate(t.rot * Math.PI / 180).translate(t.posn);
 

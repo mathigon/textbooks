@@ -786,7 +786,7 @@ export function handlePathing(path: GeoPath, base: GeoPath, heightPath: GeoPath,
   }
 }
 
-export function tangramComplete(tiles: Set<Tile>, baseOffset: number) {
+export function tangramComplete(tiles: Map<string, Tile>, baseOffset: number) {
 
   const correctStates =
     [[2, 4, 270], [4, 2, 0], [6, 4, 0], [3, 7, 0], [7, 2, 270], [4, 5, 0], [6, 6, 90]]
@@ -794,7 +794,7 @@ export function tangramComplete(tiles: Set<Tile>, baseOffset: number) {
           [tangramScale(triple[0], baseOffset), tangramScale(triple[1], baseOffset), triple[2]]);
 
   // Ensure that rotation values are within the 0-360 range for comparison purposes
-  const currentStates = [...tiles].map(tile => {
+  const currentStates = Array.from(tiles.values()).map(tile => {
     let rot = 0;
     if (tile.rot > 0) {
       rot = tile.rot % 360;

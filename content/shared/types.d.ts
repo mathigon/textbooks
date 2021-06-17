@@ -1268,8 +1268,8 @@ type TileName =
   'equation' |
   'number-card';
 export class Polypad extends CustomElementView {
-  tiles: Set<Tile>;
-  strokes: Set<Stroke>;
+  tiles: Map<string, Tile>;
+  strokes: Map<string, Tile>;
   events: EventManager;
   selection: Selection;
   $svg: SVGParentView;
