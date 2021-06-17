@@ -8,7 +8,7 @@ import {Obj} from '@mathigon/core';
 import {$N, Browser, CanvasView, ElementView, loadScript} from '@mathigon/boost';
 
 
-const url = '/content/shared/vendor/three-91.min.js';
+const url = '/content/shared/vendor/three-129.min.js';
 const renderers: Obj<THREE.WebGLRenderer> = {};
 let threePromise: Promise<any>;
 
