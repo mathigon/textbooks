@@ -156,7 +156,7 @@ Schauen wir uns nun das Sierpinski-Dreieck an. Wenn wir es um den Faktor 2 skali
 
 Aber warte ... wie kann etwas eine Dimension haben, die keine ganze Zahl ist? Es scheint unmöglich, aber dies ist nur eine der seltsamen Eigenschaften von Fraktalen. Dies ist es, was Fraktalen ihren Namen gibt: Sie haben eine __Bruchdimension__.
 
-Mit jeder Iteration entfernen wir einen Teil des Bereichs des Sierpinski-Dreiecks. Wenn wir dies unendlich oft tun könnten, wäre tatsächlich kein Bereich mehr vorhanden. Deshalb liegt das Sierpinski-Dreieck zwischen einem zweidimensionalen Bereich und einer eindimensionalen Linie.
+Mit jeder Iteration entfernen wir einen Teil der Fläche des Sierpinski-Dreiecks. Wenn wir dies unendlich oft tun könnten, wäre tatsächlich keine Fläche mehr vorhanden. Deshalb liegt das Sierpinski-Dreieck zwischen einem zweidimensionalen Fläche und einer eindimensionalen Linie.
 
 ::: .theorem
 
@@ -240,7 +240,7 @@ Wenn wir ein Kantensegment der Koch-Schneeflocke um den Faktor 3 skalieren, [[ve
 
 ::: tab
 
-#### Bereich _{span.check(when="blank-6")}_
+#### Fläche _{span.check(when="blank-6")}_
 
 Das Erstellen der Koch-Schneeflocken ist fast wie eine [rekursive Sequenz](gloss:sequence-recursive): Wir kennen die Startform (ein Dreieck) und wissen, wie man von einem Term zum nächsten gelangt (indem wir an jeder Kante weitere Dreiecke hinzufügen):
 
