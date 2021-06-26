@@ -114,7 +114,7 @@ can remove cities by tapping them, and you can add cities by clicking anywhere o
 
 ---
 
-## MathsConf 23
+## ISTE Live
 
 > id: maps-v2
 > title: Map Colouring
