@@ -550,6 +550,28 @@ discriminant:
     Wenn die Diskriminante größer als 0 ist, gibt es zwei Lösungen. Wenn sie gleich 0 ist, gibt es
     nur eine Lösung. Wenn sie kleiner als 0 ist, gibt es keine (reellen) Lösungen.
 
+distributive:
+  title: Distributivgesetz
+  text: Eine Operation • ist __distributiv__ mit einer anderen Operation * verknüpft, wenn
+    `a•(b*c) = a•b * a•c`. Zum Beispiel gilt das Distributivgesetz bei der Multiplikation (×)
+    von Zahlen die durch Addition (+) verknüpft sind. Wir kennen das vom Klammern auflösen
+    oder Herausheben.
+
+divisibility-tests:
+  title: Teilbarkeitsregeln
+  text: |
+    __Teilbarkeitsregeln__ können dir helfen, festzustellen, ob eine Zahl
+    durch eine andere teilbar ist.
+
+    * Eine Zahl ist durch __2__ teilbar, wenn sie gerade ist.
+    * Eine Zahl ist durch __3__ teilbar, wenn ihre Quersumme durch 3 teilbar ist.
+    * Eine Zahl ist durch __4__ teilbar, wenn ihre letzten beiden Ziffern durch 4 teilbar sind.
+    * Eine Zahl ist durch __5__ teilbar, wenn ihre letzte Ziffer eine 0 oder eine 5 ist.
+    * Eine Zahl ist durch __6__ teilbar, wenn sie sowohl durch 3 als auch durch 2 teilbar ist.
+    * Es gibt keine einfache Teilbarkeitsregel für 7.
+    * Eine Zahl ist durch __8__ teilbar, wenn ihre letzten drei Ziffern durch 8 teilbar sind.
+    * Eine Zahl ist durch __9__ teilbar, wenn ihre Quersumme durch 9 teilbar ist.
+    * Eine Zahl ist durch __10__ teilbar, wenn ihre letzte Ziffer eine 0 ist.
 dna:
   title: DNA
   text: |
@@ -566,6 +588,11 @@ dodecahedron:
     Das __Dodekaeder__ ist ein platonischer Körper und aus besteht 12 Flächen, die alle regelmäßige
     Fünfecke sind. Er hat 20 Eckpunkte und 30 Kanten.
   link: /course/polyhedra/platonic#platonic-overview
+
+domain:
+  title: Definitionsmenge
+  text: Die __Definitionsmenge__ einer Funktion oder Verknüpfung ist die Menge aller möglichen
+    _Eingabewerte_ (oft auf der horizontalen Achse in einem Koordinatensystem dargestellt).
 
 dot-annihilation:
   title: Vernichtung
@@ -601,6 +628,18 @@ equation:
   text: |
     Eine __Gleichung__ ist eine mathematische Aussage, die durch die Verbindung von zwei oder mehr
     Ausdrücken mit dem __Gleichheitszeichen__ `=` erzeugt wird. Sie zeigt an, dass alle diese
+    Ausdrücke den gleichen Wert haben.
+
+error-correcting-code:
+  title: Fehlerkorrigierender Code
+  text: |
+    Ein __fehlerkorrigierender Code__ ist eine Möglichkeit, eine Nachricht so zu kodieren, dass der Empfänger
+    erkennen kann, ob bei der Übertragung ein Fehler aufgetreten ist, und diesen dann auch korrigieren kann.
+
+equation:
+  title: Gleichung
+  text: Eine __Gleichung__ ist eine mathematische Aussage, die durch die Verbindung von zwei oder
+    mehreren Ausdrücken mit dem __Gleichheitszeichen__ `=` gebildet wird und gibt an, dass alle diese
     Ausdrücke den gleichen Wert haben.
 
 equilateral-triangle:
@@ -681,11 +720,21 @@ formula:
 
 fractal:
   title: Fraktal
-  text: |
-    Ein __Fraktal__ ist eine _selbstähnliche_ geometrische Form. Das bedeutet, dass sie bei
-    verschiedenen Vergrößerungsstufen gleich aussieht. Fraktale können durch unendliche Wiederholung
-    einer Vorgehensweise oder Anwendung einer Gleichung erzeugt werden.
+  text: Ein __Fraktal__ ist eine geometrische Form, die eine _fraktale Dimension_ besitzt.
+    Viele berühmte Fraktale sind _selbstähnlich_, was bedeutet, dass sie aus kleineren Kopien
+    von sich selbst bestehen. Fraktale enthalten Muster in allen Vergrößerungsstufen und können durch 
+    unendliche Wiederholung einer Vorgehensweise oder Iteration einer Gleichung erzeugt werden.
   link: /course/fractals
+
+fraction:
+  title: Bruch
+  text: |
+    Ein __Bruch__ stellt Teile eines Ganzen dar. Er wird geschrieben als `a/b`,
+    wobei _a_ der __Zähler__ und _b_ der __Nenner__ genannt wird. Man kann ihn auch
+    als Division `a ÷ b` schreiben.
+
+    Der Nenner _b_ ist die Anzahl der gleichgroßen Teile, in die das Ganze geteilt wurde.
+    Der Zähler _a_ gibt an, wie viele von diesen Teile vorhanden sind (gezählt werden können).
 
 fta:
   title: Fundamentalsatz der Arithmetik
@@ -880,10 +929,37 @@ integer:
     Die __Ganzen Zahlen__ sind die positiven und negativen Zahlen einschließlich Null: …, -3, -2,
     -1, 0, 1, 2, 3, 3, … Sie werden oft mit dem Symbol `ZZ` bezeichnet.
 
+intercept:
+  title: Achsenabschnitt
+  text: Ein __Achsenabschnitt__ ist der Punkt, an dem ein Graph eine Achse schneidet. Er wird oft nach der Achse benannt, so ist der y-Achsenabschnitt der Schnittpunkt zwischen dem Graphen und der y-Achse.
+  ## Include graph with x- and y-intercepts highlighted.
+
 internal-angle:
   title: Innenwinkel
   text: Die __Innenwinkel__ eines Vielecks sind die Winkel auf der Innenseite eines jeden Eckpunkts.
   image: internal-angle.svg
+
+interval:
+  title: Intervall
+  text: |
+    Ein __Intervall__ ist eine Menge von Zahlen zwischen zwei Endpunkten. Die Endpunkte
+    können entweder im Intervall enthalten oder nicht.
+
+    _Geschlossene_ Intervalle schließen die Endpunkte ein. (z.B. 3<=x<=6)
+
+    _Offene_ Intervalle schließen die Endpunkte aus. (z.B. 3<x<6)
+
+    _Halboffene_ oder _Halbgeschlossene_ Intervalle schließen einen Endpunkt ein und den anderen aus.
+    (z.B. 3<=x<6 oder 3<x<=6)
+
+inverse-function:
+  title: Umkehrfunktion
+  text: Eine __Umkehrfunktion__ ist die Beziehung, die die Zielmenge einer Funktion auf ihre Definitionsmenge abbildet. Nicht alle Umkehrfunktionen sind selbst Funktionen. Tatsächlich haben nur Eins-zu-Eins-Funktionen Umkehrfunktionen, die selbst als Funktionen gelten.
+
+inverse-operation:
+  title: Umkehroperation
+  text: Eine __Umkehroperation__ macht die vorherige Operation rückgängig. Eine Möglichkeit zu prüfen, ob eine Umkehroperation gilt, ist festzustellen, ob sich ein Kehrwert ergibt. Zum Beispiel ergibt die Kombination von 3 und -3 0, das neutrale Element der Addition. Ebenso ergibt die Kombination von 3 und 1/3 1, das neutrale Element der Multiplikation.
+  ## Determine linking structure among glossary entries. Or change the technical components to be more approachable.
 
 irrational-numbers:
   title: Irrationale Zahlen
@@ -1398,6 +1474,16 @@ pyramid:
 protractor:
   title: Winkelmesser
   text: Ein __Winkelmesser__ ist ein Werkzeug, um einen Winkel in Grad zu messen.
+
+punch-card:
+  title: Lochkarte
+  text: |
+    Lochkarte:
+  Titel: Lochkarte
+  Text: |
+    Eine __Lochkarte__ ist eine Karte aus steifem Papier, in die Löcher gestanzt werden können, um
+    Computerdaten oder Befehle abzuspeichern. Sie wurden in ein Kartenlesegerät eingelegt und
+    und dort in elektrische Signale umgewandelt, die vom Computer verarbeitet wurden.
 
 pythagoras-theorem:
   title: Der Satz des Pythagoras
