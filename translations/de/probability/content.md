@@ -272,13 +272,13 @@ Diese Tabelle zeigt alle möglichen Ergebnisse:
 Das wahrscheinlichste Ergebnis beim Würfeln mit zwei Würfeln ist _{span.dice.outline}7_. Es
 gibt [[6]] Ergebnisse, bei denen die Summe 7 beträgt, und insgesamt [[36]] Ergebnisse,
 _{span.reveal(when="blank-0 blank-1")}so dass die Wahrscheinlichkeit, eine 7 zu erhalten,
-`6/36 = 0,1666` beträgt._
+`6/36 = "0,1666"` beträgt._
 
 ---
 > id: future-2
 
 Die unwahrscheinlichsten Ergebnisse sind _{span.dice.outline}2_ und _{span.dice.outline}12_,
-jeweils mit einer Wahrscheinlichkeit von `1/36 = 0,0277`.
+jeweils mit einer Wahrscheinlichkeit von `1/36 = "0,0277"`.
 
 Es ist unmöglich, das Ergebnis eines einzigen Münzwurfs oder eines einmaligen Würfelns vorherzusagen.
 Mit Hilfe der Wahrscheinlichkeit können wir jedoch das Ergebnis _vieler_

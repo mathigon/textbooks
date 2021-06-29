@@ -625,9 +625,8 @@ ellipse:
 
 equation:
   title: Gleichung
-  text: |
-    Eine __Gleichung__ ist eine mathematische Aussage, die durch die Verbindung von zwei oder mehr
-    Ausdrücken mit dem __Gleichheitszeichen__ `=` erzeugt wird. Sie zeigt an, dass alle diese
+  text: Eine __Gleichung__ ist eine mathematische Aussage, die durch die Verbindung von zwei oder
+    mehreren Ausdrücken mit dem __Gleichheitszeichen__ `=` gebildet wird und gibt an, dass alle diese
     Ausdrücke den gleichen Wert haben.
 
 error-correcting-code:
@@ -635,12 +634,6 @@ error-correcting-code:
   text: |
     Ein __fehlerkorrigierender Code__ ist eine Möglichkeit, eine Nachricht so zu kodieren, dass der Empfänger
     erkennen kann, ob bei der Übertragung ein Fehler aufgetreten ist, und diesen dann auch korrigieren kann.
-
-equation:
-  title: Gleichung
-  text: Eine __Gleichung__ ist eine mathematische Aussage, die durch die Verbindung von zwei oder
-    mehreren Ausdrücken mit dem __Gleichheitszeichen__ `=` gebildet wird und gibt an, dass alle diese
-    Ausdrücke den gleichen Wert haben.
 
 equilateral-triangle:
   title: Gleichseitiges Dreieck
@@ -722,7 +715,7 @@ fractal:
   title: Fraktal
   text: Ein __Fraktal__ ist eine geometrische Form, die eine _fraktale Dimension_ besitzt.
     Viele berühmte Fraktale sind _selbstähnlich_, was bedeutet, dass sie aus kleineren Kopien
-    von sich selbst bestehen. Fraktale enthalten Muster in allen Vergrößerungsstufen und können durch 
+    von sich selbst bestehen. Fraktale enthalten Muster in allen Vergrößerungsstufen und können durch
     unendliche Wiederholung einer Vorgehensweise oder Iteration einer Gleichung erzeugt werden.
   link: /course/fractals
 

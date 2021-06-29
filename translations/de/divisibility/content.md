@@ -36,7 +36,7 @@
               td(colspan=i)
 
 Inzwischen solltest du mit der Addition, Subtraktion und Multiplikation
-von ganzen Zahlen vertraut sein. Die Division ist etwas anders, da man nicht immer eine ganze
+von ganzen Zahlen vertraut sein. Die Division ist etwas anders, da man nicht immer eine ganze
 Zahl durch eine andere teilen kann. Zum Beispiel ist 17 geteilt durch 3 keine ganze Zahl - sie liegt
 irgendwo zwischen 5 und 6. Du musst entweder einen Rest (2) angeben oder die Antwort als Dezimalzahl (5,66)
 ausdrücken.
@@ -622,12 +622,12 @@ werden __Primzahlzwillinge__ genannt.
         span.number-ball 2029
       | ,
       span.twin
-        span.number-ball.blue 108,377
-        span.number-ball.blue 108,379
+        span.number-ball.blue 108.377
+        span.number-ball.blue 108.379
       | ,
       span.twin
-        span.number-ball.green 1,523,651
-        span.number-ball.green 1,523,653
+        span.number-ball.green 1.523.651
+        span.number-ball.green 1.523.653
 
 Das größte bekannte Paar von Primzahlzwillingen hat unglaubliche 58.711 Ziffern! Aber gibt
 es unendlich viele Primzahlzwillinge, so wie es unendlich viele Primzahlen gibt?

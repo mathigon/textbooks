@@ -268,7 +268,7 @@ wären die obigen Näherungen perfekt - und sie ergeben beide die gleiche Formel
 
 ### Berechnung von Pi
 
-Wie du oben gesehen hast, ist `π = 3,1415926…` keine einfache ganze Zahl, und ihre
+Wie du oben gesehen hast, ist `π = "3,1415926…"` keine einfache ganze Zahl, und ihre
 Dezimalstellen gehen ewig weiter, ohne dass sich ein Muster wiederholt. Zahlen mit dieser Eigenschaft
 werden als [__irrationale Zahlen__](gloss:irrational-numbers) bezeichnet, und das bedeutet, dass `π`
 nicht als einfacher Bruch `a/b` ausgedrückt werden kann.
@@ -297,7 +297,7 @@ Ziffern wäre etwa 400\ km dick - das ist die Höhe, in der die
 [Internationale Raumstation](gloss:iss) die Erde umkreist!
 
 Natürlich musst du dir nicht so viele Ziffern von Pi merken. Tatsächlich ist der
-Bruch `22/7 = 3,142…` eine gute Annäherung.
+Bruch `22/7 = "3,142…"` eine gute Annäherung.
 
 :::
 
@@ -642,7 +642,7 @@ Radius multiplizieren, um die tatsächliche Drehgeschwindigkeit zu erhalten.
 
 Hier ist ein weiteres Beispiel: Dein Auto hat Reifen mit einem Radius von 0,25\ m. Wenn du mit einer Geschwindigkeit von 20\ m/s
 fährst, drehen sich die Reifen deines Autos mit [[`20/0.25 =
-80`|`20 xx 0.25 = 5`|`0.25/50 = 0,0125`]] Radiant pro Sekunde
+80`|`20 xx 0.25 = 5`|`0.25/50 = "0,0125"`]] Radiant pro Sekunde
 _{span.reveal(when="blank-0")}(oder `80/(2pi) = 13` Umdrehungen pro Sekunde)_
 
 ---

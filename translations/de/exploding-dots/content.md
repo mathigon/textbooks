@@ -390,13 +390,13 @@ können und dabei eine ganze Zahl erhalten, schreiben wir
 
 {.text-center} `abs(a)_(zehn) = 1/10^k`
 
-Zum Beispiel, `abs(850)_(zehn) = 1/(10^1) = 0,1` und `abs(8500)_(zehn) = 1/(10^2) = 0,01`
+Zum Beispiel, `abs(850)_(zehn) = 1/(10^1) = 0,1` und `abs(8500)_(zehn) = 1/(10^2) = "0,01"`
 und `abs(850000)_(zehn) =` [[0,0001]].
 
 ---
 
 Wir können auch den Abstand zwischen zwei beliebigen Zahlen messen. Zum Beispiel ist der
-Abstand zwischen 3 und 33 gleich `abs(33−3)_(zehn) = abs(30)_(zehn) = 1/(10^1) = 0,1`.
+Abstand zwischen 3 und 33 gleich `abs(33−3)_(zehn) = abs(30)_(zehn) = 1/(10^1) = "0,1"`.
 
 Mit dieser neuen Art, den Abstand zu messen, ist 1, 10, 100, 1000, … eine Zahlenfolge,
 die sich immer mehr [[Null|1|-1|unendlich]] annähert. In ähnlicher Weise kommt 9, 99, 999,
