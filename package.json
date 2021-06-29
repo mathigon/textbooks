@@ -21,7 +21,7 @@
   "dependencies": {
     "@mathigon/boost": "0.6.17",
     "@mathigon/core": "0.6.7",
-    "@mathigon/euclid": "0.6.11",
+    "@mathigon/euclid": "0.6.12",
     "@mathigon/fermat": "0.6.4",
     "@mathigon/hilbert": "0.6.6",
     "@mathigon/studio": "0.1.10",
