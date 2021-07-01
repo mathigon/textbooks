@@ -23,5 +23,5 @@
     "groupName": "Versioning",
     "automerge": true
   }],
-  "ignoreDeps": ["@types/three"]
+  "ignoreDeps": ["@types/three", "@types/d3", "@types/topojson"]
 }
