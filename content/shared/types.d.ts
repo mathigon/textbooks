@@ -631,7 +631,6 @@ export class GeoTile extends Tile {
   hover(t?: boolean): void;
   transform(): void;
   setTransform(): void;
-  setColour(colour: string): void;
   copy(copyCache?: Record<string, GeoTile>): GeoTile|undefined;
   delete(): void;
   private moveStartValue?;
@@ -650,7 +649,6 @@ export class PolygonTile extends Tile {
   protected $outline: SVGView;
   constructor(shape: string, $parent: Polypad);
   static makeThumbnail(shape: string, $el: ElementView, $parent: Polypad, colour?: string): void;
-  setColour(colour: string): void;
   flip(center?: Point): void;
   static action(name: string, tiles: Set<PolygonTile>, center: Point): void;
 }
@@ -754,7 +752,6 @@ export class NumberTile extends Tile {
   private readonly $handle?;
   constructor(options: string, $parent: Polypad);
   setWidth(width: number, silent?: boolean): void;
-  setColour(colour: string): void;
   static makeThumbnail(options: string, $el: ElementView): void;
   getSnapPoints(): Point[];
   split(): void;
@@ -782,7 +779,6 @@ export class NumberLine extends Tile {
   getSnapPoints(): Point[];
   getSnapLines(): Segment[];
   protected customTransform(): void;
-  setColour(colour: string): void;
   static makeThumbnail(options: string, $el: ElementView): void;
 }
 export class PrimeDisk extends Tile {
@@ -797,7 +793,6 @@ export class PrimeDisk extends Tile {
   setValue(n: number): void;
   multiply(n: number): void;
   getSegment(i: number): SVGView;
-  setColour(colour: string): void;
   private findNearbyTile;
   private setCollision;
   move(shift?: Point): void;
@@ -816,7 +811,6 @@ export class DecimalGrid extends Tile {
   constructor(options: string, $parent: Polypad);
   setDimensions(width: number, height: number, size: number): void;
   private drawRect;
-  setColour(colour: string): void;
   static makeThumbnail(options: string, $el: ElementView): void;
 }
 export class DotTile extends Tile {
@@ -827,7 +821,6 @@ export class DotTile extends Tile {
   cell?: DotMachineCell;
   path: Circle;
   constructor(type: string, $parent: Polypad);
-  setColour(colour: string): void;
   getSnapPoints(): never[];
   private getCell;
   moveEnd(): DotMachineCell|undefined;
@@ -858,7 +851,6 @@ export class DotMachine extends Tile {
   deselect(): void;
   private draw;
   getSnapPoints(): never[];
-  setColour(colour: string): void;
   moveEnd(): void;
   private rearrangeDots;
   static makeThumbnail(options: string, $el: ElementView): void;
@@ -876,7 +868,6 @@ export class DotMachineCell {
   constructor(machine: DotMachine, index?: number);
   setBase(base: number): void;
   delete(): void;
-  setColour(c: string): void;
   hover(show?: boolean): void;
   contains(p: Point): boolean;
   clear(): void;
@@ -898,7 +889,6 @@ export class FractionBar extends Tile {
   private readonly $handle;
   constructor(options: string, $parent: Polypad);
   setCount(count: number): void;
-  setColour(colour: string): void;
   static makeThumbnail(options: string, $el: ElementView): void;
   getSnapPoints(): Point[];
   split(): void;
@@ -912,7 +902,6 @@ export class FractionCircle extends Tile {
   rotateAroundOrigin: boolean;
   path: Circle|Sector;
   constructor(fraction: string, $parent: Polypad);
-  setColour(colour: string): void;
   static makeThumbnail(fraction: string, $el: ElementView): void;
 }
 export class AlgebraTile extends PolygonTile {
@@ -920,7 +909,6 @@ export class AlgebraTile extends PolygonTile {
   protected $text: SVGView;
   private collision?;
   constructor(type: string, $parent: Polypad);
-  setColour(colour?: string): void;
   protected customTransform(): void;
   private setCollision;
   move(shift?: Point): void;
@@ -938,7 +926,6 @@ export class Grid extends Tile {
   path: Polygon;
   constructor(options: string, $parent: Polypad);
   setDimensions(width: number, height: number): void;
-  setColour(colour: string): void;
   static makeThumbnail(options: string, $el: ElementView): void;
 }
 export class Alert extends CustomElementView {
@@ -969,7 +956,6 @@ export class Balance extends Tile {
   customTransform(): void;
   getSnapPoints(): never[];
   getSnapLines(): Segment[];
-  setColour(colour: string): void;
   static makeThumbnail(options: string, $el: ElementView): void;
   static action(name: string, tiles: Set<Balance>): Promise<void>;
 }
@@ -1047,7 +1033,6 @@ export class Coin extends Tile {
   private isAnimating;
   constructor(side: string, $parent: Polypad);
   setValue(n: number): void;
-  setColour(c: string): void;
   roll(duration?: number): Promise<void>;
   static makeThumbnail(shape: string, $el: ElementView): void;
 }
@@ -1059,7 +1044,6 @@ export class Dice extends Tile {
   private isAnimating;
   private faces;
   constructor(options: string, $parent: Polypad);
-  setColour(c: string): void;
   setValue(n: number): void;
   roll(duration?: number): Promise<void>;
   static makeThumbnail(shape: string, $el: ElementView): void;
@@ -1077,7 +1061,6 @@ export class Spinner extends Tile {
   constructor(options: string, $parent: Polypad);
   protected setupHandles(): void;
   drawSectors(sectors: number): void;
-  setColour(colour: string): void;
   setValue(angle: number): void;
   roll(duration?: number): Promise<void>;
   static makeThumbnail(shape: string, $el: ElementView): void;
@@ -1120,7 +1103,6 @@ export class TextTile extends Tile {
   click(): void;
   updateOutline(): void;
   updateText(text: string): void;
-  setColour(colour: string): void;
   focus(): void;
   blur(): void;
 }
@@ -1327,7 +1309,6 @@ export class Polypad extends CustomElementView {
   newTile(type: TileName, options: string): Tile;
   setViewport(origin: Point, zoom?: number, zoomCenter?: Point): void;
   bindSource($el: ElementView, type: string, options: string, $overlay?: ElementView, colour?: string): void;
-  setColour(c?: string): void;
   setGrid(options: string): undefined;
   setActiveTool(tool: ToolType): void;
   clear(resetViewport?: boolean): void;
