@@ -1,5 +1,5 @@
 import {$N, animate, AnimationResponse, EventCallback, slide, SVGParentView, SVGView} from '@mathigon/boost';
-import {tabulate, toLinkedList} from '@mathigon/core';
+import {tabulate} from '@mathigon/core';
 import {Angle, Arc, GeoElement, GeoShape, intersections, Line, Point, Polygon, Polyline, Rectangle, Segment} from '@mathigon/euclid';
 import {nearlyEquals} from '@mathigon/fermat';
 import {Step} from '@mathigon/studio';
@@ -70,10 +70,6 @@ export function length(pl: Polyline) {
   return pl.edges.reduce((totalLength, edge) => {
     return totalLength + edge.length;
   }, 0);
-}
-
-function moveOnLine(p: Point, amount: number, l: Line) {
-  return (new Segment(p, p.shift(amount, 0))).rotate(l.angle, p).p2;
 }
 
 function convexHull(points: Point[]) {
@@ -169,66 +165,6 @@ export class HelperPoly extends Polygon {
   }
   moveTo(loc: Point) {
     return this.translate(loc.subtract(this.centroid));
-  }
-  /**
-   * The intersection of this and another polygon, calculated using the
-   * Weiler–Atherton clipping algorithm
-   */
-  intersect(polygon: Polygon) {
-    // TODO Support intersections with multiple disjoint overlapping areas.
-    // TODO Support segments intersecting at their endpoints
-    const points = [toLinkedList<Point>(this.oriented.points),
-      toLinkedList<Point>(polygon.oriented.points)];
-
-    const max = this.points.length + polygon.points.length;
-    const result: Point[] = [];
-
-    let which = 0;
-    let active = points[which].find(p => polygon.contains(p.val))!;
-    if (!active) return undefined;  // No intersection
-
-    while (active.val !== result[0] && result.length < max) {
-      result.push(active.val);
-
-      const nextEdge = new Segment(active.val, active.next!.val);
-      active = active.next!;
-
-      for (const p of points[1 - which]) {
-        const testEdge = new Segment(p.val, p.next!.val);
-        const intersect = intersections(nextEdge, testEdge)[0];
-        if (intersect) {
-          which = 1 - which;  // Switch active polygon
-          active = {val: intersect, next: p.next};
-          break;
-        }
-      }
-    }
-
-    return new Polygon(...result);
-  }
-  helperCut(along: Line): [HelperPoly, HelperPoly] | undefined {
-    const [interA, interB] = intersections(along, this) as [Point, Point];
-    const extendAmount = this.radius + 200;
-    const baseA = moveOnLine(interA, -extendAmount, along);
-    const baseB = moveOnLine(interB, extendAmount, along);
-    const perpA = along.perpendicular(baseA);
-    const perpB = along.perpendicular(baseB);
-    const boxA = new Polygon(
-        baseA,
-        baseB,
-        moveOnLine(baseB, extendAmount, perpB),
-        moveOnLine(baseA, extendAmount, perpA)
-    );
-    const boxB = new Polygon(
-        baseA,
-        baseB,
-        moveOnLine(baseB, -extendAmount, perpB),
-        moveOnLine(baseA, -extendAmount, perpA)
-    );
-    const polyA = this.intersect(boxA);
-    const polyB = this.intersect(boxB);
-    return (polyA == undefined || polyB == undefined) ? undefined :
-      [new HelperPoly(...polyA.points), new HelperPoly(...polyB.points)];
   }
   containsPoly(other: Polygon) {
     const t = new Polygon(...this.points);
@@ -658,18 +594,9 @@ export class RenderedGeopadPoly {
       edge.redraw(this.poly.edges[index]);
     }
   }
-  cut(along: Line, options?: RenderedOptions): [RenderedGeopadPoly, RenderedGeopadPoly] | undefined {
-    const result = this.poly.helperCut(along);
-    if (result != undefined) {
-      const [a, b] = result;
-      this.erase();
-      return [
-        new RenderedGeopadPoly(a.points, this.$geopad, options),
-        new RenderedGeopadPoly(b.points, this.$geopad, options)
-      ];
-    } else {
-      return undefined;
-    }
+  cut(_along: Line, _options?: RenderedOptions): [RenderedGeopadPoly, RenderedGeopadPoly] | undefined {
+    // TODO Fix this!
+    return undefined;
   }
 }
 
