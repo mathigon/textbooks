@@ -635,6 +635,12 @@ error-correcting-code:
     Ein __fehlerkorrigierender Code__ ist eine Möglichkeit, eine Nachricht so zu kodieren, dass der Empfänger
     erkennen kann, ob bei der Übertragung ein Fehler aufgetreten ist, und diesen dann auch korrigieren kann.
 
+error-detecting-code:
+  title: Fehlererkennender Code
+  text: |
+    Ein __fehlererkennender Code__ ist eine Möglichkeit, eine Nachricht so zu kodieren, dass der Empfänger
+    erkennen kann, ob bei der Übertragung ein Fehler aufgetreten ist.
+
 equilateral-triangle:
   title: Gleichseitiges Dreieck
   text: |
@@ -854,6 +860,12 @@ hailstone-sequence:
     * Wenn `x_n` gerade ist, `x_(n+1) = x_n / 2`.
     * Wenn `x_n` ungerade ist, `x_(n+1) = 3 * x_n + 1`
   link: /course/sequences/special#hailstone
+
+hamming-code:
+  title: Hamming Code
+  text: |
+    Ein __Hamming-Code__ ist ein fehlerkorrigierender Code, der verwendet werden kann, um
+    Fehler in einer binären Zeichenfolge zu finden und zu korrigieren.
 
 heptagon:
   title: Heptagon (Siebeneck)
@@ -1301,6 +1313,14 @@ pi:
     3,14159265…
   link: /course/circles/introduction#pi-definition
 
+piecewise:
+  title: Abschnitssweise definierte Funktion
+  text: |
+    Eine __abschnittsweise definierte Funktion__ ist eine Funktion, die unterschiedliche Zuordnungsvorschriften für
+    verschiedene Teile ihres Definitionsbereichs verwendet. Zum Beispiel,
+
+    {.text-center} `f(x)= {(3-x, x<10), (x^3, 10<=x<=40), (5, x>40)}`
+
 platonic-solid:
   title: Platonischer Körper
   text: |
@@ -1464,6 +1484,12 @@ pyramid:
     Scheitelpunkt liegt direkt über der Mitte dieser Grundfläche.
   image: pyramid.svg
 
+pyramid-height:
+  title: Höhe einer Pyramide
+  text: |
+    Die __Höhe__ einer Pyramide ist der senkrechte Abstand zwischen dem Scheitelpunkt und der Basis
+    einer Pyramide.
+
 protractor:
   title: Winkelmesser
   text: Ein __Winkelmesser__ ist ein Werkzeug, um einen Winkel in Grad zu messen.
@@ -1550,6 +1576,11 @@ radioactive:
     Der __radioaktive Zerfall__ ist ein physikalischer Prozess, bei dem instabile Atome
     auseinanderbrechen und Energie freisetzen.
 
+range:
+  title: Wertebereich
+  text: Der __Wertebereich__ einer Funktion oder Zuordnung ist die Menge aller möglichen
+    _Ausgangswerte_ (oft auf der vertikalen Achse in einem Koordinatensystem dargestellt).
+
 rational-numbers:
   title: Rationale Zahlen
   text: |
@@ -1598,6 +1629,17 @@ regular-polygon:
     gleiche Größe.
   image: regular-polygon.svg
   link: /course/polyhedra/polygons#regular-polygons
+
+relation:
+  title: Relation
+  text: |
+    Eine __Relation__ dient der Darstellung von Verbindungen zwischen den Elementen in
+    zwei verschiedenen Mengen. Sie ist eine Vorschrift, die jedem Eingangswert aus der ersten
+    Menge einen oder mehrere Ausgangswerte aus der zweiten Menge zuordnet.
+
+    Wir können eine Relation als eine Menge von geordneten Paaren (_x_, _y_) schreiben, wobei _x_
+    ein Element aus der ersten Menge (genannt _Definitionsbereich_) und _y_ ein Element
+    aus der zweiten Menge (genannt _Wertebereich_) ist.
 
 rhombus:
   title: Raute
@@ -1681,6 +1723,12 @@ scientific-notation:
     a < 10`.
 
     Zum Beispiel könnte die Zahl 4600 als `4,6 × 10^3` geschrieben werden.
+
+secant:
+  title: Secant Line
+  text: Eine Sekante ist eine Gerade, die eine Kurve mindestens zweimal schneidet, zB die 
+    Gerade AB schneidet den Kreis P in zwei Punkten.
+  # TODO Insert described diagram
 
 set:
   title: Sets
@@ -1793,6 +1841,11 @@ square-numbers:
     kann. Die ersten Quadratzahlen sind 1, 4, 9, 16, 25, …
   link: /course/sequences/introduction#squares
 
+step-function:
+  title: Stufenfunktion
+  text: Eine Stufenfunktion ist eine abschnittweise definierte Funktion, die nur konstante Zuordnungsvorschriften (Komponenten) hat. Zum Beispiel, f(x)={(3,0<=x<4),(-2, 4<=x<5),(0, 6<=x<10):}
+  ## Include accompanying graph.
+
 subdivision:
   title: Unterteilungsgraphen
   text: |
@@ -1825,6 +1878,17 @@ symmetry-group:
     Eine __Symmetriegruppe__ eines geometrischen Objekts ist die Sammlung aller seiner
     _symmetrieerhaltenden Abbildungen_.
   link: /course/transformations/symmetry-groups#groups-1
+
+system-of-equations:
+  title: Gleichungssystem
+  text: |
+    Ein __Gleichungssystem__ sind zwei oder mehr Gleichungen, die gemeinsame
+    Variablen haben. Zum Beispiel,
+
+    {.text-center} `4x+y=20`<br>`x+y=-1`
+
+    Typischerweise werden Gleichungssysteme aufgestellt, um eine Lösung für jede der 
+    Variablen zu finden.
 
 tan:
   title: Tangens
@@ -1880,6 +1944,12 @@ tetrahedron:
     Dreiecke sind. Es hat vier Ecken und sechs Kanten.
   link: /course/polyhedra/platonic#platonic-overview
 
+tetris:
+  title: Tetris
+  text: __Tetris__ ist ein beliebtes Videospiel, das erstmals 1984 veröffentlicht wurde.
+    Die Spieler müssen fallende Tetromino-Steine (Formen, die aus vier
+    verbundenen Quadraten) bewegen, um ganze Reihen zu vervollständigen.
+
 theorem:
   title: Theorem
   text: |
@@ -1901,6 +1971,12 @@ transformation-image:
     __Abbild__bezeichnet. Das wird oft durch das Anhängen eines ' an das Ende ihrer Bezeichnung
     gekennzeichnet.
   link: /course/transformations/rigid#transformations
+
+transistor:
+  title: Transistor
+  text: Ein __Transistor__ ist ein kleines elektronisches Bauteil, das aus
+    Halbleitern wie __Silizium_ besteht. Er wurde erstmals 1926 vorgestellt, und ist der
+    Grundbaustein der _integrierten Schaltungen_ in Computern.
 
 translation:
   title: Verschiebung
