@@ -1451,7 +1451,7 @@ pyramid:
 pyramid-height:
   title: height of a Pyramid
   text: |
-    The __height__ of __altitude__ of a pyramid is the perpendicular distance
+    The __height__ or __altitude__ of a pyramid is the perpendicular distance
     between the apex and the base of a pyramid.
 
 protractor:
@@ -1784,7 +1784,7 @@ square-numbers:
 
 step-function:
   title: Step Function
-  test: A step function is a piecewise function that has only constant rules (components). For example, f(x)={(3,0<=x<4),(-2, 4<=x<5),(0, 6<=x<10):}
+  text: A step function is a piecewise function that has only constant rules (components). For example, f(x)={(3,0<=x<4),(-2, 4<=x<5),(0, 6<=x<10):}
   ## Include accompanying graph.
 
 subdivision:
@@ -1930,7 +1930,7 @@ translational-symmetry:
   link: /course/transformations/symmetry-groups#symmetry-groups-1
 
 transversal:
-  title: Traversal
+  title: Transversal
   text: A __transversal__ is a line that intersects two other lines.
 
 trapezium:
