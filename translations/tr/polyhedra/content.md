@@ -1,4 +1,4 @@
-# Çokgenler ve Çokyüzlü
+# Çokgenler ve Çokyüzlüler
 
 ## Çokgenler
 
@@ -8,7 +8,7 @@
 > level: Intermediate
 > next: circles
 
-[__Çokgen__](gloss:polygon) , yalnızca düz kenarları olan kapalı, düz bir şekildir. Çokgenlerin herhangi bir sayıda kenarı ve açısı olabilir, ancak kenarlar kavisli olamaz. Aşağıdaki şekillerden hangileri çokgenlerdir?
+[__Çokgen__](gloss:polygon) , yalnızca düz kenarları olan kapalı, düzlemsel bir şekildir. Çokgenlerin herhangi bir sayıda kenarı ve açısı olabilir, ancak kenarlar kavisli olamaz. Aşağıdaki şekillerden hangileri çokgendir?
 
     x-picker
       .item#item1: include svg/polygons/polygon-1.svg
@@ -23,7 +23,7 @@
 ---
 > id: polygons-1
 
-Kaç tarafına bağlı olarak çokgenlere farklı isimler veriyoruz:
+Kaç kenarı olduğuna bağlı olarak çokgenlere farklı isimler veriyoruz:
 
     .row.padded-thin
       div(style="width: 100px")
@@ -162,9 +162,9 @@ Bu çokgenlerden hangileri içbükeydir?
 ---
 > id: regular-polygons
 
-### Düzenli Çokgenler
+### Düzgün Çokgenler
 
-Tüm kenarları aynı uzunlukta ve tüm açıların aynı boyuta sahip olması durumunda bir çokgenin [__düzenli__](gloss:regular-polygon) olduğunu söylüyoruz. Bu şekillerin hangileri düzenli çokgenlerdir?
+Tüm kenarları aynı uzunlukta ve tüm açıların aynı boyuta sahip olması durumunda bir çokgenin [__düzgün__](gloss:regular-polygon) olduğunu söylüyoruz. Bu şekillerin hangileri düzgün çokgenlerdir?
 
     x-picker
       .item: include svg/polygons/regular-1.svg
@@ -177,7 +177,7 @@ Tüm kenarları aynı uzunlukta ve tüm açıların aynı boyuta sahip olması d
 ---
 > id: regular-1
 
-Düzenli çokgenler birçok farklı boyutta olabilir - ancak aynı sayıda tarafa sahip tüm normal çokgenler [[benzerdir | uyumlu | aynı alana sahip]] !
+Düzgün çokgenler birçok farklı boyutta olabilir - ancak aynı sayıda tarafa sahip tüm normal çokgenler [[benzerdir | uyumlu | aynı alana sahip]] !
 
 ---
 > id: regular-2
@@ -220,7 +220,7 @@ Düzenli çokgenler birçok farklı boyutta olabilir - ancak aynı sayıda taraf
 
 ::: column.grow
 
-Burada [düzenli bir çokgen](gloss:regular-polygon) görebilirsiniz. ${n}{n|5|4,12,1} taraf. Her tarafın uzunluğu vardır [{.pill.green} 1m](target:base) . Alanını hesaplamaya çalışalım!
+Burada [düzgün bir çokgen](gloss:regular-polygon) görebilirsiniz. ${n}{n|5|4,12,1} taraf. Her tarafın uzunluğu vardır [{.pill.green} 1m](target:base) . Alanını hesaplamaya çalışalım!
 
 İlk olarak, çokgeni bölebiliriz ${toWord(n)} uyumlu, [[ikizkenar | eşkenar | dik açılı]] üçgenler.
 
@@ -259,14 +259,14 @@ var("round(tan(pi/2-pi/n)/4,2)") = var("round(n×tan(pi/2-pi/n)/4,2)")
 
 ---
 
-## dörtgenler
+## Dörtgenler
 
 > section: quadrilaterals
 > id: quadrilaterals
 
 Bir [önceki derste](/course/triangles) üçgenlerin birçok farklı özelliğini araştırdık. Şimdi dörtgenlere bakalım.
 
-_Düzenli dörtgenlere_ [[kare]] denir [[| dikdörtgen | eşkenar dörtgen]] . Tüm kenarları aynı uzunlukta ve tüm açıları eşit.
+_Düzgün dörtgenlere_ [[kare | dikdörtgen | eşkenar dörtgen]] denir. Tüm kenarları aynı uzunlukta ve tüm açıları eşittir.
 
 ::: column.quadrilateral.reveal(when="blank-0")
 
@@ -292,7 +292,7 @@ _Düzenli dörtgenlere_ [[kare]] denir [[| dikdörtgen | eşkenar dörtgen]] . T
 ---
 > id: quadrilaterals-1
 
-Biraz daha az düzenli dörtgenler için iki seçeneğimiz var. Sadece _açıların_ eşit olmasını istiyorsak, bir [__dikdörtgen__](gloss:rectangle) elde ederiz. Sadece _tarafların_ eşit olmasını istiyorsak, bir [__eşkenar dörtgen__](gloss:rhombus) elde ederiz.
+Biraz daha az düzenli dörtgenler için iki seçeneğimiz var. Sadece _açıların_ eş olmasını istiyorsak, bir [__dikdörtgen__](gloss:rectangle) elde ederiz. Sadece _kenararın_ eş olmasını istiyorsak, bir [__eşkenar dörtgen__](gloss:rhombus) elde ederiz.
 
 ::: column.quadrilateral
 
@@ -311,7 +311,7 @@ Biraz daha az düzenli dörtgenler için iki seçeneğimiz var. Sadece _açılar
       path.red(x="segment(c,d)")
       path.red(x="segment(d,a)")
 
-{.caption} __Dikdörtgen__ , [dört eşit açıya](target:angle) sahip bir dörtgendir.
+{.caption} __Dikdörtgen__ , [dört eş açıya](target:angle) sahip bir dörtgendir.
 
 ::: column.quadrilateral
 
@@ -326,14 +326,14 @@ Biraz daha az düzenli dörtgenler için iki seçeneğimiz var. Sadece _açılar
       path.red(x="segment(g,h)" target="side" mark="bar")
       path.red(x="segment(h,e)" target="side" mark="bar")
 
-{.caption} __Eşkenar__ dörtgen [dört eşit tarafa](target:side) sahip bir dörtgendir.
+{.caption} __Eşkenar__ dörtgen [dört eş kenara](target:side) sahip bir dörtgendir.
 
 :::
 
 ---
 > id: quadrilaterals-2
 
-Daha az düzenli olan ancak yine de bazı önemli özelliklere sahip olan birkaç dörtlü daha vardır:
+Daha da az düzenli olan ancak yine de bazı önemli özelliklere sahip olan birkaç dörtgen daha var:
 
 ::: column.quadrilateral
 
@@ -348,7 +348,7 @@ Daha az düzenli olan ancak yine de bazı önemli özelliklere sahip olan birka�
       path.blue(x="segment(a,c)" mark="arrow2")
       path.blue(x="segment(b,d)" mark="arrow2")
 
-{.caption} Her iki _karşı_ taraf çifti [paralel ise](gloss:parallel) , bir __Paralelkenar__ alırız.
+{.caption} Karşılıklı kenarları  [paralel ise](gloss:parallel) , bir __Paralelkenar__ elde ederiz.
 
 ::: column.quadrilateral
 
@@ -363,7 +363,7 @@ Daha az düzenli olan ancak yine de bazı önemli özelliklere sahip olan birka�
       path.blue(x="segment(g,h)" mark="bar2")
       path.red(x="segment(h,e,)" mark="bar")
 
-{.caption} İki çift _bitişik_ kenar aynı uzunlukta ise, bir __Uçurtma__ elde ederiz.
+{.caption} İki çift _bitişik_ kenar aynı uzunlukta ise, bir __Deltoid__ elde ederiz.
 
 ::: column.quadrilateral
 
@@ -378,20 +378,20 @@ Daha az düzenli olan ancak yine de bazı önemli özelliklere sahip olan birka�
       path(x="segment(k,l)")
       path.red(x="segment(i,l)" mark="arrow")
 
-{.caption} En az bir çift karşı taraf __paralelse__ , bir __Trapezium__ alırız.
+{.caption} En az bir çift karşılıklı kenar __paralelse__ , bir __Yamuk__ elde ederiz.
 
 :::
 
 ---
 > id: quadrilaterals-venn
 
-Dörtgenler bu kategorilerin çoğuna girebilir. Farklı dörtlü tiplerin hiyerarşisini bir [Venn diyagramı](gloss:venn-diagram) olarak görselleştirebiliriz:
+Dörtgenler aynı anda bu kategorilerin çoğuna girebilir. Farklı dörtgenlerin hiyerarşisini bir [Venn diyagramı](gloss:venn-diagram) yardımıyla görselleştirebiliriz:
 
     figure: include svg/venn.svg
 
-Örneğin, her dikdörtgen aynı zamanda bir [[paralelkenar | eşkenar dörtgen | kare]] ve her [[eşkenar dörtgen | yamuk | paralelkenar]] da bir uçurtmadır. Bir eşkenar dörtgen [[bazen | her zaman | asla]] kare ve dikdörtgen her [[zaman değildir | ara sıra | asla]] yamuk.
+Örneğin, her dikdörtgen aynı zamanda bir [[paralelkenar | eşkenar dörtgen | kare]] ve her [[eşkenar dörtgen | yamuk | paralelkenar]] da bir deltoiddir. Bir eşkenar dörtgen [[bazen | her zaman | asla]] kare ve bir dikdörtgen [[her zaman | ara sıra | asla]] bir yamuktur.
 
-{.reveal(when="blank-0 blank-1 blank-2 blank-3")} Herhangi bir belirsizlikten kaçınmak için genellikle en spesifik türü kullanırız.
+{.reveal(when="blank-0 blank-1 blank-2 blank-3")} Herhangi bir belirsizlikten kaçınmak için genellikle en spesifik türünü kullanırız.
 
 ---
 > id: midsegments
@@ -402,39 +402,39 @@ Dörtgenler bu kategorilerin çoğuna girebilir. Farklı dörtlü tiplerin hiyer
 
 ::: column.grow
 
-Şimdi soldaki gri kutuda herhangi bir yerde dört nokta seçin. _{span.reveal(when="points")} Hepsini dörtgen oluşturacak şekilde bağlayabiliriz._
+Şimdi soldaki gri kutuda herhangi dört yere noktalar yerleştirin. _{span.reveal(when="points")} Bu dört noktayı dörtgen oluşturacak şekilde birleştirebiliriz._
 
-{.reveal(when="points" delay=1000)} Dört tarafın her birinin orta noktasını bulalım. Orta noktaları bağlarsak, [[başka bir dörtgen]] elde ederiz [[| bir üçgen | bir dikdörtgen]] .
+{.reveal(when="points" delay=1000)} Dört kenarın her birinin orta noktasını bulalım. Orta noktaları birleştirirsek elde ederiz [[başka bir dörtgen | bir üçgen | bir dikdörtgen]] .
 
-{.reveal(when="blank-0")} Dış dörtgenlerin köşelerini hareket ettirmeyi deneyin ve daha küçük olana ne olduğunu gözlemleyin. Sadece _herhangi bir_ dörtgen değil, her zaman bir [[paralelkenar]] gibi görünüyor [[| yamuk | dikdörtgen]] !
+{.reveal(when="blank-0")} İlk dörtgenin köşelerini hareket ettirmeyi deneyin ve daha küçük olana ne olduğunu gözlemleyin. Sadece _herhangi bir_ dörtgen değil, her zaman bir [[paralelkenar | yamuk | dikdörtgen]] olduğunu görüyoruz!
 
-{.reveal(when="blank-1")} Ama neden böyle? _Herhangi bir_ dörtgenin sonucu neden hep paralelkenar olur? Açıklamamıza yardımcı olmak için orijinal dörtgenin [köşegenlerinden](gloss:polygon-diagonal) birini çizmemiz gerekiyor.
+{.reveal(when="blank-1")} Ama neden böyle? _Herhangi bir_ dörtgenin sonucu neden hep paralelkenar olur? Açıklamamıza yardımcı olmak için, orijinal dörtgenin [köşegenlerinden](gloss:polygon-diagonal) birini çizmemiz gerekiyor.
 
-{.reveal(when="diagonal")} Köşegen dörtgeni [iki üçgene](target:triangle) böler. Ve şimdi iç dörtgenin [iki tarafının](target:midsegment) aslında [[orta]] bölümler olduğunu [[görebilirsiniz. | medyan |]] bu üçgenlerin [[dik açıortayları]] .
+{.reveal(when="diagonal")} Bir köşegen, dörtgeni [iki üçgene](target:triangle) böler. Ve şimdi iç dörtgenin [iki kenarının](target:midsegment) aslında bu üçgenlerin [[orta tabanları | kenarortayları | açıortayları] ]olduğunu görebilirsiniz.
 
-{.reveal(when="blank-2")} [Önceki derste](/course/triangles/properties) , bir üçgenin [orta](gloss:triangle-midsegment) bölümlerinin her zaman tabanına paralel olduğunu göstermiştik. Bu durumda, [bu iki tarafın](target:parallel) da köşeye paralel olduğu anlamına gelir - bu nedenle de [[birbirlerine paralel]] olmalıdırlar [[| aynı uzunluk | birbirine dik]] .
+{.reveal(when="blank-2")} [Önceki derste](/course/triangles/properties) , bir üçgenin [orta tabanlarının](gloss:triangle-midsegment)  her zaman üçgenin tabanına paralel olduğunu göstermiştik. Bu durum, [bu iki kenarın](target:parallel) da köşegene paralel olduğu anlamına gelir - bu nedenle de [[ birbirlerine paralel | aynı uzunluk | birbirine dik]] olmalıdırlar.
 
-{.reveal(when="blank-3" delay=2000)} Her iki karşı taraf çiftinin paralel olduğunu göstermek için dörtgenin [ikinci köşegeniyle](target:other) aynısını yapabiliriz. Ve bu, iç dörtgenin bir [paralelkenar](gloss:parallelogram) olduğunu kanıtlamamız gereken tek şey. _{span.qed}_
+{.reveal(when="blank-3" delay=2000)} Karşılıklı kenarların paralel olduğunu göstermek için dörtgenin [ikinci köşegeniyle](target:other) de aynısını yapabiliriz. Ve bu, iç dörtgenin bir [paralelkenar](gloss:parallelogram) olduğunu kanıtlamamız için gereken tek şey. _{span.qed}_
 
 :::
 
 ---
 > id: parallelograms
 
-### Parallelograms
+### Paralelkenar
 
-Paralelkenarların zıt tarafların paralel olması dışında birçok ilginç özelliği olduğu ortaya çıkıyor. Aşağıdaki altı ifadeden hangisi doğrudur?
+Paralelkenarların karşılıklı kenarlarının paralel olması dışında birçok başka ilginç özelliği olduğu ortaya çıktı. Aşağıdaki altı ifadeden hangileri doğrudur?
 
 ::: column.grow
 
     x-picker.list
-      .item.md The opposite sides are [congruent](gloss:congruent).
-      .item(data-error="parall-error-1") The internal angles are always less than 90°.
-      .item.md(data-error="parall-error-2") The diagonals [bisect](gloss:angle-bisector) the internal angles.
-      .item The opposite angles are congruent.
-      .item(data-error="parall-error-3") Both diagonals are congruent.
-      .item(data-error="parall-error-4") Adjacent sides have the same length
-      .item The two diagonals bisect each other in the middle.
+      .item.md Karşılıklı kenarlar [eştir](gloss:congruent).
+      .item(data-error="parall-error-1") İç açılar her zaman 90° den küçüktür.
+      .item.md(data-error="parall-error-2") Köşegenler aynı zamanda [açıortaydır](gloss:angle-bisector)
+      .item Karşılıklı açılar eştir.
+      .item(data-error="parall-error-3") Köşegenler aynı uzunluktadır.
+      .item(data-error="parall-error-4") Komşu kenarlar aynı uzunluktadır.
+      .item Köşegenler birbirini ortalar.
 
 ::: column(width=300)
 
@@ -465,7 +465,7 @@ Tabii ki, sadece bu özellikleri “gözlemlemek” yeterli değildir. Her _zama
 
 ::: tab
 
-#### Yanlar ve Açılar _{span.check(when="diagonal blank-0 blank-1")}_
+#### Karşılıklı Kenarlar ve Açılar _{span.check(when="diagonal blank-0 blank-1")}_
 
 ::: column(width=300)
 
@@ -495,23 +495,23 @@ Tabii ki, sadece bu özellikleri “gözlemlemek” yeterli değildir. Her _zama
 
 ::: column.grow
 
-{.task} Paralelkenarın karşıt kenarlarının ve açılarının her zaman uyumlu olduğunu kanıtlamaya çalışalım.
+{.task} Paralelkenarın karşıt kenarlarının ve açılarının her zaman eş olduğunu kanıtlamaya çalışalım.
 
-Paralelkenarın köşegenlerinden birini çizerek başlayın.
+Paralelkenarın köşegenlerinden birini çizerek başlayalım.
 
-{.reveal(when="diagonal")} Diyagonal, paralelkenarın kenarlarıyla dört yeni açı oluşturur. İki [kırmızı açı](target:red-angle) ve iki [mavi açı](target:blue-angle) [alternatif açılardır](gloss:alternate-angles) , bu yüzden her biri [[uyumlu]] olmalıdır [[| bitişik | tamamlayıcı]] .
+{.reveal(when="diagonal")} Köşegen, paralelkenarın kenarlarıyla dört yeni açı oluşturur. İki [kırmızı açı](target:red-angle) ve iki [mavi açı](target:blue-angle) [ters açılardır](gloss:alternate-angles) , bu yüzden her biri [[ eş | tümler | bütünler]] olmalıdır  .
 
-{.reveal(when="blank-0")} Şimdi, köşegen tarafından oluşturulan [iki üçgene](target:triangles) bakarsak, iki uyumlu açıya ve [bir uyumlu tarafa](target:diagonal) sahip olduklarını görürüz. [[ASA tarafından | AAS | AA]] uyum koşulu, her iki üçgen de uyumlu olmalıdır.
+{.reveal(when="blank-0")} Şimdi, köşegen tarafından oluşturulan [iki üçgene](target:triangles) bakarsak, iki eş açıya ve [bir eş kenara](target:diagonal) sahip olduklarını görürüz. [[AKA  | AAK | AA]] eşlik koşulu ile, her iki üçgen de eş olmalıdır.
 
-{.reveal(when="blank-1")} Bu, üçgenlerin diğer karşılık gelen kısımlarının da uyumlu olması gerektiği anlamına gelir: özellikle, her iki [karşıt taraf çifti](target:sides) da uyumludur ve her iki [karşıt açı çifti](target:angles) de uyumludur. _{span.qed}_
+{.reveal(when="blank-1")} Bu, üçgenlerin diğer karşılık gelen kısımlarının da eş olması gerektiği anlamına gelir: özellikle, her iki [karşıt kenar çifti](target:sides) de eştir ve her iki [karşı açı çifti](target:angles) de eştir. _{span.qed}_
 
 :::
 
-{.reveal(when="blank-1")} Bunun tersinin de geçerli olduğu ortaya çıkıyor: eğer bir dörtgen içinde her iki karşıt taraf çifti (veya açıları) uyumlu ise, o zaman dörtgen paralelkenar olmalıdır.
+{.reveal(when="blank-1")} Bunun tersinin de geçerli olduğu ortaya çıkıyor: eğer bir dörtgende karşılıklı kenarlar ve açılar eş ise, o zaman bu dörtgen paralelkenardır.
 
 ::: tab
 
-#### diyagonallar _{span.check(when="diagonal blank-2 blank-3")}_
+#### Köşegenler _{span.check(when="diagonal blank-2 blank-3")}_
 
 ::: column(width=300)
 
@@ -543,32 +543,32 @@ Paralelkenarın köşegenlerinden birini çizerek başlayın.
 
 ::: column.grow
 
-{.task} Şimdi bir paralelkenardaki iki köşegeninin birbirini ikiye böldüğünü kanıtlayın.
+{.task} Şimdi bir paralelkenardaki iki köşegeninin birbirini ortaladığını kanıtlayalım.
 
-Çaprazların oluşturduğu iki sarı üçgeni düşünelim:
+Köşegenlerin oluşturduğu iki sarı üçgeni düşünelim:
 
-* [İki yeşil tarafın](target:side1) uyumlu olduğunu kanıtladık, çünkü paralelkenarın karşıt taraflarıdır. * [İki kırmızı açı](target:anglesR) ve [iki mavi açı](target:anglesB) uyumludur, çünkü bunlar [[alternatif açılardır | zıt açılar | dik açılar]] .
+* [İki yeşil kenarın](target:side1) eş olduğunu kanıtladık. * [İki kırmızı açı](target:anglesR) ve [iki mavi açı](target:anglesB) da eştir, çünkü bunlar [[içters açılardır | zıt açılar | dik açılar]] .
 
-{.reveal(when="blank-2")} [[ASA tarafından | SSS | AAS]] koşulu, bu nedenle her iki sarı üçgen de uyumlu olmalıdır.
+{.reveal(when="blank-2")} [[AKA tarafından | KKK | AAK]] koşulu ile, her iki sarı üçgen de eştir.
 
-{.reveal(when="blank-3")} Şimdi uyumlu üçgenlerin karşılık gelen kısımlarının da uyumlu olduğu gerçeğini kullanabiliriz, [`bar(AM)`](target:AM) = [`bar(CM)`](target:CM) ve [`bar(BM)`](target:BM) = [`bar(DM)`](target:DM) . Başka bir deyişle, iki köşegen orta noktalarında kesişir. _{span.qed}_
+{.reveal(when="blank-3")} Şimdi eş üçgenlerin karşılık gelen kısımlarının da eş olduğu gerçeğini kullanabiliriz, [`bar(AM)`](target:AM) = [`bar(CM)`](target:CM) ve [`bar(BM)`](target:BM) = [`bar(DM)`](target:DM) . Başka bir deyişle, iki köşegen orta noktalarında kesişir. _{span.qed}_
 
 :::
 
-{.reveal(when="blank-3")} Daha önce olduğu gibi, bunun tersi de doğrudur: eğer bir dörtgen ikisinin iki köşesi birbirini keserse, dörtgen bir paralelkenardır.
+{.reveal(when="blank-3")} Daha önce olduğu gibi, bunun tersi de doğrudur: eğer bir dörtgenin köşegenleri birbirini ortalarsa, dörtgen bir paralelkenardır.
 
 :::
 
 ---
 > id: kites
 
-### Uçurtmalar
+### Deltoidler
 
 ::: column.grow
 
-Yukarıda iki çift [[zıtlığın |]] bir paralelkenarın [[bitişik]] yanları uyumludur. Bir uçurtmada, iki çift _bitişik_ taraf birbirine uygundur.
+Yukarıda bir paralelkenarın iki çift [[ karşılıklı | bitişik ]] kenarlarının eş olduğunu gördük. Bir deltoidde, iki çift _bitişik_ taraf birbirine eştir.
 
-_Uçurtma_ adı açıkça şeklinden geliyor: gökyüzünde uçabileceğiniz uçurtmalara benziyor. Bununla birlikte, şimdiye kadar gördüğümüz tüm özel dörtgenler arasında, uçurtma da [içbükey](gloss:concave) olabilen tek kişidir: bir dart veya ok gibi şekillendirilirse:
+_Deltoid_ adı açıkça şeklinden geliyor: gökyüzünde uçabileceğiniz uçurtmalara benziyor. Bununla birlikte, şimdiye kadar gördüğümüz tüm özel dörtgenler arasında, bir dart veya ok gibi şekillendirilirse, deltoid  [içbükey](gloss:concave) olabilen tek dörtgendir:
 
 ::: column(width=320)
 
@@ -589,7 +589,7 @@ _Uçurtma_ adı açıkça şeklinden geliyor: gökyüzünde uçabileceğiniz uç
       path.blue(x="segment(b,c)")
       path.blue(x="segment(d,c)")
 
-{.caption} Dışbükey bir uçurtma
+{.caption} Dışbükey bir deltoid
 
 ::: column(width=240)
 
@@ -604,7 +604,7 @@ _Uçurtma_ adı açıkça şeklinden geliyor: gökyüzünde uçabileceğiniz uç
       path.blue(x="segment(b1,c1)")
       path.blue(x="segment(d1,c1)")
 
-{.caption} Ok gibi görünen içbükey bir uçurtma
+{.caption} Ok gibi görünen içbükey bir deltoid
 
 :::
 
@@ -644,19 +644,19 @@ _Uçurtma_ adı açıkça şeklinden geliyor: gökyüzünde uçabileceğiniz uç
 
 ::: column.grow
 
-Tüm uçurtmaların [[simetrik]] olduğunu fark etmiş olabilirsiniz [[| benzer]] . _{span.reveal(when="blank-0")} [Simetri ekseni](gloss:axis-of-symmetry) [[köşegenlerden biridir | taraflardan biri | bir orta bölüm]] ._
+Tüm deltoidlerin [[simetrik | benzer]] olduğunu fark etmiş olabilirsiniz. _{span.reveal(when="blank-0")} [Simetri ekseni](gloss:axis-of-symmetry) [[köşegenlerden biridir | kenarlarından biri | bir orta taban]] ._
 
-{.reveal.r(when="blank-1")} Köşegen, uçurtmayı [iki uyumlu üçgene](target:triangle1) böler. [SSS](gloss:triangle-sss) koşulundan uyumlu olduklarını biliyoruz: her iki üçgenin de [üç uyumlu tarafı vardır](target:sss) (kırmızı, yeşil ve mavi). _{button.next-step} Devam et_
+{.reveal.r(when="blank-1")} Köşegen, deltoid [iki eş üçgene](target:triangle1) böler. [KKK](gloss:triangle-sss) koşulu ile  her iki üçgenin de eş olduklarını biliyoruz.  (target:sss) (kırmızı, yeşil ve mavi). _{button.next-step} Devam et_
 
-{.reveal.r(when="next-0")} [CPOCT](gloss:cpoct) kullanarak, [ilgili açıların](target:angles) aynı zamanda uyumlu olması gerektiğini biliyoruz. _{button.next-step} Devam et_
+{.reveal.r(when="next-0")} [CPOCT](gloss:cpoct) kullanarak, [ilgili açıların](target:angles) aynı zamanda eş olması gerektiğini biliyoruz. _{button.next-step} Devam et_
 
-{.reveal.r(when="next-1")} Bu, örneğin, [diyagonalin](target:d1) bir [[bisektör]] olduğu anlamına gelir. [[| dik |]] uçlarında [iki açının](target:vAngle) [[medyanı]] . _{button.next-step} Devam et_
+{.reveal.r(when="next-1")} Bu, örneğin, [köşegenin](target:d1) bir [[açıortay | kenarortay | kenar orta dikme]] olduğu anlamına gelir. _{button.next-step} Devam et_
 
-{.reveal.r(when="next-2")} Daha da ileri gidebiliriz: diğer diyagonal çizersek, [iki tane daha küçük üçgen](target:triangle2) elde ederiz. [SAS](gloss:triangle-sss) durumu nedeniyle bunlar da uyumlu olmalıdır: aynı [iki tarafa ve dahil edilmiş açıya sahiptirler](target:sas) . _{button.next-step} Devam et_
+{.reveal.r(when="next-2")} Daha da ileri gidebiliriz: diğer köşegeni çizersek, [iki tane daha küçük üçgen](target:triangle2) elde ederiz. [KAK](gloss:triangle-sss) durumu nedeniyle bunlar da eş olmalıdır: aynı [iki kenara ve açıya sahiptirler](target:sas) . _{button.next-step} Devam et_
 
-{.reveal(when="next-3")} Bu demektir ki bu [açı α](target:alpha) da [P açısı](target:beta) ile aynı olmalıdır. Bitişik olduklarından, hem a hem de lementary [ek açıları](gloss:supplementary-angles) [[90]]° olmalıdır.
+{.reveal(when="next-3")} Bu demektir ki bu [açı α](target:alpha) da [P açısı](target:beta) ile aynı olmalıdır. Komşu olduklarından, hem a hem de b [bütünler açıları](gloss:supplementary-angles) [[90]]° olmalıdır.
 
-{.reveal(when="blank-3")} Başka bir deyişle, bir uçurtmanın köşegenleri her zaman [[diktir | paralel]] .
+{.reveal(when="blank-3")} Başka bir deyişle, bir deltoidin köşegenleri her zaman [[diktir | paralel]] .
 
 :::
 
@@ -664,9 +664,9 @@ Tüm uçurtmaların [[simetrik]] olduğunu fark etmiş olabilirsiniz [[| benzer]
 > id: quadrilaterals-area
 > goals: draw-1 draw-2
 
-### Dörtgen Alanı
+### Dörtgenlerin Alanları
 
-Bir önceki derste üçgen alanını hesaplarken, onu bir [[dikdörtgene]] dönüştürme hilesini kullandık [[| Meydan | beşgen]] . Bazı quadrilaterallar için de bunu yapabileceğimiz ortaya çıkıyor:
+Bir önceki derste üçgen alanını hesaplarken, onu bir [[dikdörtgene | kareye | beşgene]] dönüştürme hilesini kullandık . Bazı dörtgenler için de bunu yapabiliriz.
 
 ::: tab
 
@@ -688,9 +688,9 @@ Bir önceki derste üçgen alanını hesaplarken, onu bir [[dikdörtgene]] dön�
 
 Solda, paralelkenar ile aynı alana sahip bir dikdörtgen çizmeye çalışın.
 
-{.reveal(when="draw-1")} Soldaki [eksik üçgenin](target:triangle-1) [[tam olarak aynı]] olduğunu görebiliyor musunuz? [[| daha küçük |]] sağdaki [üst üste binen üçgenden](target:triangle-2) [[daha mı büyük]] ? _{span.reveal(when="blank-1")} Bu nedenle paralelkenarın alanı_
+{.reveal(when="draw-1")} Soldaki [eksik üçgenin](target:triangle-1) [[tam olarak aynı | daha küçük | [daha büyük ]] olduğunu görebiliyor musunuz? sağdaki [üst üste binen üçgenden](target:triangle-2)   _{span.reveal(when="blank-1")} Bu nedenle paralelkenarın alanı_
 
-{.text-center.reveal(when="blank-1")} Alan = __{.i.m-green} baz__ × __{.i.m-yellow} yükseklik__
+{.text-center.reveal(when="blank-1")} Alan = __{.i.m-green} taban__ × __{.i.m-yellow} yükseklik__
 
 {.reveal(when="blank-1" delay=1000)} _Paralelkenarın yüksekliğini ölçerken dikkatli olun: genellikle iki taraftan biri ile aynı değildir._
 
@@ -698,7 +698,7 @@ Solda, paralelkenar ile aynı alana sahip bir dikdörtgen çizmeye çalışın.
 
 ::: tab
 
-#### yamuk _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_
+#### Yamuk _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_
 
 Yamukların bir çift [paralel tarafı](target:bases) olan dörtgenler olduğunu hatırlayın. Bu paralel taraflara yamuk __tabanları__ denir.
 
@@ -724,11 +724,11 @@ Yamukların bir çift [paralel tarafı](target:bases) olan dörtgenler olduğunu
 
 Daha önce olduğu gibi, bu yamuk ile aynı alana sahip bir dikdörtgen çizmeye çalışın. _{span.reveal(when="draw-2")} Soldaki ve sağdaki [eksik ve eklenen üçgenlerin](target:triangles-3) nasıl iptal edildiğini görebiliyor musunuz?_
 
-{.reveal(when="draw-2" delay=2000)} [{.pill.green}](target:t-height) bu dikdörtgenin [yüksekliği](target:t-height) [[arasındaki mesafe | ortalama |]] trapezin [paralel kenarlarının](target:bases) [[uzunluğu]] .
+{.reveal(when="draw-2" delay=2000)} [{.pill.green}](target:t-height) bu dikdörtgenin [yüksekliği](target:t-height) , yamuğun paralel kenarlarının(target:bases) [[arasındaki mesafedir | ortalamasıdır |uzunluğuna eşittir]].
 
-{.reveal.r(when="blank-2")} [{.pill.yellow}](target:t-width) dikdörtgenin [genişliği](target:t-width) [[orta noktalar]] arasındaki mesafedir [[| yamuğun]] iki paralel olmayan kenarının [[uç noktaları]] . _{span.reveal(when="blank-3")} Buna trapezyumun __orta__ bölümü denir._ _{button.next-step.reveal(when="blank-3")} Devam et_
+{.reveal.r(when="blank-2")} [{.pill.yellow}](target:t-width) dikdörtgenin [genişliği](target:t-width) yamuğun  iki paralel olmayan kenarının [[orta noktalar | uç noktaları]] arasındaki mesafedir. _{span.reveal(when="blank-3")} Buna yamuğun __orta__ tabanı denir._ _{button.next-step.reveal(when="blank-3")} Devam et_
 
-{.reveal(when="next-0")} [Üçgenlerde olduğu](gloss:triangle-midsegment) gibi, bir yamuğun orta bölümü [[paraleldir | dik |]] iki tabanı ile [[aynı uzunlukta]] . Orta bölümün uzunluğu, tabanların uzunluklarının ortalamasıdır: `(a+c)/2` .
+{.reveal(when="next-0")} [Üçgenlerde olduğu](gloss:triangle-midsegment) gibi, bir yamuğun orta tabanı,  iki tabanı ile [[aynı uzunlukta | paraleldir | diktir]] . Orta tabanın uzunluğu, tabanların uzunluklarının ortalamasıdır: `(a+c)/2` .
 
 {.reveal(when="blank-4")} Tüm bunları birleştirirsek, [_a_](target:base-2) ve [_c_](target:base-1) paralel kenarları ve yüksekliği [_h_](target:t-height) olan bir yamuk alanı için bir denklem elde ederiz:
 
@@ -738,7 +738,7 @@ Daha önce olduğu gibi, bu yamuk ile aynı alana sahip bir dikdörtgen çizmeye
 
 ::: tab
 
-#### Uçurtma _{span.check(when="blank-5")}_
+#### Deltoid _{span.check(when="blank-5")}_
 
 ::: column(width=300)
 
@@ -766,11 +766,11 @@ Daha önce olduğu gibi, bu yamuk ile aynı alana sahip bir dikdörtgen çizmeye
 
 ::: column.grow
 
-Bu uçurtmada, [iki köşegen](target:diag3) uçurtmayı çevreleyen büyük bir [dikdörtgenin](target:rect4) genişliğini ve yüksekliğini oluşturur.
+Bu deltoidde, [iki köşegen](target:diag3) onu çevreleyen büyük bir [dikdörtgenin](target:rect4) genişliğini ve yüksekliğini oluşturur.
 
-Bu dikdörtgenin alanı [[iki kat | aynı |]] uçurtma alanının [[üç katı]] . _{span.reveal(when="blank-5")} Uçurtmayı oluşturan [dört üçgenin](target:inside) her birinin, onun dışındaki [dört boşlukla nasıl](target:outside) aynı olduğunu görebiliyor musunuz?_
+Bu dikdörtgenin alanı,  deltoid alanının [[iki katıdır | aynıdır | üç katıdır]]. _{span.reveal(when="blank-5")} Deltoidi oluşturan [dört üçgenin](target:inside) her birinin, onun dışındaki [dört boşlukla nasıl](target:outside) aynı olduğunu görebiliyor musunuz?_
 
-{.reveal(when="blank-5")} Bu diyagonal bir uçurtma alanı anlamına gelir [{.i.pill.green} d1](target:d31) ve [{.i.pill.yellow} d2](target:d32)
+{.reveal(when="blank-5")} Köşegenleri  [{.i.pill.green} d1](target:d31) ve [{.i.pill.yellow} d2](target:d32) olan bir deltoidin alanı
 
 {.text-center.reveal(when="blank-5")} _Alan_ = `1/2` [{.i.pill.green} d1](target:d31) × [{.i.pill.yellow} d2](target:d32) .
 
@@ -802,13 +802,13 @@ Bu dikdörtgenin alanı [[iki kat | aynı |]] uçurtma alanının [[üç katı]]
 
 ::: column.grow
 
-[Eşkenar](gloss:rhombus) dörtgen, dört uyumlu kenarı olan bir dörtgendir. Her eşkenar dörtgenin [[paralelkenar]] olduğunu hatırlayabilirsiniz. [[| dikdörtgen | kare]] - ve ayrıca bir [[uçurtma | altıgen | içbükey çokgen]] .
+[Eşkenar](gloss:rhombus) dörtgen, dört eş kenarı olan bir dörtgendir. Her eşkenar dörtgenin [[paralelkenar | dikdörtgen | kare]] olduğunu hatırlayabilirsiniz ve ayrıca bir [[deltoid | altıgen | içbükey çokgen]] .
 
-{.reveal(when="blank-6 blank-7")} Bu, bir eşkenar dörtgen alanını bulmak için, bir paralelkenar alanı veya bir uçurtma alanı için denklemi kullanabileceğimiz anlamına gelir:
+{.reveal(when="blank-6 blank-7")} Bu, bir eşkenar dörtgen alanını bulmak için, bir paralelkenar alanı veya bir deltoid alanı için kullanılan denklemleri kullanabileceğimiz anlamına gelir:
 
-{.text-center.reveal(when="blank-6 blank-7")} _Alan_ = [{.i.pill.blue} baz](target:base) × [{.i.pill.red} yükseklik](target:height) = `1/2` [{.i.pill.green} d1](target:d41) × [{.i.pill.yellow} d2](target:d42) .
+{.text-center.reveal(when="blank-6 blank-7")} _Alan_ = [{.i.pill.blue} taban](target:base) × [{.i.pill.red} yükseklik](target:height) = `1/2` [{.i.pill.green} d1](target:d41) × [{.i.pill.yellow} d2](target:d42) .
 
-{.reveal(when="blank-6 blank-7" delay=1000)} _Farklı bağlamlarda, bir Rhombus'un farklı kısımları (kenarlar, yükseklik, köşegenler) verilebilir ve hangi denklemin daha uygun olduğunu seçmelisiniz._
+{.reveal(when="blank-6 blank-7" delay=1000)} _Farklı bağlamlarda, bir Eşkenar dörtgenin farklı kısımları (kenarlar, yükseklik, köşegenler) verilebilir vbu durumda hangi denklemin daha uygun olduğunu seçmelisiniz._
 
 :::
 
@@ -1268,7 +1268,7 @@ Yukarıdaki gibi farklı bir polihedra denerseniz, Euler formülünün her zaman
 
 Tüm dünyamız üç boyutludur - ancak düz, iki boyutlu nesneleri çizmek veya görselleştirmek çok daha kolaydır. Üç boyutlu polihedra'yı iki boyutlu bir şekilde izlemenin birkaç farklı yolu vardır.
 
- Bu ağlardan hangisi bir küp yapar Ağı nesneyle eşleştirin https://github.com/polymake/matchthenet Çizim Ağları
+Bu ağlardan hangisi bir küp yapar Ağı nesneyle eşleştirin https://github.com/polymake/matchthenet Çizim Ağları
 
 Düzlem ve katının kesişme noktasının oluşturduğu kesiti tanımlayın.
 
@@ -1305,7 +1305,7 @@ Bu dersin başlangıcında, [düzenli çokgenleri](gloss:regular-polygon) özell
 
 _Normal bir polihedronda_ tüm [yüzler](gloss:polyhedron-face) aynı türdeki çokgenlerdir ve aynı sayıda yüz her [tepe noktasında](gloss:polyhedron-vertex) toplanır. Bu iki özelliğe sahip olan [__polihedra__](gloss:platonic-solid) , Yunan filozofu [Platon'un](bio:plato) adını taşıyan [__Platonik katılar__](gloss:platonic-solid) olarak adlandırılır.
 
- Peki Platonik katılar neye benziyor - ve kaç tanesi var? Üç boyutlu bir şekil yapmak için, her tepe noktasında buluşmak için en az [[3]] yüze ihtiyacımız var. Sistematik olarak en küçük düzenli çokgenle başlayalım: eşkenar üçgenler:
+Peki Platonik katılar neye benziyor - ve kaç tanesi var? Üç boyutlu bir şekil yapmak için, her tepe noktasında buluşmak için en az [[3]] yüze ihtiyacımız var. Sistematik olarak en küçük düzenli çokgenle başlayalım: eşkenar üçgenler:
 
 ---
 > id: platonic-tetrahedron
