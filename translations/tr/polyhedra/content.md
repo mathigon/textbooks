@@ -391,7 +391,7 @@ Dörtgenler aynı anda bu kategorilerin çoğuna girebilir. Farklı dörtgenleri
 
 Örneğin, her dikdörtgen aynı zamanda bir [[paralelkenar | eşkenar dörtgen | kare]] ve her [[eşkenar dörtgen | yamuk | paralelkenar]] da bir deltoiddir. Bir eşkenar dörtgen [[bazen | her zaman | asla]] kare ve bir dikdörtgen [[her zaman | ara sıra | asla]] bir yamuktur.
 
-{.reveal(when="blank-0 blank-1 blank-2 blank-3")} Herhangi bir belirsizlikten kaçınmak için genellikle en spesifik türünü kullanırız.
+{.reveal(when="blank-0 blank-1 blank-2 blank-3")} Herhangi bir belirsizlikten kaçınmak için genellikle en spesifik adını kullanırız.
 
 ---
 > id: midsegments
@@ -410,7 +410,7 @@ Dörtgenler aynı anda bu kategorilerin çoğuna girebilir. Farklı dörtgenleri
 
 {.reveal(when="blank-1")} Ama neden böyle? _Herhangi bir_ dörtgenin sonucu neden hep paralelkenar olur? Açıklamamıza yardımcı olmak için, orijinal dörtgenin [köşegenlerinden](gloss:polygon-diagonal) birini çizmemiz gerekiyor.
 
-{.reveal(when="diagonal")} Bir köşegen, dörtgeni [iki üçgene](target:triangle) böler. Ve şimdi iç dörtgenin [iki kenarının](target:midsegment) aslında bu üçgenlerin [[orta tabanları | kenarortayları | açıortayları] ]olduğunu görebilirsiniz.
+{.reveal(when="diagonal")} Bir köşegen, dörtgeni [iki üçgene](target:triangle) böler. Ve şimdi iç dörtgenin [iki kenarının](target:midsegment) aslında bu üçgenlerin [[orta tabanları | kenar ortayları | açı ortayları]] olduğunu görebilirsiniz.
 
 {.reveal(when="blank-2")} [Önceki derste](/course/triangles/properties) , bir üçgenin [orta tabanlarının](gloss:triangle-midsegment)  her zaman üçgenin tabanına paralel olduğunu göstermiştik. Bu durum, [bu iki kenarın](target:parallel) da köşegene paralel olduğu anlamına gelir - bu nedenle de [[ birbirlerine paralel | aynı uzunluk | birbirine dik]] olmalıdırlar.
 
@@ -549,7 +549,7 @@ Köşegenlerin oluşturduğu iki sarı üçgeni düşünelim:
 
 * [İki yeşil kenarın](target:side1) eş olduğunu kanıtladık. * [İki kırmızı açı](target:anglesR) ve [iki mavi açı](target:anglesB) da eştir, çünkü bunlar [[içters açılardır | zıt açılar | dik açılar]] .
 
-{.reveal(when="blank-2")} [[AKA tarafından | KKK | AAK]] koşulu ile, her iki sarı üçgen de eştir.
+{.reveal(when="blank-2")} [[AKA | KKK | AAK]] koşulu ile, her iki sarı üçgen de eştir.
 
 {.reveal(when="blank-3")} Şimdi eş üçgenlerin karşılık gelen kısımlarının da eş olduğu gerçeğini kullanabiliriz, [`bar(AM)`](target:AM) = [`bar(CM)`](target:CM) ve [`bar(BM)`](target:BM) = [`bar(DM)`](target:DM) . Başka bir deyişle, iki köşegen orta noktalarında kesişir. _{span.qed}_
 
@@ -652,9 +652,9 @@ Tüm deltoidlerin [[simetrik | benzer]] olduğunu fark etmiş olabilirsiniz. _{s
 
 {.reveal.r(when="next-1")} Bu, örneğin, [köşegenin](target:d1) bir [[açıortay | kenarortay | kenar orta dikme]] olduğu anlamına gelir. _{button.next-step} Devam et_
 
-{.reveal.r(when="next-2")} Daha da ileri gidebiliriz: diğer köşegeni çizersek, [iki tane daha küçük üçgen](target:triangle2) elde ederiz. [KAK](gloss:triangle-sss) durumu nedeniyle bunlar da eş olmalıdır: aynı [iki kenara ve açıya sahiptirler](target:sas) . _{button.next-step} Devam et_
+{.reveal.r(when="next-2")} Daha da ileri gidebiliriz: diğer köşegeni çizersek, [iki tane daha küçük üçgen](target:triangle2) elde ederiz. [KAK] kenar- açı-kenar (gloss:triangle-sss) koşulu nedeniyle bunlar da eş olmalıdır: aynı [iki kenara ve açıya sahiptirler](target:sas) . _{button.next-step} Devam et_
 
-{.reveal(when="next-3")} Bu demektir ki bu [açı α](target:alpha) da [P açısı](target:beta) ile aynı olmalıdır. Komşu olduklarından, hem a hem de b [bütünler açıları](gloss:supplementary-angles) [[90]]° olmalıdır.
+{.reveal(when="next-3")} Bu demektir ki bu [açı α](target:alpha) da [ß açısı](target:beta) ile aynı olmalıdır. Komşu ve bütünler olduklarından, hem α hem de ß [[90]]° olmalıdır.
 
 {.reveal(when="blank-3")} Başka bir deyişle, bir deltoidin köşegenleri her zaman [[diktir | paralel]] .
 
@@ -688,11 +688,11 @@ Bir önceki derste üçgen alanını hesaplarken, onu bir [[dikdörtgene | karey
 
 Solda, paralelkenar ile aynı alana sahip bir dikdörtgen çizmeye çalışın.
 
-{.reveal(when="draw-1")} Soldaki [eksik üçgenin](target:triangle-1) [[tam olarak aynı | daha küçük | [daha büyük ]] olduğunu görebiliyor musunuz? sağdaki [üst üste binen üçgenden](target:triangle-2)   _{span.reveal(when="blank-1")} Bu nedenle paralelkenarın alanı_
+{.reveal(when="draw-1")} Soldaki [eksik üçgenin](target:triangle-1) , sağdaki [üst üste binen üçgenden](target:triangle-2)   _{span.reveal(when="blank-1")} [[tam olarak aynı | daha küçük | [daha büyük ]] olduğunu görebiliyor musunuz? Bu nedenle paralelkenarın alanı_
 
 {.text-center.reveal(when="blank-1")} Alan = __{.i.m-green} taban__ × __{.i.m-yellow} yükseklik__
 
-{.reveal(when="blank-1" delay=1000)} _Paralelkenarın yüksekliğini ölçerken dikkatli olun: genellikle iki taraftan biri ile aynı değildir._
+{.reveal(when="blank-1" delay=1000)} _Paralelkenarın yüksekliğini ölçerken dikkatli olun: farklı tabanlara ait farklı yükseklikleri vardır._
 
 :::
 
@@ -700,7 +700,7 @@ Solda, paralelkenar ile aynı alana sahip bir dikdörtgen çizmeye çalışın.
 
 #### Yamuk _{span.check(when="draw-2 blank-2 blank-3 blank-4 next-0")}_
 
-Yamukların bir çift [paralel tarafı](target:bases) olan dörtgenler olduğunu hatırlayın. Bu paralel taraflara yamuk __tabanları__ denir.
+Yamukların bir çift [paralel kenarı](target:bases) olan dörtgenler olduğunu hatırlayın. Bu paralel kenarlara yamuk __tabanları__ denir.
 
 ::: column(width=300)
 
@@ -724,11 +724,11 @@ Yamukların bir çift [paralel tarafı](target:bases) olan dörtgenler olduğunu
 
 Daha önce olduğu gibi, bu yamuk ile aynı alana sahip bir dikdörtgen çizmeye çalışın. _{span.reveal(when="draw-2")} Soldaki ve sağdaki [eksik ve eklenen üçgenlerin](target:triangles-3) nasıl iptal edildiğini görebiliyor musunuz?_
 
-{.reveal(when="draw-2" delay=2000)} [{.pill.green}](target:t-height) bu dikdörtgenin [yüksekliği](target:t-height) , yamuğun paralel kenarlarının(target:bases) [[arasındaki mesafedir | ortalamasıdır |uzunluğuna eşittir]].
+{.reveal(when="draw-2" delay=2000)} [{.pill.green}](target:t-height) Bu dikdörtgenin [yüksekliği](target:t-height) , yamuğun paralel kenarlarının(target:bases) [[arasındaki mesafedir | ortalamasıdır |uzunluğuna eşittir]].
 
-{.reveal.r(when="blank-2")} [{.pill.yellow}](target:t-width) dikdörtgenin [genişliği](target:t-width) yamuğun  iki paralel olmayan kenarının [[orta noktalar | uç noktaları]] arasındaki mesafedir. _{span.reveal(when="blank-3")} Buna yamuğun __orta__ tabanı denir._ _{button.next-step.reveal(when="blank-3")} Devam et_
+{.reveal.r(when="blank-2")} [{.pill.yellow}](target:t-width) Dikdörtgenin [genişliği](target:t-width) yamuğun  iki paralel olmayan kenarının [[orta noktalar | uç noktaları]] arasındaki mesafedir. _{span.reveal(when="blank-3")} Buna yamuğun __orta__ tabanı denir._ _{button.next-step.reveal(when="blank-3")} Devam et_
 
-{.reveal(when="next-0")} [Üçgenlerde olduğu](gloss:triangle-midsegment) gibi, bir yamuğun orta tabanı,  iki tabanı ile [[aynı uzunlukta | paraleldir | diktir]] . Orta tabanın uzunluğu, tabanların uzunluklarının ortalamasıdır: `(a+c)/2` .
+{.reveal(when="next-0")} [Üçgenlerde olduğu](gloss:triangle-midsegment) gibi, bir yamuğun orta tabanı,  iki tabanı ile [[paraleldir | aynı uzunlukta | diktir]] . Orta tabanın uzunluğu, tabanların uzunluklarının ortalamasıdır: `(a+c)/2` .
 
 {.reveal(when="blank-4")} Tüm bunları birleştirirsek, [_a_](target:base-2) ve [_c_](target:base-1) paralel kenarları ve yüksekliği [_h_](target:t-height) olan bir yamuk alanı için bir denklem elde ederiz:
 
@@ -802,13 +802,13 @@ Bu dikdörtgenin alanı,  deltoid alanının [[iki katıdır | aynıdır | üç 
 
 ::: column.grow
 
-[Eşkenar](gloss:rhombus) dörtgen, dört eş kenarı olan bir dörtgendir. Her eşkenar dörtgenin [[paralelkenar | dikdörtgen | kare]] olduğunu hatırlayabilirsiniz ve ayrıca bir [[deltoid | altıgen | içbükey çokgen]] .
+[Eşkenar](gloss:rhombus) dörtgen, dört eş kenarı olan bir dörtgendir. Her eşkenar dörtgenin [[paralelkenar | dikdörtgen | kare]] olduğunu ve ayrıca bir [[deltoid | altıgen | içbükey çokgen]] hatırlayabilirsiniz  .
 
 {.reveal(when="blank-6 blank-7")} Bu, bir eşkenar dörtgen alanını bulmak için, bir paralelkenar alanı veya bir deltoid alanı için kullanılan denklemleri kullanabileceğimiz anlamına gelir:
 
 {.text-center.reveal(when="blank-6 blank-7")} _Alan_ = [{.i.pill.blue} taban](target:base) × [{.i.pill.red} yükseklik](target:height) = `1/2` [{.i.pill.green} d1](target:d41) × [{.i.pill.yellow} d2](target:d42) .
 
-{.reveal(when="blank-6 blank-7" delay=1000)} _Farklı bağlamlarda, bir Eşkenar dörtgenin farklı kısımları (kenarlar, yükseklik, köşegenler) verilebilir vbu durumda hangi denklemin daha uygun olduğunu seçmelisiniz._
+{.reveal(when="blank-6 blank-7" delay=1000)} _Farklı durumlarda, bir eşkenar dörtgenin farklı kısımları (kenarlar, yükseklik, köşegenler) verilebilir vbu durumda hangi denklemin daha uygun olduğunu seçmelisiniz._
 
 :::
 
