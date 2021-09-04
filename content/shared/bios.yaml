@@ -2086,10 +2086,12 @@ peano:
 
 pearson:
   name: Pearson
-  bio: __Karl Pearson__ (1857 – 1936) was an English mathematician and
-    statistician. He worked on biometrics, meteorology, and eugenics, among many
-    other topics, and founded the world’s first university statistics
-    department, at University College London.
+  bio: |
+    __Karl Pearson__ (1857 – 1936) was an English mathematician and
+    statistician, and founded the world’s first university statistics
+    department at University College London.
+
+    However, he was also a proponent of eugenics and scientific racism.
 
 penrose:
   name: Penrose
