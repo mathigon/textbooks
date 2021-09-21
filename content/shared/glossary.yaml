@@ -472,6 +472,10 @@ cross-section:
   text: A __cross section__ is the intersection of a three-dimensional solid
     with a plane.
 
+crypto:
+  title: crypto-
+  text: Hidden or secret.
+
 cryptography:
   title: Cryptography
   text: __Cryptography__ is the area of mathematics that studies the enciphering
@@ -505,6 +509,10 @@ cylinder-volume:
 
     where _r_ is the radius of the circular base, and _h_ is the height of the
     cylinder (the perpendicular distance between the two bases).
+
+decrypt:
+  title: Decrypt
+  text: Turn ciphertext back into plaintext.
 
 degrees:
   title: Degrees
@@ -623,6 +631,10 @@ ellipse:
     plane.
   image: ellipse.svg
   link: /course/circles/conic-sections#ellipses
+
+encrypt:
+  title: Encrypt
+  text: Turn plaintext into ciphertext.
 
 error-detecting-code:
   title: Error-Detecting Code
@@ -796,6 +808,10 @@ graph:
   title: Graph
   text: A __graph__ is a collection of vertices connected by edges.
   link: /course/graph-theory/introduction
+
+graphein:
+  title: graphein
+  text: To write.
 
 graph-cycle:
   title: Cycle

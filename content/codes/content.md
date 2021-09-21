@@ -36,8 +36,8 @@ message of hope. See if you can spot the message – it starts around 1:30.
 
     figure: iframe(width="100%" height=166 scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/184253099&color=%23295869&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&sharing=false&download=false&show_playcount=false")
 
-
 ---
+
 > id: flashlight
 > goals: flashlight
 
@@ -63,6 +63,7 @@ or questions, it will be difficult to have more complex conversations, or to tal
 :::
 
 ---
+
 > id: telegraph
 > goals: press
 
@@ -72,7 +73,7 @@ In the early 19th century, the only way to transmit messages across long distanc
 by messenger. Companies like the “Pony Express” ran delivery routes with couriers riding on horses,
 but it could still take days or even weeks to send a message between distant cities.
 
-This all changed in 1837, with the invention of the [__telegraph__](gloss:telegraph). Using electric
+This all changed in 1837, with the invention of the [**telegraph**](gloss:telegraph). Using electric
 cables spanned across the country, it was possible to send messages almost instantly.
 
 ::: figure
@@ -108,6 +109,7 @@ current is flowing, which triggers a buzzing sound at the other end of the teleg
 :::
 
 ---
+
 > id: morse
 
 To send more complex messages, Morse represented every letter in the alphabet using a unique
@@ -124,6 +126,7 @@ the letter U, we have to send [[dot-dot-dash|dot-dash-dot|dash-dash-dot]]. Morse
 new “language”, which we now call the [Morse code](gloss:morse-code).
 
 ---
+
 > id: morse-1
 
 ::: column(width=280)
@@ -149,6 +152,7 @@ words per minute, which corresponds to six dots or dashes _every second_!
 :::
 
 ---
+
 > id: morse-encoding
 > goals: type
 
@@ -161,6 +165,7 @@ writing other words or sentences in this box, and watch how they are encoded as 
       .output.morse
 
 ---
+
 > id: radio
 > goals: play
 
@@ -174,6 +179,7 @@ more, and see if you can hear the dots and dashes in the background:
     // TODO Show actual morse code while playing
 
 ---
+
 > id: morse-applications
 > goals: play
 
@@ -211,19 +217,21 @@ this one. Can you find (and decipher) the hidden Morse code messages?
 :::
 
 ---
+
 > id: information
 
 ### Codes and Information
 
-Wherever we look, we are surrounded by [__information__](gloss:information), like books and
+Wherever we look, we are surrounded by [**information**](gloss:information), like books and
 newspapers, numbers and charts, photos, images, music, or movie clips.
 
-A [__code__](gloss:code) is a rule or algorithm that can be used to express information in a certain
+A [**code**](gloss:code) is a rule or algorithm that can be used to express information in a certain
 format. One example is our _alphabet_, which can be used to express language as a series of written
 symbols (called _letters_). Another example we saw before is the [Morse code](gloss:morse-code),
 which expresses words as sequences of [[dots and dashes|letters and spaces|radio music]].
 
 ---
+
 > id: smoke-signals
 
 But this is only the beginning, and there is a huge variety of codes that can be used for different
@@ -253,6 +261,7 @@ smoke. [Continue](btn:next)
 :::
 
 ---
+
 > id: flags
 
 There are many other examples where words or letters are not the best way to express information.
@@ -263,8 +272,8 @@ Here are some other codes you might have heard of:
 #### Phonetic Alphabet _{span.check(when="blank-0")}_
 
 Many letters sound very similar – especially when spoken over the phone or radio, with loud
-background noise. That’s why the military, police, pilots, and many others use the __NATO Phonetic
-Alphabet__ when they have to spell names. Here, every individual letter is replaced with a unique
+background noise. That’s why the military, police, pilots, and many others use the **NATO Phonetic
+Alphabet** when they have to spell names. Here, every individual letter is replaced with a unique
 word:
 
     - nato = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'India', 'Juliet', 'Kilo', 'Lima', 'Mike', 'November', 'Oscar', 'Papa', 'Quebec', 'Romeo', 'Sierra', 'Tango', 'Uniform', 'Victor', 'Whiskey', 'X-ray', 'Yankee', 'Zulu']
@@ -280,7 +289,7 @@ For example, saying “Mike–Alpha–Tango–Hotel–Sierra” would spell the 
 
 #### Maritime Flags _{span.check(when="blank-1")}_
 
-Ships can use __Maritime Signal Flags__, which are hung from their masts, to communicate with other
+Ships can use **Maritime Signal Flags**, which are hung from their masts, to communicate with other
 ships within sight range.
 
 ::: column(width=320)
@@ -316,7 +325,7 @@ _{img(src="images/maritime/e.svg" width=20 height=20)}_ on a passing ship, you s
 
 #### Flag Semaphore _{span.check(when="blank-2")}_
 
-__Flag Semaphore__ is another way to communicate using flags, which was used long before the
+**Flag Semaphore** is another way to communicate using flags, which was used long before the
 invention of the telegraph. In this case, all flags are the same, but holding them in different
 positions indicates different letters:
 
@@ -344,6 +353,7 @@ letters instead! As you can see, they ended up spelling the word [[rujv]]!
 :::
 
 ---
+
 > id: genetic
 
 ### The Genetic Code
@@ -367,11 +377,11 @@ organisms work. It consists of four different components, called _nucleotides_:
 
 A strand of DNA consists of billions of these _nucleotides_, which contain the instructions for
 the development and functioning of our body. We can represent them using sequences of the letters
-__{.m-red} A__, __{.m-blue} T__, __{.m-green} C__ and __{.m-yellow} G__.
+**{.m-red} A**, **{.m-blue} T**, **{.m-green} C** and **{.m-yellow} G**.
 
 Similar to Morse code, every three consecutive nucleotides correspond to a specific [_amino
 acid_](gloss:amino-acid), a small component used by the cells in our body. For example,
-__{.m-red}AA__**{.m-yellow}G** represents _Lysine_, an amino acid we consume by eating food like
+**{.m-red}AA\*\***{.m-yellow}G\*\* represents _Lysine_, an amino acid we consume by eating food like
 eggs, meat or soybeans.
 
 The genetic code has space for `4^3 = 64` amino acids (four options for each of the three
@@ -380,6 +390,7 @@ nucleotides in a triple), but only 20 are actually needed in our body.
 :::
 
 ---
+
 > id: intro-end
 
 Finally, remember that the same symbol can mean completely different things within different codes.
@@ -387,9 +398,7 @@ For example, the letter _C_ can be represented by “Charlie” in the NATO Phon
 be the maritime flag _{img(src="images/maritime/c.svg" width=20 height=20)}_, or it can represent
 _Cytosine_ if placed within a strand of DNA letters.
 
-
-----------------------------------------------------------------------------------------------------
-
+---
 
 ## Binary Numbers
 
@@ -416,11 +425,11 @@ But how can a simple on/off switch store information as complex as sound, images
 :::
 
 ---
+
 > id: finger5
 > sectionStatus: dev
 
 To understand how all sorts of different codes can be stored in the transistors of a computer, let’s try a thought exercise. We've just looked at how a transistor can be turned on or off, now let's look at how we can count on our fingers by putting them up or down.
-
 
 ### Playing with Digits
 
@@ -439,7 +448,7 @@ How high can you count using only one hand, without skipping any numbers? When w
 A drawback of this strategy is that there are many unused finger combinations. For example, this finger combination to the right would represent [[2]]. With our traditional model there are two fingers up, so it means two. But we already have a configuration for two! We're wasting valuable space.
 
 ::: column(width=320)
-    x-img(src="images/fingers/binary_17.jpg" width=320 height=320)
+x-img(src="images/fingers/binary_17.jpg" width=320 height=320)
 :::
 
 ---
@@ -447,7 +456,7 @@ A drawback of this strategy is that there are many unused finger combinations. F
 There is a way that we can count much higher while still using only one hand, and this counting method will also help us understand how transistors store information. The secret lies in something called [binary numbers](gloss:binary-numbers). Instead of using the number of fingers up as our count, we have to do something a bit more complicated.
 
 ::: column.grow
-We can treat each of our fingers as a __digit__ with one of two possible values: down or up. Down can represent the number __0__ and up can represent the number __1__.
+We can treat each of our fingers as a **digit** with one of two possible values: down or up. Down can represent the number **0** and up can represent the number **1**.
 
 ::: column(width=200)
 
@@ -459,6 +468,7 @@ We can treat each of our fingers as a __digit__ with one of two possible values:
         td
           x-img(src="images/fingers/finger_1_highlight.png" width=100)
           .caption= 1
+
 :::
 
 If we want to use each combination of ups and downs to represent a different number, then how many combinations can we represent? (Link back to combinatorics).
@@ -466,8 +476,6 @@ If we want to use each combination of ups and downs to represent a different num
 ---
 
 {.todo PHILIPP please help! How to style a table, while also accepting inputs?}
-
-
 
     table.finger-combos
       tr
@@ -484,7 +492,6 @@ If we want to use each combination of ups and downs to represent a different num
             div.md [[#{2**i}]]
         - i+=1
 
-
 | .head Number of fingers | .head Possible combinations. |
 | 1 | [[2]] |
 | 2 | [[4]] |
@@ -492,13 +499,12 @@ If we want to use each combination of ups and downs to represent a different num
 | 4 | [[16]] |
 | 5 | [[32]] |
 
-More generally, with __n__ fingers we can represent _{x-equation.small(solution="2^n" keys="n sup" numeric)}_. possible combinations. Remember that our fingers are merely serving as a metaphor for binary numbers. This means that __any n-digit number can represent up to 2^n different values__.
-
-
+More generally, with **n** fingers we can represent _{x-equation.small(solution="2^n" keys="n sup" numeric)}_. possible combinations. Remember that our fingers are merely serving as a metaphor for binary numbers. This means that **any n-digit number can represent up to 2^n different values**.
 
 ---
 
 ### 1s and 0s
+
 > id: bracket
 
 Recalling our lesson on [probability trees](link/to/course), with each finger that we add our number of options multiplies by two.
@@ -604,7 +610,6 @@ Yes, there are [[32]] different combinations we can make with five fingers.
                     .caption.dec= n
                     .caption.bin= ""+b0+b1+b2+b3+b4
 
-
 {.TODO PHILIPP how to make them appear after entering value into blank?}
 
 (we'll find out soon why we started with zero).
@@ -613,7 +618,6 @@ Change the [tabs](->.segmented) to toggle between the binary values and their de
 ---
 
 {.todo} Transistors
-
 
 Now that we have learned a bit about how we can represent different values by strings of 0s and 1s, let's tie this back to transistors. Recall how in our morse code/flashlight examples we were constrained by our medium’s ability to be on or off. Computers store data in transistors, so they store data as a collection of ons and offs, or 1s and 0s. Just like we just did with our fingers (by putting them up or down). If a computer had fingers, they would probably count to 31 on one hand. Everything that’s stored on a computer, from text and images to video and sound is stored in transistors as sequences of 1s and 0s, or binary code.
 
@@ -626,9 +630,7 @@ Another way we can imagine these transistors is with a series of lights.
           td: div.led(padding="1px")
             x-img(src="images/light_"+on+".png")
 
-
 This is how the sequence _{.ns.g}10011011_ would be stored.
-
 
 ---
 
@@ -640,7 +642,7 @@ Our number system operates as a [base ten](gloss:base-10) number system. Base te
 
 The value represented by each digit is the digit number times the value of the digit. So A four in the hundreds place represents the value [[400]].
 
-| __number__ | __hundreds value__ | __tens value__ | __ones value__ |
+| **number** | **hundreds value** | **tens value** | **ones value** |
 | 432 | [[400]] | [[30]] | [[2]] |
 | 907 | [[900]] | [[0]] | [[7]] |
 {.table-small.grid}
@@ -649,12 +651,12 @@ To find the value of a base ten number, we add up the values of each digit!
 
 ---
 
-Binary numbers work very similarly except they use a base-two number system. So instead of ten possible digit values, they only have 2. Each consective digit is worth [[twice|three times|ten times]] as much as the previous digit. And because in a binary number each digit can either be __1__ or __0__, each digit value can be either __on__ or __off__.
+Binary numbers work very similarly except they use a base-two number system. So instead of ten possible digit values, they only have 2. Each consective digit is worth [[twice|three times|ten times]] as much as the previous digit. And because in a binary number each digit can either be **1** or **0**, each digit value can be either **on** or **off**.
 
 Let's examine the binary number _{.ns.g}11111_ (5 consecutive 1s). How much is each digit worth?
 
-| __{.m-red}digit__ | 1 | 1 | 1 | 1 | 1 |
-| __{.m-green}digit value__   | {.s-green}_{.hex}[[16]]_ | {.s-green}_{.hex}[[8]]_ | {.s-green}_{.hex}[[4]]_ | {.s-green}_{.hex}[[2]]_ | {.s-green}_{.hex}[[1]]_ |
+| **{.m-red}digit** | 1 | 1 | 1 | 1 | 1 |
+| **{.m-green}digit value** | {.s-green}_{.hex}[[16]]_ | {.s-green}_{.hex}[[8]]_ | {.s-green}_{.hex}[[4]]_ | {.s-green}_{.hex}[[2]]_ | {.s-green}_{.hex}[[1]]_ |
 {.table-small.grid}
 
 ---
@@ -673,12 +675,12 @@ Here are some 6-digit binary numbers. Let's convert them to decimal by first wri
 
 {.text-center.s-teal} _{.ns.g}101011_ = _{.hex}[[32]]_ + _{.hex.z}0_ + _{.hex}[[8]]_ + _{.hex.z}0_ + _{.hex}[[2]]_ + _{.hex}[[1]]_ = _{.hex}[[43]]_
 
-
 When computers (including digital calculators) add and subtract numbers, this is how the numbers are represented at the level of the transistor!
 
 ---
 
 ### Converting Base-Ten to Binary
+
 > id: dec2bin
 
 Now that we know how to convert a binary to decimal, how can we convert a decimal to a binary number? This solution is not as obvious. Follow the animation below to visualize how to break a decimal number into binary digits.
@@ -703,11 +705,11 @@ Imagine a conveyor belt that slides a large block of a gelatin-like material. Th
       .legend(slot="legend") Next we test the #[strong 1s] place.
       .legend(slot="legend") We can subtract 1, so we write a #[strong 1] in the 1s place. We're left with 0, and we are finished.
 
-
 {.fixme} I'm not sure exactly how to format this, Could just leave as is, or could do as a proof (see below).
 
 Here is that simple method put into steps.
 When converting decimal number N into binary:
+
 1. Start with the highest power of 2^n, d, that you can subtract from N.
 2. If you can subtract d from N, then write a 1 in that place and continue with N = N - d.
 3. If you cannot subtract d from N, then write a 0 in that place and continue with N = N.
@@ -730,15 +732,13 @@ Here are the steps generalized:
 
 If you look around, you can find patterns related to binary numbers in computers, and in some other unexpected places!
 
-
 ::: column(width=160 parent="padded-thin")
 
     x-img(src="images/smartphone.png" width=160 height=160 alt="Color Hex Codes")
 
 ::: column(width=400)
 
-When you’re looking to buy any digital device with memory like a Smartphone, Tablet, Computer, or SD Card the options often come with __Memory__ options that are a power of 2, like 16GB, 32GB, or 64GB.
-
+When you’re looking to buy any digital device with memory like a Smartphone, Tablet, Computer, or SD Card the options often come with **Memory** options that are a power of 2, like 16GB, 32GB, or 64GB.
 
 ::: column(width=160 parent="padded-thin")
 
@@ -746,8 +746,7 @@ When you’re looking to buy any digital device with memory like a Smartphone, T
 
 ::: column(width=400)
 
- __Colors__ on computers are stored using a combination of letters and numbers. This is another base system called __hexadecimal__, which is a base-16 system. Each color has a Red, a Green, and a Blue value, each of which is a number between 0 and 255.
-
+**Colors** on computers are stored using a combination of letters and numbers. This is another base system called **hexadecimal**, which is a base-16 system. Each color has a Red, a Green, and a Blue value, each of which is a number between 0 and 255.
 
 ::: column(width=160 parent="padded-thin")
 
@@ -755,8 +754,7 @@ When you’re looking to buy any digital device with memory like a Smartphone, T
 
 ::: column(width=400)
 
-In 2016, the messaging app __WhatsApp__ increased the maximum number of possible users in a single group to 256 (2^8).
-
+In 2016, the messaging app **WhatsApp** increased the maximum number of possible users in a single group to 256 (2^8).
 
 ::: column(width=160)
 
@@ -764,7 +762,7 @@ In 2016, the messaging app __WhatsApp__ increased the maximum number of possible
 
 ::: column(width=400)
 
- Many sports tournaments start with a number of teams that is a power of two. The __NCAA Basketball Tournament__ begins with 64 (2^6) teams and has rounds called “The Sweet Sixteen”, “The Elite Eight”, and “The Final Four” (each of which is a power of two!).
+Many sports tournaments start with a number of teams that is a power of two. The **NCAA Basketball Tournament** begins with 64 (2^6) teams and has rounds called “The Sweet Sixteen”, “The Elite Eight”, and “The Final Four” (each of which is a power of two!).
 
 ::: column(width=160)
 
@@ -772,25 +770,23 @@ In 2016, the messaging app __WhatsApp__ increased the maximum number of possible
 
 ::: column(width=400)
 
-The __I-Ching__ is an ancient Chinese divination text. It contains 64 different "Hexagrams", each of which is made up of six horizontal lines which can be either solid (Yang) or divided (Yin).
+The **I-Ching** is an ancient Chinese divination text. It contains 64 different "Hexagrams", each of which is made up of six horizontal lines which can be either solid (Yang) or divided (Yin).
 
 :::
 
-
 ### Conclusion
-{.todo} Conclusion
 
+{.todo} Conclusion
 
 Now that you've learned about binary numbers, you can make this joke to your friends:
 
 {.fixme} Make this bigger and centered.
 
-__There are only 10 types of people in the world:__
-__those who understand binary,__
-__and those who don't.__
+**There are only 10 types of people in the world:**
+**those who understand binary,**
+**and those who don't.**
 
-
-----------------------------------------------------------------------------------------------------
+---
 
     // EDC photo resources
     // https://commons.wikimedia.org/wiki/File:Barcodedmail.JPG
@@ -808,7 +804,7 @@ __and those who don't.__
 
 ### Introduction
 
-Scientists and engineers have worked very hard to make satellites that travel very far from Earth. Voyager 1 is now _13 billion miles_ away from Earth.  When a satellite captures information about space, it must then transmit this data back to a satellite dish back on Earth. Perhaps this data is a photo of Jupiter's great red spot? Or perhaps it's data about the temperature on Neptune? Or movement data of asteroids? Regardless of what the message is we received, how do we know that the data we've received is accurate?
+Scientists and engineers have worked very hard to make satellites that travel very far from Earth. Voyager 1 is now _13 billion miles_ away from Earth. When a satellite captures information about space, it must then transmit this data back to a satellite dish back on Earth. Perhaps this data is a photo of Jupiter's great red spot? Or perhaps it's data about the temperature on Neptune? Or movement data of asteroids? Regardless of what the message is we received, how do we know that the data we've received is accurate?
 
 Unforuntately, our atmosphere gets in the way of our messages. Just like looking through a glass of water distorts the image of what's behind it, the charged particles in our atmosphere might distort some of the signals coming from the satellite.
 
@@ -824,6 +820,7 @@ Unforuntately, our atmosphere gets in the way of our messages. Just like looking
 When we receive a message, transmitted as many packets of binary numbers, there is a chance that some of the bits may be incorrect. We need a way to figure out (a) if any bits are incorrect and (b) which ones. Just like if you write a letter to someone and send it in the mail. If some of the words are blurred, you might be able to infer the original message from context -- but with 0s and 1s, we don't have any way to understand the context.
 
 ---
+
 > id: messages
 
 Let's think about some ways we could possibly make sure that we know the correct message.
@@ -842,7 +839,7 @@ Perhaps the simplest way to do it would be to send multiple copies of the same m
 
 ::: column.grow
 
-If we send three copies, then we will know that there's an error, *and* be able to see which message is correct. This would be an [Error Correcting Code](gloss:error-correcting-code). In this example to the left, we know that the [[blue|green]] envelope will be the correct message.
+If we send three copies, then we will know that there's an error, _and_ be able to see which message is correct. This would be an [Error Correcting Code](gloss:error-correcting-code). In this example to the left, we know that the [[blue|green]] envelope will be the correct message.
 
 ::: column(width=300)
 
@@ -861,14 +858,15 @@ There must be a better way.
 > id: parity-bit
 
 #### Parity Bit
-One very simple and cost-effective way to detect an error in a sequences of numbers is with a __parity bit__.
+
+One very simple and cost-effective way to detect an error in a sequences of numbers is with a **parity bit**.
 The parity bit is added to the end of the message to tell us something about the rest of the message.
 
 For example we can add one more bit to the end of a sequence of binary numbers depending on the sum of the first bits.
 
-{.text-center} If the sum is even, the parity bit is __0__.
+{.text-center} If the sum is even, the parity bit is **0**.
 
-{.text-center} If the sum is odd, the parity bit is __1__.
+{.text-center} If the sum is odd, the parity bit is **1**.
 
 With this scheme, after the parity bit has been appended, the sum of the entire encoded number will be [[even|odd]].
 
@@ -912,7 +910,6 @@ Woodland used his knowledge of Morse Code as a foundation to invent a new type o
 
 {.caption} The original barcode was invented as a circle, but in the 1970s an IBM engineer figured out that a rectangle would be more compact than a bulls-eye.
 
-
     // https://www.vice.com/en/article/qv38wp/how-the-railroad-industry-invented-then-immediately-discarded-the-barcode
     // https://video-images.vice.com/articles/59ef239aa525153b1140ebc5/lede/1508845007190-image2.jpeg
     x-img(src="images/train-barcode.jpeg" width=300 height=200)
@@ -947,53 +944,55 @@ The guards are on the [{.step-target.pill.b.red}outside](target:outside) and in 
 The first six digits are on the [{.step-target.pill.b.blue}left](target:left).
 The last six digits are on the [{.step-target.pill.b.green}right](target:right).
 
-__The Guards__
+**The Guards**
 
-| LEFT | CENTER | RIGHT |
-| --- | --- | --- |
+| LEFT                                           | CENTER                                          | RIGHT                                          |
+| ---------------------------------------------- | ----------------------------------------------- | ---------------------------------------------- |
 | [{.step-target.pill.b.red}101](target:outside) | [{.step-target.pill.b.red}01010](target:middle) | [{.step-target.pill.b.red}101](target:outside) |
 
-__The Digits__
+**The Digits**
 
 {.fixme} why is left and right different?
 
-| DIGIT | LEFT SIDE | RIGHT SIDE |
-|---|---|---|
-| 0 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWWBBWB.svg" width=80)}_](target:l0) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBBWWBW.svg" width=80)}_](target:r0) |
-| 1 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWBBWWB.svg" width=100)}_](target:l1) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBWWBBW.svg" width=100)}_](target:r1) |
-| 2 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWBWWBB.svg" width=100)}_](target:l2) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBWBBWW.svg" width=100)}_](target:r2) |
-| 3 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBBBWB.svg" width=100)}_](target:l3) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWWWBW.svg" width=100)}_](target:r3) |
-| 4 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBWWWBB.svg" width=100)}_](target:l4) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWBBBWW.svg" width=100)}_](target:r4) |
-| 5 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBWWWB.svg" width=100)}_](target:l5) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWBBBW.svg" width=100)}_](target:r5) |
-| 6 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBWBBBB.svg" width=100)}_](target:l6) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWBWWWW.svg" width=100)}_](target:r6) |
-| 7 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBBWBB.svg" width=100)}_](target:l7) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWWBWW.svg" width=100)}_](target:r7) |
-| 8 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBWBBB.svg" width=100)}_](target:l8) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWBWWW.svg" width=100)}_](target:r8) |
-| 9 | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWWBWBB.svg" width=100)}_](target:l9) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBBWBWW.svg" width=100)}_](target:r9) |
+| DIGIT | LEFT SIDE                                                                            | RIGHT SIDE                                                                           |
+| ----- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| 0     | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWWBBWB.svg" width=80)}_](target:l0)  | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBBWWBW.svg" width=80)}_](target:r0)  |
+| 1     | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWBBWWB.svg" width=100)}_](target:l1) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBWWBBW.svg" width=100)}_](target:r1) |
+| 2     | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWBWWBB.svg" width=100)}_](target:l2) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBWBBWW.svg" width=100)}_](target:r2) |
+| 3     | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBBBWB.svg" width=100)}_](target:l3) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWWWBW.svg" width=100)}_](target:r3) |
+| 4     | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBWWWBB.svg" width=100)}_](target:l4) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWBBBWW.svg" width=100)}_](target:r4) |
+| 5     | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBWWWB.svg" width=100)}_](target:l5) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWBBBW.svg" width=100)}_](target:r5) |
+| 6     | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBWBBBB.svg" width=100)}_](target:l6) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWBWWWW.svg" width=100)}_](target:r6) |
+| 7     | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBBWBB.svg" width=100)}_](target:l7) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWWBWW.svg" width=100)}_](target:r7) |
+| 8     | [{.pill.b.yellow}_{img(src="images/barcode/bar-WBBWBBB.svg" width=100)}_](target:l8) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BWWBWWW.svg" width=100)}_](target:r8) |
+| 9     | [{.pill.b.yellow}_{img(src="images/barcode/bar-WWWBWBB.svg" width=100)}_](target:l9) | [{.pill.b.yellow}_{img(src="images/barcode/bar-BBBWBWW.svg" width=100)}_](target:r9) |
 
 :::
 
 {.fixme} There are a few interesting patterns we can recognize here. First, notice that the codes on the left side are different from the codes on the right side. This allows the bar code to be read upside down or backwards.
 
 ##### Barcodes in different countries
+
 These barcodes with 12 digits are how they work in the US. In Europe, there are 13 digits. And other countries have different protocols for how barcodes. work.
 
 ##### Digit Value
 
 - The first digit represents what type of object it is (0 - Standard; 2 - Weighted item like fruit; 3 - Pharmacy; 5 - Coupon)
-- Digits 2-6 (highlight) represent the *Manufacturer's Code*
-- The 7-11 (highlight) represent the *Product Code*
-- The final, 12th digit (highlight) is the __Error-Detection digit__, also called the __Modulo Check Character__
+- Digits 2-6 (highlight) represent the _Manufacturer's Code_
+- The 7-11 (highlight) represent the _Product Code_
+- The final, 12th digit (highlight) is the **Error-Detection digit**, also called the **Modulo Check Character**
 
 ##### Different between Left and Right
+
 Every binary representation of digits on the left begins with a 0 and ends with a 1, and every digit on the right begins with a 1 and ends with a 0. This results in a pattern: there will always be a 10 (on the left side) or a 01 (on the right side) on the edge between digits.
 
-
 #### Error Checking.
+
 Just like our case with the satellite signals, there is a chance that the laser reading the barcode can make a mistake. Perhaps there is some dirt, or a scratch, or the laser reads it incorrectly. For that reason, barcodes have a special way of determining whether there's been a mistake.
 
 The 12th digit is dependent on the first 11 digits, so that if any of the digits is wrong, we will know (most of the time). Can you guess how the 12th digit can indicate information about the first 11?
 
-{.fixme} The odd digit places are summed and multiplied by three. Then we calculate the sum of the even places, and sum these two values together. The __Modulo Check Character__ is 10 minus the ones digit of this number.
+{.fixme} The odd digit places are summed and multiplied by three. Then we calculate the sum of the even places, and sum these two values together. The **Modulo Check Character** is 10 minus the ones digit of this number.
 
 ---
 
@@ -1007,15 +1006,15 @@ The 12th digit is dependent on the first 11 digits, so that if any of the digits
 
 ::: column(width=330)
 
-{.text-center} X = 3 * (∑ [oddDigits](target:odds)) + ∑ [evenDigits](target:evens)
+{.text-center} X = 3 \* (∑ [oddDigits](target:odds)) + ∑ [evenDigits](target:evens)
 
 {.text-center} `N = 10 - ones(X)`
 
 {.text-center} **Example**
 
-{.text-center} X = 3 * (0 + 1 + 0 + 0 + [[2]] + [[1]]) + (5 + 0 + 0 + [[1]] + [[5]])
+{.text-center} X = 3 \* (0 + 1 + 0 + 0 + [[2]] + [[1]]) + (5 + 0 + 0 + [[1]] + [[5]])
 
-{.text-center.reveal(when="blank-0 blank-1 blank-2 blank-3")} X = 3 * ([[4]]) + ([[11]])
+{.text-center.reveal(when="blank-0 blank-1 blank-2 blank-3")} X = 3 \* ([[4]]) + ([[11]])
 
 {.text-center.reveal(when="blank-0 blank-1 blank-2 blank-3 blank-4 blank-5")} X = [[12]] + 11
 
@@ -1048,15 +1047,16 @@ Pick the barcodes that have a valid error-check character.
       .item: x-barcode(value="35802034085" targets="off")
       .item: x-barcode(value="35802034085" targets="off")
 
-
 {.todo} ACTIVITY: Look around you for something with a barcode (pretty much anything you can buy at a store). Hide the numbers with paper or tape, and try to decode the numbers. After you've written down your answer, see if you're correct! And then you can try the error detection formula and confirm that it is correct. (PHOTOS also)
 
 #### Barcode Conclusion
+
 {.fixme} These are only the UPC bar codes. There are many other types of bar codes listed here: http://www.makebarcode.com/specs/barcodechart.html
 
 ---
 
 ### Hamming Codes
+
 > id: hamming
 
 Let's go back to our original problem of how we might detect errors in a message received from a satellite. We don't know the message the satellite intended to send, and unlike with barcodes there is no way to find it, such as a cashier who can look at the number and type it into the computer.
@@ -1080,8 +1080,8 @@ Computers used to be programmed by creating holes in special [punch cards](gloss
 
 How can we detect and correct an error in a messaage that is just a sequence of binary numbers? A [Hamming Code](gloss:hamming-code) can be used to do just this. The solution involves inserting new bits into the message that will tell us information about the values of those original bits. If we know the location of where an error occurred, then we know the original value of that bit because [[binary digits can only have two values|we can just look at the number under the barcode]].
 
-
 ---
+
 > id: hamming-encode
 
 #### Encoding a Hamming Code
@@ -1098,7 +1098,7 @@ Click through the slides to see how to encode a string of bits using a Hamming C
 
 {div.inline(slot="legend")} The [{.pill.red}parity bits](target:parity) will go into any position that is a power of 2. Here we place parity bits at [{.pill.red}1](target:p1), [{.pill.red}2](target:p2), [{.pill.red}4](target:p4), and [{.pill.red}8](target:p8).
 
-{div.inline(slot="legend")} We must figure out the values that go into the parity bits. We do this by dividing the sequence into one __parity group__ for each parity bit. We then assign the parity bit whatever value will make the parity of the group even.
+{div.inline(slot="legend")} We must figure out the values that go into the parity bits. We do this by dividing the sequence into one **parity group** for each parity bit. We then assign the parity bit whatever value will make the parity of the group even.
 
 {div.inline(slot="legend")} Let's start with the first parity group. Start at the parity bit in [{.pill.red}position 1](target:p1), then choose every other **1** bit.
 
@@ -1139,12 +1139,12 @@ Here is how to select the digits to include in a parity group.
 
 ::: column.grow
 
-| group | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 |
-| 2 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1 | 0 |
-| 4 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 1 |
-| 8 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 1 |
+| group | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  |
+| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1     | 1   | 0   | 1   | 0   | 1   | 0   | 1   | 0   | 1   | 0   | 1   | 0   |
+| 2     | 0   | 1   | 1   | 0   | 0   | 1   | 1   | 0   | 0   | 1   | 1   | 0   |
+| 4     | 0   | 0   | 0   | 1   | 1   | 1   | 1   | 0   | 0   | 0   | 0   | 1   |
+| 8     | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   | 1   | 1   | 1   | 1   |
 
 ::: column(width=300)
 
@@ -1166,14 +1166,16 @@ Now that we have an encoded message, how can we extract the data from it? We mus
 
 ::: column
 
-__Encoding__
+**Encoding**
+
 1. Make room for parity bits
 2. Identify parity groups.
 3. Define parity bits.
 
 ::: column
 
-__Decoding__
+**Decoding**
+
 1. Check parity bits.
 2. Make corrections.
 3. Remove parity bits.
@@ -1200,7 +1202,6 @@ Click through the slides to see how to decode a string of bits using Hamming Cod
 
 {div.inline(slot="legend")} Now we can remove the parity bits to fully decode our message.
 
-
 :::
 
 ---
@@ -1217,30 +1218,27 @@ This is not a perfect system. This type of code will not correctly detect an err
     // https://commons.wikimedia.org/wiki/File:Credit-cards.jpg
       .
 
-{.caption} Credit cards use a checksum digit calculated with __Luhn's algorithm__ to check for errors.
+{.caption} Credit cards use a checksum digit calculated with **Luhn's algorithm** to check for errors.
 
 ::: column(width=220)
 
     x-img(src="images/compact-disc.jpg" width=200 height=200)
     // https://commons.wikimedia.org/wiki/File:Compact_disc_1.jpg
 
-{.caption} CDs and DVDs use the __Reed-Solomon__ error-correcting code to allow playback even when the disc has scratches.
+{.caption} CDs and DVDs use the **Reed-Solomon** error-correcting code to allow playback even when the disc has scratches.
 
 ::: column(width=220)
 
     x-img(src="images/snapchat-qr.png" width=180 height=180)
     // https://support.snapchat.com/en-GB/a/about-snapcodes
 
-{.caption} __QR Codes__ such as Snapchat profile codes also use a __Reed-Solomon__ error-correction code.
+{.caption} **QR Codes** such as Snapchat profile codes also use a **Reed-Solomon** error-correction code.
 
 :::
 
+{.fixme} PHOTO? Software applications often include a **MD5** or **SHA-1** checksum that indicates they came from a valid source.
 
-{.fixme} PHOTO? Software applications often include a __MD5__ or __SHA-1__ checksum that indicates they came from a valid source.
-
-
-----------------------------------------------------------------------------------------------------
-
+---
 
 ## Secret Codes
 
@@ -1248,64 +1246,59 @@ This is not a perfect system. This type of code will not correctly detect an err
 > sectionStatus: dev
 > id: caesar
 
-In 49 BCE, Julius Caesar was leader of the Roman Empire, and his adopted heir Octavian was engaged
-in a battle
+The year is 49 BCE and Julius Caesar, leader of the Roman Empire, has sent a message to his adopted heir who is engaged in a battle that is not going well and is in need of reinforcements. In order to make sure the message arrives, he has sent 3 copies with trusted agents of his army. Spies from the opposing army intercept two of the messages, but one copy makes it through to Octavian.
 
+Upon receiving the letter, Octavian eagerly opens the message and reads:
 
-The year is 49BC and Julius Caesar, leader of the Roman Empire has sent a message to his adopted heir , who is engaged in a battle that is not going well and reinforcements are needed. In order to make sure the message arrives he has sent 3 copies with trusted agents of his army. Spies from the opposing army intercept two of the messages, but one copy makes it through to Octavian.
-
-Upon receiving the letter Octavian eagerly opens the message and reads:
-
-{.parchment} “Xlcjerjw, anrwoxalnvnwcb jan xw cqn fjh. Cx jaaren xw orocnnwcq Xlcxkna. Qxum yxbrcrxw
-dwcru cqnw. SL”
+{.parchment} “Xlcjerjw, anrwoxalnvnwcb jan xw cqn fjh. Cx jaaren xw orocnnwcq Xlcxkna. Qxum yxbrcrxw dwcru cqnw. SL”
 
 As you can see, the message makes no sense. Knowing that his message might fall into enemy hands,
-Caesar protected it by using a cipher.
+Caesar protected it by using a cipher: every letter in the message has been swapped with another one.
 
 [Continue](btn:next)
 
 ---
+
 > id: caesar-wheel
 > goals: wheel
 
-    svg.caesar-wheel(width=380 height=380)
-      circle(cx=190 cy=190 r=190)
-
-But Octavian knows how to crack the code: every letter in the message has been swapped with another
-one.
+    .caesar-wheel
+      include svg/caesar-wheel.svg
 
 Here you can see two wheels with all the letters of the alphabet. The outer, blue letters represent
 the original, correct letters, and the inner, red letters represent the encoded letters.
 
-To encode a message we simply have to swap every blue letter with the corresponding red one, and to
-decode it, we just have to go the other way.
+To encode a message, we simply have to rotate the wheel so that the two sets of letters don't match, and then swap every blue letter with the corresponding red one. To decode it, we just have to go the other way.
 
-Try rotating the wheel to different possitions, until the message makes sense:
+Try rotating the inner wheel to different positions until the message makes sense:
 
-{.parchment} “Octavian, reinforcements are on the way. To arrive on fifteenth October. Hold
-position until then. JC”
+::: .parch(style="clear: right;")
+
+{.parchment} “${messageText}”
 
 ---
 
-{.fixme} Octavian breathes a sigh of relief knowing that help is coming, and also that the enemy agents who captured the other two messages won’t be able to read it without the secret key.
+> id: caesar-wheel-challenge
+> goals: wheel-challenge
 
-This method of encoding a secret message is called the __Caesar cipher__. We simply "shift" every
-letter in the alphabet by a certain amount
+Octavian knows how to crack the code, because Caesar told him the key (which letter the A should line up with on his wheel) before they left Rome. Once he rotates his cipher 9 letters counterclockwise so that the outer A lines up with the inner J, he is able to decode each letter of Caesar’s hidden message with ease. Octavian breathes a sigh of relief knowing that help is coming, and also that the enemy agents who captured the other two copies won’t be able to read them without the secret key.
 
-{.fixme}  And because Octavian knew what method Caesar had used to hide the message (an algorithm), and Caesar had told him the key (what letter the A lined up with on his wheel) before they had left Rome, he was able to read Caesar’s hidden message with ease.   shifts the alphabet a certain number of places in order to write out the message. This shifting is the algorithm. The key is how many places it is shifted.
+This method of encoding a secret message is called the **Caesar cipher**. The **algorithm** that the Caesar cipher uses is to simply shift every letter by some number of places in the alphabet. The **key** tells you how many places in the alphabet to shift each letter.
 
 Take a look at this message:
 
-“ymj hfpj nx ns ymj kwnilj. ny nx f hmthtqfyj hfpj bnym afsnqqf nhnsl fsi wfnsgtb xuwnspqjx.”
+“Ymj hfpj nx ns ymj kwnilj. Ny nx f hmthtqfyj hfpj bnym afsnqqf nhnsl fsi wfnsgtb xuwnspqjx.”
+
+    .caesar-wheel
+      include svg/caesar-wheel.svg
 
 We know that each letter has been replaced with a new letter of the alphabet by shifting the whole alphabet over by a specific number of spaces. For example, if it was shifted 1 space, all A’s would be written as B’s, B’s as C’s, C’s as D’s and so on. Using the wheel above, and some guess work, try to determine the message.
 
-Interactive Elements: an input box where they should write the text
-“The cake is in the fridge. It is a chocolate cake with vanilla icing and rainbow sprinkles.”
+<!-- The cake is in the fridge. It is a chocolate cake with vanilla icing and rainbow sprinkles. -->
 
-The shift, or key, for this message, is Input Box (5).
+The key, or number of places in the alphabet that have been shifted (to the left) in this message, is [[5 (21:What is the shift if we move to the *left*?)]].
 
-We can use devices like this, or even just writing out the alphabet two times, to match up each letter and either encrypt (definition: turn plaintext into cryptotext) or decrypt (definition: turn cryptotext back into plaintext) the message.
+We can use devices like a Caesar cipher – or even just writing out the alphabet twice – to match up each letter and either [__encrypt__](gloss:encrypt) or [__decrypt__](gloss:decrypt) the message.
 
 Caesar ciphers were quite popular, and secure, for a long time. Inventors even made devices to make the encryption and decryption of these messages easier.
 
@@ -1313,17 +1306,17 @@ Caesar ciphers were quite popular, and secure, for a long time. Inventors even m
 
 ### Cryptography
 
-{.fixme} Cryptography (definition: cryptography is two words crypto - hidden, secret; and graphein - to write) is the art of hiding a message using an algorithm (a way of writing the cipher) and a key (the secret to locking and unlocking it). Many people can know an algorithm but only a few people should know the key, and the less people that know it, the more secure the message is.
+The word _cryptography_ comes from two Greek root words, [__crypto__](gloss:crypto) and [__graphein__](gloss:graphein). Cryptography is the art of hiding a message using an **algorithm** (the method the cipher uses to encode or decode the message) and a **key** (the secret that you need to know to be able to use the cipher). Many people can know an algorithm but only a few people should know the key, and the fewer people that know it, the more secure the message is.
 
-Cryptography really is the art of hiding or obscuring a message. Early methods used steganography (definition: steganos - covered and graphein - to write), which is the art of simply hiding a message. It can be done in many ways, like using ink that can only be seen under certain conditions (like heat or acid), or hiding a message under something else (like wax, or even hair - though this one takes a long time).
+Cryptography really is the art of hiding or obscuring a message. Early methods were known as steganography (_steganos_ = "covered" and _graphein_ = "to write"), which means the art of visually hiding a message. It can be done in many ways, like using ink that can only be seen under certain conditions (like heat or acid), or hiding a message under something else (like wax, or even hair - though this one takes a long time).
 
 This method physically hides the message but, if detected, the message can still be easily read.
 
-So ciphers, like the Caesar, were designed to hide messages from being read by anyone who didn’t have the key. Sometimes these encrypted messages could be combined with stenography to make them even more secure.
+So ciphers, like the Caesar, were designed to hide messages from being read by anyone who didn’t have the key. Sometimes these encrypted messages could be combined with steganography to make them even more secure.
 
-![](https://csegrecorder.com/columns/view/science-break-201303)
+<!-- ![](https://csegrecorder.com/columns/view/science-break-201303) -->
 
-In previous modules (Link to module on Morse Code) you learned how letters and words could be written in different ways and encoded to symbols or sounds (like in Morse code). But this way of writing doesn’t hide the message, it just changes it into a different format (through an algorithm, but without a key); like how letters on a keyboard are converted to ASCII, then binary, and then back again to display on your phone or monitor. But if you know how to convert between the two languages you can read the message easily. Cryptography hides the message so that you need both an algorithm AND a key to read the message.
+In previous modules (Link to module on Morse Code) you learned how letters and words could be written in different ways and encoded to symbols or sounds (like in Morse code). But this way of writing doesn’t hide the message; it just changes it into a different format - like how letters on a keyboard are converted to ASCII, then binary, and then back again to display on your phone or monitor. It uses an algorithm, but there is no key: if you know how to convert between the two languages, you can read the message easily. Cryptography hides the message so that you need both an algorithm _and_ a key to read the message.
 
 ---
 
@@ -1337,7 +1330,7 @@ Interactive Element: A text box where students can write a message and then an a
 
 To make a message even more difficult they could encrypt it and then wrap it around a tube. Meaning the person intercepting it would have to first find a tube of the correct size to line up the message before they could even begin to decipher it. And because the message would appear to be gibberish to start with, it would make it nearly impossible to find a tube the correct size (or would require a LOT of guesswork).
 
-Interactive Element: A text box students can write a message in, encrypt using the cipher wheel, and then an interactive ‘tube size selector’ that then wraps their message around the tube. This message could be sent to another user who then has to select the correct sized tube in order to read the message and decrypt it on their end (see the end of the Vigenere section for additional communication between users). There would also be an option to print out the encrypted message and instructions on how to choose a tube size from items found around the home to make a physical scytale and then share it with friends and family.
+Interactive Element: A text box students can write a message in, encrypt using the cipher wheel, and then an interactive ‘tube size selector’ that then wraps their message around the tube. This message could be sent to another user who then has to select the correct sized tube in order to read the message and decrypt it on their end (see the end of the Vigenère section for additional communication between users). There would also be an option to print out the encrypted message and instructions on how to choose a tube size from items found around the home to make a physical scytale and then share it with friends and family.
 
 ![](https://www.britannica.com/topic/Morse-Code)
 
@@ -1345,17 +1338,17 @@ Interactive Element: A text box students can write a message in, encrypt using t
 
 ### Frequency Analysis
 
-A Caesar, or substitution, cipher is one of the easiest ciphers to create, but it’s also one of the easiest to break (or crack). This is because all someone needs to do is figure out the shift being used and they can easily read the whole message. To break the encryption you’d just have to try shifting each letter in the ciphertext to see if it created a plaintext that made sense. If it does, you’ve got the key, if it doesn’t, then you try the next shift until you get it; and you’d only have to try Input Box (25) different times (at maximum).
+A Caesar, or substitution, cipher is one of the easiest ciphers to create, but it’s also one of the easiest to break (or crack). This is because all someone needs to do is figure out the shift being used and they can easily read the whole message. To break the encryption you’d just have to try shifting each letter in the ciphertext to see if it created a plaintext that made sense. If it does, you’ve got the key, if it doesn’t, then you try the next shift until you get it; and at a maximum you’d only have to try [[25]] different times.
 
-    // 25: Please check but I believe this is correct; if it was mapped A --> A it would be readable so there are only 25 choices for the shift really
+<!-- 25: Please check but I believe this is correct; if it was mapped A to A it would be readable so there are only 25 choices for the shift really -->
 
 Of course this is looking at a basic Caesar cipher, which shifted the letters, but it kept them in order. But what would happen if we shuffled the letters and put them in a different order?
 
-Let’s start with the letter A, we could map it with itself, so A → A, but that would be rare and wouldn’t make much sense, but it’s still an option. Or we could map A → B, or A → C, or A → D and so on. This would give us Input Box (26) different possible options for A. We would then choose the next letter, let’s say B, assuming it wasn’t mapped to A, and do that one next. Well we know it can’t be mapped to A, as A is already mapped to another letter, but it could map to itself so that gives us Input Box (25) different options for B. We then pick our next letter and map it to other letter giving us Input Box (24) different options and so on…
+Let’s start with the letter A. We could map it with itself, so A → A, but that would be rare and wouldn’t make much sense, although it’s still an option. Or we could map A → B, or A → C, or A → D and so on. This would give us [[26]] different possible options for A. We would then choose the next letter - let’s say B, assuming it wasn’t mapped to A - and do that one next. We know it can’t be mapped to A, as A is already mapped to another letter, but it could map to itself, so that gives us [[25]] different options for B. We then pick our next letter and map it to another letter, giving us [[24]] different options, and so on…
 
 Interactive Element: Two rows of the alphabet and students can join a line from one letter to another, mapping them (like the image below). There will also be a counter that goes from 26 down to 1 for each mapping, showing the remaining choices for letters. This can then generate a substitution alphabet that students can use to encrypt and send a message with.
 
-This would give us 26 * 25 * 24 * 23 * … * 5 * 4 * 3 * 2 * 1 = 4.03 x 10^26 (Pop-up: multiplying a sequential chain of numbers like this can also be written as 26! where the ! means factorial. You can learn more about factorials here https://mathigon.org/world/Combinatorics ) different choices. Far too many choices to try a brute force attack (definition: trying one possibility after the other until you find one that works. This can be done systematically or at random) on to decipher. So instead we turn to frequency analysis to help us crack this code.
+This would give us 26 _ 25 _ 24 _ 23 _ … _ 5 _ 4 _ 3 _ 2 \* 1 = 4.03 x 10^26 (Pop-up: multiplying a sequential chain of numbers like this can also be written as 26! where the ! means factorial. You can learn more about factorials here https://mathigon.org/world/Combinatorics ) different choices. Far too many choices to try a brute force attack (definition: trying one possibility after the other until you find one that works. This can be done systematically or at random) on to decipher. So instead we turn to frequency analysis to help us crack this code.
 
 To start with frequency analysis involves looking at how many times a specific letter (or letters) appear in a block of text and comparing it to the most commonly used letters in that language). For example, in English, the most commonly used letter is the letter E. The least common letters are Z, X, Q and J.
 
@@ -1393,22 +1386,27 @@ Interactive Element: An analysis of the above text that also shows the frequency
     // http://plus.maths.org/content/cracking-codes
     // http://plus.maths.org/content/exploring-enigma
 
-The science of creating secret codes is called __Cryptography__ and the are of
-breaking them is called __Cryptanalysis__.
+The science of creating secret codes is called **Cryptography** and the are of
+breaking them is called **Cryptanalysis**.
 
 When designing ciphers, there are several possible objectives:
 
-* __Secrecy:__ A and B can be sure that no third party X can read the message.
-* __Integrity:__ A and B can be sure that no third party X can alter the message
+- **Secrecy:** A and B can be sure that no third party X can read the message.
+- **Integrity:** A and B can be sure that no third party X can alter the message
   while it is being transmitted.
-* __Secrecy:__ B can be sure that the message actually comes from A, and not
+- **Secrecy:** B can be sure that the message actually comes from A, and not
   from some impostor.
 
 Length of security (hours, years), level of security
 
 ---
 
-### The Vignere Cipher
+> id: vigenere-cipher
+> goals: vigenere
+
+### The Vigenère Cipher
+
+    .vigenere-animation
 
 ![](https://travelnoire.com/5-things-must-rome)
 
@@ -1467,7 +1465,7 @@ Charles Babbage (1791 - 1871) was an English polymath (definition: someone who k
 In order to break the Vigenère cipher, Babbage started by looking for patterns to try and find the length of the key. He spent what must have been enormous amounts of time pouring over encrypted blocks of text and studying it for repeating sets of letters that occurred at regular intervals in the text. He did this because he knew that once he knew the key length he could use frequency analysis on each part of the cipher to crack the overall code.
 
 Interactive Element (a slide show) -
-Text to include “Say you have an encrypted block of text and you know that the key has a length of 6. This means that you know that the first letter of the ciphertext and the seventh letter of the ciphertext are encrypted using the same substitution alphabet; as you are now repeating the key and have returned to the starting letter.” The animation shows how the 1st and 7th letters are encrypted using the same row of the Vignere cipher (this can be pulled from the previous animation showing how the Vignere cipher works).
+Text to include “Say you have an encrypted block of text and you know that the key has a length of 6. This means that you know that the first letter of the ciphertext and the seventh letter of the ciphertext are encrypted using the same substitution alphabet; as you are now repeating the key and have returned to the starting letter.” The animation shows how the 1st and 7th letters are encrypted using the same row of the Vigenère cipher (this can be pulled from the previous animation showing how the Vigenère cipher works).
 The next slide would be an animation showing the following text being split into its parts (every 7th letter, starting from the 8th, being grouped together). Text: “This means we can then rewrite the original text grouping all the 1st, 7th, 14th, 21st, etc letters together.”
 The next slide would be a frequency analysis chart being generated for each section of the text. Text: We can then perform a frequency analysis on each part of the text to determine each letter of the key
 Text: Finally we have a key and we can use it to decrypt the entire text (or put it back together from its parts)
@@ -1510,12 +1508,9 @@ Important note: The weakest link in cryptography is often humans and the fact th
 
 Let’s use what we’ve learned so far to send some messages.
 
-Interactive Element: A text box where students can write an encrypted message and send it to another student. They can choose what type of cipher and if they want to combine different methods (scytale + Caesar, or scytale + Vignere, or rail fence). It’s a selector tool where they can encrypt a message and then send it to someone along with how much info they want to send along (they can tell them nothing, or just the algorithm, or the algorithm and the key). They can make it as hard or easy as they want to. On the other end the student receiving the message would have access to things like tubes, cipher wheels, and frequency analysis tools.
+Interactive Element: A text box where students can write an encrypted message and send it to another student. They can choose what type of cipher and if they want to combine different methods (scytale + Caesar, or scytale + Vigenère, or rail fence). It’s a selector tool where they can encrypt a message and then send it to someone along with how much info they want to send along (they can tell them nothing, or just the algorithm, or the algorithm and the key). They can make it as hard or easy as they want to. On the other end the student receiving the message would have access to things like tubes, cipher wheels, and frequency analysis tools.
 
-
-
-----------------------------------------------------------------------------------------------------
-
+---
 
 ## The Enigma
 
@@ -1551,7 +1546,7 @@ Interactive Element: an exploded image of the Enigma machine where each part is 
 
 ![](https://hackaday.com/2017/08/22/the-enigma-enigma-how-the-enigma-machine-worked/)
 
-![]( https://www.alamy.com/stock-photo-an-enigma-machine-rotor-on-display-showing-the-internal-wiring-in-41587437.html)
+![](https://www.alamy.com/stock-photo-an-enigma-machine-rotor-on-display-showing-the-internal-wiring-in-41587437.html)
 
 In its simplest form an Enigma machine is simply a mechanical Vigenère cipher with a 26 letter keyword. An operator types a letter, an electrical signal then gets sent through a wire to encrypt that letter to a new letter and then the new letter lights up on the board. This new letter is then written down, the rotor moves forward one place, and the next letter is typed and it’s encrypted version lights up. This continues until the rotor has gone around all 26 spots and then returns to its initial position.
 
@@ -1561,7 +1556,7 @@ With only one rotor this is no better than a simple cipher wheel and only gives 
 A second wheel is added, it only turns once more than 26 letters have been typed so there must be a minimum requirement on the input box to type more than 26 letters - or have a bunch of letters already pre-programmed into the box. The same highlighting of the path should be shown. Text to be included:
 So they added a second wheel, one that only turned once the first had gone all the way around (after 26 letters had been typed). By adding this second rotor there were now Input box (26 * 26 = 676) different combinations. This was better but a team of cryptographers, especially ones who had their own Enigma machines, would be able to determine the correct orientation in fairly short order. And so a third rotor was added.
 A third rotor added, same idea as above showing the path being followed by the letters being encrypted. A large block of text should be included though to show the first, second and third rotors moving (as the third only moves once the second has rotated 26 times). Text to be included:
-This gave Input box 26*26*26 = 17,576 possible combinations. And, while much better, a dedicated team with access to a machine, could still potentially crack this. And so eventually they added a plugboard that switched 6 letters with each other.
+This gave Input box 26*26\*26 = 17,576 possible combinations. And, while much better, a dedicated team with access to a machine, could still potentially crack this. And so eventually they added a plugboard that switched 6 letters with each other.
 Interactive Element: an image of a plug board that students can drag the cord from one letter to another to switch them before being fed into the Enigma machine. There should be 3 such cords.
 The plugboard added a random element to the encryption and gave another 100,391,791,500 additional combinations. They also decided to make the rotors moveable (so they could be put in different configurations), giving another 6 options.
 Interactive Element: an animation showing each piece of the Enigma machine being put in with the number of combinations it adds and a running total of combinations. Text to be included:
@@ -1592,7 +1587,7 @@ It all started in 1938 when rumblings had started that Germany was going to inva
 
 ![](https://www.polishgreatness.com/enigma.html)
 
-Desperate to help however he could, Mariam Rejewski, a Polish cryptographer, was one of the first people to attempt to break Enigma. Just prior to WWII Rejewski received the blueprint for making a military style Enigma machine from a disgruntled German named Hans-Thilo Schmidt. But having the machine (the algorithm) wasn’t enough, he needed the key. With over 10x10^16 possible keys it was a daunting task but Rejewski realized if he could somehow separate the plugboards from the rotors he could dramatically decrease the potential number of keys. In fact, if he could separate out the plugboards he would only have 6 * 26 * 26 * 26 =  Input box 105,456 potential settings to work with (note: there were an extra 6 settings in the Enigma Rejewksi was working with because in his version of the Enigma you could take the three rotors out and change their physical positions in the machine, giving another 6 configurations).
+Desperate to help however he could, Mariam Rejewski, a Polish cryptographer, was one of the first people to attempt to break Enigma. Just prior to WWII Rejewski received the blueprint for making a military style Enigma machine from a disgruntled German named Hans-Thilo Schmidt. But having the machine (the algorithm) wasn’t enough, he needed the key. With over 10x10^16 possible keys it was a daunting task but Rejewski realized if he could somehow separate the plugboards from the rotors he could dramatically decrease the potential number of keys. In fact, if he could separate out the plugboards he would only have 6 _ 26 _ 26 \* 26 = Input box 105,456 potential settings to work with (note: there were an extra 6 settings in the Enigma Rejewksi was working with because in his version of the Enigma you could take the three rotors out and change their physical positions in the machine, giving another 6 configurations).
 
 Interactive Element: a table like this that students can fill out or physical/clickable/draggable rotors that students can move around and ‘plug into’ an Enigma machine and a counter that keeps track of the different combinations.
 
@@ -1639,6 +1634,7 @@ So this method seemed pretty effective for cracking most messages, however it wa
 While Rejewksi’s method had some flaws it was still a revolution and a breakthrough for cracking the Enigma and helped with future efforts. However, Rejewksi’s exact method was a short lived victory as soon after creating his codebooks 2 extra, interchangeable cylinders were added to the machine which gave an extra 60 arrangements of the rotors and increased the number of possible rotor configurations to 1,054,560. To add to this they also increased the number of plugboards from 6 to 10, giving 20 possible letter swaps for a total of 1.59x10^20 possible keys. Rejewkski would have needed 10 times more bombes to create a new code book and they were too expensive for the Polish intelligence. Enigma now, once again, seemed unbreakable. Add to this the fact that Germany was about to invade Poland and so Rejewski, and Polish intelligence, gave all his work (including the blueprints for making an Enigma machine, how to set up a bombe, and his methods) to the French and British intelligence.
 
 ---
+
 Bletchley Park
 
 From: https://en.wikipedia.org/wiki/Bletchley_Park
@@ -1672,6 +1668,7 @@ So this method seemed pretty effective for cracking most messages, however it wa
 While Rejewksi’s method had some flaws it was still a revolution and a breakthrough for cracking the Enigma and helped with future efforts. However, Rejewksi’s exact method was a short lived victory as soon after creating his codebooks 2 extra, interchangeable cylinders were added to the machine which gave an extra 60 arrangements of the rotors and increased the number of possible rotor configurations to 1,054,560. To add to this they also increased the number of plugboards from 6 to 10, giving 20 possible letter swaps for a total of 1.59x10^20 possible keys. Rejewkski would have needed 10 times more bombes to create a new code book and they were too expensive for the Polish intelligence. Enigma now, once again, seemed unbreakable. Add to this the fact that Germany was about to invade Poland and so Rejewski, and Polish intelligence, gave all his work (including the blueprints for making an Enigma machine, how to set up a bombe, and his methods) to the French and British intelligence.
 
 ---
+
 Bletchley Park
 
 From: https://en.wikipedia.org/wiki/Bletchley_Park
@@ -1700,9 +1697,7 @@ Interactive Element: an animation showing the flow of an electrical current goin
 
 Here is what it would look like (maybe an animation of a wrong combination where the electron starts at the first point and then gets blocked so the rotor moves forward one position and tries again and then eventually the electron makes it all the way through and lights up the bulb). Text: In these images, S, S+1, S+2, S+3, etc refer to the rotor settings where S is the initial (unknown) rotor setting, S+1 is where it clicks forward one place, S+2 is two forward rotations, etc. Where a setting doesn’t produce a link in the chain it is skipped. Of important note, this version is using a crib (or known word that the code breakers were able to guess - like in a weather report) and is not using the day codes as Turing believed (rightfully) that these would soon no longer be used. But the same process could work for other pieces of information found in the text.
 
-
-----------------------------------------------------------------------------------------------------
-
+---
 
 ## Public Key Cryptography
 
@@ -1729,7 +1724,6 @@ So you need to share a key first, but how can you do this safely? Let’s say yo
 
 Interactive Element: a drop down list of different options they could pick to send the key separate from the message and each selection would have a pop-up of the difficulties that method presents:
 
-
 Method
 Issue
 Send another email
@@ -1742,7 +1736,6 @@ Send it to them over another form of communication (text message, social media, 
 Message could be intercepted by the phone company or by the company that owns the social media or app; if their computer is compromised the hacker might be able to see the key regardless of the way it is sent.
 
 As you can see there are many ways that the key could be intercepted. So why not create a method to send a key publicly where it doesn’t matter if someone else gets it? That’s what RSA is.
-
 
 From: https://en.wikipedia.org/wiki/RSA_Security
 
@@ -1770,7 +1763,7 @@ Interactive Element: an input box with an “HELP” button that gives the answe
 
 947 and 277 are both prime numbers and so, when multiplied together, gives an answer that only has 4 possible factors, 1, 262319, 947 and 277. Now with the help of a computer you could determine this answer pretty quickly, it would be very difficult to figure it out by hand (but it could be done, especially if you knew it was the product of two prime numbers).
 
-However, what if the prime number was longer, MUCH longer. In fact, in 2048-bit RSA encryption the number is 617 digits long.  A number this long, with only 4 factors, would take a classic, modern computer about 300 trillion years to crack. So this is what RSA makes use of.
+However, what if the prime number was longer, MUCH longer. In fact, in 2048-bit RSA encryption the number is 617 digits long. A number this long, with only 4 factors, would take a classic, modern computer about 300 trillion years to crack. So this is what RSA makes use of.
 
 ---
 
@@ -1798,7 +1791,6 @@ Each time we go around the clock we return to our starting number. So if we were
 So you see, we went around the clock 18 ‘hours’ but ended up at the number 6. This is the basis of modular arithmetic. It’s how many times the number we are looking for goes into the mod evenly, and the remainder becomes the value we are looking for.
 
 Let’s try an example: say we are looking at the number 13 in mod 5. Important note: unlike the clock above, we always start modular calculations with a 0 so the numbers go from 0 to n-1 (more on this in a minute). So to find 13 mod 5 we can simply count, starting at 0, 13 places, and then record where we end up Input 3.
-
 
 So how do we do this for bigger numbers (because who wants to count something like 447 mod 5) and why do we start at 0? This is because modular arithmetic is based on integer division and remainders. So to calculate 447 mod 5 we divide 447 by 5 and then we look at the remainder Input 2. The reason we start at 0: because a number like 550 mod 5 would have a remainder of Input 0 not of 5.
 
@@ -1841,7 +1833,6 @@ Interactive Element: students will input their various values and the value of m
 In our example we encrypted a number, but what about text or other information?
 
 Well computers actually already convert input information into numbers and then into binary; and this is the information that gets encrypted and sent.
-
 
 From: https://stillthere.co/encryption
 

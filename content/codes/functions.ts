@@ -6,15 +6,18 @@
 
 import {delay, wait} from '@mathigon/core';
 import {Point} from '@mathigon/euclid';
-import {$N, ElementView, InputView, loadScript, slide, SVGView} from '@mathigon/boost';
+import {$N, ElementView, InputView, loadScript, slide, SVGParentView, SVGView} from '@mathigon/boost';
 import {Select, Slider, Slideshow, Step} from '@mathigon/studio';
 
 import {beep, Beep} from './components/beep';
 import {CodeBox} from './components/code-box';
-import {MORSE_CODE} from './components/utilities';
+import {caesarCipher, MORSE_CODE} from './components/utilities';
 import {HammingCode} from './components/hamming';
 import {Barcode} from './components/barcode';
+import {rotateDisk} from '../shared/components/disk';
+import {RED} from '../shared/constants';
 
+import './components/caesar-cipher';
 import './components/code-box';
 import './components/barcode';
 import './components/enigma';
@@ -113,6 +116,111 @@ export function radio($step: Step) {
   });
 }
 
+// TODO: Break this out into a component
+export function caesarWheel($step: Step) {
+  const CIPHERTEXT = 'Xlcjerjw, anrwoxalnvnwcb jan xw cqn fjh. Cx jaaren xw orocnnwcq Xlcxkna. Qxum yxbrcrxw dwcru cqnw. SL';
+  $step.model.messageText = CIPHERTEXT;
+  const $wheel = $step.$('#caesar-inner-circle') as SVGView;
+  const J_OFFSET = 9;
+
+  rotateDisk($wheel, {
+    resistance: 0.5,
+    draw(angle, isMomentum) {
+      $wheel.setTransform(undefined, angle);
+
+      const lettersPerRadian = 26 / (Math.PI * 2);
+      const letterVal = Math.abs(lettersPerRadian * angle);
+      $step.model.letterOffset = Math.trunc(letterVal + 0.5) % 26;
+
+      $step.model.watch(() => {
+        if (!isMomentum) {
+          $step.model.messageText = caesarCipher(CIPHERTEXT, 26 - $step.model.letterOffset);
+          if ($step.model.letterOffset === J_OFFSET) {
+            $step.score('wheel');
+          }
+        }
+      });
+    }
+  });
+}
+
+// TODO: Delete this and use component mentioned above
+export function caesarWheelChallenge($step: Step) {
+  const $wheel = $step.$('#caesar-inner-circle') as SVGView;
+
+  rotateDisk($wheel, {
+    resistance: 0.5,
+    draw(angle) {
+      $wheel.setTransform(undefined, angle);
+    }
+  });
+}
+
+// TODO: Finish this
+export function vigenereCipher($step: Step) {
+  const FONT_SIZE = 6;
+  const CHAR_WIDTH = FONT_SIZE * 0.65;
+  $step.model.originalText = 'Cryptography is a fascinating field of mathematics.';
+  const $container = $step.$('.vigenere-animation')!;
+  const $svg = $N('svg', {viewBox: `0 0 200 80`}, $container) as SVGParentView;
+  const $original = $N('g', {class: 'sentence'}, $svg);
+  $original.hide();
+
+  const $chars = $step.model.originalText.split('').map((letter: string, idx: number) =>
+    $N('text', {
+      text: letter,
+      x: idx * CHAR_WIDTH,
+      y: FONT_SIZE,
+      'font-size': FONT_SIZE,
+      'font-family': 'monospace',
+      fill: '#fff'
+    }, $original)
+  );
+
+  delay(() => {
+    $original.enter('slide');
+  }, 100);
+
+  async function removePunctuation() {
+    // await wait(100);
+    // await $el.enter('fade', 200).promise;
+    // await animate(() => ..., 2000).promise;
+    for (const el of $chars) {
+      if (el.text.toLowerCase() !== el.text) {
+        await el.exit('fade').promise;
+        el.text = el.text.toLowerCase();
+        await el.enter('fade').promise;
+      }
+      if ([',', '.'].includes(el.text)) {
+        await el.exit('fade').promise;
+      }
+    }
+    compressSpaces();
+  }
+
+  async function compressSpaces() {
+    let spacesCount = 0;
+
+    const newPositions = $chars.map(el => {
+      if (el.text === ' ') {
+        spacesCount += 1;
+        return '0';
+      }
+      if (spacesCount > 0) {
+        return String(spacesCount * -CHAR_WIDTH);
+      }
+      return '0';
+    });
+
+    for (const el of $chars) {
+      el.animate({transform: `translateX(${newPositions[$chars.indexOf(el)]}px)`}, 1000);
+    }
+  }
+
+  delay(() => {
+    removePunctuation();
+  }, 1500);
+}
 
 // -----------------------------------------------------------------------------
 // Binary Numbers

@@ -472,8 +472,22 @@ x-hamming {
   position: relative;
   touch-action: none;
 
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
   @media screen and (min-width: 1000px) { margin-right: -80px; }
   @media screen and (max-width: 640px) { float: none; margin: 1em auto; }
 
-  circle { fill: $yellow; }
+  .caesar-inner-circle {
+    &:hover {
+      cursor: grab;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
 }

@@ -1,0 +1,9 @@
+.caesar-wheel .caesar-outer-circle {
+    &:hover {
+        cursor: grab;
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+}
