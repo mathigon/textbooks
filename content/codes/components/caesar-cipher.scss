@@ -8,4 +8,24 @@ x-caesar-cipher {
             cursor: grabbing;
         }
     }
+    .caesar-inner-segments > path,
+    .caesar-outer-segments > path {
+        transform-origin: revert;
+        transform-box: view-box;
+    }
+    .caesar-inner-letters > text,
+    .caesar-outer-letters > text{
+        dominant-baseline: central;
+        text-anchor: middle;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        user-select: none;
+    }
+    .caesar-inner-letters > text {
+        fill: $red;
+        font-size: 30px;
+    }
+    .caesar-outer-letters > text {
+        fill: $blue;
+        font-size: 38px;
+    }
 }
