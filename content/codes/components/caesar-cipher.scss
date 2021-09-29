@@ -1,9 +1,11 @@
-.caesar-wheel .caesar-outer-circle {
-    &:hover {
-        cursor: grab;
-    }
+x-caesar-cipher {
+    .caesar-inner-circle {
+        &:hover {
+            cursor: grab;
+        }
 
-    &:active {
-        cursor: grabbing;
+        &:active {
+            cursor: grabbing;
+        }
     }
 }

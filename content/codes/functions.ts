@@ -10,12 +10,11 @@ import {$N, ElementView, InputView, loadScript, slide, SVGParentView, SVGView} f
 import {Select, Slider, Slideshow, Step} from '@mathigon/studio';
 
 import {beep, Beep} from './components/beep';
+import {CaesarCipher} from './components/caesar-cipher';
 import {CodeBox} from './components/code-box';
-import {caesarCipher, MORSE_CODE} from './components/utilities';
+import {MORSE_CODE} from './components/utilities';
 import {HammingCode} from './components/hamming';
 import {Barcode} from './components/barcode';
-import {rotateDisk} from '../shared/components/disk';
-import {RED} from '../shared/constants';
 
 import './components/caesar-cipher';
 import './components/code-box';
@@ -116,44 +115,13 @@ export function radio($step: Step) {
   });
 }
 
-// TODO: Break this out into a component
 export function caesarWheel($step: Step) {
-  const CIPHERTEXT = 'Xlcjerjw, anrwoxalnvnwcb jan xw cqn fjh. Cx jaaren xw orocnnwcq Xlcxkna. Qxum yxbrcrxw dwcru cqnw. SL';
-  $step.model.messageText = CIPHERTEXT;
-  const $wheel = $step.$('#caesar-inner-circle') as SVGView;
-  const J_OFFSET = 9;
-
-  rotateDisk($wheel, {
-    resistance: 0.5,
-    draw(angle, isMomentum) {
-      $wheel.setTransform(undefined, angle);
-
-      const lettersPerRadian = 26 / (Math.PI * 2);
-      const letterVal = Math.abs(lettersPerRadian * angle);
-      $step.model.letterOffset = Math.trunc(letterVal + 0.5) % 26;
-
-      $step.model.watch(() => {
-        if (!isMomentum) {
-          $step.model.messageText = caesarCipher(CIPHERTEXT, 26 - $step.model.letterOffset);
-          if ($step.model.letterOffset === J_OFFSET) {
-            $step.score('wheel');
-          }
-        }
-      });
-    }
-  });
-}
-
-// TODO: Delete this and use component mentioned above
-export function caesarWheelChallenge($step: Step) {
-  const $wheel = $step.$('#caesar-inner-circle') as SVGView;
-
-  rotateDisk($wheel, {
-    resistance: 0.5,
-    draw(angle) {
-      $wheel.setTransform(undefined, angle);
-    }
-  });
+  const $caesarCipher = $step.$('x-caesar-cipher') as CaesarCipher;
+  $caesarCipher.model = $step.model;
+  $caesarCipher.run();
+  $caesarCipher.onMatch = () => {
+    $step.score('wheel');
+  };
 }
 
 // TODO: Finish this

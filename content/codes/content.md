@@ -1263,7 +1263,7 @@ Caesar protected it by using a cipher: every letter in the message has been swap
 > goals: wheel
 
     .caesar-wheel
-      include svg/caesar-wheel.svg
+      x-caesar-cipher(input="Xlcjerjw, anrwoxalnvnwcb jan xw cqn fjh. Cx jaaren xw orocnnwcq Xlcxkna. Qxum yxbrcrxw dwcru cqnw. SL" direction="decode" target-left-shift="9")
 
 Here you can see two wheels with all the letters of the alphabet. The outer, blue letters represent
 the original, correct letters, and the inner, red letters represent the encoded letters.
@@ -1274,7 +1274,7 @@ Try rotating the inner wheel to different positions until the message makes sens
 
 ::: .parch(style="clear: right;")
 
-{.parchment} “${messageText}”
+{.parchment} “${output}”
 
 ---
 
@@ -1290,7 +1290,7 @@ Take a look at this message:
 “Ymj hfpj nx ns ymj kwnilj. Ny nx f hmthtqfyj hfpj bnym afsnqqf nhnsl fsi wfnsgtb xuwnspqjx.”
 
     .caesar-wheel
-      include svg/caesar-wheel.svg
+      x-caesar-cipher
 
 We know that each letter has been replaced with a new letter of the alphabet by shifting the whole alphabet over by a specific number of spaces. For example, if it was shifted 1 space, all A’s would be written as B’s, B’s as C’s, C’s as D’s and so on. Using the wheel above, and some guess work, try to determine the message.
 

@@ -8,6 +8,7 @@
 @import "../../node_modules/@mathigon/studio/frontend/styles/variables";
 @import "./components/enigma";
 @import "./components/code-box";
+@import "./components/caesar-cipher";
 
 
 // -----------------------------------------------------------------------------
@@ -480,14 +481,4 @@ x-hamming {
 
   @media screen and (min-width: 1000px) { margin-right: -80px; }
   @media screen and (max-width: 640px) { float: none; margin: 1em auto; }
-
-  .caesar-inner-circle {
-    &:hover {
-      cursor: grab;
-    }
-
-    &:active {
-      cursor: grabbing;
-    }
-  }
 }
