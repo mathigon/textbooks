@@ -9,12 +9,14 @@ export class CaesarCipher extends CustomElementView {
   private input!: string;
   private direction!: string;
   private targetLeftShift!: number;
+  private timeout!: any;
   model!: any;
   onMatch?: () => void;
 
   state = observe({
     output: '',
-    currentShift: 0
+    currentShift: 0,
+    lastShift: 0
   });
 
   ready() {
@@ -33,9 +35,13 @@ export class CaesarCipher extends CustomElementView {
 
         if (this.input && !isMomentum) {
           this.setShift(angle);
-          this.run();
-          if (this.state.currentShift === this.targetLeftShift && this.onMatch) {
-            this.onMatch();
+          if (this.state.lastShift !== this.state.currentShift) {
+            if (this.timeout) clearTimeout(this.timeout);
+            this.state.lastShift = this.state.currentShift;
+            this.run();
+            if (this.state.currentShift === this.targetLeftShift && this.onMatch) {
+              this.timeout = setTimeout(this.onMatch, 1500);
+            }
           }
         }
       }
