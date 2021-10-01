@@ -131,7 +131,8 @@ export function vigenereCipher($step: Step) {
   $step.model.originalText = 'Cryptography is a fascinating field of mathematics.';
   const $container = $step.$('.vigenere-animation')!;
   const $svg = $N('svg', {viewBox: `0 0 200 80`}, $container) as SVGParentView;
-  const $original = $N('g', {class: 'sentence'}, $svg);
+  const $original = $N('g', {class: 'sentence'}, $svg) as SVGView;
+  let $copy: SVGView;
   $original.hide();
 
   const $chars = $step.model.originalText.split('').map((letter: string, idx: number) =>
@@ -141,18 +142,24 @@ export function vigenereCipher($step: Step) {
       y: FONT_SIZE,
       'font-size': FONT_SIZE,
       'font-family': 'monospace',
-      fill: '#fff'
+      fill: '#000'
     }, $original)
   );
 
-  delay(() => {
-    $original.enter('slide');
-  }, 100);
+  // delay(() => {
+  //   $original.enter('slide');
+  // }, 100);
 
   async function removePunctuation() {
     // await wait(100);
     // await $el.enter('fade', 200).promise;
     // await animate(() => ..., 2000).promise;
+    // 18:33
+    // await Promise.all($el.enter('fade'), $el.enter('pop'));
+    // 18:33
+    // const animation = animate(() => ...);
+    // await wait(100);
+    // animation.cancel();
     for (const el of $chars) {
       if (el.text.toLowerCase() !== el.text) {
         await el.exit('fade').promise;
@@ -166,11 +173,12 @@ export function vigenereCipher($step: Step) {
     compressSpaces();
   }
 
-  async function compressSpaces() {
+  function compressSpaces() {
     let spacesCount = 0;
 
-    const newPositions = $chars.map(el => {
-      if (el.text === ' ') {
+    const newPositions = $chars.map($el => {
+      if ($el.text === ' ') {
+        $el.hide();
         spacesCount += 1;
         return '0';
       }
@@ -180,14 +188,61 @@ export function vigenereCipher($step: Step) {
       return '0';
     });
 
-    for (const el of $chars) {
-      el.animate({transform: `translateX(${newPositions[$chars.indexOf(el)]}px)`}, 1000);
+    for (const $el of $chars) {
+      $el.animate({transform: `translateX(${newPositions[$chars.indexOf($el)]}px)`}, 1000);
     }
   }
 
-  delay(() => {
+  function moveDownEveryOtherLetter() {
+    $copy = $original.copy();
+    $original.parent.append($copy);
+    const $copyChildrenWithoutSpaces = $copy.children.filter(c => c.text !== ' ');
+    const $originalChildrenWithoutSpaces = $original.children.filter(c => c.text !== ' ');
+    let i = 0;
+    for (const $el of $copyChildrenWithoutSpaces) {
+      if (i % 2 === 0) {
+        $el.hide();
+      } else {
+        $originalChildrenWithoutSpaces[i].hide();
+      }
+      i++;
+    }
+    $copy.animate({transform: `translateY(15px)`}, 1000);
+  }
+
+  function compressVisibleChars($sentence: SVGView) {
+    let offset = 0;
+    for (const $el of $sentence.children) {
+      if ($el._el.style.display !== 'none') {
+        // console.log(`Moving by ${offset}px...`);
+        $el.animate({transform: `translateX(${-(Number($el.attr('x')) - offset)}px)`}, 1000);
+        offset = offset + CHAR_WIDTH;
+      }
+    }
+  }
+
+  function moveAdjacent($g1: SVGView, $g2: SVGView) {
+    const end = $g1.width;
+    const targetX = end / CHAR_WIDTH + CHAR_WIDTH;
+    $g2.animate({transform: `translateX(${targetX - 1}px) translateY(0px)`}, 1000);
+  }
+
+  async function runAnimation() {
+    await $original.enter('slide').promise;
     removePunctuation();
-  }, 1500);
+    await wait(3000);
+    moveDownEveryOtherLetter();
+    await wait(1500);
+    compressVisibleChars($original);
+    await wait(1500);
+    compressVisibleChars($copy);
+    await wait(1500);
+    moveAdjacent($original, $copy);
+  }
+
+  delay(() => {
+    runAnimation();
+  }, 100);
 }
 
 // -----------------------------------------------------------------------------
