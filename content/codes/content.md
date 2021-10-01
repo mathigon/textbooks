@@ -1279,7 +1279,7 @@ Try rotating the inner wheel to different positions until the message makes sens
 ---
 
 > id: caesar-wheel-challenge
-> goals: wheel-challenge
+> goals: blank-0
 
 Octavian knows how to crack the code, because Caesar told him the key (which letter the A should line up with on his wheel) before they left Rome. Once he rotates his cipher 9 letters counterclockwise so that the outer A lines up with the inner J, he is able to decode each letter of Caesar’s hidden message with ease. Octavian breathes a sigh of relief knowing that help is coming, and also that the enemy agents who captured the other two copies won’t be able to read them without the secret key.
 
@@ -1316,7 +1316,7 @@ So ciphers, like the Caesar, were designed to hide messages from being read by a
 
 <!-- ![](https://csegrecorder.com/columns/view/science-break-201303) -->
 
-In previous modules (Link to module on Morse Code) you learned how letters and words could be written in different ways and encoded to symbols or sounds (like in Morse code). But this way of writing doesn’t hide the message; it just changes it into a different format - like how letters on a keyboard are converted to ASCII, then binary, and then back again to display on your phone or monitor. It uses an algorithm, but there is no key: if you know how to convert between the two languages, you can read the message easily. Cryptography hides the message so that you need both an algorithm _and_ a key to read the message.
+{.fixme} In previous modules (Link to module on Morse Code) you learned how letters and words could be written in different ways and encoded to symbols or sounds (like in Morse code). But this way of writing doesn’t hide the message; it just changes it into a different format - like how letters on a keyboard are converted to ASCII, then binary, and then back again to display on your phone or monitor. It uses an algorithm, but there is no key: if you know how to convert between the two languages with the algorithm, you can read the message easily. Cryptography hides the message so that you need both an algorithm _and_ a key to read the message.
 
 ---
 
