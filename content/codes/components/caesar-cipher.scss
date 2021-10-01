@@ -21,11 +21,11 @@ x-caesar-cipher {
         user-select: none;
     }
     .caesar-inner-letters > text {
-        fill: $red;
+        fill: rgb(255,235,209);
         font-size: 30px;
     }
     .caesar-outer-letters > text {
-        fill: $blue;
+        fill: rgb(255,235,209);
         font-size: 38px;
     }
 }

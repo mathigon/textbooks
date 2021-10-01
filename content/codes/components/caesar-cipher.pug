@@ -2,13 +2,13 @@
 svg(width='100%' height='100%' viewbox='0 0 381 380' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;')
   g#caesar-outer-circle.caesar-outer-circle
     g#caesar-outer
-      circle(cx='190.5' cy='190' r='190' style='fill:rgb(235,234,238);stroke:rgb(24,24,36);stroke-width:1px;')
+      circle(cx='190.5' cy='190' r='190' style='fill:rgb(144,100,44);stroke:rgb(24,24,36);stroke-width:1px;')
     g#caesar-outer-segments.caesar-outer-segments(style='fill:none;stroke:rgb(24,24,36);stroke-width:1px;')
       - var i = 1
       while i <= 26
         path(d='M190.5,190 V0' transform=`rotate(${(360 / 26 * i++) + (360 / 26 * 0.5)} 190.5 190)`)
   g#caesar-inner-circle.caesar-inner-circle
-    circle(cx='190.5' cy='190' r='145' style='fill:rgb(235,234,238);stroke:rgb(24,24,36);stroke-width:1px;')
+    circle(cx='190.5' cy='190' r='145' style='fill:rgb(121,85,37);stroke:rgb(24,24,36);stroke-width:1px;')
     g#caesar-inner-segments.caesar-inner-segments(style='fill:none;stroke:rgb(24,24,36);stroke-width:1px;')
       - var i = 1
       while i <= 26
@@ -16,7 +16,7 @@ svg(width='100%' height='100%' viewbox='0 0 381 380' version='1.1' xmlns='http:/
     g#caesar-inner-letters.caesar-inner-letters
       for letter, i in alphabet
         text(x='190.5' y='190' transform=`rotate(${(360 / 26 * i)}, 190.5, 190) translate(0, -123)`) #{letter}
-  circle#caesar-center-circle(cx='190.5' cy='190' r='100' style='fill:rgb(197,194,204);stroke:rgb(24,24,36);stroke-width:1px;')
+  circle#caesar-center-circle(cx='190.5' cy='190' r='100' style='fill:rgb(101,71,31);stroke:rgb(24,24,36);stroke-width:1px;')
   circle#caesar-center(cx='190.5' cy='190' r='4.273' style='fill:rgb(24,24,36);')
   g#caesar-outer-letters.caesar-outer-letters
     for letter, i in alphabet

@@ -1265,10 +1265,10 @@ Caesar protected it by using a cipher: every letter in the message has been swap
     .caesar-wheel
       x-caesar-cipher(input="Xlcjerjw, anrwoxalnvnwcb jan xw cqn fjh. Cx jaaren xw orocnnwcq Xlcxkna. Qxum yxbrcrxw dwcru cqnw. SL" direction="decode" target-left-shift="9")
 
-Here you can see two wheels with all the letters of the alphabet. The outer, blue letters represent
-the original, correct letters, and the inner, red letters represent the encoded letters.
+Here you can see two wheels with all the letters of the alphabet. The outer letters represent
+the original, correct letters, and the inner letters represent the encoded letters.
 
-To encode a message, we simply have to rotate the wheel so that the two sets of letters don't match, and then swap every blue letter with the corresponding red one. To decode it, we just have to go the other way.
+To encode a message, we simply have to rotate the wheel so that the two sets of letters don't match, and then swap every outer letter with the corresponding inner one. To decode it, we just have to go the other way.
 
 Try rotating the inner wheel to different positions until the message makes sense:
 
@@ -1292,11 +1292,11 @@ Take a look at this message:
     .caesar-wheel
       x-caesar-cipher
 
-We know that each letter has been replaced with a new letter of the alphabet by shifting the whole alphabet over by a specific number of spaces. For example, if it was shifted 1 space, all A’s would be written as B’s, B’s as C’s, C’s as D’s and so on. Using the wheel above, and some guess work, try to determine the message.
+We know that each letter has been replaced with a new letter of the alphabet by shifting the whole alphabet over by a specific number of spaces. For example, if it was shifted 1 space, all A’s would be written as B’s, B’s as C’s, C’s as D’s and so on. Using the wheel here, and some guess work, try to determine the message.
 
 <!-- The cake is in the fridge. It is a chocolate cake with vanilla icing and rainbow sprinkles. -->
 
-The key, or number of places in the alphabet that have been shifted (to the left) in this message, is [[5 (21:What is the shift if we move to the *left*?)]].
+The key, or number of places that the inner circle has been rotated counterclockwise to encode this message, is [[5 (21:What is the shift if we move to the *left*?)]].
 
 We can use devices like a Caesar cipher – or even just writing out the alphabet twice – to match up each letter and either [__encrypt__](gloss:encrypt) or [__decrypt__](gloss:decrypt) the message.
 
