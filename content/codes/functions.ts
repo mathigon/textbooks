@@ -11,18 +11,21 @@ import {Select, Slider, Slideshow, Step} from '@mathigon/studio';
 
 import {beep, Beep} from './components/beep';
 import {CaesarCipher} from './components/caesar-cipher';
+import {VigenereCipher} from './components/vigenere-cipher';
 import {CodeBox} from './components/code-box';
 import {MORSE_CODE} from './components/utilities';
 import {HammingCode} from './components/hamming';
 import {Barcode} from './components/barcode';
 
 import './components/caesar-cipher';
+import './components/vigenere-cipher';
 import './components/code-box';
 import './components/barcode';
 import './components/enigma';
 import './components/enigma-rotors';
 import './components/morse';
 import './components/hamming';
+import {RED} from '../shared/constants';
 
 
 // -----------------------------------------------------------------------------
@@ -125,11 +128,11 @@ export function caesarWheel($step: Step) {
 }
 
 // TODO: Finish this
-export function vigenereCipher($step: Step) {
+export function railFence($step: Step) {
   const FONT_SIZE = 6;
   const CHAR_WIDTH = FONT_SIZE * 0.65;
   $step.model.originalText = 'Cryptography is a fascinating field of mathematics.';
-  const $container = $step.$('.vigenere-animation')!;
+  const $container = $step.$('.rail-fence')!;
   const $svg = $N('svg', {viewBox: `0 0 200 80`}, $container) as SVGParentView;
   const $original = $N('g', {class: 'sentence'}, $svg) as SVGView;
   let $copy: SVGView;
@@ -142,7 +145,7 @@ export function vigenereCipher($step: Step) {
       y: FONT_SIZE,
       'font-size': FONT_SIZE,
       'font-family': 'monospace',
-      fill: '#000'
+      fill: RED
     }, $original)
   );
 

@@ -1,0 +1,16 @@
+x-vigenere-cipher {
+  .line {
+    stroke: $light-grey; stroke-width: 1;
+    
+    &.guideline {
+      stroke: $dark-grey;
+    }
+  }
+  .letter {
+    font-size: 16px; text-anchor: middle; dominant-baseline: central;
+
+    &.guide { 
+      font-weight: bold;
+    }
+  }
+}

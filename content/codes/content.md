@@ -1406,7 +1406,7 @@ Length of security (hours, years), level of security
 
 ### The Vigenère Cipher
 
-    .vigenere-animation
+    x-vigenere-cipher
 
 ![](https://travelnoire.com/5-things-must-rome)
 
