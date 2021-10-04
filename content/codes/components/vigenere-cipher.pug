@@ -1,19 +1,17 @@
 - var alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-- var size = 540
-- var sq = 20
-svg(width='100%' height='100%' viewbox=`-1 -1 ${size + 2} ${size + 2}` version='1.1' xmlns='http://www.w3.org/2000/svg')
+- var size = 520
+- var sq = size / 26
+svg(width='100%' height='100%' viewbox=`${-sq - 1} ${-sq - 1} ${size + sq + 2} ${size + sq + 2}` version='1.1' xmlns='http://www.w3.org/2000/svg')
   rect(x=0 y=0 width=size height=size fill='#fff')
-  line.line(x1=0 y1=0 x2=0 y2=size)
-  line.line(x1=0 y1=0 x2=size y2=0)
-  for letter, idx in alpha
-    - var i = idx + 1
-    text.letter.guide(x=((i*sq) + (sq / 2)) y=(sq / 2)) #{letter} 
-    text.letter.guide(x=(sq / 2) y=(i*sq + (sq / 2))) #{letter} 
+  //- line.line(x1=-sq y1=-sq x2=-sq y2=size)
+  //- line.line(x1=-sq y1=-sq x2=size y2=-sq)
+  for letter, i in alpha
+    text.letter.guide(x=((i*sq) + (sq / 2)) y=(-sq / 2)) #{letter}
+    text.letter.guide(x=(-sq / 2) y=(i*sq + (sq / 2))) #{letter}
     line.line(x1=((i + 1)*sq) y1=0 x2=((i + 1)*sq) y2=size)
     line.line(x1=0 y1=((i + 1)*sq) x2=size y2=((i + 1)*sq))
-    for c, jdx in alpha
-      - var j = jdx + 1
-      text.letter(x=((i*sq) + (sq / 2)) y=(j*sq + (sq / 2))) #{alpha[(idx+jdx) % 26]}
-  line.line.guideline(x1=sq y1=0 x2=sq y2=size)
-  line.line.guideline(x1=0 y1=sq x2=size y2=sq)
+    for c, j in alpha
+      text.letter(x=((i*sq) + (sq / 2)) y=(j*sq + (sq / 2))) #{alpha[(i+j) % 26]}
+  line.line.guideline(x1=0 y1=-sq x2=0 y2=size)
+  line.line.guideline(x1=-sq y1=0 x2=size y2=0)
 

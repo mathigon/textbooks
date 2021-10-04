@@ -7,7 +7,7 @@ x-vigenere-cipher {
     }
   }
   .letter {
-    font-size: 16px; text-anchor: middle; dominant-baseline: central;
+    font-size: 16px; text-anchor: middle; dominant-baseline: central; font-family: monospace; transform: translateY(1px);
 
     &.guide { 
       font-weight: bold;
