@@ -14,4 +14,6 @@ svg(width='100%' height='100%' viewbox=`${-sq - 1} ${-sq - 1} ${size + sq + 2} $
       text.letter(x=((i*sq) + (sq / 2)) y=(j*sq + (sq / 2))) #{alpha[(i+j) % 26]}
   line.line.guideline(x1=0 y1=-sq x2=0 y2=size)
   line.line.guideline(x1=-sq y1=0 x2=size y2=0)
+  rect.key-marker(x=-20 y=0 width=20 height=20 stroke-width=1 fill="rgba(255,0,0,0.1)" stroke="red")
+  rect.input-marker(x=0 y=-20 width=20 height=20 stroke-width=1 fill="rgba(255,0,0,0.1)" stroke="red")
 
