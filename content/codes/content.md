@@ -1420,7 +1420,12 @@ You initially try to decode the message using a simple Caesar cipher and try all
 
 ![](http://www.musicologie.org/Biographies/v/vigenere_blaise_de.html)
 
+
 First credited to Giovan Battista Bellaso, an Italian cryptologist, the Vigenère cipher was named after Blaise de Vigenère, a French cryptographer and translator, who developed an autokey method of encryption about 20 years after Bellaso, based on his work.
+
+    .rail-fence
+
+{.fixme} The paragraph and interactive element below introduce rail fence ciphers, but those don't seem to be related to Vigenère ciphers despite what the paragraph below says. Should rail fences be in a separate section?
 
 A Vigenère cipher starts with the concept of a transposition cipher (definition: a transposition cipher is one where the letters remain the same but their position changes). An example of this is a rail fence cipher where every other letter has been moved to the end of the sentence.
 
@@ -1432,11 +1437,15 @@ Interactive Element: Allow students to write out a sentence, select the number o
 
 Interactive Element: Show the students the sentence “Miiirieoheeoiriaaaaahgnsnneatvtxbotatahsltfneetnfcsnmtfcstoatcetktcaotsgtdht” allow students to try different numbers of rails to decipher the text (the correct input is 3 rails). Input box for the answer: “Mathigon is an interactive textbook that teaches a lot of interesting facts and math facts.”
 
+<!-- How does the Vigenère cipher take the rail fence cipher one step further? There doesn't seem to be any relationship. -->
+
 The Vigenère cipher takes this one step farther and uses a series of alphabets, each shifted by one more for each linke.
 
 Image: a picture of the alphabet written out 26 times, each line shifted by one, like this: https://en.wikipedia.org/wiki/Vigenère_cipher#/media/File:Vigenère_square_shading.svg
 
 Then a keyword is picked:
+
+<!-- Vigenere cipher component goes here -->
 
 Interactive Element: Allow students to type in a 5 - 10 letter keyword of their choice. Show how this keyword would be used to encrypt a series of 15 A’s. This shows that each A is encrypted as a different letter until the keyword starts to repeat. This should be animated to show the path for encrypting each letter. It could be an automatic animation or students could click for each step.
 
