@@ -2815,7 +2815,7 @@ zeno:
 
     One example is the _paradox of motion_: imagine that you want to run a
     100 meter race. You first have to run half the distance (50 meters). But
-    before doing that, you have to runn a quarter of the distance (25 meters).
+    before doing that, you have to run a quarter of the distance (25 meters).
     Before running a quarter, you have to run `1/8`th, `1/16`th, and so on.
     This is an infinite number of tasks, which means that you’ll never arrive!
 
