@@ -19,10 +19,10 @@
     "node": "14.x"
   },
   "dependencies": {
-    "@mathigon/boost": "1.0.3",
+    "@mathigon/boost": "1.0.4",
     "@mathigon/core": "1.0.3",
     "@mathigon/euclid": "1.0.3",
-    "@mathigon/fermat": "1.0.3",
+    "@mathigon/fermat": "1.0.4",
     "@mathigon/hilbert": "1.0.3",
     "@mathigon/studio": "0.1.14",
     "@types/d3": "6.3.0",
