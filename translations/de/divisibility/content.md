@@ -64,19 +64,18 @@ von __{.green}7__ - kurz: __{.green}7__|__{.orange}21__.
 In diesem kurzen Spiel sollst du
 so schnell wie möglich bestimmen, welche Zahlen Teiler oder Vielfache sind. Klicke auf den [Startknopf](->#divisibility-game_.toggle), um zu beginnen.
 
-::: .box.f-blue.no-padding
+::: .box.blue.no-padding
 #### Teiler und Vielfache Quiz
 
-    x-gameplay
-      .factors-row
-        .factor-number ${x}
+    x-gameplay.factors-quiz
+      .circled ${x}
         | ist
         .factor-value
           .factor-bubble: .btn.btn-blue Teiler
           .factor-bubble: .btn.btn-blue Vielfaches
           .factor-bubble: .btn.btn-blue Keines
         | von
-        .factor-number ${y}
+      .circled ${y}
 
 :::
 
