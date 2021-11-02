@@ -22,7 +22,7 @@ const RADIUS = 32;
 class Bubble {
   p: Point;
   v: Point;
-  isPrime: boolean
+  isPrime: boolean;
 
   constructor(readonly $el: ElementView, bounds: Bounds) {
     this.p = Point.random(bounds);

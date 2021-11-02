@@ -268,7 +268,7 @@ class RopePoints {
       this.points[this.points.length - 1].right = final;
     }
     this.points.push(final);
-  }
+  };
   movePoint = (index: number, to: Point) => {
     const rightCap = Math.ceil(this.points.length / 2);
     const leftCap = Math.floor(this.points.length / 2);
@@ -293,13 +293,13 @@ class RopePoints {
       currentL.self = constrainDistance(currentL.self, currentL.right.self, lDist);
       lDist = nextDist;
     }
-  }
+  };
 }
 /* eslint-enable no-invalid-this */
 
 export class RopePoly {
-  private cPoints: RopePoints
-  private _poly: Polygon
+  private cPoints: RopePoints;
+  private _poly: Polygon;
   constructor(...points: Point[]) {
     this._poly = new Polygon(...points);
     this.cPoints = new RopePoints();
@@ -412,26 +412,26 @@ function isLastSquare(dropSpot: number, squareSize: number, dropAreaPoly: Rectan
 }
 
 class FillSquare {
-private rect: Rectangle
-private path: GeoPath
-constructor(template: Rectangle, $geopad: Geopad) {
-  this.rect = template;
-  this.path = $geopad.drawPath(this.rect);
-  this.path.$el.addClass('fill-square');
-}
-moveBy(by: Point) {
-  this.rect = this.rect.translate(by);
-  this.path.redraw(this.rect);
-}
-moveTo(loc: Point) {
-  this.moveBy(loc.subtract(this.rect.p));
-}
-contains(point: Point) {
-  return this.rect.contains(point);
-}
-get pos() {
-  return this.rect.p;
-}
+  private rect: Rectangle;
+  private path: GeoPath;
+  constructor(template: Rectangle, $geopad: Geopad) {
+    this.rect = template;
+    this.path = $geopad.drawPath(this.rect);
+    this.path.$el.addClass('fill-square');
+  }
+  moveBy(by: Point) {
+    this.rect = this.rect.translate(by);
+    this.path.redraw(this.rect);
+  }
+  moveTo(loc: Point) {
+    this.moveBy(loc.subtract(this.rect.p));
+  }
+  contains(point: Point) {
+    return this.rect.contains(point);
+  }
+  get pos() {
+    return this.rect.p;
+  }
 }
 
 function setupGeopadDraggableFillSquare(obj: FillSquare, $geopad: Geopad, onEnd?: (last: Point) => void) {
@@ -565,7 +565,7 @@ export class RenderedGeopadPoly {
   addSnapFriend = (f: RenderedGeopadPoly) => {
     // eslint-disable-next-line no-invalid-this
     this.snapFriends.push(f);
-  }
+  };
   get poly() {
     return this._poly;
   }

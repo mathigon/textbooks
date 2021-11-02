@@ -161,7 +161,7 @@ export class Net extends Solid {
     for (const hingeBone of hb) {
       setHingeBendAmount(hingeBone, amount);
     }
-  }
+  };
 
 }
 
