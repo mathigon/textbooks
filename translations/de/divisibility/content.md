@@ -69,12 +69,12 @@ so schnell wie möglich bestimmen, welche Zahlen Teiler oder Vielfache sind. Kli
 
     x-gameplay.factors-quiz
       .circled ${x}
-        | ist
-        .factor-value
-          .factor-bubble: .btn.btn-blue Teiler
-          .factor-bubble: .btn.btn-blue Vielfaches
-          .factor-bubble: .btn.btn-blue Keines
-        | von
+      | ist
+      .factor-value
+        .factor-bubble: .btn.btn-blue Teiler
+        .factor-bubble: .btn.btn-blue Vielfaches
+        .factor-bubble: .btn.btn-blue Keines
+      | von
       .circled ${y}
 
 :::
