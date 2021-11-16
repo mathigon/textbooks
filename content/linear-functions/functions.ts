@@ -32,7 +32,7 @@ export function slope($step: Step) {
     return $chart.toViewportCoords(new Point(x, 1.5 * x));
   }
 
-  const drag = new Draggable($point, $chart, {round: pfn});
+  const drag = new Draggable($point, {$parent: $chart, round: pfn});
   let hasSelected = false;
 
   $chart.on('mousemove', (e) => {
@@ -60,7 +60,7 @@ export function slope($step: Step) {
   });
 
   const origin = $chart.toViewportCoords(new Point(0, 0));
-  drag.on('move', (posn) => {
+  drag.on('move', ({posn}) => {
     $step.model.p = $chart.toPlotCoords(posn);
 
     const corner = {x: posn.x, y: origin.y};
@@ -148,17 +148,17 @@ export function equation1($step: Step) {
     return $chart.toViewportCoords(new Point(x, 3 / 4 * x + 2));
   }
 
-  const drag1 = new Draggable($point1, $chart, {round: pfn});
-  const drag2 = new Draggable($point2, $chart, {round: pfn});
+  const drag1 = new Draggable($point1, {$parent: $chart, round: pfn});
+  const drag2 = new Draggable($point2, {$parent: $chart, round: pfn});
 
-  drag1.on('move', (posn: Point) => {
+  drag1.on('move', ({posn}) => {
     const corner = {x: drag2.position.x, y: posn.y};
     $lineX.setLine(posn, corner);
     $lineY.setLine(corner, drag2.position);
     $triangle.points = [drag2.position, corner, posn];
   });
 
-  drag2.on('move', (posn) => {
+  drag2.on('move', ({posn}) => {
     const corner = {x: posn.x, y: drag1.position.y};
     $lineX.setLine(corner, drag1.position);
     $lineY.setLine(posn, corner);

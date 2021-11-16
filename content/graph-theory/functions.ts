@@ -870,11 +870,11 @@ export function salesman4($step: Step) {
 
   function addPoint(posn: SimplePoint) {
     const $c = $N('circle', {r: 15, cx: 0, cy: 0}, $svg);
-    const drag = new Draggable($c, $svg, {useTransform: true});
+    const drag = new Draggable($c, {$parent: $svg, useTransform: true});
 
     drag.on('move', (e) => {
-      posn.x = e.x;
-      posn.y = e.y;
+      posn.x = e.posn.x;
+      posn.y = e.posn.y;
       redraw();
     });
 

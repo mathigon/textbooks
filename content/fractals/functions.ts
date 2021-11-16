@@ -313,7 +313,7 @@ export function fractalBuilder($step: Step) {
 
   $step.model.assign({
     game,
-    download: () => $canvas.downloadImage('fractal'),
+    download: () => $canvas.downloadImage('fractal.png'),
     score: (s: string) => $step.score(s),
     play: (n: number) => {
       $step.score('play');

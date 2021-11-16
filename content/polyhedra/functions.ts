@@ -206,7 +206,7 @@ export function tessellationDrawing($step: Step) {
   }
 
   const $download = $step.$('.tessellation .icon-btn')!;
-  $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
+  $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png', 'png'));
 
   $polypad.on('move-selection rotate-selection add-tile', () => {
     const tiles = Array.from($polypad.tiles.values()) as PolygonTile[];
@@ -244,7 +244,7 @@ export function pentagons($step: Step) {
   }
 
   const [$flip, $download] = $step.$$('.tessellation .icon-btn');
-  $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
+  $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png', 'png'));
   $flip.on('click', () => $polypad.selection.action('polygon', 'flip'));
 
   let polygons = 0;

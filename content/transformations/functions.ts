@@ -120,8 +120,7 @@ export function translations1($step: Step) {
     const $polygons = $s.$$('polygon');
     $polygons[0].setTransform(initial[i]);
 
-    const drag = new Draggable($polygons[1], $s,
-        {useTransform: true, snap: 20});
+    const drag = new Draggable($polygons[1], {$parent: $s, useTransform: true, snap: 20});
     drag.setPosition(initial[i].x, initial[i].y);
     drag.on('end', () => {
       if (drag.position.equals(correct[i])) {

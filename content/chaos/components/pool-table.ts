@@ -21,11 +21,11 @@ export class PoolTable extends CustomElementView {
     this.$path = $N('path', {fill: 'transparent', stroke: 'white'}, $svg) as SVGView;
 
     const $start = $N('circle', {r: 20, fill: '#fd8c00'}, $svg);
-    const drag = new Draggable($start, $svg, {useTransform: true});
+    const drag = new Draggable($start, {$parent: $svg, useTransform: true});
 
     this.$end = $N('circle', {r: 20, fill: '#0f82f2'}, $svg) as SVGView;
 
-    drag.on('move', (p) => this.drawPath(p));
+    drag.on('move', (p) => this.drawPath(p.posn));
     drag.setPosition(380, 220);
   }
 

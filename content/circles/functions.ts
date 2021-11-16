@@ -76,12 +76,12 @@ export function similar($step: Step) {
     const $handle = $N('circle', {class: 'handle', r: 10}, $svg);
     const $outlineHalo = $N('circle', {class: 'outline-halo', r: c[2]}, $strokes) as SVGView;
     const $outline = $N('circle', {class: 'outline', r: c[2]}, $strokes) as SVGView;
-    const drag = new Draggable($handle, $svg, {snap: 20, useTransform: true});
+    const drag = new Draggable($handle, {$parent: $svg, snap: 20, useTransform: true});
 
     drag.on('move', (p) => {
-      $outline.setCenter(p);
-      $outlineHalo.setCenter(p);
-      cReady = (p.x === 320 && p.y === 180);
+      $outline.setCenter(p.posn);
+      $outlineHalo.setCenter(p.posn);
+      cReady = (p.posn.x === 320 && p.posn.y === 180);
       if (rReady && cReady) complete(c[3], $handle, $outline, $outlineHalo);
     });
 
@@ -1081,8 +1081,7 @@ export async function sphereMaps($step: Step) {
   const polygon = new Rectangle(new Point(-24, -24), 48, 48).polygon;
   const points = tabulate((i) => polygon.at(i / 64), 64);
 
-  const drag = new Draggable($rect[1], $svgs[1],
-      {useTransform: true, margin: 26});
+  const drag = new Draggable($rect[1], {$parent: $svgs[1], useTransform: true, margin: 26});
   drag.setPosition(220, 140);
 
   const {d3, topojson, world} = await loadD3();
@@ -1124,7 +1123,7 @@ export async function sphereMaps($step: Step) {
   const $select = $step.$('x-select') as Select;
   $select.on('change', ($el: ElementView) => updateProjection($el.data.name!));
   $select.one('change', () => $step.score('projection'));
-  drag.on('move', updateSelection);
+  drag.on('move', e => updateSelection(e.posn));
   drag.one('end', () => $step.score('move'));
   updateProjection($select.$active.data.name!);
 }

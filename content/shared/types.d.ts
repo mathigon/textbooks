@@ -658,6 +658,9 @@ export declare class Polypad extends CustomElementView {
     changed?: Tile[];
     deleted?: (Tile | Stroke)[];
   }): void;
+  canDelete?: boolean;
+  canCopy?: boolean;
+  setGrid: (type: string) => void;
   undo(): void;
   redo(): void;
   private applyChange;

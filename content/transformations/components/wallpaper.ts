@@ -258,7 +258,7 @@ export class Wallpaper extends CustomElementView {
     });
 
     this.$('.clear')!.on('click', () => context.clearRect(0, 0, 1e10, 1e10));
-    this.$('.save')!.on('click', () => $canvas.downloadImage('wallpaper'));
+    this.$('.save')!.on('click', () => $canvas.downloadImage('wallpaper.png'));
 
     slide($canvas, {
       down: p => drawPoint(context, activeGroup, p),
