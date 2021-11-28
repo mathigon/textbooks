@@ -996,8 +996,8 @@ die dritte Art der Kongruenzabbildung: [[Verschiebungen|Verwirbelungen|Saltos]].
 > goals: play-0 play-1
 
 [__Verschiebungssymmetrie__](gloss:translational-symmetry) funktioniert nicht mit
-einzelnen Objekten wie Blumen oder Schmetterlingen, sondern bei regelmäßigen Mustern
-, die sich in alle Richtungen erstrecken:
+einzelnen Objekten wie Blumen oder Schmetterlingen, sondern bei regelmäßigen Mustern,
+die sich in alle Richtungen erstrecken:
 
 ::: column.grow
 
