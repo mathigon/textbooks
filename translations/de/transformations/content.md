@@ -996,8 +996,8 @@ die dritte Art der Kongruenzabbildung: [[Verschiebungen|Verwirbelungen|Saltos]].
 > goals: play-0 play-1
 
 [__Verschiebungssymmetrie__](gloss:translational-symmetry) funktioniert nicht mit
-einzelnen Objekten wie Blumen oder Schmetterlingen, sondern bei regelmäßigen Mustern
-, die sich in alle Richtungen erstrecken:
+einzelnen Objekten wie Blumen oder Schmetterlingen, sondern bei regelmäßigen Mustern,
+die sich in alle Richtungen erstrecken:
 
 ::: column.grow
 
@@ -1065,11 +1065,10 @@ den entsprechenden Mustern auf der linken Seite ähnlicher sind als einander.
 > id: wallpaper-groups-3
 
 Es stellt sich heraus, dass es zwar unendlich viele mögliche Muster gibt, sie aber alle
-eine von nur 17 verschiedenen Symmetriegruppen haben. Diese werden als __Ornamentgruppen
-__ bezeichnet. Jede Ornamentgruppe wird durch eine Kombination von Verschiebungen,
-Drehungen, Spiegelungen und Gleitspiegelungen definiert. Kannst du in diesen Beispielen die [
-Drehpunkte](gloss:center-of-rotation) und die [
-Spiegelungsachsen](gloss:axis-of-symmetry) erkennen?
+eine von nur 17 verschiedenen Symmetriegruppen haben. Diese werden als __Ornamentgruppen__
+bezeichnet. Jede Ornamentgruppe wird durch eine Kombination von Verschiebungen,
+Drehungen, Spiegelungen und Gleitspiegelungen definiert. Kannst du in diesen Beispielen die
+[Drehpunkte](gloss:center-of-rotation) und die [Spiegelungsachsen](gloss:axis-of-symmetry) erkennen?
 
     x-gallery(slide-width="320")
       div
@@ -1134,7 +1133,6 @@ Der Beweis dafür erfordert eine viel fortgeschrittenere Mathematik…
 
 Stattdessen kannst du versuchen, deine eigenen sich wiederholenden Muster für jede der 17
 Ornamentgruppen zu zeichnen:
-
 
     figure: x-wallpaper
     .other-students.reveal(when="draw-1 switch")
