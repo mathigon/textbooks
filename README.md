@@ -120,4 +120,4 @@ simply run `node utilities/audio.js`.
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/MathigonOrg?style=social)](https://twitter.com/intent/follow?screen_name=MathigonOrg)
 
-© Mathigon 2016–2021, All rights reserved
+© Mathigon 2016–2022, All rights reserved
