@@ -111,7 +111,7 @@ x-parallax.full-width {
 #dominoes { cursor: pointer; }
 #dominoes g rect { fill: #999; }
 #dominoes g text { fill: #F2F2F2; font-size: 18px; letter-spacing: -1px; }
-#dominoes g { transform-origin: bottom right /* rtl:ignore */; transition: transform .1s linear; }
+#dominoes g { /* rtl:ignore */ transform-origin: bottom right; transition: transform .1s linear; }
 
 .tsm {
   background: url(/content/graph-theory/images/map.jpg);
