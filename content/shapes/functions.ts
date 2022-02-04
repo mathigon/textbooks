@@ -1999,8 +1999,7 @@ export async function slicesArrangement($step: Step1<ArrangementModel>) {
     heightSelected?: SideData
   };
   const sidesValues: Observable<SidesValues> = observe({});
-
-  const highlightData: Observable<SideData[]> = observe([]);
+  const highlightData: SideData[] = [];
 
   let arranged = false;
 
@@ -2093,13 +2092,13 @@ export async function slicesArrangement($step: Step1<ArrangementModel>) {
       else if (hovering != undefined) hlParams.push(hovering);
     } else if (hovering != undefined) hlParams.push(hovering);
 
-    highlightData.assign(hlParams);
+    // highlightData.assign(hlParams);
   });
 
-  highlightData.watch(highlightDataUpdated => { // Re-highlight when highlight data changes
-    slicesHighlight(lineupSlices!, highlightDataUpdated);
-    slicesHighlight(pizzaSlices, highlightDataUpdated);
-  });
+  // highlightData.watch(highlightDataUpdated => { // Re-highlight when highlight data changes
+  //   slicesHighlight(lineupSlices!, highlightDataUpdated);
+  //   slicesHighlight(pizzaSlices, highlightDataUpdated);
+  // });
 
   $geopad.on('pointermove', b => { // Report 'hover' status
 
