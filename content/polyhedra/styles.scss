@@ -37,7 +37,7 @@
   background: $grey-background;
 
   x-polypad { height: 450px; flex-grow: 1; }
-  svg.overlay { @include fillParent(); pointer-events: none; z-index: 6; width: auto; right: 52px; overflow: visible; }
+  svg.overlay { @include fillParent(); pointer-events: none; z-index: 6; width: auto; right: 52px; overflow: visible; stroke-linejoin: round; }
   .menu { background: $grey; border-radius: 0 4px 4px 0; padding: 2px 0; }
   .add { width: 48px; height: 48px; padding: 0 2px; cursor: grab; }
   .overlap .polygon-tile { fill: #ff5354 !important; }
