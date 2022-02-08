@@ -1505,14 +1505,14 @@ three-dimensional shape.
 
 rotate a cube to make a hexagonal cross-section
 
----
+    // ---
 
-## Scaling Shapes and Solids
+    // ## Scaling Shapes and Solids
 
-> section: scaling
-> sectionStatus: dev
+    // > section: scaling
+    // > sectionStatus: dev
 
-TODO
+    // TODO
 
 ---
 
