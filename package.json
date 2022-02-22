@@ -19,7 +19,7 @@
     "node": ">=14"
   },
   "dependencies": {
-    "@mathigon/boost": "1.0.11",
+    "@mathigon/boost": "1.0.12",
     "@mathigon/core": "1.0.7",
     "@mathigon/euclid": "1.0.8",
     "@mathigon/fermat": "1.0.7",
