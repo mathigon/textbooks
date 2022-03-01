@@ -1188,7 +1188,7 @@ Tessellations nous à la fois un outil et une inspiration pour de nombreux artis
         x-img(credit="© M. C. Escher Foundation" src="images/escher/escher-6.jpg" width=220 height=220)
         p.caption “Shells and Starfish” (1941)
 
-Ces œuvres d'art ont souvent l'air amusantes et sans effort, mais les principes mathématiques sous-jacents sont les mêmes qu'auparavant: angles, rotations, traductions et polygones. Si les maths ne sont pas corrects, la tessellation ne fonctionnera pas!
+Ces œuvres d'art ont souvent l'air amusantes et sans effort, mais les principes mathématiques sous-jacents sont les mêmes qu'auparavant: angles, rotations, translations et polygones. Si les maths ne sont pas corrects, la tessellation ne fonctionnera pas!
 
     .metamorph: img(src="images/escher/metamorphosis.jpg" width=3000 height=150)
     p.caption “Metamorphosis II” by M. C. Escher (1940)

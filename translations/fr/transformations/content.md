@@ -107,7 +107,7 @@ Il s'avère qu'il n'y a que trois types différents de transformations rigides:
       include svg/rigid-1.svg
       x-play-btn
 
-{.text-center} Une transformation qui _déplace_ simplement une forme s'appelle une [__traduction__](gloss:translation) .
+{.text-center} Une transformation qui _déplace_ simplement une forme s'appelle une [__translation__](gloss:translation) .
 
 ::: column.r(width=200)
 
@@ -130,16 +130,16 @@ Il s'avère qu'il n'y a que trois types différents de transformations rigides:
 ---
 > id: rigid-2
 
-Nous pouvons également combiner plusieurs types de transformation pour en créer des plus complexes - par exemple, une traduction suivie d'une rotation.
+Nous pouvons également combiner plusieurs types de transformation pour en créer des plus complexes - par exemple, une translation suivie d'une rotation.
 
 Mais d'abord, examinons plus en détail chacun de ces types de transformations.
 
 ---
 > id: translations
 
-### Traductions
+### translations
 
-Une [__traduction__](gloss:translation) est une transformation qui déplace chaque point d'une figure de la même distance dans la même direction.
+Une [__translation__](gloss:translation) est une transformation qui déplace chaque point d'une figure de la même distance dans la même direction.
 
 Dans le plan de coordonnées, nous pouvons spécifier une translation de la distance de déplacement de la forme le long de l'axe _x_ et de l'axe _y_ . Par exemple, une transformation de (3, 5) déplace une forme de 3 le long de l'axe _x_ et de 5 le long de l'axe _y_ .
 
@@ -895,7 +895,7 @@ Les groupes peuvent également être utilisés pour analyser la stratégie gagna
 
 > id: wallpaper-groups
 
-Dans les [sections précédentes,](/course/transformations/symmetry) nous avons vu deux types de symétrie différents correspondant à deux transformations différentes: les rotations et les réflexions. Mais il y a aussi une symétrie pour le troisième type de transformation rigide: les [[traductions | tourne | retourne]] .
+Dans les [sections précédentes,](/course/transformations/symmetry) nous avons vu deux types de symétrie différents correspondant à deux transformations différentes: les rotations et les réflexions. Mais il y a aussi une symétrie pour le troisième type de transformation rigide: les [[translations | tourne | retourne]] .
 
 ---
 > id: wallpaper-groups-1
@@ -963,7 +963,7 @@ Ces groupes ne vous disent pas grand-chose à quoi _ressemble_ le motif (par exe
 > id: wallpaper-groups-3
 > goals: gallery
 
-Il s'avère que, bien qu'il existe une infinité de modèles possibles, ils ont tous l'un des 17 groupes de symétrie différents. Ceux-ci sont appelés les __groupes de papier peint__ . Chaque groupe de papier peint est défini par une combinaison de traductions, rotations, réflexions et réflexions de glissement. Pouvez-vous voir les [centres de rotation](gloss:center-of-rotation) et les [axes de réflexion](gloss:axis-of-symmetry) dans ces exemples?
+Il s'avère que, bien qu'il existe une infinité de modèles possibles, ils ont tous l'un des 17 groupes de symétrie différents. Ceux-ci sont appelés les __groupes de papier peint__ . Chaque groupe de papier peint est défini par une combinaison de translations, rotations, réflexions et réflexions de glissement. Pouvez-vous voir les [centres de rotation](gloss:center-of-rotation) et les [axes de réflexion](gloss:axis-of-symmetry) dans ces exemples?
 
     x-gallery(slide-width="320")
       div
