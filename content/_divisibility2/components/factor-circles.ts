@@ -6,8 +6,7 @@
 
 import {$N, Browser, CustomElementView, ElementView, register, SVGParentView, SVGView} from '@mathigon/boost';
 import {Color, join, tabulate} from '@mathigon/core';
-import {ORIGIN, Point} from '@mathigon/euclid';
-import {TWO_PI} from '@mathigon/euclid/src/utilities';
+import {ORIGIN, Point, TWO_PI} from '@mathigon/euclid';
 
 
 function regular(n: number, radius: number) {
