@@ -145,6 +145,12 @@ archimedean-solid:
     different Archimedean solids.
   link: /course/polyhedra/platonic#archimedean
 
+area:
+  title: Area
+  text: The __area__ measures the size of the surface of a 2-dimensional shape.
+    If a closed figure can be packed with _n_ unit squares without gaps or
+    overlap, we say that it has an area of _n_ square units.
+
 arithmetic-mean:
   title: Arithmetic mean
   text: The __mean__ is the _average_ of a set of numbers. You can calculate it
@@ -1265,6 +1271,10 @@ perfect-numbers:
     divisors (excluding itself). For example, `28 = 1 + 2 + 4 + 7 + 14` is
     a perfect number.
   link: /course/sequences/special#perfect-1
+
+perimeter:
+  title: Perimeter
+  text: The __perimeter__ of a shape is the length of its boundary, or outside.
 
 perpendicular:
   title: Perpendicular lines
