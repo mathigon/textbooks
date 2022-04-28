@@ -19,3 +19,5 @@ x-buckets {
   .bucket:nth-child(2) { background: mix($teal, $grey-background, 85%); }
   .bucket:nth-child(3) { background: mix($purple, $grey-background, 85%); }
 }
+
+nav { display: none; }

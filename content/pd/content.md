@@ -2,11 +2,13 @@
 
 ## Introduction
 
+> sectionStatus: dev
+
 There are four levels of geometric thinking that students progress through in K–5. In earlier grades, students describe, compare, and sort two-dimensional shapes. This work is known as the visual and descriptive levels. In third grade, they apply their understandings in more analytic and abstract ways.
 
 For example, when looking at the given shape, students might talk about it in different ways, depending on their current level of geometric thinking.
 
-    figure: img(src="images/intro-1.png" width=600)
+    figure: img(src="images/intro1.png" width=600)
 
 [Continue](btn:next)
 
@@ -14,15 +16,18 @@ For example, when looking at the given shape, students might talk about it in di
 
 In this course, you will learn how third grade students reason about the attributes of two-dimensional shapes and then apply these understandings to measure of [perimeter](gloss:perimeter)
 
-    figure: img(src="images/intro-2.png" width=400)
+    figure: img(src="images/intro2.png" width=400)
 
 ---
 
 ## Attributes of 2D Shapes
 
+> sectionStatus: dev
+
 In third grade, students see that [quadrilaterals](gloss:quadrilateral) can be classified based on their sides (whether some are of equal length) and their corners (whether one or more square corners are present). They sort shapes using language and attributes that are familiar to them.
 
-    iframe.pp(src="https://mathigon.org/polypad/embed/fQSU8mcO3jgXg?key=mathigon")
+    iframe.pp(src="https://mathigon.org/polypad/embed/SUuz3WzmCSqKhA?key=mathigon")
+    // iframe.pp(src="https://mathigon.org/polypad/embed/fQSU8mcO3jgXg?key=mathigon")
 
 [Continue](btn:next)
 
@@ -118,13 +123,29 @@ For example, here are three quadrilaterals. The first one is a rectangle, a rhom
 
 ---
 
-Try it! How might you sort these shapes into categories? How do you think your students might sort these shapes?
+Here are two more examples:
 
-    iframe.pp(src="https://mathigon.org/polypad/embed/SUuz3WzmCSqKhA?key=mathigon")
+::: column(width=300)
+
+    figure: img(src="images/e1.png" width=300)
+
+::: column(width=300)
+
+    figure: img(src="images/e2.png" width=300)
+
+:::
+
+It is [[True | False]] that both shapes are quadrilaterals.
+
+It is [[True | False]] that both shapes have one or more square corners.
+
+It is [[True | False]] that both shapes have two equal-side lengths.
 
 ---
 
 ## Using Attributes of 2D Shapes to Find Perimeter
+
+> sectionStatus: dev
 
 In third grade, students are introduced to the idea of [perimeter](gloss:perimeter).
 
@@ -162,19 +183,19 @@ recognizing sides that are the same length and using multiplication).
 
 ---
 
-Try these activities by entering some correct and incorrect values, to see what students will experience!
+Try these activities by entering some correct and incorrect values, to see what students will experience. Click on each of the images below to try it:
 
 ::: column(width=220 parent="padded-thin")
 
-    a(href="https://teacher.desmos.com/activitybuilder/custom/621922800267e14121270128?collections=6203f4d0058a1e12161434e0#preview/bba0e5a0-cbc0-42d1-834a-c42bdb267ce9" style="display:block"): img(src="images/bird1.png" width=220)
+    a(href="https://teacher.desmos.com/activitybuilder/custom/621922800267e14121270128?collections=6203f4d0058a1e12161434e0#preview/bba0e5a0-cbc0-42d1-834a-c42bdb267ce9" style="display:block" target="_blank"): img(src="images/bird1.png" width=220)
 
 ::: column(width=220)
 
-    a(href="https://teacher.desmos.com/activitybuilder/custom/621922800267e14121270128?collections=6203f4d0058a1e12161434e0#preview/7519d907-ddf5-4d67-a827-60265a134eb3" style="display:block"): img(src="images/bird2.png" width=220)
+    a(href="https://teacher.desmos.com/activitybuilder/custom/621922800267e14121270128?collections=6203f4d0058a1e12161434e0#preview/7519d907-ddf5-4d67-a827-60265a134eb3" style="display:block" target="_blank"): img(src="images/bird2.png" width=220)
 
 ::: column(width=220)
 
-    a(href="https://teacher.desmos.com/activitybuilder/custom/621922800267e14121270128?collections=6203f4d0058a1e12161434e0#preview/589e00f4-7c68-4b52-bdb3-50f3613f45d7" style="display:block"): img(src="images/bird3.png" width=220)
+    a(href="https://teacher.desmos.com/activitybuilder/custom/621922800267e14121270128?collections=6203f4d0058a1e12161434e0#preview/589e00f4-7c68-4b52-bdb3-50f3613f45d7" style="display:block" target="_blank"): img(src="images/bird3.png" width=220)
 
 :::
 
@@ -218,6 +239,8 @@ misconceptions with students: Drag the statements into the box for the correct s
 
 ## Relating Perimeter and Area
 
+> sectionStatus: dev
+
 As students solve problems relating [perimeter](gloss:perimeter) and [area](gloss:area), they begin to see that shapes that have the same perimeter can have different areas.  They also see that shapes that have the same areas can have different perimeters.
 
 ::: column(width=320)
@@ -230,7 +253,21 @@ As students solve problems relating [perimeter](gloss:perimeter) and [area](glos
 
 :::
 
-If the perimeter of a rectangle increases, the area [[sometimes | always | never]] increases.
+[Continue](btn:next)
+
+---
+
+Try these activities by entering some correct and incorrect values, to see what students will experience!  Click on each of the images below to try  it.
+
+::: column(width=500)
+
+    a(href="https://teacher.desmos.com/activitybuilder/custom/6203f4fecb3f9b1f5c872cc8?collections=6203f4d0058a1e12161434e0#preview/1f0e7182-08fb-4761-9c7a-e33cf1f4d154" style="display:block" target="_blank"): img(src="images/d3.png" width=500)
+
+::: column(width=500)
+
+    a(href="https://teacher.desmos.com/activitybuilder/custom/6203f4fecb3f9b1f5c872cc8?collections=6203f4d0058a1e12161434e0#preview/24004b27-8365-4b19-82a1-352197ae4078" style="display:block" target="_blank"): img(src="images/d4.png" width=500)
+
+:::
 
 ---
 
@@ -256,12 +293,14 @@ It is important that students understand the differences and relationships betwe
 
 Try it!  What are the possible solutions your students might come up with?
 
-::: column(width=320)
+::: column(width=500)
 
-    a(href="https://teacher.desmos.com/activitybuilder/custom/6203f4fecb3f9b1f5c872cc8?collections=6203f4d0058a1e12161434e0#preview/1f0e7182-08fb-4761-9c7a-e33cf1f4d154" style="display:block"): img(src="images/d2.png" width=320)
+    a(href="https://teacher.desmos.com/activitybuilder/custom/6203f4fecb3f9b1f5c872cc8?collections=6203f4d0058a1e12161434e0#preview/1f0e7182-08fb-4761-9c7a-e33cf1f4d154" style="display:block" target="_blank"): img(src="images/d2.png" width=500)
 
-::: column(width=320)
+::: column(width=500)
 
-    a(href="https://teacher.desmos.com/activitybuilder/custom/6203f4fecb3f9b1f5c872cc8?collections=6203f4d0058a1e12161434e0#preview/24004b27-8365-4b19-82a1-352197ae4078" style="display:block"): img(src="images/d1.png" width=320)
+    a(href="https://teacher.desmos.com/activitybuilder/custom/6203f4fecb3f9b1f5c872cc8?collections=6203f4d0058a1e12161434e0#preview/24004b27-8365-4b19-82a1-352197ae4078" style="display:block" target="_blank"): img(src="images/d1.png" width=500)
 
 :::
+
+    style .next-section { display: none !important; }
