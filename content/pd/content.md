@@ -2,8 +2,6 @@
 
 ## Introduction
 
-> sectionStatus: dev
-
 There are four levels of geometric thinking that students progress through in K–5. In earlier grades, students describe, compare, and sort two-dimensional shapes. This work is known as the visual and descriptive levels. In third grade, they apply their understandings in more analytic and abstract ways.
 
 For example, when looking at the given shape, students might talk about it in different ways, depending on their current level of geometric thinking.
@@ -21,8 +19,6 @@ In this course, you will learn how third grade students reason about the attribu
 ---
 
 ## Attributes of 2D Shapes
-
-> sectionStatus: dev
 
 In third grade, students see that [quadrilaterals](gloss:quadrilateral) can be classified based on their sides (whether some are of equal length) and their corners (whether one or more square corners are present). They sort shapes using language and attributes that are familiar to them.
 
@@ -145,8 +141,6 @@ It is [[True | False]] that both shapes have two equal-side lengths.
 
 ## Using Attributes of 2D Shapes to Find Perimeter
 
-> sectionStatus: dev
-
 In third grade, students are introduced to the idea of [perimeter](gloss:perimeter).
 
 Progression of finding the perimeter:
@@ -238,8 +232,6 @@ misconceptions with students: Drag the statements into the box for the correct s
 ---
 
 ## Relating Perimeter and Area
-
-> sectionStatus: dev
 
 As students solve problems relating [perimeter](gloss:perimeter) and [area](gloss:area), they begin to see that shapes that have the same perimeter can have different areas.  They also see that shapes that have the same areas can have different perimeters.
 
