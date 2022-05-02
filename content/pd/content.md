@@ -237,11 +237,11 @@ As students solve problems relating [perimeter](gloss:perimeter) and [area](glos
 
 ::: column(width=320)
 
-    img(src="images/p1.png" width=320)
+    img(src="images/p1a.png" width=320)
 
 ::: column(width=320)
 
-    img(src="images/p2.png" width=320)
+    img(src="images/p2a.png" width=320)
 
 :::
 
