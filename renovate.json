@@ -11,12 +11,8 @@
     "groupName": "TypeScript",
     "automerge": true
   }, {
-    "packagePatterns": ["^@typescript-eslint", "^eslint", "tape"],
-    "groupName": "Tests",
-    "automerge": true
-  }, {
-    "packagePatterns": ["^@types/"],
-    "groupName": "Types",
+    "packagePatterns": ["eslint"],
+    "groupName": "Test and Build",
     "automerge": true
   }],
   "ignoreDeps": ["@types/three", "@types/d3", "@types/topojson"]
