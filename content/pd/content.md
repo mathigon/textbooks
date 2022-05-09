@@ -203,8 +203,8 @@ Three students were asked to find the perimeter of this square:
 
     figure: img.var(src="images/grid.png" width=220)
 
-* Tyler: perimeter is 16 units
-* Lexi: perimeter is 12 units
+* Tyler: perimeter is 12 units
+* Lexi: perimeter is 16 units
 * Maggie: perimeter is 8 units
 
 [Continue](btn:next)
@@ -213,7 +213,7 @@ Three students were asked to find the perimeter of this square:
 > id: buckets
 > goals: buckets
 
-The correst student is [[Tyler | Lexi | Maggie]]. Consider ways to illuminate these types of
+The correct student is [[Tyler | Lexi | Maggie]]. Consider ways to illuminate these types of
 misconceptions with students: Drag the statements into the box for the correct student.
 
     x-buckets
