@@ -133,7 +133,7 @@ Here are two more examples:
 
 It is [[True | False]] that both shapes are quadrilaterals.
 
-It is [[True | False]] that both shapes have one or more square corners.
+It is [[False | True ]] that both shapes have one or more square corners.
 
 It is [[True | False]] that both shapes have two equal-side lengths.
 
@@ -223,7 +223,7 @@ misconceptions with students: Drag the statements into the box for the correct s
         .input(bucket="1") Counted 4 tick marks along the bottom of the square, and multiplied that by 4.
       .buckets
         .bucket
-          .title Typer (12 units)
+          .title Tyler (12 units)
         .bucket
           .title Lexi (16 units)
         .bucket
