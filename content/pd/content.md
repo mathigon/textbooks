@@ -135,7 +135,7 @@ It is [[True | False]] that both shapes are quadrilaterals.
 
 It is [[False | True ]] that both shapes have one or more square corners.
 
-It is [[True | False]] that both shapes have two equal-side lengths.
+It is [[False | True ]] that both shapes have two equal-side lengths.
 
 ---
 
