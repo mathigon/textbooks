@@ -4,7 +4,7 @@
 // =============================================================================
 
 
-@import "../../node_modules/@mathigon/studio/frontend/styles/variables";
+@import "@mathigon/studio/frontend/styles/variables";
 @import "../shared/components/webgl/solid";
 @import "../shared/components/binary-swipe/binary-swipe";
 @import "../polyhedra/components/polyhedron";
@@ -69,7 +69,7 @@ div.die-faces {
 
       svg {
         width: 90px;
-        height: 90px; 
+        height: 90px;
       }
     }
   }

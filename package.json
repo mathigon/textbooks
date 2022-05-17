@@ -16,7 +16,7 @@
     "lint-fix": "eslint content --ext .ts --fix"
   },
   "engines": {
-    "node": ">=14"
+    "node": "16.x"
   },
   "dependencies": {
     "@mathigon/boost": "1.1.1",
@@ -24,7 +24,7 @@
     "@mathigon/euclid": "1.1.1",
     "@mathigon/fermat": "1.1.1",
     "@mathigon/hilbert": "1.1.1",
-    "@mathigon/studio": "0.1.21",
+    "@mathigon/studio": "0.1.22",
     "@types/d3": "6.3.0",
     "@types/three": "0.91.14",
     "@types/topojson": "3.2.3",
