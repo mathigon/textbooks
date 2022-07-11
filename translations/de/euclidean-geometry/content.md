@@ -5,13 +5,15 @@
 > id: thales
 > goals: p1 p2 p3 move
 > section: introduction
+> description: Die Geometrie ist einer der ältesten Teile der Mathematik - und einer der nützlichsten. Ihr logischer, systematischer Ansatz wurde auf vielen anderen Gebieten übernommen.
 > color: "#0F82F2"
 > level: Intermediate
 > next: transformations
 
 ::: column.grow
-Mit Mathematik beschäftigt man sich seit Jahrtausenden - um die Jahreszeiten vorherzusagen, Steuern zu
-berechnen oder die Größe der landwirtschaftlichen Nutzfläche zu schätzen.
+Mit Mathematik beschäftigt man sich seit tausenden von Jahren - um die Jahreszeiten
+vorherzusagen, Steuern zu berechnen oder die Größe der landwirtschaftlichen Nutzfläche
+zu schätzen.
 
 Mathematiker im antiken Griechenland, um 500 v. Chr., waren von mathematischen
 Mustern begeistert und wollten sie erforschen und erklären. Zum ersten Mal begannen
@@ -38,12 +40,12 @@ _{span.reveal(when="p1 p2")} Nun wollen wir diese Punkte mit einem Halbkreis ver
 {.reveal(when="p1 p2")} Wähle jetzt einen dritten Punkt, der irgendwo auf dem
 [Kreisbogen](target:circumf) des Halbkreises liegt.
 
-{.reveal(when="p3")} Als nächstes zeichnen wir das [Dreieck](target:triangle), das aus den
+{.reveal(when="p3")} Als nächstes zeichnen wir das [{.red}Dreieck](target:triangle), das aus den
 beiden Eckpunkten des Halbkreises und dem auf dem
 Kreisbogen gewählten Punkt gebildet wird.
 
 {.reveal(when="p3" delay=1000)} Versuche, die Position der drei Punkte zu verschieben und
-beobachte, was mit dem [Winkel](target:angle) oben im Dreieck passiert.
+beobachte, was mit dem [{.yellow}Winkel](target:angle) oben im Dreieck passiert.
 _{span.reveal(when="move")} Es scheint, als wäre er immer [[90]]° groß!_
 _{span.reveal(when="blank-0")} Das bedeutet, dass das Dreieck
 [[rechtwinklig|gleichseitig|spitzwinklig]] ist._
@@ -54,8 +56,8 @@ _{span.reveal(when="blank-0")} Das bedeutet, dass das Dreieck
 
 Für Thales war dies ein ziemlich spektakuläres Ergebnis. Warum sollten _Halbkreise_ und
 _rechtwinklige Dreiecke_, zwei völlig unterschiedliche Figuren, auf diese
-grundlegende Weise miteinander verbunden sein? Er war von seiner Entdeckung so begeistert, dass er der Legende nach einen ganzen Ochsen
-opferte, um den Göttern zu danken.
+grundlegende Weise miteinander verbunden sein? Er war von seiner Entdeckung so begeistert,
+dass er der Legende nach einen ganzen Ochsen opferte, um den Göttern zu danken.
 
     figure
       x-img(src="images/temple.svg" width=400 height=170)
@@ -210,9 +212,10 @@ _{button.next-step} Weiter_
       path.yellow(x="ray(a,b)")
 
 ::: column.grow
-Ein [__Strahl__](gloss:ray) liegt zwischen einer _Geraden_ und einer _Strecke_:
-er geht nur auf einer Seite unendlich weiter. Du kannst dir das wie _Sonnenstrahlen_ vorstellen:
-Sie beginnen an einem Punkt (der Sonne) und gehen dann für immer weiter.
+Ein [__Strahl__](gloss:ray) ist mehr als eine _Strecke_ aber weniger als eine _Gerade_.
+Man ihn auch _Halbgerade_, da er nur auf einer Seite unendlich weiter geht. Du kannst dir
+das wie _Sonnenstrahlen_ vorstellen: Sie beginnen an einem Punkt (der Sonne) und gehen
+dann für immer weiter.
 
 {.r} Bei der Beschriftung von Strahlen zeigt der Pfeil die Richtung an, in die er sich bis zur
 Unendlichkeit erstreckt, z.B. `vec(AB)`. Diesmal spielt die Reihenfolge der Punkte _eine_ Rolle.
@@ -254,9 +257,9 @@ _{button.next-step} Weiter_
       path.fill.green#congruent-path(x="x.rotate(1).shift(190,10)" target="move" label="B" label-class="white")
 
 ::: column.grow
-Die beiden Figuren auf der rechten Seite stimmen im Wesentlichen überein. Sie haben die gleiche Größe
-und Form, und wir könnten durch [drehen und verschieben](target:move) einen von ihnen exakt über
-den anderen legen. In der Geometrie sagen wir, dass die beiden Figuren
+Diese beiden Figuren schauen eigentlich genau gleich aus. Sie haben die gleiche Größe
+und Form, und wir könnten durch [drehen und verschieben](target:move) eine von ihnen exakt über
+die anderen legen. In der Geometrie sagen wir, dass die beiden Figuren
 [__kongruent__](gloss:congruent) oder deckungsgleich sind.
 
 Das Symbol für Kongruenz ist `≅`. Wir würden also sagen, dass `A ≅ B`.
