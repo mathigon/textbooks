@@ -574,6 +574,7 @@ conway:
   full: John Horton Conway
   born: 1937
   died: 2020
+  small: true
   bio: |
     __John Horton Conway__ (1937 – 2020) was a British mathematician who worked
     at Cambridge and Princeton University. He was a fellow of the Royal Society,
@@ -1810,8 +1811,8 @@ mirzakhani:
   keywords: Woman Female
   bio: |
     __Maryam Mirzakhani__ (مریم میرزاخانی‎, 1977 – 2017) was an Iranian
-    mathematician and professor at Stanford University. She is the only woman
-    to have received the _Fields Medal_, the highest award in mathematics.
+    mathematician and professor at Stanford University. She was the first woman
+    to receive the _Fields Medal_, the highest award in mathematics.
 
     Mirzakhani worked at the intersection of dynamical systems and geometry. She
     studied objects like _hyperbolic surfaces_ and _complex manifolds_, but
@@ -2661,6 +2662,20 @@ venn:
     who introduced the _Venn diagram_ used in set theory and probability. He
     taught at Cambridge University and was a Fellow of the Royal Society in
     London.
+
+viazovska:
+  name: Viazovska
+  born: 1984
+  full: Maryna Viazovska
+  credit: CC BY-SA 2.0, by Petra Lein
+  bio: |
+    __Maryna Viazovska__ (born 1984) is a Ukrainian mathematician and only the
+    second women in history to receive the Fields Medal, the highest award in
+    mathematics.
+
+    Viazovska solved the sphere-packing problem in 8 and 24 dimensions, which
+    asks about the most efficient way to arrange solid spheres. She is a
+    professor at the École Polytechnique Fédérale in Lausanne, Switzerland.
 
 viete:
   born: 1540
