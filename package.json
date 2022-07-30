@@ -19,12 +19,12 @@
     "node": "16.x"
   },
   "dependencies": {
-    "@mathigon/boost": "1.1.2",
+    "@mathigon/boost": "1.2.0",
     "@mathigon/core": "1.1.1",
     "@mathigon/euclid": "1.1.1",
     "@mathigon/fermat": "1.1.1",
     "@mathigon/hilbert": "1.1.1",
-    "@mathigon/studio": "0.1.23",
+    "@mathigon/studio": "0.1.24",
     "@types/d3": "6.3.0",
     "@types/three": "0.91.14",
     "@types/topojson": "3.2.3",

@@ -187,7 +187,7 @@ export function palindromes($step: Step) {
   const $inputs = $step.$$('input') as InputView[];
 
   for (let i = 0; i < 3; ++i) {
-    $inputs[i].onKeyDown('enter', () => $inputs[i].blur());
+    $inputs[i].onKey('Enter', () => $inputs[i].blur());
     $inputs[i].on('blur', () => {
       const str = '' + $inputs[i].value;
       if (!str.length) {

@@ -229,7 +229,7 @@ export function eratosthenes($section: Step) {
 
 export function primeTest($section: Step) {
   const $input = $section.$('input') as InputView;
-  $input.onKeyDown('enter', () => $input.blur());
+  $input.onKey('Enter', () => $input.blur());
 
   $input.on('blur', () => {
     const v = +$input.value;
@@ -372,7 +372,7 @@ export function cicadas($section: Step) {
 
 export function goldbach1($section: Step) {
   const $input = $section.$('input') as InputView;
-  $input.onKeyDown('enter', () => $input.blur());
+  $input.onKey('Enter', () => $input.blur());
 
   $input.on('blur', () => {
     const v = +$input.value;
