@@ -7,7 +7,7 @@
 import {total} from '@mathigon/core';
 import {clamp, lerp, toWord} from '@mathigon/fermat';
 import {Angle, intersections, isLineLike, Point, Polygon, Rectangle, Segment} from '@mathigon/euclid';
-import {Browser, slide} from '@mathigon/boost';
+import {$body, Browser, slide} from '@mathigon/boost';
 import {Slider, Step} from '@mathigon/studio';
 
 import {Geopad, GeoPath, Path, PolygonTile, Polypad} from '../shared/types';
@@ -208,7 +208,7 @@ export function tessellationDrawing($step: Step) {
 
   const $download = $step.$('.tessellation .icon-btn')!;
   $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
-  Browser.onKey('backspace', () => $polypad.selection.delete());
+  $body.onKey('Backspace', () => $polypad.selection.delete());
 
   $polypad.on('move-selection rotate-selection add-tile', () => {
     const tiles = Array.from($polypad.tiles.values()) as PolygonTile[];
@@ -249,7 +249,7 @@ export function pentagons($step: Step) {
     for (const t of $polypad.selection.tiles) t.flip();
   });
 
-  Browser.onKey('backspace', () => $polypad.selection.delete());
+  $body.onKey('Backspace', () => $polypad.selection.delete());
 
   let polygons = 0;
   $polypad.on('add-tile', () => {
