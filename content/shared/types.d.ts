@@ -146,7 +146,7 @@ export class Equation extends CustomElementView implements StepComponent {
   setup($step: Step, goal: string, userData?: UserData): void;
   focus(): void;
   onPointerdown(e?: PointerEvent): void;
-  onKey(e: {
+  handleKey(e: {
       code?: number;
       key: string;
   }): void;

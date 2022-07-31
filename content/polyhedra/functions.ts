@@ -194,15 +194,15 @@ export function quadrilateralsArea($step: Step) {
 // -----------------------------------------------------------------------------
 
 export function tessellationDrawing($step: Step) {
-  const $polypad = $step.$('x-polypad') as Polypad;
+  const $polypad = $step.$('x-polypad') as any;
   const $overlayTiles = $step.$('.overlay')!;
-  ($polypad.options as any).noPinchPan = true;
+  $polypad.options.noPinchPan = true;
 
   // TODO Save and restore progress
   let polygons = 0;
 
   for (const $a of $step.$$('.tessellation .add')) {
-    $polypad.bindSource($a, 'polygon', $a.data.shape!, $overlayTiles);
+    $polypad.bindSource($a, $overlayTiles);
     $a.$('svg')!.setAttr('viewBox', '0 0 80 80');
   }
 
@@ -234,19 +234,20 @@ export function tessellationDrawing($step: Step) {
 }
 
 export function pentagons($step: Step) {
-  const $polypad = $step.$('x-polypad') as Polypad;
-  ($polypad.options as any).noPinchPan = true;
+  const $polypad = $step.$('x-polypad') as any;
+  $polypad.options.noPinchPan = true;
   const $overlayTiles = $step.$('.overlay')!;
 
   for (const $a of $step.$$('.tessellation .add')) {
-    $polypad.bindSource($a, 'pentagon', $a.data.options!, $overlayTiles);
+    $polypad.bindSource($a, $overlayTiles);
     $a.$('svg')!.setAttr('viewBox', '0 0 80 80');
   }
 
   const [$flip, $download] = $step.$$('.tessellation .icon-btn');
   $download.on('click', () => $polypad.$svg.downloadImage('tessellation.png'));
   $flip.on('click', () => {
-    for (const t of $polypad.selection.tiles) t.flip();
+    const c = $polypad.selection.center;
+    for (const t of $polypad.selection.tiles) t.flip(c);
   });
 
   $body.onKey('Backspace', () => $polypad.selection.delete());
