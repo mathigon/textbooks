@@ -10,7 +10,7 @@ import {Angle, intersections, isLineLike, Point, Polygon, Rectangle, Segment} fr
 import {$body, Browser, slide} from '@mathigon/boost';
 import {Slider, Step} from '@mathigon/studio';
 
-import {Geopad, GeoPath, Path, PolygonTile, Polypad} from '../shared/types';
+import {Geopad, GeoPath, Path, PolygonTile} from '../shared/types';
 import {Solid} from '../shared/components/webgl/solid';
 import {Graphics3D} from '../shared/components/webgl/webgl';
 import {Anibutton} from './components/anibutton';
