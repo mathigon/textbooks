@@ -159,7 +159,7 @@ it to enclose the largest space if you form a circle (rather than other shapes
 like a rectangle or triangle).
 
 In nature, objects like water drops or air bubbles can _save energy_ by becoming
-circular or spherical, and reducing their surface area.
+spherical, and minimising their surface area for a given volume.
 
 ::: column(width=320)
 
