@@ -715,7 +715,7 @@ formula:
   title: Formel
   text: |
     Eine __Formel__ ist eine Regel oder Gleichung, die die Beziehung zwischen zwei oder mehreren
-    Variablen beschreibt. Ein Beispiel ist `A = r^2π`.
+    Variablen beschreibt. Ein Beispiel ist `A = r^2 π`.
 
 fractal:
   title: Fraktal
