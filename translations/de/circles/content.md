@@ -1185,7 +1185,7 @@ In beiden Fällen können wir das Volumen bestimmen, indem wir die Fläche ihrer
 __{.m-red}Grundfläche__ mit ihrer __{.m-blue}Höhe__ multiplizieren. Das bedeutet, dass das Volumen eines
 Zylinders mit Radius _{.b.m-red}r_ und Höhe _{.b.m-blue}h_ sich wie folgt berechnen lässt:
 
-{.text-center} `V =` _{x-equation(solution="π r^2 h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_
+{.text-center} `V =` _{x-equation(solution="r^2 π h" keys="+ − × ÷ π frac sup brackets" short-var hints="cylinder-volume-hint1 cylinder-volume-hint2")}_
 
 {.reveal(when="eqn-0")} Beachte, dass Radius und Höhe die gleichen Einheiten haben müssen,
 z.B. wenn _r_ und _h_ beide in cm sind, dann wird das Volumen in
@@ -1261,7 +1261,7 @@ großes [[Rechteck|Quadrat|Trapez]] ist.
   _{x-equation.small(solution="h" keys=" " short-var)}_
   _{span.reveal(when="eqn-1")} und die Breite des Rechtecks ist
   gleich [[dem Umfang|dem Durchmesser|der Tangente]] der Kreise:_
-  _{x-equation.small.reveal(when="blank-2" solution="2 π r" keys="+ × π sup" short-var)}_.
+  _{x-equation.small.reveal(when="blank-2" solution="2 r π" keys="+ × π sup" short-var)}_.
 
 ::: column(width=320)
 
@@ -1276,7 +1276,7 @@ großes [[Rechteck|Quadrat|Trapez]] ist.
 Das bedeutet, dass sich die gesamte Oberfläche eines Zylinders mit Radius _r_ und Höhe
 _h_ wie folgt berechnen lässt:
 
-{.text-center} `A =` _{x-equation(solution="2 π r^2 + 2 π r h" keys="+ − × ÷ π frac sup brackets" short-var)}_.
+{.text-center} `A =` _{x-equation(solution="2 r^2 π + 2 r π h" keys="+ − × ÷ π frac sup brackets" short-var)}_.
 
 ---
 > id: cylinder-real-life
@@ -1422,7 +1422,7 @@ Fall erhalten wir einen Kreis und [[einen Kreissektor|ein Kreissegment|einen Kre
 Teilstücke addieren. Die __{.m-yellow}Grundfläche__ ist ein Kreis mit dem Radius _r_. Somit ist seine Fläche gleich
 
 {.text-center.reveal(when="blank-0")} `pill(A_"Grundfläche","yellow","circle") =`
-_{x-equation.small(solution="π r^2" keys="+ × π sup" short-var)}_.
+_{x-equation.small(solution="r^2 π" keys="+ × π sup" short-var)}_.
 
 ::: column(width=320)
 
@@ -1472,9 +1472,9 @@ gleich dem [[Umfang|Durchmesser|Radius]] der _{span.pill.step-target.yellow(data
 _{span.reveal(when="blank-0")}`2 r π`. Jetzt können wir die Sektorfläche
 mit der [Formel](gloss:circle-sector) finden, die wir in einem vorherigen Abschnitt hergeleitet haben:_
 
-::: x-equation-system.reveal(when="blank-0" steps="π s^2 * ( 2 π r ) / (2 π s) | π r s" hints="cone-surface-1|cone-surface-1")
+::: x-equation-system.reveal(when="blank-0" steps="s^2 π * ( 2 r π ) / (2 s π) | r π s" hints="cone-surface-1|cone-surface-1")
 | `pill(A_"Sektor","green","sector")` | `=` | `pill(A_"Kreis","teal","circle") × pill("Kreisbogen","red","arc") / pill("Umfang","teal","circumference")` |
-|                | `=` | _{x-equation(solution="π r sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
+|                | `=` | _{x-equation(solution="r π sqrt(r^2 + h^2)" fns="/" substitutions="s: sqrt(r^2 + h^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_ |
 :::
 
 ::: column(width=280)
@@ -1506,7 +1506,7 @@ mit der [Formel](gloss:circle-sector) finden, die wir in einem vorherigen Abschn
 Schließlich müssen wir nur noch die Fläche der __{.m-yellow}Grundfläche__ und die Fläche
 des __{.m-green}Sektors__ addieren, um die Gesamtoberfläche des Kegels zu erhalten:
 
-{.text-center} `A =` _{x-equation(solution="π r^2 + π r sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_
+{.text-center} `A =` _{x-equation(solution="r^2 π + r π sqrt(h^2 + r^2)" keys="+ − × ÷ π frac sup sqrt" short-var)}_
 
 ---
 > id: sphere
@@ -1626,7 +1626,7 @@ Der Radius der „Bohrung“ beträgt _h_. Wir können die Fläche des Rings fin
 indem wir die Fläche der Bohrung von der Fläche des größeren Kreises abziehen:
 
 | _A_ | = | `r^2 π - h^2 π` |
-|     | = | `π (r^2 - h^2)` |
+|     | = | `(r^2 - h^2) π` |
 {.eqn-system}
 :::
 
@@ -1641,9 +1641,9 @@ Nach dem Prinzip von Cavalieri müssen beide Körper auch
 der Halbkugel finden, indem wir das Volumen des [Zylinders](gloss:cylinder-volume)
 und das Volumen des [Kegels](gloss:cone-volume) voneinander abziehen_
 
-::: x-equation-system.reveal(when="blank-0" steps="π r^3 - 1/3 π r^3" hints="sphere-volume")
+::: x-equation-system.reveal(when="blank-0" steps="r^3 π - 1/3 r^3 π" hints="sphere-volume")
 | `V_"Halbkugel"` | = | `V_"Zylinder" - V_"Kegel"` |
-|                 | = | _{x-equation(solution="2/3 π r^3" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
+|                 | = | _{x-equation(solution="2/3 r^3 π" keys="+ − × ÷ π frac sup brackets" short-var)}_ |
 :::
 
 ---
@@ -1694,7 +1694,7 @@ als auch eine Kugel perfekt in sein Inneres einpassen:
     .large-op.reveal(when="blank-0" animation="pop") +
 
 {.text-center} Dieser Kegel hat den Radius `r` und die Höhe `2r`. Sein Volumen beträgt
-_{x-equation.small(solution="2/3 π r^3" keys="× π sup frac" short-var)}_
+_{x-equation.small(solution="2/3 r^3 π" keys="× π sup frac" short-var)}_
 
 ::: column.r(width=220)
 
@@ -1702,14 +1702,14 @@ _{x-equation.small(solution="2/3 π r^3" keys="× π sup frac" short-var)}_
     .large-op.reveal(when="blank-0" animation="pop") =
 
 {.text-center} Diese Kugel hat den Radius `r`. Ihr Volumen beträgt
-_{x-equation.small(solution="4/3 π r^3" keys="× π sup frac" short-var)}_
+_{x-equation.small(solution="4/3 r^3 π" keys="× π sup frac" short-var)}_
 
 ::: column(width=220)
 
     x-solid(size=220 style="margin-top: -20px")
 
 {.text-center} Der Zylinder hat den Radius `r` und die Höhe `2r`. Sein Volumen beträgt
-_{x-equation.small(solution="2 π r^3" keys="× π sup frac" short-var)}_
+_{x-equation.small(solution="2 r^3 π" keys="× π sup frac" short-var)}_
 
 :::
 

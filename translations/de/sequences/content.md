@@ -10,8 +10,8 @@
 > level: Intermediate
 > next: fractals
 
-Viele Berufe, die Mathematik anwenden, sind an einer bestimmten Sache interessiert -
-_Muster finden_ und die Zukunft voraussagen zu können. Hier sind zwei Beispiele:
+Viele Berufe, die Mathematik anwenden, interessiert vor allem eines -
+_Muster zu finden und die Zukunft voraussagen zu können_. Hier sind zwei Beispiele:
 
 
 ::: column(width=160 parent="padded-thin")
@@ -21,9 +21,9 @@ _Muster finden_ und die Zukunft voraussagen zu können. Hier sind zwei Beispiele
 ::: column(width=400)
 
 Geologen auf der ganzen Welt wollen __Erdbeben__ und __Vulkanausbrüche__ vorhersagen.
-Sie können versuchen, Muster aus historischen Daten von Seismographen, der Atmosphäre
-oder sogar dem Verhalten von Tieren herauszulesen. Ein Erdbeben kann zum Beispiel
-spätere Nachbeben auslösen.
+Dazu können sie historische Daten von Seismographen, der Atmosphäre oder sogar dem
+Verhalten von Tieren verwenden und versuchen, aus diesen Muster herauszulesen. Ein
+Erdbeben kann zum Beispiel spätere Nachbeben auslösen.
 
 ::: column(width=160)
 
@@ -32,13 +32,15 @@ spätere Nachbeben auslösen.
 ::: column(width=400)
 
 Banker schauen sich auch historische Daten zu Aktienkursen, Zinssätzen und Wechselkursen
-an, um abzuschätzen, wie sich die __Finanzmärkte__ in Zukunft entwickeln könnten. Vorhersagen
-zu können, ob der Wert einer Aktie steigen oder fallen wird, kann äußerst lukrativ sein!
+an, um abzuschätzen, wie sich die __Finanzmärkte__ in Zukunft entwickeln könnten.
+Vorhersagen zu können, ob der Wert einer Aktie steigen oder fallen wird, kann äußerst
+lukrativ sein!
 
 :::
 
-Professionelle Mathematiker verwenden hochkomplexe Algorithmen, um all diese Muster zu
-finden und zu analysieren, aber wir wollen erst einmal mit etwas viel Einfacherem beginnen.
+Professionelle Mathematiker verwenden hochkomplexe Algorithmen, um all diese Muster
+zu finden und zu analysieren, aber wir wollen erst einmal mit etwas viel Einfacherem
+beginnen.
 
 ---
 > id: simple-patterns
@@ -97,7 +99,7 @@ bestimmte [Variable](gloss:variable) dar:
       | …
 
 Die kleine Zahl nach dem x wird als __Index__ bezeichnet und gibt die Position des Gliedes
-in der Folge an. Das bedeutet, dass wir das nte Glied der Folge darstellen können durch
+in der Folge an. Das bedeutet, dass wir das *n*-te Glied der Folge darstellen können durch
 [[`x_n`|`x_i`|`x_2`]].
 
     // You might think that it would be easier to label the terms in the
@@ -214,9 +216,9 @@ Jedes Glied wird aus immer größeren Quadraten gebildet:
 > id: square-1
 
 Für die Dreieckszahlen haben wir eine rekursive Formel gefunden, die dir das
-_nächste_ Glied der Folge in Abhängigkeit von den _vorherhenenden_ Gliedern
+_nächste_ Glied der Folge in Abhängigkeit von den _vorhergehenden_ Gliedern
 liefert. Für die Quadratzahlen gibt es sogar noch eine bessere Lösung: eine
-Formel, die dir direkt das *n*te Glied der Folge angibt, ohne dass du erst alle
+Formel, die dir direkt das *n*-te Glied der Folge angibt, ohne dass du erst alle
 vorherigen Glieder berechnen musst:
 
 {.text-center.s-purple} *{.n}`x_n`* = _{x-equation(solution="n^2")}_
@@ -242,11 +244,11 @@ der Folge werden [__Glieder__](gloss:sequence-term) genannt und durch Variablen
 wie `x_n` dargestellt.
 
 Eine [__rekursive Formel__](gloss:sequence-recursive) für eine Folge sagt dir den
-Wert des *n*ten Gliedes in Abhängigkeit von [[seinen vorherigen Gliedern|dem ersten Glied]].
+Wert des *n*-ten Gliedes in Abhängigkeit von [[seinen vorherigen Gliedern|dem ersten Glied]].
 Du musst auch das/die erste(n) Glied(er) angeben.
 
 Eine [__explizite Formel__](gloss:sequence-explicit) für eine Folge sagt dir
-den Wert des *n*ten Gliedes als Funktion von [[n allein|dem vorherigen Glied]],
+den Wert des *n*-ten Gliedes als Funktion von [[n allein|dem vorherigen Glied]],
 ohne sich auf andere Glieder der Folge zu beziehen.
 :::
 
@@ -255,7 +257,7 @@ ohne sich auf andere Glieder der Folge zu beziehen.
 
 ### Action-Serienbilder
 
-n den folgenden Abschnitten lernst du viele verschiedene mathematische Folgen,
+In den folgenden Abschnitten lernst du viele verschiedene mathematische Folgen,
 überraschende Muster und unerwartete Anwendungen kennen.
 
 Aber schauen wir uns zunächst etwas ganz anderes aus dem Bereich der Fotografie
@@ -306,36 +308,37 @@ Hier sind noch ein paar weitere Beispiele von Action-Serienbildern, die dir gefa
 
 
 
-## Arithmetic and Geometric Sequences
+## Arithmetische und geometrische Folgen
 
 > section: arithmetic-geometric
 > id: halley
 
 ::: column.grow
 
-In 1682, the astronomer [Edmond Halley](bio:halley) observed an unusual
-phenomenon: a glowing white object with a long tail that moved across the night
-sky. It was a __comet__, a small, icy rock that is flying through space, while
-leaving behind a trail of dust and ice.
+Im Jahr 1682 beobachtete der Astronom [Edmond Halley](bio:halley) ein ungewöhnliches
+Phänomen: ein leuchtend weißes Objekt mit einem langen Schweif, das sich über den
+Nachthimmel bewegte. Es war ein __Komet__, ein kleiner, eisiger Felsbrocken, der
+durchs All fliegt und dabei eine Spur aus Staub und Eis hinterlässt.
 
-Halley remembered that other astronomers had observed similar comets much
-earlier: one in 1530 and another in 1606. Notice that the gap between two
-consecutive observations is the same in both cases: [[76]] years.
+Halley erinnerte sich daran, dass andere Astronomen schon viel früher ähnliche
+Kometen beobachtet hatten: einen im Jahr 1530 und einen anderen im Jahr 1606.
+Beachte, dass der Abstand zwischen zwei aufeinanderfolgenden Beobachtungen in
+beiden Fällen gleich groß ist: [[76]] Jahre.
 
 ::: column(width=320)
 
-    x-img(width=320 height=256 src="images/halley.jpg" alt="Halley’s Comet")
-    p.caption Image of Halley’s Comet,#[br]taken in 1986 on Easter Island
+    x-img(width=320 height=256 src="images/halley.jpg" alt="Der Halleysche Komet")
+    p.caption Bild des Halleyschen Kometen,#[br] aufgenommen 1986 auf der Osterinsel
 
 :::
 
 ---
 > id: halley-1
 
-Halley concluded that all three observations were in fact of the same comet –
-which is now called _Halley’s comet_. It is orbiting around the sun and passes
-Earth approximately every 76 years. He also predicted when the comet would be
-visible next:
+Halley kam zu dem Schluss, dass es sich bei allen drei Beobachtungen um denselben
+Kometen handelte, der heute _Halleyscher Komet_ genannt wird. Er umkreist die Sonne
+und passiert die Erde etwa alle 76 Jahre. Er sagte auch voraus, wann der Komet das
+nächste mal sichtbar sein würde:
 
 {.text-center.s-orange.s-large.with-arrows.no-voice} _{span.n}1530_,
 _{span.n}1606 *{span.arrow}+76*_, _{.n}1682 *{span.arrow}+76*_,
@@ -345,9 +348,10 @@ _{.n}[[1910]] *{span.arrow}+76*_, _{.n}[[1986]] *{span.arrow}+76*_, …
 ---
 > id: halley-2
 
-Actually, the time interval is not always _exactly_ 76 years: it can vary by one
-or two years, as the comet’s orbit is interrupted by other planets. Today we
-know that Halley’s comet was observed by ancient astronomers as early as 240 BC!
+Das Zeitintervall beträgt nicht immer _exakt_ 76 Jahre: Es kann um ein oder zwei
+Jahre variieren, da die Umlaufbahn des Kometen durch andere Planeten gestört
+wird. Heute wissen wir, dass der Halleysche Komet bereits 240 v. Chr. von antiken
+Astronomen beobachtet wurde!
 
     figure
       .row
@@ -355,17 +359,17 @@ know that Halley’s comet was observed by ancient astronomers as early as 240 B
         x-img(src="images/halley-2.jpg" width=173 height=180 lightbox)
         x-img(src="images/halley-3.jpg" width=200 height=180 lightbox)
         x-img(src="images/halley-4.jpg" width=130 height=180 lightbox)
-      p.caption Depictions of Halley’s comet throughout time: a Babylonian tablet (164 BC), a medival tapestry (1070s), a science magazine (1910) and a Soviet stamp (1986).
+      p.caption Darstellungen des Halleyschen Kometen im Laufe der Zeit: eine babylonische Tafel (164 v. Chr.), ein mittelalterlicher Wandteppich (1070er Jahre), ein Wissenschaftsmagazin (1910) und eine sowjetische Briefmarke (1986).
 
 ---
 > id: ball
 
-A different group of scientists is investigating the behaviour of a bouncing
-tennis ball. They dropped the ball from a height of 10 meters and measured its
-position over time. With every bounce, the ball loses some of its original
-height:
+Eine andere Gruppe von Wissenschaftlern erforschte das Verhalten eines hüpfenden
+Tennisballs. Sie ließen den Ball aus einer Höhe von 10 Metern fallen und maßen
+seine Position zu verschiedenen Zeitpunkten. Bei jedem Aufprall verliert der Ball
+etwas von seiner ursprünglichen Höhe:
 
-    x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7,1" label-suffix="s,m" axis-names="time,height")
+    x-coordinate-system(padding="12 12 24 120" width=640 height=320 x-axis="0,7,1" label-suffix="s,m" axis-names="Zeit,Höhe")
       .tennis-ball
       .tennis-ball
     x-slider(steps=400 speed=0.5)
@@ -374,9 +378,10 @@ height:
 > id: ball-1
 > goals: reveals
 
-The scientists noticed that the ball loses 20% of its height after every bounce.
-In other words, the maximum height of every bounce is 80% of the previous one.
-This allowed them to predict the height of every following bounce:
+Die Wissenschaftler haben festgestellt, dass der Ball nach jedem Aufprall 20%
+seiner Höhe verliert. Mit anderen Worten: Die maximale Höhe bei jedem Aufprall
+beträgt 80 % des vorherigen Aufpralls. So konnten sie die Höhe jedes folgenden
+Aufpralls vorhersagen:
 
 {.text-center.s-teal.s-large.with-arrows.no-voice} _{span.n}10_,
 _{span.n}8 *{span.arrow}×0.8*_, _{.n}[[6.4]] *{span.arrow}×0.8*_,
@@ -389,28 +394,29 @@ _{span.n.reveal}2.097 *{span.arrow}×0.8*_*{span.reveal}, …*
 ---
 > id: arithmetic-geometric
 
-### Definitions
+### Begriffe
 
-If you compare both these problems, you might notice that there are many
-similarities: the sequence of Halley’s comet has the same
-[[difference|ratio|product]] between consecutive terms, while the
-sequence of tennis ball bounces has the same [[ratio|difference|product]]
-between consecutive terms.
+Wenn du diese beiden Beobachtungen vergleichst, wirst du feststellen, dass
+es viele Ähnlichkeiten gibt: Bei der Folge des Halleyschen Kometen ist
+[[die Differenz|das Verhältnis|das Produkt]] zwischen aufeinanderfolgenden
+Gliedern gleich, während bei der Folge von Tennisballsprüngen [[das Verhältnis|die Differenz|das Produkt]]
+zwischen aufeinanderfolgenden Gliedern gleich ist.
 
 ---
 > id: arithmetic-geometric-1
 
-Sequences with these properties have a special name:
+Folgen mit diesen Eigenschaften haben einen besonderen Namen:
 
 ::: column.grow
 ::: .theorem.s-red
 
     p.text-center: include svg/comet.svg
 
-An [__arithmetic sequence__](gloss:arithmetic-sequence) has a constant
-__{.m-red}difference *d*__ between consecutive terms.
+Eine [__arithmetische Folge__](gloss:arithmetic-sequence) hat eine konstante
+__{.m-red}Differenz *d*__ zwischen aufeinanderfolgenden Gliedern.
 
-The same number is added or subtracted to every term, to produce the next one.
+Zu jedem Glied wird die gleiche Zahl addiert oder subtrahiert, um das nächste
+Glied zu erhalten.
 
 :::
 ::: column.grow
@@ -418,10 +424,11 @@ The same number is added or subtracted to every term, to produce the next one.
 
     p.text-center: include svg/ball.svg
 
-A [__geometric sequence__](gloss:geometric-sequence) has a constant
-__{.m-green}ratio *r*__ between consecutive terms.
+Eine [__geometrische Folge__](gloss:geometric-sequence) hat ein konstantes
+__{.m-green}Verhältnis *r*__ zwischen aufeinanderfolgenden Gliedern.
 
-Every term is multiplied or divided by the same number, to produce the next.
+Jedes Glied wird mit der gleichen Zahl multipliziert oder dividiert, um das
+nächste Glied zu erhalten.
 
 :::
 :::
@@ -429,9 +436,9 @@ Every term is multiplied or divided by the same number, to produce the next.
 ---
 > id: arithmetic-geometric-select
 
-Here are a few different sequences. Can you determine which ones are arithmetic,
-geometric or neither, and what the values of _{.b.m-red}d_ and _{.b.m-green}r_
-are?
+Hier haben wir einige unterschiedliche Folgen. Kannst du herausfinden, welche
+davon arithmetisch, geometrisch oder keines von beiden sind und welche Werte
+_{.b.m-red}d_ und _{.b.m-green}r_ haben?
 
 ::: column(width=330 parent="ag-select")
 
@@ -440,8 +447,8 @@ _{span.n}16_, _{span.n}32_, _{span.n}64_, …
 
 ::: column(width=320)
 
-{.no-voice} is [[geometric|arithmetic|neither]]_{span.reveal(when="blank-0")}, with
-ratio [[2]]._
+{.no-voice} is [[geometrisch|arithmetisch|weder noch]]_{span.reveal(when="blank-0")},
+mit einem Verhältnis von [[2]]._
 
 ::: column(width=330)
 
@@ -450,8 +457,8 @@ _{span.n}11_, _{span.n}14_, _{span.n}17_, …
 
 ::: column(width=320)
 
-{.no-voice} is [[arithmetic|geometric|neither]]_{span.reveal(when="blank-2")}, with
-difference [[3]]._
+{.no-voice} is [[arithmetisch|geometrisch|weder noch]]_{span.reveal(when="blank-2")},
+mit einer Differenz von [[3]]._
 
 ::: column(width=330)
 
@@ -460,8 +467,8 @@ _{span.n}5_, _{span.n}1_, _{span.n}–3_, …
 
 ::: column(width=320)
 
-{.no-voice} is [[arithmetic|geometric|neither]]_{span.reveal(when="blank-4")}, with
-difference [[-4]]._
+{.no-voice} is [[arithmetisch|geometrisch|weder noch]]_{span.reveal(when="blank-4")},
+mit einer Differenz von [[-4]]._
 
 ::: column(width=330)
 
@@ -470,7 +477,7 @@ _{span.n}11_, _{span.n}16_, _{span.n}22_, …
 
 ::: column(width=320)
 
-{.no-voice} is [[neither|arithmetic|geometric]]_{span.reveal(when="blank-6")}._
+{.no-voice} is [[weder noch|arithmetisch|geometrisch]]_{span.reveal(when="blank-6")}._
 
 ::: column(width=330)
 
@@ -479,8 +486,8 @@ _{span.n}5_, _{span.n}2.5_, _{span.n}1.25_, …
 
 ::: column(width=320)
 
-{.no-voice} is [[geometric|arithmetic|neither]]_{span.reveal(when="blank-7")}, with
-ratio [[0.5]]._
+{.no-voice} is [[geometrisch|arithmetisch|weder noch]]_{span.reveal(when="blank-7")},
+mit einem Verhältnis von [[0.5]]._
 
 :::
 
