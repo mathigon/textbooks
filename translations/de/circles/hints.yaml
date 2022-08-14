@@ -2,7 +2,7 @@ cylinder-volume-hint1: Du musst die Fläche der Grundfläche ermitteln und sie d
 cylinder-volume-hint2: Die Grundfläche ist ein Kreis mit Radius _r_, so dass seine Fläche `π r^2` ist.
 
 cone-volume-hint1: Du musst die Fläche der Grundfläche ermitteln und sie dann mit `1/3 h` multiplizieren.
-cone-volume-hint2: Die Grundfläche ist ein Kreis mit Radius _r_, so dass seine Fläche `π r^2` ist.
+cone-volume-hint2: Die Grundfläche ist ein Kreis mit Radius _r_, so dass seine Fläche `r^2 π` ist.
 
 cone-surface-1: Du musst jeden der obigen Werte mit dem richtigen Wert ersetzen.
 cone-surface-2: Vergiss nicht, den Wert für _s_ zu verwenden, den wir vorher gefunden haben.
