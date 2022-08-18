@@ -1053,7 +1053,7 @@ new shapes from the sidebar onto the canvas. Which shapes tessellate well? Are
 there any shapes that don’t tessellate at all? Try to create interesting
 patterns!
 
-    figure: .tessellation
+    figure: .tessellation.polypad
       x-polypad
       .menu
         for s in ['equ-triangle', 'square', 'reg-pentagon', 'reg-hexagon', 'reg-octagon']
@@ -1308,7 +1308,7 @@ Two years later, in 2017, _Michaël Rao_ published a proof that there are no oth
 except the 15 that had already been found. Can you make a tessellation using all of them?
 
     figure
-      .tessellation
+      .tessellation.polypad
         x-polypad
         .menu
           for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
