@@ -19,7 +19,7 @@
     "node": "16.x"
   },
   "dependencies": {
-    "@mathigon/boost": "1.2.0",
+    "@mathigon/boost": "1.2.1",
     "@mathigon/core": "1.1.1",
     "@mathigon/euclid": "1.1.1",
     "@mathigon/fermat": "1.1.1",
