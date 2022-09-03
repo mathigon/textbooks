@@ -89,7 +89,7 @@ export function setupDieFacesPlacement($step: Step, netPositions: NetPosition[])
     face.on('exit-target', ({$target}: {$target: ElementView}) => {
       $target.removeClass('over');
     });
-    const $f = face.$el.$('svg')!.copy(true, false);
+    const $f = face.$el.$('svg')!.copy(true);
     $f.setAttr('width', sideSize);
     $f.setAttr('height', sideSize);
     face.on('end', ({$target}: {$target?: ElementView}) => {
