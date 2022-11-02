@@ -16,7 +16,7 @@
     "lint-fix": "eslint content --ext .ts --fix"
   },
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "dependencies": {
     "@mathigon/boost": "1.2.3",
