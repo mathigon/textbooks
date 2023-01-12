@@ -1617,9 +1617,9 @@ a pattern? And how is this related to the Fibonacci numbers?
 
 :::
 
-    figure
-      x-img(src="images/fibonachos.jpg" width=600 height=282)
-      p.caption © FoxTrot, by Bill Amend
+    //- figure
+    //-   x-img(src="images/fibonachos.jpg" width=600 height=282)
+    //-   p.caption © FoxTrot, by Bill Amend
 
 
 

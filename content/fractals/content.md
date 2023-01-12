@@ -369,7 +369,7 @@ many times._
 ---
 > id: frozen
 
-::: column.grow
+    //- ::: column.grow
 
 It is almost unthinkable that you can have a shape with a _finite_ area and also
 an _infinite_ circumference – but this is just one of the many unexpected
@@ -378,13 +378,10 @@ properties of fractals.
 Can you come up with any other ways to create your own fractals?
 [Continue](btn:next)
 
-::: column(width=352)
-
-    x-video(src="images/frozen.mp4" poster="images/frozen.jpg" width=352 height=198 audio credit="© Disney")
-
-{.caption} “My soul is spiralling on frozen fractals all around…”
-
-:::
+    //- ::: column(width=352)
+    //-     x-video(src="images/frozen.mp4" poster="images/frozen.jpg" width=352 height=198 audio credit="© Disney")
+    //- {.caption} “My soul is spiralling on frozen fractals all around…”
+    //- :::
 
 ---
 > id: menger-sponge
