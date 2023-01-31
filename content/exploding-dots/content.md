@@ -107,7 +107,7 @@ completely different numbers, that are actually the same. What do you think?
 ---
 
 We’ll answer this later in this course – but you might also think that the
-entire questions sounds a bit dubious. There is no way we could _actually write
+entire question sounds a bit dubious. There is no way we could _actually write
 down_ infinitely many 9s – it would take infinitely long. We have to cheat by
 writing dots and using our imagination. The question should really be:
 
