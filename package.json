@@ -24,7 +24,7 @@
     "@mathigon/euclid": "1.1.8",
     "@mathigon/fermat": "1.1.5",
     "@mathigon/hilbert": "1.1.5",
-    "@mathigon/studio": "0.1.27",
+    "@mathigon/studio": "0.1.29",
     "@types/d3": "6.3.0",
     "@types/three": "0.91.14",
     "@types/topojson": "3.2.3",
