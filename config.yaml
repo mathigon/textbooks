@@ -2,7 +2,7 @@ siteName: Mathigon
 description: A interactive textbook
 domain: mathigon.org
 
-privacyURL: /policies
+privacyURL: https://amplify.com/customer-privacy
 banner: (c) Mathigon
 locales: [en, ar, cn, de, es, fr, hi, hr, it, ja, pt, ro, ru, sv, tr, vi]
 
