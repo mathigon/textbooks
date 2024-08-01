@@ -19,12 +19,12 @@
     "node": ">=16"
   },
   "dependencies": {
-    "@mathigon/boost": "1.2.21",
-    "@mathigon/core": "1.1.16",
-    "@mathigon/euclid": "1.1.18",
-    "@mathigon/fermat": "1.1.15",
-    "@mathigon/hilbert": "1.1.15",
-    "@mathigon/studio": "0.1.42",
+    "@mathigon/boost": "1.2.27",
+    "@mathigon/core": "1.1.19",
+    "@mathigon/euclid": "1.2.0",
+    "@mathigon/fermat": "1.1.20",
+    "@mathigon/hilbert": "1.1.20",
+    "@mathigon/studio": "0.1.43",
     "@types/d3": "6.3.0",
     "@types/three": "0.91.14",
     "@types/topojson": "3.2.3",
