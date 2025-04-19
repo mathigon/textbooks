@@ -48,7 +48,7 @@
 * {.reveal(when="compass" delay="1000")} [{.step-target.pill.b.red}半径](target:r)
   指圆心与圆弧上点的距离。
 * {.reveal(when="compass" delay="4000")} [{.step-target.pill.b.blue}直径](target:d)
-  表示圆上两个相对的点的距离。它通过圆心，长度为半径的[[一半|两倍|相等长度]]。
+  表示圆上两个相对的点的距离。它通过圆心，长度为半径的[[两倍|一半|相等长度]]。
 * {.reveal(when="blank-0")} [{.step-target.pill.b.green}周长](target:c)
  （边缘长度）指环绕圆一周的长度。
 
